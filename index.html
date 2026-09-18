@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arcanum CE Restored - ART Extractor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <img class="hero-logo" src="logo.png" alt="Arcanum CE Restored logo" width="500" height="131">
+    <div class="hero-text">
+      <p class="kicker">Arcanum CE Restored</p>
+      <h1>.ART Unpacker</h1>
+    </div>
+  </header>
+
+  <section class="explorer">
+    <aside class="explorer-tree" id="explorerTree" aria-label="Folder browser"></aside>
+    <div class="explorer-main">
+      <p class="explorer-breadcrumb" id="explorerBreadcrumb">Loading library…</p>
+      <div class="explorer-grid" id="explorerGrid"></div>
+      <div class="explorer-pagination" id="explorerPagination" hidden>
+        <span id="explorerPaginationStatus"></span>
+        <button id="explorerLoadMoreBtn" type="button">Load more</button>
+      </div>
+      <div class="explorer-viewer" id="explorerViewer" hidden></div>
+    </div>
+  </section>
+
+  <details class="manual-load">
+    <summary>Or unpack a local .ART file instead</summary>
+    <section id="dropzone" class="dropzone" tabindex="0" role="button" aria-label="Choose or drop .ART files">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 19h16"/></svg>
+      <p class="dz-label">Drop .ART files here</p>
+      <p class="dz-hint">or click to browse — multiple files welcome</p>
+      <input type="file" id="fileInput" accept=".art" multiple hidden>
+    </section>
+  </details>
+
+  <section id="log" class="log" aria-live="polite"></section>
+
+  <footer class="note">
+    <p>Part of the Arcanum CE Restored toolset — companion to the <a href="https://christophemaestro.github.io/ArcanumMapExplorer/" target="_blank" rel="noopener">Map Explorer</a>.</p>
+  </footer>
+</div>
+
+<div id="gbOverlay" class="modal-overlay">
+  <div class="gif-builder" role="dialog" aria-modal="true" aria-label="GIF builder">
+    <div class="gb-header">
+      <h2 id="gbTitle">Build GIF</h2>
+      <button class="gb-close" id="gbClose" type="button" aria-label="Close">×</button>
+    </div>
+    <div class="gb-body">
+      <div class="gb-stage-wrap">
+        <div class="gb-stage-frame">
+          <canvas id="gbStageCanvas"></canvas>
+        </div>
+        <div class="gb-nav">
+          <button class="gb-navbtn" id="gbPrev" type="button">← Prev</button>
+          <span id="gbFrameLabel">1 / 1</span>
+          <button class="gb-navbtn" id="gbNext" type="button">Next →</button>
+        </div>
+        <p class="gb-hint">Drag the bright frame to reposition it. Arrow keys nudge by 1px, Shift+Arrow by 10px. The dimmer frame(s) are onion-skin references.</p>
+        <div class="gb-thumbstrip" id="gbThumbstrip"></div>
+      </div>
+      <div class="gb-side">
+        <div class="gb-field">
+          <label for="gbOnionMode">Onion skin</label>
+          <select id="gbOnionMode">
+            <option value="adjacent">Adjacent frames</option>
+            <option value="all">All included frames</option>
+            <option value="none">Off</option>
+          </select>
+        </div>
+        <div class="gb-field">
+          <label for="gbOnionOpacity">Onion skin opacity</label>
+          <input type="range" id="gbOnionOpacity" min="0.1" max="0.8" step="0.05" value="0.35">
+        </div>
+        <hr class="gb-divider">
+        <div class="gb-offset-row">
+          <div class="gb-field">
+            <label for="gbOffsetX">Offset X</label>
+            <input type="number" id="gbOffsetX" step="1">
+          </div>
+          <div class="gb-field">
+            <label for="gbOffsetY">Offset Y</label>
+            <input type="number" id="gbOffsetY" step="1">
+          </div>
+        </div>
+        <p class="gb-hint" id="gbEmbeddedHint" style="text-align:left"></p>
+        <div class="gb-btn-row">
+          <button id="gbAlignTopLeft" type="button">Top-left</button>
+          <button id="gbAlignCenter" type="button">Center</button>
+          <button id="gbAlignEmbedded" type="button">Embedded</button>
+        </div>
+        <div class="gb-btn-row">
+          <button id="gbAlignAllCenter" type="button">Center all frames</button>
+        </div>
+        <div class="gb-checkbox-row">
+          <input type="checkbox" id="gbIncludeFrame">
+          <label for="gbIncludeFrame">Include this frame in the GIF</label>
+        </div>
+        <hr class="gb-divider">
+        <div class="gb-field">
+          <label for="gbFrameDuration">This frame's duration (ms)</label>
+          <input type="number" id="gbFrameDuration" min="10" step="10">
+        </div>
+        <div class="gb-field">
+          <label for="gbGlobalDuration">Duration to apply (ms)</label>
+          <input type="number" id="gbGlobalDuration" min="10" step="10" value="100">
+        </div>
+        <div class="gb-btn-row">
+          <button id="gbApplyDuration" type="button">Apply to all frames</button>
+        </div>
+        <div class="gb-checkbox-row">
+          <input type="checkbox" id="gbLoop" checked>
+          <label for="gbLoop">Loop forever</label>
+        </div>
+        <hr class="gb-divider">
+        <button class="gb-compile" id="gbCompile" type="button">Compile GIF</button>
+        <div class="gb-progress" id="gbProgress"><div class="gb-progress-bar" id="gbProgressBar"></div></div>
+        <div class="gb-result" id="gbResult">
+          <img id="gbResultImg" alt="Compiled GIF preview">
+          <button id="gbDownload" type="button">Download GIF</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gif.js@0.2.0/dist/gif.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
