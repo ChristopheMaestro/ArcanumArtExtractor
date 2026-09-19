@@ -212,10 +212,31 @@
     margin-top: 16px;
     padding-top: 14px;
     border-top: 1px solid var(--border);
+    flex-wrap: wrap;
   }
 
   .explorer-pagination[hidden] {
     display: none;
+  }
+
+  .pagination-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .pagination-size-label {
+    font-size: 12.5px;
+    color: var(--ink-muted);
+  }
+
+  #explorerPageSize {
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    color: var(--ink);
+    font-family: inherit;
+    font-size: 12.5px;
+    padding: 7px 8px;
   }
 
   #explorerPaginationStatus {
@@ -223,7 +244,7 @@
     color: var(--ink-muted);
   }
 
-  #explorerLoadMoreBtn {
+  .pagination-navbtn {
     background: var(--surface-2);
     border: 1px solid var(--brass);
     color: var(--brass);
@@ -232,7 +253,13 @@
     transition: background 0.2s, color 0.2s;
   }
 
-  #explorerLoadMoreBtn:hover { background: var(--border); }
+  .pagination-navbtn:hover:not(:disabled) { background: var(--border); }
+
+  .pagination-navbtn:disabled {
+    opacity: 0.4;
+    cursor: default;
+    pointer-events: none;
+  }
 
   .explorer-status {
     font-size: 13px;
@@ -406,6 +433,9 @@
 
   .viewer-backbar {
     margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
 
   .btn-back {
@@ -421,6 +451,23 @@
     background: var(--border);
     border-color: var(--brass);
     color: var(--brass);
+  }
+
+  .btn-share {
+    background: var(--surface-2);
+    border: 1px solid var(--brass);
+    color: var(--brass);
+    padding: 7px 13px;
+    white-space: nowrap;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .btn-share:hover { background: var(--border); }
+
+  .btn-share.flash {
+    background: var(--brass);
+    color: var(--surface);
+    border-color: var(--brass);
   }
 
   button {

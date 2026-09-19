@@ -25,8 +25,18 @@
       <p class="explorer-breadcrumb" id="explorerBreadcrumb">Loading library…</p>
       <div class="explorer-grid" id="explorerGrid"></div>
       <div class="explorer-pagination" id="explorerPagination" hidden>
+        <div class="pagination-left">
+          <label for="explorerPageSize" class="pagination-size-label">Show</label>
+          <select id="explorerPageSize">
+            <option value="50">50</option>
+            <option value="100">100</option>
+            <option value="200">200</option>
+            <option value="all">All</option>
+          </select>
+          <button id="explorerBackBtn" type="button" class="pagination-navbtn">← Back</button>
+        </div>
         <span id="explorerPaginationStatus"></span>
-        <button id="explorerLoadMoreBtn" type="button">Load more</button>
+        <button id="explorerLoadMoreBtn" type="button" class="pagination-navbtn">Next →</button>
       </div>
       <div class="explorer-viewer" id="explorerViewer" hidden></div>
     </div>

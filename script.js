@@ -180,7 +180,7 @@
 
   let openGroup = null; // the single currently-open file's group, or null
 
-  function showViewer(article) {
+  function showViewer(article, shareInfo) {
     gridEl.hidden = true;
     paginationEl.hidden = true;
     viewerEl.innerHTML = '';
@@ -193,8 +193,20 @@
     backBtn.textContent = '← Back to folder';
     backBtn.addEventListener('click', showBrowser);
     backBar.appendChild(backBtn);
-    viewerEl.appendChild(backBar);
 
+    if (shareInfo) {
+      const shareBtn = document.createElement('button');
+      shareBtn.type = 'button';
+      shareBtn.className = 'btn-share';
+      shareBtn.textContent = '🔗 Share';
+      shareBtn.addEventListener('click', () => {
+        copyShareLink(shareInfo.folder, shareInfo.folderName, shareInfo.file, shareBtn);
+      });
+      backBar.appendChild(shareBtn);
+      updateUrlForItem(shareInfo.folder, shareInfo.folderName, shareInfo.file);
+    }
+
+    viewerEl.appendChild(backBar);
     viewerEl.appendChild(article);
     viewerEl.hidden = false;
     viewerEl.classList.add('revealed');
@@ -207,7 +219,79 @@
     viewerEl.innerHTML = '';
     gridEl.hidden = false;
     updatePaginationBar();
+    clearShareUrl();
     gridEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  // ---- Share links -----------------------------------------------------
+  //
+  // A share link encodes the item's folder path, the folder's own manifest
+  // name (needed to fetch its manifest file), and the filename itself.
+
+  function buildShareUrl(folder, folderName, filename) {
+    const url = new URL(window.location.href);
+    url.hash = '';
+    const params = new URLSearchParams();
+    if (folder) params.set('folder', folder);
+    params.set('folderName', folderName || ROOT_FOLDER_NAME);
+    params.set('file', filename);
+    url.search = params.toString();
+    return url.toString();
+  }
+
+  function updateUrlForItem(folder, folderName, filename) {
+    window.history.replaceState(null, '', buildShareUrl(folder, folderName, filename));
+  }
+
+  function clearShareUrl() {
+    const url = new URL(window.location.href);
+    url.search = '';
+    window.history.replaceState(null, '', url.pathname + url.hash);
+  }
+
+  async function copyShareLink(folder, folderName, filename, btn) {
+    const link = buildShareUrl(folder, folderName, filename);
+    const original = btn.textContent;
+    const flash = (text) => {
+      btn.textContent = text;
+      btn.classList.add('flash');
+      setTimeout(() => {
+        btn.textContent = original;
+        btn.classList.remove('flash');
+      }, 1600);
+    };
+    try {
+      if (!navigator.clipboard || !window.isSecureContext) throw new Error('clipboard API unavailable');
+      await navigator.clipboard.writeText(link);
+      flash('Link copied!');
+    } catch (e) {
+      try {
+        const ta = document.createElement('textarea');
+        ta.value = link;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.focus();
+        ta.select();
+        document.execCommand('copy');
+        ta.remove();
+        flash('Link copied!');
+      } catch (e2) {
+        flash('Copy failed');
+        log(`couldn't copy share link: ${e2 && e2.message ? e2.message : e2}`, 'err');
+      }
+    }
+  }
+
+  function parseDeepLink() {
+    const params = new URLSearchParams(window.location.search);
+    const file = params.get('file');
+    if (!file) return null;
+    return {
+      folder: params.get('folder') || '',
+      folderName: params.get('folderName') || ROOT_FOLDER_NAME,
+      file,
+    };
   }
 
   async function saveFile(filename, blob) {
@@ -259,7 +343,7 @@
     bgBtn.classList.toggle('active', on);
   }
 
-  function renderFileGroup(baseName, frames) {
+  function renderFileGroup(baseName, frames, shareInfo) {
     const group = { baseName, frames: [], sourceFrames: frames, gif: null, picking: false, transparentColor: DEFAULT_TRANSPARENT_COLOR };
 
     const article = document.createElement('article');
@@ -355,7 +439,7 @@
     header.querySelector('.btn-gif').addEventListener('click', () => openGifBuilder(group));
 
     openGroup = group;
-    showViewer(article);
+    showViewer(article, shareInfo);
   }
 
   async function handleFiles(fileList) {
@@ -787,20 +871,29 @@
     return data;
   }
 
-  const PAGE_SIZE = 50;
+  const PAGE_SIZE_OPTIONS = [50, 100, 200, 'all'];
+  let pageSize = PAGE_SIZE_OPTIONS[0]; // 50, 100, 200, or 'all'
   let folderFiles = [];     // all .art files in the currently browsed folder, sorted
   let folderRelPath = '';
+  let currentFolderName = '';
   let filesOffset = 0;
 
   const paginationEl = document.getElementById('explorerPagination');
   const paginationStatusEl = document.getElementById('explorerPaginationStatus');
-  const loadMoreBtn = document.getElementById('explorerLoadMoreBtn');
+  const nextBtn = document.getElementById('explorerLoadMoreBtn');
+  const backBtn = document.getElementById('explorerBackBtn');
+  const pageSizeSelect = document.getElementById('explorerPageSize');
 
-  function renderGrid(manifest, relativePath) {
+  function effectivePageSize() {
+    return pageSize === 'all' ? (folderFiles.length || 1) : pageSize;
+  }
+
+  function renderGrid(manifest, relativePath, folderName) {
     folderFiles = (manifest.files || [])
       .filter(f => /\.art$/i.test(f))
       .sort((a, b) => a.localeCompare(b));
     folderRelPath = relativePath;
+    currentFolderName = folderName;
     filesOffset = 0;
     breadcrumbEl.textContent = `/${relativePath}`.replace(/\/+/g, '/') || '/';
     renderFilePage();
@@ -818,7 +911,7 @@
       return;
     }
 
-    const pageFiles = folderFiles.slice(filesOffset, filesOffset + PAGE_SIZE);
+    const pageFiles = folderFiles.slice(filesOffset, filesOffset + effectivePageSize());
     for (const filename of pageFiles) {
       const baseName = filename.replace(/\.art$/i, '');
       const folderPrefix = folderRelPath ? `${folderRelPath}/` : '';
@@ -856,21 +949,51 @@
   }
 
   function updatePaginationBar() {
-    if (folderFiles.length <= PAGE_SIZE) {
+    if (folderFiles.length <= PAGE_SIZE_OPTIONS[0]) {
       paginationEl.hidden = true;
       return;
     }
-    const shownEnd = Math.min(filesOffset + PAGE_SIZE, folderFiles.length);
+    const size = effectivePageSize();
+    const shownEnd = Math.min(filesOffset + size, folderFiles.length);
     paginationStatusEl.textContent = `Showing ${filesOffset + 1}–${shownEnd} of ${folderFiles.length}`;
-    const hasMore = shownEnd < folderFiles.length;
-    loadMoreBtn.hidden = !hasMore;
+    backBtn.disabled = filesOffset === 0;
+    nextBtn.disabled = shownEnd >= folderFiles.length;
     paginationEl.hidden = false;
   }
 
-  loadMoreBtn.addEventListener('click', () => {
-    filesOffset += PAGE_SIZE;
+  nextBtn.addEventListener('click', () => {
+    if (nextBtn.disabled) return;
+    filesOffset += effectivePageSize();
     renderFilePage();
     gridEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  backBtn.addEventListener('click', () => {
+    if (backBtn.disabled) return;
+    filesOffset = Math.max(0, filesOffset - effectivePageSize());
+    renderFilePage();
+    gridEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  pageSizeSelect.addEventListener('change', () => {
+    const v = pageSizeSelect.value;
+    pageSize = v === 'all' ? 'all' : parseInt(v, 10);
+    filesOffset = 0;
+    renderFilePage();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (paginationEl.hidden) return;
+    if (document.getElementById('gbOverlay').classList.contains('open')) return;
+    const tag = (e.target && e.target.tagName) || '';
+    if (tag === 'INPUT' || tag === 'SELECT' || tag === 'TEXTAREA') return;
+    if (e.key === 'ArrowLeft' && !backBtn.disabled) {
+      e.preventDefault();
+      backBtn.click();
+    } else if (e.key === 'ArrowRight' && !nextBtn.disabled) {
+      e.preventDefault();
+      nextBtn.click();
+    }
   });
 
   async function loadArtFromServer(url, filename) {
@@ -885,7 +1008,11 @@
         return;
       }
       log(`${filename}: extracted ${frames.length} frame${frames.length === 1 ? '' : 's'}`, 'ok');
-      renderFileGroup(filename.replace(/\.art$/i, ''), frames);
+      renderFileGroup(filename.replace(/\.art$/i, ''), frames, {
+        folder: folderRelPath,
+        folderName: currentFolderName,
+        file: filename,
+      });
       viewerEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
     } catch (err) {
       log(`${filename}: ${err && err.message ? err.message : err}`, 'err');
@@ -900,7 +1027,7 @@
     gridEl.innerHTML = '<p class="explorer-status">Loading…</p>';
     try {
       const manifest = await loadManifest(relativePath, folderName);
-      renderGrid(manifest, relativePath);
+      renderGrid(manifest, relativePath, folderName);
     } catch (err) {
       gridEl.innerHTML = '';
       const p = document.createElement('p');
@@ -971,16 +1098,42 @@
     return li;
   }
 
-  function initExplorer() {
+  function initExplorer(skipAutoOpen) {
     const rootUl = document.createElement('ul');
     rootUl.className = 'tree-root';
     const rootNode = createTreeNode(ROOT_FOLDER_NAME, ROOT_RELATIVE_PATH, 0);
     rootUl.appendChild(rootNode);
     treeEl.appendChild(rootUl);
-    rootNode.querySelector('.tree-row').click();
+    if (!skipAutoOpen) rootNode.querySelector('.tree-row').click();
   }
 
-  initExplorer();
+  async function openDeepLink(target) {
+    const manifest = await loadManifest(target.folder, target.folderName);
+    renderGrid(manifest, target.folder, target.folderName);
+
+    const idx = folderFiles.indexOf(target.file);
+    if (idx === -1) {
+      log(`share link: "${target.file}" wasn't found in that folder`, 'err');
+      return;
+    }
+    const size = effectivePageSize();
+    filesOffset = Math.floor(idx / size) * size;
+    renderFilePage();
+
+    const folderPrefix = target.folder ? `${target.folder}/` : '';
+    const artUrl = `${ART_ROOT}${folderPrefix}${target.file}`;
+    await loadArtFromServer(artUrl, target.file);
+  }
+
+  const deepLinkTarget = parseDeepLink();
+  initExplorer(!!deepLinkTarget);
+  if (deepLinkTarget) {
+    openDeepLink(deepLinkTarget).catch(err => {
+      log(`share link: couldn't open — ${err && err.message ? err.message : err}`, 'err');
+      const rootRow = treeEl.querySelector('.tree-row');
+      if (rootRow) rootRow.click();
+    });
+  }
 
   // ---- Drop zone wiring ---------------------------------------------------
 
