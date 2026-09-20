@@ -20,8 +20,16 @@
   </header>
 
   <section class="explorer">
-    <aside class="explorer-tree" id="explorerTree" aria-label="Folder browser"></aside>
+    <div class="explorer-sidebar">
+      <aside class="explorer-tree" id="explorerTree" aria-label="Folder browser"></aside>
+      <button type="button" id="packerLaunchBtn" class="dat-packer-launch">🛠️ .DAT Packer</button>
+    </div>
     <div class="explorer-main">
+      <div class="explorer-search" role="search">
+        <input type="search" id="explorerSearchInput" placeholder="Search .ART files by name…" aria-label="Search all folders">
+        <button id="explorerSearchBtn" type="button" class="search-btn">Search</button>
+        <button id="explorerSearchClear" type="button" class="search-btn search-clear" hidden>✕ Clear</button>
+      </div>
       <p class="explorer-breadcrumb" id="explorerBreadcrumb">Loading library…</p>
       <div class="explorer-grid" id="explorerGrid"></div>
       <div class="explorer-pagination" id="explorerPagination" hidden>
@@ -63,6 +71,10 @@
   <div class="gif-builder" role="dialog" aria-modal="true" aria-label="GIF builder">
     <div class="gb-header">
       <h2 id="gbTitle">Build GIF</h2>
+      <label class="gb-direction-picker" id="gbDirectionPicker" hidden>
+        Direction
+        <select id="gbDirectionSelect"></select>
+      </label>
       <button class="gb-close" id="gbClose" type="button" aria-label="Close">×</button>
     </div>
     <div class="gb-body">
@@ -138,6 +150,80 @@
           <img id="gbResultImg" alt="Compiled GIF preview">
           <button id="gbDownload" type="button">Download GIF</button>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="hexOverlay" class="hex-panel" role="complementary" aria-label="Hex viewer">
+  <div class="hex-header">
+    <h2 id="hexTitle">Hex view</h2>
+    <span class="hex-meta" id="hexMeta"></span>
+    <button class="hex-close" id="hexClose" type="button" aria-label="Close">×</button>
+  </div>
+  <div class="hex-workspace">
+    <aside class="hex-frame-strip" id="hexFrameStrip" aria-label="ART frames"></aside>
+    <section class="hex-main">
+      <div class="hex-analysis" id="hexAnalysis"></div>
+      <div class="hex-scroll" id="hexScroll">
+        <div class="hex-spacer" id="hexSpacer">
+          <div class="hex-rows" id="hexRows"></div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<div id="packerOverlay" class="modal-overlay">
+  <div class="dat-packer" role="dialog" aria-modal="true" aria-label=".DAT Packer">
+    <div class="packer-header">
+      <h2>.DAT Packer</h2>
+      <button class="packer-close" id="packerClose" type="button" aria-label="Close">×</button>
+    </div>
+    <div class="packer-body">
+      <p class="packer-hint">
+        Build a new <code>.art</code> file out of 8-bit indexed <code>.bmp</code> frames — or drop
+        <code>.png</code> frames and they'll be converted automatically (the first one quantizes its own
+        colors down to a palette; any after that are colour-matched onto frame 0's palette). Every frame
+        ends up sharing frame 0's 256-colour palette in the output. Colour index (0, 0, 255) — pure blue,
+        or fully transparent pixels in a PNG — is read by the game as transparent. Use the ⬇ button on a
+        frame to grab the resulting <code>.bmp</code> any time. This packer only builds simple multi-frame
+        <code>.art</code> files (one static image per frame); it doesn't support the directional-animation
+        layout some creature art uses. Some header fields aren't fully understood, so if a packed file
+        shows up blank or transparent in-game, picking a known-working <code>.art</code> file below as a
+        reference will copy its header and per-frame reserved bytes into the output instead of guessing.
+      </p>
+
+      <div class="packer-template-row">
+        <div class="gb-field">
+          <label for="packerTemplateInput">Reference .art file (optional, recommended)</label>
+          <input type="file" id="packerTemplateInput" accept=".art">
+        </div>
+        <span id="packerTemplateStatus" class="packer-template-status"></span>
+      </div>
+
+      <section id="packerDropzone" class="dropzone packer-dropzone" tabindex="0" role="button" aria-label="Choose or drop .BMP or .PNG frames">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 19h16"/></svg>
+        <p class="dz-label">Drop .BMP or .PNG frames here</p>
+        <p class="dz-hint">or click to browse — add them in the order you want them saved</p>
+        <input type="file" id="packerFileInput" accept=".bmp,.png" multiple hidden>
+      </section>
+
+      <ol id="packerFrameList" class="packer-frame-list"></ol>
+
+      <div class="packer-output-row">
+        <div class="gb-field">
+          <label for="packerFilename">Output filename</label>
+          <input type="text" id="packerFilename" placeholder="myitem">
+        </div>
+        <button id="packerClearBtn" type="button" class="search-btn">Clear frames</button>
+        <button id="packerBuild" type="button" class="gb-compile">Build .art file</button>
+      </div>
+
+      <div id="packerLog" class="log packer-log" aria-live="polite"></div>
+
+      <div class="gb-result" id="packerResult">
+        <button id="packerDownload" type="button">Download .art</button>
       </div>
     </div>
   </div>
