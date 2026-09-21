@@ -1931,3 +1931,132 @@
   outline-offset: 1px;
   z-index: 3;
 }
+
+/* ART palette chooser */
+.palette-picker {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 4px;
+  flex-wrap: wrap;
+}
+
+.palette-label {
+  font-size: 11px;
+  color: var(--ink-muted);
+}
+
+.palette-option {
+  display: grid;
+  grid-template-columns: repeat(16, 4px);
+  grid-template-rows: repeat(16, 4px);
+  gap: 0;
+  padding: 2px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.palette-option span {
+  width: 4px;
+  height: 4px;
+  display: block;
+}
+
+.palette-option:hover {
+  border-color: var(--brass);
+}
+
+.palette-option.selected {
+  border-color: var(--brass-strong);
+  box-shadow: 0 0 0 1px var(--brass);
+}
+
+
+/* Palette preview / generation panel */
+.btn-palette {
+  background: var(--surface-2);
+  border: 1px solid var(--teal);
+  color: var(--teal);
+  padding: 8px 14px;
+  white-space: nowrap;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.btn-palette:hover,
+.btn-palette.active {
+  background: var(--border);
+  border-color: var(--brass);
+  color: var(--brass);
+}
+
+.palette-panel {
+  flex: 1 0 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 2px;
+  padding: 10px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+}
+
+.palette-panel[hidden] { display: none; }
+
+.palette-panel-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.palette-panel-top strong {
+  font-family: var(--font-display);
+  font-size: 13px;
+  color: var(--ink);
+}
+
+.palette-tint-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11px;
+  color: var(--ink-muted);
+  cursor: pointer;
+}
+
+.palette-tint-input {
+  width: 42px;
+  height: 26px;
+  padding: 2px;
+  background: var(--surface-2);
+  border: 1px solid var(--brass);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.palette-tint-input:hover { border-color: var(--teal); }
+
+.palette-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  align-items: flex-start;
+}
+
+.palette-choice {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.palette-choice-label {
+  max-width: 150px;
+  font-size: 10px;
+  color: var(--ink-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

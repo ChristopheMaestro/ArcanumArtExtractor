@@ -100,21 +100,20 @@
       throw new Error('file is truncated before its palette data');
     }
 
-    let activePalette = null;
+    const palettes = new Array(paletteCount);
     for (let p = 0; p < paletteCount; p++) {
       const palBytes = bytes.subarray(offset, offset + 1024);
       offset += 1024;
-      if (p === 0) {
-        const tuples = new Array(256);
-        for (let i = 0; i < 256; i++) {
-          const b = palBytes[i * 4];
-          const g = palBytes[i * 4 + 1];
-          const r = palBytes[i * 4 + 2];
-          tuples[i] = [r, g, b];
-        }
-        activePalette = tuples;
+      const tuples = new Array(256);
+      for (let i = 0; i < 256; i++) {
+        const b = palBytes[i * 4];
+        const g = palBytes[i * 4 + 1];
+        const r = palBytes[i * 4 + 2];
+        tuples[i] = [r, g, b];
       }
+      palettes[p] = tuples;
     }
+    const activePalette = palettes[0];
 
     const infoBytesNeeded = totalImages * 28;
     if (offset + infoBytesNeeded > buf.byteLength) {
@@ -187,6 +186,7 @@
         embeddedTop: imageInfos[idx].hotspotY,
         indices: finalIndices,
         palette: activePalette,
+        palettes,
         dataOffset,
         dataLength: compressedSize,
       };
@@ -207,6 +207,28 @@
 
   function canvasToBlob(canvas) {
     return new Promise((resolve) => canvas.toBlob(resolve, 'image/png'));
+  }
+
+  function frameCanvasForPalette(frame, palette, transparentIndex = 0) {
+    const canvas = document.createElement('canvas');
+    canvas.width = frame.width;
+    canvas.height = frame.height;
+    const rgba = new Uint8ClampedArray(frame.width * frame.height * 4);
+    for (let i = 0; i < frame.indices.length; i++) {
+      const rgb = palette[frame.indices[i]] || [0, 0, 0];
+      const o = i * 4;
+      rgba[o] = rgb[0];
+      rgba[o + 1] = rgb[1];
+      rgba[o + 2] = rgb[2];
+      rgba[o + 3] = frame.indices[i] === transparentIndex ? 0 : 255;
+    }
+    canvas.getContext('2d').putImageData(new ImageData(rgba, frame.width, frame.height), 0, 0);
+    return canvas;
+  }
+
+  function frameBlobForPalette(group, frame) {
+    const palette = group.selectedPalette || group.palettes[0];
+    return canvasToBlob(frameCanvasForPalette(frame, palette, group.transparentIndex));
   }
 
   function frameFilename(baseName, frame) {
@@ -351,7 +373,7 @@
     const zip = new JSZip();
     const folder = zip.folder(group.baseName);
     for (const entry of group.frames) {
-      const blob = await entry.blobPromise;
+      const blob = await frameBlobForPalette(group, entry.frame);
       folder.file(entry.filename, blob);
     }
     const zipBlob = await zip.generateAsync({ type: 'blob' });
@@ -374,11 +396,78 @@
     refreshGroupBlobs(group);
   }
 
-  function setPicking(group, article, bgBtn, on) {
-    group.picking = on;
-    article.classList.toggle('picking-bg', on);
-    bgBtn.textContent = on ? 'Click a pixel in a frame…' : 'Remove background';
-    bgBtn.classList.toggle('active', on);
+  async function generateFolderPaletteSuggestions(shareInfo, excludeFn) {
+    if (!shareInfo) {
+      throw new Error('palette suggestions require a server folder');
+    }
+
+    // Use the exact file list belonging to the folder the user is currently
+    // browsing whenever possible. This is the same list used to render the
+    // explorer, so palette generation cannot accidentally sample some other
+    // manifest/folder.
+    let candidates;
+    if (currentManifest && folderRelPath === shareInfo.folder && currentFolderName === shareInfo.folderName) {
+      candidates = folderFiles.slice();
+    } else {
+      const manifest = await loadManifest(shareInfo.folder, shareInfo.folderName);
+      candidates = (manifest.files || []).filter(f => /\.art$/i.test(f));
+    }
+
+    candidates = candidates
+      .filter(f => /\.art$/i.test(f))
+      .filter(f => !excludeFn(f));
+
+    const totalOtherFiles = candidates.length;
+
+    // Fisher-Yates shuffle: every Generate click gets a fresh random sample.
+    for (let i = candidates.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [candidates[i], candidates[j]] = [candidates[j], candidates[i]];
+    }
+
+    const sample = candidates.slice(0, Math.min(10, candidates.length));
+    const suggestions = [];
+    let sampledCount = 0;
+    let parsedPaletteCount = 0;
+
+    for (const filename of sample) {
+      try {
+        const prefix = shareInfo.folder ? `${shareInfo.folder}/` : '';
+        const resp = await fetch(`${ART_ROOT}${prefix}${filename}`);
+        if (!resp.ok) continue;
+
+        const buf = await resp.arrayBuffer();
+        const frames = await parseArtBuffer(buf);
+        sampledCount++;
+
+        const filePalettes = [];
+        const seenInFile = new Set();
+        for (const frame of frames) {
+          const palettes = Array.isArray(frame.palettes) && frame.palettes.length
+            ? frame.palettes
+            : (frame.palette ? [frame.palette] : []);
+          for (const palette of palettes) {
+            if (!Array.isArray(palette) || palette.length === 0) continue;
+            const key = palette.map(rgbToHex).join('');
+            if (seenInFile.has(key)) continue;
+            seenInFile.add(key);
+            filePalettes.push({ palette, source: filename });
+          }
+        }
+        if (filePalettes.length) parsedPaletteCount += filePalettes.length;
+        suggestions.push(...filePalettes);
+      } catch (_) {
+        // Keep sampling if one ART is malformed or unavailable.
+      }
+    }
+
+    return {
+      suggestions,
+      sampledCount,
+      requestedCount: sample.length,
+      totalOtherFiles,
+      parsedPaletteCount,
+    };
   }
 
   function renderFileGroup(baseName, frames, shareInfo, rawBuffer) {
@@ -386,8 +475,12 @@
     const directionCount = frames.directionCount || 1;
     const framesPerDirection = frames.framesPerDirection || frames.length;
     const group = {
-      baseName, frames: [], sourceFrames: frames, picking: false,
-      transparentColor: paletteBg, rawBuffer: rawBuffer || null,
+      baseName, frames: [], sourceFrames: frames,
+      transparentColor: paletteBg,
+      transparentIndex: 0,
+      rawBuffer: rawBuffer || null,
+      palettes: frames[0] && frames[0].palettes ? frames[0].palettes : [frames[0].palette],
+      selectedPaletteIndex: 0,
       directionCount, framesPerDirection,
       gifByDirection: {}, // one cached builder state per direction, keyed by direction index
     };
@@ -400,8 +493,7 @@
     header.innerHTML = `
       <h2>${baseName}.art</h2>
       <span class="meta">${frames.length} frame${frames.length === 1 ? '' : 's'}</span>
-      <span class="bg-status" hidden><span class="bg-swatch"></span><button class="bg-reset" type="button">Reset</button></span>
-      <button class="btn-bg">Remove background</button>
+      <button class="btn-palette" type="button">Palette</button>
       <button class="btn-hex">Hex</button>
       <button class="btn-gif">Build GIF…</button>
       <button class="btn-zip">Download all (.zip)</button>
@@ -443,7 +535,7 @@
       btn.textContent = 'PNG';
       btn.addEventListener('click', async () => {
         btn.disabled = true;
-        const blob = await entry.blobPromise;
+        const blob = await frameBlobForPalette(group, frame);
         await saveFile(filename, blob);
         btn.disabled = false;
       });
@@ -456,36 +548,148 @@
 
     article.appendChild(grid);
 
-    const bgBtn = header.querySelector('.btn-bg');
-    const bgStatus = header.querySelector('.bg-status');
-    const bgSwatch = header.querySelector('.bg-swatch');
-    const bgReset = header.querySelector('.bg-reset');
+    const paletteBtn = header.querySelector('.btn-palette');
+    const palettePanel = document.createElement('div');
+    palettePanel.className = 'palette-panel';
+    palettePanel.hidden = true;
 
-    bgBtn.addEventListener('click', () => {
-      setPicking(group, article, bgBtn, !group.picking);
+    const palettePanelTop = document.createElement('div');
+    palettePanelTop.className = 'palette-panel-top';
+    const palettePanelTitle = document.createElement('strong');
+    palettePanelTitle.textContent = 'Palettes';
+
+    const tintControl = document.createElement('label');
+    tintControl.className = 'palette-tint-control';
+    const tintLabel = document.createElement('span');
+    tintLabel.textContent = 'Tint';
+    const tintInput = document.createElement('input');
+    tintInput.type = 'color';
+    tintInput.className = 'palette-tint-input';
+    tintInput.value = '#808080';
+    tintInput.title = 'Choose a color to turn the current palette into shades of it';
+    tintInput.setAttribute('aria-label', 'Choose palette tint');
+    tintControl.append(tintLabel, tintInput);
+    palettePanelTop.append(palettePanelTitle, tintControl);
+    palettePanel.appendChild(palettePanelTop);
+
+    const paletteList = document.createElement('div');
+    paletteList.className = 'palette-list';
+    palettePanel.appendChild(paletteList);
+    header.appendChild(palettePanel);
+
+    function paletteKey(palette) {
+      return palette.map(rgbToHex).join('');
+    }
+
+    function rgbToHsl([r, g, b]) {
+      r /= 255; g /= 255; b /= 255;
+      const max = Math.max(r, g, b);
+      const min = Math.min(r, g, b);
+      let h = 0;
+      let s = 0;
+      const l = (max + min) / 2;
+      const d = max - min;
+      if (d) {
+        s = d / (1 - Math.abs(2 * l - 1));
+        switch (max) {
+          case r: h = ((g - b) / d + (g < b ? 6 : 0)) / 6; break;
+          case g: h = ((b - r) / d + 2) / 6; break;
+          default: h = ((r - g) / d + 4) / 6; break;
+        }
+      }
+      return [h, s, l];
+    }
+
+    function hslToRgb(h, s, l) {
+      if (s === 0) {
+        const v = Math.round(l * 255);
+        return [v, v, v];
+      }
+      const hue2rgb = (p, q, t) => {
+        if (t < 0) t += 1;
+        if (t > 1) t -= 1;
+        if (t < 1 / 6) return p + (q - p) * 6 * t;
+        if (t < 1 / 2) return q;
+        if (t < 2 / 3) return p + (q - p) * (2 / 3 - t) * 6;
+        return p;
+      };
+      const q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+      const p = 2 * l - q;
+      return [
+        Math.round(hue2rgb(p, q, h + 1 / 3) * 255),
+        Math.round(hue2rgb(p, q, h) * 255),
+        Math.round(hue2rgb(p, q, h - 1 / 3) * 255),
+      ];
+    }
+
+    function tintPalette(palette, hex) {
+      const n = hex.slice(1);
+      const target = [parseInt(n.slice(0, 2), 16), parseInt(n.slice(2, 4), 16), parseInt(n.slice(4, 6), 16)];
+      const [targetH, targetS] = rgbToHsl(target);
+      return palette.map((rgb, index) => {
+        if (!Array.isArray(rgb) || index === group.transparentIndex) return Array.isArray(rgb) ? rgb.slice() : [0, 0, 0];
+        const [, sourceS, sourceL] = rgbToHsl(rgb);
+        // Keep each original color's lightness, but give it the chosen hue.
+        // This preserves the palette's highlights/shadows while making the whole set
+        // read as shades of the selected color instead of one flat replacement color.
+        const saturation = Math.min(1, targetS * (0.35 + sourceS * 0.65));
+        return hslToRgb(targetH, saturation, sourceL);
+      });
+    }
+
+    function applyPalette(palette, label, buttonToSelect = null) {
+      group.previewPalette = palette;
+      group.selectedPalette = palette;
+      paletteList.querySelectorAll('.palette-option').forEach(b => b.classList.remove('selected'));
+      if (buttonToSelect) buttonToSelect.classList.add('selected');
+      group.sourceFrames.forEach(frame => {
+        const rendered = frameCanvasForPalette(frame, palette, group.transparentIndex);
+        frame.canvas.width = rendered.width;
+        frame.canvas.height = rendered.height;
+        frame.canvas.getContext('2d').drawImage(rendered, 0, 0);
+      });
+      group.frames.forEach(entry => { entry.blobPromise = frameBlobForPalette(group, entry.frame); });
+      log(`${baseName}: previewing ${label}`, 'ok');
+    }
+
+    function renderPaletteButton(palette, label, selected) {
+      const wrap = document.createElement('div');
+      wrap.className = 'palette-choice';
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'palette-option';
+      button.title = label;
+      button.setAttribute('aria-label', label);
+      for (let i = 0; i < 256; i++) {
+        const swatch = document.createElement('span');
+        swatch.style.backgroundColor = rgbToHex(palette[i] || [0, 0, 0]);
+        button.appendChild(swatch);
+      }
+      if (selected) button.classList.add('selected');
+      button.addEventListener('click', () => applyPalette(palette, label, button));
+      const caption = document.createElement('span');
+      caption.className = 'palette-choice-label';
+      caption.textContent = label;
+      wrap.append(button, caption);
+      paletteList.appendChild(wrap);
+    }
+
+    group.previewPalette = group.palettes[0];
+    group.selectedPalette = group.palettes[0];
+    group.palettes.forEach((palette, index) => renderPaletteButton(palette, `Built-in palette ${index + 1}`, index === 0));
+
+    paletteBtn.addEventListener('click', () => {
+      palettePanel.hidden = !palettePanel.hidden;
+      paletteBtn.classList.toggle('active', !palettePanel.hidden);
     });
 
-    grid.addEventListener('click', (e) => {
-      if (!group.picking) return;
-      const canvas = e.target.closest('canvas');
-      if (!canvas) return;
-      const rect = canvas.getBoundingClientRect();
-      const scaleX = canvas.width / rect.width;
-      const scaleY = canvas.height / rect.height;
-      const x = Math.max(0, Math.min(canvas.width - 1, Math.floor((e.clientX - rect.left) * scaleX)));
-      const y = Math.max(0, Math.min(canvas.height - 1, Math.floor((e.clientY - rect.top) * scaleY)));
-      const [r, g, b] = canvas.getContext('2d').getImageData(x, y, 1, 1).data;
-      applyTransparencyKey(group, [r, g, b]);
-      setPicking(group, article, bgBtn, false);
-      bgSwatch.style.background = rgbToHex([r, g, b]);
-      bgStatus.hidden = false;
-      log(`${baseName}: removed background color ${rgbToHex([r, g, b])}`, 'ok');
+    tintInput.addEventListener('input', () => {
+      const sourcePalette = group.selectedPalette || group.palettes[0];
+      const tinted = tintPalette(sourcePalette, tintInput.value);
+      const label = `Tint ${tintInput.value.toUpperCase()}`;
+      applyPalette(tinted, label);
     });
 
-    bgReset.addEventListener('click', () => {
-      applyTransparencyKey(group, paletteBg);
-      bgStatus.hidden = true;
-    });
 
     header.querySelector('.btn-zip').addEventListener('click', (e) => {
       e.target.disabled = true;
