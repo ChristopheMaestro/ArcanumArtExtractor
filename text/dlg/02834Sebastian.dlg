@@ -1,0 +1,246 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Greetings, sir.  Might I ask who you are?}{}{5}{me 0, re 41}{32}{}
+{3}{Hello to you, Sebastian.  Might I ask you a few questions?}{}{5}{me 1, re 41}{36}{}
+{4}{Sir!  Did I hear you correctly? What have I done to offend you?}{}{5}{me 0, re -40}{8}{}
+{5}{Sebastian!  Is there something I've done to offend you?}{}{5}{me 1, re -40}{8}{}
+{8}{I think you heard me just fine, my friend.  I don't like you, and that's just the way of things.  I recommend you get out of here, and fast.}{I think you heard me just fine, madam.  I don't like you, and that's just the way of things.  I recommend you get out of here, and fast.}{}{}{}{}
+{9}{Are you QUITE sure of that opinion, sir?}{}{5}{ch 15}{27}{}
+{10}{Sir!  I'm sure we can find a way to put this behind us...}{}{5}{me 0}{22}{re +15}
+{11}{Sebastian!  Is there no way we can get past this?}{}{5}{me 1}{22}{re +15}
+{12}{Keep talking like that, and you're in for a beating...}{}{5}{}{15}{re -5}
+{13}{E:}{}{5}{}{0}{}
+{15}{[He squares himself to you, whispering menacingly.]  I'm ready whenever you are.}{[He squares himself to you, whispering menacingly.]  I'm ready whenever you are.}{}{}{}{}
+{16}{Perhaps I was a bit out of line.  Accept my apologies...}{}{5}{}{22}{re +15}
+{17}{Your mouth has cost you your life today, stranger...}{}{5}{}{}{co, fl 20}
+{18}{E:}{}{5}{}{0}{}
+{20}{Fine by me.  You're a dead man...}{Fine by me.  You're dead, madam...}{}{}{}{}
+{22}{[He gives you a shrewd look, considering.]  Maybe I've been a little short with you, but I'm not a man to mince words.  State your business, and quickly...}{[He gives you a shrewd look, considering.]  Maybe I've been a little short with you, but I'm not a man to mince words.  State your business, and quickly...}{}{}{}{}
+{23}{Of course, sir.  I was wondering who you were...?}{}{5}{me 0}{32}{re +5}
+{24}{Surely, Sebastian.  Might I ask you a question or two?}{}{5}{me 1}{36}{}
+{25}{E:}{}{5}{}{0}{}
+{27}{[The man takes a moment, then nods slightly.]  I see I might have been a little hasty with my tongue, stranger.  Let's call it an honest mistake and be done with it...}{[The man takes a moment, then nods slightly.]  I see I might have been a little hasty with my tongue, stranger.  Let's call it an honest mistake and be done with it...}{}{}{}{}
+{28}{I feel the same way.  Might I ask your name, sir?}{}{5}{me 0}{32}{}
+{29}{Of course, Sebastian.  Do you have a moment?}{}{5}{me 1}{36}{}
+{30}{E:}{}{5}{}{0}{}
+{32}{The name's Sebastian.}{The name's Sebastian.}{}{}{}{}
+{33}{Greetings, sir.  Have you a moment?}{}{5}{}{36}{}
+{36}{What is it you need?}{What is it you need?}{}{}{}{}
+{37}{I've spoken with Edward Willoughsby about you...}{}{5}{}{56}{}
+{38}{Tell me a little about the Boil, Sebastian...}{}{5}{lf2 1, qu1161 0, gf2187 0, lf6 0}{97}{}
+{39}{Tell me again what you're doing here, Sebastian...}{}{5}{lf3 1, qu1161 0, gf2187 0, lf6 0}{112}{}
+{40}{I might be able to take care of that "problem", Sebastian...}{}{5}{lf4 1, qu1161 1, gf2187 0, lf6 0}{187}{}
+{41}{I've yet to take care of that "problem", Sebastian...}{}{5}{qu1161 2, gf2187 0, lf6 0}{202}{}
+{42}{I've taken care of that "problem", Sebastian...}{}{5}{qu1161 2, gf2187 1, lf6 0}{207}{}
+{43}{I might be able to take care of that "problem", Sebastian...}{}{5}{lf4 1, qu1162 1, gf2188 0, lf6 0}{187}{}
+{44}{I've yet to take care of that "problem", Sebastian...}{}{5}{qu1162 2, gf2188 0, lf6 0}{202}{}
+{45}{I've taken care of that "problem", Sebastian...}{}{5}{qu1162 2, gf2188 1, lf6 0}{209}{}
+{46}{You said you might be interested in helping me, Sebastian?}{}{5}{lf6 1, lf7 0}{212}{}
+{47}{Are you sure you won't join me, Sebastian?}{}{5}{lf7 1}{242}{jo 0 237}
+{48}{E:}{}{5}{}{0}{}
+{56}{Yes...Mr. Willoughsby mentioned that someone might be stopping in here for a drink.  [He looks around.]  I can respect a man who's got the stones to make a trip over to the Boil...}{Yes...Mr. Willoughsby mentioned that someone might be stopping in here for a drink.  [He looks around.]  I can respect a lady with the backbone to make a trip over to the Boil...}{}{}{}{}
+{57}{Well...I suppose you could call me a "concerned" citizen...}{}{5}{}{61}{}
+{58}{E:}{}{5}{}{0}{}
+{61}{[He gives you an appraising look.]  I see.  Mr. Willoughsby told you of his..."plans"...over here in the Boil?}{[He gives you an appraising look.]  I see.  Mr. Willoughsby told you of his..."plans"...over here in the Boil?}{}{}{}{}
+{62}{He mentioned them.  Perhaps you might elaborate...?}{}{5}{}{66}{}
+{63}{E:}{}{5}{}{0}{}
+{66}{Well...[He lowers his voice, leaning towards you.]...Mr. Willoughsby has his concerns about what's happening here in the Boil.  Do you know anything about the place?}{Well...[He lowers his voice, leaning towards you.]...Mr. Willoughsby has his concerns about what's happening here in the Boil.  Do you know anything about the place?}{}{}{}{}
+{67}{I've been around...}{}{5}{}{71}{re +5}
+{68}{Not much, actually...}{}{5}{}{76}{re -5}
+{69}{E:}{}{5}{}{0}{}
+{71}{[He gives you an approving nod.]  Well, then I'm sure you know about Clan Maug and Pollock's Gang...}{[He gives you an approving nod.]  Well, then I'm sure you know about Clan Maug and Pollock's Gang...}{}{}{}{}
+{72}{Sure...who doesn't?}{}{5}{}{107}{re +5}
+{73}{Well...perhaps you could refresh my memory...}{}{5}{lf1 0}{76}{lf1 1, re -5}
+{74}{Well...perhaps you could refresh my memory...}{}{5}{lf1 1}{97}{}
+{75}{E:}{}{5}{}{0}{}
+{76}{[Sebastian seems a bit disappointed in your lack of knowledge.]  Hmmm.  The Boil's not a place you want to walk into without knowing what it's about.  Most places are like that, actually.  Remember that...might save your life someday...}{[Sebastian seems a bit disappointed in your lack of knowledge.]  Hmmm.  The Boil's not a place you want to walk into without knowing what it's about.  Most places are like that, actually.  Remember that...might save your life someday...}{}{}{}{}
+{77}{I appreciate the tip, Sebastian.  You were saying?}{}{5}{}{97}{re +5}
+{78}{I didn't ask for your advice, friend.  Keep it to yourself, next time...}{}{5}{}{93}{re -5}
+{79}{[Smirk.]  I was testing YOU, friend.  So far, you're not impressing me...}{}{5}{ps 12}{86}{re +5}
+{80}{[Smirk.]  I was testing YOU, friend.  So far, you're not impressing me...}{}{5}{ps -11}{89}{}
+{81}{E:}{}{5}{}{0}{}
+{86}{[Sebastian smiles; your ruse seems to have worked.]  I like your technique, friend.  Have to admit...it caught me a bit off guard.  Well done...}{[Sebastian smiles; your ruse seems to have worked.]  I like your technique, friend.  Have to admit...it caught me a bit off guard.  Well done...}{}{}{}{}
+{87}{Thank you.  Why don't you tell me what YOU think of this place...}{}{5}{}{97}{}
+{89}{[Sebastian smirks; your ruse seems to have failed.]  Nice try, friend, but your persuading no one around here.  I'm not sure I like the way this conversation is going...perhaps Mr. Willoughsby was mistaken in referring you to me...}{[Sebastian smirks; your ruse seems to have failed.]  Nice try, friend, but your persuading no one around here.  I'm not sure I like the way this conversation is going...perhaps Mr. Willoughsby was mistaken in referring you to me...}{}{}{}{}
+{90}{Please, accept my apologies.  I'd like to hear what you have to say...}{}{5}{}{97}{}
+{91}{Hmmm.  He's going to need to refer you to the morgue, fool.}{}{5}{}{}{co, fl 20}
+{92}{This has been a waste of my time.  Good day.}{}{5}{}{0}{}
+{93}{[Anger flashes in his eyes, then a cool resolve.]  Fine by me, stranger.  I don't care one way or another whether or not you end up bleeding into the gutter.  Perhaps we ought to end this conversation...}{[Anger flashes in his eyes, then a cool resolve.]  Fine by me, stranger.  I don't care one way or another whether or not you end up bleeding into the gutter.  Perhaps we ought to end this conversation...}{}{}{}{}
+{94}{Please, accept my apologies.  I'd like to hear what you have to say...}{}{5}{}{97}{re +5}
+{95}{No, you're mistaken.  I'm going to leave YOU bleeding in the gutter...}{}{5}{}{}{co, fl 20}
+{96}{Yes.  Good idea.  I bid you farewell.}{}{5}{}{0}{re -5}
+{97}{Well, the Boil is a rough place.  There are two gangs here which control most of the criminal activity...one is Clan Maug, and the other is Pollock's Gang.}{Well, the Boil is a rough place.  There are two gangs here which control most of the criminal activity...one is Clan Maug, and the other is Pollock's Gang.}{}{}{}{lf2 1}
+{98}{I see.  Tell me a little about them...}{}{5}{}{102}{}
+{99}{K:}{}{5}{}{36}{}
+{100}{E:}{}{5}{}{0}{}
+{102}{Well, Pollock's Gang is a group of rag-tag ruffians who run things in the South Boil.  Clan Maug is holed up in the Bentley, an old hotel just north of here.  They're a tad smarter than the boys from Pollock's Gang, but no less deadly...}{Well, Pollock's Gang is a group of rag-tag ruffians who run things in the South Boil.  Clan Maug is holed up in the Bentley, an old hotel just north of here.  They're a tad smarter than the boys from Pollock's Gang, but no less deadly...}{}{}{}{}
+{103}{Go on...}{}{5}{}{107}{}
+{104}{E:}{}{5}{}{0}{}
+{107}{As you can well imagine, Clan Maug and Pollock's Gang aren't very fond of each other.  There's quite a few disagreements between members of the gangs, and most of them end up with people dead...}{As you can well imagine, Clan Maug and Pollock's Gang aren't very fond of each other.  There's quite a few disagreements between members of the gangs, and most of them end up with people dead...}{}{}{}{}
+{108}{Interesting.  What does Mr. Willoughsby have to do with all of this?}{}{5}{}{112}{}
+{109}{E:}{}{5}{}{0}{}
+{112}{Well, Mr. Willoughsby is an important man here in the city.  He's a little more than concerned that the "element" here in the Boil will spill over into the better parts of Tarant.  And, of course, he just can't have that happen...}{Well, Mr. Willoughsby is an important man here in the city.  He's a little more than concerned that the "element" here in the Boil will spill over into the better parts of Tarant.  And, of course, he just can't have that happen...}{}{}{}{lf3 1}
+{113}{I take it that's where you come in?}{}{5}{}{117}{}
+{114}{E:}{}{5}{}{0}{}
+{117}{[Sebastian smiles, wolfishly.]  Exactly.}{[Sebastian smiles, wolfishly.]  Exactly.}{}{}{}{}
+{118}{Hmmm.  Sounds like something I might want to get involved in...}{}{5}{}{122}{}
+{119}{Well, I wish you luck, Sebastian.  Good day to you...}{}{5}{}{0}{}
+{122}{[Sebastian looks at you, eyes narrowing.]  Really?  You think you're cut out for this sort of work, friend?}{[Sebastian looks at you, eyes narrowing.]  Really?  You think you're cut out for this sort of work, friend?}{}{}{}{}
+{123}{Are you questioning my mettle?  I'd not recommend it...}{}{5}{}{-11}{}
+{124}{I think I'd be up for the task...}{}{5}{}{142}{}
+{125}{What do you mean..."this sort of work"?}{}{5}{}{137}{}
+{126}{E:}{}{5}{}{0}{}
+{127}{[He gives you a hard look, then nods approvingly.]  Yes, you seem to know your way around a fight.  Nothing personal...}{[He gives you a hard look, then nods approvingly.]  Yes, you seem to know your way around a fight.  Nothing personal...}{}{}{}{}
+{128}{You could say that.  Now...the job...}{}{5}{}{142}{}
+{130}{[Sebastian chuckles, seemingly unimpressed.]  You can't talk your way through a fight around here, boy.  And never with me.  Are we clear on that?}{[Sebastian chuckles, seemingly unimpressed.]  You can't talk your way through a fight around here, girl.  And never with me.  Are we clear on that?}{}{}{}{}
+{131}{Yes, I suppose.  But I'm still interested in working with you...}{}{5}{}{142}{}
+{132}{Threaten me again, fool, and you'll be filling a grave...}{}{5}{}{}{co, fl 20}
+{133}{I tire of this conversation.  Good day to you...}{}{5}{}{0}{}
+{137}{What sort of work, you ask?  [Sebastian gives you a dark look.]  Well, what sort of work do you think it is, friend?  There's an infestation here in the Boil...someone's got to take care of it.}{What sort of work, you ask?  [Sebastian gives you a dark look.]  Well, what sort of work do you think it is, friend?  There's an infestation here in the Boil...someone's got to take care of it.}{}{}{}{}
+{138}{Ah.  Well, I'm listening, Sebastian.}{}{5}{}{142}{}
+{139}{I don't think I'd be interested in that sort of thing.  Good day to you...}{}{5}{}{0}{}
+{142}{Good, good.  Listen, I know a little bit about you...Mr. Willoughsby knows much about what happens here in Tarant and abroad, and he keeps me informed.  I'm not exactly sure what it is that you're looking for, but I might be able to help.}{Good, good.  Listen, I know a little bit about you...Mr. Willoughsby knows much about what happens here in Tarant and abroad, and he keeps me informed.  I'm not exactly sure what it is that you're looking for, but I might be able to help.}{}{}{}{}
+{143}{What is it you're proposing, Sebastian?}{}{5}{}{147}{}
+{147}{What I'm saying is...you help me take care of my problem here in the Boil, then I might be persuaded to help you with yours.  What do you think?}{What I'm saying is...you help me take care of my problem here in the Boil, then I might be persuaded to help you with yours.  What do you think?}{}{}{}{}
+{148}{Sounds intriguing.  Let's continue...}{}{5}{}{157}{re +5}
+{149}{Unfortunately, I don't need your help.  Thanks anyway.  Good bye...}{}{5}{}{0}{re -5}
+{157}{[Sebastian nods his head, then lowers his voice.]  Well, as you know, Darien Maug and Pollock have always run things here in the Boil.  I'm looking to take care of that particular situation...}{[Sebastian nods his head, then lowers his voice.]  Well, as you know, Darien Maug and Pollock have always run things here in the Boil.  I'm looking to take care of that particular situation...}{}{}{}{}
+{158}{Well, I already "took care" of Pollock...}{}{5}{gf2187 1, gf2188 0}{167}{re + 5}
+{159}{Well, I already "took care" of Damien Maug...}{}{5}{gf2187 0, gf2188 1}{170}{re + 5}
+{160}{Sorry, old boy.  I've killed them both already...}{}{5}{gf2187 1, gf2188 1}{173}{re +10}
+{161}{I see.  What are you looking to do?}{}{5}{gf2187 0, gf2188 0}{176}{}
+{167}{Really?  That was you?  My hat's off to you, sir.  I heard about that job...nice and messy...}{Really?  That was you?  My hat's off to you, madam.  I heard about that job...nice and messy...}{}{}{}{}
+{168}{Thank you.  So what are looking to do?}{}{5}{}{180}{}
+{170}{Really?  That was you?  My hat's off to you, sir.  I heard about that job...nice and messy...}{Really?  That was you?  My hat's off to you, madam.  I heard about that job...nice and messy...}{}{}{}{}
+{171}{Thank you.  So what are looking to do?}{}{5}{}{182}{}
+{173}{What?  I'd heard about Pollock, but Maug as well?  [Sebastian looks duly impressed.]  Well, it seems you've already held up your end of the bargain, my friend...}{What?  I'd heard about Pollock, but Maug as well?  [Sebastian looks duly impressed.]  Well, it seems you've already held up your end of the bargain, my friend...}{}{}{}{}
+{174}{It was nothing.  And what about YOUR end, Sebastian?}{}{5}{}{212}{}
+{176}{Well, usually with all of the fighting that goes on around here, the gangs tend to weed each other out.  But lately, the word is that Clan Maug is growing more powerful by the day...that it's only a matter of time before Darien Maug takes over ALL of the operations here in the Boil...}{Well, usually with all of the fighting that goes on around here, the gangs tend to weed each other out.  But lately, the word is that Clan Maug is growing more powerful by the day...that it's only a matter of time before Darien Maug takes over ALL of the operations here in the Boil...}{}{}{}{}
+{177}{So what?}{}{5}{}{178}{}
+{178}{If Maug consolidates his power here in the Boil without any opposition, then what's to stop him from corrupting the rest of the city in the same manner?  Get my meaning, friend?}{If Maug consolidates his power here in the Boil without any opposition, then what's to stop him from corrupting the rest of the city in the same manner?  Get my meaning, friend?}{}{}{}{}
+{179}{Clearly.  You want to get rid of Maug.}{}{5}{}{187}{}
+{180}{Well, with Pollock dead, Maug has consolidated his power here in the Boil.   What's to stop him from corrupting the rest of the city in the same manner?  Get my meaning, friend?}{Well, with Pollock dead, Maug has consolidated his power here in the Boil.   What's to stop him from corrupting the rest of the city in the same manner?  Get my meaning, friend?}{}{}{}{}
+{181}{Clearly.  You want to get rid of Maug.}{}{5}{}{187}{}
+{182}{Well, with Maug dead, Pollock has consolidated his power here in the Boil.   What's to stop him from corrupting the rest of the city in the same manner?  Get my meaning, friend?}{Well, with Maug dead, Pollock has consolidated his power here in the Boil.   What's to stop him from corrupting the rest of the city in the same manner?  Get my meaning, friend?}{}{}{}{}
+{183}{Clearly.  You want to get rid of Pollock.}{}{5}{}{197}{}
+{187}{Here's what I'm proposing.  You get rid of Darien Maug for me, and I might think about helping you take care of your problem...whatever it might be...}{Yes.  Here's what I'm proposing.  You get rid of Darien Maug for me, and I might think about helping you take care of your problem...whatever it might be...}{}{}{}{qu1162 1}
+{188}{Done.}{}{5}{}{192}{qu1162 2}
+{189}{Are you mad?  As if I'd betray my own gang!  Die, fool!}{}{5}{rp 1002}{}{co,fl 20}
+{190}{Hmmm.  Interesting.  I'll think about it and get back to you...}{}{5}{}{}{lf4 1, fl 191}
+{191}{You do that.  I'll be waiting here if you want to talk about it further...}{You do that.  I'll be waiting here if you want to talk about it further...}{}{}{}{}
+{192}{Good.  When you've taken care of the problem, come back here and we'll talk further...}{Good.  When you've taken care of the problem, come back here and we'll talk further...}{}{}{}{}
+{193}{E:}{}{5}{}{0}{}
+{197}{Here's what I'm proposing.  You get rid of Pollock for me, and I might think about helping you take care your problem...whatever it might be...}{Here's what I'm proposing.  You get rid of Pollock for me, and I might think about helping you take care your problem...whatever it might be...}{}{}{}{qu1161 1}
+{198}{Done.}{}{5}{}{192}{qu1161 2}
+{199}{Are you mad?  As if I'd betray my own gang!  Die, fool!}{}{5}{rp 1003}{}{co,fl 20}
+{200}{Hmmm.  Interesting.  I'll think about it and get back to you...}{}{5}{}{}{lf4 1, fl 191}
+{202}{Well, good luck you.   Come back here when you have...}{Well, good luck you.   Come back here when you have...}{}{}{}{}
+{203}{E:}{}{5}{}{0}{}
+{207}{Yes...I'd heard about that.  Nicely done.}{Yes...I'd heard about that.  Nicely done.}{}{}{}{qu1161 4}
+{208}{So...you said you might be interested in helping me?}{}{5}{}{212}{}
+{209}{Yes...I'd heard about that.  Nicely done.}{Yes...I'd heard about that.  Nicely done.}{}{}{}{qu1162 4}
+{210}{So...you said you might be interested in helping me?}{}{5}{}{212}{}
+{212}{Yes...you seem a fairly competent fellow.  What exactly are you involved in?}{Yes...you seem a fairly competent woman.  What exactly are you involved in?}{}{}{}{lf6 1}
+{213}{Well, that's a long story...[Tell it to him.]}{}{5}{}{222}{}
+{214}{Sorry, I can't say.  But I still expect you to live up to your obligation...}{}{5}{}{217}{}
+{215}{Perhaps we'll speak of this later.  Good day to you...}{}{5}{}{0}{}
+{217}{[He shakes his head, looking back into his ale.]  Sorry, friend.  I don't go waltzing blind into ANY situation without knowing what I'm getting into.  You keep being closed-mouthed about it, and you'll be going on alone...}{[He shakes his head, looking back into his ale.]  Sorry, friend.  I don't go waltzing blind into ANY situation without knowing what I'm getting into.  You keep being closed-mouthed about it, and you'll be going on alone...}{}{}{}{}
+{218}{Fine.  It's a long story...[Tell it to him.]}{}{5}{}{222}{}
+{219}{Forget it.  That wasn't part of the deal.  Good day to you.}{}{5}{}{0}{}
+{220}{Perhaps we'll speak of this later.  Good day to you...}{}{5}{}{0}{}
+{222}{[He waits a while before continuing.]  So.  You're telling me that all of this happened to you because you were the sole survivor of the IFS Zephyr disaster?}{[He waits a while before continuing.]  So.  You're telling me that all of this happened to you because you were the sole survivor of the IFS Zephyr disaster?}{}{}{}{}
+{223}{Yes.}{}{5}{}{232}{}
+{224}{No...but it was a good joke, wasn't it old boy?}{}{5}{}{227}{}
+{225}{E:}{}{5}{}{0}{}
+{227}{[Sebastian looks a little confused.]  Hmmm.  Your story doesn't seem to ring true, friend.  Perhaps it's best if we part ways here...}{[Sebastian looks a little confused.]  Hmmm.  Your story doesn't seem to ring true, friend.  Perhaps it's best if we part ways here...}{}{}{}{}
+{228}{E:}{}{5}{}{0}{}
+{232}{Well, I'm no hero, but I do like a good fight.  You seem the trustworthy sort, and I might be willing to lend a hand...}{Well, I'm no hero, but I do like a good fight.  You seem the trustworthy sort, and I might be willing to lend a hand...}{}{}{}{}
+{233}{So, you'll join me then...?}{}{5}{}{242}{jo 0 237}
+{237}{Surely, friend.  Why don't we be on our way...}{Surely, friend.  Why don't we be on our way...}{}{}{}{}
+{238}{Welcome aboard, Sebastian.}{}{5}{}{0}{}
+{242}{Was there anything else?}{Was there anything else?}{}{}{}{lf7 1}
+{243}{K:}{}{5}{}{36}{}
+{244}{E:}{}{5}{}{0}{}
+{256}{What can I do for you?}{What can I do for you?}{}{}{}{}
+{257}{B:}{}{5}{wa 0}{}{}
+{258}{I've a few questions for you, Sebastian...}{}{5}{wa 0}{264}{}
+{259}{I'd like you to do something for me, Sebastian...}{}{5}{wa 0}{354}{}
+{260}{What sort of things can you make, Sebastian?}{}{5}{wa 0}{}{su}
+{261}{You can stop waiting now, Sebastian...}{}{5}{wa 1}{376}{uw 0 362}
+{262}{E:}{}{5}{}{0}{}
+{263}{Duh...}{}{-4}{}{}{fl 550}
+{264}{What do you need to know?}{What do you need to know?}{}{}{}{}
+{265}{I'd like to know a few things about you, Sebastian...}{}{5}{}{}{ce}
+{266}{Do you know anything of the Isle of Thanatos, Sebastian?}{}{5}{ss 17, ss -17}{541}{}
+{267}{Sebastian!  What are we going to do now?}{}{5}{ss 24, ss -24}{545}{}
+{268}{What do you know about this place? [Shrouded Hills.]}{}{5}{ia 1}{388}{}
+{269}{What do you know about this place? [Tarant.]}{}{5}{ia 21}{392}{}
+{270}{What do you know about this place? [Black Root.]}{}{5}{ia 3}{396}{}
+{271}{What do you know about this place? [Stillwater.]}{}{5}{ia 10}{400}{}
+{272}{What do you know about this place? [Thanatos.]}{}{5}{ia 23}{405}{}
+{273}{You seem upset with me, Sebastian!  Is there anything I can do for you?}{}{5}{re -20}{330}{}
+{274}{E:}{}{5}{}{0}{}
+{330}{I'm a little less than happy about the way this whole operation is run, friend.  Of course, a bottle of wine always goes a long way towards helping a man to forget his troubles...}{I'm a little less than happy about the way this whole operation is run, friend.  Of course, a bottle of wine always goes a long way towards helping a man to forget his troubles...}{}{}{}{}
+{331}{Come now, Sebastian...is that really necessary?}{}{5}{ch 20}{336}{re +20}
+{332}{I see.  And I just happen to have some right here...}{}{5}{in 3608, ch -19}{-17}{re +20}
+{333}{I'll look into getting you some, Sebastian...}{}{5}{in -3608, ch -19}{344}{}
+{334}{Oh, the foolish things we dream of!  Let's go, shall we?}{}{5}{}{}{re -5, fl 346}
+{336}{[Sebastian gives you a shrewd look, then smiles.]  Hmmm.  Maybe I'M being a bit unreasonable here.  Let's just forget I ever said anything...}{[Sebastian gives you a shrewd look, then smiles.]  Hmmm.  Maybe I'M being a bit unreasonable here.  Let's just forget I ever said anything...}{}{}{}{}
+{337}{E:}{}{5}{}{0}{}
+{338}{[He takes the bottle, finishing it in one long drink.]  Ah.  Let's get moving, shall we?}{[He takes the bottle, finishing it in one long drink.]  Ah.  Let's get moving, shall we?}{}{}{}{}
+{339}{So you'll join me again, Sebastian?}{}{5}{}{376}{jo 0 378}
+{340}{E:}{}{5}{}{0}{}
+{344}{The sooner the better, friend...}{The sooner the better, friend...}{}{}{}{}
+{345}{E:}{}{5}{}{0}{}
+{346}{I see.  I suppose we all have to make our choices, friend...}{I see.  I suppose we all have to make our choices, friend...}{}{}{}{}
+{354}{What do you need me to do?}{What do you need me to do?}{}{}{}{}
+{355}{Move away, Sebastian.}{}{5}{}{0}{so}
+{356}{Move a bit closer, Sebastian.}{}{5}{}{0}{sc}
+{357}{Wait here for a while...}{}{5}{wa 0}{365}{wa}
+{358}{You can stop waiting now, Sebastian.}{}{5}{wa 1}{376}{uw 0 362}
+{359}{I think you'd best leave the group.}{}{5}{}{368}{lv}
+{360}{[Back]}{}{5}{}{256}{}
+{362}{Let's get moving...}{Let's get moving...}{}{}{}{}
+{363}{E:}{}{5}{}{0}{}
+{365}{I'll wait here for a little while, but don't be too long...}{I'll wait here for a little while, but don't be too long...}{}{}{}{}
+{366}{E:}{}{5}{}{0}{}
+{368}{I see.  Well, good luck to you.}{I see.  Well, good luck to you.}{}{}{}{lf31 1}
+{369}{E:}{}{5}{}{0}{}
+{371}{Greetings, friend.  What brings you back here?}{Greetings, friend.  What brings you back here?}{}{}{}{}
+{372}{Will you join me?}{}{5}{}{376}{jo 0 378}
+{373}{You seem upset with me, Sebastian!  Is there anything I can do for you?}{}{5}{re -20}{330}{}
+{374}{E:}{}{5}{}{0}{}
+{375}{Duh...}{}{-4}{}{}{fl 550}
+{376}{Was there anything else?}{Was there anything else?}{}{}{}{}
+{377}{E:}{}{5}{}{0}{}
+{378}{Yes, that sounds like a good idea.  Let's get going...}{Yes, that sounds like a good idea.  Let's get going...}{}{}{}{lf31 0}
+{379}{E:}{}{5}{}{0}{}
+{381}{Hmmm.  Kept me waiting quite a long time, didn't you?}{Hmmm.  Kept me waiting quite a long time, didn't you?}{}{}{}{}
+{382}{Sorry about that Sebastian.  Will you join me again?}{}{5}{}{376}{jo 0 386}
+{383}{You seem upset with me, Sebastian!  Is there anything I can do for you?}{}{5}{re -20}{330}{}
+{384}{E:}{}{5}{}{0}{}
+{385}{Duh...}{}{-4}{}{}{fl 550}
+{386}{Yes, I suppose I'm ready to go...}{Yes, I suppose I'm ready to go...}{}{}{}{}
+{387}{E:}{}{1}{}{0}{}
+{388}{Shrouded Hills...a small mining town.  Not much happens here as far as I know...}{Shrouded Hills...a small mining town.  Not much happens here as far as I know...}{}{}{}{}
+{389}{K:}{}{1}{}{256}{}
+{390}{E:}{}{1}{}{0}{}
+{392}{This is Tarant.  The city's got most of what you might need...nice place for a technologist.  [Sebastian smiles, darkly.] And always plenty of work for a man who's not afraid to get his hands a little dirty...}{This is Tarant.  The city's got most of what you might need...nice place for a technologist.  [Sebastian smiles, darkly.] And always plenty of work for a man who's not afraid to get his hands a little dirty...}{}{}{}{}
+{393}{K:}{}{1}{}{256}{}
+{394}{E:}{}{1}{}{0}{}
+{396}{This is Black Root.  Watch yourself around here...lots of drunk sailors with nothing to do but start trouble.  If your looking for information, the Sour Barnacle, down on the docks, is always a good place to start...}{This is Black Root.  Watch yourself around here...lots of drunk sailors with nothing to do but start trouble.  If your looking for information, the Sour Barnacle, down on the docks, is always a good place to start...}{}{}{}{}
+{397}{K:}{}{1}{}{256}{}
+{398}{E:}{}{1}{}{0}{}
+{400}{Stillwater?  They make good weapons around here...I know that much.  And a man like me is always in the market for good weapons...}{Stillwater?  They make good weapons around here...I know that much.  And a man like me is always in the market for good weapons...}{}{}{}{}
+{401}{K:}{}{1}{}{256}{}
+{402}{E:}{}{1}{}{0}{}
+{405}{What do I know about Thanatos?  What don't I know about it, old chap?  Uncharted territories, evil man-eating beasts, and more myths and legends than a damned elven historian!  Ha HA!  No place I'd rather be!}{What do I know about Thanatos?  What don't I know about it, madam?  Uncharted territories, evil man-eating beasts, and more myths and legends than a damned elven historian!  Ha HA!  No place I'd rather be!}{}{}{}{}
+{406}{K:}{}{1}{}{256}{}
+{407}{E:}{}{1}{}{0}{}
+{541}{Thanatos?  Not much, other than it's supposed to be about the most dangerous place there is.  I'm not one to shy away from a scrap, but I don't especially look forward to visiting it...}{Thanatos?  Not much, other than it's supposed to be about the most dangerous place there is.  I'm not one to shy away from a scrap, but I don't especially look forward to visiting it...}{}{}{}{}
+{542}{One or two more things...}{}{5}{}{256}{}
+{543}{E:}{}{1}{}{0}{}
+{545}{What do you think we're going to do?  We're going to turn off this game and go to bed!  Sometimes I wonder about you...}{What do you think we're going to do?  We're going to turn off this game and go to bed!  Sometimes I wonder about you...}{}{}{}{}
+{546}{One or two more things...}{}{5}{}{256}{}
+{547}{E:}{}{1}{}{0}{}
+{550}{[Sebastian gives you a hard look, disapproving of your current mental state.]}{[Sebastian gives you a hard look, disapproving of your current mental state.]}{}{}{}{}
+

@@ -1,0 +1,248 @@
+// need a gang of thieves on outskirts of Black Root
+// need a silver dagger with name 2002 on a thief above
+// need a case of 5 gold bars with name 5601 on Mayor
+// newspaper with name 5201 must be available somewhere (perhaps in Tarant)
+// in all 10 Tarant Black Root guards' death scripts: increment global 1003
+
+// lines 120,260,350 and 390 need a global FLAG added to say that Black root has rejoined Cumbria
+
+//lf1 1 - already asked Mayor for taxes
+
+//lf2 1 - talked to Mayor before
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+{1}{G:}{G:}{}{}{}{}
+	{2}{I am here on behalf of King Praetor.}{}{5}{lf1 0, qu 1000 2}{30}{lf2 1, lf1 1}
+	{3}{I have decided to locate your dagger for you.}{}{5}{qu 1005 1}{90}{qu 1005 2}
+	{4}{I have retrieved your dagger.}{}{5}{qb 1005 3, in 2002}{100}{}
+	{5}{T:11}{}{5}{qu1005 4, re 41}{20}{}
+	{6}{Please, sir, I mean no offense.}{}{5}{ch-9, re-40}{470}{re41}	
+	{7}{Pray-tor.Taxiz.}{}{-4}{qu 1000 2}{360}{lf2 1}
+	{8}{guurf.}{}{-4}{}{0}{}
+	{9}{Who are you?}{}{5}{re41, lf2 0}{400}{lf2 1}
+	{10}{You have no more protection from Tarant, Mayor.}{}{5}{qb1000 3, gv 1003 6}{200}{}
+	{11}{I haven't located your dagger yet.}{}{5}{qu 1005 2, ni2002}{20}{}
+	{12}{I wanted you to know I have your taxes.}{}{5}{qb1000 3, in 5601, lf5 0}{140}{re -15}
+	{13}{I do not believe I heard you correctly, sir.}{}{5}{ch10, re-40}{490}{re50}
+	{14}{E:}{}{5}{}{0}{}
+	
+{20}{Is there anything else?}{Is there anything else?}{}{}{}{}
+	{21}{N:}{}{5}{}{0}{}
+	{23}{Have you reconsidered giving me the taxes, perhaps?}{}{5}{}{420}{re +5}
+
+{30}{What do you want?}{What do you want?}{}{}{}{}
+	{31}{I'm here to collect the taxes Black Root owes.}{}{5}{}{40}{lf 1 1}
+	{32}{You have no more protection from Tarant, Mayor.}{}{5}{gv 1003 6}{200}{}
+	{33}{I believe this newspaper editorial will interest you.}{}{5}{gv 1001 1, in 5201}{150}{}
+	{34}{I wanted you to know I have your taxes.}{}{5}{in 5601}{140}{re -15}
+	{35}{F:}{}{5}{}{0}{}
+
+{40}{Black Root is allied with the Unified Kingdom now. I collect taxes only for Tarant.}{Black Root is allied with the United Kingdom now. I collect taxes only for Tarant.}{}{}{}{gv 1001 1}
+	{41}{King Praetor would disagree.}{}{5}{}{50}{}
+	{42}{I will collect those taxes by any means neccessary.}{}{5}{}{50}{re -15}
+
+{50}{I care not of Praetor or yourself, sir. Cumbria has left us to fend for ourselves too long. We are under the protection of Tarant now.}{I care not of Praetor or yourself, my good woman. Cumbria has left us to fend for ourselves too long. We are under the protection of Tarant now.}{}{}{}{}
+	{51}{I beg to differ.}{}{5}{}{300}{re -10}
+	{52}{So the Tarant guards are keeping Black Root secure?}{}{5}{}{60}{}
+	{53}{How does it feel to be Tarant's lapdog?}{}{5}{ps -7}{300}{re -15}
+      {54}{How does it feel to be Tarant's lapdog?}{}{5}{ps 8}{290}{re +10}
+
+{60}{Of course. They have their own procedures, but they have protected our fair town within their capabilities.}{Of course. They have their own procedures, but they have protected our fair town within their capabilities.}{}{}{}{}
+	{61}{Within their capabilities? What does that mean?}{}{5}{}{210}{}
+	{62}{They sound weak and lacking in fortitude.}{}{5}{ps 8}{70}{}
+
+{70}{The guards can arrest no one without proof, or so they say.}{The guards can arrest no one without proof, or so they say.}{}{}{}{}
+	{71}{What kind of proof?}{}{5}{}{80}{}
+	{72}{I have no interest in your weeping, sir. The taxes?}{}{5}{}{310}{re -15}
+	{73}{What proof do those dullards need?}{}{5}{ps 8}{80}{}
+
+{80}{Thieves stole my badge of office, a ceremonial silver dagger. If you can recover it from them, it would be all the proof I need to have them arrested.}{Thieves stole my badge of office, a ceremonial silver dagger. If you can recover it from them, it would be all the proof I need to have them arrested.}{}{}{}{qu 1005 1}
+	{81}{I accept your quest, my good man.}{}{5}{}{90}{qu 1005 2}
+	{82}{I have no interest in your petty concerns.}{}{5}{}{0}{re -10, fl 1020}
+	{83}{I'll need to ponder this at length. Good day.}{}{5}{}{0}{}
+        {84}{Coincidently, I have already procured your dagger.}{}{5}{in 2002}{100}{}
+
+{90}{The thieves have been known to lurk somewhere near the outskirts of town. Their leader is an elf named D'ak Taan, I believe. Godspeed, sir.}{The thieves have been known to lurk somewhere near the outskirts of town. Their leader is an elf named D'ak Taan, I believe. Godspeed, ma'am.}{}{}{}{}
+	{91}{E:}{}{5}{}{0}{}
+
+{100}{Excellent. Give it to me and I'll have the thieves arrested at once.}{Excellent. Give it to me and I'll have the thieves arrested at once.}{}{}{}{}
+	{101}{Your guards can't even protect you from petty thieves.}{}{5}{}{110}{}
+	{102}{Here it is.}{}{5}{}{430}{qu 1005 4, in 2002}
+	{103}{Not until you reconsider your allegiances.}{}{5}{ch 13}{340}{}
+
+{110}{Your point is well taken, but what would you have me do?}{Your point is well taken, but what would you have me do?}{}{}{}{}
+	{111}{Give me the taxes and align yourself with Cumbria.}{}{5}{}{120}{}
+	{112}{Do you always act the ineffectual dunderhead, fool?}{}{5}{}{0}{fl 1010, co} 
+
+{120}{I accept your proposal - if you return the ceremonial dagger to me.}{I accept your proposal - if you return the ceremonial dagger to me.}{}{}{}{}
+	{121}{Here is your dagger, sir.}{}{5}{}{130}{gf 1000 1, qu 1005 4, qu 1000 3, in -5601, in 2002, lf5 1}
+	{122}{Is that confounded dagger all that you think of?}{}{5}{ch 13}{350}{re - 5}
+
+{130}{Thank you @pcname@. Your resourcefulness amazes me.}{Thank you @pcname@. Your resourcefulness amazes me.}{}{}{}{}
+	{131}{A:}{}{5}{}{0}{}
+	{132}{E:}{}{5}{}{0}{}
+
+{140}{What?! Thief!}{What?! Thief!}{}{}{}{}
+	{141}{Calm yourself, I have a proposal for you.}{}{5}{}{230}{}
+	{142}{I think you die now.}{}{5}{}{0}{co}
+
+{150}{What leads you to believe I would have an interest in that?}{What leads you to believe I would have an interest in that?}{}{}{}{}
+	{151}{It details the current difficulties between Caladon and Tarant.}{}{5}{}{160}{}
+	{152}{My mistake. Good day.}{}{5}{}{0}{}
+
+{160}{I see.}{I see.}{}{}{}{}
+	{161}{It urges Tarant to declare war on Caladon.}{}{5}{}{170}{}
+
+{170}{What? The Unified Kingdom would invade Caladon to annex them?}{What? The Unified Kingdom would invade Caladon to annex them?}{}{}{}{}
+	{171}{You obviously want no part of this coming conflict.}{}{5}{ps -6}{0}{fl 1000, re -10}
+	{172}{You obviously want no part of this coming conflict.}{}{5}{ps 8}{180}{}
+	{173}{This editorial is the work of a respected newspaperman.}{}{5}{ps -7}{280}{}
+
+{180}{This is disastrous! We should never have left Cumbria's protection!}{This is disastrous! We should never have left Cumbria's protection!}{}{}{}{}
+	{181}{Give me the taxes and you can have that protection again.}{}{5}{}{190}{}
+
+{190}{By all means! Please deliver my regards with the taxes ... and perhaps old Praetor need not know about this whole Tarantian situation?}{Bye all means! Please deliver my regards with the taxes ... and perhaps old Praetor need not know about this whole Tarantian situation?}{}{}{}{qu 1000 3, in -5601}
+	{191}{Of course. It was a pleasure doing business. Good day.}{}{5}{}{0}{}
+
+{200}{What do you mean?}{What do you mean?}{}{}{}{}
+	{201}{All of the guards are dead. The taxes will be paid. Now.}{}{5}{}{190}{}
+
+{210}{Well, there a certain rules of propriety, you know, probable cause and proof of wrongdoings as it were.}{Well, there a certain rules of propriety, you know, probable cause and proof of wrongdoings as it were.}{}{}{}{}
+	{211}{Is there some difficulty they can not deal with?}{}{5}{}{220}{}
+	{212}{E:}{}{5}{}{0}{}
+
+{220}{I'm sure they will deal with our thievery problem in due time.}{I'm sure they will deal with our thievery problem in due time.}{}{}{}{}
+	{221}{Why is now not the time?}{}{5}{}{70}{}
+	{222}{I shall rectify any thievery problem you may have.}{}{5}{}{80}{}
+	{223}{E:}{}{5}{}{0}{} 
+
+{230}{What proposal of yours could possibly interest me?}{What proposal of yours could possibly interest me?}{}{}{}{}
+	{231}{I can steal the taxes annually or you can pay willingly.}{}{5}{}{240}{}
+
+{240}{Dog! I should have the guards run you through!}{Dog! I should have the guards run you through!}{}{}{}{}
+	{241}{Your guards can't even protect you from petty thieves.}{}{5}{}{250}{}
+
+{250}{There is some truth to your argument, scoundrel. What course of action are you offering?}{There is some truth to your argument, scoundrel. What course of action are you offering?}{}{}{}{}
+	{251}{Your allegiance should be with Cumbria once again.}{}{5}{}{260}{}
+
+{260}{By jove, I believe you are correct, sir. To the dogs with these Tarantian layabouts, eh?}{By jove, I believe you are correct, madam. To the dogs with these Tarantian layabouts, eh?}{}{}{}{gf 1000 1}
+	{261}{I wholeheartedly concur.}{}{5}{}{270}{}
+
+{270}{Please deliver my regards with the taxes ... and perhaps old Praetor need not know about this whole Tarantian situation?}{Please deliver my regards with the taxes ... and perhaps old Praetor need not know about this whole Tarantian situation?}{}{}{}{}
+	{271}{Of course. It was a pleasure doing business. Good day.}{}{5}{}{0}{}
+
+{280}{Do you take me for a fool? These are the ramblings of a muckraking journalist!}{Do you take me for a fool? These are the ramblings of a muckraking journalist!}{}{}{}{}
+	{281}{I was just in Tarant and they are preparing for war.}{}{5}{}{180}{}
+	{282}{You are right. Sorry for the trouble.}{}{5}{}{0}{}
+
+{290}{Your wit serves you well, old chap. Your ruse will not work, though, as we are content with our present arrangement with Tarant.}{Your wit serves you well, madam. Your ruse will not work, though, as we are content with our present arrangement with Tarant.}{}{}{}{}
+	{291}{So you have no complaints about the Tarantian guards?}{}{5}{}{60}{}
+	{292}{E:}{}{5}{}{0}{}
+
+{300}{You'd do well to watch your tongue. I have little patience for the cackling of fools.}{You'd do well to watch your tongue. I have little patience for the cackling of fools.}{}{}{}{}
+	{301}{So you have no complaints about the Tarantian guards?}{}{5}{}{60}{}
+	{302}{I have little patience for leaving fools alive, fool.}{}{5}{}{0}{fl 1010, co}
+	{303}{E:}{}{5}{}{0}{}
+
+{310}{You son of a motherless goat!}{You two bit harlot!}{}{}{}{}
+	{311}{Please forgive my transgression, sir.}{}{5}{}{320}{re +5}
+	{312}{I demand satisfaction, sir! [Slap him.]}{}{5}{}{0}{}
+
+{320}{Make sure your tongue is civil, sir. And you can tell Praetor the taxes are going to Tarant now and in the future.}{Make sure your tongue is civil, madam. And you can tell Praetor the taxes are going to Tarant now and in the future.}{}{}{}{}
+	{321}{So you have no trouble being policed by Tarant?}{}{5}{}{330}{}
+	{322}{The taxes will have to pried from your gutted corpse.}{}{5}{}{0}{fl 1010, co}
+
+{330}{I'm sure they will deal with our thievery problem in due time.}{I'm sure they will deal with our thievery problem in due time.}{}{}{}{}
+	{331}{I shall rectify any thievery problem you may have.}{}{5}{}{80}{}
+	{332}{E:}{}{5}{}{0}{}
+
+{340}{Why should I do such a thing?}{Why should I do such a thing?}{}{}{}{}
+	{341}{The guards wouldn't even recover the dagger for you.}{}{5}{}{110}{} 
+	{342}{F:}{}{5}{}{0}{}
+
+{350}{It is a symbol of my office, sir. And be mindful that your wit is wearing thin.}{It is a symbol of my office, miss. And be mindful that your wit is wearing thin.}{}{}{}{} 
+	{351}{Here is your dagger, sir.}{}{5}{}{130}{gf 1000 1, qu 1005 4, qu 1000 3, in -5601, in 2002}
+	{352}{E:}{}{5}{}{0}{}
+	{353}{Then my knife will speak for me!}{}{5}{}{0}{co}
+
+{360}{Praetor sent one of his advisors, I see. But Black Root is allied with the Unified Kingdom now. I collect taxes only for Tarant.}{Praetor sent one of his advisors, I see. But Black Root is allied with the Unified Kingdom now. I collect taxes only for Tarant.}{}{}{}{}
+	{361}{I take taxz.}{}{-4}{}{fl 370}{re -10}
+	{362}{snork}{}{-4}{}{0}{}
+      {363}{Guards dead. Give tax.}{}{-4}{gv 1003 6}{380}{}
+
+{370}{Yes, I am sure you will. Move along, imbecile.}{Yes, I am sure you will. Move along, imbecile.}{}{}{}{}
+
+{380}{By the gods! Here take them. Please don't hurt me, I'll do whatever you want.}{By the gods! Here take them. Please don't hurt me, I'll do whatever you want.}{}{}{}{}
+	{381}{Tank yu. Be with Cumbee-a again?}{}{-4}{}{0}{fl 390}
+	{382}{You dead. Now.}{}{-4}{}{0}{co}
+
+{390}{Yes, yes, anything. Just please leave.}{Yes, yes, anything. Just please leave.}{}{}{}{gf 1000 1}
+
+{400}{I am the mayor of Black Root. And who, may I ask, are you?}{I am the mayor of Black Root. And who, may I ask, are you?}{}{}{}{lf2 1}
+	{401}{I am @pcname@. Would you have any work for me?}{}{5}{qu 1000 0}{410}{}
+	{402}{I am @pcname@. Would you have any work for me?}{}{5}{qu 1000 1}{410}{}
+	{403}{I am here on behalf of King Praetor.}{}{5}{qu 1000 2, lf1 0}{30}{lf1 1, lf2 1}
+	{404}{I have decided to locate your dagger for you.}{}{5}{qu 1005 1}{90}{qu 1005 2}
+	{405}{I have retrieved your dagger.}{}{5}{qu 1005 2, in 2002}{100}{}
+	{406}{E:}{}{5}{}{0}{}
+	{407}{I am the last person you shall ever see, you twit.}{}{5}{}{0}{fl 1010, co}
+
+{410}{Not at this time. Perhaps you might check back with me later.}{Not at this time. Perhaps you might check back with me later.}{}{}{}{}
+	{411}{E:}{}{5}{}{0}{} 
+
+{420}{Ha ha! You're an amusing fellow. But the answer remains no.}{Ha ha! You're an amusing woman. But the answer remains no.}{}{}{}{}
+	{421}{Good day, then.}{}{5}{}{0}{}
+	{422}{That's too bad, I must eviscerate you now.}{}{5}{}{0}{fl 1010, co}
+
+{430}{Many thanks, sir. Allow me to compensate you for your troubles.}{Many thanks, madam. Allow me to compensate you for your troubles.}{}{}{}{}
+	{431}{Payment of the taxes would be compensation enough.}{}{5}{}{440}{}
+	{432}{200 coins would suit me nicely.}{}{5}{ha 13}{460}{}
+
+{440}{I am afraid I cannot oblige you. The taxes are going to Tarant, but here is 100 coins for you.}{I am afraid I cannot oblige you. The taxes are going to Tarant, but here is 100 coins for you.}{}{}{}{$$100}
+	{441}{Without your guards you wouldn't deny me the taxes.}{}{5}{}{450}{re -15}
+	{442}{Your guards cannot keep me from stealing the taxes.}{}{5}{}{450}{re -15}
+	{443}{Thank you, good day.}{}{5}{}{0}{}
+
+{450}{That may well be, but you've not the ability needed to back up your threats, so we will never know, shall we? Now take your vile presence away from me.}{That may well be, but you've not the ability needed to back up your threats, so we will never know, shall we? Now take your vile presence away from me.}{}{}{}{}
+	{451}{I suppose you can rest easy then. Good day.}{}{5}{}{0}{}
+
+{460}{200 coins it is. Thank you for your assistance, sir.}{200 coins it is. Thank you for your assistance, madam.}{}{}{}{$$200}
+	{461}{A:}{}{5}{}{0}{}
+
+{470}{Yes, yes, I suppose you can't help being who you are. What may I do for you?}{Yes, yes, I suppose you can't help being who you are. What may I do for you?}{}{}{}{}
+	{471}{I am here on behalf of King Praetor.}{}{5}{lf1 0, qu 1000 2}{30}{lf2 1, lf1 1}
+	{472}{I have decided to locate your dagger for you.}{}{5}{qu 1005 1}{90}{qu 1005 2}
+	{473}{I have retrieved your dagger.}{}{5}{qu 1005 3, in 2002}{100}{}
+	{474}{T:11}{}{5}{qu1005 4, re 41}{20}{}
+	{476}{Pray-tor.Taxiz.}{}{-4}{qu 1000 2}{360}{}
+	{477}{guurf.}{}{-4}{}{0}{}
+	{478}{Who are you?}{}{5}{lf2 0}{400}{lf2 1}
+	{479}{You have no more protection from Tarant, Mayor.}{}{5}{lf5 0, qb1000 3, gv 1003 6}{200}{}
+	{480}{I haven't located your dagger yet.}{}{5}{qu 1005 2}{20}{}
+	{481}{I wanted you to know I have your taxes.}{}{5}{qb1000 3, in 5601, lf5 0}{140}{re -15}
+	{482}{E:}{}{5}{}{0}{}
+
+{490}{Yes, yes, I suppose you can't help being who you are. What may I do for you?}{Yes, yes, I suppose you can't help being who you are. What may I do for you?}{}{}{}{}
+	{491}{I am here on behalf of King Praetor.}{}{5}{lf1 0, qu 1000 2}{30}{lf1 1, lf2 1}
+	{492}{I have decided to locate your dagger for you.}{}{5}{qu 1005 1}{90}{qu 1005 2}
+	{493}{I have retrieved your dagger.}{}{5}{qu 1005 3, in 2002}{100}{}
+	{494}{T:11}{}{5}{qu1005 4, re 41}{20}{}
+	{496}{Pray-tor.Taxiz.}{}{-4}{qu 1000 2}{360}{}
+	{497}{guurf.}{}{-4}{}{0}{}
+	{498}{Who are you?}{}{5}{lf2 0}{400}{lf2 1}
+	{499}{You have no more protection from Tarant, Mayor.}{}{5}{lf5 0, qb1000 3, gv 1003 6}{200}{}
+	{500}{I haven't located your dagger yet.}{}{5}{qu 1005 2}{20}{}
+	{501}{I wanted you to know I have your taxes.}{}{5}{qb1000 3, in 5601}{140}{re -15}
+	{502}{E:}{}{5}{}{0}{}
+
+
+
+//npc floats
+
+{1000}{Do you take me for a fool? These are the ramblings of a muckraking journalist! Leave me be.}{Do you take me for a fool? These are the ramblings of a muckraking journalist! Leave me be.}{}{}{}{}
+
+{1010}{Cumbrian dog! Die!}{Cumbrian harlot! Die!}{}{}{}{}
+
+{1020}{Begone with you, dolt!}{Begone with you, dolt!}{}{}{}{}

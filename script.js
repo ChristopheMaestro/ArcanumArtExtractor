@@ -4,7 +4,10 @@
   const dropzone = document.getElementById('dropzone');
   const fileInput = document.getElementById('fileInput');
   const logEl = document.getElementById('log');
+  const manualLoadEl = document.querySelector('.manual-load');
+  const footerNoteEl = document.querySelector('footer.note');
   const viewerEl = document.getElementById('explorerViewer');
+  let explorerMode = 'art';
 
   function log(message, kind) {
     const p = document.createElement('p');
@@ -273,6 +276,7 @@
   }
 
   function showBrowser() {
+    if (explorerMode === 'mob') { showMobBrowser(); return; }
     if (openGroup) closeGifBuilder();
     openGroup = null;
     viewerEl.hidden = true;
@@ -2504,6 +2508,1389 @@
     }
   });
 
+
+  // ---- .MOB data-file explorer -------------------------------------------
+  // The browser-side decoder mirrors dump_mob_fields.py / ObjectFieldData.cs.
+  // MOB manifests describe a folder tree: the root mob_manifest.json can have
+  // files AND subfolders, and each subfolder can have its own manifest.
+  const MOB_ROOT = 'mob/';
+  const MOB_MANIFEST_URLS = ['mob/mob_manifest.json', 'mob/manifest.json'];
+  const MOB_OD_NAMES = {"0":"Invalid","1":"Begin","2":"End","3":"Int32","4":"Int64","5":"String","6":"Handle","7":"Int32Array","8":"Int64Array","9":"UInt32Array","10":"UInt64Array","11":"ScriptArray","12":"QuestArray","13":"HandleArray","14":"Ptr","15":"PtrArray"};
+  const MOB_OD_TYPES = [1,3,4,3,3,3,9,9,9,3,3,3,3,3,3,3,9,9,9,3,3,3,3,3,3,3,3,3,3,3,3,7,11,3,3,9,10,2,1,3,3,3,9,10,2,1,3,3,3,3,3,3,9,10,2,1,3,3,3,3,13,3,3,3,3,9,10,2,1,3,6,3,3,9,10,2,1,3,3,3,6,3,3,9,10,2,1,3,6,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,9,10,2,1,3,3,3,3,7,7,7,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,9,10,2,1,3,3,3,3,3,9,10,2,1,3,3,3,3,7,7,3,3,3,3,9,10,2,1,3,3,3,3,9,10,2,1,3,3,3,9,10,2,1,3,3,3,9,10,2,1,3,3,3,9,10,2,1,3,9,3,3,9,10,2,1,3,3,3,3,3,3,9,10,2,1,3,3,3,9,10,2,1,3,3,7,7,7,9,3,3,3,3,9,9,6,3,6,6,6,6,6,3,13,3,3,13,4,3,3,3,3,3,3,9,10,2,1,3,3,9,10,3,3,12,9,10,9,10,3,10,9,9,9,3,5,3,9,9,3,3,9,10,2,1,3,6,3,6,6,3,3,10,3,4,4,3,3,3,6,3,3,13,9,9,3,3,3,9,13,2,1,3,3,3,9,10,2];
+  const MOB_GROUP_BEGIN = [0,38,45,55,68,76,86,111,140,149,163,171,178,185,192,200,210,217,252,279,306];
+  const MOB_GROUP_PARENT_LAST = [-1,36,36,36,36,36,36,109,109,109,109,109,109,109,109,109,109,36,250,250,36];
+  const MOB_TYPE_RANGE_BEGIN = [38,45,55,68,76,86,111,86,140,86,149,86,163,86,171,86,178,86,185,86,192,86,200,86,210,217,252,217,279,306];
+  const MOB_TYPE_RANGE_END = [44,54,67,75,85,110,139,110,148,110,162,110,170,110,177,110,184,110,191,110,199,110,209,110,216,251,278,251,305,312];
+  const MOB_TYPE_RANGE_OFFSET = [0,1,2,3,4,5,7,9,11,13,15,17,19,21,23,25,27,29,30];
+  const MOB_TYPE_LAST_FIELD = [43,53,66,74,84,138,147,161,169,176,183,190,198,208,215,277,304,311];
+  const MOB_FIELD_NAMES = {"1":"F_CURRENT_AID","2":"F_LOCATION","3":"F_OFFSET_X","4":"F_OFFSET_Y","14":"F_LIGHT_AID","15":"F_LIGHT_COLOR","19":"F_FLAGS","22":"F_NAME","23":"F_DESCRIPTION","27":"F_HP_PTS","29":"F_HP_DAMAGE","30":"F_MATERIAL","31":"F_RESISTANCE","32":"F_SCRIPTS","33":"F_SOUND_EFFECT","46":"F_PORTAL_FLAGS","47":"F_PORTAL_LOCK_DIFFICULTY","48":"F_PORTAL_KEY_ID","56":"F_CONTAINER_FLAGS","57":"F_CONTAINER_LOCK_DIFFICULTY","58":"F_CONTAINER_KEY_ID","69":"F_SCENERY_FLAGS","87":"F_ITEM_FLAGS","88":"F_ITEM_PARENT","89":"F_ITEM_WEIGHT","91":"F_ITEM_WORTH","93":"F_ITEM_INV_AID","94":"F_ITEM_INV_LOCATION","96":"F_ITEM_MAGIC_TECH_COMPLEXITY","97":"F_ITEM_DISCIPLINE","100":"F_ITEM_SPELL_1","105":"F_ITEM_SPELL_MANA_STORE","112":"F_WEAPON_FLAGS","114":"F_WEAPON_BONUS_TO_HIT","116":"F_WEAPON_DAMAGE_LOWER","117":"F_WEAPON_DAMAGE_UPPER","119":"F_WEAPON_SPEED_FACTOR","121":"F_WEAPON_RANGE","123":"F_WEAPON_MIN_STRENGTH","125":"F_WEAPON_AMMO_TYPE","126":"F_WEAPON_AMMO_CONSUMPTION","127":"F_WEAPON_MISSILE_AID","142":"F_AMMO_QUANTITY","143":"F_AMMO_TYPE","152":"F_ARMOR_AC_ADJ","154":"F_ARMOR_RESISTANCE_ADJ","165":"F_GOLD_QUANTITY","186":"F_KEY_KEY_ID","202":"F_WRITTEN_SUBTYPE","203":"F_WRITTEN_TEXT_START_LINE","204":"F_WRITTEN_TEXT_END_LINE","218":"F_CRITTER_FLAGS","219":"F_CRITTER_FLAGS2","220":"F_CRITTER_STAT_BASE","221":"F_CRITTER_BASIC_SKILL","222":"F_CRITTER_TECH_SKILL","223":"F_CRITTER_SPELL_TECH","231":"F_CRITTER_PORTRAIT","280":"F_NPC_FLAGS","282":"F_NPC_AI_DATA","285":"F_NPC_EXPERIENCE_WORTH","291":"F_NPC_ORIGIN","292":"F_NPC_FACTION","293":"F_NPC_RETAIL_PRICE_MULTIPLIER","294":"F_NPC_SUBSTITUTE_INVENTORY","295":"F_NPC_REACTION_BASE","296":"F_NPC_SOCIAL_CLASS"};
+  const MOB_SCRIPT_POINTS = {0:'SAP_EXAMINE',1:'SAP_USE',9:'SAP_DIALOG',10:'SAP_FIRST_HEARTBEAT',17:'SAP_BUY_OBJECT',22:'SAP_WILL_KOS',19:'SAP_HEARTBEAT',31:'SAP_DIALOG_OVERRIDE'};
+
+  const mobExploreBtn = document.getElementById('mobExploreBtn');
+  const artExploreBtn = document.getElementById('artExploreBtn');
+  const explorerHome = document.getElementById('explorerHome');
+  const artExplorerControls = document.getElementById('artExplorerControls');
+  const mobManifestCache = new Map();
+  let mobFiles = [];
+  let mobManifest = null;
+  let mobCurrentPath = '';
+  let mobCurrentFolderName = 'mob';
+
+  function mobU32(view, o) { return view.getUint32(o, true); }
+  function mobI32(view, o) { return view.getInt32(o, true); }
+  function mobI64(view, o) { return view.getBigInt64(o, true); }
+  function mobHex(bytes) { return Array.from(bytes, b => b.toString(16).padStart(2,'0')).join(' ').toUpperCase(); }
+  function mobOidText(bytes) {
+    if (bytes.length !== 24) return mobHex(bytes);
+    const type = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength).getUint32(0, true);
+    const number = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength).getUint32(8, true);
+    if (type === 1) return `A / number=${number} / raw=${mobHex(bytes)}`;
+    if (type === 2) return `GUID / ${Array.from(bytes.slice(8,24), b => b.toString(16).padStart(2,'0')).join('')} / raw=${mobHex(bytes)}`;
+    return `type=${type} / raw=${mobHex(bytes)}`;
+  }
+  function mobGroupStart(fld) { let start=0; for(const x of MOB_GROUP_BEGIN){if(x<fld)start=x;else break;} return start; }
+  function mobGroupIndex(beginValue) { const i=MOB_GROUP_BEGIN.indexOf(beginValue); return i<0?0:i; }
+  function buildMobEngine() {
+    const n=MOB_OD_TYPES.length, changeIdx=new Array(n).fill(-1), masks=new Array(n).fill(0), baseDword=new Array(MOB_GROUP_BEGIN.length).fill(0);
+    for(let fld=0;fld<n;fld++){const od=MOB_OD_TYPES[fld]; if(od===1){const gi=mobGroupIndex(fld), parentLast=MOB_GROUP_PARENT_LAST[gi]; baseDword[gi]=parentLast<0?0:changeIdx[parentLast]+1; continue;} if(od===2)continue; const gs=mobGroupStart(fld), localIdx=fld-gs-1; changeIdx[fld]=Math.floor(localIdx/32)+baseDword[mobGroupIndex(gs)]; masks[fld]=(1<<(localIdx%32))>>>0;}
+    const dwordCount=[]; for(let type=0;type<18;type++){const last=MOB_TYPE_LAST_FIELD[type]; dwordCount.push(last>=0?changeIdx[last]+1:0);} return {changeIdx,masks,dwordCount};
+  }
+  const MOB_ENGINE=buildMobEngine();
+  function enumerateMobFields(objType){const out=[];for(let f=1;f<37;f++)if(MOB_OD_TYPES[f]!==1&&MOB_OD_TYPES[f]!==2)out.push(f);const start=MOB_TYPE_RANGE_OFFSET[objType],end=MOB_TYPE_RANGE_OFFSET[objType+1];for(let r=start;r<end;r++)for(let f=MOB_TYPE_RANGE_BEGIN[r]+1;f<MOB_TYPE_RANGE_END[r];f++)if(MOB_OD_TYPES[f]!==1&&MOB_OD_TYPES[f]!==2)out.push(f);return out;}
+  function mobBitIsSet(bitmap,fld){const ci=MOB_ENGINE.changeIdx[fld];return ci>=0&&ci<bitmap.length&&((bitmap[ci]>>>0)&MOB_ENGINE.masks[fld])!==0;}
+  function mobArrayElement(od,bytes,elemSize){const v=new DataView(bytes.buffer,bytes.byteOffset,bytes.byteLength);if((od===7||od===9)&&elemSize===4)return od===7?v.getInt32(0,true):v.getUint32(0,true);if((od===8||od===10)&&elemSize===8){const x=od===8?v.getBigInt64(0,true):v.getBigUint64(0,true);return x.toString();}if(od===11&&elemSize===12){const a=v.getUint32(0,true),b=v.getUint32(4,true),c=v.getUint32(8,true);return {script_record:`${a}, ${b}, ${c}`,script_num:c};}if(od===13&&elemSize===24)return mobOidText(bytes);return `0x${mobHex(bytes).replaceAll(' ','')}`;}
+  function readMobArray(view,bytes,offset,od){const start=offset,present=bytes[offset++];if(!present)return{value:'absent',size:1};if(offset+12>bytes.length)throw new Error('truncated array header');const elemSize=view.getInt32(offset,true),count=view.getInt32(offset+4,true),bitsetId=view.getInt32(offset+8,true);offset+=12;if(elemSize<0||count<0)throw new Error(`invalid array header size=${elemSize} count=${count}`);const dataBytes=elemSize*count;if(offset+dataBytes+4>bytes.length)throw new Error('truncated array payload');const payload=bytes.slice(offset,offset+dataBytes);offset+=dataBytes;const bitsetCount=view.getInt32(offset,true);offset+=4;if(bitsetCount<0||offset+bitsetCount*4>bytes.length)throw new Error('invalid array bitset');const bits=[];for(let i=0;i<bitsetCount;i++)bits.push(view.getUint32(offset+i*4,true));offset+=bitsetCount*4;const logical=[];for(let wi=0;wi<bits.length;wi++){let w=bits[wi]>>>0;for(let bit=0;w;bit++,w>>>=1)if(w&1)logical.push(wi*32+bit);}const elements=[];for(let i=0;i<count;i++){const chunk=payload.slice(i*elemSize,(i+1)*elemSize),logicalIndex=i<logical.length?logical[i]:`compact_${i}`,value=mobArrayElement(od,chunk,elemSize);if(od===11&&value&&typeof value==='object'){value.script_attachment=MOB_SCRIPT_POINTS[logicalIndex]||`SAP_${logicalIndex}`;value.script_attachment_index=logicalIndex;}elements.push({index:logicalIndex,value,raw:mobHex(chunk)});}return{value:{element_size:elemSize,count,bitset_id:bitsetId,bitset:bits,elements},size:offset-start};}
+  function readMobField(view,bytes,offset,od){
+    const start=offset;
+
+    // INT32 is the one serialized object-field type without a presence byte.
+    if(od===3){
+      if(offset+4>bytes.length) throw new Error('truncated Int32');
+      return {value:mobI32(view,offset),size:4};
+    }
+
+    if(offset>=bytes.length) throw new Error('truncated field presence byte');
+    const present=bytes[offset++];
+
+    if(od===4){
+      if(!present) return {value:'absent',size:1};
+      if(offset+8>bytes.length) throw new Error('truncated Int64');
+      return {value:mobI64(view,offset).toString(),size:9};
+    }
+
+    if(od===5){
+      if(!present) return {value:'absent',size:1};
+      if(offset+4>bytes.length) throw new Error('truncated string length');
+      const len=view.getInt32(offset,true);
+      offset+=4;
+      if(len<0 || offset+len+1>bytes.length) throw new Error('invalid string length');
+      const raw=bytes.slice(offset,offset+len);
+      offset+=len;
+      const trailing=bytes[offset++];
+      let value='';
+      try{value=new TextDecoder('latin1').decode(raw);}catch(e){value=new TextDecoder().decode(raw);}
+      return {value:{text:value,length:len,trailing_byte:trailing,raw:mobHex(raw)},size:offset-start};
+    }
+
+    if(od===6){
+      if(!present) return {value:'absent',size:1};
+      if(offset+24>bytes.length) throw new Error('truncated handle');
+      return {value:mobOidText(bytes.slice(offset,offset+24)),size:25};
+    }
+
+    if(od===14){
+      return {value:present?'unsupported transient PTR':'absent',size:1};
+    }
+
+    if(od===7||od===8||od===9||od===10||od===11||od===12||od===13){
+      return readMobArray(view,bytes,start,od);
+    }
+
+    throw new Error(`unsupported serialized OdType ${od}`);
+  }
+  function decodeMobBuffer(buf,filename){const bytes=new Uint8Array(buf),view=new DataView(buf);if(bytes.length<62)throw new Error('file is too small to be a valid .mob');let offset=0;const version=mobU32(view,offset);offset+=4;const protoOid=bytes.slice(offset,offset+24);offset+=24;const objectOid=bytes.slice(offset,offset+24);offset+=24;const objType=view.getUint32(offset,true);offset+=4;const numFields=view.getUint16(offset,true);offset+=2;if(objType<0||objType>=MOB_TYPE_LAST_FIELD.length)throw new Error(`unsupported object type ${objType}`);const dwordCount=MOB_ENGINE.dwordCount[objType];if(offset+dwordCount*4>bytes.length)throw new Error('truncated FIELD_48 bitmap');const bitmap=[];for(let i=0;i<dwordCount;i++){bitmap.push(view.getUint32(offset,true));offset+=4;}const actualSet=bitmap.reduce((n,w)=>n+((w>>>0).toString(2).match(/1/g)||[]).length,0);const fields=[];for(const fld of enumerateMobFields(objType)){if(!mobBitIsSet(bitmap,fld))continue;const od=MOB_OD_TYPES[fld],fieldOffset=offset,parsed=readMobField(view,bytes,offset,od);offset+=parsed.size;fields.push({field:fld,name:MOB_FIELD_NAMES[fld]||`FIELD_${String(fld).padStart(3,'0')}`,od:MOB_OD_NAMES[od]||`OdType_${od}`,change_idx:MOB_ENGINE.changeIdx[fld],bit:MOB_ENGINE.masks[fld]?Math.round(Math.log2(MOB_ENGINE.masks[fld])):-1,offset:fieldOffset,size:parsed.size,raw:mobHex(bytes.slice(fieldOffset,offset)),value:parsed.value});}return{filename,size:bytes.length,version,objType,numFields,actualSet,bitmap,protoOid,objectOid,fields,endOffset:offset,trailing:bytes.slice(offset)};}
+  function mobLocationInfo(value){if(value===null||value===undefined||value==='absent')return null;let v;try{v=BigInt(value);}catch(e){return null;}const ux=BigInt.asUintN(32,v),uy=BigInt.asUintN(32,v>>32n),worldX=Number(ux),worldY=Number(uy);return{worldX,worldY,sectorX:worldX>>6,sectorY:worldY>>6,tileX:worldX&63,tileY:worldY&63};}
+  function mobValueText(value,indent=''){if(value===null||value===undefined)return'NULL / absent';if(typeof value==='object'){if(Array.isArray(value))return value.map((v,i)=>`${indent}[${i}] ${mobValueText(v,indent+'  ')}`).join('\n');if(value.elements)return[`element_size=${value.element_size}`,`count=${value.count}`,`bitset_id=${value.bitset_id}`,`bitset=${value.bitset.join(' ')}`,'elements:',...value.elements.map(e=>`  [${e.index}] ${typeof e.value==='object'?JSON.stringify(e.value):e.value} | raw=${e.raw}`)].join('\n');return Object.entries(value).map(([k,v])=>`${k}=${typeof v==='object'?JSON.stringify(v):v}`).join('\n');}return String(value);}
+
+  // F_CURRENT_AID is a packed 32-bit value: 09 00 XX YY (little-endian
+  // numeric form 0xYYXX0009). The YY byte selects the Art-ID block and XX
+  // advances by 2 for each Art ID. For example:
+  //   09 00 30 61 -> 9152
+  //   09 00 3A 61 -> 9157
+  //   09 00 8E 60 -> 9071
+  // Keep the raw packed number in parentheses so the original field value
+  // remains visible.
+  function mobCurrentAidText(value, objectType){
+    if (value === null || value === undefined) return mobValueText(value);
+    const artId = protoCurrentAidArtId(value, objectType);
+    if (artId === null) return mobValueText(value);
+    const raw = Number(value) >>> 0;
+    return `${artId} (${raw})`;
+  }
+
+  function mobJoinPath(parent, child) {
+    const a=String(parent||'').replace(/^\/+|\/+$/g,'');
+    const b=String(child||'').replace(/^\/+|\/+$/g,'');
+    return a&&b?`${a}/${b}`:(a||b);
+  }
+  function mobManifestUrlCandidates(relativePath, folderName) {
+    const prefix=relativePath?`${MOB_ROOT}${relativePath}/`:MOB_ROOT;
+    if(!relativePath) return MOB_MANIFEST_URLS;
+    return [`${prefix}${folderName}_manifest.json`,`${prefix}mob_manifest.json`,`${prefix}manifest.json`];
+  }
+  async function loadMobManifest(relativePath='',folderName='mob') {
+    if(mobManifestCache.has(relativePath)) return mobManifestCache.get(relativePath);
+    let lastError=null;
+    for(const url of mobManifestUrlCandidates(relativePath,folderName)) {
+      try { const resp=await fetch(url,{cache:'no-store'}); if(!resp.ok) throw new Error(`HTTP ${resp.status}`); const data=await resp.json(); mobManifestCache.set(relativePath,data); return data; }
+      catch(err){lastError=err;}
+    }
+    throw new Error(`couldn't load manifest for ${relativePath||'/mob/'} (${lastError&&lastError.message?lastError.message:lastError})`);
+  }
+  function extractMobManifestFiles(manifest) {
+    if(Array.isArray(manifest)) return manifest.filter(x=>typeof x==='string'&&/\.mob$/i.test(x)).sort((a,b)=>a.localeCompare(b));
+    const files=Array.isArray(manifest?.files)?manifest.files:[];
+    return files.map(x=>typeof x==='string'?x:(x&&(x.name||x.filename||x.file))).filter(x=>typeof x==='string'&&/\.mob$/i.test(x)).sort((a,b)=>a.localeCompare(b));
+  }
+  function mobSubfolders(manifest) {
+    const sub=manifest&&manifest.subfolders&&typeof manifest.subfolders==='object'?manifest.subfolders:{};
+    return Object.keys(sub).sort().map(k=>sub[k]).filter(sf=>sf&&typeof sf==='object'&&sf.folder_name);
+  }
+  function mobDisplayName(path, fallback) { return fallback || path.split('/').filter(Boolean).pop() || 'mob'; }
+  function createDataFolderCard(folderName, fullPath, openFolderFn) {
+    const card = document.createElement('button');
+    card.type = 'button';
+    card.className = 'explorer-item explorer-folder-item';
+    const thumb = document.createElement('span');
+    thumb.className = 'explorer-thumb';
+    thumb.innerHTML = '<span class="folder-glyph">📁</span>';
+    card.appendChild(thumb);
+    const name = document.createElement('span');
+    name.className = 'explorer-filename';
+    name.textContent = folderName;
+    card.appendChild(name);
+    card.addEventListener('click', () => openFolderFn(fullPath, folderName));
+    return card;
+  }
+
+  function createDataFileCard(filename, fullPath, icon, onOpen) {
+    const card = document.createElement('button');
+    card.type = 'button';
+    card.className = 'explorer-item';
+    const thumb = document.createElement('span');
+    thumb.className = 'explorer-thumb';
+    thumb.innerHTML = `<span class="folder-glyph">${icon}</span>`;
+    card.appendChild(thumb);
+    const name = document.createElement('span');
+    name.className = 'explorer-filename';
+    name.textContent = filename;
+    card.appendChild(name);
+    card._iconThumb = thumb;
+    card.addEventListener('click', () => onOpen(card));
+    return card;
+  }
+
+  async function applyProtoCurrentArtToFileCard(card, filename, relativePath = '') {
+    if (!card) return;
+    try {
+      const decoded = await decodeProtoForSearch(filename, relativePath);
+      const resolved = await resolveProtoCurrentAid(decoded);
+      if (!resolved || !resolved.artName || resolved.artId === null) return;
+
+      const canvas = document.createElement('canvas');
+      canvas.className = 'proto-file-art-icon';
+      canvas.width = 48;
+      canvas.height = 48;
+      canvas.title = `${resolved.artName} · Art ID ${resolved.artId}`;
+      card._iconThumb.replaceChildren(canvas);
+      await loadProtoCurrentAidArt(resolved.artId, resolved.artName, canvas);
+      if (canvas.classList.contains('missing')) {
+        card._iconThumb.innerHTML = '<span class="folder-glyph">🧬</span>';
+      }
+    } catch (_) {
+      // Keep the normal prototype icon when the prototype or its Current art cannot be resolved.
+    }
+  }
+
+  function renderDataExplorerTree(rootName, rootPath, rootManifest, loadManifestFn, openFolderFn, subfolderFn, fileFn = null, fileFilterFn = null) {
+    treeEl.innerHTML = '';
+    const rootUl = document.createElement('ul');
+    rootUl.className = 'tree-root';
+    const rootNode = document.createElement('li');
+    rootNode.className = 'tree-node';
+    const rootRow = document.createElement('div');
+    rootRow.className = 'tree-row';
+    rootRow.dataset.relpath = rootPath;
+    rootRow.style.paddingLeft = '10px';
+    rootRow.innerHTML = '<span class="tree-toggle">▼</span><span class="tree-icon">📁</span><span class="tree-name"></span>';
+    rootRow.querySelector('.tree-name').textContent = rootName;
+    rootNode.appendChild(rootRow);
+    const childList = document.createElement('ul');
+    childList.className = 'tree-children open';
+    rootNode.appendChild(childList);
+    rootUl.appendChild(rootNode);
+    treeEl.appendChild(rootUl);
+
+    const addFiles = async (manifest, container, depth, parentPath) => {
+      if (!fileFn) return;
+      const files = extractProtoManifestFiles(manifest);
+      for (const filename of files) {
+        let visible = true;
+        if (fileFilterFn) {
+          try { visible = await fileFilterFn(filename, parentPath); } catch (_) { visible = false; }
+        }
+        if (!visible) continue;
+        const li = document.createElement('li');
+        li.className = 'tree-node tree-file-node';
+        const row = document.createElement('button');
+        row.type = 'button';
+        row.className = 'mob-file-row';
+        row.style.paddingLeft = `${10 + depth * 16}px`;
+        row.innerHTML = '<span class="tree-icon">🧬</span><span class="tree-name"></span>';
+        row.querySelector('.tree-name').textContent = filename;
+        row.addEventListener('click', () => fileFn(filename, row, parentPath));
+        li.appendChild(row);
+        container.appendChild(li);
+      }
+    };
+
+    const buildChildren = async (manifest, container, depth, parentPath) => {
+      container.innerHTML = '';
+      const subs = subfolderFn(manifest);
+      for (const sf of subs) {
+        const fullPath = mobJoinPath(parentPath, sf.relative_path);
+        const li = document.createElement('li');
+        li.className = 'tree-node';
+        const row = document.createElement('div');
+        row.className = 'tree-row';
+        row.dataset.relpath = fullPath;
+        row.style.paddingLeft = `${10 + depth * 16}px`;
+        row.innerHTML = '<span class="tree-toggle">▶</span><span class="tree-icon">📁</span><span class="tree-name"></span>';
+        row.querySelector('.tree-name').textContent = sf.folder_name;
+        li.appendChild(row);
+        const children = document.createElement('ul');
+        children.className = 'tree-children';
+        li.appendChild(children);
+        let loaded = false;
+        let expanded = false;
+        row.addEventListener('click', async () => {
+          openFolderFn(fullPath, sf.folder_name);
+          if (expanded) { children.classList.remove('open'); row.querySelector('.tree-toggle').textContent='▶'; expanded=false; return; }
+          if (!loaded) {
+            row.classList.add('loading');
+            try { const m = await loadManifestFn(fullPath, sf.folder_name); await buildChildren(m, children, depth + 1, fullPath); loaded = true; }
+            catch (err) { log(`explorer: ${err && err.message ? err.message : err}`, 'err'); row.classList.remove('loading'); return; }
+            row.classList.remove('loading');
+          }
+          children.classList.add('open'); row.querySelector('.tree-toggle').textContent='▼'; expanded=true;
+        });
+        container.appendChild(li);
+      }
+      await addFiles(manifest, container, depth, parentPath);
+    };
+    buildChildren(rootManifest, childList, 1, rootPath);
+    rootRow.addEventListener('click', () => openFolderFn(rootPath, rootName));
+  }
+
+  function renderDataFolderGrid({ subfolders, files, relativePath, openFolderFn, openFileFn, fileIcon, afterFileCard = null }) {
+    gridEl.innerHTML = '';
+    const folders = Array.isArray(subfolders) ? subfolders : [];
+    const fileList = Array.isArray(files) ? files : [];
+    if (!folders.length && !fileList.length) {
+      const p = document.createElement('p');
+      p.className = 'explorer-status';
+      p.textContent = 'This folder is empty.';
+      gridEl.appendChild(p);
+      paginationEl.hidden = true;
+      return;
+    }
+    if (relativePath) {
+      const backPath = relativePath.split('/').slice(0, -1).join('/');
+      const backName = backPath ? backPath.split('/').pop() : (explorerMode === 'pro' ? 'proto' : 'mob');
+      const back = createDataFolderCard('..', backPath, openFolderFn);
+      back.classList.add('explorer-parent-item');
+      gridEl.appendChild(back);
+    }
+    for (const sf of folders) {
+      const fullPath = mobJoinPath(relativePath, sf.relative_path);
+      gridEl.appendChild(createDataFolderCard(sf.folder_name, fullPath, openFolderFn));
+    }
+    for (const filename of fileList) {
+      const fullPath = relativePath ? `${relativePath}/${filename}` : filename;
+      const card = createDataFileCard(filename, fullPath, fileIcon, card => openFileFn(filename, card, relativePath));
+      gridEl.appendChild(card);
+      if (afterFileCard) afterFileCard(card, filename, fullPath);
+    }
+    paginationEl.hidden = true;
+  }
+
+  function renderMobTree(manifest, relativePath, folderName) {
+    renderDataExplorerTree('mob', '', manifest, loadMobManifest, openMobFolder, mobSubfolders);
+    const subfolders = mobSubfolders(manifest);
+    const files = extractMobManifestFiles(manifest);
+    renderDataFolderGrid({
+      subfolders, files, relativePath, openFolderFn: openMobFolder, openFileFn: loadMobFromServer, fileIcon: '📦'
+    });
+  }
+  async function openMobFolder(relativePath,folderName) {
+    treeEl.innerHTML='<p class="mob-loading">Loading folder…</p>';
+    breadcrumbEl.textContent=`/mob/${relativePath?relativePath+'/':''}`;
+    try { mobCurrentPath=relativePath;mobCurrentFolderName=mobDisplayName(relativePath,folderName);saveDataExplorerState('mob',mobCurrentPath,mobCurrentFolderName,null);mobManifest=await loadMobManifest(relativePath,folderName);mobFiles=extractMobManifestFiles(mobManifest);renderMobTree(mobManifest,relativePath,mobCurrentFolderName);gridEl.hidden=false;viewerEl.hidden=true; }
+    catch(err){treeEl.innerHTML='';const p=document.createElement('p');p.className='explorer-status err';p.textContent=err&&err.message?err.message:String(err);treeEl.appendChild(p);}
+  }
+  async function enterMobExplorer() {
+    leaveExplorerHome();
+    explorerMode='mob';saveDataExplorerState('mob','', 'mob', null);artExplorerControls.hidden=true;gridEl.hidden=false;viewerEl.hidden=true;viewerEl.innerHTML='';paginationEl.hidden=true;breadcrumbEl.textContent='/mob/';treeEl.innerHTML='<p class="mob-loading">Loading /mob/ manifest…</p>';
+    try { mobCurrentPath='';mobCurrentFolderName='mob';mobManifest=await loadMobManifest('','mob');mobFiles=extractMobManifestFiles(mobManifest);renderMobTree(mobManifest,'','mob'); }
+    catch(err){treeEl.innerHTML='';const p=document.createElement('p');p.className='explorer-status err';p.textContent=err&&err.message?err.message:String(err);treeEl.appendChild(p);gridEl.innerHTML='';}
+  }
+  function leaveMobExplorer(){leaveDataExplorer();}
+  function showMobBrowser(){if(openGroup)closeGifBuilder();openGroup=null;viewerEl.hidden=true;viewerEl.innerHTML='';gridEl.hidden=false;paginationEl.hidden=true;clearShareUrl();gridEl.innerHTML='<p class="explorer-status">Select a .mob file or folder from the list.</p>';}
+  let mobViewerRequestToken = 0;
+  async function loadMobFromServer(filename,rowEl,relativePath='') {
+    treeEl.querySelectorAll('.mob-file-row.active').forEach(r=>r.classList.remove('active'));if(rowEl)rowEl.classList.add('active');
+    const url=`${MOB_ROOT}${relativePath?relativePath+'/':''}${filename}`;
+    saveDataExplorerState('mob',relativePath,mobDisplayName(relativePath,rowEl?.parentElement?.querySelector?.('.mob-list-heading strong')?.textContent?.replace(/^📦\s*/, '') || mobCurrentFolderName),filename);
+    const requestId = ++mobViewerRequestToken;
+    try {
+      const resp=await fetch(url,{cache:'no-store'});
+      if(!resp.ok)throw new Error(`HTTP ${resp.status} fetching ${url}`);
+      const decoded=decodeMobBuffer(await resp.arrayBuffer(),filename);
+      if (requestId !== mobViewerRequestToken) return;
+      const { protoSection } = renderMobViewer(decoded);
+      resolveMobPrototype(decoded).then(proto => {
+        if (requestId !== mobViewerRequestToken) return;
+        renderMobPrototypeInfo(decoded, proto, protoSection);
+      }).catch(err => {
+        if (requestId !== mobViewerRequestToken) return;
+        protoSection.innerHTML = '';
+        const p = document.createElement('p');
+        p.className = 'explorer-status err';
+        p.textContent = `Prototype resolution failed: ${err && err.message ? err.message : err}`;
+        protoSection.appendChild(p);
+      });
+    }
+    catch(err){log(`${filename}: ${err&&err.message?err.message:err}`,'err');}
+  }
+  const MOB_OBJECT_TYPE_NAMES = [
+    'WALL', 'PORTAL', 'CONTAINER', 'SCENERY', 'PROJECTILE', 'WEAPON', 'AMMO',
+    'ARMOR', 'GOLD (money)', 'FOOD', 'SCROLL', 'KEY', 'KEY_RING', 'WRITTEN',
+    'GENERIC (item)', 'PC', 'NPC', 'TRAP', 'MONSTER', 'UNIQUE_NPC'
+  ];
+
+  function mobObjectTypeName(type){
+    return MOB_OBJECT_TYPE_NAMES[type] || `Unknown object type`;
+  }
+
+  // ---- .PRO prototype explorer ------------------------------------------
+  // .PRO records use the same object-field schema as .MOB records, but their
+  // prototype OID is BLOCKED (-1), they carry an available-field bitmap, and
+  // then serialize every field of the object's type in enum order.
+  const PRO_ROOT = 'proto/';
+  const PRO_MANIFEST_URLS = ['proto/proto_manifest.json', 'proto/manifest.json'];
+  const protoExploreBtn = document.getElementById('protoExploreBtn');
+  const protoManifestCache = new Map();
+  let protoFiles = [];
+  let protoManifest = null;
+  let protoCurrentPath = '';
+  let protoCurrentFolderName = 'proto';
+  let protoBrowseMode = 'folder'; // 'folder' | 'search'
+  let protoViewerFilename = '';
+  let protoSearchResults = [];
+  let protoLastSearchQuery = '';
+  let protoObjectTypeFilter = 'all';
+  const PROTO_SEARCH_RESULT_LIMIT = 300;
+  const protoDecodedCache = new Map();
+
+  // Arcanum's .mes files are brace-delimited number -> string tables.
+  // F_DESCRIPTION stores the numeric key into text/mes/description.mes.
+  const DESCRIPTION_MES_URL = 'text/mes/description.mes';
+  const ITEM_INVEN_MES_URL = 'art/item/item_inven.mes';
+  const ITEM_ART_ROOT = 'art/item/';
+  let descriptionMesPromise = null;
+  let descriptionMesMap = null;
+  let itemInvenMesPromise = null;
+  let itemInvenMesMap = null;
+
+  function parseMesText(text) {
+    const map = new Map();
+    const fields = [];
+    let i = 0;
+    while (i < text.length) {
+      const open = text.indexOf('{', i);
+      if (open === -1) break;
+      const close = text.indexOf('}', open + 1);
+      if (close === -1) break;
+      fields.push(text.slice(open + 1, close));
+      i = close + 1;
+    }
+    for (let n = 0; n + 1 < fields.length; n += 2) {
+      const keyText = fields[n].trim();
+      if (!/^[-+]?\d+$/.test(keyText)) continue;
+      const key = Number(keyText);
+      if (!Number.isSafeInteger(key)) continue;
+      map.set(key, fields[n + 1]);
+    }
+    return map;
+  }
+
+  async function loadDescriptionMes() {
+    if (descriptionMesMap) return descriptionMesMap;
+    if (descriptionMesPromise) return descriptionMesPromise;
+    descriptionMesPromise = fetch(DESCRIPTION_MES_URL, { cache: 'no-store' })
+      .then(resp => {
+        if (!resp.ok) throw new Error(`HTTP ${resp.status} fetching ${DESCRIPTION_MES_URL}`);
+        return resp.arrayBuffer();
+      })
+      .then(buf => {
+        let text;
+        try {
+          text = new TextDecoder('windows-1252').decode(buf);
+        } catch (_) {
+          text = new TextDecoder('latin1').decode(buf);
+        }
+        descriptionMesMap = parseMesText(text);
+        return descriptionMesMap;
+      })
+      .catch(err => {
+        descriptionMesPromise = null;
+        throw err;
+      });
+    return descriptionMesPromise;
+  }
+
+  function protoDescriptionInfo(value) {
+    const id = Number(value);
+    if (!Number.isFinite(id)) return null;
+    if (!descriptionMesMap) return { id, text: null, loading: true };
+    return { id, text: descriptionMesMap.get(id) ?? null, loading: false };
+  }
+
+  async function loadItemInvenMes() {
+    if (itemInvenMesMap) return itemInvenMesMap;
+    if (itemInvenMesPromise) return itemInvenMesPromise;
+    itemInvenMesPromise = fetch(ITEM_INVEN_MES_URL, { cache: 'no-store' })
+      .then(resp => {
+        if (!resp.ok) throw new Error(`HTTP ${resp.status} fetching ${ITEM_INVEN_MES_URL}`);
+        return resp.arrayBuffer();
+      })
+      .then(buf => {
+        let text;
+        try { text = new TextDecoder('windows-1252').decode(buf); }
+        catch (_) { text = new TextDecoder('latin1').decode(buf); }
+        itemInvenMesMap = parseMesText(text);
+        return itemInvenMesMap;
+      })
+      .catch(err => {
+        itemInvenMesPromise = null;
+        throw err;
+      });
+    return itemInvenMesPromise;
+  }
+
+  function protoCurrentAidArtId(value, objectType) {
+    const raw = Number(value) >>> 0;
+    if (!Number.isFinite(raw)) return null;
+    const b0 = raw & 0xFF;
+    const b1 = (raw >>> 8) & 0xFF;
+    const b2 = (raw >>> 16) & 0xFF;
+    const b3 = (raw >>> 24) & 0xFF;
+    if (b3 !== 0x60 && b3 !== 0x61) return null;
+
+    // Confirmed item-family encoding (Gold through Generic): PP 00 XX YY.
+    // PP is the thousand block; YY advances by 128; XX/2 is the position.
+    if (b1 === 0x00 && b0 >= 0x03 && b0 <= 0x09 && (b2 & 1) === 0) {
+      return b0 * 1000 + ((b3 - 0x60) * 128) + (b2 >> 1);
+    }
+
+    // Confirmed weapon encoding:
+    //   80 00 08 60 -> 40
+    //   80 00 10 60 -> 48
+    //   80 02 0A 60 -> 205
+    // The observed fields decode as (top two bits of b0)*20 + b1*80 + b2/2.
+    if (objectType === 5) {
+      if ((b2 & 1) !== 0) return null;
+      return ((b0 >>> 6) * 20) + (b1 * 80) + (b2 >> 1);
+    }
+
+    // Confirmed ammo encoding from:
+    //   01 00 00 60 -> 1000
+    //   41 00 00 60 -> 1020
+    //   81 00 00 60 -> 1040
+    //   C1 00 00 60 -> 1060
+    // The low six bits select the thousand block; the top two bits add 20-point
+    // steps, and the third byte contributes its half-value.
+    if (objectType === 6) {
+      if ((b2 & 1) !== 0) return null;
+      return (b0 & 0x3F) * 1000 + ((b0 >>> 6) * 20) + (b2 >> 1);
+    }
+
+    // Confirmed armor encoding. The low six bits of b0 select the thousand
+    // block and its top two bits add 20-point steps.  The known b1 variants
+    // currently observed are retained explicitly until more armor samples
+    // establish the remaining bit layout.
+    if (objectType === 7) {
+      if ((b2 & 1) !== 0) return null;
+      const base = (b0 & 0x3F) * 1000 + ((b0 >>> 6) * 20);
+      const b1Offset = { 0x00: 0, 0x40: 700, 0x80: 824 }[b1 & 0xC0];
+      if (b1Offset === undefined) return null;
+      return base + b1Offset + (b2 >> 1);
+    }
+
+    return null;
+  }
+
+  async function loadProtoCurrentAidArt(artId, artName, previewCanvas) {
+    if (!artName) return;
+    const filename = artName.replace(/^.*[\/]/, '');
+    const url = `${ITEM_ART_ROOT}${filename}`;
+    try {
+      const resp = await fetch(url, { cache: 'no-store' });
+      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+      const frames = await parseArtBuffer(await resp.arrayBuffer());
+      if (!frames.length || !frames[0].canvas) throw new Error('no drawable frame');
+      const source = frames[0].canvas;
+      const maxSide = 92;
+      const scale = Math.max(1, Math.min(maxSide / source.width, maxSide / source.height));
+      const w = Math.max(1, Math.round(source.width * scale));
+      const h = Math.max(1, Math.round(source.height * scale));
+      previewCanvas.width = w;
+      previewCanvas.height = h;
+      previewCanvas.style.width = `${w}px`;
+      previewCanvas.style.height = `${h}px`;
+      const ctx = previewCanvas.getContext('2d');
+      ctx.imageSmoothingEnabled = false;
+      ctx.clearRect(0, 0, w, h);
+      ctx.drawImage(source, 0, 0, w, h);
+      previewCanvas.title = `${artName} · Art ID ${artId}`;
+    } catch (err) {
+      previewCanvas.classList.add('missing');
+      previewCanvas.title = `${artName} · bitmap unavailable`;
+    }
+  }
+
+  async function resolveProtoCurrentAid(decoded) {
+    const field = decoded.fields.find(f => f.field === 1);
+    if (!field) return null;
+    const artId = protoCurrentAidArtId(field.value, decoded.objType);
+    if (artId === null || !itemInvenMesMap) return { artId, artName: null };
+    return { artId, artName: itemInvenMesMap.get(artId) ?? null };
+  }
+
+  function protoManifestUrlCandidates(relativePath, folderName) {
+    const prefix = relativePath ? `${PRO_ROOT}${relativePath}/` : PRO_ROOT;
+    if (!relativePath) return PRO_MANIFEST_URLS;
+    return [`${prefix}${folderName}_manifest.json`, `${prefix}manifest.json`];
+  }
+
+  async function loadProtoManifest(relativePath, folderName) {
+    if (protoManifestCache.has(relativePath)) return protoManifestCache.get(relativePath);
+    let lastError = null;
+    for (const url of protoManifestUrlCandidates(relativePath, folderName)) {
+      try {
+        const resp = await fetch(url, { cache: 'no-store' });
+        if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+        const data = await resp.json();
+        protoManifestCache.set(relativePath, data);
+        return data;
+      } catch (err) {
+        lastError = err;
+      }
+    }
+    throw new Error(`couldn't load .pro manifest for /proto/${relativePath}${lastError ? ` (${lastError.message || lastError})` : ''}`);
+  }
+
+  function extractProtoManifestFiles(manifest) {
+    const files = Array.isArray(manifest?.files) ? manifest.files : [];
+    return files
+      .map(x => typeof x === 'string' ? x : (x && (x.name || x.filename || x.file)))
+      .filter(x => typeof x === 'string' && /\.pro$/i.test(x))
+      .sort((a, b) => a.localeCompare(b));
+  }
+
+  function protoSubfolders(manifest) {
+    const sub = manifest?.subfolders && typeof manifest.subfolders === 'object' ? manifest.subfolders : {};
+    return Object.keys(sub).sort().map(k => sub[k]).filter(sf => sf && typeof sf === 'object' && sf.folder_name);
+  }
+
+  function protoDisplayName(path, fallback) {
+    return fallback || path.split('/').filter(Boolean).pop() || 'proto';
+  }
+
+  function decodeProtoBuffer(buf, filename) {
+    const bytes = new Uint8Array(buf);
+    const view = new DataView(buf);
+    if (bytes.length < 56) throw new Error('file is too small to be a valid .pro');
+
+    let offset = 0;
+    const version = mobI32(view, offset); offset += 4;
+    if (version !== 119) throw new Error(`version=${version}, expected 119`);
+
+    const protoOid = bytes.slice(offset, offset + 24); offset += 24;
+    const objectOid = bytes.slice(offset, offset + 24); offset += 24;
+    const objType = mobI32(view, offset); offset += 4;
+    if (objType < 0 || objType >= MOB_TYPE_LAST_FIELD.length) {
+      throw new Error(`unsupported object type ${objType}`);
+    }
+
+    const dwordCount = MOB_ENGINE.dwordCount[objType];
+    if (!Number.isFinite(dwordCount) || dwordCount <= 0) throw new Error(`no field-bitmap schema for object type ${objType}`);
+    if (offset + dwordCount * 4 > bytes.length) throw new Error('truncated available-field bitmap');
+
+    const bitmap = [];
+    for (let i = 0; i < dwordCount; i++) {
+      bitmap.push(view.getUint32(offset, true));
+      offset += 4;
+    }
+    const actualAvailable = bitmap.reduce((n, w) => n + ((w >>> 0).toString(2).match(/1/g) || []).length, 0);
+
+    const fields = [];
+    for (const fld of enumerateMobFields(objType)) {
+      const fieldOffset = offset;
+      const od = MOB_OD_TYPES[fld];
+      const parsed = readMobField(view, bytes, offset, od);
+      offset += parsed.size;
+      fields.push({
+        field: fld,
+        name: MOB_FIELD_NAMES[fld] || `FIELD_${fld}`,
+        od: MOB_OD_NAMES[od] || `OdType_${od}`,
+        available: mobBitIsSet(bitmap, fld),
+        change_idx: MOB_ENGINE.changeIdx[fld],
+        bit: MOB_ENGINE.masks[fld] ? Math.round(Math.log2(MOB_ENGINE.masks[fld])) : -1,
+        offset: fieldOffset,
+        size: parsed.size,
+        raw: mobHex(bytes.slice(fieldOffset, offset)),
+        value: parsed.value
+      });
+    }
+
+    return {
+      filename,
+      size: bytes.length,
+      version,
+      protoOid,
+      objectOid,
+      objType,
+      bitmap,
+      actualAvailable,
+      fields,
+      endOffset: offset,
+      trailing: bytes.slice(offset)
+    };
+  }
+
+
+  async function decodeProtoForSearch(filename, relativePath = '') {
+    const key = `${relativePath}\0${filename}`;
+    if (protoDecodedCache.has(key)) return protoDecodedCache.get(key);
+    const url = `${PRO_ROOT}${relativePath ? relativePath + '/' : ''}${filename}`;
+    const promise = fetch(url, { cache: 'no-store' })
+      .then(resp => {
+        if (!resp.ok) throw new Error(`HTTP ${resp.status} fetching ${url}`);
+        return resp.arrayBuffer();
+      })
+      .then(buf => decodeProtoBuffer(buf, filename));
+    protoDecodedCache.set(key, promise);
+    try {
+      return await promise;
+    } catch (err) {
+      protoDecodedCache.delete(key);
+      throw err;
+    }
+  }
+
+  // ---- .MOB → .PRO prototype resolution -----------------------------------
+  // data-formats.md: an instance record stores only its overridden fields; every
+  // unset bit means "use the prototype's value". To show a .mob's *effective*
+  // fields we need to resolve its linked prototype (by number, from prototype_oid's
+  // OID_TYPE_A payload) and merge. protoNumberIndex walks the /proto/ manifest tree
+  // once (folder listings only, cheap) to map "NNNNNN - Name.pro" -> path.
+  let protoNumberIndexPromise = null;
+
+  async function buildProtoNumberIndex() {
+    const index = new Map();
+    const visited = new Set();
+    async function walk(relativePath, folderName) {
+      if (visited.has(relativePath)) return;
+      visited.add(relativePath);
+      let manifest;
+      try { manifest = await loadProtoManifest(relativePath, folderName); } catch (_) { return; }
+      for (const f of extractProtoManifestFiles(manifest)) {
+        const m = /^(\d+)\s*-\s*/.exec(f);
+        if (m) {
+          const num = parseInt(m[1], 10);
+          if (!index.has(num)) index.set(num, { relPath: relativePath, filename: f });
+        }
+      }
+      for (const sf of protoSubfolders(manifest)) {
+        await walk(mobJoinPath(relativePath, sf.relative_path), sf.folder_name);
+      }
+    }
+    await walk('', 'proto');
+    return index;
+  }
+
+  function getProtoNumberIndex() {
+    if (!protoNumberIndexPromise) {
+      protoNumberIndexPromise = buildProtoNumberIndex().catch(err => {
+        protoNumberIndexPromise = null;
+        throw err;
+      });
+    }
+    return protoNumberIndexPromise;
+  }
+
+  // ObjectID union: int16 type, 2 bytes padding, int32 padding, then a 16-byte
+  // union — for OID_TYPE_A (type 1) the union's first dword (offset +8) is the
+  // prototype number. Mirrors ObjectOidNumberOffset/OidNumberOffset in the C# readers.
+  function mobOidTypeAndNumber(bytes) {
+    if (!bytes || bytes.length !== 24) return null;
+    const view = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength);
+    return { type: view.getUint32(0, true), number: view.getUint32(8, true) };
+  }
+
+  async function resolveMobPrototype(decoded) {
+    const info = mobOidTypeAndNumber(decoded.protoOid);
+    if (!info || info.type !== 1) return { protoNumber: null, entry: null, decodedProto: null, error: null };
+    const protoNumber = info.number;
+    try {
+      const index = await getProtoNumberIndex();
+      const entry = index.get(protoNumber);
+      if (!entry) return { protoNumber, entry: null, decodedProto: null, error: `#${protoNumber} not found under /proto/` };
+      const url = `${PRO_ROOT}${entry.relPath ? entry.relPath + '/' : ''}${entry.filename}`;
+      const resp = await fetch(url, { cache: 'no-store' });
+      if (!resp.ok) throw new Error(`HTTP ${resp.status} fetching ${url}`);
+      const decodedProto = decodeProtoBuffer(await resp.arrayBuffer(), entry.filename);
+      return { protoNumber, entry, decodedProto, error: null };
+    } catch (err) {
+      return { protoNumber, entry: null, decodedProto: null, error: err && err.message ? err.message : String(err) };
+    }
+  }
+
+  function renderMobPrototypeInfo(decoded, proto, container) {
+    container.innerHTML = '';
+
+    if (proto.protoNumber === null) {
+      const p = document.createElement('p');
+      p.className = 'explorer-status';
+      p.textContent = "This object's prototype OID isn't a numbered (A-type) reference, so effective fields can't be resolved.";
+      container.appendChild(p);
+      return;
+    }
+    if (proto.error || !proto.decodedProto) {
+      const p = document.createElement('p');
+      p.className = 'explorer-status err';
+      p.textContent = `Prototype #${proto.protoNumber}: ${proto.error || 'not found'}`;
+      container.appendChild(p);
+      return;
+    }
+
+    const linkWrap = document.createElement('p');
+    linkWrap.className = 'mob-proto-link-wrap';
+    linkWrap.append(`Prototype #${proto.protoNumber}: `);
+    const link = document.createElement('button');
+    link.type = 'button';
+    link.className = 'mob-proto-link';
+    link.textContent = `→ ${proto.entry.filename}`;
+    link.title = 'Open this prototype in the .PRO explorer';
+    link.addEventListener('click', async () => {
+      await enterProtoExplorer();
+      await loadProtoFromServer(proto.entry.filename, null, proto.entry.relPath);
+    });
+    linkWrap.appendChild(link);
+    container.appendChild(linkWrap);
+
+    if (proto.decodedProto.objType !== decoded.objType) {
+      const warn = document.createElement('p');
+      warn.className = 'explorer-status err';
+      warn.textContent = `Prototype object type (${proto.decodedProto.objType}) doesn't match this instance's type (${decoded.objType}) — skipping the merge.`;
+      container.appendChild(warn);
+      return;
+    }
+
+    const overrideMap = new Map(decoded.fields.map(f => [f.field, f]));
+    const title = document.createElement('h3');
+    title.className = 'mob-section-title';
+    title.textContent = 'Effective fields (override + inherited)';
+    container.appendChild(title);
+
+    const table = document.createElement('div');
+    table.className = 'mob-field-table proto-field-table';
+    const head = document.createElement('div');
+    head.className = 'mob-field-row mob-field-head';
+    ['Field', 'Source', 'Type', 'Value', 'Raw'].forEach(t => {
+      const c = document.createElement('div'); c.textContent = t; head.appendChild(c);
+    });
+    table.appendChild(head);
+
+    for (const pf of proto.decodedProto.fields) {
+      const override = overrideMap.get(pf.field);
+      const f = override || pf;
+      const row = document.createElement('div');
+      row.className = 'mob-field-row';
+      const c1 = document.createElement('div');
+      c1.innerHTML = `<strong>${f.name}</strong><small>#${f.field}</small>`;
+      const c2 = document.createElement('div');
+      c2.textContent = override ? 'Overridden' : 'Inherited';
+      c2.classList.add(override ? 'proto-available' : 'mob-field-inherited');
+      const c3 = document.createElement('div'); c3.textContent = f.od;
+      const c4 = document.createElement('div'); c4.className = 'mob-value';
+      c4.textContent = f.field === 1 ? mobCurrentAidText(f.value, decoded.objType) : mobValueText(f.value);
+      const c5 = document.createElement('div'); c5.className = 'mob-raw'; c5.textContent = f.raw;
+      [c1, c2, c3, c4, c5].forEach(c => row.appendChild(c));
+      table.appendChild(row);
+    }
+    container.appendChild(table);
+  }
+
+  async function protoFileMatchesType(filename, relativePath, filter = protoObjectTypeFilter) {
+    if (!filter || filter === 'all') return true;
+    try {
+      const decoded = await decodeProtoForSearch(filename, relativePath);
+      return String(decoded.objType) === String(filter);
+    } catch (_) { return false; }
+  }
+
+  async function filterProtoFilesByObjectType(files, relativePath) {
+    if (protoObjectTypeFilter === 'all') return files;
+    const out = [];
+    for (const filename of files) {
+      if (await protoFileMatchesType(filename, relativePath)) out.push(filename);
+    }
+    return out;
+  }
+
+  function populateProtoObjectTypeFilter() {
+    const select = document.getElementById('protoObjectTypeFilter');
+    if (!select || select.options.length > 1) return;
+    MOB_OBJECT_TYPE_NAMES.forEach((name, type) => {
+      const opt = document.createElement('option');
+      opt.value = String(type);
+      opt.textContent = `${name} (${type})`;
+      select.appendChild(opt);
+    });
+  }
+
+  async function renderProtoTree(manifest, relativePath, folderName) {
+    populateProtoObjectTypeFilter();
+    const typeFilter = protoObjectTypeFilter;
+    renderDataExplorerTree('proto', '', manifest, loadProtoManifest, openProtoFolder, protoSubfolders, loadProtoFromServer,
+      async (filename, path) => protoFileMatchesType(filename, path, typeFilter));
+    const subfolders = protoSubfolders(manifest);
+    const allFiles = extractProtoManifestFiles(manifest);
+    const files = await filterProtoFilesByObjectType(allFiles, relativePath);
+    renderDataFolderGrid({
+      subfolders, files, relativePath, openFolderFn: openProtoFolder, openFileFn: loadProtoFromServer, fileIcon: '🧬',
+      afterFileCard: (card, filename) => applyProtoCurrentArtToFileCard(card, filename, relativePath)
+    });
+  }
+
+  async function openProtoFolder(relativePath, folderName) {
+    treeEl.innerHTML = '<p class="mob-loading">Loading folder…</p>';
+    breadcrumbEl.textContent = `/proto/${relativePath ? relativePath + '/' : ''}`;
+    try {
+      protoCurrentPath = relativePath;
+      protoCurrentFolderName = protoDisplayName(relativePath, folderName);
+      protoBrowseMode = 'folder';
+      protoSearchResults = [];
+      protoLastSearchQuery = '';
+      searchInputEl.value = '';
+      searchClearBtnEl.hidden = true;
+      saveDataExplorerState('pro', protoCurrentPath, protoCurrentFolderName, null);
+      protoManifest = await loadProtoManifest(relativePath, folderName);
+      protoFiles = extractProtoManifestFiles(protoManifest);
+      await renderProtoTree(protoManifest, relativePath, protoCurrentFolderName);
+      gridEl.hidden = false;
+      viewerEl.hidden = true;
+    } catch (err) {
+      treeEl.innerHTML = '';
+      const p = document.createElement('p');
+      p.className = 'explorer-status err';
+      p.textContent = err && err.message ? err.message : String(err);
+      treeEl.appendChild(p);
+    }
+  }
+
+  async function enterProtoExplorer() {
+    leaveExplorerHome();
+    explorerHome.hidden = true;
+    document.querySelector('.explorer').hidden = false;
+    if (manualLoadEl) manualLoadEl.hidden = true;
+    if (logEl) logEl.hidden = false;
+    if (footerNoteEl) footerNoteEl.hidden = false;
+    explorerMode = 'pro';
+    artExplorerControls.hidden = false;
+    if (protoObjectTypeFilterEl) protoObjectTypeFilterEl.hidden = false;
+    searchInputEl.placeholder = 'Search .PRO descriptions…';
+    searchInputEl.setAttribute('aria-label', 'Search .PRO descriptions');
+    saveDataExplorerState('pro', '', 'proto', null);
+    gridEl.hidden = false;
+    viewerEl.hidden = true;
+    viewerEl.innerHTML = '';
+    paginationEl.hidden = true;
+    breadcrumbEl.textContent = '/proto/';
+    treeEl.innerHTML = '<p class="mob-loading">Loading /proto/ manifest…</p>';
+    try {
+      protoCurrentPath = '';
+      protoCurrentFolderName = 'proto';
+      protoManifest = await loadProtoManifest('', 'proto');
+      protoFiles = extractProtoManifestFiles(protoManifest);
+      await renderProtoTree(protoManifest, '', 'proto');
+    } catch (err) {
+      treeEl.innerHTML = '';
+      const p = document.createElement('p');
+      p.className = 'explorer-status err';
+      p.textContent = err && err.message ? err.message : String(err);
+      treeEl.appendChild(p);
+      gridEl.innerHTML = '';
+    }
+  }
+
+  function leaveDataExplorer() {
+    explorerHome.hidden = true;
+    document.querySelector('.explorer').hidden = false;
+    explorerMode = 'art';
+    artExplorerControls.hidden = false;
+    if (protoObjectTypeFilterEl) protoObjectTypeFilterEl.hidden = true;
+    searchInputEl.placeholder = 'Search .ART files by name…';
+    searchInputEl.setAttribute('aria-label', 'Search all folders');
+    searchInputEl.value = '';
+    searchClearBtnEl.hidden = true;
+    showBrowser();
+    treeEl.innerHTML = '';
+    initExplorer(false);
+  }
+
+  async function showProtoBrowser() {
+    if (openGroup) closeGifBuilder();
+    openGroup = null;
+    viewerEl.hidden = true;
+    viewerEl.innerHTML = '';
+    gridEl.hidden = false;
+    paginationEl.hidden = true;
+    clearShareUrl();
+    try {
+      if (!protoManifest) protoManifest = await loadProtoManifest(protoCurrentPath, protoCurrentFolderName);
+      await renderProtoTree(protoManifest, protoCurrentPath, protoCurrentFolderName);
+    } catch (_) {
+      gridEl.innerHTML = '<p class="explorer-status">Select a .pro file or folder from the list.</p>';
+    }
+  }
+
+  async function loadProtoFromServer(filename, rowEl, relativePath = '') {
+    protoCurrentPath = relativePath || '';
+    protoBrowseMode = 'folder';
+    try {
+      protoManifest = await loadProtoManifest(protoCurrentPath, protoCurrentPath ? protoCurrentPath.split('/').pop() : 'proto');
+      protoFiles = extractProtoManifestFiles(protoManifest);
+    } catch (err) {
+      protoFiles = [];
+    }
+    protoCurrentFolderName = protoCurrentPath ? protoCurrentPath.split('/').pop() : 'proto';
+    treeEl.querySelectorAll('.mob-file-row.active').forEach(r => r.classList.remove('active'));
+    if (rowEl) rowEl.classList.add('active');
+    const url = `${PRO_ROOT}${relativePath ? relativePath + '/' : ''}${filename}`;
+    saveDataExplorerState('pro', relativePath, protoCurrentFolderName, filename);
+    protoViewerFilename = filename;
+    try {
+      const resp = await fetch(url, { cache: 'no-store' });
+      if (!resp.ok) throw new Error(`HTTP ${resp.status} fetching ${url}`);
+      const decoded = decodeProtoBuffer(await resp.arrayBuffer(), filename);
+      try { await Promise.all([loadDescriptionMes(), loadItemInvenMes()]); }
+      catch (mesErr) { log(`.mes lookup: ${mesErr && mesErr.message ? mesErr.message : mesErr}`, 'err'); }
+      renderProtoViewer(decoded);
+    } catch (err) {
+      log(`${filename}: ${err && err.message ? err.message : err}`, 'err');
+      gridEl.hidden = true;
+      viewerEl.hidden = false;
+      viewerEl.innerHTML = '';
+      const p = document.createElement('p');
+      p.className = 'explorer-status err';
+      p.textContent = `Couldn't open ${filename}: ${err && err.message ? err.message : err}`;
+      viewerEl.appendChild(p);
+    }
+  }
+
+  async function navigateProtoFile(delta) {
+    if (explorerMode !== 'pro' || viewerEl.hidden) return;
+    if (!protoFiles.length) {
+      try {
+        protoManifest = await loadProtoManifest(protoCurrentPath, protoCurrentFolderName);
+        protoFiles = extractProtoManifestFiles(protoManifest);
+      } catch (_) { return; }
+    }
+    const currentIndex = protoFiles.findIndex(name => name.toLowerCase() === String(protoViewerFilename || '').toLowerCase());
+    if (currentIndex < 0) return;
+    const nextIndex = currentIndex + delta;
+    if (nextIndex < 0 || nextIndex >= protoFiles.length) return;
+    const filename = protoFiles[nextIndex];
+    const row = Array.from(treeEl.querySelectorAll('.mob-file-row')).find(r => r.querySelector('.tree-name')?.textContent === filename);
+    await loadProtoFromServer(filename, row || null, protoCurrentPath);
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (explorerMode !== 'pro' || viewerEl.hidden) return;
+    if (e.key !== 'ArrowUp' && e.key !== 'ArrowDown') return;
+    const tag = (e.target && e.target.tagName) || '';
+    if (tag === 'INPUT' || tag === 'SELECT' || tag === 'TEXTAREA') return;
+    if (document.getElementById('gbOverlay').classList.contains('open')) return;
+    e.preventDefault();
+    navigateProtoFile(e.key === 'ArrowUp' ? -1 : 1);
+  });
+
+  function renderProtoViewer(decoded) {
+    gridEl.hidden = true;
+    paginationEl.hidden = true;
+    viewerEl.innerHTML = '';
+    viewerEl.hidden = false;
+    viewerEl.classList.add('revealed');
+
+    const article = document.createElement('article');
+    article.className = 'mob-viewer';
+
+    const backBar = document.createElement('div');
+    backBar.className = 'viewer-backbar';
+    const back = document.createElement('button');
+    back.type = 'button';
+    back.className = 'btn-back';
+    back.textContent = '← Back to prototypes';
+    back.addEventListener('click', showProtoBrowser);
+    backBar.appendChild(back);
+    article.appendChild(backBar);
+
+    const header = document.createElement('div');
+    header.className = 'file-group-header';
+    header.innerHTML = `<h2>${decoded.filename}</h2><span class="meta">${decoded.fields.length} serialized fields</span>`;
+    article.appendChild(header);
+
+    const aidField = decoded.fields.find(f => f.field === 1);
+    const aidArtId = aidField ? protoCurrentAidArtId(aidField.value, decoded.objType) : null;
+    const aidArtName = aidArtId !== null && itemInvenMesMap ? (itemInvenMesMap.get(aidArtId) ?? null) : null;
+    const descriptionField = decoded.fields.find(f => f.field === 23);
+    const descriptionInfo = descriptionField ? protoDescriptionInfo(descriptionField.value) : null;
+    if (aidField || descriptionField) {
+      const aidArt = document.createElement('div');
+      aidArt.className = 'proto-current-aid-art';
+
+      const artPreview = document.createElement('div');
+      artPreview.className = 'proto-current-aid-preview';
+      const artCanvas = document.createElement('canvas');
+      artCanvas.className = 'proto-current-aid-canvas';
+      artPreview.appendChild(artCanvas);
+
+      const artMeta = document.createElement('div');
+      artMeta.className = 'proto-current-aid-meta';
+      const artLabel = document.createElement('span');
+      artLabel.className = 'proto-current-aid-label';
+      artLabel.textContent = 'Current art';
+      const artNameEl = document.createElement('strong');
+      artNameEl.textContent = aidArtId !== null ? (aidArtName || `Art ID ${aidArtId}`) : 'Art ID unavailable';
+      artMeta.append(artLabel, artNameEl);
+
+      const descLabel = document.createElement('span');
+      descLabel.className = 'proto-current-aid-label';
+      descLabel.textContent = 'F_DESCRIPTION';
+      const descEl = document.createElement('div');
+      descEl.className = 'proto-current-aid-description';
+      if (descriptionInfo && descriptionInfo.text != null) {
+        descEl.textContent = `${descriptionInfo.text} (${descriptionInfo.id})`;
+      } else if (descriptionInfo && descriptionInfo.loading) {
+        descEl.textContent = `${mobValueText(descriptionField.value)} (loading description.mes…)`;
+      } else if (descriptionInfo) {
+        descEl.textContent = `${mobValueText(descriptionField.value)} (not found in description.mes)`;
+      } else {
+        descEl.textContent = 'Not present';
+      }
+      artMeta.append(descLabel, descEl);
+
+      aidArt.append(artPreview, artMeta);
+      article.appendChild(aidArt);
+      if (aidArtName) loadProtoCurrentAidArt(aidArtId, aidArtName, artCanvas);
+    }
+
+    // F_ITEM_INV_AID (field 93) — a separate "compact inventory-icon art id" per
+    // ObjectProto.cs, distinct from F_CURRENT_AID (field 1). It's already parsed
+    // into decoded.fields with no extra work. We don't have a confirmed bit-decode
+    // formula for it yet, so this looks the raw value up in item_inven.mes directly
+    // (no bit-shuffling) — shown side-by-side with Current art so the two can be
+    // compared against known-good examples while the Art-ID bitfield format is
+    // still being reverse-engineered.
+    const invAidField = decoded.fields.find(f => f.field === 93);
+    if (invAidField) {
+      const rawInvAid = Number(invAidField.value) >>> 0;
+      const invAidName = itemInvenMesMap ? (itemInvenMesMap.get(rawInvAid) ?? null) : null;
+
+      const invArt = document.createElement('div');
+      invArt.className = 'proto-current-aid-art';
+
+      const invPreview = document.createElement('div');
+      invPreview.className = 'proto-current-aid-preview';
+      const invCanvas = document.createElement('canvas');
+      invCanvas.className = 'proto-current-aid-canvas';
+      invPreview.appendChild(invCanvas);
+
+      const invMeta = document.createElement('div');
+      invMeta.className = 'proto-current-aid-meta';
+      const invLabel = document.createElement('span');
+      invLabel.className = 'proto-current-aid-label';
+      invLabel.textContent = 'F_ITEM_INV_AID · raw value, direct .mes lookup (unconfirmed)';
+      const invNameEl = document.createElement('strong');
+      invNameEl.textContent = invAidName || `raw ${rawInvAid} — not found in item_inven.mes`;
+      invMeta.append(invLabel, invNameEl);
+
+      invArt.append(invPreview, invMeta);
+      article.appendChild(invArt);
+      if (invAidName) loadProtoCurrentAidArt(rawInvAid, invAidName, invCanvas);
+    }
+
+    const summary = document.createElement('div');
+    summary.className = 'mob-summary';
+    summary.innerHTML = `
+      <div><span>Size</span><strong>${decoded.size} bytes</strong></div>
+      <div><span>Version</span><strong>${decoded.version}</strong></div>
+      <div><span>Object type</span><strong>${mobObjectTypeName(decoded.objType)} (${decoded.objType})</strong></div>
+      <div><span>Available fields</span><strong>${decoded.actualAvailable}</strong></div>
+      <div><span>Serialized fields</span><strong>${decoded.fields.length}</strong></div>
+    `;
+    article.appendChild(summary);
+
+    const ids = document.createElement('div');
+    ids.className = 'mob-ids';
+    ids.innerHTML = `
+      <div><b>Prototype OID</b><pre>${mobOidText(decoded.protoOid)}</pre></div>
+      <div><b>Object OID</b><pre>${mobOidText(decoded.objectOid)}</pre></div>
+      <div><b>Available mask</b><pre>${decoded.bitmap.map(x => `0x${x.toString(16).padStart(8,'0').toUpperCase()}`).join(' ')}</pre></div>
+    `;
+    article.appendChild(ids);
+
+    const title = document.createElement('h3');
+    title.className = 'mob-section-title';
+    title.textContent = 'Prototype fields';
+    article.appendChild(title);
+
+    const note = document.createElement('p');
+    note.className = 'mob-tail';
+    note.textContent = `Every field is serialized in enum order. “Available” comes from the prototype’s available-field bitmap. Canonical names are shown where supplied by ObjectInstanceReader.cs/ObjectFieldData.cs; unnamed ordinals are shown as FIELD_### until the original obj.h enum is supplied.`;
+    article.appendChild(note);
+
+    const table = document.createElement('div');
+    table.className = 'mob-field-table proto-field-table';
+    const head = document.createElement('div');
+    head.className = 'mob-field-row mob-field-head';
+    ['Field','Available','Type','Offset','Size','Value','Raw'].forEach(t => {
+      const c = document.createElement('div'); c.textContent = t; head.appendChild(c);
+    });
+    table.appendChild(head);
+
+    for (const f of decoded.fields) {
+      const row = document.createElement('div');
+      row.className = 'mob-field-row';
+      const c1 = document.createElement('div');
+      c1.innerHTML = `<strong>${f.name}</strong><small>#${f.field} · change[${f.change_idx}] bit ${f.bit}</small>`;
+      if (f.field === 23) {
+        const source = document.createElement('small');
+        source.className = 'proto-description-source';
+        source.textContent = 'From description.mes';
+        c1.appendChild(source);
+      }
+      const c2 = document.createElement('div');
+      c2.textContent = f.available ? 'Yes' : 'No';
+      if (f.available) c2.classList.add('proto-available');
+      const c3 = document.createElement('div'); c3.textContent = f.od;
+      const c4 = document.createElement('div'); c4.textContent = `0x${f.offset.toString(16).toUpperCase().padStart(4,'0')}`;
+      const c5 = document.createElement('div'); c5.textContent = String(f.size);
+      const c6 = document.createElement('div');
+      c6.className = 'mob-value';
+      if (f.field === 23) {
+        const info = protoDescriptionInfo(f.value);
+        if (info && info.text !== null) {
+          c6.textContent = `${info.text} (${info.id})`;
+        } else if (info && info.loading) {
+          c6.textContent = `${mobValueText(f.value)} (loading description.mes…)`;
+        } else if (info) {
+          c6.textContent = `${mobValueText(f.value)} (not found in description.mes)`;
+        } else {
+          c6.textContent = mobValueText(f.value);
+        }
+      } else if (f.field === 1) {
+        c6.textContent = mobCurrentAidText(f.value, decoded.objType);
+      } else if ((f.field === 89 || f.field === 91) && Number(f.value) === -1) {
+        // data-formats.md: shipped .pro files store weight/worth as a -1 sentinel;
+        // the real number is filled in at runtime from internal default tables,
+        // not read from the file. Flag it so -1 doesn't look like real data.
+        c6.textContent = `${mobValueText(f.value)} (sentinel — game computes default at runtime)`;
+      } else {
+        c6.textContent = mobValueText(f.value);
+      }
+      const c7 = document.createElement('div'); c7.className = 'mob-raw'; c7.textContent = f.raw;
+      [c1,c2,c3,c4,c5,c6,c7].forEach(c => row.appendChild(c));
+      table.appendChild(row);
+    }
+    article.appendChild(table);
+
+    const tail = document.createElement('div');
+    tail.className = 'mob-tail';
+    tail.textContent = decoded.trailing.length
+      ? `Trailing bytes: ${decoded.trailing.length}\n${mobHex(decoded.trailing)}`
+      : `End offset: 0x${decoded.endOffset.toString(16).toUpperCase()} · no trailing bytes`;
+    article.appendChild(tail);
+
+    viewerEl.appendChild(article);
+    viewerEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function renderMobViewer(decoded) {
+    gridEl.hidden = true;
+    paginationEl.hidden = true;
+    viewerEl.innerHTML = '';
+    viewerEl.hidden = false;
+    viewerEl.classList.add('revealed');
+
+    const article = document.createElement('article');
+    article.className = 'mob-viewer';
+
+    const backBar = document.createElement('div');
+    backBar.className = 'viewer-backbar';
+    const back = document.createElement('button');
+    back.type = 'button';
+    back.className = 'btn-back';
+    back.textContent = '← Back to data files';
+    back.addEventListener('click', showMobBrowser);
+    backBar.appendChild(back);
+    article.appendChild(backBar);
+
+    const header = document.createElement('div');
+    header.className = 'file-group-header';
+    header.innerHTML = `<h2>${decoded.filename}</h2><span class="meta">${decoded.fields.length} overridden field${decoded.fields.length === 1 ? '' : 's'}</span>`;
+    article.appendChild(header);
+
+    const summary = document.createElement('div');
+    summary.className = 'mob-summary';
+    const locField = decoded.fields.find(f => f.field === 2);
+    const loc = locField ? mobLocationInfo(locField.value) : null;
+    summary.innerHTML = `
+      <div><span>Size</span><strong>${decoded.size} bytes</strong></div>
+      <div><span>Version</span><strong>${decoded.version}</strong></div>
+      <div><span>Object type</span><strong>${mobObjectTypeName(decoded.objType)} (${decoded.objType})</strong></div>
+      <div><span>NUM_FIELDS</span><strong>${decoded.numFields}</strong></div>
+      <div><span>Set bits</span><strong>${decoded.actualSet}</strong></div>
+      ${loc ? `<div><span>World X / Y</span><strong>${loc.worldX} / ${loc.worldY}</strong></div><div><span>Sector X / Y</span><strong>${loc.sectorX} / ${loc.sectorY}</strong></div><div><span>Tile X / Y</span><strong>${loc.tileX} / ${loc.tileY}</strong></div>` : ''}
+    `;
+    article.appendChild(summary);
+
+    const ids = document.createElement('div');
+    ids.className = 'mob-ids';
+    ids.innerHTML = `
+      <div><b>Prototype OID</b><pre>${mobOidText(decoded.protoOid)}</pre></div>
+      <div><b>Object OID</b><pre>${mobOidText(decoded.objectOid)}</pre></div>
+      <div><b>FIELD_48</b><pre>${decoded.bitmap.map(x => `0x${x.toString(16).padStart(8,'0').toUpperCase()}`).join(' ')}</pre></div>
+    `;
+    article.appendChild(ids);
+
+    // Filled in asynchronously by loadMobFromServer once the linked prototype
+    // (if any) has been resolved — see resolveMobPrototype/renderMobPrototypeInfo.
+    const protoSection = document.createElement('div');
+    protoSection.className = 'mob-proto-section';
+    const resolving = document.createElement('p');
+    resolving.className = 'explorer-status';
+    resolving.textContent = 'Resolving prototype…';
+    protoSection.appendChild(resolving);
+    article.appendChild(protoSection);
+
+    const title = document.createElement('h3');
+    title.className = 'mob-section-title';
+    title.textContent = 'Serialized / overridden fields';
+    article.appendChild(title);
+
+    const table = document.createElement('div');
+    table.className = 'mob-field-table';
+    const head = document.createElement('div');
+    head.className = 'mob-field-row mob-field-head';
+    ['Field', 'Type', 'Offset', 'Size', 'Value', 'Raw'].forEach(t => {
+      const c = document.createElement('div'); c.textContent = t; head.appendChild(c);
+    });
+    table.appendChild(head);
+    for (const f of decoded.fields) {
+      const row = document.createElement('div');
+      row.className = 'mob-field-row';
+      const c1 = document.createElement('div');
+      c1.innerHTML = `<strong>${f.name}</strong><small>#${f.field} · change[${f.change_idx}] bit ${f.bit}</small>`;
+      const c2 = document.createElement('div'); c2.textContent = f.od;
+      const c3 = document.createElement('div'); c3.textContent = `0x${f.offset.toString(16).toUpperCase().padStart(4,'0')}`;
+      const c4 = document.createElement('div'); c4.textContent = String(f.size);
+      const c5 = document.createElement('div');
+      c5.className = 'mob-value';
+      c5.textContent = f.field === 1 ? mobCurrentAidText(f.value, decoded.objType) : mobValueText(f.value);
+      const c6 = document.createElement('div'); c6.className = 'mob-raw'; c6.textContent = f.raw;
+      [c1, c2, c3, c4, c5, c6].forEach(c => row.appendChild(c));
+      table.appendChild(row);
+    }
+    article.appendChild(table);
+
+    const tail = document.createElement('div');
+    tail.className = 'mob-tail';
+    tail.textContent = decoded.trailing.length
+      ? `Trailing bytes: ${decoded.trailing.length}\n${mobHex(decoded.trailing)}`
+      : `End offset: 0x${decoded.endOffset.toString(16).toUpperCase()} · no trailing bytes`;
+    article.appendChild(tail);
+
+    viewerEl.appendChild(article);
+    viewerEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    return { protoSection };
+  }
+  function showExplorerHome() {
+    document.body.classList.add('home-active');
+    explorerHome.hidden = false;
+    document.querySelector('.explorer').hidden = true;
+    if (manualLoadEl) manualLoadEl.hidden = true;
+    if (logEl) logEl.hidden = true;
+    if (footerNoteEl) footerNoteEl.hidden = true;
+  }
+
+  function leaveExplorerHome() {
+    document.body.classList.remove('home-active');
+  }
+  function enterArtExplorer() {
+    leaveExplorerHome();
+    explorerHome.hidden = true;
+    document.querySelector('.explorer').hidden = false;
+    if (manualLoadEl) manualLoadEl.hidden = false;
+    if (logEl) logEl.hidden = false;
+    if (footerNoteEl) footerNoteEl.hidden = false;
+    explorerMode = 'art';
+    artExplorerControls.hidden = false;
+    if (protoObjectTypeFilterEl) protoObjectTypeFilterEl.hidden = true;
+    searchInputEl.placeholder = 'Search .ART files by name…';
+    searchInputEl.setAttribute('aria-label', 'Search all folders');
+    searchInputEl.value = '';
+    searchClearBtnEl.hidden = true;
+    showBrowser();
+    treeEl.innerHTML = '';
+    initExplorer(false);
+  }
+  const appTitle = document.getElementById('appTitle');
+  if (appTitle) {
+    appTitle.addEventListener('click', showExplorerHome);
+    appTitle.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        showExplorerHome();
+      }
+    });
+  }
+
+  mobExploreBtn.addEventListener('click',()=>{ enterMobExplorer(); });
+  protoExploreBtn.addEventListener('click',()=>{ enterProtoExplorer(); });
+  artExploreBtn.addEventListener('click',()=>{ enterArtExplorer(); });
+  explorerHome.querySelectorAll('[data-open-mode]').forEach(card => {
+    card.addEventListener('click', () => {
+      const mode = card.dataset.openMode;
+      if (mode === 'art') enterArtExplorer();
+      else if (mode === 'pro') enterProtoExplorer();
+      else if (mode === 'mob') enterMobExplorer();
+    });
+  });
+
   // ---- File explorer -------------------------------------------------------
   //
   // Folder structure comes from per-folder "<foldername>_manifest.json" files
@@ -2551,12 +3938,78 @@
   let searchResults = [];    // [{ filename, relPath, folderName }]
   let lastSearchQuery = '';
   const SEARCH_RESULT_LIMIT = 300;
+  const EXPLORER_STATE_KEY = 'arcanum-art-explorer-state-v1';
+
+  function saveExplorerState(extra = {}) {
+    try {
+      const state = {
+        folder: folderRelPath,
+        folderName: currentFolderName,
+        file: extra.file !== undefined ? extra.file : null,
+        offset: filesOffset,
+        pageSize,
+        browseMode,
+        searchQuery: lastSearchQuery,
+      };
+      localStorage.setItem(EXPLORER_STATE_KEY, JSON.stringify(state));
+    } catch (_) {}
+  }
+
+  function loadExplorerState() {
+    try {
+      const raw = localStorage.getItem(EXPLORER_STATE_KEY);
+      if (!raw) return null;
+      const state = JSON.parse(raw);
+      if (!state || typeof state !== 'object') return null;
+      return state;
+    } catch (_) {
+      return null;
+    }
+  }
+
+
+  const DATA_EXPLORER_STATE_KEY = 'arcanum-data-explorer-state-v1';
+
+  function saveDataExplorerState(mode, path, folderName, file = null) {
+    try {
+      localStorage.setItem(DATA_EXPLORER_STATE_KEY, JSON.stringify({
+        mode,
+        path: path || '',
+        folderName: folderName || (mode === 'pro' ? 'proto' : 'mob'),
+        file: file || null,
+      }));
+    } catch (_) {}
+  }
+
+  function loadDataExplorerState() {
+    try {
+      const raw = localStorage.getItem(DATA_EXPLORER_STATE_KEY);
+      if (!raw) return null;
+      const state = JSON.parse(raw);
+      if (!state || (state.mode !== 'pro' && state.mode !== 'mob')) return null;
+      return state;
+    } catch (_) {
+      return null;
+    }
+  }
 
   const paginationEl = document.getElementById('explorerPagination');
   const paginationStatusEl = document.getElementById('explorerPaginationStatus');
   const nextBtn = document.getElementById('explorerLoadMoreBtn');
   const backBtn = document.getElementById('explorerBackBtn');
   const pageSizeSelect = document.getElementById('explorerPageSize');
+  const protoObjectTypeFilterEl = document.getElementById('protoObjectTypeFilter');
+  if (protoObjectTypeFilterEl) {
+    protoObjectTypeFilterEl.addEventListener('change', async () => {
+      protoObjectTypeFilter = protoObjectTypeFilterEl.value;
+      if (explorerMode !== 'pro') return;
+      if (protoBrowseMode === 'search') {
+        await runProtoSearch(protoLastSearchQuery);
+      } else {
+        await renderProtoTree(protoManifest, protoCurrentPath, protoCurrentFolderName);
+      }
+    });
+  }
   const searchInputEl = document.getElementById('explorerSearchInput');
   const searchBtnEl = document.getElementById('explorerSearchBtn');
   const searchClearBtnEl = document.getElementById('explorerSearchClear');
@@ -2620,6 +4073,7 @@
     card.addEventListener('click', () => {
       folderRelPath = relPath;
       currentFolderName = folderName;
+      saveExplorerState({ file: filename });
       loadArtFromServer(artUrl, filename);
     });
     gridEl.appendChild(card);
@@ -2762,6 +4216,7 @@
     searchResults = [];
     filesOffset = 0;
     searchClearBtnEl.hidden = false;
+    saveExplorerState({ file: null });
 
     treeEl.querySelectorAll('.tree-row.active').forEach(r => r.classList.remove('active'));
     showBrowser();
@@ -2789,18 +4244,123 @@
     filesOffset = 0;
     searchInputEl.value = '';
     searchClearBtnEl.hidden = true;
+    saveExplorerState({ file: null });
     breadcrumbEl.textContent = `/${folderRelPath}`.replace(/\/+/g, '/') || '/';
     renderFilePage();
   }
 
-  searchBtnEl.addEventListener('click', () => runSearch(searchInputEl.value));
+  // ---- .PRO search --------------------------------------------------------
+  // Mirrors collectFilesRecursive/runSearch/clearSearch above, but walks the
+  // /proto/ manifest tree, matches by filename, and — like the folder view —
+  // honors protoObjectTypeFilter by decoding only the name-matched candidates.
+
+  async function collectProtoFilesRecursive(relativePath, folderName, query, results, limit, visited) {
+    if (results.length >= limit) return;
+    if (visited.has(relativePath)) return;
+    visited.add(relativePath);
+
+    let manifest;
+    try {
+      manifest = await loadProtoManifest(relativePath, folderName);
+    } catch (err) {
+      return;
+    }
+
+    const candidates = extractProtoManifestFiles(manifest).filter(f => f.toLowerCase().includes(query));
+    for (const f of candidates) {
+      if (results.length >= limit) return;
+      if (await protoFileMatchesType(f, relativePath)) {
+        results.push({ filename: f, relPath: relativePath, folderName });
+      }
+    }
+
+    const subfolders = protoSubfolders(manifest);
+    for (const sf of subfolders) {
+      if (results.length >= limit) return;
+      await collectProtoFilesRecursive(mobJoinPath(relativePath, sf.relative_path), sf.folder_name, query, results, limit, visited);
+    }
+  }
+
+  function renderProtoSearchResults() {
+    gridEl.innerHTML = '';
+    paginationEl.hidden = true;
+    if (protoSearchResults.length === 0) {
+      const p = document.createElement('p');
+      p.className = 'explorer-status';
+      p.textContent = `No .pro files match "${protoLastSearchQuery}".`;
+      gridEl.appendChild(p);
+      return;
+    }
+    for (const item of protoSearchResults) {
+      const fullPath = item.relPath ? `${item.relPath}/${item.filename}` : item.filename;
+      const card = createDataFileCard(item.filename, fullPath, '🧬', card =>
+        loadProtoFromServer(item.filename, card, item.relPath));
+      const pathLabel = document.createElement('span');
+      pathLabel.className = 'explorer-item-path';
+      pathLabel.textContent = `/proto/${item.relPath}`.replace(/\/+/g, '/') || '/proto/';
+      card.appendChild(pathLabel);
+      gridEl.appendChild(card);
+      applyProtoCurrentArtToFileCard(card, item.filename, item.relPath);
+    }
+  }
+
+  async function runProtoSearch(rawQuery) {
+    const query = (rawQuery || '').trim();
+    if (!query) return;
+
+    protoLastSearchQuery = query;
+    protoBrowseMode = 'search';
+    protoSearchResults = [];
+    searchClearBtnEl.hidden = false;
+    saveDataExplorerState('pro', protoCurrentPath, protoCurrentFolderName, null);
+
+    treeEl.querySelectorAll('.tree-row.active, .mob-file-row.active').forEach(r => r.classList.remove('active'));
+    gridEl.hidden = false;
+    viewerEl.hidden = true;
+    breadcrumbEl.textContent = `Searching for "${query}"…`;
+    gridEl.innerHTML = '<p class="explorer-status">Searching…</p>';
+    paginationEl.hidden = true;
+
+    const results = [];
+    try {
+      await collectProtoFilesRecursive('', 'proto', query.toLowerCase(), results, PROTO_SEARCH_RESULT_LIMIT, new Set());
+    } catch (err) {
+      log(`.pro search: ${err && err.message ? err.message : err}`, 'err');
+    }
+    results.sort((a, b) => a.filename.localeCompare(b.filename));
+    protoSearchResults = results;
+
+    const cappedNote = results.length >= PROTO_SEARCH_RESULT_LIMIT ? ` (showing first ${PROTO_SEARCH_RESULT_LIMIT})` : '';
+    breadcrumbEl.textContent = `Search results for "${query}" — ${results.length} match${results.length === 1 ? '' : 'es'}${cappedNote}`;
+    renderProtoSearchResults();
+  }
+
+  function clearProtoSearch() {
+    protoBrowseMode = 'folder';
+    protoSearchResults = [];
+    protoLastSearchQuery = '';
+    searchInputEl.value = '';
+    searchClearBtnEl.hidden = true;
+    saveDataExplorerState('pro', protoCurrentPath, protoCurrentFolderName, null);
+    breadcrumbEl.textContent = `/proto/${protoCurrentPath ? protoCurrentPath + '/' : ''}`;
+    renderProtoTree(protoManifest, protoCurrentPath, protoCurrentFolderName);
+  }
+
+  searchBtnEl.addEventListener('click', () => {
+    if (explorerMode === 'pro') runProtoSearch(searchInputEl.value);
+    else runSearch(searchInputEl.value);
+  });
   searchInputEl.addEventListener('keydown', (e) => {
     if (e.key === 'Enter') {
       e.preventDefault();
-      runSearch(searchInputEl.value);
+      if (explorerMode === 'pro') runProtoSearch(searchInputEl.value);
+      else runSearch(searchInputEl.value);
     }
   });
-  searchClearBtnEl.addEventListener('click', clearSearch);
+  searchClearBtnEl.addEventListener('click', () => {
+    if (explorerMode === 'pro') clearProtoSearch();
+    else clearSearch();
+  });
 
   function renderFilePage() {
     gridEl.innerHTML = '';
@@ -2863,6 +4423,7 @@
   nextBtn.addEventListener('click', () => {
     if (nextBtn.disabled) return;
     filesOffset += effectivePageSize();
+    saveExplorerState();
     renderFilePage();
     gridEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
@@ -2870,6 +4431,7 @@
   backBtn.addEventListener('click', () => {
     if (backBtn.disabled) return;
     filesOffset = Math.max(0, filesOffset - effectivePageSize());
+    saveExplorerState();
     renderFilePage();
     gridEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
@@ -2878,6 +4440,7 @@
     const v = pageSizeSelect.value;
     pageSize = v === 'all' ? 'all' : parseInt(v, 10);
     filesOffset = 0;
+    saveExplorerState();
     renderFilePage();
   });
 
@@ -2920,6 +4483,7 @@
   }
 
   async function selectFolder(relativePath, folderName, rowEl) {
+    saveExplorerState({ file: null });
     treeEl.querySelectorAll('.tree-row.active').forEach(r => r.classList.remove('active'));
     rowEl.classList.add('active');
     showBrowser();
@@ -3019,6 +4583,7 @@
     }
     const size = effectivePageSize();
     filesOffset = Math.floor(idx / size) * size;
+    saveExplorerState({ file: target.file });
     renderFilePage();
 
     const folderPrefix = target.folder ? `${target.folder}/` : '';
@@ -3026,15 +4591,32 @@
     await loadArtFromServer(artUrl, target.file);
   }
 
+  // The landing page is intentionally minimal: no explorer, search, local drop zone, or log.
+  document.body.classList.add('home-active');
+  showExplorerHome();
+
   const deepLinkTarget = parseDeepLink();
-  initExplorer(!!deepLinkTarget);
+  const savedExplorerState = loadExplorerState();
+  if (savedExplorerState && [50, 100, 200, 'all'].includes(savedExplorerState.pageSize)) {
+    pageSize = savedExplorerState.pageSize;
+    pageSizeSelect.value = String(pageSize);
+  }
   if (deepLinkTarget) {
+    if (manualLoadEl) manualLoadEl.hidden = false;
+    if (logEl) logEl.hidden = false;
+    if (footerNoteEl) footerNoteEl.hidden = false;
+    document.querySelector('.explorer').hidden = false;
+    explorerHome.hidden = true;
+    initExplorer(true);
     openDeepLink(deepLinkTarget).catch(err => {
       log(`share link: couldn't open — ${err && err.message ? err.message : err}`, 'err');
       const rootRow = treeEl.querySelector('.tree-row');
       if (rootRow) rootRow.click();
     });
   }
+
+  // Saved .PRO/.MOB positions remain stored, but the app now opens on the file-type home screen.
+
 
   // ---- Drop zone wiring ---------------------------------------------------
 

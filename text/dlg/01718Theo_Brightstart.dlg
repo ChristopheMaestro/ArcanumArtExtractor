@@ -1,0 +1,187 @@
+{1}{G:}{}{}{}{}{}
+{2}{Greetings halfling.  Might I ask your name?}{}{5}{lf1 0, re 41}{32}{}
+{3}{That was very unmannerly.}{}{5}{lf1 0, re -40}{45}{}
+{4}{Have I in some way offended you, Theo?}{}{5}{lf1 1, lf2 0}{56}{}
+{5}{Hello again, Theo.  Might I have a little more of your time?}{}{5}{lf1 1, lf2 1,re 41}{62}{}
+{6}{Have I in some way offended you, Theo?}{}{5}{lf1 1, lf2 1, re -40}{52}{}
+{7}{I think I'll take care of those pigs for you.  What is the pay?}{}{5}{qu1117 1}{97}{}
+{8}{I haven't taken care of the pigs yet...}{}{5}{qu1117 2}{113}{}
+{9}{I have taken care of the pigs, as you requested.}{}{5}{lf3 0, qu1117 3}{116}{re +10}
+{10}{I have taken care of the pigs, as you requested.}{}{5}{lf3 1, qu1117 3}{121}{re +10}
+{11}{Maybe I will move those boulders.  What will you pay me?}{}{5}{qu1118 1}{135}{}
+{12}{I'm having a little trouble with those boulders...}{}{5}{qu1118 2, gf2321 0}{143}{}
+{13}{I've moved the boulders.}{}{5}{lf4 0, gf 2321 1}{159}{re +10}
+{14}{I've moved the boulders.}{}{5}{lf4 1, gf 2321 1}{164}{re +10}
+{15}{I know you said to go...  but I had another question...}{}{5}{lf5 1}{}{co, fl 51}
+{16}{I've moved the boulders.}{}{5}{qu1118 6}{169}{re -15}
+{17}{Hey, mister.  Wha' you name?}{}{-4}{lf1 0, re 41}{32}{}
+{18}{Dat was not nice...}{}{-4}{lf1 0, re -40}{45}{}
+{19}{Hi Theo.  Me ask sumthin?}{}{-4}{lf1 1, lf2 0}{56}{}
+{20}{Hi Theo.  Me ask sumthin?}{}{-4}{lf1 1, lf2 1}{62}{}
+{21}{Me get pigs for you.  Wha' you pay?}{}{-4}{qu1117 1}{97}{}
+{22}{Me not get pigs yet...}{}{-4}{qu1117 2}{113}{}
+{23}{Me get pigs...  Me get pigs!}{}{-4}{lf3 0, qu1117 3}{116}{re +10}
+{24}{Me get pigs...  Me get pigs!}{}{-4}{lf3 1, qu1117 3}{121}{re +10}
+{25}{Mebbe I move rocks.  Wha' you pay me?}{}{-4}{qu1118 1}{135}{}
+{26}{Dem rocks hard to move...}{}{-4}{qu1118 2, gf2321 0}{143}{}
+{27}{Me move the rocks!}{}{-4}{lf4 0, gf 2321 1}{159}{re +10}
+{28}{Me move the rocks!}{}{-4}{lf4 1, gf 2321 1}{164}{re +10}
+{29}{Me know you say go...  but me want ask sumthin' more...}{}{-4}{lf5 1}{}{co, fl 51}
+{30}{Me move the rocks!}{}{-4}{qu1118 6}{169}{re -15}
+{31}{E:}{}{1}{}{0}{}
+{32}{My name is Theo Brightstart.  Who are you?}{My name is Theo Brightstart.  Who are you?}{}{}{}{lf1 1}
+{33}{My name is @pcname@.}{}{5}{}{62}{lf2 1}
+{34}{That is none of your concern.}{}{5}{}{39}{re-10}
+{35}{I don't particularly like conversing with inferior races...}{}{5}{ra-6}{39}{re-15}
+{36}{Me name @pcname@.}{}{-4}{}{62}{lf2 1}
+{37}{No.}{}{-4}{ra-4}{39}{re-10}
+{38}{Me no like you, tiny man.}{}{-4}{ra 4}{39}{re-15}
+{39}{Then...  I don't want to talk to you!}{Then...  I don't want to talk to you!}{}{}{}{}
+{40}{That was rude.  I apologize.  My name is @pcname@.}{}{5}{}{62}{re+5, lf2 1}
+{41}{No need to talk...  Since you'll be dead in a moment!}{}{5}{}{}{co, fl 51}
+{42}{Sorry.  Me be bad.  Me name is @pcname@.}{}{-4}{}{62}{re+5, lf2 1}
+{43}{No need to talk...  You gonna be dead...}{}{-4}{}{}{co, fl 51}
+{44}{E:}{}{1}{}{0}{}
+{45}{I:}{I:}{}{}{}{}
+{46}{Fine...  I'll be the civilized one.  Could I ask your name, sir?}{}{5}{}{32}{}
+{47}{That's it!  You've insulted me enough!  Defend yourself!}{}{5}{}{}{co, fl 51}
+{48}{Uh, okay.  Uh...  Wha' you name?}{}{-4}{}{32}{}
+{49}{You no good... very bad!  Need to die!}{}{-4}{}{}{co, fl 51}
+{50}{E:}{}{1}{}{0}{}
+{51}{Augh!  I'll get you!}{Augh!  I'll get you!}{}{}{}{}
+{52}{You sure do get mad quick.}{You sure do get mad quick.  Just like a lady...}{}{}{}{}
+{53}{Errr...  I have a question.}{}{5}{}{62}{}
+{54}{I see you still need to be taught your manners.  I have a question.}{}{5}{}{62}{}
+{55}{E:}{}{5}{}{0}{}
+{56}{You don't want to give me your name...  I don't like talkin' to strangers...}{You don't want to give me your name...  I don't like talkin' to strangers...}{}{}{}{}
+{57}{Oh, please forgive me.  I am @pcname@.}{}{5}{}{62}{lf2 1}
+{58}{Do you enjoy being slaughtered by strangers?}{}{5}{}{}{co, fl 51}
+{59}{Me sorry.  Me name @pcname@.}{}{-4}{}{62}{lf2 1}
+{60}{Mebbe you like stranger make you dead?}{}{-4}{}{}{co, fl 51}
+{61}{E:}{}{1}{}{0}{}
+{62}{Well...  What do you want @pcname@?}{Well...  What do you want @pcname@?}{}{}{}{}
+{63}{C:}{}{1}{}{72}{}
+{64}{T:6, 3}{}{1}{}{72}{}
+{65}{Can you train me as an Expert at throwing?}{}{5}{tr3 -1}{72}{et3 177}
+{66}{Me wan' be Exper' for throw stuff.}{}{-4}{tr3 -1}{73}{et3 177}
+{67}{Do you have a job I could do?}{}{5}{qu1117 0}{82}{}
+{68}{You got sum work me do?}{}{-4}{qu1117 0}{82}{}
+{69}{Is there anything  I could help you with?}{}{5}{qu1117 4, qu1118 0}{126}{}
+{70}{Work for me?}{}{-4}{qu1117 4, qu1118 0}{126}{}
+{71}{E:}{}{1}{}{0}{}
+{72}{What else do you need, @pcname@?}{What else do you need, @pcname@?}{}{}{}{}
+{73}{C:}{}{1}{}{72}{}
+{74}{T:6, 3}{}{1}{}{72}{}
+{75}{Can you train me as an Expert at throwing?}{}{5}{tr3 -1}{72}{et3 177}
+{76}{Me wan' be Exper' for throw stuff.}{}{-4}{tr3 -1}{72}{et3 177}
+{77}{Do you have a job I could do?}{}{5}{qu1117 0}{82}{}
+{78}{You got sum work me do?}{}{-4}{qu1117 0}{82}{}
+{79}{Is there anything else I could help you with?}{}{5}{qu1117 4, qu1118 0}{126}{}
+{80}{More work for me?}{}{-4}{qu1117 4, qu1118 0}{126}{}
+{81}{E:}{}{1}{}{0}{}
+{82}{I do got one small problem.  I just can't seem to take care of it.  Maybe you could?}{I do got one small problem.  I just can't seem to take care of it.  Maybe you could?}{}{}{}{}
+{83}{What do you need?}{}{5}{}{86}{}
+{84}{Wha' you want me do?}{}{-4}{}{86}{}
+{85}{E:}{}{1}{}{0}{}
+{86}{I spend every day here, plowing, planting, picking...  working the land I love.  A while back some wild pigs moved into the area.  No matter what I do, I can't seem to get rid of them, and those critters are really startin' to damage my crops.  Those pigs are just too wily for me!  Think you can get rid of a few pigs?  I'll pay you.}{I spend every day here, plowing, planting, picking...  working the land I love.  A while back some wild pigs moved into the area.  No matter what I do, I can't seem to get rid of them, and those critters are really startin' to damage my crops.  Those pigs are just too wily for me!  Think you can get rid of a few pigs?  I'll pay you.}{}{}{}{qu1117 1}
+{87}{Oh I'm sure I can handle it.  What's the pay?}{}{5}{}{97}{}
+{88}{I am not sure.  I'm not one for unwarranted violence...}{}{5}{}{92}{}
+{89}{I dunno.  Dat mean me got to hurt dem?}{}{-4}{}{92}{}
+{90}{Yeah!  Me kill pigs!  Dat easy!  How much you pay?}{}{-4}{}{97}{}
+{91}{E:}{}{1}{}{0}{}
+{92}{Well...  I didn't take you for the squeamish type.  I guess I'm gonna have to take care of them myself.}{Well...  I didn't take you for the squeamish type.  I guess I'm gonna have to take care of them myself.}{}{}{}{}
+{93}{Yes, maybe you should.  It's not something I would do.}{}{5}{}{72}{}
+{94}{On second thought...  I'll do it.  What's the pay?}{}{5}{}{97}{}
+{95}{Uh huh...}{}{-4}{}{72}{}
+{96}{Hmmm...  Me get dem!  How much you pay?}{}{-4}{}{97}{}
+{97}{It's not a big job.  I don't think it's worth more than 50 coin.  What d'ya say?}{It's not a big job.  I don't think it's worth more than 50 coin.  What d'ya say?}{}{}{}{}
+{98}{Sounds fair.  I'll return shortly.}{}{5}{}{0}{qu1117 2}
+{99}{I definitely think my time is worth 75 coins.  Are we in agreement?}{}{5}{ch -7}{105}{re -5}
+{100}{I definitely think my time is worth 75 coins.  Are we in agreement?}{}{5}{ch 8}{109}{re +5}
+{101}{Okay.  Me get dem.  Be back soon.}{}{-4}{}{0}{qu1117 2}
+{102}{Me strong.  Me want 75 coin.  Okay?}{}{-4}{ch -7}{105}{re -5}
+{103}{Me strong.  Me want 75 coin.  Okay?}{}{-4}{ch 8}{109}{re +5}
+{104}{E:}{}{1}{}{0}{}
+{105}{Ha!  What d'ya take me for...  A king?  50 is my final offer...  take it or leave it.}{Ha!  What d'ya take me for...  A king?  50 is my final offer...  take it or leave it.}{}{}{}{}
+{106}{Agreed.  I'll return shortly.}{}{5}{}{0}{qu1117 2}
+{107}{Okay.  Me get dem.  Be back soon.}{}{-4}{}{0}{qu1117 2}
+{108}{E:}{}{1}{}{0}{}
+{109}{You drive a tough bargain.  75 it is.  Are we in agreement?}{You drive a tough bargain.  75 it is.  Are we in agreement?}{}{}{}{lf3 1}
+{110}{Agreed.  I'll return shortly.}{}{5}{}{0}{qu1117 2}
+{111}{Okay.  Me get dem.  Be back soon.}{}{-4}{}{0}{qu1117 2}
+{112}{E:}{}{1}{}{0}{}
+{113}{Please take care of them soon!  I depend on my crops.  I can't have them eaten by wild beasts!}{Please take care of them soon!  I depend on my crops.  I can't have them eaten by wild beasts!}{}{}{}{}
+{114}{K:}{}{1}{}{72}{}
+{115}{E:}{}{1}{}{0}{}
+{116}{Well done!  Here's the 50 coin we agreed upon.  Thank you for the help.}{Well done!  Here's the 50 coin we agreed upon.  Thank you for the help.}{}{}{}{$$ 50,  qu1117 4}
+{117}{Thank you @npcname@.  Goodbye.}{}{5}{}{0}{}
+{118}{Thank you @npcname@.  Can I ask you something?}{}{5}{}{72}{}
+{119}{T'anks @npcname@.  Buh-bye.}{}{-4}{}{0}{}
+{120}{T'anks @npcname@.  Me ask sumthin' more?}{}{-4}{}{72}{}
+{121}{Well done!  Here's the 75 coin we agreed upon.  Thank you for the help.}{Well done!  Here's the 75 coin we agreed upon.  Thank you for the help.}{}{}{}{$$ 75, qu1117 4}
+{122}{Thank you @npcname@.  Goodbye.}{}{5}{}{0}{}
+{123}{Thank you @npcname@.  Can I ask you something?}{}{5}{}{72}{}
+{124}{T'anks @npcname@.  Buh-bye.}{}{-4}{}{0}{}
+{125}{T'anks @npcname@.  Me ask sumthin' more?}{}{-4}{}{72}{}
+{126}{You certainly got an itchin' to work, eh buddy?  There is one other thing...  See those huge boulders around my field?  They make it hard to plow... gotta go around them.  Think yer strong enough to load them all into that wagon over yonder?}{You certainly got an itchin' to work, eh lady?  There is one other thing...  See those huge boulders around my field?  They make it hard to plow.  Think yer strong enough to load them all into that wagon over yonder?}{}{}{}{qu1118 1}
+{127}{I think I could manage that.  What's the pay?}{}{5}{}{135}{}
+{128}{I'm not sure.  They look pretty heavy...}{}{5}{}{143}{}
+{129}{I'd never be able to lift those!}{}{5}{}{143}{}
+{130}{What if I blew them to bits?}{}{5}{}{147}{}
+{131}{Me strong!  Me do dat!  Wha' you pay me?}{}{-4}{}{135}{}
+{132}{Me not know.  They look heavy...}{}{-4}{}{143}{}
+{133}{Me no pick dem up!  Too heavy.}{}{-4}{}{143}{}
+{134}{Dey look too heavy...  Wha' if me blow dem up?}{}{-4}{}{147}{}
+{135}{They been botherin' me a long while.   And I can tell you for sure that I'll never be able to lift them myself...  How's 50 coin sound?}{They been botherin' me a long while.   And I can tell you for sure that I'll never be able to lift them myself...  How's 50 coin sound?}{}{}{}{}
+{136}{Agreed.  I'll move them for 50 coin.  They'll be gone in no time.}{}{5}{}{0}{qu1118 2}
+{137}{50!?!  For moving those things!  I'll do it for 100, not a coin less!}{}{5}{ch -7}{154}{re -5}
+{138}{50!?!  For moving those things!  I'll do it for 100, not a coin less!}{}{5}{ch 8}{151}{}
+{139}{Okay.  Me do it.  I be back.}{}{-4}{}{0}{qu1118 2}
+{140}{50!?!  Dey huge!  Me do it for 100, nuthin else!}{}{-4}{ch -7}{154}{re -5}
+{141}{50!?!  Dey huge!  Me do it for 100, nuthin else!}{}{-4}{ch 8}{151}{}
+{142}{E:}{}{1}{}{0}{}
+{143}{Yeah.  I thought they might be too much for ya.  Well, thanks for the offer anyway.  I'd better get back to tending my crops.  Goodbye.}{Yeah.  I thought they might be too much for ya.  Well, thanks for the offer anyway.  I'd better get back to tending my crops.  Goodbye.}{}{}{}{}
+{144}{Wait! I'll try and move them.  What will you pay me?}{}{5}{}{135}{}
+{145}{Wait!  Me try and move dem.  Wha' you pay me?}{}{-4}{}{135}{}
+{146}{E:}{}{1}{}{0}{}
+{147}{No!  Don't do that!  You'd scatter debris all over my field!  If you don't think you can move them, then forget it.  I've got nuthin' else for ya.}{No!  Don't do that!  You'd scatter debris all over my field!  If you don't think you can move them, then forget it.  I've got nuthin' else for ya.}{}{}{}{}
+{148}{Wait! I'll try and move them.  What will you pay me?}{}{5}{}{135}{}
+{149}{Wait!  Me try and move dem.  Wha' you pay me?}{}{-4}{}{135}{}
+{150}{E:}{}{1}{}{0}{}
+{151}{Yeah.  Okay.  I see what you mean.  I'm sure you're worth 100.  It's a deal.}{Yeah.  Okay.  I see what you mean.  I'm sure you're worth 100.  It's a deal.}{}{}{}{lf4 1}
+{152}{I'll have them moved in no time!}{}{5}{}{0}{qu1118 2}
+{153}{Okay.  Me do it.  I be back.}{}{-4}{}{0}{qu1118 2}
+{154}{No way am I gonna pay you 100 coin to move some rocks!  Either accept the 50, or no deal.}{No way am I gonna pay you 100 coin to move some rocks!  Either accept the 50, or no deal.}{}{}{}{}
+{155}{Alright.  I'll move them for 50.  I'll be done soon.}{}{5}{}{0}{qu1118 2}
+{156}{Then forget it.  Goodbye.}{}{5}{}{0}{}
+{157}{Okay.  Me move dem for 50.  I be back.}{}{-4}{}{0}{qu1118 2}
+{158}{No way.  Buh-bye.}{}{-4}{}{0}{}
+{159}{Nice work.  Here's the 50 coin I promised.  Thank you.  I'd better get back to tending my crops.  Goodbye.}{Nice work.  Here's the 50 coin I promised.  Thank you.  I'd better get back to tending my crops.  Goodbye.}{}{}{}{$$ 50, qu1118 4}
+{160}{Thank you @npcname@.  Goodbye.}{}{5}{}{0}{}
+{161}{Thank you @npcname@.  Can I ask you something?}{}{5}{}{72}{}
+{162}{T'anks @npcname@.  Buh-bye.}{}{-4}{}{0}{}
+{163}{T'anks @npcname@.  Me ask sumthin' more?}{}{-4}{}{72}{}
+{164}{Nice work.  Here's the 100 coin I promised.  Thank you.  I'd better get back to tending my crops.  Goodbye.}{Nice work.  Here's the 100 coin I promised.  Thank you.  I'd better get back to tending my crops.  Goodbye.}{}{}{}{$$ 100, qu1118 4}
+{165}{Thank you @npcname@.  Goodbye.}{}{5}{}{0}{}
+{166}{Thank you @npcname@.  Can I ask you something?}{}{5}{}{72}{}
+{167}{T'anks @npcname@.  Buh-bye.}{}{-4}{}{0}{}
+{168}{T'anks @npcname@.  Me ask sumthin' more?}{}{-4}{}{72}{}
+{169}{I can't believe you did that!  Look at the mess you've made of my field!  It's gonna take me forever to clean up all this debris.  ...I think it's time you left.  Don't set foot on my property again!}{I can't believe you did that!  Look at the mess you've made of my field!  It's gonna take me forever to clean up all this debris.  ...I think it's time you left.  Don't set foot on my property again!}{}{}{}{lf5 1}
+{170}{Oh!  I'm sorry @npcname@.  It was a mistake...}{}{5}{}{173}{}
+{171}{Me sorry.  I no mean to make mess....}{}{-4}{}{173}{}
+{172}{E:}{}{1}{}{0}{}
+{173}{I said go!  Get off my property!}{I said go!  Get off my property!}{}{}{}{lf5 1}
+{174}{I said it was an accident!  I'm staying right here!}{}{5}{}{}{co, fl 51}
+{175}{Me say sorry.  Me not go anywhere!}{}{-4}{}{}{co, fl 51}
+{176}{E:}{}{1}{}{0}{}
+{177}{Yeah.  I'm pretty good at throwing stuff.  I get a lot of practice chucking stones at the crows 'round here.  I charge 500 for the training though.  Can't just be givin' away secrets now, can we?}{Yeah.  I'm pretty good at throwing stuff.  I get a lot of practice chucking stones at the crows 'round here.  I charge 500 for the training though.  Can't just be givin' away secrets now, can we?}{}{}{}{}
+{178}{I can pay that.  Here you are.}{}{5}{$$500}{183}{}
+{179}{I will have to earn some coin and return later.}{}{5}{$$-499}{0}{}
+{180}{Yeah.  Me got dat.  'ere.}{}{-4}{$$500}{183}{}
+{181}{Uh...  Me go.  Get more coin.}{}{-4}{$$-499}{0}{}
+{182}{F:}{}{1}{}{0}{}
+{183}{Thank you kindly, @pcname@.  [He proceeds to explain the finer points of aim and distance calculations to you, adjusting your stance and commenting upon your ability as you demonstrate your throwing skill to him.]  That is all there is to it.  You are now an Expert thrower.  If you want to become a Master, go find Clarissa Shalmo.  I believe she is in Blackroot at the moment.}{Thank you kindly, @pcname@.  [He proceeds to explain the finer points of aim and distance calculations to you, adjusting your stance and commenting upon your ability as you demonstrate your throwing skill to him.]  That is all there is to it.  You are now an Expert thrower.  If you want to become a Master, go find Clarissa Shalmo.  I believe she is in Blackroot at the moment.}{}{}{}{$$-500, rq2180, tr3 2, ru2165}
+{184}{Thanks.  Goodbye.}{}{5}{}{0}{}
+{185}{T'anks.  Buh-bye.}{}{-4}{}{0}{}
+{186}{K:}{}{1}{}{72}{}
+

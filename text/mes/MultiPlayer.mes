@@ -1,0 +1,161 @@
+//
+// Multiplayer
+//
+// Index of MessageIDs
+// 0900-0999 : Multiplayer Server Starting Messages
+// 1000-1099 : Multiplayer Control UI Messages
+// 1100-1199 : Multiplayer Notice Messages
+// 1200-1299 : Multiplayer Chat Messages
+// 1900-1999 : Multiplayer Game Saving Messages
+// 2000-2099 : Multiplayer Party Messages
+// 3000-3099 : Multiplayer Internet Messages
+
+// Used with verification of packet info/etc.
+{10}{Succeeded}
+{11}{Failed}
+
+// Used with (Multiplayer) Preferences Interface
+{50}{On}
+{51}{Off}
+
+// Used with (Multiplayer) UI
+{60}{Open}
+{61}{Closed}
+
+{65}{Dying}
+
+
+// UI Window Titles
+{75}{None}
+{76}{Choose Connection}
+{77}{Choose Game}
+{78}{Player Preferences}
+{79}{Server Preferences}
+{80}{Connecting}
+{81}{Starting Server}
+
+// Choose Connection UI Buttons
+{100}{Join LAN Game}
+{101}{Join Internet Game}
+{102}{Host Game}
+{103}{Player Setup}
+{104}{Server Options}
+{105}{Cancel}
+
+// Choose Game UI Buttons
+{120}{Join}
+{121}{Cancel}
+
+// Choose Game UI Column Headings
+{170}{Server Name}
+{171}{Ping}
+{172}{# Players}
+{173}{Scenario}
+{174}{Status}
+
+
+// Starting Server UI Column Headings
+{180}{Server Name}
+{181}{# Players}
+{182}{Scenario}
+{183}{Status}
+
+{185}{Player Name}
+{186}{Ping}
+
+// Starting Server UI Buttons
+{190}{Start}
+{191}{Cancel}
+
+
+// Connecting UI Buttons
+{195}{Cancel}
+
+
+//
+{200}{Connecting...}
+{201}{Cannot Connect}
+{202}{Server Full}
+{203}{You are Banned from this Server}
+
+{240}{Lagging}
+{241}{Server Connection Lost}
+
+// Joined, transferring startup data
+{300}{Awaiting Game State...}
+{301}{Awaiting Scenario Info...}
+{302}{Awaiting Object Info...}
+{303}{Awaiting Game Start...}
+
+// Debug information -- Statistical Information
+{350}{Ping: %d}
+{351}{Packet Loss: %d}
+// Debug Information -- Specific Errors
+{360}{Game Time Difference: %d}
+{361}{Rnd Difference: %d}
+
+// (Multiplayer) Server Preferences Interface
+{500}{Change Name}
+{501}{Player Killing}
+{502}{Max Players}
+{503}{Done}
+
+// Player Preferences Interface
+{600}{Name}
+{601}{Done}
+
+// 0900-0999 : Multiplayer Server Starting Messages
+{900}{The module %s.dat could not be found. Clients which join your server may experience oddities if your data differs.}
+{901}{Could not load the specified module '%s'. Cannot continue.}
+{902}{No start map could be found for that module.}
+{903}{No PC data was found. Your character must be in error. Creating a default character.}
+
+// 1000-1099 : Multiplayer Control UI Messages
+{1000}{Status: %s}
+{1001}{Ready}
+{1002}{Waiting}
+{1003}{Loading}
+{1090}{Disconnect}
+{1091}{Ban}
+
+// 1100-1199 : Multiplayer Notice  Messages
+{1100}{Player %s(%d) has left the game.}
+{1101}{Player %s(%d) has been kicked from the game.}
+{1102}{Player %s(%d) has been banned, no connections from this host will be allowed.}
+{1103}{The server has unexpectedly disconnected, your game may be unavailable.}
+{1104}{Player has joined the game.}
+{1105}{The player has connected, resuming the game.}
+{1106}{Please wait a player is joining the game.}
+
+// 1200-1299 : Multiplayer Chat Messages
+{1200}{%s: %s}
+{1210}{You can't talk while dead.}
+{1211}{You can't talk while unconscious.}
+
+// 1900-1999 : Multiplayer Game Saving Messages
+// 1900 - character that signifies yes in a dialog
+// 1901 - character that signifies no in a dialog
+{1900}{y}
+{1901}{n}
+{1902}{Do you wish to save your character?}
+{1903}{Do you wish to export your character to Multiplayer?}
+{1904}{The character %s already exists. Do you wish to overwrite the file?}
+
+// 2000-2099 : Multiplayer Party Messages
+{2000}{%s joined the party.}
+{2001}{%s has joined you to their party.}
+{2002}{%s left the party.}
+{2003}{You have left the party: %s}
+
+{2005}{Join Failed: %s.}
+{2006}{Join Failed: %s cannot join self.}
+{2007}{Join Failed: %s is already in a party.}
+
+{2010}{Disband Failed: %s.}
+{2011}{Disband Failed: %s is not in a party.}
+{2012}{Disband Failed: %s is not in your party.}
+
+{3000}{Waiting for a response from WON servers.}
+{3001}{Waiting for Message Of The Day.}
+{3002}{Checking for Arcanum updates.}
+{3003}{A newer version of Arcanum is available (and may be required for internet play), do you wish to upgrade?}

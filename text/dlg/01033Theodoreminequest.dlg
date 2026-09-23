@@ -1,0 +1,112 @@
+{1}{G:}{G:}{}{}{}{ }
+{2}{Is there any adventure to be had around these parts?}{}{5}{qu1008 0, re 41}{10}{ }
+{3}{I've decided to search the scientician's house for you.}{}{5}{qu1008 1}{50}{qu1008 2 }
+{4}{I have yet to retrieve your armor.}{}{5}{ni 2803, qu1008 2}{90}{ }
+{5}{I have your armor.}{}{5}{qu1008 2, in 2803}{100}{ }
+{6}{Please, I beg your pardon, sir.}{}{5}{re-40, ch-9}{215}{re45 }
+{7}{Excuse me?}{}{5}{re-40, ch10}{226}{re50 }
+{8}{If you speak harsh words to me again, they will be your last!}{}{5}{re-40, ch-9, sk2 8}{240}{re45 }
+{9}{E:}{}{1}{}{0}{ }
+{10}{It's funny you should ask. I have a bit of a problem ...}{It's funny you should ask. I have a bit of a problem ...}{}{}{}{ }
+{11}{Let me venture a guess. You need my assistance.}{}{5}{}{80}{re -5 }
+{12}{That is obvious from looking at you.}{}{5}{sk2 -7}{80}{re-15 }
+{13}{I'm listening.}{}{5}{}{20}{ }
+{14}{That is obvious from looking at you.}{}{5}{sk2 8}{250}{ }
+{19}{E:}{}{1}{}{0}{ }
+{20}{There is a rather eccentric scientician that lives here in town. Neither hide nor hair of him has been sighted in a fortnight.}{There is a rather eccentric scientician that lives here in town. Neither hide nor hair of him has been sighted in a fortnight.}{}{}{}{ }
+{21}{What does this have to do with you?}{}{5}{}{30}{ }
+{30}{I had contracted this fellow to use his "technology" to improve an old set of plate armor I had.}{I had contracted this fellow to use his "technology" to improve an old set of plate armor I had.}{}{}{}{ }
+{31}{Why do you need my assistance?}{}{5}{}{200}{ }
+{40}{It's too tough for me, but a fellow of your ingenuity could waltz right into his house and get my armor for me.}{It's too tough for me, but a woman of your ingenuity could waltz right into his house and get my armor for me.}{}{}{}{qu1008 1 }
+{41}{What do I get out of this?}{}{5}{}{50}{ }
+{42}{Forget it. It sounds like a trap.}{}{5}{}{60}{ }
+{50}{I'll give you 200 coins for retrieving my plate.}{I'll give you 200 coins for retrieving my plate.}{}{}{}{ }
+{51}{It runs contrary to my best judgement, but I'll do it.}{}{5}{}{70}{qu1008 2 }
+{52}{Sorry, that's not enough to risk my life for.}{}{5}{lf0 0}{60}{ }
+{53}{That's not enough to risk my life for. Good day.}{}{5}{lf0 1}{0}{ }
+{60}{That's too bad. It could have been profitable for both of us.}{That's too bad. It could have been profitable for both of us.}{}{}{}{ }
+{61}{Hmmm. Okay, I will do it.}{}{5}{}{70}{lf0 1 }
+{62}{E:}{}{5}{}{0}{ }
+{70}{Good show! I'll be waiting out here for you to return.}{Good show! I'll be waiting out here for you to return.}{}{}{}{ }
+{71}{E:}{}{5}{}{0}{ }
+{80}{There is no need for your snide attitude nor its accompanying comments, sir.}{There is no need for your snide attitude nor its accompanying comments, madam.}{}{}{}{ }
+{81}{My apologies, what is your problem?}{}{5}{}{20}{ }
+{82}{What about your accompanying thrashing?}{}{5}{}{0}{fl 210 ,co}
+{83}{E:}{}{5}{}{0}{ }
+{90}{Keep me appraised of your progress.}{Keep me appraised of your progress.}{}{}{}{ }
+{91}{E:}{}{5}{}{0}{ }
+{100}{Excellent! Give it to me.}{Excellent! Give it to me.}{}{}{}{ }
+{101}{Here it is.}{}{5}{}{110}{in 2803, qu1008 4 }
+{102}{Wading through there was worth more than 200 coins.}{}{5}{ha4}{120}{ }
+{103}{I've decided to keep it.}{}{5}{}{160}{re-15 }
+{110}{And here is your 200 coins. Good day, sir.}{And here is your 200 coins. Good day, madam.}{}{}{}{$$200 }
+{111}{A:}{}{5}{}{0}{ }
+{120}{Of course it is! I'll give you 300 for your troubles. Please give me the armor, now.}{Of course it is! I'll give you 300 for your troubles. Please give me the armor, now.}{}{}{}{ }
+{121}{Here it is.}{}{5}{}{140}{in 2803, qu1008 4 }
+{122}{I've decided to keep it.}{}{5}{}{170}{ }
+{123}{I think I could get 400 at an armory.}{}{5}{ha8}{130}{ }
+{130}{400 it is, then. But that is my final offer.}{400 it is, then. But that is my final offer.}{}{}{}{ }
+{131}{You have yourself a deal.}{}{5}{}{150}{in 2803, qu1008 4 }
+{132}{I've decided to keep it, after all.}{}{5}{}{0}{fl 210 ,co}
+{140}{And here is your 300 coins. Good day, sir.}{And here is your 300 coins. Good day, madam.}{}{}{}{$$300 }
+{141}{A:}{}{5}{}{0}{ }
+{150}{And here are your coins. Good day, sir.}{And here are your coins. Good day, madam.}{}{}{}{$$400 }
+{151}{A:}{}{5}{}{0}{ }
+{160}{Please give it to me. I'll give you 250 coins.}{Please give it to me. I'll give you 250 coins.}{}{}{}{ }
+{161}{You have yourself a deal.}{}{5}{}{180}{in 2803, qu1008 4 }
+{162}{N:}{}{5}{}{0}{fl 210 ,co}
+{170}{Please give it to me. I'll give you 350 coins.}{Please give it to me. I'll give you 350 coins.}{}{}{}{ }
+{171}{You have yourself a deal.}{}{5}{}{190}{in 2803, qu1008 4 }
+{172}{N:}{}{5}{}{0}{fl 210 ,co}
+{180}{And here are your coins. Good day, sir.}{And here are your coins. Good day, madam.}{}{}{}{$$250 }
+{181}{A:}{}{5}{}{0}{ }
+{190}{And here are your coins. Good day, sir.}{And here are your coins. Good day, madam.}{}{}{}{$$350 }
+{191}{A:}{}{5}{}{0}{ }
+{200}{I went to his house two days ago, searching for him. His door was unlocked, so I went in. I was immediately accosted by all manner of gadgetry and was forced to flee.}{I went to his house two days ago, searching for him. His door was unlocked, so I went in. I was immediately accosted by all manner of gadgetry and was forced to flee.}{}{}{}{ }
+{201}{You expect me to go in there for you?}{}{5}{}{40}{ }
+{202}{I don't need to be fighting with some scientician's inventions.}{}{5}{}{60}{ }
+{210}{Uncultured dunderhead! I shall have your hide for that!}{Uncultured wench! I shall have your hide for that!}{}{}{}{ }
+{215}{What does a despicable sort such as yourself want with me?}{What does a despicable woman such as yourself want with me?}{}{}{}{ }
+{216}{If I could only speak with you for a moment, sir.}{}{5}{}{220}{re+5 }
+{217}{I want to cause you incredible amounts of pain.}{}{5}{}{0}{fl 210 ,co}
+{220}{Seeing as how you know  to treat your betters with respect, it would be the least I could do to help you out. What did you wish to speak to me about?}{Seeing as how you know  to treat your betters with respect, it would be the least I could do to help you out. What did you wish to speak to me about?}{}{}{}{ }
+{221}{Is there any adventure to be had around these parts?}{}{5}{qu1008 0, re 41}{10}{ }
+{222}{I've decided to search the scientician's house for you.}{}{5}{qu1008 1}{50}{qu1008 2 }
+{223}{I have yet to retrieve your armor.}{}{5}{ni 2803, qu1008 2}{90}{ }
+{224}{I have your armor.}{}{5}{qu1008 2, in 2803}{100}{ }
+{225}{Forgive me, I must be off.}{}{5}{}{0}{ }
+{226}{Please, excuse my rudeness, sir. I spoke out of turn. I do not know what I must have been thinking. What can I help you with?}{Please, excuse my rudeness, madam. I spoke out of turn. I do not know what I must have been thinking. What can I help you with?}{}{}{}{ }
+{227}{Is there any adventure to be had around these parts?}{}{5}{qu1008 0, re 41}{10}{ }
+{228}{I've decided to search the scientician's house for you.}{}{5}{qu1008 1}{50}{qu1008 2 }
+{229}{I have yet to retrieve your armor.}{}{5}{ni 2803, qu1008 2}{90}{ }
+{230}{I have your armor.}{}{5}{qu1008 2, in 2803}{100}{ }
+{231}{Forgive me, I must be off.}{}{5}{}{0}{ }
+{240}{Please do not hurt me, sir. I do not know what I could have been thinking. Is there anything I could do for you?}{Please do not hurt me, madam. I do not know what I could have been thinking. Is there anything I could do for you?}{}{}{}{ }
+{241}{Is there any adventure to be had around these parts?}{}{5}{qu1008 0, re 41}{10}{ }
+{242}{I've decided to search the scientician's house for you.}{}{5}{qu1008 1}{50}{qu1008 2 }
+{243}{I have yet to retrieve your armor.}{}{5}{ni 2803, qu1008 2}{90}{ }
+{244}{I have your armor.}{}{5}{qu1008 2, in 2803}{100}{ }
+{245}{I am leaving.}{}{5}{}{0}{ }
+{249}{}{}{}{}{}{ }
+{250}{Heh, heh. That is quite the jest, sir.}{Heh, heh. That is quite the jest, madam.}{}{}{}{ }
+{251}{What is your problem?}{}{5}{}{20}{ }
+{260}{Hey! That's my armor you've got on there!}{Hey! That's my armor you've got on there!}{}{}{}{ }
+{261}{So, what of it?}{}{5}{sk2 8}{270}{ }
+{262}{So, what of it?}{}{5}{sk2 -7}{290}{ }
+{263}{So true. Here it is. [Give it to him.]}{}{5}{}{110}{in 2803, qu1008 4 }
+{264}{I will give it to you for 400 coins.}{}{5}{ha4}{}{ }
+{270}{[He cringes.] Uhm...nothing? It's just that, I, uh...would like it back?}{[He cringes.] Uhm...nothing? It's just that, I, uh...would like it back?}{}{}{}{ }
+{271}{Certainly. It will cost you 400 coins.}{}{5}{}{280}{ }
+{272}{Of course. Here it is. [Give it to him.]}{}{5}{}{110}{in 2803, qu1008 4 }
+{280}{But that is twice what I said I'd pay you for it!}{But that is twice what I said I'd pay you for it!}{}{}{}{ }
+{281}{That's the going rate. I could beat you up and take it if I wished.}{}{5}{}{300}{ }
+{282}{You are correct, my mistake. Here it is. [Give it to him.]}{}{5}{}{110}{in 2803, qu1008 4 }
+{290}{I will take it by force, if necessary.}{I will take it by force, if necessary.}{}{}{}{ }
+{291}{You are welcome to try.}{}{5}{}{0}{fl 210 ,co}
+{292}{There is no need for that. Here it is. [Give it to him.]}{}{5}{}{110}{in 2803, qu1008 4 }
+{300}{Hey! That's my armor your friend has there!}{Hey! That's my armor your friend has there!}{}{}{}{ }
+{301}{So, what of it?}{}{5}{sk2 8}{270}{ }
+{302}{So, what of it?}{}{5}{sk2 -7}{290}{ }
+{303}{So true. Here it is. [Give it to him.]}{}{5}{}{110}{in 2803, qu1008 4 }
+{304}{I will give it to you for 400 coins.}{}{5}{ha4}{}{ }
+

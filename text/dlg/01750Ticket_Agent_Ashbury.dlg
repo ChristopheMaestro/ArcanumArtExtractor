@@ -1,0 +1,396 @@
+{1}{Yes, I can help you with that.}{Yes, I can help you with that.}{}{}{}{}
+{2}{ I would like to reserve some seats.}{}{5}{gf 2328 1}{62}{}
+{3}{ I would like to reserve some seats.}{}{5}{gf 2328 0}{67}{}
+{4}{How much do reserved seats cost?}{}{5}{gf 2328 0}{11}{}
+{5}{What are the rules about magick on the train?}{}{12}{lf 4 0, gf 2328 0}{329}{lf 4 1}
+{6}{I need to get a refund.}{}{5}{}{337}{}
+{7}{Me go Teerant}{}{-4}{gf 2328 1}{62}{}
+{8}{Me go Teerant}{}{-4}{gf 2328 0}{67}{}
+{9}{me want coins back}{}{-4}{}{337}{}
+{10}{E:}{}{1}{}{-1}{}
+{11}{Reserved seats cost 75 coins for each person traveling.}{Reserved seats cost 75 coins for each person traveling.}{}{}{}{}
+{12}{I would like to reserve some seats for Tarant.}{}{5}{gf 2328 1}{62}{}
+{13}{I would like to reserve some seats for Tarant.}{}{12}{gf 2328 0}{67}{}
+{14}{What are the rules about magick on the train.}{}{12}{lf 4 0}{85}{lf 4 1}
+{15}{E:}{}{1}{}{-1}{}
+{16}{Reserved seats cost 75 coins each.  How many seats will you require for your group?}{Reserved seats cost 75 coins each.  How many seats will you require for your group?}{}{}{}{}
+{17}{One.}{}{1}{gv 1035 1}{163}{gv 1038 1}
+{18}{Two.}{}{1}{gv 1035 2}{177}{gv 1038 2}
+{19}{Three.}{}{1}{gv 1035 3}{191}{gv 1038 3}
+{20}{Four.}{}{1}{gv 1035 4}{205}{gv 1038 4}
+{21}{Five.}{}{1}{gv 1035 5}{219}{gv 1038 5}
+{22}{Six.}{}{1}{gv 1035 6}{233}{gv 1038 6}
+{23}{Seven.}{}{1}{gv 1035 7}{247}{gv 1038 7}
+{24}{Eight.}{}{1}{gv 1035 8}{261}{gv 1038 8}
+{25}{Nine.}{}{1}{gv 1035 9}{275}{gv 1038 9}
+{26}{Ten.}{}{1}{gv 1035 10}{282}{gv 1038 10}
+{27}{Eleven.}{}{1}{gv 1035 11}{289}{gv 1038 11}
+{28}{Twelve.}{}{1}{gv 1035 12}{296}{gv 1038 12}
+{29}{The group rate for large parties please.}{}{1}{gv 1035 13}{303}{gv 1038 13}
+{30}{That price is high! Isn't there a better price available?}{}{5}{ha 12}{59}{}
+{31}{Isn't there a lower group rate for large parties?}{}{5}{gv 1035 13, ha 12}{59}{}
+{32}{That price is high! Isn't there a better price available?}{}{5}{ha -11}{54}{}
+{33}{E:}{}{5}{}{-1}{}
+{34}{E:}{}{-4}{}{-1}{}
+{35}{Reserved seats cost 50 coins each.  How many reserved seats will you require for your group?}{Reserved seats cost 50 coins each.  How many reserved seats will you require for your group?}{}{}{}{}
+{36}{One.}{}{1}{gv 1035 1}{156}{gv 1038 1}
+{37}{Two.}{}{1}{gv 1035 2}{170}{gv 1038 2}
+{38}{Three.}{}{1}{gv 1035 3}{177}{gv 1038 3}
+{39}{Four.}{}{1}{gv 1035 4}{184}{gv 1038 4}
+{40}{Five.}{}{1}{gv 1035 5}{198}{gv 1038 5}
+{41}{Six.}{}{1}{gv 1035 6}{205}{gv 1038 6}
+{42}{Seven.}{}{1}{gv 1035 7}{212}{gv 1038 7}
+{43}{Eight.}{}{1}{gv 1035 8}{226}{gv 1038 8}
+{44}{Nine.}{}{1}{gv 1035 9}{233}{gv 1038 9}
+{45}{Ten.}{}{1}{gv 1035 10}{240}{gv 1038 10}
+{46}{Eleven.}{}{1}{gv 1035 11}{254}{gv 1038 11}
+{47}{Twelve.}{}{1}{gv 1035 12}{261}{gv 1038 12}
+{48}{The group rate for large parties please.}{}{1}{gv 1035 13}{268}{gv 1038 13}
+{49}{I still cannot afford to travel at these prices.}{}{5}{}{-1}{}
+{50}{me no got money for train.}{}{-4}{}{-1}{}
+{51}{}{}{}{}{}{}
+{52}{}{}{}{}{}{}
+{53}{}{}{}{}{}{}
+{54}{No, there are not any other reserved seats available. The price for reserved seats is 75 coins.  Can I help you or not?}{No, there are not any other reserved seats available. The price for reserved seats is 75 coins.  Can I help you or not?}{}{}{}{}
+{55}{Okay, It never hurts to look for a bargain.}{}{5}{}{16}{}
+{56}{I can't afford to travel at these prices.}{}{5}{}{-1}{}
+{57}{me try for good price. heh heh heh.}{}{-4}{}{16}{}
+{58}{me no got money for train.}{}{-4}{}{-1}{}
+{59}{You're right! Sometimes we have space available on the train because of cancellations. [checking] It appears that we have some discounted reserved seats. You are in luck today!}{You're right! Sometimes we have space available on the train because of cancellations. [checking] It appears that we have some discounted reserved seats. You are in luck today!}{}{}{}{}
+{60}{Excellent, what is the price?}{}{5}{}{35}{}
+{61}{yippeee! yippeeee! me make good deal!}{}{-4}{}{35}{}
+{62}{Excuse me Sir, but my records show that you already have a reservation.}{Excuse me mi'Lady, but my records show that you already have a reservation.}{}{}{}{}
+{63}{Errr... I have changed my mind. I want a refund.}{}{5}{}{337}{}
+{64}{me want money back.}{}{-4}{}{337}{}
+{65}{F:}{}{1}{}{-1}{}
+{66}{E:}{}{1}{}{-1}{}
+{67}{Excellent! But first, company rules require that I ask you the following questions. Answer honestly, your safety and the safety of those who travel with you will depend upon it.}{Excellent! But first, company rules require that I ask you the following questions. Answer honestly, your safety and the safety of those who travel with you will depend upon it.}{}{}{}{}
+{68}{Certainly.}{}{5}{}{85}{lf 15 1}
+{69}{There is no need go over this again is there?}{}{5}{lf 15 1, ps -14}{78}{}
+{70}{There is no need go over this again is there?}{}{5}{lf 15 1, ps 15}{334}{}
+{71}{Ugh.}{}{-4}{}{85}{}
+{72}{E:}{}{1}{}{-1}{}
+{73}{}{}{}{}{}{}
+{74}{How can I help you?}{How can I help you?}{}{}{}{}
+{75}{I would like to reserve some seats for Tarant.}{}{5}{}{67}{}
+{76}{I need to get a refund.}{}{5}{}{337}{}
+{77}{E:}{}{1}{}{-1}{}
+{78}{I am sorry the rules are THE RULES.  Please be patient. This takes just a moment and it is for your safety.}{I am sorry the rules are THE RULES.  Please be patient. This takes just a moment and it is for your safety.}{}{}{}{}
+{79}{Get it over with then!}{}{5}{}{85}{re -5}
+{80}{I understand.}{}{5}{}{85}{}
+{81}{Okay.}{}{5}{}{85}{}
+{82}{Duh.}{}{-4}{}{85}{}
+{83}{Ugh.}{}{-4}{}{85}{}
+{84}{Humph.}{}{-4}{}{85}{}
+{85}{Are you, or is any member of your party, a practitioner of magick, elven or of elven heritage.}{Are you, or is any member of your party, a practitioner of magick, elven or of elven heritage.}{}{}{}{lf 4 1}
+{86}{No.}{}{5}{}{99}{}
+{87}{Yes.}{}{5}{}{92}{}
+{88}{Nooooo}{}{-4}{}{99}{}
+{89}{Yeah Yeah}{}{-4}{}{92}{}
+{90}{E:}{}{1}{}{-1}{}
+{91}{}{}{}{}{}{}
+{92}{What best describes the most magickal member of your party.}{What best describes the most magickal member of your party.}{}{}{}{}
+{93}{Practitioner of low complexity magicks.}{}{5}{}{99}{}
+{94}{Practitioner of moderate complexity magicks.}{}{5}{}{99}{}
+{95}{Practitioner of high complexity magicks.}{}{5}{}{142}{}
+{96}{do magick la la la la la la ...}{}{-4}{}{99}{}
+{97}{do magick boom boom boom ...}{}{-4}{}{142}{}
+{98}{E:}{}{1}{}{-1}{}
+{99}{Are you carrying any magickal items. Have been approached and asked to carry any magickal items by people not traveling with your group.}{Are you carrying any magickal items. Have been approached and asked to carry any magickal items by people not traveling with your group.}{}{}{}{}
+{100}{No.}{}{5}{}{114}{}
+{101}{Yes.}{}{5}{}{107}{}
+{102}{mee think no}{}{-4}{}{114}{}
+{103}{mee think yes}{}{-4}{}{107}{}
+{104}{E:}{}{1}{}{-1}{}
+{105}{}{}{}{}{}{}
+{106}{}{}{}{}{}{}
+{107}{Are any of the magickal items that you are carrying charged with explosive fire, heat, cold, or electrical energies.}{Are any of the magickal items that you are carrying charged with explosive fire, heat, cold, or electrical energies.}{}{}{}{}
+{108}{No.}{}{5}{}{114}{}
+{109}{Yes, I am afraid so.}{}{5}{}{142}{}
+{110}{me say no}{}{-4}{}{114}{}
+{111}{me say yes}{}{-4}{}{142}{}
+{112}{E:}{}{1}{}{-1}{}
+{113}{}{}{}{}{}{}
+{114}{Which of the following category best describes your physical Age? A - Less than 100 years old. B -100 to 200 years old. C - 200 to 500,  D-more than 500 years of age.}{Which of the following category best describes your physical Age? A - Less than 100 years old. B -100 to 200 years old. C - 200 to 500,  D-more than 500 years of age.}{}{}{}{}
+{115}{A - Less than 100 years old.}{}{1}{}{121}{}
+{116}{B - Between 100 and 200 years old.}{}{1}{}{121}{}
+{117}{C - Between 200 and 500 years old.}{}{1}{}{142}{}
+{118}{D - Over 500 years.}{}{1}{}{142}{}
+{119}{E:}{}{1}{}{-1}{}
+{120}{}{}{}{}{}{}
+{121}{Are you traveling with summoned elementals, animated dead, mind controlled, turned to stone, or otherwise physically challenged party members who will need some additional time and assistance in boarding the Train.}{Are you traveling with summoned elementals, animated dead, mind controlled, turned to stone, or otherwise physically challenged party members who will need some additional time and assistance in boarding the Train.}{}{}{}{}
+{122}{No.}{}{5}{}{128}{}
+{123}{Yes.}{}{5}{}{142}{}
+{124}{uh hmmm me say no.}{}{-4}{}{128}{}
+{125}{yeah yeah yeah}{}{-4}{}{142}{}
+{126}{E:}{}{1}{}{-1}{}
+{127}{}{}{}{}{}{}
+{128}{Do you have either knowledge and practice, or enscrolled parchments, or charged magickal items with any of the following Magickal spells;  Fireflash, Body of Fire, Call Fire Elemental, Jolt, Bolt of Lightening, Disintegrate, Congeal Time, Stasis, Hasten, or Tempus Fugit. }{Do you have either knowledge and practice, or enscrolled parchments, or charged magickal items with any of the following Magickal spells;  Fireflash, Body of Fire, Call Fire Elemental, Jolt, Bolt of Lightening, Disintegrate, Congeal Time, Stasis, Hasten, or Tempus Fugit. }{}{}{}{}
+{129}{No.}{}{5}{}{149}{}
+{130}{Yes.}{}{5}{}{142}{}
+{131}{me say no}{}{-4}{}{149}{}
+{132}{me say yea yea}{}{-4}{}{142}{}
+{133}{E:}{}{1}{}{-1}{}
+{134}{}{}{}{}{}{}
+{135}{}{}{}{}{}{}
+{136}{}{}{}{}{}{}
+{137}{}{}{}{}{}{}
+{138}{}{}{}{}{}{}
+{139}{}{}{}{}{}{}
+{140}{}{}{}{}{}{}
+{141}{}{}{}{}{}{}
+{142}{Thank you for answering these questions. You're going to be required to travel in the Mage's Caboose.  The Mage's Caboose Conductor at the end of the train will assist you with boarding.}{Thank you for answering these questions. You're going to be required to travel in the Mage's Caboose.  The Mage's Caboose Conductor at the end of the train will assist you with boarding.}{}{}{}{}
+{143}{Yes that is most reasonable.}{}{5}{}{16}{}
+{144}{I understand. I would like to make some reservations.}{}{5}{}{16}{}
+{145}{If I can't go First Class then I won't travel.}{}{5}{}{-1}{}
+{146}{me must then me do.}{}{-4}{}{16}{}
+{147}{me no go}{}{-4}{}{-1}{}
+{148}{E:}{}{1}{}{-1}{}
+{149}{Thank you for answering these questions. You're eligible for reservations in the First Class compartments. The Conductor at the head of the train will help you.}{Thank you for answering these questions. You're eligible for reservations in the First Class compartments. The Conductor at the head of the train will help you.}{}{}{}{}
+{150}{Yes excellent.}{}{5}{}{16}{}
+{151}{I would like to make some reservations.}{}{5}{}{16}{}
+{152}{me must then me do.}{}{-4}{}{16}{}
+{153}{me no go}{}{-4}{}{-1}{}
+{154}{E:}{}{1}{}{-1}{}
+{155}{}{}{}{}{}{}
+{156}{The total for your reserved seats will be 50 coins.}{The total for your reserved seats will be 50 coins.}{}{}{}{}
+{157}{Yes, make the reservation please.}{}{5}{$$ 50}{310}{$$ -50, gf 2328 1}
+{158}{me go to Teerant}{}{-4}{$$ 50}{310}{$$ -50, gf 2328 1}
+{159}{I don't have enough coins to make a reservation.}{}{5}{$$-49}{-1}{gv1038 0,    fl 313}
+{160}{me no got money}{}{-4}{$$-49}{-1}{gv1038 0,    fl 313}
+{161}{F:}{}{1}{}{-1}{gv1038 0,    fl 313}
+{162}{}{}{}{}{}{}
+{163}{The total for your reserved seats will be 75 coins.}{The total for your reserved seats will be 75 coins.}{}{}{}{}
+{164}{Yes, make the reservation please.}{}{5}{$$ 75}{310}{$$ -75, gf 2328 1}
+{165}{me go to Teerant}{}{-4}{$$ 75}{310}{$$ -75, gf 2328 1}
+{166}{I don't have enough coins to make a reservation.}{}{5}{$$-74}{-1}{gv1038 0,    fl 313}
+{167}{me no got money}{}{-4}{$$-74}{-1}{gv1038 0,    fl 313}
+{168}{F:}{}{1}{}{-1}{gv1038 0,    fl 313}
+{169}{}{}{}{}{}{}
+{170}{The total for your reserved seats will be 100 coins.}{The total for your reserved seats will be 100 coins.}{}{}{}{}
+{171}{Yes, make the reservation please.}{}{5}{$$ 100}{310}{$$ -100, gf 2328 1}
+{172}{me go to Teerant}{}{-4}{$$ 100}{310}{$$ -100, gf 2328 1}
+{173}{I don't have enough coins to make a reservation.}{}{5}{$$-99}{-1}{gv1038 0,    fl 313}
+{174}{me no got money}{}{-4}{$$-99}{-1}{gv1038 0,    fl 313}
+{175}{F:}{}{1}{}{-1}{gv1038 0,    fl 313}
+{176}{}{}{}{}{}{}
+{177}{The total for your reserved seats will be 150 coins.}{The total for your reserved seats will be 150 coins.}{}{}{}{}
+{178}{Yes, make the reservation please.}{}{5}{$$ 150}{310}{$$-150, gf 2328 1}
+{179}{me go to Teerant}{}{-4}{$$ 150}{310}{$$-150, gf 2328 1}
+{180}{I don't have enough coins to make a reservation.}{}{5}{$$-149}{-1}{gv1038 0,    fl 313}
+{181}{me no got money}{}{-4}{$$-149}{-1}{gv1038 0,    fl 313}
+{182}{F:}{}{1}{}{-1}{gv1038 0,    fl 313}
+{183}{}{}{}{}{}{}
+{184}{The total for your reserved seats will be 200 coins.}{The total for your reserved seats will be 200 coins.}{}{}{}{}
+{185}{Yes, make the reservation please.}{}{5}{$$ 200}{310}{$$-200, gf 2328 1}
+{186}{me go to Teerant}{}{-4}{$$ 200}{310}{$$-200, gf 2328 1}
+{187}{I don't have enough coins to make a reservation.}{}{5}{$$-199}{-1}{gv1038 0,    fl 313}
+{188}{me no got money}{}{-4}{$$-199}{-1}{gv1038 0,    fl 313}
+{189}{F:}{}{1}{}{-1}{gv1038 0,    fl 313}
+{190}{}{}{}{}{}{}
+{191}{The total for your reserved seats will be 225 coins.}{The total for your reserved seats will be 225 coins.}{}{}{}{}
+{192}{Yes, make the reservation please.}{}{5}{$$ 225}{310}{$$-225, gf 2328 1}
+{193}{me go to Teerant}{}{-4}{$$ 225}{310}{$$-225, gf 2328 1}
+{194}{I don't have enough coins to make a reservation.}{}{5}{$$-224}{-1}{gv1038 0,    fl 313}
+{195}{me no got money}{}{-4}{$$-224}{-1}{gv1038 0,    fl 313}
+{196}{F:}{}{1}{}{-1}{gv1038 0,    fl 313}
+{197}{}{}{}{}{}{}
+{198}{The total for your reserved seats will be 250 coins.}{The total for your reserved seats will be 250 coins.}{}{}{}{}
+{199}{Yes, make the reservation please.}{}{5}{$$ 250}{310}{$$-250, gf 2328 1}
+{200}{me go to Teerant}{}{-4}{$$ 250}{310}{$$-250, gf 2328 1}
+{201}{I don't have enough coins to make a reservation.}{}{5}{$$-249}{-1}{gv1038 0,    fl 313}
+{202}{me no got money}{}{-4}{$$-249}{-1}{gv1038 0,    fl 313}
+{203}{F:}{}{1}{}{-1}{gv1038 0,    fl 313}
+{204}{}{}{}{}{}{}
+{205}{The total for your reserved seats will be 300 coins.}{The total for your reserved seats will be 300 coins.}{}{}{}{}
+{206}{Yes, make the reservation please.}{}{5}{$$ 300}{310}{$$-300, gf 2328 1}
+{207}{me go to Teerant}{}{-4}{$$ 300}{310}{$$-300, gf 2328 1}
+{208}{I don't have enough coins to make a reservation.}{}{5}{$$-299}{-1}{gv1038 0,    fl 313}
+{209}{me no got money}{}{-4}{$$-299}{-1}{gv1038 0,    fl 313}
+{210}{F:}{}{1}{}{-1}{gv1038 0,    fl 313}
+{211}{}{}{}{}{}{}
+{212}{The total for your reserved seats will be 350 coins.}{The total for your reserved seats will be 350 coins.}{}{}{}{}
+{213}{Yes, make the reservation please.}{}{5}{$$ 350}{310}{$$-350, gf 2328 1}
+{214}{me go to Teerant}{}{-4}{$$ 350}{310}{$$-350, gf 2328 1}
+{215}{I don't have enough coins to make a reservation.}{}{5}{$$-349}{-1}{gv1038 0,    fl 313}
+{216}{me no got money}{}{-4}{$$-349}{-1}{gv1038 0,    fl 313}
+{217}{F:}{}{1}{}{-1}{gv1038 0,    fl 313}
+{218}{}{}{}{}{}{}
+{219}{The total for your reserved seats will be 375 coins.}{The total for your reserved seats will be 375 coins.}{}{}{}{}
+{220}{Yes, make the reservation please.}{}{5}{$$ 375}{310}{$$-375, gf 2328 1}
+{221}{me go to Teerant}{}{-4}{$$ 375}{310}{$$-375, gf 2328 1}
+{222}{I don't have enough coins to make a reservation.}{}{5}{$$-374}{-1}{gv1038 0,    fl 313}
+{223}{me no got money}{}{-4}{$$-374}{-1}{gv1038 0,    fl 313}
+{224}{F:}{}{1}{}{-1}{gv1038 0,    fl 313}
+{225}{}{}{}{}{}{}
+{226}{The total for your reserved seats will be 400 coins.}{The total for your reserved seats will be 400 coins.}{}{}{}{}
+{227}{Yes, make the reservation please.}{}{5}{$$ 400}{310}{$$-400, gf 2328 1}
+{228}{me go to Teerant}{}{-4}{$$ 400}{310}{$$-400, gf 2328 1}
+{229}{I don't have enough coins to make a reservation.}{}{5}{$$-399}{-1}{gv1038 0,    fl 313}
+{230}{me no got money}{}{-4}{$$-399}{-1}{gv1038 0,    fl 313}
+{231}{F:}{}{1}{}{-1}{gv1038 0,    fl 313}
+{232}{}{}{}{}{}{}
+{233}{The total for your reserved seats will be 450 coins.}{The total for your reserved seats will be 450 coins.}{}{}{}{}
+{234}{Yes, make the reservation please.}{}{5}{$$ 450}{310}{$$-450, gf 2328 1}
+{235}{me go to Teerant}{}{-4}{$$ 450}{310}{$$-450, gf 2328 1}
+{236}{I don't have enough coins to make a reservation.}{}{5}{$$-449}{-1}{gv1038 0,    fl 313}
+{237}{me no got money}{}{-4}{$$-449}{-1}{gv1038 0,    fl 313}
+{238}{F:}{}{1}{}{-1}{gv1038 0,    fl 313}
+{239}{}{}{}{}{}{}
+{240}{The total for your reserved seats will be 500 coins.}{The total for your reserved seats will be 500 coins.}{}{}{}{}
+{241}{Yes, make the reservation please.}{}{5}{$$ 500}{310}{$$-500, gf 2328 1}
+{242}{me go to Teerant}{}{-4}{$$ 500}{310}{$$-500, gf 2328 1}
+{243}{I don't have enough coins to make a reservation.}{}{5}{$$-499}{-1}{gv1038 0,    fl 313}
+{244}{me no got money}{}{-4}{$$-499}{-1}{gv1038 0,    fl 313}
+{245}{F:}{}{1}{}{-1}{gv1038 0,    fl 313}
+{246}{}{}{}{}{}{}
+{247}{The total for your reserved seats will be 525 coins.}{The total for your reserved seats will be 525 coins.}{}{}{}{}
+{248}{Yes, make the reservation please.}{}{5}{$$ 525}{310}{$$-525, gf 2328 1}
+{249}{me go to Teerant}{}{-4}{$$ 525}{310}{$$-525, gf 2328 1}
+{250}{I don't have enough coins to make a reservation.}{}{5}{$$-524}{-1}{gv1038 0,    fl 313}
+{251}{me no got money}{}{-4}{$$-524}{-1}{gv1038 0,    fl 313}
+{252}{F:}{}{1}{}{-1}{gv1038 0,    fl 313}
+{253}{}{}{}{}{}{}
+{254}{The total for your reserved seats will be 550 coins.}{The total for your reserved seats will be 550 coins.}{}{}{}{}
+{255}{Yes, make the reservation please.}{}{5}{$$ 550}{310}{$$-550, gf 2328 1}
+{256}{me go to Teerant}{}{-4}{$$ 550}{310}{$$-550, gf 2328 1}
+{257}{I don't have enough coins to make a reservation.}{}{5}{$$-549}{-1}{gv1038 0,    fl 313}
+{258}{me no got money}{}{-4}{$$-549}{-1}{gv1038 0,    fl 313}
+{259}{F:}{}{1}{}{-1}{gv1038 0,    fl 313}
+{260}{}{}{}{}{}{}
+{261}{The total for your reserved seats will be 600 coins.}{The total for your reserved seats will be 600 coins.}{}{}{}{}
+{262}{Yes, make the reservation please.}{}{5}{$$ 600}{310}{$$-600, gf 2328 1}
+{263}{me go to Teerant}{}{-4}{$$ 600}{310}{$$-600, gf 2328 1}
+{264}{I don't have enough coins to make a reservation.}{}{5}{$$-599}{-1}{gv1038 0,    fl 313}
+{265}{me no got money}{}{-4}{$$-599}{-1}{gv1038 0,    fl 313}
+{266}{F:}{}{1}{}{-1}{gv1038 0,    fl 313}
+{267}{}{}{}{}{}{}
+{268}{The total for your reserved seats will be 650 coins.}{The total for your reserved seats will be 650 coins.}{}{}{}{}
+{269}{Yes, make the reservation please.}{}{5}{$$ 650}{310}{$$-650, gf 2328 1}
+{270}{me go to Teerant}{}{-4}{$$ 650}{310}{$$-650, gf 2328 1}
+{271}{I don't have enough coins to make a reservation.}{}{5}{$$-649}{-1}{gv1038 0,    fl 313}
+{272}{me no got money}{}{-4}{$$-649}{-1}{gv1038 0,    fl 313}
+{273}{F:}{}{1}{}{-1}{gv1038 0,    fl 313}
+{274}{}{}{}{}{}{}
+{275}{The total for your reserved seats will be 675 coins.}{The total for your reserved seats will be 675 coins.}{}{}{}{}
+{276}{Yes, make the reservation please.}{}{5}{$$ 675}{310}{$$-675, gf 2328 1}
+{277}{me go to Teerant}{}{-4}{$$ 675}{310}{$$-675, gf 2328 1}
+{278}{I don't have enough coins to make a reservation.}{}{5}{$$-674}{-1}{gv1038 0,    fl 313}
+{279}{me no got money}{}{-4}{$$-674}{-1}{gv1038 0,    fl 313}
+{280}{F:}{}{1}{}{-1}{gv1038 0,    fl 313}
+{281}{}{}{}{}{}{}
+{282}{The total for your reserved seats will be 750 coins.}{The total for your reserved seats will be 750 coins.}{}{}{}{}
+{283}{Yes, make the reservation please.}{}{5}{$$ 750}{310}{$$-750, gf 2328 1}
+{284}{me go to Teerant}{}{-4}{$$ 750}{310}{$$-750, gf 2328 1}
+{285}{I don't have enough coins to make a reservation.}{}{5}{$$-749}{-1}{gv1038 0,    fl 313}
+{286}{me no got money}{}{-4}{$$-749}{-1}{gv1038 0,    fl 313}
+{287}{F:}{}{1}{}{-1}{gv1038 0,    fl 313}
+{288}{}{}{}{}{}{}
+{289}{The total for your reserved seats will be 825 coins.}{The total for your reserved seats will be 825 coins.}{}{}{}{}
+{290}{Yes, make the reservation please.}{}{5}{$$ 825}{310}{$$-825, gf 2328 1}
+{291}{me go to Teerant}{}{-4}{$$ 825}{310}{$$-825, gf 2328 1}
+{292}{I don't have enough coins to make a reservation.}{}{5}{$$-824}{-1}{gv1038 0,    fl 313}
+{293}{me no got money}{}{-4}{$$-824}{-1}{gv1038 0,    fl 313}
+{294}{F:}{}{1}{}{-1}{gv1038 0,    fl 313}
+{295}{}{}{}{}{}{}
+{296}{The total for your reserved seats will be 900 coins.}{The total for your reserved seats will be 900 coins.}{}{}{}{}
+{297}{Yes, make the reservation please.}{}{5}{$$ 900}{310}{$$-900, gf 2328 1}
+{298}{me go to Teerant}{}{-4}{$$ 900}{310}{$$-900, gf 2328 1}
+{299}{I don't have enough coins to make a reservation.}{}{5}{$$-899}{-1}{gv1038 0,    fl 313}
+{300}{me no got money}{}{-4}{$$-899}{-1}{gv1038 0,    fl 313}
+{301}{F:}{}{1}{}{-1}{gv1038 0,    fl 313}
+{302}{}{}{}{}{}{}
+{303}{The total for your reserved seats will be 975 coins.}{The total for your reserved seats will be 975 coins.}{}{}{}{}
+{304}{Yes, make the reservation please.}{}{5}{$$ 975}{310}{$$-975, gf 2328 1}
+{305}{me go to Teerant}{}{-4}{$$ 975}{310}{$$-975, gf 2328 1}
+{306}{I don't have enough coins to make a reservation.}{}{5}{$$-974}{-1}{gv1038 0,    fl 313}
+{307}{me no got money}{}{-4}{$$-974}{-1}{gv1038 0,    fl 313}
+{308}{F:}{}{1}{}{-1}{gv1038 0,    fl 313}
+{309}{}{}{}{}{}{}
+{310}{Your reservations have been made. The platform is to your left.}{Your reservations have been made. The platform is to your left.}{}{}{}{}
+{311}{Thanks.}{}{5}{}{-1}{}
+{312}{ugh.}{}{-4}{}{-1}{}
+{313}{I am sorry Sir, but please come back when you have coins for the reservation.}{I am sorry Madam, but please come back when you have coins for the reservation.}{}{}{}{}
+{314}{}{}{}{}{}{}
+{315}{}{}{}{}{}{}
+{316}{}{}{}{}{}{}
+{317}{}{}{}{}{}{}
+{318}{}{}{}{}{}{}
+{319}{}{}{}{}{}{}
+{320}{I am sorry I don't show any record of your reservation on the train. I cannot make a refund with out the proper records. I suggest that you are mistaken Sir.}{I am sorry I don't show any record of your reservation on the train. I cannot make a refund with out the proper records. I suggest that you are mistaken mi'Lady.}{}{}{}{}
+{321}{F:}{}{5}{}{-1}{}
+{322}{E:}{}{5}{}{-1}{}
+{323}{F:}{}{-4}{}{-1}{}
+{324}{E:}{}{-4}{}{-1}{}
+{325}{[refunds your money] Here is your refund Sir.  In the future, please don't make unnecessary reservations.  Cancellations can cause problems and inconvenience others.  I am sure you understand.... Thanks for you cooperation Sir.}{[refunds your money] Here is your refund Madam.  In the future, please don't make unnecessary reservations.  Cancellations can cause problems and inconvenience others.  I am sure you understand.... Thanks for you cooperation Madam.}{}{}{}{}
+{326}{E:}{}{5}{}{-1}{}
+{327}{E:}{}{-4}{}{-1}{}
+{328}{}{}{}{}{}{}
+{329}{Thanks for asking.  Magickal forces affect the proper function of mechanical devices.  Complex machinery, like our train locomotive, may fail to operate in the presence of Magick.  In the case of a train, it could be disastrous!}{Thanks for asking.  Magickal forces affect the proper function of mechanical devices.  Complex machinery, like our train locomotive, may fail to operate in the presence of Magick.  In the case of a train, it could be disastrous!}{}{}{}{}
+{330}{Yes.}{}{5}{}{332}{}
+{331}{Tell me more.}{}{5}{}{332}{}
+{332}{Therefore, all passengers are questioned to determine their magickal nature.  Those that are very magickal must sit in the back of the train, as far as possible from the locomotive, to minimize the risk of an accident.  The last car on a train is called the caboose, so this car is called the Mage's Caboose.}{Therefore, all passengers are questioned to determine their magickal nature.  Those that are very magickal must sit in the back of the train, as far as possible from the locomotive, to minimize the risk of an accident.  The last car on a train is called the caboose, so this car is called the Mage's Caboose.}{}{}{}{}
+{333}{I see, thanks for the information.}{}{5}{}{74}{}
+{334}{Well for you I will make an exception... [she winks]  I can tell you are not going to cause us any problems.}{Well for you I will make an exception... [she winks]  I can tell you are not going to cause us any problems.}{}{}{}{}
+{335}{But of course.}{}{5}{}{16}{}
+{336}{}{}{}{}{}{}
+{337}{[sigh.] Oh really? There is a non refundable fee of 25 coins per reservation for most travel arrangements.}{[sigh.] Oh really? There is a non refundable fee of 25 coins per reservation for most travel arrangements.}{}{}{}{}
+{338}{Okay.}{}{1}{}{339}{}
+{339}{What seems to be the problem?}{What seems to be the problem?}{}{}{}{}
+{340}{They wouldn't let me on the train.}{}{5}{gv 1038 1}{325}{$$ 50, gv1038 0, gf2328 0}
+{341}{They wouldn't let us on the train.}{}{5}{gv 1038 2}{325}{$$ 100, gv1038 0, gf2328 0}
+{342}{They wouldn't let us on the train.}{}{5}{gv 1038 3}{325}{$$ 150, gv1038 0, gf2328 0}
+{343}{They wouldn't let us on the train.}{}{5}{gv 1038 4}{325}{$$ 200, gv1038 0, gf2328 0}
+{344}{They wouldn't let us on the train.}{}{5}{gv 1038 5}{325}{$$ 250, gv1038 0, gf2328 0}
+{345}{They wouldn't let us on the train.}{}{5}{gv 1038 6}{325}{$$ 300, gv1038 0, gf2328 0}
+{346}{They wouldn't let us on the train.}{}{5}{gv 1038 7}{325}{$$ 350, gv1038 0, gf2328 0}
+{347}{They wouldn't let us on the train.}{}{5}{gv 1038 8}{325}{$$ 400, gv1038 0, gf2328 0}
+{348}{They wouldn't let us on the train.}{}{5}{gv 1038 9}{325}{$$ 450, gv1038 0, gf2328 0}
+{349}{They wouldn't let us on the train.}{}{5}{gv 1038 10}{325}{$$ 500, gv1038 0, gf2328 0}
+{350}{They wouldn't let us on the train.}{}{5}{gv 1038 11}{325}{$$ 550, gv1038 0, gf2328 0}
+{351}{They wouldn't let us on the train.}{}{5}{gv 1038 12}{325}{$$ 600, gv1038 0, gf2328 0}
+{352}{They wouldn't let us on the train.}{}{5}{gv 1038 13}{325}{$$ 650, gv1038 0, gf2328 0}
+{353}{They wouldn't let us on the train.}{}{5}{gv 1038 0}{320}{}
+{354}{man say no ride choo choo.}{}{-4}{gv 1038 1}{325}{$$ 50, gv1038 0, gf2328 0}
+{355}{man say no ride choo choo.}{}{-4}{gv 1038 2}{325}{$$ 100, gv1038 0, gf2328 0}
+{356}{man say no ride choo choo.}{}{-4}{gv 1038 3}{325}{$$ 150, gv1038 0, gf2328 0}
+{357}{man say no ride choo choo.}{}{-4}{gv 1038 4}{325}{$$ 200, gv1038 0, gf2328 0}
+{358}{man say no ride choo choo.}{}{-4}{gv 1038 5}{325}{$$ 250, gv1038 0, gf2328 0}
+{359}{man say no ride choo choo.}{}{-4}{gv 1038 6}{325}{$$ 300, gv1038 0, gf2328 0}
+{360}{man say no ride choo choo.}{}{-4}{gv 1038 7}{325}{$$ 350, gv1038 0, gf2328 0}
+{361}{man say no ride choo choo.}{}{-4}{gv 1038 8}{325}{$$ 400, gv1038 0, gf2328 0}
+{362}{man say no ride choo choo.}{}{-4}{gv 1038 9}{325}{$$ 450, gv1038 0, gf2328 0}
+{363}{man say no ride choo choo.}{}{-4}{gv 1038 10}{325}{$$ 500, gv1038 0, gf2328 0}
+{364}{man say no ride choo choo.}{}{-4}{gv 1038 11}{325}{$$ 550, gv1038 0, gf2328 0}
+{365}{man say no ride choo choo.}{}{-4}{gv 1038 12}{325}{$$ 600, gv1038 0, gf2328 0}
+{366}{man say no ride choo choo.}{}{-4}{gv 1038 13}{325}{$$ 650, gv1038 0, gf2328 0}
+{367}{man say no ride choo choo.}{}{-4}{gv 1038 0}{320}{}
+{368}{We have had a change in plans.}{}{5}{gv 1038 1}{325}{$$ 50, gv1038 0, gf2328 0}
+{369}{We have had a change in plans.}{}{5}{gv 1038 2}{325}{$$ 100, gv1038 0, gf2328 0}
+{370}{We have had a change in plans.}{}{5}{gv 1038 3}{325}{$$ 150, gv1038 0, gf2328 0}
+{371}{We have had a change in plans.}{}{5}{gv 1038 4}{325}{$$ 200, gv1038 0, gf2328 0}
+{372}{We have had a change in plans.}{}{5}{gv 1038 5}{325}{$$ 250, gv1038 0, gf2328 0}
+{373}{We have had a change in plans.}{}{5}{gv 1038 6}{325}{$$ 300, gv1038 0, gf2328 0}
+{374}{We have had a change in plans.}{}{5}{gv 1038 7}{325}{$$ 350, gv1038 0, gf2328 0}
+{375}{We have had a change in plans.}{}{5}{gv 1038 8}{325}{$$ 400, gv1038 0, gf2328 0}
+{376}{We have had a change in plans.}{}{5}{gv 1038 9}{325}{$$ 450, gv1038 0, gf2328 0}
+{377}{We have had a change in plans.}{}{5}{gv 1038 10}{325}{$$ 500, gv1038 0, gf2328 0}
+{378}{We have had a change in plans.}{}{5}{gv 1038 11}{325}{$$ 550, gv1038 0, gf2328 0}
+{379}{We have had a change in plans.}{}{5}{gv 1038 12}{325}{$$ 600, gv1038 0, gf2328 0}
+{380}{We have had a change in plans.}{}{5}{gv 1038 13}{325}{$$ 650, gv1038 0, gf2328 0}
+{381}{me say no go.  me confused. me want coins back!}{}{-4}{gv 1038 1}{325}{$$ 50, gv1038 0, gf2328 0}
+{382}{me say no go.  me confused. me want coins back!}{}{-4}{gv 1038 2}{325}{$$ 100, gv1038 0, gf2328 0}
+{383}{me say no go.  me confused. me want coins back!}{}{-4}{gv 1038 3}{325}{$$ 150, gv1038 0, gf2328 0}
+{384}{me say no go.  me confused. me want coins back!}{}{-4}{gv 1038 4}{325}{$$ 200, gv1038 0, gf2328 0}
+{385}{me say no go.  me confused. me want coins back!}{}{-4}{gv 1038 5}{325}{$$ 250, gv1038 0, gf2328 0}
+{386}{me say no go.  me confused. me want coins back!}{}{-4}{gv 1038 6}{325}{$$ 300, gv1038 0, gf2328 0}
+{387}{me say no go.  me confused. me want coins back!}{}{-4}{gv 1038 7}{325}{$$ 350, gv1038 0, gf2328 0}
+{388}{me say no go.  me confused. me want coins back!}{}{-4}{gv 1038 8}{325}{$$ 400, gv1038 0, gf2328 0}
+{389}{me say no go.  me confused. me want coins back!}{}{-4}{gv 1038 9}{325}{$$ 450, gv1038 0, gf2328 0}
+{390}{me say no go.  me confused. me want coins back!}{}{-4}{gv 1038 10}{325}{$$ 500, gv1038 0, gf2328 0}
+{391}{me say no go.  me confused. me want coins back!}{}{-4}{gv 1038 11}{325}{$$ 550, gv1038 0, gf2328 0}
+{392}{me say no go.  me confused. me want coins back!}{}{-4}{gv 1038 12}{325}{$$ 600, gv1038 0, gf2328 0}
+{393}{me say no go.  me confused. me want coins back!}{}{-4}{gv 1038 13}{325}{$$ 650, gv1038 0, gf2328 0}
+{394}{F:}{}{1}{}{-1}{}
+{395}{}{}{}{}{}{}
+

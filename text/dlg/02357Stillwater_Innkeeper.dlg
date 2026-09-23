@@ -1,0 +1,129 @@
+{1}{G:}{}{}{}{}{lf 11 0, lf 12 0 , lf 13 0, lf 14 0}
+{2}{Greetings, good sir.}{}{5}{lf1 0, re 41}{25}{lf1 1}
+{3}{Do you always greet new patrons in such a manner?!}{}{5}{lf1 0, ch-10, re -40}{19}{lf1 1}
+{4}{Hello Innkeeper.  Might I impose on you for a moment?}{}{5}{lf1 1, re 41}{25}{}
+{5}{Can I ask you a question, Innkeeper?}{}{5}{lf1 1, ch-10, re -40}{19}{}
+{6}{There is no need for rudeness, sir.}{}{5}{lf1 1, ch11, re -40}{83}{}
+{7}{Do you always greet new patrons in such a manner?!}{}{5}{lf1 0, ch11, re -40}{83}{lf1 1}
+{8}{I believe that Joachim has left something for me...?}{}{5}{gf2306 1, ni5238}{166}{}
+{13}{Hi dee ho.}{}{-4}{lf1 0, re 41}{25}{lf1 1}
+{14}{You stupid mean guy.}{}{-4}{lf1 0, re -40}{19}{lf1 1}
+{15}{Talk to Innk'per?}{}{-4}{lf1 1, re 41}{25}{}
+{16}{Me ask Innk'per you questions?}{}{-4}{lf1 1, re -40}{140}{}
+{17}{Wa-keem leave me sumthin'...?}{}{-4}{gf2306 1, ni5238}{166}{}
+{18}{E:}{}{1}{}{0}{}
+{19}{We don't serve your type here.  Remove yourself from the premises or I will be forced to call the guard.}{We don't serve your type here.  Remove yourself from the premises or I will be forced to call the guard.}{}{}{}{}
+{20}{Please, sir, I only wish to rent a room.}{}{5}{lf 10 0}{100}{}
+{21}{No, you will be forced to call the undertaker.}{}{5}{}{0}{re -10, fl 130}
+{22}{But I wanna rent room.}{}{-4}{lf 10 0}{100}{}
+{23}{K:}{}{1}{lf 10 1}{25}{}
+{24}{F:}{}{1}{}{0}{}
+{25}{What can I help you with?}{What can I help you with?}{}{}{}{}
+{26}{I would like a room for the night.}{}{5}{lf 10 0}{45}{}
+{27}{I will be in town a while.  I would like a room for one week.}{}{5}{ha7, lf 10 0}{52}{}
+{28}{I will be in town a while.  I would like a room for one week.}{}{5}{ha-6, lf 10 0}{57}{}
+{29}{Me stay 'ere 'nite?}{}{-4}{lf 10 0}{45}{}
+{30}{Mebbe  'ere long.  Me get room for week?}{}{-4}{ha7, lf 10 0}{52}{}
+{31}{Mebbe  'ere long.  Me get room for week?}{}{-4}{ha-6, lf 10 0}{57}{}
+{32}{C:}{}{1}{lf 14 0}{35}{lf 14 1}
+{33}{E:}{}{1}{}{0}{}
+{34}{}{}{}{}{}{}
+{35}{Is there something else?}{Is there something else?}{}{}{}{}
+{36}{I would like a room for the night.}{}{5}{lf 10 0}{45}{}
+{37}{I will be in town a while.  I would like a room for one week.}{}{5}{ha7, lf 10 0}{52}{}
+{38}{I will be in town a while.  I would like a room for one week.}{}{5}{ha-6, lf 10 0}{57}{}
+{39}{Me stay here at nite?}{}{-4}{lf 10 0}{45}{}
+{40}{Me get room for week?}{}{-4}{ha7, lf 10 0}{52}{}
+{41}{Me get room for week?}{}{-4}{ha-6, lf 10 0}{57}{}
+{42}{C:}{}{1}{lf 14 0}{35}{lf 14 1}
+{43}{E:}{}{1}{}{0}{}
+{44}{}{}{}{}{}{}
+{45}{Oh, but of course, sir.  That will be 25 coins, please.}{Oh, but of course, madam.  That will be 25 coins, please.}{}{}{}{}
+{46}{Here you are. [Give him the coins]}{}{5}{$$ 25}{-2}{$$-25, lf 13 0, lf 10 1}
+{47}{That's a little steep... [sigh]  Here. [Give him the coins.]}{}{5}{$$ 25}{-2}{$$-25, lf 13 0, lf 10 1}
+{48}{Uh...  here.  [Give him the coins.]}{}{-4}{$$ 25}{-2}{$$-25, lf 13 0, lf 10 1}
+{49}{Dat a lot! Okay, here.  [Give him the coins.]}{}{-4}{$$ 25}{-2}{$$-25, lf 13 0, lf 10 1}
+{50}{K:}{}{1}{}{35}{}
+{51}{F:}{}{1}{}{0}{re-2}
+{52}{Oh, yes sir!  I would be most delighted if you would bless my establishment with your company for an extended stay.  Hmm... [ponders a moment]  For showing such patronage, I will reduce the rate to 130 coin for the full week.}{Oh, yes madam!  I would be most delighted if you would bless my establishment with your company for an extended stay.  Hmm... [ponders a moment]  For showing such patronage, I will reduce the rate to 130 coin for the full week.}{}{}{}{}
+{53}{Thank you.  Here. [Give him the coins.]}{}{5}{$$ 130}{-5}{$$-130, lf 13 1, lf 10 1}
+{54}{Uh...  T'anks.  Here.  [Give him the coins.]}{}{-4}{$$ 130}{-5}{$$-130, lf 13 1, lf 10 1}
+{55}{K:}{}{1}{}{35}{}
+{56}{F:}{}{1}{}{0}{re -2}
+{57}{Oh!  But of course...  The fee for one week is 175 coin, sir.}{Oh!  But of course...  The fee for one week is 175 coin, madam.}{}{}{}{}
+{58}{Thank you.  Here. [Give him the coins.]}{}{5}{$$ 175}{-5}{$$-175, lf 13 1, lf 10 1}
+{59}{You don't offer a reduced price for payment in advance?}{}{5}{}{78}{}
+{60}{Uh...  T'anks.  Here.  [Give him the coins.]}{}{-4}{$$ 175}{-5}{$$-175, lf 13 1, lf 10 1}
+{61}{Wha'!  It no cost less to stay long?}{}{-4}{}{78}{}
+{62}{K:}{}{1}{lf 14 0}{35}{lf 14 1}
+{63}{F:}{}{1}{}{0}{re -2}
+{64}{Thank you sir!  You will find your room just down the hall.  You will have use of the room for tonight only.  The door will be unlocked.  I do hope you enjoy your stay.}{Thank you mi'lady!  You will find your room just down the hall.  You will have use of the room for tonight only.  The door will be unlocked.  I do hope you enjoy your stay.}{}{}{}{}
+{65}{Thank you.}{}{5}{}{0}{}
+{66}{Uh...  T'anks.}{}{-4}{}{0}{}
+{67}{K:}{}{1}{}{35}{}
+{68}{C:}{}{1}{lf 14 0}{35}{lf 14 1}
+{69}{E:}{}{1}{}{0}{}
+{70}{}{}{}{}{}{}
+{71}{Thank you sir!  You will find your room just down the hall.  You'll  have use of it for the next seven nights. The door will be unlocked.  I do hope you enjoy your stay.}{Thank you mi'lady!  You will find your room just down the hall.  You'll  have use of it for the next seven nights. The door will be unlocked.  I do hope you enjoy your stay.}{}{}{}{}
+{72}{Thank you.}{}{5}{}{0}{}
+{73}{Uh...  T'anks.}{}{-4}{}{0}{}
+{74}{K:}{}{1}{}{35}{}
+{75}{C:}{}{1}{lf 14 0}{35}{lf 14 1}
+{76}{E:}{}{1}{}{0}{}
+{77}{}{}{}{}{}{}
+{78}{I am sorry sir.  Bookings have been extremely busy of late.  I am quite surprised we even have a room available.  I am certain it will not last long, should you decline to take it.}{I am sorry madam.  Bookings have been extremely busy of late.  I am quite surprised we even have a room available.  I am certain it will not last long, should you decline to take it.}{}{}{}{}
+{79}{[sigh]  Here. [Give him the coins.]}{}{5}{$$ 175}{-5}{$$-175, lf 13 1, lf 10 1}
+{80}{[sigh]  Here.  [Give him the coins.]}{}{-4}{$$ 175}{-5}{$$-175, lf 13 1, lf 10 1}
+{81}{K:}{}{1}{}{35}{}
+{82}{F:}{}{1}{}{0}{re -2}
+{83}{Oh!...I, uh didn't uh, I mean, please accept my apologies sir!  I mistook you for someone else.  How may I be of service?}{Oh!...I, uh didn't uh, I mean, please accept my apologies madam!  I mistook you for someone else.  How may I be of service?}{}{}{}{}
+{84}{I would like a room for the night.}{}{5}{lf 10 0}{45}{}
+{85}{I will be in town a while.  I would like a room for one week.}{}{5}{ha7, lf 10 0}{52}{}
+{86}{I will be in town a while.  I would like a room for one week.}{}{5}{ha-6, lf 10 0}{57}{}
+{87}{Me stay 'ere 'nite?}{}{-4}{lf 10 0}{45}{}
+{88}{Me be  'ere long.  Me get room for week?}{}{-4}{ha7, lf 10 0}{52}{}
+{89}{Me be  'ere long.  Me get room for week?}{}{-4}{ha-6, lf 10 0}{57}{}
+{90}{C:}{}{1}{lf 14 0}{35}{lf 14 1}
+{91}{E:}{}{1}{}{0}{}
+{100}{[He looks you over, disapprovingly.] Well, it will cost you 30 coins for one night, five coins more than usual, as I will have to clean the bed to get rid of the lice I'm sure you're infested with.}{[He looks you over, disapprovingly.] Well, it will cost you 30 coins, five coins more than usual, as I will have to clean the bed to get rid of the lice I'm sure you're infested with. But, you probably can't afford 30 coins, can you?}{}{}{}{}
+{101}{I'll take a room for the night. [Give him the coins.]}{}{5}{$$30, lf 10 0}{-2}{$$-30, re +5, lf 12 1, lf 10 1}
+{102}{How much for a week?}{}{5}{lf 10 0}{120}{}
+{103}{I wouldn't pay you to stay here, dog!}{}{5}{}{0}{re -10, fl 130}
+{104}{I don't believe it is worth 30 coins to stay here. Good day.}{}{5}{}{0}{re -5}
+{105}{You're right, I haven't the coin. Good day.}{}{5}{}{0}{}
+{106}{I gots money. I want room. [Give him the coins.]}{}{-4}{$$30, lf 10 0}{-2}{$$-30, re +5, lf 12 1, lf 10 1}
+{107}{I want room for week! How much that be?}{}{-4}{lf 10 0}{120}{}
+{109}{I gots money, but I no give to mean guy!}{}{-4}{}{0}{re-5}
+{110}{Uh, I gotta go 'way now.}{}{-4}{}{0}{}
+{120}{210 coins for you, but I doubt someone of your ilk could afford it.}{210 coins for you, but I doubt someone of your ilk could afford it.}{}{}{}{}
+{121}{I can, and I will take the room. [Give him the coins.]}{}{5}{$$210}{-5}{$$-210, re 45, lf 11 1, lf 10 1}
+{122}{I got money! I take room! [Give him the coins.]}{}{-4}{$$210}{-5}{$$-210, re 45, lf 11 1, lf 10 1}
+{123}{It is not worth even half that. Good day, sir.}{}{5}{}{0}{re-5}
+{124}{I got money, but I no like you inn. Bye.}{}{-4}{}{0}{re-5}
+{127}{I've had enough of you, and your flea bitten inn! Good day!}{}{5}{}{0}{re-10}
+{128}{Uh, I go away.}{}{-4}{}{0}{}
+{129}{I see. Perhaps I will return later.}{}{5}{}{0}{}
+{130}{I am not amused, sir. Please drag your flea bitten hide away from my establishment, lest I be forced to call the guards.}{I am not amused, madam. Please drag your flea bitten hide away from my establishment, lest I be forced to call the guards.}{}{}{}{}
+{140}{[sigh]  What is it?}{[sigh]  What is it?}{}{}{}{}
+{141}{Me stay 'ere 'nite?}{}{-4}{lf 10 0}{45}{}
+{142}{Mebbe  'ere long.  Me get room for week?}{}{-4}{ha7, lf 10 0}{52}{}
+{143}{Mebbe  'ere long.  Me get room for week?}{}{-4}{ha-6, lf 10 0}{57}{}
+{144}{C:}{}{1}{lf 14 0}{35}{lf 14 1}
+{145}{E:}{}{1}{}{0}{}
+{150}{[He greedily accepts your coins.] Oh, excuse me, sir! I didn't know you were a person of means. You will find your room just down the hall.  You'll  have use of it for the next seven nights. The door will be unlocked.  I do hope you enjoy your stay, and, please, excuse any offense I may have given.}{[He greedily accepts your coins.] Oh, excuse me, madam! I didn't know you were a person of means. You will find your room just down the hall.  You'll  have use of it for the next seven nights. The door will be unlocked.  I do hope you enjoy your stay, and, please, excuse any offense I may have given.}{}{}{}{}
+{151}{Thank you.}{}{5}{}{0}{}
+{152}{Uh...  T'anks.}{}{-4}{}{0}{}
+{153}{K:}{}{1}{}{35}{}
+{154}{C:}{}{1}{lf 14 0}{35}{lf 14 1}
+{155}{E:}{}{1}{}{0}{}
+{160}{Okay, then. You will find your room just down the hall, but you will have use of the room for tonight only. Don't be causing any trouble, or I won't hesitate to have you removed. And there's no refunds.}{Okay, then. You will find your room just down the hall, but you will have use of the room for tonight only. Don't be causing any trouble, or I won't hesitate to have you removed. And there's no refunds.}{}{}{}{}
+{161}{Thank you.}{}{5}{}{0}{}
+{162}{Uh...  T'anks.}{}{-4}{}{0}{}
+{163}{K:}{}{1}{}{35}{}
+{164}{C:}{}{1}{lf 14 0}{35}{lf 14 1}
+{165}{E:}{}{1}{}{0}{}
+{166}{Ah, yes...  He left some things for you.  Now where did I put them?  Oh, yes!  I recall, now...here you are.}{Ah, yes...  He left some things for you.  Now where did I put them?  Oh, yes!  I recall, now...here you are.}{}{}{}{in -5238, gf2307 1}
+{167}{Thank  you.}{}{5}{}{35}{}
+{168}{T'anks}{}{-4}{}{35}{}
+{169}{}{}{}{}{}{}
+

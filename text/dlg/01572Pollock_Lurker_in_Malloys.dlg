@@ -1,0 +1,99 @@
+{1}{Whaddaya want there, boy...?}{Whaddaya want there, lass...? [He gives you an appraising gaze.]}{}{}{}{}
+{2}{I've a few questions, if you don't mind...}{}{5}{lf1 0}{-2}{}
+{3}{I've a few questions, if you don't mind...}{}{5}{lf1 1, lf2 0}{42}{}
+{4}{I've a few questions, if you don't mind...}{}{5}{lf2 1, lf1 0}{88}{}
+{5}{Nothing in particular.}{}{5}{}{}{fl 10}
+{6}{Uh...got questions!}{}{-4}{lf5 0}{93}{}
+{7}{Uh...got questions!}{}{-4}{lf5 1}{106}{}
+{8}{E:}{}{-4}{}{}{fl 10}
+{10}{Yeah, that's what I thought, lad.  You just be on your way and you won't get hurt...}{Yeah, lassie...that's what's best for you.  [He pats your behind.]}{}{}{}{}
+{12}{[He looks at you, and smirks.]  As a matter of fact, I DO mind, boy.  You got any idea who yer messin' with in here?  Being as weak and scrawny as you are...I'm surprised someone ain't already made ya into a blood puddle...[He snickers to his friends.]}{[He looks at you, and smirks.]  As a matter of fact, I DO mind, girl.  You got any idea who yer messin' with in here?  Being as weak and scrawny as you are...I'm surprised someone ain't already made ya into a blood puddle...[He snickers to his friends.]}{}{}{}{}
+{13}{Yes, I know I'm weak.  Please...just a few moments of your time...}{}{5}{}{22}{}
+{14}{I see.  Perhaps YOU'D like to try, braggart.}{}{5}{}{26}{}
+{17}{[He looks you over, making an appraisal.]  Hmmm.  Don't know you, friend.  I ain't sayin' nothin' for nothin', but a man don't go around in the Boil askin' questions of people he don't know.  [He looks into his drink.]  Even lookin' as tough as you do.  Just ain't healthy, most ways...}{[He looks you over, making an appraisal.]  Hmmm.  Don't know you, lass.  I ain't sayin' nothin' for nothin', but a woman don't go around in the Boil askin' questions of people she don't know.  [He looks into his drink.]  Even lookin' as tough as you do.  Just ain't healthy, most ways...}{}{}{}{lf1 1}
+{18}{I'm not here to start trouble, I'm just new to this town...}{}{5}{}{31}{re +5}
+{19}{I'll ask questions of whomever I please, dog...}{}{5}{}{35}{re -5}
+{20}{Perhaps I'll return later.  Good day to you, sir...}{}{5}{}{0}{}
+{22}{Ha Ha Ha!  You hear that boys?  The poor bloke KNOWS he's weak.  [He steps up to you.]  You know what happens to lads like you in the Boil?  You wouldn't even want me to tell you.  Get the hell out of here, before someone carries you out...}{Ha Ha Ha!  You hear that boys?  The poor lass KNOWS she's weak.  [He steps up to you.]  You know what happens to women like you in the Boil?  You wouldn't even want me to tell you.  Get the hell out of here, before someone carries you out...}{}{}{}{}
+{23}{Yes, sir.  So sorry, sir...}{}{5}{}{0}{}
+{24}{I don't believe you've got the stones to face me, fool...}{}{5}{}{26}{}
+{26}{[The man's eyes flare, then he almost smiles.]  Hmmm.  Perhaps you might just have a little sand in you, boy.  The Boil will teach you right quick as to just how much.  I'll give you some free advice...don't be sayin' words you don't mean, and don't back down to no one.  Unless, of course, you run into Pollock...}{[The man's eyes flare, then he almost smiles.]  Hmmm.  Perhaps you might just have a little sand in you, lass.  The Boil will teach you right quick as to just how much.  I'll give you some free advice...don't be sayin' words you don't mean, and don't back down to no one.  Unless, of course, you run into Pollock...}{}{}{}{lf1 1}
+{27}{Thanks for the advice.  Could I ask a few more questions?}{}{5}{}{42}{}
+{28}{No one listens to advice from dead men...}{}{5}{}{}{co, fl 40}
+{29}{Good day to you, sir...}{}{5}{}{0}{}
+{31}{[He seems to approve of your reaction.]  New to the Boil, huh?  Well, its not a nice place for anyone, but especially not strangers.  I'd recommend you watch your step, stranger.  That's free advice...}{[He seems to approve of your reaction.]  New to the Boil, huh?  Well, its not a nice place for anyone, but especially not strangers.  I'd recommend you watch your step, stranger.  That's free advice...}{}{}{}{}
+{32}{Thanks for the advice.  Could I ask a few more questions?}{}{5}{}{42}{}
+{33}{E:}{}{5}{}{0}{}
+{35}{[The man looks scared, but stands up to you.  His friends set down their drinks.]  You think you can talk to a member a' Pollock's gang like that and get away with it, boy?  I don't care how rough you look...I'll have yer arse strung up a bloody flagpole, ya keep shootin' yer mouth of like that!}{[The man looks scared, but stands up to you.  His friends set down their drinks.]  You think you can talk to a member a' Pollock's gang like that and get away with it, lass?  I don't care how rough you look...I'll have yer arse strung up a bloody flagpole, ya keep shootin' yer mouth of like that!}{}{}{}{lf3 1}
+{36}{My tongue gets a bit carried away.  No offense meant...}{}{5}{}{31}{re +5}
+{37}{Is all of this 'Pollock's gang' as pathetic as you blokes?}{}{5}{}{}{co, fl 40}
+{38}{Perhaps I'd best return later...}{}{5}{}{0}{lf2 1}
+{40}{Mistake, boy.  Big mistake...}{Mistake, lass.  Big mistake...}{}{}{}{}
+{42}{I don't see why not.  Make it quick, though...}{I don't see why not.  Make it quick, though...}{}{}{}{}
+{43}{What is this pub we're in?}{}{5}{lf4 0}{50}{lf4 1}
+{44}{What is 'the Boil'?}{}{5}{}{69}{}
+{45}{What is the Clan Maug?}{}{5}{lf4 1}{56}{}
+{46}{Who is Pollock?}{}{5}{lf3 1}{-5}{}
+{47}{How does someone go about getting work around here?}{}{5}{gf2172 0}{76}{}
+{48}{E:}{}{5}{}{0}{}
+{50}{This here pub is called Caleb Malloy's.  It's the best place in the Boil to get yourself a drink, and find out what's new on the street.  There's a lot of the Clan Maug in here, too, but Malloy's is no-man's land...Pollock told us no fighting in here, and so we don't start trouble...}{This here pub is called Caleb Malloy's.  It's the best place in the Boil to get yourself a drink, and find out what's new on the street.  There's a lot of the Clan Maug in here, too, but Malloy's is no-man's land...Pollock told us no fighting in here, and so we don't start trouble...}{}{}{}{lf3 1}
+{51}{Who are the Clan Maug?}{}{5}{}{56}{}
+{52}{Who is Pollock?}{}{5}{}{-5}{}
+{53}{A few more questions...}{}{5}{}{42}{}
+{54}{E:}{}{5}{}{0}{}
+{56}{Clan Maug?  Bunch of weak-spined blokes who live in the North Boil.  Orcs and half-orcs, mostly.  Their boss goes by the name a' Darian Maug, and he lives in the Bentley...fancy building just north a' here.  Bloody flaming prince, hidin' behind his nice little house.  [He spits on the ground.]  I'd like to get my hands on him...}{Clan Maug?  Bunch of weak-spined blokes who live in the North Boil.  Orcs and half-orcs, mostly.  Their boss goes by the name a' Darian Maug, and he lives in the Bentley...fancy building just north a' here.  Bloody flaming prince, hidin' behind his nice little house.  [He spits on the ground.]  I'd like to get my hands on him...}{}{}{}{}
+{57}{Who is Pollock?}{}{5}{}{-5}{}
+{58}{A few more questions...}{}{5}{}{42}{}
+{60}{More questions...}{}{-4}{}{106}{}
+{61}{E:}{}{1}{}{0}{}
+{63}{Pollock?  He's our boss...[He gestures to his friends.]  We're all a part of Pollock's gang.  Bloody nightmares we are, too!  Eh, boys?  [They all let out a raucous howl, toasting above the table and spilling most of their drinks.]  Pollock's a half-ogre, lives down in the South Boil.  There's two bosses here in the Boil, but Pollock's the one to be afraid of... }{Pollock?  He's our boss...[He gestures to his friends.]  We're all a part of Pollock's gang.  Bloody nightmares we are, too!  Eh, boys?  [They all let out a raucous howl, toasting above the table and spilling most of their drinks.]  Pollock's a half-ogre, lives down in the South Boil.  There's two bosses here in the Boil, but Pollock's the one to be afraid of... }{}{}{}{}
+{64}{I see.  A few more questions...}{}{5}{}{42}{}
+{66}{More questions...}{}{-4}{}{106}{}
+{67}{E:}{}{1}{}{0}{}
+{69}{The Boil?  That's where you are, lad!  Everything over here on the western side a' the Garrillon Bridge.  It ain't much to look at, but its our kingdom...eh, boys!  To Pollock's gang!  [They all bellow various exclamations or expletives, raising their glasses in the air.  A lot of ale ends up on the floor.]}{The Boil?  That's where you are, lass!  Everything over here on the western side a' the Garrillon Bridge.  It ain't much to look at, but its our kingdom...eh, boys!  To Pollock's gang!  [They all bellow various exclamations or expletives, raising their glasses in the air.  A lot of ale ends up on the floor.]}{}{}{}{}
+{70}{I see.  Anything else about the Boil I should know?}{}{5}{}{72}{}
+{72}{If you got questions about the Boil, you should go and talk to Caleb Malloy, the bartender.  He's been here a lot longer than most, and he's got the scars to prove it...}{If you got questions about the Boil, you should go and talk to Caleb Malloy, the bartender.  He's been here a lot longer than most, and he's got the scars to prove it...}{}{}{}{}
+{73}{I may do that.  A few more questions...}{}{5}{}{42}{}
+{74}{E:}{}{5}{}{0}{}
+{76}{Well...a bloke's gotta be careful about who he works for here in the Boil, lad.  For example, let's say you were to take a job with the Clan Maug.  Well, me and my mates, being a part of Pollock's gang, wouldn't take too kindly to that.  You understand my meanin' lad?  [He pats a thick cudgel strapped to his belt.]  Yeah, a bloke's gotta be REAL careful...}{Well...woman like you has gotta be careful about who she works for here in the Boil.  For example, let's say you were to take a job with the Clan Maug.  Well, me and my mates, being a part of Pollock's gang, wouldn't take too kindly to that.  You understand my meanin', lass?  [He pats a thick cudgel strapped to his belt.]  Yeah, you gotta be REAL careful...}{}{}{}{}
+{77}{And if I wanted to join Pollock's gang...?}{}{5}{}{82}{}
+{79}{Uh...what if I wanna be in Pollock gang?}{}{-4}{}{82}{}
+{80}{E:}{}{1}{}{0}{}
+{82}{You might just be smarter than you look, lad.  You wanna work for Pollock, then I recommend you go and talk to Miranda Tears...she's the rough-lookin' lass that's standin' up there by the bar.  You just tell her we sent you over, and she'll decide if you're worth wastin' any time on...}{You might just be smarter than you look.  You wanna work for Pollock, then I recommend you go and talk to Miranda Tears...she's the rough-lookin' lass that's standin' up there by the bar.  You just tell her we sent you over, and she'll decide if you're worth wastin' any time on...}{}{}{}{gf2172 1}
+{83}{I see.  A few more questions...}{}{5}{}{42}{}
+{85}{Okay!  More questions...}{}{-4}{}{106}{}
+{86}{E:}{}{1}{}{0}{}
+{88}{Ain't you the bloke that was shootin' off his mouth a little while ago?  You think we're gonna forget you, boy?  Just get on outta here, and fast...}{Ain't you the lass that was shootin' off her mouth a little while ago?  You think we're gonna forget you, girl?  Just get on outta here, and fast...}{}{}{}{}
+{89}{My tongue gets a bit carried away.  No offense meant...}{}{5}{}{31}{lf2 0, lf1 1, re +5}
+{90}{Actually, I just came back to finish you off, coward...}{}{5}{}{}{co, fl 40}
+{91}{E:}{}{5}{}{0}{}
+{93}{[The man looks at you, incredulously.]  Look at this here, mates!  We've got ourselves a real quick one!  This bloke's three wheels short of a wagon!  HA HA HA!  I never thought I'd see the an idiot was walkin' the streets a' the Boil!}{[The man looks at you, incredulously.]  Look at this here, mates!  We've got ourselves a real quick one!  This lass is three wheels short of a wagon!  HA HA HA!  I never thought I'd see the day that we'd have an idiot walkin' the streets a' the Boil!}{}{}{}{}
+{94}{Uh...HAHAHAHA!!!  You funny!  Funny man!}{}{-4}{}{100}{}
+{95}{I no like your dumb words.  I gonna kill you and you friends...}{}{-4}{}{}{co, fl 98}
+{96}{E:}{}{-4}{}{0}{}
+{98}{That's a bad move here in the Boil, boy, whether you got a lick a' brains or not...}{That's a bad move here in the Boil, girl, whether you got a lick a' brains or not...}{}{}{}{}
+{100}{[He doubles over, laughing.]  Boy doesn't even know that HE'S the joke!  I haven't laughed this hard in years...[He sets his ale down, tears streaming down his face.]  You've made my day, lad.  Its not everyday that you meet someone with an empty braincase!}{[He doubles over, laughing.]  Girl doesn't even know that SHE'S the joke!  I haven't laughed this hard in years...[He sets his ale down, tears streaming down his face.]  You've made my day, girl.  Its not everyday that you meet someone with an empty braincase!}{}{}{}{}
+{101}{So...you help me?}{}{-4}{}{103}{lf5 1}
+{103}{[He dries his eyes, taking a swallow of his ale afterwards.]  Sure, boy.  A bloke like you could use all the help he can get.  What do you want?}{[He dries his eyes, taking a swallow of his ale afterwards.]  Sure, lass.  A girl like you could use all the help she can get.  What do you want?}{}{}{}{}
+{104}{I got questions!}{}{-4}{}{106}{}
+{106}{What do you want to know?}{What do you want to know?}{}{}{}{}
+{107}{Uh...what is 'Boil'?}{}{-4}{}{113}{}
+{108}{Who Pollock?}{}{-4}{lf6 1}{63}{}
+{109}{What Clan Maug?}{}{-4}{lf6 1}{56}{}
+{110}{How I get work, here?}{}{-4}{lf6 1, gf2172 0}{76}{}
+{111}{E:}{}{-4}{}{0}{}
+{113}{The Boil?  That's where you are, lad!  Everything over here on the western side a' the Garrillon Bridge.  And it ain't the kind of place that you want to be wanderin' around in...especially not with the Clan Maug and Pollock's gang roamin' the streets.  Bloke like you's just gonna get hurt.  If you got more questions about the Boil, go ask Caleb Malloy, the bartender...}{The Boil?  That's where you are, lass!  Everything over here on the western side a' the Garrillon Bridge.  And it ain't the kind of place that you want to be wanderin' around in...especially not with the Clan Maug and Pollock's gang roamin' the streets.  Lass like you's just gonna get hurt.  If you got more questions about the Boil, go ask Caleb Malloy, the bartender...}{}{}{}{lf6 1}
+{114}{More questions...}{}{-4}{}{106}{}
+{115}{E:}{}{-4}{}{}{}
+{150}{I'll drink to that!}{I'll drink to that!}{}{}{}{}
+{151}{Here's to swimmin' with bowlegged women!}{Here's to swimmin' with bowlegged women!}{}{}{}{}
+{152}{Arrrggghhhh!!!!}{Arrrggghhhh!!!!}{}{}{}{}
+{153}{Bloody good, mate!}{Bloody good, mate!}{}{}{}{}
+{154}{Yer speakin' me language!}{Yer speakin' me language!}{}{}{}{}
+{155}{Buuurrrppp!}{Buuurrrppp!}{}{}{}{}
+{156}{This one's for old Squinty Ben!}{This one's for old Squinty Ben!}{}{}{}{}
+{157}{Down the hatch!}{Down the hatch!}{}{}{}{}
+{158}{It might be pig-swill, but it'll get you drunk!}{It might be pig-swill, but it'll get you drunk!}{}{}{}{}
+{159}{Finish 'em off, boys!}{Finish 'em off, boys!}{}{}{}{}
+{160}{He always says that, bloody bugger!}{He always says that, bloody bugger!}{}{}{}{}
+

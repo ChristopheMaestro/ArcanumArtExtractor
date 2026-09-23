@@ -1,0 +1,115 @@
+{1}{[The man before you is a youngish gnome, dressed in a well-made suit.]  Excuse me...but I couldn't help but notice that you're new here in town.  I've heard about the IFS Zephyr...were you on the blimp when it crashed?}{Excuse me...but I couldn't help but notice that you're new here in town.  I've heard about the IFS Zephyr...were you on the blimp when it crashed?}{}{}{}{}
+{2}{Yes, I was.}{}{5}{}{13}{re +5}
+{3}{Mind your own business, sir.}{}{5}{}{7}{re -5}
+{4}{I'd rather not speak of it...I'm rather traumatized by the affair...}{}{5}{}{7}{}
+{5}{Uh....yeah!  I on blimp!}{}{-4}{}{13}{re +5}
+{7}{Please, sir!  I must know!  Were you on that blimp or not?  I have a very good reason for wanting to know!  I beseech you...!}{Please, madam!  I must know!  Were you on that blimp or not?  I have a very good reason for wanting to know!  I beseech you...!}{}{}{}{}
+{8}{If you must know...yes, I was on the blimp...}{}{5}{}{13}{}
+{9}{And I told you that I'd rather not speak of it.  Good day...}{}{5}{}{}{lf2 1, gf2132 1, re -5, fl 116}
+{10}{Uh....yeah!  I on blimp!}{}{-4}{}{13}{}
+{11}{NO!  I no wanna talk no more!  Leave me alone!}{}{-4}{}{}{lf2 1, gf2132 1, re -5, fl 116}
+{13}{Oh!  Thank heavens!  Then there were survivors!  Did the others come here as well?  Where are they staying?}{Oh!  Thank heavens!  Then there were survivors!  Did the others come here as well?  Where are they staying?}{}{}{}{}
+{14}{There were no other survivors.  I was the only one.}{}{5}{}{17}{}
+{15}{Uh...I only person who live...}{}{-4}{}{17}{}
+{17}{Are you sure?  [The gnome looks crestfallen.]  My older brother...he was on the blimp.  A gnomish gentleman of some years.  Did you happen to see him, sir?}{Are you sure?  [The man looks crestfallen.]  My brother...he was on the blimp.  A gnomish gentleman of some years.  Did you happen to see him, madam?}{}{}{}{}
+{18}{I did see a gnome. [Describe him]  I'm sorry, but he died...}{}{5}{}{38}{}
+{19}{I did meet a gnome.  What did you say your name was?}{}{5}{}{32}{}
+{20}{I'd rather forget the whole affair, thank you very much.}{}{5}{}{24}{}
+{21}{I saw gnome!  He die...}{}{-4}{}{38}{}
+{22}{Uh...I tired.  I go now...}{}{-4}{}{24}{}
+{24}{Please, sir!  This is my brother we're speaking of!  I need to know...!}{Please, madam!  This is my brother we're speaking of!  I need to know...!}{}{}{}{}
+{25}{And I told you that I'd rather not speak of it.  Good day...}{}{5}{}{}{lf2 1, gf2132 1, re -5, fl 116}
+{26}{I did see a gnome. [Describe him]  I'm sorry, but he died...}{}{5}{}{38}{}
+{27}{I did meet a gnome.  What did you say your name was?}{}{5}{}{32}{}
+{28}{NO!  I no wanna talk no more!  Leave me alone!}{}{-4}{}{}{lf2 1, gf2132 1, re -5, fl 116}
+{29}{I saw gnome!  He die...}{}{-4}{}{38}{}
+{32}{The name is Radcliffe...William Radcliffe.  My brother's name was Preston...did you know him, sir?  Perhaps he's at the crash site even now, alive..?}{The name is Radcliffe...William Radcliffe.  My brother's name was Preston...did you know him, madam?  Perhaps he's at the crash site even now, alive..?}{}{}{}{}
+{33}{No.  I did speak with a gnome, but he died.  I'm very sorry...}{}{5}{gf2130 0}{38}{}
+{34}{I spoke with your brother.  He died shortly after.  I'm sorry.}{}{5}{gf2130 1}{38}{}
+{38}{[His face goes pale.]  No...not Preston.  [He is silent for a moment, looking away.]  I see.  Thank you, sir.  You've been most helpful...}{[His face goes pale.]  No...not Preston.  [He is silent for a moment, looking away.]  I see.  Thank you, madam.  You've been most helpful...}{}{}{}{gf2312 1}
+{39}{I'm sorry for your loss.  Good day to you...}{}{5}{}{0}{lf2 1, gf2132 1}
+{40}{Wait!  He told me to "find the boy" and give him this ring...!}{}{5}{in 2804}{48}{}
+{41}{Sorry, gnome.  I go now...}{}{-4}{}{0}{lf2 1, gf2132 1}
+{42}{Wait!  He give me ring!  Said "give to boy..."  Maybe you?}{}{-4}{in 2804}{48}{}
+{48}{I see.  [He looks longingly at the ring.]  It was his...a family heirloom...[He looks on the verge of tears.]  Even in death, he was thinking of his family first...}{I see.  [He looks longingly at the ring.]  It was his...a family heirloom...[He looks on the verge of tears.]  Even in death, he was thinking of his family first...}{}{}{}{}
+{49}{I think he wanted you to have it. [Give him the ring.]}{}{5}{}{54}{in 2804, gf2311 1, lf3 1}
+{50}{He seemed very upset...said he'd escaped from somewhere...}{}{5}{lf1 0}{60}{lf1 1}
+{51}{Here...you take ring!  He want boy to have it...[Give it to him.]}{}{-4}{}{54}{in 2804, gf2311 1, lf3 1}
+{52}{Uh...he say he escape from somewhere...?}{}{-4}{lf1 0}{60}{lf1 1}
+{53}{}{}{}{}{}{}
+{54}{I thank you sir.  Here...please take this small token of my gratitude [He gives you 25 gold pieces.]  Its not much, but its all I have.  Tell me, did Preston tell you anything before he died?}{I thank you madam.  Here...please take this small token of my gratitude [He gives you 25 gold pieces.]  Its not much, but its all I have.  Tell me, did Preston tell you anything before he died?}{}{}{}{$$25}
+{55}{He seemed very upset...said he'd escaped from somewhere...}{}{5}{lf1 0}{60}{lf1 1}
+{56}{Uh...not really anything important...}{}{5}{}{111}{}
+{57}{Uh...he say he escape from somewhere...?}{}{-4}{lf1 0}{60}{lf1 1}
+{58}{Uh...I not remember...}{}{-4}{}{111}{}
+{60}{Really? [The man seems surprised...a little nervous.]  Yes, well...Preston was getting on in years...sometimes he had a little trouble remembering exactly where he was.  He was overseas...[he lowers his voice]...receiving "treatments"...}{Really? [The man seems surprised...a little nervous.]  Yes, well...Preston was getting on in years...sometimes he had a little trouble remembering exactly where he was.  He was overseas...[he lowers his voice]...receiving "treatments"...}{}{}{}{}
+{61}{Ah.  Well, I suppose the ring is yours...[Give it to him.]}{}{5}{in 2804, lf3 0}{54}{in 2804, gf2311 1, lf3 1}
+{62}{Hmmm.  If you're carrying identification, I'll give you the ring...}{}{5}{lf3 0}{74}{}
+{63}{I think its best I be going.  Good day to you...}{}{5}{lf3 0}{68}{}
+{64}{Uh...here!  You take ring! [Give it to him.]}{}{-4}{in 2804, lf3 0}{54}{in 2804, gf2311 1, lf3 1}
+{65}{How I know you really his brother?}{}{-4}{lf3 0}{74}{}
+{66}{I gonna go...}{}{-4}{lf3 0}{68}{}
+{67}{E:}{}{1}{lf3 1}{111}{}
+{68}{Wait!  Please...can I have the ring?  It seems he wanted me to have it...I am his little brother...he, uh, used to call me "boy" all the time.  [His voice cracks.  Then he whispers...]  Its all I have left to remember him by...}{Wait!  Please...can I have the ring?  It seems he wanted me to have it...I am his little brother...he, uh, used to call me "boy" all the time.  [His voice cracks.  Then he whispers...]  Its all I have left to remember him by...}{}{}{}{}
+{69}{Hmmm.  If you're carrying identification, I'll give you the ring...}{}{5}{}{74}{}
+{70}{I'm sorry, but I'm keeping it.  Thank you and good day...}{}{5}{}{82}{}
+{71}{How I know you really his brother?}{}{-4}{}{74}{}
+{72}{I keep ring.  I go now...}{}{-4}{}{82}{}
+{74}{[He seems hurt by your doubt.]  Sir!  This is a difficult time for me...I haven't my passport, I've lost it on the way here...[He looks angry, frustrated.]  I'd just appreciate it if you'd give me the ring, please...it belongs to me...}{[He seems hurt by your doubt.]  Madam!  This is a difficult time for me...I haven't my passport, I've lost it on the way here...[He looks angry, frustrated.]  I'd just appreciate it if you'd give me the ring, please...it belongs to me...}{}{}{}{}
+{75}{Of course.  Please, take it...[Give it to him.]}{}{5}{in 2804}{54}{in 2804, gf2311 1, lf3 1}
+{76}{Perhaps you could just describe the ring in detail...}{}{5}{}{86}{}
+{77}{No.  I'm keeping it and that's final.  Good day to you, sir.}{}{5}{}{82}{}
+{78}{Okay...take ring!}{}{-4}{in 2804}{54}{in 2804, gf2311 1, lf3 1}
+{79}{Uh...what ring look like?}{}{-4}{}{86}{}
+{80}{I dunno...I think I keep...}{}{-4}{}{82}{}
+{82}{I see.  Well sir, you're no gentlemen.  I bid you good day.  [He turns to leave, then looks back.]  I believe you're making a very large mistake.}{I see.  Well, you're no lady.  I bid you good day.  [He turns to leave, then looks back.]  I believe you're making a very large mistake.}{}{}{}{}
+{83}{So be it.  Good day to you...}{}{5}{}{0}{lf2 1, gf2132 1}
+{84}{E:}{}{-4}{}{0}{lf2 1, gf2132 1}
+{86}{[His face turns red as he gets more flustered.]  Listen, I've come a long way...its been years since I've seen that ring.  [He sets his jaw, exhaling.]  Look, I'll pay you for it...}{[His face turns red as he gets more flustered.]  Listen, I've come a long way...its been years since I've seen that ring.  [He sets his jaw, exhaling.]  Look, I'll pay you for it...}{}{}{}{}
+{87}{No...just take the ring.  [Give it to him.]}{}{5}{in 2804}{101}{in 2804, gf2311 1, lf3 1}
+{88}{Where are you travelling from?  You arrived here awfully fast...}{}{5}{}{95}{}
+{89}{How much?}{}{5}{in 2804}{123}{}
+{90}{I tire of this.  I'm leaving, now}{}{5}{}{82}{}
+{91}{Naw...you can have ring.  [Give it to him.]}{}{-4}{in 2804}{101}{in 2804, gf2311 1, lf3 1}
+{92}{Yeah!  Money!  Money!  How much?}{}{-4}{}{123}{}
+{93}{This boring.  I leave now...}{}{-4}{}{82}{}
+{95}{[The gnome's mouth drops open, as if to say something, then shuts.  His eyes narrow, and he takes a step forward.]  I recommend you give me the ring, friend.  You're a stranger here, and you can be assured that the town constable will see things that way...}{[The gnome's mouth drops open, as if to say something, then shuts.  His eyes narrow, and he takes a step forward.]  I recommend you give me the ring, madam.  You're a stranger here, and you can be assured that the town constable will see things that way...}{}{}{}{}
+{96}{Perhaps we should go speak with him...}{}{5}{}{106}{}
+{97}{Fine.  Just take the ring and be done with it.  [Give it to him.]}{}{5}{in 2804}{101}{}
+{98}{Mebbe we go talk to him...}{}{-4}{}{106}{}
+{99}{I just give you ring so you shut up...[Give it to him.]}{}{-4}{in 2804}{101}{}
+{101}{Thank you.  [He regains his composure almost immediately.]  I assume you'll be staying here in Shrouded Hills?  I'm sure we'll run into each other again...}{Thank you.  [He regains his composure almost immediately.]  I assume you'll be staying here in Shrouded Hills?  I'm sure we'll run into each other again...}{}{}{}{}
+{102}{Perhaps.  Good day to you...}{}{5}{}{0}{lf2 1, gf2132 1}
+{103}{Uh, mebbe.  Buh-bye.}{}{-4}{}{0}{lf2 1, gf2132 1}
+{106}{[He takes another step towards you, and then moves back, seeming to think twice of it.]  Fine, stranger.  Have it your way.  You're making a big mistake.  I'll have that ring one way or another...}{[He takes another step towards you, and then moves back, seeming to think twice of it.]  Fine, stranger.  Have it your way.  You're making a big mistake.  I'll have that ring one way or another...}{}{}{}{}
+{107}{Perhaps.  I bid you good day.}{}{5}{}{0}{lf2 1, gf2132 1}
+{108}{E:}{}{-4}{}{0}{lf2 1, gf2132 1}
+{111}{[The gnome looks at you for a moment, seeming to consider your words.  Then he smiles, sadly.]  Well, thank you stranger.  I'm sorry, what did you say your name was...?}{[The gnome looks at you for a moment, seeming to consider your words.  Then he smiles, sadly.]  Well, thank you stranger.  I'm sorry, what did you say your name was...?}{}{}{}{}
+{112}{I didn't say, gnome.}{}{5}{}{}{lf2 1, gf2132 1, re -5, fl 116}
+{113}{I'm sorry...my name is @PCNAME@.}{}{5}{}{119}{re +5}
+{114}{I called @PCNAME@!}{}{-4}{}{119}{re +5}
+{116}{[He seems taken aback by your response.]  Hmmph!  No need to be rude, sir.  I suppose you'll be staying here in Shrouded Hills.  I'm sure we'll be seeing one another again...}{[He seems taken aback by your response.]  Hmmph!  No need to be rude, madam.  I suppose you'll be staying here in Shrouded Hills.  I'm sure we'll be seeing one another again...}{}{}{}{}
+{119}{A pleasure to meet you, @PCNAME@.  I'll be staying here in town...I'm sure we'll run into one another again...}{A pleasure to meet you, @PCNAME@.  I'll be staying here in town...I'm sure we'll run into one another again...}{}{}{}{}
+{120}{E:}{}{5}{}{0}{lf2 1, gf2132 1}
+{121}{E:}{}{-4}{}{0}{lf2 1, gf2132 1}
+{123}{[The man smiles.]  I could pay you 50 gold pieces for it...}{[The man smiles.]  I could pay you 50 gold pieces for it...}{}{}{}{}
+{124}{Deal. [Give it to him.]}{}{5}{}{135}{in 2804, $$50, lf3 1}
+{125}{I'll give it to you for 55. [Give it to him.]}{}{5}{ha 7}{135}{in 2804, $$55, lf3 1}
+{126}{I'll give it to you for 60. [Give it to him.]}{}{5}{ha 6, ha -6}{135}{in 2804, $$60, lf3 1}
+{127}{I'll give it to you for 65. [Give it to him.]}{}{5}{ha -5}{135}{in 2804, $$65, lf3 1}
+{128}{Forget it.  I'm keeping the ring.}{}{5}{}{95}{}
+{129}{Okey-dokey! [Give it to him.]}{}{-4}{}{135}{in 2804, $$50, lf3 1}
+{130}{More! 55 gold! [Give it to him.]}{}{-4}{ha 7}{135}{in 2804, $$55, lf3 1}
+{131}{More! 60 gold! [Give it to him.]}{}{-4}{ha 6, ha -6}{135}{in 2804, $$60, lf3 1}
+{132}{More! 65 gold! [Give it to him.]}{}{-4}{ha -5}{135}{in 2804, $$65, lf3 1}
+{133}{I gonna keep ring.}{}{-4}{}{95}{}
+{135}{Done.  Thank you very much.  You'll be staying here in Shrouded Hills I assume?  I'm sure we'll be seeing each other again...}{Done.  Thank you very much.  You'll be staying here in Shrouded Hills I assume?  I'm sure we'll be seeing each other again...}{}{}{}{}
+{136}{E:}{}{5}{}{0}{lf2 1, gf2132 1}
+{137}{E:}{}{-4}{}{0}{lf2 1, gf2132 1}
+{138}{We've nothing left to talk about, sir.  I've arrangements to make.  Good day to you...}{We've nothing left to talk about, madam.  I've arrangements to make.  Good day to you...}{}{}{}{}
+{140}{Excuse me, sir, but I couldn't help but overhear you telling the good constable that you were the sole survivor on the IFS Zephyr.  Is that true?}{Excuse me, madam, but I couldn't help but overhear you telling the good constable that you were the sole survivor on the IFS Zephyr.  Is that true?}{}{}{}{}
+{141}{Yes, I was.}{}{5}{}{13}{re +5}
+{142}{Mind your own business, sir.}{}{5}{}{7}{re -5}
+{143}{I'd rather not speak of it...I'm rather traumatized by the affair...}{}{5}{}{7}{}
+{144}{Uh....yeah!  I on blimp!}{}{-4}{}{13}{re +5}
+

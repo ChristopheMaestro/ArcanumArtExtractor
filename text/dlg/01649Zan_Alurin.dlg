@@ -1,0 +1,260 @@
+{1}{G:}{G:}{}{1}{}{}
+{2}{Hello, madam.  Might I ask who you are?}{}{5}{me 0, re 41}{47}{}
+{3}{Greetings, Z'an Al'urin.  Might I impose on you for a moment?}{}{5}{me 1, re 41}{12}{}
+{5}{I'm sorry, madam?  Why do you say such things?}{}{5}{me 0, re -40}{23}{}
+{6}{Z'an Al'urin!  Is there something I've done to offend you?}{}{5}{me 1, re -40}{23}{}
+{7}{E:}{}{5}{me 1}{0}{}
+{8}{Uh...who you?}{}{-4}{}{19}{}
+{9}{E:}{}{-4}{}{0}{}
+{12}{Yes?  What do you need?}{Yes?  What do you need?}{}{2}{}{}
+{13}{You were going to tell me about the Dark Elves...}{}{5}{lf1 1, lf2 0}{133}{}
+{14}{Can you tell me what it is the Dark Elves are doing?}{}{5}{lf2 1, lf3 0}{165}{}
+{15}{I was thinking perhaps you'd like to join me...}{}{5}{lf4 1, lf3 0}{183}{}
+{16}{Are you sure you wouldn't like to join me?}{}{5}{lf3 1}{192}{jo 0 198}
+{17}{E:}{}{5}{}{0}{}
+{19}{[The elf woman before you, upon seeing your mental state, seems almost physically repulsed.]  Ugghh.  Leave me alone.  I've nothing to say to the likes of you.}{[The elf woman before you, upon seeing your mental state, seems almost physically repulsed.]  Ugghh.  Leave me alone, woman.  I've nothing to say to the likes of you.}{}{3}{}{}
+{20}{Uh...I no like your words.  Think I kill dumb elf woman...!}{}{5}{}{}{co, fl 35}
+{21}{E:}{}{5}{}{0}{}
+{23}{Pitiful creature!  Why are you wasting my time with your drivel!  You're obviously not  fit to speak with me...Begone!}{Pitiful creature!  Why are you wasting my time with your drivel!  You're obviously not  fit to speak with me...Begone!}{}{4}{}{}
+{24}{I think, perhaps, that you've made a hasty assessment, madam...}{}{5}{ch 15}{42}{re +15}
+{25}{Madam!  There must be something I can do to impress you...?}{}{5}{me 0}{37}{re +15}
+{26}{Z'an Al'urin!  I thought we were beyond these things...}{}{5}{me 1}{37}{re +15}
+{27}{Elf-woman, any more talk like that and it won't go well for you...}{}{5}{}{30}{re -5}
+{28}{E:}{}{5}{me 1}{0}{}
+{30}{What?  You, an outlander, dare to threaten a Dark Elf here, in T'sen-Ang?  I could have you killed on the spot for even thinking such a thing!  Perhaps I'll do it myself...}{What?  You, an outlander, dare to threaten a Dark Elf here, in T'sen-Ang?  I could have you killed on the spot for even thinking such a thing!  Perhaps I'll do it myself...}{}{5}{}{}
+{31}{Perhaps I was a bit out of line.  Accept my apologies...}{}{5}{}{37}{re +15}
+{32}{Your burial arrangements will be less worrisome so close to home...}{}{5}{}{}{co, fl 35}
+{33}{E:}{}{5}{me 1}{0}{}
+{35}{Fool.  You've no idea the trouble you've gotten yourself in...}{Fool.  You've no idea the trouble you've gotten yourself in...}{}{6}{}{}
+{37}{[She looks at you, haughtily.]  Perhaps I will deign to speak with you for a moment or two.  Consider yourself lucky...}{[She looks at you, haughtily.]  Perhaps I will deign to speak with you for a moment or two.  Consider yourself lucky...}{}{7}{}{}
+{38}{Thank you so very much?  Might I ask who you are?}{}{5}{me 0}{47}{re +5}
+{39}{I really appreciate it, Z'an Al'urin.  Do you have a moment?}{}{5}{me 1}{12}{}
+{40}{E:}{}{5}{me 1}{0}{}
+{42}{[The Dark Elf woman seems a little surprised at her own words.]  Uh...perhaps you're right.  I may have been a little hasty with my first impressions of you.  Perhaps we might speak for a few moments...}{[The Dark Elf woman seems a little surprised at her own words.]  Uh...perhaps you're right.  I may have been a little hasty with my first impressions of you.  Perhaps we might speak for a few moments...}{}{8}{}{}
+{43}{I'm so very glad.  Might I ask your name?}{}{5}{me 0}{47}{}
+{44}{Good, Z'an Al'urin.  Might we speak for a few moments?}{}{5}{me 1}{12}{}
+{45}{E:}{}{5}{me 1}{0}{}
+{47}{I am Z'an Al'urin, warrior-priestess of the Dark Elves.  [She gives you an uncertain look, calculating.]  And who are you, stranger?  You've never before seen the trees of T'sen-Ang...of that I am certain...}{I am Z'an Al'urin, warrior-priestess of the Dark Elves.  [She gives you an uncertain look, calculating.]  And who are you, stranger?  You've never before seen the trees of T'sen-Ang...of that I am certain...}{}{9}{}{}
+{48}{I am @PCNAME@.}{}{5}{}{52}{re +5}
+{49}{One's name is rarely important, madam...}{}{5}{}{77}{}
+{50}{Who I am and why I'm here are MY business...}{}{5}{}{92}{}
+{52}{[She gives you an appraising nod.]  Hmmm.  Honesty.  You surprise me.  You take a large risk in exposing yourself to me...especially considering what you are...}{[She gives you an appraising nod.]  Hmmm.  Honesty.  You surprise me.  You take a large risk in exposing yourself to me...especially considering what you are...}{}{10}{}{}
+{53}{And what exactly do you mean by that?}{}{5}{}{115}{}
+{54}{I think you're mistaking me for someone else...}{}{5}{}{59}{}
+{55}{I've always found honesty to be the only road to real truth...}{}{5}{}{64}{re +10}
+{56}{Who said I was being honest?}{}{5}{}{73}{}
+{59}{[She looks at you closely, a little confused, seeming to make a decision.]  Perhaps you're right, and in more ways than you think, @PCNAME@.  Even I am sometimes mistaken...maybe you are not the person I thought you were.  Good day to you, then...}{[She looks at you closely, a little confused, seeming to make a decision.]  Perhaps you're right, and in more ways than you think, @PCNAME@.  Even I am sometimes mistaken...maybe you are not the person I thought you were.  Good day to you, then...}{}{11}{}{}
+{60}{Wait!  What do you mean?  Who do you think I am?}{}{5}{}{115}{}
+{61}{And I have nothing left to say to you, Dark Elf.  Good day...}{}{5}{}{0}{lf6 1}
+{64}{Impressive, @PCNAME@.  That is a lesson that few learn in this life, although it seems so very, very simple.  Oftentimes, we walk in the shadows while trying to see the light, afraid of facing it before we really understand it.  But, both the journey and the goal are important, and rarely can we separate the two...}{Impressive, @PCNAME@.  That is a lesson that few learn in this life, although it seems so very, very simple.  Oftentimes, we walk in the shadows while trying to see the light, afraid of facing it before we really understand it.  But, both the journey and the goal are important, and rarely can we separate the two...}{}{12}{}{}
+{65}{I agree.  And what about you?  What is it YOU seek?}{}{5}{}{127}{}
+{66}{I don't agree. Sometimes the ends justify the means...}{}{5}{}{69}{}
+{69}{Really?  I find that a little sad, @PCNAME@.  I don't believe there is a way to separate a creation from its materials...a beautiful statue carved from flawed stone will eventually break, leaving it unwhole and wasted.  The way we live our lives can be no different...}{Really?  I find that a little sad, @PCNAME@.  I don't believe there is a way to separate a creation from its materials...a beautiful statue carved from flawed stone will eventually break, leaving it unwhole and wasted.  The way we live our lives can be no different...}{}{13}{}{}
+{70}{Perhaps you're right.  But why is this important to you...?}{}{5}{}{127}{re +5}
+{71}{The path is never important, only what lies at the end.}{}{5}{}{}{}
+{73}{I see you are not who I thought you were.  Farewell, @PCNAME@...we've nothing left to say to each other...}{I see you are not who I thought you were.  Farewell, @PCNAME@...we've nothing left to say to each other...}{}{14}{}{}
+{74}{Wait!  What do you mean?  Who do you think I am?}{}{5}{}{115}{}
+{75}{And I have nothing left to say to you, Dark Elf.  Good day...}{}{5}{}{0}{lf6 1}
+{77}{[She smirks, arching an eyebrow.]  Oh, really?  I'd have to say that I think you're very, very wrong.  One's name is often a reflection of who they are, or what they are doing.  To know someone's name is to wield power over them; to give someone your name is often an act of trust...}{[She smirks, arching an eyebrow.]  Oh, really?  I'd have to say that I think you're very, very wrong.  One's name is often a reflection of who they are, or what they are doing.  To know someone's name is to wield power over them; to give someone your name is often an act of trust...}{}{15}{}{}
+{78}{I fear no one's power over me.  I am @PCNAME@.}{}{5}{}{86}{}
+{79}{Trust must be given wisely.  I am @PCNAME@.}{}{5}{}{52}{re +5}
+{82}{Regardless, I don't give my name to just anyone...}{}{5}{}{92}{re -5}
+{86}{[She laughs at you.]  There are many reasons to share gifts, @PCNAME@, but bravado is the worst of them.  And if I were you, I'd fear ANYONE here knowing you're name.}{[She laughs at you.]  There are many reasons to share gifts, @PCNAME@, but bravado is the worst of them.  And if I were you, I'd fear ANYONE here knowing you're name.}{}{16}{}{}
+{87}{And why would you say that, Z'an Al'urin?}{}{5}{}{115}{}
+{88}{I tire of this, and of you.  Farewell, Dark Elf.}{}{5}{}{0}{lf6 1}
+{90}{We've nothing left to say to one another...}{We've nothing left to say to one another...}{}{17}{}{}
+{92}{Caution is the cloak of the wise...[She laughs.  It is like slow, dark music.]...and of the breathing.  I can respect a man who holds what is dear to him close to his heart.  And I think you have much to hold, stranger.  Many thoughts, and many secrets...}{Caution is the cloak of the wise...[She laughs.  It is like slow, dark music.]...and of the breathing.  I can respect a man who holds what is dear to him close to his heart.  And I think you have much to hold, stranger.  Many thoughts, and many secrets...}{}{18}{}{}
+{94}{I have nothing to hide.  I am @PCNAME@.}{}{5}{}{52}{}
+{95}{You seem one who is no stranger to cloaks and secrets, madam...}{}{5}{}{99}{}
+{96}{Don't pretend to understand who I am.  You've no idea...}{}{5}{}{111}{}
+{99}{You are correct.  I am no stranger to those ways.  I, too, hold much in my heart that is not for the eyes of the world.  Not often do I meet someone with whom I can share these things...[She gives you an intense stare.  She seems to struggle with the words, then shakes her head.]  Perhaps it is best that I go...}{You are correct.  I am no stranger to those ways.  I, too, hold much in my heart that is not for the eyes of the world.  Not often do I meet someone with whom I can share these things...[She gives you an intense stare.  She seems to struggle with the words, then shakes her head.]  Perhaps it is best that I go...}{}{19}{}{}
+{100}{Wait.  My name is @PCNAME@.}{}{5}{}{52}{re +5}
+{108}{Yes.  Some secrets are better left unsaid...}{}{5}{}{59}{}
+{111}{Really?  You might be surprised.  Am I wrong in assuming that you're seeking answers to questions that lead to even more questions?  Do you not bear a great responsibility, which sometimes seems no responsibility at all?  Am I wrong?}{Really?  You might be surprised.  Am I wrong in assuming that you're seeking answers to questions that lead to even more questions?  Do you not bear a great responsibility, which sometimes seems no responsibility at all?  Am I wrong?}{}{20}{}{}
+{112}{Hmmm.  You're extremely perceptive.  What else?}{}{5}{}{115}{}
+{113}{Wrong on all counts.  You see nothing...}{}{5}{}{59}{}
+{115}{I don't know exactly who you are, @PCNAME@, but I do know that you don't belong here.  Sometimes I...I see things that others cannot.  I know that you're road has been long, and that you're in grave danger by being here.  [She gives you a hooded glance.]  I suppose you could say that meeting me has increased that danger...}{I don't know exactly who you are, @PCNAME@, but I do know that you don't belong here.  Sometimes I...I see things that others cannot.  I know that you're road has been long, and that you're in grave danger by being here.  [She gives you a hooded glance.]  I suppose you could say that meeting me has increased that danger...}{}{21}{}{}
+{116}{Really?  For some reason I don't feel you pose a threat...}{}{5}{}{124}{}
+{118}{Perhaps you're right.  I might be forced to solve that problem...}{}{5}{}{120}{}
+{120}{[She laughs, throwing her head back.]  Don't be a fool, @PCNAME@.  If I posed any threat to you, you would already be dead.  I hold your secrets in my mind, and in my heart. I don't plan on sharing them with anyone...yet...}{[She laughs, throwing her head back.]  Don't be a fool, @PCNAME@.  If I posed any threat to you, you would already be dead.  I hold your secrets in my mind, and in my heart. I don't plan on sharing them with anyone...yet...}{}{22}{}{}
+{121}{What do you mean?  What secrets?}{}{5}{}{127}{}
+{122}{That's right.  Because you're going to be dead...}{}{5}{}{}{co, fl 35}
+{124}{[She gives you a long, hard look.]  That still remains to be seen, @PCNAME@.  But, unlike many of my brethren and sisters here, I am seeking answers to difficult questions.  Blind devotion to a cause is the easiest path to take, and the most foolish.  I wish to shed light on the path ahead, and choose the best way to travel.  Those answers, I think, begin with you...}{[She gives you a long, hard look.]  That still remains to be seen, @PCNAME@.  But, unlike many of my brethren and sisters here, I am seeking answers to difficult questions.  Blind devotion to a cause is the easiest path to take, and the most foolish.  I wish to shed light on the path ahead, and choose the best way to travel.  Those answers, I think, begin with you...}{}{23}{}{}
+{125}{Really?  And why would you think that, Z'an Al'urin...?}{}{5}{}{127}{}
+{127}{I...I see things.  When you walked into T'sen-Ang, I saw something around you...a great latticework of wood and iron, and it carried a great weight which weighed nothing at all.  These are the visions I see, @PCNAME@.  What they mean, I don't always know, but I do know that YOU are somehow important to me...}{I...I see things.  When you walked into T'sen-Ang, I saw something around you...a great latticework of wood and iron, and it carried a great weight which weighed nothing at all.  These are the visions I see, @PCNAME@.  What they mean, I don't always know, but I do know that YOU are somehow important to me...}{}{24}{}{}
+{128}{Why?  What answers are YOU seeking, Z'an Al'urin...?}{}{5}{}{133}{}
+{133}{[She is silent for a while, considering you with her dark eyes.  Then...]  What do you know of the Dark Elves, @PCNAME@?  Do you know the differences between us and our cousins in Qintarra?}{[She is silent for a while, considering you with her dark eyes.  Then...]  What do you know of the Dark Elves, @PCNAME@?  Do you know the differences between us and our cousins in Qintarra?}{}{25}{}{}
+{134}{Yes, I know of the philosophical differences...}{}{5}{}{156}{}
+{135}{I know almost nothing of the Dark Elves...}{}{5}{}{138}{}
+{136}{Let's speak of this later...}{}{5}{}{0}{lf1 1}
+{138}{I see.  Well, the Dark Elves differ from other elves in one important way.  They believe that only the elves are fit to rule, that the reason for the current state of our world is due to the fact that the elves no longer guide the other races as they once did.  They believe that Arronax was right when he waged war against Nasrudin, so many years ago...}{I see.  Well, the Dark Elves differ from other elves in one important way.  They believe that only the elves are fit to rule, that the reason for the current state of our world is due to the fact that the elves no longer guide the other races as they once did.  They believe that Arronax was right when he waged war against Nasrudin, so many years ago...}{}{26}{}{}
+{139}{What is important about Arronax and Nasrudin?}{}{5}{}{144}{}
+{140}{You keep saying "they".  Aren't you a Dark Elf, Z'an Al'urin?}{}{5}{}{159}{}
+{141}{Let's speak of this later...}{}{5}{}{0}{lf1 1}
+{144}{Arronax and Nasrudin are elves who reputedly lived during the Age of Legends.  Some elves wonder if they weren't myths themselves, stories created to lend structure to doctrine and ideology.  I, myself, think they were real...}{Arronax and Nasrudin are elves who reputedly lived during the Age of Legends.  Some elves wonder if they weren't myths themselves, stories created to lend structure to doctrine and ideology.  I, myself, think they were real...}{}{27}{}{}
+{145}{But why are they important?  What did they believe?}{}{5}{}{150}{}
+{150}{Nasrudin was the leader of the Elven Council, and that council ruled all of Arcanum and passed down law to all of the races.  Nasrudin believed in the natural place of all living things, and none more important than the others.  If anything, he saw it his place to rule only because of his open-minded philosophy...}{Nasrudin was the leader of the Elven Council, and that council ruled all of Arcanum and passed down law to all of the races.  Nasrudin believed in the natural place of all living things, and none more important than the others.  If anything, he saw it his place to rule only because of his open-minded philosophy...}{}{28}{}{}
+{151}{And Arronax...?}{}{5}{}{153}{}
+{153}{Arronax believed that the other races were helpless, hapless beings who would destroy Arcanum if left unchecked.  He and Nasrudin went to war, and Arronax was defeated...banished forever to the Void.  The Dark Elves believe in what Arronax stood for...they wish for the elves, and the elves only, to rule over Arcanum...}{Arronax believed that the other races were helpless, hapless beings who would destroy Arcanum if left unchecked.  He and Nasrudin went to war, and Arronax was defeated...banished forever to the Void.  The Dark Elves believe in what Arronax stood for...they wish for the elves, and the elves only, to rule over Arcanum...}{}{29}{}{}
+{154}{You keep saying "they".  Aren't you a Dark Elf, Z'an Al'urin?}{}{5}{}{159}{}
+{156}{Then you know that the Dark Elves, like Arronax, want Arcanum to once again be ruled elves, and elves only.  They will stop at nothing to make this a reality.  [She seems almost to shudder.]  They've already done much, and are still doing so...}{Then you know that the Dark Elves, like Arronax, want Arcanum to once again be ruled elves, and elves only.  They will stop at nothing to make this a reality.  [She seems almost to shudder.]  They've already done much, and are still doing so...}{}{30}{}{}
+{157}{You keep saying "they".  Aren't you a Dark Elf, Z'an Al'urin?}{}{5}{}{159}{}
+{159}{Yes...yes I am.  [She looks down.]  I am a Dark Elf.  Sometimes that is a burden, @PCNAME@.  I...I don't know exactly what I believe anymore.  I see visions, and these visions tell me that there is something very wrong with what the Dark Elves are working for, something very wrong with all that they have done...}{Yes...yes I am.  [She looks down.]  I am a Dark Elf.  Sometimes that is a burden, @PCNAME@.  I...I don't know exactly what I believe anymore.  I see visions, and these visions tell me that there is something very wrong with what the Dark Elves are working for, something very wrong with all that they have done...}{}{31}{}{}
+{160}{Why?  What have they done?}{}{5}{}{165}{}
+{161}{Then perhaps your place is not here among them...}{}{5}{}{170}{}
+{162}{That is a cowardly thing to say.  Your life is your own...}{}{5}{}{177}{re -5}
+{163}{Let's speak of this later...}{}{5}{}{0}{lf2 1}
+{165}{[Her face grows hard, closed to you.]  I can say no more.  All I can tell you is that I do not know if my place is here among them, and that somehow my answers lie with you, and where you are going.  But I won't lie about my loyalties, @PCNAME@.  In the end, it is my own answers that I seek.  When my choice is made, that is all that will matter...}{[Her face grows hard, closed to you.]  I can say no more.  All I can tell you is that I do not know if my place is here among them, and that somehow my answers lie with you, and where you are going.  But I won't lie about my loyalties, @PCNAME@.  In the end, it is my own answers that I seek.  When my choice is made, that is all that will matter...}{}{32}{}{}
+{166}{If it's answers that we both seek, then why don't you join me?}{}{5}{}{183}{}
+{167}{I see.  I don't think you and I have anything left to talk about...}{}{5}{}{}{lf4 1, fl 188}
+{168}{Let's speak of this later...}{}{5}{}{0}{lf2 1}
+{170}{Perhaps not.  I do not wish to betray them, nor do I wish to betray myself...or you, @PCNAME@.  And I can't say that, in the end, I won't betray one or all.  [She hangs her head, her shoulders slumping.]  Perhaps it is best that I leave all of this...}{Perhaps not.  I do not wish to betray them, nor do I wish to betray myself...or you, @PCNAME@.  And I can't say that, in the end, I won't betray one or all.  [She hangs her head, her shoulders slumping.]  Perhaps it is best that I leave all of this...}{}{33}{}{}
+{171}{If it's answers that we both seek, then why don't you join me?}{}{5}{}{183}{}
+{172}{If I can't trust you, then we have nothing left to talk about...}{}{5}{}{}{lf4 1, fl 188}
+{175}{Let's speak of this later...}{}{5}{}{0}{lf2 1}
+{177}{[Her eyes flare.]  What?  You dare to call me coward?  Why, I'll destroy...! [She stops, composes herself.]  No, I think you're correct.  I do need to find my own path, and it is not here among the blind.  Perhaps I am blind as well...I see visions of you, and where you are going, but I cannot see the choices I will make.  I wish you luck on your quest, @PCNAME@...}{[Her eyes flare.]  What?  You dare to call me coward?  Why, I'll destroy...! [She stops, composes herself.]  No, I think you're correct.  I do need to find my own path, and it is not here among the blind.  Perhaps I am blind as well...I see visions of you, and where you are going, but I cannot see the choices I will make.  I wish you luck on your quest, @PCNAME@...}{}{34}{}{}
+{178}{If it's answers that we both seek, then why don't you join me?}{}{5}{}{183}{}
+{179}{If I can't trust you, then we have nothing left to talk about...}{}{5}{}{}{lf4 1, fl 188}
+{181}{Let's speak of this later...}{}{5}{}{0}{lf2 1}
+{183}{You would have me, knowing I can make you no promises?  Knowing that my own answers will always come first?  [She shakes her head.]  And you have no idea where we are going, @PCNAME@...and I will not tell you.  Not yet...not until I am sure of the right choice...}{You would have me, knowing I can make you no promises?  Knowing that my own answers will always come first?  [She shakes her head.]  And you have no idea where we are going, @PCNAME@...and I will not tell you.  Not yet...not until I am sure of the right choice...}{}{35}{}{}
+{184}{Yes.  Will you come with me?}{}{5}{}{192}{jo 0 198}
+{186}{Yes.  Will you come with me?}{}{5}{pa 6426}{}{}
+{187}{On second thought, I'd rather you didn't come...}{}{5}{}{}{lf4 1, fl 188}
+{188}{Yes, it is best that way.  Good bye, @PCNAME@...}{Yes, it is best that way.  Good bye, @PCNAME@...}{}{36}{}{}
+{190}{Leave me, @PCNAME@.  I must go my own way...}{Leave me, @PCNAME@.  I must go my own way...}{}{37}{}{}
+{192}{Was there anything else, @PCNAME@?}{Was there anything else, @PCNAME@?}{}{38}{}{}
+{195}{A few more questions...}{}{5}{}{12}{lf3 1}
+{196}{E:}{}{5}{}{0}{lf3 1}
+{198}{[She is quiet for a long time.]  Yes, @PCNAME@, I will join you on your quest.  It may be that I can help you...I pray, for your sake, that I am not your, or the world's, undoing...}{[She is quiet for a long time.]  Yes, @PCNAME@, I will join you on your quest.  It may be that I can help you...I pray, for your sake, that I am not your, or the world's, undoing...}{}{39}{}{}
+{200}{E:}{}{5}{}{0}{}
+{202}{What is it you need?}{What is it you need?}{}{40}{}{}
+{203}{B:}{}{5}{wa 0}{}{}
+{204}{I've a few questions for you, Z'an Al'urin...}{}{5}{wa 0}{210}{}
+{205}{I'd like you to do something for me, Z'an Al'urin...}{}{5}{wa 0}{323}{}
+{206}{You can stop waiting now, Z'an Al'urin.}{}{5}{wa 1, pa -6426}{345}{uw 0 331}
+{207}{You can stop waiting now, Z'an Al'urin.}{}{5}{wa 1, pa 6426}{-16}{}
+{208}{E:}{}{5}{}{0}{}
+{209}{Duh...}{}{-4}{}{}{fl 520}
+{210}{What would you like to know, @PCNAME@?}{What would you like to know, @PCNAME@?}{}{41}{}{}
+{211}{I'd like to know some things about you, Z'an Al'urin...}{}{1}{}{}{ce}
+{225}{What do you know about Arronax, Z'an Al'urin?}{}{1}{ss 15, ss -15}{500}{}
+{226}{Do you know anything of Nasrudin?}{}{1}{ss 16, ss -16}{504}{}
+{230}{How should we find Arronax, Z'an Al'urin?}{}{1}{ss 20, ss -20}{508}{}
+{231}{What do you know of the Void, Z'an Al'urin?}{}{1}{ss 21, ss -21}{512}{}
+{234}{Z'an Al'urin!  What are we going to do now?}{}{1}{ss 24, ss -24}{516}{}
+{235}{What do you know about this place? [Shrouded Hills.]}{}{1}{ia 1}{366}{}
+{236}{What do you know about this place? [Tarant.]}{}{1}{ia 21}{371}{}
+{238}{What do you know about this place? [Caladon.]}{}{1}{ia 4}{375}{}
+{239}{What do you know about this place? [Dernholm.]}{}{1}{ia 5}{379}{}
+{240}{What do you know about this place? [Qintarra.]}{}{1}{ia 6}{383}{}
+{243}{What do you know about this place? [Wheel Clan.]}{}{1}{ia 9}{387}{}
+{245}{What do you know about this place? [Tulla.]}{}{1}{ia 11}{391}{}
+{247}{What do you know about this place? [Ring of Brodgar.]}{}{1}{ia 14}{395}{}
+{248}{What do you know about this place? [T'sen-Ang.]}{}{1}{ia 16}{399}{}
+{251}{What do you know about this place? [Vendigroth Ruins.]}{}{1}{ia 22}{403}{}
+{252}{What do you know about this place? [Thanatos.]}{}{1}{ia 23, gf2374 0}{407}{}
+{253}{Z'an Al'urin, you seem angry with me.  Is there anything I can do?}{}{1}{re -20}{300}{}
+{254}{E:}{}{1}{}{0}{}
+{300}{Are you surprised that I'm angry after the way you've been acting?  How could you be so incredibly imperceptive?  Sometimes I think you might be beyond hope.  I suppose if you were to find me some pure Elven Spring Water, I might forgive your shortcomings...}{Are you surprised that I'm angry after the way you've been acting?  How could you be so incredibly imperceptive?  Sometimes I think you might be beyond hope.  I suppose if you were to find me some pure Elven Spring Water, I might forgive your shortcomings...}{}{68}{}{}
+{301}{Dearest Z'an Al'urin...are you really all THAT upset?}{}{1}{ch 20}{307}{re +20}
+{302}{Ah!  I have some right here!  Please, accept this small gift...}{}{1}{in 3615, ch -19}{-39}{re +20}
+{303}{I'll do my best to get you some...}{}{1}{in -3615, ch -19}{317}{}
+{304}{Well, we can't all have what we want.  Let's go...}{}{1}{}{}{re -5, fl 320}
+{307}{[Z'an Al'urin attempts to resist your obvious charm, but is unsuccessful.]  Hmmm.  I guess I was wrong about you.  Perhaps there is hope for you, yet.  Shall we be on our way?}{[Z'an Al'urin attempts to resist your obvious charm, but is unsuccessful.]  Hmmm.  I guess I was wrong about you.  Perhaps there is hope for you, yet.  Shall we be on our way?}{}{69}{}{}
+{308}{Yes, let us do so...}{}{1}{}{0}{}
+{310}{[Z'an Al'urin takes the bottle from you, drinking it all.]  Mmmm.  That's much better.  Perhaps I was a little short with you before.  Forgive me.  Shall we continue on?}{[Z'an Al'urin takes the bottle from you, drinking it all.]  Mmmm.  That's much better.  Perhaps I was a little short with you before.  Forgive me.  Shall we continue on?}{}{70}{}{}
+{311}{I was wondering if you might join me again, Z'an Al'urin?}{}{1}{pa -6426, pa -6613}{345}{jo 0 348}
+{312}{I was wondering if you might join me again, Z'an Al'urin?}{}{1}{pa 6426, pa -6613}{-16}{}
+{313}{Yes.  Let's be off...}{}{1}{}{0}{}
+{317}{I believe that would be in your best interests, my friend.}{I believe that would be in your best interests, my friend.}{}{71}{}{}
+{318}{I see.  Let's go...}{}{1}{}{0}{}
+{320}{[Seething.]  You're trifling with the wrong woman, my friend.  I'll not tolerate this insensitivity for long...}{[Seething.]  You're trifling with the wrong woman, my friend.  I'll not tolerate this insensitivity for long...}{}{72}{}{}
+{323}{What did you want me to do?}{What did you want me to do?}{}{42}{}{}
+{324}{Move away, Z'an Al'urin.}{}{1}{}{0}{so}
+{325}{Move a bit closer, Z'an Al'urin.}{}{1}{}{0}{sc}
+{326}{Wait here for a while...}{}{1}{wa 0}{334}{wa}
+{327}{You can stop waiting now, Z'an Al'urin.}{}{1}{wa 1, pa -6426}{345}{uw 0 331}
+{328}{You can stop waiting now, Z'an Al'urin.}{}{1}{wa 1, pa 6426}{-16}{}
+{329}{I think you'd best leave the group.}{}{1}{}{337}{lv}
+{330}{[Back]}{}{1}{}{202}{}
+{331}{Of course. [Her dark eyes flash, but with what emotion you're not sure.]  I'm ready to go when you are...}{Of course. [Her dark eyes flash, but with what emotion you're not sure.]  I'm ready to go when you are...}{}{43}{}{}
+{332}{E:}{}{1}{}{0}{}
+{334}{I will wait here, @PCNAME@.  Hopefully, I will be here when you return...}{I will wait here, @PCNAME@.  Hopefully, I will be here when you return...}{}{44}{}{}
+{335}{E:}{}{1}{}{0}{}
+{337}{Really?  Well, I can't say that I blame you.  [She extends her hand, locking your gaze.]  I truly hope we both find what we are looking for.  Perhaps someday we shall meet again...}{Really?  Well, I can't say that I blame you.  [She extends her hand, locking your gaze.]  I truly hope we both find what we are looking for.  Perhaps someday we shall meet again...}{}{45}{}{lf31 1}
+{338}{E:}{}{1}{}{0}{}
+{339}{Well, @PCNAME@, it seems our paths cross again.  What brings you here?}{Well, @PCNAME@, it seems our paths cross again.  What brings you here?}{}{46}{}{}
+{340}{I was wondering if you might join me again, Z'an Al'urin?}{}{5}{pa -6426}{345}{jo 0 348}
+{341}{I was wondering if you might join me again, Z'an Al'urin?}{}{5}{pa 6426}{-16}{}
+{342}{Z'an Al'urin, you seem angry with me.  Is there anything I can do?}{}{5}{re -20}{300}{}
+{343}{E:}{}{5}{}{0}{}
+{344}{Duh...}{}{-4}{}{}{fl 520}
+{345}{Was there anything else?}{Was there anything else?}{}{47}{}{}
+{346}{E:}{}{1}{}{0}{}
+{348}{[Her eyes dance with unknown fire.  Her face remains unreadable.]  Yes, @PCNAME@.  I will join you.  And to the end we must go...}{[Her eyes dance with unknown fire.  Her face remains unreadable.]  Yes, @PCNAME@.  I will join you.  And to the end we must go...}{}{48}{}{lf31 0}
+{349}{E:}{}{1}{}{0}{}
+{350}{I didn't think I'd see you again, @PCNAME@.  I thought perhaps you had finally decided to go on without me.  Perhaps that would have been best...}{I didn't think I'd see you again, @PCNAME@.  I thought perhaps you had finally decided to go on without me.  Perhaps that would have been best...}{}{49}{}{}
+{351}{It's too bad you feel that way. I was hoping you'd join me, again...}{}{5}{pa -6426}{345}{jo 0 361}
+{352}{It's too bad you feel that way. I was hoping you'd join me, again...}{}{5}{pa 6426}{-16}{}
+{353}{Z'an Al'urin, you seem angry with me.  Is there anything I can do?}{}{5}{re -20}{300}{}
+{354}{E:}{}{5}{}{0}{}
+{355}{Duh...}{}{-4}{}{}{fl 520}
+{356}{[Z'an Al'urin smiles, mysteriously.]  She is right, as misguided and foolish as she may be.  I have already told you that in the end I must seek my own answers.  It seems you must choose between us...}{[Z'an Al'urin smiles, mysteriously.]  She is right, as misguided and foolish as she may be.  I have already told you that in the end I must seek my own answers.  It seems you must choose between us...}{}{50}{}{}
+{357}{No.  I'm VERY confident Raven will be able to look past this...}{}{1}{ch 20}{-22}{}
+{358}{I choose you.  It seems Raven must find her own path...}{}{1}{}{-28}{}
+{359}{Then I choose Raven.  Good bye, Z'an Al'urin...}{}{1}{}{0}{}
+{361}{[Her eyes dance with unknown fire.  Her face remains unreadable.]  Yes, @PCNAME@.  I will join you.  And to the end we must go...}{[Her eyes dance with unknown fire.  Her face remains unreadable.]  Yes, @PCNAME@.  I will join you.  And to the end we must go...}{}{51}{}{lf31 0}
+{362}{E:}{}{1}{}{0}{}
+{363}{Yes...?}{Yes...?}{}{73}{}{}
+{364}{Will you join me?}{}{1}{}{345}{jo 0 361}
+{365}{E:}{}{1}{}{0}{}
+{366}{[She closes her eyes.]  I see...an ancient house of the Defenders...a restless spirit...a place of prophecy.  [Her eyes open again.]  Does that mean anything to you, @PCNAME@...?}{[She closes her eyes.]  I see...an ancient house of the Defenders...a restless spirit...a place of prophecy.  [Her eyes open again.]  Does that mean anything to you, @PCNAME@...?}{}{52}{}{}
+{367}{K:}{}{1}{}{323}{}
+{368}{E:}{}{1}{}{0}{}
+{371}{[She closes her eyes.]  I see...the boy who changed the world, a family who communes with the dead, and someone who might just change the world again.  Sometimes the visions are confusing.  I wish I knew more about what they meant...}{[She closes her eyes.]  I see...the boy who changed the world, a family who communes with the dead, and someone who might just change the world again.  Sometimes the visions are confusing.  I wish I knew more about what they meant...}{}{53}{}{}
+{372}{K:}{}{1}{}{323}{}
+{373}{E:}{}{1}{}{0}{}
+{375}{[She closes her eyes.]  I see a man who can fly, and a lie that was buried.  [Her eyes open again.]  Interesting, to say the least...}{[She closes her eyes.]  I see a man who can fly, and a lie that was buried.  [Her eyes open again.]  Interesting, to say the least...}{}{54}{}{}
+{376}{K:}{}{1}{}{323}{}
+{377}{E:}{}{1}{}{0}{}
+{379}{[She closes her eyes.]  It's unclear...I see an old betrayal, and a place of lost souls.  [She opens her eyes.]  I think this is a very sad place indeed...}{[She closes her eyes.]  It's unclear...I see an old betrayal, and a place of lost souls.  [She opens her eyes.]  I think this is a very sad place indeed...}{}{55}{}{}
+{380}{K:}{}{1}{}{323}{}
+{381}{E:}{}{1}{}{0}{}
+{383}{[She looks around, disdainfully.]  This is Qintarra, home of the elves.  Well, SOME of the elves.  I have little else to say of the matter...}{[She looks around, disdainfully.]  This is Qintarra, home of the elves.  Well, SOME of the elves.  I have little else to say of the matter...}{}{56}{}{}
+{384}{K:}{}{1}{}{323}{}
+{385}{E:}{}{1}{}{0}{}
+{387}{[She closes her eyes.]  I see a great axe, and the pain of the one who wields it.  I also see a flock of dark birds who speak with two mouths.  [She opens her eyes.]  I wonder what that means...}{[She closes her eyes.]  I see a great axe, and the pain of the one who wields it.  I also see a flock of dark birds who speak with two mouths.  [She opens her eyes.]  I wonder what that means...}{}{57}{}{}
+{388}{K:}{}{1}{}{323}{}
+{389}{E:}{}{1}{}{0}{}
+{391}{[She closes her eyes.]  I see where all the great rivers flow.  There is also, another...watching, waiting...looking for a sign... [She opens her eyes.]  That is all I can tell you...}{[She closes her eyes.]  I see where all the great rivers flow.  There is also, another...watching, waiting...looking for a sign... [She opens her eyes.]  That is all I can tell you...}{}{58}{}{}
+{392}{K:}{}{1}{}{323}{}
+{393}{E:}{}{1}{}{0}{}
+{395}{[She closes her eyes.]  I see a great wound which strains against its dressing. I see a father's sorrow.   And I see an old truth waiting to be found.  [She opens her eyes.]  This is a powerful place, full of pain and magick.  There is much to be learned, here...}{[She closes her eyes.]  I see a great wound which strains against its dressing. I see a father's sorrow.   And I see an old truth waiting to be found.  [She opens her eyes.]  This is a powerful place, full of pain and magick.  There is much to be learned, here...}{}{59}{}{}
+{396}{K:}{}{1}{}{323}{}
+{397}{E:}{}{1}{}{0}{}
+{399}{This T'sen-Ang, the home of the Dark Elves.  I recommend you tread carefully here...}{This T'sen-Ang, the home of the Dark Elves.  I recommend you tread carefully here...}{}{60}{}{}
+{400}{K:}{}{1}{}{323}{}
+{401}{E:}{}{1}{}{0}{}
+{403}{[She closes her eyes.]  Ahh!  It's so vivid!  I see a great storm, and all lost in its raging!  I see something else...a thing of death.  [She opens her eyes.]  It's too much, I can't look anymore...}{[She closes her eyes.]  Ahh!  It's so vivid!  I see a great storm, and all lost in its raging!  I see something else...a thing of death.  [She opens her eyes.]  It's too much, I can't look anymore...}{}{61}{}{}
+{404}{K:}{}{1}{}{323}{}
+{405}{E:}{}{1}{}{0}{}
+{407}{[She closes her eyes.]  I see...  I see...  [She opens her eyes.]   What I see is impossible.  I'd...I'd rather not speak of it...}{[She closes her eyes.]  I see...  I see...  [She opens her eyes.]   What I see is impossible.  I'd...I'd rather not speak of it...}{}{62}{}{}
+{408}{K:}{}{1}{}{323}{}
+{409}{E:}{}{1}{}{0}{}
+{500}{Only what I've told you before.  And it seems that he is responsible for what is happening to you...for what is happening to everyone.  I think that Arronax has a lot to answer for...}{Only what I've told you before.  And it seems that he is responsible for what is happening to you...for what is happening to everyone.  I think that Arronax has a lot to answer for...}{}{63}{}{}
+{501}{K:}{}{1}{}{323}{}
+{502}{E:}{}{1}{}{0}{}
+{504}{Nasrudin?  A very powerful elf.  It was he that punished Arronax, sending him to the Void.  For a long time, I was taught that Nasrudin was weak, and that it was he who had cursed Arcanum to its fate.  Now...I'm not so sure.  I'm not very sure about anything, anymore...}{Nasrudin?  A very powerful elf.  It was he that punished Arronax, sending him to the Void.  For a long time, I was taught that Nasrudin was weak, and that it was he who had cursed Arcanum to its fate.  Now...I'm not so sure.  I'm not very sure about anything, anymore...}{}{64}{}{}
+{505}{K:}{}{1}{}{323}{}
+{506}{E:}{}{1}{}{0}{}
+{508}{I don't know.  If legend tells true, then Arronax is in the Void.  Somehow, we're going to have to find a way to get banished there.  I don't know anyone who has that kind of power...}{I don't know.  If legend tells true, then Arronax is in the Void.  Somehow, we're going to have to find a way to get banished there.  I don't know anyone who has that kind of power...}{}{65}{}{}
+{509}{K:}{}{1}{}{323}{}
+{510}{E:}{}{1}{}{0}{}
+{512}{[She closes her eyes.]  I cannot see anything...or perhaps it is better to say that there is too much to see.  [She opens her eyes.]  But I think we are very close to the answers we seek.  The journey, for both of us, is almost over...}{[She closes her eyes.]  I cannot see anything...or perhaps it is better to say that there is too much to see.  [She opens her eyes.]  But I think we are very close to the answers we seek.  The journey, for both of us, is almost over...}{}{66}{}{}
+{513}{K:}{}{1}{}{323}{}
+{514}{E:}{}{1}{}{0}{}
+{516}{[She closes her eyes.]  I see...I see you turning off your computer.  The game is over.  You need not play any more...}{[She closes her eyes.]  I see...I see you turning off your computer.  The game is over.  You need not play any more...}{}{67}{}{}
+{517}{K:}{}{1}{}{323}{}
+{518}{E:}{}{1}{}{0}{}
+{520}{[Z'an Al'urin gives you a withering glare, disgusted with your current mental state.  She says nothing.]}{[Z'an Al'urin gives you a withering glare, disgusted with your current mental state.  She says nothing.]}{}{}{}{}
+

@@ -1,0 +1,65 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Hello, sir.  Might I ask who you are?}{}{5}{lf1 0, re 41}{27}{lf1 1}
+{3}{Hello, Matthew.  Have you a moment?}{}{5}{lf1 1, re 41}{53}{}
+{4}{Sir!  What sort of greeting is that?  We've just met!}{}{5}{lf1 0, re -40}{11}{lf1 1}
+{5}{Matthew!  Whatever seems to be the problem?}{}{5}{lf1 1, re -40}{11}{}
+{7}{Hi!  Who you?}{}{-4}{lf1 0}{27}{lf1 1}
+{8}{Hi Matthew!  You talk with me...?}{}{-4}{lf1 1}{53}{}
+{9}{E:}{}{1}{}{0}{}
+{11}{I'm very sorry, but your very presence seems to grate on me.  I don't usually associate with people of your...kind...}{I'm very sorry, but your very presence seems to grate on me.  I don't usually associate with people of your...kind...}{}{}{}{}
+{12}{Come now, sir.  I'm sure we can put those notions behind us...}{}{5}{}{23}{re +10}
+{13}{I don't think I like what you're insinuating...}{}{5}{}{16}{re -5}
+{14}{E:}{}{5}{}{0}{}
+{16}{I don't think I could care any less as to what you do and don't like, stranger.  I recommend you take yourself elsewhere....}{I don't think I could care any less as to what you do and don't like, stranger.  I recommend you take yourself elsewhere....}{}{}{}{}
+{17}{Listen, I'm willing to make amends here if you are...}{}{5}{}{23}{re +10}
+{18}{I'll do that...right after I teach you a lesson in manners...}{}{5}{}{}{co, fl 21}
+{19}{E:}{}{5}{}{0}{}
+{21}{You've picked a fight with the wrong bloke, stranger.  Up with your fists!}{You've picked a fight with the wrong bloke, stranger.  Up with your fists!}{}{}{}{}
+{23}{Hmmm.  Perhaps you're right.  Please, forgive my small-mindedness.  I am Matthew Jameson.  A pleasure to meet you...}{Hmmm.  Perhaps you're right.  Please, forgive my small-mindedness.  I am Matthew Jameson.  A pleasure to meet you...}{}{}{}{}
+{24}{And you, sir.  What are you doing out here on the street?}{}{5}{}{33}{re +5}
+{25}{E:}{}{5}{}{0}{}
+{27}{[The man is looking at a sewer grating directly in front of him.] Yes, of course.  My name is Matthew Jameson.  Nice to meet you...}{[The man is looking at a sewer grating directly in front of him.] Yes, of course.  My name is Matthew Jameson.  Nice to meet you...}{}{}{}{}
+{28}{A pleasure.  What are you doing out here on the street?}{}{5}{}{33}{}
+{30}{Uh...why you here on street?}{}{-4}{}{33}{}
+{31}{E:}{}{1}{}{0}{}
+{33}{Oh, bloody bother!  I woke up this morning, you know...took my early trip to the loo.  So I'm washing my hands, and my wedding ring falls off!  Right down the sink and disappears! }{Oh, bloody bother!  I woke up this morning, you know...took my early trip to the loo.  So I'm washing my hands, and my wedding ring falls off!  Right down the sink and disappears! }{}{}{}{}
+{34}{That's a shame...}{}{5}{}{37}{}
+{35}{Too bad!}{}{-4}{}{37}{}
+{37}{And, I went out with the lads last night...we had a few pints too many, and I didn't get home until late.  SO!  You know what the wife is going to think.  I thought I might go down into the sewers and see if I could find it, but I hear dreadful things about the sewers...}{And, I went out with the lads last night...we had a few pints too many, and I didn't get home until late.  SO!  You know what the wife is going to think.  I thought I might go down into the sewers and see if I could find it, but I hear dreadful things about the sewers...}{}{}{}{}
+{38}{Perhaps I might be of assistance?}{}{5}{}{43}{re +5}
+{39}{That's really too bad, old boy.  Good day to you...}{}{5}{}{0}{re -5}
+{40}{Mebbe I help, Matthew!}{}{-4}{}{43}{re +5}
+{41}{Hmmm.  Wish I could help.  Buh-bye!}{}{-4}{}{0}{re -5}
+{43}{Would you, now?  I'd be so appreciative...I don't at all savor the thought of tramping around in the sewers, mussing up my shoes.  If you were to go down there, and find the ring for me, I'd pay you 150 gold pieces!}{Would you, now?  I'd be so appreciative...I don't at all savor the thought of tramping around in the sewers, mussing up my shoes.  If you were to go down there, and find the ring for me, I'd pay you 150 gold pieces!}{}{}{}{qu1068 1}
+{44}{Done.}{}{5}{}{49}{qu1068 2}
+{45}{I'll think about it.  Good day to you...}{}{5}{}{0}{}
+{46}{Uh...okay!   I do it!}{}{-4}{}{49}{qu1068 2}
+{47}{Mebbe.  I come back later.}{}{-4}{}{0}{}
+{49}{Splendid!  I'll await your return, then...}{Splendid!  I'll await your return, then...}{}{}{}{}
+{50}{E:}{}{1}{}{0}{}
+{53}{Of course...}{Of course...}{}{}{}{}
+{54}{I was wondering why you're standing here in the street...}{}{5}{qu1068 0, ni 2809}{33}{}
+{55}{I was thinking I might be able to retrieve your wedding ring...}{}{5}{qu1068 1, ni 2809}{43}{}
+{56}{I'm still looking for your ring...}{}{5}{qu1068 2, ni 2809}{65}{}
+{57}{I've found your ring...[You give it to him.]}{}{5}{qa1068 1, in 2809}{69}{in 2809}
+{58}{I've found your ring!  Unfortunately, I think I'm going to keep it...}{}{5}{qu1068 2, in 2809}{75}{al -25, re -10}
+{59}{Why you here in the street?}{}{-4}{qu1068 0, ni 2809}{33}{}
+{60}{Mebbe I help you find weeding ring?}{}{-4}{qu1068 1, ni 2809}{43}{}
+{61}{I still look for ring!}{}{-4}{qu1068 2, ni 2809}{65}{}
+{62}{I found ring!  I found ring!  Here it is...[You give it to him.]}{}{-4}{qa1068 1, in 2809}{69}{in 2809}
+{63}{I found ring!  I found ring!  Too bad fer you I gonna keep it!}{}{-4}{qu1068 2, in 2809}{75}{al -25, re -10}
+{64}{E:}{}{1}{}{0}{}
+{65}{I hope you find it soon!  My wife has been giving me strange looks, today!}{I hope you find it soon!  My wife has been giving me strange looks, today!}{}{}{}{}
+{66}{E:}{}{1}{}{0}{}
+{69}{Wonderful!  Here's your money.  You've really done me a favor here...looks like I won't be sleeping on the porch...}{Wonderful!  Here's your money.  You've really done me a favor here...looks like I won't be sleeping on the porch...}{}{}{}{$$150, qu1068 4}
+{70}{E:}{}{1}{}{0}{lf2 1}
+{73}{You're quite a chap...thanks again for your help...}{You're quite a lady...thanks again for your help...}{}{}{}{}
+{74}{}{}{}{}{}{}
+{75}{What?  My wife gave me that!  It belongs to me, sir!  I'm prepared to do whatever is necessary to get it back from you!  [He clenches his fists.]}{What?  My wife gave me that!  It belongs to me, madam!  I'm prepared to do whatever is necessary to get it back from you!  [He clenches his fists.]}{}{}{}{}
+{76}{I was only joking, old boy!  Here's the ring!  [Give it to him.]}{}{5}{}{69}{al +15, re +5, in 2809}
+{77}{You've never made a bigger mistake, Matthew...}{}{5}{}{}{co, fl 21}
+{78}{Okay!  I just jokin'!  You can have ring!  [Give it to him.]}{}{-4}{}{69}{al +15, re +5, in 2809}
+{79}{HA!  You no scare me!  I kill you!}{}{-4}{}{}{co, fl 21}
+{80}{[He gives you a wary stare.]  Eh, sure.  Here's your money.  Good day to you...}{[He gives you a wary stare.]  Eh, sure.  Here's your money.  Good day to you...}{}{}{}{$$150, qu1068 4}
+{81}{E:}{}{1}{}{0}{lf2 1}
+

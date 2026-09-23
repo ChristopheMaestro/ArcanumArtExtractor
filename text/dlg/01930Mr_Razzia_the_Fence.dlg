@@ -1,0 +1,166 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Hello sir.  May I ask your name?}{}{5}{re 41, lf1 0}{25}{}
+{3}{Greetings @npcname@.  I have something you are looking for.}{}{5}{re 41, lf1 1, rp1001}{43}{}
+{4}{Err...  okay...  May I ask your name?}{}{5}{re -40, lf1 0}{25}{}
+{5}{Uh... I have something you are looking for, @npcname@.}{}{5}{re -40, lf1 1, rp1001}{43}{}
+{6}{Hello Mr. Razzia.  I have some questions...}{}{5}{rp-1001, lf1 1}{}{fl 101}
+{7}{Can you train me as an Expert at pick pocketing?}{}{5}{rp1001, tr5 -1}{35}{et5 102}
+{8}{Can you train me as an Expert at prowling?}{}{5}{rp1001, tr6 -1}{35}{et6 114}
+{9}{Uh... I have something you are looking for, @npcname@.}{}{5}{GF2386 1}{}{co, fl 126}
+{10}{I have some questions about a passport you made...}{}{5}{GF2410 1}{127}{}
+{11}{Can you train me as an Expert at back stabbing?}{}{5}{rp1001, tr4 -1}{35}{et4 158}
+{13}{Uh... Hi.  Wha' you name?}{}{-4}{lf1 0}{25}{}
+{14}{Uh... Mister Black...  Me got sumthin' you mebbe wan'.}{}{-4}{re 41, lf1 1, rp1001}{43}{}
+{15}{Hey!  Dat rude Mister Black...  Me got sumthin' you mebbe wan'.}{}{-4}{re -40, lf1 1, rp1001}{43}{}
+{16}{Uh...  Hi Mister Black.  Me ask sumthin'?}{}{-4}{rp-1001, lf1 1}{}{fl 101}
+{17}{Me wan' train be Exper' pick pocket...}{}{-4}{rp1001, tr5 -1}{35}{et5 102}
+{18}{Me wan' train be Exper' prowler...}{}{-4}{rp1001, tr6 -1}{35}{et6 114}
+{19}{Uh... Mister Black...  Me got sumthin' you mebbe wan'.}{}{-4}{GF2386 1}{}{co, fl 126}
+{20}{Me wan' train be Exper' back stab...}{}{-4}{rp1001, tr4 -1}{35}{et4 158}
+{24}{E:}{}{1}{}{0}{}
+{25}{I am Mr. Razzia.  ...What do you want?}{I am Mr. Razzia.  ...What do you want?}{}{}{}{lf1 1}
+{26}{I have something that you might be interested in.}{}{5}{rp1001}{43}{}
+{27}{What can you tell me about this place?}{}{5}{rp-1001}{}{fl 101}
+{28}{Can you train me as an Expert at pick pocketing?}{}{5}{rp1001, tr5 1, tr5 -1, sk5 10}{102}{}
+{29}{Can you train me as an Expert at prowling?}{}{5}{rp1001, tr6 1, tr6 -1, sk6 10}{114}{}
+{30}{Me got sumthin' you mebbe wan'...}{}{-4}{rp1001}{43}{}
+{31}{Tell me 'bout dis place?}{}{-4}{rp-1001}{}{fl 101}
+{32}{Me wan' train be Expert pick pocket...}{}{-4}{rp1001, tr5 1, tr5 -1, sk5 10}{102}{}
+{33}{Me wan' train be Expert prowler...}{}{-4}{rp1001, tr6 1, tr6 -1, sk6 10}{114}{}
+{34}{E:}{}{1}{}{0}{}
+{35}{Is there something else?}{Is there something else?}{}{}{}{}
+{36}{I have something that you might be interested in.}{}{5}{rp1001}{43}{}
+{37}{Can you train me as an Expert at pick pocketing?}{}{5}{rp1001, tr5 1, tr5 -1, sk5 10}{102}{}
+{38}{Can you train me as an Expert at prowling?}{}{5}{rp1001, tr6 1, tr6 -1, sk6 10}{114}{}
+{39}{Me got sumthin' you mebbe wan'...}{}{-4}{rp1001}{43}{}
+{40}{Me wan' train be Expert pick pocket...}{}{-4}{rp1001, tr5 1, tr5 -1, sk5 10}{102}{}
+{41}{Me wan' train be Expert prowler...}{}{-4}{rp1001, tr6 1, tr6 -1, sk6 10}{114}{}
+{42}{E:}{}{1}{}{0}{}
+{43}{What have you got?}{What have you got?}{}{}{}{}
+{44}{I have the Amulet belonging to the couple at The Mushroom.}{}{5}{ru1145, rq-1145, in2851}{59}{}
+{45}{I have retrieved Ryan Sander's pocket watch.}{}{5}{ru1146, rq-1146, in5689}{65}{}
+{46}{I have retrieved the chest of gold from the shipwreck.}{}{5}{ru1147, rq-1147, in5674}{71}{}
+{47}{I have obtained a suit of Caladon Crusading Armor.}{}{5}{ru1148, rq-1148, in2850}{77}{}
+{48}{I have Ryan Marshall's criminal records file.}{}{5}{ru1149, rq-1149, in5690}{83}{}
+{49}{I have the postal bag that was bound for Tarant.}{}{5}{ru1150, rq-1150, in5676}{89}{}
+{50}{I have retrieved Jonathan Sander's Staff of Restoration.}{}{5}{ru1151, rq-1151, in2028}{95}{}
+{51}{Me got da amyoolet from dem people at da mushroom.}{}{-4}{ru1145, rq-1145, in2851}{59}{}
+{52}{Me got da wach.}{}{-4}{ru1146, rq-1146, in5689}{65}{}
+{53}{Me got gold from ship.}{}{-4}{ru1147, rq-1147, in5674}{71}{}
+{54}{Me got armor from und'r gard's house.}{}{-4}{ru1148, rq-1148, in2850}{77}{}
+{55}{Me got dem p'lees papers 'bout Rian Marshall.}{}{-4}{ru1149, rq-1149, in5690}{83}{}
+{56}{Me got bag of letters.}{}{-4}{ru1150, rq-1150, in5676}{89}{}
+{57}{Me got staff from und'r Sandur's house.}{}{-4}{ru1151, rq-1151, in2028}{95}{}
+{58}{F:}{}{1}{}{0}{}
+{59}{Yes...  We have been awaiting the arrival of that piece.  Thank you for retrieving it for us.  The Underground is paying a finder's fee of 250 coin for it.  Here you are @pcname@.  Good work.}{Yes...  We have been awaiting the arrival of that piece.  Thank you for retrieving it for us.  The Underground is paying a finder's fee of 250 coin for it.  Here you are @pcname@.  Good work.}{}{}{}{$$250, rq1145, in2851, xp4}
+{60}{My pleasure.  Goodbye @npcname@.}{}{5}{}{0}{}
+{61}{Thank you.  I have something more...}{}{5}{}{43}{}
+{62}{T'anks.  Buh-bye.}{}{-4}{}{0}{}
+{63}{T'anks.  Me got more...}{}{-4}{}{43}{}
+{64}{E:}{}{1}{}{0}{}
+{65}{Yes...  We have been awaiting the arrival of that piece.  Thank you for retrieving it for us.  The Underground is paying a finder's fee of 300 coin for it.  Here you are @pcname@.  Good work.}{Yes...  We have been awaiting the arrival of that piece.  Thank you for retrieving it for us.  The Underground is paying a finder's fee of 300 coin for it.  Here you are @pcname@.  Good work.}{}{}{}{$$300, rq1146, in5689, xp4}
+{66}{My pleasure.  Goodbye @npcname@.}{}{5}{}{0}{}
+{67}{Thank you.  I have something more...}{}{5}{}{43}{}
+{68}{T'anks.  Buh-bye.}{}{-4}{}{0}{}
+{69}{T'anks.  Me got more...}{}{-4}{}{43}{}
+{70}{E:}{}{1}{}{0}{}
+{71}{Yes...  We have been awaiting the arrival of that piece.  Thank you for retrieving it for us.  The Underground is paying a finder's fee of 700 coin for it.  Here you are @pcname@.  Good work.}{Yes...  We have been awaiting the arrival of that piece.  Thank you for retrieving it for us.  The Underground is paying a finder's fee of 700 coin for it.  Here you are @pcname@.  Good work.}{}{}{}{$$700, rq1147, in5674, xp2}
+{72}{My pleasure.  Goodbye @npcname@.}{}{5}{}{0}{}
+{73}{Thank you.  I have something more...}{}{5}{}{43}{}
+{74}{T'anks.  Buh-bye.}{}{-4}{}{0}{}
+{75}{T'anks.  Me got more...}{}{-4}{}{43}{}
+{76}{E:}{}{1}{}{0}{}
+{77}{Yes...  We have been awaiting the arrival of that piece.  Thank you for retrieving it for us.  The Underground is paying a finder's fee of 400 coin for it.  Here you are @pcname@.  Good work.}{Yes...  We have been awaiting the arrival of that piece.  Thank you for retrieving it for us.  The Underground is paying a finder's fee of 400 coin for it.  Here you are @pcname@.  Good work.}{}{}{}{$$400, rq1148, in2850, xp7}
+{78}{My pleasure.  Goodbye @npcname@.}{}{5}{}{0}{}
+{79}{Thank you.  I have something more...}{}{5}{}{43}{}
+{80}{T'anks.  Buh-bye.}{}{-4}{}{0}{}
+{81}{T'anks.  Me got more...}{}{-4}{}{43}{}
+{82}{E:}{}{1}{}{0}{}
+{83}{Yes...  We have been awaiting the arrival of that piece.  Thank you for retrieving it for us.  The Underground is paying a finder's fee of 300 coin for it.  Here you are @pcname@.  Good work.}{Yes...  We have been awaiting the arrival of that piece.  Thank you for retrieving it for us.  The Underground is paying a finder's fee of 300 coin for it.  Here you are @pcname@.  Good work.}{}{}{}{$$300, rq1149, in5690, xp10}
+{84}{My pleasure.  Goodbye @npcname@.}{}{5}{}{0}{}
+{85}{Thank you.  I have something more...}{}{5}{}{43}{}
+{86}{T'anks.  Buh-bye.}{}{-4}{}{0}{}
+{87}{T'anks.  Me got more...}{}{-4}{}{43}{}
+{88}{E:}{}{1}{}{0}{}
+{89}{Yes...  We have been awaiting the arrival of that piece.  Thank you for retrieving it for us.  The Underground is paying a finder's fee of 350 coin for it.  Here you are @pcname@.  Good work.}{Yes...  We have been awaiting the arrival of that piece.  Thank you for retrieving it for us.  The Underground is paying a finder's fee of 350 coin for it.  Here you are @pcname@.  Good work.}{}{}{}{$$350, rq1150, in5676, xp6}
+{90}{My pleasure.  Goodbye @npcname@.}{}{5}{}{0}{}
+{91}{Thank you.  I have something more...}{}{5}{}{43}{}
+{92}{T'anks.  Buh-bye.}{}{-4}{}{0}{}
+{93}{T'anks.  Me got more...}{}{-4}{}{43}{}
+{94}{E:}{}{1}{}{0}{}
+{95}{Yes...  We have been awaiting the arrival of that piece.  Thank you for retrieving it for us.  The Underground is paying a finder's fee of 500 coin for it.  Here you are @pcname@.  Good work.}{Yes...  We have been awaiting the arrival of that piece.  Thank you for retrieving it for us.  The Underground is paying a finder's fee of 500 coin for it.  Here you are @pcname@.  Good work.}{}{}{}{$$500, rq1151, in2028, xp9}
+{96}{My pleasure.  Goodbye @npcname@.}{}{5}{}{0}{}
+{97}{Thank you.  I have something more...}{}{5}{}{43}{}
+{98}{T'anks.  Buh-bye.}{}{-4}{}{0}{}
+{99}{T'anks.  Me got more...}{}{-4}{}{43}{}
+{100}{E:}{}{1}{}{0}{}
+{101}{[looking annoyed]  Listen buddy...  I do not have time for your interruptions.  If you need assistance, speak to the shopkeeper.  Goodbye.}{[looking annoyed]  Listen lady...  I do not have time for your interruptions.  If you need assistance, speak to the shopkeeper.  Goodbye.}{}{}{}{}
+{102}{Yes.  I can indeed give you Expert training as a pick pocket.  The fee is 500 coin.  Are you interested?}{Yes.  I can indeed give you Expert training as a pick pocket.  The fee is 500 coin.  Are you interested?}{}{}{}{}
+{103}{Yes.  Here is the coin. [hand him the coin]}{}{5}{$$500}{108}{}
+{104}{I need to gather a few coin first.  I'll be back.}{}{5}{$$-499}{0}{}
+{105}{Uh...  yeah.  Here coin.  [hand him the coin]}{}{-4}{$$500}{108}{}
+{106}{Me no got coin.  Me be back.}{}{-4}{$$-499}{0}{}
+{107}{F:}{}{1}{}{0}{}
+{108}{Thank you @pcname@.  [He takes a few moments to review your skills and demonstrate some new techniques]  You are now an Expert at Picking Pockets.  If you wish to become a Master at the trade, you will need to seek out Sammie White.  He lives in Tarant and can usually be found near Metro Station.  ...May your newfound skills bring you many coin.}{Thank you @pcname@.  [He takes a few moments to review your skills and demonstrate some new techniques]  You are now an Expert at Picking Pockets.  If you wish to become a Master at the trade, you will need to seek out Sammie White.  He lives in Tarant and can usually be found near Metro Station.  ...May your newfound skills bring you many coin.}{}{}{}{$$-500, tr5 2, ru2160}
+{109}{Thank you.  Goodbye.}{}{5}{}{0}{}
+{110}{Thank you.  I have something you might be interested in.}{}{5}{}{43}{}
+{111}{T'anks.  Buh-bye.}{}{-4}{}{0}{}
+{112}{T'anks.  Me mebbe got sumthin' you wan'.}{}{-4}{}{43}{}
+{113}{E:}{}{1}{}{0}{}
+{114}{Yes.  I can give you Expert training at prowling.  The fee is 500 coin. Are you interested?}{Yes.  I can give you Expert training at prowling.  The fee is 500 coin. Are you interested?}{}{}{}{}
+{115}{Yes.  Here is the coin. [hand him the coin]}{}{5}{$$500}{120}{}
+{116}{I need to gather a few coin first.  I'll be back.}{}{5}{$$-499}{0}{}
+{117}{Uh...  yeah.  Here coin.  [hand him the coin]}{}{-4}{$$500}{120}{}
+{118}{Me no got coin.  Me be back.}{}{-4}{$$-499}{0}{}
+{119}{F:}{}{1}{}{0}{}
+{120}{Thank you @pcname@.  [He takes a few moments to review your skills and demonstrate some new techniques]  You are now an Expert at prowling.  Here, take this note.  If you ever wish to become a Master prowler, you will need to follow the clues in the note to locate the Master trainer.  Good luck, @pcname@.  I am sure your newfound skills will impress the Underground.}{Thank you @pcname@.  [He takes a few moments to review your skills and demonstrate some new techniques]  You are now an Expert at prowling.  Here, take this note.  If you ever wish to become a Master prowler, you will need to follow the clues in the note to locate the Master trainer.  Good luck, @pcname@.  I am sure your newfound skills will impress the Underground.}{}{}{}{$$-500, tr6 2, ru2161, in-5233}
+{121}{Thank you.  Goodbye.}{}{5}{}{0}{}
+{122}{Thank you.  I have something you might be interested in.}{}{5}{}{43}{}
+{123}{T'anks.  Buh-bye.}{}{-4}{}{0}{}
+{124}{T'anks.  Me mebbe got sumthin' you wan'.}{}{-4}{}{43}{}
+{125}{E:}{}{1}{}{0}{}
+{126}{Assassin!  You shall die for what you did to Mr. Black!}{Assassin!  You shall die for what you did to Mr. Black!}{}{}{}{}
+{127}{I do not know what you are talking about.  I do not "make" passports...  that is against the law.}{I do not know what you are talking about.  I do not "make" passports...  that is against the law, madam.}{}{}{}{}
+{128}{Mr. Preston Radcliffe begs to differ... [show passport]}{}{5}{in5671}{132}{}
+{129}{Come now Mr. Razzia...  I "am" one of you...}{}{5}{rp1001, ni5671}{136}{}
+{130}{Does the name Preston Radcliffe jog your memory?}{}{5}{ni5671}{154}{}
+{131}{E:}{}{1}{}{0}{}
+{132}{[looking shocked... and slightly afraid]  Where did you get that?}{[looking shocked... and slightly afraid]  Where did you get that?}{}{}{}{}
+{133}{I found it on his body in the wreckage of the IFS Zephyr.}{}{5}{}{136}{}
+{134}{Off a body near the IFS Zephyr.  I need some information about him.}{}{5}{}{136}{}
+{135}{E:}{}{1}{}{0}{}
+{136}{[looking at you warily]  Who was this man, anyhow?  You are not the only person who has been asking questions...}{[looking at you warily]  Who was this man, anyhow?  You are not the only person who has been asking questions...}{}{}{}{}
+{137}{Who else has been here?}{}{5}{}{140}{}
+{138}{There have been others looking for him?}{}{5}{}{140}{}
+{139}{E:}{}{1}{}{0}{}
+{140}{A couple of thugs came by right after the Zephyr left Caladon.  They wanted information about him.  When I refused to talk, they decided I needed a little encouragement [you see the pain in his eyes]  I do not know who they were...}{A couple of thugs came by right after the Zephyr left Caladon.  They wanted information about him.  When I refused to talk, they decided I needed a little encouragement [you see the pain in his eyes]  I do not know who they were...}{}{}{}{}
+{141}{What did you tell them?}{}{5}{}{144}{}
+{142}{What did they get out of you?}{}{5}{}{144}{}
+{143}{E:}{}{1}{}{0}{}
+{144}{I told them that I had made him a passport... that he had chosen Preston Radcliffe as his name, a gnome from Tarant.  I also informed them that they were too late...  He had just departed on the Zephyr and there was nothing they could do about it...  or so I had thought...}{I told them that I had made him a passport... that he had chosen Preston Radcliffe as his name, a gnome from Tarant.  I also informed them that they were too late...  He had just departed on the Zephyr and there was nothing they could do about it...  or so I had thought...}{}{}{}{}
+{145}{What did they do?}{}{5}{}{147}{}
+{146}{E:}{}{1}{}{0}{}
+{147}{They were "insistent" that I give them information on how to get to the Zephyr.  I laughed bitterly and told them they were out of their minds...  Crazy old Maxim, had built the Zephyr in his factory outside of town, and it was a one of a kind beast...}{They were "insistent" that I give them information on how to get to the Zephyr.  I laughed bitterly and told them they were out of their minds...  Crazy old Maxim, had built the Zephyr in his factory outside of town, and it was a one of a kind beast...}{}{}{}{}
+{148}{You told them where the factory was?}{}{5}{}{150}{}
+{149}{E:}{}{1}{}{0}{}
+{150}{I thought nothing of it.  Everyone knew where Maxim's factory was...  It was that very night that it was burnt to the ground.  That is all I know.}{I thought nothing of it.  Everyone knew where Maxim's factory was...  It was that very night that it was burnt to the ground.  That is all I know.}{}{}{}{}
+{151}{Thank you.  You have been most helpful.}{}{5}{}{0}{}
+{152}{Thanks.}{}{5}{}{0}{}
+{153}{E:}{}{1}{}{0}{}
+{154}{As I have said, I do not know what you are talking about.  I would appreciate it if you would leave.}{As I have said, I do not know what you are talking about.  I would appreciate it if you would leave.}{}{}{}{}
+{155}{[menacing]  Do "not" force me to violence, "sir"...}{}{5}{}{136}{}
+{156}{[menacing]  I want some answers...  Now!}{}{5}{}{136}{}
+{157}{E:}{}{1}{}{0}{}
+{158}{Yes.  I can give you Expert training at back stabbing.  The fee is 500 coin. Are you interested?}{Yes.  I can give you Expert training at back stabbing.  The fee is 500 coin. Are you interested?}{}{}{}{}
+{159}{Yes.  Here is the coin. [hand him the coin]}{}{5}{$$500}{164}{}
+{160}{I need to gather a few coin first.  I'll be back.}{}{5}{$$-499}{0}{}
+{161}{Uh...  yeah.  Here coin.  [hand him the coin]}{}{-4}{$$500}{164}{}
+{162}{Me no got coin.  Me be back.}{}{-4}{$$-499}{0}{}
+{163}{F:}{}{1}{}{0}{}
+{164}{Thank you @pcname@.  [He takes a few moments to review and comment upon your skills, then demonstrates some new techniques for you.]  You are now an Expert backstabber.  If you ever wish to become a Master, you must locate Doctor Edmund Craig.  He is in hiding somewhere after a recent incident in Tarant.  I do not know where...}{Thank you @pcname@.  [He takes a few moments to review and comment upon your skills, then demonstrates some new techniques for you.]  You are now an Expert backstabber.  If you ever wish to become a Master, you must locate Doctor Edmund Craig.  He is in hiding somewhere after a recent incident in Tarant.  I do not know where...}{}{}{}{$$-500, tr4 2, ru2166}
+{165}{Thank you.  Goodbye.}{}{5}{}{0}{}
+{166}{Thank you.  I have something you might be interested in.}{}{5}{}{43}{}
+{167}{T'anks.  Buh-bye.}{}{-4}{}{0}{}
+{168}{T'anks.  Me mebbe got sumthin' you wan'.}{}{-4}{}{43}{}
+{169}{E:}{}{1}{}{0}{}
+

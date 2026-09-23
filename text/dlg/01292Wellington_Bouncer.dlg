@@ -1,0 +1,81 @@
+{1}{Hello sir.  May I help you sir?}{Hello madam.  May I help you?}{}{}{}{}
+{2}{Might I go in for a drink?}{1}{5}{}{9}{}
+{3}{Might I go in for a drink?}{0}{5}{}{12}{}
+{4}{I had a question or two about the Garringsburg robbery...}{}{5}{qa1063 1, qb1063 3, gf2268 0}{27}{}
+{5}{A name on the list you gave me...Rorry Limes.  Who is he?}{}{5}{gf2268 1}{90}{}
+{6}{Uh...I go inside?}{1}{-4}{}{9}{}
+{7}{Uh...I go inside?}{0}{-4}{}{12}{}
+{8}{Uh...ask questions 'bout Gar-r-ing-b-urg rob-b-bery...?}{}{-4}{qa1063 1, qb1063 3}{27}{}
+{9}{Of course, sir.  We only ask you conduct yourself in a gentlemanly manner.  Allow me to open the door. [He does so.] Please...enjoy yourself.}{Of course, madam.  We only ask you conduct yourself in a lady-like manner.  Allow me to open the door. [He does so.] Please...enjoy yourself.}{}{}{}{}
+{10}{Thank you, I will.}{}{5}{}{-2}{}
+{11}{Thanks!}{}{-4}{}{-2}{}
+{12}{I'm sorry, madam.  This is a gentleman's club.  No offense, but females are not allowed within.}{I'm sorry, madam.  This is a gentleman's club.  No offense, but females are not allowed within.}{}{}{}{}
+{13}{Is there no way I might be permitted to enter...?}{}{5}{ni 5231}{94}{}
+{14}{Uh...you sure I no go in?}{}{-4}{ni 5231}{94}{}
+{17}{I've been given this special invitation, sir...}{}{5}{in 5231}{86}{}
+{18}{I got in-nv-v-it-tation!  See!}{}{-4}{in 5231}{86}{}
+{19}{I see.  Well, good day to you.}{}{5}{}{0}{}
+{20}{Uh...buh-bye.}{}{-4}{}{0}{}
+{27}{The Garringsburg robbery?  Yes...dreadful business, that.  Can't say I'm surprised, though...old James was here just a week ago, blustering on about his painting and how much it was worth.  Every man in Tarant knew it was there by the time they dragged him out of here...}{The Garringsburg robbery?  Yes...dreadful business, that.  Can't say I'm surprised, though...old James was here just a week ago, blustering on about his painting and how much it was worth.  Every man in Tarant knew it was there by the time they dragged him out of here...}{}{}{}{}
+{28}{Might I ask you a couple of questions about that night?}{}{5}{}{37}{}
+{29}{I think I'd like to go inside and take a look around...}{1}{5}{}{9}{}
+{30}{I think I'd like to go inside and take a look around...}{0}{5}{}{12}{}
+{32}{I ask questions?}{}{-4}{}{37}{}
+{33}{I go inside bar?}{1}{-4}{}{9}{}
+{34}{I go inside bar?}{0}{-4}{}{12}{}
+{35}{E:}{}{1}{}{0}{}
+{36}{}{}{}{}{}{}
+{37}{What would you like to know?}{What would you like to know?}{}{}{}{}
+{38}{Who was Mr. Garringsburg here with that evening?}{}{5}{}{50}{}
+{39}{Who might hold ill will towards Mr. Garringsburg?}{}{5}{}{54}{}
+{40}{Was there anyone strange here that evening?}{}{5}{lf1 0}{58}{}
+{41}{Was there anyone strange here that evening?}{}{5}{lf1 1}{83}{}
+{42}{Perhaps I could take a look around inside?}{1}{5}{}{9}{}
+{43}{Perhaps I could take a look around inside?}{0}{5}{}{12}{}
+{45}{Uh...I not too smart...need help...}{}{-4}{}{78}{}
+{46}{I go inside bar?}{1}{-4}{}{9}{}
+{47}{I go inside bar?}{0}{-4}{}{12}{}
+{48}{E:}{}{1}{}{0}{}
+{50}{Oh...you know, the usual circles...Mr. Willoughsby, Mr. Pettibone, and most of the gnomish gentlemen as well as a few of the more...decadent city elves.  The crowd he usually travels with...}{Oh...you know, the usual circles...Mr. Willoughsby, Mr. Pettibone, and most of the gnomish gentlemen as well as a few of the more...decadent city elves.  The crowd he usually travels with...}{}{}{}{}
+{51}{I see.  A few more questions about that night...}{}{5}{}{37}{}
+{52}{E:}{}{5}{}{0}{}
+{54}{No one that I'd know...he's a jolly little fellow, Mr. Garringsburg.  Always one to buy the house a round of drinks...oh the stories I could tell...}{No one that I'd know...he's a jolly little fellow, Mr. Garringsburg.  Always one to buy the house a round of drinks...oh the stories I could tell...}{}{}{}{}
+{55}{Yes, I'm sure.  A few more questions about that night...}{}{5}{}{37}{}
+{56}{E:}{}{5}{}{0}{}
+{58}{Well...I'm not quite sure.  And that's the sort of information that might cost someone a few coins...I'd say about 50 gold pieces?}{Well...I'm not quite sure.  And that's the sort of information that might cost someone a few coins...I'd say about 50 gold pieces?}{}{}{}{}
+{59}{Done.}{}{5}{$$50}{74}{$$-50}
+{60}{Sorry...I don't seem to have the money.}{}{5}{$$-49}{64}{}
+{61}{Perhaps I could convince you to go a little lower?}{}{5}{ha 6, $$45}{68}{}
+{62}{No, I don't think so.  A few more questions?}{}{5}{}{37}{}
+{64}{No problem...I'm here all the time.  If you come across the coin, stop in again...}{No problem...I'm here all the time.  If you come across the coin, stop in again...}{}{}{}{}
+{65}{I'll do that...a few more questions?}{}{5}{}{37}{}
+{66}{E:}{}{5}{}{0}{}
+{68}{What were you thinking?}{What were you thinking?}{}{}{}{}
+{69}{Maybe 45 gold pieces would be more appropriate...}{}{5}{ha -7}{74}{$$-45}
+{70}{Let's call it 40 gold pieces and be done with it...}{}{5}{ha 8, ha -8}{74}{$$-40}
+{71}{35 gold pieces would seem more appropriate...}{}{5}{ha 9}{74}{$$-35}
+{72}{I've changed my mind.  A few more questions...}{}{5}{}{37}{}
+{74}{Sounds good. [He takes a piece of paper from his jacket.]  This page is from the guest book...it's from that evening.  Perhaps you might be able to find something on it...}{Sounds good. [He takes a piece of paper from his jacket.]  This page is from the guest book...it's from that evening.  Perhaps you might be able to find something on it...}{}{}{}{lf1 1, in -5221}
+{75}{I appreciate the help.  A few more questions...?}{}{5}{}{37}{}
+{76}{E:}{}{5}{}{0}{}
+{78}{[The man looks at you, smiling crookedly.]  Yes, yes you do.  Listen friend...you're a bit slow, but your heart seems in the right place.  If it's answers your looking for, you should consult Madame Toussaude...she's a gypsy with a shop down on the Rue de Avellone.  Weird old crone, but sometimes she knows the strangest things...}{[The man looks at you, smiling crookedly.]  Yes, yes you do.  Listen madam...you're a bit slow, but your heart seems in the right place.  If it's answers your looking for, you should consult Madame Toussaude...she's a gypsy with a shop down on the Rue de Avellone.  Weird old crone, but sometimes she knows the strangest things...}{}{}{}{gf2114 1}
+{79}{Uh...okay!  I go see her...thank you!}{}{-4}{}{0}{}
+{80}{Thanks!  I go inside, now?}{1}{-4}{}{9}{}
+{81}{Thanks!  I go inside, now?}{0}{-4}{}{12}{}
+{83}{We already talked about that, remember? [He winks at you.]  I'm sure that page from the guest book will be most helpful...}{We already talked about that, remember? [He winks at you.]  I'm sure that page from the guest book will be most helpful...}{}{}{}{}
+{84}{Ah, yes.  A few more questions...}{}{5}{}{37}{}
+{85}{E:}{}{5}{}{0}{}
+{86}{[You can see he's not happy about it.]  I see.  Well, madam, I can't stop you from going in.  But this is highly irregular.  I'm afraid the regular members won't be at all pleased.  I beg you...finish your business here and leave as quickly as possible. [He opens the door for you.]}{[You can see he's not happy about it.]  I see.  Well, madam, I can't stop you from going in.  But this is highly irregular.  I'm afraid the regular members won't be at all pleased.  I beg you...finish your business here and leave as quickly as possible. [He opens the door for you.]}{}{}{}{}
+{87}{E:}{}{1}{}{-2}{}
+{90}{[He pulls you aside, whispering harshly.]  Good god, man!  Will you shut up already?  If anyone finds out I gave that to you...[He calms down a bit.]  Listen, I don't know who Limes is, but you can always check the Hall of Records.  They might have some information...}{[He pulls you aside, whispering harshly.]  Good god, woman!  Will you shut up already?  If anyone finds out I gave that to you...[He calms down a bit.]  Listen, I don't know who Limes is, but you can always check the Hall of Records.  They might have some information...}{}{}{}{}
+{91}{I see.  Thank you.  Might I go inside?}{1}{5}{}{9}{}
+{92}{I see.  Thank you.  Might I go inside?}{0}{5}{}{12}{}
+{93}{E:}{}{5}{}{0}{}
+{94}{[He gives you a haughty stare.]  I'm sorry, MADAM.  This is a gentlemen's club, and it has long-standing rules concerning the...uh...fairer sex.  Mr. Wendell Wellington established this club 30 years ago, and if he says no women, then there will be no women allowed on my watch.   I'm sorry, but that's just the way it is.}{[He gives you a haughty stare.]  I'm sorry, MADAM.  This is a gentlemen's club, and it has long-standing rules concerning the...uh...fairer sex.  Mr. Wendell Wellington established this club 30 years ago, and if he says no women, then there will be no women allowed on my watch.   I'm sorry, but that's just the way it is.}{}{}{}{gf2649 1}
+{95}{I see.  And just where might I find this Mr. Wellington?}{}{5}{}{100}{}
+{96}{Uh...where Wen-dull Wellin-tun?}{}{-4}{}{100}{}
+{97}{Good day to you then...}{}{5}{}{0}{}
+{98}{E:}{}{-4}{}{0}{}
+{100}{[The bouncer looks at you incredulously.]  Madam!  As if I would tell you where the honorable Mr. Wellington lives!  Please, respect the man's wishes and his privacy.  I must ask you to leave the premises...}{[The bouncer looks at you incredulously.]  Madam!  As if I would tell you where the honorable Mr. Wellington lives!  Please, respect the man's wishes and his privacy.  I must ask you to leave the premises...}{}{}{}{ru 2213}
+{101}{E:}{}{1}{}{0}{}
+

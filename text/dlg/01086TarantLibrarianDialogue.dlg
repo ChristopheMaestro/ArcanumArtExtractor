@@ -1,0 +1,241 @@
+{1}{Pardon me sir, but do you have a membership?}{Pardon me madam, but do you have a membership?}{}{}{}{}
+{2}{Unfortunately, I do not.}{}{5}{}{115}{}
+{3}{Membership?  A membership for what?}{}{5}{}{115}{}
+{4}{Where am I?}{}{5}{}{169}{}
+{5}{Do you have "T'sen-Ang:Horror among the Dark Elves"?}{}{5}{lf12 0,qa1022 1}{94}{lf12 1}
+{6}{umm.......Hi.}{}{-4}{lf13 0}{204}{}
+{7}{Where I at?}{}{-4}{lf13 1}{202}{}
+{8}{ugh.....book.....Look for book.}{}{-4}{lf12 0, qa1022 1}{208}{}
+{9}{E:}{}{1}{}{0}{}
+{10}{Greetings.  Allow me to welcome you to the Library of Tarant.  Could I interest you in becoming one of our esteemed members?}{Greetings.  Allow me to welcome you to the Library of Tarant.  Could I interest you in becoming one of our esteemed members?}{}{}{}{}
+{11}{Membership?}{}{5}{lf8 0}{98}{}
+{12}{Please. Could you tell me a little about your facilities?}{}{5}{lf9 0}{103}{}
+{13}{Do you have "T'sen-Ang:Horror among the Dark Elves"?}{}{5}{lf12 0,qa1022 1}{89}{lf12 1}
+{14}{ugh.....book.....Look for book.}{}{-4}{lf12 0,qa1022 1}{208}{}
+{15}{G:}{G:}{}{}{}{}
+{16}{I have the money for my membership, please.}{}{5}{lf10 1,$$ 1500, lf13 0}{165}{$$ -1500}
+{17}{I have the money for my membership, please.}{}{5}{lf4 1,$$ 2000,lf13 0}{165}{$$ -2000}
+{18}{I have the money for my membership, please.}{}{5}{lf6 1,$$ 1000,lf13 0}{165}{$$ -1000}
+{19}{I have the money for my membership, please.}{}{5}{lf7 1,$$ 500,lf13 0}{165}{$$ -500}
+{20}{I have the money for my membership, please.}{}{5}{lf3 1,$$ 5000,lf13 0}{165}{$$ -5000}
+{21}{How much was it for a membership?}{}{5}{lf3 1,$$ -5000,lf13 0}{53}{}
+{22}{How much was it for a membership?}{}{5}{lf10 1,$$ -1500,lf13 0}{56}{}
+{23}{How much was it for a membership?}{}{5}{lf4 1,$$ -2000,lf13 0}{59}{}
+{24}{How much was it for a membership?}{}{5}{lf6 1,$$ -1000,lf13 0}{62}{}
+{25}{How much was it for a membership?}{}{5}{lf7 1,$$ -500,lf13 0}{65}{}
+{26}{I am interested in a membership.}{}{5}{lf8 0,lf13 0}{98}{}
+{27}{Please. Could you tell me a little about your facilities?}{}{5}{lf9 0}{103}{}
+{28}{Do you have "T'sen-Ang:Horror among the Dark Elves"?}{}{5}{lf12 0,lf13 0,re 45,qa1022 1}{89}{lf12 1}
+{29}{Do you have "T'sen-Ang:Horror among the Dark Elves"?}{}{5}{lf12 0,lf13 0,re -44,qa1022 1}{94}{lf12 1}
+{30}{"T'sen-Ang:Horror among the Dark Elves". Do you have it?}{}{5}{lf17 0,lf13 1,qa1022 1}{183}{}
+{31}{I have come to peruse the books.  Good day.}{}{5}{lf13 1}{0}{}
+{32}{I:}{}{5}{re -39,re 10}{0}{re -5}
+{33}{I:}{}{5}{re -9}{42}{}
+{34}{Hi.}{}{-4}{}{204}{}
+{35}{Look for book.}{}{-4}{qa1022 1,lf13 0,lf17 0,lf20 0}{208}{}
+{36}{Look for book.}{}{-4}{qa1022 1,lf13 1,lf17 0}{223}{}
+{37}{ugh.....book.....Look for book.}{}{-4}{qa1022 1,lf13 0,lf17 0,lf20 1}{216}{}
+{38}{money!  Got coins for member ship!}{}{-4}{$$ 6000,lf18 1}{221}{$$ -6000}
+{39}{Got money for member-ship!}{}{-4}{$$ 5000,lf19 1}{221}{$$ -5000}
+{40}{E:}{}{1}{}{0}{}
+{41}{I must regretfully inform you that you are no longer welcome  in the Library of Tarant.  Please leave.}{I must regretfully inform you that you are no longer welcome  in the Library of Tarant.  Please leave.}{}{}{}{}
+{42}{We certainly do not need your type amongst us!  Consider your membership revoked.  I would ask you to leave ......NOW.}{We certainly do not need your type amongst us!  Consider your membership revoked.  I would ask you to leave ......NOW.}{}{}{}{}
+{43}{Please wait!  I was playing a fool!}{}{5}{ch 19}{49}{}
+{44}{Wait! I was only foolin' with ya.}{}{5}{ch -18}{0}{fl 48}
+{45}{Give me my money back.}{}{5}{}{0}{fl 48}
+{46}{Fine. This place is worthless anyhow.}{}{5}{}{0}{gf2011 1 }
+{47}{E:}{}{5}{}{0}{gf2011 1 }
+{48}{Leave now!!!}{Leave now!!!}{}{}{}{gf2011 1 }
+{49}{I will give pardon for this incidence, but watch your step.}{I will give pardon for this incidence, but watch your step.}{}{}{}{}
+{50}{A:}{}{5}{}{0}{re 39}
+{51}{I:}{}{5}{}{0}{fl 48}
+{52}{E:}{}{5}{}{0}{re 29}
+{53}{Our current rate is 5000 coins for a lifetime membership.}{Our current rate is 5000 coins for a lifetime membership.}{}{}{}{}
+{54}{I must say that the price seems a bit inflated.}{}{5}{ha 14,lf16 0}{142}{lf16 1}
+{55}{E:}{}{1}{}{0}{}
+{56}{Our current rate is 1500 coins for a lifetime membership.}{Our current rate is 1500 coins for a lifetime membership.}{}{}{}{}
+{57}{I must say that the price seems a bit inflated.}{}{5}{ha 14,lf16 0}{142}{lf16 1}
+{58}{E:}{}{1}{}{0}{}
+{59}{Our current rate is 2000 coins for a lifetime membership.}{Our current rate is 2000 coins for a lifetime membership.}{}{}{}{}
+{60}{I must say that the price seems a bit inflated.}{}{5}{ha 14,lf16 0}{142}{lf16 1}
+{61}{E:}{}{1}{}{0}{}
+{62}{Our current rate is 1000 coins for a lifetime membership.}{Our current rate is 1000 coins for a lifetime membership.}{}{}{}{}
+{63}{I must say that the price seems a bit inflated.}{}{5}{ha 14,lf16 0}{142}{lf16 1}
+{64}{E:}{}{1}{}{0}{}
+{65}{Our current rate is 500 coins for a lifetime membership.}{Our current rate is 500 coins for a lifetime membership.}{}{}{}{}
+{66}{I must say that the price seems a bit inflated.}{}{5}{ha 14,lf16 0}{142}{lf16 1}
+{67}{E:}{}{1}{}{0}{}
+{68}{How may I be of service to you, sir?}{How may I be of service to you, madam?}{}{}{}{}
+{69}{I've brought the money for my membership, please.}{}{5}{lf10 1, $$ 1500, lf13 0}{165}{$$ -1500}
+{70}{I've brought the money for my membership, please.}{}{5}{lf4 1, $$ 2000, lf13 0}{165}{$$ -2000}
+{71}{I've brought the money for my membership, please.}{}{5}{lf6 1, $$ 1000, lf13 0}{165}{$$ -1000}
+{72}{I've brought the money for my membership, please.}{}{5}{lf7 1, $$ 500, lf13 0}{165}{$$ -500}
+{73}{I've brought the money for my membership, please.}{}{5}{lf3 1, $$ 5000, lf13 0}{165}{$$ -5000}
+{74}{Please tell me again, how much was it for a membership?}{}{5}{lf3 1, $$ -5000, lf13 0}{53}{}
+{75}{Please tell me again, how much was it for a membership?}{}{5}{lf10 1, $$ -1500, lf13 0}{56}{}
+{76}{Please tell me again, how much was it for a membership?}{}{5}{lf4 1, $$ -2000, lf13 0}{59}{}
+{77}{Please tell me again, how much was it for a membership?}{}{5}{lf6 1, $$ -1000, lf13 0}{62}{}
+{78}{Please tell me again, how much was it for a membership?}{}{5}{lf7 1, $$ -500, lf13 0}{65}{}
+{79}{Do you have "T'sen-Ang:Horror among the Dark Elves"?}{}{5}{lf12 0, qa1022 1, lf13 0}{94}{lf12 1}
+{80}{Do you have "T'sen-Ang:Horror among the Dark Elves"?}{}{5}{qa1022 1, lf13 1, lf17 0}{183}{}
+{81}{You spoke something of a membership?}{}{5}{lf8 0}{98}{}
+{82}{Please. Could you tell me a little about your facilities?}{}{5}{lf9 0}{103}{}
+{83}{E:}{}{1}{}{0}{}
+{84}{For what are you searching?}{For what are you searching?}{}{}{}{}
+{85}{Do you have "T'sen-Ang:Horror among the Dark Elves"?}{}{5}{lf12 0, qa 1022 1}{94}{lf12 1}
+{86}{You spoke something of a membership?}{}{5}{lf8 0}{98}{}
+{87}{Do you have "T'sen-Ang:Horror among the Dark Elves"?}{}{5}{qa1022 1, lf13 1, lf17 0}{183}{}
+{88}{E:}{}{1}{}{0}{}
+{89}{I suspect that we may very well have a copy.  However, without a membership, I am sorry but I can not assist you.}{I suspect that we may very well have a copy.  However, without a membership, I am sorry but I can not assist you.}{}{}{}{}
+{90}{Membership?}{}{5}{lf8 0}{98}{}
+{91}{Please. Could you tell me a little about your facilities?}{}{5}{lf9 0}{103}{}
+{92}{K:}{}{5}{}{68}{}
+{93}{E:}{}{1}{}{0}{}
+{94}{I suspect that we may very well have a copy.  However, without a membership, I am unable to let you view it.}{I suspect that we may very well have a copy.  However, without a membership, I am unable to let you view it.}{}{}{}{}
+{95}{Membership?}{}{5}{}{115}{}
+{96}{What is this place?}{}{5}{lf10 0}{169}{}
+{97}{How much was that membership price again?}{}{5}{lf10 1}{124}{}
+{98}{That is correct.  Anyone who wishes to peruse our volumes of knowledge must become a member.   The Library of Tarant contains a myriad of books which house many diverse subjects.}{That is correct.  Anyone who wishes to peruse our volumes of knowledge must become a member.   The Library of Tarant contains a myriad of books which house many diverse subjects.}{}{}{}{}
+{99}{How much is it for a membership?}{}{5}{}{124}{lf8 1}
+{100}{Please. Could you tell me a little about your facilities?}{}{5}{lf9 0}{103}{}
+{101}{K:}{}{5}{}{68}{}
+{102}{E:}{}{1}{}{0}{}
+{103}{This is the great Library of Tarant.  It was created 60 years ago when the King chose to make his extensive library available to the public.}{This is the great Library of Tarant.  It was created 60 years ago when the King chose to make his extensive library available to the public.}{}{}{}{}
+{104}{King? Tarant has a king?}{}{5}{}{107}{}
+{105}{You said something about a membership?}{}{5}{lf8 0}{98}{}
+{106}{E:}{}{1}{}{0}{}
+{107}{Tarant no longer has a king.  The tale is a heartbreaking one.  Some would say that when technology began to come into power, it was the King's desire to industrialize Tarant slowly.  Others thought the King was holding technology back from the people.  Though the kingdom was thriving, the royal court was in turmoil.}{Tarant no longer has a king.  The tale is a heartbreaking one.  Some would say that when technology began to come into power, it was the King's desire to industrialize Tarant slowly.  Others thought the King was holding technology back from the people.  Though the kingdom was thriving, the royal court was in turmoil.}{}{}{}{lf9 1}
+{108}{Go on.}{}{5}{}{111}{}
+{109}{You said something about a membership?}{}{5}{lf8 0}{98}{}
+{110}{E:}{}{1}{}{0}{}
+{111}{yes.......The League of Gnomish Merchants was gaining power.  One day the King was found dead.  The Queen and the Prince were missing. Having no heirs, the royal court was disbanded and the Gnomish Merchants Guild took control.}{yes.......The League of Gnomish Merchants was gaining power.  One day the King was found dead.  The Queen and the Prince were missing. Having no heirs, the royal court was disbanded and the Gnomish Merchants Guild took control.}{}{}{}{}
+{112}{Very intriguing story.  Tell me about the membership.}{}{5}{lf8 0}{98}{}
+{113}{K:}{}{5}{}{68}{}
+{114}{E:}{}{1}{}{0}{}
+{115}{All of our scholarly patrons have memberships.  The Library of Tarant requires membership for anyone who wishes to read our volumes.  We find it keeps out the bad element.}{All of our scholarly patrons have memberships.  The Library of Tarant requires membership for anyone who wishes to read our volumes.  We find it keeps out the bad element.}{}{}{}{lf12 1}
+{116}{What is the cost of a membership?}{}{5}{lf8 0}{120}{}
+{117}{What is this place?}{}{5}{}{169}{}
+{118}{My dear lady please don't judge me by my appearance.}{}{5}{ch 13}{179}{}
+{119}{E:}{}{1}{}{0}{}
+{120}{Must we continue this charade?  It must be obvious to you that this is not your element.  The pub is located right down the street.}{Must we continue this charade?  It must be obvious to you that this is not your element.  The pub is located right down the street.}{}{}{}{}
+{121}{Please just tell me how much a membership is.}{}{5}{ra -7,ra -8}{129}{lf8 1}
+{122}{Please just tell me how much a membership is.}{}{5}{ra -1,ra -2,ra -3,ra -4,ra -5,ra -6}{133}{lf8 1}
+{123}{Forget it!  I'll go to the pub. Good bye!}{}{5}{}{0}{}
+{124}{A lifetime membership costs a mere 1500 coins.}{A lifetime membership costs a mere 1500 coins.}{}{}{}{lf10 1}
+{125}{I would like a membership, here's the fee.}{}{5}{lf10 1,$$ 1500}{165}{$$ -1500, lf13 1}
+{126}{I would like a membership, but the fee seems a bit high.}{}{5}{ha 14}{142}{}
+{127}{K:}{}{5}{}{68}{}
+{128}{E:}{}{1}{}{0}{}
+{129}{A lifetime membership costs a mere 2000 coins.}{A lifetime membership costs a mere 2000 coins.}{}{}{}{lf4 1}
+{130}{I would be interested in a membership.}{}{5}{}{137}{}
+{131}{K:}{}{5}{}{68}{}
+{132}{E:}{}{1}{}{0}{}
+{133}{A lifetime membership costs a mere 5000 coins.}{A lifetime membership costs a mere 5000 coins.}{}{}{}{lf3 1}
+{134}{I would be interested in a membership.}{}{5}{}{137}{}
+{135}{K:}{}{5}{}{68}{}
+{136}{E:}{}{1}{}{0}{}
+{137}{[Shocked] Really!?   Oh my......}{[Shocked] Really!?   Oh my......}{}{}{}{}
+{138}{Yes please, here is my membership fee.}{}{5}{lf4 1,$$ 2000}{165}{$$ -2000, lf13 1}
+{139}{Yes please, here is my membership fee.}{}{5}{lf3 1,$$ 5000}{165}{$$ -5000, lf13 1}
+{140}{Yes I would.  But the price seems a bit inflated.}{}{5}{ha 14,lf16 0}{142}{lf16 1}
+{141}{Yes, but not at this time.  I'll be back later.}{}{5}{}{0}{}
+{142}{The Library contains a fortune in knowledge for the exclusive use of it's affluent members.  I'm curious, what do you think a fair price would be?}{The Library contains a fortune in knowledge for the exclusive use of it's affluent members.  I'm curious, what do you think a fair price would be?}{}{}{}{}
+{143}{2000 coins}{}{5}{ha 14,lf3 1}{147}{lf3 0,lf4 1}
+{144}{1000 coins}{}{5}{ha 14,lf4 1}{151}{lf4 0,lf6 1}
+{145}{500 coins}{}{5}{ha 14,lf10 1}{155}{lf10 0, lf7 1}
+{146}{Nevermind.}{}{5}{}{0}{}
+{147}{I find your offer acceptable.  If you have the 2000 coins, then you have your membership.}{I find your offer acceptable.  If you have the 2000 coins, then you have your membership.}{}{}{}{lf4 1}
+{148}{Here is payment.  Thank you.}{}{5}{$$ 2000}{165}{$$ -2000, lf13 1}
+{149}{Here it is.}{}{5}{$$ -1999}{159}{}
+{150}{I'll come back later.}{}{5}{}{0}{}
+{151}{I find you offer hard to resist, 1000 coins it is!}{I find you offer hard to resist, 1000 coins it is!}{}{}{}{lf6 1}
+{152}{Here is payment.  Thank you.}{}{5}{$$ 1000}{165}{$$ -1000, lf13 1}
+{153}{Here it is.}{}{5}{$$ -999,lf4 1}{159}{}
+{154}{I'll come back later.}{}{1}{}{0}{}
+{155}{I would not normally accept such an offer, but I find you hard to resist.}{I would not normally accept such an offer, but I find you hard to resist.}{}{}{}{lf7 1}
+{156}{Here is payment.  Thank you.}{}{5}{$$ 500}{165}{$$ -500, lf13 1}
+{157}{Here it is.}{}{5}{$$ -499,lf10 1}{162}{}
+{158}{I'll come back later.}{}{1}{}{0}{}
+{159}{Just as I thought!  Come back when you have money and we'll see about that membership.}{Just as I thought!  Come back when you have money and we'll see about that membership.}{}{}{}{}
+{160}{K:}{}{5}{}{84}{}
+{161}{E:}{}{1}{}{0}{}
+{162}{Please come back when you have enough money.  Your membership will be awaiting you.}{Please come back when you have enough money.  Your membership will be awaiting you.}{}{}{}{}
+{163}{K:}{}{5}{}{68}{}
+{164}{E:}{}{1}{}{0}{}
+{165}{Thank you, and welcome.  All of the books contained in the great Library are free for you to peruse and borrow.}{Thank you, and welcome.  All of the books contained in the great Library are free for you to peruse and borrow.}{}{}{}{lf13 1}
+{166}{K:}{}{5}{re 45}{68}{}
+{167}{K:}{}{5}{re -44}{84}{}
+{168}{E:}{}{1}{}{0}{}
+{169}{This is the great Library of Tarant.  Surly you read the sign over the entry way.  ......That is, if you can read.}{This is the great Library of Tarant.  Surly you read the sign over the entry way.  ......That is, if you can read.}{}{}{}{lf1 1}
+{170}{Believe me sir, I am very well schooled.}{}{15}{}{179}{}
+{171}{Forgive me sir, I was only trying to make conversation.}{}{10}{ch 13}{179}{}
+{172}{I can read ........a little.}{}{-9}{}{176}{}
+{173}{How much is a membership?}{}{5}{lf12 1}{120}{}
+{174}{Yes, of course I can read!}{}{10}{}{176}{}
+{175}{E:}{}{1}{}{0}{}
+{176}{I'm sure you can.  But you won't be doing any in here.  The Library of Tarant's books are for members only.}{I'm sure you can.  But you won't be doing any in here.  The Library of Tarant's books are for members only.}{}{}{}{}
+{177}{How much is a membership?}{}{5}{}{120}{}
+{178}{E:}{}{1}{}{0}{}
+{179}{Oh?  Please forgive me.  You would think working in a library would have taught me not to read a book by its cover.  What may I help you with?}{Oh?  Please forgive me.  You would think working in a library would have taught me not to read a book by its cover.  What may I help you with?}{}{}{}{re 55}
+{180}{Please. Could you tell me a little about your facilities?}{}{5}{lf9 0}{103}{}
+{181}{You said something about a membership?}{}{5}{lf8 0}{98}{lf8 1}
+{182}{E:}{}{1}{}{0}{}
+{183}{"T'sen-Ang:Horror Among the Dark Elves"? Sounds spooky.....}{"T'sen-Ang:Horror Among the Dark Elves"? Sounds spooky.....}{}{}{}{}
+{184}{Does the library have it?}{}{5}{}{185}{}
+{185}{Do you know who the author would be?}{Do you know who the author would be?}{}{}{}{}
+{186}{Renford A. Terwilliger}{}{5}{}{187}{}
+{187}{Wait here a moment, I'll go and look.}{Wait here a moment, I'll go and look.}{}{}{}{}
+{188}{[wait]}{}{5}{}{190}{}
+{189}{[Leave]}{}{5}{}{0}{}
+{190}{I am sorry, sir.  But I was not able to find "T'sen-Ang:Horror Among the Dark Elves".  However, I did find another book that may be of interest to you.}{I am sorry, madam.  But I was not able to find "T'sen-Ang:Horror Among the Dark Elves".  However, I did find another book that may be of interest to you.}{}{}{}{}
+{191}{No thank you. Good day.}{}{5}{}{0}{}
+{192}{What book would that be?}{}{5}{}{193}{}
+{193}{The book is titled "Curse of T'sen-Ang".  It appears to be a book about the one you are searching for.}{The book is titled "Curse of T'sen-Ang".  It appears to be a book about the one you are searching for.}{}{}{}{}
+{194}{No that's not what I need.  Thank you for looking.}{}{5}{}{0}{}
+{195}{Sounds interesting.  May I check it out?}{}{5}{}{196}{}
+{196}{Yes, of course sir. [She hands you the book]}{Yes, of course madam. [She hands you the book]}{}{}{}{in -5206, lf17 1}
+{197}{Thank you.}{}{5}{}{199}{}
+{198}{E:}{}{1}{}{0}{}
+{199}{Is there any thing else I can assist you in locating?}{Is there any thing else I can assist you in locating?}{}{}{}{}
+{200}{K:}{}{5}{}{68}{}
+{201}{E:}{}{1}{}{0}{}
+{202}{Hello @pcname@, remember be nice to the books.}{Hello @pcname@, remember be nice to the books.}{}{}{}{}
+{203}{Ok I will.}{}{-4}{}{0}{}
+{204}{Please leave!  This is no place for you.  You can't even read.}{Please leave!  This is no place for you.  You can't even read.}{}{}{}{}
+{205}{Look for book.}{}{-4}{lf12 0,qa1022 1,lf18 0,lf17 0}{208}{}
+{206}{Look for book.}{}{-4}{qa1022 1,lf18 1,lf13 1,lf17 0}{223}{}
+{207}{E:}{}{1}{}{0}{}
+{208}{What would you do with a book?  You can't read!}{What would you do with a book?  You can't read!}{}{}{}{}
+{209}{Huh?}{}{-4}{}{211}{}
+{210}{E:}{}{-4}{}{0}{}
+{211}{This is what I can do for you.  Give me the 6000 coins needed for a membership, and I will let you look at all of the books we have.}{This is what I can do for you.  Give me the 6000 coins needed for a membership, and I will let you look at all of the books we have.}{}{}{}{lf18 1,lf20 1}
+{212}{Here y'go.}{}{-4}{$$ 6000}{221}{$$ -6000}
+{213}{Need book with dark, scary elves.}{}{-4}{}{216}{}
+{214}{No. Too much.  Too much!!  [Start to cry]}{}{-4}{ps 14}{218}{}
+{215}{E:}{}{1}{}{0}{}
+{216}{Bring me money for a membership and I will help you.}{Bring me money for a membership and I will help you.}{}{}{}{}
+{217}{E:}{}{1}{}{0}{}
+{218}{Hush, hush, don't make a scene.  Hey.....I'll drop it to 5000, but no less, only if you stop crying.}{Hush, hush, don't make a scene.  Hey.....I'll drop it to 5000, but no less, only if you stop crying.}{}{}{}{lf19 1,lf18 0}
+{219}{Sniff, Sob.....Here.....Take Coin....Sniff}{}{-4}{$$ 5000}{221}{$$ -5000}
+{220}{E:}{}{1}{}{0}{}
+{221}{Oh my!?  Where did YOU locate such a immense sum of money?... Well, I suppose a deal is a deal.  You can go look at the books, but be very careful..... and don't tear them!}{Oh my!?  Where did YOU locate such a immense sum of money?... Well, I suppose a deal is a deal.  You can go look at the books, but be very careful..... and don't tear them!}{}{}{}{lf13 1}
+{222}{Need to find book with spooky, dark elves.}{}{-4}{}{223}{}
+{223}{You must tell me more about the book.  Or I will be unable to find it!}{You must tell me more about the book.  Or I will be unable to find it!}{}{}{}{}
+{224}{Tang-sing - ores and dark elves.}{}{-4}{}{225}{}
+{225}{[obviously frustrated] This is impossible! I'll go try to find you a book with dark elves in it.}{[obviously frustrated] This is impossible! I'll go try to find you a book with dark elves in it.}{}{}{}{}
+{226}{[wait]}{}{-4}{}{229}{}
+{227}{Want book with spooky elves.}{}{-4}{re 30}{233}{re -5}
+{228}{Want book with spooky elves!}{}{-4}{re -29}{237}{}
+{229}{[She fumbles through a stack of books in a cabinet]}{[She fumbles through a stack of books in a cabinet]}{}{}{}{}
+{230}{[wait]}{}{-4}{}{239}{}
+{231}{Want book with spooky elves.}{}{-4}{re 30}{233}{re -5}
+{232}{Want book with spooky elves!}{}{-4}{re -29}{237}{}
+{233}{[She ignores you as looks through a cabinet of books]}{[She ignores you as looks through a cabinet of books]}{}{}{}{}
+{234}{[wait]}{}{-4}{}{239}{}
+{235}{Want book with spooky elves.}{}{-4}{re 30}{233}{re -5}
+{236}{Want book with spooky elves!}{}{-4}{re -29}{237}{}
+{237}{You are going to have to wait!  I'm trying to locate the book for you!}{You are going to have to wait!  I'm trying to locate the book for you!}{}{}{}{}
+{238}{[wait]}{}{-4}{}{229}{}
+{239}{Here! This book has dark elves, "T'sen-Ang:Horror Among the Dark Elves" ........Take it and go away!}{Here! This book has dark elves, "T'sen-Ang:Horror Among the Dark Elves" ........Take it and go away!}{}{}{}{in -5206,lf17 1}
+{240}{aaaaa.......me happy.}{}{-4}{}{0}{}
+

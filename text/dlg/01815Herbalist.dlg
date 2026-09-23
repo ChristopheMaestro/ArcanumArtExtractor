@@ -1,0 +1,68 @@
+{1}{G:}{}{}{}{}{}
+{2}{B:}{}{1}{}{36}{}
+{3}{T:10}{}{1}{}{36}{}
+{4}{What sort of wares do you carry here?}{}{5}{}{43}{}
+{5}{Uh...  What you got 'ere?}{}{-4}{}{43}{}
+{6}{H:}{}{1}{}{43}{}
+{7}{Can you train me to be an Expert healer?}{}{5}{tr10 -1}{36}{et10 58}
+{8}{Me wan' be Exper' heal'r...}{}{-4}{tr10 -1}{36}{et10 58}
+{9}{E:}{}{1}{}{0}{}
+{10}{I sense you are a great mage.  I am honored to be in your presence, sir.  How may I assist you?}{I sense you are a great mage.  I am honored to be in your presence, madam.  How may I assist you?}{}{}{}{re +10}
+{11}{B:}{}{1}{}{36}{}
+{12}{What sort of wares do you carry here?}{}{5}{}{43}{}
+{13}{Uh...  What you got 'ere?}{}{-4}{}{43}{}
+{14}{T:10}{}{1}{}{36}{}
+{15}{H:}{}{1}{}{36}{}
+{16}{Can you train me to be an Expert healer?}{}{5}{tr10 -1}{36}{et10 58}
+{17}{Me wan' be Exper' heal'r...}{}{-4}{tr10 -1}{36}{et10 58}
+{18}{E:}{}{1}{}{0}{}
+{19}{Once again we meet great one.  What can I assist you with?}{Once again we meet great one.  What can I assist you with?}{}{}{}{}
+{20}{B:}{}{1}{}{36}{}
+{21}{T:10}{}{1}{}{36}{}
+{22}{C:}{}{1}{}{36}{}
+{23}{H:}{}{1}{}{36}{}
+{24}{Can you train me to be an Expert healer?}{}{5}{tr10 -1}{36}{et10 58}
+{25}{Me wan' be Exper' heal'r...}{}{-4}{tr10 -1}{36}{et10 58}
+{26}{E:}{}{1}{}{0}{}
+{27}{I sense a great technological aura surrounding you sir.  I am honored to make your acquaintance.  How may I assist you?}{I sense a great technological aura surrounding you madam.  I am honored to make your acquaintance.  How may I assist you?}{}{}{}{re +10}
+{28}{B:}{}{1}{}{36}{}
+{29}{What sort of wares do you carry here?}{}{5}{}{43}{}
+{30}{Uh...  What you got 'ere?}{}{-4}{}{43}{}
+{31}{H:}{}{1}{}{36}{}
+{32}{T:10}{}{1}{}{36}{}
+{33}{Can you train me to be an Expert healer?}{}{5}{tr10 -1}{36}{et10 58}
+{34}{Me wan' be Exper' heal'r...}{}{-4}{tr10 -1}{36}{et10 58}
+{35}{E:}{}{1}{}{0}{}
+{36}{Do you need anything else?}{Do you need anything else?}{}{}{}{}
+{37}{B:}{}{1}{}{36}{}
+{38}{H:}{}{1}{}{36}{}
+{39}{T:10}{}{1}{}{36}{}
+{40}{Can you train me to be an Expert healer?}{}{5}{tr10 -1}{36}{et10 58}
+{41}{Me wan' be Exper' heal'r...}{}{-4}{tr10 -1}{36}{et10 58}
+{42}{E:}{}{1}{}{0}{}
+{43}{I stock only the finest of herbs and infused concoctions.  I harvest each plant at the peak of the season, to ensure unrivaled potency, then shade dry it to perfection.  My infusions are created from age old family recipes, handed down for generations.  Is there anything in particular I can assist you with sir?}{I stock only the finest of herbs and infused concoctions.  I harvest each plant at the peak of the season, to ensure unrivaled potency, then shade dry it to perfection.  My infusions are created from age old family recipes, handed down for generations.  Is there anything in particular I can assist you with madam?}{}{}{}{}
+{44}{B:}{}{1}{}{36}{}
+{45}{H:}{}{1}{}{36}{}
+{46}{T:10}{}{1}{}{36}{}
+{47}{Can you train me to be an Expert healer?}{}{5}{tr10 -1}{36}{et10 58}
+{48}{Me wan' be Exper' heal'r...}{}{-4}{tr10 -1}{36}{et10 58}
+{49}{E:}{}{1}{}{0}{}
+{50}{What is it you want, "sir"?}{What is it you want, "madam"?}{}{}{}{}
+{51}{B:}{}{1}{}{36}{}
+{52}{T:10}{}{1}{}{36}{}
+{53}{H:}{}{1}{}{36}{}
+{54}{C:}{}{1}{}{36}{}
+{55}{Can you train me to be an Expert healer?}{}{5}{tr10 -1}{36}{et10 58}
+{56}{Me wan' be Exper' heal'r...}{}{-4}{tr10 -1}{36}{et10 58}
+{57}{E:}{}{1}{}{0}{}
+{58}{Yes, sir.  I offer training as and expert healer.  I do charge a fee of 500 coin, though.  Would you like to receive training now?}{Yes, madam.  I offer training as and expert healer.  I do charge a fee of 500 coin, though.  Would you like to receive training now?}{}{}{}{}
+{59}{Yes, please.}{}{5}{$$500}{64}{}
+{60}{I will need to gather some coin first.}{}{5}{$$-499}{36}{}
+{61}{Uh...  yeah.}{}{-4}{$$500}{64}{}
+{62}{Me get coin firs'.}{}{-4}{$$-499}{36}{}
+{63}{F:}{}{1}{}{0}{}
+{64}{Thank you. [she takes the coin from you and spends some time instructing you in the latest healing techniques]  Your training is now complete.  Congratulations, You are an Expert Healer.  ...Should you ever wish to become a Master Healer, you will need to seek out Fawn.  She lives in Qintarra.}{Thank you. [she takes the coin from you and spends some time instructing you in the latest healing techniques]  Your training is now complete.  Congratulations, You are an Expert Healer.  ...Should you ever wish to become a Master Healer, you will need to seek out Fawn.  She lives in Qintarra.}{}{}{}{$$-500, tr10 2, ru2170}
+{65}{Thank you.}{}{5}{}{36}{}
+{66}{Uh...  T'anks.}{}{-4}{}{36}{}
+{67}{E:}{}{-4}{}{0}{}
+

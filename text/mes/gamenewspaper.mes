@@ -1,0 +1,507 @@
+// This message file contains text to be used in game-supplied newspapers
+// Only the message line numbers 1000 or higher are valid
+// Each new newspaper begins on a multiple of 10, and can use up to 10
+// lines, which must be consecutive. The first line is always the main 
+// headline, while the 9 remaining lines go into 4 columns of the paper.
+// Format: each line begins with a font number and justification letter,
+// followed by the text for that line.
+
+// Some font numbers to use:
+//	490 Extra Large Headline
+//	486 Large Headline
+//	492 Normal Headline
+//	483 Story Body
+//	488 Clip Art 0-6
+
+// Justification letters (you must use one)
+//	l = left
+//	c = center
+
+// NOTE: The first blocks, 0 thru 999, are reserved for UI use
+
+// tarantian paper
+{0}{EXTRA!}
+{1}{[ THE TARANTIAN ]}
+{2}{Price 2 Coins}
+{3}{The Best Source of News-worthy Items in Arcanum}
+
+// vendigrothian paper
+{4}{[ THE VENDIGROTH TIMES ]}
+{5}{All the News That is Fit to Print}
+
+// filler articles
+{10}{492c _ WEATHER _}
+{11}{483l The Meteorological Service Bureau of Tarant is Predicting sunny weather for the next Two to Three days, with an increasing Chance of Precipitation before the Passage of a Fortnight.}
+{12}{492c _ TAX INCREASE _}
+{13}{483l The Parliament is again considering Raising the Levy of Incomes in Tarant by another 2 coins for every 100 earned. The Speaker has refuted all Public Criticism of the Increase, by Citing the importance of Public Works projects currently underway.}
+{14}{492c _ PUBLIC SERVICE ANNOUNCEMENT _}
+{15}{483l There will be a City Council meeting this Friday which is Open to the Public. The Meeting will commence sharply at 7pm.}
+{16}{492c _ EDITORIAL REMINDER _}
+{17}{483l The Tarantian would like to take this Opportunity to remind its Gentle Reader that all letters to Editor do not necessarily Reflect the views of the Newspaper or its Owner, Sir William Willaby.}
+{18}{492c _ PROHIBITION _}
+{19}{483l The spectre of Prohibition has risen once again, as Parliament considers a Bill to ban the sales of Spirits in the confines of the City proper. Supporters of the Bill cite increased Crime and Work Absenteeism figures as the principle Show of Cause for the bill, while its Critics cite similiar Statistics during the last Prohibition era over 30 years ago.}
+{20}{492c _ UNIVERSITY COLLOQUIUM SERIES _}
+{21}{483l The Engineering School of the University of Tarant is holding a Distinguished Speaker Series this semester. Interested parties are invited to contact the University Registrar for more Information.}
+{22}{492c _ CHARITY BALL _}
+{23}{483l The Ladies Society of Tarant will once again hold a Charity Ball this Saturday evening. This Event will benefit Orphans and Survivors of Foreign Wars. Festivities will begin at 8pm. Strict dress code will be enforced.}
+{24}{492c _ TIDAL FIGURES _}
+{25}{483l High tides will occur at 6:15am and 7:30pm today, with low tides at approximately 1:05pm and 25 minutes after midnight. Full tidal charts can be found on page 8.}
+
+//Game Related Newspapers
+//Use lines 1000-4990
+//Generic Newspapers Start at line 5000
+
+{1000}{490c SAMPLE HEADLINE!}
+{1001}{492c _ Place subheading here _}
+{1002}{483l And here's the text of the story. It's pretty exciting!}
+
+{1020}{490c GARRINGSBURG HEIST!
+PAINTING STOLEN!}
+{1021}{492c _ THIEVES STILL AT LARGE _}
+{1022}{483l Late on Tuesday evening, the mansion of Mr. James and Mrs. Evelyn Garringsburg, at 37 Devonshire Way, was broken into by thieves and ransacked, according to sources close to the family.  Among the many items stolen was the famed 'Kerghan and Persephone', painted by Pizarro.  Sold last year at Renaud's for a reputed 50,000 gold pieces, the painting was the show piece of the Garringsburg gallery.
+Mr. Garringsburg, a long-standing member of the Wellington Gentlemen's Club, had this to say--"You can be assured that the perpetrators of this heinous crime will be brought to justice, and that reparations will be made."  Mrs. Garringburg was unavailable for comment.
+The Garringsburgs have offered a 300 gold piece reward.  This crime is only the latest of many art-related robberies, which have included the "Lorek in repose" statue, and the Blendom Vase.}
+
+{1030}{490c ELVEN TOMBS DISCOVERED!}
+{1031}{492c _ DISCOVERY OF TOMBS IN THE MORBIHAN PLAINS BY LEARNED PROFESSOR R.I. JAMES CAUSE OF MUCH EXCITEMENT _}
+{1032}{483l Professor William G. Harriman is set to embark on an expedition to the Morbihan Plains, where a new series of ancient elvish tombs have recently been unearthed, including this exquisite example of prehistoric elven funerary art.}
+{1033}{488c 6}
+{1034}{483l According to learned professor R.I. James of the Tarantian University, who is currently on the scene, "These tombs conclusively prove that prehistoric elven society buried their dead in the ground, as I had previously theorized." Professor James discovered the tombs while searching the region for more of the Fossils which have so delighted visitors to the Polytechnic's Hall of Natural History. The unprecedented collaboration between Mssrs. James and Harriman is a unique event in the histories of their respective institutions of employment, and perhaps heralds a new era of co-operation between the two.  In any case, the curate was most effusive in praise of the kindness and good judgement of Professor James, who immediately sent for him when the nature of his discovery became clear.}
+
+{1040}{490c GILBERT BATES MURDERED!}
+{1041}{492c _ FAMED INDUSTRIALIST DEAD AT THE HANDS OF AN UNKNOWN ASSAILANT _}
+{1042}{483l 	Mr. Gilbert Bates, "The Father of Industry" as he was often called, was found dead in his mansion today, apparently the victim of foul play. His assassin is still at large.}
+{1043}{483l		Mr. Bates first attained national recognition as a youth when he invented the world's first steam engine. A reserved and humble man, Mr. Bates often attempted to downplay his achievements, saying he did not truly invent the steam engine, rather he "put together ideas that had been around for centuries" and often remarked upon his amazement that he was the first to do so.
+	Cedric Appleby, known rival and detractor of the esteemed Mr. Bates is being considered as a possible suspect at this time. "His public denunciations of Bates and his ties to the lower degenerate classes put him at the top of our list," said the chief of police.}
+{1044}{483l 	A public funerary service will be held next week. Time and location to be announced.}
+
+{1050}{490c GILBERT BATES EXPOSED AS FRAUD!}
+{1051}{492c _ BATES' JOURNAL SOLD TO PRESS, PROOF OF DWARVEN ORIGINS OF STEAM ENGINE _}
+{1052}{483l 	In a development that has shocked all of the Unified Kingdom, Gilbert Bates' journal has revealed the actual origin of the steam engine - deep within the caverns of the Black Mountain Clan! 
+	"I've been saying for years he is a fraud, and now I have proof," shouted Mr. Appleby, waving Bates' journal for all to see. "Thank the gods this impostor had finally been exposed!"} 
+{1053}{483l		Mr. Bates could not be reached for comment, as he has left his palatial estate in Tarant for points unknown. No details of his intended destination have surfaced at this time. Public opinion still seems to be behind Gilbert Bates at this time, though, much to Mr. Appleby's consternation.
+	Also involved in betraying Mr. Bates to the public is a mysterious figure, an adventurer of sorts, about which little is known (please see artist's conception, page 2).}
+
+{1060}{490c CEDRIC APPLEBY FOUND DEAD!}
+{1061}{492c _ LOCAL MISCREANT VICTIM OF FOUL PLAY _}
+{1062}{483l "Inventor" Cedric Appleby was found dead in his factory late yesterday, obviously the victim of his own machinations.
+	"It's fairly obvious to all that Mr. Appleby received his just reward," opined the constable on the scene, "what with him publicly berating Mr. Bates all the time, it was bound to happen sooner or later."
+	The always cordial Mr. Bates had this to say about his newly deceased rival, "I am truly sorry Cedric had to come to this. Perhaps it was a disgruntled customer that brought his sad life to an end." At this point, the press and Mr. Bates had a good laugh over the whole affair.}
+{1063}{483l		This reporter, for one, will miss old Cedric, as his escapades were always good for some light copy.
+	Appleby, infamous for his slipshod imitations of Bates' engines, has also been linked to recent attempts to sabotage the newest Bates' engine prototype.}
+
+
+{1070}{490c TRAIN WRECK AT
+VERMILLION STATION!}
+{1071}{492c _ DISASTER LEADS TO SEVERAL ARRESTS _}
+{1072}{483l On Friday evening, the Brackenton line was derailed by magickal influences, injuring numerous bystanders and passengers.  The incident followed an attack on Councilman Edward Willoughsby and Tullan mage Perriman Smythe by local bandits.  Smythe's retaliation led to the train wreck.
+Later that evening, Willoughsby and Smythe were accosted once again at the Willoughsby mansion.  Intervention by Smythe and an unidentified gentlemen led to the arrest of multiple individuals, one of them a powerful mage.  Willoughsby was uncharacteristically closed-mouthed about the affair.  
+"This was a private affair, and it has been dealt with in that manner."  Smythe said he might spend some more time in the city, but plans to avoid Vermillion Station.  Said Smythe, "Dreadful affair.  I'd rather forget the whole thing." }
+
+{1080}{490c WHYTECHURCH MURDERER STRIKES!}
+{1081}{492c _ POLICE BAFFLED, ASK CITIZENS FOR HELP _}
+{1082}{483l 	"Any information the citizens of Caladon could provide would be greatly appreciated," Chief Inspector Henderson told reporters earlier today. "We will use whatever means necessary to catch this heinous killer."
+This is the second in what police are beginning to fear will become a string of murders if the madman responsible is not brought to justice soon.
+	Details the police have shared with the public are scarce, but we do know the killer seems to have a preference for ladies of the night, as it were. "This does not mean the public can rest easy," Chief Inspector Henderson continued, "who knows when the murderer will tire of easy prey and begin seeking out our wives and daughters."}
+{1083}{483l 	Any citizen with information pertaining to the case should contact the Chief Inspector at 5 Saints Ave. immmediately.}	
+
+{1090}{490c COUNCILMAN URGES WAR ON CALADON!}
+{1091}{492c	_ THEY MUST BE STOPPED BEFORE THEY DESTROY OUR WAY OF LIFE _}
+{1092}{483l 	In an impassioned, and at times violent display on the floor of the Industrial Council, Councilman Braithe called for nothing less than the unconditional surrender of Caladon, even though no formal declaration of war has been issued.
+	"Were the magickally inclined in Tarant ever to try to usurp power as in the bloody mage riots of ten years past, Caladon would throw full support behind them," he screamed. "A monarchy can not be trusted, much less one that embraces both magick and technology! I say, annex Caladon now!"}
+{1093}{483l 	This reporter could not agree more with the sentiments of Councilman Braithe. It is high time we gave those Caladonians what for! We at the Tarantian hope that you will join us in urging a recall of present chairman Willoughsby and establishing Braithe in his place.}
+
+{1100}{490c KING OF CALADON
+ASSASSINATED!}
+{1101}{492c _ INCIDENT THREATENS UPCOMING NEGOTIATIONS _}
+{1102}{483l	King Farad of Caladon was found dead in his chambers, the victim of a terrible attack by one or more assailants.  The assassination falls on the eve of the negotiations between the Unified Kingdom and Caladon, and seriously threatens the possibilities of Caladon's membership.  Said Prince Auguste Farad, "We've no proof yet that this was related to the negotiations, but we're still investigating.  My father will be avenged."
+	Garret Blye, Captain of the Caladonian Royal Guard, had this to say.  "The fact that the murder took place in the King's Chamber's, just under our noses, points to foul play.  Many of the castle's servants are currently undergoing exhaustive, uh, questioning."
+	Edward Willoughsby, the Chairman of Tarant's Industrial Council and the leading proponent of Caladon's impending membership, was unavailable for commment.}
+
+{1110}{490c CALADONIAN MAN
+BRUTALLY MUREDERED!}
+{1111}{492c _ "Upstanding Citizen" survived only by his brother _}
+{1112}{483l	Local gentlemen Lawrence Brummond was found dead in his apartment last evening, the victim of a brutal beating by one or more assailants.  Currently, police have no suspects in the case.
+	"Its downright puzzling." said detective William Prescott. "Nothing out of the apartment was stolen, and there was plenty to steal.  From what we have pieced together, Mr. Brummond was a very upstanding citizen, from a well-respected family here in Caladon.  Somebody took a dislike to him, and we aim to find out who and why."
+	Police are investigating various rumors that the murder is in some way connected to the Caladon Crime Ring, purportedly headquartered in the Sobbing Onion Tavern, but no substantial evidence has yet been found.
+	Mr. Brummond is survived only by his brother Virgil, who the police are still trying to contact.  "We're hoping he might know something about the whole affair.  We've had some trouble finding him."}
+
+{1120}{490c OUTLANDER FINDS
+STOLEN PAINTING!}
+{1121}{492c _ Local Thieves Foiled by Hero _}
+{1122}{483l	Local socialite Evelyn Garringsburg announced the return of her painting, the famous "Kerghan and Persephone", by an unknown gentleman of considerable resourcefulness and bravery.  The painting, found in Mulligan Bone Alley, has been missing since it was first reported stolen by the Garringsburgs last week.  
+	The circumstances surrounding the paintings return are vague, but Mrs. Garringsburg had the utmost confidence in the character of the gentlemen who returned it.
+	"Oh, he was just a gem!  Of course I paid him for his services, but his motivations were singularly chivalrous!  If only all the men in this dreadful city were the same."  Mr. Garringsburg was unavailable for comment.
+	And to the stranger who found the paiting, this reporter takes his hat off to you, sir!  Tarant is a better place because of you.}
+
+{1130}{490c OUTLANDER FINDS
+STOLEN PAINTING!}
+{1131}{492c _ Local Thieves Foiled by Heroine _}
+{1132}{483l	Local socialite Evelyn Garringsburg announced the return of her painting, the famous "Kerghan and Persephone", by an unknown lady of considerable resourcefulness and bravery.  The painting, found in Mulligan Bone Alley, has been missing since it was first reported stolen by the Garringsburgs last week.  
+	The circumstances surrounding the paintings return are vague, but Mrs. Garringsburg had the utmost confidence in the character of the lady who returned it.
+	"Oh, she was just a angel!  Of course I paid her for her services, but her motivations were completely selfless!  If only all the women in this dreadful city were the same."  Mr. Garringsburg was unavailable for comment.
+	And to the stranger who found the paiting, this reporter takes his hat off to you, madam!  Tarant is a better place because of you.}
+
+{1140}{490c THIS IS A MISTAKE!}
+{1141}{492c _ Chad forgets what story this was! _}
+{1142}{483l	Please make chad aware if you see this!}
+
+{1150}{490c IFS ZEPHYR MIRACLE!
+SURVIVOR TELLS ALL!}
+{1151}{492c _ Man Walks Away from Fiery Death! _}
+{1152}{483l	Greetings, fellow Tarantians!  It is I, Victor Wright, your faithful and vigilant editor, bringing you an exclusive story that only a paper of this breadth and quality could possibly do!  
+	Just yesterday, our humble offices were visited by none other than the sole survivor of the IFS Zephyr blimp tragedy (please see photograph, pg.2), and he deigned to share his account of the final minutes of that fateful voyage with me, which I now share with you!  Be warned!  This story is not for the faint of heart!  'Tis a tale so real and frightening, that I recommend it only to those with the most iron-like will and constitution!
+	Upon questioning, the gentleman had this to say about his harrowing experience.  "There was a tremendous explosion...it shook the entire vessel...I didn't see anything in the air, but I heard the sound of gunfire...I also heard engines... I believe there were 2 different ones."  As impossible as it may sound, it seems the Zephyr had been attacked by some other sort of flying craft.  Upon landing, the gentleman said  that "There was wreckage also, near the blimp.  Some strange craft..."  What those craft were, the gentleman was at a loss to say.
+	The fate of the Zephyr was sealed only moments after the attack.  "I am sorry to say that no one else survived the impact," the gentleman said.  He was still visibly shaken from the experience, and I stopped questioning him shortly thereafter.
+	So!  Dear friends of the city!  What are we to make of this?  What were these strange craft?  Why did they attack such a noble craft as the Zephyr?  Flying bandits?  Or something even more dark and insidious?  Are we not safe even in our fair skies?  We at the Tarantian will work to bring you the truth of the matter, and I, Victor Wright, will not rest until we have done so!}
+
+{1160}{490c IFS ZEPHYR MIRACLE!
+SURVIVOR TELLS ALL!}
+{1161}{492c _ Woman Walks Away from Fiery Death _}
+{1162}{483l	Greetings, fellow Tarantians!  It is I, Victor Wright, your faithful and vigilant editor, bringing you an exclusive story that only a paper of this breadth and quality could possibly do!  
+	Just yesterday, our humble offices were visited by none other than the sole survivor of the IFS Zephyr blimp tragedy (please see photograph, pg.2), and she deigned to share her account of the final minutes of that fateful voyage with me, which I now share with you!  Be warned!  This story is not for the faint of heart!  'Tis a tale so real and frightening, that I recommend it only to those with the most iron-like will and constitution!
+	Upon questioning, the lady had this to say about his harrowing experience.  "There was a tremendous explosion...it shook the entire vessel...I didn't see anything in the air, but I heard the sound of gunfire...I also heard engines... I believe there were 2 different ones."  As impossible as it may sound, it seems the Zephyr had been attacked by some other sort of flying craft.  Upon landing, the lady said  that "There was wreckage also, near the blimp.  Some strange craft..."  What those craft were, she was at a loss to say.
+	The fate of the Zephyr was sealed only moments after the attack.  "I am sorry to say that no one else survived the impact," the the woman said.  She was still visibly shaken from the experience, and I stopped questioning her shortly thereafter.
+	So!  Dear friends of the city!  What are we to make of this?  What were these strange craft?  Why did they attack such a noble craft as the Zephyr?  Flying bandits?  Or something even more dark and insidious?  Are we not safe even in our fair skies?  We at the Tarantian will work to bring you the truth of the matter, and I, Victor Wright, will not rest until we have done so!}
+
+{1170}{490c IFS ZEPHYR MIRACLE!
+SURVIVOR TELLS ALL!}
+{1171}{492c _ Man Walks Away from Fiery Death! _}
+{1172}{483l	Greetings, fellow Tarantians!  It is I, Victor Wright, your faithful and vigilant editor, bringing you an exclusive story that only a paper of this breadth and quality could possibly do!  
+	Just yesterday, our humble offices were visited by none other than the sole survivor of the IFS Zephyr blimp tragedy (please see photograph, pg.2), and he deigned to share his account of the final minutes of that fateful voyage with me, which I now share with you!  Be warned!  This story is not for the faint of heart!  'Tis a tale so real and frightening, that I recommend it only to those with the most iron-like will and constitution!
+	Upon questioning, the simple gentleman had this to say about his harrowing experience.  "Der was big bang!  It rock whole blimp...Me no see nuthin', but me ear big gun firing...Me ear engines too.  Me t'ink der were 2."  As impossible as it may sound, it seems the Zephyr had been attacked by some other sort of flying craft.  Upon landing, the gentleman said  that "Me see wreck too.  Near blimp.  Some o'der flying t'ing!"  What those craft were, the gentleman was at a loss to say.
+	The fate of the Zephyr was sealed only moments after the attack.  "No o'der people live when hit ground," the gentleman said.  Alhtough not the most intelligent man, he was still visibly shaken from the experience, and I stopped questioning him shortly thereafter.
+	So!  Dear friends of the city!  What are we to make of this?  What were these strange craft?  Why did they attack such a noble craft as the Zephyr?  Flying bandits?  Or something even more dark and insidious?  Are we not safe even in our fair skies?  We at the Tarantian will work to bring you the truth of the matter, and I, Victor Wright, will not rest until we have done so!}
+
+{1180}{490c IFS ZEPHYR MIRACLE!
+SURVIVOR TELLS ALL!}
+{1181}{492c _ Woman Walks Away from Fiery Death! _}
+{1182}{483l	Greetings, fellow Tarantians!  It is I, Victor Wright, your faithful and vigilant editor, bringing you an exclusive story that only a paper of this breadth and quality could possibly do!  
+	Just yesterday, our humble offices were visited by none other than the sole survivor of the IFS Zephyr blimp tragedy (please see photograph, pg.2), and she deigned to share her account of the final minutes of that fateful voyage with me, which I now share with you!  Be warned!  This story is not for the faint of heart!  'Tis a tale so real and frightening, that I recommend it only to those with the most iron-like will and constitution!
+	Upon questioning, the simple lady had this to say about his harrowing experience.  "Der was big bang!  It rock whole blimp...Me no see nuthin', but me ear big gun firing...Me ear engines too.  Me t'ink der were 2."  As impossible as it may sound, it seems the Zephyr had been attacked by some other sort of flying craft.  Upon landing, she said  that "Me see wreck too.  Near blimp.  Some o'der flying t'ing!"  What those craft were, the lady was at a loss to say.
+	The fate of the Zephyr was sealed only moments after the attack.  "No o'der people live when hit ground," she said.  Alhtough not the most intelligent woman, she was still visibly shaken from the experience, and I stopped questioning her shortly thereafter.
+	So!  Dear friends of the city!  What are we to make of this?  What were these strange craft?  Why did they attack such a noble craft as the Zephyr?  Flying bandits?  Or something even more dark and insidious?  Are we not safe even in our fair skies?  We at the Tarantian will work to bring you the truth of the matter, and I, Victor Wright, will not rest until we have done so!}
+
+{1190}{490c IFS ZEPHYR MISSING!}
+{1191}{492c _ Fate of Great Airship Unknown! _}
+{1192}{483l	The maiden voyage of the IFS Zephyr, the first "lighter than air" airship in all of Arcanum, has come to an uncertain and mysterious end.  Initial reports from Vermillion Station are cloudy and vague, but it seems that the ship was last seen passing over the Grey Mountains, near the small mining village of Shrouded Hills.
+	We've yet been unable to contact the village directly by telegram, but the failure of the Zephyr to appear here in Tarant is a bad omen.  "The blimp was only designed to land in particular areas, and she doesn't have enough coal to keep her alight this long," said the Station Master at Vermillion Station.  "I'm afraid that logic dictates only one alternative."
+	Edward Willoughsby, Chairman of the Industrial Council, and a large investor in Vermillion Station, had this to say.  "I don't want everyone to go assuming the worst here.  The captain of the Zephyr was a skilled pilot.  Who's to say whether or not he might have landed that ship somewhere else?  I myself am hoping for the best, and my best thoughts go out to those passengers who were aboard."
+	This news follows soon after the train wreck at Vermillion Station just a few days ago.  Let us hope that the IFS Zephyr suffers a lesser fate than did the train on the Brackenton Line.}
+
+{1200}{490c PAYNE KILLS DEMON!}
+{1201}{492c _ Famed Adventurer Payne Ends Whytechurch Murders! _}
+{1202}{483l		That is correct, dear readers, our city is safe once again, due to the bravery of none other than the world renowned big game hunter Franklin Payne!
+	When asked if it was difficult to kill the creature, Payne quipped, "Bagging a demon is always a fantastic way to begin one's morning! Ha! This one was a bit of sport, but nothing to distressingly difficult, I should say."}
+{1203}{483l		As per usual, our "esteemed" Chief Inspector had no comment on why the police were powerless to stop the creature. Also unanswered was why he was unable to determine the demonic nature of the killer.}
+{1204}{483l		According to Professor Eakins of the Tarant University, the demon was originally summoned in Tarant, some 500 years ago, and has been lurking in our old sewers since. It was recently revived when the new sewer system was constructed. 
+	Once again, Tarant's folly becomes Caladon's problem! It is time for us to break all ties with Tarant before they ruin us completely!}
+
+{1210}{490c RENFORD A. TERWILLIGER FOUND DEAD!}
+{1211}{492c _ FAMED AUTHOR DEAD AMIDST MYSTERIOUS CIRCUMSTANCES _}
+{1212}{483l 	Mr. Renford A. Terwilliger, infamous author, was found dead in his home today, under very questionable circumstances.}
+{1213}{483l	Mr. Terwilliger gained noteriety with the publication of his controversial novel "Horror Among the Dark Elves", when he made every effort to assure the public that the work was indeed based on factual evidence.  However, much to Mr. Terwilliger's dismay, discerning minds deemed the book to be a work of fiction in its entirety.  Mr. Terwilliger's publicist announced that the troubled author had recently been undergoing treatments to aid with the ongoing delusions that someone was attempting to murder him for publishing his work.
+		The authorities are continuing their investigation as to the cause of his untimely demise.}
+{1214}{483l 	A private funerary for close relations and acquaintances will be held next week.}
+
+{1220}{490c SOCIETY MATRON MURDERED!}
+{1221}{492c _ PETTIBONE FOUND MURDERED WITH CEREMONIAL KNIFE _}
+{1222}{483l		Mrs. Cassandra Pettibone was found by her maid early this morning with a knife sticking prominently from her upper torso. The murder weapon appears to be an ancient ceremonial blade, perhaps of elven origin.}
+{1223}{483l		Captain Wheeler of the Tarantian Guard had this to say: "We have no leads at this time, but I would not be surprised to find that this has something to do with the latest craze among high society for elven relics." 
+	He continued, "It is rumored that some of the latest aquisitons of some of our more prominent citizens have been procured by somewhat questionable means. The public can rest assured we are looking in to all of these accusations carefully."}
+
+{1230}{490c DONN THROGG STILL AT LARGE!}
+{1231}{492c _ COWARDLY HALF-ORC STILL IN HIDING _}
+{1232}{483l		Donn Throgg, the infamous half-orc labor agitator, has been missing since Capt. Wheeler of the Tarantian Guard was forced to demonstrate the effectiveness of the Guard's new mechanized gun on the unruly anarchist protesters in Kensington Park. The unlawful assembly of orcs and half orcs is thought to have been organized by Throgg to bring more unrest to the city. 
+	"That Throgg is nothing but a trouble maker," said Capt. Wheeler, "he should be considered extremely dangerous, and if one of our good citizens happens to encounter him they should by no means try to speak with him, or have any dealings with him whatsoever. Any sightings of Throgg should immediately be reported to the Guard at once. This is a Guard matter, and should be treated accordingly."}
+{1233}{483l		Capt. Wheeler is being considered by the Industrial Council for a commendation for his recent heroic efforts, with only Councilmen  Willoughsby, Babcock and McGeehan dissenting.}
+
+{1240}{490c ANARCHIST LABORERS TAKE OVER FACTORY!}
+{1241}{492c _ UNLAWFUL ASSEMBLY DECLARED BY CAPT. WHEELER _}
+{1242}{483l		Donn Throgg has led a band of surly orcs to take over their place of employment, a factory at 15 Ten Hands Alley on the very edge of the warehouse district. At the present moment, Capt. Wheeler is on the scene with his Elite Tarantian Guards. 
+	"Throgg won't escape this time. You can be certain of that," Capt. Wheeler stated, "he's a menace to our society, to our very way of life."}
+{1243}{483l		Also on the scene was the Councilman Babcock, who had quite a different view of the proceedings. "It is wrong to treat orcs and half orcs as if they were animals. Something needs to be done about a system of laws that discriminates against certain races."
+	This reporter feels that Mr. Babcock should keep to his own affairs, and leave the discipline of the unruly lower races to qualified individuals, such as Capt. Wheeler.}
+
+{1250}{490c THROGG DEAD!}
+{1251}{492c _ "CITY CAN REST EASY NOW" SAYS WHEELER _}
+{1252}{483l		Our very own brave souls of the Tarantian Guard brought down notorious labor agitator Donn Throgg yesterday in a rain of bullets. Throgg, who has been linked to several flare ups of violence between protestors and the Guard, was considered public enemy number one by the Industrial Council.
+	"It's high time that low life got what he deserved," said Captain Wheeler, who was in charge of the detachment that ended Throgg's miserable life.}
+{1253}{483l		As usual, Councilman Babcock was on hand to decry the necessary use of violence against such hooligans. "What we have witnessed here today is the death of a journalist created monster! He was, in reality, simply trying to gain for his people what we all want - respect and our rights." Mr. Babcock continued in this vein for some time, but this reporter refuses to subject our readers to any more of his drivel.}
+
+{1260}{490c THROGG DEAD!}
+{1261}{492c _ "CITY CAN REST EASY NOW" SAYS WHEELER _}
+{1262}{483l		An unknown hero finally killed the infamous Donn Throgg, after years of his disrupting our fair city with his illegal protests and calls for equality. Throgg, who has been linked to several flare ups of violence between protestors and the Guard, was considered public enemy number one by the Industrial Council.
+	"It's high time that low life got what he deserved," said Captain Wheeler, who was in charge of the detachment that had trapped Throgg inside a warehouse, where the unidentified killer struck.}
+{1263}{483l		As usual, Councilman Babcock was on hand to decry the necessary use of violence against such hooligans. "What we have witnessed here today is the death of a journalist created monster! He was, in reality, simply trying to gain for his people what we all want - respect and our rights." Mr. Babcock continued in this vein for some time, but this reporter refuses to subject our readers to any more of his drivel.}
+
+{1270}{490c THROGG ESCAPES!!}
+{1271}{492c _ WHEELER BLAMES INTERFERENCE OF BABCOCK AND UNNAMED STRANGER _}
+{1272}{483l		After a carefully orchestrated operation in which Donn Throgg, the infamous labor agitator, was moments away from being apprehended, Councilman Babcock and an unnamed stranger conspired to effect Throgg's escape. 
+	"I cannot believe the "esteemed" Mr. Babcock had the gall to interfere in a Guard matter! I will see to having him brought up on charges!" Seethed Capt. Wheeler of the Tarantian Guard. He continued, "this was the day the threat of Donn Throgg was going to end, and Babcock's interference has set this menace loose upon Tarant again!"
+	Mr. Babcock denied knowledge of the unnamed stranger Wheeler claimed as Babcock's accomplice and also declined to comment on the whole situtation, except to say, "I think it is high time we treated all races equally, and stop the evil racism practiced by Wheeler and his ilk."}
+
+{1280}{490c MAGE THREATENS VENDIGROTH!}
+{1281}{492c _ CRAZED WIZARD WARNS AGAINST TECHNOLOGY _}
+{1282}{483l		An uninvited mage burst into the Governor's office yesterday and warned him of severe repercussions if Vendigroth did not stop developing technology. This mage, who identified himself as "Arronax" and claimed to be a member of the "Elven Council", demanded we observe the decisions of said council. 
+	Governor Nikolai informed Arronax that Vendigroth is a wholly independent country. We have never asked for, nor accepted, help from the Elven Council nor do we recognize its authority. Arronax launched into a prolonged lecture on the right of the elves to rule, after which the Governor asked him to leave. Before departing, Arronax said we would do well to heed his warnings.
+	We of the Vendigroth Times would like to applaud the actions of the Governor, who we have been critical of in the past, and we'd also like to call the citizenry to prepare for possible conflict with this crazed mage.}
+{1283}{492c _ SCIENTISTS BEGIN DEFENSE WORK _}
+{1284}{483l		Local scientists have begun work on a device that will hopefully make any mage think twice before attacking us. After yesterday's encounter with Arronax, the Governor allocated the needed funds for the device, which scientists have been proposing for months.
+	We at the Vendigroth Times have been able to get a rough idea of the workings of this device, even though, understandably, its innermost workings are a government secret. The device is meant to somehow drain the very life force from a mage! Only through the wonders of science is such a thing possible!}
+{1285}{492c _ GOVERNOR CALLS EMERGENCY CABINET MEETING _}
+{1286}{483l		Governor Nikolai called for an emergency cabinet meeting today to devise new defense strategies.}
+
+{1290}{490c SCANLAN'S FACTORY DESTROYED BY MAGE!}
+{1291}{492c _ "THIS WILL NOT STAND" VOWS GOVERNOR _}
+{1292}{483l		The mage that threatened our esteemed Governor two weeks ago has returned, and this time he has brought death with him. After callously destroying Scanlan's Factory (and thereby causing countless deaths) he had the audacity to threaten the governor yet again, saying, "this is only the beginning, if you continue down the path you've chosen".
+	The Governor, to his credit, refused to bow to this "Arronax's" whims, and told him to get out of his office. We have no comment from the Governor on the direction the meeting took after that, as he is still in critical condition in the hospital. His duties have been assumed by the Lieutenant Governor during his recovery.
+}
+{1293}{492c _ FREUHOFF'S DEVICE FINISHED! _}
+{1294}{483l		"Our first line of defense is complete." Boasted Dr. Samuel Freuhoff, as he held up what the press has begun calling "Freuhoff's Device". "Any mage will think twice before attacking a civilization that has the capability of wrenching his very life force from his body, with no hope of magickal resurrection possible," he continued.
+	Plans to begin construction of more devices, as well as several other types of anti-mage devices, are now underway.
+
+}
+{1295}{492c _ PUBLIC SERVICE ANNOUNCEMENT _}
+{1296}{483l There will be an emergency meeting this Friday which is open to the public. The Meeting will commence sharply at 7pm, and will cover what to do in case of further mage attacks.}
+{1297}{492c _ EDITORIAL REMINDER _}
+{1298}{483l The Vendigroth Times would like to take this Opportunity to remind its Gentle Reader that all letters to Editor do not necessarily Reflect the views of the Newspaper or its Owner.}
+
+{1300}{490c PROFESSOR HUNLEY TO TEST SUBMERSIBLE}
+{1301}{492c_ LEAGUE OF SCIENTISTS DISPUTE HIS THEORIES _}
+{1302}{483l		Professor Aldous Hunley is scheduled to launch his fully submersible watercraft tomorrow at noon, but his colleagues in the League of Scientists claim his theories are wrong and that he is placing himself in great mortal danger.
+	"His theories on buoyancy and air recycling are based on sound principles, but he has come to at best questionable conclusions regarding his ability to control these important factors," stated his colleague, Professor Jonathan Frink. He continued, "I fear his plan for reestablishing buoyancy by means of pressurized air is doomed to failure. When that monstrosity submerges, I fear it will never rise again. I have implored him to do more tests before conducting field studies, but he is determined to prove his theories right, at any cost."
+	Professor Hunley's craft, which resembles a large sea creature, can be seen at Dixon's Landing on the South Port before its inaugural run tomorrow.
+}
+{1303}{492c _ CHARITY BALL _}
+{1304}{483l The Ladies Society of Vendigroth will once again hold a Charity Ball this Saturday evening. This Event will benefit Orphans and Survivors of Foreign Wars. Festivities will begin at 8pm. Strict dress code will be enforced.}
+{1305}{492c _ TAX RELIEF _}
+{1306}{483l The Governor is considering Lowering the Levy of Incomes in Vendigroth by 2 coins for every 50 earned. The Governor has refuted all Public Criticism of the Decrease by his Cabinet.}
+{1307}{492c _ TIDAL FIGURES _}
+{1308}{483l High tides will occur at 6:15am and 7:30pm today, with low tides at approximately 1:05pm and 25 minutes after midnight. Full tidal charts can be found on page 8.}
+
+{1310}{490c PROF. HUNLEY MISSING, PRESUMED DEAD!}
+{1311}{492c _ EXPERIMENTAL SUBMERSIBLE FAILS TO RETURN _}
+{1312}{483l		Professor Aldous Hunley of the League of Scientists has been listed as missing and presumed dead after his experimental craft failed to return to port at its previously scheduled time.
+	"This is a sad day for all science," commented his sometime adversary on the council, Professor Jonathan Frink. "We may have disagreed on quite a few matters, but we respected each other's opinions. He will be missed."
+	Professor Hunley launched his experimental submersible some seven days past, and was scheduled to return two days ago. Professor Frink predicted this as a likely outcome, and tried to dissuade Hunley from proceeding with the test, to no avail. "I imagine my colleague is resting somewhere on the ocean floor, about now," he was heard to say as he walked away from the press conference where Hunley's disappearance was made public.
+}
+{1313}{492c _ UNIVERSITY SEEKS REPLACEMENT _}
+{1314}{483l 	The Engineering School of the University of Vendigroth is looking for a replacement for Professor Hunley, who is now presumed dead. All qualified applicants are requested to apply in person.
+} 
+{1315}{492c _ PROHIBITION _}
+{1316}{483l 	The spectre of Prohibition has risen once again, as the Governor considers a Bill to ban the sales of Spirits in the confines of the City proper. Supporters of the Bill cite increased Crime and Work Absenteeism figures as the principle Show of Cause for the bill, while its Critics cite similiar Statistics during the last Prohibition era over 30 years ago.}
+{1317}{492c _ WEATHER _}
+{1318}{483l 	The Weather Ministry of Vendigroth is Predicting increasing Chance of Precipitation for the next Fortnight, with clearing following soon after.}
+
+
+
+
+	
+
+	
+
+
+//Generic Newspapers
+
+{5000}{490c TECHNOLOGY PROTEST
+CLAIMS 3 LIVES}
+{5001}{492c _ EXCESSIVE USE OF FORCE? _}
+{5002}{483l 	Yesterday, the Tarantian Guard was called in to control a riotous protest on the steps of City Hall.  The group who organized the protest, the Friends of Magick, had amassed there in the morning, shouting obscenities and throwing various technological objects.
+The Guard, responding to complaints of the protest, arrived on the scene about an hour after the protest began, wielding guns and cudgels.  Minutes later, there was mass chaos with agitators on both sides.  When the smoke cleared, three protestors were dead.
+The protest was in response to the growing number of factories in Tarant, and the adverse affects they are having on the city's air.  "We'll not stand for it any longer," said Josiah Hummel, the Friends spokesperson.  "Tarant is our city, too."
+The Captain of the Tarantian Guard had this to say.  "The Guard is here to protect the city, whatever her air is like.  Any other bleedin' hearts here in the city can expect the same treatment."}
+
+
+{5010}{490c FLYING MACHINE RUMORS QUELLED}
+{5011}{492c _ LEARNED MAGE SPEAKS OUT _}
+{5012}{483l	As of late there have been many rumors concerning the sightings and indeed the very existence of what have come to be called "heavier than air craft". Many of these accounts describe craft that are "bird shaped", and create quite a clamor. Because we here at the Tarantian have received so many letters concerning these "sightings" or phenomena, we decided to consult an expert in the field, Master Mage Krolus Brajercliff. 
+	He is a master in both the colleges' of Air and Conveyance. When asked about these mysterious craft, Master Brajercliff informed us that such a contrivance was simply not possible, and he supplied us with the following. "Even a commoner knows that birds' bones are hollow, and filled with air. Even so, does it not have to exert itself greatly? Even the best of those retched new "engines" wouldn't have one tenth the power needed. No I'm afraid that the only way the common man can achieve flight is through the use of one of those most dangerous and inconvenient lighter-than-air ships, or through the rigorous study of Magick."
+	We at the Tarantian thank Master Brajercliff for sharing his thoughts and insights concerning this.}
+
+{5020}{490c COUNCIL PASSES 
+RODENT ORDINANCE}
+{5021}{492c _ WILL STREETS BE SAFER? _}
+{5022}{483l Staff Writer
+
+	This contentious piece of legislation has been in debate for almost a year now, with neither side willing to give any ground to the other. Finally council decided to put it up for vote and resolve the issue for better or worse. When the votes were tallied the ordinance had passed by a narrow margin. There were immediate outcries by its opposition for a recounting of votes, which was carried out at once, and confirmed that indeed the law had passed.
+	The debate began due to the increased presence of large rats in the streets of Tarant. These rodents are of a type normally found in the vast sewage system, which runs under the city. As of late they have become bolder, even to venturing out onto the streets of our bright city during daylight hours. Some city officials were concerned that this increase in activity, by the fetid vermin, might cause an increase in the outbreak of disease.
+	The new ordinance will restrict the feeding of small creatures, such as squirrels and rabbits, to pre-designated areas and then only on Sundays between the hours of Noon and six in the evening. This progressive legislation follows soon after Mr. Charles Dunston's decision to seal off larger sections of the sewers.  Mr. Dunston, manager of the Tarantian Water and Power Plant, made his decision after a number of fatal attacks were attributed to sewer inhabiting vermin.}
+
+{5030}{490c STRANGE OCCURENCES
+IN ASHBURY}
+{5031}{492c _ DENIZENS OF ELVEN FORESTS SPOTTED _}
+{5032}{483l Staff Writer
+
+	Some of the residents of Ashbury have been reporting sightings of si'im tala or "love lights", as they are known in the common tongue. These peculiar reports began reaching us here in Tarant about a week ago. We sent a journalist, by rail, to Ashbury to investigate. 
+	He interviewed many of those that had reported seeing the strange and magnificent creatures. It seems they have been appearing in the evening, in some of the resident's floral gardens, in small numbers. No one is certain how these creatures came to be in Ashbury so far from the Glimmering Forest, where they are usually found. 
+	We consulted some experts from Tarant's Athenaeum and while they stated they were aware of these reports, the only explanation they could offer as to how these creatures could have come so far from their native habitat was that they had been captured and transported here by some unknown person or persons. When asked why someone might want to do such a thing our experts could offer no explanation.
+	Whatever the cause, the residents of Ashbury are delighted to have their new visitors and hope they will take up permanent residence in their new home. For those of our readers who would like further 
+	information concerning the habits and behavior of the si'im tala, our editors recommend "Forbidden Cities of the North" by Gregor Seamus Darton. This first-rate volume can be found for purchase in most inventories of the more discerning book vendors of Tarant.}
+
+{5040}{490c CRIMINAL SCIENCE
+MARCHES FORWARD}
+{5041}{492c _ PROFESSOR MAKES AMAZING DISCOVERY _}
+{5042}{483l Staff Writer
+
+	Tarantian University has awarded an honorary doctorate to Professor Benjamin Gershwin for his pioneering work in the new field of criminal forensic science. Professor Gershwin, a noted phrenologist, has been teaching at the prestigous school for almost 20 years. 
+	Prof. Gershwin's theory, which he happened upon accidentally, proposes an interesting way to catch criminals through a technique that he calls "fingerprinting". We interviewed the good professor and asked him to explain his theory, and how he came upon it, to us.
+	"I was at my home one evening and my children's governess was scolding them for leaving their finger marks on the newly oiled table, in my dining room. When the idea came upon me like a thunderbolt. Before she could summon the domestic to wipe the table clean I ran into the dining room and began to examine the marks, which my children had left on the table. Retrieving some very dried out parchment from my desk; I was able to press it upon the marks so that they were then transferred onto the paper. I could then more easily examine them under magnification."
+	"After comparing these to others I gathered from them later, it was as I had guessed; they were all of a singular nature and could be matched up to the ones they had made previously upon the table." 
+	I then began to theorize that if the police could "lift" or make impressions of similar fingerprints at a crime scene, they might somehow match them to those of suspects and have the necessary evidence to obtain a conviction."
+	The professor is currently working with colleagues and members of the police force to perfect the process.}
+
+{5050}{490c MYSTERY ON
+THE HADRIAN}
+{5051}{492c _ MAGICKER OBSERVED IN STRANGE RITUAL _}
+{5052}{483l Staff Writer
+	
+	Police reported a curious encounter that took place down near the banks of the Hadrian River, which runs through Tarant. It seems a local constable observed a man engaged it what he described as "behavior of a most peculiar type".
+	The constable stated " I observed this individual for several minutes from my vantage point which was not far from where the suspect was standing. He was holding a bag or sack of some type in one hand and was pulling feathers out of it with the other. He would then hold the feather in his outstretched hand, in front of his face, and appeared to be concentrating some kind of Magick upon it, whereupon the feather would erupt in a blue flash and disappear from his hand. I observed this queer ritual several times before I decided fire a warning shot over his head.  Unfortunatley, my weapon would not operate". 
+	The constable went on further to explain that the man escaped, but in his haste had dropped the satchel from whence he had been pulling the feathers. The sack was found to contain a number of different feathers.  Examination of the feathers by the honorable Professor Tristan Fenwick of the Tarantian Zoological Society, showed that the feathers were indeed of a variety of birds, even some heretofore-unknown species. 
+	This information, coupled with the constable's account of his weapon misfiring, a known side effect of strong Magick in the vicinity, led Fenwick to believe this man and his strange ritual may have something to do with the recent migratory anomalies that have been occurring in the Hadrian aviary hatcheries, which others, mainly magick users, have attributed to the so-called "poisoning" of the Hadrian by local factories. The police have stated that they will continue their investigation.}
+
+{5060}{490c CASTAWAYS RESCUED
+FROM ISLAND!}
+{5061}{492c _ LOST FAMILY FOUND AT LAST _}
+{5062}{483l Staff Writer
+
+	Almost 6 years ago, the ill fated ship, Hadrian's Pride sailed from Caladon with passengers and cargo onboard and bound for Tarant. She was never to arrive at her destination and it is only by divine providence that we now know her fate.
+	The good captain Edward Teach of the trade ship "The Gypsy Shadow", out of Ashbury, was by coincidence sailing almost the same course as Hadrian's Pride when she was set upon by a powerful storm and blown far south of her planned course. The captain and his crew, being the first-rate sailors that they are, did not lose their bearings during the storm. 
+	When the tempest had passed they sighted an island that was not to be found on any of their charts. They decided to put ashore in an effort to locate some source of fresh water as the sea, during the storm, had contaminated a number of their barrels. As they made their approach to the island, they noticed movement on the beach where they had intended to disembark.
+	Much to their surprise what, or better to say whom, they found was John Borlindas and his family, late of Ashbury. They recounted their story to the captain of the Gypsy Shadow in great detail about how they had been bound for home on Hadrian's Pride and how they had planned to disembark in Tarant, and then take a train to their home in Ashbury. Mr. Borlindas told the sympathetic captain of the storm that blew them to the island and of the many adventures that had befallen them in the time since being forced to take up residence upon their new found home.
+	Captain Teach, being of a generous nature, offered Mr. Borlindas passage to Tarant for him and his family. Mr. Borlindas gratefully consented, and they joyfully arrived in Ashbury this Tuesday past.}
+
+{5070}{490c PIRATE SHIP
+STRIKES AGAIN!}
+{5071}{492c _ COUNCIL DECIDING ON ACTION _}
+{5072}{483l Staff Writer
+	
+	Another merchant ship, the Bright Star out of Tarant, appears to be the latest victim of the ever-increasing pirate activity, which has been interfering with Tarantian sea trade as of late. 
+	The ship was found adrift, about a days sail from Tarant, her hull scored, and her decks bloody with the signs of battle. Her owners stated that all of the cargo holds had been emptied, and that neither the crew nor their bodies could be located.
+	In response to this latest incident some of the merchant shipping magnates of Tarant asked for an emergency meeting of the Industrial Council. In the meeting they proposed the building of a "fast, ironclad warship using the latest in steam technologies, and carrying heavy armaments". This ship could then be used to patrol the shipping lanes and put an end to this scourge once and for all, or so say the merchants.
+	In light of this proposal, the foremost question is where the funding for such an endeavor will come from.  Tarantian locals fear increased taxes, and, considering the past policy of the Council, their fears are well-placed.  "Something must be done, and soon," said Edward Willoughsby, chairman of the Council.
+	The identities of the pirates are unknown, although an interesting theory was proposed by Three Tooth McCoy, a local fisherman. "It be none other than the ghost a' Stringy Pete hisself.  Old Pete no like too many ships in his waters, and the bloods gonna run 'til he's good and tired of it."  For those unaware of the Stringy Pete legend, he was a pirate who terrorized the seas of Arcanum almost 200 years ago.  This writer would like to believe that the old pirate is enjoying some rest after such an illustrious career.}
+
+{5080}{490c NOTED SWORDSMITH
+GIVES LECTURE}
+{5081}{492c _ CONTROVERSIAL THEORIES SPARK DEBATE _}
+{5082}{483l Sir Alex Livingston
+
+	Richard Leeks, master swordmaker, held a lecture in Stillwater regarding the similarities between scientific disciplines and the study and execution of magick. Leeks posited that the traditions of hex-binding and artifice do not differ in any great way from the modern, progressive methods of science.
+	"Attention to detail, the specifics of ingredient, shape, and size which are like a second nature to the hex-smith are mirrored by the blacksmith," stated Leeks.  "A mage judges an artifact in the same way a machinist judges his tools.  The goal is the same in both schools: affect change on the world through careful, regular method."
+	Despite angry hisses from the mostly elven audience, Leeks was calm and collected throughout the entire lecture.  Leeks is well known for his Stillwater Blades, which he forges himself and then has enchanted by a local wizard.  "There is no reason why the technologist and the mage should be at odds.  We use similar techniques, and, at the very least, should respect each others craft."}
+
+
+
+{5090}{490c PROFESSOR TO
+TRY THE IMPOSSIBLE!}
+{5091}{492c _ CAN MAGICK AND TECHNOLOGY BE JOINED? _}
+{5092}{483l Sir David Moody
+	
+	Professor Jules Vorvinstern today made covenant to engender understanding twixt Engineer and Magus by fashioning an amalgam of their comparative works.  He titles his peacemaker the 'magickal firearm'.  "This device will employ the enigmas of the technologists and the conundrums of the arcane to produce the world's very first incomparable warrior contrivance" said Professor Vorvinstern.   
+	Professor Vorvinstern studied for seventeen years under Magus Donovan Pride ere he ventured the technological.  "Jules was a fool then and he's a fool now.  Magick will not suffer his ignorant trifling," said Magus Pride.  Herbie Bumber, an engineer who attended the conference said, "if it works, great, but it won't."  
+	Undissuaded by his peers' rejection of his innovative notions, Professor Vorvinstern depicts the method he will employ in fashioning his contrivance.  "I shall secure a smoothbore musket and to it make fast through magickal apparatus a daemon for augmenting the accuracy thereupon."  Both Magus Pride and Engineer Bumber agreed (a rare happenstance) that such a binding was unnatural and should not be attempted.  Quoth Pride "He has difficulty fastening his trousers, how then shall he secure a daemon?"  "Gonna shoot his damn foot off!" muttered Bumber.
+	The professor has promised an exhibition of his product as soon as it is operational.}
+
+{5100}{490c NOTED PROFESSOR
+DIES TRAGICALLY}
+{5101}{492c _ UNTESTED THEORIES LEAD TO TERRIBLE END _}
+{5102}{483l Sir David Moody
+
+	All Arcanum laments the passing of Professor Jules Vorvinstern, originator of the 'magickal firearm'.  At the Professor Vorvinstern's most recent trial of his weapon in Kensington Square, there was an unfortunate and rather frightening turn of events.  According to Magus Pride, Professor Vorvinstern's mentor in all things magickal, the "magickal and technological forces negated each other, and allowed the extraordinary event to occur."  Exclaimed Engineer Herbie Bumber, "I told him it wouldn't work!  Damned magickers...my pipe's got more sense!" 
+	According to onlookers, Professor Vorvenstern was heard murmuring about hexagrams, bat's blood, and inversion ratios just as he fired the weapon.  Now that his records have been thrown open to scrutiny, we can ascertain that he intended to have his daemon invert itself, thus acquiring technological affinity.  The daemon, bored with long months of servitude and not desiring inversion, instead murdered the professor with a sharp pencil found nearby.  Said the daemon, "A magickal gun? Who'd want the damned thing anyway?" before disappearing in a cloud of smoke.  
+	Although questioned thoroughly, the smoothbore musket declined to comment.}
+
+{5110}{490c LOCAL WOMAN
+SHOWS GREEN THUMB}
+{5111}{492c _ TULLAN BLOSSOM STEALS SHOW _}
+{5112}{483l Staff Reporter
+
+	A remarkable specimen of floral effulgence entered into competition at the recent All-Tarant Flower Show & Garden Exposition has roused much comment among visitors.
+	Named "Pelojian's Tullan Blossom," the flower resembles an orchid of alizarin crimson petals edged with bright yellow. Yet in marked contrast to the well-loved Tarantian orchid, this strange flower is said to exude a heady and penetrating aroma, which fragrance somehow evoked for many visitors memories of their vigorous youth. Those visitors most strongly affected were heard to assert that such an effect could only come of magickal arts.
+	The bloom was the debut entry of Mrs. Florence Willoughsby, wife of the Chairman of the Tarantian Council. Far from dismissing speculation on possible magickal elements in the plant's nature, Mrs. Willoughsby seemed actively to encourage it, say onlookers.
+	After a number of female visitors, upon sniffing the Tullan Blossom, were seen to exit the show with florid complexions and fluttering fans, judges from the Tarantian Ladies' Garden Committee, organizers of the Exposition, informally requested that Mrs. Willoughsby withdraw her entry. The lady complied at once and in fact deserted the hall, though (witnesses indicate) not without barbed rejoinders.
+	Mrs. Willoughsby, those of long memory may recall, is no stranger to scandal. Some dozen years ago she created an uproar in polite society when she openly boasted of distant elvish ancestry. The Hon. Mr. Willoughsby later publicly retracted the curious claim on his wife's behalf, citing a delirium brought on by the lady's accidental ingestion of imported herbs. Mrs. Willoughsby embarked on a Grand Tour for her health and has only recently returned to society.}
+
+{5120}{490c PETTY THEFTS
+CONTINUE!}
+{5121}{492c _ LOCAL CONSTABLE ON THE JOB _}
+{5122}{483l Sir Kevin McDonald
+
+ 	The local constabulary has been stumped as of late with the frequent disappearance of small mechanical devices around the city. While users of magic are the prime suspects, Constable Larik Greenshaw notes that any number of individuals could be responsible.  
+	The constable was reported as saying: "While we are more than likely looking for a dissident band of conjurers who want to do away with today's technologies, we can't rule out other factions who could also bee responsible, such as the orcs who have a fascination with all things mechanical and may be taking the missing articles out of curiosity. Needless to say, these criminals will be apprehended and bought before the law."}
+{5123}{492c _ CALADON WOMAN MURDERED _}
+{5124}{483l
+	A body was found murdered in the Whytechurch district in Caladon, bringing this months total of murders to three. Caladon has been rocked as of late with these murders, something that has never happened with any frequency in the area. Chief Inspector Henderson worries that "Our local townfolk are scared to leave their homes these days. We've never had to deal with murders in the past, and now we suddenly have three. We're looking into the matter, but I fear these murders might be a much larger threat than most believe. Until then, our citizens and businesses are suffering because of the actions of this madman." Local authorities have urged townsfolk to be on guard when walking alone or at night, citing that the victims were all known to have been alone at the time of their deaths.}
+
+{5130}{490c NEW STEEL PLANT
+OPENS DOORS}
+{5131}{492c _ GARRINGSBURG OPENS MODERN FACTORY _}
+{5132}{483l Sir Kevin McDonald
+	Chairman Edward Willoughsby cut the ribbon today on Tarant's latest high-capacity manufacturing plant. Owned by local steel baron James Garringsburg, this new plant will turn out more steel than any plant so far in existence. Garringsburg was quoted as saying: "With today's ever increasing need for building materials, Garringsburg Steel is proud to provide Arcanum with the highest quality steel at the lowest possible price."
+	Typically, as of late, controversy surrounds the plant's orcish labor force, and the environment they will be subjected to within the plant itself.  On this point, Garringsburg was unavailable for comment.}
+{5133}{492c _ ASHBURY SHOWS FINE HARVEST _}
+{5134}{483l
+	It was another fine year for the harvest in Ashbury. Locals were fearing the worst when last winter's extended frost spelled certain doom for their springtime harvest. Much to their relief, this years harvest looked stronger than ever. Local farmer Meegosh Nelram had a particularly good crop come up this year: "I don'ts know 'ow my crops lived 'frew 'dat last winter. That frost we 'ad was right bad, and I thought every'fing 'ad gone to pot. Must 'ave been the fairy folk workin' dere majiks on my crops, bless 'em. I'll make enough 'dis year to send my nephew off to the Univer'sty where all 'is friends is." And all you readers out there can look forward to purchasing grains and fruits from Ashbury when the first shipment arrives next week.}
+
+{5140}{490c POLLUTION ON
+THE RISE}
+{5141}{492c _ LOCAL "BUSINESS" OWNER SPEAKS OUT _}
+{5142}{483l
+	A band of locals representing the lower east side met with city council yesterday to discuss the rampant pollution they claim is destroying their neighborhood. Many of these locals reside in the 10 block area between Low Dervish Way and Lions Head Circle that lies parallel to Tarant's industrial district. 
+	"Our streets are littered with debris that is carried in by carts transporting goods from the factories, and our buildings are covered with black soot put out by the coal plant.  Its enough to get a lady's bloomers in a bunch," said Madam Lil, local owner of the oft controversial house of ill-repute. "Not only are we besieged by this pollution, we must also deal with the surly orc work-force that harass my girls at all hours of the day!"
+	The Tarantian Council had no comment on this situation, other than to reassure the citizens that "everything was being taken care of."}
+{5143}{492c _ LOCAL ARTIST HONORED _}
+{5144}{483l Miss. Guinevere A. Sykes
+
+	A Tarantian artist from the East End was honored today by becoming the first human artist in 153 years to be exhibited in the Grand Gallery of Lord Brandoch.  The famous gallery has featured predominantly Elven artists for many, many years.  But Percy Smelt has now joined the ranks of such famous human artists as Bertolo and Remmer the Younger in the Brandoch Gallery.  Mister Smelt's sketches of the orcish workers in the cloth factories of Tarant were featured in last year's 'Study of Working Conditions' by Morant and Fletcher.  The popular acceptance of this book in many Elven communities led to the recent prominence of Mr. Smelt's work.
+	Some member's of Tarant's mercantile community were dismayed by the popularity of Mr. Smelt's work, leading to his abandonment of his home here in Tarant and his re-location elsewhere.  It is a pleasant surprise to see Mr. Smelt succeeding so famously in exile.}
+
+{5150}{490c  FRANKLIN PAYNE HONORED}
+{5151}{492c _ TARANT COAT OF ARMS BESTOWED FOR LIFETIME ACHEIVEMENT _}
+{5152}{483l Franklin Payne was awarded the Tarantian Coat of Arms last night during the annual civic awards banquet. After accepting the prestigious award, Mr. Payne regaled the event goers with one of his customarily shocking tales of derring do.}
+{5153}{492c _ LETTER TO THE EDITOR _}
+{5154}{483l	Sirs,
+	The publication of the article in last week's paper entitled "Local Artist Honored" can only be characterized as despicable.  The quality of editorship shown by your paper has fallen off considerably in recent months.  This piece of scurrilent trash is a perfect example of this decline in responsible editing.  Miss. Sykes has shows a marked lack of maturity; it is very easy for a young girl of tender years to be led astray by passionate rhetoric.  I urge her parents to enroll her in one of the many finishing schools for young ladies that may be found in our fair city.  She will find the knowledge that she gains there to be most efficacious in assisting her in what must be the primary goal of any well-bred young lady, matrimony.
+	As for your editorial staff, shame.  You have allowed this young woman far too much leniency in letting her pen this piece of rubbish.  And you have shown a complete lack of responsibility in allowing it to be published.  The overly imaginative artwork provided by Mr. Smelt was the worst part of the publication of that dastardly piece of anti-industrial propaganda last year.  Without those horrible scribblings, there would have been nowhere near the unrest among the illiterate working classes.  If it is true that these elves have chosen to somehow honor this man, it must be credited to their incomparable charity, rather than any sense of artistic achievement on Mr. Smelt's part.
+	I question both the veracity of your reporting and the necessity of publicizing this stain upon the artistic community.  I am thoroughly disgusted with your journal.
+Mrs. Celeste Knight-Phillips.}
+
+
+{5160}{490c PHYSICIAN FOUND BRUTALLY MURDERED!}
+{5161}{492c _ PARTNER WANTED FOR QUESTIONING _}
+{5162}{483l Doctor Theo. Wilford, Tarant's most highly respected physician, was found late last night in his office, apparently the victim of a brutal murder.  The authorities have informed us that Mr. Wilford's life was extinguished in a most gruesome manner when he was stabbed through the back with a writing quill.
+	Those in charge of the investigation feel that the murderer is certainly a person highly skilled in the anatomy of the human form, as the killing instrument was placed in precisely the correct position to cause death.  As many of our readers are aware, Mr. Wilford had recently taken on a partner, Doctor Edmund Craig, to assist with his heavy patient load.
+	The recent scandalous discovery of Doctor Craig's orcish lineage rocked the city, and the authorities are currently unable to locate him for questioning.  Any information as to his whereabouts should be reported as quickly as possible.  Do not attempt to apprehend Doctor Craig without the assistance of the guard, as he is to be considered extremely dangerous.}
+{5163}{492c _ "MUMMER'S DANCE" BOTH DELIGHTS AND INTRIGUES _}
+{5164}{483l	Miss. Guinevere A. Sykes
+
+The new performance of the "Mummer's Dance" by the Richold Players at the Old Market Theatre last evening was truly a sight for sore eyes.  After the boring repetition of every ancient stage standard that marked last season's drab efforts, the new interpretation of this classic by the imaginative troupe was a burst of excitement.  Their use of modern costuming and current idiomatic dialogue made this classic tale into a modern romance.
+	For those of us raised on the works of T. Bremmer and Matthias Leeks, this is a performance that will re-awaken your love for the old masters.  For those not acquainted with the traditional telling of the ancient sagas, this will provide a much-needed sense of familiarity for tales that don't always seem to fit in the hurly-burly modern world.}
+
+
+{5170}{490c COUNCILMAN BABCOCK SPEAKS}
+{5171}{492c _ PUBLIC EASEMENT DEBATE INTENSIFIES _}
+{5172}{483l 
+
+	The ongoing land battle between the Tarant Railroad Authorities, and the Mage Tribunal returns to the headlines once again as battle lines are drawn.  In review, for the past several months, the Tarant Railroad Authorities have been petitioning the Council to provide them additional lands through the use of public easements.  The land in question is none other than Tarant's magick district.
+	The Tarant Railroad Authorities state that this land is required in order to build a much needed rail yard, where additional locomotives and carriages may be built and housed.  Many question the motives behind such a petition, accusing the Tarant Railroad Authorities of attempting to undermine the Mage Tribunal, stating that the Railroad merely fears the Power that surrounds the district, believing that it will eventually interfere with the Railroad's operation.
+	In an interview with us, Councilman Babcock made an unexpected comment on the situation. "I fear that after reviewing the information provided by the Tarant Railroad Authorities, it is my opinion that it would be in Tarant's best interest to relocate the magick district to another area of Tarant."  When asked to comment further, he responded "Our utmost concern should be the safety of our citizens.  If there is even a remote possibility that the local of the magick district could place the Railroad in peril, then it should be relocated at the earliest opportunity."}
+
+{5180}{490c SPECIAL EDITION}
+{5181}{492c _ LETTER TO THE EDITOR _}
+{5182}{483l	Sirs,
+	I am forced to write again in protest of your recent Arts Column recommending the infamous "Mummer's Dance" production at the Old Market Theatre.  Yet again the sadly misguided Miss. Sykes has seen fit to praise all that is wrong and horrible in today's artistic society.  To take the ancient and traditional Mummer's Tales and corrupt them in this way is an outrage.  Miss. Sykes finds the costuming for this travesty to be "a sight for sore eyes."  I admit that my eyes were sore with weeping to see the traditional costumes and masks of this production replaced with the mundane clothes of the modern world.  Miss. Sykes also praises the use of "current idiomatic dialogue."  To take the words of the greatest human poet in recorded history and turn them into some disgusting working class doggerel is a work of pure vandalism.
+	To add insult to injury, I believe that the actor playing the part of the 'Kindly Peasant' was played by some sort of half-breed orc.  This is the sort of disgusting mess that your newspaper sees fit to praise?  I assure you sirs, my husband is on the staff of Lord Beaumont, and I intend to ask him to use every ounce of influence that he can muster to do something about this.  You have not heard the last of me.
+
+Mrs. Celeste Knight-Phillips
+
+}
+{5183}{492c _ SPECIAL ANNOUNCEMENT _}
+
+{5184}{483l		We are pleased to announce the start of a series of foreign correspondence from our new traveling observer, Miss. Guinevere A. Sykes.  Ms. Sykes will be making an extended visit to many of out neighboring lands and our editors have employed her to provide us with many narrative descriptions of the fascinating people and places that she will see.  We urge all of our loyal readers to prepare to be astounded by the tales that Ms. Sykes will tell us and to watch for future installments in this exciting series.}
+
+
+
+

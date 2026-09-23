@@ -1,0 +1,65 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{B:}{}{1}{}{33}{}
+{3}{T:9, 11}{}{1}{}{33}{}
+{4}{What sort of wares do you carry here?}{}{5}{lf1 0}{40}{}
+{5}{Uh...  What you got 'ere?}{}{-4}{lf1 0}{40}{}
+{6}{C:}{}{1}{}{40}{}
+{7}{Will you train me to be an Expert at persuasion?}{}{5}{tr11 -1}{33}{et11 54}
+{8}{Me wan' be perswayshun Exper'.}{}{-4}{tr11 -1}{33}{et11 54}
+{9}{E:}{}{1}{}{0}{}
+{10}{Ah...  You appear to be a man of great magickal prowess.  I am honored to make your acquaintance.  How may I assist you this day, good sir?}{Ah...  You appear to be a woman of great magickal prowess.  I am honored to make your acquaintance.  How may I assist you this day, madam?}{}{}{}{}
+{11}{T:9, 11}{}{1}{}{33}{}
+{12}{What sort of wares do you carry here?}{}{5}{lf1 0}{40}{}
+{13}{Uh...  What you got 'ere?}{}{-4}{lf1 0}{40}{}
+{14}{B:}{}{1}{}{33}{}
+{15}{Will you train me to be an Expert at persuasion?}{}{5}{tr11 -1}{33}{et11 54}
+{16}{Me wan' be perswayshun Exper'.}{}{-4}{tr11 -1}{33}{et11 54}
+{17}{E:}{}{1}{}{0}{}
+{18}{It is my pleasure to meet with you once again, @pcname@.  Please, how may I most effectively serve you this visit?}{It is my pleasure to meet with you once again, @pcname@.  Please, how may I most effectively serve you this visit?}{}{}{}{}
+{19}{T:9, 11}{}{1}{}{33}{}
+{20}{B:}{}{1}{}{33}{}
+{21}{C:}{}{1}{}{33}{}
+{22}{Will you train me to be an Expert at persuasion?}{}{5}{tr11 -1}{33}{et11 54}
+{23}{Me wan' be perswayshun Exper'.}{}{-4}{tr11 -1}{33}{et11 54}
+{24}{E:}{}{1}{}{0}{}
+{25}{Ah...  You appear to be a very learned man.  I am honored to make the acquaintance of such an esteemed technologist.  How may I assist you this day, good sir?}{Ah...  You appear to be a very learned woman.  I am honored to make the acquaintance of such an esteemed technologist.  How may I assist you this day, madam?}{}{}{}{}
+{26}{T:9, 11}{}{1}{}{33}{}
+{27}{What sort of wares do you carry here?}{}{5}{lf1 0}{40}{}
+{28}{Uh...  What you got 'ere?}{}{-4}{lf1 0}{40}{}
+{29}{B:}{}{1}{}{33}{}
+{30}{Will you train me to be an Expert at persuasion?}{}{5}{tr11 -1}{33}{et11 54}
+{31}{Me wan' be perswayshun Exper'.}{}{-4}{tr11 -1}{33}{et11 54}
+{32}{E:}{}{1}{}{0}{}
+{33}{Is there anything more I can be of assistance with, sir?}{Is there anything more I can be of assistance with, madam?}{}{}{}{}
+{34}{T:9, 11}{}{1}{}{33}{}
+{35}{C:}{}{1}{}{33}{}
+{36}{B:}{}{1}{}{33}{}
+{37}{Will you train me to be an Expert at persuasion?}{}{5}{tr11 -1}{33}{et11 54}
+{38}{Me wan' be perswayshun Exper'.}{}{-4}{tr11 -1}{33}{et11 54}
+{39}{E:}{}{1}{}{0}{}
+{40}{I carry the finest apparel and ornamentals you will find anywhere!  Our suits and jackets are all meticulously stitched and fitted to match the latest fashion trends.  Our jewelry is finely crafted by the most skilled of artisans.  We are here to cater to your every need, sir.}{I carry the finest apparel and ornamentals you will find anywhere!  Our gowns are all meticulously stitched and adorned in the latest fashions.  Our jewelry and perfumes are finely crafted by the most skilled of artisans.  We exist to cater to your every need, madam.}{}{}{}{}
+{41}{T:9, 11}{}{1}{}{33}{}
+{42}{C:}{}{1}{}{33}{}
+{43}{B:}{}{1}{}{33}{}
+{44}{Will you train me to be an Expert at persuasion?}{}{5}{tr11 -1}{33}{et11 54}
+{45}{Me wan' be perswayshun Exper'.}{}{-4}{tr11 -1}{33}{et11 54}
+{46}{E:}{}{1}{}{0}{}
+{47}{What is it you want, "sir"?}{What is it you want, "madam"?}{}{}{}{}
+{48}{T:9, 11}{}{1}{}{33}{}
+{49}{B:}{}{1}{}{33}{}
+{50}{C:}{}{1}{}{33}{}
+{51}{Will you train me to be an Expert at persuasion?}{}{5}{tr11 -1}{33}{et11 54}
+{52}{Me wan' be perswayshun Exper'.}{}{-4}{tr11 -1}{33}{et11 54}
+{53}{E:}{}{1}{}{0}{}
+{54}{Why certainly sir.  I am most adept at the skill of persuasion.  For a small fee of 500 coin, I will be more than happy to train you.}{Why certainly madam.  I am most adept at the skill of persuasion.  For a small fee of 500 coin, I will be more than happy to train you.}{}{}{}{lf1 1}
+{55}{Very good.  Here is the 500 coin.}{}{5}{$$500}{60}{}
+{56}{I will have to gather more coin first.}{}{5}{$$-499}{33}{}
+{57}{Uh...  okay.  Here coin.}{}{-4}{$$500}{60}{}
+{58}{Uh...  Me get more coin.}{}{-4}{$$-499}{33}{}
+{59}{E:}{}{1}{}{0}{}
+{60}{Thank you sir.  [He spends some time explaining and demonstrating the finer points of persuasion to you.]  You are, from this moment forth, an Expert in the art of persuasion.  I congratulate you.  Should you ever wish to achieve Mastery, please seek out Mr. Willoughsby.  He has a home in Tarant, but is often in Caladon on business.  Good day to you, sir.}{Thank you madam.  [He spends some time explaining and demonstrating the finer points of persuasion to you.]  You are, from this moment forth, an Expert in the art of persuasion.  I congratulate you.  Should you ever wish to achieve Mastery, please seek out Mr. Willoughsby.  He has a home in Tarant, but is often in Caladon on business.  Good day to you, madam.}{}{}{}{$$-500, tr11 2, ru2157}
+{61}{Thank you.  Goodbye.}{}{5}{}{0}{}
+{62}{Uh...  T'anks.}{}{-4}{}{0}{}
+{63}{E:}{}{1}{}{0}{}
+{64}{Please sir!  I wish to be along with my drink!  Good evening to you!}{Please Madam!  I much prefer the company of my cups this evening.  I am in no need of your feminine wiles at this time!}{}{}{}{}
+

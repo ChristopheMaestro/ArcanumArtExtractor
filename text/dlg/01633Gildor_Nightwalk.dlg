@@ -1,0 +1,215 @@
+{1}{G:}{}{}{}{}{}
+{2}{Greetings good halfling.  Might I ask your name?}{}{5}{lf1 0, re 41}{25}{}
+{3}{That was very unmannerly.}{}{5}{lf1 0, re -40}{39}{}
+{4}{Have I in some way offended you, Gildor?}{}{5}{lf1 1, lf2 0}{51}{}
+{5}{Hello again, Gildor.  Might I have a little more of your time?}{}{5}{lf1 1, lf2 1,re 41, qu1109 0, lf3 0}{57}{}
+{6}{Have I in some way offended you, Gildor?}{}{5}{lf1 1, lf2 1, re -40}{47}{}
+{7}{Forgive me for leaving so abruptly. Please continue your tale.}{}{5}{lf3 0, lf4 1, qu1109 0, ni 5232}{177}{}
+{8}{I have finished the book, fascinating...  Please continue...}{}{5}{lf3 1, qu1109 0, in 5232}{105}{}
+{9}{Forgive me for leaving so abruptly. Please continue your tale.}{}{5}{lf5 1, qu1109 0}{184}{}
+{10}{I shall bring you the ruby!}{}{5}{lf3 1, qu1109 1}{151}{}
+{11}{I have been unable to get the great ruby.}{}{5}{lf3 1, qu1109 2, ni 5662}{158}{}
+{12}{I have The Great Ruby of K'alru!}{}{5}{lf3 1,  in 5662}{163}{re +20}
+{13}{E:}{}{5}{}{0}{}
+{14}{Hey, mister.  Wha' you name?}{}{-4}{lf1 0, re 41}{25}{}
+{15}{Dat was not nice...}{}{-4}{lf1 0, re -40}{39}{}
+{16}{Hi Gildoor.  Me ask sumthin?}{}{-4}{lf1 1, lf2 0}{51}{}
+{17}{Hi Gildoor.  Me ask sumthin?}{}{-4}{lf1 1, lf2 1, qu1109 0, lf3 0}{57}{}
+{18}{Me sorry me go 'way... you tell more?}{}{-4}{lf3 0, lf4 1, qu1109 0, ni5232}{177}{}
+{19}{Uh, me reed book.  Hard to do.  Tell @pcname@ more story?}{}{-4}{lf3 1, qu1109 0, in5232}{105}{}
+{20}{Me sorry me go 'way... you tell more?}{}{-4}{lf5 1, qu1109 0}{184}{}
+{21}{Me get you rewbee!}{}{-4}{lf3 1, qu1109 1}{151}{}
+{22}{Me no get rewbee.}{}{-4}{lf3 1, qu1109 2, ni5662}{158}{}
+{23}{Me got rewbee!}{}{-4}{lf3 1,  in 5662}{163}{re +20}
+{24}{E:}{}{-4}{}{0}{}
+{25}{I am Gildor Nightwalk.  Who are you?}{I am Gildor Nightwalk.  Who are you?}{}{}{}{lf1 1}
+{26}{My name is @pcname@.}{}{5}{}{57}{lf2 1}
+{27}{That is none of your concern.}{}{5}{}{32}{re-10}
+{28}{I don't particularly like conversing with inferior races...}{}{5}{ra-6}{32}{re-15}
+{29}{Me name @pcname@.}{}{-4}{}{57}{lf2 1}
+{30}{No.}{}{-4}{}{32}{re-10}
+{31}{Me no like you, tiny man.}{}{-4}{ra-6}{32}{re-15}
+{32}{Have you "no" manners?}{Have you "no" manners?}{}{}{}{}
+{33}{That was rude.  I apologize.  My name is @pcname@.}{}{5}{}{57}{re+5}
+{34}{Not with filth like you!}{}{5}{}{}{co, fl 46}
+{35}{E:}{}{5}{}{0}{}
+{36}{Sorry.  Me be bad.  Me name is @pcname@.}{}{-4}{}{57}{re+5, lf2 1}
+{37}{No need...  You gonna be dead...}{}{-4}{}{}{co, fl 46}
+{38}{E:}{}{-4}{}{0}{}
+{39}{If you can't even deal with that, what are you doing traipsing about far from home, fool?  Now either state your business or leave my home!}{If you can't even deal with that, what are you doing traipsing about far from home, fool?  Now either state your business or leave my home!}{}{}{}{}
+{40}{Fine.  Could I ask your name?}{}{5}{}{25}{}
+{41}{That's it!  You've insulted me enough!  Defend yourself!}{}{5}{}{}{co, fl 46}
+{42}{E:}{}{5}{}{0}{}
+{43}{Uh, okay.  Wha' you name?}{}{-4}{}{25}{}
+{44}{You be very bad!  Need to die!}{}{-4}{}{}{co, fl 46}
+{45}{E:}{}{-4}{}{0}{}
+{46}{You don't even know who your up against, fool...}{You don't even know who your up against, fool...}{}{}{}{}
+{47}{I see you are still easily ruffled.  What do you want @pcname@?}{I see you are still easily ruffled.  What do you want @pcname@?}{}{}{}{}
+{48}{Errr...  I have a question.}{}{5}{}{57}{}
+{49}{I see you are still a rude little man...  I have a question...}{}{5}{}{57}{re-5}
+{50}{E:}{}{5}{}{0}{}
+{51}{If you are not going to tell me your name, you have no business speaking to me!}{If you are not going to tell me your name, you have no business speaking to me!}{}{}{}{}
+{52}{Please forgive me.  My name is @pcname@.}{}{5}{}{57}{lf2 1}
+{53}{Perhaps my business is squashing tiny beings...}{}{5}{}{32}{re-5}
+{54}{E:}{}{5}{}{0}{}
+{55}{Me sorry.  Me name @pcname@.}{}{-4}{}{57}{lf2 1}
+{56}{E:}{}{-4}{}{0}{}
+{57}{Well, what is it @pcname@?}{Well, what is it @pcname@?}{}{}{}{}
+{58}{R:($0, 1090-1099)}{}{5}{}{57}{}
+{59}{Do you have any work for me?}{}{5}{sk6 13}{66}{}
+{60}{Do you have any work for me?}{}{5}{sk6 -12}{203}{}
+{61}{E:}{}{5}{}{0}{}
+{62}{R:($0, 1090-1099)}{}{-4}{}{57}{}
+{63}{You got work me do?}{}{-4}{sk6 13}{66}{}
+{64}{You got work me do?}{}{-4}{sk6 -12}{203}{}
+{65}{E:}{}{-4}{}{0}{}
+{66}{[he looks you over thoroughly, assessing your capabilities]  Work, eh?  There may be something...  However, it is no simple task, and will require great courage to complete.  Does this interest you @pcname@?}{[he looks you over thoroughly, assessing your capabilities]  Work, eh?  There may be something...  However, it is no simple task, and will require great courage to complete.  Does this interest you @pcname@?}{}{}{}{}
+{67}{It does.  What would you have me do?}{}{5}{}{71}{}
+{68}{Yes.}{}{5}{}{71}{}
+{69}{Yeah.  Wha' me do?}{}{-4}{}{71}{}
+{70}{E:}{}{1}{}{0}{}
+{71}{I am going to tell you a story.  The tale will give you greater insight into the task you are going to attempt.  So please, be patient and listen.}{I am going to tell you a story.  The tale will give you greater insight into the task you are going to attempt.  So please, be patient and listen.}{}{}{}{}
+{72}{Proceed.  I am listening.}{}{5}{}{78}{}
+{73}{I don't have time for your ramblings, old man...}{}{5}{}{0}{re -5}
+{74}{E:}{}{5}{}{0}{}
+{75}{Me lissen.  You tell.}{}{-4}{}{78}{}
+{76}{Me no time for you, ol' man...}{}{-4}{}{0}{re -5}
+{77}{E:}{}{-4}{}{0}{}
+{78}{As a youth I was pressed into service by a group of travelers.  They were a rowdy, barbarous lot seeking to gain great wealth and reputation while adventuring throughout the land.  I found my place among them, for at times stealth was called for and this was my greatest ability.}{As a youth I was pressed into service by a group of travelers.  They were a rowdy, barbarous lot seeking to gain great wealth and reputation while adventuring throughout the land.  I found my place among them, for at times stealth was called for and this was my greatest ability.}{}{}{}{lf4 1}
+{79}{Go on...}{}{5}{}{83}{}
+{80}{E:}{}{5}{}{0}{}
+{81}{Uh huh...}{}{-4}{}{83}{}
+{82}{E:}{}{-4}{}{0}{}
+{83}{ As time progressed, I proved to them that I was no mere impressed servant, and become a valued member of the group.  We adventured together for several years, following old tales and discovering lost treasures.  It was a rich and wild time in my life...  [he gets lost in his thoughts for a moment]}{ As time progressed, I proved to them that I was no mere impressed servant, and become a valued member of the group.  We adventured together for several years, following old tales and discovering lost treasures.  It was a rich and wild time in my life...  [he gets lost in his thoughts for a moment]}{}{}{}{}
+{84}{Please continue.}{}{5}{}{88}{}
+{85}{E:}{}{5}{}{0}{}
+{86}{Uh huh...}{}{-4}{}{88}{}
+{87}{E:}{}{-4}{}{0}{}
+{88}{One fateful day, we were lazing about, recovering from our last adventure.  We had just cleared out a cavern full of lizard men that had been terrorizing the local community.  Deep in the back of the cave, we discovered an unmarked chest, sealed tight.  When we collected our fee from the local magistrate, we conveniently failed to mention the chest.}{One fateful day, we were lazing about, recovering from our last adventure.  We had just cleared out a cavern full of lizard men that had been terrorizing the local community.  Deep in the back of the cave, we discovered an unmarked chest, sealed tight.  When we collected our fee from the local magistrate, we conveniently failed to mention the chest.}{}{}{}{}
+{89}{Uh huh...}{}{5}{}{95}{}
+{90}{Heh heh, not exactly on the up and up, eh?}{}{5}{}{172}{re -5}
+{91}{E:}{}{5}{}{0}{}
+{92}{Uh huh...}{}{-4}{}{95}{}
+{93}{Want more reward, huh?  Dat good... me like...}{}{-4}{}{172}{re -5}
+{94}{E:}{}{-4}{}{0}{}
+{95}{It took Nightfire, a half-breed elven member of the troupe, nearly two days to spring the lock and open the chest.  Since Nightfire was an expert with a lock, there was much anticipation and speculation done over the supposed contents of the box. }{It took Nightfire, a half-breed elven member of the troupe, nearly two days to spring the lock and open the chest.  Since Nightfire was an expert with a lock, there was much anticipation and speculation done over the supposed contents of the box. }{}{}{}{}
+{96}{Go on...}{}{5}{}{100}{}
+{97}{E:}{}{5}{}{0}{}
+{98}{Uh huh...}{}{-4}{}{100}{}
+{99}{E:}{}{-4}{}{0}{}
+{100}{Inside the chest, we were disappointed to find only a few coins, several interesting baubles and a book.  As I was the only literate member, I was given the book to review.  Here, I still have the book, why don't you read it for yourself.  Tell me when you have finished, and I will continue.}{Inside the chest, we were disappointed to find only a few coins, several interesting baubles and a book.  As I was the only literate member, I was given the book to review.  Here, I still have the book, why don't you read it for yourself.  Tell me when you have finished, and I will continue.}{}{}{}{in -5232, lf3 1}
+{101}{I will, thank you.}{}{5}{}{0}{re +5}
+{102}{E:}{}{5}{}{0}{}
+{103}{Oh, okay.  T'anks.}{}{-4}{}{0}{re +5}
+{104}{E:}{}{-4}{}{0}{}
+{105}{Ahem...  Yes...  Where was I?  Oh yes, I had just finished reading the book...  We quickly reviewed the map drawn inside to determine our distance from the ruby.  It was several days travel from our encampment.  Fools that we were, we pulled out at daybreak in search of the gem.}{Ahem...  Yes...  Where was I?  Oh yes, I had just finished reading the book...  We quickly reviewed the map drawn inside to determine our distance from the ruby.  It was several days travel from our encampment.  Fools that we were, we pulled out at daybreak in search of the gem.}{}{}{}{lf5 1}
+{106}{Yes...}{}{5}{}{110}{}
+{107}{E:}{}{5}{}{0}{}
+{108}{Uh huh...}{}{-4}{}{110}{}
+{109}{E:}{}{-4}{}{0}{}
+{110}{As we neared the locale, it was as the letter described.  The hairs on our necks raised and the forest sounds ceased.  You could feel the apprehension in the air...  Then we came upon the clearing... and the ruby.  It was amazing.  Never have I beheld a more beautiful thing.  We were all mesmerized, dreaming of the pleasure we could enjoy once in possession of such treasure.}{As we neared the locale, it was as the letter described.  The hairs on our necks raised and the forest sounds ceased.  You could feel the apprehension in the air...  Then we came upon the clearing... and the ruby.  It was amazing.  Never have I beheld a more beautiful thing.  We were all mesmerized, dreaming of the pleasure we could enjoy once in possession of such treasure.}{}{}{}{}
+{111}{Uh huh...}{}{5}{}{115}{}
+{112}{E:}{}{5}{}{0}{}
+{113}{Tell more.  More!}{}{-4}{}{115}{}
+{114}{E:}{}{-4}{}{0}{}
+{115}{Two of our troop suddenly ran forward to grab the jewel, and all others save me followed.  For I never join in battle, my strength not lying in combat.  "Wait!" I hollered.  "Remember the beast!"  But it was too late.  As the two men passed the first stone, a hideous creature emerged from the depths.  My comrades drew their weapons, but they were clearly outmatched. }{Two of our troop suddenly ran forward to grab the jewel, and all others save me followed.  For I never join in battle, my strength not lying in combat.  "Wait!" I hollered.  "Remember the beast!"  But it was too late.  As the two men passed the first stone, a hideous creature emerged from the depths.  My comrades drew their weapons, but they were clearly outmatched. }{}{}{}{}
+{116}{Oh my...}{}{5}{}{120}{}
+{117}{E:}{}{5}{}{0}{}
+{118}{Oh no!}{}{-4}{}{120}{}
+{119}{E:}{}{-4}{}{0}{}
+{120}{In horror I stood there!  As the fighting moved about, more beasts materialized to join the fray.  I counted 7 beasts that dreadful day, one for each of the strange stones that filled the clearing.  The death cries of my comrades were quickly silenced.  And rather than turning on me, as I feared they would, the creatures disappeared back into the depths as the last body fell.}{In horror I stood there!  As the fighting moved about, more beasts materialized to join the fray.  I counted 7 beasts that dreadful day, one for each of the strange stones that filled the clearing.  The death cries of my comrades were quickly silenced.  And rather than turning on me, as I feared they would, the creatures disappeared back into the depths as the last body fell.}{}{}{}{}
+{121}{Continue.  Please...}{}{5}{}{125}{}
+{122}{How horrifying!}{}{5}{}{125}{}
+{123}{Dat awful...  Wha' den?}{}{-4}{}{125}{}
+{124}{E:}{}{1}{}{0}{}
+{125}{Cautiously, I approached the stones, yet dared not pass their mark.  As I observed the morbid scene that lay before me, I noticed that there was a warning carved upon each stone.  It read  "The Great Ruby of K'alru is found.  Heed this warning ere you move around.  He who walks without a sound shall pass the death beneath the ground."}{Cautiously, I approached the stones, yet dared not pass their mark.  As I observed the morbid scene that lay before me, I noticed that there was a warning carved upon each stone.  It read  "The Great Ruby of K'alru is found.  Heed this warning ere you move around.  He who walks without a sound shall pass the death beneath the ground."}{}{}{}{}
+{126}{If only they had read the stones...}{}{5}{}{130}{}
+{127}{Such irony...}{}{5}{}{0}{}
+{128}{Uh huh...}{}{-4}{}{130}{}
+{129}{E:}{}{-4}{}{0}{}
+{130}{A sickness grew in me, for I knew, had my comrades only waited, they would still be alive, for I had the skill necessary to obtain the ruby.    But in the aftermath, as terror shook my bones, I was too shaken from what I had witnessed and I lacked the confidence to complete the task.}{A sickness grew in me, for I knew, had my comrades only waited, they would still be alive, for I had the skill necessary to obtain the ruby.    But in the aftermath, as terror shook my bones, I was too shaken from what I had witnessed and I lacked the confidence to complete the task.}{}{}{}{}
+{131}{What did you do?}{}{5}{}{135}{}
+{132}{You left?}{}{5}{}{135}{}
+{133}{Wha' you do?}{}{-4}{}{135}{}
+{134}{E:}{}{1}{}{0}{}
+{135}{I fled from the scene of carnage.  I wandered aimlessly for a time, before making Stillwater my home.  I have never left again.  I fear my adventuring days have come to an end.  Yet, as the author of the letter says, the jewel and the beasts still haunt my sleep. }{I fled from the scene of carnage.  I wandered aimlessly for a time, before making Stillwater my home.  I have never left again.  I fear my adventuring days have come to an end.  Yet, as the author of the letter says, the jewel and the beasts still haunt my sleep. }{}{}{}{}
+{136}{So you did not retrieve the ruby?}{}{5}{}{142}{}
+{137}{So you never returned?}{}{5}{}{142}{}
+{138}{E:}{}{5}{}{0}{}
+{139}{You no get rewbee?}{}{-4}{}{142}{}
+{140}{You no go back, ever?}{}{-4}{}{142}{}
+{141}{E:}{}{-4}{}{0}{}
+{142}{I never did.  Yet, I still desire the Great Ruby of K'alru.  As you have probably surmised, I want you to retrieve the jewel for me.  If you can do this deed, I will pay you 1500 coin.  A large sum, but I believe the risk demands such a price.  What say you?  Will you do this task for me?}{I never did.  Yet, I still desire the Great Ruby of K'alru.  As you have probably surmised, I want you to retrieve the jewel for me.  If you can do this deed, I will pay you 1500 coin.  A large sum, but I believe the risk demands such a price.  What say you?  Will you do this task for me?}{}{}{}{qu1109 1}
+{143}{I will retrieve it for you, Gildor!}{}{5}{}{151}{}
+{144}{I am not sure.  It sounds very dangerous.  I will think about it.}{}{5}{}{0}{}
+{145}{No.  If you couldn't get it, what makes you think I will?}{}{5}{}{189}{}
+{146}{E:}{}{5}{}{0}{}
+{147}{Me get for you!  You train.  It good.}{}{-4}{}{151}{}
+{148}{Uh, me don' no. It sound hard...  Me need to t'ink.}{}{-4}{}{0}{}
+{149}{No.  You no get, why you think me get?}{}{-4}{}{189}{}
+{150}{E:}{}{-4}{}{0}{}
+{151}{Very good!  Here, let me see your map.  I will show you the location.}{Very good!  Here, let me see your map.  I will show you the location.}{}{}{}{mm 39, qu1109 2}
+{152}{I shall leave immediately.  Thank you.}{}{5}{}{0}{}
+{153}{K:}{}{5}{}{57}{}
+{154}{E:}{}{5}{}{0}{}
+{155}{Me go now.  T'ank you.}{}{-4}{}{0}{}
+{156}{K:}{}{-4}{}{57}{}
+{157}{E:}{}{-4}{}{0}{}
+{158}{Do not feel bad at being unable to obtain the ruby.  Many have failed before you.  May the gods bless you on your journey @pcname@, and remember, should you ever attempt to get the ruby again and succeed, my offer of 1500 coin still stands.}{Do not feel bad at being unable to obtain the ruby.  Many have failed before you.  May the gods bless you on your journey @pcname@, and remember, should you ever attempt to get the ruby again and succeed, my offer of 1500 coin still stands.}{}{}{}{}
+{159}{K:}{}{5}{}{57}{}
+{160}{A:}{}{1}{}{0}{}
+{161}{K:}{}{-4}{}{57}{}
+{162}{E:}{}{1}{}{0}{}
+{163}{Oh well done!  I have had great hope that you were capable.  [mumbles]  It's about time someone was!  Ahem...  Please, let me have it...}{Oh well done!  I have had great hope that you were capable.  Please, let me have it...}{}{}{}{}
+{164}{Here you are.  That was quite a task!}{}{5}{}{194}{re +5, in 5662}
+{165}{Here you go.  I actually found it quite simple to retrieve...}{}{5}{}{194}{re -5, in 5662}
+{166}{You know, I've grown fond of it.  I think I'd rather keep it...}{}{5}{}{}{co, fl 46}
+{167}{E:}{}{5}{}{0}{}
+{168}{Here ya go.  Dat was hard to do!}{}{-4}{}{194}{re +5, in 5662}
+{169}{Here ya go.  Dat was easy.  Me get, no monsters...}{}{-4}{}{194}{re -5, in 5662}
+{170}{Uh, me like.  Me t'ink me keep da rewbee...}{}{-4}{}{}{co, fl 46}
+{171}{E:}{}{-4}{}{0}{}
+{172}{Shush!  Do you want me to finish the tale, or not?}{Shush!  Do you want me to finish the tale, or not?}{}{}{}{}
+{173}{Sorry, please continue...}{}{5}{}{95}{re +5}
+{174}{E:}{}{5}{}{0}{}
+{175}{Uh, sorry.  Talk more..}{}{-4}{}{95}{re +5}
+{176}{E:}{}{-4}{}{0}{}
+{177}{Humph!  You actually expect me to remember where I left off?  Now I'll have to start over.  Pay attention this time!}{Humph!  You actually expect me to remember where I left off?  Now I'll have to start over.  Pay attention this time!}{}{}{}{}
+{178}{I most certainly will.}{}{5}{}{78}{}
+{179}{I haven't the patience!  Let me just kill you and be done with it!}{}{5}{}{}{co, fl 46}
+{180}{E:}{}{5}{}{0}{}
+{181}{Uh, okay.}{}{-4}{}{78}{}
+{182}{You talk too much!  Me kill you....be better!}{}{-4}{}{}{co, fl 46}
+{183}{E:}{}{-4}{}{0}{}
+{184}{Certainly the impatient one, aren't you?  Try and pay attention... you do want to hear the tale, don't you???}{Certainly the impatient one, aren't you?  Try and pay attention... you do want to hear the tale, don't you???}{}{}{}{}
+{185}{Yes.  Sorry.  I will listen attentively.}{}{5}{}{105}{}
+{186}{E:}{}{5}{}{0}{}
+{187}{Me sorry.  Me listen good now...}{}{-4}{}{105}{}
+{188}{E:}{}{-4}{}{0}{}
+{189}{Do not feel bad at being unwilling to attempt such a dangerous task.  Many have died trying to complete it, you are probably showing wise judgment.  May the gods bless you on your journey @pcname@, and remember, should you ever change your mind, my offer of 1500 coin still stands.}{Do not feel bad at being unwilling to attempt such a dangerous task.  Many have died trying to complete it, you are probably showing wise judgment.  May the gods bless you on your journey @pcname@, and remember, should you ever change your mind, my offer of 1500 coin still stands.}{}{}{}{}
+{190}{On second thought...  I will get it.  I have the skill!}{}{5}{}{151}{}
+{191}{E:}{}{5}{}{0}{}
+{192}{Hmmm...  Me get.  Me good 'nuff!}{}{-4}{}{151}{}
+{193}{E:}{}{-4}{}{0}{}
+{194}{Oh!  It is everything I recall it to be!  You are truly a brave soul.  [takes a moment to gaze at the beautiful bauble]   Oh, yes.  Forgive my distraction...  You are truly a great adventurer!  Here...  Here is the 1500 coin I promised.  Thank you.  Thank you, @pcname@.  May the gods bless you on your journey.}{Oh!  It is everything I recall it to be!  You are truly a brave soul.  [takes a moment to gaze at the beautiful bauble]   Oh, yes.  Forgive my distraction...  You are truly a great adventurer!  Here...  Here is the 1500 coin I promised.  Thank you.  Thank you, @pcname@.  May the gods bless you on your journey.}{}{}{}{qu1109 4, $$1500}
+{195}{Thank you, Gildor.  I bid you farewell.}{}{5}{}{0}{}
+{196}{Thank you, Gildor.  Might I ask a question?}{}{5}{}{57}{}
+{197}{Hmmm...  Perhaps I will be taking that ruby back now...}{}{5}{}{}{co, fl 46}
+{198}{E:}{}{5}{}{0}{}
+{199}{T'ank you, Gildoor.  Buh bye.}{}{-4}{}{0}{}
+{200}{T'ank you, Gildoor.  Me ask sumthin?}{}{-4}{}{57}{}
+{201}{Heh heh, 'tupid halfling.  Me get rewbee now!...   you die!}{}{-4}{}{}{co, fl 46}
+{202}{E:}{}{-4}{}{0}{}
+{203}{[he looks you over thoroughly, assessing your capabilities]  Work, eh?  I do not think you are up to the task I would have you do.  It is no simple task, and will require great stealth to complete.  You do not have the look of a thief about you.}{[he looks you over thoroughly, assessing your capabilities]  Work, eh?  I do not think you are up to the task I would have you do.  It is no simple task, and will require great stealth to complete.  You do not have the look of a thief about you.}{}{}{}{}
+{204}{You are correct, my skills do not lie in that area.}{}{5}{}{209}{}
+{205}{Perhaps I am more stealthy than I appear...}{}{5}{}{71}{}
+{206}{Yeah, me no good at dat.}{}{-4}{}{209}{}
+{207}{Me mebbe better dan you t'ink.}{}{-4}{}{71}{}
+{208}{E:}{}{1}{}{0}{}
+{209}{Then giving you this particular task would most likely kill you.  Something I am quite sure you would not appreciate.  I am sorry, but I have no work for you.  Goodbye @pcname@.}{Then giving you this particular task would most likely kill you.  Something I am quite sure you would not appreciate.  I am sorry, but I have no work for you.  Goodbye @pcname@.}{}{}{}{}
+{210}{Can I ask you something else, Gildor?}{}{5}{}{57}{}
+{211}{Wait!  Tell me of the task.  Let me judge my capabilities.}{}{5}{}{71}{}
+{212}{Me ask more?}{}{-4}{}{57}{}
+{213}{No!  You tell me.  Me t'ink 'bout if me can do.  You tell!}{}{-4}{}{71}{}
+{214}{E:}{}{1}{}{0}{}
+

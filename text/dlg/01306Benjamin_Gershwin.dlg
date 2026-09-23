@@ -1,0 +1,184 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Hello, sir.  Might I ask who you are?}{}{5}{lf1 0, re 41}{27}{lf1 1}
+{3}{Good to see you, Benjamin.  Might I speak with a moment?}{}{5}{lf1 1, re 41}{63}{}
+{4}{Excuse me!  That's no way to speak before we've even met!}{}{5}{lf1 0, re -40}{11}{lf1 1}
+{5}{I apologize if my presence upsets you...}{}{5}{lf1 1, re -40}{11}{}
+{6}{If you speak to me like that again, I'll rip your head from your neck!}{}{5}{sk2 4, re-40}{135}{re41}
+{7}{Uh...who you be?}{}{-4}{lf1 0}{27}{lf1 1}
+{8}{Benji!  I got questions!}{}{-4}{lf1 1}{63}{}
+{9}{I would thank you to address me with respect, sir.}{}{5}{sk2 4, re-40}{135}{re45}
+{10}{E:}{}{1}{}{0}{}
+{11}{You've put me in bad spirits...perhaps you'd better just leave...}{You've put me in bad spirits...perhaps you'd better just leave...}{}{}{}{}
+{12}{I'm sorry...but perhaps you need look a little closer, sir...}{}{5}{ch 10}{20}{re50}
+{13}{Sir...let's try to find some common ground, here...}{}{5}{}{24}{re41}
+{14}{You're going to be even more upset if you keep mouthing off...}{}{5}{}{16}{re -5}
+{15}{E:}{}{5}{}{0}{}
+{16}{Oh really?  I'm not sure I appreciate your threats, stranger.  I'm no spring chicken, but I can still mix it up when the need arises...}{Oh really?  I'm not sure I appreciate your threats, stranger.  I'm no spring chicken, but I can still mix it up when the need arises...}{}{}{}{}
+{17}{I'm not here to start trouble.  Perhaps we can reconcile...?}{}{5}{}{24}{re +15}
+{18}{Let's find out, old man...}{}{5}{}{}{co, fl 23}
+{19}{E:}{}{5}{}{0}{}
+{20}{Hmmm?  Oh, yes!  Of, course!  Far be it from me to not say when I'm mistaken!  You're obviously an individual of outstanding character!  So sorry!}{Hmmm?  Oh, yes!  Of, course!  Far be it from me to not say when I'm mistaken!  You're obviously an individual of outstanding character!  So sorry!}{}{}{}{}
+{21}{It's forgotten.  Might I ask who you are, sir?}{}{5}{}{27}{}
+{22}{Its in the past, Benjamin.  Might I have a moment with you?}{}{5}{}{63}{}
+{23}{Fine!   And, for you, a hard-learned lesson!}{Fine!   And, for you, a hard-learned lesson!}{}{}{}{}
+{24}{Of course, of course...forgive me, sir.  You'd think that being a scientist would give a man control over his tongue, and his reason.  Well met!  I am Benjamin Gershwin, doctor of Phrenology.  How can I be of service?}{Of course, of course...forgive me, madam.  You'd think that being a scientist would give a man control over his tongue, and his reason.  Well met!  I am Benjamin Gershwin, doctor of Phrenology.  How can I be of service?}{}{}{}{}
+{25}{Nice to meet you, Benjamin.  Did you say phrenology?}{}{5}{}{33}{re +5}
+{26}{E:}{}{5}{}{0}{}
+{27}{I am Benjamin Gershwin, doctor of Phrenology.  How can I be of service?}{I am Benjamin Gershwin, doctor of Phrenology.  How can I be of service?}{}{}{}{}
+{28}{Nice to meet you, Benjamin.  Did you say phrenology?}{}{5}{}{33}{}
+{29}{E:}{}{5}{}{0}{}
+{30}{Hi!  What is fremnologee?}{}{-4}{}{33}{}
+{31}{E:}{}{-4}{}{0}{}
+{33}{Phrenology?  It's a science of the head!  You see, every man and woman's head is characterized by different bumps and ridges.  Through studying these, I attempt to extrapolate the personality of the individual involved.   It's dreadfully interesting, and phenomenally accurate...}{Phrenology?  It's a science of the head!  You see, every man and woman's head is characterized by different bumps and ridges.  Through studying these, I attempt to extrapolate the personality of the individual involved.   It's dreadfully interesting, and phenomenally accurate...}{}{}{}{}
+{34}{Hmmm.  Will you read MY head?}{}{5}{}{86}{}
+{35}{What are you currently working on?}{}{5}{qu1154 0}{39}{}
+{36}{Uh...feel MY head!}{}{-4}{}{86}{}
+{37}{What you working on now?}{}{-4}{qu1154 0}{39}{}
+{39}{It's interesting that you ask...I'm looking to acquire the skulls of Jin and Xin, the famous Ren'ar Siamese twins, for my studies.  They were elvish debutantes who were joined at the hip their whole lives!  Scandalous characters as well...stories of their exploits still float around the elite Tarantian social circles...}{It's interesting that you ask...I'm looking to acquire the skulls of Jin and Xin, the famous Ren'ar Siamese twins, for my studies.  They were elvish debutantes who were joined at the hip their whole lives!  Scandalous characters as well...stories of their exploits still float around the elite Tarantian social circles...}{}{}{}{}
+{40}{Acquire them? Where can these skulls be found?}{}{5}{}{45}{re +5}
+{41}{Well.  Every man his hobbies.  I leave you to yours...}{}{5}{}{0}{}
+{42}{I wanna see skulls!}{}{-4}{}{45}{re +5}
+{43}{That boring.  Buh-bye!}{}{-4}{}{0}{re -5}
+{45}{Well, that's going to be a bit of a problem...perhaps you could help me with it?  They're interned in a mausoleum in the Tarant cemetery. I'll pay you 100 gold pieces for your trouble...}{Well, that's going to be a bit of a problem...perhaps you could help me with it?  They're interned in a mausoleum in the Tarant cemetery. I'll pay you 100 gold pieces for your trouble...}{}{}{}{qu1069 1, ru2209}
+{46}{Wait. You want me to rob a grave for you?}{}{5}{}{140}{}
+{47}{Certainly.  I will do so and return...}{}{5}{}{53}{qu1069 2}
+{48}{I have already retrieved them. [Give them to him.]}{}{5}{in 5629}{80}{in5629}
+{49}{Yeah!  I pick up skulls!}{}{-4}{}{53}{qu1069 2}
+{50}{I already got 'em!}{}{-4}{in 5629}{80}{in5629}
+{51}{I dunno. Mebbe I come back later.}{}{-4}{}{0}{}
+{52}{I will think about it.  Good day to you...}{}{5}{}{0}{}
+{53}{Thank you so much.  The information in these skulls might very well unlock the final phrenological secrets...help us to gain insight into the workings of the human mind!}{Thank you so much.  The information in these skulls might very well unlock the final phrenological secrets...help us to gain insight into the workings of the human mind!}{}{}{}{}
+{54}{I'm sure they will.  Good bye...}{}{5}{}{0}{}
+{55}{E:}{}{-4}{}{0}{}
+{63}{Of course...}{Of course...}{}{}{}{}
+{64}{What is it you do here?}{}{5}{qu1069 0, ni 5629}{33}{}
+{65}{I might be able to find those skulls for you...}{}{5}{qu1069 1, ni 5629}{53}{}
+{66}{I've yet to find the skulls...}{}{5}{qu1069 2, ni 5629}{76}{}
+{67}{I found the skulls...[You give them to him.]}{}{5}{qa1069 1, in 5629, qu1154 0}{80}{in 5629}
+{68}{I need to speak with you about those skulls...}{}{5}{qu1069 4, qa1154 1}{150}{}
+{69}{What you do here?}{}{-4}{qu1069 0, ni 5629}{33}{}
+{70}{Mebbe I get skulls for you?}{}{-4}{qu1069 1, ni 5629}{53}{}
+{71}{I no find skulls!}{}{-4}{qu1069 2, ni 5629}{76}{}
+{72}{I got skulls...[You give it to him.]}{}{-4}{qu1069 2, in 5629}{80}{in 5629}
+{73}{I found the skulls, but I need to speak with you about them...}{}{5}{qa1069 1, in 5629, qa1154 1}{195}{}
+{74}{I need to speak with you about those skulls...}{}{5}{qa1069 1, ni 5629, qa1154 1}{235}{}
+{75}{E:}{}{1}{}{0}{}
+{76}{Hurry!  The sooner I see them, the sooner we can see what secrets they hold!}{Hurry!  The sooner I see them, the sooner we can see what secrets they hold!}{}{}{}{}
+{77}{E:}{}{5}{}{0}{}
+{78}{E:}{}{-4}{}{0}{}
+{80}{Splendid!  Here's your payment.  I'm going to commence my research right away!  Thank you so much for your help...}{Splendid!  Here's your payment.  I'm going to commence my research right away!  Thank you so much for your help...}{}{}{}{$$100, qu1069 4}
+{82}{E:}{}{1}{}{0}{}
+{86}{Surely!  Here, if you'll just lower your head, and turn to the right...}{Surely!  Here, if you'll just lower your head, and turn to the right...}{}{}{}{}
+{87}{[Do so.]}{}{1}{ra 1}{96}{}
+{88}{[Do so.]}{}{1}{ra 2}{100}{}
+{89}{[Do so.]}{}{1}{ra 3}{104}{}
+{90}{[Do so.]}{}{1}{ra 4}{108}{}
+{91}{[Do so.]}{}{1}{ra 5}{112}{}
+{92}{[Do so.]}{}{1}{ra 6}{116}{}
+{93}{[Do so.]}{}{1}{ra 7}{120}{}
+{94}{[Do so.]}{}{1}{ra 8}{124}{}
+{96}{Ah...oh!  Quite interesting!  I would surmise, unquestionably, that you are indeed a human!}{Ah...oh!  Quite interesting!  I would surmise, unquestionably, that you are indeed a human!}{}{}{}{}
+{97}{Your powers amaze me, Benjamin...}{}{5}{}{128}{}
+{98}{Uh...yeah!  You right!  You smart!}{}{-4}{}{128}{}
+{100}{Ah...oh!  Quite interesting!  I would surmise, unquestionably, that you are indeed a dwarf!}{Ah...oh!  Quite interesting!  I would surmise, unquestionably, that you are indeed a dwarf!}{}{}{}{}
+{101}{Your powers amaze me, Benjamin...}{}{5}{}{128}{}
+{102}{Uh...yeah!  You right!  You smart!}{}{-4}{}{128}{}
+{104}{Ah...oh!  Quite interesting!  I would surmise, unquestionably, that you are indeed an elf!}{Ah...oh!  Quite interesting!  I would surmise, unquestionably, that you are indeed an elf!}{}{}{}{}
+{105}{Your powers amaze me, Benjamin...}{}{5}{}{128}{}
+{106}{Uh...yeah!  You right!  You smart!}{}{-4}{}{128}{}
+{108}{Ah...oh!  Quite interesting!  I would surmise, unquestionably, that you are indeed a half-elf!}{Ah...oh!  Quite interesting!  I would surmise, unquestionably, that you are indeed a half-elf!}{}{}{}{}
+{109}{Your powers amaze me, Benjamin...}{}{5}{}{128}{}
+{110}{Uh...yeah!  You right!  You smart!}{}{-4}{}{128}{}
+{112}{Ah...oh!  Quite interesting!  I would surmise, unquestionably, that you are indeed a gnome!}{Ah...oh!  Quite interesting!  I would surmise, unquestionably, that you are indeed a gnome!}{}{}{}{}
+{113}{Your powers amaze me, Benjamin...}{}{5}{}{128}{}
+{114}{Uh...yeah!  You right!  You smart!}{}{-4}{}{128}{}
+{116}{Ah...oh!  Quite interesting!  I would surmise, unquestionably, that you are indeed a halfling!}{Ah...oh!  Quite interesting!  I would surmise, unquestionably, that you are indeed a halfling!}{}{}{}{}
+{117}{Your powers amaze me, Benjamin...}{}{5}{}{128}{}
+{118}{Uh...yeah!  You right!  You smart!}{}{-4}{}{128}{}
+{120}{Ah...oh!  Quite interesting!  I would surmise, unquestionably, that you are indeed a half-orc!}{Ah...oh!  Quite interesting!  I would surmise, unquestionably, that you are indeed a half-orc!}{}{}{}{}
+{121}{Your powers amaze me, Benjamin...}{}{5}{}{128}{}
+{122}{Uh...yeah!  You right!  You smart!}{}{-4}{}{128}{}
+{124}{Ah...oh!  Quite interesting!  I would surmise, unquestionably, that you are indeed a half-ogre!}{Ah...oh!  Quite interesting!  I would surmise, unquestionably, that you are indeed a half-ogre!}{}{}{}{}
+{125}{Your powers amaze me, Benjamin...}{}{5}{}{128}{}
+{126}{Uh...yeah!  You right!  You smart!}{}{-4}{}{128}{}
+{128}{Yes, yes I know.   But remember,  it's not me, it's science!  And phrenology is the science of the future...!}{Yes, yes I know.   But remember,  it's not me, it's science!  And phrenology is the science of the future...!}{}{}{}{}
+{129}{Of course.  What are you currently working on?}{}{5}{qu1154 0}{39}{}
+{130}{I have a question for you, about some skulls...}{}{5}{qa1154 1}{350}{}
+{131}{Okay!  What you working on now?}{}{-4}{qu1154 0}{39}{}
+{132}{E:}{}{1}{}{0}{}
+{135}{Y..yes...s..sir. I, uh, please forgive my rudeness.}{Y..yes...m..madam. I, uh, please forgive my rudeness.}{}{}{}{}
+{136}{It's beneath mentioning, really. Have you a moment?}{}{5}{}{63}{}
+{137}{I think not. You need to be taught some manners.}{}{5}{}{16}{re-10}
+{140}{All in the interest of science, my boy, all in the interest of science. Just think about the advances that could be made from just this one little..."indiscretion".}{All in the interest of science, miss, all in the interest of science. Just think about the advances that could be made from just this one little..."indiscretion".}{}{}{}{}
+{141}{Well, since you phrase it so eloquently...I'll do it.}{}{5}{}{53}{qu1069 2}
+{149}{I will have to think on this further. Good bye.}{}{5}{}{0}{}
+{150}{Yes, what about them?}{Yes, what about them?}{}{}{}{}
+{151}{They are part of something I am not at liberty to discuss...}{}{5}{}{160}{}
+{160}{[A suspicious look crosses his face.] What is all this about? What are you saying?}{[A suspicious look crosses his face.] What is all this about? What are you saying?}{}{}{}{}
+{161}{I'm saying I need to get those skulls back from you. I can't tell you why.}{}{5}{}{170}{}
+{170}{What? Never! I have waited years for this opportunity! I will not have them snatched away from me on the eve of establishing my name as the preeminent phrenologist in the world! Why, just a cursory look at them has already raised many fascinating questions to be unraveled!}{What? Never! I have waited years for this opportunity! I will not have them snatched away from me on the eve of establishing my name as the preeminent phrenologist in the world! Why, just a cursory look at them has already raised many fascinating questions to be unraveled!}{}{}{}{}
+{171}{Perhaps there is some way I could persuade you...}{}{5}{ps4}{180}{}
+{172}{Look here, old man, hand them over or I will wring your neck!}{}{5}{sk2 12}{0}{re-10, in5629, lf2 1, fl 179}
+{173}{It's dangerous to have them. You don't know what you're involved in.}{}{5}{ps-3}{0}{gf2602 1, lf4 1, fl 190}
+{179}{Here they are! Please, don't hurt me! I'm a man of science, not a barbarian!}{Here they are! Please, don't hurt me! I'm a man of science, not a barbarian!}{}{}{}{}
+{180}{[He hesitates for a moment.] No...no. This is my life we are speaking of here. I won't let you have them, I won't!}{[He hesitates for a moment.] No...no. This is my life we are speaking of here. I won't let you have them, I won't!}{}{}{}{}
+{181}{I can give you all the answers you seek...}{}{5}{}{250}{lf3 1}
+{182}{Those skulls are very dangerous to possess.}{}{5}{}{260}{}
+{190}{I will take my chances, thank you very much. Good day to you, sir.}{I will take my chances, thank you very much. Good day to you, madam.}{}{}{}{}
+{191}{You cannot have the skulls back, so you may as well leave.}{You cannot have the skulls back, so you may as well leave.}{}{}{}{}
+{195}{What about? Please, give me the skulls, I need to have them. My reputation could be made by studying them!}{What about? Please, give me the skulls, I need to have them. My reputation could be made by studying them!}{}{}{}{}
+{196}{You don't understand. It is dangerous to have the skulls.}{}{5}{}{200}{}
+{200}{I do not care! I will pay you double my original offer! 200 coins!}{I do not care! I will pay you double my original offer! 200 coins!}{}{}{}{}
+{201}{I cannot, in good conscience, give them to you.}{}{5}{}{210}{}
+{202}{Well, in that case, here you are.}{}{5}{}{80}{$$100, lf4 1, in 5629}
+{210}{300 coins! I must have them!}{300 coins! I must have them!}{}{}{}{}
+{211}{Sold! [Give him the skulls.]}{}{5}{}{80}{$$200, lf4 1, in 5629}
+{212}{I am sorry, but no. Good day.}{}{5}{}{0}{lf5 1}
+{220}{Have you returned to sell me the skulls?}{Have you returned to sell me the skulls?}{}{}{}{}
+{221}{Yes I have. The price is 400 coins.}{}{5}{in 5629}{230}{}
+{222}{No, I haven't.}{}{5}{}{0}{fl 229}
+{229}{Well, then please don't continue coming around here to torment me.}{Well, then please don't continue coming around here to torment me.}{}{}{}{}
+{230}{400 coins! [He bites his nails, nervously for a moment.] Okay! I'll take them!}{400 coins! [He bites his nails, nervously for a moment.] Okay! I'll take them!}{}{}{}{}
+{231}{Here they are. [Give him the skulls.]}{}{5}{}{80}{$$300, lf4 1, in 5629}
+{235}{Yes, what about them? Have you found them?}{Yes, what about them? Have you found them?}{}{}{}{}
+{236}{No...but I have learned something about them.}{}{5}{}{240}{}
+{240}{What? What is it?}{What? What is it?}{}{}{}{}
+{241}{They are part of a huge conspiracy, and they are dangerous.}{}{5}{}{0}{fl 249}
+{249}{[He waves you off.] Tut, tut! I will hear none of that! I am not a man of politics, I care not for such things. All that concerns me is acquiring those skulls!}{[He waves you off.] Tut, tut! I will hear none of that! I am not a man of politics, I care not for such things. All that concerns me is acquiring those skulls!}{}{}{}{}
+{250}{What answers could you give me? I am an authority, and you are but a layman!}{What answers could you give me? I am an authority!}{}{}{}{}
+{251}{The twins were the result of breeding experiments, for one...}{}{5}{}{0}{gf2602 1, lf4 1, fl 259}
+{252}{Your very reputation is at stake, here.}{}{5}{}{335}{}
+{259}{Hoh! That is rich! I can tell a purebred skull by touch alone, and I can tell you that it was only elven blood that ran through their veins! I do not know why you are bothering me with this charade, but I tire of it. Good day.}{Hoh! That is rich! I can tell a purebred skull by touch alone, and I can tell you that it was only elven blood that ran through their veins! I do not know why you are bothering me with this charade, but I tire of it. Good day.}{}{}{}{}
+{260}{W...what do you m-mean, dangerous??}{W...what do you m-mean, dangerous??}{}{}{}{}
+{261}{There are armed men looking for them at this very moment!}{}{5}{}{270}{lf3 1}
+{262}{They're infused with dark magick that will sap your very essence!}{}{5}{}{325}{}
+{270}{Do I look like an imbecile to you? You will not scare me with your conspiracy theories.}{Do I look like an imbecile to you? You will not scare me with your conspiracy theories.}{}{}{}{}
+{271}{It's just that I didn't think you would believe the truth...}{}{5}{}{280}{}
+{280}{Oh, and what truth is that?}{Oh, and what truth is that?}{}{}{}{}
+{281}{The twins were the result of breeding experiments, for one...}{}{5}{}{0}{gf2602 1, lf4 1, fl 259}
+{283}{They are fakes, and have been substituted to make you look foolish.}{}{5}{}{290}{}
+{290}{What? It's Dr. von Felden, isn't it? Isn't it? That bastard is always trying to show me up! He's jealous of my genius, he is!}{What? It's Dr. von Felden, isn't it? Isn't it? That bastard is always trying to show me up! He's jealous of my genius, he is!}{}{}{}{}
+{291}{If you give me the skulls, I will find a way to thwart his devious plans...}{}{5}{}{315}{}
+{292}{Yes, he admitted as much to me...}{}{5}{}{300}{}
+{300}{Wait a moment, when did you speak with him?}{Wait a moment, when did you speak with him?}{}{}{}{}
+{301}{Uh...just before I came to see you?}{}{5}{}{0}{gf2602 1, lf4 1, fl 310}
+{310}{I think not. He has been away on the far continent for over six months now, attempting to prove his latest crackpot theory. I do not know if you are working for him somehow, or what your game is, but I no longer wish to speak with you. Good day.}{I think not. He has been away on the far continent for over six months now, attempting to prove his latest crackpot theory. I do not know if you are working for him somehow, or what your game is, but I no longer wish to speak with you. Good day.}{}{}{}{}
+{315}{Yes, yes, of course. Here they are. Thank you for all your help, my son.}{Yes, yes, of course. Here they are. Thank you for all your help, miss.}{}{}{in-5629, xp2, lf6 1}{}
+{316}{It is beneath mentioning, really.}{}{5}{}{0}{}
+{325}{By the gods! Whose dastardly plot was this...wait, it was Dr. von Felden, wasn't it?! That bastard is always trying to best me! He's jealous of my genius, he is!}{By the gods! Whose dastardly plot was this...wait, it was Dr. von Felden, wasn't it?! That bastard is always trying to best me! He's jealous of my genius, he is!}{}{}{}{}
+{326}{If you give me the skulls, I will find a way to thwart his devious plans...}{}{5}{}{315}{}
+{327}{Yes, he admitted as much to me...}{}{5}{}{300}{}
+{335}{My reputation? Whatsoever do you mean?}{My reputation? Whatsoever do you mean?}{}{}{}{}
+{336}{They are fakes, and have been substituted to make you look foolish.}{}{5}{}{290}{}
+{337}{Dark forces are at work to keep you from exposing the truth...}{}{5}{}{0}{gf2602 1, lf4 1, fl 344}
+{344}{Do I look like an imbecile to you? You will not scare me with your conspiracy theories. I do not know why you are here, attempting to reclaim the skulls, but I will not part with them under any circumstances. Good day.}{Do I look like an imbecile to you? You will not scare me with your conspiracy theories. I do not know why you are here, attempting to reclaim the skulls, but I will not part with them under any circumstances. Good day.}{}{}{}{}
+{345}{Please, leave me be. I don't want any trouble.}{Please, leave me be. I don't want any trouble.}{}{}{}{}
+{346}{Thank you again for all your help.}{Thank you again for all your help.}{}{}{}{}
+{350}{Yes, what is it?}{Yes, what is it?}{}{}{}{}
+{351}{I am interested in the skulls of the Ren'ar Siamese twins.}{}{5}{}{360}{}
+{360}{Ahh, yes...interesting case, that. They were elvish debutantes who were joined at the hip their whole lives!  Scandalous characters as well...stories of their exploits still float around the elite Tarantian social circles...}{Ahh, yes...interesting case, that. They were elvish debutantes who were joined at the hip their whole lives!  Scandalous characters as well...stories of their exploits still float around the elite Tarantian social circles...}{}{}{}{}
+{361}{Is there anything else you can tell me about them?}{}{5}{}{370}{}
+{369}{E:}{}{1}{}{0}{}
+{370}{Well, there are quite a few interesting rumors in the air about their heritage not being completely elven, and bizarre conspiracy theories somehow centering around them. I had the opportunity to examine the skulls before they were interred, though, and I can tell you unequivocally that they were pure bred elves. All the gossip is definitely untrue.}{Well, there are quite a few interesting rumors in the air about their heritage not being completely elven, and bizarre conspiracy theories somehow centering around them. I had the opportunity to examine the skulls before they were interred, though, and I can tell you unequivocally that they were pure bred elves. All the gossip is definitely untrue.}{}{}{}{}
+{371}{Thank you for your time.}{}{5}{}{0}{lf7 1}
+

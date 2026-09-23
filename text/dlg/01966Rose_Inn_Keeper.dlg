@@ -1,0 +1,113 @@
+{1}{G:}{}{}{}{}{lf 13 0, lf 14 0}
+{2}{Hello. }{}{5}{lf1 0, re 41}{25}{}
+{3}{Do you always greet new patrons in such a manner?!}{}{5}{lf1 0, re -40}{19}{}
+{4}{Hello Innkeeper.  Might I impose on you for a moment?}{}{5}{lf1 1, re 41}{25}{}
+{5}{Err...  Can I ask you a question, Innkeeper?}{}{5}{lf1 1, re -40}{25}{}
+{13}{Could you answer some questions for me about this matchbook?}{}{5}{in5671}{93}{}
+{14}{Who you be?}{}{-4}{lf1 0, re 41}{25}{}
+{15}{Who you be, meanie?}{}{-4}{lf1 0, re -40}{19}{}
+{16}{Talk to Innk'per?}{}{-4}{lf1 1, re 41}{25}{}
+{17}{Uh...  Me ask Innk'per sumthin'?}{}{-4}{lf1 1, re -40}{25}{}
+{18}{E:}{}{1}{}{0}{}
+{19}{We don't serve your type here.  Remove yourself from the premises or I will be forced to call the guard.}{We don't serve your type here.  Remove yourself from the premises or I will be forced to call the guard.}{}{}{}{}
+{20}{Uh...  I "have" coin...}{}{5}{}{83}{}
+{21}{Humph!  I will just take my coin elsewhere then!}{}{5}{}{83}{}
+{22}{Uh...  Me got coin...}{}{-4}{}{83}{}
+{23}{Phaw!  Me take coin sum place better den!}{}{-4}{}{83}{}
+{24}{F:}{}{1}{}{0}{}
+{25}{What can I help you with?}{What can I help you with?}{}{}{}{}
+{26}{I would like a room for the night.}{}{5}{lf 10 0}{45}{}
+{27}{I will be in town a while.  I would like a room for one week.}{}{5}{ha7, lf 10 0}{52}{}
+{28}{I will be in town a while.  I would like a room for one week.}{}{5}{ha-6, lf 10 0}{57}{}
+{29}{Me stay 'ere 'nite?}{}{-4}{lf 10 0}{45}{}
+{30}{Me be  'ere long.  Me get room for week?}{}{-4}{ha7, lf 10 0}{52}{}
+{31}{Me be  'ere long.  Me get room for week?}{}{-4}{ha-6, lf 10 0}{57}{}
+{32}{C:}{}{1}{}{35}{}
+{33}{E:}{}{1}{}{0}{}
+{34}{}{}{}{}{}{}
+{35}{Is there something else?}{Is there something else?}{}{}{}{}
+{36}{I would like a room for the night.}{}{5}{lf 10 0}{45}{}
+{37}{I will be in town a while.  I would like a room for one week.}{}{5}{ha7, lf 10 0}{52}{}
+{38}{I will be in town a while.  I would like a room for one week.}{}{5}{ha-6, lf 10 0}{57}{}
+{39}{Me stay 'ere 'nite?}{}{-4}{lf 10 0}{45}{}
+{40}{Me be  'ere long.  Me get room for week?}{}{-4}{ha7, lf 10 0}{52}{}
+{41}{Me be  'ere long.  Me get room for week?}{}{-4}{ha-6, lf 10 0}{57}{}
+{42}{C:}{}{1}{lf 14 0}{35}{lf 14 1}
+{43}{E:}{}{1}{}{0}{}
+{44}{}{}{}{}{}{}
+{45}{Oh, but of course, sir.  That will be 25 coins, please.}{Oh, but of course, madam.  That will be 25 coins, please.}{}{}{}{}
+{46}{Here you are.}{}{5}{$$ 25}{-2}{$$-25, lf 10 1}
+{47}{Oh!  That's a little steep... [sigh]  Here.}{}{5}{$$ 25}{-2}{$$-25, lf 10 1}
+{48}{Uh...  here.}{}{-4}{$$ 25}{-2}{$$-25, lf 10 1}
+{49}{Oh!  Dat a lot...  [sigh]  Here.}{}{-4}{$$ 25}{-2}{$$-25, lf 10 1}
+{50}{That's fine, but right now I have some other questions.}{}{5}{}{35}{}
+{51}{Uh..  Me have more questions.}{}{-4}{}{35}{}
+{52}{Oh, yes sir!  I would be most delighted if you would bless my establishment with your company for an extended stay.  Hmm... [ponders a moment]  For showing such patronage, I will reduce the rate to 130 coin for the full week.}{Oh, yes madam!  I would be most delighted if you would bless my establishment with your company for an extended stay.  Hmm... [ponders a moment]  For showing such patronage, I will reduce the rate to 130 coin for the full week.}{}{}{}{}
+{53}{Thank you.  Here.}{}{5}{$$ 130}{-5}{$$-130, lf 10 1}
+{54}{Uh...  T'anks.  Here.}{}{-4}{$$ 130}{-5}{$$-130, lf 10 1}
+{55}{That's fine, but right now I have some other questions.}{}{5}{}{35}{}
+{56}{Uh..  Me have more questions.}{}{-4}{}{35}{}
+{57}{Oh!  But of course...  The fee for one week is 175 coin, sir.}{Oh!  But of course...  The fee for one week is 175 coin, madam.}{}{}{}{}
+{58}{Thank you.  Here.}{}{5}{$$ 175}{-5}{$$-175, lf 10 1}
+{59}{What!  You don't offer a reduced price for payment in advance?}{}{5}{}{78}{}
+{60}{Uh...  T'anks.  Here.}{}{-4}{$$ 175}{-5}{$$-175, lf 10 1}
+{61}{Wha'!  It no cost less to stay long?}{}{-4}{}{78}{}
+{62}{That's fine, but right now I have some other questions.}{}{5}{}{35}{}
+{63}{Uh..  Me have more questions.}{}{-4}{}{35}{}
+{64}{Thank you sir!  You will find your room just down the hall.  The door will be unlocked.  I do hope you enjoy your stay.}{Thank you madam!  You will find your room just down the hall.  The door will be unlocked.  I do hope you enjoy your stay.}{}{}{}{}
+{65}{Thank you.}{}{5}{}{0}{}
+{66}{Uh...  T'anks.}{}{-4}{}{0}{}
+{67}{K:}{}{1}{}{35}{}
+{68}{C:}{}{1}{lf 14 0}{35}{lf 14 1}
+{69}{E:}{}{1}{}{0}{}
+{71}{Thank you sir!  You will find your room just down the hall.  The door will be unlocked.  I do hope you enjoy your stay.}{Thank you madam!  You will find your room just down the hall.  The door will be unlocked.  I do hope you enjoy your stay.}{}{}{}{}
+{72}{Thank you.}{}{5}{}{0}{}
+{73}{Uh...  T'anks.}{}{-4}{}{0}{}
+{74}{K:}{}{1}{}{35}{}
+{75}{C:}{}{1}{lf 14 0}{35}{lf 14 1}
+{76}{E:}{}{1}{}{0}{}
+{78}{I am sorry sir.  Bookings have been extremely busy of late.  I am quite surprised we even have a room available.  I am certain it will not last long, should you decline to take it.}{I am sorry madam.  Bookings have been extremely busy of late.  I am quite surprised we even have a room available.  I am certain it will not last long, should you decline to take it.}{}{}{}{}
+{79}{[sigh]  Here.}{}{5}{$$ 175}{-5}{$$-175, lf 10 1}
+{80}{[sigh]  Here.}{}{-4}{$$ 175}{-5}{$$-175, lf 10 1}
+{81}{That's fine, but right now I have some other questions.}{}{5}{}{35}{}
+{82}{Uh..  Me have more questions.}{}{-4}{}{35}{}
+{83}{Oh!...  Please accept my apologies sir!  I mistook you for someone else.  How may I be of service?}{Oh!...  Please accept my apologies madam!  I mistook you for someone else.  How may I be of service?}{}{}{}{}
+{84}{I would like a room for the night.}{}{5}{lf 10 0}{45}{}
+{85}{I will be in town a while.  I would like a room for one week.}{}{5}{ha7, lf 10 0}{52}{}
+{86}{I will be in town a while.  I would like a room for one week.}{}{5}{ha-6, lf 10 0}{57}{}
+{87}{Me stay 'ere 'nite?}{}{-4}{lf 10 0}{45}{}
+{88}{Me be  'ere long.  Me get room for week?}{}{-4}{ha7, lf 10 0}{52}{}
+{89}{Me be  'ere long.  Me get room for week?}{}{-4}{ha-6, lf 10 0}{57}{}
+{90}{C:}{}{1}{lf 14 0}{35}{lf 14 1}
+{91}{E:}{}{1}{}{0}{}
+{93}{Matchbook?  [looks at it]  Yes...  This is one of our matchbooks.  What question do you have about it, sir.?}{Matchbook?  [looks at it]  Yes...  This is one of our matchbooks.  What question do you have about it, madam.?}{}{}{}{}
+{94}{I found it on a dead man at the IFS Zephyr crash. Did you know him?}{}{5}{}{97}{}
+{95}{E:}{}{1}{}{0}{}
+{97}{No...  I did not know anyone...  Wait!  Yes...  Yes.  There was one person who it could have been...}{No...  I did not know anyone...  Wait!  Yes...  Yes.  There was one person who it could have been...}{}{}{}{}
+{98}{Who?}{}{5}{}{100}{}
+{99}{E:}{}{1}{}{0}{}
+{100}{Well...  It is the strangest tale really.  Late one night, I noticed all manner of strange light and sound emanating from the Ring.  Not long after the ruckus had ceased, a haggard and disheveled man arrived here, inquiring about a room for the night.  The poor fellow looked quite a fright.}{Well...  It is the strangest tale really.  Late one night, I noticed all manner of strange light and sound emanating from the Ring.  Not long after the ruckus had ceased, a haggard and disheveled man arrived here, inquiring about a room for the night.  The poor fellow looked quite a fright.}{}{}{}{}
+{101}{Really?  What was so strange about him?}{}{5}{}{104}{}
+{102}{What did he look like?}{}{5}{}{104}{}
+{103}{E:}{}{1}{}{0}{}
+{104}{He had quite an odd look about him, gaunt, clean shaven, but with the features and clothing of a dwarf...  Yet, he could not possibly have been a dwarf!  "No" dwarf I have ever heard of would sacrifice his beard to the knife...  Even today I cannot say I truly knew his race. }{He had quite an odd look about him, gaunt, clean shaven, but with the features and clothing of a dwarf...  Yet, he could not possibly have been a dwarf!  "No" dwarf I have ever heard of would sacrifice his beard to the knife...  Even today I cannot say I truly knew his race. }{}{}{}{}
+{105}{How very odd...}{}{5}{}{108}{}
+{106}{Was there anything else?}{}{5}{}{108}{}
+{107}{E:}{}{1}{}{0}{}
+{108}{He had no coin about him.  ...I was about to turn him away, when he offered me an exceptionally fine dwarven blade as compensation.  A beautiful piece it was, inscribed with the initials B.M.C.  It fetched quite a price when I sold it...}{He had no coin about him.  ...I was about to turn him away, when he offered me an exceptionally fine dwarven blade as compensation.  A beautiful piece it was, inscribed with the initials B.M.C.  It fetched quite a price when I sold it...}{}{}{}{}
+{109}{He must surely have been a dwarf!  Was there anything more?}{}{5}{}{112}{}
+{110}{Did he say anything to you?}{}{5}{}{112}{}
+{111}{E:}{}{1}{}{0}{}
+{112}{The only other inquiry he made of me was for the quickest route to Tarant.  I told him that this was normally a lengthy journey, but that he was in luck!  The maiden voyage of the IFS Zephyr would be leaving from Caladon shortly.  It was surely to be the quickest way to Tarant.}{The only other inquiry he made of me was for the quickest route to Tarant.  I told him that this was normally a lengthy journey, but that he was in luck!  The maiden voyage of the IFS Zephyr would be leaving from Caladon shortly.  It was surely to be the quickest way to Tarant.}{}{}{}{}
+{113}{It was not luck that brought people aboard that doomed ship...}{}{5}{}{116}{}
+{114}{...or the quickest way to die.}{}{5}{}{116}{}
+{115}{E:}{}{1}{}{0}{}
+{116}{Yes... the Zephyr was such an incredible tragedy.  Oh yes...  I let him know that he would need proper identification to board.  He looked the type to be lacking such, so I referred him to a man I had heard of in Caladon, Mr. Razzia, rather a shady character, but helpful when it comes to passports...}{Yes... the Zephyr was such an incredible tragedy.  Oh yes...  I let him know that he would need proper identification to board.  He looked the type to be lacking such, so I referred him to a man I had heard of in Caladon, Mr. Razzia, rather a shady character, but helpful when it comes to passports...}{}{}{}{gf2410 1}
+{117}{So he said he was going to get on the Zephyr?  Are you positive?}{}{5}{}{120}{}
+{118}{So he left for the Zephyr...  You are sure of this?}{}{5}{}{120}{}
+{119}{E:}{}{1}{}{0}{}
+{120}{He thanked me and went to his room.  When I awoke the next morn, he was gone.  He did not say a word... just left.  Och, well, I told you he was a strange one.  Anyway, that is the only person I know that would have been on that accursed flight.}{He thanked me and went to his room.  When I awoke the next morn, he was gone.  He did not say a word... just left.  Och, well, I told you he was a strange one.  Anyway, that is the only person I know that would have been on that accursed flight.}{}{}{}{}
+{121}{Thank you for the information.}{}{5}{}{0}{}
+{122}{K:}{}{5}{}{35}{}
+{123}{E:}{}{1}{}{0}{}
+

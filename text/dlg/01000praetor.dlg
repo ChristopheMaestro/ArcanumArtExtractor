@@ -1,0 +1,431 @@
+{1}{What brings an outsider to my chambers?}{Ah, a maiden from beyond the city's walls. What can I do for milady?}{}{}{}{}
+	{2}{How did you place me as from beyond the city's walls?}{}{5}{}{6}{}
+	{3}{King Praetor? Your brother sends his regards.}{}{5}{gf2282 1}{330}{}
+	{4}{I've come to see if there were any jobs to be had.}{}{5}{}{37}{}
+	{5}{E:}{}{5}{}{0}{}
+
+{6}{You do not have the ... "look" of a citizen of Cumbria.}{Milady does not have the ... "look" of a citizen of Cumbria.}{}{}{}{}
+	{7}{And what look would a subject of Cumbria have?}{1}{5}{}{11}{}
+	{8}{My lord flatters me, I'm no different than your people.}{0}{5}{}{11}{}
+	{9}{Uh ... thanks. Actually, I'm looking for work.}{}{5}{}{37}{}
+	{10}{There seems to be a gaunt appearance to your citizens.}{}{5}{pe 13}{11}{}
+
+{11}{We are a poor people now, with limited resources, and I fear my citizens are slowly starving. Cursed technology has toppled my dear Cumbria from its former glory.}{We are a poor people now, with limited resources, and I fear my citizens are slowly starving. Cursed technology has toppled my dear Cumbria from its former glory.}{}{}{}{ru2217}
+	{12}{Yes, yes, it's all a rich tapestry.}{}{5}{ch 13}{32}{re +10}
+	{13}{Technology is the scourge of our age, my good sir.}{}{5}{ma 30}{20}{}
+	{14}{I beg to differ, sir. Technology could save your lands.}{}{5}{ta 30, ch13}{79}{}
+	{15}{I beg to differ, sir. Technology could save your lands.}{}{5}{ta 30, ch -12, re -75}{74}{re -15}
+	{16}{I beg to differ, sir. Technology could save your lands.}{}{5}{ta 30, ch -12, re 76}{79}{re -15}
+	{17}{Could I be of any service to the kingdom?}{}{5}{}{37}{}
+	{18}{How did this all happen?}{}{5}{}{20}{}
+	{19}{E:}{}{5}{}{0}{}
+
+{20}{I courted the mages of Tulla in an effort to defeat the technology driven madness of Arland. They swore technology was weak compared to the magicks they wielded, yet it was strong enough to defeat our economy.}{I courted the mages of Tulla in an effort to defeat the technology driven madness of Arland. They swore technology was weak compared to the magicks they wielded, yet it was strong enough to defeat our economy.}{}{}{}{gv 1000 1, ru2218}
+	{21}{Is there some way I could help reverse your fortunes?}{}{5}{}{37}{}
+	{22}{Why haven't the mages helped?}{}{5}{}{26}{}
+	{23}{Why not use technology to improve your lot?}{}{5}{ch 13}{79}{}
+	{24}{Why not use technology to improve your lot?}{}{5}{ch -12}{74}{re -15}
+	{25}{E:}{}{5}{}{0}{}
+
+{26}{They could not face the truth after their ignorance doomed me. Eventually, they all fled.}{They could not face the truth after their ignorance doomed me. Eventually, they all fled.}{}{}{}{}
+	{27}{I can't believe the mages turned their backs on you.}{}{5}{ma 30}{170}{}
+	{28}{There is no honor in magick.}{}{5}{ta 30}{83}{}
+	{29}{Perhaps I could be of service.}{}{5}{}{37}{}
+	{30}{Tired of listening to you, I wager.}{}{5}{ch 15}{32}{}
+	{31}{E:}{}{5}{}{0}{}
+
+{32}{Ah! A quick tongue! Useful, if one knows how to use it.}{Ah! A quick tongue! Useful, if one knows how to use it.}{}{}{}{}
+	{33}{Then I'd be of use to you?}{}{5}{}{37}{}
+	{34}{Yours is useless, then, eh?}{}{5}{ch 15}{68}{}
+	{35}{Yours is useless, then, eh?}{}{5}{ch -14}{54}{}
+	{36}{E:}{}{5}{}{0}{}
+
+{37}{I have need of a courier. There appears to be some sort of problem with Black Root, one of our outlying provinces. I could use someone to look into it.}{I have need of a courier. There appears to be some sort of problem with Black Root, one of our outlying provinces. I could use someone to look into it.}{}{}{}{ qu1000 1, mm 3}
+	{38}{What's the nature of this problem?}{}{5}{}{41}{}
+	{39}{What's the pay?}{}{5}{}{50}{}
+	{40}{Not interested, thanks anyway.}{}{5}{}{0}{}
+
+{41}{Two years ago, Black Root sent word that they could not meet their taxes, their crops had failed. I haven't heard from them since. I need someone to investigate and collect what I'm owed - 5 gold bars, I believe.}{Two years ago, Black Root sent word that they could not meet their taxes, their crops had failed. I haven't heard from them since. I need someone to investigate and collect what I'm owed - 5 gold bars, I believe.}{}{}{}{}
+	{42}{Or they just decided not to pay.}{}{5}{ch 15}{46}{}
+	{43}{Could they have betrayed your majesty?}{}{5}{}{46}{}
+	{44}{What's this job worth?}{}{5}{}{50}{}
+	{45}{I'm not interested, goodbye.}{}{5}{}{0}{}
+
+{46}{Never! They are my loyal subjects. Would you be interested in such a venture?}{Never! They are my loyal subjects. Would you be interested in such a venture?}{}{}{}{}
+	{47}{What can I expect for my troubles?}{}{5}{}{50}{}
+	{48}{I'll give it a go.}{}{5}{}{0}{qu1000 2}
+	{49}{N:}{}{5}{}{0}{}
+
+{50}{If you succeed in retrieving my taxes, you'd be entitled to 200 coins, and, of course, my everlasting gratitude.}{If you succeed in retrieving my taxes, you'd be entitled to 200 coins, and, of course, my everlasting gratitude.}{}{}{}{}
+	{51}{And if just kept the gold bars instead?}{}{5}{ch 15}{65}{}
+	{52}{Consider it done.}{}{5}{}{0}{qu1000 2}
+	{53}{Not interested, thanks anyway.}{}{5}{}{0}{}
+
+{54}{Your insolence offends me! Begone, cretin.}{Your insolence offends me! Begone, harlot.}{}{}{}{}
+	{55}{I beg your forgiveness, your majesty.}{}{5}{}{59}{re +10}
+	{56}{I'll  take my leave, then.}{}{5}{}{0}{}
+	{57}{You'd best call your guards to protect your worthless hide.}{}{5}{}{0}{fl 173, co}
+	
+{59}{You'll accept the task, then?}{You'll accept the task, then?}{}{}{}{}
+	{60}{By your command, sire.}{}{5}{}{0}{ qu1000 2, re +10}
+	{61}{I regret that I cannot.}{}{5}{}{63}{re +5}
+	{62}{If your daughter wasn't so terrible to behold, I might.}{}{5}{}{0}{fl 173, co}
+
+{63}{Return if you change your mind.}{Return if you change your mind}{}{}{}{}
+	{64}{E:}{}{5}{}{0}{}
+
+{65}{Hah! A sharp riposte!! I can assure you, it would be most ... painful.}{Hah! A sharp riposte!! I can assure you, it would be most ... painful.}{}{}{}{}
+	{66}{I accept your terms, then.}{}{5}{}{0}{qu1000 2}
+	{67}{I must decline your offer.}{}{5}{}{63}{}
+
+{68}{I could use a man of your wit, sir.}{I could use a lady such as yourself.}{}{}{}{}
+	{69}{I'm listening.}{}{5}{}{37}{}
+	{70}{Not interested, sorry.}{}{5}{}{63}{}
+
+{71}{Your insolence offends me! Begone, cretin.}{Your insolence offends me! Begone, harlot.}{}{}{}{}
+	{72}{So be it.}{}{5}{}{0}{}
+	{73}{How can I rectify my misstep?}{}{5}{}{37}{}
+
+{74}{I will not speak of technology with one such as yourself! Begone with you, outlander!}{I will not speak of technology with one such as yourself! Begone with you, outlander!}{}{}{}{}
+	{75}{How can I rectify my misstep?}{}{5}{}{37}{}
+	{76}{You spoke of it first, majesty.}{}{5}{ch 15}{32}{re +10}
+	{77}{So be it.}{}{5}{}{0}{}
+	{78}{Would you like a close look at my gun, sir?}{}{5}{}{0}{fl 173, co}
+
+{79}{Please speak not of the devil's work. Technology will never have a place in Cumbria.}{Please speak not of the devil's work. Technology will never have a place in Cumbria.}{}{}{}{}
+	{80}{Perhaps I could be of service.}{}{5}{}{37}{}
+	{81}{Then you will continue to suffer.}{}{5}{}{74}{re -10}
+	{82}{E:}{}{5}{}{0}{}
+
+{83}{Yes, and technology even less!}{Yes, and technology even less!}{}{}{}{}
+	{84}{Could I be of some help?}{}{5}{}{37}{}
+	{85}{Technology is the savior of mankind!}{}{5}{ta 30}{79}{}
+	{86}{What is less than none?}{}{5}{ch 15 }{32}{}
+	{87}{What is less than none?}{}{5}{ch -14}{71}{re -10 }
+	{88}{E:}{}{5}{}{0}{}
+
+{89}{Thanks are due, friend. Our economy is showing signs of recovery since Xavier Silonus arrived from Tulla.}{Thanks are due, friend. Our economy is showing signs of recovery since Xavier Silonus arrived from Tulla.}{}{}{}{}
+	{90}{You're welcome.}{}{5}{}{91}{}
+	{91}{Consider Xavier's magicks to be at your disposal, I will pay the coin.}{Consider Xavier's magicks to be at your disposal, I will pay the coin.}{}{}{}{}
+	{92}{Thank you.}{}{5}{}{0}{}
+
+{93}{Ah! The outsider returns!}{Ah! The outsider returns!}{}{}{}{}
+	{94}{Q:1000}{}{1}{}{1}{}
+        {95}{Your brother sends his regards.}{}{5}{gf2282 1}{330}{}
+	{108}{Please excuse me.}{}{5}{}{0}{}
+
+{109}{Excellent!! Thank you for retrieving the taxes, here's your share.}{Excellent!! Thank you for retrieving the taxes, here's your share.}{}{}{}{qu 1000 4, $$ 200}
+	{110}{It was worth more than 200 coins.}{}{5}{pa-6408, ps 8}{114}{$$ 75}
+	{111}{Dante was instrumental in retrieving the taxes.}{}{5}{pa6408}{380}{$$ 75}
+	{112}{Anything else, milord?}{}{5}{pa-6408}{410}{}
+	{113}{It was worth more than 200 coins.}{}{5}{pa6408, ps 8}{}{$$ 75}
+
+{114}{Usually, I'd never renegotiate an agreed upon wage. In your case, though, I feel inclined to make an exception. Here's an extra 75 for your troubles.}{Usually, I'd never renegotiate an agreed upon wage. In your case, though, I feel inclined to make an exception. Here's an extra 75 for your troubles.}{}{}{}{}
+	{115}{Any other tasks for a humble servant?}{}{5}{}{410}{}
+	{116}{Thank you. Goodye.}{}{5}{}{0}{}
+
+
+{120}{My daughter has chosen to take up with Auguste Farad, prince of Arland, against my wishes.}{My daughter has chosen to take up with Auguste Farad, prince of Arland, against my wishes.}{}{}{}{qu1001 1}
+	{121}{Please tell me more.}{}{5}{}{123}{}
+	{122}{I must be going, sire.}{}{5}{}{0}{}
+
+{123}{I fear my harshness has driven her away. She refuses to communicate with me.}{I fear my harshness has driven her away. She refuses to communicate with me.}{}{}{}{}
+	{124}{You'd like me to get word to her?}{}{5}{}{126}{}
+	{125}{Sorry, I must be going.}{}{5}{}{0}{}
+
+{126}{Yes, I believe she's living in Caladon, capital of Arland, with the prince. Will you help?}{Yes, I believe she's living in Caladon, capital of Arland, with the prince. Will you help?}{}{}{}{ mm 4}
+	{127}{Of course, how could I not?}{}{5}{}{130}{re +10, qu1001 2}
+	{128}{How much coin is it worth?}{}{5}{ch 15 }{134}{}
+	{129}{My regrets, but I cannot.}{}{5}{}{0}{re -5}
+
+{130}{May the gods bless you, my son. [He thinks for a moment.] I believe she must have taken one of my ships to get to Caladon. Perhaps you should start by speaking with one of my dock workers, they may have some information for you.}{May the gods bless milady. [He thinks for a moment.] I believe she must have taken one of my ships to get to Caladon. Perhaps you should start by speaking with one of my dock workers, they may have some information for you.}{}{}{}{}
+	{131}{I'll return with word from her shortly.}{}{5}{}{0}{}
+	{132}{Uh, how much is this worth?}{}{5}{ch 15 }{134}{}
+	{133}{Uh, how much is this worth?}{}{5}{ch -14 }{137}{re -10 }
+
+{134}{I regret that I have little to offer but my gratitude, and perhaps a few trinkets.}{I regret that I have little to offer but my gratitude, and perhaps a few trinkets.}{}{}{}{}
+	{135}{Sorry, that's not good enough.}{}{5}{}{0}{fl  188, co}
+	{136}{Your gratitude is enough.}{}{5}{}{0}{}
+
+{137}{Why you treacherous cur! I should have you thrown in chains!}{Harlot! I should have you thrown in chains!}{}{}{}{}
+	{138}{Many pardons, I'll return with word from her shortly.}{}{5}{}{0}{qu1001 2}
+	{139}{I have heard her "services" are quite expensive.}{}{5}{}{0}{fl 173, co}
+	{140}{I'm sorry for the offense. Goodbye.}{}{5}{}{0}{}
+
+{141}{What precisely do you mean, difficulty?}{What precisely do you mean, difficulty?}{}{}{}{}
+	{142}{I killed the traitors of Black Root.}{}{5}{ch -14 }{145}{re -20}
+	{143}{Black Root betrayed you, so I had to teach them a lesson.}{}{5}{ch 15}{151}{}
+	{144}{E:}{}{5}{}{0}{}
+
+{145}{Give me the taxes - you get nothing for your treachery save that I spare your life!}{Give me the taxes - you get nothing for your treachery save that I spare your life!}{}{}{}{}
+	{146}{For your rudeness, I'll keep it.}{}{5}{}{0}{fl 173, co}
+	{147}{Here it is, but don't think this is over.}{}{5}{in 5601}{0}{in 5601, re -10}
+	{148}{I don't have it.}{}{5}{}{149}{}
+
+{149}{Get out and never return or I'll have your life!}{Get out and never return or I'll have your life!}{}{}{}{}
+	{150}{E:}{}{5}{}{0}{}
+
+{151}{I can't say I approve of your methods, but it needed to be done. The taxes, please.}{I can't say I approve of your methods, but it needed to be done. The taxes, please.}{}{}{}{}
+	{152}{Here's your taxes. Is there any other use for my "methods"?}{}{5}{in 5601}{410}{in 5601}
+	{153}{Here's your taxes. Good day.}{}{5}{in 5601}{0}{in 5601}
+	{154}{Unfortunately, I don't have it.}{}{5}{ch 15}{157}{}
+	{155}{Unfortunately, I don't have it.}{}{5}{ch -14}{287}{re -15}
+
+{156}{Dog!! I'll teach you to lie to the king! Guards!}{Dog!! I'll teach you to lie to the king! Guards!}{}{}{}{}
+
+{157}{I'm sorry to hear that, perhaps you could make amends somehow.}{I'm sorry to hear that, perhaps you could make amends somehow.}{}{}{}{}
+	{158}{Not interested, sorry.}{}{5}{}{0}{}
+	{159}{What might you suggest?}{}{5}{}{410}{}
+
+{160}{I'm sorry to hear that, perhaps you could be of service in another matter.}{I'm sorry to hear that, perhaps you could be of service in another matter.}{}{}{}{}
+	{161}{And that would be?}{}{5}{}{410}{}
+	{162}{E:}{}{5}{}{0}{}
+
+{163}{Away with you and your unholy monstrosities!}{Away with you and your unholy monstrosities!}{}{}{}{}
+
+{164}{The farmers need to keep a better watch on their sheep.}{The farmers need to keep a better watch on their sheep.}{}{}{}{}
+
+{165}{Take your cheap parlor tricks elsewhere, mage.}{Take your cheap parlor tricks elsewhere, mage.}{}{}{}{}
+
+{166}{How dare you address the king in such a state!}{How dare you address the king in such a state!}{}{}{}{}
+
+{167}{How dare you turn your back on the king!}{How dare you turn your back on the king!}{}{}{}{}
+
+{168}{Many thanks for your help.}{Many thanks for your help.}{}{}{}{}
+
+{169}{Good to see you, friend.}{Good to see you, friend.}{}{}{}{}
+
+{170}{Well that may be, but I could use someone of your ... nature to help me now.}{Well that may be, but I could use someone of your ... nature to help me now.}{}{}{}{}
+	{171}{At your service, your majesty.}{}{5}{}{37}{}
+	{172}{E:}{}{5}{}{0}{}
+
+{173}{Guards!!}{Guards!!}{}{}{}{}
+
+{174}{Get out of here before I call my guards.}{Get out of here before I call my guards.}{}{}{}{}
+
+{175}{How dare you attack my subjects! Guards!}{How dare you attack my subjects! Guards!}{}{}{}{}
+
+{176}{Lying dog! Guards!}{Lying dog! Guards!}{}{}{}{}
+
+{177}{Please make haste, I'm anxious to resolve this matter.}{Please make haste, I'm anxious to resolve this matter.}{}{}{}{}
+	{178}{E:}{}{5}{}{0}{}
+
+{179}{Please make haste, I'm anxious to resolve this matter.}{Please make haste, I'm anxious to resolve this matter.}{}{}{}{}
+	{180}{Oh, it might interest you that Black Root has joined Tarant.}{}{5}{}{182}{}
+	{181}{E:}{}{5}{}{0}{}
+
+{182}{I have heard that rumored as well. Fortunately, my subjects would never be disloyal to me.}{I have heard that rumored as well. Fortunately, my subjects would never be disloyal to me.}{}{}{}{}
+	{183}{There are Tarantian guards stationed there.}{}{5}{}{185}{re -10}
+	{184}{Of course, good day, then.}{}{5}{}{0}{}
+
+{185}{Perhaps you didn't hear me. My subjects would never do such a thing. Don't mention it again.}{Perhaps you didn't hear me. My subjects would never do such a thing. Don't mention it again.}{}{}{}{}
+	{186}{Are you demented?}{}{5}{}{0}{fl 188, co}
+	{187}{Of course, good day, then.}{}{5}{}{0}{}
+
+{188}{Get out of here before I call my guards.}{Get out of here before I call my guards.}{}{}{}{}
+
+{189}{My daughter's death weighs heavy upon me.}{My daughter's death weighs heavy upon me.}{}{}{}{}
+	{190}{I'm sorry to hear that.}{}{5}{}{0}{}
+	{191}{You drove her to her grisly end.}{}{5}{}{0}{fl 176, co}
+
+{192}{Out with it, then.}{Out with it, then.}{}{}{}{}
+	{193}{Your daughter died on the way to meet the prince. I found her ... amulet.}{}{5}{}{197}{al +100, qu1001 4}
+	{194}{The prince killed her.}{}{5}{}{204}{al -100, qu1001 4}
+
+{195}{Where is she?}{Where is she?}{}{}{}{}
+	{196}{I'm sorry, she died on her way to meet the prince.}{}{5}{}{197}{al +100, qu1001 4}
+
+{197}{Keep her amulet, I don't want it. My daughter, my only heir, how could this have happened?}{Keep her amulet, I don't want it. My daughter, my only heir, how could this have happened?}{}{}{}{}
+	{198}{The ship crashed, all hands were lost.}{}{5}{}{199}{}
+
+{199}{Here are a few coins. I'll thank you to leave me with my grief, sir.}{Here are a few coins. I'll thank you to leave me with my grief, my good lady.}{}{}{}{$$250}
+	{200}{E:}{}{5}{}{0}{}
+
+{201}{Where is she?}{Where is she?}{}{}{}{}
+	{202}{I'm sorry, she died on her way to meet the prince.}{}{5}{}{197}{al +100, qu1001 4}
+
+{204}{That bastard! I'll give you 500 coins to kill him!}{That bastard! I'll give you 500 coins to kill him!}{}{}{}{}
+	{205}{Consider it done.}{}{5}{}{0}{qu1002 2}
+	{206}{I'm sorry, I can't.}{}{5}{}{211}{}
+
+{207}{Is it done? Is it done?}{Is it done? Is it done?}{}{}{}{}
+	{208}{Not yet.}{}{5}{}{177}{}
+	{209}{I've changed my mind. I can't kill him.}{}{5}{}{0}{fl 211}
+	{210}{I was mistaken, she perished in a shipwreck.}{}{5}{}{0}{fl 211}
+
+{211}{We'll not speak of this ever again.}{We'll not speak of this ever again.}{}{}{}{}
+
+{212}{Well? Is my loss avenged?}{Well? Is my loss avenged?}{}{}{}{}
+	{213}{Yes, and rather painfully I might add.}{}{5}{}{214}{}
+
+{214}{Splendid. Here's your money. Never speak of this again.}{Splendid. Here's your money. Never speak of this again.}{}{}{}{qu1002 4, $$ 500}
+	{215}{Of course, good day.}{}{5}{}{0}{}
+	{216}{By the way, the prince didn't kill your daughter.}{}{5}{}{0}{fl 176, co}
+
+{217}{What brings an outsider to my chambers?}{Ah, a maiden from beyond the city's walls. What can I do for milady?}{}{}{}{}
+	{218}{uhhh...}{}{1}{}{220}{}
+	{219}{bye.}{}{1}{}{0}{}
+
+{220}{My dimwitted friend, I might have a task for one possessing your limited abilities.}{My dimwitted friend, I might have a task for one possessing your limited abilities.}{}{}{}{}
+	{221}{Huh?}{}{1}{}{223}{}
+	{222}{Good ... day?}{}{1}{}{0}{}
+
+{223}{Yes, I see. You do work for me?}{Yes, I see. You do work for me?}{}{}{}{}
+	{224}{akk.}{}{1}{}{226}{qu1000 1}
+	{225}{No.}{}{1}{}{0}{}
+
+{226}{I'll take that as a yes. Go to Black Root, get tax money. Bring 5 gold bars to me.}{I'll take that as a yes. Go to Black Root, get tax money. Bring 5 gold bars to me.}{}{}{}{}
+	{227}{Where the root?}{}{1}{}{0}{qu1000 2, mm 3, fl 229}
+	{228}{No, ma'am.}{}{1}{}{0}{}
+
+{229}{There, I've marked your map. Goodbye.}{There, I've marked your map. Goodbye.}{}{}{}{}
+
+{230}{Ah, the idiot returns!}{Ah, the idiot returns!}{}{}{}{}
+	{231}{D'oh.}{}{1}{qu 1000 0}{220}{}
+	{232}{D'oh.}{}{1}{qu 1000 1}{223}{}
+	{233}{Humph.}{}{1}{qu 1000 2}{0}{fl 243}
+	{234}{whooah.}{}{1}{qu 1000 3}{238}{}
+	{235}{Humph.}{}{1}{qu1000 4}{0}{fl 243}
+	{236}{grumph.}{}{1}{}{0}{}
+
+{237}{Get money. Good boy.}{Get money. Good girl.}{}{}{}{}
+
+{238}{I don't believe it, you actually did it.}{I don't believe it, you actually did it.}{}{}{}{}
+	{239}{Here taxes.}{}{1}{in 5601}{0}{qu 1000 4, in 5601, fl 241}
+	{240}{I forgot.}{}{1}{}{0}{}
+
+{241}{Here's 100 coins for your trouble. Goodbye.}{Here's 100 coins for your trouble. Goodbye.}{}{}{}{}
+
+{242}{Stupid oaf! Get out of here.}{Stupid oaf! Get out of here.}{}{}{}{}
+
+{243}{I've no more time for your idiocy. Goodbye.}{I've no more time for your idiocy. Goodbye.}{}{}{}{}
+
+{244}{How dare someone of your, your, ... caliber address one such as myself.}{How dare someone of your, your, ... caliber address one such as myself.}{}{}{}{}
+	{245}{I beg forgiveness, I only wish to serve.}{}{5}{}{248}{}
+	{246}{I suppose I should have just spit in your eye instead.}{}{5}{}{0}{fl 173, co}
+	{247}{E:}{}{5}{}{0}{}
+
+{248}{I don't think so, begone.}{I don't think so, begone.}{}{}{}{}
+	{249}{Please honor me with a task to prove my worth.}{}{5}{}{252}{re +5}
+	{250}{Please, let me sharpen my blade on your dull wit.}{}{5}{}{0}{fl 173, co}
+	{251}{E:}{}{5}{}{0}{}
+
+{252}{I have need of a courier, but I suppose you'll have to do. Black Root owes me tax money. 5 gold bars. Bring it to me.}{I have need of a courier, but I suppose you'll have to do. Black Root owes me tax money. 5 gold bars. Bring it to me.}{}{}{}{qu 1000 1, mm 3}
+	{253}{What will you pay me?}{}{5}{}{256}{re -10}
+	{254}{Consider it done.}{}{5}{}{0}{qu1000 2}
+	{255}{E:}{}{5}{}{0}{}
+
+{256}{You dare ask me for pay! Swine, your payment will be tolerance instead of torture!}{You dare ask me for pay! Swine, your payment will be tolerance instead of torture!}{}{}{}{}
+	{257}{I don't like your terms.}{}{5}{}{0}{fl 174, co}
+	{258}{I see your point. It will be done.}{}{5}{}{0}{qu 1000 2, fl 188}
+	{259}{E:}{}{5}{}{0}{}
+
+{260}{You'd best have something good to tell me, cretin.}{You'd best have something good to tell me, harlot.}{}{}{}{}
+	{261}{The queen is not so bad after a cup of ale, eh?}{}{5}{}{0}{fl 173, co}
+	{262}{Q:1000}{}{5}{}{0}{}
+	{263}{Your brother sends his regards.}{}{5}{}{330}{}
+	{269}{E:}{}{5}{}{0}{}
+
+{270}{It seems I was wrong about you. Please take 100 coins for your trouble.}{It seems I was wrong about you. Please take 100 coins for your trouble.}{}{}{}{$$ 100}
+	{271}{Anything else, your majesty?}{}{5}{}{410}{}
+	{272}{100 coins! What do you take me for?}{}{5}{}{0}{fl 188, co}
+	{273}{A:}{}{5}{}{0}{}
+
+{274}{Very well, peasant. Be quick about it.}{Very well, peasant. Be quick about it.}{}{}{}{}
+	{275}{E:}{}{5}{}{0}{}
+
+{276}{Not for the likes of you. Begone before I have the guards drag you out.}{Not for the likes of you. Begone before I have the guards drag you out.}{}{}{}{}
+	{277}{They'll be dragging me from your lifeless corpse, fool.}{}{5}{}{0}{fl 173, co}
+	{278}{E:}{}{5}{}{0}{}
+
+{279}{I'm honored to have someone of your fine heritage grace us with your presence!}{I'm honored to have someone of your fine heritage grace us with your presence!}{}{}{}{}
+	{280}{What has happened to your lands?}{}{5}{}{11}{}
+	{281}{Could I be of any use?}{}{5}{}{37}{}
+	{282}{E:}{}{5}{}{0}{}
+
+{283}{Splendid! You've returned!}{Splendid! You've returned!}{}{}{}{}
+	{284}{Q:1000}{}{5}{}{0}{}
+
+{285}{You don't seem to have the tax money. An honest mistake, I'm sure.}{You don't seem to have the tax money. An honest mistake, I'm sure.}{}{}{}{}
+	{286}{How did that happen? I'll be back.}{}{5}{}{0}{}
+
+{287}{I'm very displeased. You'd best make amends somehow.}{I'm very displeased. You'd best make amends somehow.}{}{}{}{}
+	{288}{Not interested, sorry.}{}{5}{}{0}{re -15}
+	{289}{What might you suggest?}{}{5}{}{410}{}
+
+{300}{Quest lines}{Quest lines}{}{}{}{}
+{301}{I've come to see if there were any jobs to be had.}{}{5}{}{37}{}
+{302}{I've an interest in your offer.}{}{5}{}{41}{}
+{303}{The task isn't quite finished.}{}{5}{}{-58}{}
+{304}{I've brought you the taxes.}{}{5}{}{430}{}
+{305}{Q:1001}{}{5}{}{1}{}
+{306}{Any other tasks for a humble outsider?}{}{5}{}{410}{}
+{307}{There's been some difficulty ...}{}{5}{}{141}{}
+{309}{I'd like to hear more about your problem.}{}{5}{}{120}{}
+{310}{I've not spoken to your daughter yet.}{}{5}{}{177}{}
+{311}{I have unpleasant news.}{}{5}{}{192}{}
+{312}{How are you doing?}{}{5}{}{189}{}
+{314}{Please honor me with a task to prove my worth.}{}{5}{}{252}{re +10}
+{315}{Please allow me to take up your task.}{}{5}{}{274}{re +10}
+{316}{Sorry, nothing to report.}{}{5}{}{0}{re -15, fl  188}
+{317}{I've brought you your taxes.}{}{5}{}{-75}{}
+{318}{Could I be of some other use?}{}{5}{}{276}{}
+{319}{I've killed the traitors of Black Root.}{}{5}{}{0}{fl 175, co}
+
+{330}{[He is visibly shocked for a moment before a look of sheer fury consumes him.] You spoke with my brother?! You've sealed your fate, sir! Do you have anything to say before you die?}{[He is visibly shocked for a moment before a look of sheer fury consumes him.] You spoke with my brother?! You've sealed your fate, madam! Do you have anything to say before you die?}{}{}{}{}
+{331}{I would beg you to reconsider this rash decision.}{}{5}{}{0}{fl 340, co}
+{332}{I am looking forward to ending your worthless life.}{}{5}{}{-83}{}
+
+{340}{I am truly sorry, but you must die. Guards!}{I am truly sorry, but you must die. Guards!}{}{}{}{}
+
+{350}{How dare you bring this, this "revolutionary" back into my lands! [He points to Dante.] Guards, arrest this man!}{How dare you bring this, this "revolutionary" back into my lands! [He points to Dante.] Guards, arrest this man!}{}{}{}{gv1004 1}
+	{351}{He only wishes to serve you again, your majesty.}{}{5}{}{-89}{}
+	{352}{Touch him and you will die.}{}{5}{}{0}{fl 176, co}
+
+{360}{He speaks the truth, milord. I am only here as the humble servant of @pcname@.Please excuse my presence, my only desire is to prove my devotion, that I may someday return to serve you again.}{He speaks the truth, milord. I am only here as the humble servant of @pcname@.Please excuse my presence, my only desire is to prove my devotion, that I may someday return to serve you again.}{}{}{}{}
+
+{370}{Spineless dog! I will tolerate your presence only as long as your "master" is here to speak for you.[He turns to you.] Now, what have you to tell me?}{Spineless dog! I will tolerate your presence only as long as your "master" is here to speak for you.[He turns to you.] Now, what have you to tell me?}{}{}{}{}
+	{371}{Q:1000}{}{1}{}{1}{}
+	{372}{Nothing at this moment. I will return.}{}{5}{}{0}{}
+
+{380}{He was, was he? Hmm. I suppose I was wrong about you, Dante. You are welcome to return to my service, if you are still willing.}{He was, was he? Hmm. I suppose I was wrong about you, Dante. You are welcome to return to my service, if you are still willing.}{}{}{}{}
+	{381}{Dante? This is what you wanted, was it not?}{}{5}{}{-99}{}
+
+{390}{Usually, I'd never renegotiate an agreed upon wage. In your case, though, I feel inclined to make an exception. Here's an extra 75 for your troubles.}{Usually, I'd never renegotiate an agreed upon wage. In your case, though, I feel inclined to make an exception. Here's an extra 75 for your troubles.}{}{}{}{}
+	{391}{Dante was instrumental in retrieving the taxes.}{}{5}{}{380}{}
+
+{400}{If that is all, I must get back to my business. I do have a kingdom to run, after all.}{If that is all, I must get back to my business. I do have a kingdom to run, after all.}{}{}{}{}
+	{401}{Surely there must be other tasks for a humble servant?}{}{5}{}{410}{}
+	{402}{E:}{}{5}{}{0}{}
+
+{410}{There's something of a ... personal nature. [He drifts off, seemingly lost in thought.]}{There's something of a ... personal nature. [He drifts off, seemingly lost in thought.]}{}{}{}{}
+	{411}{Such as?}{}{5}{ss-11}{420}{}
+	{412}{Such as?}{}{5}{ss12}{120}{}
+
+{420}{[He shakes his head slowly.] No, no. This is an internal matter. I will find another way. [He thinks for a moment.] Perhaps I could use your services at a later date, though.}{[He shakes his head slowly.] No, no. This is an internal matter. I will find another way. [He thinks for a moment.] Perhaps I could use your services at a later date, though.}{}{}{}{}
+	{421}{Until later, then.}{}{5}{}{0}{}
+
+{430}{Please, give them to me.}{Please, give them to me.}{}{}{}{}
+	{431}{Here you are.}{}{5}{in5601, re-49}{109}{re50, in5601}
+      {432}{Here you are.}{}{5}{in5601, re50}{109}{re+10, in5601}
+	{433}{Okay!}{}{-4}{in5601, re-49}{109}{re50, in5601}
+      {434}{Okay!}{}{-4}{in5601, re50}{109}{re+10, in5601}
+	{435}{Heh, heh, I, uh, must have misplaced them.}{}{5}{ni5601, re-41}{0}{co, fl 156}
+	{436}{I no gots it!}{}{-4}{ni5601, re-41}{0}{co, fl 156}
+	{437}{Heh, heh, I, uhm..}{}{5}{ni5601, re50}{285}{re-10}
+	{438}{Urgh?}{}{-4}{ni5601, re50}{285}{re-10}
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+

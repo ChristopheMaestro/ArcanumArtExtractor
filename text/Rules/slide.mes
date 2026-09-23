@@ -1,0 +1,74 @@
+// This file enumerates the slide in the game. Slides can be added via the script slide
+// command in one of these scripts:
+//
+//	997 - called when a script has ended the game
+//	998 - called when the player has died
+//	999 - called when in-game credits are requested
+//
+// Note that NO script is called when the game ends through the player exiting the game.
+
+// Each slide lists a BMP and an MP3. The bmp is an 8-bit BMP located in the module's
+// Slide directory. The MP3 must be located in the module's Sound/Speech/Slide directory.
+
+// Note: slide 0 is the DEFAULT death slide. If the player dies and no slide is queued by
+// script 998, then slide 0 is used.
+
+{0}{death.bmp DeathSound.mp3}
+{1}{DeadWorld.bmp v41_m.mp3}
+{2}{DeadWorld.bmp v40_m.mp3}
+{3}{DarkTemple.bmp v35_m.mp3}
+{4}{DeadWorld.bmp v32_m.mp3}
+{5}{Bane.bmp v31_m.mp3}
+{6}{Jongle.bmp v1_m.mp3}
+{7}{ShroudedDeath.bmp v2_m.mp3}
+{8}{ShroudedHappy.bmp v3_m.mp3}
+{9}{ShroudedHappy.bmp v5_m.mp3}
+{10}{ShroudedDeath.bmp v4_m.mp3}
+{11}{DonnThrogg.bmp v11_m.mp3}
+{12}{TarantDeath.bmp v6_m.mp3}
+{13}{TarantDeath.bmp v7_m.mp3}
+{14}{TarantCrime.bmp v8_m.mp3}
+{15}{TarantCrime.bmp v9_m.mp3}
+{16}{Bentley.bmp v43_m.mp3}
+{17}{Bentley.bmp v10_m.mp3}
+{18}{CumbriaHappy.bmp v12_m.mp3}
+{19}{CumbriaHappy.bmp v13_m.mp3}
+{20}{CumbriaDead.bmp v14_m.mp3}
+{21}{CumbriaDead.bmp v44_m.mp3}
+{22}{WW1Knight.bmp v15_m.mp3}
+{23}{Planes.bmp v16_m.mp3}
+{24}{CaladonHappy.bmp v18_m.mp3}
+{25}{CaladonDecay.bmp v17_m.mp3}
+{26}{Alexander.bmp v19_m.mp3}
+{27}{BlackRootHappy.bmp v20_m.mp3}
+{28}{BlackRootDead.bmp v21_m.mp3}
+{29}{BlackRootDead.bmp v45_m.mp3}
+{30}{MechHorse.bmp v22_m.mp3}
+{31}{WheelClanHappy.bmp v23_m.mp3}
+{32}{WheelClanHappy.bmp v24_m.mp3}
+{33}{DwarvesDead.bmp v25_m.mp3}
+{34}{Automaton.bmp v26_m.mp3}
+{35}{Automaton.bmp v27_m.mp3}
+{36}{DwarvesDead.bmp v46_m.mp3}
+{37}{LizardQintarra.bmp v28_m.mp3}
+{38}{LizardPrimitive.bmp v29_m.mp3}
+{39}{Vendigroth.bmp v30_m.mp3}
+{40}{Righteous.bmp v33_m.mp3}
+{41}{GoldenAge.bmp v34_m.mp3}
+{42}{BatesCastle.bmp v36_m.mp3}
+{43}{BatesCastle.bmp v37_m.mp3}
+{44}{End.bmp v39_m.mp3}
+{45}{Credits.bmp 10second.mp3}
+{46}{Credits2.bmp 10second.mp3}
+{47}{Credits3.bmp 10second.mp3}
+{48}{Credits4.bmp 10second.mp3}
+{49}{Credits5.bmp 10second.mp3}
+{50}{Credits6.bmp 10second.mp3}
+{51}{Credits7.bmp 10second.mp3}
+{52}{Credits8.bmp 10second.mp3}
+{53}{Credits9.bmp 10second.mp3}
+{54}{Credits10.bmp 10second.mp3}
+{55}{Credits11.bmp 10second.mp3}
+
+
+

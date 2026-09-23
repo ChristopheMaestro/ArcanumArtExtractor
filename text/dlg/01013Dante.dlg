@@ -1,0 +1,158 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Quite surly for a priest, aren't you?}{}{5}{re-40}{10}{re41}
+{3}{One doesn't expect to see a priest in such an establishment.}{}{5}{re41}{100}{}
+{4}{H:}{}{5}{re41}{300}{}
+{5}{I believe I've formulated a plan. Will you join me?}{}{5}{lf1 1, qu1000 2}{201}{lf4 1, jo 0  140}
+{9}{E:}{}{1}{}{0}{}
+{10}{You would be surly as well if you were unwelcome in your homeland. But that is no excuse for rudeness to others. My apologies, sir.}{You would be surly as well if you were unwelcome in your homeland. But that is no excuse for rudeness to others. My apologies, madam.}{}{}{}{}
+{11}{Where do you hail from?}{}{5}{}{20}{}
+{12}{I'd be surly if I had to look at your face in the mirror every day.}{}{5}{ch13}{171}{}
+{13}{Perhaps we'll meet when you're in a better mood.}{}{5}{}{0}{re-5, fl 170}
+{14}{Change your tone or I'll be teaching you some manners.}{}{5}{}{180}{re-15}
+{20}{I hail from Dernholm, capital of Cumbria. I've been driven from my beloved Cumbria to end up here.}{I hail from Dernholm, capital of Cumbria. I've been driven from my beloved Cumbria to end up here.}{}{}{}{}
+{21}{But Black Root is a province of Cumbria as well.}{}{5}{gv1001 0, gf1000 0, qa1000 1}{30}{}
+{22}{You'd best pack your bags. Black Root has rejoined Cumbria.}{}{5}{gf1000 1}{190}{}
+{23}{Why stay here? Why not leave this area completely?}{}{5}{gv1001 1, gf1000 0}{50}{}
+{24}{Are you not afraid of being driven out of Black Root as well?}{}{5}{gv1001 0, gf1000 0}{30}{}
+{25}{Perhaps I can help you?}{}{5}{}{335}{}
+{29}{My condolences, sir. Perhaps we'll meet again.}{}{5}{}{0}{}
+{30}{Ha! You obviously have not been here long. The mayor has betrayed Praetor and allied Black Root with Tarant.}{Ha! You obviously have not been here long. The mayor has betrayed Praetor and allied Black Root with Tarant.}{}{}{}{gv1001 1}
+{31}{That is disgraceful! I must report this to praetor at once!}{}{5}{qu1000 2}{40}{}
+{32}{King Praetor might appreciate being told about this.}{}{5}{qu1000 1}{40}{}
+{33}{Why stay here? Why not leave this area completely?}{}{5}{}{50}{}
+{34}{Good for him. Cumbria is all but dead, thank the gods.}{}{5}{}{150}{re-10}
+{35}{Someone needs to show the mayor the error of his ways.}{}{5}{qa1000 1}{160}{re+10}
+{39}{E:}{}{5}{}{0}{}
+{40}{Many have tried to tell him, but it only serves to evoke his wrath. Believe me, I have tried.}{Many have tried to tell him, but it only serves to evoke his wrath. Believe me, I have tried.}{}{}{}{}
+{41}{What is a priest such as yourself doing in a pub?}{}{5}{}{100}{}
+{42}{Someone needs to teach Praetor some manners.}{}{5}{}{150}{re-10}
+{43}{Why not leave Cumbria for good?}{}{5}{}{50}{}
+{49}{E:}{}{5}{}{0}{}
+{50}{I have lived in Cumbria my whole life. It is my home. I am...was the head of the Church of Cumbria.}{I have lived in Cumbria my whole life. It is my home. I am...was the head of the Church of Cumbria.}{}{}{}{}
+{51}{Why are you no longer the head of the church?}{}{5}{}{60}{}
+{52}{Religion did you a world of good, eh, brother?}{}{5}{}{180}{re-15}
+{59}{E:}{}{5}{}{0}{}
+{60}{King Praetor is not well. When Cumbria's economy spiraled out of control, he lashed out at his advisors. When I tried to reason with him, he banished me as well.}{King Praetor is not well. When Cumbria's economy spiraled out of control, he lashed out at his advisors. When I tried to reason with him, he banished me as well.}{}{}{}{lf3 1}
+{61}{King Praetor has not been well since the day he was born.}{}{5}{}{150}{re-15}
+{62}{You are a fool for attempting to reason with a fool.}{}{5}{}{180}{re-15}
+{63}{So it's safe to assume you're not very fond of Praetor?}{}{5}{}{70}{}
+{64}{Could you help me? I'm here to collect the taxes for Praetor?}{}{5}{qu1000 2}{201}{lf4 1, jo 0 80}
+{65}{Could you tell me where Dernholm is?}{}{5}{ar-5}{355}{}
+{69}{E:}{}{5}{}{0}{}
+{70}{Not at all. Praetor needs more assistance than ever, now that his faculties are slipping away. Even in exile I will defend my king to my dying breath.}{Not at all. Praetor needs more assistance than ever, now that his faculties are slipping away. Even in exile I will defend my king to my dying breath.}{}{}{}{}
+{71}{Could you help me? I'm here to collect the taxes for Praetor?}{}{5}{qu1000 2}{201}{lf4 1, jo 0 80}
+{72}{I've decided to collect Praetor's taxes. Could you help me?}{}{5}{qu1000 1, ps13}{201}{qu1000 2, jo 0 80}
+{73}{I've decided to collect Praetor's taxes. Could you help me?}{}{5}{qu1000 1, ps-12}{90}{}
+{74}{I'd like to assist him into his grave.}{}{5}{}{150}{re-10}
+{75}{Could you tell me where Dernholm is?}{}{5}{ar-5}{355}{}
+{79}{E:}{}{5}{}{0}{}
+{80}{Yes, this could improve my standing with Praetor. I will do it, as the gods are my witness.}{Yes, this could improve my standing with Praetor. I will do it, as the gods are my witness.}{}{}{}{}
+{81}{Let us proceed, then, shall we?}{}{5}{}{0}{}
+{82}{I'd like to ask something of you.}{}{5}{}{220}{}
+{83}{I don't believe you are worthy enough to assist me, actually.}{}{5}{}{130}{re-15}
+{90}{I'm not sure Praetor would appreciate me meddling in his affairs.}{I'm not sure Praetor would appreciate me meddling in his affairs.}{}{}{}{}
+{91}{This would be a most opportune way to prove your loyalty.}{}{5}{}{201}{re+10, lf4 1, jo 0 80}
+{92}{I think you lack the fortitude required for this task, at any rate.}{}{5}{ps13}{120}{}
+{93}{He couldn't function without others meddling in his affairs.}{}{5}{ch13}{110}{re+15}
+{94}{You are obviously to weak to think for yourself.}{}{5}{ch-12}{130}{re-15}
+{95}{I think you lack the fortitude required for this task, at any rate.}{}{5}{ps-12}{130}{re-15}
+{99}{Perhaps you are correct. Good day.}{}{5}{}{0}{}
+{100}{It's my veritable home away from home. Actually, it's just about the last place that will have me these days.}{It's my veritable home away from home. Actually, it's just about the last place that will have me these days.}{}{}{}{}
+{101}{That's understandable, judging from your repulsive stench.}{}{5}{}{180}{re-15}
+{102}{And your actual home would be where?}{}{5}{lf2 0}{20}{}
+{103}{Other towns would welcome you, why not leave Cumbria?}{}{5}{lf2 1}{50}{}
+{109}{I'm sorry to here that. Good bye.}{}{5}{}{0}{}
+{110}{Ha! That is more than true, my good man. Well, I can not make this situation I find myself in any worse, eh?}{Ha! That is more than true, my good woman. Well, I can not make this situation I find myself in any worse, eh?}{}{}{}{}
+{111}{It could actually improve your position.}{}{5}{}{201}{jo 0 80}
+{112}{It doesn't seem as if you are capable of doing anything at all.}{}{5}{}{180}{re-15}
+{113}{I don't believe you are worthy enough to assist me, actually.}{}{5}{}{130}{re-15}
+{119}{E:}{}{5}{}{0}{}
+{120}{You dare doubt my commitment, sir? I can withstand anything you could possibly bring on me.}{You dare doubt my commitment, madam? I can withstand anything you could possibly bring on me.}{}{}{}{}
+{121}{Then I challenge you to keep up with me, if you are able.}{}{5}{}{201}{lf4 1, jo 0 140}
+{122}{Let us see how you withstand a disemboweling.}{}{5}{}{0}{fl 200 ,co}
+{123}{I sincerely doubt it. Good bye.}{}{5}{}{0}{re-10}
+{129}{E:}{}{5}{}{0}{}
+{130}{You dare doubt me?! Begone before I throttle you, whelp!}{You dare doubt me?! Begone before I throttle you, harlot!}{}{}{}{}
+{131}{To join me you'll need to withstand more than a harsh word.}{}{5}{ps10}{201}{re+10, lf4 1, jo 0 140}
+{132}{I simply need to be sure about those who'd follow me.}{}{5}{ps-9}{201}{re-10}
+{133}{You'd be dead before you took a step in my direction.}{}{5}{}{0}{fl 200 ,co}
+{140}{Good show! I admire a man who's not afraid to show his mettle. Let whoever would stand in our way be damned! Lead on, good sir.}{Good show! I admire a man who's not afraid to show his mettle. Let whoever would stand in our way be damned! Lead on, madam.}{}{}{}{}
+{141}{Let us proceed then, shall we?}{}{5}{}{0}{}
+{142}{I'd like to ask something of you.}{}{5}{}{220}{}
+{150}{You'd do well to watch your tongue. I may be exiled, but I'm still a loyal Cumbrian citizen.}{You'd do well to watch your tongue. I may be exiled, but I'm still a loyal Cumbrian citizen.}{}{}{}{}
+{151}{You can not tell me you harbor no ill will towards Praetor.}{}{5}{lf3 1}{70}{}
+{152}{No, you can watch your tongue after I've cut it out.}{}{5}{}{0}{fl 200 ,co}
+{153}{How did you come to be exiled?}{}{5}{lf3 0}{60}{}
+{159}{Many pardons, I'll take my leave now.}{}{5}{}{0}{}
+{160}{Hear! Hear! Do you have a plan of action to suggest?}{Hear! Hear! Do you have a plan of action to suggest?}{}{}{}{}
+{161}{I will have Praetor's tax whether the mayor like it or not.}{}{5}{}{201}{lf4 1, jo 0 140}
+{162}{Yes, and it involves causing you intense amounts of pain.}{}{5}{}{0}{fl 200 ,co}
+{163}{Not at present. I'll inform you if I formulate one. Good day.}{}{5}{}{0}{lf1 1}
+{170}{Good riddance to you, you supercilious toad.}{Good riddance to you, you bottom dwelling harlot!}{}{}{}{}
+{171}{Heh Heh! Your wit has gotten the better of me, sir. I tip my hat to you.}{Heh Heh! Your wit has gotten the better of me, madam. I tip my hat to you.}{}{}{}{}
+{172}{Where do you hail from?}{}{5}{}{20}{}
+{173}{One doesn't expect to see a priest in such an establishment.}{}{5}{}{100}{}
+{174}{It's quite simple to outwit those who are mentally challenged.}{}{5}{}{180}{re-15}
+{179}{I've no time for this witty repartee. I must be on my way.}{}{5}{}{0}{}
+{180}{You would do well to reconsider taunting me in this manner, sir.}{You would do well to reconsider taunting me in this manner, madam.}{}{}{}{}
+{181}{I beg forgiveness. Where is your home, exactly?}{}{5}{lf2 0, gf1000 0}{20}{}
+{182}{I beg forgiveness. But why were you driven from Cumbria?}{}{5}{lf2 1, gf1000 0}{60}{}
+{183}{I'm sorry. So do you despise Praetor for banishing you, then?}{}{5}{lf3 1, gf1000 0}{70}{}
+{184}{I'll taunt you in any manner I please, you ignorant fool.}{}{5}{}{0}{fl 200 ,co}
+{190}{What?! Perhaps it is time for me to finally take my leave of dear old Cumbria.}{What?! Perhaps it is time for me to finally take my leave of dear old Cumbria.}{}{}{}{}
+{191}{Or simply stand up for yourself, you spineless twit.}{}{5}{}{180}{re-15}
+{192}{Tough break, old boy. Oh well, perhaps I will see you about.}{}{5}{}{0}{}
+{200}{I pray that you have made peace with your gods because you are about to meet them!}{I pray that you have made peace with your gods because you are about to meet them!}{}{}{}{}
+{201}{Is there anything else?}{Is there anything else?}{}{}{}{}
+{202}{I don't like sniveling cretins such as yourself, sir.}{}{5}{}{0}{fl 200 ,co}
+{209}{E:}{}{5}{}{0}{}
+{210}{Is there anything else?}{Is there anything else?}{}{}{}{}
+{211}{H:}{}{5}{}{210}{}
+{212}{I need to give you directions.}{}{5}{}{310}{}
+{213}{B:}{}{5}{}{210}{}
+{219}{E:}{}{5}{}{0}{}
+{220}{Yes, what can I help you with?}{Yes, what can I help you with?}{}{}{}{}
+{221}{H:}{}{5}{}{210}{}
+{222}{I need you to do something for me.}{}{5}{}{310}{}
+{223}{B:}{}{5}{}{210}{}
+{224}{I'd like to know a thing or two about you, Dante.}{}{5}{}{0}{ce}
+{229}{E:}{}{5}{}{0}{}
+{255}{It is good to see you again, sir. Perhaps I could be of further service?}{It is good to see you again, madam. Perhaps I could be of further service?}{}{}{}{}
+{256}{Yes, would you join with me on my quests again?}{}{5}{qu1000 2, gf1003 0}{201}{jo 0 270}
+{259}{I'm afraid not, I must be leaving.}{}{5}{}{0}{}
+{270}{I was hoping you would re extend the invitation. I would be honored.}{I was hoping you would re extend the invitation. I would be honored.}{}{}{}{}
+{271}{Splendid! Let us go.}{}{5}{}{0}{}
+{272}{H:}{}{5}{}{210}{}
+{273}{B:}{}{5}{}{210}{}
+{274}{I need you to do something for me, Dante.}{}{5}{}{310}{}
+{275}{What do you want now? Please leave me alone.}{What do you want now? Please leave me alone.}{}{}{}{}
+{277}{I want to see your corpse bleached and rotting in the sun.}{}{5}{}{0}{fl 200 ,co}
+{278}{As you wish. Good day.}{}{5}{}{0}{}
+{300}{Is there anything else?}{Is there anything else?}{}{}{}{}
+{301}{One doesn't often see a priest in an establishment such as this.}{}{5}{}{100}{}
+{302}{You're a bit surly for a priest, aren't you?}{}{5}{}{10}{}
+{303}{N:}{}{5}{}{10}{}
+{310}{What would you like for me to do?}{What would you like for me to do?}{}{}{}{}
+{311}{Could you move away from me, a bit?}{}{1}{}{210}{so}
+{312}{Don't stay so far away from me.}{}{1}{}{210}{sc}
+{313}{Could you wait here?}{}{1}{wa 0}{0}{wa, fl 325}
+{314}{Would you rejoin with me?}{}{1}{wa 1}{201}{uw1 270}
+{315}{I am afraid it is time for us to part ways, Dante.}{}{1}{}{0}{lv, fl 326}
+{316}{Nothing, actually.}{}{1}{}{210}{}
+{325}{Of course.}{Of course.}{}{}{}{}
+{326}{Perhaps our paths will cross again, someday.}{Perhaps our paths will cross again, someday.}{}{}{}{}
+{329}{It is good to see you again, sir.}{It is good to see you again, madam.}{}{}{}{}
+{330}{Yes, this is where my home is. I am grateful for your help in enabling to return to serve my beloved Cumbria, once again.}{Yes, this is where my home is. I am grateful for your help in enabling to return to serve my beloved Cumbria, once again.}{}{}{}{lf30 1, lv}
+{331}{Perhaps I will see you again, someday, then.}{}{5}{}{-16}{}
+{335}{I fear not... I am beyond help.}{I fear not... I am beyond help.}{}{}{}{}
+{336}{Can you tell me where Dernholm is at least?}{}{5}{ar-5}{345}{}
+{337}{You'd best pack your bags. Black Root has rejoined Cumbria.}{}{5}{gf1000 1}{190}{}
+{338}{Why stay here? Why not leave this area completely?}{}{5}{gv1001 1, gf1000 0}{50}{}
+{344}{My condolences, sir. Perhaps we'll meet again.}{}{5}{}{0}{}
+{345}{Of course...here you are. [He marks your map.]}{Of course...here you are. [He marks your map.]}{}{}{}{mm5}
+{346}{I hate to tell you, but Black Root has rejoined Cumbria.}{}{5}{gf1000 1}{190}{}
+{347}{Why stay here? Why not leave this area completely?}{}{5}{gv1001 1, gf1000 0}{50}{}
+{354}{Thank you. Good bye.}{}{5}{}{0}{}
+{355}{Of course...here you are. [He marks your map.]}{Of course...here you are. [He marks your map.]}{}{}{}{mm5}
+{364}{Thank you. Good bye.}{}{5}{}{0}{}
+

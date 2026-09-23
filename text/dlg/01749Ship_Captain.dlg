@@ -1,0 +1,713 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Hello, I wish to book passage aboard your ship.}{}{5}{lf6 0, lf15 0}{27}{}
+{3}{I need passage to the Isle of Despair.}{}{5}{lf8 0, ss 5, ss -6}{542}{gv 1036 7}
+{4}{Can you give me passage to the Isle of Despair?}{}{5}{lf8 1, ss 5, ss -6}{654}{gv 1036 7}
+{5}{I'd like passage to Thanatos.}{}{5}{lf3 0, ss 17, ss -17, gf2037 1}{527}{}
+{6}{Can I book passage to Thanatos?}{}{5}{lf3 1, ss 17, ss -17, gf2037 1}{538}{}
+{7}{I need someone to take me to Caladon.}{}{5}{lf4 0, ss 12, ss -12}{44}{gv 1036 4, ss13}
+{8}{I need someone to take me to Caladon.}{}{5}{lf4 0, ss 13}{44}{gv 1036 4}
+{9}{Tarant is certainly an amazing city!}{}{5}{lf21 1}{559}{}
+{10}{What can you tell me of Ashbury?}{}{5}{lf8 1}{578}{}
+{11}{The shipyards of Black Root are quite impressive.}{}{5}{lf3 1}{588}{}
+{12}{What are some points of interest here in Caladon?}{}{5}{lf4 1}{595}{}
+{13}{I am looking for passage to Half Ogre Island.}{}{5}{lf 6 0, qa1143 2}{44}{gv 1036 6}
+{14}{I would like to return to Caladon please.}{}{5}{lf6 1}{705}{}
+{15}{I would like to return to Ashbury please.}{}{5}{lf15 1}{705}{}
+{16}{Oh!  Tarant fun!}{}{-4}{lf21 1}{559}{}
+{17}{Wha' you tell me 'bout Ashberry?}{}{-4}{lf8 1}{578}{}
+{18}{Black Root have good make ship place.}{}{-4}{lf3 1}{588}{}
+{19}{Wha' good see in Caladon?}{}{-4}{lf4 1}{595}{}
+{20}{Me wan' go Than ah toes.}{}{-4}{lf3 0, ss 17, ss -17, gf2037 1}{527}{}
+{21}{Me wan' go Than ah toes.}{}{-4}{lf3 1, ss 17, ss -17, gf2037 1}{538}{}
+{22}{Me go with you on boat?}{}{-4}{lf6 0, lf15 0}{608}{}
+{23}{Me go bak cawedon now?}{}{-4}{lf6 1}{705}{}
+{24}{Me go bak Ashberry now?}{}{-4}{lf15 1}{705}{}
+{25}{Me go bak Tuh Rant now?}{}{-4}{lf21 0, lf4 1}{711}{}
+{26}{E:}{}{1}{}{0}{}
+{27}{Where would ye like to go?}{Where would ye like to go?}{}{}{}{}
+{28}{I don't know? Where should I go?}{}{5}{ss -1}{0}{fl 516}
+{29}{I'd like to go to Tarant.}{}{5}{lf21 0, ss 2}{44}{gv 1036 1}
+{30}{Ashbury would be a good destination.}{}{5}{lf8 0, lf21 0,ss 5}{44}{gv 1036 2}
+{31}{I'd like to go to Ashbury.}{}{5}{lf21 1,ss 5}{520}{gv 1036 2}
+{32}{How about Black Root?}{}{5}{lf8 0, lf3 0, lf21 0, ss 3}{44}{gv 1036 3}
+{33}{Black Root, please.}{}{5}{lf21 1, ss 3}{517}{gv 1036 3}
+{34}{I want to go to Caladon}{}{5}{lf4 0, ss 12, ss -12}{44}{gv 1036 4, ss13}
+{35}{I want to go to Caladon}{}{5}{lf4 0,  ss13}{44}{gv 1036 4}
+{36}{Can I go to Thanatos?}{}{5}{lf3 0, ss 17, ss -17, gf2037 1}{527}{gv 1036 6}
+{37}{I'd like to go to Thanatos.}{}{5}{lf3 1, ss 17, ss -17, gf2037 1}{538}{gv 1036 6}
+{38}{Me wan' go Than ah toes.}{}{-4}{lf3 0, ss 17, ss -17, gf2037 1}{527}{gv 1036 6}
+{39}{Me wan' go Than ah toes.}{}{-4}{lf3 1, ss 17, ss -17, gf2037 1}{538}{gv 1036 6}
+{40}{The Isle of Despair, please.}{}{5}{lf15 0, lf8 0, ss 5, ss -6}{542}{gv 1036 7}
+{41}{I'd like to go to the Isle of Despair.}{}{5}{lf15 0, lf8 1, ss 5, ss -6}{654}{gv 1036 7}
+{42}{I'd like to go to Half Ogre Island.}{}{5}{lf 6 0, qa1143 2}{44}{gv 1036 6}
+{43}{E:}{}{1}{}{0}{}
+{44}{Passage will cost ye 100 coin a head.}{Passage will cost ye 100 coin a head.}{}{}{}{}
+{45}{Passage for just one.}{}{1}{gv 1035 1}{81}{}
+{46}{Passage for two.}{}{1}{gv 1035 2}{119}{}
+{47}{Passage for three.}{}{1}{gv 1035 3}{157}{}
+{48}{Passage for four.}{}{1}{gv 1035 4}{195}{}
+{49}{Passage for five.}{}{1}{gv 1035 5}{233}{}
+{50}{Passage for six.}{}{1}{gv 1035 6}{271}{}
+{51}{Passage for seven.}{}{1}{gv 1035 7}{309}{}
+{52}{Passage for eight.}{}{1}{gv 1035 8}{347}{}
+{53}{Passage for nine.}{}{1}{gv 1035 9}{385}{}
+{54}{Passage for ten.}{}{1}{gv 1035 10}{404}{}
+{55}{Passage for eleven.}{}{1}{gv 1035 11}{423}{}
+{56}{Passage for twelve.}{}{1}{gv 1035 12}{442}{}
+{57}{Passage for thirteen or more.}{}{1}{gv 1035 13}{461}{}
+{58}{That fare is high! Isn't there a better fare available?}{}{5}{ha 12}{485}{}
+{59}{That fare is high! Isn't there a better fare available?}{}{5}{ha -11}{480}{}
+{60}{I would like to go somewhere else.}{}{5}{}{27}{}
+{61}{Uh...  Me no wan' go der.  Go sum diff'ren place.}{}{-4}{}{27}{}
+{62}{If ye can figure then ye knows it will be 50 coins}{If ye can figure then ye knows it will be 50 coins}{}{}{}{}
+{63}{I am ready to go to Tarant.}{}{5}{gv 1036 1,$$ 50}{-20}{$$ -50}
+{64}{I am ready to go to Ashbury.}{}{5}{gv 1036 2,$$ 50}{-22}{$$ -50}
+{65}{I am ready to go to Black Root.}{}{5}{gv 1036 3,$$ 50}{-24}{$$ -50}
+{66}{I am ready to go to Caladon.}{}{5}{gv 1036 4,$$ 50}{-26}{$$ -50}
+{67}{I am ready to go to Half Ogre Island.}{}{5}{gv 1036 6,$$ 50}{-30}{$$ -50}
+{68}{I am ready to go to the Isle of Despair.}{}{5}{gv 1036 7,$$ 50}{-32}{$$ -50}
+{69}{That is acceptable, let's leave immediately.}{}{5}{$$ -49}{514}{}
+{70}{I don't have enough money for passage.}{}{5}{$$ -49}{644}{}
+{71}{I will come back when I am  ready to travel.}{}{5}{}{0}{}
+{72}{me go tarant.}{}{-4}{gv 1036 1,$$ 50}{-20}{$$ -50}
+{73}{me go asshhhberry.}{}{-4}{gv 1036 2,$$ 50}{-22}{$$ -50}
+{74}{me go back wroot.}{}{-4}{gv 1036 3,$$ 50}{-24}{$$ -50}
+{75}{me go cawedon.}{}{-4}{gv 1036 4,$$ 50}{-26}{$$ -50}
+{76}{Me go Haf Oger I Lan.}{}{-4}{gv 1036 6,$$ 50}{-30}{$$ -50}
+{77}{me go the eyele of dispear.}{}{-4}{gv 1036 7,$$ 50}{-32}{$$ -50}
+{78}{me readi to go.}{}{-4}{$$ -49}{514}{}
+{79}{me no have money, me want to go on sheeep.}{}{-4}{$$ -49}{644}{}
+{80}{me be here again.}{}{-4}{}{0}{}
+{81}{If ye can figure then ye knows it will be 100 coins}{If ye can figure then ye knows it will be 100 coins}{}{}{}{}
+{82}{I am ready to go to Tarant.}{}{5}{gv 1036 1,$$ 100}{-20}{$$ -100}
+{83}{I am ready to go to Ashbury.}{}{5}{gv 1036 2,$$ 100}{-22}{$$ -100}
+{84}{I am ready to go to Black Root.}{}{5}{gv 1036 3,$$ 100}{-24}{$$ -100}
+{85}{I am ready to go to Caladon.}{}{5}{gv 1036 4,$$ 100}{-26}{$$ -100}
+{86}{I am ready to go to Half Ogre Island.}{}{5}{gv 1036 6,$$ 100}{-30}{$$ -100}
+{87}{I am ready to go to the Isle of Despair.}{}{5}{gv 1036 7,$$ 100}{-32}{$$ -100}
+{88}{That is acceptable, let's leave immediately.}{}{5}{$$ -99}{514}{}
+{89}{I don't have enough money for passage.}{}{5}{$$ -99}{644}{}
+{90}{I will come back when I am ready to travel.}{}{5}{}{0}{}
+{91}{me go tarant.}{}{-4}{gv 1036 1,$$ 100}{-20}{$$ -100}
+{92}{me go asshhhberry.}{}{-4}{gv 1036 2,$$ 100}{-22}{$$ -100}
+{93}{me go back wroot.}{}{-4}{gv 1036 3,$$ 100}{-24}{$$ -100}
+{94}{me go cawedon.}{}{-4}{gv 1036 4,$$ 100}{-26}{$$ -100}
+{95}{Me go Haf Oger I Lan.}{}{-4}{gv 1036 6,$$ 100}{-30}{$$ -100}
+{96}{me go the eyele of dispear.}{}{-4}{gv 1036 7,$$ 100}{-32}{$$ -100}
+{97}{me readi to go.}{}{-4}{$$ -99}{514}{}
+{98}{me no have money, me want to go on sheeep.}{}{-4}{$$ -99}{644}{}
+{99}{me be here again.}{}{-4}{}{0}{}
+{100}{If ye can figure then ye knows it will be 150 coins}{If ye can figure then ye knows it will be 150 coins}{}{}{}{}
+{101}{I am ready to go to Tarant.}{}{5}{gv 1036 1,$$ 150}{-20}{$$ -150}
+{102}{I am ready to go to Ashbury.}{}{5}{gv 1036 2,$$ 150}{-22}{$$ -150}
+{103}{I am ready to go to Black Root.}{}{5}{gv 1036 3,$$ 150}{-24}{$$ -150}
+{104}{I am ready to go to Caladon.}{}{5}{gv 1036 4,$$ 150}{-26}{$$ -150}
+{105}{I am ready to go to Half Ogre Island.}{}{5}{gv 1036 6,$$ 150}{-30}{$$ -150}
+{106}{I am ready to go to the Isle of Despair.}{}{5}{gv 1036 7,$$ 150}{-32}{$$ -150}
+{107}{That is acceptable, let's leave immediately.}{}{5}{$$ -149}{514}{}
+{108}{I don't have enough money for passage.}{}{5}{$$ -149}{644}{}
+{109}{I will come back when I am ready to travel.}{}{5}{}{0}{}
+{110}{me go tarant.}{}{-4}{gv 1036 1,$$ 150}{-20}{$$ -150}
+{111}{me go asshhhberry.}{}{-4}{gv 1036 2,$$ 150}{-22}{$$ -150}
+{112}{me go back wroot.}{}{-4}{gv 1036 3,$$ 150}{-24}{$$ -150}
+{113}{me go cawedon.}{}{-4}{gv 1036 4,$$ 150}{-26}{$$ -150}
+{114}{Me go Haf Oger I Lan.}{}{-4}{gv 1036 6,$$ 150}{-30}{$$ -150}
+{115}{me go the eyele of dispear.}{}{-4}{gv 1036 7,$$ 150}{-32}{$$ -150}
+{116}{me readi to go.}{}{-4}{$$ -149}{514}{}
+{117}{me no have money, me want to go on sheeep.}{}{-4}{$$ -149}{644}{}
+{118}{me be here again.}{}{-4}{}{0}{}
+{119}{If ye can figure then ye knows it will be 200 coins}{If ye can figure then ye knows it will be 200 coins}{}{}{}{}
+{120}{I am ready to go to Tarant.}{}{5}{gv 1036 1,$$ 200}{-20}{$$ -200}
+{121}{I am ready to go to Ashbury.}{}{5}{gv 1036 2,$$ 200}{-22}{$$ -200}
+{122}{I am ready to go to Black Root.}{}{5}{gv 1036 3,$$ 200}{-24}{$$ -200}
+{123}{I am ready to go to Caladon.}{}{5}{gv 1036 4,$$ 200}{-26}{$$ -200}
+{124}{I am ready to go to Half Ogre Island.}{}{5}{gv 1036 6,$$ 200}{-30}{$$ -200}
+{125}{I am ready to go to the Isle of Despair.}{}{5}{gv 1036 7,$$ 200}{-32}{$$ -200}
+{126}{That is acceptable, let's leave immediately.}{}{5}{$$ -199}{514}{}
+{127}{I don't have enough money for passage.}{}{5}{$$ -199}{644}{}
+{128}{I will come back when I am ready to travel.}{}{5}{}{0}{}
+{129}{me go tarant.}{}{-4}{gv 1036 1,$$ 200}{-20}{$$ -200}
+{130}{me go asshhhberry.}{}{-4}{gv 1036 2,$$ 200}{-22}{$$ -200}
+{131}{me go back wroot.}{}{-4}{gv 1036 3,$$ 200}{-24}{$$ -200}
+{132}{me go cawedon.}{}{-4}{gv 1036 4,$$ 200}{-26}{$$ -200}
+{133}{Me go Haf Oger I Lan.}{}{-4}{gv 1036 6,$$ 200}{-30}{$$ -200}
+{134}{me go the eyele of dispear.}{}{-4}{gv 1036 7,$$ 200}{-32}{$$ -200}
+{135}{me readi to go.}{}{-4}{$$ -199}{514}{}
+{136}{me no have money, me want to go on sheeep.}{}{-4}{$$ -199}{644}{}
+{137}{me be here again.}{}{-4}{}{0}{}
+{138}{If ye can figure then ye knows it will be 250 coins}{If ye can figure then ye knows it will be 250 coins}{}{}{}{}
+{139}{I am ready to go to Tarant.}{}{5}{gv 1036 1,$$ 250}{-20}{$$ -250}
+{140}{I am ready to go to Ashbury.}{}{5}{gv 1036 2,$$ 250}{-22}{$$ -250}
+{141}{I am ready to go to Black Root.}{}{5}{gv 1036 3,$$ 250}{-24}{$$ -250}
+{142}{I am ready to go to Caladon.}{}{5}{gv 1036 4,$$ 250}{-26}{$$ -250}
+{143}{I am ready to go to Half Ogre Island.}{}{5}{gv 1036 6,$$ 250}{-30}{$$ -250}
+{144}{I am ready to go to the Isle of Despair.}{}{5}{gv 1036 7,$$ 250}{-32}{$$ -250}
+{145}{That is acceptable, let's leave immediately.}{}{5}{$$ -249}{514}{}
+{146}{I don't have enough money for passage.}{}{5}{$$ -249}{644}{}
+{147}{I will come back when I am ready to travel.}{}{5}{}{0}{}
+{148}{me go tarant.}{}{-4}{gv 1036 1,$$ 250}{-20}{$$ -250}
+{149}{me go asshhhberry.}{}{-4}{gv 1036 2,$$ 250}{-22}{$$ -250}
+{150}{me go back wroot.}{}{-4}{gv 1036 3,$$ 250}{-24}{$$ -250}
+{151}{me go cawedon.}{}{-4}{gv 1036 4,$$ 250}{-26}{$$ -250}
+{152}{Me go Haf Oger I Lan.}{}{-4}{gv 1036 6,$$ 250}{-30}{$$ -250}
+{153}{me go the eyele of dispear.}{}{-4}{gv 1036 7,$$ 250}{-32}{$$ -250}
+{154}{me readi to go.}{}{-4}{$$ -249}{514}{}
+{155}{me no have money, me want to go on sheeep.}{}{-4}{$$ -249}{644}{}
+{156}{me be here again.}{}{-4}{}{0}{}
+{157}{If ye can figure then ye knows it will be 300 coins}{If ye can figure then ye knows it will be 300 coins}{}{}{}{}
+{158}{I am ready to go to Tarant.}{}{5}{gv 1036 1,$$ 300}{-20}{$$ -300}
+{159}{I am ready to go to Ashbury.}{}{5}{gv 1036 2,$$ 300}{-22}{$$ -300}
+{160}{I am ready to go to Black Root.}{}{5}{gv 1036 3,$$ 300}{-24}{$$ -300}
+{161}{I am ready to go to Caladon.}{}{5}{gv 1036 4,$$ 300}{-26}{$$ -300}
+{162}{I am ready to go to Half Ogre Island.}{}{5}{gv 1036 6,$$ 300}{-30}{$$ -300}
+{163}{I am ready to go to the Isle of Despair.}{}{5}{gv 1036 7,$$ 300}{-32}{$$ -300}
+{164}{That is acceptable, let's leave immediately.}{}{5}{$$ -299}{514}{}
+{165}{I don't have enough money for passage.}{}{5}{$$ -299}{644}{}
+{166}{I will come back when I am ready to travel.}{}{5}{}{0}{}
+{167}{me go tarant.}{}{-4}{gv 1036 1,$$ 300}{-20}{$$ -300}
+{168}{me go asshhhberry.}{}{-4}{gv 1036 2,$$ 300}{-22}{$$ -300}
+{169}{me go back wroot.}{}{-4}{gv 1036 3,$$ 300}{-24}{$$ -300}
+{170}{me go cawedon.}{}{-4}{gv 1036 4,$$ 300}{-26}{$$ -300}
+{171}{Me go Haf Oger I Lan.}{}{-4}{gv 1036 6,$$ 300}{-30}{$$ -300}
+{172}{me go the eyele of dispear.}{}{-4}{gv 1036 7,$$ 300}{-32}{$$ -300}
+{173}{me readi to go.}{}{-4}{$$ -299}{514}{}
+{174}{me no have money, me want to go on sheeep.}{}{-4}{$$ -299}{644}{}
+{175}{me be here again.}{}{-4}{}{0}{}
+{176}{If ye can figure then ye knows it will be 350 coins}{If ye can figure then ye knows it will be 350 coins}{}{}{}{}
+{177}{I am ready to go to Tarant.}{}{5}{gv 1036 1,$$ 350}{-20}{$$ -350}
+{178}{I am ready to go to Ashbury.}{}{5}{gv 1036 2,$$ 350}{-22}{$$ -350}
+{179}{I am ready to go to Black Root.}{}{5}{gv 1036 3,$$ 350}{-24}{$$ -350}
+{180}{I am ready to go to Caladon.}{}{5}{gv 1036 4,$$ 350}{-26}{$$ -350}
+{181}{I am ready to go to Half Ogre Island.}{}{5}{gv 1036 6,$$ 350}{-30}{$$ -350}
+{182}{I am ready to go to the Isle of Despair.}{}{5}{gv 1036 7,$$ 350}{-32}{$$ -350}
+{183}{That is acceptable, let's leave immediately.}{}{5}{$$ -349}{514}{}
+{184}{I don't have enough money for passage.}{}{5}{$$ -349}{644}{}
+{185}{I will come back when I am ready to travel.}{}{5}{}{0}{}
+{186}{me go tarant.}{}{-4}{gv 1036 1,$$ 350}{-20}{$$ -350}
+{187}{me go asshhhberry.}{}{-4}{gv 1036 2,$$ 350}{-22}{$$ -350}
+{188}{me go back wroot.}{}{-4}{gv 1036 3,$$ 350}{-24}{$$ -350}
+{189}{me go cawedon.}{}{-4}{gv 1036 4,$$ 350}{-26}{$$ -350}
+{190}{Me go Haf Oger I Lan.}{}{-4}{gv 1036 6,$$ 350}{-30}{$$ -350}
+{191}{me go the eyele of dispear.}{}{-4}{gv 1036 7,$$ 350}{-32}{$$ -350}
+{192}{me readi to go.}{}{-4}{$$ -349}{514}{}
+{193}{me no have money, me want to go on sheeep.}{}{-4}{$$ -349}{644}{}
+{194}{me be here again.}{}{-4}{}{0}{}
+{195}{If ye can figure then ye knows it will be 400 coins}{If ye can figure then ye knows it will be 400 coins}{}{}{}{}
+{196}{I am ready to go to Tarant.}{}{5}{gv 1036 1,$$ 400}{-20}{$$ -400}
+{197}{I am ready to go to Ashbury.}{}{5}{gv 1036 2,$$ 400}{-22}{$$ -400}
+{198}{I am ready to go to Black Root.}{}{5}{gv 1036 3,$$ 400}{-24}{$$ -400}
+{199}{I am ready to go to Caladon.}{}{5}{gv 1036 4,$$ 400}{-26}{$$ -400}
+{200}{I am ready to go to Half Ogre Island.}{}{5}{gv 1036 6,$$ 400}{-30}{$$ -400}
+{201}{I am ready to go to the Isle of Despair.}{}{5}{gv 1036 7,$$ 400}{-32}{$$ -400}
+{202}{That is acceptable, let's leave immediately.}{}{5}{$$ -399}{514}{}
+{203}{I don't have enough money for passage.}{}{5}{$$ -399}{644}{}
+{204}{I will come back when I am ready to travel.}{}{5}{}{0}{}
+{205}{me go tarant.}{}{-4}{gv 1036 1,$$ 400}{-20}{$$ -400}
+{206}{me go asshhhberry.}{}{-4}{gv 1036 2,$$ 400}{-22}{$$ -400}
+{207}{me go back wroot.}{}{-4}{gv 1036 3,$$ 400}{-24}{$$ -400}
+{208}{me go cawedon.}{}{-4}{gv 1036 4,$$ 400}{-26}{$$ -400}
+{209}{Me go Haf Oger I Lan.}{}{-4}{gv 1036 6,$$ 400}{-30}{$$ -400}
+{210}{me go the eyele of dispear.}{}{-4}{gv 1036 7,$$ 400}{-32}{$$ -400}
+{211}{me readi to go.}{}{-4}{$$ -399}{514}{}
+{212}{me no have money, me want to go on sheeep.}{}{-4}{$$ -399}{644}{}
+{213}{me be here again.}{}{-4}{}{0}{}
+{214}{If ye can figure then ye knows it will be 450 coins}{If ye can figure then ye knows it will be 450 coins}{}{}{}{}
+{215}{I am ready to go to Tarant.}{}{5}{gv 1036 1,$$ 450}{-20}{$$ -450}
+{216}{I am ready to go to Ashbury.}{}{5}{gv 1036 2,$$ 450}{-22}{$$ -450}
+{217}{I am ready to go to Black Root.}{}{5}{gv 1036 3,$$ 450}{-24}{$$ -450}
+{218}{I am ready to go to Caladon.}{}{5}{gv 1036 4,$$ 450}{-26}{$$ -450}
+{219}{I am ready to go to Half Ogre Island.}{}{5}{gv 1036 6,$$ 450}{-30}{$$ -450}
+{220}{I am ready to go to the Isle of Despair.}{}{5}{gv 1036 7,$$ 450}{-32}{$$ -450}
+{221}{That is acceptable, let's leave immediately.}{}{5}{$$ -449}{514}{}
+{222}{I don't have enough money for passage.}{}{5}{$$ -449}{644}{}
+{223}{I will come back when I am ready to travel.}{}{5}{}{0}{}
+{224}{me go tarant.}{}{-4}{gv 1036 1,$$ 450}{-20}{$$ -450}
+{225}{me go asshhhberry.}{}{-4}{gv 1036 2,$$ 450}{-22}{$$ -450}
+{226}{me go back wroot.}{}{-4}{gv 1036 3,$$ 450}{-24}{$$ -450}
+{227}{me go cawedon.}{}{-4}{gv 1036 4,$$ 450}{-26}{$$ -450}
+{228}{Me go Haf Oger I Lan.}{}{-4}{gv 1036 6,$$ 450}{-30}{$$ -450}
+{229}{me go the eyele of dispear.}{}{-4}{gv 1036 7,$$ 450}{-32}{$$ -450}
+{230}{me readi to go.}{}{-4}{$$ -449}{514}{}
+{231}{me no have money, me want to go on sheeep.}{}{-4}{$$ -449}{644}{}
+{232}{me be here again.}{}{-4}{}{0}{}
+{233}{If ye can figure then ye knows it will be 500 coins}{If ye can figure then ye knows it will be 500 coins}{}{}{}{}
+{234}{I am ready to go to Tarant.}{}{5}{gv 1036 1,$$ 500}{-20}{$$ -500}
+{235}{I am ready to go to Ashbury.}{}{5}{gv 1036 2,$$ 500}{-22}{$$ -500}
+{236}{I am ready to go to Black Root.}{}{5}{gv 1036 3,$$ 500}{-24}{$$ -500}
+{237}{I am ready to go to Caladon.}{}{5}{gv 1036 4,$$ 500}{-26}{$$ -500}
+{238}{I am ready to go to Half Ogre Island.}{}{5}{gv 1036 6,$$ 500}{-30}{$$ -500}
+{239}{I am ready to go to the Isle of Despair.}{}{5}{gv 1036 7,$$ 500}{-32}{$$ -500}
+{240}{That is acceptable, let's leave immediately.}{}{5}{$$ -499}{514}{}
+{241}{I don't have enough money for passage.}{}{5}{$$ -499}{644}{}
+{242}{I will come back when I am ready to travel.}{}{5}{}{0}{}
+{243}{me go tarant.}{}{-4}{gv 1036 1,$$ 500}{-20}{$$ -500}
+{244}{me go asshhhberry.}{}{-4}{gv 1036 2,$$ 500}{-22}{$$ -500}
+{245}{me go back wroot.}{}{-4}{gv 1036 3,$$ 500}{-24}{$$ -500}
+{246}{me go cawedon.}{}{-4}{gv 1036 4,$$ 500}{-26}{$$ -500}
+{247}{Me go Haf Oger I Lan.}{}{-4}{gv 1036 6,$$ 500}{-30}{$$ -500}
+{248}{me go the eyele of dispear.}{}{-4}{gv 1036 7,$$ 500}{-32}{$$ -500}
+{249}{me readi to go.}{}{-4}{$$ -499}{514}{}
+{250}{me no have money, me want to go on sheeep.}{}{-4}{$$ -499}{644}{}
+{251}{me be here again.}{}{-4}{}{0}{}
+{252}{If ye can figure then ye knows it will be 550 coins}{If ye can figure then ye knows it will be 550 coins}{}{}{}{}
+{253}{I am ready to go to Tarant.}{}{5}{gv 1036 1,$$ 550}{-20}{$$ -550}
+{254}{I am ready to go to Ashbury.}{}{5}{gv 1036 2,$$ 550}{-22}{$$ -550}
+{255}{I am ready to go to Black Root.}{}{5}{gv 1036 3,$$ 550}{-24}{$$ -550}
+{256}{I am ready to go to Caladon.}{}{5}{gv 1036 4,$$ 550}{-26}{$$ -550}
+{257}{I am ready to go to Half Ogre Island.}{}{5}{gv 1036 6,$$ 550}{-30}{$$ -550}
+{258}{I am ready to go to the Isle of Despair.}{}{5}{gv 1036 7,$$ 550}{-32}{$$ -550}
+{259}{That is acceptable, let's leave immediately.}{}{5}{$$ -549}{514}{}
+{260}{I don't have enough money for passage.}{}{5}{$$ -549}{644}{}
+{261}{I will come back when I am ready to travel.}{}{5}{}{0}{}
+{262}{me go tarant.}{}{-4}{gv 1036 1,$$ 550}{-20}{$$ -550}
+{263}{me go asshhhberry.}{}{-4}{gv 1036 2,$$ 550}{-22}{$$ -550}
+{264}{me go back wroot.}{}{-4}{gv 1036 3,$$ 550}{-24}{$$ -550}
+{265}{me go cawedon.}{}{-4}{gv 1036 4,$$ 550}{-26}{$$ -550}
+{266}{Me go Haf Oger I Lan.}{}{-4}{gv 1036 6,$$ 550}{-30}{$$ -550}
+{267}{me go the eyele of dispear.}{}{-4}{gv 1036 7,$$ 550}{-32}{$$ -550}
+{268}{me readi to go.}{}{-4}{$$ -549}{514}{}
+{269}{me no have money, me want to go on sheeep.}{}{-4}{$$ -549}{644}{}
+{270}{me be here again.}{}{-4}{}{0}{}
+{271}{If ye can figure then ye knows it will be 600 coins}{If ye can figure then ye knows it will be 600 coins}{}{}{}{}
+{272}{I am ready to go to Tarant.}{}{5}{gv 1036 1,$$ 600}{-20}{$$ -600}
+{273}{I am ready to go to Ashbury.}{}{5}{gv 1036 2,$$ 600}{-22}{$$ -600}
+{274}{I am ready to go to Black Root.}{}{5}{gv 1036 3,$$ 600}{-24}{$$ -600}
+{275}{I am ready to go to Caladon.}{}{5}{gv 1036 4,$$ 600}{-26}{$$ -600}
+{276}{I am ready to go to Half Ogre Island.}{}{5}{gv 1036 6,$$ 600}{-30}{$$ -600}
+{277}{I am ready to go to the Isle of Despair.}{}{5}{gv 1036 7,$$ 600}{-32}{$$ -600}
+{278}{That is acceptable, let's leave immediately.}{}{5}{$$ -599}{514}{}
+{279}{I don't have enough money for passage.}{}{5}{$$ -599}{644}{}
+{280}{I will come back when I am ready to travel.}{}{5}{}{0}{}
+{281}{me go tarant.}{}{-4}{gv 1036 1,$$ 600}{-20}{$$ -600}
+{282}{me go asshhhberry.}{}{-4}{gv 1036 2,$$ 600}{-22}{$$ -600}
+{283}{me go back wroot.}{}{-4}{gv 1036 3,$$ 600}{-24}{$$ -600}
+{284}{me go cawedon.}{}{-4}{gv 1036 4,$$ 600}{-26}{$$ -600}
+{285}{Me go Haf Oger I Lan.}{}{-4}{gv 1036 6,$$ 600}{-30}{$$ -600}
+{286}{me go the eyele of dispear.}{}{-4}{gv 1036 7,$$ 600}{-32}{$$ -600}
+{287}{me readi to go.}{}{-4}{$$ -599}{514}{}
+{288}{me no have money, me want to go on sheeep.}{}{-4}{$$ -599}{644}{}
+{289}{me be here again.}{}{-4}{}{0}{}
+{290}{If ye can figure then ye knows it will be 650 coins}{If ye can figure then ye knows it will be 650 coins}{}{}{}{}
+{291}{I am ready to go to Tarant.}{}{5}{gv 1036 1,$$ 650}{-20}{$$ -650}
+{292}{I am ready to go to Ashbury.}{}{5}{gv 1036 2,$$ 650}{-22}{$$ -650}
+{293}{I am ready to go to Black Root.}{}{5}{gv 1036 3,$$ 650}{-24}{$$ -650}
+{294}{I am ready to go to Caladon.}{}{5}{gv 1036 4,$$ 650}{-26}{$$ -650}
+{295}{I am ready to go to Half Ogre Island.}{}{5}{gv 1036 6,$$ 650}{-30}{$$ -650}
+{296}{I am ready to go to the Isle of Despair.}{}{5}{gv 1036 7,$$ 650}{-32}{$$ -650}
+{297}{That is acceptable, let's leave immediately.}{}{5}{$$ -649}{514}{}
+{298}{I don't have enough money for passage.}{}{5}{$$ -649}{644}{}
+{299}{I will come back when I am ready to travel.}{}{5}{}{0}{}
+{300}{me go tarant.}{}{-4}{gv 1036 1,$$ 650}{-20}{$$ -650}
+{301}{me go asshhhberry.}{}{-4}{gv 1036 2,$$ 650}{-22}{$$ -650}
+{302}{me go back wroot.}{}{-4}{gv 1036 3,$$ 650}{-24}{$$ -650}
+{303}{me go cawedon.}{}{-4}{gv 1036 4,$$ 650}{-26}{$$ -650}
+{304}{Me go Haf Oger I Lan.}{}{-4}{gv 1036 6,$$ 650}{-30}{$$ -650}
+{305}{me go the eyele of dispear.}{}{-4}{gv 1036 7,$$ 650}{-32}{$$ -650}
+{306}{me readi to go.}{}{-4}{$$ -649}{514}{}
+{307}{me no have money, me want to go on sheeep.}{}{-4}{$$ -649}{644}{}
+{308}{me be here again.}{}{-4}{}{0}{}
+{309}{If ye can figure then ye knows it will be 700 coins}{If ye can figure then ye knows it will be 700 coins}{}{}{}{}
+{310}{I am ready to go to Tarant.}{}{5}{gv 1036 1,$$ 700}{-20}{$$ -700}
+{311}{I am ready to go to Ashbury.}{}{5}{gv 1036 2,$$ 700}{-22}{$$ -700}
+{312}{I am ready to go to Black Root.}{}{5}{gv 1036 3,$$ 700}{-24}{$$ -700}
+{313}{I am ready to go to Caladon.}{}{5}{gv 1036 4,$$ 700}{-26}{$$ -700}
+{314}{I am ready to go to Half Ogre Island.}{}{5}{gv 1036 6,$$ 700}{-30}{$$ -700}
+{315}{I am ready to go to the Isle of Despair.}{}{5}{gv 1036 7,$$ 700}{-32}{$$ -700}
+{316}{That is acceptable, let's leave immediately.}{}{5}{$$ -699}{514}{}
+{317}{I don't have enough money for passage.}{}{5}{$$ -699}{644}{}
+{318}{I will come back when I am ready to travel.}{}{5}{}{0}{}
+{319}{me go tarant.}{}{-4}{gv 1036 1,$$ 700}{-20}{$$ -700}
+{320}{me go asshhhberry.}{}{-4}{gv 1036 2,$$ 700}{-22}{$$ -700}
+{321}{me go back wroot.}{}{-4}{gv 1036 3,$$ 700}{-24}{$$ -700}
+{322}{me go cawedon.}{}{-4}{gv 1036 4,$$ 700}{-26}{$$ -700}
+{323}{Me go Haf Oger I Lan.}{}{-4}{gv 1036 6,$$ 700}{-30}{$$ -700}
+{324}{me go the eyele of dispear.}{}{-4}{gv 1036 7,$$ 700}{-32}{$$ -700}
+{325}{me readi to go.}{}{-4}{$$ -699}{514}{}
+{326}{me no have money, me want to go on sheeep.}{}{-4}{$$ -699}{644}{}
+{327}{me be here again.}{}{-4}{}{0}{}
+{328}{If ye can figure then ye knows it will be 750 coins}{If ye can figure then ye knows it will be 750 coins}{}{}{}{}
+{329}{I am ready to go to Tarant.}{}{5}{gv 1036 1,$$ 750}{-20}{$$ -750}
+{330}{I am ready to go to Ashbury.}{}{5}{gv 1036 2,$$ 750}{-22}{$$ -750}
+{331}{I am ready to go to Black Root.}{}{5}{gv 1036 3,$$ 750}{-24}{$$ -750}
+{332}{I am ready to go to Caladon.}{}{5}{gv 1036 4,$$ 750}{-26}{$$ -750}
+{333}{I am ready to go to Half Ogre Island.}{}{5}{gv 1036 6,$$ 750}{-30}{$$ -750}
+{334}{I am ready to go to the Isle of Despair.}{}{5}{gv 1036 7,$$ 750}{-32}{$$ -750}
+{335}{That is acceptable, let's leave immediately.}{}{5}{$$ -749}{514}{}
+{336}{I don't have enough money for passage.}{}{5}{$$ -749}{644}{}
+{337}{I will come back when I am ready to travel.}{}{5}{}{0}{}
+{338}{me go tarant.}{}{-4}{gv 1036 1,$$ 750}{-20}{$$ -750}
+{339}{me go asshhhberry.}{}{-4}{gv 1036 2,$$ 750}{-22}{$$ -750}
+{340}{me go back wroot.}{}{-4}{gv 1036 3,$$ 750}{-24}{$$ -750}
+{341}{me go cawedon.}{}{-4}{gv 1036 4,$$ 750}{-26}{$$ -750}
+{342}{Me go Haf Oger I Lan.}{}{-4}{gv 1036 6,$$ 750}{-30}{$$ -750}
+{343}{me go the eyele of dispear.}{}{-4}{gv 1036 7,$$ 750}{-32}{$$ -750}
+{344}{me readi to go.}{}{-4}{$$ -749}{514}{}
+{345}{me no have money, me want to go on sheeep.}{}{-4}{$$ -749}{644}{}
+{346}{me be here again.}{}{-4}{}{0}{}
+{347}{If ye can figure then ye knows it will be 800 coins}{If ye can figure then ye knows it will be 800 coins}{}{}{}{}
+{348}{I am ready to go to Tarant.}{}{5}{gv 1036 1,$$ 800}{-20}{$$ -800}
+{349}{I am ready to go to Ashbury.}{}{5}{gv 1036 2,$$ 800}{-22}{$$ -800}
+{350}{I am ready to go to Black Root.}{}{5}{gv 1036 3,$$ 800}{-24}{$$ -800}
+{351}{I am ready to go to Caladon.}{}{5}{gv 1036 4,$$ 800}{-26}{$$ -800}
+{352}{I am ready to go to Half Ogre Island.}{}{5}{gv 1036 6,$$ 800}{-30}{$$ -800}
+{353}{I am ready to go to the Isle of Despair.}{}{5}{gv 1036 7,$$ 800}{-32}{$$ -800}
+{354}{That is acceptable, let's leave immediately.}{}{5}{$$ -799}{514}{}
+{355}{I don't have enough money for passage.}{}{5}{$$ -799}{644}{}
+{356}{I will come back when I am ready to travel.}{}{5}{}{0}{}
+{357}{me go tarant.}{}{-4}{gv 1036 1,$$ 800}{-20}{$$ -800}
+{358}{me go asshhhberry.}{}{-4}{gv 1036 2,$$ 800}{-22}{$$ -800}
+{359}{me go back wroot.}{}{-4}{gv 1036 3,$$ 800}{-24}{$$ -800}
+{360}{me go cawedon.}{}{-4}{gv 1036 4,$$ 800}{-26}{$$ -800}
+{361}{Me go Haf Oger I Lan.}{}{-4}{gv 1036 6,$$ 800}{-30}{$$ -800}
+{362}{me go the eyele of dispear.}{}{-4}{gv 1036 7,$$ 800}{-32}{$$ -800}
+{363}{me readi to go.}{}{-4}{$$ -799}{514}{}
+{364}{me no have money, me want to go on sheeep.}{}{-4}{$$ -799}{644}{}
+{365}{me be here again.}{}{-4}{}{0}{}
+{366}{If ye can figure then ye knows it will be 850 coins}{If ye can figure then ye knows it will be 850 coins}{}{}{}{}
+{367}{I am ready to go to Tarant.}{}{5}{gv 1036 1,$$ 850}{-20}{$$ -850}
+{368}{I am ready to go to Ashbury.}{}{5}{gv 1036 2,$$ 850}{-22}{$$ -850}
+{369}{I am ready to go to Black Root.}{}{5}{gv 1036 3,$$ 850}{-24}{$$ -850}
+{370}{I am ready to go to Caladon.}{}{5}{gv 1036 4,$$ 850}{-26}{$$ -850}
+{371}{I am ready to go to Half Ogre Island.}{}{5}{gv 1036 6,$$ 850}{-30}{$$ -850}
+{372}{I am ready to go to the Isle of Despair.}{}{5}{gv 1036 7,$$ 850}{-32}{$$ -850}
+{373}{That is acceptable, let's leave immediately.}{}{5}{$$ -849}{514}{}
+{374}{I don't have enough money for passage.}{}{5}{$$ -849}{644}{}
+{375}{I will come back when I am ready to travel.}{}{5}{}{0}{}
+{376}{me go tarant.}{}{-4}{gv 1036 1,$$ 850}{-20}{$$ -850}
+{377}{me go asshhhberry.}{}{-4}{gv 1036 2,$$ 850}{-22}{$$ -850}
+{378}{me go back wroot.}{}{-4}{gv 1036 3,$$ 850}{-24}{$$ -850}
+{379}{me go cawedon.}{}{-4}{gv 1036 4,$$ 850}{-26}{$$ -850}
+{380}{Me go Haf Oger I Lan.}{}{-4}{gv 1036 6,$$ 850}{-30}{$$ -850}
+{381}{me go the eyele of dispear.}{}{-4}{gv 1036 7,$$ 850}{-32}{$$ -850}
+{382}{me readi to go.}{}{-4}{$$ -849}{514}{}
+{383}{me no have money, me want to go on sheeep.}{}{-4}{$$ -849}{644}{}
+{384}{me be here again.}{}{-4}{}{0}{}
+{385}{If ye can figure then ye knows it will be 900 coins}{If ye can figure then ye knows it will be 900 coins}{}{}{}{}
+{386}{I am ready to go to Tarant.}{}{5}{gv 1036 1,$$ 900}{-20}{$$ -900}
+{387}{I am ready to go to Ashbury.}{}{5}{gv 1036 2,$$ 900}{-22}{$$ -900}
+{388}{I am ready to go to Black Root.}{}{5}{gv 1036 3,$$ 900}{-24}{$$ -900}
+{389}{I am ready to go to Caladon.}{}{5}{gv 1036 4,$$ 900}{-26}{$$ -900}
+{390}{I am ready to go to Half Ogre Island.}{}{5}{gv 1036 6,$$ 900}{-30}{$$ -900}
+{391}{I am ready to go to the Isle of Despair.}{}{5}{gv 1036 7,$$ 900}{-32}{$$ -900}
+{392}{That is acceptable, let's leave immediately.}{}{5}{$$ -899}{514}{}
+{393}{I don't have enough money for passage.}{}{5}{$$ -899}{644}{}
+{394}{I will come back when I am ready to travel.}{}{5}{}{0}{}
+{395}{me go tarant.}{}{-4}{gv 1036 1,$$ 900}{-20}{$$ -900}
+{396}{me go asshhhberry.}{}{-4}{gv 1036 2,$$ 900}{-22}{$$ -900}
+{397}{me go back wroot.}{}{-4}{gv 1036 3,$$ 900}{-24}{$$ -900}
+{398}{me go cawedon.}{}{-4}{gv 1036 4,$$ 900}{-26}{$$ -900}
+{399}{Me go Haf Oger I Lan.}{}{-4}{gv 1036 6,$$ 900}{-30}{$$ -900}
+{400}{me go the eyele of dispear.}{}{-4}{gv 1036 7,$$ 900}{-32}{$$ -900}
+{401}{me readi to go.}{}{-4}{$$ -899}{514}{}
+{402}{me no have money, me want to go on sheeep.}{}{-4}{$$ -899}{644}{}
+{403}{me be here again.}{}{-4}{}{0}{}
+{404}{If ye can figure then ye knows it will be 1000 coins}{If ye can figure then ye knows it will be 1000 coins}{}{}{}{}
+{405}{I am ready to go to Tarant.}{}{5}{gv 1036 1,$$ 1000}{-20}{$$ -1000}
+{406}{I am ready to go to Ashbury.}{}{5}{gv 1036 2,$$ 1000}{-22}{$$ -1000}
+{407}{I am ready to go to Black Root.}{}{5}{gv 1036 3,$$ 1000}{-24}{$$ -1000}
+{408}{I am ready to go to Caladon.}{}{5}{gv 1036 4,$$ 1000}{-26}{$$ -1000}
+{409}{I am ready to go to Half Ogre Island.}{}{5}{gv 1036 6,$$ 1000}{-30}{$$ -1000}
+{410}{I am ready to go to the Isle of Despair.}{}{5}{gv 1036 7,$$ 1000}{-32}{$$ -1000}
+{411}{That is acceptable, let's leave immediately.}{}{5}{$$ -999}{514}{}
+{412}{I don't have enough money for passage.}{}{5}{$$ -999}{644}{}
+{413}{I will come back when I am ready to travel.}{}{5}{}{0}{}
+{414}{me go tarant.}{}{-4}{gv 1036 1,$$ 1000}{-20}{$$ -1000}
+{415}{me go asshhhberry.}{}{-4}{gv 1036 2,$$ 1000}{-22}{$$ -1000}
+{416}{me go back wroot.}{}{-4}{gv 1036 3,$$ 1000}{-24}{$$ -1000}
+{417}{me go cawedon.}{}{-4}{gv 1036 4,$$ 1000}{-26}{$$ -1000}
+{418}{Me go Haf Oger I Lan.}{}{-4}{gv 1036 6,$$ 1000}{-30}{$$ -1000}
+{419}{me go the eyele of dispear.}{}{-4}{gv 1036 7,$$ 1000}{-32}{$$ -1000}
+{420}{me readi to go.}{}{-4}{$$ -999}{514}{}
+{421}{me no have money, me want to go on sheeep.}{}{-4}{$$ -999}{644}{}
+{422}{me be here again.}{}{-4}{}{0}{}
+{423}{If ye can figure then ye knows it will be 1100 coins}{If ye can figure then ye knows it will be 1100 coins}{}{}{}{}
+{424}{I am ready to go to Tarant.}{}{5}{gv 1036 1,$$ 1100}{-20}{$$ -1100}
+{425}{I am ready to go to Ashbury.}{}{5}{gv 1036 2,$$ 1100}{-22}{$$ -1100}
+{426}{I am ready to go to Black Root.}{}{5}{gv 1036 3,$$ 1100}{-24}{$$ -1100}
+{427}{I am ready to go to Caladon.}{}{5}{gv 1036 4,$$ 1100}{-26}{$$ -1100}
+{428}{I am ready to go to Half Ogre Island.}{}{5}{gv 1036 6,$$ 1100}{-30}{$$ -1100}
+{429}{I am ready to go to the Isle of Despair.}{}{5}{gv 1036 7,$$ 1100}{-32}{$$ -1100}
+{430}{That is acceptable, let's leave immediately.}{}{5}{$$ -1099}{514}{}
+{431}{I don't have enough money for passage.}{}{5}{$$ -1099}{644}{}
+{432}{I will come back when I am ready to travel.}{}{5}{}{0}{}
+{433}{me go tarant.}{}{-4}{gv 1036 1,$$ 1100}{-20}{$$ -1100}
+{434}{me go asshhhberry.}{}{-4}{gv 1036 2,$$ 1100}{-22}{$$ -1100}
+{435}{me go back wroot.}{}{-4}{gv 1036 3,$$ 1100}{-24}{$$ -1100}
+{436}{me go cawedon.}{}{-4}{gv 1036 4,$$ 1100}{-26}{$$ -1100}
+{437}{Me go Haf Oger I Lan.}{}{-4}{gv 1036 6,$$ 1100}{-30}{$$ -1100}
+{438}{me go the eyele of dispear.}{}{-4}{gv 1036 7,$$ 1100}{-32}{$$ -1100}
+{439}{me readi to go.}{}{-4}{$$ -1099}{514}{}
+{440}{me no have money, me want to go on sheeep.}{}{-4}{$$ -1099}{644}{}
+{441}{me be here again.}{}{-4}{}{0}{}
+{442}{If ye can figure then ye knows it will be 1200 coins}{If ye can figure then ye knows it will be 1200 coins}{}{}{}{}
+{443}{I am ready to go to Tarant.}{}{5}{gv 1036 1,$$ 1200}{-20}{$$ -1200}
+{444}{I am ready to go to Ashbury.}{}{5}{gv 1036 2,$$ 1200}{-22}{$$ -1200}
+{445}{I am ready to go to Black Root.}{}{5}{gv 1036 3,$$ 1200}{-24}{$$ -1200}
+{446}{I am ready to go to Caladon.}{}{5}{gv 1036 4,$$ 1200}{-26}{$$ -1200}
+{447}{I am ready to go to Half Ogre Island.}{}{5}{gv 1036 6,$$ 1200}{-30}{$$ -1200}
+{448}{I am ready to go to the Isle of Despair.}{}{5}{gv 1036 7,$$ 1200}{-32}{$$ -1200}
+{449}{That is acceptable, let's leave immediately.}{}{5}{$$ -1199}{514}{}
+{450}{I don't have enough money for passage.}{}{5}{$$ -1199}{644}{}
+{451}{I will come back when I am ready to travel.}{}{5}{}{0}{}
+{452}{me go tarant.}{}{-4}{gv 1036 1,$$ 1200}{-20}{$$ -1200}
+{453}{me go asshhhberry.}{}{-4}{gv 1036 2,$$ 1200}{-22}{$$ -1200}
+{454}{me go back wroot.}{}{-4}{gv 1036 3,$$ 1200}{-24}{$$ -1200}
+{455}{me go cawedon.}{}{-4}{gv 1036 4,$$ 1200}{-26}{$$ -1200}
+{456}{Me go Haf Oger I Lan.}{}{-4}{gv 1036 6,$$ 1200}{-30}{$$ -1200}
+{457}{me go the eyele of dispear.}{}{-4}{gv 1036 7,$$ 1200}{-32}{$$ -1200}
+{458}{me readi to go.}{}{-4}{$$ -1199}{514}{}
+{459}{me no have money, me want to go on sheeep.}{}{-4}{$$ -1199}{644}{}
+{460}{me be here again.}{}{-4}{}{0}{}
+{461}{If ye can figure then ye knows it will be 1300 coins}{If ye can figure then ye knows it will be 1300 coins}{}{}{}{}
+{462}{I am ready to go to Tarant.}{}{5}{gv 1036 1,$$ 1300}{-20}{$$ -1300}
+{463}{I am ready to go to Ashbury.}{}{5}{gv 1036 2,$$ 1300}{-22}{$$ -1300}
+{464}{I am ready to go to Black Root.}{}{5}{gv 1036 3,$$ 1300}{-24}{$$ -1300}
+{465}{I am ready to go to Caladon.}{}{5}{gv 1036 4,$$ 1300}{-26}{$$ -1300}
+{466}{I am ready to go to Half Ogre Island.}{}{5}{gv 1036 6,$$ 1300}{-30}{$$-1300}
+{467}{I am ready to go to the Isle of Despair.}{}{5}{gv 1036 7,$$ 1300}{-32}{$$ -1300}
+{468}{That is acceptable, let's leave immediately.}{}{5}{$$ -1299}{514}{}
+{469}{I don't have enough money for passage.}{}{5}{$$ -1299}{644}{}
+{470}{I will come back when I am ready to travel.}{}{5}{}{0}{}
+{471}{me go tarant.}{}{-4}{gv 1036 1,$$ 1300}{-20}{$$ -1300}
+{472}{me go asshhhberry.}{}{-4}{gv 1036 2,$$ 1300}{-22}{$$ -1300}
+{473}{me go back wroot.}{}{-4}{gv 1036 3,$$ 1300}{-24}{$$ -1300}
+{474}{me go cawedon.}{}{-4}{gv 1036 4,$$ 1300}{-26}{$$ -1300}
+{475}{Me go Haf Oger I Lan.}{}{-4}{gv 1036 6,$$ 1300}{-30}{$$ -1300}
+{476}{me go the eyele of dispear.}{}{-4}{gv 1036 7,$$ 1300}{-32}{$$ -1300}
+{477}{me readi to go.}{}{-4}{$$ -1299}{514}{}
+{478}{me no have money, me want to go on sheeep.}{}{-4}{$$ -1299}{644}{}
+{479}{me be here again.}{}{-4}{}{0}{}
+{480}{That's what I'm chargin'.  Ye can take it or leave it... It is of no concern to me...So what will it be?}{That's what I'm chargin', missy.  Ye can take it or leave it... It matters not to me...}{}{}{}{}
+{481}{I see.  ...What was the price again?}{}{5}{}{44}{}
+{482}{F:}{}{5}{}{0}{}
+{483}{Uh...  How many coin?}{}{-4}{}{44}{}
+{484}{F:}{}{-4}{}{0}{}
+{485}{Ye have a way about ye mister.  Perhaps you'll bring us luck upon the sea.  I will accept 50 a head...  This time... Not a coin less!  This is me final offer, so Ye better take it a'fore I change me mind.}{Ye have a way about ye missy.  Perhaps you'll bring us luck upon the sea.  I will accept 50 a head...  This time...    Not a coin less! This is me final offer. So Ye better take it a'fore I change me mind.}{}{}{}{}
+{486}{That is good business, Capt'n. You won't regret it!}{}{5}{gv 1035 1}{62}{}
+{487}{That is good business, Capt'n. You won't regret it!}{}{5}{gv 1035 2}{81}{}
+{488}{That is good business, Capt'n. You won't regret it!}{}{5}{gv 1035 3}{100}{}
+{489}{That is good business, Capt'n. You won't regret it!}{}{5}{gv 1035 4}{119}{}
+{490}{That is good business, Capt'n. You won't regret it!}{}{5}{gv 1035 5}{138}{}
+{491}{That is good business, Capt'n. You won't regret it!}{}{5}{gv 1035 6}{157}{}
+{492}{That is good business, Capt'n. You won't regret it!}{}{5}{gv 1035 7}{176}{}
+{493}{That is good business, Capt'n. You won't regret it!}{}{5}{gv 1035 8}{195}{}
+{494}{That is good business, Capt'n. You won't regret it!}{}{5}{gv 1035 9}{214}{}
+{495}{That is good business, Capt'n. You won't regret it!}{}{5}{gv 1035 10}{233}{}
+{496}{That is good business, Capt'n. You won't regret it!}{}{5}{gv 1035 11}{252}{}
+{497}{That is good business, Capt'n. You won't regret it!}{}{5}{gv 1035 12}{271}{}
+{498}{That is good business, Capt'n. You won't regret it!}{}{5}{gv 1035 13}{290}{}
+{499}{F:}{}{5}{}{0}{}
+{500}{smart capt'n. we have good deal now!}{}{-4}{gv 1035 1}{62}{}
+{501}{smart capt'n. we have good deal now!}{}{-4}{gv 1035 2}{81}{}
+{502}{smart capt'n. we have good deal now!}{}{-4}{gv 1035 3}{100}{}
+{503}{smart capt'n. we have good deal now!}{}{-4}{gv 1035 4}{119}{}
+{504}{smart capt'n. we have good deal now!}{}{-4}{gv 1035 5}{138}{}
+{505}{smart capt'n. we have good deal now!}{}{-4}{gv 1035 6}{157}{}
+{506}{smart capt'n. we have good deal now!}{}{-4}{gv 1035 7}{176}{}
+{507}{smart capt'n. we have good deal now!}{}{-4}{gv 1035 8}{195}{}
+{508}{smart capt'n. we have good deal now!}{}{-4}{gv 1035 9}{214}{}
+{509}{smart capt'n. we have good deal now!}{}{-4}{gv 1035 10}{233}{}
+{510}{smart capt'n. we have good deal now!}{}{-4}{gv 1035 11}{252}{}
+{511}{smart capt'n. we have good deal now!}{}{-4}{gv 1035 12}{271}{}
+{512}{smart capt'n. we have good deal now!}{}{-4}{gv 1035 13}{290}{}
+{513}{F:}{}{-4}{}{0}{}
+{514}{Augh!  You haven't the fare!  If I miss the tide because of ye wasting me time...  I'll get ye...  Ye can count on it!  Now get ye gone from me vessel! }{Augh!  You haven't the fare!  If I miss the tide because of ye wasting me time...  I'll get ye...  Ye can count on it!  Now get ye gone from me vessel! }{}{}{}{re -5}
+{515}{E:}{}{5}{}{0}{}
+{516}{Get ye gone from me vessel!  Don't come back unless ye know where yer goin' to.}{Get ye gone from me vessel!  Don't come back unless ye know where yer goin' to.}{}{}{}{}
+{517}{Augh!  Are ye daft?  This ship never goes there!}{Augh!  Are ye daft?  This ship never goes there!}{}{}{}{}
+{518}{Uh...  Perhaps a different location...}{}{5}{}{27}{}
+{519}{Can you tell me where Blackroot is located?}{}{5}{}{535}{}
+{520}{Bah!  Dern steam rails made sure me ship was of no use to Ashbury!  That damnable contraption'll be the death of me yet!  Mark me words!}{Bah!  Dern steam rails made sure me ship was of no use to Ashbury!  That damnable contraption'll be the death of me yet!  Mark me words!}{}{}{}{}
+{521}{Then perhaps I should sail to a different location...}{}{5}{}{27}{}
+{522}{Can you tell me where Ashbury is located?}{}{5}{}{524}{}
+{523}{E:}{}{1}{}{0}{}
+{524}{It be right thar.  [He points to a spot on your map.]}{It be right thar.  [He points to a spot on your map.]}{}{}{}{mm 8}
+{525}{Can I book passage to a different location?}{}{5}{}{27}{}
+{526}{E:}{}{1}{}{0}{}
+{527}{Thanatos!  Ye'll not find anyone fool enough to take ye to that destination 'round here!  Try Blackroot.  That place is full of desperate fools!}{Thanatos!  Ye'll not find anyone fool enough to take ye to that destination 'round here!  Try Blackroot.  That place is full of desperate fools!}{}{}{}{}
+{529}{Can I book passage to a different location then?}{}{5}{}{27}{}
+{530}{Uh...  Me go on boat?}{}{-4}{}{608}{}
+{531}{E:}{}{1}{}{0}{}
+{532}{Certainly.  Allow me a look at yer map...}{Certainly.  Allow me a look at yer map...}{}{}{}{}
+{533}{[Show him your map]}{}{5}{}{535}{}
+{534}{F:}{}{1}{}{0}{}
+{535}{Thar it be.  [He points to a location on your map.]}{Thar it be.  [He points to a location on your map.]}{}{}{}{mm 3}
+{536}{Could I get passage somewhere else?}{}{5}{}{27}{}
+{537}{E:}{}{1}{}{0}{}
+{538}{Thanatos?  Are ye daft?  This boat will never go there!}{Thanatos?  Are ye daft?  This boat will never go there!}{}{}{}{}
+{539}{Can I book passage to a different location then?}{}{5}{}{27}{}
+{540}{Uh...  Me go on boat?}{}{-4}{}{608}{}
+{541}{E:}{}{1}{}{0}{}
+{542}{Isle of Despair?  If you got any wits about ye, ye'll avoid landing on that rock!}{Isle of Despair?  If you got any wits about ye, ye'll avoid landing on that rock!}{}{}{}{}
+{543}{Why?  What sort of place is it?}{}{5}{}{545}{}
+{544}{E:}{}{1}{}{0}{}
+{545}{They say that no one has ever left the Isle and lived.  The bodies of those who've tried wash ashore on the morning tide...}{They say that no one has ever left the Isle and lived.  The bodies of those who've tried wash ashore on the morning tide...}{}{}{}{}
+{546}{Oh my...  Can I book passage to a different location then?}{}{5}{}{27}{}
+{547}{I really must reach the isle.}{}{5}{}{647}{}
+{548}{Get on with it!  I can not wait here all day while ye stand about and gawk!}{Get on with it!  I can not wait here all day while ye stand about and gawk!}{}{}{}{}
+{549}{I wish to book passage aboard your ship.}{}{5}{}{555}{}
+{550}{I need some one to take me to Isle of Despair.}{}{5}{lf8 0, ss 5, ss -6}{542}{}
+{551}{I need some one to take me to Isle of Despair.}{}{5}{lf8 1, ss 5, ss -6}{654}{}
+{552}{I need some one to take me to Thanatos.}{}{5}{lf3 0, ss 17, ss -17, gf2037 1}{527}{}
+{553}{I need some one to take me to Thanatos.}{}{5}{lf3 1, ss 17, ss -17, gf2037 1}{538}{}
+{554}{I need some one to take me to Caladon.}{}{5}{lf4 0, ss 12, ss -12}{555}{}
+{555}{I haven't got time for ye!  The ship needs unloading and yer in the way.  Come back later.}{I haven't got time for ye!  The ship needs unloading and yer in the way.  Come back later.}{}{}{}{}
+{556}{E:}{}{1}{}{0}{}
+{557}{S:}{}{1}{}{0}{re 2}
+{558}{I:}{}{1}{}{0}{re -5}
+{559}{Aye that it is...  Did ye get a chance to behold that great iron beasty... the train?}{Aye that it is...  Did ye get a chance to behold that great iron beasty... the train?}{}{}{}{}
+{560}{I did.  It is truly a wonder of modern mechanics.}{}{5}{}{566}{}
+{561}{I did.  But I spent most of my time at The Wellington.}{}{5}{}{575}{}
+{562}{No, I did not have time.  I hear it is an excellent form of travel.}{}{5}{}{571}{}
+{563}{Yeah.  Me see.  It very big!  ...Noisy too!}{}{-4}{}{566}{}
+{564}{No.  Me no see train.  They say it good for travel.}{}{-4}{}{571}{}
+{565}{E:}{}{1}{}{0}{}
+{566}{That it is.  That it is.  Still, it can not offer the sense of adventure that comes from sailing on the open.  Not for me, anyway.}{That it is.  That it is.  Still, it can not offer the sense of adventure that comes from sailing on the open.  Not for me, anyway.}{}{}{}{}
+{567}{But it does offer the masses safe and convenient travel.}{}{5}{}{571}{}
+{568}{I agree wholeheartedly.  Can I book passage with you?}{}{5}{}{27}{}
+{569}{Yeah...  Me go on boat?}{}{-4}{}{608}{}
+{570}{E:}{}{1}{}{0}{}
+{571}{As long as there are not mages about...  No.  Me thinks sailing is the best way to journey a great distance.}{As long as there are not mages about...  No.  Me thinks sailing is the best way to journey a great distance.}{}{}{}{}
+{572}{I see your point.  Can I book passage with you?}{}{5}{}{27}{}
+{573}{E:}{}{1}{}{0}{}
+{574}{Yeah...  Me go on boat?}{}{-4}{}{608}{}
+{575}{I see ye be one that enjoys the finer things life has to offer...}{I see ye be one that enjoys the finer things life has to offer...}{}{}{}{}
+{576}{I do indeed...  May I book passage aboard your vessel?}{}{5}{}{27}{}
+{577}{E:}{}{1}{}{0}{}
+{578}{Ashbury...  It's a fairly quiet place.  Probably the most interesting location in the whole place is the haunted castle.}{Ashbury...  It's a fairly quiet place.  Probably the most interesting location in the whole place is the haunted castle.}{}{}{}{}
+{579}{Haunted castle?  Where's that?}{}{5}{}{584}{}
+{580}{Yes.  That was quite an experience.  Can I book passage?}{}{5}{}{27}{}
+{581}{Where dat at?}{}{-4}{}{584}{}
+{582}{Yeah...  Me go on boat?}{}{-4}{}{608}{}
+{583}{E:}{}{1}{}{0}{}
+{584}{Ask around in town.  They'll direct ye to it.}{Ask around in town.  They'll direct ye to it.}{}{}{}{}
+{585}{Perhaps later.  I am looking for passage aboard a ship.}{}{5}{}{27}{}
+{586}{E:}{}{1}{}{0}{}
+{587}{Yeah...  Me go on boat?}{}{-4}{}{608}{}
+{588}{That they be.  Ye'll never find a finer ship than one made here in Black Root.  ...Why, this very ship was built in Black Root.  Never a finer vessel have I sailed...}{That they be.  Ye'll never find a finer ship than one made here in Black Root.  ...Why, this very ship was built in Black Root.  Never a finer vessel have I sailed...}{}{}{}{}
+{589}{It does appear quite sturdy.  Can I book passage aboard?}{}{5}{}{27}{}
+{590}{E:}{}{1}{}{0}{}
+{591}{She appears to be rather new.  Have you had her long?}{}{5}{re -80}{592}{re +5}
+{592}{She be sailing the sea for nigh 8 years.  I do me best to keep 'er ship shape.  Ye got a good eye on ye, to notice her quality.}{She be sailing the sea for nigh 8 years.  I do me best to keep 'er ship shape.  Ye got a good eye on ye, to notice her quality.}{}{}{}{}
+{593}{You've done a good job with her.  Can I book passage?}{}{5}{}{27}{}
+{594}{E:}{}{1}{}{0}{}
+{595}{Most come fer the temple.  The panarii religion be based 'ere.}{Most come fer the temple.  The panarii religion be based 'ere.}{}{}{}{}
+{596}{Yes.  I suspect you see many pilgrims.}{}{5}{}{599}{}
+{597}{Uh huh...  You take lots pilgrums der?}{}{-4}{}{599}{}
+{598}{E:}{}{1}{}{0}{}
+{599}{Pilgrims...  Not too many these days.  But me thinks thar be quite a number of fools just wishing to gawk at its splendour.}{Pilgrims...  Not too many these days.  But me thinks thar be quite a number of fools just wishing to gawk at its splendour.}{}{}{}{}
+{600}{I take it you're not a devout follower?}{}{5}{}{603}{}
+{601}{Yeah...  it pretty.  You no like panarii?}{}{-4}{}{603}{}
+{602}{E:}{}{1}{}{0}{}
+{603}{The sea... she be me goddess.  She's got all a man needs.  The panarii [he pauses and spits over the side] have nothing to offer a man like me...}{The sea... she be me goddess.  She's got all a man needs.  The panarii [he pauses and spits over the side] have nothing to offer a man like me...}{}{}{}{}
+{604}{I see your point.  Can I book passage with you?}{}{5}{}{27}{}
+{605}{Too bad...  Can I book passage aboard your vessel?}{}{5}{}{27}{}
+{606}{Yeah...  Me go on boat?}{}{-4}{}{608}{}
+{607}{E:}{}{1}{}{0}{}
+{608}{No, no.  I'm afraid I can't just take ye with me.  Only paying passengers may board me fine ship.}{No, no.  I'm afraid I can't just take ye with me.  Only paying passengers may board me fine ship.}{}{}{}{}
+{609}{Me pay!}{}{-4}{ss-4}{619}{}
+{610}{Me pay!}{}{-4}{ss7, ss-11}{619}{}
+{611}{Me pay!}{1}{-4}{ss5, ss-6}{621}{}
+{612}{Me pay!}{0}{-4}{ss5, ss-6}{-37}{}
+{613}{Me pay!}{0}{-4}{ss12, lf4 0}{-37}{}
+{614}{Me pay!}{1}{-4}{ss12, ss-12, lf4 0}{621}{ss 13}
+{615}{Me pay!}{1}{-4}{ss13, lf4 0}{621}{}
+{616}{Me pay!}{}{-4}{lf 6 0, qa1143 2}{621}{}
+{617}{Me pay!}{}{-4}{ss13, lf4 1}{695}{}
+{618}{E:}{}{1}{}{0}{}
+{619}{Oh!  I understand ye now...  [poor simple bastard]  ...I am afraid not...}{Oh!  I understand ye now...  [what a stupid woman!]  ...I am afraid not...}{}{}{}{}
+{620}{E:}{}{1}{}{0}{}
+{621}{Oh!  I understand ye now...  [poor simple bastard]  Ye want to pay yer passage aboard!   ...Well...  Ye do appear to be strong of body.  I guess ye could work for yer passage.  I be leaving for Caladon on this very tide.  I'll let ye work your way there, if ye can leave now.}{Oh!  I understand ye now...  [what a stupid woman!]  Ye want to pay yer passage aboard!   ...Well...  Ye do appear to be strong of body and the cook be needin' a galley mate as I recall. Even a nit wit like ye can wash pots and pans I suppose... [hesitating] Alright then, Ye can work for yer passage.  I be leaving for Caladon on this very tide.   Can ye can leave now?}{}{}{}{}
+{622}{Uh...  Okay.  Me go boat now.}{1}{-4}{ss13}{-26}{}
+{623}{Uh...  Okay.  Me go boat now.}{0}{-4}{ss13}{-26}{}
+{624}{Uh...  Me go boat now.}{0}{-4}{ss12, ss-12}{665}{ss 13}
+{625}{Uh...  Me go Haf Oger I Lan?}{}{-4}{lf 6 0, qa1143 2}{637}{}
+{626}{Uh...  Me go I yell of Despare?}{}{-4}{ss5, ss-6, lf8 0}{640}{}
+{627}{Uh...  Me go I yell of Despare?}{}{-4}{ss5, ss-6, lf8 1}{654}{}
+{628}{Uh...  Me go Blak Rut?}{}{-4}{lf3 0}{700}{}
+{629}{Oh!  I understand ye now...  [poor simple bastard]  Ye want to pay yer passage aboard!   ...Well...  Ye do appear to be strong of body.  I guess ye could work for yer passage.  I be leaving for Caladon on this very tide.  I'll let ye work your way there, if ye can leave now.}{Oh!  I understand ye now...  Ye want to pay yer passage aboard!   ...Well...  Ye do appear to have quite a, um... body.  Perhaps you could "work" for yer passage.  If ye know what I be sayin'.  I be leaving for Caladon on this very tide.  I'll let ye pay for yer passage by tending to me an' me men.  [looking very anxious to be on his way]  Can ye can leave now?}{}{}{}{}
+{630}{Uh...  Okay.  Me go boat now.}{1}{-4}{ss13}{-26}{}
+{631}{Uh...  Okay.  Me go boat now.}{0}{-4}{ss13}{-26}{re +10}
+{632}{Uh...  Me go boat now.}{0}{-4}{ss12, ss-12}{665}{ss 13, re +10}
+{633}{Uh...  Me go Haf Oger I Lan?}{}{-4}{lf 6 0, qa1143 2}{637}{}
+{634}{Uh...  Me go I yell of Despare?}{}{-4}{ss5, ss-6, lf8 0}{640}{}
+{635}{Uh...  Me go I yell of Despare?}{}{-4}{ss5, ss-6, lf8 1}{654}{}
+{636}{Uh...  Me go Blak Rut?}{}{-4}{lf 3 0}{700}{}
+{637}{Oh!  I understand ye now...  [poor simple bastard]  Ye want to pay yer passage aboard!   ...Well...  Ye do appear to be strong of body.  I guess ye could work for yer passage.  I be leaving for Half Ogre Island on this very tide.  I'll let ye work your way there, if ye can leave now.}{Oh!  I understand ye now...  [what a stupid woman!]  Ye want to pay yer passage aboard!   ...Well...  Ye do appear to be strong of body and the cook be needin' a galley mate as I recall. Even a nit wit like ye can wash pots and pans I suppose... [hesitating] Alright then, Ye can work for yer passage.  I be leaving for Half Ogre Island on this very tide.   Can ye can leave now?}{}{}{}{}
+{638}{Uh...  Okay.  Me go boat now.}{}{-4}{}{-30}{}
+{639}{E:}{}{1}{}{0}{}
+{640}{The Isle of Despair?  No one's crazy enough to go to that place.  No one ever comes back alive!  Now do ye want to go to Caladon or not?}{The Isle of Despair?  No one's crazy enough to go to that place.  No one ever comes back alive!  Now do you want to go to Caladon or not?}{}{}{}{}
+{641}{Uh...  Okay.  Me go boat now.}{}{-4}{ss13}{-26}{}
+{642}{Me go I yell of Despare!}{}{-4}{ss5, ss-6}{647}{}
+{643}{E:}{}{1}{}{0}{}
+{644}{If ye can't afford the fare, well then, I can't afford to take ye either. Come back when ye got the coins... Good bye to ye.}{If ye can't afford the fare, well then, I can't afford to take ye either. Come back when ye got the coins... Good bye to ye.}{}{}{}{}
+{645}{me pay me pay!}{}{-4}{}{608}{}
+{646}{E:}{}{1}{}{0}{}
+{647}{Ye must truly be daft!  Well...  try looking in Ashbury.  Mebbe you'll find another as daft as ye be.  Argh...  Now stop wastin' me time!}{Ye must truly be daft!  Well...  try looking in Ashbury.  Mebbe you'll find another as daft as ye be.  Argh...  Now stop wastin' me time!}{}{}{}{}
+{648}{Can I get passage to Ashbury?}{}{5}{}{520}{}
+{649}{Uh...  You take me Ashb'ry?}{}{-4}{}{651}{}
+{650}{E:}{}{1}{}{0}{}
+{651}{Bah!  Dern steam rails made sure me ship was of no use to Ashbury!  That damnable contraption'll be the death of me yet!  Mark me words!}{Bah!  Dern steam rails made sure me ship was of no use to Ashbury!  That damnable contraption'll be the death of me yet!  Mark me words!}{}{}{}{}
+{652}{E:}{}{1}{}{0}{}
+{653}{Wer Ashb'ry be?}{}{-4}{}{698}{}
+{654}{Isle of Despair?  If you got any wits about ye, ye'll avoid landing on that rock!}{Isle of Despair?  If you got any wits about ye, ye'll avoid landing on that rock!}{}{}{}{}
+{655}{Oh my...  Can I book passage to a different location then?}{}{5}{}{27}{}
+{656}{I really must reach the isle.}{}{5}{gf2470 0}{661}{}
+{657}{I really must reach the isle.}{}{5}{gf2470 1}{668}{}
+{658}{Me go I yell of Despare!}{}{-4}{gf2470 0}{661}{}
+{659}{Me go I yell of Despare!}{}{-4}{gf2470 1}{668}{}
+{660}{E:}{}{1}{}{0}{}
+{661}{Go talk to Teach.  He captains the other vessel berthed 'ere.  I suspect he'd be fool enough to risk his ship...  and his neck!}{Go talk to Teach.  He captains the other vessel berthed 'ere.  I suspect he'd be fool enough to risk his ship...  and his neck!}{}{}{}{}
+{662}{Thank you, I will.}{}{5}{}{0}{}
+{663}{Uh... okay.  T'anks.}{}{-4}{}{0}{}
+{664}{E:}{}{1}{}{0}{}
+{665}{Ye understand...  don't ye?  [he speaks louder, gesturing with his hands]  I'll take ye to Caladon.  But ye gotta work for me an' me crew.}{Ye understand...  don't ye?  [he speaks louder, gesturing with his hands]  I'll take ye to Caladon.  But ye gotta work for me an' me crew.}{}{}{}{}
+{666}{Uh...  Yeah.  Me work.  Me go on boat...  now.}{}{-4}{}{-26}{}
+{667}{F:}{}{1}{}{0}{}
+{668}{Insistent, aint ye?  Cap'n Teach knew that route.  Not anymore.  Poor bastard went an' got 'imself killed.  What a waste.}{Insistent, aint ye?  Cap'n Teach knew that route.  Not anymore.  Poor bastard went an' got 'imself killed.  What a waste.}{}{}{}{}
+{669}{What happened?}{}{5}{}{672}{}
+{670}{Wha' happen'?}{}{-4}{}{672}{}
+{671}{E:}{}{1}{}{0}{}
+{672}{I don' know exactly.  Hear 'e got into it with a stranger over some coin.  Teach be the rough sort, mind ye.  'Twas bound to 'appen sometime.  Damn shame if ye ask me.}{I don' know exactly.  Hear 'e got into it with a stranger over some coin.  Teach be the rough sort, mind ye.  'Twas bound to 'appen sometime.  Damn shame if ye ask me.}{}{}{}{}
+{673}{Is there anyone else that can take me to the isle?}{}{5}{}{677}{}
+{674}{I need to get to that Isle!}{}{5}{}{677}{}
+{675}{How me get I yell now?}{}{-4}{}{677}{}
+{676}{E:}{}{1}{}{0}{}
+{677}{Well...  Me an' Teach, we used to talk...  over a few drinks at the tavern.  Tol' me the way, he did.  I could mebbe get ye there.  But it would cost ye.  It will definetly cost ye...}{Well...  Me an' Teach, we used to talk...  over a few drinks at the tavern.  Tol' me the way, he did.  I could mebbe get ye there.  But it would cost ye.  It will definetly cost ye...}{}{}{}{}
+{678}{How much?}{}{5}{}{681}{}
+{679}{How many coin?}{}{-4}{}{681}{}
+{680}{F:}{}{1}{}{0}{}
+{681}{[He looks you over carefully]  It be a dangerous thing ye be askin' me to do mister.  Teach was the only cur I know of with the muster to come back from that accursed Isle alive...}{[He looks you over carefully]  It be a dangerous thing ye be askin' me to do lady.  Teach was the only cur I know of with the muster to come back from that accursed Isle alive...}{}{}{}{}
+{682}{How much!}{}{5}{}{685}{}
+{683}{How many coin!}{}{-4}{}{685}{}
+{684}{F:}{}{1}{}{0}{}
+{685}{To risk me ship, me life, an' me crew...  Five thousan' coin.  Not one less.}{To risk me ship, me life, an' me crew...  Five thousan' coin.  Not one less.}{}{}{}{}
+{686}{That is preposterous!}{}{5}{}{691}{}
+{687}{What piracy!  Fine!  Here.  Let us be on our way!}{}{5}{$$5000}{-32}{}
+{688}{Dat too much!}{}{-4}{}{691}{}
+{689}{Oh!  Dat a lot... [thinks for a moment] okay.  Here.  We go.}{}{-4}{$$5000}{-32}{}
+{690}{F:}{}{1}{}{0}{}
+{691}{That be me only offer.  I doubt ye will find a better one.  What say ye?}{That be me only offer.  I doubt ye will find a better one.  What say ye?}{}{}{}{}
+{692}{Fine!  Here.  Let us be on our way!}{}{5}{$$5000}{-32}{}
+{693}{[thinks for a moment]  Okay.  Here.  We go now.}{}{-4}{$$5000}{-32}{}
+{694}{F:}{}{1}{}{0}{}
+{695}{Oh!  I understand ye now...  [poor simple bastard]  Ye want to negotiate yer passage aboard!   ...Well...  Ye do appear to be strong of body.  I guess ye could work for yer passage.  I be leaving for Tarant on this very tide.  I'll let ye work your way there, if ye can leave now.}{Oh!  I understand ye now...  Ye want to negotiate yer passage aboard!   ...Well...  Ye do appear to have quite a, um... body.  Perhaps you could "work" for yer passage.  If ye know what I be sayin'.  I be leaving for Tarant on this very tide.  I'll let ye pay for yer passage by tending to me an' me men.  Can ye can leave now lass?}{}{}{}{}
+{696}{Uh...  Okay.  Me go boat now.}{}{-4}{}{-20}{}
+{697}{E:}{}{1}{}{0}{}
+{698}{It be right thar.  [He points to a spot on your map.]}{It be right thar.  [He points to a spot on your map.]}{}{}{}{mm 8}
+{699}{E:}{}{1}{}{0}{}
+{700}{Augh!  Are ye daft?  This ship never goes there!}{Augh!  Are ye daft?  This ship never goes there!}{}{}{}{}
+{701}{Wer Blak Rut be?}{}{-4}{}{703}{}
+{702}{E:}{}{1}{}{0}{}
+{703}{Thar it be.  [He points to a location on your map.]}{Thar it be.  [He points to a location on your map.]}{}{}{}{mm 3}
+{704}{E:}{}{1}{}{0}{}
+{705}{Argh...  The tide be ripe.  Are ye prepared to sail?}{Argh...  The tide be ripe.  Are ye prepared to sail?}{}{}{}{}
+{706}{Yes, I am ready.}{}{5}{lf6 1}{-26}{}
+{707}{Yes, I am ready.}{}{5}{lf15 1}{-22}{}
+{708}{Uh...  Yeah.  We go now.}{}{-4}{lf6 1}{-26}{}
+{709}{Uh...  Yeah.  We go now.}{}{-4}{lf15 1}{-22}{}
+{710}{F:}{}{1}{}{0}{}
+{711}{Argh...  I be goin' that way.  Same workin' terms as the last voyage...  What say ye?}{Argh...  I be goin' that way.  Same workin' terms as the last voyage...  What say ye?}{}{}{}{}
+{712}{Uh...  Okay.  Me go boat now.}{}{-4}{}{-20}{}
+{713}{F:}{}{1}{}{0}{}
+

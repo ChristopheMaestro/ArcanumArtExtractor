@@ -1,0 +1,144 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Hello, madam.  Might I ask who you are?}{}{5}{me 0, re 41}{11}{}
+{3}{Greetings, Ms. Beston.  Might I speak with you a moment?}{}{5}{me 1, re 41}{25}{}
+{4}{Please, madam!  Our first meeting, and already harsh words?}{}{5}{me 0, re -40}{17}{re +10}
+{5}{Ms. Beston!  Such language from a lady!}{}{5}{me 1, re -40}{21}{re +10}
+{7}{Uh, hi lady!  Who you?}{}{-4}{me 0}{11}{}
+{8}{Hey, Beston lady!  I ask you questions?}{}{-4}{me 1}{25}{}
+{9}{E:}{}{1}{}{0}{}
+{11}{[This woman looks at you, wide-eyed, then seems to regain her composure.]  Yes, of course.  I am Delores Beston, spirit medium and teller of future things!  I live here to serve the good and noble citizens of Tarant...to make things clearer when they are dark, to call for help when it is needed.  How may I help you?}{[This woman looks at you, wide-eyed, then seems to regain her composure.]  Yes, of course.  I am Delores Beston, spirit medium and teller of future things!  I live here to serve the good and noble citizens of Tarant...to make things clearer when they are dark, to call for help when it is needed.  How may I help you?}{}{}{}{lf1 1}
+{12}{Could I ask you a few questions, Delores?}{}{5}{}{25}{}
+{14}{Hi Delores!  I ask you questions...?}{}{-4}{}{25}{}
+{15}{E:}{}{-4}{}{0}{}
+{17}{[The woman seems frightened to see you.]  I'm sorry...I didn't mean to offend you.  Perhaps this is a testament to the unreliability of first impressions...please, forgive me...}{[The woman seems frightened to see you.]  I'm sorry...I didn't mean to offend you.  Perhaps this is a testament to the unreliability of first impressions...please, forgive me...}{}{}{}{}
+{18}{It's already forgotten, madam.  Might I ask who you are?}{}{5}{}{11}{}
+{19}{E:}{}{5}{}{0}{}
+{21}{Oh...I'm so sorry.  You've been here before!  Please...forgive the outburst...}{Oh...I'm so sorry.  You've been here before!  Please...forgive the outburst...}{}{}{}{}
+{22}{Don't fret over it, Delores.  Have a moment to spare?}{}{5}{}{25}{}
+{23}{E:}{}{5}{}{0}{}
+{25}{Of course...}{Of course...}{}{}{}{}
+{26}{What is it you do here?}{}{5}{qu1064 0}{44}{lf2 1}
+{27}{Can you tell me about my future?}{}{5}{lf2 1, qu1064 0}{71}{}
+{28}{I've come to talk about your offer to find the crystal ball...}{}{5}{qu1064 1}{81}{}
+{29}{I may need your help in finding that crystal ball...}{}{5}{lf3 1, lf4 0, qu1064 2, ni 5628}{95}{}
+{30}{I'm still looking for the crystal ball...}{}{5}{qu1064 2, ni 5628}{120}{}
+{31}{I've returned with the crystal ball...}{}{5}{qu1064 2, in 5628, qb1065 1}{125}{}
+{32}{I've returned with the crystal ball...}{}{5}{in 5628, qu1065 2, qa 1064 1, qb1064 2}{175}{}
+{33}{I have something for you, Delores...}{}{5}{qu1064 0, qu1065 2, in 5628}{178}{}
+{34}{What you do here, lady?}{}{-4}{qu1064 0}{44}{lf2 1}
+{35}{You tell me my future, lady?}{}{-4}{lf2 1, qu1064 0}{71}{}
+{36}{Mebbe I help you find crystal ball?}{}{-4}{qu1064 1}{81}{}
+{37}{I need help finding ball!}{}{-4}{lf3 1, lf4 0, qu1064 2, ni 5628}{95}{}
+{38}{Still looking for ball!}{}{-4}{qu1064 2, ni 5628}{120}{}
+{39}{Found ball, lady!}{}{-4}{qu1064 2, in 5628, qb1065 1}{125}{}
+{40}{Found ball, lady!}{}{-4}{in 5628, qa1064 1, qb1064 2, qu1065 2}{175}{}
+{41}{I got sumthin' for you, lady!}{}{-4}{qu1064 0, qu1065 2, in 5628}{178}{}
+{42}{E:}{}{1}{}{0}{}
+{44}{I talk with spirits, look into the far-flung future to see what it holds for those who dare to look!  I am a guide in the nether-realms, a mistress in the medium of the mysterious!}{I talk with spirits, look into the far-flung future to see what it holds for those who dare to look!  I am a guide in the nether-realms, a mistress in the medium of the mysterious!}{}{}{}{}
+{45}{Who are some of your clients?}{}{5}{}{67}{}
+{46}{Could you read MY future?}{}{5}{qu1064 0}{71}{}
+{47}{Sorry to say so, but I think the whole business is rubbish...}{}{5}{}{54}{re -5}
+{48}{A few more questions...}{}{5}{}{25}{}
+{50}{Uh...you see my future, lady?}{}{-4}{qu1064 0}{71}{}
+{51}{More questions!}{}{-4}{}{25}{}
+{52}{E:}{}{1}{}{0}{}
+{54}{[She seems a little put off with you.]  I suppose it's natural to feel a little  skeptical of our profession, but there's no need to be rude...}{[She seems a little put off with you.]  I suppose it's natural to feel a little  skeptical of our profession, but there's no need to be rude...}{}{}{}{}
+{55}{I'm no skeptic...I just think YOU are a fake...}{}{5}{}{59}{re -5}
+{56}{Forgive me.  Please, tell me of some of your clients...}{}{5}{}{67}{re +5}
+{57}{A few more questions...}{}{5}{}{25}{}
+{58}{E:}{}{5}{}{0}{}
+{59}{Well...I've never...how dare you!  I serve some of the most influential ladies in all of Tarant!  You know nothing of me!}{Well...I've never...how dare you!  I serve some of the most influential ladies in all of Tarant!  You know nothing of me!}{}{}{}{}
+{60}{I'd sooner consult a plate of shepherd's pie.  You're a hoax.}{}{5}{}{}{lf3 1, fl 64}
+{61}{I'm sorry.  Who did you say your clients were?}{}{5}{}{67}{}
+{62}{A few more questions...}{}{5}{}{25}{}
+{63}{E:}{}{5}{}{0}{}
+{64}{I'll not say another word to you!  I don't need this sort of abuse!}{I'll not say another word to you!  I don't need this sort of abuse!}{}{}{}{}
+{65}{You've worn out your welcome here, sir.  Find company elsewhere, please.}{You've worn out your welcome here, madam.  Find company elsewhere, please.}{}{}{}{}
+{67}{Oh, I serve most of the affluent families here in Tarant...the Willoughsbys, the Garringsburgs...the ladies all trust me, and I do what I can to lead them away from troublesome waters...}{Oh, I serve most of the affluent families here in Tarant...the Willoughsbys, the Garringsburgs...the ladies all trust me, and I do what I can to lead them away from troublesome waters...}{}{}{}{}
+{68}{Could you read MY future?}{}{5}{qu1064 0}{71}{}
+{69}{A few more questions...}{}{5}{}{25}{}
+{70}{E:}{}{5}{}{0}{}
+{71}{I'm very sorry, but currently I'm having a problem with my crystal ball.  I dropped it the other day, and my visions have been foggy and unclear ever since.  I've looked into finding another one, but, as you might guess, a crystal ball is a rare commodity...}{I'm very sorry, but currently I'm having a problem with my crystal ball.  I dropped it the other day, and my visions have been foggy and unclear ever since.  I've looked into finding another one, but, as you might guess, a crystal ball is a rare commodity...}{}{}{}{}
+{72}{I'd assume so.  Perhaps I could assist you in finding another?}{}{5}{}{81}{}
+{73}{A few more questions...}{}{5}{}{25}{}
+{75}{Mebbe I find you one!}{}{-4}{}{81}{}
+{76}{More questions!}{}{-4}{}{25}{}
+{77}{E:}{}{1}{}{0}{}
+{81}{[She smiles, mysteriously.]  Yes, I thought you might say that.  I have a feeling for such things, you know.  From the moment you walked in here, I knew you were something special...}{[She smiles, mysteriously.]  Yes, I thought you might say that.  I have a feeling for such things, you know.  From the moment you walked in here, I knew you were something special...}{}{}{}{}
+{82}{Let's not get carried away, madam...}{}{5}{}{85}{}
+{83}{Uh...whatever you say...}{}{-4}{}{85}{}
+{85}{I understand...not everyone is a believer.  In any case...I would very much appreciate your help.   If you were to find me a new crystal ball, I'll pay you 200 gold pieces.   What do you say?}{I understand...not everyone is a believer.  In any case...I would very much appreciate your help.   If you were to find me a new crystal ball, I'll pay you 200 gold pieces.   What do you say?}{}{}{}{qu1064 1, gf2716 1}
+{86}{Interesting.  I happen to have a crystal ball right here...}{}{5}{in 5628}{125}{}
+{87}{Of course...I'd be glad to assist you.}{}{5}{}{95}{qu1064 2, gf2716 1}
+{88}{I'll think about it.  A few more questions...?}{}{5}{}{25}{}
+{90}{I have crystal ball!}{}{-4}{in 5628}{125}{}
+{91}{Yeah!  I help you lady!}{}{-4}{}{95}{qu1064 2, gf2716 1}
+{92}{I think about it.  More questions!}{}{-4}{}{25}{}
+{93}{E:}{}{1}{}{0}{}
+{95}{Splendid!  Now...I may be able to assist you in finding one.  As I told you, my crystal ball is not working correctly, but sometimes a physical piece of the person I am viewing helps to clear the vision.  Might I have a lock of your hair?}{Splendid!  Now...I may be able to assist you in finding one.  As I told you, my crystal ball is not working correctly, but sometimes a physical piece of the person I am viewing helps to clear the vision.  Might I have a lock of your hair?}{}{}{}{}
+{96}{Of course.}{}{5}{}{105}{}
+{97}{I don't think that's necessary.  I'll rely on my wits.  Good day...}{}{5}{}{101}{}
+{98}{Sure!}{}{-4}{}{105}{}
+{99}{I need no magick!  I find ball by myself!  Buh-bye!}{}{-4}{}{101}{}
+{101}{[She laughs.]  Still an unbeliever?  Oh well...I wish you luck on your search.   Return here if you find you need some guidance...}{[She laughs.]  Still an unbeliever?  Oh well...I wish you luck on your search.   Return here if you find you need some guidance...}{}{}{}{}
+{102}{E:}{}{1}{}{0}{}
+{105}{Wonderful!  [She takes out a scissors and cuts a small lock of your hair.]  Now...we look into the ball, see what is to be seen.  [She stares intently, waving the lock in front of her face.]  Cloudy, but something is coming clear...yes!  I see where you might be able to procure a ball...!}{Wonderful!  [She takes out a scissors and cuts a small lock of your hair.]  Now...we look into the ball, see what is to be seen.  [She stares intently, waving the lock in front of her face.]  Cloudy, but something is coming clear...yes!  I see where you might be able to procure a ball...!}{}{}{}{lf4 1}
+{106}{Where?}{}{5}{}{109}{}
+{107}{Where ball?}{}{-4}{}{109}{}
+{109}{In the warehouse district...I see the bordello...there!  A small shop just beside it...I see a sign...Madame Toussaude's!  Within that shop is a crystal ball!  Find Madame Toussaude and you will find a crystal ball!}{In the warehouse district...I see the bordello...there!  A small shop just beside it...I see a sign...Madame Toussaude's!  Within that shop is a crystal ball!  Find Madame Toussaude and you will find a crystal ball!}{}{}{}{}
+{110}{Madame Toussaude?  Do you know anything of her?}{}{5}{}{114}{}
+{111}{Who Ma-d-da-a-me  To-o-sow-w-de?}{}{-4}{}{114}{}
+{114}{I can't say I've ever heard of her myself...there are so many self-proclaimed soothsayers in Tarant.  More than likely she's some fly-by-night gypsy, out to make a quick buck.  BUT!  Be careful...you never know what to expect from these nomads...}{I can't say I've ever heard of her myself...there are so many self-proclaimed soothsayers in Tarant.  More than likely she's some fly-by-night gypsy, out to make a quick buck.  BUT!  Be careful...you never know what to expect from these nomads...}{}{}{}{}
+{115}{My thanks.  A few more questions...}{}{5}{}{25}{}
+{116}{I will, dear lady.  Thank you for the advice.  I'll return later...}{}{5}{}{0}{}
+{117}{Okay!  More questions!}{}{-4}{}{25}{}
+{118}{I will lady!  I come back later!}{}{-4}{}{0}{}
+{120}{Well, I hope you find it soon...business has been bad since the old one broke.  Is there anything else I can help you with?}{Well, I hope you find it soon...business has been bad since the old one broke.  Is there anything else I can help you with?}{}{}{}{}
+{121}{Yes...A few more questions...}{}{5}{}{25}{}
+{123}{More questions!}{}{-4}{}{25}{}
+{124}{E:}{}{1}{}{0}{}
+{125}{[She looks surprised.]  That's...well, that's just grand!  Here's the payment. [She hands you 200 gold pieces.]  Where did you get it?}{[She looks surprised.]  That's...well, that's just grand!  Here's the payment. [She hands you 200 gold pieces.]  Where did you get it?}{}{}{}{qu1064 4, $$200}
+{126}{Madame Toussaude, a medium in the warehouse district...}{}{5}{}{129}{}
+{127}{Uh...some weird lady...To-os-s-ow-wde...?}{}{-4}{}{129}{}
+{129}{Hahahahahaha!  The old crone!  She knew absolutely nothing at all!  I knew she was a fake from the very beginning...!}{Hahahahahaha!  The old crone!  She knew absolutely nothing at all!  I knew she was a fake from the very beginning...!}{}{}{}{}
+{130}{I'm sorry...what do you mean?}{}{5}{}{133}{}
+{131}{Uh...what?}{}{-4}{}{133}{}
+{133}{Oh, if you must know...I'd heard rumors about her around town...people saying she could actually see the future!  Rubbish!  No one can REALLY see anything...it's all an act!   I lie to those old ladies all day long...tell them exactly what they want to hear!   So, I went to this Madame Toussaude, and I told her I wanted her to see MY future...}{Oh, if you must know...I'd heard rumors about her around town...people saying she could actually see the future!  Rubbish!  No one can REALLY see anything...it's all an act!   I lie to those old ladies all day long...tell them exactly what they want to hear!   So, I went to this Madame Toussaude, and I told her I wanted her to see MY future...}{}{}{}{}
+{134}{And what did she say?}{}{5}{}{137}{}
+{135}{What she tell you?}{}{-4}{}{137}{}
+{137}{She told me that a stranger would walk into my store one day, and that he would be my death.  Can you believe it?  My death!  So, when I saw you come in here, you can imagine my surprise...and my fears...}{She told me that a stranger would walk into my store one day, and that she would be my death.  Can you believe it?  My death!  So, when I saw you come in here, you can imagine my surprise...and my fears...}{}{}{}{}
+{138}{Of course...}{}{5}{}{141}{}
+{139}{Uh-huh...}{}{-4}{}{141}{}
+{141}{But don't you see the irony?  You've gone and killed her!  SHE was the one who needed to fear you...not me!  I broke my own crystal ball, just in case someone did show up...and in the end, you kill HER, and I get her crystal ball thrown in just for good measure!  HA!  So much for old Madame Toussaude...}{But don't you see the irony?  You've gone and killed her!  SHE was the one who needed to fear you...not me!  I broke my own crystal ball, just in case someone did show up...and in the end, you kill HER, and I get her crystal ball thrown in just for good measure!  HA!  So much for old Madame Toussaude...}{}{}{}{}
+{142}{Yes...well I'm glad it all worked out for you.  Good day.}{}{5}{gf2120 1}{0}{}
+{143}{Uh...okay!  Buh-bye!}{}{-4}{gf2120 1}{0}{}
+{144}{Yes...but she cursed me on her death!  And it's YOUR fault!}{}{5}{gf2120 1}{159}{}
+{145}{Uh...she gave me curse!  'Cause of you!}{}{-4}{gf2120 1}{159}{}
+{146}{I never said she was dead, Delores...}{}{5}{gf2120 0}{149}{}
+{147}{Uh...who said she dead, lady?}{}{-4}{gf2120 0}{149}{}
+{149}{Wh-h-at?  How did you get the ball...?}{Wh-h-at?  How did you get the ball...?}{}{}{}{}
+{150}{She gave it to me.  To give to you...}{}{5}{}{153}{}
+{151}{She say she want YOU to have it...}{}{-4}{}{153}{}
+{153}{I don't...no...please...get it away from me...!}{I don't...no...please...get it away from me...!}{}{}{}{}
+{154}{It's a gift, Delores.  Just for you...[You hand it to her.]}{}{5}{}{-3}{in 5628}
+{155}{No...she REALLY want you to have it...[You hand it to her.]}{}{-4}{}{-3}{in 5628}
+{156}{[Delores shudders at the touch of the ball.  Then her  limbs stiffen, her hands white-knuckled and grasping the sphere.  Her eyes go wide, then a dull blankness washes over them--either from fear or otherwise, she falls dead.]}{[Delores shudders at the touch of the ball.  Then her  limbs stiffen, her hands white-knuckled and grasping the sphere.  Her eyes go wide, then a dull blankness washes over them--either from fear or otherwise, she falls dead.]}{}{}{}{}
+{157}{Oh god!  No....NOOOOOOOO!!!!!!!!!}{Oh god!  No....NOOOOOOOO!!!!!!!!!}{}{}{}{}
+{159}{[She backs away.]  Cursed you?  I'm so very sorry...really, if there was anything I could do...}{[She backs away.]  Cursed you?  I'm so very sorry...really, if there was anything I could do...}{}{}{}{}
+{160}{I'm sure there's not.  And that's the problem...}{}{5}{}{165}{}
+{161}{I just thought you should know.  Good day to you...}{}{5}{}{0}{}
+{162}{You GONNA be sorry...}{}{-4}{}{165}{}
+{163}{Uh, that's okay.  Buh-bye...}{}{-4}{}{0}{}
+{165}{Get away from me!  I've nothing to do with all of that...I was just watching my own back!  It's not my fault!}{Get away from me!  I've nothing to do with all of that...I was just watching my own back!  It's not my fault!}{}{}{}{}
+{166}{Madame Toussaude was right all along.  I'm going to kill you...}{}{5}{}{}{co, fl 171}
+{167}{You might be right.  Good day to you.}{}{5}{}{0}{}
+{168}{I kill you now, lady.}{}{-4}{}{}{co, fl 171}
+{169}{To-o-sowd-de right...I gonna kill you...}{}{-4}{}{0}{}
+{171}{Help!  Help!  I'm being attacked!}{Help!  Help!  I'm being attacked!}{}{}{}{}
+{175}{[She looks surprised.]  That's...well, that's just grand.  Where did you get it?}{[She looks surprised.]  That's...well, that's just grand.  Where did you get it?}{}{}{}{}
+{176}{Madame Toussaude, a medium in the warehouse district...}{}{5}{}{129}{}
+{177}{Uh...some weird lady...To-os-s-ow-wde...?}{}{-4}{}{129}{}
+{178}{[She looks bewildered.]  A crystal ball?  Well, that's just grand!  I'm actually in need of one!  Where did you get it?}{[She looks bewildered.]  A crystal ball?  Well, that's just grand!  I'm actually in need of one!  Where did you get it?}{}{}{}{}
+{179}{Madame Toussaude, a medium in the warehouse district...}{}{5}{}{129}{}
+{180}{Uh...some weird lady...To-os-s-ow-wde...?}{}{-4}{}{129}{}
+

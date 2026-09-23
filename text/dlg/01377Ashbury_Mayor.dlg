@@ -1,0 +1,79 @@
+{1}{Yes...if you could talk to the crowd, you know, draw them out while I take notes. Being an outsider, you could suggest things that I would never dare. If it works out and you can get them to agree to something, well then I'm the Mayor...and you were working for me. If doesn't work out, well I can always say that you were obviously misinformed.}{Yes...if you could talk to the crowd, you know, draw them out while I take notes. Being an outsider, you could suggest things that I would never dare. If it works out and you can get them to agree to something, well then I'm the Mayor...and you were working for me. If doesn't work out, well I can always say that you were obviously misinformed.}{}{}{}{qu 1076 1 }
+{2}{This sounds like quite the intriguing proposition. I will do it!}{}{1}{}{20}{qu 1076 2}
+{9}{Public speaking is not my game, old boy. I will have to decline.}{}{1}{}{96}{}
+{10}{You know, talking with you just now has given me an idea.}{You know, talking with you just now has given me an idea.}{}{}{}{}
+{11}{It has?}{}{1}{}{1}{}
+{14}{I appreciate the offer, I really do, but this is something I must handle as mayor.}{I appreciate the offer, I really do, but this is something I must handle as mayor.}{}{}{}{}
+{15}{Please, I'd like to help out if you would give me the chance.}{}{5}{}{35}{}
+{19}{Good luck to you, then.}{}{1}{}{-14}{}
+{20}{Excellent!  Follow me into the town hall. Once we get there, just go right on up to the podium and begin taking questions from the crowd.  After the meeting is over, we can speak again.}{Excellent!  Follow me into the town hall. Once we get there, just go right on up to the podium and begin taking questions from the crowd.  After the meeting is over, we can speak again.}{}{}{}{}
+{21}{I am ready. Let us proceed to the meeting.}{}{1}{}{-47}{}
+{25}{Well, you have made a fine mess of it, they'll never build the monument now. And I am a laughing stock in my own town! I'll never live down this fiasco! Good day to you, sir!}{Well, you have made a fine mess of it, they'll never build the monument now. And I am a laughing stock in my own town! I'll never live down this fiasco! Good day to you, madam!}{}{}{}{re -10, lf0 1, qu 1076 6, rq 1071}
+{26}{E:}{}{1}{}{0}{}
+{29}{Sir,  I must thank you for your efforts! I doubt I could have done much better. Your efforts have revealed the positions of my opponents perfectly! There is still much to be done, though, so I must be on my way. Good day to you, sir.}{Madam,  I must thank you for your efforts! I doubt I could have done much better. Your efforts have revealed the positions of my opponents perfectly! There is still much to be done, though, so I must be on my way. Good day to you, madam.}{}{}{}{ re +20 , lf0 1, qu 1076 4, rq 1071, rp1056}
+{30}{E:}{}{1}{}{0}{}
+{32}{Congratulations, old boy, you have far exceeded my expectations! I have never seen anyone with the gift of oratory that you have. Thanks to your commendable performance, the good folk of Ashbury heartily support building a monument.  There is still much work to be done, so I suppose I will be on my way. Good day, sir.}{Congratulations, my dear woman, you have far exceeded my expectations! I have never seen anyone with the gift of oratory that you have. Thanks to your commendable performance, the good folk of Ashbury heartily support building a monument.  There is still much work to be done, so I suppose I will be on my way. Good day, madam.}{}{}{}{re +40 , lf0 1 , xp 1, qu 1076 4, rq 1071, rp1056}
+{33}{It was but a trifle sir. I am pleased to have been of service.}{}{1}{}{0}{}
+{34}{}{}{}{}{}{}
+{35}{I am sorry sir, but my reputation is on the line here. I must be going now.}{I am sorry madam, but my reputation is on the line here. I must be going now.}{}{}{}{}
+{36}{E:}{}{1}{}{-14}{}
+{40}{You must be new in town, I don't believe I have had the pleasure of your introduction.}{You must be new in town, I don't believe I have had the pleasure of your introduction.}{}{}{}{gf2191 1}
+{41}{Hello, I am @pcname@ . Glad to meet you.}{}{5}{}{48}{}
+{42}{I @pcname@!  Me say hi!}{}{-4}{}{52}{}
+{43}{You are correct, we have not been introduced...}{}{5}{}{56}{re -5}
+{47}{E:}{}{1}{}{-14}{gv1015  12}
+{48}{[He seems distracted for a moment before responding.] It is a pleasure to meet you,  @pcname@! I am Chester Miller, the mayor of Ashbury.}{[He seems distracted for a moment before responding.] It is a pleasure to meet you,  @pcname@! I am Chester Miller, the mayor of Ashbury.}{}{}{}{}
+{49}{What are the goings on around town?}{}{5}{}{76}{}
+{50}{You seem distressed, sir. May I ask what may be the matter?}{}{5}{ps 4}{63}{}
+{51}{E:}{}{1}{}{0}{}
+{52}{I can't understand a thing you are saying...so sorry.  [He begins to walk away, and then stops and turns to you.] Oh, and another thing, there is absolutely no loitering tolerated around here, especially for your kind. Good day.}{I can't understand a thing you are saying...so sorry.  [He begins to walk away, and then stops and turns to you.] Oh, and another thing, there is absolutely no loitering tolerated around here, especially for your kind. Good day.}{}{}{}{}
+{53}{E:}{}{1}{}{-14}{gv1015  12}
+{56}{Errr...uh... not the talkative type, I see.  Can I direct you to anything...or are you just passing through?}{Errr.. uh..  not the talkative type, I see.  Can I direct you to anything... or are you just passing through?}{}{}{}{}
+{57}{Who I am and where I am going is none of your business.}{}{1}{}{96}{re -10}
+{58}{My name is @pcname@, and I talk if I have something to say.}{}{1}{}{76}{re 5}
+{59}{E:}{}{1}{}{-14}{gv1015  12}
+{63}{A planning meeting is being held to discuss the building of a monument to Lord Bettington, the greatest man ever to come out of Ashbury. We are very particular folk around here. If we do something, we try to do it right.}{A planning meeting is being held to discuss the building of a monument to Lord Bettington, the greatest man ever to come out of Ashbury. We are very particular folk around here. If we do something, we try to do it right.}{}{}{}{}
+{64}{Please, tell me more.}{}{1}{}{67}{}
+{65}{I really do not have time for this. Good day.}{}{1}{}{-14}{gv1015  12}
+{66}{}{}{}{}{}{}
+{67}{The problem is that everyone is arguing with each other about what to do. As Mayor, I have to find a solution that pleases everybody. [He shakes his head.] It is impossible!}{The problem is that everyone is arguing with each other about what to do. As Mayor, I have to find a solution that pleases everybody. [He shakes his head.] It is impossible!}{}{}{}{}
+{68}{Please continue, I am always fascinated with local politics.}{}{1}{}{71}{}
+{69}{I wish you luck, then. Good day.}{}{1}{}{-14}{gv1015  12}
+{71}{Some people want the monument in the center of town, others want it near the entrance, and nobody knows how we will pay for it! Furthermore, there aren't any local craftsmen up to the task of building the darn thing if we could pay!}{Some people want the monument in the center of town, others want it near the entrance, and nobody knows how we will pay for it! Furthermore, there aren't any local craftsmen up to the task of building the darn thing if we could pay!}{}{}{}{}
+{72}{Is there anything I might do to help?}{}{1}{ps4}{10}{}
+{73}{Is there anything I might do to help?}{}{1}{ps-3}{14}{}
+{75}{Good luck to you, sir.}{}{1}{}{-14}{gv1015  12}
+{76}{I would like to chat, really I would sir, but I am on my way to a civic function. I am the Mayor, after all.}{I would like to chat, really I would madam, but I am on my way to a civic function. I am the Mayor, after all.}{}{}{}{}
+{77}{What is this meeting you are going to?}{}{1}{}{63}{}
+{78}{Thank you for your time.}{}{1}{}{-14}{gv1015  12}
+{96}{I really must excuse myself, sir. I am running behind on my schedule.}{I must excuse myself, madam. I am running behind my schedule.}{}{}{}{}
+{97}{E:}{}{1}{}{-14}{gv1015  12}
+{100}{G:}{G:}{}{}{}{}
+{101}{R:($0, 1070-1075)}{}{5}{re41}{100}{}
+{102}{I do not believe I heard you correctly, sir.}{}{5}{re-40, ch10}{130}{re50}
+{103}{Please, I do not wish to offend, sir.}{}{5}{re-40, ch-9}{140}{re41}
+{104}{Hi! I likes meeting peeples!}{}{-4}{}{150}{re50}
+{109}{E:}{}{1}{}{0}{}
+{110}{I can't believe you have the nerve to speak with me again. Good riddance!}{I can't believe you have the nerve to speak with me again. Good riddance!}{}{}{}{re -5}
+{119}{Please go to the podium... the crowd is restless!}{Please go to the podium... the crowd is restless!}{}{}{}{}
+{120}{Thank you... Thank you... Please... Please... we are all going to have to quiet down, so we can hear each other... I know that the Beddington Monument is foremost in the minds of everyone here, so just as soon as you settle down we can start the meeting...}{Thank you... Thank you... Please... Please... we are all going to have to quiet down, so we can hear each other... I know that the Beddington Monument is foremost in the minds of everyone here, so just as soon as you settle down we can start the meeting...}{}{}{}{}
+{121}{As usual we have a very full agenda and I am sorry for running a little bit late this evening, so I would like to suggest getting down to business as quickly as possible. Let us begin by opening the floor up to anyone who has questions. Who would like to go first? Ah yes, Mrs. Fiddlemarsh? Please speak up. }{As usual we have a very full agenda and I am sorry for running a little bit late this evening, so I would like to suggest getting down to business as quickly as possible. Let us begin by opening the floor up to anyone who has questions. Who would like to go first? Ah yes, Mrs. Fiddlemarsh? Please speak up. }{}{}{}{}
+{122}{It is right and fitting, that Ashbury should honor its heroes.}{It is right and fitting, that Ashbury should honor its heroes.}{}{}{}{}
+{123}{Conduct a design contest and vote for the best design.}{Conduct a design contest and vote for the best design.}{}{}{}{}
+{124}{Certainly, in Ashbury, a wealthy benefactor could be found.}{Certainly, in Ashbury, a wealthy benefactor could be found.}{}{}{}{}
+{125}{If it were up to me, the finest craftsmen from Tarant, of course!}{If it were up to me, the finest craftsmen from Tarant, of course!}{}{}{}{}
+{126}{A durable bronze statue, weather treated, on a granite base.}{A durable bronze statue, weather treated, on a granite base.}{}{}{}{}
+{127}{"Take an inch and you have a mile."}{"Take an inch and you have a mile."}{}{}{}{}
+{128}{Well that concludes the meeting. Thank you all for coming.}{Well that concludes the meeting. Thank you all for coming.}{}{}{}{lf 0 1}
+{130}{Oh, please excuse me, good sir. I did not wish to offend you, I must have mistaken you for one of the...lower classes. What may I do for you?}{Oh, please excuse me, madam. I did not wish to offend you, I must have mistaken you for one of the...lower classes. What may I do for you?}{}{}{}{}
+{131}{R:($0, 1070-1075)}{}{5}{}{100}{}
+{139}{E:}{}{1}{}{0}{}
+{140}{Well, I suppose I can spare a moment, even for someone like you. What may I do for you?}{Well, I suppose I can spare a moment, even for someone like you. What may I do for you?}{}{}{}{}
+{141}{R:($0, 1070-1075)}{}{5}{}{100}{}
+{149}{E:}{}{1}{}{0}{}
+{150}{Oh, dear, an imbecile. What can I help you with, you poor, unfortunate boy?}{Oh, dear, an imbecile. What can I help you with, you poor, unfortunate girl?}{}{}{}{}
+{151}{R:($0, 1070-1075)}{}{5}{}{100}{}
+{159}{E:}{}{1}{}{0}{}
+{160}{}{}{}{}{}{}
+{161}{}{}{}{}{}{}
+

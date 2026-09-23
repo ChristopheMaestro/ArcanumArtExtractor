@@ -1,0 +1,101 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Hello, sir.  Might I ask your name?}{}{5}{me 0, re 41}{27}{}
+{3}{Greetings, Mr. Winde.  Have you a moment?}{}{5}{me 1, re 41}{74}{}
+{4}{Sir!  Why are you insulting me!}{}{5}{me 0, re -40}{11}{}
+{5}{Mr. Winde!  Why the harsh words?}{}{5}{me 1, re -40}{11}{}
+{6}{E:}{}{5}{}{0}{}
+{7}{Hi!  Who you?}{}{-4}{me 0}{27}{}
+{8}{Hey Wind!  You talk with me...?}{}{-4}{me 1}{74}{}
+{9}{E:}{}{-4}{}{0}{}
+{11}{I'm very sorry sir, but I can't ignore your obvious inferiorities.  I'm afraid I'd just rather not associate with you...}{I'm very sorry madam, but I can't ignore your obvious inferiorities.  I'm afraid I'd just rather not associate with you...}{}{}{}{}
+{12}{Perhaps we might meet half way?  I'm willing to try...}{}{5}{me 0}{23}{re +10}
+{13}{Mr. Winde!  I'd of thought we'd already resolved our differences...}{}{5}{me 1}{23}{re +10}
+{14}{You're asking for a beating, elf...}{}{5}{}{16}{re -5}
+{15}{E:}{}{5}{}{0}{}
+{16}{Is that so, stranger?  How very unfortunate that you feel that way.  [He squares himself to you.]  I'm no war-monger, but I'll shed your blood if need be...}{Is that so, stranger?  How very unfortunate that you feel that way.  [He squares himself to you.]  I'm no war-monger, but I'll shed your blood if need be...}{}{}{}{}
+{17}{It need not come to that.  Please, forgive my outburst...}{}{5}{}{23}{re +10}
+{18}{I'm going to enjoy teaching you this lesson...}{}{5}{ra -3}{}{co, fl 21}
+{19}{I'm ashamed that we even share the same blood, coward...}{}{5}{ra 3}{}{co, fl 21}
+{20}{E:}{}{5}{}{0}{}
+{21}{Very well.  You've brought this upon yourself...}{Very well.  You've brought this upon yourself...}{}{}{}{}
+{23}{[The elf takes a step backwards, bowing slightly.]  Forgive me as well.  Perhaps we can speak like civil beings...[He smiles.]}{[The elf takes a step backwards, bowing slightly.]  Forgive me as well.  Perhaps we can speak like civil beings...[He smiles.]}{}{}{}{}
+{24}{I'd very much like that.  And who are you, sir?}{}{5}{me 0}{27}{re +5}
+{25}{That sounds splendid, Winde.  Might I impose for a moment?}{}{5}{me 1}{74}{}
+{26}{E:}{}{5}{}{0}{}
+{27}{My name is Mr. Winde, the master of the hunt.  It's a pleasure to meet you.  [He looks at the sky--he seems somewhat distracted.]}{My name is Mr. Winde, the master of the hunt.  It's a pleasure to meet you.  [He looks at the sky--he seems somewhat distracted.]}{}{}{}{}
+{28}{The pleasure is mine.  You said you were master of the hunt?}{}{5}{}{33}{}
+{29}{E:}{}{5}{}{0}{}
+{30}{Hi Wind!  What that mean...'m-mas-ster of hunt"?}{}{-4}{}{33}{}
+{31}{E:}{}{-4}{}{0}{}
+{33}{We have a group of hunters who supply Qintarra with food and other supplies.  I am their commander...}{We have a group of hunters who supply Qintarra with food and other supplies.  I am their commander...}{}{}{}{}
+{34}{I see.  Are there a lot of hunters here in Qintarra?}{}{5}{}{40}{}
+{35}{E:}{}{5}{}{0}{}
+{36}{Uh...okay.  Lots of hunters?}{}{-4}{}{40}{}
+{37}{E:}{}{-4}{}{0}{}
+{40}{No, we are a small community here...we never have need for more than three or four hunters at any given time.  [Again, he looks up.]  Say, do you happen to know the hour.?}{No, we are a small community here...we never have need for more than three or four hunters at any given time.  [Again, he looks up.]  Say, do you happen to know the hour.?}{}{}{}{}
+{41}{Sure...[Tell him.]}{}{5}{}{50}{}
+{42}{Uh...time?  What you talk 'bout?}{}{-4}{}{50}{}
+{50}{[He only half-hears you.]  I'm very worried...there's a hunter who left here yesterday, and hasn't returned.  Normally, I'd not be concerned, but he was hunting in the forest near the Dark Fens.  There are strange things in those swamps..}{[He only half-hears you.]  I'm very worried...there's a hunter who left here yesterday, and hasn't returned.  Normally, I'd not be concerned, but he was hunting in the forest near the Dark Fens.  There are strange things in those swamps..}{}{}{}{}
+{51}{That's worrisome.  Could I be of help?}{}{5}{}{64}{re +5}
+{52}{K:}{}{5}{}{74}{}
+{53}{Mebbe I help, Wind?}{}{-4}{}{114}{re +5}
+{54}{K:}{}{-4}{}{74}{}
+{64}{Would you?  I need to go on another hunt, but I could tell you where he was hunting and you could travel there.  I'm sure it's nothing, but I get worried about my hunters.  If you could see to it that he's safely on his way home, I could offer you some elven chain mail...}{Would you?  I need to go on another hunt, but I could tell you where he was hunting and you could travel there.  I'm sure it's nothing, but I get worried about my hunters.  If you could see to it that he's safely on his way home, I could offer you some elven chain mail...}{}{}{}{qu1079 1}
+{65}{Done...}{}{5}{}{70}{qu1079 2, gf2158 1}
+{66}{Perhaps.  Good day to you...}{}{5}{}{0}{}
+{67}{Sure!  I help you, Wind!}{}{-4}{}{70}{qu1079 2, gf2158 1}
+{68}{Uh...we talk about later...}{}{-4}{}{0}{}
+{70}{Thank you so very much.  I can mark your map with the general area where he was hunting.  [He does so.]  Good luck to you! }{Thank you so very much.  I can mark your map with the general area where he was hunting.  [He does so.]  Good luck to you! }{}{}{}{mm 34}
+{71}{E:}{}{1}{}{0}{}
+{74}{Of course.  How may I help you...?}{Of course.  How may I help you...?}{}{}{}{}
+{76}{Can you train me to be an expert dodger, Mr. Winde?}{}{5}{tr 1 -1}{87}{et 1 117}
+{77}{What do you do around here, Mr. Winde...?}{}{5}{qu1079 0, lf2 0}{33}{}
+{78}{I might be able to help you find the lost elven hunter...}{}{5}{qu1079 1, lf2 0}{64}{}
+{79}{I've yet to find the lost elven hunter...}{}{5}{qu1079 2, gf2741 0, lf2 0}{92}{}
+{80}{I found the lost elven hunter...}{}{5}{qu1079 2, gf2741 1, gf2156 0, lf2 0}{97}{}
+{81}{I found the lost elven hunter...}{}{5}{qu1079 2, gf2156 1, lf2 0}{100}{}
+{82}{I found the lost elven hunter...}{}{5}{qu1079 6, lf2 0}{140}{}
+{83}{Uh...you train me to be a ex-x-p-pert dodge guy, Wind?}{}{-4}{tr 1 -1}{87}{et 1 117}
+{84}{What you do here in tree-city, Wind?}{}{-4}{lf2 0}{33}{}
+{85}{E:}{}{1}{}{0}{}
+{87}{Was there anything else?}{Was there anything else?}{}{}{}{}
+{88}{K:}{}{1}{}{74}{}
+{89}{E:}{}{1}{}{0}{}
+{92}{I see.  I hope you can find some time to investigate this matter...}{I see.  I hope you can find some time to investigate this matter...}{}{}{}{}
+{93}{E:}{}{5}{}{0}{}
+{97}{Yes...he returned here, and told me of what happened with the Bedokaan.  The elves of Qintarra are indebted to you friend.  Please...take the armor I promised you in payment for your brave actions.  Good bye, and good luck to you...}{Yes...he returned here, and told me of what happened with the Bedokaan.  The elves of Qintarra are indebted to you friend.  Please...take the armor I promised you in payment for your brave actions.  Good bye, and good luck to you...}{}{}{}{qu1079 4, in -2813, lf2 1}
+{98}{E:}{}{5}{}{0}{}
+{100}{That's strange...he never returned here.  Do you know what has happened to him?}{That's strange...he never returned here.  Do you know what has happened to him?}{}{}{}{}
+{101}{No...I, uh, thought he was coming back here...}{}{5}{}{104}{al -10}
+{102}{Unfortunately, the poor fellow died...}{}{5}{}{107}{al +20}
+{104}{I'm afraid that something terrible has happened to him.  [He looks at you, warily.]  I'm afraid there's going to be no payment unless he returns.  I certainly hope he does...}{I'm afraid that something terrible has happened to him.  [He looks at you, warily.]  I'm afraid there's going to be no payment unless he returns.  I certainly hope he does...}{}{}{}{}
+{105}{E:}{}{5}{}{0}{}
+{107}{I see.  [Mr. Winde looks very sad.]  I thank you for your honesty.  Unfortunately, I won't be giving you the armor, but I appreciate your candor in the matter.  Good day to you, sir...}{I see.  [Mr. Winde looks very sad.]  I thank you for your honesty.  Unfortunately, I won't be giving you the armor, but I appreciate your candor in the matter.  Good day to you, madam...}{}{}{}{lf2 1}
+{108}{E:}{}{5}{}{0}{}
+{114}{I'm sorry, my friend.  I appreciate the offer, but I don't think you've the mental faculties to take on such a responsibility.  I'm sorry.  Good day to you...}{I'm sorry, my friend.  I appreciate the offer, but I don't think you've the mental faculties to take on such a responsibility.  I'm sorry.  Good day to you...}{}{}{}{}
+{115}{E:}{}{-4}{}{0}{}
+{117}{Why yes!  And it looks to me as if you've already have some training.  An elf gets to know these things just by the way someone moves, you know.  I'm afraid the cost is 500 gold pieces...tradition demands it...}{Why yes!  And it looks to me as if you've already have some training.  An elf gets to know these things just by the way someone moves, you know.  I'm afraid the cost is 500 gold pieces...tradition demands it...}{}{}{}{}
+{118}{Of course.  Here's the money... [Give it to him.]}{}{5}{$500}{126}{ $$-500}
+{119}{I see.  Perhaps I'll return later.  But a few more questions...}{}{5}{$$500}{74}{}
+{120}{I don't have the money right now...}{}{5}{$$-499}{135}{}
+{121}{Yeah!  Here money...! [Give it to him.]}{}{-4}{$500}{126}{$$-500}
+{122}{Uh...mebbe later.  I got more questions!}{}{-4}{$$500}{74}{}
+{123}{I not have money now...}{}{-4}{$$-499}{135}{}
+{124}{E:}{}{1}{}{0}{}
+{126}{Ah...you see, here are the forms you need to practice, like so...[He shows you.]  There!  You seem to have it down!  Nicely done...}{Ah...you see, here are the forms you need to practice, like so...[He shows you.]  There!  You seem to have it down!  Nicely done...}{}{}{}{tr 1 2, rq2178}
+{127}{Tell me...who is the Dodge Master?}{}{5}{}{130}{}
+{128}{Uh...who master dodge man?}{}{-4}{}{130}{}
+{130}{Well, of course I really shouldn't tell you exactly who he is, but...[He leans closer to you.]  Have you ever heard of Stillwater, my friend?  Might be a nice place to visit this time of year.  Seek out a man named Adkin Chambers...}{Well, of course I really shouldn't tell you exactly who he is, but...[He leans closer to you.]  Have you ever heard of Stillwater, my friend?  Might be a nice place to visit this time of year.  Seek out a man named Adkin Chambers...}{}{}{}{ru 2163}
+{131}{Thank you, Mr. Winde.  A few more questions?}{}{5}{}{74}{}
+{132}{Okay, Wind!  Some more questions?}{}{-4}{}{74}{}
+{133}{E:}{}{1}{}{0}{}
+{135}{Well, you can return here anytime once you have the money...}{Well, you can return here anytime once you have the money...}{}{}{}{}
+{136}{K:}{}{1}{}{74}{}
+{137}{E:}{}{1}{}{0}{}
+{140}{You did?  What has happened to him?}{You did?  What has happened to him?}{}{}{}{}
+{141}{He...uh...was killed the Bedokaan!}{}{1}{}{107}{al -20}
+{142}{He was dead when I found him...}{}{1}{}{107}{al -20}
+{143}{I betrayed him and the Bedokaan to a poacher.  It was quite lucrative...}{}{1}{}{}{co, fl 150}
+{144}{E:}{}{1}{}{0}{}
+{150}{What?  I shall avenge his death!  Die!}{What?  I shall avenge his death!  Die!}{}{}{}{}
+

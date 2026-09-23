@@ -1,0 +1,568 @@
+//
+// MainMenu
+//
+
+
+// Main SplashScreen msg
+{1}{Loading Arcanum...}
+
+
+// Loading Save Game
+{5}{Loading Save Game...}
+
+
+// Main Menu
+{10}{Single Player}
+{11}{MultiPlayer}
+{12}{Options}
+{13}{Credits}
+{14}{Exit Game}
+// Main Menu -- Hotkeys
+{20}{S}
+{21}{M}
+{22}{O}
+{23}{C}
+{24}{E}
+
+
+// Main Menu In Play
+{30}{Save Game}
+{31}{Load Game}
+{32}{Options}
+{33}{Quit Game}
+{34}{Continue}
+// Main Menu -- Hotkeys
+{40}{S}
+{41}{L}
+{42}{O}
+{43}{Q}
+{44}{C}
+
+// Single Player Menu
+{50}{New Game}
+{51}{Load Game}
+{52}{Last Save}
+{53}{View Intro}
+{54}{Cancel}
+// Single Player Menu -- Hotkeys
+{60}{N}
+{61}{L}
+{62}{S}
+{63}{V}
+{64}{C}
+
+// Main Menu In Play Locked
+{70}{Options}
+{71}{Quit Game}
+{72}{Continue}
+// Main Menu -- Hotkeys
+{80}{O}
+{81}{Q}
+{82}{C}
+
+// New Game Menu
+// WIP! JLR! THIS IS WRONG!
+{100}{Pick Character}
+{101}{Create Char}
+{102}{Cancel}
+// New Game Menu
+// WIP! JLR! THIS IS WRONG!
+{110}{P}
+{111}{C}
+{112}{X}
+
+
+// Multiplayer Main Menu
+{200}{Network}
+{201}{Internet}
+{202}{Setup}
+{203}{Cancel}
+// Multiplayer Main Menu -- Hotkeys
+{210}{N}
+{211}{I}
+{212}{S}
+{213}{C}
+
+// Multiplayer Choose Server/Client
+{220}{Join Game}
+{221}{Server}
+// Multiplayer Choose Server/Client -- Hotkeys
+{230}{J}
+{231}{S}
+
+// Multiplayer HUB
+{240}{Main Menu}
+{241}{Find Game}
+{242}{Host Game}
+{243}{Chat}
+{244}{Character}
+{245}{News}
+{246}{Community}
+// Multiplayer HUB -- Hotkeys
+{250}{M}
+{251}{F}
+{252}{H}
+{253}{C}
+{254}{S}
+{255}{N}
+{256}{O}
+
+// Multiplayer Select Char
+{260}{Accept}
+{261}{New Character}
+{270}{A}
+{271}{N}
+
+// WIP! JLR! REMOVE!
+// Multiplayer Join Start
+{280}{Join}
+{281}{Cancel}
+// Multiplayer Join Start
+{290}{J}
+{291}{C}
+
+
+
+// Multiplayer Server options Start
+{400}{Main}
+{401}{Find Game}
+{402}{Chat}
+// Multiplayer Server options Start -- Hotkeys
+{410}{M}
+{411}{F}
+{412}{C}
+
+
+// Pick New or Pregen
+{420}{Pick Character}
+{421}{New Character}
+{422}{Cancel}
+// Pick New or Pregen -- Hotkeys
+{430}{P}
+{431}{N}
+{432}{X}
+
+// Multiplayer Chat
+{440}{Main Menu}
+{441}{Find Game}
+{442}{Host Game}
+{450}{M}
+{451}{F}
+{452}{H}
+
+
+
+// Main Menu
+{460}{Single Player}
+{461}{Options}
+{462}{Credits}
+{463}{Exit Game}
+// Main Menu -- Hotkeys
+{470}{S}
+{471}{O}
+{472}{C}
+{473}{E}
+
+
+
+
+// Base, starting player name
+{500}{Choose Name} // Player
+{505}{You must choose a portrait.}
+{506}{You must choose a name.}
+
+
+
+// Pregenerated characters -- Global Script flag to set when picked (-1 means none)
+{550}{-1}
+{551}{2350}
+{552}{2351}
+{553}{2352}
+{554}{2353}
+{555}{2354}
+{556}{2355}
+{557}{2356}
+{558}{2357}
+{559}{2358}
+{560}{2359}
+{561}{2360}
+{562}{2361}
+
+
+// Used with pregenerated characters
+{610}{Create Character}
+
+// Pregenerated character descriptions
+// NOTE: The character-combinations "\t" and "\n" are used for formatting the text.
+//  In standard format, "\t" means TAB and "\n" means carriage-return and line-feed.
+{650}{\tCreate your own character.}
+
+
+
+// NO LONGER IN USE!
+// Race/Gender Combos -- Note: These lookup to values in Rules/MainMenu.mes
+{700}{Human/Male}
+{701}{Human/Female}
+{702}{Elf/Male}
+{703}{Elf/Female}
+{704}{Dwarf/Male}
+{705}{Gnome/Male}
+{706}{Halfling/Male}
+{707}{Half-Elf/Male}
+{708}{Half-Elf/Female}
+{709}{Half-Orc/Male}
+{710}{Half-Orc/Female}
+{711}{Half-Ogre/Male}
+
+// Basic Races
+{720}{Human}
+{721}{Dwarf}
+{722}{Elf}
+{723}{Half-Elf}
+{724}{Gnome}
+{725}{Halfling}
+{726}{Half-Orc}
+{727}{Half-Ogre}
+
+{739}{Initial Stats}
+
+{740}{Female}
+{741}{Male}
+{742}{You are the female gender of your race. You can withstand pain, exhaustion and toxins better than males and receive a +1 to constitution, but you are slightly weaker and receive a -1 to strength. }
+{743}{You are the male gender of your race. You tend to be stronger than a female, albeit with a lower constitution.}
+
+{745}{Race}
+
+
+// NO LONGER IN USE!  -- SEE BELOW!!!
+// Race/Gender Combo Descriptions
+{750}{Humans have no special modifiers to their stats and abilities. Humans are the most populous and distributed race by far, having numerous cities and kingdoms throughout the world. They interact with the other races as much as the gnomes, and they interbreed with everything (hence, half-elves, half-ogres, and half-orcs). They are not inherently predisposed towards magick or technology, but they are the front-runners in the latest technological race. Being shorter-lived than most of the other races as well as fairly ingenious tinkerers, they are probably attracted to the quick return on investment that technology promises.}
+{751}{Humans have no special modifiers to their stats and abilities. Humans are the most populous and distributed race by far, having numerous cities and kingdoms throughout the world. They interact with the other races as much as the gnomes, and they interbreed with everything (hence, half-elves, half-ogres, and half-orcs). They are not inherently predisposed towards magick or technology, but they are the front-runners in the latest technological race. Being shorter-lived than most of the other races as well as fairly ingenious tinkerers, they are probably attracted to the quick return on investment that technology promises.}
+{752}{The character gains +1 dexterity and beauty.  He suffers -2 ranks to all tech skills and has an increased chance of technological items failing to work.  Elves are slender and pale, having a natural, exotic beauty that is the envy of the other races.  Elves are a philosophical race, the dreamers and poets of Arcanum. They prefer to live near forests and rivers, spending their time feasting, singing and talking. Elves can be rather arrogant to all other races, but they especially disdain dwarves.}
+{753}{The character gains +1 dexterity and beauty.  She suffers -2 ranks to all tech skills and has an increased chance of technological items failing to work.  Elves are slender and pale, having a natural, exotic beauty that is the envy of the other races.  Elves are a philosophical race, the dreamers and poets of Arcanum. They prefer to live near forests and rivers, spending their time feasting, singing and talking. Elves can be rather arrogant to all other races, but they especially disdain dwarves.}
+{754}{The character gains +2 strength and +1 constitution and +2 ranks to all tech skills.  The character is hampered in throwing spells, finding that they cost twice as much to cast, and has an increased chance of magical items failing to work.  Dwarven males are short, stocky, bearded people. Although very wide and stout for their height, dwarves tend to be muscular and not fat. They are hard-working, prideful and focused almost to the point of being humorless, although most dwarves enjoy a good mead. Dwarves tend to be quick to judge and quick to anger. Dwarves dislike elves but are respectful to humans and gnomes.}
+{755}{The character gains +2 willpower, 2 ranks of Haggle and +10 to any bad reaction, but suffers -2 points of constitution.  Gnomes are short with very big noses and while not usually overweight, they do tend to get pot-bellied in later years.  Gnomes tend to be a hard-working people.  They are equally at home in cities, underground or in the forest.  Since they get along well with most other races and because they love wealth, they tend to be merchants and traders. Like humans, they have little predisposition to either magick or technology. They can use either, but most often they choose to abstain from both.}
+{756}{The character gains +2 dexterity, 2 ranks of Prowling, 1 rank of Dodge and +5% critical hit chance, but then suffers -3 points of strength.  Halflings are short people, smaller even than gnomes and dwarves. They enjoy cooking and eating and tend to be overweight. They do not wear shoes, instead relying on their heavily-soled and hair-topped feet. This also means halflings can be very quiet when they want to be.  Halflings are a quiet, rustic folk who tend not to dabble in either magick or technology, although nothing inherent prevents them from doing so. They are regarded as lazy by the other races, but despite this reputation, they are generally well liked.}
+{757}{The character gains +1 dexterity but loses 1 ranks to all tech skills. In build and appearance, they resemble their human parents more, but some half-elves possess the pointed ears and pale, delicate features associated with their elven parents. Half-elven personality ranges the entire gamut available to humans and elves, although most of them have a natural bent to their personality and enjoy spending time out-of-doors. Half-elves do not come across as arrogant to the other races and are generally well-liked by everyone.}
+{758}{The character gains +1 dexterity but loses 1 ranks to all tech skills. In build and appearance, they resemble their human parents more, but some half-elves possess the pointed ears and pale, delicate features associated with their elven parents. Half-elven personality ranges the entire gamut available to humans and elves, although most of them have a natural bent to their personality and enjoy spending time out-of-doors. Half-elves do not come across as arrogant to the other races and are generally well-liked by everyone.}
+{759}{The character gains +1 constitution, +1 strength and an extra 10% poison resistance, but loses 2 points of beauty and 2 points of charisma.  Half-orcs are the progeny of orc and human parents, usually a male orc and an unwilling female human. This history makes half-orcs a despised segment of the human population. Most half-orcs can pass as full humans (albeit ugly ones), but they usually have some trait that identifies their orcish blood (upturned nose, hairiness, foul temper) to the careful observer, and people usually discriminate against them when they discover their race. Half-orcs are quick-tempered and violent like their orcish parent. Some have learned to control their temper, but this usually means that instead of attacking immediately, they will plot revenge.}
+{760}{The character gains +1 constitution, +1 strength and an extra 10% poison resistance, but loses 2 points of beauty and 2 points of charisma.  Half-orcs are the progeny of orc and human parents, usually a male orc and an unwilling female human. This history makes half-orcs a despised segment of the human population. Most half-orcs can pass as full humans (albeit ugly ones), but they usually have some trait that identifies their orcish blood (upturned nose, hairiness, foul temper) to the careful observer, and people usually discriminate against them when they discover their race. Half-orcs are quick-tempered and violent like their orcish parent. Some have learned to control their temper, but this usually means that instead of attacking immediately, they will plot revenge.}
+{761}{The character gains +4 strength and an extra 10% damage resistance but then loses 1 point of beauty, 4 points of intelligence and 2 ranks of Prowling.  Half-ogres are half-human, half-ogre individuals, a seemingly rare combination. They tend to be large and heavy and thus cannot wear most armor or use certain technological items. In appearance, they resemble, but are not as violent as, their ogrish parents. They are slow to anger and tend to be gentle with smaller folk and if acting as bodyguards, they will defend their charges to the death. Due to their large size, they rarely face open discrimination in human cities.}
+
+
+// Human
+{770}{Humans have no special modifiers to their stats and abilities. Humans are the most populous and distributed race by far, having numerous cities and kingdoms throughout the world. They interact with the other races as much as the gnomes, and they interbreed with everything (hence, half-elves, half-ogres, and half-orcs). They are not inherently predisposed towards magick or technology, but they are the front-runners in the latest technological race. Being shorter-lived than most of the other races as well as fairly ingenious tinkerers, they are probably attracted to the quick return on investment that technology promises.}
+{771}{Humans have no special modifiers to their stats and abilities. Humans are the most populous and distributed race by far, having numerous cities and kingdoms throughout the world. They interact with the other races as much as the gnomes, and they interbreed with everything (hence, half-elves, half-ogres, and half-orcs). They are not inherently predisposed towards magick or technology, but they are the front-runners in the latest technological race. Being shorter-lived than most of the other races as well as fairly ingenious tinkerers, they are probably attracted to the quick return on investment that technology promises.}
+// Dwarves
+{772}{}
+{773}{The character gains +1 strength, +1 constitution, +15% to Technological Aptitude and +2 ranks to all tech skills.  The character suffers -1 charisma and dexterity and is hampered in throwing spells, finding that they cost twice as much to cast.  Dwarven males are short, stocky, bearded people. Although very wide and stout for their height, dwarves tend to be muscular and not fat. They are hard-working, prideful and focused almost to the point of being humorless, although most dwarves enjoy a good mead. Dwarves tend to be quick to judge and quick to anger. Dwarves dislike elves but are respectful to humans and gnomes.}
+// Elves
+{774}{The character gains +1 dexterity, willpower and beauty and +15% to Magickal Aptitude but suffers -2 constitution and -1 strength and -2 ranks to all tech skills.  Elves are slender and pale, having a natural, exotic beauty that is the envy of the other races.  Elves are a philosophical race, the dreamers and poets of Arcanum. They prefer to live near forests and rivers, spending their time feasting, singing and talking. Elves can be rather arrogant to all other races, but they especially disdain dwarves.}
+{775}{The character gains +1 dexterity, willpower and beauty and +15% to Magickal Aptitude but suffers -2 constitution and -1 strength and -2 ranks to all tech skills.  Elves are slender and pale, having a natural, exotic beauty that is the envy of the other races.  Elves are a philosophical race, the dreamers and poets of Arcanum. They prefer to live near forests and rivers, spending their time feasting, singing and talking. Elves can be rather arrogant to all other races, but they especially disdain dwarves.}
+// Half-Elves
+{776}{The character gains +1 dexterity and beauty and +5% to Magickal Aptitude but loses 1 point of constitution and 1 rank to all tech skills. In build and appearance, they resemble their human parents more, but some half-elves possess the pointed ears and pale, delicate features associated with their elven parents. Half-elven personality ranges the entire gamut available to humans and elves, although most of them have a natural bent to their personality and enjoy spending time out-of-doors. Half-elves do not come across as arrogant to the other races and are generally well-liked by everyone.}
+{777}{The character gains +1 dexterity and beauty and +5% to Magickal Aptitude but loses 1 point of constitution and 1 rank to all tech skills. In build and appearance, they resemble their human parents more, but some half-elves possess the pointed ears and pale, delicate features associated with their elven parents. Half-elven personality ranges the entire gamut available to humans and elves, although most of them have a natural bent to their personality and enjoy spending time out-of-doors. Half-elves do not come across as arrogant to the other races and are generally well-liked by everyone.}
+// Gnomes
+{778}{}
+{779}{The character gains +2 willpower, 2 ranks of Haggle and +10 to any bad reaction, but suffers -2 points of constitution.  Gnomes are short with very big noses and while not usually overweight, they do tend to get pot-bellied in later years.  Gnomes tend to be a hard-working people.  They are equally at home in cities, underground or in the forest.  Since they get along well with most other races and because they love wealth, they tend to be merchants and traders. Like humans, they have little predisposition to either magick or technology. They can use either, but most often they choose to abstain from both.}
+// Halflings
+{780}{}
+{781}{The character gains +2 dexterity, 2 ranks of Prowling, 1 rank of Dodge and +5% critical hit chance, but then suffers -3 points of strength.  Halflings are short people, smaller even than gnomes and dwarves. They enjoy cooking and eating and tend to be overweight. They do not wear shoes, instead relying on their heavily-soled and hair-topped feet. This also means halflings can be very quiet when they want to be.  Halflings are a quiet, rustic folk who tend not to dabble in either magick or technology, although nothing inherent prevents them from doing so. They are regarded as lazy by the other races, but despite this reputation, they are generally well liked.}
+// Half-Orcs
+{782}{The character gains +1 constitution, +1 strength, 2 ranks to both Melee and Dodge, and an extra 10% poison resistance, but loses 2 points of beauty and 2 points of charisma.  Half-orcs are the progeny of orc and human parents, usually a male orc and an unwilling female human. This history makes half-orcs a despised segment of the human population. Most half-orcs can pass as full humans (albeit ugly ones), but they usually have some trait that identifies their orcish blood (upturned nose,  hairiness, foul temper) to the careful observer, and people usually discriminate against them when they discover their race. Half-orcs are quick-tempered and violent like their orcish parent. Some have learned to control their temper, but this  usually means that instead of attacking immediately, they will plot revenge.}
+{783}{The character gains +1 constitution, +1 strength, 2 ranks to both Melee and Dodge, and an extra 10% poison resistance, but loses 2 points of beauty and 2 points of charisma.  Half-orcs are the progeny of orc and human parents, usually a male orc and an unwilling female human. This history makes half-orcs a despised segment of the human population. Most half-orcs can pass as full humans (albeit ugly ones), but they usually have some trait that identifies their orcish blood (upturned nose, hairiness, foul temper) to the careful observer, and people usually discriminate against them when they discover their race. Half-orcs are quick-tempered and violent like their orcish parent. Some have learned to control their temper, but this usually means that instead of attacking immediately, they will plot revenge.}
+// Half-Ogres
+{784}{}
+{785}{The character gains +4 strength and an extra 10% damage resistance but then loses 1 point of beauty, 4 points of intelligence and 2 ranks of Prowling.  Half-ogres are half-human, half-ogre individuals, a seemingly rare combination. They tend to be large and heavy and thus cannot wear most armor or use certain technological items. In appearance, they resemble, but are not as violent as, their ogrish parents. They are slow to anger and tend to be gentle with smaller folk and if acting as bodyguards, they will defend their charges to the death. Due to their large size, they rarely face open discrimination in human cities.}
+
+
+
+
+// Background title
+{800}{Background}
+
+
+// 2000-2999 Multiplayer MainMenu
+{2000}{Login Name}
+{2001}{Password}
+{2002}{Verify Password}
+{2003}{Enter your email address below if you wish to get info and updates on Arcanum and other games (You must be over 13 years old to submit an email address).}
+{2004}{Connection}
+{2005}{New WON Account}
+{2006}{Level}
+{2007}{Passwords do not match.}
+{2008}{Cannot create account, it already exists.}
+{2010}{Everything OK}
+{2011}{Invalid Password}
+{2012}{No Such Account}
+{2020}{ST: %02d}
+{2021}{DX: %02d}
+{2022}{CN: %02d}
+{2023}{BE: %02d}
+{2024}{IN: %02d}
+{2025}{PE: %02d}
+{2026}{WP: %02d}
+{2027}{CH: %02d}
+{2028}{Level: %d}
+{2029}{Alignment: %d}
+{2030}{Aptitude: %s %d}
+{2031}{Total Attack: %d}
+{2032}{Total Defense: %d}
+{2033}{Magick}
+{2034}{Technology}
+{2035}{ }
+{2040}{Message of The Day}
+{2050}{Are you sure you wish to delete %s?}
+{2051}{ERROR! File information for the selected character is not available! Cannot delete.}
+{2052}{Could not establish connection to Internet Servers.}
+
+{2100}{Server refused join.  May be full.}
+{2110}{Main}
+{2111}{Chat}
+{2112}{Host Game}
+{2120}{M}
+{2121}{C}
+{2122}{H}
+
+// 2200-2299 - ServerList strings
+{2200}{Main}
+{2201}{Chat}
+{2202}{Host Game}
+{2205}{Click to Join}
+{2206}{Missing Module}
+{2207}{Enter Password Here}
+{2208}{Waiting To Join}
+{2209}{Join Failed}
+
+{2210}{Name}
+{2211}{Type}
+{2212}{Ping}
+{2213}{Players}
+{2214}{UpTime}
+
+{2220}{All}
+{2221}{FFA}
+{2222}{Cooperative}
+{2223}{Roleplay}
+{2224}{Bookmarked}
+
+{2230}{Module: %s}
+{2231}{Level: %d-%d}
+{2232}{Player Killing: %s}
+{2233}{Friendly Fire Damage: %s}
+{2234}{Private Chat: %s}
+{2235}{Players: %d(%d)}
+{2236}{More...}
+{2237}{Type: %s}
+{2238}{ON}
+{2239}{OFF}
+{2240}{Connecting to server...}
+{2241}{Waiting for server acceptance...}
+{2242}{Could not connect to server.
+Aborting attempt to connect.}
+
+// this really should be 2210 but 2210 was already taken so, I'm
+// jumping around a little bit here
+{2250}{Invalid password.}
+{2290}{Your supplied password is invalid.}
+{2291}{You have been banned from this server, you are not allowed to join.}
+{2292}{Your protocol version does not match the servers.}
+{2293}{You do not meet the necessary critera to join the game or a duplicate player exists.}
+
+// 2300 - 2399 : Start Server Strings
+{2300}{Game Name}
+{2301}{Module}
+{2302}{Type}
+{2303}{Max Number of Players}
+{2304}{Minimum Players}
+{2305}{Min Level}
+{2306}{Max Level}
+{2307}{Password}
+{2308}{Private Chat}
+{2309}{Max Stored PCs}
+{2310}{Player Killing}
+{2311}{Friendly Fire Damage}
+{2312}{Auto Join}
+{2313}{Auto Equip}
+{2314}{Key Sharing}
+{2320}{Free For All}
+{2321}{Cooperative}
+{2322}{Roleplay}
+{2330}{Off}
+{2331}{On}
+{2332}{No Mods Found}
+{2333}{Click to Start Server}
+{2334}{Vicinity}
+
+{2350}{On}
+{2351}{Off}
+
+// 2400-2499 : Chat Strings
+{2400}{Create Room}
+{2401}{Room Name}
+{2402}{Password}
+
+// Options Buttons
+{4000}{Game}
+{4001}{Video}
+{4002}{Sound}
+{4003}{Done}
+// Options Buttons -- Hotkeys
+{4010}{G}
+{4011}{V}
+{4012}{S}
+{4013}{D}
+
+// Combat Options Buttons
+{4100}{Turn-Based}
+{4101}{Auto-Combat}
+{4102}{Always Run}
+{4103}{Float Messages}
+{4104}{Fast TB Combat}
+{4105}{Violence Filter}
+
+
+// Load/Save Game Messages
+{5000}{Game Loaded Successfully.}
+{5001}{Save Game Corrupt!  Load Failed!}
+{5002}{Game Saved Successfully.}
+{5003}{Save Game Corrupt!  Save Failed!}
+
+{5004}{Version Mismatch!}
+{5005}{Empty}
+
+{5010}{Create New Save Game}
+// Load/Save Info
+{5050}{Unknown location.}  // An area unknown
+{5051}{Level %d}  // Player's Level
+{5055}{New}  // Create a New Save Game Slot
+{5056}{Auto Save}  // Auto-Save Save Game Slot
+{5057}{Quick Save}  // Quick-Save Save Game Slot
+{5058}{Slot}  // Auto-Save Save Game Slot
+
+{5060}{Saving...}
+{5061}{Loading...}
+{5062}{Save completed.}
+{5063}{Load completed.}
+{5064}{Are you sure you want to overwrite the save game?}
+{5065}{Cannot save during turn-based combat when it isn't your turn.}
+
+// Quit Dialog Text
+{5100}{Are you sure you want to quit?}
+
+// Delete Save game Text
+{5150}{Are you sure you want to delete the save game?}
+
+
+// Misc Messages
+{6000}{Please Wait}  // Used for waiting screen
+
+
+// Hover-Help Messages:
+{6999}{Action:}
+// PickPregen
+{7000}{View Picture}
+{7001}{View Description}
+{7002}{Previous Screen}
+{7003}{Next Screen}
+
+{7010}{Previous Background}
+{7011}{Next Background}
+{7012}{Normal Pictures}
+{7013}{Custom Pictures}
+
+{7020}{Load Game}
+{7021}{Save Game}
+{7022}{Delete Save Game}
+
+{7025}{Toggle Info Display}
+
+// 10000-11000
+// Chat Messages and Help
+{10000}{Arcanum and WON.net CHAT Help File}
+{10001}{CHAT COMMANDS:}
+{10002}{/AFK - Sets you Away From Keyboard.}
+{10003}{/BAN <name> <time> - Bans a client, time can be any positive number }
+{10004}{                     followed by D for days, H for hours, M for minutes.}
+{10005}{/JOIN <name or number> - Joins the channel specified by the name or number.}
+{10006}{/HELP - Prints this message here.}
+{10007}{/I <name> - Ignores or un-ignores a client.}
+{10008}{/ME <message> - Emotes a message.}
+{10009}{: <message> - Same as the /ME command.}
+{10010}{/MOD - Change a moderator status.}
+{10011}{/MUTE <name> <time> - Mutes a client. Time is the same format as ban.}
+{10012}{/UNMUTE <name> - Un mutes a client.}
+{10013}{/W <name> <mesg> - Whisper. Sends a private message to one recepient.}
+{10014}{/WHO - Lists all the clients currently in the chatroom.}
+{10015}{Otherwise all text is sent to the current channel you are in.}
+
+{10050}{Could not join chatroom %d.}
+{10051}{Could not join chatroom %s.}
+{10052}{Unknown chatroom %s.}
+{10053}{Unknown Command. Try /HELP.}
+{10054}{%s has entered the room.}
+{10055}{%s has left.}
+{10056}{Connected to ChatServer %s (%s)}
+{10057}{Could not connect to ChatServer %s (%s)}
+{10058}{No ChatServers are available, please try and reconnect later.}
+{10059}{No ChatRooms are available, please try and reconnect later.}
+{10060}{Joined ChatRoom %s (%d)}
+{10061}{Could not join chatroom %s (%d)}
+{10062}{There is nobody in this chatroom? Odd, what about YOURSELF!}
+{10063}{Could not get a list of people in the ChatRoom.}
+{10064}{Cannot create chatroom.}
+
+// Local (non-WON) chat commands
+{10100}{JOIN}
+{10101}{HELP}
+{10102}{WHO}
+{10103}{}
+
+// Chat flags as text
+{10200}{*Moderator*}
+{10201}{(Muted)}
+{10202}{} // naughty word filter off
+{10203}{(AFK)}
+{10204}{} // no firewall
+{10205}{}
+{10206}{}
+{10207}{}
+{10208}{}
+{10209}{}
+{10210}{}
+{10211}{}
+{10212}{}
+{10213}{}
+{10214}{}
+{10215}{}
+{10216}{}
+{10217}{}
+{10218}{}
+{10219}{}
+{10220}{}
+{10221}{}
+{10222}{}
+{10223}{}
+{10224}{}
+{10225}{}
+{10226}{}
+{10227}{}
+{10228}{}
+{10229}{}
+{10230}{}
+{10231}{}
+
+//     10232 + (flag * 2)
+// and 10232 + (flag * 2) + 1
+// are the toggle on/off of the flags listed above
+
+{10232}{%s is now a channel moderator.}
+{10233}{%s is no longer a channel moderator.}
+{10234}{%s has been muted.}
+{10235}{%s can speak freely, they are no longer muted.}
+{10236}{}// dirty word filter on
+{10237}{}// dirty word filter off
+{10238}{%s has gone Away From Keyboard.}
+{10239}{%s has returned.}
+{10240}{}// firewall on
+{10241}{}// firewall off

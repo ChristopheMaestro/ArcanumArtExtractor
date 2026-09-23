@@ -1,0 +1,957 @@
+// These are race-based NPC messages, said by male NPC's to female PC's
+// based on the PC's race
+
+// Insult messages start at 1000. Each PC race gets 50 messages
+// starting on multiples of 50 (and the first block is reserved
+// for when the NPC race is the same as the PC race)
+
+
+{1000}{You insolent worm! How dare you?}
+{1001}{Get out of my sight, you grotty ruffian!}
+{1002}{I don't have to listen to this!}
+{1003}{You are an uncouth clod!}
+{1004}{Get away from me, ya balmy blighter!}
+{1005}{Buggeration! Are you crackers?}
+{1006}{Bugger off, ya lousy ratbag!}
+{1007}{Get lost, ya ratty trog!}
+{1008}{Leave me alone, ya blithering dip!}
+{1009}{I'll not have any of your guff, ya loopy blighter!}
+{1010}{Get lost, you piffle-brained dip!}
+{1011}{You are nothing but a lowlife grotbag!}
+{1012}{Ya dirty bugger! Ya louse! I hate your kind!}
+{1013}{What are you gawping at, ya blithering dimwit?}
+{1014}{What a sordid little piece of work you are!}
+{1015}{I say, you are mad, quite mad.}
+{1016}{A plague on you and yours!}
+{1017}{A bane on you and your house!}
+{1018}{Curse you, and everything you stand for!}
+{1019}{Your kind is a pestilence!}
+{1020}{Bother! You are a hopeless delinquent.}
+{1021}{Bugger it! You are beyond redemption.}
+{1022}{Bog all! You are an incorrigible and inconsiderate brute.}
+{1023}{You are one depraved individual, to be sure.}
+{1024}{You are a fraud and a charlatan!}
+{1025}{Rubbish! You are a lazy, shiftless cretin.}
+{1026}{You are a drudge, a peon, a mere menial. Leave me!}
+{1027}{You are an immoral and licentious scoundrel!}
+
+{1050}{What are you gawping at, human scum?}
+{1051}{Look here! A lippy, holier-than-thou human!}
+{1052}{All you humans are walking piles of stinking manure!}
+{1053}{Thieving scum human! You are not welcome here!}
+{1054}{I will not take any of your human guff, ratbag!}
+{1055}{Dirty humans! Get lost, you cowardly clot!}
+{1056}{Take a gander at this: a clumsy, ham-fisted human!}
+{1057}{You stupid human soddingrotter! Get lost!}
+{1058}{All you humans are a boring, empty-headed lot.}
+{1059}{You humans are weak and cowardly, unfit to live.} 
+{1060}{Human scum! I hope you rot.}
+{1061}{You humans are beneath contempt!} 
+{1062}{Your kind are an evil blight on the world!} 
+
+
+{1100}{Bugger off, ya daft old dirt-beard!}
+{1101}{What are you doing here, ya old tangle-bearded clot?}
+{1102}{You don't belong here, ya bloody beardface!}
+{1103}{Bugger off, you ham fisted, grotty dwarf!}
+{1104}{I don't like your stink, you rotten, egg-laying dwarf!}
+{1105}{Bugger it! Get lost or I'll cut off your dirty beard!}
+{1106}{You lazy, shiftless dwarves are a blight on the world!}
+{1107}{All you dwarves are bearded piles of stinking manure!}
+{1108}{You cantankerous knot-beard!}
+{1109}{Get away from me or I'll cut off your stinkin' beard!}
+{1110}{Bog off, ya bloody ratbag! I hate you walking beards!}
+
+{1150}{You bloody arrogant elf!}
+{1151}{You blithering, pointy-eared daisy-jumper!}
+{1152}{You lazy, shiftless elves are a bloody blight on the world!}
+{1153}{All you elves are prancing piles of stinking perfumed manure!}
+{1154}{Bugger off, you prancing flower-faerie!}
+{1155}{Bog all! I'll not take any more of your elven arrogance!}
+{1156}{You daft, pointy-eared fool!}
+{1157}{Bugger off, you pointy-eared cousin to an orc!}
+{1158}{Bog off, ya bloody ratbag! I hate you pointy-faced elves!}
+{1159}{You holier-than-thou elves are no better than orcs!}
+
+{1200}{What have you got to be arrogant about, Halfie?}
+{1201}{All you half-elves are crackers, you are!}
+{1202}{All you cheesy, pointy-eared Halfies are fools!}
+{1203}{You panty-waist half-elf! I'll have your guts for garters!}
+{1204}{You lazy, shiftless half-elves are a blight on the world!}
+{1205}{All you half-elves are piles of perfumed manure!}
+{1206}{You ignorant, half-a-brain half-elf!}
+{1207}{Bugger off, ya blithering half-elf.}
+{1208}{Bog off, ya bloody ratbag! I hate you half-elves!} 
+{1209}{All you low-born half-elves are lewd and reprehensible.}
+{1210}{Bah! Half-elves! You are all gutless half-breeds.}
+ 
+{1250}{Bugger all, you rich capitalist pig!}
+{1251}{Give me any lip, gnome, and I'll give you what for!}
+{1252}{All you little money-grubbers should die!}
+{1253}{Ya dippy gnome! What did you come around here for?}
+{1254}{Stow your lip, ya grotty gnome!}
+{1255}{You gnomes are waltzing piles of stinking manure in suits!}
+{1256}{Bugger off, ya cheesy little gnome!}
+{1257}{Bugger off, ya daft, grotty-old gnome!}
+{1258}{Bog off, ya bloody ratbag! I hate you ugly gnomes!}
+{1259}{All you belligerent gnomes are beastly fools!}
+
+{1300}{Go crawl back into your muddy hole, halfling!}
+{1301}{Bugger off, ankle-biter!}
+{1302}{Get lost, you little, thieving squirrel!}
+{1303}{All you pint-sized brats are shoeless and clueless!}
+{1304}{You snivelling hairfeet are all shiftless fools!}
+{1305}{You lazy halflings are a bloody blight on the world!}
+{1306}{You ignorant, half-a-brain halfling!}
+{1307}{Bog off, ya bloody ratbag! I hate you fat halflings!}
+{1308}{All you cowardly hairfeet are toads!}
+{1309}{All you halflings are a bunch of hairy footed twits!}
+{1310}{You are a big-footed boob!}
+{1311}{Bugger off, you little thieving toady!}
+
+
+{1350}{Half-orc? You smell 100% orc to me!}
+{1351}{Bog all! You half-orcs are cruddy grotbags!}
+{1352}{Get lost, half-orc! Or I'll have your guts for garters!}
+{1353}{Bugger off, Halfie! You thieving swine disgust me!}
+{1354}{Get out of here, you grotty trog!}
+{1355}{You lazy, good-for-nothing, ugly half-orc!}
+{1356}{Bog off, ya bloody ratbag! I hate you ugly half-orcs!}
+{1357}{You lazy, shiftless half-orcs are a blight on the world!}
+{1358}{All you half-orcs are cowardly piles of stinking manure!}
+{1359}{You ignorant, half-a-brain half-orc!}
+{1360}{You stupid half-orcs are an uncivilized, barbaric lot.}
+{1361}{Half-orcs are unfit to associate with real people.}
+{1362}{You repulsive half-orcs are unfit to be seen in daylight.}
+
+ 
+{1400}{You half-ogres are a stupid lot, eh?}
+{1401}{Bugger it! You Big-Halfies are all as thick as a brick!}
+{1402}{All you half-ogres are ignorant, muscle-bound clods!}
+{1403}{Get lost, you dimwitted, thick-skulled dolt!}
+{1404}{Bog off, ya walking hill!}
+{1405}{Bugger off, ya lazy, ignorant half-ogre!}
+{1406}{You half-ogres are lumbering mountains of stinking manure!}
+{1407}{You big idiot! None of you half-ogres have half a brain!}
+{1408}{You ignorant half-ogre stooge!}
+{1409}{You stupid, half-wit half-ogre!}
+{1410}{Bog off, ya bloody ratbag! I hate you ugly half-ogres!} 
+{1411}{All you stupid half-ogres are an uncivilized, barbaric lot!}
+{1412}{Where's your little gnome master, dolt?}
+{1413}{Bosh! You are nothing but a gnome's menial.}
+
+
+// Initial bad greeting messages start at 2000. Each PC race gets 50
+// messages starting on multiples of 50 (and the first block is reserved
+// for when the NPC race is the same as the PC race)
+
+{2000}{What do you want?}
+{2001}{What is it you want from me?}
+{2002}{I would rather not talk to you.}
+{2003}{Why are you bothering me?}
+{2004}{Why do you bother me?}
+{2005}{What? I am busy. Leave me be.}
+{2006}{What could you possibly want from me?}
+{2007}{Why would you assume I had any desire to speak with one such as yourself?}
+{2008}{Get on with it. I do not have all day.}
+{2009}{Yes? Get on with it.}
+{2010}{I cannot help you.}
+{2011}{Why do you accost me?}
+{2012}{I do not have time for the likes of you.}
+{2013}{What is the meaning of this?}
+{2014}{You must be lost. You do not belong here.}
+
+
+{2050}{What does a human want from me?}
+{2051}{What do you want, human?}
+{2052}{I do not have time for humans.}
+{2053}{What does a human want with me?}
+{2054}{Get on with it, human. I do not have all day.}
+{2055}{I do not have time for you, human.}
+{2056}{I cannot help you, human.}
+{2057}{I do not have time for your ilk, human.}
+{2058}{I do not associate with humans.}
+{2059}{Speak, human. Or do you not know how?}
+{2060}{I do not know you, human, nor do I want to.}
+{2061}{What could a human possibly want with me?}
+{2062}{Get on with it, human.}
+{2063}{What? Are you a beggar? What is it, human?}
+{2064}{Speak up, human. Do not mumble.}
+
+
+{2100}{I have no time for those of your race, dwarf.}
+{2101}{What is it, dwarf?}
+{2102}{I do not have time for dwarves.}
+{2103}{What does a dwarf want with me?}
+{2104}{Get on with it, dwarf. I do not have all day.}
+{2105}{I cannot help you, dwarf.}
+{2106}{I do not have time for your ilk, dwarf.}
+{2107}{I do not associate with dwarves.}
+{2108}{Speak, dwarf. Or do you not know how?}
+{2109}{I do not know you, dwarf, nor do I want to.}
+{2110}{What could a dwarf possibly want with me?}
+{2111}{Get on with it, dwarf.}
+{2112}{You must be lost, dwarf. You don't belong here.}
+{2113}{What? Are you a beggar? What is it, dwarf?}
+{2114}{Speak up, dwarf. Do not mumble.}
+{2115}{You do not belong here, dwarf.}
+
+
+{2150}{I have no patience for those of your race, sharp ear.}
+{2151}{I have no time for you, elf.}
+{2152}{I suggest you leave, sharp ear.}
+{2153}{I do not have time for elves.}
+{2154}{What does an elf want with me?}
+{2155}{Get on with it, elf. I do not have all day.}
+{2156}{I do not wish to speak with you, elf.}
+{2157}{I cannot help you, elf.}
+{2158}{I do not have time for your ilk, elf.}
+{2159}{I do not associate with elves.}
+{2160}{Speak, elf. Or do you not know how?}
+{2161}{I do not know you, elf, nor do I want to.}
+{2162}{What could an elf possibly want with me?}
+{2163}{Get on with it, elf.}
+{2164}{What? Are you a beggar? What is it, elf?}
+{2165}{You do not belong here, elf.}
+
+
+{2200}{I have no patience for half-breeds.}
+{2201}{I don't care for your kind, half-elf.}
+{2202}{What do you want, half-elf? Nothing good, of that I'm certain.}
+{2203}{I do not have time for half-breeds.}
+{2204}{What does a half-elf want with me?}
+{2205}{Get on with it, half-elf. I do not have all day.}
+{2206}{I do not wish to speak with you, half-breed.}
+{2207}{I cannot help you, half-elf.}
+{2208}{I do not have time for your ilk, half-elf.}
+{2209}{I do not associate with half-breeds.}
+{2210}{Speak, half-elf. Or do you not know how?}
+{2211}{I do not know you, half-elf, nor do I want to.}
+{2212}{What could a half-elf possibly want with me?}
+{2213}{Get on with it, half-elf.}
+{2214}{You must be lost, half-breed. You do not belong here.}
+{2215}{What? Are you a beggar? What is it, half-elf?}
+{2216}{You do not belong here, half-breed.}
+{2217}{We don't associate with half-breeds around here.}
+
+
+
+{2250}{A gnome deigns to talk to me?}
+{2251}{I don't care for your kind, gnome.}
+{2252}{What do you want, gnome? Nothing good, of that I'm certain.}
+{2253}{I do not have time for gnomes.}
+{2254}{What does a gnome want with me?}
+{2255}{Get on with it, gnome. I do not have all day.}
+{2256}{I have no patience for gnomes, fool.}
+{2257}{I cannot help you, gnome.}
+{2258}{I do not have time for your ilk, gnome.}
+{2259}{I do not associate with gnomes.}
+{2260}{Speak, gnome. Or do you not know how?}
+{2261}{I do not know you, gnome, nor do I wish to.}
+{2262}{What could a gnome possibly want with me?}
+{2263}{Get on with it, gnome.}
+{2264}{Why would you think I would wish to speak with a gnome?}
+{2265}{You must be lost, gnome. You are not welcome here.}
+{2266}{What? Are you a beggar? What is it, gnome?}
+{2267}{Speak up, gnome. Do not mutter.}
+{2268}{We do not associate with your kind around here, gnome.}
+
+
+
+{2300}{A halfling deigns to talk to me?}
+{2301}{I don't care for your kind, halfling.}
+{2302}{What do you want, halfling? Nothing good, of that I'm certain.}
+{2303}{I do not have time for halflings.}
+{2304}{What does a halfling want with me?}
+{2305}{Get on with it, halfling. I do not have all day.}
+{2306}{I have no patience for halflings, fool.}
+{2307}{I cannot help you, halfling.}
+{2308}{I do not have time for your ilk, halfling.}
+{2309}{I do not associate with halflings.}
+{2310}{Speak, halfling. Or do you not know how?}
+{2311}{I do not know you, halfling, nor do I wish to.}
+{2312}{What could a halfling possibly want with me?}
+{2313}{Get on with it, halfling.}
+{2314}{Why would you think I would wish to speak with a halfling?}
+{2315}{You must be lost, halfling. You are not welcome here.}
+{2316}{What? Are you a beggar? What is it, halfling?}
+{2317}{Speak up, halfling. Do not mutter.}
+{2318}{We do not associate with your kind around here, halfling.}
+
+
+{2350}{A half-orc deigns to talk to me?}
+{2351}{I don't care for your kind, half-orc.}
+{2352}{What do you want, half-orc? Nothing good, of that I'm certain.}
+{2353}{I do not have time for half-orcs.}
+{2354}{What does a half-orc want with me?}
+{2355}{Get on with it, half-orc. I do not have all day.}
+{2356}{I have no patience for half-orcs, fool.}
+{2357}{I cannot help you, half-orc.}
+{2358}{I do not have time for your ilk, half-orc.}
+{2359}{I do not associate with half-orcs.}
+{2360}{Speak, half-orc. Or do you not know how?}
+{2361}{I do not know you, half-orc, nor do I wish to.}
+{2362}{What could a half-orc possibly want with me?}
+{2363}{Get on with it, half-orc.}
+{2364}{Why would you think I would wish to speak with a half-orc?}
+{2365}{You must be lost, half-orc. You are not welcome here.}
+{2366}{What? Are you a beggar? What is it, half-orc?}
+{2367}{Speak up, half-orc. Do not mutter.}
+{2368}{We do not associate with your kind around here, half-orc.}
+
+
+{2400}{A half-ogre deigns to talk to me?}
+{2401}{I don't care for your kind, half-ogre.}
+{2402}{What do you want, half-ogre? Nothing good, of that I'm certain.}
+{2403}{I do not have time for half-ogres.}
+{2404}{What does a half-ogre want with me?}
+{2405}{Get on with it, half-ogre. I do not have all day.}
+{2406}{I have no patience for half-ogres, fool.}
+{2407}{I cannot help you, half-ogre.}
+{2408}{I do not have time for your ilk, half-ogre.}
+{2409}{I do not associate with half-ogres.}
+{2410}{Speak, half-ogre. Or do you not know how?}
+{2411}{I do not know you, half-ogre, nor do I wish to.}
+{2412}{What could a half-ogre possibly want with me?}
+{2413}{Get on with it, half-ogre.}
+{2414}{Why would you think I would wish to speak with a half-ogre?}
+{2415}{You must be lost, half-ogre. You are not welcome here.}
+{2416}{What? Are you a beggar? What is it, half-ogre?}
+{2417}{Speak up, half-ogre. Do not mutter.}
+{2418}{We do not associate with your kind around here, half-ogre.}
+
+
+// Initial worst greeting messages start at 3000. Each PC race gets 50
+// messages starting on multiples of 50 (and the first block is reserved
+// for when the NPC race is the same as the PC race)
+
+{3000}{Leave me be, fool.}
+{3001}{Blood and Sand! Why are you bothering me, idiot?}
+{3002}{Bugger off, will you? I'm busy.}
+{3003}{Why does an idiot such as yourself feel the need to bother me?}
+{3004}{You look no better than you smell.}
+{3005}{I do not like to be bothered by addle-brains like you. Hear me?}
+{3006}{What is it, fool?}
+{3007}{Scum.  I'd rather not speak to your kind.}
+{3008}{Leave me be before I gut you, fool.}
+{3009}{Bugger off, dolt.}
+
+{3050}{You humans are the worst of the lot...}
+{3051}{Bugger off, human! I'm busy.}
+{3052}{You're a addle-brained human if ever I saw one...}
+{3053}{Humans!  They should lock up the lot of you...}
+{3054}{You humans repulse me!}
+{3055}{What is it, human scum?}
+{3056}{What is it, you ignorant human?}
+{3057}{Human scum.  I don't speak with your kind.}
+{3058}{Your very presence disgusts me, human.}
+{3059}{Get out of my sight, human.}
+
+{3100}{You dwarves are the worst of the lot...}
+{3101}{Bugger off, ya lousy dwarf! I'm busy.}
+{3102}{You're a stone-brained dwarf if ever I saw one...}
+{3103}{Dwarves!  They should bury the lot of you...}
+{3104}{Another arrogant dwarf. What do you want, dolt?}
+{3105}{You dwarves nauseate me.}
+{3106}{I hate dwarves.}
+{3107}{What is it, you ignorant dwarf?}
+{3108}{Dwarf scum.  I don't speak with your kind.}
+{3109}{Your very presence disgusts me, dwarf.}
+{3110}{Get out of my sight, dwarf.}
+
+
+{3150}{You elves are the worst of the lot...}
+{3151}{Bugger off, ya lousy elf! I'm busy.}
+{3152}{You're a tree-brained elf if ever I saw one...}
+{3153}{Elves!  They should hang the lot of you...}
+{3154}{Another arrogant elf. What do you want?}
+{3155}{I knew elves were repulsive, but you...}
+{3156}{I hate elves. Have I made myself clear?}
+{3157}{What is it, you ignorant elf?}
+{3158}{Elf scum.  I don't speak with your kind.}
+{3159}{Your very presence disgusts me, elf.}
+{3160}{Get out of my sight, elf.}
+{3161}{Your elven airs make me ill.  Move on.}
+
+{3200}{Another misbegotten half-breed. What do you want?}
+{3201}{You elves are the worst of the lot...}
+{3202}{Bugger off, ya lousy half-breed! I'm busy.}
+{3203}{You're a tree-brained half-breed if ever I saw one...}
+{3204}{Half-breeds!  They should burn the lot of you...}
+{3205}{Another arrogant half-breed. What do you want?}
+{3206}{I thought true elves were repulsive, but you...}
+{3207}{I hate elves and their kin.}
+{3208}{What is it, you ignorant half-breed?}
+{3209}{Elven scum.  I don't speak with your kind.}
+{3210}{Your very presence disgusts me, half-breed.}
+{3211}{Get out of my sight, elven trash.}
+
+
+{3250}{Another silver-spooned gnome. What do you want?}
+{3251}{You gnomes are the worst of the lot...}
+{3252}{Bugger off, ya lousy gnome! I'm busy.}
+{3253}{Another penny-pinching gnome...}
+{3254}{Gnomes!  They should burn the lot of you...}
+{3255}{Another miserly gnome. What do you want, dolt?}
+{3256}{I hate gnomes and their kin.}
+{3257}{What is it, you ignorant gnome?}
+{3258}{Gnomish scum.  I don't speak with your kind.}
+{3259}{Your very presence disgusts me, gnome.}
+{3260}{Get out of my sight, gnomish trash.}
+{3261}{Most gnomes are loathsome, but you've won the prize.}
+
+{3300}{Another unendurable halfling. What do you want?}
+{3301}{You halflings are the worst of the lot...}
+{3302}{Bugger off, ya lousy halfing! I'm busy.}
+{3303}{Another lazy-brained halfling...}
+{3304}{Halfings!  They should skewer the lot of you...}
+{3305}{Bothersome halflings...what do you want?}
+{3306}{You repulse me, halfling.}
+{3307}{I hate halfings and their kin.}
+{3308}{What is it, you ignorant halfling?}
+{3309}{Halfing scum.  I don't speak with your kind.}
+{3310}{Your very presence disgusts me, halfling.}
+{3311}{Get out of my sight, halfling trash.}
+{3312}{For being so small, you're monumentally repugnant, halfling....}
+
+{3350}{Another misbegotten half-breed. What do you want?}
+{3351}{You orcish rabble are the worst of the lot...}
+{3352}{Bugger off, ya lousy half-breed! I'm busy.}
+{3353}{You're a small-brained half-breed if ever I saw one...}
+{3354}{Half-breeds!  They should flay the lot of you...}
+{3355}{Another petulant half-breed. What do you want?}
+{3356}{I thought normal orcs were repulsive, but you...}
+{3357}{I hate orcs and their kin.}
+{3358}{What is it, you ignorant half-breed?}
+{3359}{Orcish scum.  I don't speak with your kind.}
+{3360}{Your very presence disgusts me, half-breed.}
+{3361}{Get out of my sight, orcish trash.}
+{3362}{Even orcish half-breeds are loathsome, I see. Away with you.}
+
+{3400}{Another barbaric half-breed. What do you want?}
+{3401}{You ogre rabble are the worst of the lot...}
+{3402}{Bugger off, ya lousy half-breed! I'm busy.}
+{3403}{You're a small-brained half-breed if ever I saw one...}
+{3404}{Half-breeds!  They should stone the lot of you...}
+{3405}{Another illiterate half-breed. What do you want?}
+{3406}{I hate ogres and their kin.}
+{3407}{What is it, you ignorant half-breed?}
+{3408}{Ogre scum.  I don't speak with your kind.}
+{3409}{Your very presence disgusts me, half-breed.}
+{3410}{Get out of my sight, ogre trash.}
+{3411}{Even ogre half-breeds are loathsome, I see. Away with you.}
+
+
+// Second bad greeting messages start at 4000. Each PC race gets 50
+// messages starting on multiples of 50 (and the first block is reserved
+// for when the NPC race is the same as the PC race)
+
+{4000}{Why are you back here?  I've no desire to speak with you again...}
+{4001}{I do not recall wanting to speak to you again.}
+{4002}{Stop coming back here.}
+{4003}{I've had enough of your guff. Leave me be.}
+{4004}{I'd rather not talk to you.}
+{4005}{Get on with it. I do not have all day.}
+{4006}{I haven't time for the likes of you.}
+{4007}{Leave me be. I don't like you.}
+{4008}{I do not think I want to talk to you.}
+{4009}{You better have a good reason for speaking to me again.}
+{4010}{What is the meaning of this?}
+{4011}{Speak your peace, and be off.}
+{4012}{What do you want from me?}
+{4013}{I would rather not talk to you.}
+{4014}{Why are you bothering me?}
+{4015}{I've little time for the likes of you...}
+{4016}{Begone.  I didn't like you the last time we spoke...}
+{4017}{Leave me alone.  I've had enough of you...}
+
+{4050}{I've no desire to speak with you, human}
+{4051}{Why are you bothering me again, human?}
+{4052}{I do not recall asking you to come back, human.}
+{4053}{Leave me be.  I have no time for humans, especially you...}
+{4054}{Meddling as always...can't you just leave me alone, human?}
+{4055}{Just get away from me, human...}
+{4056}{Why do you bother me again, human?}
+{4057}{You humans are always talking too much.  I've no time for it...}
+{4058}{I've not the stomach for you, nor your human failings...}
+{4059}{Why are you annoying me again, human?}
+{4060}{Go away, human. I don't need your aggravation...}
+{4061}{I've no interest in anything you'd have to say, human}
+{4062}{What do you want from me, human?}
+{4063}{Why is someone of your kind talking to me, human?}
+{4064}{I would rather not talk to you, human.}
+{4065}{Leave me alone.  Your drivel pains me, human...}
+{4066}{I've little time for the likes of you, human...}
+{4067}{Perhaps I need to be a bit clearer, human.  Get away.}
+{4068}{I've not the patience for humans today.  Please, just move on...}
+
+{4100}{I've no desire to speak with you, dwarf}
+{4101}{Why are you bothering me again, dwarf?}
+{4102}{I do not recall asking you to come back, dwarf.}
+{4103}{Leave me be.  I have no time for dwarves, especially you...}
+{4104}{Meddling as always...can't you just leave me alone, dwarf?}
+{4105}{Just get away from me, dwarf...}
+{4106}{Why do you bother me again, dwarf?}
+{4107}{You dwarves are always talking too much.  I've no time for it...}
+{4108}{I've not the stomach for you, nor your dwarven failings...}
+{4109}{Why are you annoying me again, dwarf?}
+{4110}{Go away, dwarf. I don't need your aggravation...}
+{4111}{I've no interest in anything you'd have to say, dwarf.}
+{4112}{Speak your peace and be off, dwarf.}
+{4113}{You've come to the wrong person, dwarf.}
+{4114}{What do you want from me, dwarf?}
+{4115}{Why is someone of your kind talking to me, dwarf?}
+{4116}{I would rather not talk to you, dwarf.}
+{4117}{Leave me alone.  Your drivel pains me, dwarf...}
+{4118}{I've little time for the likes of you, dwarf...}
+{4119}{Perhaps I need to be a bit clearer, dwarf.  Get away.}
+{4120}{I've not the patience for dwarves today.  Please, just move on...}
+
+{4150}{I've no desire to speak with you, elf.}
+{4151}{Why are you bothering me again, elf?}
+{4152}{I do not recall asking you to come back, elf.}
+{4153}{Leave me be.  I have no time for elves, especially you...}
+{4154}{Meddling as always...can't you just leave me alone, elf?}
+{4155}{Just get away from me, elf...}
+{4156}{Why do you bother me again, elf?}
+{4157}{You elves are always talking too much.  I've no time for it...}
+{4158}{I've not the stomach for you, nor your elven failings...}
+{4159}{Why are you annoying me again, elf?}
+{4160}{Go away, elf. I don't need your aggravation...}
+{4161}{I've no interest in anything you'd have to say, elf.}
+{4162}{Speak your peace and be off, elf.}
+{4163}{You've come to the wrong person, elf.}
+{4164}{What do you want from me, elf?}
+{4165}{Why is someone of your kind talking to me, elf?}
+{4166}{I would rather not talk to you, elf.}
+{4167}{Leave me alone.  Your drivel pains me, elf...}
+{4168}{I've little time for the likes of you, elf...}
+{4169}{Perhaps I need to be a bit clearer, elf.  Get away.}
+{4170}{I've not the patience for elves today.  Please, just move on...}
+
+{4200}{I've no desire to speak with you, half-breed}
+{4201}{Why are you bothering me again, half-breed?}
+{4202}{I do not recall asking you to come back, half-breed.}
+{4203}{Leave me be.  I have no time for elves, especially you...}
+{4204}{Meddling as always...can't you just leave me alone, half-breed?}
+{4205}{Just get away from me, half-breed...}
+{4206}{Why do you bother me again, half-breed?}
+{4207}{You elven types are always talking too much.  I've no time for it...}
+{4208}{I've not the stomach for you, half-elf...}
+{4209}{Why are you annoying me again, half-breed?}
+{4210}{Go away, half-breed. I don't need your aggravation...}
+{4211}{I've no interest in anything you'd have to say, half-breed.}
+{4212}{Speak your peace and be off, half-breed.}
+{4213}{You've come to the wrong person, half-breed.}
+{4214}{What do you want from me, half-breed?}
+{4215}{Why is someone of your kind talking to me, half-breed?}
+{4216}{I would rather not talk to you, half-breed.}
+{4217}{Leave me alone.  Your drivel pains me, half-breed...}
+{4218}{I've little time for the likes of you, half-breed...}
+{4219}{Perhaps I need to be a bit clearer, half-breed.  Get away.}
+
+
+{4250}{I've no desire to speak with you, gnome.}
+{4251}{Why are you bothering me again, gnome?}
+{4252}{I do not recall asking you to come back, gnome.}
+{4253}{Leave me be.  I have no time for you penny-pinching gnomes.}
+{4254}{Meddling as always...can't you just leave me alone, gnome?}
+{4255}{Just get away from me, gnome...}
+{4256}{Why do you bother me again, gnome?}
+{4257}{You gnomes are always blowing hot air.  I've no time for it...}
+{4258}{I've not the stomach for you, nor your miserly ways...}
+{4259}{Why are you annoying me again, gnome?}
+{4260}{Go away, gnome. I don't need your aggravation...}
+{4261}{I've no interest in anything you'd have to say, gnome.}
+{4262}{Speak your peace and be off, gnome.}
+{4263}{You've come to the wrong person, gnome.}
+{4264}{What do you want from me, gnome?}
+{4265}{Why is someone of your kind talking to me, you money-grubbing gnome?}
+{4266}{I would rather not talk to you, gnome.}
+{4267}{Leave me alone.  Your blathering pains me, money-changer...}
+{4268}{I've little time for the likes of you, gnome...}
+{4269}{Perhaps I need to be a bit clearer, gnome.  Get away.}
+{4270}{I've not the patience for gnomes today.  Please, just move on...}
+
+{4300}{I've no desire to speak with you, halfling.}
+{4301}{Why are you bothering me again, halfling?}
+{4302}{I do not recall asking you to come back, halfling.}
+{4303}{Leave me be.  I have no time for halflings, especially you...}
+{4304}{Meddling as always...can't you just leave me alone, halfling?}
+{4305}{Just get away from me, halfling...}
+{4306}{Why do you bother me again, halfling?}
+{4307}{You halflings are speaking nonsense.  I've no time for it...}
+{4308}{I've not the stomach for you, nor your halfling failings...}
+{4309}{Why are you annoying me again, halfling?}
+{4310}{Go away, half-breed. I don't need your aggravation...}
+{4311}{I've no interest in anything you'd have to say, halfling.}
+{4312}{Speak your peace, and be off, halfling.}
+{4313}{You've come to the wrong person, halfling.}
+{4314}{What do you want from me, halfling?}
+{4315}{Why is someone of your kind talking to me, halfling?}
+{4316}{I would rather not talk to you, halfling.}
+{4317}{Leave me alone.  Your drivel pains me, halfling...}
+{4318}{I've little time for the likes of you, halfling...}
+{4319}{Perhaps I need to be a bit clearer, halfling.  Get away.}
+{4320}{I've not the patience for halflings today.  Please, just move on...}
+{4321}{You lazy halflings always bring trouble wherever you go.}
+
+{4350}{I've no desire to speak with you, half-breed}
+{4351}{Why are you bothering me again, half-breed?}
+{4352}{I do not recall asking you to come back, half-breed.}
+{4353}{Leave me be.  I have no time for orcs, especially you...}
+{4354}{Meddling as always...can't you just leave me alone, half-breed?}
+{4355}{Just get away from me, half-breed...}
+{4356}{Why do you bother me again, half-breed?}
+{4357}{You orcs are always causing trouble.  I've no time for it...}
+{4358}{I've not the stomach for you, nor your orcish idiocy.}
+{4359}{Why are you annoying me again, half-breed?}
+{4360}{Go away, half-breed. I don't need your aggravation...}
+{4361}{I've no interest in anything you'd have to say, half-breed.}
+{4362}{Speak your peace, and be off, half-breed.}
+{4363}{You've come to the wrong person, half-breed.}
+{4364}{What do you want from me, half-breed?}
+{4365}{Why is someone of your kind talking to me, half-breed?}
+{4366}{I would rather not talk to you, half-breed.}
+{4367}{Leave me alone.  Your drivel pains me, half-breed...}
+{4368}{I've little time for the likes of you, half-breed...}
+{4369}{What brings you out from the safety of your hole, half-breed?}
+
+{4400}{I've no desire to speak with you, half-breed}
+{4401}{Why are you bothering me again, half-breed?}
+{4402}{I do not recall asking you to come back, half-breed.}
+{4403}{Leave me be.  I have no time for ogres, especially you...}
+{4404}{Meddling as always...can't you just leave me alone, half-breed?}
+{4405}{Just get away from me, half-breed...}
+{4406}{Why do you bother me again, ogre half-breed?}
+{4407}{You ogres are always getting in the way.  I've no time for it...}
+{4408}{I've not the stomach for you, nor your ogre idiocy.}
+{4409}{Why are you annoying me again, half-breed?}
+{4410}{Go away, half-breed. I don't need your aggravation...}
+{4411}{I've no interest in anything you'd have to say, half-breed.}
+{4412}{Speak your peace, and be off, half-breed.}
+{4413}{You've come to the wrong person, half-breed.}
+{4414}{What do you want from me, half-breed?}
+{4415}{Why is someone of your kind talking to me, ogre?}
+{4416}{I would rather not talk to you, half-breed.}
+{4417}{Leave me alone.  Your drivel pains me, half-breed...}
+{4418}{I've little time for the likes of you, half-ogre...}
+{4419}{Perhaps I need to be a bit clearer, half-ogre.  Get away.}
+{4420}{I've not the patience for ogres today.  Please, just move on...}
+
+
+
+// Second worst greeting messages start at 5000. Each PC race gets 50
+// messages starting on multiples of 50 (and the first block is reserved
+// for when the NPC race is the same as the PC race)
+
+{5000}{Why are you back here to bother me again, fool?}
+{5001}{I do not want to speak to you again, ignorant dog.}
+{5002}{Stop coming back here, miscreant.}
+{5003}{I have had enough of your nonsense. Leave me alone.}
+{5004}{Bugger it all! If it isn't the miscreant. What do you want now?}
+{5005}{I do not want to talk to you.}
+{5006}{I do not want to talk to you, dog.}
+{5007}{Oh Bloody hell. What do you want now, you intolerable wretch?}
+{5008}{Bog off! Why do you accost me?}
+{5009}{I do not have time for the likes of you.}
+{5010}{I do not like you at all. Why do you persist in bothering me?}
+{5011}{I do not want to talk to you.}
+{5012}{You do not belong here. Please leave before I am forced to beat you severely.}
+{5013}{Fire and Damnation, it's the decrepit piece of rubbish! Speak your peace, and be off.}
+{5014}{Are you talking to me, you grotty bounder?}
+{5015}{Why do you persist in bothering me so?}
+{5016}{What do you want of me now?}
+{5017}{Leave me be, you foul sod!}
+{5018}{Go away!}
+{5019}{Get out of here, dog!}
+
+
+
+{5050}{Bugger all! Ignorant human. Go away.}
+{5051}{I do not recall asking you back here, you disease ridden human.}
+{5052}{What is it now, wretch? I have no time for humans.}
+{5053}{Why do you bother me again, spineless human?}
+{5054}{<mutter> What brings slime like you around, human?}
+{5055}{What mad, wretched, little human insanity are you on about today?}
+{5056}{If it isn't the gutless pinprick of a human.}
+{5057}{Why are you always bothering me, human louse?}
+{5058}{Stay away from me, cursed human. I do not want your vile aggravation.}
+{5059}{Impertinent human! Go away.}
+{5060}{Human scum, leave me be!}
+{5061}{Why are you are bothering me again, boorish human?}
+{5062}{Have I not made my dislike for humans quite clear, dolt?}
+{5063}{Look, human, I do not like you, UNDERSTAND?}
+{5064}{Go away, you slack-jawed human ape!}
+{5065}{Need I remind you that humans are not welcome around here?}
+{5066}{Pah! The cravenly human again? Leave me be, you slack jawed ape!}
+{5067}{I despise you and your vapid kin, you mawkish human.}
+
+
+{5100}{Bugger all! Ignorant dwarf. Go away.}
+{5101}{I do not recall asking you back here, you disease ridden dwarf.}
+{5102}{What is it now, wretch? I have no time for dwarves.}
+{5103}{Why do you bother me again, spineless dwarf?}
+{5104}{<mutter> What brings slime like you around, dwarf?}
+{5105}{What mad, wretched, little dwarf insanity are you on about today?}
+{5106}{If it isn't the gutless pinprick of a dwarf.}
+{5107}{Why are you always bothering me, dwarven louse?}
+{5108}{Stay away from me, cursed dwarf. I do not want your vile aggravation.}
+{5109}{Impertinent dwarf! Go away.}
+{5110}{Dwarven scum, leave me be!}
+{5111}{Why are you are bothering me again, boorish dwarf?}
+{5112}{Have I not made my dislike for dwarves quite clear, dolt?}
+{5113}{Look, dwarf, I do not like you, UNDERSTAND?}
+{5114}{Go away, you slack-jawed dwarf ape!}
+{5115}{Need I remind you that dwarves are not welcome around here?}
+{5116}{Pah! The cravenly dwarf again? Leave me be, you slack jawed ape!}
+{5117}{I despise you and your vapid kin, you mawkish dwarf.}
+
+
+{5150}{Bugger all! Ignorant elf. Go away.}
+{5151}{I do not recall asking you back here, you disease ridden elf.}
+{5152}{What is it now, wretch? I have no time for elves.}
+{5153}{Why do you bother me again, spineless elf?}
+{5154}{<mutter> What brings slime like you around, elf?}
+{5155}{What mad, wretched, little elf insanity are you on about today?}
+{5156}{If it isn't the gutless pinprick of a elf.}
+{5157}{Why are you always bothering me, elven louse?}
+{5158}{Stay away from me, cursed elf. I do not want your vile aggravation.}
+{5159}{Impertinent elf! Go away.}
+{5160}{Elven scum, leave me be!}
+{5161}{Why are you are bothering me again, boorish elf?}
+{5162}{Have I not made my dislike for elves quite clear, dolt?}
+{5163}{Look, elf, I do not like you, UNDERSTAND?}
+{5164}{Go away, you slack-jawed elf ape!}
+{5165}{Need I remind you that elves are not welcome around here?}
+{5166}{Pah! The cravenly elf again? Leave me be, you slack jawed ape!}
+{5167}{I despise you and your vapid kin, you mawkish elf.}
+{5168}{Go away, you slack-jawed elven tree-monkey!}
+{5169}{I despise you and your presumptuous kin, you snobbish elf.}
+
+
+
+{5200}{Bugger all! Ignorant half-elf. Go away.}
+{5201}{I do not recall asking you back here, you disease ridden half-elf.}
+{5202}{What is it now, wretch? I have no time for half-breeds.}
+{5203}{Why do you bother me again, spineless half-elf?}
+{5204}{<mutter> What brings slime like you around, half-elf?}
+{5205}{What mad, wretched, little half-elf insanity are you on about today?}
+{5206}{If it isn't the gutless pinprick of a half-elf.}
+{5207}{Why are you always bothering me, you mongrel half-breed louse?}
+{5208}{Stay away from me, cursed half-breed. I do not want your vile aggravation.}
+{5209}{Impertinent half-elf! Go away.}
+{5210}{Half-breed scum, leave me be!}
+{5211}{Why are you are bothering me again, boorish half-elf?}
+{5212}{Have I not made my dislike for half-breeds quite clear, dolt?}
+{5213}{Look, half-elf, I do not like you, UNDERSTAND?}
+{5214}{Go away, you slack-jawed half-elf ape!}
+{5215}{Need I remind you that half-breeds are not welcome around here?}
+{5216}{Pah! The cravenly half-elf again? Leave me be, you slack jawed ape!}
+{5217}{I despise you and your vapid kin, you mawkish half-elf.}
+{5218}{Go away, you slack-jawed half-breed tree-monkey!}
+{5219}{I despise you and your presumptuous kin, you snobbish half-elf.}
+
+
+{5250}{Bugger all! Ignorant gnome. Go away.}
+{5251}{I do not recall asking you back here, you disease ridden gnome.}
+{5252}{What is it now, wretch? I have no time for gnomes.}
+{5253}{Why do you bother me again, spineless gnome?}
+{5254}{<mutter> What brings slime like you around, gnome?}
+{5255}{What mad, wretched, little gnome insanity are you on about today?}
+{5256}{If it isn't the gutless pinprick of a gnome.}
+{5257}{Why are you always bothering me, you mongrel gnome louse?}
+{5258}{Stay away from me, cursed gnome. I do not want your vile aggravation.}
+{5259}{Impertinent gnome! Go away.}
+{5260}{Gnome scum, leave me be!}
+{5261}{Why are you are bothering me again, boorish gnome?}
+{5262}{Have I not made my dislike for gnomes quite clear, dolt?}
+{5263}{Look, gnome, I do not like you, UNDERSTAND?}
+{5264}{Go away, you hairy nosed gnomish pachyderm!}
+{5265}{Need I remind you that gnomes are not welcome around here?}
+{5266}{Pah! The cravenly gnome again? Leave me be, you slack jawed ape!}
+{5267}{I despise you and your kin, you filthy capitalist gnome.}
+{5268}{Go away, you slack-jawed gnome tree-monkey!}
+{5269}{I despise you and your robber baron kin, you parsimonious gnome.}
+
+{5300}{Bugger all! Ignorant halfling. Go away.}
+{5301}{I do not recall asking you back here, you disease ridden halfling.}
+{5302}{What is it now, wretch? I have no time for halflings.}
+{5303}{Why do you bother me again, spineless halfling?}
+{5304}{<mutter> What brings slime like you around, halfling?}
+{5305}{What mad, wretched, little halfling insanity are you on about today?}
+{5306}{If it isn't the gutless pinprick of a halfling.}
+{5307}{Why are you always bothering me, halfling louse?}
+{5308}{Stay away from me, cursed halfling. I do not want your vile aggravation.}
+{5309}{Impertinent halfling! Go away.}
+{5310}{Halfling scum, leave me be!}
+{5311}{Why are you are bothering me again, boorish halfling?}
+{5312}{Have I not made my dislike for halflings quite clear, simpleton?}
+{5313}{Look, halfling, I do not like you, UNDERSTAND?}
+{5314}{Go away, you slovenly, greased halfling ape!}
+{5315}{Need I remind you that halflings are not welcome around here?}
+{5316}{Pah! The cravenly halfling again? Leave me be, you slack jawed ape!}
+{5317}{I despise you and your empty headed kin, you rotund halfling.}
+{5318}{Look, halfling, I do not like you, UNDERSTAND?}
+{5319}{Go away, you dull-witted, halfling goat!}
+{5320}{Those of your halfling breed are not welcome around here.}
+{5321}{Pah! The cravenly halfling again? Leave me be, wretched groundhog!}
+{5322}{I have no tolerance for any bigbellied, dirty footed halfling.}
+{5323}{I despise you and your thieving kin, you fat halfling.}
+{5324}{Stay away from me, you lardbottom of a halfling.} 
+
+{5350}{Bugger all! Ignorant half-orc. Go away.}
+{5351}{I do not recall asking you back here, you disease ridden half-orc.}
+{5352}{What is it now, wretch? I have no time for half-orcs.}
+{5353}{Why do you bother me again, spineless half-orc?}
+{5354}{<mutter> What brings slime like you around, half-orc?}
+{5355}{What mad, wretched, little half-orc insanity are you on about today?}
+{5356}{If it isn't the gutless pinprick of a half-orc.}
+{5357}{Why are you always bothering me, half-orc louse?}
+{5358}{Stay away from me, cursed half-orc. I do not want your vile aggravation.}
+{5359}{Impertinent half-orc! Go away.}
+{5360}{Half-orc scum, leave me be!}
+{5361}{Why are you are bothering me again, boorish half-orc?}
+{5362}{Have I not made my dislike for half-orcs quite clear, dolt?}
+{5363}{Look, half-orc, I do not like you, UNDERSTAND?}
+{5364}{Go away, you slack-jawed half-orc ape!}
+{5365}{Need I remind you that half-orcs are not welcome around here?}
+{5366}{Pah! The cravenly half-orc again? Leave me be, you slack jawed ape!}
+{5367}{I despise you and your ignorant kin, you beastly half-orc.}
+
+{5400}{Bugger all! Ignorant half-ogre. Go away.}
+{5401}{I do not recall asking you back here, you disease ridden half-ogre.}
+{5402}{What is it now, wretch? I have no time for half-ogres.}
+{5403}{Why do you bother me again, spineless half-ogre?}
+{5404}{<mutter> What brings slime like you around, half-ogre?}
+{5405}{What mad, wretched, little half-ogre insanity are you on about today?}
+{5406}{If it isn't the gutless pinprick of a half-ogre.}
+{5407}{Why are you always bothering me, half-ogre louse?}
+{5408}{Stay away from me, cursed half-ogre. I do not want your vile aggravation.}
+{5409}{Impertinent half-ogre! Go away.}
+{5410}{Half-ogre scum, leave me be!}
+{5411}{Why are you are bothering me again, boorish half-ogre?}
+{5412}{Have I not made my dislike for half-ogres quite clear, dolt?}
+{5413}{Look, half-ogre, I do not like you, UNDERSTAND?}
+{5414}{Go away, you slack-jawed half-ogre ape!}
+{5415}{Need I remind you that half-ogres are not welcome around here?}
+{5416}{Pah! The cravenly half-ogre again? Leave me be, you slack jawed ape!}
+{5417}{I despise you and your ignorant kin, you beastly half-ogre.}
+
+
+// Shrink spell messages start at 6000. Each PC race gets 50
+// messages starting on multiples of 50 (and the first block is reserved
+// for when the NPC race is the same as the PC race)
+
+{6000}{What happened to your, uh, height?}
+{6001}{Why are you so small?}
+{6002}{My word! A bit of the leprechaun in your family, 'ay what?}
+{6003}{I say! How is the air down there?}
+{6004}{Oh! I almost missed you. You could almost be mistaken for a sprite, you could!}
+{6005}{Oh my! Watch you do not get stepped on down there.}
+{6006}{Ods bodkins! You are a mite wee thing, are you not?}
+
+
+{6050}{Look at the tiny human!}
+{6051}{Holy Word! What an ugly pixie.}
+{6052}{Hmm. Awfully skinny for a halfling. And your feet are too small!}
+{6053}{My! What a tiny nose for a gnome!}
+{6054}{Oh my! I have never seen such a sickly looking dwarf before!}
+{6055}{Go away, child. You bother me.}
+{6056}{Hmm. What are you? A tiny human?}
+{6057}{I did not think you humans came in such varied sizes . . . especially so small!}
+{6058}{My word! You are a wee little human!}
+
+{6100}{Look at the tiny dwarf!}
+{6101}{Holy Word! Are you a kobold?}
+{6102}{Hmm. Awfully bulky for a leprechaun! And I didn't know they had such ratty beards.}
+{6103}{My! What a big beard for a sprite!}
+{6104}{Oh my! I have never seen a baby dwarf before! Even baby dwarves have beards!}
+{6105}{Go away, dwarven child. You bother me.}
+{6106}{Hmm. Something is wrong here. What are you? A tiny dwarf?}
+{6107}{I did not think you dwarves came in such varied sizes . . . especially so small!}
+{6108}{You are a dwarf, are you not? How is it you are so small?}
+{6109}{Oh! Are you . . . no, you cannot be. What are you?}
+{6110}{Piffle! You are a wee bit short for a dwarf!}
+{6111}{My word! You are a wee little dwarf!}
+
+{6150}{Look at the tiny elf!}
+{6151}{Holy Word! Are you a leprechaun?}
+{6152}{Hmm. Awfully pointy ears for a leprechaun!}
+{6153}{My! A sprite! Where are your wings?}
+{6154}{Oh my! I have never seen a baby elf before! Such sharp ear points!}
+{6155}{Go away, elven child. You bother me.}
+{6156}{Hmm. Something is wrong here. What are you? A tiny elf?}
+{6157}{I did not think you elves came in such varied sizes . . . especially so small!}
+{6158}{You are an elf, are you not? How is it you are so small?}
+{6159}{Oh! Are you . . . no, you cannot be. What are you?}
+{6160}{Piffle! You are wee bit short for an elf!}
+{6161}{My word! You are a wee little elf!}
+
+{6200}{Look at the tiny half-elf!}
+{6201}{Holy Word! Are you a half-leprechaun?}
+{6202}{My! A pixie! Whyever are you here?}
+{6203}{Go away, elven child. You bother me.}
+{6204}{Hmm. Something is wrong here. What are you? A tiny half-elf?}
+{6205}{I did not think you half-elves came in such varied sizes . . . especially so small!}
+{6206}{You are a half-elf, are you not? How is it you are so small?}
+{6207}{Oh! Are you...no, you cannot be. What are you?}
+{6208}{Piffle! You are wee bit short for a half-elf!}
+{6209}{My word! You are a wee little half-elf!}
+{6210}{You look like a cross between an elf and a halfling!}
+
+{6250}{Look at the tiny gnome!}
+{6251}{Holy Word! Are you a baby gnome?}
+{6252}{Hmm. Awfully big nose for a faerie!}
+{6253}{My! A tiny faerie! Where are your wings?}
+{6254}{Oh my! I have never seen a baby gnome before! Such a big nose on such a little head!}
+{6255}{Go away, gnomish child. You bother me.}
+{6256}{Hmm. Something is wrong here. What are you? A tiny gnome?}
+{6257}{I did not think you gnomes came in such varied sizes...especially so small!}
+{6258}{You are a gnome, are you not? How is it you are so small?}
+{6259}{Oh! Are you...no, you cannot be. What are you?}
+{6260}{Piffle! You are wee bit short for an gnome!}
+{6261}{My word! You are a wee little gnome!}
+{6262}{You are the smallest gnome I have ever seen!}
+
+{6300}{Look at the tiny halfling!}
+{6301}{Holy Word! Are you fat sprite?}
+{6302}{My! A big-footed pixie! Whyever are you here?}
+{6303}{Oh my! I have never seen a leprechaun before! Where is your pot of gold?}
+{6304}{Go away, halfling child. You bother me.}
+{6305}{Hmm. Something is wrong here. What are you? A tiny halfling?}
+{6306}{I did not think you halflings came in such varied sizes . . . especially so small!}
+{6307}{Piffle! You are wee bit short, even for a halfling!}
+{6308}{My word! You are a wee little halfling!}
+{6309}{You look like a cross between a tiny faerie and a halfling!}
+{6310}{You are so tiny! Are you a quarterling?}
+
+{6350}{Look at the tiny half-orc!}
+{6351}{Holy Word! Are you a baby half-orc?}
+{6352}{Hmm. Awfully ugly for a faerie!}
+{6353}{My! A hideous faerie! Are you an outcast?}
+{6354}{Oh my! I have never seen a baby half-orc before! A face only a mother could love!}
+{6355}{Go away, orcish child. You bother me.}
+{6356}{Hmm. Something is wrong here. What are you? A tiny half-orc?}
+{6357}{I did not think you half-orc came in such varied sizes . . . especially so small!}
+{6358}{You are a half-orc, are you not? How is it you are so small?}
+{6359}{Oh! Are you...no, you cannot be. What are you?}
+{6360}{Piffle! You are wee bit short for a half-orc!}
+{6361}{My word! You are a wee little half-orc!}
+{6362}{You are the smallest half-orc I have ever seen!}
+{6363}{You look as if someone bred an orc and a halfling!}
+
+{6400}{Look! A troglodyte!}
+{6401}{Holy Word! You are the ugliest human I have ever seen!}
+{6402}{You are the strangest thing I ever saw! Too small for a half-ogre, but sure ugly enough.}
+{6403}{My! A pint-size half-ogre! Looks like you need a big brother for protection, it does.}
+{6404}{Oh my! I have never seen such a small half-ogre! Or are you a half-orc?}
+{6405}{Go away, half-ogre child. You bother me.}
+{6406}{Hmm. Something is wrong here. What are you? A tiny half-ogre?}
+{6407}{I did not think you half-ogres came in such varied sizes . . . especially so small!}
+{6408}{You are a half-ogre, are you not? How is it you are so small?}
+{6409}{Oh! Are you...no, you cannot be. What are you?}
+{6410}{Piffle! You are wee bit short, especially for a half-ogre!}
+{6411}{My word! You are a wee little half-ogre!}
+{6412}{You look like a cross between a midget orc and an ogre!}
+{6413}{Are you a half-orc or a half-ogre?}

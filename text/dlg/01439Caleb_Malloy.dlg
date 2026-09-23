@@ -1,0 +1,147 @@
+{1}{Can I help you?}{Can I help you?}{}{}{}{}
+{2}{Perhaps.  Might I ask who you are, sir?}{}{5}{me 0, re 41}{27}{}
+{3}{Hello, Caleb.  Have you a moment?}{}{5}{me 1, re 41}{84}{}
+{4}{Sir!  What have I done to deserve such treatment?}{}{5}{me 0, re -40}{11}{}
+{5}{What's wrong, Caleb?  Have I done something to offend you?}{}{5}{me 1, re -40}{11}{}
+{7}{Uh...I not too smart.  Who you?}{}{-4}{me 0}{27}{}
+{8}{Hi, Caleb!  Got questions...}{}{-4}{me 1}{84}{}
+{9}{E:}{}{-4}{}{0}{}
+{11}{I just plain don't like you.  That's all I've got to say about it.}{I just plain don't like you, stranger.  That's all I've got to say about it.}{}{}{}{}
+{12}{I'm not looking to start trouble, I'd just like to speak with you...}{}{5}{me 0}{23}{re +10}
+{13}{Caleb!  Aren't we above this sort of thing?}{}{5}{me 1}{23}{re +10}
+{14}{I'd recommend you rein in your tongue, barkeep...}{}{5}{}{16}{re -5}
+{15}{E:}{}{5}{}{0}{}
+{16}{[His brow furrows.  Somehow, the scowl deepens.]  Did I hear you right?  Are you callin' me out in my own bar, lad?  You don't know how bad a mistake you just made...}{[His brow furrows.  Somehow, the scowl deepens.]  Did I hear you right?  Are you callin' me out in my own bar, girl?  You don't know how bad a mistake you just made...}{}{}{}{}
+{17}{Maybe I spoke too soon.  Accept my apology, sir...}{}{5}{}{23}{re +10}
+{18}{This place is yours?  What an utter dungheap...}{}{5}{}{}{co, fl 21}
+{19}{E:}{}{5}{}{0}{}
+{21}{That's it, boy.  No one talks that way to Caleb Malloy...}{That's it, lass.  No one talks that way to Caleb Malloy...}{}{}{}{}
+{23}{[He rubs his chin, squinting an eye at you.]  Well, maybe you ain't so bad after all, lad.  What is it you need?}{[He rubs his chin, squinting an eye at you.]  Well, maybe you ain't so bad after all, girl.  What is it you need?}{}{}{}{}
+{24}{Could I start by asking who you are?}{}{5}{me 0}{27}{re +5}
+{25}{Splendid, Caleb.  Might I ask you a few questions?}{}{5}{me 1}{84}{}
+{26}{E:}{}{5}{}{0}{}
+{27}{[The man before you is thick, barrel-chested, wearing an apron and what looks to be a permanent scowl.  He regards you evenly.] I'm called Malloy...Caleb Malloy, and this is my pub.}{[The man before you is thick, barrel-chested, wearing an apron and what looks to be a permanent scowl.  He regards you evenly.] I'm called Malloy...Caleb Malloy, and this is my pub.}{}{}{}{}
+{28}{Nice to meet you, Caleb.}{}{5}{}{33}{}
+{30}{Hi, Caleb!}{}{-4}{}{33}{}
+{31}{E:}{}{1}{}{0}{}
+{33}{Good to meet you too, lad. [He looks around, then leans a bit closer.]  Listen, you're new around here...a man can tell just by lookin' who knows the Boil and who don't.  This ain't a nice place to be visitin', especially when you don't know the lay 'a the land...}{Good to meet you too, miss. [He looks around, then leans a bit closer.]  Listen, you're new around here...a man can tell just by lookin' who knows the Boil and who don't.  This ain't a nice place to be visitin', especially when you don't know the lay 'a the land...}{}{}{}{}
+{34}{What do you mean, 'the Boil'?}{}{5}{lf1 0}{41}{}
+{35}{Thanks for the advice, but I think I can handle myself...}{}{5}{}{191}{re -5}
+{37}{Uh...what you mean 'the Boil'?}{}{-4}{}{41}{}
+{38}{E:}{}{1}{}{0}{}
+{41}{The Boil...that's what this here stinkin' neighborhood is called.  [He laughs, wiping off the bar.]  Bloody den of thieves, brigands and murderers.  A few poor families here and there...mostly just tryin' to make a living and stay out 'a the way of Clan Maug and Pollock's gang...}{The Boil...that's what this here stinkin' neighborhood is called.  [He laughs, wiping off the bar.]  Bloody den of thieves, brigands and murderers.  A few poor families here and there...mostly just tryin' to make a living and stay out 'a the way of Clan Maug and Pollock's gang...}{}{}{}{}
+{42}{Clan Maug and Pollock's gang...who are they?}{}{5}{lf1 0}{159}{}
+{43}{Can you tell me anything else about the Boil?}{}{5}{lf1 0}{145}{}
+{44}{I'm looking for work...}{}{5}{}{54}{}
+{45}{Uh...who Clan Mog and Po-o-ll-a-ks Gang...?}{}{-4}{}{159}{}
+{53}{I need work...}{}{-4}{}{54}{}
+{54}{Well...you could talk with some of the boys here in the bar.  Of course, that would mean you'd have to make a choice which gang you wanted to join up with...Maug's or Pollock's...and then you'd have the other gang out to kill you.  It gets pretty messy out here...[He chuckles to himself.]}{Well...you could talk with some of the boys here in the bar.  Of course, that would mean you'd have to make a choice which gang you wanted to join up with...Maug's or Pollock's...and then you'd have the other gang out to kill you.  It gets pretty messy out here...[He chuckles to himself.]}{}{}{}{}
+{55}{Who are Maug and Pollock?}{}{5}{lf1 0}{159}{}
+{56}{Are there any other alternatives?}{}{5}{}{60}{}
+{57}{Who Mog and Po-o-ll-a-k?}{}{-4}{}{159}{}
+{58}{What else I do, Caleb?}{}{-4}{}{60}{}
+{60}{Hmmm. [He looks you over.]  I've got a job that needs doin'.  Might be easy, or it might get messy.  You never know here in the Boil...}{Hmmm. [He looks you over.]  I've got a job that needs doin'.  Might be easy, or it might get messy.  You never know here in the Boil...}{}{}{}{}
+{61}{I'd be interested in hearing about it...}{}{5}{}{68}{}
+{62}{What job?}{}{-4}{}{68}{}
+{63}{K:}{}{1}{}{84}{}
+{64}{E:}{}{1}{}{0}{}
+{68}{Well, I get a pretty regular shipment of whiskey every week.  'Cept lately, one of the gangs been stealin' it.  Normally I don't get any trouble from them, and neither one is ownin' up to it 'cause they know somebody's getting' their skull smashed when I find out who it is...}{Well, I get a pretty regular shipment of whiskey every week.  'Cept lately, one of the gangs been stealin' it.  Normally I don't get any trouble from them, and neither one is ownin' up to it 'cause they know somebody's getting' their skull smashed when I find out who it is...}{}{}{}{}
+{69}{I see.  What is it you need me for?}{}{5}{}{74}{}
+{70}{I'd rather not get involved.  Might I ask you a few questions?}{}{5}{}{0}{}
+{71}{What you need me do, Caleb?}{}{-4}{}{74}{}
+{72}{Uh...I not like that.  I ask more questions!}{}{-4}{}{0}{}
+{74}{Well, I need someone to go and pick up the whiskey for me.  I'm runnin' real low.  You go pick it up, and I'll give you 500 gold pieces when you get it back here.  What do you think?}{Well, I need someone to go and pick up the whiskey for me.  I'm runnin' real low.  You go pick it up, and I'll give you 500 gold pieces when you get it back here.  What do you think?}{}{}{}{qu1086 1}
+{75}{Sounds good.  What do I do?}{}{5}{}{80}{qu1086 2, gf2178 1}
+{76}{I'm not interested.  A few more questions...}{}{5}{}{84}{}
+{77}{Sure!  Where I pick up?}{}{-4}{}{80}{qu1086 2, gf2178 1}
+{78}{I not do that...but got more questions...}{}{-4}{}{84}{}
+{80}{The man's name is Biggs.  He'll be waitin' for you in the middle of the Garrillon Bridge, at the towers.  I'll send a boy over there, and tell him to be waitin' for you.  Watch yourself, lad...the Boil ain't a place to be getting' careless, you hear me?}{The man's name is Biggs.  He'll be waitin' for you in the middle of the Garrillon Bridge, at the towers.  I'll send a boy over there, and tell him to be waitin' for you.  Watch yourself, lass...the Boil ain't a place to be getting' careless, you hear me?}{}{}{}{}
+{81}{E:}{}{1}{}{0}{}
+{84}{Of course.  How may I help you...?}{Of course.  How may I help you...?}{}{}{}{}
+{86}{What can you tell me about 'the Boil'?}{}{5}{lf1 0}{145}{}
+{87}{Is there any work to be had around here?}{}{5}{qu1086 0}{54}{}
+{88}{You said you might have a job picking up some whiskey...?}{}{5}{qu1086 1}{68}{}
+{90}{I've yet to pick up your whiskey, Caleb...}{}{5}{qu1086 2, ni 5647, gf2179 0}{104}{}
+{91}{I've picked up your whiskey, Caleb...here it is...}{}{5}{qu1086 2, in 5647}{109}{in 5647}
+{92}{I tried to pick up the whiskey, but I was assaulted...}{}{5}{qu1086 2, gf2179 1, ni 5647}{114}{}
+{94}{Tell me 'bout 'the Boil', Caleb!}{}{-4}{}{145}{}
+{95}{I need a job, Caleb...}{}{-4}{qu1086 0}{54}{}
+{96}{You say you got a job for me, Caleb...?}{}{-4}{qu1086 1}{68}{}
+{97}{I no pick up wisskee, Caleb...}{}{-4}{qu1086 2, ni 5647, gf2179 0}{104}{}
+{98}{I've got wisskee, Caleb!  Here take it...!}{}{-4}{qu1086 2, in 5647}{109}{in 5647}
+{99}{I tried pick up wisskee, but bad men took it...!}{}{-4}{qu1086 2, gf2179 1, ni 5647}{114}{}
+{100}{E:}{}{1}{}{0}{}
+{104}{The quicker you do that, the better, lad.  The boys here don't like it when old Caleb runs out of whiskey...}{The quicker you do that, the better, lass.  The boys here don't like it when old Caleb runs out of whiskey...}{}{}{}{}
+{105}{K:}{}{1}{}{84}{}
+{106}{E:}{}{1}{}{0}{}
+{109}{You have!  That's grand, lad.  Thank you so much for the help.  Here's your money...[He hands you a handful of gold.]  You're welcome in Malloy's anytime...}{You have!  That's grand, lass.  Thank you so much for the help.  Here's your money...[He hands you a handful of gold.]  You're welcome in Malloy's anytime...}{}{}{}{qu1086 4, $$500}
+{110}{K:}{}{1}{}{84}{}
+{111}{E:}{}{1}{}{0}{}
+{114}{Really?  That's a shame, lad.  I figured something like that would happen.  Did you get a good look at who did it?}{Really?  That's a shame, lass.  I figured something like that would happen.  Did you get a good look at who did it?}{}{}{}{}
+{115}{No...uh, they didn't say...}{}{5}{}{120}{}
+{116}{Yes...it was Malek Nebbs, from the Clan Maug...}{}{5}{}{125}{gf2180 1}
+{117}{Uh...I dunno...}{}{-4}{}{120}{}
+{118}{Yeah!  Man name Ka-a-l-le-bb Ne-e-bb-bs?}{}{-4}{}{125}{gf2180 1}
+{120}{I'm very sorry, lad.  Thanks for tryin' to help me anyhow...here's a 100 gold pieces for your trouble...}{I'm very sorry, lass.  Thanks for tryin' to help me anyhow...here's a 100 gold pieces for your trouble...}{}{}{}{$$100}
+{121}{K:}{}{1}{}{84}{}
+{122}{E:}{}{1}{}{0}{}
+{125}{Nebbs!  That son of a...I'll kill him!  I swear I will!}{Nebbs!  That son of a...I'll kill him!  I swear I will!}{}{}{}{}
+{126}{Shhh!  Caleb!  Keep your voice down!}{}{5}{}{135}{}
+{127}{I agree!  I'm with you, Caleb...let's kill the bastard!}{}{5}{}{-2}{}
+{128}{Perhaps I should leave...good day to you, Caleb...}{}{5}{}{-2}{}
+{130}{Caleb!  Be quiet!  Bad men here...}{}{-4}{}{135}{}
+{132}{Yeah!  Smash Nebbs!}{}{-4}{}{-2}{}
+{133}{E:}{}{-4}{}{-2}{}
+{134}{}{}{}{}{}{}
+{135}{I'm not afraid of any of these boys!  Caleb Malloy is no man to be stealin' from!  Nebbs just made a big mistake!}{I'm not afraid of any of these boys!  Caleb Malloy is no man to be stealin' from!  Nebbs just made a big mistake!}{}{}{}{}
+{136}{I'll have no more of this...good day, Caleb...}{}{5}{}{-2}{}
+{137}{Uh...I gotta go!  Buh-bye!}{}{-4}{}{-2}{}
+{138}{Old Nebbs is lucky he isn't here.  When I see him next, he's a dead man!  Clan Maug be damned!}{Old Nebbs is lucky he isn't here.  When I see him next, he's a dead man!  Clan Maug be damned!}{}{}{}{}
+{139}{K:}{}{1}{}{84}{}
+{140}{E:}{}{1}{}{0}{}
+{143}{There you are, Nebbs!  I'll break your skinny neck!}{There you are, Nebbs!  I'll break your skinny neck!}{}{}{}{}
+{145}{What do you want to know about the Boil?}{What do you want to know about the Boil?}{}{}{}{}
+{146}{Who are the Clan Maug and Pollock's Gang?}{}{5}{}{159}{}
+{147}{Are there any shops in the Boil?}{}{5}{}{175}{}
+{148}{Where can a man stay in the Boil?}{1}{5}{}{183}{}
+{149}{Where can a woman stay in the Boil?}{0}{5}{}{183}{}
+{150}{I've a few more general questions...}{}{5}{}{84}{}
+{152}{Uh...who Clan Mog and Po-o-ll-a-ks Gang...?}{}{-4}{}{159}{}
+{153}{Where I buy things in the Boil?}{}{-4}{}{175}{}
+{154}{Where I sleep in Boil?}{}{-4}{}{183}{}
+{155}{Uh...some other questions...}{}{-4}{}{84}{}
+{156}{E:}{}{1}{}{0}{}
+{159}{Pollock's a half-ogre who runs a mish-mash bunch of Hooligans here in the boil--not too organized, mind you, but vicious and cruel. }{Pollock's a half-ogre who runs a mish-mash bunch of Hooligans here in the boil--not too organized, mind you, but vicious and cruel. }{}{}{}{}
+{160}{And the Clan Maug?}{}{5}{}{163}{}
+{163}{Darian Maug's Clan is mostly orcs and half-orcs.  He plays it a little quieter, but you can't trust him anymore than a Bangellian viper. }{Darian Maug's Clan is mostly orcs and half-orcs.  He plays it a little quieter, but you can't trust him anymore than a Bangellian viper.  Either way, if you get involved with one, the other gang's going to be after your hide.  A man needs to be careful about who he works for in the Boil...}{}{}{}{}
+{164}{Who's the better gang to work for?}{}{5}{}{167}{}
+{165}{Who better to work for?}{}{-4}{}{167}{}
+{167}{Well, that's tough to say, lad.  If you get involved with one, the other gang's going to be after your hide.  A man needs to be careful about who he works for in the Boil...once you decide, there's no going back...}{Well, that's tough to say, lass.  If you get involved with one, the other gang's going to be after your hide.  A man needs to be careful about who he works for in the Boil...once you decide, there's no going back...}{}{}{}{}
+{168}{I see.  A few more questions about the Boil...}{}{5}{}{145}{}
+{169}{A few more general questions...}{}{5}{}{84}{}
+{171}{Okay!  A few more Boil questions...}{}{-4}{}{145}{}
+{172}{Uh...some other questions...}{}{-4}{}{84}{}
+{173}{E:}{}{1}{}{0}{}
+{175}{There ain't much to buy around here.  Old Mellin Bungerton, the halfling, has a wagon set up somewhere around here.  He's usually got something for sale, and most of it stolen...}{There ain't much to buy around here.  Old Mellin Bungerton, the halfling, has a wagon set up somewhere around here.  He's usually got something for sale, and most of it stolen...}{}{}{}{}
+{176}{I see.  A few more questions about the Boil...}{}{5}{}{145}{}
+{177}{A few more general questions...}{}{5}{}{84}{}
+{179}{Okay!  A few more Boil questions...}{}{-4}{}{145}{}
+{180}{Uh...some other questions...}{}{-4}{}{84}{}
+{181}{E:}{}{1}{}{0}{}
+{183}{Not too many places for a stranger to lay his head here in the Boil, lad.  You might want to try old Mother Tilley...she's got a shack just to the west of here.  Sometimes she'll take in a boarder or two, if she trusts 'em...}{Not too many places for a stranger to lay his head here in the Boil, lass.  You might want to try old Mother Tilley...she's got a shack just to the west of here.  Sometimes she'll take in a boarder or two, if she trusts 'em...}{}{}{}{}
+{184}{I see.  A few more questions about the Boil...}{}{5}{}{145}{}
+{185}{A few more general questions...}{}{5}{}{84}{}
+{187}{Okay!  A few more Boil questions...}{}{-4}{}{145}{}
+{188}{Uh...some other questions...}{}{-4}{}{84}{}
+{189}{E:}{}{1}{}{0}{}
+{191}{[He smirks at you.]  Really, now?  Think you know your way around the Boil, do you?  I guess you won't be needin' my advice, then.  Guess I'll just keep my mouth shut about what goes on around here...}{[He smirks at you.]  Really, now?  Think you know your way around the Boil, do you?  I guess you won't be needin' my advice, then.  Guess I'll just keep my mouth shut about what goes on around here...}{}{}{}{}
+{192}{That's the way I'd like it.  Now, is there any jobs to be had here?}{}{5}{}{54}{lf1 1}
+{193}{Wait!  Perhaps I spoke too soon, Caleb...}{}{5}{}{196}{re +5}
+{194}{E:}{}{5}{}{0}{}
+{196}{[He laughs, slapping his hand on the bar.]  Maybe you ain't as stupid as you look, lad.  You could do a lot worse than to hear what old Caleb has to say about the Boil...}{[He laughs, slapping his hand on the bar.]  Maybe you ain't as stupid as you look, lass.  You could do a lot worse than to hear what old Caleb has to say about the Boil...}{}{}{}{}
+{197}{K:}{}{5}{}{84}{}
+{198}{E:}{}{5}{}{0}{}
+{200}{[Caleb looks over at Nebbs' corpse.]  Heh.  Looks like someone already took care of him.  Serves the bastard right...}{[Caleb looks over at Nebbs' corpse.]  Heh.  Looks like someone already took care of him.  Serves the bastard right...}{}{}{}{}
+{201}{K:}{}{5}{}{84}{}
+{202}{E:}{}{5}{}{0}{}
+

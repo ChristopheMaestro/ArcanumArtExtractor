@@ -1,0 +1,218 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Greetings, madam.  Might I ask who you are?}{}{5}{me 0, re 41}{34}{}
+{3}{Hello to you, Jayna.  Might I ask you a few questions?}{}{5}{me 1, re 41}{38}{}
+{4}{Madam!  Did I hear you correctly? What have I done to offend you?}{}{5}{me 0, re -40}{10}{}
+{5}{Jayna!  Is there something I've done to offend you?}{}{5}{me 1, re -40}{10}{}
+{6}{Uh...hi!  Who you?}{}{-4}{me 0}{34}{}
+{7}{Hey, Jayna!  I talk to you...?}{}{-4}{me 1}{38}{}
+{8}{E:}{}{1}{}{0}{}
+{10}{I don't mean to be rude, but I just don't like you, sir.  Please, just leave me alone...}{I don't mean to be rude, but I just don't like you, madam.  Please, just leave me alone...}{}{}{}{}
+{11}{Are you QUITE sure of that opinion, madam?}{}{5}{ch 11}{29}{}
+{12}{Madam!  Please!  Can't we talk in a more civilized manner...?}{}{5}{me 0}{24}{re +15}
+{13}{Jayna!  I thought we'd put our differences behind us...}{}{5}{me 1}{24}{re +15}
+{14}{You're asking for trouble with words like that, wench...}{}{5}{}{17}{re -5}
+{15}{E:}{}{1}{}{0}{}
+{17}{I won't be threatened by the likes of you!  I can defend myself if necessary!}{I won't be threatened by the likes of you!  I can defend myself if necessary!}{}{}{}{}
+{18}{Things need not deteriorate so.  Please, accept my apologies...}{}{5}{}{24}{re +15}
+{19}{I'm afraid that you're going to have to.  You've sealed your fate...}{}{5}{}{}{co, fl 22}
+{20}{E:}{}{1}{}{0}{}
+{22}{Fine!  I will fight you if I must!}{Fine!  I will fight you if I must!}{}{}{}{}
+{24}{[The woman seems a little embarrassed at her words.]  I'm sorry.  Sometimes I don't think before I speak.  Perhaps we might start again?}{[The woman seems a little embarrassed at her words.]  I'm sorry.  Sometimes I don't think before I speak.  Perhaps we might start again?}{}{}{}{}
+{25}{I'd like that, madam.  Might I ask who you are?}{}{5}{me 0}{34}{re +5}
+{26}{Sounds good to me, Jayna.  Might I ask you a question or two?}{}{5}{me 1}{38}{}
+{27}{E:}{}{1}{}{0}{}
+{29}{[Her eyes widen a bit.  Then she smiles, warmly.]  I'm flabbergasted, sir!  I mean, if I would have known you were so, well...civilized!...I would never have spoken}{[Her eyes widen a bit.  Then she smiles, warmly.]  I'm flabbergasted, madam!  I mean, if I would have known you were so, well...civilized!...I would never have spoken}{}{}{}{}
+{30}{I feel the same way.  Might I ask your name, madam?}{}{5}{me 0}{34}{}
+{31}{Of course, Jayna.  Do you have a moment?}{}{5}{me 1}{38}{}
+{32}{E:}{}{1}{}{0}{}
+{34}{My name is Jayna...Jayna Stiles.}{My name is Jayna...Jayna Stiles.}{}{}{}{}
+{35}{Greetings, madam.  Have you a moment?}{}{5}{}{38}{}
+{36}{Hi Jayna!  I aks you sum questions?}{}{-4}{}{38}{}
+{38}{How can I help you?}{How can I help you?}{}{}{}{}
+{39}{What are you doing here in Dernholm, Jayna?}{}{5}{lf1 0}{55}{lf1 1}
+{40}{What sort of healing do you do?}{}{5}{lf1 1}{65}{}
+{41}{Tell me a little about Dernholm...}{}{5}{}{170}{}
+{42}{Are you sure you wouldn't like to come along with me, Jayna?}{}{5}{lf3 1, ta 10}{155}{jo 0 160}
+{43}{Are you sure you wouldn't like to come along with me, Jayna?}{}{5}{lf3 1, ta -9}{165}{}
+{44}{Whut you do in Durn-home, Jayna?}{}{-4}{lf1 0}{55}{}
+{45}{Whut kind healing you do?}{}{-4}{lf1 1}{65}{lf1 1}
+{46}{I wanna know 'about Durn-home!}{}{-4}{}{170}{}
+{47}{You wanna come with me, Jayna?}{}{-4}{lf3 1, ta 10}{155}{jo 0 160}
+{48}{You wanna come with me, Jayna?}{}{-4}{lf3 1, ta -9}{165}{}
+{49}{H:}{}{1}{}{38}{}
+{50}{E:}{}{1}{}{0}{}
+{55}{What am I doing here?  Well, what does anyone really do in Dernholm?  Not much to do in this town...wasn't always this way, to hear the way my parents used to talk about it.  [She seems a little sad, sighing.]  I guess you could say I'm a healer, if I'm anything at all...}{What am I doing here?  Well, what does anyone really do in Dernholm?  Not much to do in this town...wasn't always this way, to hear the way my parents used to talk about it.  [She seems a little sad, sighing.]  I guess you could say I'm a healer, if I'm anything at all...}{}{}{}{lf1 1}
+{56}{What sort of healing do you do?}{}{5}{}{65}{}
+{57}{Where are your parents?  Do they live here as well?}{}{5}{}{75}{}
+{58}{What happened to this place?}{}{5}{}{170}{}
+{59}{Whut kind healing you do?}{}{-4}{}{65}{}
+{60}{Where you mom and dad?  They live in Durn-home?}{}{-4}{}{75}{}
+{61}{Uh...whut happen to Durn-home?}{}{-4}{}{170}{}
+{62}{K:}{}{1}{}{38}{}
+{63}{E:}{}{1}{}{0}{}
+{65}{Well...I don't really do any of it very well. There hasn't been a decent doctor around here for a very long time, and our best midwife died not too long ago.  I really want to learn, but there's not really anyone to learn from.   [She gets a determined look in her eyes.] But I'm still trying!  You see, it's really important to me that I become a great healer....}{Well...I don't really do any of it very well. There hasn't been a decent doctor around here for a very long time, and our best midwife died not too long ago.  I really want to learn, but there's not really anyone to learn from.   [She gets a determined look in her eyes.] But I'm still trying!  You see, it's really important to me that I become a great healer....}{}{}{}{}
+{66}{Why is that, Jayna?}{}{5}{}{75}{lf2 1}
+{67}{Why, Jayna?}{}{-4}{}{75}{lf2 1}
+{68}{How are your studies progressing?}{}{5}{}{95}{}
+{69}{You learnin' a lot?}{}{-4}{}{95}{}
+{70}{E:}{}{1}{}{0}{}
+{75}{Well...[She looks to the ground.  You see that this is difficult for her to talk about.]...there was a disease that came to Dernholm a few years ago.  As I told you, there hasn't been a doctor here for a long time.  We didn't have any medicines, and shipments from Tarant are very scarce...}{Well...[She looks to the ground.  You see that this is difficult for her to talk about.]...there was a disease that came to Dernholm a few years ago.  As I told you, there hasn't been a doctor here for a long time.  We didn't have any medicines, and shipments from Tarant are very scarce...}{}{}{}{}
+{76}{And so?}{}{5}{}{80}{}
+{77}{Uh...yeah?}{}{-4}{}{80}{}
+{80}{Well, my parents got sick, you see...[Tears well up in her eyes.]  They were so brave, right up until the end...but they died.  Many others died here as well.  No one around knew how to deal with such sickness, and so all we could do is sit here and watch our loved ones pass away.  [She dries her eyes.]  And it was then that I decided...}{Well, my parents got sick, you see...[Tears well up in her eyes.]  They were so brave, right up until the end...but they died.  Many others died here as well.  No one around knew how to deal with such sickness, and so all we could do is sit here and watch our loved ones pass away.  [She dries her eyes.]  And it was then that I decided...}{}{}{}{}
+{81}{What did you decide?}{}{5}{}{85}{}
+{82}{Decide whut?}{}{-4}{}{85}{}
+{85}{I decided that I never wanted to watch people die that way again.  I decided to become a great healer...to save others from the pain I felt when I saw my parents die.  And so that's what I've been trying to do...}{I decided that I never wanted to watch people die that way again.  I decided to become a great healer...to save others from the pain I felt when I saw my parents die.  And so that's what I've been trying to do...}{}{}{}{}
+{86}{How are your studies progressing?}{}{5}{}{95}{}
+{87}{Why isn't there a doctor here?  What has happened to Dernholm?}{}{5}{}{170}{}
+{88}{You learnin' a lot?}{}{-4}{}{95}{}
+{89}{Why no dok-ter here?  Whut happen to Durn-home?}{}{-4}{}{170}{}
+{90}{K:}{}{1}{}{38}{}
+{91}{E:}{}{1}{}{0}{}
+{95}{Not too well, unfortunately.  As I said there's not anyone to learn from around here.  I have a little healing skill, but I'm just no good at magick.  [She lowers her voice, leaning towards you.]  Actually, I'm very interested in some of the newer, technological practices...}{Not too well, unfortunately.  As I said there's not anyone to learn from around here.  I have a little healing skill, but I'm just no good at magick.  [She lowers her voice, leaning towards you.]  Actually, I'm very interested in some of the newer, technological practices...}{}{}{}{}
+{96}{Really?  Do you really think technology is better?}{}{5}{}{100}{}
+{97}{Uh?  You like teck-nologee more?}{}{-4}{}{100}{}
+{100}{Shhh!  Keep your voice down!  Don't you know?  You can't even talk about such things around here...it's the law!  King Praetor got it in his old noggin a long time ago that technology is terrible, and he doesn't want anyone even thinking about it.  [She looks about.]  You see where THAT has gotten us...}{Shhh!  Keep your voice down!  Don't you know?  You can't even talk about such things around here...it's the law!  King Praetor got it in his old noggin a long time ago that technology is terrible, and he doesn't want anyone even thinking about it.  [She looks about.]  You see where THAT has gotten us...}{}{}{}{}
+{101}{Do you know much about...er...THAT sort of healing?}{}{5}{}{110}{}
+{102}{Is that what happened to Dernholm?}{}{5}{}{170}{}
+{103}{Whut you know 'bout teck-nologee healin'?}{}{-4}{}{110}{}
+{104}{That why Durn-home so bad?}{}{-4}{}{170}{}
+{105}{K:}{}{1}{}{38}{}
+{106}{E:}{}{1}{}{0}{}
+{110}{Not a whole lot.  I've read a few textbooks...I have to keep them well-hidden, mind you...but there really just isn't much to be learned around here...}{Not a whole lot.  I've read a few textbooks...I have to keep them well-hidden, mind you...but there really just isn't much to be learned around here...}{}{}{}{}
+{111}{Well, why don't you leave?  Go to Tarant, maybe?}{}{5}{}{120}{}
+{112}{Why you stay here?}{}{-4}{}{120}{}
+{113}{K:}{}{1}{}{38}{}
+{114}{E:}{}{1}{}{0}{}
+{120}{[She sighs.]  I can't really afford to.  My parents weren't wealthy people, and I don't make much money here in Dernholm.  Plus, it's not all that safe for a woman to be travelling all by herself.  I'm afraid that I'm stuck here, for now...}{[She sighs.]  I can't really afford to.  My parents weren't wealthy people, and I don't make much money here in Dernholm.  Plus, it's not all that safe for a woman to be travelling all by herself.  I'm afraid that I'm stuck here, for now...}{}{}{}{}
+{121}{Hmmm.  Maybe you'd like to come along with me...?}{}{5}{ta 10}{130}{re +5}
+{122}{Hmmm.  Maybe you'd like to come along with me...?}{}{5}{ta -9}{165}{}
+{123}{That's a shame, really.  A few more questions...?}{}{5}{}{38}{}
+{124}{Uh...mebbe you come with me!}{}{-4}{ta 10}{130}{re +5}
+{125}{Uh...mebbe you come with me!}{}{-4}{ta -9}{165}{}
+{126}{Uh...too bad.  Sum more questions...?}{}{-4}{}{38}{}
+{127}{E:}{}{1}{}{0}{}
+{130}{[Hope flares in her eyes.]  What?  What do you mean?}{[Hope flares in her eyes.]  What?  What do you mean?}{}{}{}{}
+{131}{Well, I'm...er...travelling.  I could use a scientific healer...}{}{5}{}{140}{re +5}
+{132}{I...uh...going places.  Might need teck-nologee healer...}{}{-4}{}{140}{re +5}
+{133}{Nothing.  Forget it.  A few more questions...}{}{5}{}{38}{re -5}
+{134}{Nuthin'.  Sum more questions...?}{}{-4}{}{38}{re -5}
+{135}{E:}{}{1}{}{0}{}
+{140}{Really?  I mean...I don't know very much...I don't know how much help I would be...}{Really?  I mean...I don't know very much...I don't know how much help I would be...}{}{}{}{}
+{141}{Perhaps we could learn things together...?}{}{5}{}{150}{re +5}
+{142}{Uh...mebbe we both learn things!}{}{-4}{}{150}{re +5}
+{143}{Perhaps you're right.  Forget I mentioned it.  One or two more things...}{}{5}{}{38}{re -5}
+{144}{Yeah, you're right!  I not need you!  Sum more questions...}{}{-4}{}{38}{re -5}
+{145}{E:}{}{1}{}{0}{}
+{150}{[She laughs aloud, clapping her hands together.]  Oh yes!  That sounds just wonderful!  I mean...I'll work my very hardest to learn while we're abroad...you can count on me, sir!  I won't let you down...}{[She laughs aloud, clapping her hands together.]  Oh yes!  That sounds just wonderful!  I mean...I'll work my very hardest to learn while we're abroad...you can count on me, madam!  I won't let you down...}{}{}{}{lf3 1}
+{151}{So...you'll come along, then?}{}{5}{}{155}{jo 0 160}
+{152}{So you wanna come?}{}{-4}{}{155}{jo 0 160}
+{155}{Was there anything else?}{Was there anything else?}{}{}{}{}
+{156}{K:}{}{1}{}{38}{}
+{157}{E:}{}{1}{}{0}{}
+{160}{Yes!  I would love to come with you!  I'm ready to go right now!}{Yes!  I would love to come with you!  I'm ready to go right now!}{}{}{}{re +5}
+{161}{Then let's do so...}{}{5}{}{0}{}
+{162}{Okay!  Let's go!}{}{-4}{}{0}{}
+{165}{[She looks you over, considering.]  No...you don't seem very technologically inclined.  I'm looking to learn about technology...you and I wouldn't be a very good combination...}{[She looks you over, considering.]  No...you don't seem very technologically inclined.  I'm looking to learn about technology...you and I wouldn't be a very good combination...}{}{}{}{}
+{166}{K:}{}{1}{}{38}{}
+{167}{E:}{}{1}{}{0}{}
+{170}{Well, that's a long story.  You see, Dernholm was once a powerful kingdom...I don't know a lot of history, but I do know that it was once as powerful as Tarant, or Caladon...}{Well, that's a long story.  You see, Dernholm was once a powerful kingdom...I don't know a lot of history, but I do know that it was once as powerful as Tarant, or Caladon...}{}{}{}{}
+{171}{Really?  What happened?}{}{5}{}{175}{}
+{172}{Whut happen to it?}{}{-4}{}{175}{}
+{173}{E:}{}{1}{}{0}{}
+{175}{Well...King Praetor decided long ago that he would tolerate no technology in his kingdom.  He was, well...influenced...by his mage "counselors".  King Praetor assumed the throne at a very young age, and he was very impressionable...}{Well...King Praetor decided long ago that he would tolerate no technology in his kingdom.  He was, well...influenced...by his mage "counselors".  King Praetor assumed the throne at a very young age, and he was very impressionable...}{}{}{}{}
+{176}{Please, continue...}{}{5}{}{180}{}
+{177}{I wanna hear more!}{}{-4}{}{180}{}
+{178}{K:}{}{1}{}{38}{}
+{179}{E:}{}{1}{}{0}{}
+{180}{Well, eventually there was a war between Tarant and Cumbria, and Tarant was victorious.  The Dragon Knights...King Praetor's Elite guard...were almost all wiped out in the final battle.  Dernholm crumbled, deteriorated into what you see here today...}{Well, eventually there was a war between Tarant and Cumbria, and Tarant was victorious.  The Dragon Knights...King Praetor's Elite guard...were almost all wiped out in the final battle.  Dernholm crumbled, deteriorated into what you see here today...}{}{}{}{}
+{181}{Tell me more about the Dragon Knights...}{}{5}{}{190}{}
+{182}{I wanna hear more about Drag-un Nites!}{}{-4}{}{190}{}
+{183}{K:}{}{1}{}{38}{}
+{184}{E:}{}{1}{}{0}{}
+{190}{I don't know much about them...but if you talk to Lianna Pel Dar, she can tell you much more.  She lives by herself...on the northern end of town...}{I don't know much about them...but if you talk to Lianna Pel Dar, she can tell you much more.  She lives by herself...on the northern end of town...}{}{}{}{}
+{191}{K:}{}{1}{}{38}{}
+{192}{E:}{}{1}{}{0}{}
+{210}{What can I do for you?}{What can I do for you?}{}{}{}{}
+{211}{B:}{}{1}{wa 0}{}{}
+{212}{K:}{}{1}{wa 0}{225}{}
+{213}{I'd like you to do something for me, Jayna...}{}{5}{wa 0}{267}{}
+{214}{I need you do sumthin. Jayna!}{}{-4}{wa 0}{267}{}
+{215}{What sort of things can you make, Jayna?}{}{5}{wa 0}{}{su}
+{216}{Whut stuff you make, Jayna?}{}{-4}{wa 0}{}{su}
+{217}{You can stop waiting now, Jayna.}{}{5}{wa 1}{295}{uw 0 280}
+{218}{Stop waitin' Jayna!}{}{-4}{wa 1}{295}{uw 0 280}
+{219}{E:}{}{1}{}{0}{}
+{225}{What do you need to know?}{What do you need to know?}{}{}{}{}
+{226}{I'd like to know a few things about you, Jayna...}{}{5}{}{}{ce}
+{228}{What do you know about this place?}{}{5}{ia 21}{316}{}
+{229}{What do you know about this place?}{}{5}{ia 3}{321}{}
+{230}{What do you know about this place?}{}{5}{ia -5, ia -21, ia -3}{326}{}
+{231}{You seem upset with me, Jayna!  Is there anything I can do for you?}{}{5}{re -20}{239}{}
+{232}{I wanna know stuff 'bout you, Jayna!}{}{-4}{}{}{ce}
+{234}{Whut you know 'bout this place, Jayna?}{}{-4}{ia 21}{316}{}
+{235}{Whut you know 'bout this place, Jayna?}{}{-4}{ia 3}{321}{}
+{236}{Whut you know 'bout this place, Jayna?}{}{-4}{ia -5, ia -21, ia -3}{326}{}
+{237}{You mad at me, Jayna!  Kin I do sumthin' fer you?}{}{-4}{re -20}{239}{}
+{238}{E:}{}{1}{}{0}{}
+{239}{Well...it's not that I'm ungrateful that you invited me along, but I'm not very happy with the way you've been acting.  Of course, I've always been partial to sweet cakes...if you happen to have some, everything might look a little better...}{Well...it's not that I'm ungrateful that you invited me along, but I'm not very happy with the way you've been acting.  Of course, I've always been partial to sweet cakes...if you happen to have some, everything might look a little better...}{}{}{}{}
+{240}{Come now, Jayna...is that really necessary?}{}{5}{ch 20}{249}{re +20}
+{241}{Thank goodness I've got some right here!}{}{5}{in 3618, ch -19}{-11}{re +20}
+{242}{I'll look into getting you some, Jayna...}{}{5}{in -3618, ch -19}{257}{}
+{243}{Oh, the foolish things we dream of!  Let's go, shall we?}{}{5}{}{}{re -5, fl 259}
+{246}{Good!  I got some here!}{}{-4}{in 3618, ch -19}{-11}{re +20}
+{247}{I get you sum soon, Jayna!}{}{-4}{in -3618, ch -19}{257}{}
+{248}{Too bad!  You no getting' nuthin'!}{}{-4}{}{}{re -5, fl 259}
+{249}{[Jayna seems torn, but can't seem to resist your charm.]  Oh, I'm sorry.  The whole thing must be my fault, somehow.  Shall we continue on?}{[Jayna seems torn, but can't seem to resist your charm.]  Oh, I'm sorry.  The whole thing must be my fault, somehow.  Shall we continue on?}{}{}{}{}
+{250}{E:}{}{5}{}{0}{}
+{251}{[She takes them from you, eating them in one bite.]  Ah.  Let's get moving, shall we?}{[She takes them from you, eating them in one bite.]  Ah.  Let's get moving, shall we?}{}{}{}{}
+{252}{So you'll join me again, Jayna?}{}{5}{}{295}{jo 0 298}
+{253}{E:}{}{5}{}{0}{}
+{257}{Good!  I look forward to it!}{Good!  I look forward to it!}{}{}{}{}
+{258}{E:}{}{5}{}{0}{}
+{259}{Well!  I've never...!  I won't tolerate this for much longer, I'll you that!}{Well!  I've never...!  I won't tolerate this for much longer, I'll you that!}{}{}{}{}
+{267}{What do you need me to do?}{What do you need me to do?}{}{}{}{}
+{268}{Move away, Jayna.}{}{5}{}{0}{so}
+{269}{Move a bit closer, Jayna.}{}{5}{}{0}{sc}
+{270}{Wait here for a while...}{}{5}{wa 0}{283}{wa}
+{271}{You can stop waiting now, Jayna.}{}{5}{wa 1}{295}{uw 0 280}
+{272}{I think you'd best leave the group.}{}{5}{}{286}{lv}
+{273}{Get away, Jayna!}{}{-4}{}{0}{so}
+{274}{Come closer, Jayna!}{}{-4}{}{0}{sc}
+{275}{You wait here...}{}{-4}{}{283}{wa}
+{276}{Stop waitin', Jayna!}{}{-4}{}{295}{uw 0 280}
+{277}{I no want you in group anymore...}{}{-4}{}{286}{lv}
+{278}{[Back]}{}{1}{}{210}{}
+{280}{Fine by me!  Let's get going...}{Fine by me!  Let's get going...}{}{}{}{}
+{281}{E:}{}{1}{}{0}{}
+{283}{Okay.  But try not to be too long, alright?}{Okay.  But try not to be too long, alright?}{}{}{}{}
+{284}{E:}{}{1}{}{0}{}
+{286}{Oh.  [She seems very sad, a little frightened.]  Well...I'm sure I'll find something to do around here.  Good bye...}{Oh.  [She seems very sad, a little frightened.]  Well...I'm sure I'll find something to do around here.  Good bye...}{}{}{}{lf31 1}
+{287}{E:}{}{1}{}{0}{}
+{289}{Hello again!  Good to see you again!}{Hello again!  Good to see you again!}{}{}{}{}
+{290}{Will you join me again, Jayna?}{}{5}{}{295}{jo 0 298}
+{291}{You seem upset with me, Jayna!  Is there anything I can do for you?}{}{5}{re -20}{239}{}
+{292}{You wanna join, Jayna?}{}{-4}{}{295}{jo 0 298}
+{293}{You mad at me, Jayna!  Kin I do sumthin' fer you?}{}{-4}{re -20}{239}{}
+{294}{E:}{}{1}{}{0}{}
+{295}{Was there anything else?}{Was there anything else?}{}{}{}{}
+{296}{E:}{}{1}{}{0}{}
+{298}{Yes, that sounds like a grand idea!  Let's get going...}{Yes, that sounds like a grand idea!  Let's get going...}{}{}{}{lf31 0}
+{299}{E:}{}{1}{}{0}{}
+{301}{Hmmm.  Kept me waiting quite a long time, didn't you?}{Hmmm.  Kept me waiting quite a long time, didn't you?}{}{}{}{}
+{302}{Sorry about that Jayna.  Will you join me again?}{}{5}{}{295}{jo 0 298}
+{303}{You seem upset with me, Jayna!  Is there anything I can do for you?}{}{5}{re -20}{239}{}
+{312}{I no mean to!  You wanna join me, Jayna?}{}{-4}{}{295}{jo 0 298}
+{313}{You mad at me, Jayna!  Kin I do sumthin' fer you?}{}{-4}{re -20}{239}{}
+{314}{K:}{}{1}{}{225}{}
+{315}{E:}{}{1}{}{0}{}
+{316}{This is Tarant!  I'm so very excited!  If there's anywhere that a person could learn about technology, this is the place!  I think Gilbert Bates, the inventor of the steam engine, lives here!  And then there's Tarant University, the shipyards, the factories...I've never seen a more beautiful place in all my life!}{This is Tarant!  I'm so very excited!  If there's anywhere that a person could learn about technology, this is the place!  I think Gilbert Bates, the inventor of the steam engine, lives here!  And then there's Tarant University, the shipyards, the factories...I've never seen a more beautiful place in all my life!}{}{}{}{}
+{317}{K:}{}{1}{}{225}{}
+{318}{E:}{}{1}{}{0}{}
+{321}{Oh...this is Black Root.  It's a small fishing town, but lately it has been in the news.  Rumor has it that Black Root wants to secede from Cumbria and join the Unified Kingdom!  King Praetor is not happy about that at all...}{Oh...this is Black Root.  It's a small fishing town, but lately it has been in the news.  Rumor has it that Black Root wants to secede from Cumbria and join the Unified Kingdom!  King Praetor is not happy about that at all...}{}{}{}{}
+{322}{K:}{}{1}{}{225}{}
+{323}{E:}{}{1}{}{0}{}
+{326}{[She looks around, shaking her head.]  I can't rightly say.  I haven't seen much of the world, friend.  But I'll keep my eyes open for you...}{[She looks around, shaking her head.]  I can't rightly say.  I haven't seen much of the world, friend.  But I'll keep my eyes open for you...}{}{}{}{}
+{327}{K:}{}{1}{}{225}{}
+{328}{E:}{}{1}{}{0}{}
+

@@ -1,0 +1,204 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{W:}{}{5}{lf1 0, re41}{20}{lf1 1}
+{3}{I must not have heard you correctly...}{}{5}{re-40, ch10}{380}{re50}
+{4}{Please, excuse my presence, sir. I mean no offense.}{}{5}{re-40, ch-9}{390}{re41}
+{5}{Speak to me like that again and you will seriously regret it.}{}{5}{re-40, sk2 12}{400}{re41}
+{6}{W:}{}{-4}{lf1 0}{260}{lf1 1}
+{7}{I have decided to look for the part you want.}{}{5}{qu 1047 1}{100}{}
+{8}{I have the part you wanted.}{}{5}{qa1047 1, in 5605, qb1047 3}{250}{}
+{9}{K:}{}{1}{lf1 1, re41}{30}{}
+{10}{I gonna look for thing you want!}{}{-4}{qu 1047 1}{100}{}
+{11}{I got thing for you.}{}{-4}{qa1047 1, in 5605, qb1047 3}{250}{}
+{12}{I do not believe there is any call to speak to me rudely, sir.}{}{5}{re-40, sk2 12}{400}{re45}
+{14}{E:}{}{1}{}{0}{}
+{20}{I am Weldo Rubin, the renowned halfling adventurer, at your service sir.}{I am Weldo Rubin, the renowned halfling adventurer, at your service madam.}{}{}{}{}
+{21}{What are you doing out here, Weldo?}{}{5}{}{350}{}
+{22}{A halfling adventurer?}{}{5}{ra-2, ra-5, ra-6}{360}{re -5}
+{24}{E:}{}{1}{}{0}{}
+{30}{What do you wish to know?}{What do you wish to know?}{}{}{}{}
+{31}{Can you tell me of your adventures?}{}{5}{lf 0 0}{40}{lf0 1}
+{32}{Tell me more about your adventures.}{}{5}{lf 0 1}{40}{}
+{33}{About the city in the desert...}{}{5}{lf10 1, ar-11}{50}{}
+{34}{I have decided to look for the part you want.}{}{5}{qu 1047 1}{100}{}
+{35}{I have the part you wanted.}{}{5}{qu 1047 2, in 5605}{250}{}
+{36}{I need find old city in desert!}{}{-4}{qa1027 1, ni 5616}{410}{lf10 1}
+{37}{I need find old city in desert!}{}{-4}{qu1027 0, qa1051 1, ni5616}{410}{lf10 1}
+{38}{E:}{}{1}{}{0}{}
+{40}{I always love to speak of my adventures! What can I share with you?}{I always love to speak of my adventures! What can I share with you?}{}{}{}{}
+{41}{Have you found anything of interest in your travels?}{}{5}{}{130}{lf3 1}
+{42}{Have you seen  any cities in the wastes?}{}{5}{lf10 0}{170}{lf10 1}
+{43}{What kind of monsters have seen in the desert?}{}{5}{}{210}{lf 0 1}
+{45}{E:}{}{1}{}{0}{}
+{50}{Yes, what is it?}{Yes, what is it?}{}{}{}{}
+{51}{Join me and we will travel there.}{}{5}{re 60}{460}{jo 0 60}
+{53}{Join me and we will travel there.}{}{5}{re -59}{70}{}
+{54}{Would you please show me where it is on my map?}{}{5}{re 60, lf25 0}{80}{}
+{55}{Would you please show me where it is on my map?}{}{5}{re 40, re -59, lf3 0, lf25 0}{480}{}
+{57}{Would you please show me where it is on my map?}{}{5}{re 40, re -59,  lf 3 1, lf25 0}{90}{}
+{58}{Would you please show me where it is on my map?}{}{5}{re -39, lf25 0}{110}{}
+{59}{E:}{}{1}{}{0}{}
+{60}{That sounds great! I would love to go on more adventures!}{That sounds great! I would love to go on more adventures!}{}{}{}{mm 11}
+{61}{Let's head out then.}{}{1}{}{0}{}
+{70}{No thanks, sir. I prefer to adventure alone.}{No thanks, madam. I prefer to adventure alone.}{}{}{}{}
+{71}{Could you at least show me where it is located?}{}{5}{re 60, lf25 0}{80}{}
+{72}{Could you at least show me where it is located?}{}{5}{re 40, re -59, lf 10 1, lf25 0, lf10 0}{80}{}
+{73}{Could you at least show me where it is located?}{}{5}{re 40, re -59, lf 3 1, lf25 0}{90}{}
+{75}{Could you at least show me where it is located?}{}{5}{re -39, lf 3 0, lf25 0}{110}{}
+{79}{E:}{}{1}{}{0}{}
+{80}{OK. I have marked the location of the city on your map.}{OK. I have marked the location of the city on your map.}{}{}{}{mm 11, lf25 1}
+{81}{K:}{}{5}{}{30}{}
+{83}{Join with me, and we will travel to the desert city together!}{}{5}{re 60}{460}{jo 0 60}
+{84}{Join with me, and we will travel to the desert city together!}{}{5}{re -59}{70}{}
+{89}{E:}{}{1}{}{0}{}
+{90}{I will mark your map if you bring me a part for the device I showed you. I think I need a little metal sprocket that fell off near the wreckage. Will you do this?}{I will mark your map if you bring me a part for the device I showed you. I think I need a little metal sprocket that fell off near the wreckage. Will you do this?}{}{}{}{qu 1047 1}
+{91}{I'll do it. Where can I find these ruins?}{}{5}{}{100}{}
+{92}{Look, you tiny fool, you had better tell me.}{}{5}{ra -2, ra -5, ra -6, ps 10, lf25 0}{80}{re -10}
+{93}{I'm beginning to wonder if you actually know where the city is.}{}{8}{ps 10}{120}{}
+{94}{What if I pay you?}{}{5}{}{270}{}
+{98}{Would this do? [Show him the old gear.]}{}{5}{in5605}{250}{}
+{99}{E:}{}{1}{}{0}{}
+{100}{Great! Here is the location of the ruins. [He marks your map.] Return with the part when you have found it.}{Great! Here is the location of the ruins. [He marks your map.] Return with the part when you have found it.}{}{}{}{mm73, qu 1047 2}
+{101}{E:}{}{1}{}{0}{}
+{110}{No. I don't trust you. They seemed like nice people.}{No. I don't trust you. They seemed like nice people.}{}{}{}{}
+{111}{Look, you tiny fool, you had better tell me.}{}{5}{ra -2, ra -5, ra -6, ps 10}{80}{re -10}
+{112}{Is there something I can trade for the information?}{}{5}{lf3 0}{470}{}
+{113}{I'm beginning to wonder if you actually know where the city is.}{}{5}{ps 10}{120}{}
+{114}{What if I pay you?}{}{5}{}{270}{}
+{115}{Is there something I can trade for the information?}{}{5}{lf3 1}{90}{}
+{120}{Of course I know where it is!}{Of course I know where it is!}{}{}{}{}
+{121}{Then show me. There's no harm in that.}{}{5}{}{80}{}
+{123}{K:}{}{5}{}{30}{}
+{130}{Well, yes, actually. I found a very interesting device on a foray near here. [He holds up a rather small, peculiar item for you to look at.] I found this in some old ruins out in the wastes.}{Well, yes, actually. I found a very interesting device on a foray near here. [He holds up a rather small, peculiar item for you to look at.] I found this in some old ruins out in the wastes.}{}{}{}{}
+{131}{Really?}{}{5}{}{140}{}
+{140}{Yes. The ruins were made of a metal of a sort I've never encountered before. Their was all manner of junk around and inside them. I found this device while rummaging through it.}{Yes. The ruins were made of a metal of a sort I've never encountered before. Their was all manner of junk around and inside them. I found this device while rummaging through it.}{}{}{}{}
+{141}{I see.}{}{5}{}{150}{}
+{150}{Some nasty lizards must live underneath it, because they swarmed out at the noise and I had to retreat a ways.}{Some nasty lizards must live underneath it, because they swarmed out at the noise and I had to retreat a ways.}{}{}{}{}
+{151}{Sounds bad.}{}{5}{}{160}{}
+{160}{Well, you have to expect danger in my line of work.}{Well, you have to expect danger in my line of work.}{}{}{}{}
+{161}{K:}{}{5}{}{30}{}
+{162}{E:}{}{1}{}{0}{}
+{170}{Well, it's pretty empty out there, and I haven't been here exploring all that long. But I found this one city, way out in the wastes, surrounded by shifting sands. No roads led into or out of the place.}{Well, it's pretty empty out there, and I haven't been here exploring all that long. But I found this one city, way out in the wastes, surrounded by shifting sands. No roads led into or out of the place.}{}{}{}{}
+{171}{Please, continue.}{}{5}{}{180}{}
+{180}{There was a no obvious entrance, so I climbed the surrounding wall. From that vantage I could see the whole place.}{There was a no obvious entrance, so I climbed the surrounding wall. From that vantage I could see the whole place.}{}{}{}{}
+{181}{Anyone live there?}{}{5}{}{190}{}
+{190}{Yeah, there were a lot of people inside, lots of different races. Everyone was wearing robes and acting very polite and all.}{Yeah, there were a lot of people inside, lots of different races. Everyone was wearing robes and acting very polite and all.}{}{}{}{}
+{191}{Did you go inside?}{}{5}{}{200}{}
+{200}{No, I climbed back down and left. Bigger folk have their own ways, and I won't be disturbing them.}{No, I climbed back down and left. Bigger folk have their own ways, and I won't be disturbing them.}{}{}{}{}
+{201}{Would you join with me and travel there?}{}{5}{re 60}{460}{jo 0 60}
+{202}{Would you join with me and travel there?}{}{5}{re -59}{70}{}
+{204}{Would you please show me where it is on my map?}{}{5}{re 60, lf25 0}{80}{}
+{205}{Would you please show me where it is on my map?}{}{5}{re 40, re -59, lf3 0, lf25 0}{480}{}
+{206}{Would you please show me where it is on my map?}{}{5}{re 40, re -59,  lf 3 1, lf25 0}{90}{}
+{207}{Would you please show me where it is on my map?}{}{5}{re -39, lf25 0}{110}{}
+{209}{E:}{}{1}{}{0}{}
+{210}{I have seen all kinds of strange critters. I have seen giant spiders with the upper body of a woman! That wasn't the strangest thing, though.}{I have seen all kinds of strange critters. I have seen giant spiders with the upper body of a woman! That wasn't the strangest thing, though.}{}{}{}{}
+{211}{What could be stranger than that?}{}{5}{}{220}{}
+{220}{Once I saw the darnedest thing. Deep in the desert, I saw a rock stand up and move around. I swear it looked at me, too.}{Once I saw the darnedest thing. Deep in the desert, I saw a rock stand up and move around. I swear it looked at me, too.}{}{}{}{}
+{221}{Did you speak to it?}{}{5}{}{230}{}
+{222}{Did you attack it?}{}{5}{}{240}{}
+{230}{Don't be absurd. I took off my hat, bowed graciously, and left it to its own devices.}{Don't be absurd. I took off my hat, bowed graciously, and left it to its own devices.}{}{}{}{}
+{231}{K:}{}{5}{}{30}{}
+{232}{E:}{}{1}{}{0}{}
+{240}{Such a typical question...no I did not. I left.}{Such a typical question...no I did not. I left.}{}{}{}{}
+{241}{K:}{}{5}{}{30}{}
+{242}{E:}{}{1}{}{0}{}
+{250}{That's great! Give it to me and I will mark your map.}{That's great! Give it to me and I will mark your map.}{}{}{}{}
+{251}{Here it is.}{}{5}{}{80}{qu 1047 4, in 5605}
+{252}{Here it be!}{}{-4}{}{80}{qu 1047 4, in 5605}
+{258}{I no wanna. I go way.}{}{-4}{}{0}{}
+{259}{I don't think so. Good day.}{}{5}{}{0}{}
+{260}{Oh, dear...an imbecile. MY NAME IS WELDO RUBIN. I AM ADVENTURER, WHAT DO YOU WANT?}{Oh, dear...an imbecile. MY NAME IS WELDO RUBIN. I AM ADVENTURER, WHAT DO YOU WANT?}{}{}{}{}
+{261}{I need find old city in desert!}{}{-4}{qa1027 1, ni 5616}{410}{}
+{262}{I need find old city in desert!}{}{-4}{qu1027 0, qa1051 1, ni5616}{410}{}
+{269}{Nuthin'.}{}{-4}{}{0}{}
+{270}{Give me 100 coins and I will mark your map.}{Give me 100 coins and I will mark your map.}{}{}{}{}
+{271}{Ok, here is 100 coins.}{}{5}{$$ 100}{80}{$$ -100}
+{272}{I don't have that much money.}{}{5}{$$ -99}{280}{}
+{273}{How about 50 coins?}{}{5}{ha 10, $$ 50}{80}{$$ -50}
+{274}{N:}{}{5}{}{280}{}
+{280}{Too bad for you then.}{Too bad for you then.}{}{}{}{}
+{281}{K:}{}{5}{}{30}{}
+{282}{E:}{}{5}{}{0}{}
+{290}{How can I help you?}{How can I help you?}{}{}{}{}
+{291}{B:}{}{5}{wa 0}{297}{}
+{292}{U: 12}{}{5}{wa 0}{297}{}
+{293}{K:}{}{5}{wa 0}{311}{}
+{294}{I need you to do something...}{}{5}{fo 1, wa 0}{304}{}
+{295}{Let's Go.}{}{5}{wa 1}{297}{uw 0 297}
+{296}{Nothing never mind.}{}{5}{wa 0}{0}{}
+{297}{Is there anything else?}{Is there anything else?}{}{}{}{}
+{298}{B:}{}{5}{wa 0}{297}{}
+{299}{U: 12}{}{5}{wa 0}{297}{}
+{300}{K:}{}{5}{wa 0}{311}{}
+{301}{I need you to do something...}{}{5}{fo 1, wa 0}{304}{}
+{302}{Let's Go.}{}{5}{wa 1}{297}{uw 0 297}
+{303}{No. Nothing else.}{}{5}{wa 0}{0}{}
+{304}{What would you like me to do?}{What would you like me to do?}{}{}{}{}
+{305}{Move away.}{}{5}{}{297}{so}
+{306}{Move closer.}{}{5}{}{297}{sc}
+{307}{Wait here.}{}{5}{wa 0}{297}{wa }
+{308}{Disband.}{}{5}{}{297}{lv}
+{309}{[Back]}{}{5}{}{290}{}
+{310}{Will do.}{Will do.}{}{}{}{}
+{311}{What do you need to know?}{What do you need to know?}{}{}{}{}
+{330}{What can you tell me about the ruins of Vendigroth?}{}{5}{ss 18,ss-18}{344}{}
+{339}{[Back]}{}{5}{}{290}{}
+{340}{Nothing, never mind.}{}{5}{}{0}{}
+{341}{Sorry, can't help you with that.}{Sorry, can't help you with that.}{}{}{}{}
+{342}{K:}{}{5}{}{311}{}
+{343}{E:}{}{1}{}{0}{}
+{344}{Not much, I am afraid. I just know about the city in the wastes.}{Not much, I am afraid. I just know about the city in the wastes.}{}{}{}{}
+{345}{K:}{}{5}{}{311}{}
+{346}{E:}{}{5}{}{0}{}
+{350}{Why, adventuring, of course! What better place to explore than the dreaded wastes of Vendigroth!}{Why, adventuring, of course! What better place to explore than the dreaded wastes of Vendigroth!}{}{}{}{}
+{351}{Have you seen any cities out in the wastes, perhaps?}{}{5}{lf10 0}{170}{lf 0 1, lf 10 1}
+{352}{Have you found anything of interest in your travels?}{}{5}{}{130}{lf 0 1, lf 3 1}
+{353}{What kind of monsters have seen in the desert?}{}{5}{}{210}{lf 0 1}
+{360}{[He pulls himself up to his full height, and attempts to look you in the eye.] What are you implying? I can adventure with the best of them!}{[He pulls himself up to his full height, and attempts to look you in the eye.] What are you implying? I can adventure with the best of them!}{}{}{}{}
+{361}{It is just that most halflings aren't much for adventuring, is all.}{}{5}{}{370}{}
+{370}{Oh. Well, I actually find most halflings a bit on the boring side. No thrill in their lives, nor do they want any.}{Oh. Well, I actually find most halflings a bit on the boring side. No thrill in their lives, nor do they want any.}{}{}{}{}
+{371}{K:}{}{5}{}{30}{}
+{379}{E:}{}{5}{}{0}{}
+{380}{Oh, please excuse my rudeness. I don't know what could have come over me. What can I help you with?}{Oh, please excuse my rudeness. I don't know what could have come over me. What can I help you with?}{}{}{}{}
+{381}{W:}{}{1}{lf1 0}{20}{lf1 1}
+{382}{K:}{}{1}{lf1 1}{30}{}
+{389}{E:}{}{1}{}{0}{}
+{390}{Well, I suppose you can not help being the miserable sort of person you seem to be. What can I help you with?}{Well, I suppose you can not help being the miserable sort of person you seem to be. What can I help you with?}{}{}{}{}
+{391}{W:}{}{1}{lf1 0}{20}{lf1 1}
+{392}{K:}{}{1}{lf1 1}{40}{}
+{393}{You can scream for mercy as I kill you.}{}{5}{}{0}{co}
+{399}{E:}{}{1}{}{0}{}
+{400}{Okay, okay, I apologize. No need to get all huffy with me! What is it you want?}{Okay, okay, I apologize. No need to get all huffy with me! What is it you want?}{}{}{}{}
+{401}{W:}{}{1}{lf1 0}{20}{lf1 1}
+{402}{K:}{}{1}{lf1 1}{40}{}
+{403}{I want you to scream for mercy as I kill you.}{}{5}{}{0}{co}
+{409}{Nothing. Good day.}{}{5}{}{0}{}
+{410}{In my many travels through the wastes, I have only come upon one city...but I don't know if I feel comfortable imparting its location to an idiot such as yourself.}{In my many travels through the wastes, I have only come upon one city...but I don't know if I feel comfortable imparting its location to an idiot such as yourself.}{}{}{}{}
+{411}{Pleeeeease?}{}{-4}{}{420}{}
+{412}{I no idiot! I no like you now!}{}{-4}{}{450}{}
+{420}{Hmmm. There is something I need. If you were to get it for me, I would tell you where the city is.}{Hmmm. There is something I need. If you were to get it for me, I would tell you where the city is.}{}{}{}{}
+{421}{What that be?}{}{-4}{}{430}{}
+{430}{I found a very interesting device on a foray near here. [He holds up a rather small, peculiar item for you to look at.] I found this in some old ruins out in the wastes.}{I found a very interesting device on a foray near here. [He holds up a rather small, peculiar item for you to look at.] I found this in some old ruins out in the wastes.}{}{}{}{}
+{431}{Huh?}{}{-4}{}{440}{}
+{440}{Exactly. I was unable to get all the parts for this, as I was accosted by some lizards. If you go get me the part I need, I will show you where the old city is.}{Exactly. I was unable to get all the parts for this, as I was accosted by some lizards. If you go get me the part I need, I will show you where the old city is.}{}{}{}{qu 1047 1}
+{441}{Okay!}{}{-4}{}{100}{qu1047 2}
+{442}{Is this part? [Show him the part.]}{}{-4}{in5605}{250}{}
+{449}{I no wanna. I go way.}{}{-4}{}{0}{}
+{450}{Hmmm. There is something I need. If you were to get it for me, I would tell you where the city is.}{Hmmm. There is something I need. If you were to get it for me, I would tell you where the city is.}{}{}{}{}
+{451}{What that be?}{}{-4}{}{430}{}
+{460}{Is there anything else?}{Is there anything else?}{}{}{}{}
+{461}{Can you tell me of your adventures?}{}{5}{lf 0 0}{40}{}
+{462}{Tell me more about your adventures.}{}{5}{lf 0 1}{40}{}
+{463}{About the city in the desert...}{}{5}{lf10 1, ar-11}{50}{}
+{464}{I have decided to look for the part you want.}{}{5}{qu 1047 1}{100}{}
+{465}{I have the part you wanted.}{}{5}{qu 1047 2, in 5605}{250}{}
+{468}{E:}{}{1}{}{0}{}
+{470}{I found a very interesting device on a foray near here. [He holds up a rather small, peculiar item for you to look at.] I found this in some old ruins out in the wastes. Trouble is, it is missing a part. It doesn't work, as it is.}{I found a very interesting device on a foray near here. [He holds up a rather small, peculiar item for you to look at.] I found this in some old ruins out in the wastes. Trouble is, it is missing a part. It doesn't work, as it is.}{}{}{}{}
+{471}{I'm listening.}{}{5}{}{90}{}
+{480}{I do not know...perhaps if you did something for me, first...}{I do not know...perhaps if you did something for me, first...}{}{}{}{}
+{481}{Look, you tiny fool, you had better tell me.}{}{5}{ra -2, ra -5, ra -6, ps 10}{80}{re -10}
+{482}{What would that be?}{}{5}{lf3 1}{90}{}
+{483}{I'm beginning to wonder if you actually know where the city is.}{}{5}{ps 10}{120}{}
+{484}{What if I pay you, instead?}{}{5}{}{270}{}
+{485}{What would that be?}{}{5}{lf3 0}{470}{}
+

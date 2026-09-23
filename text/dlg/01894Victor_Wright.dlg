@@ -1,0 +1,184 @@
+{1}{G:}{}{}{}{}{}
+{2}{Greetings, sir.  Might I ask your name?}{}{5}{lf1 0, re 41}{25}{}
+{3}{That was very unmannerly.  I only wish to know your name.}{}{5}{lf1 0, re -40}{25}{}
+{4}{Have I in some way offended you, Mr. Wright?}{}{5}{lf1 1, lf2 0}{43}{}
+{5}{Hello again, Mr. Wright.  Might I have a little more of your time?}{}{5}{lf1 1, lf2 1,re 41}{49}{}
+{6}{Have I in some way offended you, Mr. Wright?}{}{5}{lf1 1, lf2 1, re -40}{39}{}
+{7}{I think I'll deliver that note for you.}{}{5}{qu1134 1}{157}{}
+{8}{I haven't delivered the note yet...}{}{5}{qu1134 2}{160}{}
+{9}{I have delivered the note to Mrs. Halster.}{}{5}{qu1134 3}{163}{re +5}
+{10}{I'll sell you my story, if you're still interested...}{}{5}{lf4 1, gf2030 0, lf 8 0}{99}{}
+{11}{I might have a newsworthy story for you.}{}{5}{gf2030 0, lf3 1, lf 8 0}{77}{}
+{12}{Hey, mister.  Wha' you name?}{}{-4}{lf1 0, re 41}{25}{}
+{13}{Dat was not nice...  Me jus' wan' you name...}{}{-4}{lf1 0, re -40}{25}{}
+{14}{Hi Mister Rite.  Me ask sumthin?}{}{-4}{lf1 1, lf2 0}{43}{}
+{15}{Hi Mister Rite.  Me ask sumthin?}{}{-4}{lf1 1, lf2 1,re 41}{49}{}
+{16}{Uh... dat rude, Mister Rite...  Me make mad?}{}{-4}{lf1 1, lf2 1, re -40}{39}{}
+{17}{Me t'ink me take note for you.}{}{-4}{qu1134 1}{157}{}
+{18}{Me no take note yet...}{}{-4}{qu1134 2}{160}{}
+{19}{Me take note to Misus Halster.}{}{-4}{qu1134 3}{163}{re +5}
+{20}{Me sell blimp story, if you wan'...}{}{-4}{lf4 1, gf2030 0, lf 8 0}{99}{}
+{21}{Mebbe me have story for you.}{}{-4}{gf2030 0, lf3 1, lf 8 0}{77}{}
+{22}{I have evidence of a conspiracy you may be interested in.}{}{5}{lf1 1, in5247, gf2408 0, lf10 0}{180}{}
+{23}{I wanted to speak to you about Sam Longwell!}{}{5}{Gf2408 1, lf10 1}{210}{}
+{24}{E:}{}{1}{}{0}{}
+{25}{I'm Mr. Wright.  Editor of the Tarantian, finest newspaper in all the land.  Who are you?}{I'm Mr. Wright.  Editor of the Tarantian, finest newspaper in all the land.  Who are you?}{}{}{}{lf1 1}
+{26}{My name is @pcname@.}{}{5}{}{49}{lf2 1}
+{27}{That is none of your concern.}{}{5}{}{30}{re-5}
+{28}{Me name @pcname@.}{}{-4}{}{49}{lf2 1}
+{29}{You no need it...}{}{-4}{}{30}{re-5}
+{30}{Then get out of my office!}{Then get out of my office!}{}{}{}{}
+{31}{I apologize for being rude.  Rough day...  My name is @pcname@.}{}{5}{}{34}{re+5, lf2 1}
+{32}{Sorry.  Me rude.  It bad day...  Me name is @pcname@.}{}{-4}{}{34}{re+5, lf2 1}
+{33}{I:}{}{1}{}{0}{re-3}
+{34}{Ah...  I understand.  Have a few of those myself from time to time.  What can I do for you @pcname@?}{Ah...  I understand.  Have a few of those myself from time to time.  What can I do for you @pcname@?}{}{}{}{}
+{35}{I have a question...}{}{5}{}{49}{}
+{36}{Me ask sumthin'?}{}{-4}{}{49}{}
+{37}{E:}{}{1}{}{0}{0}
+{38}{Guards!  Guards!}{Guards!  Guards!}{}{}{}{}
+{39}{No... No.  Sorry.  I did not recognize you at first @pcname@.}{No... No.  Sorry.  I did not recognize you at first @pcname@.}{}{}{}{}
+{40}{Apology accepted.  I have a question...}{}{5}{}{49}{}
+{41}{Uh...  Okay.  Me ask sumthin...}{}{-4}{}{49}{}
+{42}{E:}{}{1}{}{0}{}
+{43}{You don't want to give me your name...  I don't recall seeing you around before...  and I don't like talkin' to strangers.}{You don't want to give me your name...  I don't recall seeing you around before...  and I don't like talkin' to strangers.}{}{}{}{}
+{44}{I apologize for being rude.  Rough day...  My name is @pcname@.}{}{5}{}{34}{re+5, lf2 1}
+{45}{How do you enjoy being killed by them?}{}{5}{}{0}{co, fl 38}
+{46}{Sorry.  Me rude.  It bad day...  Me name is @pcname@.}{}{-4}{}{34}{re+5, lf2 1}
+{47}{Mebbe you like stranger make you dead?}{}{-4}{}{0}{co, fl 38}
+{48}{E:}{}{1}{}{0}{}
+{49}{What can I help you with?}{What can I help you with?}{}{}{}{}
+{50}{Do you have a job I could do?}{}{5}{qu1134 0}{81}{}
+{51}{R:$0, 1040-1049}{}{5}{ss -6}{63}{}
+{52}{R:$0, 1040-1049}{}{5}{ss 7, ss -13}{63}{}
+{53}{R:$0, 1040-1049}{}{5}{ss 14}{63}{}
+{54}{R:$0, 1040-1049}{}{-4}{ss -6}{63}{}
+{55}{R:$0, 1040-1049}{}{-4}{ss 7 , ss -13}{63}{}
+{56}{R:$0, 1040-1049}{}{-4}{ss 14}{63}{}
+{57}{Is there any more work?}{}{5}{qa1134 4, gf2030 0}{81}{}
+{58}{Is there any more work?}{}{5}{qa1134 4, gf2030 1}{170}{}
+{59}{You got sum work me do?}{}{-4}{qu1134 0}{81}{}
+{60}{More work for me?}{}{-4}{qa1134 4, gf2030 1}{170}{}
+{61}{More work for me?}{}{-4}{qa1134 4, gf2030 0}{81}{}
+{62}{E:}{}{1}{}{0}{}
+{63}{What else do you need, @pcname@?}{What else do you need, @pcname@?}{}{}{}{}
+{64}{Do you have a job I could do?}{}{5}{qu1134 0}{81}{}
+{65}{R:$0, 1040-1049}{}{5}{ss -6}{63}{}
+{66}{R:$0, 1040-1049}{}{5}{ss 7 , ss -13}{63}{}
+{67}{R:$0, 1040-1049}{}{5}{ss 14}{63}{}
+{68}{R:$0, 1040-1049}{}{-4}{ss -6}{63}{}
+{69}{R:$0, 1040-1049}{}{-4}{ss 7 , ss -13}{63}{}
+{70}{R:$0, 1040-1049}{}{-4}{ss 14}{63}{}
+{71}{Is there any more work?}{}{5}{qa1134 4, gf2030 0}{81}{}
+{72}{Is there any more work?}{}{5}{qa1134 4, gf2030 1}{170}{}
+{73}{You got sum work me do?}{}{-4}{qu1134 0}{81}{}
+{74}{More work for me?}{}{-4}{qa1134 4, gf2030 1}{170}{}
+{75}{More work for me?}{}{-4}{qa1134 4, gf2030 0}{81}{}
+{76}{E:}{}{1}{}{0}{}
+{77}{Well, this is the Tarantian.  News is our business.  We pay quite well for a good story.  What have you got?}{Well, this is the Tarantian.  News is our business.  We pay quite well for a good story.  What have you got?}{}{}{}{lf3 1}
+{78}{Well, I am the sole survivor of the IFS Zephyr.  Does that qualify?}{}{5}{lf 8 0}{87}{}
+{79}{Me only one make off blimp crash.  Dat good news?}{}{-4}{lf 8 0}{87}{}
+{80}{F:}{}{1}{}{0}{}
+{81}{Well, this is the Tarantian.  News is our business.  The first thing that pops to mind when you mention work is news.  Do you have any newsworthy stories?  We pay quite well.}{Well, this is the Tarantian.  News is our business.  The first thing that pops to mind when you mention work is news.  Do you have any newsworthy stories?  We pay quite well.}{}{}{}{lf3 1}
+{82}{Well, I am the sole survivor of the IFS Zephyr.  Does that qualify?}{}{5}{lf 8 0}{87}{}
+{83}{Uh, no...  I was actually looking for more of a labor position.}{}{5}{qb1134 1}{152}{}
+{84}{Me only one make off blimp crash.  Dat good news?}{}{-4}{lf 8 0}{87}{}
+{85}{Uh... no.  Me jus' look for work.}{}{-4}{qb1134 1}{152}{}
+{86}{E:}{}{1}{}{0}{}
+{87}{No!  YOU?  You are the sole survivor from the IFS Zephyr tragedy?  What a godsend!  I must have your story!  I'll pay you 500 coin, on the spot, if you'll answer my questions. }{No!  YOU?  You are the sole survivor from the IFS Zephyr tragedy?  What a godsend!  I must have your story!  I'll pay you 500 coin, on the spot, if you'll answer my questions. }{}{}{}{}
+{88}{500!  You've got yourself a story, Mr. Wright!  Ask away!}{}{5}{lf 8 0}{103}{lf 4 1}
+{89}{Uh, no thank you.  I'd rather not have such publicity...}{}{5}{lf 8 0}{93}{}
+{90}{500!  Dat lots of coin!  Me tell you story now!}{}{-4}{lf 8 0}{103}{lf 4 1}
+{91}{Uh...  no.  Me no wan' be in paper.  Me sorry.}{}{-4}{lf 8 0}{93}{}
+{92}{E:}{}{1}{}{0}{}
+{93}{Oh...  The greedy type, eh?  Well, I suppose that's acceptable, what with you being the "only" survivor and all...  I can go as high as 800.  But that's top coin.  No one is going to offer you more...  No one!}{Oh...  The greedy type, eh?  Well, I suppose that's acceptable, what with you being the "only" survivor and all...  I can go as high as 800.  But that's top coin.  No one is going to offer you more...  No one!}{}{}{}{}
+{94}{Well, for 800, you've got yourself a story!}{}{5}{lf 8 0}{103}{lf 5 1}
+{95}{No really.  I'm not interested.  I'm looking for real work...}{}{5}{qb1134 1}{152}{}
+{96}{Okay!  You got me story for 800!  Wow!}{}{-4}{lf 8 0}{103}{lf 5 1}
+{97}{Uh...  no.  Really.  Me jus wan' work.  No be in paper.}{}{-4}{qb1134 1}{152}{}
+{98}{E:}{}{1}{}{0}{}
+{99}{Oh yes @pcname@!  The Tarantian is most interested in your story.  Are you ready to answer some questions?}{Oh yes @pcname@!  The Tarantian is most interested in your story.  Are you ready to answer some questions?}{}{}{}{lf 8 1}
+{100}{Yes, go ahead.}{}{5}{}{103}{}
+{101}{Uh...  okay.}{}{-4}{}{103}{}
+{102}{E:}{}{1}{}{0}{lf 8 0}
+{103}{First of all, I realize it was a very traumatizing experience.  Please take your time.  If you need to stop for a few moments, I fully understand.  Are you ready?}{First of all, I realize it was a very traumatizing experience.  Please take your time.  If you need to stop for a few moments, I fully understand.  Are you ready?}{}{}{}{lf 8 1}
+{104}{Yes.  Thank you for your understanding.  We can begin.}{}{5}{}{107}{}
+{105}{Uh... T'anks.  Yeah.  Me ready.}{}{-4}{}{107}{}
+{106}{E:}{}{1}{}{0}{lf 8 0}
+{107}{So @pcname@, you are the sole survivor from the horrendous IFS Zephyr disaster?}{So @pcname@, you are the sole survivor from the horrendous IFS Zephyr disaster?}{}{}{}{}
+{108}{Yes.  I am sorry to say that no one else survived the impact.}{}{5}{}{111}{}
+{109}{Yeah.  No o'der people live when hit ground.}{}{-4}{}{111}{}
+{110}{E:}{}{1}{}{0}{lf 8 0}
+{111}{Do you have any idea what caused the great air ship to plummet?}{Do you have any idea what caused the great air ship to plummet?}{}{}{}{}
+{112}{There was a tremendous explosion...  it shook the entire vessel...}{}{5}{}{115}{}
+{113}{Der was big bang!  It rock whole blimp...}{}{-4}{}{115}{}
+{114}{E:}{}{1}{}{0}{lf 8 0}
+{115}{Yes...}{Yes...}{}{}{}{}
+{116}{I didn't see anything in the air, but I heard the sound of gunfire...}{}{5}{}{119}{}
+{117}{Me no see nuthin', but me hear big guns firing...}{}{-4}{}{119}{}
+{118}{E:}{}{1}{}{0}{lf 8 0}
+{119}{Gunfire?  At that altitude?  How is that possible?}{Gunfire?  At that altitude?  How is that possible?}{}{}{}{}
+{120}{I also heard engines...  I believe there were 2 different ones.}{}{5}{}{123}{}
+{121}{Me ear engines too.  Me t'ink der were 2.}{}{-4}{}{123}{}
+{122}{E:}{}{1}{}{0}{lf 8 0}
+{123}{Engines?  The Zephyr was a one of a kind.  What else could have been up there with you?}{Engines?  The Zephyr was a one of a kind.  What else could have been up there with you?}{}{}{}{}
+{124}{There was wreckage also, near the blimp.  Some strange craft...}{}{5}{}{-2}{}
+{125}{Me see wreck too.  Near blimp.  Some o'der flying t'ing...}{}{-4}{}{-2}{}
+{126}{E:}{}{1}{}{0}{lf 8 0}
+{127}{More flying craft?  Incredible! [writing notes frantically]  So you don't think it was an accident? ...or sabotage?  ...You're telling me that the IFS Zephyr was shot out of the sky deliberately?  By some sort of secret air craft?}{More flying craft?  Incredible! [writing notes frantically]  So you don't think it was an accident? ...or sabotage?  ...You're telling me that the IFS Zephyr was shot out of the sky deliberately?  By some sort of secret air craft?}{}{}{}{gf2030 1}
+{128}{Yes.  That's as much as I've been able to piece together.}{1}{5}{lf4 1, lf5 0}{136}{np 1150 1}
+{129}{Yeah.  Dat wha' me see.}{1}{-4}{lf4 1, lf5 0}{136}{np 1170 1}
+{130}{Yes.  That's as much as I've been able to piece together.}{0}{5}{lf4 1, lf5 0}{136}{np 1160 1}
+{131}{Yeah.  Dat wha' me see.}{0}{-4}{lf4 1, lf5 0}{136}{np 1180 1}
+{132}{Yes.  That's as much as I've been able to piece together.}{1}{5}{lf5 1}{144}{np 1150 1}
+{133}{Yeah.  Dat wha' me see.}{1}{-4}{lf5 1}{144}{np 1170 1}
+{134}{Yes.  That's as much as I've been able to piece together.}{0}{5}{lf5 1}{144}{np 1160 1}
+{135}{Yeah.  Dat wha' me see.}{0}{-4}{lf5 1}{144}{np 1180 1}
+{136}{[looking very strange - a mixture of shock and elation]  @pcname@!  You've just given me the story of a lifetime!  Thank you so much!  Here...  Here's the coin I promised.  You've more than earned it.  I've got to get this to the presses immediately!  Goodbye!}{[looking very strange - a mixture of shock and elation]  @pcname@!  You've just given me the story of a lifetime!  Thank you so much!  Here...  Here's the coin I promised.  You've more than earned it.  I've got to get this to the presses immediately!  Goodbye!}{}{}{}{$$500, np }
+{137}{Goodbye.}{}{5}{}{0}{}
+{138}{Wait!  I know you're in a hurry...but is there anything else I can do?}{}{5}{qu1134 0}{152}{}
+{139}{Wait!  I know you're in a hurry...but is there anything else I can do?}{}{5}{qa1134 1}{170}{}
+{140}{Buh-bye.}{}{-4}{}{0}{}
+{141}{Wait!  Me know you gotta go... but me wan' more work...}{}{-4}{qu1134 0}{152}{}
+{142}{Wait!  Me know you gotta go... but me wan' more work...}{}{-4}{qa1134 1}{170}{}
+{143}{E:}{}{1}{}{0}{}
+{144}{[looking very strange - a mixture of shock and elation]  @pcname@!  You've just given me the story of a lifetime!  Thank you so much!  Here...  Here's the coin I promised.  You've more than earned it.  I've got to get this to the presses immediately!  Goodbye!}{[looking very strange - a mixture of shock and elation]  @pcname@!  You've just given me the story of a lifetime!  Thank you so much!  Here...  Here's the coin I promised.  You've more than earned it.  I've got to get this to the presses immediately!  Goodbye!}{}{}{}{$$800}
+{145}{Goodbye.}{}{5}{}{0}{}
+{146}{Wait!  I know you're in a hurry...but is there anything else I can do?}{}{5}{qu1134 0}{152}{}
+{147}{Wait!  I know you're in a hurry...but is there anything else I can do?}{}{5}{qa1134 1}{170}{}
+{148}{Buh-bye.}{}{-4}{}{0}{}
+{149}{Wait!  Me know you gotta go... but me wan' more work...}{}{-4}{qu1134 0}{152}{}
+{150}{Wait!  Me know you gotta go... but me wan' more work...}{}{-4}{qa1134 1}{170}{}
+{151}{E:}{}{1}{}{0}{}
+{152}{Well...  We don't have any openings here at the moment.  [thinks for a moment]  There's a small job you could do.  It only pays 75 coin.  Are you interested?}{Well...  We don't have any openings here at the moment.  [thinks for a moment]  There's a small job you could do.  It only pays 75 coin.  Are you interested?}{}{}{}{}
+{153}{Yes.  Yes I am.}{}{5}{}{157}{}
+{154}{Uh... no thank you.  Goodbye.}{}{5}{}{0}{}
+{155}{Yeah.  Me is.}{}{-4}{}{157}{}
+{156}{Uh...  no.  Buh-bye.}{}{-4}{}{0}{}
+{157}{Alright.  Here.  This is a payment note.  I need it delivered to Mrs. Halster.  Her house is located at the corner of Devonshire and Vermillion.  Return to me after delivery, and I'll give you the 75 coin.}{Alright.  Here.  This is a payment note.  I need it delivered to Mrs. Halster.  Her house is located at the corner of Devonshire and Vermillion.  Return to me after delivery, and I'll give you the 75 coin.}{}{}{}{QU1134 2, in-5243}
+{158}{Alright.  I'll be back soon.}{}{5}{}{0}{}
+{159}{Uh... okay.  Me go.}{}{-4}{}{0}{}
+{160}{Please deliver it soon.  That payment is late...  that's the only reason I'm allowing you to deliver it @pcname@.}{Please deliver it soon.  That payment is late...  that's the only reason I'm allowing you to deliver it @pcname@.}{}{}{}{}
+{161}{Alright.  I'll be back soon.}{}{5}{}{0}{}
+{162}{Uh... okay.  Me go.}{}{-4}{}{0}{}
+{163}{Well done.  Thank you @pcname@.  Here's the 75 coin I promised.}{Well done.  Thank you @pcname@.  Here's the 75 coin I promised.}{}{}{}{$$75, qu1134 4}
+{164}{Thank you Mr. Wright.  Goodbye.}{}{5}{}{0}{}
+{165}{Thank you Mr. Wright.  Is there any more work?}{}{5}{gf2030 1}{170}{}
+{166}{Thank you Mr. Wright.  Is there any more work?}{}{5}{gf2030 0}{81}{}
+{167}{T'anks Mister rite.  Buh-bye.}{}{-4}{}{0}{}
+{168}{T'anks Mister rite.  Der more work?}{}{-4}{gf2030 1}{170}{}
+{169}{T'anks Mister rite.  Der more work?}{}{-4}{gf2030 0}{81}{}
+{170}{No.  I'm sorry @pcname@.  That was all I had available.}{No.  I'm sorry @pcname@.  That was all I had available.}{}{}{}{}
+{171}{Alright.  Thank you.  Goodbye.}{}{5}{}{0}{}
+{172}{Uh...  Okay.  Buh-bye.}{}{-4}{}{0}{}
+{180}{[A look of suspicion crosses his face.] What do you mean, "conspiracy"? Is this some type of jest?}{[A look of suspicion crosses his face.] What do you mean, "conspiracy"? Is this some type of jest?}{}{}{}{}
+{181}{The Industrial Council has been illegally breeding half ogres!}{}{5}{}{190}{}
+{190}{Hah! And I suppose you have proof of this?}{Hah! And I suppose you have proof of this?}{}{}{}{}
+{191}{Yes, I do. [Show him the journal.]}{}{5}{}{200}{}
+{200}{By the gods! Quick, put it away. [He hands it back to you.] This is dangerous, do you hear me? I can't take it here...bring it to the office in Caladon, Sam Longwell will help you with this. It's at 7 Saints Ave. Hurry! And don't tell anyone else about this....}{By the gods! Quick, put it away. [He hands it back to you.] This is dangerous, do you hear me? I can't take it here...bring it to the office in Caladon, Sam Longwell will help you with this. It's at 7 Saints Ave. Hurry! And don't tell anyone else about this....}{}{}{}{lf10 1}
+{201}{I am on my way, then.}{}{5}{}{0}{}
+{210}{Who? I'm afraid I don't know of anyone by that name.}{Who? I'm afraid I don't know of anyone by that name.}{}{}{}{}
+{211}{You told me to give him the journal!}{}{5}{}{220}{}
+{220}{You must be delusional. I told you no such thing.}{You must be delusional. I told you no such thing.}{}{}{}{}
+{221}{Oh, I see how this all works, now. Good day, sir!}{}{5}{}{0}{}
+{222}{You bastard! I'll teach you to betray me!!!}{}{5}{}{0}{co}
+

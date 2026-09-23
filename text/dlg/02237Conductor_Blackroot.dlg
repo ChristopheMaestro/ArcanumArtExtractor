@@ -1,0 +1,84 @@
+{1}{Please wait a moment while  I check your reservations.}{Please wait a moment while  I check your reservations.}{}{}{}{lf 10 0, lf 11 0, lf 12 0, lf 13 0 , lf 14 0}
+{2}{Yes.}{}{5}{}{-12}{}
+{3}{Duh okay.}{}{-4}{}{-12}{}
+{4}{[interrupting] Tell me about this new contraption, the train.}{}{5}{lf 2 0}{38}{lf 2 1}
+{5}{E:}{}{1}{}{-1}{}
+{6}{}{}{}{}{}{}
+{7}{}{}{}{}{}{}
+{8}{}{}{}{}{}{}
+{9}{}{}{}{}{}{}
+{10}{[remembering his duty] Just a moment please while I check your reservations.}{[remembering his duty] Just a moment please while I check your reservations.}{}{}{}{}
+{11}{Yes.}{}{5}{}{-12}{}
+{12}{Okay.}{}{-4}{}{-12}{}
+{13}{E:}{}{1}{}{-1}{}
+{14}{}{}{}{}{}{}
+{15}{You are free to board the train.   We are about to leave.  All Aboard for Blackroot!  All a board!}{You are free to board the train.   We are about to leave.  All Aboard for Blackroot!  All a board!}{}{}{}{}
+{16}{[Board the train]}{}{1}{}{-10}{gf2487 0, gv 1066 0}
+{17}{}{}{}{}{}{}
+{18}{}{}{}{}{}{}
+{19}{}{}{}{}{}{}
+{20}{[checking your reservation] Yes your reservations are in order. }{[checking your reservation] Yes your reservations are in order. }{}{}{}{}
+{21}{Can we board then?}{}{5}{}{-16}{}
+{22}{What can you tell me about this new contraption, the train?}{}{5}{lf 2 0}{38}{lf 2 1}
+{23}{E:}{}{5}{}{-1}{}
+{24}{Me ride train? Huh?  Me go on choo choo.}{}{-4}{}{-16}{}
+{25}{E:}{}{-4}{}{-1}{}
+{26}{}{}{}{}{}{}
+{27}{}{}{}{}{}{}
+{28}{}{}{}{}{}{}
+{29}{[noting a discrepancy] There seems to be more of you here than are on your reservation. I suggest you go and clear this up with front office. Get a refund first, then repurchase your ticket.}{[noting a discrepancy] There seems to be more of you here than are on your reservation. I suggest you go and clear this up with front office. Get a refund first, then repurchase your ticket.}{}{}{}{}
+{30}{Uh sorry, I don't know how this could have happened.}{}{5}{}{-1}{}
+{31}{Your reservations staff must have made a mistake.}{}{5}{}{-1}{}
+{32}{I will clear this up and be right back.}{}{5}{}{-1}{}
+{33}{me go see what happened}{}{-4}{}{-1}{}
+{34}{E:}{}{1}{}{-1}{}
+{35}{[noting a discrepancy] There seems to be no record of your reservation. Are you sure you have made a reservation? Go sort this out with the ticket office. I don't have time for this kind of consternation!}{[noting a discrepancy] There seems to be no record of your reservation. Are you sure you have made a reservation? Go sort this out with the ticket office. I don't have time for this kind of consternation!}{}{}{}{}
+{36}{E:}{}{1}{}{-1}{}
+{37}{}{}{}{}{}{}
+{38}{This, Sir, is the most remarkable piece of machinery in all the land.  The mechanical ingenuity behind it's working components will both astound and amaze you.  Never have the masses been offered such luxurious travel accommodations.}{This, Madam, is the most remarkable piece of machinery in all the land.  The mechanical ingenuity behind it's working components will both astound and amaze you.  Never have the masses been offered such luxurious travel accommodations.}{}{}{}{lf2 1}
+{39}{Thank you.  I am looking forward to traveling aboard it.}{}{5}{}{10}{}
+{40}{Technological Ingenuity!  A good teleport will beat it any time!}{}{5}{ma 50}{10}{re -5}
+{41}{Amazing! I can hardly believe all of the new things these days.}{}{5}{}{10}{}
+{42}{T'anks.  Me t'ink it gonna be fun to ride on!}{}{-4}{}{10}{}
+{43}{Wow!  Dat make me head hurt jus' lookin' at it!}{}{-4}{}{10}{}
+{44}{E:}{}{1}{}{-1}{}
+{45}{The train is about to leave.  Please, make haste to board.  I hope that you have an enjoyable experience aboard her.}{The train is about to leave.  Please, make haste to board.  I hope that you have an enjoyable experience aboard her.}{}{}{}{}
+{46}{[studying his pocket watch] I am detecting a strong MAGICKAL presence in your group.  Don't you fools know what can happen if you even go near a powerful steam engine like this locomotive. Go and speak to the Conductor of the Mage's Caboose! Get out of here now!}{[studying his pocket watch] I am detecting a strong MAGICKAL presence in your group.  Don't you fools know what can happen if you even go near a powerful steam engine like this locomotive. Go and speak to the Conductor of the Mage's Caboose! Get out of here now!}{}{}{}{}
+{47}{My aptitude is not enough to interfere with the mechanics.}{}{5}{ma-10, ps 10}{54}{}
+{48}{My aptitude is not enough to interfere with the mechanics.}{}{5}{ma41}{58}{re -5}
+{49}{I will go and speak with him.  Thank you.}{}{5}{}{-1}{}
+{50}{me ride, me say it okay, me know, me do it.}{}{-4}{ma-10, ps 10}{54}{}
+{51}{me ride, me say it okay, me know, me do it.}{}{-4}{ma41}{58}{re -5}
+{52}{me go. do what you say.}{}{-4}{}{-1}{}
+{53}{E:}{}{1}{}{-1}{}
+{54}{[He studies you carefully]  Hmm...  Yes.  I believe you are correct.  I will allow you to ride.}{[He studies you carefully]  Hmm...  Yes.  I believe you are correct.  I will allow you to ride.}{}{}{}{}
+{55}{[Board the train]}{}{5}{}{-10}{gf2487 0, gv 1066 0}
+{56}{[Board the train]}{}{-4}{}{-10}{gf2487 0, gv 1066 0}
+{57}{E:}{}{1}{}{-1}{}
+{58}{Do you take me for a fool?  I will not endanger lives for your convenience! LEAVE NOW !  or I will have to call the guards.}{Do you take me for a fool?  I will not endanger lives for your convenience! LEAVE NOW !  or I will have to call the guards.}{}{}{}{}
+{59}{E:}{}{1}{}{-1}{}
+{60}{Thank you for traveling aboard the train.  We hope that you enjoy your stay in Tarant.}{Thank you for traveling aboard the train.  We hope that you enjoy your stay in Tarant.}{}{}{}{}
+{61}{Thank you for traveling aboard the train.  We hope that you enjoy your stay in Tarant.}{Thank you for traveling aboard the train.  We hope that you enjoy your stay in Tarant.}{}{}{}{}
+{62}{}{}{}{}{}{}
+{63}{}{}{}{}{}{}
+{64}{}{}{}{}{}{}
+{65}{}{}{}{}{}{}
+{66}{}{}{}{}{}{}
+{67}{}{}{}{}{}{}
+{68}{}{}{}{}{}{}
+{69}{[noting a discrepancy] There seems to be more of you here than are on your reservation. I suggest you go and clear this up with front office. Get a refund first, then repurchase your ticket.}{[noting a discrepancy] There seems to be more of you here than are on your reservation. I suggest you go and clear this up with front office. Get a refund first, then repurchase your ticket.}{}{}{}{}
+{70}{I:}{}{5}{}{-1}{}
+{71}{E:}{}{5}{}{-1}{}
+{72}{I:}{}{-4}{}{-1}{}
+{73}{E:}{}{-4}{}{-1}{}
+{74}{Good grief, we don't allow undead on the train! Get that thing out of here! If you have a complaint see a Ticket Agent. They will be able to get you a refund.}{Good grief, we don't allow undead on the train! Get that thing out of here! If you have a complaint see a Ticket Agent. They will be able to get you a refund.}{}{}{}{}
+{75}{E:}{}{5}{}{-1}{}
+{76}{E:}{}{-4}{}{-1}{}
+{77}{}{}{}{}{}{}
+{78}{}{}{}{}{}{}
+{79}{}{}{}{}{}{}
+{80}{Sorry, NO animals allowed on the train. If you have a complaint, you can get a refund with the ticket agent.}{Sorry, NO animals allowed on the train. If you have a complaint, you can get a refund with the ticket agent.}{}{}{}{}
+{81}{E:}{}{5}{}{-1}{}
+{82}{E:}{}{-4}{}{-1}{}
+{83}{}{}{}{}{}{}
+

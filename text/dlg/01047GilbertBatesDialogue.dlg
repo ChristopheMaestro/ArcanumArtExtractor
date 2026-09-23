@@ -1,0 +1,627 @@
+{1}{Allow me to introduce myself, I am Gilbert Bates, as I am sure you may have surmised. I'd like to extend my thanks to you, sir, for putting an end to the difficulties at my factory. I've been informed that there is a matter you wish to discuss?}{Allow me to introduce myself, I am Gilbert Bates, as I am sure you may have surmised. I'd like to extend my thanks to you, madam, for putting an end to the difficulties at my factory. I've been informed that there is a matter you wish to discuss?}{}{1}{}{ }
+{2}{Quite so. I'd like to ask you about this ring.}{}{5}{in 2804,  lf13 0}{10}{lf13 1 }
+{3}{ I'd like to ask you about a ring I had. [Describe the ring.]}{}{5}{ni 2804,  lf13 0}{10}{lf13 1 }
+{4}{What can you tell me of the recent attempt on your life?}{}{5}{gf1028 1, lf15 0}{1100}{lf15 1 }
+{9}{That is true, but it will have to wait. Good day, sir.}{}{5}{}{0}{ }
+{10}{Great Gods! How did you come by that ring?}{Great Gods! How did you come by that ring?}{}{2}{}{ }
+{11}{A gnome gave it to me as he lay dying.}{}{5}{ra -5, ra -2}{20}{ }
+{12}{A strange looking fellow gave it to me.}{}{5}{ra 5}{30}{ }
+{13}{A strange looking gnome gave it to me as he lay dying.}{}{5}{ra 2}{30}{ }
+{14}{I would rather not say.}{}{5}{}{1070}{ }
+{20}{A gnome! What manner of tomfoolery is this? Are you certain it was not a dwarf?}{A gnome! What manner of tomfoolery is this? Are you certain it was not a dwarf?}{}{3}{}{ }
+{21}{Of course. I've never seen a skinny, beardless dwarf.}{}{5}{}{60}{ }
+{22}{Why would a dwarf have your ring?}{}{5}{}{1090}{ }
+{30}{Strange? Whatever do you mean, pray tell?}{Strange? Whatever do you mean, pray tell?}{}{4}{}{ }
+{31}{Well, he was ugly for a gnome, almost dwarvish.}{}{5}{ra 5}{40}{ }
+{32}{Gnomes have those beady eyes, but his were strong, dwarf like.}{}{5}{ra 2}{50}{ }
+{40}{Dwarvish? He might have been a dwarf?}{Dwarvish? He might have been a dwarf?}{}{5}{}{ }
+{41}{Too slight, and beardless. You know dwarves and their beards.}{}{5}{}{60}{ }
+{50}{Are you sure it wasn't a dwarf, then?}{Are you sure it wasn't a dwarf, then?}{}{6}{}{ }
+{51}{No beard. We would sooner slit our throat than cut our beards.}{}{5}{}{60}{ }
+{60}{Yes. I am ... familiar with dwarves and their customs. Tell me, was there anything distinctive about his fellow?}{Yes. I am ... familiar with dwarves and their customs. Tell me, was there anything distinctive about his fellow?}{}{7}{}{ }
+{61}{He had a scar over his left eye.}{}{5}{}{70}{ }
+{70}{By Alberich! I knew it in my heart - that was no gnome. It was Stennar Rock Cutter. [He is visibly shaken by this realization.]}{By Alberich! I knew it in my heart - that was no gnome. It was Stennar Rock Cutter. [He is visibly shaken by this realization.]}{}{8}{}{ru2016 }
+{71}{A dwarf? Clean shaven? Impossible!}{}{5}{ra 2}{80}{ }
+{72}{I suppose it could have been a sick dwarf, but his beard...}{}{5}{ra -2}{80}{ }
+{73}{Who's Stennar? Why would a dwarf shave his beard?}{}{5}{ra -2}{1095}{ }
+{74}{Who's Stennar? A dwarf would never cut his beard!}{}{5}{ra 2}{1095}{ }
+{80}{Yes, I know. It is madness...but please, tell me, did he say anything to you before he died? Did he say anything about, uh... about me?}{Yes, I know. It is madness...but please, tell me, did he say anything to you before he died? Did he say anything about, uh... about me?}{}{9}{}{ }
+{81}{He said he had escaped to warn us about the evil...}{}{5}{}{1330}{ }
+{90}{I do not know. Even though dwarves reckon time differently than humans, he must have realized that I am now an old man. Perhaps it is because I was but a boy when I...when I betrayed his trust, all those years ago.}{I do not know. Even though dwarves reckon time differently than humans, he must have realized that I am now an old man. Perhaps it is because I was but a boy when I...when I betrayed his trust, all those years ago.}{}{10}{}{ }
+{91}{How did you come to betray him?}{}{5}{}{1260}{ }
+{92}{I know all about it. I must admit to having read your journal.}{}{5}{qu1014 2}{100}{re -5 }
+{100}{I see. I suppose you have some reason I should not summon my guards immediately to deliver you a sound thrashing?}{I see. I suppose you have some reason I should not summon my guards immediately to deliver you a sound thrashing?}{}{11}{}{ }
+{101}{Please, allow me to return it. I've seen the error of my ways.}{}{5}{qb1039 1}{230}{re +5 }
+{102}{Appleby hired me to steal it, but I've changed my mind.}{}{5}{qa1039 2}{110}{gf1012 1 }
+{103}{If you would like them to see your humiliating beating, go ahead.}{}{5}{}{0}{fl  1050 ,co}
+{110}{His treachery is well known to me, and tiresome as well. I think it's time I sent some people over to have a talk with Mr. Appleby. But I believe I may have a job for a resourceful individual such as yourself.}{His treachery is well known to me, and tiresome as well. I think it's time I sent some people over to have a talk with Mr. Appleby. But I believe I may have a job for a resourceful individual such as yourself.}{}{12}{}{np1060 1 }
+{111}{And that would be?}{}{5}{}{120}{ }
+{112}{Why does Appleby hate you so much?}{}{5}{lf11 0}{1055}{lf11 1 }
+{119}{Sorry, not interested.}{}{5}{}{140}{re -10 }
+{120}{Since you have read my journal, you know of my association with the Black Mountain Clan. I'd like for you to go search their mines for some clue to their whereabouts.}{Since you have read my journal, you know of my association with the Black Mountain Clan. I'd like for you to go search their mines for some clue to their whereabouts.}{}{13}{}{ }
+{121}{You've caught my fancy. I will endeavor to return with some word.}{}{5}{}{130}{ }
+{122}{Sorry, not interested.}{}{5}{}{140}{re -10 }
+{130}{Your spirit invigorates an old man. Here, let me mark your map. Please return as soon as you have any information, I will make it worth your while.}{Your spirit invigorates an old man. Here, let me mark your map. Please return as soon as you have any information, I will make it worth your while.}{}{176}{}{mm 7, ss 4, gf1024 1 }
+{131}{I shall return with the information you have requested.}{}{5}{}{170}{qu 1013 2 }
+{132}{Thank you. Here is your journal back, you forgot to take it.}{}{5}{}{160}{re +10, al +25 }
+{140}{You have the nerve to rebuff me after you have stolen my personal belongings? I strongly suggest you reconsider.}{You have the nerve to rebuff me after you have stolen my personal belongings? I strongly suggest you reconsider.}{}{177}{}{ }
+{141}{You make a strong case. I accept your proposal.}{}{5}{}{130}{re +5 }
+{142}{I strongly suggest you reconsider your tone, old man.}{}{5}{}{150}{re -10 }
+{150}{While I might admire your impertinence, I will have no more of it. Accept my offer, or accept the consequences.}{While I might admire your impertinence, I will have no more of it. Accept my offer, or accept the consequences.}{}{178}{}{ }
+{151}{How can I refuse such an elegantly phrased request?}{}{5}{}{130}{re +5 }
+{152}{You shall be accepting the consequences of your impertinence!}{}{5}{}{0}{fl  1050 ,co}
+{160}{Ah, this old man's mind is going ... you should keep it, it could harbor some clue that I've forgotten through the fog of my years. I advise you not to let it out of your care, though, as that could be ... unhealthy.}{Ah, this old man's mind is going ... you should keep it, it could harbor some clue that I've forgotten through the fog of my years. I advise you not to let it out of your care, though, as that could be ... unhealthy.}{}{179}{}{ }
+{161}{I shall return with the information you have requested.}{}{5}{}{170}{ }
+{162}{You'd trust me? Your feeble mind has surely rotted away.}{}{5}{}{0}{fl  1050 ,co}
+{170}{Oh, one more thing ... I would like to purchase my ring back from you. I'd give you 200 gold. It would mean quite a bit to me, my father gave it to me before he died.}{Oh, one more thing ... I would like to purchase my ring back from you. I'd give you 200 gold. It would mean quite a bit to me, my father gave it to me before he died.}{}{180}{}{ }
+{171}{Certainly. Here it is.}{}{5}{in 2804}{180}{in 2804, $$200, re+10 }
+{172}{I don't have it here, but I will bring it when I return.}{}{5}{ni2804}{180}{lf 2 1 }
+{173}{That is not enough.}{}{5}{in 2804, ha -11}{190}{re -10 }
+{174}{300 would be better for me.}{}{5}{in 2804, ha 12}{220}{ }
+{180}{Much obliged. I will speak with you when you return.}{Much obliged. I will speak with you when you return.}{}{14}{}{ }
+{181}{K:}{}{5}{}{1290}{ }
+{182}{E:}{}{5}{}{0}{ }
+{190}{You will have to excuse an old man whose hearing is drifting away. I know that I could not have heard you refusing my generous offer.}{You will have to excuse an old man whose hearing is drifting away. I know that I could not have heard you refusing my generous offer.}{}{15}{}{ }
+{191}{What sort would I be to refuse such an offer? [Give him the ring]}{}{5}{in 2804}{180}{in 2804, $$200 }
+{192}{I don't have it here, but I will bring it when I return.}{}{5}{}{180}{lf2 1 }
+{193}{Do not trifle with me old man. Your offer was insulting.}{}{5}{}{200}{re -10 }
+{200}{You dare? I've had men beaten within inches of their lives for less than that! Give me the ring NOW - you get nothing!}{You dare? I've beaten women within inches of their lives for less than that! Give me the ring NOW - you get nothing!}{}{16}{}{ }
+{201}{Please don't have me beaten! Here is your ring.}{}{5}{}{210}{in 2804 }
+{202}{You'll get something - my foot planted in your nether regions!}{}{5}{}{0}{fl  1050 ,co}
+{210}{Now remove your sorry, worthless hide from my presence and bring me some answers!}{Now remove your sorry, worthless hide from my presence and bring me some answers!}{}{17}{}{ }
+{211}{Yes, sir. Thank you, sir.}{}{5}{}{0}{ }
+{212}{Your problem is that you've lived too long. Let me fix that.}{}{5}{}{0}{fl  1050 ,co}
+{220}{Yes, you are correct. That does seem to be a reasonable amount.}{Yes, you are correct. That does seem to be a reasonable amount.}{}{18}{}{ }
+{221}{Here is your ring.}{}{5}{}{180}{in 2804, $$300 }
+{230}{You stole into my house undetected, did you? Hmmm. I believe I might have a task for an individual such as yourself.}{You stole into my house undetected, did you? Hmmm. I believe I might have a task for an individual such as yourself.}{}{19}{}{ }
+{231}{And that would be?}{}{5}{}{120}{ }
+{232}{Sorry, not interested.}{}{5}{}{140}{re -10 }
+{240}{ I do not recognize you, are you new here?}{ I do not recognize you, are you new here?}{}{20}{}{ }
+{241}{Actually, I'm not a servant, but it is imperative I speak with you.}{}{5}{ni 2804}{250}{gf1024 1 }
+{242}{I'm not a servant. I need to speak with you about this ring.}{}{5}{in 2804}{10}{gf1024 1 }
+{249}{Yes I am, sir. Pardon my interruption, I'll be going now.}{}{5}{}{0}{ }
+{250}{What sort of ruse is this? How did you get in here?}{What sort of ruse is this? How did you get in here?}{}{21}{}{ }
+{251}{That's unimportant. We need to talk about a ring. [Describe ring.]}{}{5}{ni 2804, lf13 0}{10}{lf13 1 }
+{252}{Cedric Appleby sent me to find something to expose you with.}{}{5}{qu1039 1, in 5202}{260}{re - 10 }
+{253}{Cedric Appleby sent me to find something to expose you with.}{}{5}{qu1039 2}{260}{re - 10 }
+{254}{Why I'm here is more important. Appleby is looking to ruin you.}{}{5}{qu1039 1, gf1006 0}{260}{gf1012 1 }
+{255}{That's unimportant. I'm here to talk about this ring. [Show Ring.]}{}{5}{in 2804, lf13 0}{10}{lf3 1 }
+{256}{Why I'm here is more important. Appleby is looking to ruin you.}{}{5}{ gf1006 1}{290}{gf1012 1 }
+{260}{And you have chosen to share this with me to what end? Perhaps you are tired of living?}{And you have chosen to share this with me to what end? Perhaps you are tired of living?}{}{22}{}{ }
+{261}{I needed to be able to talk to you about this ring.}{}{5}{in 2804, lf13 0}{10}{lf13 1 }
+{262}{I need to talk to you about a ring. [Describe the Ring]}{}{5}{ni 2804, lf13 0}{10}{lf13 1 }
+{263}{Au contraire! It must be you that tires of life to speak to me thus!}{}{5}{ch 14}{270}{re -10 }
+{264}{I wanted to warn you of his treachery.}{}{5}{}{290}{gf1012 1 }
+{270}{Your wit may prove to be the end of you, sir!}{Your wit may prove to be the end of you, madam!}{}{23}{}{ }
+{271}{I knew one of your caliber would appreciate some verbal jousting!}{}{5}{re -59}{280}{re 60 }
+{272}{I knew one of your caliber would appreciate some verbal jousting!}{}{5}{re 60}{280}{re +15 }
+{273}{You misunderstand my threat for humor. It is time to die.}{}{5}{}{0}{fl  1050 ,co}
+{280}{So true. It is refreshing to meet one who is not afraid to jest with someone in my position. But tell me, what brings you here?}{So true. It is refreshing to meet one who is not afraid to jest with someone in my position. But tell me, what brings you here?}{}{24}{}{ }
+{281}{I needed to be able to talk to you about this ring.}{}{5}{in 2804, lf13 0}{10}{lf13 1 }
+{282}{I need to talk to you about a ring. [Describe the Ring]}{}{5}{ni 2804, lf13 0}{10}{lf13 1 }
+{283}{I'm afraid it must wait. Goodbye.}{}{5}{}{0}{ }
+{290}{His treachery is well known to me, and tiresome as well. I think it's time I sent some people over to have a talk with Mr. Appleby.}{His treachery is well known to me, and tiresome as well. I think it's time I sent some people over to have a talk with Mr. Appleby.}{}{25}{}{np1060 1 }
+{291}{I'd like to ask you about this ring.}{}{5}{in 2804, lf13 0}{10}{lf13 1 }
+{292}{I'd like to talk to you about a ring. [Describe the ring.]}{}{5}{ni 2804, lf13 0}{10}{lf13 1 }
+{293}{Why does Appleby hate you so much?}{}{5}{lf12 0}{1055}{lf12 1 }
+{299}{Well, I just wanted to warn you. Goodbye.}{}{5}{}{0}{lf 1 1, re +10 }
+{300}{Your impertinence astounds me! How dare you deign to approach me, servant!}{Your impertinence astounds me! How dare you deign to approach me, servant!}{}{26}{}{ }
+{301}{I've something else that will astound you. [Show him the ring.]}{}{5}{ch 14, in 2804}{10}{re 50, gf1024 1 }
+{302}{I know I'm not fit to shine your shoes, but I must speak with you.}{}{5}{}{310}{re +5, gf1024 1 }
+{303}{This will astound you even further. [Describe the ring.]}{}{5}{ch 14, ni 2804}{10}{re 50, gf1024 1 }
+{304}{I've something else that will astound you. [Go to combat.]}{}{5}{}{0}{fl  1050 ,co}
+{305}{Of course sir, pardon me, sir. I will make my exit now, sir.}{}{5}{}{0}{ }
+{310}{This had best be worth my while or there will be hell to pay for squandering my time!}{This had best be worth my while or there will be hell to pay for squandering my time!}{}{27}{}{ }
+{311}{I beg your patience, but I thought you'd want to see this ring.}{}{5}{in 2804, lf13 0}{10}{re +5, lf13 1 }
+{312}{I beg your pardon, but I must ask of a ring I had. [Describe ring.]}{}{5}{ni 2804, lf13 0}{10}{re +5, lf13 1 }
+{313}{I want to talk to you about your ring a bit more.}{}{5}{lf13 1}{1245}{ }
+{314}{I've heard enough of your blustering. I'll show you "hell to pay".}{}{5}{}{0}{fl  1050 ,co}
+{320}{[This elderly man approaches you, his hand outstretched in greeting.] Good day to you, sir. I am Gilbert Bates, as I am sure you have surmised. My guards inform me there is a matter you wish to discuss?}{[This elderly man approaches you, his hand outstretched in greeting.] Good day to you, madam. I am Gilbert Bates, as I am sure you have surmised. My guards inform me there is a matter you wish to discuss?}{}{28}{}{ }
+{321}{Quite so. I'd like to ask you about this ring.}{}{5}{in 2804, gf1007 0, lf13 0}{10}{lf13 1 }
+{322}{ I'd like to ask you about a ring I had. [Describe the ring.]}{}{5}{ni 2804, gf1007 0, lf13 0}{10}{lf13 1 }
+{323}{What is your involvement with the Black Mountain Clan?}{}{5}{gf1007 1}{360}{ }
+{324}{What can you tell me of the recent attempt on your life?}{}{5}{gf1028 1}{1195}{lf15 1 }
+{329}{That is true, but it will have to wait. Good day, sir.}{}{5}{}{0}{ }
+{330}{Stennar! Wait, you're not ... when my guards said there was a dwarf with a ring, I thought ... did he send you?}{Stennar! Wait, you're not ... when my guards said there was a dwarf with a ring, I thought ... did he send you?}{}{29}{}{ }
+{331}{Not unless he is a gnome. Stennar is a dwarven name.}{}{5}{}{350}{ }
+{332}{No he didn't. I'm sorry, I must take my leave.}{}{5}{}{340}{ }
+{340}{Please, don't leave. I must talk to you about Stennar. It's been so long. What happened to him?}{Please, don't leave. I must talk to you about Stennar. It's been so long. What happened to him?}{}{30}{}{ }
+{341}{I don't know. I'd like to talk about a ring I found. [Describe ring.]}{}{5}{ni 2804}{10}{ }
+{342}{I don't know Stennar, but I'd like to talk about this ring.}{}{5}{in 2804}{10}{ }
+{349}{I apologize, but I must go.}{}{5}{}{0}{ }
+{350}{Of course he's not a gnome. But if you don't know him, where did you come by that ring? Dwarves generally have more dignity than to turn to thievery.}{Of course he's not a gnome. But if you don't know him, where did you come by that ring? Dwarves generally have more dignity than to turn to thievery.}{}{31}{}{ }
+{351}{A strange looking gnome gave it to me as he lay dying.}{}{5}{}{30}{ }
+{352}{How dare you accuse me of thievery! I'm no gnome! Good day!}{}{5}{}{340}{ }
+{360}{Wha ... what did you say? I uh never, that is, I don't know anything about ... about them ...}{Wha ... what did you say? I uh never, that is, I don't know anything about ... about them ...}{}{32}{}{ }
+{361}{I've been to the bottom of their mines. I know you were involved.}{}{5}{}{370}{ }
+{362}{I must have been mistaken. Goodbye.}{}{5}{}{0}{ }
+{370}{You've been there? Do you know what happened to them?}{You've been there? Do you know what happened to them?}{}{33}{}{ }
+{371}{They were banished to the isle of despair, because of you.}{}{5}{}{1065}{ }
+{380}{And why would the village idiot be addressing me?}{And why would the village idiot be addressing me?}{}{34}{}{ }
+{381}{Me kill sab ah toors.}{}{-4}{gf1007 0, qu1040 4}{390}{ }
+{382}{Black clan bamished cuz you.}{}{-4}{me 0, gf1007 1}{480}{ }
+{383}{You ring? [Show ring.]}{}{-4}{gf1007 0, qb1040 3, in 2804, lf13 0}{400}{lf13 1 }
+{384}{I had ring. [Make feeble attempt to describe the ring.]}{}{-4}{gf1007 0, qb1040 3, ni 2804, lf13 0}{400}{lf13 1 }
+{389}{ugha?}{}{-4}{}{0}{ }
+{390}{When my guards told me you would be coming to speak with me they failed to mention that you were a complete idiot.}{When my guards told me you would be coming to speak with me they failed to mention that you were a complete idiot.}{}{35}{}{ }
+{391}{This your ring?}{}{-4}{in 2804, lf13 0}{400}{lf13 1 }
+{392}{I had ring. [Make feeble attempt to describe the ring.]}{}{-4}{ni 2804, lf13 0}{400}{lf13 1 }
+{399}{Uhfgnmm.}{}{-4}{}{0}{ }
+{400}{Where did you get that ring? Did a dwarf give it to you?}{Where did you get that ring? Did a dwarf give it to you?}{}{36}{}{ }
+{401}{No. Stupid scarface gnome gave. Then died.}{}{-4}{}{405}{ }
+{405}{Scar? Where was this scar? Speak up, you ignorant fool!}{Scar? Where was this scar? Speak up, you ignorant fool!}{}{37}{}{ }
+{406}{Eye.}{}{-4}{}{410}{ }
+{410}{Damn them all to hell! What did they do to you, Stennar?}{Damn them all to hell! What did they do to you, Stennar?}{}{38}{}{ }
+{411}{Me not Stennar.}{}{-4}{}{415}{ }
+{415}{I know you're not Stennar, fool. Just pretend you're not a complete imbecile and listen. I need to share this with someone, and as luck would have it, you won't understand half of it anyway.}{I know you're not Stennar, fool. Just pretend you're not a complete imbecile and listen. I need to share this with someone, and as luck would have it, you won't understand half of it anyway.}{}{39}{}{ }
+{416}{Okey.}{}{-4}{}{-42}{ru2017 }
+{417}{I stole book. No story.}{}{-4}{qu1014 2}{420}{ }
+{420}{(Hmmm. He might just be stupid enough to do something for me.) YOU GO TO THE BLACK MOUNTAIN MINES AND FIND WHERE CLAN WENT TO, OKAY?}{(Hmmm. She might just be stupid enough to do something for me.) YOU GO TO THE BLACK MOUNTAIN MINES AND FIND WHERE CLAN WENT TO, OKAY?}{}{40}{}{ }
+{421}{Yes?}{}{-4}{qu1014 2}{425}{ }
+{422}{Yes?}{}{-4}{qb1014 1}{425}{qu1013 2 }
+{423}{No!}{}{-4}{}{430}{ }
+{425}{I'll mark your map. Now get out. Come back when you are done.}{I'll mark your map. Now get out. Come back when you are done.}{}{41}{}{mm 7, ss 4, gf1024 1 }
+{426}{boog gye.}{}{-4}{}{0}{ }
+{430}{You dare?! I suggest you change your mind, simpleton!}{You dare?! I suggest you change your mind, simpleton!}{}{42}{}{ }
+{431}{yes!}{}{-4}{qu1014 2}{425}{ }
+{432}{yes!}{}{-4}{qb1014 1}{425}{qu1013 2 }
+{433}{No?}{}{-4}{}{0}{fl  1050 ,co}
+{440}{None of them ever returned with any worthwhile information, and some never returned at all. The ones that did told of vicious traps and creatures attacking them from the shadows. As word of these failures spread, it became more and more difficult to find souls brave enough to take on the challenge.}{None of them ever returned with any worthwhile information, and some never returned at all. The ones that did told of vicious traps and creatures attacking them from the shadows. As word of these failures spread, it became more and more difficult to find souls brave enough to take on the challenge.}{}{43}{}{qu1012 4 }
+{441}{But why did he send me here with your ring?}{}{5}{}{1270}{ }
+{442}{What I do now?}{}{-4}{gf1007 0}{420}{ }
+{446}{Dwarveses on bad people island.}{}{-4}{gf1007 1}{850}{ }
+{450}{It is apparent to me that it has become imperative to find out the fate of the Black Mountain Clan. Thank you for bringing this to my attention, but I must retire to deduce my next step. Good day.}{It is apparent to me that it has become imperative to find out the fate of the Black Mountain Clan. Thank you for bringing this to my attention, but I must retire to deduce my next step. Good day.}{}{44}{}{ }
+{451}{I would be interested in solving this conundrum as well.}{}{5}{gf1007 0}{460}{ }
+{452}{As I see it, the next step is to go to the Isle of Despair.}{}{5}{gf1007 1}{680}{ }
+{459}{I wish you well. Goodbye.}{}{5}{}{0}{qu1013 1 }
+{460}{You do seem to be a resourceful individual. I believe I would like to employ you for this task. I assure you I would make it worth your while.}{You do seem to be a resourceful individual. I believe I would like to employ you for this task. I assure you I would make it worth your while.}{}{45}{}{ }
+{461}{Accepted.}{}{5}{qb1014 1}{470}{qu1013 2 }
+{462}{Accepted.}{}{5}{qu1014 2}{470}{ }
+{468}{I spoke too hastily. I must take my leave.}{}{5}{qu1014 2}{0}{ }
+{469}{I spoke too hastily. I must take my leave.}{}{5}{qb1014 1}{0}{qu1013 1 }
+{470}{Splendid! Here, let me mark your map with the location of the Black Mountain mines. I am certain there must be some clues to be found there. Please, return as soon as you have found anything.}{Splendid! Here, let me mark your map with the location of the Black Mountain mines. I am certain there must be some clues to be found there. Please, return as soon as you have found anything.}{}{46}{}{mm 7, ss 4, gf1024 1 }
+{471}{I shall return with the information you have requested.}{}{5}{in2804}{170}{ }
+{472}{May I ask you some questions before I leave?}{}{5}{}{1290}{ }
+{473}{I shall return with the information you have requested.}{}{5}{ni2804}{0}{ }
+{480}{Banished? Where?}{Banished? Where?}{}{47}{}{ }
+{481}{Ilo dispar?}{}{-4}{}{-42}{ }
+{490}{You have returned! Tell me, what news?}{You have returned! Tell me, what news?}{}{48}{}{ }
+{491}{The dwarves were banished to the Isle of Despair because, uh ...}{}{5}{gf1007 1, lf1 0}{500}{lf1 1  }
+{492}{I've brought the ring for you. [Give him the ring.]}{}{5}{lf2 1, in 2804}{620}{in 2804 }
+{493}{I have decided to go to the Isle of Despair. How do I get there?}{}{5}{qu1013 4, qu1015 1, gf2542 1}{530}{qu1015 2 }
+{494}{They aren't on the Isle of Despair. They were never there.}{}{5}{qu1015 4, qb1017 3, lf5 0}{630}{ }
+{495}{I've talked with Loghaire, of the Wheel Clan.}{}{5}{qu1016 2, lf7 0}{690}{lf7 1 }
+{496}{I have something important to discuss.}{}{5}{ qu1013 0, qb1014 1}{600}{ }
+{497}{I have decided to search the Black Mountain mines for you.}{}{5}{qu1013 1}{470}{qu1013 2 }
+{498}{The Black Mountain Clan were banished to the void by the dark elves.}{}{5}{qa1016 3, lf10 0}{970}{ }
+{499}{I have found no new information since we last spoke.}{}{5}{}{0}{ }
+{500}{For the sake of the gods, out with it, man!}{For the sake of the gods, out with it, woman!}{}{49}{}{ }
+{501}{They irresponsibly allowed their technology to spread to humans.}{}{5}{}{510}{qu1013 4 }
+{502}{Your callous betrayal and theft of their technology doomed them.}{}{5}{re 39}{1030}{re -5, qu1013 4 }
+{503}{Your callous betrayal and theft of their technology doomed them.}{}{5}{re -38}{0}{qu1013 4, fl  1050 ,co}
+{504}{They irresponsibly allowed their technology to spread to humans.}{}{5}{qu1014 4}{510}{ }
+{510}{[He seems taken aback a moment, as he considers what you have told him.] By the gods, it is as I always feared! I doomed them all! [He is now sobbing openly.] What have I done? My youthful impertinence...I ... here's...some gold for your trouble. [He attempts to compose himself.] Could you...[he chokes back more tears]...do...something further for me?}{[He seems taken aback a moment, as he considers what you have told him.] By the gods, it is as I always feared! I doomed them all! [He is now sobbing openly.] What have I done? My youthful impertinence...I ... here's...some gold for your trouble. [He attempts to compose himself.] Could you...[he chokes back more tears]...do...something further for me?}{}{50}{}{$$ 300 }
+{511}{You would like me to go to the Isle of Despair?}{}{5}{}{520}{ }
+{512}{I'm sorry, but 300 gold doesn't even cover my expenditures.}{}{5}{ps 15}{570}{ }
+{514}{What do?}{}{-4}{}{850}{ }
+{520}{If you would...I know I've already asked much of you, but an old man needs to put his mind at ease.}{If you would...I know I've already asked much of you, but an old man needs to put his mind at ease.}{}{51}{}{gf2542 1 }
+{521}{Of course. How do I get there?}{}{5}{}{530}{qu1015 2 }
+{522}{What is the Isle of Despair?}{}{5}{}{580}{ }
+{523}{I'm sorry, but I won't be going to any Isle of Despair.}{}{5}{}{0}{ }
+{530}{Go to the docks at Ashbury, you can find it on your map. Ask around for Edward Teach, a crusty old salt. He is in command of one of the boats that I use for "special" jobs.}{Go to the docks at Ashbury, you can find it on your map. Ask around for Edward Teach, a crusty old salt. He is in command of one of the boats that I use for "special" jobs.}{}{52}{}{mm 8, gf 1008 1 }
+{531}{And he will take me? Can this man be trusted?}{}{5}{}{540}{ }
+{540}{I trust him implicitly. There are rumors of a somewhat less than virtuous career on the high seas, but he's a good man should a difficult situation arise.}{I trust him implicitly. There are rumors of a somewhat less than virtuous career on the high seas, but he's a good man should a difficult situation arise.}{}{53}{}{ru2018 }
+{541}{That is reassuring.}{}{5}{ch12}{-48}{ }
+{542}{That is reassuring.}{}{5}{ch -11}{560}{ }
+{550}{I'll wire ahead to Teach to expect you. [He looks at his bodyguard.] Chukka, here, is quite beneficial to have around for protection. If you're interested, you might be able to persuade him to accompany you on your journey.}{I'll wire ahead to Teach to expect you. [He looks at his bodyguard.] Chukka, here, is quite beneficial to have around for protection. If you're interested, you might be able to persuade him to accompany you on your journey.}{}{54}{}{gf1008 1, gf1020 1 }
+{551}{K:}{}{5}{}{1290}{ }
+{559}{Thank you for your generosity. I will apprise you of my findings.}{}{5}{}{0}{qu1015 2 }
+{560}{I'll wire ahead to tell Teach to expect you.}{I'll wire ahead to tell Teach to expect you.}{}{55}{}{gf1008 1 }
+{561}{K:}{}{5}{}{1290}{ }
+{569}{Thank you for your generosity. I will apprise you of my findings.}{}{5}{}{0}{qu1015 2 }
+{570}{Of course, of course, here is 100 more. Would you please go to the Isle of Despair for me?}{Of course, of course, here is 100 more. Would you please go to the Isle of Despair for me?}{}{56}{}{$$ 100, qu1015 1, gf2542 1 }
+{571}{Of course.}{}{5}{}{520}{ }
+{572}{What is the Isle of Despair?}{}{5}{}{580}{ }
+{573}{Perhaps at a later time. Good day.}{}{5}{}{0}{ }
+{580}{The Isle of Despair is a penal colony. Extremely dangerous. The criminals are unceremoniously left on her shores to fend for themselves against the elements and the other 'inmates'. I would be indebted to you, of course.}{The Isle of Despair is a penal colony. Extremely dangerous. The criminals are unceremoniously left on her shores to fend for themselves against the elements and the other 'inmates'. I would be indebted to you, of course.}{}{57}{}{ }
+{581}{I'll do it, but how do I get to there?}{}{5}{}{530}{qu1015 2 }
+{582}{Will your indebtedness run to more than 300 gold this time?}{}{5}{ps 12, lf6 0}{590}{ }
+{589}{I'm sure you'd see to it that I received a nice burial. No thanks.}{}{5}{}{0}{ }
+{590}{Most certainly. I think this should cover any difficulties you incur along the way.}{Most certainly. I think this should cover any difficulties you incur along the way.}{}{58}{}{$$450 }
+{591}{Excellent. How do I get there?}{}{5}{}{530}{qu1015 2 }
+{600}{What would this be pertaining too?}{What would this be pertaining too?}{}{59}{}{ }
+{601}{I'd like to ask you about this ring.}{}{5}{in 2804, ra -2}{10}{ }
+{602}{I'd like to ask you about this ring I had. [Describe the ring.]}{}{5}{ni 2804, ra -2}{10}{ }
+{609}{F:}{}{5}{}{0}{ }
+{610}{Is there any news?}{Is there any news?}{}{60}{}{ }
+{611}{The dwarves were banished to the Isle of Despair because, uh ...}{}{5}{gf1007 1, lf11 0}{500}{lf11 1 }
+{612}{I have decided to go to the Isle of Despair. How do I get there?}{}{5}{qu1013 4, qu1015 1, gf2542 1}{530}{qu1015 2 }
+{613}{They aren't on the Isle of Despair. They were never there.}{}{5}{qu1015 4, qb1017 3, lf5 0}{630}{ }
+{614}{I've talked with Loghaire, of the Wheel Clan.}{}{5}{qu1016 2, lf7 0}{690}{lf7 1 }
+{615}{I have decided to search the Black Mountain mines for you.}{}{5}{qu1013 1}{470}{ }
+{616}{The Black Mountain Clan were banished to the void by the dark elves.}{}{5}{qa1016 3}{970}{ }
+{617}{What can you tell me of the recent attempt on your life?}{}{5}{gf1028 1, lf15 0}{1225}{lf15 1 }
+{619}{I have found no new information since we last spoke.}{}{5}{}{0}{ }
+{620}{Splendid! Here is your gold.}{Splendid! Here is your gold.}{}{61}{}{$$200 }
+{621}{300 would be better for me.}{}{5}{ps 15}{625}{ }
+{622}{A:}{}{5}{}{610}{ }
+{625}{Yes, you are correct. That does seem to be a reasonable amount.}{Yes, you are correct. That does seem to be a reasonable amount.}{}{62}{}{$$100 }
+{626}{A:}{}{5}{}{610}{ }
+{630}{What manner of fiendish plot is afoot here? Are you certain of this ?}{What manner of fiendish plot is afoot here? Are you certain of this ?}{}{63}{}{ }
+{631}{This is Thorvald. He was imprisoned there for 100 years.}{}{5}{pa6410}{640}{ }
+{632}{I spoke with a dwarf who had been there for 100 years.}{}{5}{pa-6410}{640}{ }
+{640}{Gods! This is disastrous! What are we to do now?}{Gods! This is disastrous! What are we to do now?}{}{64}{}{ }
+{641}{I am on my way to talk to Loghaire of the Wheel Clan.}{}{5}{}{650}{ }
+{649}{I am at a loss myself. Let me know if you find them. Good day.}{}{5}{}{0}{ }
+{650}{Yes, yes. That is our logical next step. Tell me, is there anything I can do to help you?}{Yes, yes. That is our logical next step. Tell me, is there anything I can do to help you?}{}{65}{}{ }
+{651}{Uh, you forgot to pay me for searching the Isle of Despair.}{}{5}{ps 15}{660}{ }
+{652}{Uh, you forgot to pay me for searching the Isle of Despair.}{}{5}{ps -14}{670}{ }
+{660}{Ah, the vagaries of the elderly mind ... pardon my forgetfulness, here is your gold.}{Ah, the vagaries of the elderly mind ... pardon my forgetfulness, here is your gold.}{}{66}{}{$$500, lf5 1 }
+{661}{K:}{}{5}{}{1290}{ }
+{669}{I will return after I gain an audience with Loghaire.}{}{5}{}{0}{ }
+{670}{Ah, the vagaries of the elderly mind ... pardon my forgetfulness, here is gold.}{Ah, the vagaries of the elderly mind ... pardon my forgetfulness, here is gold.}{}{67}{}{$$400, lf5 1 }
+{671}{K:}{}{5}{}{1290}{ }
+{679}{I will return after I gain an audience with Loghaire.}{}{5}{}{0}{ }
+{680}{What a capital idea. I could never have asked something so dangerous of someone, but since you were so kind to offer ...}{What a capital idea. I could never have asked something so dangerous of someone, but since you were so kind to offer ...}{}{68}{}{qu1015 1, gf2542 1 }
+{681}{How do I get there?}{}{5}{}{530}{qu1015 2 }
+{682}{Dangerous? What exactly is the Isle of Despair?}{}{5}{}{580}{lf6 1  }
+{683}{I'm sorry, but I won't be going to any Isle of Despair.}{}{5}{}{0}{ }
+{690}{What did he tell you?}{What did he tell you?}{}{69}{}{ }
+{691}{He said the elves did the actual banishing.}{}{5}{}{700}{ }
+{700}{They allowed elves to banish dwarves?! What in the name of all that is holy is happening to this world?}{They allowed elves to banish dwarves?! What in the name of all that is holy is happening to this world?}{}{70}{}{ }
+{701}{He was pretty upset about it as well.}{}{5}{}{710}{ }
+{710}{Well, what do the elves have to say about all of this?}{Well, what do the elves have to say about all of this?}{}{71}{}{ }
+{711}{I'm on my way to talk to them.}{}{5}{qb1018 2, re 49}{720}{ }
+{712}{They blame it on the dark elves.}{}{5}{qa1020 3}{730}{ }
+{713}{I hope you understand I have no association with those elves.}{}{5}{ra 3, re 49, qa1020 3}{750}{ }
+{714}{I hope you understand I have no association with those elves.}{}{5}{ra 3, re -48, qa1020 3}{830}{ }
+{715}{I'm on my way to talk to them.}{}{5}{qb1018 2, re -48}{820}{ }
+{720}{Excellent! Here is some more gold to help you on your way.}{Here is some more gold to help you on your way.}{}{72}{}{$$400 }
+{721}{K:}{}{5}{}{1290}{ }
+{729}{A:}{}{5}{}{0}{ }
+{730}{Of course they would! This tangled skein of misleading clues and subterfuge is enough to drive a man mad! We must get to the bottom of these lies!}{Of course they would! This tangled skein of misleading clues and subterfuge is enough to drive a man mad! We must get to the bottom of these lies!}{}{73}{}{ }
+{731}{I agree. I will not rest until this whole matter has been resolved.}{}{5}{}{740}{ }
+{732}{I hope you understand I have no association with those elves.}{}{5}{ra 3, lf8 0, re 49, qa1020 3}{750}{lf8 1 }
+{733}{I hope you understand I have no association with those elves.}{}{5}{ra 3, lf8 0, re -48, qa1020 3}{820}{lf8 1 }
+{740}{What will you do now?}{What will you do now?}{}{74}{}{ }
+{741}{I'm going to talk to the dark elves.}{}{5}{re 49}{720}{ }
+{742}{I'm going to talk to the dark elves.}{}{5}{re -48}{820}{ }
+{750}{Of course, my friend, of course. But tell me, what excuse did they proffer for us to swallow like naïve schoolgirls?}{Of course, my friend, of course. But tell me, what excuse did they proffer for us to swallow like naïve schoolgirls?}{}{75}{}{ }
+{751}{I haven't spoken with them. I'm on my way to talk to them now.}{}{5}{qb1018 2}{720}{ }
+{752}{They blame it on the dark elves.}{}{5}{qa1018 3}{730}{ }
+{760}{What in the name of all that is holy would make you deign to address me? I would assume you have some pertinent information to impart.}{What in the name of all that is holy would make you deign to address me? I would assume you have some pertinent information to impart.}{}{76}{}{ }
+{761}{The dwarves were banished to the Isle of Despair because, uh ...}{}{5}{gf1007 1, lf11 0}{500}{lf11 1 }
+{762}{I've brought the ring for you. [Give him the ring.]}{}{5}{lf2 1, in 2804}{770}{re +10 }
+{763}{I have decided to go to the Isle of Despair. How do I get there?}{}{5}{qu1013 4, qu1015 1, gf2542 1}{780}{re +10, qu1015 2 }
+{764}{They aren't on the Isle of Despair. They were never there.}{}{5}{qu1015 4, qb1017 3, lf5 0}{630}{re +10 }
+{765}{I've talked with Loghaire, of the Wheel Clan.}{}{5}{qu1016 2, lf7 0}{690}{re +10 }
+{766}{I have something important to discuss.}{}{5}{ qu1013 0}{310}{ }
+{767}{I have decided to search the Black Mountain mines for you.}{}{5}{qu1013 1}{780}{re +10 }
+{768}{The Black Mountain Clan were banished to the void by the dark elves.}{}{5}{qa1016 3}{970}{ }
+{769}{I beg your forgiveness, but I have nothing to report.}{}{5}{}{0}{re -5 }
+{770}{I suppose I owe you thanks for this. Here's a token of my appreciation. [He hands you some gold.]}{I suppose I owe you thanks for this. Here's a token of my appreciation. [He hands you some gold.]}{}{77}{}{$$100 }
+{771}{A:}{}{5}{}{610}{ in2804 }
+{772}{Why, you coin pinching skinflint! 100 coins is an insult!}{}{5}{}{1020}{re -15 }
+{780}{I am unsure as to whether I should employ you as my emissary at all. I do not like you nor the feelings you would engender in people as a representative of the Bates' name.}{I am unsure as to whether I should employ you as my emissary at all. I do not like you nor the feelings you would engender in people as a representative of the Bates' name.}{}{78}{}{ }
+{781}{Please afford me this opportunity to prove my worth to you.}{}{5}{ch 14}{800}{re +15 }
+{782}{Please afford me this opportunity to prove my worth to you.}{}{5}{ch -14}{790}{ }
+{784}{I am unsure as to whether I should gut you or decapitate you.}{}{5}{}{0}{fl  1050 ,co}
+{790}{As you wish, peasant. But heed my warning - if you should bring shame on my house, I will have you hunted down and killed like the dog you are.}{As you wish, peasant. But heed my warning - if you should bring shame on my house, I will have you hunted down and killed like the dog you are.}{}{79}{}{ }
+{791}{Thank you for this opportunity, sir.}{}{5}{qu1013 1}{810}{ }
+{792}{Thank you for this opportunity, sir.}{}{5}{qu1013 4, qb1015 3, gf2542 1}{530}{ }
+{799}{I will think about your warning as I pick my teeth with your bones.}{}{5}{}{0}{fl  1050 ,co}
+{800}{Certainly. You're not as bad a person as you originally seemed to me, after all.}{Certainly. You're not as bad a person as you originally seemed to me, after all.}{}{80}{}{ }
+{801}{We were speaking of my excursion to the Black Mountain Clan for you?}{}{5}{qu1013 1}{470}{ }
+{802}{We were speaking of my excursion to the Isle of Despair?}{}{5}{qu1013 4, qb1015 2, gf2542 1}{530}{ }
+{803}{It's too late to retract your words. We must fight to the death.}{}{5}{}{0}{fl  1050 ,co}
+{810}{Now, as to the Black Mountain Mines, let me mark your map. As soon as you discover anything, return and I might bestow a few coins on you for your trouble.}{Now, as to the Black Mountain Mines, let me mark your map. As soon as you discover anything, return and I might bestow a few coins on you for your trouble.}{}{81}{}{mm 7, ss 4, gf1024 1 }
+{811}{I shall return with the information you have requested.}{}{5}{qb1014 2}{170}{qu1013 2 }
+{812}{I shall return with the information you have requested.}{}{5}{qu1014 2}{170}{ }
+{820}{I'm not so sure about you or where your allegiances may lie. I will be watching you, that is one thing you may be assured of.}{I'm not so sure about you or where your allegiances may lie. I will be watching you, that is one thing you may be assured of.}{}{82}{}{ }
+{821}{Thank you for the vote of confidence. Good day.}{}{5}{}{0}{ }
+{822}{You have found me out! Damnation and hellfire, now you die!}{}{5}{}{0}{fl  1050 ,co}
+{830}{Time will tell, time will tell. What elven lies did they tell you to tell me?}{Time will tell, time will tell. What elven lies did they tell you to tell me?}{}{83}{}{ }
+{831}{I haven't spoken with them. I'm on my way to talk to them now.}{}{5}{qb1018 2}{820}{ }
+{832}{They blame it on the dark elves.}{}{5}{qa1018 3}{730}{ }
+{840}{And what would the imbecile like to tell me now?}{And what would the imbecile like to tell me now?}{}{84}{}{ }
+{841}{You fault dwarfseses bandished to I despair.}{}{-4}{gf1007 1, lf11 0}{510}{lf11 1, qu1013 4 }
+{843}{How go I love desper?}{}{-4}{qu1013 4, qb1015 3, gf2542 1}{860}{qu1015 2 }
+{844}{Dwarf guys ain't on island. Ever.}{}{-4}{qu1015 4, qb1017 3, lf5 0}{870}{lf5 1 }
+{845}{I talk to Log guy. Head dwarf.}{}{-4}{qu1016 2, lf7 0}{900}{ }
+{846}{Impotent discuss.}{}{-4}{ qu1013 0}{380}{ }
+{847}{I go Black Mountain Clan?}{}{-4}{qu1013 1}{425}{ }
+{848}{DWARVES BANISHED TO VOID! DWARVES BANISHED VOID!!}{}{-4}{qa1016 3, lf9 0}{920}{lf9 1 }
+{849}{I no nothin.}{}{-4}{}{0}{ }
+{850}{(How could I have forgotten who I was speaking to?) YOU GO TO ISLAND WHERE BAD PEOPLE ARE.}{(How could I have forgotten who I was speaking to?) YOU GO TO ISLAND WHERE BAD PEOPLE ARE.}{}{85}{}{ }
+{851}{Okey le dokely. How get there?}{}{-4}{}{860}{ }
+{860}{HERE'S ASHBURY ON MAP. GO FIND CAPTAIN TEACH. HE TAKE YOU.}{HERE'S ASHBURY ON MAP. GO FIND CAPTAIN TEACH. HE TAKE YOU.}{}{86}{}{mm 8, gf1008 1, qu1015 2, ru2018 }
+{861}{yep.}{}{-4}{}{0}{ }
+{870}{IS THAT SO?}{IS THAT SO?}{}{87}{}{ }
+{871}{I go. Talk to head dorf Log.}{}{-4}{}{880}{ }
+{880}{You do that.}{You do that.}{}{88}{}{ }
+{881}{Can I have money?}{}{-4}{}{890}{ }
+{890}{Sure, why not. Here is some gold. Please leave me alone.}{Sure, why not. Here is some gold. Please leave me alone.}{}{89}{}{$$100 }
+{891}{Woo - Hoo. 100 gold! Bye.}{}{-4}{}{0}{ }
+{900}{I have no time for this. You don't really have anything of importance to tell me, do you?}{I have no time for this. You don't really have anything of importance to tell me, do you?}{}{90}{}{ }
+{901}{Log don't know neither.}{}{-4}{}{910}{ }
+{910}{Just as I suspected. LEAVE NOW. OKAY?}{Just as I suspected. LEAVE NOW. OKAY?}{}{91}{}{ }
+{911}{money?}{}{-4}{}{915}{ }
+{915}{Here's some coins. Get out of here.}{Here's some coins. Get out of here.}{}{92}{}{$$50 }
+{916}{tanks you.}{}{-4}{}{0}{ }
+{920}{BY THE GODS, MAN, WHAT ARE YOU SAYING?}{BY THE GODS, WOMAN, WHAT ARE YOU SAYING?}{}{93}{}{ }
+{921}{I don't know.}{}{-4}{}{925}{ }
+{925}{Thanks, really, you have been so extremely helpful YOU BLEEDIN' IDIOT!!!!!}{Thanks, really, you have been so extremely helpful YOU BLEEDIN' IDIOT!!!!!}{}{94}{}{ }
+{926}{Money? I did good?}{}{-4}{}{930}{ }
+{927}{You mean. You die now.}{}{-4}{}{0}{fl  1050 ,co}
+{930}{I'll give you these coins to never come back here, okay?}{I'll give you these coins to never come back here, okay?}{}{95}{}{$$250 }
+{931}{OKAY!}{}{-4}{}{0}{gf1011 1 }
+{940}{What answers do you seek?}{What answers do you seek?}{}{96}{}{ }
+{941}{What is your story? And what about this ring?}{}{5}{in 2804, ss 2}{-42}{qu1012 4 }
+{942}{Where are the Black Mountain Clan's mines?}{}{5}{qb1013 2, qu1012 4}{960}{ }
+{943}{How can I get to the Isle of Despair?}{}{5}{qu1012 4, gf1007 1, qb1015 2}{965}{ }
+{944}{What is your story? And what about your ring that I was given?}{}{5}{ni 2804, ss 2}{-42}{qu1012 4 }
+{949}{I release you.}{}{5}{}{0}{ }
+{950}{I gave Stennar that ring the last time I saw him. And now we are both dead.....}{ I gave Stennar that ring the last time I saw him. And now we are both dead.....}{}{97}{}{ }
+{951}{Where are the Black Mountain Clan's mines?}{}{5}{qb1013 2, qu1012 4}{960}{ }
+{952}{How can I get to the Isle of Despair?}{}{5}{qu1012 4, gf1007 1, qu1015 1}{965}{ }
+{953}{E:}{}{5}{}{0}{ }
+{960}{The Black Mountain Clan has been marked on your map.}{The Black Mountain Clan has been marked on your map.}{}{98}{}{mm 7, ss 4, gf1024 1 }
+{961}{How can I get to the Isle of Despair?}{}{5}{qu1012 4, gf1007 1, qu1015 1}{965}{ }
+{962}{E:}{}{5}{}{0}{ }
+{965}{Captain Edward Teach. Ashbury. Your map is marked.}{Captain Edward Teach. Ashbury. Your map is marked.}{}{99}{}{mm 8, gf1008 1 }
+{966}{E:}{}{5}{}{0}{ }
+{970}{It ... can't be. What possible purpose could that have served?}{It ... can't be. What possible purpose could that have served?}{}{100}{}{ }
+{971}{The dark elves had been waiting for any excuse to banish dwarves.}{}{5}{}{1000}{ }
+{972}{I don't know. Oh well, goodbye.}{}{5}{}{980}{ }
+{980}{You must tell me! You can't just leave this way!}{You must tell me! You can't just leave this way!}{}{101}{}{ }
+{981}{I'm sorry, I've nothing more to tell you.}{}{5}{}{0}{al -50 }
+{982}{I can't? I've run all over this continent for what? Nothing!}{}{5}{}{990}{ }
+{983}{The dark elves had been waiting for any excuse to banish dwarves.}{}{5}{}{1000}{ }
+{990}{You are insane! I will not let you leave without telling me why all this happened!}{You are insane! I will not let you leave without telling me why all this happened!}{}{102}{}{ }
+{991}{The dark elves had been waiting for any excuse to banish dwarves.}{}{5}{}{1000}{ }
+{992}{Try to stop me, old man.}{}{5}{}{0}{fl  1050 ,co}
+{1000}{But why?}{But why?}{}{103}{}{ }
+{1001}{[Tell him the whole story.]}{}{5}{}{1010}{gf1011 1 }
+{1002}{Find out for yourself, Ebeneezer. Good day.}{}{5}{}{0}{fl  1050 ,co}
+{1010}{And to think my life has been conducted under the shadow of guilt for no reason save it fit the heinous machinations of the dark elves. I must think on this ... but here, please take these coins for all your troubles.}{And to think my life has been conducted under the shadow of guilt for no reason save it fit the heinous machinations of the dark elves. I must think on this ... but here, please take these coins for all your troubles.}{}{104}{}{$$500 }
+{1011}{A:}{}{5}{}{0}{lf10 1 }
+{1020}{Far be it for me to insult you, I will just keep it. My next insult involves bodily injury. Yours.}{Far be it for me to insult you, I will just keep it. My next insult involves bodily injury. Yours.}{}{105}{}{re -15 }
+{1021}{Of course, please accept my apologies. Here is the ring.}{}{5}{}{610}{in2804 }
+{1022}{No, yours. Let us commence to fighting.}{}{5}{}{0}{fl  1050 ,co}
+{1030}{You dare, sir? Must I school you in the proper manner with which to conduct yourself in society?}{You dare, madam? Must I school you in the proper manner with which to conduct yourself in society?}{}{106}{}{ }
+{1031}{I did not mean that to sound as harsh as it may have.}{}{5}{ch 14}{510}{ }
+{1032}{I am a simpleminded fool. Please take pity on my lack of culture.}{}{5}{}{510}{ }
+{1033}{Please, attempt to school me as I give you a lesson in pain.}{}{5}{}{0}{fl  1050 ,co}
+{1035}{ I have never actually claimed that I did. It was just people's assumption. I have invented any number of devices based off its principals, but I did not invent the first one.}{ I have never actually claimed that I did. It was just people's assumption. I have invented any number of devices based off its principals, but I did not invent the first one.}{}{107}{}{ }
+{1036}{Is that not dishonest? Taking credit for something you didn't do?}{}{5}{}{1038}{ }
+{1037}{What did you think would happen when you sold the engine?}{}{5}{}{1310}{ }
+{1038}{Yes it is, and it torments me every day. I was but a child when the robed ones gave me their dire warnings, and I was terrified. They were explicit that I was not to reveal the origins of the steam engine.}{Yes it is, and it torments me every day. I was but a child when the robed ones gave me their dire warnings, and I was terrified. They were explicit that I was not to reveal the origins of the steam engine.}{}{108}{}{ }
+{1039}{K:}{}{5}{}{1290}{ }
+{1040}{Yes, being fabulously wealthy must be a burden on you.}{}{5}{ch 14}{1042}{ }
+{1042}{All this wealth is an albatross around my neck. Every day, reminding me of the heinous error of my youth.}{All this wealth is an albatross around my neck. Every day, reminding me of the heinous error of my youth.}{}{109}{}{ }
+{1043}{K:}{}{5}{}{1290}{ }
+{1044}{I've decided to explore the Black Mountain Clan mines for you.}{}{5}{qu1014 2, qb1013 1}{470}{ }
+{1045}{I've decided to explore the Black Mountain Clan mines for you.}{}{5}{qb1014 1, qb1013 1}{470}{qu1013 2 }
+{1049}{I must take my leave, good sir.}{}{5}{}{0}{ }
+{1050}{Chukka! Attack!}{Chukka! Attack!}{}{110}{}{ }
+{1051}{I refuse to speak to any individual in that state of undress. Please put on your clothes.}{I refuse to speak to any individual in that state of undress. Please put on your clothes.}{}{111}{}{ }
+{1052}{I am not in the mood for your wizard's tricks. I will not speak with you until you cease your magical activity.}{I am not in the mood for your wizard's tricks. I will not speak with you until you cease your magical activity.}{}{112}{}{ }
+{1053}{Who let this animal in here?}{Who let this animal in here?}{}{113}{}{ }
+{1054}{Thank you for all your help. I wish to be left alone to ruminate on my life.}{Thank you for all your help. I wish to be left alone to ruminate on my life.}{}{114}{}{ }
+{1055}{Appleby is a disturbed hack. We have known each other since we were in short pants, when we were actually friends. As I began to patent my inventions, however, he became increasingly hostile.}{Appleby is a disturbed hack. We have known each other since we were in short pants, when we were actually friends. As I began to patent my inventions, however, he became increasingly hostile.}{}{115}{}{ }
+{1056}{Why is that?}{}{5}{}{1058}{ }
+{1058}{He always was going on about how he was going to be a fabulously wealthy industrialist, but he's not very intelligent. At first it was sad, but he has become dangerously unhinged in recent years.}{He always was going on about how he was going to be a fabulously wealthy industrialist, but he's not very intelligent. At first it was sad, but he has become dangerously unhinged in recent years.}{}{116}{}{ }
+{1059}{About that job you were speaking of ...}{}{5}{lf11 1}{120}{ }
+{1060}{I'd like to ask you about this ring.}{}{5}{in 2804, lf12 1}{10}{ }
+{1061}{I'd like to talk to you about a ring. [Describe the ring.]}{}{5}{ni 2804, lf12 1}{10}{ }
+{1062}{Well, I just wanted to warn you. Goodbye.}{}{5}{lf12 1}{0}{lf 1 1, re +10 }
+{1065}{Banished...by the gods...I did it to them. [He begins to cry, quietly.] I had always feared the worst ....}{Banished...by the gods...I did it to them. [He begins to cry, quietly.] I had always feared the worst ....}{}{117}{}{ }
+{1066}{How did you become involved with dwarves?}{}{5}{}{-42}{ }
+{1070}{Why, do you have something to hide? Perhaps you stole it - tell me, where did you get it?}{Why, do you have something to hide? Perhaps you stole it - tell me, where did you get it?}{}{118}{}{ }
+{1071}{Calm down, I didn't steal it. How did you lose it?}{}{5}{}{1075}{ }
+{1072}{I don't appreciate your accusations, old man.}{}{5}{}{1082}{re -5 }
+{1075}{That is none of your affair. I ask you for the last time, where did you get the ring?}{That is none of your affair. I ask you for the last time, where did you get the ring?}{}{119}{}{ }
+{1076}{A gnome gave it to me as he lay dying.}{}{5}{ra -5, ra -2}{20}{ }
+{1077}{A strange looking fellow gave it to me.}{}{5}{ra 5}{30}{ }
+{1078}{A strange looking gnome gave it to me as he lay dying.}{}{5}{ra 2}{30}{ }
+{1079}{You'd do well to watch your tone. I'm asking the questions here.}{}{5}{}{1082}{re -5 }
+{1082}{I'll ignore your disrespect once - provided you tell me you came by that ring.}{I'll ignore your disrespect once - provided you tell me you came by that ring.}{}{120}{}{ }
+{1083}{A gnome gave it to me as he lay dying.}{}{5}{ra -5, ra -2}{20}{ }
+{1084}{A strange looking fellow gave it to me.}{}{5}{ra 5}{30}{ }
+{1085}{A strange looking gnome gave it to me as he lay dying.}{}{5}{ra 2}{30}{ }
+{1086}{I'm going to whip your arrogance out of you, dog.}{}{5}{}{0}{fl 1050 ,co}
+{1090}{That is a long story, and one that does not concern you. Suffice it to say that it should have been in the possession of a dwarf.}{That is a long story, and one that does not concern you. Suffice it to say that it should have been in the possession of a dwarf.}{}{121}{}{ }
+{1091}{Well, it wasn't a dwarf. Too skinny, and he had no beard.}{}{5}{}{60}{ }
+{1095}{Stennar was an old friend of mine ... but for him to cut his beard ... by the gods! It's unthinkable! [He pauses.] But please, tell me, did he say anything to you before he died? Did he say anything about, uh... about me?}{Stennar was an old friend of mine ... but for him to cut his beard ... by the gods! It's unthinkable! [He pauses.] But please, tell me, did he say anything to you before he died? Did he say anything about, uh... about me?}{}{122}{}{ }
+{1096}{He said he had escaped to warn us about the evil...}{}{5}{}{1330}{ }
+{1100}{There's not much, really, as Chukka is given to overzealousness in his protection of my person. He rendered the interloper lifeless before I could question him. All he had on his person was an amulet bearing the symbol of the Molochean Hand, the eye in the hexagram.}{There's not much, really, as Chukka is given to overzealousness in his protection of my person. He rendered the interloper lifeless before I could question him. All he had on his person was an amulet bearing the symbol of the Molochean Hand, the eye in the hexagram.}{}{123}{}{gf1085 1 }
+{1101}{The Molochean Hand?}{}{5}{}{1110}{lf15 1 }
+{1110}{They were a religious order of assassins some 500 years ago. Rumors of their continued existence surface periodically, but are usually proven to be hoaxes. I figure this for a new group trying to adopt some of the prestige of the name.}{They were a religious order of assassins some 500 years ago. Rumors of their continued existence surface periodically, but are usually proven to be hoaxes. I figure this for a new group trying to adopt some of the prestige of the name.}{}{124}{}{ru2019 }
+{1111}{They seem to be after me as well.}{}{5}{gf1045 1}{1120}{ }
+{1112}{Well, I'd like to ask you about this ring.}{}{5}{in 2804,  lf13 0}{10}{lf13 1 }
+{1113}{Interesting. I'd like to ask you about a ring. [Describe the ring.]}{}{5}{ni 2804,  lf13 0}{10}{lf13 1 }
+{1119}{E:}{}{5}{}{0}{ }
+{1120}{Let us hope for both our sakes that they are mere pretenders to the name, then. I would be loathe to have the authentic Molocheans out for my blood.}{Let us hope for both our sakes that they are mere pretenders to the name, then. I would be loathe to have the authentic Molocheans out for my blood.}{}{125}{}{ }
+{1121}{Well, I'd like to ask you about this ring.}{}{5}{in 2804,  lf13 0}{10}{lf13 1 }
+{1122}{Interesting. I'd like to ask you about a ring. [Describe the ring.]}{}{5}{ni 2804,  lf13 0}{10}{lf13 1 }
+{1123}{K:}{}{5}{lf13 1}{1290}{ }
+{1124}{Why do you suppose they tried to kill us?}{}{5}{lf13 1}{1380}{ }
+{1129}{I will keep a watchful eye, then. Good day.}{}{5}{}{0}{ }
+{1130}{There's not much, really, as Chukka is given to overzealousness in his protection of my person. He rendered the interloper lifeless before I could question him. All he had on his person was an amulet bearing the symbol of the Molochean Hand, the eye in the hexagram.}{There's not much, really, as Chukka is given to overzealousness in his protection of my person. He rendered the interloper lifeless before I could question him. All he had on his person was an amulet bearing the symbol of the Molochean Hand, the eye in the hexagram.}{}{126}{}{gf1085 1 }
+{1131}{The Molochean Hand?}{}{5}{}{1140}{lf15 1 }
+{1140}{They were a religious order of assassins some 500 years ago. Rumors of their continued existence surface periodically, but are usually proven to be hoaxes. I figure this for a new group trying to adopt some of the prestige of the name.}{They were a religious order of assassins some 500 years ago. Rumors of their continued existence surface periodically, but are usually proven to be hoaxes. I figure this for a new group trying to adopt some of the prestige of the name.}{}{127}{}{ru2019 }
+{1141}{They seem to be after me as well.}{}{5}{gf1045 1}{1150}{ }
+{1144}{E:}{}{5}{}{0}{ }
+{1150}{Let us hope for both our sakes that they are mere pretenders to the name, then. I would be loathe to have the authentic Molocheans out for my blood.}{Let us hope for both our sakes that they are mere pretenders to the name, then. I would be loathe to have the authentic Molocheans out for my blood.}{}{128}{}{ }
+{1151}{Why do you suppose they tried to kill us?}{}{5}{}{1380}{ }
+{1152}{K:}{}{5}{}{1290}{ }
+{1153}{I will keep a watchful eye, then. Good day.}{}{5}{}{0}{ }
+{1160}{There's not much, really, as Chukka is given to overzealousness in his protection of my person. He rendered the interloper lifeless before I could question him. All he had on his person was an amulet bearing the symbol of the Molochean Hand, the eye in the hexagram.}{There's not much, really, as Chukka is given to overzealousness in his protection of my person. He rendered the interloper lifeless before I could question him. All he had on his person was an amulet bearing the symbol of the Molochean Hand, the eye in the hexagram.}{}{129}{}{gf1085 1 }
+{1161}{The Molochean Hand?}{}{5}{}{1170}{lf15 1 }
+{1170}{They were a religious order of assassins some 500 years ago. Rumors of their continued existence surface periodically, but are usually proven to be hoaxes. I figure this for a new group trying to adopt some of the prestige of the name.}{They were a religious order of assassins some 500 years ago. Rumors of their continued existence surface periodically, but are usually proven to be hoaxes. I figure this for a new group trying to adopt some of the prestige of the name.}{}{130}{}{ru2019 }
+{1171}{They seem to be after me as well.}{}{5}{gf1045 1}{1180}{ }
+{1174}{Interesting, but we need to talk about a ring. [Describe ring.]}{}{5}{ni 2804, lf13 0}{10}{lf13 1 }
+{1175}{I see. But more importantly, Appleby hired me to expose you.}{}{5}{qu1039 1, in 5202}{260}{re - 10 }
+{1176}{I see. More importantly, Appleby tried to hire me to expose you.}{}{5}{qu1039 2}{260}{re - 10 }
+{1177}{I'm actually here to warn you that Appleby is looking to ruin you.}{}{5}{qu1039 1, gf1006 0, ni5202}{260}{gf1012 1 }
+{1178}{Interesting, but I'm here to talk about this ring. [Show Ring.]}{}{5}{in 2804, lf13 0}{10}{lf3 1 }
+{1179}{I'm actually here to warn you that Appleby is looking to ruin you.}{}{5}{ gf1006 1}{290}{gf1012 1 }
+{1180}{Let us hope for both our sakes that they are mere pretenders to the name, then. I would be loathe to have the authentic Molocheans out for my blood.}{Let us hope for both our sakes that they are mere pretenders to the name, then. I would be loathe to have the authentic Molocheans out for my blood.}{}{131}{}{ }
+{1183}{Interesting, but we need to talk about a ring. [Describe ring.]}{}{5}{ni 2804, lf13 0}{10}{lf13 1 }
+{1184}{I see. But more importantly, Appleby hired me to expose you.}{}{5}{qu1039 1, in 5202}{260}{re - 10 }
+{1185}{I see. More importantly, Appleby tried to hire me to expose you.}{}{5}{qu1039 2}{260}{re - 10 }
+{1186}{I'm actually here to warn you that Appleby is looking to ruin you.}{}{5}{qu1039 1, gf1006 0, ni5202}{260}{gf1012 1 }
+{1187}{Interesting, but I'm here to talk about this ring. [Show Ring.]}{}{5}{in 2804, lf13 0}{10}{lf3 1 }
+{1188}{I'm actually here to warn you that Appleby is looking to ruin you.}{}{5}{ gf1006 1}{290}{gf1012 1 }
+{1190}{Why do you suppose they tried to kill us?}{}{5}{lf13 1}{1380}{ }
+{1194}{I will keep a watchful eye, then. Good day.}{}{5}{}{0}{ }
+{1195}{There's not much, really, as Chukka is given to overzealousness in his protection of my person. He rendered the interloper lifeless before I could question him. All he had on his person was an amulet bearing the symbol of the Molochean Hand, the eye in the hexagram.}{There's not much, really, as Chukka is given to overzealousness in his protection of my person. He rendered the interloper lifeless before I could question him. All he had on his person was an amulet bearing the symbol of the Molochean Hand, the eye in the hexagram.}{}{132}{}{gf1085 1 }
+{1196}{The Molochean Hand?}{}{5}{}{1205}{lf15 1 }
+{1205}{They were a religious order of assassins some 500 years ago. Rumors of their continued existence surface periodically, but are usually proven to be hoaxes. I figure this for a new group trying to adopt some of the prestige of the name.}{They were a religious order of assassins some 500 years ago. Rumors of their continued existence surface periodically, but are usually proven to be hoaxes. I figure this for a new group trying to adopt some of the prestige of the name.}{}{133}{}{ru2019 }
+{1206}{They seem to be after me as well.}{}{5}{gf1045 1}{1215}{ }
+{1207}{Well, I'd like to ask you about this ring.}{}{5}{in 2804,  lf13 0}{10}{lf13 1 }
+{1208}{Interesting. I'd like to ask you about a ring. [Describe the ring.]}{}{5}{ni 2804,  lf13 0}{10}{lf13 1 }
+{1209}{What is your involvement with the Black Mountain Clan?}{}{5}{gf1007 1}{360}{ }
+{1214}{E:}{}{5}{}{0}{ }
+{1215}{Let us hope for both our sakes that they are mere pretenders to the name, then. I would be loathe to have the authentic Molocheans out for my blood.}{Let us hope for both our sakes that they are mere pretenders to the name, then. I would be loathe to have the authentic Molocheans out for my blood.}{}{134}{}{ }
+{1216}{Well, I'd like to ask you about this ring.}{}{5}{in 2804,  lf13 0}{10}{lf13 1 }
+{1217}{Interesting. I'd like to ask you about a ring. [Describe the ring.]}{}{5}{ni 2804,  lf13 0}{10}{lf13 1 }
+{1218}{What is your involvement with the Black Mountain Clan?}{}{5}{gf1007 1}{360}{ }
+{1223}{Why do you suppose they tried to kill us?}{}{5}{lf13 1}{1380}{ }
+{1224}{I will keep a watchful eye, then. Good day.}{}{5}{}{0}{ }
+{1225}{There's not much, really, as Chukka is given to overzealousness in his protection of my person. He rendered the interloper lifeless before I could question him. All he had on his person was an amulet bearing the symbol of the Molochean Hand, the eye in the hexagram.}{There's not much, really, as Chukka is given to overzealousness in his protection of my person. He rendered the interloper lifeless before I could question him. All he had on his person was an amulet bearing the symbol of the Molochean Hand, the eye in the hexagram.}{}{135}{}{gf1085 1 }
+{1226}{The Molochean Hand?}{}{5}{}{1235}{lf15 1 }
+{1235}{They were a religious order of assassins some 500 years ago. Rumors of their continued existence surface periodically, but are usually proven to be hoaxes. I figure this for a new group trying to adopt some of the prestige of the name.}{They were a religious order of assassins some 500 years ago. Rumors of their continued existence surface periodically, but are usually proven to be hoaxes. I figure this for a new group trying to adopt some of the prestige of the name.}{}{136}{}{gf1085 1, ru2019 }
+{1236}{They seem to be after me as well.}{}{5}{gf1045 1}{1240}{ }
+{1239}{That is very interesting.}{}{5}{}{610}{ }
+{1240}{Let us hope for both our sakes that they are mere pretenders to the name, then. I would be loathe to have the authentic Molocheans out for my blood.}{Let us hope for both our sakes that they are mere pretenders to the name, then. I would be loathe to have the authentic Molocheans out for my blood.}{}{137}{}{ }
+{1244}{I will keep a watchful eye, then.}{}{5}{}{610}{ }
+{1245}{Why are you troubling me about this again?}{Why are you troubling me about this again?}{}{138}{}{ }
+{1246}{I want to know how you were involved with Stennar Rock Cutter.}{}{5}{}{1250}{ }
+{1247}{Forgive my intrusion. Good day.}{}{5}{}{0}{ }
+{1250}{Stennar? I met him when I was a young man. It is quite the tale, actually.}{Stennar? I met him when I was a young man. It is quite the tale, actually.}{}{139}{}{ }
+{1251}{I'm listening.}{}{5}{}{-42}{ }
+{1252}{I must beg your forgiveness and take my leave.}{}{5}{}{0}{ }
+{1260}{That, that is quite the long tale... a tale of my shame, it is.}{That, that is quite the long tale... a tale of my shame, it is.}{}{140}{}{ }
+{1261}{I'm listening.}{}{5}{}{-42}{ru2017 }
+{1270}{He knew that ring would lend veracity to your tale. I gave Stennar that ring the last time I saw him. And now he is dead... [He pauses for a moment, perhaps to compose himself.] If only we knew what he meant by "the evil".}{He knew that ring would lend veracity to your tale. I gave Stennar that ring the last time I saw him. And now he is dead... [He pauses for a moment, perhaps to compose himself.] If only we knew what he meant by "the evil".}{}{141}{}{ }
+{1272}{The Panarii think the "evil" refers to someone named Arronax.}{}{5}{gf2344 1}{1480}{ }
+{1273}{I met a Panarii acolyte who thought it had some religious meaning.}{}{5}{gf2004 1, gf2344 0, pa-6409}{1490}{ }
+{1274}{Virgil, here, thinks it has something to do with his religion.}{}{5}{gf2344 0, pa6409}{1490}{ }
+{1278}{What can we do now?}{}{5}{gf1007 0, gf2004 0, gf2344 0, pa-6409}{1280}{ }
+{1279}{What can we do now?}{}{5}{gf1007 1, gf2004 0, gf2344 0}{450}{ }
+{1280}{There must be some clue left in the Black Mountain mines, I'm certain of this. You seem to be a resourceful individual, would you be interested in searching the mines for some clue as to their whereabouts? I would make it worth your while, I can assure you.}{There must be some clue left in the Black Mountain mines, I'm certain of this. You seem to be a resourceful individual, would you be interested in searching the mines for some clue as to their whereabouts? I would make it worth your while, I can assure you.}{}{142}{}{ }
+{1281}{I am anxious to solve this conundrum, as well. I accept.}{}{5}{qb1014 1}{470}{qu1013 2 }
+{1282}{I am anxious to solve this conundrum, as well. I accept.}{}{5}{qu1014 2}{470}{ }
+{1283}{I'd like to ask you some further questions before I commit myself.}{}{5}{qb1014 1}{1290}{qu1013 1 }
+{1284}{I'd like to ask you some further questions before I commit myself.}{}{5}{qu1014 2}{1290}{ }
+{1288}{That sounds a bit too dangerous, to me. Good day, sir.}{}{5}{qu1014 2}{0}{ }
+{1289}{That sounds a bit too dangerous, to me. Good day, sir.}{}{5}{qb1014 1}{0}{qu1013 1 }
+{1290}{Of course. What do you wish to ask of me?}{Of course. What do you wish to ask of me?}{}{143}{}{ }
+{1291}{You didn't actually invent the steam engine?}{}{5}{}{1035}{ }
+{1292}{Why the need to impress the dwarves after they rejected you?}{}{5}{}{1320}{ }
+{1293}{What can you tell me of the recent attempt on your life?}{}{5}{gf1028 1, lf15 0}{1130}{lf15 1 }
+{1294}{Why do you suppose the Molochean Hand tried to kill us?}{}{5}{lf15 1}{1380}{ }
+{1295}{Can you tell me about your business?}{}{5}{}{1395}{ }
+{1307}{I've decided to explore the Black Mountain Clan mines for you.}{}{5}{qu1014 2, qb1013 1}{470}{ }
+{1308}{I've decided to explore the Black Mountain Clan mines for you.}{}{5}{qb1014 1, qb1013 1}{470}{qu1013 2 }
+{1309}{E:}{}{5}{}{0}{ }
+{1310}{Such is the enthusiasm, or perhaps the impetuousness, of youth that I did not stop to consider the consequences of my actions. All I could see was a way to gain the respect of the dwarves. It was all that mattered.}{Such is the enthusiasm, or perhaps the impetuousness, of youth that I did not stop to consider the consequences of my actions. All I could see was a way to gain the respect of the dwarves. It was all that mattered.}{}{144}{}{ }
+{1311}{It must be unsettling to get so much praise for the steam engine.}{}{5}{}{1038}{ }
+{1320}{You don't understand, I was... I was orphaned at a young age. The dwarves represented everything I wanted my family to be - a tight knit clan. And the respect I had for their brilliance with technology... I made the mistake common to youth, I thought intelligence equaled compassion. I needed to belong, to find that I had some worth.}{You don't understand, I was... I was orphaned at a young age. The dwarves represented everything I wanted my family to be - a tight knit clan. And the respect I had for their brilliance with technology... I made the mistake common to youth, I thought intelligence equaled compassion. I needed to belong, to find that I had some worth.}{}{145}{}{ }
+{1321}{You were orphaned? What happened?}{}{5}{}{1350}{ }
+{1322}{K:}{}{5}{}{1290}{ }
+{1329}{I must take my leave, good sir.}{}{5}{}{0}{ }
+{1330}{The evil? What evil? And where did he escape from?}{The evil? What evil? And where did he escape from?}{}{146}{}{ }
+{1331}{He didn't say. I was hoping you would know what it meant.}{}{5}{}{1340}{ }
+{1340}{Something horrible must have happened after I ... after I ...[His voice trails off. He is obviously too distressed to continue.] Did he...did he say anything else?}{Something horrible must have happened after I ... after I ...[His voice trails off. He is obviously too distressed to continue.] Did he...did he say anything else?}{}{147}{}{ }
+{1341}{He referred to you as a boy. Why would he do that?}{}{5}{}{90}{ }
+{1350}{My mother died bringing me into this world. I believe my father died then as well, even though he continued to exist in the world for some eight more years. When he could stand living no longer, he took his own life.}{My mother died bringing me into this world. I believe my father died then as well, even though he continued to exist in the world for some eight more years. When he could stand living no longer, he took his own life.}{}{148}{}{ }
+{1351}{But abandoning you like that...}{}{5}{}{1360}{ }
+{1360}{He left me decently provided for, and with his grasp on reality becoming more tenuous each day, I believe he felt I would be safer in the care of others. [He shakes his head, sadly.] The last thing he did in this life was to give me that ring.}{He left me decently provided for, and with his grasp on reality becoming more tenuous each day, I believe he felt I would be safer in the care of others. [He shakes his head, sadly.] The last thing he did in this life was to give me that ring.}{}{149}{}{ }
+{1361}{And then you gave it to Stennar?}{}{5}{}{1370}{ }
+{1362}{That is quite sad. I've decided to explore the Black Mountain Clan for you, sir.}{}{5}{qu1014 2, qb1013 1}{470}{ }
+{1363}{That is quite sad. I've decided to explore the Black Mountain Clan for you, sir.}{}{5}{qb1014 1, qb1013 1}{470}{qu1013 2 }
+{1370}{That is how much his friendship meant to me. I was devastated when he disappeared with the rest of the clan. I believe I felt more deserted and alone then, than I did when my father killed himself.}{That is how much his friendship meant to me. I was devastated when he disappeared with the rest of the clan. I believe I felt more deserted and alone then, than I did when my father killed himself.}{}{150}{}{ }
+{1371}{K:}{}{5}{}{1290}{ }
+{1379}{I must take my leave, good sir.}{}{5}{}{0}{ }
+{1380}{I do not know. But I am beginning to believe they are behind Stennar's death. This all seems to be pointing to my involvement with the Black Mountain Clan, doesn't it? That is why I feel it is imperative to find out their fate. Our lives seem to be dependent on it, in fact.}{I do not know. But I am beginning to believe they are behind Stennar's death. This all seems to be pointing to my involvement with the Black Mountain Clan, doesn't it? That is why I feel it is imperative to find out their fate. Our lives seem to be dependent on it, in fact.}{}{151}{}{ }
+{1381}{K:}{}{5}{}{1290}{ }
+{1382}{Some of our lives more than others, eh?}{}{5}{}{1390}{ }
+{1389}{E:}{}{5}{}{0}{ }
+{1390}{[He looks at his enormous bodyguard.] Yes, it would seem that I am well protected here, but the more staff one has, the easier it is for one of them to be bribed or replaced with an assassin. Also, my notoriety keeps me a prisoner inside my house. They will always know where to look for me. You, on the other hand, can blend with the crowd, so to speak.}{[He looks at his enormous bodyguard.] Yes, it would seem that I am well protected here, but the more staff one has, the easier it is for one of them to be bribed or replaced with an assassin. Also, my notoriety keeps me a prisoner inside my house. They will always know where to look for me. You, on the other hand, can blend with the crowd, so to speak.}{}{152}{}{ }
+{1391}{K:}{}{5}{}{1290}{ }
+{1394}{E:}{}{5}{}{0}{ }
+{1395}{Well, as you know, I am the foremost manufacturer of steam engines in Arcanum, virtually without competition. I am working on a prototype for a smaller, more efficient engine right now, as a matter of fact. I also have various interests in other technological endeavors.}{Well, as you know, I am the foremost manufacturer of steam engines in Arcanum, virtually without competition. I am working on a prototype for a smaller, more efficient engine right now, as a matter of fact. I also have various interests in other technological endeavors.}{}{153}{}{ }
+{1396}{How have you devastated your competition so?}{}{5}{}{1405}{ }
+{1397}{Do you have any labor difficulties in your factories?}{}{5}{ra7}{1430}{re-5 }
+{1398}{Do you have any labor difficulties in your factories?}{}{5}{ra-7}{1460}{ }
+{1399}{K:}{}{5}{}{1290}{ }
+{1404}{E:}{}{5}{}{0}{ }
+{1405}{It is not much of an accomplishment when old Cedric Appleby is your chief competitor. Poor Cedric. Always was a bit of a blundering fool. I really wish I could have convinced him to come work for me...}{It is not much of an accomplishment when old Cedric Appleby is your chief competitor. Poor Cedric. Always was a bit of a blundering fool. I really wish I could have convinced him to come work for me...}{}{154}{}{ }
+{1406}{Why? I mean, if he's such an idiot?}{}{5}{}{1410}{ }
+{1407}{K:}{}{5}{}{1290}{ }
+{1409}{E:}{}{5}{}{0}{ }
+{1410}{Cedric and I were close friends when we were children. He was furious that I wouldn't introduce him to the dwarves...can you imagine? I had a difficult enough time gaining their respect without his simplemindedness. After I "invented" the steam engine he began to despise me. Strangely enough, I wish he was still my friend some days.}{Cedric and I were close friends when we were children. He was furious that I wouldn't introduce him to the dwarves...can you imagine? I had a difficult enough time gaining their respect without his simplemindedness. After I "invented" the steam engine he began to despise me. Strangely enough, I wish he was still my friend some days.}{}{155}{}{ }
+{1411}{Appleby tried to hire me to steal something to expose you with.}{}{5}{qa1039 1, gf1012 0}{1420}{gf1012 1 }
+{1414}{K:}{}{5}{}{1290}{ }
+{1419}{E:}{}{5}{}{0}{ }
+{1420}{Cedric, you bastard! I tire of his games...sadly enough, I think it's time for someone to pay him a visit, before he finally gets up the nerve to start hiring people to kill me.}{Cedric, you bastard! I tire of his games...sadly enough, I think it's time for someone to pay him a visit, before he finally gets up the nerve to start hiring people to kill me.}{}{156}{}{ }
+{1421}{Do you have any labor difficulties in your factories?}{}{5}{ra7}{1430}{re-5 }
+{1422}{Do you have any labor difficulties in your factories?}{}{5}{ra-7}{1460}{ }
+{1423}{K:}{}{5}{}{1290}{ }
+{1429}{E:}{}{5}{}{0}{ }
+{1430}{[He looks at you suspiciously.] Why do you ask, [he pauses for effect]...halforc? You're not a labor sympathizer, are you? A "unionizer", perhaps? I can assure you, my workers are happy to have the jobs I give them. I treat your people better  than any other factory owner, of that I can assure you.}{[He looks at you suspiciously.] Why do you ask, [he pauses for effect]...halforc? You're not a labor sympathizer, are you? A "unionizer", perhaps? I can assure you, my workers are happy to have the jobs I give them. I treat your people better  than any other factory owner, of that I can assure you.}{}{157}{}{ }
+{1431}{I didn't mean to imply anything, sir. Simply curious.}{}{5}{}{1440}{re+5 }
+{1432}{I am sure you believe that, you racist oppressor.}{}{5}{}{1450}{re-10 }
+{1433}{K:}{}{5}{}{1290}{ }
+{1439}{E:}{}{5}{}{0}{ }
+{1440}{Yes, I can understand that, with all the talk of labor difficulties and protests in all the journals. But, in answer to your original question, I believe that I am fortunate to have been spared a lot of the problems others have been experiencing with their workers. I do believe it is because I treat my workers better than most. Why, their working conditions are almost human.}{Yes, I can understand that, with all the talk of labor difficulties and protests in all the journals. But, in answer to your original question, I believe that I am fortunate to have been spared a lot of the problems others have been experiencing with their workers. I do believe it is because I treat my workers better than most. Why, their working conditions are almost human.}{}{158}{}{ }
+{1441}{K:}{}{5}{}{1290}{ }
+{1442}{I can take your pomposity no longer! Death to the bourgeoisie!}{}{5}{}{0}{fl 1050 ,co}
+{1449}{E:}{}{5}{}{0}{ }
+{1450}{How dare you, sir! I will not have subhuman labor agitators insult me in my own home!}{How dare you, madam! I will not have subhuman labor agitators insult me in my own home!}{}{159}{}{ }
+{1451}{I apologize. Subhumans such as myself are prone to outbursts.}{}{5}{}{1455}{re+10 }
+{1452}{I can take your pomposity no longer! Death to the bourgeoisie!}{}{5}{}{0}{fl 1050 ,co}
+{1455}{Yes, yes, this is true. The lower races are lacking in restraint. I suppose your racial shortcomings are not your fault.}{Yes, yes, this is true. The lower races are lacking in restraint. I suppose your racial shortcomings are not your fault.}{}{160}{}{ }
+{1456}{I must make an example of your bourgeoisie hide, swine!}{}{5}{}{0}{fl 1050 ,co}
+{1457}{K:}{}{5}{}{1290}{ }
+{1459}{E:}{}{5}{}{0}{ }
+{1460}{[He looks at you suspiciously.] Why do you ask? You're not a labor sympathizer, are you? A "unionizer", perhaps? I can assure you, my workers are happy to have the jobs I give them. I treat all orcs, true blood and half breed alike, better  than any other factory owner. Of that I can assure you.}{[He looks at you suspiciously.] Why do you ask? You're not a labor sympathizer, are you? A "unionizer", perhaps? I can assure you, my workers are happy to have the jobs I give them. I treat all orcs, true blood and half breed alike, better  than any other factory owner. Of that I can assure you.}{}{161}{}{ }
+{1461}{I didn't mean to imply anything, sir. Simply curious.}{}{5}{}{1440}{re+5 }
+{1462}{I am sure you believe that, you racist oppressor.}{}{5}{}{1470}{re-10 }
+{1463}{K:}{}{5}{}{1290}{ }
+{1469}{E:}{}{5}{}{0}{ }
+{1470}{How dare you! I will not have labor agitators insult me in my own home!}{How dare you! I will not have labor agitators insult me in my own home!}{}{162}{}{ }
+{1471}{I apologize, sir. My outburst was uncalled for.}{}{5}{}{1475}{ }
+{1472}{I can take your pomposity no longer! Death to the bourgeoisie!}{}{5}{}{0}{fl 1050 ,co}
+{1475}{I suppose I can forgive your rudeness, this once.}{I suppose I can forgive your rudeness, this once.}{}{163}{}{ }
+{1476}{K:}{}{5}{}{1290}{ }
+{1479}{I appreciate your grace, sir. I must be off, though. Good day.}{}{5}{}{0}{ }
+{1480}{I don't put much stock in religious ramblings. I'm more concerned with who killed Stennar, and why, and what all this has to do with my relationship with the Black Mountain Clan.}{I don't put much stock in religious ramblings. I'm more concerned with who killed Stennar, and why, and what all this has to do with my relationship with the Black Mountain Clan.}{}{164}{}{ }
+{1481}{So what is to be done, now?}{}{5}{gf1007 1}{450}{ }
+{1482}{So what is to be done, now?}{}{5}{gf1007 0}{1280}{ }
+{1490}{I don't put much stock in religious ramblings, myself. But if you feel it could help you to get more information on the Panarii, you should go to their temple on the northern end of Lion's Head Circle.  I'm more concerned with who killed Stennar, and why, and what all this has to do with my relationship with the Black Mountain Clan.}{I don't put much stock in religious ramblings, myself. But if you feel it could help you to get more information on the Panarii, you should go to their temple on the northern end of Lion's Head Circle.  I'm more concerned with who killed Stennar, and why, and what all this has to do with my relationship with the Black Mountain Clan.}{}{165}{}{ru2154 }
+{1491}{So what is to be done, now?}{}{5}{gf1007 1}{450}{ }
+{1492}{So what is to be done, now?}{}{5}{gf1007 0}{1280}{ }
+{1500}{It's ironic that my greatest mistake is that which brought me such wealth. As a youth, I was enamored of all things dwarven, so I sought out the nearest clan and attempted to impress them with my grasp of their technology. They laughed.}{It's ironic that my greatest mistake is that which brought me such wealth. As a youth, I was enamored of all things dwarven, so I sought out the nearest clan and attempted to impress them with my grasp of their technology. They laughed.}{}{166}{}{ }
+{1501}{[Continue]}{}{1}{}{1502}{ }
+{1502}{It was obviously a novelty to them, a ridiculous human who had a natural bent towards technology. I suppose it didn't help that I was a mere 14 years old at the time. I became something they humored to entertain themselves.}{It was obviously a novelty to them, a ridiculous human who had a natural bent towards technology. I suppose it didn't help that I was a mere 14 years old at the time. I became something they humored to entertain themselves.}{}{167}{}{ }
+{1503}{[Continue]}{}{1}{}{1504}{ }
+{1504}{Stennar was the only one who truly called me friend in all those years, and betrayal is how I repaid his friendship. It was he who first showed me their steam engine, as he knew I could appreciate the beautiful intricacies of its design.}{Stennar was the only one who truly called me friend in all those years, and betrayal is how I repaid his friendship. It was he who first showed me their steam engine, as he knew I could appreciate the beautiful intricacies of its design.}{}{168}{}{ }
+{1505}{[Continue]}{}{1}{}{1506}{ }
+{1506}{They had left it to rust in a corner, as they had very little use for a device that would reduce the need for sheer physical power. Imagine a dwarf relying on a device to do his digging for him! It's preposterous.}{They had left it to rust in a corner, as they had very little use for a device that would reduce the need for sheer physical power. Imagine a dwarf relying on a device to do his digging for him! It's preposterous.}{}{169}{}{ }
+{1507}{[Continue]}{}{1}{}{1508}{ }
+{1508}{I asked him if I could tinker with it, perhaps improve on it, as I knew this was the key to becoming truly a part of the dwarven world. I quickly devised a way to use it to power a pump for draining the mines.}{I asked him if I could tinker with it, perhaps improve on it, as I knew this was the key to becoming truly a part of the dwarven world. I quickly devised a way to use it to power a pump for draining the mines.}{}{170}{}{ }
+{1509}{[Continue]}{}{1}{}{1510}{ }
+{1510}{When I fell all over myself trying to explain it to them, laughter was, once again, their only response. I knew I had to somehow gain their respect, so I hastily sketched some schematics and set out to prove my theory.}{When I fell all over myself trying to explain it to them, laughter was, once again, their only response. I knew I had to somehow gain their respect, so I hastily sketched some schematics and set out to prove my theory.}{}{171}{}{ }
+{1511}{[Continue]}{}{1}{}{1512}{ }
+{1512}{The struggling human mining company that I brought the plans to offered me a share in their mines for the steam pump! I was ecstatic - I had not a care for their mines or their money, I desired vindication!}{The struggling human mining company that I brought the plans to offered me a share in their mines for the steam pump! I was ecstatic - I had not a care for their mines or their money, I desired vindication!}{}{172}{}{ }
+{1513}{[Continue]}{}{1}{}{1514}{ }
+{1514}{When I returned to the dwarves to boast of my accomplishments and be welcomed into their clan ... they were gone. The inventions came quickly after that, fueled by my anger and confusion.}{When I returned to the dwarves to boast of my accomplishments and be welcomed into their clan ... they were gone. The inventions came quickly after that, fueled by my anger and confusion.}{}{173}{}{ }
+{1515}{[Continue]}{}{1}{}{1516}{ }
+{1516}{How could they have denied me my place amongst them after all my labors? Somehow, I felt I could still prove myself to them. I continued searching for them in all my spare moments, but to no avail. But then, they came - the robed ones.}{How could they have denied me my place amongst them after all my labors? Somehow, I felt I could still prove myself to them. I continued searching for them in all my spare moments, but to no avail. But then, they came - the robed ones.}{}{174}{}{ }
+{1517}{[Continue]}{}{1}{}{1518}{ }
+{1518}{They appeared to me late one night and they warned me to never speak of, nor try to find, the dwarves again. Still being a mere lad, you can imagine the terror that put into me. As my wealth and power grew, I shook off some of my youthful fear and hired the first in a long chain of investigators to locate Stennar and his clan.}{They appeared to me late one night and they warned me to never speak of, nor try to find, the dwarves again. Still being a mere lad, you can imagine the terror that put into me. As my wealth and power grew, I shook off some of my youthful fear and hired the first in a long chain of investigators to locate Stennar and his clan.}{}{175}{}{ }
+{1519}{[Continue]}{}{1}{}{-46}{ }
+

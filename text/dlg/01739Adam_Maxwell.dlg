@@ -1,0 +1,217 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Greetings sir.  Might I ask your name?}{}{5}{lf1 0, re 41}{34}{}
+{3}{That was very unmannerly.}{}{5}{lf1 0, re -40}{47}{}
+{4}{Have I offended you, Adam?}{}{5}{lf1 1, lf2 0}{58}{}
+{5}{Hello again, Adam.  Can I ask you a question?}{}{5}{lf1 1, lf2 1,re 41}{64}{}
+{6}{Have I offended you, Adam?}{}{5}{lf1 1, lf2 1, re -40}{54}{}
+{7}{I think I'll get that book for you Adam.  What is the pay?}{}{5}{qu1122 1}{102}{}
+{8}{I'm still trying to get the book...}{}{5}{qu1122 2, ni 5241}{118}{}
+{9}{I've got the book.  Here.}{}{5}{lf3 0,  in 5241}{121}{re +10, in5241}
+{10}{I've got the book.  Here.}{}{5}{lf3 1,  in 5241}{126}{re +10, in5241}
+{11}{Maybe I will get that necklace...  What will you pay me?}{}{5}{qu1123 1}{136}{}
+{12}{I'm having a little trouble retrieving the necklace.}{}{5}{qu1123 2, ni 2825}{144}{}
+{13}{I've got the necklace.  Here...take it.}{}{5}{lf4 0,   in 2825}{155}{re +10, in2825}
+{14}{I've got the necklace.  Here...take it.}{}{5}{lf4 1,   in 2825}{160}{re +10, in2825}
+{15}{I've got a package for you...}{}{5}{qu1124 2, in 5666}{168}{lf1 1, lf2 1}
+{16}{Me got bag for you...}{}{-4}{qu1124 2, in 5666}{168}{lf1 1, lf2 1}
+{17}{Hey, mister.  Wha' you name?}{}{-4}{lf1 0, re 41}{34}{}
+{18}{Dat was not nice...}{}{-4}{lf1 0, re -40}{47}{}
+{19}{Hi Adam.  Me ask sumthin?}{}{-4}{lf1 1, lf2 0}{58}{}
+{20}{Hi Adam.  Me ask sumthin?}{}{-4}{lf1 1, lf2 1}{64}{}
+{21}{Me get book for you.  Wha' you pay?}{}{-4}{qu1122 1}{102}{}
+{22}{Me not get book yet...}{}{-4}{qu1122 2, ni 5241}{118}{}
+{23}{Me got the book!  Here.  It for you.}{}{-4}{lf3 0,  in 5241}{121}{re +10, in5241}
+{24}{Me got the book!  Here.  It for you.}{}{-4}{lf3 1,  in 5241}{126}{re +10, in5241}
+{25}{Mebbe I get necklace.  Wha' you pay me?}{}{-4}{qu1123 1}{136}{}
+{26}{Dat necklace hard to get!}{}{-4}{qu1123 2, ni 2825}{144}{}
+{27}{Me got the necklace!  Here.  Take it.}{}{-4}{lf4 0,   in 2825}{155}{re +10, in2825}
+{28}{Me got the necklace!  Here.  Take it.}{}{-4}{lf4 1,   in 2825}{160}{re +10, in2825}
+{29}{Can you train me as an Expert locksmith?}{}{5}{tr14 -1}{0}{et14 174}
+{30}{Can you train me as an Expert at trap disarming?}{}{5}{tr15 -1}{0}{et15 197}
+{31}{Uh... me wan' train be Exper' wit' loks...}{}{-4}{tr14 -1}{0}{et14 174}
+{32}{Uh...  me wan' train be Exper' wit' dis arm trap t'ings.}{}{-4}{tr15 -1}{0}{et15 197}
+{33}{E:}{}{1}{}{0}{}
+{34}{My name is Adam Maxwell.  ...and who are you?}{My name is Adam Maxwell.  ...and who are you?}{}{}{}{lf1 1}
+{35}{My name is @pcname@.}{}{5}{}{64}{lf2 1}
+{36}{That is none of your concern.}{}{5}{}{41}{re-10}
+{37}{I don't particularly like conversing with inferior races...}{}{5}{ra-1}{41}{re-15}
+{38}{Me name @pcname@.}{}{-4}{}{64}{lf2 1}
+{39}{No.}{}{-4}{ra-8}{41}{re-10}
+{40}{Me no like you, tiny man.}{}{-4}{ra 8}{41}{re-15}
+{41}{I have no use for someone so lacking in manners...goodbye.}{I have no use for someone so lacking in manners...goodbye.}{}{}{}{}
+{42}{That was very rude.  I apologize.  My name is @pcname@.}{}{5}{}{64}{re+5, lf2 1}
+{43}{I think you have no use for living.  I think I can solve that problem...}{}{5}{}{}{co, fl 53}
+{44}{Sorry.  Me be bad.  Me name is @pcname@.}{}{-4}{}{64}{re+5, lf2 1}
+{45}{Me t'ink you gonna be dead...}{}{-4}{}{}{co, fl 53}
+{46}{E:}{}{1}{}{0}{}
+{47}{I:}{I:}{}{}{}{}
+{48}{Fine...  I guess I'll be the mannerly one.  Could I ask your name, sir?}{}{5}{}{34}{}
+{49}{That's it!  Defend yourself!}{}{5}{}{}{co, fl 53}
+{50}{Hmm...  Uh, okay.  Uh...  Wha' you name?}{}{-4}{}{34}{}
+{51}{You jus' mean!  I get you!}{}{-4}{}{}{co, fl 53}
+{52}{E:}{}{1}{}{0}{}
+{53}{Death comes so easily to fools...}{Death comes so easily to fools...}{}{}{}{}
+{54}{I see you have no stomach for sarcasm.  Very well.  I apologize.  Please continue...}{I see you have no stomach for sarcasm.  Very well.  I apologize.  Please continue...}{}{}{}{}
+{55}{Errr...  I have a question.}{}{5}{}{64}{}
+{56}{I see you are an ass.  ...I have a question.}{}{5}{}{64}{}
+{57}{E:}{}{5}{}{0}{}
+{58}{I willingly told you my name.  If you are not going to reciprocate, then I am not speaking to you.}{I willingly told you my name.  If you are not going to reciprocate, then I am not speaking to you.}{}{}{}{}
+{59}{I'm sorry.  My name is @pcname@.}{}{5}{}{64}{lf2 1}
+{60}{Then fight me!}{}{5}{}{}{co, fl, re -10 53}
+{61}{Me sorry.  Me name @pcname@.}{}{-4}{}{64}{lf2 1}
+{62}{Den me gotta kill you!}{}{-4}{}{}{co, fl, re -10 53}
+{63}{E:}{}{1}{}{0}{}
+{64}{Well...  What do you want @pcname@?}{Well...  What do you want @pcname@?}{}{}{}{}
+{65}{C:}{}{1}{}{75}{}
+{66}{T:4, 5, 6}{}{1}{}{75}{}
+{67}{Do you have a job I could do?}{}{5}{rp 1001, qu1122 0}{86}{}
+{68}{You got sum work me do?}{}{-4}{rp 1001, qu1122 0}{86}{}
+{69}{Is there anything else I could do for you?}{}{5}{rp1001, qu1122 4, qu1123 0}{131}{}
+{70}{More work for me?}{}{-4}{rp1001, qu1122 4, qu1123 0}{131}{}
+{71}{Tell me, why did you have me retrieve a blank book?}{}{5}{qa1122 3, qb 1122 4, lf0 0}{165}{}
+{72}{Why der no words in book?}{}{-4}{qa1122 3, qb 1122 4, lf0 0}{165}{}
+{74}{F:}{}{1}{}{0}{}
+{75}{What else do you need, @pcname@?}{What else do you need, @pcname@?}{}{}{}{}
+{76}{C:}{}{1}{}{75}{}
+{77}{T:4, 5, 6}{}{1}{}{75}{}
+{78}{Do you have a job I could do?}{}{5}{rp 1001, qu1122 0}{86}{}
+{79}{You got sum work me do?}{}{-4}{rp 1001, qu1122 0}{86}{}
+{80}{Is there anything else I could do for you?}{}{5}{rp1001, qu1122 4, qu1123 0}{131}{}
+{81}{More work for me?}{}{-4}{rp1001, qu1122 4, qu1123 0}{131}{}
+{82}{Tell me, why did you have me retrieve a blank book?}{}{5}{qa1122 3, qb 1122 4, lf0 0}{165}{}
+{83}{Why der no words in book?}{}{-4}{qa1122 3, qb 1122 4, lf0 0}{165}{}
+{84}{I:}{}{1}{re -40}{75}{re -5}
+{85}{F:}{}{1}{}{0}{}
+{86}{Ahh...  A member of the Underground.  I thought I recognized your name.  As a matter of fact, we do have an order that needs filling.  Are you available?}{Ahh...  A member of the Underground.  I thought I recognized your name.  As a matter of fact, we do have an order that needs filling.  Are you available?}{}{}{}{}
+{87}{That depends on the job...}{}{5}{}{90}{}
+{88}{Wha' you want me do?}{}{-4}{}{90}{}
+{89}{E:}{}{1}{}{0}{}
+{90}{The home of the widower Misk, located here in Caladon, contains an extensive library of rare and unusually books that belonged to her recently deceased husband.  One of our clients wishes to obtain a volume that is of particular interest to him.  It's a very old tome entitled Divinations and Magicks for the Adept Wizard.  Can you retrieve it for me?}{The home of the widower Misk, located here in Caladon, contains an extensive library of rare and unusually books that belonged to her recently deceased husband.  One of our clients wishes to obtain a volume that is of particular interest to him.  It's a very old tome entitled Divinations and Magicks for the Adept Wizard.  Can you retrieve it for me?}{}{}{}{qu1122 1}
+{91}{Yes I can.  What is the pay?}{}{5}{}{102}{}
+{92}{I am not interested at the moment.  Perhaps later...}{}{5}{}{96}{}
+{93}{Yeah.  Me do.  Wha' you pay me?}{}{-4}{}{102}{}
+{94}{I dunno.  Mebbe me do later.}{}{-4}{}{96}{}
+{95}{E:}{}{1}{}{0}{}
+{96}{Well...  I see your dedication to the Underground is rather weak.  No matter...  I will find a more dedicated individual.}{Well...  I see your dedication to the Underground is rather weak.  No matter...  I will find a more dedicated individual.}{}{}{}{}
+{97}{Can I ask you something more?}{}{5}{}{75}{}
+{98}{On second thought...  I'll do it.  What's the pay?}{}{5}{}{102}{}
+{99}{Me ask sumthin' more?}{}{-4}{}{75}{}
+{100}{Hmmm...  Me get it!  Wha' you pay?}{}{-4}{}{102}{}
+{101}{E:}{}{1}{}{0}{}
+{102}{It's not a large job.  However, the client is paying top dollar.  Is 250 coin acceptable?}{It's not a large job.  However, the client is paying top dollar.  Is 250 coin acceptable?}{}{}{}{}
+{103}{It's a deal.  I'll return with it shortly.}{}{5}{}{0}{qu1122 2}
+{104}{I will do it for 350.  Are we in agreement?}{}{5}{ch -11}{110}{re -5}
+{105}{I will do it for 350.  Are we in agreement?}{}{5}{ch 12}{114}{re +5}
+{106}{Okay.  Me get it.  Be back soon.}{}{-4}{}{0}{qu1122 2}
+{107}{Me good.  Me want 350 coin.  Okay?}{}{-4}{ch -11}{110}{re -5}
+{108}{Me good.  Me want 350 coin.  Okay?}{}{-4}{ch 12}{114}{re +5}
+{109}{E:}{}{1}{}{0}{}
+{110}{Retrieving a book is hardly worth that!  The 250 was not negotiable.  Either accept it, or go your way.}{Retrieving a book is hardly worth that!  The 250 was not negotiable.  Either accept it, or go your way.}{}{}{}{}
+{111}{I will accept it.  I'll be back with the book soon.}{}{5}{}{0}{qu1122 2}
+{112}{Okay.  Me get it for 250.  Me be back.}{}{-4}{}{0}{qu1122 2}
+{113}{E:}{}{1}{}{0}{}
+{114}{Well...  It could be difficult to retrieve.  Alright.  350 it is.  Do you accept the job?}{Well...  It could be difficult to retrieve.  Alright.  350 it is.  Do you accept the job?}{}{}{}{lf3 1}
+{115}{It's a deal.  I'll return with it shortly.}{}{5}{}{0}{qu1122 2}
+{116}{Okay.  Me get it.  Be back soon.}{}{-4}{}{0}{qu1122 2}
+{117}{E:}{}{1}{}{0}{}
+{118}{Please retrieve the tome soon.  Our client is beginning to tire of the wait.}{Please retrieve the tome soon.  Our client is beginning to tire of the wait.}{}{}{}{}
+{119}{K:}{}{1}{}{75}{}
+{120}{E:}{}{1}{}{0}{}
+{121}{Well done!  Here's the 250 coin we agreed upon.  Thank you for the help.  Your dedication will be mentioned to the Underground.}{Well done!  Here's the 250 coin we agreed upon.  Thank you for the help.  Your dedication will be mentioned to the Underground.}{}{}{}{$$ 250,  qu1122 4}
+{122}{Thank you @npcname@.  Goodbye.}{}{5}{}{0}{}
+{123}{Thank you @npcname@.  Can I ask you something?}{}{5}{}{75}{}
+{124}{T'anks @npcname@.  Buh-bye.}{}{-4}{}{0}{}
+{125}{T'anks @npcname@.  Me ask sumthin' more?}{}{-4}{}{75}{}
+{126}{Well done!  Here's the 350 coin we agreed upon.  Thank you for the help.  Your dedication will be mentioned to the Underground.}{Well done!  Here's the 350 coin we agreed upon.  Thank you for the help.  Your dedication will be mentioned to the Underground.}{}{}{}{$$ 350, qu1122 4}
+{127}{Thank you @npcname@.  Goodbye.}{}{5}{}{0}{}
+{128}{Thank you @npcname@.  Can I ask you something?}{}{5}{}{75}{}
+{129}{T'anks @npcname@.  Buh-bye.}{}{-4}{}{0}{}
+{130}{T'anks @npcname@.  Me ask sumthin' more?}{}{-4}{}{75}{}
+{131}{Very good.  Your dedication is admirable.  Yes.  There is another job.  It will be more difficult.  There is priceless necklace, The Necklace of Queen K'na S'ea, kept in a safe at the Caladon Museum.  We have a client who is very interested in obtaining the piece.  Are you interested?}{Very good.  Your dedication is admirable.  Yes.  There is another job.  It will be more difficult.  There is priceless necklace, The Necklace of Queen K'na S'ea, kept in a safe at the Caladon Museum.  We have a client who is very interested in obtaining the piece.  Are you interested?}{}{}{}{qu1123 1}
+{132}{I think I could manage that.  What's the pay?}{}{5}{}{136}{}
+{133}{I'm not sure.  That sounds much more challenging...}{}{5}{}{144}{}
+{134}{Me can do dat!  Wha' you pay me?}{}{-4}{}{136}{}
+{135}{Me not know.  That mebbe to hard to get...}{}{-4}{}{144}{}
+{136}{I must warn you.  The museum has employed some type of new technological security system.  I don't know the details, but it might serve you well to preview the museum thoroughly before removing the necklace.  ...This is a dangerous mission, so it pays 550 coin.  Do you accept?}{I must warn you.  The museum has employed some type of new technological security system.  I don't know the details, but it might serve you well to preview the museum thoroughly before removing the necklace.  ...This is a dangerous mission, so it pays 550 coin.  Do you accept?}{}{}{}{}
+{137}{Yes.  I'll do it for 550.  Thank you for the warning.}{}{5}{}{0}{qu1123 2}
+{138}{It does sound dangerous.  I would like 750 to heist the jewelry.}{}{5}{ch -11}{151}{re -5}
+{139}{It does sound dangerous.  I would like 750 to heist the jewelry.}{}{5}{ch 12}{148}{}
+{140}{Okay.  Me do it.  I be back.}{}{-4}{}{0}{qu1123 2}
+{141}{Dat sound bad.  Me want 750 coin.}{}{-4}{ch -11}{151}{re -5}
+{142}{Dat sound bad.  Me want 750 coin.}{}{-4}{ch 12}{148}{}
+{143}{E:}{}{1}{}{0}{}
+{144}{I understand.  The risk involved has deterred many of our league from attempting to heist the necklace.  Thank you for your help with the book.  Goodbye.}{I understand.  The risk involved has deterred many of our league from attempting to heist the necklace.  Thank you for your help with the book.  Goodbye.}{}{}{}{}
+{145}{Wait! I'll try it.  What will you pay me?}{}{5}{}{136}{}
+{146}{Wait!  Me try and get it!  Wha' you pay me?}{}{-4}{}{136}{}
+{147}{E:}{}{1}{}{0}{}
+{148}{Hmm...  You are the only member I've found willing to take the risk.  So yes, 750 coin is acceptable.}{Hmm...  You are the only member I've found willing to take the risk.  So yes, 750 coin is acceptable.}{}{}{}{lf4 1}
+{149}{I'll have them moved in no time!}{}{5}{}{0}{qu1123 2}
+{150}{Okay.  Me do it.  I be back.}{}{-4}{}{0}{qu1123 2}
+{151}{That is beyond reason.  I believe 550 coin is a very generous offer.  If it is not enough, I will find another for the task.}{That is beyond reason.  I believe 550 coin is a very generous offer.  If it is not enough, I will find another for the task.}{}{}{}{}
+{152}{Alright.  I'll do it for 550.}{}{5}{}{0}{qu1123 2}
+{153}{Okay.  Me do it.}{}{-4}{}{0}{qu1123 2}
+{154}{F:}{}{1}{}{0}{}
+{155}{Wow!  You are extremely talented.  Nice work.  Here's the 550 coin I promised.  The Underground thanks you.}{Wow!  You are extremely talented.  Nice work.  Here's the 550 coin I promised.  The Underground thanks you.}{}{}{}{$$ 550, qu1123 4}
+{156}{Thank you @npcname@.  Goodbye.}{}{5}{}{0}{}
+{157}{Thank you @npcname@.  Can I ask you something?}{}{5}{}{75}{}
+{158}{T'anks @npcname@.  Buh-bye.}{}{-4}{}{0}{}
+{159}{T'anks @npcname@.  Me ask sumthin' more?}{}{-4}{}{75}{}
+{160}{Wow!  You are extremely talented.  Nice work.  Here's the 750 coin I promised.  The Underground thanks you.}{Wow!  You are extremely talented.  Nice work.  Here's the 750 coin I promised.  The Underground thanks you.}{}{}{}{$$ 750, qu1123 4}
+{161}{Thank you @npcname@.  Goodbye.}{}{5}{}{0}{}
+{162}{Thank you @npcname@.  Can I ask you something?}{}{5}{}{75}{}
+{163}{T'anks @npcname@.  Buh-bye.}{}{-4}{}{0}{}
+{164}{T'anks @npcname@.  Me ask sumthin' more?}{}{-4}{}{75}{}
+{165}{Ahh...  Very observant of you.  It has been hidden, so it will not be discerned by those without the appropriate knowledge.  Do not worry though, our client is well versed in it's use.  He will be extremely pleased that you have obtained it.  Thank you.}{Ahh...  Very observant of you.  It has been hidden, so it will not be discerned by those without the appropriate knowledge.  Do not worry though, our client is well versed in it's use.  He will be extremely pleased that you have obtained it.  Thank you.}{}{}{}{lf0 1}
+{166}{K:}{}{1}{}{75}{}
+{167}{E:}{}{1}{}{0}{}
+{168}{Ahh...  The jewels.  Yes.  I've been expecting them...   Here.  Let me see them.  [takes bag from you and looks through it]  ...Yes.  Everything seems to be in order.  You've done us a great service, transporting these through alternate channels.}{Ahh...  The jewels.  Yes.  I've been expecting them...   Here.  Let me see them.  [takes bag from you and looks through it]  ...Yes.  Everything seems to be in order.  You've done us a great service, transporting these through alternate channels.}{}{}{}{qu1124 4, in 5666}
+{169}{I was glad to help.  I was told I would be compensated?}{}{5}{}{171}{}
+{170}{Me happy to help.  He say me get sumthin'?}{}{-4}{}{171}{}
+{171}{Yes...  Yes.  Compensation.  I was told to offer you a little extra, since the cargo you delivered was of such importance.  Here's 350 coin for your trouble.  The Underground thanks you.}{Yes...  Yes.  Compensation.  I was told to offer you a little extra, since the cargo you delivered was of such importance.  Here's 350 coin for your trouble.  The Underground thanks you.}{}{}{}{$$ 350}
+{172}{K:}{}{1}{}{75}{}
+{173}{E:}{}{1}{}{0}{}
+{174}{Yeah...  I can do that.  I want 500 coin up front though, as a training fee. }{Yeah...  I can do that.  I want 500 coin up front though, as a training fee. }{}{}{}{}
+{175}{That is acceptable.  I am ready to be trained.}{}{5}{$$500, sk14 9}{188}{}
+{176}{Fine.  Let's get on with it.}{}{5}{$$500, sk14 9}{188}{}
+{177}{That is acceptable.  I am ready to be trained.}{}{5}{$$500, sk14 -8}{184}{}
+{178}{Fine.  Let's get on with it.}{}{5}{$$500, sk14 -8}{184}{}
+{179}{I will need to return later with more coin.  Goodbye.}{}{5}{$$-499}{0}{}
+{180}{Uh...  Okay.  Me ready.}{}{-4}{$$500, sk14 9}{188}{}
+{181}{Uh...  Okay.  Me ready.}{}{-4}{$$500, sk14 -8}{184}{}
+{182}{Uh...  Me go get more coin.  Be back.}{}{-4}{$$-499}{0}{}
+{183}{F:}{}{1}{}{0}{}
+{184}{[After working with you for a few moments he pauses.]  Hold on there...  You obviously have "some" skill as a locksmith, but I do not think you are ready to advance to Expert yet.  Go and improve your skill a bit more, then we will talk.}{[After working with you for a few moments he pauses.]  Hold on there...  You obviously have "some" skill as a locksmith, but I do not think you are ready to advance to Expert yet.  Go and improve your skill a bit more, then we will talk.}{}{}{}{}
+{185}{Alright.  I will return shortly.}{}{5}{}{0}{}
+{186}{Okay.  Me be back.}{}{-4}{}{0}{}
+{187}{F:}{}{1}{}{0}{}
+{188}{Thanks. [He takes the coin from you]  Here, let me show you some tricks [He proceeds to expand your knowledge of locking mechanism variations in detail.]  ...All right, @pcname@.  You have become an Expert Locksmith. }{Thanks. [He takes the coin from you]  Here, let me show you some tricks [He proceeds to expand your knowledge of locking mechanism variations in detail.]  ...All right, @pcname@.  You have become an Expert Locksmith. }{}{}{}{tr14 2, $$-500, rq2183}
+{189}{Thank you.  Now, where would I find the Master Locksmith?}{}{5}{}{191}{}
+{190}{T'anks.  Wer Mast'r Lock train man be?}{}{-4}{}{191}{}
+{191}{[looking slightly amused]  I know right where he is!  J.T. Morgan is who you want.  He is real easy to find right now, since he is serving a life sentence right here in Caladon's prison.  Good luck with becoming a Master Locksmith!  ...you are going to need it!}{[looking slightly amused]  I know right where he is!  J.T. Morgan is who you want.  He is real easy to find right now, since he is serving a life sentence right here in Caladon's prison.  Good luck with becoming a Master Locksmith!  ...you are going to need it!}{}{}{}{ru2173}
+{192}{Well...  that may be problematic.  Thank you, though.  Goodbye.}{}{5}{}{0}{}
+{193}{It sounds as if I'll need it!  Thank you for my training.  Goodbye.}{}{5}{}{0}{}
+{194}{Oh!  Dat not good.   Uh...  T'anks for train me.  Buh-bye.}{}{-4}{}{0}{}
+{195}{Uh!...  Me need luck mebbe!  T'anks for train.  Me go now.  Buh-bye.}{}{-4}{}{0}{}
+{196}{E:}{}{1}{}{0}{}
+{197}{Yeah...  I can do that.  I want 500 coin up front though, as a training fee. }{Yeah...  I can do that.  I want 500 coin up front though, as a training fee. }{}{}{}{}
+{198}{That is acceptable.  I am ready to be trained.}{}{5}{$$500, sk15 9}{211}{}
+{199}{Fine.  Let's get on with it.}{}{5}{$$500, sk15 9}{211}{}
+{200}{That is acceptable.  I am ready to be trained.}{}{5}{$$500, sk15 -8}{207}{}
+{201}{Fine.  Let's get on with it.}{}{5}{$$500, sk15 -8}{207}{}
+{202}{I will need to return later with more coin.  Goodbye.}{}{5}{$$-499}{0}{}
+{203}{Uh...  Okay.  Me ready.}{}{-4}{$$500, sk15 9}{211}{}
+{204}{Uh...  Okay.  Me ready.}{}{-4}{$$500, sk15 -8}{207}{}
+{205}{Uh...  Me go get more coin.  Be back.}{}{-4}{$$-499}{0}{}
+{206}{F:}{}{1}{}{0}{}
+{207}{[After working with you for a few moments he stops.]  Hold on there... You obviously have "some" skill disarming traps, but I do not think you are ready to advance to Expert yet.  Go and improve your skill a bit more, then we will talk.}{[After working with you for a few moments he stops.]  Hold on there... You obviously have "some" skill disarming traps, but I do not think you are ready to advance to Expert yet.  Go and improve your skill a bit more, then we will talk.}{}{}{}{}
+{208}{All right.  I will return shortly.}{}{5}{}{0}{}
+{209}{Okay.  Me be back.}{}{-4}{}{0}{}
+{210}{F:}{}{1}{}{0}{}
+{211}{Thanks. [He takes the coin from you]  Here, let me show you some tricks [He proceeds to expand your knowledge of trap disarmament, demonstrating several new methods.]  ...All right, @pcname@.  You have become a trap disarm Expert. }{Thanks. [He takes the coin from you]  Here, let me show you some tricks [He proceeds to expand your knowledge of trap disarmament, demonstrating several new methods.]  ...All right, @pcname@.  You have become a trap disarm Expert. }{}{}{}{tr15 2, $$-500, rq2184}
+{212}{Thank you.  Now, where would I find the Master?}{}{5}{}{214}{}
+{213}{T'anks.  Wer Mast'r trayn man be?}{}{-4}{}{214}{}
+{214}{[looking slightly amused]  I know right where he is!  Daniel McPherson is the man you want.  His home is right across from mine, here in Caladon, but he is always busy.  The king is constantly calling upon him to improve the castle defenses.  I would be surprised if he even takes the time to teach anymore.}{[looking slightly amused]  I know right where he is!  Daniel McPherson is the man you want.  His home is right across from mine, here in Caladon, but he is always busy.  The king is constantly calling upon him to improve the castle defenses.  I would be surprised if he even takes the time to teach anymore.}{}{}{}{ru2174}
+{215}{Well...  that may be problematic.  Thank you, though.  Goodbye.}{}{5}{}{0}{}
+{216}{Oh!  Dat not good.   Uh...  T'anks for train me.  Buh-bye.}{}{-4}{}{0}{}
+{217}{E:}{}{1}{}{0}{}
+

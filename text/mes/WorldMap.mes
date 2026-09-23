@@ -1,0 +1,79 @@
+// WorldMap Info
+//
+
+
+
+{499}{Action}
+
+{500}{Message Quill}
+{501}{Map View} // WorldMap View
+{502}{Continent View} // Zoom View
+{503}{Map View} // Town View
+{510}{Scroll Map}
+{511}{Delete Current Waypoint}
+{512}{Toggle Walking Waypoint Path}
+{520}{Toggle General Marker View}
+{521}{Toggle Skull Marker View}
+{522}{Toggle Chest Marker View}
+{523}{Toggle Question Marker View}
+
+{600}{You cannot access the World Map during combat.}
+{601}{Your path is blocked.  You must locate either a bridge, pass or means of transporation in order to travel to this destination.}
+
+{602}{You cannot access the World Map during an encounter.}
+
+{605}{The World Map is not available.}
+
+// Used by TownMap Waypoint-UI
+{610}{Your path is blocked.  Try clicking closer to the previous waypoint.}
+{611}{You have reached the maximum allowable number of waypoints and may not add another.}
+
+
+// Used for Teleport-blocked regions
+{640}{You are unable to teleport to this location.  Something is blocking you.}
+
+
+{650}{Your spell seems to have no effect.}
+
+
+// Used for Worldmap System Font Color -- Don't translate!
+{655}{254, 248, 236}   // Default is all 250's
+
+
+// Note: This file is currently NOT IN USE 4/14/00 JLR
+//   Everything has been moved to module-specific worldmap files
+
+// No Longer in USE!
+// World Latitude/Longitude Offsets (Base Values for (0, 0))
+{20}{0, 0}
+
+// No Longer in USE!
+// Width & Height Count of WorldMap Tiles
+{50}{4, 2}
+
+// No Longer in USE!
+// WorldMap Tile Art-Idx Lookup:
+{100}{149, 157}
+{101}{150, 158}
+{102}{151, 159}
+{103}{152, 160}
+{104}{153, 161}
+{105}{154, 162}
+{106}{155, 163}
+{107}{156, 164}
+
+// No Longer in USE!
+
+// ---- Road Info ----
+// Road End-Points: (X, Y)
+{1000}{36128, 25696} // Tarant
+{1001}{38432, 35232}
+{1002}{45472, 41632}
+{1003}{54496, 45344} // Shrouded Hills
+{1004}{54624, 45408} // Crash Site
+
+// Road Edges
+{2000}{0, 1}
+{2001}{1, 2}
+{2002}{2, 3}
+{2003}{3, 0}

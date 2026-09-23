@@ -1,0 +1,382 @@
+{1}{Halt!  Don't you know I can smell your presence, foolish one?!}{Halt!  Don't you know I can smell your presence, foolish one?!}{}{}{}{re 30 }
+{2}{Uh, greetings, sir.  Might I ask who you are?}{}{5}{lf1 0}{16}{re 30 }
+{3}{Greetings, Adkin. Might I speak with you a moment?}{}{5}{lf1 1}{154}{re 30 }
+{4}{I have brought you a gift from  Lady Druella.}{}{5}{in 3603, lf 14 0, qa 1115 1, qb 1115 2}{198}{re +50, lf 14 1 }
+{5}{I have the eyes of Sir Garrick Stout!}{}{5}{in 5660, lf 15 0, qu1105 3}{162}{re +50, lf 15 1 }
+{6}{I have the eyes of Sir Garrick Stout!}{}{5}{in 5660, lf 15 0, qu1116 3}{257}{re +50, lf 15 1 }
+{7}{I have improved my skill.  Please train me.}{}{5}{qu1116 4, tr1 2, tr1 -2, sk1 20}{271}{ }
+{8}{Me better now.  You train me?}{}{-4}{qu1116 4, tr1 2, tr1 -2, sk1 20}{271}{ }
+{9}{Me got eyes!  Me got eyes!}{}{-4}{in 5660, lf 15 0, qu1105 3}{162}{re +50, lf 15 1 }
+{10}{Me got eyes!  Me got eyes!}{}{-4}{in 5660, lf 15 0, qu1116 3}{257}{re +50, lf 15 1 }
+{11}{Uh... yeah...  Me ask you sumthin?}{}{-4}{lf1 1}{154}{re 30 }
+{12}{Uh...  Me smell?}{}{-4}{lf1 0}{16}{re 30 }
+{13}{Me have pretty bottle from nice lady.}{}{-4}{in 3603, lf 14 0, qa 1115 1, qb 1115 2}{198}{re +50, lf 14 1 }
+{15}{E:}{}{1}{}{0}{ }
+{16}{You actually thought you were capable of catching me unaware, didn't you?  Who sent you?!}{You actually thought you were capable of catching me unaware, didn't you?  Who sent you?!}{}{}{}{ }
+{17}{I mean you no harm. Could you tell me your name, sir?}{}{5}{}{21}{ }
+{19}{Me no sent...uh...what you name?}{}{-4}{}{21}{ }
+{20}{E:}{}{1}{}{0}{ }
+{21}{Names...names...of what import are they?  Merely a tool our enemies utilize to destroy us!  What is the name that will be your own undoing?}{Names...names...of what import are they?  Merely a tool our enemies utilize to destroy us!  What is the name that will be your own undoing?}{}{}{}{ }
+{22}{Uh, yes...I am known as @pcname@. Might I ask yours?}{}{5}{}{26}{ }
+{23}{My name is as unimportant as your own.}{}{5}{}{0}{ }
+{24}{Hurgh?}{}{-4}{}{103}{ }
+{25}{E:}{}{1}{}{0}{ }
+{26}{Why have you come to bother an old, blind man, @pcname@?  Did he send you to finish me off?  Did he?!}{Why have you come to bother an old, blind man, @pcname@?  Did he send you to finish me off?  Did he?!}{}{}{}{ }
+{27}{I know not of what you speak. No one sent me.}{}{5}{}{46}{ }
+{29}{Look, all I asked was your name! You are testing me...}{}{5}{}{33}{ }
+{30}{I no unnerstand.}{}{-4}{}{46}{ }
+{31}{You make me mad...no answer what me asks!}{}{-4}{}{33}{ }
+{32}{It is time I taught you a lesson...}{It is time I taught you a lesson...}{}{}{}{re -15 }
+{33}{Then be gone from me!  I need no imbeciles gawking at the grotesque mask that once gave me vision.  Bother me no further!}{Then be gone from me!  I need no imbeciles gawking at the grotesque mask that once gave me vision.  Bother me no further!}{}{}{}{ }
+{35}{Who is it that is trying to harm you?}{}{5}{}{46}{ }
+{36}{I have no use for a crazy fool!  I am leaving!}{}{5}{}{40}{ }
+{37}{Need 'elp?  Summon bad to bind man?}{}{-4}{}{46}{ }
+{38}{Who hurt you?}{}{-4}{}{46}{ }
+{39}{You nuts!  Me go 'way!}{}{-4}{}{40}{ }
+{40}{Hold a moment!  Take heed... should you make known our meeting here, you shall find your name on the death list of the evil one, alongside mine own.  [He laughs, maniacally.]  Evil.  EVIL!  Stealer of sight!  Destroyer of the innocent!}{Hold a moment!  Take heed... should you make known our meeting here, you shall find your name on the death list of the evil one, alongside mine own.  [He laughs, maniacally.]  Evil.  EVIL!  Stealer of sight!  Destroyer of the innocent!}{}{}{}{ }
+{41}{I think you may have been out here alone for far too long.}{}{5}{}{0}{ }
+{42}{Blind or not...  you're just too annoying to be left alive!}{}{5}{}{}{co, fl 32}
+{44}{You crazy guy! I go away now.}{}{-4}{}{0}{ }
+{45}{Me die?!?  No!  YOU DIE!}{}{-4}{}{}{co, fl 32}
+{46}{He has never found me, you know...he never will!  Not me!  The Master of dodge is too crafty for the likes of Stout!  ...never, never, never... }{He has never found me, you know...he never will!  Not me!  The Master of dodge is too crafty for the likes of Stout!  ...never, never, never... }{}{}{}{ }
+{47}{You are Adkin Chambers....the Dodge Master?}{}{5}{tr1 2, tr1 -2}{64}{lf1 1 }
+{48}{Master of the Dodge?  You are the dodge Master?!?}{}{5}{tr1 -1}{55}{ }
+{49}{You are a Master? Ha ha ha...tell me another one, cripple.}{}{5}{tr1 -1}{55}{ }
+{50}{You doge Master?  A'ken Chabers?  Me look for you!}{}{-4}{tr1 2, tr1 -2}{64}{ }
+{53}{Ha ha ha...  Blind man make funny!  Who you reelee be?}{}{-4}{tr1 -1}{55}{ }
+{54}{E:}{}{1}{}{0}{ }
+{55}{Know you not to whom you speak, fool?  I am Adkin Chambers...Master of the dodge!}{Know you not to whom you speak, fool?  I am Adkin Chambers...  Master of the dodge!}{}{}{}{lf1 1, gf2280 1 }
+{56}{If you're the "Master"... why don't you train me?}{}{5}{}{81}{ }
+{57}{The dodge Master is a crazy blind man...  Prove it!}{}{5}{}{}{co, fl 32}
+{58}{May I ask you a question, Mr. Chambers?}{}{5}{}{139}{ }
+{60}{You Mastur huh? If that true, den you train @pcname@!}{}{-4}{}{81}{ }
+{61}{Ok funny doge man...you so good...doge THIS!}{}{-4}{}{}{co, fl 32}
+{62}{Me ask sumthin?}{}{-4}{}{139}{ }
+{63}{E:}{}{1}{}{0}{ }
+{64}{Who told you that?!  What do you know?  I thought you knew nothing... and now you have my name... Liar!  I am still the best... you shall not kill me!}{Who told you that!  What do you know?  I thought you knew nothing...  and now you have my name...  Liar!  I am still the best... you shall not kill me!}{}{}{}{ }
+{65}{I am seeking you, but for training, no other purpose.}{}{5}{tr1 2, tr1 -2}{69}{ }
+{67}{Me no lie!  Me just want train.  You do?}{}{-4}{tr1 2, tr1 -2}{69}{ }
+{68}{E:}{}{1}{}{0}{ }
+{69}{Liar!  He sent you to finish me off!  Didn't he!?!  It wasn't enough that he stole Druella, was it!?!  Or that he blinded me and left me for dead?}{Liar!  He sent you to finish me off!  Didn't he!?!  It wasn't enough that he stole Druella, was it!?!  Or that he blinded me and left me for dead?}{}{}{}{ }
+{70}{No, sir.  I only came seeking your wisdom as a trainer.}{}{5}{}{75}{ }
+{73}{Me just want training!}{}{-4}{}{75}{ }
+{74}{E:}{}{1}{}{0}{ }
+{75}{You expect me to believe that you have sought out an old, blind man to complete your Master dodge training?  What a fool you must think me to be!}{You expect me to believe that you have sought out an old, blind man to complete your Master dodge training?  What a fool you must think me to be!}{}{}{}{ }
+{76}{It is true, sir. There is no reason, aside from training.}{}{5}{}{81}{ }
+{79}{Bind man still train?   Or too hard?}{}{-4}{}{81}{ }
+{80}{E:}{}{1}{}{0}{ }
+{81}{[Sarcastically]  How shall I ascertain your level of wisdom in the art of dodge?    If you are truly well versed, you will be able to anticipate THIS...  [he suddenly launches his arm forward to strike you...]}{[sarcastically]  How shall I ascertain your level of wisdom in the art of dodge?    If you are truly well versed, you will be able to anticipate THIS...  [he suddenly launches his arm forward to strike you...]}{}{}{}{ }
+{82}{What the? [Dodge]}{}{5}{tr1 2, tr1 -2, sk1 20}{179}{ }
+{83}{What the? [Dodge]}{}{5}{tr1 2, tr1 -2, sk1 -19}{191}{ }
+{84}{What the? [Dodge]}{}{5}{tr1 1, tr1 -1}{186}{ }
+{85}{Hey! Crazy old man! [Dodge]}{}{5}{tr1 -1}{186}{ }
+{86}{Hurgh? [Dodge]}{}{-4}{tr1 2, tr1 -2, sk1 20}{179}{ }
+{87}{Hurgh? [Dodge]}{}{-4}{tr1 2, tr1 -2, sk1 -19}{191}{ }
+{88}{Hurgh? [Dodge]}{}{-4}{tr1 1, tr1 -1}{186}{ }
+{89}{Hey!  You be crazy! [Dodge]}{}{-4}{tr1 -1}{186}{ }
+{90}{Ha!  Fine!  I shall "believe" you.  If Master training is what you truly seek, I have a task you must complete before I will disclose my secrets to you.}{Ha!  Fine!  I shall "believe" you.  If Master training is what you truly seek, I have a task you must complete before I will disclose my secrets to you.}{}{}{}{ }
+{91}{Anything, Master.}{}{5}{}{96}{ }
+{92}{What must I do to prove my skill?}{}{5}{}{96}{ }
+{94}{What me do?}{}{-4}{}{96}{ }
+{95}{E:}{}{1}{}{0}{ }
+{96}{Death!  I want death!  Kill Sir Garrick Stout, the Master of melee!  Ha ha!  There!  Prove he is not your master, and then I shall reward you with training! }{Death!  I want death!  Kill Sir Garrick Stout, the Master of melee!  Ha ha!  There!  Prove he is not your master, and then I shall reward you with training! }{}{}{}{qu1105 1 }
+{97}{You want me to kill the melee Master?  But why?}{}{5}{gf2291 0}{107}{ }
+{98}{What purpose would his death serve you?}{}{5}{gf2291 0}{107}{ }
+{99}{I killed that arrogant fool already.}{}{5}{gf2291  1}{336}{ }
+{100}{Why me kill maylay Mastur?}{}{-4}{gf2291 0}{107}{ }
+{101}{What he done to you?}{}{-4}{gf2291 0}{107}{ }
+{102}{Me kill bad man already.}{}{-4}{gf2291  1}{336}{ }
+{103}{Ha!  I see he sent an idiot to complete his task.  Could he find no better?!  I asked you your name, fool!}{Ha!  I see he sent an idiot to complete his task.  Could he find no better?!  I asked you your name, fool!}{}{}{}{ }
+{104}{Oh... @pcname@.  Dat my name.}{}{-4}{}{26}{ }
+{105}{I no idiot!  Dat make me mad!  I get you now!}{}{-4}{}{}{co, fl 32}
+{106}{E:}{}{-4}{}{0}{ }
+{107}{Why should he die?  WHY SHOULD HE DIE?!?  For destroying my life and blinding me, you fool!  Druella was mine!  Mine, I say!  He knew it, knew she loved me...  That's why he wanted her for himself!}{Why should he die?  WHY SHOULD HE DIE?!?  For destroying my life and blinding me, you fool!  Druella was mine!  Mine, I say!  He knew it, knew she loved me...  That's why he wanted her for himself!}{}{}{}{ }
+{108}{He blinded you over a woman?}{}{5}{}{112}{ }
+{110}{You fite 'bout girl?}{}{-4}{}{112}{ }
+{111}{E:}{}{1}{}{0}{ }
+{112}{He and I had always been at odds with one another.  But then he challenged me to a duel for her hand.  I was infuriated!  The pompous pig!  Proud I was, so I accepted, even against her protests... Little did I know how truly obsessed with Druella he had become...}{He and I had always been at odds with one another.  But then he challenged me to a duel for her hand.  I was infuriated!  The pompous pig!  Proud I was, so I accepted, even against her protests... Little did I know how truly obsessed with Druella he had become...}{}{}{}{ }
+{113}{How is it that you were blinded, but not killed?}{}{5}{}{118}{ }
+{116}{He blind you during drool?  That not seem right.}{}{-4}{}{118}{ }
+{117}{E:}{}{-4}{}{0}{ }
+{118}{I made a miscalculation, and he had me.  I yielded, yet he pressed on...he attempted to forced me to expound his prowess as a fighter.  When I refused, he told me that he would make sure I never thought I was his equal again.  Then he blinded me with his sword.  The last sound I heard as the pain took my consciousness was Druella's scream.}{I made a miscalculation, and he had me.  I yielded, yet he pressed on...he attempted to forced me to expound his prowess as a fighter.  When I refused, he told me that he would make sure I never thought I was his equal again.  Then he blinded me with his sword.  The last sound I heard as the pain took my consciousness was Druella's scream.}{}{}{}{ }
+{119}{What happened then?}{}{5}{}{124}{ }
+{120}{I will seek vengeance for you!  What shall I bring you as proof?}{}{5}{}{134}{qu1105 2 }
+{121}{What then?}{}{-4}{}{124}{ }
+{122}{I get him for you! }{}{-4}{}{134}{qu1105 2 }
+{124}{As I healed in an infirmary, disfigured and blind, my hatred for Stout grew into an unquenchable thirst.  It consumes my every waking moment.  You are the tool that has been sent to me.  You shall be my eyes!}{As I healed in an infirmary, disfigured and blind, my hatred for Stout grew into an unquenchable thirst.  It consumes my every waking moment.  You are the tool that has been sent to me.  You shall be my eyes!}{}{}{}{ }
+{125}{I will seek vengeance in your name! }{}{5}{}{134}{qu1105 2 }
+{126}{I get him for you!}{}{-4}{}{134}{qu1105 2 }
+{127}{He is a strong opponent.  I will have to think about it...}{}{5}{}{0}{ }
+{128}{Him big man.  Me not sure...  I come back.}{}{-4}{}{0}{ }
+{129}{I heard rumor that Druella had escaped his clutches.  It is the only thought of pleasure that exists in my life.  Perhaps you shall locate her in your travels.  I would welcome news of her, if you come by it.  [He suddenly reverts back to his obsession...]  He shall finally pay for destroying our life, Druella, my love.  He shall finally pay!!!  ...GO!  Decimate the demon known as Garrick Stout and return his eyes to me!!!}{I heard rumor that Druella had escaped his clutches.  It is the only thought of pleasure that exists in my life.  Perhaps you shall locate her in your travels.  I would welcome news of her, if you come by it.  [He suddenly reverts back to his obsession...]  He shall finally pay for destroying our life, Druella, my love.  He shall finally pay!!!  ...GO!  Decimate the demon known as Garrick Stout and return his eyes to me!!!}{}{}{}{ }
+{130}{I go!}{}{5}{}{0}{ }
+{131}{I shall!  I have a question before I leave...}{}{5}{}{139}{ }
+{132}{Me get him!}{}{-4}{}{0}{ }
+{133}{Yes!  But me ask more first...}{}{-4}{}{139}{ }
+{134}{[Chuckling evilly]  Bring me his eyes.  That will be proof enough that he is dead.}{[Chuckling evilly]  Bring me his eyes.  That will be proof enough that he is dead.}{}{}{}{ }
+{135}{Consider them yours. If I may, what happened to Druella?}{}{5}{}{129}{ }
+{137}{I get them!  What happen to girl?}{}{-4}{}{129}{ }
+{138}{E:}{}{1}{}{0}{ }
+{139}{What is it?}{What is it?}{}{}{}{ }
+{140}{Will you train me as a dodge Master?}{}{5}{qb 1105 0, qb 1116 0}{75}{ }
+{141}{H:}{}{5}{}{139}{ }
+{142}{E:}{}{5}{}{0}{ }
+{143}{I will kill Stout for you. }{}{5}{qu1105 1}{134}{qu1105 2 }
+{144}{I have the eyes of your enemy!}{}{5}{qu1105 3, in5660, lf 15 0}{162}{ }
+{145}{I have brought you a gift from the Lady Druella.}{}{5}{in 3603, lf 14 0, qa 1115 1, qb 1115 2}{198}{ }
+{146}{Me got sumthin for you...  from your Lady!}{}{-4}{in 3603, lf 14 0, qa 1115 1, qb 1115 2}{198}{ }
+{147}{Train me doge Mast'r?}{}{-4}{qb 1105 0, qb 1116 0}{75}{ }
+{148}{H:}{}{-4}{}{139}{ }
+{149}{I get Stout for you! }{}{-4}{qu1105 1}{134}{qu1105 2 }
+{150}{Me got eyes!  Me got eyes!}{}{-4}{qu1105 3, in5660, lf 15 0}{162}{ }
+{151}{E:}{}{-4}{}{0}{ }
+{152}{I have not yet gotten the eyes of Stout.}{}{5}{qu1105 2, ni5660}{157}{ }
+{153}{Me no get eyes yet.}{}{-4}{qu1105 2, ni5660}{157}{ }
+{154}{Oh, it's you @pcname@.  I thought I recognized your stench!}{Oh, it's you @pcname@.  I thought I recognized your perfume!}{}{}{}{ }
+{155}{I have a question...}{}{5}{}{139}{ }
+{156}{Me ask?}{}{-4}{}{139}{ }
+{157}{Then why are you here!?!  I have nothing for you until Stout is dead!  KILL HIM!!!}{Then why are you here!?!  I have nothing for you until Stout is dead!  KILL HIM!!!}{}{}{}{ }
+{158}{K:}{}{5}{}{139}{ }
+{159}{E:}{}{5}{}{0}{ }
+{160}{K:}{}{-4}{}{139}{ }
+{161}{E:}{}{-4}{}{0}{ }
+{162}{[He begins laughing, maniacally.]  Yes!  YES!!  I knew you were capable!  Let me have them!}{[He begins laughing, maniacally.]  Yes!  YES!!  I knew you were capable!  Let me have them!}{}{}{}{lf 15 1 }
+{163}{Here, take them.}{}{5}{}{167}{in 5660 }
+{164}{Please take these disgusting things!}{}{5}{}{167}{in 5660 }
+{165}{Okay.  Here they are.}{}{-4}{}{167}{in 5660 }
+{166}{Take the yucky yucky ding!}{}{-4}{}{167}{in 5660 }
+{167}{[He begins speaking to the eyes.] I knew I would have retribution!  Now you have paid for your crimes!  Vengeance is MINE!  [He gleefully crushes the eyes in his clenched fists, laughing all the while.]}{[He begins speaking to the eyes.] I knew I would have retribution!  Now you have paid for your crimes!  Vengeance is MINE!  [He gleefully crushes the eyes in his clenched fists, laughing all the while.]}{}{}{}{ }
+{168}{Ahem.  Mr. Chambers, might I have my training now?}{}{5}{}{170}{ }
+{169}{Ummm....  Me get trained now?}{}{-4}{}{170}{ }
+{170}{Yes, my son!  Anything you wish for ridding the world of that vile creature!  In killing Stout, you have proven your capability in our art.  Allow me to bestow upon you the title of Dodge Master.  Thank you.  Thank you so much.}{Yes, madam!  Anything you wish for ridding the world of that vile creature!  In killing Stout, you have proven your capability in our art.  Allow me to bestow upon you the title of Dodge Master.  Thank you.  Thank you so much.}{}{}{}{tr1 3, qu1105 4, rq2163 }
+{171}{Thank you.  I will continue my adventures...}{}{5}{}{-15}{ }
+{172}{Now I must dispatch you. There can be but one master.}{}{5}{}{}{co, fl 32}
+{173}{I bring a gift...  from the Lady Druella!}{}{5}{ in3603, lf 14 0, qa1115 1, qb 1115 2}{198}{lf 14 1 }
+{175}{Thank you, Master}{}{-4}{}{-15}{ }
+{176}{Me got sumthin for you...  from your Lady!}{}{-4}{ in3603, lf 14 0, qa1115 1, qb 1115 2}{198}{lf 14 1 }
+{177}{Okay. Now you die! I be only master!}{}{-4}{}{}{co, fl 32}
+{178}{E:}{}{1}{}{-15}{ }
+{179}{[You succeed at dodging his blow.]  I see you have reached Expert status in our skill...}{[You succeed at dodging his blow.]  I see you have reached Expert status in our skill...}{}{}{}{ }
+{180}{I told you I was only seeking training!}{}{5}{}{90}{ }
+{181}{That's it, blind man!  Defend yourself!}{}{5}{}{}{co, fl 32}
+{183}{Hey!  Crazy man, me only want training!}{}{-4}{}{90}{ }
+{184}{You try hurt me!  Me get you!}{}{-4}{}{}{co, fl 32}
+{185}{E:}{}{1}{}{0}{ }
+{186}{[You are struck by the blind man's surprisingly powerful blow.]  Ha!  I knew you were lying!  You haven't anywhere near the skill required to train as a Master,  you must surely be a spy!  Leave me, or face the consequences!}{[You are struck by the blind man's surprisingly powerful blow.]  Ha!  I knew you were lying!  You haven't anywhere near the skill required to train as a Master,  you must surely be a spy!  Leave me, or face the consequences!}{}{}{}{ }
+{187}{That's it, you're crazy!  I'm leaving!}{}{5}{}{40}{ }
+{188}{You're going to pay for that, blind man...}{}{5}{}{}{co, fl 32}
+{189}{You nuts!  Me go 'way!}{}{-4}{}{40}{ }
+{190}{Hey!  You hit me!  Now me hit you!}{}{-4}{}{}{co, fl 32}
+{191}{[You attempt to sidestep the blow, but are nicked by the blind man's surprising quickness.]  Hmmm...  I see you have reached the level of Expert in the art of the dodge.  Yet your skill is not yet adequate to become a Master.  Improve yourself - then, perhaps I will train you.}{[You attempt to sidestep the blow, but are nicked by the blind man's surprising quickness.]  Hmmm...  I see you have reached the level of Expert in the art of the dodge.  Yet your skill is not yet adequate to become a Master.  Improve yourself - then, perhaps I will train you.}{}{}{}{ }
+{192}{I will better myself and return.}{}{5}{}{0}{ }
+{193}{That's it, blind man!  Defend yourself!}{}{5}{}{}{co, fl 32}
+{195}{Me get better.  Den come back.}{}{-4}{}{0}{ }
+{196}{You try hurt me!  Me get you!}{}{-4}{}{}{co, fl 32}
+{197}{E:}{}{1}{}{0}{ }
+{198}{Lady Druella!  You have seen her!  What has she sent?}{Lady Druella!  You have seen her!  What has she sent?}{}{}{}{ }
+{199}{A potion.  I have been told it will restore your sight!}{}{5}{ gf2291 1}{203}{ }
+{200}{A poshun.  It make you see again!}{}{-4}{gf2291 1}{203}{ }
+{201}{A potion.  I have been told it will restore your sight!}{}{5}{gf2291 0}{-10}{ }
+{202}{A poshun.  It make you see again!}{}{-4}{ gf2291 0}{-10}{ }
+{203}{Restore my sight?!  How did she come by such a thing?  Is this some type of tomfoolery?}{Restore my sight?!  How did she come by such a thing?  Is this some type of tomfoolery?}{}{}{}{ }
+{204}{Garrick attempted to blackmail her into marriage with it.}{}{5}{}{206}{ }
+{205}{Gareek try make her marry him give you eyes back.}{}{-4}{}{206}{ }
+{206}{That evil, cunning beast!  Was there no end to the atrocities to which he was capable?  You have done well to rid the world of his presence.  What are you waiting for?  Give me the potion!}{That evil, cunning beast!  Was there no end to the atrocities to which he was capable?  You have done well to rid the world of his presence.  What are you waiting for?  Give me the potion!}{}{}{}{ }
+{207}{Here.  Drink it down.}{}{5}{}{-10}{ }
+{209}{Here.  Drink dis. }{}{-4}{}{-10}{ }
+{211}{I can see!  I can see!  Gods be praised!  I have never heard of such a magick before!  That monster must have paid dearly for this draught!  Oh bless you!  Please...  what of Druella?}{I can see!  I can see!  Gods be praised!  I have never heard of such a magick before!  That monster must have paid dearly for this draught!  Oh bless you!  Please...  what of Druella?}{}{}{}{gf 2292 1, qu 1115 4, in 3603, al +100, fp }
+{212}{She is in Dernholm - she was unsure if you still loved her.}{}{5}{qu1114 4, gf2290 0, gf2291 1}{-19}{ }
+{213}{She became Sir Garricks bride, in exchange for your sight.}{}{5}{qu1114 4, gf2290 0, gf2291 0}{400}{ }
+{214}{I am afraid she did not make it. She loved you to the last.}{}{5}{gf2290 1}{229}{ }
+{215}{She was annoying. I killed her, as I am about to do to you.}{}{5}{gf2290 1}{}{co, fl 234}
+{216}{She wait in Dernholm.  She not know if you still love her.}{}{-4}{qu1114 4, gf2290 0, gf2291 1}{-19}{ }
+{217}{She in Dernholm, marry Sir Gareek, so you can see.}{}{-4}{qu1114 4, gf2290 0, gf2291 0}{400}{ }
+{218}{Me sorry.  She love you till she die...}{}{-4}{gf2290 1}{229}{ }
+{219}{She a pain.  Me kill her, just like me gonna kill you!}{}{-4}{gf2290 1}{}{co, fl 234}
+{220}{My love for her has never faltered.  I leave at once!  Thank you for all you have done for us.  You are an honorable warrior.  May the gods bless you on your journey!  Goodbye!}{My love for her has never faltered.  I leave at once!  Thank you for all you have done for us.  You are an honorable warrior.  May the gods bless you on your journey!  Goodbye!}{}{}{}{ }
+{221}{Goodbye.}{}{5}{}{-15}{ }
+{222}{There is one thing you could do for me....Dodge Master...}{}{5}{sk1 18, tr 1 2, tr 1 -2, gf2291 1, qu 1105 0}{350}{ }
+{223}{I must tell you, Sir Garrick is dead. I have his eyes.}{}{5}{lf 15 0, in 5660, qu 1105 3}{162}{ }
+{224}{Now that it will be a fair fight... I shall kill you!}{}{5}{}{}{co, fl 32}
+{225}{Gareek he dead! I gots his eeeyeees!}{}{-4}{lf 15 0, in 5660, qu 1105 3}{162}{ }
+{226}{Yes. Me very jumpy. Me want learn to Dodge Master.}{}{-4}{sk1 18, tr 1 2, tr 1 -2, gf2291 1, qu 1105 0}{350}{ }
+{227}{Buh-bye.}{}{-4}{}{-15}{ }
+{228}{Now you can see me kill you!!}{}{-4}{}{}{co, fl 32}
+{229}{NOOOOO!  Say it is not so!  Oh!  What a price this vision has had!  What a price!  I would trade it in an instant if only she were alive!  [His grief wracks his body with sobs]  Please...  leave me, that I may mourn in solitude.}{NOOOOO!  Say it is not so!  Oh!  What a price this vision has had!  What a price!  I would trade it in an instant if only she were alive!  [His grief wracks his body with sobs]  Please...  leave me, that I may mourn in solitude.}{}{}{}{ }
+{230}{I am sorry Adkin.  I will go.  Goodbye.}{}{5}{}{0}{ }
+{231}{Let us see if you will be as easy to kill as she was...}{}{5}{}{}{co, fl 234}
+{232}{Me sorry A'ken.  Buh-bye.}{}{-4}{}{0}{ }
+{233}{Me see if you easy to kill like her.  You scream like girl?}{}{-4}{}{}{co, fl 234}
+{234}{What!?!  You!  How dare you return to gloat!  I shall have my vengeance upon you!}{What!?!  You!  How dare you return to gloat!  I shall have my vengeance upon you!}{}{}{}{ }
+{235}{}{}{}{}{}{ }
+{236}{}{}{}{}{}{ }
+{237}{}{}{}{}{}{ }
+{238}{}{}{}{}{}{ }
+{239}{}{}{}{}{}{ }
+{240}{Lady Druella!  You have seen her!  What has she sent?}{Lady Druella!  You have seen her!  What has she sent?}{}{}{}{ }
+{241}{A potion. I have been told it will restore your sight!}{}{5}{}{-10}{ }
+{242}{A poshun.  It make you see again!  Here.  Drink dis.}{}{-4}{}{-10}{ }
+{244}{}{}{}{}{}{ }
+{245}{}{}{}{}{}{ }
+{246}{}{}{}{}{}{ }
+{247}{}{}{}{}{}{ }
+{248}{}{}{}{}{}{ }
+{249}{}{}{}{}{}{ }
+{252}{[He thinks for a moment.]...His eyes.  [Laughs evilly]  Yes.  His eyes!  That is the proof I want!  Bring me the eyes of Sir Garrick Stout, and I shall teach you the Mastery of dodge.}{[He thinks for a moment.]...His eyes.  [Laughs evilly]  Yes.  His eyes!  That is the proof I want!  Bring me the eyes of Sir Garrick Stout, and I shall teach you the Mastery of dodge.}{}{}{}{ }
+{253}{I will return with them shortly.}{}{5}{}{0}{qu1116 2 }
+{254}{I am sorry.  I do not wish to kill him.  Goodbye.}{}{5}{}{0}{ }
+{255}{Me go get dem.  Be back soon.}{}{-4}{}{0}{qu1116 2 }
+{256}{No.  Me no want to kill Sir Gareek.  Buy-bye.}{}{-4}{}{0}{ }
+{257}{[He begins laughing, maniacally.]  Yes!  YES!!  I knew you were capable!  Let me have them!}{[He begins laughing, maniacally.]  Yes!  YES!!  I knew you were capable!  Let me have them!}{}{}{}{lf 15 1 }
+{258}{Here, take them.}{}{5}{}{262}{in 5660 }
+{259}{Please take these disgusting things!}{}{5}{}{262}{in 5660 }
+{260}{Okay.  Here they are.}{}{-4}{}{262}{in 5660 }
+{261}{Take da yucky yucky ding!}{}{-4}{}{262}{in 5660 }
+{262}{[He starts talking to the eyes.] I knew I would have retribution!  Now you have paid for your crimes!  Vengeance is MINE!  [He gleefully crushes the eyes in his clenched fists, laughing all the while.]}{[He starts talking to the eyes.] I knew I would have retribution!  Now you have paid for your crimes!  Vengeance is MINE!  [He gleefully crushes the eyes in his clenched fists, laughing all the while.]}{}{}{}{ }
+{263}{Ahem.  Adkin, might I have my training now?}{}{5}{sk1 18, tr 1 2, tr 1 -2}{271}{ }
+{264}{ummm....  Me get trained now?}{}{-4}{sk1 18, tr 1 2, tr 1 -2}{271}{ }
+{265}{Ahem.  Adkin, might I have my training now?}{}{5}{sk1 -17, tr 1 2, tr 1 -2}{285}{ }
+{266}{ummm....  Me get trained now?}{}{-4}{sk1 -17, tr 1 2, tr 1 -2}{285}{ }
+{267}{Ahem.  Adkin, might I have my training now?}{}{5}{tr 1 -1}{285}{ }
+{268}{ummm....  Me get trained now?}{}{-4}{tr 1 -1}{285}{ }
+{271}{Yes, my son!  Anything you wish for ridding the world of that vile creature!  In killing Stout, you have proven your capability in our art.  Allow me to bestow upon you the title of Dodge Master.  Thank you.  Thank you so much.  ...And what of my beloved Druella?}{Yes, my daughter!  Anything you wish for ridding the world of that vile creature!  In killing Stout, you have proven your capability in our art.  Allow me to bestow upon you the title of Dodge Master.  Thank you.  Thank you so much.    ...And what of my beloved Druella?}{}{}{}{tr1 3, qu1116 4, Rq2163 }
+{272}{She is in Dernholm - she was unsure if you still loved her.}{}{5}{qu1114 4, gf2290 0, gf2291 1}{-19}{ }
+{273}{She became Sir Garricks bride, in exchange for your sight.}{}{5}{qu1114 4, gf2290 0, gf2291 0}{400}{ }
+{274}{I am afraid she did not make it.  She loved you to the last.}{}{5}{gf2290 1}{229}{ }
+{275}{She was annoying. I killed her, as I am about to do to you.}{}{5}{gf2290 1}{}{co, fl 234}
+{276}{She wait in Dernholm.  She not know if you still love her.}{}{-4}{qu1114 4, gf2290 0, gf2291 1}{-19}{ }
+{277}{She in Dernholm, marry Sir Gareek, so you can see.}{}{-4}{qu1114 4, gf2290 0, gf2291 0}{400}{ }
+{278}{Me sorry.  She love you till she die...}{}{-4}{gf2290 1}{229}{ }
+{279}{She a pain.  Me kill her, just like me gonna kill you!}{}{-4}{gf2290 1}{}{co, fl 234}
+{280}{I am very specialized.  I can not train you until you have completed both your Apprenticeship and Expert training, and you have practiced enough to be worthy of Master training.  I am sorry.  But that is all I have to offer...}{I am very specialized.  I can not train you until you have completed both your Apprenticeship and Expert training, and you have practiced enough to be worthy of Master training.  I am sorry.  But that is all I have to offer...}{}{}{}{ }
+{281}{I'll develop my skills. What will be proof of his death?}{}{5}{}{252}{qu1116 2 }
+{283}{Me get better.  I kill him.  What you want proof he dead?}{}{-4}{}{252}{qu1116 2 }
+{284}{E:}{}{1}{}{0}{ }
+{285}{I am very specialized.  I can not train you until you have completed both your Apprenticeship and Expert training, and you have practiced enough to be worthy of Master training.  I am sorry.  Come back to me when you have developed your skill.  I will train you.}{I am very specialized.  I can not train you until you have completed both your Apprenticeship and Expert training, and you have practiced enough to be worthy of Master training.  I am sorry.  Come back to me when you have developed your skill.  I will train you.}{}{}{}{ }
+{286}{I will better myself and return.}{}{5}{}{0}{ }
+{288}{Me get better.  Den come back.}{}{-4}{}{0}{ }
+{289}{E:}{}{1}{}{0}{ }
+{292}{}{}{}{}{}{ }
+{293}{}{}{}{}{}{ }
+{294}{}{}{}{}{}{ }
+{295}{}{}{}{}{}{ }
+{296}{Yes, my son!  Anything you wish for ridding the world of that vile creature!  In killing Stout, you have proven your capability as a fighter.  Anytime... Soon I hope... that  you are ready to learn, I will bestow upon you the title of Dodge Master.  Thank you.  Thank you so much.  ...And what of my beloved Druella?}{Yes, my daughter!  Anything you wish for ridding the world of that vile creature!  In killing Stout, you have proven your capability as a fighter.  Anytime... Soon I hope... that  you are ready to learn, I will bestow upon you the title of Dodge Master.  Thank you.  Thank you so much.  ...And what of my beloved Druella?}{}{}{}{ }
+{297}{She is in Dernholm - she was unsure if you still loved her.}{}{5}{qu1114 4, gf2290 0, gf2291 1}{-19}{ }
+{298}{She became Sir Garricks bride, in exchange for your sight.}{}{5}{qu1114 4, gf2290 0, gf2291 0}{400}{ }
+{299}{I am afraid she did not make it.  She loved you to the last.}{}{5}{gf2290 1}{229}{ }
+{300}{She was annoying. I killed her, as I am about to do to you.}{}{5}{gf2290 1}{}{co, fl 260}
+{301}{She wait in Dernholm.  She not know if you still love her.}{}{-4}{qu1114 4, gf2290 0, gf2291 1}{-19}{ }
+{302}{She in Dernholm, marry Sir Gareek, so you can see.}{}{-4}{qu1114 4, gf2290 0, gf2291 0}{400}{ }
+{303}{Me sorry.  She love you till she die...}{}{-4}{gf2290 1}{229}{ }
+{304}{She a pain.  Me kill her, just like me gonna kill you!}{}{-4}{gf2290 1}{}{co, fl 260}
+{309}{At last you have mastered the skill necessary. I bestow upon you the title of Dodge Master!}{At last you have mastered the skill necessary. I bestow upon you the title of Dodge Master!}{}{}{}{tr1 3, qu1116 4, rq2163 }
+{310}{Thank you for your patience.}{}{5}{}{0}{ }
+{312}{Me say thank yooo to master!}{}{-4}{}{0}{ }
+{313}{E:}{}{1}{}{0}{ }
+{314}{G:}{G:}{}{}{}{ }
+{315}{I have the eyes of Garrick Stout as you requested!}{}{5}{in5660, lf 13 0}{262}{lf 13 1, in 5660 }
+{316}{I am still trying to kill Stout and bring you his eyes!}{}{5}{ni5660, lf 13 0}{0}{ }
+{317}{I am ready for master training.}{}{5}{lf 13 1, tr 1 2, tr 1 -2, sk1 18}{309}{ }
+{318}{I am still working on my training.}{}{5}{tr 1 -1, tr 1 1}{0}{ }
+{319}{I am still working on my skill.}{}{5}{sk1 -17, tr 1 1}{0}{ }
+{320}{I am not ready for training.}{}{5}{}{0}{ }
+{321}{Me have eyes of bad man.}{}{-4}{in5660, lf 13 0}{262}{lf 13 1, in 5660 }
+{322}{Me soon will have eyes of bad man.}{}{-4}{ni5660, lf 13 0}{0}{ }
+{323}{Ugh me train. Now!}{}{-4}{lf 13 1, tr 1 2, tr 1 -2, sk1 18}{309}{ }
+{324}{Ugh me no train. Me need train. Me go now!}{}{-4}{tr 1 -1, tr 13 1}{0}{ }
+{325}{Ugh me no train. Me need skill. Me go now!}{}{-4}{sk1 -17, tr 13 1}{0}{ }
+{326}{Ugh me not ready to learn.}{}{-4}{}{0}{ }
+{327}{Unless you bring me the eyes of Sir Garrick Stout, I will not full fill our bargain. Bring me his eyes!}{Unless you bring me the eyes of Sir Garrick Stout, I will not full fill our bargain. Bring me his eyes!}{}{}{}{ }
+{328}{E:}{}{5}{}{0}{ }
+{329}{E:}{}{-4}{}{0}{ }
+{330}{[Laughing] You are already a master! I wish you luck in all of your adventures!}{[Laughing] You are already a master! I wish you luck in all of your adventures!}{}{}{}{qu 1116 4 }
+{331}{E:}{}{5}{}{0}{ }
+{332}{E:}{}{-4}{}{0}{ }
+{335}{Kill Stout! And bring me his eyes!}{Kill Stout! And bring me his eyes!}{}{}{}{ }
+{336}{[His mouth drops in disbelief.]  What do you say? Garrick Stout is dead?}{[His mouth drops in disbelief.]  What do you say? Garrick Stout is dead?}{}{}{}{ }
+{337}{Yes.}{}{5}{}{339}{ }
+{338}{Yep!  He dead.}{}{-4}{}{339}{ }
+{339}{What proof do you have?  He was the master of Melee.  He could not have been defeated so easily.}{What proof do you have?  He was the master of Melee.  He could not have been defeated so easily.}{}{}{}{ }
+{340}{I say he is dead.  You may doubt me at your own peril.}{}{5}{}{343}{ }
+{341}{Do not impugn my honor, sir.}{}{5}{}{343}{ }
+{342}{He very very dead. Me sure!}{}{-4}{}{343}{ }
+{343}{[He accepts this as truth.] As there are gods in Arcanum, I knew someday I would have retribution!  Vengeance is MINE, at last!  Ha Ha Ha Ha}{[He accepts this as truth.] As there are gods in Arcanum, I knew someday I would have retribution!  Vengeance is MINE, at last!  Ha Ha Ha Ha}{}{}{}{ }
+{344}{Ahem.  Adkin, might we discuss training?}{}{5}{sk1 18, tr 1 2, tr 1 -2}{271}{ }
+{345}{ummm....  Me get trained now?}{}{-4}{sk1 18, tr 1 2, tr 1 -2}{271}{ }
+{346}{Ahem.  Adkin, might we discuss training?}{}{5}{sk1 -17, tr 1 2, tr 1 -2}{285}{ }
+{347}{ummm....  Me get trained now?}{}{-4}{sk1 -17, tr 1 2, tr 1 -2}{285}{ }
+{348}{Ahem.  Adkin, might we discuss training?}{}{5}{tr 1 -1}{285}{ }
+{349}{ummm....  Me get trained now?}{}{-4}{tr 1 -1}{285}{ }
+{350}{But of course...it would be my honor, after all you have done @pcname@,  to show you the secret of the Dodge.  We need to spend a few hours training.  Here, let us begin....}{But of course...it would be my honor, after all you have done @pcname@,  to show you the secret of the Dodge.  We need to spend a few hours training.  Here, let us begin....}{}{}{}{ }
+{351}{[start training]}{}{1}{}{0}{tr 1 3 , rq2163 }
+{352}{}{}{}{}{}{ }
+{353}{I have no possessions ...wait!  I am very skilled.  I am, after all, the Dodge Master.  I offer Master training, if you kill him.}{I have no possessions ...wait!  I am very skilled.  I am, after all, the Dodge Master.  I offer Master training, if you kill him.}{}{}{}{qu1116 1 }
+{354}{I will kill him for you. }{}{5}{sk1 18, tr 1 2, tr 1 -2}{252}{ }
+{355}{I am not skilled enough to become a Master.}{}{5}{sk1 -17, tr 1 2, tr 1 -2}{280}{ }
+{356}{I am not a hired assassin, I refuse.}{}{5}{}{157}{ }
+{357}{Oh!  Me like be Master.  I kill him. }{}{-4}{sk1 18, tr 1 2, tr 1 -2}{252}{ }
+{358}{Dat sound good.  But me no good enuff to be Master.}{}{-4}{sk1 -17, tr 1 2, tr 1 -2}{280}{ }
+{359}{Me not gonna kill him. Me say no.}{}{-4}{}{157}{ }
+{360}{}{}{}{}{}{ }
+{361}{Greetings @pcname@, I can not thank you enough for restoring my sight. I shall always be in your debt.}{Greetings @pcname@, I can not thank you enough for restoring my sight. I shall always be in your debt.}{}{}{}{ }
+{362}{There is one thing you could do for me....Dodge Master...}{}{5}{sk1 18, tr 1 2, tr 1 -2, gf2291 1, qu 1105 0}{350}{ }
+{363}{Yes. Me very jumpy. Me want learn to Dodge Master.}{}{-4}{sk1 18, tr 1 2, tr 1 -2, gf2291 1, qu 1105 0}{350}{ }
+{364}{Will you train me to be a Dodge Master then?}{}{5}{sk1 18, tr 1 2, tr 1 -2, gf2291 0, qu 1105 0}{373}{ }
+{365}{Me want to be mast'r Dodge. You teach me?}{}{-4}{sk1 18, tr 1 2, tr 1 -2, gf2291 0, qu 1105 0}{373}{ }
+{366}{I've been thinking about your offer to kill Stout.}{}{5}{sk1 18, tr 1 2, tr 1 -2, gf2291 0, qu 1105 1}{392}{ }
+{367}{Me been thinking 'bout killing Stout.}{}{-4}{sk1 18, tr 1 2, tr 1 -2, gf2291 0, qu 1105 1}{392}{ }
+{368}{I have the eyes of Sir Garrick Stout!}{}{5}{qu1105 3, in5660, lf 15 0}{162}{ }
+{369}{Me got eyes!  Me got eyes!}{}{-4}{qu1105 3, in5660, lf 15 0}{162}{ }
+{370}{I have not yet gotten the eyes of Stout.}{}{5}{qu1105 2, ni5660}{157}{ }
+{371}{Me no get eyes yet.}{}{-4}{qu1105 2, ni5660}{157}{ }
+{372}{E:}{}{1}{}{0}{ }
+{373}{[pensively] Yes, but on one condition... That Garrick Stout must die.  Kill him and I will train you.}{[pensively] Yes, but on one condition... That Garrick Stout must die.  Kill him and I will train you.}{}{}{}{ }
+{374}{If I kill him, you will train me as payment?}{}{5}{}{383}{ }
+{375}{No.  I have no quarrel with him.  I will not.}{}{5}{}{0}{ }
+{376}{That is how you repay him? You must die!}{}{5}{}{}{co, fl 32}
+{377}{Me kill him den you train me?}{}{-4}{}{383}{ }
+{378}{No.  Me no mad at Sir Gareek.  Me no kill him.}{}{-4}{}{0}{ }
+{379}{He fix you! You one need to die!}{}{-4}{}{}{co, fl 32}
+{380}{}{}{}{}{}{ }
+{381}{}{}{}{}{}{ }
+{382}{}{}{}{}{}{ }
+{383}{Yes, I offer Master training, if you kill him.}{Yes, I offer Master training, if you kill him.}{}{}{}{qu1116 1 }
+{384}{I will kill him for you. }{}{5}{sk1 18, tr 1 2, tr 1 -2}{252}{ }
+{385}{I am not a hired assassin, I refuse.}{}{5}{}{157}{ }
+{386}{Oh!  Me like be Master.  I kill him. }{}{-4}{sk1 18, tr 1 2, tr 1 -2}{252}{ }
+{387}{Me not gonna kill him. Me say no.}{}{-4}{}{157}{ }
+{388}{}{}{}{}{}{ }
+{389}{}{}{}{}{}{ }
+{390}{}{}{}{}{}{ }
+{391}{}{}{}{}{}{ }
+{392}{[Chuckling evilly]  Bring me his eyes.  That will be proof enough that he is dead.}{[Chuckling evilly]  Bring me his eyes.  That will be proof enough that he is dead.}{}{}{}{ }
+{393}{Consider them yours.}{}{5}{}{0}{qu 1105 2 }
+{394}{E:}{}{5}{}{0}{ }
+{395}{I get them}{}{-4}{}{0}{qu 1105 2 }
+{396}{E:}{}{1}{}{0}{ }
+{397}{}{}{}{}{}{ }
+{398}{}{}{}{}{}{ }
+{399}{}{}{}{}{}{ }
+{400}{[Aghast] No!  ...What a price this vision has had!  What a price!  I would never have asked her to marry that monster!  ...He must die!  But he has proven I am no match for him...  You appear strong.  Will you destroy this foul beast?  What say you?}{[Aghast] No!  ...What a price this vision has had!  What a price!  I would never have asked her to marry that monster!  ...He must die!  But he has proven I am no match for him...  You appear strong.  Will you destroy this foul beast?  What say you?}{}{}{}{ }
+{401}{What payment do you offer?}{}{5}{qu 1105 0}{353}{ }
+{402}{You have suggested killing Stout before.}{}{5}{qa 1105 1, qb 1105 2}{414}{ }
+{403}{I have the eyes of Sir Garrick Stout!}{}{5}{qu1105 3, in5660, lf 15 0}{162}{ }
+{404}{Me got eyes!  Me got eyes!}{}{-4}{qu1105 3, in5660, lf 15 0}{162}{ }
+{405}{No.  I have no quarrel with him.  I will not.}{}{5}{}{0}{ }
+{406}{That is how you repay him? You must die!}{}{5}{}{}{co, fl 32}
+{407}{Wha' you give me to kill him?}{}{-4}{qu 1105 0}{353}{ }
+{408}{You say me 'bout killing Stout before.}{}{-4}{qa 1105 1, qb 1105 2}{414}{ }
+{409}{I have not yet gotten the eyes of Stout.}{}{5}{qu1105 2, ni5660}{157}{ }
+{410}{Me no get eyes yet.}{}{-4}{qu1105 2, ni5660}{157}{ }
+{411}{No.  Me no mad at Sir Gareek.  Me no kill him.}{}{-4}{}{0}{ }
+{412}{He fix you! You one need to die!}{}{-4}{}{}{co, fl 32}
+{413}{E:}{}{1}{}{0}{ }
+{414}{Yes... and my desire for revenge is unchanged!  Kill Stout and bring me his eys as proof!  Do this... and I shall train you as a Dodge Master!}{Yes... and my desire for revenge is unchanged!  Kill Stout and bring me his eyes as proof!  Do this... and I shall train you as a Dodge Master!}{}{}{}{ }
+{415}{I will kill him for you and return.}{}{5}{sk1 18, tr 1 2, tr 1 -2}{0}{qu 1105 2 }
+{416}{I am not a hired assassin, I refuse.}{}{5}{}{0}{ }
+{417}{Oh!  Me like be Master.  I kill him. }{}{-4}{sk1 18, tr 1 2, tr 1 -2}{0}{qu 1105 2 }
+{418}{Me not gonna kill him. Me say no.}{}{-4}{}{0}{ }
+{419}{E:}{}{1}{}{0}{ }
+{420}{}{}{}{}{}{ }
+{421}{}{}{}{}{}{ }
+

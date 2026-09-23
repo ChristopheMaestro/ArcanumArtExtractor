@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Arcanum CE Restored - ART Extractor</title>
+<title>Arcanum Asset Browser</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -15,20 +15,86 @@
     <img class="hero-logo" src="logo.png" alt="Arcanum CE Restored logo" width="500" height="131">
     <div class="hero-text">
       <p class="kicker">Arcanum CE Restored</p>
-      <h1>.ART Unpacker</h1>
+      <h1 id="appTitle" class="app-title" role="button" tabindex="0" title="Back to file type selection">Arcanum Asset Browser</h1>
     </div>
+    <nav class="file-mode-nav" aria-label="File type navigation">
+      <button type="button" id="artExploreBtn" class="file-mode-btn art-mode">.ART files</button>
+      <button type="button" id="protoExploreBtn" class="file-mode-btn object-mode">.PRO files</button>
+      <button type="button" id="mobExploreBtn" class="file-mode-btn object-mode">.MOB files</button>
+    </nav>
   </header>
 
-  <section class="explorer">
+  <section class="explorer-home" id="explorerHome">
+    <div class="home-category home-art">
+      <div class="home-category-heading">
+        <span class="home-category-kicker">01</span>
+        <h2>Art &amp; graphics</h2>
+      </div>
+      <div class="home-card-grid">
+        <button type="button" class="home-file-card" data-open-mode="art">
+          <span class="home-file-icon" aria-hidden="true"><span class="home-file-fold"></span><span class="home-file-icon-label">.ART</span></span>
+          <strong>.art files</strong>
+          <span>Explore sprites, animations and graphics</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="home-category home-object">
+      <div class="home-category-heading">
+        <span class="home-category-kicker">02</span>
+        <h2>Object models</h2>
+      </div>
+      <div class="home-card-grid">
+        <button type="button" class="home-file-card" data-open-mode="pro">
+          <span class="home-file-icon" aria-hidden="true"><span class="home-file-fold"></span><span class="home-file-icon-label">.PRO</span></span>
+          <strong>.pro files</strong>
+          <span>Explore prototype object definitions</span>
+        </button>
+        <button type="button" class="home-file-card is-disabled" disabled>
+          <span class="home-file-icon" aria-hidden="true"><span class="home-file-fold"></span><span class="home-file-icon-label">.SEC</span></span>
+          <strong>.sec files</strong>
+          <span>Coming later</span>
+        </button>
+        <button type="button" class="home-file-card" data-open-mode="mob">
+          <span class="home-file-icon" aria-hidden="true"><span class="home-file-fold"></span><span class="home-file-icon-label">.MOB</span></span>
+          <strong>.mob files</strong>
+          <span>Explore placed game objects</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="home-category home-text">
+      <div class="home-category-heading">
+        <span class="home-category-kicker">03</span>
+        <h2>Text tables</h2>
+      </div>
+      <div class="home-card-grid">
+        <button type="button" class="home-file-card is-disabled" disabled>
+          <span class="home-file-icon" aria-hidden="true"><span class="home-file-fold"></span><span class="home-file-icon-label">.DLG</span></span>
+          <strong>.dlg files</strong>
+          <span>Coming later</span>
+        </button>
+        <button type="button" class="home-file-card is-disabled" disabled>
+          <span class="home-file-icon" aria-hidden="true"><span class="home-file-fold"></span><span class="home-file-icon-label">.MES</span></span>
+          <strong>.mes files</strong>
+          <span>Coming later</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="explorer" hidden>
     <div class="explorer-sidebar">
       <aside class="explorer-tree" id="explorerTree" aria-label="Folder browser"></aside>
+
       <button type="button" id="packerLaunchBtn" class="dat-packer-launch">🛠️ .DAT Packer</button>
     </div>
     <div class="explorer-main">
-      <div class="explorer-search" role="search">
+      <div class="explorer-search" id="artExplorerControls" role="search">
         <input type="search" id="explorerSearchInput" placeholder="Search .ART files by name…" aria-label="Search all folders">
         <button id="explorerSearchBtn" type="button" class="search-btn">Search</button>
         <button id="explorerSearchClear" type="button" class="search-btn search-clear" hidden>✕ Clear</button>
+        <select id="protoObjectTypeFilter" class="proto-object-type-filter" hidden aria-label="Filter .PRO files by object type"><option value="all">All object types</option></select>
       </div>
       <p class="explorer-breadcrumb" id="explorerBreadcrumb">Loading library…</p>
       <div class="explorer-grid" id="explorerGrid"></div>

@@ -1,0 +1,92 @@
+//
+// Area -- List of areas
+//   X-Coord, Y-Coord, WM-X-offset, WM-Y-offset /Name /Description./Radius:<#>
+//
+//   Coords are on the main world-map.  Radius is detection radius (in sectors),
+// in other words, the # of sectors that the player must pass near it on the
+// WorldMap to make it visible if it isn't already known; default value is 5.
+//   The WM-#-offset values are used to position the name text in the worldmap.
+//
+
+{0}{0, 0, 0, 0 /A Place Unimportant/This is the unknown area.}
+{1}{90226,84176, 0, 0 /Shrouded Hills/A small mining town.}
+{2}{92960,82592, 0, -5 /Crash Site/The remains of the crashed blimp.}
+{3}{70218,92096, 0, 0 /Black Root/A border town.}
+{4}{102768, 116894, 0, 5 /Caladon/A thriving feudal kingdom.}
+{5}{79163, 105618, 0, 0 /Dernholm, capital of Cumbria/A dying feudal kingdom.}
+{6}{98922, 42009, 0, 0 /Qintarra/A large elven community.}
+{7}{83690, 48174, -5, 15 /The Black Mountain Mines/The abandoned home of The Black Mountain Clan./Radius:-1}
+{8}{32320, 62472, 0, 0 /Ashbury/A city on the eastern seaboard.}
+{9}{61050, 42562, 0, 0 /Wheel Clan/A Dwarven society deep in the Grey Mountains./Radius:-1}
+{10}{76113, 48162, 0, -10 /Stillwater/A small town, famed for its swords.}
+{11}{28455, 31171, 0, 0 /Tulla/A mysterious city of mages deep in the Vendigroth Wastes.} //Old Tulla 28319, 31202
+{12}{104172,35969, 0, 0 /Falcon's Ache/Elven holy ground, at the edge of the Glimmering Forest}
+{13}{112027, 96883, 0, 0 /Roseborough/A small town near the Ring of Brodgar}
+{14}{112279,94639, 0, 0 /Ancient Ruins/Ancient Ruins/Radius:5}//Old Ring of Brodgar
+{15}{22184,41521, 0, 0 /Dark Elf Camp/The dark elves' base camp near the ruins of Vendigroth}
+{16}{96416, 18911, 0, 0 /T'sen-Ang/Home of the Dark Elves./Radius:-1}
+{17}{82492, 45629, 0, 0 /Hardin's Pass/A treacherous snowy pass leading to the Glimmering Forest.}
+{18}{96014,92287, 0, 0 /Gorgoth Pass/A long forgotten pass joining the kingdoms of Dernholm and Caladon./Radius:5}
+{19}{20693, 56027, 0, 0 /Isle of Despair/A penal colony.}
+{20}{29874,47350, 0, 0 /Gateway to the Wastes/A bridge leading into the Vendigroth Wastes.} // Old Leahbo 29151,48287  
+{21}{62243,65664, 0, 0 /Tarant/The biggest, most industrial city in Arcanum.}
+{22}{19704,37452, 0, 0 /Vendigroth Ruins/The remnants of an ancient city./Radius:1}// entrance to ruins: 19689,37487 
+{23}{46198,120881, -60, 10 /Nasrudin's Resting Place/Reputed to be the location of the remains of Nasrudin.}//old:46827,120680 
+{24}{43669, 85717, 0, 0 /Stringy Petes Cove/A haunted cove./Radius:-1}
+{25}{32602, 71189, 0, 0/The Williamson Homestead/A run-down shanty.}
+{26}{55779, 76127, 0, 0/Vooriden/A small village just south of Tarant./Radius:20}
+{27}{75486, 18380, 0, -10/The Bangellian Deeps/The resting place of the Bangellian Scourge.}
+{28}{90818, 70319, 0, 0/Torin Quarry/An ancient dwarven stone quarry.}//90825, 70292
+{29}{51705, 85747, -80, 10/Stringy Pete's Treasure/The final resting place of the infamous pirate's bounty./Radius:-1}
+{30}{45527, 65394, 0, 10/Elven Ruins/A place that may hold untold elven riches./Radius:1}
+{31}{20526, 53542, 0, 0/The home of Maximillian/A strange old man on the Isle of Despair.}
+{32}{22157, 52802, -40, -15/Shades Beach/A place reputed to be full of strange objects.}
+{33}{17196, 52632, 0, -10/The Women's Camp/A small village comprised solely of nomadic women.}
+{34}{75497, 20051, 0, 5/The Bedokaan Village/A small village of reptilian creatures, located in the Dark Fens./Radius:-1}
+{35}{77170, 17560, -120, -15/The Poachers Camp/The camp of some Bedokaan poachers.}
+{36}{0, 0, 0, 0 /A Place Unimportant/This is the unknown area.}
+{37}{85994, 56686, 0, 0/Stonecutter Clan/The home of the Stonecutter Clan.}
+{38}{101536, 116144, 0, 0/A mysterious location/Discovered on the wall painting in the Mushroom.}
+{39}{50845, 15901, 0, 0/The Ruby Glade/An eerie, ancient place./Radius:-1}
+{40}{88650, 40995, 0, 0/The Castle S'nel N'fa /A trap filled ruin rumored to contain the staff of K'an T'au./Radius:-1}
+{41}{75700, 101216, 0, 0/A Lair of Gyr Dolours/The last known location of the tormented Lady Druella./Radius:-1}
+{42}{75470, 93736, 0, 0/Liam's Workshop/Liam Camerons Workshop./Radius:3}
+{43}{40699, 76973, 0, 0/Kree/The once great city destroyed by the Bane of Kree./Radius:20}
+{44}{87403, 59823, 0, 0/The Pit of Fires/The location of the Blade of Xerxes.}
+{45}{59131, 108638, 0, 0/Half Ogre Island/The rumored location of the secret breeding laboratory.}// old: 59028, 108560
+{46}{0, 0, 0, 0/A Place Unimportant/This is the unknown area.}
+{47}{78754, 62751, 0, 0/Vollinger's Meeting Place/Vollinger's meeting place./Radius:-1}
+{48}{49267, 53559, 0, 0/The Lair of Bellerogrim/A cave where they discovered Arcanum's last Dragon.}
+{49}{101152, 64478, 0, 0/Lethe Wyvern Sighting/Rumored lair of the lethe wyvern./Radius:-1}
+{50}{40223, 101945, 0, 0/Boat Landing on Thanatos/Landing for the Isle of Death}
+{51}{47628, 108786, 0, 0/Village of the Ashlag Tribe/The home of a primitive tribe that worships a mysterious deity.}
+{52}{41056, 112926, 0, 0/The Lair of the Bogaroth/The reputed lair of the monster that slaughtered the entire Ashlag tribe.}
+{53}{65824, 84632, 0, 0/Ruins of Szabo/Some ancient ruins./Radius:1}
+{54}{46112, 120624, 0, 0/Land Bridge/Beginning of the trail leading to the god of Thanatos.}
+{55}{63608, 50488, 0, 0/Dungeon of the Dragon Pool/Dungeon of the Dragon Pool.}
+{56}{49718, 58743, 0, 0/Ancient Temple/A temple rumored to hold treasures untold.}
+{57}{96948, 75722, 0, -15/Secret Entrance to the Iron Clan/The entrance to the legendary dwarven clan./Radius:-1}
+{58}{91902, 39305, 0, 0/K'na Tha/A place of ancient magick rumored to contain Azrams Star./Radius:-1}
+{59}{96319, 113312, 0, 0/Razors Pointe/Ships fear these treacherous waters that must be passed to navigate around the tip of Arcanum./Radius:20}
+{60}{31891, 56980, 0, 0/Ancient Shipwreck/The remains of an ancient pirate ship./Radius:10}
+{61}{67130, 44393, 0, 0/Uncharted Cave/No one knows what mysteries may lie in this unexplored cave./Radius:10}
+{62}{99225, 98206, 0, 0/Thieves Cave/Thieves Cave/Radius:25}
+{63}{87907,45024, 0, -10/Strange Ceremony/Strange chanting can be heard nearby..../Radius:5}
+{64}{84513,11425, 0, 0/Secret Village/You hear high pitched rejoicing...../Radius:5}
+{65}{53341, 66079, 0, 0/Forbidden Pit/Dangerous looking pit filled with skeletons and widowers./Radius:10}
+{66}{92830, 84702, 0, 10/Simon Fahrkus' Shack/Simon Fahrkus' Shack/Radius:-1}
+{67}{92896, 83359, -140, 0/Arbalah's House/Arbalah's House/Radius:-1}
+{68}{78751, 97887, 0, 0/Wolf Cave/Wolf Cave/Radius:10}
+{69}{77797, 72805, 0, 0/Torg's Altar/An old, stone altar/Radius:15}
+{70}{56490, 26977, 0, 0/Kerlin's Altar/An ancient, golden altar/Radius:20}
+{71}{104104, 104610, 0, 0/Bolo's Altar/A weathered, stone altar/Radius:20}
+{72}{84586, 53037, 0, 0/The Place of Lost Voices/A place shown to you by the map in the Iron Clan Chest/Radius:-1}
+{73}{30364, 44319, 0, 0/Mysterious ruins of the wastes/A location shown to you by Weldo Rubin.}
+{74}{39588, 33621, 0, 0/Strange Pond/An interesting pond in the middle of nowhere./Radius:25}
+{75}{68876, 32889, 0, 0/The Bog/An evil-looking place./Radius:25}
+{76}{104148, 77062, 0, 0/The Broken Cathedral/A place of old ruins./Radius:25}
+{77}{108504, 84356, 0, 0/The Old Lagoon/A remote lagoon./Radius:25}
+{78}{87527, 101345, 0, 0/Ancient Maze/A mysterious old maze./Radius:25}
+{79}{103116, 90384, 0, 0/The Cold Place/An ominous place./Radius:25}
+{80}{80738, 30497, 0, 0/Small Camp/A small camp is visible from a distance./Radius:25}
+{81}{102113, 56290, 0, 0/Small Pond/You hear shouts and whip-cracking./Radius:25}
