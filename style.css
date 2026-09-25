@@ -2493,3 +2493,144 @@ body.home-active .dat-packer {
 
 /* Prototype file cards can use their assigned Current art as the file icon. */
 .explorer-thumb .proto-file-art-icon { display:block; width:48px; height:48px; image-rendering:pixelated; object-fit:contain; }
+
+/* Text table search (/semes/, /dlg/, /mes/, /oemes/, /Rules/) ----------- */
+.text-table-search-launch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  margin-top: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--ink);
+  border-radius: 8px;
+  padding: 14px 16px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .2s ease, border-color .2s ease, color .2s ease;
+}
+
+.text-table-search-launch:hover {
+  background: var(--surface-2);
+  border-color: var(--brass);
+  color: var(--brass-strong);
+}
+
+.text-search-modal {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  width: min(900px, 100%);
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.ts-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border);
+  flex: none;
+}
+
+.ts-header h2 {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0;
+  color: #f1e4c3;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.ts-close {
+  background: transparent;
+  border: none;
+  color: var(--ink-muted);
+  font-size: 22px;
+  line-height: 1;
+  padding: 2px 8px;
+  cursor: pointer;
+}
+
+.ts-close:hover { color: var(--rust); }
+
+.ts-body {
+  padding: 18px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 0;
+}
+
+.ts-hint {
+  margin: 0;
+  font-size: 12px;
+  color: var(--ink-muted);
+  line-height: 1.5;
+}
+
+.ts-hint code {
+  color: var(--brass);
+  background: var(--surface-2);
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+
+.ts-searchbar {
+  display: flex;
+  gap: 8px;
+  flex: none;
+}
+
+.ts-searchbar input {
+  flex: 1;
+  min-width: 0;
+  font-family: inherit;
+  font-size: 12.5px;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.ts-searchbar input:focus-visible { outline: none; border-color: var(--brass); }
+.ts-searchbar input::placeholder { color: var(--ink-muted); }
+
+.ts-status {
+  margin: 0;
+  font-size: 12px;
+  color: var(--ink-muted);
+  min-height: 16px;
+}
+
+.ts-results {
+  flex: 1;
+  min-height: 200px;
+  max-height: 55vh;
+  overflow: auto;
+  margin: 0;
+  padding: 12px 14px;
+  background: #171512;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--ink);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+@media (max-width: 680px) {
+  .text-search-modal { width: 100%; }
+  .ts-searchbar { flex-direction: column; }
+}

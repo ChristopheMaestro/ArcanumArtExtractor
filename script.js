@@ -2523,7 +2523,92 @@
   const MOB_TYPE_RANGE_END = [44,54,67,75,85,110,139,110,148,110,162,110,170,110,177,110,184,110,191,110,199,110,209,110,216,251,278,251,305,312];
   const MOB_TYPE_RANGE_OFFSET = [0,1,2,3,4,5,7,9,11,13,15,17,19,21,23,25,27,29,30];
   const MOB_TYPE_LAST_FIELD = [43,53,66,74,84,138,147,161,169,176,183,190,198,208,215,277,304,311];
-  const MOB_FIELD_NAMES = {"1":"F_CURRENT_AID","2":"F_LOCATION","3":"F_OFFSET_X","4":"F_OFFSET_Y","14":"F_LIGHT_AID","15":"F_LIGHT_COLOR","19":"F_FLAGS","22":"F_NAME","23":"F_DESCRIPTION","27":"F_HP_PTS","29":"F_HP_DAMAGE","30":"F_MATERIAL","31":"F_RESISTANCE","32":"F_SCRIPTS","33":"F_SOUND_EFFECT","46":"F_PORTAL_FLAGS","47":"F_PORTAL_LOCK_DIFFICULTY","48":"F_PORTAL_KEY_ID","56":"F_CONTAINER_FLAGS","57":"F_CONTAINER_LOCK_DIFFICULTY","58":"F_CONTAINER_KEY_ID","69":"F_SCENERY_FLAGS","87":"F_ITEM_FLAGS","88":"F_ITEM_PARENT","89":"F_ITEM_WEIGHT","91":"F_ITEM_WORTH","93":"F_ITEM_INV_AID","94":"F_ITEM_INV_LOCATION","96":"F_ITEM_MAGIC_TECH_COMPLEXITY","97":"F_ITEM_DISCIPLINE","100":"F_ITEM_SPELL_1","105":"F_ITEM_SPELL_MANA_STORE","112":"F_WEAPON_FLAGS","114":"F_WEAPON_BONUS_TO_HIT","116":"F_WEAPON_DAMAGE_LOWER","117":"F_WEAPON_DAMAGE_UPPER","119":"F_WEAPON_SPEED_FACTOR","121":"F_WEAPON_RANGE","123":"F_WEAPON_MIN_STRENGTH","125":"F_WEAPON_AMMO_TYPE","126":"F_WEAPON_AMMO_CONSUMPTION","127":"F_WEAPON_MISSILE_AID","142":"F_AMMO_QUANTITY","143":"F_AMMO_TYPE","152":"F_ARMOR_AC_ADJ","154":"F_ARMOR_RESISTANCE_ADJ","165":"F_GOLD_QUANTITY","186":"F_KEY_KEY_ID","202":"F_WRITTEN_SUBTYPE","203":"F_WRITTEN_TEXT_START_LINE","204":"F_WRITTEN_TEXT_END_LINE","218":"F_CRITTER_FLAGS","219":"F_CRITTER_FLAGS2","220":"F_CRITTER_STAT_BASE","221":"F_CRITTER_BASIC_SKILL","222":"F_CRITTER_TECH_SKILL","223":"F_CRITTER_SPELL_TECH","231":"F_CRITTER_PORTRAIT","280":"F_NPC_FLAGS","282":"F_NPC_AI_DATA","285":"F_NPC_EXPERIENCE_WORTH","291":"F_NPC_ORIGIN","292":"F_NPC_FACTION","293":"F_NPC_RETAIL_PRICE_MULTIPLIER","294":"F_NPC_SUBSTITUTE_INVENTORY","295":"F_NPC_REACTION_BASE","296":"F_NPC_SOCIAL_CLASS"};
+  const MOB_FIELD_NAMES = {"1":"F_CURRENT_AID","2":"F_LOCATION","3":"F_OFFSET_X","4":"F_OFFSET_Y","14":"F_LIGHT_AID","15":"F_LIGHT_COLOR","19":"F_FLAGS","20":"F_FLAGS2","22":"F_NAME","23":"F_DESCRIPTION","27":"F_HP_PTS","29":"F_HP_DAMAGE","30":"F_MATERIAL","31":"F_RESISTANCE","32":"F_SCRIPTS","33":"F_SOUND_EFFECT","34":"F_SOUND_FLAGS","46":"F_PORTAL_FLAGS","47":"F_PORTAL_LOCK_DIFFICULTY","48":"F_PORTAL_KEY_ID","56":"F_CONTAINER_FLAGS","57":"F_CONTAINER_LOCK_DIFFICULTY","58":"F_CONTAINER_KEY_ID","69":"F_SCENERY_FLAGS","87":"F_ITEM_FLAGS","88":"F_ITEM_PARENT","89":"F_ITEM_WEIGHT","91":"F_ITEM_WORTH","93":"F_ITEM_INV_AID","94":"F_ITEM_INV_LOCATION","96":"F_ITEM_MAGIC_TECH_COMPLEXITY","97":"F_ITEM_DISCIPLINE","100":"F_ITEM_SPELL_1","105":"F_ITEM_SPELL_MANA_STORE","112":"F_WEAPON_FLAGS","114":"F_WEAPON_BONUS_TO_HIT","116":"F_WEAPON_DAMAGE_LOWER","117":"F_WEAPON_DAMAGE_UPPER","119":"F_WEAPON_SPEED_FACTOR","121":"F_WEAPON_RANGE","123":"F_WEAPON_MIN_STRENGTH","125":"F_WEAPON_AMMO_TYPE","126":"F_WEAPON_AMMO_CONSUMPTION","127":"F_WEAPON_MISSILE_AID","142":"F_AMMO_QUANTITY","143":"F_AMMO_TYPE","152":"F_ARMOR_AC_ADJ","154":"F_ARMOR_RESISTANCE_ADJ","165":"F_GOLD_QUANTITY","186":"F_KEY_KEY_ID","202":"F_WRITTEN_SUBTYPE","203":"F_WRITTEN_TEXT_START_LINE","204":"F_WRITTEN_TEXT_END_LINE","218":"F_CRITTER_FLAGS","219":"F_CRITTER_FLAGS2","220":"F_CRITTER_STAT_BASE","221":"F_CRITTER_BASIC_SKILL","222":"F_CRITTER_TECH_SKILL","223":"F_CRITTER_SPELL_TECH","231":"F_CRITTER_PORTRAIT","280":"F_NPC_FLAGS","282":"F_NPC_AI_DATA","285":"F_NPC_EXPERIENCE_WORTH","291":"F_NPC_ORIGIN","292":"F_NPC_FACTION","293":"F_NPC_RETAIL_PRICE_MULTIPLIER","294":"F_NPC_SUBSTITUTE_INVENTORY","295":"F_NPC_REACTION_BASE","296":"F_NPC_SOCIAL_CLASS"};
+
+  // Bit-flag breakdowns for known flag/bitmask fields, contributed from manual
+  // reverse-engineering notes (object_data.txt) and cross-checked against the
+  // field-ID layout above. Confidence varies per field — see MOB_FLAG_FIELD_NOTES.
+  const MOB_FLAG_BITS = {
+    19: [ // F_FLAGS — general per-object engine flags
+      [0x00000004, 'Flat'],
+      [0x00000010, 'SeeThrough'],
+      [0x00000020, 'ShootThrough'],
+      [0x00000400, 'NoBlock'],
+      [0x00000800, 'ClickThrough'],
+      [0x00100000, "Don'tLight"],
+      [0x00400000, 'Invulnerable']
+    ],
+    20: [ // F_FLAGS2 — second flags dword (bit offsets tentative, see notes)
+      [0x00008000, 'Illusion'],
+      [0x00010000, 'Stoned']
+    ],
+    34: [ // F_SOUND_FLAGS — ambient/animation flags alongside the sound effect
+      [0x0001, 'NoAutoAnimate'],
+      [0x0004, 'Nocturnal'],
+      [0x0010, 'IsFire'],
+      [0x0040, 'Respawnable'],
+      [0x0100, 'MarksTownmap']
+    ],
+    46: [ // F_PORTAL_FLAGS — door lock state
+      [0x001, 'Locked'],
+      [0x002, 'Jammed'],
+      [0x004, 'MagicallyHeld'],
+      [0x008, 'NeverLocked'],
+      [0x010, 'AlwaysLocked'],
+      [0x020, 'LockedDay'],
+      [0x040, 'LockedNight'],
+      [0x080, 'Busted'],
+      [0x100, 'Sticky']
+    ],
+    56: [ // F_CONTAINER_FLAGS — same lock-state bits as F_PORTAL_FLAGS
+      [0x001, 'Locked'],
+      [0x002, 'Jammed'],
+      [0x004, 'MagicallyHeld'],
+      [0x008, 'NeverLocked'],
+      [0x010, 'AlwaysLocked'],
+      [0x020, 'LockedDay'],
+      [0x040, 'LockedNight'],
+      [0x080, 'Busted'],
+      [0x100, 'Sticky']
+    ]
+  };
+  // Per-field confidence notes (shown nowhere in the UI; kept here for future reference).
+  // 19 F_FLAGS / 46+56 lock flags: high confidence — bit values and grouping match
+  //   object_data.txt's byte-by-byte notes with no gaps.
+  // 20 F_FLAGS2 / 34 F_SOUND_FLAGS: field-ID placement is high confidence (no group
+  //   marker between 19/20 or 33/34), but the exact bit *shift* for F_FLAGS2 is
+  //   inferred from an assumed byte offset in the source notes, not confirmed byte-for-byte.
+  const MOB_RESISTANCE_LABELS = ['Damage', 'Fire', 'Electrical', 'Poison', 'Magic'];
+
+  function mobDecodeFlagBits(field, num) {
+    const table = MOB_FLAG_BITS[field];
+    if (!table || typeof num !== 'number') return null;
+    const set = table.filter(([mask]) => (num & mask) === mask).map(([, name]) => name);
+    const known = table.reduce((acc, [mask]) => acc | mask, 0);
+    const leftover = num & ~known;
+    let text = set.length ? set.join(', ') : '(none of the known bits set)';
+    if (leftover) text += ` [+ unrecognized bits: 0x${(leftover >>> 0).toString(16)}]`;
+    return text;
+  }
+
+  // Field-aware value formatter: wraps mobValueText but adds a human-readable
+  // flag breakdown for known bitmask fields, and resistance-type labels for
+  // F_RESISTANCE array elements.
+  function mobFieldValueText(field, value) {
+    if (MOB_FLAG_BITS[field] && typeof value === 'number') {
+      const decoded = mobDecodeFlagBits(field, value);
+      return decoded ? `${value} (${decoded})` : mobValueText(value);
+    }
+    if (field === 31 && value && value.elements) { // F_RESISTANCE
+      const lines = [`element_size=${value.element_size}`, `count=${value.count}`, `bitset_id=${value.bitset_id}`, `bitset=${value.bitset.join(' ')}`, 'elements:'];
+      value.elements.forEach(e => {
+        const label = MOB_RESISTANCE_LABELS[e.index] ? ` (${MOB_RESISTANCE_LABELS[e.index]})` : '';
+        lines.push(`  [${e.index}]${label} ${typeof e.value === 'object' ? JSON.stringify(e.value) : e.value} | raw=${e.raw}`);
+      });
+      return lines.join('\n');
+    }
+    return mobValueText(value);
+  }
   const MOB_SCRIPT_POINTS = {0:'SAP_EXAMINE',1:'SAP_USE',9:'SAP_DIALOG',10:'SAP_FIRST_HEARTBEAT',17:'SAP_BUY_OBJECT',22:'SAP_WILL_KOS',19:'SAP_HEARTBEAT',31:'SAP_DIALOG_OVERRIDE'};
 
   const mobExploreBtn = document.getElementById('mobExploreBtn');
@@ -3335,7 +3420,7 @@
       c2.classList.add(override ? 'proto-available' : 'mob-field-inherited');
       const c3 = document.createElement('div'); c3.textContent = f.od;
       const c4 = document.createElement('div'); c4.className = 'mob-value';
-      c4.textContent = f.field === 1 ? mobCurrentAidText(f.value, decoded.objType) : mobValueText(f.value);
+      c4.textContent = f.field === 1 ? mobCurrentAidText(f.value, decoded.objType) : mobFieldValueText(f.field, f.value);
       const c5 = document.createElement('div'); c5.className = 'mob-raw'; c5.textContent = f.raw;
       [c1, c2, c3, c4, c5].forEach(c => row.appendChild(c));
       table.appendChild(row);
@@ -3720,7 +3805,7 @@
         // not read from the file. Flag it so -1 doesn't look like real data.
         c6.textContent = `${mobValueText(f.value)} (sentinel — game computes default at runtime)`;
       } else {
-        c6.textContent = mobValueText(f.value);
+        c6.textContent = mobFieldValueText(f.field, f.value);
       }
       const c7 = document.createElement('div'); c7.className = 'mob-raw'; c7.textContent = f.raw;
       [c1,c2,c3,c4,c5,c6,c7].forEach(c => row.appendChild(c));
@@ -3820,7 +3905,7 @@
       const c4 = document.createElement('div'); c4.textContent = String(f.size);
       const c5 = document.createElement('div');
       c5.className = 'mob-value';
-      c5.textContent = f.field === 1 ? mobCurrentAidText(f.value, decoded.objType) : mobValueText(f.value);
+      c5.textContent = f.field === 1 ? mobCurrentAidText(f.value, decoded.objType) : mobFieldValueText(f.field, f.value);
       const c6 = document.createElement('div'); c6.className = 'mob-raw'; c6.textContent = f.raw;
       [c1, c2, c3, c4, c5, c6].forEach(c => row.appendChild(c));
       table.appendChild(row);
@@ -4654,4 +4739,270 @@
 
   wireDropzone(dropzone, fileInput, handleFiles);
   wireDropzone(packerDropzoneEl, packerFileInputEl, handlePackerFiles);
+
+  // ---- Text table search (/semes/, /dlg/, /mes/, /oemes/, /Rules/) --------
+  //
+  // Each of these root folders is expected to carry the same
+  // "<foldername>_manifest.json" convention (with an optional generic
+  // "manifest.json" fallback and optional "subfolders", exactly like the
+  // ART/PRO/MOB explorers above). This walks every listed file across all
+  // five roots and applies the same matching + {dialog} cleanup rules as
+  // research.py: an exact, case-sensitive substring match against each raw
+  // line, with empty/numeric/duplicate-per-file {tokens} stripped out.
+
+  const TEXT_TABLE_ROOTS = [
+    { key: 'semes', root: 'semes/', folderName: 'semes' },
+    { key: 'dlg', root: 'dlg/', folderName: 'dlg' },
+    { key: 'mes', root: 'mes/', folderName: 'mes' },
+    { key: 'oemes', root: 'oemes/', folderName: 'oemes' },
+    { key: 'rules', root: 'Rules/', folderName: 'Rules' },
+  ];
+
+  const TEXT_SEARCH_MATCH_LIMIT = 2000;
+  const TEXT_SEARCH_CONCURRENCY = 8;
+
+  const textTableManifestCache = new Map(); // "root::relativePath" -> parsed manifest json
+  let textTableFileIndexPromise = null;
+
+  function textTableManifestUrls(root, relativePath, folderName) {
+    const prefix = relativePath ? `${root}${relativePath}/` : root;
+    return [`${prefix}${folderName}_manifest.json`, `${prefix}manifest.json`];
+  }
+
+  async function loadTextTableManifest(root, relativePath, folderName) {
+    const cacheKey = `${root}::${relativePath}`;
+    if (textTableManifestCache.has(cacheKey)) return textTableManifestCache.get(cacheKey);
+    const urls = textTableManifestUrls(root, relativePath, folderName);
+    let lastErr = null;
+    for (const url of urls) {
+      try {
+        const resp = await fetch(url);
+        if (!resp.ok) { lastErr = new Error(`HTTP ${resp.status} for ${url}`); continue; }
+        const data = await resp.json();
+        textTableManifestCache.set(cacheKey, data);
+        return data;
+      } catch (err) {
+        lastErr = err;
+      }
+    }
+    throw lastErr || new Error(`couldn't load a manifest for ${root}${relativePath}`);
+  }
+
+  async function collectTextTableRootFiles(rootDef, relativePath, folderName, out, visited) {
+    const visitKey = `${rootDef.key}::${relativePath}`;
+    if (visited.has(visitKey)) return;
+    visited.add(visitKey);
+
+    let manifest;
+    try {
+      manifest = await loadTextTableManifest(rootDef.root, relativePath, folderName);
+    } catch (err) {
+      out.errors.push(`${rootDef.root}${relativePath ? relativePath + '/' : ''}: ${err && err.message ? err.message : err}`);
+      return;
+    }
+
+    const rootLabel = rootDef.root.replace(/\/$/, '');
+    const folderDisplay = relativePath ? `${rootLabel}/${relativePath}` : rootLabel;
+
+    const files = manifest.files || [];
+    for (const f of files) {
+      out.files.push({
+        root: rootDef.root,
+        relPath: relativePath,
+        filename: f,
+        folderDisplay,
+        filePath: `${folderDisplay}/${f}`,
+      });
+    }
+
+    const subfolders = manifest.subfolders || {};
+    const keys = Object.keys(subfolders).sort();
+    for (const key of keys) {
+      const sf = subfolders[key];
+      await collectTextTableRootFiles(rootDef, joinPath(relativePath, sf.relative_path), sf.folder_name, out, visited);
+    }
+  }
+
+  function buildTextTableFileIndex() {
+    if (!textTableFileIndexPromise) {
+      textTableFileIndexPromise = (async () => {
+        const out = { files: [], errors: [] };
+        await Promise.all(TEXT_TABLE_ROOTS.map(rootDef =>
+          collectTextTableRootFiles(rootDef, '', rootDef.folderName, out, new Set())
+        ));
+        return out;
+      })().catch(err => {
+        // Let the next search attempt retry from scratch instead of caching a failure.
+        textTableFileIndexPromise = null;
+        throw err;
+      });
+    }
+    return textTableFileIndexPromise;
+  }
+
+  async function poolRun(items, limit, worker) {
+    let i = 0;
+    const n = Math.max(1, Math.min(limit, items.length));
+    const runners = new Array(n).fill(0).map(async () => {
+      while (i < items.length) {
+        const idx = i++;
+        await worker(items[idx]);
+      }
+    });
+    await Promise.all(runners);
+  }
+
+  // Mirrors research.py's process_dialog(): strips empty, purely-numeric,
+  // and (per-file) duplicate {tokens}; a line with no brackets is left as-is.
+  function processTextTableLine(rawLine, seenDialogsForFile) {
+    const clean = rawLine.trim();
+    if (!clean) return null;
+    const hasBrackets = /\{[^}]*\}/.test(clean);
+    let hasValidContent = !hasBrackets;
+    const modified = clean.replace(/\{([^}]*)\}/g, (match, inner) => {
+      const stripped = inner.trim();
+      if (!stripped) return '';
+      if (/^\d+$/.test(stripped)) return '';
+      if (seenDialogsForFile.has(stripped)) return '';
+      seenDialogsForFile.add(stripped);
+      hasValidContent = true;
+      return stripped;
+    });
+    const collapsed = modified.replace(/\s+/g, ' ').trim();
+    return (hasValidContent && collapsed) ? collapsed : null;
+  }
+
+  async function runTextTableSearch(rawQuery) {
+    const query = rawQuery || '';
+    if (!query.trim()) {
+      tsStatusEl.textContent = 'Search expression cannot be empty.';
+      tsResultsEl.textContent = '';
+      return;
+    }
+
+    tsSearchBtnEl.disabled = true;
+    tsStatusEl.textContent = `Searching for "${query}" in /semes/, /dlg/, /mes/, /oemes/ and /Rules/…`;
+    tsResultsEl.textContent = '';
+
+    try {
+      const index = await buildTextTableFileIndex();
+      const folderGroups = new Map(); // folderDisplay -> Map(filePath -> [{lineNum, text}])
+      const readErrors = index.errors.slice();
+      let matchCount = 0;
+      let capped = false;
+
+      await poolRun(index.files, TEXT_SEARCH_CONCURRENCY, async (entry) => {
+        if (capped) return;
+        let text;
+        try {
+          const resp = await fetch(`${entry.root}${entry.relPath ? entry.relPath + '/' : ''}${entry.filename}`);
+          if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+          text = await resp.text();
+        } catch (err) {
+          readErrors.push(`${entry.filePath}: ${err && err.message ? err.message : err}`);
+          return;
+        }
+
+        const seenDialogsForFile = new Set();
+        const rawLines = text.split(/\r\n|\r|\n/);
+        const fileMatches = [];
+        for (let i = 0; i < rawLines.length; i++) {
+          if (capped) break;
+          const rawLine = rawLines[i];
+          if (!rawLine.includes(query)) continue;
+          const processed = processTextTableLine(rawLine, seenDialogsForFile);
+          if (processed === null) continue;
+          fileMatches.push({ lineNum: i + 1, text: processed });
+          matchCount++;
+          if (matchCount >= TEXT_SEARCH_MATCH_LIMIT) capped = true;
+        }
+
+        if (fileMatches.length) {
+          if (!folderGroups.has(entry.folderDisplay)) folderGroups.set(entry.folderDisplay, new Map());
+          folderGroups.get(entry.folderDisplay).set(entry.filePath, fileMatches);
+        }
+      });
+
+      renderTextTableResults(query, folderGroups, readErrors, capped);
+    } catch (err) {
+      tsStatusEl.textContent = `Search failed: ${err && err.message ? err.message : err}`;
+    } finally {
+      tsSearchBtnEl.disabled = false;
+    }
+  }
+
+  function renderTextTableResults(query, folderGroups, errors, capped) {
+    const folders = Array.from(folderGroups.keys()).sort((a, b) => a.localeCompare(b));
+    let totalFiles = 0;
+    let totalMatches = 0;
+    const lines = [];
+
+    if (folders.length === 0) {
+      lines.push('No matches found.');
+    } else {
+      for (const folder of folders) {
+        lines.push('='.repeat(60));
+        lines.push(`📁 FOLDER: ${folder}`);
+        lines.push('='.repeat(60));
+        const filesMap = folderGroups.get(folder);
+        const filePaths = Array.from(filesMap.keys()).sort((a, b) => a.localeCompare(b));
+        for (const filePath of filePaths) {
+          totalFiles++;
+          lines.push(`[MATCH] ${filePath}`);
+          for (const m of filesMap.get(filePath)) {
+            totalMatches++;
+            lines.push(`[LINE ${m.lineNum}]: ${m.text}`);
+          }
+          lines.push('');
+        }
+        lines.push('');
+      }
+      if (capped) lines.push(`… output capped at ${TEXT_SEARCH_MATCH_LIMIT} matches — refine your search for more.`);
+    }
+
+    tsResultsEl.textContent = lines.join('\n');
+
+    const summary = folders.length
+      ? `${totalMatches} match${totalMatches === 1 ? '' : 'es'} in ${totalFiles} file${totalFiles === 1 ? '' : 's'} across ${folders.length} folder${folders.length === 1 ? '' : 's'} for "${query}"${capped ? ' (capped)' : ''}`
+      : `No matches for "${query}".`;
+    tsStatusEl.textContent = errors.length
+      ? `${summary} — ${errors.length} file${errors.length === 1 ? '' : 's'} couldn't be read.`
+      : summary;
+  }
+
+  const textTableSearchBtnEl = document.getElementById('textTableSearchBtn');
+  const textSearchOverlayEl = document.getElementById('textSearchOverlay');
+  const tsCloseBtnEl = document.getElementById('tsClose');
+  const tsInputEl = document.getElementById('tsInput');
+  const tsSearchBtnEl = document.getElementById('tsSearchBtn');
+  const tsStatusEl = document.getElementById('tsStatus');
+  const tsResultsEl = document.getElementById('tsResults');
+
+  function openTextTableSearch() {
+    textSearchOverlayEl.classList.add('open');
+    tsInputEl.focus();
+  }
+
+  function closeTextTableSearch() {
+    textSearchOverlayEl.classList.remove('open');
+  }
+
+  if (textTableSearchBtnEl) {
+    textTableSearchBtnEl.addEventListener('click', openTextTableSearch);
+  }
+  tsCloseBtnEl.addEventListener('click', closeTextTableSearch);
+  textSearchOverlayEl.addEventListener('click', (e) => {
+    if (e.target === textSearchOverlayEl) closeTextTableSearch();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (!textSearchOverlayEl.classList.contains('open')) return;
+    if (e.key === 'Escape') closeTextTableSearch();
+  });
+  tsSearchBtnEl.addEventListener('click', () => runTextTableSearch(tsInputEl.value));
+  tsInputEl.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      runTextTableSearch(tsInputEl.value);
+    }
+  });
 })();

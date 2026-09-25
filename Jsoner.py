@@ -59,7 +59,7 @@ def generate_architectural_manifests(root_directory):
 
 # --- Configuration ---
 # Targets your main source folders tree
-target_folder = './proto' 
+target_folder = './data' 
 
 if __name__ == "__main__":
     generate_architectural_manifests(target_folder)

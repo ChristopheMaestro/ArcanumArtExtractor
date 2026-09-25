@@ -116,6 +116,8 @@
     </div>
   </section>
 
+  <button type="button" id="textTableSearchBtn" class="text-table-search-launch">🔎 Search through text tables</button>
+
   <details class="manual-load">
     <summary>Or unpack a local .ART file instead</summary>
     <section id="dropzone" class="dropzone" tabindex="0" role="button" aria-label="Choose or drop .ART files">
@@ -291,6 +293,28 @@
       <div class="gb-result" id="packerResult">
         <button id="packerDownload" type="button">Download .art</button>
       </div>
+    </div>
+  </div>
+</div>
+
+<div id="textSearchOverlay" class="modal-overlay">
+  <div class="text-search-modal" role="dialog" aria-modal="true" aria-label="Search through text tables">
+    <div class="ts-header">
+      <h2>Search text tables</h2>
+      <button class="ts-close" id="tsClose" type="button" aria-label="Close">×</button>
+    </div>
+    <div class="ts-body">
+      <p class="ts-hint">
+        Searches every file listed in <code>/semes/</code>, <code>/dlg/</code>, <code>/mes/</code>,
+        <code>/oemes/</code> and <code>/Rules/</code> (including their subfolders) for an exact,
+        case-sensitive match.
+      </p>
+      <div class="ts-searchbar">
+        <input type="search" id="tsInput" placeholder="Enter the expression to search for…" aria-label="Search text tables">
+        <button id="tsSearchBtn" type="button" class="search-btn">Search</button>
+      </div>
+      <p class="ts-status" id="tsStatus"></p>
+      <pre class="ts-results" id="tsResults"></pre>
     </div>
   </div>
 </div>
