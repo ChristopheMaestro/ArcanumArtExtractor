@@ -21,6 +21,7 @@
       <button type="button" id="artExploreBtn" class="file-mode-btn art-mode">.ART files</button>
       <button type="button" id="protoExploreBtn" class="file-mode-btn object-mode">.PRO files</button>
       <button type="button" id="mobExploreBtn" class="file-mode-btn object-mode">.MOB files</button>
+      <button type="button" id="secExploreBtn" class="file-mode-btn object-mode">.SEC files</button>
     </nav>
   </header>
 
@@ -50,10 +51,10 @@
           <strong>.pro files</strong>
           <span>Explore prototype object definitions</span>
         </button>
-        <button type="button" class="home-file-card is-disabled" disabled>
+        <button type="button" class="home-file-card" data-open-mode="sec">
           <span class="home-file-icon" aria-hidden="true"><span class="home-file-fold"></span><span class="home-file-icon-label">.SEC</span></span>
           <strong>.sec files</strong>
-          <span>Coming later</span>
+          <span>Browse 64×64 sector tile maps</span>
         </button>
         <button type="button" class="home-file-card" data-open-mode="mob">
           <span class="home-file-icon" aria-hidden="true"><span class="home-file-fold"></span><span class="home-file-icon-label">.MOB</span></span>
@@ -87,9 +88,11 @@
     <div class="explorer-sidebar">
       <aside class="explorer-tree" id="explorerTree" aria-label="Folder browser"></aside>
 
-      <button type="button" id="packerLaunchBtn" class="dat-packer-launch">🛠️ .DAT Packer</button>
+      <button type="button" id="packerLaunchBtn" class="dat-packer-launch">🛠️ .ART Packer</button>
+      <button type="button" id="mobMapLaunchBtn" class="dat-packer-launch mob-map-launch" hidden>🗺️ Display on map</button>
     </div>
     <div class="explorer-main">
+      <button type="button" id="sidebarToggleBtn" class="sidebar-toggle" aria-expanded="true" aria-controls="explorerTree">◀ Hide sidebar</button>
       <div class="explorer-search" id="artExplorerControls" role="search">
         <input type="search" id="explorerSearchInput" placeholder="Search .ART files by name…" aria-label="Search all folders">
         <button id="explorerSearchBtn" type="button" class="search-btn">Search</button>
@@ -243,9 +246,9 @@
 </div>
 
 <div id="packerOverlay" class="modal-overlay">
-  <div class="dat-packer" role="dialog" aria-modal="true" aria-label=".DAT Packer">
+  <div class="dat-packer" role="dialog" aria-modal="true" aria-label=".ART Packer">
     <div class="packer-header">
-      <h2>.DAT Packer</h2>
+      <h2>.ART Packer</h2>
       <button class="packer-close" id="packerClose" type="button" aria-label="Close">×</button>
     </div>
     <div class="packer-body">
@@ -305,8 +308,8 @@
     </div>
     <div class="ts-body">
       <p class="ts-hint">
-        Searches every file listed in <code>/semes/</code>, <code>/dlg/</code>, <code>/mes/</code>,
-        <code>/oemes/</code> and <code>/Rules/</code> (including their subfolders) for an exact,
+        Searches every file listed in <code>/data/semes/</code>, <code>/data/dlg/</code>, <code>/data/mes/</code>,
+        <code>/data/oemes/</code> and <code>/data/Rules/</code> (including their subfolders) for an exact,
         case-sensitive match.
       </p>
       <div class="ts-searchbar">
@@ -314,13 +317,19 @@
         <button id="tsSearchBtn" type="button" class="search-btn">Search</button>
       </div>
       <p class="ts-status" id="tsStatus"></p>
-      <pre class="ts-results" id="tsResults"></pre>
+      <div class="ts-workspace">
+        <div class="ts-results-pane"><div class="ts-results" id="tsResults"></div></div>
+        <section class="ts-source-pane" id="tsSourcePane" hidden aria-label="Text table file contents">
+          <div class="ts-source-header"><div class="ts-source-title-wrap"><strong id="tsSourceTitle">File contents</strong><span id="tsSourceMatch"></span></div><button type="button" class="ts-source-close" id="tsSourceClose" aria-label="Close file preview">×</button></div>
+          <div class="ts-source-scroll" id="tsSourceScroll"></div>
+        </section>
+      </div>
     </div>
   </div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gif.js@0.2.0/dist/gif.js"></script>
-<script src="script.js"></script>
+<script src="viewer.js"></script>
 </body>
 </html>
