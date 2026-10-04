@@ -41,6 +41,9 @@
 
   // ---- Collapsible left sidebar ---------------------------------------------
   // Hides the folder tree so the map viewer can use the full page width.
+  // sidebarControl lets other features (the SEC tile editor) collapse and
+  // restore it without touching the saved preference.
+  let sidebarControl = null;
   (function initSidebarToggle() {
     const explorer = document.querySelector('section.explorer');
     const btn = document.getElementById('sidebarToggleBtn');
@@ -58,6 +61,14 @@
     let collapsed = false;
     try { collapsed = localStorage.getItem(KEY) === '1'; } catch (_) {}
     apply(collapsed);
+    sidebarControl = {
+      isCollapsed: () => collapsed,
+      set: (value, persist) => {
+        collapsed = !!value;
+        if (persist) { try { localStorage.setItem(KEY, collapsed ? '1' : '0'); } catch (_) {} }
+        apply(collapsed);
+      }
+    };
     btn.addEventListener('click', () => {
       collapsed = !collapsed;
       try { localStorage.setItem(KEY, collapsed ? '1' : '0'); } catch (_) {}
@@ -153,7 +164,11 @@
     return { frames, buf };
   }
 
-  async function parseArtBuffer(buf, maxFrames = Infinity) {
+  // opts.firstPerDirection: decode only the first non-empty image of each direction
+  // (what rotation-based callers use) and skip the pixel data of every other frame.
+  // Critter/monster ART holds dozens of animation frames per direction; decoding
+  // all of them for one thumbnail or one map sprite is what made loading slow.
+  async function parseArtBuffer(buf, maxFrames = Infinity, opts = null) {
     if (buf.byteLength < 0x84) {
         throw new Error(`file too small to contain valid headers (${buf.byteLength} bytes)`);
     }
@@ -227,12 +242,26 @@
     }
 
     const frames = [];
+    const firstOnly = !!(opts && opts.firstPerDirection);
+    // opts.frame: which image within each direction to decode (clamped to the
+    // direction's last frame); 0 = the first non-empty image of each direction.
+    const wantFrame = firstOnly ? Math.max(0, Math.min(Math.max(0, framesPerDirection - 1), (opts.frame | 0))) : 0;
+    const dirDone = new Set();
     for (let idx = 0; idx < imageInfos.length && frames.length < maxFrames; idx++) {
       const { width: w, height: h, size: compressedSize } = imageInfos[idx];
       if (w === 0 || h === 0) continue;
 
       if (offset + compressedSize > buf.byteLength) {
         throw new Error(`frame ${idx} pixel data runs past the end of the file`);
+      }
+      if (firstOnly) {
+        const dir = Math.floor(idx / framesPerDirection);
+        if (wantFrame > 0) {
+          if (idx % framesPerDirection !== wantFrame) { offset += compressedSize; continue; }
+        } else {
+          if (dirDone.has(dir)) { offset += compressedSize; continue; }
+          dirDone.add(dir);
+        }
       }
       const dataOffset = offset;
       const chunk = bytes.subarray(offset, offset + compressedSize);
@@ -293,6 +322,20 @@
 
   function canvasToBlob(canvas) {
     return new Promise((resolve) => canvas.toBlob(resolve, 'image/png'));
+  }
+
+  // Saves a canvas exactly as it is currently drawn (same pixels, same size).
+  async function exportCanvasPng(canvas, baseName) {
+    const blob = await canvasToBlob(canvas);
+    if (!blob) throw new Error('the browser could not encode the canvas as PNG');
+    const safe = String(baseName || 'map').replace(/[^\w.\-]+/g, '_').replace(/^_+|_+$/g, '') || 'map';
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = `${safe}.png`;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 10000);
   }
 
   function frameCanvasForPalette(frame, palette, transparentIndex = 0) {
@@ -359,6 +402,7 @@
   }
 
   function showBrowser() {
+    if (explorerMode === 'dlg') { showDlgBrowser(); return; }
     if (explorerMode === 'mob') { showMobBrowser(); return; }
     if (openGroup) closeGifBuilder();
     openGroup = null;
@@ -2988,6 +3032,8 @@
 
   const mobExploreBtn = document.getElementById('mobExploreBtn');
   const secExploreBtn = document.getElementById('secExploreBtn');
+  const dlgExploreBtn = document.getElementById('dlgExploreBtn');
+  const mesExploreBtn = document.getElementById('mesExploreBtn');
   const artExploreBtn = document.getElementById('artExploreBtn');
   const explorerHome = document.getElementById('explorerHome');
   const artExplorerControls = document.getElementById('artExplorerControls');
@@ -3159,7 +3205,7 @@
     name.textContent = filename;
     card.appendChild(name);
     card._iconThumb = thumb;
-    card.addEventListener('click', () => onOpen(card));
+    card.addEventListener('click', () => onOpen(card, filename, fullPath));
     return card;
   }
 
@@ -3198,7 +3244,7 @@
     }
   }
 
-  function renderDataExplorerTree(rootName, rootPath, rootManifest, loadManifestFn, openFolderFn, subfolderFn, fileFn = null, fileFilterFn = null, filesExtractorFn = extractProtoManifestFiles, fileIcon = '🧬', rootOpenPath = rootPath, rootOpenFolderName = rootName, currentFolderName = null) {
+  function renderDataExplorerTree(rootName, rootPath, rootManifest, loadManifestFn, openFolderFn, subfolderFn, fileFn = null, fileFilterFn = null, filesExtractorFn = extractProtoManifestFiles, fileIcon = '🧬', rootOpenPath = rootPath, rootOpenFolderName = rootName, currentFolderName = null, folderFilterFn = null) {
     treeEl.innerHTML = '';
     const rootUl = document.createElement('ul');
     rootUl.className = 'tree-root';
@@ -3264,6 +3310,11 @@
       const subs = subfolderFn(manifest);
       for (const sf of subs) {
         const fullPath = mobJoinPath(parentPath, sf.relative_path);
+        if (folderFilterFn) {
+          let includeFolder = false;
+          try { includeFolder = await folderFilterFn(fullPath, sf.folder_name); } catch (_) { includeFolder = false; }
+          if (!includeFolder) continue;
+        }
         const li = document.createElement('li');
         li.className = 'tree-node';
         const row = document.createElement('div');
@@ -3951,6 +4002,8 @@
   const EYE_CANDY_MES_URL = `${DATA_ROOT}art/eye_candy/eye_candy.mes`;
   const EYE_CANDY_ART_ROOT = `${DATA_ROOT}art/eye_candy/`;
   const CRITTER_ART_ROOT = `${DATA_ROOT}art/critter/`;
+  const MONSTER_ART_ROOT = `${DATA_ROOT}art/monster/`;
+  const UNIQUE_NPC_ART_ROOT = `${DATA_ROOT}art/unique_npc/`;
   const PROTO_ART_TYPE_EYE_CANDY = 18;
   let descriptionMesPromise = null;
   let descriptionMesMap = null;
@@ -4582,6 +4635,42 @@
     return { offsetX: ox ?? 0, offsetY: oy ?? 0 };
   }
 
+  // F_BLIT_SCALE (field 12): per-object sprite size in percent (100 = the ART's
+  // native size). Monster/NPC protos use it to make e.g. big or small variants
+  // share one ART file, so ignoring it draws every one at the generic size.
+  // A placed object that doesn't carry the field inherits the prototype's value.
+  // Returns a multiplier (1 = normal); 0 / negative / missing mean "unset" -> 1.
+  const BLIT_SCALE_NORMAL = 100;
+  function blitScaleFactor(raw) {
+    const v = Number(raw);
+    return Number.isFinite(v) && v > 0 ? v / BLIT_SCALE_NORMAL : null;
+  }
+  async function secObjectBlitScale(obj, protoCache) {
+    let sc = blitScaleFactor(secFieldInt(obj.fields, 12));
+    if (sc === null) {
+      try {
+        const proto = await resolveMobPrototype(obj, protoCache);
+        sc = blitScaleFactor(secFieldInt(proto?.decodedProto?.fields, 12));
+      } catch (_) {}
+    }
+    return sc ?? 1;
+  }
+
+  // F_BLIT_FLAGS (field 9). Bit 0x10 is the additive blend: the flame sprites
+  // (TorchFlame, CampFire, ...) carry it, and their black background is meant to
+  // add nothing. Without it the sprite is drawn opaque and shows a black box.
+  const SEC_BLIT_ADD = 0x10;
+  async function secObjectBlitFlags(obj, protoCache) {
+    let v = secFieldInt(obj.fields, 9);
+    if (v === null) {
+      try {
+        const proto = await resolveMobPrototype(obj, protoCache);
+        v = secFieldInt(proto?.decodedProto?.fields, 9);
+      } catch (_) {}
+    }
+    return (v ?? 0) >>> 0;
+  }
+
   // Objects can carry lights too (game/light.c sub_4D9590, run for every object of a
   // sector by sector_light_list_fold()): F_LIGHT_FLAGS / F_LIGHT_AID / F_LIGHT_COLOR
   // (13-15) plus four overlay lights F_OVERLAY_LIGHT_* (16-18, arrays). Colour packs
@@ -4717,35 +4806,101 @@
     return out;
   }
 
+  // One fetch per critter/monster/unique-NPC ART file, and one decode per
+  // (file, frame number) that decodes only that frame of each direction. Shared
+  // by the map sprites and the proto thumbnails/preview. Misses are cached too.
+  const critterBufferCache = new Map();
+  const critterFrameCache = new Map();
+  function loadCritterBuffer(url) {
+    let p = critterBufferCache.get(url);
+    if (!p) {
+      p = fetch(url).then(r => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return r.arrayBuffer();
+      });
+      critterBufferCache.set(url, p);
+    }
+    return p;
+  }
+  function loadCritterFrames(url, frameNo = 0) {
+    const f = Number.isInteger(frameNo) && frameNo > 0 ? frameNo : 0;
+    const key = `${url}|f${f}`;
+    let p = critterFrameCache.get(key);
+    if (!p) {
+      p = loadCritterBuffer(url).then(async buf => {
+        let frames = await parseArtBuffer(buf, Infinity, { firstPerDirection: true, frame: f });
+        if (!frames.length && f > 0) frames = await parseArtBuffer(buf, Infinity, { firstPerDirection: true, frame: 0 });
+        return frames;
+      });
+      critterFrameCache.set(key, p);
+    }
+    return p;
+  }
+
+  // Resolves which ART file actually exists for a critter/monster/unique-NPC id
+  // (cached per requested file set). The decoded weapon+animation file is tried
+  // first, then the same weapon's base animation, then the unarmed base file --
+  // many weapon/animation combinations do not exist for every body/armour.
+  const critterArtResolveCache = new Map();
+  function resolveCritterArt(info) {
+    if (!info || !info.filename) return Promise.resolve(null);
+    const names = info.candidates || [info.filename];
+    const key = info.monster
+      ? `m|${info.artRoot || MONSTER_ART_ROOT}${info.monsterFolder}/${info.monsterCode}|${info.waKey}`
+      : `c|${names.join('|')}`;
+    let p = critterArtResolveCache.get(key);
+    if (!p) {
+      p = (async () => {
+        if (info.monster) {
+          const url = await resolveMonsterArtUrl(info);
+          if (!url) return null;
+          const file = decodeURIComponent(url.split('/').pop());
+          const stem = file.toLowerCase().replace(/\.art$/, '');
+          const fallback = !(info.waLetters && stem.endsWith(info.waLetters));
+          return { url, file, wanted: info.waLetters || null, fallback };
+        }
+        for (let i = 0; i < names.length; i++) {
+          const url = `${CRITTER_ART_ROOT}${names[i].split('\\').map(encodeURIComponent).join('/')}`;
+          const ok = await loadCritterFrames(url, info.frameNo).then(() => true, () => false);
+          if (ok) return { url, file: names[i].split('\\').pop(), wanted: names[0].split('\\').pop(), fallback: i > 0 };
+        }
+        return null;
+      })();
+      critterArtResolveCache.set(key, p);
+    }
+    return p;
+  }
+
   // Map-tile art for placed NPCs/PCs: art/critter/<dir>/<file>.art, frame chosen
-  // by the object's own rotation (same selection as scenery/portals).
+  // by the object's own rotation (same selection as scenery/portals) and the
+  // frame number stored in its art id.
   async function loadCritterMapArt(info) {
     if (!info || !info.filename) return null;
-    if (!window.__arcanumMobArtFrames) window.__arcanumMobArtFrames = new Map();
-    const url = `${CRITTER_ART_ROOT}${info.filename.split('\\').map(encodeURIComponent).join('/')}`;
     try {
-      let framesPromise = window.__arcanumMobArtFrames.get(url);
-      if (!framesPromise) {
-        framesPromise = fetch(url).then(r => {
-          if (!r.ok) throw new Error(`HTTP ${r.status}`);
-          return r.arrayBuffer();
-        }).then(b => parseArtBuffer(b));
-        window.__arcanumMobArtFrames.set(url, framesPromise);
-      }
-      const frames = await framesPromise;
+      const res = await resolveCritterArt(info);
+      if (!res) return null;
+      const url = res.url;
+      // Cache the finished sprite per file + rotation + frame so the horizontal
+      // flip canvas is built once, not once per placed NPC/monster.
+      if (!window.__arcanumCritterSprites) window.__arcanumCritterSprites = new Map();
+      const spriteKey = `${url}|${info.rotation}|f${info.frameNo || 0}|${res.fallback ? 1 : 0}`;
+      const cachedSprite = window.__arcanumCritterSprites.get(spriteKey);
+      if (cachedSprite) return cachedSprite;
+      const frames = await loadCritterFrames(url, info.frameNo);
       if (!frames.length || !frames[0]?.canvas) return null;
       const { frame, mirrored } = pickArtFrameForRotation(frames, info.rotation);
       if (!frame?.canvas) return null;
       let source = frame.canvas;
       let hotspotX = Number(frame.hotspotX) || 0;
       if (mirrored) { source = flipCanvasHorizontally(source); hotspotX = source.width - hotspotX; }
-      return {
+      const sprite = {
         canvas: source, hotspotX, hotspotY: Number(frame.hotspotY) || 0,
-        artName: info.filename, artFile: info.filename.split('\\').pop(),
-        artNote: info.exact ? null : 'critter art approx. (weapon/animation bits not decoded)'
+        artName: res.file, artFile: res.file,
+        artNote: res.fallback ? `critter art fallback: wanted ${res.wanted || '?'}, using ${res.file}` : null
       };
+      window.__arcanumCritterSprites.set(spriteKey, sprite);
+      return sprite;
     } catch (_) {
-      window.__arcanumMobArtFrames.delete(url);
       return null;
     }
   }
@@ -4831,7 +4986,13 @@
         const frames = await framesPromise;
         if (!frames || !frames.length || !frames[0]?.canvas) continue;
         const portalPick = objectType === 1 ? pickPortalFrameForRotation(frames, rotation) : null;
-        const { frame, mirrored } = portalPick || pickArtFrameForRotation(frames, rotation);
+        // Traps (eye-candy art, nibble E) are drawn on maps with their 10th
+        // frame -- frame 0 is a mostly empty/idle frame. Use the last frame if
+        // the ART has fewer than 10.
+        const trapPick = objectType === PROTO_ART_TYPE_EYE_CANDY
+          ? { frame: frames[Math.min(9, frames.length - 1)], mirrored: false }
+          : null;
+        const { frame, mirrored } = portalPick || trapPick || pickArtFrameForRotation(frames, rotation);
         if (!frame?.canvas) continue;
         const palettes = frame.palettes || [];
         const selectedPaletteIndex = Number.isInteger(paletteIndex)
@@ -4881,6 +5042,11 @@
     // nibble E. Their numeric Art ID is still the normal tig_art_num_get()
     // value; only the TIG type/folder is different from scenery/items.
     if (typeNibble === 0xE) return PROTO_ART_TYPE_EYE_CANDY;
+    // A trap proto's real art is an eye-candy id (nibble E, handled above).
+    // 026027 - 10001 Trap.pro instead holds 0x40000280 -- a scenery-typed id
+    // (type 10, num 0 = Pedastal1.ART) that is only a leftover placeholder, so
+    // don't let the generic nibble-4 rule turn a trap into a pedestal.
+    if (objectType === 17 && typeNibble !== 0xE) return objectType;
     if (typeNibble === 0x3) return 1; // portal
     if (typeNibble === 0x4) return 3; // scenery
     if (objectType === 2 && typeNibble === 0x7) return 2; // container
@@ -4910,12 +5076,152 @@
   // packed from the high bits down, which the verified gender/body/rotation
   // positions fit exactly:  bits 20-23 armor, bit 19 shield, bits 14-18 frame.
   // Bits 0-10 (anim / weapon / palette) are NOT decoded.
+  // monster.mes: monster number -> art code. The number sits in bits 23-27 of a
+  // 0xC-type art id (inferred from four supplied monster .pro files: 0xC4802000,
+  // 0xC6802000, 0xC6002000, 0xC7002000 -> 9, 13, 12, 14 = bun, pha, liz, rat);
+  // rotation is bits 11-13 like critters. Remaining bits are not decoded.
+  const MONSTER_CODES = ['wlf','spd','ocm','ert','ld1','ls1','lz1','lm1','gd1','bun','msp','aut','liz','pha','rat','sna','ape','ber','chk','cug','shp','tgr','pig','cow','wow','mpg','FIR','WAT','AIR','dkn','spq','wwf'];
+  const MONSTER_NAMES = ['Wolf','Spider','Orc','Earth Elemental','Lesser Demon','Lesser Skeleton','Lesser Zombie','Lesser Mummy','Greater Demon','Bunny','Mechanical Spider','Automaton','Lizard Man','Phantom Knight','WereRat','SnakeMan','Ape','Bear','Chicken','Cougar','Sheep','Tiger','Pig','Cow',"Will 'O Wisp",'Mutant Pig','Fire Elemental','Water Elemental','Air Elemental','Death Knight','Spider Queen','Werewolf'];
+  // Weapon / animation / frame / palette parts of a critter-style art id.
+  // Layout (tig_art_critter_id_create argument order, packed from the high bits
+  // down -- INFERRED, the CE source is not part of this project; the rotation,
+  // gender/body/armor bit positions above were verified, these were not):
+  //   bits 14-18 frame   bits 6-10 anim   bits 4-5 palette   bits 0-3 weapon
+  // File name suffix: weapon letter 'A'+weapon, animation letter 'a'+anim (the
+  // default NPC id, all zero, is the ...Aa file). Palette is decoded for display
+  // only. If pictures come out wrong, only this table needs to change.
+  const CRITTER_AID_BITS = { weaponShift: 0, weaponMask: 0xF, animShift: 6, animMask: 0x1F, frameShift: 14, frameMask: 0x1F, paletteShift: 4, paletteMask: 0x3 };
+  function critterAidWeaponAnimFrame(raw) {
+    const B = CRITTER_AID_BITS;
+    const weapon = (raw >>> B.weaponShift) & B.weaponMask;
+    const anim = (raw >>> B.animShift) & B.animMask;
+    const frameNo = (raw >>> B.frameShift) & B.frameMask;
+    const palette = (raw >>> B.paletteShift) & B.paletteMask;
+    const weaponLetter = String.fromCharCode(65 + weapon);
+    const animLetter = anim < 26 ? String.fromCharCode(97 + anim) : null;
+    const waLetters = animLetter ? (weaponLetter + animLetter).toLowerCase() : null;
+    const detail = `weapon ${weapon} (${weaponLetter}) \u00b7 anim ${anim}${animLetter ? ` (${animLetter})` : ' (no letter)'} \u00b7 frame ${frameNo}` + (palette ? ` \u00b7 palette ${palette} (not applied)` : '');
+    return { weapon, anim, frameNo, palette, weaponLetter, animLetter, waLetters, waKey: `${weapon}.${anim}`, detail };
+  }
+  function protoMonsterAidInfo(raw) {
+    const hex = '0x' + raw.toString(16).toUpperCase().padStart(8, '0');
+    const rotation = (raw >>> 11) & 0x7;
+    const num = (raw >>> 23) & 0x1F;
+    const code = MONSTER_CODES[num] || null;
+    const name = MONSTER_NAMES[num] || `monster #${num}`;
+    const wa = critterAidWeaponAnimFrame(raw);
+    const text = `${raw} (${hex}) \u00b7 monster ${num}: ${name}${code ? ` (${code})` : ''} \u00b7 rotation ${rotation} \u00b7 ${wa.detail}`;
+    // art/monster/<FOLDER>/<code>uwx<aa>.ART, e.g. AIR/airuwxab.ART. 'uw' = underwear
+    // armor and 'x' = no shield (same slots as critter names); the last two letters
+    // are weapon/animation. Monster folders are not all lower case (AIR, FIR, LIZ,
+    // PHA, RAT, SNA, WAT), so the folder is taken from this exact-case list.
+    const folder = code ? (MONSTER_UPPER_FOLDERS.has(code.toUpperCase()) ? code.toUpperCase() : code.toLowerCase()) : null;
+    const lower = code ? code.toLowerCase() : null;
+    // Nominal name only (the animation pair is resolved against the folder's
+    // manifest at load time, see monsterArtCandidates).
+    const filename = lower ? `${folder}\\${lower}uwxaa.ART` : null;
+    return { raw, hex, rotation, monster: true, monsterNum: num, monsterCode: code, monsterName: name,
+             monsterFolder: folder, gender: 0, body: 0, armor: 0, shield: 0, exact: false, filename, text,
+             weapon: wa.weapon, anim: wa.anim, frameNo: wa.frameNo, waLetters: wa.waLetters, waKey: wa.waKey };
+  }
+
+  // unique_npc.mes: unique NPC number -> art folder (exact case, e.g. 'FM1uw',
+  // 'hmmvg'). Unlike monsters the code already includes the armour part, so the
+  // files are <folder>/<folder>x<anim>.ART (art/unique_npc/<folder>/).
+  const UNIQUE_NPC_CODES = ['hmmbs','hmmtn','hmmvg','ghmvg','hmmki','ghmst','hmmgb','effvg','efmvg','ghmv2','ghfvg','hmfvg','dfmvg','effsl','efmax','hmmpn','ghfcd','hmfc2','hopuw','ayauw','dgnuw','gwtuw','hlbuw','kituw','krguw','lycuw','snwuw','kergn','Kr1uw','Kr2uw','Kr3uw','SHMuw','GLMuw','FM1uw','PH1uw','PH2uw','PH3uw','SWGuw','nakuw','VORuw'];
+  // Type nibble 0xD (TIG unique-NPC art). INFERRED from a single supplied .pro
+  // (027343 - NPC.pro, F_CURRENT_AID 0xD1402010): rotation is bits 11-13 as for
+  // critters/monsters, and the unique number is taken as the 8-bit field at bits
+  // 20-27 that critters use for gender/body/armour (0xD14 -> 0x14 = 20, dgnuw).
+  // If the picture is wrong, change these two constants (e.g. shift 22 / mask 0x3F
+  // gives #5 ghmst; shift 23 / mask 0x1F gives #2 hmmvg) -- nothing else depends on them.
+  const UNIQUE_NPC_NUM_SHIFT = 20, UNIQUE_NPC_NUM_MASK = 0xFF;
+  function protoUniqueNpcAidInfo(raw) {
+    const hex = '0x' + raw.toString(16).toUpperCase().padStart(8, '0');
+    const rotation = (raw >>> 11) & 0x7;
+    const num = (raw >>> UNIQUE_NPC_NUM_SHIFT) & UNIQUE_NPC_NUM_MASK;
+    const code = UNIQUE_NPC_CODES[num] || null;
+    const wa = critterAidWeaponAnimFrame(raw);
+    const text = `${raw} (${hex}) \u00b7 unique NPC ${num}${code ? ` (${code})` : ' (not in unique_npc.mes)'} \u00b7 rotation ${rotation} \u00b7 ${wa.detail}`;
+    const filename = code ? `${code}\\${code.toLowerCase()}xaa.ART` : null;
+    // Reuses the monster loader path: info.monster + monsterFolder/monsterCode + artRoot.
+    return { raw, hex, rotation, monster: true, uniqueNpc: true, monsterNum: num, monsterCode: code, monsterName: code,
+             monsterFolder: code, artRoot: UNIQUE_NPC_ART_ROOT, gender: 0, body: 0, armor: 0, shield: 0, exact: false, filename, text,
+             weapon: wa.weapon, anim: wa.anim, frameNo: wa.frameNo, waLetters: wa.waLetters, waKey: wa.waKey };
+  }
+
+  const monsterUrlCache = new Map();
+  function resolveMonsterArtUrl(info) {
+    const key = `${info.artRoot || MONSTER_ART_ROOT}${info.monsterFolder}/${info.monsterCode}|${info.waKey}`;
+    if (!monsterUrlCache.has(key)) {
+      monsterUrlCache.set(key, (async () => {
+        const urls = await monsterArtCandidates(info);
+        // With a manifest the first candidate is known to exist; without one,
+        // probe in order, once.
+        if (urls.length && urls[0] && monsterFolderCache.get(`${info.artRoot || MONSTER_ART_ROOT}${info.monsterFolder}`) && (await monsterFolderCache.get(`${info.artRoot || MONSTER_ART_ROOT}${info.monsterFolder}`))) return urls[0];
+        for (const u of urls) {
+          // loadCritterFrames() caches the decoded file, so the hit is not downloaded twice.
+          const ok = await loadCritterFrames(u, info.frameNo).then(() => true).catch(() => false);
+          if (ok) return u;
+        }
+        return null;
+      })());
+    }
+    return monsterUrlCache.get(key);
+  }
+
+  const MONSTER_UPPER_FOLDERS = new Set(['AIR', 'FIR', 'LIZ', 'PHA', 'RAT', 'SNA', 'WAT']);
+  const monsterFolderCache = new Map();
+  // Returns candidate URLs for a monster's ART, best first. Uses the folder's
+  // <FOLDER>_manifest.json when available (the animation letters differ per
+  // monster: AIR has no 'aa' file, only ab/ad/af/...), otherwise guesses.
+  async function monsterArtCandidates(info) {
+    if (!info || !info.monster || !info.monsterFolder) return [];
+    const folder = info.monsterFolder;
+    const root = info.artRoot || MONSTER_ART_ROOT;
+    // Monsters: <code>uwx<anim>; unique NPCs: the folder name already ends in the
+    // armour letters, so files are <folder>x<anim> (shield letter optional).
+    const prefix = info.uniqueNpc ? info.monsterCode.toLowerCase() : `${info.monsterCode.toLowerCase()}uwx`;
+    const cacheKey = `${root}${folder}`;
+    if (!monsterFolderCache.has(cacheKey)) {
+      monsterFolderCache.set(cacheKey, fetch(`${root}${folder}/${folder}_manifest.json`)
+        .then(r => r.ok ? r.json() : null).then(j => (j && Array.isArray(j.files)) ? j.files : null).catch(() => null));
+    }
+    const files = await monsterFolderCache.get(cacheKey);
+    let names = [];
+    if (files) {
+      names = files.filter(f => f.toLowerCase().startsWith(prefix) && /\.art$/i.test(f)).sort((a, b) => a.toLowerCase() < b.toLowerCase() ? -1 : 1);
+      // Preference: the weapon+animation decoded from the art id, then that
+      // weapon's base animation, then the base animation ('aa', then 'ab').
+      const wl = info.waLetters ? info.waLetters[0] : null;
+      const rank = f => {
+        const tail = f.toLowerCase().replace(/\.art$/, '').slice(-2);
+        if (info.waLetters && tail === info.waLetters) return 0;
+        if (wl && tail === `${wl}a`) return 1;
+        return tail === 'aa' ? 2 : tail === 'ab' ? 3 : 4;
+      };
+      names.sort((a, b) => rank(a) - rank(b));
+    } else {
+      const wa = info.waLetters, wl = wa ? wa[0] : null;
+      const tails = [...new Set([wa, wl && `${wl}a`, 'aa', 'ab'].filter(Boolean))];
+      names = tails.flatMap(t => info.uniqueNpc ? [`${prefix}x${t}.ART`, `${prefix}${t}.ART`] : [`${prefix}${t}.ART`]);
+    }
+    return names.map(n => `${root}${folder}/${encodeURIComponent(n)}`);
+  }
+
   function protoCritterAidInfo(value, objectType) {
     if (objectType !== 15 && objectType !== 16) return null;
     const numeric = Number(value);
     if (!Number.isFinite(numeric)) return null;
     const raw = numeric >>> 0;
-    if (raw === 0xFFFFFFFF || ((raw >>> 28) & 0xF) !== 0x2) return null;
+    if (raw === 0xFFFFFFFF) return null;
+    // Monster protos (e.g. wolves, bunnies, phantom knights) do NOT use the
+    // critter art type: their F_CURRENT_AID has type nibble 0xC (TIG monster art),
+    // so the critter-only check below used to reject them and no art id was shown.
+    if (((raw >>> 28) & 0xF) === 0xC) return protoMonsterAidInfo(raw);
+    // Unique NPCs (type nibble 0xD) live in art/unique_npc/<folder>/ (unique_npc.mes).
+    if (((raw >>> 28) & 0xF) === 0xD) return protoUniqueNpcAidInfo(raw);
+    if (((raw >>> 28) & 0xF) !== 0x2) return null;
     const hex = '0x' + raw.toString(16).toUpperCase().padStart(8, '0');
     const rotation = (raw >>> 11) & 0x7;
     const gender = (raw >>> 27) & 0x1;
@@ -4926,10 +5232,10 @@
     const parts = [bodyName ? `${bodyName} ${gender ? 'male' : 'female'}` : `body type ${body}`];
     if (armor) parts.push(CRITTER_ARMOR_NAMES[armor] ? `${CRITTER_ARMOR_NAMES[armor]} armor` : `armor ${armor}`);
     parts.push(`rotation ${rotation}`);
-    // bits 0-10 (anim/weapon/palette) and 14-18 (frame) must be zero for the
-    // filename to be exact (the default NPC proto); otherwise it is an
-    // approximation (no weapon, idle animation).
-    const exact = (raw & 0x7FF) === 0 && ((raw >>> 14) & 0x1F) === 0;
+    // weapon (bits 0-3), animation (6-10) and frame (14-18) are decoded below by
+    // critterAidWeaponAnimFrame(); the default NPC proto (all zero) is the ...Aa file.
+    const wa = critterAidWeaponAnimFrame(raw);
+    let candidates = null;
     let filename = null;
     if (bodyName && CRITTER_ARMOR_CODES[armor]) {
       let g = gender, b = body;
@@ -4940,10 +5246,16 @@
       }
       const bodyCode = CRITTER_BODY_CODES[b];
       const gc = g ? 'M' : 'F';
-      filename = `${bodyCode}${gc}\\${bodyCode}${gc}${CRITTER_ARMOR_CODES[armor]}${shield ? 'S' : 'X'}Aa.art`;
-      parts.push(exact ? filename : `${filename} (approx.: weapon/animation bits not decoded)`);
+      // Decoded weapon+animation file first, then the same weapon's base
+      // animation, then the unarmed base file (see resolveCritterArt()).
+      const stem = `${bodyCode}${gc}${CRITTER_ARMOR_CODES[armor]}${shield ? 'S' : 'X'}`;
+      const names = [wa.animLetter ? `${stem}${wa.weaponLetter}${wa.animLetter}.art` : null, `${stem}${wa.weaponLetter}a.art`, `${stem}Aa.art`].filter(Boolean);
+      candidates = [...new Set(names)].map(n => `${bodyCode}${gc}\\${n}`);
+      filename = candidates[0];
+      parts.push(`${filename} \u00b7 ${wa.detail}`);
     }
-    return { raw, hex, rotation, gender, body, armor, shield, exact, filename, text: `${raw} (${hex}) \u00b7 ${parts.join(' \u00b7 ')}` };
+    return { raw, hex, rotation, gender, body, armor, shield, exact: true, filename, candidates, weapon: wa.weapon, anim: wa.anim, frameNo: wa.frameNo,
+             waKey: wa.waKey, text: `${raw} (${hex}) \u00b7 ${parts.join(' \u00b7 ')}` };
   }
 
   function protoCurrentAidArtId(value, objectType) {
@@ -5003,9 +5315,12 @@
     // looked up in scenery.mes). Solved and round-trip-verified against every real
     // scenery .pro in the game (45/45), matching every named blueprint in proto.c
     // (trees, stones, lights 1-13, wall-of-fire/stone/force, dynamite, smoke, ...).
-    //   bits 19-25 (7 bits): num        bits 6-10 (5 bits): type
+    //   bits 19-26 (8 bits): num        bits 6-10 (5 bits): type
+    // num is 8 bits, not 7: scenery.mes has entries above 127 within a type
+    // (e.g. 13139 HurbPlanter1 = type 13, num 139). With 7 bits, 139 & 127 = 11
+    // wrapped to 13011 (T_stump_2).
     if (objectType === 3) {
-      const num = (raw >>> 19) & 0x7F;
+      const num = (raw >>> 19) & 0xFF;
       const type = (raw >>> 6) & 0x1F;
       if ((raw >>> 28) !== 0x4) return null;
       return type * 1000 + num;
@@ -5024,7 +5339,7 @@
     //   bits 0-3 (4 bits): type (WEAPON=0..GENERIC=9, matches objectType-5)
     //   bits 6-9 (4 bits): subtype (weapon family; 0 for non-weapon/armor)
     //   bits 14-16 (3 bits, armor only): coverage (TORSO=0, SHIELD=1, HELMET=2, ...)
-    //   bits 17-21 (5 bits): num
+    //   bits 17-24 (8 bits): num
     // bits 4,5,12 encode disposition (which of ground/inven/paper/schematic a
     // FIELD is meant to read) but are not needed here: the caller already knows
     // which table to search from the field itself (see protoArtMesMap).
@@ -5036,7 +5351,11 @@
       if (type !== expectedType) return null; // the value's own type bits must agree with the object's type
       const subtype = (raw >>> 6) & 0xF;
       const coverage = (raw >>> 14) & 0x7;
-      const num = (raw >>> 17) & 0x1F;
+      // num is 8 bits (17-24), not 5: generic items run up to 9193 and food/keys/
+      // pc items also exceed 31 in item_ground.mes. With only 5 bits, 9065 (steel,
+      // num 65) was read as 65 & 31 = 1, i.e. 9001 (papers). Bit 24 is why the
+      // 0x60/0x61 check above accepts both values of the top byte.
+      const num = (raw >>> 17) & 0xFF;
       let key = num + 20 * subtype + 1000 * type;
       if (type === 2 && coverage !== 0) key += 20 * (5 * coverage + 10);
       return key;
@@ -5050,19 +5369,19 @@
   // direction-major, so index = rotation * framesPerDirection).
   async function loadCritterAidArt(info, previewCanvas, maxSide = 92) {
     if (!info || !info.filename) return false;
-    const url = `${CRITTER_ART_ROOT}${info.filename.split('\\').map(encodeURIComponent).join('/')}`;
+    let url = `${CRITTER_ART_ROOT}${info.filename.split('\\').map(encodeURIComponent).join('/')}`;
     try {
-      const resp = await fetch(url, { cache: 'no-store' });
-      if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-      const buf = await resp.arrayBuffer();
-      const frames = await parseArtBuffer(buf);
+      // Resolved once per art-id type (cached) instead of probing candidate
+      // files with a fresh download for every card.
+      const res = await resolveCritterArt(info);
+      if (!res) throw new Error('no ART file found');
+      url = res.url;
+      const frames = await loadCritterFrames(url, info.frameNo);
       if (!frames.length) throw new Error('no drawable frame');
-      const hv = new DataView(buf);
-      const directions = (hv.getUint32(0, true) & 1) === 0 ? 8 : 1;
-      const perDir = Math.max(1, hv.getUint32(8 * 4, true));
-      const index = (directions === 8 ? info.rotation % 8 : 0) * perDir;
-      const source = (frames[index] || frames[0]).canvas;
+      const { frame, mirrored } = pickArtFrameForRotation(frames, info.rotation);
+      let source = (frame || frames[0]).canvas;
       if (!source) throw new Error('no drawable frame');
+      if (mirrored) source = flipCanvasHorizontally(source);
       const scale = Math.max(1, Math.min(maxSide / source.width, maxSide / source.height));
       const w = Math.max(1, Math.round(source.width * scale));
       const h = Math.max(1, Math.round(source.height * scale));
@@ -5715,9 +6034,13 @@
         // wall prototype in isolation, and this isn't a decode failure.
         nameEl.textContent = 'Not applicable — wall art is computed per-tile from map adjacency, not stored on the prototype (see game/wall.c)';
       } else if (protoCritterAidInfo(field ? field.value : null, decoded.objType)) {
-        nameEl.textContent = `Critter art ID ${protoCritterAidInfo(field.value, decoded.objType).text}`;
+        const protoScale = blitScaleFactor(decoded.fields?.find(f => f.field === 12)?.value);
+        nameEl.textContent = `Critter art ID ${protoCritterAidInfo(field.value, decoded.objType).text}` +
+          (protoScale && protoScale !== 1 ? ` \u00b7 size ${Math.round(protoScale * 100)}%` : '');
       } else {
-        nameEl.textContent = 'Art ID unavailable';
+        nameEl.textContent = decoded.objType === 17
+          ? 'No trap art \u2014 F_CURRENT_AID is not an eye-candy id (placeholder, ignored)'
+          : 'Art ID unavailable';
       }
       meta.append(labelEl, nameEl);
 
@@ -6033,6 +6356,8 @@
 
   mobExploreBtn.addEventListener('click',()=>{ enterMobExplorer(); });
   if (secExploreBtn) secExploreBtn.addEventListener('click',()=>{ enterSecExplorer(); });
+  if (dlgExploreBtn) dlgExploreBtn.addEventListener('click',()=>{ enterDlgExplorer(); });
+  if (mesExploreBtn) mesExploreBtn.addEventListener('click',()=>{ enterMesExplorer(); });
   protoExploreBtn.addEventListener('click',()=>{ enterProtoExplorer(); });
   artExploreBtn.addEventListener('click',()=>{ enterArtExplorer(); });
   explorerHome.querySelectorAll('[data-open-mode]').forEach(card => {
@@ -6042,8 +6367,423 @@
       else if (mode === 'pro') enterProtoExplorer();
       else if (mode === 'mob') enterMobExplorer();
       else if (mode === 'sec') enterSecExplorer();
+      else if (mode === 'dlg') enterDlgExplorer();
+      else if (mode === 'mes') enterMesExplorer();
     });
   });
+
+  // ---- .DLG dialogue explorer --------------------------------------------
+  // ---- .MES text-table explorer ------------------------------------------
+  // MES files are distributed throughout the entire data tree, not under one
+  // dedicated /data/mes/ directory. The root data_manifest.json is therefore
+  // the starting point; every descendant manifest is recursively inspected,
+  // and only branches containing at least one .mes file are exposed.
+  const MES_ROOT = DATA_ROOT;
+  const MES_DATA_MANIFEST_URL = `${DATA_ROOT}data_manifest.json`;
+  const mesManifestCache = new Map();
+  const mesFolderContentCache = new Map();
+  let mesCurrentPath = '';
+  let mesCurrentFolderName = 'data';
+  let mesCurrentManifest = null;
+  let mesFiles = [];
+  let mesOpenData = null;
+  let mesSearchQuery = '';
+  let mesShowComments = true;
+
+  function mesJoinPath(parent, child) {
+    const a = String(parent || '').replace(/^\/+|\/+$/g, '');
+    const b = String(child || '').replace(/^\/+|\/+$/g, '');
+    return a && b ? `${a}/${b}` : (a || b);
+  }
+  function mesManifestUrl(relativePath = '', folderName = 'data') {
+    if (!relativePath) return MES_DATA_MANIFEST_URL;
+    const prefix = `${DATA_ROOT}${encPath(relativePath)}/`;
+    const name = folderName || relativePath.split('/').pop() || 'data';
+    return `${prefix}${encodeURIComponent(name)}_manifest.json`;
+  }
+  async function loadMesManifest(relativePath = '', folderName = 'data') {
+    const key = relativePath || '';
+    if (mesManifestCache.has(key)) return mesManifestCache.get(key);
+    const url = mesManifestUrl(relativePath, folderName);
+    const resp = await fetch(url, { cache: 'no-store' });
+    if (!resp.ok) throw new Error(`couldn't load data manifest at ${url} (HTTP ${resp.status})`);
+    const data = await resp.json();
+    mesManifestCache.set(key, data);
+    return data;
+  }
+  function extractMesManifestFiles(manifest) {
+    const files = Array.isArray(manifest) ? manifest : (Array.isArray(manifest?.files) ? manifest.files : []);
+    return files.map(x => typeof x === 'string' ? x : (x && (x.name || x.filename || x.file)))
+      .filter(x => typeof x === 'string' && /\.mes$/i.test(x)).sort((a,b)=>a.localeCompare(b));
+  }
+  function mesSubfolders(manifest) {
+    const sub = manifest?.subfolders && typeof manifest.subfolders === 'object' ? manifest.subfolders : {};
+    return Object.keys(sub).sort((a,b)=>a.localeCompare(b)).map(k => sub[k])
+      .filter(sf => sf && typeof sf === 'object' && sf.folder_name && sf.relative_path);
+  }
+  async function mesFolderHasContent(relativePath, folderName) {
+    const key = `${relativePath}|${folderName}`;
+    if (mesFolderContentCache.has(key)) return mesFolderContentCache.get(key);
+    const promise = (async () => {
+      try {
+        const manifest = await loadMesManifest(relativePath, folderName);
+        if (extractMesManifestFiles(manifest).length) return true;
+        for (const sf of mesSubfolders(manifest)) {
+          const fullPath = mesJoinPath(relativePath, sf.relative_path);
+          if (await mesFolderHasContent(fullPath, sf.folder_name)) return true;
+        }
+      } catch (_) {}
+      return false;
+    })();
+    mesFolderContentCache.set(key, promise);
+    return promise;
+  }
+  async function mesVisibleSubfolders(manifest, relativePath) {
+    const result = [];
+    for (const sf of mesSubfolders(manifest)) {
+      const fullPath = mesJoinPath(relativePath, sf.relative_path);
+      if (await mesFolderHasContent(fullPath, sf.folder_name)) result.push(sf);
+    }
+    return result;
+  }
+  function mesFileUrl(relativePath, filename) {
+    return `${MES_ROOT}${relativePath ? encPath(relativePath) + '/' : ''}${encPath(filename)}`;
+  }
+  async function fetchMesText(relativePath, filename) {
+    const resp = await fetch(mesFileUrl(relativePath, filename), { cache: 'no-store' });
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+    const buf = await resp.arrayBuffer();
+    try { return new TextDecoder('windows-1252').decode(buf); }
+    catch (_) { return new TextDecoder('latin1').decode(buf); }
+  }
+
+  function mesParseText(text) {
+    const lines = String(text || '').replace(/\r\n?/g, '\n').split('\n');
+    const entries = [];
+    const comments = [];
+    let pendingComments = [];
+    let field = null;
+    let fields = [];
+    let fieldStartLine = 0;
+    let braceDepth = 0;
+    const flushComment = (lineNo, raw) => {
+      const value = raw.replace(/^\s*\/\/\s?/, '').trim();
+      if (value) pendingComments.push({ line: lineNo, text: value });
+    };
+    for (let li = 0; li < lines.length; li++) {
+      const line = lines[li], lineNo = li + 1, trimmed = line.trim();
+      if (field === null && fields.length === 0 && /^\/\//.test(trimmed)) { flushComment(lineNo, line); continue; }
+      if (field === null && fields.length === 0 && !trimmed) continue;
+      for (let i = 0; i < line.length; i++) {
+        const ch = line[i];
+        if (ch === '{' && field === null) {
+          field = ''; braceDepth = 1; fieldStartLine ||= lineNo; continue;
+        }
+        if (ch === '}' && field !== null) {
+          fields.push(field); field = null; braceDepth = 0; continue;
+        }
+        if (field !== null) field += ch;
+      }
+      if (field === null && fields.length >= 2) {
+        const rawKey = fields[0].trim();
+        if (/^[-+]?\d+$/.test(rawKey)) {
+          entries.push({ key: Number(rawKey), value: fields[1], line: fieldStartLine || lineNo, comments: pendingComments });
+          pendingComments = [];
+        }
+        fields = []; fieldStartLine = 0;
+      }
+    }
+    return { entries, trailingComments: pendingComments };
+  }
+
+  function mesEscapeText(value) { return escapeHtml(String(value ?? '')); }
+  function mesMatches(entry, query) {
+    if (!query) return true;
+    const q=query.toLowerCase();
+    return String(entry.key).includes(q) || String(entry.value).toLowerCase().includes(q) || entry.comments.some(c=>c.text.toLowerCase().includes(q));
+  }
+  function mesRenderViewer(filename, relativePath, parsed) {
+    const wrap=mesCreateEl('article','mes-viewer');
+    const bar=mesCreateEl('div','mes-viewer-head');
+    const back=document.createElement('button'); back.type='button'; back.className='btn-back'; back.textContent='← Back to folder'; back.addEventListener('click',showMesBrowser); bar.appendChild(back);
+    const title=mesCreateEl('div','mes-file-title'); title.appendChild(mesCreateEl('strong',null,filename)); title.appendChild(mesCreateEl('span',null,`/${relativePath || 'data'}`)); bar.appendChild(title);
+    const controls=mesCreateEl('div','mes-controls');
+    const search=document.createElement('input'); search.type='search'; search.className='mes-search'; search.placeholder='Search key, text, or comment…'; search.value=mesSearchQuery;
+    search.addEventListener('input',()=>{mesSearchQuery=search.value; mesRenderTable(table,parsed);}); controls.appendChild(search);
+    const commentsToggle=document.createElement('button'); commentsToggle.type='button'; commentsToggle.className='mes-control active'; commentsToggle.textContent='Comments: on'; commentsToggle.addEventListener('click',()=>{mesShowComments=!mesShowComments;commentsToggle.classList.toggle('active',mesShowComments);commentsToggle.textContent=mesShowComments?'Comments: on':'Comments: off';mesRenderTable(table,parsed);}); controls.appendChild(commentsToggle);
+    bar.appendChild(controls); wrap.appendChild(bar);
+    const summary=mesCreateEl('div','mes-summary'); summary.innerHTML=`<span><b>${parsed.entries.length}</b> entries</span><span><b>${parsed.entries.reduce((n,e)=>n+e.comments.length,0)}</b> comments</span><span>Numeric key → text table</span>`; wrap.appendChild(summary);
+    const tableWrap=mesCreateEl('div','mes-table-wrap'); const table=document.createElement('div'); table.className='mes-table'; mesRenderTable(table,parsed); tableWrap.appendChild(table); wrap.appendChild(tableWrap);
+    if(parsed.trailingComments.length){ const tail=mesCreateEl('div','mes-trailing-comments'); tail.appendChild(mesCreateEl('strong',null,'Comments at end of file')); parsed.trailingComments.forEach(c=>tail.appendChild(mesCreateEl('div',null,`Line ${c.line}: ${c.text}`))); wrap.appendChild(tail); }
+    return wrap;
+  }
+  function mesCreateEl(tag,cls,text){ const el=document.createElement(tag); if(cls)el.className=cls; if(text!==undefined)el.textContent=text; return el; }
+  function mesRenderTable(table,parsed){
+    table.innerHTML='';
+    const entries=parsed.entries.filter(e=>mesMatches(e,mesSearchQuery));
+    const head=document.createElement('div'); head.className='mes-row mes-head'; ['Line','Key','Text / value'].forEach(x=>head.appendChild(mesCreateEl('div',null,x))); table.appendChild(head);
+    if(!entries.length){table.appendChild(mesCreateEl('div','mes-empty','No entries match this search.'));return;}
+    for(const e of entries){
+      if(mesShowComments && e.comments.length){ const c=mesCreateEl('div','mes-comment-block'); c.appendChild(mesCreateEl('span','mes-comment-marker','//')); const lines=mesCreateEl('div','mes-comment-lines'); e.comments.forEach(x=>mesCommentLinesAppend(lines,x)); c.appendChild(lines); table.appendChild(c); }
+      const row=mesCreateEl('div','mes-row'); row.appendChild(mesCreateEl('div','mes-line',String(e.line))); row.appendChild(mesCreateEl('div','mes-key',String(e.key))); row.appendChild(mesCreateEl('div','mes-value',e.value)); table.appendChild(row);
+    }
+  }
+  function mesCommentLinesAppend(parent,c){ const d=mesCreateEl('div',null,c.text); d.dataset.line=c.line; parent.appendChild(d); }
+  function mesOpenViewer(filename, relativePath){
+    fetchMesText(relativePath,filename).then(text=>{
+      mesOpenData=mesParseText(text); mesSearchQuery=''; saveDataExplorerState('mes',relativePath,mesCurrentFolderName,filename);
+      gridEl.hidden=true; paginationEl.hidden=true; viewerEl.hidden=false; viewerEl.classList.add('revealed'); viewerEl.innerHTML=''; viewerEl.appendChild(mesRenderViewer(filename,relativePath,mesOpenData)); viewerEl.scrollIntoView({behavior:'smooth',block:'start'});
+    }).catch(err=>{viewerEl.hidden=false;viewerEl.classList.add('revealed');viewerEl.innerHTML=`<div class="mes-error">Couldn't read ${escapeHtml(filename)}: ${escapeHtml(err?.message||err)}</div>`;});
+  }
+  async function openMesFolder(relativePath,folderName){
+    mesCurrentPath=relativePath; mesCurrentFolderName=folderName; mesCurrentManifest=await loadMesManifest(relativePath,folderName); mesFiles=extractMesManifestFiles(mesCurrentManifest); saveDataExplorerState('mes',relativePath,folderName,null);
+    breadcrumbEl.textContent=`/data/${relativePath?relativePath+'/':''}`; gridEl.hidden=false; viewerEl.hidden=true; viewerEl.classList.remove('revealed'); viewerEl.innerHTML='';
+    const visibleFolders=await mesVisibleSubfolders(mesCurrentManifest,relativePath);
+    renderDataFolderGrid({subfolders:visibleFolders,files:mesFiles,relativePath,openFolderFn:openMesFolder,openFileFn:(fn,card,_fullPath)=>mesOpenViewer(fn,relativePath),fileIcon:'📜'});
+  }
+  function renderMesTree(manifest,path,folderName){
+    renderDataExplorerTree('data',path,manifest,loadMesManifest,openMesFolder,mesSubfolders,(filename,_row,parent)=>mesOpenViewer(filename,parent),null,extractMesManifestFiles,'📜',path,folderName,folderName,mesFolderHasContent);
+  }
+  function showMesBrowser(){ if(mesOpenData)mesOpenData=null; viewerEl.hidden=true;viewerEl.classList.remove('revealed');viewerEl.innerHTML='';gridEl.hidden=false;paginationEl.hidden=true;clearShareUrl();if(mesCurrentManifest)openMesFolder(mesCurrentPath,mesCurrentFolderName).catch(err=>{gridEl.innerHTML=`<p class="explorer-status err">${escapeHtml(err?.message||err)}</p>`;}); }
+  async function enterMesExplorer(restoreState=false){
+    leaveExplorerHome(); explorerHome.hidden=true; document.querySelector('.explorer').hidden=false; if(manualLoadEl)manualLoadEl.hidden=true;if(logEl)logEl.hidden=true;if(footerNoteEl)footerNoteEl.hidden=false; explorerMode='mes';syncSidebarLaunchButtons();artExplorerControls.hidden=true;if(protoObjectTypeFilterEl)protoObjectTypeFilterEl.hidden=true;if(searchInputEl)searchInputEl.value='';if(searchClearBtnEl)searchClearBtnEl.hidden=true;paginationEl.hidden=true;viewerEl.hidden=true;viewerEl.classList.remove('revealed');
+    const saved=restoreState?loadDataExplorerState():null; const path=saved?.mode==='mes'?(saved.path||''):''; const name=path?(saved.folderName||path.split('/').pop()):'data'; treeEl.innerHTML='<p class="mob-loading">Loading /data/ manifest…</p>';gridEl.innerHTML='';
+    try{mesCurrentPath=path;mesCurrentFolderName=name;mesCurrentManifest=await loadMesManifest(path,name);mesFiles=extractMesManifestFiles(mesCurrentManifest);renderMesTree(mesCurrentManifest,path,name);await openMesFolder(path,name);if(saved?.file&&mesFiles.includes(saved.file))mesOpenViewer(saved.file,path);}catch(err){treeEl.innerHTML='';gridEl.innerHTML=`<p class="explorer-status err">${escapeHtml(err?.message||err)}</p>`;}
+  }
+
+  // ---- .DLG dialogue explorer --------------------------------------------
+  const DLG_ROOT = `${DATA_ROOT}dlg/`;
+  const dlgManifestCache = new Map();
+  let dlgCurrentPath = '';
+  let dlgCurrentFolderName = 'dlg';
+  let dlgCurrentManifest = null;
+  let dlgFiles = [];
+  let dlgOpenData = null;
+  let dlgCurrentNode = 1;
+  let dlgHistory = [];
+  let dlgFemaleMode = false;
+  let dlgShowInternals = false;
+
+  function dlgJoinPath(parent, child) {
+    const a = String(parent || '').replace(/^\/+|\/+$/g, '');
+    const b = String(child || '').replace(/^\/+|\/+$/g, '');
+    return a && b ? `${a}/${b}` : (a || b);
+  }
+  function dlgManifestUrl(relativePath = '', folderName = 'dlg') {
+    const prefix = relativePath ? `${DLG_ROOT}${encPath(relativePath)}/` : DLG_ROOT;
+    const name = folderName || relativePath.split('/').pop() || 'dlg';
+    return `${prefix}${encodeURIComponent(name)}_manifest.json`;
+  }
+  async function loadDlgManifest(relativePath = '', folderName = 'dlg') {
+    const key = relativePath;
+    if (dlgManifestCache.has(key)) return dlgManifestCache.get(key);
+    const url = dlgManifestUrl(relativePath, folderName);
+    const resp = await fetch(url, { cache: 'no-store' });
+    if (!resp.ok) throw new Error(`couldn't load .dlg manifest at ${url} (HTTP ${resp.status})`);
+    const data = await resp.json();
+    dlgManifestCache.set(key, data);
+    return data;
+  }
+  function extractDlgManifestFiles(manifest) {
+    const files = Array.isArray(manifest) ? manifest : (Array.isArray(manifest?.files) ? manifest.files : []);
+    return files.map(x => typeof x === 'string' ? x : (x && (x.name || x.filename || x.file)))
+      .filter(x => typeof x === 'string' && /\.dlg$/i.test(x)).sort((a,b)=>a.localeCompare(b));
+  }
+  function dlgSubfolders(manifest) {
+    const sub = manifest?.subfolders && typeof manifest.subfolders === 'object' ? manifest.subfolders : {};
+    return Object.keys(sub).sort().map(k => sub[k]).filter(sf => sf && typeof sf === 'object' && sf.folder_name);
+  }
+  function dlgFileUrl(relativePath, filename) {
+    return `${DLG_ROOT}${relativePath ? encPath(relativePath) + '/' : ''}${encPath(filename)}`;
+  }
+  async function fetchDlgText(relativePath, filename) {
+    const resp = await fetch(dlgFileUrl(relativePath, filename), { cache: 'no-store' });
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+    const buf = await resp.arrayBuffer();
+    try { return new TextDecoder('windows-1252').decode(buf); }
+    catch (_) { return new TextDecoder('latin1').decode(buf); }
+  }
+  function dlgParseFields(text) {
+    const out = [];
+    let i = 0, line = 1;
+    const len = text.length;
+    while (i < len) {
+      while (i < len && text[i] !== '{') { if (text[i] === '\n') line++; i++; }
+      if (i >= len) break;
+      const fields = [], startLine = line;
+      for (let f = 0; f < 7; f++) {
+        if (text[i] !== '{') throw new Error(`missing { near line ${line}`);
+        i++;
+        let value = '';
+        while (i < len && text[i] !== '}') {
+          if (text[i] === '\n') line++;
+          value += text[i++];
+        }
+        if (i >= len) throw new Error(`unterminated field near line ${line}`);
+        i++;
+        fields.push(value);
+      }
+      out.push({ line: startLine, num: Number.parseInt(fields[0],10), text: fields[1], gender: fields[2], iq: Number.parseInt(fields[3],10) || 0, conditions: fields[4], response: Number.parseInt(fields[5],10) || 0, actions: fields[6] });
+    }
+    return out.filter(e => Number.isFinite(e.num)).sort((a,b)=>a.num-b.num);
+  }
+  function dlgSpecialKind(text) {
+    const m = String(text || '').trim().match(/^([a-z]):(.*)$/i);
+    if (!m) return null;
+    return { code: m[1].toLowerCase(), arg: m[2].trim() };
+  }
+  const DLG_SPECIAL_DESCRIPTIONS = {
+    a:'class-specific generated option', b:'leader/follower generated option', c:'story-generated option',
+    d:'known-area direction option', e:'generic generated option', f:'generic generated option',
+    h:'healing option', i:'insult option', k:'generic generated option', l:'newspaper option',
+    n:'generic generated option', p:'newspaper option', q:'quest-dependent option', r:'rumor option',
+    s:'generic generated option', t:'training option', u:'skill-use option', w:'generic generated option',
+    x:'known-area direction option', y:'generic generated option', z:'spell-use option'
+  };
+  function dlgSpecialLabel(entry) {
+    const sp = dlgSpecialKind(entry.text);
+    if (!sp) return { label: entry.text, special: false, description: '' };
+    const desc = DLG_SPECIAL_DESCRIPTIONS[sp.code] || 'engine-generated option';
+    const suffix = sp.arg ? ` ${sp.arg}` : '';
+    return { label: `[${desc}${suffix ? ` ·${suffix}` : ''}]`, special: true, description: desc };
+  }
+  function dlgBuildNodes(entries) {
+    const byNum = new Map(entries.map(e => [e.num,e]));
+    const nodes = new Map();
+    for (let i=0;i<entries.length;i++) {
+      const e=entries[i];
+      if (e.iq !== 0) continue;
+      const options=[];
+      for (let j=i+1;j<entries.length;j++) {
+        const o=entries[j];
+        if (o.iq===0) break;
+        const special=dlgSpecialLabel(o);
+        options.push({...o, special});
+      }
+      nodes.set(e.num,{...e, femaleText:e.gender, options});
+    }
+    return { byNum, nodes };
+  }
+  function dlgDisplayNpcText(node) {
+    return dlgFemaleMode && node.femaleText && node.femaleText.trim() ? node.femaleText : node.text;
+  }
+  function dlgTargetText(option) {
+    if (option.response > 0) return `→ ${option.response}`;
+    if (option.response < 0) return `Script / special target ${option.response}`;
+    return 'Ends conversation';
+  }
+  function dlgCreateEl(tag, cls, text) {
+    const el=document.createElement(tag); if(cls) el.className=cls; if(text!==undefined) el.textContent=text; return el;
+  }
+  function dlgRenderGameStage(stage, data) {
+    stage.innerHTML='';
+    const node=data.nodes.get(dlgCurrentNode);
+    const title=dlgCreateEl('div','dlg-stage-title',`Line ${dlgCurrentNode}`); stage.appendChild(title);
+    if(!node){
+      const end=dlgCreateEl('div','dlg-terminal','No NPC speech node exists at this line.'); stage.appendChild(end); return;
+    }
+    const npc=dlgCreateEl('div','dlg-npc-bubble');
+    npc.appendChild(dlgCreateEl('div','dlg-speaker','NPC'));
+    npc.appendChild(dlgCreateEl('div','dlg-speech',dlgDisplayNpcText(node) || ''));
+    if(node.actions && dlgShowInternals) npc.appendChild(dlgCreateEl('div','dlg-internal',`Effects on entry: ${node.actions}`));
+    if(node.conditions && dlgShowInternals) npc.appendChild(dlgCreateEl('div','dlg-internal',`Conditions: ${node.conditions}`));
+    stage.appendChild(npc);
+    const optionsWrap=dlgCreateEl('div','dlg-options');
+    if(!node.options.length){ stage.appendChild(dlgCreateEl('div','dlg-terminal', /^e:\s*$/i.test(node.text)?'Dialogue end marker (E:)':'No following player options.')); return; }
+    node.options.forEach((o,index)=>{
+      const btn=document.createElement('button'); btn.type='button'; btn.className='dlg-option';
+      const label=o.special.special ? o.special.label : o.text;
+      btn.appendChild(dlgCreateEl('span','dlg-option-index',String(index+1)));
+      btn.appendChild(dlgCreateEl('span','dlg-option-text',label || ''));
+      const meta=[];
+      if(o.conditions) meta.push(`Requires: ${o.conditions}`);
+      meta.push(dlgTargetText(o));
+      if(o.actions) meta.push(`Effects: ${o.actions}`);
+      const m=dlgCreateEl('span','dlg-option-meta',meta.join('  ·  '));
+      if(!dlgShowInternals && o.conditions) m.textContent=`Requires conditions (${o.conditions})  ·  ${dlgTargetText(o)}`;
+      btn.appendChild(m);
+      btn.addEventListener('click',()=>{
+        dlgHistory.push(dlgCurrentNode);
+        if(o.response>0 && data.nodes.has(o.response)){ dlgCurrentNode=o.response; dlgRenderGameStage(stage,data); dlgRenderFlowMap(data); }
+        else { dlgRenderTerminal(stage,o); }
+      });
+      optionsWrap.appendChild(btn);
+    });
+    stage.appendChild(optionsWrap);
+    const nav=dlgCreateEl('div','dlg-stage-nav');
+    const back=document.createElement('button'); back.type='button'; back.className='dlg-control'; back.textContent='← Previous'; back.disabled=!dlgHistory.length;
+    back.addEventListener('click',()=>{if(!dlgHistory.length)return; dlgCurrentNode=dlgHistory.pop(); dlgRenderGameStage(stage,data); dlgRenderFlowMap(data);}); nav.appendChild(back);
+    const reset=document.createElement('button'); reset.type='button'; reset.className='dlg-control'; reset.textContent='↺ Restart at line 1'; reset.addEventListener('click',()=>{dlgHistory=[];dlgCurrentNode=data.nodes.has(1)?1:(data.nodes.keys().next().value||1);dlgRenderGameStage(stage,data);dlgRenderFlowMap(data);}); nav.appendChild(reset);
+    stage.appendChild(nav);
+  }
+  function dlgRenderTerminal(stage,o){
+    stage.innerHTML=''; stage.appendChild(dlgCreateEl('div','dlg-stage-title','Conversation branch'));
+    const p=dlgCreateEl('div','dlg-pc-bubble'); p.appendChild(dlgCreateEl('div','dlg-speaker','PLAYER')); p.appendChild(dlgCreateEl('div','dlg-speech',o.special.special?o.special.label:o.text)); stage.appendChild(p);
+    const end=dlgCreateEl('div','dlg-terminal',o.response===0?'This response ends the normal dialog.':`The game hands control to special/script handling (response ${o.response}).`); stage.appendChild(end);
+    if(o.actions) stage.appendChild(dlgCreateEl('div','dlg-internal',`Effects: ${o.actions}`));
+    const back=document.createElement('button'); back.type='button'; back.className='dlg-control'; back.textContent='← Back to NPC line'; back.addEventListener('click',()=>{dlgRenderGameStage(stage,dlgOpenData);}); stage.appendChild(back);
+  }
+  function dlgRenderFlowMap(data){
+    const map=document.getElementById('dlgFlowMap'); if(!map)return; map.innerHTML='';
+    const heading=dlgCreateEl('div','dlg-map-heading','Dialogue flow'); map.appendChild(heading);
+    const nodes=[...data.nodes.values()];
+    for(const n of nodes){
+      const card=dlgCreateEl('button','dlg-map-node'); card.type='button'; if(n.num===dlgCurrentNode)card.classList.add('is-current');
+      card.appendChild(dlgCreateEl('span','dlg-map-num',`#${n.num}`));
+      card.appendChild(dlgCreateEl('span','dlg-map-text',n.text||'(empty)'));
+      const targets=n.options.filter(o=>o.response>0).map(o=>o.response);
+      const targetLine=targets.length?`Choices → ${[...new Set(targets)].join(', ')}`:'No normal next line';
+      card.appendChild(dlgCreateEl('span','dlg-map-target',targetLine));
+      card.addEventListener('click',()=>{dlgCurrentNode=n.num;dlgHistory=[];const stage=document.getElementById('dlgStage');dlgRenderGameStage(stage,data);dlgRenderFlowMap(data);});
+      map.appendChild(card);
+    }
+  }
+  function dlgOpenViewer(filename, relativePath){
+    fetchDlgText(relativePath,filename).then(text=>{
+      const entries=dlgParseFields(text); const data=dlgBuildNodes(entries); dlgOpenData=data;
+      dlgCurrentNode=data.nodes.has(1)?1:(data.nodes.keys().next().value||1); dlgHistory=[]; dlgFemaleMode=false; dlgShowInternals=false;
+      gridEl.hidden=true; paginationEl.hidden=true; viewerEl.hidden=false; viewerEl.classList.add('revealed'); viewerEl.innerHTML='';
+      const wrap=dlgCreateEl('article','dlg-viewer');
+      const bar=dlgCreateEl('div','dlg-viewer-head');
+      const back=document.createElement('button'); back.type='button'; back.className='btn-back'; back.textContent='← Back to folder'; back.addEventListener('click',showDlgBrowser); bar.appendChild(back);
+      const h=dlgCreateEl('div','dlg-file-title'); h.appendChild(dlgCreateEl('strong',null,filename)); h.appendChild(dlgCreateEl('span',null,`/${relativePath||'dlg'}`)); bar.appendChild(h);
+      const controls=dlgCreateEl('div','dlg-controls');
+      const gender=document.createElement('button'); gender.type='button'; gender.className='dlg-control'; gender.textContent='Female text'; gender.addEventListener('click',()=>{dlgFemaleMode=!dlgFemaleMode;gender.classList.toggle('active',dlgFemaleMode);dlgRenderGameStage(document.getElementById('dlgStage'),data);}); controls.appendChild(gender);
+      const internals=document.createElement('button'); internals.type='button'; internals.className='dlg-control'; internals.textContent='Show conditions/effects'; internals.addEventListener('click',()=>{dlgShowInternals=!dlgShowInternals;internals.classList.toggle('active',dlgShowInternals);dlgRenderGameStage(document.getElementById('dlgStage'),data);}); controls.appendChild(internals);
+      bar.appendChild(controls); wrap.appendChild(bar);
+      const summary=dlgCreateEl('div','dlg-summary',`${entries.length} records · ${data.nodes.size} NPC speech nodes · engine-style choices are shown as dynamic options when the source uses a:, b:, c:, q:, etc.`); wrap.appendChild(summary);
+      const workspace=dlgCreateEl('div','dlg-workspace');
+      const stage=dlgCreateEl('section','dlg-stage'); stage.id='dlgStage';
+      const map=dlgCreateEl('aside','dlg-flow-map'); map.id='dlgFlowMap';
+      workspace.append(stage,map); wrap.appendChild(workspace); viewerEl.appendChild(wrap);
+      dlgRenderGameStage(stage,data); dlgRenderFlowMap(data); viewerEl.scrollIntoView({behavior:'smooth',block:'start'});
+    }).catch(err=>{viewerEl.hidden=false;viewerEl.innerHTML=`<div class="dlg-error">Couldn't read ${escapeHtml(filename)}: ${escapeHtml(err?.message||err)}</div>`;});
+  }
+  async function openDlgFolder(relativePath, folderName){
+    dlgCurrentPath=relativePath; dlgCurrentFolderName=folderName; dlgCurrentManifest=await loadDlgManifest(relativePath,folderName); dlgFiles=extractDlgManifestFiles(dlgCurrentManifest);
+    saveDataExplorerState('dlg',relativePath,folderName,null);
+    breadcrumbEl.textContent=`/dlg/${relativePath ? relativePath+'/' : ''}`;
+    gridEl.hidden=false; viewerEl.hidden=true; viewerEl.innerHTML='';
+    renderDataFolderGrid({subfolders:dlgSubfolders(dlgCurrentManifest),files:dlgFiles,relativePath,openFolderFn:openDlgFolder,openFileFn:(fn, card, _fullPath)=>dlgOpenViewer(fn, relativePath),fileIcon:'💬'});
+  }
+  function showDlgBrowser(){
+    if(dlgOpenData){dlgOpenData=null;}
+    viewerEl.hidden=true; viewerEl.classList.remove('revealed'); viewerEl.innerHTML=''; gridEl.hidden=false; paginationEl.hidden=true; clearShareUrl();
+    if(dlgCurrentManifest) openDlgFolder(dlgCurrentPath,dlgCurrentFolderName).catch(err=>{gridEl.innerHTML=`<p class="explorer-status err">${escapeHtml(err?.message||err)}</p>`;});
+  }
+  function renderDlgTree(manifest, path, folderName){
+    renderDataExplorerTree('dlg',path,manifest,loadDlgManifest,openDlgFolder,dlgSubfolders,(filename,_row,parent)=>dlgOpenViewer(filename,parent),null,extractDlgManifestFiles,'💬',path,folderName,folderName);
+  }
+  async function enterDlgExplorer(restoreState=false){
+    leaveExplorerHome(); explorerHome.hidden=true; document.querySelector('.explorer').hidden=false;
+    if(manualLoadEl) manualLoadEl.hidden=true; if(logEl) logEl.hidden=true; if(footerNoteEl) footerNoteEl.hidden=false;
+    explorerMode='dlg'; syncSidebarLaunchButtons(); artExplorerControls.hidden=true; if(protoObjectTypeFilterEl) protoObjectTypeFilterEl.hidden=true;
+    if(searchInputEl) searchInputEl.value=''; if(searchClearBtnEl) searchClearBtnEl.hidden=true; paginationEl.hidden=true;
+    const saved=restoreState?loadDataExplorerState():null; const path=saved?.mode==='dlg'?(saved.path||''):''; const name=path?(saved.folderName||path.split('/').pop()):'dlg';
+    treeEl.innerHTML='<p class="mob-loading">Loading /dlg/ manifest…</p>'; gridEl.innerHTML=''; viewerEl.hidden=true;
+    try { dlgCurrentPath=path; dlgCurrentFolderName=name; dlgCurrentManifest=await loadDlgManifest(path,name); dlgFiles=extractDlgManifestFiles(dlgCurrentManifest); renderDlgTree(dlgCurrentManifest,path,name); await openDlgFolder(path,name); if(saved?.file && dlgFiles.includes(saved.file)) dlgOpenViewer(saved.file,path); }
+    catch(err){treeEl.innerHTML='';gridEl.innerHTML=`<p class="explorer-status err">${escapeHtml(err?.message||err)}</p>`;}
+  }
 
   // ---- File explorer -------------------------------------------------------
   //
@@ -6327,12 +7067,185 @@
     const staticObjects = objectList?.objects || [];
     return {
       filename, size: bytes.length, lightCount, lights, tileOffset, tiles,
+      sourceBuffer: buf,
       staticObjectOffset: objectList?.offset ?? null,
       staticObjectCount: staticObjects.length,
       staticObjects,
       staticObjectError,
       staticObjectPlaceholder: objectList?.placeholder ?? null
     };
+  }
+
+  // ---- SEC editor helpers: prototype catalog, object builder, sector writer ------
+  // Walls (type 0), portals (type 1) and scenery (type 3) are instances of numbered
+  // prototypes (.pro). To offer them in a palette every prototype is decoded once,
+  // in the background, and sorted into buckets by object type.
+  const secProtoCatalog = { byType: { 0: [], 1: [], 3: [] }, scanned: 0, total: 0, done: false, started: false, error: null, listeners: [] };
+  function secProtoCatalogNotify() {
+    for (const fn of secProtoCatalog.listeners.slice()) { try { fn(secProtoCatalog); } catch (_) {} }
+  }
+  function secStartProtoScan() {
+    if (secProtoCatalog.started) return;
+    secProtoCatalog.started = true;
+    (async () => {
+      try {
+        const index = await getProtoNumberIndex();
+        const entries = [...index.entries()].sort((a, b) => a[0] - b[0]);
+        secProtoCatalog.total = entries.length;
+        let next = 0;
+        const worker = async () => {
+          while (next < entries.length) {
+            const [num, e] = entries[next++];
+            try {
+              const d = await decodeProtoForSearch(e.filename, e.relPath);
+              const t = d.objType;
+              if (t === 0 || t === 1 || t === 3) {
+                const aidF = d.fields.find(f => f.field === 1);
+                if (aidF != null && aidF.value != null) {
+                  secProtoCatalog.byType[t].push({
+                    num, filename: e.filename, relPath: e.relPath, objType: t,
+                    aid: Number(aidF.value) >>> 0,
+                    label: e.filename.replace(/^\d+\s*-\s*/, '').replace(/\.pro$/i, '')
+                  });
+                }
+              }
+            } catch (_) { /* unreadable prototype: skip */ }
+            secProtoCatalog.scanned++;
+            if (secProtoCatalog.scanned % 40 === 0) secProtoCatalogNotify();
+          }
+        };
+        await Promise.all(Array.from({ length: 12 }, worker));
+        for (const k of [0, 1, 3]) secProtoCatalog.byType[k].sort((a, b) => a.num - b.num);
+      } catch (err) {
+        secProtoCatalog.error = String(err?.message || err);
+      }
+      secProtoCatalog.done = true;
+      secProtoCatalogNotify();
+    })();
+  }
+
+  // Serialised static object with only F_CURRENT_AID (1) and F_LOCATION (2) set; every
+  // other field comes from the prototype. Mirrors decodeSecStaticObject() byte for byte:
+  // version 119 · proto OID (type 1 = numbered prototype) · object OID (type 2 = GUID) ·
+  // type · num_fields · change bitmap · Int32 (no presence byte) · Int64 (presence byte).
+  function secNewGuid() {
+    const b = new Uint8Array(16);
+    if (typeof crypto !== 'undefined' && crypto.getRandomValues) crypto.getRandomValues(b);
+    else for (let i = 0; i < 16; i++) b[i] = Math.floor(Math.random() * 256);
+    return b;
+  }
+  function secBuildStaticObject(objType, protoNum, aid, locBig, numFields) {
+    const dwc = MOB_ENGINE.dwordCount[objType];
+    const bitmap = new Array(dwc).fill(0);
+    for (const f of [1, 2]) { const ci = MOB_ENGINE.changeIdx[f]; bitmap[ci] = (bitmap[ci] | MOB_ENGINE.masks[f]) >>> 0; }
+    const size = 4 + 24 + 24 + 4 + 2 + dwc * 4 + 4 + 9;
+    const bytes = new Uint8Array(size), dv = new DataView(bytes.buffer);
+    const protoOid = new Uint8Array(24), objectOid = new Uint8Array(24);
+    new DataView(protoOid.buffer).setInt16(0, 1, true);
+    new DataView(protoOid.buffer).setUint32(8, protoNum >>> 0, true);
+    new DataView(objectOid.buffer).setInt16(0, 2, true);
+    objectOid.set(secNewGuid(), 8);
+    let o = 0;
+    dv.setUint32(o, 119, true); o += 4;
+    bytes.set(protoOid, o); o += 24;
+    bytes.set(objectOid, o); o += 24;
+    dv.setInt32(o, objType, true); o += 4;
+    dv.setInt16(o, numFields, true); o += 2;
+    for (const w of bitmap) { dv.setUint32(o, w >>> 0, true); o += 4; }
+    dv.setInt32(o, aid | 0, true); o += 4;
+    bytes[o++] = 1;
+    dv.setBigInt64(o, BigInt.asIntN(64, locBig), true); o += 8;
+    return {
+      filename: 'new object', size, version: 119, objType, numFields, actualSet: 2, bitmap, protoOid, objectOid,
+      fields: [
+        { field: 1, name: MOB_FIELD_NAMES[1], od: 'Int32', value: aid | 0 },
+        { field: 2, name: MOB_FIELD_NAMES[2], od: 'Int64', value: BigInt.asIntN(64, locBig).toString() }
+      ],
+      endOffset: size, trailing: new Uint8Array(0), __bytes: bytes, __new: true
+    };
+  }
+
+  // Keep the original bytes of every object so a sector can be written back unchanged
+  // apart from the objects that were added or removed.
+  function secEnsureObjectBytes(decoded) {
+    if (decoded.__objBytesReady) return true;
+    if (decoded.staticObjectOffset == null || !decoded.sourceBuffer) return false;
+    const src = new Uint8Array(decoded.sourceBuffer);
+    let off = decoded.staticObjectOffset;
+    for (const obj of decoded.staticObjects) { obj.__bytes = src.slice(off, off + obj.size); off += obj.size; }
+    decoded.__origObjects = decoded.staticObjects.slice();
+    decoded.__objBytesReady = true;
+    return true;
+  }
+  function secObjectListDiffers(decoded) {
+    const orig = decoded.__origObjects, cur = decoded.staticObjects;
+    if (!orig) return false;
+    if (orig.length !== cur.length) return true;
+    for (let i = 0; i < cur.length; i++) if (orig[i] !== cur[i]) return true;
+    return false;
+  }
+  function secBuildSectorBytes(decoded) {
+    if (!decoded.sourceBuffer) throw new Error(`original bytes of ${decoded.filename} are not available`);
+    const out = new Uint8Array(decoded.sourceBuffer.slice(0));
+    const dv = new DataView(out.buffer);
+    for (let i = 0; i < 4096; i++) dv.setUint32(decoded.tileOffset + i * 4, decoded.tiles[i] >>> 0, true);
+    if (!secObjectListDiffers(decoded)) return out;
+    if (decoded.staticObjectOffset == null) throw new Error(`${decoded.filename}: object list could not be located`);
+    const head = out.subarray(0, decoded.staticObjectOffset);
+    const total = head.length + decoded.staticObjects.reduce((n, o) => n + o.__bytes.length, 0) + 4;
+    const res = new Uint8Array(total);
+    res.set(head, 0);
+    let off = head.length;
+    for (const o of decoded.staticObjects) { res.set(o.__bytes, off); off += o.__bytes.length; }
+    new DataView(res.buffer).setInt32(off, decoded.staticObjects.length, true);
+    return res;
+  }
+
+  // Facade ART file by facade number (shares secFacadeFileCache with loadSecFacadeArt).
+  async function secFacadeFile(num) {
+    const names = await loadSecFacadeNames();
+    const name = names[num];
+    if (!name) return null;
+    const key = name.toLowerCase();
+    if (secFacadeFileMissing.has(key)) return null;
+    let promise = secFacadeFileCache.get(key);
+    if (!promise) {
+      promise = (async () => {
+        try {
+          const resp = await fetch(`${DATA_ROOT}art/facade/${encPath(name)}.art`, { cache: 'no-store' });
+          if (!resp.ok) return null;
+          const frames = await parseArtBuffer(await resp.arrayBuffer());
+          if (!frames.length || !frames[0]?.indices?.length) return null;
+          return { frames, filename: `${name}.art`, facadeName: name };
+        } catch (_) { return null; }
+      })();
+      secFacadeFileCache.set(key, promise);
+    }
+    const file = await promise;
+    if (!file) { secFacadeFileMissing.add(key); return null; }
+    return file;
+  }
+  const SEC_FACADE_FIELD_MASK = (0xF0000000 | 1 | (0x3FF << 1) | (0xFF << 17) | (1 << 27)) >>> 0;
+  function secMakeFacadeRaw(num, frame, walkable, keepBits) {
+    return (((keepBits >>> 0) & ~SEC_FACADE_FIELD_MASK) | (SEC_ART_TYPE_FACADE << 28) | (walkable ? 1 : 0) |
+      ((frame & 0x3FF) << 1) | ((num & 0xFF) << 17) | (((num >> 8) & 1) << 27)) >>> 0;
+  }
+
+  // Wall / portal / scenery art ids: rotation is bits 11-13; walls also carry the piece
+  // (14-19) and variation (8-9), see decodeWallArtId().
+  function secAidWithRotation(aid, rotation) { return (((aid >>> 0) & ~(7 << 11)) | ((rotation & 7) << 11)) >>> 0; }
+  function secWallAid(baseAid, piece, rotation, variation) {
+    const clear = (3 << 8) | (7 << 11) | (0x3F << 14);
+    return (((baseAid >>> 0) & ~clear) | ((variation & 3) << 8) | ((rotation & 7) << 11) | ((piece & 0x3F) << 14)) >>> 0;
+  }
+
+  // Tile edges. Direction 0..3 = NE, SE, SW, NW (a wall's rotation / 2). The neighbour
+  // across each edge, in world (x, y): NE = (x-1, y), SE = (x, y+1), SW = (x+1, y),
+  // NW = (x, y-1). An edge shared by two tiles gets one canonical key (NE / SE form).
+  function secEdgeKey(x, y, dir) {
+    if (dir === 2) return `${x + 1},${y},0`;
+    if (dir === 3) return `${x},${y - 1},1`;
+    return `${x},${y},${dir}`;
   }
 
   // Keep the source-derived SEC parser above as the single implementation.
@@ -6595,6 +7508,20 @@
     return { raw: aid, artId, num1, num2, type, flippable1, flippable2, a3, a4, flags };
   }
 
+  // A raw tile value of 0 is a real tile (indoor non-flippable tile 300, a3=0,
+  // a4=0 -> e.g. Dn1bse0a.ART); it is only "empty" when the WHOLE sector is
+  // zero (an unused sector). Skipping every 0 left holes in sectors that use
+  // the a4=0 variant alongside the other orientations.
+  function secSectorAllZero(decoded) {
+    if (!decoded?.tiles) return true;
+    if (decoded.__allZero === undefined) {
+      let all = true;
+      for (let i = 0; i < decoded.tiles.length; i++) if ((decoded.tiles[i] >>> 0) !== 0) { all = false; break; }
+      decoded.__allZero = all;
+    }
+    return decoded.__allZero;
+  }
+
   function secTileInfo(raw) {
     if (secIsFacadeArtId(raw)) {
       const facadeNum = secFacadeNumber(raw);
@@ -6796,7 +7723,11 @@
       const palette = palettes[paletteIndex] || frame.palette;
       if (!palette) continue;
 
-      const rendered = frameCanvasForPalette(frame, palette, 0);
+      let rendered = frameCanvasForPalette(frame, palette, 0);
+      // Bit 0 of the packed tile ID is the horizontal-flip flag: the ART file is
+      // named from the stored a3/a4, and the tile is then drawn mirrored. Every
+      // mis-rotated tile in the test sector had this bit set.
+      if ((tile.raw & 1) && rendered) rendered = flipCanvasHorizontally(rendered);
       const result = {
         canvas: rendered,
         filename: file.filename,
@@ -6824,10 +7755,13 @@
 
   // Map viewer background (plain black).
   const SEC_MAP_BACKGROUND = '#000000';
-  function drawSecMap(canvas, tiles, selected, mode, artTiles) {
-    const dpr = window.devicePixelRatio || 1;
-    const cssW = Math.max(320, Math.floor(canvas.clientWidth || 760));
-    const cssH = Math.max(260, Math.floor(canvas.clientHeight || 620));
+  // renderOpts (export): { full: true, cssW, cssH, dpr } draws the whole sector at
+  // 100% zoom (1 source pixel per screen pixel) instead of fitting the display.
+  function drawSecMap(canvas, tiles, selected, mode, artTiles, renderOpts = null) {
+    const full = !!(renderOpts && renderOpts.full);
+    const dpr = renderOpts?.dpr ?? (window.devicePixelRatio || 1);
+    const cssW = renderOpts?.cssW ?? Math.max(320, Math.floor(canvas.clientWidth || 760));
+    const cssH = renderOpts?.cssH ?? Math.max(260, Math.floor(canvas.clientHeight || 620));
     canvas.width = Math.round(cssW * dpr);
     canvas.height = Math.round(cssH * dpr);
     const ctx = canvas.getContext('2d', { alpha: false });
@@ -6841,9 +7775,9 @@
     const iso = secIsoMetrics(bounds);
 
     if (mode === 'color') {
-      const cell = Math.min(cssW, cssH) / 64;
-      const left = (cssW - cell * 64) / 2;
-      const top = (cssH - cell * 64) / 2;
+      const cell = full ? 1 : Math.min(cssW, cssH) / 64;
+      const left = full ? 0 : (cssW - cell * 64) / 2;
+      const top = full ? 0 : (cssH - cell * 64) / 2;
       for (let y = 0; y < 64; y++) for (let x = 0; x < 64; x++) {
         const raw = tiles[y * 64 + x] >>> 0;
         const tile = secTileInfo(raw);
@@ -6852,7 +7786,7 @@
       }
       ctx.strokeStyle = 'rgba(0,0,0,.16)';
       ctx.lineWidth = .5;
-      for (let i = 0; i <= 64; i++) {
+      for (let i = 0; i <= 64 && cell >= 4; i++) {
         const px = Math.round(left + i * cell) + .5;
         const py = Math.round(top + i * cell) + .5;
         ctx.beginPath(); ctx.moveTo(px, top); ctx.lineTo(px, top + 64 * cell); ctx.stroke();
@@ -6866,7 +7800,7 @@
       return;
     }
 
-    const fit = secIsoFitView(cssW, cssH, bounds);
+    const fit = full ? { zoom: 1, offsetX: 0, offsetY: 0 } : secIsoFitView(cssW, cssH, bounds);
     const ox = fit.offsetX, oy = fit.offsetY, fitZoom = fit.zoom;
     drawSecActualTiles(ctx, [{ decoded: { tiles }, position: { x: 0, y: 0 } }], bounds, artTiles, fit);
 
@@ -6890,7 +7824,9 @@
     const zoom = Math.max(0.01, Math.min(32, Number(view?.zoom) || 1));
     const ox = Number(view?.offsetX) || 0;
     const oy = Number(view?.offsetY) || 0;
-    const dpr = window.devicePixelRatio || 1;
+    // Use the context's own scale (set by the caller) rather than the window's
+    // devicePixelRatio, so off-screen exports rendered at dpr 1 are not clipped.
+    const dpr = (ctx.getTransform && ctx.getTransform().a) || window.devicePixelRatio || 1;
     const cssW = ctx.canvas.width / dpr;
     const cssH = ctx.canvas.height / dpr;
 
@@ -6898,12 +7834,30 @@
       if (!sector?.decoded || !sector.position) continue;
       const baseX = (sector.position.x - bounds.minX) * 64;
       const baseY = (sector.position.y - bounds.minY) * 64;
+      // Skip sectors that are entirely off screen. Now that edge tiles resolve,
+      // nearly every tile has art, so walking all 4096 tiles of every loaded
+      // sector on each redraw got noticeably slower. Bounding box = the four
+      // sector corners, padded for oversized edge art.
+      {
+        const PAD = 160;
+        const xs = [0, 63].flatMap(lx => [0, 63].map(ly => iso.originX + ((baseY + ly) - (baseX + lx)) * SEC_ISO_HALF_W));
+        const ys = [0, 63].flatMap(lx => [0, 63].map(ly => iso.originY + ((baseX + lx) + (baseY + ly)) * SEC_ISO_HALF_H));
+        const minSX = Math.min(...xs) - PAD, maxSX = Math.max(...xs) + PAD;
+        const minSY = Math.min(...ys) - PAD, maxSY = Math.max(...ys) + PAD;
+        if (maxSX * zoom + ox < 0 || minSX * zoom + ox > cssW || maxSY * zoom + oy < 0 || minSY * zoom + oy > cssH) continue;
+      }
+      const tilesArr = sector.decoded.tiles;
+      const sectorAllZero = secSectorAllZero(sector.decoded);
       for (let y = 0; y < 64; y++) for (let x = 0; x < 64; x++) {
-        const raw = sector.decoded.tiles[y * 64 + x] >>> 0;
-        if (raw === 0) continue;
-        const center = secIsoProject(baseX + x, baseY + y, iso);
+        const raw = tilesArr[y * 64 + x] >>> 0;
+        if (raw === 0 && sectorAllZero) continue;
         const art = artTiles?.get(raw);
         if (!art?.canvas) continue;
+        // inline secIsoProject (no per-tile object allocation)
+        const center = {
+          x: iso.originX + ((baseY + y) - (baseX + x)) * SEC_ISO_HALF_W,
+          y: iso.originY + ((baseX + x) + (baseY + y)) * SEC_ISO_HALF_H
+        };
         // Draw the ART frame at its own native size, centred on the tile.
         // Edge/transition tiles are not guaranteed to be the same size as a
         // plain 78x40 floor tile; forcing them into 78x40 squashed or clipped
@@ -6951,8 +7905,27 @@
     toolbar.appendChild(status);
     const modeBtn = document.createElement('button');
     modeBtn.type = 'button'; modeBtn.className = 'btn-back sec-map-mode';
-    modeBtn.textContent = 'Show actual tiles';
+    modeBtn.textContent = 'Isometric view';
     toolbar.appendChild(modeBtn);
+    const exportBtn = document.createElement('button');
+    exportBtn.type = 'button'; exportBtn.className = 'btn-back sec-map-export';
+    exportBtn.textContent = 'Export PNG';
+    exportBtn.title = 'Save the map exactly as shown in the display';
+    exportBtn.addEventListener('click', async () => {
+      try {
+        // Whole sector at 100% zoom, rendered off screen (independent of the display size/zoom).
+        const iso1 = secIsoMetrics({ minX: 0, maxX: 0, minY: 0, maxY: 0 });
+        const w = mode === 'art' ? Math.ceil(iso1.width) : 64;
+        const h = mode === 'art' ? Math.ceil(iso1.height) : 64;
+        const off = document.createElement('canvas');
+        drawSecMap(off, decoded.tiles, null, mode, artTiles, { full: true, cssW: w, cssH: h, dpr: 1 });
+        await exportCanvasPng(off, `${String(decoded.filename || 'sector').replace(/\.[^.]+$/, '')}_${mode === 'art' ? 'tiles' : 'colors'}_100pct`);
+        status.textContent = `Exported ${w} × ${h} px PNG`;
+      } catch (err) {
+        status.textContent = `Export failed: ${err && err.message ? err.message : err}`;
+      }
+    });
+    toolbar.appendChild(exportBtn);
     mapCard.appendChild(toolbar);
     const stage = document.createElement('div'); stage.className = 'sec-map-stage';
     const canvas = document.createElement('canvas');
@@ -7029,7 +8002,7 @@
 
     modeBtn.addEventListener('click', async () => {
       mode = mode === 'color' ? 'art' : 'color';
-      modeBtn.textContent = mode === 'art' ? 'Show colors' : 'Show actual tiles';
+      modeBtn.textContent = mode === 'art' ? 'Top-down view' : 'Isometric view';
       if (mode === 'art' && !artLoadStarted) {
         artLoadStarted = true;
         modeBtn.disabled = true;
@@ -7052,7 +8025,7 @@
           }
         } finally {
           modeBtn.disabled = false;
-          modeBtn.textContent = 'Show colors';
+          modeBtn.textContent = 'Top-down view';
         }
       }
       redraw();
@@ -7165,7 +8138,11 @@
     }};
   }
 
-  const SEC_ISO_TILE_W = 78;
+  // game/location.c location_xy(): tile origins are 40 px apart per step in x and
+  // 20 in y, i.e. an 80x40 cell (the floor art itself is 78 wide, drawn 1 px in,
+  // see tile.c). The viewer used 78, which stretched every sprite-to-tile
+  // relationship (a wall slab is exactly 40 px along its edge).
+  const SEC_ISO_TILE_W = 80;
   const SEC_ISO_TILE_H = 40;
   const SEC_ISO_HALF_W = SEC_ISO_TILE_W / 2;
   const SEC_ISO_HALF_H = SEC_ISO_TILE_H / 2;
@@ -7297,6 +8274,9 @@
           const paletteIndex = artObjType === 3 && resolvedAidRaw != null
             ? (Number(resolvedAidRaw) >>> 4) & 3
             : null;
+          // Trap objects whose art id is not an eye-candy id (e.g. the arrow-trap
+          // source protos holding a placeholder scenery id) are not drawn on maps.
+          if (mob.objType === 17 && (((Number(resolvedAidRaw) >>> 28) & 0xF) !== 0xE)) return;
           const sceneryRotation = (artObjType === 3 || artObjType === 2 || artObjType === 1) && resolvedAidRaw != null ? aidRotation(resolvedAidRaw) : null;
           let artCanvas = null, artName = null, artFile = null, artNote = null, hotspotX = 0, hotspotY = 0;
           if (mob.objType === 0 && wallArt?.canvas) {
@@ -7316,6 +8296,8 @@
           }
           if (!window.__secMobProtoCache) window.__secMobProtoCache = new Map();
           const { offsetX, offsetY } = await secObjectPixelOffsets(mob, window.__secMobProtoCache);
+          const blitScale = (mob.objType === 15 || mob.objType === 16) ? await secObjectBlitScale(mob, window.__secMobProtoCache) : 1;
+          const blitFlags = await secObjectBlitFlags(mob, window.__secMobProtoCache);
           const objLight = await secObjectLightSources(mob, window.__secMobProtoCache);
           const wallField = mob.fields.find(f => f.field === 39);
           const currentAidRaw = aidField ? aidField.value : null;
@@ -7336,7 +8318,7 @@
             // is intentionally attached only to wall MOBs to avoid bloating
             // the normal MOB overlay data.
             wallFields: mob.objType === 0 ? mob.fields.map(f => ({ field: f.field, value: f.value })) : null,
-            hotspotX, hotspotY, offsetX, offsetY,
+            hotspotX, hotspotY, offsetX, offsetY, blitScale, blitFlags,
             lightSources: objLight.sources, nocturnal: objLight.nocturnal
           });
           diagnostics.loaded++;
@@ -7398,6 +8380,9 @@
         const paletteIndex = artObjType === 3 && resolvedAidRaw != null
           ? (Number(resolvedAidRaw) >>> 4) & 3
           : null;
+        // Trap objects whose art id is not an eye-candy id (e.g. the arrow-trap
+        // source protos holding a placeholder scenery id) are not drawn on maps.
+        if (obj.objType === 17 && (((Number(resolvedAidRaw) >>> 28) & 0xF) !== 0xE)) return null;
         const sceneryRotation = (artObjType === 3 || artObjType === 2 || artObjType === 1) && resolvedAidRaw != null ? aidRotation(resolvedAidRaw) : null;
         let artCanvas = null, artName = null, artFile = null, artNote = null, hotspotX = 0, hotspotY = 0, wallArt = null;
         if (obj.objType === 0 && currentAidField) {
@@ -7418,6 +8403,8 @@
           } catch (_) {}
         }
         const { offsetX, offsetY } = await secObjectPixelOffsets(obj, protoCache);
+        const blitScale = (obj.objType === 15 || obj.objType === 16) ? await secObjectBlitScale(obj, protoCache) : 1;
+        const blitFlags = await secObjectBlitFlags(obj, protoCache);
         const objLight = await secObjectLightSources(obj, protoCache);
         const nameField = obj.fields?.find(f => f.field === 22);
         const name = nameField?.value != null && String(nameField.value).trim() ? String(nameField.value).trim() : `${sector.filename}#object${i}`;
@@ -7436,7 +8423,7 @@
           sceneryFlags: (obj.fields?.find(f => f.field === 69)?.value ?? 0) >>> 0,
           seq: i,
           wallFields: obj.objType === 0 ? obj.fields.map(f => ({ field: f.field, value: f.value })) : null,
-          hotspotX, hotspotY, offsetX, offsetY,
+          hotspotX, hotspotY, offsetX, offsetY, blitScale, blitFlags,
           lightSources: objLight.sources, nocturnal: objLight.nocturnal,
           staticSecObject: true
         };
@@ -7470,63 +8457,6 @@
     return points;
   }
 
-  // Wall ART is a slab whose base runs along one tile edge: 40px wide (half a
-  // 78px tile) with the base sloping 2:1. Rather than trusting the ART hotspot
-  // (which does not correspond to a tile vertex), the sprite is placed so the
-  // left end of its base sits on the left end of the edge it belongs to. The
-  // height of that point is read from the sprite itself: the lowest opaque
-  // pixel of its left-most populated column, extrapolated to column 0.
-  // `slope` is the base slope in the drawn (already mirrored) canvas.
-  const secWallBaseCache = new WeakMap();
-  function secWallBaseLeftY(canvas, slope) {
-    const key = `${slope}`;
-    let perCanvas = secWallBaseCache.get(canvas);
-    if (perCanvas && perCanvas.has(key)) return perCanvas.get(key);
-    let result = null;
-    try {
-      const w = canvas.width, h = canvas.height;
-      const probe = Math.min(w, 8);
-      const img = readCanvasPixels(canvas);
-      if (!img) throw new Error('no pixels');
-      const pix = img.data;
-      // Base line (slope `slope`) estimated at x=0 from the lowest opaque
-      // pixel near each end of the sprite. Walls end in solid posts, so the
-      // ends are never doorway gaps. The smaller value is the line that
-      // touches the base from above, which ignores any plinth step sticking
-      // out below it -- so mirrored and unmirrored walls land at the same height.
-      const estimate = (x0, fromRight) => {
-        for (let i = 0; i < probe; i++) {
-          const x = fromRight ? x0 + probe - 1 - i : x0 + i;
-          for (let y = h - 1; y >= 0; y--) {
-            if (pix[(y * w + x) * 4 + 3] > 0) return y - slope * x;
-          }
-        }
-        return null;
-      };
-      const left = estimate(0, false);
-      const right = w > probe ? estimate(w - probe, true) : left;
-      const vals = [left, right].filter(v => v !== null);
-      result = vals.length ? Math.min(...vals) : null;
-    } catch (_) { result = null; }
-    if (!perCanvas) { perCanvas = new Map(); secWallBaseCache.set(canvas, perCanvas); }
-    perCanvas.set(key, result);
-    return result;
-  }
-
-  // Some wall pieces (doorways, lintels, anything whose base is not a solid
-  // 40px slab) have no usable base line to read from their pixels. The game
-  // places every wall purely from its ART hotspot, so the hotspot is the
-  // reliable signal once its meaning is known. That meaning is calibrated here
-  // from ordinary 40px pieces, where the base-line rule is trustworthy:
-  //   H = median( hotspotX , hotspotY - baseLineY )
-  // kept separately for unmirrored / mirrored art. Any piece is then placed at
-  //   tileCentre + edgeLeftEnd + H - hotspot
-  // which reproduces the base-line placement for ordinary pieces.
-  let secWallCalCache = { sig: null, cal: null };
-  function secMedian(a) {
-    const b = a.slice().sort((x, y) => x - y), n = b.length;
-    return n % 2 ? b[(n - 1) / 2] : (b[n / 2 - 1] + b[n / 2]) / 2;
-  }
   // Rotation that decides which tile edge a wall or portal stands on.
   function secEdgeRotation(p) {
     if (Number.isInteger(p?.wallDecode?.rotation)) return p.wallDecode.rotation & 7;
@@ -7534,28 +8464,29 @@
     return null;
   }
 
-  function secWallCalibration(wallPoints) {
-    const first = wallPoints[0], last = wallPoints[wallPoints.length - 1];
-    const sig = `${wallPoints.length}|${first?.file}|${last?.file}`;
-    if (secWallCalCache.sig === sig) return secWallCalCache.cal;
-    const samples = [[], []];
-    for (const w of wallPoints) {
-      if (w.type !== 0) continue; // only real wall slabs calibrate the hotspot
-      const c = w.artCanvas, rot = w.wallDecode?.rotation;
-      if (!c || !Number.isInteger(rot) || c.width < 38 || c.width > 42) continue;
-      const m = (rot & 2) ? 1 : 0;
-      const by = secWallBaseLeftY(c, m ? -0.5 : 0.5);
-      if (by === null) continue;
-      samples[m].push({ x: Number(w.hotspotX) || 0, y: (Number(w.hotspotY) || 0) - by });
+  // Where a wall's ART hotspot lands, relative to the tile centre (unzoomed iso px).
+  //
+  // Every object is blitted at  anchor - hotspot  (game/object.c object_get_rect),
+  // and the tig art module that would define a wall's anchor is not in the source
+  // zip. What the zip does fix is the geometry of each edge (game/light.c
+  // sub_4DC210: start point + 2:1 slope, 40 px long, ground line = the edge).
+  // The anchors below follow from two measured sprites, with the rest by symmetry:
+  //   * unmirrored art (rot 0,1,4,5): hotspot x = last column (the edge's right
+  //     end), hotspot y = 20 px below the ground line at the edge's left end
+  //   * mirrored art  (rot 2,3,6,7): hotspot x = column 1 (the edge's left end),
+  //     hotspot y = 20 px above the ground line at the edge's left end
+  // Left ends of the edges: NE top vertex (0,-20), SE bottom vertex (0,+20),
+  // SW and NW left vertex (-40,0). So:
+  //   NE (rot 0,1)  (+40,   0)     SE (rot 2,3)  (  0,   0)
+  //   SW (rot 4,5)  (  0, +20)     NW (rot 6,7)  (-40, -20)
+  // UNVERIFIED for SW/NW (no clean sample of those); the tooltip shows the numbers used.
+  function secWallAnchor(rotation) {
+    switch (((rotation >> 1) & 3)) {
+      case 0: return { dx: SEC_ISO_HALF_W, dy: 0 };                     // NE
+      case 1: return { dx: 0, dy: 0 };                                  // SE
+      case 2: return { dx: 0, dy: SEC_ISO_HALF_H };                     // SW
+      default: return { dx: -SEC_ISO_HALF_W, dy: -SEC_ISO_HALF_H };     // NW
     }
-    const cal = samples.map(list => {
-      if (list.length < 3) return null;
-      const mx = secMedian(list.map(v => v.x)), my = secMedian(list.map(v => v.y));
-      const agree = list.filter(v => Math.abs(v.x - mx) <= 2 && Math.abs(v.y - my) <= 2).length;
-      return agree / list.length >= 0.6 ? { x: mx, y: my, n: list.length, agree } : null;
-    });
-    secWallCalCache = { sig, cal };
-    return cal;
   }
 
   // Left end of the tile edge a wall rotation sits on, relative to the tile
@@ -7646,7 +8577,6 @@
       const r = secEdgeRotation(w) ?? 0;
       return (r > 1 && r < 6) ? 1 : 0;
     };
-    const wallCal = mode === 'art' ? secWallCalibration(calibrationPoints || wallPoints) : [null, null];
     wallPoints = wallPoints.slice().sort((a, b) => depth(a) - depth(b) || a.tileX - b.tileX || inTile(a) - inTile(b));
     for (const wall of wallPoints) {
       if (mode === 'art' && !wall.artCanvas) continue;
@@ -7657,12 +8587,9 @@
       if (localX < 0 || localY < 0 || localX >= mapWidthTiles || localY >= mapHeightTiles) continue;
       let px, py;
       if (mode === 'art') {
-        const rotation = secEdgeRotation(wall) ?? 1;
-        let anchorX = localX, anchorY = localY;
-        if (rotation <= 1) { anchorX -= 0.5; anchorY += 0.5; }
-        else if (rotation <= 5) { anchorX += 0.5; anchorY += 0.5; }
-        else { anchorX += 0.5; anchorY -= 0.5; }
-        const p = secIsoProject(anchorX, anchorY, iso);
+        // Tile centre (location_xy + 40,20). Walls move this to their edge anchor
+        // (secWallAnchor) below; everything else is blitted at centre - hotspot.
+        const p = secIsoProject(localX, localY, iso);
         px = p.x * zoom + ox; py = p.y * zoom + oy;
       } else {
         px = localX * zoom + ox + zoom / 2;
@@ -7712,41 +8639,28 @@
       let drawX = px - (Number(wall.hotspotX)||0) * scale;
       let drawY = py - (Number(wall.hotspotY)||0) * scale;
       let lightRuns = null, lightColour = null, lightResolved = false;
-      // Edge-aligned placement (see secWallBaseLeftY / secWallCalibration).
+      // Placement: anchor - hotspot (see secWallAnchor), plus the object offset below.
       const edgeRot = secEdgeRotation(wall);
-      if (edgeRot !== null) {
+      if (edgeRot !== null && mode === 'art') {
         const rot = edgeRot;
         const mirrored = (rot & 2) !== 0;
         const centre = secIsoProject(localX, localY, iso);
+        const anchor = secWallAnchor(rot);
         const end = secWallEdgeLeftEnd(rot);
         const hotX = Number(wall.hotspotX) || 0, hotY = Number(wall.hotspotY) || 0;
-        const baseY = wall.type === 0 ? secWallBaseLeftY(c, mirrored ? -0.5 : 0.5) : null; // a doorway has no usable base line
-        const cal = wallCal[mirrored ? 1 : 0];
-        let ux = null, uy = null, how = '';
-        if (cal) {
-          ux = centre.x + end.dx + cal.x - hotX;
-          uy = centre.y + end.dy + cal.y - hotY;
-          how = `hotspot-calibrated (H ${cal.x}, ${cal.y} from ${cal.agree}/${cal.n} pieces)`;
-        } else if (baseY !== null) {
-          ux = centre.x + end.dx;
-          uy = centre.y + end.dy - baseY;
-          how = 'base-line rule (no calibration available)';
-        }
-        if (ux !== null) {
-          drawX = ux * scale + ox;
-          drawY = uy * scale + oy;
-          if (lighting && mode === 'art') {
-            const offX = Number(wall.offsetX) || 0, offY = Number(wall.offsetY) || 0;
-            lightResolved = true;
-            if (wall.type === 0) {
-              lightRuns = lighting.wallRuns(wall, rot, ux + offX, c.width, centre.x + end.dx + offX, centre.y + end.dy + offY, mirrored ? -0.5 : 0.5);
-            } else {
-              lightColour = lighting.portalColor(wall, rot, centre.x + offX, centre.y + offY);
-            }
+        const offX = Number(wall.offsetX) || 0, offY = Number(wall.offsetY) || 0;
+        const ux = centre.x + anchor.dx - hotX;
+        drawX = px + (anchor.dx - hotX) * scale;
+        drawY = py + (anchor.dy - hotY) * scale;
+        if (lighting) {
+          lightResolved = true;
+          if (wall.type === 0) {
+            lightRuns = lighting.wallRuns(wall, rot, ux + offX, c.width, centre.x + end.dx + offX, centre.y + end.dy + offY, mirrored ? -0.5 : 0.5);
+          } else {
+            lightColour = lighting.portalColor(wall, rot, centre.x + offX, centre.y + offY);
           }
-          wall.placementNote = `${how}; canvas ${c.width}x${c.height}, hotspot ${hotX},${hotY}, ` +
-            `pixel base Y ${baseY === null ? '?' : baseY}, implied H ${hotX}, ${baseY === null ? '?' : hotY - baseY}, offset ${wall.offsetX || 0},${wall.offsetY || 0}`;
         }
+        wall.placementNote = `edge anchor (${anchor.dx},${anchor.dy}) - hotspot ${hotX},${hotY}; offset ${wall.offsetX || 0},${wall.offsetY || 0}; canvas ${c.width}x${c.height}`;
       }
       drawX += (Number(wall.offsetX) || 0) * scale;
       drawY += (Number(wall.offsetY) || 0) * scale;
@@ -7760,7 +8674,7 @@
       } else if (lighting && lightColour) {
         ctx.drawImage(lighting.sprite(c, lightColour), drawX, drawY, c.width * scale, c.height * scale);
       } else if (lighting && mode === 'art' && !lightResolved) {
-        // Placement fell back to the hotspot: no edge geometry, so use the plain outdoor colour.
+        // No edge geometry (unknown rotation): use the plain outdoor colour.
         ctx.drawImage(lighting.sprite(c, lighting.ambient.outdoor), drawX, drawY, c.width * scale, c.height * scale);
       } else {
         ctx.drawImage(c, drawX, drawY, c.width * scale, c.height * scale);
@@ -7814,18 +8728,24 @@
           ctx.rect(tileLeft, tileTop, tileSize, tileSize);
           ctx.clip();
         } else {
-          dw = Math.max(1, mob.artCanvas.width * zoom);
-          dh = Math.max(1, mob.artCanvas.height * zoom);
+          // F_BLIT_SCALE: scale the sprite about its hotspot (the point on the tile).
+          const bs = Number(mob.blitScale) > 0 ? Number(mob.blitScale) : 1;
+          dw = Math.max(1, mob.artCanvas.width * zoom * bs);
+          dh = Math.max(1, mob.artCanvas.height * zoom * bs);
           const hotspotX = Number(mob.hotspotX) || 0;
           const hotspotY = Number(mob.hotspotY) || 0;
-          left = px - hotspotX * zoom;
-          top = py - hotspotY * zoom;
+          left = px - hotspotX * zoom * bs;
+          top = py - hotspotY * zoom * bs;
         }
         let artSrc = mob.artCanvas;
-        if (lighting && mode === 'art') {
+        // Additive-blend objects (flames, glows) emit light: they are added to the
+        // scene, not tinted by the ambient colour and not drawn with their black.
+        const additive = mode === 'art' && ((Number(mob.blitFlags) | 0) & SEC_BLIT_ADD) !== 0;
+        if (lighting && mode === 'art' && !additive) {
           const rgb = lighting.mobColor(mob, (px - ox) / zoom, (py - oy) / zoom);
           if (rgb) artSrc = lighting.sprite(artSrc, rgb);
         }
+        if (additive) ctx.globalCompositeOperation = 'lighter';
         ctx.drawImage(artSrc, left, top, dw, dh);
         if (showBounds) {
           ctx.strokeStyle = typeColor;
@@ -7913,15 +8833,17 @@
     }
   }
 
-  function drawSecFolderMap(canvas, sectors, bounds, selected, mode, artTiles, view, mobPoints = [], mapBackground = null, overlayVisibility = {}) {
+  // renderOpts (export): { cssW, cssH, dpr } renders to an explicit size instead of
+  // the on-screen canvas size.
+  function drawSecFolderMap(canvas, sectors, bounds, selected, mode, artTiles, view, mobPoints = [], mapBackground = null, overlayVisibility = {}, renderOpts = null) {
     const sectorCols = bounds.maxX - bounds.minX + 1;
     const sectorRows = bounds.maxY - bounds.minY + 1;
     const mapW = sectorCols * 64;
     const mapH = sectorRows * 64;
     const iso = secIsoMetrics(bounds);
-    const dpr = window.devicePixelRatio || 1;
-    const cssW = Math.max(320, Math.floor(canvas.clientWidth || 760));
-    const cssH = Math.max(260, Math.floor(canvas.clientHeight || 620));
+    const dpr = renderOpts?.dpr ?? (window.devicePixelRatio || 1);
+    const cssW = renderOpts?.cssW ?? Math.max(320, Math.floor(canvas.clientWidth || 760));
+    const cssH = renderOpts?.cssH ?? Math.max(260, Math.floor(canvas.clientHeight || 620));
     canvas.width = Math.round(cssW * dpr);
     canvas.height = Math.round(cssH * dpr);
     const ctx = canvas.getContext('2d', { alpha: false });
@@ -8197,9 +9119,13 @@
   // indoor colour when tig_art_tile_id_type_get(aid) == 0, outdoor otherwise. The
   // game reads that same type bit (bit 8) on a facade id, so facades must NOT be
   // forced to the outdoor colour.
-  function secTileIsIndoor(raw) {
+  // A stored value of 0 is a real indoor tile (type bit 0), e.g. Dn1bse0a. It is
+  // only "no tile" when its whole sector is zero / not loaded, so callers pass the
+  // sector's decoded data; without it a 0 falls back to outdoor.
+  function secTileIsIndoor(raw, decoded) {
     raw = Number(raw) >>> 0;
-    return raw !== 0 && ((raw >>> 8) & 1) === 0;
+    if (raw === 0 && (!decoded || secSectorAllZero(decoded))) return false;
+    return ((raw >>> 8) & 1) === 0;
   }
   // Mask: outdoor colour everywhere, indoor colour on tiles whose art type is 0
   // (game/tile.c: `color = !tile_type ? indoor_color : outdoor_color`).
@@ -8218,7 +9144,7 @@
       const baseY = (sector.position.y - bounds.minY) * 64;
       for (let y = 0; y < 64; y++) for (let x = 0; x < 64; x++) {
         const raw = sector.decoded.tiles[y * 64 + x] >>> 0;
-        if (!secTileIsIndoor(raw)) continue;
+        if (!secTileIsIndoor(raw, sector.decoded)) continue;
         const center = secIsoProject(baseX + x, baseY + y, iso);
         const px = center.x * zoom + ox, py = center.y * zoom + oy;
         if (px + hw < 0 || px - hw > cssW || py + hh < 0 || py - hh > cssH) continue;
@@ -8345,7 +9271,7 @@
         if (m.nocturnal) {
           const sec = view.sectorMap && view.sectorMap.get(`${m.sectorX},${m.sectorY}`);
           const raw = sec?.decoded ? (sec.decoded.tiles[(m.tileY & 63) * 64 + (m.tileX & 63)] >>> 0) : 0;
-          indoor = secTileIsIndoor(raw);
+          indoor = secTileIsIndoor(raw, sec?.decoded);
           if (!indoor && isDay) continue;
         }
         const p = secIsoProject((m.sectorX - bounds.minX) * 64 + m.tileX, (m.sectorY - bounds.minY) * 64 + m.tileY, iso);
@@ -8444,7 +9370,7 @@
       baseAt(wx, wy) {
         const sector = sectorMap && sectorMap.get(`${Math.floor(wx / 64)},${Math.floor(wy / 64)}`);
         const raw = sector?.decoded ? (sector.decoded.tiles[(wy & 63) * 64 + (wx & 63)] >>> 0) : 0;
-        const indoor = secTileIsIndoor(raw);
+        const indoor = secTileIsIndoor(raw, sector?.decoded);
         return indoor ? ambient.indoor : ambient.outdoor;
       },
       quantize(rgb, base) {
@@ -8595,25 +9521,115 @@
     };
     updateMobMapMeta();
     const showFiles = document.createElement('button'); showFiles.type = 'button'; showFiles.className = 'btn-back'; showFiles.textContent = 'Show SEC files';
-    showFiles.addEventListener('click', () => { viewerEl.hidden = true; viewerEl.innerHTML = ''; gridEl.hidden = false; renderSecFolderGrid(secManifest, relativePath); });
+    showFiles.addEventListener('click', () => { if (edit.unsaved && !confirm('You have tile edits that were not exported. Leave anyway?')) return; viewerEl.hidden = true; viewerEl.innerHTML = ''; gridEl.hidden = false; renderSecFolderGrid(secManifest, relativePath); });
     head.appendChild(showFiles); article.appendChild(head);
 
     const layout = document.createElement('div'); layout.className = 'sec-map-layout';
     const mapCard = document.createElement('section'); mapCard.className = 'sec-map-card';
     const toolbar = document.createElement('div'); toolbar.className = 'sec-map-toolbar';
-    const status = document.createElement('span'); status.className = 'sec-viewer-meta'; status.textContent = 'Colors · wheel to zoom · drag to pan · click a tile to inspect'; toolbar.appendChild(status);
+    const status = document.createElement('span'); status.className = 'sec-viewer-meta'; status.textContent = 'Top-down view · wheel to zoom · drag to pan · click a tile to inspect'; toolbar.appendChild(status);
     const zoomOut = document.createElement('button'); zoomOut.type='button'; zoomOut.className='btn-back'; zoomOut.textContent='−'; zoomOut.title='Zoom out';
     const zoomLabel = document.createElement('span'); zoomLabel.className='sec-zoom-label';
     const zoomIn = document.createElement('button'); zoomIn.type='button'; zoomIn.className='btn-back'; zoomIn.textContent='+'; zoomIn.title='Zoom in';
     const zoomReset = document.createElement('button'); zoomReset.type='button'; zoomReset.className='btn-back'; zoomReset.textContent='Reset zoom';
     toolbar.append(zoomOut, zoomLabel, zoomIn, zoomReset);
-    const modeBtn = document.createElement('button'); modeBtn.type = 'button'; modeBtn.className = 'btn-back sec-map-mode'; modeBtn.textContent = 'Show actual tiles'; toolbar.appendChild(modeBtn); mapCard.appendChild(toolbar);
+    const modeBtn = document.createElement('button'); modeBtn.type = 'button'; modeBtn.className = 'btn-back sec-map-mode'; modeBtn.textContent = 'Isometric view'; toolbar.appendChild(modeBtn);
+    const exportBtn = document.createElement('button');
+    exportBtn.type = 'button'; exportBtn.className = 'btn-back sec-map-export';
+    exportBtn.textContent = 'Export PNG';
+    exportBtn.title = 'Save the map exactly as shown in the display';
+    exportBtn.addEventListener('click', async () => {
+      exportBtn.disabled = true;
+      try {
+        status.textContent = 'Preparing export…';
+        await new Promise(r => setTimeout(r, 0)); // let the status text paint
+        // Objects and lights only exist once the MOB data is loaded.
+        const wantsObjects = lightState.enabled || ['containers', 'walls', 'scenery', 'otherMobs'].some(k => overlayVisibility[k]);
+        if (wantsObjects) await loadMobDataAtZoom();
+        if (lightLoading) await lightLoading;
+        // Whole map at 100% zoom, rendered off screen: independent of the display
+        // size, current zoom/pan and device pixel ratio. No selection highlight.
+        const fullW = mode === 'art' ? Math.ceil(iso.width) : mapW;
+        const fullH = mode === 'art' ? Math.ceil(iso.height) : mapH;
+        // Browsers cap canvas size; if the map is bigger, use the largest zoom that fits.
+        const MAX_DIM = 32767, MAX_AREA = 268435456;
+        let zoom = 1;
+        if (fullW > MAX_DIM || fullH > MAX_DIM || fullW * fullH > MAX_AREA) {
+          zoom = Math.floor(Math.min(MAX_DIM / fullW, MAX_DIM / fullH, Math.sqrt(MAX_AREA / (fullW * fullH))) * 1000) / 1000;
+        }
+        const outW = Math.max(1, Math.floor(fullW * zoom)), outH = Math.max(1, Math.floor(fullH * zoom));
+        const off = document.createElement('canvas');
+        const exportView = Object.assign({}, view, { zoom, offsetX: 0, offsetY: 0 });
+        drawSecFolderMap(off, valid, bounds, null, mode, artTiles, exportView, mobPoints, mapBackground, overlayVisibility, { cssW: outW, cssH: outH, dpr: 1 });
+        const folder = String(relativePath || '').split('/').filter(Boolean).pop() || 'map';
+        await exportCanvasPng(off, `${folder}_${mode === 'art' ? 'tiles' : 'colors'}_${Math.round(zoom * 100)}pct`);
+        status.textContent = zoom < 1
+          ? `Exported ${outW} × ${outH} px at ${Math.round(zoom * 100)}% (100% would be ${fullW} × ${fullH} px, over the browser canvas limit)`
+          : `Exported ${outW} × ${outH} px at 100%`;
+      } catch (err) {
+        status.textContent = `Export failed: ${err && err.message ? err.message : err}`;
+      } finally {
+        exportBtn.disabled = false;
+      }
+    });
+    toolbar.appendChild(exportBtn);
+    const displayAllBtn = document.createElement('button');
+    displayAllBtn.type = 'button'; displayAllBtn.className = 'btn-back sec-map-display-all';
+    displayAllBtn.textContent = 'Display all';
+    displayAllBtn.title = 'Actual tiles for every sector, plus containers, walls, scenery, other MOBs and lighting';
+    displayAllBtn.addEventListener('click', async () => {
+      displayAllBtn.disabled = true;
+      try {
+        // 1. actual tiles
+        if (mode !== 'art') await applyMode('art');
+        // 2. every non-blank sector (not just the ones already clicked)
+        const todo = valid.filter(sec => !view.loadedSectors.has(secSectorKey(sec)) && !view.blankSectors?.has(secSectorKey(sec)));
+        let done = 0;
+        for (let i = 0; i < todo.length; i += 4) {
+          status.textContent = `Loading sectors… ${done}/${todo.length}`;
+          await Promise.all(todo.slice(i, i + 4).map(sec => loadSectorTiles(sec).then(() => { done++; })));
+        }
+        // 3. object overlays (bounds outlines are a debug aid, so they are left as they are)
+        for (const key of ['containers', 'walls', 'scenery', 'otherMobs']) {
+          overlayVisibility[key] = true;
+          overlayButtons[key]?.setAttribute('aria-pressed', 'true');
+          overlayButtons[key]?.classList.add('active');
+        }
+        status.textContent = 'Loading objects…';
+        await loadMobDataAtZoom();
+        // 4. lighting
+        if (!lightState.enabled) lightToggle.click();
+        if (lightLoading) await lightLoading;
+        redraw();
+        status.textContent = `All elements displayed · ${view.loadedSectors.size} sectors · ${mobPoints.length} objects${lightState.error ? ` · lighting: ${lightState.error}` : ''}`;
+      } catch (err) {
+        status.textContent = `Display all failed: ${err && err.message ? err.message : err}`;
+      } finally {
+        displayAllBtn.disabled = false;
+      }
+    });
+    toolbar.appendChild(displayAllBtn);
+    const editBtn = document.createElement('button');
+    editBtn.type = 'button'; editBtn.className = 'btn-back sec-edit-btn';
+    editBtn.textContent = 'Edit'; editBtn.setAttribute('aria-pressed', 'false');
+    editBtn.title = 'Open the map editor: the window is used in full, zoom goes to 100% and the tools open on the right. Leave with "Exit edit".';
+    const exportSecBtn = document.createElement('button');
+    exportSecBtn.type = 'button'; exportSecBtn.className = 'btn-back sec-edit-export';
+    exportSecBtn.textContent = 'Export .SEC'; exportSecBtn.disabled = true;
+    exportSecBtn.title = 'Save the altered .sec file(s)';
+    // Keep the editor control in the SEC map header so it is always visible,
+    // even when the toolbar wraps into several rows or the map is narrow.
+    editBtn.classList.add('sec-map-header-edit');
+    head.appendChild(editBtn);
+    toolbar.appendChild(exportSecBtn);
+    mapCard.appendChild(toolbar);
     const overlayControls = document.createElement('div');
     overlayControls.className = 'sec-overlay-controls';
     overlayControls.setAttribute('role', 'group');
     overlayControls.setAttribute('aria-label', 'Map overlays');
     toolbar.appendChild(overlayControls);
     const overlayVisibility = { containers: false, walls: false, scenery: false, otherMobs: false, bounds: false };
+    const overlayButtons = {};
     const addOverlayToggle = (key, label, title) => {
       const button = document.createElement('button');
       button.type = 'button';
@@ -8628,6 +9644,7 @@
         redraw();
       });
       overlayControls.appendChild(button);
+      overlayButtons[key] = button;
     };
     addOverlayToggle('containers', 'Containers', 'Show or hide containers');
     addOverlayToggle('walls', 'Walls', 'Show or hide walls');
@@ -8692,13 +9709,17 @@
     info.innerHTML = '<h3>Art IDs on map</h3><div class="sec-art-legend"></div><hr><h3>Selected tile</h3><div class="sec-info-row"><span>Sector X / Y</span><span>—</span></div><div class="sec-info-row"><span>Tile X / Y</span><span>—</span></div><div class="sec-info-row"><span>World X / Y</span><span>—</span></div><div class="sec-info-row"><span>Art ID</span><span>—</span></div><div class="sec-info-row"><span>Tile</span><span>—</span></div><div class="sec-info-row"><span>SEC file</span><span>—</span></div><div class="sec-info-row"><span>Hex</span><span>—</span></div><hr><h3>MOBs on tile</h3><div class="sec-mob-info">—</div><hr><h3>Walls on tile</h3><div class="sec-wall-info">—</div>';
     layout.append(mapCard, info); article.appendChild(layout);
     const legendEl = info.querySelector('.sec-art-legend');
-    for (const entry of secFolderLegendEntries(valid)) {
-      const row = document.createElement('div'); row.className = 'sec-art-legend-row';
-      const swatch = document.createElement('span'); swatch.className = 'sec-art-legend-swatch'; swatch.style.background = entry.color;
-      const label = document.createElement('span'); label.className = 'sec-art-legend-label'; label.textContent = `${entry.artId}${entry.name ? ` · ${entry.name}` : ''}`;
-      const count = document.createElement('span'); count.className = 'sec-art-legend-count'; count.textContent = String(entry.count);
-      row.append(swatch, label, count); legendEl.appendChild(row);
-    }
+    const fillLegend = () => {
+      legendEl.innerHTML = '';
+      for (const entry of secFolderLegendEntries(valid)) {
+        const row = document.createElement('div'); row.className = 'sec-art-legend-row';
+        const swatch = document.createElement('span'); swatch.className = 'sec-art-legend-swatch'; swatch.style.background = entry.color;
+        const label = document.createElement('span'); label.className = 'sec-art-legend-label'; label.textContent = `${entry.artId}${entry.name ? ` · ${entry.name}` : ''}`;
+        const count = document.createElement('span'); count.className = 'sec-art-legend-count'; count.textContent = String(entry.count);
+        row.append(swatch, label, count); legendEl.appendChild(row);
+      }
+    };
+    fillLegend();
 
     const mapW = (maxX - minX + 1) * 64, mapH = (maxY - minY + 1) * 64;
     const iso = secIsoMetrics(bounds);
@@ -8706,6 +9727,16 @@
     const view = { zoom: 1, offsetX: 0, offsetY: 0, initialized: false, sectorMap, colorSectorCache: new Map(), light: lightState,
       blankSectors: null, loadedSectors: new Set(), loadingSectors: new Set() };
     let selected = null, mode = 'color', artTiles = new Map(), artLoadStarted = false, artLoadTimer = null;
+    // Tile-editor state (see the "Tile editing" block below).
+    let drawCursorHook = null;
+    const edit = {
+      on: false, brush: null, size: 1, variation: 'auto', plainA3: 0, tool: 'tile',
+      undo: [], redo: [], stroke: null, painting: false, last: null, lastF: null, hover: null,
+      dirty: new Map(),        // sector key -> { sector, orig } for every sector whose tiles differ from the file on disk
+      objSecs: new Map(),      // sector key -> sector whose object list was changed
+      objOps: [], strokeSeen: new Set(), sel: {}, objectsReady: false, commonPiece: 0, skippedMob: 0, problem: null,
+      unsaved: false, prevSidebar: null, panning: false, eyeTile: null, fillCount: 0, wallBrush: 'line', wallDrag: null
+    };
     const infoRows = info.querySelectorAll('.sec-info-row span:last-child');
     const mobInfoEl = info.querySelector('.sec-mob-info');
     const wallInfoEl = info.querySelector('.sec-wall-info');
@@ -8723,7 +9754,7 @@
       if (view.zoom >= 0.6 && !mobLoadStarted) loadMobDataAtZoom().catch(() => {});
     };
     const updateZoomLabel = () => { zoomLabel.textContent = `${Math.round(view.zoom * 100)}%`; };
-    const redraw = () => { updateZoomLabel(); drawSecFolderMap(canvas, valid, bounds, selected, mode, artTiles, view, mobPoints, mapBackground, overlayVisibility); };
+    const redraw = () => { updateZoomLabel(); drawSecFolderMap(canvas, valid, bounds, selected, mode, artTiles, view, mobPoints, mapBackground, overlayVisibility); if (drawCursorHook) drawCursorHook(); };
     const zoomAt = (factor, cx, cy) => {
       const old = view.zoom, next = Math.max(.01, Math.min(32, old * factor));
       if (next === old) return;
@@ -8836,20 +9867,38 @@
     };
     canvas.addEventListener('wheel', event => { event.preventDefault(); const r=canvas.getBoundingClientRect(); zoomAt(event.deltaY < 0 ? 1.18 : 1/1.18, event.clientX-r.left, event.clientY-r.top); }, {passive:false});
     let dragging=false, dragX=0, dragY=0;
-    canvas.addEventListener('mousedown', e => { if (e.button !== 0) return; dragging=true; dragX=e.clientX; dragY=e.clientY; canvas.style.cursor='grabbing'; });
-    window.addEventListener('mouseup', () => { dragging=false; canvas.style.cursor='crosshair'; });
+    canvas.addEventListener('mousedown', e => {
+      if (edit.on) {
+        // Edit mode: left button uses the current tool (Move pans; Alt+click picks a tile), middle/right button always pans.
+        if (document.activeElement && document.activeElement !== document.body && document.activeElement.blur) document.activeElement.blur();
+        if (e.button === 0) {
+          e.preventDefault();
+          if (edit.tool === 'move') { dragging=true; dragX=e.clientX; dragY=e.clientY; canvas.style.cursor='grabbing'; }
+          else if (e.altKey && (edit.tool === 'tile' || edit.tool === 'fill')) pickTileFromMap(e);
+          else if (edit.tool === 'eyedropper') inspectTile(e);
+          else beginStroke(e);
+        }
+        else if (e.button === 1 || e.button === 2) { e.preventDefault(); dragging=true; dragX=e.clientX; dragY=e.clientY; canvas.style.cursor='grabbing'; }
+        return;
+      }
+      if (e.button !== 0) return; dragging=true; dragX=e.clientX; dragY=e.clientY; canvas.style.cursor='grabbing';
+    });
+    canvas.addEventListener('contextmenu', e => { if (edit.on) e.preventDefault(); });
+    window.addEventListener('mouseup', () => { dragging=false; canvas.style.cursor = edit.on ? (edit.tool === 'move' ? 'grab' : 'crosshair') : 'crosshair'; endStroke(); });
     canvas.addEventListener('mousemove', event => {
+      if (edit.on && edit.painting && !dragging) { continueStroke(event); return; }
+      if (edit.on && !dragging) { const t = sectorAtPoint(event); if (t) { selected = t; scheduleEditRedraw(); } }
       if (dragging) { view.offsetX += event.clientX-dragX; view.offsetY += event.clientY-dragY; dragX=event.clientX; dragY=event.clientY; redraw(); scheduleVisibleArtLoad(); return; }
       const p = sectorAtPoint(event), sector = p && findSector(p.sectorX, p.sectorY);
       if (!sector?.decoded) { tip.hidden=true; return; }
-      if (mode === 'art' && !view.loadedSectors.has(secSectorKey(sector))) {
+      if (mode === 'art' && !edit.on && !view.loadedSectors.has(secSectorKey(sector))) {
         canvas.style.cursor = view.blankSectors?.has(secSectorKey(sector)) ? 'crosshair' : 'pointer';
         if (view.blankSectors?.has(secSectorKey(sector))) { tip.hidden=true; return; }
         tip.hidden=false; tip.textContent=`Sector ${secSectorLabel(sector)} · click to load`;
         const sr0=stage.getBoundingClientRect(); tip.style.left=`${event.clientX-sr0.left}px`; tip.style.top=`${event.clientY-sr0.top}px`;
         return;
       }
-      canvas.style.cursor = 'crosshair';
+      canvas.style.cursor = edit.on && edit.tool === 'move' ? 'grab' : 'crosshair';
       const raw=sector.decoded.tiles[p.tileY*64+p.tileX]>>>0, tile=secTileInfo(raw);
       const loadedArt = artTiles.get(raw);
       tip.hidden=false; tip.textContent=`Sector ${p.sectorX},${p.sectorY} · Tile ${p.tileX},${p.tileY} · Art ID ${tile.artId}${tile.name?` · ${tile.name}`:''}${loadedArt?.facadeName?` · frame ${loadedArt.facadeFrame}`:''}`;
@@ -8857,6 +9906,7 @@
     });
     canvas.addEventListener('mouseleave', () => { tip.hidden=true; });
     canvas.addEventListener('click', event => {
+      if (edit.on) return; // in edit mode a press changes tiles instead of inspecting them
       if (Math.abs(event.clientX-dragX)+Math.abs(event.clientY-dragY)>6) return;
       const p=sectorAtPoint(event); if(!p) return;
       const sec=findSector(p.sectorX,p.sectorY); if(!sec?.decoded) return;
@@ -8868,7 +9918,7 @@
     });
     zoomOut.addEventListener('click',()=>zoomAt(1/1.4,stage.clientWidth/2,stage.clientHeight/2));
     zoomIn.addEventListener('click',()=>zoomAt(1.4,stage.clientWidth/2,stage.clientHeight/2));
-    zoomReset.addEventListener('click',fitView);
+    zoomReset.addEventListener('click',()=>{ if (edit.on) zoom100(); else fitView(); });
 
     const scheduleVisibleArtLoad = () => {
       if (mode !== 'art' || !artLoadStarted) return;
@@ -8887,7 +9937,8 @@
       try {
         await loadSecTileManifest();
         const need = new Set();
-        for (const t of sector.decoded.tiles) { const raw = t >>> 0; if (raw !== 0 && !artTiles.has(raw)) need.add(raw); }
+        const zeroSector = secSectorAllZero(sector.decoded);
+        for (const t of sector.decoded.tiles) { const raw = t >>> 0; if ((raw !== 0 || !zeroSector) && !artTiles.has(raw)) need.add(raw); }
         const results = await Promise.all([...need].map(async raw => ({ raw, art: await loadSecTileArt(secTileInfo(raw)) })));
         for (const { raw, art } of results) if (art) artTiles.set(raw, art);
         view.loadedSectors.add(key);
@@ -8899,8 +9950,8 @@
         redraw();
       }
     };
-    modeBtn.addEventListener('click', async () => {
-      mode=mode==='color'?'art':'color'; modeBtn.textContent=mode==='art'?'Show colors':'Show actual tiles';
+    const applyMode = async (nextMode) => {
+      mode=nextMode; modeBtn.textContent=mode==='art'?'Top-down view':'Isometric view';
       if (mode === 'art') {
         // Before anything is shown, find the sectors made only of blank tiles.
         if (!view.blankSectors) {
@@ -8912,10 +9963,11 @@
         artLoadStarted = true;
         sectorStatus();
       } else {
-        status.textContent = 'Colors · wheel to zoom · drag to pan · click a tile to inspect';
+        status.textContent = 'Top-down view · wheel to zoom · drag to pan · click a tile to inspect';
       }
       fitView();
-    });
+    };
+    modeBtn.addEventListener('click', () => { if (edit.on) return; applyMode(mode === 'color' ? 'art' : 'color'); });
     async function loadVisibleFolderTileArt(){
       const needed=new Set();
       const w=stage.clientWidth,h=stage.clientHeight;
@@ -8940,7 +9992,7 @@
           if(x0>x1||y0>y1) continue;
           for(let y=y0;y<=y1;y++)for(let x=x0;x<=x1;x++){
             const raw = s.decoded.tiles[y*64+x]>>>0;
-            if (raw !== 0) needed.add(raw);
+            if (raw !== 0 || !secSectorAllZero(s.decoded)) needed.add(raw);
           }
         }
       }
@@ -8961,6 +10013,1493 @@
       status.textContent=`${artTiles.size} tile art files loaded · zoom/pan to load more`;
       redraw();
     }
+
+    // ---- Editing ----------------------------------------------------------------
+    // "Edit" opens a tool bar: Move · Eraser · Tile · Facade · Scenery · Wall · Portal.
+    //  - Tile / Facade change the 4096-tile list of a sector (facades are tiles of art type 11).
+    //  - Scenery / Wall / Portal add or remove *static objects* of the sector (the object list at the
+    //    end of the .sec file). A new object only stores its prototype number, F_CURRENT_AID and
+    //    F_LOCATION; everything else comes from the prototype.
+    // "Export .SEC" writes the original bytes back with only the tile list and the object list replaced.
+    const hexRaw = raw => `0x${(raw >>> 0).toString(16).padStart(8, '0').toUpperCase()}`;
+    const nextFrame = () => new Promise(resolve => requestAnimationFrame(() => resolve()));
+    const originalHint = hint.textContent;
+
+    const ICON_CURSOR = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5l12.2 9.3-5.4 1 3.1 6-2.6 1.3-3.1-6.1-4.2 3.6z" fill="currentColor"/></svg>';
+    const ICON_ERASER = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><g transform="rotate(-45 12 11)"><rect x="3.5" y="7.5" width="17" height="7.5" rx="1.6"/><path d="M11 7.5v7.5"/></g><path d="M5 20.5h14"/></svg>';
+    const ICON_FILL = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M4.6 12.2l7.1-7.1 7.2 7.2-6.6 6.6a1.7 1.7 0 0 1-2.4 0l-5.3-5.3a1.7 1.7 0 0 1 0-2.4z"/><path d="M4.6 12.2h14.3"/><path d="M11.7 5.1L9.4 2.8"/><path d="M21 14.6c0 1.3-.9 2.2-1.6 2.2s-1.6-.9-1.6-2.2c0-1.1 1.6-3.1 1.6-3.1s1.6 2 1.6 3.1z" fill="currentColor"/></svg>';
+    const ICON_EYEDROPPER = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M17.3 2.9a2.2 2.2 0 0 1 3.1 3.1l-2.3 2.3-3.1-3.1z"/><path d="M15 5.2l3.8 3.8"/><path d="M15 6.9l-9.4 9.4a2 2 0 0 0-.55 1.1l-.35 2.7 2.7-.35a2 2 0 0 0 1.1-.55l9.4-9.4"/></svg>';
+    const TOOLS = [
+      { id: 'move', icon: ICON_CURSOR, title: 'Move: drag to pan the map, nothing is placed' },
+      { id: 'eraser', icon: ICON_ERASER, title: 'Eraser: removes the scenery, then the portal, then the wall of a tile (never the tile or facade)' },
+      { id: 'fill', icon: ICON_FILL, title: 'Fill: replaces the clicked tile and every identical tile connected to it (paint bucket)' },
+      { id: 'eyedropper', icon: ICON_EYEDROPPER, title: 'Eyedropper: lists everything on a tile; click an entry to open its tool with it selected' },
+      { id: 'tile', label: 'Tile', title: 'Tile palette' },
+      { id: 'facade', label: 'Facade', title: 'Facade palette' },
+      { id: 'scenery', label: 'Scenery', title: 'Scenery palette' },
+      { id: 'wall', label: 'Wall', title: 'Walls: top-down view, draw on tile edges' },
+      { id: 'portal', label: 'Portal', title: 'Portals (doors, windows): isometric view, placed on walls' }
+    ];
+    const TOOL_HINTS = {
+      move: 'Drag the map to move it. Nothing is placed.',
+      eraser: 'Click or drag. Per tile: the scenery goes first, then the portal, then the wall. Tiles and facades are never touched.',
+      tile: 'Left-drag paints the chosen tile · Alt+click picks the tile under the cursor.',
+      fill: 'Click a tile: it and every identical tile connected to it (up/down/left/right on the map) become the chosen tile · Alt+click picks the tile under the cursor.',
+      eyedropper: 'Click a tile to list everything on it, then click an entry of the list to open its tool with that item selected.',
+      facade: 'Click to stamp the whole facade; the clicked tile becomes its first cell.',
+      scenery: 'Click or drag to place scenery on tiles.',
+      wall: 'Top-down view: pick a brush (Edge, Line or Rectangle) and draw walls along tile edges.',
+      portal: 'Isometric view: click an existing wall to put the portal on it.'
+    };
+    const WALL_BRUSH_HINTS = {
+      edge: 'Edge: click or drag along tile edges, each edge you touch gets a wall. Press on the side of the edge the wall should belong to.',
+      line: 'Line: press where the line starts, release where it ends (it snaps to the nearest straight direction). The walls belong to the tiles on the side you pressed on. Esc cancels.',
+      rect: 'Rectangle: press on one corner, release on the opposite corner. The walls go around it, on its inner tiles. Esc cancels.'
+    };
+    const toolHintFor = id => id === 'wall' ? WALL_BRUSH_HINTS[edit.wallBrush] : TOOL_HINTS[id];
+    const PROTO_TYPE = { wall: 0, portal: 1, scenery: 3 };
+    const optList = (n, f) => Array.from({ length: n }, (_, i) => `<option value="${i}">${f ? f(i) : i}</option>`).join('');
+    const PANE_OPTIONS = {
+      facade: '<label>Columns <input type="number" class="sec-opt-cols" min="1" max="64" value="1"></label><label><input type="checkbox" class="sec-opt-walk" checked> Walkable</label><label><input type="checkbox" class="sec-opt-swap"> Swap axes</label>',
+      scenery: `<label>Rotation <select class="sec-opt-rot"><option value="proto">As prototype</option>${optList(8)}</select></label><label class="sec-opt-wide">Base prototype <select class="sec-opt-base"><option value="">(scanning prototypes…)</option></select></label>`,
+      wall: `<div class="sec-wall-brushes sec-opt-wide" role="group" aria-label="Wall brush"><span>Draw</span><button type="button" class="sec-wall-brush" data-brush="edge" aria-pressed="false" title="One edge at a time: click or drag along tile edges">Edge</button><button type="button" class="sec-wall-brush" data-brush="line" aria-pressed="true" title="Straight line: press where it starts, release where it ends">Line</button><button type="button" class="sec-wall-brush" data-brush="rect" aria-pressed="false" title="Rectangle: press on one corner, release on the opposite one">Rectangle</button></div><label>Piece <select class="sec-opt-piece"><option value="auto">Auto</option>${optList(WALL_PIECES.length, i => `${i} · ${WALL_PIECES[i]}`)}</select></label><label>Variation <select class="sec-opt-var">${optList(4)}</select></label>`,
+      portal: ''
+    };
+    const paneHtml = kind => `
+      <section class="sec-tool-pane" data-pane="${kind}" hidden>
+        <p class="sec-edit-note"></p>
+        <div class="sec-edit-controls">${PANE_OPTIONS[kind]}</div>
+        <div class="sec-edit-filters"><input type="search" class="sec-edit-search" placeholder="Search name or number…" aria-label="Search"></div>
+        <div class="sec-pal-status"></div>
+        <div class="sec-edit-tiles" role="listbox"></div>
+      </section>`;
+    const editPanel = document.createElement('div');
+    editPanel.className = 'sec-edit-panel'; editPanel.hidden = true;
+    editPanel.innerHTML = `
+      <h3>Editor</h3>
+      <div class="sec-tool-bar" role="toolbar" aria-label="Editing tools">${TOOLS.map(t =>
+        `<button type="button" class="sec-tool" data-tool="${t.id}" title="${t.title}" aria-label="${t.id}" aria-pressed="false">${t.icon || `<span class="sec-tool-label">${t.label}</span>`}</button>`).join('')}</div>
+      <p class="sec-tool-hint"></p>
+      <div class="sec-edit-controls sec-edit-common">
+        <label class="sec-edit-size-label">Brush <select class="sec-edit-size"><option value="1">1×1</option><option value="2">2×2</option><option value="3">3×3</option><option value="4">4×4</option><option value="5">5×5</option></select></label>
+        <button type="button" class="sec-edit-undo btn-back" disabled>Undo</button>
+        <button type="button" class="sec-edit-redo btn-back" disabled>Redo</button>
+      </div>
+      <section class="sec-tool-pane" data-pane="tile" hidden>
+        <p class="sec-edit-note"></p>
+        <div class="sec-edit-controls">
+          <label>Variation <select class="sec-edit-variation"></select></label>
+        </div>
+        <div class="sec-edit-filters">
+          <input type="search" class="sec-edit-search" placeholder="Search name or number…" aria-label="Search tiles">
+          <select class="sec-edit-category" aria-label="Tile category">
+            <option value="all">All tiles</option>
+            <option value="0">Outdoor · 0–99</option>
+            <option value="1">Outdoor · 100–199</option>
+            <option value="2">Indoor · 200–299</option>
+            <option value="3">Indoor · 300–399</option>
+          </select>
+          <label class="sec-edit-used"><input type="checkbox" class="sec-edit-used-only"> Only tiles used on this map</label>
+        </div>
+        <div class="sec-edit-tiles" role="listbox" aria-label="Game tiles"></div>
+      </section>
+      <section class="sec-tool-pane" data-pane="eyedropper" hidden>
+        <p class="sec-eye-head">Click a tile on the map to see what is on it.</p>
+        <div class="sec-eye-list" role="list"></div>
+      </section>
+      ${['facade', 'scenery', 'wall', 'portal'].map(paneHtml).join('')}`;
+    info.appendChild(editPanel);
+    const q1 = (root, sel) => root.querySelector(sel);
+    const panes = {};
+    for (const el of editPanel.querySelectorAll('.sec-tool-pane')) panes[el.dataset.pane] = el;
+    const ui = {
+      toolBar: q1(editPanel, '.sec-tool-bar'),
+      toolBtns: [...editPanel.querySelectorAll('.sec-tool')],
+      hint: q1(editPanel, '.sec-tool-hint'),
+      sizeLabel: q1(editPanel, '.sec-edit-size-label'),
+      size: q1(editPanel, '.sec-edit-size'),
+      undo: q1(editPanel, '.sec-edit-undo'),
+      redo: q1(editPanel, '.sec-edit-redo'),
+      note: q1(panes.tile, '.sec-edit-note'),
+      variation: q1(panes.tile, '.sec-edit-variation'),
+      search: q1(panes.tile, '.sec-edit-search'),
+      category: q1(panes.tile, '.sec-edit-category'),
+      usedOnly: q1(panes.tile, '.sec-edit-used-only'),
+      list: q1(panes.tile, '.sec-edit-tiles')
+    };
+    // per-palette references (facade, scenery, wall, portal)
+    const pk = {};
+    for (const kind of ['facade', 'scenery', 'wall', 'portal']) {
+      const pane = panes[kind];
+      pk[kind] = {
+        pane, built: false, rendered: -1, obs: null,
+        meta: q1(pane, '.sec-edit-note'),
+        brushBtns: kind === 'wall' ? [...pane.querySelectorAll('.sec-wall-brush')] : null,
+        search: q1(pane, '.sec-edit-search'), status: q1(pane, '.sec-pal-status'), list: q1(pane, '.sec-edit-tiles'),
+        cols: q1(pane, '.sec-opt-cols'), walk: q1(pane, '.sec-opt-walk'), swap: q1(pane, '.sec-opt-swap'),
+        rot: q1(pane, '.sec-opt-rot'), base: q1(pane, '.sec-opt-base'), piece: q1(pane, '.sec-opt-piece'), variation: q1(pane, '.sec-opt-var')
+      };
+    }
+    ui.variation.innerHTML = '<option value="auto">Auto (mix)</option>' + 'abcdefgh'.split('').map((c, i) => `<option value="${i}">${c}</option>`).join('');
+    ui.variation.value = 'auto';    // default: mix every variant that exists
+
+    // Keep the tool labels inside their square whatever the width of the panel.
+    const fitToolLabels = () => {
+      const w = ui.toolBtns[0].clientWidth;
+      if (w > 0) ui.toolBar.style.setProperty('--tool-font', `${Math.max(6, Math.min(11, w * 0.19)).toFixed(1)}px`);
+    };
+    new ResizeObserver(fitToolLabels).observe(ui.toolBar);
+
+    // A plain (non-blended) tile: num1 = num2 = the chosen tile, so every corner uses it.
+    // Layout (decodeSecTileArtId): num1 22-27 · num2 16-21 · a3 12-15 · a4 9-11 ·
+    // type 8 (1 = outdoor) · flippable1 7 · flippable2 6 · palette 4-5 · mirror 0.
+    // tilename.mes ids: 0-99 outdoor+flippable, 100-199 outdoor, 200-299 indoor+flippable, 300-399 indoor.
+    const plainTileRaw = (artId, a4) => {
+      const group = Math.floor(artId / 100), num = artId % 100;
+      const type = group < 2 ? 1 : 0, flip = group % 2 === 0 ? 1 : 0;
+      return ((num << 22) | (num << 16) | (edit.plainA3 << 12) | (a4 << 9) | (type << 8) | (flip << 7) | (flip << 6)) >>> 0;
+    };
+    // Plain tiles in existing sectors tell us whether the game stores them with a3 = 0 or 15.
+    const detectPlainA3 = () => {
+      const counts = new Map();
+      for (const s of valid) {
+        const t = s.decoded.tiles;
+        for (let i = 0; i < t.length; i++) {
+          const raw = t[i] >>> 0;
+          if (raw >>> 28) continue;
+          if (((raw >>> 22) & 63) !== ((raw >>> 16) & 63)) continue;
+          const a3 = (raw >>> 12) & 15;
+          if (a3 === 0 || a3 === 15) counts.set(a3, (counts.get(a3) || 0) + 1);
+        }
+      }
+      edit.plainA3 = (counts.get(15) || 0) > (counts.get(0) || 0) ? 15 : 0;
+    };
+
+    // Which ART variants (a4 = 0..7 -> letters a..h) exist for a plain tile.
+    const variantCache = new Map(), thumbCache = new Map();
+    const variantArt = async (artId, a4) => {
+      const raw = plainTileRaw(artId, a4);
+      const tile = secTileInfo(raw);
+      const manifest = await loadSecTileManifest();
+      const names = secTileArtFilename(tile);
+      if (manifest.size && names.length && !manifest.has(String(names[0]).toLowerCase())) return null;
+      const art = await loadSecTileArt(tile);
+      return art ? { a4, raw, art } : null;
+    };
+    const resolveVariants = async artId => {
+      if (variantCache.has(artId)) return variantCache.get(artId);
+      const out = [];
+      for (let a4 = 0; a4 < 8; a4++) { const v = await variantArt(artId, a4); if (v) out.push(v); }
+      variantCache.set(artId, out);
+      return out;
+    };
+    const firstVariant = async artId => {
+      if (thumbCache.has(artId)) return thumbCache.get(artId);
+      let found = null;
+      for (let a4 = 0; a4 < 8 && !found; a4++) found = await variantArt(artId, a4);
+      thumbCache.set(artId, found);
+      return found;
+    };
+    const drawThumb = (cv, art) => {
+      const c = cv.getContext('2d');
+      c.clearRect(0, 0, cv.width, cv.height); c.imageSmoothingEnabled = false;
+      if (!art?.canvas) return false;
+      const k = Math.min(cv.width / art.canvas.width, cv.height / art.canvas.height, 1);
+      const w = art.canvas.width * k, h = art.canvas.height * k;
+      c.drawImage(art.canvas, (cv.width - w) / 2, (cv.height - h) / 2, w, h);
+      return true;
+    };
+
+    // ---- tile brush ----
+    const showBrush = () => {
+      // The chosen tile is highlighted in the list below; this line only adds what the list cannot show.
+      const b = edit.brush;
+      ui.note.textContent = !b ? ''
+        : b.custom ? `Picked from the map: ${b.name || 'unnamed tile'} (${hexRaw(b.raw)})`
+        : (b.variants.length ? `${b.variants.length} variant${b.variants.length === 1 ? '' : 's'}: ${b.variants.map(v => 'abcdefgh'[v.a4]).join(' ')}` : 'no ART file found – draws blank');
+    };
+    const markActiveTile = () => {
+      ui.list.querySelectorAll('.sec-edit-tile.active').forEach(el => el.classList.remove('active'));
+      if (edit.brush && !edit.brush.custom) ui.list.querySelector(`.sec-edit-tile[data-art="${edit.brush.artId}"]`)?.classList.add('active');
+    };
+    const selectPaletteTile = async (artId, name) => {
+      const variants = await resolveVariants(artId);
+      for (const v of variants) artTiles.set(v.raw, v.art);
+      edit.brush = { custom: false, artId, name, variants, fallbackRaw: plainTileRaw(artId, 0) };
+      showBrush(); markActiveTile();
+      status.textContent = `Brush: #${artId}${name ? ` ${name}` : ''} · left-drag to paint`;
+    };
+    const pickTileFromMap = async event => {
+      const t = worldTileAt(event); if (!t) return;
+      const at = sectorAtWorld(t.wx, t.wy); if (!at) return;
+      const raw = at.sec.decoded.tiles[at.idx] >>> 0;
+      const tinfo = secTileInfo(raw);
+      if (!artTiles.has(raw)) { const art = await loadSecTileArt(tinfo); if (art) artTiles.set(raw, art); }
+      edit.brush = { custom: true, raw, name: tinfo.name, artId: tinfo.artId };
+      showBrush(); markActiveTile();
+      status.textContent = `Picked ${tinfo.name || 'tile'} (${hexRaw(raw)}) from the map`;
+    };
+    const brushRawAt = (wx, wy) => {
+      const b = edit.brush;
+      if (b.custom) return b.raw;
+      let list = b.variants;
+      if (!list.length) return b.fallbackRaw;
+      if (edit.variation !== 'auto') {
+        const match = list.filter(v => v.a4 === Number(edit.variation));
+        list = match.length ? match : [list[0]];
+      }
+      if (list.length === 1) return list[0].raw;
+      // Position-based scatter: stable, so undo/redo and re-painting never shuffle the tiles.
+      let h = (Math.imul(wx, 73856093) ^ Math.imul(wy, 19349663)) >>> 0;
+      h = Math.imul(h ^ (h >>> 15), 0x85ebca6b) >>> 0;
+      return list[(h >>> 8) % list.length].raw;
+    };
+
+    // ---- pointer <-> world helpers (both views) ----
+    // World tile coordinates are map-local: x = 0 is the right-most tile column, y = 0 the top row.
+    // Top-down: column = mapW-1-x. Isometric: secIsoProject(x, y).
+    const worldFloat = event => {
+      const r = canvas.getBoundingClientRect();
+      const sx = (event.clientX - r.left - view.offsetX) / view.zoom, sy = (event.clientY - r.top - view.offsetY) / view.zoom;
+      let fx, fy;
+      if (mode === 'art') { const p = secIsoUnproject(sx, sy, iso); fx = p.x; fy = p.y; }
+      else { fx = mapW - 1 - (sx - 0.5); fy = sy - 0.5; }
+      const wx = Math.round(fx), wy = Math.round(fy);
+      return (wx < 0 || wy < 0 || wx >= mapW || wy >= mapH) ? null : { fx, fy, wx, wy };
+    };
+    const worldTileAt = event => { const f = worldFloat(event); return f ? { wx: f.wx, wy: f.wy } : null; };
+    const sectorAtWorld = (wx, wy) => {
+      if (wx < 0 || wy < 0 || wx >= mapW || wy >= mapH) return null;
+      const sec = findSector(minX + (wx >> 6), minY + (wy >> 6));
+      return sec?.decoded ? { sec, idx: (wy & 63) * 64 + (wx & 63) } : null;
+    };
+    // nearest tile edge (dir 0..3 = NE, SE, SW, NW) to a continuous world position
+    const edgeFromFloat = f => {
+      const mids = [[f.wx - 0.5, f.wy], [f.wx, f.wy + 0.5], [f.wx + 0.5, f.wy], [f.wx, f.wy - 0.5]];
+      let best = 0, bd = Infinity;
+      mids.forEach((m, i) => { const d = (m[0] - f.fx) ** 2 + (m[1] - f.fy) ** 2; if (d < bd) { bd = d; best = i; } });
+      return { wx: f.wx, wy: f.wy, dir: best };
+    };
+    const wxOf = p => (p.sectorX - minX) * 64 + p.tileX;
+    const wyOf = p => (p.sectorY - minY) * 64 + p.tileY;
+
+    // ---- object index (walls, portals, scenery) ----
+    let objIndex = null, edgeIndex = null;
+    const invalidateObjIdx = () => { objIndex = null; edgeIndex = null; };
+    const idxPush = (m, k, p) => { const arr = m.get(k); if (arr) arr.push(p); else m.set(k, [p]); };
+    const idxDrop = (m, k, p) => { const arr = m.get(k); if (!arr) return; const i = arr.indexOf(p); if (i >= 0) arr.splice(i, 1); };
+    const indexAdd = p => {
+      if (objIndex && (p.type === 0 || p.type === 1 || p.type === 3)) idxPush(objIndex, `${wxOf(p)},${wyOf(p)}`, p);
+      if (edgeIndex && (p.type === 0 || p.type === 1)) { const k = edgeKeyOf(p); if (k != null) idxPush(edgeIndex, k, p); }
+    };
+    const indexRemove = p => {
+      if (objIndex) idxDrop(objIndex, `${wxOf(p)},${wyOf(p)}`, p);
+      if (edgeIndex) { const k = edgeKeyOf(p); if (k != null) idxDrop(edgeIndex, k, p); }
+    };
+    const getObjIndex = () => {
+      if (objIndex) return objIndex;
+      objIndex = new Map();
+      for (const p of mobPoints) {
+        if (p.type !== 0 && p.type !== 1 && p.type !== 3) continue;
+        const k = `${wxOf(p)},${wyOf(p)}`;
+        const arr = objIndex.get(k); if (arr) arr.push(p); else objIndex.set(k, [p]);
+      }
+      return objIndex;
+    };
+    const objectsAt = (wx, wy) => getObjIndex().get(`${wx},${wy}`) || [];
+    const edgeKeyOf = p => { const rot = secEdgeRotation(p) ?? p.__rot; return rot == null ? null : secEdgeKey(wxOf(p), wyOf(p), (rot >> 1) & 3); };
+    const getEdgeIndex = () => {
+      if (edgeIndex) return edgeIndex;
+      edgeIndex = new Map();
+      for (const p of mobPoints) {
+        if (p.type !== 0 && p.type !== 1) continue;
+        const k = edgeKeyOf(p); if (k == null) continue;
+        const arr = edgeIndex.get(k); if (arr) arr.push(p); else edgeIndex.set(k, [p]);
+      }
+      return edgeIndex;
+    };
+    const objectsReady = async () => {
+      if (edit.objectsReady) return;
+      await loadMobDataAtZoom();
+      // Remember which serialized object each static point came from (valid until the first edit).
+      for (const p of mobPoints) {
+        if (p.staticSecObject && p.seq >= 0 && !p.__obj) p.__obj = findSector(p.sectorX, p.sectorY)?.decoded?.staticObjects?.[p.seq];
+      }
+      const counts = new Map();
+      for (const p of mobPoints) if (p.type === 0 && p.wallDecode && Number.isInteger(p.wallDecode.piece)) counts.set(p.wallDecode.piece, (counts.get(p.wallDecode.piece) || 0) + 1);
+      let bestPiece = 0, bestN = 0;
+      for (const [pc, n] of counts) if (n > bestN) { bestN = n; bestPiece = pc; }
+      edit.commonPiece = bestPiece;
+      edit.objectsReady = true;
+      invalidateObjIdx();
+    };
+    const prepSector = sec => secEnsureObjectBytes(sec.decoded);
+    const numFieldsCache = new Map();
+    const numFieldsFor = objType => {
+      if (numFieldsCache.has(objType)) return numFieldsCache.get(objType);
+      let n = null;
+      for (const s of valid) { const o = s.decoded.staticObjects?.find(x => x.objType === objType && !x.__new); if (o) { n = o.numFields; break; } }
+      if (n == null) n = MOB_TYPE_LAST_FIELD[objType];
+      numFieldsCache.set(objType, n);
+      return n;
+    };
+    const locationFor = (sec, tileX, tileY) => {
+      let base = null;
+      for (const o of sec.decoded.staticObjects || []) {
+        const f = o.fields?.find(x => x.field === 2);
+        if (f) { try { base = BigInt(f.value) & ~(0x3Fn | (0x3Fn << 32n)); break; } catch (_) {} }
+      }
+      if (base == null) base = (BigInt(Number(sec.position.x) * 64) | (BigInt(Number(sec.position.y) * 64) << 32n)) & ~(0x3Fn | (0x3Fn << 32n));
+      return base | BigInt(tileX) | (BigInt(tileY) << 32n);
+    };
+
+    // ---- adding / removing objects ----
+    const hydratePoint = async (pt, sec) => {
+      try {
+        const diag = { decodeFailures: [], locationFailures: [], staticObjectCount: 0, staticObjectTypeCounts: {}, wallLoaded: 0 };
+        const pseudo = { filename: sec.filename, position: sec.position, decoded: { staticObjects: [pt.__obj] } };
+        const [p] = await loadSecStaticObjectPoints([pseudo], diag);
+        if (p) Object.assign(pt, p, { file: pt.file, seq: pt.seq, __obj: pt.__obj, __rot: pt.__rot, name: pt.name });
+      } catch (_) { /* the placeholder point stays */ }
+      redraw();
+    };
+    const addObject = (wx, wy, objType, item, aid, rot) => {
+      const at = sectorAtWorld(wx, wy); if (!at) return null;
+      const sec = at.sec;
+      if (!prepSector(sec)) { edit.problem = `${sec.filename}: its object list could not be parsed, so objects cannot be added there`; return null; }
+      const tileX = wx & 63, tileY = wy & 63;
+      const loc = locationFor(sec, tileX, tileY);
+      const obj = secBuildStaticObject(objType, item.num, aid, loc, numFieldsFor(objType));
+      sec.decoded.staticObjects.push(obj);
+      sec.decoded.staticObjectCount = sec.decoded.staticObjects.length;
+      const pt = {
+        file: `${sec.filename}#new`, name: item.label,
+        worldX: Number(sec.position.x) * 64 + tileX, worldY: Number(sec.position.y) * 64 + tileY,
+        sectorX: Number(sec.position.x), sectorY: Number(sec.position.y), tileX, tileY,
+        type: objType, typeName: mobObjectTypeName(objType), artId: null, artName: null, artCanvas: null,
+        wallFlags: 0, wallDecode: objType === 0 ? decodeWallArtId(aid) : null,
+        portalRotation: objType === 1 ? rot : null, artFile: null, artNote: null,
+        currentAidRaw: aid | 0, locationRaw: loc.toString(), objFlags: 0, sceneryFlags: 0, seq: -1,
+        wallFields: objType === 0 ? obj.fields.map(f => ({ field: f.field, value: f.value })) : null,
+        hotspotX: 0, hotspotY: 0, offsetX: 0, offsetY: 0, blitScale: 1, blitFlags: 0,
+        lightSources: [], nocturnal: false, staticSecObject: true, __obj: obj, __rot: rot
+      };
+      mobPoints.push(pt);
+      edit.objSecs.set(secSectorKey(sec), sec);
+      edit.objOps.push({ kind: 'add', sec, obj, pt, index: sec.decoded.staticObjects.length - 1 });
+      indexAdd(pt);
+      hydratePoint(pt, sec);
+      return pt;
+    };
+    const removeObject = pt => {
+      if (!pt.staticSecObject || !pt.__obj) { edit.skippedMob++; return false; }
+      const sec = findSector(pt.sectorX, pt.sectorY), d = sec?.decoded;
+      if (!d || !prepSector(sec)) return false;
+      const i = d.staticObjects.indexOf(pt.__obj); if (i < 0) return false;
+      d.staticObjects.splice(i, 1); d.staticObjectCount = d.staticObjects.length;
+      const j = mobPoints.indexOf(pt); if (j >= 0) mobPoints.splice(j, 1);
+      edit.objSecs.set(secSectorKey(sec), sec);
+      edit.objOps.push({ kind: 'del', sec, obj: pt.__obj, pt, index: i });
+      indexRemove(pt);
+      return true;
+    };
+    const applyObjOp = (e, forward) => {
+      const d = e.sec.decoded;
+      if ((e.kind === 'add') === forward) { d.staticObjects.splice(Math.min(e.index, d.staticObjects.length), 0, e.obj); mobPoints.push(e.pt); }
+      else {
+        const i = d.staticObjects.indexOf(e.obj); if (i >= 0) d.staticObjects.splice(i, 1);
+        const j = mobPoints.indexOf(e.pt); if (j >= 0) mobPoints.splice(j, 1);
+      }
+      d.staticObjectCount = d.staticObjects.length;
+    };
+
+    // ---- changing tiles ----
+    let editRedrawQueued = false;
+    const scheduleEditRedraw = () => {
+      if (editRedrawQueued) return;
+      editRedrawQueued = true;
+      requestAnimationFrame(() => { editRedrawQueued = false; redraw(); });
+    };
+    const sectorDiffers = d => { const a = d.sector.decoded.tiles, b = d.orig; for (let i = 0; i < 4096; i++) if (a[i] !== b[i]) return true; return false; };
+    const dirtySectors = () => {
+      const m = new Map();
+      for (const [k, d] of edit.dirty) m.set(k, d.sector);
+      for (const [k, s] of edit.objSecs) m.set(k, s);
+      return m;
+    };
+    const touchSector = sec => {
+      delete sec.decoded.__allZero;               // blank/all-zero detection must be redone
+      view.colorSectorCache.delete(sec.filename); // colour-mode bitmap
+      view._lightModel = null;
+      const key = secSectorKey(sec);
+      view.blankSectors?.delete(key);             // an edited sector is no longer "blank"
+      if (!view.loadedSectors.has(key) && !view.loadingSectors.has(key)) loadSectorTiles(sec);
+    };
+    const refreshEditUi = () => {
+      ui.undo.disabled = !edit.undo.length; ui.redo.disabled = !edit.redo.length;
+      const n = dirtySectors().size;
+      exportSecBtn.disabled = n === 0;
+      exportSecBtn.textContent = n ? `Export .SEC (${n})` : 'Export .SEC';
+      exportSecBtn.title = n ? `Save ${n} altered sector file${n === 1 ? '' : 's'}${n > 1 ? ' (as a .zip)' : ''}` : 'Nothing changed yet';
+    };
+    const setTile = (wx, wy, raw) => {
+      const at = sectorAtWorld(wx, wy); if (!at) return false;
+      const { sec, idx } = at;
+      const old = sec.decoded.tiles[idx] >>> 0;
+      if (old === raw) return false;
+      const key = secSectorKey(sec);
+      if (!edit.dirty.has(key)) edit.dirty.set(key, { sector: sec, orig: Uint32Array.from(sec.decoded.tiles) });
+      const sk = `${key}:${idx}`;
+      if (!edit.stroke.has(sk)) edit.stroke.set(sk, { sec, idx, before: old });
+      sec.decoded.tiles[idx] = raw;
+      touchSector(sec);
+      return true;
+    };
+    const brushOffset = () => Math.floor((edit.size - 1) / 2);
+    const forFootprint = (wx, wy, fn) => {
+      const n = edit.size, o = brushOffset();
+      let changed = false;
+      for (let dy = 0; dy < n; dy++) for (let dx = 0; dx < n; dx++) if (fn(wx + dx - o, wy + dy - o)) changed = true;
+      return changed;
+    };
+    const applyBrush = (wx, wy) => forFootprint(wx, wy, (x, y) => setTile(x, y, brushRawAt(x, y)));
+
+    // ---- fill (paint bucket) ----
+    // Two tiles count as "the same" when they show the same ground: a plain tile is compared by its tile number
+    // (so its a/b/c... variants and flips all match), a facade by its facade number, and a blended edge tile by its
+    // exact value (an edge piece is only ever the same as the very same piece).
+    const fillKey = raw => {
+      const info = secTileInfo(raw);
+      if (info.isFacade) return `f${info.facadeNum}`;
+      if (!(raw >>> 28) && info.num1 === info.num2 && info.flippable1 === info.flippable2) return `t${info.artId}`;
+      return `r${raw >>> 0}`;
+    };
+    const fillAt = (wx, wy) => {
+      const start = sectorAtWorld(wx, wy); if (!start) return false;
+      const keyCache = new Map();
+      const keyOf = raw => { let k = keyCache.get(raw); if (k === undefined) { k = fillKey(raw); keyCache.set(raw, k); } return k; };
+      const target = keyOf(start.sec.decoded.tiles[start.idx] >>> 0);
+      const seen = new Uint8Array(mapW * mapH);
+      const first = wy * mapW + wx;
+      const stack = [first]; seen[first] = 1;
+      let changed = 0;
+      while (stack.length) {
+        const v = stack.pop(), x = v % mapW, y = (v - x) / mapW;
+        const at = sectorAtWorld(x, y);
+        if (!at || keyOf(at.sec.decoded.tiles[at.idx] >>> 0) !== target) continue;
+        if (setTile(x, y, brushRawAt(x, y))) changed++;
+        if (x > 0 && !seen[v - 1]) { seen[v - 1] = 1; stack.push(v - 1); }
+        if (x < mapW - 1 && !seen[v + 1]) { seen[v + 1] = 1; stack.push(v + 1); }
+        if (y > 0 && !seen[v - mapW]) { seen[v - mapW] = 1; stack.push(v - mapW); }
+        if (y < mapH - 1 && !seen[v + mapW]) { seen[v + mapW] = 1; stack.push(v + mapW); }
+      }
+      edit.fillCount = changed;
+      if (!changed) edit.problem = 'Nothing to fill: the connected tiles already are the chosen tile.';
+      return changed > 0;
+    };
+
+    // ---- eraser: scenery, then portals, then walls (+ the portals standing in them) ----
+    const eraseTile = (wx, wy) => {
+      const k = `e${wx},${wy}`;
+      if (edit.strokeSeen.has(k)) return false;   // one layer per tile and stroke
+      edit.strokeSeen.add(k);
+      const list = objectsAt(wx, wy);
+      const layers = [
+        { on: overlayVisibility.scenery, items: list.filter(p => p.type === 3) },
+        { on: overlayVisibility.otherMobs, items: list.filter(p => p.type === 1) },
+        { on: overlayVisibility.walls, items: list.filter(p => p.type === 0) }
+      ];
+      for (let li = 0; li < layers.length; li++) {
+        const L = layers[li]; if (!L.on || !L.items.length) continue;
+        let targets = L.items.slice();
+        if (li === 2) {
+          const idx = getEdgeIndex();
+          for (const w of L.items) { const ek = edgeKeyOf(w); if (ek != null) for (const e of idx.get(ek) || []) if (e.type === 1 && !targets.includes(e)) targets.push(e); }
+        }
+        let changed = false;
+        for (const p of targets) if (removeObject(p)) changed = true;
+        if (changed) return true;
+      }
+      return false;
+    };
+    const eraseFootprint = (wx, wy) => forFootprint(wx, wy, eraseTile);
+
+    // ---- scenery ----
+    const placeScenery = (wx, wy) => {
+      const item = edit.sel.scenery; if (!item) return false;
+      const k = `s${wx},${wy}`;
+      if (edit.strokeSeen.has(k)) return false;
+      edit.strokeSeen.add(k);
+      const rv = pk.scenery.rot.value;
+      const aid = rv === 'proto' ? item.aid : secAidWithRotation(item.aid, Number(rv));
+      if (objectsAt(wx, wy).some(p => p.type === 3 && p.__obj && mobOidTypeAndNumber(p.__obj.protoOid)?.number === item.num && (Number(p.currentAidRaw) >>> 0) === aid)) return false;
+      return !!addObject(wx, wy, 3, item, aid, null);
+    };
+
+    // ---- walls (drawn on tile edges, top-down view) ----
+    const wallPiece = () => pk.wall.piece.value === 'auto' ? (edit.commonPiece ?? 0) : Number(pk.wall.piece.value);
+    const placeWall = ({ wx, wy, dir }) => {
+      const item = edit.sel.wall; if (!item) return false;
+      const key = secEdgeKey(wx, wy, dir);
+      if (edit.strokeSeen.has(`w${key}`)) return false;
+      edit.strokeSeen.add(`w${key}`);
+      const rot = dir * 2;
+      const aid = secWallAid(item.aid, wallPiece(), rot, Number(pk.wall.variation.value));
+      const existing = (getEdgeIndex().get(key) || []).filter(p => p.type === 0);
+      if (existing.some(p => (Number(p.currentAidRaw) >>> 0) === aid && p.__obj && mobOidTypeAndNumber(p.__obj.protoOid)?.number === item.num)) return false;
+      let changed = false;
+      for (const p of existing) if (removeObject(p)) changed = true;   // replacing the wall that stood there
+      if (addObject(wx, wy, 0, item, aid, rot)) changed = true;
+      return changed;
+    };
+
+    // Line / rectangle brushes work on tile CORNERS. Corner (i, j) sits at world (i - 0.5, j - 0.5), so tile x lies
+    // between corners x and x + 1. Edge directions: 0 = NE (towards x-1), 1 = SE (y+1), 2 = SW (x+1), 3 = NW (y-1).
+    const vertexFromFloat = f => ({ i: Math.max(0, Math.min(mapW, Math.round(f.fx + 0.5))), j: Math.max(0, Math.min(mapH, Math.round(f.fy + 0.5))) });
+    const wallSegments = d => {
+      const out = [], inMap = (x, y) => x >= 0 && y >= 0 && x < mapW && y < mapH;
+      if (edit.wallBrush === 'rect') {
+        const a = Math.min(d.i0, d.i1), b = Math.max(d.i0, d.i1), c = Math.min(d.j0, d.j1), e = Math.max(d.j0, d.j1);
+        if (b > a && e > c) {
+          // every wall belongs to a tile inside the rectangle
+          for (let x = a; x < b; x++) { out.push({ wx: x, wy: c, dir: 3 }); out.push({ wx: x, wy: e - 1, dir: 1 }); }
+          for (let y = c; y < e; y++) { out.push({ wx: a, wy: y, dir: 0 }); out.push({ wx: b - 1, wy: y, dir: 2 }); }
+          return out;
+        }                               // a flat "rectangle" is just a line
+      }
+      const dx = d.i1 - d.i0, dy = d.j1 - d.j0;
+      if (!dx && !dy) return out;
+      if (Math.abs(dx) >= Math.abs(dy)) {            // runs along x: the walls sit on the edge between rows j-1 and j
+        const j = d.j0, lo = Math.min(d.i0, d.i1), hi = Math.max(d.i0, d.i1), upper = d.sy < j - 0.5;
+        for (let x = lo; x < hi; x++) {
+          let wy = upper ? j - 1 : j, dir = upper ? 1 : 3;
+          if (!inMap(x, wy)) { wy = upper ? j : j - 1; dir = upper ? 3 : 1; }
+          if (inMap(x, wy)) out.push({ wx: x, wy, dir });
+        }
+      } else {                                       // runs along y: the walls sit on the edge between columns i-1 and i
+        const i = d.i0, lo = Math.min(d.j0, d.j1), hi = Math.max(d.j0, d.j1), left = d.sx < i - 0.5;
+        for (let y = lo; y < hi; y++) {
+          let wx = left ? i - 1 : i, dir = left ? 2 : 0;
+          if (!inMap(wx, y)) { wx = left ? i : i - 1; dir = left ? 0 : 2; }
+          if (inMap(wx, y)) out.push({ wx, wy: y, dir });
+        }
+      }
+      return out;
+    };
+    const commitWallDrag = () => {
+      const d = edit.wallDrag; edit.wallDrag = null;
+      if (!d) return;
+      for (const s of wallSegments(d)) placeWall(s);
+    };
+    const cancelWallDrag = () => {
+      if (!edit.wallDrag) return;
+      edit.wallDrag = null; edit.painting = false; edit.stroke = null; edit.objOps = [];
+      status.textContent = 'Cancelled'; scheduleCursor();
+    };
+
+    // ---- portals (isometric view, only on an existing wall) ----
+    const portalTarget = f => {
+      const idx = getEdgeIndex();
+      let best = null, bd = 0.75 * 0.75;
+      for (let tx = f.wx - 1; tx <= f.wx + 1; tx++) for (let ty = f.wy - 1; ty <= f.wy + 1; ty++) for (const dir of [0, 1]) {
+        const key = `${tx},${ty},${dir}`;
+        const wall = (idx.get(key) || []).find(p => p.type === 0);
+        if (!wall) continue;
+        const mid = dir === 0 ? [tx - 0.5, ty] : [tx, ty + 0.5];
+        const d = (mid[0] - f.fx) ** 2 + (mid[1] - f.fy) ** 2;
+        if (d < bd) { bd = d; best = { tx, ty, dir, key, wall }; }
+      }
+      return best;
+    };
+    const placePortal = f => {
+      const item = edit.sel.portal; if (!item) return false;
+      const hit = portalTarget(f);
+      if (!hit) { edit.problem = 'Portals can only be placed on a wall: click right on a wall.'; return false; }
+      const rot = secEdgeRotation(hit.wall) ?? hit.wall.__rot ?? 0;
+      const aid = secAidWithRotation(item.aid, rot);
+      const existing = (getEdgeIndex().get(hit.key) || []).filter(p => p.type === 1);
+      if (existing.some(p => (Number(p.currentAidRaw) >>> 0) === aid && p.__obj && mobOidTypeAndNumber(p.__obj.protoOid)?.number === item.num)) return false;
+      let changed = false;
+      for (const p of existing) if (removeObject(p)) changed = true;
+      if (addObject(wxOf(hit.wall), wyOf(hit.wall), 1, item, aid, rot)) changed = true;
+      return changed;
+    };
+
+    // ---- facades (a facade is one picture cut into 80x40 cells; each cell is a tile of art type 11) ----
+    const facadeCells = (sel, wx, wy) => sel.idxs.map(fr => {
+      const rel = fr - sel.idxs[0], col = rel % sel.cols, row = Math.floor(rel / sel.cols);
+      return { frame: fr, wx: wx + col * sel.colVec[0] + row * sel.rowVec[0], wy: wy + col * sel.colVec[1] + row * sel.rowVec[1] };
+    });
+    const placeFacade = (wx, wy) => {
+      const sel = edit.sel.facade; if (!sel) return false;
+      let changed = false;
+      for (const c of facadeCells(sel, wx, wy)) {
+        const raw = secMakeFacadeRaw(sel.num, c.frame, sel.walkable, sel.keep);
+        if (!artTiles.has(raw) && sel.artByFrame.get(c.frame)) artTiles.set(raw, sel.artByFrame.get(c.frame));
+        if (setTile(c.wx, c.wy, raw)) changed = true;
+      }
+      return changed;
+    };
+    // Cell order / orientation is not stored anywhere we can read, so look at how this facade is already
+    // used on the map; otherwise guess and let the user adjust Columns / Swap axes.
+    const inferFacadeLayout = (num, idxs) => {
+      const pos = new Map(); let keep = null, walk = null;
+      for (const s of valid) {
+        const t = s.decoded.tiles, bx = (s.position.x - minX) * 64, by = (s.position.y - minY) * 64;
+        for (let i = 0; i < 4096; i++) {
+          const raw = t[i] >>> 0;
+          if (secArtType(raw) !== SEC_ART_TYPE_FACADE) continue;
+          if (keep === null) keep = (raw & ~SEC_FACADE_FIELD_MASK) >>> 0;
+          if (secFacadeNumber(raw) !== num) continue;
+          const fr = secFacadeFrame(raw);
+          if (!pos.has(fr)) pos.set(fr, [bx + (i & 63), by + (i >> 6)]);
+          if (walk === null) walk = secFacadeWalkable(raw);
+        }
+      }
+      const n = idxs.length, first = idxs[0];
+      let colVec = [1, 0], rowVec = [0, 1], cols = Math.max(1, Math.ceil(Math.sqrt(n))), known = false;
+      const p0 = pos.get(first), p1 = pos.get(idxs[1]);
+      if (p0 && p1 && idxs[1] === first + 1 && Math.abs(p1[0] - p0[0]) + Math.abs(p1[1] - p0[1]) === 1) {
+        colVec = [p1[0] - p0[0], p1[1] - p0[1]]; rowVec = [colVec[1], colVec[0]]; cols = n; known = true;
+        for (const k of idxs) {
+          if (k === first || k === first + 1) continue;
+          const pk2 = pos.get(k); if (!pk2) continue;
+          const d = [pk2[0] - p0[0], pk2[1] - p0[1]];
+          if (colVec[0] * d[1] - colVec[1] * d[0] !== 0 && Math.abs(d[0]) + Math.abs(d[1]) === 1) { cols = k - first; rowVec = d; break; }
+        }
+      }
+      return { colVec, rowVec, cols, known, keep: keep ?? 0, walkable: walk ?? 1 };
+    };
+
+    // ---- strokes ----
+    const needsObjects = t => t === 'eraser' || t === 'scenery' || t === 'wall' || t === 'portal' || t === 'eyedropper';
+    const toolReady = () => {
+      const t = edit.tool;
+      if (t === 'move' || t === 'eyedropper') return false;
+      if ((t === 'tile' || t === 'fill') && !edit.brush) { status.textContent = 'Pick a tile in the list on the right first (Alt+click picks one from the map).'; return false; }
+      if ((t === 'facade' || t === 'scenery' || t === 'wall' || t === 'portal') && !edit.sel[t]) { status.textContent = `Pick a ${t} in the palette on the right first.`; return false; }
+      if (t === 'scenery' && edit.sel.scenery.num == null) { status.textContent = 'Scenery prototypes are still being scanned - try again in a moment.'; return false; }
+      if (needsObjects(t) && !edit.objectsReady) { status.textContent = 'Objects are still loading…'; return false; }
+      return true;
+    };
+    // Bresenham between two mouse samples, so a fast drag leaves no gaps (like Paint's pencil).
+    const paintLine = (a, b, fn) => {
+      let x0 = a.wx, y0 = a.wy;
+      const x1 = b.wx, y1 = b.wy, dx = Math.abs(x1 - x0), dy = -Math.abs(y1 - y0);
+      const sx = x0 < x1 ? 1 : -1, sy = y0 < y1 ? 1 : -1;
+      let err = dx + dy;
+      for (;;) {
+        fn(x0, y0);
+        if (x0 === x1 && y0 === y1) break;
+        const e2 = 2 * err;
+        if (e2 >= dy) { err += dy; x0 += sx; }
+        if (e2 <= dx) { err += dx; y0 += sy; }
+      }
+    };
+    const tileToolFn = () => ({ tile: applyBrush, eraser: eraseFootprint, scenery: placeScenery }[edit.tool]);
+    const beginStroke = event => {
+      if (!toolReady()) return;
+      const f = worldFloat(event); if (!f) return;
+      edit.painting = true; edit.stroke = new Map(); edit.objOps = []; edit.strokeSeen = new Set(); edit.skippedMob = 0; edit.problem = null;
+      edit.last = { wx: f.wx, wy: f.wy }; edit.lastF = f;
+      const t = edit.tool;
+      if (t === 'wall') {
+        if (edit.wallBrush === 'edge') placeWall(edgeFromFloat(f));
+        else { const v = vertexFromFloat(f); edit.wallDrag = { i0: v.i, j0: v.j, i1: v.i, j1: v.j, sx: f.fx, sy: f.fy }; scheduleCursor(); }
+      }
+      else if (t === 'portal') placePortal(f);
+      else if (t === 'facade') placeFacade(f.wx, f.wy);
+      else if (t === 'fill') fillAt(f.wx, f.wy);
+      else tileToolFn()(f.wx, f.wy);
+      scheduleEditRedraw();
+    };
+    const continueStroke = event => {
+      const f = worldFloat(event);
+      if (!f) { edit.last = null; edit.lastF = null; return; }
+      const t = edit.tool;
+      if (t === 'wall' && edit.wallDrag) {
+        const v = vertexFromFloat(f), d = edit.wallDrag;
+        if (v.i !== d.i1 || v.j !== d.j1) {
+          d.i1 = v.i; d.j1 = v.j;
+          const n = wallSegments(d).length;
+          status.textContent = `${edit.wallBrush === 'rect' ? 'Rectangle' : 'Line'} · ${n} wall${n === 1 ? '' : 's'} · release to place, Esc to cancel`;
+          scheduleCursor();
+        }
+        return;
+      }
+      if (t === 'wall') {
+        // sample along the pointer path so a quick drag still catches every edge
+        const a = edit.lastF || f, steps = Math.max(1, Math.ceil(Math.hypot(f.fx - a.fx, f.fy - a.fy) / 0.2));
+        for (let i = 1; i <= steps; i++) {
+          const fx = a.fx + (f.fx - a.fx) * i / steps, fy = a.fy + (f.fy - a.fy) * i / steps;
+          const wx = Math.round(fx), wy = Math.round(fy);
+          if (wx < 0 || wy < 0 || wx >= mapW || wy >= mapH) continue;
+          placeWall(edgeFromFloat({ fx, fy, wx, wy }));
+        }
+      } else if (t === 'tile' || t === 'eraser' || t === 'scenery') {
+        if (edit.last && edit.last.wx === f.wx && edit.last.wy === f.wy) return;
+        paintLine(edit.last || f, f, tileToolFn());
+      }
+      edit.last = { wx: f.wx, wy: f.wy }; edit.lastF = f;
+      scheduleEditRedraw();
+    };
+    function endStroke() {
+      if (!edit.painting) return;
+      edit.painting = false; edit.last = null; edit.lastF = null;
+      commitWallDrag();
+      const entries = [];
+      if (edit.stroke) for (const e of edit.stroke.values()) entries.push({ kind: 'tile', sec: e.sec, idx: e.idx, before: e.before, after: e.sec.decoded.tiles[e.idx] >>> 0 });
+      for (const e of edit.objOps || []) entries.push(e);
+      if (entries.length) {
+        edit.undo.push(entries); if (edit.undo.length > 300) edit.undo.shift();
+        edit.redo.length = 0; edit.unsaved = true;
+        const n = dirtySectors().size;
+        status.textContent = `${edit.fillCount ? `Filled ${edit.fillCount} tile${edit.fillCount === 1 ? '' : 's'} · ` : ''}${n} sector${n === 1 ? '' : 's'} modified · Export .SEC to save`;
+      } else if (edit.problem) status.textContent = edit.problem;
+      if (edit.skippedMob) status.textContent += ` · ${edit.skippedMob} object${edit.skippedMob === 1 ? '' : 's'} come from .mob files and cannot be erased here`;
+      edit.stroke = null; edit.objOps = []; edit.fillCount = 0; refreshEditUi(); scheduleEditRedraw();
+    }
+    const replayHistory = (from, to, useAfter) => {
+      const entries = from.pop(); if (!entries) return;
+      const touched = new Set();
+      for (const e of entries) if (e.kind === 'tile') { e.sec.decoded.tiles[e.idx] = useAfter ? e.after : e.before; touched.add(e.sec); }
+      const objs = entries.filter(e => e.kind !== 'tile');
+      for (const e of (useAfter ? objs : objs.slice().reverse())) { applyObjOp(e, useAfter); touched.add(e.sec); }
+      for (const sec of touched) {
+        touchSector(sec);
+        const key = secSectorKey(sec), d = edit.dirty.get(key);
+        if (d && !sectorDiffers(d)) edit.dirty.delete(key);
+        if (secObjectListDiffers(sec.decoded)) edit.objSecs.set(key, sec); else edit.objSecs.delete(key);
+      }
+      to.push(entries); edit.unsaved = true; invalidateObjIdx();
+      refreshEditUi(); redraw();
+    };
+    const undoEdit = () => replayHistory(edit.undo, edit.redo, false);
+    const redoEdit = () => replayHistory(edit.redo, edit.undo, true);
+    ui.undo.addEventListener('click', undoEdit);
+    ui.redo.addEventListener('click', redoEdit);
+    const onEditKey = e => {
+      if (!article.isConnected) { document.removeEventListener('keydown', onEditKey, true); return; }
+      if (edit.on && e.key === 'Escape' && edit.wallDrag) { e.preventDefault(); e.stopPropagation(); cancelWallDrag(); return; }
+      if (!edit.on || !(e.ctrlKey || e.metaKey) || e.altKey) return;
+      // A text box that holds text keeps its own Ctrl+Z; everywhere else it undoes the map.
+      const t = e.target;
+      if (t && /^(textarea)$/i.test(t.tagName) && t.value) return;
+      if (t && /^input$/i.test(t.tagName) && /^(text|search|number|)$/i.test(t.type || '') && t.value) return;
+      const k = String(e.key || '').toLowerCase(), c = e.code;
+      if ((k === 'z' || c === 'KeyZ') && !e.shiftKey) {
+        e.preventDefault(); e.stopPropagation();
+        if (edit.undo.length) { undoEdit(); status.textContent = `Undone · ${edit.undo.length} step${edit.undo.length === 1 ? '' : 's'} left`; }
+        else status.textContent = 'Nothing to undo';
+      } else if (k === 'y' || c === 'KeyY' || ((k === 'z' || c === 'KeyZ') && e.shiftKey)) {
+        e.preventDefault(); e.stopPropagation();
+        if (edit.redo.length) { redoEdit(); status.textContent = 'Redone'; } else status.textContent = 'Nothing to redo';
+      }
+    };
+    document.addEventListener('keydown', onEditKey, true);   // capture: runs before any focused control sees the key
+    window.addEventListener('beforeunload', e => { if (article.isConnected && edit.unsaved) { e.preventDefault(); e.returnValue = ''; } });
+    ui.size.addEventListener('change', () => { edit.size = Number(ui.size.value) || 1; scheduleCursor(); });
+    ui.variation.addEventListener('change', () => { edit.variation = ui.variation.value; });
+
+    // ---- brush / edge cursor drawn over the map ----
+    const cursorCv = document.createElement('canvas');
+    cursorCv.className = 'sec-edit-cursor';
+    stage.appendChild(cursorCv);
+    const tileCentre = (wx, wy) => {
+      if (mode === 'art') { const p = secIsoProject(wx, wy, iso); return { x: p.x * view.zoom + view.offsetX, y: p.y * view.zoom + view.offsetY }; }
+      return { x: (mapW - 1 - wx + 0.5) * view.zoom + view.offsetX, y: (wy + 0.5) * view.zoom + view.offsetY };
+    };
+    const tilePath = (c, wx, wy) => {
+      const p = tileCentre(wx, wy), z = view.zoom;
+      if (mode === 'art') { const hw = SEC_ISO_HALF_W * z, hh = SEC_ISO_HALF_H * z; c.moveTo(p.x, p.y - hh); c.lineTo(p.x + hw, p.y); c.lineTo(p.x, p.y + hh); c.lineTo(p.x - hw, p.y); c.closePath(); }
+      else c.rect(p.x - z / 2, p.y - z / 2, z, z);
+    };
+    const edgePath = (c, wx, wy, dir) => {
+      const p = tileCentre(wx, wy), z = view.zoom;
+      if (mode === 'art') {
+        const hw = SEC_ISO_HALF_W * z, hh = SEC_ISO_HALF_H * z;
+        const T = [p.x, p.y - hh], R = [p.x + hw, p.y], B = [p.x, p.y + hh], L = [p.x - hw, p.y];
+        const seg = [[T, R], [R, B], [B, L], [L, T]][dir];
+        c.moveTo(seg[0][0], seg[0][1]); c.lineTo(seg[1][0], seg[1][1]);
+      } else {
+        const x0 = p.x - z / 2, y0 = p.y - z / 2, x1 = x0 + z, y1 = y0 + z;
+        const seg = [[[x1, y0], [x1, y1]], [[x0, y1], [x1, y1]], [[x0, y0], [x0, y1]], [[x0, y0], [x1, y0]]][dir];
+        c.moveTo(seg[0][0], seg[0][1]); c.lineTo(seg[1][0], seg[1][1]);
+      }
+    };
+    // ---- translucent preview of what is about to be placed ----
+    const PREVIEW_ALPHA = 0.62;
+    const previewCache = new Map();
+    // Objects are previewed with the very same art/anchor code as placed ones: build the object once,
+    // let loadSecStaticObjectPoints() resolve its art, then redraw that point at the hovered tile.
+    const previewTemplate = (objType, item, aid) => {
+      const key = `${objType}|${item.num}|${aid}`;
+      let e = previewCache.get(key);
+      if (!e) {
+        e = { pt: null };
+        previewCache.set(key, e);
+        (async () => {
+          try {
+            const obj = secBuildStaticObject(objType, item.num, aid, 0n, numFieldsFor(objType));
+            const diag = { decodeFailures: [], locationFailures: [], staticObjectCount: 0, staticObjectTypeCounts: {}, wallLoaded: 0 };
+            const [pt] = await loadSecStaticObjectPoints([{ filename: 'preview', position: { x: 0, y: 0 }, decoded: { staticObjects: [obj] } }], diag);
+            e.pt = pt && pt.artCanvas ? pt : false;
+          } catch (_) { e.pt = false; }
+          scheduleCursor();
+        })();
+      }
+      return e.pt || null;
+    };
+    const drawObjectPreview = (c, tpl, wx, wy) => {
+      if (!tpl) return;
+      const pt = Object.assign({}, tpl, {
+        sectorX: minX + (wx >> 6), sectorY: minY + (wy >> 6), tileX: wx & 63, tileY: wy & 63,
+        worldX: (minX + (wx >> 6)) * 64 + (wx & 63), worldY: (minY + (wy >> 6)) * 64 + (wy & 63)
+      });
+      c.save(); c.globalAlpha = PREVIEW_ALPHA; c.imageSmoothingEnabled = false;
+      if (pt.type === 0 || pt.type === 1) drawSecWallOverlay(c, [pt], bounds, mode, view.zoom, view.offsetX, view.offsetY, iso, null, null);
+      else drawSecMobOverlay(c, [pt], bounds, mode, view.zoom, view.offsetX, view.offsetY, iso, false, null);
+      c.restore();
+    };
+    const drawTilePreview = (c, raw, wx, wy) => {
+      if (wx < 0 || wy < 0 || wx >= mapW || wy >= mapH) return;
+      c.save(); c.globalAlpha = PREVIEW_ALPHA; c.imageSmoothingEnabled = false;
+      if (mode === 'art') {
+        const art = artTiles.get(raw);
+        if (art?.canvas) {
+          const p = tileCentre(wx, wy), w = art.canvas.width * view.zoom, h = art.canvas.height * view.zoom;
+          c.drawImage(art.canvas, p.x - w / 2, p.y - h / 2, w, h);
+        }
+      } else {
+        const p = tileCentre(wx, wy), z = view.zoom;
+        c.fillStyle = secTileColor(secTileInfo(raw).artId);
+        c.fillRect(p.x - z / 2, p.y - z / 2, z, z);
+      }
+      c.restore();
+    };
+    const drawCursor = () => {
+      const dpr = window.devicePixelRatio || 1, w = stage.clientWidth, h = stage.clientHeight;
+      if (cursorCv.width !== Math.round(w * dpr) || cursorCv.height !== Math.round(h * dpr)) { cursorCv.width = Math.round(w * dpr); cursorCv.height = Math.round(h * dpr); }
+      const c = cursorCv.getContext('2d');
+      c.setTransform(dpr, 0, 0, dpr, 0, 0); c.clearRect(0, 0, w, h);
+      const f = edit.hover, t = edit.tool;
+      if (!edit.on || !f || t === 'move' || edit.panning) return;
+      const lw = Math.max(1.5, Math.min(3, view.zoom * 0.1));
+      // outline of the footprint; `fill` (optional) tints it lightly, the preview shows through
+      const footprint = (cells, fill, stroke) => {
+        c.beginPath(); for (const k of cells) tilePath(c, k[0], k[1]);
+        if (fill) { c.fillStyle = fill; c.fill(); }
+        c.strokeStyle = stroke; c.lineWidth = lw; c.stroke();
+      };
+      const edgeLine = (wx, wy, dir, colour) => {
+        c.save(); c.beginPath(); edgePath(c, wx, wy, dir);
+        c.strokeStyle = colour; c.lineWidth = Math.max(2, Math.min(5, view.zoom * 0.12)); c.lineCap = 'round'; c.stroke(); c.restore();
+      };
+      if (t === 'fill') {
+        if (edit.brush) drawTilePreview(c, brushRawAt(f.wx, f.wy), f.wx, f.wy);
+        footprint([[f.wx, f.wy]], null, '#ffe066');
+      } else if (t === 'eyedropper') {
+        if (edit.eyeTile) footprint([[edit.eyeTile.wx, edit.eyeTile.wy]], 'rgba(32,178,170,.18)', '#20b2aa');
+        footprint([[f.wx, f.wy]], null, '#ffe066');
+      } else if (t === 'tile' || t === 'eraser') {
+        const n = edit.size, o = brushOffset(), cells = [];
+        for (let dy = 0; dy < n; dy++) for (let dx = 0; dx < n; dx++) cells.push([f.wx + dx - o, f.wy + dy - o]);
+        if (t === 'tile') {
+          if (edit.brush) for (const k of cells) drawTilePreview(c, brushRawAt(k[0], k[1]), k[0], k[1]);
+          footprint(cells, null, '#ffe066');
+        } else footprint(cells, 'rgba(255,143,132,.25)', '#ff8f84');
+      } else if (t === 'facade') {
+        const sel = edit.sel.facade;
+        if (sel) {
+          const cells = facadeCells(sel, f.wx, f.wy);
+          for (const k of cells) {
+            const art = sel.artByFrame.get(k.frame);
+            if (art) drawTilePreview(c, secMakeFacadeRaw(sel.num, k.frame, sel.walkable, sel.keep), k.wx, k.wy);
+          }
+          footprint(cells.map(k => [k.wx, k.wy]), null, '#ffe066');
+        } else footprint([[f.wx, f.wy]], null, '#ffe066');
+      } else if (t === 'scenery') {
+        const item = edit.sel.scenery;
+        if (item && item.num != null) {
+          const rv = pk.scenery.rot.value, aid = rv === 'proto' ? item.aid : secAidWithRotation(item.aid, Number(rv));
+          drawObjectPreview(c, previewTemplate(3, item, aid), f.wx, f.wy);
+        }
+        footprint([[f.wx, f.wy]], null, '#ffe066');
+      } else if (t === 'wall') {
+        const item = edit.sel.wall, hasWall = e => (getEdgeIndex().get(secEdgeKey(e.wx, e.wy, e.dir)) || []).some(p => p.type === 0);
+        const drawSeg = (e, withArt) => {
+          if (withArt && item) drawObjectPreview(c, previewTemplate(0, item, secWallAid(item.aid, wallPiece(), e.dir * 2, Number(pk.wall.variation.value))), e.wx, e.wy);
+          edgeLine(e.wx, e.wy, e.dir, hasWall(e) ? '#ff8f84' : '#ffe066');
+        };
+        if (edit.wallBrush === 'edge') drawSeg(edgeFromFloat(f), true);
+        else {
+          const dot = (i, j, r, col) => { const p = tileCentre(i - 0.5, j - 0.5); c.save(); c.beginPath(); c.arc(p.x, p.y, r, 0, Math.PI * 2); c.fillStyle = col; c.fill(); c.restore(); };
+          const d = edit.wallDrag;
+          if (d) {
+            const segs = wallSegments(d);
+            segs.forEach((s, n) => drawSeg(s, n < 250));
+            dot(d.i0, d.j0, 4, '#20b2aa');
+            dot(d.i1, d.j1, 4, '#ffe066');
+          } else { const v = vertexFromFloat(f); dot(v.i, v.j, 4, '#ffe066'); }
+        }
+      } else if (t === 'portal') {
+        const item = edit.sel.portal, hit = edit.objectsReady ? portalTarget(f) : null;
+        if (hit) {
+          if (item) {
+            const rot = secEdgeRotation(hit.wall) ?? hit.wall.__rot ?? 0;
+            drawObjectPreview(c, previewTemplate(1, item, secAidWithRotation(item.aid, rot)), wxOf(hit.wall), wyOf(hit.wall));
+          }
+          edgeLine(hit.tx, hit.ty, hit.dir, '#20b2aa');
+        } else footprint([[f.wx, f.wy]], 'rgba(255,143,132,.10)', 'rgba(255,143,132,.7)');
+      }
+    };
+    drawCursorHook = drawCursor;
+    let cursorQueued = false;
+    const scheduleCursor = () => { if (cursorQueued) return; cursorQueued = true; requestAnimationFrame(() => { cursorQueued = false; drawCursor(); }); };
+    const updateHover = event => { edit.hover = worldFloat(event); scheduleCursor(); };
+    canvas.addEventListener('mouseleave', () => { edit.hover = null; scheduleCursor(); });
+    canvas.addEventListener('mousemove', event => { if (edit.on) updateHover(event); });
+
+    // ---- palettes ----
+    // Tile palette: every tile listed in tilename.mes
+    let paletteBuilt = false, usedArtIds = new Set(), thumbObserver = null;
+    const applyPaletteFilter = () => {
+      const qs = ui.search.value.trim().toLowerCase(), cat = ui.category.value, used = ui.usedOnly.checked;
+      for (const el of ui.list.children) {
+        const id = Number(el.dataset.art);
+        const ok = (cat === 'all' || Math.floor(id / 100) === Number(cat))
+          && (!used || usedArtIds.has(id))
+          && (!qs || el.dataset.search.includes(qs));
+        el.hidden = !ok;
+      }
+    };
+    const buildPalette = () => {
+      usedArtIds = new Set(secFolderLegendEntries(valid).map(e => e.artId));
+      if (paletteBuilt) { applyPaletteFilter(); return; }
+      paletteBuilt = true;
+      ui.list.innerHTML = '';
+      const entries = [...(secTileNameMesMap || new Map()).entries()].sort((a, b) => a[0] - b[0]);
+      thumbObserver = new IntersectionObserver(items => {
+        for (const it of items) {
+          if (!it.isIntersecting) continue;
+          const el = it.target; thumbObserver.unobserve(el);
+          const cv = el.querySelector('canvas');
+          firstVariant(Number(el.dataset.art)).then(v => { if (!drawThumb(cv, v?.art)) el.classList.add('no-art'); }).catch(() => el.classList.add('no-art'));
+        }
+      }, { root: ui.list, rootMargin: '120px' });
+      for (const [artId, entry] of entries) {
+        if (artId % 100 > 63) continue; // the packed tile id only has 6 bits per tile number
+        const btn = document.createElement('button');
+        btn.type = 'button'; btn.className = 'sec-edit-tile';
+        btn.dataset.art = String(artId);
+        btn.dataset.search = `${artId} ${entry.name} ${entry.comment || ''}`.toLowerCase();
+        btn.title = `#${artId} ${entry.name}${entry.comment ? ` — ${entry.comment}` : ''}`;
+        const cv = document.createElement('canvas'); cv.width = 80; cv.height = 40;
+        const label = document.createElement('span'); label.textContent = `${artId} · ${entry.name || '?'}`;
+        btn.append(cv, label);
+        btn.addEventListener('click', () => selectPaletteTile(artId, entry.name));
+        ui.list.appendChild(btn);
+        thumbObserver.observe(btn);
+      }
+      markActiveTile(); applyPaletteFilter();
+    };
+    ui.search.addEventListener('input', applyPaletteFilter);
+    ui.category.addEventListener('change', applyPaletteFilter);
+    ui.usedOnly.addEventListener('change', applyPaletteFilter);
+
+    // generic helpers for the other palettes
+    const makePaletteButton = (id, search, title, label) => {
+      const btn = document.createElement('button');
+      btn.type = 'button'; btn.className = 'sec-edit-tile';
+      btn.dataset.id = String(id); btn.dataset.search = search.toLowerCase(); btn.title = title;
+      const cv = document.createElement('canvas'); cv.width = 80; cv.height = 40;
+      const span = document.createElement('span'); span.textContent = label;
+      btn.append(cv, span);
+      return btn;
+    };
+    const filterPane = P => {
+      const qs = P.search.value.trim().toLowerCase();
+      for (const el of P.list.children) el.hidden = !!qs && !el.dataset.search.includes(qs);
+    };
+    const markActivePane = (kind, id) => {
+      const P = pk[kind];
+      P.list.querySelectorAll('.sec-edit-tile.active').forEach(el => el.classList.remove('active'));
+      if (id != null) P.list.querySelector(`.sec-edit-tile[data-id="${id}"]`)?.classList.add('active');
+    };
+    const makeThumbObserver = (P, draw) => new IntersectionObserver(items => {
+      for (const it of items) {
+        if (!it.isIntersecting) continue;
+        const el = it.target; P.obs.unobserve(el);
+        draw(el, el.querySelector('canvas'));
+      }
+    }, { root: P.list, rootMargin: '120px' });
+
+    // Facade palette (facadename.mes)
+    const facadeThumbCache = new Map();
+    const facadeThumbArt = async num => {
+      if (facadeThumbCache.has(num)) return facadeThumbCache.get(num);
+      const file = await secFacadeFile(num);
+      let art = null;
+      if (file) {
+        const f0 = file.frames.filter(f => f.direction === 0).sort((a, b) => a.index - b.index)[0];
+        if (f0) art = await loadSecFacadeArt(secMakeFacadeRaw(num, f0.index, 1, 0));
+      }
+      facadeThumbCache.set(num, art);
+      return art;
+    };
+    const selectFacade = async (num, name) => {
+      const P = pk.facade;
+      P.meta.textContent = 'loading cells…';
+      const file = await secFacadeFile(num);
+      if (!file) { P.meta.textContent = 'ART file not found'; edit.sel.facade = null; return; }
+      const idxs = file.frames.filter(f => f.direction === 0).map(f => f.index).sort((a, b) => a - b);
+      if (!idxs.length) { P.meta.textContent = 'no cells'; edit.sel.facade = null; return; }
+      const lay = inferFacadeLayout(num, idxs);
+      const artByFrame = new Map();
+      await Promise.all(idxs.map(async fr => { const a = await loadSecFacadeArt(secMakeFacadeRaw(num, fr, lay.walkable, lay.keep)); if (a) artByFrame.set(fr, a); }));
+      edit.sel.facade = { num, name, idxs, artByFrame, cols: lay.cols, colVec: lay.colVec, rowVec: lay.rowVec, keep: lay.keep, walkable: lay.walkable };
+      P.cols.value = String(lay.cols); P.walk.checked = !!lay.walkable; P.swap.checked = false;
+      P.meta.textContent = `${idxs.length} cell${idxs.length === 1 ? '' : 's'} · layout ${lay.known ? 'taken from this map' : 'guessed: adjust Columns / Swap axes'}`;
+      markActivePane('facade', num);
+      status.textContent = `Facade #${num} ${name} · click to stamp it`;
+      scheduleCursor();
+    };
+    pk.facade.cols.addEventListener('change', () => { const s = edit.sel.facade; if (s) { s.cols = Math.max(1, Number(pk.facade.cols.value) || 1); scheduleCursor(); } });
+    pk.facade.walk.addEventListener('change', () => { const s = edit.sel.facade; if (s) s.walkable = pk.facade.walk.checked ? 1 : 0; });
+    pk.facade.swap.addEventListener('change', () => { const s = edit.sel.facade; if (s) { [s.colVec, s.rowVec] = [s.rowVec, s.colVec]; scheduleCursor(); } });
+    pk.facade.search.addEventListener('input', () => filterPane(pk.facade));
+    const buildFacadePalette = async () => {
+      const P = pk.facade;
+      if (P.built) return;
+      P.built = true;
+      P.status.textContent = 'Loading facade list…';
+      let names;
+      try { names = await loadSecFacadeNames(); }
+      catch (err) { P.built = false; P.status.textContent = `Could not load facadename.mes: ${String(err?.message || err)}`; return; }
+      P.obs = makeThumbObserver(P, (el, cv) => {
+        facadeThumbArt(Number(el.dataset.id)).then(a => { if (!drawThumb(cv, a)) el.classList.add('no-art'); }).catch(() => el.classList.add('no-art'));
+      });
+      P.list.innerHTML = '';
+      let count = 0;
+      names.forEach((name, num) => {
+        if (!name) return;
+        count++;
+        const btn = makePaletteButton(num, `${num} ${name}`, `#${num} ${name}`, `${num} · ${name}`);
+        btn.addEventListener('click', () => selectFacade(num, name));
+        P.list.appendChild(btn); P.obs.observe(btn);
+      });
+      P.status.textContent = `${count} facades`;
+      markActivePane('facade', edit.sel.facade?.num);
+    };
+
+    // Scenery / wall / portal palettes (prototypes, found by scanning /proto/ once)
+    const protoThumbArt = async item => {
+      if (item.objType === 0) return loadWallArtFromRaw(secWallAid(item.aid, edit.commonPiece ?? 0, 0, 0));
+      const artId = protoCurrentAidArtId(item.aid, item.objType);
+      if (artId == null) return null;
+      const artObjType = protoArtObjectType(item.aid, item.objType);
+      const pal = artObjType === 3 ? (item.aid >>> 4) & 3 : null;
+      return loadMobMapArtShared(artId, artObjType, pal, aidRotation(item.aid), item.aid);
+    };
+    const renderProtoList = kind => {
+      const P = pk[kind], items = secProtoCatalog.byType[PROTO_TYPE[kind]].slice().sort((a, b) => a.num - b.num);
+      const cat = secProtoCatalog;
+      P.status.textContent = cat.error ? `Prototype scan failed: ${cat.error}`
+        : cat.done ? `${items.length} ${kind} prototype${items.length === 1 ? '' : 's'}`
+        : `Scanning prototypes… ${cat.scanned}/${cat.total} · ${items.length} found`;
+      if (P.rendered === items.length && !cat.done) return;
+      if (P.rendered === items.length && P.renderedDone) return;
+      P.rendered = items.length; P.renderedDone = cat.done;
+      P.obs?.disconnect();
+      P.obs = makeThumbObserver(P, (el, cv) => {
+        const item = items.find(i => String(i.num) === el.dataset.id);
+        protoThumbArt(item).then(a => { if (!drawThumb(cv, a)) el.classList.add('no-art'); }).catch(() => el.classList.add('no-art'));
+      });
+      P.list.innerHTML = '';
+      for (const item of items) {
+        const btn = makePaletteButton(item.num, `${item.num} ${item.label}`, `#${item.num} ${item.label}`, `${item.num} · ${item.label}`);
+        btn.addEventListener('click', () => selectProto(kind, item));
+        P.list.appendChild(btn); P.obs.observe(btn);
+      }
+      filterPane(P); markActivePane(kind, edit.sel[kind]?.num);
+    };
+    const selectProto = (kind, item) => {
+      const P = pk[kind];
+      edit.sel[kind] = item;
+      P.meta.textContent = kind === 'portal' ? 'click a wall to place it' : `art id 0x${item.aid.toString(16).toUpperCase()}`;
+      markActivePane(kind, item.num);
+      status.textContent = `${kind[0].toUpperCase()}${kind.slice(1)}: #${item.num} ${item.label}`;
+    };
+    for (const kind of ['scenery', 'wall', 'portal']) pk[kind].search.addEventListener('input', () => filterPane(pk[kind]));
+    for (const b of pk.wall.brushBtns) b.addEventListener('click', () => {
+      cancelWallDrag();
+      edit.wallBrush = b.dataset.brush;
+      pk.wall.brushBtns.forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+      if (edit.tool === 'wall') { ui.hint.textContent = toolHintFor('wall'); status.textContent = toolHintFor('wall'); }
+      edit.hover = null; scheduleCursor();
+    });
+    for (const kind of ['wall', 'portal']) secProtoCatalog.listeners.push(() => { if (pk[kind].built) renderProtoList(kind); });
+    const buildProtoPalette = kind => {
+      const P = pk[kind];
+      secStartProtoScan();
+      if (kind === 'scenery') { buildSceneryPalette(); return; }
+      if (!P.built) { P.built = true; }
+      renderProtoList(kind);
+    };
+
+    // Scenery palette: every entry of scenery.mes (key = 1000 * type + num). Only a few dozen scenery
+    // prototypes exist, so an entry without its own prototype is placed as an instance of the chosen
+    // "base prototype" with the art id overridden (an object's F_CURRENT_AID wins over its prototype's).
+    const sceneryAidOf = key => ((4 << 28) | ((key % 1000) << 19) | (Math.floor(key / 1000) << 6)) >>> 0;
+    const exactSceneryProto = new Map();       // art key -> prototype that already uses that art
+    const syncSelectedScenery = () => {
+      const P = pk.scenery, sel = edit.sel.scenery;
+      if (!sel) return;
+      const exact = exactSceneryProto.get(sel.artKey);
+      sel.num = exact ? exact.num : (Number(P.base.value) || null);
+      sel.exact = !!exact;
+      P.meta.textContent = sel.num == null ? 'waiting for the prototype scan…'
+        : exact ? `own prototype #${exact.num}` : `no prototype of its own · uses base prototype #${sel.num}`;
+    };
+    const refreshSceneryBase = () => {
+      const P = pk.scenery, items = secProtoCatalog.byType[3];
+      exactSceneryProto.clear();
+      for (const it of items) { const k = protoCurrentAidArtId(it.aid, 3); if (k != null && !exactSceneryProto.has(k)) exactSceneryProto.set(k, it); }
+      if (P.base.options.length !== items.length || !P.base.value) {
+        const cur = P.base.value;
+        P.base.innerHTML = items.length ? items.map(i => `<option value="${i.num}">#${i.num} · ${i.label}</option>`).join('') : '<option value="">(scanning prototypes…)</option>';
+        if (cur && items.some(i => String(i.num) === cur)) P.base.value = cur;
+        else if (items.length) {
+          const use = new Map();    // prefer the scenery prototype this map already uses most
+          for (const sec of valid) for (const o of sec.decoded.staticObjects || []) if (o.objType === 3) { const n = mobOidTypeAndNumber(o.protoOid)?.number; if (n != null) use.set(n, (use.get(n) || 0) + 1); }
+          let best = items[0].num, bn = -1;
+          for (const it of items) { const n = use.get(it.num) || 0; if (n > bn) { bn = n; best = it.num; } }
+          P.base.value = String(best);
+        }
+      }
+      syncSelectedScenery();
+    };
+    pk.scenery.base.addEventListener('change', syncSelectedScenery);
+    secProtoCatalog.listeners.push(() => { if (pk.scenery.built) refreshSceneryBase(); });
+    const selectScenery = (key, label) => {
+      const P = pk.scenery;
+      edit.sel.scenery = { num: null, label, aid: sceneryAidOf(key), objType: 3, artKey: key };
+      syncSelectedScenery();
+      markActivePane('scenery', key);
+      status.textContent = `Scenery: #${key} ${label}`;
+      scheduleCursor();
+    };
+    const buildSceneryPalette = async () => {
+      const P = pk.scenery;
+      refreshSceneryBase();
+      if (P.built) return;
+      P.built = true;
+      P.status.textContent = 'Loading scenery.mes…';
+      let mes;
+      try { mes = await loadSceneryMes(); }
+      catch (err) { P.built = false; P.status.textContent = `Could not load scenery.mes: ${String(err?.message || err)}`; return; }
+      const entries = [...mes.entries()].filter(([k]) => k >= 0 && k % 1000 <= 255 && Math.floor(k / 1000) <= 31).sort((a, b) => a[0] - b[0]);
+      P.obs = makeThumbObserver(P, (el, cv) => {
+        const key = Number(el.dataset.id);
+        protoThumbArt({ objType: 3, aid: sceneryAidOf(key) }).then(a => { if (!drawThumb(cv, a)) el.classList.add('no-art'); }).catch(() => el.classList.add('no-art'));
+      });
+      P.list.innerHTML = '';
+      for (const [key, text] of entries) {
+        const label = String(text).trim().replace(/\.art\b.*$/i, '');
+        const btn = makePaletteButton(key, `${key} ${label}`, `#${key} ${label}`, `${key} · ${label}`);
+        btn.addEventListener('click', () => selectScenery(key, label));
+        P.list.appendChild(btn); P.obs.observe(btn);
+      }
+      P.status.textContent = `${entries.length} scenery entries (scenery.mes)`;
+      filterPane(P); markActivePane('scenery', edit.sel.scenery?.artKey);
+    };
+
+    // ---- eyedropper: list what is on a tile; a click on an entry opens its tool with it selected ----
+    const eye = { head: q1(panes.eyedropper, '.sec-eye-head'), list: q1(panes.eyedropper, '.sec-eye-list') };
+    const EDGE_NAMES = ['NE', 'SE', 'SW', 'NW'];
+    let eyeSeq = 0;
+    const protoCatalogReady = () => new Promise(resolve => {
+      secStartProtoScan();
+      if (secProtoCatalog.done) { resolve(); return; }
+      const fn = () => {
+        if (!secProtoCatalog.done) return;
+        const i = secProtoCatalog.listeners.indexOf(fn); if (i >= 0) secProtoCatalog.listeners.splice(i, 1);
+        resolve();
+      };
+      secProtoCatalog.listeners.push(fn);
+    });
+    // Rotation and palette bits differ between instances of one prototype, so they are ignored when matching.
+    const stripAidVariant = v => ((v >>> 0) & ~((7 << 11) | (3 << 4))) >>> 0;
+    const protoItemFor = p => {
+      const list = secProtoCatalog.byType[p.type] || [];
+      const n = p.__obj ? mobOidTypeAndNumber(p.__obj.protoOid)?.number : null;
+      if (n != null) { const it = list.find(i => i.num === n); if (it) return it; }
+      if (p.currentAidRaw == null) return null;
+      const aid = Number(p.currentAidRaw) >>> 0;
+      if (p.type === 0) { const d = decodeWallArtId(aid); return d ? (list.find(i => decodeWallArtId(i.aid)?.num === d.num) || null) : null; }
+      return list.find(i => stripAidVariant(i.aid) === stripAidVariant(aid)) || null;
+    };
+    const eyeRow = (kind, title, sub, art, onClick) => {
+      const el = document.createElement(onClick ? 'button' : 'div');
+      el.className = onClick ? 'sec-eye-item' : 'sec-eye-item static';
+      if (onClick) { el.type = 'button'; el.addEventListener('click', onClick); }
+      const cv = document.createElement('canvas'); cv.width = 80; cv.height = 40;
+      const text = document.createElement('span'); text.className = 'sec-eye-text';
+      const k = document.createElement('strong'); k.textContent = kind;
+      const t = document.createElement('span'); t.textContent = title;
+      text.append(k, t);
+      if (sub) { const s = document.createElement('em'); s.textContent = sub; text.appendChild(s); }
+      el.append(cv, text);
+      if (art) Promise.resolve(art).then(a => drawThumb(cv, a)).catch(() => {});
+      eye.list.appendChild(el);
+    };
+    const openTileTool = async (raw, info) => {
+      await setTool('tile');
+      ui.search.value = ''; ui.category.value = 'all'; ui.usedOnly.checked = false; applyPaletteFilter();
+      const plain = !(raw >>> 28) && info.num1 === info.num2 && info.flippable1 === info.flippable2;
+      if (plain && secTileNameMesMap?.has(info.artId) && info.artId % 100 <= 63) {
+        await selectPaletteTile(info.artId, info.name);
+        ui.list.querySelector(`.sec-edit-tile[data-art="${info.artId}"]`)?.scrollIntoView({ block: 'nearest' });
+      } else {
+        // a blended edge piece is not in the list: use that exact piece as the brush
+        if (!artTiles.has(raw)) { const art = await loadSecTileArt(info); if (art) artTiles.set(raw, art); }
+        edit.brush = { custom: true, raw, name: info.name, artId: info.artId };
+        showBrush(); markActiveTile();
+        status.textContent = `Picked ${info.name || 'tile'} (${hexRaw(raw)}) · left-drag to paint`;
+      }
+    };
+    const openFacadeTool = async (num, name) => {
+      await setTool('facade');
+      await selectFacade(num, name);
+      pk.facade.search.value = ''; filterPane(pk.facade);
+      setTimeout(() => pk.facade.list.querySelector(`.sec-edit-tile[data-id="${num}"]`)?.scrollIntoView({ block: 'nearest' }), 200);
+    };
+    const openObjectTool = async p => {
+      const kind = p.type === 0 ? 'wall' : p.type === 1 ? 'portal' : 'scenery';
+      await setTool(kind);
+      await protoCatalogReady();
+      const item = protoItemFor(p);
+      const P = pk[kind];
+      if (kind === 'scenery') {
+        const aid = p.currentAidRaw != null ? Number(p.currentAidRaw) >>> 0 : (item ? item.aid : null);
+        if (aid == null) { status.textContent = 'Could not tell which scenery this is.'; return; }
+        const key = ((aid >>> 6) & 31) * 1000 + ((aid >>> 19) & 0xFF);
+        let label = String(key);
+        try { const text = (await loadSceneryMes()).get(key); if (text != null) label = String(text).trim().replace(/\.art\b.*$/i, ''); } catch (_) {}
+        selectScenery(key, label);
+        const rot = aidRotation(aid);
+        if (rot != null && [...P.rot.options].some(o => o.value === String(rot))) P.rot.value = String(rot);
+        P.search.value = ''; filterPane(P);
+      } else {
+        if (!item) { status.textContent = `Could not find the prototype of this ${kind}.`; return; }
+        selectProto(kind, item);
+        if (kind === 'wall' && p.wallDecode) {
+          if ([...P.piece.options].some(o => o.value === String(p.wallDecode.piece))) P.piece.value = String(p.wallDecode.piece);
+          if ([...P.variation.options].some(o => o.value === String(p.wallDecode.variation))) P.variation.value = String(p.wallDecode.variation);
+        }
+        P.search.value = ''; filterPane(P);
+      }
+      setTimeout(() => P.list.querySelector('.sec-edit-tile.active')?.scrollIntoView({ block: 'nearest' }), 200);
+    };
+    const renderInspect = async () => {
+      const my = ++eyeSeq, tile = edit.eyeTile;
+      eye.list.innerHTML = '';
+      if (!tile) { eye.head.textContent = 'Click a tile on the map to see what is on it.'; return; }
+      const at = sectorAtWorld(tile.wx, tile.wy); if (!at) return;
+      eye.head.textContent = `Sector ${minX + (tile.wx >> 6)},${minY + (tile.wy >> 6)} · tile ${tile.wx & 63},${tile.wy & 63} — click an entry to open its tool`;
+      try { await loadSecFacadeNames(); } catch (_) {}
+      if (my !== eyeSeq) return;
+      const raw = at.sec.decoded.tiles[at.idx] >>> 0, info = secTileInfo(raw);
+      if (info.isFacade) {
+        eyeRow('Facade', `#${info.facadeNum} · ${info.facadeName || 'unnamed'}`, `cell ${info.facadeFrame}`, loadSecFacadeArt(raw),
+          () => openFacadeTool(info.facadeNum, info.facadeName || ''));
+      } else {
+        const art = artTiles.get(raw) || loadSecTileArt(info).then(a => { if (a) artTiles.set(raw, a); return a; });
+        const blend = info.num1 !== info.num2 || info.flippable1 !== info.flippable2;
+        eyeRow('Tile', `#${info.artId} · ${info.name || 'unnamed'}`, blend ? 'edge / blend piece' : '', art, () => openTileTool(raw, info));
+      }
+      if (!edit.objectsReady) {
+        eye.head.textContent += ' · loading objects…';
+        try { await objectsReady(); } catch (_) {}
+        if (my !== eyeSeq) return;
+        eye.head.textContent = eye.head.textContent.replace(' · loading objects…', '');
+      }
+      let n = 0;
+      const here = objectsAt(tile.wx, tile.wy);
+      for (const [type, label] of [[0, 'Wall'], [1, 'Portal'], [3, 'Scenery']]) {
+        for (const p of here.filter(o => o.type === type)) {
+          n++;
+          const item = protoItemFor(p);
+          const title = item ? `#${item.num} · ${item.label}` : (p.artName || p.name || label);
+          const rot = type === 3 ? null : (secEdgeRotation(p) ?? p.__rot);
+          const sub = [rot != null ? `${EDGE_NAMES[(rot >> 1) & 3]} edge` : null, p.staticSecObject ? null : 'from a .mob file'].filter(Boolean).join(' · ');
+          const art = p.artCanvas ? { canvas: p.artCanvas } : (item ? protoThumbArt(item) : null);
+          eyeRow(label, title, sub, art, () => openObjectTool(p));
+        }
+      }
+      const others = mobPoints.filter(p => p.type !== 0 && p.type !== 1 && p.type !== 3 && wxOf(p) === tile.wx && wyOf(p) === tile.wy).slice(0, 20);
+      for (const p of others) { n++; eyeRow(p.typeName || 'Object', p.artName || p.name || '', 'no tool for this one', p.artCanvas ? { canvas: p.artCanvas } : null, null); }
+      if (!n) { const none = document.createElement('p'); none.className = 'sec-eye-head'; none.textContent = 'No wall, portal, scenery or other object on this tile.'; eye.list.appendChild(none); }
+    };
+    const inspectTile = async event => {
+      const t = worldTileAt(event); if (!t || !sectorAtWorld(t.wx, t.wy)) return;
+      edit.eyeTile = { wx: t.wx, wy: t.wy };
+      scheduleCursor();
+      await renderInspect();
+    };
+    secProtoCatalog.listeners.push(() => { if (secProtoCatalog.done && edit.on && edit.tool === 'eyedropper' && edit.eyeTile) renderInspect(); });
+
+    // ---- tools ----
+    const layersForTool = { eraser: ['scenery', 'walls', 'otherMobs'], eyedropper: ['scenery', 'walls', 'otherMobs'], scenery: ['scenery'], wall: ['walls'], portal: ['walls', 'otherMobs'] };
+    const showLayers = keys => {
+      for (const k of keys) {
+        if (overlayVisibility[k]) continue;
+        overlayVisibility[k] = true;
+        overlayButtons[k]?.setAttribute('aria-pressed', 'true'); overlayButtons[k]?.classList.add('active');
+      }
+    };
+    const editCursor = () => edit.tool === 'move' ? 'grab' : 'crosshair';
+    // Leave the view where it is (same tile in the middle of the screen) when switching views.
+    const centreWorld = () => {
+      const cx = stage.clientWidth / 2, cy = stage.clientHeight / 2;
+      const sx = (cx - view.offsetX) / view.zoom, sy = (cy - view.offsetY) / view.zoom;
+      if (mode === 'art') { const p = secIsoUnproject(sx, sy, iso); return { x: p.x, y: p.y }; }
+      return { x: mapW - 1 - (sx - 0.5), y: sy - 0.5 };
+    };
+    const setModePreserve = async (nextMode, zoom) => {
+      if (mode === nextMode) return;
+      const c = centreWorld(), cx = stage.clientWidth / 2, cy = stage.clientHeight / 2;
+      mode = nextMode; modeBtn.textContent = mode === 'art' ? 'Top-down view' : 'Isometric view';
+      if (mode === 'art') { if (!view.blankSectors) view.blankSectors = secDetectBlankSectors(valid); artLoadStarted = true; }
+      view.zoom = zoom;
+      if (mode === 'art') { const p = secIsoProject(c.x, c.y, iso); view.offsetX = cx - p.x * zoom; view.offsetY = cy - p.y * zoom; }
+      else { view.offsetX = cx - (mapW - 1 - c.x + 0.5) * zoom; view.offsetY = cy - (c.y + 0.5) * zoom; }
+      redraw(); if (mode === 'art') scheduleVisibleArtLoad();
+    };
+    const setTool = async id => {
+      edit.tool = id;
+      ui.toolBtns.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.tool === id)));
+      for (const [k, el] of Object.entries(panes)) el.hidden = k !== (id === 'fill' ? 'tile' : id);
+      ui.sizeLabel.hidden = !(id === 'tile' || id === 'eraser');
+      ui.hint.textContent = toolHintFor(id);
+      canvas.style.cursor = editCursor();
+      edit.hover = null;
+      if (id === 'wall') await setModePreserve('color', 18);
+      else if (id !== 'move' && id !== 'eraser' && id !== 'eyedropper') await setModePreserve('art', 1);
+      if (layersForTool[id]) showLayers(layersForTool[id]);
+      if (id === 'eyedropper') secStartProtoScan();
+      if (needsObjects(id) && !edit.objectsReady) {
+        status.textContent = 'Loading objects…';
+        try { await objectsReady(); } catch (err) { status.textContent = `Could not load objects: ${String(err?.message || err)}`; }
+        if (edit.tool !== id) return;
+      }
+      if (id === 'facade') buildFacadePalette();
+      else if (PROTO_TYPE[id] != null) buildProtoPalette(id);
+      if (id === 'tile' || id === 'fill') {
+        const fillTool = id === 'fill';
+        status.textContent = edit.brush
+          ? `${fillTool ? 'Fill' : 'Brush'}: ${edit.brush.name || 'tile'} · ${fillTool ? 'click a tile to fill the connected area' : 'left-drag to paint'}`
+          : `${fillTool ? 'Fill' : 'Tile'} tool · pick a tile on the right${fillTool ? ', then click the map' : ', then left-drag on the map to paint'}`;
+      } else status.textContent = toolHintFor(id);
+      if (id === 'eyedropper') renderInspect();
+      redraw();
+    };
+    ui.toolBtns.forEach(b => b.addEventListener('click', () => { if (edit.on) setTool(b.dataset.tool); }));
+    // Outside edit mode the plain handler above switches the view; this one only handles edit mode.
+    modeBtn.addEventListener('click', () => { if (edit.on) setModePreserve(mode === 'color' ? 'art' : 'color', mode === 'color' ? 1 : 18); });
+
+    // ---- 100% zoom, centred on whatever is in the middle of the view ----
+    function zoom100() {
+      const cx = stage.clientWidth / 2, cy = stage.clientHeight / 2, old = view.zoom;
+      const wx = (cx - view.offsetX) / old, wy = (cy - view.offsetY) / old;
+      view.zoom = 1; view.offsetX = cx - wx; view.offsetY = cy - wy;
+      redraw(); scheduleVisibleArtLoad();
+    }
+    const loadAllSectorsForEdit = async () => {
+      if (!view.blankSectors) view.blankSectors = secDetectBlankSectors(valid);
+      const todo = valid.filter(sec => !view.loadedSectors.has(secSectorKey(sec)) && !view.blankSectors.has(secSectorKey(sec)));
+      let done = 0;
+      for (let i = 0; i < todo.length && edit.on; i += 4) {
+        status.textContent = `Edit mode · loading sectors… ${done}/${todo.length}`;
+        await Promise.all(todo.slice(i, i + 4).map(sec => loadSectorTiles(sec).then(() => { done++; })));
+      }
+      if (edit.on) status.textContent = toolHintFor(edit.tool);
+    };
+
+    const enterEdit = async () => {
+      if (edit.on) return;
+      editBtn.disabled = true;
+      try {
+        status.textContent = 'Edit mode · loading tile list…';
+        await loadSecTileNameMes(); await loadSecTileManifest();
+        detectPlainA3();
+        edit.on = true;
+        edit.prevSidebar = sidebarControl ? sidebarControl.isCollapsed() : null;
+        sidebarControl?.set(true, false);               // hide the folder sidebar (not remembered as a preference)
+        document.body.classList.add('sec-edit-full');      // header, folder sidebar and everything around the viewer disappear
+        window.scrollTo(0, 0);
+        article.classList.add('sec-editing'); info.classList.add('editing'); editPanel.hidden = false;
+        editBtn.textContent = 'Exit edit'; editBtn.setAttribute('aria-pressed', 'true');
+        hint.textContent = 'Edit mode · right/middle-drag: pan · wheel: zoom · Ctrl+Z / Ctrl+Y: undo / redo · the tool bar on the right chooses what the left button does';
+        selected = null;
+        buildPalette(); showBrush(); refreshEditUi();
+        if (mode !== 'art') await applyMode('art');     // actual tiles are needed to see what is placed
+        await nextFrame(); await nextFrame();            // let the layout settle after the sidebar closes
+        zoom100(); fitToolLabels();
+        await setTool(edit.tool);
+        loadAllSectorsForEdit().catch(err => { status.textContent = `Edit mode · ${String(err?.message || err)}`; });
+      } finally { editBtn.disabled = false; }
+    };
+    const exitEdit = () => {
+      if (!edit.on) return;
+      if (edit.unsaved && !confirm('You have edits that were not exported yet.\n\nPress Cancel, then use "Export .SEC" to save them first. Leave edit mode anyway?')) return;
+      endStroke();
+      edit.on = false; dragging = false; edit.hover = null;
+      document.body.classList.remove('sec-edit-full');
+      article.classList.remove('sec-editing'); info.classList.remove('editing'); editPanel.hidden = true;
+      editBtn.textContent = 'Edit'; editBtn.setAttribute('aria-pressed', 'false');
+      hint.textContent = originalHint;
+      canvas.style.cursor = 'crosshair';
+      fillLegend();
+      if (edit.prevSidebar === false) sidebarControl?.set(false, false);
+      selected = null; redraw();
+      requestAnimationFrame(() => requestAnimationFrame(() => fitView()));   // the stage has its normal size again
+      const n = dirtySectors().size;
+      status.textContent = n ? `${n} sector${n === 1 ? '' : 's'} modified · Export .SEC to save` : 'Top-down view · wheel to zoom · drag to pan · click a tile to inspect';
+    };
+    editBtn.addEventListener('click', () => { if (edit.on) exitEdit(); else enterEdit(); });
+
+    // ---- export: original bytes with only the tile list and the object list replaced ----
+    const saveBlob = (blob, name) => {
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob); a.download = name;
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(() => URL.revokeObjectURL(a.href), 10000);
+    };
+    exportSecBtn.addEventListener('click', async () => {
+      const changed = [...dirtySectors().values()];
+      if (!changed.length) return;
+      exportSecBtn.disabled = true;
+      try {
+        const files = changed.map(sec => ({ name: sec.filename, bytes: secBuildSectorBytes(sec.decoded) }));
+        if (files.length === 1) {
+          saveBlob(new Blob([files[0].bytes], { type: 'application/octet-stream' }), files[0].name);
+          status.textContent = `Exported ${files[0].name}`;
+        } else if (typeof JSZip !== 'undefined') {
+          const zip = new JSZip();
+          for (const f of files) zip.file(f.name, f.bytes);
+          const folder = String(relativePath || '').split('/').filter(Boolean).pop() || 'map';
+          saveBlob(await zip.generateAsync({ type: 'blob' }), `${folder}_edited_sec.zip`);
+          status.textContent = `Exported ${files.length} altered sectors as a .zip`;
+        } else {
+          for (const f of files) { saveBlob(new Blob([f.bytes], { type: 'application/octet-stream' }), f.name); await new Promise(r => setTimeout(r, 250)); }
+          status.textContent = `Exported ${files.length} altered sectors`;
+        }
+        edit.unsaved = false;
+      } catch (err) {
+        status.textContent = `Export failed: ${err && err.message ? err.message : err}`;
+      } finally { refreshEditUi(); }
+    });
 
     const ro=new ResizeObserver(()=>{ if(!view.initialized) fitView(); else redraw(); }); ro.observe(stage);
     requestAnimationFrame(fitView);
@@ -9184,7 +11723,7 @@
       localStorage.setItem(DATA_EXPLORER_STATE_KEY, JSON.stringify({
         mode,
         path: path || '',
-        folderName: (folderName && folderName !== '..') ? folderName : (mode === 'pro' ? 'proto' : 'maps'),
+        folderName: (folderName && folderName !== '..') ? folderName : (mode === 'pro' ? 'proto' : (mode === 'mes' ? 'mes' : 'maps')),
         file: file || null,
       }));
     } catch (_) {}
@@ -9195,7 +11734,7 @@
       const raw = localStorage.getItem(DATA_EXPLORER_STATE_KEY);
       if (!raw) return null;
       const state = JSON.parse(raw);
-      if (!state || (state.mode !== 'pro' && state.mode !== 'mob' && state.mode !== 'sec')) return null;
+      if (!state || (state.mode !== 'pro' && state.mode !== 'mob' && state.mode !== 'sec' && state.mode !== 'dlg' && state.mode !== 'mes')) return null;
       return state;
     } catch (_) {
       return null;
@@ -9816,8 +12355,10 @@
   } else {
     const savedDataState = loadDataExplorerState();
     if (savedDataState?.mode === 'sec') enterSecExplorer(true);
+    else if (savedDataState?.mode === 'dlg') enterDlgExplorer(true);
     else if (savedDataState?.mode === 'pro') enterProtoExplorer(true);
     else if (savedDataState?.mode === 'mob') enterMobExplorer(true);
+    else if (savedDataState?.mode === 'mes') enterMesExplorer(true);
   }
 
   // The last .SEC/.PRO/.MOB location is restored on a normal page reload.

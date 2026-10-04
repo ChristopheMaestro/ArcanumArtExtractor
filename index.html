@@ -22,6 +22,8 @@
       <button type="button" id="protoExploreBtn" class="file-mode-btn object-mode">.PRO files</button>
       <button type="button" id="mobExploreBtn" class="file-mode-btn object-mode">.MOB files</button>
       <button type="button" id="secExploreBtn" class="file-mode-btn object-mode">.SEC files</button>
+      <button type="button" id="dlgExploreBtn" class="file-mode-btn text-mode">.DLG files</button>
+      <button type="button" id="mesExploreBtn" class="file-mode-btn text-mode">.MES files</button>
     </nav>
   </header>
 
@@ -70,15 +72,15 @@
         <h2>Text tables</h2>
       </div>
       <div class="home-card-grid">
-        <button type="button" class="home-file-card is-disabled" disabled>
+        <button type="button" class="home-file-card" data-open-mode="dlg">
           <span class="home-file-icon" aria-hidden="true"><span class="home-file-fold"></span><span class="home-file-icon-label">.DLG</span></span>
           <strong>.dlg files</strong>
-          <span>Coming later</span>
+          <span>Explore dialogue trees and in-game conversation flow</span>
         </button>
-        <button type="button" class="home-file-card is-disabled" disabled>
+        <button type="button" class="home-file-card" data-open-mode="mes">
           <span class="home-file-icon" aria-hidden="true"><span class="home-file-fold"></span><span class="home-file-icon-label">.MES</span></span>
           <strong>.mes files</strong>
-          <span>Coming later</span>
+          <span>Explore keyed text tables and their comments</span>
         </button>
       </div>
     </div>
