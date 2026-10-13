@@ -1,0 +1,382 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arcanum Asset Browser</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="shell.css">
+</head>
+<body>
+<div class="page app" id="app">
+  <!-- Top bar: file-type switch (browse) · editor menu (edit) · context tools -->
+  <header class="topbar" id="topbar">
+    <button type="button" id="appTitle" class="brand" title="Back to the welcome screen">
+      <img class="brand-logo" src="logo.png" alt="Arcanum CE Restored logo" width="500" height="131">
+      <span class="brand-text"><span class="brand-kicker">Arcanum CE Restored</span><span class="brand-title">Asset Browser</span></span>
+    </button>
+    <nav class="topbar-tabs file-mode-nav" id="topbarTabs" aria-label="File type navigation">
+      <div class="tab-group tab-art" role="group" aria-label="Graphics">
+        <button type="button" id="artExploreBtn" class="file-mode-btn art-mode" title=".ART files" aria-pressed="false">ART</button>
+      </div>
+      <span class="tab-sep" aria-hidden="true"></span>
+      <div class="tab-group tab-object" role="group" aria-label="Object models">
+        <button type="button" id="protoExploreBtn" class="file-mode-btn object-mode" title=".PRO files" aria-pressed="false">PRO</button>
+        <button type="button" id="secExploreBtn" class="file-mode-btn object-mode" title=".SEC files" aria-pressed="false">SEC</button>
+        <button type="button" id="mobExploreBtn" class="file-mode-btn object-mode" title=".MOB files" aria-pressed="false">MOB</button>
+      </div>
+      <span class="tab-sep" aria-hidden="true"></span>
+      <div class="tab-group tab-text" role="group" aria-label="Text tables">
+        <button type="button" id="dlgExploreBtn" class="file-mode-btn text-mode" title=".DLG files" aria-pressed="false">DLG</button>
+        <button type="button" id="mesExploreBtn" class="file-mode-btn text-mode" title=".MES files" aria-pressed="false">MES</button>
+      </div>
+      <span class="tab-sep" aria-hidden="true"></span>
+      <div class="tab-group tab-script" role="group" aria-label="Script">
+        <button type="button" id="scrExploreBtn" class="file-mode-btn script-mode" title=".SCR files" aria-pressed="false">SCR</button>
+      </div>
+    </nav>
+    <div class="topbar-editor" id="topbarEditor" role="toolbar" aria-label="Map editor menu"></div>
+    <div class="topbar-tools" id="topbarTools" role="toolbar" aria-label="Tools">
+      <button type="button" id="packerLaunchBtn" class="tool-btn tool-art" title="Build a .ART file from BMP / PNG frames" hidden>🛠️ .ART Packer</button>
+      <button type="button" id="worldEditorLaunchBtn" class="tool-btn tool-art" title="Create a new world map and edit it" hidden>🌍 Open world editor</button>
+    </div>
+  </header>
+
+  <div class="workspace">
+    <!-- Left side bar: the file list; turns into the tool strip while editing a map -->
+    <aside class="side-left" id="sideLeft" aria-label="Files and tools">
+      <div class="side-layer side-tree">
+        <div class="side-head">
+          <span class="side-title" id="sideTreeTitle">Files</span>
+          <button type="button" id="sidebarToggleBtn" class="sidebar-toggle" aria-expanded="true" aria-controls="explorerTree" title="Hide the file list">◀</button>
+        </div>
+        <div class="explorer-tree" id="explorerTree" aria-label="File list"></div>
+      </div>
+      <div class="side-layer side-rail" id="toolRail" aria-label="Editing tools"></div>
+    </aside>
+
+    <!-- Centre: welcome screen, or the folders / files / viewer of the current category -->
+    <main class="stage" id="stage">
+      <section class="explorer-home" id="explorerHome">
+        <div class="welcome-head">
+          <img class="welcome-logo" src="logo.png" alt="" width="500" height="131">
+          <h1 class="welcome-title">Arcanum Asset Browser</h1>
+          <p class="welcome-sub">Pick a kind of file to start exploring. Seven file types in four categories.</p>
+          <div class="welcome-resume" id="welcomeResume" hidden></div>
+        </div>
+        <div class="home-category home-art">
+          <div class="home-category-heading">
+            <span class="home-category-kicker">01</span>
+            <h2>Graphics</h2>
+          </div>
+          <div class="home-card-grid">
+            <button type="button" class="home-file-card" data-open-mode="art">
+              <span class="home-file-icon" aria-hidden="true"><span class="home-file-fold"></span><span class="home-file-icon-label">.ART</span></span>
+              <strong>.art files</strong>
+              <span>Explore sprites, animations and graphics</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="home-category home-object">
+          <div class="home-category-heading">
+            <span class="home-category-kicker">02</span>
+            <h2>Object models</h2>
+          </div>
+          <div class="home-card-grid">
+            <button type="button" class="home-file-card" data-open-mode="pro">
+              <span class="home-file-icon" aria-hidden="true"><span class="home-file-fold"></span><span class="home-file-icon-label">.PRO</span></span>
+              <strong>.pro files</strong>
+              <span>Explore prototype object definitions</span>
+            </button>
+            <button type="button" class="home-file-card" data-open-mode="sec">
+              <span class="home-file-icon" aria-hidden="true"><span class="home-file-fold"></span><span class="home-file-icon-label">.SEC</span></span>
+              <strong>.sec files</strong>
+              <span>Browse 64×64 sector tile maps</span>
+            </button>
+            <button type="button" class="home-file-card" data-open-mode="mob">
+              <span class="home-file-icon" aria-hidden="true"><span class="home-file-fold"></span><span class="home-file-icon-label">.MOB</span></span>
+              <strong>.mob files</strong>
+              <span>Explore placed game objects</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="home-category home-text">
+          <div class="home-category-heading">
+            <span class="home-category-kicker">03</span>
+            <h2>Text tables</h2>
+          </div>
+          <div class="home-card-grid">
+            <button type="button" class="home-file-card" data-open-mode="dlg">
+              <span class="home-file-icon" aria-hidden="true"><span class="home-file-fold"></span><span class="home-file-icon-label">.DLG</span></span>
+              <strong>.dlg files</strong>
+              <span>Explore dialogue trees and in-game conversation flow</span>
+            </button>
+            <button type="button" class="home-file-card" data-open-mode="mes">
+              <span class="home-file-icon" aria-hidden="true"><span class="home-file-fold"></span><span class="home-file-icon-label">.MES</span></span>
+              <strong>.mes files</strong>
+              <span>Explore keyed text tables and their comments</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="home-category home-script">
+          <div class="home-category-heading">
+            <span class="home-category-kicker">04</span>
+            <h2>Script</h2>
+          </div>
+          <div class="home-card-grid">
+            <button type="button" class="home-file-card" data-open-mode="scr">
+              <span class="home-file-icon" aria-hidden="true"><span class="home-file-fold"></span><span class="home-file-icon-label">.SCR</span></span>
+              <strong>.scr files</strong>
+              <span>Read script logic: conditions, actions, jumps and calls</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="explorer" hidden>
+        <div class="explorer-main">
+          <div class="explorer-grid" id="explorerGrid"></div>
+          <div class="explorer-pagination" id="explorerPagination" hidden>
+            <div class="pagination-left">
+              <label for="explorerPageSize" class="pagination-size-label">Show</label>
+              <select id="explorerPageSize">
+                <option value="50">50</option>
+                <option value="100">100</option>
+                <option value="200">200</option>
+                <option value="all">All</option>
+              </select>
+              <button id="explorerBackBtn" type="button" class="pagination-navbtn">← Back</button>
+            </div>
+            <span id="explorerPaginationStatus"></span>
+            <button id="explorerLoadMoreBtn" type="button" class="pagination-navbtn">Next →</button>
+          </div>
+          <div class="explorer-viewer" id="explorerViewer" hidden></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Right side bar: search for the current category, then details of what is open -->
+    <aside class="side-right" id="sideRight" aria-label="Search and details">
+      <div class="explorer-search" id="artExplorerControls" role="search">
+        <div class="search-row">
+          <input type="search" id="explorerSearchInput" placeholder="Search .ART files by name…" aria-label="Search all folders">
+          <button id="explorerSearchBtn" type="button" class="search-btn" title="Search" aria-label="Search">🔍</button>
+        </div>
+        <button id="explorerSearchClear" type="button" class="search-btn search-clear" hidden>✕ Clear search</button>
+        <select id="protoObjectTypeFilter" class="proto-object-type-filter" hidden aria-label="Filter .PRO files by object type"><option value="all">All object types</option></select>
+      </div>
+      <div class="side-panel is-empty" id="sidePanel">
+        <p class="side-empty" id="sideEmpty">Open a file to see its details here.</p>
+      </div>
+    </aside>
+  </div>
+
+  <div class="statusbar" id="statusbar">
+    <p class="explorer-breadcrumb" id="explorerBreadcrumb">Loading library…</p>
+  </div>
+</div>
+
+<div id="gbOverlay" class="modal-overlay">
+  <div class="gif-builder" role="dialog" aria-modal="true" aria-label="GIF builder">
+    <div class="gb-header">
+      <h2 id="gbTitle">Build GIF</h2>
+      <label class="gb-direction-picker" id="gbDirectionPicker" hidden>
+        Direction
+        <select id="gbDirectionSelect"></select>
+      </label>
+      <button class="gb-close" id="gbClose" type="button" aria-label="Close">×</button>
+    </div>
+    <div class="gb-body">
+      <div class="gb-stage-wrap">
+        <div class="gb-stage-frame">
+          <canvas id="gbStageCanvas"></canvas>
+        </div>
+        <div class="gb-nav">
+          <button class="gb-navbtn" id="gbPrev" type="button">← Prev</button>
+          <span id="gbFrameLabel">1 / 1</span>
+          <button class="gb-navbtn" id="gbNext" type="button">Next →</button>
+        </div>
+        <p class="gb-hint">Drag the bright frame to reposition it. Arrow keys nudge by 1px, Shift+Arrow by 10px. The dimmer frame(s) are onion-skin references.</p>
+        <div class="gb-thumbstrip" id="gbThumbstrip"></div>
+      </div>
+      <div class="gb-side">
+        <div class="gb-field">
+          <label for="gbOnionMode">Onion skin</label>
+          <select id="gbOnionMode">
+            <option value="adjacent">Adjacent frames</option>
+            <option value="all">All included frames</option>
+            <option value="none">Off</option>
+          </select>
+        </div>
+        <div class="gb-field">
+          <label for="gbOnionOpacity">Onion skin opacity</label>
+          <input type="range" id="gbOnionOpacity" min="0.1" max="0.8" step="0.05" value="0.35">
+        </div>
+        <hr class="gb-divider">
+        <div class="gb-offset-row">
+          <div class="gb-field">
+            <label for="gbOffsetX">Offset X</label>
+            <input type="number" id="gbOffsetX" step="1">
+          </div>
+          <div class="gb-field">
+            <label for="gbOffsetY">Offset Y</label>
+            <input type="number" id="gbOffsetY" step="1">
+          </div>
+        </div>
+        <p class="gb-hint" id="gbEmbeddedHint" style="text-align:left"></p>
+        <div class="gb-btn-row">
+          <button id="gbAlignTopLeft" type="button">Top-left</button>
+          <button id="gbAlignCenter" type="button">Center</button>
+          <button id="gbAlignEmbedded" type="button">Embedded</button>
+        </div>
+        <div class="gb-btn-row">
+          <button id="gbAlignAllCenter" type="button">Center all frames</button>
+        </div>
+        <div class="gb-checkbox-row">
+          <input type="checkbox" id="gbIncludeFrame">
+          <label for="gbIncludeFrame">Include this frame in the GIF</label>
+        </div>
+        <hr class="gb-divider">
+        <div class="gb-field">
+          <label for="gbFrameDuration">This frame's duration (ms)</label>
+          <input type="number" id="gbFrameDuration" min="10" step="10">
+        </div>
+        <div class="gb-field">
+          <label for="gbGlobalDuration">Duration to apply (ms)</label>
+          <input type="number" id="gbGlobalDuration" min="10" step="10" value="100">
+        </div>
+        <div class="gb-btn-row">
+          <button id="gbApplyDuration" type="button">Apply to all frames</button>
+        </div>
+        <div class="gb-checkbox-row">
+          <input type="checkbox" id="gbLoop" checked>
+          <label for="gbLoop">Loop forever</label>
+        </div>
+        <hr class="gb-divider">
+        <button class="gb-compile" id="gbCompile" type="button">Compile GIF</button>
+        <div class="gb-progress" id="gbProgress"><div class="gb-progress-bar" id="gbProgressBar"></div></div>
+        <div class="gb-result" id="gbResult">
+          <img id="gbResultImg" alt="Compiled GIF preview">
+          <button id="gbDownload" type="button">Download GIF</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="hexOverlay" class="hex-panel" role="complementary" aria-label="Hex viewer">
+  <div class="hex-header">
+    <h2 id="hexTitle">Hex view</h2>
+    <span class="hex-meta" id="hexMeta"></span>
+    <button class="hex-close" id="hexClose" type="button" aria-label="Close">×</button>
+  </div>
+  <div class="hex-workspace">
+    <aside class="hex-frame-strip" id="hexFrameStrip" aria-label="ART frames"></aside>
+    <section class="hex-main">
+      <div class="hex-analysis" id="hexAnalysis"></div>
+      <div class="hex-scroll" id="hexScroll">
+        <div class="hex-spacer" id="hexSpacer">
+          <div class="hex-rows" id="hexRows"></div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<div id="packerOverlay" class="modal-overlay">
+  <div class="dat-packer" role="dialog" aria-modal="true" aria-label=".ART Packer">
+    <div class="packer-header">
+      <h2>.ART Packer</h2>
+      <button class="packer-close" id="packerClose" type="button" aria-label="Close">×</button>
+    </div>
+    <div class="packer-body">
+      <section class="packer-step">
+        <h3><span>1</span> What is this .art for?</h3>
+        <div class="packer-kinds" id="packerKinds" role="radiogroup" aria-label="Kind of .art file"></div>
+        <p class="packer-hint" id="packerKindBlurb"></p>
+        <div class="packer-options">
+          <div class="gb-field" id="packerActivityField" hidden>
+            <label for="packerActivity">Animation</label>
+            <select id="packerActivity"></select>
+          </div>
+          <div class="gb-field" id="packerEdgeField" hidden>
+            <label for="packerEdge">Wall edge</label>
+            <select id="packerEdge"></select>
+          </div>
+          <div class="gb-field" id="packerFpsField">
+            <label for="packerFps">Frames per second</label>
+            <input type="number" id="packerFps" min="1" max="60" step="1" value="8">
+          </div>
+          <div class="gb-field" id="packerActionField">
+            <label for="packerAction" title="The frame at which the game applies the animation's effect: a swing's hit, a door's opening…">Action frame</label>
+            <input type="number" id="packerAction" min="0" step="1" placeholder="last">
+          </div>
+          <div class="gb-field packer-template-field">
+            <label for="packerTemplateInput">Copy settings from an existing .art (optional)</label>
+            <input type="file" id="packerTemplateInput" accept=".art">
+            <span id="packerTemplateStatus" class="packer-template-status"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="packer-step">
+        <h3><span>2</span> Add the frames</h3>
+        <p class="packer-hint" id="packerFramesHint"></p>
+        <section id="packerDropzone" class="dropzone packer-dropzone" tabindex="0" role="button" aria-label="Choose or drop .BMP or .PNG frames">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 19h16"/></svg>
+          <p class="dz-label">Drop .BMP or .PNG frames here</p>
+          <p class="dz-hint">or click to browse. Add them in file order. PNG: the first one sets the palette and transparent pixels become the game's transparent colour (palette index 0). BMP: 8-bit indexed; pure blue becomes index 0.</p>
+          <input type="file" id="packerFileInput" accept=".bmp,.png" multiple hidden>
+        </section>
+        <p class="packer-summary" id="packerSummary"></p>
+        <ol id="packerFrameList" class="packer-frame-list"></ol>
+      </section>
+
+      <section class="packer-step" id="packerStageStep">
+        <h3><span>3</span> Place the hotspot</h3>
+        <p class="packer-hint" id="packerStageHint"></p>
+        <div class="packer-stage-wrap">
+          <canvas id="packerStage" class="packer-stage" width="560" height="380" tabindex="0" aria-label="Hotspot preview. Drag the picture, or use the arrow keys."></canvas>
+        </div>
+        <div class="packer-stage-tools">
+          <label>Zoom <select id="packerZoom"><option value="1">1×</option><option value="2" selected>2×</option><option value="3">3×</option><option value="4">4×</option></select></label>
+          <label class="packer-check"><input type="checkbox" id="packerMoveTogether" checked> Move all frames together</label>
+          <button type="button" id="packerHotReset" class="search-btn">Default hotspot</button>
+          <button type="button" id="packerHotAll" class="search-btn">Copy this frame's hotspot to all</button>
+          <button type="button" id="packerStride" class="search-btn" hidden>Fill walking movement</button>
+        </div>
+      </section>
+
+      <section class="packer-step">
+        <h3><span>4</span> Build</h3>
+
+      <div class="packer-output-row">
+        <div class="gb-field">
+          <label for="packerFilename">Output filename</label>
+          <input type="text" id="packerFilename" placeholder="myitem">
+        </div>
+        <button id="packerClearBtn" type="button" class="search-btn">Clear frames</button>
+        <button id="packerBuild" type="button" class="gb-compile">Build .art file</button>
+      </div>
+
+      <div id="packerLog" class="log packer-log" aria-live="polite"></div>
+
+      <div class="gb-result" id="packerResult">
+        <button id="packerDownload" type="button">Download .art</button>
+      </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gif.js@0.2.0/dist/gif.js"></script>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+// Item sounds range 4000-5999
+// * weapons only
+
+// subtypes begin at multiples of 10 and are values of TIG_Art_Weapon in art.h (minus 2, since no_weapon and unarmed are not items)
+
+// --- daggers start at 4000
+
+{4000}{swish_thin.wav} //Use
+{4001}{} //Busted
+{4002}{} //Destroyed
+{4003}{} //*Miss
+{4004}{} //*Hit 1 (if empty default to weapon material to target material table.)
+{4005}{} //*Hit 2 (if empty default to weapon material to target material table.)
+{4006}{} //*Critical Hit (if empty default to weapon material to target material table.)
+{4007}{} //*Out of ammo. If empty, play nothing
+
+// --- one-handed swords start at 4010
+
+{4010}{swish_medium.wav} //Use
+{4011}{} //Busted
+{4012}{} //Destroyed
+{4013}{} //*Miss
+{4014}{} //*Hit 1 (if empty default to weapon material to target material table.)
+{4015}{} //*Hit 2 (if empty default to weapon material to target material table.)
+{4016}{} //*Critical Hit (if empty default to weapon material to target material table.)
+{4017}{} //*Out of ammo. If empty, play nothing
+
+// --- axes start at 4020
+
+// --- maces/hammers start at 4030
+
+{4030}{swish_heavy.wav} //Use
+{4031}{} //Busted
+{4032}{} //Destroyed
+{4033}{} //*Miss
+{4034}{} //*Hit 1 (if empty default to weapon material to target material table.)
+{4035}{} //*Hit 2 (if empty default to weapon material to target material table.)
+{4036}{} //*Critical Hit (if empty default to weapon material to target material table.)
+{4037}{} //*Out of ammo. If empty, play nothing
+
+// --- pistols start at 40
+
+{4040}{shoot_pistol.wav} //Use
+{4041}{break_gun_small.wav} //Busted
+{4042}{break_gun_small.wav} //Destroyed
+{4043}{RICOCHET.wav} //*Miss
+{4044}{} //*Hit 1 (if empty default to weapon material to target material table.)
+{4045}{} //*Hit 2 (if empty default to weapon material to target material table.)
+{4046}{} //*Critical Hit (if empty default to weapon material to target material table.)
+{4047}{gun-out-of-ammo.wav} //*Out of ammo. If empty, play nothing
+
+// --- two-handed swords start at 50
+
+{4050}{swish_heavy.wav} //Use
+{4051}{} //Busted
+{4052}{} //Destroyed
+{4053}{} //*Miss
+{4054}{} //*Hit 1 (if empty default to weapon material to target material table.)
+{4055}{} //*Hit 2 (if empty default to weapon material to target material table.)
+{4056}{} //*Critical Hit (if empty default to weapon material to target material table.)
+{4057}{} //*Out of ammo. If empty, play nothing
+
+// --- bows start at 60
+
+{4060}{shoot_bow.wav} //Use
+{4061}{break_bow.wav} //Busted
+{4062}{break_bow.wav} //Destroyed
+{4063}{} //*Miss
+{4064}{} //*Hit 1 (if empty default to weapon material to target material table.)
+{4065}{} //*Hit 2 (if empty default to weapon material to target material table.)
+{4066}{} //*Critical Hit (if empty default to weapon material to target material table.)
+{4067}{} //*Out of ammo. If empty, play nothing
+
+// --- rifles/hi tech guns start at 80
+
+{4080}{shoot_rifle.wav} //Use
+{4081}{break_gun_big.wav} //Busted
+{4082}{break_gun_big.wav} //Destroyed
+{4083}{RICOCHET.wav} //*Miss
+{4084}{} //*Hit 1 (if empty default to weapon material to target material table.)
+{4085}{} //*Hit 2 (if empty default to weapon material to target material table.)
+{4086}{} //*Critical Hit (if empty default to weapon material to target material table.)
+{4087}{gun-out-of-ammo.wav} //*Out of ammo. If empty, play nothing
+
+// --- staffs start at 110
+
+{4110}{swish_heavy.wav} //Use
+{4111}{} //Busted
+{4112}{} //Destroyed
+{4113}{} //*Miss
+{4114}{} //*Hit 1 (if empty default to weapon material to target material table.)
+{4115}{} //*Hit 2 (if empty default to weapon material to target material table.)
+{4116}{} //*Critical Hit (if empty default to weapon material to target material table.)
+{4117}{} //*Out of ammo. If empty, play nothing
+
+// Wolf Teeth???
+
+{5060}{critter_wolf_miss.wav} //Use
+{5061}{} //Busted
+{5062}{} //Destroyed
+{5063}{critter_wolf_miss.wav} //*Miss
+{5064}{} //*Hit 1 (if empty default to weapon material to target material table.)
+{5065}{} //*Hit 2 (if empty default to weapon material to target material table.)
+{5066}{} //*Critical Hit (if empty default to weapon material to target material table.)
+{5067}{} //*Out of ammo. If empty, play nothing
+
+// Flame Thrower
+
+{5070}{Spell_Elemental_Fire_Body_Up.Wav} //Use
+{5071}{} //Busted
+{5072}{} //Destroyed
+{5073}{} //*Miss
+{5074}{} //*Hit 1 (if empty default to weapon material to target material table.)
+{5075}{} //*Hit 2 (if empty default to weapon material to target material table.)
+{5076}{} //*Critical Hit (if empty default to weapon material to target material table.)
+{5077}{} //*Out of ammo. If empty, play nothing
+
+// Hushed Pistol
+
+{5080}{shoot_pistol-hushed.Wav} //Use
+{5081}{} //Busted
+{5082}{} //Destroyed
+{5083}{} //*Miss
+{5084}{} //*Hit 1 (if empty default to weapon material to target material table.)
+{5085}{} //*Hit 2 (if empty default to weapon material to target material table.)
+{5086}{} //*Critical Hit (if empty default to weapon material to target material table.)
+{5087}{} //*Out of ammo. If empty, play nothing
+
+
+// General item sounds ------------------------------------
+
+// Picking up sounds
+
+{5950}{item_pick_up.wav} // flesh
+{5951}{item_pick_up.wav} // light metal
+{5952}{item_pick_up.wav} // heavy metal
+{5953}{item_pick_up.wav} // stone
+{5954}{item_pick_up.wav} // wood
+{5955}{item_pick_up.wav} // glass
+{5956}{item_pick_up.wav} // cloth
+{5957}{item_pick_up.wav} // paper
+{5958}{BagOfCoins.wav} // coins
+
+// Dropping sounds
+
+{5960}{item_drop.wav} // flesh
+{5961}{item_drop.wav} // light metal
+{5962}{item_drop.wav} // heavy metal
+{5963}{item_drop.wav} // stone
+{5964}{item_drop.wav} // wood
+{5965}{item_drop.wav} // glass
+{5966}{item_drop.wav} // cloth
+{5967}{item_drop.wav} // paper
+{5968}{BagOfCoins.wav} // coins
