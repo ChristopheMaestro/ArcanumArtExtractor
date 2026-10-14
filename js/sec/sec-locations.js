@@ -35,7 +35,7 @@ export function parseGameAreas(text) {
 let placesPromise = null;
 export function loadGameAreas() {
   if (!placesPromise) placesPromise = (async () => {
-    const resp = await fetch(`${DATA_ROOT}mes/gamearea.mes`, { cache: 'no-store' });
+    const resp = await fetch(`${DATA_ROOT}mes/gamearea.mes`);
     if (!resp.ok) throw new Error(`gamearea.mes: HTTP ${resp.status}`);
     return parseGameAreas(await resp.text());
   })().catch(err => { placesPromise = null; throw err; });

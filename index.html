@@ -9,9 +9,9 @@
      locate_world_labels.py, items.js by build_items.py, ...; encounters.js is loaded on demand). Pictures: atlas/
      (item-icons.png, portraits.png, maps/ read by world-atlas.html); music and sounds: data/sound/. Files and Workshop = the Asset Browser
      (asset-browser.html) in two frames; the Workshop keeps to its map editor. -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- Fonts saved in vendor/fonts/. Not render-blocking (media flips on load): a pending stylesheet would hold up the
+     script that starts a #files frame -->
+<link href="vendor/fonts/fonts.css" rel="stylesheet" media="print" onload="this.media='all'">
 <style>
 :root {
   --bg: #1a1a1a; --surface: #211c14; --surface-2: #362e22; --surface-3: #2a241a;
@@ -565,7 +565,7 @@ button.dbar:hover { background: var(--surface-2); color: var(--ink); }
       <button class="edgetoggle" id="placesToggle" type="button" title="Hide the places list" aria-label="Hide the places list" aria-expanded="true">‹</button>
       <!-- which place is on show: kept here for the page's own use (the places list shows it) -->
       <span id="atlasTitle" hidden>Shrouded Hills</span><span id="atlasCrumb" hidden>Arcanum › Cities</span>
-      <!-- the real world map (world-atlas.html, pictures in atlas/maps/world/) with the labels placed by toolbox/atlas/locate_world_labels.py and the containers of toolbox/atlas/build_items.py -->
+      <!-- the real world map (world-atlas.html, pictures in atlas/world/) with the labels placed by toolbox/atlas/locate_world_labels.py and the containers of toolbox/atlas/build_items.py -->
       <iframe class="mapview" id="worldFrame" src="world-atlas.html?embed=1&amp;place=Shrouded%20Hills" title="World map" style="border:0;width:100%"></iframe>
       <div class="sndnow" id="sndNow" hidden></div>
     </main>
@@ -600,6 +600,18 @@ button.dbar:hover { background: var(--surface-2); color: var(--ink); }
       </div>
     </main>
   </div>
+  <script>
+  // A #files / #workshop link starts its frame now, while the Atlas's data below is still loading (online that is seconds).
+  // The same link loadBrowser() (js/atlas/atlas-app.js) makes, so it keeps this frame rather than loading it again.
+  (function () {
+    var q = location.hash.slice(1).split('&'), screen = q.shift(), frame = document.getElementById(screen === 'files' ? 'filesFrame' : screen === 'workshop' ? 'workFrame' : '');
+    if (!frame) return;
+    var query = q.length ? q.join('&') : (screen === 'workshop' ? 'mode=sec' : '');
+    if (q.length && screen === 'files') { var p = new URLSearchParams(query); p.delete('editor'); query = String(p); }
+    frame.style.visibility = 'hidden';
+    frame.src = 'asset-browser.html' + (query ? '?' + query : '');
+  })();
+  </script>
 
   <div class="statusbar" id="statusbar"></div>
 </div>

@@ -43,10 +43,9 @@ async function mesFolderHasContent(relativePath, folderName) {
     try {
       const manifest = await loadMesManifest(relativePath, folderName);
       if (manifestFiles(manifest, 'mes').length) return true;
-      for (const sf of mesSubfolders(manifest)) {
-        const fullPath = joinPath(relativePath, sf.relative_path);
-        if (await mesFolderHasContent(fullPath, sf.folder_name)) return true;
-      }
+      // sub-folders all at once: online each manifest is a round trip
+      const found = await Promise.all(mesSubfolders(manifest).map(sf => mesFolderHasContent(joinPath(relativePath, sf.relative_path), sf.folder_name)));
+      if (found.some(Boolean)) return true;
     } catch (_) {}
     return false;
   })();
@@ -54,12 +53,9 @@ async function mesFolderHasContent(relativePath, folderName) {
   return promise;
 }
 async function mesVisibleSubfolders(manifest, relativePath) {
-  const result = [];
-  for (const sf of mesSubfolders(manifest)) {
-    const fullPath = joinPath(relativePath, sf.relative_path);
-    if (await mesFolderHasContent(fullPath, sf.folder_name)) result.push(sf);
-  }
-  return result;
+  const subs = mesSubfolders(manifest);
+  const keep = await Promise.all(subs.map(sf => mesFolderHasContent(joinPath(relativePath, sf.relative_path), sf.folder_name)));
+  return subs.filter((_, i) => keep[i]);
 }
 function mesFileUrl(relativePath, filename) {
   return `${MES_ROOT}${relativePath ? encPath(relativePath) + '/' : ''}${encPath(filename)}`;

@@ -6,7 +6,7 @@ import { exportCanvasPng } from '../art/art-export.js';
 import { parseArtBuffer } from '../art/art-decoder.js';
 import { DATA_ROOT, SEC_ROOT } from '../core/config.js';
 import { breadcrumbEl } from '../core/dom.js';
-import { encPath } from '../core/util.js';
+import { encPath, loadJSZip } from '../core/util.js';
 import { mobObjectTypeName } from '../mob/mob-schema.js';
 import { aidRotation } from '../objects/art-frames.js';
 import { loadMobMapArtShared } from '../objects/map-art-loader.js';
@@ -192,7 +192,7 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
   let mapBackground = null;
   try {
     const mapUrl = `${SEC_ROOT}${relativePath ? encPath(relativePath) + '/' : ''}Map.bmp`;
-    const resp = await fetch(mapUrl, { cache: 'no-store' });
+    const resp = await fetch(mapUrl);
     if (resp.ok) {
       const blob = await resp.blob(), objectUrl = URL.createObjectURL(blob), img = new Image();
       mapBackground = await new Promise(resolve => {
@@ -2079,7 +2079,7 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
   });
   const questPanel = createQuestPanel(panes.quest, { story: edit.story, changed: storyChanged });
   const fetchDataBytes = async path => {
-    const resp = await fetch(`${DATA_ROOT}${path}`, { cache: 'no-store' });
+    const resp = await fetch(`${DATA_ROOT}${path}`);
     if (!resp.ok) throw new Error(`${path}: HTTP ${resp.status}`);
     return new Uint8Array(await resp.arrayBuffer());
   };
@@ -2089,7 +2089,7 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
     let rec = shippedRecs.get(pt.file);
     if (!rec) {
       if (!pt.mobUrl) return null;
-      const resp = await fetch(pt.mobUrl, { cache: 'no-store' });
+      const resp = await fetch(pt.mobUrl);
       if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
       const bytes = new Uint8Array(await resp.arrayBuffer());
       rec = { name: pt.file, bytes, orig: bytes.slice(), pt, shipped: true, kind: pt.type === 2 ? 'containers' : 'npcs', protoNum: pt.protoNum };
@@ -4486,8 +4486,8 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
       if (files.length === 1 && !files[0].name.includes('/')) {
         saveBlob(new Blob([files[0].bytes], { type: 'application/octet-stream' }), files[0].name);
         status.textContent = `Exported ${files[0].name}`;
-      } else if (typeof JSZip !== 'undefined') {
-        const zip = new JSZip();
+      } else if (await loadJSZip().then(() => true, () => false)) {
+        const zip = new window.JSZip();
         for (const f of files) zip.file(f.name, f.bytes);
         const folder = String(relativePath || '').split('/').filter(Boolean).pop() || 'map';
         const onlyStory = hasStory && !changed.length && !mobs.length;

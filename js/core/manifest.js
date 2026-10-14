@@ -49,7 +49,7 @@ export function createManifestLoader({ root, rootName, label }) {
     if (cache.has(path)) return cache.get(path);
     const url = manifestUrl(root, path, folderName, rootName);
     try {
-      const resp = await fetch(url, { cache: 'no-store' });
+      const resp = await fetch(url);
       if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
       const data = await resp.json();
       cache.set(path, data);
@@ -66,7 +66,7 @@ export function artNameIndex(url) {
   return memoAsync(async () => {
     const map = new Map();
     try {
-      const resp = await fetch(url, { cache: 'no-store' });
+      const resp = await fetch(url);
       if (resp.ok) {
         for (const f of manifestFileList(await resp.json())) {
           if (/\.art$/i.test(f)) { const base = f.split('/').pop(); map.set(base.toLowerCase(), base); }

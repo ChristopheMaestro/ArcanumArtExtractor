@@ -3,7 +3,7 @@
 import { errText } from '../core/text-io.js';
 import { readCanvasPixels } from '../core/canvas-utils.js';
 import { log } from '../core/log.js';
-import { saveFile } from '../core/util.js';
+import { loadGifJs, saveFile, vendorUrl } from '../core/util.js';
 
 let activeGroup = null;    // the { frames, currentIndex, ... } state for the open builder
 let activeGroupRef = null; // the file-group it belongs to (for baseName / re-entry)
@@ -234,7 +234,7 @@ export function closeGifBuilder() {
 
 async function getGifWorkerUrl() {
   if (gifWorkerUrl) return gifWorkerUrl;
-  const resp = await fetch('https://cdn.jsdelivr.net/npm/gif.js@0.2.0/dist/gif.worker.js');
+  const resp = await fetch(vendorUrl('gif.worker.js'));
   if (!resp.ok) throw new Error(`couldn't load the GIF worker script (HTTP ${resp.status})`);
   const text = await resp.text();
   gifWorkerUrl = URL.createObjectURL(new Blob([text], { type: 'application/javascript' }));
@@ -294,7 +294,7 @@ async function compileGif() {
   document.getElementById('gbResult').classList.remove('show');
 
   try {
-    const workerScript = await getGifWorkerUrl();
+    const [workerScript, GIF] = await Promise.all([getGifWorkerUrl(), loadGifJs()]);
     const width = Math.max(1, Math.round(bounds.width));
     const height = Math.max(1, Math.round(bounds.height));
     const keyColor = pickGifTransparentKey(included);

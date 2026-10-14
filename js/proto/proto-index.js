@@ -25,9 +25,13 @@ async function listProtoFiles(path, name, out, visited) {
   let manifest;
   try { manifest = await loadProtoManifest(path, name); } catch (_) { return; }
   for (const filename of manifestFiles(manifest, 'pro')) out.push({ filename, path, folderName: name });
-  for (const sf of manifestSubfolders(manifest)) {
-    await listProtoFiles(joinPath(path, sf.relative_path || sf.folder_name), sf.folder_name, out, visited);
-  }
+  // sub-folders all at once (a round trip each online), their files kept in folder order
+  const subs = await Promise.all(manifestSubfolders(manifest).map(async sf => {
+    const sub = [];
+    await listProtoFiles(joinPath(path, sf.relative_path || sf.folder_name), sf.folder_name, sub, visited);
+    return sub;
+  }));
+  for (const sub of subs) out.push(...sub);
 }
 
 async function buildIndex() {

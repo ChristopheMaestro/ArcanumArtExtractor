@@ -6,6 +6,7 @@ import { errText } from '../core/text-io.js';
 import { createManifestLoader } from '../core/manifest.js';
 import { parseArtBuffer } from './art-decoder.js';
 import { attachArtPreview, deferArtPreview } from './art-preview.js';
+import { folderPreviewCells, loadSheet, loadThumbIndex, sheetCellCanvas } from './art-thumb-sheets.js';
 import { renderFileGroup } from './file-group.js';
 import { ART_ROOT } from '../core/config.js';
 import {
@@ -119,7 +120,8 @@ function createFileCard(filename, relPath, folderName, opts) {
 
   const thumb = document.createElement('span');
   thumb.className = 'explorer-thumb';
-  attachArtPreview(thumb, relPath, filename);
+  // a folder page uses the folder's thumbnail sheets; search results come from many folders: one file each
+  attachArtPreview(thumb, relPath, filename, opts?.showPath ? null : folderFiles);
   card.appendChild(thumb);
 
   const name = document.createElement('span');
@@ -172,6 +174,24 @@ function renderSubfolderCard(sf, parentRelPath) {
   gridEl.appendChild(card);
 
   deferArtPreview(thumb, async () => {
+    // The previews of a folder's sub-folders are one sheet; without it, walk the sub-folder for its first files.
+    const cells = await folderPreviewCells(parentRelPath, fullPath);
+    const sheetUrl = cells?.find(c => !c.missing)?.url;
+    const sheet = sheetUrl ? await loadSheet(sheetUrl) : null;
+    if (cells && (!sheetUrl || sheet)) {
+      if (!cells.length || !thumb.isConnected) return;
+      thumb.innerHTML = '';
+      thumb.classList.add('has-mosaic');
+      for (let i = 0; i < 4; i++) {
+        const cell = document.createElement('span');
+        cell.className = 'mosaic-cell';
+        if (!cells[i]) cell.classList.add('empty');
+        else if (cells[i].missing) { cell.classList.add('missing'); cell.textContent = '🖼'; }
+        else cell.appendChild(sheetCellCanvas(sheet, cells[i]));
+        thumb.appendChild(cell);
+      }
+      return;
+    }
     const arts = await findFirstArtFiles(fullPath, sf.folder_name, 4);
     if (!arts.length || !thumb.isConnected) return;
     thumb.innerHTML = '';
@@ -189,7 +209,9 @@ function renderSubfolderCard(sf, parentRelPath) {
   });
 }
 
-async function findFirstArtFiles(relativePath, folderName, limit) {
+// The first `limit` .art files of a folder and then of its sub-folders, depth first: a folder card's preview.
+// toolbox/build_art_thumbs.py makes the preview sheets with it.
+export async function findFirstArtFiles(relativePath, folderName, limit) {
   const arts = [];
   const visited = new Set();
   const MAX_FETCHES = 40;
@@ -477,6 +499,7 @@ async function selectFolder(relativePath, folderName) {
 let artTree = null;
 
 export function initExplorer(skipAutoOpen) {
+  loadThumbIndex();   // alongside the first folder manifest, not after it
   artTree = mountFolderTree({
     rootName: ROOT_FOLDER_NAME, loadManifest, ext: 'art', fileIcon: '🖼️',
     openFolder: selectFolder,

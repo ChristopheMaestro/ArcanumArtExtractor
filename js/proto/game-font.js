@@ -17,7 +17,7 @@ const fonts = new Map();     // file name -> memoized loader
 export function loadGameFont(file) {
   if (!fonts.has(file)) {
     fonts.set(file, memoAsync(async () => {
-      const resp = await fetch(`${FONT_ROOT}${file}`, { cache: 'no-store' });
+      const resp = await fetch(`${FONT_ROOT}${file}`);
       if (!resp.ok) throw new Error(`HTTP ${resp.status} fetching ${file}`);
       const frames = await parseArtBuffer(await resp.arrayBuffer());
       const glyphs = new Map();

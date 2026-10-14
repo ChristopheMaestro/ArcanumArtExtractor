@@ -9,7 +9,7 @@ export function decodeText(buf) {
 }
 
 export async function fetchBuffer(url) {
-  const resp = await fetch(url, { cache: 'no-store' });
+  const resp = await fetch(url);
   if (!resp.ok) throw new Error(`HTTP ${resp.status} fetching ${url}`);
   return resp.arrayBuffer();
 }

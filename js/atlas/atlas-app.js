@@ -26,7 +26,9 @@ IT.containers.forEach((c, ci) => c.items.forEach(([i, q]) => WHERE[i][c.storeOf 
 IT.npcs.forEach((n, ni) => n.items.forEach(([i, q]) => WHERE[i].n.push([ni, q])));
 IT.ground.forEach((g, gi) => WHERE[g.item].g.push(gi));
 const SOURCE_USERS = {};          // list -> the containers, merchants (by their box) and people who roll it
-const users = id => SOURCE_USERS[id] = SOURCE_USERS[id] || { c: [], m: [], n: [] };
+const users = id => SOURCE_USERS[id] = SOURCE_USERS[id] || { c: [], m: [], n: [], e: [] };
+// e: creatures the world map's random encounters make (Arcanum only)
+for (const [id, s] of Object.entries(IT.sources)) if (s.wander) users(id).e = s.wander;
 IT.containers.forEach((c, ci) => c.source && (c.storeOf != null ? users(c.source).m.push(c.storeOf) : users(c.source).c.push(ci)));
 IT.npcs.forEach((n, ni) => n.source && users(n.source).n.push(ni));
 for (const [id, s] of Object.entries(IT.sources)) if (SOURCE_USERS[id]) s.items.forEach(([i, r]) => WHERE[i].s.push([id, r]));
@@ -84,9 +86,9 @@ const wireItems = root => {
 // game: only where it is found in that game (Arcanum or a module; the Items screen's filter), else everywhere
 function itemDetail(i, game) {
   const it = IT.items[i], all = WHERE[i];
-  const inG = (g => !game || g === game), userIn = u => !game ? u : { c: u.c.filter(ci => CON_GAME[ci] === game), m: u.m.filter(ni => NPC_GAME[ni] === game), n: u.n.filter(ni => NPC_GAME[ni] === game) };
+  const inG = (g => !game || g === game), userIn = u => !game ? u : { c: u.c.filter(ci => CON_GAME[ci] === game), m: u.m.filter(ni => NPC_GAME[ni] === game), n: u.n.filter(ni => NPC_GAME[ni] === game), e: game === 'Arcanum' ? u.e : [] };
   const w = !game ? all : { c: all.c.filter(([ci]) => inG(CON_GAME[ci])), b: all.b.filter(([ci]) => inG(CON_GAME[ci])), n: all.n.filter(([ni]) => inG(NPC_GAME[ni])),
-    g: all.g.filter(gi => inG(gameOf(IT.ground[gi]))), s: all.s.filter(([id]) => { const u = userIn(SOURCE_USERS[id]); return u.c.length + u.m.length + u.n.length; }),
+    g: all.g.filter(gi => inG(gameOf(IT.ground[gi]))), s: all.s.filter(([id]) => { const u = userIn(SOURCE_USERS[id]); return u.c.length + u.m.length + u.n.length + u.e.length; }),
     x: all.x.filter(gi => inG(scriptGame(IT.scripted[gi]))) };
   const sub = [it.kind === 'Written' ? it.written : it.kind, it.slot && it.slot !== 'Torso' ? it.slot : '', it.ammo,
     it.slot === 'Torso' && it.sizes ? (it.sizes.length === 3 ? 'any size' : 'size ' + it.sizes.join('/')) : '',
@@ -116,7 +118,7 @@ function itemDetail(i, game) {
   }));
   if (w.x.length) rows.push(`<div class="wgrp">🎁 Given by a script</div>` + more(w.x, 20, gi => {
     const g = IT.scripted[gi];
-    const how = g.price ? `sells it for ${g.price} gold` : g.when === 'talk' ? (g.toPc ? 'hands it over in a conversation' : 'comes to have it through a conversation')
+    const how = g.turns ? `turns into it${g.when === 'talk' ? ' when spoken to' : g.when === 'use' ? ' when used' : g.when === 'death' ? ' when killed' : ''}` : g.price ? `sells it for ${g.price} gold` : g.when === 'talk' ? (g.toPc ? 'hands it over in a conversation' : 'comes to have it through a conversation')
       : g.when === 'death' ? 'drops it when killed' : g.when === 'use' ? 'gives it when used' : g.when === 'look' ? 'gives it when looked at' : 'a script makes it';
     const who = `${g.proto ? 'Any ' : ''}${esc(g.name || 'Someone')} <span class="q">· ${esc(how)}</span>`;
     return `<div class="wrow">${g.proto ? `<span>${who}</span><span class="wp" title="script ${esc(g.script)}">${esc(g.script)}</span>`
@@ -135,6 +137,7 @@ function itemDetail(i, game) {
   if (w.s.length) rows.push(`<div class="wgrp">🎲 Can turn up in</div>` + more(byRate(w.s), 15, ([id, r]) => {
     const u = userIn(SOURCE_USERS[id]), who = [...new Set([...u.m, ...u.n].map(ni => IT.npcs[ni].name).filter(Boolean))];
     const what = u.m.length ? 'shop: ' : '';
+    if (!who.length && !u.c.length && u.e.length) return `<div class="wrow"><span>${esc(IT.sources[id].name)} <b>${rateTxt(r)}</b></span><span class="wp">${esc('random encounter: ' + u.e.join(', '))}</span></div>`;
     return `<div class="wrow"><span>${esc(what ? shopKind(IT.sources[id].name) : IT.sources[id].name)} <b>${rateTxt(r)}</b></span><span class="wp">${who.length ? esc(what + who.slice(0, 3).join(', ') + (who.length > 3 ? '…' : '')) : u.c.length + ' container' + (u.c.length > 1 ? 's' : '')}</span></div>`;
   }));
   h += `<div class="sec"><div class="sec-t">Where to find it${game && GAMES.length > 1 ? ' in ' + esc(game) : ''}</div>${rows.join('') || (game && !NOT_IN_GAME(i) ? `<div class="flavour">Not found in ${esc(game)}.</div>` : '') || '<div class="flavour">Not in the game: no chest, person, merchant, script or schematic provides it.</div>'}</div>`;
@@ -913,7 +916,7 @@ const IN_GAME = new Map(GAMES.map(g => [g, new Set()]));
   (IT.scripted || []).forEach(g => g.name && add(scriptGame(g), g.item));
   for (const [id, s] of Object.entries(IT.sources)) {
     const u = SOURCE_USERS[id];
-    if (u) new Set([...u.c.map(ci => CON_GAME[ci]), ...u.m.map(ni => NPC_GAME[ni]), ...u.n.map(ni => NPC_GAME[ni])]).forEach(g => s.items.forEach(([i]) => add(g, i)));
+    if (u) new Set([...u.c.map(ci => CON_GAME[ci]), ...u.m.map(ni => NPC_GAME[ni]), ...u.n.map(ni => NPC_GAME[ni]), ...(u.e.length ? ['Arcanum'] : [])]).forEach(g => s.items.forEach(([i]) => add(g, i)));
   }
   IT.items.forEach((it, i) => (MADE[i].length || TEACHES[i].length) && add('Arcanum', i));
 }
@@ -1517,6 +1520,8 @@ const BROWSERS = {
   workshop: { frame: document.getElementById('workFrame'), note: document.getElementById('workNote'), start: 'mode=sec', list: 'map list', query: '', seen: null },
 };
 const filesFrame = BROWSERS.files.frame;
+// a #files / #workshop link has started its frame already (index.html): that is its link
+for (const b of Object.values(BROWSERS)) { const src = b.frame.getAttribute('src'); if (src) b.query = src.split('?')[1] || ''; }
 function loadBrowser(screen, query) {
   const b = BROWSERS[screen];
   if (query && screen === 'files') { const p = new URLSearchParams(query); p.delete('editor'); query = String(p); }   // editing is the Workshop's
@@ -1634,7 +1639,7 @@ function dressWorkshop(doc) {
 }
 // The page cannot reach into a file:// frame, and the browser keeps the viewers from reading the data folders there: then
 // Files and the Workshop explain how to start the local server.
-for (const [screen, b] of Object.entries(BROWSERS)) b.frame.addEventListener('load', () => {
+function onBrowserLoad(screen, b) {
   let doc = null; try { doc = b.frame.contentDocument; } catch (_) {}
   const ok = !!(doc && doc.getElementById('app'));
   if (ok) {
@@ -1648,7 +1653,15 @@ for (const [screen, b] of Object.entries(BROWSERS)) b.frame.addEventListener('lo
     let booted = false; try { booted = ok && (doc.body.classList.contains('home-active') || !doc.querySelector('.explorer').hidden); } catch (_) {}
     b.note.hidden = booted;
   }, 1500);
-});
+}
+for (const [screen, b] of Object.entries(BROWSERS)) {
+  b.frame.addEventListener('load', () => onBrowserLoad(screen, b));
+  // started early by index.html, it may have loaded before this script ran (a frame the page cannot read, from file://,
+  // is taken as loaded: the handler then shows the note, and running it again on the real load does no harm)
+  if (!b.frame.getAttribute('src')) continue;
+  let early = true; try { const d = b.frame.contentDocument; early = !d || (d.readyState === 'complete' && b.frame.contentWindow.location.href !== 'about:blank'); } catch (_) {}
+  if (early) onBrowserLoad(screen, b);
+}
 // the .mob a person or a container of the Atlas comes from (npcs.js / submaps.js / items.js: paths under data/maps)
 const FILE_OWNER = new Map();
 for (const n of PEOPLE) if (n.file) FILE_OWNER.set(n.file.toLowerCase(), { npc: n });

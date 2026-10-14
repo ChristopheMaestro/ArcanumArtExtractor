@@ -4,11 +4,56 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Arcanum Asset Browser</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="vendor/fonts/fonts.css">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="shell.css">
+<!-- Only a speed hint: modules that main.js reaches through other modules, fetched with the first wave instead of
+     two or three round trips later (online). A file missing from this list still loads, just later. -->
+<link rel="modulepreload" href="js/main.js">
+<link rel="modulepreload" href="js/core/manifest.js">
+<link rel="modulepreload" href="js/core/art-id.js">
+<link rel="modulepreload" href="js/explorer/nav-history.js">
+<link rel="modulepreload" href="js/explorer/file-search.js">
+<link rel="modulepreload" href="js/explorer/folder-tree.js">
+<link rel="modulepreload" href="js/explorer/match.js">
+<link rel="modulepreload" href="js/art/packer-kinds.js">
+<link rel="modulepreload" href="js/art/packer-guide.js">
+<link rel="modulepreload" href="js/mob/mob-card-art.js">
+<link rel="modulepreload" href="js/mob/mob-extras.js">
+<link rel="modulepreload" href="js/mob/mob-identity.js">
+<link rel="modulepreload" href="js/proto/proto-index.js">
+<link rel="modulepreload" href="js/proto/item-card.js">
+<link rel="modulepreload" href="js/proto/game-font.js">
+<link rel="modulepreload" href="js/text/dlg-dynamic.js">
+<link rel="modulepreload" href="js/text/dlg-codes.js">
+<link rel="modulepreload" href="js/scr/scr-dlg-triggers.js">
+<link rel="modulepreload" href="js/scr/scr-explain.js">
+<link rel="modulepreload" href="js/scr/scr-local-flags.js">
+<link rel="modulepreload" href="js/scr/scr-global-flags.js">
+<link rel="modulepreload" href="js/sec/sec-terrain.js">
+<link rel="modulepreload" href="js/sec/sec-inventory.js">
+<link rel="modulepreload" href="js/sec/sec-npc-motion.js">
+<link rel="modulepreload" href="js/sec/sec-lod.js">
+<link rel="modulepreload" href="js/sec/sec-roofs.js">
+<link rel="modulepreload" href="js/sec/sec-nav.js">
+<link rel="modulepreload" href="js/sec/sec-locations.js">
+<link rel="modulepreload" href="js/sec/sec-map-data.js">
+<link rel="modulepreload" href="js/sec/sec-rotation.js">
+<link rel="modulepreload" href="js/editor/world-editor-dialog.js">
+<link rel="modulepreload" href="js/editor/sec-game-protos.js">
+<link rel="modulepreload" href="js/editor/sec-sector-extras.js">
+<link rel="modulepreload" href="js/editor/sec-facade-groups.js">
+<link rel="modulepreload" href="js/editor/sec-facade-layouts.js">
+<link rel="modulepreload" href="js/editor/sec-house-plan.js">
+<link rel="modulepreload" href="js/editor/sec-house-data.js">
+<link rel="modulepreload" href="js/editor/sec-house-wfc.js">
+<link rel="modulepreload" href="js/editor/sec-village-paths.js">
+<link rel="modulepreload" href="js/editor/sec-map-files.js">
+<link rel="modulepreload" href="js/editor/mob-edit-panel.js">
+<link rel="modulepreload" href="js/editor/mob-edit.js">
+<link rel="modulepreload" href="js/editor/sec-extra-tools.js">
+<link rel="modulepreload" href="js/editor/story-panel.js">
+<link rel="modulepreload" href="js/editor/story-data.js">
 </head>
 <body>
 <div class="page app" id="app">
@@ -375,8 +420,7 @@
   </div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gif.js@0.2.0/dist/gif.js"></script>
+<!-- JSZip and gif.js load when first needed (js/core/util.js loadJSZip / loadGifJs) -->
 <script type="module" src="js/main.js"></script>
 </body>
 </html>

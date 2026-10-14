@@ -75,7 +75,7 @@ export async function loadMobFromServer(filename,rowEl,relativePath='') {
   saveDataExplorerState('mob',relativePath,mobDisplayName(relativePath,rowEl?.parentElement?.querySelector?.('.mob-list-heading strong')?.textContent?.replace(/^📦\s*/, '') || mobCurrentFolderName),filename);
   const requestId = ++mobViewerRequestToken;
   try {
-    const resp=await fetch(url,{cache:'no-store'});
+    const resp=await fetch(url);
     if(!resp.ok)throw new Error(`HTTP ${resp.status} fetching ${url}`);
     const decoded=decodeMobBuffer(await resp.arrayBuffer(),filename);
     await loadDescriptionMes().catch(() => null);   // so the name of a special NPC shows in the field table

@@ -68,7 +68,7 @@ async function loadMapLightInfo(relativePath) {
   let info = { lightScheme: 1, found: false };
   for (const fname of ['mapinfo.txt', 'MapInfo.txt', 'Mapinfo.txt']) {
     try {
-      const resp = await fetch(`${base}${fname}`, { cache: 'no-store' });
+      const resp = await fetch(`${base}${fname}`);
       if (!resp.ok) continue;
       const text = await resp.text();
       for (const line of text.split(/\r?\n/)) {
@@ -315,7 +315,7 @@ export async function ensureSecLightArt(sectors, objectPoints) {
     if (name) {
       for (const file of [`${name.trim()}.art`, `${name.trim().toLowerCase()}.art`]) {
         try {
-          const resp = await fetch(`${SEC_LIGHT_ART_ROOT}${encodeURIComponent(file)}`, { cache: 'no-store' });
+          const resp = await fetch(`${SEC_LIGHT_ART_ROOT}${encodeURIComponent(file)}`);
           if (!resp.ok) continue;
           const parsed = await parseArtBuffer(await resp.arrayBuffer());
           // Light ARTs may be rotated 8-direction sprites; the first direction is used.

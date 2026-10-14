@@ -79,7 +79,7 @@ export async function decodeProtoForSearch(filename, relativePath = '') {
   const key = `${relativePath}\0${filename}`;
   if (protoDecodedCache.has(key)) return protoDecodedCache.get(key);
   const url = `${PRO_ROOT}${relativePath ? encPath(relativePath) + '/' : ''}${encPath(filename)}`;
-  const promise = fetch(url, { cache: 'no-store' })
+  const promise = fetch(url)
     .then(resp => {
       if (!resp.ok) throw new Error(`HTTP ${resp.status} fetching ${url}`);
       return resp.arrayBuffer();

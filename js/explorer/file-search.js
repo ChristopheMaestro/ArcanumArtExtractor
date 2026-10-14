@@ -71,9 +71,13 @@ async function listFiles(path, name, out, visited) {
   let manifest;
   try { manifest = await provider.loadManifest(path, name); } catch (_) { return; }
   for (const filename of manifestFiles(manifest, provider.ext)) out.push({ filename, path });
-  for (const sf of manifestSubfolders(manifest)) {
-    await listFiles(joinPath(path, sf.relative_path || sf.folder_name), sf.folder_name, out, visited);
-  }
+  // sub-folders are read all at once (online each manifest is a round trip), their files kept in folder order
+  const subs = await Promise.all(manifestSubfolders(manifest).map(async sf => {
+    const sub = [];
+    await listFiles(joinPath(path, sf.relative_path || sf.folder_name), sf.folder_name, sub, visited);
+    return sub;
+  }));
+  for (const sub of subs) out.push(...sub);
 }
 
 function statusPara(text, err = false) {

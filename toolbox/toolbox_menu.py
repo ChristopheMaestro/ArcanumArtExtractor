@@ -131,6 +131,14 @@ TOOLS = [
         'script': 'Jsoner.py', 'needs': [], 'ask': args_confirm('Rewrite every manifest under data/?'),
     },
     {
+        'name': 'Build .ART thumbnail sheets',
+        'tagline': 'art-thumbs/: the .ART grid\'s thumbnails, one picture per page of 50',
+        'detail': ['Draws every .art file\'s thumbnail with the viewer\'s own code (a headless browser) into sheets, so',
+                   'the online grid loads one picture per page instead of 50 .art files. Takes a few minutes.',
+                   'Run it after adding, renaming, removing or changing .art files (after Jsoner.py).'],
+        'script': 'build_art_thumbs.py', 'needs': ['playwright', 'PIL'], 'ask': args_confirm('Rewrite art-thumbs/?'),
+    },
+    {
         'name': 'Check exported .sec files',
         'tagline': 'will the game load them? (locations, object order, wall ids, ...)',
         'detail': ['Reads .sec files, a folder or an exported *_sec.zip the way the game does and lists what it would',

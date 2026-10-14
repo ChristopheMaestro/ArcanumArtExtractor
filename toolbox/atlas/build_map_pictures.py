@@ -13,9 +13,10 @@ No people, creatures, items, containers, doors or roofs: the Atlas shows those a
 The world map also gets one picture per terrain template (data/terrain/<n>.sec) its grid uses: every sector without a
 .sec of its own is that template, so one picture serves thousands of sectors (as in the game, terrain.tdf).
 
-Output, in atlas/maps/<map>/:  L0/<stem>_<col>_<row>.webp full size in 8 x 4 pieces (a sector is 5120 x 2560 px plus
-a margin for sprites that reach over its edge), H/ the same at 1/2 in 4 x 2 pieces (pieces.json: which are not empty),
-L1 1/4, L2 1/16, atlas.webp (all the pictures at 1/64), meta.json.  js/atlas/data/map-pictures.js
+Output, in atlas/maps/<map>/ (the world in atlas/world/, a module's map in atlas/modules/<map>/):  L0/<stem>_<col>_<row>.webp full size in 8 x 4 pieces (a sector is 5120 x 2560 px plus
+a margin for sprites that reach over its edge), L0.5/ the same at 1/2 in 4 x 2 pieces (pieces.json: which are not empty),
+L1 1/4, L2 1/16, atlas.webp (all the pictures at 1/64), meta.json.  A map of atlas/maps/ then keeps only the sizes it
+needs (prune_levels: none smaller than the first under 1 MB in all).  js/atlas/data/map-pictures.js
 (window.ArcanumPictures) lists them for world-atlas.html.  Pictures already made with the same settings are kept, so a
 stopped run carries on where it was.
 --glows: the glows the Atlas puts on what its filters mark, in the shape of each thing's art (atlas/glows/, js/atlas/data/glow-shapes.js).
@@ -28,6 +29,7 @@ import base64
 import io
 import json
 import re
+import shutil
 import socketserver
 import struct
 import sys
@@ -51,7 +53,9 @@ DATA_JS = ROOT / 'js' / 'atlas' / 'data'                   # the generated data 
 MAPS = ROOT / 'data' / 'maps'
 MODULES = ROOT / 'data' / 'maps-modules' / '_Modules'            # the maps of the modules: one folder each, drawn like the game's own maps (--modules)
 MODULE_NAMES = sorted(d.name for d in MODULES.iterdir() if d.is_dir()) if MODULES.is_dir() else []
-OUT = ROOT / 'atlas' / 'maps'
+OUT = ROOT / 'atlas' / 'maps'                                   # the game's maps
+OUT_WORLD = ROOT / 'atlas' / 'world'                             # the world map (terrain templates, its own rules)
+OUT_MODULES = ROOT / 'atlas' / 'modules'                         # the modules' maps
 OUT_JS = DATA_JS / 'map-pictures.js'
 WORLD = 'Arcanum1-024-fixed'
 SKIP_FOLDERS = {'ShopMap', 'Scienticians Underground Lev 1', 'Scienticians Underground Lev 2'}   # not in Rules/MapList.mes
@@ -76,6 +80,15 @@ def sector_xy(path):
         return None
     v = int(path.stem)
     return v & 0x3FFFFFF, v >> 26
+
+
+def map_dirs():
+    """Every map's picture folder: the world, the game's maps, the modules'."""
+    return [OUT_WORLD] * OUT_WORLD.is_dir() + sorted(p for p in OUT.glob('*') if p.is_dir()) + sorted(p for p in OUT_MODULES.glob('*') if p.is_dir())
+
+
+def metas():
+    return [d / 'meta.json' for d in map_dirs() if (d / 'meta.json').is_file()]
 
 
 def base_of(folder):
@@ -374,32 +387,52 @@ def shrink(im, factor):                                          # premultiplied
 
 OBJ_COLS, OBJ_ROWS = 8, 4                                        # a full-size objects layer is kept in 8 x 4 pieces: the Atlas loads only those in view
 # Full-size pictures are kept in pieces too (a whole one is 66 MB once decoded: drawing a few froze the Atlas for seconds):
-# L0/<stem>_<col>_<row>.webp 8 x 4 pieces of the full size, H/<stem>_<col>_<row>.webp 4 x 2 pieces of the half size,
+# L0/<stem>_<col>_<row>.webp 8 x 4 pieces of the full size, L0.5/<stem>_<col>_<row>.webp 4 x 2 pieces of the half size,
 # all 688 x 752 px; only the pieces that are not empty. pieces.json keeps their masks per picture.
-PIECES = {'L0': (8, 4, 1), 'H': (4, 2, 2)}                       # folder: columns, rows, 1/factor of the full picture
+PIECES = {'L0': (8, 4, 1), 'L0.5': (4, 2, 2)}                     # folder: columns, rows, 1/factor of the full picture
 
 
-def split_layer(im, folder, stem, cols=OBJ_COLS, rows=OBJ_ROWS, quality=90, method=4):
-    """Write the pieces of a picture that are not empty as <folder>/<stem>_<col>_<row>.webp; the mask has bit row*cols+col set for each."""
+def only_black(im):
+    """True if what shows of an RGBA picture is black (or nothing shows)."""
+    a = im.getchannel('A')
+    if a.getbbox() is None:
+        return True
+    seen = a.point(lambda x: 255 if x > 8 else 0)
+    zero = Image.new('L', im.size, 0)
+    shown = [Image.composite(im.getchannel(c), zero, seen) for c in 'RGB']
+    if any(ch.getextrema()[1] > 24 for ch in shown):
+        return False
+    # black with a few lighter specks (lossy pictures, an edge's anti-aliasing), not dark ground (the Void's is ~15, 11, 8)
+    lit = sum(ch.point(lambda x: 255 if x > 8 else 0).histogram()[255] for ch in shown)
+    return lit <= 0.001 * max(1, seen.histogram()[255])
+
+
+def split_layer(im, folder, stem, cols=OBJ_COLS, rows=OBJ_ROWS, quality=90, method=4, ground=False):
+    """Write the pieces of a picture that are not empty as <folder>/<stem>_<col>_<row>.webp; the mask has bit row*cols+col set for each.
+    ground: pieces that are only black are not written either (the Atlas fills black over the sector there); returns
+    (mask, mask of those)."""
     tw, th = im.width // cols, im.height // rows
-    mask = 0
+    mask = black = 0
     for r in range(rows):
         for c in range(cols):
             piece = im.crop((c * tw, r * th, (c + 1) * tw, (r + 1) * th))
             if piece.getchannel('A').getbbox() is None:
                 continue
+            if ground and only_black(piece):
+                black |= 1 << (r * cols + c)
+                continue
             piece.save(folder / f'{stem}_{c}_{r}.webp', 'WEBP', quality=quality, method=method)
             mask |= 1 << (r * cols + c)
-    return mask
+    return (mask, black) if ground else mask
 
 
 def split_picture(im, out, stem):
-    """The pieces of a full-size picture at full and half size; returns their masks [L0, H]."""
+    """The pieces of a full-size picture at full and half size; returns their masks [L0, L0.5, black L0, black L0.5]."""
     masks = []
     for sub, (cols, rows, f) in PIECES.items():
         (out / sub).mkdir(parents=True, exist_ok=True)
-        masks.append(split_layer(im if f == 1 else shrink(im, f), out / sub, stem, cols, rows, quality=85, method=0))   # 3x faster than 4, same size
-    return masks
+        masks.append(split_layer(im if f == 1 else shrink(im, f), out / sub, stem, cols, rows, quality=85, method=0, ground=True))   # 3x faster than 4, same size
+    return [m for m, _ in masks] + [b for _, b in masks]
 
 
 def piece_stem(p):                                               # sec_123_4_1 -> sec_123
@@ -413,6 +446,57 @@ def read_pieces(out):
         return {}
 
 
+# The smaller sizes are there so that a big map does not load more than the computer can take. A map whose pictures at one
+# size weigh less than this in all needs no smaller size: the Atlas loads them all.
+SMALL_ENOUGH = 1024 * 1024
+
+
+def prune_levels(out):
+    """A map of atlas/maps/ keeps only the sizes it needs: from full size down (L0, L0.5, L1, L2), none smaller than the
+    first that is under SMALL_ENOUGH, and the objects layers' 1/4 pictures (O1, F1) only where the full-size ones weigh
+    more. L3 only serves to make atlas.webp (atlas_cells() takes over). The world and the modules keep every size."""
+    if out.parent != OUT:
+        return
+    weight = lambda sub: sum(f.stat().st_size for f in (out / sub).glob('*.webp'))
+    order = ['L0', 'L0.5', 'L1', 'L2']
+    first = next((k for k, sub in enumerate(order) if weight(sub) < SMALL_ENOUGH), len(order) - 1)
+    gone = order[first + 1:] + ['L3']
+    for full, small in (('O0', 'O1'), ('F0', 'F1')):
+        if (out / full).is_dir() and weight(full) < SMALL_ENOUGH:
+            gone.append(small)
+    for sub in gone:
+        shutil.rmtree(out / sub, ignore_errors=True)
+
+
+def levels_of(out):
+    """What write_index tells the Atlas of the sizes a map has: top, its smallest (0: L0 alone, 0.5, 1 or 2), small, the
+    objects layers with a 1/4 picture."""
+    has = lambda sub: (out / sub).is_dir() and any((out / sub).iterdir())
+    return {'top': 2 if has('L2') else 1 if has('L1') else 0.5 if has('L0.5') else 0, 'small': [k for k in 'OF' if has(f'{k}1')]}
+
+
+def atlas_cells(out):
+    """stem -> its 1/64 picture, cut from the map's atlas.webp (a map whose L3 is gone: prune_levels)."""
+    try:
+        meta = json.loads((out / 'meta.json').read_text(encoding='utf-8'))
+        with Image.open(out / 'atlas.webp') as a:
+            atlas = a.convert('RGBA')
+    except (OSError, ValueError):
+        return {}
+    aw, ah = IMG_W // ATLAS_FACTOR, IMG_H // ATLAS_FACTOR
+    return {e['stem']: atlas.crop((e['atlas'][0] * aw, e['atlas'][1] * ah, (e['atlas'][0] + 1) * aw, (e['atlas'][1] + 1) * ah))
+            for e in meta.get('images', []) if 'atlas' in e}
+
+
+def small_picture(out, stem, cells):
+    """A picture at 1/64: L3/<stem>.png, or its cell of the atlas already made."""
+    p = out / 'L3' / f'{stem}.png'
+    if p.is_file():
+        with Image.open(p) as small:
+            return small.convert('RGBA')
+    return cells[stem]
+
+
 def _split_one(job):
     path, out = job
     with Image.open(path) as im:
@@ -423,7 +507,7 @@ def split_existing_pictures():
     """Turn the whole full-size L0/<stem>.webp pictures of earlier runs into pieces (no rendering needed)."""
     from multiprocessing import Pool
     with Pool(5) as pool:
-        for meta in sorted(OUT.glob('*/meta.json')):
+        for meta in metas():
             out = meta.parent
             wholes = sorted((out / 'L0').glob('*.webp'))
             pieces = read_pieces(out)
@@ -441,7 +525,7 @@ def split_existing_pictures():
 
 def split_existing_layers():
     """Turn the full-size O0/<stem>.webp files of earlier runs into pieces (no rendering needed)."""
-    for f in sorted(OUT.glob('*/objects.json')):
+    for f in [d / 'objects.json' for d in map_dirs() if (d / 'objects.json').is_file()]:
         d = json.loads(f.read_text(encoding='utf-8'))
         masks = d.setdefault('masks', {})
         o0 = f.parent / 'O0'
@@ -460,7 +544,7 @@ def split_existing_layers():
 class MapJob:
     def __init__(self, folder):
         self.folder, self.key = folder, ('World' if folder == WORLD else clean_map(folder))
-        self.dir = OUT / ('world' if folder == WORLD else slug(self.key))
+        self.dir = OUT_WORLD if folder == WORLD else (OUT_MODULES if folder in MODULE_NAMES else OUT) / slug(self.key)
         base = base_of(folder)
         by_xy = {}
         own = [p for p in base.glob('*.sec') if sector_xy(p)]
@@ -515,7 +599,6 @@ def main():
     skip = [w.strip().lower() for w in args.skip.split(',') if w.strip()]
     folders = [f for f in folders if not named(f, skip)]
     signature = {'version': VERSION, 'light': args.light, 'hour': args.hour if args.light else None, 'doors': args.doors, 'pad': PAD, 'quality': QUALITY, 'ground': GROUND}
-    OUT.mkdir(parents=True, exist_ok=True)
     if args.only_index:
         write_index()
         return 0
@@ -608,8 +691,10 @@ def draw_map(mj, args, signature, run, state, errors):
     try:
         old = json.loads(meta_file.read_text(encoding='utf-8'))
         kept = set(old.get('drawn', [])) if old.get('signature') == signature and not args.force else set()
+        kept_black = set(old.get('black', [])) if kept else set()
     except (OSError, ValueError):
-        old, kept = {}, set()
+        old, kept, kept_black = {}, set(), set()
+    smalls = atlas_cells(out)                                    # the 1/64 pictures of a map whose L3 is gone
     progress_file = out / 'progress.json'                        # pictures done by a run that did not finish (resumed)
     try:
         prog = json.loads(progress_file.read_text(encoding='utf-8'))
@@ -645,8 +730,16 @@ def draw_map(mj, args, signature, run, state, errors):
         xs, ys = [x for x, _ in mj.by_xy], [y for _, y in mj.by_xy]
         bounds = {'minX': min(xs), 'minY': min(ys), 'maxX': max(xs), 'maxY': max(ys)}
 
-    images, drawn, blank = [], set(), set()
+    # A sector whose picture is only black (black tiles, nothing on them) is left out like a blank one: on the Atlas's black
+    # it would show nothing. Its objects layer, if it has one, is drawn all the same: such a sector stays.
+    images, drawn, blank, black = [], set(), set(), set()
     pieces = read_pieces(out)
+    with_objects = set()
+    for f in ('objects.json', 'offobjects.json'):
+        try:
+            with_objects |= set(json.loads((out / f).read_text(encoding='utf-8'))['stems'])
+        except (OSError, ValueError, KeyError):
+            pass
     for n, (kind, ref, path) in enumerate(jobs, 1):
         if kind == 'tpl':
             tp = terrain['templates'][ref]
@@ -663,7 +756,14 @@ def draw_map(mj, args, signature, run, state, errors):
             what = f'{mj.folder}/{path.relative_to(base_of(mj.folder)).as_posix()}'
         job.update(mapScheme=mj.scheme, light=args.light, hour=args.hour, doors=args.doors, pad=PAD, size=[IMG_W, IMG_H], quality=QUALITY)
         state['what'] = what
-        have = (stem in kept or (kind == 'tpl' and args.no_terrain)) and stem in pieces and all((out / f'L{k}' / f'{stem}.{"png" if k == 3 else "webp"}').exists() for k in range(1, 4))
+        if stem in kept_black and stem not in with_objects:
+            print(f'[{n}/{len(jobs)}] {what} ... black (kept out)')
+            black.add(stem)
+            if kind == 'sec':
+                blank.add(ref)
+            continue
+        have = (stem in kept or (kind == 'tpl' and args.no_terrain)) and stem in pieces and (
+            all((out / f'L{k}' / f'{stem}.{"png" if k == 3 else "webp"}').exists() for k in range(1, 4)) or (out.parent == OUT and stem in smalls))
         print(f'[{n}/{len(jobs)}] {what} ...', end='', flush=True)
         t0 = time.time()
         if not have:
@@ -698,6 +798,16 @@ def draw_map(mj, args, signature, run, state, errors):
                 for p in (out / sub).glob(f'{stem}_*_*.webp'):
                     if piece_stem(p) == stem:
                         p.unlink()
+            if stem not in with_objects and only_black(im):
+                print(' black (kept out)')
+                for k in range(1, 4):
+                    (out / f'L{k}' / f'{stem}.{"png" if k == 3 else "webp"}').unlink(missing_ok=True)
+                pieces.pop(stem, None)
+                (out / 'pieces.json').write_text(json.dumps(pieces), encoding='utf-8')
+                black.add(stem)
+                if kind == 'sec':
+                    blank.add(ref)
+                continue
             pieces[stem] = split_picture(im, out, stem)
             (out / 'pieces.json').write_text(json.dumps(pieces), encoding='utf-8')
             for k, f in LEVELS.items():
@@ -738,16 +848,15 @@ def draw_map(mj, args, signature, run, state, errors):
     aw, ah = IMG_W // ATLAS_FACTOR, IMG_H // ATLAS_FACTOR
     atlas = Image.new('RGBA', (aw * ATLAS_COLS, ah * max(1, -(-len(images) // ATLAS_COLS))), (0, 0, 0, 0))
     for i, e in enumerate(images):
-        with Image.open(out / 'L3' / f'{e["stem"]}.png') as small:
-            small = small.convert('RGBA')
-            atlas.paste(small, ((i % ATLAS_COLS) * aw, (i // ATLAS_COLS) * ah))
-            r, g, b, _ = small.convert('RGBa').resize((1, 1), Image.BOX).convert('RGBA').getpixel((0, 0))
+        small = small_picture(out, e['stem'], smalls)
+        atlas.paste(small, ((i % ATLAS_COLS) * aw, (i // ATLAS_COLS) * ah))
+        r, g, b, _ = small.convert('RGBa').resize((1, 1), Image.BOX).convert('RGBA').getpixel((0, 0))
         e['color'] = [r, g, b]
         e['atlas'] = [i % ATLAS_COLS, i // ATLAS_COLS]
         e.pop('tpl', None)
     atlas.save(out / 'atlas.webp', 'WEBP', lossless=True)
     meta = {'key': mj.key, 'folder': mj.folder, 'dir': out.relative_to(ROOT).as_posix(), 'signature': signature,
-            'drawn': sorted(drawn | (kept if partial else set())), 'complete': not partial,
+            'drawn': sorted(drawn | (kept if partial else set())), 'black': sorted(black | (kept_black if partial else set())), 'complete': not partial,
             'lightScheme': mj.scheme, 'bounds': bounds, 'gridW': W, 'gridH': H, 'images': images,
             'grid': base64.b64encode(zlib.compress(cells.tobytes(), 9)).decode('ascii')}
     meta_file.write_text(json.dumps(meta, separators=(',', ':')), encoding='utf-8')
@@ -756,12 +865,20 @@ def draw_map(mj, args, signature, run, state, errors):
             for p in (out / sub).glob(f'*.{ext}'):
                 if p.stem not in drawn:
                     p.unlink()
-        for sub in PIECES:
-            for p in (out / sub).glob('*.webp'):
-                if piece_stem(p) not in drawn:
-                    p.unlink()
         pieces = {s: m for s, m in pieces.items() if s in drawn}
+        for k, (sub, (cols, _, _)) in enumerate(PIECES.items()):   # and pieces outside their mask (an older run's, black)
+            for p in (out / sub).glob('*_*_*.webp'):
+                m = pieces.get(piece_stem(p))
+                c, r = map(int, p.stem.rsplit('_', 2)[1:])
+                if m is None or not m[k] >> (r * cols + c) & 1:
+                    p.unlink()
         (out / 'pieces.json').write_text(json.dumps(pieces), encoding='utf-8')
+        prune_levels(out)
+        top = levels_of(out)['top']                              # kept pictures of an earlier run have no smaller sizes left
+        half = sum(bin(m[1]).count('1') for m in pieces.values()) if top >= 0.5 else 0
+        if any(not (out / f'L{k}' / f'{e["stem"]}.webp').exists() for e in images for k in (1, 2) if k <= top) or (
+                half and len(list((out / 'L0.5').glob('*.webp'))) < half):
+            errors.append(f'{mj.key}: now needs its smaller sizes, which earlier runs removed: run it again with --force')
     write_index()
 
 
@@ -832,6 +949,8 @@ def draw_objects(mj, args, signature, run, state, errors, url):
         if len(done) % 10 == 0:
             save()
     save()
+    if not (args.limit or args.around):
+        prune_levels(out)
     write_index()
 
 
@@ -1064,10 +1183,10 @@ def pick(secs, n):
 
 def write_index():
     maps = {}
-    for f in sorted(OUT.glob('*/meta.json')):
+    for f in metas():
         m = json.loads(f.read_text(encoding='utf-8'))
         pieces = read_pieces(f.parent)                           # p: masks of the full and half-size pieces (bit row*cols+col)
-        maps[m['key']] = {k: m[k] for k in ('dir', 'bounds', 'gridW', 'gridH', 'grid', 'complete')} | {
+        maps[m['key']] = {k: m[k] for k in ('dir', 'bounds', 'gridW', 'gridH', 'grid', 'complete')} | levels_of(f.parent) | {
             'images': [{'stem': e['stem'], 'kind': e['kind'], 'color': e['color'], 'atlas': e['atlas']} | ({'p': pieces[e['stem']]} if e['stem'] in pieces else {})
                        for e in m['images']]}
         for file, k in (('objects.json', 'objects'), ('offobjects.json', 'offObjects')):
@@ -1080,7 +1199,8 @@ def write_index():
             except (OSError, ValueError, KeyError):
                 pass
     data = {'note': 'GENERATED by toolbox/atlas/build_map_pictures.py. Per map: sector pictures (L0 full and H 1/2 in pieces, L1 1/4, L2 1/16, '
-                    'atlas.webp 1/64), grid = picture number + 1 per sector of bounds (zlib, uint16).',
+                    'atlas.webp 1/64; top = the smallest whole picture a map has, small = its objects layers with a 1/4 picture), '
+                    'grid = picture number + 1 per sector of bounds (zlib, uint16).',
             'sector': {'w': SECTOR_W, 'h': SECTOR_H}, 'pad': PAD, 'img': {'w': IMG_W, 'h': IMG_H}, 'levels': {str(k): v for k, v in LEVELS.items()},
             'pieces': {k: [c, r, f] for k, (c, r, f) in PIECES.items()},
             'atlas': {'w': IMG_W // ATLAS_FACTOR, 'h': IMG_H // ATLAS_FACTOR, 'cols': ATLAS_COLS}, 'maps': maps}

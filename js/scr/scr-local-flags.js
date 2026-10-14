@@ -18,7 +18,7 @@ import { parseCodes } from '../text/dlg-codes.js';
 import { SCR_ACTIONS, SCR_CONDITIONS, SCR_VALUE_TYPES } from './scr-schema.js';
 
 export const loadLocalFlagIndex = memoAsync(async () => {
-  const resp = await fetch(`${DATA_ROOT}scr/local_flags.json`, { cache: 'no-store' });
+  const resp = await fetch(`${DATA_ROOT}scr/local_flags.json`);
   if (!resp.ok) throw new Error(`local_flags.json: HTTP ${resp.status}`);
   return resp.json();
 });

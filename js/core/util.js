@@ -23,6 +23,28 @@ export async function saveFile(filename, blob) {
   }
 }
 
+// The two libraries (copies in vendor/), loaded the first time they are needed: as <script> tags they held
+// up the whole page for a ZIP or GIF download few people make.
+const scriptLoads = new Map();
+function loadScriptOnce(url, globalName) {
+  if (window[globalName]) return Promise.resolve(window[globalName]);
+  if (!scriptLoads.has(url)) {
+    const p = new Promise((resolve, reject) => {
+      const s = document.createElement('script');
+      s.src = url;
+      s.onload = () => window[globalName] ? resolve(window[globalName]) : reject(new Error(`${url} did not define ${globalName}`));
+      s.onerror = () => reject(new Error(`couldn't load ${url}`));
+      document.head.appendChild(s);
+    });
+    scriptLoads.set(url, p);
+    p.catch(() => scriptLoads.delete(url));
+  }
+  return scriptLoads.get(url);
+}
+export const vendorUrl = name => new URL(`../../vendor/${name}`, import.meta.url).href;
+export const loadJSZip = () => loadScriptOnce(vendorUrl('jszip.min.js'), 'JSZip');   // JSZip 3.10.1
+export const loadGifJs = () => loadScriptOnce(vendorUrl('gif.js'), 'GIF');           // gif.js 0.2.0
+
 export function rgbToHex([r, g, b]) {
   return '#' + [r, g, b].map(v => v.toString(16).padStart(2, '0')).join('');
 }

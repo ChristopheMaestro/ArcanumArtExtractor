@@ -72,9 +72,12 @@ async function protoFileMatchesType(filename, relativePath, filter = protoObject
 
 async function filterProtoFilesByObjectType(files, relativePath) {
   if (protoObjectTypeFilter === 'all') return files;
+  // in batches side by side: each check reads its .pro (a round trip online)
   const out = [];
-  for (const filename of files) {
-    if (await protoFileMatchesType(filename, relativePath)) out.push(filename);
+  for (let i = 0; i < files.length; i += 32) {
+    const batch = files.slice(i, i + 32);
+    const ok = await Promise.all(batch.map(f => protoFileMatchesType(f, relativePath)));
+    batch.forEach((f, j) => { if (ok[j]) out.push(f); });
   }
   return out;
 }
@@ -156,7 +159,7 @@ export async function loadProtoFromServer(filename, rowEl, relativePath = '') {
   saveDataExplorerState('pro', relativePath, protoCurrentFolderName, filename);
   protoViewerFilename = filename;
   try {
-    const resp = await fetch(url, { cache: 'no-store' });
+    const resp = await fetch(url);
     if (!resp.ok) throw new Error(`HTTP ${resp.status} fetching ${url}`);
     const decoded = decodeProtoBuffer(await resp.arrayBuffer(), filename);
     try { await Promise.all([loadDescriptionMes(), loadItemInvenMes(), loadItemGroundMes(), loadItemPaperMes(), loadContainerMes(), loadSceneryMes()]); }

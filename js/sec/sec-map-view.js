@@ -87,7 +87,9 @@ function parseSecSectorPosition(filename) {
 export async function loadSecFolderSectors(relativePath, filenames, onProgress) {
   const results = [];
   const queue = filenames.map((filename, index) => ({ filename, index }));
-  const workerCount = Math.min(4, Math.max(1, queue.length));
+  // online every sector is a round trip of its own: measured on GitHub Pages (HTTP/2), 621 sectors take ~13 s at 16
+  // at a time, ~6 s at 32, no better at 64. A local server (HTTP/1.1, 6 connections) is not slowed by the extra ones.
+  const workerCount = Math.min(32, Math.max(1, queue.length));
   let completed = 0;
 
   const loadOne = async item => {
@@ -102,7 +104,7 @@ export async function loadSecFolderSectors(relativePath, filenames, onProgress) 
     } else {
       try {
         const prefix = relativePath ? `${relativePath}/` : '';
-        const resp = await fetch(`${SEC_ROOT}${encPath(prefix)}${encPath(path)}`, { cache: 'no-store' });
+        const resp = await fetch(`${SEC_ROOT}${encPath(prefix)}${encPath(path)}`);
         if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
         result = { filename, dir, index, position, decoded: readSecTileData(await resp.arrayBuffer(), filename), error: null };
       } catch (err) {

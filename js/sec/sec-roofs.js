@@ -60,7 +60,7 @@ function loadRoofFile(name) {
   if (!p) {
     p = (async () => {
       try {
-        const resp = await fetch(`${ROOF_ART_DIR}${encPath(name)}.art`, { cache: 'no-store' });
+        const resp = await fetch(`${ROOF_ART_DIR}${encPath(name)}.art`);
         if (!resp.ok) return null;
         const frames = await parseArtBuffer(await resp.arrayBuffer());
         return frames.length ? { frames, name } : null;

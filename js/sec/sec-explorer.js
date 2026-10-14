@@ -33,17 +33,21 @@ export function loadSecManifest(relativePath = '', folderName) {
   const key = String(relativePath || '');
   if (!mergedManifests.has(key)) {
     const p = (async () => {
+      // the terrain grid is read alongside the manifest, and the sub-folder manifests all at once (online each is a round trip)
+      const terrain = key ? loadTerrainMap(key).catch(() => null) : null;
       const manifest = await loadMapsManifest(relativePath, folderName);
-      if (!key || !manifestSubfolders(manifest).length || !(await loadTerrainMap(key).catch(() => null))) return manifest;
+      if (!key || !manifestSubfolders(manifest).length || !(await terrain)) return manifest;
       const files = manifestFileList(manifest).slice();
-      for (const sf of manifestSubfolders(manifest)) {
-        let sub;
-        try { sub = await loadMapsManifest(joinPath(key, sf.relative_path || sf.folder_name), sf.folder_name); } catch (_) { continue; }
+      const subs = await Promise.all(manifestSubfolders(manifest).map(sf =>
+        loadMapsManifest(joinPath(key, sf.relative_path || sf.folder_name), sf.folder_name).catch(() => null)));
+      manifestSubfolders(manifest).forEach((sf, i) => {
+        const sub = subs[i];
+        if (!sub) return;
         const own = manifestFileList(sub).filter(f => /\.(sec|mob)$/i.test(f) && !/\//.test(f));
-        if (!own.some(f => /\.sec$/i.test(f)) || manifestSubfolders(sub).length) continue;
+        if (!own.some(f => /\.sec$/i.test(f)) || manifestSubfolders(sub).length) return;
         const dir = sf.relative_path || sf.folder_name;
         for (const f of own) files.push(`${dir}/${f}`);
-      }
+      });
       return { ...manifest, files, relativeNames: true };
     })();
     mergedManifests.set(key, p);

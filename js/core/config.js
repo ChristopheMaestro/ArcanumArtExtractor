@@ -13,3 +13,6 @@ export const UNIQUE_NPC_ART_ROOT = `${DATA_ROOT}art/unique_npc/`;
 export const ART_ROOT = `${DATA_ROOT}art/`;
 
 export const SEC_ROOT = `${DATA_ROOT}maps/`;
+
+// Thumbnail sheets of the .ART grid (toolbox/build_art_thumbs.py), not game data.
+export const ART_THUMBS_ROOT = 'art-thumbs/';

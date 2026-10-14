@@ -432,7 +432,7 @@ export async function loadProtoCurrentAidArt(artId, artName, previewCanvas, obje
   }
   const url = `${protoArtRoot(objectType)}${encPath(filename)}`;
   try {
-    const resp = await fetch(url, { cache: 'no-store' });
+    const resp = await fetch(url);
     if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
     const frames = await parseArtBuffer(await resp.arrayBuffer(), 1);
     if (!frames.length || !frames[0].canvas) throw new Error('no drawable frame');

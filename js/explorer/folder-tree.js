@@ -16,6 +16,8 @@ import { registerSearchProvider } from './file-search.js';
 
 // A folder can hold thousands of files; the main pane pages/filters those.
 const MAX_FILE_LEAVES = 500;
+// files a file filter checks at once
+const FILTER_BATCH = 32;
 
 export function mountFolderTree({
   rootName, loadManifest, openFolder, ext, fileIcon = '📄',
@@ -64,27 +66,28 @@ export function mountFolderTree({
   async function fill(node, manifest) {
     node.children.innerHTML = '';
     node.kids = [];
-    for (const sf of manifestSubfolders(manifest)) {
-      const fullPath = joinPath(node.path, sf.relative_path);
-      if (folderFilter) {
-        let keep = false;
-        try { keep = await folderFilter(fullPath, sf.folder_name); } catch (_) { keep = false; }
-        if (!keep) continue;
-      }
-      const kid = createNode(sf.folder_name, fullPath, node.depth + 1);
+    // the filters may each read a file: they run side by side (online each read is a round trip)
+    const subfolders = manifestSubfolders(manifest);
+    const keep = await Promise.all(subfolders.map(sf => !folderFilter ? true
+      : Promise.resolve().then(() => folderFilter(joinPath(node.path, sf.relative_path), sf.folder_name)).catch(() => false)));
+    subfolders.forEach((sf, i) => {
+      if (!keep[i]) return;
+      const kid = createNode(sf.folder_name, joinPath(node.path, sf.relative_path), node.depth + 1);
       node.kids.push(kid);
       node.children.appendChild(kid.li);
-    }
+    });
     if (!openFile) return;
     const files = manifestFiles(manifest, ext);
+    const visible = [];
+    for (let i = 0; i < files.length && visible.length < MAX_FILE_LEAVES; i += FILTER_BATCH) {
+      const batch = files.slice(i, i + FILTER_BATCH);
+      const ok = await Promise.all(batch.map(f => !fileFilter ? true
+        : Promise.resolve().then(() => fileFilter(f, node.path)).catch(() => false)));
+      batch.forEach((f, j) => { if (ok[j]) visible.push(f); });
+    }
     let shown = 0;
-    for (const filename of files) {
+    for (const filename of visible) {
       if (shown >= MAX_FILE_LEAVES) break;
-      if (fileFilter) {
-        let visible = true;
-        try { visible = await fileFilter(filename, node.path); } catch (_) { visible = false; }
-        if (!visible) continue;
-      }
       const li = document.createElement('li');
       li.className = 'tree-node tree-file-node';
       const row = document.createElement('button');

@@ -36,7 +36,7 @@ async function inflate(bytes) {
 let namesPromise = null;
 function loadTerrainNames() {
   if (!namesPromise) namesPromise = (async () => {
-    const resp = await fetch(`${TERRAIN_ROOT}terrain.mes`, { cache: 'no-store' });
+    const resp = await fetch(`${TERRAIN_ROOT}terrain.mes`);
     if (!resp.ok) throw new Error(`terrain.mes: HTTP ${resp.status}`);
     const mes = parseMesText(await resp.text());
     // terrain_init_types: names are numbered 0.. without gaps; a "/b" suffix marks blocked terrain
@@ -56,7 +56,7 @@ function loadTerrainNames() {
 // Base terrains with the editor colour terrain.mes gives each (messages 100 + id): [{ id, name, blocked, color: [r, g, b] }].
 export async function loadTerrainTypes() {
   const { names, blocked } = await loadTerrainNames();
-  const resp = await fetch(`${TERRAIN_ROOT}terrain.mes`, { cache: 'no-store' });
+  const resp = await fetch(`${TERRAIN_ROOT}terrain.mes`);
   const mes = parseMesText(await resp.text());
   const folders = await loadTerrainFolders();
   return names.map((name, id) => {
@@ -72,7 +72,7 @@ function loadTerrainFolders() {
   if (!folderPromise) folderPromise = (async () => {
     const map = new Map();
     try {
-      const resp = await fetch(`${TERRAIN_ROOT}terrain_manifest.json`, { cache: 'no-store' });
+      const resp = await fetch(`${TERRAIN_ROOT}terrain_manifest.json`);
       if (resp.ok) for (const name of Object.keys((await resp.json()).subfolders || {})) map.set(name.toLowerCase(), name);
     } catch (_) {}
     return map;
@@ -107,7 +107,7 @@ export function loadTerrainMap(relativePath) {
 }
 async function loadTerrainMapUncached(relativePath) {
   let resp;
-  try { resp = await fetch(`${SEC_ROOT}${relativePath ? encPath(relativePath) + '/' : ''}terrain.tdf`, { cache: 'no-store' }); } catch (_) { return null; }
+  try { resp = await fetch(`${SEC_ROOT}${relativePath ? encPath(relativePath) + '/' : ''}terrain.tdf`); } catch (_) { return null; }
   if (!resp.ok) return null;
   const buf = await resp.arrayBuffer();
   if (buf.byteLength < TERRAIN_HEADER_SIZE) return null;
@@ -137,8 +137,7 @@ async function loadTerrainMapUncached(relativePath) {
     if (buf.byteLength < TERRAIN_HEADER_SIZE + ids.length * 2) throw new Error('terrain.tdf is truncated');
     ids.set(new Uint16Array(buf.slice(TERRAIN_HEADER_SIZE, TERRAIN_HEADER_SIZE + ids.length * 2)));
   }
-  const { names, blocked } = await loadTerrainNames();
-  const folders = await loadTerrainFolders();
+  const [{ names, blocked }, folders] = await Promise.all([loadTerrainNames(), loadTerrainFolders()]);
   return {
     width, height, names, ids,
     // What the engine would load for sector (x, y): null outside the grid.
@@ -194,8 +193,7 @@ export async function buildWorldFiles(width, height, terrainId) {
 // the editor exports). Each sector is its own editable copy of a plain template of that terrain:
 // tiles, lights (moved to the sector's place, in the bytes too) and objects are not shared.
 export async function createWorldSectors(width, height, terrainId, onProgress) {
-  const { names } = await loadTerrainNames();
-  const folders = await loadTerrainFolders();
+  const [{ names }, folders] = await Promise.all([loadTerrainNames(), loadTerrainFolders()]);
   const cells = [];
   for (let y = 0; y < height; y++) for (let x = 0; x < width; x++) cells.push({ x, y });
   const out = [];
@@ -234,7 +232,7 @@ export async function loadTerrainSector(info) {
   const path = info.template.path;
   if (!templateCache.has(path)) {
     const p = (async () => {
-      const resp = await fetch(`${TERRAIN_ROOT}${encPath(info.template.folder)}/${info.template.file}.sec`, { cache: 'no-store' });
+      const resp = await fetch(`${TERRAIN_ROOT}${encPath(info.template.folder)}/${info.template.file}.sec`);
       return resp.ok ? readSecTileData(await resp.arrayBuffer(), path) : null;
     })();
     templateCache.set(path, p);

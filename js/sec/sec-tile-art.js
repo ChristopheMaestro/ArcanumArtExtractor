@@ -121,7 +121,7 @@ export async function loadSecFacadeArt(raw) {
   if (!promise) {
     promise = (async () => {
       try {
-        const resp = await fetch(`${DATA_ROOT}art/facade/${encPath(name)}.art`, { cache: 'no-store' });
+        const resp = await fetch(`${DATA_ROOT}art/facade/${encPath(name)}.art`);
         if (!resp.ok) return null;
         const frames = await parseArtBuffer(await resp.arrayBuffer());
         if (!frames.length || !frames[0]?.indices?.length) return null;
@@ -336,7 +336,7 @@ async function loadSecTileFile(exact) {
   const promise = (async () => {
     try {
       const url = `${DATA_ROOT}art/tile/${encPath(exact)}`;
-      const resp = await fetch(url, { cache: 'no-store' });
+      const resp = await fetch(url);
       if (!resp.ok) return null;
       const buffer = await resp.arrayBuffer();
       const frames = await parseArtBuffer(buffer);

@@ -123,7 +123,7 @@ function interfaceIconNumber(d, complexity) {
 async function loadInterfaceIcon(num, interfaceMes) {
   const file = interfaceMes.get(num);
   if (!file) return null;
-  const resp = await fetch(`${DATA_ROOT}art/interface/${encodeURIComponent(file.trim())}`, { cache: 'no-store' });
+  const resp = await fetch(`${DATA_ROOT}art/interface/${encodeURIComponent(file.trim())}`);
   if (!resp.ok) return null;
   const frames = await parseArtBuffer(await resp.arrayBuffer(), 1);
   return frames[0]?.canvas ?? null;
@@ -241,7 +241,7 @@ export async function cardIconSource(decoded) {
 export async function loadCardIcon(source) {
   if (!source) return null;
   if (source.kind === 'interface') {
-    const resp = await fetch(source.url, { cache: 'no-store' });
+    const resp = await fetch(source.url);
     if (!resp.ok) return null;
     return (await parseArtBuffer(await resp.arrayBuffer(), 1))[0]?.canvas ?? null;
   }

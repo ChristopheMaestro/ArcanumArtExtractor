@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Clear the black overlap band of the sector pictures (atlas/maps/*), without drawing anything again.
+Clear the black overlap band of the sector pictures (atlas/maps/*, atlas/world, atlas/modules/*), without drawing anything again.
 
 build_map_pictures.py draws each sector over a black diamond 3 px larger than the sector, with the neighbours' tiles in that
 band. Where a neighbour's tile was not drawn the band stays black, and since the Atlas lays the pictures back to front, the
@@ -11,7 +11,8 @@ edge loses its near-black pixels there (the dark windows of the Tarant bridge to
 run it again: build_map_pictures.py now clears the black while drawing, before the objects, and no longer calls cut_band().
 
 For each picture: the full-size picture is put back together from its L0 pieces, cleaned, and the pieces that changed are
-written again, then H, L1, L2, L3 (and the map's atlas.webp) are made again from it, as build_map_pictures.py makes them.
+written again, then L0.5, L1, L2, L3 (and the map's atlas.webp) are made again from it, as build_map_pictures.py makes them
+(only the sizes the map still has: build_map_pictures.prune_levels).
 bandcut.json in each map folder lists the pictures done, so a second run only does what is new.
 
   py trim_band.py                       every map
@@ -28,7 +29,6 @@ import numpy as np
 from PIL import Image
 
 HERE = Path(__file__).resolve().parent
-OUT = HERE.parents[1] / 'atlas' / 'maps'
 PAD_L, PAD_T = 192, 384                      # build_map_pictures.PAD
 SW, SH = 5120, 2560                          # a sector's diamond
 REACH = 6                                    # px outside the diamond looked at (the band is 3 px, a lossy edge a little more)
@@ -88,8 +88,8 @@ def do_one(job):
     # the others, made again from it like build_map_pictures.py makes them
     masks = []
     for sub, (cols, rows, f) in bp.PIECES.items():
-        if sub == 'L0':
-            masks.append(mask)
+        if sub == 'L0' or not (out / sub).is_dir():              # (a size the map no longer has: bp.prune_levels; mask kept)
+            masks.append(mask if sub == 'L0' else None)
             continue
         for p in (out / sub).glob(f'{stem}_*_*.webp'):
             if bp.piece_stem(p) == stem:
@@ -98,7 +98,9 @@ def do_one(job):
     im = full2
     for k, f in bp.LEVELS.items():
         im = bp.shrink(im, f // (1 if k == 1 else bp.LEVELS[k - 1]))
-        im.save(out / f'L{k}' / f'{stem}.webp', 'WEBP', quality=85, method=4)
+        if (out / f'L{k}').is_dir():
+            im.save(out / f'L{k}' / f'{stem}.webp', 'WEBP', quality=85, method=4)
+    (out / 'L3').mkdir(exist_ok=True)                            # for the atlas (prune_levels removes it again)
     bp.shrink(im, bp.ATLAS_FACTOR // bp.LEVELS[2]).save(out / 'L3' / f'{stem}.png')
     return stem, masks
 
@@ -106,24 +108,25 @@ def do_one(job):
 def rebuild_atlas(out, meta):
     import build_map_pictures as bp
     aw, ah = bp.IMG_W // bp.ATLAS_FACTOR, bp.IMG_H // bp.ATLAS_FACTOR
-    images = meta['images']
+    images, smalls = meta['images'], bp.atlas_cells(out)
     atlas = Image.new('RGBA', (aw * bp.ATLAS_COLS, ah * max(1, -(-len(images) // bp.ATLAS_COLS))), (0, 0, 0, 0))
     for i, e in enumerate(images):
-        with Image.open(out / 'L3' / f'{e["stem"]}.png') as small:
-            atlas.paste(small.convert('RGBA'), ((i % bp.ATLAS_COLS) * aw, (i // bp.ATLAS_COLS) * ah))
+        atlas.paste(bp.small_picture(out, e['stem'], smalls), ((i % bp.ATLAS_COLS) * aw, (i // bp.ATLAS_COLS) * ah))
     atlas.save(out / 'atlas.webp', 'WEBP', lossless=True)
+    bp.prune_levels(out)
 
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument('--maps', help='folder names under atlas/maps, comma separated (default: all)')
+    ap.add_argument('--maps', help='map folder names (e.g. world, bmc), comma separated (default: all)')
     ap.add_argument('--stems', help='only these pictures, comma separated')
     args = ap.parse_args()
     sys.path.insert(0, str(HERE))
     wanted = set(args.maps.split(',')) if args.maps else None
     only = set(args.stems.split(',')) if args.stems else None
+    import build_map_pictures as bp
     with Pool(2, maxtasksperchild=8) as pool:
-        for meta_file in sorted(OUT.glob('*/meta.json')):
+        for meta_file in bp.metas():
             out = meta_file.parent
             if wanted and out.name not in wanted:
                 continue
@@ -140,7 +143,7 @@ def main():
             for stem, masks in pool.imap_unordered(do_one, todo):
                 done.add(stem)
                 if masks is not None:
-                    pieces[stem] = masks
+                    pieces[stem] = [o if n is None else n for n, o in zip(masks, pieces[stem])] + pieces[stem][2:]   # (the masks of the black pieces, not kept as files, stay)
                     changed += 1
                 if len(done) % 20 == 0:
                     done_file.write_text(json.dumps(sorted(done)), encoding='utf-8')
@@ -150,8 +153,6 @@ def main():
             if changed:
                 rebuild_atlas(out, json.loads(meta_file.read_text(encoding='utf-8')))
             print(f'{out.name}: {len(todo)} pictures, {changed} changed ({time.time() - t0:.0f} s)', flush=True)
-    sys.path.insert(0, str(HERE))
-    import build_map_pictures as bp
     bp.write_index()
 
 

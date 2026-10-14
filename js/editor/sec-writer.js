@@ -503,7 +503,7 @@ export async function secFacadeFile(num) {
   if (!promise) {
     promise = (async () => {
       try {
-        const resp = await fetch(`${DATA_ROOT}art/facade/${encPath(name)}.art`, { cache: 'no-store' });
+        const resp = await fetch(`${DATA_ROOT}art/facade/${encPath(name)}.art`);
         if (!resp.ok) return null;
         const frames = await parseArtBuffer(await resp.arrayBuffer());
         if (!frames.length || !frames[0]?.indices?.length) return null;

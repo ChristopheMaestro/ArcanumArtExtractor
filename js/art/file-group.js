@@ -20,10 +20,11 @@ import { log } from '../core/log.js';
 
 import { setOpenGroup } from '../core/state.js';
 
-import { rgbToHex, saveFile } from '../core/util.js';
+import { loadJSZip, rgbToHex, saveFile } from '../core/util.js';
 import { showViewer } from '../explorer/viewer-shell.js';
 
 async function downloadGroupZip(group) {
+  const JSZip = await loadJSZip();
   const zip = new JSZip();
   const folder = zip.folder(group.baseName);
   for (const entry of group.frames) {

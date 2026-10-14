@@ -441,10 +441,11 @@ class ScriptGifts:
                     t = struct.unpack_from('<i', d, a)[0]
                     name = sat[t] if 0 <= t < len(sat) else ''
                     ot, ov = d[a + 4:a + 12], struct.unpack_from('<8i', d, a + 12)
-                    if name in ('CREATE_ITEM', 'CREATE_OBJECT') and ot[0] == 3:
+                    if name in ('CREATE_ITEM', 'CREATE_OBJECT', 'TRANSFORM_ATTACHEE_INTO_BASIC_PROTOTYPE') and ot[0] == 3:
                         idx = items.proto_entry(ov[0] + 20)
                         if idx is not None:
-                            self.makes[num].append((i, idx, ot[1] in self.FOCUS_PLAYER))
+                            # a transformation makes nothing new: the script's holder turns into the item (an empty trap used on a bunny)
+                            self.makes[num].append((i, idx, name[0] == 'C' and ot[1] in self.FOCUS_PLAYER, name[0] == 'T'))
                     elif name in self.CALLS:
                         k = 2 if name == 'CHANGE_SCRIPT' else 0
                         if ot[k] == 3 and ov[k] in self.files and ov[k] != num:
@@ -488,9 +489,9 @@ class ScriptGifts:
                         todo.append(c)
             held = [h for s in sorted(seen) for h in self.holders.get(s, [])]
             price = self.prices(num)
-            for line, idx, to_pc in made:
+            for line, idx, to_pc, turns in made:
                 for hook, o, is_proto in held or [(None, None, False)]:
-                    out.append((idx, num, hook, o, is_proto, price.get(line), to_pc))
+                    out.append((idx, num, hook, o, is_proto, price.get(line), to_pc, turns))
         return out
 
     def title(self, num):
@@ -711,7 +712,7 @@ def main():
                     o.map, o.area = name, rel[0] if name == WORLD and len(rel) > 1 else ''
                     gifts.hold(o)
     scripted, seen_gift = [], {}
-    for idx, num, hook, o, is_proto, price, to_pc in sorted(gifts.gifts(), key=lambda r: r[4]):     # placed holders first
+    for idx, num, hook, o, is_proto, price, to_pc, turns in sorted(gifts.gifts(), key=lambda r: r[4]):     # placed holders first
         if items.entries[idx]['hidden']:
             continue
         g = {'item': idx, 'script': gifts.title(num)}
@@ -729,6 +730,8 @@ def main():
             g['when'] = gifts.HOOKS[hook]
         if to_pc:
             g['toPc'] = True
+        if turns:
+            g['turns'] = True        # the holder itself becomes the item
         # one row per item and holder: two script lines that make it (with and without a price) are one row, and a character
         # already listed where it stands is not listed again as "any <prototype>"
         who = json.dumps([idx, g.get('name')])
@@ -748,6 +751,19 @@ def main():
     for s in used:
         if s in sources:
             sources[s]['used'] = True
+    # creatures the world map's random encounters make (Rules/WMap_Rnd.mes, basic proto + 20) roll their list when they appear
+    enc = set()
+    for text in ao.DATA.joinpath('Rules', 'WMap_Rnd.mes').read_text(encoding='cp1252', errors='replace').split('}{')[1::2]:
+        enc.update(int(n) + 20 for n in re.findall(r'(?:First|Second|Third|Thrid|Fourth|Fifth):\s*(\d+)', text))
+    wander = defaultdict(set)
+    for num in enc:
+        p = items.protos.get(num) or next((ao.read_proto(f) for f in ao.DATA.joinpath('proto').glob(f'{num:06d} - *.pro')), None)
+        if p is not None and p.type in (15, 16):
+            e = ao.Effective(p, None)
+            if e.int(239) in sources:
+                wander[e.int(239)].add((items.desc.get(e.int(23)) or '').strip())
+    for s, names in wander.items():
+        sources[s]['wander'] = sorted(n for n in names if n)
     pos = items.write_icons()
     for it in items.entries:
         it['icon'] = list(pos[it['icon']]) if it['icon'] is not None and it['icon'] in pos else None

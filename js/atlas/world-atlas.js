@@ -1,4 +1,4 @@
-// The map of world-atlas.html (embedded by index.html with ?embed=1): sector pictures from atlas/maps/ (listed in
+// The map of world-atlas.html (embedded by index.html with ?embed=1): sector pictures from atlas/world/, atlas/maps/, atlas/modules/ (listed in
 // js/atlas/data/map-pictures.js), the world included.
 'use strict';
 (async () => {
@@ -257,7 +257,7 @@
   }
 
   // ---- pictures ---------------------------------------------------------------------------------------
-  // One picture per sector (atlas/maps/, toolbox/atlas/build_map_pictures.py: tiles, walls, scenery and the game's light).
+  // One picture per sector (atlas/world/, atlas/maps/, atlas/modules/, toolbox/atlas/build_map_pictures.py: tiles, walls, scenery and the game's light).
   // Drawn like this:
   //  * far and middle distance: tiles of 256 px put together from one small patch per picture, shrunk once per level
   //    with smoothing, each patch opaque over the sector's average colour inside its diamond, so neighbouring sectors
@@ -270,15 +270,41 @@
     const GW = M.gridW, GH = M.gridH, images = M.images, ORX = M.bounds.minX, ORY = M.bounds.minY;
     const X0 = HW * (ORY - ORX), Y0 = HH * (ORX + ORY);       // world px of the grid's first sector (absolute sector numbers)
     const LEVEL_W = { 0: IMGW, 1: IMGW / +C.levels[1], 2: IMGW / +C.levels[2] };
+    // a small map keeps only the sizes it needs (build_map_pictures.prune_levels): TOP is its smallest (0: L0 alone,
+    // 0.5: L0 and L0.5, 1: L1 too, 2: L2 too), SMALL the objects layers that have a 1/4 picture
+    const TOP = M.top ?? 2, SMALL = new Set(M.small ?? ['O', 'F']), TILE_SRC = Math.min(2, TOP);
     let cells = null, disposed = false;
     const ready = (async () => {
       const bin = Uint8Array.from(atob(M.grid), c => c.charCodeAt(0));
       cells = new Uint16Array(await new Response(new Blob([bin]).stream().pipeThrough(new DecompressionStream('deflate'))).arrayBuffer());
       schedule();
     })();
-    // the map's extent in world px
-    const box = { x0: X0 + HW * -(GH - 1) - HW - PD.l, x1: X0 + HW * (GW - 1) + HW + PD.r, y0: Y0 - 20 - PD.t, y1: Y0 + HH * (GW + GH - 2) + C.sector.h - 20 + PD.b };
+    // the map's extent in world px (sector rx, ry is at x = HW (ry - rx): from -(GW - 1) to GH - 1 half sectors)
+    const box = { x0: X0 - HW * (GW - 1) - HW - PD.l, x1: X0 + HW * (GH - 1) + HW + PD.r, y0: Y0 - 20 - PD.t, y1: Y0 + HH * (GW + GH - 2) + C.sector.h - 20 + PD.b };
     const css = im => (im.css ??= `rgb(${im.color[0]},${im.color[1]},${im.color[2]})`);
+    // a sector's average-colour diamond is drawn a hair larger (f, a fraction of its size) so neighbours overlap without a
+    // seam, but only on the sides that have a neighbour; on the others a hair smaller, under the picture's own ground, as
+    // its soft edge would show as a faint outline on the black.
+    // Sides: top-right (rx - 1), bottom-right (ry + 1), bottom-left (rx + 1), top-left (ry - 1).
+    const filled = (rx, ry) => rx >= 0 && ry >= 0 && rx < GW && ry < GH && cells[ry * GW + rx] > 0;
+    const sidesAt = (rx, ry) => [filled(rx - 1, ry), filled(rx, ry + 1), filled(rx + 1, ry), filled(rx, ry - 1)];
+    const ALL_SIDES = [true, true, true, true];
+    let cellOf = null;                // a sector picture's cell in the grid (terrain pictures of the world are in many: all sides)
+    const sidesOf = i => {
+      if (images[i].sides) return images[i].sides;
+      if (!cellOf) { cellOf = new Map(); for (let k = 0; k < cells.length; k++) if (cells[k] && images[cells[k] - 1].kind === 'sec') cellOf.set(cells[k] - 1, k); }
+      const k = cellOf.get(i);
+      return (images[i].sides = k === undefined ? ALL_SIDES : sidesAt(k % GW, Math.floor(k / GW)));
+    };
+    function fillDiamond(g, cx, cy, hw, hh, f, sides) {
+      const [a, b, c, d] = sides.map(s => s ? f : -f);
+      g.beginPath();
+      g.moveTo(cx + hw * (a - d) / 2, cy - hh * (1 + (d + a) / 2));
+      g.lineTo(cx + hw * (1 + (a + b) / 2), cy + hh * (b - a) / 2);
+      g.lineTo(cx + hw * (b - c) / 2, cy + hh * (1 + (b + c) / 2));
+      g.lineTo(cx - hw * (1 + (c + d) / 2), cy + hh * (c - d) / 2);
+      g.closePath(); g.fill();
+    }
     const urlOf = (lvl, i) => `${src.base}L${lvl}/${images[i].stem}.${src.ext}`;
 
     // pictures: the atlas always; L2 / L1 / L0 on demand under a memory budget
@@ -313,11 +339,11 @@
       if (!overview) {
         const h = Math.ceil((GW + GH) * ovStep / 2) + 4, c = document.createElement('canvas'); c.width = OV_W; c.height = h;
         const g = c.getContext('2d'), img = g.createImageData(OV_W, h), px = img.data;
-        for (let v = 0; v <= GW + GH - 2; v++) for (let u = -(GH - 1); u <= GW - 1; u++) {
+        for (let v = 0; v <= GW + GH - 2; v++) for (let u = -(GW - 1); u <= GH - 1; u++) {
           if ((u + v) & 1) continue;
           const rx = (v - u) / 2, ry = (v + u) / 2; if (rx < 0 || ry < 0 || rx >= GW || ry >= GH) continue;
           const n = cells[ry * GW + rx]; if (!n) continue;
-          const col = images[n - 1].color, X = Math.round((u + GH - 1 + 0.5) * ovStep) - 1, Y = Math.round((v + 0.5) * ovStep / 2) - 1;
+          const col = images[n - 1].color, X = Math.round((u + GW - 1 + 0.5) * ovStep) - 1, Y = Math.round((v + 0.5) * ovStep / 2) - 1;
           for (let dy = 0; dy < ovDotH; dy++) for (let dx = 0; dx < ovDotW; dx++) {
             const xx = X + dx - (ovDotW >> 1) + 1, yy = Y + dy - (ovDotH >> 1) + 1; if (xx < 0 || xx >= OV_W || yy < 0 || yy >= h) continue;
             const o = (yy * OV_W + xx) * 4; px[o] = col[0]; px[o + 1] = col[1]; px[o + 2] = col[2]; px[o + 3] = 255;
@@ -326,20 +352,21 @@
         g.putImageData(img, 0, 0); overview = c;
       }
       const k = ovStep / HW;
-      ctx.drawImage(overview, view.ox + z * (X0 + HW * (-(GH - 1) - 0.5)), view.oy + z * (Y0 + 620), overview.width / k * z, overview.height / k * z);
+      ctx.drawImage(overview, view.ox + z * (X0 + HW * (-(GW - 1) - 0.5)), view.oy + z * (Y0 + 620), overview.width / k * z, overview.height / k * z);
     }
 
     // far and middle distance: tiles. Level s = a sector is s px wide; levels up to 64 are made from the atlas (1/64),
-    // 128 and 256 from the 1/16 pictures, loaded when a tile needs them.
+    // 128 and 256 from the 1/16 pictures (1/4 where a small map has none), loaded when a tile needs them; a map with
+    // pieces only (L0, L0.5) has tiles up to 64 only, its sectors drawn one by one from there.
     const TILE = 256, TILE_LEVELS = [4, 8, 16, 32, 64, 128, 256], ATLAS_LEVELS_TO = 64, TILE_BUDGET_MS = 10;
-    const TILES_BELOW_PX = 256 / 0.9, OVERVIEW_BELOW_PX = 3;
+    const TILES_BELOW_PX = (TOP >= 1 ? 256 : ATLAS_LEVELS_TO) / 0.9, OVERVIEW_BELOW_PX = 3;
     const levels = new Map(), tiles = new Map();
     function levelOf(s) {
       let L = levels.get(s);
       if (L) return L;
       const zk = s / SW, exX = (HW + PD.l) * zk, exY = (20 + PD.t) * zk, oX = Math.ceil(exX), oY = Math.ceil(exY);
       L = { s, zk, exX, exY, oX, oY, pw: Math.ceil(IMGW * zk) + 2, ph: Math.ceil(IMGH * zk) + 2, fromL2: s > ATLAS_LEVELS_TO,
-        patches: new Array(images.length).fill(null), CX: oX, CY: oY + (HH - 20) * zk, hw: HW * zk + 0.75, hh: HH * zk + 0.4 };
+        patches: new Array(images.length).fill(null), CX: oX, CY: oY + (HH - 20) * zk, hw: HW * zk, hh: HH * zk, f: Math.max(0.75 / (HW * zk), 0.4 / (HH * zk)) };
       levels.set(s, L);
       return L;
     }
@@ -350,16 +377,16 @@
       const im = images[i];
       let source = null, sx = 0, sy = 0, sw = 0, sh = 0;
       if (!L.fromL2) { source = atlasImg; sx = im.atlas[0] * A.w; sy = im.atlas[1] * A.h; sw = A.w; sh = A.h; }
-      else if (!failed.has('2/' + i)) {
-        const e = cache.get('2/' + i);
-        if (!e) { wanted.push([2, i]); return null; }
+      else if (!failed.has(TILE_SRC + '/' + i)) {
+        const e = cache.get(TILE_SRC + '/' + i);
+        if (!e) { wanted.push([TILE_SRC, i]); return null; }
         if (!e.ready) return null;
         e.used = frameNo; source = e.img; sw = e.img.naturalWidth; sh = e.img.naturalHeight;
       }
       const c = document.createElement('canvas'); c.width = L.pw; c.height = L.ph;
       const g = c.getContext('2d');
       g.fillStyle = css(im);
-      g.beginPath(); g.moveTo(L.CX, L.CY - L.hh); g.lineTo(L.CX + L.hw, L.CY); g.lineTo(L.CX, L.CY + L.hh); g.lineTo(L.CX - L.hw, L.CY); g.closePath(); g.fill();
+      fillDiamond(g, L.CX, L.CY, L.hw, L.hh, L.f, sidesOf(i));
       if (source) { g.imageSmoothingEnabled = true; g.imageSmoothingQuality = 'high'; g.drawImage(source, sx, sy, sw, sh, L.oX - L.exX, L.oY - L.exY, IMGW * L.zk, IMGH * L.zk); }
       return (L.patches[i] = c);
     }
@@ -396,8 +423,10 @@
       tiles.delete(oldKey);
       return old.slot;
     }
+    // tiles are counted from the world's origin, not the grid's first sector: where they fall (and so how the pictures are
+    // smoothed into them) does not depend on the map's extent
     function buildTile(L, tx, ty, slot) {
-      const TX = tx * TILE - APRON, TY = ty * TILE - APRON;
+      const TX = tx * TILE - APRON - X0 * L.zk, TY = ty * TILE - APRON - Y0 * L.zk;
       let ok = true;
       eachInSquare(L, TX, TY, SLOT, i => { if (!patchOf(L, i)) ok = false; });
       if (!ok) return false;
@@ -414,10 +443,10 @@
       if (!atlasImg) { drawOverview(z); return true; }
       const s = TILE_LEVELS.find(l => l >= devPx * 0.9) ?? TILE_LEVELS[TILE_LEVELS.length - 1];
       const L = levelOf(s), k = z / L.zk;                    // CSS px per level px
-      const lox = view.ox + z * X0, loy = view.oy + z * Y0;   // screen position of the grid's origin
+      const lox = view.ox, loy = view.oy;                     // screen position of the world's origin
       const tx0 = Math.floor(-lox / k / TILE), tx1 = Math.floor((cw - lox) / k / TILE), ty0 = Math.floor(-loy / k / TILE), ty1 = Math.floor((ch - loy) / k / TILE);
-      const wx0 = Math.floor((box.x0 - X0) * L.zk / TILE), wx1 = Math.floor((box.x1 - X0) * L.zk / TILE);
-      const wy0 = Math.floor((box.y0 - Y0) * L.zk / TILE), wy1 = Math.floor((box.y1 - Y0) * L.zk / TILE);
+      const wx0 = Math.floor(box.x0 * L.zk / TILE), wx1 = Math.floor(box.x1 * L.zk / TILE);
+      const wy0 = Math.floor(box.y0 * L.zk / TILE), wy1 = Math.floor(box.y1 * L.zk / TILE);
       const list = [];
       for (let ty = Math.max(ty0, wy0); ty <= Math.min(ty1, wy1); ty++) for (let tx = Math.max(tx0, wx0); tx <= Math.min(tx1, wx1); tx++) list.push([tx, ty]);
       const mx = (cw / 2 - lox) / k / TILE - 0.5, my = (ch / 2 - loy) / k / TILE - 0.5;
@@ -457,11 +486,13 @@
 
     // close: each sector's picture over a diamond of its average colour (neighbouring pictures meet along soft
     // diagonal edges, which would let the background show through as a fine grid)
-    // Close up the pictures are in pieces (C.pieces: full size in 8 x 4, half size in 4 x 2, only those not empty): only the
+    // Close up the pictures are in pieces (C.pieces: L0 full size in 8 x 4, L0.5 half size in 4 x 2, only those not empty): only the
     // pieces on screen are fetched and decoded, and the 1/4 picture stands in meanwhile. A whole full-size picture is 66 MB
     // once decoded: a few of those froze the page for seconds.
     function drawSectors(z) {
-      const disp = IMGW * z, lvl = disp <= A.w * 1.25 ? 3 : disp <= LEVEL_W[2] * 1.25 ? 2 : disp <= LEVEL_W[1] * 1.25 ? 1 : PC && disp <= IMGW / PC.H[2] * 1.25 ? 'H' : 0;
+      const disp = IMGW * z;
+      let lvl = disp <= A.w * 1.25 ? 3 : disp <= LEVEL_W[2] * 1.25 ? 2 : disp <= LEVEL_W[1] * 1.25 ? 1 : PC && disp <= IMGW / PC['L0.5'][2] * 1.25 ? 0.5 : 0;
+      if (lvl !== 3 && lvl > TOP) lvl = TOP;                   // a size the map does not have: the next larger
       const wx0 = -view.ox / z - X0, wx1 = (cw - view.ox) / z - X0, wy0 = -view.oy / z - Y0, wy1 = (ch - view.oy) / z - Y0, mX = HW + PD.l + 8;
       const u0 = Math.ceil((wx0 - mX) / HW), u1 = Math.floor((wx1 + mX) / HW);
       // picture v spans world y from HH v - 20 - pad.t to HH v - 20 + sector height + pad.b
@@ -473,20 +504,20 @@
       }
       ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = 'medium';
       for (const [rx, ry, i] of vis) {
-        const cx = view.ox + z * (X0 + HW * (ry - rx)), cy = view.oy + z * (Y0 + HH * (rx + ry) + HH - 20), hw = z * HW + 1.5, hh = z * HH + 1;
-        if (cx + hw < 0 || cx - hw > cw || cy + hh < 0 || cy - hh > ch) continue;
+        const cx = view.ox + z * (X0 + HW * (ry - rx)), cy = view.oy + z * (Y0 + HH * (rx + ry) + HH - 20), hw = z * HW, hh = z * HH;
+        if (cx + hw + 2 < 0 || cx - hw - 2 > cw || cy + hh + 2 < 0 || cy - hh - 2 > ch) continue;
         ctx.fillStyle = css(images[i]);
-        ctx.beginPath(); ctx.moveTo(cx, cy - hh); ctx.lineTo(cx + hw, cy); ctx.lineTo(cx, cy + hh); ctx.lineTo(cx - hw, cy); ctx.closePath(); ctx.fill();
+        fillDiamond(ctx, cx, cy, hw, hh, Math.max(1.5 / hw, 1 / hh), sidesAt(rx, ry));
       }
       const need = [];
       for (const [rx, ry, i] of vis) {
         const dx = view.ox + z * (X0 + HW * (ry - rx) - HW - PD.l), dy = view.oy + z * (Y0 + HH * (rx + ry) - 20 - PD.t), dw = IMGW * z, dh = IMGH * z;
         if (dx > cw || dy > ch || dx + dw < 0 || dy + dh < 0) continue;
         const d = Math.hypot(dx + dw / 2 - cw / 2, dy + dh / 2 - ch / 2);
-        if ((lvl === 0 || lvl === 'H') && PC && images[i].p) { drawPieces(lvl === 0 ? 'L0' : 'H', i, dx, dy, z, d, need); continue; }
+        if (lvl < 1 && PC && images[i].p) { drawPieces('L' + lvl, i, dx, dy, z, d, need, sidesAt(rx, ry)); continue; }
         let shown = null;
         if (lvl !== 3) {
-          const l = lvl === 'H' ? 0 : lvl, e = cache.get(l + '/' + i);      // a picture not in pieces: whole
+          const l = lvl < 1 ? 0 : lvl, e = cache.get(l + '/' + i);      // a picture not in pieces: whole
           if (e && e.ready) { e.used = frameNo; shown = e.img; }
           else { shown = bestReady(i); if (!e) need.push([l, i, d]); }
         }
@@ -498,9 +529,24 @@
       if (z >= OBJECTS_FROM_Z && (objMask.size || offMask.size)) drawObjects(z, vis);
       piecePump();
     }
-    function drawPieces(name, i, dx, dy, z, d, need) {
-      const [cols, rows, f] = PC[name], mask = images[i].p[name === 'L0' ? 0 : 1] >>> 0, pw = IMGW / cols, ph = IMGH / rows, stem = images[i].stem;
-      if (!cache.has('1/' + i) && !failed.has('1/' + i)) need.push([1, i, d]);
+    // pieces that were only black are not kept (p[2], p[3]: their masks): black is filled there, over the sector's diamond only
+    // (a black piece's ground covered the average colour and what the sectors behind reach into the diamond, nothing else)
+    function drawPieces(name, i, dx, dy, z, d, need, sides) {
+      const [cols, rows, f] = PC[name], j = name === 'L0' ? 0 : 1, mask = images[i].p[j] >>> 0, black = (images[i].p[j + 2] ?? 0) >>> 0;
+      const pw = IMGW / cols, ph = IMGH / rows, stem = images[i].stem;
+      if (black) {
+        const hw = z * HW, hh = z * HH;
+        ctx.save(); ctx.fillStyle = '#000'; ctx.beginPath();
+        for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++) {
+          if (!(black >>> (r * cols + c) & 1)) continue;
+          ctx.rect(Math.round(dx + c * pw * z), Math.round(dy + r * ph * z), Math.round(dx + (c + 1) * pw * z) - Math.round(dx + c * pw * z), Math.round(dy + (r + 1) * ph * z) - Math.round(dy + r * ph * z));
+        }
+        ctx.clip();
+        fillDiamond(ctx, dx + z * (HW + PD.l), dy + z * (HH + PD.t), hw, hh, Math.max(1.5 / hw, 1 / hh), sides);
+        ctx.restore();
+      }
+      if (!mask) return;
+      if (TOP >= 1 && !cache.has('1/' + i) && !failed.has('1/' + i)) need.push([1, i, d]);
       const stand = bestReady(i), k = stand ? stand.naturalWidth / IMGW : 0;
       for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++) {
         if (!(mask >>> (r * cols + c) & 1)) continue;
@@ -555,7 +601,7 @@
     const objMask = new Map((M.objects || []).map((i, k) => [i, (M.objectMasks || [])[k] >>> 0]));
     const offMask = new Map((M.offObjects || []).map((i, k) => [i, (M.offObjectMasks || [])[k] >>> 0]));
     function drawObjects(z, vis) {
-      const lvl = IMGW * z <= LEVEL_W[1] * 1.25 ? 1 : 0, w1 = LEVEL_W[1], h1 = w1 * IMGH / IMGW;
+      const far = IMGW * z <= LEVEL_W[1] * 1.25, w1 = LEVEL_W[1], h1 = w1 * IMGH / IMGW;
       const dw = IMGW * z, dh = IMGH * z;
       const layers = showOff ? [[objMask, 'O'], [offMask, 'F']] : [[objMask, 'O']];
       for (const [rx, ry, i] of vis) for (const [masks, L] of layers) {
@@ -563,8 +609,8 @@
         const dx = view.ox + z * (X0 + HW * (ry - rx) - HW - PD.l), dy = view.oy + z * (Y0 + HH * (rx + ry) - 20 - PD.t);
         if (dx > cw || dy > ch || dx + dw < 0 || dy + dh < 0) continue;
         const d = Math.hypot(dx + dw / 2 - cw / 2, dy + dh / 2 - ch / 2), stem = images[i].stem;
-        const small = pieceNeed(L + '1/' + i, `${src.base}${L}1/${stem}.${src.ext}`, w1 * h1 * 4, d + OBJECTS_LATER);
-        if (lvl) { if (small) ctx.drawImage(small.img, dx, dy, dw, dh); continue; }
+        const small = SMALL.has(L) ? pieceNeed(L + '1/' + i, `${src.base}${L}1/${stem}.${src.ext}`, w1 * h1 * 4, d + OBJECTS_LATER) : null;
+        if (far && SMALL.has(L)) { if (small) ctx.drawImage(small.img, dx, dy, dw, dh); continue; }
         const mask = masks.get(i);
         for (let r = 0; r < OBJ_ROWS; r++) for (let c = 0; c < OBJ_COLS; c++) {
           if (!(mask >>> (r * OBJ_COLS + c) & 1)) continue;
@@ -582,6 +628,12 @@
       draw(z) {
         if (!cells) return;
         frameNo++; wanted.length = 0;
+        // the map's ground is black: sectors that are only black have no picture (the world's own background, outside it, is not black)
+        const gx = view.ox + z * X0, gy = view.oy + z * (Y0 - 20);
+        ctx.fillStyle = '#000'; ctx.beginPath();
+        ctx.moveTo(gx, gy); ctx.lineTo(gx + z * HW * GH, gy + z * HH * GH);
+        ctx.lineTo(gx + z * HW * (GH - GW), gy + z * HH * (GW + GH)); ctx.lineTo(gx - z * HW * GW, gy + z * HH * GW);
+        ctx.closePath(); ctx.fill();
         const sectorPx = SW * z;
         if (sectorPx < OVERVIEW_BELOW_PX) { ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = 'low'; drawOverview(z); }
         else if (sectorPx * dpr < TILES_BELOW_PX) { ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = 'low'; if (drawTiles(z, sectorPx * dpr)) schedule(); }
