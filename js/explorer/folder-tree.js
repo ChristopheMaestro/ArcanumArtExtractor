@@ -22,7 +22,7 @@ const FILTER_BATCH = 32;
 export function mountFolderTree({
   rootName, loadManifest, openFolder, ext, fileIcon = '📄',
   openFile = null, fileFilter = null, folderFilter = null, searchFields = null,
-  searchLines = null, openLine = null, lineLinks = null, searchCards = null,
+  searchLines = null, openLine = null, lineLinks = null, searchCards = null, searchScope = null,
 }) {
   let nodes = new Map();        // path -> node
   let root = null;
@@ -171,7 +171,7 @@ export function mountFolderTree({
 
   // The right side bar's search looks through this tree's manifests (see file-search.js).
   registerSearchProvider(openFile ? {
-    rootName, loadManifest, ext, fileIcon, openFile, fields: searchFields, lines: searchLines, openLine, lineLinks, cards: searchCards,
+    rootName, loadManifest, ext, fileIcon, openFile, fields: searchFields, lines: searchLines, openLine, lineLinks, cards: searchCards, scope: searchScope,
     where,
     restore: () => { const { path, name } = where(); return openFolder(path, name); },
   } : null);

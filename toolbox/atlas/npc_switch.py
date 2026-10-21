@@ -61,38 +61,68 @@ def cut(s, n=70):
     return s if len(s) <= n else s[:n].rstrip() + '…'
 
 
+def _script_lines(f):
+    """[[condition, action, else action], ...] of a script: (type, [operand types], [operand values]) each."""
+    d = f.read_bytes()
+    out = []
+    for i in range(max(min(struct.unpack_from('<i', d, 0x34)[0], (len(d) - 0x40) // 0x84), 0)):
+        o = 0x40 + i * 0x84
+        part = []
+        for off in (0, 0x2C, 0x58):
+            t = struct.unpack_from('<i', d, o + off)[0]
+            part.append((t, list(d[o + off + 4:o + off + 12]), list(struct.unpack_from('<8i', d, o + off + 12))))
+        out.append(part)
+    return out
+
+
 class Switches:
-    def __init__(self):
+    def __init__(self, module=None, version=None):
+        """`module`: a module folder - its own scr, dlg and names. A module's flag and quest numbers are its own, which no table
+        here knows: a flag then reads "flag N is set", a quest "quest N".
+        `version`: a game_files.Version (a mod, a module over the game): scripts, dialogs, flags and tables with every layer over the game's."""
         self.sat, self.sct = enum('ScriptActionType', 'SAT_'), enum('ScriptConditionType', 'SCT_')
+        self.module = module
+        if version is not None:
+            self.dlg = version.tree('dlg')
+            self.files = version.script_numbers()
+            if version.module:                       # a module's flag and quest numbers are its own, which no table here knows
+                self.flags, self.names, self.quests = {}, {}, {}
+            else:
+                flags = version.global_flags()
+                self.flags, self.names = flags['flags'], flags['scripts']
+                import build_quests
+                self.quests = build_quests.QUEST_TITLES
+            self.oname = {k: re.sub(r'^\s*\d+\s+', '', v).strip() for k, v in version.mes('oemes', 'oname.mes').items()}
+            self.rumours = version.mes('mes', 'game_rd_npc_m2m.mes')
+            self.desc = version.descriptions()
+            self.cache, self._paths, self._sig = {}, {}, None
+            self.gen_cache = None
+            return
+        self.dlg = (module or ao.DATA) / 'dlg'
         self.files = {}
-        for f in (ao.DATA / 'scr').glob('*.scr'):
+        for f in ((module or ao.DATA) / 'scr').glob('*.scr'):
             m = re.match(r'(\d+)', f.name)
             if m:
                 self.files[int(m.group(1))] = f
-        flags = json.loads((ao.DATA / 'scr' / 'global_flags.json').read_text(encoding='utf-8'))
-        self.flags, self.names = flags['flags'], flags['scripts']
-        import build_quests
-        self.quests = build_quests.QUEST_TITLES
+        if module:
+            self.flags, self.names, self.quests = {}, {}, {}
+        else:
+            flags = json.loads((ao.DATA / 'scr' / 'global_flags.json').read_text(encoding='utf-8'))
+            self.flags, self.names = flags['flags'], flags['scripts']
+            import build_quests
+            self.quests = build_quests.QUEST_TITLES
         oname = ao.mes(ao.DATA / 'oemes' / 'oname.mes')
         self.oname = {k: re.sub(r'^\s*\d+\s+', '', v).strip() for k, v in oname.items()}
         self.rumours = ao.mes(ao.DATA / 'mes' / 'game_rd_npc_m2m.mes')
-        self.desc = ao.descriptions()
-        self.cache = {}
+        self.desc = ao.descriptions(module)
+        self.cache, self._paths, self._sig = {}, {}, None
         self.gen_cache = None
 
     # ---- a script as lines -------------------------------------------------------------------------------------------
     def lines(self, num):
         if num not in self.cache:
-            d = self.files[num].read_bytes()
-            out = []
-            for i in range(max(min(struct.unpack_from('<i', d, 0x34)[0], (len(d) - 0x40) // 0x84), 0)):
-                o = 0x40 + i * 0x84
-                part = []
-                for off in (0, 0x2C, 0x58):
-                    t = struct.unpack_from('<i', d, o + off)[0]
-                    part.append((t, list(d[o + off + 4:o + off + 12]), list(struct.unpack_from('<8i', d, o + off + 12))))
-                out.append(part)
-            self.cache[num] = out
+            import game_files
+            self.cache[num] = game_files.parse_file(self.files[num], 'switch-lines', _script_lines)     # (each file read once, kept between runs)
         return self.cache[num]
 
     def title(self, num):
@@ -307,8 +337,8 @@ class Switches:
         if getattr(self, '_gv', None) is None:
             self._gv = {}
             gv = re.compile(r'(?<![a-z])gv\s*(\d+)\s+(-?\d+)', re.I)
-            for f in sorted((ao.DATA / 'dlg').glob('*.dlg')):
-                for raw in f.read_text(encoding='cp1252', errors='replace').splitlines():
+            for f in sorted(self.dlg.glob('*.dlg')):
+                for raw in ao.read_text(f).splitlines():
                     raw = raw.strip()
                     if not (raw.startswith('{') and raw.endswith('}')):
                         continue
@@ -490,15 +520,41 @@ class Switches:
         return out
 
     def own_paths(self, e):
-        """The ways the NPC's own scripts switch it on: [sentence, ...] (an empty path reads 'right away'), and what they do to others."""
-        paths, others = [], []
-        for hook, num, counters in self.scripts_of(e):
-            own, oth = self.run(num, counters)
-            paths += own
-            others += oth
+        """The ways the NPC's own scripts switch it on: [sentence, ...] (an empty path reads 'right away'), and what they do to others.
+        The same scripts give the same answer: worked out once per set of scripts (a town's guards all carry the same ones)."""
+        mine = self.scripts_of(e)
+        key = tuple((hook, num, tuple(c)) for hook, num, c in mine)
+        if key not in self._paths:
+            self._paths[key] = self._own_paths(mine)
+        texts, others = self._paths[key]
+        return list(texts), list(others)
+
+    def _walked(self, mine):
+        """(paths, others) of run() over the scripts: kept between runs (reports/cache), keyed by those scripts and every script of this set
+        of files (a walk follows the scripts it swaps in or calls). A walk can take minutes; what it found does not depend on the tables."""
+        import game_files
+        if self._sig is None:
+            import zlib
+            stats = sorted((n, p.name.lower(), st.st_size, st.st_mtime_ns) for n, p in self.files.items() for st in [p.stat()])     # (one stat per file)
+            self._sig = zlib.crc32(repr((stats, sorted(self.oname))).encode())     # (describe() keeps an item test only when oname.mes has the number)
+        key = (self._sig, tuple((hook, num, tuple(c)) for hook, num, c in mine))
+        memo = game_files._parsed('switch-walks')
+        if key not in memo:
+            paths, others = [], []
+            for hook, num, counters in mine:
+                own, oth = self.run(num, counters)
+                paths += own
+                others += oth
+            memo[key] = (paths, others)
+            game_files._DIRTY.add('switch-walks')
+        return memo[key]
+
+    def _own_paths(self, mine):
+        paths, others = self._walked(mine)
+        paths, others = list(paths), list(others)
         texts = []
         for p in self.simplify(paths):
-            t = self.render(p)
+            t = self.render(sorted(p, key=repr))       # (a set: in a fixed order, or the sentence changes from one run to the next)
             if not t:       # nothing readable on the way: unconditional, or only tests this cannot read
                 t = ('when its own script decides so (it tests something this tool cannot read)' if any(i[0] == 'other' for i in p)
                      else 'right away (its own script switches it on when the game starts it)')

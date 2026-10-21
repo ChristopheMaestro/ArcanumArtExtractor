@@ -125,120 +125,7 @@
   .file-mode-btn.art-mode { border-color: var(--teal); color: var(--teal); }
   .file-mode-btn.object-mode { border-color: var(--brass); color: var(--brass); }
 
-  .explorer-home {
-    display: grid;
-    gap: 20px;
-    min-height: 520px;
-  }
-  .explorer-home[hidden] { display: none; }
-
-  .home-category {
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 18px;
-    background: var(--surface);
-  }
-  .home-art { border-color: rgba(87, 168, 160, .55); background: linear-gradient(180deg, rgba(87,168,160,.10), var(--surface)); }
-  .home-object { border-color: rgba(201, 157, 75, .55); background: linear-gradient(180deg, rgba(201,157,75,.10), var(--surface)); }
-  .home-text { border-color: rgba(154, 119, 180, .55); background: linear-gradient(180deg, rgba(154,119,180,.10), var(--surface)); }
-
-  .home-category-heading {
-    display: flex;
-    align-items: baseline;
-    gap: 12px;
-    margin-bottom: 14px;
-  }
-  .home-category-heading h2 {
-    margin: 0;
-    font: 600 clamp(20px, 2.4vw, 28px)/1.1 var(--font-display);
-    color: #f1e4c3;
-  }
-  .home-category-kicker {
-    font: 600 11px/1 var(--font-mono);
-    letter-spacing: .12em;
-    opacity: .75;
-  }
-  .home-card-grid {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 12px;
-    width: 100%;
-  }
-  .home-file-card {
-    min-width: 0;
-    flex: 1 1 0;
-    min-height: 165px;
-    padding: 16px;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    background: var(--surface-2);
-    color: var(--ink);
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 10px;
-    cursor: pointer;
-    transition: transform .15s, border-color .15s, box-shadow .15s;
-  }
-  .home-file-card:hover:not(:disabled) {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0,0,0,.22);
-  }
-  .home-art .home-file-card { border-color: rgba(87,168,160,.55); }
-  .home-object .home-file-card { border-color: rgba(201,157,75,.55); }
-  .home-text .home-file-card { border-color: rgba(154,119,180,.55); }
-  .home-file-card.is-disabled { opacity: .48; cursor: default; }
-  .home-file-icon {
-    position: relative;
-    width: 96px;
-    height: 108px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid rgba(229,192,123,.78);
-    border-radius: 6px;
-    background: #171512;
-    box-shadow: 0 8px 20px rgba(0,0,0,.28);
-    padding: 12px 10px 10px;
-    box-sizing: border-box;
-  }
-  .home-file-fold {
-    position: absolute;
-    top: -2px;
-    right: -2px;
-    width: 24px;
-    height: 24px;
-    border-left: 2px solid rgba(229,192,123,.78);
-    border-bottom: 2px solid rgba(229,192,123,.78);
-    background: #171512;
-    transform: skew(-45deg);
-    transform-origin: top right;
-  }
-  .home-file-icon-label {
-    color: #f1d69a;
-    font: 600 18px/1 var(--font-mono);
-    letter-spacing: .02em;
-    overflow-wrap: anywhere;
-    text-align: center;
-  }
-  .home-file-card strong { font: 600 15px/1.2 var(--font-mono); }
-  .home-file-card span:last-child { color: var(--ink-muted); font-size: 10.5px; line-height: 1.4; }
-  .home-art { border-color: rgba(32,178,170,.65); }
-  .home-art .home-category-kicker { color: var(--teal); }
-  .home-art .home-file-card:hover:not(:disabled) { border-color: var(--teal); }
-  .home-object { border-color: rgba(255,224,102,.55); }
-  .home-object .home-category-kicker { color: var(--brass); }
-  .home-object .home-file-card:hover:not(:disabled) { border-color: var(--brass); }
-  .home-text { border-color: rgba(255,143,132,.6); }
-  .home-text .home-category-kicker { color: var(--rust); }
-  .home-text .home-file-card:hover:not(:disabled) { border-color: var(--rust); }
-  .home-script { border-color: rgba(143,196,110,.6); background: linear-gradient(180deg, rgba(143,196,110,.10), var(--surface)); }
-  .home-script .home-category-kicker { color: #8fc46e; }
-  .home-script .home-file-card { border-color: rgba(143,196,110,.55); }
-  .home-script .home-file-card:hover:not(:disabled) { border-color: #8fc46e; }
   .file-mode-btn.script-mode { border-color: #8fc46e; color: #8fc46e; }
-  .home-file-card.is-disabled { opacity: .52; cursor: default; }
 
 
   .explorer {
@@ -2396,17 +2283,6 @@
 @media (max-width: 760px) {
   .hero { align-items: flex-start; flex-wrap: wrap; }
   .file-mode-nav { max-width: 100%; width: 100%; margin-left: 0; justify-content: flex-start; }
-  .explorer-home { min-height: 0; }
-}
-
-/* Home screen: keep the launcher clean and prevent explorer-only controls from
-   flashing underneath it while the app initializes. */
-body.home-active .explorer,
-body.home-active .manual-load,
-body.home-active #log,
-body.home-active footer.note,
-body.home-active .dat-packer {
-  display: none !important;
 }
 
 .app-title {
@@ -2419,93 +2295,6 @@ body.home-active .dat-packer {
 .app-title:focus-visible {
   outline: 1px solid var(--brass);
   outline-offset: 5px;
-}
-
-/* Home launcher: give every file-type card the same footprint while
-   reserving one card-width of space for each extension in a category. */
-.explorer-home {
-  display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
-  align-items: stretch;
-  gap: 14px;
-  min-height: 0;
-}
-.explorer-home .home-category {
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
-  flex: none;
-}
-.explorer-home .home-art { grid-column: span 1; }
-.explorer-home .home-object { grid-column: span 3; }
-.explorer-home .home-text { grid-column: span 2; }
-.explorer-home .home-script { grid-column: span 1; }
-.explorer-home .home-card-grid {
-  flex: 1 1 auto;
-  align-items: stretch;
-  gap: 8px;
-}
-.explorer-home .home-file-card {
-  min-width: 0;
-  min-height: 150px;
-  padding: 12px;
-  gap: 8px;
-}
-.explorer-home .home-art .home-file-card,
-.explorer-home .home-object .home-file-card,
-.explorer-home .home-script .home-file-card,
-.explorer-home .home-text .home-file-card {
-  height: 100%;
-}
-.explorer-home .home-file-icon {
-  width: 76px;
-  height: 86px;
-}
-.explorer-home .home-file-icon-label {
-  font-size: 15px;
-}
-.explorer-home .home-file-card strong {
-  font-size: 12px;
-}
-.explorer-home .home-file-card span:last-child {
-  font-size: 9px;
-}
-
-@media (max-width: 980px) {
-  .explorer-home {
-    gap: 10px;
-  }
-  .explorer-home .home-category {
-    padding: 12px;
-  }
-  .explorer-home .home-category-heading {
-    gap: 7px;
-    margin-bottom: 9px;
-  }
-  .explorer-home .home-category-heading h2 {
-    font-size: 18px;
-  }
-  .explorer-home .home-file-card {
-    padding: 9px;
-  }
-  .explorer-home .home-file-icon {
-    width: 60px;
-    height: 70px;
-  }
-}
-
-@media (max-width: 760px) {
-  .explorer-home {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-  .explorer-home .home-category,
-  .explorer-home .home-art,
-  .explorer-home .home-object,
-  .explorer-home .home-script,
-  .explorer-home .home-text {
-    flex: none;
-  }
 }
 
 
@@ -2606,6 +2395,9 @@ body.home-active .dat-packer {
   font: 500 10px/1.2 var(--font-mono);
   cursor: pointer;
 }
+.sec-overlay-toggle { white-space: nowrap; min-width: 0; }
+.sec-overlay-toggle.sec-mob-files-btn { letter-spacing: -.3px; }
+body.sec-edit-full .sec-viewer-only { display: none !important; }   /* waypoints, start and animate exist in the viewer only */
 .sec-overlay-toggle:hover,
 .sec-overlay-toggle:focus-visible { border-color: var(--brass); color: var(--ink); }
 .sec-overlay-toggle[aria-pressed="true"] {
@@ -2643,6 +2435,30 @@ body.home-active .dat-packer {
   white-space: nowrap;
   transform: translate(8px, 8px);
 }
+.sec-ctx-menu {
+  position: absolute;
+  z-index: 5;
+  padding: 3px;
+  border: 1px solid var(--brass);
+  border-radius: 4px;
+  background: rgba(25,22,17,.97);
+  box-shadow: 0 4px 14px rgba(0,0,0,.5);
+}
+.sec-ctx-menu[hidden] { display: none; }
+.sec-ctx-menu button {
+  display: block;
+  width: 100%;
+  padding: 5px 14px;
+  border: 0;
+  border-radius: 3px;
+  background: none;
+  color: var(--ink);
+  font: 11px/1.35 var(--font-mono);
+  text-align: left;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.sec-ctx-menu button:hover { background: rgba(255,215,0,.14); }
 .sec-map-hint { margin: 8px 0 0; color: var(--ink-muted); font-size: 10px; }
 .sec-tile-info { padding: 14px; min-height: 180px; }
 .sec-tile-info h3 { margin: 0 0 10px; font: 600 17px/1.2 var(--font-display); color: #f1e4c3; }
@@ -2711,6 +2527,8 @@ body.home-active .dat-packer {
 .sec-loading-sector { color: var(--ink); font: 11px/1.5 var(--font-mono); min-height: 34px; overflow-wrap: anywhere; }
 .sec-loading-track { height: 12px; border: 1px solid var(--border); background: #171512; border-radius: 3px; overflow: hidden; margin: 12px 0 7px; }
 .sec-loading-fill { height: 100%; width: 0%; background: var(--brass); transition: width .12s ease; }
+.sec-large-load { margin-top: 6px; padding: 9px 22px; background: var(--surface-2); border: 1px solid var(--brass); border-radius: 3px; color: var(--brass); font: 600 13px/1 var(--font-display); letter-spacing: .04em; cursor: pointer; transition: background .15s, color .15s; }
+.sec-large-load:hover, .sec-large-load:focus-visible { background: var(--brass); color: #171512; outline: none; }
 .sec-loading-percent { text-align: right; color: var(--ink-muted); font: 10px/1.3 var(--font-mono); }
 
 .sec-folder-map-stage {
@@ -2770,8 +2588,6 @@ body.sidebar-collapsed .sec-folder-map-stage {
 /* ---- .DLG dialogue explorer -------------------------------------------- */
 .file-mode-btn.text-mode { border-color: var(--rust); color: var(--rust); }
 .file-mode-btn.text-mode:hover { background: var(--surface-2); }
-.home-text .home-file-card { border-color: rgba(255,143,132,.6); }
-.home-text .home-file-card:hover:not(:disabled) { border-color: var(--rust); }
 
 .dlg-viewer { width: 100%; }
 .dlg-viewer-head { display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:14px; }

@@ -1,18 +1,18 @@
 #!/usr/bin/env python3
 """
-Generates art-thumbs/: the thumbnails of the .ART grid as sheets, so the asset browser loads one picture
+Generates js/art/art-thumbs/: the thumbnails of the .ART grid as sheets, so the asset browser loads one picture
 per page of 50 instead of the 50 .art files (online that was ~50 requests and up to ~4 MB per page).
 
-    art-thumbs/index.json               what the sheets hold (see js/art/art-thumb-sheets.js)
-    art-thumbs/<folder>/<k>.webp        the folder's .art files k*50 .. k*50+49 (English name order), 10 per row
-    art-thumbs/<folder>/folders.webp    the 4-picture previews of the folder's sub-folder cards
+    js/art/art-thumbs/index.json               what the sheets hold (see js/art/art-thumb-sheets.js)
+    js/art/art-thumbs/<folder>/<k>.webp        the folder's .art files k*50 .. k*50+49 (English name order), 10 per row
+    js/art/art-thumbs/<folder>/folders.webp    the 4-picture previews of the folder's sub-folder cards
 
 The thumbnails are drawn by the viewer's own code (js/art/art-preview.js renderArtThumb, a headless browser),
 so they are the pixels the grid would draw from the .art files. Needs Playwright and Pillow:
 
     python toolbox/build_art_thumbs.py
 
-Run it again after adding, renaming, removing or changing .art files (and after Jsoner.py). A folder whose
+Run it again after adding, renaming, removing or changing .art files (and after file_index.py). A folder whose
 files no longer match its sheets falls back to loading the .art files, so stale sheets are slow, not wrong
 - except for a changed picture under the same name, which keeps its old thumbnail until this runs.
 """
@@ -30,7 +30,7 @@ from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-OUT = ROOT / 'art-thumbs'
+OUT = ROOT / 'js' / 'art' / 'art-thumbs'
 
 try:
     from playwright.sync_api import sync_playwright
@@ -171,7 +171,7 @@ def main():
     with sync_playwright() as pw:
         browser = pw.chromium.launch()
         page = browser.new_page(locale='en-US')
-        page.goto(base + '/asset-browser.html', wait_until='domcontentloaded')
+        page.goto(base + '/index.html?view=browser', wait_until='domcontentloaded')
         page.wait_for_timeout(1500)
         folders = page.evaluate(WALK_JS)
         for i, f in enumerate(folders, 1):

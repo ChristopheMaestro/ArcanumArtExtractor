@@ -9,12 +9,13 @@ from art/interface, picked by number through art/interface/interface.mes:
   * every line of gamebook / gamenewspaper / gameplaque .mes begins with a font number and a justification letter
     ("492c _ WEATHER _"); the page furniture (newspaper title, telegram headings) names fonts in the C source.
 A font is one ART frame per character (frame = character code - 31); the game draws the grey ramp in the font's colour:
-black everywhere, white on the plaque. This script turns the pictures used into PNGs inside js/atlas/data/library.js
-(data: URIs, so the page works from a plain file) and copies the text of the five .mes files; index.html lays the
-text out with the same rectangles as written_ui.c. Re-run it rather than editing the output:  py build_library.py
+black everywhere, white on the plaque. This script turns the pictures used into lossless WebP files (atlas/library/, a pool
+shared by the versions; a font is its black strip, the page tints it white) named by js/atlas/data/library.js, and copies
+the text of the five .mes files; index.html lays the text out with the same rectangles as written_ui.c. Re-run it rather
+than editing the output:  py build_library.py
 Needs Pillow.
 """
-import base64
+import hashlib
 import io
 import json
 import re
@@ -24,8 +25,9 @@ from PIL import Image
 
 import arcanum_objects as ao
 
-DATA_JS = ao.PROJECT / 'js' / 'atlas' / 'data'
+DATA_JS = ao.DATA_JS
 OUT_JS = DATA_JS / 'library.js'
+POOL = ao.PROJECT / 'atlas' / 'library'
 ART = ao.DATA / 'art' / 'interface'
 FIRST_CHAR = 31                       # tig_font: frame 0 is character 31
 MES = {0: 'gamebook.mes', 1: 'gamenote.mes', 2: 'gamenewspaper.mes', 3: 'gametelegram.mes', 6: 'gameplaque.mes'}
@@ -82,10 +84,30 @@ def art_frames(path):
     return out
 
 
-def data_uri(img):
+def picture(img):
+    """The picture as a lossless WebP in the shared pool (atlas/library/<md5>.webp: every version's library.js points there, a picture they
+    have alike is one file) -> its path for the page. Loaded on the Library's first use (atlas-app.js libLoad), not with the data."""
     buf = io.BytesIO()
-    img.save(buf, 'PNG', optimize=True)
-    return 'data:image/png;base64,' + base64.b64encode(buf.getvalue()).decode()
+    img.convert('RGBA').save(buf, 'WEBP', lossless=True, quality=100, method=6)
+    b = buf.getvalue()
+    p = POOL / f'{hashlib.md5(b).hexdigest()[:16]}.webp'
+    if not p.is_file():
+        POOL.mkdir(parents=True, exist_ok=True)
+        p.write_bytes(b)
+    return p.relative_to(ao.PROJECT).as_posix()
+
+
+def prune_pool():
+    """Pool pictures no version's library.js names any more go."""
+    used = set()
+    base = ao.PROJECT / 'js' / 'atlas' / 'data'                        # (a version's run writes js/atlas/data/<key>/: the base game's file counts too)
+    for js in {OUT_JS, base / 'library.js', *base.glob('*/library.js')}:
+        if not js.is_file():
+            continue
+        used |= set(re.findall(r'atlas/library/([0-9a-f]{16}\.webp)', js.read_text(encoding='utf-8')))
+    for p in POOL.glob('*.webp'):
+        if p.name not in used:
+            p.unlink()
 
 
 def background(path):
@@ -93,7 +115,7 @@ def background(path):
     img = Image.new('P', (w, h))
     img.putdata(bytes(idx))
     img.putpalette([c for rgb in pal for c in rgb])
-    return {'w': w, 'h': h, 'src': data_uri(img)}
+    return {'w': w, 'h': h, 'src': picture(img)}
 
 
 def font(path):
@@ -102,33 +124,74 @@ def font(path):
     height = max(f[1] for f in frames)
     total = sum(f[0] for f in frames)
     black = Image.new('RGBA', (total, height), (0, 0, 0, 0))
-    white = Image.new('RGBA', (total, height), (0, 0, 0, 0))
     glyphs, x = {}, 0
-    pictures = False
-    full = Image.new('RGBA', (total, height), (0, 0, 0, 0)) if pictures else None
     for n, (w, h, hx, hy, idx, pal) in enumerate(frames):
-        if pictures and w and h:
-            tile = Image.new('RGBA', (w, h)); tile.putdata([(0, 0, 0, 0) if v == 0 else (*pal[v], 255) for v in idx]); full.paste(tile, (x, 0))
-        if w and h and not pictures:
-            b, wh = [], []
-            for v in idx:
-                if v < 2:                       # 0 transparent, 1 edge marker
-                    b.append((0, 0, 0, 0)); wh.append((0, 0, 0, 0))
-                else:
-                    k = min(255, round(255 * pal[v][0] / peak))
-                    b.append((0, 0, 0, k)); wh.append((255, 255, 255, k))      # the grey ramp is how much ink, not a grey
-            for img, px in ((black, b), (white, wh)):
-                tile = Image.new('RGBA', (w, h)); tile.putdata(px); img.paste(tile, (x, 0))
+        if w and h:
+            px = [(0, 0, 0, 0) if v < 2 else (0, 0, 0, min(255, round(255 * pal[v][0] / peak))) for v in idx]   # 0 transparent, 1 edge marker; the grey ramp is how much ink, not a grey
+            tile = Image.new('RGBA', (w, h))
+            tile.putdata(px)
+            black.paste(tile, (x, 0))
         glyphs[n + FIRST_CHAR] = [x, w, hx]
         x += w
-    if pictures:
-        return {'h': height, 'glyphs': glyphs, 'black': data_uri(full), 'white': data_uri(full)}
-    return {'h': height, 'glyphs': glyphs, 'black': data_uri(black), 'white': data_uri(white)}
+    return {'h': height, 'glyphs': glyphs, 'src': picture(black)}      # (the white ink of the plaque: the page tints this strip)
 
 
-def documents(texts):
-    """Every readable text (each starts a block of ten lines, written_ui.c) and where a copy is placed in the world."""
-    desc = ao.descriptions()
+def stock_blocks(mod_texts):
+    """(module, kind, first line) of the blocks of ten lines a module still has as the editor's template left them
+    (the same text, line by line, in at least three modules): placeholders, not content of the module."""
+    seen = {}
+    for texts in mod_texts.values():
+        for sub, t in texts.items():
+            for k, v in t.items():
+                seen.setdefault((sub, k), {}).setdefault(v, 0)
+                seen[sub, k][v] += 1
+    out = set()
+    for name, texts in mod_texts.items():
+        for sub, t in texts.items():
+            blocks = {}
+            for k, v in t.items():
+                if k >= (1020 if sub == 3 else 1000):
+                    blocks.setdefault(k // 10 * 10, []).append((k, v))
+            for start, lines in blocks.items():
+                if all(seen[sub, k][v] >= 3 for k, v in lines):
+                    out.add((name, sub, start))
+    return out
+
+
+def copy_version(module):
+    """The game_files.Version of a module under the running mod when that mod has a copy of it (data/mods/<mod>/modules/<M>), else None."""
+    import os
+    import game_files
+    v = game_files.Version(os.environ.get('ATLAS_VERSION', 'base'), module.name)
+    return v if v.copy_owners else None
+
+
+def module_texts(module):
+    """A module's own texts (its mes/game*.mes); under a mod with a copy of it, also the mod's blocks its objects point at (CE moved Lost Dungeon
+    of Souls' books to its own gamebook.mes, 1920+: its copy's books read those)."""
+    own = {sub: ao.mes(module / 'mes' / name) for sub, name in MES.items()}
+    v = copy_version(module)
+    if v is None:
+        return own
+    import build_modules
+    full = {sub: v.mes('mes', name) for sub, name in MES.items()}
+    protos = v.protos()
+    for key, mod, folder in build_modules.entries():
+        for path in sorted(folder.glob('*.mob')) if mod.name == module.name else []:
+            o = ao.read_mob(path)
+            if o.type == 13:
+                e = ao.Effective(o, protos.get(o.proto))
+                sub, start = e.int(202), e.int(203)
+                if sub in full and start // 10 * 10 not in {k // 10 * 10 for k in own[sub]}:
+                    own[sub].update({k: t for k, t in full[sub].items() if k // 10 * 10 == start // 10 * 10})
+    return own
+
+
+def documents(texts, module=None):
+    """Every readable text (each starts a block of ten lines, written_ui.c) and where a copy is placed in the world.
+    `module`: a module folder, whose own texts these are; its copies lie on its own maps (the place is the map's key)."""
+    v = copy_version(module) if module else None
+    desc = v.descriptions() if v else ao.descriptions(module)          # (under a mod with a copy of the module: its names too, game_files)
     docs = {}
     for sub, t in texts.items():
         for n in t:
@@ -148,7 +211,7 @@ def documents(texts):
     def info(o, e):
         return e.int(202), e.int(203), (desc.get(e.int(23)) or '').strip(), e.int(23)
 
-    for p in protos.values():
+    for p in ([] if module else protos.values()):          # (a module has no protos of its own: the base ones name the game's texts)
         if p.type == 13:
             sub, start, name, nid = info(p, ao.Effective(p, None))
             if (sub, start) in docs and name:
@@ -156,11 +219,19 @@ def documents(texts):
                 if nid == 14072:
                     docs[sub, start]['v'] = 1
     objs, holder = [], {}
-    for path in sorted((ao.DATA / 'maps').rglob('*.mob')):
-        o = ao.read_mob(path)
-        rel = path.relative_to(ao.DATA / 'maps').parts
-        o.map, o.area = rel[0], (rel[1] if rel[0] == WORLD and len(rel) > 2 else '')
-        objs.append(o)
+    if module:
+        import build_modules
+        for key, mod, folder in build_modules.entries():
+            for path in sorted(folder.glob('*.mob')) if mod.name == module.name else []:
+                o = ao.read_mob(path)
+                o.map, o.area = key, ''
+                objs.append(o)
+    else:
+        for path in sorted((ao.DATA / 'maps').rglob('*.mob')):
+            o = ao.read_mob(path)
+            rel = path.relative_to(ao.DATA / 'maps').parts
+            o.map, o.area = rel[0], (rel[1] if rel[0] == WORLD and len(rel) > 2 else '')
+            objs.append(o)
     for o in objs:
         field = 60 if o.type == 2 else 238 if o.type in (15, 16) else None
         if field:
@@ -183,7 +254,7 @@ def documents(texts):
         if not at.tile and owner is None:
             continue
         world = at.map == WORLD
-        place = world_place.get(at.area, at.area or 'Wilderness') if world else ao.clean_map(at.map)
+        place = world_place.get(at.area, at.area or 'Wilderness') if world else at.map if module else ao.clean_map(at.map)
         by = (desc.get(ao.Effective(owner, protos.get(owner.proto)).int(23)) or '').strip() if owner else ''
         if owner is not None and owner.type == 2:
             by = by or 'Container'
@@ -199,12 +270,16 @@ def documents(texts):
 def main():
     interface = ao.mes(ART / 'interface.mes')
     texts = {sub: ao.mes(ao.DATA / 'mes' / name) for sub, name in MES.items()}
+    import build_modules
+    mods = [m for m in build_modules.module_folders() if any((m / 'mes' / n).is_file() for n in MES.values())]
+    mod_texts = {m.name: module_texts(m) for m in mods}
     wanted = set(UI_FONTS)
-    for sub in (0, 2, 6):
-        for line in texts[sub].values():
-            m = re.match(r'^\s*(\d+)[lcLC]', line)
-            if m:
-                wanted.add(int(m.group(1)))
+    for tx in [texts, *mod_texts.values()]:
+        for sub in (0, 2, 6):
+            for line in tx[sub].values():
+                m = re.match(r'^\s*(\d+)[lcLC]', line)
+                if m:
+                    wanted.add(int(m.group(1)))
     fonts, missing = {}, []
     for num in sorted(wanted):
         name = interface.get(num, '').strip()
@@ -215,15 +290,29 @@ def main():
     bgs = {n: background(find(interface[n].strip())) for n in BACKGROUNDS}
     docs = documents(texts)
     mes = {str(sub): {str(k): v.replace('\r', '') for k, v in t.items()} for sub, t in texts.items()}
+    # a module's texts (its own mes/gamebook.mes ...): the page puts them over the game's headings and fillers (the lines below 1000)
+    module_mes = {}
+    stock = stock_blocks(mod_texts)
+    for m in mods:
+        d = documents(mod_texts[m.name], m)
+        keep = [x for x in d if (m.name, x['k'], x['s']) not in stock]
+        docs += [{**x, 'g': m.name} for x in keep]
+        module_mes[m.name] = {str(sub): {str(k): v.replace('\r', '') for k, v in t.items()
+                                         if (m.name, sub, k // 10 * 10) not in stock or k < (1020 if sub == 3 else 1000)}
+                              for sub, t in mod_texts[m.name].items()}
+        print(f'  {m.name}: {len(keep)} documents ({sum(1 for x in keep if x["f"])} placed)'
+              + (f', {len(d) - len(keep)} editor placeholders left out ({sum(1 for x in d if x["f"] and x not in keep)} placed)'
+                 if len(keep) != len(d) else ''))
     data = {'source': 'toolbox/atlas/build_library.py',
             'note': 'backgrounds / fonts are keyed by interface art number (art/interface/interface.mes); fonts: h = line '
-                    'height, glyphs[code] = [x in the strip, width, advance]; black / white = the strip in the two colours '
-                    'the game uses. mes[kind][line] = text of gamebook / gamenote / gamenewspaper / gametelegram / '
+                    'height, glyphs[code] = [x in the strip, width, advance]; src = the strip in black (white: the page tints '
+                    'it), every src a file of atlas/library/. mes[kind][line] = text of gamebook / gamenote / gamenewspaper / gametelegram / '
                     'gameplaque (kind = the written subtype 0 / 1 / 2 / 3 / 6). docs: k = kind, s = first line, v = the '
                     'Vendigroth Times, n = names of the items that carry it, f = [place, world map?, tile, held by, copies].',
-            'docs': docs, 'backgrounds': bgs, 'fonts': fonts, 'mes': mes}
+            'docs': docs, 'backgrounds': bgs, 'fonts': fonts, 'mes': mes, 'moduleMes': module_mes}
     OUT_JS.write_text('// GENERATED by toolbox/atlas/build_library.py - re-run it rather than editing by hand.\n'
                       'window.ArcanumLibrary = ' + json.dumps(data, ensure_ascii=False, separators=(',', ':')) + ';\n', encoding='utf-8')
+    prune_pool()
     print(f'{len(docs)} documents ({sum(1 for d in docs if d["f"])} with a copy placed in the world), '
           f'{len(fonts)} fonts, {len(bgs)} backgrounds, {sum(len(t) for t in texts.values())} text lines'
           + (f'; fonts not read: {missing}' if missing else ''))

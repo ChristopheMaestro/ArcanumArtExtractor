@@ -2,7 +2,8 @@
 
 import { DLG_FIELDS, cachedLines } from '../explorer/file-search.js';
 import { mountFolderTree } from '../explorer/folder-tree.js';
-import { createManifestLoader, manifestFiles, manifestSubfolders } from '../core/manifest.js';
+import { manifestFiles, manifestSubfolders } from '../core/manifest.js';
+import { createIndexLoader } from '../core/file-index.js';
 
 import { backButton } from '../explorer/nav-history.js';
 
@@ -24,9 +25,9 @@ import { explainActions, explainConditions, loadCodeTables } from './dlg-codes.j
 
 import { dlgTriggers, openTrigger, triggerLabel } from '../scr/scr-dlg-triggers.js';
 
-const DLG_ROOT = `${DATA_ROOT}dlg/`;
+// Listed from data/ (dlg, the mods, the modules): the paths are under data/ (toolbox/file_index.py)
 let dlgCurrentPath = '';
-let dlgCurrentFolderName = 'dlg';
+let dlgCurrentFolderName = 'data';
 let dlgCurrentManifest = null;
 let dlgFiles = [];
 let dlgOpenData = null;
@@ -38,10 +39,10 @@ let dlgFocusNum = null; // the line a search result pointed at, highlighted in t
 let dlgTriggerMap = null; // dialogue line -> script lines that show it (scr-dlg-triggers.js)
 
 let dlgTree = null;
-const loadDlgManifest = createManifestLoader({ root: DLG_ROOT, rootName: 'dlg', label: '.dlg' });
+const loadDlgManifest = createIndexLoader('dlg');
 
 function dlgFileUrl(relativePath, filename) {
-  return `${DLG_ROOT}${relativePath ? encPath(relativePath) + '/' : ''}${encPath(filename)}`;
+  return `${DATA_ROOT}${relativePath ? encPath(relativePath) + '/' : ''}${encPath(filename)}`;
 }
 const fetchDlgText = (relativePath, filename) => fetchText(dlgFileUrl(relativePath, filename));
 // Search results, one per dialogue line (file-search.js): NPC lines carry their female text too.
@@ -269,7 +270,7 @@ function dlgOpenViewer(filename, relativePath, focusNum=null){
     const wrap=dlgCreateEl('article','dlg-viewer');
     const bar=dlgCreateEl('div','dlg-viewer-head');
     bar.appendChild(backButton());
-    const h=dlgCreateEl('div','dlg-file-title'); h.appendChild(dlgCreateEl('strong',null,filename)); h.appendChild(dlgCreateEl('span',null,`/${relativePath||'dlg'}`)); bar.appendChild(h);
+    const h=dlgCreateEl('div','dlg-file-title'); h.appendChild(dlgCreateEl('strong',null,filename)); h.appendChild(dlgCreateEl('span',null,`/data/${relativePath}`)); bar.appendChild(h);
     const controls=dlgCreateEl('div','dlg-controls');
     const gender=document.createElement('button'); gender.type='button'; gender.className='dlg-control'; gender.textContent='Female text'; gender.addEventListener('click',()=>{dlgFemaleMode=!dlgFemaleMode;gender.classList.toggle('active',dlgFemaleMode);dlgRenderGameStage(document.getElementById('dlgStage'),data);}); controls.appendChild(gender);
     const internals=document.createElement('button'); internals.type='button'; internals.className='dlg-control'; internals.textContent='Explain conditions/effects'; internals.addEventListener('click',()=>{dlgShowInternals=!dlgShowInternals;internals.classList.toggle('active',dlgShowInternals);dlgRenderGameStage(document.getElementById('dlgStage'),data);}); controls.appendChild(internals);
@@ -287,9 +288,9 @@ function dlgOpenViewer(filename, relativePath, focusNum=null){
 }
 async function openDlgFolder(relativePath, folderName){
   if(dlgTree) dlgTree.select(relativePath);
-  dlgCurrentPath=relativePath; dlgCurrentFolderName=folderName; dlgCurrentManifest=await loadDlgManifest(relativePath,folderName); dlgFiles=manifestFiles(dlgCurrentManifest, 'dlg');
+  dlgCurrentPath=relativePath; dlgCurrentFolderName=folderName; dlgCurrentManifest=await loadDlgManifest(relativePath); dlgFiles=manifestFiles(dlgCurrentManifest, 'dlg');
   saveDataExplorerState('dlg',relativePath,folderName,null);
-  breadcrumbEl.textContent=`/dlg/${relativePath ? relativePath+'/' : ''}`;
+  breadcrumbEl.textContent=`/data/${relativePath ? relativePath+'/' : ''}`;
   gridEl.hidden=false; viewerEl.hidden=true; viewerEl.innerHTML='';
   renderDataFolderGrid({subfolders:manifestSubfolders(dlgCurrentManifest),files:dlgFiles,relativePath,openFolderFn:openDlgFolder,openFileFn:(fn, card, _fullPath)=>dlgOpenViewer(fn, relativePath),fileIcon:'💬'});
 }
@@ -301,9 +302,9 @@ export async function openDlgFile(file, focusNum = null) {
 
 // focusNum: a dialogue line to show (an NPC line, or a player option on the NPC line above it).
 export async function enterDlgExplorer(restoreState = false, focusNum = null) {
-  const { path, name, file } = beginDataExplorer('dlg', { rootName: 'dlg', restoreState });
+  const { path, name, file } = beginDataExplorer('dlg', { rootName: 'data', restoreState });
   dlgTree = mountFolderTree({
-    rootName: 'dlg', loadManifest: loadDlgManifest, openFolder: openDlgFolder, ext: 'dlg', fileIcon: '💬', searchFields: DLG_FIELDS,
+    rootName: 'data', loadManifest: loadDlgManifest, openFolder: openDlgFolder, ext: 'dlg', fileIcon: '💬', searchFields: DLG_FIELDS,
     searchLines: dlgSearchLines, openLine: (filename, parent, num) => dlgOpenViewer(filename, parent, num),
     lineLinks: async (_parent, filename) => new Map([...await dlgTriggers(filename)].map(([num, list]) =>
       [num, list.map(t => ({ prefix: '📜 Triggered by ', text: triggerLabel(t), title: `Open ${t.scr} at line ${t.line}`, open: () => openTrigger(t) }))])),

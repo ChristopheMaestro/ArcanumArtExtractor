@@ -6,7 +6,8 @@ import { exportCanvasPng } from '../art/art-export.js';
 import { parseArtBuffer } from '../art/art-decoder.js';
 import { DATA_ROOT, SEC_ROOT } from '../core/config.js';
 import { breadcrumbEl } from '../core/dom.js';
-import { encPath, loadJSZip } from '../core/util.js';
+import { mapFolderPath, siblingMapPath } from '../core/file-index.js';
+import { encPath, escapeHtml, loadJSZip } from '../core/util.js';
 import { mobObjectTypeName } from '../mob/mob-schema.js';
 import { aidRotation } from '../objects/art-frames.js';
 import { loadMobMapArtShared } from '../objects/map-art-loader.js';
@@ -40,7 +41,7 @@ import { loadGameAreas, secretAreaName } from '../sec/sec-locations.js';
 import { loadLightSchemeNames, loadMapData, loadMapList, loadTownMapNames } from '../sec/sec-map-data.js';
 import { attachView } from '../explorer/nav-history.js';
 import { editorRequested, saveDataExplorerState, setEditorFlag } from '../explorer/state-store.js';
-import { loadTerrainMap, loadTerrainSector } from '../sec/sec-terrain.js';
+import { editableTerrainSector, loadTerrainMap, loadTerrainSector } from '../sec/sec-terrain.js';
 import { loadSecRoofNames, loadSecRoofsForSectors, secRoofNum } from '../sec/sec-roofs.js';
 import {
   loadSecFacadeArt,
@@ -111,7 +112,7 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
   // (a copy: the Map tool edits it, and the loaded one is shared by every view of this map)
   let mapData = await loadMapData(relativePath).catch(() => null);
   mapData = mapData ? { ...mapData, start: mapData.start && { ...mapData.start }, jumps: mapData.jumps.map(j => ({ ...j, dst: { ...j.dst } })), blockedSectors: new Set(mapData.blockedSectors) }
-    : { folder: String(relativePath || '').split('/')[0], limits: null, start: null, jumps: [], blockedSectors: new Set() };
+    : { folder: mapFolderPath(relativePath), limits: null, start: null, jumps: [], blockedSectors: new Set() };
   const lim = mapData?.limits;
   const minX = lim ? Math.min(0, content.minX) : content.minX, maxX = lim ? Math.max(lim.sectorsX - 1, content.maxX) : content.maxX;
   const minY = lim ? Math.min(0, content.minY) : content.minY, maxY = lim ? Math.max(lim.sectorsY - 1, content.maxY) : content.maxY;
@@ -191,7 +192,7 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
   };
   let mapBackground = null;
   try {
-    const mapUrl = `${SEC_ROOT}${relativePath ? encPath(relativePath) + '/' : ''}Map.bmp`;
+    const mapUrl = `${SEC_ROOT}${relativePath ? encPath(relativePath) + '/' : ''}Map.png`;      // (the game's Map.bmp, stored as a lossless PNG: 12 MB -> 47 KB)
     const resp = await fetch(mapUrl);
     if (resp.ok) {
       const blob = await resp.blob(), objectUrl = URL.createObjectURL(blob), img = new Image();
@@ -383,7 +384,8 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
     return button;
   };
   addOverlayToggle(['scenery'], 'Objects', 'Show or hide scenery');
-  addOverlayToggle(['containers', 'otherMobs'], 'Mob', 'Show or hide containers, NPCs and the other MOBs (items, portals…)');
+  const mobFilesBtn = addOverlayToggle(['containers', 'otherMobs'], 'Mob files', 'Show or hide containers, NPCs and the other MOBs (items, portals…); the tile of each one is lit and its .mob file name written beside it');
+  mobFilesBtn.classList.add('sec-mob-files-btn');
   addOverlayToggle(['walls'], 'Walls', 'Show or hide walls');
   addOverlayToggle(['roofs'], 'Roofs', 'Show or hide roofs (isometric view)').addEventListener('click', () => { ensureRoofArt(); });
   // "Areas" (top-down view): the game's areas (gamearea.mes) and, in red, the secret areas, as on the
@@ -398,7 +400,7 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
     areasBtn.setAttribute('aria-pressed', String(areaState.on)); areasBtn.classList.toggle('active', areaState.on);
     if (areaState.on && mode === 'art' && !edit.on) applyMode('color'); else redraw();
   });
-  overlayControls.appendChild(areasBtn);
+  // Removed from the toolbar (too many filters); the button stays detached and hidden so the state code keeps working.
   // Map data the game keeps beside the tiles and objects (both views): jump points (map.jmp), tile
   // scripts (in the .sec), blocked tiles (.sec) and blocked sectors (map.sbf), the start location
   // (startloc.txt). Each button only shows when this map has some.
@@ -412,7 +414,8 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
     ['start', 'Start', 'Where the player starts on this map (startloc.txt)'],
   ]) {
     const b = document.createElement('button');
-    b.type = 'button'; b.className = 'sec-overlay-toggle'; b.textContent = label; b.title = title; b.hidden = key !== 'waypoints';
+    b.type = 'button'; b.className = 'sec-overlay-toggle'; b.textContent = label; b.title = title; b.hidden = key === 'start';   // Start only when this map's start lies inside it
+    if (key === 'waypoints' || key === 'start') b.classList.add('sec-viewer-only');   // viewer only, not in the editor
     b.setAttribute('aria-pressed', 'false');
     b.addEventListener('click', () => {
       layers[key] = !layers[key]; b.setAttribute('aria-pressed', String(layers[key])); b.classList.toggle('active', layers[key]);
@@ -423,7 +426,7 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
     overlayControls.appendChild(b);
     layerBtns[key] = b;
   }
-  loadTerrainMap(String(relativePath || '').split('/')[0]).then(async map => {
+  loadTerrainMap(mapFolderPath(relativePath)).then(async map => {
     if (!map) return;
     areaState.areas = await loadGameAreas().catch(() => null);
     if (areaState.areas?.length) areasBtn.hidden = false;
@@ -444,6 +447,7 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
   const lightAnim = document.createElement('button');
   lightAnim.type = 'button'; lightAnim.className = 'sec-overlay-toggle'; lightAnim.textContent = 'Animate';
   lightAnim.title = 'Play animated objects (camp fires, torches, ...) and animated lights; click a door or chest to open / close it and a trap to set it off; NPCs walk, and idle ones breathe, their waypoints and standpoints (the hour slider switches between day and night routes)'; lightAnim.setAttribute('aria-pressed', 'false');
+  lightAnim.classList.add('sec-viewer-only');   // viewer only, not in the editor
   lightControls.append(lightToggle, lightAnim, lightLabel);
   layoutToolbar();
   const lightState = { enabled: false, hour: 12, table: null, animate: false, animTime: 0 };
@@ -521,9 +525,9 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
   info.innerHTML =
     fold('sec-fold-map', 'Map', '') +
     fold('sec-fold-tile', 'Selected tile', ['Sector X / Y', 'Tile X / Y', 'World X / Y', 'Art ID', 'Tile', 'SEC file', 'Hex'].map(infoRow).join('')) +
-    fold('sec-fold-art', 'Art IDs on map', '<div class="sec-art-legend"></div>') +
     fold('sec-fold-objects', 'Objects on tile', '<div class="sec-obj-info">—</div>') +
-    fold('sec-fold-mobs', 'Mobs on tile', '<div class="sec-mob-info">—</div>');
+    fold('sec-fold-mobs', 'Mobs on tile', '<div class="sec-mob-info">—</div>') +
+    fold('sec-fold-art', 'Art IDs on map', '<div class="sec-art-legend"></div>', false);
   info.querySelector('.sec-fold-map .sec-fold-body').append(head, toolbar);
   layout.append(mapCard, info); article.appendChild(layout);
   const legendEl = info.querySelector('.sec-art-legend');
@@ -589,6 +593,7 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
     try {
       const sector = await loadTerrainSector(cand);
       if (!sector) { status.textContent = `Terrain sector ${cand.id}: template ${cand.template.path} was not found`; return; }
+      if (sectorMap.has(key)) return;   // made into a real sector meanwhile ("Create sector")
       valid.push(sector); sectorMap.set(key, sector);
       await loadSectorTiles(sector);
       status.textContent = `Terrain sector ${cand.id} loaded · ${cand.label} · terrain/${cand.template.path}`;
@@ -619,6 +624,7 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
     roofSecs: new Map(),     // sector key -> sector whose roof grid was changed
     lightSecs: new Map(),    // sector key -> sector whose light list was changed
     extraSecs: new Map(),    // sector key -> sector whose block list, tile scripts or properties were changed
+    created: new Map(),      // sector key -> sector made from a terrain template ("Create sector"): always exported
     newMobs: [],             // the .mob files made here: { name, bytes, obj, pt } (exported next to the sectors)
     modMobs: new Map(),      // file name -> { name, bytes, orig, pt, ... } of a .mob file of the map that was changed (exported as its replacement)
     kidMobs: [],             // the items put in an inventory: { name, bytes, oid, owner (the owner's file name) } (exported with the others)
@@ -663,7 +669,7 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
       const text = `${folder || `map ${j.dstMap}`} · ${j.dst.x}, ${j.dst.y}`;
       row('Jump point', folder ? link(text, `Open ${folder} at tile ${j.dst.x}, ${j.dst.y}`, async () => {
         const m = await import('../sec/sec-explorer.js');
-        await m.openSecAtTile(folder, folder, { sectorX: Math.floor(j.dst.x / 64), sectorY: Math.floor(j.dst.y / 64), tileX: j.dst.x & 63, tileY: j.dst.y & 63 }, `Arrival from ${relativePath}`);
+        await m.openSecAtTile(siblingMapPath(relativePath, folder), folder, { sectorX: Math.floor(j.dst.x / 64), sectorY: Math.floor(j.dst.y / 64), tileX: j.dst.x & 63, tileY: j.dst.y & 63 }, `Arrival from ${relativePath}`);
       }) : text);
     }
     const mask = sector.decoded.blockMask, bit = p.tileX | (p.tileY << 6);
@@ -706,7 +712,7 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
   const fitView = () => {
     const w = Math.max(320, stage.clientWidth || 760), h = Math.max(260, stage.clientHeight || 620);
     const r = viewRect();
-    view.zoom = Math.max(.01, Math.min(32, Math.min(w / r.w, h / r.h)));
+    view.zoom = Math.max(.001, Math.min(32, Math.min(w / r.w, h / r.h)));
     view.offsetX = (w - r.w * view.zoom) / 2 - r.x * view.zoom;
     view.offsetY = (h - r.h * view.zoom) / 2 - r.y * view.zoom;
     view.initialized = true; redraw();
@@ -739,7 +745,7 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
     if (!s) return;
     if (s.mode !== mode) await applyMode(s.mode);
     for (const k of Object.keys(layers)) { layers[k] = !!s.layers?.[k] && !layerBtns[k].hidden; setToggle(layerBtns[k], layers[k]); }
-    areaState.on = !!s.areas && !areasBtn.hidden; setToggle(areasBtn, areaState.on);
+    areaState.on = false; setToggle(areasBtn, false);   // Areas has no button any more
     for (const [k, btn] of Object.entries(overlayButtons)) if (!!s.overlays?.[k] !== !!overlayVisibility[k]) { overlayVisibility[k] = !!s.overlays?.[k]; setToggle(btn, overlayVisibility[k]); }
     view.zoom = s.zoom; view.offsetX = s.offsetX; view.offsetY = s.offsetY; view.initialized = true;
     selected = s.selected; if (selected) updateInfo(selected);
@@ -765,7 +771,7 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
   // Frame-time readout next to the zoom: add ?perf to the page address (or localStorage.secPerf = 1).
   const showPerf = /[?&]perf\b/.test(location.search) || (() => { try { return localStorage.getItem('secPerf') === '1'; } catch (_) { return false; } })();
   let perfText = '';
-  const updateZoomLabel = () => { crumbZoom = `Zoom ${Math.round(view.zoom * 100)}%${perfText}`; renderCrumb(); if (editBarSync) editBarSync(); };
+  const updateZoomLabel = () => { crumbZoom = `Zoom ${view.zoom < 0.1 ? +(view.zoom * 100).toFixed(1) : Math.round(view.zoom * 100)}%${perfText}`; renderCrumb(); if (editBarSync) editBarSync(); };
   // Redraws are coalesced: any number of redraw() calls within a frame (wheel and pointer events
   // arrive faster than the display refreshes) paint once. redrawNow() paints immediately.
   let redrawQueued = false, lastDrawAt = 0;
@@ -776,7 +782,7 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
     updateZoomLabel();
     drawSecFolderMap(canvas, valid, bounds, selected, mode, artTiles, view, mobPoints, mapBackground, overlayVisibility);
     if (areaState.on && areaState.areas && mode === 'color') drawAreasTopDown();
-    if (Object.values(layers).some(Boolean)) drawMapLayers();
+    if (Object.values(layers).some(Boolean) || (overlayVisibility.otherMobs && !edit.on)) drawMapLayers();
     if (drawCursorHook) drawCursorHook();
     const ms = performance.now() - t0;
     // What a lit frame costs: its own time, or the gap since the previous frame when frames run
@@ -799,7 +805,7 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
   function drawAreasTopDown() {
     const ctx = canvas.getContext('2d');
     const dpr = window.devicePixelRatio || 1;
-    const z = Math.max(0.01, Math.min(32, view.zoom)), ox = view.offsetX, oy = view.offsetY;
+    const z = Math.max(0.001, Math.min(32, view.zoom)), ox = view.offsetX, oy = view.offsetY;
     const cw = canvas.width / dpr, ch = canvas.height / dpr;
     const TX0 = minX * 64, TY0 = minY * 64;
     const left = X => (mapW - 1 - (X - TX0)) * z + ox, top = Y => (Y - TY0) * z + oy;
@@ -883,8 +889,10 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
       }
       return null;
     };
-    const out = {};
-    for (const [key, [isoNum, tdNum]] of Object.entries(OVERLAY_ART)) out[key] = { iso: await load(isoNum).catch(() => null), td: await load(tdNum).catch(() => null) };
+    // All pieces at once (online each fetch is a round trip).
+    const out = {}, entries = Object.entries(OVERLAY_ART);
+    const got = await Promise.all(entries.map(([, nums]) => Promise.all(nums.map(n => load(n).catch(() => null)))));
+    entries.forEach(([key], i) => { out[key] = { iso: got[i][0], td: got[i][1] }; });
     overlayArt = out; redraw();
   })();
   // TIG_ART_BLT_BLEND_COLOR_CONST: the picture multiplied by a colour (its transparency kept).
@@ -914,10 +922,18 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
     return (s._genBlock = out);
   };
   const OF_NO_BLOCK = 0x400;
+  // Per sector ("x,y"): a 4096-tile mask of the tiles an object blocks (no string key per tile and frame).
   const objectBlocks = () => {
     if (genBlockSrc === mobPoints) return genBlockObjects;
-    genBlockSrc = mobPoints; genBlockObjects = new Set();
-    for (const o of mobPoints) if (o.type !== 0 && o.type !== 1 && !((o.objFlags | 0) & OF_NO_BLOCK)) genBlockObjects.add(`${o.worldX},${o.worldY}`);
+    genBlockSrc = mobPoints; genBlockObjects = new Map();
+    for (const o of mobPoints) {
+      if (o.type === 0 || o.type === 1 || ((o.objFlags | 0) & OF_NO_BLOCK)) continue;
+      const X = o.worldX, Y = o.worldY;
+      if (!Number.isInteger(X) || !Number.isInteger(Y)) continue;
+      const sx = Math.floor(X / 64), sy = Math.floor(Y / 64), k = `${sx},${sy}`;
+      let m = genBlockObjects.get(k); if (!m) genBlockObjects.set(k, m = new Uint8Array(4096));
+      m[(Y - sy * 64) * 64 + (X - sx * 64)] = 1;
+    }
     return genBlockObjects;
   };
   // A colour per NPC (the editor gives each NPC its own), as "r,g b" for tintOf(): a hue from its file name.
@@ -938,7 +954,7 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
     if (!overlayArt) loadOverlayArt();
     const ctx = canvas.getContext('2d');
     const dpr = window.devicePixelRatio || 1;
-    const z = Math.max(0.01, Math.min(32, view.zoom)), ox = view.offsetX, oy = view.offsetY;
+    const z = Math.max(0.001, Math.min(32, view.zoom)), ox = view.offsetX, oy = view.offsetY;
     const cw = canvas.width / dpr, ch = canvas.height / dpr;
     const iso_ = mode === 'art';
     const centre = (X, Y) => {
@@ -1007,9 +1023,10 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
         for (const s of valid) {
           if (!s.decoded || !sectorOnScreen(s.position.x, s.position.y)) continue;
           const gen = genBlockFor(s), mask = s.decoded.blockMask, bx = s.position.x * 64, by = s.position.y * 64;
+          const om = objs.get(`${bx / 64},${by / 64}`);
           for (let i = 0; i < 4096; i++) {
             const X = bx + (i & 63), Y = by + (i >> 6);
-            if (gen[i] || objs.has(`${X},${Y}`)) blit(tb, 0, X, Y, { tint: '128,0,0' });
+            if (gen[i] || (om && om[i])) blit(tb, 0, X, Y, { tint: '128,0,0' });
             if (mask && ((mask[i >> 5] >>> (i & 31)) & 1)) blit(tb, 0, X, Y, { tint: '255,0,0' });
           }
         }
@@ -1041,6 +1058,17 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
         list.forEach((w, n) => { if (onScreen(centre(w.x, w.y), 80)) blit(wp, n, w.x, w.y, { tint: rgb, minPx: 14 }); });
       }
       ctx.restore();
+    }
+    // "Mob files": light the tile of every object that comes from a .mob file and write the file's name beside it.
+    if (overlayVisibility.otherMobs && !edit.on) {
+      const lit = mobPoints.filter(o => !o.staticSecObject && o.file && Number.isInteger(o.worldX) && Number.isInteger(o.worldY) && onScreen(centre(o.worldX, o.worldY), 80));
+      if (lit.length) {
+        ctx.beginPath();
+        for (const o of lit) tilesPath(o.worldX, o.worldY, o.worldX, o.worldY);
+        ctx.fillStyle = 'rgba(255,214,90,.38)'; ctx.fill();
+        ctx.lineWidth = 1.5; ctx.strokeStyle = '#ffd65a'; ctx.stroke();
+        if (showLabels) for (const o of lit) label(o.file, centre(o.worldX, o.worldY), '#ffe9a8');
+      }
     }
     if (layers.start && startInMap) {
       const p = centre(mapData.start.x, mapData.start.y);
@@ -1082,7 +1110,7 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
     requestAnimationFrame(() => { if (redrawQueued) redrawNow(); });
   };
   const zoomAt = (factor, cx, cy) => {
-    const old = view.zoom, next = Math.max(.01, Math.min(32, old * factor));
+    const old = view.zoom, next = Math.max(.001, Math.min(32, old * factor));
     if (next === old) return;
     const wx = (cx - view.offsetX) / old, wy = (cy - view.offsetY) / old;
     view.zoom = next; view.offsetX = cx - wx * next; view.offsetY = cy - wy * next; markGesture(); redraw();
@@ -1178,7 +1206,7 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
     const fmt = v => (v == null ? '—' : String(v));
     const hex = v => (v == null ? '—' : `0x${(Number(v) >>> 0).toString(16).toUpperCase()}`);
     const card = html => { const box = document.createElement('div'); box.className = 'sec-mob-info-row'; box.innerHTML = html; return box; };
-    const esc = v => String(v ?? '').replace(/[&<>]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]));
+    const esc = escapeHtml;
     const wallCard = wall => {
       const fields = Array.isArray(wall.wallFields) ? wall.wallFields : [];
       const field = n => fields.find(f => f.field === n)?.value;
@@ -1246,11 +1274,97 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
     }
     if (e.button !== 0) return; dragging=true; dragX=e.clientX; dragY=e.clientY; canvas.style.cursor='grabbing';
   });
-  canvas.addEventListener('contextmenu', e => { if (edit.on) e.preventDefault(); });
-  window.addEventListener('mouseup', () => { dragging=false; canvas.style.cursor = edit.on ? (edit.pan ? 'grab' : 'crosshair') : 'crosshair'; endStroke(); });
+  // "Create sector": a place of the map that has no .sec of its own (the game builds it from a terrain template)
+  // becomes a real, editable sector: a copy of the template, exported as the .sec of that place.
+  const createSectorAt = async (sx, sy) => {
+    const key = `${sx},${sy}`;
+    const cur = sectorMap.get(key);
+    if (cur && !cur.terrain) return null;
+    const cand = cur ? null : terrainCandidate(sx, sy);
+    if (!cur && !cand) return null;
+    view.terrain.loading.add(key); redraw();
+    try {
+      const shared = cur || await loadTerrainSector(cand);
+      if (!shared) { status.textContent = `Terrain sector ${cand.id}: template ${cand.template.path} was not found`; return null; }
+      const old = sectorMap.get(key);
+      if (old && !old.terrain) return old;
+      const sector = editableTerrainSector(shared);
+      const i = old ? valid.indexOf(old) : -1;
+      if (i >= 0) valid[i] = sector; else valid.push(sector);
+      sectorMap.set(key, sector);
+      edit.created.set(key, sector); edit.unsaved = true; refreshEditUi();
+      // Its objects again, now as a plain sector's (own objects, not the template's shared ones).
+      if (mobLoadPromise) await mobLoadPromise;
+      if (mobLoadStarted) {
+        const diag = { decodeFailures: [], locationFailures: [], staticObjectCount: 0, staticObjectTypeCounts: {}, wallLoaded: 0 };
+        const points = await staticPointsFor([sector], diag);
+        if (edit.objectsReady) for (const p of points) if (p.staticSecObject && p.seq >= 0) p.__obj = sector.decoded.staticObjects[p.seq];
+        mobPoints = mobPoints.filter(p => !(p.sectorX === sx && p.sectorY === sy && p.staticSecObject)).concat(points);
+        staticCovered.add(key);
+        invalidateObjIdx(); updateMobMapMeta();
+      }
+      view.colorSectorCache.delete(sector.filename); view.lodSectorCache?.delete(sector.filename);
+      await loadSectorTiles(sector);
+      refreshLightArt(); refreshEditUi();
+      status.textContent = `Sector ${sx}, ${sy} created from terrain/${cand ? cand.template.path : shared.terrain.template.path} · it is exported as ${sector.filename}`;
+      return sector;
+    } catch (err) {
+      status.textContent = `Could not create sector ${sx}, ${sy}: ${errText(err)}`;
+      return null;
+    } finally {
+      view.terrain.loading.delete(key); redraw();
+    }
+  };
+  // Listeners on document / window: once this map has been on screen and is gone (another folder opened), the
+  // next event runs them one last time and takes them all off, so the old map can be freed.
+  const globalListeners = [];
+  let mapShown = false;
+  const listenGlobal = (target, type, fn, opt) => {
+    const h = e => {
+      fn(e);
+      if (article.isConnected) { mapShown = true; return; }
+      if (mapShown) for (const [t, ty, hh, o] of globalListeners.splice(0)) t.removeEventListener(ty, hh, o);
+    };
+    globalListeners.push([target, type, h, opt]);
+    target.addEventListener(type, h, opt);
+  };
+  const ctxMenu = document.createElement('div'); ctxMenu.className = 'sec-ctx-menu'; ctxMenu.hidden = true;
+  const ctxItem = document.createElement('button'); ctxItem.type = 'button'; ctxMenu.appendChild(ctxItem);
+  stage.appendChild(ctxMenu);
+  let ctxTarget = null, rightDown = null;
+  const hideCtxMenu = () => { ctxMenu.hidden = true; ctxTarget = null; };
+  ctxItem.addEventListener('click', () => { const t = ctxTarget; hideCtxMenu(); if (t) createSectorAt(t.sx, t.sy); });
+  canvas.addEventListener('mousedown', e => { if (e.button === 2) rightDown = { x: e.clientX, y: e.clientY }; }, true);
+  listenGlobal(document, 'mousedown', e => { if (!ctxMenu.hidden && !ctxMenu.contains(e.target)) hideCtxMenu(); }, true);
+  listenGlobal(document, 'keydown', e => { if (e.key === 'Escape') hideCtxMenu(); }, true);
+  canvas.addEventListener('wheel', hideCtxMenu, { passive: true });
+  canvas.addEventListener('contextmenu', e => {
+    if (!edit.on) return;
+    e.preventDefault();
+    hideCtxMenu();
+    if (rightDown && Math.abs(e.clientX - rightDown.x) + Math.abs(e.clientY - rightDown.y) > 6) return;   // that was a pan
+    const p = sectorAtPoint(e); if (!p) return;
+    const sec = findSector(p.sectorX, p.sectorY);
+    if (sec ? !sec.terrain : !terrainCandidate(p.sectorX, p.sectorY)) return;
+    ctxTarget = { sx: p.sectorX, sy: p.sectorY };
+    ctxItem.textContent = 'Create sector';
+    ctxItem.title = `Make sector ${p.sectorX}, ${p.sectorY} an editable copy of the terrain it uses; it is exported as a .sec of its own`;
+    const sr = stage.getBoundingClientRect();
+    ctxMenu.hidden = false;
+    ctxMenu.style.left = `${Math.min(e.clientX - sr.left, Math.max(0, sr.width - ctxMenu.offsetWidth - 4))}px`;
+    ctxMenu.style.top = `${Math.min(e.clientY - sr.top, Math.max(0, sr.height - ctxMenu.offsetHeight - 4))}px`;
+  });
+  listenGlobal(window, 'mouseup', () => { dragging=false; canvas.style.cursor = edit.on ? (edit.pan ? 'grab' : 'crosshair') : 'crosshair'; endStroke(); });
   canvas.addEventListener('mousemove', event => {
     if (edit.on && edit.painting && !dragging) { continueStroke(event); return; }
-    if (edit.on && !dragging) { const t = sectorAtPoint(event); if (t) { selected = t; scheduleEditRedraw(); } }
+    if (edit.on && !dragging) {
+      const t = sectorAtPoint(event);
+      if (t) {
+        // the map only changes when the pointer reaches another tile
+        const same = selected && selected.sectorX === t.sectorX && selected.sectorY === t.sectorY && selected.tileX === t.tileX && selected.tileY === t.tileY;
+        selected = t; if (!same) scheduleEditRedraw();
+      }
+    }
     if (dragging) { view.offsetX += event.clientX-dragX; view.offsetY += event.clientY-dragY; dragX=event.clientX; dragY=event.clientY; markGesture(); redraw(); scheduleVisibleArtLoad(); return; }
     const p = sectorAtPoint(event), sector = p && findSector(p.sectorX, p.sectorY);
     if (!sector?.decoded) {
@@ -1365,7 +1479,7 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
     if (!keep) { fitView(); return; }
     // One tile step is about 44 px long in the isometric drawing and 1 px in the top-down one.
     const ISO_PER_TOPDOWN = 44;
-    const zoom = Math.max(.01, Math.min(32, mode === 'art' ? keep.zoom / ISO_PER_TOPDOWN : keep.zoom * ISO_PER_TOPDOWN));
+    const zoom = Math.max(.001, Math.min(32, mode === 'art' ? keep.zoom / ISO_PER_TOPDOWN : keep.zoom * ISO_PER_TOPDOWN));
     const cx = stage.clientWidth / 2, cy = stage.clientHeight / 2;
     view.zoom = zoom;
     if (mode === 'art') { const p = secIsoProject(keep.c.x, keep.c.y, iso); view.offsetX = cx - p.x * zoom; view.offsetY = cy - p.y * zoom; }
@@ -1715,8 +1829,8 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
   };
   const resolveVariants = async artId => {
     if (variantCache.has(artId)) return variantCache.get(artId);
-    const out = [];
-    for (let a4 = 0; a4 < 8; a4++) { const v = await variantArt(artId, a4); if (v) out.push(v); }
+    // the eight variants at once (each existing one is a fetch), kept in a..h order
+    const out = (await Promise.all(Array.from({ length: 8 }, (_, a4) => variantArt(artId, a4)))).filter(Boolean);
     variantCache.set(artId, out);
     return out;
   };
@@ -2138,6 +2252,7 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
     for (const [k, s] of edit.roofSecs) m.set(k, s);
     for (const [k, s] of edit.lightSecs) m.set(k, s);
     for (const [k, s] of edit.extraSecs) m.set(k, s);
+    for (const [k, s] of edit.created) m.set(k, s);
     return m;
   };
   const touchSector = sec => {
@@ -3306,7 +3421,7 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
   const undoEdit = () => replayHistory(edit.undo, edit.redo, false);
   const redoEdit = () => replayHistory(edit.redo, edit.undo, true);
   const onEditKey = e => {
-    if (!article.isConnected) { document.removeEventListener('keydown', onEditKey, true); return; }
+    if (!article.isConnected) return;
     if (edit.on && e.key === 'Escape' && edit.wallDrag) { e.preventDefault(); e.stopPropagation(); cancelWallDrag(); return; }
     if (edit.on && e.key === 'Escape' && edit.moveDrag) {
       e.preventDefault(); e.stopPropagation();
@@ -3328,8 +3443,8 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
       if (edit.redo.length) { redoEdit(); status.textContent = 'Redone'; } else status.textContent = 'Nothing to redo';
     }
   };
-  document.addEventListener('keydown', onEditKey, true);   // capture: runs before any focused control sees the key
-  window.addEventListener('beforeunload', e => { if (article.isConnected && edit.unsaved) { e.preventDefault(); e.returnValue = ''; } });
+  listenGlobal(document, 'keydown', onEditKey, true);   // capture: runs before any focused control sees the key
+  listenGlobal(window, 'beforeunload', e => { if (article.isConnected && edit.unsaved) { e.preventDefault(); e.returnValue = ''; } });
   const setBrushSize = n => {
     edit.size = Math.max(1, Math.min(64, Math.round(Number(n)) || 1));
     for (const r of ui.sizeRanges) r.value = String(edit.size);
@@ -3847,7 +3962,7 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
     for (const it of items) { const k = T.keyOfAid(it.aid); if (k != null && !exact.has(k)) exact.set(k, it); }
     if (P.base.options.length !== items.length || !P.base.value) {
       const cur = P.base.value;
-      P.base.innerHTML = items.length ? items.map(i => `<option value="${i.num}">#${i.num} · ${i.label}</option>`).join('') : '<option value="">(scanning prototypes…)</option>';
+      P.base.innerHTML = items.length ? items.map(i => `<option value="${i.num}">#${i.num} · ${escapeHtml(i.label)}</option>`).join('') : '<option value="">(scanning prototypes…)</option>';
       if (cur && items.some(i => String(i.num) === cur)) P.base.value = cur;
       else if (items.length) {
         const use = new Map();    // prefer the prototype this map already uses most
@@ -4012,7 +4127,7 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
     for (const it of items) { const k = protoCurrentAidArtId(it.aid, 3); if (k != null && !exactSceneryProto.has(k)) exactSceneryProto.set(k, it); }
     if (P.base.options.length !== items.length || !P.base.value) {
       const cur = P.base.value;
-      P.base.innerHTML = items.length ? items.map(i => `<option value="${i.num}">#${i.num} · ${i.label}</option>`).join('') : '<option value="">(scanning prototypes…)</option>';
+      P.base.innerHTML = items.length ? items.map(i => `<option value="${i.num}">#${i.num} · ${escapeHtml(i.label)}</option>`).join('') : '<option value="">(scanning prototypes…)</option>';
       if (cur && items.some(i => String(i.num) === cur)) P.base.value = cur;
       else if (items.length) {
         const use = new Map();    // prefer the scenery prototype this map already uses most
@@ -4304,8 +4419,8 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
     flyout.style.left = `${Math.round(r.right + 6)}px`; flyout.style.top = `${Math.round(r.top)}px`;
     flyout.querySelector('[aria-current="true"]')?.focus();
   };
-  document.addEventListener('pointerdown', e => { if (flyout && !flyout.contains(e.target)) closeFlyout(); }, true);
-  document.addEventListener('keydown', e => { if (flyout && e.key === 'Escape') { closeFlyout(); } });
+  listenGlobal(document, 'pointerdown', e => { if (flyout && !flyout.contains(e.target)) closeFlyout(); }, true);
+  listenGlobal(document, 'keydown', e => { if (flyout && e.key === 'Escape') { closeFlyout(); } });
   syncGroupButtons();
 
   const setTool = async id => {
@@ -4394,7 +4509,7 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
   editBarSync = () => {
     if (!edit.on) return;
     const n = view.loadedSectors.size;
-    barText.textContent = `${Math.round(view.zoom * 100)}% - ${n} sector${n === 1 ? '' : 's'} loaded`;
+    barText.textContent = `${view.zoom < 0.1 ? +(view.zoom * 100).toFixed(1) : Math.round(view.zoom * 100)}% -${n} sector${n === 1 ? '' : 's'} loaded`;
     for (const b of viewBtns) b.setAttribute('aria-pressed', String(b.dataset.mode === mode));
   };
   const moveToWorkspace = () => {

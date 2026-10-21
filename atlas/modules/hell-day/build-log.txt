@@ -1,0 +1,390 @@
+[2026-10-17 20:03:54] verification of "Hell Day" (module Hell Day, folder Main): 115 .sec, 2053 .mob on disk
+    pictures: complete=True, 234 images, 20 black
+    objects layer: True, switched-off layer: True
+    glows: 795 tiles with glows
+
+--- pipeline log of the module ---
+===== run started 2026-10-16 21:38:54 (modules of this batch: Hell Day) =====
+
+[2026-10-16 21:38:54] register: OK in 6 min 02 s
+    command: build_modules.py
+    covers every module of the batch (full output in the _batch log)
+    |   Grayhills - Grayhills: 5 doors and ladders, 4 signs (from its scripts)
+    | Grayhills - Grayhills: 59 sectors, 917 objects, 127 people and creatures, bbox [1939, 2029, 4026, 4035], start [2143, 2208]
+    |   Terror - start: 0 doors and ladders, 4 signs (from its scripts)
+    | Terror - start: 74 sectors, 1402 objects, 402 people and creatures, bbox [184, 253, 1774, 1725], start [1638, 1624]
+    |   The Killer Inside - LD_estate_second_story: 0 doors and ladders, 0 signs (from its scripts)
+    | The Killer Inside - LD_estate_second_story: 1 sectors, 2 objects, 0 people and creatures, bbox [6, 24, 26, 46], start [16, 36]
+    |   The Killer Inside - Nodnol: 0 doors and ladders, 3 signs (from its scripts)
+    | The Killer Inside - Nodnol: 42 sectors, 159 objects, 72 people and creatures, bbox [3029, 3063, 3327, 3333], start [3259, 3155]
+    |   Virgil the Pervert - PervertedCaves: 0 doors and ladders, 0 signs (from its scripts)
+    | Virgil the Pervert - PervertedCaves: 3 sectors, 66 objects, 7 people and creatures, bbox [286, 295, 364, 348], start [352, 306]
+    |   WhiteSands - DarkRiver: 1 doors and ladders, 0 signs (from its scripts)
+    | WhiteSands - DarkRiver: 26 sectors, 40 objects, 19 people and creatures, bbox [199, 89, 252, 173], start [229, 146]
+    |   WhiteSands - MoleBurrow: 1 doors and ladders, 0 signs (from its scripts)
+    | WhiteSands - MoleBurrow: 2 sectors, 24 objects, 14 people and creatures, bbox [188, 100, 250, 162], start [204, 116]
+    |   WhiteSands - Tull: 0 doors and ladders, 0 signs (from its scripts)
+    | WhiteSands - Tull: 6 sectors, 82 objects, 21 people and creatures, bbox [611, 546, 652, 608], start [632, 574]
+    |   WhiteSands - UnderCemetary: 1 doors and ladders, 0 signs (from its scripts)
+    | WhiteSands - UnderCemetary: 3 sectors, 36 objects, 15 people and creatures, bbox [64, 139, 151, 169], start [88, 154]
+    |   WhiteSands - WhiteSands: 3 doors and ladders, 0 signs (from its scripts)
+    | WhiteSands - WhiteSands: 88 sectors, 510 objects, 127 people and creatures, bbox [25802, 20345, 29707, 21021], start [28582, 20836]
+    |   Arcanum City: 0 doors and ladders, 0 signs (from its scripts)
+    | Arcanum City: 38 sectors, 3 objects, 1 people and creatures, bbox [2272, 1012, 2350, 1079], start [2301, 1068]
+    |   Hell Day: 10 doors and ladders, 0 signs (from its scripts)
+    | Hell Day: 135 sectors, 2053 objects, 531 people and creatures, bbox [300, 334, 3011, 2244], start [2518, 1905]
+    | Wrote modules.js (989 KB)
+
+[2026-10-16 21:44:56] pictures: FAILED (exit 1) in 0 min 18 s
+    command: build_map_pictures.py --maps Hell Day
+    | [112/258] terrain/desert island/0.sec ... kept (0.0 s)
+    | [113/258] terrain/desert island/67108865.sec ... kept (0.0 s)
+    | [114/258] terrain/desert island/67108864.sec ... kept (0.0 s)
+    | [115/258] terrain/Desert Island to Water/67108867.sec ... kept (0.0 s)
+    | [116/258] terrain/water to desert island/134217731.sec ... kept (0.0 s)
+    | [117/258] terrain/desert island/1.sec ... kept (0.0 s)
+    | [118/258] terrain/water to desert island/134217729.sec ... kept (0.0 s)
+    | [119/258] terrain/water to desert island/1.sec ... kept (0.0 s)
+    | [120/258] terrain/Desert Island to Water/134217731.sec ... kept (0.0 s)
+    | [121/258] terrain/Desert Island to Water/134217730.sec ... kept (0.0 s)
+    | [122/258] terrain/Desert Island to Water/134217729.sec ... kept (0.0 s)
+    | [123/258] terrain/water to desert island/3.sec ... kept (0.0 s)
+    | Traceback (most recent call last):
+    |   File "C:\Users\PetitChat\Documents\GitHub\ArcanumArtExtractor\toolbox\atlas\build_map_pictures.py", line 1368, in <module>
+    |     sys.exit(main())
+    |              ~~~~^^
+    |   File "C:\Users\PetitChat\Documents\GitHub\ArcanumArtExtractor\toolbox\atlas\build_map_pictures.py", line 750, in main
+    |     draw_map(MapJob(folder), args, signature, run, state, errors)
+    |     ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\PetitChat\Documents\GitHub\ArcanumArtExtractor\toolbox\atlas\build_map_pictures.py", line 859, in draw_map
+    |     what = f'{mj.folder}/{path.relative_to(base_of(mj.folder)).as_posix()}'
+    |                           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\PetitChat\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py", line 490, in relative_to
+    |     raise ValueError(f"{str(self)!r} is not in the subpath of {str(other)!r}")
+    | ValueError: 'C:\\Users\\PetitChat\\Documents\\GitHub\\ArcanumArtExtractor\\toolbox\\atlas\\reports\\sec-view\\modules\\Hell Day\\maps\\Main\\268435464.sec' is not in the subpath of 'C:\\Users\\PetitChat\\Documents\\GitHub\\ArcanumArtExtractor\\data\\modules\\Hell Day\\maps\\Main'
+
+[2026-10-16 21:45:14] objects: OK in 0 min 09 s
+    command: build_map_pictures.py --objects --maps Hell Day
+    | 
+    | == Hell Day: no base pictures yet, skipped
+    | 
+    | Done in 0.1 min. 0 warnings (toolbox/atlas/reports/map-pictures-report.txt).
+
+[2026-10-16 21:45:24] off-objects: OK in 0 min 02 s
+    command: build_map_pictures.py --off-objects --maps Hell Day
+    | 
+    | == Hell Day: no base pictures yet, skipped
+    | 
+    | Done in 0.0 min. 0 warnings (toolbox/atlas/reports/map-pictures-report.txt).
+
+[2026-10-16 21:45:27] items: OK in 5 min 13 s
+    command: build_items.py
+    covers every module of the batch (full output in the _batch log)
+    | 1423 prototypes
+    |   792 items from the prototypes
+    | 40411 .mob files
+    |   1532 items in all (1525 shown, 562 with their own name), 654 pictures
+    |   2642 containers (463 on the world map), 1745 hold items, 970 roll a random list
+    |   3149 NPCs carry something, 2830 items lie on the ground, 123 InvenSource lists
+    |   78 script gifts (62 items), 16 from scripts nothing carries
+    |   44 hexed items; 118 schematics (56 learned, 61 found with a paper)
+    | Wrote js\atlas\data\items.js (1914 KB) and atlas\item-icons.png
+
+[2026-10-16 21:50:40] assets: OK in 0 min 39 s
+    command: build_assets.py
+    covers every module of the batch (full output in the _batch log)
+    | 13943 .mob objects, 2938 with scripts, 69 without a sector
+    | Wrote assets.js (2264 KB)
+
+[2026-10-16 21:51:19] modules: OK in 1 min 44 s
+    command: build_modules.py
+    covers every module of the batch (full output in the _batch log)
+    |   Grayhills - Grayhills: 5 doors and ladders, 4 signs (from its scripts)
+    | Grayhills - Grayhills: 59 sectors, 917 objects, 127 people and creatures, bbox [1939, 2029, 4026, 4035], start [2143, 2208]
+    |   Terror - start: 0 doors and ladders, 4 signs (from its scripts)
+    | Terror - start: 74 sectors, 1402 objects, 402 people and creatures, bbox [184, 253, 1774, 1725], start [1638, 1624]
+    |   The Killer Inside - LD_estate_second_story: 0 doors and ladders, 0 signs (from its scripts)
+    | The Killer Inside - LD_estate_second_story: 1 sectors, 2 objects, 0 people and creatures, bbox [6, 24, 26, 46], start [16, 36]
+    |   The Killer Inside - Nodnol: 0 doors and ladders, 3 signs (from its scripts)
+    | The Killer Inside - Nodnol: 42 sectors, 159 objects, 72 people and creatures, bbox [3029, 3063, 3327, 3333], start [3259, 3155]
+    |   Virgil the Pervert - PervertedCaves: 0 doors and ladders, 0 signs (from its scripts)
+    | Virgil the Pervert - PervertedCaves: 3 sectors, 66 objects, 7 people and creatures, bbox [286, 295, 364, 348], start [352, 306]
+    |   WhiteSands - DarkRiver: 1 doors and ladders, 0 signs (from its scripts)
+    | WhiteSands - DarkRiver: 26 sectors, 40 objects, 19 people and creatures, bbox [199, 89, 252, 173], start [229, 146]
+    |   WhiteSands - MoleBurrow: 1 doors and ladders, 0 signs (from its scripts)
+    | WhiteSands - MoleBurrow: 2 sectors, 24 objects, 14 people and creatures, bbox [188, 100, 250, 162], start [204, 116]
+    |   WhiteSands - Tull: 0 doors and ladders, 0 signs (from its scripts)
+    | WhiteSands - Tull: 6 sectors, 82 objects, 21 people and creatures, bbox [611, 546, 652, 608], start [632, 574]
+    |   WhiteSands - UnderCemetary: 1 doors and ladders, 0 signs (from its scripts)
+    | WhiteSands - UnderCemetary: 3 sectors, 36 objects, 15 people and creatures, bbox [64, 139, 151, 169], start [88, 154]
+    |   WhiteSands - WhiteSands: 3 doors and ladders, 0 signs (from its scripts)
+    | WhiteSands - WhiteSands: 88 sectors, 510 objects, 127 people and creatures, bbox [25802, 20345, 29707, 21021], start [28582, 20836]
+    |   Arcanum City: 0 doors and ladders, 0 signs (from its scripts)
+    | Arcanum City: 38 sectors, 3 objects, 1 people and creatures, bbox [2272, 1012, 2350, 1079], start [2301, 1068]
+    |   Hell Day: 10 doors and ladders, 0 signs (from its scripts)
+    | Hell Day: 135 sectors, 2053 objects, 531 people and creatures, bbox [300, 334, 3011, 2244], start [2518, 1905]
+    | Wrote modules.js (989 KB)
+
+[2026-10-16 21:53:04] glows: OK in 11 min 25 s
+    command: build_map_pictures.py --glows --modules
+    covers every module of the batch (full output in the _batch log)
+    | WhiteSands - WhiteSands: 18/32 sectors, 126 glows, 1917 shapes
+    | WhiteSands - WhiteSands: 19/32 sectors, 129 glows, 1917 shapes
+    | WhiteSands - WhiteSands: 20/32 sectors, 131 glows, 1917 shapes
+    | WhiteSands - WhiteSands: 21/32 sectors, 135 glows, 1917 shapes
+    | WhiteSands - WhiteSands: 22/32 sectors, 138 glows, 1917 shapes
+    | WhiteSands - WhiteSands: 23/32 sectors, 140 glows, 1917 shapes
+    | WhiteSands - WhiteSands: 24/32 sectors, 141 glows, 1917 shapes
+    | WhiteSands - WhiteSands: 25/32 sectors, 150 glows, 1917 shapes
+    | WhiteSands - WhiteSands: 26/32 sectors, 155 glows, 1917 shapes
+    | WhiteSands - WhiteSands: 27/32 sectors, 171 glows, 1920 shapes
+    | WhiteSands - WhiteSands: 28/32 sectors, 174 glows, 1920 shapes
+    | WhiteSands - WhiteSands: 29/32 sectors, 175 glows, 1920 shapes
+    | WhiteSands - WhiteSands: 30/32 sectors, 187 glows, 1924 shapes
+    | WhiteSands - WhiteSands: 32/32 sectors, 190 glows, 1924 shapes  (193 marked tiles)
+    | 
+    | Woodmir Race - Race01: 1/7 sectors, 26 glows, 1926 shapes
+    | Woodmir Race - Race01: 2/7 sectors, 65 glows, 1928 shapes
+    | Woodmir Race - Race01: 3/7 sectors, 124 glows, 1932 shapes
+    | Woodmir Race - Race01: 4/7 sectors, 146 glows, 1934 shapes
+    | Woodmir Race - Race01: 5/7 sectors, 169 glows, 1935 shapes
+    | Woodmir Race - Race01: 6/7 sectors, 192 glows, 1937 shapes
+    | Woodmir Race - Race01: 7/7 sectors, 211 glows, 1938 shapes  (211 marked tiles)
+    | 1938 shapes in 6 sheets, 1938 outlines in 11 sheets (671 s)
+    | 
+    | Done in 11.4 min. 0 warnings (toolbox/atlas/reports/map-pictures-report.txt).
+
+[2026-10-16 22:04:30] routines: OK in 2 min 56 s
+    command: build_routines.py
+    covers every module of the batch (full output in the _batch log)
+    | Wrote routines.js: 766 of 11105 NPCs (158 KB); 436 patrol, 415 change place at night
+
+[2026-10-16 22:07:26] quests: OK in 0 min 57 s
+    command: build_quests.py
+    covers every module of the batch (full output in the _batch log)
+    |      T'sen-Ang -> -
+    |      Tarant City Hall Downstairs -> Tarant
+    |      Tarant Sewers-01 -> Tarant Old Sewers
+    |      Tarant Sewers-02 -> Tarant Old Sewers
+    |      The Killer Inside - Nodnol -> -
+    |      Thieves Cave -> Thieves Cave
+    |      Time - Past -> -
+    |      Time - Present -> -
+    |      Tombeau - start -> -
+    |      Tresor - ile -> -
+    |      Tulla Interior -> Teleportation Gate
+    |      VOID-Kerghans Castle -> -
+    |      Vallee - manoir -> -
+    |      Vallee - valee -> -
+    |      Vendigroth Underground -> Elven Ruins - Underground
+    |      Virgil the Pervert - PervertedCaves -> -
+    |      Void -> -
+    |      Void - Arronax's Interior -> -
+    |      Vormantown -> -
+    |      Wheel Clan -> Wheel Clan
+    |      WhiteSands - DarkRiver -> -
+    |      WhiteSands - MoleBurrow -> -
+    |      WhiteSands - UnderCemetary -> -
+    |      WhiteSands - WhiteSands -> -
+    |      Woodmir Race - Race01 -> -
+
+[2026-10-16 22:08:23] library: OK in 0 min 19 s
+    command: build_library.py
+    covers every module of the batch (full output in the _batch log)
+    |   Woodmir Race: 0 documents (0 placed), 6 editor placeholders left out (0 placed)
+    |   Affaire: 3 documents (3 placed), 5 editor placeholders left out (0 placed)
+    |   Livre Ombres: 4 documents (4 placed), 5 editor placeholders left out (0 placed)
+    |   Mystere: 9 documents (9 placed), 4 editor placeholders left out (0 placed)
+    |   Naufrageur: 5 documents (4 placed), 5 editor placeholders left out (0 placed)
+    |   Resident Eval: 1 documents (1 placed), 8 editor placeholders left out (0 placed)
+    |   Secret: 6 documents (5 placed), 4 editor placeholders left out (0 placed)
+    |   Tombeau: 3 documents (3 placed), 4 editor placeholders left out (0 placed)
+    |   Tresor: 1 documents (1 placed), 6 editor placeholders left out (0 placed)
+    |   Vallee: 6 documents (6 placed), 2 editor placeholders left out (0 placed)
+    |   Battlearena: 0 documents (0 placed), 9 editor placeholders left out (0 placed)
+    |   Deep15: 10 documents (8 placed), 3 editor placeholders left out (0 placed)
+    |   Delirium of Evil: 0 documents (0 placed), 6 editor placeholders left out (0 placed)
+    |   Doomsday: 17 documents (17 placed), 2 editor placeholders left out (0 placed)
+    |   Dungeon of Quests: 7 documents (6 placed), 4 editor placeholders left out (0 placed)
+    |   Escape Tarant: 11 documents (6 placed), 5 editor placeholders left out (0 placed)
+    |   Grayhills: 20 documents (16 placed), 5 editor placeholders left out (0 placed)
+    |   Terror: 3 documents (3 placed), 8 editor placeholders left out (0 placed)
+    |   The Killer Inside: 7 documents (3 placed), 2 editor placeholders left out (0 placed)
+    |   Virgil the Pervert: 7 documents (1 placed), 2 editor placeholders left out (0 placed)
+    |   WhiteSands: 5 documents (3 placed), 3 editor placeholders left out (0 placed)
+    |   Arcanum City: 0 documents (0 placed), 9 editor placeholders left out (0 placed)
+    |   Hell Day: 0 documents (0 placed), 9 editor placeholders left out (0 placed)
+    | 358 documents (203 with a copy placed in the world), 17 fonts, 6 backgrounds, 646 text lines
+    | Wrote js\atlas\data\library.js (2959 KB)
+
+[2026-10-16 22:08:42] index: OK in 0 min 01 s
+    command: build_map_pictures.py --only-index
+    covers every module of the batch (full output in the _batch log)
+
+===== run finished 2026-10-16 22:08:44, 29 min 49 s in all =====
+
+===== run started 2026-10-16 22:10:01 (modules of this batch: Hell Day) =====
+
+[2026-10-16 22:10:01] pictures: OK in 8 min 45 s
+    command: build_map_pictures.py --maps Hell Day
+    | [236/258] Hell Day/1946157096.sec ... objects 571, lights 537, Lighting Default [255, 255, 246]/[74, 80, 98] (4.4 s)
+    | [237/258] Hell Day/1946157097.sec ... objects 529, lights 545, Lighting Default [255, 255, 246]/[74, 80, 98] (4.6 s)
+    | [238/258] Hell Day/1946157098.sec ... objects 493, lights 577, Lighting Default [255, 255, 246]/[74, 80, 98] (4.6 s)
+    | [239/258] Hell Day/1946157099.sec ... objects 427, lights 563, Lighting Default [255, 255, 246]/[74, 80, 98] (4.3 s)
+    | [240/258] Hell Day/1946157100.sec ... objects 320, lights 569, Lighting Default [255, 255, 246]/[74, 80, 98] (4.4 s)
+    | [241/258] Hell Day/1946157101.sec ... objects 321, lights 364, Lighting Default [255, 255, 246]/[74, 80, 98] (4.3 s)
+    | [242/258] Hell Day/2013265957.sec ... objects 480, lights 243, Lighting Default [255, 255, 246]/[74, 80, 98] (4.3 s)
+    | [243/258] Hell Day/2013265958.sec ... objects 506, lights 413, Lighting Default [255, 255, 246]/[74, 80, 98] (9.4 s)
+    | [244/258] Hell Day/2013265959.sec ... objects 519, lights 456, Lighting Default [255, 255, 246]/[74, 80, 98] (4.5 s)
+    | [245/258] Hell Day/2013265960.sec ... objects 662, lights 541, Lighting Default [255, 255, 246]/[74, 80, 98] (4.4 s)
+    | [246/258] Hell Day/2013265961.sec ... objects 679, lights 546, Lighting Default [255, 255, 246]/[74, 80, 98] (4.5 s)
+    | [247/258] Hell Day/2013265962.sec ... objects 589, lights 519, Lighting Default [255, 255, 246]/[74, 80, 98] (4.4 s)
+    | [248/258] Hell Day/2013265963.sec ... objects 638, lights 441, Lighting Default [255, 255, 246]/[74, 80, 98] (5.0 s)
+    | [249/258] Hell Day/2013265964.sec ... objects 605, lights 379, Lighting Default [255, 255, 246]/[74, 80, 98] (4.4 s)
+    | [250/258] Hell Day/2013265965.sec ... objects 539, lights 226, Lighting Default [255, 255, 246]/[74, 80, 98] (4.4 s)
+    | [251/258] Hell Day/2080374823.sec ... objects 494, lights 256, Lighting Default [255, 255, 246]/[74, 80, 98] (4.3 s)
+    | [252/258] Hell Day/2080374824.sec ... objects 459, lights 339, Lighting Default [255, 255, 246]/[74, 80, 98] (4.4 s)
+    | [253/258] Hell Day/2080374825.sec ... objects 531, lights 345, Lighting Default [255, 255, 246]/[74, 80, 98] (4.5 s)
+    | [254/258] Hell Day/2080374826.sec ... objects 486, lights 326, Lighting Default [255, 255, 246]/[74, 80, 98] (4.4 s)
+    | [255/258] Hell Day/2281701381.sec ... objects 88, lights 48, Lighting Default [255, 255, 246]/[74, 80, 98] (3.1 s)
+    | [256/258] Hell Day/2281701382.sec ... black (kept out)
+    | [257/258] Hell Day/2348810245.sec ... objects 178, lights 48, Lighting Default [255, 255, 246]/[74, 80, 98] (3.1 s)
+    | [258/258] Hell Day/2348810246.sec ... objects 147, lights 48, Lighting Default [255, 255, 246]/[74, 80, 98] (2.9 s)
+    | 
+    | Done in 8.7 min. 11 warnings (toolbox/atlas/reports/map-pictures-report.txt).
+
+[2026-10-16 22:18:46] objects: FAILED (exit 1) in 0 min 01 s
+    command: build_map_pictures.py --objects --maps Hell Day
+    | 
+    | == Hell Day: objects layers of 135 sectors
+    | Traceback (most recent call last):
+    |   File "C:\Users\PetitChat\Documents\GitHub\ArcanumArtExtractor\toolbox\atlas\build_map_pictures.py", line 1371, in <module>
+    |     sys.exit(main())
+    |              ~~~~^^
+    |   File "C:\Users\PetitChat\Documents\GitHub\ArcanumArtExtractor\toolbox\atlas\build_map_pictures.py", line 748, in main
+    |     draw_objects(MapJob(folder), args, signature, run, state, errors, url)
+    |     ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\PetitChat\Documents\GitHub\ArcanumArtExtractor\toolbox\atlas\build_map_pictures.py", line 1042, in draw_objects
+    |     what = f'{mj.folder}/{path.relative_to(base_of(mj.folder)).as_posix()}'
+    |                           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\PetitChat\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py", line 490, in relative_to
+    |     raise ValueError(f"{str(self)!r} is not in the subpath of {str(other)!r}")
+    | ValueError: 'C:\\Users\\PetitChat\\Documents\\GitHub\\ArcanumArtExtractor\\toolbox\\atlas\\reports\\sec-view\\modules\\Hell Day\\maps\\Main\\268435464.sec' is not in the subpath of 'C:\\Users\\PetitChat\\Documents\\GitHub\\ArcanumArtExtractor\\data\\modules\\Hell Day\\maps\\Main'
+
+[2026-10-16 22:18:48] off-objects: FAILED (exit 1) in 0 min 01 s
+    command: build_map_pictures.py --off-objects --maps Hell Day
+    | 
+    | == Hell Day: objects layers of 135 sectors
+    | Traceback (most recent call last):
+    |   File "C:\Users\PetitChat\Documents\GitHub\ArcanumArtExtractor\toolbox\atlas\build_map_pictures.py", line 1371, in <module>
+    |     sys.exit(main())
+    |              ~~~~^^
+    |   File "C:\Users\PetitChat\Documents\GitHub\ArcanumArtExtractor\toolbox\atlas\build_map_pictures.py", line 748, in main
+    |     draw_objects(MapJob(folder), args, signature, run, state, errors, url)
+    |     ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\PetitChat\Documents\GitHub\ArcanumArtExtractor\toolbox\atlas\build_map_pictures.py", line 1042, in draw_objects
+    |     what = f'{mj.folder}/{path.relative_to(base_of(mj.folder)).as_posix()}'
+    |                           ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\PetitChat\AppData\Local\Python\pythoncore-3.14-64\Lib\pathlib\__init__.py", line 490, in relative_to
+    |     raise ValueError(f"{str(self)!r} is not in the subpath of {str(other)!r}")
+    | ValueError: 'C:\\Users\\PetitChat\\Documents\\GitHub\\ArcanumArtExtractor\\toolbox\\atlas\\reports\\sec-view\\modules\\Hell Day\\maps\\Main\\268435464.sec' is not in the subpath of 'C:\\Users\\PetitChat\\Documents\\GitHub\\ArcanumArtExtractor\\data\\modules\\Hell Day\\maps\\Main'
+
+[2026-10-16 22:18:49] glows: OK in 11 min 46 s
+    command: build_map_pictures.py --glows --modules
+    covers every module of the batch (full output in the _batch log)
+    | WhiteSands - WhiteSands: 18/32 sectors, 126 glows, 1917 shapes
+    | WhiteSands - WhiteSands: 19/32 sectors, 129 glows, 1917 shapes
+    | WhiteSands - WhiteSands: 20/32 sectors, 131 glows, 1917 shapes
+    | WhiteSands - WhiteSands: 21/32 sectors, 135 glows, 1917 shapes
+    | WhiteSands - WhiteSands: 22/32 sectors, 138 glows, 1917 shapes
+    | WhiteSands - WhiteSands: 23/32 sectors, 140 glows, 1917 shapes
+    | WhiteSands - WhiteSands: 24/32 sectors, 141 glows, 1917 shapes
+    | WhiteSands - WhiteSands: 25/32 sectors, 150 glows, 1917 shapes
+    | WhiteSands - WhiteSands: 26/32 sectors, 155 glows, 1917 shapes
+    | WhiteSands - WhiteSands: 27/32 sectors, 171 glows, 1920 shapes
+    | WhiteSands - WhiteSands: 28/32 sectors, 174 glows, 1920 shapes
+    | WhiteSands - WhiteSands: 29/32 sectors, 175 glows, 1920 shapes
+    | WhiteSands - WhiteSands: 30/32 sectors, 187 glows, 1924 shapes
+    | WhiteSands - WhiteSands: 32/32 sectors, 190 glows, 1924 shapes  (193 marked tiles)
+    | 
+    | Woodmir Race - Race01: 1/7 sectors, 26 glows, 1926 shapes
+    | Woodmir Race - Race01: 2/7 sectors, 65 glows, 1928 shapes
+    | Woodmir Race - Race01: 3/7 sectors, 124 glows, 1932 shapes
+    | Woodmir Race - Race01: 4/7 sectors, 146 glows, 1934 shapes
+    | Woodmir Race - Race01: 5/7 sectors, 169 glows, 1935 shapes
+    | Woodmir Race - Race01: 6/7 sectors, 192 glows, 1937 shapes
+    | Woodmir Race - Race01: 7/7 sectors, 211 glows, 1938 shapes  (211 marked tiles)
+    | 1938 shapes in 6 sheets, 1938 outlines in 11 sheets (697 s)
+    | 
+    | Done in 11.8 min. 0 warnings (toolbox/atlas/reports/map-pictures-report.txt).
+
+[2026-10-16 22:30:36] index: OK in 0 min 01 s
+    command: build_map_pictures.py --only-index
+    covers every module of the batch (full output in the _batch log)
+
+===== run finished 2026-10-16 22:30:38, 20 min 36 s in all =====
+
+===== run started 2026-10-16 22:31:54 (modules of this batch: Hell Day) =====
+
+[2026-10-16 22:31:54] objects: OK in 2 min 47 s
+    command: build_map_pictures.py --objects --maps Hell Day
+    | [113/135] Hell Day/1946157096.sec ... 20 objects (2.9 s)
+    | [114/135] Hell Day/1946157097.sec ... 6 objects (2.2 s)
+    | [115/135] Hell Day/1946157098.sec ... 35 objects (2.7 s)
+    | [116/135] Hell Day/1946157099.sec ... 37 objects (2.8 s)
+    | [117/135] Hell Day/1946157100.sec ... 44 objects (2.7 s)
+    | [118/135] Hell Day/1946157101.sec ... 30 objects (2.3 s)
+    | [119/135] Hell Day/2013265957.sec ... none
+    | [120/135] Hell Day/2013265958.sec ... 6 objects (2.0 s)
+    | [121/135] Hell Day/2013265959.sec ... 16 objects (7.6 s)
+    | [122/135] Hell Day/2013265960.sec ... 11 objects (2.3 s)
+    | [123/135] Hell Day/2013265961.sec ... 1 objects (1.8 s)
+    | [124/135] Hell Day/2013265962.sec ... 1 objects (1.8 s)
+    | [125/135] Hell Day/2013265963.sec ... 11 objects (2.3 s)
+    | [126/135] Hell Day/2013265964.sec ... 3 objects (2.2 s)
+    | [127/135] Hell Day/2013265965.sec ... none
+    | [128/135] Hell Day/2080374823.sec ... none
+    | [129/135] Hell Day/2080374824.sec ... none
+    | [130/135] Hell Day/2080374825.sec ... none
+    | [131/135] Hell Day/2080374826.sec ... none
+    | [132/135] Hell Day/2281701381.sec ... 4 objects (2.0 s)
+    | [133/135] Hell Day/2281701382.sec ... none
+    | [134/135] Hell Day/2348810245.sec ... 37 objects (2.3 s)
+    | [135/135] Hell Day/2348810246.sec ... 64 objects (2.6 s)
+    | 
+    | Done in 2.8 min. 0 warnings (toolbox/atlas/reports/map-pictures-report.txt).
+
+[2026-10-16 22:34:42] off-objects: OK in 0 min 35 s
+    command: build_map_pictures.py --off-objects --maps Hell Day
+    | [113/135] Hell Day/1946157096.sec ... 6 objects (2.1 s)
+    | [114/135] Hell Day/1946157097.sec ... none
+    | [115/135] Hell Day/1946157098.sec ... none
+    | [116/135] Hell Day/1946157099.sec ... none
+    | [117/135] Hell Day/1946157100.sec ... none
+    | [118/135] Hell Day/1946157101.sec ... none
+    | [119/135] Hell Day/2013265957.sec ... none
+    | [120/135] Hell Day/2013265958.sec ... none
+    | [121/135] Hell Day/2013265959.sec ... none
+    | [122/135] Hell Day/2013265960.sec ... none
+    | [123/135] Hell Day/2013265961.sec ... none
+    | [124/135] Hell Day/2013265962.sec ... none
+    | [125/135] Hell Day/2013265963.sec ... none
+    | [126/135] Hell Day/2013265964.sec ... none
+    | [127/135] Hell Day/2013265965.sec ... none
+    | [128/135] Hell Day/2080374823.sec ... none
+    | [129/135] Hell Day/2080374824.sec ... none
+    | [130/135] Hell Day/2080374825.sec ... none
+    | [131/135] Hell Day/2080374826.sec ... none
+    | [132/135] Hell Day/2281701381.sec ... none
+    | [133/135] Hell Day/2281701382.sec ... none
+    | [134/135] Hell Day/2348810245.sec ... none
+    | [135/135] Hell Day/2348810246.sec ... none
+    | 
+    | Done in 0.6 min. 0 warnings (toolbox/atlas/reports/map-pictures-report.txt).
+
+[2026-10-16 22:35:18] index: OK in 0 min 01 s
+    command: build_map_pictures.py --only-index
+    covers every module of the batch (full output in the _batch log)
+
+===== run finished 2026-10-16 22:35:19, 3 min 24 s in all =====
+

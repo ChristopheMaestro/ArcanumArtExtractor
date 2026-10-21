@@ -99,12 +99,14 @@ export async function convertPngToFrame(file) {
   const { width, height, data } = await decodePngFile(file);
   const total = width * height;
 
+  // The opaque colours (one small array per pixel) are only needed to build a first frame's own palette.
+  const collect = packerFrames.length === 0;
   const opaqueColors = [];
   let hasTransparent = false;
   for (let i = 0; i < total; i++) {
     const o = i * 4;
     if (data[o + 3] < PNG_ALPHA_THRESHOLD) { hasTransparent = true; continue; }
-    opaqueColors.push([data[o], data[o + 1], data[o + 2]]);
+    if (collect) opaqueColors.push([data[o], data[o + 1], data[o + 2]]);
   }
 
   // Arcanum always reads palette index 0 as the transparent/color-key

@@ -12,13 +12,13 @@
 
 import { DATA_ROOT, SEC_ROOT } from '../core/config.js';
 import { parseMesText } from '../core/mes-parser.js';
+import { indexSubfolderNames } from '../core/file-index.js';
 import { encPath } from '../core/util.js';
 import { readSecTileData } from './sec-parser.js';
 import { secMapInfoBytes } from '../editor/sec-writer.js';
 
 const TERRAIN_ROOT = `${DATA_ROOT}terrain/`;
 const TERRAIN_HEADER_SIZE = 0x20;
-const FIRST_TRANSITION_ID = 200;
 // Only outdoor world maps are treated as terrain-backed (interior maps also ship a tiny terrain.tdf).
 const MIN_WORLD_SECTORS = 1000;
 
@@ -71,10 +71,7 @@ let folderPromise = null;
 function loadTerrainFolders() {
   if (!folderPromise) folderPromise = (async () => {
     const map = new Map();
-    try {
-      const resp = await fetch(`${TERRAIN_ROOT}terrain_manifest.json`);
-      if (resp.ok) for (const name of Object.keys((await resp.json()).subfolders || {})) map.set(name.toLowerCase(), name);
-    } catch (_) {}
+    for (const name of await indexSubfolderNames('sec', 'terrain')) map.set(name.toLowerCase(), name);   // (folders that hold template sectors)
     return map;
   })();
   return folderPromise;
@@ -96,16 +93,18 @@ export function terrainTemplateFor(tid, names) {
 // Reads <map>/terrain.tdf; resolves to null for maps without a world-sized terrain grid.
 // Cached per folder: the explorer and the map viewer both ask.
 const terrainMapCache = new Map();
-export function loadTerrainMap(relativePath) {
-  const key = String(relativePath || '');
+// minSectors: the smallest grid (width and height) taken as terrain-backed; the Atlas passes 1, since a module's outdoor map
+// has a small grid whose sectors without a .sec of their own are templates too.
+export function loadTerrainMap(relativePath, minSectors = MIN_WORLD_SECTORS) {
+  const key = `${minSectors}|${relativePath || ''}`;
   if (!terrainMapCache.has(key)) {
-    const p = loadTerrainMapUncached(relativePath);
+    const p = loadTerrainMapUncached(relativePath, minSectors);
     terrainMapCache.set(key, p);
     p.catch(() => terrainMapCache.delete(key));
   }
   return terrainMapCache.get(key);
 }
-async function loadTerrainMapUncached(relativePath) {
+async function loadTerrainMapUncached(relativePath, minSectors) {
   let resp;
   try { resp = await fetch(`${SEC_ROOT}${relativePath ? encPath(relativePath) + '/' : ''}terrain.tdf`); } catch (_) { return null; }
   if (!resp.ok) return null;
@@ -114,7 +113,7 @@ async function loadTerrainMapUncached(relativePath) {
   const view = new DataView(buf);
   const flags = view.getUint32(4, true);
   const width = Number(view.getBigInt64(8, true)), height = Number(view.getBigInt64(16, true));
-  if (Math.abs(view.getFloat32(0, true) - 1.2) > 1e-4 || width < MIN_WORLD_SECTORS || height < MIN_WORLD_SECTORS || width * height > 1 << 24) return null;
+  if (Math.abs(view.getFloat32(0, true) - 1.2) > 1e-4 || width < minSectors || height < minSectors || width * height > 1 << 24) return null;
   const ids = new Uint16Array(width * height);
   if (flags & 1) {
     const jobs = [];
@@ -206,17 +205,24 @@ export async function createWorldSectors(width, height, terrainId, onProgress) {
       const info = { x, y, id: String((BigInt(y) << 26n) | BigInt(x)), template: { folder, file: t.file, path: `${folder}/${t.file}.sec` } };
       const shared = await loadTerrainSector(info);
       if (!shared) throw new Error(`template ${info.template.path} was not found`);
-      const d = shared.decoded;
-      const buf = d.sourceBuffer.slice(0), dv = new DataView(buf);
-      d.lights.forEach((l, n) => { dv.setUint32(4 + n * 0x30 + 8, l.x >>> 0, true); dv.setUint32(4 + n * 0x30 + 12, l.y >>> 0, true); });
-      out.push({
-        filename: shared.filename, position: { x, y },
-        decoded: { ...d, filename: shared.filename, sourceBuffer: buf, tiles: Uint32Array.from(d.tiles), lights: d.lights.map(l => ({ ...l })),
-          staticObjects: d.staticObjects.map(o => ({ ...o })), tileScripts: (d.tileScripts || []).slice(), roofArtIds: d.roofArtIds && Uint32Array.from(d.roofArtIds) }
-      });
+      out.push(editableTerrainSector(shared));
     }));
   }
   return out;
+}
+
+// An editable copy of a sector made by loadTerrainSector(): its own tiles, lights (moved to the sector's place, in the
+// bytes too), objects, tile scripts and roofs, and no `terrain` mark, so the editor treats it like a sector of the
+// map and exports it as a .sec of its own place (the writer moves the objects there).
+export function editableTerrainSector(shared) {
+  const d = shared.decoded;
+  const buf = d.sourceBuffer.slice(0), dv = new DataView(buf);
+  d.lights.forEach((l, n) => { dv.setUint32(4 + n * 0x30 + 8, l.x >>> 0, true); dv.setUint32(4 + n * 0x30 + 12, l.y >>> 0, true); });
+  return {
+    filename: shared.filename, position: { x: shared.position.x, y: shared.position.y },
+    decoded: { ...d, filename: shared.filename, sourceBuffer: buf, tiles: Uint32Array.from(d.tiles), lights: d.lights.map(l => ({ ...l })),
+      staticObjects: d.staticObjects.map(o => ({ ...o })), tileScripts: (d.tileScripts || []).slice(), roofArtIds: d.roofArtIds && Uint32Array.from(d.roofArtIds) }
+  };
 }
 
 // Loads and decodes the template of one sector, moved to the sector's own place the way

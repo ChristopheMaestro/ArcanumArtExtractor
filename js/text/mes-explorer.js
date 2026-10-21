@@ -2,7 +2,8 @@
 
 import { MES_FIELDS, cachedLines } from '../explorer/file-search.js';
 import { mountFolderTree } from '../explorer/folder-tree.js';
-import { createManifestLoader, joinPath, manifestFiles, manifestSubfolders } from '../core/manifest.js';
+import { createIndexLoader } from '../core/file-index.js';
+import { manifestFiles, manifestSubfolders } from '../core/manifest.js';
 
 import { backButton } from '../explorer/nav-history.js';
 
@@ -17,13 +18,9 @@ import { beginDataExplorer, renderDataFolderGrid, showExplorerError } from '../e
 
 import { saveDataExplorerState } from '../explorer/state-store.js';
 
-// MES files are distributed throughout the entire data tree, not under one
-// dedicated /data/mes/ directory. The root data_manifest.json is therefore
-// the starting point; every descendant manifest is recursively inspected,
-// and only branches containing at least one .mes file are exposed.
+// The .MES files are spread over the whole data tree (mes/, art/, Rules/, the mods, the modules...): the explorer starts at data/.
+// data/file_index_mes.json (toolbox/file_index.py) lists only the folders that hold at least one .mes.
 const MES_ROOT = DATA_ROOT;
-const MES_DATA_MANIFEST_URL = `${DATA_ROOT}data_manifest.json`;
-const mesFolderContentCache = new Map();
 let mesCurrentPath = '';
 let mesCurrentFolderName = 'data';
 let mesCurrentManifest = null;
@@ -33,30 +30,10 @@ let mesSearchQuery = '';
 let mesShowComments = true;
 
 let mesTree = null;
-const loadMesManifest = createManifestLoader({ root: DATA_ROOT, rootName: 'data', label: 'data' });
+const loadMesManifest = createIndexLoader('mes');
 const mesSubfolders = manifest => manifestSubfolders(manifest).filter(sf => sf.relative_path);
 
-async function mesFolderHasContent(relativePath, folderName) {
-  const key = `${relativePath}|${folderName}`;
-  if (mesFolderContentCache.has(key)) return mesFolderContentCache.get(key);
-  const promise = (async () => {
-    try {
-      const manifest = await loadMesManifest(relativePath, folderName);
-      if (manifestFiles(manifest, 'mes').length) return true;
-      // sub-folders all at once: online each manifest is a round trip
-      const found = await Promise.all(mesSubfolders(manifest).map(sf => mesFolderHasContent(joinPath(relativePath, sf.relative_path), sf.folder_name)));
-      if (found.some(Boolean)) return true;
-    } catch (_) {}
-    return false;
-  })();
-  mesFolderContentCache.set(key, promise);
-  return promise;
-}
-async function mesVisibleSubfolders(manifest, relativePath) {
-  const subs = mesSubfolders(manifest);
-  const keep = await Promise.all(subs.map(sf => mesFolderHasContent(joinPath(relativePath, sf.relative_path), sf.folder_name)));
-  return subs.filter((_, i) => keep[i]);
-}
+const mesVisibleSubfolders = async manifest => mesSubfolders(manifest);
 function mesFileUrl(relativePath, filename) {
   return `${MES_ROOT}${relativePath ? encPath(relativePath) + '/' : ''}${encPath(filename)}`;
 }
@@ -157,7 +134,7 @@ async function openMesFolder(relativePath,folderName){
 export async function enterMesExplorer(restoreState = false) {
   const { path, name, file } = beginDataExplorer('mes', { rootName: 'data', restoreState });
   mesTree = mountFolderTree({
-    rootName: 'data', loadManifest: loadMesManifest, openFolder: openMesFolder, folderFilter: mesFolderHasContent,
+    rootName: 'data', loadManifest: loadMesManifest, openFolder: openMesFolder,
     ext: 'mes', fileIcon: '📜', searchFields: MES_FIELDS, openFile: (filename, _row, parent) => mesOpenViewer(filename, parent),
     searchLines: mesSearchLines, openLine: (filename, parent, key) => mesOpenViewer(filename, parent, key),
   });

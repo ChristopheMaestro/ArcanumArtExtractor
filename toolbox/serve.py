@@ -37,6 +37,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 class Server(socketserver.ThreadingTCPServer):
     allow_reuse_address = True
     daemon_threads = True
+    request_queue_size = 256        # the default 5 makes Windows refuse connections when a page asks for dozens of files at once
 
 
 def main():

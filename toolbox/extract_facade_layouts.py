@@ -19,7 +19,7 @@ Writes js/editor/sec-facade-layouts.js.
 Usage:  python extract_facade_layouts.py [--max-guess 150]
 """
 from __future__ import annotations
-import argparse, heapq, json, os, struct
+import argparse, heapq, json, os
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -40,19 +40,18 @@ def collect_votes():
         if not secs:
             continue
         at: dict[int, dict[tuple[int, int], int]] = defaultdict(dict)    # num -> (x, y) -> frame
+        sids = {}
         for f in secs:
             try:
-                sid = int(f[:-4])
+                sids[f] = int(f[:-4])
             except ValueError:
                 continue
-            b = Path(d, f).read_bytes()
-            to = 4 + struct.unpack_from('<I', b, 0)[0] * 0x30
-            if to + 16384 > len(b):
+        for sid, b in zip(sids.values(), fa.read_files(Path(d, f) for f in sids)):
+            ft = fa.facade_tiles(b)             # (the tiles of art type ART_TYPE_FACADE)
+            if ft is None:
                 continue
             bx, by = (sid & 0x3FFFFFF) * 64, (sid >> 26) * 64
-            for i, raw in enumerate(struct.unpack_from('<4096I', b, to)):
-                if raw >> 28 != ART_TYPE_FACADE:
-                    continue
+            for i, raw in zip(*ft):
                 num = ((raw >> 17) & 0xFF) | ((raw >> 19) & 0x100)
                 at[num][(bx + (i & 63), by + (i >> 6))] = (raw >> 1) & 0x3FF
         for num, pts in at.items():
@@ -104,6 +103,9 @@ def place_from_seams(cells, out):
             cache[k] = fa.seam(cells[a], cells[b], n[0], n[1])[0]
         return cache[k]
     todo = set(cells) - set(out)
+    # per frontier cell: (its placed neighbours, score of every frame, the best frame) - kept until those neighbours
+    # change (a frame placed next to it) or its best frame is placed elsewhere, as only then does its choice change
+    memo: dict[tuple[int, int], tuple[list, dict, float, int]] = {}
     while todo:
         frontier = {}
         for f, (x, y) in out.items():
@@ -113,11 +115,22 @@ def place_from_seams(cells, out):
                     frontier.setdefault(c, []).append((f, n))
         best = None
         for c, nbrs in frontier.items():
-            # a cell touching several placed cells is the most informative
-            for u in todo:
-                s = sum(seam(f, u, n) for f, n in nbrs) / len(nbrs) - 2.0 * len(nbrs)
-                if best is None or s < best[0]:
-                    best = (s, u, c)
+            m = memo.get(c)
+            if m is None or m[0] != nbrs:
+                # a cell touching several placed cells is the most informative
+                scores = {u: sum(seam(f, u, n) for f, n in nbrs) / len(nbrs) - 2.0 * len(nbrs) for u in todo}
+                m = None
+            else:
+                scores = m[1]
+            if m is None or m[3] not in todo:
+                # the first frame (in the order of `todo`) with the lowest score, as a scan of every pair picks
+                cb = None
+                for u in todo:
+                    if cb is None or scores[u] < cb[0]:
+                        cb = (scores[u], u)
+                m = memo[c] = (nbrs, scores, cb[0], cb[1])
+            if best is None or m[2] < best[0]:
+                best = (m[2], m[3], c)
         _, u, c = best
         out[u] = c; occ[c] = u; todo.discard(u)
 

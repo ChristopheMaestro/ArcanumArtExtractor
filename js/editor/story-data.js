@@ -137,8 +137,13 @@ export async function storyFiles(story, fetchBytes) {
     files.push({ name: `dlg/${stem}.dlg`, bytes: stringBytes(compileDialog(d).text) }, { name: `scr/${stem}.scr`, bytes: buildDialogScript(safeName(d.name)) });
   }
   if (story.quests.length) {
-    for (const [file, pick] of [['gamequestlog.mes', q => q.text], ['gamequestlogdumb.mes', q => q.dumb || q.text]]) {
-      files.push({ name: `mes/${file}`, bytes: mergeQuestLog(await fetchBytes(`mes/${file}`), story.quests, pick) });
+    const logs = [['gamequestlog.mes', q => q.text], ['gamequestlogdumb.mes', q => q.dumb || q.text]];
+    // both read at once; awaited in order, so a failure reports the same file as before
+    const reads = logs.map(([file]) => Promise.resolve(fetchBytes(`mes/${file}`)));
+    for (const r of reads) r.catch(() => {});
+    for (let i = 0; i < logs.length; i++) {
+      const [file, pick] = logs[i];
+      files.push({ name: `mes/${file}`, bytes: mergeQuestLog(await reads[i], story.quests, pick) });
     }
   }
   return files;

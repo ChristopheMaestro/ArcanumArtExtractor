@@ -79,7 +79,14 @@ export const houseFloorTile = num => HOUSE_FLOORS[num] ?? null;
 export const WFC_TUNING = { emptyBias: .15, likeness: .7, model: .3, anchorBias: .1, loneBias: .25, fullModel: .7, baseFull: .06, fullPower: 7, minFull: .05, fillTo: 1 };
 const WFC_ANCHORS = ['bed', 'table', 'seat+table', 'stove', 'workbench'];     // counted first, then put by the WFC
 // the big thing a WFC class is (a bed with a painting over it is a bed), or null
-const anchorOf = cls => !cls ? null : WFC_ANCHORS.includes(cls) ? cls : WFC_ANCHORS.find(a => !a.includes('+') && cls.split('+').includes(a)) ?? null;
+// (remembered per class: it is asked for every unit of every witness each time a house is furnished)
+const anchorMemo = new Map();
+const anchorOf = cls => {
+  if (!cls) return null;
+  let a = anchorMemo.get(cls);
+  if (a === undefined) anchorMemo.set(cls, a = WFC_ANCHORS.includes(cls) ? cls : WFC_ANCHORS.find(a => !a.includes('+') && cls.split('+').includes(a)) ?? null);
+  return a;
+};
 
 const OPENING_PIECES = { w3: [9, 10, 11], w4: [12, 13, 14, 15], w5: [16, 17, 18, 19, 20], d3: [21, 22, 23], d4: [24, 25, 26, 27], hearth: [34, 35, 36] };
 const WINDOW_GLASS = new Set([10, 13, 14, 17, 18, 19]);  // the window pieces with the portal: the window itself, the rest its frame
@@ -117,7 +124,7 @@ const newSeed = () => Math.floor(Math.random() * 4294967296);
 // come with what they go with (HOUSE_SATELLITES). A unit with a thing that only stands on a hearth (the fire) is
 // counted apart ("hearth"), among the houses that have a hearth. What the map has outdoors only (trees, bushes, shop
 // signs) is never taken inside, nor what it has indoors only into a yard (HOUSE_OUTDOOR / HOUSE_INDOOR).
-const keyOf = part => part.split(':')[0];
+const keyOf = part => { const i = part.indexOf(':'); return i < 0 ? part : part.slice(0, i); };
 const unitCategory = sig => [...new Set(sig.split('|').map(p => HOUSE_CATEGORIES[keyOf(p)] || 'other'))].sort().join('+');
 const OUTDOOR = new Set(HOUSE_OUTDOOR.map(String)), INDOOR = new Set(HOUSE_INDOOR.map(String));
 const UNIQUE = new Set(HOUSE_UNIQUE.map(String));
@@ -143,6 +150,14 @@ const WITNESSES = HOUSE_SAMPLES.map(([s, W, H, shape, rooms, units, hearths, rug
     return { sig, cat, group, wcls: group === 'hearth' ? null : wfcClassOf(sig), x, y, room, mask, door, offs, deps };
   }).filter(Boolean)
 }));
+// How many of a witness's indoor units are of big thing `c` (WFC_ANCHORS), counted once per witness.
+const witAnchorCount = (wit, c) => {
+  if (!wit.anchorCounts) {
+    wit.anchorCounts = new Map();
+    for (const u of wit.units) if (u.room >= 0) { const a = anchorOf(u.wcls); if (a) wit.anchorCounts.set(a, (wit.anchorCounts.get(a) || 0) + 1); }
+  }
+  return wit.anchorCounts.get(c) || 0;
+};
 // The WFC's model of the furniture, learned from the witnesses' tiles (built when first needed).
 let wfcModelCache = null;
 function wfcModel() {
@@ -1564,7 +1579,7 @@ function furnish({ plan, weights: weights0, rooms, roomOf, ring, doorZone, doorC
     const seeds = [];
     for (const c of WFC_ANCHORS) {
       let n = drawCount(WITNESSES.map(wit => {
-        const k0 = wit.units.filter(u => u.room >= 0 && anchorOf(u.wcls) === c).length, k = Math.max(Math.min(k0, 1), k0 * Math.min(1, house.W * house.H / wit.area));
+        const k0 = witAnchorCount(wit, c), k =Math.max(Math.min(k0, 1), k0 * Math.min(1, house.W * house.H / wit.area));
         return Math.floor(k) + (rng() < k % 1 ? 1 : 0);
       }), weights, rng);
       // (a tavern whose tables stand in rows already has them: the room's few others are the collapse's)

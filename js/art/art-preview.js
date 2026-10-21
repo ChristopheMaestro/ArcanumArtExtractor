@@ -2,8 +2,8 @@
 // otherwise the first frame of the .art file itself.
 
 import { parseArtBuffer } from './art-decoder.js';
-import { loadSheet, sheetCellCanvas, sheetCellForFile } from './art-thumb-sheets.js';
-import { ART_ROOT } from '../core/config.js';
+import { artSheetPath, loadSheet, sheetCellCanvas, sheetCellForFile } from './art-thumb-sheets.js';
+import { DATA_ROOT } from '../core/config.js';
 import { encPath } from '../core/util.js';
 
 const artPreviewCache = new Map();
@@ -46,7 +46,7 @@ export async function renderArtThumb(buf) {
 
 async function loadArtPreview(relativePath, filename) {
   const prefix = relativePath ? `${relativePath}/` : '';
-  const url = `${ART_ROOT}${encPath(prefix)}${encPath(filename)}`;
+  const url = `${DATA_ROOT}${encPath(prefix)}${encPath(filename)}`;   // (relativePath is under data/)
   if (artPreviewCache.has(url)) return artPreviewCache.get(url);
 
   const previewPromise = (async () => {
@@ -74,7 +74,8 @@ export function attachArtPreview(container, relativePath, filename, folderFiles 
   image.loading = 'lazy';
   container.appendChild(image);
   deferArtPreview(container, async () => {
-    const cell = folderFiles ? await sheetCellForFile(relativePath, filename, folderFiles) : null;
+    const sheetPath = artSheetPath(relativePath);
+    const cell = folderFiles && sheetPath !== null ? await sheetCellForFile(sheetPath, filename, folderFiles) : null;
     if (cell?.missing) { if (container.isConnected) showMissing(container); return; }
     const sheet = cell ? await loadSheet(cell.url) : null;
     if (sheet) {

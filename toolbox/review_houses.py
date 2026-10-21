@@ -34,7 +34,7 @@ def run(cases, wfc, tuning=None):
         b = pw.chromium.launch(); pg = b.new_page()
         logs = []
         pg.on('console', lambda m: logs.append(m.text)); pg.on('pageerror', lambda e: logs.append('ERR ' + str(e)))
-        pg.goto(f'http://127.0.0.1:{srv.server_address[1]}/logo.png')
+        pg.goto(f'http://127.0.0.1:{srv.server_address[1]}/logo.webp')
         res = pg.evaluate('''async ([cases, wfc, tuning]) => {
             const m = await import('/js/editor/sec-house-plan.js');
             Object.assign(m.WFC_TUNING, tuning || {});
@@ -136,7 +136,7 @@ def render_sprites(plans):
     threading.Thread(target=srv.serve_forever, daemon=True).start()
     with sync_playwright() as pw:
         b = pw.chromium.launch(); pg = b.new_page()
-        pg.goto(f'http://127.0.0.1:{srv.server_address[1]}/logo.png')
+        pg.goto(f'http://127.0.0.1:{srv.server_address[1]}/logo.webp')
         urls = pg.evaluate(SPRITES_JS, plans)
         b.close()
     srv.shutdown()

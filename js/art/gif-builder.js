@@ -93,9 +93,15 @@ function redrawStage() {
   renderThumbstrip();
 }
 
+// What the strip was last built for: dragging a frame redraws the stage on every pointer move, and rebuilding every
+// thumbnail canvas each time is wasted when nothing the strip shows has changed.
+let thumbstripFor = null, thumbstripKey = '';
 function renderThumbstrip() {
   const gifState = activeGroup;
   const strip = document.getElementById('gbThumbstrip');
+  const key = `${gifState.currentIndex}|${activeGroupRef ? activeGroupRef.paletteSeq | 0 : 0}|${gifState.frames.map(f => (f.include ? 1 : 0)).join('')}`;
+  if (thumbstripFor === gifState && thumbstripKey === key) return;
+  thumbstripFor = gifState; thumbstripKey = key;
   strip.innerHTML = '';
   gifState.frames.forEach((f, i) => {
     const cell = document.createElement('div');
@@ -188,6 +194,7 @@ function selectGifDirection(group, direction) {
   }
   activeGroup = group.gifByDirection[direction];
   activeGroupRef = group;
+  thumbstripFor = null;   // (re)opened: the strip is built afresh
 
   const picker = document.getElementById('gbDirectionSelect');
   if (picker.value !== String(direction)) picker.value = String(direction);

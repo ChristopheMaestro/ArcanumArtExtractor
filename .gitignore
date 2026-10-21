@@ -5,10 +5,11 @@ __pycache__/
 # Tool output and run reports (re-created by the scripts that write them)
 /export/
 /exported-fonts/
-/toolbox/extract.csv
-/toolbox/extract.xlsx
-/toolbox/reports/
-/toolbox/atlas/reports/
+
+# Build scripts and their output (local only)
+/toolbox/
+# import_ce_restored.py's record of the import (5 MB; only the importer reads it)
+/data/mods/Arcanum CE Restored/_manifest.json
 
 # Local Claude Code settings
 .claude/settings.local.json

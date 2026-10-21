@@ -16,7 +16,7 @@ export const editorSlot = document.getElementById('topbarEditor');
 export const toolRail = document.getElementById('toolRail');
 export const sidePanel = document.getElementById('sidePanel');
 
-const MODE_EXT = { art: 'ART', pro: 'PRO', sec: 'SEC', mob: 'MOB', dlg: 'DLG', mes: 'MES', scr: 'SCR' };
+const MODE_EXT = { art: 'ART', pro: 'PRO', sec: 'SEC', mob: 'MOB', dlg: 'DLG', mes: 'MES', scr: 'SCR', bmp: 'BMP' };
 const tabs = [...document.querySelectorAll('#topbarTabs .file-mode-btn')];
 const treeTitle = document.getElementById('sideTreeTitle');
 
@@ -25,8 +25,6 @@ const SIDE_SELECTORS = ['.mob-side-actions', '.sec-tile-info', '.mes-summary', '
 
 const sideItems = new Set();   // { el, owner }
 const contextTools = new Set(); // { el, owner, seen }
-
-const isHome = () => document.body.classList.contains('home-active');
 
 // A tool shown in the top bar for as long as the viewer `owner` is on screen.
 export function addContextTool(el, owner) {
@@ -114,15 +112,14 @@ export function applySearchUi(mode = explorerMode) {
 }
 
 function syncChrome() {
-  const home = isHome();
-  document.body.dataset.mode = home ? 'home' : explorerMode;
+  document.body.dataset.mode = explorerMode;
   for (const tab of tabs) {
-    const on = !home && tab.id === `${explorerMode}ExploreBtn`;
+    const on = tab.id === `${explorerMode}ExploreBtn`;
     tab.classList.toggle('active', on);
     tab.setAttribute('aria-pressed', String(on));
   }
   if (treeTitle) treeTitle.textContent = `.${MODE_EXT[explorerMode] || 'ART'} files`;
-  if (!home) applySearchUi();
+  applySearchUi();
   window.dispatchEvent(new Event('resize'));
 }
 
@@ -131,7 +128,6 @@ document.addEventListener('explorermodechange', () => {
   syncChrome();
 });
 new MutationObserver(syncChrome).observe(document.body, { attributes: true, attributeFilter: ['class'] });
-document.body.classList.add('home-active');
 syncChrome();
 
 // The bars take this long (see shell.css) to move between the browse and the editor layout;

@@ -16,7 +16,7 @@ from pathlib import Path
 import arcanum_objects as ao
 
 ROOT = Path(__file__).resolve().parents[2]
-DATA_JS = ROOT / 'js' / 'atlas' / 'data'                   # the generated data the pages load
+DATA_JS = ao.DATA_JS                   # the generated data the pages load
 MAPS = ao.DATA / 'maps'
 WORLD = 'Arcanum1-024-fixed'
 OUT_JS = DATA_JS / 'demographics.js'

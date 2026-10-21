@@ -3,6 +3,7 @@
 import { parseArtBuffer } from '../art/art-decoder.js';
 import { frameCanvasForPalette } from '../art/art-export.js';
 import { CRITTER_ART_ROOT, MONSTER_ART_ROOT } from '../core/config.js';
+import { onVersionChange } from '../core/util.js';
 import { flipCanvasHorizontally, pickArtFrameForRotation } from './art-frames.js';
 import { resolveMonsterArtUrl } from '../proto/critter-aid.js';
 
@@ -11,6 +12,7 @@ import { resolveMonsterArtUrl } from '../proto/critter-aid.js';
 // by the map sprites and the proto thumbnails/preview. Misses are cached too.
 const critterBufferCache = new Map();
 const critterFrameCache = new Map();
+onVersionChange(() => { critterBufferCache.clear(); critterFrameCache.clear(); });      // (the art is the version's: the Atlas switches version in the page)
 function loadCritterBuffer(url) {
   let p = critterBufferCache.get(url);
   if (!p) {
@@ -53,6 +55,7 @@ export function critterFrameSource(frame, paletteIndex) {
 // first, then the same weapon's base animation, then the unarmed base file --
 // many weapon/animation combinations do not exist for every body/armour.
 const critterArtResolveCache = new Map();
+onVersionChange(() => critterArtResolveCache.clear());
 export function resolveCritterArt(info) {
   if (!info || !info.filename) return Promise.resolve(null);
   const names = info.candidates || [info.filename];
@@ -88,6 +91,7 @@ export function resolveCritterArt(info) {
 // ({ canvas, hotspotX, hotspotY }), or null when no walk ART exists: resolveCritterArt()
 // falls back to the idle file in that case, which must not be played as a walk.
 const critterWalkCache = new Map();
+onVersionChange(() => critterWalkCache.clear());
 export async function loadCritterWalkArt(info) {
   const res = await resolveCritterArt(info);
   if (!res || !/b\.art$/i.test(res.file)) return null;
@@ -119,6 +123,7 @@ export async function loadCritterWalkArt(info) {
 // direction of the idle file the critter's art id resolves to. Resolves to { dirs, fps }
 // like loadCritterWalkArt, or null when the file has a single frame per direction.
 const critterIdleCache = new Map();
+onVersionChange(() => critterIdleCache.clear());
 export async function loadCritterIdleArt(info) {
   const res = await resolveCritterArt(info);
   if (!res) return null;

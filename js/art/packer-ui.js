@@ -5,12 +5,13 @@ import { buildArtBuffer, buildBmpBuffer, parseBmp, readArtTemplate } from './pac
 import { convertPngToFrame, remapToPalette } from './packer-png.js';
 import { PACKER_EDGES, PACKER_KINDS, walkStride } from './packer-kinds.js';
 import { createGuide } from './packer-guide.js';
+import { indicesToRgba, paletteRgbaLut } from './art-export.js';
 import { packerLaunchBtn } from '../core/dom.js';
 import { saveFile } from '../core/util.js';
+import { openToolPage, registerToolPage } from '../editor/tool-pages.js';
 
 const $ = id => document.getElementById(id);
 const packerOverlayEl = $('packerOverlay');
-const packerCloseBtn = $('packerClose');
 const packerKindsEl = $('packerKinds');
 const packerKindBlurbEl = $('packerKindBlurb');
 const packerActivityFieldEl = $('packerActivityField');
@@ -31,14 +32,11 @@ const packerMoveTogetherEl = $('packerMoveTogether');
 const packerHotResetBtn = $('packerHotReset');
 const packerHotAllBtn = $('packerHotAll');
 const packerStrideBtn = $('packerStride');
-const packerFilenameEl = $('packerFilename');
 const packerTemplateInputEl = $('packerTemplateInput');
 const packerTemplateStatusEl = $('packerTemplateStatus');
-const packerBuildBtn = $('packerBuild');
+const packerExportBtn = $('packerExport');
 const packerClearBtn = $('packerClearBtn');
 const packerLogEl = $('packerLog');
-const packerResultEl = $('packerResult');
-const packerDownloadBtn = $('packerDownload');
 
 // [{ id, name, width, height, indices, palette, outIndices, canvas, paletteMismatch, note, hotX, hotY, moveX, moveY }]
 export let packerFrames = [];
@@ -81,14 +79,7 @@ function buildFrameThumbCanvas(width, height, indices, palette) {
   canvas.width = width;
   canvas.height = height;
   const total = width * height;
-  const rgba = new Uint8ClampedArray(total * 4);
-  for (let i = 0; i < total; i++) {
-    const idx = indices[i];
-    const [r, g, b] = palette[idx] || [0, 0, 0];
-    const o = i * 4;
-    rgba[o] = r; rgba[o + 1] = g; rgba[o + 2] = b;
-    rgba[o + 3] = idx === 0 ? 0 : 255;
-  }
+  const rgba = indicesToRgba(indices, total, paletteRgbaLut(palette, 0), total);
   canvas.getContext('2d').putImageData(new ImageData(rgba, width, height), 0, 0);
   return canvas;
 }
@@ -120,7 +111,6 @@ function defaultHotspot(frame) {
 
 function invalidatePackerBuild() {
   packerBlob = null;
-  packerResultEl.classList.remove('show');
 }
 
 // Everything that depends on the set of frames: shared palette, recoloured copies, thumbnails.
@@ -366,9 +356,6 @@ export async function handlePackerFiles(fileList) {
       defaultHotspot(frame);
       packerFrames.push(frame);
       packerLog(`${file.name}: added (${width}×${height})${note}`, 'ok');
-      if (!packerFilenameEl.value) {
-        packerFilenameEl.value = file.name.replace(/\.(bmp|png)$/i, '').replace(/[-_ ]?\d+$/, '');
-      }
     } catch (err) {
       packerLog(`${file.name}: ${errText(err)}`, 'err');
     }
@@ -464,41 +451,39 @@ function buildPacker() {
     }));
     const buf = buildArtBuffer(frames, packerFrames[0].palette, spec);
     packerBlob = new Blob([buf], { type: 'application/octet-stream' });
-    packerResultEl.classList.add('show');
     packerLog(`built ${kindDef().label.toLowerCase()}: ${directions() === 8 ? `8 directions × ${per} frames` : `${per} frame${per === 1 ? '' : 's'}`} — ${buf.byteLength.toLocaleString()} bytes`, 'ok');
   } catch (err) {
     packerLog(`build failed: ${errText(err)}`, 'err');
   }
 }
 
-async function downloadPacker() {
+// Export: builds the .art and saves it, named after the first frame that was added.
+async function exportPacker() {
+  buildPacker();
   if (!packerBlob) return;
-  const name = (packerFilenameEl.value || 'output').trim().replace(/\.art$/i, '') || 'output';
+  const name = (packerFrames[0].name.replace(/\.(bmp|png)$/i, '').trim()) || 'output';
   await saveFile(`${name}.art`, packerBlob);
 }
 
+// The packer is a page of the window, not a pop-up: purpose and frames in the left bar, the hotspot preview in the
+// centre, the build in the right bar (see tool-pages.js).
+{
+  const steps = [...packerOverlayEl.querySelectorAll('.packer-step')];
+  registerToolPage('packer', { title: '.ART Packer', leftWidth: 300, rightWidth: 400, rightTitle: 'Settings and frames',
+    rightAction: packerExportBtn, left: [steps[0]], main: [steps[3]], right: [steps[1], steps[2], steps[4]] });
+  packerOverlayEl.remove();
+}
+
 function openPacker() {
-  packerOverlayEl.classList.add('open');
+  openToolPage('packer');
   stage.load();
   stage.redraw();
 }
 
-function closePacker() {
-  packerOverlayEl.classList.remove('open');
-}
-
 packerLaunchBtn.addEventListener('click', openPacker);
-packerCloseBtn.addEventListener('click', closePacker);
-packerOverlayEl.addEventListener('click', (e) => {
-  if (e.target === packerOverlayEl) closePacker();
-});
-document.addEventListener('keydown', (e) => {
-  if (!packerOverlayEl.classList.contains('open')) return;
-  if (e.key === 'Escape') closePacker();
-});
-packerBuildBtn.addEventListener('click', buildPacker);
+document.addEventListener('toolpageopen', (e) => { if (e.detail === 'packer') { stage.load(); stage.redraw(); } });
+packerExportBtn.addEventListener('click', exportPacker);
 packerClearBtn.addEventListener('click', clearPackerFrames);
-packerDownloadBtn.addEventListener('click', downloadPacker);
 packerActivityEl.addEventListener('change', () => {
   settings.activity = packerActivityEl.value;
   packerFps(activityDef().fps);

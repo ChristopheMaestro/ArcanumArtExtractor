@@ -1,4 +1,4 @@
-﻿// .SCR script explorer: lists a script's condition/action table the way
+// .SCR script explorer: lists a script's condition/action table the way
 // script_execute() walks it (game/script.c).
 //
 // Every entry is one line: "IF <condition> THEN <action> ELSE <action>". The
@@ -9,7 +9,9 @@
 
 import { SCR_FIELDS } from '../explorer/file-search.js';
 import { mountFolderTree } from '../explorer/folder-tree.js';
-import { createManifestLoader, manifestFiles, manifestSubfolders } from '../core/manifest.js';
+import { manifestFiles, manifestSubfolders } from '../core/manifest.js';
+import { loadScrManifest } from './scr-dlg-triggers.js';
+import { createIndexLoader } from '../core/file-index.js';
 import { DATA_ROOT } from '../core/config.js';
 import { fetchBuffer, fetchText, errText } from '../core/text-io.js';
 import { breadcrumbEl, gridEl, paginationEl, viewerEl } from '../core/dom.js';
@@ -25,24 +27,23 @@ import { decodeScrBuffer, scrNumberFromFilename } from './scr-decoder.js';
 import { flagMeaning, flagMeaningParts, flagUsers, isWriter, loadGlobalFlagIndex, shortName } from './scr-global-flags.js';
 import { SCR_ACTIONS, SCR_CONDITIONS, SCR_FOCUS_OBJECTS, SCR_VALUE_TYPES } from './scr-schema.js';
 
-const SCR_ROOT = `${DATA_ROOT}scr/`;
+// The explorer lists from data/ (scr, the mods, the modules): its paths are under data/ (toolbox/file_index.py). The script numbers (getScrNumberIndex) are the base game's, from scr/.
+const loadScrTree = createIndexLoader('scr');
 const DLG_ROOT = `${DATA_ROOT}dlg/`;
 
 let scrCurrentPath = '';
-let scrCurrentFolderName = 'scr';
+let scrCurrentFolderName = 'data';
 let scrCurrentManifest = null;
 let scrFiles = [];
 let scrTree = null;
 // "Simplify": show the scripts in plain English (kept while moving from script to script).
 let scrSimplify = false;
 
-const loadScrManifest = createManifestLoader({ root: SCR_ROOT, rootName: 'scr', label: '.scr' });
-
 // script number -> file name, as script_name.c builds it from the file names.
 let scrNumberIndex = null;
 export async function getScrNumberIndex() {
   if (!scrNumberIndex) {
-    const manifest = await loadScrManifest('', 'scr');
+    const manifest = await loadScrManifest();
     const index = new Map();
     for (const f of manifestFiles(manifest, 'scr')) {
       const n = scrNumberFromFilename(f);
@@ -340,7 +341,7 @@ function flagSideCard(flagIndex, flagLines, filename, ctx) {
 async function scrOpenViewer(filename, relativePath, { line = null } = {}) {
   let decoded;
   try {
-    decoded = decodeScrBuffer(await fetchBuffer(`${SCR_ROOT}${relativePath ? encPath(relativePath) + '/' : ''}${encPath(filename)}`), filename);
+    decoded = decodeScrBuffer(await fetchBuffer(`${DATA_ROOT}${relativePath ? encPath(relativePath) + '/' : ''}${encPath(filename)}`), filename);
   } catch (err) {
     gridEl.hidden = true;
     viewerEl.hidden = false;
@@ -629,10 +630,10 @@ async function scrOpenViewer(filename, relativePath, { line = null } = {}) {
 async function openScrFolder(relativePath, folderName) {
   if (scrTree) scrTree.select(relativePath);
   scrCurrentPath = relativePath; scrCurrentFolderName = folderName;
-  scrCurrentManifest = await loadScrManifest(relativePath, folderName);
+  scrCurrentManifest = await loadScrTree(relativePath);
   scrFiles = manifestFiles(scrCurrentManifest, 'scr');
   saveDataExplorerState('scr', relativePath, folderName, null);
-  breadcrumbEl.textContent = `/scr/${relativePath ? relativePath + '/' : ''}`;
+  breadcrumbEl.textContent = `/data/${relativePath ? relativePath + '/' : ''}`;
   gridEl.hidden = false; viewerEl.hidden = true; viewerEl.innerHTML = '';
   renderDataFolderGrid({
     subfolders: manifestSubfolders(scrCurrentManifest), files: scrFiles, relativePath,
@@ -661,9 +662,9 @@ export async function openScrFile(file, line = null) {
 }
 
 export async function enterScrExplorer(restoreState = false, line = null) {
-  const { path, name, file } = beginDataExplorer('scr', { rootName: 'scr', restoreState });
+  const { path, name, file } = beginDataExplorer('scr', { rootName: 'data', restoreState });
   scrTree = mountFolderTree({
-    rootName: 'scr', loadManifest: loadScrManifest, openFolder: openScrFolder, ext: 'scr', fileIcon: '📜', searchFields: SCR_FIELDS,
+    rootName: 'data', loadManifest: loadScrTree, openFolder: openScrFolder, ext: 'scr', fileIcon: '📜', searchFields: SCR_FIELDS,
     openFile: (filename, _row, parent) => scrOpenViewer(filename, parent),
   });
   try {

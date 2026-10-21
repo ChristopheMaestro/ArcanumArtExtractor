@@ -107,7 +107,7 @@ HTML = r'''<!doctype html>
       if (backgroundCache.has(key)) return backgroundCache.get(key);
       const promise = (async () => {
         try {
-          const url = '/data/maps/' + (key ? key.split('/').map(encodeURIComponent).join('/') + '/' : '') + 'Map.bmp';
+          const url = '/data/maps/' + (key ? key.split('/').map(encodeURIComponent).join('/') + '/' : '') + 'Map.png';      // (the game's Map.bmp as a lossless PNG)
           const resp = await fetch(url, { cache: 'no-store' });
           if (!resp.ok) return null;
           const blob = await resp.blob();
@@ -297,7 +297,7 @@ HTML = r'''<!doctype html>
           console.warn('[SEC EXPORT] Roofs could not be loaded', { sec: secPath, error: String(err?.message || err) });
         }
       }
-      // Batch exports are always transparent. Do not load or draw Map.bmp.
+      // Batch exports are always transparent. Do not load or draw Map.png.
       const mapBackground = null;
 
       folderMap.drawSecFolderMap(
@@ -370,7 +370,8 @@ def build_headless_overrides(project: Path, proto_index: dict[str, str]):
     # project's source so its tile placement stays tied to the real implementation.
     src = (js / 'sec' / 'sec-map-view.js').read_text(encoding='utf-8')
     start = src.index('export function drawSecActualTiles')
-    end = src.find('\nexport ', start + 10)
+    end = src.find('\n}\n', start)           # the function's closing brace (what follows, e.g. the sec-aliases loader, needs imports the headless copy lacks)
+    end = end + 3 if end >= 0 else end
     if end < 0:
         raise RuntimeError('Could not isolate drawSecActualTiles from sec-map-view.js')
     draw_fn = src[start:end]
@@ -475,6 +476,8 @@ export function rgbToHex([r, g, b]) {
   return '#' + [r, g, b].map(v => v.toString(16).padStart(2, '0')).join('');
 }
 export async function saveFile() { throw new Error('saveFile is unavailable in headless SEC export'); }
+export function onVersionChange(reset) { return reset; }      // (the headless page never switches version)
+export function versionChanged() {}
 '''
 
     return {
@@ -672,6 +675,11 @@ def main():
 
             print('Headless SEC renderer initialized successfully.\n')
             total = len(sec_files)
+            mob_lists: dict[Path, list[str]] = {}       # each folder's .mob files, listed once, not once per sector
+            def mobs_of(folder: Path) -> list[str]:
+                if folder not in mob_lists:
+                    mob_lists[folder] = folder_mobs(folder)
+                return mob_lists[folder]
             for n, sec in enumerate(sec_files, 1):
                 rel = sec.relative_to(maps_root)
                 relative_path = rel.parent.as_posix() if rel.parent != Path('.') else ''
@@ -681,7 +689,7 @@ def main():
                 if sec_folder != parent_map_folder:
                     mob_folders.append(parent_map_folder)
                 mob_sources = [
-                    {'relativePath': folder_relative_path(mf, maps_root), 'files': folder_mobs(mf)}
+                    {'relativePath': folder_relative_path(mf, maps_root), 'files': mobs_of(mf)}
                     for mf in mob_folders
                 ]
                 output = export_root / rel.with_suffix('.png')

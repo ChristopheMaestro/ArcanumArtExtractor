@@ -10,7 +10,7 @@ always seen; the kept pairs are joined into groups. Writes js/editor/sec-facade-
 Usage:  python extract_facade_groups.py [--report]
 """
 from __future__ import annotations
-import argparse, json, os, re, struct
+import argparse, json, os, re
 from collections import Counter, defaultdict
 from pathlib import Path
 
@@ -63,19 +63,19 @@ def main():
         if not secs:
             continue
         tiles = {}
+        sids = {}
         for f in secs:
             try:
-                sid = int(f[:-4])
+                sids[f] = int(f[:-4])
             except ValueError:
                 continue
-            b = Path(d, f).read_bytes()
-            to = 4 + struct.unpack_from('<I', b, 0)[0] * 0x30
-            if to + 16384 > len(b):
+        for sid, b in zip(sids.values(), fa.read_files(Path(d, f) for f in sids)):
+            ft = fa.facade_tiles(b)
+            if ft is None:
                 continue
             bx, by = (sid & 0x3FFFFFF) * 64, (sid >> 26) * 64
-            for i, raw in enumerate(struct.unpack_from('<4096I', b, to)):
-                if raw >> 28 == 11:
-                    tiles[(bx + (i & 63), by + (i >> 6))] = (((raw >> 17) & 0xFF) | ((raw >> 19) & 0x100), (raw >> 1) & 0x3FF)
+            for i, raw in zip(*ft):
+                tiles[(bx + (i & 63), by + (i >> 6))] = (((raw >> 17) & 0xFF) | ((raw >> 19) & 0x100), (raw >> 1) & 0x3FF)
         stamps = stamps_of_map(tiles, layouts)
         if not stamps:
             continue

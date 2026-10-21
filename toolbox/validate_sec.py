@@ -21,11 +21,13 @@ checked. 37 of the 2,487 shipped sectors fail the order check (objects whose fla
 """
 from __future__ import annotations
 
+import functools
 import os
 import re
 import struct
 import sys
 import zipfile
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -59,6 +61,7 @@ def _engine():
 CI, MK, DWC = _engine()
 
 
+@functools.lru_cache(maxsize=None)          # (built once a type, not once an object; callers only read it)
 def fields_of(t):
     out = [f for f in range(1, 37) if OD[f] not in (1, 2)]
     for r in range(RANGE_OFF[t], RANGE_OFF[t + 1]):
@@ -160,19 +163,27 @@ def protos() -> dict[int, dict]:
     global _protos
     if _protos is None:
         _protos = {}
+        found = []
         for dp, _, fn in os.walk(PROTO_ROOT):
             for f in fn:
                 m = re.match(r'^(\d+)\s*-', f)
                 if not m or not f.lower().endswith('.pro'):
                     continue
-                b = Path(dp, f).read_bytes()
-                t = struct.unpack_from('<i', b, 52)[0]
-                o, vals = 56 + 4 * DWC[t], {}
-                for fld in fields_of(t):          # a prototype stores every field of its type
-                    vals[fld], n = read_field(b, o, OD[fld])
-                    o += n
-                _protos[int(m.group(1))] = vals
+                found.append((m, Path(dp, f)))
+        for m, b in zip((m for m, _ in found), read_files(p for _, p in found)):
+            t = struct.unpack_from('<i', b, 52)[0]
+            o, vals = 56 + 4 * DWC[t], {}
+            for fld in fields_of(t):          # a prototype stores every field of its type
+                vals[fld], n = read_field(b, o, OD[fld])
+                o += n
+            _protos[int(m.group(1))] = vals
     return _protos
+
+
+def read_files(paths) -> list[bytes]:
+    """The bytes of each of `paths`, in order; read by a few threads (on Windows opening a file is the slow part)."""
+    with ThreadPoolExecutor(16) as pool:
+        return list(pool.map(Path.read_bytes, paths))
 
 
 def get(o, f):
@@ -256,8 +267,9 @@ def check(name: str, b: bytes, terrain: bool) -> tuple[list[str], list[str]]:
         if 1 in o['fields'] and a >> 28 in (1, 3) and (a & 0x11) != (0x11 if (a >> 11) & 2 else 0):
             mirror += 1
     errors.append(count('wall/portal art id(s) whose mirror bits disagree with the rotation', mirror))
-    if [id(o) for o in engine_order(objs)] != [id(o) for o in objs]:
-        first = next(i for i, (a, e) in enumerate(zip(objs, engine_order(objs))) if a is not e)
+    order = engine_order(objs)
+    if [id(o) for o in order] != [id(o) for o in objs]:
+        first = next(i for i, (a, e) in enumerate(zip(objs, order)) if a is not e)
         errors.append(f'objects are not in the engine order (first difference at object #{first})')
     warnings.append(count('scenery object(s) without F_AID (24)', sum(1 for o in objs if o['type'] == 3 and 1 in o['fields'] and 24 not in o['fields'])))
     return [e for e in errors if e], [w for w in warnings if w]

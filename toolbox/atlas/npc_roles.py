@@ -28,10 +28,14 @@ def columns(r):
 
 
 class Roles:
-    def __init__(self):
-        names = bq.Names()
+    def __init__(self, dlg_folder=None, version=None):
+        """dlg_folder: a module's dlg folder (its script numbers are its own, not the game's).
+        version: a game_files.Version: the dialogs and tables of the game with every layer over them (a mod, a module)."""
+        names = bq.Names(version=version)
+        if version is not None:
+            dlg_folder = version.tree('dlg')
         self.by_script = {}
-        for n, lines in bq.load_dialogs().items():
+        for n, lines in bq.load_dialogs(dlg_folder).items():
             r = {'shop': False, 'join': False, 'train': []}
             for ln in lines.values():
                 if ln['text'].strip() == 'B:':

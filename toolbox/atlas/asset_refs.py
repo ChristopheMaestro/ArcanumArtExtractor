@@ -1,7 +1,7 @@
 """
 The game files behind one object, for the Atlas's Advanced view: its prototype, its art id and the scripts hung on it.
 
-An object is listed as [file, object type, prototype number, art id, scripts]:
+An object is listed as [file, object type, prototype number, art id, scripts, own .mes texts (only when it has any)]:
   file       its .mob, or the .sec it is a static object of (paths under data/maps)
   type       the object type (1 portal, 2 container, 3 scenery, 15 PC, 16 NPC...; 0 = a tile script, no object)
   art id     F_CURRENT_AID (field 1), the object's own or its prototype's (the page turns it into an .ART file name the way
@@ -15,7 +15,7 @@ import struct
 
 import arcanum_objects as ao
 
-F_AID, F_SCRIPTS = 1, 32
+F_AID, F_NAME, F_DESCRIPTION, F_SCRIPTS = 1, 22, 23, 32
 
 
 class Protos:
@@ -54,10 +54,32 @@ def aid(o, proto):
     return v & 0xFFFFFFFF if isinstance(v, int) else 0
 
 
+_mes = {}
+
+
+def own_texts(o, proto):
+    """The .mes entries of the object's own F_NAME (oemes/oname.mes) and F_DESCRIPTION (mes/description.mes, from 30000 mes/gamedesc.mes) when they
+    differ from its prototype's: [[mes file, text], ...] - "801 Door to Pollock's House", "Caleb Malloy's Pub"; [] = none."""
+    if not _mes:
+        _mes['oname'] = ao.mes(ao.DATA / 'oemes' / 'oname.mes')
+        _mes['desc'] = ao.descriptions()
+    out = []
+    for fld, table, files in ((F_NAME, 'oname', ('oname.mes',)), (F_DESCRIPTION, 'desc', ('description.mes', 'gamedesc.mes'))):
+        n = o.get(fld)
+        if not n or (proto is not None and proto.get(fld) == n):
+            continue
+        text = _mes[table].get(n, '').strip()
+        if text:
+            out.append([files[-1] if n >= 30000 else files[0], text if table == 'oname' else f'{n} · {text}'])
+    return out
+
+
 def ref(file, o, protos):
-    """[file, object type, prototype number, art id, scripts] of an object (see above)."""
+    """[file, object type, prototype number, art id, scripts(, own .mes texts)] of an object (see above)."""
     p = protos.get(o.proto)
-    return [file, o.type, o.proto if p else 0, aid(o, p), scripts(o, p)]
+    r = [file, o.type, o.proto if p else 0, aid(o, p), scripts(o, p)]
+    texts = own_texts(o, p)
+    return r + [texts] if texts else r
 
 
 def sector_of(sec_path):

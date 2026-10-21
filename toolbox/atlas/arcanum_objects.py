@@ -12,7 +12,12 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 PROJECT = HERE.parent.parent
-DATA = PROJECT / 'data'
+# ARCANUM_DATA: a version of the game's merged data root (game_files.make_root: the base game's files with a mod's over them), so that every builder
+# reads the version's data without knowing it; ATLAS_DATA_JS: where the generated js goes (js/atlas/data/<version>/ instead of js/atlas/data/).
+import os  # noqa: E402
+DATA = Path(os.environ['ARCANUM_DATA']) if os.environ.get('ARCANUM_DATA') else PROJECT / 'data'
+DATA_JS = Path(os.environ['ATLAS_DATA_JS']) if os.environ.get('ATLAS_DATA_JS') else PROJECT / 'js' / 'atlas' / 'data'
+ASSET_DIR = Path(os.environ['ATLAS_ASSET_DIR']) if os.environ.get('ATLAS_ASSET_DIR') else PROJECT / 'atlas'      # where a version's own sheets go (item-icons.webp, portraits.png)
 sys.path.insert(0, str(PROJECT / 'toolbox'))
 import extract_mob_prototypes as emp  # noqa: E402  (schema, object types, prototype numbers)
 
@@ -37,7 +42,7 @@ def read_value(data, off, od):
         if not present:
             return None, off
         n = struct.unpack_from('<i', data, off)[0]
-        return data[off + 4:off + 4 + n].decode('cp1252', 'replace').rstrip('\0'), off + 4 + n + 1
+        return data[off + 4:off + 4 + n].decode(RAW_ENC, 'replace').rstrip('\0'), off + 4 + n + 1
     if od == 6:
         return (bytes(data[off:off + 24]) if present else None), off + (24 if present else 0)
     if od == 14:
@@ -105,6 +110,14 @@ def read_proto(path):
 
 
 def read_mob(path):
+    """A .mob file's object (game_files.parse_file: each file read once, kept between runs; a new Obj each call, since callers set map / file /
+    area on theirs; its fields are shared and never written)."""
+    import game_files
+    o = game_files.parse_file(path, 'mob', _read_mob)
+    return Obj(o.type, o.proto, o.oid, o.fields, Path(path).name)
+
+
+def _read_mob(path):
     obj, _ = read_object(path.read_bytes())
     obj.file = path.name
     return obj
@@ -151,24 +164,56 @@ class Effective:
         return v.get(i, 0) if isinstance(v, dict) else 0
 
 
+RAW_ENC = os.environ.get('ARCANUM_RAW_ENC', 'cp1252')      # strings kept inside binary files (.pro, .scr headers): the mod's code page (cp1251 for the Russian mod)
+
+
+def codec_for(path):
+    """The code page of a text file: the Russian mod's own files are Windows-1251; a merged data root that was transcoded (game_files.make_root:
+    ARCANUM_TEXT_ENC=utf-8) is read as that; everything else is the game's Windows-1252."""
+    p = str(path).lower().replace('/', '\\')
+    if 'russian mod' in p:
+        return 'cp1251'
+    enc = os.environ.get('ARCANUM_TEXT_ENC')
+    root = str(DATA).lower().replace('/', '\\')
+    # only the files make_root converted are in that code page: not the modules / mods / maps in it, which are the game's own files (Windows-1252, hard links)
+    if enc and DATA != PROJECT / 'data' and p.startswith(root + '\\') and p[len(root) + 1:].split('\\', 1)[0] not in ('modules', 'mods', 'maps'):
+        return enc
+    return 'cp1252'
+
+
+def read_text(path):
+    return Path(path).read_bytes().decode(codec_for(path), 'replace')
+
+
 # ---- .mes ----------------------------------------------------------------------------------------------------
 def mes(path):
     out = {}
     if not path.exists():
         return out
-    for m in re.finditer(r'\{(-?\d+)\}\{([^}]*)\}', path.read_text(encoding='cp1252', errors='replace')):
+    # (CE's gamebook.mes has entries without their closing brace, "{1890}{37c" then "{1891}{37l": such an entry ends where the next begins)
+    for m in re.finditer(r'\{(-?\d+)\}\{([^}]*?)(?:\}|(?=\r?\n\{-?\d+\}\{)|\Z)', read_text(path)):
         out[int(m.group(1))] = m.group(2)
     return out
 
 
-def descriptions():
-    """description.mes, with the module's gamedesc.mes from 30000 up (game/description.c)."""
+def descriptions(module=None):
+    """description.mes, with the module's gamedesc.mes from 30000 up (game/description.c). `module`: a module folder
+    carrying its own mes/gamedesc.mes, which replaces the game's."""
     d = mes(DATA / 'mes' / 'description.mes')
-    d.update({k: v for k, v in mes(DATA / 'mes' / 'gamedesc.mes').items() if k >= 30000})
+    own = module / 'mes' / 'gamedesc.mes' if module else None
+    d.update({k: v for k, v in mes(own if own and own.is_file() else DATA / 'mes' / 'gamedesc.mes').items() if k >= 30000})
     return d
 
 
 # ---- maps ----------------------------------------------------------------------------------------------------
+def has_suffix(folder, suffix):
+    """any(folder.glob('*' + suffix)), without case, but stops at the first one: listing a whole map folder takes ~0.25 s on this disk
+    (140 module map folders: 35 s with glob, 0.2 s so)."""
+    suffix = suffix.lower()
+    with os.scandir(folder) as it:
+        return any(e.name.lower().endswith(suffix) for e in it)
+
+
 def clean_map(name):
     """A map folder -> the map key the Atlas uses ("Bates Mansion Lev 1" -> "Bates Mansion Level 1", no "-fixed")."""
     return re.sub(r'-fixed$', '', name).replace('Lev ', 'Level ').strip()

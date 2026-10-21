@@ -2,7 +2,7 @@
 
 import { errText } from '../core/text-io.js';
 import { paletteZeroColor, parseArtFile } from './art-decoder.js';
-import { canvasToBlob, frameBlobForPalette, frameCanvasForPalette, frameFilename } from './art-export.js';
+import { frameBlobForPalette, frameFilename, indicesToRgba, paletteRgbaLut } from './art-export.js';
 
 import { openGifBuilder } from './gif-builder.js';
 import { addContextTool } from '../ui/shell.js';
@@ -84,7 +84,8 @@ export function renderFileGroup(baseName, frames, shareInfo, rawBuffer) {
 
   for (const frame of frames) {
     const filename = frameFilename(baseName, frame);
-    const entry = { filename, frame, blobPromise: canvasToBlob(frame.canvas) };
+    // (no PNG is made up front: a download encodes its frame when clicked, with the palette shown then)
+    const entry = { filename, frame };
     group.frames.push(entry);
 
     const card = document.createElement('figure');
@@ -214,15 +215,17 @@ export function renderFileGroup(baseName, frames, shareInfo, rawBuffer) {
   function applyPalette(palette, label, buttonToSelect = null) {
     group.previewPalette = palette;
     group.selectedPalette = palette;
+    group.paletteSeq = (group.paletteSeq | 0) + 1;   // (the GIF builder's thumbnails are copies: they are redrawn on a change)
     paletteList.querySelectorAll('.palette-option').forEach(b => b.classList.remove('selected'));
     if (buttonToSelect) buttonToSelect.classList.add('selected');
+    // Repainted in place from the indices (one table per palette), not through a scratch canvas per frame.
+    const lut = paletteRgbaLut(palette, group.transparentIndex);
     group.sourceFrames.forEach(frame => {
-      const rendered = frameCanvasForPalette(frame, palette, group.transparentIndex);
-      frame.canvas.width = rendered.width;
-      frame.canvas.height = rendered.height;
-      frame.canvas.getContext('2d').drawImage(rendered, 0, 0);
+      frame.canvas.width = frame.width;
+      frame.canvas.height = frame.height;
+      const rgba = indicesToRgba(frame.indices, frame.indices.length, lut, frame.width * frame.height);
+      frame.canvas.getContext('2d').putImageData(new ImageData(rgba, frame.width, frame.height), 0, 0);
     });
-    group.frames.forEach(entry => { entry.blobPromise = frameBlobForPalette(group, entry.frame); });
     log(`${baseName}: previewing ${label}`, 'ok');
   }
 

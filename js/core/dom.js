@@ -20,9 +20,9 @@ export const dlgExploreBtn = document.getElementById('dlgExploreBtn');
 export const scrExploreBtn = document.getElementById('scrExploreBtn');
 
 export const mesExploreBtn = document.getElementById('mesExploreBtn');
-export const artExploreBtn = document.getElementById('artExploreBtn');
+export const bmpExploreBtn = document.getElementById('bmpExploreBtn');
+export const artExploreBtn =document.getElementById('artExploreBtn');
 
-export const explorerHome = document.getElementById('explorerHome');
 export const artExplorerControls = document.getElementById('artExplorerControls');
 
 export const protoExploreBtn = document.getElementById('protoExploreBtn');

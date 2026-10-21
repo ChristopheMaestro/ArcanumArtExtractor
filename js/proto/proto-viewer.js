@@ -1,6 +1,7 @@
 // .PRO viewer.
 
 import { gridEl, paginationEl, viewerEl } from '../core/dom.js';
+import { escapeHtml } from '../core/util.js';
 import {
   mobCurrentAidText,
   mobFieldValueText,
@@ -38,7 +39,7 @@ export function renderProtoViewer(decoded) {
 
   const header = document.createElement('div');
   header.className = 'file-group-header';
-  header.innerHTML = `<h2>${decoded.filename}</h2><span class="meta">${decoded.fields.length} serialized fields</span>`;
+  header.innerHTML = `<h2>${escapeHtml(decoded.filename)}</h2><span class="meta">${decoded.fields.length} serialized fields</span>`;
   article.appendChild(header);
 
   // Every one of these fields is populated by the game's own tig_art_*_id_create()

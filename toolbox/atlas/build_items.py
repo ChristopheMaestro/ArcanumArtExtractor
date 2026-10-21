@@ -11,10 +11,11 @@ Every item of the game, every container and what it holds, for the Atlas.
   * NPCs that carry something and items lying on the ground, so an item can say where it is found.
   * InvenSource.mes lists (what a merchant or a container rolls), so an item can say who sells it.
 
-Writes js/atlas/data/items.js (window.ArcanumItems) and atlas/item-icons.png (the inventory pictures).
+Writes js/atlas/data/items.js (window.ArcanumItems) and atlas/item-icons.webp (the inventory pictures, lossless).
 Needs Pillow.
 """
 import json
+import os
 import re
 import struct
 from collections import defaultdict
@@ -22,12 +23,15 @@ from collections import defaultdict
 from PIL import Image
 
 import arcanum_objects as ao
+import game_files
+import sec_alias
 import build_modules
 import build_notices
+from progress import say
 
-DATA_JS = ao.PROJECT / 'js' / 'atlas' / 'data'
+DATA_JS = ao.DATA_JS
 OUT_JS = DATA_JS / 'items.js'
-OUT_PNG = ao.PROJECT / 'atlas' / 'item-icons.png'
+OUT_ICONS = ao.ASSET_DIR / 'item-icons.webp'
 MAPS = ao.DATA / 'maps'
 WORLD = 'Arcanum1-024-fixed'
 
@@ -50,20 +54,37 @@ ART_FILE_TYPOS = {'i_elixir_of_hypnotic_suggestion.art': 'i_elixr_of_hypnotic_su
 
 
 class Items:
-    def __init__(self):
-        self.desc = ao.descriptions()
-        self.inven = ao.mes(ao.DATA / 'art' / 'item' / 'item_inven.mes')
-        self.effects = ao.mes(ao.DATA / 'mes' / 'item_effect.mes')
-        self.item_mes = ao.mes(ao.DATA / 'mes' / 'item.mes')
-        self.intgame = ao.mes(ao.DATA / 'mes' / 'intgame.mes')
-        self.written = {k: ao.mes(ao.DATA / 'mes' / f) for k, f in WRITTEN_MES.items()}
-        self.keys = ao.mes(ao.DATA / 'mes' / 'gamekey.mes')
-        self.onames = ao.mes(ao.DATA / 'oemes' / 'oname.mes')
-        self.protos = {}
-        for p in (ao.DATA / 'proto').rglob('*.pro'):
-            o = ao.read_proto(p)
-            self.protos[o.proto] = o
+    def __init__(self, version=None):
+        """version: a game_files.Version (None = the base game with the modules' own names and texts, as items.js is built): every table, prototype
+        and icon is the game's with the version's layers over it."""
+        import game_files
+        self.version = v = version or game_files.Version('base')
+        self.base_desc = self.desc = v.descriptions()
+        key_env = os.environ.get('ATLAS_VERSION', 'base')            # (the module's names and texts: base game + the mod + the module + the mod's copy of the module)
+        mods = {k: (m, game_files.Version(key_env, m.name)) for k, m, _ in build_modules.entries()}
+        say(f'version "{key_env}": reading the names of {len(mods)} module maps (those with their own mes/gamedesc.mes)')
+        self.module_desc = {}
+        for k, (m, mv) in mods.items():
+            if (m / 'mes' / 'gamedesc.mes').is_file():
+                self.module_desc[k] = mv.descriptions()
+                say(f'   names of {k}: {len(self.module_desc[k])} entries')
+        self.inven = v.mes('art', 'item', 'item_inven.mes')
+        self.effects = v.mes('mes', 'item_effect.mes')
+        self.item_mes = v.mes('mes', 'item.mes')
+        self.intgame = v.mes('mes', 'intgame.mes')
+        self.base_written = self.written = {k: v.mes('mes', f) for k, f in WRITTEN_MES.items()}
+        # a module's own books, notes, newspapers... (mes/game*.mes) replace the game's for its objects
+        self.module_written = {k: {s: mv.mes('mes', f) for s, f in WRITTEN_MES.items()}
+                               for k, (m, mv) in mods.items() if any((m / 'mes' / f).is_file() for f in WRITTEN_MES.values())}
+        self.keys = v.mes('mes', 'gamekey.mes')
+        self.onames = v.mes('oemes', 'oname.mes')
+        self.protos = dict(v.protos())
         self.entries, self.by_sig, self.icons = [], {}, {}
+
+    def use(self, o):
+        """Names from here on are the descriptions of the object's own module (its mes/gamedesc.mes), when it has one."""
+        self.desc = self.module_desc.get(getattr(o, 'map', None), self.base_desc)
+        self.written = self.module_written.get(getattr(o, 'map', None), self.base_written)
 
     # ---- one entry per thing the player can tell apart --------------------------------------------------------
     def name_of(self, e):
@@ -203,9 +224,9 @@ class Items:
         pal = ((aid & 0xFFFFFFFF) >> 4) & 0x3
         key = (name.lower(), pal)
         if key not in self.icons:
-            path = ao.DATA / 'art' / 'item' / name
-            if not path.exists():
-                hits = [p for p in path.parent.iterdir() if p.name.lower() == name.lower()]
+            path = self.version.path('art', 'item', name)           # (the last layer that has the file: a mod's icon wins)
+            if path is None:
+                hits = [p for r in reversed(self.version.roots) if (r / 'art' / 'item').is_dir() for p in (r / 'art' / 'item').iterdir() if p.name.lower() == name.lower()]
                 path = hits[0] if hits else None
             frame = ao.art_first_frame(path, pal) if path else None
             self.icons[key] = {'n': len(self.icons), 'frame': frame} if frame else None
@@ -228,9 +249,22 @@ class Items:
         flags = obj.get(87)          # a placed copy can be hexed (or cleansed) without a name of its own
         hexed_differs = flags is not None and proto is not None and (flags ^ (proto.get(87) or 0)) & OIF_HEXED
         title = self.own_title(obj, proto) if not unique or 4010 <= (own or 0) <= 4029 else None   # 4010-4029: "Stone", "Something Big"...
+        title = title or self.recycled_name(obj, proto)
         if not unique and not hexed_differs and not title:
             return self.proto_entry(obj.proto)
         return self.entry_for(obj, proto, unique, title)
+
+    def recycled_name(self, obj, proto):
+        """A recycled prototype: the placed copy has its own unidentified name ("Amulet") but keeps the old description
+        ("Dark Helm"). When only the editor name (field 22) says what the unidentified name says, it is the real name."""
+        if proto is None or obj.get(98) is None or obj.get(98) == proto.get(98):
+            return None
+        e = ao.Effective(obj, proto)
+        last = (self.desc.get(obj.get(98)) or '').lower().split()[-1:]
+        raw = re.sub(r'^\s*\d+\s+', '', self.onames.get(e.int(22)) or '').strip()
+        if last and last[0] in raw.lower().split() and last[0] not in self.name_of(e).lower().split():
+            return raw
+        return None
 
     def own_title(self, obj, proto):
         """A placed key or written item that carries no name of its own is still not the plain prototype: a key opens one
@@ -268,7 +302,8 @@ class Items:
         return None
 
     # ---- the icon sheet -----------------------------------------------------------------------------------------
-    def write_icons(self):
+    def write_icons(self, out=None):
+        out = out or OUT_ICONS
         frames = sorted((v for v in self.icons.values() if v), key=lambda v: v['n'])
         W, x, y, row, pos = 1024, 0, 0, 0, {}
         for v in sorted(frames, key=lambda v: -v['frame'][1]):
@@ -282,15 +317,15 @@ class Items:
         for v in frames:
             w, h, rgba = v['frame']
             sheet.paste(Image.frombytes('RGBA', (w, h), rgba), pos[v['n']][:2])
-        OUT_PNG.parent.mkdir(exist_ok=True)
-        sheet.save(OUT_PNG, optimize=True)
+        out.parent.mkdir(exist_ok=True)
+        sheet.save(out, 'WEBP', lossless=True, quality=100, method=6)          # (the same pixels as a PNG, 40% smaller)
         self.sheet = list(sheet.size)
         return pos
 
 
 def inven_sources(items):
     out = {}
-    for k, v in ao.mes(ao.DATA / 'Rules' / 'InvenSource.mes').items():
+    for k, v in items.version.mes('Rules', 'InvenSource.mes').items():
         if ':' not in v:
             continue
         name, rest = v.split(':', 1)
@@ -306,9 +341,13 @@ def inven_sources(items):
         out[k] = {'name': name.strip(), 'gold': gold, 'items': [[i, r] for i, r in lst.items()]}
     # what a merchant whose box rolls list k buys from the player: item numbers, or "all"
     # (lines read {n}Name:{numbers}, the name outside the braces)
-    text = (ao.DATA / 'Rules' / 'InvenSourceBuy.mes').read_text(encoding='cp1252', errors='replace')
-    for m in re.finditer(r'\{(\d+)\}[^{}\n]*:\s*\{([^}]*)\}', text):
-        k, rest = int(m.group(1)), m.group(2).strip()
+    buys = {}                                                    # (a mod's file over the game's: the later layer's line of a number wins)
+    for root in items.version.roots:
+        f = root / 'Rules' / 'InvenSourceBuy.mes'
+        if f.is_file():
+            for m in re.finditer(r'\{(\d+)\}[^{}\n]*:\s*\{([^}]*)\}', ao.read_text(f)):
+                buys[int(m.group(1))] = m.group(2).strip()
+    for k, rest in buys.items():
         if k in out:
             if rest.lower() == 'all':
                 out[k]['buys'] = 'all'
@@ -351,8 +390,8 @@ class Altars:
 
     def __init__(self, items, objs):
         self.items = items
-        bless = ao.mes(ao.DATA / 'mes' / 'gamebless.mes')
-        effects = ao.mes(ao.DATA / 'Rules' / 'effect.mes')
+        bless = items.version.mes('mes', 'gamebless.mes')
+        effects = items.version.mes('Rules', 'effect.mes')
         self.blessings = []          # (text of the three lines, title, effect in words)
         for k in sorted(bless):
             if k % 10 == 0 and k + 2 in bless:
@@ -369,11 +408,7 @@ class Altars:
         for o in objs:
             if o.type in ao.ITEM_TYPES and o.get(22):
                 self.placed[o.get(22)].append(o)
-        self.scripts = {}
-        for f in (ao.DATA / 'scr').glob('*.scr'):
-            m = re.match(r'(\d+)', f.name)
-            if m:
-                self.scripts[int(m.group(1))] = f
+        self.scripts = items.version.script_numbers()
 
     def named(self, n):
         """The item entries an OBJ_F_NAME stands for: prototypes, else placed items that carry it themselves."""
@@ -392,7 +427,7 @@ class Altars:
             if not f:
                 continue
             data = f.read_bytes()
-            m = re.match(r"(?:The )?Altar of ([^,]+), (.+)", data[8:48].split(b'\0')[0].decode('cp1252', 'replace').strip())
+            m = re.match(r"(?:The )?Altar of ([^,]+), (.+)", data[8:48].split(b'\0')[0].decode(ao.RAW_ENC, 'replace').strip())
             if not m:
                 continue
             god, title = m.group(1).strip(), m.group(2).strip()      # "Ter'el", "the god of Wisdom" / "the Stone God"
@@ -416,6 +451,17 @@ class Altars:
         return None
 
 
+def _actions(f):
+    """[(script line, action type, operand types (8 bytes), operand values (8))] of both actions of every line of a .scr."""
+    d = f.read_bytes()
+    out = []
+    for i in range(max(min(struct.unpack_from('<i', d, 0x34)[0], (len(d) - 0x40) // 0x84), 0) if len(d) >= 0x40 else 0):
+        o = 0x40 + i * 0x84
+        for a in (o + 0x2C, o + 0x58):
+            out.append((i, struct.unpack_from('<i', d, a)[0], d[a + 4:a + 12], struct.unpack_from('<8i', d, a + 12)))
+    return out
+
+
 class ScriptGifts:
     """Items a script makes: the actions "create item" (into an object's inventory: the player, or the script's own NPC, who then
     sells, hands over or drops it) and "create object" (on the ground next to someone). Their first value is the item's basic
@@ -427,29 +473,31 @@ class ScriptGifts:
     CALLS = ('CALL_SCRIPT', 'CALL_SCRIPT_IN', 'CALL_SCRIPT_AT', 'CALL_SCRIPT_EX', 'CHANGE_SCRIPT', 'CHANGE_THIS_SCRIPT_TO_SCRIPT')
     HOOKS = {'DIALOG': 'talk', 'DIALOG_OVERRIDE': 'talk', 'DYING': 'death', 'USE': 'use', 'EXAMINE': 'look'}
 
-    def __init__(self, items):
+    def __init__(self, items, module=None):
+        """`module`: a module folder - its own scr and dlg in place of the game's (a module numbers its scripts from 1)."""
         from npc_switch import enum
         sat, self.sap = enum('ScriptActionType', 'SAT_'), enum('ScriptAttachmentPoint', 'SAP_')
-        self.files = {int(m.group(1)): f for f in (ao.DATA / 'scr').glob('*.scr') if (m := re.match(r'(\d+)', f.name))}
+        if module is None:                       # the game's, with the layers of the version over it
+            self.dlg = items.version.tree('dlg')
+            self.files = items.version.script_numbers()
+        else:
+            mv = game_files.Version(os.environ.get('ATLAS_VERSION', 'base'), module.name)      # base game + (mod) + the module + (the mod's copy of it)
+            self.dlg = mv.tree('dlg')
+            self.files = mv.script_numbers()
         self.makes = defaultdict(list)       # script -> [(script line, item entry, to the player)]
         self.calls = defaultdict(set)        # script -> the scripts it runs or swaps in
         for num, f in self.files.items():
-            d = f.read_bytes()
-            for i in range(max(min(struct.unpack_from('<i', d, 0x34)[0], (len(d) - 0x40) // 0x84), 0) if len(d) >= 0x40 else 0):
-                o = 0x40 + i * 0x84
-                for a in (o + 0x2C, o + 0x58):
-                    t = struct.unpack_from('<i', d, a)[0]
-                    name = sat[t] if 0 <= t < len(sat) else ''
-                    ot, ov = d[a + 4:a + 12], struct.unpack_from('<8i', d, a + 12)
-                    if name in ('CREATE_ITEM', 'CREATE_OBJECT', 'TRANSFORM_ATTACHEE_INTO_BASIC_PROTOTYPE') and ot[0] == 3:
-                        idx = items.proto_entry(ov[0] + 20)
-                        if idx is not None:
-                            # a transformation makes nothing new: the script's holder turns into the item (an empty trap used on a bunny)
-                            self.makes[num].append((i, idx, name[0] == 'C' and ot[1] in self.FOCUS_PLAYER, name[0] == 'T'))
-                    elif name in self.CALLS:
-                        k = 2 if name == 'CHANGE_SCRIPT' else 0
-                        if ot[k] == 3 and ov[k] in self.files and ov[k] != num:
-                            self.calls[num].add(ov[k])
+            for i, t, ot, ov in _actions(f):
+                name = sat[t] if 0 <= t < len(sat) else ''
+                if name in ('CREATE_ITEM', 'CREATE_OBJECT', 'TRANSFORM_ATTACHEE_INTO_BASIC_PROTOTYPE') and ot[0] == 3:
+                    idx = items.proto_entry(ov[0] + 20)
+                    if idx is not None:
+                        # a transformation makes nothing new: the script's holder turns into the item (an empty trap used on a bunny)
+                        self.makes[num].append((i, idx, name[0] == 'C' and ot[1] in self.FOCUS_PLAYER, name[0] == 'T'))
+                elif name in self.CALLS:
+                    k = 2 if name == 'CHANGE_SCRIPT' else 0
+                    if ot[k] == 3 and ov[k] in self.files and ov[k] != num:
+                        self.calls[num].add(ov[k])
         self.holders = defaultdict(list)     # script -> [(hook name, object, is a prototype)]
 
     def hold(self, o, is_proto=False):
@@ -463,10 +511,10 @@ class ScriptGifts:
 
     def prices(self, num):
         """script line -> the gold an answer of its conversation takes before jumping to it."""
-        p = ao.DATA / 'dlg' / (self.files[num].stem + '.dlg')
+        p = self.dlg / (self.files[num].stem + '.dlg')
         out = {}
         if p.exists():
-            for m in re.finditer(r'\{\d+\}\{[^{}]*\}\{[^{}]*\}\{[^{}]*\}\{[^{}]*\}\{(-\d+)\}\{([^{}]*)\}', p.read_text(encoding='cp1252', errors='replace')):
+            for m in re.finditer(r'\{\d+\}\{[^{}]*\}\{[^{}]*\}\{[^{}]*\}\{[^{}]*\}\{(-\d+)\}\{([^{}]*)\}', ao.read_text(p)):
                 gold = re.search(r'\$\$\s*-(\d+)', m.group(2))
                 if gold:
                     out[-int(m.group(1))] = int(gold.group(1))
@@ -502,8 +550,8 @@ def recipes(items, objs):
     """Rules/schematic.mes: 2000-3999 learned with a tech degree (2000 + 200 * tech + 10 * (degree - 1)),
     4000+ found in the world as a written item of subtype Schematic whose text start line is the number.
     Item numbers are basic prototypes, like InvenSource.mes: proto = number + 20."""
-    rules = ao.mes(ao.DATA / 'Rules' / 'schematic.mes')
-    text = ao.mes(ao.DATA / 'mes' / 'schematic_text.mes')
+    rules = items.version.mes('Rules', 'schematic.mes')
+    text = items.version.mes('mes', 'schematic_text.mes')
     docs = defaultdict(set)              # schematic number -> item entries of the schematic papers
     papers = [(p, None, items.proto_entry) for p in items.protos.values() if p.type == 13]
     papers += [(o, items.protos.get(o.proto), None) for o in objs if o.type == 13]
@@ -562,11 +610,13 @@ def recipes(items, objs):
 
 
 def main():
+    say(f'reading the tables and prototypes of {ao.DATA}')
     items = Items()
     print(f'{len(items.protos)} prototypes')
     for num in sorted(items.protos):
         items.proto_entry(num)
     print(f'  {len(items.entries)} items from the prototypes')
+    say('reading the .mob files of the game\'s maps')
 
     world_place = {}
     wl = DATA_JS / 'world-labels.js'
@@ -583,15 +633,19 @@ def main():
         o.area = rel[1] if rel[0] == WORLD and len(rel) > 2 else ''
         objs.append(o)
         by_oid[ao.oid_key(o.oid)] = o
+    say(f'   {len(objs)} .mob files in the game\'s maps')
     # the modules' maps (build_modules.py) come last, so nothing of the game's own maps changes place in the lists
-    for folder in build_modules.module_folders():
-        for path in sorted(folder.rglob('*.mob')):
+    for key, module, folder in build_modules.entries():
+        mv = game_files.Version(os.environ.get('ATLAS_VERSION', 'base'), module.name)
+        n = len(objs)
+        for path in build_modules.mob_files(mv, module, folder):
             o = ao.read_mob(path)
-            o.map = folder.name
+            o.map = key
             o.file = '../' + path.relative_to(ao.DATA).as_posix()      # (the Advanced view opens it from data/maps)
             o.area = ''
             objs.append(o)
             by_oid[ao.oid_key(o.oid)] = o
+        say(f'   module map {key}: {len(objs) - n} .mob files')
     print(f'{len(objs)} .mob files')
 
     def where(o):
@@ -635,11 +689,20 @@ def main():
         for f in (60, 238):
             if o.type in (2, 15, 16):
                 held.update(ao.oid_key(raw) for raw in (o.get(f) or {}).values())
+    say('reading the game\'s scripts (what containers say when examined)')
     notice_scripts = build_notices.read_scripts()
+    mods_v = {k: game_files.Version(os.environ.get('ATLAS_VERSION', 'base'), m.name) for k, m, _ in build_modules.entries()}
+    module_notices = {}
+    for k, m, _ in build_modules.entries():
+        if (m / 'scr').is_dir():
+            module_notices[k] = (build_notices.read_scripts(mods_v[k].tree('scr')), mods_v[k].tree('dlg'))
+            say(f'   scripts of module map {k}: {len(module_notices[k][0])}')
+    say(f'containers, NPC inventories and items on the ground, from {len(objs)} objects')
     containers, npcs, ground = [], [], []
     box_at, stores = {}, []          # container id -> its index; (NPC entry, id of its store box)
     altars = Altars(items, objs)
     for o in objs:
+        items.use(o)
         proto = items.protos.get(o.proto)
         e = ao.Effective(o, proto)
         if o.type == 2:
@@ -648,11 +711,10 @@ def main():
             locked = bool(flags & OCOF_LOCKED) and not flags & (OCOF_NEVER_LOCKED | OCOF_BUSTED)
             c = {'name': (items.desc.get(e.int(23)) or 'Container').strip(), **where(o), 'tile': list(o.tile) if o.tile else None,
                  'items': contents(o, 60), 'file': o.file}
-            for _hook, num in build_notices.hooked(o):        # what it says when it is examined or used (one object, one entry)
-                if num in notice_scripts and 'says' not in c:
-                    stem, lines = notice_scripts[num]
-                    table = build_notices.dialogue(stem)
-                    text = '\n'.join(re.sub(r'\s+', ' ', table[n]).strip() for n in lines if table.get(n, '').strip())
+            scr_of, dlg_of = module_notices.get(o.map, (notice_scripts, None))
+            for hook, num in build_notices.hooked(o):         # what it says when it is examined or used (one object, one entry; its counters pick its lines)
+                if num in scr_of and 'says' not in c:
+                    text = build_notices.says(scr_of, num, o, hook, mods_v[o.map].tree('scr') if o.map in module_notices else None, dlg_of)
                     if text:
                         c['says'] = text
             if locked:
@@ -668,7 +730,7 @@ def main():
                 c['source'] = e.int(61)
             if o.proto - 20 in BOX_KINDS:          # the basic prototype: what kind of container it is (descriptions.h)
                 c['kind'] = BOX_KINDS[o.proto - 20]
-                if c['kind'].startswith('altar'):
+                if c['kind'].startswith('altar') and o.map not in module_notices:      # (an altar's script: the game's own scripts only)
                     a = altars.of(e)
                     if a:
                         c['altar'] = a
@@ -689,7 +751,7 @@ def main():
             idx = items.mob_entry(o)
             if idx is not None and not items.entries[idx]['hidden']:
                 qty = o.get(165) if o.type == 8 else o.get(142) if o.type == 6 else None
-                ground.append({'item': idx, 'qty': qty or 1, **where(o), 'tile': list(o.tile)})
+                ground.append({'item': idx, 'qty': qty or 1, **where(o), 'tile': list(o.tile), 'file': o.file})
 
     # a merchant sells from a box of their own, usually tucked away out of reach (OBJ_F_NPC_SUBSTITUTE_INVENTORY)
     for ni, key in stores:
@@ -697,26 +759,56 @@ def main():
         if ci is not None:
             npcs[ni]['store'] = ci
             containers[ci]['storeOf'] = ni
+    say(f'   {len(containers)} containers, {len(npcs)} NPCs carrying something, {len(ground)} items on the ground')
     # what scripts make: the manuals the University Bookseller sells, the telegram the Caladon operator hands over...
+    say('items that scripts create: who holds the scripts (.mob, prototypes, then every .sec)')
     gifts = ScriptGifts(items)
     for o in objs:
-        gifts.hold(o)
+        if o.map not in module_notices:                  # (a module numbers its scripts from 1 like the game: not the game's scripts)
+            gifts.hold(o)
     for p in items.protos.values():
         gifts.hold(p, True)
-    folders = [(d, d.name) for d in MAPS.iterdir() if d.is_dir()] + [(d, d.name) for d in build_modules.module_folders()]
+    folders = [(d, d.name) for d in MAPS.iterdir() if d.is_dir()] + [(f, k) for k, _, f in build_modules.entries() if k not in module_notices]
     for folder, name in folders:
-        for sec in folder.rglob('*.sec'):
-            rel = sec.relative_to(folder).parts
+        n_sec = 0
+        for sec in sec_alias.rglob(folder, '*.sec'):
+            n_sec += 1
+            rel = sec_alias.rel(sec, folder).parts
             for o in ao.sec_objects(sec):
                 if isinstance(o.get(32), dict):
                     o.map, o.area = name, rel[0] if name == WORLD and len(rel) > 1 else ''
                     gifts.hold(o)
+        if n_sec >= 200 or name == WORLD:
+            say(f'   {name}: {n_sec} .sec files read')
+    say(f'   .sec files of {len(folders)} maps read')
+    # a module with scripts of its own: its own scripts, held by its own objects only (no prototypes: those are the game's)
+    module_gifts = []
+    mg_of = {}                                               # one ScriptGifts per module, whatever its number of maps
+    objs_of = defaultdict(list)                              # map key -> its objects, in the order of objs (not all 50,000 looked at for each map)
+    for o in objs:
+        objs_of[o.map].append(o)
+    for key, module, folder in build_modules.entries():
+        if key in module_notices:
+            mg = mg_of.setdefault(module.name, ScriptGifts(items, module))
+            for o in objs_of.get(key, ()):
+                mg.hold(o)
+            for sec in sec_alias.rglob(folder, '*.sec'):
+                for o in ao.sec_objects(sec):
+                    if isinstance(o.get(32), dict):
+                        o.map, o.area = key, ''
+                        mg.hold(o)
+            say(f'   module map {key}: its own scripts\' gifts')
+    module_gifts = list(mg_of.values())
     scripted, seen_gift = [], {}
-    for idx, num, hook, o, is_proto, price, to_pc, turns in sorted(gifts.gifts(), key=lambda r: r[4]):     # placed holders first
+    rows = [(gifts, r) for r in sorted(gifts.gifts(), key=lambda r: r[4])]
+    for mg in module_gifts:
+        rows += [(mg, r) for r in sorted(mg.gifts(), key=lambda r: r[4])]
+    for gifts, (idx, num, hook, o, is_proto, price, to_pc, turns) in rows:     # placed holders first
         if items.entries[idx]['hidden']:
             continue
         g = {'item': idx, 'script': gifts.title(num)}
         if o is not None:
+            items.use(o)
             p = o if is_proto else items.protos.get(o.proto)
             g['name'] = (items.desc.get(ao.Effective(o, p).int(23)) or '').strip()
             if is_proto:
@@ -745,6 +837,8 @@ def main():
         seen_gift[key] = g
         seen_gift.setdefault(who, g)
         scripted.append(g)
+    say(f'   {len(scripted)} script gifts')
+    say('random lists (InvenSource), schematics, wandering creatures')
     sources = inven_sources(items)
     crafts = recipes(items, objs)
     used = {c.get('source') for c in containers + npcs} - {None}
@@ -753,7 +847,7 @@ def main():
             sources[s]['used'] = True
     # creatures the world map's random encounters make (Rules/WMap_Rnd.mes, basic proto + 20) roll their list when they appear
     enc = set()
-    for text in ao.DATA.joinpath('Rules', 'WMap_Rnd.mes').read_text(encoding='cp1252', errors='replace').split('}{')[1::2]:
+    for text in ao.read_text(ao.DATA.joinpath('Rules', 'WMap_Rnd.mes')).split('}{')[1::2]:
         enc.update(int(n) + 20 for n in re.findall(r'(?:First|Second|Third|Thrid|Fourth|Fifth):\s*(\d+)', text))
     wander = defaultdict(set)
     for num in enc:
@@ -764,11 +858,13 @@ def main():
                 wander[e.int(239)].add((items.desc.get(e.int(23)) or '').strip())
     for s, names in wander.items():
         sources[s]['wander'] = sorted(n for n in names if n)
+    say(f'the inventory pictures -> {OUT_ICONS.relative_to(ao.PROJECT)}')
     pos = items.write_icons()
+    say(f'writing {OUT_JS.relative_to(ao.PROJECT)}')
     for it in items.entries:
         it['icon'] = list(pos[it['icon']]) if it['icon'] is not None and it['icon'] in pos else None
 
-    data = {'source': 'toolbox/atlas/build_items.py', 'icons': 'atlas/item-icons.png', 'iconSheet': items.sheet,
+    data = {'source': 'toolbox/atlas/build_items.py', 'icons': OUT_ICONS.relative_to(ao.PROJECT).as_posix(), 'iconSheet': items.sheet,
             'note': 'items[i]: one thing the player can tell apart. containers / npcs / ground refer to items by index; '
                     'tile = [x, y] on the map named by place (world: true = the world map). sources = Rules/InvenSource.mes. '
                     'recipes = Rules/schematic.mes (tech / needs index techs; degree set = learned with that degree, '
@@ -792,7 +888,7 @@ def main():
           f'{sum(1 for g in scripted if "name" not in g)} from scripts nothing carries')
     print(f'  {sum(1 for i in items.entries if i.get("hexed"))} hexed items; {len(crafts)} schematics '
           f'({sum(1 for r in crafts if "degree" in r)} learned, {sum(1 for r in crafts if r.get("found"))} found with a paper)')
-    print(f'Wrote {OUT_JS.relative_to(ao.PROJECT)} ({OUT_JS.stat().st_size // 1024} KB) and {OUT_PNG.relative_to(ao.PROJECT)}')
+    print(f'Wrote {OUT_JS.relative_to(ao.PROJECT)} ({OUT_JS.stat().st_size // 1024} KB) and {OUT_ICONS.relative_to(ao.PROJECT)}')
 
 
 if __name__ == '__main__':

@@ -18,6 +18,7 @@ This script therefore:
 Run this from the directory containing the ./data/ folder.
 """
 
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 import re
 import csv
@@ -314,14 +315,25 @@ def proto_values(proto_number, proto_index):
     return _proto_values[proto_number]
 
 
-def parse_mob_header_and_aid(path):
+def read_or_error(path):
+    """The bytes of a file, or the exception reading it raised (raised again where the file is parsed)."""
+    try:
+        return path.read_bytes()
+    except Exception as exc:
+        return exc
+
+
+def parse_mob_header_and_aid(path, data=None):
     """
-    Parse only what is needed from a .mob.
+    Parse only what is needed from a .mob (its bytes `data`, when already read).
 
     Unlike .PRO, a .MOB serializes only fields whose bitmap bit is set.
     F_CURRENT_AID is field 1 and is the first serialized field when present.
     """
-    data = path.read_bytes()
+    if data is None:
+        data = path.read_bytes()
+    elif isinstance(data, Exception):
+        raise data
 
     if len(data) < 62:
         raise ValueError("file is too small")
@@ -582,15 +594,19 @@ def main():
 
     print(f"Found {len(mob_files)} .mob files.")
 
+    # Read by a few threads, in order, while the files are parsed one by one (on Windows opening a file is the slow part).
+    pool = ThreadPoolExecutor(16)
+    mob_data = pool.map(read_or_error, mob_files)
+
     rows = []
     unique_rows = set()   # rows named by the object's own F_DESCRIPTION
     race_type = {}        # row -> (race, type)
 
-    for n, path in enumerate(mob_files, 1):
+    for n, (path, data) in enumerate(zip(mob_files, mob_data), 1):
         relative = path.relative_to(MAPS_ROOT)
 
         try:
-            mob = parse_mob_header_and_aid(path)
+            mob = parse_mob_header_and_aid(path, data)
 
             object_type = mob["object_type"]
             type_name = OBJECT_TYPES[object_type]
@@ -689,6 +705,7 @@ def main():
 
         if n % 100 == 0:
             print(f"Processed {n}/{len(mob_files)}...")
+    pool.shutdown()
 
     header = ["Folder", "File", "Object type", "Type ID", "Proto", "Name", "Race", "Type", "Gender"]
     table = []

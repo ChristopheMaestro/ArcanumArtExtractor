@@ -7,7 +7,7 @@
 // window.gameScroll(doc) gives another page (Files: the Asset Browser in its frame) the same bars, see dressPage below.
 (function () {
   const LINE = 28, PAGE = 5, WHEEL = 3, ARROW = 13, MIN_THUMB = 12;
-  const SCROLLERS = '.loclist, .tree, .qlist, .igrid, .lib-list, .dlg, .welcome, #labelPanel, .side-right';
+  const SCROLLERS = '.loclist, .tree, .qlist, .igrid, .lib-list, .dlg, #labelPanel, .side-right';
 
   // el: the scrolling element. Inside the Atlas the bar sits in el's parent (made relative). On a page that is not ours
   // (`page` given) nothing of its layout is touched: the bar is a fixed element next to el, laid over el's right edge, and
@@ -100,7 +100,8 @@
     return { el, bar, place };
   }
 
-  function start() { document.querySelectorAll(SCROLLERS).forEach(el => attach(el)); }
+  // the listed boxes get the bar inside the page's layout; any other scrolling box of the page (lists and panels that come and go) is found like on another page
+  function start() { document.querySelectorAll(SCROLLERS).forEach(el => attach(el)); dressPage(document, !!document.querySelector('style') && /\.gsb\s*\{/.test([...document.querySelectorAll('style')].map(s => s.textContent).join(''))); }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
 
   // ---- another page (the Asset Browser in Files) -------------------------------------------------------------------------
@@ -140,10 +141,10 @@
     return [...out];
   }
 
-  function dressPage(doc) {
+  function dressPage(doc, ownCss) {      // ownCss: the page has the bars' style sheet already (the Atlas)
     if (!doc || doc.__gameScroll) return;
     const win = doc.defaultView;
-    doc.head.insertAdjacentHTML('beforeend', `<style id="gameScrollCss">${PAGE_CSS}</style>`);
+    if (!ownCss) doc.head.insertAdjacentHTML('beforeend', `<style id="gameScrollCss">${PAGE_CSS}</style>`);
     let selectors = null;
     const bars = new Map();                            // scrolling box -> its bar
     let queued = false;
@@ -153,7 +154,7 @@
       for (const s of selectors) {
         let list; try { list = doc.querySelectorAll(s); } catch (_) { continue; }
         for (const el of list) {
-          if (bars.has(el) || el === doc.body || el === doc.documentElement || el.closest('.gsb')) continue;
+          if (bars.has(el) || el === doc.body || el === doc.documentElement || el.closest('.gsb') || el.classList.contains('gs-scroller') || el.matches('.welcome')) continue;   // .welcome: no bar at all
           if (!/auto|scroll/.test(win.getComputedStyle(el).overflowY)) continue;
           const b = attach(el, page); if (b) bars.set(el, b);
         }

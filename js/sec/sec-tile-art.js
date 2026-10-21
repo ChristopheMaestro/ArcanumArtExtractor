@@ -4,7 +4,7 @@ import { ART_TYPE, artType } from '../core/art-id.js';
 import { parseArtBuffer } from '../art/art-decoder.js';
 import { frameCanvasForPalette } from '../art/art-export.js';
 import { DATA_ROOT } from '../core/config.js';
-import { artNameIndex } from '../core/manifest.js';
+import { artNameIndex } from '../core/file-index.js';
 import { parseMesNameList } from '../core/mes-parser.js';
 import { fetchText, memoAsync } from '../core/text-io.js';
 import { encPath } from '../core/util.js';
@@ -27,10 +27,7 @@ let secFacadeNameMap = null;
 export const secFacadeFileCache = new Map();
 export const secFacadeFileMissing = new Set();
 
-const SEC_TILE_MANIFEST_URL = `${DATA_ROOT}art/tile/tile_manifest.json`;
 const SEC_TILE_A3_CODES = '06b489237ea5dc10';
-const SEC_TILE_A3_SET = [0, 1, 8, 3, 4, 5, 6, 7, 8, 3, 10, 11, 6, 7, 14, 15];
-const SEC_TILE_A3_UNSET = [0, 1, 2, 9, 4, 5, 12, 13, 2, 9, 10, 11, 12, 13, 14, 15];
 export let secTileNameMesMap = null;
 const secTileArtCache = new Map();
 const secTileArtMissing = new Set();
@@ -162,7 +159,7 @@ export async function loadSecFacadeArt(raw) {
 
 export const loadSecTileNameMes = memoAsync(async () => (secTileNameMesMap = parseSecTileNameMes(await fetchText(SEC_TILE_NAME_MES_URL))));
 
-export const loadSecTileManifest = artNameIndex(SEC_TILE_MANIFEST_URL);
+export const loadSecTileManifest = artNameIndex('art/tile');
 
 function decodeSecTileArtId(raw) {
   const aid = Number(raw) >>> 0;
@@ -179,7 +176,7 @@ function decodeSecTileArtId(raw) {
   // The extracted edge ART files (e.g. sw1sw24h.art) are named from the STORED
   // a3/a4 values. Remapping a3 through the UNSET table produced codes for which
   // no file exists (b/c/d/e), so edge and sector-border tiles drew nothing.
-  // Verified against tile_manifest.json: every tile in the test sector resolves.
+  // Verified against the art/tile names of file_index_art.json: every tile in the test sector resolves.
   const a3 = storedA3;
   const a4 = storedA4;
 
@@ -276,6 +273,29 @@ export function secTileArtFilename(tile) {
   return candidates;
 }
 
+// Keep colors semantically coherent with tilename.mes, while still giving
+// different Art IDs slightly different shades inside the same material.
+// (Built once: secTileColor runs for every tile value of a colour-mode sector.)
+const SEC_TILE_COLOR_FAMILIES = [
+  [/\bblack(?:ened)?\b|\bobsidian\b/, [56,56,56]],
+  [/\bdead\s+grass\b/, [135,125,62]],
+  [/\bgrass\b|\bmeadow\b|\bvegetation\b|\bleaf\b|\bleaves\b/, [67,125,48]],
+  [/\bdirt\b|\bmud\b|\bearth\b|\bsoil\b|\bbog\b/, [112,75,42]],
+  [/\bsand\b|\bdesert\b|\bbeach\b/, [194,161,91]],
+  [/\bsnow\b|\bice\b|\bfrost\b/, [207,222,232]],
+  [/\bwater\b|\bsea\b|\blake\b|\briver\b|\bpond\b|\bshallow\s+water\b|\bdeep\s+water\b/, [53,116,154]],
+  [/\brock\b|\bstone\b|\bgranite\b|\bmarble\b|\bconcrete\b|\bbrick\b|\bsidewalk\b|\bpavement\b|\basphalt\b/, [105,105,105]],
+  [/\bwood\b|\bplank\b|\btimber\b|\blog\b/, [137,91,55]],
+  [/\bmetal\b|\biron\b|\bsteel\b/, [112,119,125]],
+  [/\bmarsh\b|\bswamp\b/, [92,108,62]],
+  [/\bdark\b/, [48,48,48]],
+  [/\blight\b|\bwhite\b/, [198,198,198]]
+];
+const SEC_TILE_SOUND_COLORS = {
+  0: [112,75,42], 1: [194,161,91], 2: [207,222,232],
+  3: [105,105,105], 4: [53,116,154], 5: [137,91,55]
+};
+
 export function secTileColor(artId) {
   if (artId >= SEC_FACADE_ARTID_BASE) {
     const h = Math.imul((artId >>> 0) ^ 0x9e3779b9, 0x85ebca6b) >>> 0;
@@ -285,25 +305,9 @@ export function secTileColor(artId) {
   const info = secTileNameMesMap?.get(artId);
   const text = `${info?.name || ''} ${info?.comment || ''} ${info?.raw || ''}`.toLowerCase();
 
-  // Keep colors semantically coherent with tilename.mes, while still giving
-  // different Art IDs slightly different shades inside the same material.
+  // (material families: SEC_TILE_COLOR_FAMILIES below)
   let base = [82, 82, 82];
-  const families = [
-    [/\bblack(?:ened)?\b|\bobsidian\b/, [56,56,56]],
-    [/\bdead\s+grass\b/, [135,125,62]],
-    [/\bgrass\b|\bmeadow\b|\bvegetation\b|\bleaf\b|\bleaves\b/, [67,125,48]],
-    [/\bdirt\b|\bmud\b|\bearth\b|\bsoil\b|\bbog\b/, [112,75,42]],
-    [/\bsand\b|\bdesert\b|\bbeach\b/, [194,161,91]],
-    [/\bsnow\b|\bice\b|\bfrost\b/, [207,222,232]],
-    [/\bwater\b|\bsea\b|\blake\b|\briver\b|\bpond\b|\bshallow\s+water\b|\bdeep\s+water\b/, [53,116,154]],
-    [/\brock\b|\bstone\b|\bgranite\b|\bmarble\b|\bconcrete\b|\bbrick\b|\bsidewalk\b|\bpavement\b|\basphalt\b/, [105,105,105]],
-    [/\bwood\b|\bplank\b|\btimber\b|\blog\b/, [137,91,55]],
-    [/\bmetal\b|\biron\b|\bsteel\b/, [112,119,125]],
-    [/\bmarsh\b|\bswamp\b/, [92,108,62]],
-    [/\bdark\b/, [48,48,48]],
-    [/\blight\b|\bwhite\b/, [198,198,198]]
-  ];
-  for (const [re, rgb] of families) {
+  for (const [re, rgb] of SEC_TILE_COLOR_FAMILIES) {
     if (re.test(text)) { base = rgb; break; }
   }
 
@@ -312,11 +316,7 @@ export function secTileColor(artId) {
   // not already identify a material.
   if (base[0] === 82 && base[1] === 82 && base[2] === 82) {
     const sound = Number((info?.raw || '').match(/(?:^|\s)([0-5])\s*$/)?.[1]);
-    const soundBase = {
-      0: [112,75,42], 1: [194,161,91], 2: [207,222,232],
-      3: [105,105,105], 4: [53,116,154], 5: [137,91,55]
-    };
-    if (soundBase[sound]) base = soundBase[sound];
+    if (SEC_TILE_SOUND_COLORS[sound]) base = SEC_TILE_SOUND_COLORS[sound];
   }
 
   // Deterministic shade variation: same material family stays visually

@@ -2,8 +2,9 @@
 
 import { ART_ID_INVALID, ART_TYPE, artType } from '../core/art-id.js';
 import { parseArtBuffer } from '../art/art-decoder.js';
-import { CRITTER_ART_ROOT, MONSTER_ART_ROOT, UNIQUE_NPC_ART_ROOT } from '../core/config.js';
-import { encPath } from '../core/util.js';
+import { CRITTER_ART_ROOT, DATA_ROOT, MONSTER_ART_ROOT, UNIQUE_NPC_ART_ROOT } from '../core/config.js';
+import { indexFolderFiles } from '../core/file-index.js';
+import { encPath, onVersionChange } from '../core/util.js';
 import { flipCanvasHorizontally, pickArtFrameForRotation } from '../objects/art-frames.js';
 import { critterFrameSource, loadCritterFrames, resolveCritterArt } from '../objects/critter-art.js';
 import { PROTO_ART_TYPE_EYE_CANDY, protoArtRoot } from './proto-mes.js';
@@ -103,7 +104,7 @@ function protoMonsterAidInfo(raw) {
   const folder = code ? (MONSTER_UPPER_FOLDERS.has(code.toUpperCase()) ? code.toUpperCase() : code.toLowerCase()) : null;
   const lower = code ? code.toLowerCase() : null;
   // Nominal name only (the animation pair is resolved against the folder's
-  // manifest at load time, see monsterArtCandidates).
+  // file list at load time, see monsterArtCandidates).
   const filename = lower ? `${folder}\\${lower}uwxaa.ART` : null;
   return { raw, hex, rotation, monster: true, monsterNum: num, monsterCode: code, monsterName: name,
            monsterFolder: folder, gender: 0, body: 0, armor: 0, shield: 0, exact: false, filename, text,
@@ -120,6 +121,12 @@ const UNIQUE_NPC_CODES = ['hmmbs','hmmtn','hmmvg','ghmvg','hmmki','ghmst','hmmgb
 // 20-27 that critters use for gender/body/armour (0xD14 -> 0x14 = 20, dgnuw).
 // If the picture is wrong, change these two constants (e.g. shift 22 / mask 0x3F
 // gives #5 ghmst; shift 23 / mask 0x1F gives #2 hmmvg) -- nothing else depends on them.
+// A mod's unique_npc.mes (CE adds numbers 40 and up) names more folders than the base game's table above: {number}{folder} lines fill it in.
+export function addUniqueNpcCodes(mesText) {
+  for (const m of String(mesText).matchAll(/\{(\d+)\}\s*\{([^}]+)\}/g)) UNIQUE_NPC_CODES[+m[1]] = m[2].trim();
+}
+// (the page's own unique_npc.mes: a mod's, where the page serves one; the Atlas redirects this fetch to the version's copy)
+try { const r = await fetch(`${UNIQUE_NPC_ART_ROOT}unique_npc.mes`); if (r.ok) addUniqueNpcCodes(await r.text()); } catch (_) {}
 const UNIQUE_NPC_NUM_SHIFT = 20, UNIQUE_NPC_NUM_MASK = 0xFF;
 function protoUniqueNpcAidInfo(raw) {
   const hex = '0x' + raw.toString(16).toUpperCase().padStart(8, '0');
@@ -136,6 +143,7 @@ function protoUniqueNpcAidInfo(raw) {
 }
 
 const monsterUrlCache = new Map();
+onVersionChange(() => monsterUrlCache.clear());
 export function resolveMonsterArtUrl(info) {
   const key = `${info.artRoot || MONSTER_ART_ROOT}${info.monsterFolder}/${info.monsterCode}|${info.waKey}`;
   if (!monsterUrlCache.has(key)) {
@@ -157,8 +165,9 @@ export function resolveMonsterArtUrl(info) {
 
 const MONSTER_UPPER_FOLDERS = new Set(['AIR', 'FIR', 'LIZ', 'PHA', 'RAT', 'SNA', 'WAT']);
 const monsterFolderCache = new Map();
+onVersionChange(() => monsterFolderCache.clear());
 // Returns candidate URLs for a monster's ART, best first. Uses the folder's
-// <FOLDER>_manifest.json when available (the animation letters differ per
+// file list in data/file_index_art.json when available (the animation letters differ per
 // monster: AIR has no 'aa' file, only ab/ad/af/...), otherwise guesses.
 async function monsterArtCandidates(info) {
   if (!info || !info.monster || !info.monsterFolder) return [];
@@ -169,8 +178,7 @@ async function monsterArtCandidates(info) {
   const prefix = info.uniqueNpc ? info.monsterCode.toLowerCase() : `${info.monsterCode.toLowerCase()}uwx`;
   const cacheKey = `${root}${folder}`;
   if (!monsterFolderCache.has(cacheKey)) {
-    monsterFolderCache.set(cacheKey, fetch(`${root}${folder}/${folder}_manifest.json`)
-      .then(r => r.ok ? r.json() : null).then(j => (j && Array.isArray(j.files)) ? j.files : null).catch(() => null));
+    monsterFolderCache.set(cacheKey, indexFolderFiles('art', `${root}${folder}`.slice(DATA_ROOT.length)));
   }
   const files = await monsterFolderCache.get(cacheKey);
   let names = [];

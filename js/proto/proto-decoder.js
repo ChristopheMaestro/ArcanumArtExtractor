@@ -1,6 +1,6 @@
 // .PRO decoding.
 
-import { PRO_ROOT } from '../core/config.js';
+import { DATA_ROOT, PRO_ROOT } from '../core/config.js';
 import { encPath } from '../core/util.js';
 import {
   enumerateMobFields,
@@ -55,7 +55,7 @@ export function decodeProtoBuffer(buf, filename) {
       bit: MOB_ENGINE.masks[fld] ? Math.round(Math.log2(MOB_ENGINE.masks[fld])) : -1,
       offset: fieldOffset,
       size: parsed.size,
-      raw: mobHex(bytes.slice(fieldOffset, offset)),
+      raw: mobHex(bytes.subarray(fieldOffset, offset)),
       value: parsed.value
     });
   }
@@ -75,10 +75,14 @@ export function decodeProtoBuffer(buf, filename) {
   };
 }
 
+// A folder under data/ (proto, mods/<Mod>/proto, modules/...: what the .PRO explorer lists) or, as the prototype index and the editor name it, under data/proto/.
+const underData = p => /^(proto|mods|modules)(\/|$)/.test(p);
+export const protoFileUrl = (relativePath, filename) => `${underData(relativePath || '') ? DATA_ROOT : PRO_ROOT}${relativePath ? encPath(relativePath) + '/' : ''}${encPath(filename)}`;
+
 export async function decodeProtoForSearch(filename, relativePath = '') {
   const key = `${relativePath}\0${filename}`;
   if (protoDecodedCache.has(key)) return protoDecodedCache.get(key);
-  const url = `${PRO_ROOT}${relativePath ? encPath(relativePath) + '/' : ''}${encPath(filename)}`;
+  const url = protoFileUrl(relativePath, filename);
   const promise = fetch(url)
     .then(resp => {
       if (!resp.ok) throw new Error(`HTTP ${resp.status} fetching ${url}`);

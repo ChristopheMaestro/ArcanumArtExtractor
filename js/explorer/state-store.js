@@ -1,6 +1,7 @@
 // Remembers the last data-explorer location.
 
 import { visit } from './nav-history.js';
+import { toDataPath } from '../core/file-index.js';
 
 const DATA_EXPLORER_STATE_KEY = 'arcanum-data-explorer-state-v1';
 
@@ -37,11 +38,11 @@ export const currentDataState = () => lastState;
 export function adoptUrlState() {
   const params = new URLSearchParams(window.location.search);
   const mode = params.get('mode');
-  if (!mode || !['pro', 'mob', 'sec', 'dlg', 'scr', 'mes'].includes(mode)) return;
+  if (!mode || !['pro', 'mob', 'sec', 'dlg', 'scr', 'mes', 'bmp'].includes(mode)) return;
   const unsafe = (s) => /^[\\/]/.test(s) || s.split(/[\\/]/).some(seg => seg === '..');
   const path = params.get('path') || '', folderName = params.get('folderName') || '', file = params.get('file') || null;
   if (unsafe(path) || unsafe(folderName) || (file && unsafe(file))) return;
-  persistState(mode, path, folderName, file);
+  persistState(mode, toDataPath(mode, path, !!file), folderName, file);   // (a link from before the explorers started at data/ names a folder under maps/, proto/...)
 }
 
 // Every folder or file an explorer opens comes through here: it is saved for "Continue" and the address
@@ -53,7 +54,7 @@ export function saveDataExplorerState(mode, path, folderName, file = null) {
 
 function persistState(mode, path, folderName, file) {
   try {
-    const shown = (folderName && folderName !== '..') ? folderName : (mode === 'pro' ? 'proto' : (mode === 'mes' ? 'mes' : (mode === 'scr' ? 'scr' : 'maps')));
+    const shown = (folderName && folderName !== '..') ? folderName : 'data';
     lastState = { mode, path: path || '', folderName: shown, file: file || null };
     writeStateUrl(lastState);
   } catch (_) {}
@@ -61,7 +62,7 @@ function persistState(mode, path, folderName, file) {
     localStorage.setItem(DATA_EXPLORER_STATE_KEY, JSON.stringify({
       mode,
       path: path || '',
-      folderName: (folderName && folderName !== '..') ? folderName : (mode === 'pro' ? 'proto' : (mode === 'mes' ? 'mes' : (mode === 'scr' ? 'scr' : 'maps'))),
+      folderName: (folderName && folderName !== '..') ? folderName : 'data',
       file: file || null,
     }));
   } catch (_) {}
@@ -72,8 +73,8 @@ export function loadDataExplorerState() {
     const raw = localStorage.getItem(DATA_EXPLORER_STATE_KEY);
     if (!raw) return null;
     const state = JSON.parse(raw);
-    if (!state || (state.mode !== 'pro' && state.mode !== 'mob' && state.mode !== 'sec' && state.mode !== 'dlg' && state.mode !== 'scr' && state.mode !== 'mes')) return null;
-    return state;
+    if (!state || (state.mode !== 'pro' && state.mode !== 'mob' && state.mode !== 'sec' && state.mode !== 'dlg' && state.mode !== 'scr' && state.mode !== 'mes' && state.mode !== 'bmp')) return null;
+    return { ...state, path: toDataPath(state.mode, state.path, !!state.file) };
   } catch (_) {
     return null;
   }

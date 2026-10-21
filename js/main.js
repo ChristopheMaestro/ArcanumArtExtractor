@@ -20,6 +20,7 @@ import './art/hex-viewer.js';
 import './art/packer-art-builder.js';
 import './art/packer-png.js';
 import './art/packer-ui.js';
+import '../translator/translator-ui.js';
 import './mob/mob-schema.js';
 import './mob/mob-decoder.js';
 import './mob/mob-explorer.js';
@@ -65,9 +66,9 @@ import './art/dropzone.js';
 import './explorer/keyboard-nav.js';
 import { initExplorer, loadExplorerState, openDeepLink, pageSize, setPageSize } from './art/art-explorer.js';
 import { parseDeepLink } from './art/share-links.js';
-import { explorerHome, footerNoteEl, logEl, manualLoadEl, pageSizeSelect, treeEl } from './core/dom.js';
+import { footerNoteEl, logEl, manualLoadEl, pageSizeSelect, treeEl } from './core/dom.js';
 import { log } from './core/log.js';
-import { showExplorerHome } from './explorer/home.js';
+import './explorer/home.js';
 import { adoptUrlState, loadDataExplorerState } from './explorer/state-store.js';
 import { enterMobExplorer } from './mob/mob-explorer.js';
 import { enterProtoExplorer } from './proto/proto-explorer.js';
@@ -75,12 +76,11 @@ import { enterSecExplorer } from './sec/sec-explorer.js';
 import { enterScrExplorer } from './scr/scr-explorer.js';
 import { enterDlgExplorer } from './text/dlg-explorer.js';
 import { enterMesExplorer } from './text/mes-explorer.js';
+import { enterBmpExplorer } from './art/bmp-explorer.js';
 
-// The landing page is intentionally minimal: no explorer, search, local drop zone, or log.
-document.body.classList.add('home-active');
-const deepLinkTarget = parseDeepLink();   // read before the home screen rewrites the address
+// No welcome screen of its own: the Atlas's is the first screen, and this page only runs inside its Files / Workshop frames.
+const deepLinkTarget = parseDeepLink();   // read before the address is rewritten
 adoptUrlState();                          // ?mode=pro&… links become the location to restore
-showExplorerHome();
 const savedExplorerState = loadExplorerState();
 if (savedExplorerState && [50, 100, 200, 'all'].includes(savedExplorerState.pageSize)) {
   setPageSize(savedExplorerState.pageSize);
@@ -90,9 +90,7 @@ if (deepLinkTarget) {
   if (manualLoadEl) manualLoadEl.hidden = false;
   if (logEl) logEl.hidden = false;
   if (footerNoteEl) footerNoteEl.hidden = false;
-  document.body.classList.remove('home-active');
   document.querySelector('.explorer').hidden = false;
-  explorerHome.hidden = true;
   initExplorer(true);
   openDeepLink(deepLinkTarget).catch(err => {
     log(`share link: couldn't open — ${errText(err)}`, 'err');
@@ -107,4 +105,6 @@ if (deepLinkTarget) {
   else if (savedDataState?.mode === 'pro') enterProtoExplorer(true);
   else if (savedDataState?.mode === 'mob') enterMobExplorer(true);
   else if (savedDataState?.mode === 'mes') enterMesExplorer(true);
+  else if (savedDataState?.mode === 'bmp') enterBmpExplorer(true);
+  else document.getElementById('artExploreBtn')?.click();   // no last place: the first tab
 }

@@ -4,8 +4,8 @@ import { flipCanvasHorizontally } from './art-frames.js';
 import { ART_TYPE, artType } from '../core/art-id.js';
 import { parseArtBuffer } from '../art/art-decoder.js';
 import { frameCanvasForPalette } from '../art/art-export.js';
-import { ART_ROOT, PORTAL_ART_ROOT } from '../core/config.js';
-import { artNameIndex } from '../core/manifest.js';
+import { ART_ROOT } from '../core/config.js';
+import { artNameIndex } from '../core/file-index.js';
 import { fetchText, memoAsync } from '../core/text-io.js';
 import { parseMesText } from '../core/mes-parser.js';
 import { encPath } from '../core/util.js';
@@ -76,9 +76,9 @@ export const loadWallStructureTable = memoAsync(async () => {
   return wallStructureTable;
 });
 
-// art/portal/portal_manifest.json and art/wall/wall_manifest.json (if present).
-export const loadPortalManifest = artNameIndex(`${PORTAL_ART_ROOT}portal_manifest.json`);
-const loadWallManifest = artNameIndex(`${ART_ROOT}wall/wall_manifest.json`);
+// The exact-case names of the .art files in art/portal and art/wall (data/file_index_art.json).
+export const loadPortalManifest = artNameIndex('art/portal');
+const loadWallManifest = artNameIndex('art/wall');
 
 // TIG wall art ID layout (derived from the wall objects of the Iron Clan HQ
 // sectors; the TIG bit macros are not part of the CE source tree):

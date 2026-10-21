@@ -21,9 +21,10 @@ import zlib
 from pathlib import Path
 
 import arcanum_objects as ao
+import sec_alias
 
 ROOT = Path(__file__).resolve().parents[2]
-DATA_JS = ROOT / 'js' / 'atlas' / 'data'                   # the generated data the pages load
+DATA_JS = ao.DATA_JS                   # the generated data the pages load
 WORLD = ao.DATA / 'maps' / 'Arcanum1-024-fixed'
 OUT_JS = DATA_JS / 'encounters.js'
 POWER = ['none', 'easy', 'average', 'powerful']
@@ -36,7 +37,7 @@ SLOTS = ['First:', 'Second:', 'Third:', 'Fourth:', 'Fifth:']
 def raw_mes(path):
     """The entries of a .mes as raw text (the values hold commas and colons ao.mes keeps as they are)."""
     out = {}
-    for m in re.finditer(r'\{(\d+)\}\{([^}]*)\}', path.read_text(encoding='cp1252', errors='replace')):
+    for m in re.finditer(r'\{(\d+)\}\{([^}]*)\}', ao.read_text(path)):
         out[int(m.group(1))] = m.group(2)
     return out
 
@@ -124,7 +125,7 @@ def terrain_grid():
 def town_sectors():
     """Sectors of the world map with a town map: no random encounter there (wmap_rnd_check)."""
     towns = set()
-    for path in WORLD.rglob('*.sec'):
+    for path in sec_alias.rglob(WORLD, '*.sec'):
         if not path.stem.isdigit():
             continue
         data = path.read_bytes()

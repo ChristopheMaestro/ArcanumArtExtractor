@@ -57,6 +57,12 @@ export function errorPara(text) {
   return p;
 }
 
+// What was read from the game's files depends on the version on show (the Atlas switches version without reloading the page,
+// js/atlas/atlas-boot.js): every cache of such a read registers a function that empties it, and the switch calls them all.
+const versionResets = new Set();
+export function onVersionChange(reset) { versionResets.add(reset); return reset; }
+export function versionChanged() { for (const reset of versionResets) { try { reset(); } catch (_) {} } }
+
 export function escapeHtml(text) {
   return String(text ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 }

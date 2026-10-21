@@ -61,7 +61,7 @@ export function secSectorsInView(sectors, bounds, iso, view, cssW, cssH) {
     return Math.max(...xs) >= 0 && Math.min(...xs) <= cssW && Math.max(...ys) >= 0 && Math.min(...ys) <= cssH;
   });
 }
-// One pixel of Map.bmp per sector (same placement as the background drawn in sec-folder-map.js):
+// One pixel of Map.png (the game's Map.bmp) per sector (same placement as the background drawn in sec-folder-map.js):
 // column = width - 1 - sectorX, row = sectorY. Read once into an ImageData.
 function secMapBmpColor(view, mapBackground, x, y) {
   if (!mapBackground?.complete || !mapBackground.naturalWidth) return null;
@@ -95,7 +95,7 @@ export function drawSecTerrainPlaceholders(ctx, bounds, iso, view, cssW, cssH, m
     ctx.moveTo(pts[0].x, pts[0].y);
     for (let i = 1; i < 4; i++) ctx.lineTo(pts[i].x, pts[i].y);
     ctx.closePath();
-    // Plain Map.bmp colour (no outline, no name): the sector simply reads as part of the map.
+    // Plain Map.png colour (no outline, no name): the sector simply reads as part of the map.
     const bmp = secMapBmpColor(view, mapBackground, x, y);
     ctx.fillStyle = bmp || SEC_TERRAIN_FILL; ctx.fill();
     if (!bmp) { ctx.strokeStyle = SEC_TERRAIN_EDGE; ctx.lineWidth = 1; ctx.stroke(); }

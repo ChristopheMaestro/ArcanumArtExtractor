@@ -1,4 +1,4 @@
-// The map of world-atlas.html (embedded by index.html with ?embed=1): sector pictures from atlas/world/, atlas/maps/, atlas/modules/ (listed in
+// The map view of index.html (embedded in the Atlas with ?embed=1): sector pictures from atlas/world/, atlas/maps/, atlas/modules/ (listed in
 // js/atlas/data/map-pictures.js), the world included.
 'use strict';
 (async () => {
@@ -32,38 +32,53 @@
   // used (notices.js, toolbox/atlas/build_notices.py).
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   // obj: the object (or tile) the script hangs on, for the Advanced view
-  for (const [key, area, x, y, title, text, obj] of (window.ArcanumNotices ? window.ArcanumNotices.notices : [])) {
-    const map = key == null ? -1 : mapIndex.get(key);
-    if (map == null) continue;
-    labels.push({ text: title, category: 'information', tile: [x, y], place: map >= 0 ? MP.maps[map].name : area, map, mapKey: map >= 0 ? key : area,
-      description: text === title ? '' : esc(text).replace(/\n/g, '<br>'), placed: 'script', obj });      // a sign that only gives its name has nothing more to show
+  // image: the picture a diagram or mural opens (atlas/pictures/)
+  // The labels of a map only a mod has (Vorakia Sewers in CE Restored and Forgotten Places) wait in modLabels: that map joins MP.maps
+  // only when the mod is switched in (syncCEMaps), which then gives them their map and puts them with the others.
+  const modLabels = [];
+  for (const [key, area, x, y, title, text, obj, image] of (window.ArcanumNotices ? window.ArcanumNotices.notices : [])) {
+    const map = key == null ? -1 : mapIndex.get(key), into = map == null ? modLabels : labels;
+    into.push({ text: title, category: 'information', tile: [x, y], place: map >= 0 ? MP.maps[map].name : map == null ? key : area, map, mapKey: key != null ? key : area,
+      description: text === title ? '' : esc(text).replace(/\n/g, '<br>'), image, placed: 'script', obj });      // a sign that only gives its name has nothing more to show
   }
   for (const [key, area, x, y, what, to, obj] of (window.ArcanumWaypoints ? window.ArcanumWaypoints.waypoints : [])) {
-    const map = key == null ? -1 : mapIndex.get(key);
-    if (map == null) continue;
-    const names = [...new Set(to.map(t => t[1]))];
-    labels.push({ text: names.join(' / '), category: 'waypoint', tile: [x, y], place: map >= 0 ? MP.maps[map].name : area, map, mapKey: map >= 0 ? key : area,
-      what, to: to.map(([m, place, tx, ty]) => ({ map: m, place, tile: [tx, ty] })), placed: 'script', obj });
+    const map = key == null ? -1 : mapIndex.get(key), into = map == null ? modLabels : labels;
+    const names = [...new Set(to.map(t => t[4] || t[1]))];         // (t[4]: what the player picks in the dialog of a person who takes them there)
+    // a sign on the very object that teleports (the Big Stone over Mannox's Hole): one label, the waypoint, with the sign's text in it
+    const si = into.findIndex(l => l.category === 'information' && l.map === map && l.mapKey === (key != null ? key : area) && Math.abs(l.tile[0] - x) <= 1 && Math.abs(l.tile[1] - y) <= 1);
+    const sign = si >= 0 ? into.splice(si, 1)[0] : null;
+    into.push({ text: names.join(' / '), category: sign ? ['waypoint', 'information'] : 'waypoint', tile: [x, y], place: map >= 0 ? MP.maps[map].name : map == null ? key : area, map, mapKey: key != null ? key : area,
+      description: sign ? sign.description || esc(sign.text) : undefined, image: sign ? sign.image : undefined,
+      what, to: to.map(([m, place, tx, ty, label]) => ({ map: m, place, tile: [tx, ty], label })), placed: 'script', obj });
   }
   const mapKey = (map, place) => map >= 0 ? MP.maps[map].key : place;     // how items.js names the map a thing is on
 
   // People and containers come from the game files alone, one per object on its own tile (npcs.js, submaps.js, items.js);
   // the labels left are waypoints, notes, altars and quest objects, and never stand for a person or a container.
-  // containers of the world map and of the other maps (items.js), every one just a "Container" on the map (the real kind -
-  // barrel, bin, wood chest... - is not shown)
+  // containers of the world map and of the other maps (items.js), each named by what it is (barrel, bin, wood chest...)
   const IT = window.ArcanumItems;
-  const chests0 = IT ? IT.containers.map((c, i) => ({ ...c, i, map: c.world ? -1 : (mapIndex.has(c.place) ? mapIndex.get(c.place) : -2) })).filter(c => c.map > -2 && c.tile) : [];
   // A trap door is a container (its lock) and a waypoint (the script that takes you down) on one tile: one display, the
   // waypoint, which says it is locked and how hard the lock is. (An empty trap door with no waypoint stays a container.)
-  const doorWays = labels.filter(l => l.category === 'waypoint');
-  const chests = chests0.filter(c => {
-    if (c.name !== 'Trap Door' || c.items.length || c.source) return true;
-    const w = doorWays.find(l => l.map === c.map && !l.lock && Math.abs(l.tile[0] - c.tile[0]) <= 2 && Math.abs(l.tile[1] - c.tile[1]) <= 2);
-    if (!w) return true;
-    w.lock = { locked: c.locked, keys: c.keys, held: c.held, jammed: c.jammed };
-    w.text += ' 🔒';
-    return false;
-  });
+  const doorWays = [...labels, ...modLabels].filter(l => catsOf(l).includes('waypoint'));
+  const chests = [];                          // the containers of the version on show (items.js of the version): rebuilt when a mod switches its maps in (refreshChests)
+  function refreshChests() {
+    chests.length = 0;
+    if (!IT) return;
+    IT.containers.forEach((c, i) => {
+      if (!c.tile) return;
+      const map = c.world ? -1 : (mapIndex.has(c.place) ? mapIndex.get(c.place) : -2);
+      if (map < -1) return;
+      const row = { ...c, i, map };
+      if (c.name === 'Trap Door' && !c.items.length && !c.source) {
+        const w = doorWays.find(l => l.map === map && (!l.lock || l.lock.fromChest === i) && Math.abs(l.tile[0] - c.tile[0]) <= 2 && Math.abs(l.tile[1] - c.tile[1]) <= 2);
+        if (w) {
+          if (!w.lock) { w.lock = { locked: c.locked, keys: c.keys, held: c.held, jammed: c.jammed, fromChest: i }; w.text += ' 🔒'; }
+          return;
+        }
+      }
+      chests.push(row);
+    });
+  }
   let activeChest = null;
   const CONTAINER = 'Container';
 
@@ -82,7 +97,7 @@
   }
   addNpcs(window.ArcanumNpcs, npcs);
   addNpcs(window.ArcanumSubNpcs, npcs, true);
-  let creaturesLoading = false, activeNpc = null;
+  let creaturesLoading = false, activeNpc = null, creaturesLoaded = () => {};
   // The filter buttons under the map. Nothing is labelled on the map: a filter that is switched on makes everything of its
   // kind in the current map glow (over the object art when zoomed in); hover names it, a click opens it.
   const FILTERS = { chest: false, people: false, creature: false, way: false, item: false, sign: false };
@@ -92,7 +107,7 @@
     creaturesLoading = true;
     addNpcs(window.ArcanumModuleCreatures, creatures, true);       // (the modules' maps)
     let left = 2;
-    const done = () => { if (!--left) { creaturesLoading = false; markCache.clear(); schedule(); } };
+    const done = () => { if (!--left) { creaturesLoading = false; creaturesLoaded(); markCache.clear(); schedule(); } };
     for (const [file, global, sub] of [['js/atlas/data/creatures.js', 'ArcanumCreatures', false], ['js/atlas/data/subcreatures.js', 'ArcanumSubCreatures', true]]) {
       const s = document.createElement('script'); s.src = file;
       s.onload = () => { addNpcs(window[global], creatures, sub); done(); };
@@ -102,6 +117,7 @@
   }
   // the filter buttons show the game's interface pictures (portraits.png) in place of their emoji, fitted to the button
   const FICONS = (window.ArcanumPortraits || {}).filterIcons || {};
+  document.head.insertAdjacentHTML('beforeend', `<style>html .filters .ficon{background-image:url("${(window.ArcanumPortraits || {}).sheet || 'atlas/portraits.png'}")}</style>`);      // (this version's sheet)
   for (const b of document.querySelectorAll('#filters button[data-icon]')) {
     const box = FICONS[b.dataset.icon];
     if (!box) continue;
@@ -131,7 +147,7 @@
   // random encounters of the world map (encounters.js, toolbox/atlas/build_encounters.py; fetched when turned on): the zones where
   // the chance of an encounter is set, and a click in open country asks the page what can turn up there
   let showEnc = !!saved.enc, encMark = null;
-  const loadEnc = () => { if (showEnc && !window.ArcanumEncounters) { const s = document.createElement('script'); s.src = 'js/atlas/data/encounters.js'; s.onload = schedule; document.head.appendChild(s); } };
+  const loadEnc = () => { if (showEnc && !window.ArcanumEncounters) { const s = document.createElement('script'); s.src = AtlasData.url('encounters'); s.onload = schedule; document.head.appendChild(s); } };
   document.getElementById('encBtn').classList.toggle('on', showEnc); loadEnc();
   document.getElementById('encBtn').onclick = e => {
     showEnc = !showEnc; e.currentTarget.classList.toggle('on', showEnc);
@@ -165,18 +181,73 @@
 
   // Areas: the named spots of the world map (areas.js, toolbox/atlas/build_areas.py). Most are places already; those that are not (and are
   // not a map of their own) become places, and the secret areas - spots no area points to - a group of their own.
-  const AR = window.ArcanumAreas || { areas: [], secret: [] };
+  let ceOn = new URLSearchParams(location.search).has('ce');          // CE Restored or Carcanum (the version menu in the Atlas): see setCE
+  // Each mod has its own data under the names the code below reads (ArcanumCE, ArcanumCEMaps...): useMod puts the chosen one there
+  const MOD_KEYS = ['ArcanumCE', 'ArcanumCEMaps', 'ArcanumCEAreas', 'ArcanumCEMobs', 'ArcanumCEGlows', 'ArcanumCEAlias'];
+  const MODS = { ce: Object.fromEntries(MOD_KEYS.map(k => [k, window[k]])), car: { ArcanumCE: window.ArcanumCarcanum, ArcanumCEMaps: window.ArcanumCarcanumMaps, ArcanumCEAreas: window.ArcanumCarcanumAreas, ArcanumCEMobs: window.ArcanumCarcanumMobs, ArcanumCEGlows: window.ArcanumCarcanumGlows },
+    fp: { ArcanumCE: window.ArcanumFP, ArcanumCEMaps: window.ArcanumFPMaps, ArcanumCEAreas: window.ArcanumFPAreas, ArcanumCEMobs: window.ArcanumFPMobs, ArcanumCEGlows: window.ArcanumFPGlows, ArcanumCEAlias: window.ArcanumCEAlias },      // (Forgotten Places is built on CE Restored: CE's pictures are still deduplicated through CE's alias list)
+    ru: { ArcanumCE: window.ArcanumRU, ArcanumCEMaps: window.ArcanumRUMaps, ArcanumCEAreas: window.ArcanumRUAreas, ArcanumCEMobs: window.ArcanumRUMobs, ArcanumCEGlows: window.ArcanumRUGlows } };
+  let modVer = 'ce';
+  function useMod(ver) { modVer = MODS[ver] ? ver : 'ce'; for (const k of MOD_KEYS) window[k] = MODS[modVer][k]; }
+  // The maps only CE Restored has join the list while it is on (appended, so the other maps keep their index) and leave it when it is off
+  // and so do the locations it adds to the world (ce-maps.js: named as on the map, a place each, opened on the spot where it lies)
+  function syncCEMaps() {
+    const CE = window.ArcanumCE, have = MP.maps.some(m => m.ce);
+    const hasLocs = L.places.some(p => p.ceLoc);
+    if (window.ArcanumCEMaps && hasLocs !== ceOn) {
+      if (ceOn) {
+        L.places.push(...window.ArcanumCEMaps.locations.filter(r => !L.places.some(p => p.name === r.name) && !(modVer === 'fp' && r.name === "Wolfe's Cave")).map(r => ({ name: r.name, modGroup: r.settlement ? 'Cities' : 'Other locations', view: r.tile, labels: [], area: true, ceLoc: true })));
+        L.places.push(...(window.ArcanumCEMaps.secret || []).filter(s => !L.places.some(p => p.name === s.name)).map(s => ({ name: s.name, modGroup: 'Secret areas', view: s.tile, labels: [], area: true, ceLoc: true })));
+      }
+      else L.places = L.places.filter(p => !p.ceLoc);
+    }
+    if (!CE || have === ceOn) return;
+    if (ceOn) {
+      const base = MP.maps.length;
+      // Forgotten Places: its caves and houses sit under the place they belong to (see atlas-app.js)
+      const fp = modVer === 'fp', FPG = { Brandybuck: 'Brandybuck', CaveOfBanishment: 'The Cavern of Madness', LeahboUnderground: 'Leahbo', Plainwicke: 'Plainwicke Plantation', 'Spider Cave': 'Spider Cave', TombOfHorrors: "Acererak's Tomb" };
+      const FPN = { Brandybuck: 'Brandybuck Houses', 'Spider Cave': 'Spider Cave - Inside' };
+      MP.maps.push(...CE.maps.map(m => fp && FPN[m.name] ? { ...m, name: FPN[m.name] } : m));
+      MP.sections.push(...CE.sections.map(s => ({ ...s, map: s.map + base, ...(fp && FPG[s.name] ? { group: FPG[s.name], ...(FPN[s.name] && { name: FPN[s.name] }) } : {}) })));
+    } else {
+      MP.maps.splice(MP.maps.findIndex(m => m.ce));
+      for (let i = MP.sections.length - 1; i >= 0; i--) if (MP.sections[i].map >= MP.maps.length) MP.sections.splice(i, 1);
+    }
+    mapIndex.clear(); MP.maps.forEach((m, i) => mapIndex.set(m.key, i));
+    for (const l of modLabels) {      // the labels of the mod's own maps come and go with them
+      const map = mapIndex.get(l.mapKey), at = labels.indexOf(l);
+      l.map = map == null ? null : map;
+      if (map != null && at < 0) { l.place = MP.maps[map].name; labels.push(l); }
+      else if (map == null && at >= 0) labels.splice(at, 1);
+    }
+  }
+  syncCEMaps();
+  const BASE_AR = window.ArcanumAreas || { areas: [], secret: [] };
+  let AR = BASE_AR;
   const sectionNames = new Set(MP.sections.map(s => s.name));
   const QUEST_PLACES = new Set(['The Black Mountain Mines']);       // quest places the world labels do not group as such
-  for (const a of AR.areas) if (!a.place && !sectionNames.has(a.name)) { L.places.push({ name: a.name, modGroup: a.settlement ? 'Cities' : QUEST_PLACES.has(a.name) ? 'Quest locations' : 'Other locations', view: a.tile, labels: [], area: true }); a.place = a.name; }
-  for (const s of AR.secret) L.places.push({ name: s.name, modGroup: 'Secret areas', view: s.tile, labels: [], area: true });
-  // what the names on the map are: settlements (always there), other areas, secret areas
-  const PINS = [];
-  for (const a of AR.areas) PINS.push({ name: a.name, tile: a.tile, big: a.settlement, hidden: a.hidden, place: a.place, info: { ...a, kind: a.settlement ? 'settlement' : 'area' } });
-  for (const s of AR.secret) PINS.push({ name: s.name, tile: s.tile, big: false, secret: true, place: s.name, info: { ...s, kind: 'secret' } });
-  const pinned = new Set(PINS.map(p => p.place || p.name));
-  for (const p of L.places) if (p.view && !pinned.has(p.name)) PINS.push({ name: p.name, tile: p.view, big: p.modGroup === 'Cities', place: p.name });
-  PINS.sort((a, b) => b.big - a.big);
+  for (const a of BASE_AR.areas) if (!a.place && !sectionNames.has(a.name)) { L.places.push({ name: a.name, modGroup: a.settlement ? 'Cities' : QUEST_PLACES.has(a.name) ? 'Quest locations' : 'Other locations', view: a.tile, labels: [], area: true }); a.place = a.name; }
+  for (const s of BASE_AR.secret) L.places.push({ name: s.name, modGroup: 'Secret areas', view: s.tile, labels: [], area: true });
+  // what the names on the map are: settlements (always there), other areas, secret areas. With CE Restored on, its own list (ce-areas.js:
+  // the base game's with CE's changes and additions) stands in place of the base game's
+  const pinEls = new Map();
+  let PINS = [];
+  function buildPins() {
+    const ce = ceOn && window.ArcanumCEAreas;
+    AR = ce || BASE_AR;
+    // (a CE location is found by where it lies: Port Ruins is four areas of one name)
+    if (ce) for (const a of AR.areas) if (!a.place) { const q = L.places.find(q => q.area && (q.ceLoc ? q.view[0] === a.tile[0] && q.view[1] === a.tile[1] : q.name === a.name)); if (q) a.place = q.name; }
+    PINS = [];
+    const fpOut = !ceOn ? null : modVer === 'fp' ? new Set(["Wolfe's Cave", 'Center of Arcanum', 'Fan Graveyard']) : modVer === 'ce' ? new Set(['Center of Arcanum']) : null;      // (not shown in CE Restored / Forgotten Places, see atlas-app.js)
+    for (const a of AR.areas) if (!fpOut?.has(a.name)) PINS.push({ name: a.name, tile: a.tile, big: a.settlement, hidden: a.hidden, place: a.place, info: { ...a, kind: a.settlement ? 'settlement' : 'area' } });
+    for (const s of AR.secret) if (!fpOut?.has(s.name)) PINS.push({ name: s.name, tile: s.tile, big: false, secret: true, place: s.name, info: { ...s, kind: 'secret' } });
+    const pinned = new Set(PINS.map(p => p.place || p.name));
+    for (const p of L.places) if (p.view && !pinned.has(p.name) && !(ce && p.area)) PINS.push({ name: p.name, tile: p.view, big: p.modGroup === 'Cities', place: p.name });
+    PINS.sort((a, b) => b.big - a.big);
+    for (const el of pinEls.values()) el.remove();
+    pinEls.clear();
+  }
+  buildPins();
 
   // place list
   const byGroup = {};
@@ -198,6 +269,20 @@
   legend.innerHTML = Object.entries(CHECK).map(([k, [c, t]]) => `<div style="--c:${c}"><i></i>${t}<b>${counts[k] || 0}</b></div>`).join('');
   if (saved.check) { document.body.classList.add('check'); document.getElementById('checkBtn').classList.add('on'); }
   document.getElementById('checkBtn').onclick = e => { e.currentTarget.classList.toggle('on', document.body.classList.toggle('check')); saveOpts(); schedule(); };
+  // The filters as one number for the page's link: a bit per filter button (FLAG_KEYS), 64 = people switched off, 128 = encounters
+  const FLAG_KEYS = ['chest', 'people', 'creature', 'way', 'item', 'sign'];
+  const flagBits = () => FLAG_KEYS.reduce((n, k, i) => n | (FILTERS[k] ? 1 << i : 0), 0) | (showOff ? 64 : 0) | (showEnc ? 128 : 0);
+  function applyFlags(n) {
+    FLAG_KEYS.forEach((k, i) => {
+      FILTERS[k] = !!(n & (1 << i));
+      const b = document.querySelector(`#filters button[data-f="${k}"]`); if (b) b.classList.toggle('on', FILTERS[k]);
+      if (k === 'creature' && FILTERS[k]) loadCreatures();
+    });
+    showOff = !!(n & 64); document.getElementById('offBtn').classList.toggle('on', showOff);
+    showEnc = !!(n & 128); document.getElementById('encBtn').classList.toggle('on', showEnc); loadEnc();
+    if (!showEnc) encMark = null;
+    markCache.clear(); saveOpts(); schedule();
+  }
 
   // ---- view ----------------------------------------------------------------------------------------
   const canvas = document.getElementById('stage'), ctx = canvas.getContext('2d'), pinsEl = document.getElementById('pins');
@@ -214,11 +299,17 @@
   function box() {
     if (cur < 0) return worldPictures.box;
     const [x0, y0, x1, y1] = MP.maps[cur].bbox, xs = [tileWX(x0, y0), tileWX(x1, y0), tileWX(x0, y1), tileWX(x1, y1)], ys = [tileWY(x0, y0), tileWY(x1, y0), tileWY(x0, y1), tileWY(x1, y1)];
-    return { x0: Math.min(...xs) - 300, x1: Math.max(...xs) + 300, y0: Math.min(...ys) - 300, y1: Math.max(...ys) + 300 };
+    const b = { x0: Math.min(...xs) - 300, x1: Math.max(...xs) + 300, y0: Math.min(...ys) - 300, y1: Math.max(...ys) + 300 };
+    const pb = ceOn && window.ArcanumCE?.pictures[MP.maps[cur].key] && layers.get(MP.maps[cur].key)?.box;      // CE Restored may add sectors to a module's map beyond its edge
+    return pb ? { x0: Math.min(b.x0, pb.x0), x1: Math.max(b.x1, pb.x1), y0: Math.min(b.y0, pb.y0), y1: Math.max(b.y1, pb.y1) } : b;
   }
   const fitZoom = () => { const b = box(); return Math.min(cw / (b.x1 - b.x0), ch / (b.y1 - b.y0)); };
   function fit() { const b = box(); view.z = fitZoom(); view.ox = cw / 2 - view.z * (b.x0 + b.x1) / 2; view.oy = ch / 2 - view.z * (b.y0 + b.y1) / 2; schedule(); }
-  function zoomAt(mx, my, f) { const z = Math.max(fitZoom() * (cur < 0 ? 0.8 : 0.5), Math.min(cur < 0 ? 1.5 : 3, view.z * f)), k = z / view.z; view.ox = mx - (mx - view.ox) * k; view.oy = my - (my - view.oy) * k; view.z = z; schedule(); }
+  // these module maps, and any map whose sector grid is over 50 x 50, may be zoomed out to 0.1 %
+  const FAR_OUT = new Set(['WhiteSands - WhiteSands', 'Escape Tarant - Death']);
+  const farOut = m => { const g = pictureSource(m.key)?.map; return FAR_OUT.has(m.key) || !!g && (g.gridW > 50 || g.gridH > 50); };
+  const minZoom = () => cur < 0 ? fitZoom() * 0.8 : farOut(MP.maps[cur]) ? Math.min(fitZoom() * 0.5, 0.001) : fitZoom() * 0.5;
+  function zoomAt(mx, my, f) { const z = Math.max(minZoom(), Math.min(cur < 0 ? 1.5 : 3, view.z * f)), k = z / view.z; view.ox = mx - (mx - view.ox) * k; view.oy = my - (my - view.oy) * k; view.z = z; schedule(); }
   // which map is on show (-1 = the world); the parent page is told so its title and list follow
   // the maps and views left behind by jumping (a door, a place of the list, a link): "Back" goes to the last one
   const backStack = [];
@@ -233,6 +324,16 @@
   function centreOn(X, Y, z) {
     if (!cw) { pending = () => centreOn(X, Y, z); return; } view.z = z; view.ox = cw / 2 - z * tileWX(X, Y); view.oy = ch / 2 - z * tileWY(X, Y); schedule(); }
   let pending = null;   // a view asked for while the page was hidden (0 px wide): done once it has a size
+  // The game's start tile of a map is not always on the map (it was placed loosely): then a waypoint that stands on it is where
+  // the view opens.
+  async function onMap(idx, start) {
+    const pics = layerFor(idx);
+    if (!pics || !pics.has) return start;
+    await pics.ready;
+    if (pics.has(start[0], start[1])) return start;
+    const w = labels.find(l => l.map === idx && catsOf(l).includes('waypoint') && pics.has(l.tile[0], l.tile[1]));
+    return w ? w.tile : start;
+  }
   // a place of the world, or a section of one of the other maps; `tile` = arrive on that tile instead of framing the place
   function goPlace(name, tile) {
     const p = L.places.find(q => q.name === name), s = !p && MP.sections.find(q => q.name === name);
@@ -243,6 +344,7 @@
     if (tile) { centreOn(tile[0], tile[1], p ? 0.3 : 0.7); return; }
     // arrive where the game puts the player: the world map's spot of the place (its area), or the start of the map
     const area = p && AR.areas.find(a => a.place === p.name), st = area ? area.tile : s && MP.maps[s.map].start;
+    if (st && s) { onMap(s.map, st).then(t => centreOn(t[0], t[1], 0.7)); return; }
     if (st) { centreOn(st[0], st[1], p ? 0.3 : 0.7); return; }
     const pts = (p || s).labels.filter(l => l.tile);
     if (pts.length > 1) {   // frame the place's labels
@@ -257,26 +359,57 @@
   }
 
   // ---- pictures ---------------------------------------------------------------------------------------
-  // One picture per sector (atlas/world/, atlas/maps/, atlas/modules/, toolbox/atlas/build_map_pictures.py: tiles, walls, scenery and the game's light).
+  // One picture per sector (atlas/world/, atlas/maps/, atlas/modules/; the terrain templates, atlas/terrain/, toolbox/atlas/build_map_pictures.py: tiles, walls, scenery and the game's light).
   // Drawn like this:
   //  * far and middle distance: tiles of 256 px put together from one small patch per picture, shrunk once per level
   //    with smoothing, each patch opaque over the sector's average colour inside its diamond, so neighbouring sectors
   //    meet without a seam and nothing is stretched up from a thumbnail;
   //  * close: each sector's own picture (1/16, 1/4 or full size as the zoom needs) over a diamond of its average colour.
   // The patches and tiles are made with canvas drawing only (no reading pixels back), so this works from file:// too.
-  function makePictures(src) {
+  // prev: the layer of the same map from the other source (CE Restored on or off). Its decoded pictures are taken over by file name,
+  // so only the sectors whose picture differs are fetched again, and it stays on screen until this one can draw.
+  function makePictures(src, prev) {
+    const inh = prev ? prev.share() : null;
+    let stale = prev || null;
     const C = src.common, M = src.map;
     const IMGW = C.img.w, IMGH = C.img.h, SW = C.sector.w, HW = SW / 2, HH = C.sector.h / 2, PD = C.pad, A = C.atlas;
     const GW = M.gridW, GH = M.gridH, images = M.images, ORX = M.bounds.minX, ORY = M.bounds.minY;
     const X0 = HW * (ORY - ORX), Y0 = HH * (ORX + ORY);       // world px of the grid's first sector (absolute sector numbers)
     const LEVEL_W = { 0: IMGW, 1: IMGW / +C.levels[1], 2: IMGW / +C.levels[2] };
-    // a small map keeps only the sizes it needs (build_map_pictures.prune_levels): TOP is its smallest (0: L0 alone,
-    // 0.5: L0 and L0.5, 1: L1 too, 2: L2 too), SMALL the objects layers that have a 1/4 picture
-    const TOP = M.top ?? 2, SMALL = new Set(M.small ?? ['O', 'F']), TILE_SRC = Math.min(2, TOP);
-    let cells = null, disposed = false;
-    const ready = (async () => {
-      const bin = Uint8Array.from(atob(M.grid), c => c.charCodeAt(0));
-      cells = new Uint16Array(await new Response(new Blob([bin]).stream().pipeThrough(new DecompressionStream('deflate'))).arrayBuffer());
+    // SMALL: the objects layers that have a 1/4 picture (a small map keeps only the sizes it needs, build_map_pictures.prune_levels)
+    const SMALL = new Set(M.small ?? ['O', 'F']), PC = C.pieces;
+    let cells = null, disposed = false, LV = null, LVm = null;
+    // The ground (levels 2, 1, 0.5, 0 and the tiles' 1/16 pictures) is drawn from the map's live files (LV, live-layer.js): the base game's sectors
+    // from them, the sectors a version (CE Restored...) adds or changes from that version's (LVm, registry key <version>:<map>); a sector with
+    // no file (and every sector far away) shows the atlas picture
+    function liveLayers() {
+      const L = window.ArcanumLive, mk = `${modVer}:${src.key}`;
+      const wantB = L && L.has(src.key) && (!ceOn || src.old || !src.ceMap), wantM = L && ceOn && L.has(mk);      // (a map only the version has: no base layer; a map the version does not touch is the base game's: its own live files)
+      if (!wantB && LV) { LV.dispose(); LV = null; }
+      if (!wantM && LVm) { LVm.dispose(); LVm = null; }
+      if (wantB && !LV) LV = L.create(src.key, { view, schedule });
+      if (wantM && !LVm) LVm = L.create(mk, { view, schedule });
+      return [LV, LVm].filter(Boolean);
+    }
+    const liveOf = i => images[i].kind !== 'sec' && images[i].kind !== 'tpl' ? null : ceOn && src.ceMap && images[i].kind === 'sec' && (!src.old || images[i].ce) ? LVm : LV;
+    const ready = (async () => {      // (a mod's map of the base game's size has only the cells it changes: gridPatch over the base game's grid)
+      // (the world's grid is written as its low bytes, then its high bytes: gridPlanes, build_map_pictures.write_index_files)
+      const from = M.grid != null ? M : C.maps[src.key]?.grid != null ? C.maps[src.key] : null;
+      const grid = from ? from.grid : (await mapGrids())[src.key];
+      const s = atob(grid), bin = new Uint8Array(s.length);
+      for (let i = 0; i < s.length; i++) bin[i] = s.charCodeAt(i);
+      const buf = await new Response(new Blob([bin]).stream().pipeThrough(new DecompressionStream('deflate'))).arrayBuffer();
+      if (from?.gridPlanes) {
+        const b = new Uint8Array(buf), n = b.length >> 1;
+        cells = new Uint16Array(n);
+        for (let i = 0; i < n; i++) cells[i] = b[i] | b[n + i] << 8;
+      } else cells = new Uint16Array(buf);
+      const P = M.gridPatch || [];
+      for (let i = 0; i < P.length; i += 2) cells[P[i]] = P[i + 1];
+      // only the world map shows terrain where a sector has no .sec; the base game's and CE Restored's other maps leave those cells empty (modules keep theirs)
+      // (CE Restored's Hell Day keeps its terrain too)
+      if (src.key !== 'World' && !/^atlas\/modules|\/hell-day$/.test(String(M.dir)))
+        for (let i = 0; i < cells.length; i++) if (cells[i] && images[cells[i] - 1].kind === 'tpl') cells[i] = 0;
       schedule();
     })();
     // the map's extent in world px (sector rx, ry is at x = HW (ry - rx): from -(GW - 1) to GH - 1 half sectors)
@@ -305,32 +438,24 @@
       g.lineTo(cx - hw * (1 + (c + d) / 2), cy + hh * (c - d) / 2);
       g.closePath(); g.fill();
     }
-    const urlOf = (lvl, i) => `${src.base}L${lvl}/${images[i].stem}.${src.ext}`;
-
-    // pictures: the atlas always; L2 / L1 / L0 on demand under a memory budget
-    const BUDGET = 600 * 1024 * 1024, cache = new Map(), failed = new Set(), wanted = [];
-    let active = 0, frameNo = 0, atlasImg = null, cacheBytes = 0;
-    const atlas = new Image(); atlas.onload = () => { atlasImg = atlas; schedule(); }; atlas.src = src.atlasUrl;
-    function request(lvl, i) {
-      const key = lvl + '/' + i; if (cache.has(key) || failed.has(key) || disposed) return;
-      const e = { img: new Image(), ready: false, bytes: LEVEL_W[lvl] * (LEVEL_W[lvl] * IMGH / IMGW) * 4, used: frameNo };
-      cache.set(key, e); active++;
-      const finish = ok => {
-        active--; e.ready = ok;
-        if (e.ready) cacheBytes += e.bytes; else { cache.delete(key); failed.add(key); }
-        evict(); pump(); schedule();
-      };
-      e.img.src = urlOf(lvl, i);
-      e.img.decode().then(() => finish(true), () => finish(false));      // decoded off the main thread, so drawing it later does not stall the page
-    }
-    function pump() { while (active < 6 && wanted.length) { const w = wanted.shift(); request(w[0], w[1]); } }
-    function evict() {
-      if (cacheBytes <= BUDGET) return;
-      for (const [key, e] of [...cache.entries()].filter(([, e]) => e.ready && e.used < frameNo).sort((a, b) => a[1].used - b[1].used)) {
-        if (cacheBytes <= BUDGET * 0.8) break; cache.delete(key); cacheBytes -= e.bytes; e.img.src = '';
+    // a terrain template's pictures are shared by the maps that use it (atlas/terrain/), not in the map's own folder
+    // (CE Restored: a picture flagged ce is in the CE folder, the others of the combined map in the base game's)
+    // (Forgotten Places: a combined map lies over three folders, so each of its pictures names its own, d)
+    const baseOf = i => images[i].kind === 'tpl' ? C.terrain + '/' : images[i].d ? images[i].d + '/' : src.old && !images[i].ce ? src.old : src.base;
+    // a picture that is the same as another is stored once: its URL becomes the copy's (CE pictures: toolbox/atlas/dedupe_ce.py, ce-alias.js;
+    // all the others: dedupe_pictures.py, pic-alias*.js, asked second since a CE alias can name a picture that moved;
+    // a copy ending in '/' is the file of the same name in that folder)
+    const aliasUrl = u => {
+      for (const A of [window.ArcanumCEAlias, window.ArcanumPicAlias]) {
+        const i = u.lastIndexOf('/'), d = A && A[u.slice(6, i)], f = u.slice(i + 1), t = d && d[f];
+        if (t) u = 'atlas/' + (t.endsWith('/') ? t + f : t);
       }
-    }
-    const bestReady = i => { for (const lvl of [0, 1, 2]) { const e = cache.get(lvl + '/' + i); if (e && e.ready) { e.used = frameNo; return e.img; } } return null; };
+      return u;
+    };
+
+    // the atlas picture (1/64 of every sector): far away, and where a sector has no live file
+    let frameNo = 0, atlasImg = null;
+    const atlas = new Image(); atlas.onload = () => { atlasImg = atlas; schedule(); }; atlas.src = src.atlasUrl;
 
     // very far: one dot per sector (each a little wider than the spacing, so no gaps), built once
     const OV_W = 4096, ovStep = OV_W / (GW + GH), ovDotW = Math.ceil(2 * ovStep) + 1, ovDotH = Math.ceil(ovStep) + 1;
@@ -338,15 +463,21 @@
     function drawOverview(z) {
       if (!overview) {
         const h = Math.ceil((GW + GH) * ovStep / 2) + 4, c = document.createElement('canvas'); c.width = OV_W; c.height = h;
-        const g = c.getContext('2d'), img = g.createImageData(OV_W, h), px = img.data;
-        for (let v = 0; v <= GW + GH - 2; v++) for (let u = -(GW - 1); u <= GH - 1; u++) {
-          if ((u + v) & 1) continue;
-          const rx = (v - u) / 2, ry = (v + u) / 2; if (rx < 0 || ry < 0 || rx >= GW || ry >= GH) continue;
-          const n = cells[ry * GW + rx]; if (!n) continue;
-          const col = images[n - 1].color, X = Math.round((u + GW - 1 + 0.5) * ovStep) - 1, Y = Math.round((v + 0.5) * ovStep / 2) - 1;
-          for (let dy = 0; dy < ovDotH; dy++) for (let dx = 0; dx < ovDotW; dx++) {
-            const xx = X + dx - (ovDotW >> 1) + 1, yy = Y + dy - (ovDotH >> 1) + 1; if (xx < 0 || xx >= OV_W || yy < 0 || yy >= h) continue;
-            const o = (yy * OV_W + xx) * 4; px[o] = col[0]; px[o + 1] = col[1]; px[o + 2] = col[2]; px[o + 3] = 255;
+        const g = c.getContext('2d'), img = g.createImageData(OV_W, h), px32 = new Uint32Array(img.data.buffer);
+        // (the world has 4 million sectors: each dot is written as whole pixels, 32 bits at a time, from tables made once - RGBA
+        // in memory order - and only the u that land on the grid are visited, in the same order, as dots overlap)
+        const LE = new Uint8Array(new Uint32Array([1]).buffer)[0] === 1;
+        const words = new Uint32Array(images.length);
+        images.forEach((im, i) => { const col = im.color; if (col) words[i] = (LE ? (255 << 24 | col[2] << 16 | col[1] << 8 | col[0]) : (col[0] << 24 | col[1] << 16 | col[2] << 8 | 255)) >>> 0; });
+        const offX = (ovDotW >> 1) - 1, offY = (ovDotH >> 1) - 1, XA = new Int32Array(GW + GH), XB = new Int32Array(GW + GH);   // a dot's columns, by u + GW - 1
+        for (let k = 0; k < GW + GH; k++) { const X = Math.round((k + 0.5) * ovStep) - 1; XA[k] = Math.max(0, X - offX); XB[k] = Math.min(OV_W, X - offX + ovDotW); }
+        for (let v = 0; v <= GW + GH - 2; v++) {
+          const ua = Math.max(-(GW - 1), -v, v - 2 * (GW - 1)), ub = Math.min(GH - 1, v, 2 * (GH - 1) - v);
+          const Y = Math.round((v + 0.5) * ovStep / 2) - 1, y0 = Math.max(0, Y - offY), y1 = Math.min(h, Y - offY + ovDotH);
+          for (let u = ua + ((ua + v) & 1); u <= ub; u += 2) {
+            const n = cells[((v + u) >> 1) * GW + ((v - u) >> 1)]; if (!n) continue;
+            const word = words[n - 1], x0 = XA[u + GW - 1], x1 = XB[u + GW - 1];
+            for (let yy = y0; yy < y1; yy++) for (let o = yy * OV_W + x0, e = yy * OV_W + x1; o < e; o++) px32[o] = word;
           }
         }
         g.putImageData(img, 0, 0); overview = c;
@@ -359,7 +490,7 @@
     // 128 and 256 from the 1/16 pictures (1/4 where a small map has none), loaded when a tile needs them; a map with
     // pieces only (L0, L0.5) has tiles up to 64 only, its sectors drawn one by one from there.
     const TILE = 256, TILE_LEVELS = [4, 8, 16, 32, 64, 128, 256], ATLAS_LEVELS_TO = 64, TILE_BUDGET_MS = 10;
-    const TILES_BELOW_PX = (TOP >= 1 ? 256 : ATLAS_LEVELS_TO) / 0.9, OVERVIEW_BELOW_PX = 3;
+    const TILES_BELOW_PX = 256 / 0.9, OVERVIEW_BELOW_PX = 3;
     const levels = new Map(), tiles = new Map();
     function levelOf(s) {
       let L = levels.get(s);
@@ -372,16 +503,23 @@
     }
     // a picture's patch for a level: its average colour in its diamond (a hair larger, so diamonds overlap), the picture
     // shrunk over it; null while the 1/16 picture it needs is loading (it is asked for)
+    // a sector's live 1/16 picture: undefined when the sector has no live file, null while it is being made
+    function liveThumb(i) {
+      if (!window.ArcanumLive) return undefined;
+      liveLayers();
+      const lv = liveOf(i);
+      return lv && lv.ok(images[i].stem) ? lv.thumb(images[i].stem) : undefined;
+    }
     function patchOf(L, i) {
       if (L.patches[i]) return L.patches[i];
       const im = images[i];
       let source = null, sx = 0, sy = 0, sw = 0, sh = 0;
       if (!L.fromL2) { source = atlasImg; sx = im.atlas[0] * A.w; sy = im.atlas[1] * A.h; sw = A.w; sh = A.h; }
-      else if (!failed.has(TILE_SRC + '/' + i)) {
-        const e = cache.get(TILE_SRC + '/' + i);
-        if (!e) { wanted.push([TILE_SRC, i]); return null; }
-        if (!e.ready) return null;
-        e.used = frameNo; source = e.img; sw = e.img.naturalWidth; sh = e.img.naturalHeight;
+      else {          // the sector's 1/16 picture comes from its live file; a sector with none keeps the atlas picture
+        const t = liveThumb(i);
+        if (t === null) return null;
+        if (t) { source = t; sw = t.width; sh = t.height; }
+        else { source = atlasImg; sx = im.atlas[0] * A.w; sy = im.atlas[1] * A.h; sw = A.w; sh = A.h; }
       }
       const c = document.createElement('canvas'); c.width = L.pw; c.height = L.ph;
       const g = c.getContext('2d');
@@ -480,19 +618,14 @@
         }
       }
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      pump();
       return missing;
     }
 
-    // close: each sector's picture over a diamond of its average colour (neighbouring pictures meet along soft
-    // diagonal edges, which would let the background show through as a fine grid)
-    // Close up the pictures are in pieces (C.pieces: L0 full size in 8 x 4, L0.5 half size in 4 x 2, only those not empty): only the
-    // pieces on screen are fetched and decoded, and the 1/4 picture stands in meanwhile. A whole full-size picture is 66 MB
-    // once decoded: a few of those froze the page for seconds.
+    // close: each sector drawn from its live file (live-layer.js: level 2, 1, 0.5 or 0 as the zoom needs) over a diamond of its
+    // average colour (neighbouring pictures meet along soft diagonal edges, which would let the background show through as a fine grid)
     function drawSectors(z) {
       const disp = IMGW * z;
-      let lvl = disp <= A.w * 1.25 ? 3 : disp <= LEVEL_W[2] * 1.25 ? 2 : disp <= LEVEL_W[1] * 1.25 ? 1 : PC && disp <= IMGW / PC['L0.5'][2] * 1.25 ? 0.5 : 0;
-      if (lvl !== 3 && lvl > TOP) lvl = TOP;                   // a size the map does not have: the next larger
+      const lvlWant = disp <= A.w * 1.25 ? 3 : disp <= LEVEL_W[2] * 1.25 ? 2 : disp <= LEVEL_W[1] * 1.25 ? 1 : PC && disp <= IMGW / PC['L0.5'][2] * 1.25 ? 0.5 : 0;
       const wx0 = -view.ox / z - X0, wx1 = (cw - view.ox) / z - X0, wy0 = -view.oy / z - Y0, wy1 = (ch - view.oy) / z - Y0, mX = HW + PD.l + 8;
       const u0 = Math.ceil((wx0 - mX) / HW), u1 = Math.floor((wx1 + mX) / HW);
       // picture v spans world y from HH v - 20 - pad.t to HH v - 20 + sector height + pad.b
@@ -502,71 +635,43 @@
         const rx = (v - u) / 2, ry = (v + u) / 2; if (rx < 0 || ry < 0 || rx >= GW || ry >= GH) continue;
         const n = cells[ry * GW + rx]; if (n) vis.push([rx, ry, n - 1]);
       }
-      ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = 'medium';
+      const lives = lvlWant !== 3 ? liveLayers() : [];           // Live: the ground of the sectors that have live files comes from them (levels 2, 1, 0.5, 0)
+      let rough = false;
+      for (const l of lives) rough = l.begin(lvlWant) || rough;
+      ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = rough ? 'low' : 'medium';
       for (const [rx, ry, i] of vis) {
         const cx = view.ox + z * (X0 + HW * (ry - rx)), cy = view.oy + z * (Y0 + HH * (rx + ry) + HH - 20), hw = z * HW, hh = z * HH;
         if (cx + hw + 2 < 0 || cx - hw - 2 > cw || cy + hh + 2 < 0 || cy - hh - 2 > ch) continue;
+        const lv = lives.length ? liveOf(i) : null;
+        if (lv && lv.ok(images[i].stem) && lv.ready(images[i].stem)) continue;   // Live picture ready: its own black base is the ground, the average colour would only show as a line where its band is clear
         ctx.fillStyle = css(images[i]);
         fillDiamond(ctx, cx, cy, hw, hh, Math.max(1.5 / hw, 1 / hh), sidesAt(rx, ry));
       }
-      const need = [];
       for (const [rx, ry, i] of vis) {
         const dx = view.ox + z * (X0 + HW * (ry - rx) - HW - PD.l), dy = view.oy + z * (Y0 + HH * (rx + ry) - 20 - PD.t), dw = IMGW * z, dh = IMGH * z;
         if (dx > cw || dy > ch || dx + dw < 0 || dy + dh < 0) continue;
         const d = Math.hypot(dx + dw / 2 - cw / 2, dy + dh / 2 - ch / 2);
-        if (lvl < 1 && PC && images[i].p) { drawPieces('L' + lvl, i, dx, dy, z, d, need, sidesAt(rx, ry)); continue; }
-        let shown = null;
-        if (lvl !== 3) {
-          const l = lvl < 1 ? 0 : lvl, e = cache.get(l + '/' + i);      // a picture not in pieces: whole
-          if (e && e.ready) { e.used = frameNo; shown = e.img; }
-          else { shown = bestReady(i); if (!e) need.push([l, i, d]); }
-        }
-        if (shown) ctx.drawImage(shown, dx, dy, dw, dh);
-        else if (atlasImg) ctx.drawImage(atlasImg, images[i].atlas[0] * A.w, images[i].atlas[1] * A.h, A.w, A.h, dx, dy, dw, dh);
+        const lv = lives.length ? liveOf(i) : null;
+        if ((!lv || !lv.ok(images[i].stem) || !lv.draw(ctx, images[i].stem, dx, dy, dw, dh, d)) && atlasImg) ctx.drawImage(atlasImg, images[i].atlas[0] * A.w, images[i].atlas[1] * A.h, A.w, A.h, dx, dy, dw, dh);
       }
-      need.sort((a, b) => a[2] - b[2]); for (const n of need.slice(0, 60)) wanted.push([n[0], n[1]]);
-      pump();
+      for (const l of lives) l.end();
       if (z >= OBJECTS_FROM_Z && (objMask.size || offMask.size)) drawObjects(z, vis);
       piecePump();
     }
-    // pieces that were only black are not kept (p[2], p[3]: their masks): black is filled there, over the sector's diamond only
-    // (a black piece's ground covered the average colour and what the sectors behind reach into the diamond, nothing else)
-    function drawPieces(name, i, dx, dy, z, d, need, sides) {
-      const [cols, rows, f] = PC[name], j = name === 'L0' ? 0 : 1, mask = images[i].p[j] >>> 0, black = (images[i].p[j + 2] ?? 0) >>> 0;
-      const pw = IMGW / cols, ph = IMGH / rows, stem = images[i].stem;
-      if (black) {
-        const hw = z * HW, hh = z * HH;
-        ctx.save(); ctx.fillStyle = '#000'; ctx.beginPath();
-        for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++) {
-          if (!(black >>> (r * cols + c) & 1)) continue;
-          ctx.rect(Math.round(dx + c * pw * z), Math.round(dy + r * ph * z), Math.round(dx + (c + 1) * pw * z) - Math.round(dx + c * pw * z), Math.round(dy + (r + 1) * ph * z) - Math.round(dy + r * ph * z));
-        }
-        ctx.clip();
-        fillDiamond(ctx, dx + z * (HW + PD.l), dy + z * (HH + PD.t), hw, hh, Math.max(1.5 / hw, 1 / hh), sides);
-        ctx.restore();
-      }
-      if (!mask) return;
-      if (TOP >= 1 && !cache.has('1/' + i) && !failed.has('1/' + i)) need.push([1, i, d]);
-      const stand = bestReady(i), k = stand ? stand.naturalWidth / IMGW : 0;
-      for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++) {
-        if (!(mask >>> (r * cols + c) & 1)) continue;
-        const x0 = Math.round(dx + c * pw * z), x1 = Math.round(dx + (c + 1) * pw * z), y0 = Math.round(dy + r * ph * z), y1 = Math.round(dy + (r + 1) * ph * z);
-        if (x0 > cw || y0 > ch || x1 < 0 || y1 < 0) continue;
-        const t = pieceNeed(`${name}/${i}/${c}/${r}`, `${src.base}${name}/${stem}_${c}_${r}.${src.ext}`, pw / f * ph / f * 4,Math.hypot((x0 + x1) / 2 - cw / 2, (y0 + y1) / 2 - ch / 2));
-        if (t) ctx.drawImage(t.img, x0, y0, x1 - x0, y1 - y0);
-        else if (stand) ctx.drawImage(stand, c * pw * k, r * ph * k, pw * k, ph * k, x0, y0, x1 - x0, y1 - y0);
-        else if (atlasImg) ctx.drawImage(atlasImg, images[i].atlas[0] * A.w + c * A.w / cols, images[i].atlas[1] * A.h + r * A.h / rows, A.w / cols, A.h / rows, x0, y0, x1 - x0, y1 - y0);
-      }
-    }
-
-    // pieces (ground and objects) and the 1/4 objects pictures: only those on screen are fetched, a few at a time, the ground
-    // before the objects and nearest the centre first, each decoded off the main thread before it is first drawn; the
-    // oldest dropped under a budget
-    const PC = C.pieces, P_BUDGET = 400 * 1024 * 1024, pcache = new Map(), OBJECTS_LATER = 1e5;
+    // the objects layers' pieces and 1/4 pictures: only those on screen are fetched, a few at a time, nearest the centre first,
+    // each decoded off the main thread before it is first drawn; the oldest dropped under a budget
+    const P_BUDGET = 400 * 1024 * 1024, pcache = new Map(), OBJECTS_LATER = 1e5;
     let pBytes = 0, pActive = 0;
     function pieceNeed(key, url, bytes, d) {
       let e = pcache.get(key);
-      if (!e) { if (disposed) return null; e = { key, url, img: null, state: 'queued', bytes, used: frameNo, d }; pcache.set(key, e); }
+      if (!e) {
+        url = aliasUrl(url);
+        if (disposed) return null;
+        const taken = inh && inh.pc.get(url);
+        e = taken ? { ...taken, key, used: frameNo, d } : { key, url, img: null, state: 'queued', bytes, used: frameNo, d };
+        if (taken) pBytes += bytes;
+        pcache.set(key, e);
+      }
       e.used = frameNo; e.d = d;
       return e.state === 'ready' ? e : null;
     }
@@ -575,15 +680,27 @@
         let best = null;
         for (const e of pcache.values()) if (e.state === 'queued' && e.used >= frameNo - 1 && (!best || e.d < best.d)) best = e;
         if (!best) break;
-        const e = best; e.state = 'loading'; e.img = new Image(); e.img.src = e.url; pActive++;
+        const e = best; e.state = 'loading'; pActive++;
         const done = ok => {
           pActive--;
           if (ok && !disposed) { e.state = 'ready'; pBytes += e.bytes; evictPieces(); } else { e.state = 'failed'; e.img = null; }
           piecePump(); schedule();
         };
-        e.img.decode().then(() => done(true), () => done(false));
+        loadPiece(e).then(() => done(true), () => done(false));
       }
       for (const [k, e] of pcache) if (e.state === 'queued' && e.used < frameNo - 1) pcache.delete(k);   // asked for, then scrolled away
+    }
+    // a piece stored as an overlay (toolbox/atlas/build_overlays.py, overlay.js) is the base piece with the file's pixels drawn over it
+    function loadPiece(e) {
+      const i = e.url.lastIndexOf('/'), base = (window.ArcanumOverlay || {})[e.url.slice(6, i)]?.[e.url.slice(i + 1)];
+      const top = new Image(); top.src = e.url;
+      if (!base) { e.img = top; return top.decode(); }
+      const under = new Image(); under.src = aliasUrl('atlas/' + base);
+      return Promise.all([top.decode(), under.decode()]).then(() => {
+        const c = document.createElement('canvas'); c.width = under.naturalWidth; c.height = under.naturalHeight;
+        const g = c.getContext('2d'); g.drawImage(under, 0, 0); g.drawImage(top, 0, 0, c.width, c.height);
+        e.img = c;
+      });
     }
     function evictPieces() {
       if (pBytes <= P_BUDGET) return;
@@ -609,14 +726,14 @@
         const dx = view.ox + z * (X0 + HW * (ry - rx) - HW - PD.l), dy = view.oy + z * (Y0 + HH * (rx + ry) - 20 - PD.t);
         if (dx > cw || dy > ch || dx + dw < 0 || dy + dh < 0) continue;
         const d = Math.hypot(dx + dw / 2 - cw / 2, dy + dh / 2 - ch / 2), stem = images[i].stem;
-        const small = SMALL.has(L) ? pieceNeed(L + '1/' + i, `${src.base}${L}1/${stem}.${src.ext}`, w1 * h1 * 4, d + OBJECTS_LATER) : null;
+        const small = SMALL.has(L) ? pieceNeed(L + '1/' + i, `${baseOf(i)}${L}1/${stem}.${src.ext}`, w1 * h1 * 4, d + OBJECTS_LATER) : null;
         if (far && SMALL.has(L)) { if (small) ctx.drawImage(small.img, dx, dy, dw, dh); continue; }
         const mask = masks.get(i);
         for (let r = 0; r < OBJ_ROWS; r++) for (let c = 0; c < OBJ_COLS; c++) {
           if (!(mask >>> (r * OBJ_COLS + c) & 1)) continue;
           const x0 = Math.round(dx + c * TW * z), x1 = Math.round(dx + (c + 1) * TW * z), y0 = Math.round(dy + r * TH * z), y1 = Math.round(dy + (r + 1) * TH * z);
           if (x0 > cw || y0 > ch || x1 < 0 || y1 < 0) continue;
-          const t = pieceNeed(`${L}0/${i}/${c}/${r}`, `${src.base}${L}0/${stem}_${c}_${r}.${src.ext}`, TW * TH * 4, OBJECTS_LATER + Math.hypot((x0 + x1) / 2 - cw / 2, (y0 + y1) / 2 - ch / 2));
+          const t = pieceNeed(`${L}0/${i}/${c}/${r}`, `${baseOf(i)}${L}0/${stem}_${c}_${r}.${src.ext}`, TW * TH * 4, OBJECTS_LATER + Math.hypot((x0 + x1) / 2 - cw / 2, (y0 + y1) / 2 - ch / 2));
           if (t) ctx.drawImage(t.img, x0, y0, x1 - x0, y1 - y0);
           else if (small) ctx.drawImage(small.img, c * TW / 4, r * TH / 4, TW / 4, TH / 4, x0, y0, x1 - x0, y1 - y0);   // the quarter-size picture meanwhile
         }
@@ -625,9 +742,17 @@
 
     return {
       box, ready,
+      has: (tx, ty) => !!cells && filled((tx >> 6) - ORX, (ty >> 6) - ORY),      // is this tile on a sector the map has (after `ready`)
+      share() {          // what is decoded and ready, by file name, for the layer that takes over
+        const pc = new Map();
+        for (const e of pcache.values()) if (e.state === 'ready') pc.set(e.url, e);
+        return { pc };
+      },
       draw(z) {
+        if (stale && (!cells || !atlasImg)) { stale.draw(z); return; }       // the map it replaces, until this one has its grid and atlas
+        if (stale) { stale.dispose(); stale = null; }
         if (!cells) return;
-        frameNo++; wanted.length = 0;
+        frameNo++;
         // the map's ground is black: sectors that are only black have no picture (the world's own background, outside it, is not black)
         const gx = view.ox + z * X0, gy = view.oy + z * (Y0 - 20);
         ctx.fillStyle = '#000'; ctx.beginPath();
@@ -639,32 +764,92 @@
         else if (sectorPx * dpr < TILES_BELOW_PX) { ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = 'low'; if (drawTiles(z, sectorPx * dpr)) schedule(); }
         else drawSectors(z);
       },
-      dispose() { disposed = true; for (const e of cache.values()) e.img.src = ''; cache.clear(); pcache.clear(); for (const s of sheets) s.c.width = 0; tiles.clear(); levels.clear(); atlas.src = ''; },
+      dispose() { disposed = true; if (LV) { LV.dispose(); LV = null; } if (LVm) { LVm.dispose(); LVm = null; } if (stale) { stale.dispose(); stale = null; } pcache.clear(); for (const s of sheets) s.c.width = 0; tiles.clear(); levels.clear(); atlas.src = ''; },
     };
   }
   // the pictures of a map (null: none yet)
   const PIC = window.ArcanumPictures;
+  if (window.ArcanumLive) window.ArcanumLive.ready.then(() => schedule());      // the registry of maps that have sector files has arrived: draw them
+  // the grids of the maps other than the world (map-grids.js, build_map_pictures.write_index_files): fetched the first time one opens
+  let gridsP = null;
+  const mapGrids = () => gridsP || (gridsP = new Promise(ok => {
+    const s = document.createElement('script'); s.src = 'js/atlas/data/map-grids.js';
+    s.onload = () => ok(window.ArcanumMapGrids || {}); s.onerror = () => { gridsP = null; ok({}); };
+    document.head.appendChild(s);
+  }));
+  // CE Restored (the button in the Atlas): the maps as the improved game has them, from js/atlas/data/ce-restored.js
   function pictureSource(key) {
-    const M = PIC && PIC.maps[key];
-    return M ? { common: PIC, map: M, base: M.dir + '/', ext: 'webp', atlasUrl: M.dir + '/atlas.webp' } : null;
+    const CE = ceOn && window.ArcanumCE && window.ArcanumCE.pictures[key];
+    const M = CE || (PIC && PIC.maps[key]);
+    if (!M) return null;
+    return { key, common: PIC, map: M, ceMap: !!CE, base: M.dir + '/', old: CE && M.baseDir ? M.baseDir + '/' : null, ext: 'webp', atlasUrl: CE && M.atlasFile || M.dir + '/atlas.webp' };
   }
+  // CE Restored's people and creatures (ce-mobs.js): in the sectors it has, they stand in place of the base game's
+  const swapped = { npcs: [], creatures: [] };       // the base game's, taken out while CE is on
+  function swapMobs(list, kind) {
+    const CM = window.ArcanumCEMobs;
+    if (!CM) return;
+    const gone = swapped[kind], isCE = n => n.ce;
+    if (!ceOn) {                                      // back to the base game's
+      for (let i = list.length - 1; i >= 0; i--) if (isCE(list[i])) list.splice(i, 1);
+      list.push(...gone.splice(0));
+      return;
+    }
+    if (list.some(isCE)) return;
+    const add = [];
+    addNpcs({ ...CM, npcs: CM[kind] }, add);
+    for (const n of add) n.ce = true;
+    const inside = [];                                  // everyone in the maps only CE has (they are not in the base game's lists at all)
+    addNpcs({ ...CM, npcs: CM[kind === 'npcs' ? 'subNpcs' : 'subCreatures'] || [] }, inside, true);
+    for (const n of inside) n.ce = true;
+    const rel = f => f.slice(f.lastIndexOf('/') + 1).toLowerCase();     // by file name: a mod may keep a file in another subfolder than the base game (Carcanum: Crash Site's people sit in the world folder's root)
+    const theirs = new Set(add.map(n => rel(n.file)));       // CE only ships the .mob files it adds or changes: one with the same name replaces the base game's
+    for (let i = list.length - 1; i >= 0; i--) if (list[i].map === -1 && !list[i].sub && theirs.has(rel(list[i].file))) gone.push(...list.splice(i, 1));
+    list.push(...add, ...inside);
+  }
+  function swapAllMobs() { swapMobs(npcs, 'npcs'); if (creatures.length) swapMobs(creatures, 'creatures'); refreshChests(); markCache.clear(); }
+  refreshChests();
+  creaturesLoaded = () => { if (ceOn) swapMobs(creatures, 'creatures'); };
+
   const layers = new Map();
+  let replaced = new Map();               // the layers the last CE switch took out, by map: the new one takes over from them
   function layerFor(map) {                // map: -1 = the world, else an index into MP.maps
     const key = map < 0 ? 'World' : MP.maps[map].key;
     if (!layers.has(key)) {
-      const src = pictureSource(key);
-      layers.set(key, src ? makePictures(src) : null);
+      const src = pictureSource(key), prev = replaced.get(key);
+      replaced.delete(key);
+      layers.set(key, src ? makePictures(src, prev) : null);
+      if (prev && !src) prev.dispose();
     }
     return layers.get(key);
   }
-  const worldPictures = layerFor(-1);
+  let worldPictures = layerFor(-1);
+  function setCE(on, ver = modVer) {      // only what differs is fetched again: the layers swap sources and keep the pictures they share
+    if (on && ceOn && ver !== modVer) setCE(false);        // from one mod to the other: leave the first (with its own data), then enter the second
+    if (on === ceOn) return;
+    if (on) useMod(ver);
+    ceOn = on;
+    if (!on && cur >= MP.maps.findIndex(m => m.ce) && MP.maps.some(m => m.ce)) { switchMap(-1); fit(); }      // the map on show was one only CE has
+    syncCEMaps();
+    for (const l of replaced.values()) if (l) l.dispose();
+    replaced = new Map([...layers].filter(([, l]) => l));
+    layers.clear(); worldPictures = layerFor(-1); if (cur >= 0) layerFor(cur);
+    for (const l of replaced.values()) l.dispose();            // the maps not on show: made when next opened
+    replaced = new Map();
+    swapAllMobs(); buildPins(); schedule();
+  }
+  if (ceOn) swapAllMobs();
 
   // ---- drawing --------------------------------------------------------------------------------------
   let queued = false, frameNo = 0;
+  // &over=1 (the Atlas changed version and shows the map it had until this one has filled in, atlas-boot.js): the page and its background are
+  // transparent and the map is not painted black first, so what is not drawn yet shows the old map; 'atlas-opaque' ends it
+  let over = new URLSearchParams(location.search).has('over');
   function schedule() { if (!queued) { queued = true; requestAnimationFrame(draw); } }
   function draw() {
     queued = false; frameNo++;
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.fillStyle = cur >= 0 ? '#000' : '#0e0d0c'; ctx.fillRect(0, 0, cw, ch);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    if (over) ctx.clearRect(0, 0, cw, ch); else { ctx.fillStyle = cur >= 0 ? '#000' : '#0e0d0c'; ctx.fillRect(0, 0, cw, ch); }
     const z = view.z;
     const pics = layerFor(cur);
     if (pics) pics.draw(z);
@@ -675,19 +860,25 @@
     drawPins(z);
     const cx = (cw / 2 - view.ox) / z, cy = (ch / 2 - view.oy) / z;
     const tx = Math.round((cy / 20 - cx / 40) / 2), ty = Math.round((cy / 20 + cx / 40) / 2);
-    document.getElementById('hud').textContent = `tile ${tx}, ${ty} · ${z >= 0.1 ? Math.round(z * 100) : (z * 100).toPrecision(2)}%`;
+    hud();
     if (embed) {      // tell the page where the view is (for "Share this view"), once it has settled
       clearTimeout(viewTimer);
-      viewTimer = setTimeout(() => parent.postMessage({ type: 'atlas-view', view: { map: cur >= 0 ? MP.maps[cur].key : null, tile: [tx, ty], z: +view.z.toPrecision(4) } }, '*'), 300);
+      viewTimer = setTimeout(() => parent.postMessage({ type: 'atlas-view', view: { map: cur >= 0 ? MP.maps[cur].key : null, tile: [tx, ty], z: +view.z.toPrecision(4), f: flagBits() } }, '*'), 300);
     }
   }
-  let viewTimer = 0;
+  let viewTimer = 0, pointer = null;       // pointer: where the mouse is on the canvas, for the readout
+  // the readout follows the pointer (the middle of the view when it is off the map); a sector is 64 x 64 tiles
+  function hud() {
+    const z = view.z, hx = ((pointer ? pointer[0] : cw / 2) - view.ox) / z, hy = ((pointer ? pointer[1] : ch / 2) - view.oy) / z;
+    const px = Math.round((hy / 20 - hx / 40) / 2), py = Math.round((hy / 20 + hx / 40) / 2);
+    document.getElementById('hud').textContent = `Sector ${Math.floor(px / 64)}, ${Math.floor(py / 64)} (${px}, ${py}) · ${z >= 0.1 ? Math.round(z * 100) : (z * 100).toPrecision(2)}%`;
+  }
 
   // who gives a quest: the quests name the very object (its place and tile, from the same .mob / .sec files)
   const nk = s => String(s).toLowerCase().replace(/[^a-z0-9]/g, '');
   function markGivers(givers) {
     const at = new Set(givers.map(g => nk(g.place) + '|' + g.tile.join(',')));
-    for (const l of labels) l.quest = at.has(nk(mapKey(l.map, l.place)) + '|' + l.tile.join(','));
+    for (const l of new Set([...labels, ...modLabels])) l.quest = at.has(nk(l.map == null ? l.mapKey : mapKey(l.map, l.place)) + '|' + l.tile.join(','));
     for (const n of npcs) n.quest = at.has(nk(n.place) + '|' + n.tile.join(','));
     markCache.clear(); schedule();
   }
@@ -695,6 +886,14 @@
   // ---- glows -----------------------------------------------------------------------------------------
   // Everything of a switched-on kind on the current map glows where it stands (nothing is written on the map). Whatever is
   // selected (clicked, or sent by "show on the map") is ringed even when its filter is off.
+  // A person who takes you somewhere (the Tarant coachmen, Captain Teach, the ferry wheels) is one thing, the person: they glow under the
+  // waypoint filter too, and their panel carries the waypoint's buttons (atlas-app.js selectNpc). Found by the .mob the waypoint hangs on.
+  const fileOf = f => String(f || '').slice(String(f || '').lastIndexOf('/') + 1).toLowerCase();
+  function personOf(l) {
+    if (!l.to || !l.obj || !/\.mob$/i.test(l.obj[0])) return null;
+    const f = fileOf(l.obj[0]);
+    return npcs.find(n => n.map === l.map && fileOf(n.file) === f) || creatures.find(n => n.map === l.map && fileOf(n.file) === f) || null;
+  }
   const GLOW = { chest: '#ff4d3d', people: '#6fe07a', creature: '#c586ff', way: '#4fd1ff', item: '#ffa94d', sign: '#ffe27a' };
   const KINDS = Object.keys(FILTERS);
   function marksOf(kind) {
@@ -703,13 +902,19 @@
     if (list) return list;
     list = [];
     if (kind === 'chest') {
-      for (const c of chests) if (c.map === cur) list.push({ tile: c.tile, name: CONTAINER, c, open: () => selectChest(c) });
+      for (const c of chests) if (c.map === cur) list.push({ tile: c.tile, name: c.name || CONTAINER, c, open: () => selectChest(c) });
     }
     if (kind === 'people' || kind === 'creature') {
       for (const n of kind === 'people' ? npcs : creatures) if (n.map === cur) list.push({ tile: n.tile, name: n.name, n, open: () => selectNpc(n) });
     }
     if (kind === 'way' || kind === 'sign') {           // the labels: waypoints, and the signs that read something out
-      for (const l of labels) if (l.map === cur && (catsOf(l).includes('waypoint') ? 'way' : 'sign') === kind) list.push({ tile: l.tile, name: l.text, l, open: () => select(l) });
+      // one thing that is both (a sign on the door that teleports, a person who takes you somewhere) is listed and glows under both filters, as one
+      for (const l of labels) {
+        const cats = catsOf(l);
+        if (l.map !== cur || !(kind === 'way' ? cats.includes('waypoint') : cats.includes('information') || !cats.includes('waypoint'))) continue;
+        const p = kind === 'way' ? personOf(l) : null;       // a person who teleports: the person is the thing (their panel has the buttons)
+        list.push(p ? { tile: p.tile, name: p.name, n: p, open: () => selectNpc(p) } : { tile: l.tile, name: l.text, l, open: () => select(l) });
+      }
     }
     if (kind === 'item' && IT) {                        // what lies on the floor (items.js)
       for (const g of IT.ground) {
@@ -721,6 +926,18 @@
     markCache.set(key, list);
     return list;
   }
+  // Whatever holds a teleport glows the teleport's blue, under whichever filter it is drawn (a coachman under "people", a sign on a door that teleports under "signs")
+  function teleSet() {
+    const key = 'tele|' + cur;
+    let s = markCache.get(key);
+    if (!s) {
+      s = new Set();
+      for (const l of labels) if (l.map === cur && l.to) s.add(personOf(l) || l);           // (the person a waypoint hangs on, else the label)
+      markCache.set(key, s);
+    }
+    return s;
+  }
+  const isTele = m => m.l ? catsOf(m.l).includes('waypoint') : m.n ? teleSet().has(m.n) : false;
   const isActive = m => (m.c && m.c === activeChest) || (m.l && m.l === activeLabel) || (m.g && m.g === activeLabel) || (m.n && m.n === activeNpc);
   // The glow is a halo: faint in the middle so the figure stays readable, brightest just around its outline, then fading out.
   // One sprite per colour, stretched into an upright oval around the figure.
@@ -738,37 +955,85 @@
   }
   // Zoomed in, the halo takes the shape of the thing's own art (glow-shapes.js: its outline, widened and blurred, white on
   // clear sheets); the oval above is for what has no art of its own, and while a sheet is loading.
-  const GD = window.ArcanumGlows, glowSheets = [], tinted = new Map(), SHAPES_FROM_Z = 0.2;   // the objects' art shows from 20 %
-  function shapeOf(m, kind) {
-    const all = GD && GD.at[cur >= 0 ? MP.maps[cur].key : 'World'], t = all && all[m.tile[0] + ',' + m.tile[1]];
-    if (!t) return null;
-    // only the thing itself glows: people, containers, items on the floor, signs, waypoints
-    return t[m.n ? 'n' : m.c ? 'c' : m.g ? 'i' : kind === 'people' || kind === 'creature' ? 'n' : kind === 'chest' ? 'c' : kind === 'item' ? 'i' : kind === 'way' ? 'w' : 's'] || null;
+  // (CE Restored's own, ce-glows.js, go first while it is on: its people stand where the base game's did not)
+  const tinted = new Map(), SHAPES_FROM_Z = 0.2;   // the objects' art shows from 20 %
+  // glow-shapes.js and the mod's set (2 MB together) are fetched the first time a glow is drawn zoomed in, not with the page: the oval
+  // stands in until they are there
+  let GD = null, glowsAsked = false;
+  const MOD_GLOWS = { ce: 'ArcanumCEGlows', car: 'ArcanumCarcanumGlows', fp: 'ArcanumFPGlows', ru: 'ArcanumRUGlows' };
+  function loadGlows() {
+    if (glowsAsked) return;
+    glowsAsked = true;
+    const urls = ['js/atlas/data/glow-shapes.js', ...window.AtlasData.modUrls('glows')];
+    let left = urls.length;
+    const done = () => {
+      if (--left) return;
+      for (const [v, k] of Object.entries(MOD_GLOWS)) if (MODS[v] && window[k]) MODS[v].ArcanumCEGlows = window[k];
+      if (ceOn) window.ArcanumCEGlows = MODS[modVer].ArcanumCEGlows;
+      GD = window.ArcanumGlows || { at: {}, shapes: {} };
+      schedule();
+    };
+    for (const u of urls) { const s = document.createElement('script'); s.src = u; s.onload = s.onerror = done; document.head.appendChild(s); }
   }
-  function tintedShape(id, color) {
-    const key = id + color;
+  // A glow is one picture in the shared pool (atlas/glows/pool/<hash>.webp): the halo at the left, the art's outline at its right.
+  // Each object has its own: at[map]["X,Y"][kind] = [[hash, dx, dy, object], ...], the object being what the rows know it by
+  // (a .mob's lower-case file name, or p<prototype> for an object of a .sec); a mod's set lists only what it changes.
+  const glowDir = D => D.dir || 'atlas/glows/pool';
+  const poolImgs = new Map();
+  function poolImage(D, hash) {
+    let im = poolImgs.get(hash);
+    if (!im) { im = new Image(); im.onload = () => { im.ready = true; schedule(); }; im.src = `${glowDir(D)}/${hash}.webp`; poolImgs.set(hash, im); }
+    return im.ready ? im : null;
+  }
+  const fileName = f => (f || '').slice((f || '').lastIndexOf('/') + 1).toLowerCase();
+  function oidOf(m) {
+    if (m.l && m.l.obj) return /\.mob$/i.test(m.l.obj[0]) ? fileName(m.l.obj[0]) : 'p' + m.l.obj[2];
+    const f = m.n ? m.n.file : m.c ? m.c.file : m.g ? m.g.file : null;
+    return f ? fileName(f) : null;
+  }
+  function shapeOf(m, kind) {
+    if (!GD) { loadGlows(); return null; }
+    const key =cur >= 0 ? MP.maps[cur].key : 'World', CEG = ceOn && window.ArcanumCEGlows;
+    // (asked for every mark at every frame: the answer is kept on the mark until the map or the glow sets change)
+    const was = m.shapeFor;
+    if (was && was[0] === key && was[1] === GD && was[2] === CEG && was[3] === kind) return was[4];
+    const found = findShape(m, kind, key, CEG);
+    m.shapeFor = [key, GD, CEG, kind, found];
+    return found;
+  }
+  function findShape(m, kind, key, CEG) {
+    const xy = m.tile[0] + ',' + m.tile[1], oid = oidOf(m);
+    // only the thing itself glows: people, containers, items on the floor, signs, waypoints
+    const g = m.n ? 'n' : m.c ? 'c' : m.g ? 'i' : kind === 'people' || kind === 'creature' ? 'n' : kind === 'chest' ? 'c' : kind === 'item' ? 'i' : kind === 'way' ? 'w' : 's';
+    const sets = (CEG ? [CEG, GD] : [GD]).filter(Boolean);      // (the mod on now: useMod swaps it)
+    const lists = sets.map(D => [D, D.at[key] && D.at[key][xy] && D.at[key][xy][g]]).filter(([, l]) => l && l.length);
+    const title = g === 's' && m.l ? m.l.text : null;                          // (a sign's glow knows what the notice is called: two boards of one prototype on a tile)
+    for (const [D, l] of lists) {                                                // the entry of this very object, the mod's first
+      const s = (title && (l.find(e => e[4] === title && e[3] === oid) || l.find(e => e[4] === title))) || (oid && l.find(e => e[3] === oid));
+      if (s) return { s, D };
+    }
+    return lists.length ? { s: lists[0][1][0], D: lists[0][0] } : null;         // (an object the rows cannot name: whatever stands on the tile)
+  }
+  function tintedShape(hash, color, D) {
+    const key = hash + color;
     let c = tinted.get(key);
     if (c) return c;
-    const [s, x, y, w, h] = GD.shapes[id];
-    let sheet = glowSheets[s];
-    if (!sheet) { sheet = glowSheets[s] = new Image(); sheet.onload = () => { sheet.ready = true; schedule(); }; sheet.src = `atlas/glows/glows-${s}.webp`; }
-    if (!sheet.ready) return null;
+    const im = poolImage(D, hash);
+    if (!im) return null;
+    const [w, h] = D.shapes[hash];
     if (tinted.size > 2000) tinted.clear();
     c = document.createElement('canvas'); c.width = w; c.height = h;
     const g = c.getContext('2d');
-    g.drawImage(sheet, x, y, w, h, 0, 0, w, h); g.globalCompositeOperation = 'source-in'; g.fillStyle = color; g.fillRect(0, 0, w, h);
+    g.drawImage(im, 0, 0, w, h, 0, 0, w, h); g.globalCompositeOperation = 'source-in'; g.fillStyle = color; g.fillRect(0, 0, w, h);
     tinted.set(key, c);
     return c;
-  }
-  // What is selected stands in front of its glow: its art is lifted out of the map as drawn (through its outline, masks-*.webp
+  }  // What is selected stands in front of its glow: its art is lifted out of the map as drawn (through its outline, masks-*.webp
   // of glow-shapes.js) before the glows go on, and put back over them.
-  const maskSheets = [], lifted = document.createElement('canvas');
+  const lifted = document.createElement('canvas');
   function liftFigure(h, z) {
-    const [s, x, y, w, hh] = GD.masks[h.mask];
-    let sheet = maskSheets[s];
-    if (!sheet) { sheet = maskSheets[s] = new Image(); sheet.onload = () => { sheet.ready = true; schedule(); }; sheet.src = `atlas/glows/masks-${s}.webp`; }
-    if (!sheet.ready) return null;
-    const X = h.tx + (h.dx + GD.margin) * z, Y = h.ty + (h.dy + GD.margin) * z, W = Math.max(1, Math.round(w * z * dpr)), H = Math.max(1, Math.round(hh * z * dpr));
+    const D = h.D, [hw, , w, hh] = D.shapes[h.mask], x = hw, y = 0, sheet = poolImage(D, h.mask);      // (the outline sits right of the halo in the same picture)
+    if (!sheet) return null;
+    const X = h.tx + (h.dx + D.margin) * z, Y = h.ty + (h.dy + D.margin) * z, W = Math.max(1, Math.round(w * z * dpr)), H = Math.max(1, Math.round(hh * z * dpr));
     lifted.width = W; lifted.height = H;
     const g = lifted.getContext('2d');
     g.drawImage(sheet, x, y, w, hh, 0, 0, W, H);
@@ -802,17 +1067,17 @@
         if (fa <= 0 && !active) continue;
         const faint = !!(m.n && m.n.off);                                        // not there yet: only with the 💤 button (or selected)
         if (faint && !showOff && !active) continue;
-        const tx = view.ox + z * tileWX(...m.tile), ty = view.oy + z * tileWY(...m.tile), color = GLOW[kind];
+        const tx = view.ox + z * tileWX(...m.tile), ty = view.oy + z * tileWY(...m.tile), color = isTele(m) ? GLOW.way : GLOW[kind];
         if (!glows) {
           if (tx < -10 || ty < -10 || tx > cw + 10 || ty > ch + 10) continue;
           hits.push({ x: tx, y: ty, rx: 6, ry: 6, tx, ty, tw, th, m, active, faint, color, a: active ? 1 : fa, dot: true });
           continue;
         }
-        const s = shapeOf(m, kind);
-        if (s) {                                                                 // the halo of its art: [shape, dx, dy, mask] from the tile's centre
-          const [, , , w, h] = GD.shapes[s[0]], sw = w * GD.scale * z, sh = h * GD.scale * z, x0 = tx + s[1] * z, y0 = ty + s[2] * z;
+        const found = shapeOf(m, kind);
+        if (found) {                                                             // the halo of its art: [shape, dx, dy, mask] from the tile's centre
+          const s = found.s, D = found.D, [w, h] = D.shapes[s[0]], sw = w * D.scale * z, sh = h * D.scale * z, x0 = tx + s[1] * z, y0 = ty + s[2] * z;
           if (x0 > cw || y0 > ch || x0 + sw < 0 || y0 + sh < 0) continue;
-          hits.push({ x: x0 + sw / 2, y: y0 + sh / 2, rx: sw * 0.4, ry: sh * 0.4, x0, y0, sw, sh, shape: s[0], dx: s[1], dy: s[2], mask: s[3], tx, ty, tw, th, m, active, faint, color, a: active ? 1 : fa });
+          hits.push({ x: x0 + sw / 2, y: y0 + sh / 2, rx: sw * 0.4, ry: sh * 0.4, x0, y0, sw, sh, D, shape: s[0], dx: s[1], dy: s[2], mask: s[0], tx, ty, tw, th, m, active, faint, color, a: active ? 1 : fa });
           continue;
         }
         const x = tx, y = ty - lift;
@@ -826,7 +1091,7 @@
       ctx.save();
       ctx.globalCompositeOperation = 'lighter';                                  // the glow adds light to the art under it
       for (const h of hits) {
-        const t = h.shape != null && tintedShape(h.shape, h.color);
+        const t = h.shape != null && tintedShape(h.shape, h.color, h.D);
         ctx.globalAlpha = (h.faint && !h.active ? 0.45 : 1) * h.a;
         for (let k = h.active ? 2 : 1; k--;) {                                   // what is selected glows twice as bright
           if (t) ctx.drawImage(t, h.x0, h.y0, h.sw, h.sh);
@@ -937,7 +1202,6 @@
   }
 
   // place names when far
-  const pinEls = new Map();
   let activeLabel = null;
   // Settlements are always named; every other area from 0.05 %, a name giving way when it would sit on one already placed
   const PIN_FROM_Z = 0.0005;
@@ -949,7 +1213,7 @@
   function drawPins(z) {
     const close = z >= 0.025 || cur >= 0;
     const seen = new Set(), taken = [];
-    if (!close) {
+    if (!close && FILTERS.sign) {      // the names of the locations belong to the information filter
       for (const p of PINS) {
         if (!p.big && z < PIN_FROM_Z) continue;
         const x = view.ox + z * tileWX(...p.tile), y = view.oy + z * tileWY(...p.tile);
@@ -976,18 +1240,18 @@
     activeChest = c; activeLabel = null; activeNpc = null; schedule();
     if (embed) { parent.postMessage({ type: 'atlas-container', index: c.i }, '*'); return; }
     const src = c.source && IT.sources[c.source];
-    panel.innerHTML = `<h2>📦 ${CONTAINER}</h2><div class="meta">${c.place}${c.locked != null ? ` · locked (${c.locked})` : ''}</div>
+    panel.innerHTML = `<h2>📦 ${esc(c.name || CONTAINER)}</h2><div class="meta">${esc(c.place)}${c.locked != null ? ` · locked (${c.locked})` : ''}</div>
       ${c.items.length ? `<h3>Contains</h3><div class="items">${itemList(c.items)}</div>` : ''}
-      ${src ? `<h3>Random: ${src.name}</h3><div class="items">${src.items.map(([i, r]) => `<div><span>${IT.items[i].name}</span><span>${r}%</span></div>`).join('')}</div>` : ''}
+      ${src ? `<h3>Random: ${esc(src.name)}</h3><div class="items">${src.items.map(([i, r]) => `<div><span>${esc(IT.items[i].name)}</span><span>${r}%</span></div>`).join('')}</div>` : ''}
       ${!c.items.length && !src ? '<p class="empty">Empty.</p>' : ''}
       <div class="chk">tile: ${c.tile.join(', ')}</div>`;
   }
   function selectNpc(n) {
     activeNpc = n; activeLabel = null; activeChest = null; schedule();
     if (embed) { parent.postMessage({ type: 'atlas-npc', npc: n }, '*'); return; }
-    panel.innerHTML = `<h2>${n.name}</h2>
-      <div class="meta">${[n.race, n.gender === 0 ? '♀' : n.gender === 1 ? '♂' : '', n.kind ? n.kindName : '', n.level ? 'level ' + n.level : ''].filter(Boolean).join(' · ')}</div>
-      <div class="meta">${n.place}${n.shop ? ' · sells goods' : ''}</div>`;
+    panel.innerHTML = `<h2>${esc(n.name)}</h2>
+      <div class="meta">${esc([n.race, n.gender === 0 ? '♀' : n.gender === 1 ? '♂' : '', n.kind ? n.kindName : '', n.level ? 'level ' + n.level : ''].filter(Boolean).join(' · '))}</div>
+      <div class="meta">${esc(n.place)}${n.shop ? ' · sells goods' : ''}</div>`;
   }
   function selectGround(g) {
     activeLabel = g; activeChest = null; activeNpc = null; schedule();
@@ -997,10 +1261,10 @@
   function select(l) {
     activeLabel = l; activeChest = null; activeNpc = null; schedule();
     if (embed) { parent.postMessage({ type: 'atlas-label', label: l }, '*'); return; }
-    panel.innerHTML = `<h2>${l.text}</h2>
-      <div class="meta">${catsOf(l).map(c => (ICON[c] || '') + ' ' + c).join(' · ')} — ${l.place}</div>
+    panel.innerHTML = `<h2>${esc(l.text)}</h2>
+      <div class="meta">${esc(catsOf(l).map(c => (ICON[c] || '') + ' ' + c).join(' · '))} — ${esc(l.place)}</div>
       ${l.description ? `<h3>About</h3><div class="desc">${l.description}</div>` : ''}
-      ${l.to ? `<h3>Waypoint</h3><div>🚪 to ${l.to.map(t => t.place).join(', ')}</div>` : ''}
+      ${l.to ? `<h3>Waypoint</h3><div>🚪 to ${esc(l.to.map(t => t.label || t.place).join(', '))}</div>` : ''}
       ${l.lock ? `<div>🔒 Locked${l.lock.locked ? ` · difficulty ${l.lock.locked}` : ''}</div>` : ''}
       <div class="chk">placed: ${l.placed}<br>tile: ${l.tile.join(', ')}<br>${l.object ? 'object: ' + l.object + '<br>' : ''}${l.screenshot ? 'screenshot px: ' + l.screenshot.join(', ') : ''}</div>`;
   }
@@ -1011,18 +1275,30 @@
   }
   window.addEventListener('message', e => {
     if (e.data && e.data.type === 'atlas-unselect') { activeLabel = activeChest = activeNpc = null; schedule(); }   // its panel was closed
-    if (e.data && e.data.type === 'atlas-go') goPlace(e.data.place, e.data.tile);
+    if (e.data && e.data.type === 'atlas-opaque') { over = false; document.documentElement.classList.remove('over'); document.body.classList.remove('over'); schedule(); }
+    if (e.data && e.data.type === 'atlas-ce') setCE(!!e.data.on, e.data.ver);
+    if (e.data && e.data.type === 'atlas-go') {
+      goPlace(e.data.place, e.data.tile);
+      if (embed) requestAnimationFrame(() => requestAnimationFrame(() => parent.postMessage({ type: 'atlas-ack' }, '*')));      // (drawn: the page may show the map)
+    }
     if (e.data && e.data.type === 'atlas-travel') {           // through a waypoint: arrive on that tile of that map
       const i = e.data.map == null ? -1 : mapIndex.get(e.data.map);
       if (i == null) return;
       switchMap(i);
-      centreOn(e.data.tile[0], e.data.tile[1], i < 0 ? 0.3 : 0.7);
+      if (e.data.start && i >= 0) onMap(i, e.data.tile).then(t => centreOn(t[0], t[1], 0.7));      // a map opened at its start tile
+      else centreOn(e.data.tile[0], e.data.tile[1], i < 0 ? 0.3 : 0.7);
     }
-    if (e.data && e.data.type === 'atlas-setview') {          // a shared link: this map, this spot, this zoom
+    if (e.data && e.data.type === 'atlas-pick') {             // a shared link: the label that was open on that tile of this map
+      const l = labels.find(q => q.map === cur && q.tile[0] === e.data.tile[0] && q.tile[1] === e.data.tile[1]);
+      if (l) select(l);
+    }
+    if (e.data && e.data.type === 'atlas-setview') {          // a shared link: this map, this spot, this zoom, these filters
+      if (e.data.f != null) applyFlags(e.data.f);
       const i = e.data.map == null ? -1 : mapIndex.get(e.data.map);
       switchMap(i == null ? -1 : i);
       centreOn(e.data.tile[0], e.data.tile[1], Math.max(0.0005, Math.min(3, +e.data.z || 0.3)));
-      if (cw && embed) parent.postMessage({ type: 'atlas-ack' }, '*');      // arrived: the page stops asking (or it would undo the next zoom)
+      // arrived: the page stops asking (or it would undo the next zoom), and shows the map: said once this view has been drawn
+      if (cw && embed) requestAnimationFrame(() => requestAnimationFrame(() => parent.postMessage({ type: 'atlas-ack' }, '*')));
     }
     if (e.data && e.data.type === 'atlas-quests') markGivers(e.data.givers || []);   // who starts a quest gets a "!"
     if (e.data && e.data.type === 'atlas-check') { document.body.classList.toggle('check', !!e.data.on); schedule(); }
@@ -1047,11 +1323,13 @@
   // lost button release, can never throw the map back to a stale offset
   canvas.addEventListener('pointerdown', e => { drag = { x: e.clientX, y: e.clientY, moved: 0 }; canvas.setPointerCapture(e.pointerId); canvas.classList.add('drag'); });
   canvas.addEventListener('pointermove', e => {
-    if (!drag) { hover(e); return; }
+    const r = canvas.getBoundingClientRect(); pointer = [e.clientX - r.left, e.clientY - r.top];
+    if (!drag) { hover(e); hud(); return; }
     if (!e.buttons) { end(); return; }
     drag.moved += Math.abs(e.clientX - drag.x) + Math.abs(e.clientY - drag.y);
     view.ox += e.clientX - drag.x; view.oy += e.clientY - drag.y; drag.x = e.clientX; drag.y = e.clientY; schedule(); });
   const end = () => { drag = null; canvas.classList.remove('drag'); };
+  canvas.addEventListener('pointerleave', () => { pointer = null; hud(); });
   canvas.addEventListener('pointerup', e => {
     const click = drag && drag.moved < 5, h = click ? hitAt(e) : null;        // a click on something that glows opens it
     if (h) { end(); h.m.open(); return; }
@@ -1066,7 +1344,7 @@
     end();
   });
   canvas.addEventListener('pointercancel', end);
-  canvas.parentElement.addEventListener('wheel', e => { e.preventDefault(); const r = canvas.getBoundingClientRect(); zoomAt(e.clientX - r.left, e.clientY - r.top, Math.exp(-e.deltaY * (e.deltaMode === 1 ? 0.12 : 0.0042))); }, { passive: false });
+  canvas.parentElement.addEventListener('wheel', e => { e.preventDefault(); const r = canvas.getBoundingClientRect(); zoomAt(e.clientX - r.left, e.clientY - r.top, Math.exp(-e.deltaY * (e.deltaMode === 1 ? 0.15 : 0.00525))); }, { passive: false });
   document.getElementById('worldBtn').onclick = () => {
     const b = backStack.pop() || { map: -1 };       // exactly where I was before the jump (no history: the whole world)
     switchMap(b.map, true);

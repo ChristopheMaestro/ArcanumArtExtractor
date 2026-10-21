@@ -1,6 +1,7 @@
 // Shared loading helpers: text decoding, fetch, memoized async loaders, .mes tables.
 
 import { parseMesText } from './mes-parser.js';
+import { onVersionChange } from './util.js';
 
 // Arcanum's text files are Windows-1252; latin1 is the fallback decoder.
 export function decodeText(buf) {
@@ -32,6 +33,7 @@ export function memoAsync(fn) {
     return pending;
   };
   load.peek = () => (loaded ? value : null);
+  onVersionChange(() => { value = null; loaded = false; pending = null; });      // (read again after the Atlas switches version)
   return load;
 }
 

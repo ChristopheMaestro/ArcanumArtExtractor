@@ -161,7 +161,7 @@ def art_contours(parts) -> dict:
     threading.Thread(target=srv.serve_forever, daemon=True).start()
     with sync_playwright() as pw:
         b = pw.chromium.launch(); pg = b.new_page()
-        pg.goto(f'http://127.0.0.1:{srv.server_address[1]}/logo.png')
+        pg.goto(f'http://127.0.0.1:{srv.server_address[1]}/logo.webp')
         res = pg.evaluate(CONTOUR_JS, [[list(p) for p in sorted(parts)], CONTOUR_STEP])
         b.close()
     srv.shutdown()
@@ -355,7 +355,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--objects', help='reuse a dump (json) of the sectors'); ap.add_argument('--save-objects', help='save the dump')
     args = ap.parse_args()
-    if args.objects: data = json.loads(Path(args.objects).read_text())
+    if args.objects: data = json.loads(Path(args.objects).read_text(encoding='utf-8'))
     else:
         print('reading the sectors...', file=sys.stderr); data = dump_objects()
         if args.save_objects: Path(args.save_objects).write_text(json.dumps(data))

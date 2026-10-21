@@ -1,4 +1,4 @@
-﻿// Loads map objects and static-object points for SEC maps.
+// Loads map objects and static-object points for SEC maps.
 
 import { ART_TYPE, artType } from '../core/art-id.js';
 import { errText } from '../core/text-io.js';
@@ -22,7 +22,8 @@ import {
 import { loadWallArtFromRaw } from '../objects/wall-art.js';
 import { protoArtObjectType, protoCritterAidInfo, protoCurrentAidArtId } from '../proto/critter-aid.js';
 import { mobOidTypeAndNumber, resolveMobPrototype } from '../proto/proto-resolution.js';
-import { loadMapsManifest, manifestFileList } from '../core/manifest.js';
+import { manifestFileList } from '../core/manifest.js';
+import { loadMapFolderIndex } from '../core/file-index.js';
 import { secDisplayName } from './sec-explorer.js';
 import { inventoryOidsOf, inventorySourceOf, isInventoryItem, registerInventoryItem } from './sec-inventory.js';
 
@@ -45,7 +46,7 @@ export async function loadMobsForSecMap(relativePath = '', manifestHint = null) 
   };
   let manifest = manifestHint;
   if (!manifest) {
-    try { manifest = await loadMapsManifest(relativePath, secDisplayName(relativePath, relativePath ? '' : 'maps')); diagnostics.manifestLoaded = true; }
+    try { manifest = await loadMapFolderIndex(relativePath); diagnostics.manifestLoaded = true; }
     catch (err) { diagnostics.manifestError = errText(err); const empty = []; empty.mobDiagnostics = diagnostics; return empty; }
   } else {
     diagnostics.manifestLoaded = true;
@@ -56,10 +57,12 @@ export async function loadMobsForSecMap(relativePath = '', manifestHint = null) 
   diagnostics.manifestMobFiles = files.length;
   const prefix = String(relativePath || '').replace(/^\/+|\/+$/g, '');
   const points = [];
-  const BATCH = 32;
-  for (let i = 0; i < files.length; i += BATCH) {
-    const batch = files.slice(i, i + BATCH);
-    await Promise.all(batch.map(async name => {
+  // POOL files in flight at any time (a pool, not batches that each wait for their slowest file: online every fetch is a
+  // round trip). The points and the inventory items are taken in the files' order afterwards, so seq - which decides the
+  // draw order of objects on one tile - does not depend on which file came in first.
+  const POOL = 64;
+  const results = new Array(files.length), inventory = new Array(files.length);
+  const loadOne = async (name, k) => {
       const path = /\//.test(name) && !manifest?.relativeNames ? name.replace(/^\/+/, '') : (prefix ? `${prefix}/${name}` : name);
       diagnostics.filesExamined++;
       try {
@@ -82,7 +85,7 @@ export async function loadMobsForSecMap(relativePath = '', manifestHint = null) 
         // (objlist_insert_internal() refuses them), so they must not be drawn.
         if (isInventoryItem(mob.fields)) {
           diagnostics.inventoryItemsSkipped = (diagnostics.inventoryItemsSkipped || 0) + 1;
-          registerInventoryItem(mob);   // listed under its owner in the side bar
+          inventory[k] = mob;   // listed under its owner in the side bar (registered below)
           return;
         }
         const locField = mob.fields.find(f => f.field === 2);
@@ -147,7 +150,7 @@ export async function loadMobsForSecMap(relativePath = '', manifestHint = null) 
         const wallField = mob.fields.find(f => f.field === 39);
         const currentAidRaw = aidField ? aidField.value : null;
         const locationRaw = locField ? locField.value : null;
-        points.push({
+        results[k] = {
           file: mob.filename || name.split('/').pop(), name: mobName, mobUrl: `${MOB_ROOT}${encPath(path)}`,   // (the editor reads the file again to change it)
           worldX: loc.worldX, worldY: loc.worldY,
           sectorX: loc.sectorX, sectorY: loc.sectorY, tileX: loc.tileX, tileY: loc.tileY,
@@ -159,7 +162,7 @@ export async function loadMobsForSecMap(relativePath = '', manifestHint = null) 
           objFlags: flagWords.objFlags,
           sceneryFlags: flagWords.sceneryFlags,
           scripts,
-          seq: points.length,
+          seq: -1,   // (set below, in the files' order)
           // Keep the complete decoded field list for wall diagnostics. This
           // is intentionally attached only to wall MOBs to avoid bloating
           // the normal MOB overlay data.
@@ -168,13 +171,21 @@ export async function loadMobsForSecMap(relativePath = '', manifestHint = null) 
           lightSources: objLight.sources, nocturnal: objLight.nocturnal,
           animFrames: (flagWords.sceneryFlags & 1) ? null : animFrames, animFps,
           motion, critterAidRaw: (motion || mob.objType === 15 || mob.objType === 16) ? resolvedAidRaw : null, actionFrames, actionFps, portalFlags
-        });
+        };
         diagnostics.loaded++;
         if (mob.objType === 0) diagnostics.wallLoaded++;
       } catch (err) {
         diagnostics.decodeFailures.push({ file: path, error: errText(err), stack: String(err?.stack || '') });
       }
-    }));
+  };
+  let next = 0;
+  const worker = async () => {
+    while (next < files.length) { const k = next++; await loadOne(files[k], k); }
+  };
+  await Promise.all(Array.from({ length: Math.min(POOL, files.length) }, worker));
+  for (let k = 0; k < files.length; k++) {
+    if (inventory[k]) registerInventoryItem(inventory[k]);
+    if (results[k]) { results[k].seq = points.length; points.push(results[k]); }
   }
   points.mobDiagnostics = diagnostics;
   return points;
@@ -301,13 +312,20 @@ export async function loadSecStaticObjectPoints(sectors, diagnostics) {
     if (!pos) continue;
     for (let i = 0; i < objects.length; i++) jobs.push([sector, pos, objects[i], i]);
   }
-  for (let k = 0; k < jobs.length; k += CHUNK) {
-    const results = await Promise.all(jobs.slice(k, k + CHUNK).map(j =>
-      processObject(...j).catch(err => {
+  // CHUNK objects in flight at any time (a pool, so one slow art fetch does not hold up the next 63); the points are
+  // still appended in job order.
+  const results = new Array(jobs.length);
+  let next = 0;
+  const worker = async () => {
+    while (next < jobs.length) {
+      const k = next++, j = jobs[k];
+      results[k] = await processObject(...j).catch(err => {
         diagnostics.decodeFailures.push({ file: `${j[0].filename}#object${j[3]}`, error: errText(err) });
         return null;
-      })));
-    for (const p of results) if (p) points.push(p);
-  }
+      });
+    }
+  };
+  await Promise.all(Array.from({ length: Math.min(CHUNK, jobs.length) }, worker));
+  for (const p of results) if (p) points.push(p);
   return points;
 }

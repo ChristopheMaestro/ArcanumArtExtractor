@@ -1,8 +1,8 @@
 // Shared by the .SEC folder map: tile drawing, sector loading and the loading card.
 
-import { errText } from '../core/text-io.js';
+import { errText, fetchBuffer, memoAsync } from '../core/text-io.js';
 
-import { SEC_ROOT } from '../core/config.js';
+import { DATA_ROOT, SEC_ROOT } from '../core/config.js';
 
 import { encPath } from '../core/util.js';
 import { SEC_ISO_HALF_H, SEC_ISO_HALF_W, SEC_ISO_TILE_H, SEC_ISO_TILE_W, secIsoMetrics } from './sec-iso.js';
@@ -36,10 +36,9 @@ export function drawSecActualTiles(ctx, sectors, bounds, artTiles, view) {
     // sector corners, padded for oversized edge art.
     {
       const PAD = 160;
-      const xs = [0, 63].flatMap(lx => [0, 63].map(ly => iso.originX + ((baseY + ly) - (baseX + lx)) * SEC_ISO_HALF_W));
-      const ys = [0, 63].flatMap(lx => [0, 63].map(ly => iso.originY + ((baseX + lx) + (baseY + ly)) * SEC_ISO_HALF_H));
-      const minSX = Math.min(...xs) - PAD, maxSX = Math.max(...xs) + PAD;
-      const minSY = Math.min(...ys) - PAD, maxSY = Math.max(...ys) + PAD;
+      // (the corners' extremes: x is smallest at tile (63, 0) and largest at (0, 63); y at (0, 0) and (63, 63))
+      const minSX = iso.originX + ((baseY + 0) - (baseX + 63)) * SEC_ISO_HALF_W - PAD, maxSX = iso.originX + ((baseY + 63) - (baseX + 0)) * SEC_ISO_HALF_W + PAD;
+      const minSY = iso.originY + ((baseX + 0) + (baseY + 0)) * SEC_ISO_HALF_H - PAD, maxSY = iso.originY + ((baseX + 63) + (baseY + 63)) * SEC_ISO_HALF_H + PAD;
       if (maxSX * zoom + ox < 0 || minSX * zoom + ox > cssW || maxSY * zoom + oy < 0 || minSY * zoom + oy > cssH) continue;
     }
     const tilesArr = sector.decoded.tiles;
@@ -50,25 +49,23 @@ export function drawSecActualTiles(ctx, sectors, bounds, artTiles, view) {
       const art = artTiles?.get(raw);
       if (!art?.canvas) continue;
       // inline secIsoProject (no per-tile object allocation)
-      const center = {
-        x: iso.originX + ((baseY + y) - (baseX + x)) * SEC_ISO_HALF_W,
-        y: iso.originY + ((baseX + x) + (baseY + y)) * SEC_ISO_HALF_H
-      };
+      const centerX = iso.originX + ((baseY + y) - (baseX + x)) * SEC_ISO_HALF_W;
+      const centerY = iso.originY + ((baseX + x) + (baseY + y)) * SEC_ISO_HALF_H;
       // Draw the ART frame at its own native size, centred on the tile.
       // Edge/transition tiles are not guaranteed to be the same size as a
       // plain 78x40 floor tile; forcing them into 78x40 squashed or clipped
       // their blended borders.
       const artW = art.canvas.width || SEC_ISO_TILE_W;
       const artH = art.canvas.height || SEC_ISO_TILE_H;
-      const left = center.x - artW / 2;
-      const right = center.x + artW / 2;
-      const top = center.y - artH / 2;
-      const bottom = center.y + artH / 2;
+      const left = centerX - artW / 2;
+      const right = centerX + artW / 2;
+      const top = centerY - artH / 2;
+      const bottom = centerY + artH / 2;
       if (right * zoom + ox < 0 || left * zoom + ox > cssW || bottom * zoom + oy < 0 || top * zoom + oy > cssH) continue;
       const dw = artW * zoom;
       const dh = artH * zoom;
-      const px = center.x * zoom + ox;
-      const py = center.y * zoom + oy;
+      const px = centerX * zoom + ox;
+      const py = centerY * zoom + oy;
       ctx.drawImage(art.canvas, px - dw / 2, py - dh / 2, dw, dh);
     }
   }
@@ -82,6 +79,19 @@ function parseSecSectorPosition(filename) {
     const mask = (1n << 26n) - 1n;
     return { id, x: Number(id & mask), y: Number((id >> 26n) & mask) };
   } catch (_) { return null; }
+}
+
+// A .sec stored once: its copies were moved away (toolbox/atlas/dedupe_sectors.py) and data/sec-aliases.tsv names the copy kept
+// ("moved path <tab> kept path", both under data/). Read on the first sector that is not there, so a folder without any costs nothing.
+const secAliases = memoAsync(async () => {
+  try { return new Map(new TextDecoder().decode(await fetchBuffer(`${DATA_ROOT}sec-aliases.tsv`)).split('\n').filter(Boolean).map(l => l.trimEnd().split('\t'))); }
+  catch (_) { return new Map(); }
+});
+async function fetchSec(rel) {           // rel: under data/
+  const resp = await fetch(`${SEC_ROOT}${encPath(rel)}`);
+  if (resp.status !== 404) return resp;
+  const kept = (await secAliases()).get(rel);
+  return kept ? fetch(`${DATA_ROOT}${encPath(kept)}`) : resp;
 }
 
 export async function loadSecFolderSectors(relativePath, filenames, onProgress) {
@@ -104,7 +114,7 @@ export async function loadSecFolderSectors(relativePath, filenames, onProgress) 
     } else {
       try {
         const prefix = relativePath ? `${relativePath}/` : '';
-        const resp = await fetch(`${SEC_ROOT}${encPath(prefix)}${encPath(path)}`);
+        const resp = await fetchSec(`${prefix}${path}`);
         if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
         result = { filename, dir, index, position, decoded: readSecTileData(await resp.arrayBuffer(), filename), error: null };
       } catch (err) {
@@ -125,6 +135,25 @@ export async function loadSecFolderSectors(relativePath, filenames, onProgress) 
   };
   await Promise.all(Array.from({ length: workerCount }, worker));
   return results.filter(item => item && item.position);
+}
+
+// Shown in the place of the loading card for a map with many sectors: the map loads only when the user says so.
+export function renderSecLargeConfirm(folderName, total, onLoad) {
+  const article = document.createElement('article');
+  article.className = 'sec-viewer sec-folder-loading';
+  article.innerHTML = `
+      <div class="sec-viewer-head"><div>
+        <h2 class="sec-viewer-title"></h2>
+        <div class="sec-viewer-meta">This map is not loaded yet.</div>
+      </div></div>
+      <section class="sec-map-card sec-loading-card">
+        <div class="sec-loading-title">This map has ${total} sectors.</div>
+        <div class="sec-loading-sector">Loading it can take a while. Do you want to load it?</div>
+        <button type="button" class="sec-large-load">Load map</button>
+      </section>`;
+  article.querySelector('.sec-viewer-title').textContent = `Map · ${folderName}`;
+  article.querySelector('.sec-large-load').addEventListener('click', onLoad, { once: true });
+  return article;
 }
 
 export function renderSecFolderLoading(folderName, total) {

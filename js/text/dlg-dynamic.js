@@ -26,10 +26,18 @@ const FILE = { pc: 'gd_pc2m.mes', clsPc: 'gd_cls_pc2m.mes', clsNpc: 'gd_cls_m2m.
 // Load every table the resolver reads; call before rendering (the resolver itself is synchronous).
 export const loadDynamicTables = () => Promise.all(Object.values(TABLES).map(t => t().catch(() => null)));
 
+// The lines of a range, worked out once per loaded table: a .dlg asks for the same few ranges
+// for every line of the flow map, and gd_cls_m2m.mes alone has thousands of entries.
+const ranges = new Map();   // "key from to" -> { table, list }
 function range(key, from, to) {
   const table = TABLES[key].peek();
   if (!table) return [];
-  return [...table].filter(([n, s]) => n >= from && n <= to && s.trim()).sort((a, b) => a[0] - b[0]).map(([, s]) => s);
+  const id = `${key} ${from} ${to}`;
+  const hit = ranges.get(id);
+  if (hit && hit.table === table) return hit.list;
+  const list = [...table].filter(([n, s]) => n >= from && n <= to && s.trim()).sort((a, b) => a[0] - b[0]).map(([, s]) => s);
+  ranges.set(id, { table, list });
+  return list;
 }
 const nameIn = (key, n) => TABLES[key].peek()?.get(n) || `#${n}`;
 const numbers = s => (String(s).match(/-?\d+(?:\s*-\s*\d+)?/g) || []).map(x => x.replace(/\s+/g, ''));

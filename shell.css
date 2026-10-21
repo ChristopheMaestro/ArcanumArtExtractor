@@ -2,7 +2,6 @@
    App shell: top bar · left side bar · centre · right side bar · status bar
    Loaded after style.css. Layout only: the viewers keep the look they have in style.css.
 
-   body.home-active     welcome screen (both side bars closed)
    body.sec-edit-full   map editor (left bar = tool strip, top bar = editor menu)
    ========================================================================== */
 
@@ -20,7 +19,6 @@ body {
   --stage-fill: calc(100dvh - var(--topbar-h) - var(--status-h) - 36px);
 }
 body.sidebar-collapsed:not(.sec-edit-full) { --side-left-w: 36px; }
-body.home-active { --side-left-w: 0px; --side-right-w: 0px; }
 body.sec-edit-full { --side-left-w: 56px; --side-right-w: clamp(280px, 22vw, 340px); --stage-fill: calc(100dvh - var(--topbar-h) - var(--status-h)); }
 
 .page.app {
@@ -74,7 +72,6 @@ body.sec-edit-full .topbar { grid-template-columns: auto minmax(0, 1fr) 0; }
 .topbar .topbar-tabs .file-mode-btn.active, .topbar .topbar-tabs .file-mode-btn[aria-pressed="true"] {
   background: rgba(32,178,170,.2); color: #f1e4c3; border-color: var(--teal); box-shadow: inset 0 -2px 0 var(--teal);
 }
-body.home-active .topbar-tabs { max-width: 0; opacity: 0; pointer-events: none; }
 /* context tools of the current category (Art packer, text search, map display, Edit…) */
 .topbar-tools {
   grid-column: 3; justify-self: end; display: flex; align-items: center; gap: 6px;
@@ -92,7 +89,6 @@ body.home-active .topbar-tabs { max-width: 0; opacity: 0; pointer-events: none; 
 .tool-btn.tool-art { border-color: rgba(32,178,170,.7); color: var(--teal); }
 .tool-btn.tool-object { border-color: rgba(255,224,102,.55); color: var(--brass); }
 .tool-btn:hover { background: var(--border); }
-body.home-active .topbar-tools { opacity: 0; pointer-events: none; }
 body.sec-edit-full .topbar-tools { display: none; }
 
 /* editor menu (overlays · lighting · view · export · exit): takes the place of the tabs */
@@ -279,37 +275,6 @@ body.sec-edit-full .stage .sec-folder-map-stage { border: 0; border-radius: 0; m
 .statusbar:has(.crumb-data) { gap: 0; }
 .statusbar .explorer-breadcrumb:has(.crumb-data) { flex: 1 1 auto; min-width: 0; display: flex; gap: 24px; }
 .explorer-breadcrumb .crumb-data { margin-left: auto; flex: none; white-space: pre; tab-size: 4; }
-body.home-active .statusbar { display: none; }
-
-/* ---- welcome screen ----------------------------------------------------------------- */
-body.home-active .stage {
-  padding: 28px clamp(16px, 4vw, 56px) 28px;
-  background:
-    radial-gradient(ellipse 70% 45% at 50% 0%, rgba(255,215,0,.08), transparent 70%),
-    linear-gradient(180deg, #17140f, #100e0a);
-}
-.explorer-home { width: 100%; max-width: 1280px; margin: auto; min-height: 0; align-content: center; }
-.explorer-home .home-category-heading { flex-wrap: wrap; gap: 4px 10px; }
-.explorer-home .home-category-heading h2 { font-size: clamp(15px, 1.7vw, 24px); }
-.explorer-home .home-file-card { min-height: 190px; }
-.welcome-head {
-  grid-column: 1 / -1; display: flex; flex-direction: column; align-items: center; text-align: center;
-  gap: 6px; padding: 8px 0 18px;
-}
-.welcome-logo { width: min(300px, 60vw); height: auto; display: block; margin-bottom: 6px; }
-.welcome-title { margin: 0; font: 600 clamp(26px, 3.4vw, 38px)/1.15 var(--font-display); color: #f1e4c3; text-shadow: 1px 1px 2px #000; }
-.welcome-sub { margin: 0; color: var(--ink-muted); font-size: 12.5px; }
-.welcome-resume { margin-top: 12px; }
-.welcome-resume-btn {
-  display: inline-flex; align-items: baseline; gap: 10px; max-width: 100%;
-  padding: 9px 16px; border: 1px solid var(--border); border-radius: 6px;
-  background: var(--surface); color: var(--ink); cursor: pointer; font: inherit;
-  transition: border-color .15s, background .15s;
-}
-.welcome-resume-btn:hover, .welcome-resume-btn:focus-visible { border-color: var(--brass); background: var(--surface-2); }
-.welcome-resume-kicker { flex: none; font: 600 9.5px/1 var(--font-mono); letter-spacing: .14em; text-transform: uppercase; color: var(--brass); }
-.welcome-resume-btn strong { font: 500 12px/1.3 var(--font-mono); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-
 /* ---- narrower windows ------------------------------------------------------------------ */
 @media (max-width: 1100px) {
   body { --side-left-w: 230px; --side-right-w: 250px; }
@@ -395,11 +360,6 @@ body .stage .sec-folder-map-stage { border: 0; border-radius: 0; margin: 0; }
 /* art ids: keep the picture's proportions inside the square */
 .proto-current-aid-preview { flex: none; }
 .proto-current-aid-canvas { flex: none; width: auto !important; height: auto !important; max-width: 92px; max-height: 92px; object-fit: contain; }
-
-body.home-active .topbar { display: none; }
-
-body.home-active.sidebar-collapsed:not(.sec-edit-full) { --side-left-w: 0px; }
-body.home-active .side-left { border: 0; }
 
 .explorer-tree .kb-cursor { outline: 1px solid var(--brass); outline-offset: -1px; }
 

@@ -31,9 +31,11 @@ import sys
 from pathlib import Path
 
 import arcanum_objects as ao
+import progress
+import sec_alias
 
 ROOT = Path(__file__).resolve().parents[2]
-DATA_JS = ROOT / 'js' / 'atlas' / 'data'                   # the generated data the pages load
+DATA_JS = ao.DATA_JS                   # the generated data the pages load
 DATA = ao.DATA
 MAPS = DATA / 'maps'
 WORLD = 'Arcanum1-024-fixed'
@@ -108,13 +110,25 @@ F_ONAME = 22               # the object-name number: what a dialog's "in N" mean
 ITEM_TYPES = range(5, 15)  # weapon .. generic: things the player can pick up
 ITEM_WANT, ITEM_SPOTS = set(), {}     # item name numbers a quest asks for -> where they lie (filled by find_carriers)
 ITEM_SPOTS_MAX = 8        # an item lying in more places than this is a commodity, not a quest item
+MODULE_ID = 100000       # a module's quest 1005 is 100000 * (its place in SHOWN + 1) + 1005
 FLAGS_PER_SCRIPT_MAX = 3
 FLAG_SETTERS_MAX = 4    # a global flag that more scripts than this set is not a quest's own
 
 
 # ---- the games's code strings ("qu1000 2, $$ 200") -----------------------------------------------------------------
+_CODES = {}
+
+
 def parse_codes(s):
-    """dialog.c: skip to a letter or '$', read two characters, atoi the number after them (a second number is read after the first)."""
+    """dialog.c: skip to a letter or '$', read two characters, atoi the number after them (a second number is read after the first).
+    Each string read once per process (npc_roles.Roles reads the game's 700 dialogs again for every module: 1.8 million calls)."""
+    key = s or ''
+    if key not in _CODES:
+        _CODES[key] = _parse_codes(key)
+    return list(_CODES[key])
+
+
+def _parse_codes(s):
     out, i, n = [], 0, len(s or '')
     s = s or ''
 
@@ -152,62 +166,76 @@ def script_number(name):
     return int(m.group(1)) if m else None
 
 
-def load_dialogs():
-    """script number -> {line number: {pc, text, test, goto, effect, parent}} (an answer's parent is the line it is offered under)."""
+def load_dialogs(folder=None):
+    """script number -> {line number: {pc, text, test, goto, effect, parent}} (an answer's parent is the line it is offered under).
+    `folder`: a module's own dlg folder, in place of the game's."""
+    import game_files
     out = {}
-    for f in sorted((DATA / 'dlg').glob('*.dlg')):
+    for f, lines in game_files.parse_files(folder or DATA / 'dlg', '.dlg', 'quest-dialogs', _dialog_lines):    # (each file read once, kept between runs)
         n = script_number(f.name)
-        lines, last_npc = {}, None
-        for raw in f.read_text(encoding='cp1252', errors='replace').splitlines():
-            raw = raw.strip()
-            if not raw.startswith('{') or not raw.endswith('}'):
-                continue
-            parts = raw[1:-1].split('}{')
-            if len(parts) < 7 or not parts[0].lstrip('-').isdigit():
-                continue
-            num = int(parts[0])
-            pc = parts[3].strip() != ''
-            line = {'pc': pc, 'text': clean(parts[1]), 'test': parts[4], 'goto': parts[5].strip(), 'effect': parts[6], 'parent': None}
-            if pc:
-                line['parent'] = last_npc
-            else:
-                last_npc = num
-            lines[num] = line
-        out[n] = lines
+        if n is not None:
+            out[n] = lines
     return out
+
+
+def _dialog_lines(f):
+    lines, last_npc = {}, None
+    for raw in ao.read_text(f).splitlines():
+        raw = raw.strip()
+        if not raw.startswith('{') or not raw.endswith('}'):
+            continue
+        parts = raw[1:-1].split('}{')
+        if len(parts) < 7 or not parts[0].lstrip('-').isdigit():
+            continue
+        num = int(parts[0])
+        pc = parts[3].strip() != ''
+        line = {'pc': pc, 'text': clean(parts[1]), 'test': parts[4], 'goto': parts[5].strip(), 'effect': parts[6], 'parent': None}
+        if pc:
+            line['parent'] = last_npc
+        else:
+            last_npc = num
+        lines[num] = line
+    return lines
 
 
 # ---- scripts -----------------------------------------------------------------------------------------------------------
-def load_scripts():
-    """script number -> {description, ops: [(kind, quest, state)]} for the scripts that set a quest state with fixed numbers."""
+def load_scripts(folder=None):
+    """script number -> {description, ops: [(kind, quest, state)]} for the scripts that set a quest state with fixed numbers.
+    `folder`: a module's own scr folder, in place of the game's."""
+    import game_files
     out = {}
-    for f in sorted((DATA / 'scr').glob('*.scr')):
+    for f, sc in game_files.parse_files(folder or DATA / 'scr', '.scr', 'quest-scripts', _script_ops):       # (each file read once, kept between runs)
         n = script_number(f.name)
-        b = f.read_bytes()
-        if len(b) < 0x40:
-            continue
-        desc = b[8:48].split(b'\0')[0].decode('cp1252', 'replace').strip()
-        count = min(struct.unpack_from('<i', b, 0x34)[0], (len(b) - 0x40) // 0x84)
-        ops, story, swaps = [], [], []
-        for i in range(max(count, 0)):
-            o = 0x40 + i * 0x84
-            for off in (0x2C, 0x58):
-                typ = struct.unpack_from('<i', b, o + off)[0]
-                ot = b[o + off + 4:o + off + 12]
-                ov = struct.unpack_from('<8i', b, o + off + 12)
-                # 16 = set pc quest state (obj, quest, state), 17 = set quest global state (quest, state); a fixed number has type 3
-                if typ == 16 and ot[1] == 3 and ot[2] == 3:
-                    ops.append((ov[1], ov[2]))
-                elif typ == 17 and ot[0] == 3 and ot[1] == 3:
-                    ops.append((ov[0], ov[1]))
-                elif typ == 43 and ot[0] == 3:      # set story state (number)
-                    story.append(ov[0])
-                elif typ == 6 and ot[0] == 3:       # change this script to script (number)
-                    swaps.append((None, ov[0]))
-                elif typ == 99 and ot[0] == 1 and ot[1] == 3 and ot[2] == 3:      # change script (attachee, attachment point, script)
-                    swaps.append((ov[1], ov[2]))
-        out[n] = {'desc': desc, 'name': f.stem, 'ops': ops, 'story': story, 'swaps': swaps}
+        if n is not None and sc is not None:
+            out[n] = dict(sc, name=f.stem)
     return out
+
+
+def _script_ops(f):
+    b = f.read_bytes()
+    if len(b) < 0x40:
+        return None
+    desc = b[8:48].split(b'\0')[0].decode(ao.RAW_ENC, 'replace').strip()
+    count = min(struct.unpack_from('<i', b, 0x34)[0], (len(b) - 0x40) // 0x84)
+    ops, story, swaps = [], [], []
+    for i in range(max(count, 0)):
+        o = 0x40 + i * 0x84
+        for off in (0x2C, 0x58):
+            typ = struct.unpack_from('<i', b, o + off)[0]
+            ot = b[o + off + 4:o + off + 12]
+            ov = struct.unpack_from('<8i', b, o + off + 12)
+            # 16 = set pc quest state (obj, quest, state), 17 = set quest global state (quest, state); a fixed number has type 3
+            if typ == 16 and ot[1] == 3 and ot[2] == 3:
+                ops.append((ov[1], ov[2]))
+            elif typ == 17 and ot[0] == 3 and ot[1] == 3:
+                ops.append((ov[0], ov[1]))
+            elif typ == 43 and ot[0] == 3:      # set story state (number)
+                story.append(ov[0])
+            elif typ == 6 and ot[0] == 3:       # change this script to script (number)
+                swaps.append((None, ov[0]))
+            elif typ == 99 and ot[0] == 1 and ot[1] == 3 and ot[2] == 3:      # change script (attachee, attachment point, script)
+                swaps.append((ov[1], ov[2]))
+    return {'desc': desc, 'ops': ops, 'story': story, 'swaps': swaps}
 
 
 def add_swapped(carriers, scripts):
@@ -314,30 +342,73 @@ def find_carriers(wanted, protos, desc, world_place):
                                                 'tile': list(o.tile) if o.tile and world else None,
                                                 'mtile': list(o.tile) if o.tile and not world else None, 'point': point})
 
-    for path in sorted(MAPS.rglob('*.mob')):
+    mobs = sorted(MAPS.rglob('*.mob'))
+    progress.say(f'   who carries the scripts: {len(mobs)} .mob files of {MAPS}')
+    for path in mobs:
         o = ao.read_mob(path)
         note(o, path.relative_to(MAPS).parts, protos.get(o.proto))
-    for path in sorted(MAPS.rglob('*.sec')):
+    secs = sorted(sec_alias.rglob(MAPS, '*.sec'))
+    progress.say(f'   who carries the scripts: {len(secs)} .sec files')
+    for path in secs:
         try:
             objs = ao.sec_objects(path)
         except Exception:
             continue
         for o in objs:
-            note(o, path.relative_to(MAPS).parts, protos.get(o.proto))
+            note(o, sec_alias.rel(path, MAPS).parts, protos.get(o.proto))
     return carriers
+
+
+def find_module_carriers(module, protos, desc):
+    """The same for one module: its scripts are carried by the objects of its own maps (build_modules.entries), a map's key is the place."""
+    import build_modules
+    carriers = {}
+    for key, mod, folder in build_modules.entries():
+        if mod.name != module.name:
+            continue
+        for path in sorted(folder.glob('*.mob')):
+            o = ao.read_mob(path)
+            e = ao.Effective(o, protos.get(o.proto))
+            v = e[F_SCRIPTS]
+            if not isinstance(v, dict) or not o.tile:
+                continue
+            for point, b in v.items():
+                if isinstance(b, (bytes, bytearray)) and len(b) >= 12:
+                    carriers.setdefault(struct.unpack_from('<I', b, 8)[0], []).append({
+                        'oid': str(o.oid), 'off': 1 if e.int(F_OBJ_FLAGS) & OF_OFF else 0, 'map': key, 'place': key, 'world': False,
+                        'type': o.type, 'name': clean(desc.get(e.int(F_NAME)) or ''), 'tile': None, 'mtile': list(o.tile), 'point': point})
+    return carriers
+
+
+class NoEntrances:
+    def find(self, folder):
+        return None
 
 
 # ---- assembling ----------------------------------------------------------------------------------------------------------
 class Names:
     """Item, skill and reputation names for the effects of a line."""
 
-    def __init__(self):
-        self.desc = ao.descriptions()
+    def __init__(self, module=None, version=None):
+        """`module`: a module folder, whose own mes (names, reputations, places) replace the game's.
+        `version`: a game_files.Version: the game's tables with every layer's laid over them."""
+        if version is not None:
+            self.desc = version.descriptions()
+            self.oname = {k: re.sub(r'^\s*\d+\s+', '', v) for k, v in version.mes('oemes', 'oname.mes').items()}
+            self.skill = version.mes('mes', 'skill.mes')
+            self.rep = version.mes('mes', 'gamereplog.mes')
+            self.area = version.mes('mes', 'gamearea.mes')
+            return
+
+        def own(name):
+            p = module / 'mes' / name if module else None
+            return p if p and p.is_file() else DATA / 'mes' / name
+        self.desc = ao.descriptions(module)
         oname = ao.mes(DATA / 'oemes' / 'oname.mes')
         self.oname = {k: re.sub(r'^\s*\d+\s+', '', v) for k, v in oname.items()}
         self.skill = ao.mes(DATA / 'mes' / 'skill.mes')
-        self.rep = ao.mes(DATA / 'mes' / 'gamereplog.mes')
-        self.area = ao.mes(DATA / 'mes' / 'gamearea.mes')
+        self.rep = ao.mes(own('gamereplog.mes'))
+        self.area = ao.mes(own('gamearea.mes'))
 
     def item(self, n):
         return clean(self.desc.get(n) or self.oname.get(n) or '') or 'an item'
@@ -397,16 +468,33 @@ def role_of(state):
 ORDER = {'start': 2, 'talk': 2.6, 'goal': 3, 'done': 4, 'other': 5, 'fail': 6}
 
 
-def main():
-    names = Names()
-    qlog = ao.mes(DATA / 'mes' / 'gamequestlog.mes')
+def module_title(log):
+    """A module has only the logbook sentence of a quest: its first words make the title."""
+    s = clean(log)
+    s = re.split(r'(?<=[.!?])\s', s)[0].rstrip('.!?')
+    return s if len(s) <= 48 else re.sub(r'[\s,;:]+\S*$', '', s[:48]) + '…'
+
+
+def build(mod=None):
+    """The quests of the game (mod=None) or of one module folder, which has its own mes, Rules, dlg and scr (a module numbers
+    them from 1 like the game: the game's must never be read for it). Returns (quests, story state texts)."""
+    names = Names(mod)
+    where_from = (lambda *p: mod.joinpath(*p)) if mod else (lambda *p: DATA.joinpath(*p))
+    qlog = ao.mes(where_from('mes', 'gamequestlog.mes'))
     meta = {}
-    for q, s in ao.mes(DATA / 'Rules' / 'gamequest.mes').items():
+    for q, s in ao.mes(where_from('Rules', 'gamequest.mes')).items():
         p = s.split()
-        meta[q] = (int(p[0]), int(p[1]))
+        meta[q] = (int(p[0]), int(p[1].lstrip('+')) if len(p) > 1 else 0)
     xp_levels = {k: int(v) for k, v in ao.mes(DATA / 'Rules' / 'xp_quest.mes').items()}
-    dialogs, scripts = load_dialogs(), load_scripts()
-    quest_ids = sorted(q for q in qlog if q not in HIDDEN and (q >= 1000 or q in QUEST_TITLES) and q in QUEST_TITLES)
+    progress.say(f'quests of {mod.name if mod else "the game"}: reading the dialogs and scripts')
+    dialogs, scripts = load_dialogs(mod / 'dlg' if mod else None), load_scripts(mod / 'scr' if mod else None)
+    progress.say(f'   {len(dialogs)} dialogs, {len(scripts)} scripts, {len(qlog)} logbook lines')
+    if mod:
+        quest_ids = sorted(q for q in qlog if q >= 1000 and clean(qlog[q]) and not clean(qlog[q]).startswith('This is what appears in the log for quest'))   # (the editor's stock placeholder)
+        title = lambda q: module_title(qlog[q])
+    else:
+        quest_ids = sorted(q for q in qlog if q not in HIDDEN and (q >= 1000 or q in QUEST_TITLES) and q in QUEST_TITLES)
+        title = lambda q: QUEST_TITLES[q]
 
     # 1. which scripts say something about which quest
     by_script = {}   # (script, quest) -> {'sets': {state: [(line, how)]}, 'gates': [(state, line)]}
@@ -468,12 +556,11 @@ def main():
         else:
             print(f'story state {s} has no quest of its own, left unassigned ({len(prev)} candidates)')
     print('story states by quest:', {q: sorted(d) for q, d in sorted(story_of.items())})
-    print('  was main by hand, sets no story state:', sorted(MAIN - set(story_of)), '| sets one, was not main:', sorted(set(story_of) - MAIN))
+    if not mod:
+        print('  was main by hand, sets no story state:', sorted(MAIN - set(story_of)), '| sets one, was not main:', sorted(set(story_of) - MAIN))
 
-    protos = {}
-    for p in (DATA / 'proto').rglob('*.pro'):
-        o = ao.read_proto(p)
-        protos[o.proto] = o
+    import game_files
+    protos = game_files.protos_of(DATA)                    # (read once per process, not once per module)
     world_place = {}
     wl = DATA_JS / 'world-labels.js'
     if wl.exists():
@@ -492,13 +579,17 @@ def main():
                 if code == 'in' and v:
                     (handed if v < 0 else quest_items).setdefault(q, []).append(abs(v))
     quest_items = {q: [k for k in dict.fromkeys(l) if k not in handed.get(q, ())] for q, l in quest_items.items()}
-    ITEM_WANT.update(k for l in quest_items.values() for k in l)
-    carriers = add_swapped(find_carriers(None, protos, names.desc, world_place), scripts)
+    if mod:        # (the places an item lies in are those of the game's maps)
+        quest_items = {}
+        carriers = add_swapped(find_module_carriers(mod, protos, names.desc), scripts)
+    else:
+        ITEM_WANT.update(k for l in quest_items.values() for k in l)
+        carriers = add_swapped(find_carriers(None, protos, names.desc, world_place), scripts)
     print(f'{len(carriers)} scripts are carried by something')
 
     # 2. one candidate step per (script, role)
-    wl_data = load_world_labels()
-    where = Entrances(wl_data)
+    wl_data = None if mod else load_world_labels()
+    where = NoEntrances() if mod else Entrances(wl_data)
     quests = {q: [] for q in quest_ids}
     dropped = []
     for (n, q), info in sorted(by_script.items()):
@@ -554,7 +645,9 @@ def main():
     # 2b. global flags. A part of a quest is often a deed, not a conversation: the king dies, his death script sets a global flag, the
     # quest giver's heartbeat script sees it and the giver now pays out. So every flag that a script of the quest (or of whoever carries
     # it) or a dialog line of the quest tests is followed back to the scripts and dialogs that set it, and whoever carries those is a part.
-    tested, setters = flag_links()
+    if not mod:
+        progress.say('parts found through global flags (scr/global_flags.json)')
+    tested, setters = ({}, {}) if mod else flag_links()      # (a module has no global flag table)
     def okey(c):        # (a sector's objects do not all have their own id)
         return c['map'], c['oid'], tuple(c['tile'] or c['mtile'] or ())
     carried = {}        # object -> the scripts it carries
@@ -619,10 +712,10 @@ def main():
                 p['name'] = names.item(k)
             quests[q].append({'role': 'goal', 'state': 3, 'script': 1000000 + k, 'say': '', 'ask': '', 'chain': True,
                               'fx': {'gold': [], 'give': [], 'take': [], 'extra': []}, 'who': people, 'more': more})
-            print(f'  item part: {q} {QUEST_TITLES[q]} <- pick up {names.item(k)} ({len(spots)} places)')
+            print(f'  item part: {q} {title(q)} <- pick up {names.item(k)} ({len(spots)} places)')
     print('parts added through global flags:')
     for q, l in sorted(chain.items()):
-        print('  ', q, QUEST_TITLES[q], '<-', [(f, sc_name(scripts, n), k) for f, n, k in l])
+        print('  ', q, title(q), '<-', [(f, sc_name(scripts, n), k) for f, n, k in l])
 
     # 3. build the final quests
     out_q = []
@@ -659,13 +752,13 @@ def main():
             else:
                 merged.append(b)
         story = sorted(story_of.get(q, {}))
-        kind = 'main' if story else 'master' if q in MASTER else 'side'     # a quest that moves the StoryState on is a main quest
+        kind = 'main' if story else 'master' if q in MASTER and not mod else 'side'     # a quest that moves the StoryState on is a main quest
         giver = next((w for m in merged if m['role'] in ('start', 'talk', 'goal', 'done') for w in m['who']), None)
         done = [m for m in merged if m['role'] == 'done']
         golds = [g for m in done for g in m['gold']]
         reward = {'xp': xp_levels.get(level, 0), 'level': level, 'align': align, 'gold': [min(golds), max(golds)] if golds else [],
                   'items': list(dict.fromkeys(x for m in done for x in m['give'])), 'extra': list(dict.fromkeys(x for m in done for x in m['extra']))}
-        out_q.append({'id': q, 'title': QUEST_TITLES[q], 'log': log, 'kind': kind, 'story': story, 'unused': 0 if any(m['role'] != 'fail' for m in merged) else 1,
+        out_q.append({'id': q, 'title': title(q), 'log': log, 'kind': kind, 'story': story, 'unused': 0 if any(m['role'] != 'fail' for m in merged) else 1,
                       'giver': giver, 'steps': merged, 'reward': reward})
     # a quest nothing starts is often an older version of one the game does use ("Breaking Morgan Out of Prison" became "Tools for the
     # Locksmith"): the used quest whose logbook sentence shares the most words says which one the player met instead
@@ -673,25 +766,46 @@ def main():
         return {w for w in re.findall(r"[a-z']{4,}", q['log'].lower()) if w not in STOP}
     live = [q for q in out_q if not q['unused']]
     for q in out_q:
-        if q['unused'] and q['log']:
+        if q['unused'] and q['log'] and any(o['log'] for o in live):
             w = words(q)
             score, best = max(((len(w & words(o)) / max(1, len(w | words(o))), o) for o in live if o['log']), key=lambda t: t[0])
             print(f"  unused {q['id']} {q['title']}: closest {best['id']} {best['title']} ({score:.2f}, {len(w & words(best))} words)")
             if score >= SAME_QUEST and len(w & words(best)) >= 3:
                 q['sameAs'] = best['id']
-    note = ('storyStates[n] =the game\'s sentence for story state n (mes/StoryState.mes). '
+    story_text = {k: clean(v) for k, v in ao.mes(where_from('mes', 'StoryState.mes')).items()}
+    if mod:
+        for q in out_q:
+            q['module'] = mod.name
+            q['storyText'] = {s: story_text.get(s, '') for s in q['story']}
+        print(f'{mod.name}: {len(out_q)} quests, {sum(1 for q in out_q if not q["unused"])} with steps')
+    return out_q, story_text
+
+
+def main():
+    out_q, story_text = build()
+    import build_modules
+    mods = [m for m in build_modules.module_folders() if (m / 'mes' / 'gamequestlog.mes').is_file()]
+    progress.say(f'{len(mods)} modules with a logbook of their own: {", ".join(m.name for m in mods)}')
+    for mod in mods:
+        more, _ = build(mod)
+        for q in more:
+            q['id'] += MODULE_ID * (1 + build_modules.SHOWN.index(mod.name))     # (a module numbers its quests from 1000 too)
+            if q.get('sameAs'):
+                q['sameAs'] += MODULE_ID * (1 + build_modules.SHOWN.index(mod.name))
+        out_q += more
+    note = ('storyStates[n] =the game\'s sentence for story state n (mes/StoryState.mes). A quest of a module has module = its name, id = '
+            'module number * 100000 + its own number, storyText = its story states\' sentences. '
             'quests[i] = {id, title, log (the logbook sentence), kind (main = it sets a story state; master / side), story (the story states it sets), unused (1 = nothing in the game starts it), '
             'sameAs (of an unused one: the quest in use that tells the same errand), giver '
             '(first person met), steps: [{role (start / talk / goal / done / fail), state, who: [{name, place, world (1 = on the world map), tile, verb, '
             'npc, near: {place, tile, name} (for a place that is a separate map: its entrance)}], more, say, ask, gold [min, max], give, take, extra}], '
             'reward: {xp, level, align, gold [min, max], items, extra}}')
-    story_text = {k: clean(v) for k, v in ao.mes(DATA / 'mes' / 'StoryState.mes').items()}
     js = {'source': 'toolbox/atlas/build_quests.py', 'note': note, 'storyStates': [story_text.get(i, '') for i in range(max(story_text) + 1)],
           'quests': out_q}
     OUT_JS.write_text('// GENERATED by toolbox/atlas/build_quests.py - re-run it rather than editing by hand.\nwindow.ArcanumQuests = '
                       + json.dumps(js, ensure_ascii=False, separators=(',', ':')) + ';\n', encoding='utf-8')
     used = [q for q in out_q if not q['unused']]
-    print(f'Wrote {OUT_JS.name}: {len(out_q)} quests, {len(used)} with steps ({OUT_JS.stat().st_size // 1024} KB); test scripts left out: {dropped}')
+    print(f'Wrote {OUT_JS.name}: {len(out_q)} quests, {len(used)} with steps ({OUT_JS.stat().st_size // 1024} KB)')
     print('  nothing starts them:', [q['id'] for q in out_q if q['unused']])
     print('  no first person:', [q['id'] for q in used if not q['giver']])
     nw = sorted({(w['place'], (w.get('near') or {}).get('name', '-')) for q in out_q for s in q['steps'] for w in s['who'] if not w['world']})

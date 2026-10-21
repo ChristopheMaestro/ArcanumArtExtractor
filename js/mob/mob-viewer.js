@@ -1,6 +1,7 @@
 ﻿// .MOB file viewer.
 
 import { gridEl, paginationEl, viewerEl } from '../core/dom.js';
+import { escapeHtml } from '../core/util.js';
 import { mobCurrentAidText, mobFieldValueText, mobHex, mobLocationInfo, mobOidText } from './mob-decoder.js';
 import { backButton } from '../explorer/nav-history.js';
 import { mobObjectTypeName } from './mob-schema.js';
@@ -23,7 +24,7 @@ export function renderMobViewer(decoded) {
 
   const header = document.createElement('div');
   header.className = 'file-group-header';
-  header.innerHTML = `<h2>${decoded.filename}</h2><span class="meta">${decoded.fields.length} overridden field${decoded.fields.length === 1 ? '' : 's'}</span>`;
+  header.innerHTML = `<h2>${escapeHtml(decoded.filename)}</h2><span class="meta">${decoded.fields.length} overridden field${decoded.fields.length === 1 ? '' : 's'}</span>`;
   article.appendChild(header);
 
   // The game's info box for the object (filled in once the prototype is known), and the jump buttons.

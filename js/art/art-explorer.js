@@ -1,14 +1,14 @@
-﻿// .ART folder explorer: tree, grid, pagination, search, saved state.
+// .ART folder explorer: tree, grid, pagination, search, saved state.
 
 import { joinPath } from '../core/manifest.js';
 import { mountFolderTree } from '../explorer/folder-tree.js';
 import { errText } from '../core/text-io.js';
-import { createManifestLoader } from '../core/manifest.js';
+import { createIndexLoader, toDataPath } from '../core/file-index.js';
 import { parseArtBuffer } from './art-decoder.js';
 import { attachArtPreview, deferArtPreview } from './art-preview.js';
-import { folderPreviewCells, loadSheet, loadThumbIndex, sheetCellCanvas } from './art-thumb-sheets.js';
+import { artSheetPath, folderPreviewCells, loadSheet, loadThumbIndex, sheetCellCanvas } from './art-thumb-sheets.js';
 import { renderFileGroup } from './file-group.js';
-import { ART_ROOT } from '../core/config.js';
+import { DATA_ROOT } from '../core/config.js';
 import {
   breadcrumbEl,
   gridEl,
@@ -29,11 +29,12 @@ import { visit } from '../explorer/nav-history.js';
 import { matchFields, splitTerms } from '../explorer/match.js';
 import { artBaseName, loadProtoIndex } from '../proto/proto-index.js';
 
-// The root manifest follows the same <foldername>_manifest.json convention.
-export const ROOT_FOLDER_NAME = 'art';
+// (the listing of each folder comes from data/file_index_art.json)
+export const ROOT_FOLDER_NAME = 'data';
 const ROOT_RELATIVE_PATH = '';
 
-export const loadManifest = createManifestLoader({ root: ART_ROOT, rootName: ROOT_FOLDER_NAME, label: 'art' });
+// Listed from data/ (art, the mods, the modules): the paths are under data/ (toolbox/file_index.py)
+export const loadManifest = createIndexLoader('art');
 
 const PAGE_SIZE_OPTIONS = [50, 100, 200, 'all'];
 export let pageSize = PAGE_SIZE_OPTIONS[0]; // 50, 100, 200, or 'all'
@@ -106,13 +107,13 @@ function renderGrid(manifest, relativePath, folderName) {
   folderRelPath = relativePath;
   currentFolderName = folderName;
   filesOffset = 0;
-  breadcrumbEl.textContent = `/${relativePath}`.replace(/\/+/g, '/') || '/';
+  breadcrumbEl.textContent = `/data/${relativePath}`;
   renderFilePage();
 }
 
 function createFileCard(filename, relPath, folderName, opts) {
   const prefix = relPath ? `${relPath}/` : '';
-  const artUrl = `${ART_ROOT}${encPath(prefix)}${encPath(filename)}`;
+  const artUrl = `${DATA_ROOT}${encPath(prefix)}${encPath(filename)}`;
 
   const card = document.createElement('button');
   card.type = 'button';
@@ -132,7 +133,7 @@ function createFileCard(filename, relPath, folderName, opts) {
   if (opts && opts.showPath) {
     const pathLabel = document.createElement('span');
     pathLabel.className = 'explorer-item-path';
-    pathLabel.textContent = `/${relPath}`.replace(/\/+/g, '/') || '/';
+    pathLabel.textContent = `/data/${relPath}`;
     card.appendChild(pathLabel);
   }
   if (opts && opts.note) {
@@ -175,7 +176,8 @@ function renderSubfolderCard(sf, parentRelPath) {
 
   deferArtPreview(thumb, async () => {
     // The previews of a folder's sub-folders are one sheet; without it, walk the sub-folder for its first files.
-    const cells = await folderPreviewCells(parentRelPath, fullPath);
+    const parentSheet = artSheetPath(parentRelPath), childSheet = artSheetPath(fullPath);
+    const cells = parentSheet !== null && childSheet !== null ? await folderPreviewCells(parentSheet, childSheet) : null;
     const sheetUrl = cells?.find(c => !c.missing)?.url;
     const sheet = sheetUrl ? await loadSheet(sheetUrl) : null;
     if (cells && (!sheetUrl || sheet)) {
@@ -287,8 +289,21 @@ async function collectFilesRecursive(relativePath, folderName, terms, index, res
 
   const subfolders = manifest.subfolders || {};
   const keys = Object.keys(subfolders).sort();
-  for (const key of keys) {
+  // Online every manifest is a round trip: the next sub-folders' manifests are requested ahead (the loader keeps them),
+  // while the walk itself stays in the same order, so the results are the same.
+  const AHEAD = 16;
+  const prefetch = j => {
+    if (j >= keys.length) return;
+    const sf = subfolders[keys[j]];
+    if (!sf || typeof sf !== 'object') return;
+    const rel = joinPath(relativePath, sf.relative_path);
+    if (!visited.has(rel)) loadManifest(rel, sf.folder_name).catch(() => {});
+  };
+  if (results.length < limit) for (let j = 0; j < AHEAD; j++) prefetch(j);
+  for (let i = 0; i < keys.length; i++) {
+    const key = keys[i];
     if (results.length >= limit) return;
+    prefetch(i + AHEAD);
     const sf = subfolders[key];
     await collectFilesRecursive(joinPath(relativePath, sf.relative_path), sf.folder_name, terms, index, results, limit, visited);
   }
@@ -335,7 +350,7 @@ function clearSearch() {
   searchInputEl.value = '';
   searchClearBtnEl.hidden = true;
   saveExplorerState({ file: null });
-  breadcrumbEl.textContent = `/${folderRelPath}`.replace(/\/+/g, '/') || '/';
+  breadcrumbEl.textContent = `/data/${folderRelPath}`;
   renderFilePage();
 }
 
@@ -517,6 +532,7 @@ export async function openArtPlace({ path, folderName, file, query, offset }) {
 }
 
 export async function openDeepLink(target) {
+  target = { ...target, folder: toDataPath('art', target.folder, true) };   // (a link from before the explorer started at data/ names a folder of art/)
   if (artTree) artTree.select(target.folder);
   const manifest = await loadManifest(target.folder, target.folderName);
   renderGrid(manifest, target.folder, target.folderName);
@@ -537,6 +553,6 @@ export async function openDeepLink(target) {
   renderFilePage();
 
   const folderPrefix = target.folder ? `${target.folder}/` : '';
-  const artUrl = `${ART_ROOT}${encPath(folderPrefix)}${encPath(target.file)}`;
+  const artUrl = `${DATA_ROOT}${encPath(folderPrefix)}${encPath(target.file)}`;
   await loadArtFromServer(artUrl, target.file);
 }

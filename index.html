@@ -4,11 +4,32 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Arcanum Asset Browser</title>
+<!-- ONE page, three views. Which one is on show is decided here, before anything is drawn, and only that view's markup,
+     styles and scripts are written into the body (from the <template>s below):
+       atlas    the Atlas: maps, items, quests, library, demographics (script js/atlas/atlas-app.js). The page itself.
+       map      the world map the Atlas shows in a frame (js/atlas/world-atlas.js)
+       browser  the Asset Browser: Files and, in a second frame, the Workshop (js/main.js)
+     The Atlas puts the other two in frames that load this same file, each named "arcanum:<view>" (window.name). On their own
+     they are index.html?view=map and index.html?view=browser (a link with embed=, or with mode= / file= / folder=, is taken as
+     the map or the browser too, so the links the Asset Browser writes into its address bar keep working). -->
+<script>
+(function () {
+  var q = new URLSearchParams(location.search), v = '';
+  if (window.top !== window && /^arcanum:/.test(window.name)) v = window.name.slice(8);
+  if (!v) v = q.get('view') || (q.has('embed') ? 'map' : (q.has('mode') || q.has('file') || q.has('folder')) ? 'browser' : 'atlas');
+  window.ArcanumView = /^(atlas|map|browser)$/.test(v) ? v : 'atlas';
+  // the welcome screen has no top bar: hidden from the first paint, not once atlas-boot.js has put screen-home on the body
+  var h = location.hash.slice(1).split('&')[0];
+  if (window.ArcanumView === 'atlas' && (!h || h === 'home')) document.documentElement.classList.add('boot-home');
+})();
+</script>
+
+<template id="view-atlas">
 <!-- The Atlas (the Map Explorer, on the real world map) with the Asset Browser's Files and Workshop behind it.
      Script: js/atlas/atlas-app.js. Data: js/atlas/data/, made by the generators in toolbox/atlas/ (world-labels.js by
      locate_world_labels.py, items.js by build_items.py, ...; encounters.js is loaded on demand). Pictures: atlas/
-     (item-icons.png, portraits.png, maps/ read by world-atlas.html); music and sounds: data/sound/. Files and Workshop = the Asset Browser
-     (asset-browser.html) in two frames; the Workshop keeps to its map editor. -->
+     (item-icons.webp, portraits.png, maps/ read by the map view); music and sounds: data/sound/. Files and Workshop = the Asset Browser
+     view in two frames; the Workshop keeps to its map editor. -->
 <!-- Fonts saved in vendor/fonts/. Not render-blocking (media flips on load): a pending stylesheet would hold up the
      script that starts a #files frame -->
 <link href="vendor/fonts/fonts.css" rel="stylesheet" media="print" onload="this.media='all'">
@@ -51,7 +72,8 @@ img { display: block; }
 .side-head { display: flex; align-items: center; justify-content: space-between; padding: 10px 12px 8px; font: 600 10px var(--font-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); }
 
 /* ---- welcome ------------------------------------------------------------- */
-.welcome { flex: 1; overflow-y: auto; padding: 34px 40px 60px; }
+.welcome { flex: 1; overflow-y: auto; padding: 34px 40px 60px; scrollbar-width: none; -ms-overflow-style: none; }   /* scrolls on a small window, but shows no bar */
+.welcome::-webkit-scrollbar { display: none; }
 .welcome-head { text-align: center; max-width: 760px; margin: 0 auto 26px; }
 .welcome-head img { height: 64px; width: auto; margin: 0 auto 10px; }
 .welcome-head h1 { margin: 0; font: 600 30px var(--font-display); color: #f1e4c3; letter-spacing: .03em; }
@@ -79,13 +101,27 @@ img { display: block; }
 .door-who { font: 10.5px var(--font-mono); color: var(--ink-faint); }
 
 /* ---- location list (Atlas) --------------------------------------------- */
-.region-tabs { display: flex; margin: 0 10px 8px; border: 1px solid var(--border); border-radius: 4px; overflow: hidden; }
+.region-tabs { display: flex; margin: 0 0 8px; border: solid var(--border); border-width: 1px 0; }
+.ver-wrap { flex: 1; position: relative; display: flex; }
+.ver-wrap > button { flex: 1; }
+.ver-menu { position: absolute; top: 100%; left: 0; min-width: 100%; width: max-content; z-index: 30; background: var(--surface-2); border: 1px solid var(--border); }
+.ver-menu[hidden] { display: none; }
+.ver-arrow { display: inline-block; padding: 4px 6px; margin: -4px -6px -4px 0; }
+.ver-arrow:hover { color: #f1e4c3; }
+.ver-menu button { display: block; width: 100%; text-align: left; padding: 7px 8px; white-space: nowrap; }
+.ver-menu button.on { color: #f1e4c3; background: var(--surface); }
 .region-tabs button { flex: 1; border: 0; background: none; padding: 6px 4px; font: 600 10.5px var(--font-display); color: var(--ink-muted); }
 .region-tabs button.on { background: var(--surface-2); color: #f1e4c3; }
 .loclist { flex: 1; overflow-y: auto; padding: 0 6px 10px; }
+.loccat { margin: 14px 4px 2px; padding-bottom: 3px; border-bottom: 1px solid var(--border); font: 600 12px var(--font-display); letter-spacing: .06em; color: var(--atlas); }
+.loccat:first-child { margin-top: 4px; }
 .locgroup { margin: 8px 6px 3px; font: 600 9.5px var(--font-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); }
 .loc { display: flex; align-items: center; gap: 6px; width: 100%; border: 0; background: none; padding: 5px 8px; border-radius: 3px; text-align: left; font: 12.5px var(--font-display); color: var(--ink-muted); }
 .loc:hover { background: var(--surface-3); color: var(--ink); }
+.loc.ce { color: #6fc7b4; }
+.loc.ce:hover { color: #9fe3d3; }
+.loc.own { color: #7eb0ff; }       /* a module the mod on show has its own version of (data/mods/<mod>/modules/<module>) */
+.loc.own:hover { color: #b3d0ff; }
 .loc.on { background: var(--surface-2); color: #f1e4c3; box-shadow: inset 2px 0 0 var(--atlas); }
 .loc .n { margin-left: auto; font: 10px var(--font-mono); color: var(--ink-faint); }
 .plist { display: flex; flex-direction: column; }
@@ -98,7 +134,10 @@ img { display: block; }
 .locrow > .loc { flex: 1; min-width: 0; }
 .loctog { width: 18px; flex: none; border: 0; background: none; color: var(--ink-faint); font-size: 10px; cursor: pointer; padding: 0; }
 .loctog:hover { color: var(--ink); }
-.lockids > .loc { padding-left: 28px; font-size: 12px; }
+.lockids { margin: 0 0 6px 21px; padding-left: 4px; border-left: 1px solid var(--atlas); }
+.lockids > .loc { padding-left: 6px; font-size: 12px; }
+.lockids > .loc::before { content: "↳"; font-size: 11px; color: var(--ink-faint); }
+.loc .subn { margin-left: auto; padding: 0 5px; border: 1px solid var(--border); border-radius: 8px; font: 9.5px var(--font-mono); color: var(--ink-faint); }
 .locdet { margin: 1px 0; }
 .locdet > summary { display: flex; align-items: center; gap: 6px; padding: 5px 8px; cursor: pointer; font: 12.5px var(--font-display); color: var(--ink-muted); border-radius: 3px; list-style: none; }
 .locdet > summary::-webkit-details-marker { display: none; }
@@ -208,6 +247,7 @@ body.screen-workshop .statusbar, body.screen-workshop .topbar { display: none; }
 .modlink { white-space: nowrap; display: none; align-items: center; gap: 5px; border: 0; background: none; padding: 5px 6px; font: 11px var(--font-display); color: var(--ink-faint); }
 .modlink:hover { color: var(--ink); text-decoration: underline; }
 .modlink.on { color: var(--brass-strong); }
+.modlink.na { opacity: .5; }
 /* Advanced view: the game files behind a panel (atlas-app.js fillAdvanced), one row each: kind, file name, what it is */
 .adv { display: none; }
 body.advanced .adv { display: block; }
@@ -228,7 +268,7 @@ a.adv-row:focus-visible { outline: 2px solid var(--teal); outline-offset: 1px; }
 body.screen-home .modlink { display: flex; }
 body.screen-atlas .atlasnav, body.screen-atlas .modlink { display: flex; }
 body.screen-atlas .statusbar, body.screen-home .statusbar { display: none; }
-body.screen-home .topbar { display: none; }
+body.screen-home .topbar, html.boot-home .topbar { display: none; }
 body.screen-atlas .topbar { background: linear-gradient(#2a2318, #211c14); border-bottom-color: #5c4b31; }
 body.screen-atlas .hud span, body.screen-atlas .musicbox { font-family: var(--font-display); }
 body.screen-atlas .sec-t { font: 600 12px var(--font-display); letter-spacing: .06em; text-transform: none; color: var(--atlas); }
@@ -261,6 +301,13 @@ body.screen-atlas .quest span { font-family: var(--font-display); }
 .hero { cursor: pointer; } .hero:hover { border-color: var(--atlas); }
 .hero-map { position: relative; min-height: 300px; background: #0d0b08 center / cover; }
 .hero-map::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, transparent 55%, var(--surface)); }
+.hero-slide { position: absolute; inset: 0; background: center / cover; opacity: 0; transition: opacity 1.2s ease; }
+.hero-slide.on { opacity: 1; }
+.hero-caption { position: absolute; left: 16px; bottom: 14px; z-index: 2; max-width: calc(100% - 32px); padding: 5px 12px 6px; border-left: 2px solid var(--atlas); border-radius: 2px 4px 4px 2px;
+  font: italic 400 14px/1.3 var(--font-display, Georgia, serif); letter-spacing: .02em; color: #f4e8c8; text-shadow: 0 1px 3px rgba(0,0,0,.9);
+  background: linear-gradient(90deg, rgba(10,8,5,.72), rgba(10,8,5,.38)); backdrop-filter: blur(3px);
+  opacity: 0; transform: translateY(4px); transition: opacity .7s ease, transform .7s ease; pointer-events: none; }
+.hero-caption.on { opacity: 1; transform: none; }
 .hero-body { padding: 22px 24px; display: flex; flex-direction: column; gap: 12px; }
 .modders { max-width: 1060px; margin: 22px auto 0; display: grid; grid-template-columns: auto 1fr 1fr; gap: 12px; align-items: stretch; }
 .modders-k { writing-mode: vertical-rl; transform: rotate(180deg); font: 600 9.5px var(--font-mono); letter-spacing: .16em; text-transform: uppercase; color: var(--ink-faint); text-align: center; }
@@ -275,7 +322,7 @@ body.screen-atlas .quest span { font-family: var(--font-display); }
 /* ---- items --------------------------------------------------------------- */
 .ibox { flex: none; display: inline-flex; align-items: center; justify-content: center; width: var(--s); height: var(--s); }
 .ibox .ph { width: 70%; height: 70%; border: 1px dashed #3d3324; border-radius: 3px; }
-.spr { display: block; background-image: url("atlas/item-icons.png"); background-repeat: no-repeat; }
+.spr { display: block; background-image: url("atlas/item-icons.webp"); background-repeat: no-repeat; }
 .inv { display: grid; grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); gap: 6px; }
 .item { display: flex; flex-direction: column; align-items: center; gap: 3px; border: 1px solid var(--border); background: #15110c; border-radius: 3px; padding: 5px 3px 4px; text-align: center; font: 10.5px/1.2 var(--font-display); color: var(--ink-muted); cursor: pointer; }
 .item b, .rrow b, .wrow b { color: var(--brass); font-weight: 600; }
@@ -369,11 +416,12 @@ button.dbar:hover { background: var(--surface-2); color: var(--ink); }
 
 /* ---- quests -------------------------------------------------------------- */
 .qlist { flex: 1; min-height: 0; overflow-y: auto; padding: 10px 12px 20px; display: flex; flex-direction: column; gap: 5px; align-content: start; }
-.qrow { flex: none; display: grid; grid-template-columns: 26px 1fr 150px; gap: 10px; align-items: center; width: 100%; text-align: left; border: 1px solid var(--border); background: var(--surface); border-radius: 4px; padding: 8px 12px; }
+.qrow { flex: none; display: grid; grid-template-columns: 26px minmax(0, 1fr) 150px; gap: 10px; align-items: center; width: 100%; text-align: left; border: 1px solid var(--border); background: var(--surface); border-radius: 4px; padding: 8px 12px; }
 .qrow:hover { border-color: #8a7552; }
 .qrow.on { border-color: var(--atlas); background: var(--surface-2); box-shadow: inset 2px 0 0 var(--atlas); }
 .qrow .qi { font-size: 18px; text-align: center; }
-.qrow b { display: block; font: 600 13.5px var(--font-display); color: #f1e4c3; }
+.qrow b { display: block; font: 600 13.5px var(--font-display); color: #f1e4c3; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.qrow > span:nth-child(2) { min-width: 0; }
 .qrow .s { display: block; margin-top: 1px; font: 11.5px var(--font-display); color: var(--ink-faint); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .qrow .qx { font: 11px/1.3 var(--font-display); color: var(--ink-muted); text-align: right; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .qrow .qx i { display: block; font-style: normal; color: var(--ink-faint); }
@@ -421,13 +469,11 @@ button.dbar:hover { background: var(--surface-2); color: var(--ink); }
 .qnav .nx { text-align: right; }
 .qnav .none { flex: 1; }
 </style>
-</head>
-<body>
 
 <div class="app">
   <header class="topbar">
     <button class="brand" data-go="home" title="Welcome screen">
-      <img src="logo.png" alt="">
+      <img src="logo.webp" alt="">
       <span><span class="brand-kicker">Arcanum CE Restored</span><span class="brand-title">Arcanum Asset Browser</span></span>
     </button>
     <nav class="atlasnav" id="atlasNav">
@@ -448,7 +494,7 @@ button.dbar:hover { background: var(--surface-2); color: var(--ink); }
     <main class="stage">
       <div class="welcome">
         <div class="welcome-head">
-          <img src="logo.png" alt="">
+          <img src="logo.webp" alt="">
           <h1>Arcanum Asset Browser</h1>
         </div>
 
@@ -492,7 +538,8 @@ button.dbar:hover { background: var(--surface-2); color: var(--ink); }
       <div class="maptools">
         <span class="title" id="itemsTitle">All items</span>
         <span class="crumb" id="itemsCrumb" style="font-family:var(--font-display)"></span>
-        <select class="tbtn" id="itemGame" style="font-family:var(--font-display)" title="Show the items of this game"></select>
+        <button class="tbtn" id="itemOnlyMod" type="button" hidden style="font-family:var(--font-display)" title="Show only the items this module adds: those not found in Arcanum itself">Only module</button>
+        <select class="tbtn" id="itemGame"style="font-family:var(--font-display)" title="Show the items of this game"></select>
       </div>
       <div class="igrid" id="itemGrid"></div>
     </main>
@@ -511,7 +558,7 @@ button.dbar:hover { background: var(--surface-2); color: var(--ink); }
       <div class="maptools">
         <span class="title" id="questTitle">All quests</span>
         <span class="crumb" id="questCrumb" style="font-family:var(--font-display)"></span>
-        <button class="tbtn" id="questClear" style="font-family:var(--font-display)">Clear filters</button>
+        <select class="tbtn" id="questGame" style="font-family:var(--font-display)" title="Show the quests of this game"></select>
       </div>
       <div class="qlist" id="questList"></div>
     </main>
@@ -529,6 +576,7 @@ button.dbar:hover { background: var(--surface-2); color: var(--ink); }
       <div class="maptools">
         <span class="title" id="libTitle">Everything to read</span>
         <span class="crumb" id="libCrumb" style="font-family:var(--font-display)"></span>
+        <select class="tbtn" id="libGame" style="font-family:var(--font-display)" title="Show the texts of this game"></select>
       </div>
       <div class="lib">
         <div class="lib-reader" id="libReader"><div class="flavour" style="padding:20px;font-family:Georgia,serif;font-style:italic;color:var(--ink-muted)">Pick something to read it as the game shows it.</div></div>
@@ -548,6 +596,7 @@ button.dbar:hover { background: var(--surface-2); color: var(--ink); }
       <div class="maptools">
         <span class="title" id="demoTitle">Everyone in Arcanum</span>
         <span class="crumb" id="demoCrumb" style="font-family:var(--font-display)"></span>
+        <select class="tbtn" id="demoGame" style="font-family:var(--font-display)" title="Show the people of this game"></select>
         <button class="tbtn" id="demoClear" style="font-family:var(--font-display)">Clear filters</button>
       </div>
       <div class="demo" id="demoBody"></div>
@@ -557,7 +606,7 @@ button.dbar:hover { background: var(--surface-2); color: var(--ink); }
   <!-- =================================================================== ATLAS -->
   <div class="workspace" data-screen="atlas">
     <aside class="side-left rel">
-      <div class="region-tabs" id="modeTabs"><button class="on" data-mode="arcanum">Arcanum</button><button data-mode="modules">Modules</button></div>
+      <div class="region-tabs" id="modeTabs"><div class="ver-wrap"><button class="on" data-mode="arcanum" id="verTab" aria-haspopup="listbox" aria-expanded="false" title="Which version of the game to show"><span id="verName">CE Restored 1.61</span> <span id="verArrow" class="ver-arrow">&#9662;</span></button><div class="ver-menu" id="verMenu" role="listbox" hidden><button role="option" data-ver="ce">CE Restored 1.61</button><button role="option" data-ver="base">Arcanum 1.0.7.4</button><button role="option" data-ver="ru">Russian Mod Pack 2012 RC9</button><button role="option" data-ver="car">Polished CAR Arcanum</button><button role="option" data-ver="fp">Forgotten Places 6.0</button></div></div><button data-mode="modules">Modules</button></div>
       <div class="loclist" id="locList"><!-- filled from world-labels.js --></div>
     </aside>
 
@@ -565,8 +614,8 @@ button.dbar:hover { background: var(--surface-2); color: var(--ink); }
       <button class="edgetoggle" id="placesToggle" type="button" title="Hide the places list" aria-label="Hide the places list" aria-expanded="true">‹</button>
       <!-- which place is on show: kept here for the page's own use (the places list shows it) -->
       <span id="atlasTitle" hidden>Shrouded Hills</span><span id="atlasCrumb" hidden>Arcanum › Cities</span>
-      <!-- the real world map (world-atlas.html, pictures in atlas/world/) with the labels placed by toolbox/atlas/locate_world_labels.py and the containers of toolbox/atlas/build_items.py -->
-      <iframe class="mapview" id="worldFrame" src="world-atlas.html?embed=1&amp;place=Shrouded%20Hills" title="World map" style="border:0;width:100%"></iframe>
+      <!-- the real world map (the map view of this file, pictures in atlas/world/, atlas/terrain/) with the labels placed by toolbox/atlas/locate_world_labels.py and the containers of toolbox/atlas/build_items.py -->
+      <iframe class="mapview" id="worldFrame" name="arcanum:map" data-src="index.html?embed=1&amp;place=Shrouded%20Hills" title="World map" style="border:0;width:100%"></iframe>
       <div class="sndnow" id="sndNow" hidden></div>
     </main>
 
@@ -576,8 +625,8 @@ button.dbar:hover { background: var(--surface-2); color: var(--ink); }
   <!-- =================================================================== FILES -->
   <div class="workspace" data-screen="files">
     <main class="stage">
-      <!-- the Asset Browser itself (asset-browser.html), loaded the first time Files opens -->
-      <iframe class="filesview" id="filesFrame" title="Game files"></iframe>
+      <!-- the Asset Browser itself (the browser view of this file), loaded the first time Files opens -->
+      <iframe class="filesview" id="filesFrame" name="arcanum:browser" title="Game files"></iframe>
       <div class="filesnote" id="filesNote" hidden>
         <h2>Files need the local server</h2>
         <p>The file viewers read the game data folders, which a browser only allows from a server. Double-click
@@ -590,8 +639,8 @@ button.dbar:hover { background: var(--surface-2); color: var(--ink); }
   <!-- =================================================================== WORKSHOP -->
   <div class="workspace" data-screen="workshop">
     <main class="stage">
-      <!-- the Asset Browser again (asset-browser.html), on the maps: picking one opens its map editor -->
-      <iframe class="filesview" id="workFrame" title="Workshop"></iframe>
+      <!-- the Asset Browser again (the browser view), on the maps: picking one opens its map editor -->
+      <iframe class="filesview" id="workFrame" name="arcanum:browser" title="Workshop"></iframe>
       <div class="filesnote" id="workNote" hidden>
         <h2>The Workshop needs the local server</h2>
         <p>The map editor reads the game data folders, which a browser only allows from a server. Double-click
@@ -605,11 +654,15 @@ button.dbar:hover { background: var(--surface-2); color: var(--ink); }
   // The same link loadBrowser() (js/atlas/atlas-app.js) makes, so it keeps this frame rather than loading it again.
   (function () {
     var q = location.hash.slice(1).split('&'), screen = q.shift(), frame = document.getElementById(screen === 'files' ? 'filesFrame' : screen === 'workshop' ? 'workFrame' : '');
+    // The map frame (~5 MB of pictures and data) starts at once when the link leads anywhere but the welcome screen, Files or Workshop;
+    // on the welcome screen atlas-app.js starts it once the app is up (atlas-boot.js), so it does not share the connection with the Atlas's own data.
+    var world = document.getElementById('worldFrame');
+    if (!frame && screen && screen !== 'home') world.src = world.getAttribute('data-src');
     if (!frame) return;
     var query = q.length ? q.join('&') : (screen === 'workshop' ? 'mode=sec' : '');
     if (q.length && screen === 'files') { var p = new URLSearchParams(query); p.delete('editor'); query = String(p); }
     frame.style.visibility = 'hidden';
-    frame.src = 'asset-browser.html' + (query ? '?' + query : '');
+    frame.src = 'index.html' + (query ? '?' + query : '');
   })();
   </script>
 
@@ -618,23 +671,467 @@ button.dbar:hover { background: var(--surface-2); color: var(--ink); }
 
 <div class="itemcard-overlay" id="itemCard"></div>
 
-<script src="js/atlas/data/world-labels.js"></script>
-<script src="js/atlas/data/items.js"></script>
-<script src="js/atlas/data/demographics.js"></script>
-<script src="js/atlas/data/library.js"></script>
-<script src="js/atlas/data/npcs.js"></script>
-<script src="js/atlas/data/routines.js"></script>
+<script src="js/atlas/data/versions.js"></script>
+<script src="js/atlas/version-data.js"></script>
 <script src="js/atlas/data/hero.js"></script>
+<!-- The welcome screen is drawn from the markup above. The data files (js/atlas/data/, listed in atlas-boot.js) load in the background, and the app
+     (atlas-app.js) starts when they are in; a change of version starts it again (atlas-boot.js), so nothing here is reloaded. -->
+<script src="js/atlas/atlas-boot.js"></script>
+</template>
+
+<template id="view-map">
+<!-- The Atlas on the real world map. Script: js/atlas/world-atlas.js. Data: js/atlas/data/ (world-labels.js placed by
+     toolbox/atlas/locate_world_labels.py, items.js = every container and what it holds, toolbox/atlas/build_items.py, ...).
+     Every map, the world included, is drawn from its sector pictures (atlas/world/, atlas/maps/, atlas/modules/, and the terrain templates shared by the maps that use them: atlas/terrain/; toolbox/atlas/build_map_pictures.py).
+     ?embed=1 hides the side panels and talks to the parent page (index.html) with postMessage. -->
+<script>
+// the embedded page hides its own side panels from its first paint, not once world-atlas.js has run (that waits for the data files);
+// &over=1: transparent, over the picture of the old map (world-atlas.js)
+(function () {
+  var q = new URLSearchParams(location.search);
+  document.body.classList.toggle('embed', q.has('embed'));
+  if (q.has('over')) { document.documentElement.classList.add('over'); document.body.classList.add('over'); }
+})();
+</script>
+<link rel="stylesheet" href="vendor/fonts/fonts.css">
+<style>
+:root { --bg: #0e0d0c; --surface: #211c14; --surface-2: #362e22; --border: #4a3e2e; --ink: #d4c5a1; --ink-muted: #b3a685; --ink-faint: #8a7d62; --atlas: #e8c66a; --magick: #6fa8ff; }
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; background: var(--bg); color: var(--ink); font: 13px/1.45 system-ui, sans-serif; overflow: hidden; user-select: none; -webkit-user-select: none; }
+html.over, body.over { background: transparent; }
+button { font: inherit; color: inherit; cursor: pointer; }
+.app { display: flex; height: 100%; }
+.side { width: 250px; flex: none; background: var(--surface); border-right: 1px solid var(--border); display: flex; flex-direction: column; min-height: 0; }
+.side h1 { margin: 0; padding: 12px 14px 4px; font: 600 16px Cinzel, Georgia, serif; color: #f1e4c3; }
+.side .sub { padding: 0 14px 8px; font-size: 11.5px; color: var(--ink-faint); }
+.places { flex: 1; overflow-y: auto; padding: 0 6px 12px; }
+.grp { margin: 10px 8px 3px; font: 600 9.5px ui-monospace, monospace; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); }
+.place { display: flex; width: 100%; border: 0; background: none; padding: 4px 8px; border-radius: 3px; text-align: left; font: 12.5px Cinzel, Georgia, serif; color: var(--ink-muted); }
+.place:hover { background: #2a241a; color: var(--ink); }
+.place.on { background: var(--surface-2); color: #f1e4c3; box-shadow: inset 2px 0 0 var(--atlas); }
+.place span { margin-left: auto; font: 10px ui-monospace, monospace; color: var(--ink-faint); }
+.stage { flex: 1; position: relative; min-width: 0; }
+canvas { position: absolute; inset: 0; width: 100%; height: 100%; cursor: grab; touch-action: none; }
+canvas.drag { cursor: grabbing; }
+.pins { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.placename { position: absolute; transform: translate(-50%, -50%); pointer-events: auto; cursor: pointer; font: 700 17px 'Times New Roman', Times, 'Liberation Serif', serif; color: #fff; text-shadow: 0 0 4px #000, 0 0 2px #000, 0 0 8px #000; white-space: nowrap; }
+/* the game writes the names of its world map in NewTimes16Font (art 840, wmap_ui.c): a Times serif. Settlements bold, other places smaller and plain, secret areas the same size in italic */
+.placename.small { font-size: 13px; font-weight: 400; }
+.placename.secret { font-style: italic; }
+.legend { position: absolute; left: 10px; bottom: 10px; display: none; padding: 8px 10px; background: rgba(21,17,12,.92); border: 1px solid var(--border); border-radius: 5px; font-size: 11.5px; }
+body.check .legend { display: block; }
+.legend div { display: flex; align-items: center; gap: 7px; }
+.legend i { width: 10px; height: 10px; border-radius: 2px; background: var(--c); }
+.legend b { margin-left: auto; padding-left: 12px; font-weight: 500; color: var(--ink-faint); }
+.nav { position: absolute; top: 10px; left: 10px; }
+.nav button { border: 1px solid var(--border); background: rgba(33,28,20,.94); border-radius: 4px; padding: 5px 10px; font: 11.5px Cinzel, Georgia, serif; color: var(--ink-muted); }
+.filters { position: absolute; left: 50%; bottom: 12px; transform: translateX(-50%); display: flex; gap: 6px; padding: 5px; background: rgba(21,17,12,.88); border: 1px solid var(--border); border-radius: 9px; }
+.filters button { width: 36px; height: 36px; padding: 0; border: 1px solid var(--border); background: rgba(33,28,20,.94); border-radius: 6px; font-size: 18px; line-height: 1; opacity: .6; transition: opacity .6s, box-shadow .9s, border-color .6s, background .6s; }
+.filters button:hover { opacity: 1; }
+.filters button.on { opacity: 1; border-color: var(--c); background: rgba(60,48,34,.96); box-shadow: 0 0 9px 1px var(--c); }
+.filters .ficon { display: block; margin: auto; background-image: url("atlas/portraits.png"); background-repeat: no-repeat; }
+body.embed #checkBtn { display: none; }
+.tip { position: absolute; display: none; transform: translate(-50%, -100%); padding: 2px 7px; background: rgba(21,17,12,.94); border: 1px solid var(--border); border-radius: 3px; color: #f1e4c3; font: 11.5px Cinzel, Georgia, serif; white-space: normal; width: max-content; max-width: 320px; text-align: center; pointer-events: none; z-index: 5; }
+.panel { width: 320px; flex: none; background: var(--surface); border-left: 1px solid var(--border); overflow-y: auto; padding: 14px 16px; }
+.panel h2 { margin: 0 0 2px; font: 600 18px Cinzel, Georgia, serif; color: #f1e4c3; }
+.panel .meta { font-size: 12px; color: var(--ink-muted); }
+.panel h3 { margin: 14px 0 6px; font: 600 12px Cinzel, Georgia, serif; color: var(--atlas); }
+.panel .desc { font-family: Georgia, serif; font-style: italic; color: var(--ink-muted); }
+.panel .empty { color: var(--ink-faint); }
+.chk { margin-top: 16px; padding: 9px 10px; border: 1px dashed #6b5a3f; border-radius: 4px; font: 11.5px ui-monospace, monospace; color: var(--ink-muted); display: none; }
+body.check .chk { display: block; }
+.inv span { display: inline-block; margin: 0 4px 4px 0; padding: 2px 7px; border: 1px solid var(--border); border-radius: 10px; font-size: 11.5px; }
+.inv span.magick { color: var(--magick); border-color: var(--magick); }
+.hud { position: absolute; right: 52px; bottom: 10px; padding: 4px 9px; background: rgba(33,28,20,.94); border: 1px solid var(--border); border-radius: 4px; font: 11px ui-monospace, monospace; color: var(--ink-muted); }
+body.embed .side, body.embed .panel, body.embed .legend { display: none; }
+.panel .items div { display: flex; justify-content: space-between; padding: 2px 0; border-bottom: 1px dotted #3a3122; }   /* the public Atlas: no review tools */
+#msg { position: absolute; inset: 0; display: none; place-items: center; padding: 30px; text-align: center; }
+</style>
+<div class="app">
+  <aside class="side">
+    <h1>Arcanum Asset Browser</h1>
+    <div class="sub">The real world map, with the Map Explorer’s labels</div>
+    <div class="places" id="places"></div>
+  </aside>
+  <main class="stage">
+    <canvas id="stage"></canvas>
+    <div class="pins" id="pins"></div>
+    <div class="nav"><button id="worldBtn" type="button" style="display:none">↩ Back</button></div>
+    <div class="filters" id="filters">
+      <button type="button" data-f="chest" data-icon="chest" style="--c:#ff4d3d" title="Containers">📦</button>
+      <button type="button" data-f="people" data-icon="people" style="--c:#6fe07a" title="People">🧑</button>
+      <button type="button" data-f="creature" data-icon="creature" style="--c:#c586ff" title="Creatures">🐾</button>
+      <button type="button" id="offBtn" data-icon="off" style="--c:#a9b4d6" title="Also those who are not there yet: people and creatures who only turn up later in the story (shown fainter)">💤</button>
+      <button type="button" data-f="way" data-icon="way" style="--c:#4fd1ff" title="Waypoints">🚪</button>
+      <button type="button" data-f="item" data-icon="item" style="--c:#ffa94d" title="Items on the floor">🎒</button>
+      <button type="button" data-f="sign" data-icon="sign" style="--c:#ffe27a" title="Signs and other things that tell you something">ℹ️</button>
+      <button type="button" id="encBtn" data-icon="enc" style="--c:#ff7a5a" title="Random encounters: where they happen while travelling; click open country to see what can attack you there">🎲</button>
+      <button type="button" id="checkBtn" data-icon="check" style="--c:#b4a0ff" title="Check placement">✔️</button>
+    </div>
+    <div class="tip" id="tip"></div>
+    <div class="legend" id="legend"></div>
+    <div class="hud" id="hud"></div>
+    <div id="msg"></div>
+  </main>
+  <aside class="panel" id="panel"><p class="empty">Click a label on the map.</p></aside>
+</div>
+<script src="js/atlas/data/versions.js"></script>
+<script src="js/atlas/version-data.js"></script>
+<script src="js/atlas/data/map-pictures.js"></script>
+<script src="js/atlas/data/pic-alias.js"></script>
+<script src="js/atlas/data/overlay.js"></script>
+<!-- the mod of the version on show (nothing for the base game): pictures, alias lists, maps, areas, people (its glows: world-atlas.js loadGlows) -->
+<script>AtlasData.mod('pictures', 'maps', 'areas', 'mobs')</script>
+<script src="js/atlas/data/world-labels.js"></script>
+<script>AtlasData('items')</script>
+<script src="js/atlas/data/npcs.js"></script>
+<script>AtlasData('routines')</script>
 <script src="js/atlas/data/submaps.js"></script>
-<script src="js/atlas/data/modules.js"></script>
+<script>AtlasData('modules')</script>
 <script src="js/atlas/modules-merge.js"></script>
-<script src="js/atlas/data/waypoints.js"></script>
-<script src="js/atlas/data/notices.js"></script>
+<script>AtlasData('waypoints')</script>
+<script>AtlasData('notices')</script>
+<script src="js/atlas/modules-merge-labels.js"></script>
 <script src="js/atlas/data/areas.js"></script>
-<script src="js/atlas/data/quests.js"></script>
-<script src="js/atlas/data/portraits.js"></script>
-<script src="js/atlas/data/sound.js"></script>
-<script src="js/atlas/atlas-app.js"></script>
+<script>AtlasData('portraits')</script>
+<script src="js/atlas/live-layer.js"></script>
+<script src="js/atlas/world-atlas.js"></script>
 <script src="js/atlas/game-scroll.js"></script>
+</template>
+
+<template id="view-browser">
+<link rel="stylesheet" href="vendor/fonts/fonts.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="shell.css">
+<!-- Only a speed hint: modules that main.js reaches through other modules, fetched with the first wave instead of
+     two or three round trips later (online). A file missing from this list still loads, just later. -->
+<link rel="modulepreload" href="js/main.js">
+<link rel="modulepreload" href="js/core/manifest.js">
+<link rel="modulepreload" href="js/core/art-id.js">
+<link rel="modulepreload" href="js/explorer/nav-history.js">
+<link rel="modulepreload" href="js/explorer/file-search.js">
+<link rel="modulepreload" href="js/explorer/folder-tree.js">
+<link rel="modulepreload" href="js/explorer/match.js">
+<link rel="modulepreload" href="js/art/packer-kinds.js">
+<link rel="modulepreload" href="js/art/packer-guide.js">
+<link rel="modulepreload" href="js/mob/mob-card-art.js">
+<link rel="modulepreload" href="js/mob/mob-extras.js">
+<link rel="modulepreload" href="js/mob/mob-identity.js">
+<link rel="modulepreload" href="js/proto/proto-index.js">
+<link rel="modulepreload" href="js/proto/item-card.js">
+<link rel="modulepreload" href="js/proto/game-font.js">
+<link rel="modulepreload" href="js/text/dlg-dynamic.js">
+<link rel="modulepreload" href="js/text/dlg-codes.js">
+<link rel="modulepreload" href="js/scr/scr-dlg-triggers.js">
+<link rel="modulepreload" href="js/scr/scr-explain.js">
+<link rel="modulepreload" href="js/scr/scr-local-flags.js">
+<link rel="modulepreload" href="js/scr/scr-global-flags.js">
+<link rel="modulepreload" href="js/sec/sec-terrain.js">
+<link rel="modulepreload" href="js/sec/sec-inventory.js">
+<link rel="modulepreload" href="js/sec/sec-npc-motion.js">
+<link rel="modulepreload" href="js/sec/sec-lod.js">
+<link rel="modulepreload" href="js/sec/sec-roofs.js">
+<link rel="modulepreload" href="js/sec/sec-nav.js">
+<link rel="modulepreload" href="js/sec/sec-locations.js">
+<link rel="modulepreload" href="js/sec/sec-map-data.js">
+<link rel="modulepreload" href="js/sec/sec-rotation.js">
+<link rel="modulepreload" href="js/editor/world-editor-dialog.js">
+<link rel="modulepreload" href="js/editor/sec-game-protos.js">
+<link rel="modulepreload" href="js/editor/sec-sector-extras.js">
+<link rel="modulepreload" href="js/editor/sec-facade-groups.js">
+<link rel="modulepreload" href="js/editor/sec-facade-layouts.js">
+<link rel="modulepreload" href="js/editor/sec-house-plan.js">
+<link rel="modulepreload" href="js/editor/sec-house-data.js">
+<link rel="modulepreload" href="js/editor/sec-house-wfc.js">
+<link rel="modulepreload" href="js/editor/sec-village-paths.js">
+<link rel="modulepreload" href="js/editor/sec-map-files.js">
+<link rel="modulepreload" href="js/editor/mob-edit-panel.js">
+<link rel="modulepreload" href="js/editor/mob-edit.js">
+<link rel="modulepreload" href="js/editor/sec-extra-tools.js">
+<link rel="modulepreload" href="js/editor/story-panel.js">
+<link rel="modulepreload" href="js/editor/story-data.js">
+<div class="page app" id="app">
+  <!-- Top bar: file-type switch (browse) · editor menu (edit) · context tools -->
+  <header class="topbar" id="topbar">
+    <button type="button" id="appTitle" class="brand" title="Back to the welcome screen">
+      <img class="brand-logo" src="logo.webp" alt="Arcanum CE Restored logo" width="500" height="131">
+      <span class="brand-text"><span class="brand-kicker">Arcanum CE Restored</span><span class="brand-title">Asset Browser</span></span>
+    </button>
+    <nav class="topbar-tabs file-mode-nav" id="topbarTabs" aria-label="File type navigation">
+      <div class="tab-group tab-art" role="group" aria-label="Graphics">
+        <button type="button" id="artExploreBtn" class="file-mode-btn art-mode" title=".ART files" aria-pressed="false">ART</button>
+        <button type="button" id="bmpExploreBtn" class="file-mode-btn art-mode" title=".BMP files" aria-pressed="false">BMP</button>
+      </div>
+      <span class="tab-sep" aria-hidden="true"></span>
+      <div class="tab-group tab-object" role="group" aria-label="Object models">
+        <button type="button" id="protoExploreBtn" class="file-mode-btn object-mode" title=".PRO files" aria-pressed="false">PRO</button>
+        <button type="button" id="secExploreBtn" class="file-mode-btn object-mode" title=".SEC files" aria-pressed="false">SEC</button>
+        <button type="button" id="mobExploreBtn" class="file-mode-btn object-mode" title=".MOB files" aria-pressed="false">MOB</button>
+      </div>
+      <span class="tab-sep" aria-hidden="true"></span>
+      <div class="tab-group tab-text" role="group" aria-label="Text tables">
+        <button type="button" id="dlgExploreBtn" class="file-mode-btn text-mode" title=".DLG files" aria-pressed="false">DLG</button>
+        <button type="button" id="mesExploreBtn" class="file-mode-btn text-mode" title=".MES files" aria-pressed="false">MES</button>
+      </div>
+      <span class="tab-sep" aria-hidden="true"></span>
+      <div class="tab-group tab-script" role="group" aria-label="Script">
+        <button type="button" id="scrExploreBtn" class="file-mode-btn script-mode" title=".SCR files" aria-pressed="false">SCR</button>
+      </div>
+    </nav>
+    <div class="topbar-editor" id="topbarEditor" role="toolbar" aria-label="Map editor menu"></div>
+    <div class="topbar-tools" id="topbarTools" role="toolbar" aria-label="Tools">
+      <button type="button" id="packerLaunchBtn" class="tool-btn tool-art" title="Build a .ART file from BMP / PNG frames" hidden>🛠️ .ART Packer</button>
+      <button type="button" id="worldEditorLaunchBtn" class="tool-btn tool-art" title="Create a new world map and edit it" hidden>🌍 Open world editor</button>
+    </div>
+  </header>
+
+  <div class="workspace">
+    <!-- Left side bar: the file list; turns into the tool strip while editing a map -->
+    <aside class="side-left" id="sideLeft" aria-label="Files and tools">
+      <div class="side-layer side-tree">
+        <div class="side-head">
+          <span class="side-title" id="sideTreeTitle">Files</span>
+          <button type="button" id="sidebarToggleBtn" class="sidebar-toggle" aria-expanded="true" aria-controls="explorerTree" title="Hide the file list">◀</button>
+        </div>
+        <div class="explorer-tree" id="explorerTree" aria-label="File list"></div>
+      </div>
+      <div class="side-layer side-rail" id="toolRail" aria-label="Editing tools"></div>
+    </aside>
+
+    <!-- Centre: the folders / files / viewer of the current category -->
+    <main class="stage" id="stage">
+      <section class="explorer" hidden>
+        <div class="explorer-main">
+          <div class="explorer-grid" id="explorerGrid"></div>
+          <div class="explorer-pagination" id="explorerPagination" hidden>
+            <div class="pagination-left">
+              <label for="explorerPageSize" class="pagination-size-label">Show</label>
+              <select id="explorerPageSize">
+                <option value="50">50</option>
+                <option value="100">100</option>
+                <option value="200">200</option>
+                <option value="all">All</option>
+              </select>
+              <button id="explorerBackBtn" type="button" class="pagination-navbtn">← Back</button>
+            </div>
+            <span id="explorerPaginationStatus"></span>
+            <button id="explorerLoadMoreBtn" type="button" class="pagination-navbtn">Next →</button>
+          </div>
+          <div class="explorer-viewer" id="explorerViewer" hidden></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Right side bar: search for the current category, then details of what is open -->
+    <aside class="side-right" id="sideRight" aria-label="Search and details">
+      <div class="explorer-search" id="artExplorerControls" role="search">
+        <div class="search-row">
+          <input type="search" id="explorerSearchInput" placeholder="Search .ART files by name…" aria-label="Search all folders">
+          <button id="explorerSearchBtn" type="button" class="search-btn" title="Search" aria-label="Search">🔍</button>
+        </div>
+        <button id="explorerSearchClear" type="button" class="search-btn search-clear" hidden>✕ Clear search</button>
+        <select id="protoObjectTypeFilter" class="proto-object-type-filter" hidden aria-label="Filter .PRO files by object type"><option value="all">All object types</option></select>
+      </div>
+      <div class="side-panel is-empty" id="sidePanel">
+        <p class="side-empty" id="sideEmpty">Open a file to see its details here.</p>
+      </div>
+    </aside>
+  </div>
+
+  <div class="statusbar" id="statusbar">
+    <p class="explorer-breadcrumb" id="explorerBreadcrumb">Loading library…</p>
+  </div>
+</div>
+
+<div id="gbOverlay" class="modal-overlay">
+  <div class="gif-builder" role="dialog" aria-modal="true" aria-label="GIF builder">
+    <div class="gb-header">
+      <h2 id="gbTitle">Build GIF</h2>
+      <label class="gb-direction-picker" id="gbDirectionPicker" hidden>
+        Direction
+        <select id="gbDirectionSelect"></select>
+      </label>
+      <button class="gb-close" id="gbClose" type="button" aria-label="Close">×</button>
+    </div>
+    <div class="gb-body">
+      <div class="gb-stage-wrap">
+        <div class="gb-stage-frame">
+          <canvas id="gbStageCanvas"></canvas>
+        </div>
+        <div class="gb-nav">
+          <button class="gb-navbtn" id="gbPrev" type="button">← Prev</button>
+          <span id="gbFrameLabel">1 / 1</span>
+          <button class="gb-navbtn" id="gbNext" type="button">Next →</button>
+        </div>
+        <p class="gb-hint">Drag the bright frame to reposition it. Arrow keys nudge by 1px, Shift+Arrow by 10px. The dimmer frame(s) are onion-skin references.</p>
+        <div class="gb-thumbstrip" id="gbThumbstrip"></div>
+      </div>
+      <div class="gb-side">
+        <div class="gb-field">
+          <label for="gbOnionMode">Onion skin</label>
+          <select id="gbOnionMode">
+            <option value="adjacent">Adjacent frames</option>
+            <option value="all">All included frames</option>
+            <option value="none">Off</option>
+          </select>
+        </div>
+        <div class="gb-field">
+          <label for="gbOnionOpacity">Onion skin opacity</label>
+          <input type="range" id="gbOnionOpacity" min="0.1" max="0.8" step="0.05" value="0.35">
+        </div>
+        <hr class="gb-divider">
+        <div class="gb-offset-row">
+          <div class="gb-field">
+            <label for="gbOffsetX">Offset X</label>
+            <input type="number" id="gbOffsetX" step="1">
+          </div>
+          <div class="gb-field">
+            <label for="gbOffsetY">Offset Y</label>
+            <input type="number" id="gbOffsetY" step="1">
+          </div>
+        </div>
+        <p class="gb-hint" id="gbEmbeddedHint" style="text-align:left"></p>
+        <div class="gb-btn-row">
+          <button id="gbAlignTopLeft" type="button">Top-left</button>
+          <button id="gbAlignCenter" type="button">Center</button>
+          <button id="gbAlignEmbedded" type="button">Embedded</button>
+        </div>
+        <div class="gb-btn-row">
+          <button id="gbAlignAllCenter" type="button">Center all frames</button>
+        </div>
+        <div class="gb-checkbox-row">
+          <input type="checkbox" id="gbIncludeFrame">
+          <label for="gbIncludeFrame">Include this frame in the GIF</label>
+        </div>
+        <hr class="gb-divider">
+        <div class="gb-field">
+          <label for="gbFrameDuration">This frame's duration (ms)</label>
+          <input type="number" id="gbFrameDuration" min="10" step="10">
+        </div>
+        <div class="gb-field">
+          <label for="gbGlobalDuration">Duration to apply (ms)</label>
+          <input type="number" id="gbGlobalDuration" min="10" step="10" value="100">
+        </div>
+        <div class="gb-btn-row">
+          <button id="gbApplyDuration" type="button">Apply to all frames</button>
+        </div>
+        <div class="gb-checkbox-row">
+          <input type="checkbox" id="gbLoop" checked>
+          <label for="gbLoop">Loop forever</label>
+        </div>
+        <hr class="gb-divider">
+        <button class="gb-compile" id="gbCompile" type="button">Compile GIF</button>
+        <div class="gb-progress" id="gbProgress"><div class="gb-progress-bar" id="gbProgressBar"></div></div>
+        <div class="gb-result" id="gbResult">
+          <img id="gbResultImg" alt="Compiled GIF preview">
+          <button id="gbDownload" type="button">Download GIF</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="hexOverlay" class="hex-panel" role="complementary" aria-label="Hex viewer">
+  <div class="hex-header">
+    <h2 id="hexTitle">Hex view</h2>
+    <span class="hex-meta" id="hexMeta"></span>
+    <button class="hex-close" id="hexClose" type="button" aria-label="Close">×</button>
+  </div>
+  <div class="hex-workspace">
+    <aside class="hex-frame-strip" id="hexFrameStrip" aria-label="ART frames"></aside>
+    <section class="hex-main">
+      <div class="hex-analysis" id="hexAnalysis"></div>
+      <div class="hex-scroll" id="hexScroll">
+        <div class="hex-spacer" id="hexSpacer">
+          <div class="hex-rows" id="hexRows"></div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<div id="packerOverlay" class="modal-overlay">
+  <div class="dat-packer" role="dialog" aria-modal="true" aria-label=".ART Packer">
+    <div class="packer-header">
+      <h2>.ART Packer</h2>
+      <button class="packer-close" id="packerClose" type="button" aria-label="Close">×</button>
+    </div>
+    <div class="packer-body">
+      <section class="packer-step">
+        <h3><span>1</span> What is this .art for?</h3>
+        <div class="packer-kinds" id="packerKinds" role="radiogroup" aria-label="Kind of .art file"></div>
+      </section>
+
+      <section class="packer-step" id="packerOptionsStep">
+        <h3><span>2</span> Settings</h3>
+        <p class="packer-hint" id="packerKindBlurb"></p>
+        <div class="packer-options">
+          <div class="gb-field" id="packerActivityField" hidden>
+            <label for="packerActivity">Animation</label>
+            <select id="packerActivity"></select>
+          </div>
+          <div class="gb-field" id="packerEdgeField" hidden>
+            <label for="packerEdge">Wall edge</label>
+            <select id="packerEdge"></select>
+          </div>
+          <div class="gb-field" id="packerFpsField">
+            <label for="packerFps">Frames per second</label>
+            <input type="number" id="packerFps" min="1" max="60" step="1" value="8">
+          </div>
+          <div class="gb-field" id="packerActionField">
+            <label for="packerAction" title="The frame at which the game applies the animation's effect: a swing's hit, a door's opening…">Action frame</label>
+            <input type="number" id="packerAction" min="0" step="1" placeholder="last">
+          </div>
+          <div class="gb-field packer-template-field">
+            <label for="packerTemplateInput">Copy settings from an existing .art (optional)</label>
+            <input type="file" id="packerTemplateInput" accept=".art">
+            <span id="packerTemplateStatus" class="packer-template-status"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="packer-step">
+        <h3><span>3</span> Add the frames</h3>
+        <p class="packer-hint" id="packerFramesHint"></p>
+        <section id="packerDropzone" class="dropzone packer-dropzone" tabindex="0" role="button" aria-label="Choose or drop .BMP or .PNG frames">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 19h16"/></svg>
+          <p class="dz-label">Drop .BMP or .PNG frames here</p>
+          <p class="dz-hint">or click to browse. Add them in file order. PNG: the first one sets the palette and transparent pixels become the game's transparent colour (palette index 0). BMP: 8-bit indexed; pure blue becomes index 0.</p>
+          <input type="file" id="packerFileInput" accept=".bmp,.png" multiple hidden>
+        </section>
+        <p class="packer-summary" id="packerSummary"></p>
+        <ol id="packerFrameList" class="packer-frame-list"></ol>
+      </section>
+
+      <section class="packer-step" id="packerStageStep">
+        <h3><span>4</span> Place the hotspot</h3>
+        <p class="packer-hint" id="packerStageHint"></p>
+        <div class="packer-stage-wrap">
+          <canvas id="packerStage" class="packer-stage" width="560" height="380" tabindex="0" aria-label="Hotspot preview. Drag the picture, or use the arrow keys."></canvas>
+        </div>
+        <div class="packer-stage-tools">
+          <label>Zoom <select id="packerZoom"><option value="1">1×</option><option value="2" selected>2×</option><option value="3">3×</option><option value="4">4×</option></select></label>
+          <label class="packer-check"><input type="checkbox" id="packerMoveTogether" checked> Move all frames together</label>
+          <button type="button" id="packerHotReset" class="search-btn">Default hotspot</button>
+          <button type="button" id="packerHotAll" class="search-btn">Copy this frame's hotspot to all</button>
+          <button type="button" id="packerStride" class="search-btn" hidden>Fill walking movement</button>
+        </div>
+      </section>
+
+      <section class="packer-step">
+        <button id="packerClearBtn" type="button" class="search-btn">Clear frames</button>
+        <div id="packerLog" class="log packer-log" aria-live="polite"></div>
+      </section>
+      <button id="packerExport" type="button" class="btn-back sec-edit-export tool-export">Export .ART</button>
+    </div>
+  </div>
+</div>
+
+<!-- JSZip and gif.js load when first needed (js/core/util.js loadJSZip / loadGifJs) -->
+<script type="module" src="js/main.js"></script>
+</template>
+</head>
+<body>
+<script id="atlasWriter">document.write(document.getElementById('view-' + window.ArcanumView).innerHTML)</script>
 </body>
 </html>

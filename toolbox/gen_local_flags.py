@@ -149,7 +149,7 @@ def collect_attachments():
         with sync_playwright() as pw:
             browser = pw.chromium.launch()
             page = browser.new_page()
-            page.goto(base_url + "/asset-browser.html", wait_until="domcontentloaded")
+            page.goto(base_url + "/index.html?view=browser", wait_until="domcontentloaded")
             page.wait_for_timeout(1500)
             for start in range(0, len(items), 1500):
                 res = page.evaluate(SCAN_JS, {"items": items[start:start + 1500]})

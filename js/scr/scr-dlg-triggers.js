@@ -6,18 +6,21 @@
 // (the file names do not always agree on case).
 
 import { DATA_ROOT } from '../core/config.js';
-import { createManifestLoader, manifestFiles } from '../core/manifest.js';
+import { manifestFiles } from '../core/manifest.js';
+import { createIndexLoader } from '../core/file-index.js';
 import { fetchBuffer } from '../core/text-io.js';
 import { decodeScrBuffer, scrNumberFromFilename } from './scr-decoder.js';
 import { SCR_ACTIONS, SCR_VALUE_TYPES } from './scr-schema.js';
 
 const SCR_ROOT = `${DATA_ROOT}scr/`;
 const TRIGGER_ACTIONS = new Set(['dialog', 'float line', 'print line']);
-const loadManifest = createManifestLoader({ root: SCR_ROOT, rootName: 'scr', label: '.scr' });
+// The base game's scr/ folder (the .scr explorer shares it for the script numbers).
+const loadScrIndex = createIndexLoader('scr');
+export const loadScrManifest = () => loadScrIndex('scr');
 
 let scrByNumber = null;
 function scriptFiles() {
-  scrByNumber ??= loadManifest('', 'scr').then(m => {
+  scrByNumber ??= loadScrManifest().then(m => {
     const index = new Map();
     for (const f of manifestFiles(m, 'scr')) {
       const n = scrNumberFromFilename(f);

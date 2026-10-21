@@ -4,9 +4,8 @@ import { mountFolderTree } from '../explorer/folder-tree.js';
 
 import { errText } from '../core/text-io.js';
 
-import { createManifestLoader, manifestFiles, manifestSubfolders } from '../core/manifest.js';
-
-import { PRO_ROOT } from '../core/config.js';
+import { joinPath, manifestFiles, manifestSubfolders } from '../core/manifest.js';
+import { createIndexLoader, toDataPath } from '../core/file-index.js';
 
 import { breadcrumbEl, gridEl, paginationEl, protoObjectTypeFilterEl, searchClearBtnEl, searchInputEl, treeEl, viewerEl } from '../core/dom.js';
 
@@ -26,7 +25,7 @@ import { MOB_OBJECT_TYPE_NAMES } from '../mob/mob-schema.js';
 
 import { applyProtoCurrentArtToFileCard } from './proto-card-art.js';
 
-import { decodeProtoBuffer, decodeProtoForSearch } from './proto-decoder.js';
+import { decodeProtoBuffer, decodeProtoForSearch, protoFileUrl } from './proto-decoder.js';
 
 import {
   loadContainerMes,
@@ -46,7 +45,7 @@ import { matchFields, splitTerms } from '../explorer/match.js';
 let protoFiles = [];
 let protoManifest = null;
 let protoCurrentPath = '';
-let protoCurrentFolderName = 'proto';
+let protoCurrentFolderName = 'data';
 let protoBrowseMode = 'folder'; // 'folder' | 'search'
 let protoViewerFilename = '';
 let protoSearchResults = [];
@@ -56,10 +55,13 @@ const PROTO_SEARCH_RESULT_LIMIT = 300;
 export const protoDecodedCache = new Map();
 
 let protoTree = null;
-export const loadProtoManifest = createManifestLoader({ root: PRO_ROOT, rootName: 'proto', label: '.pro' });
+// (the base game's proto/ folder, by paths under it: the prototype index and the .mob resolution read it so)
+// The explorer lists from data/ (proto, the mods, the modules): its paths are under data/ (toolbox/file_index.py)
+const loadProtoTree = createIndexLoader('pro');
+export const loadProtoManifest = relativePath => loadProtoTree(joinPath('proto', relativePath));
 
 function protoDisplayName(path, fallback) {
-  return fallback || path.split('/').filter(Boolean).pop() || 'proto';
+  return fallback || path.split('/').filter(Boolean).pop() || 'data';
 }
 
 async function protoFileMatchesType(filename, relativePath, filter = protoObjectTypeFilter) {
@@ -105,7 +107,7 @@ async function renderProtoGrid(manifest, relativePath) {
 
 async function openProtoFolder(relativePath, folderName) {
   if (protoTree) protoTree.select(relativePath);
-  breadcrumbEl.textContent = `/proto/${relativePath ? relativePath + '/' : ''}`;
+  breadcrumbEl.textContent = `/data/${relativePath ? relativePath + '/' : ''}`;
   try {
     protoCurrentPath = relativePath;
     protoCurrentFolderName = protoDisplayName(relativePath, folderName);
@@ -115,7 +117,7 @@ async function openProtoFolder(relativePath, folderName) {
     searchInputEl.value = '';
     searchClearBtnEl.hidden = true;
     saveDataExplorerState('pro', protoCurrentPath, protoCurrentFolderName, null);
-    protoManifest = await loadProtoManifest(relativePath, folderName);
+    protoManifest = await loadProtoTree(relativePath);
     protoFiles = manifestFiles(protoManifest, 'pro');
     await renderProtoGrid(protoManifest, relativePath);
     gridEl.hidden = false;
@@ -125,11 +127,11 @@ async function openProtoFolder(relativePath, folderName) {
 
 export async function enterProtoExplorer(restoreState = false) {
   const { path, name, file } = beginDataExplorer('pro', {
-    rootName: 'proto', breadcrumb: 'proto', restoreState, showLog: true, showArtControls: true, showTypeFilter: true,
+    rootName: 'data', breadcrumb: 'data', restoreState, showLog: true, showArtControls: true, showTypeFilter: true,
     searchPlaceholder: 'Search .PRO name, description, type…'
   });
   protoTree = mountFolderTree({
-    rootName: 'proto', loadManifest: loadProtoManifest, openFolder: openProtoFolder, ext: 'pro', fileIcon: '🧬',
+    rootName: 'data', loadManifest: loadProtoTree, openFolder: openProtoFolder, ext: 'pro', fileIcon: '🧬',
     openFile: loadProtoFromServer,
     fileFilter: (filename, folder) => protoFileMatchesType(filename, folder, protoObjectTypeFilter),
   });
@@ -139,23 +141,25 @@ export async function enterProtoExplorer(restoreState = false) {
 
 // Open a prototype of the .PRO explorer from elsewhere (a .mob's "See .pro").
 export async function openProtoFile(filename, relativePath = '') {
-  saveDataExplorerState('pro', relativePath, relativePath.split('/').pop() || 'proto', filename);
+  relativePath = toDataPath('pro', relativePath, true);   // (a .mob names the prototype by its folder under proto/)
+  saveDataExplorerState('pro', relativePath, relativePath.split('/').pop() || 'data', filename);
   await enterProtoExplorer(true);
 }
 
 export async function loadProtoFromServer(filename, rowEl, relativePath = '') {
+  relativePath = toDataPath('pro', relativePath, true);   // (a search result names its folder under proto/)
   protoCurrentPath = relativePath || '';
   protoBrowseMode = 'folder';
   try {
-    protoManifest = await loadProtoManifest(protoCurrentPath, protoCurrentPath ? protoCurrentPath.split('/').pop() : 'proto');
+    protoManifest = await loadProtoTree(protoCurrentPath);
     protoFiles = manifestFiles(protoManifest, 'pro');
   } catch (err) {
     protoFiles = [];
   }
-  protoCurrentFolderName = protoCurrentPath ? protoCurrentPath.split('/').pop() : 'proto';
+  protoCurrentFolderName = protoCurrentPath ? protoCurrentPath.split('/').pop() : 'data';
   treeEl.querySelectorAll('.mob-file-row.active').forEach(r => r.classList.remove('active'));
   if (rowEl) rowEl.classList.add('active');
-  const url = `${PRO_ROOT}${relativePath ? encPath(relativePath) + '/' : ''}${encPath(filename)}`;
+  const url = protoFileUrl(relativePath, filename);
   saveDataExplorerState('pro', relativePath, protoCurrentFolderName, filename);
   protoViewerFilename = filename;
   try {
@@ -178,7 +182,7 @@ async function navigateProtoFile(delta) {
   if (explorerMode !== 'pro' || viewerEl.hidden) return;
   if (!protoFiles.length) {
     try {
-      protoManifest = await loadProtoManifest(protoCurrentPath, protoCurrentFolderName);
+      protoManifest = await loadProtoTree(protoCurrentPath);
       protoFiles = manifestFiles(protoManifest, 'pro');
     } catch (_) { return; }
   }
@@ -233,7 +237,7 @@ function renderProtoSearchResults() {
       loadProtoFromServer(item.filename, card, item.relPath));
     const pathLabel = document.createElement('span');
     pathLabel.className = 'explorer-item-path';
-    pathLabel.textContent = `/proto/${item.relPath}`.replace(/\/+/g, '/') || '/proto/';
+    pathLabel.textContent = `/data/proto/${item.relPath}`.replace(/\/+/g, '/');
     card.appendChild(pathLabel);
     if (item.note) { const note = document.createElement('span'); note.className = 'explorer-item-note'; note.textContent = item.note; note.title = item.note; card.appendChild(note); }
     gridEl.appendChild(card);
@@ -285,6 +289,6 @@ export function clearProtoSearch() {
   searchInputEl.value = '';
   searchClearBtnEl.hidden = true;
   saveDataExplorerState('pro', protoCurrentPath, protoCurrentFolderName, null);
-  breadcrumbEl.textContent = `/proto/${protoCurrentPath ? protoCurrentPath + '/' : ''}`;
+  breadcrumbEl.textContent = `/data/${protoCurrentPath ? protoCurrentPath + '/' : ''}`;
   renderProtoGrid(protoManifest, protoCurrentPath);
 }

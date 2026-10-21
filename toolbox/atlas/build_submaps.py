@@ -21,6 +21,7 @@ from collections import defaultdict
 from pathlib import Path
 
 import arcanum_objects as ao
+import sec_alias
 import locate_world_labels as L
 import npc_roles
 import npc_switch
@@ -28,7 +29,7 @@ from build_demographics import (KINDS, RACES, OCF_UNDEAD, OCF_ANIMAL, OCF_MONSTE
                                 person_race_gender)
 
 ROOT = Path(__file__).resolve().parents[2]
-DATA_JS = ROOT / 'js' / 'atlas' / 'data'                   # the generated data the pages load
+DATA_JS = ao.DATA_JS                   # the generated data the pages load
 MAPS = ao.DATA / 'maps'
 WORLD = 'Arcanum1-024-fixed'
 OUT_JS = DATA_JS / 'submaps.js'
@@ -94,7 +95,10 @@ PICTURE_FOLDER = {
     'Wheel Clan - Throne Hall': 'Wheel Clan', 'Loghaire\'s Chambers': 'Wheel Clan', 'Wheel Clan - Dredge': 'Wheel Clan',
     'Wheel Clan - Mine': 'Wheel Clan', 'Wolf Cave - Inside': 'Wolf-Cave',
 }
-SKIP_FOLDERS = {WORLD, 'ShopMap', 'Scienticians Underground Lev 1', 'Scienticians Underground Lev 2'}   # character creation / not in MapList
+SKIP_FOLDERS = {WORLD}
+# Not in Rules/MapList.mes (no door leads there): listed last, so the others keep their index, under the group "Unreachable maps"
+UNREACHABLE = ['ShopMap', 'Scienticians Underground Lev 1', 'Scienticians Underground Lev 2']
+UNREACHABLE_GROUP = 'Unreachable maps'
 AREA_BY_FOLDER = {'Void': 'The Void', "Void - Arronax's Interior": 'The Void', "Void - Cave of Kriggyrd's Falchion": 'The Void',
                   'VOID-Kerghans Castle': 'The Void'}
 
@@ -157,7 +161,7 @@ def folder_objects(folder, sch, desc):
         otype, proto, own, loc, _ = L.read_object(path.read_bytes(), 0, sch)
         if loc is not None:
             objs.append(row(path, 'mob', otype, proto, own, loc))
-    for path in sorted((MAPS / folder).glob('*.sec')):
+    for path in sorted(sec_alias.glob(MAPS / folder, '*.sec')):
         for otype, proto, own, loc in L.sec_objects(path.read_bytes(), sch):
             if otype != 0 and loc is not None:
                 statics.append(row(path, 'sec', otype, proto, own, loc))
@@ -173,7 +177,7 @@ def main():
     pictures = [m for m in base if m.get('typemap') != 'overworld' and m['displayName'] not in in_world]
 
     listing, areas = map_list(), area_names()
-    folders = sorted(d.name for d in MAPS.iterdir() if d.is_dir() and d.name not in SKIP_FOLDERS)
+    folders = sorted(d.name for d in MAPS.iterdir() if d.is_dir() and d.name not in SKIP_FOLDERS and d.name not in UNREACHABLE) + UNREACHABLE
     folder_of = {f.lower(): f for f in folders}
     sch, desc = L.emp.schema(), L.emp.load_description_mes()
     adesc = ao.descriptions()
@@ -214,6 +218,8 @@ def main():
         bbox = [min(xs), min(ys), max(xs), max(ys)]
         area = areas.get(info.get('area')) if info.get('area') else AREA_BY_FOLDER.get(folder)
         area = area.split(',')[0].strip() if area else area
+        if folder in UNREACHABLE:
+            area = UNREACHABLE_GROUP
         mp = {'key': key, 'name': pretty(folder), 'area': area, 'bbox': bbox, 'start': info.get('start')}
         mi = len(maps)
         maps.append(mp)

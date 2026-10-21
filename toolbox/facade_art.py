@@ -4,6 +4,8 @@ import re, struct
 from pathlib import Path
 import numpy as np
 
+from validate_sec import read_files  # noqa: F401  (the facade tools read the maps' sectors with it)
+
 ROOT = Path(__file__).resolve().parent.parent
 FACADE_DIR = ROOT / 'data' / 'art' / 'facade'
 
@@ -25,6 +27,17 @@ def facade_names() -> dict[int, str]:
     return names
 
 
+def facade_tiles(b: bytes):
+    """([tile index], [raw tile value]) of the facade tiles (art type 11) of a .sec's tile array, in tile order; None
+    when the file is too short to hold the array."""
+    at = 4 + struct.unpack_from('<I', b, 0)[0] * 0x30
+    if at + 16384 > len(b):
+        return None
+    t = np.frombuffer(b, dtype='<u4', count=4096, offset=at)
+    idx = np.flatnonzero((t >> 28) == 11)
+    return idx.tolist(), t[idx].tolist()
+
+
 def _rle(chunk: bytes, total: int) -> bytearray:
     out = bytearray(total)
     p = o = 0
@@ -44,9 +57,21 @@ class Cell:
         self.rgb, self.mask, self.hx, self.hy = rgb, mask, hx, hy
 
 
+_art_paths: dict[str, Path] | None = None
+
+
+def _list_arts():
+    global _art_paths
+    _art_paths = {}
+    for p in FACADE_DIR.glob('*.ART'):
+        _art_paths.setdefault(p.stem.lower(), p)      # (the first one the folder lists, as a search of it finds)
+
+
 def load_cells(name: str) -> dict[int, Cell]:
     """Frame index -> Cell, for the first direction of FACADE_DIR/<name>.ART."""
-    path = next((p for p in FACADE_DIR.glob('*.ART') if p.stem.lower() == name.lower()), None)
+    if _art_paths is None:              # the folder is listed once, not once a facade
+        _list_arts()
+    path = _art_paths.get(name.lower())
     if path is None:
         return {}
     b = path.read_bytes()
@@ -78,24 +103,47 @@ def seam(a: Cell, b: Cell, dx: int, dy: int) -> tuple[float, int]:
     # canvas coordinates of each cell's top-left corner, hotspot at the origin
     ax, ay = -a.hx, -a.hy
     bx, by = sx - b.hx, sy - b.hy
-    x0, y0 = min(ax, bx) - 2, min(ay, by) - 2
-    x1 = max(ax + a.mask.shape[1], bx + b.mask.shape[1]) + 2
-    y1 = max(ay + a.mask.shape[0], by + b.mask.shape[0]) + 2
+    # a touching pair is a pixel of b next to (one step from) a pixel of a: it lies in b's box and in a's box grown by
+    # one pixel, so only that window (plus one pixel around it) is looked at, not the canvas of both cells
+    x0, x1 = max(ax - 1, bx), min(ax + a.mask.shape[1] + 1, bx + b.mask.shape[1])
+    y0, y1 = max(ay - 1, by), min(ay + a.mask.shape[0] + 1, by + b.mask.shape[0])
+    if x0 >= x1 or y0 >= y1:
+        return 255.0, 0
+    x0, y0, x1, y1 = x0 - 1, y0 - 1, x1 + 1, y1 + 1
     W, H = x1 - x0, y1 - y0
     ma = np.zeros((H, W), bool); mb = np.zeros((H, W), bool)
     ca = np.zeros((H, W, 3), np.int16); cb = np.zeros((H, W, 3), np.int16)
-    ya, xa = ay - y0, ax - x0
-    ma[ya:ya + a.mask.shape[0], xa:xa + a.mask.shape[1]] = a.mask; ca[ya:ya + a.mask.shape[0], xa:xa + a.mask.shape[1]] = a.rgb
-    yb, xb = by - y0, bx - x0
-    mb[yb:yb + b.mask.shape[0], xb:xb + b.mask.shape[1]] = b.mask; cb[yb:yb + b.mask.shape[0], xb:xb + b.mask.shape[1]] = b.rgb
+    _paste(ma, ca, a, ax - x0, ay - y0)
+    _paste(mb, cb, b, bx - x0, by - y0)
     solo_a, solo_b = ma & ~mb, mb & ~ma
     tot, n = 0.0, 0
     for sh in ((0, 1), (1, 0)):
         for sign in (1, -1):
             oy, ox = sh[0] * sign, sh[1] * sign
-            sa = np.roll(solo_a, (oy, ox), (0, 1))          # a's pixels moved one step
-            hit = sa & solo_b
+            # a's pixels moved one step (a pixel on the window's edge is never a pair: no need to wrap around)
+            (ty, fy), (tx, fx) = _step(oy, H), _step(ox, W)
+            hit = solo_a[fy, fx] & solo_b[ty, tx]
             if hit.any():
-                shifted = np.roll(ca, (oy, ox), (0, 1))
-                tot += float(np.abs(shifted[hit] - cb[hit]).sum()); n += int(hit.sum()) * 3
+                tot += float(np.abs(ca[fy, fx][hit] - cb[ty, tx][hit]).sum()); n += int(hit.sum()) * 3
     return (tot / n if n else 255.0), n
+
+
+def _paste(m, c, cell: Cell, x: int, y: int):
+    """The part of `cell` (top-left corner at x, y of the window) that falls into the window m / c."""
+    h, w = cell.mask.shape
+    H, W = m.shape
+    sy0, sx0 = max(0, -y), max(0, -x)
+    sy1, sx1 = min(h, H - y), min(w, W - x)
+    if sy0 >= sy1 or sx0 >= sx1:
+        return
+    m[y + sy0:y + sy1, x + sx0:x + sx1] = cell.mask[sy0:sy1, sx0:sx1]
+    c[y + sy0:y + sy1, x + sx0:x + sx1] = cell.rgb[sy0:sy1, sx0:sx1]
+
+
+def _step(o: int, size: int) -> tuple[slice, slice]:
+    """(to, from) slices of an axis of `size` for a shift by o (-1, 0, 1)."""
+    if o > 0:
+        return slice(o, size), slice(0, size - o)
+    if o < 0:
+        return slice(0, size + o), slice(-o, size)
+    return slice(0, size), slice(0, size)

@@ -8,7 +8,6 @@ import { applySearchUi } from '../ui/shell.js';
 
 import {
   breadcrumbEl,
-  explorerHome,
   footerNoteEl,
   gridEl,
   logEl,
@@ -66,7 +65,7 @@ export function createDataFileCard(filename, fullPath, icon, onOpen) {
   return card;
 }
 
-export function renderDataFolderGrid({ subfolders, files, relativePath, openFolderFn, openFileFn, fileIcon, afterFileCard = null }) {
+export function renderDataFolderGrid({ subfolders, files, relativePath, openFolderFn, openFileFn, fileIcon, afterFileCard = null, afterFolderCard = null }) {
   gridEl.innerHTML = '';
   const folders = Array.isArray(subfolders) ? subfolders : [];
   const fileList = Array.isArray(files) ? files : [];
@@ -86,7 +85,9 @@ export function renderDataFolderGrid({ subfolders, files, relativePath, openFold
   }
   for (const sf of folders) {
     const fullPath = joinPath(relativePath, sf.relative_path);
-    gridEl.appendChild(createDataFolderCard(sf.folder_name, fullPath, openFolderFn));
+    const card = createDataFolderCard(sf.folder_name, fullPath, openFolderFn);
+    gridEl.appendChild(card);
+    if (afterFolderCard) afterFolderCard(card, fullPath);
   }
   for (const filename of fileList) {
     const fullPath = relativePath ? `${relativePath}/${filename}` : filename;
@@ -98,7 +99,6 @@ export function renderDataFolderGrid({ subfolders, files, relativePath, openFold
 }
 
 export function leaveDataExplorer(skipAutoOpen = false) {
-  explorerHome.hidden = true;
   document.querySelector('.explorer').hidden = false;
   setExplorerMode('art');
   syncSidebarLaunchButtons();
@@ -116,8 +116,6 @@ export function leaveDataExplorer(skipAutoOpen = false) {
 // loading message. Returns the folder to open: { path, name, file }.
 export function beginDataExplorer(mode, { rootName, label = rootName, breadcrumb = null, restoreState = false,
     showLog = false, showArtControls = false, showTypeFilter = false, searchPlaceholder = null }) {
-  document.body.classList.remove('home-active');
-  explorerHome.hidden = true;
   document.querySelector('.explorer').hidden = false;
   if (manualLoadEl) manualLoadEl.hidden = true;
   if (logEl) logEl.hidden = !showLog;

@@ -1,10 +1,11 @@
-﻿// .MOB file explorer.
+// .MOB file explorer.
 
 import { applyMobCardIcon, startMobCardIcons } from './mob-card-art.js';
 import { MOB_FIELDS } from '../explorer/file-search.js';
 import { mountFolderTree } from '../explorer/folder-tree.js';
 import { errText } from '../core/text-io.js';
-import { loadMapsManifest, manifestFiles, manifestSubfolders } from '../core/manifest.js';
+import { manifestFiles, manifestSubfolders } from '../core/manifest.js';
+import { createIndexLoader, toDataPath } from '../core/file-index.js';
 
 import { MOB_ROOT } from '../core/config.js';
 
@@ -27,15 +28,19 @@ import { renderMobPrototypeInfo, resolveMobPrototype } from '../proto/proto-reso
 import { renderMobExtras } from './mob-extras.js';
 import { loadDescriptionMes } from '../proto/proto-mes.js';
 
+// Listed from data/ (the base maps, the mods and the modules): paths are under data/ (toolbox/file_index.py)
+const loadMobManifest = createIndexLoader('mob');
+// A search reads every object it looks through: it covers the game, mod or module of the folder on show (the base game from the data root).
+const mobSearchScope = path => { const p = String(path || '').split('/').filter(Boolean); return !p.length ? 'maps' : (p[0] === 'mods' || p[0] === 'modules') && p.length > 1 ? p.slice(0, 2).join('/') : p[0] === 'maps' ? 'maps' : p.join('/'); };
 export let mobFiles = [];
 let mobManifest = null;
 let mobTree = null;
 export let mobCurrentPath = '';
-let mobCurrentFolderName = 'maps';
+let mobCurrentFolderName = 'data';
 // The folder being browsed: what a jump to another file needs to come back here.
 export const mobState = () => ({ path: mobCurrentPath, folderName: mobCurrentFolderName });
 
-function mobDisplayName(path, fallback) { return (fallback && fallback !== '..') ? fallback : (path.split('/').filter(Boolean).pop() || 'maps'); }
+function mobDisplayName(path, fallback) { return (fallback && fallback !== '..') ? fallback : (path.split('/').filter(Boolean).pop() || 'data'); }
 
 function renderMobGrid(manifest, relativePath) {
   startMobCardIcons();
@@ -47,21 +52,21 @@ function renderMobGrid(manifest, relativePath) {
 }
 async function openMobFolder(relativePath, folderName) {
   if (mobTree) mobTree.select(relativePath);
-  breadcrumbEl.textContent = `/mob/${relativePath ? relativePath + '/' : ''}`;
+  breadcrumbEl.textContent = `/data/${relativePath ? relativePath + '/' : ''}`;
   try {
     mobCurrentPath = relativePath;
     mobCurrentFolderName = mobDisplayName(relativePath, folderName);
     saveDataExplorerState('mob', mobCurrentPath, mobCurrentFolderName, null);
-    mobManifest = await loadMapsManifest(relativePath, folderName);
+    mobManifest = await loadMobManifest(relativePath);
     mobFiles = manifestFiles(mobManifest, 'mob');
     renderMobGrid(mobManifest, relativePath);
     gridEl.hidden = false; viewerEl.hidden = true;
   } catch (err) { showExplorerError(err); }
 }
 export async function enterMobExplorer(restoreState = false) {
-  const { path, name, file } = beginDataExplorer('mob', { rootName: 'maps', label: 'mob', breadcrumb: 'mob', restoreState });
+  const { path, name, file } = beginDataExplorer('mob', { rootName: 'data', label: 'mob', breadcrumb: 'data', restoreState });
   mobTree = mountFolderTree({
-    rootName: 'maps', loadManifest: loadMapsManifest, openFolder: openMobFolder, ext: 'mob', fileIcon: '📦', searchFields: MOB_FIELDS,
+    rootName: 'data', loadManifest: loadMobManifest, openFolder: openMobFolder, ext: 'mob', fileIcon: '📦', searchFields: MOB_FIELDS, searchScope: mobSearchScope,
     openFile: (filename, row, folder) => loadMobFromServer(filename, row, folder),
     searchCards: { begin: startMobCardIcons, decorate: (card, filename, relativePath) => applyMobCardIcon(card, filename, relativePath) },
   });

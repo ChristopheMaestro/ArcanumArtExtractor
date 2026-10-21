@@ -12,9 +12,9 @@
 import { DATA_ROOT } from '../core/config.js';
 import { fetchBuffer, fetchText, memoAsync, mesTable } from '../core/text-io.js';
 import { encPath } from '../core/util.js';
+import { mapFolderPath } from '../core/file-index.js';
 
-const MAPS_ROOT = `${DATA_ROOT}maps/`;
-const fileUrl = (folder, name) => `${MAPS_ROOT}${encPath(folder)}/${name}`;
+const fileUrl = (folder, name) => `${DATA_ROOT}${encPath(folder)}/${name}`;   // folder: under data/ (maps/<Map>, mods/<Mod>/maps/<Map>...)
 const optional = p => p.catch(() => null);
 const locXY = (view, at) => ({ x: view.getUint32(at, true), y: view.getUint32(at + 4, true) });
 
@@ -22,7 +22,7 @@ const cache = new Map();
 // Everything map-level about the map folder `folder` (the top folder of a path): { limits, start,
 // jumps, blockedSectors }, each null / empty when the file is missing.
 export function loadMapData(folder) {
-  const key = String(folder || '').split('/')[0];
+  const key = mapFolderPath(folder);
   if (!cache.has(key)) cache.set(key, (async () => {
     const [prp, start, jmp, sbf] = await Promise.all([
       optional(fetchBuffer(fileUrl(key, 'map.prp'))),

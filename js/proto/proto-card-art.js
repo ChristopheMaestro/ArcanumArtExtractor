@@ -12,8 +12,26 @@ import { decodeProtoForSearch } from './proto-decoder.js';
 
 import { ensureProtoArtMesLoaded } from './proto-mes.js';
 
-export async function applyProtoCurrentArtToFileCard(card, filename, relativePath = '') {
+// A folder of the mods holds thousands of prototypes: their icons are filled in a few at a time, in grid order, and a card that
+// left the page (another folder was opened) is skipped.
+const ICON_PARALLEL = 8;
+const iconQueue = [];
+let iconsRunning = 0;
+function pumpIcons() {
+  while (iconsRunning < ICON_PARALLEL && iconQueue.length) {
+    const job = iconQueue.shift();
+    if (!job.card.isConnected) continue;
+    iconsRunning++;
+    fillCardIcon(job.card, job.filename, job.relativePath).finally(() => { iconsRunning--; pumpIcons(); });
+  }
+}
+export function applyProtoCurrentArtToFileCard(card, filename, relativePath = '') {
   if (!card?._iconThumb) return;
+  iconQueue.push({ card, filename, relativePath });
+  pumpIcons();
+}
+
+async function fillCardIcon(card, filename, relativePath) {
   try {
     const decoded = await decodeProtoForSearch(filename, relativePath);
     const aidField = decoded.fields.find(f => f.field === 1);

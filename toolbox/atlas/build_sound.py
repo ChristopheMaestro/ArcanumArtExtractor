@@ -24,9 +24,10 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 import arcanum_objects as ao
+import sec_alias
 
 ROOT = Path(__file__).resolve().parents[2]
-DATA_JS = ROOT / 'js' / 'atlas' / 'data'                   # the generated data the pages load
+DATA_JS = ao.DATA_JS                   # the generated data the pages load
 SOUND = ao.DATA / 'sound'
 MAPS = ao.DATA / 'maps'
 WORLD = 'Arcanum1-024-fixed'
@@ -40,7 +41,7 @@ SPELLING = {'wastland_day.wav': 'wasteland_day.wav', 'wastland_night.wav': 'wast
 def mes_lines(path):
     """{number: text} of a .mes; SchemeList puts words before some entries ("RESERVED{2700}{...}"), the game skips them."""
     return {int(m.group(1)): m.group(2).strip()
-            for m in re.finditer(r'\{(\d+)\}\{([^}]*)\}', path.read_text(encoding='cp1252', errors='replace'))}
+            for m in re.finditer(r'\{(\d+)\}\{([^}]*)\}', ao.read_text(path))}
 
 
 def param(opts, key):
@@ -102,7 +103,7 @@ def sector_sound(path):
 
 def map_sectors(folder):
     out = {}
-    for p in (MAPS / folder).rglob('*.sec'):
+    for p in sec_alias.rglob(MAPS / folder, '*.sec'):
         if p.stem.isdigit():
             s = sector_sound(p)
             if s:

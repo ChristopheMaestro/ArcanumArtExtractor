@@ -56,13 +56,15 @@ export function analyzeLocalFlags({ decoded, dlg, ownNumber, index }) {
   const attached = me?.attached || null;
   // The dialogue's effects only reach the copy attached at the dialog event; without the index, assume they do.
   const dlgReaches = !attached || !Object.keys(attached).length || !!attached.DIALOG;
-  const dlgEntries = dlg ? [...dlg.values()] : [];
+  // Each line's codes are read once (not once per flag): only the "lf" ones matter here.
+  const lfOnly = str => parseCodes(str).filter(c => c.code === 'lf');
+  const dlgEntries = flags.size && dlg ? [...dlg.values()].map(d => ({ d, actions: lfOnly(d.actions), conditions: d.iq !== 0 ? lfOnly(d.conditions) : [] })) : [];
 
   for (const f of flags.values()) {
     // 2. the dialogue: effects of every line, tests of the player's options (an NPC line's test field is a voice-over number).
-    for (const d of dlgEntries) {
-      for (const c of parseCodes(d.actions)) if (c.code === 'lf' && c.value === f.n) (c.value2 ? f.dlgSets : f.dlgClears).push({ src: 'dlg', num: d.num, pc: d.iq !== 0 });
-      if (d.iq !== 0) for (const c of parseCodes(d.conditions)) if (c.code === 'lf' && c.value === f.n) f.tests.push({ src: 'dlg', num: d.num, wants: c.value2 ? 1 : 0 });
+    for (const { d, actions, conditions } of dlgEntries) {
+      for (const c of actions) if (c.value === f.n) (c.value2 ? f.dlgSets : f.dlgClears).push({ src: 'dlg', num: d.num, pc: d.iq !== 0 });
+      for (const c of conditions) if (c.value === f.n) f.tests.push({ src: 'dlg', num: d.num, wants: c.value2 ? 1 : 0 });
     }
     f.dlgReaches = dlgReaches;
     // 3. what the attachments start with: the script file's own header, then the objects.

@@ -10,16 +10,23 @@ import { decodeMobBuffer } from '../mob/mob-decoder.js';
 import { loadDescriptionMes, protoDescriptionInfo } from '../proto/proto-mes.js';
 import { joinPath, manifestFiles, manifestSubfolders } from '../core/manifest.js';
 import { breadcrumbEl, gridEl, paginationEl, searchClearBtnEl, searchInputEl, viewerEl } from '../core/dom.js';
-import { errText, fetchBuffer, decodeText } from '../core/text-io.js';
+import { errText, fetchBuffer, fetchText, decodeText } from '../core/text-io.js';
 import { encPath } from '../core/util.js';
 import { decodeScrBuffer } from '../scr/scr-decoder.js';
+import { loadExplainTables, simplifyRows } from '../scr/scr-explain.js';
+import { SCR_ACTIONS, SCR_CONDITIONS } from '../scr/scr-schema.js';
+import { dlgParseFields } from '../text/dlg-explorer.js';
+import { loadDynamicTables, resolveDynamic } from '../text/dlg-dynamic.js';
 import { matchFields, splitTerms } from './match.js';
 import { visit } from './nav-history.js';
 
 const RESULT_LIMIT = 400;
 const CONCURRENCY = 8;
 
-let provider = null;   // { rootName, loadManifest, ext, fileIcon, openFile, restore, fields?, cards? }
+let provider = null;   // { rootName, loadManifest, ext, fileIcon, openFile, restore, fields?, cards?, scope? }
+// Where a search starts: the data root, or what provider.scope(current folder) names (the MOB explorer lists the mods and modules too: reading the
+// 119 000 objects of all of them for every search would take minutes, so it searches the game, mod or module the folder belongs to).
+const searchStart = () => provider.scope ? provider.scope(provider.where?.().path || '') : '';
 let searching = 0;
 // The last query of each category (by extension), so coming back to the category shows its results again.
 const lastQueries = new Map();
@@ -46,9 +53,32 @@ const fileUrl = (root, path, filename) => `${root}${path ? `${encPath(path)}/` :
 // .DLG / .MES: the whole text of the file.
 export const textFileFields = root => (path, filename) =>
   cachedFields(fileUrl(root, path, filename), buf => [{ label: 'text', text: decodeText(buf) }]);
-// .SCR: the description written in the header.
+// .SCR: the description written in the header, then every line told in plain English (the same text as
+// the Simplify view: quest names, item names, the words of the dialogue lines it shows…).
 export const scrFileFields = root => (path, filename) =>
-  cachedFields(fileUrl(root, path, filename), buf => [{ label: 'description', text: decodeScrBuffer(buf, filename).description }]);
+  cachedFields(fileUrl(root, path, filename), async buf => {
+    const decoded = decodeScrBuffer(buf, filename);
+    const fields = [{ label: 'description', text: decoded.description }];
+    try {
+      const [dlg] = await Promise.all([scrDialogue(filename), loadExplainTables(), loadDynamicTables()]);
+      const ctx = {
+        maxQuote: 400,
+        dlgText: n => { const e = dlg?.get(n); return e ? resolveDynamic(e.text, { npc: e.iq === 0 })?.text ?? e.text ?? '' : ''; },
+      };
+      const defs = { cond: t => SCR_CONDITIONS[t], act: t => SCR_ACTIONS[t] };
+      const text = simplifyRows(decoded.entries, defs, ctx)
+        .map(r => r.text.replace(/⟦L:(-?\d+)⟧/g, 'line $1').replace(/⟦S:(-?\d+)⟧/g, 'script $1')).join('\n');
+      if (text) fields.push({ label: 'script', text });
+    } catch (_) { /* the tables are missing: the description alone is searched */ }
+    return fields;
+  });
+// The .dlg that shares the script's file name.
+const scrDialogue = async filename => {
+  try {
+    const entries = dlgParseFields(await fetchText(`${DATA_ROOT}dlg/${encodeURIComponent(filename.replace(/\.scr$/i, ''))}.dlg`));
+    return new Map(entries.map(e => [e.num, e]));
+  } catch (_) { return null; }
+};
 
 // .MOB: the name in its F_DESCRIPTION (Gilbert Bates, Virgil), which the file itself only holds as a number.
 export const mobFileFields = root => (path, filename) =>
@@ -60,9 +90,9 @@ export const mobFileFields = root => (path, filename) =>
     return text ? [{ label: 'description', text }] : [];
   });
 
-export const DLG_FIELDS = textFileFields(`${DATA_ROOT}dlg/`);
+export const DLG_FIELDS = textFileFields(DATA_ROOT);
 export const MES_FIELDS = textFileFields(DATA_ROOT);
-export const SCR_FIELDS = scrFileFields(`${DATA_ROOT}scr/`);
+export const SCR_FIELDS = scrFileFields(DATA_ROOT);
 export const MOB_FIELDS = mobFileFields(MOB_ROOT);
 
 async function listFiles(path, name, out, visited) {
@@ -131,7 +161,7 @@ function highlighted(text, terms) {
 
 async function runLineSearch(terms, shown, label, token) {
   const files = [];
-  await listFiles('', provider.rootName, files, new Set());
+  await listFiles(searchStart(), provider.rootName, files, new Set());
   const groups = [];   // { filename, path, lines: [...] } in file order
   let total = 0, next = 0, checked = 0;
   const worker = async () => {
@@ -142,7 +172,8 @@ async function runLineSearch(terms, shown, label, token) {
       const lines = await provider.lines(file.path, file.filename);
       const hits = [];
       for (const ln of lines) {
-        const body = `${ln.text}\n${ln.alt || ''}`.toLowerCase();
+        // lower-cased once: the lines are cached, so a later search reuses it
+        const body = ln.lower ??= `${ln.text}\n${ln.alt || ''}`.toLowerCase();
         let inText = false, ok = true;
         for (const t of terms) {
           if (body.includes(t)) inText = true;
@@ -248,7 +279,7 @@ export async function runFileSearch(rawQuery) {
   const files = [];
   const hits = [];
   try {
-    await listFiles('', provider.rootName, files, new Set());
+    await listFiles(searchStart(), provider.rootName, files, new Set());
     let next = 0, checked = 0;
     const worker = async () => {
       while (next < files.length && hits.length < RESULT_LIMIT && token === searching) {

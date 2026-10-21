@@ -45,6 +45,7 @@ function decodeSecStaticObject(bytes, offset, limit, filename, index) {
     const parsed = readMobField(view, bytes, offset, od);
     offset += parsed.size;
     if (offset > limit) throw new Error(`SEC object #${index}: field ${fld} extends past object-list count`);
+    const fieldEnd = offset;
     fields.push({
       field: fld,
       name: MOB_FIELD_NAMES[fld] || `FIELD_${String(fld).padStart(3, '0')}`,
@@ -53,7 +54,8 @@ function decodeSecStaticObject(bytes, offset, limit, filename, index) {
       bit: MOB_ENGINE.masks[fld] ? Math.round(Math.log2(MOB_ENGINE.masks[fld])) : -1,
       offset: fieldOffset,
       size: parsed.size,
-      raw: mobHex(bytes.slice(fieldOffset, offset)),
+      // (the hex text only when a field table shows it: a big map has hundreds of thousands of fields)
+      get raw() { return mobHex(bytes.subarray(fieldOffset, fieldEnd)); },
       value: parsed.value
     });
   }

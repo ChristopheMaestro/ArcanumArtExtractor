@@ -18,7 +18,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from validate_sec import parse_sec, protos, SecError  # noqa: E402
+from validate_sec import parse_sec, protos, read_files, SecError  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 MAPDIR = ROOT / 'data' / 'maps' / 'Arcanum1-024-fixed'
@@ -61,11 +61,10 @@ def main() -> int:
     seen = {t: defaultdict(Counter) for t in FIELDS}
     by_type = Counter()                                       # scenery type (key // 1000), proto -> objects
     files = 0
-    for path in sorted(MAPDIR.rglob('*.sec')):
-        if path.name == '134217730001.sec':
-            continue
+    paths = [p for p in sorted(MAPDIR.rglob('*.sec')) if p.name != '134217730001.sec']
+    for b in read_files(paths):
         try:
-            sec = parse_sec(path.read_bytes())
+            sec = parse_sec(b)
         except SecError:
             continue
         files += 1

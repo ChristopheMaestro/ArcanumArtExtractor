@@ -65,7 +65,7 @@ function onKey(e) {
   if (!['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'Enter'].includes(k)) return;
   if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
   const body = document.body.classList;
-  if (body.contains('home-active') || body.contains('sec-edit-full')) return;
+  if (body.contains('sec-edit-full')) return;
   const tag = (e.target && e.target.tagName) || '';
   if (tag === 'INPUT' || tag === 'SELECT' || tag === 'TEXTAREA' || tag === 'BUTTON' && k === 'Enter' || e.target?.isContentEditable) return;
   if (document.querySelector('.modal-overlay.open, #hexOverlay.open')) return;

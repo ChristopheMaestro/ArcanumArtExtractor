@@ -5,7 +5,7 @@ import { SEC_ISO_HALF_H, SEC_ISO_HALF_W, secIsoMetrics, secIsoProject } from './
 import { secDrawLightMask, secMakeLighting, secPrepareLightModel, secTintLayer } from './sec-lighting.js';
 import { drawSecActualTiles, SEC_MAP_BACKGROUND } from './sec-map-view.js';
 import { drawSecMobOverlay, secObjectAnim, secPoseOf } from './sec-mob-overlay.js';
-import { drawSecPlaceholders, drawSecTerrainPlaceholders, secSectorKey } from './sec-placeholders.js';
+import { drawSecPlaceholders, drawSecTerrainPlaceholders, secSectorKey, secVisibleSectorRange } from './sec-placeholders.js';
 import { drawSecRoofs } from './sec-roofs.js';
 import { secTileColor, secTileInfo } from './sec-tile-art.js';
 import { drawSecWallOverlay, secMergeMovers, secSortObjectsLikeGame } from './sec-walls.js';
@@ -37,11 +37,20 @@ export function drawSecFolderMap(canvas, sectors, bounds, selected, mode, artTil
   ctx.clearRect(0, 0, cssW, cssH);
   ctx.fillStyle = SEC_MAP_BACKGROUND; ctx.fillRect(0, 0, cssW, cssH);
 
-  const zoom = Math.max(0.01, Math.min(32, view.zoom));
+  const zoom = Math.max(0.001, Math.min(32, view.zoom));
   const ox = view.offsetX, oy = view.offsetY;
   const sectorMap = view.sectorMap || new Map(sectors.map(s => [`${s.position.x},${s.position.y}`, s]));
+  // The sectors that can show anything in the viewport (a sector of margin for overhanging objects
+  // and roofs). Everything below only walks these, so a frame costs what is on screen, not the map.
+  const range = mode === 'art'
+    ? secVisibleSectorRange({ zoom, offsetX: ox, offsetY: oy }, bounds, iso, cssW, cssH)
+    : {
+      x0: Math.max(bounds.minX, bounds.maxX - Math.floor(((cssW - ox) / zoom) / 64) - 1), x1: Math.min(bounds.maxX, bounds.maxX - Math.floor((-ox / zoom) / 64) + 1),
+      y0: Math.max(bounds.minY, bounds.minY + Math.floor((-oy / zoom) / 64) - 1), y1: Math.min(bounds.maxY, bounds.minY + Math.floor(((cssH - oy) / zoom) / 64) + 1)
+    };
+  const near = list => list.filter(s => s.position && s.position.x >= range.x0 && s.position.x <= range.x1 && s.position.y >= range.y0 && s.position.y <= range.y1);
 
-  // Map.bmp is a sector-level image (one source pixel per 64x64 sector).
+  // Map.png (the game's Map.bmp) is a sector-level image (one source pixel per 64x64 sector).
   // Draw it in grayscale first; SEC tiles and MOBs are drawn over it.
   if (mapBackground && mapBackground.complete && mapBackground.naturalWidth) {
     const bgLeft = (bounds.maxX - mapBackground.naturalWidth + 1) * 64;
@@ -50,8 +59,20 @@ export function drawSecFolderMap(canvas, sectors, bounds, selected, mode, artTil
     const bgH = mapBackground.naturalHeight * 64;
     ctx.save();
     ctx.globalAlpha = 0.72;
-    ctx.imageSmoothingEnabled = false;
-    ctx.drawImage(mapBackground, bgLeft * zoom + ox, bgTop * zoom + oy, bgW * zoom, bgH * zoom);
+    if (mode === 'art') {
+      // Isometric view: the picture is the sector grid, so it is drawn through the same tile -> screen
+      // transform as the sectors (pixel column c is sector x = width - 1 - c, row r is sector y = r).
+      const w = mapBackground.naturalWidth;
+      const L0 = (w - bounds.minX) * 64 - .5, T0 = -bounds.minY * 64 - .5;
+      const k = zoom * 64;
+      ctx.imageSmoothingEnabled = k * SEC_ISO_HALF_W < 2;   // far out, a pixel is under 2 px wide: smooth it
+      ctx.transform(k * SEC_ISO_HALF_W, -k * SEC_ISO_HALF_H, k * SEC_ISO_HALF_W, k * SEC_ISO_HALF_H,
+        zoom * (iso.originX + (T0 - L0) * SEC_ISO_HALF_W) + ox, zoom * (iso.originY + (L0 + T0) * SEC_ISO_HALF_H) + oy);
+      ctx.drawImage(mapBackground, 0, 0);
+    } else {
+      ctx.imageSmoothingEnabled = false;
+      ctx.drawImage(mapBackground, bgLeft * zoom + ox, bgTop * zoom + oy, bgW * zoom, bgH * zoom);
+    }
     ctx.restore();
   }
 
@@ -66,7 +87,7 @@ export function drawSecFolderMap(canvas, sectors, bounds, selected, mode, artTil
   view.perf = { objectsDrawn: 0, objectsTotal: 0 };
   view.lastDrawLit = false;
   const drawPlaceholders = () => {
-    drawSecPlaceholders(ctx, sectors, bounds, iso, view, cssW, cssH);
+    drawSecPlaceholders(ctx, near(sectors), bounds, iso, view, cssW, cssH);
     if (!renderOpts) drawSecTerrainPlaceholders(ctx, bounds, iso, view, cssW, cssH, mapBackground);
   };
   if (mode === 'color') {
@@ -80,6 +101,8 @@ export function drawSecFolderMap(canvas, sectors, bounds, selected, mode, artTil
     const firstSY = Math.max(bounds.minY, bounds.minY + Math.floor(worldTop / 64));
     const lastSY = Math.min(bounds.maxY, bounds.minY + Math.floor(worldBottom / 64));
 
+    // tile colour by raw tile value, worked out once per value for the sector images built in this frame (not once per tile)
+    const rgbOf = new Map();
     for (let sy = firstSY; sy <= lastSY; sy++) for (let sx = firstSX; sx <= lastSX; sx++) {
       const sector = sectorMap.get(`${sx},${sy}`);
       if (!sector?.decoded) continue;
@@ -94,8 +117,9 @@ export function drawSecFolderMap(canvas, sectors, bounds, selected, mode, artTil
         const cctx = cache.getContext('2d', { alpha: false });
         const image = cctx.createImageData(64, 64);
         for (let i = 0; i < sector.decoded.tiles.length; i++) {
-          const info = secTileInfo(sector.decoded.tiles[i] >>> 0);
-          const m = String(secTileColor(info.artId)).match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/);
+          const raw = sector.decoded.tiles[i] >>> 0;
+          let m = rgbOf.get(raw);
+          if (m === undefined) rgbOf.set(raw, m = String(secTileColor(secTileInfo(raw).artId)).match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/));
           const off = i * 4;
           if (m) { image.data[off] = +m[1]; image.data[off+1] = +m[2]; image.data[off+2] = +m[3]; }
           image.data[off+3] = 255;
@@ -121,7 +145,7 @@ export function drawSecFolderMap(canvas, sectors, bounds, selected, mode, artTil
     // Only sectors the user has loaded are drawn (and lit); the rest are placeholders.
     drawPlaceholders(); // below tiles; loaded sectors are skipped inside
     const allSectors = sectors;
-    sectors = sectors.filter(s => view.loadedSectors?.has(secSectorKey(s)));
+    sectors = near(sectors).filter(s => view.loadedSectors?.has(secSectorKey(s)));
     if (lod) {
       // A miniature of each sector with everything it shows (tiles, objects, roofs).
       const byKey = view.lodMobs && view.lodMobs.src === mobPoints && view.lodMobs.n === mobPoints.length ? view.lodMobs.map : null;
@@ -171,7 +195,7 @@ export function drawSecFolderMap(canvas, sectors, bounds, selected, mode, artTil
   }
 
   // In low detail the objects and roofs are already part of the sector miniatures.
-  if (!lod) drawSortedObjects(ctx, view, mobPoints, loadedMobs, bounds, mode, zoom, ox, oy, iso, cssW, cssH, overlayVisibility, lighting);
+  if (!lod) drawSortedObjects(ctx, view, mobPoints, loadedMobs, bounds, mode, zoom, ox, oy, iso, cssW, cssH, overlayVisibility, lighting, range);
 
   // Roofs go on top of everything (isometric view only).
   if (mode === 'art' && !lod && overlayVisibility.roofs) drawSecRoofs(ctx, sectors, bounds, iso, view, cssW, cssH);
@@ -235,14 +259,38 @@ function objectOrder(view, mobPoints, loadedMobs, mode, vis) {
   const edgeObjects = (vis.walls ? walls : []).concat(vis.otherMobs ? pts.filter(portalsOnEdges) : []);
   // One shared, game-ordered pass so nearer walls/objects cover farther ones
   // (and vice versa) instead of all walls being painted after every object.
-  return (view._objOrder = { hash: h, flags, ordered: secSortObjectsLikeGame(visible.concat(edgeObjects)), edgeSet: new Set(edgeObjects) });
+  const ordered = secSortObjectsLikeGame(visible.concat(edgeObjects));
+  // Positions in the draw order, per sector, so a frame can pick out just the sectors in view.
+  const bySector = new Map();
+  ordered.forEach((o, i) => {
+    const k = `${o.sectorX},${o.sectorY}`;
+    const list = bySector.get(k);
+    if (list) list.push(i); else bySector.set(k, [i]);
+  });
+  return (view._objOrder = { hash: h, flags, ordered, bySector, edgeSet: new Set(edgeObjects) });
 }
 
 // Objects (walls, critters, portals, scenery, ground items) are lit one by one: ambient colour
 // of the tile they stand on plus any light shining on them (game/light.c sub_4DC210), so each
 // sprite is tinted with its own colour. Objects well outside the view are skipped.
-function drawSortedObjects(ctx, view, mobPoints, loadedMobs, bounds, mode, zoom, ox, oy, iso, cssW, cssH, vis, lighting) {
-  const { ordered: staticOrder, edgeSet } = objectOrder(view, mobPoints, loadedMobs, mode, vis);
+function drawSortedObjects(ctx, view, mobPoints, loadedMobs, bounds, mode, zoom, ox, oy, iso, cssW, cssH, vis, lighting, range = null) {
+  const { ordered: allOrdered, bySector, edgeSet } = objectOrder(view, mobPoints, loadedMobs, mode, vis);
+  let staticOrder = allOrdered;
+  // Only the objects of the sectors in view (still in draw order); walking NPCs move between sectors.
+  if (range && !secObjectAnim.enabled) {
+    const idx = [];
+    const cells = (range.x1 - range.x0 + 1) * (range.y1 - range.y0 + 1);
+    if (cells <= bySector.size) {
+      for (let y = range.y0; y <= range.y1; y++) for (let x = range.x0; x <= range.x1; x++) { const l = bySector.get(`${x},${y}`); if (l) for (const i of l) idx.push(i); }
+    } else {
+      for (const [k, l] of bySector) {
+        const c = k.indexOf(','), x = +k.slice(0, c), y = +k.slice(c + 1);
+        if (x >= range.x0 && x <= range.x1 && y >= range.y0 && y <= range.y1) for (const i of l) idx.push(i);
+      }
+    }
+    idx.sort((a, b) => a - b);
+    staticOrder = idx.map(i => allOrdered[i]);
+  }
   // Walking NPCs are ordered by the tile they are on now, not the one they started from.
   let ordered = staticOrder;
   if (secObjectAnim.enabled) {
@@ -268,5 +316,5 @@ function drawSortedObjects(ctx, view, mobPoints, loadedMobs, bounds, mode, zoom,
     if (edgeSet.has(o)) drawSecWallOverlay(ctx, [o], bounds, mode, zoom, ox, oy, iso, lighting);
     else drawSecMobOverlay(ctx, [o], bounds, mode, zoom, ox, oy, iso, vis.bounds, lighting);
   }
-  view.perf = { objectsDrawn: drawn, objectsTotal: ordered.length };
+  view.perf = { objectsDrawn: drawn, objectsTotal: allOrdered.length };
 }

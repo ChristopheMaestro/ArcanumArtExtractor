@@ -1,4 +1,4 @@
-// Pre-made thumbnail sheets for the .ART grid (art-thumbs/, written by toolbox/build_art_thumbs.py).
+// Pre-made thumbnail sheets for the .ART grid (js/art/art-thumbs/, written by toolbox/build_art_thumbs.py).
 // Online, one sheet of 50 thumbnails is one request where the .art files are 50 (several MB for critters).
 //
 //   art-thumbs/index.json        what the sheets hold (below)
@@ -39,6 +39,9 @@ export function fileListHash(names) {
   }
   return h.toString(16).padStart(8, '0');
 }
+
+// The explorer's folders are under data/; the sheets are made for the folders of art/ (art/tile = 'tile'). The mods' folders have none: null.
+export const artSheetPath = path => (path === 'art' ? '' : String(path || '').startsWith('art/') ? path.slice(4) : null);
 
 const folderUrl = rel => `${ART_THUMBS_ROOT}${rel ? `${encPath(rel)}/` : ''}`;
 

@@ -8,6 +8,7 @@
 // tool from what it hands over (`env`). Changes are recorded as { kind: 'fn', sec, apply(forward) } history entries.
 
 import { ART_TYPE } from '../core/art-id.js';
+import { escapeHtml } from '../core/util.js';
 import { SEC_ISO_HALF_W } from '../sec/sec-iso.js';
 import { loadLightSchemeNames, loadMapList, loadTownMapNames } from '../sec/sec-map-data.js';
 import { loadSecRoofNames, secRoofNum } from '../sec/sec-roofs.js';
@@ -18,7 +19,7 @@ import { SEC_NO_ROOF, secIsRoofId } from './sec-writer.js';
 
 export const EXTRA_TOOLS = ['stamp', 'roof', 'light', 'block', 'sector', 'mapdata'];
 
-const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const esc = escapeHtml;
 const q = (root, sel) => root.querySelector(sel);
 // A row of buttons of which one is on (the look of the Wall tool's brushes). `onPick(id)` runs on a click.
 function pickRow(root, onPick) {
@@ -585,9 +586,10 @@ export function createExtraTools(env) {
       if (tool !== 'light') return;
       const z = env.zoom(), iso = env.getMode() === 'art';
       c.save(); c.lineWidth = 1.5;
+      const cw = c.canvas.clientWidth, ch = c.canvas.clientHeight;   // read once, not per light
       for (const sec of env.valid) for (const l of sec.decoded?.lights || []) {
         const p = env.tileCentre(l.x - env.minX * 64, l.y - env.minY * 64);
-        if (p.x < -80 || p.y < -80 || p.x > c.canvas.clientWidth + 80 || p.y > c.canvas.clientHeight + 80) continue;
+        if (p.x < -80 || p.y < -80 || p.x > cw + 80 || p.y > ch + 80) continue;
         const ox = (l.offsetX || 0) * z * (iso ? 1 : 0), oy = (l.offsetY || 0) * z * (iso ? 1 : 0);
         const rgb = l.flags & LF_INDOOR ? [120, 160, 255] : l.flags & LF_OUTDOOR ? [255, 255, 255] : [l.r, l.g, l.b];
         const r = lightRadius((l.artId >>> 19) & 0x1FF) * (iso ? SEC_ISO_HALF_W : 0.5) * z;

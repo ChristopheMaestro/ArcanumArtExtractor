@@ -120,13 +120,28 @@ function interfaceIconNumber(d, complexity) {
   }
 }
 
+// An art/interface file, read once: the same few icons and bars serve every card of a folder.
+// The canvas is only drawn from. A failed read is not kept, so the next card tries again.
+const interfaceArt = new Map();   // file name -> Promise<canvas | null>
+function interfaceIconArt(file) {
+  let p = interfaceArt.get(file);
+  if (!p) {
+    p = (async () => {
+      const resp = await fetch(`${DATA_ROOT}art/interface/${encodeURIComponent(file)}`);
+      if (!resp.ok) { interfaceArt.delete(file); return null; }
+      const frames = await parseArtBuffer(await resp.arrayBuffer(), 1);
+      return frames[0]?.canvas ?? null;
+    })();
+    interfaceArt.set(file, p);
+    p.catch(() => interfaceArt.delete(file));
+  }
+  return p;
+}
+
 async function loadInterfaceIcon(num, interfaceMes) {
   const file = interfaceMes.get(num);
   if (!file) return null;
-  const resp = await fetch(`${DATA_ROOT}art/interface/${encodeURIComponent(file.trim())}`);
-  if (!resp.ok) return null;
-  const frames = await parseArtBuffer(await resp.arrayBuffer(), 1);
-  return frames[0]?.canvas ?? null;
+  return interfaceIconArt(file.trim());
 }
 
 // Window geometry from intgame.c: the icon is blitted at (217, 69) and the text rectangles start at x = 290,
@@ -241,9 +256,13 @@ export async function cardIconSource(decoded) {
 export async function loadCardIcon(source) {
   if (!source) return null;
   if (source.kind === 'interface') {
-    const resp = await fetch(source.url);
-    if (!resp.ok) return null;
-    return (await parseArtBuffer(await resp.arrayBuffer(), 1))[0]?.canvas ?? null;
+    // a copy of the shared canvas: the caller puts it in the page
+    const art = await interfaceIconArt(source.file);
+    if (!art) return null;
+    const copy = document.createElement('canvas');
+    copy.width = art.width; copy.height = art.height;
+    if (copy.width && copy.height) copy.getContext('2d').drawImage(art, 0, 0);
+    return copy;
   }
   const img = new Image();
   await new Promise((ok, fail) => { img.onload = ok; img.onerror = fail; img.src = source.url; });

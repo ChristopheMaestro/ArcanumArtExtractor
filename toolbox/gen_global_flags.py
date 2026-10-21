@@ -20,14 +20,18 @@ Run it again after changing scripts or dialogues.
 """
 
 import json
+import os
 import re
 import struct
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 SCHEMA = ROOT / "js" / "scr" / "scr-schema.js"
 OUT = DATA / "scr" / "global_flags.json"
+SCR, DLG = DATA / "scr", DATA / "dlg"           # (the folders read: a version of the game with a mod over it points them at its own layered tree, see generate())
+WMAP, MENU = DATA / "Rules" / "WMap_Rnd.mes", DATA / "mes" / "MainMenu.mes"
 
 HEADER_SIZE, ENTRY_SIZE, ACTION_SIZE = 0x40, 0x84, 0x2C
 VT_NUMBER, VT_GL_FLAG = 3, 4          # ScriptValueType (SCR_VALUE_TYPES in scr-schema.js)
@@ -66,9 +70,14 @@ class Index:
             self.flag(n)[key].append(item)
 
 
+def read_all(paths):
+    """(path, bytes) of each of `paths`, in order; read by a few threads (on Windows opening a file is the slow part)."""
+    with ThreadPoolExecutor(16) as pool:
+        return list(zip(paths, pool.map(Path.read_bytes, paths)))
+
+
 def scan_scripts(index, conds, acts):
-    for path in sorted((DATA / "scr").glob("*.scr")):
-        buf = path.read_bytes()
+    for path, buf in read_all(sorted(SCR.glob("*.scr"))):
         if len(buf) < HEADER_SIZE:
             continue
         count = min(struct.unpack_from("<i", buf, 0x34)[0], (len(buf) - HEADER_SIZE) // ENTRY_SIZE)
@@ -101,9 +110,21 @@ def scan_scripts(index, conds, acts):
                     index.scripts[path.name] = scr_description(buf)
 
 
+def _text(path):
+    """utf-8 when the file is (a transcoded data root), else the game's Windows-1252."""
+    return _decode(Path(path).read_bytes())
+
+
+def _decode(b):
+    try:
+        return b.decode("utf-8")
+    except UnicodeDecodeError:
+        return b.decode("cp1252", "replace")
+
+
 def scr_description(buf):
     end = buf.find(b"\0", 8, 48)
-    return buf[8:end if end >= 0 else 48].decode("cp1252", "replace").strip()
+    return buf[8:end if end >= 0 else 48].decode(os.environ.get("ARCANUM_RAW_ENC", "cp1252"), "replace").strip()
 
 
 def dlg_entries(text):
@@ -146,11 +167,11 @@ GF = re.compile(r"(?<![a-z])gf\s*(\d+)\s+(-?\d+)", re.I)
 
 
 def scan_dialogues(index):
-    for path in sorted((DATA / "dlg").glob("*.dlg")):
-        text = path.read_text(encoding="cp1252", errors="replace")
+    for path, b in read_all(sorted(DLG.glob("*.dlg"))):
+        text = _decode(b)
         # The dialogue is run by the script of the same name (script_name_build_dlg_name()).
         scr = path.with_name(path.stem + ".scr").name
-        scr_path = DATA / "scr" / scr
+        scr_path = SCR / scr
         if GF.search(text) and scr_path.exists() and scr not in index.scripts:
             index.scripts[scr] = scr_description(scr_path.read_bytes())
         for num, line, _gender, iq, tests, _resp, results in dlg_entries(text):
@@ -168,10 +189,10 @@ def scan_dialogues(index):
 
 
 def scan_encounters(index):
-    path = DATA / "Rules" / "WMap_Rnd.mes"
+    path = WMAP
     if not path.exists():
         return
-    for raw in path.read_text(encoding="cp1252", errors="replace").splitlines():
+    for raw in _text(path).splitlines():
         m = re.match(r"\s*\{(\d+)\}\{([^}]*)\}(.*)", raw)
         if not m:
             continue
@@ -182,10 +203,10 @@ def scan_encounters(index):
 
 
 def scan_pregens(index):
-    path = DATA / "mes" / "MainMenu.mes"
+    path = MENU
     if not path.exists():
         return
-    for m in re.finditer(r"\{(5[5-9]\d)\}\{\s*(-?\d+)\s*\}", path.read_text(encoding="cp1252", errors="replace")):
+    for m in re.finditer(r"\{(5[5-9]\d)\}\{\s*(-?\d+)\s*\}", _text(path)):
         num, flag = int(m.group(1)), int(m.group(2))
         if num >= 551 and flag > 0:  # mainmenu_ui_pregen_char_execute()
             index.add(flag, "pregen", num - 550)

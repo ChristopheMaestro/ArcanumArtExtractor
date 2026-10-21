@@ -2,7 +2,8 @@
 
 import { mountFolderTree } from '../explorer/folder-tree.js';
 
-import { joinPath, loadMapsManifest, manifestFileList, manifestFiles, manifestSubfolders } from '../core/manifest.js';
+import { joinPath, manifestFileList, manifestFiles, manifestSubfolders } from '../core/manifest.js';
+import { createIndexLoader, loadMapFolderIndex, toDataPath } from '../core/file-index.js';
 
 import { buildWorldFiles, createWorldSectors, loadTerrainMap } from './sec-terrain.js';
 
@@ -16,7 +17,10 @@ import { mountBackBar } from '../explorer/nav-history.js';
 import { renderSecFolderMap } from '../editor/sec-folder-viewer.js';
 import { removeContextTools } from '../ui/shell.js';
 
-import { loadSecFolderSectors, renderSecFolderLoading } from './sec-map-view.js';
+import { loadSecFolderSectors, renderSecFolderLoading, renderSecLargeConfirm } from './sec-map-view.js';
+
+const SEC_AUTOLOAD_MAX = 100;       // a map with more sectors asks before loading
+const secLoadApproved = new Set();  // folders the user said yes to, this session
 import { explorerMode } from '../core/state.js';
 import { openWorldEditorDialog } from '../editor/world-editor-dialog.js';
 
@@ -35,11 +39,11 @@ export function loadSecManifest(relativePath = '', folderName) {
     const p = (async () => {
       // the terrain grid is read alongside the manifest, and the sub-folder manifests all at once (online each is a round trip)
       const terrain = key ? loadTerrainMap(key).catch(() => null) : null;
-      const manifest = await loadMapsManifest(relativePath, folderName);
+      const manifest = await loadMapFolderIndex(relativePath);
       if (!key || !manifestSubfolders(manifest).length || !(await terrain)) return manifest;
       const files = manifestFileList(manifest).slice();
       const subs = await Promise.all(manifestSubfolders(manifest).map(sf =>
-        loadMapsManifest(joinPath(key, sf.relative_path || sf.folder_name), sf.folder_name).catch(() => null)));
+        loadMapFolderIndex(joinPath(key, sf.relative_path || sf.folder_name)).catch(() => null)));
       manifestSubfolders(manifest).forEach((sf, i) => {
         const sub = subs[i];
         if (!sub) return;
@@ -62,10 +66,10 @@ let secTree = null;
 let secMapView = null;   // { path, article }: the folder map currently in the viewer
 let secMapToken = 0;
 let secCurrentPath = null;
-export let secCurrentFolderName = 'maps';
+export let secCurrentFolderName = 'data';
 
 export function secDisplayName(path, fallback) {
-  return (fallback && fallback !== '..') ? fallback : (path.split('/').filter(Boolean).pop() || 'maps');
+  return (fallback && fallback !== '..') ? fallback : (path.split('/').filter(Boolean).pop() || 'data');
 }
 
 function renderSecFolderGrid(manifest, relativePath) {
@@ -128,30 +132,42 @@ document.addEventListener('explorermodechange', syncWorldEditorBtn);
 
 // A new world from the dialog: its sectors are generated in memory and the editor opens on them.
 // No .sec exists until the editor's export.
-document.addEventListener('worldeditorcreate', async e => {
-  const { width, height, terrain } = e.detail;
+// Shows a world that exists only in memory and opens the editor on it. A world loaded from a .zip this tool exported
+// brings its sectors, and its own map.prp / terrain.tdf / mapinfo.txt go out again with the next export.
+async function openVirtualWorld(label, width, height, makeSectors, extraFiles, breadcrumb) {
   const token = ++secMapToken;
-  const loading = renderSecFolderLoading('New world', width * height);
+  const loading = renderSecFolderLoading(label, width * height);
   viewerEl.innerHTML = '';
   viewerEl.appendChild(loading.article);
   viewerEl.hidden = false; viewerEl.classList.add('revealed'); gridEl.hidden = true;
   try {
     await new Promise(resolve => requestAnimationFrame(resolve));
-    const sectors = await createWorldSectors(width, height, terrain.id, (n, total) => loading.update(n, total, { filename: 'Generating sectors' }));
-    const article = await renderSecFolderMap('New world', 'New world', sectors, null, { virtual: true, startEditing: true, extraFiles: () => buildWorldFiles(width, height, terrain.id) });
+    const sectors = await makeSectors(loading);
+    const article = await renderSecFolderMap(label, label, sectors, null, { virtual: true, startEditing: true, extraFiles });
     if (token !== secMapToken) { if (article) removeContextTools(article); return; }
     viewerEl.innerHTML = '';
     viewerEl.appendChild(article);
     secMapView = null;   // never matches a folder: this map is not on disk
-    breadcrumbEl.textContent = `/maps/ (new world ${width} × ${height}, ${terrain.name})`;
+    breadcrumbEl.textContent = breadcrumb;
   } catch (err) {
     showExplorerError(err);
   }
+}
+document.addEventListener('worldeditorcreate', e => {
+  const { width, height, terrain } = e.detail;
+  openVirtualWorld('New world', width, height, loading => createWorldSectors(width, height, terrain.id, (n, total) => loading.update(n, total, { filename: 'Generating sectors' })),
+    () => buildWorldFiles(width, height, terrain.id), `/maps/ (new world ${width} × ${height}, ${terrain.name})`);
+});
+document.addEventListener('worldeditorload', e => {
+  const { name, width, height, terrainId, sectors, worldFiles } = e.detail;
+  openVirtualWorld('New world', width, height, async () => sectors,
+    async () => worldFiles.length === 3 || terrainId == null ? worldFiles : buildWorldFiles(width, height, terrainId),
+    `/maps/ (new world ${width} × ${height}, loaded from ${name})`);
 });
 
 // Make `relativePath` the current folder (manifest, file list, breadcrumb).
 async function setSecContext(relativePath, folderName) {
-  breadcrumbEl.textContent = `/maps/${relativePath ? relativePath + '/' : ''}`;
+  breadcrumbEl.textContent = `/data/${relativePath ? relativePath + '/' : ''}`;
   const prevPath = secCurrentPath;
   secCurrentPath = relativePath; syncWorldEditorBtn();
   if (secManifest && relativePath === prevPath) return;
@@ -170,12 +186,17 @@ async function showSecMap(path, folderName, focusFilename) {
     return;
   }
   const token = ++secMapToken;
-  const loading = renderSecFolderLoading(folderName, secFiles.length);
   viewerEl.innerHTML = '';
-  viewerEl.appendChild(loading.article);
   viewerEl.hidden = false;
   viewerEl.classList.add('revealed');
   gridEl.hidden = true;
+  if (secFiles.length > SEC_AUTOLOAD_MAX && !secLoadApproved.has(path)) {
+    await new Promise(resolve => viewerEl.appendChild(renderSecLargeConfirm(folderName, secFiles.length, () => { secLoadApproved.add(path); resolve(); })));
+    if (token !== secMapToken) return;   // the user went somewhere else while the question was open
+  }
+  const loading = renderSecFolderLoading(folderName, secFiles.length);
+  viewerEl.innerHTML = '';
+  viewerEl.appendChild(loading.article);
   // Give the browser a chance to paint the loading UI before the first fetch.
   await new Promise(resolve => requestAnimationFrame(resolve));
   const sectors = await loadSecFolderSectors(path, secFiles, loading.update);
@@ -190,18 +211,19 @@ async function showSecMap(path, folderName, focusFilename) {
 
 // "See on map": the map of the folder, centred on a tile (a sector and the tile in it).
 export async function openSecAtTile(relativePath, folderName, tile, label) {
+  relativePath = toDataPath('sec', relativePath, true);   // (a caller may name a map of the base game by its folder only)
   saveDataExplorerState('sec', relativePath, folderName, null);
   await enterSecExplorer(true);
   if (secMapView && secMapView.path === relativePath) await secMapView.article.goToTile(tile.sectorX, tile.sectorY, tile.tileX, tile.tileY, label);
 }
 
 export async function enterSecExplorer(restoreState = false) {
-  const { path, name, file } = beginDataExplorer('sec', { rootName: 'maps', breadcrumb: 'maps', restoreState });
+  const { path, name, file } = beginDataExplorer('sec', { rootName: 'data', breadcrumb: 'data', restoreState });
   secMapView = null;
   secCurrentPath = null; secManifest = null;
   secTree = mountFolderTree({
     // The tree (and the search) list each folder's own files; only the map merges in the sub-folders.
-    rootName: 'maps', loadManifest: loadMapsManifest, openFolder: openSecFolder, ext: 'sec', fileIcon: '🗺️',
+    rootName: 'data', loadManifest: createIndexLoader('sec'), openFolder: openSecFolder, ext: 'sec', fileIcon: '🗺️',
     openFile: (filename, row, folder) => openSecFile(filename, folder, row),
   });
   try {

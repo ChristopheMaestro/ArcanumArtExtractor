@@ -1,18 +1,33 @@
 // The Arcanum Asset Browser page (index.html): welcome screen, Atlas, Items, Library, Quests, Demographics, and the
-// Asset Browser (asset-browser.html) in the Files and Workshop frames. Data: js/atlas/data/ (toolbox/atlas/), pictures:
+// Asset Browser (the browser view of this same file) in the Files and Workshop frames. Data: js/atlas/data/ (toolbox/atlas/), pictures:
 // atlas/, music and sounds: data/sound/.
+// The whole app is one function, run by atlas-boot.js once the data files are in, and again when the version changes (the page is not reloaded):
+// nothing here may outlive a run except through what the boot undoes (listeners on window / document, timers, <head> additions) or what
+// stop() undoes (the sounds). The data it reads is window.Arcanum..., made again by every version's files.
+window.AtlasApp = function () {
 let current = 'home';
 
 const ICON = { quest: '📜', shop: '🪙', followers: '🛡️', waypoint: '🚪', key: '🔑', npc: '🧑' };
 
 /* ------------------------------------------------------------------ atlas: the real world map */
-// Places and labels come from world-labels.js (toolbox/atlas/locate_world_labels.py); the map is world-atlas.html in a frame.
+// Places and labels come from world-labels.js (toolbox/atlas/locate_world_labels.py); the map is the map view of this same file, in a frame.
 // Items, containers and who carries what come from items.js (toolbox/atlas/build_items.py).
 const WL = window.ArcanumWorldLabels;
 const IT = window.ArcanumItems;
+// the sheets of this version (a mod's own item icons and portraits): the style sheet names the base game's
+// (an item of a base game's module under a mod, not in the mod's list: ib, its icon in the base game's sheet; toolbox/atlas/splice_modules.py)
+document.head.insertAdjacentHTML('beforeend', `<style>html .spr{background-image:url("${IT.icons || 'atlas/item-icons.webp'}")}html .spr.ib{background-image:url("${IT.baseIcons || 'atlas/item-icons.webp'}")}html .face{background-image:url("${(window.ArcanumPortraits || {}).sheet || 'atlas/portraits.png'}")}</style>`);
 Object.assign(ICON, { chest: '📦', information: 'ℹ️', altar: '🕯️', bounty: '💰', master: '🎓' });
 const worldFrame = document.getElementById('worldFrame');
+// The map's frame has no src while the welcome screen is first drawn (index.html): its pictures and data would take the connection from the
+// Atlas's own files. It starts once this app is up, or when the visitor goes anywhere but the welcome screen (go()), whichever is first,
+// and at once for a link to anywhere but the welcome screen, Files and Workshop (index.html does that for the page's first start).
+const startWorldFrame = () => { if (!worldFrame.getAttribute('src')) worldFrame.src = worldFrame.dataset.src; };
+{ const first = location.hash.slice(1).split('&')[0]; if (first && first !== 'home' && first !== 'files' && first !== 'workshop') startWorldFrame(); }
+setTimeout(startWorldFrame, 200);
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+// a.localeCompare(b) made once: the same order, many times faster when a long list is sorted
+const collate = new Intl.Collator().compare;
 
 // ---- items: lookups built once -----------------------------------------------------------------------
 const BYNAME = new Map();
@@ -48,8 +63,8 @@ IT.recipes.forEach((r, ri) => {
 function spr(i, box) {
   const it = IT.items[i];
   if (!it || !it.icon) return `<span class="ibox" style="--s:${box}px"><span class="ph"></span></span>`;
-  const [x, y, w, h] = it.icon, s = Math.min(1, box / Math.max(w, h)), [W, H] = IT.iconSheet;
-  return `<span class="ibox" style="--s:${box}px"><span class="spr" style="width:${w * s}px;height:${h * s}px;background-size:${W * s}px ${H * s}px;background-position:-${x * s}px -${y * s}px"></span></span>`;
+  const [x, y, w, h] = it.icon, s = Math.min(1, box / Math.max(w, h)), [W, H] = it.ib ? IT.baseIconSheet : IT.iconSheet;
+  return `<span class="ibox" style="--s:${box}px"><span class="spr${it.ib ? ' ib' : ''}" style="width:${w * s}px;height:${h * s}px;background-size:${W * s}px ${H * s}px;background-position:-${x * s}px -${y * s}px"></span></span>`;
 }
 const cls = it => it.hexed ? ' hexed' : it.magick ? ' magick' : it.tech ? ' tech' : '';
 // a random list gives an item one chance per roll: [100, 100, 20] -> "100% ×2 · 20%"
@@ -165,7 +180,7 @@ function openMapOf(place, tile, map) {
   go('atlas');
   if (map == null) { if (WL.places.some(q => q.name === place)) goPlace(place); else focusTile(place, tile); return; }
   const m = MP.maps[MAP_BY_KEY.get(nkey(map))];
-  travelTo(m.key, m.name, m.start || tile);
+  travelTo(m.key, m.name, m.start || tile, !!m.start);
 }
 function wireDetail(root, open) {
   root.querySelectorAll('[data-item]').forEach(b => b.addEventListener('click', () => open(+b.dataset.item)));
@@ -176,9 +191,10 @@ function wireDetail(root, open) {
 function showItem(i) {
   if (current === 'atlas') {       // on the map the item shows in the right sidebar, like a person or a container
     const p = openPanel();
-    p.innerHTML = itemDetail(i);
+    p.innerHTML = itemDetail(i, shownGame());      // (only where it is found in the world you are in, not in the modules)
     p.scrollTop = 0;
     wireDetail(p, showItem);
+    setPanelRef('i' + i.toString(36));
     return;
   }
   const box = document.getElementById('itemCard');
@@ -220,11 +236,16 @@ function containerBody(ci) {
   return h;
 }
 const labelAside = document.getElementById('labelAside');
-function openPanel() { labelAside.classList.add('open'); return document.getElementById('labelPanel'); }
+// what the right sidebar shows, for the page's link: a letter and a number - n person (PEOPLE), c container, i item, a / s area /
+// secret area, l label of the map (its tile, x_y)
+let panelRef = null;
+const setPanelRef = r => { panelRef = r; syncLink(); };
+function openPanel() { panelRef = null; labelAside.classList.add('open'); return document.getElementById('labelPanel'); }
 // closing the panel also lets go of what it showed on the map (as in the Map Explorer)
 function closePanel() {
   if (!labelAside.classList.contains('open')) return;
   labelAside.classList.remove('open');
+  setPanelRef(null);
   worldFrame.contentWindow.postMessage({ type: 'atlas-unselect' }, '*');
 }
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closePanel(); });
@@ -233,6 +254,7 @@ const setPlacesHidden = (hidden, save) => {
   document.querySelector('.workspace[data-screen="atlas"]').classList.toggle('noleft', hidden);
   b.textContent = hidden ? '›' : '‹'; b.title = b.ariaLabel = hidden ? 'Show the places list' : 'Hide the places list'; b.ariaExpanded = String(!hidden);
   if (save) try { localStorage.setItem('atlas-places-hidden', hidden ? '1' : '0'); } catch (_) {}
+  try { syncLink(); } catch (_) {}        // (runs once before the link code below has been set up)
 };
 document.getElementById('placesToggle').onclick = () => setPlacesHidden(!document.querySelector('.workspace[data-screen="atlas"]').classList.contains('noleft'), true);
 try { if (localStorage.getItem('atlas-places-hidden') === '1') setPlacesHidden(true); } catch (_) {}
@@ -240,6 +262,7 @@ function selectContainer(ci) {
   const c = IT.containers[ci], p = openPanel();
   p.innerHTML = `<div class="panel-head">${boxFace(c)}<div><h3>${esc(c.name)}</h3><div class="meta">${esc(placeTitle(c.place))}</div></div></div>${containerBody(ci)}${advancedSection(c.file)}`;
   wireItems(p);
+  setPanelRef('c' + ci.toString(36));
 }
 // ---- Advanced view: every game file behind what the panel shows, each opened in Files ----------------------------------
 // assets.js (toolbox/atlas/build_assets.py, fetched once the view is turned on) knows each .mob's prototype, art id, scripts,
@@ -254,8 +277,20 @@ let assetsP = null;
 function loadAssets() {
   return assetsP || (assetsP = new Promise(ok => {
     const s = document.createElement('script');
-    s.src = 'js/atlas/data/assets.js';
-    s.onload = () => ok(window.ArcanumAssets || null);
+    s.src = AtlasData.url('assets');
+    s.onload = () => {                // mobs are written by folder (build_assets.pack_mobs): back to mobs[path] = [type, proto, aid, scripts, sector, portrait, source]
+      const A = window.ArcanumAssets;
+      if (A && !A.flat) {
+        const mobs = {};
+        for (const [dir, rows] of Object.entries(A.mobs)) for (const [name, r] of Object.entries(rows)) {
+          const row = [0, 0, 0, [], 0, 0, 0, []].map((d, i) => r[i] ?? d);
+          if (typeof row[4] === 'number' && row[4]) row[4] = `${dir}/${row[4]}.sec`;
+          mobs[`${dir}/${name}.mob`] = row;
+        }
+        A.mobs = mobs; A.flat = true;
+      }
+      ok(A || null);
+    };
     s.onerror = () => { assetsP = null; ok(null); };
     document.head.appendChild(s);
   }));
@@ -274,7 +309,7 @@ function filesQuery(mode, file) {
 }
 const ADV_KIND = { mob: 'MOB', sec: 'SEC', pro: 'PRO', art: 'ART', bmp: 'BMP', scr: 'SCR', dlg: 'DLG', mes: 'MES' };
 function advRow(kind, name, role, q, title) {
-  const href = q.startsWith('data/') ? q : 'asset-browser.html?' + q;
+  const href = q.startsWith('data/') ? q : 'index.html?view=browser&' + q;
   return `<a class="adv-row" href="${esc(href)}"${q.startsWith('data/') ? ' target="_blank" rel="noopener"' : ` data-files="${esc(q)}"`} title="${esc(title || name)}">
     <span class="adv-ext k-${kind}">${ADV_KIND[kind]}</span><span class="adv-name">${esc(name)}</span><span class="adv-role">${esc(role)}</span></a>`;
 }
@@ -284,7 +319,7 @@ const modUrl = p => import(new URL(p, location.href).href);
 async function artUrlOf(type, aid) {
   if (!aid || aid === 0xFFFFFFFF) return null;
   const [ca, cr, pm] = await Promise.all(['js/proto/critter-aid.js', 'js/objects/critter-art.js', 'js/proto/proto-mes.js'].map(modUrl));
-  const critter = ca.protoCritterAidInfo(aid, type);
+  const critter = ca.protoCritterAidInfo(aid, type);       // (critter-aid.js reads the version's unique_npc.mes itself, the pets' folders included: make_root)
   if (critter && critter.filename) return (await cr.resolveCritterArt(critter))?.url || null;
   const artId = ca.protoCurrentAidArtId(aid, type), artType = ca.protoArtObjectType(aid, type);
   if (artId == null || artType === 18) return null;
@@ -307,18 +342,29 @@ async function fillAdvanced(root = document.getElementById('labelPanel')) {
     if (!A) { list.innerHTML = '<div class="flavour">js/atlas/data/assets.js is missing: run toolbox/atlas/build_assets.py.</div>'; continue; }
     let ref = JSON.parse(box.dataset.adv);
     if (typeof ref === 'string') ref = [ref];
-    const [file] = ref, m = A.mobs[file];
-    const [type, proto, aid, scripts, sector, portrait, source] = m || [ref[1], ref[2], ref[3], ref[4] || [], file.endsWith('.sec') ? file : 0, 0, 0];
+    const [file] = ref;
+    // a mod's row names its .mob by its own folder ("../mods/<mod>/maps/..."); the version's assets.js is built on the merged data, keyed like the base game's
+    if (!A.byName) { A.byName = {}; for (const k in A.mobs) A.byName[k.slice(k.lastIndexOf('/') + 1).toLowerCase()] = k; }
+    const m = A.mobs[file] || (file.endsWith('.mob') && A.mobs[A.byName[splitPath(file)[1].toLowerCase()]]);
+    const [type, proto, aid, scripts, sector, portrait, source, ownName] = m || [ref[1], ref[2], ref[3], ref[4] || [], file.endsWith('.sec') ? file : 0, 0, 0, ref[5] || []];
+    // a module's files lie outside the folders of the Files tool: they are linked directly, and its scripts and
+    // dialogs are its own (their numbers collide with the game's)
+    const modName = (/^modules\/([^/]+)\//.exec(file) || [])[1], MD = modName && A.mod && A.mod[modName];
+    const modDir = modName ? `data/modules/${encodeURIComponent(modName)}/` : '';
+    const fileQ = (kind, f) => modName ? 'data/' + f.split('/').map(encodeURIComponent).join('/') : filesQuery(kind, f);
+    const scrOf = n => MD ? MD.scr[n] : A.scr[n], dlgOf = n => MD ? MD.dlg[n] : A.dlg[n];
+    const scrQ = (kind, f) => MD ? modDir + kind + '/' + encodeURIComponent(f) : filesQuery(kind, f);
     let h = '';
-    if (file.endsWith('.mob')) h += advRow('mob', splitPath(file)[1], `Placed object · ${splitPath(file)[0]}`, filesQuery('mob', file), file);
-    if (sector) h += advRow('sec', splitPath(sector)[1], `${file.endsWith('.sec') ? (type ? 'Placed in the sector' : 'Tile script of the sector') : 'Sector it stands in'} · ${splitPath(sector)[0]}`, filesQuery('sec', sector), sector);
+    if (file.endsWith('.mob')) h += advRow('mob', splitPath(file)[1], `Placed object · ${splitPath(file)[0]}`, fileQ('mob', file), file);
+    if (sector) h += advRow('sec', splitPath(sector)[1], `${file.endsWith('.sec') ? (type ? 'Placed in the sector' : 'Tile script of the sector') : 'Sector it stands in'} · ${splitPath(sector)[0]}`, fileQ('sec', sector), sector);
     if (proto && A.protos[proto]) h += advRow('pro', A.protos[proto], `Prototype ${proto}`, filesQuery('pro', A.protos[proto]));
+    for (const [f, text] of ownName) h += advRow('mes', f, text, filesQuery('mes', (f === 'oname.mes' ? 'oemes/' : 'mes/') + f));      // the object's own F_NAME / F_DESCRIPTION (not its prototype's)
     h += '<div class="adv-art"></div>';
     if (portrait && A.portraits[portrait]) h += advRow('bmp', A.portraits[portrait], `Portrait ${portrait}`, 'data/portrait/' + encodeURIComponent(A.portraits[portrait]));
     for (const [pt, n] of scripts || []) {
       const when = pt < 0 ? 'walking onto the tile' : SAP[pt] || `point ${pt}`;
-      h += A.scr[n] ? advRow('scr', A.scr[n], `Script ${n} · on ${when}`, filesQuery('scr', A.scr[n])) : `<div class="adv-row off"><span class="adv-ext k-scr">SCR</span><span class="adv-name">script ${n}</span><span class="adv-role">on ${esc(when)} · no .scr file</span></div>`;
-      if (A.dlg[n]) h += advRow('dlg', A.dlg[n], `Lines of script ${n}${pt === 9 || pt === 31 ? ' · the conversation' : ''}`, filesQuery('dlg', A.dlg[n]));
+      h += scrOf(n) ? advRow('scr', scrOf(n), `Script ${n} · on ${when}`, scrQ('scr', scrOf(n))) : `<div class="adv-row off"><span class="adv-ext k-scr">SCR</span><span class="adv-name">script ${n}</span><span class="adv-role">on ${esc(when)} · no .scr file</span></div>`;
+      if (dlgOf(n)) h += advRow('dlg', dlgOf(n), `Lines of script ${n}${pt === 9 || pt === 31 ? ' · the conversation' : ''}`, scrQ('dlg', dlgOf(n)));
     }
     if (source) h += advRow('mes', 'InvenSource.mes', `Random inventory · list ${source}${IT.sources[source] ? ` (${IT.sources[source].name})` : ''}`, filesQuery('mes', 'Rules/InvenSource.mes'));
     list.innerHTML = h || '<div class="flavour">No game file.</div>';
@@ -347,7 +393,17 @@ advBtn.onclick = () => {
 // the other maps of the game (castles, caves, cellars...), drawn from their pictures (map-pictures.js); every picture of the Map Explorer is a "section" of one
 const MP = window.ArcanumMaps || { maps: [], sections: [] };
 const SECT = new Map(MP.sections.map(s => [s.name, s]));
-const nkey = s => String(s || '').toLowerCase().replace(/â€™|[’'`]/g, '').replace(/[^a-z0-9]/g, '');
+// a place the sidebar spells as the game's own typo (the key stays: the data names it so)
+const PLACE_DISPLAY = { 'Stringy Petes Cove': "Stringy Pete's Cove", 'CaveOfBanishment': 'Cave of Banishment', 'LeahboUnderground': 'Leahbo Underground', 'Plainwicke': 'Plainwicke Houses', 'TombOfHorrors': 'Tomb of Horrors', 'ShopMap': 'Shop Map' };
+// The Russian Mod Pack names the places in Russian: with it on, a place is shown by its area's name in ru-areas.js (the mod's area of the
+// same number as the base game's, so `place` is the English name the lists go by). A version change reloads the page, so this is read once.
+{ const ru = window.AtlasVer === 'ru' && window.ArcanumRUAreas, done = new Set();
+  if (ru) for (const a of ru.areas) if (a.place && a.name && !done.has(a.place)) { PLACE_DISPLAY[a.place] = a.name; done.add(a.place); } }
+const shownName = name => PLACE_DISPLAY[name] || name;
+const byShownName = (a, b) => shownName(a.name).localeCompare(shownName(b.name));
+// the name a place goes by in the data, from the title on show (which is the display name)
+const shownPlace = () => { const t = document.getElementById('atlasTitle').textContent; return Object.keys(PLACE_DISPLAY).find(k => PLACE_DISPLAY[k] === t) || t; };
+const nkey = s => String(s || '').toLowerCase().replace(/â€™|[’'`]/g, '').replace(/[^\p{L}\p{N}]/gu, '');      // (any letter: the Russian Mod Pack's places are in Cyrillic)
 const MAP_BY_KEY = new Map(MP.maps.map((m, i) => [nkey(m.key), i]));      // how items.js and the quests name a map
 const placeTitle = name => { const m = MP.maps.find(x => x.key === name); return m ? m.name : name; };
 function placeCrumb(name) {
@@ -367,7 +423,7 @@ function showPlace(place) {
   place = placeTitle(place);
   document.querySelectorAll('#locList .loc').forEach(b => b.classList.toggle('on', b.dataset.place === place));
   syncPlaceFolds();
-  document.getElementById('atlasTitle').textContent = place;
+  document.getElementById('atlasTitle').textContent = PLACE_DISPLAY[place] || place;
   document.getElementById('atlasCrumb').textContent = placeCrumb(place);
   syncLink();
 }
@@ -387,19 +443,19 @@ function focusContainer(ci) {
 }
 // A waypoint is a door, ladder or tile whose script teleports you (waypoints.js): `to` says where, as a map (null = the world),
 // the name of the place and the tile you arrive on.
-function travelTo(map, place, tile) {
+function travelTo(map, place, tile, start) {
   closePanel();
   document.getElementById('itemCard').classList.remove('on');
   go('atlas');
   const sec = map != null && MP.sections.find(s => MP.maps[s.map].key === map);
   showPlace(sec ? sec.name : place);
-  worldFrame.contentWindow.postMessage({ type: 'atlas-travel', map, tile }, '*');
+  worldFrame.contentWindow.postMessage({ type: 'atlas-travel', map, tile, start }, '*');
 }
 
 // a label (waypoint, note, altar, quest object) -> the shape selectLabel() draws (Map Explorer fields, nothing about files)
 function fromWorld(l) {
   return { text: l.text, cat: (Array.isArray(l.category) ? l.category : [l.category]).filter(Boolean),
-    desc: l.description, to: l.to, what: l.what, lock: l.lock,
+    desc: l.description, image: l.image, to: l.to, what: l.what, lock: l.lock,
     god: l.godType, offering: l.offering, blessing: l.blessing,
     place: l.place, mapKey: l.mapKey || l.place, map: l.map, tile: l.tile, obj: l.obj };
 }
@@ -424,8 +480,38 @@ function selectArea(a) {
     : `It appears on the world map once the player has passed within ${r} map square${r === 1 ? '' : 's'} of it.`;
   p.innerHTML = `<div class="panel-head"><span class="portrait chestpic">${a.kind === 'secret' ? '🗝️' : a.kind === 'settlement' ? '🏘️' : '📍'}</span>
     <div><h3>${esc(a.name)}</h3><div class="cats"><span>${a.kind === 'secret' ? 'Secret area' : a.hidden ? 'Hidden area' : a.kind === 'settlement' ? 'Settlement' : 'Area'}</span></div></div></div>
-    ${a.description ? `<div class="sec">${esc(a.description)}</div>` : ''}<div class="sec"><div class="sec-t">On the world map</div><div>${esc(how)}</div></div>`;
+    ${a.description ? `<div class="sec">${esc(a.description)}</div>` : ''}<div class="sec"><div class="sec-t">On the world map</div><div>${esc(how)}</div></div>
+    ${a.tile ? `<div class="sec"><div class="sec-t">Location</div><div>Tile ${a.tile[0]}, ${a.tile[1]} · sector ${a.tile[0] >> 6}, ${a.tile[1] >> 6}</div></div>` : ''}`;
+  const ai = AR.areas.findIndex(q => q.name === a.name), si = AR.secret.findIndex(q => q.name === a.name);
+  if (ai >= 0 || si >= 0) setPanelRef(ai >= 0 ? 'a' + ai.toString(36) : 's' + si.toString(36));
 }
+// The modules come in categories (left list of the Modules tab, and the game choice of Items, Quests, Library and Demographics);
+// inside a category they are in alphabetical order. A module named nowhere here is an "Other Module".
+const MODULE_CATS = [
+  ['Troika Modules', ['Buried Secrets', 'Dungeon Crawl 2', 'Dusty Dunes', 'Hellgate', 'Lost Dungeon of Souls', 'Vormantown', 'Deathmatch', 'Time', 'Woodmir Race']],
+  ['French Modules', ['Bourrin', 'MuHu', 'Affaire', 'Livre Ombres', 'Mystere', 'Naufrageur', 'Resident Eval', 'Secret', 'Tombeau', 'Tresor', 'Vallee', 'Addon01', 'Dolores 0.25']],
+  ['Russian Modules', ['Arcanum City', 'Hell Day']],      // (CE Restored's: they are there while CE Restored is on)
+  ['Other Modules', []],
+];
+const moduleCat = m => (MODULE_CATS.find(c => c[1].includes(m)) || MODULE_CATS[MODULE_CATS.length - 1])[0];
+const modulesByCat = mods => MODULE_CATS.map(([c]) => [c, mods.filter(m => moduleCat(m) === c).sort((a, b) => a.localeCompare(b))]).filter(x => x[1].length);
+// With a mod on, a module the mod has a copy of (data/mods/<mod>/modules/<module>: module-index.js owned) or that only the mod has (CE's
+// Russian modules) is the mod's own build, listed in blue; every other module is the base game's, which the mod's data files carry too
+// (toolbox/atlas/splice_modules.py), so any module opens in the data loaded.
+const MI = window.AtlasModuleIndex || { owned: {} };
+const VER = window.AtlasVer || 'base';
+const VER_MAPS = { ce: window.ArcanumCEMaps, car: window.ArcanumCarcanumMaps, fp: window.ArcanumFPMaps, ru: window.ArcanumRUMaps }[VER];
+const OWNED = new Set([...(MI.owned[VER] || []), ...(VER_MAPS ? VER_MAPS.maps.filter(m => m.module).map(m => m.module) : [])]);      // (module maps only the mod has: Hell Day)
+const modOwns = g => VER !== 'base' && OWNED.has(g);
+const VER_NAME = { ce: 'CE Restored', car: 'Carcanum', fp: 'Forgotten Places', ru: 'The Russian Mod Pack' };
+// the options of a game choice: Arcanum, then each category as a group of its modules (extra: loose options such as "Not in game")
+const gameOptions = (games, extra = []) => {
+  const o = g => `<option value="${esc(g)}">${esc(g)}</option>`;
+  return o('Arcanum') + modulesByCat(games.filter(g => g !== 'Arcanum')).map(([c, ms]) => `<optgroup label="${esc(c)}">${ms.map(o).join('')}</optgroup>`).join('') + extra.map(o).join('');
+};
+// the game each screen was last left on survives a refresh (localStorage; one key per screen)
+const savedGame = (key, ok) => { try { const v = localStorage.getItem('atlas-game-' + key); if (v && ok(v)) return v; } catch (_) {} return 'Arcanum'; };
+const saveGame = (key, v) => { try { localStorage.setItem('atlas-game-' + key, v); } catch (_) {} };
 // Arcanum or Modules: the places list shows the game's own maps, or the maps of the modules (one group each)
 const isModuleSection = s => !!MP.maps[s.map].module;
 let atlasMode = 'arcanum';
@@ -433,10 +519,11 @@ try { if (localStorage.getItem('atlas-mode') === 'modules' && MP.sections.some(i
 function buildPlaceList() {
   const list = document.getElementById('locList');
   list.innerHTML = '';
+  const ceNames = new Set([...WL.places.filter(p => p.ceLoc).map(p => p.name), ...MP.maps.filter(m => m.ce).map(m => m.name)]);      // what CE Restored adds has its own colour
   const btn = (name, n, go) => {
     const b = document.createElement('button');
-    b.className = 'loc' + (name === 'Shrouded Hills' ? ' on' : ''); b.dataset.place = name;
-    b.textContent = name;
+    b.className = 'loc' + (name === 'Shrouded Hills' ? ' on' : '') + (ceNames.has(name) ? ' ce' : ''); b.dataset.place = name;
+    b.textContent = PLACE_DISPLAY[name] || name;
     b.onclick = () => goPlace(go || name);
     return b;
   };
@@ -449,29 +536,59 @@ function buildPlaceList() {
   for (const n of (window.ArcanumNotices ? window.ArcanumNotices.notices : [])) add(n[0] == null ? n[1] : n[0]);
   const count = (p, key) => things.get(key) || 0;
   if (atlasMode === 'modules') {
-    const mods = new Map();
-    for (const s of MP.sections) if (isModuleSection(s)) { if (!mods.has(s.group)) mods.set(s.group, []); mods.get(s.group).push(s); }
-    for (const [g, ss] of mods) {
-      list.insertAdjacentHTML('beforeend', `<div class="locgroup">${esc(g)}</div>`);
-      for (const s of ss) list.appendChild(btn(s.name, count(s, MP.maps[s.map].key)));
+    // one row per map name (a mod's own copy of a module's map, appended after it, is the one its name opens)
+    const mods = new Map(), add = (g, name, main) => { if (!mods.has(g)) mods.set(g, new Map()); mods.get(g).set(name, { name, main }); };
+    for (const s of MP.sections) if (isModuleSection(s)) add(s.group, s.name, !!MP.maps[s.map].main);
+    // a module is listed like a place of the game: its row opens the map it starts on (Rules/MapList.mes START_MAP: maps[i].main); a module
+    // of one map is that row alone, the others of a module of several fold under it (▸, their number on the row; unrolled while one is on show)
+    const mbtn = (g, name, text) => { const b = btn(name, 0); b.classList.remove('ce'); b.classList.toggle('own', modOwns(g)); b.textContent = text; return b; };
+    for (const [cat, names] of modulesByCat([...mods.keys()])) {
+      list.insertAdjacentHTML('beforeend', `<div class="loccat">${esc(cat)}</div>`);
+      for (const g of names) {
+        const ss = [...mods.get(g).values()].sort((x, y) => x.name.localeCompare(y.name));
+        const main = ss.find(s => s.main) || ss[0], inside = ss.filter(s => s !== main);
+        const short = s => s.name.startsWith(g + ' - ') ? s.name.slice(g.length + 3) : s.name;      // ("MuHu - donjon" under MuHu: "donjon")
+        const row = document.createElement('div'); row.className = 'locrow';
+        const head = mbtn(g, main.name, g);
+        if (modOwns(g)) head.dataset.own = VER;
+        head.title = [main.name !== g ? `${g}: opens ${short(main)}, the map it starts on` : '', modOwns(g) ? `${VER_NAME[VER]} has its own version of this module` : ''].filter(Boolean).join('. ');
+        if (!inside.length) {
+          row.innerHTML = '<span class="loctog"></span>'; row.appendChild(head);
+          list.appendChild(row); continue;
+        }
+        const tog = document.createElement('button'); tog.className = 'loctog'; tog.type = 'button'; tog.textContent = '▸'; tog.title = 'Show the module\'s other maps';
+        const kids = document.createElement('div'); kids.className = 'lockids'; kids.hidden = true;
+        for (const s of inside) kids.appendChild(mbtn(g, s.name, short(s)));
+        tog.onclick = () => { kids.hidden = !kids.hidden; tog.textContent = kids.hidden ? '▸' : '▾'; };
+        head.insertAdjacentHTML('beforeend', `<span class="subn" title="${inside.length} other map${inside.length === 1 ? '' : 's'}">${inside.length}</span>`);
+        row.append(tog, head);
+        list.append(row, kids);
+      }
     }
+    syncPlaceFolds();
     return;
   }
   // the other maps, by the area of the world they belong to; those of a place hang under it
-  const areas = new Map();
-  for (const s of MP.sections) { if (isModuleSection(s)) continue; const a = s.group || 'Elsewhere'; if (!areas.has(a)) areas.set(a, []); areas.get(a).push(s); }
+  const areas = new Map(), LIST_GROUPS = ['Cities', 'Quest locations', 'Other locations', 'Secret areas'], listed = new Map();
+  for (const s of MP.sections) {
+    if (isModuleSection(s)) continue;
+    // a map whose group is one of the list's groups (CE's Dragons Lair: "Other locations") is a row of that group itself
+    if (LIST_GROUPS.includes(s.group)) { if (!listed.has(s.group)) listed.set(s.group, []); listed.get(s.group).push({ name: s.name, go: s.name }); continue; }
+    const a = s.group || 'Elsewhere'; if (!areas.has(a)) areas.set(a, []); areas.get(a).push(s);
+  }
   const areaOf = new Map([...areas].map(([a, ss]) => [nkey(a), a])), taken = new Set();
   const GROUP_NAME = { Cities: 'Settlements' };
   const PLACE_GROUP = { 'Qintarra': 'Cities', 'The Black Mountain Mines': 'Quest locations', 'The Void': 'Quest locations' };
-  for (const g of ['Cities', 'Quest locations', 'Other locations', 'Secret areas']) {
-    const ps = WL.places.filter(p => p.modGroup === g && (count(p, p.name) || p.area || AREA_OF.has(p.name))).sort((a, b) => a.name.localeCompare(b.name));
+  for (const g of LIST_GROUPS) {
+    const ps = WL.places.filter(p => p.modGroup === g && (count(p, p.name) || p.area || AREA_OF.has(p.name)));
+    for (const l of listed.get(g) || []) if (!ps.some(p => p.name === l.name)) ps.push(l);
     // places the world labels list under no group, or that are made of maps only (the Void): put where they belong
     for (const [name, grp] of Object.entries(PLACE_GROUP)) {
       if (grp !== g || ps.some(p => p.name === name) || !areaOf.has(nkey(name))) continue;
       const ss = areas.get(areaOf.get(nkey(name))).map(s => s.name).sort();
       ps.push({ name, go: ss.includes(name) ? name : ss[0] });
     }
-    ps.sort((a, b) => a.name.localeCompare(b.name));
+    ps.sort(byShownName);
     list.insertAdjacentHTML('beforeend', `<div class="locgroup">${GROUP_NAME[g] || g}</div>`);
     for (const p of ps) {
       const a = areaOf.get(nkey(p.name));
@@ -484,10 +601,25 @@ function buildPlaceList() {
       const row = document.createElement('div'); row.className = 'locrow';
       const tog = document.createElement('button'); tog.className = 'loctog'; tog.type = 'button'; tog.textContent = '▸'; tog.title = 'Show the maps inside';
       const kids = document.createElement('div'); kids.className = 'lockids'; kids.hidden = true;
-      for (const s of areas.get(a).sort((x, y) => x.name.localeCompare(y.name))) kids.appendChild(btn(s.name, count(s, MP.maps[s.map].key)));
+      const inside = areas.get(a).sort((x, y) => x.name.localeCompare(y.name));
+      // the maps inside read as such: a guide line down their side (CSS), and their number on the place's own row
+      for (const s of inside) kids.appendChild(btn(s.name, count(s, MP.maps[s.map].key)));
       tog.onclick = () => { kids.hidden = !kids.hidden; tog.textContent = kids.hidden ? '▸' : '▾'; };
-      row.append(tog, btn(p.name, count(p, p.name), p.go));
+      const head = btn(p.name, count(p, p.name), p.go);
+      head.insertAdjacentHTML('beforeend', `<span class="subn" title="${inside.length} map${inside.length === 1 ? '' : 's'} inside">${inside.length}</span>`);
+      row.append(tog, head);
       list.append(row, kids);
+    }
+  }
+  // maps no door leads to: a group of their own, the maps listed straight under its name
+  const lost = areas.get('Unreachable maps');
+  if (lost) {
+    taken.add('Unreachable maps');
+    list.insertAdjacentHTML('beforeend', '<div class="locgroup">Unreachable maps</div>');
+    for (const s of lost.sort(byShownName)) {
+      const row = document.createElement('div'); row.className = 'locrow';
+      row.innerHTML = '<span class="loctog"></span>'; row.appendChild(btn(s.name, count(s, MP.maps[s.map].key)));
+      list.appendChild(row);
     }
   }
   const rest = [...areas].filter(([a]) => !taken.has(a)).sort((x, y) => x[0].localeCompare(y[0]));
@@ -504,15 +636,132 @@ buildPlaceList();
 function setAtlasMode(mode, go) {
   atlasMode = mode;
   try { localStorage.setItem('atlas-mode', mode); } catch (_) {}
-  document.querySelectorAll('#modeTabs button').forEach(b => b.classList.toggle('on', b.dataset.mode === mode));
+  document.querySelectorAll('#modeTabs button[data-mode]').forEach(b => b.classList.toggle('on', b.dataset.mode === mode));
   buildPlaceList();
   if (!go) return;
-  const first = mode === 'modules' ? MP.sections.find(isModuleSection) : null;
-  goPlace(first ? first.name : 'Shrouded Hills');
+  if (mode === 'modules') { const b = document.querySelector('#locList .loc'); if (b) b.click(); return; }      // (the first module listed)
+  goPlace('Shrouded Hills');
 }
-document.querySelectorAll('#modeTabs button').forEach(b => { b.onclick = () => setAtlasMode(b.dataset.mode, true); });
-document.querySelectorAll('#modeTabs button').forEach(b => b.classList.toggle('on', b.dataset.mode === atlasMode));
-if (atlasMode === 'modules') worldFrame.addEventListener('load', () => { const s = MP.sections.find(isModuleSection); if (s) goPlace(s.name); }, { once: true });
+const verMenu = document.getElementById('verMenu'), verTab = document.getElementById('verTab');
+function toggleVerMenu(open) { verMenu.hidden = !open; verTab.setAttribute('aria-expanded', open); }
+document.querySelectorAll('#modeTabs button[data-mode]').forEach(b => {
+  b.onclick = e => {
+    const arrow = b === verTab && e.target.closest('#verArrow');      // the list of versions rolls down only by the little arrow
+    if (b === verTab && atlasMode === 'arcanum') return arrow && toggleVerMenu(verMenu.hidden);
+    setAtlasMode(b.dataset.mode, true);
+    if (arrow) toggleVerMenu(true);
+  };
+});
+document.addEventListener('click', e => { if (!e.target.closest('.ver-wrap')) toggleVerMenu(false); });
+document.querySelectorAll('#modeTabs button[data-mode]').forEach(b => b.classList.toggle('on', b.dataset.mode === atlasMode));
+// "CE Restored" is not a view: it switches the map pictures between the base game and the game with what CE Restored adds
+// Versions: 'ce' (default), 'base' (Arcanum 1.0.7.4), 'ru' (Russian Mod Pack 2012 RC9: base game + data/mods/Russian Mod 2012 RC9, integrated like the other mods, ru*.js; its tables are in Russian, UTF-8 in the generated files)
+const VERSIONS = AtlasData.names;
+// car -> data/mods/Carcanum (integrated like CE Restored: ce-style data in carcanum*.js), fp -> data/mods/Forgotten Places 6.0 (integrated the same way, fp*.js; it lies over CE Restored, so its lists carry CE's maps too)
+const atlasVer = VERSIONS[window.AtlasVer] ? window.AtlasVer : 'ce';             // (version-data.js decides, and loads only that version's mod files)
+const MODS = { ce: window.ArcanumCEMaps, car: window.ArcanumCarcanumMaps, fp: window.ArcanumFPMaps, ru: window.ArcanumRUMaps };      // the maps / locations each integrated mod adds
+let modVer = MODS[atlasVer] ? atlasVer : 'ce';                                  // the mod whose data is in the lists (while one is on)
+let ceOn = !!MODS[atlasVer];
+// The maps only CE Restored has (ce-maps.js) are listed while it is on: appended to ArcanumMaps, so the others keep their index
+const FP_HIDDEN = ['Center of Arcanum', 'Fan Graveyard'], fpGone = [];      // (secret areas a mod leaves out of the lists, put back when it goes)
+const hiddenSecrets = () => modVer === 'fp' ? FP_HIDDEN : modVer === 'ce' ? ['Center of Arcanum'] : [];
+let switchingMod = false, leftMap = null;     // going from one mod to another: see the version menu
+function syncCEMaps() {
+  const CE = MODS[modVer], have = MP.maps.some(m => m.ce);
+  if (!CE || have === ceOn) return;
+  // the regions of the world it changes are places of their own, each named after the area nearest to its sectors
+  const shownLoc = !ceOn && WL.places.some(p => p.ceLoc && p.name === shownPlace());
+  if (ceOn) {         // in the groups of the others: settlements or other locations; a secret area of the base game that CE gives a line to is no secret any more
+    // Forgotten Places: no "Wolfe's Cave" (it is the Wolf Cave, which gets the mod's colour) and no Center of Arcanum / Fan Graveyard secret areas
+    if (modVer === 'fp') {
+      const w = WL.places.find(p => p.name === 'Wolf Cave');
+      if (w && !w.ceLoc) Object.assign(w, { ceWas: w.modGroup, ceLoc: true });
+    }
+    for (const n of hiddenSecrets()) { const i = WL.places.findIndex(p => p.name === n); if (i >= 0) fpGone.push(...WL.places.splice(i, 1)); }
+    for (const r of CE.locations) {
+      if (modVer === 'fp' && r.name === "Wolfe's Cave") continue;
+      const group = r.settlement ? 'Cities' : 'Other locations', info = { name: r.name, description: r.description, tile: r.tile, radius: r.radius, kind: r.settlement ? 'settlement' : 'area' };
+      const had = WL.places.find(p => p.name === r.name);
+      if (!had) WL.places.push({ name: r.name, modGroup: group, view: r.tile, labels: [], area: true, ceLoc: true, info });
+      else if (had.modGroup === 'Secret areas') Object.assign(had, { ceWas: had.modGroup, modGroup: group, ceLoc: true, info });
+    }
+    for (const s of CE.secret || []) if (!WL.places.some(p => p.name === s.name) && !hiddenSecrets().includes(s.name)) WL.places.push({ name: s.name, modGroup: 'Secret areas', view: s.tile, labels: [], area: true, ceLoc: true });
+  } else {
+    for (const p of WL.places) if (p.ceWas) { p.modGroup = p.ceWas; delete p.ceWas; delete p.ceLoc; delete p.info; }
+    WL.places = WL.places.filter(p => !p.ceLoc);
+    WL.places.push(...fpGone.splice(0));
+  }
+  if (ceOn) {
+    const base = MP.maps.length;
+    // Forgotten Places: its caves and houses are listed under the place they belong to (Brandybuck and Spider Cave get their own name, as a place of that name exists)
+    const fp = modVer === 'fp', FPG = { Brandybuck: 'Brandybuck', CaveOfBanishment: 'The Cavern of Madness', LeahboUnderground: 'Leahbo', Plainwicke: 'Plainwicke Plantation', 'Spider Cave': 'Spider Cave', TombOfHorrors: "Acererak's Tomb" };
+    const FPN = { Brandybuck: 'Brandybuck Houses', 'Spider Cave': 'Spider Cave - Inside' };
+    MP.maps.push(...CE.maps.map(m => fp && FPN[m.name] ? { ...m, name: FPN[m.name] } : m));
+    MP.sections.push(...CE.sections.map(s => ({ ...s, map: s.map + base, ...(fp && FPG[s.name] ? { group: FPG[s.name], ...(FPN[s.name] && { name: FPN[s.name] }) } : {}) })));
+  } else {
+    const title = shownPlace(), shown = SECT.get(title), first = MP.maps.findIndex(m => m.ce);
+    MP.maps.splice(first);
+    for (let i = MP.sections.length - 1; i >= 0; i--) if (MP.sections[i].map >= MP.maps.length) MP.sections.splice(i, 1);
+    if (switchingMod) { if (shown && shown.map >= first) leftMap = title; }      // mod to mod: the view stays where it is (back onto the map left, below, if the other mod has it)
+    else if (shown && shown.map >= first) {      // (on the world map the view stays, even if its title was a place only the mod has)
+      closePanel(); showPlace('Shrouded Hills'); worldFrame.contentWindow.postMessage({ type: 'atlas-go', place: 'Shrouded Hills' }, '*'); }
+  }
+  SECT.clear(); MP.sections.forEach(s => SECT.set(s.name, s));
+  MAP_BY_KEY.clear(); MP.maps.forEach((m, i) => MAP_BY_KEY.set(nkey(m.key), i));
+  const on = document.querySelector('#locList .loc.on');
+  buildPlaceList();
+  if (on) { document.querySelectorAll('#locList .loc').forEach(b => b.classList.toggle('on', b.dataset.place === on.dataset.place)); syncPlaceFolds(); }
+}
+function applyCE() {
+  syncCEMaps();
+  document.getElementById('verName').textContent = VERSIONS[atlasVer];
+  const kicker = document.querySelector('.brand-kicker'); if (kicker) kicker.textContent = VERSIONS[atlasVer];       // (the header names the version on show)
+  verMenu.querySelectorAll('button').forEach(b => { const on = b.dataset.ver === atlasVer; b.classList.toggle('on', on); b.setAttribute('aria-selected', on); });
+  try { worldFrame.contentWindow.postMessage({ type: 'atlas-ce', on: ceOn, ver: modVer }, '*'); } catch (_) {}
+}
+// the right panel closes first, and the loading starts once it is shut (its width is animated: the map would be stretched while it moves)
+const panelShut = () => new Promise(done => {
+  if (!labelAside.classList.contains('open')) return done();
+  const end = () => { labelAside.removeEventListener('transitionend', onEnd); clearTimeout(timer); done(); };
+  const onEnd = e => { if (e.target === labelAside && e.propertyName === 'width') end(); };
+  const timer = setTimeout(end, 800);
+  labelAside.addEventListener('transitionend', onEnd);
+  closePanel();
+});
+verMenu.querySelectorAll('button').forEach(b => { b.onclick = async () => {
+  const next = b.dataset.ver;
+  toggleVerMenu(false);
+  if (next === atlasVer) return;
+  await panelShut();
+  // Every data file (items, notices, doors, quests, portraits...) is the version's own (js/atlas/version-data.js): the boot (atlas-boot.js) fetches
+  // the new version's files while this one stays in use, then starts the app again on them, in the page. The link in the address bar
+  // (#m=map.x.y.zoom...) is kept, so the view stays where it is.
+  const previous = atlasVer;
+  try { localStorage.setItem('atlas-ver', next); } catch (_) {}
+  // (on a module's map the map is named instead: its number depends on the data loaded)
+  const sec = SECT.get(shownPlace());
+  if (current === 'atlas' && sec && isModuleSection(sec)) { const u = new URL(location.href); u.hash = 'g=' + encodeURIComponent(sec.name); try { history.replaceState(null, '', u); } catch (_) {} }
+  else syncLink(true);
+  window.AtlasBoot.switchVersion(next, previous);
+}; });
+worldFrame.addEventListener('load', applyCE);
+applyCE();
+// a link that names a map (g=, made when the page reloads into another version): opened once the map page is up
+const gWant = /[#&]g=([^&]+)/.exec(location.hash);
+if (gWant) {
+  const name = decodeURIComponent(gWant[1]), s = SECT.get(name);
+  if (s) {
+    const wantMode = isModuleSection(s) ? 'modules' : 'arcanum';
+    if (wantMode !== atlasMode) setAtlasMode(wantMode, false);
+    worldFrame.style.visibility = 'hidden'; setTimeout(() => revealMap(), 8000);      // (shown when the map has arrived: its ack; this if it never does)
+    worldFrame.addEventListener('load', () => { go('atlas'); goPlace(name); }, { once: true });
+  }
+}
+// (a link to a view wins over the first module's map: restoreView opens it)
+else if (atlasMode === 'modules' && !/[#&][mv]=/.test(location.hash)) {
+  worldFrame.style.visibility = 'hidden'; setTimeout(() => revealMap(), 8000);
+  worldFrame.addEventListener('load', () => { const b = document.querySelector('#locList .loc'); if (b) b.click(); }, { once: true });
+}
 window.addEventListener('message', e => {
   if (e.source !== worldFrame.contentWindow || !e.data) return;
   if (e.data.type === 'atlas-blank') closePanel();              // a click on the map, on nothing in particular
@@ -528,8 +777,8 @@ window.addEventListener('message', e => {
   if (e.data.type === 'atlas-container') selectContainer(e.data.index);
   if (e.data.type === 'atlas-item') showItem(e.data.item);
   if (e.data.type === 'atlas-npc') selectNpc(e.data.npc);
-  if (e.data.type === 'atlas-ready') sendGivers();
-  if (e.data.type === 'atlas-ack') wantedView = null;
+  if (e.data.type === 'atlas-ready') { sendGivers(); if (wantedView && resendView) resendView(); }
+  if (e.data.type === 'atlas-ack') arrived();
   if (e.data.type === 'atlas-view') { lastView = e.data.view; viewReached(lastView); if (SND) SND.view(lastView); syncLink(); }
   if (e.data.type === 'atlas-encounter') showEncounter(e.data.tile);
 });
@@ -563,15 +812,26 @@ function selectNpc(n) {
     : n.why
       ? `This NPC is turned off and will display under the following conditions:${items(n.why.split(' — or — '))}`
       : `This NPC is turned off, and nothing in the game's scripts appears to ever turn ${n.kind ? 'it' : 'them'} on.`}</div>`;
-  h += questsSection(questsAt(n.place, n.tile));
-  if (n.shop) h += shopHtml(carried, n.markup);
+  h += questsSection(questsAt(n.place, n.tile, true));
+  const shop = n.shop ? shopHtml(carried, n.markup) : null;      // (the shop's stock comes after what they carry and train)
+  if (shop) h += shop.head;
   h += roleHtml(n.role);
   h += routineHtml(n.file);
+  // a person who takes you somewhere is one thing with the waypoint (waypoints.js: the row hangs on their .mob): the buttons are here
+  const fileOf = f => String(f || '').slice(String(f || '').lastIndexOf('/') + 1).toLowerCase();
+  const ways = (window.ArcanumWaypoints ? window.ArcanumWaypoints.waypoints : []).filter(w => (w[0] == null ? w[1] : w[0]) === n.place && w[2] === n.tile[0] && w[3] === n.tile[1]
+    && w[6] && /\.mob$/i.test(w[6][0]) && (!n.file || fileOf(w[6][0]) === fileOf(n.file)));
+  const dests = ways.flatMap(w => w[5]);
+  if (dests.length) h += `<div class="sec"><div class="sec-t">Waypoint${ways[0][4] ? ` · ${esc(ways[0][4])}` : ''}</div>${dests.map((t, i) => `<button class="tbtn" data-travel="${i}">🚪 Travel to ${esc(t[4] || t[1])}</button>`).join('')}</div>`;
   if (carried && carried.items.length) h += `<div class="sec"><div class="sec-t">Carries</div><div class="inv">${carried.items.map(([i, q]) => tile(i, q)).join('')}</div></div>`;
   const s = carried && carried.source && IT.sources[carried.source];
   if (s && s.items.length) h += `<div class="sec"><div class="sec-t">Carries at random</div>${rarelist(byRate(s.items))}</div>`;
+  if (shop) h += shop.stock;
   p.innerHTML = h + advancedSection(n.file);
   wireItems(p);
+  p.querySelectorAll('[data-travel]').forEach(b => { b.onclick = () => { const t = dests[+b.dataset.travel]; travelTo(t[0], t[1], [t[2], t[3]]); }; });
+  const pi = PEOPLE.indexOf(n);
+  if (pi >= 0) setPanelRef('n' + pi.toString(36));
 }
 
 // ---- everyone who lives in the place on show ------------------------------------------------------------------------
@@ -588,12 +848,13 @@ function shopHtml(carried, markup, typeHint) {
   const type = s ? shopKind(s.name) : typeHint;
   const cash = box ? box.items.filter(([i]) => IT.items[i].kind === 'Gold').reduce((t, [, q]) => t + q, 0) : 0;
   const cashTxt = cash ? `${cash} gold${s && s.gold[1] ? ` <span class="note">(restocks ${s.gold[0]}–${s.gold[1]})</span>` : ''}` : s && s.gold[1] ? `${s.gold[0]}–${s.gold[1]} gold` : '';
-  let h = `<div class="sec"><div class="sec-t">Shop</div><dl class="kv">${type ? `<dt>Kind</dt><dd>${esc(type)}</dd>` : ''}${markup ? `<dt>Prices</dt><dd>${markup} % of an item's worth</dd>` : ''}${cashTxt ? `<dt>Cash</dt><dd>${cashTxt}</dd>` : ''}</dl>
+  const head = `<div class="sec"><div class="sec-t">Shop</div><dl class="kv">${type ? `<dt>Kind</dt><dd>${esc(type)}</dd>` : ''}${markup ? `<dt>Prices</dt><dd>${markup} % of an item's worth</dd>` : ''}${cashTxt ? `<dt>Cash</dt><dd>${cashTxt}</dd>` : ''}</dl>
     ${markup >= 200 ? '<div class="warn">⚠ Excessive markup</div>' : markup >= 150 ? '<div class="warn">⚠ High markup</div>' : markup && markup < 100 ? '<div class="flavour">Sells below the usual price.</div>' : ''}</div>`;
   const stock = box ? box.items.filter(([i]) => IT.items[i].kind !== 'Gold') : [];      // the gold in the box is the merchant's cash
+  let h = '';
   if (stock.length) h += `<div class="sec"><div class="sec-t">In stock</div><div class="inv">${stock.map(([i, q]) => tile(i, q)).join('')}</div></div>`;
   if (s && s.items.length) h += `<div class="sec"><div class="sec-t">Restocks at random</div>${rarelist(byRate(s.items))}</div>`;
-  return h;
+  return { head, stock: h };
 }
 const roleHtml = r => !r ? '' : (r.j ? '<div class="sec"><div class="sec-t">Follower</div><div>Can join your party.</div></div>' : '')
   + (r.t ? `<div class="sec"><div class="sec-t">Trainer</div><div>${r.t.map(esc).join(' · ')}</div></div>` : '');
@@ -615,7 +876,7 @@ function routineHtml(file) {
 }
 // the place the atlas shows now: { key: how people are filed (world place name / map key), label, sub: inside one of the other maps }
 function currentPlace() {
-  const t = document.getElementById('atlasTitle').textContent, s = SECT.get(t), m = s ? MP.maps[s.map] : MP.maps.find(x => x.name === t);
+  const t = shownPlace(), s = SECT.get(t), m = s ? MP.maps[s.map] : MP.maps.find(x => x.name === t);
   return m ? { key: m.key, label: m.name, sub: true, title: t } : { key: t, label: t, sub: false, title: t };
 }
 // mock-ups name a person: show the game's picture of them
@@ -625,7 +886,7 @@ function currentPlace() {
 // the sector's terrain, the power and the time of day, unless the spot has a table of its own.
 function showEncounter(tile) {
   const E = window.ArcanumEncounters;
-  if (!E) { const s = document.createElement('script'); s.src = 'js/atlas/data/encounters.js'; s.onload = () => showEncounter(tile); document.head.appendChild(s); return; }
+  if (!E) { const s = document.createElement('script'); s.src = AtlasData.url('encounters'); s.onload = () => showEncounter(tile); document.head.appendChild(s); return; }
   const [X, Y] = tile;
   const inZone = list => list.filter(([x, y, r]) => Math.max(Math.abs(X - x), Math.abs(Y - y)) <= r).sort((a, b) => a[2] - b[2])[0];
   const z = inZone(E.zones), pz = inZone(E.powerZones), fx = inZone(E.fixed);
@@ -675,7 +936,8 @@ const SND = (() => {
   try { master = +(localStorage.getItem('atlas-snd-vol') ?? 70) / 100; night = localStorage.getItem('atlas-snd-night') === '1'; } catch (_) {}
   const tracks = new Map();      // file -> { a: Audio, v: volume now, to: volume wanted, ms: fade length }
   const hourIn = (t, h) => !t || (t[0] <= t[1] ? h >= t[0] && h <= t[1] : h >= t[0] || h <= t[1]);   // "19-0": till midnight, as meant
-  const url = f => 'data/sound/' + f.split('/').map(encodeURIComponent).join('/');
+  const ownSound = new Set(window.AtlasSoundOwn || []);       // (the sounds the mod on show has of its own: from its folder, the others from the base game's)
+  const url = f => (ownSound.has(f) && window.AtlasModDir ? window.AtlasModDir : 'data/') + 'sound/' + f.split('/').map(encodeURIComponent).join('/');
   const schemesOf = p => p === 'travel' ? [] : [...new Set(p)].filter(s => S.schemes[s]).map(s => S.schemes[s]);
   function wanted() {            // the songs that should play now, with their volume
     const out = new Map(), h = night ? HOURS.night : HOURS.day;
@@ -805,7 +1067,8 @@ const SND = (() => {
   document.addEventListener('visibilitychange', activity);
   window.atlasSound = activity;
   paint(); activity();
-  return { view: v => { if (on) locate(v); else where = null; }, screen: activity, state: () => ({ on, night, pair, place, tracks: [...tracks].map(([f, t]) => [f, +t.v.toFixed(2), t.to]) }) };
+  const stop = () => { for (const t of tracks.values()) { t.a.pause(); t.a.removeAttribute('src'); t.a.load(); } tracks.clear(); on = false; };      // (the app starts again: another version)
+  return { stop, view: v => { if (on) locate(v); else where = null; }, screen: activity, state: () => ({ on, night, pair, place, tracks: [...tracks].map(([f, t]) => [f, +t.v.toFixed(2), t.to]) }) };
 })();
 
 // ---- links to a view of the map ---------------------------------------------------------------------------------------
@@ -813,44 +1076,92 @@ let lastView = null;       // what the map reports: { map (key of one of the oth
 // The address bar always holds a link to where you are: the view of the map, or the page you are on. It waits until the
 // page has read the link it was opened with (linkLive).
 let linkLive = false, linkTimer = 0;
-function syncLink() {
+// The link is as short as it can be: m=<map>.<x>.<y>.<zoom>.<options>[.<panel>], everything in base 36.
+//   map      0 = the world, else 1 + the map's number in submaps.js
+//   zoom     log2(z) * 24 + 400 (one step = 3 %)
+//   options  the map's filter bits (world-atlas.js flagBits) + 256 when the places list is hidden
+//   panel    what the right sidebar shows (panelRef), left out when it is closed
+const placesHidden = () => document.querySelector('.workspace[data-screen="atlas"]').classList.contains('noleft');
+function viewHash(v) {
+  const mi = v.map == null ? undefined : MAP_BY_KEY.get(nkey(v.map)), b = n => Math.round(n).toString(36);
+  return 'm=' + [mi == null ? 0 : b(mi + 1), b(v.tile[0]), b(v.tile[1]), b(Math.log2(v.z) * 24 + 400), b((v.f || 0) | (placesHidden() ? 256 : 0))].join('.') + (panelRef ? '.' + panelRef : '');
+}
+function syncLink(now) {
   if (!linkLive) return;
   clearTimeout(linkTimer);
-  linkTimer = setTimeout(() => {
+  const write = () => {
     const u = new URL(location.href);
-    u.hash = current === 'atlas' && lastView ? 'v=' + encodeURIComponent(JSON.stringify({ ...lastView, t: document.getElementById('atlasTitle').textContent }))
-      : BROWSERS[current] && BROWSERS[current].query ? current + '&' + BROWSERS[current].query : current;
+    u.hash = (current === 'atlas' && lastView ? viewHash(lastView)
+      : BROWSERS[current] && BROWSERS[current].query ? current + '&' + BROWSERS[current].query : current);
     try { history.replaceState(null, '', u); } catch (_) {}
-  }, 250);
+  };
+  if (now) write(); else linkTimer = setTimeout(write, 250);
 }
 // A link opens the atlas on that view. The map page needs a moment to start (it unpacks the world first), so the request is
 // repeated until the map reports being there.
-let wantedView = null;
+// The map's frame starts on its own default place: it stays hidden (what is behind it shows: the old version's map picture, atlas-boot.js)
+// until it has arrived on the wanted view, so the place it starts on is never seen.
+let wantedView = null, resendView = null;
+const revealMap = () => { worldFrame.style.visibility = ''; };
 function restoreView() {
-  const m = /[#&]v=([^&]+)/.exec(location.hash); if (!m) return false;
+  const m = /[#&]m=([^&]+)/.exec(location.hash), old = !m && /[#&]v=([^&]+)/.exec(location.hash);      // v= is the long JSON form of older links
+  if (!m && !old) return false;
   try {
-    const v = JSON.parse(decodeURIComponent(m[1]));
-    if (!Array.isArray(v.tile)) return false;
-    wantedView = v; go('atlas'); showPlace(v.t || 'World map');
+    let v;
+    if (m) {
+      const [mi, x, y, zc, f, p] = m[1].split('.'), n = s => parseInt(s, 36);
+      const map = n(mi) > 0 && MP.maps[n(mi) - 1] ? MP.maps[n(mi) - 1].key : null;
+      v = { map, tile: [n(x), n(y)], z: 2 ** ((n(zc) - 400) / 24), f: n(f) & 255, p };
+      setPlacesHidden(!!(n(f) & 256));
+      const sec = map != null && MP.sections.find(s => MP.maps[s.map].key === map);
+      v.t = sec ? sec.name : 'World map';
+      const wantMode = sec && isModuleSection(sec) ? 'modules' : 'arcanum';      // the list shows the side the map belongs to
+      if (wantMode !== atlasMode) setAtlasMode(wantMode, false);
+    } else v = JSON.parse(decodeURIComponent(old[1]));
+    if (!Array.isArray(v.tile) || v.tile.some(Number.isNaN)) return false;
+    wantedView = v; worldFrame.style.visibility = 'hidden'; go('atlas'); showPlace(v.t || 'World map');
     let tries = 0;
     const send = () => {
-      if (!wantedView || ++tries > 40) { clearInterval(timer); return; }
-      worldFrame.contentWindow.postMessage({ type: 'atlas-setview', map: v.map, tile: v.tile, z: v.z }, '*');
+      if (!wantedView || ++tries > 40) { clearInterval(timer); if (wantedView) { wantedView = null; revealMap(); } return; }
+      worldFrame.contentWindow.postMessage({ type: 'atlas-setview', map: v.map, tile: v.tile, z: v.z, f: v.f }, '*');
     };
     const timer = setInterval(send, 400); send();
+    resendView = send;               // (and again the moment the map says it is up: atlas-ready)
     return true;
   } catch (_) { return false; }
 }
 const viewReached = lv => {                       // the map reports where it is: done once it is on the wanted spot
-  if (wantedView && lv && lv.map === wantedView.map && Math.abs(lv.tile[0] - wantedView.tile[0]) + Math.abs(lv.tile[1] - wantedView.tile[1]) <= 6) wantedView = null;
+  if (wantedView && lv && lv.map === wantedView.map && Math.abs(lv.tile[0] - wantedView.tile[0]) + Math.abs(lv.tile[1] - wantedView.tile[1]) <= 6) arrived();
 };
+function arrived() {          // the map is on the wanted view: open what the link had open in the right sidebar
+  const p = wantedView && wantedView.p; wantedView = null;
+  revealMap();
+  if (p) openRef(p);
+}
+// the right sidebar of a link (panelRef above)
+function openRef(r) {
+  const k = r[0], id = r.slice(1), n = s => parseInt(s, 36);
+  if (k === 'n' && PEOPLE[n(id)]) selectNpc(PEOPLE[n(id)]);
+  else if (k === 'c' && IT.containers[n(id)]) selectContainer(n(id));
+  else if (k === 'i' && IT.items[n(id)]) showItem(n(id));
+  else if (k === 'a' && AR.areas[n(id)]) selectArea({ ...AR.areas[n(id)], kind: AR.areas[n(id)].settlement ? 'settlement' : 'area' });
+  else if (k === 's' && AR.secret[n(id)]) selectArea({ ...AR.secret[n(id)], kind: 'secret' });
+  else if (k === 'l') worldFrame.contentWindow.postMessage({ type: 'atlas-pick', tile: id.split('_').map(n) }, '*');
+}
 
+// the picture the game's examine card shows for a scenery or a portal (js/proto/item-card.js): scenery the same icon always, a portal a window or a door by bit 10 of its art id
+const labelFace = obj => {
+  if (!obj || !PT.sceneryIcon) return '';
+  if (obj[1] === 3) return face(PT.sceneryIcon);
+  if (obj[1] === 1) return face(PT.portalIcons[((obj[3] >>> 10) & 1) === 0 ? 'window' : 'door']);
+  return '';
+};
 // A label is a waypoint, a note, an altar or a quest object: people and containers have panels of their own (selectNpc,
 // selectContainer), straight from their .mob.
 function selectLabel(l) {
   // a plain waypoint (one way, nothing to read, no lock, no quest) just takes you there; in the Advanced view it shows its files
   const files = advOn() && l.obj;
-  if (!files && l.to && l.to.length === 1 && !l.lock && !l.desc && !l.god && !(l.tile && questsAt(l.mapKey || l.place, l.tile).length)) {
+  if (!files && l.to && l.to.length === 1 && !l.lock && !l.desc && !l.image && !l.god && !(l.tile && questsAt(l.mapKey || l.place, l.tile).length)) {
     const t = l.to[0]; travelTo(t.map, t.place, t.tile); return;
   }
   // an altar label that is not on the altar itself: the game's altar a few steps away
@@ -858,19 +1169,20 @@ function selectLabel(l) {
     && !!c.world === !(l.map >= 0) && Math.abs(c.tile[0] - l.tile[0]) + Math.abs(c.tile[1] - l.tile[1]) <= 25) : -1;
   const boxIdx = altarNear(), box = boxIdx >= 0 ? IT.containers[boxIdx] : null;
   // nothing to say but its name: a click does nothing
-  if (!files && !l.desc && !l.god && !l.to && !l.lock && !box && !(l.tile && questsAt(l.mapKey || l.place, l.tile).length)) return;
+  if (!files && !l.desc && !l.image && !l.god && !l.to && !l.lock && !box && !(l.tile && questsAt(l.mapKey || l.place, l.tile).length)) return;
   const p = openPanel();
-  const pic = box ? boxFace(box) : `<span class="portrait chestpic">${ICON[l.cat[0]] || '❖'}</span>`;
+  const pic = box ? boxFace(box) : labelFace(l.obj) || `<span class="portrait chestpic">${ICON[l.cat[0]] || '❖'}</span>`;
   let h = `<div class="panel-head">${pic}
     <div><h3>${esc(l.text)}</h3>
     <div class="cats">${l.cat.map(c => `<span>${ICON[c] || ''} ${c}</span>`).join('')}</div></div></div>`;
   if (l.desc) h += `<div class="sec">${l.desc}</div>`;
+  if (l.image) h += `<div class="sec"><img src="${esc(l.image)}" alt="${esc(l.text)}" style="width:100%;height:auto;border-radius:4px;display:block"></div>`;
   if (l.god && !(box && box.altar)) {        // an altar the game runs from a script on the floor: its blessing by the god's name
     const god = l.text.replace(/['’]s altar$/i, ''), b = (IT.blessings || []).find(([t]) => nkey(t).includes(nkey(god)));
     h += `<div class="sec"><div class="sec-t">Altar of ${esc(god)}</div><dl class="kv">${l.offering ? `<dt>Offering</dt><dd>${esc(l.offering)}</dd>` : ''}
       <dt>Blessing</dt><dd>${b ? `${esc(b[0])}<div class="note">${esc(b[1])}</div>` : esc(l.blessing || '')}</dd></dl></div>`;
   }
-  if (l.to) h += `<div class="sec"><div class="sec-t">Waypoint${l.what ? ` · ${esc(l.what)}` : ''}</div>${l.to.map((t, i) => `<button class="tbtn" data-travel="${i}">🚪 Travel to ${esc(t.place)}</button>`).join('')}</div>`;
+  if (l.to) h += `<div class="sec"><div class="sec-t">Waypoint${l.what ? ` · ${esc(l.what)}` : ''}</div>${l.to.map((t, i) => `<button class="tbtn" data-travel="${i}">🚪 Travel to ${esc(t.label || t.place)}</button>`).join('')}</div>`;
   if (l.lock) {          // a locked trap door: the lock of the container that stood on the same tile
     const keys = (l.lock.keys || []).map(k => `<button class="keylink" data-item="${k}">🔑 ${esc(IT.items[k].name)}</button>`).join(' ');
     h += `<div class="sec"><div class="sec-t">Lock</div><div>🔒 Locked${l.lock.locked ? ` · difficulty ${l.lock.locked}` : ''}</div>
@@ -880,6 +1192,7 @@ function selectLabel(l) {
   if (box) h += containerBody(boxIdx);
   p.innerHTML = h + advancedSection(l.obj || (box && box.file));
   wireItems(p);
+  if (l.tile) setPanelRef('l' +l.tile[0].toString(36) + '_' + l.tile[1].toString(36));
   p.querySelectorAll('[data-travel]').forEach(b => { b.onclick = () => { const t = l.to[+b.dataset.travel]; travelTo(t.map, t.place, t.tile); }; });
 }
 
@@ -923,8 +1236,15 @@ const IN_GAME = new Map(GAMES.map(g => [g, new Set()]));
 // the filter: a game, or the items nothing anywhere hands out ("Not in game")
 const NOT_IN_ANY = 'Not in game';
 IN_GAME.set(NOT_IN_ANY, new Set(SHOWN.filter(NOT_IN_GAME)));
-const itemView = { filter: 'all', q: '', game: 'Arcanum', sel: null };
-const itemPool = () => SHOWN.filter(i => IN_GAME.get(itemView.game).has(i));
+const itemView = { filter: 'all', q: '', game: 'Arcanum', sel: null, only: false };
+// "Only module": a module is chosen and the items that Arcanum itself also hands out are left out
+const isModuleGame = g => g !== 'Arcanum' && GAMES.includes(g);
+const itemPool = () => SHOWN.filter(i => IN_GAME.get(itemView.game).has(i) && !(itemView.only && isModuleGame(itemView.game) && IN_GAME.get('Arcanum').has(i)));
+function syncOnlyMod() {
+  const b = document.getElementById('itemOnlyMod');
+  b.hidden = !isModuleGame(itemView.game);
+  b.classList.toggle('on', itemView.only);
+}
 function buildKinds() {
   const el = document.getElementById('itemKinds'), pool = itemPool();
   el.innerHTML = FILTERS.map(([k, label, f]) => k === 'sep' ? '<div class="locgroup">Show</div>' :
@@ -935,11 +1255,14 @@ function buildKinds() {
 document.getElementById('itemSearch').oninput = e => { itemView.q = e.target.value.trim().toLowerCase(); renderItems(); };
 {
   const sel = document.getElementById('itemGame');
-  sel.innerHTML = [...GAMES, NOT_IN_ANY].map(g => `<option value="${esc(g)}">${esc(g)}</option>`).join('');
+  sel.innerHTML = gameOptions(GAMES, [NOT_IN_ANY]);
+  sel.value = itemView.game = savedGame('items', v => v === NOT_IN_ANY || GAMES.includes(v));
   sel.onchange = e => {
-    itemView.game = e.target.value; buildKinds(); renderItems();
+    itemView.game = e.target.value; saveGame('items', itemView.game); syncOnlyMod(); buildKinds(); renderItems();
     if (itemView.sel != null) pickItem(itemView.sel);           // the open card follows the chosen game
   };
+  document.getElementById('itemOnlyMod').onclick = () => { itemView.only = !itemView.only; syncOnlyMod(); buildKinds(); renderItems(); };
+  syncOnlyMod();
 }
 buildKinds();
 function renderItems() {
@@ -947,7 +1270,7 @@ function renderItems() {
   document.querySelectorAll('#itemKinds [data-filter]').forEach(b => b.classList.toggle('on', b.dataset.filter === itemView.filter));
   document.querySelectorAll('#atlasNav [data-go="items"]').forEach(b => b.classList.toggle('on', current === 'items'));
   let list = itemPool().filter(f).filter(i => !itemView.q || IT.items[i].name.toLowerCase().includes(itemView.q));
-  list.sort((a, b) => IT.items[a].name.localeCompare(IT.items[b].name));
+  list.sort((a, b) => collate(IT.items[a].name, IT.items[b].name));
   document.getElementById('itemsTitle').textContent = label;
   document.getElementById('itemsCrumb').textContent = `${list.length} item${list.length === 1 ? '' : 's'}`;
   const grid = document.getElementById('itemGrid');
@@ -963,13 +1286,47 @@ function pickItem(i) {
   p.scrollTop = 0;
   wireDetail(p, pickItem);
 }
-renderItems();
+// arrow keys move the selection from item to item on the Items screen (up/down: the tile above/below in the same column)
+document.addEventListener('keydown', e => {
+  if (current !== 'items' || e.altKey || e.ctrlKey || e.metaKey || !/^Arrow(Up|Down|Left|Right)$/.test(e.key)) return;
+  const t = e.target; if (t && /^(INPUT|SELECT|TEXTAREA)$/.test(t.tagName)) return;
+  const tiles = [...document.querySelectorAll('#itemGrid .itile')]; if (!tiles.length) return;
+  e.preventDefault();
+  let k = tiles.findIndex(b => +b.dataset.pick === itemView.sel);
+  if (k < 0) k = 0;
+  else if (e.key === 'ArrowLeft') k = Math.max(0, k - 1);
+  else if (e.key === 'ArrowRight') k = Math.min(tiles.length - 1, k + 1);
+  else {
+    const cur = tiles[k], dir = e.key === 'ArrowDown' ? 1 : -1;
+    // the nearest tile in the next row (or previous) whose left edge is closest to this one's
+    const rows = [...new Set(tiles.map(b => b.offsetTop))].sort((a, b) => a - b), r = rows.indexOf(cur.offsetTop) + dir;
+    if (r >= 0 && r < rows.length) {
+      let best = -1, bd = Infinity;
+      tiles.forEach((b, j) => { if (b.offsetTop !== rows[r]) return; const d = Math.abs(b.offsetLeft - cur.offsetLeft); if (d < bd) { bd = d; best = j; } });
+      if (best >= 0) k = best;
+    }
+  }
+  tiles[k].scrollIntoView({ block: 'nearest' });
+  pickItem(+tiles[k].dataset.pick);
+});
+// (the grid is drawn when the Items screen opens: go('items'))
 
 /* ------------------------------------------------------------------ atlas: library (library.js)
    Draws a book, note, newspaper, telegram or plaque the way the game's reading screen does: its own background
    picture and bitmap fonts, text laid out in the same rectangles (coordinates are those of the 800 x 400 reading
    window; the 132 px side bar is not drawn, so everything moves 132 px to the left). */
 const LB = window.ArcanumLibrary;
+// a module's own books, notes, papers: its lines sit over the game's headings and fillers (below 1000; a telegram's below 1020)
+LB.modMes = {};
+for (const [g, kinds] of Object.entries(LB.moduleMes || {})) {
+  LB.modMes[g] = {};
+  for (const k of Object.keys(LB.mes)) {
+    const base = {};
+    for (const [n, t] of Object.entries(LB.mes[k])) if (+n < (k === "3" ? 1020 : 1000)) base[n] = t;
+    LB.modMes[g][k] = Object.assign(base, kinds[k] || {});
+  }
+}
+let libText = LB.mes;                                           // the text table of the document being drawn
 const LIB_KINDS = [[0, "Books", "📖"], [1, "Notes", "📝"], [2, "Newspapers", "📰"], [3, "Telegrams", "✉️"], [6, "Plaques", "🪧"]];
 const LIB_ONE = { 0: "Book", 1: "Note", 2: "Newspaper", 3: "Telegram", 6: "Plaque" };
 const LIB_BG = { 0: 477, 1: 489, 2: 487, 3: 491, 6: 633 }, LIB_BG_VENDIGROTH = 817;
@@ -984,25 +1341,36 @@ const LIB_TELE_PARTS = [[481, 1000, 342, 35, 1], [481, 1001, 342, 41, 1], [481, 
 const LIB_PAPER_PARTS = [[485, 0, 216, 44, 1], [484, 1, 453, 41, 1], [485, 0, 689, 44, 1], [482, 2, 194, 76, 0], [482, 3, 449, 76, 1], [482, 2, 712, 76, 2]];
 const LIB_VENDIGROTH_PARTS = [[485, 0, 216, 44, 1], [815, 4, 453, 41, 1], [485, 0, 689, 44, 1], [482, 2, 194, 76, 0], [482, 5, 449, 76, 1], [482, 2, 712, 76, 2]];
 
-// the pictures: decoded once, on first use
+// the pictures (atlas/library/): loaded once, on first use. A font is its strip in black; the white ink (the plaque) is that
+// strip with its ink coloured white
 let libReady = null;
 function libLoad() {
   if (!libReady) {
     const img = src => new Promise((ok, no) => { const im = new Image(); im.onload = () => ok(im); im.onerror = no; im.src = src; });
+    const tint = (im, color) => {
+      const c = document.createElement("canvas"); c.width = im.naturalWidth; c.height = im.naturalHeight;
+      const g = c.getContext("2d"); g.drawImage(im, 0, 0); g.globalCompositeOperation = "source-in"; g.fillStyle = color; g.fillRect(0, 0, c.width, c.height);
+      return c;
+    };
     const jobs = [];
     LB.pics = { bg: {}, font: {} };
     for (const [n, b] of Object.entries(LB.backgrounds)) jobs.push(img(b.src).then(im => { LB.pics.bg[n] = im; }));
-    for (const [n, f] of Object.entries(LB.fonts)) {
-      LB.pics.font[n] = {};
-      for (const c of ["black", "white"]) jobs.push(img(f[c]).then(im => { LB.pics.font[n][c] = im; }));
-    }
+    for (const [n, f] of Object.entries(LB.fonts)) jobs.push(img(f.src).then(im => { LB.pics.font[n] = { black: im, white: tint(im, "#fff") }; }));
     libReady = Promise.all(jobs);
   }
   return libReady;
 }
 
+// a font's glyphs are numbered by the game's one-byte code page (Windows-1251 for the Russian Mod Pack, 1252 otherwise); the
+// texts are Unicode: a character above 255 (Cyrillic, curly quotes, dashes) is looked up by its byte in that code page
+const LIB_CP = (() => {
+  const m = new Map();
+  try { [...new TextDecoder(window.AtlasVer === "ru" ? "windows-1251" : "windows-1252").decode(Uint8Array.from({ length: 128 }, (_, i) => i + 128))].forEach((c, i) => m.set(c.charCodeAt(0), i + 128)); } catch (_) {}
+  return m;
+})();
+const libCode = ch => { const c = ch.charCodeAt(0); return c > 255 ? LIB_CP.get(c) ?? c : c; };
 // text in a bitmap font: the pen advances by each glyph's advance, the last glyph counts its own width
-const libAdv = (f, ch, last) => { const g = f.glyphs[ch.charCodeAt(0)]; return g ? (last ? g[1] : g[2]) : 4; };
+const libAdv = (f, ch, last) => { const g = f.glyphs[libCode(ch)]; return g ? (last ? g[1] : g[2]) : 4; };
 const libWidth = (f, s) => { let w = 0; for (let i = 0; i < s.length; i++) w += libAdv(f, s[i], i === s.length - 1); return w; };
 function libWrap(f, text, maxW) {
   const lines = [];
@@ -1024,7 +1392,7 @@ function libDrawLines(ctx, num, color, lines, r, centered) {
     let x = r.x - LIB_SIDEBAR + (centered ? Math.floor((r.w - libWidth(f, line)) / 2) : 0);
     const y = r.y + row * f.h;
     for (let i = 0; i < line.length; i++) {
-      const g = f.glyphs[line.charCodeAt(i)];
+      const g = f.glyphs[libCode(line[i])];
       if (g && g[1]) ctx.drawImage(strip, g[0], 0, g[1], f.h, x, y, g[1], f.h);
       x += libAdv(f, line[i], i === line.length - 1);
     }
@@ -1064,7 +1432,7 @@ function libParagraph(ctx, str, num, centered, r, color) {
 }
 // a book page or a plaque: paragraphs one after another until one does not fit; returns where the next page starts
 function libPageLike(ctx, kind, base, r, at, color) {
-  const T = LB.mes[kind];
+  const T = libText[kind];
   let n = at.num;
   if (n >= base + LIB_TEN || !(n in T)) return null;
   let [fn, c, str] = libParse(T[n]);
@@ -1092,7 +1460,7 @@ function libBookPages(base) {                                   // where each pa
   return pages;
 }
 function libPaper(ctx, num, vendigroth) {                       // headline, then the story over the columns, then filler articles
-  const T = LB.mes[2], rects = LIB_NEWS.map(r => ({ ...r }));
+  const T = libText[2], rects = LIB_NEWS.map(r => ({ ...r }));
   for (const [font, line, x, y, align] of vendigroth ? LIB_VENDIGROTH_PARTS : LIB_PAPER_PARTS) libElement(ctx, T[line] || "", font, x, y, align);
   if (num in T) { const [fn, c, str] = libParse(T[num]); libParagraph(ctx, str, fn, c, rects[0], "black"); }
   let n = num + 1;
@@ -1126,7 +1494,8 @@ function libPaper(ctx, num, vendigroth) {                       // headline, the
 }
 // draws a document into the 668 x 400 canvas; `page` is the left page of a book. Returns the number of book pages.
 function libDraw(canvas, d, page) {
-  const ctx = canvas.getContext("2d"), T = LB.mes[d.k], s = d.s;
+  libText = d.g ? LB.modMes[d.g] : LB.mes;
+  const ctx = canvas.getContext("2d"), T = libText[d.k], s = d.s;
   canvas.width = LIB_W; canvas.height = LIB_H;
   ctx.drawImage(LB.pics.bg[d.v ? LIB_BG_VENDIGROTH : LIB_BG[d.k]], 0, 0);
   if (d.k === 0) {
@@ -1153,7 +1522,7 @@ const LIB_ONE_LINE = s => s.replace(/\s+/g, " ").trim();
 const LIB_NAME_USES = {};
 LB.docs.forEach(d => d.n.forEach(n => { LIB_NAME_USES[n] = (LIB_NAME_USES[n] || 0) + 1; }));
 LB.docs.forEach((d, i) => {
-  const T = LB.mes[d.k], lines = [];
+  const T = (d.g ? LB.modMes[d.g] : LB.mes)[d.k], lines = [];
   for (let k = 0; k < LIB_TEN && (d.s + k) in T; k++) {
     const line = LIB_ONE_LINE(d.k === 1 || d.k === 3 ? T[d.s + k] : libParse(T[d.s + k])[2]);   // notes and telegrams: no font prefix
     if (line && !/^\d+$/.test(line)) lines.push(line);                     // a bare number is a picture in the book, not words
@@ -1168,12 +1537,18 @@ LB.docs.forEach((d, i) => {
 });
 LB.docs = LB.docs.filter(d => !/^test message/i.test(d.lines[0] || "")).map((d, i) => Object.assign(d, { id: i }));   // a left-over developer line
 // the documents sit under their category in the left column; pressing the open category folds it again
-const libView = { kind: 0, q: "", sel: null, page: 0 };
-const libMatch = d => !libView.q || d.title.toLowerCase().includes(libView.q) || d.text.includes(libView.q);
-const libListOf = k => LB.docs.filter(d => d.k === k && libMatch(d)).sort((a, b) => a.title.localeCompare(b.title));
+const libView = { kind: 0, q: "", sel: null, page: 0, game: "Arcanum" };
+const libMatch = d => (d.g || "Arcanum") === libView.game && (!libView.q || d.title.toLowerCase().includes(libView.q) || d.text.includes(libView.q));
+{
+  const sel = document.getElementById("libGame");
+  sel.innerHTML = gameOptions(GAMES);
+  sel.value = libView.game = savedGame("library", v => GAMES.includes(v));
+  sel.onchange = e => { libView.game = e.target.value; saveGame("library", libView.game); libView.sel = null; renderLibrary(); };
+}
+const libListOf = k => LB.docs.filter(d => d.k === k && libMatch(d)).sort((a, b) => collate(a.title, b.title));
 document.getElementById("libSearch").oninput = e => { libView.q = e.target.value.trim().toLowerCase(); renderLibrary(); };
-document.getElementById("libCount").textContent = LB.docs.length;
 function renderLibrary() {
+  document.getElementById("libCount").textContent = LB.docs.filter(d => (d.g || "Arcanum") === libView.game).length;
   document.querySelectorAll('#atlasNav [data-go="library"]').forEach(b => b.classList.toggle("on", current === "library"));
   const el = document.getElementById("libKinds");
   let shown = 0;
@@ -1226,10 +1601,19 @@ async function readDoc(id, page) {
 
 /* ------------------------------------------------------------------ atlas: demographics (demographics.js) */
 const DM = window.ArcanumPeople;
-const demo = { kind: 0, place: null, race: null, gender: null };   // kind: index into DM.kinds, -1 = every kind of creature
+// the modules' people and creatures join the rows (places are appended to DM.places); each place belongs to a game
+const DMC = window.ArcanumModuleCreatures, MOD = window.ArcanumModules;
+const PLACE_GAME = DM.places.map(() => 'Arcanum');
+if (DMC && MOD) {
+  const off = DM.places.length;
+  DM.places.push(...MOD.places);
+  PLACE_GAME.push(...MOD.places.map(p => (MAP_BY_KEY.has(nkey(p)) && MP.maps[MAP_BY_KEY.get(nkey(p))].module) || 'Arcanum'));
+  for (const r of [...MOD.npcs, ...DMC.npcs]) DM.people.push([r[0] + off, r[3], r[4], r[5], r[6], r[7], r[8]]);   // (place, kind, race, gender, level, alignment, name)
+}
+const demo = { kind: 0, place: null, race: null, gender: null, game: 'Arcanum' };   // kind: index into DM.kinds, -1 = every kind of creature
 const KIND_PLURAL = { Person: 'People', Animal: 'Animals', Monster: 'Monsters', Undead: 'Undead', Mechanical: 'Machines' };
 const LEVEL_STEPS = [[1, 5], [6, 10], [11, 15], [16, 20], [21, 25], [26, 30], [31, 40], [41, 99]];
-const demoRows = skip => DM.people.filter(r => (demo.kind < 0 || r[1] === demo.kind) && (skip === 'place' || demo.place == null || r[0] === demo.place)
+const demoRows = skip => DM.people.filter(r => PLACE_GAME[r[0]] === demo.game && (demo.kind < 0 || r[1] === demo.kind) && (skip === 'place' || demo.place == null || r[0] === demo.place)
   && (skip === 'race' || demo.race == null || r[2] === demo.race) && (skip === 'gender' || demo.gender == null || r[3] === demo.gender));
 const pct = (n, of) => of ? Math.round(n * 1000 / of) / 10 : 0;
 function demoBars(rows, key, labels, attr) {
@@ -1241,28 +1625,29 @@ function demoBars(rows, key, labels, attr) {
       <span class="tr"><span class="f1" style="width:${x.m * 100 / max}%"></span><span class="f0" style="width:${x.f * 100 / max}%"></span></span><b>${x.n}</b></button>`).join('');
 }
 function renderDemo() {
-  const kinds = DM.kinds, all = DM.people;
+  const kinds = DM.kinds, all = DM.people.filter(r => PLACE_GAME[r[0]] === demo.game);
   document.getElementById('demoCount').textContent = all.length;
   document.getElementById('demoKinds').innerHTML = [['-1', 'Every creature', all.length], ...kinds.map((k, i) => [String(i), KIND_PLURAL[k] || k, all.filter(r => r[1] === i).length])]
     .map(([v, label, n]) => `<button class="loc${+v === demo.kind ? ' on' : ''}" data-kind="${v}">${label}<span class="n">${n}</span></button>`).join('');
   const inKind = all.filter(r => demo.kind < 0 || r[1] === demo.kind);
   const pc = {}; inKind.forEach(r => pc[r[0]] = (pc[r[0]] || 0) + 1);
-  const placeList = Object.entries(pc).sort((a, b) => b[1] - a[1] || DM.places[a[0]].localeCompare(DM.places[b[0]]));
+  const placeList = Object.entries(pc).sort((a, b) => b[1] - a[1] || collate(DM.places[a[0]], DM.places[b[0]]));
   document.getElementById('demoPlaces').innerHTML = '<div class="locgroup">Where</div>' +
-    `<button class="loc${demo.place == null ? ' on' : ''}" data-place="">All of Arcanum<span class="n">${inKind.length}</span></button>` +
+    `<button class="loc${demo.place == null ? ' on' : ''}" data-place="">All of ${esc(demo.game)}<span class="n">${inKind.length}</span></button>` +
     placeList.map(([p, n]) => `<button class="loc${demo.place === +p ? ' on' : ''}" data-place="${p}">${esc(DM.places[p])}<span class="n">${n}</span></button>`).join('');
   const rows = demoRows(), total = rows.length, females = rows.filter(r => !r[3]).length, lv = rows.filter(r => r[4] > 0);
   const kindName = demo.kind < 0 ? 'creature' : DM.kinds[demo.kind] === 'Person' ? 'person' : DM.kinds[demo.kind].toLowerCase();
   const plural = n => kindName === 'person' ? (n === 1 ? 'person' : 'people') : kindName + (n === 1 ? '' : 's');
   const avg = lv.length ? Math.round(lv.reduce((s, r) => s + r[4], 0) / lv.length * 10) / 10 : 0;
-  document.getElementById('demoTitle').textContent = demo.place == null ? 'Everyone in Arcanum' : DM.places[demo.place];
+  document.getElementById('demoTitle').textContent = demo.place == null ? 'Everyone in ' + demo.game : DM.places[demo.place];
   document.getElementById('demoCrumb').textContent = [demo.race != null ? DM.races[demo.race] : '', demo.gender != null ? (demo.gender ? 'male' : 'female') : '']
     .filter(Boolean).join(' · ') || `${total} ${plural(total)}`;
   const hist = LEVEL_STEPS.map(([a, b]) => lv.filter(r => r[4] >= a && r[4] <= b).length);
   const hmax = Math.max(1, ...hist);
   // the game gives a race and a gender to people only: undead, monsters, animals and machines are told apart by kind
   const isPerson = demo.kind === 0, nPlaces = new Set(rows.map(r => r[0])).size;
-  const kindCounts = DM.kinds.map((k, i) => demoRows().filter(r => r[1] === i).length), kmax = Math.max(1, ...kindCounts);
+  const kindCounts = DM.kinds.map((k, i) => rows.filter(r => r[1] === i).length), kmax = Math.max(1, ...kindCounts);      // (rows = demoRows())
+  const byGender = isPerson ? demoRows('gender') : null;
   document.getElementById('demoBody').innerHTML = !total ? '<div class="flavour">Nobody matches.</div>' : `
     <div class="dcard wide"><div class="dbig"><div><b>${total}</b>${plural(total)}</div>
       ${isPerson ? `<div><b>${pct(females, total)}%</b>female</div><div><b>${pct(total - females, total)}%</b>male</div>` : ''}
@@ -1272,8 +1657,8 @@ function renderDemo() {
     ${isPerson ? `<div class="dcard"><h4>Races</h4>${demoBars(demoRows('race'), r => r[2], DM.races, 'race')}
       <div class="dkey"><span><i class="f1" style="background:var(--atlas)"></i>male</span><span><i style="background:#b86f8f"></i>female</span></div></div>
     <div class="dcard"><h4>Gender</h4>${[['0', 'Female'], ['1', 'Male']].map(([g, l]) => {
-      const n = demoRows('gender').filter(r => r[3] === +g).length; return `<button class="dbar${demo.gender === +g ? ' on' : ''}" data-gender="${g}"><span>${l}</span>
-      <span class="tr"><span style="width:${pct(n, demoRows('gender').length)}%;background:${g === '0' ? '#b86f8f' : 'var(--atlas)'}"></span></span><b>${n}</b></button>`; }).join('')}</div>` : ''}
+      const n = byGender.filter(r => r[3] === +g).length; return `<button class="dbar${demo.gender === +g ? ' on' : ''}" data-gender="${g}"><span>${l}</span>
+      <span class="tr"><span style="width:${pct(n, byGender.length)}%;background:${g === '0' ? '#b86f8f' : 'var(--atlas)'}"></span></span><b>${n}</b></button>`; }).join('')}</div>` : ''}
     <div class="dcard"><h4>Levels</h4><div class="dhist">${hist.map((n, i) => `<div class="col" title="${n}">${n || ''}<span style="height:${n * 100 / hmax}%"></span>${LEVEL_STEPS[i][0]}${LEVEL_STEPS[i][1] > 40 ? '+' : '–' + LEVEL_STEPS[i][1]}</div>`).join('')}</div></div>
     <div class="dcard wide"><h4>Everyone listed</h4><div class="dlist" id="demoList"></div></div>`;
   if (total) renderDemoList(rows);
@@ -1283,6 +1668,12 @@ function renderDemo() {
   document.querySelectorAll('#demoBody [data-kindbar]').forEach(b => b.onclick = () => { demo.kind = +b.dataset.kindbar; demo.race = demo.gender = null; renderDemo(); });
   document.querySelectorAll('#demoPlaces [data-place]').forEach(b => b.onclick = () => { demo.place = b.dataset.place === '' ? null : +b.dataset.place; renderDemo(); });
   document.getElementById('demoClear').onclick = () => { Object.assign(demo, { kind: 0, place: null, race: null, gender: null }); renderDemo(); };
+}
+{
+  const sel = document.getElementById('demoGame');
+  sel.innerHTML = gameOptions(GAMES);
+  sel.value = demo.game = savedGame('demographics', v => GAMES.includes(v));
+  sel.onchange = e => { demo.game = e.target.value; saveGame('demographics', demo.game); Object.assign(demo, { place: null, race: null, gender: null }); renderDemo(); };
 }
 // the list of everyone the filters leave, sortable by each column (a second click on a column turns the order round)
 const DEMO_COLS = [
@@ -1296,7 +1687,7 @@ const demoSort = { col: 'name', dir: 1 };
 function renderDemoList(rows) {
   const el = document.getElementById('demoList');
   const col = DEMO_COLS.find(c => c[0] === demoSort.col), key = col[2], name = DEMO_COLS[0][2];
-  const cmp = (a, b) => typeof a === 'number' ? a - b : a === b ? 0 : !a ? 1 : !b ? -1 : a.localeCompare(b);   // (empty last)
+  const cmp = (a, b) => typeof a === 'number' ? a - b : a === b ? 0 : !a ? 1 : !b ? -1 : collate(a, b);   // (empty last)
   const list = rows.slice().sort((a, b) => cmp(key(a), key(b)) * demoSort.dir || cmp(name(a), name(b)) || b[4] - a[4]);
   el.innerHTML = `<table><thead><tr>${DEMO_COLS.map(([k, l]) => `<th data-sort="${k}"${k === 'level' ? ' class="num"' : ''} aria-sort="${k === demoSort.col ? (demoSort.dir > 0 ? 'ascending' : 'descending') : 'none'}">${l}<span class="arr">${k === demoSort.col ? (demoSort.dir > 0 ? '▲' : '▼') : ''}</span></th>`).join('')}</tr></thead>
     <tbody>${list.map(r => `<tr><td>${esc(name(r)) || '<i>no name</i>'}</td><td>${esc(DEMO_COLS[1][2](r))}</td><td>${DEMO_COLS[2][2](r) || '–'}</td><td class="num">${r[4] || '–'}</td><td>${esc(DM.places[r[0]])}</td></tr>`).join('')}</tbody></table>`;
@@ -1334,22 +1725,31 @@ const QACT = [], GIVERS = [];
 QS.forEach(q => q.steps.forEach((s, si) => s.who.forEach((w, wi) => {
   if (!(w.world && w.tile) && subMap(w) == null) return;
   const tile = w.world ? w.tile : w.mtile;
-  QACT.push({ qid: q.id, si, wi, nm: qnorm(w.name), place: qnorm(w.place), tile });
-  if (s.role === 'start') GIVERS.push({ name: w.name, place: w.place, tile });
+  QACT.push({ qid: q.id, si, wi, nm: qnorm(w.name), place: qnorm(w.place), tile, npc: w.npc ? 1 : 0 });
+  if (s.role === 'start' && !q.module) GIVERS.push({ name: w.name, place: w.place, tile });
 })));
 // the quest steps of whoever stands on that tile (quests.js names the very object that carries the dialog or script)
-const questsAt = (place, tile) => {
-  const pl = qnorm(place);
-  return QACT.filter(a => a.place === pl && a.tile[0] === tile[0] && a.tile[1] === tile[1]);
+// (people = true: the steps of a person; otherwise those of an object - a guard standing next to a street sign is not the sign's quest)
+const questsAt = (place, tile, people = false) => {
+  const pl = qnorm(place), npc = people ? 1 : 0;
+  return QACT.filter(a => a.place === pl && a.tile[0] === tile[0] && a.tile[1] === tile[1] && a.npc === npc);
 };
 function sendGivers() { try { worldFrame.contentWindow.postMessage({ type: 'atlas-quests', givers: GIVERS }, '*'); } catch (_) {} }
 
 const qItem = name => { const i = BYNAME.get(nameKey(name)); return i != null ? cit(i) : `<span>${esc(name)}</span>`; };
 const goldText = g => g.length ? (g[0] === g[1] ? g[0] : g[0] + '–' + g[1]) + ' gold' : '';
-const alignText = a => a ? `${a > 0 ? '+' : '−'}${Math.abs(a)} (${a > 0 ? 'towards good' : 'towards evil'})` : '';
+const alignText = a => a ? `${a > 0 ? '+' : '−'}${+(Math.abs(a) / 10).toFixed(1)}` : '';   // (stored on a -1000..1000 scale, the game shows -100..100)
+// why a quest is lost at a part: the person's death script sets it ("Defeat"), or a line you can say to them does
+function failWhy(s) {
+  const names = [...new Set(s.who.map(w => w.name))];
+  if (!names.length) return '';
+  const nm = esc(names.join(' or '));
+  if (s.who.some(w => w.verb === 'Defeat')) return `The quest can be lost if ${nm} dies.`;
+  return s.ask ? `The quest can be lost if you tell ${nm}: “${esc(s.ask)}”` : `The quest can be lost through what you say to ${nm}.`;
+}
 function partRole(q, i) {
   const s = q.steps[i], n = partCount(q);
-  if (s.role === 'fail') return 'The quest can be lost here';
+  if (s.role === 'fail') return failWhy(s) || 'The quest can be lost here';
   const of = `Part ${i + 1} of ${n}`;
   return s.role === 'start' ? `${of} · gives the quest` : s.role === 'talk' ? `${of} · talk to them` : s.role === 'goal' ? `${of} · objective`
     : i === n - 1 ? `${of} · final part, the reward` : of;
@@ -1379,7 +1779,7 @@ const storyTag = q => q.story.length ? `<em class="qstory">${storyLabel(q)}</em>
 function storySection(q) {
   if (!q.story.length) return '';
   return `<div class="sec"><div class="sec-t">Moves the story on</div><div class="qstories">${q.story.map(s =>
-    `<div><b>State ${s}</b><span>${esc(QD.storyStates[s] || '')}</span></div>`).join('')}</div></div>`;
+    `<div><b>State ${s}</b><span>${esc((q.storyText || QD.storyStates)[s] || '')}</span></div>`).join('')}</div></div>`;
 }
 function showQuest(id) {
   qv.sel = id;
@@ -1413,8 +1813,8 @@ function showQuest(id) {
   p.querySelectorAll('[data-quest-open]').forEach(b => { b.onclick = () => openQuest(+b.dataset.questOpen); });
 }
 function openQuest(id) {
-  Object.assign(qv, { kind: QBY.get(id).unused ? 'unused' : 'all', place: null, q: '' });
-  document.getElementById('questSearch').value = '';
+  Object.assign(qv, { kind: QBY.get(id).unused ? 'unused' : 'all', place: null, q: '', game: QBY.get(id).module || 'Arcanum' });
+  document.getElementById('questSearch').value = ''; document.getElementById('questGame').value = qv.game;
   go('quests');
   showQuest(id);
   const row = document.querySelector(`#questList .qrow[data-quest="${id}"]`);
@@ -1463,13 +1863,20 @@ function questGo(qid, si, wi) {
   if (!p.querySelector(`[data-qopen="${qid}"]`)) { p.insertAdjacentHTML('beforeend', questsSection([{ qid, si, wi }])); wireItems(p); }
 }
 
-const qv = { kind: 'all', place: null, q: '', sel: null };
+const qv = { kind: 'all', place: null, q: '', sel: null, game: 'Arcanum' };
+const qInGame = q => (q.module || 'Arcanum') === qv.game;
+{
+  const sel = document.getElementById('questGame');
+  sel.innerHTML = gameOptions(GAMES);
+  sel.value = qv.game = savedGame('quests', v => GAMES.includes(v));
+  sel.onchange = e => { qv.game = e.target.value; saveGame('quests', qv.game); qv.place = null; renderQuests(); };
+}
 const Q_KINDS = [['all', 'All quests'], ['main', '✨ Main story'], ['master', '🎓 Master training'], ['side', '📜 Side quests'], ['unused', '🚫 Not in game']];
-const qList = skip => QS.filter(q => (skip === 'kind' || (qv.kind === 'unused' ? q.unused : !q.unused && (qv.kind === 'all' || q.kind === qv.kind)))
+const qList = skip => QS.filter(q => qInGame(q) && (skip === 'kind' || (qv.kind === 'unused' ? q.unused : !q.unused && (qv.kind === 'all' || q.kind === qv.kind)))
   && (skip === 'place' || !qv.place || q.places.includes(qv.place)) && (!qv.q || q._t.includes(qv.q)));
 function renderQuests() {
   const list = qList(), byKind = qList('kind');
-  document.getElementById('questCount').textContent = QS.filter(q => !q.unused).length;
+  document.getElementById('questCount').textContent = QS.filter(q => !q.unused && qInGame(q)).length;
   document.getElementById('questKinds').innerHTML = Q_KINDS.map(([k, label]) =>
     `<button class="loc${qv.kind === k ? ' on' : ''}" data-kind="${k}">${label}<span class="n">${byKind.filter(q => k === 'unused' ? q.unused : !q.unused && (k === 'all' || q.kind === k)).length}</span></button>`).join('');
   const pc = {};
@@ -1482,7 +1889,7 @@ function renderQuests() {
   const row = q => `<button class="qrow${q.id === qv.sel ? ' on' : ''}" data-quest="${q.id}"><span class="qi">${QKIND[q.kind][0]}</span>
     <span><b>${esc(q.title)}</b>${storyTag(q)}<span class="s">${esc(q.log)}</span></span>
     <span class="qx">${q.giver ? esc((q.giver.verb === 'Talk to' ? '' : q.giver.verb + ' ') + q.giver.name) : ''}<i>${esc(q.giverPlace)}</i></span></button>`;
-  const order = qs => qs.slice().sort((a, b) => a.kind === 'main' && b.kind === 'main' ? (a.story[0] - b.story[0]) || a.id - b.id : a.title.localeCompare(b.title));
+  const order = qs => qs.slice().sort((a, b) => a.kind === 'main' && b.kind === 'main' ? (a.story[0] - b.story[0]) || a.id - b.id : collate(a.title, b.title));
   let h = '';
   if (qv.kind === 'all') for (const k of ['main', 'master', 'side']) {
     const qs = list.filter(q => q.kind === k);
@@ -1495,22 +1902,28 @@ function renderQuests() {
   document.querySelectorAll('#questPlaces [data-place]').forEach(b => b.onclick = () => { qv.place = b.dataset.place || null; renderQuests(); });
 }
 document.getElementById('questSearch').oninput = e => { qv.q = e.target.value.trim().toLowerCase(); renderQuests(); };
-document.getElementById('questClear').onclick = () => { Object.assign(qv, { kind: 'all', place: null, q: '' }); document.getElementById('questSearch').value = ''; renderQuests(); };
 // Quests and Demographics, opened from the map, come filtered to the place on show
+// the game (Arcanum or a module) the map on show belongs to
+function shownGame() {
+  const title = shownPlace(), sec = SECT.get(title) || MP.maps.find(m => m.name === title), map = MP.maps.find(m => m.name === title);
+  return (map && map.module) || (sec && GAMES.includes(sec.group) ? sec.group : 'Arcanum');
+}
 function filterQuestsToPlace() {
-  const title = document.getElementById('atlasTitle').textContent, sec = SECT.get(title) || MP.maps.find(m => m.name === title);
+  const title = shownPlace(), sec = SECT.get(title) || MP.maps.find(m => m.name === title);
   const place = sec ? (sec.group || sec.area) : title;       // inside a castle or cave: the quests of the place it belongs to
-  Object.assign(qv, { kind: 'all', q: '', place: QS.some(q => !q.unused && q.places.includes(place)) ? place : null });
-  document.getElementById('questSearch').value = '';
+  const game = shownGame();
+  Object.assign(qv, { kind: 'all', q: '', game, place: QS.some(q => !q.unused && qInGame(q) && q.places.includes(place)) ? place : null });
+  document.getElementById('questSearch').value = ''; document.getElementById('questGame').value = game;
 }
 function filterDemoToPlace() {
   const cp = currentPlace(), want = new Set([cp.title, cp.label, cp.key].map(nkey));
   const i = DM.places.findIndex(p => want.has(nkey(p)));
   demo.place = i >= 0 ? i : null; demo.race = demo.gender = null;
+  if (i >= 0) { demo.game = PLACE_GAME[i]; document.getElementById('demoGame').value = demo.game; }
 }
 
 /* ------------------------------------------------------------------ files and workshop */
-// Both are the Asset Browser itself (asset-browser.html, unchanged), each in a frame of its own, loaded the first time it opens.
+// Both are the Asset Browser itself (the browser view of index.html, unchanged), each in a frame of its own, loaded the first time it opens.
 // Files shows every kind of file. The Workshop keeps to the maps: a map picked there opens straight in the map editor, and
 // "Exit edit" goes back to the maps. Files has no editing tools at all (no Edit, world editor or .ART packer). Each frame keeps its own GET link
 // (?mode=sec&path=..&editor=on), which the address bar repeats as #files&<link> / #workshop&<link>. The two share the Asset
@@ -1527,19 +1940,16 @@ function loadBrowser(screen, query) {
   if (query && screen === 'files') { const p = new URLSearchParams(query); p.delete('editor'); query = String(p); }   // editing is the Workshop's
   if (b.frame.getAttribute('src') && (!query || query === b.query)) return;
   b.query = query || b.start; b.seen = null;
-  b.frame.style.visibility = 'hidden';                 // shown once dressed (the load handler): no flash of its own welcome screen
-  b.frame.src = 'asset-browser.html' + (b.query ? '?' + b.query : '');
+  b.frame.style.visibility = 'hidden';                 // shown once dressed (the load handler)
+  b.frame.src = 'index.html' + (b.query ? '?' + b.query : '');
 }
 function openFiles(query) { loadBrowser('files', query); go('files'); }
 // One top bar: the Asset Browser's (file types, its tools, the map editor's menu), in the Atlas bar's dress. Its brand becomes
-// the Atlas's (a click goes to the welcome screen) and it stays up on its own welcome screen. Files adds the "in the Atlas"
+// the Atlas's (a click goes to the welcome screen). Files adds the "in the Atlas"
 // button; the Workshop puts its own short menu where the file types were.
 const BAR_CSS = `
 :root { --topbar-h: 50px; }
-.explorer-home { display: none !important; }        /* its welcome screen (pick a kind of file): the bar's tabs do that */
 .topbar { background: linear-gradient(#2a2318, #211c14); border-bottom-color: #5c4b31; }
-body.home-active .topbar { display: grid; }
-body.home-active .topbar-tabs { max-width: 900px; opacity: 1; pointer-events: auto; }
 .topbar .topbar-tabs, .topbar .tab-group { gap: 2px; }
 .topbar .tab-sep { height: 16px; margin: 0 6px; background: #5c4b31; }
 .topbar .topbar-tabs .file-mode-btn, #workNav button { border: 0; background: none; padding: 7px 13px; border-radius: 4px; box-shadow: none;
@@ -1574,7 +1984,7 @@ body.sidebar-collapsed:not(.sec-edit-full) { --side-left-w: 0px; }
 #atlasEdge:hover { background: #362e22; color: #e8c66a; }
 #atlasEdge::before { content: "‹"; }
 body.sidebar-collapsed #atlasEdge::before { content: "›"; }
-body.home-active #atlasEdge, body.sec-edit-full #atlasEdge { display: none; }`;
+body.sec-edit-full #atlasEdge { display: none; }`;
 // Files only shows: the map editor (Edit), the world editor and the .ART packer are the Workshop's
 const FILES_CSS = `
 #topbarTools .sec-edit-btn, #packerLaunchBtn, #worldEditorLaunchBtn { display: none !important; }`;
@@ -1583,24 +1993,26 @@ const WORK_CSS = `
 .topbar .topbar-tabs, #packerLaunchBtn, #worldEditorLaunchBtn { display: none !important; }
 #workNav { grid-column: 2; justify-self: center; display: flex; align-items: center; gap: 2px; }
 body.sec-edit-full #workNav { display: none; }
-body.sec-edit-full .viewer-backbar { display: none; }      /* "Exit edit" is the way back to the maps */`;
+body.sec-edit-full .viewer-backbar { display: none; }      /* "Exit edit" is the way back to the maps */
+.tb-ic { font-family: 'Segoe UI Symbol', 'Noto Sans Symbols 2', 'Apple Symbols', sans-serif; font-variant-emoji: text; font-weight: normal; }
+.tb-map { display: inline-block; width: 1.05em; height: 1.12em; vertical-align: -.2em; background: currentColor; -webkit-mask: url(atlas/map-icon.png) center / contain no-repeat; mask: url(atlas/map-icon.png) center / contain no-repeat; }
+.tool-back { display: none; }                                /* the Workshop's menu is the way back */`;
 function dressBar(doc, screen) {
   if (doc.getElementById('atlasEmbed')) return;
   const b = BROWSERS[screen];
-  doc.head.insertAdjacentHTML('beforeend', `<style id="atlasEmbed">${BAR_CSS}${screen === 'workshop' ? WORK_CSS : FILES_CSS}</style>`);
+  // The page links its style.css / shell.css at the end of its body, and the sheet that comes last wins at equal weight: this one goes
+  // after them (at the end of the body, kept there if the page adds more), or the bar shows the browser's own boxed buttons
+  doc.body.insertAdjacentHTML('beforeend', `<style id="atlasEmbed">${BAR_CSS}${screen === 'workshop' ? WORK_CSS : FILES_CSS}</style>`);
+  const dress = doc.getElementById('atlasEmbed');
+  new doc.defaultView.MutationObserver(() => { if (doc.body.lastElementChild !== dress) doc.body.appendChild(dress); }).observe(doc.body, { childList: true });
   const brand = doc.getElementById('appTitle');
   brand.querySelector('.brand-title').textContent = 'Arcanum Asset Browser';
   brand.title = 'Welcome screen';
   doc.addEventListener('click', e => {               // before the Asset Browser's own handlers
-    if (e.target.closest('#appTitle')) { e.stopPropagation(); e.preventDefault(); go('home'); }   // not its welcome screen
+    if (e.target.closest('#appTitle')) { e.stopPropagation(); e.preventDefault(); go('home'); }   // the Atlas's welcome screen
   }, true);
   if (screen === 'files') doc.getElementById('topbarTools').insertAdjacentHTML('afterbegin', '<button type="button" class="tool-btn" id="filesAtlas" hidden></button>');
   else dressWorkshop(doc);
-  // Its welcome screen never shows: with no last place to reopen (main.js has started reopening it by now), and whenever it
-  // would go back there, the first tab opens instead (ART in Files, the maps in the Workshop)
-  const leaveHome = () => { if (doc.body.classList.contains('home-active')) doc.getElementById(screen === 'files' ? 'artExploreBtn' : 'secExploreBtn')?.click(); };
-  new doc.defaultView.MutationObserver(leaveHome).observe(doc.body, { attributes: true, attributeFilter: ['class'] });
-  leaveHome();
   // the edge tab works the Asset Browser's own fold button (which keeps the choice)
   const fold = doc.getElementById('sidebarToggleBtn'), side = doc.getElementById('sideLeft');
   if (fold && side) {
@@ -1616,14 +2028,16 @@ function dressBar(doc, screen) {
 function dressWorkshop(doc) {
   const win = doc.defaultView, click = id => doc.getElementById(id)?.click();
   doc.getElementById('topbarTabs').insertAdjacentHTML('afterend', `<nav id="workNav" aria-label="Workshop">
-    <button type="button" data-k="maps" aria-pressed="true" title="Pick a map to edit">🗺 Maps</button>
-    <button type="button" data-k="world" title="Make a new world map and edit it">🌍 New world</button>
-    <button type="button" data-k="packer" title="Build a .ART file from BMP / PNG frames">🛠 .ART Packer</button></nav>`);
+    <button type="button" data-k="maps" aria-pressed="true" title="Pick a map to edit"><span class="tb-ic tb-map" aria-hidden="true"></span> Map editor</button>
+    <button type="button" data-k="world" title="Make a new world map and edit it, or load one made here"><span class="tb-ic" aria-hidden="true">🌍&#xFE0E;</span> New world</button>
+    <button type="button" data-k="packer" title="Build a .ART file from BMP / PNG frames"><span class="tb-ic" aria-hidden="true">🛠&#xFE0E;</span> .ART Packer</button>
+    <button type="button" data-k="translator" title="Review and edit the English of a translated dialog file"><span class="tb-ic" aria-hidden="true">💬&#xFE0E;</span> Translator</button></nav>`);
   doc.getElementById('workNav').addEventListener('click', e => {
     const k = e.target.closest('button')?.dataset.k;
-    if (k === 'maps') click('secExploreBtn');
-    if (k === 'world') click('worldEditorLaunchBtn');
-    if (k === 'packer') click('packerLaunchBtn');
+    if (!k) return;
+    if (k === 'maps') { doc.dispatchEvent(new win.CustomEvent('toolpage', { detail: 'close' })); click('secExploreBtn'); return; }
+    if (k === 'translator') { doc.dispatchEvent(new win.CustomEvent('toolpage', { detail: 'translator' })); return; }
+    click(k === 'world' ? 'worldEditorLaunchBtn' : 'packerLaunchBtn');
   });
   const tools = doc.getElementById('topbarTools');
   let editing = false;
@@ -1646,13 +2060,23 @@ function onBrowserLoad(screen, b) {
     try { dressBar(doc, screen); } catch (err) { console.error(`${screen}: could not dress the Asset Browser`, err); }
     b.seen = null;                                       // a new page: the poll below takes up its link (and "in the Atlas")
   }
-  b.frame.style.visibility = '';
+  // shown once its list area is up (main.js opens the first tab or the last place at once; 3 s at most)
+  const t0 = Date.now(), reveal = () => {
+    let up = !ok; try { up = up || !doc.querySelector('.explorer').hidden; } catch (_) { up = true; }
+    if (up || Date.now() - t0 > 3000) b.frame.style.visibility = ''; else requestAnimationFrame(reveal);
+  };
+  reveal();
   // main.js marks the page once its modules run; a page that loaded without them cannot read the files
-  setTimeout(() => {
+  // (a slow start - a busy machine, the data still loading - is not a missing server: look again every half second, 20 s at most,
+  // and show the note only when the page never booted)
+  const started = Date.now();
+  const look = () => {
     try { if (ok && b.frame.contentDocument !== doc) return; } catch (_) {}      // the frame went on to another page meanwhile
-    let booted = false; try { booted = ok && (doc.body.classList.contains('home-active') || !doc.querySelector('.explorer').hidden); } catch (_) {}
-    b.note.hidden = booted;
-  }, 1500);
+    let booted = false; try { booted = ok && !doc.querySelector('.explorer').hidden; } catch (_) {}
+    if (booted || !ok || Date.now() - started > 20000) b.note.hidden = booted;
+    else setTimeout(look, 500);
+  };
+  setTimeout(look, 1500);
 }
 for (const [screen, b] of Object.entries(BROWSERS)) {
   b.frame.addEventListener('load', () => onBrowserLoad(screen, b));
@@ -1689,7 +2113,11 @@ setInterval(() => {
   const b = BROWSERS[current];
   if (!b || !b.frame.getAttribute('src')) return;
   let q, doc; try { if (b.frame.contentWindow.location.href === 'about:blank') return; q = b.frame.contentWindow.location.search.slice(1); doc = b.frame.contentDocument; } catch (_) { return; }
-  if (current === 'workshop') doc.querySelector('#workNav [data-k="maps"]')?.setAttribute('aria-pressed', String(new URLSearchParams(q).get('mode') === 'sec'));
+  if (current === 'workshop') {
+    const tool = ['world', 'packer', 'translator'].find(k => doc.body.classList.contains('ws-tool-' + k));
+    doc.querySelector('#workNav [data-k="maps"]')?.setAttribute('aria-pressed', String(!tool && new URLSearchParams(q).get('mode') === 'sec'));
+    for (const k of ['world', 'packer', 'translator']) doc.querySelector(`#workNav [data-k="${k}"]`)?.setAttribute('aria-pressed', String(tool === k));
+  }
   if (q === b.seen) return;
   b.seen = b.query = q; syncLink();
   if (current === 'files') showFilesOwner(q);
@@ -1697,17 +2125,11 @@ setInterval(() => {
 
 /* ------------------------------------------------------------------ screens */
 const SCREENS = ['home', 'atlas', 'items', 'library', 'quests', 'people', 'files', 'workshop'];
-// the welcome page shows another place of the game each time it is opened
-(function () {
-  const list = window.ArcanumHero || [];
-  if (!list.length) return;
-  const h = list[Math.floor(Math.random() * list.length)], el = document.getElementById('heroMap');
-  el.style.backgroundImage = `url("${h.src}")`;
-  el.title = h.alt;
-})();
+// (the welcome page's picture is chosen by atlas-boot.js: it is on screen before this app starts)
 
 function go(screen) {
   current = screen;
+  if (screen !== 'home' && !BROWSERS[screen]) startWorldFrame();
   document.body.classList.remove(...SCREENS.map(s => 'screen-' + s));
   document.body.classList.add('screen-' + screen);
   if (['items', 'people', 'library', 'quests'].includes(screen)) document.body.classList.add('screen-atlas');   // these pages are part of the Atlas
@@ -1739,3 +2161,5 @@ document.querySelector('.hero').addEventListener('click', e => { if (!e.target.c
 }
 restoreView();          // a shared link (#v=...) opens the atlas on that view
 linkLive = true; syncLink();
+return { stop() { if (SND) SND.stop(); } };
+};
