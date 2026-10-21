@@ -1,0 +1,38 @@
+// Na'jle companion dialogue for the Forgotten Places Port of Adia.
+// Uses stock follower result codes so CE and Arcanum own party behavior.
+{1}{[The siren spider lifts her head. Her voice arrives inside your thoughts, dry and perfectly composed.] Well, human? I am listening. Do try to justify the interruption.}{[The siren spider lifts her head. Her voice arrives inside your thoughts, dry and perfectly composed.] Well, human? I am listening. Do try to justify the interruption.}{}{}{0}{ }
+{2}{Who--or what--are you?}{}{1}{lf1 0}{20}{ }
+{3}{Why are you waiting here at the port?}{}{1}{lf1 0}{30}{ }
+{4}{Why were you exiled?}{}{1}{lf1 0}{40}{ }
+{5}{What exactly do you want from me?}{}{1}{lf1 0}{50}{ }
+{6}{You have a deal. Fight with me, and you leave aboard my ship when I do.}{}{1}{lf1 0}{70}{jo 2 70, lf1 1}
+{7}{I am not making that arrangement.}{}{1}{lf1 0}{0}{ }
+{8}{B:}{}{1}{lf1 1, wa 0}{0}{ }
+{9}{Remind me of our arrangement.}{}{1}{lf1 1}{60}{ }
+{10}{I'd like you to do something for me, Na'jle.}{}{1}{lf1 1, wa 0}{110}{ }
+{11}{Come with me again.}{}{1}{lf1 1, wa 1}{90}{uw 0 90}
+{12}{E:}{}{1}{lf1 1}{0}{ }
+{20}{Na'jle. Yes, I speak, and yes, I am aware this is impressive to you. Intelligence did not begin with mammals.}{Na'jle. Yes, I speak, and yes, I am aware this is impressive to you. Intelligence did not begin with mammals.}{}{}{0}{ }
+{21}{E:}{}{1}{}{0}{ }
+{30}{My community has exiled me. I have only a few days to leave this island before the banishment is enforced. I am at the Port of Adia because your ship is the first useful solution to present itself.}{My community has exiled me. I have only a few days to leave this island before the banishment is enforced. I am at the Port of Adia because your ship is the first useful solution to present itself.}{}{}{0}{ }
+{31}{E:}{}{1}{}{0}{ }
+{40}{Why was I exiled? How boldly personal. That answer is mine until I decide your mind is sturdy enough to hold it.}{Why was I exiled? How boldly personal. That answer is mine until I decide your mind is sturdy enough to hold it.}{}{}{0}{ }
+{41}{E:}{}{1}{}{0}{ }
+{50}{A place aboard your ship when you leave. If you choose to stay on this island, I will fight beside you until you recover your sense. I will help with whatever further quests distract you as well. Consider it passage paid in advance.}{A place aboard your ship when you leave. If you choose to stay on this island, I will fight beside you until you recover your sense. I will help with whatever further quests distract you as well. Consider it passage paid in advance.}{}{}{0}{ }
+{51}{E:}{}{1}{}{0}{ }
+{60}{You provide me passage aboard your ship when you finally leave. Until then, I keep unpleasant things from eating you and assist with your quests. It is a remarkably generous arrangement--for you.}{You provide me passage aboard your ship when you finally leave. Until then, I keep unpleasant things from eating you and assist with your quests. It is a remarkably generous arrangement--for you.}{}{}{0}{ }
+{61}{E:}{}{1}{}{0}{ }
+{70}{Agreed. I will protect your soft human exterior, and you will remember my place aboard the ship. Try not to make either task tedious.}{Agreed. I will protect your soft human exterior, and you will remember my place aboard the ship. Try not to make either task tedious.}{}{}{0}{lf1 1}
+{71}{E:}{}{1}{}{0}{ }
+{80}{Very well. I shall remain here and contemplate how slowly two legs carry a thought.}{Very well. I shall remain here and contemplate how slowly two legs carry a thought.}{}{}{0}{ }
+{81}{E:}{}{1}{}{0}{ }
+{90}{At last. I was beginning to suspect you had been outwitted by the scenery.}{At last. I was beginning to suspect you had been outwitted by the scenery.}{}{}{0}{lf1 1}
+{91}{E:}{}{1}{}{0}{ }
+{100}{Go, then. I will remain near the port. Do remember that abandoning your most capable ally is a very human sort of decision.}{Go, then. I will remain near the port. Do remember that abandoning your most capable ally is a very human sort of decision.}{}{}{0}{ }
+{101}{E:}{}{1}{}{0}{ }
+{110}{Very well. What do your two-legged priorities require now?}{Very well. What do your two-legged priorities require now?}{}{}{0}{ }
+{111}{Move farther away from me.}{}{1}{lf1 1, wa 0}{0}{so }
+{112}{Stay close to me.}{}{1}{lf1 1, wa 0}{0}{sc }
+{113}{Wait here.}{}{1}{lf1 1, wa 0}{80}{wa }
+{114}{Leave the group.}{}{1}{lf1 1, wa 0}{100}{lv, lf1 0}
+{115}{Never mind.}{}{1}{lf1 1, wa 0}{1}{ }

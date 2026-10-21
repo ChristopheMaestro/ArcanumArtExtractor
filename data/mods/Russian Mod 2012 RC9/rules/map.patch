@@ -1,0 +1,165 @@
+# object.patch
+# Patches objects and mobiles in the running game whenever the
+# map is loaded.
+# Format:
+#  OBJ_ID: attribute1 value1 attribute2 value2 attributeN valueN
+#
+# Legal attributes:
+#  internal_name
+#  known_name
+#  alignment
+#  origin
+#  notify_npc
+#  magic_hit_adjust
+#  obj_flag	(OF_OFF)   (note: !OF_FLAG removes the OF_FLAG)
+#  training (st_untrained|st_beginner|st_expert|st_master) (bs_bow|bs_dodge|ts_repair|etc)
+#  script (Attachment point number) (script number)
+#  daystand (x coordinate) (y coordinate)
+#  nightstand (x coordinate) (y coordinate)
+# Example: 
+#   G_ADECC642_F23D_4CF4_8E1F_71EC9CF6C87E: internal_name 1234 obj_flag OF_OFF training st_expert ts_firearms
+#	SHARON'S CHANGES
+#	MYRTH'S NECKLACE NO NPC PICKUP
+G_49794656_F91D_4271_8EF8_8A697F9EA583: item_flag OIF_NO_NPC_PICKUP
+#	CASSIES NECKLACE ADD KNOWN NAME
+G_434D84C2_5779_11D4_8F1D_00A0CC6511C6: known_name 30487
+#	TARANT BEGGAR  ADD HB SCRIPT
+G_30AF1907_5C7D_4482_A5C1_E713346B56B6: script 19 1987
+#	RIGHT DOOR IN ASHBURY PRISON ADD BUST SCRIPT  ADD INTERNAL NAME
+G_7B138D03_8BFB_47FD_BE39_1DAA80164F5C: script 30 2905 internal_name 801
+#	LEFT DOOR IN ASHBURY PRISON ADD BUST SCRIPT  ADD INTERNAL NAME
+G_B39A140F_1029_43AB_A6D3_8A90D8B8465F: script 30 2906 internal_name 807
+#	FALLOW ROLLAND ADD RESSURECT SCRIPT
+G_3FB40163_0AE5_405A_98E7_E84A4E4003AF: script 18 3090
+#	JERROLD AYMES DAY NIGHT STAND
+G_FA355D0C_8308_4EFB_B8C0_EED651CD4B5C: daystand 32319 62515 nightstand 32319 62515 npc_flag !ONF_WANDERS npc_flag !ONF_WANDERS_IN_DARK
+#	GUIDO LIGHTOUCH DAY NIGHT STAND
+G_5C29EA18_45B5_425D_B36C_F4F251F69536: daystand 32327 62514 nightstand 32327 62514 npc_flag !ONF_WANDERS npc_flag !ONF_WANDERS_IN_DARK
+#	LEON'S CHANGES
+#	BARBARIANS OF KREE ALIGNMENT CHANGE
+G_8B16D075_B08F_40C1_96C5_62C3B4BAD231: alignment -250
+G_E04B1350_E111_415B_B4E7_1C1EF63631E0: alignment -250
+G_F84EECDD_71FE_4DAE_A7C0_06ECE4DC1AD7: alignment -250
+G_668B381D_908D_4BCF_83F9_8D43BC48F9CC: alignment -250
+G_B7F3B6A4_7243_4FD7_AD2B_D7AED647A265: alignment -250
+G_C18A0FF4_96BC_4763_8859_2F089E92838D: alignment -250
+G_BD9D2955_EEC2_495F_9A4C_BEF480159FEA: alignment -250
+G_A1473F7F_B4DE_4DDD_AA05_92BFDCF6BBE0: alignment -250
+G_B3C2E5B7_A450_4BE7_A4F1_0171596D085F: alignment -250
+G_AD49A6BF_0959_4577_A181_19BCE8C8A17E: alignment -250
+G_176DC8D9_F495_4089_8FB4_A35D66D1CE82: alignment -250
+G_0E7344C1_6A73_4356_861D_F2C083CAA5E0: alignment -250
+G_2C6F468D_C4DC_45F3_8CCD_4E0598607E6D: alignment -250
+G_B1CBBB6E_8FC8_4F09_A5A5_3B3893C971DC: alignment -250
+G_C3190D34_3F96_4C76_9D59_E6EEE6CAD61D: alignment -250
+G_F00AAB45_3967_4616_9D41_51074BC5F0DB: alignment -250
+G_EEC7E7F2_316A_4796_8772_FDBE9903C236: alignment -250
+G_62ED0EED_5812_4565_BD31_0B46FAE5394C: alignment -250
+G_60AEF825_98CE_4A1C_92A1_A2E228729940: alignment -250
+G_9D8CC8F0_94D7_4680_AF23_D8B97A76B107: alignment -250
+#	DONN THROGG NO FLEE FLAG AND EXPERT AT FIREARMS
+G_6504FB1B_25DA_492D_BF0F_2BB5FD273CF5: training st_expert ts_firearms critter_flag ocf_no_flee
+#	VINCENT TOGGLED OFF, NEW FIRST HB SCRIPT, NO FLEE FLAG SET
+G_6662835F_290C_405D_9B73_E72661B43179: script 19 3089 obj_flag OF_OFF critter_flag ocf_no_flee
+#	SEWER GUARDS NOTIFIED ABOUT DOOR
+G_1EA9E8FE_4D9C_46D2_BE8C_C42E2DAA7195: notify_npc 6600
+#	CHANGE GAR'S ORIGIN
+G_D90A975B_38AB_11D4_8F1D_00E02920220C: origin 0
+#	MAKE DOC ROBERTS SWORD MAGICKAL
+G_77DF4104_12FE_11D4_8F1D_00E02920220C: magic_hit_adjust 5 item_flag OIF_is_magical
+#	Changed flags on Tulla Material Door, as well as added a skip default flag to its use
+G_3960279C_1C9A_4771_A092_8041D2758696: script 1 1893 portal_flag !OPF_LOCKED portal_flag !OPF_ALWAYS_LOCKED
+#	Changed flags on Tulla Power Door, as well as added a skip default flag to its use
+G_9AC7A2BF_3892_45A0_A521_AF17FE827082: script 1 1893 portal_flag !OPF_LOCKED portal_flag !OPF_ALWAYS_LOCKED
+#	Changed flags on Tulla Spirit Door, as well as added a skip default flag to its use
+G_8712F329_FADC_4A1E_9419_C1A97F529079: script 1 1893 portal_flag !OPF_LOCKED portal_flag !OPF_ALWAYS_LOCKED
+#	Changed flags on Tulla Truth Door, as well as added a skip default flag to its use
+G_D53C305F_F01E_48FD_B65E_1EF833DABDE5: script 1 1893 portal_flag !OPF_LOCKED portal_flag !OPF_ALWAYS_LOCKED
+#	Changed Magic/Tech complexity on Pelojian's Amulet from 80 to 0
+G_3DE88D4C_17CC_4B1C_8DA1_A798DE089C06: magic_tech_complexity 0
+#	THADDEUS NO FLEE
+G_B514A81A_13C2_11D4_8F1D_00E02920220C: critter_flag ocf_no_flee
+#	Crumbling Skeleton in the Temple of the Derian-Ka changed to "Aloof"
+G_400EB7CA_31BF_49FD_B979_A810DD522B06: npc_flag onf_aloof
+#	Orc on Garillon Bridge in Tarant: Changed his faction so he fights alongside Malek Nebbs
+G_5D8A5C1F_4D2A_11D4_8F1D_00E02920220C: faction 12
+#	Crumbling Skeleton in the Temple of the Derian-Ka: changed faction to none
+G_400EB7CA_31BF_49FD_B979_A810DD522B06: faction 0
+#	Changed Iron Clan Automaton 1 to no dialogue script
+G_1C0079BF_D46A_4E5C_A952_F56E443E7158: script 9 0
+#	Changed Iron Clan Automaton 2 to no dialogue script
+G_0BA7C338_8D3D_4B18_9DBA_7B57288FBC50: script 9 0
+#	Changed Iron Clan Automaton 3 to no dialogue script
+G_00D5E499_940F_4F4A_834A_3EB2DBB2F0EB: script 9 0
+#	Changed Iron Clan Automaton 4 to no dialogue script
+G_77EB53E6_3E25_4B98_8B96_17EB0B8B2399: script 9 0
+#	Changed Scientician's Underground Automaton to no dialogue script
+G_068C25B3_C1EE_4F5B_9173_69A960A432B7: script 9 0
+#	Panarii Temple Guard Day/Night Stand
+G_078C38C0_0341_4E23_BA3F_277B1143A80F: daystand 60 78 nightstand 60 78 
+#	Bangellian Scourge set to Identified
+G_988EABF3_A246_4445_BDDC_17FE8988D995: item_flag OIF_IDENTIFIED
+#	Bangellian Scourge set to Hexed
+G_988EABF3_A246_4445_BDDC_17FE8988D995: item_flag OIF_HEXED
+#
+#	Changes Made by Misc Authors:
+#
+#	Blackstone Blade Script Fix - Change to Correct One [Made by Da real Asrudin.]
+G_C2A4A37D_5E2B_461D_B8DF_8EDE5300AB58: script 25 30067
+#	Signet Ring Script Fix - Add New Heartbeat Script [Made by Da real Asrudin.]
+G_39BC7F20_1789_11D4_8F1D_00E02920220C: script 19 6000
+#	Stillwater General Store Clerk - Set Night Stand [Made by Sinbad.]
+G_DBC9A093_4DD2_4078_B9D6_35DEBE9717A6: nightstand 76154 48182
+#	Magic Beans - Add New Script, Remove "Is Magical" Flag [Made by eee78.]
+G_60C8851C_C7E8_45AE_B14F_051AB5A43F4B: script 1 6002 item_flag !OIF_IS_MAGICAL item_flag OIF_NEEDS_TARGET
+G_BAB9A125_A69D_42EE_90A8_CC3DA48117BF: script 1 6002 item_flag !OIF_IS_MAGICAL item_flag OIF_NEEDS_TARGET
+G_E308ABEB_4639_4935_9EA7_5DA183030DFF: script 1 6002 item_flag !OIF_IS_MAGICAL item_flag OIF_NEEDS_TARGET
+#	Thiefs Now Buy Stolen Goods - Set "Fence" Flag [Made by eee78.]
+G_7B5FAF29_9254_420F_AC97_04691491B9D6: npc_flag ONF_FENCE
+G_8459DBF4_9570_4CAF_9F48_D97610746ED5: npc_flag ONF_FENCE
+#
+#	Changes Made by Gentle_Giant:
+#
+#       Auguste Farad - Add New Dying Script for Praetor's Quest 1002, Set "Unressurectable" and "Unrevivifiable" Flags
+G_5474EDE6_75B1_4A08_8AC2_AE4325974BDE: script 12 3096 critter_flag ocf_unrevivifiable critter_flag ocf_unressurectable
+#       Maug and Pollock from Boil - Set "Unressurectable" and "Unrevivifiable" Flags
+G_D0EBC630_5CB9_4C27_89A3_30BE547FBE61: critter_flag ocf_unrevivifiable critter_flag ocf_unressurectable
+G_13014871_2CDE_11D4_8F1D_00E02920220C: critter_flag ocf_unrevivifiable critter_flag ocf_unressurectable
+#	Tollo Underhill - Set Backstab Training to Expert Level
+G_6687BA54_14AA_47A9_A2B5_91C18F2C2A3A: training st_expert ts_backstab
+#	Mr. and Mrs. Rolland - Set Day and Night Stand
+G_DD75F107_8564_4030_ACBA_80A0BD361DC5: daystand 32337 62486 nightstand 32327 62483
+G_347F77C4_0293_4BF1_B509_5BBE55057CC6: daystand 32328 62487 nightstand 32327 62484
+#	Thrayne - Set Day and Night Stand
+G_969E1A0E_B467_4C3D_A98C_1677CC68648F: daystand 456 37 nightstand 455 34
+#	Gideon Laier - Alignment Change
+G_659CC886_5BF0_46D2_9F77_0EF5B43D06FC: alignment -250
+#	Barbarians of Kree - Alignment Changes
+G_B313B404_7AAB_4DE0_9B96_BD2FC154E9CD: alignment -250
+G_B6BAB227_AEBE_484C_840F_0695D64DE88A: alignment -250
+#	Dark Elves Guards of T'sen-Ang - Alignment Changes
+G_9DCDC12C_E9A9_400D_85FF_B412C590347D: alignment -300
+G_C1761F60_3E7D_456B_887E_D612CF9D6317: alignment -300
+#	Cursed Paladins - Alignment Change
+G_0B993E79_87A5_476D_8DC8_616CB970FB97: alignment -300
+G_86E40E7E_4613_4FBA_AD53_71354E8365DE: alignment -300
+G_88E31101_0D0D_4AF1_BDC7_BA00B30EA9CF: alignment -300
+G_CC94A2DA_D5B2_42BB_90A4_22F3E489C076: alignment -300
+G_CF85F7BC_BDC6_4E47_99BD_420AD8AC5556: alignment -300
+#	Orc from Tarant, Factory Worker - Set Correct Name
+G_53432E58_9451_4FB6_A26D_A1E52884E83E: known_name 30417
+#	Medallion of Silence -- G_921D3017_B8CD_4DE9_BA57_836DB4A3396E -- DO IT SMTH WITH ME!
+#
+#	Arcanum 1.5 Expansion. Changes Made by gamer_777:
+#
+#	Changed Magic/Tech complexity on Edinorog Shield
+G_9D95A6C5_D4B4_4E0F_8B78_3097484BC3CC: magic_tech_complexity 0
+#	Anny - Add New First Heartbeat Script
+G_7A2E9438_FFB5_4E52_B4E3_392C0718C0D6: script 10 6082
+#	Fix Tailor in Black Root - Set Day Stand
+G_3D528188_67E6_4BF8_B347_834179AD1CDC: daystand 70238 92104
+#	Spider on Island - Toggled Off, New Heartbeat Script
+G_9FD1AF09_EEF0_4CE3_9F4F_DF0268BB8784: script 19 9095 obj_flag OF_OFF
+#	Fix for Betty's chest and Guard
+G_48322517_7E1D_4CD6_855B_524C9D7F723F: notify_npc 6729
+G_12C1F783_147D_4021_BD0A_1979EE581816: script 19 8004

@@ -1,0 +1,119 @@
+{1201}{Cost: 25, ChargeBeginCost: 1}
+{1655}{[Begin], Type: Trait, art_num, 28}
+{1660}{[End], Type: ObjFlag, obj_f_spell_flags, OSF_BODY_OF_AIR, FLAG_OFF}
+{1661}{[End], Type: Trait, art_num, -1}
+{1707}{[Begin], Apply_AoE: Tgt_Summoned, Type: ObjFlag, obj_f_npc_flags, ONF_KOS_OVERRIDE, FLAG_ON}
+{1708}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 2, Add, Play: Callback}
+{1709}{[End], Type: EyeCandy, 2, Add, Play: Reverse | End_Callback} // Dissipating
+{1710}{[Callback], Type: ObjFlag, obj_f_flags, OF_DONTDRAW, FLAG_OFF}
+{1711}{[EndCallback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+{1805}{[Begin], AoE: Tgt_Object, Type: Damage, DmgType: Dmg_Normal, Dmg: 20-50, Dmg_Flags: Scaled}
+{1905}{[Begin], Type: Trait, art_num, 3}
+{1910}{[End], Type: ObjFlag, obj_f_spell_flags, OSF_BODY_OF_EARTH, FLAG_OFF}
+{1911}{[End], Type: Trait, art_num, -1}
+{1957}{[Begin], Apply_AoE: Tgt_Summoned, Type: ObjFlag, obj_f_npc_flags, ONF_KOS_OVERRIDE, FLAG_ON}
+{1958}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 2, Add, Play: Callback}
+{1959}{[End], Type: EyeCandy, 2, Add, Play: Reverse | End_Callback} // Dissipating
+{1960}{[Callback], Type: ObjFlag, obj_f_flags, OF_DONTDRAW, FLAG_OFF}
+{1961}{[EndCallback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+{2105}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Invulnerable | Tgt_Non_Party_Critters, Type: Damage, DmgType: Dmg_Fire, Dmg: 15-25, Dmg_Flags: Scaled}
+{2155}{[Begin], Type: Trait, art_num, 26}
+{2159}{[End], Type: ObjFlag, obj_f_spell_flags, OSF_BODY_OF_FIRE, FLAG_OFF}
+{2161}{[End], Type: Trait, art_num, -1}
+{2207}{[Begin], Apply_AoE: Tgt_Summoned, Type: ObjFlag, obj_f_npc_flags, ONF_KOS_OVERRIDE, FLAG_ON}
+{2208}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 2, Add, Play: Callback}
+{2209}{[End], Type: EyeCandy, 2, Add, Play: Reverse | End_Callback} // Dissipating
+{2210}{[Callback], Type: ObjFlag, obj_f_flags, OF_DONTDRAW, FLAG_OFF}
+{2211}{[EndCallback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+{2405}{[Begin], Type: Trait, art_num, 27}
+{2411}{[End], Type: ObjFlag, obj_f_spell_flags, OSF_BODY_OF_WATER, FLAG_OFF}
+{2413}{[End], Type: Trait, art_num, -1}
+{2457}{[Begin], Apply_AoE: Tgt_Summoned, Type: ObjFlag, obj_f_npc_flags, ONF_KOS_OVERRIDE, FLAG_ON}
+{2458}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 2, Add, Play: Callback}
+{2459}{[End], Type: EyeCandy, 2, Add, Play: Reverse | End_Callback} // Dissipating
+{2460}{[Callback], Type: ObjFlag, obj_f_flags, OF_DONTDRAW, FLAG_OFF}
+{2461}{[EndCallback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+{2555}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self, Type: Damage, DmgType: Dmg_Electrical, Dmg: 5-35, Dmg_Flags: Scaled}
+{2655}{[Begin], Type: Damage, DmgType: Dmg_Electrical, Dmg: 50-100, Dmg_Flags: Scaled}
+{3103}{No_Stack: 1, Disallowed_TSF: OSF_MIND_CONTROLLED}
+{3657}{[Begin], Apply_AoE: Tgt_Summoned, Type: ObjFlag, obj_f_npc_flags, ONF_KOS_OVERRIDE, FLAG_ON}
+{3658}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 2, Add, Play: Callback}
+{3659}{[End], Type: EyeCandy, 2, Add, Play: Reverse | End_Callback} // Dissipating
+{3660}{[Callback], Type: ObjFlag, obj_f_flags, OF_DONTDRAW, FLAG_OFF}
+{3661}{[EndCallback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+{3755}{[Begin], Type: Damage, DmgType: Dmg_Normal, Dmg: 3-20, Dmg_Flags: Scaled}
+{3857}{[Begin], Apply_AoE: Tgt_Summoned, Type: ObjFlag, obj_f_npc_flags, ONF_KOS_OVERRIDE, FLAG_ON}
+{3858}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 2, Add, Play: Callback}
+{3859}{[Begin], Apply_AoE: Tgt_Summoned, Type: Trait, art_num, -1}
+{3860}{[End], Type: EyeCandy, 2, Add, Play: Reverse | End_Callback} // Dissipating
+{3861}{[Callback], Type: ObjFlag, obj_f_flags, OF_DONTDRAW, FLAG_OFF}
+{3862}{[EndCallback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+{4005}{[Begin], Type: Heal, Dmg: 10-50, Dmg_Flags: Scaled}
+{4105}{[Begin], Type: Heal, Dmg: 50-100, Dmg_Flags: Scaled | Scars | Crippling}
+{4301}{Cost: 10, Duration: (60 @ -1), Resist: (stat_constitution @ -5), Info: aggressive}
+{4408}{[Begin], Apply_AoE: Tgt_Summoned, Type: ObjFlag, obj_f_npc_flags, ONF_KOS_OVERRIDE, FLAG_ON}
+{4409}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 2, Add, Play: Callback}
+{4410}{[Begin], Apply_AoE: Tgt_Summoned, Type: Trait, art_num, -1}
+{4411}{[End], Type: EyeCandy, 2, Add, Play: Reverse | End_Callback} // Dissipating
+{4412}{[Callback], Type: ObjFlag, obj_f_flags, OF_DONTDRAW, FLAG_OFF}
+{4413}{[EndCallback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+{4458}{[End], AoE: Tgt_Obj_T_Critter, Type: EyeCandy, 2, Add, Play: Reverse} // 23
+{4556}{[Begin], Apply_AoE: Tgt_Summoned, Type: ObjFlag, obj_f_critter_flags, OCF_MONSTER, FLAG_ON}
+{4557}{[Begin], Apply_AoE: Tgt_Summoned, Type: ObjFlag, obj_f_spell_flags, OSF_MIND_CONTROLLED, FLAG_ON}
+{4558}{[Begin], Apply_AoE: Tgt_Summoned, Type: ObjFlag, obj_f_npc_flags, ONF_KOS_OVERRIDE, FLAG_ON}
+{4559}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 2, Add, Play: Callback}
+{4560}{[End], Type: EyeCandy, 2, Add, Play: Reverse | End_Callback} // Dissipating
+{4561}{[Callback], Type: ObjFlag, obj_f_flags, OF_DONTDRAW, FLAG_OFF}
+{4562}{[EndCallback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+{4606}{[Begin], Apply_AoE: Tgt_Summoned, Type: ObjFlag, obj_f_critter_flags, OCF_MONSTER, FLAG_ON}
+{4607}{[Begin], Apply_AoE: Tgt_Summoned, Type: ObjFlag, obj_f_spell_flags, OSF_MIND_CONTROLLED, FLAG_ON}
+{4608}{[Begin], Apply_AoE: Tgt_Summoned, Type: ObjFlag, obj_f_npc_flags, ONF_KOS_OVERRIDE, FLAG_ON}
+{4609}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 2, Add, Play: Callback}
+{4610}{[End], Type: EyeCandy, 2, Add, Play: Reverse | End_Callback} // Dissipating
+{4611}{[Callback], Type: ObjFlag, obj_f_flags, OF_DONTDRAW, FLAG_OFF}
+{4612}{[EndCallback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+{4657}{[Begin], Apply_AoE: Tgt_Summoned, Type: ObjFlag, obj_f_npc_flags, ONF_KOS_OVERRIDE, FLAG_ON}
+{4658}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 2, Add, Play: Callback}
+{4659}{[Begin], Apply_AoE: Tgt_Summoned, Type: Trait, art_num, -1}
+{4660}{[End], Type: EyeCandy, 2, Add, Play: Reverse | End_Callback} // Dissipating
+{4661}{[Callback], Type: ObjFlag, obj_f_flags, OF_DONTDRAW, FLAG_OFF}
+{4662}{[EndCallback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+{4710}{[Begin], Apply_AoE: Tgt_Summoned, Type: Trait, art_num, -1}
+{4711}{[Callback], Type: ObjFlag, obj_f_flags, OF_DONTDRAW, FLAG_OFF}
+{5056}{[Begin], AoE: Tgt_Parent_Obj | Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical, Type: Heal, Dmg: 3}
+{7601}{Cost: 5, Info: aggressive}
+{10503}{No_Stack: 0, ItemTriggers: Item_Used}
+{11407}{[Maintain], ItemTriggers: Wear, Type: ChargeNBranch, Cost: 1}  // 10
+{11409}{[Maintain], AoE: Tgt_Obj_No_ST_Critter_Dead, ItemTriggers: Wear, Type: Heal, Dmg: 4}
+{11551}{Range: 2, Info: aggressive}
+{11555}{[Begin], ItemTriggers: Item_Used, Type: Damage, DmgType: Dmg_Poison, Dmg: 290}
+{11750}{AoE: Tgt_Tile | Tgt_Obj_Radius | Tgt_Non_Party_Critters | Tgt_Obj_No_ST_Critter_Dead, Radius: 2, [Callback]AoE: Tgt_Summoned}
+{11800}{AoE: Tgt_Tile | Tgt_Obj_Radius | Tgt_Obj_No_ST_Critter_Dead, Radius: 2, [Callback]AoE: Tgt_Summoned}
+{12005}{[Begin], AoE: Tgt_Obj_Radius, ItemTriggers: Parent_Atks_Location, Type: Damage, DmgType: Dmg_Fire, Dmg: 1-1}
+{12006}{[Begin], AoE: Tgt_Tile_Radius, ItemTriggers: Parent_Atks_Location, Type: Summon, Proto: 4031}
+{12007}{[Begin], Apply_AoE: Tgt_Summoned, ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 2, Add}
+{12008}{[Begin], Apply_AoE: Tgt_Summoned, ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 3, Add, Play: Stack | Random_Start | Fire_Dmg}
+{12009}{[Begin], Apply_AoE: Tgt_Self, ItemTriggers: Parent_Atks_Location, Type: Destroy}
+{12010}{[End], ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 2, Remove}
+{12011}{[End], ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 3, Remove}
+{12012}{[End], ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 2, Add, Play: Reverse | End_Callback} // Dissipating
+{12013}{[EndCallback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+{12250}{AoE: Tgt_None, [Begin]AoE: Tgt_Tile | Tgt_Obj_Radius | Tgt_Non_Party_Critters | Tgt_Obj_No_ST_Critter_Dead, [Begin]Radius: 2, [Callback]AoE: Tgt_Summoned}
+{12750}{AoE: Tgt_Object, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical | Tgt_Non_Party_Critters}
+{12900}{AoE: Tgt_Tile | Tgt_Obj_Radius | Tgt_Non_Party_Critters, Radius: 3}
+{13000}{AoE: Tgt_None, Radius: 1, [Begin]AoE: Tgt_Tile | Tgt_Obj_Radius | Tgt_Obj_T_Critter | Tgt_Tile_Radius | Tgt_Obj_No_ST_Critter_Undead | Tgt_Non_Party_Critters, [Maintain]AoE: Tgt_Obj_Radius | Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Mechanical | Tgt_Obj_No_ST_Critter_Undead | Tgt_Non_Party_Critters, [End]AoE: Tgt_Summoned, [EndCallback]AoE: Tgt_Summoned}
+{13050}{AoE: Tgt_None, [Begin]AoE: Tgt_Tile | Tgt_Obj_Radius | Tgt_Non_Party_Critters | Tgt_Obj_No_ST_Critter_Dead, [Begin]Radius: 2, [Callback]AoE: Tgt_Summoned}
+{13057}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self | Tgt_Obj_T_Critter, ItemTriggers: Parent_Atks_Location, Type: Damage, Dmg_Flags: Stunned}
+{13058}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self | Tgt_Obj_T_Critter, ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 2, Add}
+{13059}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self | Tgt_Obj_T_Critter, ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 3, Add, Play: Stack}
+{13250}{AoE: Tgt_None, [Begin]AoE: Tgt_Tile | Tgt_Obj_Radius | Tgt_Non_Party_Critters | Tgt_Obj_No_ST_Critter_Dead, [Begin]Radius: 2, [Callback]AoE: Tgt_Summoned}
+{13255}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self | Tgt_Non_Party_Critters | Tgt_Obj_T_Portal | Tgt_Obj_T_Container, Type: Damage, DmgType: Dmg_Normal, Dmg: 20-40}
+{13256}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self | Tgt_Non_Party_Critters | Tgt_Obj_T_Portal | Tgt_Obj_T_Container, Type: Damage, DmgType: Dmg_Fire, Dmg: 20-40}
+{13257}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self | Tgt_Non_Party_Critters | Tgt_Obj_T_Portal | Tgt_Obj_T_Container, Type: EyeCandy, 2, Add}
+{13258}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self | Tgt_Non_Party_Critters | Tgt_Obj_T_Portal | Tgt_Obj_T_Container, Type: EyeCandy, 3, Add, Play: Stack}
+{13259}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self | Tgt_Obj_T_Critter | Tgt_Non_Party_Critters | Tgt_Obj_T_Portal | Tgt_Obj_T_Container, Type: AGoal, anim_goal_knockback}
+{13260}{[Begin], AoE: Tgt_Tile, Type: Summon, Proto: 4050}
+{13261}{[Begin], AoE: Tgt_Tile, Apply_AoE: Tgt_Summoned, Type: EyeCandy, 2, Add, Play: Callback}
+{13950}{AoE: Tgt_Tile | Tgt_Obj_Radius | Tgt_Non_Party_Critters | Tgt_Obj_No_ST_Critter_Dead, Radius: 2, [Callback]AoE: Tgt_Summoned}
+{14000}{AoE: Tgt_Tile | Tgt_Obj_Radius | Tgt_Obj_No_ST_Critter_Dead, Radius: 2, [Callback]AoE: Tgt_Summoned}
+{13262}{[Callback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}

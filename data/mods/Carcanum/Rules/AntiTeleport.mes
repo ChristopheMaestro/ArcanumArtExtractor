@@ -1,0 +1,21 @@
+// Anti Teleport Regions
+
+//   These specify circles wherein Teleportation via Spells is disallowed
+// on the *world* (or primary) map.  Other maps (dungeons/etc.) map to their
+// location on the world map for purposes of checking this.
+
+// X, Y, Radius (in sectors, of a circle)
+
+{100}{20515, 54051, 55}  // Close to the Home of Maximillian  (Just south of it)
+{101}{96416, 18911, 5} // The area surrounding the home of the Dark Elves
+
+
+// List of Anti-Teleport *Maps*
+
+// Note: -1 is placeholder, change it to a valid MapID from maplist.mes!
+
+{1000}{5069}  // Fa'al Kin's Maze
+{1001}{5007}  // VOID
+{1002}{5071}  // VOID - Arronax's Interior
+{1003}{5072}  // VOID -Kerghans Castle
+{1004}{5074}  // VOID - Cave Of Kriggyrd's Falchion

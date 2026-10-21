@@ -1,0 +1,59 @@
+{1}{PREPARE TO DIE, ACCURSED PIRATE!}{PREPARE TO DIE, ACCURSED PIRATE!}{}{}{}{gf3205 1}
+{2}{Do not be afraid. I am not a pirate.}{}{5}{}{30}{re +5}
+{3}{You no be afraid. @pcname@ no pirate.}{}{-4}{}{30}{re +5}
+{4}{Is that how you welcome a stranger?!}{}{5}{}{30}{}
+{5}{One more word like that and I will beat you to a pulp...}{}{5}{}{30}{re -5}
+{6}{Cool your head before it bursts...}{}{-4}{}{30}{re -5}
+
+{30}{[As his surprise slowly fades, the man studies you, suddenly perplexed.]}{[As his surprise slowly fades, the man studies you, suddenly perplexed.]}{}{}{}{}
+{31}{Who are you?}{}{5}{}{60}{}
+{32}{You who?}{}{-4}{}{60}{}
+{33}{What's going on here?}{}{5}{}{60}{}
+{34}{What happen in village?}{}{-4}{}{60}{}
+
+{60}{My name is Henri Hauchecorne. I am the last survivor of the fishing village. Pirates attacked us last night. All my companions are dead...}{My name is Henri Hauchecorne. I am the last survivor of the fishing village. Pirates attacked us last night. All my companions are dead...}{}{}{}{re +5}
+{61}{Who are these pirates?}{}{5}{}{90}{}
+{62}{Who pirates?}{}{-4}{}{90}{}
+{63}{Why were you attacked?}{}{5}{}{120}{}
+{64}{Why pirates attack here?}{}{-4}{}{120}{}
+
+{90}{Who are they, and where did they come from? I do not know. All I know is that they landed on the island's southern beach... Nothing will survive in their wake. We are living on borrowed time, but trust me, the end is near...}{Who are they, and where did they come from? I do not know. All I know is that they landed on the island's southern beach... Nothing will survive in their wake. We are living on borrowed time, but trust me, the end is near...}{}{}{}{lf1 1, re +5}
+{91}{Why were you attacked?}{}{5}{lf2 0}{120}{}
+{92}{Why pirates attack here?}{}{-4}{lf2 0}{120}{}
+{93}{What will you do now?}{}{5}{lf1 1, lf2 1}{150}{}
+{94}{What you do now?}{}{-4}{lf1 1, lf2 1}{150}{}
+
+{120}{The pirates are searching for the famous treasure of Hermann Toothrot, the old hermit. Many treasure hunters have tried, but none ever found a single gold coin. At least they were peaceful... I do not even know whether the hermit is still alive; it has been so long since we saw him. Even if he is alive, people say his solitude finally drove him mad...}{The pirates are searching for the famous treasure of Hermann Toothrot, the old hermit. Many treasure hunters have tried, but none ever found a single gold coin. At least they were peaceful... I do not even know whether the hermit is still alive; it has been so long since we saw him. Even if he is alive, people say his solitude finally drove him mad...}{}{}{}{lf2 1, re +5, qu1274 1}
+{121}{Who are these pirates?}{}{5}{lf1 0}{90}{}
+{122}{Who pirates?}{}{-4}{lf1 0}{90}{}
+{124}{What will you do now?}{}{5}{lf1 1, lf2 1}{150}{}
+{125}{What you do now?}{}{-4}{lf1 1, lf2 1}{150}{}
+
+{150}{All I can do is hope the pirates find the treasure before they think of coming back this way... To tell you the truth, I think that fabulous hoard is nothing more than a legend...}{All I can do is hope the pirates find the treasure before they think of coming back this way... To tell you the truth, I think that fabulous hoard is nothing more than a legend...}{}{}{}{re +5}
+{151}{Will you follow me if I go deal with the pirates?}{}{5}{}{180}{}
+{152}{You follow @pcname@ if me fight pirates?}{}{-4}{}{180}{}
+
+{180}{Ha! Ha! Ha!... You are joking, I presume! How do you expect to drive off the pirates all by yourself?}{Ha! Ha! Ha!... You are joking, I presume! How do you expect to drive off the pirates all by yourself?}{}{}{}{}
+{181}{I will find a way.}{}{5}{}{210}{}
+{182}{@pcname@ find way.}{}{-4}{}{210}{}
+{183}{You underestimate me, sir.}{}{5}{}{210}{}
+{184}{You not know @pcname@ strength!}{}{-4}{}{210}{}
+{185}{Since you are waiting for death, face it with dignity by following me.}{}{5}{}{210}{re +10}
+{186}{You wait for pirates kill. Follow me instead!}{}{-4}{}{210}{re +10}
+
+{210}{I do not know whether you are sane, but... very well! Before we die, though, grant me one favor: could you bring me a bottle of Chateau Be'ron wine? There is a connoisseur in the village. "Borrow" a bottle from him for me, one last little pleasure...}{I do not know whether you are sane, but... very well! Before we die, though, grant me one favor: could you bring me a bottle of Chateau Be'ron wine? There is a connoisseur in the village. "Borrow" a bottle from him for me, one last little pleasure...}{}{}{}{}
+{211}{All right.}{}{1}{ni3613}{0}{qu1273 2}
+{212}{I will think about it.}{}{5}{ni3613}{0}{qu1273 1}
+{213}{@pcname@ think about it.}{}{-4}{ni3613}{0}{qu1273 1}
+{214}{Could this be the wine you wanted? [You hand him the bottle.]}{}{5}{in3613}{-6}{qu1273 4, in3613}
+{215}{[You hand him the bottle.]}{}{-4}{in3613}{-6}{qu1273 4, in3613}
+
+{250}{Watch out for the pirate archer. He is deadly, believe me.}{Watch out for the pirate archer. He is deadly, believe me.}{}{}{}{}
+
+{300}{Do you have what I asked for?}{Do you have what I asked for?}{}{}{}{}
+{301}{Y:}{}{1}{in3613}{-6}{qu1273 4, in3613}
+{302}{N:}{}{1}{ni3613}{0}{}
+
+{330}{I am with you.}{I am with you.}{}{}{}{}
+
+{500}{I thought I was finished...}{I thought I was finished...}{}{}{}{}

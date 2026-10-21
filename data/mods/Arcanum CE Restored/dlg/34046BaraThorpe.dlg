@@ -1,0 +1,66 @@
+{1}{What can I do for you?}{What can I do for you?}{}{}{}{}
+{2}{Who did you say you were again?}{}{5}{}{10}{}
+{3}{What you do again?}{}{-4}{}{10}{}
+{4}{B:}{}{1}{}{0}{}
+{5}{Q:1010}{}{1}{}{0}{}
+{6}{T:8,9}{}{1}{}{0}{}
+{7}{E:}{}{1}{}{0}{}
+{10}{Bara Thorpe, exotic trader. I deal only in the odd, the unique items. Items with history.}{Bara Thorpe, exotic trader. I deal only in the odd, the unique items. Items with history.}{}{}{}{}
+{11}{[Game Explanation...]}{}{1}{}{20}{}
+{12}{F:}{}{1}{}{1}{}
+{20}{I buy keys, Notes, books, and unique items you think you might need later but don't want to carry around. My inventory doesn't reset, so don't worry about losing things.}{I buy keys, Notes, books, and unique items you think you might need later but don't want to carry around. My inventory doesn't reset, so don't worry about losing things.}{}{}{}{}
+{21}{F:}{}{1}{}{0}{}
+{50}{Hello there! My name's Bara. Who might you be?}{Hello there! My name's Bara. Who might you be?}{}{}{}{}
+{51}{I'm @PCNAME@. Well met.}{}{5}{}{1}{lf1 1}
+{52}{Me @PCNAME@. Hiya.}{}{-4}{}{1}{lf1 1}
+{53}{I don't think so. Good bye.}{}{5}{}{1}{lf1 1}
+{54}{E:}{}{1}{}{0}{lf1 1}
+{60}{Quest stuff Here}{Quest Stuff here}{}{}{}{}
+{61}{Have you got an work I could do?}{}{1}{}{100}{qu 1270 1}
+{62}{About that job...}{}{1}{}{110}{}
+{63}{I'm still working on finding the Landers.}{}{1}{}{120}{}
+{64}{The Landers are dead...}{}{1}{}{130}{qu 1270 4, lf2 1}
+{65}{Have you got any work that I could do?}{}{1}{}{0}{fl 180}
+{66}{Yoo gotz any werd for me?}{}{1}{}{100}{qu 1270 1}
+{67}{Me want to talk about job...}{}{1}{}{110}{}
+{68}{I still look for Landers Famulee.}{}{1}{}{120}{}
+{69}{Landers famulee is ded.}{}{1}{}{130}{qu 1270 4, lf2 1}
+{100}{It's funny you should mention that, because I have got something I'd like you to do. The day the Man in Black came into town, he came to the Landers door and... they let him in. He came out later, but I haven't seen any of them since. Please sir, the Landers have a boy, barely 13 years old. Can you find out what happened to them?}{It's funny you should mention that, because I have got something I'd like you to do. The day the Man in Black came into town, he came to the Landers door and... they let him in. He came out later, but I haven't seen any of them since. Please ma'am, the Landers have a boy, barely 13 years old. Can you find out what happened to them?}{}{}{}{}
+{101}{Certainly. Is there anything else you can tell me that might be important?}{}{5}{}{150}{qu 1270 2}
+{102}{Okie. Anyting else I shood know?}{}{-4}{}{150}{qu 1270 2}
+{103}{I think not. Solve your own problems.}{}{5}{}{0}{re -2, fl 250}
+{104}{Haha, no. You figure it out yooself, stoopid ladee!}{}{-4}{}{0}{re -2, fl 250}
+{105}{Perhaps. What will be the fee?}{}{5}{}{107}{}
+{106}{E:}{}{1}{}{0}{}
+{107}{Well sir, if that is what is important to you, I can pay you 25 coin. Will you help them?}{Well sir, if that is what is important to you, I can pay you 25 coin. Will you help them?}{}{}{}{}
+{108}{Ok.}{}{1}{}{150}{re -1}
+{109}{E:}{}{1}{}{0}{re -1}
+{110}{Yes, finding out what happened to the Landers family. Are you willing to accept the task?}{Yes, finding out what happened to the Landers family. Are you willing to accept the task?}{}{}{}{}
+{111}{Yes, lady. I will help you. What else can you tell me?}{}{5}{}{150}{}
+{112}{Ok, me help. What else you tell me?}{}{-4}{}{150}{}
+{113}{No.}{}{1}{}{0}{}
+{120}{Alright. Remember, their house is on the far west side of Newberg, south of Erenor's KnickKnacks. Please find them!}{Alright. Remember, their house is on the far west side of Newberg, south of Erenor's KnickKnacks. Please find them!}{}{}{}{}
+{121}{E:}{}{1}{}{0}{}
+{130}{Oh my god! No! Please! Poor Elaina! [She sobs uncontrollably, her shoulders shaking with tears.] I can't believe they're dead.}{Oh my god! No! Please! Poor Elaina! [She sobs uncontrollably, her shoulders shaking with tears.] I can't believe they're dead.}{}{}{}{}
+{131}{My apologies, madame. I am very sorry for your loss.}{}{5}{}{140}{al 1}
+{132}{Uh.}{}{-4}{}{140}{}
+{133}{Just give me my payment and I will be off.}{}{5}{}{135}{re -2, al -1, $$ 25}
+{134}{Yoo pay me muney. Now.}{}{-4}{}{135}{re -2, al -1, $$ 25}
+{135}{[Her lips tighten and her face hardens.] If the money is what you want then money you will get. [She hands you the 25 coin.]}{[Her lips tighten and her face hardens.] If the money is what you want then money you will get. [She hands you the 25 coin.]}{}{}{}{}
+{136}{E:}{}{1}{}{0}{}
+{137}{I'm sorry...}{}{5}{}{0}{re 1, al 1}
+{140}{Yes, it's just the shock of losing them... Oh I'm sorry, you need your payment, hold on a moment...}{Yes, it's just the shock of losing them... Oh I'm sorry, you need your payment, hold on a moment...}{}{}{}{}
+{141}{Thank you for the 25 coin, madame. Good day.}{}{5}{}{0}{$$ 25}
+{142}{Okie, thanks for coins bye bye.}{}{-4}{}{0}{$$ 25}
+{143}{Please madame, keep the coin, by all means. I'm only sorry I couldn't help them sooner.}{}{5}{}{145}{re 2, al 1}
+{145}{Thank you for your kindness, young man. I'll be sure to tell everyone about how good you are.}{Thank you for your kindness, young man. I'll be sure to tell everyone about how good you are.}{}{}{}{}
+{146}{E:}{}{1}{}{0}{}
+{150}{It's settled then. They live just to the west of my home, south of Erenor's KnickKnacks. It's on the far west side of Newberg. Please let me know what you find. I'll be waiting with 25 coin for you then.}{It's settled then. They live just to the west of my home, south of Erenor's KnickKnacks. It's on the far west side of Newberg. Please let me know what you find. I'll be waiting with 25 coin for you then.}{}{}{}{}
+{151}{I've already found them... they're all dead.}{}{1}{gf3129 1}{130}{qu1270 4}
+{152}{Me alreddy find dem peeples. Dey all dead.}{}{1}{gf3129 1}{130}{qu1270 4}
+{155}{E:}{}{1}{gf3129 0}{0}{qu 1270 2}
+{180}{No way. I don't even want to talk to you.}{No way. I don't even want to talk to you.}{}{}{}{}
+{190}{Oh}{}{1}{}{}{}
+{200}{Hello, sir, and thank you again for helping us put the Landers family to rest. How can I be of assistance?}{Hello, sir, and thank you again for helping us put the Landers family to rest. How can I be of assistance?}{}{}{}{}
+{201}{E:}{}{1}{}{0}{}
+{250}{I will not be spoken to in such a fashion. Good day, sir!}{I will not be spoken to in such a fashion. Good day, Madame!}{}{}{}{}

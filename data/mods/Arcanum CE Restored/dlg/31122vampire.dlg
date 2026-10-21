@@ -1,0 +1,42 @@
+// Dialog starts at 10 and will only happen once. Later dialogs float line 80 and exit
+// Note: Shulgar is KOS if the player has the book
+
+{10}{Stop! I, Shulgar the Black, demand that you go no farther!}{Stop! I, Shulgar the Black, demand that you go no farther!}{}{}{}{}
+{11}{I do not recognize your authority, Shulgar.}{}{5}{}{20}{}
+{12}{Who are you to order me so?}{}{5}{}{20}{}
+{13}{Duh...me am @pcname@. Who you?}{}{-4}{}{20}{}
+
+{20}{I rule these caverns, and all undead here answer to me!}{I rule these caverns, and all undead here answer to me!}{}{}{}{}
+{21}{I come seeking a book, the Pnakotic Manuscript. Have you head of it?}{}{5}{}{30}{}
+{22}{Me want book. Called the Neurotic Man Skit.}{}{-4}{}{30}{}
+{23}{Zeebo here doesn't.}{}{5}{pa 8001}{70}{}
+
+{30}{[Shulgar hisses!] Sssssssssss! Damn you! I *had* the book, after all these years! After all these centuries of waiting.}{[Shulgar hisses!] Sssssssssss! Damn you woman! I *had* the book, after all these years! After all these centuries of waiting.}{}{}{}{}
+{31}{Where is it now?}{}{5}{}{40}{}
+{32}{Wow, you must be a real loser!}{}{5}{}{0}{co}
+{33}{Where be book?}{}{-4}{}{40}{}
+
+{40}{[Shulgar averts his eyes.] I summoned an Old One and commanded him to destroy the accursed temple above.}{[Shulgar averts his eyes.] I summoned an Old One and commanded him to destroy the accursed temple above.}{}{}{}{}
+{41}{The temple still stands. I just came from there.}{}{5}{}{50}{}
+{42}{Yes, yes, but what about the book?}{}{5}{}{50}{}
+{43}{Where be book?!}{}{-4}{}{50}{}
+
+{50}{Ssssssss! The Old One stole it! He would not obey me! The formulae must be wrong, for I made no mistake!}{Ssssssss! The Old One stole it! He would not obey me! The formulae must be wrong, for I made no mistake!}{}{}{}{}
+{51}{Sounds like you made a mistake to me.}{}{5}{}{0}{co}
+{52}{You dumb! Read bad. Me read gud.}{}{-4}{}{0}{co}
+{53}{Where is this Old One now? Tell me, please.}{}{5}{}{60}{}
+{54}{Me kill dis Old One. You point me where he is.}{}{-4}{}{60}{}
+
+{60}{[Shulgar eyes you warily.] Certainly, friend. The Old one has gone deeper into the caverns. Seek him, if you must. But remember, he is nearly invulnerable. You will need Habor's special ebon blade to cut his hide.}{[Shulgar eyes you warily.] Certainly, friend. The Old one has gone deeper into the caverns. Seek him, if you must. But remember, he is nearly invulnerable. You will need Habor's special ebon blade to cut his hide.}{}{}{}{gf 3003 1}
+{61}{I shall. Goodbye, Shulgar.}{}{5}{}{0}{}
+{62}{Me go kill now.}{}{-4}{}{0}{}
+
+{70}{The little one is no concern of mine.}{The little one is no concern of mine.}{}{}{}{}
+{71}{Just pointing out that you are a liar.}{}{5}{}{0}{co}
+{72}{I come seeking a book, the Pnakotic Manuscript. Have you head of it?}{}{5}{}{30}{}
+{73}{Me want book. Called the Neurotic Man Skit.}{}{-4}{}{30}{}
+{74}{Zeebo is undead. You not control all undead. You a liar!}{}{-4}{}{0}{co}
+
+{80}{I will speak to you no more. Find my book!}{I will speak to you no more. Find my book!}{}{}{}{}
+
+//{}{}{}{}{}{}{}

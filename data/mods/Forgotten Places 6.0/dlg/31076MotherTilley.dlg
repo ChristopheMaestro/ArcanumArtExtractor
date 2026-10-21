@@ -1,0 +1,89 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Hello.  Can I ask you something?}{}{5}{lf1 0, re 41}{25}{}
+{3}{Do you always greet potential "guest" in such a manner?!}{}{5}{lf1 0, re -40}{19}{}
+{4}{Hello.  Can I ask you something?}{}{5}{lf1 1, re 41}{25}{}
+{5}{Err...  Can I ask you a question?}{}{5}{lf1 1, re -40}{25}{}
+{14}{Who you be?}{}{-4}{lf1 0, re 41}{25}{}
+{15}{Who you be, meanie?}{}{-4}{lf1 0, re -40}{19}{}
+{16}{Me ask sumthin'?}{}{-4}{lf1 1, re 41}{25}{}
+{17}{Uh...  Me ask sumthin'?}{}{-4}{lf1 1, re -40}{25}{}
+{18}{E:}{}{1}{}{0}{}
+{19}{[very sarcastically]  Ha!  Guest!  ...We don't like your kind around here, mister...}{[very sarcastically]  Ha!  Guest!  ...We don't like your kind around here, lady...}{}{}{}{}
+{20}{Uh...  I "have" coin...}{}{5}{}{76}{}
+{21}{Well!  I am sure my coin will be appreciated elsewhere!  Goodbye!}{}{5}{}{0}{}
+{22}{Uh...  Me got coin...}{}{-4}{}{76}{}
+{23}{Phaw!  Me take coin sum place else den!}{}{-4}{}{0}{}
+{24}{F:}{}{1}{}{0}{}
+{25}{What d'ya want?}{What d'ya want?}{}{}{}{lf1 1}
+{26}{I would like a bed for the night.}{}{5}{gf2399 0, lf 10 0}{45}{}
+{27}{How much to stay a week?}{}{5}{ha7, gf2399 0, lf 10 0}{52}{}
+{28}{How much to stay a week?}{}{5}{ha-6, gf2399 0, lf 10 0}{57}{}
+{29}{Me stay 'ere 'nite?}{}{-4}{gf2399 0, lf 10 0}{45}{}
+{30}{Me get bed for week?}{}{-4}{ha7, gf2399 0, lf 10 0}{52}{}
+{31}{Me get bed for week?}{}{-4}{ha-6, gf2399 0, lf 10 0}{57}{}
+{32}{I would like to be trained to be an Expert pick pocket.}{}{5}{tr5 -1}{35}{et5 86}
+{33}{Uh... Me wan' be Xper' pik pokut guy.}{}{-4}{tr5 -1}{35}{et5 86}
+{34}{E:}{}{1}{}{0}{}
+{35}{Is there sumthin' else?}{Is there sumthin' else?}{}{}{}{}
+{36}{I would like a bed for the night.}{}{5}{gf2399 0, lf 10 0}{45}{}
+{37}{How much to stay a week?}{}{5}{ha7, gf2399 0, lf 10 0}{52}{}
+{38}{How much to stay a week?}{}{5}{ha-6, gf2399 0, lf 10 0}{57}{}
+{39}{Me stay 'ere 'nite?}{}{-4}{gf2399 0, lf 10 0}{45}{}
+{40}{Me get bed for week?}{}{-4}{ha7, gf2399 0, lf 10 0}{52}{}
+{41}{Me get bed for week?}{}{-4}{ha-6, gf2399 0, lf 10 0}{57}{}
+{42}{I would like to be trained to be an Expert pick pocket.}{}{5}{tr5 1, tr5 -1, sk5 9}{86}{}
+{43}{Uh... Me wan' be Xper' pik pokut guy.}{}{-4}{tr5 1, tr5 -1, sk5 9}{86}{}
+{44}{E:}{}{1}{}{0}{}
+{45}{The price is 13 coins.  Take it or leave it buddy...}{The price is 13 coins.  Take it or leave it lady...}{}{}{}{}
+{46}{Here you are. [hand him the coin]}{}{5}{$$ 13}{-2}{$$-13, lf 13 1, lf 10 1}
+{47}{[looking around] That's a little steep... but here. [hand him the coin]}{}{5}{$$ 13}{-2}{$$-13, lf 13 1, lf 10 1}
+{48}{Uh...  here.  [hand him the coin]}{}{-4}{$$ 13}{-2}{$$-13, lf 13 1, lf 10 1}
+{49}{For dis!  Dat a lot...  [sigh]  Here.  [hand him the coin]}{}{-4}{$$ 13}{-2}{$$-13, lf 13 1, lf 10 1}
+{50}{K:}{}{1}{}{35}{}
+{51}{F:}{}{1}{}{0}{re-2}
+{52}{Get lucky down at the docks, eh?  Mus' be nice to be rich.  Hmm... [seems to struggle for a moment]  Never was good at those high falutin' calculations...  Let's see...  [thinks some more]  A full week'll cost ya 67 coin.}{Get lucky down at the docks, eh?  Mus' be nice to be rich.  Hmm... [seems to struggle for a moment]  Never was good at those high falutin' calculations...  Let's see...  [thinks some more]  A full week'll cost ya 67 coin.}{}{}{}{}
+{53}{Here. [hand him the coin]}{}{5}{$$ 67}{-5}{$$-67, lf 13 0, lf 10 1}
+{54}{Uh...  T'anks.  Here.  [hand him the coin]}{}{-4}{$$ 67}{-5}{$$-67, lf 13 0, lf 10 1}
+{55}{K:}{}{1}{}{35}{}
+{56}{F:}{}{1}{}{0}{re-2}
+{57}{Get lucky down at the docks, eh?  Mus' be nice to be rich.  Hmm... [seems to struggle for a moment]  Never was good at those high falutin' calculations...  Let's see...  [thinks some more]  A full week'll cost ya 90 coin.}{Get lucky down at the docks, eh?  Mus' be nice to be rich.  Hmm... [seems to struggle for a moment]  Never was good at those high falutin' calculations...  Let's see...  [thinks some more]  A full week'll cost ya 90 coin.}{}{}{}{}
+{58}{Thank you.  Here. [hand him the coin]}{}{5}{$$ 90}{-5}{$$-90, lf 13 0, lf 10 1}
+{59}{Uh...  T'anks.  Here.  [hand him the coin]}{}{-4}{$$ 90}{-5}{$$-90, lf 13 0, lf 10 1}
+{60}{K:}{}{1}{}{35}{}
+{61}{F:}{}{1}{}{0}{re-2}
+{62}{Okay.  Go ahead and get yerself one o' the empty bunks.  This money is for tonight only. Just remember...  I don't put up with any fiten' or stealin' in this here establishment, hear?  Jus' keep to yerself and every thing'll be fine.}{Okay.  Go ahead and get yerself one o' the empty bunks.  This money is for tonight only. Just remember...  I don't put up with any fiten' or stealin' in this here establishment, hear?  Jus' keep to yerself and every thing'll be fine.}{}{}{}{}
+{63}{Thank you.}{}{5}{}{0}{}
+{64}{Uh...  T'anks.}{}{-4}{}{0}{}
+{65}{K:}{}{1}{}{35}{}
+{66}{I would like to be trained to be an Expert pick pocket.}{}{5}{tr5 1, tr5 -1, sk5 9}{86}{}
+{67}{Uh... Me wan' be Xper' pik pokut guy.}{}{-4}{tr5 1, tr5 -1, sk5 9}{86}{}
+{68}{E:}{}{1}{}{0}{}
+{69}{Okay.  Go ahead and get yerself one o' the empty bunks.  This money is for the next seven nights. Just remember...  I don't put up with any fiten' or stealin' in this here establishment, hear?  Jus' keep to yerself and every thing'll be fine.}{Okay.  Go ahead and get yerself one o' the empty bunks.  This money is for the next seven nights. Just remember...  I don't put up with any fiten' or stealin' in this here establishment, hear?  Jus' keep to yerself and every thing'll be fine.}{}{}{}{}
+{70}{Thank you.}{}{5}{}{0}{}
+{71}{Uh...  T'anks.}{}{-4}{}{0}{}
+{72}{K:}{}{1}{}{35}{}
+{73}{I would like to be trained to be an Expert pick pocket.}{}{5}{tr5 1, tr5 -1, sk5 9}{86}{}
+{74}{Uh... Me wan' be Xper' pik pokut guy.}{}{-4}{tr5 1, tr5 -1, sk5 9}{86}{}
+{75}{E:}{}{1}{}{0}{}
+{76}{Well...  In that case...  What can I do for you?}{Well...  In that case...  What can I do for you?}{}{}{}{}
+{77}{I would like a bed for the night.}{}{5}{gf2399 0, lf 10 0}{45}{}
+{78}{How much to stay a week?}{}{5}{ha7, gf2399 0, lf 10 0}{52}{}
+{79}{How much to stay a week?}{}{5}{ha-6, gf2399 0, lf 10 0}{57}{}
+{80}{Me stay 'ere 'nite?}{}{-4}{gf2399 0, lf 10 0}{45}{}
+{81}{Me get bed for week?}{}{-4}{ha7, gf2399 0, lf 10 0}{52}{}
+{82}{Me get bed for week?}{}{-4}{ha-6, gf2399 0, lf 10 0}{57}{}
+{83}{I would like to be trained to be an Expert pick pocket.}{}{5}{tr5 1, tr5 -1, sk5 9}{86}{}
+{84}{Uh... Me wan' be Xper' pik pokut guy.}{}{-4}{tr5 1, tr5 -1, sk5 9}{86}{}
+{85}{E:}{}{1}{}{0}{}
+{86}{Yeah...  I can do that.  I want 500 for teachin' ya though.  You got it?}{Yeah...  I can do that.  I want 500 for teachin' ya though.  You got it?}{}{}{}{}
+{87}{Yes.  Here is the coin. [hand him the coin]}{}{5}{$$500}{92}{}
+{88}{I need to gather a few coin first.  I'll be back.}{}{5}{$$-499}{0}{}
+{89}{Uh...  yeah.  Here coin.  [hand him the coin]}{}{-4}{$$500}{92}{}
+{90}{Me no got coin.  Me be back.}{}{-4}{$$-499}{0}{}
+{91}{F:}{}{1}{}{0}{}
+{92}{[He looks surprised]  Thanks buddy.  [He takes a few moments to review your skills and demonstrate some new techniques to you.]  There.  Consider yerself an Expert at Picking Pockets.  You ever wanna be a Master, go see Sammie White.  He hangs out near Metro Station.}{[He looks surprised]  Thanks lady.  [He takes a few moments to review your skills and demonstrate some new techniques to you.]  There.  Consider yerself an Expert at Picking Pockets.  You ever wanna be a Master, go see Sammie White.  He hangs out near Metro Station.}{}{}{}{$$-500, tr5 2, ru2160}
+{93}{Thank you.  Goodbye.}{}{5}{}{0}{}
+{94}{K:}{}{1}{}{35}{}
+{95}{T'anks.  Buh-bye.}{}{-4}{}{0}{}
+{96}{E:}{}{1}{}{0}{}
+

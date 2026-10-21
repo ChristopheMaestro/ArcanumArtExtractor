@@ -1,0 +1,244 @@
+{1}{Hi I am Althea.I am Virgil's friend. I am glad to meet you .}{Hi I am Althea.I am Virgil's friend I am glad to meet you .}{}{}{}{}
+{2}{I am @pcname@ . I was a passenger on the blimp . I am the only survivor from that crash.}{}{6}{}{4}{}
+{3}{I am @pcname@ .Big blimp crash . Me lucky escape.}{}{-5}{}{4}{}
+{4}{Virgil saw the Blimp crash .He believes that you @pcname@ are a reincarnation of an elf that lived 2000 years ago .Of course I don't believe that nonsense. But I do care about Virgil a lot. And you @pcname@ it seems that you need all the help that you can get right now.}{Virgil saw the Blimp crash .He believes that you @pcname@ are a reincarnation of an elf that lived 2000 years ago .Of course I don't believe that nonsense. But I do care about Virgil a lot. And you @pcname@ it seems that you need all the help that you can get right now.}{}{}{}{}
+{5}{Are you suggesting that you should come with me and Virgil ? }{}{6}{}{7}{}
+{6}{Want to comme with Virgina and me ?}{}{-5}{}{7}{}
+{7}{Mayby @pcname@ .}{Mayby @pcname@ .}{}{}{}{}
+{8}{But it could be very dangerous.}{}{6}{}{500}{}
+{9}{You coulda hurta badly if comma with Vigila and  moushelf.}{}{-5}{}{500}{}
+{100}{What do you need me to do?}{What do you need me to do?}{}{}{}{}
+{101}{You can stop waiting now, Althea.}{}{5}{wa 1}{0}{uw 0 280}
+{102}{K:}{}{1}{wa 0}{300}{}
+{103}{What sort of things can you make, Althea?}{}{5}{wa 0}{}{su}
+{104}{Whut stuff you make, Althea?}{}{-4}{wa 0}{}{su}
+{105}{E:}{}{1}{}{0}{}
+{106}{B:}{}{1}{wa 0}{}{}
+{107}{More ..}{}{1}{}{110}{}
+{110}{What more  do you need me to do?}{What more  do you need me to do?}{}{}{}{}
+{111}{Move away, Althea.}{}{5}{}{0}{so}
+{112}{Move a bit closer, Althea.}{}{5}{}{0}{sc}
+{113}{Wait here for a while...}{}{5}{wa 0}{-20}{wa}
+{114}{Can you prepare  a potion of haste for me Althea ?}{}{20}{$$200,ra9 }{700}{}
+{115}{Get away, Althea!}{}{-4}{}{0}{so}
+{116}{Come closer, Althea!}{}{-4}{}{0}{sc}
+{117}{You wait here...}{}{-4}{wa 0}{0}{wa}
+{118}{Stop waitin', Althea!}{}{-4}{wa 1}{0}{uw 0 280}
+{280}{ Let's get going...}{Let's get going...}{}{}{}{}
+{281}{E:}{}{1}{}{0}{}
+{300}{What do you want to know @pcname@}{What do you want to know @pcname@}{}{}{}{}
+{301}{Where are you coming from ?}{}{1}{}{400}{}
+{302}{Is Virgil your husband ?}{}{1}{}{410}{}
+{303}{Can you tell me about yourshelf ?}{}{1}{}{}{ce }
+{304}{Can you repair stuff ?}{}{12}{}{}{ri }
+{400}{Oh it's a long story and i don't want to share it with you.}{Oh it's a long story and i don't want to share it with you.}{}{}{}{}
+{401}{Ok then lets continue our adventure. }{}{1}{}{0}{}
+{410}{Oh no he is not we are just good friends.}{Oh no he is not we are just good friends. }{}{}{}{}
+{411}{Ok then lets continue our adventure. }{}{1}{}{0}{}
+{500}{I am a very capable person .I can take care of myshelf.So will you ask me to join your party ?}{I am a very capable person .I can take care of myshelf.So will you ask me to join your party ?}{}{}{}{}
+{501}{I would like you to join my party .}{}{5}{}{580}{jo 0 600,gf2795 1}
+{502}{Stop waitin', Althea!}{}{-4}{}{580}{jo 0 600,gf2795 1}
+{503}{Sorry Althea but i do not need you right now.}{}{1}{}{0}{}
+{580}{Sorry there are too many people in your party}{Sorry there are too many people in your party}{}{}{}{}
+{581}{Ok.}{}{1}{}{}{}
+{600}{I am happy to join you}{I am happy to join you}{}{}{}{}
+{601}{Ok.}{}{1}{}{}{}
+{700}{Of course but this service will cost you 200 gold coins @pcname@ .Do you still want me to prepare a potion of haste ?}{Of course but this service will cost you 200 gold coins @pcname@ .Do you still want me to prepare a potion of haste ?}{}{}{}{}
+{701}{Yes please.}{}{1}{}{-25}{$$-200 }
+{702}{No i have changed my mind Althea.}{}{1}{}{0}{}
+{703}{How do you manage to find the ingredients to create this potion Althea ?}{}{1}{}{704}{}
+{704}{This is a family secret @pcname@ . I will protect this secret with my life.}{This is a family secret @pcname@ . I will protect this secret with my life.}{}{}{}{}
+{705}{Ok I am sorry that i asked.}{}{1}{}{0}{re -5}
+{706}{So you are not telling me ? Time for you to die !}{}{1}{}{0}{wa,re -30000  , co,al -10}
+{800}{Look . I don't believe the things Virgil said to me about you but I do worry about  you @pcname@ .}{Look . I don't believe the things Virgil said to me about you but I do worry about  you @pcname@ .}{}{}{}{}
+{801}{Then please come with me.}{}{1}{}{580}{jo 0 600,gf2795 1}
+{802}{Stop waitin', Althea!}{}{-4}{}{580}{uw 0 600}
+{900}{By the way @pcname@ what season of the year have you been born?}{By the way @pcname@ what season of the year have you been born?}{}{}{}{}
+{901}{I was born in the summer (June, July, August).}{}{1}{}{905}{}
+{902}{I was born in the autumn (September, October, November).}{}{1}{}{910}{}
+{903}{I was born in the winter (December, January, February).}{}{1}{}{915}{}
+{904}{I was born in the spring (March, April, May).}{}{1}{}{920}{}
+{905}{So what month were you born in summer?}{So what month were you born in summer ?}{}{}{}{}
+{906}{I was born in June.(+4 constitution)}{}{1}{}{-32}{gv 1203 6}
+{907}{I was born in July.(+4 perception)}{}{1}{}{-32}{gv 1203 7}
+{908}{I was born in August.(+1 max followers)}{}{1}{}{-32}{gv 1203 8}
+{909}{Oh sorry wrong season.}{}{1}{}{900}{}
+{910}{So what month were you born in autumn?}{So what month were you born in autumn?}{}{}{}{}
+{911}{I was born in September.(+3 intelligence)}{}{1}{}{-32}{gv 1203 9}
+{912}{I was born in October.(+7 life +7 fatigue)}{}{1}{}{-32}{gv 1203 10}
+{913}{I was born in November.(+8/4 spot traps)}{}{1}{}{-32}{gv 1203 11}
+{914}{Oh sorry wrong season.}{}{1}{}{900}{}
+{915}{So what month were you born in winter?}{So what month were you born  in winter ?}{}{}{}{}
+{916}{I was born in December.(+6/4 persuasion)}{}{1}{}{-32}{gv 1203 12}
+{917}{I was born in January.(+8/4 prowling)}{}{1}{}{-32}{gv 1203 1}
+{918}{I was born in February.(+2 strength)}{}{1}{}{-32}{gv 1203 2}
+{919}{Oh sorry wrong season.}{}{1}{}{900}{}
+{920}{So what month were you born in spring?}{So what month were you born  in spring ?}{}{}{}{}
+{921}{I was born in March.(+5 melee damage)}{}{1}{}{-32}{gv 1203 3}
+{922}{I was born in April.(+2 dexterity)}{}{1}{}{-32}{gv 1203 4}
+{923}{I was born in May.(Min fire res 65)}{}{1}{}{-32}{gv 1203 5}
+{924}{Oh sorry wrong season.}{}{1}{}{900}{}
+{1000}{By the way @pcname@ what kind of bonus do you want?}{By the way @pcname@ what kind of bonus do you want?}{}{}{}{}
+{1001}{I want one of the normal bonus (Speedboy, Lifegiver, Fatiguegiver).}{}{1}{}{1005}{}
+{1002}{I want one of the stats bonus (Perception Boy, Smart Boy, Mule Boy).}{}{1}{}{1010}{}
+{1003}{I want one of the extra bonus  (Trapper Boy, Haggle Boy, Healing Boy).}{}{1}{}{1015}{}
+{1004}{I want one of the extra bonus (March, April, May).}{}{20}{$$100000, pe20,al100 }{1020}{}
+{1005}{Choose your normal bonus @pcname@.}{Choose your normal bonus @pcname@.}{}{}{}{}
+{1006}{Speed Boy.(+1 Speed)}{}{1}{}{0}{gv 1205 1 ,gv 1206  298 ,gv 1207  1 }
+{1007}{Lifegiver.(+5 life)}{}{1}{}{0}{gv 1205 2 ,gv 1206  314 ,gv 1207  5 }
+{1008}{Fatiguegiver.(+5  fatigue)}{}{1}{}{0}{gv 1205 3 ,gv 1206  316 ,gv 1207  5 }
+{1009}{Oh sorry wrong choice.}{}{1}{}{1000}{}
+{1010}{By the way @pcname@ what kind of stat bonus do you want?}{By the way @pcname@ what kind of stat bonus do you want?}{}{}{}{}
+{1011}{Smart boy .(+1 intelligence.)}{}{1}{}{0}{gv 1205 4 ,gv 1206  229 ,gv 1207 1}
+{1012}{PerceptiveBoy .(+1 perception.)}{}{1}{}{0}{gv 1205 5 ,gv 1206  231 ,gv 1207 1}
+{1013}{Mule Boy .(+1000 carrying capacity)}{}{1}{}{0}{gv 1205 6 ,gv 1206  294 ,gv 1207 2}
+{1014}{Oh sorry wrong choice.}{}{1}{}{1000}{}
+{1015}{By the way @pcname@ what kind of power bonus do you want?}{By the way @pcname@ what kind of power bonus do you want?}{}{}{}{}
+{1016}{Trapper boy .(+4/4  spot traps skill.)}{}{1}{pe12}{0}{gv 1205 11,gv 1206  254 ,gv 1207 4}
+{1017}{Haggle Boy .(4/4 haggle skill.)}{}{12}{}{0}{gv 1205 12,gv 1206  264 ,gv 1207 4}
+{1018}{Heal Boy .(+4/4 Heal skill)}{}{12}{}{0}{gv 1205 13,gv 1206  266 ,gv 1207 4}
+{1019}{Oh sorry wrong choice.}{}{1}{}{1000}{}
+{1020}{So what month were you born in spring?}{So what month were you born  in spring ?}{}{}{}{}
+{1021}{I was born in March.(+5 melee damage)}{}{1}{}{0}{gv 1205 999}
+{1022}{I was born in April.(+2 dexterity)}{}{1}{}{0}{gv 1205 999}
+{1023}{I was born in May.(Min fire res 65)}{}{1}{}{0}{gv 1205 999}
+{1024}{Oh sorry wrong season.}{}{1}{}{1000}{}
+{1100}{By the way @pcname@ what kind of bonus do you want?}{By the way @pcname@ what kind of bonus do you want?}{}{}{}{}
+{1101}{I want one of the normal bonus (Speedboy, Lifegiver, Fatiguegiver).}{}{1}{}{1105}{}
+{1102}{I want one of the stats bonus (Perception Boy, Smart Boy, Mule Boy).}{}{1}{}{1110}{}
+{1103}{I want one of the power bonus  (Throwing Boy, Ranger Boy, Repairman Boy).}{}{1}{}{1115}{}
+{1104}{I want one of the extra bonus (March, April, May).}{}{20}{$$100000, pe20}{1120}{}
+{1105}{Choose your normal bonus @pcname@.}{Choose your normal bonus @pcname@.}{}{}{}{}
+{1106}{Speed Boy.(+1 Speed)}{}{1}{}{0}{gv 1205 1 ,gv 1206  298 ,gv 1207  1 }
+{1107}{Lifegiver.(+5 life)}{}{1}{}{0}{gv 1205 2 ,gv 1206  314 ,gv 1207  5 }
+{1108}{Fatiguegiver.(+5  fatigue)}{}{1}{}{0}{gv 1205 3 ,gv 1206  316 ,gv 1207  5 }
+{1109}{Oh sorry wrong choice.}{}{1}{}{1100}{}
+{1110}{By the way @pcname@ what kind of stat bonus do you want?}{By the way @pcname@ what kind of stat bonus do you want?}{}{}{}{}
+{1111}{Smart boy .(+1 intelligence.)}{}{1}{}{0}{gv 1205 4 ,gv 1206  229 ,gv 1207 1}
+{1112}{PerceptiveBoy .(+1 perception.)}{}{1}{}{0}{gv 1205 5 ,gv 1206  231 ,gv 1207 1}
+{1113}{Mule Boy .(+1000 carrying capacity)}{}{1}{}{0}{gv 1205 6 ,gv 1206  294 ,gv 1207 2}
+{1114}{Oh sorry wrong choice.}{}{1}{}{1100}{}
+{1115}{By the way @pcname@ what kind of power bonus do you want?}{By the way @pcname@ what kind of power bonus do you want?}{}{}{}{}
+{1116}{Throwing Boy .(+5/4  throwing skill.)}{}{1}{ra-3 ,ra-4}{0}{gv 1205 21,gv 1206  262 ,gv 1207 5}
+{1117}{Ranger Boy .(5/4 Bows skill.)}{}{1}{ra-1 ,ra-2 ,ra-5,ra-6,ra-7,ra-8}{0}{gv 1205 22,gv 1206  256 ,gv 1207 5}
+{1118}{Repairman Boy .(+6/4 Reapairman skill)}{}{12}{}{0}{gv 1205 23,gv 1206  272 ,gv 1207 5}
+{1119}{Oh sorry wrong choice.}{}{1}{}{1100}{}
+{1120}{So what month were you born in spring?}{So what month were you born  in spring ?}{}{}{}{}
+{1121}{I was born in March.(+5 melee damage)}{}{1}{}{0}{gv 1205 999}
+{1122}{I was born in April.(+2 dexterity)}{}{1}{}{0}{gv 1205 999}
+{1123}{I was born in May.(Min fire res 65)}{}{1}{}{0}{gv 1205 999}
+{1124}{Oh sorry wrong season.}{}{1}{}{1100}{}
+{1200}{By the way @pcname@ what kind of bonus do you want?}{By the way @pcname@ what kind of bonus do you want?}{}{}{}{}
+{1201}{I want one of the normal bonus (Speedboy, Lifegiver, Fatiguegiver).}{}{1}{}{1205}{}
+{1202}{I want one of the stats bonus (Perception Boy, Smart Boy, Mule Boy).}{}{1}{}{1210}{}
+{1203}{I want one of the power bonus  (Firearms Boy, Disarm Boy, Picklocks Boy).}{}{1}{}{1215}{}
+{1204}{I want one of the power bonus (Thunder Boy, Fire boy, Gambling boy).}{}{1}{}{1220}{}
+{1205}{Choose your normal bonus @pcname@.}{Choose your normal bonus @pcname@.}{}{}{}{}
+{1206}{Speed Boy.(+1 Speed)}{}{1}{}{0}{gv 1205 1 ,gv 1206  298 ,gv 1207  1 }
+{1207}{Lifegiver.(+5 life)}{}{1}{}{0}{gv 1205 2 ,gv 1206  314 ,gv 1207  5 }
+{1208}{Fatiguegiver.(+5  fatigue)}{}{1}{}{0}{gv 1205 3 ,gv 1206  316 ,gv 1207  5 }
+{1209}{Oh sorry wrong choice.}{}{1}{}{1200}{}
+{1210}{By the way @pcname@ what kind of stat bonus do you want?}{By the way @pcname@ what kind of stat bonus do you want?}{}{}{}{}
+{1211}{Smart boy .(+1 intelligence.)}{}{1}{}{0}{gv 1205 4 ,gv 1206  229 ,gv 1207 1}
+{1212}{PerceptiveBoy .(+1 perception.)}{}{1}{}{0}{gv 1205 5 ,gv 1206  231 ,gv 1207 1}
+{1213}{Mule Boy .(+1000 carrying capacity)}{}{1}{}{0}{gv 1205 6 ,gv 1206  294 ,gv 1207 2}
+{1214}{Oh sorry wrong choice.}{}{1}{}{1200}{}
+{1215}{By the way @pcname@ what kind of power bonus do you want?}{By the way @pcname@ what kind of power bonus do you want?}{}{}{}{}
+{1216}{Firearms Boy .(+8/4  firearms skill.)}{}{1}{ra-8,ra-3 ,ra-4,pe16}{0}{gv 1205 31 ,gv 1206  274 ,gv 1207 8}
+{1217}{Disarm Traps Boy  .(8/4 disarm skill.)}{}{12}{ra-1 ,ra-2 ,ra-5 ,ra-6 ,ra-7}{0}{gv 1205 32 ,gv 1206  278 ,gv 1207 8}
+{1218}{Picklocks Boy .(+5/4 Ricklocks skill)}{}{12}{}{0}{gv 1205 33 ,gv 1206  276 ,gv 1207 5}
+{1219}{Oh sorry wrong choice.}{}{1}{}{1200}{}
+{1220}{By the way @pcname@ what kind of power bonus do you want?}{By the way @pcname@ what kind of power bonus do you want?}{}{}{}{}
+{1221}{Bruiser Boy.(+5 melee damage)}{}{-9}{ra-3,ra-5,ra-6}{0}{gv 1205 34 ,gv 1206  374 ,gv 1207 1}
+{1222}{Fire Boy.( fire resistance 65 min)}{}{1}{ra8}{0}{gv 1205 35 ,gv 1206  53 ,gv 1207 1}
+{1223}{Gambling boy.(+8/4 gambling)}{}{17}{}{0}{gv 1205 36 ,gv 1206  270 ,gv 1207 8}
+{1224}{Oh sorry wrong choice}{}{1}{}{1200}{}
+{1300}{By the way @pcname@ what kind of bonus do you want?}{By the way @pcname@ what kind of bonus do you want?}{}{}{}{}
+{1301}{I want one of the normal bonus (Speedboy, Lifegiver, Fatiguegiver).}{}{1}{}{1306}{}
+{1302}{I want one of the stats bonus (Perception Boy, Smart Boy, Mule Boy).}{}{1}{}{1311}{}
+{1303}{Power bonus  (Benevolent Scientist, Criminal Scientist, Science  Genius ).}{}{1}{}{1316}{}
+{1304}{power bonus (Human Gentelman, Dwarf Endurance, Ogre Bruiser).}{}{1}{}{1321}{}
+{1305}{I want one of the power bonus (Tough Adventurer, Elven Heritage).}{}{1}{}{1326}{}
+{1306}{Choose your normal bonus @pcname@.}{Choose your normal bonus @pcname@.}{}{}{}{}
+{1307}{Speed Boy.(+1 Speed)}{}{1}{}{0}{gv 1205 1 ,gv 1206  298 ,gv 1207  1 }
+{1308}{Lifegiver.(+5 life)}{}{1}{}{0}{gv 1205 2 ,gv 1206  314 ,gv 1207  5 }
+{1309}{Fatiguegiver.(+5  fatigue)}{}{1}{}{0}{gv 1205 3 ,gv 1206  316 ,gv 1207  5 }
+{1310}{Oh sorry wrong choice.}{}{1}{}{1300}{}
+{1311}{By the way @pcname@ what kind of stat bonus do you want?}{By the way @pcname@ what kind of stat bonus do you want?}{}{}{}{}
+{1312}{Smart boy .(+1 intelligence.)}{}{1}{}{0}{gv 1205 4 ,gv 1206  229 ,gv 1207 1}
+{1313}{PerceptiveBoy .(+1 perception.)}{}{1}{}{0}{gv 1205 5 ,gv 1206  231 ,gv 1207 1}
+{1314}{Mule Boy .(+1000 carrying capacity)}{}{1}{}{0}{gv 1205 6 ,gv 1206  294 ,gv 1207 2}
+{1315}{Oh sorry wrong choice.}{}{1}{}{1300}{}
+{1316}{By the way @pcname@ what kind of power bonus do you want?}{By the way @pcname@ what kind of power bonus do you want?}{}{}{}{}
+{1317}{Benevolent Scientist.(+2 max followers.)}{}{20}{ta100 ,al100 }{0}{gv 1205 41 ,gv 1206  308 ,gv 1207 2}
+{1318}{Criminal Mastermind.(+2 max followers.)}{}{5}{ta100 ,na-100 }{0}{gv 1205 42 ,gv 1206  308 ,gv 1207 2}
+{1319}{Science  Genius(+6 charisma)}{}{20}{ta100}{0}{gv 1205 43 ,gv 1206  235 ,gv 1207 6}
+{1320}{Oh sorry wrong choice.}{}{1}{}{1300}{}
+{1321}{By the way @pcname@ what kind of power bonus do you want?}{By the way @pcname@ what kind of power bonus do you want?}{}{}{}{}
+{1322}{Human Gentelman(+25 reaction)}{}{1}{ra1 }{0}{gv 1205 44 ,gv 1206  327 ,gv 1207 5}
+{1323}{Dwarf Endurance(+40 fatigue)}{}{1}{ra2}{0}{gv 1205 45 ,gv 1206  316 ,gv 1207 40}
+{1324}{Half Ogre Bruiser.(+10 melee damage)}{}{1}{ra8}{0}{gv 1205 46 ,gv 1206  374 ,gv 1207 2}
+{1325}{Oh sorry wrong choice}{}{1}{}{1300}{}
+{1326}{By the way @pcname@ what kind of power bonus do you want?}{By the way @pcname@ what kind of power bonus do you want?}{}{}{}{}
+{1327}{Tough Adventurer.(+10% damage resistance)}{}{1}{ra-1,ra-2,ra-8,ra-3,ra-4}{0}{gv 1205 47 ,gv 1206  333 ,gv 1207 10}
+{1328}{Elven Heritage.(+3 beauty +3 intelligence)}{}{1}{ra-1,ra-1,ra-2,ra-5,ra-6,ra-7,ra-8}{0}{gv 1205 48 ,gv 1206  229 ,gv 1207 3 ,gv 1208  227 ,gv 1209 3}
+{1329}{Oh sorry wrong choice}{}{1}{}{1300}{}
+{1400}{By the way @pcname@ what kind of bonus do you want?}{By the way @pcname@ what kind of bonus do you want?}{}{}{}{}
+{1401}{I want one of the normal bonus (Speedboy, Lifegiver, Fatiguegiver).}{}{1}{}{1406}{}
+{1402}{I want one of the stats bonus (Perception Boy, Smart Boy, Mule Boy).}{}{1}{}{1411}{}
+{1403}{Power bonus  (Healer Master, Gambling Master,Repair Master ).}{}{1}{}{1416}{}
+{1404}{power bonus (Firearms Master, Picklocks Master, Disarm Master).}{}{1}{}{1421}{}
+{1405}{I want one of the power bonus (Lone Wolf, Elven Heritage).}{}{1}{}{1426}{}
+{1406}{Choose your normal bonus @pcname@.}{Choose your normal bonus @pcname@.}{}{}{}{}
+{1407}{Speed Boy.(+1 Speed)}{}{1}{}{0}{gv 1205 1 ,gv 1206  298 ,gv 1207  1 }
+{1408}{Lifegiver.(+5 life)}{}{1}{}{0}{gv 1205 2 ,gv 1206  314 ,gv 1207  5 }
+{1409}{Fatiguegiver.(+5  fatigue)}{}{1}{}{0}{gv 1205 3 ,gv 1206  316 ,gv 1207  5 }
+{1410}{Oh sorry wrong choice.}{}{1}{}{1400}{}
+{1411}{By the way @pcname@ what kind of stat bonus do you want?}{By the way @pcname@ what kind of stat bonus do you want?}{}{}{}{}
+{1412}{Smart boy .(+1 intelligence.)}{}{1}{}{0}{gv 1205 4 ,gv 1206  229 ,gv 1207 1}
+{1413}{PerceptiveBoy .(+1 perception.)}{}{1}{}{0}{gv 1205 5 ,gv 1206  231 ,gv 1207 1}
+{1414}{Mule Boy .(+1000 carrying capacity)}{}{1}{}{0}{gv 1205 6 ,gv 1206  294 ,gv 1207 2}
+{1415}{Oh sorry wrong choice.}{}{1}{}{1400}{}
+{1416}{By the way @pcname@ what kind of power bonus do you want?}{By the way @pcname@ what kind of power bonus do you want?}{}{}{}{}
+{1417}{Healer Master.(+20 life.)}{}{1}{tr10 3}{0}{gv 1205 51 ,gv 1206  314 ,gv 1207 20}
+{1418}{Gambling Master.(+8/4 dodge.)}{}{1}{tr8 3}{0}{gv 1205 52 ,gv 1206  258 ,gv 1207 8}
+{1419}{Repair Master(Life increased by 15%)}{}{1}{tr12 3}{0}{gv 1205 53 ,gv 1206  280 ,gv 1207 3}
+{1420}{Oh sorry wrong choice.}{}{1}{}{1400}{}
+{1421}{By the way @pcname@ what kind of power bonus do you want?}{By the way @pcname@ what kind of power bonus do you want?}{}{}{}{}
+{1422}{Firearms Master(+4 beauty)}{}{1}{tr13 3}{0}{gv 1205 54 ,gv 1206  227 ,gv 1207 4}
+{1423}{Picklocks Master(+4 perception)}{}{1}{tr14 3}{0}{gv 1205 55 ,gv 1206  231 ,gv 1207 4}
+{1424}{Disarm Master.(+4 willpower)}{}{1}{tr15 3}{0}{gv 1205 56 ,gv 1206  233 ,gv 1207 4}
+{1425}{Oh sorry wrong choice}{}{1}{}{1400}{}
+{1426}{By the way @pcname@ what kind of power bonus do you want?}{By the way @pcname@ what kind of power bonus do you want?}{}{}{}{}
+{1427}{Lone Wolf.(+30 life +30 fatigue)}{}{1}{ch-7}{0}{gv 1205 57 ,gv 1206  318 ,gv 1207 30}
+{1428}{Elven Heritage.(+3 beauty +3 intelligence)}{}{1}{ra-1,ra-1,ra-2,ra-5,ra-6,ra-7,ra-8}{0}{gv 1205 58 ,gv 1206  229 ,gv 1207 3 ,gv 1208  227 ,gv 1209 3}
+{1429}{Oh sorry wrong choice}{}{1}{}{1400}{}
+{1500}{By the way @pcname@ what kind of bonus do you want?}{By the way @pcname@ what kind of bonus do you want?}{}{}{}{}
+{1501}{I want one of the normal bonus (Speedboy, Lifegiver, Fatiguegiver).}{}{1}{}{1506}{}
+{1502}{I want one of the stats bonus (Perception Boy, Smart Boy, Mule Boy).}{}{1}{}{1511}{}
+{1503}{Power bonus  (The Terminator, Tireless Mage, Ninja).}{}{1}{}{1516}{}
+{1504}{power bonus (Diplomacy Master, Technology Master, Meta Master).}{}{1}{}{1521}{}
+{1506}{Choose your normal bonus @pcname@.}{Choose your normal bonus @pcname@.}{}{}{}{}
+{1507}{Speed Boy.(+1 Speed)}{}{1}{}{0}{gv 1205 1 ,gv 1206  298 ,gv 1207  1 }
+{1508}{Lifegiver.(+5 life)}{}{1}{}{0}{gv 1205 2 ,gv 1206  314 ,gv 1207  5 }
+{1509}{Fatiguegiver.(+5  fatigue)}{}{1}{}{0}{gv 1205 3 ,gv 1206  316 ,gv 1207  5 }
+{1510}{Oh sorry wrong choice.}{}{1}{}{1500}{}
+{1511}{By the way @pcname@ what kind of stat bonus do you want?}{By the way @pcname@ what kind of stat bonus do you want?}{}{}{}{}
+{1512}{Smart boy .(+1 intelligence.)}{}{1}{}{0}{gv 1205 4 ,gv 1206  229 ,gv 1207 1}
+{1513}{PerceptiveBoy .(+1 perception.)}{}{1}{}{0}{gv 1205 5 ,gv 1206  231 ,gv 1207 1}
+{1514}{Mule Boy .(+1000 carrying capacity)}{}{1}{}{0}{gv 1205 6 ,gv 1206  294 ,gv 1207 2}
+{1515}{Oh sorry wrong choice.}{}{1}{}{1500}{}
+{1516}{By the way @pcname@ what kind of power bonus do you want?}{By the way @pcname@ what kind of power bonus do you want?}{}{}{}{}
+{1517}{The Terminator.(All your hits become critical.)}{}{1}{tr13 3 ,tr10 3 ,tr1 3 ,tr2 3}{0}{gv 1205 61 ,gv 1206  300 ,gv 1207 100}
+{1518}{Tireless Mage.(+50 fatigue.)}{}{1}{ma100}{0}{gv 1205 62 ,gv 1206  316 ,gv 1207 50}
+{1519}{Ninja(+30 damage bonus in melee)}{}{1}{tr4 3 ,tr5 3 ,tr6 3 ,tr7 3}{0}{gv 1205 63 ,gv 1206  374 ,gv 1207 6}
+{1520}{Oh sorry wrong choice.}{}{1}{}{1500}{}
+{1521}{By the way @pcname@ what kind of power bonus do you want?}{By the way @pcname@ what kind of power bonus do you want?}{}{}{}{}
+{1522}{Social Master(+35 life +35 fatigue)}{}{1}{tr8 3 ,tr9 3,tr11 3,tr 10 2}{0}{gv 1205 64 ,gv 1206  318 ,gv 1207 35}
+{1523}{Technology Master(+30% DR)}{}{1}{tr12 3 ,tr14 3,tr15 3 ,tr10 2,tr12 3}{0}{gv 1205 65 ,gv 1206  333 ,gv 1207 30}
+{1524}{Meta Master.(+12 perception +12/4 firearms)}{}{1}{sc9 5,ta1}{0}{gv 1205 66 ,gv 1206  231 ,gv 1207 12 ,gv 1208  274 ,gv 1209 12}
+{1525}{Oh sorry wrong choice}{}{1}{}{1500}{}
+{1600}{Hi @pcname@ . Iam the spirit of your lost ancestors.You can always find me here at the old Panarii crypt.I am going to give you bonus when you are ready.}{Hi @pcname@ . Iam the spirit of your lost ancestors.You can always find me here at the old Panarii crypt.I am going to give you bonus when you are ready.}{}{}{}{}
+{1601}{Ok spirit.}{}{1}{}{0}{}
+{1650}{Goodbye now @pcname@ . I have trained you as much as I could . See you in the other side.}{Goodbye now @pcname@ . I have trained you as much as I could . See you in the other side.}{}{}{}{}
+{1651}{Bye spirit . I hope we dont meet soon.}{}{1}{}{-24}{}

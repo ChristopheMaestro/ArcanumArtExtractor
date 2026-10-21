@@ -1,0 +1,161 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Greetings, my good fellow.  Might I ask who you are?}{}{5}{me 0, re 41}{34}{}
+{3}{Hello again, Hamfist.  Might I ask you a few questions?}{}{5}{me 1, re 41}{38}{}
+{4}{Excuse me!  Did I hear you correctly? What have I done to offend you?}{}{5}{me 0, re -40}{10}{}
+{5}{I say!  Is there something I've done to offend you?}{}{5}{me 1, re -40}{10}{}
+{6}{Uh...hi!  Who you?}{}{-4}{me 0}{34}{}
+{7}{Hey, Hamfist!  I talk to you...?}{}{-4}{me 1}{38}{}
+{8}{E:}{}{1}{}{0}{}
+{10}{(Growling his words) Yuh.. Me no like you. Go away... }{(Growling his words) Yuh.. Me no like you. Go away... }{}{}{}{}
+{11}{Are you QUITE sure of that opinion?}{}{5}{ch 11}{29}{}
+{12}{Can't we talk in a more civilized manner...?}{}{5}{me 0}{24}{re +15}
+{13}{Look, my good fellow,  I thought we'd put our differences behind us...}{}{5}{me 1}{24}{re +15}
+{14}{You're asking for trouble with words like that, half-breed...}{}{5}{}{17}{re -5}
+{15}{E:}{}{1}{}{0}{}
+{17}{You no threat to me.... (He bares his teeth)}{You no threat to me.... (He bares his teeth)}{}{}{}{}
+{18}{Things need not deteriorate so.  Please, accept my apologies...}{}{5}{}{24}{re +15}
+{19}{I'm afraid that you're going to have to.  You've sealed your fate...}{}{5}{}{}{co, fl 22}
+{20}{E:}{}{1}{}{0}{}
+{22}{Haaa!! Battle! (ROAR!!!)}{Haaa!! Battle! (ROAR!!!)}{}{}{}{}
+{24}{Well.... Maybee.... Sometimes me talk first, think later. Try again? }{Well.... Maybee.... Sometimes me talk first, think later. Try again? }{}{}{}{}
+{25}{I'd like that,.  Might I ask who you are?}{}{5}{me 0}{34}{re +5}
+{26}{Sounds good to me, My good fellow.  Might I ask you a question or two?}{}{5}{me 1}{38}{}
+{27}{E:}{}{1}{}{0}{}
+{29}{Well.... Maybee not.... Sometimes me talk first, think later. Try again? }{Well.... Maybee not.... Sometimes me talk first, think later. Try again? }{}{}{}{}
+{30}{Of course. Of course.  Might I ask your name, my good man?}{}{5}{me 0}{34}{}
+{31}{Of course, Hamfist.  Do you have a moment?}{}{5}{me 1}{38}{}
+{32}{E:}{}{1}{}{0}{}
+{34}{Me called Hamfist. }{Me called Hamfist. }{}{}{}{}
+{35}{Hamfist - indeed.  Have you got a moment?}{}{5}{}{38}{}
+{36}{Hamfist, yuh...  I aks you sum questions?}{}{-4}{}{38}{}
+{38}{What you wan' ?}{What you wan' ?}{}{}{}{}
+{39}{What are you doing here, Hamfist?}{}{5}{lf1 0}{55}{lf1 1}
+{40}{What are you doing here, Hamfist?}{}{5}{lf1 1}{55}{lf 1 0}
+{42}{I would like to engage your services, Hamfist.}{}{5}{lf3 1, $$1000}{155}{jo 2 160, $$-1000}
+{43}{I would like to engage your services, Hamfist.}{}{5}{lf3 1, $$-999}{165}{}
+{44}{Whut you do here, Hamfist?}{}{-4}{lf1 0}{55}{}
+{46}{Whut you do here, Hamfist?}{}{-4}{if 1 1}{55}{if 1 0}
+{47}{You wanna come with me?}{}{-4}{lf3 1, $$1000}{155}{jo 2 160, $$-1000}
+{48}{You wanna come with me?}{}{-4}{lf3 1, $$-999}{165}{}
+{49}{K:}{}{1}{}{38}{}
+{50}{E:}{}{1}{}{0}{}
+{55}{Me need money. Need work - make money. Me good wit sword.}{Me need money. Need work - make money. Me good wit sword.}{}{}{}{lf1 1}
+{56}{Yes, I well imagine you are. How much money are we talking about?}{}{5}{}{65}{}
+{57}{Am I correct in assuming you are a mercenary?}{}{5}{}{170}{}
+{59}{Yuh, you look like you can fight good. How much money you need?}{}{-4}{}{65}{}
+{60}{You mer-cen-ary?}{}{-4}{}{170}{}
+{62}{K:}{}{1}{}{38}{}
+{63}{E:}{}{1}{}{0}{}
+{65}{1000 gold. You pay me 1000 gold an' I do what you wan'.}{1000 gold. You pay me 1000 gold an' I do what you wan'.}{}{}{}{}
+{66}{That's a little high. Are your services worth that much?}{}{5}{}{75}{lf2 1}
+{67}{Oooo, lot of money. You really that good?}{}{-4}{}{75}{lf2 1}
+{70}{E:}{}{1}{}{0}{}
+{75}{Yeah - me that good. Me no run from fight, me no be traitor, me be there when you need strong hands. Me do anythin' to any-body you say. }{Yeah - me that good. Me no run from fight, me no be traitor, me be there when you need strong hands. Me do anythin' to any-body you say. }{}{}{}{}
+{76}{Well, that is good to know.}{}{5}{}{120}{}
+{77}{Is good.}{}{-4}{}{120}{}
+{120}{You wan' to hire me?}{You wan' to hire me?}{}{}{}{}
+{121}{Hmmm.  Perhaps I shall. A thousand gold you say...?}{}{5}{$$1000}{150}{re +5}
+{122}{Hmmm.  Perhaps I shall. A thousand gold you say...?}{}{5}{$$-999}{165}{}
+{123}{Not right now.  A few more questions...?}{}{5}{}{38}{re -5}
+{124}{Uh...Yeah! Mebbe you come with me!}{}{-4}{$$1000}{150}{re +5}
+{125}{Uh...Yeah! Mebbe you come with me!}{}{-4}{$$-999}{165}{}
+{126}{Uh...Not today.  Sum more questions...?}{}{-4}{}{38}{re -5}
+{127}{E:}{}{1}{}{0}{}
+{150}{Yuh, 1000 - no less.}{Yuh, 1000 - no less.}{}{}{}{lf3 1}
+{151}{So...you'll come along, then?}{}{5}{}{155}{jo 2 160, $$-1000}
+{152}{So you wanna come?}{}{-4}{}{155}{jo 2 160, $$-1000}
+{155}{Anythin' else?}{Anythin' else?}{}{}{}{}
+{156}{K:}{}{1}{}{38}{}
+{157}{E:}{}{1}{}{0}{}
+{160}{Me ready to go now.}{Me ready to go now.}{}{}{}{re +5}
+{161}{Then let's do so...}{}{5}{}{-14}{}
+{162}{Okay!  Let's go!}{}{-4}{}{-14}{}
+{165}{Nooo... You not have 'nuff money. Mebee later.}{Nooo... You not have 'nuff money. Mebee later.}{}{}{}{}
+{166}{K:}{}{1}{}{38}{}
+{167}{E:}{}{1}{}{0}{}
+{170}{Yuh, me mer-cen-ary. You have problem wit dat?}{Yuh, me mer-cen-ary. You have problem wit dat?}{}{}{}{}
+{171}{No, not at all. How much for your services?}{}{5}{}{65}{}
+{172}{Uh...No... How much you get?}{}{-4}{}{65}{}
+{173}{E:}{}{1}{}{0}{}
+{210}{Wha' you wan' from me?}{Wha' you wan' from me?}{}{}{}{}
+{211}{B:}{}{1}{wa 0}{-14}{}
+{212}{K:}{}{1}{wa 0}{225}{}
+{213}{I'd like you to do something for me, Hamfist...}{}{5}{wa 0}{267}{}
+{214}{I need you do sumthin' Hamfist...}{}{-4}{wa 0}{267}{}
+{215}{What sort of things can you make, Hamfist?}{}{5}{wa 0}{}{su}
+{216}{Whut stuff you make, Hamfist?}{}{-4}{wa 0}{}{su}
+{217}{You can stop waiting now, Hamfist.}{}{5}{wa 1}{295}{uw 0 280}
+{218}{Stop waitin' Hamfist!}{}{-4}{wa 1}{295}{uw 0 280}
+{219}{E:}{}{1}{}{0}{}
+{225}{Wha' you need to know?}{Wha' you need to know?}{}{}{}{}
+{226}{I'd like to know a few things about you, Hamfist...}{}{5}{}{}{ce}
+{228}{What do you know about this place?}{}{5}{ia 91}{316}{}
+{229}{What do you know about this place?}{}{5}{ia 8}{321}{}
+{230}{What do you know about this place?}{}{5}{ia -91, ia -8}{326}{}
+{231}{You seem upset with me, Hamfist!  Is there anything I can do for you?}{}{5}{re -10}{239}{}
+{232}{I wanna know stuff 'bout you, Hamfist!}{}{-4}{}{}{ce}
+{234}{Whut you know 'bout this place?}{}{-4}{ia 91}{316}{}
+{235}{Whut you know 'bout this place?}{}{-4}{ia 3}{321}{}
+{236}{Whut you know 'bout this place?}{}{-4}{ia -91, ia -3}{326}{}
+{237}{You mad at me, Hamfist!  Kin I do sumthin' fer you?}{}{-4}{re -10}{239}{}
+{238}{E:}{}{1}{}{0}{}
+{239}{Well... You... Me not happy wit you. But! Me like sweet cakes. That maybee make alright.}{Well... You... Me not happy wit you. But! Me like sweet cakes. That maybee make alright.}{}{}{}{}
+{240}{Come now, Hamfist...is that really necessary?}{}{5}{ch 15}{249}{re +20}
+{241}{Thank goodness I've got some right here!}{}{5}{in 3618, ch -14}{-11}{re +20}
+{242}{I'll look into getting you some, Hamfist...}{}{5}{in -3618, ch -14}{257}{}
+{243}{Oh, the foolish things we dream of!  Let's go, shall we?}{}{5}{}{}{re -5, fl 259}
+{246}{Good!  I got some here!}{}{-4}{in 3618, ch -14}{-11}{re +20}
+{247}{I get you sum soon, Hamfist!}{}{-4}{in -3618, ch -14}{257}{}
+{248}{Too bad!  You no getting' nuthin'!}{}{-4}{}{}{re -5, fl 259}
+{249}{[Hamfist seems torn, but can't seem to resist your charm.]  Maybee it just me.  Let's go.....}{[Hamfist seems torn, but can't seem to resist your charm.]  Maybee it just me.  Let's go.....}{}{}{}{}
+{250}{E:}{}{5}{}{0}{}
+{251}{[He takes them from you, eating them in one bite.]  Ah.  That's better. Let's go!}{[He takes them from you, eating them in one bite.]  Ah.  That's better. Let's go!}{}{}{}{}
+{252}{So you'll join me again, Hamfist?}{}{5}{}{295}{jo 0 298}
+{253}{E:}{}{5}{}{0}{}
+{257}{Good!  Me look forward to it!}{Good!  Me look forward to it!}{}{}{}{}
+{258}{E:}{}{5}{}{0}{}
+{259}{[Soft growl] Huh! Me no take this much longer...}{[Soft growl] Huh! Me no take this much longer...}{}{}{}{}
+{267}{What you need me to do?}{What you need me to do?}{}{}{}{}
+{268}{Move away, Hamfist.}{}{5}{}{0}{so}
+{269}{Move a bit closer, Hamfist.}{}{5}{}{0}{sc}
+{270}{Wait here for a while...}{}{5}{wa 0}{283}{wa}
+{271}{You can stop waiting now, Hamfist.}{}{5}{wa 1}{295}{uw 0 280}
+{272}{I think you'd best leave the group.}{}{5}{}{286}{lv}
+{273}{Get away, Hamfist!}{}{-4}{}{0}{so}
+{274}{Come closer, Hamfist!}{}{-4}{}{0}{sc}
+{275}{You wait here...}{}{-4}{}{283}{wa}
+{276}{Stop waitin', Hamfist!}{}{-4}{}{295}{uw 0 280}
+{277}{I no want you in group anymore...}{}{-4}{}{286}{lv}
+{278}{[Back]}{}{1}{}{210}{}
+{280}{Okay! Right behind you.}{Okay! Right behind you.}{}{}{}{}
+{281}{E:}{}{1}{}{0}{}
+{283}{Okay.  No take too long, alright?}{Okay.  No take too long, alright?}{}{}{}{}
+{284}{E:}{}{1}{}{0}{}
+{286}{Oh. Well...  'bye...}{Oh. Well...  'bye...}{}{}{}{lf31 1}
+{287}{E:}{}{1}{}{0}{}
+{289}{Hello.  Good to see you.}{Hello.  Good to see you.}{}{}{}{}
+{290}{Will you join me again, Hamfist?}{}{5}{}{295}{jo 0 298}
+{291}{You seem upset with me, Hamfist!  Is there anything I can do for you?}{}{5}{re -10}{239}{}
+{292}{You wanna join, Hamfist?}{}{-4}{}{295}{jo 0 298}
+{293}{You mad at me, Hamfist!  Kin I do sumthin' fer you?}{}{-4}{re -10}{239}{}
+{294}{E:}{}{1}{}{0}{}
+{295}{Anythin' else?}{Anythin' else?}{}{}{}{}
+{296}{E:}{}{1}{}{0}{}
+{298}{Yuh... Good idea!  Let's go...}{Yuh... Good idea!  Let's go...}{}{}{}{lf31 0}
+{299}{E:}{}{1}{}{0}{}
+{301}{Hmmm.  Make me wait long time, didn't you?}{Hmmm.  Make me wait long time, didn't you?}{}{}{}{}
+{302}{Sorry about that Hamfist.  Will you join me again?}{}{5}{}{295}{jo 0 298}
+{303}{You seem upset with me, Hamfist!  Is there anything I can do for you?}{}{5}{re -10}{239}{}
+{312}{I no mean to!  You wanna join me, Hamfist?}{}{-4}{}{295}{jo 0 298}
+{313}{You mad at me, Hamfist!  Kin I do sumthin' fer you?}{}{-4}{re -10}{239}{}
+{314}{K:}{}{1}{}{225}{}
+{315}{E:}{}{1}{}{0}{}
+{316}{This is Leah-bo. All they do here is catch fishies and sell stuff to treas-ure hunters who come through town. Is not bad.}{This is Leah-bo. All they do here is catch fishies and sell stuff to treas-ure hunters who come through town. Is not bad.}{}{}{}{}
+{317}{K:}{}{1}{}{225}{}
+{318}{E:}{}{1}{}{0}{}
+{321}{heh... This is Ash-bury. Me like it here. Nice people at bar by docks.}{heh... This is Ash-bury. Me like it here. Nice people at bar by docks.}{}{}{}{}
+{322}{K:}{}{1}{}{225}{}
+{323}{E:}{}{1}{}{0}{}
+{326}{[He looks around, shaking his head.]  Me not know. Mebee be here before but no can remem-ber. Maybee me drink too much dat day. Heh...}{[He looks around, shaking his head.]  Me not know. Mebee be here before but no can remem-ber. Maybee me drink too much dat day. Heh...}{}{}{}{}
+{327}{K:}{}{1}{}{225}{}
+{328}{E:}{}{1}{}{0}{}

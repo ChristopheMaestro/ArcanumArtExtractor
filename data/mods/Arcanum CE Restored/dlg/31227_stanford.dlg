@@ -1,0 +1,380 @@
+lf1: PC has asked attachee if everything is all right
+lf2: PC has told attachee about laela
+
+//added
+lf3: PC heard all about Laela but hasn't offered to talk to her
+
+
+
+{1}{[This young man appears to be lost in thought.]}{[This young man appears to be lost in thought.]}{}{}{}{}
+{2}{Sir..?  Is everything alright?}{}{5}{lf1 0, gf3010 0}{11}{}
+{3}{Wa ya lookin' at?}{}{-4}{lf1 0, gf3010 0}{11}{}
+{4}{Can I have another minute of your time?}{}{5}{lf1 1, gf3010 0, qu1193 0}{125}{}
+{5}{Tawk to ya?}{}{-4}{lf1 1, gf3010 0, qu1193 0}{125}{}
+{6}{I talked to her, Stanford.}{}{5}{gf3015 1, lf2 0, gf3010 0, qu 1193 3}{133}{}
+{7}{Laelieeee tok ta @pcname@, Stannie!!}{}{-4}{gf3015 1, lf2 0, gf3010 0, qu 1193 3}{133}{}
+{8}{Hi, Stanford.}{}{5}{lf2 1, gf3010 0}{200}{}
+{9}{Tok Stanfo?}{}{-4}{lf2 1, gf3010 0}{200}{}
+{10}{E:}{}{1}{gf3010 0}{0}{}
+{11}{[He finally notices you] Oh…
+  Oh!  I'm terribly sorry.  What were we talking about again?}{[He finally notices you] Oh…  Oh!  I'm terribly sorry.  What were we talking about again?}{}{}{}{lf1 1}
+{12}{Is something the matter?}{}{5}{}{17}{}
+{13}{We weren't talking, sir.  Good day.}{}{5}{}{0}{}
+{14}{Wa ya lookin' at?  Wa'sda matter?}{}{-4}{}{17}{}
+{15}{}{}{}{}{}{}
+{16}{}{}{}{}{}{}
+{17}{Matter?  Why, of course it matters!  I'm in love with her!  I can't stop thinking about her.  I can hardly eat or sleep or do anything…
+  She's… She's the most beautiful lady in all of Arcanum!  [He sighs.]}{Matter?  Why, of course it matters!  I'm in love with her!  I can't stop thinking about her.  I can hardly eat or sleep or do anything…  She's… She's the most beautiful lady in all of Arcanum!  [He sighs.]}{}{}{}{}
+{18}{You mean to tell me she's more beautiful than I am?}{0}{5}{}{23}{}
+{19}{Is she even prettier than the girls at Madame Lil's?}{1}{5}{}{23}{}
+{20}{Where da purdy ladeeeeeeeeeeeeee?}{}{-4}{}{83}{}
+{21}{Who is she?}{}{5}{}{83}{}
+{22}{}{}{}{}{}{}
+{23}{Madame Lil's?  I've only heard stories about that scandalous place.}{I don't mean to be rude, miss, but you really shouldn't go around saying things like that.}{}{}{}{}
+{24}{[Menacingly] I'd like to hear you say that again.}{0}{5}{}{38}{}
+{25}{Are you serious?!  You people don't get out much around these parts, do you?}{1}{5}{}{38}{}
+{26}{}{}{}{}{}{}
+{27}{}{}{}{}{}{}
+{28}{Laela Morey is her name.  She's the town herbalist.  [sigh]}{Laela Morey is her name.  She's the town herbalist.  [sigh]}{}{}{}{}
+{29}{What are you standing around here for?  Did she turn you down?}{}{5}{}{53}{}
+{30}{Wanna see purdy ladeee too!!  Me go see!}{}{-4}{}{48}{}
+{31}{}{}{}{}{}{}
+{32}{}{}{}{}{}{}
+{33}{Stanford Lainson.  Nice to meet you, sir.}{Stanford Lainson.  Nice to meet you, madame.}{}{}{}{}
+{34}{Likewise.  Tell me more about Miss Morey.}{1}{5}{}{53}{}
+{35}{The pleasure is mine.  Tell me more about this Laela.}{0}{5}{}{53}{}
+{36}{Wa ya lookin' at?}{}{-4}{}{28}{}
+{37}{}{}{}{}{}{}
+{38}{A respectable gentleman doesn't spend his free time wandering brothels, sir.}{My apologies, madame.  I didn’t mean to offend your, uh... gentle sensibilities.  [You notice a bead of sweat trickle down his neck.]}{}{}{}{}
+{39}{To each his own, I suppose.  I'm @pcname@.}{1}{5}{}{43}{}
+{40}{We did start off on the wrong foot, didn't we?  I'm @pcname@.}{0}{5}{}{43}{}
+{41}{}{}{}{}{}{}
+{42}{}{}{}{}{}{}
+{43}{Stanford Lainson.  Nice to meet you, sir.}{Stanford Lainson.  Nice to meet you, madame.}{}{}{}{}
+{44}{So, this beautiful woman, who is she?}{}{5}{}{28}{}
+{45}{}{}{}{}{}{}
+{46}{}{}{}{}{}{}
+{47}{}{}{}{}{}{}
+{48}{What?!  Wait, you can't be serious!  You'll embarrass me, you idiot!}{What?!  Wait, you can't be serious!  You'll embarrass me, you idiot!}{}{}{}{}
+{49}{Durrr…
+?}{}{-4}{}{53}{}
+{50}{Who idiot?  Me no like weke little guyz.}{}{-4}{}{63}{}
+{51}{}{}{}{}{}{}
+{52}{}{}{}{}{}{}
+{53}{A few months ago, I set out from Vooriden to meet my mentor in Ashbury.  Since it would be a long trek, I decided to make a pit stop in Dusty Dunes to refresh my supplies and equipment before going on.  Little did I know, a group of orc bandits were roving the plains looking for any breathing corpse carrying a purse.  I ran into them of course.}{A few months ago, I set out from Vooriden to meet my mentor in Ashbury.  Since it would be a long trek, I decided to make a pit stop in Dusty Dunes to refresh my supplies and equipment before going on.  Little did I know, a group of orc bandits were roving the plains looking for any breathing corpse carrying a purse.  I ran into them of course.}{}{}{}{}
+{54}{You put up a good fight, I hope?}{}{5}{}{58}{}
+{55}{Hahahah, baddie orcs kilt ya!! Hahahahah!! [You roll over in laughter.]}{}{-4}{}{63}{}
+{56}{You're from Vooriden?  Are you a member of the Halcyon Order?}{}{5}{}{68}{}
+{57}{}{}{}{}{}{}
+{58}{[Stanford pats a boomerang in his pack] Of course!  I whipped out my boomerang and showed them the true skill of a throwing apprentice!  In fact, I had even managed to take down two of those bastards before their leader cracked me in the back of the head.  When I came to, I was in Dusty Dunes.  That's when I saw her for the first time...}{[Stanford pats a boomerang in his pack] Of course!  I whipped out my boomerang and showed them the true skill of a throwing apprentice!  In fact, I had even managed to take down two of those bastards before their leader cracked me in the back of the head.  When I came to, I was in Dusty Dunes.  That's when I saw her for the first time...}{}{}{}{}
+{59}{Laela rescued you from the orcs?}{}{5}{}{88}{}
+{60}{Who get ya ta duddydoos?}{}{-4}{}{88}{}
+{61}{}{}{}{}{}{}
+{62}{}{}{}{}{}{}
+{63}{[He glowers at you.]}{[He glowers at you.]}{}{}{}{}
+{64}{Durrr…
+?}{}{-4}{}{73}{}
+{65}{}{}{}{}{}{}
+{66}{}{}{}{}{}{}
+{67}{}{}{}{}{}{}
+{68}{Oh, no.  No, no, no.  I just happened to grow up in that town, but my family was never really into the religious thing.}{Oh, no.  No, no, no.  I just happened to grow up in that town, but my family was never really into the religious thing.}{}{}{}{}
+{69}{I see.  Well, as you were saying.  Did you show those bandits what you were made of?}{}{5}{}{58}{}
+{70}{}{}{}{}{}{}
+{71}{}{}{}{}{}{}
+{72}{}{}{}{}{}{}
+{73}{Come on, now.  Are you listening or what?  I'm telling a story here.}{Come on, now.  Are you listening or what?  I'm telling a story here.}{}{}{}{}
+{74}{I sorry.  You say yer storieeeeeee. You beated beet!}{}{-4}{}{58}{}
+{75}{}{}{}{}{}{}
+{76}{}{}{}{}{}{}
+{77}{}{}{}{}{}{}
+{78}{Oh, will you look at the time!  I'm going to watch the cacti grow now.  Thanks for the chat.}{Oh, will you look at the time!  I'm going to watch the cacti grow now.  Thanks for the chat.}{}{}{}{}
+{79}{}{}{}{}{}{}
+{80}{}{}{}{}{}{}
+{81}{}{}{}{}{}{}
+{82}{}{}{}{}{}{}
+{83}{[He blinks.]  How rude of me, I haven't even introduced myself.  Stanford Lainson, sir.  Nice to meet you.}{[He blinks.]  How rude of me, I haven't even introduced myself.  Stanford Lainson, madame.  Nice to meet you.}{}{}{}{}
+{84}{My name @pcname@.  Dats me!  Wherda purdy girlieee?}{}{-4}{}{28}{}
+{85}{I'm @pcname@.  Please, tell me more.}{}{5}{}{28}{}
+{86}{}{}{}{}{}{}
+{87}{}{}{}{}{}{}
+{88}{I'm not sure.  All I know is when I came around, Laela was tending to my headwound.  Her voice was so sweet.  And her eyes…
+ they were so soulful, so deep.  I lost myself in those beautiful eyes then.}{I'm not sure.  All I know is when I came around, Laela was tending to my headwound.  Her voice was so sweet.  And her eyes… they were so soulful, so deep.  I lost myself in those beautiful eyes then.}{}{}{}{}
+{89}{And that's when you took her hand and told her how beautiful she was, right?}{}{5}{}{93}{}
+{90}{Me lost too…
+}{}{-4}{}{98}{}
+{91}{And then you guys talked, right?}{}{5}{}{93}{}
+{92}{}{}{}{}{}{}
+{93}{Well, no.  I passed out a few seconds later.}{Well, no.  I passed out a few seconds later.}{}{}{}{}
+{94}{That's pretty pathetic, Stanford.}{}{5}{}{103}{}
+{95}{}{}{}{}{}{}
+{96}{}{}{}{}{}{}
+{97}{}{}{}{}{}{}
+{98}{Well, @pcname@, there's nothing more to say.  Two days later, I left her shop and haven't worked up the courage to talk to her since.  I mean, sometimes I'd get as far as her front door before I lost my nerve...}{Well, @pcname@, there's nothing more to say.  Two days later, I left her shop and haven't worked up the courage to talk to her since.  I mean, sometimes I'd get as far as her front door before I lost my nerve…
+}{}{}{}{}
+{99}{Ya wanna me tell purdy ladeee for ya?}{}{-4}{}{108}{}
+{100}{Bye-byeeeeeeeeee!}{}{-4}{}{0}{}
+{101}{}{}{}{}{}{}
+{102}{}{}{}{}{}{}
+{103}{It is, isn't it?  [He chuckles to himself.]  Two days later, I left her shop and haven't worked up the courage to talk to her since.  I mean, sometimes I'd get as far as her front door before I lost my nerve…
+}{It is, isn't it?  [He chuckles to himself.]  Two days later, I left her shop and haven't worked up the courage to talk to her since.  I mean, sometimes I'd get as far as her front door before I lost my nerve…}{}{}{}{lf3 1}
+{104}{I guess I could go ask her what she thinks about you [Wink, wink].}{}{5}{}{108}{}
+{105}{Hmm…
+ how much would you pay me to play matchmaker, Stan?}{}{5}{na -200}{118}{}
+{106}{Oh well, I guess you'll never know.}{}{5}{}{}{fl 113}
+{107}{}{}{}{}{}{}
+{108}{I don't know…
+  Oh heck, why not?!  Could you do that for me?  See if she remembers me at least?}{I don't know…  Oh heck, why not?!  Could you do that for me?  See if she remembers me at least?}{}{}{}{qu 1003 1}
+{109}{I'll be right back.}{}{5}{}{0}{qu 1193 2}
+{110}{Okey!!}{}{-4}{}{0}{qu 1193 2}
+{111}{}{}{}{}{}{}
+{112}{}{}{}{}{}{}
+{113}{No, I guess not.  It was really refreshing to talk about this with you.  Maybe one of these days I will work up the courage to talk to Miss Morey.}{No, I guess not.  It was really refreshing to talk about this with you.  Maybe one of these days I will work up the courage to talk to Miss Morey.}{}{}{}{}
+{114}{}{}{}{}{}{}
+{115}{}{}{}{}{}{}
+{116}{}{}{}{}{}{}
+{117}{}{}{}{}{}{}
+{118}{What are you talking about?  I'm just barely hanging on here!  I can't pay you!  I wouldn't be able to pay you even if I wanted to...}{What are you talking about?  I'm just barely hanging on here!  I can't pay you!  I wouldn't be able to pay you even if I wanted to...}{}{}{}{}
+{119}{Oh fine.  I'll be right back.}{}{5}{}{0}{qu 1193 2}
+{120}{Well, forget I even asked.}{}{5}{}{0}{}
+{121}{}{}{}{}{}{}
+{122}{}{}{}{}{}{}
+{123}{}{}{}{}{}{}
+{124}{}{}{}{}{}{}
+{125}{I suppose so.}{I suppose so.}{}{}{}{}
+{126}{You're obviously deep in thought.  Is something the matter?}{}{5}{lf3 0}{17}{}
+{127}{Sumpthin da matterr?}{}{-4}{lf3 0}{17}{}
+{128}{Want me to ask Laela what she thinks about you? [Wink, wink].}{}{5}{lf3 1}{108}{}
+{129}{Ya wanna me talk ta purdy ladeee for ya?}{}{-4}{lf3 1}{108}{}
+{130}{}{}{}{}{}{}
+{131}{}{}{}{}{}{}
+{132}{}{}{}{}{}{}
+{133}{[He grabs your shoulder, hysterically.] You DID?! Oh my lord, what did she say?!  Did she remember me?! Did it take her a long time to recognize my name?!  Was she interested?!!  Does she want to see me as much as I want to see her?! This suspense is utterly killing me--What did she say, dammit!!}{[He grabs your shoulder, hysterically.] You DID?! Oh my lord, what did she say?!  Did she remember me?! Did it take her a long time to recognize my name?!  Was she interested?!!  Does she want to see me as much as I want to see her?! This suspense is utterly killing me--What did she say, dammit!!}{}{}{}{qu1193 4, lf2 1}
+{134}{Hmm…
+ Well, "interested" is such an interesting term…}{}{5}{ps4}{145}{}
+{135}{Maybe you should sit down for this…
+}{}{5}{}{145}{}
+{136}{You wimp. Did you really think she'd fall for someone like you?}{}{5}{na -200}{145}{}
+{137}{She no want yuuuuuu!!}{}{-4}{}{145}{}
+{138}{Mmmm…
+. Mange…?}{}{-4}{ps4}{145}{}
+{139}{Laelieee hates youse gutz!!  Heh.}{}{-4}{na -200}{145}{}
+{140}{}{}{}{}{}{}
+{141}{}{}{}{}{}{}
+{142}{}{}{}{}{}{}
+{143}{}{}{}{}{}{}
+{144}{}{}{}{}{}{}
+{145}{W-w-what do you mean? [He tightens his grip.]}{W-w-what do you mean? [He tightens his grip.]}{}{}{}{}
+{146}{She seems mildly, uh, distracted at the moment.}{}{5}{ps4}{185}{}
+{147}{Miss Morey is in love with the adventurer Franklin Payne.}{}{5}{}{155}{}
+{148}{She happens to have a sickening fascination for that Franklin Payne.}{}{5}{na -200}{155}{}
+{149}{Uhmm…
+ Laelieee wanna Frankie Frank Pay..?}{}{-4}{}{155}{}
+{150}{[You nearly burst a neuron thinking so hard for an excuse.] Ahha!!}{}{-4}{ps4}{165}{}
+{151}{Heheh, you wimpeh. Frankly Pay coo. Heh.}{}{-4}{na -200}{155}{}
+{152}{}{}{}{}{}{}
+{153}{}{}{}{}{}{}
+{154}{}{}{}{}{}{}
+{155}{Franklin Payne?!!  You can't be serious!! }{Franklin Payne?!!  You can't be serious!! }{}{}{}{}
+{156}{I know…
+  He's not even half the adventurer I am.}{}{5}{na -200}{175}{}
+{157}{Yah, @pcname@ cooer do.}{}{-4}{na -200}{175}{}
+{158}{I am. She admitted it herself.}{}{5}{}{175}{}
+{159}{Yapuuuu!! Frankie Frank Pay!!}{}{-4}{}{175}{}
+{160}{}{}{}{}{}{}
+{161}{}{}{}{}{}{}
+{162}{}{}{}{}{}{}
+{163}{}{}{}{}{}{}
+{164}{}{}{}{}{}{}
+{165}{[He lets go of your shoulder.] Yessss? I forgot who I was dealing with for a second.}{[He lets go of your shoulder.] Yessss? I forgot who I was dealing with for a second.}{}{}{}{}
+{166}{Laelieee wa busy…
+ She no times fer ya.}{}{-4}{ps4}{185}{}
+{167}{Umm…
+ Girlie likey Frankie Paaay.}{}{-4}{}{155}{}
+{168}{}{}{}{}{}{}
+{169}{}{}{}{}{}{}
+{170}{}{}{}{}{}{}
+{171}{}{}{}{}{}{}
+{172}{}{}{}{}{}{}
+{173}{}{}{}{}{}{}
+{174}{}{}{}{}{}{}
+{175}{[His face turns beet red, as if an internal struggle is about to tear him apart. He clenches his fists.]  I've made up my mind. I'm going with you.  We're finding this Franklin Payne and seeing just how much of a bigshot he really is!!}{[His face turns beet red, as if an internal struggle is about to tear him apart. He clenches his fists.]  I've made up my mind. I'm going with you.  We're finding this Franklin Payne and seeing just how much of a bigshot he really is!!}{}{}{}{}
+{176}{What?! No, you're not!! A wimp like you wouldn't last a second.}{}{5}{na -200}{195}{}
+{177}{Suit yourself, but I'm not bailing you out if you get in a fix.}{}{5}{na -200}{}{jo 1 183}
+{178}{Um, let's go then.}{}{5}{}{}{jo 1 183}
+{179}{Nooooooooo!! No join @pcname@!!}{}{-4}{na -200}{195}{}
+{180}{Okey mange.}{}{-4}{}{}{jo 1 183}
+{181}{Uh…
+ well, I'd rather not…}{}{5}{}{195}{}
+{182}{}{}{}{}{}{}
+{183}{Let's be off right this minute!  I've a bone to pick with this Payne!!}{Let's be off right this minute!  I've a bone to pick with this Payne!!}{}{}{}{}
+{184}{}{}{}{}{}{}
+{185}{But she does remember me? She's just more occupied with her career at the moment, right? I can live with that. [He lets go of your shoulder.] A strong woman with a tight vision for what she wants in life. That's so attractive!! [He looks around the bar.] Hmm, in the mean time, I guess I should get out of here and just do something. What do you say @pcname@? Since you're an adventurer and all, mind if I come along?}{But she does remember me? She's just more occupied with her career at the moment, right? I can live with that. [He lets go of your shoulder.] A strong woman with a tight vision for what she wants in life. That's so attractive!! [He looks around the bar.] Hmm, in the mean time, I guess I should get out of here and just do something. What do you say @pcname@? Since you're an adventurer and all, mind if I come along?}{}{}{}{}
+{186}{Sure, let's go.}{}{5}{}{}{jo 1 192}
+{187}{Okey, yay yay! Moor partyyyy!!}{}{5}{}{}{jo 1 192}
+{188}{Hmm…
+ I need to think about this.}{}{5}{}{195}{}
+{189}{Umm…
+ Bye bye..?}{}{-4}{}{195}{}
+{190}{}{}{}{}{}{}
+{191}{}{}{}{}{}{}
+{192}{Excellent! I'll cut down anything that stands in our way, @pcname@!}{Excellent! I'll cut down anything that stands in our way, @pcname@!}{}{}{}{}
+{193}{}{}{}{}{}{}
+{194}{}{}{}{}{}{}
+{195}{[His excitement deflates like a balloon.] I see…
+ Well, please let me know if you ever want my help.}{[His excitement deflates like a balloon.] I see… Well, please let me know if you ever want my help.}{}{}{}{}
+{196}{Will do.}{}{5}{}{0}{}
+{197}{Okey.}{}{-4}{}{0}{}
+{198}{}{}{}{}{}{}
+{199}{}{}{}{}{}{}
+{200}{Did you change your mind? Can I join your party?}{Did you change your mind? Can I join your party?}{}{}{}{}
+{201}{Sure, let's go.}{}{5}{}{}{jo 1 192}
+{202}{Okey, yay yay! Moor partyyyy!!}{}{-4}{}{}{jo 1 192}
+{203}{Maybe later.}{}{5}{}{0}{}
+{204}{Umm…
+ Bye bye..?}{}{-4}{}{0}{}
+{205}{}{}{}{}{}{}
+{206}{}{}{}{}{}{}
+{207}{}{}{}{}{}{}
+{208}{}{}{}{}{}{}
+{209}{}{}{}{}{}{}
+{210}{}{}{}{}{}{}
+{211}{}{}{}{}{}{}
+{212}{}{}{}{}{}{}
+{213}{}{}{}{}{}{}
+{214}{}{}{}{}{}{}
+{215}{}{}{}{}{}{}
+{216}{}{}{}{}{}{}
+{217}{}{}{}{}{}{}
+{218}{}{}{}{}{}{}
+{219}{}{}{}{}{}{}
+{220}{}{}{}{}{}{}
+{221}{}{}{}{}{}{}
+{222}{}{}{}{}{}{}
+{223}{}{}{}{}{}{}
+{224}{}{}{}{}{}{}
+{225}{}{}{}{}{}{}
+{226}{}{}{}{}{}{}
+{227}{}{}{}{}{}{}
+{228}{}{}{}{}{}{}
+{229}{}{}{}{}{}{}
+{230}{What's up, @pcname@?}{What's up, @pcname@?}{}{}{}{}
+{231}{B:}{}{1}{wa 0}{}{}
+{232}{K:}{}{1}{wa 0}{245}{}
+{233}{Could you do something for me, Stanford?}{}{5}{wa 0}{255}{}
+{234}{Ya doooo, do Stannie!}{}{-4}{wa 0}{255}{}
+{235}{Enough waiting, Stanford. Let's go.}{}{5}{wa 1}{250}{uw 0 240}
+{236}{Less go, mange!}{}{-4}{wa 1}{250}{uw 0 240}
+{237}{E:}{}{1}{}{0}{}
+{238}{}{}{}{}{}{}
+{239}{}{}{}{}{}{}
+{240}{I'm on it, @pcname@. Ready when you are.}{I'm on it, @pcname@. Ready when you are.}{}{}{}{}
+{241}{}{}{}{}{}{}
+{242}{}{}{}{}{}{}
+{243}{}{}{}{}{}{}
+{244}{}{}{}{}{}{}
+{245}{Of course.}{Of course.}{}{}{}{}
+{246}{I'd like to know a few things about you, Stanford.}{}{5}{}{}{ce}
+{247}{I wanna know stuff 'bout you, Stannie!}{}{-4}{}{}{ce}
+{248}{E:}{}{1}{}{0}{}
+{249}{}{}{}{}{}{}
+{250}{Anything else, sir?}{Anything else, madame?}{}{}{}{}
+{251}{E:}{}{1}{}{0}{}
+{252}{}{}{}{}{}{}
+{253}{}{}{}{}{}{}
+{254}{}{}{}{}{}{}
+{255}{Sure, and what would that be?}{Sure, and what would that be?}{}{}{}{}
+{256}{Move away, Stanford.}{}{5}{}{0}{so}
+{257}{Ya tooooooooo close me!!}{}{-4}{}{0}{so}
+{258}{Move a bit closer, Stanford.}{}{5}{}{0}{sc}
+{259}{Ya tooooooooo far me!!}{}{-4}{}{0}{sc}
+{260}{Wait here…
+}{}{5}{wa 0}{270}{wa}
+{261}{Ya staaaaaay!!}{}{-4}{wa 0}{270}{wa}
+{262}{Enough waiting, Stanford. Let's go.}{}{5}{wa 1}{250}{uw 0 240}
+{263}{Less go, mange!}{}{-4}{wa 1}{250}{uw 0 240}
+{264}{Sorry, Stanford. I don't want you in my party anymore.}{}{5}{}{}{lv, fl 270}
+{265}{Ya no gow wit meee moore.}{}{-4}{}{}{lv, fl 270}
+{266}{[Back]}{}{1}{}{230}{}
+{267}{}{}{}{}{}{}
+{268}{}{}{}{}{}{}
+{269}{}{}{}{}{}{}
+{270}{[He is crestfallen.] Oh…
+ But, but… [sigh] Fine, have it your way.}{[He is crestfallen.] Oh… But, but… [sigh] Fine, have it your way.}{}{}{}{}
+{271}{E:}{}{1}{}{0}{}
+{272}{}{}{}{}{}{}
+{273}{}{}{}{}{}{}
+{274}{}{}{}{}{}{}
+{275}{}{}{}{}{}{}
+{276}{}{}{}{}{}{}
+{277}{}{}{}{}{}{}
+{278}{}{}{}{}{}{}
+{279}{}{}{}{}{}{}
+{280}{}{}{}{}{}{}
+{281}{}{}{}{}{}{}
+{282}{}{}{}{}{}{}
+{283}{}{}{}{}{}{}
+{284}{}{}{}{}{}{}
+{285}{Uhh…
+  @pcname@, you go ahead. I'll wait for you outside.}{Uhh…  @pcname@, you go ahead. I'll wait for you outside.}{}{}{}{}
+{286}{What?! Why? Come on, Stanford.}{}{5}{}{295}{}
+{287}{Durrr…
+? Mange…?}{}{-4}{}{295}{}
+{288}{}{}{}{}{}{}
+{289}{}{}{}{}{}{}
+{290}{}{}{}{}{}{}
+{291}{}{}{}{}{}{}
+{292}{}{}{}{}{}{}
+{293}{}{}{}{}{}{}
+{294}{}{}{}{}{}{}
+{295}{[Whispering] No, I just can't. Seeing how great an adventurer that Payne is…
+ I, I can't even begin to compare right now. [He lets out a long sigh] I'm leaving Dusty Dunes… It's time I continued the journey I started.  I'm sure Master Brightstart has been wondering where I wandered off to. [He sighs again.]}{[Whispering] No, I just can't. Seeing how great an adventurer that Payne is… I, I can't even begin to compare right now. [He lets out a long sigh] I'm leaving Dusty Dunes… It's time I continued the journey I started.  I'm sure Master Brightstart has been wondering where I wandered off to. [He sighs again.]}{}{}{}{}
+{296}{Stop saying that. Let's go, I really need to buy some supplies.}{}{5}{}{-7}{}
+{297}{Noooo!!  Me go, Stannie go!}{}{-4}{}{-7}{}
+{298}{Why do you have to be pathetic at a time like this?}{}{5}{na -200}{-7}{}
+{299}{Yuu big wussssy!! Har!}{}{-4}{na -200}{-7}{}
+{300}{}{}{}{}{}{}
+{301}{}{}{}{}{}{}
+{302}{}{}{}{}{}{}
+{303}{}{}{}{}{}{}
+{304}{}{}{}{}{}{}
+{305}{Oh, that's just great. Did you see that? Arcanum's greatest adventurer just up and went in Laela's shop to buy supplies. Of all places! [He throws his hands up in exasperation.] Now I really can't go in there.}{Oh, that's just great. Did you see that? Arcanum's greatest adventurer just up and went in Laela's shop to buy supplies. Of all places! [He throws his hands up in exasperation.] Now I really can't go in there.}{}{}{}{}
+{306}{You're going to leave without even thanking Laela?}{}{5}{}{315}{}
+{307}{Yuu no gonna thanx Laeliee? Dat not nice. Meanie.}{}{-4}{}{315}{}
+{308}{What part of 'pathetic' did you not understand? We're going.}{}{5}{na -200}{315}{}
+{309}{We going, Stannie wusss.}{}{-4}{}{315}{}
+{310}{}{}{}{}{}{}
+{311}{}{}{}{}{}{}
+{312}{}{}{}{}{}{}
+{313}{}{}{}{}{}{}
+{314}{}{}{}{}{}{}
+{315}{[He gives you a long look] Okay, fine.  Please try to be quick about it, alright @pcname@?}{[He gives you a long look] Okay, fine.  Please try to be quick about it, alright @pcname@?}{}{}{}{}
+{316}{I'll try. [You turn toward the shopkeeper] Excuse me, miss?}{}{5}{}{-15}{}
+{317}{Okalee! [You turn toward the shopkeeper] Me wanna buy stuffz!}{}{-4}{}{-15}{}
+{318}{}{}{}{}{}{}
+{319}{}{}{}{}{}{}
+{320}{[Whispering] Look at how entranced she is! I can't take it anymore--I'm going, @pcname@!}{[Whispering] Look at how entranced she is! I can't take it anymore--I'm going, @pcname@!}{}{}{}{}
+{321}{[You grab his shoulder to stop him.]}{}{1}{}{-22}{}
+{322}{}{}{}{}{}{}
+{323}{}{}{}{}{}{}
+{324}{}{}{}{}{}{}
+{325}{Um.. Uh, yes…
+ S-Stanford Lainson, my dear lady. Yes, thank you for t-t-tending to my wounds then. I hope I wasn't too much of a bother.}{Um.. Uh, yes… S-Stanford Lainson, my dear lady. Yes, thank you for t-t-tending to my wounds then. I hope I wasn't too much of a bother.}{}{}{}{}
+{326}{[Listen.]}{}{1}{}{-29}{}
+{327}{}{}{}{}{}{}
+{328}{}{}{}{}{}{}
+{329}{}{}{}{}{}{}
+{330}{[He blushes modestly.] Well, actually... I'm, I'm not really that great of an adventurer.}{[He blushes modestly.] Well, actually... I'm, I'm not really that great of an adventurer.}{}{}{}{}
+{331}{[Listen.]}{}{1}{}{-36}{}
+{332}{}{}{}{}{}{}
+{333}{}{}{}{}{}{}
+{334}{}{}{}{}{}{}
+{335}{[A shocked expression is plastered all over Stanford's face. He appears speechless.]}{[A shocked expression is plastered all over Stanford's face. He appears speechless.]}{}{}{}{}
+{336}{[You elbow him.] Hey, you do have stories don't you?}{}{5}{}{340}{}
+{337}{[You smack his forehead] Sayyy sumptin Stannnnie!!!}{}{-4}{}{340}{}
+{338}{}{}{}{}{}{}
+{339}{}{}{}{}{}{}
+{340}{Y-you're really interested? Um.. Sure. I do have a few stories here and there…
+ [He straightens and begins to recount his journey from Vooriden.]}{Y-you're really interested? Um.. Sure. I do have a few stories here and there… [He straightens and begins to recount his journey from Vooriden.]}{}{}{}{}
+{341}{[Leave the two of them alone.]}{}{1}{}{-43}{lv}
+{342}{}{}{}{}{}{}
+{343}{}{}{}{}{}{}

@@ -1,0 +1,53 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Hello miss.  May I ask your name?}{}{5}{re 41, lf1 0,rp 1001}{9}{}
+{3}{Greetings @npcname@.  I have something you are looking for.}{}{5}{re 41, lf1 1, rp1001}{19}{}
+{4}{Err...  okay...  May I ask your name?}{}{5}{re -40, lf1 0,rp 1001}{9}{}
+{5}{Uh... I have something you are looking for, @npcname@.}{}{5}{re -40, lf1 1, rp1001}{19}{}
+{6}{Hello Miss Natalie.  I have some questions...}{}{5}{rp-1001, lf1 1}{}{fl 100}
+{7}{Uh... Hi.  Wha' you name?}{}{-4}{lf1 0,rp 1001}{9}{}
+{8}{E:}{}{1}{}{0}{}
+{9}{I am Miss. Natalie.  ...What do you want? Oh i see that you are one of us. Let me write something in your rumors book.}{I am Miss. Natalie.  ...What do you want? Oh i see that you are one of us. Let me write something in your rumors book.}{}{}{}{lf1 1, ru 1203,ru 1204,ru 1205,ru 1206}
+{10}{I may have something you are looking for.}{}{5}{rp1001}{19}{}
+{11}{What can you tell me about this place?}{}{5}{rp-1001}{}{fl 100}
+{12}{May have itemz for joo.}{}{-4}{rp1001}{19}{}
+{13}{Tell me 'bout dis place?}{}{-4}{rp-1001}{}{fl 100}
+{14}{E:}{}{1}{}{0}{}
+{15}{Is there something else?}{Is there something else?}{}{}{}{}
+{16}{I have something that you might be interested in.}{}{5}{rp1001}{19}{}
+{17}{Me got sumthin' you mebbe wan'...}{}{-4}{rp1001}{19}{}
+{18}{E:}{}{1}{}{0}{}
+{19}{What have you got?}{What have you got?}{}{}{}{}
+{20}{I have the rare ruby.}{}{5}{ru1203, rq-1203, in5701}{29}{rq 1203}
+{21}{I have Doc's lucky diamond.}{}{5}{ru1204, rq-1204, in5702}{35}{rq 1204}
+{22}{I have Lucan's ring.}{}{5}{ru1205, rq-1205, in2867}{41}{rq 1205}
+{23}{I  have obtained the constable's sapphire}{}{5}{ru1206, rq-1206, in5703}{47}{rq 1206}
+{24}{I gotz da rarez rubiez.}{}{-4}{ru1203, rq-1203, in5701}{29}{rq 1203}
+{25}{I have da Docks rarez diamond !!!.}{}{-4}{ru1204, rq-1204, in5702}{35}{rq 1204}
+{26}{I gotz Lucanz's ringz .}{}{-4}{ru1205, rq-1205, in2867}{41}{rq 1205}
+{27}{Me got contable sapipifire !!.}{}{-4}{ru1206, rq-1206, in5703}{47}{rq 1206}
+{28}{F:}{}{1}{}{0}{}
+{29}{Yes...  We have been awaiting the arrival of that piece.  Thank you for retrieving it for us.  The Underground is paying a finder's fee of 250 coin for it.  Here you are @pcname@.  Good work.}{Yes...  We have been awaiting the arrival of that piece.  Thank you for retrieving it for us.  The Underground is paying a finder's fee of 250 coin for it.  Here you are @pcname@.  Good work.}{}{}{}{$$250,in5701,xp5,al-4}
+{30}{My pleasure.  Goodbye @npcname@.}{}{5}{}{0}{}
+{31}{Thank you.  I have something more...}{}{5}{}{19}{}
+{32}{T'anks.  Buh-bye.}{}{-4}{}{0}{}
+{33}{T'anks.  Me got more...}{}{-4}{}{19}{}
+{34}{E:}{}{1}{}{0}{}
+{35}{Yes...  We have been awaiting the arrival of that piece.  Thank you for retrieving it for us.  The Underground is paying a finder's fee of 300 coin for it.  Here you are @pcname@.  Good work.}{Yes...  We have been awaiting the arrival of that piece.  Thank you for retrieving it for us.  The Underground is paying a finder's fee of 300 coin for it.  Here you are @pcname@.  Good work.}{}{}{}{$$300,in5702,xp12,al-4 }
+{36}{My pleasure.  Goodbye @npcname@.}{}{5}{}{0}{}
+{37}{Thank you.  I have something more...}{}{5}{}{19}{}
+{38}{T'anks.  Buh-bye.}{}{-4}{}{0}{}
+{39}{T'anks.  Me got more...}{}{-4}{}{19}{}
+{40}{E:}{}{1}{}{0}{}
+{41}{Yes...  We have been awaiting the arrival of that piece.  Thank you for retrieving it for us.  The Underground is paying a finder's fee of 700 coin for it.  Here you are @pcname@.  Good work.}{Yes...  We have been awaiting the arrival of that piece.  Thank you for retrieving it for us.  The Underground is paying a finder's fee of 700 coin for it.  Here you are @pcname@.  Good work.}{}{}{}{$$700,in2867,xp7,al-4}
+{42}{My pleasure.  Goodbye @npcname@.}{}{5}{}{0}{}
+{43}{Thank you.  I have something more...}{}{5}{}{19}{}
+{44}{T'anks.  Buh-bye.}{}{-4}{}{0}{}
+{45}{T'anks.  Me got more...}{}{-4}{}{19}{}
+{46}{E:}{}{1}{}{0}{}
+{47}{Yes...  We have been awaiting the arrival of that piece.  Thank you for retrieving it for us.  The Underground is paying a finder's fee of 400 coin for it.  Here you are @pcname@.  Good work.}{Yes...  We have been awaiting the arrival of that piece.  Thank you for retrieving it for us.  The Underground is paying a finder's fee of 400 coin for it.  Here you are @pcname@.  Good work.}{}{}{}{$$400,in5703,xp12}
+{48}{My pleasure.  Goodbye @npcname@.}{}{5}{}{0}{}
+{49}{Thank you.  I have something more...}{}{5}{}{19}{}
+{50}{T'anks.  Buh-bye.}{}{-4}{}{0}{}
+{51}{T'anks.  Me got more...}{}{-4}{}{19}{}
+{52}{E:}{}{1}{}{0}{}
+{100}{Get away . I am not talking to you sir.}{Get away . I am not talking to you lady.}{}{}{}{}

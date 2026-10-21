@@ -1,0 +1,30 @@
+// Apollo never speaks; narrative describes the animal. Native follower result codes own party state.
+{1}{[Apollo raises his head and turns one ear toward you.]}{[Apollo raises his head and turns one ear toward you.]}{}{}{0}{ }
+{2}{I should speak with the Fine Pet Emporium proprietor first.}{}{1}{gf2998 0}{10}{ }
+{3}{Come with me, Apollo.}{}{1}{gf2998 1, lf1 0}{20}{jo 2 20, lf1 1}
+{4}{Give Apollo a command.}{}{1}{gf2998 1, lf1 1}{40}{ }
+{5}{B:Open Apollo's saddlebags.}{}{1}{gf2998 1, lf1 1}{0}{ }
+{6}{L:}{}{1}{gf2998 1, lf1 1}{0}{ }
+{7}{CE_APOLLO_PET:Pet Apollo.}{}{1}{gf2998 1}{70}{ }
+{8}{E:}{}{1}{}{0}{ }
+{10}{[Apollo watches you calmly. The Fine Pet Emporium proprietor handles his sale.]}{[Apollo watches you calmly. The Fine Pet Emporium proprietor handles his sale.]}{}{}{0}{ }
+{11}{E:}{}{1}{}{0}{ }
+{20}{[Apollo steps forward and falls in behind you.]}{[Apollo steps forward and falls in behind you.]}{}{}{0}{ }
+{21}{E:}{}{1}{}{0}{ }
+{40}{[Apollo waits for your signal.]}{[Apollo waits for your signal.]}{}{}{0}{ }
+{41}{Wait here.}{}{1}{wa 0}{50}{wa }
+{42}{Follow me again.}{}{1}{wa 1}{20}{jo 2 20, lf1 1}
+{43}{CE_APOLLO_HOME:Head back to the Fine Pet Emporium. I will collect you later.}{}{1}{}{0}{ }
+{44}{Back.}{}{1}{}{1}{ }
+{50}{[Apollo settles where he stands. If you leave him behind when you leave this area, he will return to the Fine Pet Emporium.]}{[Apollo settles where he stands. If you leave him behind when you leave this area, he will return to the Fine Pet Emporium.]}{}{}{0}{ }
+{51}{E:}{}{1}{}{0}{ }
+{70}{[Apollo lowers his head into your hand, then gently noses your shoulder.]}{[Apollo lowers his head into your hand, then gently noses your shoulder.]}{}{}{0}{ }
+{71}{E:}{}{1}{}{0}{ }
+{45}{CE_APOLLO_SADDLE_ON:Wear the riding saddle, Apollo.}{}{1}{gf2998 1}{80}{}
+{46}{CE_APOLLO_SADDLE_OFF:Take off the riding saddle, Apollo.}{}{1}{gf2998 1}{82}{}
+{80}{[You fit the saddle from Apollo's packs across his back. He stands patiently while you secure the straps.]}{[You fit the saddle from Apollo's packs across his back. He stands patiently while you secure the straps.]}{}{}{}{}
+{81}{Good boy.}{}{1}{}{1}{}
+{82}{[You loosen the straps and put the saddle back in Apollo's packs.]}{[You loosen the straps and put the saddle back in Apollo's packs.]}{}{}{}{}
+{83}{There you go.}{}{1}{}{1}{}
+{84}{[Apollo needs the riding saddle in his own packs before you can fit it. Put it in his inventory first.]}{[Apollo needs the riding saddle in his own packs before you can fit it. Put it in his inventory first.]}{}{}{}{}
+{85}{I will do that.}{}{1}{}{1}{}

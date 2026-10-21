@@ -1,0 +1,92 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Hello.}{}{5}{lf1 0}{7}{}
+{3}{Hello Jeb.}{}{5}{lf1 1}{11}{}
+{4}{Uh... Hi.}{}{-4}{lf1 0}{7}{}
+{5}{Uh... Hi Jeb.}{}{-4}{lf1 1}{11}{}
+{6}{E:}{}{1}{}{0}{}
+{7}{New around these parts, aren't you?  I am sure I would have remembered you.  Jebadiah's the name, although most folks just call me Jeb.}{New around these parts, aren't you?  I am sure I would have remembered you.  Jebadiah's the name, although most folks just call me Jeb.}{}{}{}{lf1 1}
+{8}{It is good to meet you Jeb.  I am @pcname@.}{}{5}{}{11}{}
+{9}{Uh... hi Jeb.  Me be @pcname@.}{}{-4}{}{11}{}
+{10}{E:}{}{1}{}{0}{}
+{11}{What can I do for you, @pcname@?}{What can I do for you, @pcname@?}{}{}{}{}
+{12}{Fen told me you were looking for some dragon's blood.}{}{5}{qu1230 1, ni5803}{25}{}
+{13}{I've found some dragon's blood!}{}{5}{in5803, qb1230 2}{34}{}
+{14}{Do you know anything about Abbey, she has a grave in Riverton.}{}{5}{gf 3061 1, lf2 0}{37}{}
+{15}{A woman in town, Nora, thinks someone is trying to kill me.}{}{5}{lf3 0, gf 3074 1}{41}{}
+{16}{That woman I was telling you about, Nora... someone killed her!}{}{5}{gf 3067 1, lf4 0}{71}{}
+{17}{I tried talking to Lily about Abbey...}{}{5}{gf 3062 1, lf5 0}{77}{}
+{18}{Fen tell me you wan' get sum dragun blud.}{}{-4}{qu1230 1, ni5803}{25}{}
+{19}{Me got sum dragun blud!}{}{-4}{in5803, qb1230 2}{34}{}
+{20}{You no sumthin' bout Abbee?  She got grayv in Rivertown.}{}{-4}{gf 3061 1, lf2 0}{37}{}
+{21}{Dis woman, Nora, she say sumwon going to kill me.}{}{-4}{lf3 0, gf 3074 1}{41}{}
+{22}{Dat woman, Nora... Sumwon killed her!}{}{-4}{gf 3067 1, lf4 0}{71}{}
+{23}{Me try talk Lilee bout Abee...}{}{-4}{gf 3062 1, lf5 0}{77}{}
+{24}{E:}{}{1}{}{0}{}
+{25}{Oh you've met Fen!  He's such a good friend... I only with I was able to help him more.  I've looked everywhere for the dragon's blood.  It just doesn't seem to exist anymore.}{Oh you've met Fen!  He's such a good friend... I only with I was able to help him more.  I've looked everywhere for the dragon's blood.  It just doesn't seem to exist anymore.}{}{}{}{}
+{26}{You can really cure them if you find it?}{}{5}{}{30}{}
+{27}{Uh... you reely fix dem if you get?}{}{-4}{}{30}{}
+{29}{E:}{}{1}{}{0}{}
+{30}{Oh yes!  I learned of the ancient spell while I studied at Tulla.  I even witnessed its use one time, so I am most certain it will work.  If I can only find this one last ingredient.  If you ever find any in your travels, please let me know.}{Oh yes!  I learned of the ancient spell while I studied at Tulla.  I even witnessed its use one time, so I am most certain it will work.  If I can only find this one last ingredient.  If you ever find any in your travels, please let me know.}{}{}{}{}
+{31}{I will.  There's one more thing...}{}{5}{}{11}{qu1230 2}
+{32}{Uh... okay.  And uh....}{}{-4}{}{11}{qu1230 2}
+{33}{E:}{}{1}{}{0}{}
+{34}{Oh may the gods be praised!  Thank you @pcname@! [He takes the vial from you.]  It's just enough too!  I'll get to work on the potion right away!  Here.   I had saved up this 1000 coin to help pay for it when I found it.  You have saved me so much time!  Thank you!}{Oh may the gods be praised!  Thank you @pcname@! [He takes the vial from you.]  It's just enough too!  I'll get to work on the potion right away!  Here.   I had saved up this 1000 coin to help pay for it when I found it.  You have saved me so much time!  Thank you!}{}{}{}{in5803, $$1000, qu1230 4, re+40}
+{35}{Thank you for the reward Jeb.  I wish you well.}{}{5}{}{0}{}
+{36}{Uh... T'anks.  Me hope it work good.}{}{-4}{}{0}{}
+{37}{[His face clouds with pain.]  Oh yes...  but that was a long, long time ago.  How did you learn of Abbey?}{[His face clouds with pain.]  Oh yes...  but that was a long, long time ago.  How did you learn of Abbey?}{}{}{}{}
+{38}{Nora directed me to the grave.  She thinks I am in danger.}{}{5}{}{41}{}
+{39}{Nora tell me look at grayv.  She t'ink me be in dangur.}{}{-4}{}{41}{}
+{40}{E:}{}{1}{}{0}{}
+{41}{Nora?  Hmmm...  I don't know why she would think someone was trying to harm you.  Although there have been some strange disappearances around town lately.  And always outsiders.  I wonder why I hadn't connected that before?  I will have to investigate this.}{Nora?  Hmmm...  I don't know why she would think someone was trying to harm you.  Although there have been some strange disappearances around town lately.  And always outsiders.  I wonder why I hadn't connected that before?  I will have to investigate this.}{}{}{}{lf3 1}
+{42}{So you don't know who would be responsible?}{}{5}{gf 3061 0}{47}{}
+{43}{You not no who it be?}{}{-4}{gf 3061 0}{47}{}
+{44}{She seems to think it is somehow tied to Abbey.}{}{5}{}{51}{}
+{45}{She t'ink it got sumthin ta do wit' Abbee.}{}{-4}{}{51}{}
+{46}{E:}{}{1}{}{0}{}
+{47}{No, I'm sorry I don't.}{No, I'm sorry I don't.}{}{}{}{}
+{48}{Thank you.  One more thing...}{}{5}{}{11}{}
+{49}{Uh... Okay.  But uh...}{}{-4}{}{11}{}
+{50}{E:}{}{1}{}{0}{}
+{51}{Abbey?  But that was so long ago...    You see, Abbey was a beautiful young widow when I moved here many years ago.  Just she and her daughter, Lily lived in town.  They got by, but it was always difficult, not having a man around to help...}{Abbey?  But that was so long ago...    You see, Abbey was a beautiful young widow when I moved here many years ago.  Just she and her daughter, Lily lived in town.  They got by, but it was always difficult, not having a man around to help...}{}{}{}{}
+{52}{Yes...}{}{5}{}{55}{}
+{53}{Uh uh...}{}{-4}{}{55}{}
+{54}{E:}{}{1}{}{0}{}
+{55}{We had a particularly harsh winter.  It was freezing for months, and food became very scarce.  Apparently things were very bad for Abbey and Lily.  But I didn't know this.  I keep myself fairly secluded from the common populace...}{We had a particularly harsh winter.  It was freezing for months, and food became very scarce.  Apparently things were very bad for Abbey and Lily.  But I didn't know this.  I keep myself fairly secluded from the common populace...}{}{}{}{}
+{56}{Yes...}{}{5}{}{59}{}
+{57}{Uh uh...}{}{-4}{}{59}{}
+{58}{E:}{}{1}{}{0}{}
+{59}{I had been out hunting, and upon returning found Abbey rummaging through my cupboards.  It was obvious that she was stealing from me, but I overreacted.  To this day I regret what I did.}{I had been out hunting, and upon returning found Abbey rummaging through my cupboards.  It was obvious that she was stealing from me, but I overreacted.  To this day I regret what I did.}{}{}{}{}
+{60}{What did you do?}{}{5}{}{63}{}
+{61}{Wha' you do?}{}{-4}{}{63}{}
+{62}{E:}{}{1}{}{0}{}
+{63}{In my rage I dominated her will and cast nightmare upon nightmare upon her mind.  Her psyche was not strong enough to withstand the onslaught and she withdrew to some hidden space in her mind, never to return.  She remained little more than a walking husk the remainder of her days.}{In my rage I dominated her will and cast nightmare upon nightmare upon her mind.  Her psyche was not strong enough to withstand the onslaught and she withdrew to some hidden space in her mind, never to return.  She remained little more than a walking husk the remainder of her days.}{}{}{}{gf 3063 1}
+{64}{Oh my...}{}{5}{}{67}{}
+{65}{Uh... dat bad.}{}{-4}{}{67}{}
+{66}{E:}{}{1}{}{0}{}
+{67}{It is the most regretful act of my entire existence.  If I could undo those few moments of my life I most surely would.  I tried to help Lily out, after I realized what I had done, but her hatred for me runs deep.  She will take nothing from me.}{It is the most regretful act of my entire existence.  If I could undo those few moments of my life I most surely would.  I tried to help Lily out, after I realized what I had done, but her hatred for me runs deep.  She will take nothing from me.}{}{}{}{lf2 1}
+{68}{K:}{}{5}{}{11}{}
+{69}{K:}{}{-4}{}{11}{}
+{70}{E:}{}{1}{}{0}{}
+{71}{That is very unfortunate!  I have done some checking and people are indeed missing.  Bodies from the cemetery have also turned up missing.  I sense dark, dark magick at work.  And I do not like where the clues are leading...}{That is very unfortunate!  I have done some checking and people are indeed missing.  Bodies from the cemetery have also turned up missing.  I sense dark, dark magick at work.  And I do not like where the clues are leading...}{}{}{}{lf4 1}
+{72}{Lily!}{}{5}{gf 3065 0}{81}{}
+{73}{Lilee!}{}{-4}{gf 3065 0}{81}{}
+{74}{It was Lily.  She attacked me and I was forced to kill her.}{}{5}{gf 3065 1}{89}{}
+{75}{It be Lilee.  She fite me.  Me have kill her.}{}{-4}{gf 3065 1}{89}{}
+{76}{E:}{}{1}{}{0}{}
+{77}{That is odd.  She was always such a sweet girl.  She took care of her mother to the very end.  She loved her very much.  I don't know why she would be hostile when asked about her...}{That is odd.  She was always such a sweet girl.  She took care of her mother to the very end.  She loved her very much.  I don't know why she would be hostile when asked about her...}{}{}{}{lf5 1}
+{78}{Can I ask you something else?}{}{5}{}{11}{}
+{79}{Me ask sumthin' more?}{}{-4}{}{11}{}
+{80}{E:}{}{1}{}{0}{}
+{81}{Yes... Lily.  It appears she has been practicing the dark arts.  No doubt to one day be powerful enough to defeat me.  And she has progressed much.  Please, do nothing.  Leave her to me.  I can protect myself.  And I will try and reason with her before I resort to violence.}{Yes... Lily.  It appears she has been practicing the dark arts.  No doubt to one day be powerful enough to defeat me.  And she has progressed much.  Please, do nothing.  Leave her to me.  I can protect myself.  And I will try and reason with her before I resort to violence.}{}{}{}{}
+{82}{But people are getting hurt!}{}{5}{}{85}{}
+{83}{But peeple dye!}{}{-4}{}{85}{}
+{84}{E:}{}{1}{}{0}{}
+{85}{I will keep a close eye out and make sure she harms no one else.  Be assured of that @pcname@.  Do not worry.  I will confront her shortly.}{I will keep a close eye out and make sure she harms no one else.  Be assured of that @pcname@.  Do not worry.  I will confront her shortly.}{}{}{}{}
+{86}{I will be quiet for now.  But I will still be cautious...}{}{5}{}{0}{}
+{87}{Me no say nothin'.  But me still be karful her.  She bad.}{}{-4}{}{0}{}
+{88}{F:}{}{1}{}{0}{}
+{89}{[His face grows deeply concerned.]  I am so very, very sorry it came to that.  It seems my guilt grows as I age, instead of fades.  I am sorry.  At least no more will die at her hands.  Thank you for letting me know @pcname@.}{[His face grows deeply concerned.]  I am so very, very sorry it came to that.  It seems my guilt grows as I age, instead of fades.  I am sorry.  At least no more will die at her hands.  Thank you for letting me know @pcname@.}{}{}{}{xp3, gf 3073 1}
+{90}{I am sorry too.  Goodbye Jeb.}{}{5}{}{0}{}
+{91}{Uh... yeah.  Buh-bye Jeb.}{}{-4}{}{0}{}
+{92}{E:}{}{1}{}{0}{}
+

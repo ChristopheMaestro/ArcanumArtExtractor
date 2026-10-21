@@ -1,0 +1,23 @@
+lf1: PC has declined to bring kid with him
+
+{1}{Waaah! You no hurt me! [You see before you a slightly deformed child.]}{Waaah! You no hurt me! [You see before you a slightly deformed child.]}{}{}{}{}
+{2}{Easy now. I'm here to get you out of this well.}{}{1}{lf 1 0}{5}{qu 1192 3}
+{3}{Haha! Stupid kid die now.}{}{-4}{lf 1 0}{}{qu 1192 6, co}
+{4}{All right, come with me. I'll get you out.}{}{1}{lf 1 1}{}{qu 1192 3, jo 1 9, fl 9}
+{5}{Really? Oh tank you mister! You kill scarries outside! Me go with you!}{Really? Oh tank you lady! You kill scarries outside! Me go with you!}{}{}{}{}
+{6}{Stay close. We're going back up.}{}{1}{}{}{jo 1 9, fl 9}
+{7}{You'll have to wait here for now.}{}{1}{}{0}{re -5, lf 1 1}
+{8}{Uh... I'll just be on my way now.}{}{5}{}{0}{}
+{9}{Tanks mister! We go up well!}{Tanks lady! We go up well!}{}{}{}{}
+{10}{Tanks mister!}{Tanks lady!}{}{}{}{}
+{20}{Yah?}{Yah?}{}{}{}{}
+{21}{B:}{}{1}{wa 0, qb 1192 3}{}{}
+{22}{Tell me about yourself.}{}{1}{wa0, qb1192 3}{}{ce}
+{23}{Wait here a moment.}{}{1}{wa 0, qb 1192 3}{}{fl 30, gf 3018 1, wa}
+{24}{Come along. Let's get you out of here.}{}{1}{wa 1, qb 1192 3}{}{fl 10, gf 3018 0, uw 1 10}
+{25}{Nothing just now.}{}{1}{qb 1192 3}{0}{}
+{26}{You're safe now. Stay here with your dog.}{}{1}{qa 1192 4}{}{fl 10, lv}
+{30}{Otay. You be back soon I hopes.}{Otay. You be back soon I hopes.}{}{}{}{}
+{35}{Hey mister! Wanna pway?}{Hey lady! Wanna pway?}{}{}{}{}
+{36}{Hooray! We're out, mister!}{Hooray! We're out, lady!}{}{}{}{}
+{37}{You're safe now. Stay here with your dog.}{}{1}{}{}{fl 10, qu 1192 4, gf 3019 1, lv}

@@ -1,0 +1,534 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Greetings, sir.  Might I ask who you are?}{}{5}{me 0, re 41}{34}{}
+{3}{Hello to you, Neddao.  Might I ask you a few questions?}{}{5}{me 1, re 41}{38}{}
+{4}{Sir!  Did I hear you correctly? What have I done to offend you?}{}{5}{me 0, re -40}{10}{}
+{5}{Neddao!  Is thise something I've done to offend you?}{}{5}{me 1, re -40}{10}{}
+{6}{Uh...hi!  Who you?}{}{-4}{me 0}{34}{}
+{7}{Hey, Ned-dow! Me talk to you...?}{}{-4}{me 1}{38}{}
+{8}{E:}{}{1}{}{0}{}
+{10}{I simply don't like you, sir.  So why don't you just run along and leave me alone...}{I simply don't like you, woman.  So why don't you just run along and leave me alone...}{}{}{}{}
+{11}{Are you QUITE sure of that opinion, sir?}{}{5}{ch 11}{29}{}
+{12}{sir!  Please!  Can't we talk in a more civilized manner...?}{}{5}{me 0}{24}{re +15}
+{13}{Neddao!  I thought we'd put our differences behind us...}{}{5}{me 1}{24}{re +15}
+{14}{You're asking for trouble with words like that...}{}{5}{}{17}{re -5}
+{15}{E:}{}{1}{}{0}{}
+{17}{And You! do not even know the meaning of the word! I"ll have the town guards throw your out of here so hard you'll bounce twice!}{And You! do not even know the meaning of the word! I"ll have the town guards throw your out of here so hard you'll bounce twice!}{}{}{}{}
+{18}{Things need not deteriorate so.  Please, accept my apologies...}{}{5}{}{24}{re +15}
+{19}{Well, it looks like I'll just have to prove that I don't bounce for anyone! Defend yourself, DOG!}{}{5}{}{}{co, fl 22}
+{20}{E:}{}{1}{}{0}{}
+{22}{GUARDS!!!! GUARDS!!!!}{GUARDS!!!! GUARDS!!!!}{}{}{}{}
+{24}{Very well. Let us do so.}{Very well. Let us do so.}{}{}{}{}
+{25}{I'd like that, sir.  Might I ask who you are?}{}{5}{me 0}{34}{re +5}
+{26}{Sounds good to me, Neddao.  Might I ask you a question or two?}{}{5}{me 1}{38}{}
+{27}{E:}{}{1}{}{0}{}
+{29}{[His eyes widen a bit.  Then he smiles, warmly.]  I'm flabbergasted, sir!  I mean, if I would have known you were so, well...civilized!...I would never have spoken like that.}{[His eyes widen a bit.  Then he smiles, warmly.]  I'm flabbergasted, madam!  I mean, if I would have known you were so, well...civilized!...I would never have spoken like so.}{}{}{}{}
+{30}{I feel the same way.  Might I ask your name, sir?}{}{5}{me 0}{34}{}
+{31}{Of course, Neddao.  Do you have a moment?}{}{5}{me 1}{38}{}
+{32}{E:}{}{1}{}{0}{}
+{34}{I am called Neddao. Neddao Wallau. I am Lord Mayor and Chief Magistrate for the Shire of Brandybuck. You can call me Neddao - everyone else does. [He is nonplussed about that]}{I am called Neddao. Neddao Wallau. I am Lord Mayor and Chief Magistrate for the Shire of Brandybuck. You can call me Neddao - everyone else does. [He is nonplussed about that]}{}{}{}{}
+{35}{Greetings, Neddao.  My name is @PCNAME@. May I ask you some questions?}{}{5}{}{38}{}
+{36}{Hi  Ned-dow! Me called @PCNAME@.  I aks you sum questions?}{}{-4}{}{38}{}
+{38}{What would you like to know?}{What would you like to know?}{}{}{}{}
+{39}{What can you tell me about Brandybuck, Neddao?}{}{5}{}{110}{}
+{40}{Are there any adventures to be had around here?}{}{5}{}{100}{}
+{41}{Whut you can tell me about here, Ned-dow?}{}{-4}{}{110}{}
+{42}{Any adventures around here?}{}{-4}{}{100}{}
+{43}{What do you know about the Underhill Farm?}{}{5}{gf 2800 1, ra 1}{150}{}
+{44}{Whut  you know about place for sale?}{}{-4}{gf 2800 1, ra 1}{150}{}
+{45}{What do you know about the Underhill Farm?}{}{5}{gf 2800 1, ra 2}{250}{}
+{46}{Whut  you know about place for sale?}{}{-4}{gf 2800 1, ra 2}{250}{}
+{47}{What do you know about the Underhill Farm?}{}{5}{gf 2800 1, ra 3}{350}{}
+{48}{Whut  you know about place for sale?}{}{-4}{gf 2800 1, ra 3}{350}{}
+{49}{What do you know about the Underhill Farm?}{}{5}{gf 2800 1, ra 4}{450}{}
+{50}{Whut  you know about place for sale?}{}{-4}{gf 2800 1, ra 4}{450}{}
+{51}{What do you know about the Underhill Farm?}{}{5}{gf 2800 1, ra 5}{550}{}
+{52}{Whut  you know about place for sale?}{}{-4}{gf 2800 1, ra 5}{550}{}
+{53}{What do you know about the Underhill Farm?}{}{5}{gf 2800 1, ra 6}{650}{}
+{54}{Whut  you know about place for sale?}{}{-4}{gf 2800 1, ra 6}{650}{}
+{55}{What do you know about the Underhill Farm?}{}{5}{gf 2800 1, ra 7}{750}{}
+{56}{Whut  you know about place for sale?}{}{-4}{gf 2800 1, ra 7}{750}{}
+{57}{What do you know about the Underhill Farm?}{}{5}{gf 2800 1, ra 8}{850}{}
+{58}{Whut  you know about place for sale?}{}{-4}{gf 2800 1, ra 8}{850}{}
+{59}{Just thought I'd let you know that I've bought the farm. Greetings neighbor! [You smile contentedly]}{}{5}{gf 2801 1, ra 1}{0}{fl 130}
+{60}{Me buy the farm. Hi neighbor! [You smile contentedly]}{}{-4}{gf 2801 1, ra 1}{0}{fl 130}
+{61}{Just thought I'd let you know that I've bought the farm. Greetings neighbor! [You smile contentedly]}{}{5}{gf 2801 1, ra 2}{0}{fl 130}
+{62}{Me buy the farm. Hi neighbor! [You smile contentedly]}{}{-4}{gf 2801 1, ra 2}{0}{fl 130}
+{63}{Just thought I'd let you know that I've bought the farm. Greetings neighbor! [You smile contentedly]}{}{5}{gf 2801 1, ra 3}{0}{fl 130}
+{64}{Me buy the farm. Hi neighbor! [You smile contentedly]}{}{-4}{gf 2801 1, ra 3}{0}{fl 130}
+{65}{Just thought I'd let you know that I've bought the farm. Greetings neighbor! [You smile contentedly]}{}{5}{gf 2801 1, ra 4}{0}{fl 130}
+{66}{Me buy the farm. Hi neighbor! [You smile contentedly]}{}{-4}{gf 2801 1, ra 4}{0}{fl 130}
+{67}{Just thought I'd let you know that I've bought the farm. Greetings neighbor! [You smile contentedly]}{}{5}{gf 2801 1, ra 5}{0}{fl 130}
+{68}{Me buy the farm. Hi neighbor! [You smile contentedly]}{}{-4}{gf 2801 1, ra 5}{0}{fl 130}
+{69}{Just thought I'd let you know that I've bought the farm. Greetings neighbor! [You smile contentedly]}{}{5}{gf 2801 1, ra 6}{0}{fl 131}
+{70}{Me buy the farm. Hi neighbor! [You smile contentedly]}{}{-4}{gf 2801 1, ra 6}{0}{fl 130}
+{71}{Just thought I'd let you know that I've bought the farm. Greetings neighbor! [You smile contentedly]}{}{5}{gf 2801 1, ra 7}{0}{fl 130}
+{72}{Me buy the farm. Hi neighbor! [You smile contentedly]}{}{-4}{gf 2801 1, ra 7}{0}{fl 130}
+{73}{Just thought I'd let you know that I've bought the farm. Greetings neighbor! [You smile contentedly]}{}{5}{gf 2801 1, ra 8}{0}{fl 130}
+{74}{Me buy the farm. Hi neighbor! [You smile contentedly]}{}{-4}{gf 2801 1, ra 8}{0}{fl 130}
+{75}{e:}{}{1}{}{0}{}
+
+{100}{[He thinks for a moment] Well, there is a pack of wolves at each end of town that's getting a little too brave for their own good. Why don't you be a sport and dispatch one of them as you leave?}{[He thinks for a moment] Well, there is a pack of wolves at each end of town that's getting a little too brave for their own good. Why don't you be a dear and dispatch one of them as you leave?}{}{}{}{}
+{101}{That's not quite what I had in mind.}{}{5}{}{103}{}
+{102}{Not whut me had in mind.}{}{-4}{}{103}{}
+{103}{I know. [He smiles sardonically]}{I know. [He smiles sardonically]}{}{}{}{}
+{104}{K:}{}{1}{}{38}{}
+{105}{E:}{}{1}{}{0}{}
+
+{110}{Oh.... well. Let's see now. We're the largest remaining shire in all of Arcanum. In case you're unfamiliar with our customs, in order for one of our communities to be called a shire, there can be no more than two members of the other races living there. Otherwise, it's just a town.}{Oh.... well. Let's see now. We're the largest remaining shire in all of Arcanum. In case you're unfamiliar with our customs, in order for one of our communities to be called a shire, there can be no more than two members of the other races living there. Otherwise, it's just a town.}{}{}{}{}
+{111}{I did not know that. I appreciate you enlightening me. Please, continue.}{}{5}{}{113}{}
+{112}{Me not know dat. Tanks. Please, go on.}{}{-4}{}{113}{}
+{113}{Brandybuck is also considered to be the wealthiest shire around due to the abundance of wool, potatoes, and tobacco we export each year. Through centuries of carefull breeding our sheep produce the softest wool to be found anywhere in the land and our soil, once we removed most of the rocks, is perfect for the growing of most crops.. }{Brandybuck is also considered to be the wealthiest shire around due to the abundance of wool, potatoes, and tobacco we export each year. Through centuries of carefull breeding our sheep produce the softest wool to be found anywhere in the land and our soil, once we removed most of the rocks, is perfect for the growing of most crops.. }{}{}{}{}
+{114}{[You listen]}{}{1}{}{115}{}
+{115}{Let's see, we're still considered to be part of Cumbria, although we operate more like an independant city-state. King Praetor's tax-men find their way here once a year, collect their gold, then leave us in peace again. So, we take care of our own affairs. }{Let's see, we're still considered to be part of Cumbria, although we operate more like an independant city-state. King Praetor's tax-men find their way here once a year, collect their gold, then leave us in peace again. So, we take care of our own affairs. }{}{}{}{}
+{116}{[You listen]}{}{1}{}{119}{}
+{117}{Oh, look at the time! I don't mean to seem rude, but I must be getting along.}{}{5}{}{126}{}
+{118}{Oh! Me must go now. Utter tings to be done today. Me must go now.}{}{-4}{}{126}{}
+{119}{Being a rural shire, there's not too much in the way of tourist interests, I'm afraid. There's a medicine show that comes around once a year, soon after that is our harvest festival. But other than that, the only real excitement we've had lately is when the Vlafa place caught fire.}{Being a rural shire, there's not too much in the way of tourist interests, I'm afraid. There's a medicine show that comes around once a year, soon after that is our harvest festival. But other than that, the only real excitement we've had lately is when the Vlafa place caught fire.}{}{}{}{}
+{120}{I hope no one was hurt!}{}{5}{}{122}{}
+{121}{Me hope no one got hurt!}{}{-4}{}{122}{}
+{122}{Thankfully, no. But it did put them into a bit of a bind. Until they can afford to rebuild, they are having to live out of their barn. They shouldn't be in there too much longer though as their oldest boy, Lasou, went to Cattan to get some money from a rich relative.}{Thankfully, no. But it did put them into a bit of a bind. Until they can afford to rebuild, they are having to live out of their barn. They shouldn't be in there too much longer though as their oldest boy, Lasou, went to Cattan to get some money from a rich relative.}{}{}{}{}
+{123}{Well, thank you for the information. You've been most helpful. Good day to you.}{}{5}{}{126}{}
+{124}{Tanks for tellin' me. That stuff good to know. Bye.}{}{-4}{}{126}{}
+{125}{K:}{}{1}{}{38}{}
+{126}{Good day to you. Now, if you'll excuse me, I must get back to my duties. The nearest way out of town is just up the road a piece. }{Good day to you. Now, if you'll excuse me, I must get back to my duties. The nearest way out of town is just up the road a piece. }{}{}{}{}
+{127}{I say!}{}{5}{}{0}{}
+{128}{'Ere now!}{}{-4}{}{0}{}
+{129}{}{}{}{}{}{}
+{130}{[He gazes at you in disbelief for a moment before walking away and muttering] Oh, Frigo! Frigo! What have you done to us?!}{[He gazes at you in disbelief for a moment before walking away and muttering] Oh, Frigo! Frigo! What have you done to us?!}{}{}{}{}
+{131}{And greetings to you too. neighbor!}{And greetings to you too. neighbor!}{}{}{}{}
+
+{150}{Why do you want to know? [He looks at you suspiciously] You're not thinking of living there are you?}{Why do you want to know? [He looks at you suspiciously] You're not thinking of living there are you?}{}{}{}{}
+{151}{Not really, but I do travel quite a bit, and if I should hear of someone looking for a place of their own, having some details would be nice.}{}{5}{}{157}{}
+{152}{Actually, I just might. The place is charming, and this might be a good place to retire to.}{}{5}{}{168}{}
+{153}{Perhaps. Perhaps not. I do try to keep my eyes open for an good investment possibility. I can see rental prospects here.}{}{5}{}{187}{}
+{154}{Not really, but me do travel a lot. If me hear someone wantin' a place, know'n things about dis would be nice.}{}{-4}{}{157}{}
+{155}{Yuh! Me like da little hole. It comfy inside. Me learn to duck head. Heh!}{}{-4}{}{168}{}
+{156}{Maybe and maybe not. Me tinks me can rent dis place to little people an' dey give me money!}{}{-4}{}{187}{}
+{157}{Oh, well! Yes! Yes, indeed! [He looks quite relieved] There's not much more to tell besides what you can see with your own two eyes. It's a small place, but has about two acres of good, cleared land. And it has a deep well that has never run dry. I think the only reason Mr. Furbottom is selling it is because he got a bit over-extended. There was a drop in tobacco prices and that happens to be his main source of income.}{Oh, well! Yes! Yes, indeed! [He looks quite relieved] There's not much more to tell besides what you can see with your own two eyes. It's a small place, but has about two acres of good, cleared land. And it has a deep well that has never run dry. I think the only reason Mr. Furbottom is selling it is because he got a bit over-extended. There was a drop in tobacco prices and that happens to be his main source of income.}{}{}{}{}
+{158}{I see. Thank you. Do you happen to know how much he's asking for the place?}{}{5}{}{160}{}
+{159}{Tanks! That stuff is good to know. Uhh... Do you know how much Mr. Fur-bottom (snicker) wants for place?}{}{-4}{}{160}{}
+{160}{He was asking 75,000 until recently. I heard that he lowered the asking price, but I'm afraid I don't know what the current one is.}{He was asking 75,000 until recently. I heard that he lowered the asking price, but I'm afraid I don't know what the current one is.}{}{}{}{}
+{161}{Less than 75,000, eh? I just might know of someone who would be interested. Where might I find this Furbottom, chap?}{}{5}{}{163}{}
+{162}{Less dan 75,000, eh? Me might know of someone. Where does dis Frigo Fur-bottom [smile] live?}{}{-4}{}{163}{}
+{163}{He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{}{}{}{gf 2802 1}
+{164}{Thank you. I'll be going now.}{}{5}{}{0}{}
+{165}{Tanks! Me go now!}{}{-4}{}{0}{}
+{166}{K:}{}{1}{}{38}{}
+{167}{}{}{}{}{}{}
+{168}{Oh, goodness gracious me! You don't a hobbit-hole to live in. You are human! Stand tall, be proud of your heritage, and all that! Not be all hunched over and banging your head on the ceiling every other step. No, no. You don't want that. Trust me, my good man, you'd be much happier in a place like Tarant, Caladon, Black Root, or even - oh, what's that place? - Shrouded Hills! Be among your own kind.}{Oh, goodness gracious me! You don't a hobbit-hole to live in. You are human! Stand tall, be proud of your heritage, and all that! Not be all hunched over and banging your head on the ceiling every other step. No, no. You don't want that. Trust me, my good lady, you'd be much happier in a place like Tarant, Caladon, Black Root, or even - oh, what's that place? - Shrouded Hills! Be among your own kind.}{}{}{}{}
+{169}{But I like it here. This place, this entire community, has a homey feeling to it.}{}{5}{}{173}{}
+{170}{Perhaps you're right. Just the same, in case I meet someone who is looking for a place, perhaps I should speak with Mr. Furbottom.}{}{5}{}{180}{}
+{171}{But me like it here! Dis place has a comfy feel to it.}{}{-4}{}{173}{}
+{172}{Maybe you right. Ah! If me do find someone to buy it, maybe me should talk to Mr. Fur-bottom [snicker] and learn more.}{Maybe you right. Ah! If me do find someone to buy it, maybe me should talk to Mr. Fur-bottom [snicker] and learn more.}{-4}{}{180}{}
+{173}{Perhaps you're not seeing things clearly, [pause for emphasis]  human. Brandybuck is a Shire. That means it's a halfling community. Not a human, not an elf, not a dwarf community, but a halfling community. And we mean to keep it that way}{Perhaps you're not seeing things clearly, [pause for emphasis]  human. Brandybuck is a Shire. That means it's a halfling community. Not a human, not an elf, not a dwarf community, but a halfling community. And we mean to keep it that way}{}{}{}{}
+{174}{I see.... [pause] ...your bigotry.}{}{5}{}{176}{}
+{175}{Me see.... [pause] your big-got-tree.}{}{-4}{}{176}{}
+{176}{Call it what you will, human. We take care of our own here. OUR own.....}{Call it what you will, human. We take care of our own here. OUR own.....}{}{}{}{re -10}
+{177}{You're asking for trouble with words like that...}{}{5}{}{202}{}
+{178}{You askin' for trouble wit words like dat...}{}{-4}{}{202}{}
+{179}{e:}{}{1}{}{0}{}
+{180}{Why so? Between me, the sign, and what you've seen, what more is there to learn?}{Why so? Between me, the sign, and what you've seen, what more is there to learn?}{}{}{}{}
+{181}{To get the measure of the fellow, of course. I'd know to know what kind of person a friend of mine might have to deal with.}{}{5}{}{183}{}
+{182}{To see whut kind of man Fur-bottom is. If I send little friend to talk to him, I not want his feelin's hurt by rude man. Right?}{}{-4}{}{183}{}
+{183}{Of course, of course. How silly of me! He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{Of course, of course. How silly of me! He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{}{}{}{gf 2802 1}
+{184}{Thank you! I'll be going now.}{}{5}{}{0}{}
+{185}{Tanks! Me go now!}{}{-4}{}{0}{}
+{186}{}{}{}{}{}{}
+{187}{Well, that is one possibility. Given that you do seem to be on the road much of the time, you could engage the services of one of the townsfolk to collect the rent - For a fee, of course. Can't exactly say that I'm keen on the idea of Brandybuck land belonging to an outlander, but it could tolerated.}{Well, that is one possibility. Given that you do seem to be on the road much of the time, you could engage the services of one of the townsfolk to collect the rent - For a fee, of course. Can't exactly say that I'm keen on the idea of Brandybuck land belonging to an outlander, but it could tolerated.}{}{}{}{}
+{188}{That's pretty much what I had in mind. Could you direct me to this Mr. Furbottom?}{}{5}{}{199}{}
+{189}{What do you mean by tolerated?}{}{5}{}{192}{}
+{190}{Yuh, that what me think. Good idea on sum-one here to get munee for me. Now, where do Mr. Fur-bottom live?}{}{-4}{}{199}{}
+{191}{Whut you mean, tolerated?}{}{-4}{}{192}{}
+{192}{Perhaps you're not seeing things clearly, [pause for emphasis]  human. Brandybuck is a Shire. That means it's a halfling community. Not a human, not an elf, not a dwarf community, but a halfling community. And we mean to keep it that way.}{Perhaps you're not seeing things clearly, [pause for emphasis]  human. Brandybuck is a Shire. That means it's a halfling community. Not a human, not an elf, not a dwarf community, but a halfling community. And we mean to keep it that way.}{}{}{}{}
+{193}{I see.... [pause] ...your bigotry.}{}{5}{}{195}{}
+{194}{Me see.... [pause] your big-got-tree.}{}{-4}{}{195}{}
+{195}{Call it what you will, human. We take care of our own here. OUR own.....}{Call it what you will, human. We take care of our own here. OUR own.....}{}{}{}{re -10}
+{196}{You're asking for trouble with words like that...}{}{5}{}{202}{}
+{197}{You askin' for trouble wit words like dat...}{}{1}{}{202}{}
+{198}{E:}{}{1}{}{0}{}
+{199}{He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{}{}{}{gf 2802 1}
+{200}{e:}{}{1}{}{0}{}
+{201}{}{}{}{}{}{}
+{202}{No - The only one who's asking for trouble is you for being somewhere you're not wanted. Now then, is there anything else?}{No - The only one who's asking for trouble is you for being somewhere you're not wanted. Now then, is there anything else?}{}{}{}{}
+{203}{K:}{}{1}{}{38}{}
+{204}{e:}{}{1}{}{0}{}
+
+{250}{Why do you want to know? [He looks at you suspiciously] You're not thinking of living there are you?}{Why do you want to know? [He looks at you suspiciously] You're not thinking of living there are you?}{}{}{}{}
+{251}{Not really, but I do travel quite a bit, and if I should hear of someone looking for a place of their own, having some details would be nice.}{}{5}{}{257}{}
+{252}{Actually, I just might. The place is charming, and this might be a good place to retire to.}{}{5}{}{268}{}
+{253}{Perhaps. Perhaps not. I do try to keep my eyes open for an good investment possibility. I can see rental prospects here.}{}{5}{}{287}{}
+{254}{Not really, but me do travel a lot. If me hear someone wantin' a place, know'n things about dis would be nice.}{}{-4}{}{257}{}
+{255}{Yuh! Me like da little hole. It comfy inside. Lot like home. Heh!}{}{-4}{}{268}{}
+{256}{Maybe and maybe not. Me tinks me can rent dis place to little people an' dey give me money!}{}{-4}{}{287}{}
+{257}{Oh, well! Yes! Yes, indeed! [He looks quite relieved] There's not much more to tell besides what you can see with your own two eyes. It's a small place, but has about two acres of good, cleared land. And it has a deep well that has never run dry. I think the only reason Mr. Furbottom is selling it is because he got a bit over-extended. There was a drop in tobacco prices and that happens to be his main source of income.}{Oh, well! Yes! Yes, indeed! [He looks quite relieved] There's not much more to tell besides what you can see with your own two eyes. It's a small place, but has about two acres of good, cleared land. And it has a deep well that has never run dry. I think the only reason Mr. Furbottom is selling it is because he got a bit over-extended. There was a drop in tobacco prices and that happens to be his main source of income.}{}{}{}{}
+{258}{I see. Thank you. Do you happen to know how much he's asking for the place?}{}{5}{}{260}{}
+{259}{Tanks! That stuff is good to know. Uhh... Do you know how much Mr. Fur-bottom (snicker) wants for place?}{}{-4}{}{260}{}
+{260}{He was asking 75,000 until recently. I heard that he lowered the asking price, but I'm afraid I don't know what the current one is.}{He was asking 75,000 until recently. I heard that he lowered the asking price, but I'm afraid I don't know what the current one is.}{}{}{}{}
+{261}{Less than 75,000, eh? I just might know of someone who would be interested. Where might I find this Furbottom, chap?}{}{5}{}{263}{}
+{262}{Less dan 75,000, eh? Me might know of someone. Where does dis Frigo Fur-bottom [smile] live?}{}{-4}{}{263}{}
+{263}{He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{}{}{}{gf 2802 1}
+{264}{Thank you. I'll be going now.}{}{5}{}{0}{}
+{265}{Tanks! Me go now!}{}{-4}{}{0}{}
+{266}{K:}{}{1}{}{38}{}
+{267}{}{}{}{}{}{}
+{268}{Oh, goodness gracious me! You don't a hobbit-hole to live in. You are a dwarf! Stand tall, be proud of your heritage, and all that!  Trust me, my good man, if you're tired of living in one of the Clans, you'd be much happier in a place like Tarant, Caladon, Black Root, or even - oh, what's that place? - Shrouded Hills! I'm sure there would be other dwarves there, and you could be among your own kind.}{Oh, goodness gracious me! You don't a hobbit-hole to live in. You are a dwarf! Stand tall, be proud of your heritage, and all that!  Trust me, my good man, if you're tired of living in one of the Clans, you'd be much happier in a place like Tarant, Caladon, Black Root, or even - oh, what's that place? - Shrouded Hills! I'm sure there would be other dwarves there, and you could be among your own kind.}{}{}{}{}
+{269}{But I like it here. This place, this entire community, has a homey feeling to it.}{}{5}{}{273}{}
+{270}{Perhaps you're right. Just the same, in case I meet someone who is looking for a place, perhaps I should speak with Mr. Furbottom.}{}{5}{}{280}{}
+{271}{But me like it here! Dis place has a comfy feel to it.}{}{-4}{}{273}{}
+{272}{Maybe you right. Ah! If me do find someone to buy it, maybe me should talk to Mr. Fur-bottom [snicker] and learn more.}{Maybe you right. Ah! If me do find someone to buy it, maybe me should talk to Mr. Fur-bottom [snicker] and learn more.}{-4}{}{280}{}
+{273}{Perhaps you're not seeing things clearly, [pause for emphasis]  dwarf. Brandybuck is a Shire. That means it's a halfling community. Not a dwarf, not an elf, not a human community, but a halfling community. And we mean to keep it that way.}{Perhaps you're not seeing things clearly, [pause for emphasis]  dwarf. Brandybuck is a Shire. That means it's a halfling community. Not a dwarf, not an elf, not a human community, but a halfling community. And we mean to keep it that way.}{}{}{}{}
+{274}{I see.... [pause] ...your bigotry.}{}{5}{}{276}{}
+{275}{Me see.... [pause] your big-got-tree.}{}{-4}{}{276}{}
+{276}{Call it what you will, dwarf. We take care of our own here. OUR own.....}{Call it what you will, dwarf. We take care of our own here. OUR own.....}{}{}{}{re -10}
+{277}{You're asking for trouble with words like that...}{}{5}{}{301}{}
+{278}{You askin' for trouble wit words like dat...}{}{-4}{}{301}{}
+{279}{e:}{}{1}{}{0}{}
+{280}{Why so? Between me, the sign, and what you've seen, what more is there to learn?}{Why so? Between me, the sign, and what you've seen, what more is there to learn?}{}{}{}{}
+{281}{To get the measure of the fellow, of course. I'd know to know what kind of person a friend of mine might have to deal with.}{}{5}{}{283}{}
+{282}{To see whut kind of man Fur-bottom is. If I send little friend to talk to him, I not want his feelin's hurt by rude man. Right?}{}{-4}{}{283}{}
+{283}{Of course, of course. How silly of me! He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{Of course, of course. How silly of me! He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{}{}{}{gf 2802 1}
+{284}{Thank you! I'll be going now.}{}{5}{}{0}{}
+{285}{Tanks! Me go now!}{}{-4}{}{0}{}
+{286}{}{}{}{}{}{}
+{287}{Well, that is one possibility. Given that you do seem to be on the road much of the time, you could engage the services of one of the townsfolk to collect the rent - For a fee, of course. Can't exactly say that I'm keen on the idea of Brandybuck land belonging to an outlander, but it could tolerated.}{Well, that is one possibility. Given that you do seem to be on the road much of the time, you could engage the services of one of the townsfolk to collect the rent - For a fee, of course. Can't exactly say that I'm keen on the idea of Brandybuck land belonging to an outlander, but it could tolerated.}{}{}{}{}
+{288}{That's pretty much what I had in mind. Could you direct me to this Mr. Furbottom?}{}{5}{}{298}{}
+{289}{What do you mean by tolerated?}{}{5}{}{273}{}
+{290}{Yuh, that what me think. Good idea on sum-one here to get munee for me. Now, where do Mr. Fur-bottom live?}{}{-4}{}{298}{}
+{291}{Whut you mean, tolerated?}{}{-4}{}{273}{}
+{292}{Perhaps you're not seeing things clearly, [pause for emphasis]  dwarf. Brandybuck is a Shire. That means it's a halfling community. Not a dwarf, not an elf, not a human community, but a halfling community. And we mean to keep it that way.}{Perhaps you're not seeing things clearly, [pause for emphasis]  dwarf. Brandybuck is a Shire. That means it's a halfling community. Not a dwarf, not an elf, not a human community, but a halfling community. And we mean to keep it that way.}{}{}{}{}
+{293}{I see.... [pause] ...your bigotry.}{}{5}{}{295}{}
+{294}{Me see.... [pause] your big-got-tree.}{}{-4}{}{295}{}
+{295}{Call it what you will, dwarf. We take care of our own here. OUR own.....}{Call it what you will, dwarf. We take care of our own here. OUR own.....}{}{}{}{re -10}
+{296}{You're asking for trouble with words like that...}{}{5}{}{38}{}
+{297}{E:}{}{1}{}{0}{}
+{298}{}{}{}{}{}{}
+{299}{He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{}{}{}{gf 2802 1}
+{300}{e:}{}{1}{}{0}{}
+{301}{No - The only one who's asking for trouble is you for being somewhere you're not wanted. Now then, is there anything else?}{No - The only one who's asking for trouble is you for being somewhere you're not wanted. Now then, is there anything else?}{}{}{}{}
+{302}{K:}{}{1}{}{38}{}
+{303}{E:}{}{1}{}{0}{}
+
+{350}{Why do you want to know? [He looks at you suspiciously] You're not thinking of living there are you?}{Why do you want to know? [He looks at you suspiciously] You're not thinking of living there are you?}{}{}{}{}
+{351}{Not really, but I do travel quite a bit, and if I should hear of someone looking for a place of their own, having some details would be nice.}{}{5}{}{357}{}
+{352}{Actually, I just might. The place is charming, and this might be a good place to retire to.}{}{5}{}{368}{}
+{353}{Perhaps. Perhaps not. I do try to keep my eyes open for an good investment possibility. I can see rental prospects here.}{}{5}{}{387}{}
+{354}{Not really, but me do travel a lot. If me hear someone wantin' a place, know'n things about dis would be nice.}{}{-4}{}{357}{}
+{355}{Yuh! Me like da little hole. It comfy inside. Me learn to duck head. Heh!}{}{-4}{}{368}{}
+{356}{Maybe and maybe not. Me tinks me can rent dis place to little people an' dey give me money!}{}{-4}{}{387}{}
+{357}{Oh, well! Yes! Yes, indeed! [He looks quite relieved] There's not much more to tell besides what you can see with your own two eyes. It's a small place, but has about two acres of good, cleared land. And it has a deep well that has never run dry. I think the only reason Mr. Furbottom is selling it is because he got a bit over-extended. There was a drop in tobacco prices and that happens to be his main source of income.}{Oh, well! Yes! Yes, indeed! [He looks quite relieved] There's not much more to tell besides what you can see with your own two eyes. It's a small place, but has about two acres of good, cleared land. And it has a deep well that has never run dry. I think the only reason Mr. Furbottom is selling it is because he got a bit over-extended. There was a drop in tobacco prices and that happens to be his main source of income.}{}{}{}{}
+{358}{I see. Thank you. Do you happen to know how much he's asking for the place?}{}{5}{}{360}{}
+{359}{Tanks! That stuff is good to know. Uhh... Do you know how much Mr. Fur-bottom (snicker) wants for place?}{}{-4}{}{360}{}
+{360}{He was asking 75,000 until recently. I heard that he lowered the asking price, but I'm afraid I don't know what the current one is.}{He was asking 75,000 until recently. I heard that he lowered the asking price, but I'm afraid I don't know what the current one is.}{}{}{}{}
+{361}{Less than 75,000, eh? I just might know of someone who would be interested. Where might I find this Frigo Furbottom, chap?}{}{5}{}{363}{}
+{362}{Less dan 75,000, eh? Me might know of someone. Where does dis Frigo Fur-bottom [smile] live?}{}{-4}{}{363}{}
+{363}{He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{}{}{}{gf 2802 1}
+{364}{Thank you. I'll be going now.}{}{5}{}{0}{}
+{365}{Tanks! Me go now!}{}{-4}{}{0}{}
+{366}{K:}{}{1}{}{38}{}
+{367}{}{}{}{}{}{}
+{368}{Oh, goodness gracious me! You don't a hobbit-hole to live in. You are elven! Stand tall, be proud of your heritage, and all that! Not be all hunched over and banging your head on the ceiling every other step. No, no. You don't want that. Trust me, my good man, if you're tired of forest living, you'd be much happier in a place like Tarant, Caladon, Black Root  or even - oh, what's that place? - Shrouded Hills!}{Oh, goodness gracious me! You don't a hobbit-hole to live in. You are elven! Stand tall, be proud of your heritage, and all that! Not be all hunched over and banging your head on the ceiling every other step. No, no. You don't want that. Trust me, my good lady, if you're tired of forest living, you'd be much happier in a place like Tarant, Caladon, Black Root  or even - oh, what's that place? - Shrouded Hills!}{}{}{}{}
+{369}{But I like it here. This place, this entire community, has a homey feeling to it.}{}{5}{}{373}{}
+{370}{Perhaps you're right. Just the same, in case I meet someone who is looking for a place, perhaps I should speak with Mr. Furbottom.}{}{5}{}{380}{}
+{371}{But me like it here! Dis place has a comfy feel to it.}{}{-4}{}{373}{}
+{372}{Maybe you right. Ah! If me do find someone to buy it, maybe me should talk to Mr. Fur-bottom [snicker] and learn more.}{Maybe you right. Ah! If me do find someone to buy it, maybe me should talk to Mr. Fur-bottom [snicker] and learn more.}{-4}{}{380}{}
+{373}{Perhaps you're not seeing things clearly, [pause for emphasis]  elf. Brandybuck is a Shire. That means it's a halfling community. Not an elf, not a dwarf, not a human community, but a halfling community. And we mean to keep it that way.}{Perhaps you're not seeing things clearly, [pause for emphasis]  elf. Brandybuck is a Shire. That means it's a halfling community. Not an elf, not a dwarf, not a human community, but a halfling community. And we mean to keep it that way.}{}{}{}{}
+{374}{I see.... [pause] ...your bigotry.}{}{5}{}{376}{}
+{375}{Me see.... [pause] your big-got-tree.}{}{-4}{}{376}{}
+{376}{Call it what you will, elf. We take care of our own here. OUR own.....}{Call it what you will, elf. We take care of our own here. OUR own.....}{}{}{}{re -10}
+{377}{You're asking for trouble with words like that...}{}{5}{}{401}{}
+{378}{You askin' for trouble wit words like dat...}{}{-4}{}{401}{}
+{379}{e:}{}{1}{}{0}{}
+{380}{Why so? Between me, the sign, and what you've seen, what more is there to learn?}{Why so? Between me, the sign, and what you've seen, what more is there to learn?}{}{}{}{}
+{381}{To get the measure of the fellow, of course. I'd know to know what kind of person a friend of mine might have to deal with.}{}{5}{}{383}{}
+{382}{To see whut kind of man Fur-bottom is. If I send little friend to talk to him, I not want his feelin's hurt by rude man. Right?}{}{-4}{}{383}{}
+{383}{Of course, of course. How silly of me! He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{Of course, of course. How silly of me! He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{}{}{}{}
+{384}{Thank you! I'll be going now.}{}{5}{}{0}{}
+{385}{Tanks! Me go now!}{}{-4}{}{0}{}
+{386}{}{}{}{}{}{}
+{387}{Well, that is one possibility. Given that you do seem to be on the road much of the time, you could engage the services of one of the townsfolk to collect the rent - For a fee, of course. Can't exactly say that I'm keen on the idea of Brandybuck land belonging to an outlander, but it could tolerated.}{Well, that is one possibility. Given that you do seem to be on the road much of the time, you could engage the services of one of the townsfolk to collect the rent - For a fee, of course. Can't exactly say that I'm keen on the idea of Brandybuck land belonging to an outlander, but it could tolerated.}{}{}{}{}
+{388}{That's pretty much what I had in mind. Could you direct me to this Mr. Furbottom?}{}{5}{}{398}{}
+{389}{What do you mean by tolerated?}{}{5}{}{373}{}
+{390}{Yuh, that what me think. Good idea on sum-one here to get munee for me. Now, where do Mr. Fur-bottom live?}{}{-4}{}{398}{}
+{391}{Whut you mean, tolerated?}{}{-4}{}{373}{}
+{392}{Perhaps you're not seeing things clearly, [pause for emphasis]  elf. Brandybuck is a Shire. That means it's a halfling community. Not an elf, not a dwarf, not a human community, but a halfling community. And we mean to keep it that way.}{Perhaps you're not seeing things clearly, [pause for emphasis]  elf. Brandybuck is a Shire. That means it's a halfling community. Not an elf, not a dwarf, not a human community, but a halfling community. And we mean to keep it that way.}{}{}{}{}
+{393}{I see.... [pause] ...your bigotry.}{}{5}{}{395}{}
+{394}{Me see.... [pause] your big-got-tree.}{}{-4}{}{395}{}
+{395}{Call it what you will, elf. We take care of our own here. OUR own.....}{Call it what you will, elf. We take care of our own here. OUR own.....}{}{}{}{re -10}
+{396}{K:}{}{1}{}{38}{}
+{397}{E:}{}{1}{}{0}{}
+{398}{He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{}{}{}{}{gf 2802 1}
+{399}{e:}{}{1}{}{0}{}
+{400}{}{}{}{}{}{}
+{401}{No - The only one who's asking for trouble is you for being somewhere you're not wanted. Now then, is there anything else?}{No - The only one who's asking for trouble is you for being somewhere you're not wanted. Now then, is there anything else?}{}{}{}{}
+{402}{K:}{}{1}{}{38}{}
+{403}{E:}{}{1}{}{0}{}
+
+{450}{Why do you want to know? [He looks at you suspiciously] You're not thinking of living there are you?}{Why do you want to know? [He looks at you suspiciously] You're not thinking of living there are you?}{}{}{}{}
+{451}{Not really, but I do travel quite a bit, and if I should hear of someone looking for a place of their own, having some details would be nice.}{}{5}{}{457}{}
+{452}{Actually, I just might. The place is charming, and this might be a good place to retire to.}{}{5}{}{468}{}
+{453}{Perhaps. Perhaps not. I do try to keep my eyes open for an good investment possibility. I can see rental prospects here.}{}{5}{}{487}{}
+{454}{Not really, but me do travel a lot. If me hear someone wantin' a place, know'n things about dis would be nice.}{}{-4}{}{457}{}
+{455}{Yuh! Me like da little hole. It comfy inside. Me learn to duck head. Heh!}{}{-4}{}{468}{}
+{456}{Maybe and maybe not. Me tinks me can rent dis place to little people an' dey give me money!}{}{-4}{}{487}{}
+{457}{Oh, well! Yes! Yes, indeed! [He looks quite relieved] There's not much more to tell besides what you can see with your own two eyes. It's a small place, but has about two acres of good, cleared land. And it has a deep well that has never run dry. I think the only reason Mr. Furbottom is selling it is because he got a bit over-extended. There was a drop in tobacco prices and that happens to be his main source of income.}{Oh, well! Yes! Yes, indeed! [He looks quite relieved] There's not much more to tell besides what you can see with your own two eyes. It's a small place, but has about two acres of good, cleared land. And it has a deep well that has never run dry. I think the only reason Mr. Furbottom is selling it is because he got a bit over-extended. There was a drop in tobacco prices and that happens to be his main source of income.}{}{}{}{}
+{458}{I see. Thank you. Do you happen to know how much he's asking for the place?}{}{5}{}{460}{}
+{459}{Tanks! That stuff is good to know. Uhh... Do you know how much Mr. Fur-bottom (snicker) wants for place?}{}{-4}{}{460}{}
+{460}{He was asking 75,000 until recently. I heard that he lowered the asking price, but I'm afraid I don't know what the current one is.}{He was asking 75,000 until recently. I heard that he lowered the asking price, but I'm afraid I don't know what the current one is.}{}{}{}{}
+{461}{Less than 75,000, eh? I just might know of someone who would be interested. Where might I find this Furbottom, chap?}{}{5}{}{463}{}
+{462}{Less dan 75,000, eh? Me might know of someone. Where does dis Frigo Fur-bottom [smile] live?}{}{-4}{}{463}{}
+{463}{He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{}{}{}{gf 2802 1}
+{464}{Thank you. I'll be going now.}{}{5}{}{0}{}
+{465}{Tanks! Me go now!}{}{-4}{}{0}{}
+{466}{K:}{}{1}{}{38}{}
+{467}{}{}{}{}{}{}
+{468}{Oh, goodness gracious me! You don't a hobbit-hole to live in. You are half-elf! Stand tall, be proud of your heritage, and all that! Not be all hunched over and banging your head on the ceiling every other step. No, no. You don't want that. Trust me, my good man, if you're tired of forest living, you'd be much happier in a place like Tarant, Caladon, Black Root  or even - oh, what's that place? - Shrouded Hills!}{Oh, goodness gracious me! You don't a hobbit-hole to live in. You are half-elf! Stand tall, be proud of your heritage, and all that! Not be all hunched over and banging your head on the ceiling every other step. No, no. You don't want that. Trust me, my good lady,  you'd be much happier in a place like Tarant, Caladon, Black Root  or even - oh, what's that place? - Shrouded Hills!}{}{}{}{}
+{469}{But I like it here. This place, this entire community, has a homey feeling to it.}{}{5}{}{473}{}
+{470}{Perhaps you're right. Just the same, in case I meet someone who is looking for a place, perhaps I should speak with Mr. Furbottom.}{}{5}{}{480}{}
+{471}{But me like it here! Dis place has a comfy feel to it.}{}{-4}{}{473}{}
+{472}{Maybe you right. Ah! If me do find someone to buy it, maybe me should talk to Mr. Fur-bottom [snicker] and learn more.}{Maybe you right. Ah! If me do find someone to buy it, maybe me should talk to Mr. Fur-bottom [snicker] and learn more.}{-4}{}{480}{}
+{473}{Perhaps you're not seeing things clearly, [pause for emphasis]  half-elf. Brandybuck is a Shire. That means it's a halfling community. That word does not mean half-elves, half-ogres, half-orcs, or any other half-breeds, but halflings. Hobbits, as we call ourselves. And we mean to keep it that way.}{Perhaps you're not seeing things clearly, [pause for emphasis]  half-elf. Brandybuck is a Shire. That means it's a halfling community. That word does not mean half-elves, half-ogres, half-orcs, or any other half-breeds, but halflings. Hobbits, as we call ourselves. And we mean to keep it that way.}{}{}{}{}
+{474}{I see.... [pause] ...your bigotry.}{}{5}{}{476}{}
+{475}{Me see.... [pause] your big-got-tree.}{}{-4}{}{476}{}
+{476}{Call it what you will, half-elf. We take care of our own here. OUR own.....}{Call it what you will, half-elf. We take care of our own here. OUR own.....}{}{}{}{re -10}
+{477}{You're asking for trouble with words like that...}{}{5}{}{494}{}
+{478}{You askin' for trouble wit words like dat...}{}{-4}{}{494}{}
+{479}{e:}{}{1}{}{0}{}
+{480}{Why so? Between me, the sign, and what you've seen, what more is there to learn?}{Why so? Between me, the sign, and what you've seen, what more is there to learn?}{}{}{}{}
+{481}{To get the measure of the fellow, of course. I'd know to know what kind of person a friend of mine might have to deal with.}{}{5}{}{483}{}
+{482}{To see whut kind of man Fur-bottom is. If I send little friend to talk to him, I not want his feelin's hurt by rude man. Right?}{}{-4}{}{483}{}
+{483}{Of course, of course. How silly of me! He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{Of course, of course. How silly of me! He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{}{}{}{gf 2802 1}
+{484}{Thank you! I'll be going now.}{}{5}{}{0}{}
+{485}{Tanks! Me go now!}{}{-4}{}{0}{}
+{486}{}{}{}{}{}{}
+{487}{Well, that is one possibility. Given that you do seem to be on the road much of the time, you could engage the services of one of the townsfolk to collect the rent - For a fee, of course. Can't exactly say that I'm keen on the idea of Brandybuck land belonging to an outlander, but it could tolerated.}{Well, that is one possibility. Given that you do seem to be on the road much of the time, you could engage the services of one of the townsfolk to collect the rent - For a fee, of course. Can't exactly say that I'm keen on the idea of Brandybuck land belonging to an outlander, but it could tolerated.}{}{}{}{}
+{488}{That's pretty much what I had in mind. Could you direct me to this Mr. Furbottom?}{}{5}{}{498}{}
+{489}{What do you mean by tolerated?}{}{5}{}{473}{}
+{490}{Yuh, that what me think. Good idea on sum-one here to get munee for me. Now, where do Mr. Fur-bottom live?}{}{-4}{}{498}{}
+{491}{Whut you mean, tolerated?}{}{-4}{}{473}{}
+
+{494}{No - The only one who's asking for trouble is you for being somewhere you're not wanted. Now then, is there anything else?}{No - The only one who's asking for trouble is you for being somewhere you're not wanted. Now then, is there anything else?}{}{}{}{}
+{495}{K:}{}{1}{}{38}{}
+{496}{E:}{}{1}{}{0}{}
+
+{498}{He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{}{}{}{gf 2802 1}
+{499}{e:}{}{1}{}{0}{}
+{500}{}{}{}{}{}{}
+
+{550}{Why do you want to know? [He looks at you suspiciously] You're not thinking of living there are you?}{Why do you want to know? [He looks at you suspiciously] You're not thinking of living there are you?}{}{}{}{}
+{551}{Not really, but I do travel quite a bit, and if I should hear of someone looking for a place of their own, having some details would be nice.}{}{5}{}{557}{}
+{552}{Actually, I just might. The place is charming, and this might be a good place to retire to in my golden years.}{}{5}{}{568}{}
+{553}{Perhaps. Perhaps not. I do try to keep my eyes open for an good investment possibility. I can see rental prospects here.}{}{5}{}{587}{}
+{554}{Not really, but me do travel a lot. If me hear someone wantin' a place, know'n things about dis would be nice.}{}{-4}{}{557}{}
+{555}{Yuh! Me like da little hole. It comfy inside.}{}{-4}{}{568}{}
+{556}{Maybe and maybe not. Me tinks me can rent dis place to little people an' dey give me money!}{}{-4}{}{587}{}
+{557}{Oh, well! Yes! Yes, indeed! [He looks quite relieved] There's not much more to tell besides what you can see with your own two eyes. It's a small place, but has about two acres of good, cleared land. And it has a deep well that has never run dry. I think the only reason Mr. Furbottom is selling it is because he got a bit over-extended. There was a drop in tobacco prices and that happens to be his main source of income.}{Oh, well! Yes! Yes, indeed! [He looks quite relieved] There's not much more to tell besides what you can see with your own two eyes. It's a small place, but has about two acres of good, cleared land. And it has a deep well that has never run dry. I think the only reason Mr. Furbottom is selling it is because he got a bit over-extended. There was a drop in tobacco prices and that happens to be his main source of income.}{}{}{}{}
+{558}{I see. Thank you. Do you happen to know how much he's asking for the place?}{}{5}{}{560}{}
+{559}{Tanks! That stuff is good to know. Uhh... Do you know how much Mr. Fur-bottom (snicker) wants for place?}{}{-4}{}{560}{}
+{560}{He was asking 75,000 until recently. I heard that he lowered the asking price, but I'm afraid I don't know what the current one is.}{He was asking 75,000 until recently. I heard that he lowered the asking price, but I'm afraid I don't know what the current one is.}{}{}{}{}
+{561}{Less than 75,000, eh? I just might know of someone who would be interested. Where might I find this Furbottom, chap?}{}{5}{}{563}{}
+{562}{Less dan 75,000, eh? Me might know of someone. Where does dis Frigo Fur-bottom [smile] live?}{}{-4}{}{563}{}
+{563}{He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{}{}{}{gf 2802 1}
+{564}{Thank you. I'll be going now.}{}{5}{}{0}{}
+{565}{Tanks! Me go now!}{}{-4}{}{0}{}
+{566}{K:}{}{1}{}{38}{}
+{567}{}{}{}{}{}{}
+{568}{Oh, goodness gracious me! You don't a hobbit-hole to live in. You are a gnome! Stand tall, be proud of your heritage, and all that! Trust me, my good man, you'd be much happier in a place like Tarant, Caladon, Black Root, or even - oh, what's that place? - Shrouded Hills! I'm sure there would be other gnomes there, and you could be among your own kind.}{Oh, goodness gracious me! You don't a hobbit-hole to live in. You are a gnome! Stand tall, be proud of your heritage, and all that! Trust me, my good lady, you'd be much happier in a place like Tarant, Caladon, Black Root, or even - oh, what's that place? - Shrouded Hills! I'm sure there would be other gnomes there, and you could be among your own kind.}{}{}{}{}
+{569}{But I like it here. This place, this entire community, has a homey feeling to it.}{}{5}{}{573}{}
+{570}{Perhaps you're right. Just the same, in case I meet someone who is looking for a place, perhaps I should speak with Mr. Furbottom.}{}{5}{}{580}{}
+{571}{But me like it here! Dis place has a comfy feel to it.}{}{-4}{}{573}{}
+{572}{Maybe you right. Ah! If me do find someone to buy it, maybe me should talk to Mr. Fur-bottom [snicker] and learn more.}{Maybe you right. Ah! If me do find someone to buy it, maybe me should talk to Mr. Fur-bottom [snicker] and learn more.}{-4}{}{580}{}
+{573}{Perhaps you're not seeing things clearly, [pause for emphasis]  gnome. Brandybuck is a Shire. That means it's a halfling community. Not some cramped little gnome town filled with greedy, grasping creatures who'd sell their own mothers for a tuppance, but a halfling community. And we mean to keep it that way.}{Perhaps you're not seeing things clearly, [pause for emphasis]  gnome. Brandybuck is a Shire. That means it's a halfling community. Not some cramped little gnome town filled with greedy, grasping creatures who'd sell their own mothers for a tuppance, but a halfling community. And we mean to keep it that way.}{}{}{}{}
+{574}{I see.... [pause] ...your bigotry.}{}{5}{}{576}{}
+{575}{Me see.... [pause] your big-got-tree.}{}{-4}{}{576}{}
+{576}{Call it what you will, gnome. We take care of our own here. OUR own.....}{Call it what you will, gnome. We take care of our own here. OUR own.....}{}{}{}{re -10}
+{577}{You're asking for trouble with words like that...}{}{5}{}{594}{}
+{578}{You askin' for trouble wit words like dat...}{}{-4}{}{594}{}
+{579}{e:}{}{1}{}{0}{}
+{580}{Why so? Between me, the sign, and what you've seen, what more is there to learn?}{Why so? Between me, the sign, and what you've seen, what more is there to learn?}{}{}{}{}
+{581}{To get the measure of the fellow, of course. I'd know to know what kind of person a friend of mine might have to deal with.}{}{5}{}{583}{}
+{582}{To see whut kind of man Fur-bottom is. If I send friend to talk to him, I not want his feelin's hurt by rude man. Right?}{}{-4}{}{583}{}
+{583}{Of course, of course. How silly of me! He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{Of course, of course. How silly of me! He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{}{}{}{gf 2802 1}
+{584}{Thank you! I'll be going now.}{}{5}{}{0}{}
+{585}{Tanks! Me go now!}{}{-4}{}{0}{}
+{586}{}{}{}{}{}{}
+{587}{Well, that is one possibility. Given that you do seem to be on the road much of the time, you could engage the services of one of the townsfolk to collect the rent - For a fee, of course. Can't exactly say that I'm keen on the idea of Brandybuck land belonging to an outlander, but it could tolerated.}{Well, that is one possibility. Given that you do seem to be on the road much of the time, you could engage the services of one of the townsfolk to collect the rent - For a fee, of course. Can't exactly say that I'm keen on the idea of Brandybuck land belonging to an outlander, but it could tolerated.}{}{}{}{}
+{588}{That's pretty much what I had in mind. Could you direct me to this Mr. Furbottom?}{}{5}{}{598}{}
+{589}{What do you mean by tolerated?}{}{5}{}{592}{}
+{590}{Yuh, that what me think. Good idea on sum-one here to get munee for me. Now, where do Mr. Fur-bottom live?}{}{-4}{}{598}{}
+{591}{Whut you mean, tolerated?}{}{-4}{}{592}{}
+
+{594}{No - The only one who's asking for trouble is you for being somewhere you're not wanted. Now then, is there anything else?}{No - The only one who's asking for trouble is you for being somewhere you're not wanted. Now then, is there anything else?}{}{}{}{}
+{595}{K:}{}{1}{}{38}{}
+{596}{E:}{}{1}{}{0}{}
+
+{598}{He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{}{}{}{gf 2802 1}
+{599}{e:}{}{1}{}{0}{}
+{600}{}{}{}{}{}{}
+
+{620}{You won't regret it, my good fellow! This place is a real beauty with solid construction and plenty of room for expansion after you finish sowing your wild oats.}{You won't regret it, my good lady! This place is a real beauty with solid construction and plenty of room for expansion after you decide to raise a family. Yes, indeed. }{}{}{}{}
+{621}{It's nice of you to say that.}{}{5}{}{623}{}
+{622}{Perhaps it's a bit too soon for me to settle down. In case I meet someone who is looking for a place, perhaps I should speak with Mr. Furbottom.}{}{5}{}{680}{}
+{623}{You are welcome. Now then, is there anything else I can assist you with?}{You are welcome. Now then, is there anything else I can assist you with?}{}{}{}{}
+{624}{K:}{}{5}{}{38}{}
+{625}{No, I believe that will be sufficient. Good day to you.}{}{5}{}{0}{}
+
+{630}{Why yes. The practice of an absentee landlord is not completely unknown to us. I, personally collect the rent on three establishments for a gentleman who resides in Tarant.}{Why yes. The practice of an absentee landlady is not completely unknown to us. I, personally collect the rent on three establishments for a gentleman who resides in Tarant.}{}{}{}{}
+{631}{In that case, I shall cetrainly keep you in mind. Perhaps I could retain your services as well.}{}{5}{}{632}{}
+{632}{Indeed! Now then, is there anything else I can assist you with?}{Indeed! Now then, is there anything else I can assist you with?}{}{}{}{}
+{633}{K:}{}{1}{}{38}{}
+{634}{No, I believe that will be sufficient. Good day to you.}{}{5}{}{0}{}
+
+{650}{Ah! Yes. Thinking of living there are you? Starting a family, perhaps?}{Ah! Yes. Thinking of living there are you? Starting a family, perhaps?}{}{}{}{}
+{651}{Not really, but I do travel quite a bit, and if I should hear of someone looking for a place of their own, having some details would be nice.}{}{5}{}{657}{}
+{652}{Actually, I just might. The place is charming, and this looks like a good place to retire to when I settle down..}{}{5}{}{620}{}
+{653}{Perhaps. Perhaps not. I do try to keep my eyes open for an good investment possibility. I can see rental prospects here.}{}{5}{}{630}{}
+{654}{Not really, but me do travel a lot. If me hear someone wantin' a place, know'n things about dis would be nice.}{}{-4}{}{657}{}
+{655}{Yuh! Me like da little hole. It comfy inside. Feel like home. Me come back when ready to settle down.}{}{-4}{}{668}{}
+{656}{Maybe and maybe not. Me tinks me can rent dis place to little people an' dey give me money!}{}{-4}{}{687}{}
+{657}{Oh, well! Yes! Yes, indeed! [He looks mildly disappointed] There's not much more to tell besides what you can see with your own two eyes. It's a small place, but has about two acres of good, cleared land. And it has a deep well that has never run dry. I think the only reason Mr. Furbottom is selling it is because he got a bit over-extended. There was a drop in tobacco prices and that happens to be his main source of income.}{Oh, well! Yes! Yes, indeed! [He looks mildly disappointed] There's not much more to tell besides what you can see with your own two eyes. It's a small place, but has about two acres of good, cleared land. And it has a deep well that has never run dry. I think the only reason Mr. Furbottom is selling it is because he got a bit over-extended. There was a drop in tobacco prices and that happens to be his main source of income.}{}{}{}{}
+{658}{I see. Thank you. Do you happen to know how much he's asking for the place?}{}{5}{}{660}{}
+{659}{Tanks! That stuff is good to know. Uhh... Do you know how much Mr. Fur-bottom (snicker) wants for place?}{}{-4}{}{660}{}
+{660}{He was asking 75,000 until recently. I heard that he lowered the asking price, but I'm afraid I don't know what the current one is.}{He was asking 75,000 until recently. I heard that he lowered the asking price, but I'm afraid I don't know what the current one is.}{}{}{}{}
+{661}{Less than 75,000, eh? I just might know of someone who would be interested. Where might I find this Furbottom, chap?}{}{5}{}{663}{}
+{662}{Less dan 75,000, eh? Me might know of someone. Where does dis Frigo Fur-bottom [smile] live?}{}{-4}{}{663}{}
+{663}{He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{}{}{}{gf 2802 1}
+{664}{Thank you. I'll be going now.}{}{5}{}{0}{}
+{665}{Tanks! Me go now!}{}{-4}{}{0}{}
+{666}{K:}{}{1}{}{38}{}
+{667}{}{}{}{}{}{}
+{668}{Oh, goodness gracious me! You don't want to buy this ratty old place. Just look at it. See how the roofline dips down right there? That's a sure sign the roof is not too far away from collapsing. Trust me on this. The place looks pretty, and it's got a good well, but it would be a bad investment for you.}{Oh, goodness gracious me! You don't want to buy this ratty old place. Just look at it. See how the roofline dips down right there? That's a sure sign the roof is not too far away from collapsing. Trust me on this. The place looks pretty, and it's got a good well, but it would be a bad investment for you.}{}{}{}{}
+{669}{But I like it here. This place, this entire community, has a homey feeling to it.}{}{5}{}{673}{}
+{670}{Perhaps you're right. Just the same, in case I meet someone who is looking for a place, perhaps I should speak with Mr. Furbottom.}{}{5}{}{680}{}
+{671}{But me like it here! Dis place has a comfy feel to it. Me good wit hands. Me fix da roof. It be good again.}{}{-4}{}{673}{}
+{672}{Maybe you right. Ah! If me do find someone to buy it, maybe me should talk to Mr. Fur-bottom [snicker] and learn more.}{Maybe you right. Ah! If me do find someone to buy it, maybe me should talk to Mr. Fur-bottom [snicker] and learn more.}{-4}{}{680}{}
+{673}{Perhaps you're not seeing things clearly, [pause for emphasis]  simpleton. Brandybuck is a Shire with honest, intelligent people. And we mean to keep it that way. }{Perhaps you're not seeing things clearly, [pause for emphasis]  simpleton. Brandybuck is a Shire with honest, intelligent people. And we mean to keep it that way. }{}{}{}{}
+{674}{I see.... [pause] ...your bigotry.}{}{5}{}{676}{}
+{675}{Me see.... [pause] your big-got-tree.}{}{-4}{}{676}{}
+{676}{Call it what you will, @PCNAME@. We don't want dead-heads around here. Do you understand me?}{Call it what you will, @PCNAME@. We don't want dead-heads around here. Do you understand me?}{}{}{}{re -10}
+{677}{You're asking for trouble with words like that...}{}{5}{}{694}{}
+{678}{You askin' for trouble wit words like dat...}{}{-4}{}{694}{}
+{679}{e:}{}{1}{}{0}{}
+{680}{Why so? Between me, the sign, and what you've seen, what more is there to learn?}{Why so? Between me, the sign, and what you've seen, what more is there to learn?}{}{}{}{}
+{681}{To get the measure of the fellow, of course. I'd know to know what kind of person a friend of mine might have to deal with.}{}{5}{}{683}{}
+{682}{To see whut kind of man Fur-bottom is. If I send friend to talk to him, I not want his feelin's hurt by rude man. Right?}{}{-4}{}{683}{}
+{683}{Of course, of course. How silly of me! He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{Of course, of course. How silly of me! He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{}{}{}{gf 2802 1}
+{684}{Thank you! I'll be going now.}{}{5}{}{0}{}
+{685}{Tanks! Me go now!}{}{-4}{}{0}{}
+{686}{}{}{}{}{}{}
+{687}{Well, that is one possibility. Given that you do seem to be on the road much of the time, you could engage the services of one of the townsfolk to collect the rent - For a fee, of course. Can't exactly say that I'm keen on the idea of Brandybuck land belonging to someone like yourself, but it could tolerated.}{Well, that is one possibility. Given that you do seem to be on the road much of the time, you could engage the services of one of the townsfolk to collect the rent - For a fee, of course. Can't exactly say that I'm keen on the idea of Brandybuck land belonging to someone like yourself, but it could tolerated.}{}{}{}{}
+{688}{That's pretty much what I had in mind. Could you direct me to this Mr. Furbottom?}{}{5}{}{698}{}
+{689}{What do you mean by tolerated?}{}{5}{}{673}{}
+{690}{Yuh, that what me think. Good idea on sum-one here to get munee for me. Now, where do Mr. Fur-bottom live?}{}{-4}{}{698}{}
+{691}{Whut you mean, tolerated?}{}{-4}{}{673}{}
+
+{694}{No - The only one who's asking for trouble is you for being somewhere you're not wanted. Now then, is there anything else?}{No - The only one who's asking for trouble is you for being somewhere you're not wanted. Now then, is there anything else?}{}{}{}{}
+{695}{K:}{}{1}{}{38}{}
+{696}{E:}{}{1}{}{0}{}
+
+{698}{He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{}{}{}{gf 2802 1}
+{699}{e:}{}{1}{}{0}{}
+{700}{}{}{}{}{}{}
+
+{750}{Why do you want to know? [He looks at you suspiciously] You're not thinking of living there are you?}{Why do you want to know? [He looks at you suspiciously] You're not thinking of living there are you?}{}{}{}{}
+{751}{Not really, but I do travel quite a bit, and if I should hear of someone looking for a place of their own, having some details would be nice.}{}{5}{}{757}{}
+{752}{Actually, I just might. The place is charming, and this might be a good place to retire to in a few years.}{}{5}{}{768}{}
+{753}{Perhaps. Perhaps not. I do try to keep my eyes open for an good investment possibility. I can see rental prospects here.}{}{5}{}{787}{}
+{754}{Not really, but me do travel a lot. If me hear someone wantin' a place, know'n things about dis would be nice.}{}{-4}{}{757}{}
+{755}{Yuh! Me like da little hole. It comfy inside. Me learn to duck head. Heh!}{}{-4}{}{768}{}
+{756}{Maybe and maybe not. Me tinks me can rent dis place to little people an' dey give me money!}{}{-4}{}{787}{}
+{757}{Oh, well! Yes! Yes, indeed! [He looks quite relieved] There's not much more to tell besides what you can see with your own two eyes. It's a small place, but has about two acres of good, cleared land. And it has a deep well that has never run dry. I think the only reason Mr. Furbottom is selling it is because he got a bit over-extended. There was a drop in tobacco prices and that happens to be his main source of income.}{Oh, well! Yes! Yes, indeed! [He looks quite relieved] There's not much more to tell besides what you can see with your own two eyes. It's a small place, but has about two acres of good, cleared land. And it has a deep well that has never run dry. I think the only reason Mr. Furbottom is selling it is because he got a bit over-extended. There was a drop in tobacco prices and that happens to be his main source of income.}{}{}{}{}
+{758}{I see. Thank you. Do you happen to know how much he's asking for the place?}{}{5}{}{760}{}
+{759}{Tanks! That stuff is good to know. Uhh... Do you know how much Mr. Fur-bottom (snicker) wants for place?}{}{-4}{}{760}{}
+{760}{He was asking 75,000 until recently. I heard that he lowered the asking price, but I'm afraid I don't know what the current one is.}{He was asking 75,000 until recently. I heard that he lowered the asking price, but I'm afraid I don't know what the current one is.}{}{}{}{}
+{761}{Less than 75,000, eh? I just might know of someone who would be interested. Where might I find this Furbottom, chap?}{}{5}{}{763}{}
+{762}{Less dan 75,000, eh? Me might know of someone. Where does dis Frigo Fur-bottom [smile] live?}{}{-4}{}{763}{}
+{763}{He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{}{}{}{gf 2802 1}
+{764}{Thank you. I'll be going now.}{}{5}{}{0}{}
+{765}{Tanks! Me go now!}{}{-4}{}{0}{}
+{766}{K:}{}{1}{}{38}{}
+{767}{}{}{}{}{}{}
+{768}{Oh, goodness gracious me! You don't a hobbit-hole to live in. You are a half-orc! Stand tall, be proud of your heritage, and all that! Trust me, my good man, you'd be much happier in a place like Tarant, Caladon, Black Root, or even - oh, what's that place? - Shrouded Hills! I'm sure there would be others there, and you could be among your own kind.}{Oh, goodness gracious me! You don't a hobbit-hole to live in. You are a half-orc! Stand tall, be proud of your heritage, and all that! Trust me, my good lady, you'd be much happier in a place like Tarant, Caladon, Black Root, or even - oh, what's that place? - Shrouded Hills! I'm sure there would be others there, and you could be among your own kind.}{}{}{}{}
+{769}{But I like it here. This place, this entire community, has a homey feeling to it.}{}{5}{}{773}{}
+{770}{Perhaps you're right. Just the same, in case I meet someone who is looking for a place, perhaps I should speak with Mr. Furbottom.}{}{5}{}{780}{}
+{771}{But me like it here! Dis place has a comfy feel to it.}{}{-4}{}{773}{}
+{772}{Maybe you right. Ah! If me do find someone to buy it, maybe me should talk to Mr. Fur-bottom [snicker] and learn more.}{Maybe you right. Ah! If me do find someone to buy it, maybe me should talk to Mr. Fur-bottom [snicker] and learn more.}{-4}{}{780}{}
+{773}{Perhaps you're not seeing things clearly, [pause for emphasis]  half-ORC! Brandybuck is a Shire. That means it's a halfling community. That word does not mean half-elves, half-ogres, half-orcs, or any other half-breeds, but halflings. Hobbits, as we call ourselves. And we mean to keep it that way.}{Perhaps you're not seeing things clearly, [pause for emphasis]  half-ORC! Brandybuck is a Shire. That means it's a halfling community. That word does not mean half-elves, half-ogres, half-orcs, or any other half-breeds, but halflings. Hobbits, as we call ourselves. And we mean to keep it that way.}{}{}{}{}
+{774}{I see.... [pause] ...your bigotry.}{}{5}{}{776}{}
+{775}{Me see.... [pause] your big-got-tree.}{}{-4}{}{776}{}
+{776}{Call it what you will, gnome. We take care of our own here. OUR own.....}{Call it what you will, gnome. We take care of our own here. OUR own.....}{}{}{}{re -10}
+{777}{You're asking for trouble with words like that...}{}{5}{}{794}{}
+{778}{You askin' for trouble wit words like dat...}{}{-4}{}{794}{}
+{779}{e:}{}{1}{}{0}{}
+{780}{Why so? Between me, the sign, and what you've seen, what more is there to learn?}{Why so? Between me, the sign, and what you've seen, what more is there to learn?}{}{}{}{}
+{781}{To get the measure of the fellow, of course. I'd know to know what kind of person a friend of mine might have to deal with.}{}{5}{}{783}{}
+{782}{To see whut kind of man Fur-bottom is. If I send friend to talk to him, I not want his feelin's hurt by rude man. Right?}{}{-4}{}{783}{}
+{783}{Of course, of course. How silly of me! He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{Of course, of course. How silly of me! He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{}{}{}{gf 2802 1}
+{784}{Thank you! I'll be going now.}{}{5}{}{0}{}
+{785}{Tanks! Me go now!}{}{-4}{}{0}{}
+{786}{}{}{}{}{}{}
+{787}{Well, that is one possibility. Given that you do seem to be on the road much of the time, you could engage the services of one of the townsfolk to collect the rent - For a fee, of course. Can't exactly say that I'm keen on the idea of Brandybuck land belonging to an outlander, but it could tolerated.}{Well, that is one possibility. Given that you do seem to be on the road much of the time, you could engage the services of one of the townsfolk to collect the rent - For a fee, of course. Can't exactly say that I'm keen on the idea of Brandybuck land belonging to an outlander, but it could tolerated.}{}{}{}{}
+{788}{That's pretty much what I had in mind. Could you direct me to this Mr. Furbottom?}{}{5}{}{798}{}
+{789}{What do you mean by tolerated?}{}{5}{}{773}{}
+{790}{Yuh, that what me think. Good idea on sum-one here to get munee for me. Now, where do Mr. Fur-bottom live?}{}{-4}{}{798}{}
+{791}{Whut you mean, tolerated?}{}{-4}{}{773}{}
+
+{794}{No - The only one who's asking for trouble is you for being somewhere you're not wanted. Now then, is there anything else?}{No - The only one who's asking for trouble is you for being somewhere you're not wanted. Now then, is there anything else?}{}{}{}{}
+{795}{K:}{}{1}{}{38}{}
+{796}{E:}{}{1}{}{0}{}
+
+{798}{He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{}{}{}{gf 2802 1}
+{799}{e:}{}{1}{}{0}{}
+{700}{}{}{}{}{}{}
+
+{850}{Why do you want to know? [He looks at you suspiciously] You're not thinking of living there are you?}{Why do you want to know? [He looks at you suspiciously] You're not thinking of living there are you?}{}{}{}{}
+{851}{Not really, but I do travel quite a bit, and if I should hear of someone looking for a place of their own, having some details would be nice.}{}{5}{}{857}{}
+{852}{Actually, I just might. The place is charming, and this might be a good place to retire to.}{}{5}{}{868}{}
+{853}{Perhaps. Perhaps not. I do try to keep my eyes open for an good investment possibility. I can see rental prospects here.}{}{5}{}{887}{}
+{854}{Not really, but me do travel a lot. If me hear someone wantin' a place, know'n things about dis would be nice.}{}{-4}{}{857}{}
+{855}{Yuh! Me like da little hole. It comfy inside. Me learn to duck head. Heh!}{}{-4}{}{868}{}
+{856}{Maybe and maybe not. Me tinks me can rent dis place to little people an' dey give me money!}{}{-4}{}{887}{}
+{857}{Oh, well! Yes! Yes, indeed! [He looks quite relieved] There's not much more to tell besides what you can see with your own two eyes. It's a small place, but has about two acres of good, cleared land. And it has a deep well that has never run dry. I think the only reason Mr. Furbottom is selling it is because he got a bit over-extended. There was a drop in tobacco prices and that happens to be his main source of income.}{Oh, well! Yes! Yes, indeed! [He looks quite relieved] There's not much more to tell besides what you can see with your own two eyes. It's a small place, but has about two acres of good, cleared land. And it has a deep well that has never run dry. I think the only reason Mr. Furbottom is selling it is because he got a bit over-extended. There was a drop in tobacco prices and that happens to be his main source of income.}{}{}{}{}
+{858}{I see. Thank you. Do you happen to know how much he's asking for the place?}{}{5}{}{860}{}
+{859}{Tanks! That stuff is good to know. Uhh... Do you know how much Mr. Fur-bottom (snicker) wants for place?}{}{-4}{}{860}{}
+{860}{He was asking 75,000 until recently. I heard that he lowered the asking price, but I'm afraid I don't know what the current one is.}{He was asking 75,000 until recently. I heard that he lowered the asking price, but I'm afraid I don't know what the current one is.}{}{}{}{}
+{861}{Less than 75,000, eh? I just might know of someone who would be interested. Where might I find this Furbottom, chap?}{}{5}{}{863}{}
+{862}{Less dan 75,000, eh? Me might know of someone. Where does dis Frigo Fur-bottom [smile] live?}{}{-4}{}{863}{}
+{863}{He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{}{}{}{gf 2802 1}
+{864}{Thank you. I'll be going now.}{}{5}{}{0}{}
+{865}{Tanks! Me go now!}{}{-4}{}{0}{}
+{866}{K:}{}{1}{}{38}{}
+{867}{}{}{}{}{}{}
+{868}{Oh, goodness gracious me! You don't a hobbit-hole to live in. A big, strapping fellow like you? Ah...ah. ah... A. big man needs a big house to live in. One with lots of room to stretch out in and ceilings high enough where  there's no danger of hitting your head. Trust me, my good fellow, that's a small place made for small people, and you are just too big for it. I'm sorry, but that's the way it is.}{Oh, goodness gracious me! You don't a hobbit-hole to live in. A big, strapping fellow like you? Ah...ah. ah... A. big man needs a big house to live in. One with lots of room to stretch out in and ceilings high enough where  there's no danger of hitting your head. Trust me, my good fellow, that's a small place made for small people, and you are just too big for it. I'm sorry, but that's the way it is.}{}{}{}{}
+{869}{But I like it here. This place, this entire community, has a homey feeling to it.}{}{5}{}{873}{}
+{870}{Perhaps you're right. Just the same, in case I meet someone who is looking for a place, perhaps I should speak with Mr. Furbottom.}{}{5}{}{880}{}
+{871}{But me like it here! Dis place has a comfy feel to it. Heh. Me can wear helmet. He-he.}{}{-4}{}{873}{}
+{872}{Maybe you right. Ah! If me do find someone to buy it, maybe me should talk to Mr. Fur-bottom [snicker] and learn more.}{Maybe you right. Ah! If me do find someone to buy it, maybe me should talk to Mr. Fur-bottom [snicker] and learn more.}{-4}{}{880}{}
+{873}{Perhaps you're not seeing things clearly, so I'll try to explain. Brandybuck is a Shire. That means it's a halfling community. That word does not mean half-elves, half-ogres, half-orcs, or any other half-breeds, but halflings. Hobbits, as we call ourselves. And we mean to keep it that way. Do you see what I mean?}{Perhaps you're not seeing things clearly, so I'll try to explain. Brandybuck is a Shire. That means it's a halfling community. That word does not mean half-elves, half-ogres, half-orcs, or any other half-breeds, but halflings. Hobbits, as we call ourselves. And we mean to keep it that way. Do you see what I mean?}{}{}{}{}
+{874}{I see.... [pause] ...your bigotry.}{}{5}{}{876}{}
+{875}{Me see.... [pause] your big-got-tree.}{}{-4}{}{876}{}
+{876}{Call it what you will. We take care of our own here. OUR own.....}{Call it what you will. We take care of our own here. OUR own.....}{}{}{}{re -10}
+{877}{You're asking for trouble with words like that...}{}{5}{}{894}{}
+{878}{You askin' for trouble wit words like dat...}{}{-4}{}{894}{}
+{879}{e:}{}{1}{}{0}{}
+{880}{Why so? Between me, the sign, and what you've seen, what more is there to learn?}{Why so? Between me, the sign, and what you've seen, what more is there to learn?}{}{}{}{}
+{881}{To get the measure of the fellow, of course. I'd know to know what kind of person a friend of mine might have to deal with.}{}{5}{}{883}{}
+{882}{To see whut kind of man Fur-bottom is. If I send friend to talk to him, I not want his feelin's hurt by rude man. Right?}{}{-4}{}{883}{}
+{883}{Of course, of course. How silly of me! He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{Of course, of course. How silly of me! He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{}{}{}{gf 2802 1}
+{884}{Thank you! I'll be going now.}{}{5}{}{0}{}
+{885}{Tanks! Me go now!}{}{-4}{}{0}{}
+{886}{}{}{}{}{}{}
+{887}{Well, that is one possibility. Given that you do seem to be on the road much of the time, you could engage the services of one of the townsfolk to collect the rent - For a fee, of course. Can't exactly say that I'm keen on the idea of Brandybuck land belonging to an outlander, but it could tolerated.}{Well, that is one possibility. Given that you do seem to be on the road much of the time, you could engage the services of one of the townsfolk to collect the rent - For a fee, of course. Can't exactly say that I'm keen on the idea of Brandybuck land belonging to an outlander, but it could tolerated.}{}{}{}{}
+{888}{That's pretty much what I had in mind. Could you direct me to this Mr. Furbottom?}{}{5}{}{898}{}
+{889}{What do you mean by tolerated?}{}{5}{}{873}{}
+{890}{Yuh, that what me think. Good idea on sum-one here to get munee for me. Now, where do Mr. Fur-bottom live?}{}{-4}{}{898}{}
+{891}{Whut you mean, tolerated?}{}{-4}{}{873}{}
+
+{894}{No - The only one who's asking for trouble is you for being somewhere you're not wanted. Now then, is there anything else?}{No - The only one who's asking for trouble is you for being somewhere you're not wanted. Now then, is there anything else?}{}{}{}{}
+{895}{K:}{}{1}{}{38}{}
+{896}{E:}{}{1}{}{0}{}
+
+{898}{He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{He lives in the South Farthing - Oh, wait! I just seen him going towards the town square. If you hurry, you might catch him!}{}{}{}{gf 2802 1}
+{899}{e:}{}{1}{}{0}{}
+{900}{}{}{}{}{}{}
+
+

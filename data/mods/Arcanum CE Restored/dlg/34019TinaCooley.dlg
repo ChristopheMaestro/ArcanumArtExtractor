@@ -1,0 +1,97 @@
+{1}{Hello. May I help you?}{Hello. May I help you?}{}{}{}{}
+{2}{My name is @PCNAME@. Who might you be?}{}{5}{}{10}{lf1 1}
+{3}{Why don't you tell me who you are first.}{}{5}{}{15}{lf1 1}
+{4}{Me is @PCNAME@. Who you be?}{}{-4}{}{10}{lf1 1}
+{5}{Me think you tell me who you are before me tell you anyting.}{}{-4}{}{15}{lf1 1}
+{6}{E:}{}{1}{}{0}{}
+{10}{My name is Tina. I live here in Newberg.}{My name is Tina. I live here in Newberg.}{}{}{}{}
+{11}{Well met, Tina.}{}{5}{}{20}{re+2 }
+{12}{Gahhh. Good too meat yoo, Teena.}{}{-4}{}{20}{re+2 }
+{13}{Quiet, woman.}{}{1}{}{20}{re -2}
+{14}{E:}{}{1}{}{0}{}
+{15}{Alright, no need to be so testy. My name is Tina. I live here in Newberg.}{Alright, no need to be so testy. My name is Tina. I live here in Newberg.}{}{}{}{}
+{16}{Well met, Tina.}{}{5}{}{20}{re+2}
+{17}{Gahhh. Good too meat yoo, Teena.}{}{-4}{}{20}{re+2}
+{18}{Quiet, woman.}{}{1}{}{20}{re -2}
+{19}{E:}{}{1}{}{0}{}
+{20}{What did you want to talk about?}{What did you want to talk about?}{}{}{}{}
+{21}{What do you do for a living?}{}{5}{lf2 0, lf3 0}{50}{}
+{22}{What is yoo job?}{}{-4}{lf2 0, lf3 0}{50}{}
+{23}{Tell me about yourself.}{}{5}{lf2 0, lf3 0}{35}{}
+{24}{Why don't yoo tell me 'bout yooself.}{}{-4}{lf2 0, lf3 0}{35}{}
+{25}{Q:1009}{}{1}{}{0}{}
+{26}{Would you like to come with me on my travels?}{}{5}{lf2 0, qu 1269 4}{-2}{}
+{27}{You want come wit me?}{}{-4}{lf2 0, qu 1269 4}{-2}{}
+{28}{T:4,6,14}{}{1}{}{0}{}
+{29}{E:}{}{1}{}{0}{}
+{35}{Well, first off, I think you should know I live a very extreme lifestyle.}{Well, first off, I think you should know I live a very extreme lifestyle.}{}{}{}{}
+{36}{What do you mean by an "extreme" lifestyle?}{}{5}{}{40}{}
+{37}{What you mean?}{}{-4}{}{40}{}
+{38}{F:}{}{1}{}{20}{}
+{40}{I mean, I like to live dangerously. Take risks. I do what I like. I do drugs, I fight, and I enjoy myself thoroughly. Like I said, an extreme lifestyle.}{I mean, I like to live dangerously. Take risks. I do what I like. I do drugs, I fight, and I enjoy myself thoroughly. Like I said, an extreme lifestyle.}{}{}{}{}
+{41}{Very intriguing. What do you do for a living, then?}{}{5}{}{50}{}
+{42}{Uh. Uh... what you do for job?}{}{-4}{}{50}{}
+{43}{That's insane. Goodbye.}{}{5}{}{0}{re -2, fl 100, lf2 1}
+{44}{Sorry, I don't approve of drugs. Bye.}{}{5}{}{0}{re -2, fl 100, lf2 1}
+{45}{Uh... you crazy lady. Bye.}{}{-4}{}{0}{re -2, fl 100, lf2 1}
+{46}{I agree completely, madam. Life was made to be lived to the fullest. What is your profession?}{}{5}{}{50}{re +2}
+{47}{Me agree! Fun is good! What you do for living?}{}{-4}{}{50}{re +2}
+{50}{I'm a professional Acquirer of Properties.}{I'm a professional Acquirer of Properties.}{}{}{}{}
+{51}{Is that some sort of business real estate trading thing?}{}{5}{}{55}{}
+{52}{So you're a thief?}{}{10}{}{65}{}
+{53}{Uhhh... what that mean?}{}{-4}{}{55}{}
+{55}{I acquire objects for people. Objects that don't belong to me... Objects I don't necessarily pay for... get it?}{I acquire objects for people. Objects that don't belong to me... Objects I don't necessarily pay for... get it?}{}{}{}{}
+{56}{Ahh. You're a thief.}{}{5}{}{65}{}
+{57}{Me not understand.}{}{-4}{}{60}{}
+{60}{I TAKE things from people WITHOUT their PERMISSION. Do you understand what I'm getting at? No? It rhymes with "leaf".}{I TAKE things from people WITHOUT their PERMISSION. Do you understand what I'm getting at? No? It rhymes with "leaf".}{}{}{}{}
+{61}{*Begins reciting words to self.* Beef... teef... grief... umm... beef... uhh... THIEF???}{}{-4}{}{65}{}
+{65}{Some might call me so. I prefer to be called an "Acquirer of Properties". Anyway, now that you know a little about me, I have a proposition for you.}{Some might call me so. I prefer to be called an "Acquirer of Properties". Anyway, now that you know a little about me, I have a proposition for you.}{}{}{}{}
+{66}{I'm listening.}{}{5}{}{70}{qu 1269 1}
+{67}{Okie.}{}{-4}{}{70}{qu 1269 1}
+{68}{F:}{}{1}{}{20}{}
+{70}{I recently "acquired" a marble statuette from a neighboring village. I hid the statuette in one of my secret places, but the guards are watching me, so I can't go retrieve the statuette to sell it. Could you obtain this statuette for me?}{I recently "acquired" a marble statuette from a neighboring village. I hid the statuette in one of my secret places, but the guards are watching me, so I can't go retrieve the statuette to sell it. Could you obtain this statuette for me?}{}{}{}{}
+{71}{Certainly, my dear.}{}{5}{ni 5802}{130}{lf3 1, qu 1269 2}
+{72}{Okie.}{}{-4}{ni 5802}{130}{lf3 1, qu 1269 2}
+{73}{Assist you in a crime? I think not!}{}{5}{}{0}{re -2, fl 100, lf2 1}
+{74}{Already got it.}{}{1}{in 5802, lf2 0}{150}{qu 1269 3}
+{80}{Hell yeah, let's go raise some hell! I've always wanted to get out of this crappy town.}{Hell yeah, let's go raise some hell! I've always wanted to get out of this crappy town.}{}{}{}{}
+{81}{Great!}{}{1}{}{}{jo 0 0, fl 97}
+{90}{Sorry, I don't travel with that goody-goody Jana. The stupid bitch will have to go before I'll head out with you...}{Sorry, I don't travel with that goody-goody Jana. The stupid bitch will have to go before I'll head out with you...}{}{}{}{}
+{91}{Alright.}{}{5}{}{0}{}
+{92}{Okie.}{}{-4}{}{0}{}
+{93}{I'll get rid of her.}{}{5}{}{0}{fl 98,re+2 }
+{94}{Okie, me get rid of her right away!}{}{-4}{}{0}{fl 98,re+2 }
+{95}{Hey, don't talk about Jana that way! Jana, let's go.}{}{5}{}{0}{fl 100, re -2}
+{96}{You no talk bout Jana like dat! Jana, we leave now.}{}{-4}{}{0}{fl 100, re -2}
+{97}{Let's go kick some ass!}{Let's go kick some ass!}{}{}{}{}
+{98}{Ok honey, let me know when you dump the slut.}{Ok honey, let me know when you dump the slut.}{}{}{}{}
+{99}{Leave me the hell alone, jerkwad.}{Leave me the hell alone, jerkwad.}{}{}{}{}
+{100}{Fine. Leave me alone, boring person.}{Fine. Leave me alone, boring person.}{}{}{}{}
+{101}{Quests start here}{Quests Start here}{}{}{}{}
+{102}{On second thought, I'd like to take that job for you...}{}{1}{lf2 0}{130}{qu 1269 2}
+{103}{I'm still looking for that marble statue... where did you say it was?}{}{1}{lf2 0}{133}{}
+{104}{I've got the marble statuette here...}{}{1}{in 5802, lf2 0}{150}{}
+{106}{On second thought, I'd like to take that job for you...}{}{1}{lf2 0}{130}{qu 1269 2}
+{107}{I'm still looking for that marble statue... where did you say it was?}{}{1}{lf2 0}{133}{}
+{108}{I've got the marble statuette here...}{}{1}{in 5802, lf2 0}{150}{}
+{110}{Me think me want to find statchoo for yoo...}{}{1}{lf2 0}{130}{qu 1269 2}
+{111}{Me still looking for dat statchoo thingy... where you say it were?}{}{1}{lf2 0}{133}{}
+{112}{Me found statue! You want?}{}{1}{in 5802, lf2 0}{150}{}
+{130}{Ok,the plan is as follows. Head north on the road out of Newberg, and take the left at the Cemetery sign. Follow the path until you reach the cemetery, then take this key and enter the iron fencing. [She hands you a key.] Go down the stairs to the crypt and look for the chamber with 3 sarcophagi. The statuette is on the floor near the center sarcophagus. Bring it back to me, and I will pay you 50 coin.}{Ok,the plan is as follows. Head north on the road out of Newberg, and take the left at the Cemetery sign. Follow the path until you reach the cemetery, then take this key and enter the iron fencing. [She hands you a key.] Go down the stairs to the crypt and look for the chamber with 3 sarcophagi. The statuette is on the floor near the center sarcophagus. Bring it back to me, and I will pay you 50 coin.}{}{}{}{}
+{131}{Right. I'm on it. I'll let you know when I've got it.}{}{5}{}{0}{in -4602}
+{132}{Uhh... me not unnerstand. But me try.}{}{-4}{}{0}{in -4602}
+{133}{Head north on the road out of Newberg, and take the left at the Cemetery sign. Follow the path west until you reach the cemetery, then enter the tomb using the key I gave you. Go down the stairs to the crypt and find the chamber with the 3 coffins. The statuette is on the floor near the center one. Bring it back, and I'll give you fifty coin.}{Head north on the road out of Newberg, and take the left at the Cemetery sign. Follow the path west until you reach the cemetery, then enter the tomb using the key I gave you. Go down the stairs to the crypt and find the chamber with the 3 coffins. The statuette is on the floor near the center one. Bring it back, and I'll give you fifty coin.}{}{}{}{}
+{134}{Me not sure... me confused.}{}{-4}{}{136}{in -4602}
+{135}{Ok.}{}{5}{}{0}{in -4602}
+{136}{Just do your best, and don't screw it up, okay?}{Just do your best, and don't screw it up, okay?}{}{}{}{}
+{137}{Okie.}{}{-4}{}{0}{}
+{150}{Good work! Can I have the statuette?}{Good work! Can I have the statuette?}{}{}{}{}
+{151}{Certainly. Here you go.}{}{5}{in 5802}{160}{$$ 50, qu 1269 4, in 5802}
+{152}{Okie. Here you go.}{}{-4}{in 5802}{160}{$$ 50, qu 1269 4, in 5802}
+{153}{No, actually I think I'm going to keep it and sell it! Ha!}{}{5}{in 5802}{0}{lf2 1, fl 99, qu 1269 6}
+{154}{No, me goin to keep it! Bahahaha!}{}{-4}{in 5802}{0}{lf2 1, fl 99, qu 1269 6}
+{155}{I don't seem to have it with me.}{}{5}{}{0}{}
+{156}{Me no have it.}{}{-4}{}{0}{}
+{157}{E:}{}{1}{}{0}{}
+{160}{Okay, and here is your 50 coin. It's been good working with you. I'd be interested in doing more work together in the future, perhaps...}{Okay, and here is your 50 coin. It's been good working with you. I'd be interested in doing more work together in the future, perhaps...}{}{}{}{}
+{161}{E:}{}{1}{}{0}{}

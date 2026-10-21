@@ -1,0 +1,302 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Hello, sir.  Might I ask you a few questions...?}{}{5}{pf1 0, re 41}{35}{}
+{3}{Sir!  We've only just met and you say such things!}{}{5}{pf1 0, re -40}{10}{}
+{4}{Greetings, Shackleford.  Have you a moment?}{}{5}{pf1 1, re 41}{40}{}
+{5}{Shackleford!  Why the harsh words?}{}{5}{pf1 1, re -40}{10}{}
+{6}{Hi!  Who you?}{}{-4}{pf1 0}{35}{}
+{7}{Hi Cackle Bird!  I aks you sum questions?}{}{-4}{pf1 1}{40}{}
+{8}{E:}{}{1}{}{0}{}
+{10}{By the gods!  I know it's terrible manners to say so, but you are the most repulsive individual I've ever met in my life.  If you don't mind, please get yourself out of my sight as quickly as possible...}{By the gods!  I know it's terrible manners to say so, but you are the most repulsive individual I've ever met in my life.  If you don't mind, please get yourself out of my sight as quickly as possible...}{}{}{}{}
+{11}{Sir, are you so very sure about your assessment of me...?}{}{5}{ch 15}{30}{re +15}
+{12}{Perhaps you're not taking into account my combat prowess, sir...}{}{5}{sk2 8}{30}{}
+{13}{Sir! I throw myself upon your mercy and tolerance!}{}{5}{pf1 0}{25}{re +15}
+{14}{Shackleford!  Hadn't we already put such things behind us...?}{}{5}{pf1 1}{25}{re +15}
+{15}{Another word like that, and you're a dead man...}{}{5}{}{18}{re -5}
+{16}{E:}{}{5}{}{0}{}
+{18}{[The man regards you, coolly.]  I don't think I'm the sort of man you want to trifle with, sir.  I recommend you rescind your comments at once...}{[The man regards you, coolly.]  I don't think I'm the sort of man you want to trifle with, madam.  I recommend you rescind your comments at once...}{}{}{}{}
+{19}{Forgive my quick tongue, sir.  Accept my apologies...}{}{5}{}{25}{re +15}
+{20}{You've sealed your fate, dog...}{}{5}{}{}{co, fl 23}
+{21}{E:}{}{5}{}{0}{}
+{23}{Such a terrible waste.  Good bye, then...}{Such a terrible waste.  Good bye, then...}{}{}{}{}
+{25}{[He sniffs derisively.]  I suppose I might be convinced to tolerate you for a few moments.  Speak quickly before I change my mind...}{[He sniffs derisively.]  I suppose I might be convinced to tolerate you for a few moments.  Speak quickly before I change my mind...}{}{}{}{}
+{26}{Thank you so very much.  Might I ask your name...?}{}{5}{pf1 0}{35}{re +5}
+{27}{Thank you, Shackleford.  Do you have a moment?}{}{5}{pf1 1}{40}{}
+{28}{E:}{}{5}{}{0}{}
+{30}{[The man acquiesces, nodding his head.]  Perhaps I did speak a little quickly, friend.  Forgive me.  Perhaps we should speak after all...}{[The man acquiesces, nodding his head.]  Perhaps I did speak a little quickly, friend.  Forgive me.  Perhaps we should speak after all...}{}{}{}{}
+{31}{I'm so very glad.  Might I ask who you are?}{}{5}{}{35}{}
+{32}{Thank you, Shackleford.  Could I ask you a few questions?}{}{5}{}{40}{}
+{33}{E:}{}{5}{}{0}{}
+{35}{Yes, of course.  My name is Mr. Shackleford.  I'm Mr. Merton K. Vorman's personal lawyer...}{Yes, of course.  My name is Mr. Shackleford.  I'm Mr. Merton K. Vorman's personal lawyer...}{}{}{}{pf1 1}
+{36}{Nice to meet you, Shackleford.  Might I ask you a few questions?}{}{5}{}{40}{}
+{37}{I aks you sum questions, Cacklebird?}{}{-4}{}{40}{}
+{38}{E:}{}{1}{}{0}{}
+{40}{Of course...}{Of course...}{}{}{}{}
+{41}{Who is Mr. Merton K. Vorman?}{}{5}{pf2 0, qb1170 1}{83}{pf2 1}
+{42}{Tell me about Vormantown...}{}{5}{pf2 1}{93}{}
+{43}{What are your duties around here, Mr. Shackleford...?}{}{5}{pf2 1}{73}{}
+{44}{I've spoken with the elven leader...}{}{5}{pf3 1, pf2 1, qu1170 0}{133}{}
+{45}{I've spoken with the dwarven leader...}{}{5}{pf4 1, pf2 1, qu1170 0}{175}{}
+{46}{Perhaps I could help you deal with the elves and the dwarves?}{}{5}{qu1170 1, gf1 0}{207}{}
+{47}{Perhaps I could help you deal with the elves and the dwarves?}{}{5}{qu1170 1, gf1 1}{219}{}
+{48}{I've yet to deal with the elves and the dwarves...}{}{5}{qu1170 2, qb1171 3, qb1172 3}{237}{}
+{49}{I've solved the problems with the elves and the dwarves...}{}{5}{qu1170 2, qu1171 4, qu1172 4, pf33 0}{248}{}
+{50}{I've solved the problems with the elves and the dwarves...}{}{5}{qu1170 2, qu1171 4, qu1172 4, pf33 1}{261}{}
+{51}{I've discovered some strange things, Shackleford...}{}{5}{qu1170 4}{267}{}
+{52}{Who Merlin Kay Vermin?}{}{-4}{pf2 0, qb1170 1}{83}{pf2 1}
+{53}{Uh...tell me 'bout Vermintown!}{}{-4}{pf2 1}{93}{}
+{54}{Whut you do 'round here, Cackle Bird?}{}{-4}{pf2 1}{73}{}
+{55}{I talk wif da Elf guy...}{}{-4}{pf3 1, pf2 1, qu1170 0}{133}{}
+{56}{Me and dwarf guy talk...}{}{-4}{pf4 1, pf2 1, qu1170 0}{175}{}
+{57}{Mebbe I help you with elfs and short guy dwarfs?}{}{-4}{qu1170 1, gf1 0}{207}{}
+{58}{Mebbe I help you with elfs and short guy dwarfs?}{}{-4}{qu1170 1, gf1 1}{219}{}
+{59}{I still not do stuff with elfs and dwarfs...}{}{-4}{qu1170 2, qb1171 3, qb1172 3}{237}{}
+{60}{I fixed the elfs and dwarfs!}{}{-4}{qu1170 2, qu1171 4, qu1172 4, pf33 0}{248}{}
+{61}{I fixed the elfs and dwarfs!}{}{-4}{qu1170 2, qu1171 4, qu1172 4, pf33 1}{261}{}
+{62}{Weird stuff happenin', Cackle Bird!}{}{-4}{qu1170 4, qu1171 4, qu1172 4}{267}{}
+{63}{I found Mr. Vorman - and that thing he created.}{}{5}{gf 3186 1}{500}{}
+{64}{I find Mr. Vermin - an' dat thing he make.}{}{-4}{gf 3186 1}{500}{}
+{65}{E:}{}{1}{}{0}{}
+{73}{Me?  Oh I take care of Mr. Merton's personal business, as well as his legal needs both here and abroad.  His estate is quite substantial, as I'm sure you can surmise from his beautiful home, here.  It keeps me very busy, and today is especially hectic...}{Me?  Oh I take care of Mr. Merton's personal business, as well as his legal needs both here and abroad.  His estate is quite substantial, as I'm sure you can surmise from his beautiful home, here.  It keeps me very busy, and today is especially hectic...}{}{}{}{}
+{74}{Why?  What's going on today?}{}{5}{}{430}{}
+{75}{Why so bizzee today?}{}{-4}{}{430}{}
+{76}{K:}{}{1}{}{40}{}
+{77}{E:}{}{1}{}{0}{}
+{83}{Mr. Vorman?  He's a brilliant gnomish gentleman!  A true genius in every sense of the word!  Vormantown owes its very existence to his foresight!  He's a scientist, a philosopher, a philanthropist!  Arcanum has never seen his like! }{Mr. Vorman?  He's a brilliant gentleman!  A true genius in every sense of the word!  Vormantown owes its very existence to his foresight!  He's a scientist, a philosopher, a philanthropist!  Arcanum has never seen his like! }{}{}{}{}
+{84}{I see.  Tell me a little about Vormantown...}{}{5}{}{93}{}
+{85}{You said he was a scientist...what sort of things does he study?}{}{5}{}{113}{}
+{86}{Where is Mr. Vorman?  Might I speak with him?}{}{5}{}{123}{}
+{87}{What are your specific duties, Mr. Shackleford?}{}{5}{}{73}{}
+{88}{Uh...tell me 'bout Vermintown!}{}{-4}{}{93}{}
+{89}{Uh...okay!  Where is he?}{}{-4}{}{113}{}
+{90}{Whut you do 'round here, Cackle Bird?}{}{-4}{}{73}{}
+{91}{E:}{}{1}{}{0}{}
+{93}{Vormantown?  Well, it's an experiment of sorts...Mr. Vorman's personal vision of social utopia.  A few select laborers and artisans, living here on this island in almost complete harmony.  Ask around!  You'll find that everyone here is completely happy...}{Vormantown?  Well, it's an experiment of sorts...Mr. Vorman's personal vision of social utopia.  A few select laborers and artisans, living here on this island in almost complete harmony.  Ask around!  You'll find that everyone here is completely happy...}{}{}{}{}
+{94}{And what does Mr. Vorman hope to accomplish with this "experiment"?}{}{5}{}{103}{}
+{95}{Interesting.  What else does Mr. Vorman study?}{}{5}{}{113}{}
+{96}{And where is Mr. Vorman?}{}{5}{}{123}{}
+{97}{Uh...where is Vermin?}{}{-4}{}{123}{}
+{98}{K:}{}{1}{}{40}{}
+{99}{E:}{}{1}{}{0}{}
+{103}{What else?  Enlightenment, of course!  I mean...the new world is upon us, friend!  The future depends on the our ability to exist with one another in harmony!  Magick user, technologist, and the common man.  When Mr. Vorman has finished with his observations, he will share his discoveries with the rest of the world!}{What else?  Enlightenment, of course!  I mean...the new world is upon us, friend!  The future depends on the our ability to exist with one another in harmony!  Magick user, technologist, and the common man.  When Mr. Vorman has finished with his observations, he will share his discoveries with the rest of the world!}{}{}{}{}
+{104}{I see.  What else does Mr. Vorman study?}{}{5}{}{113}{}
+{105}{And where is Mr. Vorman?}{}{5}{}{123}{}
+{106}{K:}{}{1}{}{40}{}
+{107}{E:}{}{1}{}{0}{}
+{113}{Oh, Mr. Vorman is a true renaissance man...he's an expert in both elven and dwarven history, most of the newer sciences, as well as being extremely well-read in the mysteries of the occult.  His library is very, very extensive...}{Oh, Mr. Vorman is a true renaissance man...he's an expert in both elven and dwarven history, most of the newer sciences, as well as being extremely well-read in the mysteries of the occult.  His library is very, very extensive...}{}{}{}{}
+{114}{Interesting.  Might I speak with Mr. Vorman?}{}{5}{}{123}{}
+{115}{K:}{}{1}{}{40}{}
+{116}{E:}{}{1}{}{0}{}
+{123}{Well...ah...you see, Mr. Vorman is away on personal business.  He didn't tell me when he was going to return. Very sorry about that...}{Well...ah...you see, Mr. Vorman is away on personal business.  He didn't tell me when he was going to return. Very sorry about that...}{}{}{}{}
+{124}{K:}{}{1}{}{40}{}
+{125}{E:}{}{1}{}{0}{}
+{133}{Oh?  You've met Qin'ar?  What did he tell you?}{Oh?  You've met Qin'ar?  What did he tell you?}{}{}{}{}
+{134}{Not much.  He told me it was fated that I first speak with you...}{}{5}{ra -2}{143}{}
+{135}{Not much.  He told me it was fated that I first speak with you...}{}{5}{ra 2}{148}{}
+{136}{He said I gotta talk to you...said it was my den-n-s-sit-t-ee!}{}{-4}{}{143}{}
+{137}{K:}{}{1}{}{40}{}
+{138}{E:}{}{1}{}{0}{}
+{143}{[Shackleford smirks.]  That's so like him.  Elves can be so damned existential}{[Shackleford smirks.]  That's so like him.  Elves can be so damned existential}{}{}{}{}
+{144}{Yes, I suppose.  So why is Qin'ar here?}{}{5}{}{153}{}
+{148}{[Shackleford smirks.]  That's so like him.  Elves can be so damned existential...[He looks at you, remembering himself.]  Er, not offense, my good man.  Er, good elf...}{[Shackleford smirks.]  That's so like him.  Elves can be so damned existential...[He looks at you, remembering himself.]  Er, not offense, madam...}{}{}{}{}
+{149}{None taken.  So why is Qin'ar here?}{}{5}{}{153}{}
+{153}{Well, it seems that the elven village of Ter'elon has been overrun with...what did he call them? [He pulls a letter from within his jacket.]..."metal creatures who spit fire and bring death".   I think that's how he phrased it, anyhow.  Knowing elves, its probably a metaphor for a dropped pocketwatch...}{Well, it seems that the elven village of Ter'elon has been overrun with...what did he call them? [He pulls a letter from within his jacket.]..."metal creatures who spit fire and bring death".   I think that's how he phrased it, anyhow.  Knowing elves, its probably a metaphor for a dropped pocketwatch...}{}{}{}{}
+{154}{I see.  What does he want here?}{}{5}{}{158}{}
+{158}{Well, I'm not exactly sure.  I haven't had the time to speak with him about it.  To tell you the truth, I'm quite overwhelmed with my normal duties, especially with Mr. Vorman being out of town, as well as the problems with Veryk Ironwill, king of the Stone Heart Clan...}{Well, I'm not exactly sure.  I haven't had the time to speak with him about it.  To tell you the truth, I'm quite overwhelmed with my normal duties, especially with Mr. Vorman being out of town, as well as the problems with Veryk Ironwill, king of the Stone Heart Clan...}{}{}{}{}
+{159}{I've also spoken with Veryk Ironwill, although briefly...}{}{5}{pf4 1, qb1170 1}{175}{}
+{160}{Why is Veryk Ironwill here?}{}{5}{pf4 0, qb1170 1}{195}{}
+{161}{Hmmm.  Perhaps I could be of assistance...?}{}{5}{qu1170 1, gf3187 0}{207}{}
+{162}{Hmmm.  Perhaps I could be of assistance...?}{}{5}{qu1170 1, gf3187 1}{219}{}
+{163}{I also talked to short dwarf guy!}{}{-4}{pf4 1, qb1170 1}{175}{}
+{164}{Why dwarf guy here?}{}{-4}{pf4 0, qb1170 1}{195}{}
+{165}{Mebbe I help!}{}{-4}{qu1170 1, gf3187 0}{207}{}
+{166}{Mebbe I help!}{}{-4}{qu1170 1, gf3187 1}{219}{}
+{167}{K:}{}{1}{}{40}{}
+{168}{E:}{}{1}{}{0}{}
+{175}{Veryk Ironwill?  Did he actually speak to you?}{Veryk Ironwill?  Did he actually speak to you?}{}{}{}{}
+{176}{Not really.  He told me that he'd speak only to Vorman himself...}{}{5}{}{185}{}
+{177}{Uh-uh.  He say he only talk to Vermin, not me!}{}{-4}{}{185}{}
+{178}{K:}{}{1}{}{40}{}
+{179}{E:}{}{1}{}{0}{}
+{185}{Yes, that sounds like Veryk.  He doesn't like much of anything or anyone...I'm surprised he's actually here.  The Stone Heart Clan is located within Sorrel's Rock, a mountain on the northern shore of Lake Ivory, just a few miles away.  But I don't think I've seen Veryk more than once in the last 10 years...}{Yes, that sounds like Veryk.  He doesn't like much of anything or anyone...I'm surprised he's actually here.  The Stone Heart Clan is located within Sorrel's Rock, a mountain on the northern shore of Lake Ivory, just a few miles away.  But I don't think I've seen Veryk more than once in the last 10 years...}{}{}{}{}
+{186}{So why is he here?}{}{5}{}{195}{}
+{187}{So why he here now?}{}{-4}{}{195}{}
+{188}{K:}{}{1}{}{40}{}
+{189}{E:}{}{1}{}{0}{}
+{195}{I really don't know...I haven't had the time to stop by his quarters.  More than likely he's just come to insult us all for the afternoon.  As soon as I find a free moment, I'll speak with him and find out.  Things have just been so damned busy around here...not to mention the problems that we're having with the elves...}{I really don't know...I haven't had the time to stop by his quarters.  More than likely he's just come to insult us all for the afternoon.  As soon as I find a free moment, I'll speak with him and find out.  Things have just been so damned busy around here...not to mention the problems that we're having with the elves...}{}{}{}{}
+{196}{I've also spoken with Qin'ar of the elves...}{}{5}{pf3 1, qb1170 1}{133}{}
+{197}{What problems with the elves?}{}{5}{pf3 0, qb1170 1}{153}{}
+{198}{I talked with elf guy, too!}{}{-4}{pf3 1, qb1170 1}{133}{}
+{199}{Uh?  What wrong with elfs?}{}{-4}{pf3 0, qb1170 1}{153}{}
+{200}{Perhaps I could be of assistance, Shackleford...}{}{5}{qb1170 1, gf3187 0}{207}{}
+{201}{Perhaps I could be of assistance, Shackleford...}{}{5}{qb1170 1, gf3187 1}{219}{}
+{202}{Mebbe I help you, Cackle Bird!}{}{-4}{qb1170 1, gf3187 0}{207}{}
+{203}{Mebbe I help you, Cackle Bird!}{}{-4}{qb1170 1, gf3187 1}{219}{}
+{204}{K:}{}{1}{}{40}{}
+{205}{E:}{}{1}{}{0}{}
+{207}{Hmmm.  Perhaps you could at that.  I could use a little assistance dealing with Qin'ar and Veryk Ironwill.  [He thinks a moment.]  I'll tell you what...if you can resolve the problems with the elves and the dwarves, I'll pay you $1000 gold pieces.  Agreed?}{Hmmm.  Perhaps you could at that.  I could use a little assistance dealing with Qin'ar and Veryk Ironwill.  [He thinks a moment.]  I'll tell you what...if you can resolve the problems with the elves and the dwarves, I'll pay you $1000 gold pieces.  Agreed?}{}{}{}{qu1170 1}
+{208}{Done.}{}{5}{}{227}{qu1170 2, gf3187 1}
+{209}{I'll think about it.  A few more questions...}{}{5}{}{40}{}
+{210}{Okey-dokey!}{}{-4}{}{227}{qu1170 2, gf3187 1}
+{211}{Mebbe.  Sum more questions furst!}{}{-4}{}{40}{}
+{212}{E:}{}{1}{}{0}{}
+{219}{Well, I've already given the job to someone else.  But, were you to resolve the problems with Qin'ar and Veryk Ironwill, I might be able to offer you a little something...how does 500 gold pieces sound?}{Well, I've already given the job to someone else.  But, were you to resolve the problems with Qin'ar and Veryk Ironwill, I might be able to offer you a little something...how does 500 gold pieces sound?}{}{}{}{qu1170 1, pf33 1}
+{220}{Done.}{}{5}{}{227}{qu1170 2}
+{221}{I'll think about it.  A few more questions...}{}{5}{}{40}{}
+{222}{Okey-dokey!}{}{-4}{}{227}{qu1170 2}
+{223}{Mebbe.  Sum more questions furst!}{}{-4}{}{40}{}
+{224}{E:}{}{1}{}{0}{}
+{227}{Splendid!  I'll look forward to seeing how you deal with this situation...}{Splendid!  I'll look forward to seeing how you deal with this situation...}{}{}{}{}
+{228}{K:}{}{1}{}{40}{}
+{229}{E:}{}{1}{}{0}{}
+{237}{I see.  Well, please resolve these issues as soon as possible.  You'll be paid as soon as you do...}{I see.  Well, please resolve these issues as soon as possible.  You'll be paid as soon as you do...}{}{}{}{}
+{238}{K:}{}{1}{}{40}{}
+{239}{E:}{}{1}{}{0}{}
+{248}{You have?  That's grand!  Here, take your payment...[He hands you 1000 gold pieces.]  Thank you so much, friend.  Mr.  Merton will be most grateful...}{You have?  That's grand!  Here, take your payment...[He hands you 1000 gold pieces.]  Thank you so much, friend.  Mr.  Merton will be most grateful...}{}{}{}{qu1170 4, $$1000}
+{249}{Your welcome.  But I have been noticing some strange things...}{}{5}{pf5 1, pf2 1}{267}{}
+{250}{You welkum!  But weird stuff been happenin' Cackle-bird!}{}{-4}{pf5 1, pf2 1}{267}{}
+{251}{K:}{}{1}{}{40}{}
+{252}{E:}{}{1}{}{0}{}
+{261}{You have?  That's grand!  Here, take your payment...[He hands you 500 gold pieces.]  It seems perhaps I should have hired you in the first place.  Thank you so much, friend.  Mr.  Merton will be most grateful...}{You have?  That's grand!  Here, take your payment...[He hands you 500 gold pieces.]  It seems perhaps I should have hired you in the first place.  Thank you so much, friend.  Mr.  Merton will be most grateful...}{}{}{}{qu1170 4, $$500}
+{262}{Your welcome.  But I have been noticing some strange things...}{}{5}{pf5 1, pf2 1}{267}{}
+{263}{You welkum!  But weird stuff been happenin' Cackle-bird!}{}{-4}{pf5 1, pf2 1}{267}{}
+{264}{K:}{}{1}{}{40}{}
+{265}{E:}{}{1}{}{0}{}
+{267}{Whatever do you mean, sir?}{Whatever do you mean, madam?}{}{}{}{}
+{268}{A red handkerchief was found in the elven village...}{}{5}{qu1171 4, pf16 0}{288}{}
+{269}{A red handkerchief was found in the elven village...}{}{5}{qu1171 4, pf16 1}{404}{}
+{270}{Elf guy found red hank-er-cheef in elf village!}{}{-4}{qu1171 4, pf16 0}{288}{}
+{271}{Elf guy found red hank-er-cheef in elf village!}{}{-4}{qu1171 4, pf16 1}{404}{}
+{272}{Ivalde Ingot noticed that one of his attackers walked with a limp...}{}{5}{qu1172 4, pf17 0}{339}{}
+{273}{Ivalde Ingot noticed that one of his attackers walked with a limp...}{}{5}{qu1172 4, pf17 1}{410}{}
+{274}{Ee-bald sed that guy who attacked him walked funny!}{}{-4}{qu1172 4, pf17 0}{339}{}
+{275}{Ee-bald sed that guy who attacked him walked funny!}{}{-4}{qu1172 4, pf17 1}{410}{}
+{276}{K:}{}{1}{}{40}{}
+{277}{E:}{}{1}{}{0}{}
+{288}{[Shackleford seems a bit shaken...] R-red handkerchief?  Well, what does that mean?  I mean...there are red handkerchiefs all over Arcanum!  Why is that important?}{[Shackleford seems a bit shaken...] R-red handkerchief?  Well, what does that mean?  I mean...there are red handkerchiefs all over Arcanum!  Why is that important?}{}{}{}{}
+{289}{I don't know, but I plan on finding out...}{}{5}{pf10 0, pf9 0}{298}{}
+{290}{I dunno, but I gonna find out!}{}{-4}{pf10 0, pf9 0}{298}{}
+{291}{Mr. Vorman is wearing a red handkerchief in his portrait...}{}{5}{pf10 1}{308}{pf16 1}
+{292}{Miriam Crow sells Vorman red handkerchiefs every week...}{}{5}{pf9 1}{308}{pf16 1}
+{293}{Vermin wearin' red hankercheef in big picture!}{}{-4}{pf10 1}{313}{pf16 1}
+{294}{Clothes guys sells Vermin hankercheefs all the time!}{}{-4}{pf9 1}{313}{pf16 1}
+{298}{[Shackleford looks relieved.]  Yes...well...I'm sure you're wasting your time.  After all, what could a red handkerchief possibly tell you?}{[Shackleford looks relieved.]  Yes...well...I'm sure you're wasting your time.  After all, what could a red handkerchief possibly tell you?}{}{}{}{}
+{299}{There was something else strange as well...}{}{5}{pf11 1}{267}{}
+{300}{Sumthin' else is weird, too!}{}{-4}{pf11 1}{267}{}
+{301}{K:}{}{1}{}{40}{}
+{302}{E:}{}{1}{}{0}{}
+{308}{[Shackleford looks distraught.]  Ah...yes...well, I suppose Mr. Vorman does have an affinity for red handkerchiefs...but what exactly are you insinuating, sir?}{[Shackleford looks distraught.]  Ah...yes...well, I suppose Mr. Vorman does have an affinity for red handkerchiefs...but what exactly are you insinuating, madam?}{}{}{}{}
+{309}{Perhaps Mr. Vorman has something to do with all of this...}{}{5}{}{321}{}
+{310}{Mebbe Vermin made trouble at elf place!}{}{-4}{}{321}{}
+{313}{[Shackleford seems distraught.]  Yes...well, there is that.  What exactly are you insinuating, sir?}{[Shackleford seems distraught.]  Yes...well, there is that.  What exactly are you insinuating, madam?}{}{}{}{}
+{314}{Perhaps Mr. Vorman has something to do with all of this...}{}{5}{}{321}{}
+{315}{Mebbe Vermin made trouble at elf place!}{}{-4}{}{321}{}
+{321}{I don't think that necessarily proves anything, sir!}{I don't think that necessarily proves anything, madam!}{}{}{}{}
+{322}{Not yet...but I'll keep looking to the matter...}{}{5}{pf11 0, pf17 0}{334}{}
+{323}{Mebbe not...but I keep lookin' around!}{}{-4}{pf11 0, pf17 0}{334}{}
+{324}{There was something else strange as well...}{}{5}{pf11 1, pf17 0}{267}{}
+{325}{Sumthin' else is weird, too!}{}{-4}{pf11 1, pf17 0}{267}{}
+{326}{I think that this, along with Ivalde's testimony, proves his complicity...}{}{5}{pf17 1}{374}{}
+{327}{Yeah it does!  Cuz Vermin walks funny, too!}{}{-4}{pf17 1}{374}{}
+{334}{Feel free...but I'm sure it's absolutely nothing...}{Feel free...but I'm sure it's absolutely nothing...}{}{}{}{}
+{335}{K:}{}{1}{}{40}{}
+{336}{E:}{}{1}{}{0}{}
+{339}{[Shackleford seems a bit shaken...] A limp?  I-I...I'm sure I don't know what you're getting at, sir!  Why would you possibly think that was important?}{[Shackleford seems a bit shaken...] A limp?  I-I...I'm sure I don't know what you're getting at, sir!  Why would you possibly think that was important?}{}{}{}{}
+{340}{I don't know, but I plan on finding out...}{}{5}{pf12 0, pf13 0}{349}{}
+{341}{I dunno, but I gonna find out!}{}{-4}{pf12 0, pf13 0}{349}{}
+{342}{I found a pair of leg braces in Mr. Vorman's study...}{}{5}{pf12 1}{354}{pf17 1}
+{343}{I got leg-helpers in Vermin's room!}{}{-4}{pf12 1}{354}{pf17 1}
+{344}{I spoke with Mr. Radley about Mr. Vorman's limp...}{}{5}{pf13 1}{357}{pf17 1}
+{345}{Blacksmith guy sed that Vermin walks funny, too!}{}{-4}{pf13 1}{357}{pf17 1}
+{349}{[Shackleford looks relieved.]  I'm sure it will turn out to be nothing but circumstantial nonsense, sir.}{[Shackleford looks relieved.]  I'm sure it will turn out to be nothing but circumstantial nonsense, madam.}{}{}{}{}
+{350}{K:}{}{1}{}{40}{}
+{351}{E:}{}{1}{}{0}{}
+{354}{[Shackleford starts to sweat.]  That is a bit odd, now isn't it?  Heh-heh...uh...well...what exactly are you saying, sir?}{[Shackleford starts to sweat.]  That is a bit odd, now isn't it?  Heh-heh...uh...well...what exactly are you saying, madam?}{}{}{}{}
+{355}{Perhaps it was Mr. Vorman who took the dwarven engine...}{}{5}{}{364}{}
+{356}{Mebbe Vermin stole dwarf machine!}{}{-4}{}{364}{}
+{357}{Yes...well...ah...[Shackleford pulls a handkerchief from his jacket, wiping his brow.]...Mr. Vorman did have an accident as a child.  What are you getting at, sir?}{Yes...well...ah...[Shackleford pulls a handkerchief from his jacket, wiping his brow.]...Mr. Vorman did have an accident as a child.  What are you getting at, madam?}{}{}{}{}
+{358}{Perhaps it was Mr. Vorman who took the dwarven engine...}{}{5}{}{364}{}
+{359}{Mebbe Vermin stole dwarf machine!}{}{-4}{}{364}{}
+{364}{That's hogwash!  Like Mr. Vorman would do such a thing!}{That's hogwash!  Like Mr. Vorman would do such a thing!}{}{}{}{}
+{365}{I can't prove it yet, but I'll keep looking into the matter...}{}{5}{pf11 0, pf17 0}{334}{}
+{366}{I not know for sure, but I keep lookin' around!}{}{-4}{pf11 0, pf17 0}{334}{}
+{367}{There was something else strange as well...}{}{5}{pf11 1, pf16 0}{267}{}
+{368}{Sumthin' else is weird, too!}{}{-4}{pf11 1, pf16 0}{267}{}
+{369}{I think that this, along with the red handkerchief, proves his complicity...}{}{5}{pf16 1}{374}{}
+{370}{Yeah he would!  'Member the red hankercheef?}{}{-4}{pf16 1}{374}{}
+{374}{[Shackleford looks crestfallen.]  Yes...I suppose I can't deny it anymore...Mr. Vorman must be at the root of all of this.  And I'm afraid I know what he's trying to do...}{[Shackleford looks crestfallen.]  Yes...I suppose I can't deny it anymore...Mr. Vorman must be at the root of all of this.  And I'm afraid I know what he's trying to do...}{}{}{}{}
+{375}{What?  What is he doing?}{}{5}{}{379}{}
+{376}{Whut?}{}{-4}{}{379}{}
+{379}{Well...Mr. Vorman has always been interested in the occult.  He's very well-read in a variety of ancient texts, and lately I've noticed that he's been obsessing over one in particular...}{Well...Mr. Vorman has always been interested in the occult.  He's very well-read in a variety of ancient texts, and lately I've noticed that he's been obsessing over one in particular...}{}{}{}{}
+{380}{Which one?}{}{5}{}{384}{}
+{381}{Uh?}{}{-4}{}{384}{}
+{384}{I'm not sure of the name...but I know it has to do with some ancient legend...and Mr. Vorman thought it had something to do with the rise of technology and it's relationship to magick...I don't know...he was always so damned cryptic about the whole thing...}{I'm not sure of the name...but I know it has to do with some ancient legend...and Mr. Vorman thought it had something to do with the rise of technology and it's relationship to magick...I don't know...he was always so damned cryptic about the whole thing...}{}{}{}{}
+{385}{I think I've read it in his study...}{}{5}{pf18 1}{389}{}
+{386}{I saw it, I think!}{}{-4}{pf18 1}{389}{}
+{387}{What do you think he's trying to do?}{}{5}{pf18 0}{394}{}
+{388}{Whut you think he gonna do?}{}{-4}{pf18 0}{394}{}
+{389}{Then you know as much as I do.  I think he's going to try and use these stolen objects to...I don't know...I just don't know...}{Then you know as much as I do.  I think he's going to try and use these stolen objects to...I don't know...I just don't know...}{}{}{}{}
+{390}{Where can I find him?}{}{5}{}{399}{}
+{391}{Where I find him?}{}{-4}{}{399}{}
+{392}{There's also the fact that his dead son's body was stolen...}{}{5}{pf20 1}{465}{}
+{394}{I think he's going to try and use these stolen objects to...I don't know...I just don't know...}{I think he's going to try and use these stolen objects to...I don't know...I just don't know...}{}{}{}{}
+{395}{Where can I find him?}{}{5}{}{399}{}
+{396}{Where I find him?}{}{-4}{}{399}{}
+{397}{There's also the fact that his dead son's body was stolen...}{}{5}{pf20 1}{465}{}
+{399}{I'm not exactly sure, but it's a safe bet that he's down in the basement.  He has a laboratory down there, somewhere...I was never allowed to see it, but he gave me the key in case of an emergency.  Here...it's yours...[He hands you a key.]}{I'm not exactly sure, but it's a safe bet that he's down in the basement.  He has a laboratory down there, somewhere...I was never allowed to see it, but he gave me the key in case of an emergency.  Here...it's yours...[He hands you a key.]}{}{}{}{pf19 1, gf3188 1, in-4424}
+{400}{Thank you.  I'll look into the matter, sir...}{}{5}{}{-8}{}
+{401}{Thanks!}{}{-4}{}{-8}{}
+{404}{Yes, yes....we've already been over that...what else have you found?}{Yes, yes....we've already been over that...what else have you found?}{}{}{}{}
+{405}{Nothing else yet...but I will, sir...}{}{5}{pf11 0}{334}{}
+{406}{Nuttin' yet!  But I keep lookin'!}{}{-4}{pf11 0}{334}{}
+{407}{Ivalde Ingot noticed that one of his attackers walked with a limp...}{}{5}{pf11 1, pf17 0}{339}{}
+{408}{Ee-bald sed that guy who attacked him walked funny!}{}{-4}{pf11 1, pf17 0}{339}{}
+{410}{Yes, yes....we've already been over that...what else have you found?}{Yes, yes....we've already been over that...what else have you found?}{}{}{}{}
+{411}{Nothing else yet...but I will, sir...}{}{5}{pf8 0}{334}{}
+{412}{Nuttin' yet!  But I keep lookin'!}{}{-4}{pf8 0}{334}{}
+{413}{A red handkerchief was found in the elven village...}{}{5}{pf8 1, pf16 0}{288}{}
+{414}{I got a red hankercheef in elf village!}{}{-4}{pf8 1, pf16 0}{288}{}
+{424}{I hope you find out what is going on.  I fear that a great evil is being done, even as we speak...}{I hope you find out what is going on.  I fear that a great evil is being done, even as we speak...}{}{}{}{}
+{425}{You're too late!  They've already gone after Mr. Vorman!  He's in the basement...there's a trap door in his study!  Go!  As quickly as you can...!}{You're too late!  They've already gone after Mr. Vorman!  He's in the basement...there's a trap door in his study!  Go!  As quickly as you can...!}{}{}{}{}
+{430}{Haven't you heard?  Qin'ar, the leader of the Ter'elon elves, and Veryk Ironwill, the leader of the Stone Heart Clan, are both here in the house today!}{Haven't you heard?  Qin'ar, the leader of the Ter'elon elves, and Veryk Ironwill, the leader of the Stone Heart Clan, are both here in the house today!}{}{}{}{}
+{431}{Yes...I've spoken with both of them...}{}{5}{pf3 1, pf4 1}{450}{}
+{432}{I've spoken with Qin'ar, actually...}{}{5}{pf3 1, pf4 0}{133}{}
+{433}{I've spoken with Veryk Ironwill, already...}{}{5}{pf3 0, pf4 1}{175}{}
+{434}{Really?  Why are they here?}{}{5}{pf3 0, pf4 0}{440}{}
+{435}{Yeah!  I talked to bof of 'em!}{}{-4}{pf3 1, pf4 1}{450}{}
+{436}{I talked to elf guy!}{}{-4}{pf3 1, pf4 0}{133}{}
+{437}{Me and short dwarf guy talk...!}{}{-4}{pf3 0, pf4 1}{175}{}
+{438}{Uh...why?}{}{-4}{pf3 0, pf4 0}{440}{}
+{440}{Well...it seems that there has been a disturbance up in the elven village, and I don't have the slightest idea why Veryk is here.  I'll talk with them both as soon as I can find a free moment...so much to do, you know...}{Well...it seems that there has been a disturbance up in the elven village, and I don't have the slightest idea why Veryk is here.  I'll talk with them both as soon as I can find a free moment...so much to do, you know...}{}{}{}{}
+{441}{Hmmm.  Perhaps I could be of assistance?}{}{5}{qu1170 0, gf3187 0}{207}{}
+{442}{Hmmm.  Perhaps I could be of assistance?}{}{5}{qu1170 0, gf3187 1}{219}{}
+{443}{Mebbe I could help!}{}{-4}{qu1170 0, gf3187 0}{207}{}
+{444}{Mebbe I could help!}{}{-4}{qu1170 0, gf3187 1}{219}{}
+{445}{K:}{}{1}{}{40}{}
+{446}{E:}{}{1}{}{0}{}
+{450}{You have!  Splendid...what did they say?}{You have!  Splendid...what did they say?}{}{}{}{}
+{451}{Qin'ar said it was fated I speak with you, and Veryk would say nothing...}{}{5}{}{455}{}
+{452}{Elf say sumthin' 'bout density, and short guy say nuttin'!!}{}{-4}{}{455}{}
+{455}{[Shackleford laughs.]  That sounds like both of them.  Well, I suppose I shall have to deal with them as quickly as possible.  If only I didn't have so much else to do...}{[Shackleford laughs.]  That sounds like both of them.  Well, I suppose I shall have to deal with them as quickly as possible.  If only I didn't have so much else to do...}{}{}{}{}
+{456}{Hmmm.  Perhaps I could be of assistance?}{}{5}{qu1170 0, gf3187 0}{207}{}
+{457}{Hmmm.  Perhaps I could be of assistance?}{}{5}{qu1170 0, gf3187 1}{219}{}
+{458}{Mebbe I could help!}{}{-4}{qu1170 0, gf3187 0}{207}{}
+{459}{Mebbe I could help!}{}{-4}{qu1170 0, gf3187 1}{219}{}
+{460}{K:}{}{1}{}{40}{}
+{461}{E:}{}{1}{}{0}{}
+{465}{You mean Oren's grave was desecrated?  The body stolen?  Oh no...I fear that Mr. Vorman may have finally lost his mind...}{You mean Oren's grave was desecrated?  The body stolen?  Oh no...I fear that Mr. Vorman may have finally lost his mind...}{}{}{}{}
+{466}{Where can I find him?}{}{5}{}{399}{}
+{467}{Where I find him?}{}{-4}{}{399}{}
+
+
+{497}{AH! You've returned! Did you find him?}{AH! You've returned! Did you find him?}{}{}{}{}
+{498}{I found Mr. Vorman - and that thing he created.}{}{5}{}{500}{}
+{499}{I find Mr. Vermin - an' dat thing he make.}{}{-4}{}{500}{}
+{500}{Please, tell me. What happened? Is Mr. Vorman all right?}{Please, tell me. What happened? Is Mr. Vorman all right?}{}{}{}{}
+{501}{[You tell him what transpired.]}{}{1}{}{503}{}
+{502}{}{}{}{}{}{}
+{503}{[Shackleford is in mild shock] Oh dear, Mr. Vorman dead, and how am I going to explain this to Veryk and Qin'ar?}{[Shackleford is in mild shock] Oh dear, Mr. Vorman dead, and how am I going to explain this to Veryk and Qin'ar?}{}{}{}{}
+{504}{You're an attorney, I'm sure you'll think of something.}{}{5}{}{506}{}
+{505}{You an' att-att....   law-guy! You will think of sum'thin'.}{}{-4}{}{506}{}
+{506}{That is hardly reassuring.}{That is hardly reassuring.}{}{}{}{fp }
+{507}{E:}{}{1}{}{0}{fl 508}
+{508}{[He is lost in thought] Oh my.... }{[He is lost in thought] Oh my.... }{}{}{}{}

@@ -1,0 +1,37 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Hello.}{}{5}{lf1 0}{7}{}
+{3}{Hello again Cole.}{}{5}{lf1 1}{35}{}
+{4}{Uh... Hi.}{}{-4}{lf1 0}{7}{}
+{5}{Uh... Hi Cold.}{}{-4}{lf1 1}{35}{}
+{6}{E:}{}{1}{}{0}{}
+{7}{Hello stranger!  You certainly have traveled a bit to get here.  Where do you hail from?}{Hello stranger!  You certainly have traveled a bit to get here.  Where do you hail from miss?}{}{}{}{}
+{8}{Well, I've just come from Riverton.}{}{5}{}{11}{}
+{9}{Me jus' leev Rivertown.}{}{-4}{}{11}{}
+{10}{E:}{}{1}{}{0}{}
+{11}{Ahh... You must be on your way to Tyr then.  Be careful.  I haven't heard much in the way of good news coming from there since that Minra witch took over.}{Ahh... You must be on your way to Tyr then.  Be careful.  I haven't heard much in the way of good news coming from there since that Minra witch took over.}{}{}{}{}
+{12}{I will be careful.}{}{5}{}{21}{}
+{13}{Me be karful.}{}{-4}{}{21}{}
+{15}{E:}{}{1}{}{0}{}
+{21}{Tell me... you didn't happen to see a slimy, sneaking halfling thief on your way here did you?}{Tell me... you didn't happen to see a slimy, sneaking halfling thief on your way here did you?}{}{}{}{}
+{22}{Uh... I can't say that I did.  Why do you ask?}{}{5}{}{26}{}
+{23}{Uh... No.}{}{-4}{}{26}{}
+{25}{E:}{}{1}{}{0}{}
+{26}{Stole a key from me, he did.  He's more the fool though.  He thought he took the key to my cavern storage, but the whelp took off with my basement key instead.  Stupid kid.  I even had them labeled.  I guess he couldn't read.}{Stole a key from me, he did.  He's more the fool though.  He thought he took the key to my cavern storage, but the whelp took off with my basement key instead.  Stupid kid.  I even had them labeled.  I guess he couldn't read.}{}{}{}{lf1 1}
+{27}{Oh!  Maybe I did see him.  Is this your key? [you hold it out to him.]}{}{5}{in5802}{32}{}
+{28}{I'm sorry to hear that...}{}{5}{}{35}{}
+{29}{Oh!  Mebbe me did fin' he.  Dis be da key? [you hold it out to him.]}{}{-4}{in5802}{32}{}
+{30}{Uh...  dat too bad.}{}{-4}{}{35}{}
+{31}{E:}{}{1}{}{0}{}
+{32}{Oh my.  Well, I guess he got what was coming to him, in a way.  Too bad.  What a waste.  Thank you for returning my key to me anyway.  Here.  Here's a bit of coin for your trouble.}{Oh my.  Well, I guess he got what was coming to him, in a way.  Too bad.  What a waste.  Thank you for returning my key to me anyway.  Here.  Here's a bit of coin for your trouble.}{}{}{}{$$50, lf2 1, in5802, gf 3072 0}
+{33}{Thanks.}{}{5}{}{35}{}
+{34}{Uh...  T'anks.}{}{-4}{}{35}{}
+{35}{So what can I help you with @pcname@?}{So what can I help you with @pcname@?}{}{}{}{}
+{36}{B:}{}{1}{gf 3072 0}{0}{}
+{37}{Interested in trading?}{}{5}{gf 3072 1}{40}{}
+{38}{Us trade?}{}{-4}{gf 3072 1}{40}{}
+{39}{E:}{}{1}{}{0}{}
+{40}{[He begins looking through your stuff.]  Hey!  Some of these things are mine!  [His eyes narrow.]  What do you take me for mister?  I don't know about you, but I defend what's mine.}{[He begins looking through your stuff.]  Hey!  Some of these things are mine!  [His eyes narrow.]  What do you take me for lady?  I don't know about you, but I defend what's mine.}{}{}{}{}
+{41}{Uh...  But...}{}{5}{}{}{co, fl 43}
+{42}{Uh oh.}{}{-4}{}{}{co, fl 43}
+{43}{Prepare to die Thief!}{Prepare to die Thief!}{}{}{}{}
+

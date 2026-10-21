@@ -1,0 +1,77 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{What do you sell here?}{}{5}{gf3102 0}{21}{}
+{3}{Me like buy stuffs. What yoo got to sell?}{}{-4}{gf3102 0}{21}{}
+{4}{I've come to speak to you about Jana.}{}{5}{gf3102 0, qu 1262 2}{100}{}
+{5}{We make talk about Jana.}{}{-4}{gf3102 0, qu 1262 2}{100}{}
+{6}{Nice shop you've got here.}{}{5}{gf3102 0, gf3104 0}{30}{}
+{7}{This not bad place.}{}{-4}{gf3102 0, gf3104 0}{30}{}
+{8}{Jana is here...}{}{1}{gf3102 0, qu 1262 4}{150}{}
+{10}{Jana here...}{}{-4}{gf3102 0, qu 1262 4}{150}{}
+{12}{Jana is dead...}{}{1}{qu 1261 6, qu 1262 6, gf3101 1, gf3102 0}{120}{}
+{13}{I've come to speak to you about Jana.}{}{5}{gf3102 0, qu 1261 3}{100}{}
+{14}{We make talk about Jana.}{}{-4}{gf3102 0, qu 1261 3}{100}{}
+{15}{T:9}{}{1}{}{0}{}
+{16}{E:}{}{1}{}{0}{}
+
+
+{21}{I'll buy and sell most any standard supplies and equipment. Food, lamps, jewelry, little bits of technology, but not herbs. Would you like to see my stock?}{I'll buy and sell most any standard supplies and equipment. Food, lamps, jewelry, little bits of technology, many different things. Would you like to see my stock?}{}{}{}{}
+{22}{B:}{}{1}{}{1}{}
+{23}{E:}{}{1}{}{0}{}
+
+
+{30}{Yes, but it lacks a woman's touch. Since my daughter moved out, I've had no help in keeping up the place.}{Yes, but it lacks a woman's touch. Since my daughter moved out, I've had no help in keeping up the place.}{}{}{}{}
+{31}{Why did she move out?}{}{5}{}{40}{}
+{32}{What? She touched place and it moved? I confused.}{}{-4}{}{40}{}
+{33}{Wow, how spectacularly boring.}{}{5}{}{0}{}
+{34}{Ugh. Bye.}{}{-4}{}{0}{}
+
+
+{40}{I wanted her to work in the store with me, perhaps take it over when I pass on. It's an honest living and she's a keen mind for a bargain. However, she insisted on learning "medicines", and "technology". Rubbish. She's got it in her head that she wants to be an adventurer! Can you believe it?}{I wanted her to work in the store with me, perhaps take it over when I pass on. It's an honest living and she's a keen mind for a bargain. However, she insisted on learning "medicines", and "technology". Rubbish. She's got it in her head that she wants to be an adventurer! Can you believe it?}{}{}{}{}
+{41}{Intriguing. Tell me more.}{}{5}{}{50}{}
+{42}{Ok? Yes? I BELIEVE YOU!}{}{-4}{}{50}{}
+{43}{Wow, amazing. Goodbye.}{}{5}{}{0}{}
+{44}{Booooring. Bye bye.}{}{-4}{}{0}{}
+
+
+{50}{I just can't accept that my daughter is meant for that kind of life. I'd do anything to have her safe at home with me again. Say, do you think you might be able to talk to her? Convince her, perhaps? There's coin in it for you.}{I just can't accept that my daughter is meant for that kind of life. I'd do anything to have her safe at home with me again. Say, do you think you might be able to talk to her for me? Convince her, perhaps? There's coin in it for you.}{}{}{}{}
+{51}{Sorry, no.}{}{1}{}{1}{}
+{52}{Sure, I'll do my best...}{}{5}{}{60}{qu 1261 2, gf3104 1}
+{53}{Me talk at her.}{}{-4}{}{60}{qu 1261 2, gf3104 1}
+
+{60}{I'd appreciate it. Her cabin is across town, just next door the inn. She tends the herb garden there. I'll pay you 50 coin to talk her into coming home.}{I'd appreciate it. Her cabin is across town, just next door the inn. She tends the herb garden there. I'll pay you 50 coin to talk her into coming home.}{}{}{}{}
+{61}{I'll get started right away.}{}{5}{}{0}{}
+{62}{Me get to work now!}{}{-4}{}{0}{}
+
+
+{70}{You'll be sorry you said that!}{You'll be sorry you said that!}{}{}{}{}
+{71}{Wait!}{}{1}{}{0}{}
+
+{80}{Have you anything new to tell me about Jana?}{Have you anything new to tell me about Jana?}{}{}{}{}
+{81}{E:}{}{1}{}{0}{}
+
+
+{100}{Yes? Have you news of Jana?}{Yes? Have you news of Jana? }{}{}{}{}
+{101}{Yes, she wants you to know that...[explain Jana's feelings]}{}{5}{qu 1262 2}{110}{qu 1262 3}
+{102}{Uh ya, Um she sez dat...[Do your best to communicate the story, with lots of gestures and grunts.]}{}{-4}{qu 1262 2}{110}{qu 1262 3}
+{103}{She has decided to stay with you.}{}{5}{qu 1261 3}{140}{}
+{104}{She gonna stay wit you here now.}{}{-4}{qu 1261 3}{140}{}
+{105}{E:}{}{1}{}{0}{}
+
+{110}{[As he listens to you, his face grows sad with realization.] I... I never knew she was so passionate about travelling. Thank you, sir, for helping me to better understand Jana. Please tell her she has my blessing to go where her heart leads.}{[As he listens to you, his face grows sad with realization.] I... I never knew she was so passionate about travelling. Thank you, madam, for helping me to better understand Jana. Please tell her she has my blessing to go where her heart leads.}{}{}{}{}
+{111}{Certainly, my good sir.}{}{5}{}{0}{}
+{112}{Ugh, no problum! *burp*}{}{-4}{}{0}{}
+{113}{Whatever.}{}{1}{}{0}{}
+
+
+{120}{Oh, by the gods, she's dead? [His face contorts with rage.] I curse you! I curse your name and blood!}{Oh, by the gods, she's dead? [His face contorts with rage.] I curse you! I curse your name and blood!}{}{}{}{}
+{121}{I'm sorry...}{}{1}{}{0}{gf3102 1}
+{122}{The bitch deserved it.}{}{1}{}{0}{gf3102 1}
+
+{140}{Thank you, traveller. You have returned the joy to an old man's life. Jana will be happier tending the store here, anyway. Here is your 50 coin, and my thanks always be with you.}{Thank you, traveller. You have returned the joy to an old man's life. Jana will be happier tending the store here, anyway. Here is your 50 coin, and my thanks always be with you.}{}{}{}{}
+{141}{I appreciate the coin, but your thanks is worth far more. Peace be with you.}{}{5}{}{-2}{qu 1261 4}
+{142}{Shiny moneys! Thanks you much!}{}{-4}{}{-2}{qu 1261 4}
+{143}{I take my leave of you, sentimental cretin.}{}{5}{}{-2}{qu 1261 4, gf3102 1}
+{144}{I leave now, stupid man.}{}{-4}{}{-2}{qu 1261 4, gf3102 1}
+
+{150}{Thank you again, traveller. I will say my goodbye to Jana now, that she might be off on her trek with all haste. Take care, my daughter. Jana waves goodbye to him.}{Thank you again, traveller. I will say my goodbye to Jana now, that she might be off on her trek with all haste. Take care, my daughter.}{}{}{}{}
+{151}{E:}{}{1}{}{0}{}

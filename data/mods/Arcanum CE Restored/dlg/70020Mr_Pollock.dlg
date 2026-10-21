@@ -1,0 +1,173 @@
+{1}{Hello, is there something I can help you with?}{Hello, is there something I can help you with?}{}{}{}{}
+{2}{W:}{}{1}{lf0 0}{20}{lf0 1}
+{3}{May I ask you a question?}{}{5}{lf0 1}{30}{}
+{4}{Kan me ask you kwestshun?}{}{-4}{lf0 1}{30}{}
+{8}{E:}{}{1}{}{0}{}
+{20}{My name's Mr Pollock, I'm a Sheep Farmer here in Grayhills. May I ask who you are?}{My name's Mr Pollock, I'm a Sheep Farmer here in Grayhills. May I ask who you are?}{}{}{}{}
+{21}{Certainly, I'm @pcname@.}{}{5}{}{30}{}
+{22}{Yep, me @pcname@.}{}{-4}{}{30}{}
+{30}{What can I do for you @pcname@?}{What can I do for you @pcname@?}{}{}{}{}
+{31}{What are you doing?}{}{5}{qu 1405 0}{60}{}
+{32}{Wat you doin'?}{}{-4}{qu 1405 0}{60}{}
+{33}{Are you the Sheep Farmer that attacked the Mummy?}{}{5}{qu 1404 2}{270}{}
+{34}{Are you da Sheep Farmer dat attaked da Mummy?}{}{-4}{qu 1404 2}{270}{}
+{35}{I might be able to help with that damaged axe.}{}{5}{qu 1405 1}{70}{}
+{36}{Uhhh, me kan help wit da damedged axe.}{}{-4}{qu 1405 1}{70}{}
+{37}{I've fixed your axe.}{}{5}{qu 1405 2}{-2}{}
+{38}{Me fix yoor axe.}{}{-4}{qu 1405 2}{-2}{}
+{39}{I've decided to cut down the trees for you.}{}{5}{qu 1406 1}{250}{}
+{40}{Me wanna kut down da trees for you.}{}{-4}{qu 1406 1}{250}{}
+{41}{Will you let me cut down the trees now?}{}{5}{qu 1406 0, lf1 1, sk2 8}{230}{}
+{42}{Kan me kut down da trees for you now?}{}{-4}{qu 1406 0, lf1 1, sk2 8}{230}{}
+{43}{Will you let me cut down the trees now?}{}{5}{qu 1406 0, lf1 1, sk2 -7}{240}{}
+{44}{Kan me kut down da trees for you now?}{}{-4}{qu 1406 0, lf1 1, sk2 -7}{240}{}
+{45}{I've cut down the trees for you.}{}{5}{gf3140 1, gf3141 1, gf3142 1, qu 1406 2}{260}{}
+{46}{Me haf kut down da trees for you.}{}{-4}{gf3140 1, gf3141 1, gf3142 1, qu 1406 2}{260}{}
+{47}{You mentioned something about trees? Can I cut them down for you?}{}{5}{qu 1406 0, lf2 1, lf1 0, sk2 8}{230}{}
+{48}{You say somet'ing 'bout trees. Kan me kut down da trees for you?}{}{-4}{qu 1406 0, lf2 1, lf1 0, sk2 8}{230}{}
+{49}{You mentioned something about trees? Can I cut them down for you?}{}{5}{qu 1406 0, lf2 1, lf1 0, sk2 -7}{240}{}
+{50}{You say somet'ing 'bout trees. Kan me kut down da trees for you?}{}{-4}{qu 1406 0, lf2 1, lf1 0, sk2 -7}{240}{}
+{51}{Can I ask you something about the Mummy?}{}{5}{qu 1404 4}{310}{}
+{52}{Kan me ask you somet'ing 'bout da Mummy?}{}{-4}{qu 1404 4}{310}{}
+{53}{E:}{}{1}{}{0}{}
+{60}{Well, I was cutting down some trees for firewood, seeing as winter is coming. Unfortunately though, my axe is broken and I need it repaired before I can cut down any more trees.}{Well, I was cutting down some trees for firewood, seeing as winter is coming. Unfortunately though, my axe is broken and I need it repaired before I can cut down any more trees.}{}{}{}{qu 1405 1}
+{61}{How unfortunate, can I ask you something else?}{}{5}{}{30}{}
+{62}{Bummer, can me ask you somet'ing else?}{}{-4}{}{30}{}
+{63}{Perhaps I could help?}{}{5}{}{70}{}
+{64}{Mabbe me kan help?}{}{-4}{}{70}{}
+{65}{E:}{}{1}{}{0}{}
+{70}{Okay, if you can help I'd greatly appreciate it. Now, I left my axe around here somewhere....}{Okay, if you can help I'd greatly appreciate it. Now, I left my axe around here somewhere....}{}{}{}{qu 1405 2}
+{71}{Is this your axe? [Show him the axe you picked up]}{}{5}{in 72201}{80}{}
+{72}{Dis yoor axe? [Show him the axe you picked up]}{}{-4}{in 72201}{80}{}
+{73}{I think I see it on the ground there, by your feet.}{}{5}{ni 72201}{90}{}
+{74}{Me dink me see it on da grownd dere, by yoor feet.}{}{-4}{ni 72201}{90}{}
+{80}{[He looks at the axe your holding] Ahhh... Yes, that's it! As you can see it is badly broken. I've had it for a number of years now and it had become worn out and blunt because I've been using it so much. Next thing I know, SNAP! It broke just this afternoon.}{[He looks at the axe your holding] Ahhh... Yes, that's it! As you can see it is badly broken. I've had it for a number of years now and it had become worn out and blunt because I've been using it so much. Next thing I know, SNAP! It broke just this afternoon.}{}{}{}{}
+{81}{Do you know someone that could repair it?}{}{5}{}{100}{}
+{82}{Do you 'no somewun dat koold reepare it?}{}{-4}{}{100}{}
+{83}{I'll see what I can do.}{}{5}{}{0}{}
+{84}{Me see wat me kan do.}{}{-4}{}{0}{}
+{90}{Yes that's it! Feel free to take it and get it repaired for me. I've had it for a number of years now and it had become worn out and blunt because I've been using it so much. Next thing I know, SNAP! It broke just this afternoon.}{Yes that's it! Feel free to take it and get it repaired for me. I've had it for a number of years now and it had become worn out and blunt because I've been using it so much. Next thing I know, SNAP! It broke just this afternoon.}{}{}{}{}
+{91}{Do you know someone that could repair it?}{}{5}{}{100}{}
+{92}{Do you 'no somewun dat koold reepare it?}{}{-4}{}{100}{}
+{93}{I'll see what I can do.}{}{5}{}{0}{}
+{94}{Me see wat me kan do.}{}{-4}{}{0}{}
+{100}{Yes I do. Try the Dwarven Smithy in town, he's supposed to be good at repairing things. See what he can do with it.}{Yes I do. Try the Dwarven Smithy in town, he's supposed to be good at repairing things. See what he can do with it.}{}{}{}{}
+{101}{A:}{}{1}{}{0}{}
+{110}{I'm sorry, but the axe is still broken. Look, go away and get it fixed, then come back to me once it's repaired.}{I'm sorry, but the axe is still broken. Look, go away and get it fixed, then come back to me once it's repaired.}{}{}{}{}
+{111}{E:}{}{1}{}{0}{}
+{120}{Ahhh... Fantastic! Now I'll be able to cut down these trees for firewood. That should give me enough firewood to last through winter.}{Ahhh... Fantastic! Now I'll be able to cut down these trees for firewood. That should give me enough firewood to last through winter.}{}{}{}{qu 1405 4, lf2 1}
+{121}{I could cut down the trees for you.}{}{5}{sk2 8}{230}{}
+{122}{Me koold cut down da trees for you.}{}{-4}{sk2 8}{230}{}
+{123}{I could cut down the trees for you.}{}{5}{sk2 -7}{240}{}
+{124}{Me koold cut down da trees for you.}{}{-4}{sk2 -7}{240}{}
+{125}{E:}{}{1}{}{0}{}
+{130}{You have? Well, could you drop it on the ground so that I can check if it's busted please? Er... If it is already on the ground, could you move it closer to me?}{You have? Well, could you drop it on the ground so that I can check if it's busted please? Er... If it is already on the ground, could you move it closer to me?}{}{}{}{}
+{131}{Okay, I'll drop it on the ground for you.}{}{5}{in 72201}{0}{}
+{132}{Okay, me drop it on da grownd for you.}{}{-4}{in 72201}{0}{}
+{133}{Err... Why? Can't you see that it's fixed?}{}{5}{in 72201, lf3 0}{140}{}
+{134}{Uhhh... Why? Kan't you see dat it be fixed?}{}{-4}{in 72201, lf3 0}{140}{}
+{135}{Sure, I'll drop it on the ground closer to you.}{}{5}{ni 72201}{0}{}
+{136}{Uhuh, me drop it on da grownd neer you.}{}{-4}{ni 72201}{0}{}
+{140}{[His eyes roll into the back of his head and he talks in a deep demonic tone] No I can't! There's no script action of 'Check if item named (num) is busted'. There's only the 'Check if (obj) is busted'. Now of course, I have to create a loop to find object named 2201 don't I? Then 'check if Current Looped Object is busted'.}{[His eyes roll into the back of his head and he talks in a deep demonic tone] No I can't! There's no script action of 'Check if item named (num) is busted'. There's only the 'Check if (obj) is busted'. Now of course, I have to create a loop to find object named 2201 don't I? Then 'check if Current Looped Object is busted'.}{}{}{}{lf3 1}
+{141}{But WHY does the axe have to be on the ground?}{}{5}{}{150}{}
+{142}{Buy why dos da axe haf to be on da grownd?}{}{-4}{}{150}{}
+{143}{I'll just put the axe down now.}{}{5}{}{0}{}
+{144}{Me jus' put da axe down now.}{}{-4}{}{0}{}
+{150}{Well, I can't 'Loop for every item in inventory' can I? So when I 'Loop for objects in Vicinity' it doesn't check in anyone's inventory! That's why the axe was on the ground in the first place. Although, that was actually so I could loop for it and damage it. You would've thought there'd be a 'Busted' flag for weapons huh?}{Well, I can't 'Loop for every item in inventory' can I? SO when I 'Loop for objects in Vicinity' it doesn't check in anyone's inventory! That's why the axe was on the ground in the first place. Although, that was actually so I could loop for it and damage it. You would've thought there'd be a 'Busted' flag for weapons huh?}{}{}{}{}
+{151}{What ARE you talking about?}{}{5}{}{160}{}
+{152}{Wat you be talkin' 'bout?}{}{-4}{}{160}{}
+{153}{Err.... I'll just drop the axe. Okay?}{}{5}{}{0}{}
+{154}{Uhhh.... Me jus' drop da axe. Okay?}{}{-4}{}{0}{}
+{156}{May Interplay crumble before it's rape of Fallout!! NEVER will I buy Fallout Tactics 2! Fallout Tactics 1 was bad enough! By the GODS those missions were long...}{May Interplay crumble before it's rape of Fallout!! NEVER will I buy a Fallout Tactics 2! Fallout Tactics 1 was bad enough! By the GODS those missions were long...}{}{}{}{}
+{160}{[He carries on as if he's a man possesed] Well, I've spent a whole day! One WHOLE DAY!! Trying to figure out how to do this quest. First of all, I wanted to 'bust' the axe with a flag. But I couldn't. So I had to loop for it and bust it with a script on my first heartbeat. Only to do that, the item has to be on the ground, it can't be in my inventory.}{[He carries on as if he's a man possesed] Well, I've spent a whole day! One WHOLE DAY!! Trying to figure out how to do this quest. First of all, I wanted to 'bust' the axe with a flag. But I couldn't. So I had to loop for it and bust it with a script on my first heartbeat. Only to do that, the item has to be on the ground, it can't be in my inventory.}{}{}{}{}
+{161}{[Say nothing and let him continue]}{}{1}{}{170}{}
+{162}{By the Gods! You're possesed by an evil demon! You have to DIE!!}{}{5}{}{0}{co, fl 156}
+{163}{By da Gods! You be possessed by evil deeeman! You haf to DIE!!}{}{-4}{}{0}{co, fl 156}
+{164}{Uhhh... Yessss.... All right... I'll put the axe down now...}{}{5}{}{0}{}
+{165}{Uhhh... Yeahhhh.... Okay... Me put da axe down now...}{}{-4}{}{0}{}
+{170}{[He continues as his eyes go blood red] Then, I wanted the PC to repair the axe, only to do that, I had to install the latest 1074 patch! That meant renaming WorldEd so that it didn't change it to the latest version which only reads from .dat files. Uncompressing and compressing a mod every time I load WorldEd just gets a bit too much.}{[He continues as his eyes go blood red] Then, I wanted the PC to repair the axe, only to do that, I had to install the latest 1074 patch! That meant renaming WorldEd so that it didn't change it to the latest version which only reads from .dat files. Uncompressing and compressing a mod every time I load WorldEd just gets a bit too much.}{}{}{}{}
+{171}{[You've let him get this far.. So why not continue?]}{}{1}{}{180}{}
+{180}{Then, once that was done, I realised that I couldn't check to see if item 2201 was busted if it was in inventory. So, I had two options. ONE: Drop the quest, but after spending so long on it already, I figured why not continue? Which was option TWO: Continue with the quest, but concoct some plan to make the PC drop the axe so that we can check if it's busted.}{Then, once that was done, I realised that I couldn't check to see if item 2201 was busted if it was in inventory. So, I had two options. ONE: Drop the quest, but after spending so long on it already, I figured why not continue? Which was option TWO: Continue with the quest, but concoct some plan to make the PC drop the axe so that we can check if it's busted.}{}{}{}{}
+{181}{I'm dropping the axe now...}{}{5}{}{0}{}
+{182}{Me drop da axe now...}{}{-4}{}{0}{}
+{183}{Oh please, by all means, don't stop there...}{}{5}{}{190}{}
+{184}{Uhh.. Pleese kontinyoo, don't stop dair...}{}{-4}{}{190}{}
+{190}{So, I decided to have the NPC ask the PC to drop the axe. Pretty stupid huh? Of course, now I bet I'll find some way of doing what I originally intended and make the NPC give you the axe. But then I thought... Seeing as I'm in the mood for writing, and it IS 2:00 AM in the morning... Why not write some out-of-character dialogue?}{So, I decided to have the NPC ask the PC to drop the axe. Pretty stupid huh? Of course, now I bet I'll find some way of doing what I originally intended and make the NPC give you the axe. But then I thought... Seeing as I'm in the mood for writing, and it IS 2:00 AM in the morning... Why not write some out-of-character dialogue?}{}{}{}{}
+{191}{Yeah, why not?}{}{1}{}{200}{}
+{192}{This is too stupid. I'll just drop the axe.}{}{5}{}{0}{}
+{193}{Dis is dum. Me jus' drop da axe.}{}{-4}{}{0}{}
+{200}{So... What do you think of my mod so far? Pretty scripted huh? I mean, you can only get the next quest if you've done the first one. That's what you get when you don't plan it out properly in the beginning. OH BOY did I learn THAT lesson quickly!! I hope I don't make the same mistake for 'The Elven Saga'. No sir, that ones gonna be THOROUGHLY planned out...}{So... What do you think of my mod so far? Pretty scripted huh? I mean, you can only get the next quest if you've done the first one. That's what you get when you don't plan it out properly in the beginning. OH BOY did I learn THAT lesson quickly!! I hope I don't make the same mistake for 'The Elven Saga'. No ma'am, that ones gonna be THOROUGHLY planned out...}{}{}{}{}
+{201}{Actually, I don't mind it being so scripted.}{}{5}{}{210}{}
+{202}{Akshully, me not mind it bein' dat skripted.}{}{-4}{}{210}{}
+{203}{Yeah, I think that's dumb, how everything is so scripted.}{}{5}{}{210}{}
+{204}{Yep, me dink it be dum to haf every'ting so skripted.}{}{-4}{}{210}{}
+{205}{True, it could be better. But hey, you live and learn.}{}{5}{}{210}{}
+{206}{Uhuh, it koold be bettuh. Buy hay, you live and lern.}{}{-4}{}{210}{}
+{207}{Well... You've just gone and ruined my gaming experience.}{}{5}{}{210}{}
+{208}{Well... You haf jus' gone and roo-end my gaming expeeriense.}{}{-4}{}{210}{}
+{209}{I've worked for more than 4 months on this! You could at least give me some credit!}{I've worked for more than 4 months on this! You could at least give me some credit!}{}{}{}{}
+{210}{[His eyes roll back into their proper places and he talks normally once more] Huh? What? You say something?}{[His eyes roll back into their proper places and he talks normally once more] Huh? What? You say something?}{}{}{}{}
+{211}{Yes, I said I'll drop the axe on the ground for you.}{}{5}{}{0}{}
+{212}{Yep, me say dat me drop da axe on da grownd for you.}{}{-4}{}{0}{}
+{213}{By the Gods you shall die!}{}{5}{}{0}{co, fl 209}
+{214}{By da Gods you haf to die!}{}{-4}{}{0}{co, fl 209}
+{230}{Hmmm... [He looks you over] Yes, you seem to be capable of wielding an axe. Listen, take my axe and cut down the three big trees that are at the end of this path here. They can be a little tricky to cut down, you'll have to force yourself to attack them.}{Hmmm... [He looks you over] Yes, you seem to be capable of wielding an axe. Listen, take my axe and cut down the three big trees that are at the end of this path here. They can be a little tricky to cut down, you'll have to force yourself to attack them.}{}{}{}{qu 1406 1}
+{231}{Sure, I can do that.}{}{5}{}{250}{}
+{232}{Uhuh, me kan do dat.}{}{-4}{}{250}{}
+{233}{Let me think about it for a moment.}{}{5}{}{0}{}
+{234}{Me haf to dink 'bout it for a moment.}{}{-4}{}{0}{}
+{240}{[He looks you over] No, perhaps if you come back when you have enough skill to wield an axe? Maybe I'll let you do it then. Handling an axe without the proper skill is very dangerous.}{[He looks you over] No, perhaps if you come back when you have enough skill to wield an axe? Maybe I'll let you do it then. Handling an axe without the proper skill is very dangerous.}{}{}{}{lf1 1}
+{241}{E:}{}{1}{}{0}{}
+{250}{Okay then, just grab my axe and get chopping. Like I said, these big trees can be a little tricky to cut down. Just make sure you force yourself to attack them okay?}{Okay then, just grab my axe and get chopping. Like I said, these big trees can be a little tricky to cut down. Just make sure you force yourself to attack them okay?}{}{}{}{qu 1406 2}
+{251}{A:}{}{1}{}{0}{}
+{260}{Yes I can see that! Well done! I must say, you have a very nice chopping action. Thank you for this, I'll now have plenty of wood to keep me nice and warm all through the winter. Oh, by the way, feel free to keep my axe. I won't be needing it. I think I'll buy a new one.}{Yes I can see that! Well done! I must say, you have a very nice chopping action. Thank you for this, I'll now have plenty of wood to keep me nice and warm all through the winter. Oh, by the way, feel free to keep my axe. I won't be needing it. I think I'll buy a new one.}{}{}{}{qu 1406 4}
+{261}{E:}{}{1}{}{0}{}
+{270}{[He seems to swell with pride] Why yes, I am the Sheep farmer that attacked that horrible Mummy. I sure showed it a thing or two!}{[He seems to swell with pride] Why yes, I am the Sheep farmer that attacked that horrible Mummy. I sure showed it a thing or two!}{}{}{}{}
+{271}{I heard you were only able to cut off a piece of wrapping.}{}{5}{}{280}{}
+{272}{Me heer dat you koold only kut off peece of 'rapping.}{}{-4}{}{280}{}
+{273}{You sure did. I'm going to kill it now and save Grayhills.}{}{5}{}{290}{}
+{274}{You shoor did. Me gonna kill it now an' sayve Grayheels.}{}{-4}{}{290}{}
+{280}{Well I don't care what you heard! I was there and I know what happened! That's all that matters to me!}{Well I don't care what you heard! I was there and I know what happened! That's all that matters to me!}{}{}{}{}
+{281}{Err.. What can you tell me about the Mummy?}{}{5}{}{300}{}
+{282}{Uhh.. Wat you 'no 'bout da Mummy?}{}{-4}{}{300}{}
+{290}{You are? You must be nearly as brave as I am to do that! Why, I almost had that Mummy when I saw it that night, it was barely able to escape alive! Good thing I had my axe with me!}{You are? You must be nearly as brave as I am to do that! Why, I almost had that Mummy when I saw it that night, it was barely able to escape alive! Good thing I had my axe with me!}{}{}{}{}
+{291}{That's not what I heard...}{}{5}{}{280}{}
+{292}{Dat not wat me herd...}{}{-4}{}{280}{}
+{293}{What can you tell me about the Mummy?}{}{5}{}{300}{}
+{294}{Wat you 'no 'bout da Mummy?}{}{-4}{}{300}{}
+{300}{Hmmm.... Well... There was a bright moon the night that I saw it, so I was able to catch quite a good look at it. It's got putrid yellow skin covered with the occasional black, rotting fleshy spot and wrapped over all of that are slightly yellowed cloth wrappings. Here, this is the bit that I cut off of it [He rumages through his things and hands you a piece of cloth].}{Hmmm.... Well... There was a bright moon the night that I saw it, so I was able to catch quite a good look at it. It's got putrid yellow skin covered with the occasional black, rotting fleshy spot and wrapped over all of that are slightly yellowed cloth wrappings. Here, this is the bit that I cut off of it [He rumages through his things and hands you a piece of cloth].}{}{}{}{in -75801}
+{301}{Where would I find the Mummy now?}{}{5}{}{330}{}
+{302}{Were woold me find da Mummy now?}{}{-4}{}{330}{}
+{310}{Sure, go right ahead. What would you like to know about the Mummy?}{Sure, go right ahead. What would you like to know about the Mummy?}{}{}{}{}
+{311}{Describe it to me again.}{}{5}{}{320}{}
+{312}{Deskriybe it to me 'gain.}{}{-4}{}{320}{}
+{313}{Where would I find the Mummy now?}{}{5}{}{330}{}
+{314}{Were woold me find da Mummy now?}{}{-4}{}{330}{}
+{315}{The Mummy attacked you around here?}{}{5}{}{340}{}
+{316}{Da Mummee attaked you 'rownd heer?}{}{-4}{}{340}{}
+{317}{E:}{}{1}{}{0}{}
+{320}{It's got putrid yellow skin covered with the occasional black, rotting fleshy spot and wrapped over all of that are slightly yellowed cloth wrappings.}{It's got putrid yellow skin covered with the occasional black, rotting fleshy spot and wrapped over all of that are slightly yellowed cloth wrappings.}{}{}{}{}
+{321}{K:}{}{1}{}{310}{}
+{330}{Well, everyone in Grayhills believes that it's hiding up in the old abandoned silver mine outside of town. They're nothing more than a labyrinth of caves now. The Mayor arranged for some men to guard the entrance so that it if it came out, the men would be able to stop it attacking anyone. Of course, they're far too scared to actually go into the caves themselves and deal with the Mummy...}{Well, everyone in Grayhills believes that it's hiding up in the old abandoned silver mine outside of town. They're nothing more than a labyrinth of caves now. The Mayor arranged for some men to guard the entrance so that it if it came out, the men would be able to stop it attacking anyone. Of course, they're far too scared to actually go into the caves themselves and deal with the Mummy...}{}{}{}{qu 1407 2, qu 1404 4}
+{331}{K:}{}{1}{}{310}{}
+{340}{Yes, that's right. Just over there actually [He points towards his Sheep Farm]. I was hiding behind that wall when I heard a noise. I originally thought it was one of the local boys, little Tim. As soon as I thought he was close enough, I jumped out and found the Mummy instead. That's when I swung my axe and cut off the piece of cloth. The Mummy ran away after that.}{Yes, that's right. Just over there actually [He points towards his Sheep Farm]. I was hiding behind that wall when I heard a noise. I originally thought it was one of the local boys, little Tim. As soon as I thought he was close enough, I jumped out and found the Mummy instead. That's when I swung my axe and cut off the piece of cloth. The Mummy ran away after that.}{}{}{}{}
+{341}{K:}{}{1}{}{310}{}
+{2000}{If this is about the mummy, I want my family safe. That matters more than what the fellows at the inn say about my axe.}{If this is about the mummy, I want my family safe. That matters more than what the fellows at the inn say about my axe.}{}{}{}{}
+{2001}{Describe that night again.}{}{1}{}{340}{}
+{2002}{Amtut will stay in the caves. Will you stop hunting him?}{}{1}{gv 822 1, gv 820 0}{2010}{}
+{2003}{What do you think of how this ended?}{}{1}{gv 820 1}{2050}{}
+{2004}{What do you think of how this ended?}{}{1}{gv 820 2}{2060}{}
+{2005}{What do you think of how this ended?}{}{1}{gv 820 3}{2070}{}
+{2006}{I wanted to discuss your other work.}{}{1}{}{1}{}
+{2010}{You ask me to trust the thing I found outside my sheep pen? I swung first, yes. But I have children in that house.}{You ask me to trust the thing I found outside my sheep pen? I swung first, yes. But I have children in that house.}{}{}{}{}
+{2011}{He ran instead of attacking. Your own account says so.}{}{1}{qu 1404 4}{2020}{}
+{2012}{Let me ask about that night first.}{}{1}{}{340}{}
+{2013}{Goodbye.}{}{1}{}{0}{}
+{2020}{[He looks toward the farm.] Then keep him away from here. No wandering by night. No visitors to the pen. If he keeps that promise, I will keep my axe for firewood. Tell the mayor I said so.}{[He looks toward the farm.] Then keep him away from here. No wandering by night. No visitors to the pen. If he keeps that promise, I will keep my axe for firewood. Tell the mayor I said so.}{}{}{}{gv 823 1}
+{2021}{Goodbye.}{}{1}{}{0}{}
+{2050}{The sheep are quiet. I suppose I ought to be pleased. Still, after what you told me, I am glad that axe only caught his wrappings.}{The sheep are quiet. I suppose I ought to be pleased. Still, after what you told me, I am glad that axe only caught his wrappings.}{}{}{}{}
+{2051}{Goodbye.}{}{1}{}{0}{}
+{2060}{No midnight visitor, no frightened children. I have kept my word. I expect him to keep his.}{No midnight visitor, no frightened children. I have kept my word. I expect him to keep his.}{}{}{}{}
+{2061}{Goodbye.}{}{1}{}{0}{}
+{2070}{They say you killed it. Good. That is what we hired you for, is it not? [He waits for your answer a little longer than you expect.]}{They say you killed it. Good. That is what we hired you for, is it not? [He waits for your answer a little longer than you expect.]}{}{}{}{}
+{2071}{Goodbye.}{}{1}{}{0}{}

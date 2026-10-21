@@ -1,0 +1,124 @@
+{1}{G:}{}{}{}{}{}
+{2}{B:}{}{1}{}{25}{}
+{3}{T:10, 4}{}{1}{}{25}{}
+{4}{What sort of wares do you carry here?}{}{5}{}{30}{}
+{5}{Uh...  What you got 'ere?}{}{-4}{}{30}{}
+{6}{C:}{}{1}{}{25}{}
+{7}{E:}{}{1}{}{0}{}
+{8}{It will be a pleasure to assist you, great mage.  What do you need?}{It will be a pleasure to assist you, great mage.  What do you need?}{}{}{}{re +10}
+{9}{T:10, 4}{}{1}{}{25}{}
+{10}{What sort of wares do you carry here?}{}{5}{}{30}{}
+{11}{Uh...  What you got 'ere?}{}{-4}{}{30}{}
+{12}{B:}{}{1}{}{25}{}
+{13}{E:}{}{1}{}{0}{}
+{14}{Thank you for your patronage, @pcname@.  What can I get for you?}{Thank you for your patronage, @pcname@.  What can I get for you?}{}{}{}{}
+{15}{T:10, 4}{}{1}{}{25}{}
+{16}{B:}{}{1}{}{25}{}
+{17}{C:}{}{1}{}{25}{}
+{18}{E:}{}{1}{}{0}{}
+{19}{You seem a man of technological means.  You do not belong here.}{You seem a lady of technological means.  You do not belong here.}{}{}{}{lf1 1}
+{20}{I:}{}{1}{}{0}{re -5}
+{21}{F:}{}{1}{}{0}{re -2}
+{22}{E:}{}{1}{}{0}{}
+{23}{}{}{}{}{}{}
+{24}{}{}{}{}{}{}
+{25}{Is there anything else I can do for you?}{Is there anything else I can do for you?}{}{}{}{}
+{26}{T:10, 4}{}{1}{}{25}{}
+{27}{C:}{}{1}{}{25}{}
+{28}{B:}{}{1}{}{25}{}
+{29}{E:}{}{1}{}{0}{}
+{30}{I carry a wide selection of magickally enhanced armor and weaponry, in addition to proper mage attire and accoutrements.  I also stock a fine selection of enchanted scrolls for the discerning gentleman.  If you require any assistance, please let me know.}{I carry a wide selection of magickally enhanced armor and weaponry, in addition to proper mage attire and accoutrements.  I also stock a fine selection of enchanted scrolls for the discerning lady.  If you require any assistance, please let me know.}{}{}{}{}
+{31}{T:10, 4}{}{1}{}{25}{}
+{32}{C:}{}{1}{}{25}{}
+{33}{B:}{}{1}{}{25}{}
+{34}{Do you carry any *specialty* items?}{}{5}{pf 40 0}{51}{}
+{35}{Do you have anythin' *special*?}{}{-4}{pf 40 0}{51}{}
+{36}{E:}{}{1}{}{0}{}
+{37}{What do you want @pcname@?}{What do you want @pcname@?}{}{}{}{}
+{38}{T:10, 4}{}{1}{}{25}{}
+{39}{B:}{}{1}{}{25}{}
+{40}{C:}{}{1}{}{25}{}
+{41}{E:}{}{1}{}{0}{}
+{42}{Please!  I do not want the integrity of my magickal wares compromised.  Leave here at once!}{Please!  I do not want the integrity of my magickal wares compromised.  Leave here at once!}{}{}{}{}
+{43}{I:}{}{1}{}{0}{re -5}
+{44}{F:}{}{1}{}{0}{re -1}
+{45}{E:}{}{1}{}{0}{}
+{46}{Remove yourself from my shop, you modern abomination!}{Remove yourself from my shop, you modern abomination!}{}{}{}{}
+{47}{I:}{}{1}{}{0}{re -5}
+{48}{F:}{}{1}{}{0}{re -1}
+{49}{E:}{}{1}{}{0}{}
+{50}{}{}{}{}{}{}
+{51}{[He eyes you suspiciously] All my wares are on display, sir.}{[He eyes you suspiciously] All my wares are on display, madam.}{}{}{}{}
+{52}{All of them? Surely you have something a little special tucked away?}{}{1}{}{56}{}
+{53}{F:}{}{1}{}{0}{re -1}
+{54}{E:}{}{1}{}{0}{}
+{55}{}{}{}{}{}{}
+{56}{Well... [He is about to say something but then seems to change his mind] Listen, I am harangued and harassed by the TTM at every turn just for selling minor magickal artifacts. If I was selling contraband items they'd hang me in a heartbeat! For all I know you are their latest recruit come to fit me for the noose!}{Well... [He is about to say something but then seems to change his mind] Listen, I am harangued and harassed by the TTM at every turn just for selling minor magickal artifacts. If I was selling contraband items they'd hang me in a heartbeat! For all I know you are their latest recruit come to fit me for the noose!}{}{}{}{}
+{57}{You have my word of honour, my good fellow, I am not in league with any such organisation.}{}{5}{}{71}{}
+{58}{What might a TTM be?}{}{5}{}{64}{}
+{59}{I give yuu my word I am not with any group.}{}{-4}{}{71}{}
+{60}{Whut is dis TTM?}{}{-4}{}{64}{}
+{61}{F:}{}{1}{}{0}{re -1}
+{62}{E:}{}{1}{}{0}{}
+{63}{}{}{}{}{}{}
+{64}{The Tarantian Technological Millitia. He draws the half moon of the Lesser Curse in the air when he speaks their name.] Thugs and brigands secretly in the employ of the Industrial Council! They aim to destroy all magick within the confines of Tarant. They rob travellers of magickal items like any common highwayman and claim it is to keep Tarant's industries free from supernatural sabotage.}{The Tarantian Technological Millitia. He draws the half moon of the Lesser Curse in the air when he speaks their name.] Thugs and brigands secretly in the employ of the Industrial Council! They aim to destroy all magick within the confines of Tarant. They rob travellers of magickal items like any common highwayman and claim it is to keep Tarant's industries free from supernatural sabotage.}{}{}{}{}
+{65}{Sounds quite sensible to me. Magick can only slow Tarant's technological development.}{}{5}{}{46}{re -5}
+{66}{How terrible. I can assure you I am not in league with such ne'er do-wells.}{}{5}{}{71}{}
+{67}{That sounds dashed unsporting of them. A sensible balance is best in all things.}{}{5}{}{71}{}
+{68}{Makes sense to me. Magick can only slow down the advancement of machines. Right?}{}{-4}{}{46}{re -5}
+{69}{Dat is no good! I am not wit' dose - people!}{}{-4}{}{71}{}
+{70}{Ahhh! That not good! I think you need a balance in dis world.}{}{-4}{}{71}{}
+{71}{Perhaps. But I have nothing here for the curious dilettante.}{Perhaps. But I have nothing here for the curious dilettante.}{}{}{}{}
+{72}{I will have you know that I am an experienced fortune hunter who may live or die depending on his equipment.}{1}{5}{}{78}{}
+{73}{A dilettante? Hardly! I happen to be an experienced fortune hunter who may live or die depending on her equipment.}{0}{5}{}{78}{}
+{74}{F:}{}{5}{}{25}{re -1}
+{75}{I am no - uh... What you said - I am a fortune hunter who might live or die be-cause of my equip-ment.}{}{-4}{}{78}{}
+{76}{F:}{}{-4}{}{25}{re -1}
+{77}{}{}{}{}{}{}
+{78}{[He runs a sceptical eye over you] Very well. [He retrieves a small chest from below the counter and whispers into the lock. There is a click and the lid springs open to reveal two gold and white globes.] These are the Personal Teleport Stones of the great mage TONGSyaBASS. With them you can set a location almost anywhere on the continent and return whenever you wish.}{[He runs a sceptical eye over you] Very well. [He retrieves a small chest from below the counter and whispers into the lock. There is a click and the lid springs open to reveal two gold and white globes.] These are the Personal Teleport Stones of the great mage TONGSyaBASS. With them you can set a location almost anywhere on the continent and return whenever you wish.}{}{}{}{}
+{79}{Oh my... These are special. You can set a return location anywhere?}{}{5}{}{87}{}
+{80}{Who is this TONGSyaBASS fellow? I am unfamiliar with the name.}{}{5}{}{93}{}
+{81}{Oooo... Dese are special. You can go back to where-ever you want?}{}{-4}{}{87}{}
+{82}{Who is TONGSyaBASS. I don't know dat name.}{}{-4}{}{93}{}
+{83}{These are special, to be sure, but I don't believe they will be of use to me. Thank you for showing them to me just the same.}{}{5}{}{25}{re +2}
+{84}{Dese are special but not what I need. Tanks fur showin' them to me.}{}{-4}{}{25}{re +2}
+{85}{How much?}{}{1}{}{102}{}
+{86}{}{}{}{}{}{}
+{87}{Regrettably, no. There is an inherent flaw with the gems that renders them useless inside caves, cellars, sewers, or even large stone structures. The spell can only carry you through the air - not through soil or thick stone walls. You can, however, set a location in the outside world you'd like to return to and the Use Stone will transport you back there as often as you wish.}{Regrettably, no. There is an inherent flaw with the gems that renders them useless inside caves, cellars, sewers, or even large stone structures. The spell can only carry you through the air - not through soil or thick stone walls. You can, however, set a location in the outside world you'd like to return to and the Use Stone will transport you back there as often as you wish.}{}{}{}{}
+{88}{I see. Yes - There are limits to everything, so why should these be any different? I'll take them! What is the asking price?}{}{5}{}{102}{}
+{89}{I see. These are special, to be sure, but I don't believe they will be of use to me. Thank you for showing them to me just the same.}{}{5}{}{25}{re +2}
+{90}{I see. Yes. I can only use in outside world. I unnerstand. How much?}{}{-4}{}{102}{}
+{91}{I see. Yes. I can only use in outside world. I unnerstand. Dese are special but not what I need. Tanks fur showin' them to me.}{}{-4}{}{25}{re +2}
+{92}{}{}{}{}{}{}
+{93}{He was a great scripter of spells and enchantments who mysteriously disappeared one day and hasn't been heard from since. I am not surprised that you haven't hear of him as he was a private individual. I've heard, and this is just a rumor, that he was working on a way to use magic to enhance the power of technology. But, again, that is just a rumor.}{He was a great scripter of spells and enchantments who mysteriously disappeared one day and hasn't been heard from since. I am not surprised that you haven't hear of him as he was a private individual. I've heard, and this is just a rumor, that he was working on a way to use magic to enhance the power of technology. But, again, that is just a rumor.}{}{}{}{}
+{94}{Magick to enhance technology? Fffttt! Never happen! Back to these wonderful stones; you said you can teleport almost anywhere? }{}{5}{}{87}{}
+{95}{Magick to enhance technology? There's an interesting concept. Had he succeeded he would have been the greatest of all mages. }{}{5}{}{98}{}
+{96}{Magick to enhance machines? Phooey! Never happen! Back to da stones - you say I can make a place I can go back to at any time? Maybe to my bedroom in da castle I will buy when I get rich?}{}{-4}{}{87}{}
+{97}{Magick to enhance machines? Dere's an idea. If he had done it he would be famous. Yes? }{}{-4}{}{98}{}
+{98}{Indeed. It would have done much to restore a balance to this changing world.}{Indeed. It would have done much to restore a balance to this changing world.}{}{}{}{}
+{99}{But, that's neither here nor there. Speaking of which; about these stones; I don't believe I have a use for them at this time.}{}{5}{}{25}{}
+{100}{But, dat's neither here or dere. Speakin' of which; dese stones are special but I don't see a use for dem. Sorry.}{}{-4}{}{25}{}
+{101}{}{}{}{}{}{}
+{102}{These are a bargain at nine thousand gold pieces. For the pair, of course.}{These are a bargain at nine thousand gold pieces. For the pair, of course.}{}{}{}{}
+{103}{Very well. Here is your coin.}{0}{5}{$$9000}{120}{$$-9000}
+{104}{Very well. Here is your coin.}{1}{5}{$$9000}{120}{$$-9000}
+{105}{Is there a discount for not informing the Tarantian Technological Millitia about your private wares?}{}{5}{}{110}{re-23}
+{106}{I'll take them!}{}{-4}{$$9000}{120}{$$-9000}
+{107}{Is dere a discount for not tell the Millitia about your private stuff?}{}{-4}{}{110}{re-23}
+{108}{F:}{}{1}{}{25}{}
+{109}{E:}{}{1}{}{0}{}
+{110}{[He responds through gritted teeth.] Four thousand coin. Take it and leave.}{[He responds through gritted teeth.] Four thousand coin. Take it and leave.}{}{}{}{}
+{111}{A pleasure doing business with you!}{}{1}{$$4000}{-41}{$$-4000,fl124}
+{112}{Perhaps you could try a little harder?}{}{1}{}{0}{fl116,co}
+{113}{F:}{}{1}{}{0}{}
+{114}{}{}{}{}{}{}
+{115}{}{}{}{}{}{}
+{116}{I can make things much harder for you!}{I can make things much harder for you!}{}{}{}{}
+{117}{}{}{}{}{}{}
+{118}{I'm sorry, but you don't have enough money. Come back when you do.}{I'm sorry, but you don't have enough money. Come back when you do.}{}{}{}{}
+{119}{}{}{}{}{}{}
+{120}{A wise investment! You will not regret this.}{A wise investment! You will not regret this.}{}{}{}{in -5702,in -5703,re +10,pf 40 1}
+{121}{I believe you are correct.}{}{5}{}{25}{}
+{122}{I think so. Heh!}{}{-4}{}{25}{}
+{123}{}{}{}{}{}{}
+{124}{[The mage traces a symbol of protection in the air and glares icily at you]}{[The mage traces a symbol of protection in the air and glares icily at you]}{}{}{}{in -5702,in -5703,re 10,pf 40 1}

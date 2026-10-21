@@ -1,0 +1,37 @@
+{10}{So @pcname@ will you donate 10000 gold coins in order to have me in your party ?}{So @pcname@ will you donate 10000 gold coins in order to have me in your party ?}{}{}{}{}
+{11}{I have decided to kill you instead .}{}{1}{gf 2801 0}{0}{re -5000 ,co,al -50}
+{12}{Ok . Here take the money .You give Arbalah 10000 gold coins.}{}{1}{$$10000}{80}{$$-10000, gf 2801 1,jo 1 90}
+{13}{I want you to join me but i dont have the money right now.}{}{1}{$$-9999}{0}{}
+{14}{Let me think about it.}{}{1}{$$10000 }{0}{re -1}
+{15}{I have already given you the money Arbalah.}{}{1}{gf 2801 1}{80}{jo 0 90}
+{80}{You have earned my friendship but you have too many people in your party.Tell one of your other followers to wait and ask me again.}{You have earned my friendship but you have too many people in your party.Tell one of your other followers to wait and ask me again.}{}{}{0}{}
+{81}{Ok.}{}{1}{}{0}{}
+{90}{We are now joined by a blood oath @pcname@.}{We are now joined by a blood oath @pcname@.}{}{}{}{}
+{91}{Ok.But I let me warn you .If you ever leave me I will kill you.}{}{1}{}{100}{re -2}
+{92}{I am happy to have you in my party.}{}{1}{}{100}{re +1}
+{100}{How can I help you @pcname@ ?}{How can I help you @pcname@ ?}{}{}{}{}
+{101}{B:}{}{1}{wa 0}{}{}
+{102}{K:}{}{1}{wa 0}{0}{ce }
+{105}{E:}{}{1}{}{0}{}
+{106}{More ..}{}{1}{}{110}{}
+{110}{What else could I do for you @pcname@ ?}{What else could I do for you @pcname@ ?}{}{}{}{}
+{111}{Move away, Arbalah}{}{5}{}{0}{so}
+{112}{Move a bit closer, Arbalah}{}{5}{}{0}{sc}
+{113}{Wait here for a while...}{}{5}{wa 0}{-20}{wa}
+{114}{You can stop waiting now, Arbalah.}{}{5}{wa 1}{0}{uw 0 280}
+{116}{Get away, Arbalah!}{}{-4}{}{0}{so}
+{117}{Come closer, Arbalah!}{}{-4}{}{0}{sc}
+{118}{You wait here...}{}{-4}{wa 0}{0}{wa}
+{119}{Stop waitin', Arbalah!}{}{-4}{wa 1}{0}{uw 0 280}
+{280}{ Let's get going...}{Let's get going...}{}{}{}{}
+{281}{E:}{}{1}{}{0}{}
+{300}{Yes Master ! What you want to ask Master !}{Yes Master ! What you want to ask Master !}{}{}{}{}
+{301}{Who is the big boss around here ?}{}{6}{}{305}{}
+{302}{Whoi is da BIG BOSS around here ?}{}{-6}{}{305}{}
+{305}{You are the Master my Lord.}{You are the Master my Lord.}{}{}{}{}
+{306}{Good pathetic robotic slave .}{}{1}{}{307}{}
+{307}{You hear your slave whisper "Da boss suck he is a fat lazy bastard"}{You hear your slave whisper "Da boss suck she is a fat ugly  crazy witch"}{}{}{}{}
+{308}{Did I hear anything slave ?}{}{1}{}{309}{}
+{309}{No boss ! No boss !}{No boss ! No boss !}{}{}{309}{}
+{310}{Good !}{}{6}{}{0}{}
+{311}{Goodies .Now shut up slave because smarties @pcname@ gonna smuck you to pieces !!!}{}{-6}{}{0}{}

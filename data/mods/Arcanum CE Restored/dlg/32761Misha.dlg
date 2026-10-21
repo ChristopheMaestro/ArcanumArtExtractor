@@ -1,0 +1,37 @@
+// Misha companion dialogue. Misha never speaks; NPC text is physical narration only.
+// Uses stock follower result codes so CE and Arcanum own party behavior.
+{1}{[Misha turns toward you with a low, questioning huff.]}{[Misha turns toward you with a low, questioning huff.]}{}{}{0}{ }
+{2}{Easy, Misha. I should speak with Mr. Parnell first.}{}{1}{gf2999 0}{15}{ }
+{3}{Come on, Misha. Follow me.}{}{1}{gf2999 1, lf1 0}{20}{jo 2 20, lf1 1}
+{4}{Give Misha a command.}{}{1}{lf1 1}{90}{ }
+{9}{B:Can you hold some stuff for me, Misha?}{}{1}{lf1 1}{0}{ }
+{10}{E:}{}{1}{}{0}{ }
+{11}{Spend some time with Misha.}{}{1}{gf2999 1, lf1 1}{100}{ }
+{15}{[Misha rakes one broad paw across the Stillwater Giant's display case, then looks back at you as if daring the exhibit to object.]}{[Misha rakes one broad paw across the Stillwater Giant's display case, then looks back at you as if daring the exhibit to object.]}{}{}{0}{ }
+{16}{E:}{}{1}{}{0}{ }
+{20}{[Misha sniffs your hands, gives a satisfied grunt, and falls into step beside you.]}{[Misha sniffs your hands, gives a satisfied grunt, and falls into step beside you.]}{}{}{0}{lf1 1}
+{21}{E:}{}{1}{}{0}{ }
+{30}{[Misha sits heavily, watching you with patient dark eyes.]}{[Misha sits heavily, watching you with patient dark eyes.]}{}{}{0}{ }
+{31}{E:}{}{1}{}{0}{ }
+{40}{[Misha rises, shakes herself, and pads back to your side.]}{[Misha rises, shakes herself, and pads back to your side.]}{}{}{0}{lf1 1}
+{41}{E:}{}{1}{}{0}{ }
+{50}{[Misha gives a short snort and settles where she stands.]}{[Misha gives a short snort and settles where she stands.]}{}{}{0}{ }
+{51}{E:}{}{1}{}{0}{ }
+{60}{[Misha leans her full weight into your hand. Her tail thumps once against the floor, entirely by accident.]}{[Misha leans her full weight into your hand. Her tail thumps once against the floor, entirely by accident.]}{}{}{0}{ }
+{61}{E:}{}{1}{}{0}{ }
+{70}{[Misha closes her eyes in bliss. When you stop, one broad paw nudges your hand back into position.]}{[Misha closes her eyes in bliss. When you stop, one broad paw nudges your hand back into position.]}{}{}{0}{ }
+{71}{E:}{}{1}{}{0}{ }
+{80}{[Misha places one enormous paw in your palm, then presses down until your shoulder begins to buckle.]}{[Misha places one enormous paw in your palm, then presses down until your shoulder begins to buckle.]}{}{}{0}{ }
+{81}{E:}{}{1}{}{0}{ }
+{90}{[Misha watches you attentively, ears pricked for a familiar command.]}{[Misha watches you attentively, ears pricked for a familiar command.]}{}{}{0}{ }
+{91}{Move farther away from me.}{}{1}{wa 0}{0}{so }
+{92}{Stay close to me.}{}{1}{wa 0}{0}{sc }
+{93}{Sit here.}{}{1}{wa 0}{30}{wa }
+{94}{Come with me again.}{}{1}{wa 1}{40}{uw 0 40}
+{95}{Leave the group.}{}{1}{}{50}{lv, lf1 0}
+{96}{Never mind.}{}{1}{}{1}{ }
+{100}{[Misha studies your hands, then lowers her great head within reach.]}{[Misha studies your hands, then lowers her great head within reach.]}{}{}{0}{ }
+{101}{Pet Misha.}{}{1}{}{60}{ }
+{102}{Scratch behind Misha's ears.}{}{1}{}{70}{ }
+{103}{Ask Misha for her paw.}{}{1}{}{80}{ }
+{104}{Maybe later.}{}{1}{}{1}{ }

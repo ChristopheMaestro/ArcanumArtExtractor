@@ -1,0 +1,63 @@
+{1}{Something I can help you with?}{Something I can help you with?}{}{}{}{}
+{2}{Hello, may I ask who I have the pleasure of addressing?}{}{5}{}{10}{}
+{3}{Who yoo bee?}{}{-4}{}{10}{}
+{4}{What do you know about the Man in Black?}{}{5}{}{30}{}
+{5}{Wut yoo knoe 'bout Man in Blakk?}{}{-4}{}{30}{}
+{6}{Q:1006}{}{1}{}{0}{}
+{9}{E:}{}{1}{}{0}{}
+
+{10}{Name's Brighton. I own this here farmspread. Yeah, I know it's awful close to town, but I'm one of the only farmers in the area. Most of the other food is flown in by airship in supply deliveries every couple months.}{Name's Brighton. I own this here farmspread. Yeah, I know it's awful close to town, but I'm one of the only farmers in the area. Most of the other food is flown in by airship in supply deliveries every couple months.}{}{}{}{}
+{11}{What do you do here?}{}{5}{}{20}{}
+{12}{What your job be?}{}{-4}{}{20}{}
+{13}{F:}{}{1}{}{1}{}
+
+{20}{I farm the land, and I take care of the herd of cows down yonder path. I supply much of this town's fresh food.}{I farm the land, and I take care of the herd of cows down yonder path. I supply much of this town's fresh food.}{}{}{}{}
+{21}{Neato.}{}{1}{}{1}{}
+
+{30}{Not much that you probably don't. He came into town, stayed for mere hours, and then headed off to Tull.}{Not much that you probably don't. He came into town, stayed for mere hours, and then headed off to Tull.}{}{}{}{}
+{31}{Hmm. Thank you for the information.}{}{5}{}{1}{}
+{32}{Okie, thanks you sir.}{}{-4}{}{1}{}
+
+{40}{As a matter of fact, yes. Something has been attacking my herd at night. It's killed two of my cows now and left their remains strewn all over the place- ugly mess, it was. If you're the monster-hunting sort, I'd appreciate you taking care of the problem for me. I could pay you 100 coin.}{As a matter of fact, yes. Something has been attacking my herd at night. It's killed two of my cows now and left their remains strewn all over the place- ugly mess, it was. If you're the monster-hunting sort, I'd appreciate you taking care of the problem for me. I could pay you 100 coin.}{}{}{}{}
+{41}{Certainly. What do you know about the monster?}{}{5}{gf3117 0}{50}{qu 1266 2}
+{42}{Okie... do you know anything about monstar?}{}{-4}{gf3117 0}{50}{qu 1266 2}
+{43}{No way. Find some other fool to get killed for you.}{}{5}{gf3117 0}{0}{qu 1266 1}
+{44}{Uh uh. Me not want to kill monster. Bye.}{}{-4}{gf3117 0}{0}{qu 1266 1}
+{45}{I've already killed it. It was a couple of young wolves.}{}{5}{gf3117 1}{70}{qu 1266 3}
+{46}{Me kill already! Was big doggies!}{}{-4}{gf3117 1}{70}{qu 1266 3}
+{47}{E:}{}{1}{gf3117 0}{0}{qu 1266 1}
+
+{50}{Well, it hasn't left any tracks that I can find, but it must be pretty large to tear those animals apart the way it does. I usually find the dead cows just outside the cow yard, to the south.}{Well, it hasn't left any tracks that I can find, but it must be pretty large to tear those animals apart the way it does. I usually find the dead cows just outside the cow yard, to the south.}{}{}{}{}
+{51}{Ok, I'll see what I can do.}{}{5}{gf3117 0}{0}{}
+{52}{Ok, me be back when me dun.}{}{-4}{gf3117 0}{0}{}
+{53}{Actually, I've already killed them. It was two medium-sized wolves.}{}{5}{gf3117 1}{70}{qu 1266 3}
+{54}{Me kill them already! Be two big wolves... but me kill them.}{}{-4}{gf3117 1}{70}{qu 1266 3}
+
+{60}{Ok, well let me know when ye do. I've got your hundred coin here.}{Ok, well let me know when ye do. I've got your hundred coin here.}{}{}{}{}
+{61}{E:}{}{1}{}{0}{}
+
+{70}{Well done, sir! Here's your 100 coin, and ye've earned it well. Wolves, you say? I should have guessed. All my thanks go with ye.}{Well done, lady! Here's your 100 coin, and ye've earned it well. Wolves, you say? I should have guessed. All my thanks go with ye.}{}{}{}{}
+{71}{Yes, well, an easy task for one of my power. Good day.}{}{5}{}{-2}{qu 1266 4, re -5}
+{72}{My pleasure, good sir.}{}{5}{}{-2}{qu 1266 4}
+{73}{Yoo welcum. Me leave.}{}{-4}{}{-2}{qu 1266 4}
+
+
+{100}{Quest Responses}{}{}{}{}{}
+{101}{Do you have any jobs for me?}{}{5}{}{40}{}
+{102}{About that job of yours...I'd like to take it. What can you tell me about it?}{}{5}{}{50}{qu 1266 2}
+{103}{I'm still working on catching that monster...}{}{5}{}{60}{}
+{104}{Your beast turned out to be a pair of wolves. They're dead now, though.}{}{5}{}{70}{}
+
+{105}{Yoo gots any jobbs fer me?}{}{-4}{}{40}{}
+{106}{Me want to take dat job you gots.}{}{-4}{}{50}{qu 1266 2}
+{107}{Me still workin on dat job.}{}{-4}{}{60}{}
+{108}{The monster were woofs! Me kill dem. They dead.}{}{-4}{}{70}{}
+
+{110}{Do you have any jobs for me?}{}{1}{}{115}{}
+
+{115}{No sir, I do not deal with bastards like you.}{No madam, I do not deal with bastards like you.}{}{}{}{}
+{116}{I'll kill you for that!}{}{5}{}{0}{co, fl 120, qu 1266 6}
+{117}{Me kill you!!!}{}{-4}{}{0}{co, fl 120, qu 1266 6}
+{118}{E:}{}{1}{}{0}{}
+
+{120}{Die, you ruffian!}{Die, you ruffian!}{}{}{}{}

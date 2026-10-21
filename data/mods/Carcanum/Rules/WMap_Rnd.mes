@@ -1,0 +1,735 @@
+WorldMap Random Encounter Info
+
+
+Saved World Width/Length (Used for when world size changes...)
+{100}{0, 0}
+
+Radii are in tiles.  Here are some usefull values:
+   1600  <-- 25  sectors
+   3160  <-- all the way from The Blimp to Shrouded Hills
+   6400  <-- 100 sectors
+  33550  <-- all the way from Shrouded Hills to Tarant
+
+When referencing a chart, the code uses the smallest circle that
+includes the current location.  This gives the effect of smaller
+circles being on top of larger circles.
+
+Frequency Chart
+{10000}{44288, 110720, 4800, 20%}  //Thanatos
+{10001}{88128, 78848, 9600, 4%}  // Shrouded Hills
+{10002}{75328, 69632, 9600, 6%}  // Shrouded Hill to Tarrant
+{10003}{64704, 63296, 9600, 2%}  // Tarrant
+{10004}{50816, 62784, 9600, 8%}  // Tarrant to Ashbery
+{10005}{36480, 64256, 9600, 6%}  // Ashbery
+{10006}{96768, 46464, 6400, 6%}  // Qintarra
+{10007}{103168, 115520, 4800, 5%}  // Caladon
+{10008}{103168, 112256, 4800, 5%}  // Rosebrough
+{10009}{80896, 43776, 6400, 12%}  // Hardin Pass 
+{10010}{90880, 27712, 9600, 10%}  // Dark Elf Forest
+{10011}{55232, 27264, 9600, 4%}  // Northen Forgoten Region
+{10012}{23488, 36224, 6400, 25%}  // Vendigroth Wastes
+{10013}{12288, 26560, 4800, 20%}  // Vendigroth Wastes Tip
+{10014}{71552, 17344, 4800, 8%}  // Dark Fens
+{10015}{102784, 65536, 9600, 4%}  // Qintarra/Caladon Connector
+{10016}{95680, 96128, 9600, 4%}  // Southern Stonewall Range
+{10017}{93248, 110464, 6400, 10%}  //Rocky Point
+{10018}{40064, 81536, 9600, 10%}  //Kree
+{10019}{104896, 81920, 9600, 10%}  //North of Rosebough
+{10020}{53568, 72448, 6400, 15%}  //Morbahand Plain
+{10021}{75497, 20051, 128, 0%}  //Bedokan Village
+{10022}{61050, 42562, 128, 100%} //Mysterious Apparition
+{10023}{88128, 78848, 1000, 3%}  // Shrouded Hills
+
+
+Power Chart -- Easy/Average/Powerful
+{20000}{44288, 110720, 9600, Powerful}  //Thanatos
+{20001}{88128, 78848, 9600, Easy}  // Shrouded Hills
+{20002}{75328, 69632, 6400, Easy}  // Shrouded Hill to Tarrant
+{20003}{64704, 58496, 9600, Easy}  // Tarrant
+{20004}{50816, 57984, 6400, Easy}  // Tarrant to Ashbery
+{20005}{36480, 59456, 9600, Easy}  // Ashbery
+{20006}{96768, 46464, 6400, Easy}  // Qintarra
+{20007}{103168, 115520, 4800, Easy}  // Caladon
+{20008}{103168, 112256, 4800, Easy}  // Rosebrough
+{20009}{80896, 43776, 4800, Powerful}  // Hardin Pass 
+{20010}{90880, 27712, 9600, Powerful}  // Dark Elf Forest
+{20011}{55232, 27264, 9600, Powerful}  // Northen Forgoten Region
+{20012}{23488, 36224, 6400, Powerful}  // Vendigroth Wastes
+{20013}{12288, 26560, 4800, Powerful}  // Vendigroth Wastes Tip
+{20014}{71552, 17344, 4800, Powerful}  // Dark Fens
+{20015}{102784, 65536, 9600, Powerful}  // Qintarra/Caladon Connector
+{20016}{95680, 96128, 9600, Powerful}  // Southern Stonewall Range
+{20017}{93248, 110464, 4800, Powerful}  //Rocky Point
+{20018}{40064, 81536, 9600, Powerful}  //Kree
+
+Encounter Index Chart starts at 30000
+{30000}{76113, 48162, 4800, 54}
+{30001}{61050, 42562, 128, 55} //Mysterious Apparition
+
+Encounter Tables:
+
+Table Description: Frequency %, Critter Count, Base Proto Num, MinLevel: <value>, MaxLevel: <value>, GlobalFlag: <value>, TriggerCount: <value>
+Note: Frequencies do *NOT* have to add up to 100%, it will roll based on how many it actually gets
+
+(terrain - 1) * (powerMax - 1) * timeOfDayMax +
+(power - 1) * timeOfDayMax +
+timeOfDay
+
+2 * 3 * 9 = 54 terrain based tables
+2 * 3 = 6 tables per terrain
+
+{49999}{2}  // # of Distinct Encounter Tables
+
+Lush Grasslands
+  Table 0 Grasslands Day Easy
+{50000}{20%, First: 28427, 2-3, MinLevel: 1, MaxLevel: 12, GlobalFlag: 2819}  // Lesser Boar
+{50001}{20%, First: 28428, 1-2, MinLevel: 1, MaxLevel: 12, GlobalFlag: 2819}  // Greater Boar
+{50002}{12%, First: 17165, 1, Second: 17157, 1-2} //gnome trader
+{50003}{16%, First: 17171, 1, Second: 17157, 2-4} // human 1 trader
+{50004}{17%, First: 17173, 1, Second: 17157, 2-4} // human 2 trader
+
+
+// Malochian Hand
+{50005}{50%, First: 17315, 1, MaxLevel: 5}// Malochian Hand
+{50006}{50%, First: 17315, 1, Second: 17316, 2-3, MinLevel: 6, MaxLevel: 20, GlobalFlag: 2819}// Malochian Hand easy
+{50007}{25%, First: 17313, 1, Second: 17316, 2-3, MinLevel: 15, MaxLevel: 45, GlobalFlag: 2819}// Malochian Hand humman medium
+{50008}{25%, First: 17314, 1, Second: 17316, 2-3, MinLevel: 15, MaxLevel: 50, GlobalFlag: 2819}// Malochian Hand halfelf medium
+{50009}{25%, First: 17313, 1, Second: 17316, 2-4, MinLevel: 49, MaxLevel: 50, GlobalFlag: 2819}// Malochian Hand human hard
+{50010}{25%, First: 17314, 1, Second: 17316, 2-4, MinLevel: 49, MaxLevel: 50, GlobalFlag: 2819}// Malochian Hand human medium
+
+// Bate's Bounty Hunters
+{50011}{25%, First: 17310, 1, GlobalFlag: 2094} human
+{50012}{25%, First: 17311, 1, GlobalFlag: 2094} half elf
+{50013}{7%, First: 28342, 3, MinLevel: 26, MaxLevel: 37, GlobalFlag: 2819}	//Venom Hound
+{50014}{7%, First: 28342, 4-5, MinLevel: 38, MaxLevel: 49, GlobalFlag: 2819}	//Venom Hound
+{50015}{7%, First: 28355, 4-5, MinLevel: 34, MaxLevel: 50, GlobalFlag: 2819}  // Putrid Rodent
+
+  Table 1 Grasslands Night Easy
+{50100}{20%, First: 28428, 1-2, MinLevel: 1, MaxLevel: 13, GlobalFlag: 2819}  // Greater Boar
+{50101}{10%, First: 28421, 2-4, MinLevel: 1, MaxLevel: 50, GlobalFlag: 2819}  // Lycanthrope
+{50102}{1%, First: 28311, 1, Second: 28312, 1, MinLevel: 25, GlobalFlag: 2819}  //Earth+Fire Elementals
+{50103}{20%, First: 28428, 2-3, MinLevel: 12, MaxLevel: 17, GlobalFlag: 2819}  // Greater Boar
+{50104}{20%, First: 28428, 3-5, MinLevel: 16, MaxLevel: 26, GlobalFlag: 2819}  // Greater Boar
+{50105}{20%, First: 28428, 5-6, MinLevel: 26, MaxLevel: 35, GlobalFlag: 2819}  // Greater Boar
+{50106}{20%, First: 28428, 6-8, MinLevel: 36, MaxLevel: 45, GlobalFlag: 2819}  // Greater Boar
+{50107}{20%, First: 28428, 8-10, MinLevel: 46, MaxLevel: 50, GlobalFlag: 2819}  // Greater Boar
+ 
+   Table 2 Grasslands Day Average
+{50200}{50%, First: 28428, 1-2, MinLevel: 1, MaxLevel: 13, GlobalFlag: 2819}  // Greater Boar
+{50201}{20%, First: 28355, 2, MinLevel: 1, MaxLevel: 50, GlobalFlag: 2819}  // Putrid Rodent
+{50202}{15%, First: 27323, 2-3, MinLevel: 10, MaxLevel: 25, GlobalFlag: 2819}  //Dragaron
+{50203}{15%, First: 27323, 4-6, MinLevel: 25, MaxLevel: 50, GlobalFlag: 2819}  //Dragaron
+{50204}{15%, First: 27323, 7-10, MinLevel: 35, MaxLevel: 44, GlobalFlag: 2819}  //Dragaron
+{50205}{15%, First: 27323, 9-11, MinLevel: 45, MaxLevel: 50, GlobalFlag: 2819}  //Dragaron
+{50206}{9%, First: 17165, 1, Second: 17157, 1-2} //gnome trader
+{50207}{12%, First: 17171, 1, Second: 17157, 2-4} // human 1 trader
+{50208}{12%, First: 17173, 1, Second: 17157, 2-4} // human 2 trader
+{50209}{20%, First: 28428, 2-3, MinLevel: 12, MaxLevel: 17, GlobalFlag: 2819}  // Greater Boar
+{50210}{20%, First: 28428, 3-5, MinLevel: 16, MaxLevel: 26, GlobalFlag: 2819}  // Greater Boar
+{50211}{20%, First: 28428, 5-6, MinLevel: 26, MaxLevel: 35, GlobalFlag: 2819}  // Greater Boar
+{50212}{20%, First: 28428, 6-8, MinLevel: 36, MaxLevel: 45, GlobalFlag: 2819}  // Greater Boar
+{50213}{20%, First: 28428, 8-10, MinLevel: 46, MaxLevel: 50, GlobalFlag: 2819}  // Greater Boar
+
+
+// Bate's Bounty Hunters
+{50214}{25%, First: 17310, 1, GlobalFlag: 2094} human
+{50215}{25%, First: 17311, 1, GlobalFlag: 2094} half elf
+
+  Table 3 Grasslands Night Average
+{50300}{50%, First: 28429, 5-8, MinLevel: 1, MaxLevel: 13, GlobalFlag: 2819}  // Feral Boar
+{50301}{20%, First: 28342, 1, MinLevel: 1, MaxLevel: 12, GlobalFlag: 2819}	//Venom Hound
+{50302}{30%, First: 28355, 3-6, MinLevel: 25, MaxLevel: 50, GlobalFlag: 2819}  // Putrid Rodent
+{50303}{20%, First: 28421, 1, MinLevel: 10, MaxLevel: 50, GlobalFlag: 2819}  // Lycanthrope
+{50304}{4%, First: 28311, 1, Second: 28312, 1, MinLevel: 49, GlobalFlag: 2819}  //Earth+Fire Elementals
+{50305}{20%, First: 28429, 2-3, MinLevel: 12, MaxLevel: 17, GlobalFlag: 2819}  // Feral Boar
+{50306}{20%, First: 28429, 3-5, MinLevel: 16, MaxLevel: 26, GlobalFlag: 2819}  // Feral Boar
+{50307}{20%, First: 28429, 5-6, MinLevel: 26, MaxLevel: 35, GlobalFlag: 2819}  // Feral Boar
+{50308}{20%, First: 28429, 6-8, MinLevel: 36, MaxLevel: 45, GlobalFlag: 2819}  // Feral Boar
+{50309}{20%, First: 28429, 8-9, MinLevel: 46, MaxLevel: 50, GlobalFlag: 2819}  // Feral Boar
+{50310}{20%, First: 28342, 4-6, MinLevel: 26, MaxLevel: 37, GlobalFlag: 2819}	//Venom Hound
+{50311}{20%, First: 28342, 6-9, MinLevel: 38, MaxLevel: 49, GlobalFlag: 2819}	//Venom Hound
+
+  Table 4 Grasslands Day Powerful
+{50400}{2%, First: 28360, 1}  // Vorpal Bunny
+{50401}{30%, First: 28355, 1-2, MinLevel: 1, MaxLevel: 15, GlobalFlag: 2819}  // Putrid Rodent
+{50402}{30%, First: 28342, 1-3, Second: 28340, 2, MinLevel: 21, MaxLevel: 35, GlobalFlag: 2819}	//Venom Hound + Timber Wolves
+{50403}{30%, First: 27321, 1-3, Second: 27322, 1, MinLevel: 21, MaxLevel: 50, GlobalFlag: 2819}  //Wyverns
+{50404}{9%, First: 28311, 1, Second: 28312, 1, MinLevel: 49, GlobalFlag: 2819}  //Earth+Fire Elementals
+{50405}{5%, First: 17165, 1, Second: 17157, 1-2} //gnome trader
+{50406}{7%, First: 17171, 1, Second: 17157, 2-4} // human 1 trader
+{50407}{7%, First: 17173, 1, Second: 17157, 2-4} // human 2 trader
+{50408}{20%, First: 28342, 4-6, MinLevel: 26, MaxLevel: 37, GlobalFlag: 2819}	//Venom Hound
+{50409}{20%, First: 28342, 6-9, MinLevel: 38, MaxLevel: 49, GlobalFlag: 2819}	//Venom Hound
+{50410}{30%, First: 28355, 5-7, MinLevel: 34, MaxLevel: 50, GlobalFlag: 2819}  // Putrid Rodent
+
+   Table 5 Grasslands Night Powerful
+{50500}{20%, First: 28355, 1-2, MinLevel: 1, MaxLevel: 15, GlobalFlag: 2819}  // Putrid Rodent
+{50501}{20%, First: 28342, 1, Second: 28340, 3, MinLevel: 21, MaxLevel: 31, GlobalFlag: 2819}	//Venom Hound + Timber Wolves
+{50502}{20%, First: 27322, 1-3, MinLevel: 1, MaxLevel: 50, GlobalFlag: 2819}  // Greater Wyvern
+{50503}{30%, First: 28422, 1, Second: 28340, 1-4, MinLevel: 21, MaxLevel: 50, GlobalFlag: 2819}  // Howler + Wolves
+{50504}{10%, First: 28313, 1, Second: 28312, 1, MinLevel: 49, GlobalFlag: 2819}  //Water+Fire Elementals
+{50505}{20%, First: 28343, 3-4, MinLevel: 26, MaxLevel: 37, GlobalFlag: 2819}	//Patriarch wolf
+{50506}{20%, First: 28343, 5-6, MinLevel: 38, MaxLevel: 44, GlobalFlag: 2819}	//Patriarch wolf
+{50507}{10%, First: 28343, 7, MinLevel: 45, MaxLevel: 50, GlobalFlag: 2819}	//Patriarch wolf
+{50508}{20%, First: 28355, 5-7, MinLevel: 34, MaxLevel: 48, GlobalFlag: 2819}  // Putrid Rodent
+
+Plains
+  Table 6 Plains Day Easy
+{50600}{20%, First: 28429, 4-5, MinLevel: 1, MaxLevel: 15, GlobalFlag: 2819}  // Feral Boar +
+{50601}{20%, First: 28345, 3-7, MinLevel: 12, MaxLevel: 30, GlobalFlag: 2819} // Lesser Spider
+{50602}{20%, First: 28346, 4-7, MinLevel: 28, MaxLevel: 35, GlobalFlag: 2819} // Prodigious Vermin
+{50603}{20%, First: 28332, 5-8, MinLevel: 33, MaxLevel: 50, GlobalFlag: 2819}  // Cougar
+{50604}{3%, First: 28311, 1, Second: 28312, 1, MinLevel: 49, GlobalFlag: 2819}  //Earth+Fire Elementals
+{50605}{6%, First: 17165, 1, Second: 17157, 1-2} //gnome trader
+{50606}{9%, First: 17171, 1, Second: 17157, 2-4} // human 1 trader
+{50607}{9%, First: 17173, 1, Second: 17157, 2-4} // human 2 trader
+
+
+//Bandits
+{50608}{3%, First: 17307, 1, Second: 17308, 1, MaxLevel: 14, GlobalFlag: 2627}// Orc Bandits Easy
+{50609}{3%, First: 17307, 1, Second: 17308, 4-5, MinLevel: 18, MaxLevel: 24, GlobalFlag: 2627}// Orc Bandits Hard1
+{50610}{3%, First: 17307, 1, Second: 17308, 7-11, Thrid: 17285, 1, MinLevel: 40, MaxLevel: 50, GlobalFlag: 2627}// Orc Bandits Hard2
+{50611}{3%, First: 17307, 1, Second: 17308, 6-7, Thrid: 17286, 1, MinLevel: 25, MaxLevel: 39, GlobalFlag: 2627}// Orc Bandits Hard3
+
+// Malochian Hand
+{50612}{30%, First: 17315, 1, MaxLevel: 5}// Malochian Hand
+{50613}{30%, First: 17315, 1, Second: 17316, 2-3, MinLevel: 6, MaxLevel: 20, GlobalFlag: 2626}// Malochian Hand easy
+{50614}{25%, First: 17313, 1, Second: 17316, 3-4, MinLevel: 15, MaxLevel: 50, GlobalFlag: 2626}// Malochian Hand humman medium
+{50615}{25%, First: 17314, 1, Second: 17316, 2-4, MinLevel: 15, MaxLevel: 50, GlobalFlag: 2626}// Malochian Hand halfelf medium
+{50616}{25%, First: 17313, 1, Second: 17316, 3-5, MinLevel: 49, MaxLevel: 50, GlobalFlag: 2626}// Malochian Hand human hard
+{50617}{25%, First: 17314, 1, Second: 17316, 4-6, MinLevel: 49, MaxLevel: 50, GlobalFlag: 2626}// Malochian Hand human medium
+
+// Bate's Bounty Hunters
+{50618}{20%, First: 17310, 1, GlobalFlag: 2094}// human
+{50619}{15%, First: 17311, 1, GlobalFlag: 2094}// half elf
+{50620}{30%, First: 17312, 1, GlobalFlag: 2094}// dwarf
+
+//Mysterious Apparition
+{50621}{2000%, First: 27366, 1, GlobalFlag: 2701}
+//Friendly trader
+{50622}{5%, First: 27392, 1}
+{50623}{5%, First: 17165, 1, Second: 17157, 2-4}
+{50624}{3%, First: 17167, 1, Second: 17157, 2-4}
+{50625}{3%, First: 17169, 1, Second: 17157, 2-4}
+{50626}{4%, First: 17171, 1, Second: 17157, 2-4}
+{50627}{3%, First: 17173, 1, Second: 17157, 2-4}
+{50628}{3%, First: 17175, 1, Second: 17157, 1}
+{50629}{4%, First: 17159, 1, Second: 17157, 2-4}
+{50630}{3%, First: 17161, 1, Second: 17157, 2-4}
+{50631}{3%, First: 17163, 1, Second: 17157, 2-4}
+{50632}{6%, First: 17155, 3-6, GlobalFlag: 2820}
+{50633}{2%, First: 17165, 1, Second: 17157, 1-2} //gnome trader
+
+  Table 7 Plains Night Easy
+{50700}{30%, First: 28429, 5-6, MinLevel: 1, MaxLevel: 15, GlobalFlag: 2819}  // Feral Boar +
+{50701}{30%, First: 28345, 3-5, MinLevel: 1, MaxLevel: 15, GlobalFlag: 2819} // Lesser Spider
+{50702}{20%, First: 28346, 2-3, MinLevel: 21, MaxLevel: 30, GlobalFlag: 2819} // Greater Spider
+{50703}{20%, First: 28346, 3-4, MinLevel: 31, MaxLevel: 40, GlobalFlag: 2819} // Greater Spider
+{50704}{20%, First: 28346, 5-6, MinLevel: 41, MaxLevel: 50, GlobalFlag: 2819} // Greater Spider
+{50705}{20%, First: 28346, 6-7, MinLevel: 46, MaxLevel: 50, GlobalFlag: 2819} // Greater Spider
+{50706}{5%, First: 28327, 1-2, MinLevel: 19, MaxLevel: 28, GlobalFlag: 2819} // Were Rat
+{50707}{5%, First: 28327, 2-3, MinLevel: 29, MaxLevel: 38, GlobalFlag: 2819} // Were Rat
+{50708}{5%, First: 28327, 3-4, MinLevel: 39, MaxLevel: 44, GlobalFlag: 2819} // Were Rat
+{50709}{5%, First: 28327, 4-6, MinLevel: 45, MaxLevel: 50, GlobalFlag: 2819} // Were Rat
+{50710}{15%, First: 28327, 2-3,Second: 28356, 2-3, MinLevel: 35, MaxLevel: 50} // Were Rat , Orc Rat
+
+  Table 8 Plains Day Average
+{50800}{20%, First: 28456, 1, MinLevel: 1, MaxLevel: 14, GlobalFlag: 2819}  // Mountain Lion
+{50801}{20%, First: 28346, 5-6, MinLevel: 34, MaxLevel: 50, GlobalFlag: 2819} // Prodigious Vermin
+{50802}{20%, First: 28356, 2-3, MinLevel: 19, MaxLevel: 32, GlobalFlag: 2819} // Rock-Rat
+{50803}{1%, First: 28311, 2-3, Second: 28312, 3-4, MinLevel: 49, GlobalFlag: 2819}  //Earth+Fire Elementals
+{50804}{6%, First: 17165, 1, Second: 17157, 1-2} //gnome trader
+{50805}{6%, First: 17171, 1, Second: 17157, 2-4} // human 1 trader
+{50806}{6%, First: 17173, 1, Second: 17157, 2-4} // human 2 trader
+{50807}{6%, First: 17169, 1, Second: 17157, 2-4} // Dwarf Trader
+{50808}{4%, First: 17163, 1, Second: 17157, 2-4} // Halfling Trader
+
+//Bandits
+{50809}{0%, First: 17307, 1, Second: 17308, 1-2, MaxLevel: 2, GlobalFlag: 2627}// Orc Bandits Easy
+{50810}{0%, First: 17307, 1, Second: 17308, 2-3, MinLevel: 1, MaxLevel: 2, GlobalFlag: 2627}// Orc Bandits Hard1
+{50811}{0%, First: 17307, 1, Second: 17308, 2, Thrid: 17285, 1, MinLevel: 1, MaxLevel: 2, GlobalFlag: 2627}// Orc Bandits Hard2
+{50812}{0%, First: 17307, 1, Second: 17308, 1-3, Thrid: 17286, 1, MinLevel: 1, MaxLevel: 2, GlobalFlag: 2627}// Orc Bandits Hard3
+
+// Malochian Hand
+{50813}{10%, First: 17315, 1, MaxLevel: 5}// Malochian Hand
+{50814}{10%, First: 17315, 1, Second: 17316, 2-3, MinLevel: 6, MaxLevel: 20, GlobalFlag: 2626}// Malochian Hand easy
+{50815}{5%, First: 17313, 1, Second: 17316, 3-4, MinLevel: 15, MaxLevel: 50, GlobalFlag: 2626}// Malochian Hand humman medium
+{50816}{5%, First: 17314, 1, Second: 17316, 4-5, MinLevel: 15, MaxLevel: 50, GlobalFlag: 2626}// Malochian Hand halfelf medium
+{50817}{5%, First: 17313, 1, Second: 17316, 3-6, MinLevel: 49, MaxLevel: 50, GlobalFlag: 2626}// Malochian Hand human hard
+{50818}{5%, First: 17314, 1, Second: 17316, 3-8, MinLevel: 49, MaxLevel: 50, GlobalFlag: 2626}// Malochian Hand human medium
+
+// Bate's Bounty Hunters
+{50819}{5%, First: 17310, 1, GlobalFlag: 2094, GlobalFlag: 2819} human
+{50820}{5%, First: 17311, 1, GlobalFlag: 2094, GlobalFlag: 2819} half elf
+{50821}{5%, First: 17312, 1, GlobalFlag: 2094, GlobalFlag: 2819} dwarf
+
+//Mysterious Apparition
+{50822}{2000%, First: 27366, 1, GlobalFlag: 2701}
+
+  Table 9 Plains Night Average
+{50900}{50%, First: 28429, 3, MinLevel: 1, MaxLevel: 10, GlobalFlag: 2819}  // Feral Boar +
+{50901}{20%, First: 28327, 2, MinLevel: 1, MaxLevel: 10, GlobalFlag: 2819} // Were Rat
+{50902}{10%, First: 28352, 1-2, Second: 28456, 1, MinLevel: 1, MaxLevel: 10, GlobalFlag: 2819} // Widower
+{50903}{24%, First: 28429, 3-4, Second: 28456, 3-5, MinLevel: 22, MaxLevel: 50, GlobalFlag: 2819}  // Feral Boar + Lions
+{50904}{7%, First: 28327, 2, MinLevel: 19, MaxLevel: 31, GlobalFlag: 2819} // Were Rat
+{50905}{7%, First: 28327, 4, MinLevel: 30, MaxLevel: 50, GlobalFlag: 2819} // Were Rat
+{50906}{10%, First: 28352, 4-6, MinLevel: 30, MaxLevel: 50, GlobalFlag: 2819} // Widower
+{50907}{0%, First: 28311, 2-3, Second: 28312, 3-4, MinLevel: 49, GlobalFlag: 2819}  //Earth+Fire Elementals
+
+
+  Table 10 Plains Day Powerful
+{51000}{50%, First: 28429, 3, MinLevel: 1, MaxLevel: 5, GlobalFlag: 2819}  // Feral Boar +
+{51001}{20%, First: 28356, 1-5, Second: 28357, 1-3, GlobalFlag: 2819} // Rock-Rat + Granite-Rat
+{51002}{50%, First: 28456, 2-3, MinLevel: 1, MaxLevel: 50, GlobalFlag: 2819}  // Mountain Lions
+{51003}{3%, First: 28311, 2-3, Second: 28312, 3-4, MinLevel: 49, GlobalFlag: 2819}  //Earth+Fire Elementals
+{51004}{30%, First: 28429, 3-4, Second: 28456, 3-5, MinLevel: 10, MaxLevel: 50, GlobalFlag: 2819}  // Feral Boar + Lions
+{51005}{20%, First: 28327, 2-3, Second: 28429, 4-5, MinLevel: 25, MaxLevel: 50, GlobalFlag: 2819} // Were Rat + Feral Board
+{51006}{6%, First: 17165, 1, Second: 17157, 1-2} //gnome trader
+{51007}{6%, First: 17171, 1, Second: 17157, 2-4} // human 1 trader
+{51008}{6%, First: 17173, 1, Second: 17157, 2-4} // human 2 trader
+{51009}{6%, First: 17169, 1, Second: 17157, 2-4} // Dwarf Trader
+{51010}{4%, First: 17163, 1, Second: 17157, 2-4} // Halfling Trader
+
+//Mysterious Apparition
+{51011}{2000%, First: 27366, 1, GlobalFlag: 2701}
+
+  Table 11 Plains Night Powerful
+{51100}{50%, First: 28429, 3-5, MinLevel: 1, MaxLevel: 15, GlobalFlag: 2819}  // Feral Boar +s
+{51101}{20%, First: 28327, 1-2, MinLevel: 1, MaxLevel: 15, GlobalFlag: 2819} // Were Rat
+{51102}{20%, First: 28352, 1-2, MinLevel: 1, MaxLevel: 15, GlobalFlag: 2819} // Widower
+{51103}{1%, First: 28313, 2-3, Second: 28312, 3-4, MinLevel: 49, GlobalFlag: 2819}  //Water+Fire Elementals
+{51104}{30%, First: 28429, 3-4, Second: 28456, 3-5, MinLevel: 20, MaxLevel: 50, GlobalFlag: 2819}  // Feral Boar + Lions
+{51105}{20%, First: 28327, 3, MinLevel: 35, MaxLevel: 45, GlobalFlag: 2819} // Were Rat
+{51106}{1%, First: 28327, 1-3, Second: 28374, 3, MinLevel: 45, MaxLevel: 50, GlobalFlag: 2819} // Were Rat
+{51107}{20%, First: 28352, 2-4, MinLevel: 15, MaxLevel: 25, GlobalFlag: 2819} // Widower
+{51108}{20%, First: 28352, 4-6, MinLevel: 27, MaxLevel: 36, GlobalFlag: 2819} // Widower
+{51109}{20%, First: 28352, 6-9, MinLevel: 37, MaxLevel: 50, GlobalFlag: 2819} // Widower
+
+Swamps
+  Table 12 Swamps Easy Day
+{51200}{50%, First: 28373, 2-3, MinLevel: 12, MaxLevel: 50, GlobalFlag: 2819}  // Slither Guard
+{51201}{8%, First: 17159, 1, Second: 17157, 2-4} // Traders
+{51202}{8%, First: 17175, 1, Second: 17157, 1}  // Traders
+{51203}{8%, First: 17161, 1, Second: 17157, 2}  // Traders
+
+
+  Table 13 Swamps Easy Night
+{51300}{5%, First: 28379, 2-6, MinLevel: 1, MaxLevel: 50, GlobalFlag: 2819}  // Slime Deamon
+{51301}{5%, First: 28367, 2-8, MinLevel: 1, MaxLevel: 50, GlobalFlag: 2819}  // Muck Walker
+
+  Table 14 Swamps Average Day
+{51400}{50%, First: 28373, 1-4, MinLevel: 15, MaxLevel: 50, GlobalFlag: 2819}  // Slither Guard
+{51401}{20%, First: 28373, 2, Second: 28374, 1, MinLevel: 7, MaxLevel: 17, GlobalFlag: 2819}  // Slither Guard + Snake Menace
+{51402}{20%, First: 28373, 3, Second: 28374, 1, MinLevel: 17, MaxLevel: 25, GlobalFlag: 2819}  // Slither Guard + Snake Menace
+{51403}{20%, First: 28373, 5-7, Second: 28374, 1, MinLevel: 27, MaxLevel: 35, GlobalFlag: 2819}  // Slither Guard + Snake Menace
+{51404}{20%, First: 28373, 7-9, Second: 28374, 2, MinLevel: 37, MaxLevel: 45, GlobalFlag: 2819}  // Slither Guard + Snake Menace
+{51405}{20%, First: 28373, 9-11, Second: 28374, 2, MinLevel: 47, MaxLevel: 50, GlobalFlag: 2819}  // Slither Guard + Snake Menace
+{51406}{10%, First: 28394, 1, MinLevel: 15, MaxLevel: 50, GlobalFlag: 2819}  // Swamp Ape
+{51407}{0%, First: 28385, 3-6, MinLevel: 49, GlobalFlag: 2819}  // Ore Golem Ha ha ha   28385
+{51408}{8%, First: 17159, 1, Second: 17157, 2-4} // Traders
+{51409}{8%, First: 17175, 1, Second: 17157, 1}   // Traders
+{51410}{8%, First: 17161, 1, Second: 17157, 2}   // Traders
+{51411}{7%, First: 17169, 1, Second: 17157, 1-2} // Dwarf Trader
+
+  Table 15 Swamps Average Night
+{51500}{50%, First: 28379, 1, MinLevel: 1, MaxLevel: 50, GlobalFlag: 2819}  // Slime Deamon
+{51501}{50%, First: 28367, 1-2, MinLevel: 19, MaxLevel: 50, GlobalFlag: 2819}  // Muck Walker
+{51502}{0%, First: 28385, 3-8, MinLevel: 49, GlobalFlag: 2819}  // Ore Golem Ha ha ha   28385
+
+  Table 16 Swamps Powerful Day
+{51600}{50%, First: 28373, 2-4, MinLevel: 1, MaxLevel: 50, GlobalFlag: 2819}  // Slither Guard
+{51601}{20%, First: 28373, 2, Second: 28375, 1, MinLevel: 15, MaxLevel: 50, GlobalFlag: 2819}  // Slither Guard + Elemental Snake
+{51602}{30%, First: 28394, 1-2, MinLevel: 15, MaxLevel: 34, GlobalFlag: 2819}  // Swamp Ape   28385
+{51603}{30%, First: 28394, 4-7, MinLevel: 35, MaxLevel: 50, GlobalFlag: 2819}  // Swamp Ape   28385
+{51604}{30%, First: 28346, 4-6, Second: 27324, 2-3, Third: 28394, 1-4,  MinLevel: 15, MaxLevel: 50, GlobalFlag: 2819}  // Greater Spider+Slime Demon
+{51605}{8%, First: 17159, 1, Second: 17157, 2-4} // Traders
+{51606}{8%, First: 17175, 1, Second: 17157, 1}   // Traders
+{51607}{8%, First: 17161, 1, Second: 17157, 2}   // Traders
+
+  Table 17 Swamps Powerful Night
+{51700}{50%, First: 28379, 1, MinLevel: 1, MaxLevel: 50, GlobalFlag: 2819}  // Slime Deamon
+{51701}{50%, First: 28367, 4-6, MinLevel: 22, MaxLevel: 50, GlobalFlag: 2819}  // Muck Walker  28385
+{51702}{0%, First: 28385, 3-5, Second: 28313, 1, MinLevel: 49, GlobalFlag: 2819}  //Ore Golems Water Elemental
+{51703}{50%, First: 28346, 4-6, Second: 27324, 2-3, Third: 28379, 1-4,  MinLevel: 30, MaxLevel: 50, GlobalFlag: 2819}  // Greater Spider+Swamp Ape
+Elven Forest
+
+  Table 18 Elven Forest Easy Day
+{51800}{50%, First: 27337, 3-5, MinLevel: 1, MaxLevel: 12, GlobalFlag: 2819}  // Kites
+{51801}{10%, First: 27328, 1-2, MinLevel: 11, MaxLevel: 22, GlobalFlag: 2819}  // Lesser Gowrath
+{51802}{10%, First: 27328, 2-4, MinLevel: 23, MaxLevel: 30, GlobalFlag: 2819}  // Lesser Gowrath
+{51803}{10%, First: 27328, 3-5, MinLevel: 30, MaxLevel: 35, GlobalFlag: 2819}  // Lesser Gowrath
+{51804}{10%, First: 27328, 5-7, MinLevel: 36, MaxLevel: 44, GlobalFlag: 2819}  // Lesser Gowrath
+{51805}{10%, First: 27328, 6-9, MinLevel: 45, MaxLevel: 50, GlobalFlag: 2819}  // Lesser Gowrath
+{51806}{15%, First: 28452, 1, MinLevel: 1, MaxLevel: 50, GlobalFlag: 2819}  // Willowisp
+{51807}{10%, First: 28452, 2, Second: 28453, 1, MinLevel: 1, MaxLevel: 50, GlobalFlag: 2819}  // Willowisp and volar's
+{51808}{1%, First: 27324, 2, Second: 28313, 1, MinLevel: 40, GlobalFlag: 2819}  // Phage Dragarons Water Elemental
+{51809}{6%, First: 27324, 5, Second: 27329, 2-4, MinLevel: 32, MaxLevel: 50, GlobalFlag: 2819}  // Phage Dragarons Lesser Gowrath
+{51810}{15%, First: 17167, 1} // Traders
+{51811}{6%, First: 17163, 1, Second: 17157, 2-4} // Halfling Trader
+
+  Table 19 Elven Forest Easy Night
+{51900}{50%, First: 27337, 3-5, Second: 27338, 1-2, MinLevel: 1, MaxLevel: 14, GlobalFlag: 2819}  // Kites
+{51901}{10%, First: 28454, 1-6, MinLevel: 12, MaxLevel: 50, GlobalFlag: 2819}  // Death Lantern
+{51902}{10%, First: 28452, 1, MinLevel: 1, MaxLevel: 50, GlobalFlag: 2819}  // Willowisp
+{51903}{20%, First: 27324, 5-8, Second: 28312, 1, MinLevel: 49, GlobalFlag: 2819}  // Phage Dragarons Fire Elemental
+{51904}{20%, First: 27324, 4-6, Second: 27329, 2-4, MinLevel: 12, MaxLevel: 50, GlobalFlag: 2819}  // Phage Dragarons Lesser Gowrath
+{51905}{2%, First: 17167, 1} // Traders
+
+  Table 20 Elven Forest Average Day
+{52000}{20%, First: 27328, 1-2, Second: 27329, 1, MinLevel: 1, MaxLevel: 15, GlobalFlag: 2819}  // Lesser Gowrath
+{52001}{10%, First: 28452, 1-2, Second: 28453, 1, MinLevel: 1, MaxLevel: 50, GlobalFlag: 2819}  // Willowisp
+{52002}{20%, First: 27324, 4-6, MinLevel: 1, MaxLevel: 50, GlobalFlag: 2819}  // Phage Dragaron
+{52003}{4%, First: 27324, 5-8, Second: 28313, 1, MinLevel: 49, GlobalFlag: 2819}  // Phage Dragarons Water Elemental
+{52004}{16%, First: 17167, 1}  // Trader
+{52005}{8%, First: 17163, 1, Second: 17157, 2-4} // Halfling Trader
+{52006}{20%, First: 27328, 3-4, Second: 27329, 1, MinLevel: 19, MaxLevel: 29, GlobalFlag: 2819}  // Lesser Gowrath
+{52007}{20%, First: 27328, 5-8, Second: 27329, 2, MinLevel: 32, MaxLevel: 50, GlobalFlag: 2819}  // Lesser Gowrath
+
+  Table 21 Elven Forest Average Night
+{52100}{50%, First: 27337, 1-3, Second: 27338, 1-3, MinLevel: 1, MaxLevel: 12, GlobalFlag: 2819}  // Kites
+{52101}{10%, First: 28454, 1, MinLevel: 1, MaxLevel: 50, GlobalFlag: 2819}  // Death Lantern
+{52102}{10%, First: 28452, 2, Second: 28453, 1, MinLevel: 1, MaxLevel: 50, GlobalFlag: 2819}  // Willowisp
+{52103}{1%, First: 27324, 3, Second: 28312, 1, MinLevel: 34, GlobalFlag: 2819}  // Phage Dragarons Fire Elemental
+{52104}{20%, First: 27324, 4-6, Second: 27329, 2-4, MinLevel: 33, MaxLevel: 50, GlobalFlag: 2819}  // Phage Dragarons Lesser Gowrath
+{52105}{5%, First: 17167, 1} // Trader
+
+  Table 22 Elven Forest Powerful Day
+{52200}{1%, First: 27365, 1}  // Lethe Wyvern
+{52201}{20%, First: 27328, 2-4, Second: 27329, 1-2, MinLevel: 1, MaxLevel: 17, GlobalFlag: 2819}  // Lesser Gowrath
+{52202}{10%, First: 28452, 2-4, Second: 28453, 1, MinLevel: 1, MaxLevel: 50, GlobalFlag: 2819}  // Willowisp and volar's
+{52203}{50%, First: 27324, 1-4, Second: 27334, 1-2, MinLevel: 33, MaxLevel: 50, GlobalFlag: 2819}  // Phage Dragaron + Hell Beast
+{52204}{2%, First: 27324, 5-8, Second: 28313, 1, MinLevel: 49, GlobalFlag: 2819}  // Phage Dragarons Water Elemental
+{52205}{5%, First: 28346, 4, Second: 27324, 2-6, Third: 27339, 1-4,  MinLevel: 30, MaxLevel: 50, GlobalFlag: 2819}  // Greater Spider+Phage 
+{52206}{15%, First: 17167, 1}// Trader
+{52207}{7%, First: 17163, 1, Second: 17157, 2-4} // Halfling Trader
+
+  Table 23 Elven Forest Powerful Night
+{52300}{20%, First: 27337, 1-4, Second: 27338, 1-4, Third: 27339, 1, MinLevel: 1, MaxLevel: 19, GlobalFlag: 2819}  // Kites
+{52301}{20%, First: 28454, 3-5, MinLevel: 25, MaxLevel: 50, GlobalFlag: 2819}  // Death Lantern
+{52302}{40%, First: 28452, 1-4, Second: 28453, 1, MinLevel: 1, MaxLevel: 50, GlobalFlag: 2819}  // Willowisp
+{52303}{20%, First: 27324, 5-8, Second: 28312, 1, MinLevel: 49, GlobalFlag: 2819}  // Phage Dragarons Fire Elemental
+{52304}{50%, First: 28346, 4-6, Second: 28345, 2-6, Third: 27339, 1-4,  MinLevel: 15, MaxLevel: 34, GlobalFlag: 2819}  // Greater 
+{52305}{2%, First: 27324, 5-9, Second: 27329, 1-4, MinLevel: 12, MaxLevel: 50, GlobalFlag: 2819}  // Phage Dragarons Lesser Gowrath
+{52306}{2%, First: 17167, 1} // Trader
+{52307}{2%, First: 17163, 1, Second: 17157, 2-4} // Halfling Trader
+{52308}{20%, First: 27337, 1-4, Second: 27338, 1-4, Third: 27339, 4-5, MinLevel: 26, MaxLevel: 45, GlobalFlag: 2819}  // Kites
+
+Jungle
+    Table 24 Jungle Easy Day
+{52400}{2%, First: 28388, 1, MinLevel: 1, MaxLevel: 15, GlobalFlag: 2819}  // Monkey
+{52401}{5%, First: 28393, 5-7, MinLevel: 34, MaxLevel: 50, GlobalFlag: 2819}  // Greater Gorilla
+{52402}{2%, First: 27341, 4-6, MinLevel: 16, MaxLevel: 34, GlobalFlag: 2819}  // Lesser Krag
+{52403}{2%, First: 27331, 5-8, Second: 28312, 1, MinLevel: 49, GlobalFlag: 2819}  // Wargun Fire Elemental
+{52404}{4%, First: 17175, 1}
+{52405}{4%, First: 17161, 1}
+{52406}{0%, First: 17165, 1, Second: 17157, 1-2} //gnome trader
+{52407}{4%, First: 17171, 1, Second: 17157, 2-4} // human 1 trader
+{52408}{4%, First: 17173, 1, Second: 17157, 2-4} // human 2 trader
+  
+  Table 25 Jungle Easy Night
+{52500}{8%, First: 28334, 1, MinLevel: 1, MaxLevel: 11, GlobalFlag: 2819}  // Tiger
+{52501}{2%, First: 27331, 5-8, Second: 28312, 1, MinLevel: 49, GlobalFlag: 2819}  // Wargun Fire Elemental
+{52502}{8%, First: 28334, 8-11, MinLevel: 40, MaxLevel: 50, GlobalFlag: 2819}  // Tiger
+{52503}{8%, First: 28334, 7-9, MinLevel: 30, MaxLevel: 40, GlobalFlag: 2819}  // Tiger
+{52504}{8%, First: 28334, 3-5, MinLevel: 22, MaxLevel: 30, GlobalFlag: 2819}  // Tiger
+{52505}{8%, First: 28334, 2-3, MinLevel: 16, MaxLevel: 23, GlobalFlag: 2819}  // Tiger
+
+
+  Table 26 Jungle Average Day
+{52600}{9%, First: 28389, 1, Second: 28388, 1, MinLevel: 9, MaxLevel: 17, GlobalFlag: 2819}  // Leprous Monkey + Monkey
+{52601}{9%, First: 28390, 4-8, MinLevel: 33, MaxLevel: 50, GlobalFlag: 2819}  // Monkey Swarmers
+{52602}{9%, First: 28393, 1, MinLevel: 14, MaxLevel: 23, GlobalFlag: 2819}  // Greater Gorilla
+{52603}{5%, First: 28395, 1-2, MinLevel: 22, MaxLevel: 33, GlobalFlag: 2819}  // Skullcrusher
+{52604}{9%, First: 27341, 5-7: Second: 27342, 5-5, MinLevel: 33, MaxLevel: 44, GlobalFlag: 2819}  // Lesser Krag+Warrior
+{52605}{2%, First: 27331, 5-8, Second: 28312, 1, MinLevel: 49, GlobalFlag: 2819}  // Wargun Fire Elemental
+{52606}{7%, First: 17175, 1}
+{52607}{7%, First: 17161, 1}
+{52608}{1%, First: 17165, 1, Second: 17157, 1-2} //gnome trader
+{52609}{7%, First: 17171, 1, Second: 17157, 2-4} // human 1 trader
+{52610}{7%, First: 17173, 1, Second: 17157, 2-4} // human 2 trader
+{52611}{9%, First: 28393, 3-4, MinLevel: 30, MaxLevel: 45, GlobalFlag: 2819}  // Greater Gorilla
+{52612}{9%, First: 28390, 1, MinLevel: 3, MaxLevel: 15, GlobalFlag: 2819}  // Monkey Swarmers
+
+  Table 27 Jungle Average Night
+{52700}{20%, First: 28334, 1-2, MinLevel: 1, MaxLevel: 24, GlobalFlag: 2819}  // Great Tiger
+{52701}{20%, First: 27333, 1-2, MinLevel: 1, MaxLevel: 24, GlobalFlag: 2819}  // Fever Beast
+{52702}{20%, First: 28389, 1-3, MinLevel: 1, MaxLevel: 24, GlobalFlag: 2819}  // Leprous Monkey 
+{52703}{1%, First: 27331, 2-5, Second: 28312, 1, MinLevel: 49, GlobalFlag: 2819}  // Wargun Fire Elemental
+{52704}{20%, First: 28334, 4-6, MinLevel: 25, MaxLevel: 40, GlobalFlag: 2819}  // Great Tiger
+{52705}{20%, First: 27333, 4-6, MinLevel: 25, MaxLevel: 40, GlobalFlag: 2819}  // Fever Beast
+{52706}{20%, First: 28389, 4-6, MinLevel: 25, MaxLevel: 40, GlobalFlag: 2819}  // Leprous Monkey 
+{52707}{1%, First: 27331, 2-5, Second: 28312, 1, MinLevel: 49, GlobalFlag: 2819}  // Wargun Fire Elemental
+{52708}{20%, First: 28334, 7-9, MinLevel: 41, MaxLevel: 50, GlobalFlag: 2819}  // Great Tiger
+{52709}{20%, First: 27333, 7-9, MinLevel: 41, MaxLevel: 50, GlobalFlag: 2819}  // Fever Beast
+{52710}{20%, First: 28389, 7-9, MinLevel: 41, MaxLevel: 50, GlobalFlag: 2819}  // Leprous Monkey 
+
+  Table 28 Jungle Powerful Day
+{52800}{9%, First: 28393, 5-7, Second: 28395, 1, MinLevel: 40, MaxLevel: 50, GlobalFlag: 2819}  // Greater Gorilla + Skullcrusher
+{52801}{9%, First: 28390, 4-8, Second: 28392, 1, MinLevel: 30, MaxLevel: 40, GlobalFlag: 2819}  // Monkey Swarmers+Apish Shaman
+{52802}{9%, First: 27331, 3-4, Second: 28393, 3-4, MinLevel: 25, MaxLevel: 34, GlobalFlag: 2819}  // Wargun+Gorilla
+{52803}{9%, First: 28390, 2-4, MinLevel: 18, MaxLevel: 34, GlobalFlag: 2819}  // Monkey Swarmers
+{52804}{9%, First: 27341, 2-3, Second: 27342, 2-3, Third: 27343, 1, MinLevel: 11, MaxLevel: 26, GlobalFlag: 2819}  // Lesser 
+{52805}{9%, First: 27341, 1-3, Second: 27342, 1-3, Third: 27343, 2, Fourth: 27344, 1, MinLevel: 11, MaxLevel: 32, GlobalFlag: 2819}  // 
+{52806}{1%, First: 27331, 5-8, Second: 28312, 1, MinLevel: 49, GlobalFlag: 2819}  // Wargun Fire Elemental
+{52807}{9%, First: 28346, 4-6, Second: 28345, 2-6, MinLevel: 33, MaxLevel: 50, GlobalFlag: 2819}  // Greater Spider
+{52808}{6%, First: 17175, 1}
+{52809}{6%, First: 17161, 1}
+{52810}{2%, First: 17165, 1, Second: 17157, 1-2} //gnome trader
+{52811}{6%, First: 17171, 1, Second: 17157, 2-4} // human 1 trader
+{52812}{6%, First: 17173, 1, Second: 17157, 2-4} // human 2 trader
+{52813}{9%, First: 27331, 1, Second: 28393, 1, MinLevel: 9, MaxLevel: 19, GlobalFlag: 2819}  // Wargun+Gorilla
+
+
+ Table 29 Jungle Powerful Night
+{52900}{14%, First: 27333, 1-2, Second: 28389,2-4, MinLevel: 7, MaxLevel: 16, GlobalFlag: 2819}  // Fever Beast+Leprous Monkey 
+{52901}{12%, First: 27331, 1, Second: 28393, 2, Third: 28389, 2-3, MinLevel: 17, MaxLevel: 29, GlobalFlag: 2819}  // Wargun+Gorilla+LepMonk
+{52902}{1%, First: 28393, 5-8, Second: 28312, 1, MinLevel: 44, GlobalFlag: 2819}  // Gorillas + Fire Elemental
+{52903}{10%, First: 28346, 4-5, Second: 28345, 2-5, MinLevel: 35, MaxLevel: 44, GlobalFlag: 2819}  // Greater Spider
+{52904}{10%, First: 28334, 7-10, MinLevel: 41, MaxLevel: 50, GlobalFlag: 2819}  // Great Tiger
+{52905}{10%, First: 27333, 7-10, MinLevel: 41, MaxLevel: 50, GlobalFlag: 2819}  // Fever Beast
+{52906}{10%, First: 28389, 7-10, MinLevel: 41, MaxLevel: 50, GlobalFlag: 2819}  // Leprous Monkey 
+
+Desert
+    Table 30 Desert Day Easy
+{53000}{5%, First: 28320, 1, MinLevel: 1, MaxLevel: 12, GlobalFlag: 2819}  // Spider
+{53001}{5%, First: 28345, 4-5, MinLevel: 13, MaxLevel: 29, GlobalFlag: 2819}  // Lesser Spider
+{53002}{15%, First: 28417, 5-8, MinLevel: 30, MaxLevel: 39, GlobalFlag: 2819}  // Arachnix
+{53003}{2%, First: 28420, 1, Second: 28417, 2, Third: 28312, 1, MinLevel: 40, GlobalFlag: 2819}  // PlagMadeArach+fire elem
+{53004}{8%, First: 17175, 1} // Trader ?
+{53005}{8%, First: 17161, 1}  // Trader ?
+{53006}{0%, First: 17165, 1, Second: 17157, 1-2} //gnome trader
+{53007}{6%, First: 17171, 1, Second: 17157, 2-4} // human 1 trader
+{53008}{6%, First: 17173, 1, Second: 17157, 2-4} // human 2 trader
+
+
+  Table 31 Desert Night Easy
+{53100}{3%, First: 28346, 1, MinLevel: 1, MaxLevel: 50, GlobalFlag: 2819}  // Greater Spider
+{53101}{3%, First: 28345, 2-3, MinLevel: 1, MaxLevel: 15, GlobalFlag: 2819}  // Lesser Spider
+{53102}{3%, First: 28420, 1, Second: 28417, 4-7, Third: 28313, 1-3, MinLevel: 49, GlobalFlag: 2819}  // PlagMadeArach+Water elem
+
+  Table 32 Desert Day Average
+{53200}{3%, First: 28346, 1-2, MinLevel: 1, MaxLevel: 50, GlobalFlag: 2819}  // Greater Spider
+{53201}{3%, First: 28320, 1, Second: 28345, 2-4, MinLevel: 1, MaxLevel: 15, GlobalFlag: 2819}  // Spider+Lesser
+{53202}{3%, First: 28417, 1-2, MinLevel: 1, MaxLevel: 50, GlobalFlag: 2819}  // Arachnix
+{53203}{3%, First: 28419, 1-2, MinLevel: 1, MaxLevel: 50, GlobalFlag: 2819}  // InsectressHuntress
+{53204}{3%, First: 28420, 1, Second: 28417, 4-7, Third: 28313, 1-3, MinLevel: 49, GlobalFlag: 2819}  // PlagMadeArach+Water elem
+{53205}{8%, First: 17175, 1}  // trader
+{53206}{8%, First: 17161, 1}  // trader
+{53207}{3%, First: 17165, 1, Second: 17157, 1-2} //gnome trader
+{53208}{6%, First: 17171, 1, Second: 17157, 2-4} // human 1 trader
+{53209}{6%, First: 17173, 1, Second: 17157, 2-4} // human 2 trader
+
+
+
+  Table 33 Desert Night Average
+{53300}{3%, First: 28350, 1, MinLevel: 1, MaxLevel: 15, GlobalFlag: 2819}  // Dread Spider
+{53301}{3%, First: 28346, 1-3, Second: 28345, 2-4, MinLevel: 1, MaxLevel: 15, GlobalFlag: 2819}  // Greater Spider
+{53302}{5%, First: 28420, 1, Second: 28417, 6-7, Third: 28312, 2, MinLevel: 49, GlobalFlag: 2819}  // PlagMadeArach+fire elem
+{53303}{8%, First: 28346, 1, Second: 28345, 1, MinLevel: 7, MaxLevel: 15, GlobalFlag: 2819}  // Greater Spider
+{53304}{8%, First: 28346, 2, Second: 28345, 2, MinLevel: 15, MaxLevel: 24, GlobalFlag: 2819}  // Greater Spider
+{53305}{8%, First: 28346, 2-3, Second: 28345, 2-4, MinLevel: 25, MaxLevel: 35, GlobalFlag: 2819}  // Greater Spider
+{53306}{8%, First: 28346, 3-5, Second: 28345, 5-6, MinLevel: 36, MaxLevel: 45, GlobalFlag: 2819}  // Greater Spider
+{53307}{8%, First: 28346, 6, Second: 28345, 6-7, MinLevel: 46, MaxLevel: 50, GlobalFlag: 2819}  // Greater Spider
+
+  Table 34 Desert Day Powerful
+{53400}{2%, First: 28346, 4-6, Second: 28345, 2-6, MinLevel: 1, MaxLevel: 15, GlobalFlag: 2819}  // Greater Spider
+{53401}{2%, First: 28350, 1, Second: 28320, 4-6, MinLevel: 1, MaxLevel: 50, GlobalFlag: 2819}  // Dread Spider
+{53402}{2%, First: 28350, 1-2, MinLevel: 1, MaxLevel: 50, GlobalFlag: 2819}  // Dread Spider+husks
+{53403}{2%, First: 28419, 4-6, Second: 28345, 5-8, MinLevel: 28, MaxLevel: 50, GlobalFlag: 2819}  // Insectress Hunter
+{53404}{2%, First: 28420, 1, Second: 28417, 6-7, MinLevel: 1, MaxLevel: 50, GlobalFlag: 2819}  // PlagMadeArach
+{53405}{2%, First: 28420, 1, Second: 28417, 6-7, Third: 28313, 1-3, MinLevel: 49, GlobalFlag: 2819}  // PlagMadeArach+Water elem
+{53406}{8%, First: 17175, 1}  // trader
+{53407}{8%, First: 17161, 1}  // trader
+{53408}{2%, First: 17165, 1, Second: 17157, 1-2} //gnome trader
+{53409}{6%, First: 17171, 1, Second: 17157, 2-4} // human 1 trader
+{53410}{6%, First: 17173, 1, Second: 17157, 2-4} // human 2 trader
+
+
+  Table 35 Desert Night Powerful
+{53500}{1%, First: 28350, 1-4, Second: 28320, 1-3, MinLevel: 1, MaxLevel: 50, GlobalFlag: 2819}  // Dread Spider+Husks
+{53501}{1%, First: 28346, 5-6, Second: 28345, 2-6, MinLevel: 22, MaxLevel: 40, GlobalFlag: 2819}  // Greater Spider
+{53502}{1%, First: 28350, 3-5, MinLevel: 1, MaxLevel: 50, GlobalFlag: 2819}  // Dread Spider
+{53503}{1%, First: 28420, 1, Second: 28417, 6-7, Third: 28312, 1, MinLevel: 49, GlobalFlag: 2819}  // PlagMadeArach+fire elem
+{53504}{8%, First: 28346, 1, Second: 28345, 1, MinLevel: 7, MaxLevel: 15, GlobalFlag: 2819}  // Greater Spider
+{53505}{8%, First: 28346, 2, Second: 28345, 2, MinLevel: 15, MaxLevel: 24, GlobalFlag: 2819}  // Greater Spider
+{53506}{8%, First: 28346, 2-3, Second: 28345, 2-4, MinLevel: 25, MaxLevel: 35, GlobalFlag: 2819}  // Greater Spider
+{53507}{8%, First: 28346, 3-5, Second: 28345, 5-6, MinLevel: 36, MaxLevel: 45, GlobalFlag: 2819}  // Greater Spider
+{53508}{8%, First: 28346, 6, Second: 28345, 6-7, MinLevel: 46, MaxLevel: 50, GlobalFlag: 2819}  // Greater Spider
+
+
+Forest
+    Table 36 Forest Easy Day
+{53600}{5%, First: 28399, 2-6, Second: 27342, 1-3, MinLevel: 17, MaxLevel: 26, GlobalFlag: 2819}  // Black Bear + Krag
+{53601}{5%, First: 28397, 4-6, Second: 27342, 1-3, MinLevel: 25, MaxLevel: 50, GlobalFlag: 2819}  // Golden Bear
+{53602}{5%, First: 28429, 3-4, MinLevel: 1, MaxLevel: 8, GlobalFlag: 2819}  // Ailing Wolves
+{53603}{5%, First: 27344, 7-8, Second: 28319, 1-3,MinLevel: 22, MaxLevel: 50, GlobalFlag: 2819}  // Krag Beserker+Wolves
+{53604}{5%, First: 17167, 1}
+{53605}{7%, First: 17165, 1, Second: 17157, 1-2} //gnome trader
+{53606}{7%, First: 17171, 1, Second: 17157, 2-4} // human 1 trader
+{53607}{7%, First: 17173, 1, Second: 17157, 2-4} // human 2 trader
+
+// Malochian Hand
+{53608}{30%, First: 17315, 1, MaxLevel: 5}// Malochian Hand
+{53609}{30%, First: 17315, 1, Second: 17316, 1-3, MinLevel: 6, MaxLevel: 20, GlobalFlag: 2626}// Malochian Hand easy
+{53610}{15%, First: 17313, 1, Second: 17316, 5-9, MinLevel: 15, MaxLevel: 50, GlobalFlag: 2626}// Malochian Hand humman medium
+{53611}{0%, First: 17314, 1, Second: 17316, 8-9, MinLevel: 15, MaxLevel: 30, GlobalFlag: 2626}// Malochian Hand halfelf medium
+{53612}{0%, First: 17313, 1, Second: 17316, 4-8, MinLevel: 49, MaxLevel: 50, GlobalFlag: 2626}// Malochian Hand human hard
+{53613}{30%, First: 17314, 1, Second: 17316, 7-9, MinLevel: 49, GlobalFlag: 2626}// Malochian Hand human medium
+
+// Bate's Bounty Hunters
+{53614}{5%, First: 17310, 1, GlobalFlag: 2094, GlobalFlag: 2819} human
+{53615}{10%, First: 17311, 1, GlobalFlag: 2094, GlobalFlag: 2819} half elf
+
+  Table 37 Forest Easy Night
+{53700}{5%, First: 27336, 1-2, MaxLevel: 15, GlobalFlag: 2819}  // Lesser Kite
+{53701}{5%, First: 27340, 1, MaxLevel: 15, GlobalFlag: 2819}  // Kite Berserker
+{53702}{5%, First: 28330, 2, Second: 28319, 1-2, MaxLevel: 15, GlobalFlag: 2819}  // Ailing Wolves+Wolves
+{53703}{5%, First: 28319, 6-7, MinLevel: 15, MaxLevel: 30, GlobalFlag: 2819}  // Wolves
+
+
+  Table 38 Forest Average Day
+{53800}{9%, First: 28330, 1, MinLevel: 1, MaxLevel: 15, GlobalFlag: 2819}  // Grizzly Bear
+{53801}{9%, First: 28399, 1-3, Second: 28403, 1-3, MinLevel: 1, MaxLevel: 50, GlobalFlag: 2819}  // Black Bear+Cubs
+{53802}{9%, First: 28319, 2-4, MinLevel: 1, MaxLevel: 50, GlobalFlag: 2819}  // Wolves
+{53803}{9%, First: 28319, 1-4, Second: 28340, 1-6, MinLevel: 25, MaxLevel: 50, GlobalFlag: 2819}  // Wolves + Timber Wolves
+{53804}{6%, First: 17167, 1} // trader ?
+{53805}{6%, First: 17165, 1, Second: 17157, 1-2} //gnome trader
+{53806}{6%, First: 17171, 1, Second: 17157, 2-4} // human 1 trader
+{53807}{6%, First: 17173, 1, Second: 17157, 2-4} // human 2 trader
+{53808}{2%, First: 17169, 1, Second: 17157, 2-4} // Dwarf Trader
+{53809}{7%, First: 17163, 1, Second: 17157, 2-4} // Halfling Trader
+
+  Table 39 Forest Average Night
+{53900}{9%, First: 27336, 1-3, Second: 27338, 1-2, MinLevel: 1, MaxLevel: 15, GlobalFlag: 2819}  // Lesser Kite+Warrior
+{53901}{9%, First: 27340, 12-13, MinLevel: 33, MaxLevel: 50, GlobalFlag: 2819}  // Kite Berserker
+{53902}{9%, First: 28319, 4, Second: 28340, 3-4, MinLevel: 26, MaxLevel: 35, GlobalFlag: 2819}  // Wolves + Timber Wolves
+{53903}{9%, First: 28340, 2, MinLevel: 15, MaxLevel: 25, GlobalFlag: 2819}  // Timber Wolves
+
+  Table 40 Forest Powerful Day
+{54000}{9%, First: 28397, 1-2,Second: 28399, 2, MinLevel: 7, MaxLevel: 22, GlobalFlag: 2819}  // Golden Bear+Black Bears
+{54001}{9%, First: 28330, 2, Second: 28401, 2-3, MinLevel: 16, MaxLevel: 26, GlobalFlag: 2819}  // Grizzly Bear+Cubs
+{54002}{9%, First: 28399, 2-3, Second: 28404, 2-5, MinLevel: 34, MaxLevel: 45, GlobalFlag: 2819}  // Black Bears+Ancient Bear
+{54003}{9%, First: 28340, 4-7, MinLevel: 34, MaxLevel: 50, GlobalFlag: 2819}  // Timber Wolves
+{54004}{9%, First: 28319, 3-4, Second: 28343, 1, MinLevel: 15, MaxLevel: 24, GlobalFlag: 2819}  // Wolves+Patriarch
+{54005}{9%, First: 28343, 2-4, Second: 28340, 1, MinLevel: 22, MaxLevel: 32, GlobalFlag: 2819}  // Patriarch+Timber Wolves
+{54006}{9%, First: 27344, 7-8, Second: 28343, 1,MinLevel: 32, MaxLevel: 50, GlobalFlag: 2819}  // Krag Beserker+Pat Wolves
+{54007}{6%, First: 17167, 1}  // trader ?
+{54008}{6%, First: 17165, 1, Second: 17157, 1-2} //gnome trader
+{54009}{6%, First: 17171, 1, Second: 17157, 2-4} // human 1 trader
+{54010}{6%, First: 17173, 1, Second: 17157, 2-4} // human 2 trader
+{54011}{1%, First: 17169, 1, Second: 17157, 2-4} // Dwarf Trader
+{54012}{7%, First: 17163, 1, Second: 17157, 2-4} // Halfling Trader
+
+  Table 41 Forest Powerful Night
+{54100}{9%, First: 27337, 3-4, Second: 27338, 1-3, MinLevel: 1, MaxLevel: 14, GlobalFlag: 2819}  // Kite Warrior+Bowmen
+{54101}{9%, First: 27337, 1-3, Second: 27338, 2-3, Third: 27339, 2, MinLevel: 1, MaxLevel: 14, GlobalFlag: 2819}  // Kite 
+{54102}{9%, First: 27340, 3-6, MinLevel: 15, MaxLevel: 22, GlobalFlag: 2819}  // Kite Berserker
+{54103}{9%, First: 28340, 2, MinLevel: 15, MaxLevel: 24, GlobalFlag: 2819}  // Timber Wolves
+{54104}{9%, First: 28340, 3-4, MinLevel: 25, MaxLevel: 34, GlobalFlag: 2819}  // Timber Wolves
+{54105}{9%, First: 28340, 4-6, MinLevel: 35, MaxLevel: 40, GlobalFlag: 2819}  // Timber Wolves
+{54106}{9%, First: 28340, 5-7, MinLevel: 41, MaxLevel: 45, GlobalFlag: 2819}  // Timber Wolves
+{54107}{9%, First: 28340, 6-8, MinLevel: 46, MaxLevel: 50, GlobalFlag: 2819}  // Timber Wolves
+{54108}{9%, First: 27343, 7-8, Second: 28343, 1,MinLevel: 32, MaxLevel: 50, GlobalFlag: 2819}  // Krag Shaman+Pat Wolves
+
+Snowy Plains
+  Table 42 Snowy Plains Easy Day
+{54200}{9%, First: 28429, 2-3, MinLevel: 1, MaxLevel: 5, GlobalFlag: 2819}  // Feral Boar +
+{54201}{5%, First: 28429, 2, Second: 28319, 1-4, MinLevel: 1, MaxLevel: 5, GlobalFlag: 2819}  // Ailing Wolves+Wolves
+{54202}{9%, First: 28399, 1-6, MinLevel: 1, MaxLevel: 50, GlobalFlag: 2819}  // Black Bear
+{54203}{9%, First: 28396, 2-8, Second: 28344, 1, MinLevel: 49, GlobalFlag: 2819}  // Yeti+BruteFang
+{54204}{9%, First: 28429, 6-8, MinLevel: 15, MaxLevel: 25, GlobalFlag: 2819}  // Feral Boar +
+{54205}{9%, First: 27344, 6-7, Second: 28396, 1,MinLevel: 22, MaxLevel: 50, GlobalFlag: 2819}  // Krag Beserker+Yeti
+{54206}{9%, First: 17159, 1, Second: 17157, 2-4}
+{54207}{2%, First: 17165, 1, Second: 17157, 1-2} //gnome trader
+{54208}{5%, First: 17171, 1, Second: 17157, 2-4} // human 1 trader
+{54209}{5%, First: 17173, 1, Second: 17157, 2-4} // human 2 trader
+{54210}{6%, First: 17169, 1, Second: 17157, 2-4} // Dwarf Trader
+{54211}{2%, First: 17163, 1, Second: 17157, 2-4} // Halfling Trader
+
+  Table 43 Snowy Plains Easy Night
+{54300}{9%, First: 28319, 2-4, Second: 28430, 3-5, MinLevel: 1, MaxLevel: 50, GlobalFlag: 2819}  // Boar fire + magick immune
+{54301}{9%, First: 28429, 1-2, MinLevel: 1, MaxLevel: 5, GlobalFlag: 2819}  // Feral Boar +
+{54302}{9%, First: 28396, 4-5, Second: 28344, 1-3, MinLevel: 49, GlobalFlag: 2819}  // Yeti+BruteFang
+{54303}{9%, First: 28341, 3, Second: 28398, 6-7, MinLevel: 16, MaxLevel: 50, GlobalFlag: 2819}  // ShiverBit +Polar Bear
+
+
+  Table 44 Snowy Plains Average Day
+{54400}{9%, First: 28429, 3-4, Second: 28398, 1, MinLevel: 1, MaxLevel: 15, GlobalFlag: 2819}  // Feral Boar +Polar Bear
+{54401}{9%, First: 28319, 3-6, MinLevel: 1, MaxLevel: 50, GlobalFlag: 2819}  // Wolves
+{54402}{5%, First: 28319, 1-4, Second: 28340, 1-4, MinLevel: 1, MaxLevel: 50, GlobalFlag: 2819}  // Wolves + Timber Wolves
+{54403}{9%, First: 28398, 1-6, MinLevel: 10, MaxLevel: 50, GlobalFlag: 2819}  // Polar Bear
+{54404}{9%, First: 28396, 4-8, Second: 28344, 1, MinLevel: 49, GlobalFlag: 2819}  // Yeti+BruteFang
+{54405}{9%, First: 28341, 3, Second: 28398, 6-7, MinLevel: 16, MaxLevel: 50, GlobalFlag: 2819}  // ShiverBit +Polar Bear
+{54406}{9%, First: 17159, 1, Second: 17157, 2-4}
+{54407}{1%, First: 17165, 1, Second: 17157, 1-2} //gnome trader
+{54408}{3%, First: 17171, 1, Second: 17157, 2-4} // human 1 trader
+{54409}{3%, First: 17173, 1, Second: 17157, 2-4} // human 2 trader
+{54410}{11%, First: 17169, 1, Second: 17157, 2-4} // Dwarf Trader
+{54411}{1%, First: 17163, 1, Second: 17157, 2-4} // Halfling Trader
+
+  Table 45 Snowy Plains Average Night
+{54500}{9%, First: 28319, 2-4, Second: 28430, 3-5, MinLevel: 1, MaxLevel: 50, GlobalFlag: 2819}  // Boar fire + magick immune
+{54501}{9%, First: 28319, 1-4, Second: 28340, 1-2, MinLevel: 1, MaxLevel: 50, GlobalFlag: 2819}  // Wolves + Timber Wolves
+{54502}{9%, First: 28396, 3-6, Second: 28396, 3-6, MinLevel: 33, GlobalFlag: 2819}  // Patriarch Wolves+Yeti
+{54503}{9%, First: 28341, 3, Second: 28398, 6-7, MinLevel: 44, MaxLevel: 50, GlobalFlag: 2819}  // ShiverBit +Polar Bear
+
+
+  Table 46 Snowy Plains Powerful Day
+{54600}{9%, First: 28343, 5-7, MinLevel: 1, MaxLevel: 50, GlobalFlag: 2819}  // Patriarch Wolf
+{54601}{9%, First: 28398, 4-6, MinLevel: 1, MaxLevel: 50, GlobalFlag: 2819}  // Polar Bear
+{54602}{20%, First: 28340, 4-7, MinLevel: 1, MaxLevel: 50, GlobalFlag: 2819}  // Timber Wolves
+{54603}{9%, First: 28319, 2-4, Second: 28341, 2-3, MinLevel: 22, MaxLevel: 50, GlobalFlag: 2819}  // Wolves+ShiverBit
+{54604}{9%, First: 28343, 2-4, Second: 28344, 2-3, MinLevel: 22, MaxLevel: 50, GlobalFlag: 2819}  // Patriarch Wolves+BruteFang
+{54605}{0%, First: 28396, 4-9, Second: 28344, 2-4, MinLevel: 49, GlobalFlag: 2819}  // Yeti+BruteFang
+{54606}{9%, First: 28341, 3, Second: 28398, 6-7, Third: 28396, 1, MinLevel: 16, MaxLevel: 50, GlobalFlag: 2819}  // ShiverBit +Polar Bear+Yeti
+{54607}{20%, First: 17159, 1, Second: 17157, 2-4}
+{54608}{0%, First: 17165, 1, Second: 17157, 1-2} //gnome trader
+{54609}{5%, First: 17171, 1, Second: 17157, 2-4} // human 1 trader
+{54610}{5%, First: 17173, 1, Second: 17157, 2-4} // human 2 trader
+{54611}{11%, First: 17169, 1, Second: 17157, 2-4} // Dwarf Trader
+{54612}{1%, First: 17163, 1, Second: 17157, 2-4} // Halfling Trader
+
+
+  Table 47 Snowy Plains Powerful Night
+{54700}{9%, First: 28343, 1, Second: 28396, 2-4, MinLevel: 15, MaxLevel: 24, GlobalFlag: 2819}  // Patriarch Wolf+ Yeti
+{54701}{9%, First: 28340, 2, MinLevel: 15, MaxLevel: 25, GlobalFlag: 2819}  // Timber Wolves
+{54702}{9%, First: 28343, 2, Second: 28344, 1, MinLevel: 9, MaxLevel: 24, GlobalFlag: 2819}  // Patriarch Wolves+BruteFang
+{54703}{9%, First: 28396, 2, Second: 28396, 3-4, MinLevel: 25, GlobalFlag: 2819}  // Patriarch Wolves+Yeti
+{54704}{9%, First: 28341, 1, Second: 28398, 1-3, Third: 28396, 3, MinLevel: 16, MaxLevel: 33, GlobalFlag: 2819}  // 
+{54705}{9%, First: 27344, 2, Second: 28396, 4, MinLevel: 22, MaxLevel: 33, GlobalFlag: 2819}  // Krag Beserker+Yeti
+{54706}{9%, First: 28343, 2-3, Second: 28396, 2-4, MinLevel: 35, MaxLevel: 50, GlobalFlag: 2819}  // Patriarch Wolf+ Yeti
+{54707}{9%, First: 28340, 2-4, MinLevel: 15, MaxLevel: 35, GlobalFlag: 2819}  // Timber Wolves
+{54708}{9%, First: 28343, 4-6, Second: 28344, 1, MinLevel: 29, MaxLevel: 50, GlobalFlag: 2819}  // Patriarch Wolves+BruteFang
+{54709}{1%, First: 28396, 2, Second: 28396, 3-6, MinLevel: 34, GlobalFlag: 2819}  // Patriarch Wolves+Yeti
+{54710}{9%, First: 28341, 1, Second: 28398, 4-5, Third: 28396, 4-5, MinLevel: 37, MaxLevel: 50, GlobalFlag: 2819}  // 
+{54711}{9%, First: 27344, 3-6, Second: 28396, 4, MinLevel: 38, MaxLevel: 50, GlobalFlag: 2819}  // Krag Beserker+Yeti
+
+Void
+  Table 48 Void Easy Day
+{54800}{50%, First: 28429, 1}  // Feral Boar +
+
+  Table 49 Void Easy Night
+{54900}{50%, First: 28429, 1}  // Feral Boar +
+
+  Table 50 Void Average Day
+{55000}{50%, First: 28429, 1}  // Feral Boar +
+
+  Table 51 Void Average Night
+{55100}{50%, First: 28429, 1}  // Feral Boar +
+
+  Table 52 Void Powerful Day
+{55200}{50%, First: 28429, 1}  // Feral Boar +
+
+  Table 53 Void Powerful Night
+{55300}{50%, First: 28429, 1}  // Feral Boar +
+
+
+Start of User-Defined Tables:
+Remember to adjust the number of Distinct Encounter Tables at line 49999
+whenever you add a new table.
+
+  Table 54 // Stillwater Bunny
+{55400}{50%, First: 28463, 1, GlobalFlag: 2702, TriggerCount: 1}  
+
+  Table 55 //Mysterious Apparition
+{55500}{2000%, First: 27366, 1, GlobalFlag: 2701}

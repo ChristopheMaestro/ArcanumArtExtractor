@@ -1,0 +1,112 @@
+{1}{Thank the gods you are here, @pcname@! You must have received word from my father. [She sees the puzzled look on your face.] Some strange magick has transformed me into a wolf. I assure you that I am Samantha, daughter of your friend Fernando.}{Thank the gods you are here, @pcname@! You must have received word from my father. [She sees the puzzled look on your face.] Some strange magick has transformed me into a wolf. I assure you that I am Samantha, daughter of your friend Fernando.}{}{}{}{lf1 1, pf51 1, gf3032 1 }
+{2}{Where is your father?}{}{5}{}{20}{ }
+{3}{Where you dad be?}{}{-4}{}{20}{ }
+{20}{I do not know. He was gone when I awoke in this form, a fortnight ago. Strange things had been transpiring around here, people were disappearing at an alarming rate, and...}{I do not know. He was gone when I awoke in this form, a fortnight ago. Strange things had been transpiring around here, people were disappearing at an alarming rate, and...}{}{}{}{ }
+{21}{Slow down, please, start from the beginning.}{}{5}{}{30}{ }
+{22}{You talk too fast. Tell me whole story.}{}{-4}{}{30}{ }
+{30}{Of course, of course. About a year ago, people began disappearing from the village, about one or two a month. The local mage informed the town council that evil magick had begun emanating from the castle, so a group of volunteers were sent to investigate. They never returned.}{Of course, of course. About a year ago, people began disappearing from the village, about one or two a month. The local mage informed the town council that evil magick had begun emanating from the castle, so a group of volunteers were sent to investigate. They never returned.}{}{}{}{ }
+{31}{And then?}{}{5}{}{40}{ }
+{32}{Hurgh?}{}{-4}{}{40}{ }
+{40}{We became as a town under siege. We tried defending ourselves, to no avail. The dead ones began coming in the night, dragging off more and more villagers. The last of the town leaders decided on one last assault upon the castle to try and end this horror. I was to go with them, but when I awoke that morning they were gone and I had been transformed.}{We became as a town under siege. We tried defending ourselves, to no avail. The dead ones began coming in the night, dragging off more and more villagers. The last of the town leaders decided on one last assault upon the castle to try and end this horror. I was to go with them, but when I awoke that morning they were gone and I had been transformed.}{}{}{}{qu1210 1 }
+{41}{I see. I suppose I am meant to investigate the castle now, eh?}{}{5}{}{50}{ }
+{42}{So whut I s'posed do now?}{}{-4}{}{60}{ }
+{50}{If you would. It is why my father sent for you, his most trusted friend.}{If you would. It is why my father sent for you, his most trusted friend.}{}{}{}{ }
+{51}{I suppose I have no choice then, do I?}{}{5}{}{70}{qu1210 2 }
+{52}{He knows I will always follow the noble path, no matter the risks!}{}{5}{}{70}{qu1210 2 }
+{53}{I never liked your father much. I don't think I'm interested.}{}{5}{}{0}{re-10, pf52 1, fl 89}
+{60}{Oh, dear, I had forgotten that you were...challenged. Even so, my father counted you as one of his most loyal friends...I NEED YOU TO STOP WHATEVER EVILNESS IS HAPPENING IN THE CASTLE, DO YOU UNDERSTAND?}{Oh, dear, I had forgotten that you were...challenged. Even so, my father counted you as one of his most loyal friends...I NEED YOU TO STOP WHATEVER EVILNESS IS HAPPENING IN THE CASTLE, DO YOU UNDERSTAND?}{}{}{}{ }
+{61}{OKAY!}{}{-4}{}{70}{qu1210 2 }
+{62}{No.}{}{-4}{}{0}{re-10, pf52 1, fl  89}
+{70}{And...if I may please join with you? I need your help to free me of this curse!}{And...if I may please join with you? I need your help to free me of this curse!}{}{}{}{qu1211 1 }
+{71}{Of course.}{}{5}{}{0}{qu1211 2, jo 1 80}
+{72}{OKAY!}{}{-4}{}{0}{qu1211 2, jo 1 80}
+{73}{I work alone. Sorry.}{}{5}{}{0}{re-5, pf53 1, fl 89}
+{74}{No. I no want you follow me.}{}{-4}{}{0}{re-5, pf53 1, fl 89}
+{80}{Let us be off then, shall we?}{Let us be off then, shall we?}{}{}{}{ }
+{81}{Of course.}{}{5}{}{0}{ }
+{82}{OKAY!}{}{-4}{}{0}{ }
+{89}{I had forgotten the heart of a mercenary beats within you. Goodbye, then.}{I had forgotten the heart of a mercenary beats within you. Goodbye, then.}{}{}{}{ }
+{90}{[She growls at you.] What do you want now?}{[She growls at you.] What do you want now?}{}{}{}{ }
+{91}{I have decided to help you with your quest.}{}{5}{pf52 1, qb1210 1}{100}{qu1210 2, re +10 }
+{92}{I gonna fight the evil!!!}{}{-4}{pf52 1, qb1210 1}{100}{qu1210 2, re +10 }
+{93}{I would like for you to join with me, after all.}{}{5}{pf53 1}{0}{jo 1 80}
+{94}{Youse come along, OKAY?!}{}{-4}{pf53 1}{0}{jo 1 80}
+{99}{E:}{}{1}{}{0}{ }
+{100}{Thank you. I can see my father's trust in you was well placed...there is something else...may I please join with you? I need your help to free me of this curse!}{Thank you. I can see my father's trust in you was well placed...there is something else...may I please join with you? I need your help to free me of this curse!}{}{}{}{ }
+{101}{Of course.}{}{5}{}{0}{qu1211 2, jo 1  80}
+{102}{OKAY!}{}{-4}{}{0}{qu1211 2, jo 1  80}
+{103}{I work alone. Sorry.}{}{5}{}{0}{re-5, pf53 1, fl 89}
+{104}{No. I no want you follow me.}{}{-4}{}{0}{re-5, pf53 1, fl 89}
+{110}{Yes?}{Yes?}{}{}{}{ }
+{111}{I'd like to know something about you...}{}{5}{}{}{ce }
+{112}{I need you to do something.}{}{5}{}{120}{ }
+{113}{B:}{}{5}{}{0}{ }
+{114}{I want know bout youse.}{}{-4}{}{}{ce }
+{115}{I need you do sumptin.}{}{-4}{}{120}{ }
+{116}{B:}{}{-4}{}{0}{ }
+{117}{Your father changed you into a wolf to protect you.}{}{5}{gf3031 1, lf10 0}{220}{lf10 1 }
+{118}{You dad guy make youse wolf so you no hurt!}{}{-4}{gf3031 1, lf10 0}{220}{lf10 1 }
+{119}{E:}{}{1}{}{0}{ }
+{120}{What would you like for me to do?}{What would you like for me to do?}{}{}{}{ }
+{121}{Please don't follow me so closely.}{}{5}{wa0}{0}{so }
+{122}{You're too far away.}{}{5}{wa0}{0}{sc }
+{123}{Wait here for me.}{}{5}{wa0}{0}{wa }
+{124}{You can stop waiting and rejoin with me now.}{}{5}{wa1}{0}{uw1  230}
+{125}{I think it is time to end our association.}{}{5}{wa0}{0}{pf53 1, lv, fl  139}
+{126}{Please don't follow me so closely.}{}{-4}{wa0}{0}{so }
+{127}{You be too far aways!}{}{-4}{wa0}{0}{sc }
+{128}{You wait! Okay?}{}{-4}{wa0}{0}{wa }
+{129}{You follow me agins?}{}{-4}{wa1}{0}{uw1  230}
+{130}{You stop followin me round!}{}{-4}{wa0}{0}{pf53 1, lv, fl  139}
+{138}{[Back]}{}{1}{}{110}{ }
+{139}{I thought I could trust you to help. I guess I was wrong. Goodbye.}{I thought I could trust you to help. I guess I was wrong. Goodbye.}{}{}{}{ }
+{140}{Oh, you must be an associate of my father's friend. Are you here to help as well?}{Oh, you must be an associate of my father's friend. Are you here to help as well?}{}{}{}{gf3032 1 }
+{141}{What is going on around here? You are a...wolf?}{}{5}{}{150}{ }
+{142}{Why you talk at me, wolf?}{}{-4}{}{150}{ }
+{150}{Oh, excuse me, I had forgotten...I am normally human. My name is Samantha, and my father sent for your associate to help us here.}{Oh, excuse me, I had forgotten...I am normally human. My name is Samantha, and my father sent for your associate to help us here.}{}{}{}{ }
+{151}{I have no associate. I am not who you think I am.}{}{5}{}{160}{ }
+{152}{I gots no friendses. I not who you think I be.}{}{-4}{}{160}{ }
+{153}{Where is your father? What is the story here?}{}{5}{}{170}{ }
+{154}{Where your dad be? What goings on?}{}{-4}{}{170}{ }
+{160}{You're not? I see...but perhaps you could see your way clear to helping us out, regardless?}{You're not? I see...but perhaps you could see your way clear to helping us out, regardless?}{}{}{}{ }
+{161}{That depends. Please, tell me your story.}{}{5}{}{170}{ }
+{162}{I dunno. What is story?}{}{-4}{}{170}{ }
+{170}{About a year ago, people began disappearing from the village, about one or two a month. The local mage informed the town council that evil magick had begun emanating from the castle, so a group of volunteers were sent to investigate. They never returned.}{About a year ago, people began disappearing from the village, about one or two a month. The local mage informed the town council that evil magick had begun emanating from the castle, so a group of volunteers were sent to investigate. They never returned.}{}{}{}{ }
+{171}{And then?}{}{5}{}{180}{ }
+{172}{Hurgh?}{}{-4}{}{180}{ }
+{180}{We became as a town under siege. We tried defending ourselves, to no avail. The dead ones began coming in the night, dragging off more and more villagers. The last of the town leaders decided on one last assault upon the castle to try and end this horror. I was to go with them, but when I awoke that morning they were gone and I had been transformed.}{We became as a town under siege. We tried defending ourselves, to no avail. The dead ones began coming in the night, dragging off more and more villagers. The last of the town leaders decided on one last assault upon the castle to try and end this horror. I was to go with them, but when I awoke that morning they were gone and I had been transformed.}{}{}{}{ }
+{181}{I see. I suppose I am meant to investigate the castle now, eh?}{}{5}{}{190}{ }
+{182}{So whut I s'posed do now? Look in castle?}{}{-4}{}{190}{ }
+{190}{If you would be so kind...}{If you would be so kind...}{}{}{}{ }
+{191}{I suppose I have no choice then, do I?}{}{5}{lf5 0}{70}{qu1210 2 }
+{192}{I will always follow the noble path, no matter the risks!}{}{5}{lf5 0}{70}{qu1210 2 }
+{193}{I don't think I'm interested in your plight.}{}{5}{lf5 0}{0}{re-10, pf52 1, fl 89}
+{194}{I suppose I have no choice then, do I?}{}{5}{lf5 1}{200}{ }
+{195}{I will always follow the noble path, no matter the risks!}{}{5}{lf5 1}{200}{ }
+{196}{I don't think I'm interested in your plight.}{}{5}{lf5 1}{0}{re-10, pf52 1, fl 89}
+{197}{Okay!}{}{-4}{lf5 0}{70}{qu1210 2 }
+{198}{Okay!}{}{-4}{lf5 1}{200}{qu1210 2 }
+{199}{I no wanna!}{}{-4}{}{0}{re-10, pf52 1, fl 89}
+{200}{Thank you, I am in your debt.}{Thank you, I am in your debt.}{}{}{}{ }
+{201}{Why don't you join with me instead of the jester you're following?}{}{5}{}{0}{jo 0  80}
+{202}{You follow me instead!}{}{-4}{}{0}{jo 0  80}
+{208}{E:}{}{-4}{}{0}{ }
+{209}{You are most welcome.}{}{5}{}{0}{ }
+{210}{[She growls at you.] What do you want now?}{[She growls at you.] What do you want now?}{}{}{}{ }
+{211}{I have decided to help you with your quest.}{}{5}{pf52 1, qb1210 1}{200}{qu1210 2, re +10 }
+{212}{I gonna fight evil!}{}{-4}{pf52 1, qb1210 1}{200}{qu1210 2, re +10 }
+{218}{E:}{}{1}{}{0}{ }
+{219}{I am pleased you are helping my people, sir.}{I am pleased you are helping my people, madam.}{}{}{}{ }
+{220}{Hmmph. That is so like him to overreact so. I can take care of myself, as you have seen. Oh, well, I suppose he does what he does out of love for me...}{Hmmph. That is so like him to overreact so. I can take care of myself, as you have seen. Oh, well, I suppose he does what he does out of love for me...}{}{}{}{ }
+{229}{E:}{}{1}{}{0}{ }
+{230}{Anything else?}{Anything else?}{}{}{}{ }
+{231}{I'd like to know something about you...}{}{5}{}{}{ce }
+{232}{I need you to do something.}{}{5}{}{120}{ }
+{233}{B:}{}{5}{}{0}{ }
+{234}{I want know bout youse.}{}{-4}{}{}{ce }
+{235}{I need you do sumptin.}{}{-4}{}{120}{ }
+{236}{B:}{}{-4}{}{0}{ }
+{237}{Your father changed you into a wolf to protect you.}{}{5}{gf3031 1, lf10 0}{220}{lf10 1 }
+{238}{You dad guy make youse wolf so you no hurt!}{}{-4}{gf3031 1, lf10 0}{220}{lf10 1 }
+{239}{E:}{}{1}{}{}{ }
+

@@ -1,0 +1,48 @@
+{1}{Hi I am Althea. I am glad to meet you . I am a friend of Virgil .Virgil told me weird things about you.}{Hi I am Althea. I am glad to meet you . I am a friend of Virgil .Virgil told me weird things about you.}{}{}{}{}
+{2}{I am @pcname@ . I was on a blimp crash . I am the only survivor from that crash.}{}{6}{}{-2}{in-5731}
+{3}{I am @pcname@ .Big blimp crash . Me lucky escape.}{}{-5}{}{-2}{in-5731}
+{4}{}{}{}{}{}{}
+{5}{}{}{}{}{}{}
+{6}{}{}{}{}{}{}
+{100}{What do you need me to do?}{What do you need me to do?}{}{}{}{}
+{101}{B:}{}{1}{wa 0}{}{}
+{102}{K:}{}{1}{wa 0}{300}{}
+{103}{What sort of things can you make, Althea?}{}{5}{wa 0}{}{su}
+{104}{Whut stuff you make, Althea?}{}{-4}{wa 0}{}{su}
+{105}{E:}{}{1}{}{0}{}
+{106}{More ..}{}{1}{}{110}{}
+{110}{What more  do you need me to do?}{What more  do you need me to do?}{}{}{}{}
+{111}{Move away, Althea.}{}{5}{}{0}{so}
+{112}{Move a bit closer, Althea.}{}{5}{}{0}{sc}
+{113}{Wait here for a while...}{}{5}{wa 0}{-20}{wa}
+{114}{You can stop waiting now, Althea.}{}{5}{wa 1}{0}{uw 0 280}
+{115}{Can you prepare  a potion of haste for me Althea ?}{}{12}{$$200}{700}{}
+{116}{Get away, Althea!}{}{-4}{}{0}{so}
+{117}{Come closer, Althea!}{}{-4}{}{0}{sc}
+{118}{You wait here...}{}{-4}{wa 0}{0}{wa}
+{119}{Stop waitin', Althea!}{}{-4}{wa 1}{0}{uw 0 280}
+{280}{ Let's get going...}{Let's get going...}{}{}{}{}
+{281}{E:}{}{1}{}{0}{}
+{300}{What do you want to know @pcname@}{What do you want to know @pcname@}{}{}{}{}
+{301}{Where are you coming from ?}{}{1}{}{400}{}
+{302}{Is Virgil your husband ?}{}{1}{}{410}{}
+{303}{Can you tell me about yourshelf ?}{}{1}{}{}{ce }
+{304}{Can you repair stuff ?}{}{12}{}{}{ri }
+{400}{Oh it's a long story and i don't want to share it with you.}{Oh it's a long story and i don't want to share it with you.}{}{}{}{}
+{401}{Ok then lets continue our adventure. }{}{1}{}{0}{}
+{410}{Oh no he is not we are just good friends.}{Oh no he is not we are just good friends. }{}{}{}{}
+{411}{Ok then lets continue our adventure. }{}{1}{}{0}{}
+{500}{Look . I don't believe the things Virgil says about you but I do worry about Virgil and you @pcname@ .}{Look . I don't believe the things Virgil says about you but I do worry about Virgil and you @pcname@ }{}{}{}{}
+{501}{Then please come with me.}{}{1}{}{580}{jo 0 600,gf2795 1}
+{502}{Stop waitin', Althea!}{}{-4}{}{580}{uw 0 600}
+{580}{Sorry there are too many people in your party}{Sorry there are too many people in your party}{}{}{}{}
+{581}{Ok.}{}{1}{}{}{}
+{600}{I am happy to join you}{I am happy to join you}{}{}{}{}
+{601}{Ok.}{}{1}{}{}{}
+{700}{Of course but this service will cost you 200 gold coins @pcname@ .Do you still want me to prepare a potion of haste ?}{Of course but this service will cost you 200 gold coins @pcname@ .Do you still want me to prepare a potion of haste ?}{}{}{}{}
+{701}{Yes please.}{}{1}{}{-25}{$$-200 }
+{702}{No i have changed my mind Althea.}{}{1}{}{0}{}
+{703}{How do you manage to find the ingredients to create this potion Althea ?}{}{1}{}{704}{}
+{704}{This is a family secret @pcname@ . I will protect this secret with my life.}{This is a family secret @pcname@ . I will protect this secret with my life.}{}{}{}{}
+{705}{Ok I am sorry that i asked.}{}{1}{}{0}{re -5}
+{706}{So you are not telling me ? Time for you to die !}{}{1}{}{0}{wa,re -30000  , co,al -10}

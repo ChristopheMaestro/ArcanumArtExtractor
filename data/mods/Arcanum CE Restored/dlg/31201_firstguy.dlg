@@ -1,0 +1,50 @@
+
+{1}{G:}{G:}{}{}{}{}
+{2}{B:}{}{1}{}{}{}
+{3}{Hello. I hear there is a job for me to do?}{}{5}{lf 1 0, qu 1191 0}{15}{gf 3014 0}
+{4}{Me do job? }{}{-4}{lf 1 0, qu 1191 0}{15}{gf 3014 0}
+{5}{Hello. I hear there is a job for me to do?}{}{5}{lf 1 1, qu 1191 0}{}{fl 60, gf 3014 0}
+{6}{Me do job?}{}{-4}{lf 1 1, qu 1191 0}{}{fl 60, gf 3014 0}
+{7}{I haven't found Franklin yet.}{}{5}{gf 3014 0, lf 1 1, in 32851}{}{fl 61}
+{8}{Me not find pain yet.}{}{-4}{gf 3014 0, lf 1 1, in 32851}{}{fl 61}
+{9}{I delivered the package! Here's the receipt.}{}{5}{in 32850, qu 1191 3}{-2}{qu 1191 4, $$ 1000, in 32850}
+{10}{I find pain guy! He gimme paper. You gimme money!}{}{-4}{in 32850, qu 1191 3}{-2}{qu 1191 4, $$ 1000, in 32850}
+{11}{E:}{}{1}{}{0}{}
+{12}{I still need the package for Franklin.}{}{5}{qu 1191 2, ni 32851, ni 32850, lf 1 1}{75}{}
+{13}{Me still need pain box.}{}{-4}{qu 1191 2, ni 32851, ni 32850, lf 1 1}{75}{}
+{15}{Ah yes! What took you so long? Well, no time to lose. Good ol' Frankin Payne seems to really need this right away, so I'll not waste another second. Here's the package and $1000, half your pay. Get a receipt from Payne when you hand him the package so I can pay you the other half. Do you need anything?}{Ah yes! What took you so long? Well, no time to lose. Good ol' Franklin Payne seems to really need this right away, so I'll not waste another second. Here's the package and $1000, half your pay. Get a receipt from Payne when you hand him the package so I can pay you the other half. Do you need anything?}{}{}{}{$$ 1000, lf 1 1, qu 1191 2, in -32851}
+{16}{B:}{}{1}{}{}{}
+{17}{Wait, I think the job is worth a bit more.}{}{5}{ha 2}{40}{}
+{18}{You gimme more moneys for job!}{}{-4}{ha 2}{40}{}
+{20}{Where exactly is he?}{}{5}{}{25}{}
+{21}{Me aks more?}{}{-4}{}{25}{}
+{22}{No. I'll be off now. }{}{5}{}{0}{}
+{23}{Nnnnnope!}{}{-4}{}{0}{}
+{25}{Willard will teleport you to the swamp's entrance. From there, you're on your own. Do you need anything else?}{Willard will teleport you to the swamp's entrance. From there, you're on your own. Do you need anything else?}{}{}{}{}
+{26}{B:}{}{1}{}{}{}
+{27}{Tell me more about this job.}{}{5}{}{35}{}
+{28}{Whut else?}{}{-4}{}{35}{}
+{29}{No thanks. I'm off.}{}{5}{}{0}{}
+{30}{Nnnnnope! I go now.}{}{-4}{}{0}{}
+{35}{Well, good ol' Franklin Payne seems to have gotten himself in another dirty tangle down in the swamps. He sent his only helper back with a note asking for a replacement gun, but that poor sop died at my door step. Now it's up to you to find Payne in the swamp. Who knows, he may already be eaten by the wild animals out there. Anything else?}{Well, good ol' Franklin Payne seems to have gotten himself in another dirty tangle down in the swamps. He sent his only helper back with a note asking for a replacement gun, but that poor sop died at my door step. Now it's up to you to find Payne in the swamp. Who knows, he may already be eaten by the wild animals out there. Anything else? }{}{}{}{gf 3012 1}
+{36}{B:}{}{1}{}{}{}
+{37}{I guess I better go rescue him then.}{}{5}{}{0}{}
+{38}{Silly Fwank guy. Me go save him.}{}{-4}{}{0}{}
+{40}{Hmm... Well, it can get hairy out there. I'll add another $500 and that's final. Anything else? }{Hmm... Well, it can get hairy out there. I'll add another $500 and that's final. Anything else? }{}{}{}{$$ 500}
+{41}{B:}{}{1}{}{}{}
+{42}{Excellent. Now, how do I find him?}{}{5}{}{25}{}
+{43}{Yay! Me do money job now. Where pain be?}{}{-4}{}{25}{}
+{44}{I'm going to need more than that to risk my life.}{}{5}{ha6}{50}{}
+{45}{What if I hurt? Need more moneys to make all better.}{}{-4}{ha6}{50}{}
+{46}{No thanks. I'm off.}{}{5}{}{0}{}
+{47}{Nnnnnope! I go now.}{}{-4}{}{0}{}
+{50}{Well, I suppose I can do that. If you run off with the money I'll have Willard hunt you down anyways. Here's another $200. Anything else? }{Well, I suppose I can do that. If you run off with the money I'll have Willard hunt you down anyways. Here's another $200. Anything else? }{}{}{}{$$ 200}
+{51}{B:}{}{1}{}{}{}
+{52}{Excellent. Now, how do I find him?}{}{5}{}{25}{}
+{54}{No thanks. I'm off.}{}{5}{}{0}{}
+{60}{If you're here for the delivery job, I've already given it to another fellow. Better catch up if you want in on job... to deliver the package to Franklin Payne that is.}{If you're here for the delivery job, I've already given it to another fellow. Better catch up if you want in on job... to deliver the package to Franklin Payne that is.}{}{}{}{qu 1191 1}
+{61}{What are you waiting for? Get going! The man's life may be in danger!}{What are you waiting for? Get going! The man's life may be in danger!}{}{}{}{}
+{65}{Well done! Here's the rest of the payment. Good luck to you now.}{Well done! Here's the rest of the payment. Good luck to you now.}{}{}{}{}
+{70}{I've nothing more for you to do.}{I've nothing more for you to do.}{}{}{}{}
+{75}{It's still here. Take it to Franklin Payne and bring me his receipt.}{It's still here. Take it to Franklin Payne and bring me his receipt.}{}{}{}{in -32851}
+{76}{I'll take it to him.}{}{1}{}{0}{}

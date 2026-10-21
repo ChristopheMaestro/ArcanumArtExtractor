@@ -1,0 +1,8 @@
+AutoSkill script is designed to give skills to proto critters. It adjusts the skill level to match a critter's corresponding stat, e.g. it will give bow 19 to a critter with dx 19. It should be attached to either 13 (enter combat) or 19 (heartbeat) attachment points. Script removes itself automatically upon giving the required skills.
+
+3200 script should be used with counters.
+Counter 3: Stat
+Counter 2: Divisor
+Counter 1: Effect
+
+Example: 1 4 199. In this case a critter with dx 12 will get the effect 199 (melee +4, dodge +4) 3 times. NOTE: it's impossible to use counters with values bigger than 255, that's why premade scripts are used.

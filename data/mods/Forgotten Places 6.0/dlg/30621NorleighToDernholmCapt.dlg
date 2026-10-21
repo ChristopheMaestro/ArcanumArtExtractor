@@ -1,0 +1,340 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Hello, I wish to book passage aboard your ship.}{}{5}{}{7}{}
+{3}{Me go with you on boat?}{}{-4}{}{7}{}
+{4}{F:}{}{1}{}{0}{}
+{5}{E:}{}{1}{}{0}{}
+{6}{}{}{}{}{}{}
+{7}{Aye, sir. Where would ye like to go?}{Aye, lass. Where would ye like to go?}{}{}{}{}
+{8}{I don't know. Where should I go?}{}{5}{}{16}{}
+{9}{Me not know. Where shuud me go?}{}{-4}{}{16}{}
+{10}{I'd like passage to Dernholm, please.}{}{5}{}{21}{}
+{11}{Me wanna go to Dern-holm.}{}{-4}{}{21}{}
+{12}{f:}{}{1}{}{0}{}
+{13}{e:}{}{1}{}{0}{}
+{14}{}{}{}{}{}{}
+{15}{}{}{}{}{}{}
+{16}{Get ye gone from me vessel!  Don't come back unless ye know where yer goin' to.}{Get ye gone from me vessel!  Don't come back unless ye know where yer goin' to.}{}{}{}{}
+{17}{I:}{}{1}{}{0}{re -5}
+{18}{S:}{}{1}{}{0}{re +2}
+{19}{E:}{}{1}{}{0}{}
+{20}{}{}{}{}{}{}
+{21}{Passage will cost ye 100 coin a head.}{Passage will cost ye 100 coin a head.}{}{}{}{}
+{22}{Passage for just one.}{}{1}{gv 1035 1 }{52}{}
+{23}{Passage for two.}{}{1}{gv 1035 2}{72}{}
+{24}{Passage for three.}{}{1}{gv 1035 3}{92}{}
+{25}{Passage for four.}{}{1}{gv 1035 4}{112}{}
+{26}{Passage for five.}{}{1}{gv 1035 5}{132}{}
+{27}{Passage for six.}{}{1}{gv 1035 6}{152}{}
+{28}{Passage for seven.}{}{1}{gv 1035 7}{172}{}
+{29}{Passage for eight.}{}{1}{gv 1035 8}{192}{}
+{30}{Passage for nine.}{}{1}{gv 1035 9}{212}{}
+{31}{Passage for ten.}{}{1}{gv 1035 10}{222}{}
+{32}{Passage for eleven.}{}{1}{gv 1035 11}{232}{}
+{33}{Passage for twelve.}{}{1}{gv 1035 12}{242}{}
+{34}{Passage for thirteen or more.}{}{1}{gv 1035 13}{252}{}
+{35}{That fare is high! Isn't there a better fare available?}{}{5}{ha 12}{267}{}
+{36}{That fare is high! Isn't there a better fare available?}{}{5}{ha -11}{262}{}
+{37}{Dat is high! Is dere nuttin cheaper?}{}{-4}{ha 12}{267}{}
+{38}{Dat is high! Is dere nuttin cheaper?}{}{-4}{ha -11}{262}{}
+{39}{I would like to go somewhere else.}{}{5}{}{7}{}
+{40}{Uh...  Me no wan' go der.  Go sum diff'ren place.}{}{-4}{}{7}{}
+{41}{}{}{}{}{}{}
+{42}{If ye can figure then ye knows it will be 50 coins}{If ye can figure then ye knows it will be 50 coins}{}{}{}{}
+{43}{I am ready to leave whenever you are.}{}{5}{$$ 50}{-20}{$$ -50}
+{44}{That is acceptable, let's leave immediately.}{}{5}{$$ -49}{296}{}
+{45}{I don't have enough money for passage.}{}{5}{$$ -49}{310}{}
+{46}{I will come back when I am  ready to travel.}{}{5}{}{0}{}
+{47}{Me readi to go.}{}{-4}{$$ 50}{-20}{$$ -50}
+{48}{Me readi to go.}{}{-4}{$$ -49}{296}{}
+{49}{Me no have money, me want to go on sheeep.}{}{-4}{$$ -49}{310}{}
+{50}{Me be here again.}{}{-4}{}{0}{}
+{51}{}{}{}{}{}{}
+{52}{If ye can figure then ye knows it will be 100 coins}{If ye can figure then ye knows it will be 100 coins}{}{}{}{}
+{53}{I am ready to leave whenever you are.}{}{5}{$$ 100}{-20}{$$ -100}
+{54}{That is acceptable, let's leave immediately.}{}{5}{$$ -99}{296}{}
+{55}{I don't have enough money for passage.}{}{5}{$$ -99}{310}{}
+{56}{I will come back when I am ready to travel.}{}{5}{}{0}{}
+{57}{Me readi to go.}{}{-4}{$$ 100}{-20}{$$ -100}
+{58}{Me readi to go.}{}{-4}{$$ -99}{296}{}
+{59}{Me no have money, me want to go on sheeep.}{}{-4}{$$ -99}{310}{}
+{60}{Me be here again.}{}{-4}{}{0}{}
+{61}{}{}{}{}{}{}
+{62}{If ye can figure then ye knows it will be 150 coins}{If ye can figure then ye knows it will be 150 coins}{}{}{}{}
+{63}{I am ready to leave whenever you are.}{}{5}{$$ 150}{-20}{$$ -150}
+{64}{That is acceptable, let's leave immediately.}{}{5}{$$ -149}{296}{}
+{65}{I don't have enough money for passage.}{}{5}{$$ -149}{310}{}
+{66}{I will come back when I am ready to travel.}{}{5}{}{0}{}
+{67}{Me readi to go.}{}{-4}{$$ 150}{-20}{$$ -150}
+{68}{Me readi to go.}{}{-4}{$$ -149}{296}{}
+{69}{Me no have money, me want to go on sheeep.}{}{-4}{$$ -149}{310}{}
+{70}{Me be here again.}{}{-4}{}{0}{}
+{71}{}{}{}{}{}{}
+{72}{If ye can figure then ye knows it will be 200 coins}{If ye can figure then ye knows it will be 200 coins}{}{}{}{}
+{73}{I am ready to leave whenever you are.}{}{5}{$$ 200}{-20}{$$ -200}
+{74}{That is acceptable, let's leave immediately.}{}{5}{$$ -199}{296}{}
+{75}{I don't have enough money for passage.}{}{5}{$$ -199}{310}{}
+{76}{I will come back when I am ready to travel.}{}{5}{}{0}{}
+{77}{Me readi to go.}{}{-4}{$$ 200}{-20}{$$ -200}
+{78}{Me readi to go.}{}{-4}{$$ -199}{296}{}
+{79}{Me no have money, me want to go on sheeep.}{}{-4}{$$ -199}{310}{}
+{80}{Me be here again.}{}{-4}{}{0}{}
+{81}{}{}{}{}{}{}
+{82}{If ye can figure then ye knows it will be 250 coins}{If ye can figure then ye knows it will be 250 coins}{}{}{}{}
+{83}{I am ready to leave whenever you are.}{}{5}{$$ 250}{-20}{$$ -250}
+{84}{That is acceptable, let's leave immediately.}{}{5}{$$ -249}{296}{}
+{85}{I don't have enough money for passage.}{}{5}{$$ -249}{310}{}
+{86}{I will come back when I am ready to travel.}{}{5}{}{0}{}
+{87}{Me readi to go.}{}{-4}{$$ 250}{-20}{$$ -250}
+{88}{Me readi to go.}{}{-4}{$$ -249}{296}{}
+{89}{Me no have money, me want to go on sheeep.}{}{-4}{$$ -249}{310}{}
+{90}{Me be here again.}{}{-4}{}{0}{}
+{91}{}{}{}{}{}{}
+{92}{If ye can figure then ye knows it will be 300 coins}{If ye can figure then ye knows it will be 300 coins}{}{}{}{}
+{93}{I am ready to leave whenever you are.}{}{5}{$$ 300}{-20}{$$ -300}
+{94}{That is acceptable, let's leave immediately.}{}{5}{$$ -299}{296}{}
+{95}{I don't have enough money for passage.}{}{5}{$$ -299}{310}{}
+{96}{I will come back when I am ready to travel.}{}{5}{}{0}{}
+{97}{Me readi to go.}{}{-4}{$$ 300}{-20}{$$ -300}
+{98}{Me readi to go.}{}{-4}{$$ -299}{296}{}
+{99}{Me no have money, me want to go on sheeep.}{}{-4}{$$ -299}{310}{}
+{100}{Me be here again.}{}{-4}{}{0}{}
+{101}{}{}{}{}{}{}
+{102}{If ye can figure then ye knows it will be 350 coins}{If ye can figure then ye knows it will be 350 coins}{}{}{}{}
+{103}{I am ready to leave whenever you are.}{}{5}{$$ 350}{-20}{$$ -350}
+{104}{That is acceptable, let's leave immediately.}{}{5}{$$ -349}{296}{}
+{105}{I don't have enough money for passage.}{}{5}{$$ -349}{310}{}
+{106}{I will come back when I am ready to travel.}{}{5}{}{0}{}
+{107}{Me readi to go.}{}{-4}{$$ 350}{-20}{$$ -350}
+{108}{Me readi to go.}{}{-4}{$$ -349}{296}{}
+{109}{Me no have money, me want to go on sheeep.}{}{-4}{$$ -349}{310}{}
+{110}{Me be here again.}{}{-4}{}{0}{}
+{111}{}{}{}{}{}{}
+{112}{If ye can figure then ye knows it will be 400 coins}{If ye can figure then ye knows it will be 400 coins}{}{}{}{}
+{113}{I am ready to leave whenever you are.}{}{5}{$$ 400}{-20}{$$ -400}
+{114}{That is acceptable, let's leave immediately.}{}{5}{$$ -399}{296}{}
+{115}{I don't have enough money for passage.}{}{5}{$$ -399}{310}{}
+{116}{I will come back when I am ready to travel.}{}{5}{}{0}{}
+{117}{Me readi to go.}{}{-4}{$$ 400}{-20}{$$ -400}
+{118}{Me readi to go.}{}{-4}{$$ -399}{296}{}
+{119}{Me no have money, me want to go on sheeep.}{}{-4}{$$ -399}{310}{}
+{120}{Me be here again.}{}{-4}{}{0}{}
+{121}{}{}{}{}{}{}
+{122}{If ye can figure then ye knows it will be 450 coins}{If ye can figure then ye knows it will be 450 coins}{}{}{}{}
+{123}{I am ready to leave whenever you are.}{}{5}{$$ 450}{-20}{$$ -450}
+{124}{That is acceptable, let's leave immediately.}{}{5}{$$ -449}{296}{}
+{125}{I don't have enough money for passage.}{}{5}{$$ -449}{310}{}
+{126}{I will come back when I am ready to travel.}{}{5}{}{0}{}
+{127}{Me readi to go.}{}{-4}{$$ 450}{-20}{$$ -450}
+{128}{Me readi to go.}{}{-4}{$$ -449}{296}{}
+{129}{Me no have money, me want to go on sheeep.}{}{-4}{$$ -449}{310}{}
+{130}{Me be here again.}{}{-4}{}{0}{}
+{131}{}{}{}{}{}{}
+{132}{If ye can figure then ye knows it will be 500 coins}{If ye can figure then ye knows it will be 500 coins}{}{}{}{}
+{133}{I am ready to leave whenever you are.}{}{5}{$$ 500}{-20}{$$ -500}
+{134}{That is acceptable, let's leave immediately.}{}{5}{$$ -499}{296}{}
+{135}{I don't have enough money for passage.}{}{5}{$$ -499}{310}{}
+{136}{I will come back when I am ready to travel.}{}{5}{}{0}{}
+{137}{Me readi to go.}{}{-4}{$$ 500}{-20}{$$ -500}
+{138}{Me readi to go.}{}{-4}{$$ -499}{296}{}
+{139}{Me no have money, me want to go on sheeep.}{}{-4}{$$ -499}{310}{}
+{140}{Me be here again.}{}{-4}{}{0}{}
+{141}{}{}{}{}{}{}
+{142}{If ye can figure then ye knows it will be 550 coins}{If ye can figure then ye knows it will be 550 coins}{}{}{}{}
+{143}{I am ready to leave whenever you are.}{}{5}{$$ 550}{-20}{$$ -550}
+{144}{That is acceptable, let's leave immediately.}{}{5}{$$ -549}{296}{}
+{145}{I don't have enough money for passage.}{}{5}{$$ -549}{310}{}
+{146}{I will come back when I am ready to travel.}{}{5}{}{0}{}
+{147}{Me readi to go.}{}{-4}{$$ 550}{-20}{$$ -550}
+{148}{Me readi to go.}{}{-4}{$$ -549}{296}{}
+{149}{Me no have money, me want to go on sheeep.}{}{-4}{$$ -549}{310}{}
+{150}{Me be here again.}{}{-4}{}{0}{}
+{151}{}{}{}{}{}{}
+{152}{If ye can figure then ye knows it will be 600 coins}{If ye can figure then ye knows it will be 600 coins}{}{}{}{}
+{153}{I am ready to leave whenever you are.}{}{5}{$$ 600}{-20}{$$ -600}
+{154}{That is acceptable, let's leave immediately.}{}{5}{$$ -599}{296}{}
+{155}{I don't have enough money for passage.}{}{5}{$$ -599}{310}{}
+{156}{I will come back when I am ready to travel.}{}{5}{}{0}{}
+{157}{Me readi to go.}{}{-4}{$$ 600}{-20}{$$ -600}
+{158}{Me readi to go.}{}{-4}{$$ -599}{296}{}
+{159}{Me no have money, me want to go on sheeep.}{}{-4}{$$ -599}{310}{}
+{160}{Me be here again.}{}{-4}{}{0}{}
+{161}{}{}{}{}{}{}
+{162}{If ye can figure then ye knows it will be 650 coins}{If ye can figure then ye knows it will be 650 coins}{}{}{}{}
+{163}{I am ready to leave whenever you are.}{}{5}{$$ 650}{-20}{$$ -650}
+{164}{That is acceptable, let's leave immediately.}{}{5}{$$ -649}{296}{}
+{165}{I don't have enough money for passage.}{}{5}{$$ -649}{310}{}
+{166}{I will come back when I am ready to travel.}{}{5}{}{0}{}
+{167}{Me readi to go.}{}{-4}{$$ 650}{-20}{$$ -650}
+{168}{Me readi to go.}{}{-4}{$$ -649}{296}{}
+{169}{Me no have money, me want to go on sheeep.}{}{-4}{$$ -649}{310}{}
+{170}{Me be here again.}{}{-4}{}{0}{}
+{171}{}{}{}{}{}{}
+{172}{If ye can figure then ye knows it will be 700 coins}{If ye can figure then ye knows it will be 700 coins}{}{}{}{}
+{173}{I am ready to leave whenever you are.}{}{5}{$$ 700}{-20}{$$ -700}
+{174}{That is acceptable, let's leave immediately.}{}{5}{$$ -699}{296}{}
+{175}{I don't have enough money for passage.}{}{5}{$$ -699}{310}{}
+{176}{I will come back when I am ready to travel.}{}{5}{}{0}{}
+{177}{Me readi to go.}{}{-4}{$$ 700}{-20}{$$ -700}
+{178}{Me readi to go.}{}{-4}{$$ -699}{296}{}
+{179}{Me no have money, me want to go on sheeep.}{}{-4}{$$ -699}{310}{}
+{180}{Me be here again.}{}{-4}{}{0}{}
+{181}{}{}{}{}{}{}
+{182}{If ye can figure then ye knows it will be 750 coins}{If ye can figure then ye knows it will be 750 coins}{}{}{}{}
+{183}{I am ready to leave whenever you are.}{}{5}{$$ 750}{-20}{$$ -750}
+{184}{That is acceptable, let's leave immediately.}{}{5}{$$ -749}{296}{}
+{185}{I don't have enough money for passage.}{}{5}{$$ -749}{310}{}
+{186}{I will come back when I am ready to travel.}{}{5}{}{0}{}
+{187}{Me readi to go.}{}{-4}{$$ 750}{-20}{$$ -750}
+{188}{Me readi to go.}{}{-4}{$$ -749}{296}{}
+{189}{Me no have money, me want to go on sheeep.}{}{-4}{$$ -749}{310}{}
+{190}{Me be here again.}{}{-4}{}{0}{}
+{191}{}{}{}{}{}{}
+{192}{If ye can figure then ye knows it will be 800 coins}{If ye can figure then ye knows it will be 800 coins}{}{}{}{}
+{193}{I am ready to leave whenever you are.}{}{5}{$$ 800}{-20}{$$ -800}
+{194}{That is acceptable, let's leave immediately.}{}{5}{$$ -799}{296}{}
+{195}{I don't have enough money for passage.}{}{5}{$$ -799}{310}{}
+{196}{I will come back when I am ready to travel.}{}{5}{}{0}{}
+{197}{Me readi to go.}{}{-4}{$$ 800}{-20}{$$ -800}
+{198}{Me readi to go.}{}{-4}{$$ -799}{296}{}
+{199}{Me no have money, me want to go on sheeep.}{}{-4}{$$ -799}{310}{}
+{200}{Me be here again.}{}{-4}{}{0}{}
+{201}{}{}{}{}{}{}
+{202}{If ye can figure then ye knows it will be 850 coins}{If ye can figure then ye knows it will be 850 coins}{}{}{}{}
+{203}{I am ready to leave whenever you are.}{}{5}{$$ 850}{-20}{$$ -850}
+{204}{That is acceptable, let's leave immediately.}{}{5}{$$ -849}{296}{}
+{205}{I don't have enough money for passage.}{}{5}{$$ -849}{310}{}
+{206}{I will come back when I am ready to travel.}{}{5}{}{0}{}
+{207}{Me readi to go.}{}{-4}{$$ 850}{-20}{$$ -850}
+{208}{Me readi to go.}{}{-4}{$$ -849}{296}{}
+{209}{Me no have money, me want to go on sheeep.}{}{-4}{$$ -849}{310}{}
+{210}{Me be here again.}{}{-4}{}{0}{}
+{211}{}{}{}{}{}{}
+{212}{If ye can figure then ye knows it will be 900 coins}{If ye can figure then ye knows it will be 900 coins}{}{}{}{}
+{213}{I am ready to leave whenever you are.}{}{5}{$$ 900}{-20}{$$ -900}
+{214}{That is acceptable, let's leave immediately.}{}{5}{$$ -899}{296}{}
+{215}{I don't have enough money for passage.}{}{5}{$$ -899}{310}{}
+{216}{I will come back when I am ready to travel.}{}{5}{}{0}{}
+{217}{Me readi to go.}{}{-4}{$$ 900}{-20}{$$ -900}
+{218}{Me readi to go.}{}{-4}{$$ -899}{296}{}
+{219}{Me no have money, me want to go on sheeep.}{}{-4}{$$ -899}{310}{}
+{220}{Me be here again.}{}{-4}{}{0}{}
+{221}{}{}{}{}{}{}
+{222}{If ye can figure then ye knows it will be 1000 coins}{If ye can figure then ye knows it will be 1000 coins}{}{}{}{}
+{223}{I am ready to leave whenever you are.}{}{5}{$$ 1000}{-20}{$$ -1000}
+{224}{That is acceptable, let's leave immediately.}{}{5}{$$ -999}{296}{}
+{225}{I don't have enough money for passage.}{}{5}{$$ -999}{310}{}
+{226}{I will come back when I am ready to travel.}{}{5}{}{0}{}
+{227}{Me readi to go.}{}{-4}{$$ 1000}{-20}{$$ -1000}
+{228}{Me readi to go.}{}{-4}{$$ -999}{296}{}
+{229}{Me no have money, me want to go on sheeep.}{}{-4}{$$ -999}{310}{}
+{230}{Me be here again.}{}{-4}{}{0}{}
+{231}{}{}{}{}{}{}
+{232}{If ye can figure then ye knows it will be 1100 coins}{If ye can figure then ye knows it will be 1100 coins}{}{}{}{}
+{233}{I am ready to leave whenever you are.}{}{5}{$$ 1100}{-20}{$$ -1100}
+{234}{That is acceptable, let's leave immediately.}{}{5}{$$ -1099}{296}{}
+{235}{I don't have enough money for passage.}{}{5}{$$ -1099}{310}{}
+{236}{I will come back when I am ready to travel.}{}{5}{}{0}{}
+{237}{Me readi to go.}{}{-4}{$$ 1100}{-20}{$$ -1100}
+{238}{Me readi to go.}{}{-4}{$$ -1099}{296}{}
+{239}{Me no have money, me want to go on sheeep.}{}{-4}{$$ -1099}{310}{}
+{240}{Me be here again.}{}{-4}{}{0}{}
+{241}{}{}{}{}{}{}
+{242}{If ye can figure then ye knows it will be 1200 coins}{If ye can figure then ye knows it will be 1200 coins}{}{}{}{}
+{243}{I am ready to leave whenever you are.}{}{5}{$$ 1200}{-20}{$$ -1200}
+{244}{That is acceptable, let's leave immediately.}{}{5}{$$ -1199}{296}{}
+{245}{I don't have enough money for passage.}{}{5}{$$ -1199}{310}{}
+{246}{I will come back when I am ready to travel.}{}{5}{}{0}{}
+{247}{Me readi to go.}{}{-4}{$$ 1200}{-20}{$$ -1200}
+{248}{Me readi to go.}{}{-4}{$$ -1199}{296}{}
+{249}{Me no have money, me want to go on sheeep.}{}{-4}{$$ -1199}{310}{}
+{250}{Me be here again.}{}{-4}{}{0}{}
+{251}{}{}{}{}{}{}
+{252}{If ye can figure then ye knows it will be 1300 coins}{If ye can figure then ye knows it will be 1300 coins}{}{}{}{}
+{253}{I am ready to leave whenever you are.}{}{5}{$$ 1300}{-20}{$$ -1300}
+{254}{That is acceptable, let's leave immediately.}{}{5}{$$ -1299}{296}{}
+{255}{I don't have enough money for passage.}{}{5}{$$ -1299}{310}{}
+{256}{I will come back when I am ready to travel.}{}{5}{}{0}{}
+{257}{Me readi to go.}{}{-4}{$$ 1300}{-20}{$$ -1300}
+{258}{Me readi to go.}{}{-4}{$$ -1299}{296}{}
+{259}{Me no have money, me want to go on sheeep.}{}{-4}{$$ -1299}{310}{}
+{260}{Me be here again.}{}{-4}{}{0}{}
+{261}{}{}{}{}{}{}
+{262}{That's what I'm chargin'.  Ye can take it or leave it... It is of no concern to me...So what will it be?}{That's what I'm chargin', missy.  Ye can take it or leave it... It matters not to me...}{}{}{}{}
+{263}{I see.  ...What was the price again?}{}{5}{}{21}{}
+{264}{F:}{}{5}{}{0}{}
+{265}{Uh...  How many coin?}{}{-4}{}{21}{}
+{266}{F:}{}{-4}{}{0}{}
+{267}{Ye have a way about ye mister.  Perhaps you'll bring us luck upon the sea.  I will accept 50 a head...  This time... Not a coin less!  This is me final offer, so ye better take it a'fore I change me mind.}{Ye have a way about ye missy.  Perhaps you'll bring us luck upon the sea.  I will accept 50 a head...  This time...    Not a coin less! This is me final offer. So ye better take it a'fore I change me mind.}{}{}{}{}
+{268}{That is good business, Capt'n. You won't regret it!}{}{5}{gv 1035 1}{42}{}
+{269}{That is good business, Capt'n. You won't regret it!}{}{5}{gv 1035 2}{52}{}
+{270}{That is good business, Capt'n. You won't regret it!}{}{5}{gv 1035 3}{62}{}
+{271}{That is good business, Capt'n. You won't regret it!}{}{5}{gv 1035 4}{72}{}
+{272}{That is good business, Capt'n. You won't regret it!}{}{5}{gv 1035 5}{87}{}
+{273}{That is good business, Capt'n. You won't regret it!}{}{5}{gv 1035 6}{92}{}
+{274}{That is good business, Capt'n. You won't regret it!}{}{5}{gv 1035 7}{102}{}
+{275}{That is good business, Capt'n. You won't regret it!}{}{5}{gv 1035 8}{112}{}
+{276}{That is good business, Capt'n. You won't regret it!}{}{5}{gv 1035 9}{122}{}
+{277}{That is good business, Capt'n. You won't regret it!}{}{5}{gv 1035 10}{132}{}
+{278}{That is good business, Capt'n. You won't regret it!}{}{5}{gv 1035 11}{142}{}
+{279}{That is good business, Capt'n. You won't regret it!}{}{5}{gv 1035 12}{152}{}
+{280}{That is good business, Capt'n. You won't regret it!}{}{5}{gv 1035 13}{162}{}
+{281}{F:}{}{5}{}{0}{}
+{282}{smart capt'n. we have good deal now!}{}{-4}{gv 1035 1}{42}{}
+{283}{smart capt'n. we have good deal now!}{}{-4}{gv 1035 2}{52}{}
+{284}{smart capt'n. we have good deal now!}{}{-4}{gv 1035 3}{62}{}
+{285}{smart capt'n. we have good deal now!}{}{-4}{gv 1035 4}{72}{}
+{286}{smart capt'n. we have good deal now!}{}{-4}{gv 1035 5}{87}{}
+{287}{smart capt'n. we have good deal now!}{}{-4}{gv 1035 6}{92}{}
+{288}{smart capt'n. we have good deal now!}{}{-4}{gv 1035 7}{102}{}
+{289}{smart capt'n. we have good deal now!}{}{-4}{gv 1035 8}{112}{}
+{290}{smart capt'n. we have good deal now!}{}{-4}{gv 1035 9}{122}{}
+{291}{smart capt'n. we have good deal now!}{}{-4}{gv 1035 10}{132}{}
+{292}{smart capt'n. we have good deal now!}{}{-4}{gv 1035 11}{142}{}
+{293}{smart capt'n. we have good deal now!}{}{-4}{gv 1035 12}{152}{}
+{294}{smart capt'n. we have good deal now!}{}{-4}{gv 1035 13}{162}{}
+{295}{F:}{}{-4}{}{0}{}
+{296}{Augh!  You haven't the fare!  If I miss the tide because of ye wasting me time...  I'll get ye...  Ye can count on it!  Now get ye gone from me vessel! }{Augh!  You haven't the fare!  If I miss the tide because of ye wasting me time...  I'll get ye...  Ye can count on it!  Now get ye gone from me vessel! }{}{}{}{re -5}
+{297}{E:}{}{1}{}{0}{}
+{298}{}{}{}{}{}{}
+{299}{Get ye gone from me vessel!  Don't come back unless ye know where yer goin' to.}{Get ye gone from me vessel!  Don't come back unless ye know where yer goin' to.}{}{}{}{}
+{300}{I:}{}{1}{}{0}{re -5}
+{301}{S:}{}{1}{}{0}{re +2}
+{302}{E:}{}{1}{}{0}{}
+{303}{}{}{}{}{}{}
+{304}{I haven't got time for ye, ya fickle wench!  The ship needs unloading and yer in the way.  So, be off with ya!.}{I haven't got time for ye, ya fickle wench!  The ship needs unloading and yer in the way.  So, be off with ya!.}{}{}{}{}
+{305}{E:}{}{1}{}{0}{}
+{306}{S:}{}{1}{}{0}{re +2}
+{307}{I:}{}{1}{}{0}{re -5}
+{308}{No, no.  I'm afraid I can't just take ye with me.  Only paying passengers may board me fine ship.}{No, no.  I'm afraid I can't just take ye with me.  Only paying passengers may board me fine ship.}{}{}{}{}
+{309}{}{}{}{}{}{}
+{310}{If ye can't afford the fare, well then, I can't afford to take ye either. Come back when ye got the coins... Good bye to ye.}{If ye can't afford the fare, well then, I can't afford to take ye either. Come back when ye got the coins... Good bye to ye.}{}{}{}{}
+{311}{Perhaps I could earn my passage?}{0}{5}{}{316}{}
+{312}{Perhaps I could earn my passage?}{1}{5}{}{316}{}
+{313}{Maybee me work my way dere?}{0}{-4}{}{316}{}
+{314}{Maybee me work my way dere?}{1}{-4}{}{316}{}
+{315}{E:}{}{1}{}{}{}
+{316}{ ...Well...  Ye do appear to be strong of body.  I guess ye could work for yer passage.  I be leaving for Norleigh on this very tide.  I'll let ye work your way there, if ye can leave now.}{ ...Well...  Ye do appear to have quite a, um... body.  Perhaps you could "work" for yer passage.  If ye know what I be sayin'.  I be leaving for Norleigh on this very tide.  I'll let ye pay for yer passage by tending to me an' me men.  [looking anxious to be on his way]  Can ye can leave now?}{}{}{}{}
+{317}{That is acceptable. I'm ready to leave whenever you are.}{1}{5}{}{-20}{re +20}
+{318}{[You glance around at the crew] I suppose I could live with that. I'm ready to leave whenever you are.}{0}{5}{}{336}{re +20}
+{319}{[Surprised and indignant] The nerve! Why would you even dare to make such a proposal?}{0}{5}{}{325}{re -5}
+{320}{Yuh - me can do dat. Me can go now.}{1}{-4}{}{-20}{re +20}
+{321}{[You glance around at the crew] Me can live wit' dat. Let's go, Cap'n!}{0}{-4}{}{336}{re +10}
+{322}{[Surprised and indignant] What?! Me no whore! Why you think such tings?}{0}{-4}{}{325}{re -5}
+{323}{f:}{}{1}{}{0}{}
+{324}{}{}{}{}{}{}
+{325}{That be me only offer.  I doubt ye will find a better one aroun' here.  What say ye?}{That be me only offer.  I doubt ye will find a better one aroun' here.  What say ye?}{}{}{}{}
+{326}{Fine! Let us go and be done with this!}{0}{5}{}{336}{re +10}
+{327}{I will not debase myself for you or anyone else!}{0}{5}{}{331}{re -5}
+{328}{[thinks for a moment]  Okay.  We go now.}{0}{-4}{}{336}{re +10}
+{329}{No! Me no do dat. You not nice.}{}{-4}{}{331}{re -5}
+{330}{f:}{}{1}{}{0}{}
+{331}{Augh! I haven't got time for ye, ya fickle wench!  The ship needs unloading and yer in the way.  So, be off with ya!.}{Augh! I haven't got time for ye, ya fickle wench!  The ship needs unloading and yer in the way.  So, be off with ya!.}{}{}{}{}
+{332}{e:}{}{1}{}{0}{}
+{333}{s:}{}{1}{}{0}{re +2}
+{334}{I:}{}{1}{}{0}{re -5}
+{335}{}{}{}{}{}{}
+{336}{Excellent! Excellent! Ye can have the cabin righ' next to mine! Give ya a little privacy. By tha way, what be yer name?}{Excellent! Excellent! Ye can have the cabin righ' next to mine! Give ya a little privacy. By tha way, what be yer name?}{}{}{}{}
+{337}{[Sudden inspiration] Just call me Stormy, Captain, 'cause I'm going to blow you down!}{}{5}{}{-20}{}
+{338}{[Sudden idea] Just call me Stormy, Cap'tn! Me gonna blow ya down!}{}{-4}{}{-20}{}
+{339}{}{}{}{}{}{}
+{340}{}{}{}{}{}{}

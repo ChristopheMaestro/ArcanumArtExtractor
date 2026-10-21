@@ -1,0 +1,43 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Good day madam.}{}{5}{lf1 0}{7}{}
+{3}{Hello Jenna.}{}{5}{lf1 1}{38}{}
+{4}{Uh... Hi.}{}{-4}{lf1 0}{7}{}
+{5}{Uh... Hi Jennah.}{}{-4}{lf1 1}{38}{}
+{6}{E:}{}{1}{}{0}{}
+{7}{You must me new here in town.  I am Jenna.  My husband owns the general store here in Riverton.}{You must me new here in town.  I am Jenna.  My husband owns the general store here in Riverton.}{}{}{}{}
+{8}{It is nice to meet you Jenna.}{}{5}{}{11}{}
+{9}{Uh... yeah.}{}{-4}{}{11}{}
+{10}{E:}{}{1}{}{0}{}
+{11}{You seem the adventurous type.  Tell me, would you be interested in a job?  It pays well.}{You seem the adventurous type.  Tell me, would you be interested in a job?  It pays well.}{}{}{}{}
+{12}{What do you need?}{}{5}{}{21}{}
+{13}{Wha' you wan' me do?}{}{-4}{}{21}{}
+{15}{F:}{}{1}{}{0}{}
+{21}{Well, there's an old necklace, it has been in my family for several generations.  [She looks annoyed.]  At least, it "was" in my family...}{Well, there's an old necklace, it has been in my family for several generations.  [She looks annoyed.]  At least, it "was" in my family...}{}{}{}{}
+{22}{What happened to it?}{}{5}{}{26}{}
+{23}{Wha' happen?}{}{-4}{}{26}{}
+{25}{E:}{}{1}{}{0}{}
+{26}{The necklace is magickal.  It contains some helpful spells, nature and healing and the like.  The local kite tribe somehow figured out what it was and their Shaman stole it from me one day while I was out strolling.}{The necklace is magickal.  It contains some helpful spells, nature and healing and the like.  The local kite tribe somehow figured out what it was and their Shaman stole it from me one day while I was out strolling.}{}{}{}{}
+{27}{He didn't harm you?}{}{5}{}{30}{}
+{28}{You no get hurt?}{}{-4}{}{30}{}
+{29}{E:}{}{1}{}{0}{}
+{30}{Thank goodness no.  Luckily my husband heard my shouts and came running over to rescue me.  But not before that wily kite tore the pendant from my throat.}{Thank goodness no.  Luckily my husband heard my shouts and came running over to rescue me.  But not before that wily kite tore the pendant from my throat.}{}{}{}{}
+{31}{I am glad to hear you were unharmed.}{}{5}{}{34}{}
+{32}{Me 'appy you no get hurt.}{}{-4}{}{34}{}
+{33}{E:}{}{1}{}{0}{}
+{34}{I feel dreadfully lost without my necklace.  It was my favorite piece.  If you were to retrieve it from the kite, I would pay you 300 coin.  What do you think?}{I feel dreadfully lost without my necklace.  It was my favorite piece.  If you were to retrieve it from the kite, I would pay you 300 coin.  What do you think?}{}{}{}{lf1 1, qu1231 1}
+{35}{I will try and get it back for you Jenna.}{}{5}{}{0}{qu1231 2}
+{36}{Uh...  Okay.}{}{-4}{}{0}{qu1231 2}
+{37}{F:}{}{1}{}{0}{}
+{38}{Well hello again.  What can I do for you @pcname@?}{Well hello again.  What can I do for you @pcname@?}{}{}{}{}
+{39}{I just stopped by to let you know I haven't gotten your necklace yet.}{}{5}{qb1231 2, ni3001}{}{fl 45}
+{40}{I have your necklace!}{}{5}{qb1231 2, in3001}{46}{}
+{41}{Me no get neklass yet...}{}{-4}{qb1231 2, ni3001}{}{fl 45}
+{42}{Me got neklass!}{}{-4}{qb1231 2, in3001}{46}{}
+{43}{R:$0,1000-1004}{}{1}{}{0}{}
+{44}{E:}{}{1}{}{0}{}
+{45}{[Sigh.]  I understand.  I guess I will just have to learn to live without it.  Thank you for getting back to me @pcname@.}{[Sigh.]  I understand.  I guess I will just have to learn to live without it.  Thank you for getting back to me @pcname@.}{}{}{}{}
+{46}{Oh! [Her face lights up with joy]  Thank you so much!  [She takes the necklace from you.]  I've missed it so much.  Here.  Here is the money we agreed upon.  Again, thank you @pcname@.}{Oh! [Her face lights up with joy]  Thank you so much!  [She takes the necklace from you.]  I've missed it so much.  Here.  Here is the money we agreed upon.  Again, thank you @pcname@.}{}{}{}{in3001, qu1231 4, $$300}
+{47}{You are welcome.  Goodbye Jenna.}{}{5}{}{0}{}
+{48}{Uh... okay.  Buh-bye Jennah.}{}{-4}{}{0}{}
+{49}{E:}{}{1}{}{0}{}
+

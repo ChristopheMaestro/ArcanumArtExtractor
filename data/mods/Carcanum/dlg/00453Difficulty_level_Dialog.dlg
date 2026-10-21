@@ -1,0 +1,129 @@
+{1}{Hello @pcname@ .I am your dungeon master. I would like to ask you some questions . After your answer my questions you can continue playing.}{Hello @pcname@ .I am your dungeon master. I would like to ask you some questions . After your answer my questions you can continue playing.}{}{}{}{}
+{2}{Please go on.}{}{1}{}{3}{}
+{3}{Please select monster hit points .}{Please select monster hit points .}{}{}{}{}
+{4}{Very easy.(Monster hit points max 65 %)}{}{1}{}{15}{gv 1211 0}
+{5}{Easy(Monster hit points min 65 % max 100%)}{}{1}{}{15}{gv 1211 7}
+{6}{Normal.(Monster hit points min 65 % max150 %)}{}{1}{}{15}{gv 1211 17}
+{7}{Hard.(Monster hit points min 65% max 200 %) }{}{1}{}{15}{gv 1211 27}
+{8}{More ...}{}{1}{}{9}{}
+{9}{Select difficulty level.}{Select difficulty level.}{}{}{}{}
+{10}{Very hard.(Monster hit points 65% min max 250 %)}{}{1}{}{15}{gv 1211 37}
+{11}{Insane.(Monster hit points 65% min max 300 %)}{}{1}{}{15}{gv 1211 47}
+{12}{Elite.(Monster hit points min 65 % max 350 %)}{}{1}{}{15}{gv 1211 57}
+{13}{Impossible.(Monster hit points min 105 % max 500 %)}{}{1}{}{15}{gv 1211 87}
+{14}{Back ...}{}{1}{}{1}{}
+{15}{Do you want to allow  player's beauty to modify summons hit points ? 5% per point of beauty 55 % for 1 beauty 150% for 20 beauty ?}{Do you want to allow  player's beauty to modify summons hit points ? 5% per point of beauty 55 % for 1 beauty 150% for 20 beauty ?}{}{}{}{}
+{16}{Yes (recommended).}{}{1}{}{18}{gv 1213 10}
+{17}{No . I want summons to have the hit points they always had.}{}{1}{}{18}{gv 1213 1}
+{18}{Do you want to get an one time bonus to hit points and fatigue in order to make the game easier ?}{Do you want to get an one time bonus to hit points and fatigue in order to make the game easier ?}{}{}{}{}
+{19}{No.(master).}{}{1}{}{29}{gv 1218 0,gv1230 1}
+{20}{I would like to select a special elite class package instead.}{}{1}{}{105}{}
+{21}{Yes.(+10 life +10 fatigue)(expert).}{}{1}{}{29}{gv 1218 9,gv1230 1}
+{22}{Yes.(+20 life +20 fatigue)(experienced)}{}{1}{}{29}{gv 1218 19,gv1230 1}
+{23}{More ...}{}{1}{}{24}{}
+{24}{Choose a bonus to your hit points and fatigue}{Choose a bonus to your hit points and fatigue}{}{}{}{}
+{25}{Yes.(+30 life +30 fatigue)(beginner ).}{}{1}{}{29}{gv 1218 29,gv1230 1}
+{26}{Yes.(+40 life +40 fatigue)(new player ).}{}{1}{}{29}{gv 1218 39,gv1230 1}
+{27}{Yes.(+50 life +50 fatigue)( very new player ).}{}{1}{}{29}{gv  1218 49,gv1230 1}
+{28}{Back...}{}{1}{}{18}{}
+{29}{The reason that followers that have magick do not cast spells is that the A.I is very conservative with regards to fatigue. Do you want your followers to have more fatigue so that they can cast more spells ?}{The reason that followers that have magick do not cast spells is that the A.I is very conservative with regards to fatigue. Do you want your followers to have more fatigue so that they can cast more spells ?}{}{}{}{}
+{30}{No.(not recommended)}{}{1}{}{37}{gv 1219 0}
+{31}{Yes. Give them 40 % more fatigue.(Recommended)}{}{1}{}{37}{gv 1219 8}
+{32}{Yes. Give them 80 % more fatigue.}{}{1}{}{37}{gv 1219 16}
+{33}{The way the game works is that in combat  when you change sector ( 64 tiles square) your followers teleports close to you if they are far away. For finer combat control you want your followers to teleport when.}{The way the game works is that in combat  when you change sector ( 64 tiles square) your followers teleports close to you if they are far away. For finer combat control you want your followers to teleport when.}{}{}{}{}
+{34}{No leave it as it was.}{}{1}{}{37}{gv 1220 40}
+{35}{8 tiles max in combat(Lots of teleports fine combat control)}{}{1}{}{37}{gv 1220 8}
+{36}{15 tiles(recommended)}{}{1}{}{37}{gv 1220 15}
+{37}{This version introduces death strike. Death strike effects 90% of monsters and undead. It is a chance to kill with 1 strike or spell.}{This version introduces death strike. Death strike effects 90% of monsters and undead. It is a chance to kill with 1 strike or spell.}{}{}{}{}
+{38}{Please go on.}{}{1}{}{39}{}
+{39}{The chance to do a death strike is constant. But you are only going to have a chance to do a death strike if you are the same level as the monster and your perception is maxed 20.For every point that your perception is lower than 20 you must be 2 levels higher than the monster.Death strike will work with direct area of effect spells.}{The chance to do a death strike is constant. But you are only going to have a chance to do a death strike if you are the same level as the monster and your perception is maxed 20.For every point that your perception is lower than 20 you must be 2 levels higher than the monster.Death strike will work with direct area of effect spells.}{}{}{}{}
+{40}{Please go on.}{}{1}{}{41}{}
+{41}{What chance do you want to have (you or your followers) to make a death strike ?}{What chance do you want to have (you or your followers) to make a death strike ?}{}{}{}{}
+{42}{Six per cent .(recommended)}{}{1}{}{46}{gv 1221 6}
+{43}{Three per cent.(Hard)}{}{1}{}{46}{gv 1221 3}
+{44}{Nine per cent (Makes game much easier if you max perception)}{}{1}{}{46}{gv 1221 9}
+{45}{One per cent (Not recommended)}{}{1}{}{46}{gv 1211 1}
+{46}{Do you want random encounters to be disabled ? They will disabled anyway if you have the CAR as a follower. This will not disable encounters with the wilderness merchants.}{Do you want random encounters to be disabled ? They will disabled anyway if you have the CAR as a follower. This will not disable encounters with the wilderness merchants.}{}{}{}{}
+{47}{No.(recommended)}{}{1}{}{49}{gf 2819 1}
+{48}{I hate encounters with random monsters(Makes  the game much much easier.)}{}{1}{}{49}{gf 2819 0}
+{49}{Do you want to get an one time bonus to electrical , fire  and damage resistances ?}{Do you want to get an one time bonus to electrical , fire  and damage resistances ?}{}{}{}{}
+{50}{No.(Not recommended)}{}{1}{}{61}{gv 1227 0}
+{51}{Yes(6%).(Very Hard)}{}{1}{}{61}{gv 1227 5}
+{52}{Yes(11%).(Hard)}{}{1}{}{61}{gv 1227 10}
+{53}{Yes(16%).(Medium)}{}{1}{}{61}{gv 1227 15}
+{54}{More ...}{}{1}{}{55}{}
+{55}{How much more @pcname@ ?}{How much more @pcname@ ?}{}{}{}{}
+{56}{Yes(21%).(Easy)}{}{1}{}{61}{gv 1227 20}
+{57}{Yes(24%).(Easy)}{}{1}{}{61}{gv 1227 23}
+{58}{Yes(27%).(Very Easy)}{}{1}{}{61}{gv 1227 26}
+{59}{Yes(29%).(Very Easy)}{}{1}{}{61}{gv 1227 28}
+{60}{Back ...}{}{1}{}{49}{}
+{61}{Do you want to enable the Molochean Hand Hack ? Scales the difficulty and the rewards of the the Molochean Hand encounters}{Do you want to enable the Molochean Hand Hack ? Scales the difficulty and the rewards of the the Molochean Hand encounters}{}{}{}{}
+{62}{Yes.(Not recommended unless you have used it before)}{}{1}{}{64}{gf 2822 1}
+{63}{No.}{}{1}{}{64}{gf 2822 0}
+{64}{In the world of Arcanum when some creature die their angry souls leave the dead body of the creature and  seek revenge .Do you want to make the Death Spirit souls scale with player level ? }{In the world of Arcanum when some creature die their angry souls leave the dead body of the creature and  seek revenge .Do you want to make the Death Spirit souls scale with player level ? }{}{}{}{}
+{65}{No  (easy)}{}{1}{}{67}{gf 2826 0}
+{66}{Yes (Hard)}{}{1}{}{67}{gf 2826 1}
+{67}{I would like to know some things about your character. What does your character think about persons of the other sex? (secondary social background)}{I would like to know some things about your character. What does your character think about persons of the other sex? (secondary social background)}{}{}{}{}
+{68}{Men and women should respect their traditional roles.(neutral)}{}{1}{}{80}{gv 1229 1}
+{69}{As a woman, let me assure you that women are superior to men.(sexist)}{0}{1}{}{80}{gv 1229 2}
+{70}{As a man, let me assure you that men are clearly superior to women.(sexist)}{1}{1}{}{80}{gv 1229 3}
+{71}{The gods have revealed to me that men and women are equal.(religious)}{}{1}{}{80}{gv 1229 4}
+{72}{Are we living in the dark ages? Of course man and woman are equal.(radical)}{}{1}{}{80}{gv 1229 5}
+{73}{I am, erm, more interested in my own sex than the other...}{0}{1}{}{80}{gv 1229 6}
+{74}{I am, erm, more interested in my own sex than the other...}{1}{19}{}{80}{gv 1229 7}
+{75}{Do you want me to add random food items to some bodies in the Starting area ? And if so how many ?}{Do you want me to add random food items to some bodies in the Starting area ? And if so how many ?}{}{}{}{}
+{76}{None.}{}{1}{}{80}{gv 1231 0}
+{77}{One.}{}{1}{}{80}{gv 1231 1}
+{78}{Three.}{}{1}{}{80}{gv 1231 3}
+{79}{Five.}{}{1}{}{80}{gv 1231 5}
+{80}{That is all .Do you want to finalize your changes and go play the game or nullify them and select everything from the start ? You will be able to see your choices under the section reputations in your book.}{That is all .Do you want to finalize your changes and go play the game or nullify them and select everything from the start ? You will be able to see your choices under the section reputations in your book.}{}{}{}{}
+{81}{I am satisfied. I want to start playing right away.}{}{1}{}{83}{}
+{82}{I want to change some options. Lets 'go again.}{}{1}{}{1}{}
+{83}{Just one thing more. I must inform you that encumbrance in the world of Arcanum not only reduces your speed but also your dodge skill and magickal aptitude. More specifically each level of encumbrance reduces your magickal aptitude by 10.You can however spend more points in spells to compensate.}{Just one thing more. I must inform you that encumbrance in the world of Arcanum not only reduces your speed but also your dodge skill and magickal aptitude. More specifically each level of encumbrance reduces your magickal aptitude by 10.You can however spend more points in spells to compensate.}{}{}{}{}
+{84}{Please go on.}{}{1}{}{85}{}
+{85}{Each level of encumbrance also reduces your dodge ability by 2/4 .You cannot put more points in dodge than the usual five. However there is a way to manage your encumbrance problem.}{Each level of encumbrance also reduces your dodge ability by 2/4 .You cannot put more points in dodge than the usual five. However there is a way to manage your encumbrance problem.}{}{}{}{}
+{86}{Please go on.}{}{1}{}{87}{}
+{87}{I can transfer to you right now some items .Each of those items when placed in your inventory will allow you to carry 2000 stones without encumbrance problems. Please do not think of this as cheating. It is just a way to modify the rules for your benefit.}{I can transfer to you right now some items .Each of those items when placed in your inventory will allow you to carry 2000 stones without encumbrance problems. Please do not think of this as cheating. It is just a way to modify the rules for your benefit.}{}{}{}{}
+{88}{Ok .What do you advise me to do ?}{}{1}{}{89}{}
+{89}{I advise you to accept those items. Later you can throw them away if you want. You can ask me only once for  those items.}{I advise you to accept those items. Later you can throw them away if you want. You can ask me only once for  those items.}{}{}{}{}
+{90}{Ok please transfer one of those items to me.}{}{1}{in-5735}{95}{in-5735 ,rp1216}
+{91}{Ok please transfer two of those items to me.}{}{1}{in-5735}{95}{in-5735 ,in-5735  ,rp1215}
+{92}{Ok please transfer four of those items to me.}{}{1}{in-5735}{95}{in-5735 ,in-5735 ,in-5735 ,in-5735 ,rp1214 }
+{93}{Ok please transfer nine of those items to me.}{}{1}{in-5735}{95}{in-5735 ,in-5735 ,in-5735 ,in-5735 ,in-5735 ,in-5735 ,in-5735 ,in-5735 ,in -5735,rp1213 }
+{94}{I do not want any of those items.}{}{1}{in-5735}{95}{rp1217}
+{95}{That is all .Have a nice adventure @pcname@. Remember  : you will be able to see your choices under the section reputations in your book.}{That is all .Have a nice adventure @pcname@. Remember  : you will be able to see your choices under the section reputations in your book.}{}{}{}{}
+{96}{E:}{}{1}{}{-2}{}
+{97}{}{}{}{}{}{}
+{98}{Of course not.}{}{1}{}{80}{gv 1228 0}
+{99}{Just give me the four top hats.}{}{1}{}{80}{gv 1228 4}
+{100}{Give me the teddy bear  the make up box and  the  top hats..}{}{1}{}{80}{gv 1228 8}
+{101}{Give me everything.}{}{1}{}{80}{gv 1228 12}
+{102}{Do you want to start the game with the following items: Four top quality hats  , four high heels shoes, a makeup box and a sweet teddy bear pillow ? }{Do you want to start the game with the following items: Four top quality hats  , four high heels shoes, a makeup box and a sweet teddy bear pillow ? }{}{}{}{}
+{103}{}{}{}{}{}{}
+{104}{}{}{}{}{}{}
+{105}{ok @pcname@ . Which special elite class package do you want ? }{ok @pcname@ . Which special elite class package do you want ? }{}{}{}{}
+{106}{Arcane Master.+35% to base fatigue +4 willpower.}{}{1}{}{29}{gv 1230 1248,gv 1218 0}
+{107}{Summoner. All your summons have +3 st and +3 dex.}{}{1}{}{29}{gv 1230 1249,gv 1218 0}
+{108}{Doctor. +4  intelligence +8/4 to doctor   +15 reaction in big cities.}{}{1}{}{29}{gv 1230 1250,gv 1218 0}
+{109}{back to one time bonus to hit points and fatigue}{}{1}{}{18}{}
+{110}{more  special elite class packages}{}{1}{}{111}{}
+{111}{What more elite class packages do you want ?}{What more elite class packages do you want ?}{}{}{}{}
+{112}{Gambler +4  intelligence +8/4 to gambling and +10 %  critical hits }{}{1}{}{29}{gv 1230 1251,gv 1218 0}
+{113}{Bruiser.  +10 damage bonus with all melee weapons.}{}{1}{}{29}{gv 1230 1252,gv 1218 0}
+{114}{Gladiator .+5 to dexterity +5/4  melee  +5/4 dodge.}{}{1}{}{29}{gv 1230 1253,gv 1218 0}
+{115}{back to one time bonus to hit points and fatigue}{}{1}{}{18}{}
+{116}{more  special elite class packages}{}{1}{}{117}{}
+{117}{What more elite class packages do you want ?}{What more elite class packages do you want ?}{}{}{}{}
+{118}{Merchant. +4  intelligence +8/4  haggle  +30 reaction wilderness traders +8 diamonds.}{}{1}{}{29}{gv 1230 1254,gv 1218 0}
+{119}{Gunner. +4 to perception +8/4 to guns and you start the game with a black diamond .}{}{1}{}{29}{gv 1230 1255,gv 1218 0}
+{120}{Technologist.  +4 to int + 4 random schematics + charged ring  +40 reaction Tarrant.}{}{1}{}{29}{gv 1230 1256,gv 1218 0}
+{121}{back to one time bonus to hit points and fatigue}{}{1}{}{}{}
+{122}{more  special elite class packages}{}{1}{}{123}{}
+{123}{What more elite class packages do you want ?}{What more elite class packages do you want ?}{}{}{18}{}
+{124}{Thief.+4 to dex +4/4 pickpocket , +4/4 locksmith +4/4 detect traps  +4/4 disable traps.}{}{1}{}{29}{gv 1230 1257,gv 1218 0}
+{125}{Ninja. .+2 to perception +5/4 to prowling +2 to dexterity  +5/4 backstab.+ fine dagger.}{}{1}{}{29}{gv 1230 1258,gv 1218 0}
+{126}{Diplomat.  +4 to charisma  +4/4 to persuasion +2 to beauty.}{}{1}{}{29}{gv 1230 1259,gv 1218 0}
+{127}{back to one time bonus to hit points and fatigue}{}{1}{}{18}{}
+{128}{back to special elite class packages}{}{1}{}{105}{}
+{129}{}{}{}{}{}{}

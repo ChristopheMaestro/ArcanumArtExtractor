@@ -1,0 +1,111 @@
+// Game portraits start at 1000
+
+// Each portrait is a 256 color BMP file that is 64 x 64 pixels. It's name should have a
+// three letter prefix which is 2 letters for race and one letter for gender. This prefix
+// defines which race-gender combination of a PC or NPC can use this portrait.
+
+// the race prefixes are
+//	HU - human
+//	DW - dwarf
+//	EL - elf
+//	HE - half elf
+//	GN - gnome
+//	HA - halfling
+//	HO - half orc
+//	HG - half ogre
+
+// the gender prefixes are
+//	M - male
+//	F - female
+
+// Special prefixes
+//	NPC - this portrait is useable only by NPC's, regardless of race or gender
+//	ANY - anyone (PC or NPC of any race or gender) can use this portrait
+
+// Example (using brackets instead of braces):
+//	[1000][ELM1]		means there is a portrait named data/portrait/ELM1.bmp
+//				which is only available to elf males 
+//	[1001][ANYpretty]	means there is a portrait named data/portrait/ANYpretty.bmp
+//				which is useable by anyone
+//	[1002][NPCbob]		means there is a portrait named data/portrait/NPCbob.bmp
+//	
+
+{1000}{ELM1}
+{1001}{DWM1}
+{1002}{GNM1}
+{1003}{HAM1}
+{1004}{HOM1}
+{1005}{HUM1}
+{1006}{ELF1}
+{1007}{HOF1}
+{1008}{HUF1}
+{1009}{HGM1}
+{1010}{HEM1}
+{1011}{HEF1}
+{1012}{HEM2}
+{1013}{HOF2}
+{1014}{GNM2}
+{1015}{ELM2}
+{1016}{HOM2}
+{1017}{HAM2}
+{1018}{HUM2}
+{1019}{HUM3}
+{1020}{DWM2}
+{1021}{HGM2}
+{1022}{GNM3}
+{1023}{HAM3}
+{1024}{ELF2}
+{1025}{HUF2}
+{1026}{HEF2}
+{1027}{HGM3}
+{1028}{DWM3}
+{1029}{HEF3}
+{1030}{HOM3}
+{1031}{HOF3}
+{1032}{HEM3}
+{1033}{ELM3}
+{1034}{ELF3}
+{1035}{NPCDoc}
+{1036}{NPCVirg}
+{1037}{NPCPerr}
+{1038}{NPCSogg}
+{1039}{NPCMag}
+{1040}{NPCGeof}
+{1041}{NPCVoll}
+{1042}{NPCGar}
+{1043}{NPCChukk}
+{1044}{NPCTor}
+{1045}{NPCFrank}
+{1046}{NPCLog}
+{1047}{NPCSeb}
+{1048}{NPCZan}
+{1049}{HUF3}
+{1050}{NPCDante}
+{1051}{NPCRav}
+{1052}{NPCJay}
+{1053}{NPCArr}
+{1054}{NPCJor}
+{1055}{NPCWeldo}
+{1056}{NPCTollo}
+{1057}{NPCBane}
+{1058}{NPCSwyft}
+{1059}{NPCCyn}
+{1060}{NPCThor}
+{1061}{NPCMerg}
+{1062}{NPCDog}
+{1063}{NPCWar}
+{1064}{NPCKrak}
+{1065}{NPCGorg}
+{1066}{DWM4}
+{1067}{HOM4}
+{1068}{GNM4}
+{1069}{HEM4}
+{1070}{HGM4}
+{1071}{HAM4}
+{1072}{HUM4}
+{1073}{ELM4}
+{1074}{HEF4}
+{1075}{HUF4}
+{1076}{HOF4}
+{1077}{ELF4}
+{1078}{NPCCar}

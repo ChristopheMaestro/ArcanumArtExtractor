@@ -1,0 +1,60 @@
+{1}{Welcome to The Sleep Hollow Inn. How may I help you sir?}{Welcome to The Sleepy Hollow Inn. How may I help you madame?}{}{}{}{}
+{2}{I'd like to rent a room please.}{}{5}{re 41, gf3151 0, gf3152 0}{20}{}
+{3}{We wunna get room.}{}{-4}{re 41, gf3151 0, gf3152 0}{20}{}
+{4}{I'd like to rent a room please.}{}{5}{re -40, gf3151 0, gf3152 0}{80}{}
+{5}{We wunna get room.}{}{-4}{re -40, gf3151 0, gf3152 0}{80}{}
+{6}{I'd like to rent a room please.}{}{5}{gf3151 1}{60}{}
+{7}{We wunna get room.}{}{-4}{gf3151 1}{60}{}
+{8}{I'd like to rent a room please.}{}{5}{gf3152 1}{70}{}
+{9}{We wunna get room.}{}{-4}{gf3152 1}{70}{}
+{10}{I'm looking for the Town Gossip.}{}{5}{gv800 2}{300}{}
+{11}{I'm looking for the Town Gossip.}{}{5}{gv800 3}{300}{}
+{12}{Me be lookin' for da Town Gossip.}{}{-4}{gv800 2}{300}{}
+{13}{Me be lookin' for da Town Gossip.}{}{-4}{gv800 3}{300}{}
+{14}{E:}{}{1}{}{0}{}
+{20}{Certainly sir. How long are you expecting to stay?}{Certainly sir. How long are you expecting to stay?}{}{}{}{}
+{21}{Just the one night please.}{}{5}{}{30}{}
+{22}{Won nite pleese.}{}{-4}{}{30}{}
+{23}{Better make that a week, I'll be in town for a while.}{}{5}{}{40}{}
+{24}{Uhh.. Me need hole week.}{}{-4}{}{40}{}
+{25}{F:}{}{1}{}{0}{}
+{30}{Well then sir, we have two rooms available for rent tonight. One, our pride and joy, is a first class room with all the finery! At only 50 coin for one nights' stay it is certainly worth seeing. Our second room is our... Er... How shall I put this? Oh yes, it is our 'discount' room for those who are lacking in coin. A modest sum of 20 coin will rent you this room for the night. Now then sir, which room would you like to rent?}{Well then madame, we have two rooms available for rent tonight. One, our pride and joy, is a first class room with all the finery! At only 50 coin for one nights' stay it is certainly worth seeing. Our second room is our... Er... How shall I put this? Oh yes, it is our 'discount' room for those who are lacking in coin. A modest sum of 20 coin will rent you this room for the night. Now then madame, which room would you like to rent?}{}{}{}{}
+{31}{Give me first class all the way! [Pay 50 coin]}{}{5}{$$50}{-9}{$$-50, lc0 23, gf3152 1}
+{32}{Me wan' good room! [Pay 50 coin]}{}{-4}{}{-9}{$$-50, lc0 23, gf3152 1}
+{33}{I'd better take the discount one. [Pay 20 coin]}{}{5}{$$20}{-5}{$$-20, lc0 23, gf3151 1}
+{34}{Uhhh... Me better get cheep won. [Pay 20 coin]}{}{-4}{$$20}{-5}{$$-20, lc0 23, gf3151 1}
+{35}{Actually, I think I'll need to stay for the whole week.}{}{5}{}{40}{}
+{36}{Uhhh... Akshully, me need hole week.}{}{-4}{}{40}{}
+{37}{F:}{}{1}{}{0}{}
+{40}{Okay then sir, we have two rooms available for the whole week. Our finest room at the special weekly rate of 200 coin is certainly worth seeing. However, if you lack the coin, then I suggest the 'discount' room for a mere 100 coin a week. Now then, which room would you like?}{Okay then sir, we have two rooms available for the whole week. Our finest room at the special weekly rate of 200 coin is certainly worth seeing. However, if you lack the coin, then I suggest the 'discount' room for a mere 100 coin a week. Now then, which room would you like?}{}{}{}{}
+{41}{Give me first class all the way! [Pay 200 coin]}{}{5}{$$200}{-9}{$$-200, lc0 167, gf3152 1}
+{42}{Me wan' good room! [Pay 200 coin]}{}{-4}{$$200}{-9}{$$-200, lc0 167, gf3152 1}
+{43}{I'd better take the discount one. [Pay 100 coin]}{}{5}{$$100}{-5}{$$-100, lc0 167, gf3151 1}
+{44}{Uhhh... Me better get cheep won. [Pay 100 coin]}{}{-4}{$$100}{-5}{$$-100, lc0 167, gf3151 1}
+{45}{I'd rather just stay for one night if that's possible.}{}{5}{}{30}{}
+{46}{Uhhh... Me wunna stay for tonite only.}{}{-4}{}{30}{}
+{47}{F:}{}{1}{}{0}{}
+{60}{I'm sorry sir, but you currently have an outstanding rent on our 'discount' bed. As such, I can't rent you another bed at this point in time.}{I'm sorry madame, but you currently have an outstanding rent on our 'discount' bed. As such, I can't rent you another bed at this point in time.}{}{}{}{}
+{61}{A:}{}{1}{}{0}{}
+{70}{I'm sorry sir, but you currently have the use of our finest bed. You can't have another bed until your current rent expires.}{I'm sorry madame, but you currently have the use of our finest bed. You can't have another bed until your current rent expires.}{}{}{}{}
+{71}{A:}{}{1}{}{0}{}
+{80}{Oh you would, would you? Well, the only room available for the likes of you is our 'discount' room. For you, it's 35 coin a night or 300 for the week. Take it or leave it.}{Oh you would, would you? Well, the only room available for the likes of you is our 'discount' room. For you, it's 35 coin a night or 300 for the week. Take it or leave it.}{}{}{}{}
+{81}{I'll take it for the night. [Pay 35 coin]}{}{5}{$$35}{-5}{$$-35, lc0 23, gf3151 1}
+{82}{Me haf' it fer nite. [Pay 35 coin]}{}{-4}{$$35}{-5}{$$-35, lc0 23, gf3151 1}
+{83}{I'll need it for the week. [Pay 300 coin]}{}{5}{$$300}{-5}{$$-300, lc0 167, gf3151 1}
+{84}{Uhhh.. Me need if fer week. [Pay 300 coin]}{}{-4}{$$300}{-5}{$$-300, lc0 167, gf3151 1}
+{85}{Surely I can get it cheaper?}{}{5}{ha 7}{90}{}
+{86}{Kan't me get it cheeper?}{}{-4}{ha 7}{90}{}
+{87}{E:}{}{1}{}{0}{}
+{90}{Hmmm... [He considers it for a moment] All right then, I'll give you the room for the normal price of 20 coin per night and 100 for the week. Is that agreeable?}{Hmmm... [He considers it for a moment] All right then, I'll give you the room for the normal price of 20 coin per night and 100 for the week. Is that agreeable?}{}{}{}{}
+{91}{Certainly, I'll take it for the night. [Pay 35 coin]}{}{5}{$$35}{-5}{$$-35, lc0 23, gf3151 1}
+{92}{Okay. Me wan' it fer nite. [Pay 35 coin]}{}{-4}{$$35}{-5}{$$-35, lc0 23, gf3151 1}
+{93}{Yes it is, I'll have it for the week. [Pay 300 coin]}{}{5}{$$300}{-5}{$$-300, lc0 167, gf3151 1}
+{94}{Uhuh... Me need if fer week. [Pay 300 coin]}{}{-4}{$$300}{-5}{$$-300, lc0 167, gf3151 1}
+{95}{E:}{}{1}{}{0}{}
+{100}{There you go sir, your bed is ready. The door to the 'discount' room is unlocked, you can go in when you're ready. Also, try not to break anything in there. Just because it's cheap doesn't mean you can go in and wreck the place.}{There you go madame. The door to the 'discount' room is unlocked, you can  go in when you're ready. Also, try not to break anything in there. Just because it's cheap doesn't mean you can go in and wreck the place.}{}{}{}{}
+{101}{A:}{}{1}{}{0}{}
+{200}{A fine choice sir! Your bed is ready and waiting for you. You will find the door to our best room unlocked, feel free to go in and use it at your pleasure!}{A fine choice madame! You will find the door to our best room unlocked, feel free to go in and use it at your pleasure!}{}{}{}{}
+{201}{A:}{}{1}{}{0}{}
+{300}{Well this is a first! Most people usually want to avoid the Gossip of Grayhills! You'll find him hiding in the corner of the Recreation Room through there [he points through the archway].}{Well this is a first! Most people usually want to avoid the Gossip of Grayhills! You'll find him hiding in the corner of the Recreation Room through there [he points through the archway].}{}{}{}{}
+{301}{A:}{}{1}{}{0}{}

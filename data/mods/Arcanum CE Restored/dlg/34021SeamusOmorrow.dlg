@@ -1,0 +1,120 @@
+{1}{'Ello there, cunny. What ye be about?}{'Ello there, cunny. What ye be about?}{}{}{}{}
+{2}{Nothing much. Have you anything of interest to talk to me about?}{}{5}{qu 1265 0}{10}{}
+{3}{Guhhhh...what? me not understand.}{}{-4}{qu 1265 0}{20}{}
+{4}{Q:1005}{}{1}{qa 1265 1}{0}{}
+{5}{What yoo talk to Walter about?}{}{-4}{lf1 0}{80}{}
+{6}{What did you and the Walter have to say to each other?}{}{5}{lf1 0}{80}{}
+{7}{T:4,5,6}{}{1}{}{0}{}
+{8}{E:}{}{1}{}{0}{}
+
+{10}{Aye, if a man be lookin for work, I think I could find some.}{Aye, if ye be lookin for work I think I could find some.}{}{}{}{}
+{11}{I'd appreciate any work you could offer.}{}{5}{}{25}{}
+{12}{Me want work! Me want work!}{}{-4}{}{25}{}
+{13}{E:}{}{1}{}{0}{}
+
+
+{20}{Aye, a bit slow of wit, are ye? Well, let me tell you, smarts dont matter nearly as much the drive to succeed! Willpower! A man's got to do what he's got to do in life, aye?}{Aye, a bit slow of wit, are ye? Well, let me tell you, smarts dont matter nearly as much the drive to succeed! Willpower! A man's got to do what he's got to do in life, aye?}{}{}{}{}
+{21}{Uh... yeah.}{0}{1}{}{25}{}
+{22}{I'm a woman.}{1}{1}{}{25}{}
+{23}{Me not know what you talking about. Bye.}{}{1}{}{0}{}
+
+{25}{Well then, are you a man who is willing to do the dirty jobs in order to better his own life? I mean, the REALLY dirty jobs?}{Well then, are you a woman who is willing to do the dirty jobs in order to better his own life? I mean, the REALLY dirty jobs?}{}{}{}{}
+{26}{What kind of dirty jobs?}{}{5}{}{30}{}
+{27}{Oh, illegal stuff? Sure, No problem.}{}{10}{}{35}{qu 1265 1}
+{28}{Me not care about dirt. What job?}{}{-4}{}{35}{}
+{29}{No way. Bye.}{}{1}{}{0}{}
+
+{30}{The kind that are, um, how shall we say... legally questionable.}{The kind that are, um, how shall we say... legally questionable.}{}{}{}{}
+{31}{Oh, that's what you meant? I have no problem with breaking the law for gain.}{}{5}{}{35}{}
+{32}{What? Engage in illegal activity? I would never do such a thing!}{}{5}{}{0}{qu 1265 1, re -10}
+{33}{I'm sorry, not interested.}{}{5}{}{0}{}
+
+{35}{A frien' of mine needs a cunny silenced. An older cunny in Tull, by the name of Gromoth. If you take care of him, I can pay ya 400 coin.}{A frien' of mine needs a cunny silenced. An older cunny in Tull, by the name of Gromoth. If you take care of him, I can pay ya 400 coin.}{}{}{}{}
+{36}{Alright, I'll do it.}{}{5}{}{45}{qu 1265 2}
+{37}{Ok, me do it!}{}{-4}{}{45}{qu 1265 2}
+{38}{Kill someone? Forget it! I'm out of here!}{}{5}{}{0}{qu 1265 1, re -10}
+{39}{You wan me murder someone? No thanks, me leaving!}{}{-4}{}{0}{qu 1265 1, re -10}
+{40}{F:}{}{1}{}{0}{qu 1265 1}
+
+{45}{Aye. See me with your payment when the deed's done.}{Aye. See me with your payment when the deed's done.}{}{}{}{}
+{46}{E:}{}{1}{}{0}{}
+
+{50}{The following are quest responses.}{The following are quest responses.}{}{}{}{}
+
+{51}{I've decided to take you up on that "job".}{}{1}{}{35}{}
+{52}{I'm still working on taking care of Gromoth for you. Where did you say he was?}{}{1}{}{100}{}
+{53}{I've done the deed. The old fool is dead.}{}{1}{}{110}{}
+{55}{I let him go.}{}{1}{}{130}{}
+
+{57}{I've decided to take you up on that "job".}{}{1}{}{120}{}
+{58}{I'm still working on taking care of Gromoth for you. Where did you say he was?}{}{1}{}{120}{}
+{59}{I've done the deed. The old fool is dead.}{}{1}{}{120}{}
+
+{64}{Me think me change mind about job!}{}{1}{}{35}{}
+{65}{Me still trying to off Gromoth. Where he at again?}{}{1}{}{100}{}
+{66}{Old Man Gromoth dead. Where my money?}{}{1}{}{110}{}
+{69}{I let him go.}{}{1}{}{130}{}
+
+{80}{Nothin! He just wanted to find out where the outhouse was.}{Nothin! He just wanted to find out where the outhouse was.}{}{}{}{}
+{81}{Why do I not believe you?}{}{5}{}{85}{}
+{82}{Look, let me explain to you exactly WHY you should tell me what I want to know...[Persuade him.]}{}{5}{ps 4}{150}{}
+{83}{Me think you lie!}{}{-4}{}{85}{}
+{84}{Me think you should tell me! NOW![Persuade him.]}{}{-4}{ps 4}{150}{}
+
+{85}{Sir, such accusations wound me! I am a law-abiding citizen, and would like nothing more than to help your squireship in catching Walter.}{Ma'am, such accusations wound me! I am a law-abiding citizen, and would like nothing more than to help your squireship in catching Walter.}{}{}{}{}
+{86}{How much coin will it cost me?}{}{5}{}{90}{}
+{87}{Okie. How much this gonna cost?}{}{-4}{}{90}{}
+{88}{Yoo tell me, or yoo regret it.}{}{-4}{}{140}{}
+{89}{Two choices. Tell me what I want to know, or I make your skull into pureed yam.}{}{4}{}{140}{}
+
+{90}{Oh, perhaps... 50 coin. Ya, for 50 coin I'll tell you what you want to know.}{Oh, perhaps... 50 coin. Ya, for 50 coin I'll tell you what you want to know.}{}{}{}{}
+{91}{Ok. Here's your 50 coin.}{}{5}{$$ 50}{150}{$$ 50}
+{92}{Okie. Here the coin.}{}{-4}{$$ 50}{150}{$$ 50}
+{93}{I don't have enough. I may be back later, though.}{}{5}{}{0}{}
+{94}{Me not have enough. Me come back when me have enough.}{}{-4}{}{0}{}
+{95}{F:}{}{1}{}{0}{}
+
+{100}{Gromoth is in Tull, remember? He's an elderly gent.}{Gromoth is in Tull, remember? He's an elderly gent.}{}{}{}{}
+{101}{Oh yeah... bye.}{}{1}{}{0}{}
+
+
+{110}{Aye, good work, cunny. Here's your coin, as promised. Nice doing business with ye.}{Aye, good work, cunny. Here's your coin, as promised. Nice doing business with ye.}{}{}{}{}
+{111}{Thanks.}{}{1}{}{0}{qu 1265 4}
+
+
+{120}{I have no desire to do further business with you. You have angered me one time too many.}{I have no desire to do further business with you. You have angered me one time too many.}{}{}{}{}
+{121}{E:}{}{1}{}{0}{}
+
+{130}{Ye did WHAT?! And ye have the nerve to come back here and tell me to me face? Do ye wish to DIE?}{Ye did WHAT?! And ye have the nerve to come back here and tell me to me face? Do ye wish to DIE?}{}{}{}{}
+{131}{Yes.}{}{1}{}{140}{}
+{132}{No... please don't hurt me.}{}{1}{}{140}{}
+{133}{Not before you, you slimy murdering bastard!}{}{5}{}{}{qu 1265 6, co, fl 135}
+{134}{Me kill you first, bad man!}{}{-4}{}{}{qu 1265 6, co, fl 135}
+
+{135}{I'll kill ye!!!}{I'll kill ye!!!}{}{}{}{}
+
+{140}{Don't test your luck with me, sonny. I'd gut ye like a rabbit.}{Don't test your luck with me, lassie. I'd gut ye like a rabbit.}{}{}{}{}
+{141}{Ahm...alright. I'll be leaving now.}{}{5}{}{0}{}
+{142}{Gah... me leave now.}{}{-4}{}{0}{}
+{143}{Let's go, you cheesy-accent motherfucker.}{}{5}{}{}{qu 1265 6, co, fl 135}
+{144}{Me kill you! DIiiiiieee!!}{}{-4}{}{}{qu 1265 6, co, fl 135}
+
+{150}{The Landers man- John Landers. He told me to be on the lookout for this guy, and to tell him where John lived when he got into town. Apparently they have some sort of business relationship.}{The Landers man- John Landers. He told me to be on the lookout for this guy, and to tell him where John lived when he got into town. Apparently they have some sort of business relationship.}{}{}{}{lf1 1}
+{151}{John Landers is dead, along with the rest of his family. Walter did it.}{}{5}{qa 1270 3}{160}{}
+{152}{All Landers family dead now. Walter kill them.}{}{-4}{qa 1270 3}{160}{}
+{153}{John Landers? Where can I find him?}{}{5}{}{170}{}
+{154}{Where I find John Landers at?}{}{-4}{}{170}{}
+{155}{F:}{}{1}{}{1}{}
+{156}{E:}{}{1}{}{0}{}
+
+{160}{Well, I ain't had nothing ta do with that. I just told Walter where he could find John, like John told me to. And I been cooperative. That's all I know!}{Well, I ain't had nothing ta do with that. I just told Walter where he could find John, like John told me to. And I been cooperative. That's all I know!}{}{}{}{}
+{161}{Alright. Let me know if you "remember" anything else.}{}{5}{}{0}{}
+{162}{Okie. Talk to me if you figger anything out.}{}{-4}{}{0}{}
+{163}{I don't believe you. YOu fucking tell me now or I'll kill you.}{}{5}{}{140}{}
+{164}{Me think you lie. ME KILL YOU IF YOU LIE!}{}{-4}{}{140}{}
+
+{170}{He and his family live in a house over on the west side of town. Just south of Erenor's Knickknacks and Sundries.}{He and his family live in a house over on the west side of town. Just south of Erenor's Knickknacks and Sundries.}{}{}{}{}
+{171}{Ok. Thanks for the information.}{}{5}{}{0}{}
+{172}{Okie. Thanks for the info.}{}{-4}{}{0}{}
+
+
