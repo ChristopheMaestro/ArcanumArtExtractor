@@ -1,0 +1,90 @@
+{1}{What are you doing down here?}{What are you doing down here?}{}{}{}{}
+{2}{I was about to ask you the same question!}{}{5}{}{210}{}
+{3}{Having a look around.  Why?  Do you own the sewers?}{}{5}{}{220}{}
+{5}{I'm looking for training.  Can you help me?}{}{5}{}{10}{}
+{6}{U live in steenky place!}{}{-4}{}{230}{}
+{9}{E:}{}{1}{}{0}{}
+
+{10}{Depends on what you're looking for.  I specialize in espionage - Spotting and Disarming Traps, and Picking Locks. [she gives you a sideways glance]}{Depends on what you're looking for.  I specialize in espionage - Spotting and Disarming Traps, and Picking Locks. [she gives you a sideways glance]}{}{}{}{}
+{11}{If I can see a trap, I can avoid a trap.  Teach me Spotting Traps.}{}{5}{}{180}{}
+{12}{If I can disarm a trap, I can get past it.  Teach me Disarming Traps.}{}{5}{}{190}{}
+{13}{If I can get past a lock then I don't need a key.  Teach me Lock Picking.}{}{5}{}{200}{}
+{19}{F:}{}{1}{}{1}{}
+
+{30}{What else do you need?}{What else do you need?}{}{}{}{}
+{39}{E:}{}{1}{}{0}{}
+
+{50}{Training to be a Trap Spotting Expert will cost you 200 coin.}{Training to be a Trap Spotting Expert will cost you 200 coin.}{}{}{}{}
+{51}{I've got the money right here. [give her 200 coin]}{}{1}{$$200}{60}{$$-200, tr7 2}
+{59}{F:}{}{1}{}{0}{}
+
+{60}{You're a Trap Spotting Expert now.}{You're a Trap Spotting Expert now.}{}{}{}{}
+{69}{A:}{}{1}{}{0}{}
+
+{70}{Training to be a Trap Spotting Master takes the utmost in concentration.  If you are sure you're ready, the price is 300 coin.}{Training to be a Trap Spotting Master takes the utmost in concentration.  If you are sure you're ready, the price is 300 coin.}{}{}{}{}
+{71}{[After a moment of reflection] I think it is time I mastered Backstabbing.}{}{1}{$$300}{80}{$$-300, tr7 3}
+{79}{F:}{}{1}{}{1}{}
+
+{80}{[There are secret techniques, and then there are long forgotten secret techniques.  She shows you all of the latter]  Congratulations, Trap Spotting Master.}{[There are secret techniques, and then there are long forgotten secret techniques.  She shows you all of the latter]  Congratulations, Trap Spotting Master.}{}{}{}{}
+{89}{A:}{}{1}{}{0}{} 
+
+{90}{How unfortunate, it appears that you lack the necessary requirements to become a Master. Perhaps if you improve and come back later?}{How unfortunate, it appears that you lack the necessary requirements to become a Master. Perhaps if you improve and come back later?}{}{}{}{}
+{99}{E:}{}{1}{}{0}{}
+
+{100}{If you seek to become a Trap Disarming Expert, the cost will be 200 coin.}{If you seek to become a Trap Disarming Expert, the cost will be 200 coin.}{}{}{}{}
+{101}{Here is the necessary coin.}{}{1}{$$200}{140}{$$-200, tr15 2}
+{109}{F:}{}{1}{}{0}{}
+
+{110}{A Trap Disarming Master becomes one with his trap.  Only the most dedicated can receive this training.  It will cost you 300 coin.}{A Trap Disarming Master becomes one with her trap.  Only the most dedicated can receive this training.  It will cost you 300 coin.}{}{}{}{}
+{111}{I've known for a long time that I was meant to be a Pick Pocket Master. [give her 300 coin]}{}{1}{$$300}{150}{$$-300, tr15 3}
+{119}{F:}{}{1}{}{1}{}
+
+{120}{Lock Picking Expert?  The fee is 200 coin.}{Lock Picking Expert?  The fee is 200 coin.}{}{}{}{}
+{121}{[give her 200 coin]}{}{1}{$$200}{160}{$$-200, tr14 2}
+{129}{F:}{}{1}{}{0}{}
+
+{130}{Lock Picking Master?  My fee is 300 coin.}{Lock Picking Master?  My fee is 300 coin.}{}{}{}{}
+{131}{Here's your money. [give her 300 coin]}{}{1}{$$300}{170}{$$-300, tr14 3}
+{139}{F:}{}{1}{}{1}{}
+
+{140}{You are truly a Trap Disarming Expert now.}{You are truly a Trap Disarming Expert now.}{}{}{}{}
+{149}{A:}{}{1}{}{0}{}
+
+{150}{You are now one with your trap.}{You are now one with your trap.}{}{}{}{}
+{159}{A:}{}{1}{}{0}{} 
+
+{160}{You are an expert at Lock Picking now.}{You are an expert at Lock Picking now.}{}{}{}{}
+{169}{A:}{}{1}{}{0}{}
+
+{170}{Lock Picking Master - No locks are safe any longer!}{Lock Picking Master - No locks are safe any longer!}{}{}{}{}
+{179}{A:}{}{1}{}{0}{} 
+
+{180}{What level of training do you want?}{What level of training do you want?}{}{}{}{}
+{181}{T:7}{}{1}{}{30}{}
+{182}{Train me to be a Trap Spotting Expert.}{}{1}{tr7 -1}{1}{et7 50}
+{183}{Train me to be a Trap Spotting Master.}{}{1}{sk7 18, tr7 2, tr7 -2}{70}{}
+{184}{Train me to be a Trap Spotting Master.}{}{1}{tr7 -1}{90}{}
+{189}{F:}{}{1}{}{1}{}
+
+{190}{What level of training do you seek?}{What level of training do you seek?}{}{}{}{}
+{191}{T:15}{}{1}{}{30}{}
+{192}{Train me to be a Trap Disarming Expert.}{}{1}{tr15 -1}{1}{et15 100}
+{193}{Train me to be a Trap Disarming Master.}{}{1}{sk15 18, tr15 2, tr15 -2}{110}{}
+{194}{Train me to be a Trap Disarming Master.}{}{1}{tr15 -1}{90}{}
+{199}{F:}{}{1}{}{1}{}
+
+{200}{What level of training do you seek?}{What level of training do you seek?}{}{}{}{}
+{201}{T:14}{}{1}{}{30}{}
+{202}{Train me to be a Lock Picking Expert.}{}{1}{tr14 -1}{1}{et14 120}
+{203}{Train me to be a Lock Picking Master.}{}{1}{sk14 18, tr14 2, tr14 -2}{130}{}
+{204}{Train me to be a Lock Picking Master.}{}{1}{tr14 -1}{90}{}
+{209}{F:}{}{1}{}{1}{}
+
+{210}{I live here.}{I live here.}{}{}{}{}
+{219}{E:}{}{1}{}{0}{}
+
+{220}{No.}{No.}{}{}{}{}
+{229}{E:}{}{1}{}{0}{}
+
+{230}{Wait a minute.  Is that ear wax?  No - it's the rest of your brains leaking out of your ear.  That's so sad.}{Wait a minute.  Is that ear wax?  No - it's the rest of your brains leaking out of your ear.  That's so sad.}{}{}{}{}
+{229}{E:}{}{1}{}{0}{}

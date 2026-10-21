@@ -1,0 +1,63 @@
+{1}{Monsieur?}{Madame?}{}{}{}{}
+{2}{W:}{}{1}{lf1 0}{30}{lf1 1}
+{3}{Que faites vous à Tarn-el-Sadar?}{}{5}{lf2 0}{60}{lf2 1}
+{4}{Quoi toi faire à Tarn-el-Sadar?}{}{-4}{lf2 0}{60}{lf2 1}
+{5}{E:}{}{1}{}{90}{}
+
+{30}{Mon nom est Mëlyàn Lomëlindë.}{Mon nom est Mëlyàn Lomëlindë.}{}{}{}{}
+{31}{Que faites vous à Tarn-el-Sadar?}{}{5}{lf2 0}{60}{lf2 1}
+{32}{Quoi toi faire à Tarn-el-Sadar?}{}{-4}{lf2 0}{60}{lf2 1}
+{33}{E:}{}{1}{}{90}{}
+
+{60}{Je fais le commerce d'herbes médicinales avec la ville de Dernholm. J'achète en échange des épices qui se vendent très bien ici.}{Je fais le commerce d'herbes médicinales avec la ville de Dernholm. J'achète en échange des épices qui se vendent très bien ici.}{}{}{}{}
+{61}{W:}{}{1}{lf1 0}{30}{lf1 1}
+{62}{E:}{}{1}{}{90}{}
+
+{90}{Je vous en supplie, écoutez moi!}{Je vous en supplie, écoutez moi!}{}{}{}{}
+{91}{Que se passe-t-il?}{}{5}{}{120}{}
+{92}{Je n'ai pas de temps à vous consacrer.}{}{5}{}{0}{lf3 1}
+{93}{Quoi toi dire?}{}{-4}{}{120}{}
+{94}{@pcname@ pas avoir temps pour toi.}{}{-4}{}{0}{lf3 1}
+
+{120}{Je ne le montre à personne ici, mais je suis au désespoir, monsieur. Ma fille Ninièl a disparu. Cela fait trois jours que je ne l'ai pas vue! Tous le monde ici se rit de moi tellement ma petite Ninièl a déjà fugué. Mais, j'ai un pressentiment, cette fois-ci...}{Je ne le montre à personne ici, mais je suis au désespoir, madame. Ma fille Ninièl a disparu. Cela fait trois jours que je ne l'ai pas vue! Tous le monde ici se rit de moi tellement ma petite Ninièl a déjà fugué. Mais, j'ai un pressentiment, cette fois-ci...}{}{}{}{}
+{121}{Qu'est-ce qui vous fait penser que ce n'est pas une fugue?}{}{5}{lf4 0, qu1000 0}{160}{lf4 1}
+{122}{Chez qui votre fille se réfugiait-elle lors de ses fugues?}{}{5}{lf5 0, qu1000 0}{220}{lf5 1}
+{123}{Pourquoi toi penser ça?}{}{-4}{lf4 0, qu1000 0}{160}{lf4 1}
+{124}{Ta fille aller où avant pendant fugues?}{}{-4}{lf5 0, qu1000 0}{220}{lf5 1}
+{125}{[Vous lui donnez la note trouvée sur le corps de sa fille.]}{}{1}{qu1000 4}{}{fl 320}
+
+{160}{Ces affaires sont toujours là... Elle m'a dit qu'elle allait simplement se promener du côté de la prison troglodyte...}{Ces affaires sont toujours là... Elle m'a dit qu'elle allait simplement se promener du côté de la prison troglodyte...}{}{}{}{ru1001}
+{161}{Où se touve cet endroit?}{}{5}{}{190}{}
+{162}{Où être?}{}{-4}{}{190}{}
+{163}{Chez qui votre fille se réfugiait-elle lors de ses fugues?}{}{5}{lf5 0}{220}{lf5 1}
+{164}{Ta fille aller où avant pendant fugues?}{}{-4}{lf5 0}{220}{lf5 1}
+
+{190}{Un chemin y mène en direction de l'Est. C'est indiqué.}{Un chemin y mène en direction de l'Est. C'est inndiqué.}{}{}{}{}
+{191}{Chez qui votre fille se réfugiait-elle lors de ses fugues?}{}{5}{lf5 0}{220}{lf5 1}
+{192}{Ta fille aller où avant pendant fugues?}{}{-4}{lf5 0}{220}{lf5 1}
+{193}{Je vais faire mon possible pour retrouver votre fille.}{}{5}{lf4 1, lf5 1}{}{lf6 1, fl 260, re +10, qu1000 2}
+{194}{Moi essayer retrouver fille.}{}{-4}{lf4 1, lf5 1}{}{lf6 1, fl 260, re +10, qu1000 2}
+{195}{E:}{}{1}{lf4 1, lf5 1}{0}{re -10, qu1000 1, lf6 1}
+
+
+{220}{Elle allait chez ce vaurien d'Henri Langham! Il habite à la sortie de la ville.}{Elle allait chez ce vaurien d'Henri Langham! Il habite à la sortie de la ville.}{}{}{}{ru1000}
+{221}{Qu'est-ce qui vous fait penser que ce n'est pas une fugue?}{}{5}{lf4 0}{160}{lf4 1}
+{223}{Pourquoi toi penser pas être fugue?}{}{-4}{lf4 0}{160}{lf4 1}
+{224}{Je vais faire mon possible pour retrouver votre fille.}{}{5}{lf4 1, lf5 1}{}{lf6 1, fl 260, re +10, qu1000 2}
+{225}{Moi essayer retrouver fille.}{}{-4}{lf4 1, lf5 1}{}{lf6 1, fl 260, re +10, qu1000 2}
+{226}{E:}{}{1}{lf4 1, lf5 1}{0}{re -10, qu1000 1, lf6 1}
+
+{260}{Vous avez du coeur, monsieur!... Dieu vous vienne en aide pour retrouver ma fille!}{Vous avez du coeur, madame!... Dieu vous vienne en aide pour retrouver ma fille!}{}{}{}{}
+
+{290}{Avez-vous retrouvé ma fille?}{Avez-vous retrouvé ma fille?}{}{}{}{}
+{291}{Je la recherche activement, madame.}{}{5}{qu1000 2}{0}{}
+{292}{Moi chercher encore}{}{-4}{qu1000 2}{0}{}
+{293}{[Vous lui annoncez que sa fille a été tuée par un ogre.]}{}{1}{qu1000 4}{}{fl 320}
+{294}{J'ai aussi mes propres affaires, madame.}{}{5}{qu1000 1}{0}{}
+{295}{@pcname@ avoir aussi affaires...}{}{-4}{qu1000 1}{0}{}
+
+{320}{MON DIEU !!! NON !!! [elle fond en larmes]}{MON DIEU !!! NON !!! [elle fond en larmes]}{}{}{}{lf7 1}
+
+{330}{Laissez moi seule, je n'en puis plus...}{Laissez moi seule, je n'en puis plus...}{}{}{}{}
+
+

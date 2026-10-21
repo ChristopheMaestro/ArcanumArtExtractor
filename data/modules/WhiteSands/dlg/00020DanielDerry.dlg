@@ -1,0 +1,55 @@
+{1}{Well, what can I do for you today *hic* sir?}{Well, what can I do for you today *hic* pretty lady?)}{}{}{}{}
+{2}{Who might you be, sir?}{}{5}{}{5}{lf1 1}
+{3}{Whut yor name?}{}{-4}{}{5}{lf1 1}
+{4}{E:}{}{1}{}{0}{}
+{5}{Daniel Derry, adventurer extraordinaire and sampler of find brews across the baronies. At your service.[His drink sloshes as he bows comically.]}{Daniel Derry, adventurer extraordinaire and sampler of find brews across the baronies. At your service.[His drink sloshes as he bows comically.]}{}{}{}{}
+{6}{Well met.}{}{5}{}{10}{}
+{7}{Duuuhh...hi.}{}{-4}{}{10}{}
+{8}{E:}{}{1}{}{0}{}
+{10}{What can I do for you today?}{What can I do for you today?}{}{}{}{}
+{11}{I understand you've got Mr. Doan's book.}{}{5}{qu 1007 2}{50}{}
+{12}{So, you got Doan book?}{}{-4}{qu 1007 2}{50}{}
+{13}{Nice to meet you, Daniel! Have you had many adventures in Newberg?}{}{5}{lf2 0}{20}{}
+{14}{Hi-hi, Mistar Derrey!!! You are advencherer, huh?}{}{-4}{lf2 0}{20}{}
+{15}{You adventurer types make me sick.}{}{5}{lf4 0}{0}{re -5, lf4 1}
+{16}{Uh-uh! You stoopid advencherer.}{}{-4}{lf4 0}{0}{re -5, lf4 1}
+{17}{T:0,1,7}{}{1}{}{0}{}
+{18}{E:}{}{1}{}{0}{}
+{20}{Oh yes, I am a great adventurer. I've travelled with caravans all up and down the Western Barony coasts, as far north as S'Addle. seen amazing creatures and strange phenomenon.}{Oh yes, I am a great adventurer. I've travelled with caravans all up and down the Western barony coasts, as far north as S'Addle. I have seen amazing creatures and strange phenomenon.}{}{}{}{}
+{21}{Like what?}{}{1}{}{30}{}
+{22}{F:}{}{1}{}{10}{}
+{30}{I've seen rats the size of dogs, and big thunderous guns that could blow a hole through a mountain. I've seen a sorceror make a flock of birds dance at his bidding. I've seen dark half-living creatures of the night swallow a man's soul.}{I've seen rats the size of dogs, and big thunderous guns that could blow a hole through a mountain. I've seen a sorceror make a flock of birds dance at his bidding. I've seen dark half-living creatures of the night swallow a man's soul.}{}{}{}{}
+{31}{Wow, you have truly seen some odd and wonderful things. Could I join your caravan someday, perhaps?}{}{5}{}{40}{lf2 1}
+{32}{Uhhh, wow, dat some neat stuff. Me want to come with you on wagons. See amazing stuffs.}{}{-4}{}{40}{lf2 1}
+{33}{Yeah right. Lies.}{}{5}{}{0}{lf2 1, re -5, fl 111}
+{34}{You make all dat up! You lie!}{}{-4}{}{0}{lf2 1, re -5, fl 111}
+{35}{Neato. Bye.}{}{1}{}{0}{lf2 1}
+{36}{F:}{}{1}{}{10}{lf2 1}
+{40}{Perhaps, my friend. Perhaps, when the full release of WhiteSands comes out, we can travel together.}{Perhaps, my friend. Perhaps, when the full release of WhiteSands comes out, we can travel together.}{}{}{}{}
+{41}{Awww, shucks. I can't wait.}{}{5}{}{0}{}
+{42}{Ohh, me not want to wait. *eyes fill with tears*}{}{-4}{}{0}{}
+{50}{[His eyes narrom suspiciously.] Who told you that? Is that old man running that mouth of his again? If I've told him once, I've told him a hundred times, I don't have his book!}{[His eyes narrom suspiciously.] Who told you that? Is that old man running that mouth of his again? If I've told him once, I've told him a hundred times, I don't have his book!}{}{}{}{}
+{51}{He seems to believe otherwise.}{}{5}{}{60}{}
+{52}{He dont beleeve you! He say you got it!}{}{-4}{}{60}{}
+{53}{Do you know who might have it, then?}{}{5}{}{70}{}
+{54}{Guhh... are you know who have it then?}{}{-4}{}{70}{}
+{55}{E:}{}{1}{}{0}{}
+{60}{Well, he can go to hell. I lost it three weeks ago in the Swamps west of Newberg when the caravan I travelled with wrecked. I'm not going back for it, but if you want it, that's where it'll be. [He shows you on your map where the Swamps are.]}{Well, he can go to hell. I lost it three weeks ago in the Swamps west of Newberg when the caravan I travelled with wrecked. I'm not going back for it, but if you want it, that's where it'll be. [He shows you on your map where the Swamps are.]}{}{}{}{mm3 }
+{61}{I don't believe you. Hand it over now, or pay the price.}{}{5}{}{100}{re -10}
+{62}{Me no beleeve you! You lie!!!!}{}{-4}{}{100}{re -10}
+{63}{Hmm, alright. I guess I'll go search for it there.}{}{5}{}{0}{}
+{64}{Okie. Me go look in Swamp for book.}{}{-4}{}{0}{}
+{65}{E:}{}{1}{}{0}{}
+{70}{I haven't a clue who has it. I lost it in the Swamps to the west when the caravan I travelled with wrecked. It could be anywhere in that area by now. [He indicates the area he lost it in on your map.]}{I haven't a clue who has it. I lost it in the Swamps to the west when the caravan I travelled with wrecked. It could be anywhere in that area by now. [He indicates the area he lost it in on your map.]}{}{}{}{mm3 }
+{71}{I don't believe you. Hand it over now, or pay the price.}{}{5}{}{100}{re -10}
+{72}{Me no beleeve you! You lie!!!!}{}{-4}{}{100}{re -10}
+{73}{Hmm, alright. I guess I'll go search for it there.}{}{5}{}{0}{}
+{74}{Okie. Me go look in Swamp for book.}{}{-4}{}{0}{}
+{75}{E:}{}{1}{}{0}{}
+{100}{You be playing with your life if you fuck with me, laddy. Back off.}{You be playing with your life if you fuck with me, girl. Back off.}{}{}{}{}
+{101}{Alright, I'm leaving.}{}{5}{}{0}{}
+{102}{Me leave now.}{}{-4}{}{0}{}
+{103}{Fuck with this, asshole.[Attack him.]}{}{5}{}{}{co, fl 110}
+{104}{Me kill you!!!!!}{}{-4}{}{}{co, fl 110}
+{110}{I'll see you in hell!}{I'll see you in hell!}{}{}{}{}
+{111}{How dare you insult me so!}{How dare you insult me so!}{}{}{}{}

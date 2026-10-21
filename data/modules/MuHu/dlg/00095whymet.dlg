@@ -1,0 +1,42 @@
+// [LABEL] Bonjour
+{1}{Oui, je suis occupé, quesque vous voulez ?}{Oui, je suis occupé, quesque vous voulez ?}{}{1}{}{}
+{2}{Je voudrais vous poser quelques questions}{}{1}{}{21}{}
+{3}{Si vous êtes occupé , je vous laisse. au revoir}{}{1}{}{}{}
+
+// [LABEL] question
+{21}{Vous savez depuis ce qu'il m'est arrivé ce matin même je suis prêt à répondre à n'importe quelle question.}{Vous savez depuis ce qu'il m'est arrivé ce matin même je suis prêt à répondre à n'importe quelle question.}{}{2}{}{}
+{22}{Ah , que vous est-il arrivé ce matin ?}{}{1}{}{41}{}
+{23}{Je disais ça pour rire. Je dois partir.}{}{1}{}{}{}
+
+// [LABEL] cematin
+{41}{Figurez-vous que ce matin, cet oeuf que vous voyez ici, avait la taille d'un oeuf à la coque ordinaire. Ma femme était allée le chercher au poulailler. Quand je le laisse chauffer quelques minutes, je reviens à la cuisine, puis le trouve à cette taille !! vous vous rendez compte !}{Figurez-vous que ce matin, cet oeuf que vous voyez ici, avait la taille d'un oeuf à la coque ordinaire. Ma femme était allée le chercher au poulailler. Quand je le laisse chauffer quelques minutes, je reviens à la cuisine, puis le trouve à cette taille !! vous vous rendez compte !}{}{3}{}{}
+{42}{C'est étonnant ! Pourquoi avez vous ramené cet oeuf ici ?}{}{1}{}{61}{}
+{43}{C'est stupéfiant...... d'ailleurs en parlant de stupéfiants, je vous conseillerai de ne pas en abuser, voyez le résultat.}{}{1}{}{81}{}
+{44}{Je dois partir, vous continuerez une autre fois}{}{1}{}{}{}
+
+// [LABEL] oeufici
+{61}{Je l'ai ramené avec ce petit wagon, il est trop lourd ! Je voulais le présenter à ces 3 hommes, ce sont des chercheurs renommés, mais ils croient à une supercherie ! Je sais pourtant ce que j'ai vu ! J'aimerais bien qu'ils m'aident à résoudre ça !}{Je l'ai ramené avec ce petit wagon, il est trop lourd ! Je voulais le présenter à ces 3 hommes, ce sont des chercheurs renommés, mais ils croient à une supercherie ! Je sais pourtant ce que j'ai vu ! J'aimerais bien qu'ils m'aident à résoudre ça !}{}{4}{}{}
+{62}{Si vous voulez je peux voir ce que je peux faire pour vous ?}{}{1}{}{101}{}
+{63}{C'est pas étonnant qu'ils croient à une supercherie...}{}{1}{}{81}{}
+{64}{Je dois partir, sorry}{}{1}{}{}{}
+
+// [LABEL] prenezpourunfou
+{81}{Vous me prenez pour un fou, c'est ça ? Vous n'avez pas tort, à votre place je réagirais comme vous, mais je sais ce que j'ai vu !! personne ne me croit !}{Vous me prenez pour un fou, c'est ça ? Vous n'avez pas tort, à votre place je réagirais comme vous, mais je sais ce que j'ai vu !! personne ne me croit !}{}{5}{}{}
+{82}{Bon d'accord, admettons que je vous croies....qu'y aurait-ilà faire pour vous aider ?}{}{1}{}{101}{}
+{83}{Vous auriez vous aussi très bien réagi, bravo....malheureusement vous êtes fou, au revoir.}{}{1}{}{}{}
+
+// [LABEL] peux faire pour vous
+{101}{Ben ce serait sympa à vous d'examiner mon poulailler et les alentours, parce que ma femme est partie pour quelques jours, elle ne peut pas le faire. Moi je suis occupé ici avec ces hommes. Vous avez certainement plus de flair que moi pour trouver des indices....}{Ben ce serait sympa à vous d'examiner mon poulailler et les alentours, parce que ma femme est partie pour quelques jours, elle ne peut pas le faire. Moi je suis occupé ici avec ces hommes. Vous avez certainement plus de flair que moi pour trouver des indices....}{}{6}{}{}
+{102}{D'accord, j'irai voir ce qui ne va pas. Je reviendrai dès que ce sera fait.}{}{1}{}{141}{}
+{103}{Combien me payerez vous pour ça ?}{}{1}{}{121}{}
+{104}{J'irai bien, mais malheureusement j'ai un de ces mal de dos ! ouille (vous mentez) désolé.}{}{1}{}{}{}
+
+// [LABEL] payer
+{121}{Oh ! je pensais que vous me rendriez ce service gratuitement ! Je n'ai pas de quoi vous payer....}{Oh ! je pensais que vous me rendriez ce service gratuitement ! Je n'ai pas de quoi vous payer....}{}{7}{}{}
+{122}{C'est pas grave, je le ferai gratuitement tout compte fait. }{}{1}{}{141}{}
+{123}{C'est bien dommage, je vais donc vous quitter.}{}{1}{}{}{}
+
+// [LABEL] QUETE aaccept
+{141}{Très bien, merci à vous ! Je vous donne mon nom et mon adresse , ça vous aidera un peu : Pierre Whymet, numéro 665 rue Chougatine.}{Très bien, merci à vous ! Je vous donne mon nom et mon adresse , ça vous aidera un peu : Pierre Whymet, numéro 665 rue Chougatine.}{}{8}{}{}
+{142}{Merci bien, je reviens dès que possible}{}{1}{}{}{qu1018 2,ru20023 }
+

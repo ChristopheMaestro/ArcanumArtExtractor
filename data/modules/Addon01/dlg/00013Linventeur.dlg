@@ -1,0 +1,49 @@
+{1}{G:}{}{}{}{}{}
+{2}{bonjour @npcname@.}{}{1}{me1 }{6}{}
+{3}{Bonjours, nom nom est @pcname@.}{}{1}{me0 }{4}{}
+{4}{Je suis Linventeur.}{}{}{}{}{}
+{5}{Puis-je vous poser quelques questions ?}{}{1}{}{6}{}
+{6}{Que désirez-vous ?}{}{}{}{}{}
+{7}{LarmeMurier aurait besoin d'un peu de votre poudre expérimentale.}{}{1}{qu1009 2,$$50 }{48}{}
+{8}{Avez-vous du travail ?}{}{1}{qa1002 2,qb1005 1}{43}{}
+{9}{J'ai le thermomètre}{}{1}{in5805 ,qu1005 3}{46}{}
+{10}{B:}{}{1}{}{6}{}
+{11}{Auriez-vous des objets plus spécifiques ?}{}{1}{}{16}{}
+{12}{Parlez-moi de vous.}{}{1}{}{14}{}
+{13}{E:}{}{1}{}{}{}
+{14}{Autrefois j'habitais au Centre, mais je me suis installé ici. C'est plus tranquille pour mes expériences. Puis, lorsque je fais une commande spéciale, je suis rapidement informé de l'arrivée du bateau.}{}{}{}{}{}
+{15}{Puis-je vous poser quelques questions ?}{}{1}{}{6}{}
+{16}{Lampe électrique (300), Anneau électroactif (500), Revolver de choix (1000), Epée équilibrée (1000) .  [entre parenthèses le prix en pièces d'or].}{}{}{}{}{}
+{17}{la lampe électrique.}{}{1}{$$300 }{-2}{$$-300 }
+{18}{Anneau électroactif.}{}{1}{$$500 }{-4}{$$-500 }
+{19}{Revolver de choix}{}{1}{$$1000 }{-6}{$$-1000 }
+{20}{Epée équilibrée}{}{1}{$$1000 }{-8}{$$-1000 }
+{21}{[suite 1]}{}{1}{}{22}{}
+{22}{Spectromètre de flux (500), Passe-partout automatique (500), Hache ultralégère (1000), Grenade offensive (2000).}{}{}{}{}{}
+{23}{Spectromètre de flux}{}{1}{$$500 }{-10}{$$-500 }
+{24}{Passe-partout automatique}{}{1}{$$500 }{-12}{$$-500 }
+{25}{Hache ultralégère}{}{1}{$$1000 }{-14}{$$-1000 }
+{26}{Grenade offensive.}{}{1}{$$2000 }{-16}{$$-2000 }
+{27}{[suite 2]}{}{1}{}{28}{}
+{28}{Dynamite (2000), Fusil à lunette (4000), Canon portable (4000), Fusil éléphant (6000)}{}{}{}{}{}
+{29}{Dynamite}{}{1}{$$2000 }{-20}{$$-2000 }
+{30}{Fusil à lunette}{}{1}{$$4000 }{-22}{$$-4000 }
+{31}{Canon portable }{}{1}{$$4000 }{-24}{$$-4000 }
+{32}{Fusil éléphant}{}{1}{$$6000 }{-26}{$$-6000 }
+{33}{[suite 3]}{}{1}{}{34}{}
+{34}{Méca-lorgnon (2000), Heaume de vision (2000), Cotte de mailles légère taille normale (2000), Cuirasse d'élite taille normale (2000)}{}{}{}{}{}
+{35}{Méca-lorgnon}{}{1}{$$2000 }{-28}{$$-2000 }
+{36}{Heaume de vision}{}{1}{$$2000 }{-30}{$$-2000 }
+{37}{Cotte de mailles légère taille normale.}{}{1}{$$2000 }{-32}{$$-2000 }
+{38}{Cuirasse d'élite taille normale.}{}{1}{$$2000 }{-34}{$$-2000 }
+{39}{[suite 4]}{}{1}{}{40}{}
+{40}{Ecran de feu (2000).}{}{}{}{}{}
+{41}{Ecran de feu}{}{1}{$$2000 }{-18}{$$-2000 }
+{42}{Autre chose ...}{}{1}{}{6}{}
+{43}{J'ai cassé mon thermomètre. Je ne peux quitter l'expérience en cours et avec les évènement en cours je n'ose pas envoyer ma femme. Pouvez-vous m'en chercher un haute température ? Il daoit coûter dans les 50 pièces, voici.}{}{}{}{}{}
+{44}{Oui bien sûr [vous prenez l'argent].}{}{1}{}{6}{$$50 ,qu1005 2}
+{45}{J'ai demandé du travail, pas à être coursier.}{}{1}{}{6}{re-10 }
+{46}{Vous l'avez, donnez vite [il place le thermomètre dans le bain]. Merci, tenez 25 pièce pour votre peine.}{}{}{}{}{}
+{47}{C'est trop [vous prenez l'argent]. Et merci.}{}{1}{}{6}{$$25 ,qu1005 4,in5805 ,re+10 }
+{48}{Tenez, ce sera 50 pièces.}{}{}{}{}{}
+{49}{Voici [vous payez et prenez la poudre].}{}{1}{}{6}{in-5804 ,$$-50 ,qu1009 3}

@@ -1,0 +1,28 @@
+// [LABEL] bijour
+{1}{Oui, que voulez vous ?}{Oui, que voulez vous ?}{}{1}{}{}
+{2}{B:}{}{1}{}{}{}
+{3}{Que faites-vous ici ?}{}{1}{}{21}{}
+{4}{E:}{}{1}{}{}{}
+// [LABEL] fékoi
+{21}{Je vends des produits de soins aux passants pour qu'ils puissent se guérir eux même pour éviter d'aller à l'hopital, ça coute plus cher.}{Je vends des produits de soins aux passants pour qu'ils puissent se guérir eux même pour éviter d'aller à l'hopital, ça coute plus cher.}{}{2}{}{}
+{22}{B:}{}{1}{}{}{}
+{23}{C'est illégal, non ?}{}{1}{}{41}{}
+{24}{E:}{}{1}{}{}{}
+// [LABEL] illégal
+{41}{Oui et alors ? Tu crois qu'en disant ça aux flics tu vas obtenir une prime ? Que dalle ! c'est un pays libre, ici.}{Oui et alors ? Tu crois qu'en disant ça aux flics tu vas obtenir une prime ? Que dalle ! c'est un pays libre, ici.}{}{3}{}{}
+{42}{Dans ce cas je ferai justice moi même ! préparez vous à mourir}{}{1}{}{}{co }
+{43}{Oui après tout vous avez raison. On a tous besoin de soins moins cher.}{}{1}{}{61}{re+11 }
+{44}{Je préfère m'en aller, au revoir.}{}{1}{}{}{}
+// [LABEL] razon
+{61}{Euh, merci...[elle rougit] . Je ne pensais pas que vous réagiriez comme ça.... alors que puis-je pour vous ?}{Euh, merci...vous êtes sympa en fait, de ne pas vous en prendre à moi.}{}{4}{}{}
+{62}{Je voudrais faire connaissance avec vous}{1}{1}{}{81}{}
+{63}{C'est naturel, voyons. Parlons encore un peu...}{0}{1}{}{81}{}
+{64}{E:}{}{1}{}{}{}
+{65}{B:}{}{1}{}{}{}
+// [LABEL] discutey/connaitre
+{81}{Euh...et bien je m'appelle Tina. Et vous ?}{Ok. Présentons nous, alors : mon prénom c'est Tina, et vous ?}{}{5}{}{}
+{82}{Je m'appelle @pcname@. Depuis quand êtes vous ici ?}{1}{1}{}{}{}
+{83}{Moi c'est @pcname@.}{0}{1}{}{}{}
+{84}{E:}{}{1}{}{}{}
+// [LABEL] quand, partir.
+{101}{}{}{}{6}{}{}

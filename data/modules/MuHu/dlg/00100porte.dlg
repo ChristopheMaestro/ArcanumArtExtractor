@@ -1,0 +1,82 @@
+// [LABEL] debut
+{1}{Halte là! Vous n'avez pas le droit d'entre dans le qg!}{Halte là! Vous n'avez pas le droit d'entre dans le qg!}{}{1}{}{}
+{2}{ah et pourquoi?}{}{1}{qu1013 0}{41}{}
+{3}{rien à foutre de ton interdiction, je vais où je veux.}{}{1}{qu1013 0}{21}{}
+{4}{bon ben au revoir.}{}{1}{}{}{}
+{5}{J'ai les plans!}{}{1}{qu1013 3}{281}{}
+{6}{Je cherche toujours les plans.}{}{1}{qu1013 2}{261}{}
+{7}{J'accepte de trouver les plans du ratus 2400}{}{1}{qu1013 1}{301}{}
+
+// [LABEL] rein a foutre
+{21}{Je vous previens, si vous faites un pas de plus, ca va mal aller.}{Je vous previens, si vous faites un pas de plus, ca va mal aller.}{}{2}{}{}
+{22}{Je suis curieux de voir ca.}{}{1}{}{}{co}
+{23}{C'était juste une petite connerie. Bon pourquoi je ne peux pas renter?}{}{1}{}{41}{}
+
+// [LABEL] pourquoi peut pas rentrer
+{41}{C'est le QG des pauvres et vous n'êtes pas pauvre.}{C'est le QG des pauvres et vous n'êtes pas pauvre.}{}{3}{}{}
+{42}{Mais c'est n'importe quoi! Un QG pour les pauvres et puis quoi encore. Pourquoi pas un QG pour les cochons tant qu'on y est.}{}{1}{}{61}{}
+{43}{Mais pourquoi les pauvres ont-ils besoin d'un QG?}{}{1}{}{61}{}
+{44}{Mais si je suis pauvre, je me suis juste deguisé en riche.}{}{1}{}{201}{}
+{45}{Si tu ne me laisses pas renter la Terre va se transformer en patate chaude et nous serons envahi par les crapauds volants.}{}{1}{}{221}{}
+
+// [LABEL] n'importe quoi qg pauvre
+{61}{On voit bien que vous êtes un riche. Les pauvres ont besoin d'un QG pour discuter de leur dernières trouvailles dans les poubelles. Et également pour troquer des trucs.}{On voit bien que vous êtes un riche. Les pauvres ont besoin d'un QG pour discuter de leur dernières trouvailles dans les poubelles. Et également pour troquer des trucs.}{}{4}{}{}
+{62}{Mais vous pouvez faire ca dehors.}{}{1}{}{81}{}
+{63}{N'y a-il pas un moyen pour que je puisse rentrer?}{}{1}{}{101}{}
+
+// [LABEL] faire dehors
+{81}{Non mais oh! Dehors il fait froid et y a des loups qui peuvent nous agresser.}{Non mais oh! Dehors il fait froid et y a des loups qui peuvent nous agresser.}{}{5}{}{}
+{82}{Ouais d'accord. Y a pas un moyen pour renter dans le QG?}{}{1}{}{101}{}
+
+// [LABEL] rentrer ds le QG
+{101}{Mmmm, il y a peut-être un moyen de vous faire rentrer.}{Mmmm, il y a peut-être un moyen de vous faire rentrer.}{}{6}{}{}
+{102}{Et c'est quoi?}{}{1}{}{121}{}
+{103}{Ca ne m'interesse pas aurevoir.}{}{1}{}{}{}
+
+// [LABEL] etckoi
+{121}{Avez-vous reussi à raisonner Olivier?}{Avez-vous reussi à raisonner Olivier?}{}{7}{}{}
+{122}{Non, je l'ai tué.}{}{1}{qu1002 5}{161}{}
+{123}{Non, je ne l'ai pas encore vu}{}{1}{qu1002 0}{181}{}
+{124}{Oui j'ai reussi.}{}{1}{qu1002 4}{141}{}
+{125}{J'ai accepté d'aider les gardes mais je n'ai pas encore vu Olivier.}{}{1}{qu1002 2}{181}{}
+{126}{J'ai entendu parler d'Olivier mais je ne l'ai pas vu}{}{1}{qu1002 1}{181}{}
+
+// [LABEL] olivier
+{141}{Tres bien. Allez le voir et obliger-le à nous donner les plans de la technologie du ratus 2400.}{Tres bien. Allez le voir et obliger-le à nous donner les plans de la technologie du ratus 2400.}{}{8}{}{}
+{142}{Le ratus 2400?}{}{1}{}{241}{}
+
+// [LABEL] tue olivier
+{161}{Ben c'est con pour toi, mais tu ne pourras jamais rentré dans le QG. Fallait pas le tuer.}{Ben c'est con pour toi, mais tu ne pourras jamais rentré dans le QG. Fallait pas le tuer.}{}{9}{}{}
+{162}{Mince alors. Bon ben tant pis. Au revoir.}{}{1}{}{}{}
+
+// [LABEL] pasencorevuolivier
+{181}{Revenez quand vous aurez raisonner Olivier.}{Revenez quand vous aurez raisonner Olivier.}{}{10}{}{}
+{182}{D'accord je reviendrais quand ce sera fait.}{}{1}{}{}{}
+
+// [LABEL] je suis riche
+{201}{N'essaye pas de m'avoir à ce petit jeux. Je sais reconnaitre un pauvre quand j'en vois un.}{N'essaye pas de m'avoir à ce petit jeux. Je sais reconnaitre un pauvre quand j'en vois un.}{}{11}{}{}
+{202}{Y a pas un autre moyen d'entrer?}{}{1}{}{101}{}
+{203}{Bon j'abandonne aurevoir.}{}{1}{}{}{}
+{204}{Mais pourquoi on peut pas rentrer?}{}{1}{}{41}{}
+
+// [LABEL] patate chaude
+{221}{Oh no! C'est bon tu peux rentrer, j'espere que ca n'arrivera pas.}{Oh no! C'est bon tu peux rentrer, j'espere que ca n'arrivera pas.}{}{12}{}{}
+{222}{Fais moi confiance, je ferais tout pour que ca n'arrive pas.}{}{1}{}{}{}
+
+// [LABEL] ratus 2400
+{241}{C'est une machine qui permet de faire de l'argent à partir de rat. Si nous possedons les plans nous deviendrons riches!}{C'est une machine qui permet de faire de l'argent à partir de rat. Si nous possedons les plans nous deviendrons riches!}{}{13}{}{}
+{242}{Très bien je vais chercher les plans chez Olivier.}{}{1}{}{}{qu1013 2}
+{243}{Ca ne m'interesse pas, au revoir.}{}{1}{}{}{qu1013 1}
+
+// [LABEL] cherche tjs
+{261}{Revenez quand vous les aurez trouver.}{Revenez quand vous les aurez trouver.}{}{14}{}{}
+{262}{Très bien.}{}{1}{}{}{}
+
+// [LABEL] j'ai les plans
+{281}{Magnifique! Nous allons enfin être riche! Vous pouvez entrer maintenant.}{Magnifique! Nous allons enfin être riche! Vous pouvez entrer maintenant.}{}{15}{}{}
+{282}{Cool, content de vous avoir aider.}{}{1}{}{}{qu1013 4}
+
+// [LABEL] accepte quete
+{301}{Très bien. Reviens avec les plans et tu feras partis des notres.}{Très bien. Reviens avec les plans et tu feras partis des notres.}{}{16}{}{}
+{302}{Ok, ca marche.}{}{1}{}{}{}
+

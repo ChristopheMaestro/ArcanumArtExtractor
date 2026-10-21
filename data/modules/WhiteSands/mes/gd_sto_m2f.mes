@@ -1,0 +1,358 @@
+// This file contains NPC responses to being asked about the current
+// story state. Each block begins at a multiple of 100, based on
+// the story state. Within each block, there is one line for each
+// race.
+
+0 human
+1 dwarf
+2 elf
+3 half elf
+4 gnome
+5 halfling
+6 half orc
+7 half ogre
+8 dark elf
+9 ogre
+10 orc
+
+// Story state is 0
+
+{0}{I’m no expert.  Maybe you should talk to a merchant.}
+{1}{Looks to made of quality silver...}
+{2}{I know its not elven.  Beyond that, I can tell you very little.}
+{3}{Looks like a nice piece of jewelry.}
+{4}{A very exquisite ring, my friend!  Hold on to it!}
+{5}{I’ve no interest in such things...}
+{6}{Nothing.  Nothing at all.}
+{7}{I've not a clue.}
+{8}{Take your questions elsewhere.}
+{9}{I wish I couls help you with that.}
+{10}{Nothing.  Nothing at all.}
+
+// Story state is 1
+
+{100}{That sounds like a company, but I’m not sure where they are.}
+{101}{Company.  HUMAN company, I’d say.}
+{102}{Hmmm.  Interesting name for a company.  Very OLD name...}
+{103}{I don’t know offhand...I’d venture to guess a company of sorts.}
+{104}{Well respected company.  I wouldn’t know exactly where they're located.}
+{105}{Sounds like something from the big city...}
+{106}{Rich bastards, I’d say.  Just sound like it.}
+{107}{No idea.}
+{108}{Such things don’t concern me.}
+{109}{No idea.}
+{110}{Rich bastards, I’d say.  Just sound like it.}
+
+// Story state is 2
+{200}{Bates!  He’s a genius!  Invented the steam engine!}
+{201}{We’ll not speak of him again, understand?}
+{202}{Technological  meddler.  Look what he’s done to the land...}
+{203}{He’s fairly smart for a human...machines and what not.}
+{204}{Brilliant technologist.  Made me a fortune last year...}
+{205}{Busy human, always making those noisy machines.}
+{206}{Treats his workers badly, I’m told.}
+{207}{Have a half-brother who used to work for him.}
+{208}{I’d rather not speak of Mr. Bates.}
+{209}{Have a half-brother who used to work for him.}
+{210}{Treats his workers badly, I’m told.}
+
+
+// Story state is 3
+{300}{What a tragedy!  He’s been killed recently...}
+{301}{Poor Mr. Bates.  We’re all accountable, it seems, in the end.}
+{302}{Technological  meddler.  He got what was coming to him...}
+{303}{Sad story, that one.  Looks like someone took a disliking to him.}
+{304}{A sad day for industry when they found his body.  Mr. Bates was a titan.}
+{305}{I only know he was recently murdered, under mysterious circumstances.}
+{306}{I just read a sensational story in the newspaper about his death.  Fascinating!}
+{307}{I wonder who he left his fortune to?.}
+{308}{Mr. Bates.  It seems fate is not without a sense of justice.}
+{309}{I wonder who he left his fortune to?.}
+{310}{I just read a sensational story in the newspaper about his death.  Fascinating!}
+
+
+// Story state is 4
+{400}{Black Mountain Clan?  Sounds dwarven...}
+{401}{Don’t ask a dwarf about clans.  And NEVER that one.}
+{402}{Rather rude of you to ask about someone’s home...}
+{403}{I don’t know...dwarves usually keep to themselves}
+{404}{Dwarves.  Egads!  Terrible business men...}
+{405}{I think I heard about a clan once...}
+{406}{Dwarves speak very little about their homes...}
+{407}{Don’t ask me.  Ask a dwarf.}
+{408}{Next question.}
+{409}{Don’t ask me.  Ask a dwarf.}
+{410}{Dwarves speak very little about their homes...}
+
+
+// Story state is 5
+{500}{You mean the Black Isle?  I’m not quite sure...}
+{501}{Our people know little of things offshore...}
+{502}{A place better not spoken of...stay away from it.}
+{503}{I believe its somewhere off the eastern coast...}
+{504}{I’ve no idea.  No business there, so who cares?}
+{505}{Isle?  You mean island?  Ugghh...all that water...}
+{506}{Knew a dock worker, once, who claimed he’d been there.  Too bad the bloke drowned.}
+{507}{I don’t know.}
+{508}{Mind your own business stranger.}
+{509}{I don’t know.}
+{510}{Knew a dock worker, once, who claimed he’d been there.  Too bad the bloke drowned.}
+
+// Story state is 6
+{600}{Not much.  Something about a prison, maybe?}
+{601}{Penal colony.  Bad place, I understand.}
+{602}{Strange place about which to be making polite conversation.}
+{603}{No details come to mind.}
+{604}{Fairly devoid of natural resources, no currency...}
+{605}{Other than it being frightening?  Not much.}
+{606}{Sent a cousin of mine there for no reason...he was innocent...}
+{607}{Nothing.}
+{608}{Nothing I’m going to share with you.}
+{609}{Nothing.}
+{610}{Sent a cousin of mine there for no reason...he was innocent...}
+
+
+// Story state is 7
+{700}{I know little of the dwarven people.}
+{701}{That’s not information you need, friend.}
+{702}{Leaders of the dwarven clans.  Fairly reclusive}
+{703}{They stay away from everyone...}
+{704}{Tried, unsuccessfully, to strike a mining deal with them, once...}
+{705}{Just some more dwarves, I believe.}
+{706}{Never heard of them.}
+{707}{Short fellows.}
+{708}{Nothing.  Nothing at all.  Don’t ask again.}
+{709}{Short fellows.}
+{710}{Never heard of them.}
+
+
+// Story state is 8
+{800}{I’ve not a clue.  Elves are close-mouthed about their homes...}
+{801}{Deep in the Glimmering Forest.  You’d never find it.}
+{802}{We speak not of such things.}
+{803}{I think my great-great-grandmother lived there...}
+{804}{I’d love to find out...exquisite lumbering...}
+{805}{I’m not quite sure...I have trouble finding MY home...}
+{806}{Never knew anyone who even LIED about knowing.}
+{807}{I don’t know.}
+{808}{NEVER ask an elf about his home.  EVER.}
+{809}{I don’t know.}
+{810}{Never knew anyone who even LIED about knowing.}
+
+
+// Story state is 9
+{900}{I know the elves are supposed to live there...}
+{901}{Very little, and I’m glad of it.}
+{902}{Nothing.  I’d never speak a word of the elven home.}
+{903}{Just that my ancestors are from there...}
+{904}{Not too much, I’m afraid.}
+{905}{Pretty tress, I’m sure.  Nice people, elves.}
+{906}{Can’t say as I know ANYTHING about the place.}
+{907}{Ask an elf.}
+{908}{We speak not of such things.}
+{909}{Ask an elf.}
+{910}{Can’t say as I know ANYTHING about the place.}
+
+
+// Story state is 10
+{1000}{Hmmm...  Have you tried the cemetary?  You might also try the Hall of Records.  They can sometimes be of assistance with such matters.}
+{1001}{Its beyond me.}
+{1002}{Yes, I’ve heard of that name.  I believe he died a Tragic death or somesuch.  He has a nice headstone over at the cemetary.}
+{1003}{No idea, really.  Wait...  I fear you may need to check the cemetary.  Or the Hall of Records.  They carry information about Tarant's deceased.}
+{1004}{Terwilliger...Terwilliger.. it sounds vaguely familiar.  Oh!  Have you checked the cemetary?}
+{1005}{Sounds like a human name....}
+{1006}{I’ve absolutely no idea.}
+{1007}{I don’t know much about people.}
+{1008}{Never speak that name in my presence...}
+{1009}{I’ve absolutely no idea.}
+{1010}{I don’t know much about people.}
+
+
+
+// Story state is 11
+{1100}{No... But the library of Tarant has many books.}
+{1101}{What, is that a book?  I’ve no idea...}
+{1102}{Have you checked the local bookseller, or the library?}
+{1103}{Sounds like something you’d find at a library...}
+{1104}{I’ve been asking myself the very same question...}
+{1105}{Sounds scary!  Keep it away from me if you find it!}
+{1106}{Try the library.  Where else are you going to find books?}
+{1107}{I don’t read much.}
+{1108}{[Shrewdly.] No... Let me know if you find one though.}
+{1109}{I don’t read much.}
+{1110}{Try the library.  Where else are you going to find books?}
+
+// Story state is 12
+{1200}{Old seaport, on the southern tip of the continent.  Quite a long voyage, from what I hear.}
+{1201}{That seaport?  Not much.}
+{1202}{I know its the center for that strange Panarii religion.  But you'll need a sturdy ship to get there.}
+{1203}{On the western sea coast, I believe.  Nice city.}
+{1204}{Difficult city to trade with... no train access.  Ships are the only way to get there.}
+{1205}{Too far away for my tastes.  The sea is not for me.}
+{1206}{None of my concern.}
+{1207}{Very little.}
+{1208}{I’ve nothing good to say about the place.}
+{1209}{Very little.}
+{1210}{None of my concern.}
+
+// Story state is 13
+{1300}{Name sounds familiar.  Some connection with a book?}
+{1301}{I’m drawing a blank.}
+{1302}{I’m not familiar with that human.}
+{1303}{Something in the news...Caladon, maybe...?}
+{1304}{He’s been a popular man as of late...an object of value...?}
+{1305}{Absolutely nothing.}
+{1306}{Nothing at all.}
+{1307}{I don’t know a whole lot.}
+{1308}{Yes.  I know of Mr. Misk.  No.  I’m not sharing with you.}
+{1309}{I don’t know a whole lot.}
+{1310}{Nothing at all.}
+
+
+// Story state is 14
+{1400}{Nothing.  I don’t even think they’re real.}
+{1401}{Bloody troublemakers.}
+{1402}{Not something you want to ask an elf about, friend.}
+{1403}{A lot of myths and legends.  Mostly conjecture, I think.}
+{1404}{Are there any?}
+{1405}{I don’t know anything, and I don’t want to.}
+{1406}{Nothing...as if they reallly exist.}
+{1407}{Not much.}
+{1408}{Ask again, and I’ll SHOW you something about them...}
+{1409}{Not much.}
+{1410}{Nothing...as if they reallly exist.}
+
+// Story state is 15
+{1500}{You’d be better off asking one of those Panarii fanatics...}
+{1501}{Elven religious clap-trap.}
+{1502}{There’s much I could tell you.  There’s nothing I will.}
+{1503}{Some religious figure?  Check with a Panarii priest...}
+{1504}{Nothing. The local Panarii temple would be more helpful.}
+{1505}{I’m not sure I’m familiar with the gentleman.}
+{1506}{Your asking me?  I’ve no clue.}
+{1507}{Nothing at all.}
+{1508}{Did you say something?}
+{1509}{Nothing at all.}
+{1510}{Your asking me?  I’ve no clue.}
+
+
+// Story state is 16
+{1600}{You’d be better off asking one of those Panarii fanatics...}
+{1601}{An elven legend...some sort of deity, I believe.}
+{1602}{There’s much I could tell you.  There’s nothing I will.}
+{1603}{Some religious figure?  Check with a Panarii priest...}
+{1604}{Nothing. The local Panarii temple would be more helpful.}
+{1605}{I’m not sure I’m familiar with the gentleman.}
+{1606}{Your asking me?  I’ve no clue.}
+{1607}{Nothing at all.}
+{1608}{Did you say something?}
+{1609}{Nothing at all.}
+{1610}{Your asking me?  I’ve no clue.}
+
+
+// Story state is 17
+{1700}{I’m no geography expert, but it's far to the east.}
+{1701}{Its far across the ocean, to the east.  That’s all I know.}
+{1702}{A strange island, full of beasts, and perhaps something more...?}
+{1703}{I think I knew this once...something about monsters...?}
+{1704}{No shipping there.  A few lost expeditions...}
+{1705}{I’ve never even heard of it.}
+{1706}{I don’t know anything about the place.}
+{1707}{Hmmm.  Can’t say as I recall one thing.}
+{1708}{Nothing I’m going to share with you.}
+{1709}{Hmmm.  Can’t say as I recall one thing.}
+{1710}{I don’t know anything about the place.}
+
+
+// Story state is 18
+{1800}{Ruins?  I know the Vendigroth WASTES are far northeast.}
+{1801}{An evil place, full of bad blood.  To the northeast.}
+{1802}{An OLD city, Vendigroth.  I didn’t know there were ruins.}
+{1803}{Somewhere to the northeast I think.}
+{1804}{That name means nothing to me.}
+{1805}{Vendigroth?  Sure!  Its somewhere just above Leahbo!}
+{1806}{Northeast, I’d say.  Bring friends.  A LOT of them.}
+{1807}{Uhh...nothing.  Nothing at all.}
+{1808}{Why do YOU want to know?  I’ll say nothing.}
+{1809}{Uhh...nothing.  Nothing at all.}
+{1810}{Northeast, I’d say.  Bring friends.  A LOT of them.}
+
+
+// Story state is 19
+{1900}{Bloody tourist trap!  Stay away from the Gift Shop!}
+{1901}{Bunch of stones just north of Caladon.  Religious site...?}
+{1902}{A place of history and power.  Just north of Caladon.}
+{1903}{Just north of old Caladon, near the Black Spire...}
+{1904}{Tied up in that Panarii business, isn’t it?}
+{1905}{I’ve no idea what you’re talking about.}
+{1906}{Near Caladon.  Had a relative who worked in the Gift Shop...}
+{1907}{Ring?  I don’t know about jewelry...}
+{1908}{Don’t ask about that place.  You’d never understand.}
+{1909}{Ring?  I don’t know about jewelry...}
+{1910}{Near Caladon.  Had a relative who worked in the Gift Shop...}
+
+// Story state is 20
+{2000}{His keep is just east of the crossroads...}
+{2001}{I don’t know, but he’s to blame for all of this...}
+{2002}{The old one is not far, but he can see no visitors...}
+{2003}{Take the left fork of the crossroads...the monster...}
+{2004}{His keep is not far from the crossroads...}
+{2005}{I keep my head out of such business...}
+{2006}{Bloody elven madman!  I don’t know, nor care.}
+{2007}{Who?}
+{2008}{The master is not far, but will see no one...}
+{2009}{Who?}
+{2010}{Bloody elven madman!  I don’t know, nor care.}
+
+
+// Story state is 21
+{2100}{A bloody harsh place to live....}
+{2101}{Nothing but death and despair here, stranger.}
+{2102}{A fate worse than death.}
+{2103}{NO ONE deserves the life we live here.}
+{2104}{There’s no worse fate than being banished here.}
+{2105}{A terrible place.  How I long for my home...}
+{2106}{Look around you.  Welcome to hell.}
+{2107}{Horrible, horrible place.}
+{2108}{If I’d have known THIS was the reward...}
+{2109}{Horrible, horrible place.}
+{2110}{Look around you.  Welcome to hell.}
+
+// Story state is 22
+{2200}{He defeated Arronax, and doomed us all...}
+{2201}{An evil, evil being.  God help us all.}
+{2202}{Powerful, wizard.  Stay clear of him.}
+{2203}{Started the war here, so many years ago.  Maniac!}
+{2204}{Very little, beyond the fact that’s he’s in charge...}
+{2205}{Nothing!  I know nothing!}
+{2206}{Bloody tyrant!  He’s got to be stopeed!}
+{2207}{Uhhh...who is that?}
+{2208}{He controls the void, now.}
+{2209}{Uhhh...who is that?}
+{2210}{Bloody tyrant!  He’s got to be stopeed!}
+
+// Story state is 23
+{2300}{Somewhere in the [Void City] ruins, I believe...}
+{2301}{Magick.  I find it safer to keep my distance...}
+{2302}{Old magick, older even than the elves...}
+{2303}{I’ve heard about it...buried somewhere in [Void City]...}
+{2304}{Check the ruins of old [Void City].}
+{2305}{No idea, stranger.  Sorry.}
+{2306}{Maybe somewhere in [Void City]?}
+{2307}{I’m confused...}
+{2308}{I’d heard it had been lost, but check in [Void City].}
+{2309}{I’m confused...}
+{2310}{Maybe somewhere in [Void City]?}
+
+// Story state is 24
+{2400}{Get a life, it's game over guy.}
+{2401}{Try this one.  Restarteth the game.}
+{2402}{What are you doing you idiot? The game is finished.}
+{2403}{Stop playing this game and start another one.}
+{2404}{Oh, how very, very sad.  Just turn the game off, son.}
+{2405}{You must be joking.  You’ve already won!  Go to sleep!}
+{2406}{Are you listening?  THE GAME IS OVER!}
+{2407}{Huh?  I thought the game was over.}
+{2408}{What you need is a social life.}
+{2409}{Huh?  I thought the game was over.}
+{2410}{Are you listening?  THE GAME IS OVER!}

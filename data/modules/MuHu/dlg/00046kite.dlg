@@ -1,0 +1,47 @@
+// [LABEL] debut
+{1}{Salut mon p'tit.}{Salut mon p'tit.}{}{1}{}{}
+{2}{Tu ne serais pas un kite par hasard?}{}{5}{}{21}{}
+{3}{Bye.}{}{1}{}{}{}
+{4}{Eh, je ne suis pas petit.}{}{5}{ra1 }{121}{}
+{5}{Moi pas comprendre pourkoi toi parle?}{}{-4}{}{}{}
+// [LABEL] kiteetkat
+{21}{Si, mais je me suis converti à la société.}{Si, mais je me suis converti à la société.}{}{2}{}{}
+{22}{Ouais, ben t'aurais pas dû.}{}{1}{}{101}{re-7}
+{23}{Tu fais quoi maintenant?}{}{1}{}{41}{}
+{24}{Bye.}{}{1}{}{}{}
+// [LABEL] jrfaisquoi
+{41}{Je suis forgeron. Je répare des trucs quoi.}{Je suis forgeron. Je répare des trucs quoi.}{}{3}{}{}
+{42}{Cool, tu peux me réparer un truc?}{}{1}{}{}{ri }
+{43}{Tu peux faire de moi un apprenti en reparation?}{}{1}{sk12 1}{61}{tr12 1}
+{44}{Tu peux me donner un bigmac?}{}{1}{}{201}{gf1 1}
+// [LABEL] apprenti
+{61}{Voila tu es apprenti.}{Voila tu es apprenti.}{}{4}{}{}
+{62}{Cool, a plus}{}{1}{}{}{}
+{63}{Qui dois je voir pour devenir expert?}{}{1}{}{}{}
+// [LABEL] cent euros
+{81}{Bien sur voila. Fais en bonne usage.}{Bien sur voila. Fais en bonne usage.}{}{5}{}{}
+{82}{Merci.}{}{1}{}{}{}
+// [LABEL] tauraispasdu
+{101}{Quoi! Va te faire foutre!}{Quoi! Va te faire foutre!}{}{6}{}{}
+{102}{Très bien, je me casse. De toute façon les kites c'est des pédés.}{}{1}{}{}{}
+// [LABEL] petit
+{121}{Euh ouais mais c'est que... En fait... Bon c'est un peu débile comme phrase mais bon.}{Euh ouais mais c'est que... En fait... Bon c'est un peu débile comme phrase mais bon.}{}{7}{}{}
+{122}{Ouais que fais-tu au fait?}{}{1}{}{41}{}
+{123}{Bye.}{}{1}{}{}{}
+{124}{En effet, faut vraiment etre con pour dire ca. Ca prouve que tu es bien un kite.}{}{1}{}{141}{re-8 }
+// [LABEL] tesbienunkite
+{141}{Je ne te permets pas d'insulter ma race. T'as interêt à faire tes excuses tout de suite.}{Je ne te permets pas d'insulter ma race. T'as interêt à faire tes excuses tout de suite.}{}{8}{}{}
+{142}{Ok, je m'excuse, je n'aurais jamais du dire cela.}{}{1}{}{161}{}
+{143}{Faire des excuses à un kite? Et puis quoi encore? Tu crois que c'est la foire à la saucisse ou quoi? }{}{1}{}{181}{re-7}
+// [LABEL] excuse
+{161}{Bon, je te pardonne. Que voulais-tu au fait?}{Bon, je te pardonne. Que voulais-tu au fait?}{}{9}{}{}
+{162}{J'aimerais savoir ce que tu fais ici.}{}{1}{}{41}{}
+{163}{Rien salut.}{}{1}{}{}{}
+// [LABEL] foiresaucisse
+{181}{Quoi! Tu vas devoir payer de ton insolence.}{Quoi! Tu vas devoir payer de ton insolence.}{}{10}{}{}
+{182}{Je vais te faire exploser comme une saucisse pleine de sang.}{}{1}{}{}{co, fl 80}
+{183}{Je vais te tuer jusqu'à ce que tu sois mort.}{}{1}{}{}{co, fl 80}
+// [LABEL] bigmac
+{201}{Non desolé,  j'ai pas que ca à foutre. }{Non desolé,  j'ai pas que ca à foutre. }{}{11}{}{}
+{202}{Ah, bon ben tant pis. Mais dis moi.}{}{1}{}{41}{}
+{203}{Tu veux pas me donner de bigmac? Tu vas payer pouer ca!}{}{1}{}{}{co}

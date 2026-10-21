@@ -1,0 +1,31 @@
+{1}{Que désirez-vous @pcname@ ? Acheter des marchandises, des livres ou encore entendre les derniers potins ?}{Que désirez-vous @pcname@ ? Acheter des marchandises, des livres ou encore entendre les derniers potins ?}{}{}{}{}
+{2}{Comment connaissez-vous mon nom ?}{}{1}{me0 }{30}{}
+{3}{R:$0, 1000-1004}{}{1}{}{1}{}
+{4}{B:}{}{1}{}{1}{}
+{5}{Je serais interessé par ces manuels si c'est bien ceux qui permettent de fabriquer des objets sans qu'on ai le niveau.}{}{1}{}{7}{}
+{6}{E:}{}{1}{}{}{}
+{7}{Voulez-vous m'acherter des manuels technique ? C'est 1000 pièces.}{}{}{}{}{}
+{8}{C'est un peu cher, à Tarante, ils ne coûtent que 750,  mais d'accord. J'en ai trop besoin.}{}{1}{$$1000 }{12}{}
+{9}{Non, c'est trop cher.}{}{1}{}{}{}
+{10}{Tant pis, une autre fois peut-être ?}{}{}{}{}{}
+{11}{E:}{}{1}{}{0}{}
+{12}{Quels manuels souhaitez-vous acheter... ?}{Quels manuels souhaitez-vous acheter... ?}{}{}{}{}
+{13}{Des manuels de chimie...}{}{1}{}{-2}{$$-750}
+{14}{Des manuels sur les explosifs...}{}{1}{}{-5}{$$-750}
+{15}{Des manuels de botanique...}{}{1}{}{-8}{$$-750}
+{16}{Des manuels de forgeron...}{}{1}{}{-11}{$$-750}
+{17}{[Plus.]}{}{1}{}{18}{}
+{18}{Quels manuels souhaitez-vous acheter... ?}{Quels manuels souhaitez-vous acheter... ?}{}{}{}{}
+{19}{Des manuels de thérapeutique...}{}{1}{}{-14}{$$-750}
+{20}{Des manuels d'armurier...}{}{1}{}{-17}{$$-750}
+{21}{Des manuels d'électricité...}{}{1}{}{-20}{$$-750}
+{22}{Des manuels de mécanique...}{}{1}{}{-23}{$$-750}
+{23}{[Plus.]}{}{1}{}{24}{}
+{24}{Quels manuels souhaitez-vous acheter... ?}{Quels manuels souhaitez-vous acheter... ?}{}{}{}{}
+{25}{[Retour.]}{}{1}{}{12}{}
+{26}{E:}{}{1}{}{0}{}
+{27}{[Elle vous tend le livre.] Y a-t-il autre chose ?}{[Elle vous tend le livre.] Y a-t-il autre chose ?}{}{}{}{}
+{28}{Je souhaiterais acheter un autre manuel...}{}{1}{}{12}{}
+{29}{E:}{}{1}{}{0}{}
+{30}{Je suis ravie de vous voir enfin. Vous savez, les rumeurs vont vite, @pcname@. Mon nom est @npcname@, je suis la femme de Linventeur. Je suis herboriste et à temps perdu, je mets au propre et classe les notes de mon maris. Je vends aussi des manuels, mon mari est si occupé. Et puis, il faut bien trouver de l'argent pour financer ses recherches.}{}{}{}{}{}
+{31}{Enchanté de vous connaître @pcname@, mais parlons affaire.}{}{1}{}{1}{}

@@ -1,0 +1,116 @@
+// [LABEL] Hey bonjour
+{1}{Hey bonjour, c'est que vous vouley ?}{Hey bonjour, c'est que vous vouley ?}{}{1}{}{}
+{2}{Euh, c'est quoi cette pierre ?}{}{1}{me0 }{21}{}
+{3}{Vous parlez bizarre...non ? vous trouvez pas ?}{}{1}{me0 }{81}{}
+{4}{Au revoir}{}{1}{}{}{}
+{5}{Oui, tu me reconnais, c'est moi, @pcname@ !}{}{1}{me1 }{281}{}
+// [LABEL] Pierre ckoi ?
+{21}{C'te Pierre ? ben c'est le téléporteur jusqu'à la ville de Québec city. Pourquoi, v'voulez y'aller ?}{C'te Pierre ? ben c'est le téléporteur jusqu'à la ville de Québec city. Pourquoi, v'voulez y'aller ?}{}{2}{}{}
+{22}{Ben...y'a quoi là bas ?}{}{1}{}{41}{}
+{23}{Non merci, salut}{}{1}{}{}{}
+// [LABEL] Y'akoi québec ?
+{41}{Ouh, je vous garantis que là bas c'est l'une des villes les plus :" high tech" de la région ! y'a de tout là bas !}{Ouh, je vous garantis que là bas c'est l'une des villes les plus :" high tech" de la région ! y'a de tout là bas !}{}{3}{}{}
+{42}{Ouais, ça m'a l'air intéressant ! C'est combien pour y aller ?}{}{1}{}{61}{}
+{43}{je regrette j'ai à faire, avant... salut}{}{1}{}{}{}
+// [LABEL] Pour y aller ?
+{61}{Boh, c'est gratuit, mon bon monsieur ! le qualité n'a pas de prix ici ! il vous suffit de toucher c'te pierre, là et puis vous y s'rez.}{Boh, c'est gratuit, ma bonne demoiselle ! le qualité n'a pas de prix ici ! il vous suffit de toucher c'te pierre, là et puis vous y s'rez.}{}{4}{}{}
+{62}{Ok, p'tit gars, merci pour tes infos. Au revoir}{1}{1}{}{}{}
+{63}{Merci, tu es sympa, au revoir !}{0}{1}{}{}{}
+// [LABEL] Parle bizarre
+{81}{HEY ! on se moque pas de mon accent québécois ! Bon c'est que tu veux alors ?}{HEY ! on se moque pas de mon accent québécois ! Bon c'est que tu veux alors ?}{}{5}{}{}
+{82}{Je voudrais en savoir plus sur toi, tu m'intéresses.}{}{1}{}{101}{}
+{83}{Oh en fait rien. salut !}{}{1}{}{}{}
+// [LABEL] Savoir plus
+{101}{Ben moi mon nom c'est m'sieur Y . T'as po besoin d'savoir autre chose je pense....}{Ben moi mon nom c'est m'sieur Y . T'as po besoin d'savoir autre chose je pense....}{}{6}{}{}
+{102}{Bon, ok.... elle mène où cette pierre ?}{1}{1}{}{21}{}
+{103}{Je voudrais savoir quel âge tu as, s'il te plaît !}{0}{1}{}{121}{}
+// [LABEL] Mon âge
+{121}{Mon âge ? pourquoi qu'tu veux savoir ça toi ? j'ai 25 ans.... ben...t'veux savoir autre chose ?}{Mon âge ? pourquoi qu'tu veux savoir ça toi ? j'ai 25 ans.... ben...t'veux savoir autre chose ?}{}{7}{}{}
+{122}{Ouais, tu as une petite amie ?}{}{1}{}{141}{}
+{123}{Non c'est bon, salut}{}{1}{}{}{}
+// [LABEL] Une meuf ?
+{141}{Non j'ai pas d'blonde, moi. Mon boulot c'est de garder les pierres téléporteurs mais pas de courir les blondes....et ni de faire la causette à propos de ce sjuet avec des autres filles d'ailleurs...}{Non j'ai pas d'blonde, moi. Mon boulot c'est de garder les pierres téléporteurs mais pas de courir les blondes....et ni de faire la causette à propos de ce sjuet avec des autres filles d'ailleurs...}{}{8}{}{}
+{142}{Bon ok j'y vais, je veux pas te déranger...}{}{1}{}{}{}
+{143}{Oh mais avec moi tu veux pas parler un ptit peu ??...[vous lui faites un petit sourire]}{}{1}{}{161}{}
+// [LABEL] Parler toué ?
+{161}{Mm, mouais, bon ok, je veux bien... tu m'as l'air sympa comme blonde.}{Mm, mouais, bon ok, je veux bien... tu m'as l'air sympa comme blonde.}{}{9}{}{}
+{162}{Mais je suis très sympa tu sais....[vous lui souriez toujours]}{}{1}{}{181}{}
+{163}{Je sais, toi aussi}{}{1}{}{201}{re+10 }
+// [LABEL] Sympa allume
+{181}{Oulà oulà, moi je veux juste parler, hey ! tu vas pas me déconcentrer dans mon job, toi. Allez file, je te parlerai plus tard.}{Oulà oulà, moi je veux juste parler, hey ! tu vas pas me déconcentrer dans mon job, toi. Allez file, je te parlerai plus tard.}{}{10}{}{}
+{182}{Ok A+ j'espère [toujours ce sourire]}{}{1}{}{}{}
+// [LABEL] Sympa sympa
+{201}{[il sourit] Mais pourquoi  que vous avez décidé de me parler en fait ?}{[il sourit] Mais pourquoi  que vous avez décidé de me parler en fait ?}{}{11}{}{}
+{202}{Ben je sais pas, t'avais l'air sympa...moi j'aime bien parler avec les gens gentils...}{}{1}{}{221}{re+15 }
+{203}{Parce que ....tu m'intéresses...[vous lui souriez de plus en plus]}{}{1}{}{181}{}
+// [LABEL] Géné
+{221}{Bon, ben...[il semble gêné] .....bon tu veux aller à Québec city ? tu vas voir c'est un bel endroit...}{Bon, ben...[il semble gêné] .....bon tu veux aller à Québec city ? tu vas voir c'est un bel endroit...}{}{12}{}{}
+{222}{Ouais, je te fais confiance, j'y vais...[clin d'oeil]}{}{1}{}{}{re+7 }
+{223}{Pourquoi tu changes de sujet ?? continuons à parler de toi ...}{}{1}{}{241}{}
+// [LABEL] Abuser
+{241}{Désolé, j'ai po le temps. Une prochaine fois peut être... Bonjour !}{Désolé, j'ai po le temps. Une prochaine fois peut être... Bonjour !}{}{13}{}{}
+{242}{Ok, euh....bonjour....}{}{1}{}{}{}
+{243}{Quel dommage, je ne connais même pas ton prénom....}{}{1}{}{261}{}
+// [LABEL] prénom
+{261}{Mon prénom......je sais pas si je te le dis, j'ai po le droit......bon allez tant pis : mon prénom c'est Claude...je te le dis vraiment paske c'est toi [il sourit amicalement]. Allez maintenant faut que je bosse. Bonjour !}{Mon prénom......je sais pas si je te le dis, j'ai po le droit......bon allez tant pis : mon prénom c'est Claude...je te le dis vraiment paske c'est toi [il sourit amicalement]. Allez maintenant faut que je bosse. Bonjour !}{}{14}{}{}
+{262}{Bonjour ! A+}{}{1}{}{}{}
+// [LABEL] toué !
+{281}{Ah ben pourquoi tu reviens me voir ?}{Ah oui toi, la belle blonde je te reconnais ! }{}{15}{}{}
+{282}{Ben...c'est quoi la pierre déjà ?}{}{1}{}{21}{}
+{283}{Eh oui c'est moi....alors as tu le temps de continuer notre petite discussion ?}{0}{1}{}{301}{}
+// [LABEL] Temps de continuer
+{301}{Ah, oui pas beaucoup, mais je peux parler un petit peu. Que veux tu savoir ?}{Ah, oui pas beaucoup, mais je peux parler un petit peu. Que veux tu savoir ?}{}{16}{}{}
+{302}{Claude, pourquoi es-tu si pris par ton travail ?}{}{1}{}{321}{}
+{303}{Claude, pourquoi n'as tu jamais eu de blonde ?}{}{1}{}{341}{}
+{304}{Rien de spécial, je passais pour savoir si tu allais bien. bonjour !}{}{1}{}{}{}
+// [LABEL] Job
+{321}{Ben j'y peux rien, c'est comme ça. J'ai été choisi par le conseil des pierres pour être ambassadeur de Québec city à Pouriland. Je dois remplir mon rôle , c'est tout...}{Ben j'y peux rien, c'est comme ça. J'ai été choisi par le conseil des pierres pour être ambassadeur de Québec city à Pouriland. Je dois remplir mon rôle , c'est tout...}{}{17}{}{}
+{322}{Mais ici, personne ne vient jamais ! tu pourrais quitter ton travail et mener une vie normale, non ?}{}{1}{}{361}{}
+{323}{Tu dois affreusement manquer de distractions ! je te plains d'avoir un boulot pareil !}{}{1}{}{441}{}
+// [LABEL] blonde
+{341}{Ben je fais ce travail depuis mes 13 ans, donc depuis 7 ans je suis planté ici à attendre... les blondes par ici ça court pas les rues ! y'a même pas de rues, d'ailleurs ! Voilà pourquoi !}{Ben je fais ce travail depuis mes 13 ans, donc depuis 7 ans je suis planté ici à attendre... les blondes par ici ça court pas les rues ! y'a même pas de rues, d'ailleurs ! Voilà pourquoi !}{}{18}{}{}
+{342}{Mais, c'est horrible, tu ne mérites pas de finir ta vie ici , sans personne à tes côtés !}{}{1}{}{381}{re+5 }
+{343}{Tu as toute ma compassion, Claude... je dois te laisser à présent...}{}{1}{}{}{}
+// [LABEL] Quiter job
+{361}{Je ne peux pas quitter ce job.... sinon, le conseil des pierres m'enverra des tueurs pour me sanctionner. J'ai été choisi, c'est la règle ! Mais tu sais, quelque fois des gens passent ici, et toi, heureusement que je t'ai rencontrée !}{Je ne peux pas quitter ce job.... sinon, le conseil des pierres m'enverra des tueurs pour me sanctionner. J'ai été choisi, c'est la règle ! Mais tu sais, quelque fois des gens passent ici, et toi, heureusement que je t'ai rencontrée !}{}{19}{}{}
+{362}{Tu es trop gentil,tu dois trouver un moyen de t'en sortir et de ne pas moisir ici !}{}{1}{}{421}{re+8 }
+{363}{C'est trop triste, je dois m'en aller malheureusement....}{}{1}{}{}{}
+// [LABEL] vivre seul
+{381}{Il faut croire que si, puisque j'ai été choisi. Je dois assurer mes fonctions, même si cela doit détruire ma vie et me laisser seul pour toujours}{Il faut croire que si, puisque j'ai été choisi. Je dois assurer mes fonctions, même si cela doit détruire ma vie et me laisser seul pour toujours}{}{20}{}{}
+{382}{Claude, tu n'es pas seul.....}{}{1}{}{401}{}
+{383}{C'est horrible....je dois te quitter, maintenant mais j'espère qu'on se reverra...}{}{1}{}{}{}
+// [LABEL] pas seul
+{401}{Mais si je suis un solitaire, je l'ai toujours été, et [il baisse les yeux] je ne vois pas pourquoi ça changerait...}{Mais si je suis un solitaire, je l'ai toujours été, et [il baisse les yeux] je ne vois pas pourquoi ça changerait...}{}{21}{}{}
+{402}{Eh bien ça va changer parce que je suis là pour t'aider !}{}{1}{}{421}{re+10 }
+{403}{Je dois y aller, excuse moi....}{}{1}{}{}{}
+// [LABEL] Il n'y a aucune solution
+{421}{Il n'y a pas de solution à mon malheur ! personne ne peut m'aider, si ce n'est le conseil des pierres !}{Il n'y a pas de solution à mon malheur ! personne ne peut m'aider, si ce n'est le conseil des pierres !}{}{22}{}{}
+{422}{J'irai les voir !}{}{1}{}{461}{}
+{423}{Pauvre Claude j'aurais tant voulu t'aider....}{}{1}{}{}{}
+// [LABEL] Distractions...
+{441}{Oui en effet je m'amuse pas beaucoup, mais c'est comme ça, ma chère @pcname@}{Oui en effet je m'amuse pas beaucoup, mais c'est comme ça, ma chère @pcname@}{}{23}{}{}
+{442}{Je pourrais te fournir quelques distractions si tu veux....}{}{1}{}{481}{re+9 }
+{443}{Désolée, je dois y aller à présent...}{}{1}{}{}{}
+// [LABEL] voir les pierres
+{461}{Non, n'y vas pas c'est du suicide ! Je ne veux pas que quelqu'un comme toi meure par ma faute....}{Non, n'y vas pas c'est du suicide ! Je ne veux pas que quelqu'un comme toi meure par ma faute....}{}{24}{}{}
+{462}{J'irai car je ne laisse pas les gens dans le malheur !}{}{1}{}{}{}
+{463}{Si c'est si dangereux je vais y réfléchir un peu...}{}{1}{}{}{}
+// [LABEL] genre de ditractions ?
+{481}{Ah ? Que pourrais tu faire pour moi ? [il vous regarde avec un petit sourire]}{Ah ? Que pourrais tu faire pour moi ? [il vous regarde avec un petit sourire]}{}{25}{}{}
+{482}{On pourrait jouer à la balle !}{}{1}{}{501}{}
+{483}{On pourrait jouer à pierre-feuille-ciseaux !}{}{1}{}{521}{}
+{484}{Je pourrais te consoler en te faisant...tout plein de trucs que tu aimerais !}{}{1}{}{541}{}
+{485}{Euh, ben pour l'instant rien, salut}{}{1}{}{}{}
+// [LABEL] baballe
+{501}{Euh ben j'ai pas de balle sur moi, ça tombe mal....}{Euh ben j'ai pas de balle sur moi, ça tombe mal....}{}{26}{}{}
+{502}{Euh....moi non plus. Bon tant pis je reviendrai te voir, t'inquiète !}{}{1}{}{}{}
+// [LABEL] Chicoumi
+{521}{Euh, mouais... vaudrait mieux pas, parce que en ce moment, le conseil m'observe par voie magique : ils sont au dessus de moi et ça ferait pas très sérieux.}{Euh, mouais... vaudrait mieux pas, parce que en ce moment, le conseil m'observe par voie magique : ils sont au dessus de moi et ça ferait pas très sérieux.}{}{27}{}{}
+{522}{Bon, ok, alors je reviendrai un peu plus tard, à plus !}{}{1}{}{}{}
+// [LABEL] Faire des trucs...
+{541}{[il pose sur vous un regard étonné] Je t'ai dit que je n'avais pas le temps à cause de mon travail mais toi tu me le redemandes ?! De toute façon le conseil nous observe par voie magique à tout moment...}{[il pose sur vous un regard étonné] Je t'ai dit que je n'avais pas le temps à cause de mon travail mais toi tu me le redemandes ?! De toute façon le conseil nous observe par voie magique à tout moment...}{}{28}{}{}
+{542}{Ah oui, j'aurais dû y penser... je reviendrai te voir, t'inquiète.}{}{1}{}{}{}
+{543}{Mais oui je te le redemande car....je ne veux pas que tu sois malheureux}{}{1}{re90 }{561}{}
+// [LABEL] redemande
+{561}{Mais....tu me plais bien, @pcname@ mais comprends moi, je n'ai pas le droit, sinon c'est la mort !}{Mais....tu me plais bien, @pcname@ mais comprends moi, je n'ai pas le droit, sinon c'est la mort !}{}{29}{}{}
+{562}{D'accord. Je suis déçue mais je reviendrai te voir, t'inquiète.}{}{1}{}{}{}

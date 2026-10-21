@@ -1,0 +1,48 @@
+// [LABEL] Bonjour
+{1}{Bonjour. ah vous avez l'air d'un aventurier. Vous voulez une baguette ?}{Bonjour. ah vous avez l'air d'un aventurier. Vous voulez une baguette ?}{}{1}{}{}
+{2}{Oui, en effet. C'est vous le boulanger du coin,alors ! J'ai entendu parler de vous.}{}{1}{}{21}{}
+{3}{Votre pain ne m'a pas l'air frais, cher monsieur. Vous trouvez pas ?}{}{1}{}{41}{}
+{4}{Au revoir, bonne continuation}{}{1}{}{}{}
+{5}{Hey j'ai trouvé une machine je sais pas si c'est dont vous avez besoin.}{}{1}{qu1017 3}{161}{}
+
+// [LABEL] Vous le boulanger
+{21}{Oui en effet c'est moi. Où avez vous entendu parler de moi ?}{Oui en effet c'est moi. Où avez vous entendu parler de moi ?}{}{2}{}{}
+{22}{J'entends les gens parler de vous c'est tout}{}{1}{}{81}{}
+{23}{Ca te regarde pas, continue à vendre ton pain sans poser de questions.}{}{1}{}{}{}
+
+// [LABEL] Pain frais
+{41}{Evidemment qu'il n'est pas frais. Tout le monde le sait ici. Ce pain date d'il y a 2 semaines, il est complètement rassi. On m'a volé mon matériel de cuisson depuis 2 semaines, je ne puis plus en fabriquer.}{Evidemment qu'il n'est pas frais. Tout le monde le sait ici. Ce pain date d'il y a 2 semaines, il est complètement rassi. On m'a volé mon matériel de cuisson depuis 2 semaines, je ne puis plus en fabriquer.}{}{3}{}{}
+{42}{Ah oui, c'est vrai, y'a que des pauvres dans ce bled, j'avais oublié.}{}{1}{}{}{}
+{43}{Je peux peut être vous en trouver un nouveau ?}{}{1}{}{61}{}
+{44}{Bon en fait c'était pour rire, je m'en fous de votre vie. Salut}{}{1}{}{}{}
+
+// [LABEL] Nouveau matos
+{61}{Ouais ça serait sympa.}{Ouais ça serait sympa.}{}{4}{}{}
+{62}{Je cours en chercher un, A+}{}{1}{}{}{qu1017 2}
+{63}{Non, je rigolais. Tu crois pas que je vais t'aider kamem ?}{}{1}{}{}{}
+{64}{Faudra me payer par contre}{}{1}{}{}{}
+
+// [LABEL] Parler de vous
+{81}{Vous m'avez pas l'air bien curieux. D'où vous venez ?}{Vous m'avez pas l'air bien curieux. D'où vous venez ?}{}{5}{}{}
+{82}{De très loin,  j'ai été téléporté ici à partir de l'a ville d'Ayecity. ça a l'air un peu fou, je sais.}{}{1}{}{101}{}
+{83}{Je préfère ne pas vous le dire, c'est classé secret défense de la part du gouvernement. [vous mentez]}{}{1}{}{121}{}
+{84}{De votre cul, au fond à gauche. Sur ce, bonne journée.}{}{1}{}{}{}
+
+// [LABEL] Viens d'Ayecity
+{101}{Ayecity ? Jamais entendu parler. Bon je vous laisse, je ne voudrais pas entrer dans votre vie privée. De plus j'ai beaucoup de pain sur la planche (haha).}{Ayecity ? Jamais entendu parler. Bon je vous laisse, je ne voudrais pas entrer dans votre vie privée. De plus j'ai beaucoup de pain sur la planche (haha).}{}{6}{}{}
+{102}{C'est gentil à vous ! salut}{}{1}{}{}{}
+
+// [LABEL] Secret défense
+{121}{Mais quel gouvernement ??? les villes s'administrent toutes seules dans le monde, voyons..... mais....attendez vous n'êtes pas de cette planète... vous êtes un extra terrestre ??!!}{Mais quel gouvernement ??? les villes s'administrent toutes seules dans le monde, voyons..... mais....attendez vous n'êtes pas de cette planète... vous êtes un extra terrestre ??!!}{}{7}{}{}
+{122}{Vous êtes sérieux, là ? Attendez, vous le faites exprès c'est pas possible ?!!}{}{1}{}{141}{}
+{123}{Tu sais ce qu'il te dit l'alien, ducon ? au r'voir}{}{1}{}{}{}
+
+// [LABEL] Exprès
+{141}{Bien entendu je le fais exprès. allez je vous laisse tranquille, j'ai beaucoup de pain sur la planche (héhéhaha)}{Bien entendu je le fais exprès. allez je vous laisse tranquille, j'ai beaucoup de pain sur la planche (héhéhaha)}{}{8}{}{}
+{142}{Ahaha,  Quel humour ! allez A+ [vous vous forcez à rire]}{}{1}{}{}{}
+{143}{Au revoir}{}{1}{}{}{}
+
+// [LABEL] machine
+{161}{Mais oui, en effet ! Merci beaucoup, malheureusement je n'ai rien à vous offrir à part de l'XP, désolé. Mais si vous avez besoin d'un renseignement, n'hésitez pas !}{Mais oui, en effet ! Merci beaucoup, malheureusement je n'ai rien à vous offrir à part de l'XP, désolé. Mais si vous avez besoin d'un renseignement, n'hésitez pas !}{}{9}{}{qu1003 4,xp3 ,in-3080}
+{162}{Bien sûr, au revoir}{}{1}{}{}{}
+

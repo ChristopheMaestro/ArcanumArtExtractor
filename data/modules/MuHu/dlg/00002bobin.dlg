@@ -1,0 +1,33 @@
+// [LABEL] NewPage0001
+{1}{Mais que faites-vous dans ma maison?}{Mais que faites-vous dans ma maison?}{}{1}{}{}
+{2}{Excusez-moi je me suis trompé}{}{1}{}{}{}
+{3}{Qu'est-ce qu'il a le barbu? Il a un probleme?}{}{1}{}{21}{re-10}
+{4}{Puis-je vous poser une question?}{}{1}{}{41}{}
+// [LABEL] NewPage0002
+{21}{C'est abberant de traiter de la sorte quelqu'un comme moi, allez vous en!}{C'est abberant de traiter de la sorte quelqu'un comme moi, allez vous en!}{}{2}{}{}
+{22}{Tres bien je m'en vais vieux con!}{}{1}{}{}{re-5}
+{23}{Attendez, non je ne voulais pas dire ça, excusez moi s'il vous plaît !}{}{1}{}{81}{re+10}
+// [LABEL] NewPage0003
+{41}{Allez y! Et depechez vous je ne n'ai pas que ca a faire!}{Allez y! Et depechez vous je ne n'ai pas que ca a faire!}{}{3}{}{}
+{42}{Sur quoi travailler-vous en ce moment?}{}{1}{}{61}{re+4}
+{43}{Pourquoi êtes-vous à l'ecart de la societe?}{}{1}{}{21}{re-4}
+{44}{Pourquoi êtes vous aussi con?}{}{1}{}{21}{re-7}
+// [LABEL] NewPage0004
+{61}{Je travaille sur une équation tres compliquée. Il faut trouver le barycentre de la mediane du carré des coefficients directeurs de la droite x/y-15c, le tout au carré bien sûr!}{Je travaille sur une équation tres compliquée. Il faut trouver le barycentre de la mediane du carré des coefficients directeurs de la droite x/y-15c, le tout au carré bien sûr!}{}{4}{}{}
+{62}{C'est vraiment un boulot de con, y a pas à dire!}{}{1}{}{21}{re-8}
+{63}{Mais c'est simple ca fait 2!}{}{+15}{}{}{}
+// [LABEL] Excuses
+{81}{Bon ok, je vous excuse. Que voulez vous d'autre ?}{Bon ok, je vous excuse. Que voulez vous d'autre ?}{}{5}{}{}
+{82}{Vous avez vu l'attaque de loups à l'instant ? C'était impressionant, hein ?}{}{1}{}{101}{}
+{83}{Qui habite la petite cabane en bas du lac ?}{}{1}{}{121}{}
+{84}{Non je rigole, je m'excuse pas, vas chier vieux fou !!!}{}{1}{}{}{re-6}
+// [LABEL] Attaque de loup
+{101}{Bien entendu, que je l'ai vue. J'étais à la fenêtre avant votre arrivée. Vous savez je l'avais prévue cette attaque, depuis quelques jours déjà.}{Bien entendu, que je l'ai vue. J'étais à la fenêtre avant votre arrivée. Vous savez je l'avais prévue cette attaque, depuis quelques jours déjà.}{}{6}{}{}
+{102}{Ah bon, vous êtes fort !}{}{1}{}{}{re+7}
+{103}{Bon en fait je m'en balance, au revoir, et bon appétit bien fur !}{}{1}{}{}{re-4}
+// [LABEL] Cabane en bas
+{121}{Je ne sais pas exactement. J'ai aperçu le proprio à mon arrivée dans cette ville, y a une semaine. Il est bizarre.}{Je ne sais pas exactement. J'ai aperçu le proprio à mon arrivée dans cette ville, y a une semaine. Il est bizarre.}{}{7}{}{}
+{122}{Ok merci du tuyau je vais voir qui c'est.}{}{1}{}{}{}
+// [LABEL] NewPage0002
+{141}{Mais oui vous avez raison, tenez prenez ces quelques pièces pour vous exprimer ma gratitude}{Mais oui vous avez raison, tenez prenez ces quelques pièces pour vous exprimer ma gratitude}{}{8}{}{}
+{142}{merci}{}{1}{}{}{$$50}

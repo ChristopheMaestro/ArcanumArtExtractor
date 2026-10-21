@@ -1,0 +1,30 @@
+{1}{G:}{}{}{}{}{}
+{2}{Bonjour, je me nomme @pcname@.}{}{1}{me0 }{4}{}
+{3}{Salut @npcname@, quoi de neuf ?}{}{1}{me1 }{6}{}
+{4}{Je suis le @npcname@. Enfin, quand le temps le permet, entre les tempêtes d'exquinoxe. Lorsque je suis à terre, je vends divers objets ramenés de mes voyages. Certains dockers, qui font également partie de mon équipage, agissent de même. Les autres doivent sûrement ramasser les objets "tombés" d'une charette.}{}{}{}{}{}
+{5}{Qu'avez-vous à me dire d'intéressant ?}{}{1}{}{6}{}
+{6}{Voulez-vous troquer ou bien des renseignements ?}{}{}{}{}{}
+{7}{Je ne connais pas encore la région. Pouvez-vous me la décrire ?}{}{1}{qu1004 0}{15}{}
+{8}{R:$0, 1005-1008}{}{1}{}{6}{}
+{9}{B:}{}{1}{}{6}{}
+{10}{Finalement, j'accepte de vous ramener votre bouteille [il vous donne 15 pièces].}{}{1}{qu1004 1}{6}{$$15 ,qu1004 2}
+{11}{J'ai votre bouteille Capitaine.}{}{1}{in3802 ,qu1004 3}{25}{}
+{12}{LairBoris m'a demandé si vous lui avez ramené ses herbes ?}{}{1}{qu1006 2}{27}{}
+{13}{EstAilleurs voudrait récupérer son stock de tissus.}{}{1}{qu1012 2}{29}{}
+{14}{E:}{}{1}{}{}{}
+{15}{Les Zils est un archipel. Centril, l'île où nous nous trouvons, est la seule qui comporte une calanque abritée et assez profonde pour permettre aux bateaux de mouiller. Aussi ce port et sa proche région, est appelé le Port. Centril comporte aussi le centre administratif de l'archipel que l'on appelle naturellement le Centre. Au debut, le Port ne comportait que des entrepôts et des champs. Et les murs entourant le Port, ont été construits, à l'origine, pour protéger les récoltes des animaux.}{}{}{}{}{}
+{16}{[suite]}{}{1}{}{17}{}
+{17}{Peu à peu avec le passage des gens venant chercher des marchandises, les voyageurs qui fanaient en attendant le bateau, des commerces se sont montés. Puis c'est plus facile pour eux de s'approvisionner. Mais je crois que vous n'êtes pas venu au meilleur moment. Je viens d'apprendre par un docker que l'île est envahie par des monstres. Et que le Capitaine de la Garde interdirait que l'on serve de l'alcool à la taverne.}{}{}{}{}{}
+{18}{Si l'on ne peut plus boire un coup, où va-t-on ?}{}{1}{qu1004 0}{22}{}
+{19}{Et, où pourrais-je faire mes achats, où trouver du travail ?}{}{1}{}{20}{}
+{20}{Pour vos emplettes, rue des Boutiques, ou au Centre. Si vous voulez gagner quelques pièces avant de les faire, étant donné que mon bateau viens d'arriver, les entrepôts embauchent peut-être. Sinon, demandez aux gardes.}{}{}{}{}{}
+{21}{Je vous remercie, autre chose ...}{}{1}{}{6}{}
+{22}{Enfin quelqu'un qui me comprend. D'ailleurs, vous me rendriez un fier service si vous pouviez me ramener un bouteille de la cuvée spéciale de SanSoif. Tenez voici de l'argent, au cas où vous ne pourriez faire l'avance [il vous tend 15  pièces]. Je n'ose quitter mon bateau avec ces nouveaux évènements.}{}{}{}{}{}
+{23}{Je vous compatis, et vous la ramènerais au plus vite [vous prennez les pièces].}{}{1}{}{6}{qu1004 2,$$15 }
+{24}{çà ne vous fera pas de mal de rester un peu à jeun, espèce d'ivrogne.}{}{1}{}{6}{al-10 ,qu1004 }
+{25}{Merci, pour votre peine voici 20 pièces.}{}{}{}{}{}
+{26}{Fallait pas [vous empochez les 20 pièces].}{}{1}{}{6}{$$20 ,qu1004 4,in3802 }
+{27}{Oui, j'ai réussi à les dénicher. Et bien sûr, il vous a demandé de lui ramemner. Les voici.}{}{}{}{}{}
+{28}{Merci.}{}{1}{}{6}{in-3803 ,qu1006 3}
+{29}{Bien sûr, tenez.}{}{}{}{}{}
+{30}{Merci [vous prenez le tissus].}{}{1}{}{6}{qu1012 3,in-5803 }

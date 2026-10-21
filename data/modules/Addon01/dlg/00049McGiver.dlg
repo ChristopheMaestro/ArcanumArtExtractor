@@ -1,0 +1,59 @@
+{1}{G:}{}{}{}{}{}
+{2}{Bonjour, @npcname@.}{}{1}{me1}{11}{}
+{3}{W:}{}{1}{me0 }{4}{}
+{4}{Je suis Mc Giver, ancien Forgeron de l'ancien Roi. A qui ai-je l'honneur ?}{}{}{}{}{}
+{5}{Je me nomme Toto, un simple voyageur.}{}{1}{}{6}{}
+{6}{Que puis-pour vous ?}{}{}{}{}{}
+{7}{J'aimerais connaître votre Histoire.}{}{1}{}{9}{}
+{8}{E:}{}{1}{}{0}{}
+{9}{Moultes aventures, il m'est arrivé. Une longue histoire, c'est. Un autre jour peut-être ?}{}{}{}{}{}
+{10}{Dans quel dommaine excellez-vous ?}{}{1}{}{11}{}
+{11}{Réparation, crochetage, détection et désamorçage de piège. Seriez-vous interressé par un entrainement ? Ou préférez-vous acheter quelque chose ?}{}{}{}{}{}
+{12}{B:}{}{1}{}{}{}
+{13}{T:7, 12, 14, 15}{}{1}{}{11}{}
+{14}{Je serais plutôt intéressé par l'expertise.}{}{1}{}{21}{}
+{15}{Avez-vous du travail pour moi ?}{}{1}{qa1002 2,qb1013 1}{54}{}
+{16}{Pouvez-vous m'indentifier quelque chose ?}{}{1}{}{11}{ii }
+{17}{J'ai le pur alliage.}{}{1}{qu1013 2,in5622 }{56}{}
+{18}{@npcname@, j'ai encrore du pur alliage.}{}{1}{in5622. ,qa1013 4}{58}{}
+{19}{Lépicier demandee si sa hache est prête.}{}{1}{qu1007 2}{51}{}
+{20}{E:}{}{1}{}{}{}
+{21}{Voulez-vous devenir expert en détection de piège, en répartation, crochetage ou désamorçage.}{}{}{}{}{}
+{22}{Pouvez-vous m'aider à atteindre le grade d'expert en détection de piège, monsieur ?}{}{5}{tr7 -1}{21}{et7 27}
+{23}{Pouvez-vous m'aider à atteindre le grade d'expert en réparation monsieur ?}{}{5}{tr12 -1}{21}{et12 33}
+{24}{Pouvez-vous m'aider à atteindre le grade d'expert en crochetage, monsieur ?}{}{5}{tr14 -1}{21}{et14 39}
+{25}{Pouvez-vous m'aider à atteindre le grade d'expert en désamorçage de piège,monsieur ?}{}{5}{tr15 -1}{21}{et15 45}
+{26}{Finalement, je me contenterais d'apprentissage.}{}{1}{}{11}{}
+{27}{Je veux bien vous aider à devenir expert détection de piège pour 400 pièces d'or.}{}{}{}{}{}
+{28}{Certe je les ai mais je dois faire des emplêtes plus urgentes. A plus tard.}{}{1}{}{11}{}
+{29}{Tenez, c'est un bon investissement.}{}{1}{$$400 }{31}{}
+{30}{Désolé, je suis à court. A plus tard.}{}{1}{$$-399 }{11}{}
+{31}{Merci beaucoup, @pcname@. [Il vous explique comment répérer facilement des pièges, en expliquant, croquis à l'appuis les principaux types.] Voilà, vous savez tout. Vous êtes désormais expert en détection de pièges}{}{}{}{}{tr7 2,$$-400 }
+{32}{Merci, beaucoup. Puis-je vous demander autre chose.}{}{1}{}{11}{}
+{33}{Je veux bien vous aider à devenir expert en réparation pour 400 pièces d'or.}{}{}{}{}{}
+{34}{Certe je les ai mais je dois faire des emplêtes plus urgentes. A plus tard.}{}{1}{}{11}{}
+{35}{Tenez, c'est un bon investissement.}{}{1}{$$400 }{37}{}
+{36}{Désolé, je suis à court. A plus tard.}{}{1}{$$-399 }{11}{}
+{37}{Merci beaucoup, @pcname@.  Vous êtes désormais expert en réparation.}{}{}{}{}{tr12 2,$$-400 }
+{38}{Merci, beaucoup. Puis-je vous demander autre chose.}{}{1}{}{11}{}
+{39}{Je veux bien vous aider à devenir expert en crochetage pour 400 pièces d'or.}{}{}{}{}{}
+{40}{Certe je les ai mais je dois faire des emplêtes plus urgentes. A plus tard.}{}{1}{}{11}{}
+{41}{Tenez, c'est un bon investissement.}{}{1}{$$400 }{31}{}
+{42}{Désolé, je suis à court. A plus tard.}{}{1}{$$-399 }{11}{}
+{43}{Merci beaucoup, @pcname@. Vous êtes désormais expert en crochetage.}{}{}{}{}{tr14 2,$$-400 }
+{44}{Merci, beaucoup. Puis-je vous demander autre chose.}{}{1}{}{11}{}
+{45}{Je veux bien vous aider à devenir expert en désamorçage pour 400 pièces d'or.}{}{}{}{}{}
+{46}{Certe je les ai mais je dois faire des emplêtes plus urgentes. A plus tard.}{}{1}{}{11}{}
+{47}{Tenez, c'est un bon investissement.}{}{1}{$$400 }{49}{}
+{48}{Désolé, je suis à court. A plus tard.}{}{1}{$$-399 }{11}{}
+{49}{Merci beaucoup, @pcname@.  Voilà, vous savez tout. Vous êtes désormais expert en désamorçage.}{}{}{}{}{tr15 2,$$-400 }
+{50}{Merci, beaucoup. Puis-je vous demander autre chose.}{}{1}{}{11}{}
+{51}{La voici. Ce sera 50 pièces.}{}{}{}{}{}
+{52}{Tenez [vous payez et récupérez la hache].}{}{1}{$$50 }{11}{$$-50 ,in-2201 ,qu1007 3}
+{53}{Oups, j'ai oublié l'argent, je reviens.}{}{1}{$$-49 }{11}{}
+{54}{Les routes vers la mine étant coupé, je n'ai plus de pur alliage. 250 pièces si vous m'en ramenez.}{}{}{}{}{}
+{55}{Votre offre est allèchante. Comptez sur moi.}{}{1}{}{11}{qu1013 2}
+{56}{Merci, avec ces évènements tout le monde me demande des armes ou de les réparer. Voilà la somme promise. Je continuerai à vous acheter du pur alliage à 200 pièces mais ce ne sera pas une quête.}{}{}{}{}{}
+{57}{C'est moi qui vous remerci, j'ai gardement besoin de cet argent.}{}{1}{}{11}{$$250 ,qu1013 4,in5622 }
+{58}{Voilà, 200 pièces comme convenu.}{}{}{}{}{}
+{59}{Merci @npcname@, ce me sera bien utile.}{}{1}{}{11}{$$200 ,in5622 }

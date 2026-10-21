@@ -1,0 +1,81 @@
+{1}{Ah ! N'y a-t-il personne pour aider un pauvre hère ?}{Ah ! N'y a-t-il personne pour aider un pauvre hère ?}{}{}{}{}
+// Vu si quete pas mentionnee
+{2}{Euh... Bonjour... Vous avez un problème ?}{}{5}{qu1000 0}{20}{}
+{3}{Huh... 'jour... Vou problaim ?}{}{-4}{qu1000 0}{25}{}
+// vu si quete mentionnee pas acceptee
+{4}{J'ai décidé de vous aider finalement}{}{5}{qu1000 1}{100}{}
+{5}{Moi aidé vou !}{}{-4}{qu1000 1}{105}{}
+{6}{E:}{}{1}{qu1000 1}{0}{}
+// vu si quete acceptee
+{7}{Où m'avez-vous dit qu'était votre maison ?}{}{5}{qu1000 2}{120}{}
+{8}{Ou méson ?}{}{-4}{qu1000 2}{125}{}
+// vu si quete finie pas reportee
+{9}{J'ai tué vos rats !}{}{5}{gv0 3, qu1000 2}{140}{}
+{10}{Moi tué ra !}{}{-4}{gv0 3, qu1000 2}{145}{}
+// vu si quete completee reportee
+{11}{E:}{}{1}{qu1000 4}{0}{}
+
+{20}{Si j'ai un problème ? Un peu que j'ai un problème ! Je me suis retiré en hermitage au nord de ce village, et ce matin des rats ont trouvé ma maison confortable ! Comme si ma maison était là pour eux !}{Si j'ai un problème ? Un peu que j'ai un problème ! Je me suis retiré en hermitage au nord de ce village, et ce matin des rats ont trouvé ma maison confortable ! Comme si ma maison était là pour eux !}{}{}{}{qu1000 1}
+{21}{Pourquoi ne les tuez-vous pas ?}{}{5}{}{40}{}
+{22}{F:}{}{}{}{0}{}
+
+{25}{Ah c'est bien ma veine ! La seule personne qui m'écoute est un abruti !}{Ah c'est bien ma veine ! La seule personne qui m'écoute est une attardée !}{}{}{}{}
+{26}{Euh... Koi votr problaim ?}{}{-4}{}{45}{}
+{27}{Vou appelé moua abruti ! moi tué vou !}{1}{-4}{}{0}{qu1000 6, co, al -50}
+{28}{Vou appelé moa attardée ! moi tué vou !}{0}{-4}{}{0}{qu1000 6, co, al -50}
+{29}{F:}{}{}{}{0}{}
+
+{40}{Hélas, j'ai fait voeu de non-violence ! Notez que j'ai aussi fait voeu de silence, mais là, c'est assez important pour que je brise ce dernier...}{Hélas, j'ai fait voeu de non-violence ! Notez que j'ai aussi fait voeu de silence, mais là, c'est assez important pour que je brise ce dernier...}{}{}{}{}
+{41}{Que diriez-vous si je vous en débarassait ?}{}{5}{}{60}{}
+{42}{Hah ! Vous avez fait voeu de non-violence ! Eh bien voyons si vous êtes capable de le briser aussi !}{}{5}{}{0}{qu1000 6, co, al -50}
+{43}{E:}{}{}{}{0}{}
+
+{45}{Eh bien, vois-tu, ma... euh... Maison à moi envahie par rats ! Toi devoir tuer rats !}{Eh bien, vois-tu, ma... euh... Maison à moi envahie par rats ! Toi devoir tuer rats !}{}{}{}{qu1000 1}
+{46}{Euh.. Dacor...}{}{-4}{}{65}{}
+{49}{Toi pa tué ra, moa tué toa !}{}{-4}{}{0}{qu1000 6, co, al -50}
+{48}{E:}{}{}{}{}{}
+
+{60}{Vous accepteriez ? Formidable ! Ma maison se trouve au nord de ce village, suivez ce chemin ! [Il vous désigne le chemin sur lequel il se tient]}{Vous accepteriez ? Formidable ! Ma maison se trouve au nord de ce village, suivez ce chemin ! [Il vous désigne le chemin sur lequel il se tient]}{}{}{}{}
+{61}{Hep, minute, je n'ai pas dit que je ferais ça gratuitement !!}{}{5}{}{80}{}
+{62}{D'accord, j'y vais tout de suite...}{}{5}{}{0}{qu1000 2}
+{63}{Hum... A la réflexion, je préfère ne pas me mêler de ce qui ne me regarde pas...}{}{5}{}{0}{}
+{64}{F:}{}{}{}{0}{}
+
+{65}{Ah ouf ! Maison a moi au nord ! Toi suivre chemin ici ! [Il vous montre le chemin su lequel il se tient]}{Ah ouf ! Maison a moi au nord ! Toi suivre chemin ici ! [Il vous montre le chemin su lequel il se tient]}{}{}{}{}
+{66}{Moa veu compan... Compans... Choz en aichanje !}{}{-4}{}{85}{}
+{67}{Dacor, moa i allé}{}{-4}{}{0}{qu1000 2}
+{68}{Eu... Moa pa allé fina.. Finhalm.... An fète !}{}{-4}{}{0}{}
+{69}{F:}{}{}{}{0}{}
+
+{80}{Oh... Mais j'ai également fait voeu de pauvreté ! Je ne possède absolument rien !}{Oh... Mais j'ai également fait voeu de pauvreté ! Je ne possède absolument rien !}{}{}{}{}
+{81}{Alors je prendrais mon salaire sur votre corps !}{}{5}{}{0}{qu1000 6, co, al -50}
+{82}{Tant pis... Je le ferais quand-même...}{}{5}{}{0}{qu1000 2}
+{83}{Et vous croyez que je vais travailler pour des prunes ? Laissez tomber !}{}{5}{}{0}{}
+{84}{F:}{}{}{}{0}{}
+
+{85}{Quoi ? Tu veux une compensation ? Mais depuis quand paye-t-on les imbéciles ? En plus je... Moi rien avoir ! Moi être pauvre !}{Quoi ? Tu veux une compensation ? Mais depuis quand paye-t-on les imbéciles ? En plus je... Moi rien avoir ! Moi être pauvre !}{}{}{}{}
+{86}{Alor moa tué toa é prendr choz sur toa mor !}{}{-4}{}{0}{qu1000 6, co, al -50}
+{87}{Hah.... [longue pause d'intense réflexion] Moa i allé kan maime !}{}{-4}{}{0}{qu1000 2}
+{88}{Hu... Alor moa pa tué ra !}{}{-4}{}{0}{}
+{89}{F:}{}{}{}{0}{}
+
+{100}{Vous voulez bien ? Ouf ! Merci ! Ma maison est au nord de ce village ! Dépêchez-vous !}{Vous voulez bien ? Ouf ! Merci ! Ma maison est au nord de ce village ! Dépêchez-vous !}{}{}{}{qu1000 2}
+{101}{E:}{}{}{}{0}{}
+
+{105}{Toi vouloir ? Ma maison être au nord ! Toi te dépêcher !}{Toi vouloir ? Ma maison être au nord ! Toi te dépêcher !}{}{}{}{qu1000 2}
+{106}{E:}{}{}{}{0}{}
+
+{120}{Ma maison est au nord ! Vite ! Avant qu'ils ne détruisent tout !}{Ma maison est au nord ! Vite ! Avant qu'ils ne détruisent tout !}{}{}{}{}
+{121}{E:}{}{}{}{0}{}
+
+{125}{Ma maison être au nord ! Toi te dépêcher !}{Ma maison être au nord ! Toi te dépêcher !}{}{}{}{}
+{126}{E:}{}{}{}{0}{}
+
+{140}{Ah ! Bien ! Merci ! Soyez béni !}{Ah ! Bien ! Merci ! Soyez bénie !}{}{}{}{qu1000 4, al +50}
+{141}{E:}{}{}{}{0}{}
+
+{145}{Ah ! Merci ! T'es bien brave !}{Ah ! Merci ! T'es bien brave !}{}{}{}{qu1000 4, al +50}
+{146}{E:}{}{}{}{0}{}
+
+{150}{Oui ?}{Oui ?}{}{}{}{}
+{151}{E:}{E:}{}{}{0}{}

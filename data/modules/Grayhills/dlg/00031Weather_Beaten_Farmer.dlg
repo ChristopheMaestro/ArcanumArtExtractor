@@ -1,0 +1,42 @@
+// Weather-Beaten Farmer - Crop Rotation Quest
+// (Crop Rotation dialogue only available if intelligence is at least 8 in Fallout)
+// Make it 10 or 12 in Arcanum
+// lf0 1 = PC has asked name
+
+{1}{Hello.}{Hello.}{}{}{}{}
+{2}{Good day.}{}{1}{}{10}{}
+{3}{E:}{}{1}{}{0}{}
+
+{10}{What can I do for you?}{What can I do for you?}{}{}{}{}
+{11}{W:}{}{1}{lf0 0}{20}{}
+{12}{What can you tell me about Grayhills?}{}{5}{lf0 1}{30}{}
+{13}{Wat you 'no 'bout Grayheels?}{}{-4}{lf0 1}{30}{}
+{14}{What are you doing?}{}{5}{}{40}{}
+{15}{W'at you be doin'?}{}{-4}{}{40}{}
+{16}{E:}{}{1}{}{0}{}
+
+{Y}{}{}{INT}{}{XXX}{}
+
+{20}{I am called Curtis.}{I am called Curtis.}{}{}{}{lf0 1}
+{21}{K:}{}{1}{}{10}{}
+
+{30}{Grayhills is a small town but we support ourselves. Aside from the attacks by insects to my crops and the occasional fright from the Mummy, we have no problems. Charles Gray III is a good Mayor.}{Grayhills is a small town but we support ourselves. Aside from the attacks by insects to my crops and the occasional fright from the Mummy, we have no problems. Charles Gray III is a good Mayor.}{}{}{}{}
+{31}{K:}{}{1}{}{0}{}
+
+{40}{I am a farmer. }{}{}{}{}{}
+
+3. What are you doing?
+- I am a farmer. We irrigated the desert many years ago. Although the wasteland is harsh, it is possible to grow things with patience and time.
+	I see. You seem to be doing pretty well. (Back to previous two options)
+	You have all of your fields planted now? You could probably do better with crop rotation.
+	- Crop rotation? What's that?
+	Never mind.
+	You only plant some of your fields, allowing the others to get back some of the nutrients that the plants used up. You let the other fields become fertile again by just tilling up whatever grows there.
+	- Huh. Never thought of that. Makes sense, though. Good idea.
+	[Done]
+
+End dialogue and print message: You gain 500 experience points for helping to improve the agriculture of Shady Sands.
+
+4. Nothing thanks. (EXIT)
+
+// {Y}{}{}{INT}{}{XXX}{}

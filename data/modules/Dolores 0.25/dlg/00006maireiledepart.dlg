@@ -1,0 +1,108 @@
+{1}{G:}{G:}{}{1}{}{}
+//Vu si quete pas mentionnee
+{2}{W:}{}{5}{qu1001 0}{20}{}
+{3}{W:}{}{-4}{qu1001 0}{20}{}
+//vu si quete pas acceptee
+{4}{J'ai décidé d'accepter de tuer vos araignées !}{}{5}{qu1001 1}{120}{}
+{5}{Moi tué arégné !}{}{-4}{qu1001 1}{120}{}
+//vu si quete pas finie
+{6}{Je n'ai pas encore tué les araignées}{}{5}{qu1001 2}{140}{}
+{7}{Moa pa tué arégné}{}{-4}{qu1001 2}{140}{}
+//vu si quete finie
+{8}{J'ai tué vos araignées !}{}{5}{gv1 5, qu1001 2}{160}{}
+{9}{Moa tuer airégné !}{}{-4}{gv1 5, qu1001 2}{160}{}
+//Vu seulement si parlé au parent et ni Nain ni Elfe
+{10}{Savez-vous où se réside le représentant du Gouvernement des Arcanes ?}{}{5}{qu1002 2, ra -2, ra -3, gf9 0}{180}{}
+{11}{Ou aitre chef maichan gouvairneman ?}{}{-4}{qu1002 2, gf9 0}{200}{}
+//Vu si Nain
+{12}{Est-ce que vous sauriez où se trouve le Gouvernement des Arcanes ?}{}{5}{qu1002 2, ra 2, gf9 0}{370}{}
+//Vu si Elfe
+{13}{Sauriez-vous où réside le Gouvernement des Arcanes ?}{}{5}{qu1002 2, ra 3, gf9 0}{390}{}
+//Vu dans tous les cas
+{14}{E:}{}{1}{}{0}{}
+
+{20}{Mon nom est Kedyder, et je suis le maire de cette île. Puis-je vous retourner la question ?}{Mon nom est Kedyder, et je suis le maire de cette île. Puis-je vous retourner la question Madame ?}{}{2}{}{}
+{21}{Bien sûr, je m'appelle @pcname@. Avez-vous du travail par ici ?}{}{5}{}{40}{}
+{22}{Huh.. Oui.. Moi @pcname@ Vous avoir travail ?}{}{-4}{}{60}{}
+{23}{J'ai d'autres questions}{}{5}{}{1}{}
+{24}{Moi otres kaistyons}{}{-4}{}{1}{}
+
+{40}{Eh bien, nous avons un petit problème dans le temple en ce moment. Des araignées énormes sont apparues, et depuis, nous avons moins de visites car les pélerins ont peur. Pourriez-vous nous en débarasser ?}{Eh bien, nous avons un petit problème dans le temple en ce moment. Des araignées énormes sont apparues, et depuis, nous avons moins de visites car les pélerins ont peur. Pourriez-vous nous en débarasser ?}{}{3}{}{qu1001 1}
+{41}{Cela dépend... Combien est-ce payé ?}{}{1}{}{80}{}
+{42}{Oui, bien sûr. Où est-ce ?}{}{1}{}{120}{}
+{43}{F:}{}{1}{}{1}{}
+
+{60}{Hum.... Oui, j'ai travail. Toi aller dans temple et tuer araignées dedans !}{Hum.... Oui, j'ai travail. Toi aller dans temple et tuer araignées dedans !}{}{4}{}{qu1001 1}
+{61}{Euh... Dacor.}{}{1}{}{120}{}
+{62}{Huh... Payer combien ?}{}{1}{}{100}{}
+{63}{F:}{}{1}{}{1}{}
+
+{80}{Hm, eh bien, les fonds communaux ne se portent pas très bien en ce moment, je dirais, 25 pièces, cela serait déjà beaucoup...}{Hm, eh bien, les fonds communaux ne se portent pas très bien en ce moment, je dirais, 25 pièces, cela serait déjà beaucoup...}{}{5}{0}{}
+{81}{75 ? Soit. Où est-ce ?}{}{1}{}{120}{}
+{82}{Excusez-moi, mais je pense que tuer des araignées vaut plus que cela. Au revoir.}{}{1}{}{0}{}
+{83}{F:}{}{1}{}{1}{}
+
+{100}{Quoi ? Il faut payer les abrutis maintenant ? Pfff.... Très bien. Moi te payer 10 pièces. Toi d'accord ?}{Quoi ? Il faut payer les abrutis maintenant ? Pfff.... Très bien. Moi te payer 10 pièces. Toi d'accord ?}{}{6}{}{}
+{101}{Toi appeler moi abruti ! Moi te tué !!!}{}{1}{}{0}{qu1001 6, co}
+{102}{Euh... Bien. Ou le tampl ?}{}{1}{}{120}{}
+{103}{Hu... Pas assez... Euh... Moi partir...}{}{1}{}{0}{}
+{104}{F:}{}{1}{}{1}{}
+
+{120}{Merci ! Le temple est au Nord-Est du village.}{Merci !Le temple est au Nord-Est du village.}{}{7}{}{qu1001 2}
+{121}{Très bien, j'y vais tout de suite.}{}{5}{}{0}{}
+{122}{Huh... Dacor, moi i alé mintnan}{}{-4}{}{0}{}
+{123}{E:}{}{1}{}{0}{}
+
+{140}{Eh bien, hâtez-vous !}{Eh bien, hâtez-vous !}{}{}{}{}
+{141}{Je crois que je vais plutôt vous tuer vous !}{}{5}{}{0}{qu1001 6, co}
+{142}{Moa tué toa pluto !}{}{-4}{}{0}{qu1001 6, co}
+{143}{E:}{}{1}{}{0}{}
+
+{160}{Ah ! Merci ! Vous nous ôtez une énorme épine du pied ! Tenez, prenez ces quelques pièces !}{Ah ! Merci ! Vous nous ôtez une énorme épine du pied ! Tenez, prenez ces quelques pièces !}{}{}{}{qu1001 4}
+{161}{Ce fut un plaisir}{}{5}{}{0}{$$ 25}
+{162}{Je crois que je vais finir le travail en vous massacrant !}{}{5}{}{0}{qu1001 6, co}
+{163}{Hi... Pa deux koua !}{}{-4}{}{0}{$$ 10}
+{164}{Moa tué toa mintnan !}{}{-4}{}{0}{qu1001 6, co}
+{165}{E:}{}{1}{}{0}{}
+
+{180}{On peut aisément imaginer qu'il se trouve dans la capitale, récemment envahie, Rarith. Quant à savoir où exactement dans la capitale...}{On peut aisément imaginer qu'il se trouve dans la capitale, récemment envahie, Rarith. Quant à savoir où exactement dans la capitale...}{}{}{}{}
+{181}{Où pourrais-je trouver des informations sur lui ?}{}{5}{}{220}{}
+
+{200}{Hum... Lui certainement à Rarith, ancienne capitale de l'archipel. Euh, d'ici. Mais je ne sais rien de plus.}{Hum... Lui certainement à Rarith, ancienne capitale de l'archipel. Euh, d'ici. Mais je ne sais rien de plus.}{}{}{}{}
+{201}{Ki peu meu dir plusse ?}{}{-4}{}{240}{}
+
+{220}{[Il s'accorde un court moment de réflexion] J'imagine que les Elfes pourront vous aider... Si vous les trouvez...}{[Il s'accorde un court moment de réflexion] J'imagine que les Elfes pourront vous aider... Si vous les trouvez...}{}{}{}{}
+{221}{Pourquoi les Elfes ? Et où puis-je les trouver ?}{}{5}{}{260}{}
+
+{240}{[Il réfléchit quelques instants] Elfes certainement savoir.}{[Il réfléchit quelques instants] Elfes certainement savoir.}{}{}{}{}
+{241}{Pourkoua ?}{}{-4}{}{280}{}
+
+{260}{Eh bien, ils se trouvent toujours partout, surtout là où on ne les attend pas. De plus, le Gouvernement des Arcanes, l'envahisseur, aide les Elfes, pour deux raisons : la majorité des membres du Gouvernement en sont, et ils aident le Gouvernement de par leur nature magique.}{Eh bien, ils se trouvent toujours partout, surtout là où on ne les attend pas. De plus, le Gouvernement des Arcanes, l'envahisseur, aide les Elfes, pour deux raisons : la majorité des membres du Gouvernement en sont, et ils aident le Gouvernement de par leur nature magique.}{}{}{}{}
+{261}{D'accord... Et pour savoir où les trouver ?}{}{5}{}{300}{}
+
+{280}{[Il s'énerve] Eh bien, pourquoi pas !?}{[Il s'énerve] Eh bien, pourquoi pas !?}{}{}{}{}
+{281}{Dacor... Ai ou son ailf ?}{}{-4}{}{320}{}
+
+{300}{Hum... Ca, c'est une autre paire de manches... Leur village s'appelle Laldar. Il se trouve dans les arbres, sur une île du nom de Choathien. Sinon, le secret de l'emplacement du village est bien gardé. Vous devriez essayer de trouver un Elfe pour qu'il vous aide...}{Hum... Ca, c'est une autre paire de manches... Leur village s'appelle Laldar. Il se trouve dans les arbres, sur une île du nom de Choathien. Sinon, le secret de l'emplacement du village est bien gardé. Vous devriez essayer de trouver un Elfe pour qu'il vous aide...}{}{}{}{qu1003 2}
+{301}{Très bien. Merci pour ces informations.}{}{5}{}{340}{}
+
+{320}{Ville à eux : Laldar. Dans forêt, sur île Choathien. Moi pas savoir où exactement. Toi trouver Elfe pour information.}{Ville à eux : Laldar. Dans forêt, sur île Choathien. Moi pas savoir où exactement. Toi trouver Elfe pour information.}{}{}{}{qu1003 2}
+{321}{Hu.. Dacor...}{}{-4}{}{360}{}
+
+{340}{Vous devriez pouvoir trouver un Elfe dans le temple du village. Quelques écclésiastiques en sont.}{Vous devriez pouvoir trouver un Elfe dans le temple du village. Quelques écclésiastiques en sont.}{}{}{}{gf6 1, gf9 1}
+{341}{Très bien. Merci pour tout, et au revoir...}{}{5}{}{0}{}
+
+{360}{Toi aller dans temple pour voir prêtre. Lui être Elfe.}{Toi aller dans temple pour voir prêtre. Lui être Elfe.}{}{}{}{gf6 1, gf9 1}
+{361}{Hu... Dacor... Merssi !}{}{-4}{}{0}{}
+
+{370}{Eh bien... Mmhhh... Les Elfes pourraient vous en dire plus... Mais... Vous comprenez....}{Eh bien... Mmhhh... Les Elfes pourraient vous en dire plus... Mais... Vous comprenez....}{}{}{}{}
+{371}{Oui, encore ces préjugés raciaux, hein !? Mais où puis-je les trouver ?}{}{1}{}{380}{}
+
+{380}{Eh bien... Personnellement, je ne peux pas vous en dire beaucoup plus.... Allez donc trouver le prêtre au temple du village. Il saura vous renseigner...}{Eh bien... Personnellement, je ne peux pas vous en dire beaucoup plus.... Allez donc trouver le prêtre au temple du village. Il saura vous renseigner...}{}{}{}{qu1003 2, gf6 1, gf9 1}
+{381}{Merci.}{}{1}{}{0}{}
+
+{390}{Hum... Vos compatriotes, les Elfes, le savent. Pourquoi pas vous ?}{Hum... Vos compatriotes, les Elfes, le savent. Pourquoi pas vous ?}{}{}{}{}
+{391}{Je ne suis pas de ce continent.}{}{1}{}{400}{}
+
+{400}{Mmh.. Soit. Allez trouver le prêtre dans le temple du village. Il pourra vous en dire plus.}{Mmh.. Soit. Allez trouver le prêtre dans le temple du village. Il pourra vous en dire plus.}{}{}{}{qu1003 2, gf6 1, gf9 1}
+{401}{Merci. Au revoir.}{}{1}{}{0}{}

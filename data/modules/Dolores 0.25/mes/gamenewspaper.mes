@@ -1,0 +1,84 @@
+
+// This message file contains text to be used in game-supplied newspapers
+// Only the message line numbers 1000 or higher are valid
+// Each new newspaper begins on a multiple of 10, and can use up to 10
+// lines, which must be consecutive. The first line is always the main 
+// headline, while the 9 remaining lines go into 4 columns of the paper.
+// Format: each line begins with a font number and justification letter,
+// followed by the text for that line.
+
+// Some font numbers to use:
+//	490 Extra Large Headline
+//	486 Large Headline
+//	492 Normal Headline
+//	483 Story Body
+//	488 Clip Art 0-6
+
+// Justification letters (you must use one)
+//	l = left
+//	c = center
+
+// NOTE: The first blocks, 0 thru 999, are reserved for UI use
+
+// News Paper Type 1
+{0}{EXTRA!}
+{1}{[ NOUVELLES ]}
+{2}{Prix : 2 pièces}
+{3}{La meilleure source d'information de tout Dolores}
+
+// News Paper Type 2
+{4}{[ LE DOLORES ]}
+{5}{Toutes les nouvelles aptes à être imprimées}
+
+// filler articles
+{10}{492c _ METEO _}
+{11}{483l Le service météorologique prévoit un temps ensolleillé pour les deux à trois jours prochains, avec une chance accrue de de précipitations avant minuit.}
+{12}{492c _ AUGMENTATION DES TAXES _}
+{13}{483l Le Gouvernement de Dolores considère encore une fois d'augmenter l'impôt sur le revenu, en raison de la situation de crise politique que nous vivons actuellement. Vous pourrez trouver les détails de l'affaire en page 3.}
+{14}{492c _ ANNONCES PUBLIQUES _}
+{15}{483l Un conseil devrait se tenir à Aliwen, ce vendredi, qui doit être ouvert à tous. Il débutera à 7 heures précises.}
+{16}{492c _ RAPPEL DE L'EDITEUR _}
+{17}{483l La rédacion tient à rappeler à ses lecteurs que les rédactions ne reflètent pas forcément l'opinion du propriétaire du journal, Mr William Willaby.}
+{18}{492c _ LA GUERRE ! _}
+{19}{483l Le spectre de la guerre est de retour... Le Gouvernement des Arcane exige encore une fois l'extradition de tous les technologistes, quelle que soit leur race. Les gouvernements conjoints de Dolores et des autres continents résistants refusent bien entendu cet injonction, et les tensions montent entre les gouvernements. Il se pourrait qu'une nouvelle guerre éclate bientôt. Les détails en page 5.}
+{20}{492c _ COLLOQUE DES UNIVERSITES _}
+{21}{483l Les Universités de Dolores tiendront un colloque semestriel dans le courant de la semaine. Les gens intéressés sont invités à contacter le secrétariat des universités pour plus d'informations.}
+{22}{492c _ BAL DE CHARITE _}
+{23}{483l La Société des Dames d'Aliwen tiendra à nouveau un bal de charité ce samedi soir. Cet évènement aura lieu en faveur des orphelins et des survivants de la guerre, encore récente. Les festivités commenceront à 8 heures. Une tenue correcte est exigée.}
+{24}{492c _ MAREES _}
+{25}{483l La marée haute aura lieu à 6h15 et 19h30 aujourd'hui, et la marée basse à environ 13h05 et 0h25. Le tableau des marées du mois se trouve en page 8.}
+
+//Game Related Newspapers
+//Use lines 1000-4990
+//Generic Newspapers Start at line 5000
+
+{1000}{490c EXEMPLE ! }
+{1001}{492c _ Sous-titre _}
+{1002}{483l Texte de la news.}
+
+{1020}{490c GARRINGSBURG HEIST!
+PAINTING STOLEN!}
+{1021}{492c _ THIEVES STILL AT LARGE _}
+{1022}{483l Late on Tuesday evening, the mansion of Mr. James and Mrs. Evelyn Garringsburg, at 37 Devonshire Way, was broken into by thieves and ransacked, according to sources close to the family.  Among the many items stolen was the famed 'Kerghan and Persephone', painted by Pizarro.  Sold last year at Renaud's for a reputed 50,000 gold pieces, the painting was the show piece of the Garringsburg gallery.
+Mr. Garringsburg, a long-standing member of the Wellington Gentlemen's Club, had this to say--"You can be assured that the perpetrators of this heinous crime will be brought to justice, and that reparations will be made."  Mrs. Garringburg was unavailable for comment.
+The Garringsburgs have offered a 300 gold piece reward.  This crime is only the latest of many art-related robberies, which have included the "Lorek in repose" statue, and the Blendom Vase.}
+
+
+
+
+
+
+//Generic Newspapers
+
+{5000}{490c LES RUMEURS SE CONFIRMENT}
+{5001}{492c _ DES APPARITIONS MYSTERIEUSES _}
+{5002}{483l 	Hier soir, un homme est arrivé à l'office du journal, pour nous signaler qu'il avait apperçu un fantôme, qui s'était approché de lui. Il avait fui, mais un de nos reporters est allé sur place voir ce qu'il en est.
+	Il apparaît que le fantôme en question a laissé des traces visibles. Notre reporter a suivi celles-ci, et a découvert un grand cercle de terre brûlée, manifestement par magie car il apparaîtrait que le cercle date de plusieurs années, voire dixaines d'années, ou plus.
+	Si cet évènement avait été isolé, on n'en aurait point fait mention, mais il fait suite à une série de découvertes étranges, de technologies et arcanes mystérieuses et inconnues. Nous pensons qu'il est possible qu'une civilisation ancienne aie vécu sur cet archipel avant de disparaître totalement, sans pratiquement laisser de traces. Nos enquêteurs suivent leur piste, mais nous n'avons rien de vraiment concret à vous révéler pour l'instant ; nous vous tiendrons au courant.}
+
+
+{5010}{490c LA MENACE DE GUERRE SE PRECISE}
+{5011}{492c _ LE GOUVERNEMENT DES ARCANES N'EN A PAS ASSEZ _}
+{5012}{483l	Il y a peu, un messager du Gouvernement des Arcanes, actuellement stationné dans l'ancienne capitale de l'archipel, est arrivé à Aliwen, porteur d'un message pour le moins inquiétant.
+	Le Gouvernement ennemi exige l'extradition immédiate des ressortissant technologiques logés sur Dolores. Les dirigeants de l'archipel ont bien évidemment refusé avec fermeté, mais cela ne fait qu'aggraver les relations tendues entre le continent d'Arcanum et le reste de l'archipel.
+	Les raisons invoquées par le Gouvernement des Arcanes sont les mêmes depuis des années, et ce sont les mêmes raisons qui ont déclenché la guerre relativement récemment : la technologie interfère avec la magie ; or le Gouvernement des Arcanes utilise énormément la magie, dans de multiples domaines, pour diriger Arcanum. Ils prétendent ainsi que la technologie, localisée sur Dolores et les continents alliés, perturbe leurs manipulations. Le peu de technologie présente, et l'éloignement suffisent bien évidemment à rétorquer que cet argument n'a pas de fondement, mais Arcanum insiste, et Tarante, grande ville de nature magique, se prépare au combat.}

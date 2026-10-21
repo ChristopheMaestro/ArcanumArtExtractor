@@ -1,0 +1,4767 @@
+// These are class-based NPC messages, said by male NPC's to male PC's
+
+// Asking for money messages start at 1000. Each class gets 50 messages
+// starting on multiples of 50
+
+// noble
+{1000}{It will cost you %d coins. Are you interested?}
+{1001}{Nothing is without cost. Would you pay %d coins?}
+{1002}{To fulfill that request, I will need %d coins. Is that agreeable?}
+{1003}{A pity to have to ask, but for %d coins I can help you, sir. Is that an agreeable fee?}
+{1004}{Unfortunately, the matter of finances needs to come first . . . do you have the %d coins?}
+{1005}{Are you willing to pay %d coins?}
+
+
+// priest
+{1050}{Would you bequeath %d coins, first?}
+{1051}{Those to whom I pray require %d coins for that. A miserly sum, do you not agree?}
+{1052}{My aid will cost you only %d coins. Is that agreeable?}
+{1053}{Yes, of course, my brother. Would %d coins be an agreeable price?}
+{1054}{Yes indeed. A %d coin donation will suffice. Is that agreeable?}
+{1055}{To be sure, for %d coins. Is that agreeable to you?}
+{1056}{For a %d coin donation it can be done. Are you interested?}
+{1057}{%d coins, and it shall be done. What do you say?}
+
+// wizard
+{1100}{It will cost you %d coins. Are you interested?}
+{1101}{Nothing is without cost. Would you pay %d coins?}
+{1102}{To fulfill that request, I will need %d coins. Is that agreeable?}
+{1103}{A pity to have to ask, but for %d coins I can help you, sir. Is that an agreeable fee?}
+{1104}{Unfortunately, the matter of finances needs to come first . . . do you have the %d coins?}
+{1105}{Are you willing to pay %d coins?}
+
+// technologist
+{1150}{That will cost you %d coins. Are you interested?}
+{1151}{It will cost you some coin for that. %d, is a fair price, is it not?}
+{1152}{I can help you for %d coins. Are you still interested?}
+{1153}{I am able to do that, for a small fee, of course. %d coins. This is agreeable?}
+{1154}{Will you pay %d coins for my assistance?}
+{1155}{Are you willing to pay %d coins?}
+{1156}{A %d coin financing will suffice. That is more than a fair price, don't you agree?}
+
+
+// shopkeeper
+{1200}{The price is %d coins. Is this agreeable to you?}
+{1201}{I can do that for %d coins. That's a bargain price, is it not?}
+{1202}{I can assist you for %d coins, good citizen. What do you say?}
+{1203}{I can provide that for only %d coins. Are you still interested?}
+{1204}{This transaction will be %d coins. Is this an agreeable sum?}
+{1205}{It will only be %d coins. More than fair, don't you agree?}
+{1206}{I am able to do that, but it will cost %d coins. Is this agreeable to you?}
+{1207}{The price will total %d coins. What say you?}
+{1208}{To be sure, I can do so for %d coins. Are you interested?}
+
+
+
+// guard
+{1250}{I would have %d coins first. More than fair, is it not?}
+{1251}{I will need %d coins first. Are you still interested?}
+{1252}{I want %d coins first. What do you say?}
+{1253}{Around here that will cost you %d coins. This is agreeable?}
+{1254}{%d coins first, sir. Is this agreeable to you?}
+{1255}{%d coins, and I will help you, yes?}
+{1256}{%d coins?}
+{1257}{A %d coin payment will suffice. What say you?}
+
+
+// city_dweller
+{1300}{I would have %d coins first. More than fair, is it not?}
+{1301}{That would cost %d coins, to be exact. Have you got the coins for it?}
+{1302}{That will cost you %d coins. Are you interested?}
+{1303}{It will cost you some coin for that. %d, is a fair price, is it not?}
+{1304}{I can help you for %d coins. Are you still interested?}
+{1305}{I am able to do that, for a small fee, of course. %d coins. This is agreeable?}
+{1306}{Will you pay %d coins for my assistance?}
+{1307}{Are you willing to pay %d coins?}
+{1308}{A %d coin financing will suffice. That is more than a fair price, don't you agree?}
+
+// villager
+{1350}{Can you spare %d coins for my help with that?}
+{1351}{That would cost %d coins, to be exact. Have you got the coins for it?}
+{1352}{That will cost you %d coins. Are you interested?}
+{1353}{It will cost you some coin for that. %d, is a fair price, is it not?}
+{1354}{I can help you for %d coins. Are you still interested?}
+{1355}{I am able to do that, for a small fee, of course. %d coins. This is agreeable?}
+{1356}{Will you pay %d coins for my assistance?}
+{1357}{Are you willing to pay %d coins?}
+{1358}{A %d coin financing will suffice. That is more than a fair price, don't you agree?}
+
+// beggar
+{1400}{Can you spare %d coins for my help with that?}
+{1401}{%d coins to help my family?}
+{1402}{Oh, indeed! If you will only spare %d coins. Yes?}
+{1403}{To be sure, mister. %d coins, please.}
+{1404}{Sir, for you a %d coin payment will suffice for that.}
+{1405}{My pleasure, sir, for %d coins.}
+{1406}{To be sure, mister, for %d coins.}
+{1407}{For %d coins, sir, it can be done.}
+{1408}{I can help you for %d coins, mister.}
+
+// thief
+{1450}{Can you spare %d coins for my help with that?}
+{1451}{That would cost %d coins, to be exact. Have you got the coins for it?}
+{1452}{That will cost you %d coins. Are you interested?}
+{1453}{It will cost you some coin for that. %d, is a fair price, is it not?}
+{1454}{I can help you for %d coins. Are you still interested?}
+{1455}{I am able to do that, for a small fee, of course. %d coins. This is agreeable?}
+{1456}{Will you pay %d coins for my assistance?}
+{1457}{Are you willing to pay %d coins?}
+{1458}{A %d coin financing will suffice. That is more than a fair price, don't you agree?}
+
+// bandit
+{1500}{Can you spare %d coins for my help with that?}
+{1501}{That would cost %d coins, to be exact. Have you got the coins for it?}
+{1502}{That will cost you %d coins. Are you interested?}
+{1503}{It will cost you some coin for that. %d, is a fair price, is it not?}
+{1504}{I can help you for %d coins. Are you still interested?}
+{1505}{I am able to do that, for a small fee, of course. %d coins. This is agreeable?}
+{1506}{Will you pay %d coins for my assistance?}
+{1507}{Are you willing to pay %d coins?}
+{1508}{A %d coin financing will suffice. That is more than a fair price, don't you agree?}
+
+
+// Not enough money messages start at 2000. Each class gets 50 messages
+// starting on multiples of 50
+
+// noble
+{2000}{You do not have enough coins.}
+{2001}{You do not have enough coins there.}
+{2002}{That is not nearly enough coins.}
+{2003}{You do not have the coins necessary.}
+{2004}{The price is decidedly more than your finances will allow.}
+{2005}{You cannot produce the required number of coins.}
+{2006}{You cannot meet my price.}
+{2007}{The coins you show are sorely lacking in number.}
+{2008}{Your lack of funds is about to put an end to this discussion.}
+{2009}{The price is decidedly more than your purse will allow.}
+{2010}{Surely you realize you do not have enough money?}
+{2011}{You do not have the amount necessary.}
+
+// priest
+{2050}{I am afraid you do not have enough.}
+{2051}{You do not have enough coins there.}
+{2052}{That is not nearly enough coins.}
+{2053}{You do not have enough for the nominal donation.}
+{2054}{The donation is decidedly more than your finances will allow.}
+{2055}{You do not own the required number of coins.}
+{2056}{You do not have the required donation.}
+{2057}{You do not have enough for the donation?}
+{2058}{The coins you proffer are sorely lacking in number.}
+{2059}{Pray, do return once you have the required number of coins.}
+{2060}{The offered donation is not near adequate.}
+{2061}{The donation is more than your pocket holds.}
+
+// wizard
+{2100}{I see you cannot pay.}
+{2101}{No. I cannot ignore that you do not have enough coins there.}
+{2102}{That is not nearly enough coins.}
+{2103}{You are dreadfully short on coins. I can do nothing for you.}
+{2104}{Your funds are not hardly enough for the task at hand.}
+{2105}{You lack the money necessary.}
+{2106}{You do not have the miniscule price we agreed upon.}
+{2107}{Your coins are grievously lacking in number.}
+{2108}{You do not have have the required number of coins.}
+{2109}{I am obliged to say that you do not have the coins necessary.}
+{2110}{The price is more than your purse contains.}
+{2111}{Surely you realize you do not have enough to meet my price?}
+
+// technologist
+{2150}{You are short of cash.}
+{2151}{I cannot ignore the fact that you do not have enough money for payment.}
+{2152}{That is not nearly enough money.}
+{2153}{You are undeniably short on coins. I can do nothing for you.}
+{2154}{Your funds are not hardly enough.}
+{2155}{The price is manifestly more than you can produce.}
+{2156}{I cannot help but notice that you do not have the requisite payment.}
+{2157}{Indeed, you are short on the price.}
+{2158}{Those coins are, without a doubt, lacking in number.}
+{2159}{Surely you realize you do not have enough to meet the fee?}
+{2160}{The price is more than your purse contains.}
+{2161}{You do not have the minimal fee I require.}
+
+// shopkeeper
+{2200}{You do not have enough to pay.}
+{2201}{I cannot accept the pittance you have proffered for payment.}
+{2202}{That is not nearly enough money.}
+{2203}{You are terribly short on cash. I can do nothing for you.}
+{2204}{Your funds are not hardly enough.}
+{2205}{You do not have the price I require.}
+{2206}{The price is more than you have.}
+{2207}{You are lacking in coins.}
+{2208}{I cannot accept the scant payment you tender.}
+{2209}{Those coins are of an inadequate number.}
+{2210}{You seem to be lacking in cash.}
+{2211}{You do not have the money necessary.}
+{2212}{This costs more than you can afford.}
+{2213}{You do not have enough money.}
+{2214}{Surely you realize you are short on the price?}
+
+// guard
+{2250}{You do not have enough money.}
+{2251}{I cannot accept that pittance you show for payment.}
+{2252}{There are not enough coins in your hand.}
+{2253}{You are painfully short on cash. I can do nothing for you.}
+{2254}{Your funds are not hardly enough.}
+{2255}{You do not have the money I require.}
+{2256}{This is beyond a doubt more than you can legally afford.}
+{2257}{What you offer for payment does not make the grade.}
+{2258}{Your coins are lacking in number and purpose.}
+{2259}{You do not have my price.}
+{2260}{Surely you realize how short of money you are?}
+{2261}{Your purse lacks the price.}
+
+// city_dweller
+{2300}{You do not have enough money.}
+{2301}{There is not enough coins in your offer.}
+{2302}{You are short on coins.}
+{2303}{Your funds are not hardly enough.}
+{2304}{Those coins are sufferably poor in number.}
+{2305}{The amount is more than you have.}
+{2306}{You must first have the price agreed upon.}
+{2307}{You do not have the amount I need.}
+{2308}{Surely you realize you lack the payment?}
+
+// villager
+{2350}{You do not have enough money.}
+{2351}{You do not have enough money.}
+{2352}{Your funds are not enough.}
+{2353}{You do not have the money.}
+{2354}{You are short of cash.}
+{2355}{The amount is too much for you.}
+{2356}{You do not have the price agreed upon.}
+{2357}{You do not have the amount I want.}
+{2358}{You lack the payment.}
+{2359}{Your purse is light.}
+
+// beggar
+{2400}{You do not have enough.}
+{2401}{I cannot help if you cannot pay.}
+{2402}{You do not have the money.}
+{2403}{You are short of coins, mister.}
+{2404}{Your coins are too few in number.}
+{2405}{Those coins are not enough in number, mister.}
+{2406}{I shall be glad to help you once you can throw me enough coins.}
+{2407}{The amount is too much for you, sir.}
+{2408}{You do not have the price agreed upon.}
+{2409}{You do not have the right amount.}
+{2410}{You lack the payment.}
+{2411}{Your purse is lacking.}
+
+// thief
+{2450}{You do not have enough coins there.}
+{2451}{Seriously now, that is not nearly enough coins.}
+{2452}{The price is certainly more than your purse carries at this time.}
+{2453}{You do not have the required number of coins.}
+{2454}{The coins you show are sorely lacking in number.}
+{2455}{I do not recommend you attempt to slight me with payment!}
+{2456}{The amount is more than you own.}
+{2457}{You are short on my price.}
+{2458}{Surely you realize that you are short of money?}
+{2459}{Your purse is too light.}
+
+// bandit
+{2500}{You cannot pay.}
+{2501}{You do not have enough coins there.}
+{2502}{That is not enough!}
+{2503}{I would need more than you have to offer.}
+{2504}{No! The coins you try to pawn off on me are not enough!}
+{2505}{You do not have enough coins to interest me.}
+{2506}{Do not try to cheat me with payment!}
+{2507}{Liar! You cannot pay.}
+{2508}{You do not have enough money.}
+{2509}{You don't have enough to pay up.}
+{2510}{You are short on my price.}
+{2511}{You are short of coins.}
+{2512}{You do not have the money.}
+
+
+// Offers to train a beginner cannot 3000. Each class gets 50 messages
+// starting on multiples of 50
+
+// noble
+{3000}{What type of training are you seeking?}
+{3001}{Of course. What do you wish to be trained in?}
+{3002}{Most decidedly. What manner of training would you be seeking?}
+{3003}{What manner of training interests you?}
+{3004}{Certainly. What do you wish to be trained in?}
+{3005}{What type of training are you seeking?}
+{3006}{What manner of training are you seeking?}
+{3007}{What manner of training interests you?}
+{3008}{What type of training are you seeking?}
+
+// priest
+{3050}{What type of training are you seeking?}
+{3051}{Of course. What do you wish to be trained in?}
+{3052}{Most decidedly. What manner of training would you be seeking?}
+{3053}{What manner of training interests you?}
+{3054}{Certainly. What do you wish to be trained in?}
+{3055}{What type of training are you seeking?}
+{3056}{What manner of training are you seeking?}
+{3057}{What manner of training interests you?}
+{3058}{What type of training are you seeking?}
+
+// wizard
+{3100}{What type of training are you seeking?}
+{3101}{Of course. What do you wish to be trained in?}
+{3102}{Most decidedly. What manner of training would you be seeking?}
+{3103}{What manner of training interests you?}
+{3104}{Certainly. What do you wish to be trained in?}
+{3105}{What type of training are you seeking?}
+{3106}{What manner of training are you seeking?}
+{3107}{What manner of training interests you?}
+{3108}{What type of training are you seeking?}
+
+// technologist
+{3150}{What type of training are you seeking?}
+{3151}{Of course. What do you wish to be trained in?}
+{3152}{Most decidedly. What manner of training would you be seeking?}
+{3153}{What manner of training interests you?}
+{3154}{Certainly. What do you wish to be trained in?}
+{3155}{What type of training are you seeking?}
+{3156}{What manner of training are you seeking?}
+{3157}{What manner of training interests you?}
+{3158}{What type of training are you seeking?}
+
+// shopkeeper
+{3200}{What type of training are you seeking?}
+{3201}{Of course. What do you wish to be trained in?}
+{3202}{Most decidedly. What manner of training would you be seeking?}
+{3203}{What manner of training interests you?}
+{3204}{Certainly. What do you wish to be trained in?}
+{3205}{What type of training are you seeking?}
+{3206}{What manner of training are you seeking?}
+{3207}{What manner of training interests you?}
+{3208}{What type of training are you seeking?}
+
+// guard
+{3250}{What type of training are you seeking?}
+{3251}{Of course. What do you wish to be trained in?}
+{3252}{Most decidedly. What manner of training would you be seeking?}
+{3253}{What manner of training interests you?}
+{3254}{Certainly. What do you wish to be trained in?}
+{3255}{What type of training are you seeking?}
+{3256}{What manner of training are you seeking?}
+{3257}{What manner of training interests you?}
+{3258}{What type of training are you seeking?}
+
+// city_dweller
+{3300}{What type of training are you seeking?}
+{3301}{Of course. What do you wish to be trained in?}
+{3302}{Most decidedly. What manner of training would you be seeking?}
+{3303}{What manner of training interests you?}
+{3304}{Certainly. What do you wish to be trained in?}
+{3305}{What type of training are you seeking?}
+{3306}{What manner of training are you seeking?}
+{3307}{What manner of training interests you?}
+{3308}{What type of training are you seeking?}
+
+// villager
+{3350}{What type of training are you seeking?}
+{3351}{Of course. What do you wish to be trained in?}
+{3352}{Most decidedly. What manner of training would you be seeking?}
+{3353}{What manner of training interests you?}
+{3354}{Certainly. What do you wish to be trained in?}
+{3355}{What type of training are you seeking?}
+{3356}{What manner of training are you seeking?}
+{3357}{What manner of training interests you?}
+{3358}{What type of training are you seeking?}
+
+// beggar
+{3400}{What type of training are you seeking?}
+{3401}{Of course. What do you wish to be trained in?}
+{3402}{Most decidedly. What manner of training would you be seeking?}
+{3403}{What manner of training interests you?}
+{3404}{Certainly. What do you wish to be trained in?}
+{3405}{What type of training are you seeking?}
+{3406}{What manner of training are you seeking?}
+{3407}{What manner of training interests you?}
+{3408}{What type of training are you seeking?}
+
+// thief
+{3450}{What type of training are you seeking?}
+{3451}{Of course. What do you wish to be trained in?}
+{3452}{Most decidedly. What manner of training would you be seeking?}
+{3453}{What manner of training interests you?}
+{3454}{Certainly. What do you wish to be trained in?}
+{3455}{What type of training are you seeking?}
+{3456}{What manner of training are you seeking?}
+{3457}{What manner of training interests you?}
+{3458}{What type of training are you seeking?}
+
+// bandit
+{3500}{What type of training are you seeking?}
+{3501}{Of course. What do you wish to be trained in?}
+{3502}{Most decidedly. What manner of training would you be seeking?}
+{3503}{What manner of training interests you?}
+{3504}{Certainly. What do you wish to be trained in?}
+{3505}{What type of training are you seeking?}
+{3506}{What manner of training are you seeking?}
+{3507}{What manner of training interests you?}
+{3508}{What type of training are you seeking?}
+
+
+// Already trained messages start at 4000. Each class gets 50 messages
+// starting on multiples of 50
+
+// noble
+{4000}{You already have received apprentice training in that skill.}
+{4001}{You are already an apprentice.}
+{4002}{You are already trained as an apprentice in that particular skill.}
+{4003}{You have already completed the apprentice level of training.}
+{4004}{You are already an apprentice in that skill.}
+{4005}{You have trained as an apprentice already.}
+{4006}{Are you not aware that you already are an apprentice of that skill?}
+
+// priest
+{4050}{You have trained as an apprentice already.}
+{4051}{Are you not aware that you already are an apprentice of that skill?}
+{4052}{You already have received apprentice training in that skill.}
+{4053}{You are already an apprentice.}
+{4054}{You are already trained as an apprentice in that particular skill.}
+{4055}{You have already completed the apprentice level of training.}
+{4056}{You are already an apprentice in that skill.}
+
+// wizard
+{4100}{You have trained as an apprentice already.}
+{4101}{Are you not aware that you already are an apprentice of that skill?}
+{4102}{You already have received apprentice training in that skill.}
+{4103}{You are already an apprentice.}
+{4104}{You are already trained as an apprentice in that particular skill.}
+{4105}{You have already completed the apprentice level of training.}
+{4106}{You are already an apprentice in that skill.}
+
+// technologist
+{4150}{You have trained as an apprentice already.}
+{4151}{Are you not aware that you already are an apprentice of that skill?}
+{4152}{You already have received apprentice training in that skill.}
+{4153}{You are already an apprentice.}
+{4154}{You are already trained as an apprentice in that particular skill.}
+{4155}{You have already completed the apprentice level of training.}
+{4156}{You are already an apprentice in that skill.}
+
+// shopkeeper
+{4200}{You have trained as an apprentice already.}
+{4201}{Are you not aware that you already are an apprentice of that skill?}
+{4202}{You already have received apprentice training in that skill.}
+{4203}{You are already an apprentice.}
+{4204}{You are already trained as an apprentice in that particular skill.}
+{4205}{You have already completed the apprentice level of training.}
+{4206}{You are already an apprentice in that skill.}
+
+// guard
+{4250}{You have trained as an apprentice already.}
+{4251}{Are you not aware that you already are an apprentice of that skill?}
+{4252}{You already have received apprentice training in that skill.}
+{4253}{You are already an apprentice.}
+{4254}{You are already trained as an apprentice in that particular skill.}
+{4255}{You have already completed the apprentice level of training.}
+{4256}{You are already an apprentice in that skill.}
+
+// city_dweller
+{4300}{You have trained as an apprentice already.}
+{4301}{Are you not aware that you already are an apprentice of that skill?}
+{4302}{You already have received apprentice training in that skill.}
+{4303}{You are already an apprentice.}
+{4304}{You are already trained as an apprentice in that particular skill.}
+{4305}{You have already completed the apprentice level of training.}
+{4306}{You are already an apprentice in that skill.}
+
+// villager
+{4350}{You have trained as an apprentice already.}
+{4351}{Are you not aware that you already are an apprentice of that skill?}
+{4352}{You already have received apprentice training in that skill.}
+{4353}{You are already an apprentice.}
+{4354}{You are already trained as an apprentice in that particular skill.}
+{4355}{You have already completed the apprentice level of training.}
+{4356}{You are already an apprentice in that skill.}
+
+// beggar
+{4400}{You have trained as an apprentice already.}
+{4401}{Are you not aware that you already are an apprentice of that skill?}
+{4402}{You already have received apprentice training in that skill.}
+{4403}{You are already an apprentice.}
+{4404}{You are already trained as an apprentice in that particular skill.}
+{4405}{You have already completed the apprentice level of training.}
+{4406}{You are already an apprentice in that skill.}
+
+// thief
+{4450}{You have trained as an apprentice already.}
+{4451}{Are you not aware that you already are an apprentice of that skill?}
+{4452}{You already have received apprentice training in that skill.}
+{4453}{You are already an apprentice.}
+{4454}{You are already trained as an apprentice in that particular skill.}
+{4455}{You have already completed the apprentice level of training.}
+{4456}{You are already an apprentice in that skill.}
+
+// bandit
+{4500}{You have trained as an apprentice already.}
+{4501}{Are you not aware that you already are an apprentice of that skill?}
+{4502}{You already have received apprentice training in that skill.}
+{4503}{You are already an apprentice.}
+{4504}{You are already trained as an apprentice in that particular skill.}
+{4505}{You have already completed the apprentice level of training.}
+{4506}{You are already an apprentice in that skill.}
+
+
+// Not ready to train messages start at 5000. Each class gets 50 messages
+// starting on multiples of 50
+
+// noble
+{5000}{You are not skilled enough to be trained as an apprentice.}
+{5001}{Your skill is not at the required level to be trained as an apprentice.}
+{5002}{You lack the adequate skill to be trained.}
+{5003}{You need to have more experience.}
+{5004}{Your skills are not refined enough for apprentice training.}
+{5005}{You lack the adequate skill to be trained.}
+{5006}{You are not ready for apprentice training in that skill.}
+{5007}{You are not skilled enough to be trained as an apprentice.}
+
+// priest
+{5050}{You are not skilled enough to be trained as an apprentice.}
+{5051}{Your skill is not at the required level to be trained as an apprentice.}
+{5052}{You lack the adequate skill to be trained.}
+{5053}{You need to have more experience.}
+{5054}{Your skills are not refined enough for apprentice training.}
+{5055}{You lack the adequate skill to be trained.}
+{5056}{You are not ready for apprentice training in that skill.}
+{5057}{You are not skilled enough to be trained as an apprentice.}
+
+
+// wizard
+{5100}{You are not skilled enough to be trained as an apprentice.}
+{5101}{Your skill is not at the required level to be trained as an apprentice.}
+{5102}{You lack the adequate skill to be trained.}
+{5103}{You need to have more experience.}
+{5104}{Your skills are not refined enough for apprentice training.}
+{5105}{You lack the adequate skill to be trained.}
+{5106}{You are not ready for apprentice training in that skill.}
+{5107}{You are not skilled enough to be trained as an apprentice.}
+
+// technologist
+{5150}{You are not skilled enough to be trained as an apprentice.}
+{5151}{Your skill is not at the required level to be trained as an apprentice.}
+{5152}{You lack the adequate skill to be trained.}
+{5153}{You need to have more experience.}
+{5154}{Your skills are not refined enough for apprentice training.}
+{5155}{You lack the adequate skill to be trained.}
+{5156}{You are not ready for apprentice training in that skill.}
+{5157}{You are not skilled enough to be trained as an apprentice.}
+
+// shopkeeper
+{5200}{You are not skilled enough to be trained as an apprentice.}
+{5201}{Your skill is not at the required level to be trained as an apprentice.}
+{5202}{You lack the adequate skill to be trained.}
+{5203}{You need to have more experience.}
+{5204}{Your skills are not refined enough for apprentice training.}
+{5205}{You lack the adequate skill to be trained.}
+{5206}{You are not ready for apprentice training in that skill.}
+{5207}{You are not skilled enough to be trained as an apprentice.}
+
+// guard
+{5250}{You are not skilled enough to be trained as an apprentice.}
+{5251}{Your skill is not at the required level to be trained as an apprentice.}
+{5252}{You lack the adequate skill to be trained.}
+{5253}{You need to have more experience.}
+{5254}{Your skills are not refined enough for apprentice training.}
+{5255}{You lack the adequate skill to be trained.}
+{5256}{You are not ready for apprentice training in that skill.}
+{5257}{You are not skilled enough to be trained as an apprentice.}
+
+// city_dweller
+{5300}{You are not skilled enough to be trained as an apprentice.}
+{5301}{Your skill is not at the required level to be trained as an apprentice.}
+{5302}{You lack the adequate skill to be trained.}
+{5303}{You need to have more experience.}
+{5304}{Your skills are not refined enough for apprentice training.}
+{5305}{You lack the adequate skill to be trained.}
+{5306}{You are not ready for apprentice training in that skill.}
+{5307}{You are not skilled enough to be trained as an apprentice.}
+
+// villager
+{5350}{You are not skilled enough to be trained as an apprentice.}
+{5351}{Your skill is not at the required level to be trained as an apprentice.}
+{5352}{You lack the adequate skill to be trained.}
+{5353}{You need to have more experience.}
+{5354}{Your skills are not refined enough for apprentice training.}
+{5355}{You lack the adequate skill to be trained.}
+{5356}{You are not ready for apprentice training in that skill.}
+{5357}{You are not skilled enough to be trained as an apprentice.}
+
+// beggar
+{5400}{You are not skilled enough to be trained as an apprentice.}
+{5401}{Your skill is not at the required level to be trained as an apprentice.}
+{5402}{You lack the adequate skill to be trained.}
+{5403}{You need to have more experience.}
+{5404}{Your skills are not refined enough for apprentice training.}
+{5405}{You lack the adequate skill to be trained.}
+{5406}{You are not ready for apprentice training in that skill.}
+{5407}{You are not skilled enough to be trained as an apprentice.}
+
+// thief
+{5450}{You are not skilled enough to be trained as an apprentice.}
+{5451}{Your skill is not at the required level to be trained as an apprentice.}
+{5452}{You lack the adequate skill to be trained.}
+{5453}{You need to have more experience.}
+{5454}{Your skills are not refined enough for apprentice training.}
+{5455}{You lack the adequate skill to be trained.}
+{5456}{You are not ready for apprentice training in that skill.}
+{5457}{You are not skilled enough to be trained as an apprentice.}
+
+// bandit
+{5500}{You are not skilled enough to be trained as an apprentice.}
+{5501}{Your skill is not at the required level to be trained as an apprentice.}
+{5502}{You lack the adequate skill to be trained.}
+{5503}{You need to have more experience.}
+{5504}{Your skills are not refined enough for apprentice training.}
+{5505}{You lack the adequate skill to be trained.}
+{5506}{You are not ready for apprentice training in that skill.}
+{5507}{You are not skilled enough to be trained as an apprentice.}
+
+// Did training messages start at 6000. Each class gets 50 messages
+// starting on multiples of 50
+
+// noble
+{6000}{Your apprentice training is complete.}
+{6001}{You are now an apprentice.}
+{6002}{You have succeeded in your apprentice training.}
+{6003}{You are now an apprentice.}
+{6004}{You have reached the first level of your training.}
+{6005}{You are now an apprentice.}
+{6006}{Your apprentice training is complete.}
+
+
+// priest
+{6050}{Your apprentice training is complete.}
+{6051}{You are now an apprentice.}
+{6052}{You have succeeded in your apprentice training.}
+{6053}{You are now an apprentice.}
+{6054}{You have reached the first level of your training.}
+{6055}{You are now an apprentice.}
+{6056}{Your apprentice training is complete.}
+
+// wizard
+{6100}{Your apprentice training is complete.}
+{6101}{You are now an apprentice.}
+{6102}{You have succeeded in your apprentice training.}
+{6103}{You are now an apprentice.}
+{6104}{You have reached the first level of your training.}
+{6105}{You are now an apprentice.}
+{6106}{Your apprentice training is complete.}
+
+// technologist
+{6150}{Your apprentice training is complete.}
+{6151}{You are now an apprentice.}
+{6152}{You have succeeded in your apprentice training.}
+{6153}{You are now an apprentice.}
+{6154}{You have reached the first level of your training.}
+{6155}{You are now an apprentice.}
+{6156}{Your apprentice training is complete.}
+
+// shopkeeper
+{6200}{Your apprentice training is complete.}
+{6201}{You are now an apprentice.}
+{6202}{You have succeeded in your apprentice training.}
+{6203}{You are now an apprentice.}
+{6204}{You have reached the first level of your training.}
+{6205}{You are now an apprentice.}
+{6206}{Your apprentice training is complete.}
+
+// guard
+{6250}{Your apprentice training is complete.}
+{6251}{You are now an apprentice.}
+{6252}{You have succeeded in your apprentice training.}
+{6253}{You are now an apprentice.}
+{6254}{You have reached the first level of your training.}
+{6255}{You are now an apprentice.}
+{6256}{Your apprentice training is complete.}
+
+// city_dweller
+{6300}{Your apprentice training is complete.}
+{6301}{You are now an apprentice.}
+{6302}{You have succeeded in your apprentice training.}
+{6303}{You are now an apprentice.}
+{6304}{You have reached the first level of your training.}
+{6305}{You are now an apprentice.}
+{6306}{Your apprentice training is complete.}
+
+// villager
+{6350}{Your apprentice training is complete.}
+{6351}{You are now an apprentice.}
+{6352}{You have succeeded in your apprentice training.}
+{6353}{You are now an apprentice.}
+{6354}{You have reached the first level of your training.}
+{6355}{You are now an apprentice.}
+{6356}{Your apprentice training is complete.}
+
+// beggar
+{6400}{Your apprentice training is complete.}
+{6401}{You are now an apprentice.}
+{6402}{You have succeeded in your apprentice training.}
+{6403}{You are now an apprentice.}
+{6404}{You have reached the first level of your training.}
+{6405}{You are now an apprentice.}
+{6406}{Your apprentice training is complete.}
+
+// thief
+{6450}{Your apprentice training is complete.}
+{6451}{You are now an apprentice.}
+{6452}{You have succeeded in your apprentice training.}
+{6453}{You are now an apprentice.}
+{6454}{You have reached the first level of your training.}
+{6455}{You are now an apprentice.}
+{6456}{Your apprentice training is complete.}
+
+// bandit
+{6500}{Your apprentice training is complete.}
+{6501}{You are now an apprentice.}
+{6502}{You have succeeded in your apprentice training.}
+{6503}{You are now an apprentice.}
+{6504}{You have reached the first level of your training.}
+{6505}{You are now an apprentice.}
+{6506}{Your apprentice training is complete.}
+
+
+// No rumors messages start at 7000. Each class gets 50 messages
+// starting on multiples of 50
+
+// noble
+{7000}{I have no information to impart.}
+{7001}{I am sorry to say I know nothing of use to you.}
+{7002}{I am sorry, but I know nothing of any use to you.}
+{7003}{I wish I knew something of importance, but I do not.}
+{7004}{If I knew something of import, I would indeed let you know.}
+{7005}{If I should hear of anything in the future I will inform you.}
+{7006}{If I come across some bit of news I will be sure to let you know.}
+{7007}{I am truly vexed that I unable to help you.}
+{7008}{What little I have heard is, unfortunately, of no importance to you.}
+{7009}{I cannot seem to recall anything of importance.}
+{7010}{Gossiping is not my profession.}
+{7011}{I cannot help wondering at my knowing nothing of what is useful to you.}
+{7012}{I have heard no news you would be interested in.}
+{7013}{I find myself unable to recall a thing of use to you.}
+{7014}{I have no news to pass on to you.}
+{7015}{I do not have any news for you.}
+{7016}{I find myself unable to help you with any information.}
+
+// priest
+{7050}{My brother, anything I have heard must remain with me.}
+{7051}{I am sorry. I know nothing I can tell you.}
+{7052}{I am sorry, but I know of nothing of use to you.}
+{7053}{I wish providence graced me with wisdom for you, but alas, no.}
+{7054}{If I came upon something of import to you, I would indeed let you know.}
+{7055}{If I should hear of anything, I will inform you.}
+{7056}{If I gain knowledge of some bit of news I will be sure to let you know.}
+{7057}{I am truly pained that I unable to help you.}
+{7058}{What little I have heard is, unfortunately, confidential.}
+{7059}{I cannot recall anything of importance.}
+{7060}{Gossiping is not my profession.}
+{7061}{I know nothing of what is useful to you.}
+{7062}{My apologies, but I have nothing for you.}
+{7063}{Divine Providence has willed that I hold no knowledge for you.}
+{7064}{I know nothing that will help you.}
+{7065}{My brother, gossip is a tool of the wicked.}
+{7066}{I find that I have no news of import to pass on.}
+{7067}{It is a pity, but I do not have any news for you.}
+{7068}{I, myself, am unable to help you with any information.}
+{7069}{I have no information to pass on.}
+
+// wizard
+{7100}{My spells have revealed nothing.}
+{7101}{I have perceived nothing of use to you.}
+{7102}{I have perceived nothing of any use to you.}
+{7103}{I would like to have something of import to impart, but I do not.}
+{7104}{If I perceived something useful for you, I would indeed let you know.}
+{7105}{If I should hear of anything in the future I will inform you.}
+{7106}{If, in my travels, I come across some news I will be sure to let you know.}
+{7107}{I unable to help you.}
+{7108}{What little I have heard is of no importance to you.}
+{7109}{I can discern nothing useful to pass on.}
+{7110}{Gossiping is beneath my station.}
+{7111}{I know nothing of current issue that is useful to you.}
+{7112}{I have heard no news you would be interested in.}
+{7113}{I am unable to recall anything of use to you.}
+{7114}{I have no news of significance to pass on to you.}
+{7115}{I do not have any news of consequence for you.}
+{7116}{I am unable to help you with current events.}
+{7117}{Unfortunately, I have no tidings for you.}
+
+// technologist
+{7150}{I have no information for you.}
+{7151}{I am sorry, I know nothing to pass on to you.}
+{7152}{I am sorry, but I know of nothing of use to you.}
+{7153}{If I came upon something you could understand, I would indeed let you know.}
+{7154}{If I should come upon anything interesting, I will inform you.}
+{7155}{If I happen upon some bit of news I will be sure to let you know.}
+{7156}{I unable to help you.}
+{7157}{What little I have heard is, unfortunately, past your ken.}
+{7158}{I cannot be mindful of such trivialities, leave me.}
+{7159}{Gossiping is not my profession.}
+{7160}{I know nothing of concern to you.}
+{7161}{I have nothing interesting for you.}
+{7162}{I have nothing that will help you.}
+{7163}{I have no information of worthiness to pass on.}
+{7164}{My time is too important to waste with gossip.}
+{7165}{I do not have any news of concern for you.}
+{7166}{I am unable to pass on any news of consequence.}
+{7167}{I have heard nothing that concerns you.}
+{7168}{No. Nothing at all. I have heard nothing.}
+{7169}{I have no information for you.}
+
+// shopkeeper
+{7200}{No information to sell today.}
+{7201}{I have heard nothing of use.}
+{7202}{I have come across nothing of any use.}
+{7203}{I would like to have something to tell, but I do not.}
+{7204}{If I heard something useful to you, I would indeed let you know.}
+{7205}{If I should hear of anything I will inform you.}
+{7206}{If I come across some news I will be sure to let you know.}
+{7207}{I unable to help you.}
+{7208}{What little I have heard deals only of local commerce.}
+{7209}{Usually I do have something to pass on, but at the moment . . . nothing.}
+{7210}{I know nothing of current worth that is useful to you.}
+{7211}{I have heard no gossip you would be interested in.}
+{7212}{I am unable to recall any rumours of use to you.}
+{7213}{I have no news of worth to pass on.}
+{7214}{All the rumours lately have been naught but idle gossip.}
+{7215}{It is a pity, but I do not have any news to sell you.}
+{7216}{All current events I have heard of are only of local concern.}
+{7217}{I have no tidings for you.}
+{7218}{My customers have told me nothing.}
+{7219}{Nothing today.}
+
+// guard
+{7250}{Everything is quiet right now.}
+{7251}{I know nothing to pass on to you.}
+{7252}{I know of nothing of use to you.}
+{7253}{Nothing out of the ordinary}
+{7254}{If I came upon something unusual, I would let you know.}
+{7255}{If I come upon anything out of the ordinary, I will inform you.}
+{7256}{If I happen upon something exceptional I will be sure to let you know.}
+{7257}{All has been generally quiet here.}
+{7258}{What little I have heard is official business only.}
+{7259}{I do not pass along confidential information.}
+{7260}{Gossiping is not my concern.}
+{7261}{I have not heard or seen anything unusual.}
+{7262}{Gossiping is not my bailiwick.}
+{7263}{The rumours lately have all been petty gossip.}
+{7264}{I have seen nothing that can help you.}
+{7265}{I have no information of worthiness to pass on.}
+{7266}{My concern is my patrol area -- nothing of interest for you.}
+{7267}{I do not know anything of concern to you.}
+{7268}{I am not able to pass on anything I am privy to, citizen.}
+{7269}{I have heard nothing that concerns you, citizen.}
+{7270}{No. Nothing at all. Move along now.}
+{7271}{I have no rumours for you.}
+{7272}{Everything is quiet right now.}
+
+// city_dweller
+{7300}{I know nothing.}
+{7301}{I have heard nothing.}
+{7302}{I have come across nothing.}
+{7303}{I would like to have something to tell, but I do not.}
+{7304}{I have heard nothing useful to you.}
+{7305}{I have not heard anything of importance.}
+{7306}{I will be sure to let you know if I hear anything.}
+{7307}{I unable to help you.}
+{7308}{What I am concerned with deals only of local business.}
+{7309}{I know nothing useful to you.}
+{7310}{I have heard nothing that would interest you.}
+{7311}{I have no rumours of use to you.}
+{7312}{I have no rumours to pass on.}
+{7313}{All the rumours lately have been idle gossip.}
+{7314}{It is a pity, but I have not heard anything the least bit spicy lately.}
+{7315}{What I know is only of local concern.}
+{7316}{I have no tidings for you.}
+{7317}{No rumours to make a penny on today.}
+{7318}{To be sure, I know nothing.}
+{7319}{I know nothing new.}
+
+// villager
+{7350}{I have not heard a thing.}
+{7351}{I have heard nothing.}
+{7352}{I have come upon nothing at all.}
+{7353}{I have nothing to tell.}
+{7354}{I have heard nothing.}
+{7355}{I have not heard anything.}
+{7356}{I will let you know if I hear anything.}
+{7357}{I unable to help you.}
+{7358}{I am only concerned with the local weather.}
+{7359}{Sometimes I hear the juiciest bits, but at the moment there is only old gossip.}
+{7360}{I know nothing useful to you.}
+{7361}{I have heard nothing that would interest you.}
+{7362}{I have no rumours of use to you.}
+{7363}{I must attend to my chores, no time for gossip today.}
+{7364}{I have heard no rumours.}
+{7365}{All the rumours lately have been quite boring.}
+{7366}{A good rumour breaks up the day a bit. I could use one myself.}
+{7367}{To be sure, what I know is only local gossip.}
+{7368}{I have no tidings for you.}
+{7369}{No rumours to sit a spell with today.}
+{7370}{I know nothing.}
+{7371}{I have not heard a thing.}
+{7372}{I have not heard a thing.}
+
+// beggar
+{7400}{My feeble ears have learned naught today.}
+{7401}{I have heard naught, fair one.}
+{7402}{I have come across nothing.}
+{7403}{I would like to have something useful to tell, but I do not.}
+{7404}{I have heard nothing useful to you.}
+{7405}{I have not heard anything of importance.}
+{7406}{I will be sure to let you know if I hear anything.}
+{7407}{I unable to help you.}
+{7408}{What I have heard lately deals only of the local streets.}
+{7409}{Usually I hear the juiciest items, but at the moment, nothing.}
+{7410}{Gossip around here has been mighty poor lately.}
+{7411}{I know nothing useful to you.}
+{7412}{I have heard nothing that would interest you.}
+{7413}{I have no rumours of use to you.}
+{7414}{You know I would help if I could.}
+{7415}{I have no rumours to pass on.}
+{7416}{All the rumours lately have not been worth a crust of moldy bread.}
+{7417}{I have not heard anything.}
+{7418}{I know nothing.}
+{7419}{I have no tidings for you.}
+{7420}{Nobody tells me nothing nomore.}
+{7421}{No rumours to beg a penny on today.}
+{7422}{To be sure, I know nothing.}
+
+// thief
+{7450}{No rumours to sell.}
+{7451}{I know nothing to pass on, friend.}
+{7452}{I know of nothing of use to you.}
+{7453}{Nothing out of the ordinary.}
+{7454}{If I came upon something unusual, you would know.}
+{7455}{If I come upon anything out of the ordinary, I will inform you.}
+{7456}{If I happen upon something exceptional, I will be sure to let you know.}
+{7457}{All has been too quiet here, friend.}
+{7458}{What little I have heard is not for you, friend.}
+{7459}{I do not pass along confidential information.}
+{7460}{The gossip lately has been for housewives alone, friend.}
+{7461}{I have not heard or seen anything unusual.}
+{7462}{Gossip around here has been a mite slim lately.}
+{7463}{The rumours lately have all been petty gossip.}
+{7464}{I have heard nothing that can help you.}
+{7465}{I have no information of worthiness to pass on.}
+{7466}{My concern is only with my territory -- nothing of interest for you.}
+{7467}{I do not know anything of concern to you, friend.}
+{7468}{I have nothing to pass on, friend.}
+{7469}{I have heard nothing that concerns you, friend.}
+{7470}{No. Nothing at all, friend.}
+{7471}{I have no rumours for you.}
+{7472}{Everything is quiet right now, friend.}
+{7473}{No rumours to sell, friend.}
+
+// bandit
+{7500}{I have come across no news of value.}
+{7501}{I have heard nothing.}
+{7502}{I have come across nothing lately.}
+{7503}{I would like to have something useful to tell, but I do not.}
+{7504}{I have heard nothing useful to you.}
+{7505}{I have not heard anything of importance.}
+{7506}{I will be sure to let you know if I hear anything.}
+{7507}{I unable to help you, pal.}
+{7508}{What I have heard lately only deal with the highways, old boy.}
+{7509}{At the moment, nothing.}
+{7510}{Pickings around here has been mighty poor lately.}
+{7511}{I know nothing useful to you, friend.}
+{7512}{I have heard nothing that would interest you.}
+{7513}{I have no rumours of use to you.}
+{7514}{I have no rumours to pass on.}
+{7515}{All the rumours lately have not been worth a pint of lager.}
+{7516}{I have not heard anything.}
+{7517}{I know nothing.}
+{7518}{I have no tidings.}
+{7519}{Nobody tells me nothing no more.}
+{7520}{No rumours today.}
+{7521}{To be sure, I know nothing.}
+{7522}{My ears have heard naught today.}
+{7523}{I have come across nothing of any worth.}
+
+
+// Initial great greeting messages start at 8000. Each class gets 50
+// messages starting on multiples of 50
+
+// noble
+{8000}{Sir, how wonderful to make your acquaintance!}
+{8001}{Well met! Well met, indeed.}
+{8002}{It is a great honour to meet you!.}
+{8003}{It is my great pleasure to meet you! What can I do for you?}
+{8004}{It is a true honour to meet you.}
+{8005}{Good day! It is a singular pleasure, I am sure!}
+{8006}{How wonderful to meet you!}
+{8007}{I am most happy to meet you.}
+{8008}{It is so good to meet you! What can I do for you?}
+{8009}{Oh my, it is so nice to meet you! So very nice, indeed.}
+{8010}{The pleasure is mine! All mine.}
+{8011}{I am delighted to make your acquaintance.}
+{8012}{My compliments. My sincerest compliments.}
+{8013}{Your good fortune and health.}
+{8014}{Greeting and salutations!}
+{8015}{We are well met! I am at your service.}
+{8016}{It is a great honour to meet you!}
+{8017}{It is my great pleasure to meet you!}
+{8018}{Good day! It is a pleasure to meet you.}
+{8019}{I am taking a fancy to you already.}
+{8020}{It is so good to meet you! So very good, indeed.}
+{8021}{It is so nice to meet you! So very nice, indeed.}
+{8022}{The pleasure is mine! A great pleasure, it is}
+{8023}{Simply delighted to make your acquaintance.}
+{8024}{My compliments. My grandest compliments.}
+{8025}{Your exceedingly good health.}
+{8026}{How wonderful to make your acquaintance!}
+{8027}{An honor. How do you do?}
+{8028}{How do you do? An honor to meet you.}
+{8029}{Indeed! What can I do for you?}
+{8030}{What do you require? I am at your service.}
+{8031}{A veritable pleasure to meet you.}
+{8032}{Hello. Are you enjoying yourself?}
+{8033}{Yes? Are you in need of anything?}
+{8034}{Meeting you has made my day.}
+{8035}{What is mine, is yours.}
+{8036}{I am at your disposal.}
+{8037}{This is most extraordinary! Your reputation precedes you.}
+{8038}{Indeed! Marvelous! How nice to meet you.}
+{8039}{Delighted, truly delighted, to be meeting you.}
+{8040}{Sensational! I am delighted to be meeting you.}
+{8041}{A distinct and singular pleasure to introduce myself to you.}
+{8042}{Oh, my yes! I hope you are having a pleasant day.}
+{8043}{Definitely a pleasure to meet you.}
+{8044}{Very happy to make your acquaintance.}
+{8045}{Oh my! Uncommonly good to make your acquaintance.}
+{8046}{How do you do. I hope you are well.}
+{8047}{Oh! Are you? Oh, yes! Your reputation has preceded you.}
+{8048}{I say, wonderful to make your acquaintance!}
+
+// priest
+{8050}{Welcome, my son, welcome!}
+{8051}{it is well met, son! Well met, indeed.}
+{8052}{It is a divine honour. An honour, indeed.}
+{8053}{Good day! It is a divine pleasure!}
+{8054}{I am honoured to meet you! What service may I do for you?}
+{8055}{I am blessed to meet you! Blessed, indeed.}
+{8056}{Oh my, another brother! What can I do for you?}
+{8057}{A good meeting is the foundation of a good friendship!}
+{8058}{How do you do. I hope you are well.}
+{8059}{Blessed day! It is good to meet one such as yourself!}
+{8060}{It is good to greet you a brother! Very good, indeed.}
+{8061}{My compliments. My very best for you.}
+{8062}{Your blessed health, my brother.}
+{8063}{it is well met, son! What may I do for you?}
+{8064}{It is a divine honour. What may I do for you?}
+{8065}{I am honoured to meet you! What may I do for you?}
+{8066}{I am blessed to meet you! What may I do for you?}
+{8067}{It is wonderful to meet you! What may I do for you?}
+{8068}{How do you do. I am at your disposal.}
+{8069}{Blessed day! It is good to meet one such as yourself!}
+{8070}{It is good to greet you as a brother!}
+{8071}{My best compliments. What may I do for you?}
+{8072}{Your blessed good health, brother.}
+{8073}{My child, how wonderful to make your acquaintance!}
+{8074}{An honor, my child. How are you faring?}
+{8075}{How do you do, my child? An honor to meet you.}
+{8076}{Yes? Is there anything can I do for you?}
+{8077}{Yes? Is there anything can I do for you?}
+{8078}{Oh! Yes? What can I do for you?}
+{8079}{What do you require, brother?}
+{8080}{A veritable blessing to meet you.}
+{8081}{Hello, my child. Are you enjoying yourself?}
+{8082}{Yes? Are you in need of anything?}
+{8083}{Bless me! Meeting you has made my day.}
+{8084}{What is mine, is yours, my son.}
+{8085}{I am at your disposal, my son.}
+{8086}{Delighted, truly delighted, to be meeting you.}
+{8087}{A blessing it is to introduce myself to you.}
+{8088}{Oh, hello! I hope you are having a pleasant day.}
+{8089}{Definitely a blessing to meet you.}
+{8090}{The gods smile on our acquaintance.}
+{8091}{Oh my! Truly blessed to make your acquaintance.}
+
+// wizard
+{8100}{It is a true honour. How may I be of service?}
+{8101}{Oh, yes! Your reputation has preceded you.}
+{8102}{Ah, yes. The Fates decreed that we would meet at a propitious moment.}
+{8103}{Ah, it is enlightening to make your acquaintance!}
+{8104}{I am very pleased to make your acquaintance.}
+{8105}{I, a powerful enchanter, bid you welcome!}
+{8106}{Well met, it is! Well met, indeed.}
+{8107}{I bid you welcome. How can I be of service?}
+{8108}{It is a pleasure to make your acquaintance.}
+{8109}{Good Day! There is magic in the air today!}
+{8110}{How do you do? I hope you are well.}
+{8111}{My sincerest compliments.}
+{8112}{Your bountiful good health.}
+{8145}{Uncommonly good to make your acquaintance.}
+{8114}{It is a true honour.}
+{8115}{I am very pleased to make your acquaintance.}
+{8116}{I bid you welcome! Indeed I do!}
+{8117}{Well met, it is! Well met, indeed,}
+{8118}{I bid you welcome and well met.}
+{8119}{I am honoured, and at your service.}
+{8120}{My very best compliments.}
+{8121}{Your very good health.}
+{8122}{I am delighted to make your acquaintance.}
+{8123}{My good sir, how wonderful to make your acquaintance!}
+{8124}{An honor. How do you do? I have wanted to meet you.}
+{8125}{How do you do? An honor to meet you.}
+{8126}{Yes? What may I do for you?}
+{8127}{Yes? What may I do for you?}
+{8128}{Indeed! Yes? What may I do for you?}
+{8129}{Meeting you has brightened my day.}
+{8130}{A profound pleasure to meet you.}
+{8131}{Hello. Do you lack for anything I can provide?}
+{8132}{Yes? Do you lack anything I can help you with?}
+{8133}{My good sir! Meeting you has made my day.}
+{8134}{What is mine, is yours.}
+{8135}{My knowledge is at your disposal.}
+{8136}{This is most illuminating! Your reputation precedes you.}
+{8137}{Indeed! I was hoping to meet you.}
+{8138}{Delighted! Indeed. A pleasure to be meeting you.}
+{8139}{Indeed! I am delighted. I knew we would meet.}
+{8140}{No need to introduce yourself! I knew our paths would converge.}
+{8141}{A distinct and singular pleasure to introduce myself to you.}
+{8142}{Oh, my yes! I hope you are having a pleasant day.}
+{8143}{Definitely a pleasure to meet you.}
+{8144}{Very happy to make your acquaintance.}
+
+// technologist
+{8150}{Sir, I am at your disposal.}
+{8151}{I am here for you, sir.}
+{8152}{I am very pleased to meet you.}
+{8153}{Yes, it is certainly good to meet you.}
+{8154}{Oh yes! A pleasure, I am sure.}
+{8155}{Welcome! Indeed, welcome.}
+{8156}{I am very happy to make your acquaintance.}
+{8157}{Good day sir! How do you do?}
+{8158}{Splendid! My pleasure to make your acquaintance.}
+{8159}{May I be of any assistance?}
+{8160}{To whom do I owe the pleasure of your acquaintance?}
+{8161}{My compliments, sir.}
+{8162}{Your increased good health, sir.}
+{8163}{Sir, I am at your disposal.}
+{8164}{I am here for you, my good man.}
+{8165}{I am very pleased to meet you. Very pleased, yes.}
+{8166}{Oh yes! A pleasure, I am sure. A great pleasure}
+{8167}{Welcome! What can I do for you?}
+{8168}{I am very happy to make your acquaintance.}
+{8169}{May I be of any assistance?}
+{8170}{I am honoured, to whom do I owe this pleasure?}
+{8171}{My extreme best compliments.}
+{8172}{Your very good good health.}
+{8173}{I am delighted to make your acquaintance.}
+{8174}{How wonderful to make your acquaintance!}
+{8175}{An honor. How do you do?}
+{8176}{How do you do? An honor to meet you.}
+{8177}{Yes? Is there some way I can be of service?}
+{8178}{Yes? What service may I render?}
+{8179}{Indeed! What service do you require of me?}
+{8180}{How do you do? It is indeed a pleasure.}
+{8181}{A welcome pleasure to meet you.}
+{8182}{Hello. Are you finding what you need here?}
+{8183}{Yes? Have I . . .? Yes. I think I have heard of you.}
+{8184}{My word! Meeting you like this has made my day.}
+{8185}{What is mine, is yours. Indeed.}
+{8186}{My technical expertise is at your disposal.}
+{8187}{This is most educational! Your reputation precedes you.}
+{8188}{How do you do. I hope you are well.}
+{8189}{Delighted! A pleasure to be meeting you.}
+{8190}{Indeed! I am delighted.}
+{8191}{Oh, how wonderful to meet you.}
+{8192}{A singular pleasure to introduce myself to you.}
+{8193}{Oh, my yes! Wonderful! How are you?}
+{8194}{A pleasure, a pleasure to meet you.}
+{8195}{Happy to make your acquaintance. Very happy, I believe.}
+{8196}{A rare pleasure it is to make your acquaintance.}
+
+// shopkeeper
+{8200}{I am your humble servant. Please direct me as you will.}
+{8201}{Shopkeeping's my game. Mighty glad to meet you!}
+{8202}{It certainly is good to meet one such as yourself!}
+{8203}{Good day! It is a right certain pleasure!}
+{8204}{Well, I'm mighty glad to meet you! Mighty glad}
+{8205}{Glory be! It's mighty fine to meet you!}
+{8206}{It is good to meet you, sir! Very good, indeed.}
+{8207}{My, my! Is there any way I can help you? Any way at all?}
+{8208}{An honour, indeed, it is to meet you. I am at your disposal.}
+{8209}{How may I be at your service, sir?}
+{8210}{Very excellent it is, indeed, to make your acquaintance!}
+{8211}{I am delighted to make your acquaintance, sir.}
+{8212}{A pleasure to meet you, I must say!}
+{8213}{My best compliments.}
+{8214}{Your very good health.}
+{8215}{Mighty glad to meet you! Mighty glad, indeed.}
+{8216}{I am your humble servant. What is it that you need?}
+{8217}{Good day! It is a certain pleasure!}
+{8218}{Well, I'm mighty glad to meet you, sir!}
+{8219}{It's mighty fine to meet you!}
+{8220}{It is good to meet you, sir!}
+{8221}{Is there any way I can help you?}
+{8222}{How may I be at your service?}
+{8223}{I am delighted to make your acquaintance.}
+{8224}{A pleasure to meet you! A pleasure.}
+{8225}{My best compliments. Indeed!}
+{8226}{Your very good health. Very good, indeed.}
+{8227}{How do you do, sir? Well, I hope.}
+{8228}{Looking for something special? May I be of help?}
+{8229}{How do you do? May I be of assistance?}
+{8230}{Yes? May I be of any assistance?}
+{8231}{Yes, sir? Can I be of any assistance?}
+{8232}{Anything in particular interest you today?}
+{8233}{May I ask what strikes your fancy today?}
+{8234}{Is there something I can help you with?}
+{8235}{Hello. I hope we have what you are looking for.}
+{8236}{Yes? Is there any way I can be of assistance?}
+{8237}{Yes? What can I do for you today?}
+{8238}{Hmm? Yes? I hope everything is satisfactory?}
+{8239}{Hmm? Is everything to your liking?}
+{8240}{Yes? Is everything satisfactory?}
+{8241}{Yes? How can I be of service?}
+{8242}{Yes? What can I do for you?}
+{8243}{Yes? Can I be of service?}
+{8244}{Welcome to my humble establishment.}
+{8245}{Welcome. I hope we have what you are looking for.}
+{8246}{Very good to make your acquaintance.}
+{8247}{I am very happy to make your acquaintance}
+{8248}{Hello. Welcome to the best establishment in the area.}
+
+// guard
+{8250}{Hello. I am greatly honored.}
+{8251}{Sir. My compliments.}
+{8252}{You are a vision of loveliness.}
+{8253}{I am humbled.}
+{8254}{Sir, it is a great pleasure.}
+{8255}{At your service, sir}
+{8256}{Command me! I am yours.}
+{8257}{Name your service, sir.}
+{8258}{Always in your service, sir.}
+{8259}{To be sure, I am at your command.}
+{8260}{It is an honour to make your acquaintance.}
+{8261}{A fine day it is to make your acquaintance.}
+{8262}{Good day. How do you do?}
+{8263}{Hello. I wish you well.}
+{8264}{Hello there!}
+{8265}{Well met, sir!}
+{8266}{My compliments, honourable sir.}
+{8267}{Your good health, sir.}
+{8268}{Hello. I wish you well.}
+{8269}{Hello there! Doing well, I hope?}
+{8270}{Well met! How are you today?}
+{8271}{Hello. I am greatly honoured.}
+{8272}{I am humbled. A pleasure to meet you.}
+{8273}{Sir, it is a great pleasure.}
+{8274}{Always at your service.}
+{8275}{My compliments. My best compliments.}
+{8276}{Your good health. Your very good health.}
+{8277}{What can I help you with?}
+{8278}{Yes? Is there a problem I can help with?}
+{8279}{May I help you? Anything at all?}
+{8280}{Hello. May I help you?}
+{8281}{Always at your disposal.}
+{8282}{Good day. What can I do for you?}
+{8283}{Yes? Can I be of service?}
+{8284}{Is there a problem? Do you need help?}
+{8285}{Hello. Are you needing any help?}
+{8286}{Yes? Anything asir?}
+{8287}{Yes? Are you having a good day?}
+{8288}{Oh, yes? What is it?}
+{8289}{Hello. Have you a need for me?}
+{8290}{Yes? A wonderful day, is it not?}
+{8291}{A right fine pleasure to be meeting you.}
+{8292}{Yes? Is there a problem?}
+{8293}{Mister is doing well, I hope?}
+{8294}{Hello. How are you doing today?}
+{8295}{Yes? Do you have something to report, sir?}
+{8296}{Hello. I trust you are safe.}
+{8297}{How are you doing today. I trust you are safe.}
+{8298}{A pleasure to meet you. May I be of any assistance?}
+{8299}{An honour to meet you. Are you needing my assistance?}
+
+// city_dweller
+{8300}{I am honoured to meet you.}
+{8301}{Good day! It is a pleasure, I am sure!}
+{8302}{Please allow me! Is there any service I can do for you?}
+{8303}{Hello. I hope you are having a good day.}
+{8304}{Anything for you sir! Anything at all!}
+{8305}{Greetings friend! A pleasure to meet you!}
+{8306}{Hail! How are you this fine day?}
+{8307}{A real pleasure it is to make your acquaintance.}
+{8308}{A superlative honour to meet you.}
+{8309}{A splendid pleasure it is to make your acquaintance!}
+{8310}{It is my intense satisfaction to introduce myself to you.}
+{8311}{How do you do? Great is the pleasure, I'm sure.}
+{8312}{My best compliments.}
+{8313}{Your best good health.}
+{8314}{Please allow me! A pleasure!}
+{8315}{Greetings citizen! A pleasure to meet you!}
+{8316}{Hail, friend! How are you this fine day?}
+{8317}{Ah! it is wonderful to take your hand, sir.}
+{8318}{Hello. What can I do for you?}
+{8319}{Hello. How do you do?}
+{8320}{Hello. What a nice stretch of weather we are enjoying, wouldn't you say?}
+{8321}{Hello. I hope you are doing well.}
+{8322}{Yes? Are you having a good time?}
+{8323}{What is it? Is there something I can help you with?}
+{8324}{Yes? I am busy, but I can take a moment out for you.}
+{8325}{Why, certainly. What can I help you with?}
+{8326}{Absolutely. How can I be of service?}
+{8327}{A pleasure. Are you enjoying our fair city?}
+{8328}{Nice to meet you. How do you like our modern city?}
+{8329}{Glad to meet you. Are you enjoying the city life?}
+{8330}{Hmm? Yes? How are you today?}
+{8331}{Yes? How are you this fine day?}
+{8332}{Yes? Is the world treating you right?}
+{8333}{What a wonder of an age we live in. Wouldn't you say?}
+{8334}{A pleasure to meet you. How are you doing?}
+{8335}{I trust all is well with you?}
+{8336}{Hello. I trust all is well with you?}
+{8337}{Hmm? Yes. Indeed! Very nice to meet you.}
+{8338}{Very happy to make your acquaintance.}
+{8339}{I am honoured to make your acquaintance.}
+
+// villager
+{8350}{It's a great honor.}
+{8351}{I am very happy to make your acquaintance.}
+{8352}{You are most impressive.}
+{8353}{I am pleased to meet you.}
+{8354}{I am very happy to meet you.}
+{8355}{Please! How can I be of service?}
+{8356}{To be sure, it is a pleasure to meet you.}
+{8357}{To be sure, a pleasure, it is.}
+{8358}{May I help you?}
+{8359}{Anything I can do for you?}
+{8360}{A right pleasure it is to meet you!}
+{8361}{Oh my! I am your servant.}
+{8362}{Sir! To what do we owe the honour of your acquaintance?}
+{8363}{A pleasure it it is to meet you!}
+{8364}{Greetings, indeed! A fine pleasure to meet you!}
+{8365}{You are indeed welcome!}
+{8366}{Good day to you.}
+{8367}{How do you do?}
+{8368}{My compliments.}
+{8369}{Your good health.}
+{8370}{Please! I am at your service.}
+{8371}{You are indeed welcome here!}
+{8372}{Good day to you. A very good day.}
+{8373}{How do you do? Very well, I trust?}
+{8374}{My compliments. My best, of course!}
+{8375}{Greetings! I am humbled to meet you!}
+{8376}{I am honored. Greatly honored.}
+{8377}{It is wonderful to meet you. Wonderful!}
+{8378}{Ah! it is wonderful to greet you like this.}
+{8379}{Hello. What can I do for you?}
+{8380}{Why, hello. How do you do?}
+{8381}{Very happy to make your acquaintance.}
+{8382}{'Ay there. I hope you are doing well.}
+{8383}{Yes? Is there something you are needing?}
+{8384}{What is it? Is there something I can help you with?}
+{8385}{Lots to do today. But I would be glad to chat with you a moment.}
+{8386}{Why, yes, of course. What can I help you with?}
+{8387}{A pleasure. How can I be of help to you?}
+{8388}{A pleasure. Are you enjoying our fair country?}
+{8389}{Very nice to meet you.}
+{8390}{Glad to meet you. Are you enjoying yourself?}
+{8391}{Aye! You are welcome here. Indeed.}
+{8392}{Yes? How are you this fine country day?}
+{8393}{Breathe that country air! Wonderful it is!}
+{8394}{Aye! Yes, indeed! What is it I can do for you?}
+{8395}{A pleasure to meet you. How are you doing?}
+{8396}{I trust all is well with you?}
+{8397}{Hello. I trust all is well with you?}
+
+// beggar
+{8400}{Oh, such as I is not worthy to speak to you.}
+{8401}{Please. I beg your pardon.}
+{8402}{Oh! You are so wonderful!}
+{8403}{Please. Please. What can I do for you?}
+{8404}{I did not mean to get in your way. I am humbly sorry.}
+{8405}{A vision you are! A vision!}
+{8406}{Whatever I can do, I will do for you.}
+{8407}{Oh please. This poor beggar did not mean any harm.}
+{8408}{Aye, there be none finer than you!}
+{8409}{Can this old beggar do anything for you now?}
+{8410}{To be sure, would that I could greet you as you deserve!}
+{8411}{My humble compliments.}
+{8412}{Your very good health.}
+{8413}{Oh, I am not worthy to speak to you.}
+{8414}{I did not mean to get in your way. I am sorry.}
+{8415}{A vision of royalty you are!}
+{8416}{The best of health.}
+{8417}{Anything I can be doing for you?}
+{8418}{Yes? You need me for something?}
+{8419}{Hello What can I do for you?}
+{8420}{If it pleases, I can be of service.}
+{8421}{If it pleases. What can I do for you?}
+{8422}{Yes? Oh, how nice to meet you.}
+{8423}{Please? Yes? Can I be of any help?}
+{8424}{How are you? I hope you are doing fine.}
+{8425}{Yes? How are you? What can I help you with?}
+{8426}{Oh. Nice to meet you. Did you call for me?}
+{8427}{Yes? Are you needing help from me?}
+{8428}{Hmm? Yes? A pleasure. How are you today?}
+{8429}{How do you do? A right fine pleasure it is to meet you.}
+{8430}{Yes? How do you do? Do you need me? Anything at all.}
+{8431}{Yes. Indeed! Nice to meet you. Would you be needing me?}
+{8432}{Happy to make your acquaintance. Very happy, indeed.}
+{8433}{I am happy to make your acquaintance. Most happy, I am.}
+
+// thief
+{8450}{It is a great honour to meet you.}
+{8451}{It is good to meet one such as yourself! I am the craftiest rogue around.}
+{8452}{Greetings sir! It is an honour to meet you!}
+{8453}{Making your acquaintance, has made this a fine day, indeed!}
+{8454}{Good day to you, I hope I can be of some small service to you.}
+{8455}{My fortune has increased by making your acquaintance!}
+{8456}{A fine day it is to be making your acquaintance! Welcome!}
+{8457}{A thrill it is! I am glad to be making your acquaintance.}
+{8458}{A visit of Lady Luck herself it is to meet you!}
+{8459}{A first rate pleasure to meet you.}
+{8460}{Frightfully good to meet you!}
+{8461}{My sincere compliments sir.}
+{8462}{Your extraordinary good health.}
+{8463}{It is good to meet one such as yourself.}
+{8464}{Greetings citizen! It is an honour to meet you!}
+{8465}{My fortune has increased by making your acquaintance!}
+{8466}{You are welcome here, old friend. To be sure.}
+{8467}{Good day to you.}
+{8468}{It is an honour. A right good honour.}
+{8469}{It is nice to meet you, friend. It is, indeed.}
+{8470}{Indeed, I am most happy to meet you.}
+{8471}{Shall we talk, friend? Anything you need?}
+{8472}{Shall we talk. I am most, ah, resourceful.}
+{8473}{What is it, friend? Can I be of aid?}
+{8474}{What is it? Be needing something of me?}
+{8475}{Yes? What is it, friend? Be needing something?}
+{8476}{Hmm. Yes? What can I enlighten you about, friend?}
+{8477}{How are you, friend? Enjoying yourself?}
+{8478}{Yes? What can I do for you, friend?}
+{8479}{Yes? Why do you want me, friend?}
+{8480}{Hmm? Yes, what is it, friend?}
+{8481}{Hmm? Are you needing me, friend?}
+{8482}{A nice day for a stroll, would you say, friend?}
+{8483}{Hello, friend. And how are you doing?}
+{8484}{Hello there. What say you this fine day?}
+{8485}{Hmm? Yes? What's the word, friend? Having a good day?}
+{8486}{Hello. A right regular pleasure, it is.}
+{8487}{Hello. Are you needing any of my services?}
+{8488}{Hello. What a fine day it is today.}
+{8489}{Yes? Good to meet you.}
+{8490}{Ah. Yes, friend. Nice to meet you. What can I do for you?}
+{8491}{Mighty fine day, friend. What can I do for you?}
+{8492}{A veritable honour to meet you.}
+
+// bandit
+{8500}{I am honoured to make your acquaintance.}
+{8501}{It is good to meet ya!}
+{8502}{Aye! It's good to meet such as yourself here, it is!}
+{8503}{I be glad to meet ya, so I say!}
+{8504}{I am at your service! Glad you are here!}
+{8505}{Aye! It is good to welcome you, it is!}
+{8506}{Oh yes! You are welcome here, aye!}
+{8507}{Hallo! What can I do for you, brother?}
+{8508}{The day be looking up when I be meeting the likes of you!}
+{8509}{Ho! I think we'll get along right famously, I do!}
+{8510}{I think I like you already!}
+{8511}{My compliments, brother!}
+{8512}{The best of health, sir!}
+{8513}{What can I do for you, brother?}
+{8514}{How are you, old friend?}
+{8515}{A right fine day it is, I do declare.}
+{8516}{What's the word on the street, brother?}
+{8517}{Are you doing all right, my friend?}
+{8518}{Hello. What is it you be wanting, friend?}
+{8519}{A nice day, it is. A right nice day, I think.}
+{8520}{Get into any good scraps lately, friend?}
+{8521}{Right good to meet you, brother.}
+{8522}{What can I do for you, brother?}
+{8523}{Ho! What a good day it is.}
+{8524}{Good to be making your acquaintance, brother.}
+{8525}{Good to meet you, brother. Right good, it is.}
+{8526}{I be doing well, how about you?}
+{8527}{How are you, friend? Staying out of trouble?}
+{8528}{Staying out of trouble, brother?}
+{8529}{Right friendly of you, it is.}
+{8530}{Nice to meet you, I do declare.}
+{8531}{A right fine pleasure it is to meet you.}
+{8532}{How do you do, friend? I am doing well.}
+{8533}{Yes? Do you need me? What can I do for you?}
+{8534}{Hallo! What can I do for you?}
+
+
+// Initial good greeting messages start at 9000. Each class gets 50
+// messages starting on multiples of 50
+
+// noble
+{9000}{Greetings.}
+{9001}{Sir, it is nice to make your acquaintance.}
+{9002}{It is nice to meet you.}
+{9003}{It is a pleasure to meet you.}
+{9004}{It is an honour.}
+{9005}{It is a pleasure, I am sure!}
+{9006}{Yes. Welcome. Indeed.}
+{9007}{Greetings! And welcome.}
+{9008}{It is good to meet you.}
+{9009}{It is nice to meet you.}
+{9010}{It is a pleasure.}
+{9011}{I am happy to make your acquaintance.}
+{9012}{Sir, I am happy to make your acquaintance.}
+{9013}{Hello. How are you?}
+{9014}{How do you do, sir?}
+{9015}{How do you do?}
+{9016}{Hello.}
+{9017}{Yes, sir?}
+{9018}{Yes?}
+{9019}{Yes?}
+{9020}{What is it?}
+{9021}{Yes? What is it?}
+{9022}{What can I do for you?}
+{9023}{Yes? What can I do for you?}
+{9024}{What do you want?}
+{9025}{Yes? What do you want?}
+{9026}{Hmm? Yes?}
+{9027}{Hmm? What is it?}
+{9028}{Hmm? Yes? What is it?}
+{9029}{Hmm? Yes? What is it?}
+{9030}{Hmm? Yes? What can I do for you?}
+{9031}{Hmm? Yes? What can I do for you?}
+{9032}{Hmm? What can I do for you?}
+{9033}{Hmm? What can I do for you?}
+
+// priest
+{9050}{Welcome, what can I do for you?}
+{9051}{Hello, son.}
+{9052}{It is an honour.}
+{9053}{Hello! It is a pleasure.}
+{9054}{How do you do?}
+{9055}{Blessed Be!}
+{9056}{Hello, my son.}
+{9057}{A good day it is, don't you think so?.}
+{9058}{Merry met, my brother.}
+{9059}{Blessings! It is nice to meet you.}
+{9060}{Greetings, my brother.}
+{9061}{I am happy to make your acquaintance, my brother.}
+{9062}{I am happy to make your acquaintance.}
+{9063}{Hello. How are you?}
+{9064}{How do you do, son?}
+{9065}{How do you do, sir?}
+{9066}{Hello, brother.}
+{9067}{Yes, child.}
+{9068}{Hmm. Yes, brother?}
+{9069}{Hmm. Yes, son?}
+{9070}{What is it, child?}
+{9071}{Yes? What is it, son?}
+{9072}{What can I do for you, brother?}
+{9073}{Yes? What can I do for you, brother?}
+{9074}{What do you want, son?}
+{9075}{Yes? What do you want, son?}
+{9076}{Hmm? Yes?}
+{9077}{Hmm? What is it, child?}
+{9078}{Hmm? Yes? What is it?}
+{9079}{Hmm? Yes? What is it, son?}
+{9080}{Hmm? Yes? What can I do for you?}
+{9081}{Hmm? Yes? What can I do for you, child?}
+{9082}{Hmm? What can I do for you?}
+{9083}{Hmm? What can I do for you, brother?}
+
+
+// wizard
+{9100}{Hello, what can I do for you?}
+{9101}{Salutations!}
+{9102}{It is an honour.}
+{9103}{It is nice to make your acquaintance.}
+{9104}{I am pleased to make your acquaintance.}
+{9105}{Nice to meet you.}
+{9106}{Well met.}
+{9107}{I bid you welcome.}
+{9108}{It is nice to make your acquaintance.}
+{9109}{Good Day! I am a wizard, y'know?}
+{9110}{I am at your service.}
+{9111}{Hello there. I am honoured.}
+{9112}{Happy to make your acquaintance, sir.}
+{9113}{How are you?}
+{9114}{How do you do?}
+{9115}{How do you do, sir?}
+{9116}{Hello, here I am, yes.}
+{9117}{Yes, I am here.}
+{9118}{Yes?}
+{9119}{Yes?}
+{9120}{What is it, sir?}
+{9121}{Yes? What is it?}
+{9122}{What can I help you with?}
+{9123}{What can I help you with?}
+{9124}{Yes? What can I help you with?}
+{9125}{Yes? What can I help you with?}
+{9126}{Hmm? Yes?}
+{9127}{Hmm? Do you need me?}
+{9128}{Hmm? Yes? Do you need me?}
+{9129}{Hmm? Yes? Do you need me?}
+{9130}{Hmm? Yes? What can I do for you?}
+{9131}{Hmm? Yes? What can I do for you?}
+{9132}{Hmm? What can I do for you?}
+{9133}{Hmm? What can I do for you?}
+{9134}{I am happy to make your acquaintance.}
+
+// technologist
+{9150}{Hello. What can I do for you?}
+{9151}{It is a nice day.}
+{9152}{I am pleased to meet you.}
+{9153}{It is good to meet you.}
+{9154}{A pleasure, I am sure.}
+{9155}{Welcome!}
+{9156}{I am happy to make your acquaintance.}
+{9157}{How do you do? I am honoured.}
+{9158}{A pleasure to make your acquaintance.}
+{9159}{I am an inventor. Pleased to meet you.}
+{9160}{How do you do?}
+{9161}{Sir, I am pleased to meet you.}
+{9162}{Happy to make your acquaintance.}
+{9163}{How are you, sir?}
+{9164}{How do you do?}
+{9165}{How do you do, sir?}
+{9166}{Hello, how are you?}
+{9167}{Yes, how are you?}
+{9168}{Yes?}
+{9169}{Yes?}
+{9170}{Yes, sir?}
+{9171}{What is it?}
+{9172}{Yes? What is it?}
+{9173}{What do you need help with?}
+{9174}{What do you need help with, sir?}
+{9175}{Yes? What might you need?}
+{9176}{Yes? What might you need, sir?}
+{9177}{Hmm? Yes, sir?}
+{9178}{Hmm? Do you need me?}
+{9179}{Hmm? Yes? Do you need me?}
+{9180}{Hmm? Yes? Do you need me, sir?}
+{9181}{Hmm? Yes? What do you want?}
+{9182}{Hmm? Yes? What do you want, sir?}
+{9183}{Hmm? What can I do for you?}
+{9184}{Hmm? What can I do for you, sir?}
+{9185}{I am happy to make your acquaintance.}
+
+
+// shopkeeper
+{9200}{Hello. See anything you like?}
+{9201}{Welcome to my shop. Glad to meet you.}
+{9202}{It is good to meet you! Very good.}
+{9203}{Good day! It is a pleasure.}
+{9204}{Well, I am glad to meet you!}
+{9205}{It is good to meet you.}
+{9206}{It is good to meet you, sir!}
+{9207}{Is there any way I can help you?}
+{9208}{It is nice to meet you. I am at your disposal.}
+{9209}{How may I be of help, sir?}
+{9210}{It is good to make your acquaintance.}
+{9211}{I am pleased to make your acquaintance.}
+{9212}{Hello, sir. I am the best shopkeeper in the region.}
+{9213}{I am your servant. What is it that you need?}
+{9214}{How do you do?}
+{9215}{How do you do?}
+{9216}{Hello, looking for something special?}
+{9217}{Hello, looking for something special?}
+{9218}{Yes, sir?}
+{9219}{Yes?}
+{9220}{What interests you today, sir?}
+{9221}{Yes? What strikes your fancy today?}
+{9222}{What can I help you with?}
+{9223}{What can I help you with, sir?}
+{9224}{Yes? What can I help you with?}
+{9225}{Yes? What can I help you with?}
+{9226}{Hmm? Yes, sir?}
+{9227}{Hmm? How can I help you?}
+{9228}{Hmm? Yes? How can I be of service?}
+{9229}{Hmm? Yes? What would you like to see, sir?}
+{9230}{Hmm? Yes? What can I do for you?}
+{9231}{Hmm? Yes? What can I do for you?}
+{9232}{Hmm? What can I do for you, sir?}
+{9233}{Hmm? What can I do for you?}
+{9234}{I am happy to make your acquaintance.}
+{9235}{Happy to make your acquaintance, sir.}
+{9236}{How are you, sir?}
+
+// guard
+{9250}{Hello. Can I do anything for you?}
+{9251}{Hello.}
+{9252}{May I help you?}
+{9253}{Hello. It is nice to meet you.}
+{9254}{I am pleased to meet you.}
+{9255}{Sir, it is a pleasure.}
+{9256}{At your service.}
+{9257}{Is there a need for me?}
+{9258}{What service do you need?}
+{9259}{In your service, sir.}
+{9260}{I am at your command, sir.}
+{9261}{It is nice to make your acquaintance.}
+{9262}{A fine day it is.}
+{9263}{It is a good day.}
+{9264}{Hello. How do you do?}
+{9265}{Hello.}
+{9266}{Well met, sir.}
+{9267}{May I help you?}
+{9268}{Yes? Is there a problem?}
+{9269}{May I help you, sir?}
+{9270}{I am at your disposal, sir.}
+{9271}{What is it?}
+{9272}{Yes? What is it, sir?}
+{9273}{Do you need help?}
+{9274}{Do you need help?}
+{9275}{Yes? Anything wrong?}
+{9276}{Yes? Anything wrong?}
+{9277}{Hmm? Yes?}
+{9278}{Hmm? Do you need me?}
+{9279}{Hmm? Yes? Do you need me, sir?}
+{9280}{Hmm? Yes? Do you need me?}
+{9281}{Hmm? Yes? Is there a problem?}
+{9282}{Hmm? Yes? Is there a problem?}
+{9283}{Hmm? Have you a need for me, sir?}
+{9284}{I trust you are safe.}
+{9285}{Hello. Can I help you?}
+{9286}{Is there anything I can do for you?}
+{9287}{May I be of assistance?}
+{9288}{May I be of assistance, sir?}
+{9289}{May I be of assistance?}
+
+// city_dweller
+{9300}{Hello, sir, the pleasure is mine.}
+{9301}{Good day it is a pleasure, indeed.}
+{9302}{How do you do? My pleasure, indeed.}
+{9303}{Another frightful day, I fear. How do you do?}
+{9304}{What can I do for you sir?}
+{9305}{Hello! A pleasure to meet you.}
+{9306}{How are you this day?}
+{9307}{A pleasure it is to make your acquaintance.}
+{9308}{An honour to meet you.}
+{9309}{A pleasure it is to make your acquaintance.}
+{9310}{It is my satisfaction to introduce myself to you.}
+{9311}{How do you do?}
+{9312}{Hello.}
+{9313}{Hello. What do you need?}
+{9314}{How do you do?}
+{9315}{How do you do?}
+{9316}{How do you do?}
+{9317}{Hello. What is it?}
+{9318}{Hello. Nice to meet you.}
+{9319}{Yes?}
+{9320}{What is it, sir?}
+{9321}{Yes? What can I do for you?}
+{9322}{What can I help you with?}
+{9323}{What?}
+{9324}{Yes? What is it?}
+{9325}{Yes? What is it?}
+{9326}{Hmm? Yes?}
+{9327}{Hmm? How are you?}
+{9328}{Hmm? Yes? How are you?}
+{9329}{Hmm? Yes? Nice to meet you?}
+{9330}{Hmm? Yes? Nice to meet you, sir?}
+{9331}{Hmm? Yes? A pleasure.}
+{9332}{Hmm? How do you do?}
+{9333}{Hmm? How do you do?}
+{9334}{Hmm? Yes. Nice to meet you.}
+{9335}{Happy to make your acquaintance, sir.}
+{9336}{I am happy to make your acquaintance.}
+
+// villager
+{9350}{Greetings.}
+{9351}{Well met.}
+{9352}{Hello there.}
+{9353}{Sir! My pleasure.}
+{9354}{To be sure, my pleasure.}
+{9355}{Greetings! I am happy to meet you.}
+{9356}{Do you need something, sir?}
+{9357}{What can I do for you?}
+{9358}{A pleasure it is to meet you, sir.}
+{9359}{It is a nice day.}
+{9360}{To what do we owe the pleasure of your acquaintance?}
+{9361}{Aye! A good day to you, sir.}
+{9362}{A right fine day to you}
+{9363}{You are welcome here, sir.}
+{9364}{Good day to you, sir.}
+{9365}{It is an honour.}
+{9366}{It is nice to meet you.}
+{9367}{I am happy to meet you.}
+{9368}{Hello there.}
+{9369}{How do you do?}
+{9370}{How do you do?}
+{9371}{What is it?}
+{9372}{Yes? What is it, sir?}
+{9373}{How are you?}
+{9374}{How are you?}
+{9375}{Yes? Can I help?}
+{9376}{Yes? Can I help?}
+{9377}{Hmm? Yes?}
+{9378}{Hmm? Are you needing me?}
+{9379}{Hmm? Yes? What can I do for you?}
+{9380}{Hmm? Yes? What do you need?}
+{9381}{Hmm? Yes? Looking for someone?}
+{9382}{Hmm? Yes? Did you say something?}
+{9383}{Hmm? Having a nice day?}
+{9384}{Hmm? Need a hand, sir?}
+{9385}{What can I help you with.}
+{9386}{Hello. A pleasure, it is.}
+{9387}{Yes? Me?}
+{9388}{Hello. How do you do?}
+{9389}{Hello. Is it a good day for you?}
+{9390}{I hope you are well.}
+{9391}{Yes? Are you lost?}
+{9392}{Can I help you?}
+{9393}{Can I help you, sir?}
+{9394}{It is an honor.}
+
+// beggar
+{9400}{Hello, kind sir. It pleases me that you speak with me.}
+{9401}{I beg your pardon.}
+{9402}{Thank you for noticing this ol' beggar.}
+{9403}{What can I do for you?}
+{9404}{I did not mean to get in your way.}
+{9405}{A right noble gentleman you are.}
+{9406}{What can I do for you?}
+{9407}{Please. I did not mean any harm.}
+{9408}{Aye, it be a good day.}
+{9409}{Can I do anything for you?}
+{9410}{To be sure, it is a nice day!}
+{9411}{Please excuse my appearance.}
+{9412}{<cough> Hello, please excuse my appearance.}
+{9413}{Please? What can I do for you?}
+{9414}{How are you?}
+{9415}{How are you? A nice day it is.}
+{9416}{How do you do?}
+{9417}{Hello, sir. Do you need my help?}
+{9418}{Hello. Is there something I can do for you?}
+{9419}{A nice day. Yes?}
+{9420}{What do you need me for?}
+{9421}{Yes? What do you need me for?}
+{9422}{What can I do for you?}
+{9423}{If it pleases?}
+{9424}{If it pleases, yes?}
+{9425}{<cough> Yes? How nice to meet you, sir.}
+{9426}{Please? Yes? Can I help?}
+{9427}{How are you?}
+{9428}{Yes? How are you? What can I help you with?}
+{9429}{Oh. Nice to meet you. Do you need me?}
+{9430}{<cough> Yes? Nice to meet you.}
+{9431}{Hmm? Yes? A pleasure.}
+{9432}{<cough> How do you do?}
+{9433}{Yes? How do you do? Do you need me?}
+{9434}{<cough> Yes. Indeed! Nice to meet you.}
+{9435}{Happy to make your acquaintance.}
+{9436}{I am happy to make your acquaintance.}
+
+// thief
+{9450}{Hello. What would you like?}
+{9451}{Good to meet you!}
+{9452}{Greetings! It is nice to meet you.}
+{9453}{It is nice to make your acquaintance.}
+{9454}{Good day to you, I hope I can be of some service?}
+{9455}{It is nice to be making your acquaintance.}
+{9456}{A fine day it is!}
+{9457}{I am glad to be making your acquaintance.}
+{9458}{A right fine day it is to meet you!}
+{9459}{A pleasure to meet you.}
+{9460}{Good to meet you! What is your pleasure.}
+{9461}{It is an honour to meet you.}
+{9462}{A fine day to you.}
+{9463}{You are welcome here.}
+{9464}{Good day to you, I says.}
+{9465}{It is an honour.}
+{9466}{It is nice to meet you.}
+{9467}{Indeed, I am happy to meet you.}
+{9468}{Shall we talk?}
+{9469}{Shall we talk?}
+{9470}{What is it?}
+{9471}{What is it?}
+{9472}{Yes? What is it, friend?}
+{9473}{Hmm. Yes? What is it?}
+{9474}{How are you, friend?}
+{9475}{Yes? What do you want of me?}
+{9476}{Yes? Why do you want me?}
+{9477}{Hmm? Yes, what?}
+{9478}{Hmm? Are you needing me, friend?}
+{9479}{Hmm? Yes? What can I do for you?}
+{9480}{Hmm? Yes? What do you need?}
+{9481}{Hmm? Yes? Need a hand, friend?}
+{9482}{Hmm? Yes? Did you say something?}
+{9483}{Hmm? Did you say something?}
+{9484}{Hmm? Looking for someone?}
+{9485}{Looking for someone, friend?}
+{9486}{Hello. A pleasure, it is.}
+{9487}{Yes? Who? Me, friend?}
+{9488}{Hello, friend. Are you needing my services?}
+{9489}{Hello. Have you a need for me?.}
+{9490}{Hello. What news have you, friend?}
+{9491}{Yes, friend? Have you lost something?}
+{9492}{Yes? Ah. Yes. What can I do for you?}
+{9493}{What can I do for you, friend?}
+
+// bandit
+{9500}{Well met. Can I help you?}
+{9501}{It is good to meet you!}
+{9502}{Aye! It is a good day.}
+{9503}{I am glad to meet you.}
+{9504}{Glad you are here!}
+{9505}{Aye! Welcome to you.}
+{9506}{You are welcome here, brother.}
+{9507}{How are you, brother?}
+{9508}{The day be looking up, I think.}
+{9509}{I think we might have some things in common, I do.}
+{9510}{I like the look of you!}
+{9511}{Good to make your acquaintance.}
+{9512}{Yes, what can I do for you?}
+{9513}{Yes? What can I do for you?}
+{9514}{How are you?}
+{9515}{Yes? What do you need?}
+{9516}{Yes? How are you? What can I do for you?}
+{9517}{Hello. Do you need me?}
+{9518}{Hello. Is there something I can do for you?}
+{9519}{A nice day, it is.}
+{9520}{What do you need me for?}
+{9521}{Yes? What do you need me for?}
+{9522}{What can I do for you?}
+{9523}{Hello. What can I do for you?}
+{9524}{If it pleases you?}
+{9525}{Yes? Nice to meet you.}
+{9526}{Hallo! Can I help you?}
+{9527}{How are you, brother?}
+{9528}{How do you do?}
+{9529}{Nice to meet you, I says. Do you need me?}
+{9530}{Yes? Nice to meet you.}
+{9531}{Hmm? Yes? A pleasure.}
+{9532}{How do you do?}
+{9533}{Yes? Do you need me?}
+{9534}{Yes. What can I do for you?}
+{9535}{Making your acquaintance.}
+{9536}{You be needing me, brother?}
+
+
+// Initial neutral greeting messages start at 10000. Each class gets 50
+// messages starting on multiples of 50
+
+// noble
+{10000}{Yes?}
+{10001}{How do you do?}
+{10002}{How do you do?}
+{10003}{A nice day.}
+{10004}{Yes?}
+{10005}{It is a pleasure.}
+{10006}{Welcome.}
+{10007}{How do you do?}
+{10008}{It is nice to meet you.}
+{10009}{It is nice to meet you.}
+{10010}{It is a pleasure.}
+{10011}{It is nice to make your acquaintance.}
+{10012}{Hello.}
+{10013}{Greetings.}
+{10014}{Sir, it is nice to make your acquaintance.}
+{10015}{How do you do?}
+{10016}{Hello, sir.}
+{10017}{Sir.}
+{10018}{Sir?}
+{10019}{Yes?}
+{10020}{What is it?}
+{10021}{Yes? What is it?}
+{10022}{What can I do for you?}
+{10023}{Yes? What can I do for you?}
+{10024}{What do you want?}
+{10025}{Yes? What do you want?}
+{10026}{Hmm? Yes?}
+{10027}{Hmm? What is it?}
+{10028}{Hmm? Yes? What is it?}
+{10029}{Hmm? Who might you be?}
+{10030}{Hmm? Yes? Who might you be?}
+{10031}{Hmm? Yes? Who might you be?}
+{10032}{Hmm? What do you want?}
+{10033}{Hmm? What can I do for you?}
+
+// priest
+{10050}{Yes, my son?}
+{10051}{Hello. I am pleased to meet you.}
+{10052}{How do you do, son?.}
+{10053}{How do you do, sir?}
+{10054}{Yes, my son?}
+{10055}{My pleasure.}
+{10056}{A merry meet, I am sure.}
+{10057}{A good day it is, son.}
+{10058}{Blessings, son.}
+{10059}{Blessed Be.}
+{10060}{Greetings, my son.}
+{10061}{Son, what is it I can do for you?}
+{10062}{It is Her Will.}
+{10063}{Hello, son.}
+{10064}{Sir.}
+{10065}{Sir?}
+{10066}{Yes?}
+{10067}{What is it?}
+{10068}{Yes? What is it?}
+{10069}{What can I do for you?}
+{10070}{Yes? What can I do for you?}
+{10071}{What do you want?}
+{10072}{Yes? What do you want?}
+{10073}{Hmm? Yes?}
+{10074}{Hmm? Yes?}
+{10075}{Yes? What is it?}
+{10076}{Hmm? Yes? What is it?} 
+{10077}{Hmm? Yes? What is it?}
+{10078}{Yes? What do you want?}
+{10079}{Hmm? Yes? What do you want?}
+{10080}{Hmm? Yes? What do you want?}
+
+// wizard
+{10100}{What do you want, sir?}
+{10101}{How do you do?}
+{10102}{I am pleased}
+{10103}{This is . . . interesting.}
+{10104}{Nice to make your acquaintance.}
+{10105}{Good day to you.}
+{10106}{Good day.}
+{10107}{Welcome.}
+{10108}{How do you do, sir?}
+{10109}{Hello. Nice to meet you.}
+{10110}{Yes? Can I help you?}
+{10111}{Yes? What is it?}
+{10112}{Hello, sir.}
+{10113}{Yes? Hello.}
+{10114}{Sir.}
+{10115}{Sir?}
+{10116}{Yes?}
+{10117}{What is it?}
+{10118}{Yes? What is it?}
+{10119}{What can I do for you?}
+{10120}{Yes? What can I do for you?}
+{10121}{What do you want?}
+{10122}{Yes? What do you want?}
+{10123}{Hmm?}
+{10124}{Hmm?}
+{10125}{Yes? What is it?}
+{10126}{Hmm? What is it?} 
+{10127}{Hmm? What is it?}
+{10128}{Yes? What do you want?}
+{10129}{Hmm? What do you want?}
+{10130}{Hmm? What do you want?}
+
+// technologist
+{10150}{Yes friend?}
+{10151}{Yes, yes? What is it?}
+{10152}{A nice day, sir.}
+{10153}{How do you do?}
+{10154}{What is it?}
+{10155}{Hello, sir.}
+{10156}{It is nice to make your acquaintance.}
+{10157}{Yes? I am busy. What is it?}
+{10158}{Hmmm? Yes?}
+{10159}{I am busy. What do you want?}
+{10160}{Yes? How do you do?}
+{10161}{Sir, I am busy at the moment.}
+{10162}{Hello, sir. What is it I can do for you?}
+{10163}{Yes, sir? Why do you disturb me?}
+{10164}{Sir.}
+{10165}{Sir?}
+{10166}{Yes?}
+{10167}{What is it?}
+{10168}{Yes? What is it?}
+{10169}{What can I do for you?}
+{10170}{Yes? What can I do for you?}
+{10171}{What do you want?}
+{10172}{Yes? What do you want?}
+{10173}{Hmm?}
+{10174}{Hmm?}
+{10175}{Hmm? What is it?}
+{10176}{Hmm? What is it?} 
+{10177}{Hmm? What is it?}
+{10178}{Hmm? What do you want?}
+{10179}{Hmm? What do you want?}
+{10180}{Hmm? What do you want?}
+
+// shopkeeper
+{10200}{Can I help you?}
+{10201}{What can I do for you?}
+{10202}{Good day.}
+{10203}{Good day.}
+{10204}{I am glad to meet you.}
+{10205}{It is nice to meet you.}
+{10206}{It is nice to meet you.}
+{10207}{Is there any way I can help you?}
+{10208}{I am at your disposal.}
+{10209}{How may I be of help?}
+{10210}{It is nice to make your acquaintance.}
+{10211}{I am pleased.}
+{10212}{Hello.}
+{10213}{What is it that you need?}
+{10214}{Hello. See anything you like?}
+{10215}{Sir?}
+{10216}{Yes?}
+{10217}{What is it?}
+{10218}{Yes? What is it?}
+{10219}{What can I do for you?}
+{10220}{Yes? What can I do for you?}
+{10221}{What do you want?}
+{10222}{Yes? What do you want?}
+{10223}{Hmm?}
+{10224}{Hmm?}
+{10225}{Hmm? What is it?}
+{10226}{Hmm? What is it?} 
+{10227}{Hmm? What do you want?}
+{10228}{Hmm? What do you want?}
+{10229}{Hmm? What can I do for you?}
+{10230}{Hmm? What can I do for you?}
+
+// guard
+{10250}{Move along.}
+{10251}{Sir, I haven't time to talk.}
+{10252}{Please, I am on duty.}
+{10253}{Hello. What is it?}
+{10254}{Yes?}
+{10255}{Sir, it is a good day.}
+{10256}{I am the guard here.}
+{10257}{Is there a need for me?}
+{10258}{Is someone in need of my service?}
+{10259}{Trouble?}
+{10260}{I am on patrol. Please be quick about it.}
+{10261}{Your acquaintance.}
+{10262}{A fine day.}
+{10263}{Sir?}
+{10264}{Hello.}
+{10265}{How do you do?}
+{10266}{How do you do, sir?}
+{10267}{Hello. Can I be of service?}
+{10268}{Hello.}
+{10269}{What is it?}
+{10270}{Sir, please continue about your business.}
+{10271}{'Ay, what?}
+{10272}{'Ay, what?}
+{10273}{Yes?}
+{10274}{What is it?}
+{10275}{Yes? What is it?}
+{10276}{What can I do for you?}
+{10277}{Yes? What can I do for you?}
+{10278}{What do you want?}
+{10279}{Yes? What do you want?}
+{10280}{Hmm?}
+{10281}{Hmm?}
+{10282}{Hmm? What is it?}
+{10283}{Hmm? What do you want?}
+{10284}{Hmm? What can I do for you?}
+{10285}{Hmm? What is it?}
+{10286}{Hmm? What do you want?}
+{10287}{Hmm? What can I do for you?}
+{10288}{Yes, sir?}
+{10289}{Halloa!}
+{10290}{Yo there! Hold up. What are you about?}
+{10291}{So. Are you needing me?}
+{10292}{Hallo you!}
+{10293}{Who is it that wants me?}
+{10294}{Be quick about it, now. I have to be on.}
+{10295}{Hark! Who goes there?}
+
+
+// city_dweller
+{10300}{Yes, what is it?}
+{10301}{Hello.}
+{10302}{Yes?}
+{10303}{Hello. It is nice to meet you.}
+{10304}{I am pleased to meet you.}
+{10305}{It is nice, I'm sure.}
+{10306}{What?}
+{10307}{Is there a need for me?}
+{10308}{What is it that you need?}
+{10309}{I says, do you need me?}
+{10310}{How do you do?}
+{10311}{Make your acquaintance.}
+{10312}{A fine day.}
+{10313}{It is a good day.}
+{10314}{Hello. How do you do?}
+{10315}{Hello.}
+{10316}{Hurry now. I am in a hurry!}
+{10317}{Hello. Be quick about it, please.}
+{10318}{Yes? What can you be wanting me for?}
+{10319}{'Ay, what?}
+{10320}{'Ay, what?}
+{10321}{What is it?}
+{10322}{Yes? What is it?}
+{10323}{What can I do for you?}
+{10324}{Yes? What can I do for you?}
+{10325}{What do you want?}
+{10326}{Yes? What do you want?}
+{10327}{Hmm?}
+{10328}{Hmm?}
+{10329}{Hmm? What is it?}
+{10330}{Hmm? What do you want?}
+{10331}{Hmm? What can I do for you?}
+{10332}{Hmm? What is it?}
+{10333}{Hmm? What do you want?}
+{10334}{Hmm? What can I do for you?}
+{10335}{Please come back later, sir, when I am off work.}
+{10336}{Yes?}
+{10337}{Be quick about it.}
+{10338}{Be quick about it.}
+{10339}{Be quick about it.}
+{10340}{Be quick about it, now. I have to be on.}
+{10341}{Be quick about it, now. I have to be on.}
+{10342}{Be quick about it, now. I have to be on.}
+
+// villager
+{10350}{Sir?}
+{10351}{Yes friend?}
+{10352}{Yes, what is it?}
+{10353}{Sir? What is it?}
+{10354}{To be sure.}
+{10355}{Happy to meet you.}
+{10356}{Do you need something?}
+{10357}{What can I do for you?}
+{10358}{A pleasure.}
+{10359}{Nice day.}
+{10360}{I says, yes?}
+{10361}{A good day to you.}
+{10362}{A fine day.}
+{10363}{You are welcome.}
+{10364}{Good day.}
+{10365}{An honour.}
+{10366}{Nice to meet you.}
+{10367}{Happy to meet you.}
+{10368}{Greetings.}
+{10369}{Yes?}
+{10370}{Hello there.}
+{10371}{Sir?}
+{10372}{Yes friend, what is it?}
+{10373}{Aye?}
+{10374}{'Ay, what?}
+{10375}{'Ay, what?}
+{10376}{What is it?}
+{10377}{Yes? What is it?}
+{10378}{What can I do for you?}
+{10379}{Yes? What can I do for you?}
+{10380}{What do you want?}
+{10381}{Yes? What do you want?}
+{10382}{Hmm?}
+{10383}{Hmm?}
+{10384}{Hmm? What is it?}
+{10385}{Hmm? What do you want?}
+{10386}{Hmm? What can I do for you?}
+{10387}{Hmm? What is it?}
+{10388}{Hmm? What do you want?}
+{10389}{Hmm? What can I do for you?}
+{10390}{How are you, sir?}
+{10391}{Yes?}
+{10392}{Who are you?}
+{10393}{Who are you?}
+{10394}{Yes? Who are you?}
+{10395}{Yes? Who are you?}
+{10396}{Be quick about it, now. I have to be on.}
+{10397}{Be quick about it, now. I have to be on.}
+
+// beggar
+{10400}{Hello. Pity a poor beggar like me.}
+{10401}{<cough> I beg your pardon.}
+{10402}{Thank you for noticing this ol' beggar.}
+{10403}{<cough> What can I do for you?}
+{10404}{<cough> I did not mean to get in your way.}
+{10405}{A right good gentleman you are.}
+{10406}{What can I do for you?}
+{10407}{<cough> Please. I did not mean no harm.}
+{10408}{Aye, it be a good day.}
+{10409}{<cough> Can I do anything for you?}
+{10410}{To be sure, it is a nice day!}
+{10411}{Sir, please excuse my appearance.}
+{10412}{<cough> <cough> Sir, please excuse my appearance.}
+{10413}{Hello, kind sir.}
+{10414}{What is it?}
+{10415}{Yes? What is it?}
+{10416}{What can I do for you?}
+{10417}{<cough> What can I do for you?}
+{10418}{Yes? What can I do for you?}
+{10419}{<cough> What do you want?}
+{10420}{Yes? What do you want?}
+{10421}{<cough> Hmm?}
+{10422}{Hmm?}
+{10423}{Hmm? What is it?}
+{10424}{Hmm? What is it?}
+{10425}{<cough> Hmm? What is it?}
+{10426}{Hmm? What do you want?}
+{10427}{Hmm? What do you want?}
+{10428}{Hmm? What can I do for you?}
+{10429}{<cough> Hmm? What can I do for you?}
+{10430}{Yes?}
+{10431}{<cough> Yes?}
+{10432}{Who is it that wants me?}
+{10433}{<cough>Who is it that wants me?}
+{10434}{Yes? What do you want me for?}
+{10435}{Yes? What do you want me for?}
+{10436}{Yes? What do you want me for? I did nothing.}
+{10437}{I did nothing. What do you want me for?}
+{10438}{<cough> Yes? What do you want me for? I did nothing.}
+{10439}{<cough> Be quick about it, now. I have to be on.}
+
+// thief
+{10450}{What is it?}
+{10451}{Nice to meet you.}
+{10452}{Greetings!}
+{10453}{It is nice to make your acquaintance.}
+{10454}{Good day to you, how can I be of service?}
+{10455}{It is nice to be making your acquaintance.}
+{10456}{A fine day it is.}
+{10457}{Glad to be making your acquaintance.}
+{10458}{Aye, a right day it is.}
+{10459}{A pleasure.}
+{10460}{Yes? What can I do for you?}
+{10461}{Yes? Be quick now.}
+{10462}{Hello. What is it?}
+{10463}{Who is it wants me?}
+{10464}{Yes? What is it?}
+{10465}{What can I do for you?}
+{10466}{Yes? What can I do for you?}
+{10467}{What do you want?}
+{10468}{Yes? What do you want?}
+{10469}{Hmm?}
+{10470}{Hmm?}
+{10471}{Hmm? What is it?}
+{10472}{Hmm? What do you want?}
+{10473}{Hmm? What can I do for you?}
+{10474}{Hmm? What is it?}
+{10475}{Hmm? What do you want?}
+{10476}{Hmm? What can I do for you?}
+{10477}{Yes?}
+{10478}{Who is it that wants me?}
+{10479}{Who is it that wants me?}
+{10480}{Yes? Who is it that wants me?}
+{10481}{Yes? Who is it that wants me?}
+{10482}{Yes? Who is it that wants me?}
+{10483}{Be quick about it, now. I have to be on.}
+{10484}{Be quick about it, now. I have to be on.}
+{10485}{Be quick about it, now. I have to be on.}
+{10486}{What is it?}
+
+// bandit
+{10500}{What?}
+{10501}{What do you want?}
+{10502}{Aye?}
+{10503}{I says?}
+{10504}{Yes?}
+{10505}{Aye?}
+{10506}{Why have you come to me, brother?}
+{10507}{What is on your mind, friend?}
+{10508}{Be quick about it, brother.}
+{10509}{Aye, we might have something in common, we might.}
+{10510}{I don't know if I like the look of you or not.}
+{10511}{Yes? Are you looking for me?}
+{10512}{What is it?}
+{10513}{Who is it wants me?}
+{10514}{Yes? What is it?}
+{10515}{What can I do for you?}
+{10516}{Yes? What can I do for you?}
+{10517}{What do you want?}
+{10518}{Yes? What do you want?}
+{10519}{Hmm?}
+{10520}{Hmm?}
+{10521}{Hmm? What is it?}
+{10522}{Hmm? What is it?}
+{10523}{Hmm? What is it?}
+{10524}{Hmm? What do you want?}
+{10525}{Hmm? What do you want?}
+{10526}{Hmm? What do you want?}
+{10527}{Yes?}
+{10528}{Who is it wants me?}
+{10529}{Who is it wants me?}
+{10530}{Yes? Who wants me?}
+{10531}{Yes? Who wants me?}
+{10532}{Yes? Who wants me?}
+{10533}{Be quick about it.}
+{10534}{Be quick about it.}
+{10535}{Be quick about it.}
+{10536}{What is it?}
+
+
+// Second great greeting messages start at 11000. Each class gets 50
+// messages starting on multiples of 50
+
+// noble
+{11000}{How wonderful to see you again!}
+{11001}{Delighted to meet you again!}
+{11002}{Delighted to meet you again, my good friend!}
+{11003}{Very excellent it is, indeed, to meet you again!}
+{11004}{Very excellent it is, indeed, to meet you again!}
+{11005}{Ah! Superlative to see you again!}
+{11006}{Ah! Superlative to see you again, my good friend!}
+{11007}{Wonderful it is, to have the pleasure of your company again!}
+{11008}{Wonderful it is, to have the pleasure of your company again!}
+{11009}{Splendid it is, to greet you once again!}
+{11010}{Splendid it is, to greet you once again!}
+{11011}{It is to my intense satisfaction that we meet again!}
+{11012}{It is to my intense satisfaction that we meet again!}
+{11013}{Your very good health!}
+{11014}{Your very good health, my good friend!}
+{11015}{A cheerful day, it is, seeing you again!}
+{11016}{A cheerful day, it is, seeing you again!}
+{11017}{It is so very fine to be meeting you again!}
+{11018}{It is so very fine to be meeting you again!}
+{11019}{What an exquisite pleasure to be greeting you once again!}
+{11020}{What an exquisite pleasure to be greeting you once again!}
+{11021}{It is indeed a delight to see you again!}
+{11022}{It is indeed a delight to see you again!}
+{11023}{It is absolutely wonderful to see you again!}
+{11024}{It is wonderful to see you again, my intimate friend!}
+{11025}{How very pleasing and proper it is to see you again!}
+{11026}{How very pleasing and proper it is to see you again!}
+{11027}{It is such a blessing to greet you again!}
+{11028}{It is such a blessing to greet you again!}
+{11029}{It is so very pleasant to meet you again!}
+{11030}{It is so very pleasant to meet you again!}
+{11031}{It is ever so charming to meet you again!}
+{11032}{It is ever so charming to meet you again!}
+{11033}{I am honored to renew our acquaintance!}
+{11034}{I am honored to renew our acquaintance!}
+{11035}{Meeting you again has given me great satisfaction!}
+{11036}{Meeting you again has given me great satisfaction!}
+{11037}{I am ever so fortunate to see you again!}
+{11038}{I am ever so fortunate to see you again!}
+{11039}{How wonderful to see you again my good fellow!}
+{11040}{Absolutely overjoyed to see you again, my good friend!}
+{11041}{Absolutely overjoyed to see you again!}
+{11042}{All is right with the world now that we meet again!}
+{11043}{How very fortunate I am to have met you again!}
+
+// priest
+{11050}{My son, how joyous is your return!}
+{11051}{I am blessed to meet you again!}
+{11052}{I am happy to meet you again!}
+{11053}{Very happy I am, indeed, to convene with you again!}
+{11054}{I am very happy to convene with you again!}
+{11055}{Ah yes! A blessing to see you again!}
+{11056}{Ah yes! A blessing to meet you again!}
+{11057}{Wonderful it is, to have the holy pleasure of your company again!}
+{11058}{Wonderful it is, to have the pleasure of your company again!}
+{11059}{Splendid it is, to bless you once again!}
+{11060}{Splendid it is, to see you once again!}
+{11061}{It is to my great satisfaction that we gather again!}
+{11062}{It is to my blessed satisfaction that we gather again!}
+{11063}{Your very good health!}
+{11064}{Your very good health, my son!}
+{11065}{A blessed day, it is, seeing you again!}
+{11066}{A blessed day, it is, meeting you again!}
+{11067}{A holy ordainment, it is, to be meeting you again!}
+{11068}{A holy ordainment, it is, to be seeing you again!}
+{11069}{It is holy destiny to be greeting you once again!}
+{11070}{It is nice to be greeting you once again!}
+{11071}{It is indeed a delight to enjoin with you again!}
+{11072}{It is a delight to enjoin with you again!}
+{11073}{It is absolutely wonderful to see you again!}
+{11074}{It is wonderful to see you again!}
+{11075}{How very holy and blessed it is to see you again!}
+{11076}{How holy and blessed it is to see you again!}
+{11077}{It is such a blessing to greet you again!}
+{11078}{It is a blessing to greet you again!}
+{11079}{Fate smiles upon us again!}
+{11080}{Fate smiles upon us again, my son!}
+{11081}{It is ever so pleasing to convene with you again!}
+{11082}{It is pleasing to convene with you again!}
+{11083}{I am very honored to renew our holy acquaintance!}
+{11084}{I am honored to renew our holy acquaintance!}
+{11085}{Meeting you again has given me great satisfaction!}
+{11086}{Seeing you again has given me great satisfaction!}
+{11087}{I am ever so fortunate to convene with you again!}
+{11088}{I am fortunate to convene with you again!}
+{11089}{Oh, yes! I am happy to see you again!}
+
+// wizard
+{11100}{Hello! Nice to see you again!}
+{11101}{Delighted to meet you again!}
+{11102}{Delighted to meet you again!}
+{11103}{Very excellent it is, indeed, to engage with you again!}
+{11104}{Very excellent it is, indeed, to engage with you again!}
+{11105}{Yes! Superlative to engage with you again!}
+{11106}{Yes! Superlative to engage with you again!}
+{11107}{Wonderful it is, to have the pleasure of engaging with you again!}
+{11108}{Wonderful it is, to have the pleasure of engaging with you again!}
+{11109}{Splendid it is, to come together with you once again!}
+{11110}{Splendid it is, to come together with you once again!}
+{11111}{It is satisfying that we come across each other again!}
+{11112}{It is satisfying that we come across each other again!}
+{11113}{Your very good health!}
+{11114}{Your very good health!}
+{11115}{A cheerful day, it is, that our paths intersect again!}
+{11116}{A cheerful day, it is, that our paths intersect again!}
+{11117}{It is very fine to engage with you again!}
+{11118}{It is very fine to engage with you again!}
+{11119}{What a pleasure that our lives coincide once again!}
+{11120}{What a pleasure that our lives coincide once again!}
+{11121}{It is a delight to engage with you again!}
+{11122}{It is a delight to engage with you again!}
+{11123}{It is absolutely wonderful to see you again!}
+{11124}{It is wonderful to see you again!}
+{11125}{How very pleasing it is to engage with you again!}
+{11126}{How very pleasing it is to engage with you again!}
+{11127}{It is a blessing to come across you again!}
+{11128}{It is a blessing to come across you again!}
+{11129}{Our paths cross yet again!}
+{11130}{Our paths cross yet again!}
+{11131}{Our lives intertwine again!}
+{11132}{Our lives intertwine again!}
+{11133}{I am honored to renew our acquaintance!}
+{11134}{I am honored to renew our acquaintance!}
+{11135}{Meeting you again has given me great satisfaction!}
+{11136}{Meeting you again has given me great satisfaction!}
+{11137}{I am ever fortunate to be with you again!}
+{11138}{I am ever fortunate to be with you again!}
+{11139}{Hello! Nice to see you again!}
+
+// technologist
+{11150}{Welcome back! What can I do for you?}
+{11151}{Delighted to consult with you again!}
+{11152}{Delighted to consult with you again!}
+{11153}{Very excellent, indeed, to consult with you again!}
+{11154}{Very excellent, indeed, to consult with you again!}
+{11155}{Ah! Superlative, indeed, to confer with you again!}
+{11156}{Ah! Superlative, indeed, to confer with you again!}
+{11157}{Wonderful it is, to have the pleasure of your company again!}
+{11158}{Wonderful it is to have the pleasure of your company again!}
+{11159}{Splendid it is, to have a word with you again!}
+{11160}{Splendid it is, to have a word with you again!}
+{11161}{It is to my satisfaction that I consult with you again!}
+{11162}{It is to my satisfaction that I consult with you again!}
+{11163}{Your very good health!}
+{11164}{Your very good health, my friend!}
+{11165}{A cheerful day, it is, seeing you again!}
+{11166}{A cheerful day, it is, seeing you again!}
+{11167}{It is so very fine to be consulting with you again!}
+{11168}{It is so very fine to be consulting with you again!}
+{11169}{What a pleasure to have a word with you once again!}
+{11170}{What a pleasure to have a word with you once again!}
+{11171}{It is indeed delightful to confer with you again!}
+{11172}{It is indeed delightful to confer with you again!}
+{11173}{It is wonderful to have a word with you again!}
+{11174}{It is wonderful to have a word with you again!}
+{11175}{How very pleasing and proper it is to confer with you again!}
+{11176}{How very pleasing and proper it is to confer with you again!}
+{11177}{It is such a blessing to have a word with you again!}
+{11178}{It is such a blessing to have a word with you again!}
+{11179}{It is so very pleasant to consult with you again!}
+{11180}{It is so very pleasant to consult with you again!}
+{11181}{It is ever so charming to consult with you again!}
+{11182}{It is ever so charming to consult with you again!}
+{11183}{I am honored to renew our acquaintance!}
+{11184}{I am honored to renew our acquaintance!}
+{11185}{Meeting you again gives me great satisfaction!}
+{11186}{Meeting you again gives me great satisfaction!}
+{11187}{I am ever so fortunate to confer with you again!}
+{11188}{I am ever so fortunate to confer with you again!}
+{11189}{Welcome back, associate! What can I do for you?}
+
+// shopkeeper
+{11200}{My friend, you have returned!}
+{11201}{Delighted to see you again!}
+{11202}{Delighted to see you again!}
+{11203}{Very excellent, indeed, for you to visit me again!}
+{11204}{Very excellent, indeed, for you to visit me again!}
+{11205}{Ah! Superlative to see you again!}
+{11206}{Ah! Superlative to see you again!}
+{11207}{Wonderful, to have the pleasure of your company again!}
+{11208}{Wonderful, to have the pleasure of your company again!}
+{11209}{Splendid, to have you visit once again!}
+{11210}{Splendid, to have you visit once again!}
+{11211}{It is to my satisfaction that you visit me again!}
+{11212}{It is to my satisfaction that you visit me again!}
+{11213}{Your very good health!}
+{11214}{Your very good health!}
+{11215}{A cheerful day, it is, seeing you again!}
+{11216}{A cheerful day, it is, seeing you again!}
+{11217}{It is so very fine for me that you should visit again!}
+{11218}{It is so very fine for me that you should visit again!}
+{11219}{What an exquisite pleasure to have you visit again!}
+{11220}{What an exquisite pleasure to have you visit again!}
+{11221}{It is indeed a delight to see you again!}
+{11222}{It is indeed a delight to see you again!}
+{11223}{It is absolutely wonderful to see you again!}
+{11224}{It is wonderful to see you again!}
+{11225}{How very pleasing to have you visit again!}
+{11226}{How very pleasing to have you visit again!}
+{11227}{It is such a blessing to have you visit again!}
+{11228}{It is such a blessing to have you visit again!}
+{11229}{It is so very pleasant to have you visit again!}
+{11230}{It is so very pleasant to have you visit again!}
+{11231}{It is ever so charming to have you visit again!}
+{11232}{It is ever so charming to have you visit again!}
+{11233}{I am honored to renew our acquaintance!}
+{11234}{I am honored to renew our acquaintance!}
+{11235}{It has given me great satisfaction to have you visit again!}
+{11236}{It has given me great satisfaction to have you visit again!}
+{11237}{I am ever so fortunate to see you again!}
+{11238}{I am ever so fortunate to see you again!}
+{11239}{Sir, you have returned!}
+{11240}{Sir, you have returned!}
+
+// guard
+{11250}{Greetings. I trust you are well.}
+{11251}{Delighted to encounter you again!}
+{11252}{Delighted to encounter you again, friend!}
+{11253}{Very excellent to encounter you again, it is indeed!}
+{11254}{Very excellent to encounter you again, it is indeed, friend!}
+{11255}{Aye! Superlative to encounter you again!}
+{11256}{Aye! Superlative to encounter you again, friend!}
+{11257}{Wonderful to encounter you again!}
+{11258}{Wonderful to encounter you again, friend!}
+{11259}{Splendid to encounter you again!}
+{11260}{Splendid to encounter you again, friend!}
+{11261}{It is my satisfaction that we happen upon each other again!}
+{11262}{It is my satisfaction that we happen upon each other again, friend!}
+{11263}{Your very good health!}
+{11264}{Your very good health!}
+{11265}{A cheerful day, it is, meeting you again!}
+{11266}{A cheerful day, it is, meeting you again, friend!}
+{11267}{It is very good to chance upon you again!}
+{11268}{It is very good to chance upon you again, friend!}
+{11269}{What a pleasure to encounter you once again!}
+{11270}{What a pleasure to encounter you once again, friend!}
+{11271}{It is a delight to encounter you again!}
+{11272}{It is a delight to encounter you again, friend!}
+{11273}{Wonderful to bump into you again!}
+{11274}{Wonderful to bump into you again, friend!}
+{11275}{Sir! How are you?}
+{11276}{Friend! How are you?}
+{11277}{It is a blessing to encounter you again!}
+{11278}{It is a blessing to encounter you again, friend!}
+{11279}{Hallo again, friend!}
+{11280}{Hallo again, old friend!}
+{11281}{Great to chance upon you again!}
+{11282}{Great to chance upon you again, friend!}
+{11283}{I am honored once again!}
+{11284}{I am honored once again, friend!}
+{11285}{Meeting you again is just great!}
+{11286}{Meeting you again is just great, friend!}
+{11287}{Great to see you again!}
+{11288}{Great to see you again!}
+{11289}{Greetings friend. I trust you are well.}
+{11290}{Hello and welcome back!}
+{11291}{Hello and welcome back!}
+{11292}{It's good to see you again!}
+{11293}{It's good to see you again, friend!}
+
+// city_dweller
+{11300}{Hello again!}
+{11301}{Delighted to bump into you again!}
+{11302}{Delighted to bump into you again sir!}
+{11303}{Very excellent to bump into you again!}
+{11304}{Very excellent to bump into you again!}
+{11305}{Superlative to see you again!}
+{11306}{Superlative to see you again!}
+{11307}{Wonderful to have the pleasure of your company again!}
+{11308}{Wonderful to have the pleasure of your company again!}
+{11309}{Splendid to see you again!}
+{11310}{Splendid to see you again!}
+{11311}{It is my intense satisfaction that we meet again!}
+{11312}{It is my intense satisfaction that we meet again, noble sir!}
+{11313}{Your very good health!}
+{11314}{Your very good health!}
+{11315}{A cheerful day!}
+{11316}{A cheerful day!}
+{11317}{It is so fine to be meeting you again!}
+{11318}{It is so fine to be meeting you again!}
+{11319}{What an exquisite pleasure to be seeing you again!}
+{11320}{What an exquisite pleasure to be seeing you again!}
+{11321}{It is a delight to see you again!}
+{11322}{It is a delight to see you again!}
+{11323}{It is wonderful to see you again!}
+{11324}{It is wonderful to see you again!}
+{11325}{How very proper it is to see you again!}
+{11326}{How very proper it is to see you again!}
+{11327}{It is a blessing to meeet you again!}
+{11328}{It is a blessing to bump into you again sir!}
+{11329}{It is so pleasant to bump into you again!}
+{11330}{It is so pleasant to bump into you again sir!}
+{11331}{It is so charming to bump into you again!}
+{11332}{It is so charming to bump into you again!}
+{11333}{I am rightfully honored to renew our acquaintance!}
+{11334}{I am rightfully honored to renew our acquaintance!}
+{11335}{Meeting you again gives me great satisfaction!}
+{11336}{Meeting you again gives me great satisfaction!}
+{11337}{I am so fortunate to bump into you again!}
+{11338}{I am so fortunate to bump into you again!}
+{11339}{Hello again!}
+
+// villager
+{11350}{Greetings. What is it you need?}
+{11351}{Delighted to meet you again!}
+{11352}{Delighted to meet you again!}
+{11353}{Very excellent to find you again!}
+{11354}{Very excellent to find you again!}
+{11355}{Aye! Great to see you again!}
+{11356}{Aye! Great to see you again sir!}
+{11357}{Wonderful to have the pleasure of your company again!}
+{11358}{Wonderful to have the pleasure of your company again!}
+{11359}{Splendid to see you once again!}
+{11360}{Splendid to see you once again!}
+{11361}{It is my satisfaction that we meet again!}
+{11362}{It is my satisfaction that we meet again!}
+{11363}{Your very good health!}
+{11364}{Your very good health! Good to see you again.}
+{11365}{A cheerful day, seeing you again!}
+{11366}{A cheerful day, seeing you again!}
+{11367}{It is very fine to be seeing you again!}
+{11368}{It is very fine to be seeing you again!}
+{11369}{What a pleasure to see you once again!}
+{11370}{What a pleasure to see you once again!}
+{11371}{It is a delight to see you again!}
+{11372}{It is a delight to see you again!}
+{11373}{It is wonderful to see you again!}
+{11374}{It is wonderful to see you again!}
+{11375}{How pleasing it is to see you again!}
+{11376}{How pleasing it is to see you again!}
+{11377}{It is a blessing to see you again!}
+{11378}{It is a blessing to see you again!}
+{11379}{It is very pleasant to see you again!}
+{11380}{It is very pleasant to see you again!}
+{11381}{It is so charming to see you again!}
+{11382}{It is so charming to see you again!}
+{11383}{I am deeply honored to renew our acquaintance!}
+{11384}{I am deeply honored to renew our acquaintance!}
+{11385}{Seeing you again has given me great satisfaction!}
+{11386}{Seeing you again has given me great satisfaction!}
+{11387}{I am fortunate to see you again!}
+{11388}{I am fortunate to see you again!}
+{11389}{Greetings. I trust you are well.}
+{11390}{Greetings. What can I do for you?}
+{11391}{It is good to see you again!}
+{11392}{Welcome back!}
+{11393}{It is good to see you again!}
+{11394}{Welcome back!}
+
+// beggar
+{11400}{Oh, I am graced by your presence again!}
+{11401}{I am delighted to find you again!}
+{11402}{I am delighted to find you again!}
+{11403}{It is very wonderful to find you again!}
+{11404}{It is very wonderful to find you again!}
+{11405}{It is great to see <cough> you again!}
+{11406}{It is great to see you again!}
+{11407}{Wonderful, to have the pleasure of your company again!}
+{11408}{Wonderful, to have the pleasure of your company again!}
+{11409}{Wonderful to find you once again!}
+{11410}{Wonderful to find you once again!}
+{11411}{It is my great satisfaction that we find each other again!}
+{11412}{It is my great satisfaction that we find each other again!}
+{11413}{Your very good <cough> health!}
+{11414}{Your very good health!}
+{11415}{A cheerful day, it is, seeing you again!}
+{11416}{A cheerful day, it is, seeing you again!}
+{11417}{It is very fine to find you again!}
+{11418}{It is very fine to find you again!}
+{11419}{What a pleasure to <cough> find you again!}
+{11420}{What a pleasure to find you again!}
+{11421}{It is a delight to see you again!}
+{11422}{It is a delight to see you again!}
+{11423}{It is wonderful to see you again!}
+{11424}{It is wonderful to see you again!}
+{11425}{How pleasing it is to see you again!}
+{11426}{How pleasing it is to see you again!}
+{11427}{It is a great blessing to find you again!}
+{11428}{It is a great blessing to find you again!}
+{11429}{It is wonderful to see you again!}
+{11430}{It is wonderful to see you again!}
+{11431}{It is <cough> great to see you again!}
+{11432}{It is great to see you again!}
+{11433}{I am greatly honored to renew our acquaintance!}
+{11434}{I am greatly honored to renew our acquaintance!}
+{11435}{It is my great satisfaction to see you again!}
+{11436}{It is my great satisfaction to see you again!}
+{11437}{I am so fortunate to see you again!}
+{11438}{I am so fortunate to see you again!}
+{11439}{Oh sir, I am graced by your presence again!}
+
+// thief
+{11450}{Hello. How have you been?}
+{11451}{Delighted to discover you again!}
+{11452}{Delighted to discover you again, my friend!}
+{11453}{Very excellent it is, indeed, to meet you again!}
+{11454}{Very excellent it is, indeed, to meet you again, my friend!}
+{11455}{Ah! Superlative to see you again!}
+{11456}{Ah! Superlative to see you again, my friend!}
+{11457}{Wonderful it is, to have the pleasure of your company again!}
+{11458}{Wonderful it is, my friend, to have the pleasure of your company again!}
+{11459}{Splendid it is, to greet you once again!}
+{11460}{Splendid it is, to greet you once again, my friend!}
+{11461}{It is to my intense satisfaction that we meet again!}
+{11462}{It is to my intense satisfaction that we meet again, my friend!}
+{11463}{Your very good health!}
+{11464}{Your very good health, my friend!}
+{11465}{A cheerful day, it is, seeing you again!}
+{11466}{A cheerful day, it is, seeing you again, my friend!}
+{11467}{It is so very fine to be discovering you again!}
+{11468}{It is so very fine to be discovering you again, my friend!}
+{11469}{What an exquisite pleasure to be greeting you once again!}
+{11470}{What an exquisite pleasure to be greeting you once again, my friend!}
+{11471}{It is indeed a delight to see you again!}
+{11472}{It is indeed a delight to see you again, my friend!}
+{11473}{It is absolutely wonderful to see you again!}
+{11474}{It is wonderful to see you again, my friend!}
+{11475}{How very pleasing and proper it is to see you again!}
+{11476}{How very pleasing and proper it is to see you again, my friend!}
+{11477}{It is such a blessing to greet you again!}
+{11478}{It is such a blessing to greet you again, my friend!}
+{11479}{It is so very pleasant to discover you again!}
+{11480}{It is so very pleasant to discover you again, my friend!}
+{11481}{It is ever so charming to discover you again!}
+{11482}{It is ever so charming to discover you again, my  friend!}
+{11483}{I am honored to renew our acquaintance!}
+{11484}{I am honored to renew our acquaintance, my friend!}
+{11485}{Meeting you again has given me great satisfaction!}
+{11486}{Meeting you again has given me great satisfaction, my friend!}
+{11487}{I am ever so fortunate to see you again!}
+{11488}{I am ever so fortunate to see you again, my friend!}
+{11489}{Greetings, my friend. I trust you are well.}
+{11490}{Hello sir. How have you been?}
+
+// bandit
+{11500}{With warm heart and open hand, I greet my friend!}
+{11501}{Delighted to run into you again!}
+{11502}{Delighted to run into you again!}
+{11503}{Excellent to run into you again!}
+{11504}{Excellent to run into you again!}
+{11505}{Ah! Superlative!!}
+{11506}{Ah! Superlative! How are you, friend?}
+{11507}{Wonderful!}
+{11508}{Wonderful to see you again!}
+{11509}{Splendid!}
+{11510}{Splendid! Are you well?}
+{11511}{It is my satisfaction to run into you again!}
+{11512}{It is my satisfaction to run into you again!}
+{11513}{Your very good health!}
+{11514}{Your very good health!}
+{11515}{A cheerful day!}
+{11516}{A cheerful day! Are you enjoying it, my friend?}
+{11517}{It is fine to run into you again!}
+{11518}{It is fine to run into you again!}
+{11519}{A pleasure to greet you again!}
+{11520}{A pleasure to greet you again!}
+{11521}{A delight to see you again!}
+{11522}{A delight to see you again!}
+{11523}{Wonderful to see you again!}
+{11524}{Wonderful to see you again!}
+{11525}{Great to see you again!}
+{11526}{Great to see you again!}
+{11527}{A blessing to greet you again!}
+{11528}{A blessing to greet you again!}
+{11529}{It is my pleasure!}
+{11530}{It is my pleasure!}
+{11531}{It is great to run into you again!}
+{11532}{It is great to run into you again!}
+{11533}{It is great to renew our acquaintance!}
+{11534}{It is great to renew our acquaintance!}
+{11535}{Bumping into you always gives me great satisfaction!}
+{11536}{Bumping into you always gives me great satisfaction!}
+{11537}{I am fortunate to see you again!}
+{11538}{I am fortunate to see you again!}
+{11539}{With warm heart and open hand, I greet my old friend!}
+
+
+// Second good greeting messages start at 12000. Each class gets 50
+// messages starting on multiples of 50
+
+// noble
+{12000}{Hello again. How are you doing?}
+{12001}{Hello again. I hope you are well?}
+{12002}{It is a nice day, is it not.}
+{12003}{It is a nice day, is it not.}
+{12004}{It is always an honour.}
+{12005}{It is always an honour.}
+{12006}{Yes. Welcome. How do you do?}
+{12007}{Yes. Welcome. How do you do?}
+{12008}{It is good to see you again.}
+{12009}{It is good to see you again.}
+{12010}{It is a pleasure once again.}
+{12011}{It is a pleasure once again.}
+{12012}{Hello. How are you today?}
+{12013}{Hello. How are you today?}
+{12014}{Greetings.}
+{12015}{Greetings.}
+{12016}{It is nice to see you again.}
+{12017}{Sir! It is nice to see you again.}
+{12018}{It is a pleasure to see you again.}
+{12019}{It is a pleasure to see you again.}
+{12020}{It is always a pleasure, I am sure! }
+{12021}{It is always a pleasure, I am sure! }
+{12022}{Greetings! A pleasure to see you again.}
+{12023}{Greetings! A pleasure to see you again.}
+{12024}{It is nice to meet you again.}
+{12025}{It is nice to meet you again.}
+{12026}{I am happy to make your acquaintance again.}
+{12027}{I am happy to make your acquaintance again.}
+{12028}{How do you do?}
+{12029}{How do you do?}
+{12030}{Charming.}
+{12031}{Charming.}
+
+// priest
+{12050}{Welcome.}
+{12051}{Welcome.}
+{12052}{Hello! Always a pleasure.}
+{12053}{Hello! Always a pleasure.}
+{12054}{Blessings brother.}
+{12055}{Blessings.}
+{12056}{A good day it is, don't you think so?}
+{12057}{A good day it is, don't you think so?}
+{12058}{Blessings. It is nice to meet you again.}
+{12059}{Blessings. It is nice to meet you again.}
+{12060}{Welcome, what can I do for you?}
+{12061}{Welcome, what can I do for you?}
+{12062}{Hello, son.}
+{12063}{Hello, my brother.}
+{12064}{Always an honour.}
+{12065}{Always an honour.}
+{12066}{How do you do today?}
+{12067}{How do you do?}
+{12068}{Hello my brother. How are you today?}
+{12069}{Hello. How are you today?}
+{12070}{Always well met, my brother.}
+{12071}{Always well met, son.}
+{12072}{Greetings, my brother.}
+{12073}{Greetings, son.}
+
+// wizard
+{12100}{Hello.}
+{12101}{Salutations! How are you today?}
+{12102}{It is always an honour.}
+{12103}{it is nice to make your acquaintance again.}
+{12104}{I am pleased to see you again.}
+{12105}{I greet you once again!}
+{12106}{We met before! I am honoured.}
+{12107}{Once again, I bid you welcome.}
+{12108}{Ah, yes! Glad to see you again.}
+{12109}{Hello. How are you?}
+{12110}{I am always at your service.}
+{12111}{Hello there.}
+{12112}{Hello, what can I do for you?}
+{12113}{Hello, my friend.}
+{12114}{Always an honour.}
+{12115}{Always an honour.}
+{12116}{How do you do, my friend?}
+{12117}{How do you do?}
+{12118}{Hello my friend. How are you today?}
+{12119}{Hello. How are you today?}
+{12120}{Always well met, my friend.}
+{12121}{Always well met.}
+{12122}{Greetings, my friend.}
+{12123}{Greetings.}
+
+// technologist
+{12150}{Greetings.}
+{12151}{It is a nice day. What can I do for you?}
+{12152}{I am pleased to meet you again.}
+{12153}{It is good to meet you again.}
+{12154}{A pleasure once again, I'm sure.}
+{12155}{Welcome! What can I do for you?}
+{12156}{I am happy to see you again.}
+{12157}{How do you do?}
+{12158}{A pleasure to make your acquaintance again.}
+{12159}{Hello. How nice to see you.}
+{12160}{I remember you. How do you do?}
+{12161}{I remember you. To what do I owe this honour?}
+{12162}{Hello. What can I do for you?}
+{12163}{Hello, my friend.}
+{12164}{Always an honour.}
+{12165}{Always an honour.}
+{12166}{How do you do, my friend?}
+{12167}{How do you do?}
+{12168}{Hello my friend. How are you today?}
+{12169}{Hello. How are you today?}
+{12170}{Always a pleasure, my friend.}
+{12171}{Always a pleasure.}
+{12172}{Greetings, my friend.}
+{12173}{Greetings.}
+
+// shopkeeper
+{12200}{What can I do for you?}
+{12201}{Glad to see you again.}
+{12202}{A pleasure to see you here again.}
+{12203}{Good day! It is a pleasure.}
+{12204}{Well, what brings you here? I hope all is well?}
+{12205}{It is good to see you here again.}
+{12206}{I am glad you came back!}
+{12207}{Is there any way I can help you?}
+{12208}{I am at your disposal.}
+{12209}{How may I be of help?}
+{12210}{It is good to make your acquaintance again.}
+{12211}{I am pleased to make your acquaintance again.}
+{12212}{Hello. Only the best for you!}
+{12213}{I am your servant. What is it that you need?}
+{12214}{Hello. See anything you like?}
+{12215}{Hello, my friend.}
+{12216}{Always right good to see you.}
+{12217}{Always right good to see you.}
+{12218}{How do you do, my friend?}
+{12219}{How do you do?}
+{12220}{Hello my friend. How are you today?}
+{12221}{Hello. How are you today?}
+{12222}{Always a pleasure, my friend.}
+{12223}{Always a pleasure.}
+{12224}{How are you today, my friend?}
+{12225}{How are you today?}
+
+// guard
+{12250}{Can I help you?}
+{12251}{Do you need help?}
+{12252}{I remember you. May I be of assistance?}
+{12253}{Hello. It is nice to meet you again.}
+{12254}{I am pleased to see you again.}
+{12255}{It is a pleasure to meet you again.}
+{12256}{At your service.}
+{12257}{Is there a need for me?}
+{12258}{What service do you need?}
+{12259}{In your service.}
+{12260}{I am at your command.}
+{12261}{Always an honour.}
+{12262}{A fine day it is.}
+{12263}{It is a good day.}
+{12264}{Hello. How do you do?}
+{12265}{Hello.}
+{12266}{Well met.}
+{12267}{May I help you?}
+{12268}{Yes? Is there a problem?}
+{12269}{Hello. Can I do anything for you?}
+{12270}{Hello.}
+{12271}{Is there some way I can be of assistance?}
+{12272}{Hello. I hope you are doing well?}
+{12273}{What is it that you need now?}
+{12274}{Hello. Anything I can help you with?}
+{12275}{Hello, my friend.}
+{12276}{Always right good to see you.}
+{12277}{Always right good to see you.}
+{12278}{How do you do, my friend?}
+{12279}{How do you do?}
+{12280}{Hello my friend. How are you today?}
+{12281}{Hello. How are you today?}
+{12282}{Always a right good pleasure, my friend.}
+{12283}{Always a right good pleasure.}
+{12284}{How are you today, my friend?}
+{12285}{How are you today?}
+{12286}{I am pleased to make your acquaintance again.}
+
+
+// city_dweller
+{12300}{Hello again.}
+{12301}{Good day it is a pleasure.}
+{12302}{How do you do?}
+{12303}{Another frightful day, I fear. How are you?}
+{12304}{What can I do for you?}
+{12305}{Hello! A pleasure to see you again.}
+{12306}{How are you this day?}
+{12307}{A pleasure it is.}
+{12308}{An honour to see you again.}
+{12309}{A pleasure it is to see you again.}
+{12310}{It is always my pleasure.}
+{12311}{How do you do?}
+{12312}{Hello, the pleasure is mine.}
+{12313}{it is nice to make your acquaintance again.}
+{12314}{I am pleased to see you again.}
+{12315}{We met before! I remember you.}
+{12316}{Ah, yes! Glad to see you again.}
+{12317}{Hello. Remember me?}
+{12318}{I am always at your service}
+{12319}{Hello there.}
+{12320}{Hello, what can I do for you?}
+{12321}{Hello, friend.}
+{12322}{Always an honour.}
+{12323}{Always an honour.}
+{12324}{How do you do, my friend?}
+{12325}{How do you do?}
+{12326}{Hello my friend. How are you today?}
+{12327}{Hello. How are you today?}
+
+// villager
+{12350}{We meet again.}
+{12351}{Hello.}
+{12352}{Welcome back.}
+{12353}{Sir! Nice to see you again.}
+{12354}{To be sure, it is nice to see you again.}
+{12355}{Greetings! Always happy to be in your company.}
+{12356}{Do you need something?}
+{12357}{What can I do for you?}
+{12358}{A pleasure it is.}
+{12359}{It is a nice day.}
+{12360}{To what do we owe the pleasure?}
+{12361}{Aye! A good day to you.}
+{12362}{A fine day to you.}
+{12363}{You are welcome here.}
+{12364}{Good day to you.}
+{12365}{It is an honour.}
+{12366}{It is nice to see you again.}
+{12367}{I am happy to see you again.}
+{12368}{You are always welcome here.}
+{12369}{Greetings.}
+{12370}{How do you do?}
+{12371}{Hello there.}
+
+// beggar
+{12400}{I am happy to see you again.}
+{12401}{I beg your pardon.}
+{12402}{Thank you for noticin' this ol' beggar again.}
+{12403}{What can I do for you?}
+{12404}{I did not mean to get <cough> in your way.}
+{12405}{A right noble man you are.}
+{12406}{What can I do for you?}
+{12407}{Please. What can I do for you?}
+{12408}{Aye, it be a good day.}
+{12409}{Can I do anything for you?}
+{12410}{To be sure, it is a nice day!}
+{12411}{Mister, please <cough> excuse my appearance.}
+{12412}{Hello, kind. It pleases me that you speak with me.}
+
+// thief
+{12450}{Hello.}
+{12451}{Good to meet you again!}
+{12452}{Greetings! It is nice to see you again.}
+{12453}{To what do I owe the pleasure.}
+{12454}{Good day to you, I hope I can be of some service?}
+{12455}{It is nice that you came back to see your old friend.}
+{12456}{A fine day it is!}
+{12457}{Is there something you need?}
+{12458}{A right fine day it is.}
+{12459}{A pleasure to see you.}
+{12460}{Good to see you again! Remember me?}
+{12461}{It is again an honour.}
+{12462}{Hello. What would you like?}
+{12463}{It is good to make your acquaintance again.}
+{12464}{I am pleased to see you again.}
+{12465}{We met before. I remember you.}
+{12466}{Ah, yes. Glad to see you again.}
+{12467}{Hello. Do you remember me?}
+{12468}{I am always at your service}
+{12469}{Hello. How are you?}
+{12470}{Hello, what can I do for you?}
+{12471}{Hello, friend. Business? Or pleasure?}
+{12472}{Always at your service.}
+{12473}{Always at your service.}
+{12474}{How do you do, my friend?}
+{12475}{How do you do?}
+{12476}{Hello my friend. How are you today?}
+{12477}{Hello. How are you today?}
+
+// bandit
+{12500}{Well met.}
+{12501}{It is good to see ya!}
+{12502}{Aye! It is a good day.}
+{12503}{I am glad to see ya.}
+{12504}{Glad you are here!}
+{12505}{Aye! Welcome.}
+{12506}{You are welcome here, brother.}
+{12507}{How are you?}
+{12508}{The day be looking up, I think.}
+{12509}{What brings you here?}
+{12510}{I certainly like the look of you!}
+{12511}{How are you?}
+{12512}{Can I help you.?}
+{12513}{Good to see you again.}
+{12514}{We met before. I remember you.}
+{12515}{Ah, yes. Good to see you again.}
+{12516}{Hello. Do you remember me?}
+{12517}{At your service, I am}
+{12518}{Hello. Good day today, 'ay?}
+{12519}{Aye, what do you need?}
+{12520}{Ho, friend. Business or pleasure, is it?}
+{12521}{Always your man.}
+{12522}{How are you, my friend?}
+{12523}{How are you?}
+{12524}{Hello friend. How are you today?}
+{12525}{Hello. How are you today?}
+
+
+
+// Second neutral greeting messages start at 13000. Each class gets 50
+// messages starting on multiples of 50
+
+// noble
+{13000}{Hello.}
+{13001}{Yes?}
+{13002}{Yes, what is it?}
+{13003}{My pleasure.}
+{13004}{Welcome.}
+{13005}{How do you do?}
+{13006}{It is nice to see you.}
+{13007}{It is a pleasure.}
+{13008}{To what do we owe this visit?}
+{13009}{Hello.}
+{13010}{Greetings.}
+{13011}{How do you do?}
+{13012}{Yes?}
+{13013}{Yes? How do you do?}
+
+
+// priest
+{13050}{Please state the reason for your return, my son.}
+{13051}{Hello.}
+{13052}{How do you do?}
+{13053}{Yes? What is it?}
+{13054}{Hmm, yes. You are, yes?}
+{13055}{Bless you.}
+{13056}{A good day it is.}
+{13057}{Blessings.}
+{13058}{Greetings.}
+{13059}{Is there something you need?}
+{13060}{Yes?}
+{13061}{How do you do, child?}
+
+
+// wizard
+{13100}{Yes?}
+{13101}{How do you do?}
+{13102}{Good day.}
+{13103}{Welcome.}
+{13104}{Hello.}
+{13105}{Yes. What is it?}
+{13106}{What is it?}
+{13107}{What do you want?}
+{13108}{Hmm. How do you do?}
+
+
+
+// technologist
+{13150}{Yes?}
+{13151}{Yes, yes. Why have you come back?}
+{13152}{A nice day.}
+{13153}{How do you do?}
+{13154}{Yes, what is it?}
+{13155}{Hello.}
+{13156}{It is nice to see you.}
+{13157}{Oh yes, we met before. I remember you.}
+{13158}{Yes? How do you do?}
+{13159}{Yes? How do you do?}
+{13160}{Hello. What is it I can do for you?}
+{13161}{Yes, what do you need?}
+{13162}{What? Oh, yes. How do you do?}
+
+// shopkeeper
+{13200}{Back to inspect my goods?}
+{13201}{Can I help you?}
+{13202}{Good day.}
+{13203}{Good day. What can I do for you?}
+{13204}{What brings you back?}
+{13205}{See something you missed before?}
+{13206}{Come for another bargain?}
+{13207}{Is there any way I can help you?}
+{13208}{I am at your disposal.}
+{13209}{How may I be of help?}
+{13210}{Did you forget something last time?}
+{13211}{Hello.}
+{13212}{What is it that you need?}
+{13213}{Hello. See anything you like?}
+{13214}{Care to buy something?}
+{13215}{Yes? What can I do for you today?}
+{13216}{How do you do today?}
+{13217}{See anything you like?}
+{13218}{What can I do for you today?}
+
+// guard
+{13250}{Move along.}
+{13251}{Please continue about your business.}
+{13252}{Greetings.}
+{13253}{Hello. What is it?}
+{13254}{Yes?}
+{13255}{Is there a need for me?}
+{13256}{I am on patrol. Please be quick about it.}
+{13257}{Yes, What?}
+{13258}{Hello.}
+{13259}{How do you do?}
+{13260}{How are you?}
+{13261}{Hello. Can I be of service?}
+{13262}{Hello.}
+{13263}{What is it?}
+{13264}{Please continue about your business.}
+{13265}{Move along please.}
+
+
+
+// city_dweller
+{13300}{Hello.}
+{13301}{Hello.}
+{13302}{Yes?}
+{13303}{Hello. It is nice to see you.}
+{13304}{Yes?}
+{13305}{What is it?}
+{13306}{What?}
+{13307}{You wish to speak with me?}
+{13308}{What do you need?}
+{13309}{What brings you about?}
+{13310}{How do you do?}
+{13311}{Nice to see you again.}
+{13312}{Hello again.}
+{13313}{Yes, what is it?}
+{13314}{Something I can do for you?}
+
+// villager
+{13350}{Hello.}
+{13351}{Oh, it is you again.}
+{13352}{Greetings.}
+{13353}{Sir, what brings you back here?}
+{13354}{To be sure, it is nice to see you again.}
+{13355}{Yes, what is it?}
+{13356}{Do you need something?}
+{13357}{What can I do for you?}
+{13358}{Yes? What?}
+{13359}{Nice to see you again sir.}
+{13360}{Greetings.}
+{13361}{Yes?}
+{13362}{Hello again.}
+{13363}{Sir? Can I be of service again?}
+{13364}{Yes, what is it?}
+{13365}{Aye?}
+{13366}{Hello again.}
+{13367}{Yes?}
+{13368}{Yes, what?}
+
+
+// beggar
+{13400}{Welcome back.}
+{13401}{I beg your <cough> pardon.}
+{13402}{Thank you for noticing this old beggar again.}
+{13403}{What can I do for you?}
+{13404}{I did not mean to get in your way.}
+{13405}{A right good man you are.}
+{13406}{What can I <cough> do for you?}
+{13407}{Can I do anything for you?}
+{13408}{Please excuse my appearance.}
+{13409}{<cough> What is it?}
+{13410}{What do you <cough> want from me?}
+{13411}{What can this poor beggar do for you?}
+{13412}{Good health to you, <cough>.}
+{13413}{What brings you here?}
+
+// thief
+{13450}{Yes?}
+{13451}{Greetings.}
+{13452}{Good day to you. How can I be of service?}
+{13453}{Ah yes, it is you again.}
+{13454}{Yes, I remember you. Is there something you need?}
+{13455}{Yes? Be quick now.}
+{13456}{Hello. What is it now?}
+{13457}{What is it now?}
+{13458}{What do you need from me?}
+{13459}{Good health, and all that.}
+{13460}{What brings you about again?}
+
+// bandit
+{13500}{What is it?}
+{13501}{What do you want?}
+{13502}{Aye?}
+{13503}{Yes?}
+{13504}{What is it you want this time?}
+{13505}{Why have you come to me again, brother?}
+{13506}{What is it this time?}
+{13507}{Be quick about it.}
+{13508}{Why are you back?}
+{13509}{I still don't know if I like the look of you or not.}
+{13510}{Yes? Are you looking for me?}
+{13511}{What is it now?}
+{13512}{What is it now?}
+{13513}{What now?}
+{13514}{What brings you back?}
+
+
+// Offer healing messages start at 14000. Each class gets 50
+// messages starting on multiples of 50
+
+// noble
+{14000}{What type of healing would you be seeking?}
+{14001}{What sort of healing do you need?}
+{14002}{What type of healing?}
+
+// priest
+{14050}{What type of healing would you be seeking?}
+{14051}{What sort of healing do you need?}
+{14052}{What type of healing?}
+
+// wizard
+{14100}{What type of healing would you be seeking?}
+{14101}{What sort of healing do you need?}
+{14102}{What type of healing?}
+
+// technologist
+{14150}{What type of healing would you be seeking?}
+{14151}{What sort of healing do you need?}
+{14152}{What type of healing?}
+
+// shopkeeper
+{14200}{What type of healing are you seeking?}
+{14201}{What sort of healing do you need?}
+{14202}{What type of healing?}
+
+// guard
+{14250}{What type of healing would you be seeking, citizen?}
+{14251}{What sort of healing do you need?}
+{14252}{What type of healing?}
+
+// city_dweller
+{14300}{What type of healing would you be seeking?}
+{14301}{What sort of healing do you need?}
+{14302}{What type of healing?}
+
+// villager
+{14350}{What type of healing would you be seeking?}
+{14351}{What sort of healing do you need?}
+{14352}{What type of healing?}
+
+// beggar
+{14400}{Healing? What kind?}
+{14401}{What sort of healing?}
+{14402}{What type of healing are you looking for?}
+
+// thief
+{14450}{Healing? What kind?}
+{14451}{What sort of healing?}
+{14452}{What type of healing are you looking for?}
+
+// bandit
+{14500}{Healing? What kind?}
+{14501}{What sort of healing?}
+{14502}{What type of healing are you looking for?}
+
+
+// Finished messages start at 15000. Each class gets 50
+// messages starting on multiples of 50
+
+// noble
+{15000}{I am finished.}
+{15001}{It is completed.}
+{15002}{It is done.}
+{15003}{Delighted to be of service.}
+{15004}{All finished.}
+{15005}{Exactly so, indeed, it is done.}
+
+
+// priest
+{15050}{It is completed.}
+{15051}{It is done.}
+{15052}{I am finished.}
+{15053}{My part is done.}
+{15054}{The will of the gods is done.}
+{15055}{All done.}
+{15056}{It is done.}
+{15057}{The task is brought about to its end.}
+{15058}{It has been brought to pass.}
+{15059}{We are finished.}
+{15060}{It is completed.}
+{15061}{It is full done.}
+{15062}{It is ready.}
+{15063}{My part is done.}
+
+
+// wizard
+{15100}{I have performed the task.}
+{15101}{Effectively finished.}
+{15102}{It is finished.}
+{15103}{It is done.}
+{15104}{It is completed.}
+{15105}{It is done, through and through.}
+{15106}{I am finished.}
+
+
+// technologist
+{15150}{It is done.}
+{15151}{I am finished.}
+{15152}{It is successful.}
+{15153}{All done.}
+{15154}{It is done.}
+{15155}{I have concluded.}
+{15156}{It is final.}
+{15157}{I am finished.}
+{15158}{Nicely done, if I do say so myself.}
+{15159}{I have completed the task.}
+{15160}{I am finished.}
+{15161}{Thoroughly executed and implemented.}
+
+
+// shopkeeper
+{15200}{Our transaction is complete.}
+{15201}{Our transaction is complete.}
+{15202}{I am finished.}
+{15203}{I have completed the task.}
+{15204}{Here we go. All done.}
+{15205}{All done.}
+{15206}{Finished.}
+{15207}{The deal is done.}
+{15208}{The deal is done.}
+{15209}{It is complete.}
+{15210}{It is completed.}
+
+// guard
+{15250}{I am finished.}
+{15251}{Success.}
+{15252}{I am done.}
+{15253}{I have finished.}
+{15254}{I have finished.}
+{15255}{I have finished.}
+{15256}{I have finished.}
+{15257}{I have finished.}
+{15258}{I have executed the task.}
+
+
+// city_dweller
+{15300}{All done.}
+{15301}{I am finished.}
+{15302}{All finished.}
+{15303}{I am finished.}
+{15304}{All finished.}
+{15305}{I am finished.}
+{15306}{All finished.}
+{15307}{I am done.}
+{15308}{I am done.}
+{15309}{Done and finished.}
+{15310}{Done and finished.}
+{15311}{All done, it is.}
+{15312}{All done.}
+{15313}{I am done.}
+{15314}{I am done.}
+{15315}{Done and finished.}
+
+// villager
+{15350}{I am done.}
+{15351}{I am done.}
+{15352}{I am finished.}
+{15353}{It is done.}
+{15354}{It is finished.}
+{15355}{It is finished.}
+{15356}{It is finished.}
+{15357}{It is finished.}
+{15358}{It is completed.}
+{15359}{It is completed.}
+{15360}{It is completed.}
+{15361}{It is completed.}
+{15362}{I am done.}
+{15363}{I am done.}
+{15364}{I am done.}
+{15365}{I am done.}
+{15366}{That chore is done.}
+{15367}{That chore has been completed.}
+
+
+// beggar
+{15400}{I am done.}
+{15401}{I am finished.}
+{15402}{I think I am done.}
+{15403}{Very good. It is done.}
+{15404}{It is finished.}
+{15405}{All is done.}
+{15406}{I am finished.}
+{15407}{I am done.}
+{15408}{All finished for you.}
+{15409}{I have done what I can.}
+{15410}{All that I can do, is done.}
+{15411}{I think I am done.}
+{15412}{That is all I can do.}
+{15413}{It is done.}
+{15414}{Very good.}
+{15415}{It is finished.}
+{15416}{All is done.}
+{15417}{It is at an end.}
+{15418}{I am done.}
+
+
+// thief
+{15450}{I am finished.}
+{15451}{I have finished.}
+{15452}{It is finished.}
+{15453}{I have carried it out.}
+{15454}{It is ended.}
+{15455}{All done.}
+{15456}{Voila! It is done.}
+{15457}{The job is done.}
+{15458}{It is complete.}
+
+
+// bandit
+{15500}{Done.}
+{15501}{I am done.}
+{15502}{It is done.}
+{15503}{I am finished.}
+{15504}{Finished.}
+{15505}{It is finished.}
+{15506}{That is done.}
+{15507}{I am finished.}
+{15508}{I am done.}
+{15509}{I am done with it.}
+
+
+// Greeting a PC in underwear messages start at 16000. Each class gets
+// 50 messages starting on multiples of 50
+
+// noble
+{16000}{Your clothes! Where are your clothes?!}
+{16001}{Please get dressed, sir!}
+{16002}{By the gods! Put some clothes on!}
+{16003}{Your lack of clothes does not befit your station.}
+{16004}{Be so kind as to cover yourself, fool.}
+{16005}{Sir! Your attire is altogether unsatisfactory!}
+{16006}{At least, sir, you could drape a cloak over yourself!}
+{16007}{Really! Only a fool would appear in such a dreadful lack of dress!}
+{16008}{Where are your clothes? This is highly inappropriate!}
+{16009}{Please cover yourself! I do not need to see that!}
+{16010}{Your lack of apparel is an affront to my delicate senses!}
+{16011}{Well! I do not expect the finer regalia from the likes of you . . . but this?}
+{16012}{Oh please! This is a civilized society. We wear respectable raiment here!}
+{16013}{How rude and insolent to appear before me in such discourteous dress!}
+{16014}{Please! Even the lowest fool wears more clothes than you!}
+{16015}{Please do not assault my refined and delicate senses, naked fool!}
+{16016}{Please dress yourself, fool!}
+{16017}{Sir! May I suggest that you and your decadent garb belong on a lonely street corner!}
+{16018}{Lowlife swine! Please dress yourself!}
+{16019}{How dare you flaunt your syphilitic excesses around society!}
+{16020}{Sir!  You are not fit for polite company in that state of undress!}
+{16021}{How rude and insolent to appear before me in such discourteous state of undress!}
+{16022}{How dare you flaunt your syphilitic excesses around someone such as myself!}
+{16023}{Really! You show such presumption in addressing me while you are unclad!}
+
+
+
+
+// priest
+{16050}{My son, hide your sinful nakedness!}
+{16051}{You must put on some clothes forthwith!}
+{16052}{Son, the goddesses may forgive your lack of attire, but the people are another matter entirely.}
+{16053}{My word! Your state of undress is decidedly impious!}
+{16054}{My son! Is it beyond your capacity to attire yourself decently?}
+{16055}{Oh dear! Please trouble yourself to put on proper garments!}
+{16056}{Oh no! This really will not do! Please put on some clothing!}
+{16057}{To walk about undressed speaks outrageously of the fool's life!}
+{16058}{Really! Where are your clothes? This is most amoral! Most sinful!}
+{16059}{Sir! Even the most unprincipled layman wears clothes!}
+{16060}{You offend my pious sensibilities with your state of wicked undress.}
+{16061}{Sir! Your dress! By all that's holy, cover yourself!}
+{16062}{By all that's holy, cover yourself!}
+{16063}{How dare you flaunt your corrupt morals to someone such as myself! Put on some clothes!}
+
+
+// wizard
+{16100}{My word? Now who summoned a naked man?}
+{16101}{Invisibility spell go wrong? Only your clothes disappear?}
+{16102}{Dreadfully poor manners you have to approach me undressed!}
+{16103}{How discourteous! You jolt my concentration with your shocking dress!}
+{16104}{Please attend to your clothing the next time we meet!}
+{16105}{My dear man, your natural endowments are perhaps hardly so great as you imagine! Please don some clothes.}
+{16106}{Are you too poor for clothes?}
+{16107}{By my Blood! How do you stay focused with the chill breeze blowing about your nether regions?}
+{16108}{How droll! You ruined my focus with your nakedness!}
+{16109}{How very odd! Your robe, or lack of it, that is.}
+{16110}{You are an odd man! Walking about with no clothes!}
+{16111}{Your dress! That sort of thing is not proper!}
+{16112}{I cannot at all consent to your state of dress!}
+{16113}{I am truly mystified that you should think such dress is proper!}
+
+// technologist
+{16150}{You know, clothes were invented some time back.}
+{16151}{For the sake of the gods! Put some clothes on!}
+{16152}{Sir! Nobody will take you seriously until you learn to put your clothes on in the morning.}
+{16153}{Aye! Clothes may be an infernal convention, but looking at you and I see why it is a good thing to be wearing them!}
+{16154}{Your state of undress is altogether unsatisfactory.}
+{16155}{Your state of nakedness is rather more than I can endure!}
+{16156}{On the haphazard of selfish viewpoints, I do consider your unclothed state to be an insult to sensible people in general, and myself in particular.}
+{16157}{Sir, your lack of clothes is entirely inappropriate.}
+{16158}{How very odd! Your garb, or lack of it, that is.}
+{16159}{Your lack of dress! That sort of thing is simply not done!}
+
+
+// shopkeeper
+{16200}{I cannot at all consent to your state of dress!}
+{16201}{Oh please, sir! It is not proper to prance about naked!}
+{16202}{Perhaps you will be wanting the name of a good tailor?}
+{16203}{Please! Dress yourself or next time I will be forced to call a guard!}
+{16204}{Upon my word! I would be gratified if you were to cover your nakedness!}
+{16205}{Pray excuse me, but are you aware that, ahem, you wear no garment at all?}
+{16206}{Oh, reprehensible man! You have done my heart no good, sir, with your poor state of dress!}
+{16207}{Oh, mischievous fool! Are you addled? Where is your dress!}
+{16208}{How very odd! Your lack of clothing, that is.}
+{16209}{I am very much astonished at your lack of dress!}
+{16210}{Your dress! That sort of thing is not proper!}
+{16211}{I cannot at all consent to your state of dress!}
+
+
+// guard
+{16250}{I must insist you dress yourself!}
+{16251}{Sir! Attend to your dress at once!}
+{16252}{Sir! I ask you to put on some clothes.}
+{16253}{Sir! If you continue to parade naked I will have to run you in.}
+{16254}{My word! Put on some clothes!}
+{16255}{Now where are your clothes, man?}
+{16256}{Ho there! Marching about with your nethers to the air is certain wenchery!}
+{16257}{Sir, I'll have to ask you to put on some clothes!}
+{16258}{Sir! Clothe yourself, please!}
+{16259}{I must insist you dress yourself!}
+{16260}{I must insist that you not tramp about while dressed so.}
+{16261}{I cannot at all consent to your state of dress in my territory!}
+
+
+// city_dweller
+{16300}{Young man! Please put a dress on!}
+{16301}{If I were you, I would be ashamed to appear in public undressed like that!}
+{16302}{What happened? Have Orcs mugged you and stolen your clothes?}
+{16303}{Oh my! Drape yourself with a cloak, in the least!}
+{16304}{Heavens! Have the good grace to cover yourself!}
+{16305}{Oh my heavens! A naked man!}
+{16306}{Upon my honor! How wretchedly insolent you are in your nakedness!}
+{16307}{Oh! Saints preserve me from your awful nakedness!}
+{16308}{You must certainly be up to no good if you run about unclothed, fool!}
+{16309}{You dishonor me by forcing public discourse while you stand before me naked!}
+{16310}{You are taking too great a liberty by promenading about unclad! Sensualist!}
+{16311}{How primitive! Marching about so with your . . . nethers . . . showing to the world!}
+{16312}{What is this city coming to? Your dress, your garments, your clothing!}
+
+
+// villager
+{16350}{Aye, I am upset that you should think such dress is proper!}
+{16351}{I see much more of you than I would like! Please wear a dress next time.}
+{16352}{Oh! A mite chilly for that state of undress, I would say, dear.}
+{16353}{Are you a wild man from the hills? Where are your clothes?}
+{16354}{My Blood! Do you realize that you are naked, young man?}
+{16355}{Glory be! What is the world coming to when men parade about with no clothes upon their bodies?}
+{16356}{Young man! Does your mum know you are out and about undressed like that?}
+{16357}{We wear clothes around here, sir.}
+{16358}{Are you down on your luck? Where are your clothes?}
+{16359}{Why must you run about undressed so?}
+{16360}{You are ill-dressed for our town.}
+{16361}{Get your clothes on!}
+{16362}{You must be jesting! You are wearing next to nothing!}
+{16363}{Your dress, boy! That sort of thing is not done here!}
+{16364}{To be sure, I cannot at all consent to your state of dress!}
+{16365}{I am upset that you should think such dress is proper!}
+
+// beggar
+{16400}{Poor sir, you appear worse off than me. Do you not have any clothes?}
+{16401}{Oh sir, please! Do not be afflicting your nakedness upon me saintly person!}
+{16402}{Oh my word! Do you know you have no garments?}
+{16403}{Please sir! Even a poor beggar man such as myself has a sense of decency! Your clothes!}
+{16404}{Sir, you must be desperate to wander out-of-doors undressed like that!}
+{16405}{Sir, how desperate you must be to have no clothes!}
+{16406}{Your dress! That sort of thing is not proper here!}
+{16407}{I do not think anyone will consent to your state of dress!}
+{16408}{The worthy citizens will be upset that you should think such dress is proper!}
+
+
+// thief
+{16450}{My word! Did someone steal the dress off your back?}
+{16451}{Sir! Your clothes! You are drawing unwanted attention to us!}
+{16452}{If I were you, sir, I would be looking to nab a few choice items off the nearest laundry line right quick!}
+{16453}{My word! One rarely gets to see such a sight as you, being in the altogether as you are!}
+{16454}{Must you dispense with your clothes?}
+{16455}{Yo-ho! Where are your clothes?}
+{16456}{Your dress, friend! That sort of thing is not the usual state of fare around here!}
+{16457}{The worthy nobles will be in a tizzy that you should think such dress is proper, friend!}
+
+
+// bandit
+{16500}{Oh yes! What a sight you are! Always prance about in the altogether, do you?}
+{16501}{Your mum never taught you how to dress?}
+{16502}{Oh sir, please! Do not make me laugh so, put some clothes on your body!}
+{16503}{Are you crazed in the head that you walk about naked?}
+{16504}{Always walk about starkers, do you?}
+{16505}{Oh no! Do you know you are starkers, sir?}
+{16506}{Are you too drunk to know that you have been stripped?}
+{16507}{Look at you with no dress!}
+
+
+
+// Greeting a PC in barbarian armor messages start at 17000. Each
+// class gets 50 messages starting on multiples of 50
+
+// noble
+{17000}{The barbarians are through the gates again?!}
+{17001}{Please sir! A proper dress is the preferred accoutrements of fine society.}
+{17002}{You really are in desperate want of a decent tailor.}
+{17003}{Hmm. Have you come to sack and pillage? Or are you the, uh, entertainment?}
+{17004}{Good lord! Do you suppose that is proper dress . . . anywhere?}
+{17005}{I can not seem to remember the proper greeting when one meets a barbarian.}
+{17006}{I do not normally associate with barbarians.}
+{17007}{Yes, well. Please be quick about it. I do not want anyone to see me with a barbarian.}
+{17008}{Please, uh, sir, at least wear a very large cloak to hide those, uh, clothes . . .}
+{17009}{Oh! How distasteful! Barbarian rags!!}
+{17010}{Hmm. Perhaps it is not fair to expect foreigners to understand the finer art of dressing oneself.}
+{17011}{I do declare! An authentic Wild Man!}
+{17012}{Please sir, you are not dressed appropriately to have civilized discourse with me.}
+{17013}{Are you lost? You look like the Wildman of the Woods. Really now!}
+{17014}{How fabulous! A circus must be in town!}
+{17015}{Is there a costume ball somewhere close by?}
+{17016}{Oh! Really! Barbarians do not mingle with the finer folk.}
+
+
+// priest
+{17050}{My backward brother, I appeal to your feral nature to wear a proper suit.}
+{17051}{Please, such dress is bound to be provocative to the citizens.}
+{17052}{That attire is not proper for civilized people by any standard.}
+{17053}{My son, have you come to confess your barbaric sins?}
+{17054}{Your clothes mark you to society as an ignorant, sinful man.}
+{17056}{I am sorry, but I am not conversant with the beliefs of the barbaric tribes.}
+{17057}{How dreadful! Have you no clothes but those barbarian rags?}
+{17058}{Please, my son, a dress that covers more of you is the preferred modesty of civilized society.}
+{17059}{By the gods! A barbarian!}
+
+
+
+// wizard
+{17100}{By The Dragon's Claw! A Berserker Chief!}
+{17101}{Hello. Can you understand me? Do you speak a civilized tongue?}
+{17102}{Please, sir, cover yourself!}
+{17103}{I do declare! A tried and true barbarian!}
+{17104}{You have a frightfully odd sense of fashion.}
+{17105}{Sir, your attire does certainly leave nothing to the imagination!}
+{17106}{Ha! Your costume has indeed brightened up the dreariest little day.}
+{17107}{My wild friend, life in this civilized society must be difficult for you.}
+{17108}{Well met, my barbarian friend.}
+{17109}{Greetings, Wild Man of the Wood.}
+{17110}{What service may I do for you, my barbarian friend?}
+{17111}{Well met, Barbarian.}
+{17112}{Well met, my barbarian friend.}
+
+
+
+// technologist
+{17150}{Oh, how primitive!}
+{17151}{What could a barbarian possibly desire from me?}
+{17152}{A barbarian!}
+{17153}{I do declare! A barbarian!}
+{17154}{How dare you accost me in such vulgar dress?}
+{17155}{Sir, your raiment shows a distinct unsteadiness of character.}
+{17156}{What is the world coming to when a barbarian fancies no presumption to address me?}
+{17157}{Those clothes are an affront to sensible, forward-thinking people everywhere.}
+{17158}{Sir, your clothes indicate an unhealthy attachment to that which is primitive and foolish.}
+{17159}{I see nothing suitable in the way you present yourself to me.}
+{17160}{What service may I do for you, my barbarian friend?}
+
+
+// shopkeeper
+{17200}{Very nice loincloth. Have you ever worn a dress?}
+{17201}{Hmm. I always wondered where barbarians carried their, uh, money . . .}
+{17202}{Oh now, that is a new look in, uh, old fashion, I daresay.}
+{17203}{Oh! Is a circus in town? Are you The Wild Man? Or perhaps The Lion Tamer?}
+{17204}{Oh sir! Look at you. One thousand years of fashion down the proverbial drain.}
+{17205}{Mr. barbarian, Please be advised we only accept the legal coin of the realm here.}
+{17206}{Sir! Please put on some appropriate clothing!}
+
+// guard
+{17250}{Watch your step, barbarian.}
+{17251}{Right! A Wild Man! Only on my shift does this happen!}
+{17252}{Hah! A Barbarian!}
+{17253}{What brings you down from the backwoods, wild man?}
+{17254}{What brings you into town, barbarian?}
+{17255}{What do you want here, barbarian?}
+{17256}{This is a peaceful place, barbarian. Watch that it stays that way.}
+{17257}{I hope you are not planning mischief here, barbarian.}
+{17258}{Right! There will not be any pillaging, ransacking or plundering around here, barbarian.}
+{17259}{Keep in mind The Law does not take kindly to barbarian antics nowadays.}
+{17260}{We have laws around here, barbarian. Remember that.}
+{17261}{What brings you into town, Barbarian?}
+{17262}{What do you want here, Barbarian?}
+{17263}{This is a peaceful place, Barbarian. Watch that it stays that way.}
+
+
+// city_dweller
+{17300}{Another barbarian in town? What is this place becoming?}
+{17301}{A Wild Man!}
+{17302}{So what are you? Another bloody, penny novel Barbarian?}
+{17303}{Citizen, I suggest that you change your outfit while in this city.}
+{17304}{How very odd! A wild man!}
+{17305}{So very odd! A wild man!}
+{17306}{Oh my! A throwback!}
+{17307}{Good day . . . oh! Uh. I must just mention, uh, your clothes, sir?}
+{17308}{Have you no dignity, citizen? How can you appear so in public?}
+{17309}{By your outfit I have to say you are a man without any dignity.}
+{17310}{The city is no place for your kind, barbarian.}
+{17311}{The city is not for you, wild man.}
+
+
+// villager
+{17350}{Ho, what brings you out of the woods?}
+{17351}{Aye! A Wild Man!}
+{17352}{Aye! What is with the costume?}
+{17353}{Greetings, barbarian.}
+{17354}{Greetings, wild man.}
+{17355}{Greetings, berserker.}
+{17356}{Ho, barbarian.}
+{17357}{Ho, wild man.}
+{17358}{Perhaps you should put on some clothes, mister.}
+{17359}{Have you no shame, sir? How can you appear in public dressed so?}
+
+
+// beggar
+{17400}{Oh great barbarian chief, overlook a pitiful and poor beggar man!}
+{17401}{Greetings, barbarian!}
+{17402}{I have never met a barbarian before.}
+{17403}{What can I do for you, barbarian chief?}
+{17404}{What can I do for you, berserker war chief sir?}
+{17405}{At your service always, barbarian chief.}
+{17406}{Always at your service, berserker chief.}
+{17407}{Yes, berserker war chief sir?}
+{17408}{At your service, barbarian chief.}
+{17409}{Oh great Barbarian chief, overlook a pitiful and poor beggar man!}
+{17410}{At your service, Barbarian chief.}
+{17411}{Oh no! An Barbarian!}
+{17412}{What can I do for you, Barbarian Chief?}
+{17413}{Please pay no mind to my humble self, Barbarian war chief sir.}
+
+
+// thief
+{17450}{Don't you think you should put on some manner of appropriate dress?}
+{17451}{Well now, lass, where have we been living of late? A cave?}
+{17452}{Oh yes, you will have the guards watching you, my barbarian friend.}
+{17453}{Be quick about it, barbarian. You are drawing unwanted attention to me.}
+{17454}{Watch it, barbarian! I may not be as strong as you, but I wager I am a sight quicker.}
+{17455}{Ho there! Now that is a costume to give the chattering magpies a month's worth of gossip!}
+{17456}{Oh yes! That garb will keep the local dunderheads in an uproar for a week of Sundays.}
+{17457}{Blazing strange apparel you have there, friend.}
+{17458}{My compliments on the, uh, evening wear, my friend.}
+{17459}{You have a frightfully odd wardrobe, friend.}
+{17460}{Aye! That barbarian outfit must be poor comfort around here.}
+{17461}{Be quick about it, barbarian. You are drawing unwanted attention to me.}
+
+// bandit
+{17500}{Out of my way, spear boy!}
+{17501}{Har! Let me guess . . . it is magic water-rat armor, is it not?}
+{17502}{Hello barbarian! What is it you want?}
+{17503}{Ho there! What is a Wild Man like yourself doing here?}
+{17504}{What brings you down from the hills?}
+{17505}{What brings your kind out from hiding?}
+{17506}{Very! What are we now? A wild man raised by wolves?}
+{17507}{What is it you want, berserker?}
+{17508}{Ho there, barbarian!}
+{17509}{Ho, a barbarian! What say you?}
+{17510}{What can I do for you, barbarian?}
+{17511}{Hey there, sir! Getting back to nature?}
+{17512}{Hallo, Barbarian! What can I do for you?}
+{17513}{Ho there, Barbarian!}
+{17514}{Ho, an Barbarian! What say you?}
+{17515}{What can I do for you, Barbarian?}
+{17516}{What do you want, Barbarian?}
+
+
+
+
+// Fear of associates messages start at 18000. Each class gets 50
+// messages starting on multiples of 50
+
+// noble
+{18000}{Heavens! What is that with you?}
+{18001}{No, no, no! Your, uh, brutish companion is not welcome here.}
+{18002}{I will not have it! Get rid of that . . . intolerable beast . . . immediately!}
+{18003}{Heavens! How dare you put us all in danger by bringing that dreadful thing here?}
+{18004}{Sir! I am a respectable man! I will not associate with that, that depraved thing!}
+{18005}{My word! Have you no sense? How dare you bring that nasty thing here?}
+{18006}{What is the matter with you, sir? What prevailed upon you to associate with . . .  that?}
+{18007}{No, sir! I will not associate with you as long as that frightful thing is with you.}
+{18008}{Sir! Your, uh, beastly companion is definitely not allowed around here.}
+{18009}{Get that horrid thing out of here! What do you think this is?}
+{18010}{Have you no decency, sir? Get rid of that . . . thing.}
+{18011}{Have you lost your sanity, sir? Get rid of that . . . whatever it is.}
+{18012}{Have you gone mad? Get that . . . savage thing . . . out of here!}
+{18013}{Have you lost your mind? Get that . . . barbarous monstrosity . . . away from here!}
+{18014}{Really! This is most provoking! Remove your freakish brute of a companion immediately!}
+{18015}{I say! You must be mad to bring that monstrosity around here!}
+{18016}{Someone call the Law! What could possibly cause you to bring that bestial thing here?}
+{18017}{What has come over you, sir? That, uh, thing, is not for decent company.}
+{18018}{Have you no sense, sir? What possessed you to bring that awful brute here?}
+{18019}{This is most extraordinary conduct! Get that uncivilized monstrosity out of here.}
+
+// priest
+{18050}{Blasphemer! Take your follower from my sight!}
+{18051}{Son, repent and leave that vile companion behind.} 
+{18052}{That obscene follower of yours is not a holy thing.}
+{18053}{That is unheard of! How can you associate with those dirty beasts?}
+{18054}{Oh, really! If you associate with such degenerate companions . . .}
+{18055}{Brother! Take that vile associate of yours out of my face.}
+{18056}{Consorting with loathsome creatures is one thing. But to flaunt it! That is quite another.} 
+{18057}{Brother! How can you bring that unsavory freak with you here?}
+{18058}{Ach, son! No good will come of associating with the likes of those beasts.}
+{18059}{Heed me! It is not proper to consort with such a menace as that!}
+{18060}{Gracious! What is that following you?}
+{18061}{Gracious! What is that horrible thing following you?}
+{18062}{Gracious! What is that wicked beast following you?}
+{18063}{Gods! Watch out for that evil thing behind you!}
+{18064}{Take my advice, brother, and do not turn your back on that sinful beast.}
+{18065}{Goodness! Take care, son. No good will come of that demonic beast.}
+{18066}{Take care! you tread close to blasphemy with followers like that!}
+{18067}{Oh my! Please. Remove that dangerous beast.}
+{18068}{Oh dear! Please. Get that uncontrollable menace away from me.}
+{18069}{Oh Heavens! Please. Th-that beast! P-please get it out of here.}
+
+// wizard
+{18100}{Nice, uh, friends you travel with.}
+{18101}{Hmm. Is it hard to keep your, uh, friend in line?}
+{18102}{Hmm, hello. Yes, well. Where did you find, uh, your friend?}
+{18103}{Hmm, hello. Yes, well. Has your friend, uh, eaten recently?}
+{18104}{Hmm, hello. Yes, well. Most unusual travelling companions, I should say.}
+{18105}{Hmm, hello. Yes, well. Are you sure your, uh, escort is, uh, not dangerous?}
+{18106}{Oh, my! How do you do? And your, uh, friend is doing well also, I trust?}
+{18107}{Oh, my! Yes. Good to see you . . . is your, uh, servant, uh, under control?}
+{18108}{Goodness! Where do you find such outlandish followers?}
+{18109}{I say! Where do you find such bizarre companions?}
+{18110}{Incredible! Where do you find such outlandish followers?}
+{18111}{Lo! Where do you find such eccentric companions?}
+{18112}{Will wonders never cease! Where do you find such unusual followers?}
+{18113}{Incredible! Where do you find such, uh, rustic companions?}
+{18114}{However did you tame that thing?}
+{18115}{However do you control that beast?}
+{18116}{Now that is a sight! Where did you find it? Your companion, I mean.}
+{18117}{Ho! Very unusual followers you attract, friend.}
+{18118}{My, oh my! They let you walk around here with, uh, that thing in tow?}
+
+// technologist
+{18150}{What the . . .? What is that feral thing with you?}
+{18151}{What the . . .? What is that ugly atrocity with you?}
+{18152}{What the . . .? What is that vile abomination with you?}
+{18153}{What the . . .? What is that bizarre brute with you?}
+{18154}{What the . . .? What is that obscene thing with you?}
+{18155}{What the . . .? What is that malodorous horror with you?}
+{18156}{What the . . .? What is that terrible thing with you?}
+{18157}{What the . . .? What is that miserable monster with you?}
+{18158}{What the . . .? What is that horrible menace with you?}
+{18159}{What the . . .? What is that loathsome barbarity with you?}
+{18160}{What the . . .? What is that repugnant demon with you?}
+{18161}{What the . . .? What is that repellent fiend with you?}
+{18162}{This is inexcusable! Remove that dangerous beast immediately!}
+{18163}{This is unendurable! Remove that awful terror immediately!}
+{18164}{This is bizarre! Get your obscene companion out of here!}
+{18165}{You must have lost your head! Get that uncivilized thing away from me!}
+{18166}{You must have lost your sanity! Get that distasteful denizen away from me!}
+{18167}{You must have lost your wits! Get that barbarous beast away from me!}
+{18168}{How dare you torment me with that dangerous brute of yours?}
+{18169}{How dare you hound me with that feral brute of yours?}
+{18170}{How dare you bring that obscene brute anywhere near me?}
+{18171}{How dare you bring that bizarre brute anywhere near me?}
+{18172}{How dare you bring that uncivilized horror anywhere near me?}
+
+// shopkeeper
+{18200}{Please, sir! Take that depraved beast from my shop.}
+{18201}{Please, sir! Take that ugly thing from my shop.}
+{18202}{Please, sir! Take that awful brute from my shop.}
+{18203}{Please, sir! Make your sinister companion go away!}
+{18204}{Please, sir! Your brute is scaring the customers . . . and me!}
+{18205}{Please, sir! That monstrosity will have the Law here, right quick!}
+{18206}{Please, sir! Remove your brute from my store!}
+{18207}{Please, sir! Remove your bizarre companion from my store!}
+{18208}{Please, sir! Remove that obscene brute from my store!}
+{18209}{Please, sir! Remove that vile horror from my store!}
+{18210}{No, sir! No! I will not serve that . . . inhuman thing.}
+{18211}{No, sir! I refuse to serve that . . . dangerous menace.}
+{18212}{No, sir! I can not serve that . . . wild brute.}
+{18213}{Oh! Now really! Your, uh, feral friend does not belong here.}
+{18214}{Oh! Now really! Your, uh, bizarre companion does not belong here.}
+{18215}{Oh! Now really, sir! Your, uh, horrid follower does not belong here.}
+{18216}{P-please, sir! Th-that th-thing is most intimidating!}
+{18217}{P-please, sir! That th-thing is m-most distressing!}
+{18218}{Uh, sir. I do not quite think that this is the proper place for your, uh, outlandish companion.}
+{18219}{Uh, sir. I find it hard to imagine that your, uh, uncouth follower belongs here.}
+
+// guard
+{18250}{Get that horrid thing away from here!}
+{18251}{Put a leash on that menacing brute. Now!}
+{18252}{If that dangerous brute causes any trouble, I will be looking for YOU!}
+{18253}{No, no! I will not have that "friend" of yours around my beat.}
+{18254}{You AND that thing of yours keep going, and do not stop anywhere near here.}
+{18255}{Take that walking hazard out of this neighborhood . . . NOW.}
+{18256}{If you control that inhuman thing, get it out of here now.}
+{18257}{Halt! Get that dangerous thing out of here! Now!}
+{18258}{You and your "companion" will have to leave. I cannot let you put the citizenry in danger.}
+{18259}{Oh, right! You are not going anyplace with that wild thing tagging along!}
+{18260}{Away! Get that barbaric thing away from here!}
+{18261}{What? Are you insane? Get that crazy thing away from here!}
+{18262}{Rabble-rouser! Get that dangerous thing out of here!}
+{18263}{You must be mad! Take that inhuman brute back where it belongs.}
+{18264}{Sir! You and your, uh, friend need to vacate the area at once.}
+{18265}{Sir! You and your, uh, follower need to leave the area at once.}
+{18266}{Sir! You and your, uh, companion need to depart the area at once.}
+{18267}{Sir! You and your, uh, servant need to abandon the area at once.}
+{18268}{Sir! You and your, uh, escort need to quit the area at once.}
+
+// city_dweller
+{18300}{What is that with you? Aiee!}
+{18301}{G-g-g-go away! G-g-g-get that revolting th-thing away from me!}
+{18302}{G-g-go away! G-g-get that frightful thing away from me!}
+{18303}{G-go away! G-get that disgusting thing away from me!}
+{18304}{Something horrible is behind you!}
+{18305}{Something terrible is behind you!}
+{18306}{Something dangerous walks behind you!}
+{18307}{Some THING walks behind you!}
+{18308}{Look out for that thing behind you!}
+{18309}{Really! I cannot compose myself while that thing of yours is about.}
+{18310}{Oh, right! They let anything walk the streets nowadays!}
+{18311}{Oh, right! They let anything wander the streets nowadays!}
+{18312}{Oh, right! They let anything roam the streets nowadays!}
+{18313}{Oh, right! They let anything wander the city nowadays!}
+{18314}{Oh, right! They let anything into the city nowadays!}
+{18315}{Oh, right! They let anything roam the city nowadays!}
+{18316}{There is a, a THING behind you!}
+
+
+// villager
+{18350}{Look out behind you!}
+{18351}{Run! Look out behind you!}
+{18352}{There is a monster behind you!}
+{18353}{Watch out! Look behind you!}
+{18354}{Watch out! Look behind you!}
+{18355}{There is something horrible following you!}
+{18356}{There is something terrible behind you!}
+{18357}{There is something hideous next to you!}
+{18358}{What is that behind you?}
+{18359}{What is that behind you?}
+{18360}{What is that behind you?}
+{18361}{What is that abominable creature behind you?}
+{18362}{What is that frightening brute following you?}
+{18363}{What is that hideous monster next to you?}
+{18364}{Sound the alarm! Monsters!}
+{18365}{Look! Behind you! What is it?}
+{18366}{Behind you! Why does it follow you?}
+{18367}{I do not think that brute will be welcome here.}
+{18368}{Uh. Your, uh, friend seems most unfriendly.}
+
+
+// beggar
+{18400}{I am seeing monsters!}
+{18401}{Monsters! Aieee!}
+{18402}{Run for your life! Monsters!}
+{18403}{A monster! Get out of my way! Aiee!}
+{18404}{Help! Monsters! Help!}
+{18405}{Oh glory be! A monster!}
+{18406}{Move away slow-like. There is a horrible beast behind you!}
+{18407}{A monster! Forget the coins. There is no time to wait for them.} 
+{18408}{M-m-monster!}
+{18409}{What is that b-beast!}
+{18410}{Oh, no! That creature looks dangerous!}
+{18411}{Oh! Why afflict me with that horrible creature?}
+{18412}{Please. I did nothing! Do not send your terrible servant after me.}
+{18413}{Please. I did nothing! Do not send your horrible slave after me.}
+{18414}{Please. I did nothing! Do not send your unholy bodyguard after me.}
+{18415}{Please. I did nothing! Do not send your vicious beast after me.}
+{18416}{Please. I did nothing! Do not send your horrid companion after me.}
+{18417}{What is that b-beast?}
+{18418}{What is th-that beast?}
+{18419}{Wha-what is that beast?}
+
+// thief
+{18450}{Get that horrible thing away from me!}
+{18451}{No, no! I will not have that "friend" of yours around my territory.}
+{18452}{If you control that horrid thing, get it out of here now.}
+{18453}{What? Are you crazy, friend? Get that uncontrollable thing away from here!}
+{18454}{Get that barbaric brute away from here!}
+{18455}{You must be mad! You cannot tame that inhuman brute.}
+{18456}{You must have lost your wits! You cannot tame that bestial brute.}
+{18457}{Where is your sanity, sir? You cannot tame that revolting brute.}
+{18458}{That is the most appalling travelling companion I have ever seen.}
+{18459}{No. Let me guess. That obscene monster is your, uh, squire?}
+{18460}{Get that malodorous thing away from me. It is drawing unwanted attention this way.}
+{18461}{Why must you draw attention to me by bringing your perverted followers along?}
+{18462}{Oh, right! Like I did not have enough trouble, I need to deal with your creepy companions.}
+{18463}{What? Why do you employ such a brutish menace?}
+{18464}{What? Why do you employ such a miserable monster?}
+{18465}{What? Why do you employ such a troublesome terror?}
+{18466}{What? Why do you employ such a disturbing companion?}
+{18467}{Oh, please! Get that thing away from me.}
+{18468}{I will not have anything to do with that vicious creature of yours.}
+{18469}{Get that pestilent, diseased, ugly brute away from me!}
+
+// bandit
+{18500}{I will kill that thing if it gets any closer.}
+{18501}{Believe me! I will kill that beast if it comes closer.}
+{18502}{Stop! I will kill that brute if it comes near me.}
+{18503}{I do not like those creatures. I will kill it if it comes near me.}
+{18504}{Keep that filthy creature away from me, or I will kill it.}
+{18505}{Keep that menace away from me, or I will cut it to pieces.}
+{18506}{Keep that smelly brute away from me, or I will put a bullet in it}
+{18507}{If you want to talk to me, get rid of that stinking monstrosity following you.}
+{18508}{I will not talk to you while that miserable horror of yours is around.}
+{18509}{Go away. And take your filthy, stinking brute with you.}
+{18510}{If you want no harm to come to your brute, keep it far away from me.}
+{18511}{Why are you trying to intimidate me with your foul creature?}
+{18512}{Keep your foul creatures away from me.}
+{18513}{Keep your bestial friends away from me.}
+{18514}{Keep your filthy followers away from me.}
+{18515}{Bloody Hell! Those filthy creatures are dangerous.}
+{18516}{Bloody Hell! Keep your foul beasts away from me.}
+{18517}{Bloody Hell! Keep those dangerous brutes away from here.}
+{18518}{The stench from your beast is horrible! Get it away.}
+{18519}{Bloody Hell, brother! Your brute smells awful! I cannot stand it.}
+
+
+// Body spell messages start at 19000. Each class gets 50
+// messages starting on multiples of 50
+
+// noble
+{19000}{What are you?!}
+{19001}{No! Get away! What in heaven's name are you?}
+{19002}{Oh my heavens! What are you?}
+{19003}{Good Heavens! What are you?}
+{19004}{My word! What are you?}
+{19005}{What in the name of the gods are you?}
+{19006}{No! A monster! Get away from me!}
+{19007}{Oh no! Oh, my word! My goddess! A monster!}
+{19008}{This is unbelievable! A demon! Run!}
+{19009}{I cannot believe it! A demon! Help!}
+{19010}{This is not possible! A demon! Save yourselves!}
+{19011}{Oh my! How very odd! A demon! I think I will faint!}
+{19012}{M-monster! Oh, why did I get out of bed this morning?}
+{19013}{A monster? No! No. It is not possible, I say! Totally unsuitable!}
+{19014}{A monster! Oh, what series of misadventures has brought me to this horrible end?}
+
+// priest
+{19050}{What in the name of the gods are you?}
+{19051}{What in all that is holy are you?}
+{19052}{A demon! Goddess protect me! Run!}
+{19053}{Goddess protect me! A demon!}
+{19054}{A demon! Goddess protect me!}
+{19055}{No! Go away! Elemental demon!}
+{19056}{Go away! Elemental demon! Disperse!}
+{19057}{Be gone, foul beast of the elemental void!}
+{19058}{Help! An elemental fiend is upon me!}
+{19059}{A demon from the void! Run!}
+{19060}{Goddess have mercy! Protect me from this monster!}
+{19061}{Goddess have mercy! Protect me from this demon!}
+
+
+// wizard
+{19100}{I imagine that spell is a lot of effort to maintain.}
+{19101}{Hmm. Is it hard to keep your, uh, appearances up?}
+{19102}{Are you a summoned elemental? No. I see what you are.}
+{19103}{What? Oh! My, my. Are we having fun scaring the locals?}
+{19104}{Ahh! An excellent charade, old boy. But not necessary on my account.}
+{19105}{Hmm. An excellent charade, indeed. But entirely unnecessary for my account.}
+{19106}{I congratulate you. A very fine rendition of the elemental body spell you have there.}
+{19107}{Congratulations. You have a fine understanding of the elemental body spell.}
+{19108}{Hmm. Yes. Well. I have seen better elemental body spells in my time.}
+{19109}{Hmm. Yes. Indeed. I have cast better elemental body spells myself.}
+{19110}{Hmm, yes. I believe you could use some practice on that elemental body spell.}
+{19111}{Hmm, yes. A competent casting of an elemental body spell, I would say.}
+{19112}{Hmm, yes. An adequate interpretation of the elemental body spell, sir.}
+{19113}{Hmm. A barely adequate elemental body spell, friend. A little rough around the edges.}
+{19114}{Oh, yes! A fantastic interpretation of the elemental body spell, I would say. Indeed!}
+
+// technologist
+{19150}{Keep your dirty magick away from me!}
+{19151}{Keep your magick away from me! And stay away!}
+{19152}{Get your magick away from me! Fast!}
+{19153}{Get your magick away from me! Now!}
+{19154}{Anarchist! Get your foul magic away from me!}
+{19155}{Anarchist! Keep your foul magic away from me!}
+{19156}{Miscreant! Get your magick away from me!}
+{19157}{Libertine! Get your magick away from me!}
+{19158}{Iconoclast! Get your magick away from me!}
+{19159}{Transgressor! Get your magick away from me!}
+{19160}{Recidivist! Get your magick away from me!}
+{19161}{Recidivist! Keep your magick away from me!}
+{19162}{Hooligan! Get your magick away from me!}
+{19163}{Hooligan! Keep your magick away from me!}
+{19164}{Fool! Get away with your magick, or you shall regret it!}
+
+
+// shopkeeper
+{19200}{No! What have I done to be afflicted by monsters?}
+{19201}{No! What have I done to be afflicted by demons?}
+{19202}{No! No! Please leave me be, monster!}
+{19203}{No! No! Please leave me be, demon!}
+{19204}{Keep away from me, elemental brute!}
+{19205}{Keep away from me, elemental demon!}
+{19206}{Keep away from me, elemental monster!}
+{19207}{Keep away from me, you elemental fiend!}
+{19208}{Keep away from me, you elemental freak!}
+{19209}{Keep away from me, you elemental monstrosity!}
+{19210}{Aieeee! A monster!}
+{19211}{Aieeee! A monster!}
+{19212}{Aieeee! A demon!}
+{19213}{Aieeee! A demon!}
+{19214}{Help! A monster!}
+{19215}{A monster! Help!}
+{19216}{Help! A demon!}
+{19217}{A demon! Help!}
+
+
+// guard
+{19250}{Stand back, monster!}
+{19251}{Somebody needs to chain you up!}
+{19252}{No, no! I will not have monsters on my beat.}
+{19253}{Get out of this neighborhood, monster! NOW!}
+{19254}{Get out! Get out of here now, you demon!}
+{19255}{Halt! Get out of here, fiend! Now!}
+{19256}{You need to leave now, demon. I cannot let you put the citizenry in danger.}
+{19257}{Out! Get out of here immediately, elemental monster!}
+{19258}{What? Get away from here! You do not belong here, monster!}
+{19259}{Go away, elemental fiend! Go away!}
+
+
+
+// city_dweller
+{19300}{Help! A monster!}
+{19301}{Help! A monster!}
+{19302}{Help! A Horror!}
+{19303}{Help! Monsters!}
+{19304}{Help! Monsters!}
+{19305}{Help! A monstrosity!}
+{19306}{Help! A monstrosity!}
+{19307}{Help! A fiend}
+{19308}{Help! A fiend!}
+{19309}{Help! A demon!}
+{19310}{Help! A demon!}
+{19311}{Run for your lives! A monster!}
+{19312}{Run for your lives! Demons!}
+{19313}{Run for your lives! A demon!}
+{19314}{Run for your lives! Monsters!}
+{19315}{G-go away! G-get away from me, you m-monster!}
+{19316}{G-go away! G-get away from me, you d-demon!}
+{19317}{G-go away! G-get away from me, you horror!}
+
+
+// villager
+{19350}{Demon!}
+{19351}{Demon! Run!}
+{19352}{Demon! Help!}
+{19353}{Horrors from hell! Run!}
+{19354}{Horrors from the void! Run!}
+{19355}{Horrors from Beyond! Run!}
+{19356}{Run! Run! Monsters are about!}
+{19357}{Run! Monsters are about! Run!}
+{19358}{Monsters are about! Run! Run!}
+{19359}{Stygian demons! Help!}
+{19360}{Oh my god! A demon invasion!}
+{19361}{An infernal fiend! Help!}
+{19362}{A demon! Why me? Not me! Help!}
+{19363}{Aaaaaaaaaaaah!}
+
+
+// beggar
+{19400}{Aieeeee!}
+{19401}{Aieeeee!}
+{19402}{Aieeeee!}
+{19403}{Aieeeee!}
+{19404}{Aieeeee!}
+{19405}{Nooo! Stay away from me!}
+{19406}{Nooo! Get away from me!}
+{19407}{Nooo! Keep away from me!}
+{19408}{Run! A monster!}
+{19409}{Run! A demon!}
+{19410}{Run! Aiee!}
+{19411}{Run! Help!}
+{19412}{Aaaagh! No! Monster!}
+{19413}{Help! Demons from hell!}
+{19414}{No! Not me! Not me!}
+{19415}{Help! Stay away! Run! Monster!}
+{19416}{Ulp! A monster!}
+{19417}{Agh! Somebody save me from the monster!}
+{19418}{Oh, Mother of Mercy! A monster!}
+{19419}{Mother of Mercy! Save me from the monster!}
+
+// thief
+{19450}{Stand back, elemental monstrosity!}
+{19451}{Stand back, elemental brute! I know how to defend myself!}
+{19452}{Are you that eager to feel the hand of death, monster?}
+{19453}{Are you so eager to meet your fate, fiend?}
+{19454}{Are you that eager to feel the touch of death, monster?}
+{19455}{Somebody needs to chain you up, I think!}
+{19456}{If you start any trouble with me, monster, I will kill you.}
+{19457}{Listen, y-you. I have plenty of f-friends, you hear? So, you do not scare me.}
+{19458}{Get out of here, fiend! Leave me be!}
+{19459}{Leave now, demon! Leave me alone!}
+{19460}{Get out of here immediately, elemental monster!}
+{19461}{What are you? You do not belong here, monster!}
+{19462}{Back! Get back! Help! An elemental!}
+
+
+// bandit
+{19500}{Do you wish to taste my steel, creature of darkness?}
+{19501}{Are you looking to taste my steel, demon of the void?}
+{19502}{Stay away or you shall rue the day you were created, monster!}
+{19503}{Make no trouble for me, demon, or you shall regret it!}
+{19504}{Make trouble for me, demon, and you shall rue this day!}
+{19505}{Start any trouble, demon, and I will make sure you regret it!}
+{19506}{Start any trouble, monster, and I will hurt you! Indeed I will!}
+{19507}{Make no trouble with me, brute of the elements! Or else feel my anger!}
+{19508}{Ha! Bigger monsters than you have fallen to me! Beware!}
+
+
+
+// Polymorph messages start at 20000. Each class gets 50
+// messages starting on multiples of 50
+
+// noble
+{20000}{What fool let this sheep in here?}
+{20001}{Hmm. We must be having roast lamb tonight. Where is that cook?}
+{20002}{What is a sheep doing here? My word!}
+{20003}{Indeed! Is this a barn? Someone get this sheep out of here!}
+{20004}{Really! A sheep! Hmph!}
+{20005}{A sheep? What is this society coming to? No respect anymore.}
+{20006}{Hmm. Someone call the butcher and tell him to take this sheep away.}
+{20007}{Go, go, go! Go away, sheep, go away!}
+{20008}{Now really! Who owns this sheep?}
+{20009}{What? Do I look like a shepherd?}
+{20010}{What is the matter? Lost your flock?}
+
+// priest
+{20050}{This is not a pasture!}
+{20051}{Ah, yes! Roast lamb tonight!}
+{20052}{What? No, I am only metaphorically speaking a shepherd, you know.}
+{20053}{Someone lose this sheep?}
+{20054}{A sheep. Hmm. Dinner, perhaps?}
+{20055}{A nice, fat sheep! You will make a good dinner.}
+{20056}{Hmm. Go away, I have no time for sheep.}
+{20057}{Baa, baa yourself!}
+{20058}{Look here! Who owns this sheep?}
+{20059}{Go find your shepherd, little sheep.}
+{20060}{Who let this sheep in here?}
+
+// wizard
+{20100}{Hmm? Looking for a Dispel Magic, huh?}
+{20101}{Ah, yes, indeed! Roast lamb tonight!}
+{20102}{What? No, I am too busy to play with sheep.}
+{20103}{Lost your true form, did you? That will teach you to be careful.}
+{20104}{Go away. Find whoever did this to you and stop bothering me.}
+{20105}{Hmm. Go away, I have no time to dispel your present form.}
+{20106}{Baa, baa yourself! Having fun in that form?}
+{20107}{Get used to being a sheep -- you'll be that way for a while.}
+{20108}{Ha! Watch out for the shepherds!}
+{20109}{Go find a nice pasture until it wears off. and leave me be.}
+
+// technologist
+{20150}{Who is letting farm animals run loose?}
+{20151}{Ah, yes! Roast lamb tonight!}
+{20152}{What? Dirty animal! Get out!}
+{20153}{Someone lose a sheep?}
+{20154}{A sheep. Hmm. Dinner? Yes.}
+{20155}{A nice, plump sheep! A very good dinner, indeed.}
+{20156}{Baa yourself! Go away, I have no time for sheep.}
+{20157}{Baa, baa. Cute little sheep. Go away before I send the cook after you.}
+{20158}{Now look here! Who owns this sheep?}
+{20159}{Go find a shepherd. Get out!}
+{20160}{What? Do I look like a shepherd?}
+{20161}{Who lost this stupid sheep?}
+{20162}{This is definitely not a pasture!}
+
+// shopkeeper
+{20200}{Gads, who let a sheep in here?}
+{20201}{Hmm. We will be having roast lamb tonight. Yes, indeed.}
+{20202}{What is a sheep doing here?}
+{20203}{What? Is this a barn? Someone get this sheep out of here!}
+{20204}{Really! A sheep! Who lost this animal?}
+{20205}{A sheep? No, I don't accept sheep, only coins.}
+{20206}{Someone call the butcher and tell him to take this sheep away.}
+{20207}{Away with you, filthy animal!}
+
+
+// guard
+{20250}{Damn farmers letting their sheep run loose.}
+{20251}{Ah, yes! Roast lamb tonight!}
+{20252}{What? Stupid sheep! Get away!}
+{20253}{Someone lose a sheep?}
+{20254}{A sheep. Hmm. Reminds me that I am hungry, it does.}
+{20255}{A nice, plump sheep! A very good dinner, indeed.}
+{20256}{Baa yourself! Go away, I have no time for sheep.}
+{20257}{Go away before I send the butcher after you.}
+{20258}{Who owns this sheep?}
+{20259}{This is definitely not a free pasture!}
+
+// city_dweller
+{20300}{Why would a sheep be walking around free?}
+{20301}{Get away, filthy animal.}
+{20302}{What is a sheep doing here?}
+{20303}{What? Someone get this sheep out of here!}
+{20304}{Really! Who lost this animal?}
+{20305}{Stupid animal.}
+{20306}{Someone call the butcher and tell him about this sheep.}
+{20307}{Go away, dirty sheep, go away!}
+{20308}{Anyone own this animal?}
+
+
+// villager
+{20350}{Uh-oh, someone is going to be angry when they notice you are loose.}
+{20351}{If you don't go away I'll make mutton stew out of you.}
+{20352}{A goodly looking sheep, you are. I wonder who owns you?}
+{20353}{Mighty fine looking sheep, I says. Would not mind owning you myself.}
+{20354}{Hmm? I wonder where your shepherd is?}
+{20355}{Go! Your shepherd must be about here somewhere.}
+{20356}{Begone, you mangy sheep.}
+
+// beggar
+{20400}{What? Sheep?}
+{20401}{Ah, yes! Mutton stew!}
+{20402}{Mutton stew tonight, everyone!}
+{20403}{Oh, my! I can smell the roast lamb cooking now!}
+{20404}{Come here you nice, fat sheep! Time for the cookpot!}
+{20405}{Do not tempt me, sheep. I am hungry enough to eat you raw!}
+{20406}{Oh, my word! Can it be? Mutton from heaven?}
+{20407}{Oh, a sheep! Now where's my cookpot?}
+{20408}{Mutton stew! Mutton stew! Mutton stew tonight!}
+
+
+// thief
+{20450}{What is this, a barn?}
+{20451}{Ah, yes! I think I will have roast lamb tonight!}
+{20452}{What? Stupid sheep! Get away from me!}
+{20453}{Someone lose a sheep?}
+{20454}{A sheep. Hmm. Reminds me that I am hungry, it does.}
+{20455}{A nice, plump sheep! A very good dinner for me, indeed.}
+{20456}{Baa yourself! Go away, I have no time for pesky sheep.}
+{20457}{Go! Before I set the butcher after you.}
+{20458}{Who owns this lost sheep?}
+{20459}{Go find a shepherd. Get away!}
+{20460}{What? Do I look like a shepherd?}
+{20461}{Who lost this sheep?}
+{20462}{Damn farmers letting their sheep run loose.}
+{20463}{Who has let farm animals run loose?}
+{20464}{This is not a farm pasture!}
+
+// bandit
+{20500}{Yum, I haven't had lamb chops in a while.}
+{20501}{Ah, yes! Mutton stew, for sure!}
+{20502}{Mutton stew tonight, everybody!}
+{20503}{Oh, yum! I can smell the roast lamb cooking already!}
+{20504}{Come here you scrawny sheep! Time for the cookpot!}
+{20505}{Get away, sheep!}
+{20506}{My word! Free mutton?}
+{20507}{A sheep! Now where's my cookpot?}
+{20508}{Mutton stew! Mutton stew! Mutton stew tonight!}
+{20509}{Here my belly rumbling, sheep? You best begone quick.}
+{20510}{Mutton stew, I says!}
+
+
+
+// Mirror image messages start at 21000. Each class gets 50
+// messages starting on multiples of 50
+
+// noble
+{21000}{UNUSED}
+
+// priest
+{21050}{UNUSED.}
+
+
+// wizard
+{21100}{UNUSED.}
+
+
+// technologist
+{21150}{UNUSED}
+
+// shopkeeper
+{21200}{UNUSED}
+
+
+// guard
+{21250}{UNUSED}
+
+// city_dweller
+{21300}{UNUSED}
+
+
+// villager
+{21350}{UNUSED}
+
+// beggar
+{21400}{UNUSED}
+
+
+// thief
+{21450}{UNUSED}
+
+
+// bandit
+{21500}{UNUSED}
+
+
+
+// Invisibility messages start at 22000. Each class gets 50
+// messages starting on multiples of 50
+// noble
+{22000}{Goddess above! A ghost of my ancestors!}
+{22001}{Ohhh, my! I . . . must be imagining voices . . . ohhh!}
+{22002}{Uh . . . did I hear . . . something?}
+{22003}{Uh-oh. G-g-ghosts. I think it is time to leave. Oh, yes!}
+{22004}{What? Who spoke? Where are you?}
+{22005}{Yes, well . . . uh . . . what? Who? Where? Oh dear!}
+{22006}{How do you do? Oh! Where are you? Did someone speak?}
+{22007}{Hello? Yes? Anyone there?}
+{22008}{Yes? Who said that?}
+{22009}{Oh, bad luck, indeed. Either I am hearing things, or this place is haunted.}
+{22010}{Yes? Uh. Sir!? Where are you?}
+{22011}{Oh please, spirit. Leave me be!}
+{22012}{Oh my, oh my, oh my! I declare. A haunt is about.}
+{22013}{Oh! Shadows and wraiths!}
+{22014}{My word! A poltergeist!}
+{22015}{Apparitions or insanity! I prefer apparitions . . . I think.}
+{22016}{Disembodied voices?! Oh dear.}
+{22017}{Shades of phantoms and specters!}
+{22018}{Uh-oh. A haunting is afoot!}
+{22019}{Oh my! An imp is upon me.}
+{22020}{Oh my! A malicious spirit is upon me.}
+{22021}{Hello, what? Is anybody here?}
+{22022}{Hello, yes? Is anybody here?}
+{22023}{Hello, hello? Is anybody here?}
+
+// priest
+{22050}{Spirit from beyond, I exorcise thee!}
+{22051}{Be gone, foul phantom!}
+{22052}{Let me be, wicked imp!}
+{22053}{Demons and fiends are about!}
+{22054}{Restless spirits, be gone from here!}
+{22055}{Most wicked spirit, go back to the realms from which you came.}
+{22056}{Disembodied fiend! There is nothing for you here. Go!}
+{22057}{Leave here, invisible demon!}
+{22058}{Be on your way, ghost. Leave the living alone.}
+{22059}{Voices and apparitions! It must be an unholy phenomena!}
+{22060}{Invisible demon! In the name of the gods I command you to depart!}
+{22061}{What? Did somebody speak?}
+{22062}{Yes? Did somebody speak?}
+{22063}{What is it? Is somebody there?}
+{22064}{Yes, what is it? Is somebody there?}
+{22065}{What? Is somebody there?}
+
+// wizard
+{22100}{Yes, invisibility can be fun.}
+{22101}{It is the height of rudeness to converse while invisible, you know.}
+{22102}{Oh, an invisible prankster.}
+{22103}{Oh, invisible, are we?}
+{22104}{Huh? Oh. An invisible delinquent, no doubt.}
+{22105}{Oh, hmm. Uh, I see. Invisibility practice, is it?}
+{22106}{Yes? Hmm. Come now. Take down that invisibility spell so we can talk properly.}
+{22107}{Oh! You gave me a start! Please be visible next time you greet me.}
+{22108}{What is it? I heard you stumbling about. Invisibility is not inherently silent, you know.}
+{22109}{Yes, yes, yes. What is it, my invisible, uh, friend?}
+{22110}{Really now. Am I supposed to be impressed? Let me see you.}
+{22111}{Yes? Uh. Invisible? Oh. What do you want?}
+{22112}{Hmm? Yes. Who are you, oh invisible one?}
+
+
+// technologist
+{22150}{Huh? Somebody say something?}
+{22151}{What? What? Is anybody there?}
+{22152}{Huh? Somebody say something?}
+{22153}{What? Oh. I have been working too hard -- I am hearing voices now.}
+{22154}{Yes, be right with you. Oh, hmm. I must be imagining voices now.}
+{22155}{Hello. Um. Hello? Well. Time for a rest. I am hearing voices now.}
+{22156}{Huh? No. I don't believe in ghosts. Go away. You bother me.}
+{22157}{Yes? Oh. Hmm. Nobody there. Hmm. Oh, well.}
+{22158}{Hmm? What was that? Hmm. Nobody there. Ah, well. Back to work.}
+{22159}{Eh? . . . What? . . . Hmm. . . . <mutter, mutter>}
+{22160}{Eh, what? Who? Oh. I am hearing things again.}
+{22161}{What? What? Is anybody there?}
+{22162}{What? What? Is anybody there?}
+
+
+// shopkeeper
+{22200}{Ack! My shop is haunted!}
+{22201}{Egads! A haunt! A demon! A fiend!}
+{22202}{Whoa! What? Who? Where?}
+{22203}{We are haunted!}
+{22204}{I must be hearing things!}
+{22205}{A . .  a ghost!}
+{22206}{Eep! Oh, those voices in my head will be the death of me yet!}
+{22207}{I am losing my mind. I hear voices, yet no one is there.}
+{22208}{Who-who said that?}
+{22209}{Yes? Did I hear somebody?}
+{22210}{Yes? Is anybody there?}
+
+// guard
+{22250}{Where are you? I cannot see you!}
+{22251}{Huh? Come out where I can see you.}
+{22252}{What? Come out in the open.}
+{22253}{Who? Where are you?}
+{22254}{Where? Who are you?}
+{22255}{Who is speaking to me?}
+{22256}{Yes? Who? Where are you?}
+{22257}{Who said that? Come out if you want to talk to me.}
+{22258}{What? Who is hiding here?}
+{22259}{Hmm. Come on out, now. It is not proper to be hiding from the Law.}
+{22260}{Where? Who? What?}
+{22261}{What? Who? Where?}
+{22262}{Who? Where? What?}
+{22263}{Where? What? Who?}
+{22264}{What? Where? Who?}
+{22265}{Who? What? Where?}
+{22266}{Eh? Huh? What? Where?}
+{22267}{Huh? What? Who? Where?}
+{22268}{Who is there?}
+{22269}{Who is lurking about here?}
+
+
+// city_dweller
+{22300}{Huh? Is anybody there?}
+{22301}{Who are you?}
+{22302}{Who is about?}
+{22303}{Who is about?}
+{22304}{Who wants me?}
+{22305}{Who calls me?}
+{22306}{Who spoke?}
+{22307}{Who is speaking?}
+{22308}{Who said that?}
+{22309}{Where are you?}
+{22310}{Where are you hiding?}
+{22311}{Why bother me with ventriloquist pranks?}
+{22312}{Why are you hiding?}
+{22313}{Huh?}
+{22314}{Who said that?}
+
+
+// villager
+{22350}{Who wants me?}
+{22351}{What are you? A spook?}
+{22352}{Who? Is there a ghost about?}
+{22353}{Oh! What? Must be a sprite about, I says!}
+{22354}{Eh? Oh, hmm, must be a ghost hereabouts, I thinks.}
+{22355}{Voices I do indeed hear! No doubt that spooks are about.}
+{22356}{What?}
+{22357}{Who is there? Come on, show yourself!}
+{22358}{Yes? Is anybody there?}
+{22359}{Who said that?}
+{22360}{A ghost!}
+
+// beggar
+{22400}{Do not play with a poor beggar. Show yourself.}
+{22401}{Why torment a poor beggar with pranks? Show yourself.}
+{22402}{What? Who? Let me be! Go away, spook!}
+{22403}{Where is that voice coming from?}
+{22404}{Oh! I have got to get these voices out of my head!}
+{22405}{I thought I heard something, I did.}
+{22406}{What . . . wait. I swear I heard somebody . . . <mutter, mutter>}
+{22407}{What? I swear I heard somebody . . . <mutter, mutter>}
+{22408}{Eh? Voices again? Away with you.}
+{22409}{Hey, where are you? Let me see you.}
+{22410}{What? Is anybody there?}
+{22411}{What? Is anybody there?}
+{22412}{What? Is anybody there?}
+{22413}{Huh? What? Who is there?}
+{22414}{Huh? What? Who is there?}
+{22415}{Huh? Speak up, I cannot see you!}
+
+
+// thief
+{22450}{Hey, who touched me?}
+{22451}{Stay back, whoever . . . whatever you are!}
+{22452}{Whoa! Get away! Voices without a body are bad luck, I think.}
+{22453}{By your leave! Who? What . . . where?}
+{22454}{Yes? Who? Oh. It is time for some rest, I think.}
+{22455}{Yes? Hmm. Very good hiding in shadows, I think? Or . . . hmmm.}
+{22456}{Good day . . . uh, hmm. I must be going balmy! There ain't nobody there!}
+{22457}{Hey! Is anybody there? Hmph!}
+{22458}{Um . . . hmm. They said I would start to hear voices, they did.}
+{22459}{Eegads! A ghost!}
+{22460}{What? Who? Oh now, this is good. Hearing voices now, am I?}
+{22461}{Who said that?}
+{22462}{What? Who said that?}
+{22463}{What? Show yourself if you want to talk to me.}
+{22464}{What? Who? Come out from hiding if you want to talk.}
+{22465}{Aw, right! Now what is going on? Disembodied voices! What next, I say?}
+{22466}{Huh? I say! Who said that?}
+{22467}{Huh? Who said that?}
+{22468}{Come out from hiding.}
+{22469}{Say what? Where are you?}
+{22470}{Say what, now? Where are you?}
+{22471}{What? Is anybody there?}
+
+
+// bandit
+{22500}{Come out and show yourself, tramp!}
+{22501}{Wha . . .? I know I heard something . . .}
+{22502}{Oh. Blow me down, but I heard voices coming out of thin air, I did.}
+{22503}{Hmm? Uh, I gotta stop drinking so much. I am hearing voices now.}
+{22504}{'Ay, what? A voice from thin air? <mutter>}
+{22505}{'Ay. Buy me a drink, or leave me alone. Voices, voices and more voices -- but no bodies!}
+{22506}{'Ay what? Anybody there? <mutter>}
+{22507}{Eh? Speak up, I cannot see you.}
+{22508}{What? Is anybody there?}
+{22509}{Eh? What say you? Uh. Nobody around, <mutter>.}
+{22510}{Eh? I cannot see anybody.}
+{22511}{Eh? Did I just hear something?}
+{22512}{'Ay what? I know I heard somebody . . .}
+{22513}{Say what? Where are you? Who said that?}
+{22514}{Oh, right! Now I am hearing voices!}
+{22515}{Blimey! I know I heard somebody . . .}
+{22516}{Jiminy! I know I heard somebody . . .}
+{22517}{Huh, what?}
+{22518}{Huh, what?}
+{22519}{Where are you? Come on, show yourself!}
+
+
+

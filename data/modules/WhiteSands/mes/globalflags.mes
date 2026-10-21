@@ -1,0 +1,25 @@
+// Beds available in Game. We don't use '0' because Counter 0 might be '0' to start off with? So start with 11 for simplicity’s sake, I can then just -10.
+// Subtract '10' when you tie in a number to the 'counter 0' of the 'use' attachment point for the beds (ie. 11 becomes bed 1, 12 = 2, 13 = 3 etc...)
+// These are only used to check in dialog if the PC can rent a bed again or not.
+{11}{1 - PC has paid for POOR bed.}
+{12}{1 - PC has paid for GOOD bed.} 
+
+
+//Flags for NewBerg quests
+{20}{1 - PC has accepted "convince Jana" quest from Erenor}
+{21}{1 - PC has accepted "retrieve Jana" quest from Erenor}
+{22}{1 - PC has picked Jana's side}
+{23}{1 - PC has accepted Jana's quest to convince her father}
+{24}{1 - Jana is dead}
+{25}{1 - Has heard of the "Retrieve Jana" quest}
+{26}{1 - Has Retrieved Jana successfully for Erenor}
+{27}{1 - Erenor/Jana quests are completely over}
+{28}{1 - Jana has agreed to stay home with Erenor}
+{29}{1 - Jana has decided to accompany the PC}
+{30}{1 - Erenor has given Jana his blessing to leave}
+{31}{1 - PC's know Jana's name.}
+{32}{1 - PC has heard of "convince Jana" quest}
+{33}{1 - PC is on Erenor's side}
+
+
+

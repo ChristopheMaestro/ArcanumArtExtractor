@@ -1,0 +1,60 @@
+{1}{G:}{}{}{}{}{}
+{2}{Bonjour, je me nomme @pcname@.}{}{1}{me0 }{4}{}
+{3}{Salut @npcname@, quoi de neuf ?}{}{1}{me1 }{6}{}
+{4}{Je suis @npcname@.}{}{}{}{}{}
+{5}{Qu'avez-vous à me dire d'intéressant ?}{}{1}{}{6}{}
+{6}{Voulez-vous troquer ou bien des renseignements ?}{}{}{}{}{}
+{7}{R: $0, 1001-1010}{}{1}{}{6}{}
+{8}{B:}{}{1}{}{6}{}
+{9}{Paysan, as-tu du travail ?}{}{1}{qa1002 2,lc0 1,qu1003 0}{25}{}
+{10}{Paysan, j'ai ta pelle.}{}{1}{in5801 ,lc0 1,qu1003 2}{28}{}
+{11}{Linventeur m'a demander de lui rapporter un thermomètre spécial.}{}{1}{qu1005 2,lc0 3,$$50 }{30}{}
+{12}{N'auriez-vous pas du travail Lairboris?}{}{1}{qa1002 2,qb1006 1,lc0 2}{32}{}
+{13}{J'ai votre herbe LairBoris.}{}{1}{qu1006 3,lc0 2,in3803 }{35}{}
+{14}{Avez-vous du travail Lépicier ?}{}{1}{qa1002 2,qb1007 1,lc0 3}{37}{}
+{15}{J'ai votre hache Lépicier.}{}{1}{in2201 ,qu1007 3,lc0 3}{40}{}
+{16}{Avez-vous du travail, FaireAilleurs ?}{}{1}{qa1002 2,qb1008 1,lc0 4}{42}{}
+{17}{J'ai vos objets, FaireAilleurs.}{}{1}{qu1008 3,in5802 ,lc0 4}{45}{}
+{18}{Avez-vous du travail, LarmeMurier ?}{}{1}{qa1002 2,qb1009 1,lc0 5}{47}{}
+{19}{J'ai la poudre expérimentale, LarmeMurier.}{}{1}{qu1009 3,in5804 ,lc0 5}{50}{}
+{20}{SanSoif demande si vous ne pouviez pas le dépanner d'une caisse d'absinthe. Il vous la rendra quand il sera livré.}{}{1}{qu1010 2,lc0 3}{52}{}
+{21}{Lot'El demande si vous avez de la lavande.}{}{1}{qu1011 2,lc0 2,$$20 }{54}{}
+{22}{Avez-vous du travail EstAilleurs ?}{}{1}{qa1002 2,lc0 6,qb1012 1}{56}{}
+{23}{J'ai votre tissu, EstAilleurs.}{}{1}{in5803 ,qu1012 3,lc0 6}{59}{}
+{24}{E:}{}{1}{}{}{}
+{25}{Recupérez notre pelle s'il vous plait.  Retournez à l'endroit où se tenait le chef Ogre de l'est. Suivez le chemin. Au bout de celui-ci, la pelle est dans un arbre creux. Attention, des maraudeurs, bien armés s'y sont installé. C'est d'ailleurs pour cela que nous n'avons pu nous en charger nous-même. Puis ramenez-la à l'un d'entre nous.}{}{}{}{}{}
+{26}{D'accord. Je vous la ramènerais.}{}{1}{}{6}{qu1003 2}
+{27}{J'ai autre chose qu'à courrir après des pelles.}{}{1}{}{6}{qu1003 1,al-10 }
+{28}{C'est vrai, vous avez la pelle ?}{}{}{}{}{}
+{29}{Oui, tenez.}{}{1}{}{6}{in5801 ,qu1003 4,rp1003 }
+{30}{ha, il l'a encore cassé. Tenez, çà fera 50 pièces.}{}{}{}{}{}
+{31}{Merci [Vous payez et prenez le thermomètre]}{}{1}{}{6}{$$-50 ,in-5805 ,qu1005 3}
+{32}{Je n'ose quitter mon magazin et le Capitaine du bateau devrait m'avoir ramené mes herbes. Pourriez-vous vous en charger ?}{}{}{}{}{}
+{33}{Naturellement.}{}{1}{}{6}{qu1006 2}
+{34}{Mais qu'est-ce que vous avez tous à me prendre pour un coursier. Non.}{}{1}{}{6}{qu1006 2,re-10 }
+{35}{Merci, voici 20 pièces pour votre peine, mon brave.}{}{}{}{}{}
+{36}{C'est trop ! [vous prenez l'argent].}{}{1}{}{6}{qu1006 4,$$20 ,in3803 }
+{37}{Avec ces évènements, je n'ose quitter ma boutique. J'ai donné ma hache à réparer à Mc Giver. Il a du effectuer le travail. Pouvez-vous aller me la chercher ? Ce n'est pas le bon moment pour être désarmé. Tenez 50 pièces, cela devrait suffir.}{}{}{}{}{}
+{38}{Naturellement.}{}{1}{}{6}{qu1007 2,$$50 }
+{39}{Vous me prennez pour un garçon de course ? Je n'accepte pas.}{}{1}{}{6}{re-10 ,qu1007 }
+{40}{Ah, merci (il la passe à sa ceinture]. Tenez, 50 pièces pour votre peine. Et c'est peu, car vous auriez pu la garder pour vous si vous étiez malhonnête.}{}{}{}{}{}
+{41}{Merci beaucoup, j'en fairais bon usage [vous prenez l'argent].}{}{1}{}{6}{qu1007 4,$$50 ,re+20 ,in2201 }
+{42}{Vu les évènements, je n'ose m'éloigner de ma roulotte. Pouvez-vous allez voir le Garde des Entrepôts. Si par malheur, les dockers ont cassé des objets en déchargeant le bateau, je me fairais un bonheur de les récupérer.}{}{}{}{}{}
+{43}{Naturellement.}{}{1}{}{6}{qu1008 2}
+{44}{Vous me prennez pour un garçon de course ? Non.}{}{1}{}{6}{re-10 ,qu1008 }
+{45}{Merci. Tenez 20 pièces pour vous.}{}{}{}{}{}
+{46}{Merci.}{}{1}{}{6}{$$20 ,qu1008 4,in5802 }
+{47}{Avec ces évènements, je n'ose quitter ma boutique. Pouvez-vous me rapporter un peu de poudre expérimentale de Linventeur. Voici 50 pièces.}{}{}{}{}{}
+{48}{Naturellement.}{}{1}{}{6}{qu1009 2,$$50 }
+{49}{Vous me prennez pour un garçon de course ? Je n'accepte pas.}{}{1}{}{6}{re-10 ,qu1009}
+{50}{Merci, prenez ces 20 pièces pour votre peine.}{}{}{}{}{}
+{51}{Fallait pas [vous prenez l'argent].}{}{1}{}{6}{in5804 ,$$20 ,qu1009 4}
+{52}{Il est gonflé. En temps normal, sans problème. Mais cette fois-ci, on ne sais pas quand il sera livré. Tenez quand même.}{}{}{}{}{}
+{53}{Merci.}{}{1}{}{6}{in-3804 ,qu1010 3}
+{54}{Bien sûr, voici. 20 pièces s'il vous plaît.}{}{}{}{}{}
+{55}{Tenez [vous payez et prenez le paquet].}{}{1}{}{6}{$$-20 ,qu1011 3,in-3801 }
+{56}{Je n'ose quitter ma boutique, pourtant il faudrait que je récupère le stock de tissus arrivé avec le bateau. Pouvez-vous vous en charger ?}{}{}{}{}{}
+{57}{Naturellement.}{}{1}{}{6}{qu1012 2}
+{58}{Vous me prennez pour un garçon de course ? Je n'accepte pas.}{}{1}{}{6}{re-10 ,qu1012 }
+{59}{Merci, tenez 20 pièces pour votre peine.}{}{}{}{}{}
+{60}{Fallait pas [vous prenez l'argent].}{}{1}{}{6}{$$20 ,qu1012 4,in5803 }

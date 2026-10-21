@@ -1,0 +1,115 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{What do you sell here?}{}{5}{}{30}{}
+{3}{B:}{}{1}{}{0}{}
+{4}{I seek training.  Can you help me?}{}{5}{}{10}{}
+{5}{Could you repair something for me?}{}{5}{}{0}{ri}
+{6}{Oooh!  Shy nee tings!}{}{-4}{}{210}{}
+{7}{Anything interesting going on in town?}{}{5}{}{220}{}
+{9}{E:}{}{1}{}{0}{}
+
+{10}{Of course.  What type of training you looking for?}{Yes, ma'am.  What type of training you looking for?}{}{}{}{}
+{11}{I want to become much more deft at dodging.}{}{5}{}{180}{}
+{12}{I could use some help with my throwing arm.}{}{5}{}{190}{}
+{13}{I'd like to be able to repair my equipment.}{}{5}{}{200}{}
+{19}{F:}{}{1}{}{1}{}
+
+{30}{Melee Weapons and Armour are my specialty.  Body armour, helms, boots, maces, hammers, and swords.  None are finer in all of Arcanum!}{Melee Weapons and Armour are my specialty.  Body armour, helms, boots, maces, hammers, and swords.  None are finer in all of Arcanum!}{}{}{}{}
+{31}{B:}{}{1}{}{0}{}
+{32}{I seek training.  Can you help me?}{}{5}{}{10}{}
+{33}{Could you repair something for me?}{}{5}{}{0}{ri}
+{39}{E:}{}{1}{}{0}{}
+
+{40}{Is there something else you need?}{Is there something else you might need, ma'am?}{}{}{}{}
+{41}{B:}{}{1}{}{0}{}
+{42}{I seek training.  Can you help me?}{}{5}{}{10}{}
+{43}{Could you repair something for me?}{}{5}{}{0}{ri}
+{49}{E:}{}{1}{}{0}{}
+
+{50}{Training to be a Dodge Expert will cost you 200 coin.}{Training to be a Dodge Expert will cost you 200 coin.}{}{}{}{}
+{51}{I've got the money right here. [give him 200 coin]}{}{1}{$$200}{60}{$$-200, tr1 2}
+{59}{F:}{}{1}{}{0}{}
+
+{60}{[He shows you how to be quick and nimble on your feet] You're a Dodge Expert now.}{[He shows you how to be quick and nimble on your feet] You're a Dodge Expert now.}{}{}{}{}
+{69}{A:}{}{1}{}{0}{}
+
+{70}{Training to be a Dodge Master requires the maximum in flexibility.  If you are sure you're ready, the price is 300 coin.}{Training to be a Dodge Master requires the maximum in flexibility.  If you are sure you're ready, the price is 300 coin.}{}{}{}{}
+{71}{[You stretch your arms and then your legs]  I think it is time I became a Dodge Master.}{}{1}{$$300}{80}{$$-300, tr1 3}
+{79}{F:}{}{1}{}{1}{}
+
+{80}{[There are secret techniques, and then there are long forgotten secret techniques.  He shows you all of the latter]  Congratulations, Dodge Master.}{[There are secret techniques, and then there are long forgotten secret techniques.  He shows you all of the latter]  Congratulations, Dodge Master.}{}{}{}{}
+{89}{A:}{}{1}{}{0}{} 
+
+{90}{Sorry buddy, but you don't have what it takes to become a Master. Come back when you get a little more hair on your chest.}{Sorry lady.  But your skills just aren't up to par for Master training.  Come back after you've put in some practice.}{}{}{}{}
+{99}{E:}{}{1}{}{0}{}
+
+{100}{Getting to be a Throwing Expert will cost you 200 coin.}{Getting to be a Throwing Expert will cost you 200 coin.}{}{}{}{}
+{101}{Here is the necessary coin.}{}{1}{$$200}{140}{$$-200, tr3 2}
+{109}{F:}{}{1}{}{0}{}
+
+{110}{A Throwing Master can hit anything, anywhere within arm shot.  You appear to be ready, but are you really?  It will cost you 300 coin.}{A Throwing Master can hit anything, anywhere within arm shot.  You appear to be ready, but are you really?  It will cost you 300 coin.}{}{}{}{}
+{111}{I'm a natural.  Lets proceed. [give him 300 coin]}{}{1}{$$300}{150}{$$-300, tr3 3}
+{119}{F:}{}{1}{}{1}{}
+
+{120}{So you want to become an Expert at Repair?  The fee is 200 coin.}{So you want to become an Expert at Repair?  The fee is 200 coin.}{}{}{}{}
+{121}{[You look at your tools, and you can't help but grin. Give him 200 coin]}{}{1}{$$200}{160}{$$-200, tr12 2}
+{129}{F:}{}{1}{}{0}{}
+
+{130}{Being a Repair Master will make you a very highly sought after person.  It is a skill level many wish they had but one which few actually do.  My fee is 300 coin.}{Being a Repair Master will make you a very highly sought after person.  It is a skill level many wish they had but one which few actually do.  My fee is 300 coin.}{}{}{}{}
+{131}{[You nod in agreement]  Teach me Repair Mastery. [give him 300 coin]}{}{1}{$$300}{170}{$$-300, tr12 3}
+{139}{F:}{}{1}{}{1}{}
+
+{140}{[You can practically hit things with your eyes closed now!] You are a Throwing Expert.}{[You can practically hit things with your eyes closed now!] You are a Throwing Expert.}{}{}{}{}
+{149}{A:}{}{1}{}{0}{}
+
+{150}{[You feel you like you could hit a fly with a boomerang all the way on the other side of town.]  You are now unrivaled in the art of throwing.}{[You feel you like you could hit a fly with a boomerang all the way on the other side of town.]  You are now unrivaled in the art of throwing.}{}{}{}{}
+{159}{A:}{}{1}{}{0}{} 
+
+{160}{[You quickly check your armour and make a few repairs.  You are much more adept than you were before]  Congratulations, Repair Master.}{[You quickly check your armour and make a few repairs.  You are much more adept than you were before]  Congratulations, Repair Master.}{}{}{}{}
+{169}{A:}{}{1}{}{0}{}
+
+{170}{Repair Mastery is only for those of us that are truly gifted.  Welcome, brother. [he reaches out and shakes your hand]}{Repair Mastery is only for those of us that are truly gifted.  Welcome, sister. [he gently takes your hand and then bows down and gives you a small kiss on the back of it]}{}{}{}{}
+{179}{A:}{}{1}{}{0}{} 
+
+{180}{What level of training do you seek?}{What level of training do you seek?}{}{}{}{}
+{181}{T:1}{}{1}{}{30}{}
+{182}{Train me to be a Dodge Expert.}{}{1}{tr1 -1}{1}{et1 50}
+{183}{Train me to be a Dodge Master.}{}{1}{sk1 18, tr1 2, tr1 -2}{70}{}
+{184}{Train me to be a Dodge Master.}{}{1}{tr1 -1}{90}{}
+{189}{F:}{}{1}{}{1}{}
+
+{190}{What level of training do you seek?}{What level of training do you seek?}{}{}{}{}
+{191}{T:3}{}{1}{}{30}{}
+{192}{Train me to be a Throwing Expert.}{}{1}{tr3 -1}{1}{et3 100}
+{193}{Train me to be a Throwing Master.}{}{1}{sk3 18, tr3 2, tr3 -2}{110}{}
+{194}{Train me to be a Throwing Master.}{}{1}{tr3 -1}{90}{}
+{199}{F:}{}{1}{}{1}{}
+
+{200}{What level of training do you seek?}{What level of training do you seek?}{}{}{}{}
+{201}{T:12}{}{1}{}{30}{}
+{202}{Train me to be a Repair Expert.}{}{1}{tr12 -1}{1}{et12 120}
+{203}{Train me to be a Repair Master.}{}{1}{sk12 18, tr12 2, tr12 -2}{130}{}
+{204}{Train me to be a Repair Master.}{}{1}{tr12 -1}{90}{}
+{209}{F:}{}{1}{}{1}{}
+
+{210}{[shakes his head.  Lets you stare at your reflection in the armour for a few minutes, watching you make faces and giggle]  Okay now son.  I think it's time for you to run along.}{[shakes his head.  Lets you stare at your reflection in the armour for a few minutes, watching you make faces and giggle]  Okay now girl.  I think it's time for you to run along.}{}{}{}{}
+{211}{bye meer or man haha!}{}{-4}{}{0}{}
+
+{220}{Actually, it isn't necessarily interesting.  It is more depressing.  It is a shame that Tony has been exiled. [a sad look comes over his face]}{Actually, it isn't necessarily interesting.  It is more depressing.  It is a shame that Tony has been exiled. [a sad look comes over his face]}{}{}{}{}
+{221}{Who is Tony?}{}{5}{}{230}{}
+{229}{E:}{}{1}{}{0}{}
+
+{230}{Tony Stark.  Only the greatest inventor Latveria has ever known!  His advancements in armour are second to none!}{Tony Stark.  Only the greatest inventor Latveria has ever known!  His advancements in armour are second to none!}{}{}{}{}
+{231}{Why was he exiled?}{}{5}{}{240}{}
+{239}{E:}{}{1}{}{0}{}
+
+{240}{Supposedly he double crossed Sir Victor Von Doom.  But I just can't believe he would do something like that.}{Supposedly he double crossed Sir Victor Von Doom.  But I just can't believe he would do something like that.}{}{}{}{}
+{241}{Where was he exiled to?}{}{5}{}{250}{}
+{249}{E:}{}{1}{}{0}{}
+
+{250}{He was exiled to the caves in the northeast region of the land.  Sir Doom told him never to return.}{He was exiled to the caves in the northeast region of the land.  Sir Doom told him never to return.}{}{}{}{}
+{251}{That is grave news indeed.}{}{5}{}{40}{}
+{259}{E:}{}{1}{}{0}{}
+
+{260}{Lord Doom would like to see you regarding a matter of the utmost urgency.}{Lord Doom would like to see you regarding a matter of the utmost urgency.}{}{}{}{}
+{261}{Very well.}{}{5}{}{1}{}
+{262}{Uh huh.}{}{-4}{}{1}{}

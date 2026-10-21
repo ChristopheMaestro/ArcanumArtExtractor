@@ -1,0 +1,124 @@
+{1}{Oui?}{Oui?}{}{1}{}{}
+{2}{Bonjour. Qui êtes-vous, s'il vous plaît?}{}{5}{lf1 0}{30}{lf1 1}
+{3}{Bonjour, mon père. Je m'appelle @pcname@.}{}{5}{lf1 0}{30}{lf1 1, re+10}
+{4}{Toi bonjour. Qui être teplaît?}{}{-4}{lf1 0}{30}{lf1 1}
+{5}{Bonjour, toi. Moi être @pcname@.}{}{-4}{lf1 0}{30}{lf1 1, re+10}
+{6}{Que faîtes-vous ici?}{}{5}{lf1 1, lf2 0}{60}{lf2 1}
+{7}{Puis-je vous rendre service par un moyen quelconque?}{}{5}{lf1 1,lf3 0, qu1002 0}{90}{lf3 1}
+{8}{Toi quoi faire ici?}{}{-4}{lf1 1, lf2 0}{60}{lf2 1}
+{9}{@pcname@ peut aider toi faire trucs??}{}{-4}{lf1 1,lf3 0, qu1002 0}{90}{lf3 1}
+{10}{B:}{}{1}{lf2 1}{0}{}
+{11}{Je viens chercher un puissant somnifère pour le père prieur.}{}{5}{lf2 1, qu1000 1}{-2}{qu1000 3}
+{12}{Moi venir chercher solifère pour père prieur.}{}{-4}{lf2 1, qu1000 1}{-2}{qu1000 3}
+{13}{Voici vos lunettes de chirurgien, mon père.}{}{5}{in 3005, lf1 1}{180}{qu1002 4, in 3005}
+{14}{Voilà lunettes, père.}{}{-4}{in 3005, lf1 1}{180}{qu1002 4, in 3005}
+{15}{E:}{}{1}{}{0}{}
+
+{30}{Je suis le père Matthieu. Bienvenue parmi nous, mon enfant.}{Je suis le père Matthieu. Bienvenue parmi nous, mon enfant.}{}{2}{}{}
+{31}{Que faîtes-vous ici?}{}{5}{lf1 1, lf2 0}{60}{lf2 1}
+{32}{Puis-je vous rendre service par un moyen quelconque?}{}{5}{lf1 1,lf3 0, qu1002 0}{90}{lf3 1}
+{33}{Toi quoi faire ici?}{}{-4}{lf1 1, lf2 0}{60}{lf2 1}
+{34}{@pcname@ peut aider toi faire trucs??}{}{-4}{lf1 1,lf3 0, qu1002 0}{90}{lf3 1}
+{35}{E:}{}{1}{}{0}{}
+
+{60}{Je suis le père soigneur de l'abbaye. Je m'exerce dans l'art de la médecine. A ne pas confondre avec le travail de l'herboriste ou du mage.}{Je suis le père soigneur de l'abbaye. Je m'exerce dans l'art de la médecine. A ne pas confondre avec le travail de l'herboriste ou du mage.}{}{3}{}{}
+{61}{Puis-je vous rendre service par un moyen quelconque?}{}{5}{lf1 1,lf3 0, qu1002 0}{90}{lf3 1}
+{62}{@pcname@ peut aider toi faire trucs??}{}{-4}{lf1 1,lf3 0, qu1002 0}{90}{lf3 1}
+{63}{Je viens chercher un puissant somnifère pour le père prieur.}{}{5}{lf2 1, qu1000 1}{-2}{qu1000 3}
+{64}{Moi venir chercher solifère pour père prieur.}{}{-4}{lf2 1, qu1000 1}{-2}{qu1000 3}
+{65}{B:}{}{1}{lf2 1}{0}{}
+{66}{Voici vos lunettes de chirurgien, mon père.}{}{5}{in 3005, lf1 1}{180}{qu1002 4, in 3005}
+{67}{Voilà lunettes, père.}{}{-4}{in 3005, lf1 1}{180}{qu1002 4, in 3005}
+{68}{E:}{}{1}{}{0}{}
+
+{90}{Il n'y a pas grand chose que je puisse vous faire faire...}{Il n'y a pas grand chose que je puisse vous faire faire...}{}{4}{}{}
+{91}{[Suite]}{}{1}{}{92}{}
+
+{92}{...Attendez! J'y pense à présent! J'ai égaré mes lunettes de chirurgien. Je n'ai pas le temps de les chercher. Pourriez-vous les retrouver pour moi?}{...Attendez! J'y pense à présent! J'ai égaré mes lunettes de chirurgien. Je n'ai pas le temps de les chercher. Pourriez-vous les retrouver pour moi?}{}{5}{}{}
+{93}{Y:}{}{1}{}{100}{qu1002 2, re +5}
+{94}{N:}{}{1}{}{130}{qu1002 1}
+
+{100}{Merci beaucoup.}{Merci beaucoup.}{}{6}{}{}
+{101}{Que faîtes-vous ici?}{}{5}{lf1 1, lf2 0}{60}{lf2 1}
+{102}{Puis-je vous rendre service par un moyen quelconque?}{}{5}{lf1 1,lf3 0, qu1002 0}{90}{lf3 1}
+{103}{Toi quoi faire ici?}{}{-4}{lf1 1, lf2 0}{60}{lf2 1}
+{104}{@pcname@ peut aider toi faire trucs??}{}{-4}{lf1 1,lf3 0, qu1002 0}{90}{lf3 1}
+{105}{B:}{}{1}{lf2 1}{0}{}
+{106}{Je viens chercher un puissant somnifère pour le père prieur.}{}{5}{lf2 1, qu1000 1}{-2}{qu1000 3}
+{107}{Moi venir chercher solifère pour père prieur.}{}{-4}{lf2 1, qu1000 1}{-2}{qu1000 3}
+{108}{Voici vos lunettes de chirurgien, mon père.}{}{5}{in 3005, lf1 1}{180}{qu1002 4, in 3005}
+{109}{Voilà lunettes, père.}{}{-4}{in 3005, lf1 1}{180}{qu1002 4, in 3005}
+{110}{E:}{}{1}{}{0}{}
+
+{130}{Cela ne fait rien.}{Cela ne fait rien.}{}{7}{}{}
+{131}{Que faîtes-vous ici?}{}{5}{lf1 1, lf2 0}{60}{lf2 1}
+{132}{Puis-je vous rendre service par un moyen quelconque?}{}{5}{lf1 1,lf3 0, qu1002 0}{90}{lf3 1}
+{133}{Toi quoi faire ici?}{}{-4}{lf1 1, lf2 0}{60}{lf2 1}
+{134}{@pcname@ peut aider toi faire trucs??}{}{-4}{lf1 1,lf3 0, qu1002 0}{90}{lf3 1}
+{135}{B:}{}{1}{lf2 1}{0}{}
+{136}{Je viens chercher un puissant somnifère pour le père prieur.}{}{5}{lf2 1, qu1000 1}{-2}{qu1000 3}
+{137}{Moi venir chercher solifère pour père prieur.}{}{-4}{lf2 1, qu1000 1}{-2}{qu1000 3}
+{138}{Voici vos lunettes de chirurgien, mon père.}{}{5}{in 3005, lf1 1}{180}{qu1002 4, in 3005}
+{139}{Voilà lunettes, père.}{}{-4}{in 3005, lf1 1}{180}{qu1002 4, in 3005}
+{140}{E:}{}{1}{}{0}{}
+
+{150}{Voici. Prenez cette boîte de sachets. Mais faîtes bien attention : il s'agît d'un remède puissant. Mélangé à un breuvage ou à un quelconque repas, il prendra effet presque immédiatement après que le patient l'ait ingurgité!}{Voici. Prenez cette boîte de sachets. Mais faîtes bien attention : il s'agît d'un remède puissant. Mélangé à un breuvage ou à un quelconque repas, il prendra effet presque immédiatement après que le patient l'ait ingurgité!}{}{8}{}{in -5803}
+{151}{Puis-je vous rendre service par un moyen quelconque?}{}{5}{lf1 1,lf3 0, qu1002 0}{90}{lf3 1}
+{152}{@pcname@ peut aider toi faire trucs??}{}{-4}{lf1 1,lf3 0, qu1002 0}{90}{lf3 1}
+{153}{B:}{}{1}{lf2 1}{0}{}
+{154}{Voici vos lunettes de chirurgien, mon père.}{}{5}{in 3005, lf1 1}{180}{qu1002 4, in 3005}
+{155}{Voilà lunettes, père.}{}{-4}{in 3005, lf1 1}{180}{qu1002 4, in 3005}
+{156}{E:}{}{1}{}{0}{}
+
+{180}{Merci beaucoup mon enfant!}{Merci beaucoup mon enfant!}{}{9}{}{}
+{181}{Que faîtes-vous ici?}{}{5}{lf1 1, lf2 0}{60}{lf2 1}
+{182}{Puis-je vous rendre service par un moyen quelconque?}{}{5}{lf1 1,lf3 0, qu1002 0}{90}{lf3 1}
+{183}{Toi quoi faire ici?}{}{-4}{lf1 1, lf2 0}{60}{lf2 1}
+{184}{@pcname@ peut aider toi faire trucs??}{}{-4}{lf1 1,lf3 0, qu1002 0}{90}{lf3 1}
+{185}{B:}{}{1}{lf2 1}{0}{}
+{186}{Je viens chercher un puissant somnifère pour le père prieur.}{}{5}{lf2 1, qu1000 1}{-2}{qu1000 3}
+{187}{Moi venir chercher solifère pour père prieur.}{}{-4}{lf2 1, qu1000 1}{-2}{qu1000 3}
+{188}{Voici vos lunettes de chirurgien, mon père.}{}{5}{in 3005, lf1 1}{180}{qu1002 4, in 3005}
+{189}{Voilà lunettes, père.}{}{-4}{in 3005, lf1 1}{180}{qu1002 4, in 3005}
+{190}{E:}{}{1}{}{0}{}
+
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+
+

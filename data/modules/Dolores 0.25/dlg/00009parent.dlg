@@ -1,0 +1,93 @@
+{1}{[Votre oncle adoptif vous regarde étrangement et ne dit pas un mot]}{[Votre oncle adoptif vous regarde étrangement et ne dit pas un mot]}{}{}{}{}
+// Seulement si pas encore parlé avec, lu journal ou non
+{2}{Euh... Bonjour mon oncle ?}{}{5}{gf1 0}{20}{}
+{3}{Hu.. 'Jour tonton !}{}{-4}{gf1 0}{30}{}
+//Seulement si deja parle, revenu apres avoir lu journal
+{4}{J'ai lu le journal de mon père.}{}{5}{gf1 1, gf0 1}{120}{}
+{5}{Moa lu journal a papa...}{}{-4}{gf1 1, gf0 1}{140}{}
+//seulement si deja parle, revenu sans lire le journal
+{6}{Euh... Je n'ai pas encore lu le journal.. Je reviens...}{}{5}{gf1 1, gf0 0}{0}{}
+{7}{hu... Moa reviain}{}{-4}{gf1 1, gf0 0}{0}{}
+// Seulement si déjà parlé avec, deja lu etc
+{8}{E:}{}{1}{gf1 1}{0}{}
+
+{20}{[Son regard s'adoucit enfin et un sourire commence à poindre au bord de ses lèvres] Oui... Bonjour mon neveux...}{[Son regard s'adoucit enfin et un sourire commence à poindre au bord de ses lèvres] Oui... Bonjour ma nièce...}{}{}{}{gf1 1}
+{21}{Quelque chose ne va pas ?}{}{5}{}{40}{}
+
+{30}{[Son regard se durcit et il vous regarde fixement. Sa voix est un murmure que vous entendez à peine] Il est malheureux que le fils de mon ami soit devenu ainsi...}{[Son regard se durcit et il vous regarde fixement. Sa voix est un murmure que vous entendez à peine] Il est malheureux que la fille de mon ami soit devenue ainsi...}{}{}{}{gf1 1}
+{31}{Huh ?}{}{-4}{}{50}{}
+
+{40}{Non... Non... Enfin, plutôt, si... Tu sais...}{}{}{}{}{}
+
+// seulement si pas lu le journal
+{41}{Euh... Non ?! Quoi ?}{}{5}{gf0 0}{60}{}
+
+// seulement si lu le journal
+{42}{Vous voulez parler du journal de mon père ?}{}{5}{gf0 1}{80}{}
+
+{50}{Hem... Comment dire... [Dans un murmure] De toute façon cet attardé ne comprendra pas la moitié de ce que je vais lui dire...}{Hem... Comment dire... [Dans un murmure] De toute façon cette attardée ne comprendra pas la moitié de ce que je vais lui dire...}{}{}{}{}
+
+// Si pas lu le journal
+{51}{Huh ? Koua ?}{}{-4}{gf0 0}{90}{}
+
+// si lu le journal
+{52}{Koua ? Journalle ?}{}{-4}{gf0 1}{110}{}
+
+
+// Si pas lu journal, IN>5
+{60}{Eh bien... Chez toi, il y a un coffre. Ouvre-le, et lis le journal qu'il y a à l'intérieur. C'est l'ancien journal de ton père.}{Eh bien... Chez toi, il y a un coffre. Ouvre-le, et lis le journal qu'il y a à l'intérieur. C'est l'ancien journal de ton père.}{}{}{}{}
+{61}{D'accord, je reviens tout de suite.}{}{5}{}{0}{}
+
+// Si lu journal, IN>5
+{80}{[Il paraît soulagé] Oui, exactement. C'était pour te dire que... Je n'étais pas réellement ton oncle. Du moins, pas de sang. Mais cela n'a que peu d'importance. Maintenant que tu sais qui tu es réellement, tu dois suivre ta vie. }{[Il paraît soulagé] Oui, exactement. C'était pour te dire que... Je n'étais pas réellement ton oncle. Du moins, pas de sang. Mais cela n'a que peu d'importance. Maintenant que tu sais qui tu es réellement, tu dois suivre ta vie.}{}{}{}{}
+{81}{[Suite]}{}{1}{}{82}{}
+
+{82}{Mais... [Il paraît attristé et décidé à la fois] Ce que je voudrais... Et que ton père voudrait également... s'il était encore de ce monde... Ce ne serait pas de venger tout le monde... Quoique... Mais de restaurer la paix... De convaincre ce... Gouvernement des Arcanes de laisser les technologistes avoir des droits, comme tout le monde !}{Mais... [Il paraît attristé et décidé à la fois] Ce que je voudrais... Et que ton père voudrait également... s'il était encore de ce monde... Ce ne serait pas de venger tout le monde... Quoique... Mais de restaurer la paix... De convaincre ce... Gouvernement des Arcanes de laisser les technologistes avoir des droits, comme tout le monde !}{}{}{}{}
+{83}{Je comprend... Je convaincrais le chef du gouvernement !}{}{5}{}{160}{}
+{84}{Ce gouvernement a assassiné mes parents, et leurs amis ! Ils doivent mourir !}{}{5}{}{180}{}
+
+//Si pas lu journal, IN<5
+{90}{Va chez toi. Ouvre le coffre dans l'entrée. Lis le livre (si tu y arrives). Et reviens me voir.}{Va chez toi. Ouvre le coffre dans l'entrée. Lis le livre (si tu y arrives). Et reviens me voir.}{}{}{}{}
+{91}{Dacor. Jivé.}{}{-4}{}{0}{}
+
+//Si lu journal, IN<5
+{110}{Hem... oui, c'est ça... Bon, tu sais maintenant que je ne suis pas ton oncle (heureusement). Ton père, tout comme moi, voudrait que tu... Euh... Toi devoir convaincre le chef des méchants que technologistes doivent être respectés !}{Hem... oui, c'est ça... Bon, tu sais maintenant que je ne suis pas ton oncle (heureusement). Ton père, tout comme moi, voudrait que tu... Euh... Toi devoir convaincre le chef des méchants que technologistes doivent être respectés !}{}{}{}{}
+{111}{Gouvairneman maichan ! doi savoar ke technolojy biain !}{}{-4}{}{200}{}
+{112}{Pa jenti gouvairneman ! Moa tué gouvairneman !}{}{-4}{}{220}{}
+
+//revenu apres lecture IN>5
+{120}{C'était pour te dire que... Je n'étais pas réellement ton oncle. Du moins, pas de sang. Mais cela n'a que peu d'importance. Maintenant que tu sais qui tu es réellement, tu dois suivre ta vie.}{C'était pour te dire que... Je n'étais pas réellement ton oncle. Du moins, pas de sang. Mais cela n'a que peu d'importance. Maintenant que tu sais qui tu es réellement, tu dois suivre ta vie.}{}{}{}{}
+{121}{[Suite]}{}{1}{}{82}{}
+
+//revenu apres lecture IN<5
+{140}{Bon, tu sais maintenant que je ne suis pas ton oncle (heureusement). Ton père, tout comme moi, voudrait que tu... Euh... Toi devoir convaincre le chef des méchants que technologistes doivent être respectés !}{Bon, tu sais maintenant que je ne suis pas ton oncle (heureusement). Ton père, tout comme moi, voudrait que tu... Euh... Toi devoir convaincre le chef des méchants que technologistes doivent être respectés !}{}{}{}{}
+{141}{Gouvairneman maichan ! doi savoar ke technolojy biain !}{}{-4}{}{200}{}
+{142}{Pa jenti gouvairneman ! Moa tué gouvairneman !}{}{-4}{}{220}{}
+
+//reponse positive apres explication IN>5
+{160}{[Un sourire illumine son visage] Je savais que tu saurais faire le bon choix... Maintenant, il faut que tu le trouves ce chef... Parce que je ne saurais plus t'indiquer l'île, et je me fais trop vieux pour ce genre de voyage...}{[Un sourire illumine son visage] Je savais que tu saurais faire le bon choix... Maintenant, il faut que tu le trouves ce chef... Parce que je ne saurais plus t'indiquer l'île, et je me fais trop vieux pour ce genre de voyage...}{}{}{}{qu1002 2, ru1001, gf10 1}
+{161}{Très bien. Je pars dès maintenant à la recherche d'informations.}{}{5}{}{0}{}
+
+//reponse negative apres explication IN>5
+{180}{[Son visage s'assombrit] Eh bien j'imagine que je ne pourrais pas te faire changer d'avis... Malheureusement pour toi, je ne saurais pas te dire où ce chef réside...}{[Son visage s'assombrit] Eh bien j'imagine que je ne pourrais pas te faire changer d'avis... Malheureusement pour toi, je ne saurais pas te dire où ce chef réside...}{}{}{}{qu1002 2, ru1001, gf10 1}
+{181}{Je n'ai pas besoin de toi pour le trouver !}{}{5}{}{0}{}
+{182}{Même sous la torture ?}{}{5}{}{230}{re -20}
+
+//reponse positive apres explication IN<5
+{200}{Ouf... Je respire ! Tu n'es pas un meurtrier ! Mais c'est pas de chance, parce que je ne sais pas où est ce chef. Tu vas devoir le trouver seul...}{Ouf... Je respire ! Tu n'es pas un meurtrier ! Mais c'est pas de chance, parce que je ne sais pas où est ce chef. Tu vas devoir le trouver seule...}{}{}{}{qu1002 2, ru1001, gf10 1}
+{201}{Ah... Moa partir pour trouvé cheffe !}{}{-4}{}{0}{}
+
+/reponse negative apres explication  IN<5
+{220}{[Son expression se durcit] Malheureusement, tu vas devoir chercher seul. Surtout si tu veux les tuer, je ne t'aiderais pas.}{[Son expression se durcit] Malheureusement, tu vas devoir chercher seule. Surtout si tu veux les tuer, je ne t'aiderais pas.}{}{}{}{qu1002 2, ru1001, gf10 1}
+{221}{Alor moa partir seul san toa !}{}{-4}{}{0}{}
+{222}{Moa te tué si toa pa donné informassion a moa !}{}{-4}{}{240}{re -20}
+
+{230}{[Il blêmit] Mais... Enfin... Tu ne m'attaquerait tout même pas ?!}{[Il blêmit] Mais... Enfin... Tu ne me tuerait tout même pas ?!}{}{}{}{}
+{231}{Tu parles ! [Attaque-le]}{}{5}{}{0}{co}
+{232}{Mmhh... A la réflexion, je pense que je vais attendre un peu...}{}{5}{}{0}{}
+
+{240}{[Il pâlit] Mais enfin... Tu ne vas pas m'attaquer tout de même ! C'est moi qui t'ai élevé, nourri, et tout !}{[Il pâlit] Mais enfin... Tu ne vas pas m'attaquer tout de même ! C'est moi qui t'ai élevé, nourri, et tout !}{}{}{}{}
+{241}{Grrr ! [Attaque-le]}{}{-4}{}{0}{co}
+{242}{Mmpfft... Moa i allé...}{}{-4}{}{0}{}
+
+{300}{[Votre oncle vous regarde sans dire un mot]}{[Votre oncle vous regarde sans dire un mot]}{}{}{}{}

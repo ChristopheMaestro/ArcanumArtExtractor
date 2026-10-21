@@ -1,0 +1,20 @@
+{1}{G:}{}{}{}{}{}
+{2}{Bonjour @npcname@.}{}{1}{me1 }{10}{}
+{3}{Bonjour, Mon nom est @pcname@. Je viens arriver par le bateau.}{}{1}{me0 }{4}{}
+{4}{Je suis @npcname@, le propriétaire de la taverne. Si vous désiriez une chambre, je suis désolé, nous sommes complet.}{}{}{}{}{}
+{5}{Pouvez-vous me dire quand vous en aurez de disponible ?}{}{1}{}{6}{}
+{6}{Vous n'êtes donc pas au courant ! Cela fait plusieurs jours que les routes sont coupées. Certaines personnes n'ont pu rentrer chez elles. Et l'arrivée du bateau, n'a fait qu'en augmenter le nombre.}{}{}{}{}{}
+{7}{Mon Dieu, c'est terrible, pouvez-vous m'en dire plus ?}{}{1}{}{8}{}
+{8}{Je pourrais vous raconter certaines rumeurs mais demandez aussi aux autres habitants.}{}{}{}{}{}
+{9}{Autre chose.}{}{1}{}{10}{}
+{10}{Je n'ai plus de chambre. Que désirez-vous ? }{}{}{}{}{}
+{11}{R: $0, 1001-1010}{}{1}{}{12}{}
+{12}{B:}{}{1}{}{12}{}
+{13}{Du travail.}{}{1}{qa1002 2,qb1011 1}{16}{}
+{14}{J'ai la lavande.}{}{1}{qu1011 3,in3801 }{19}{}
+{15}{E:}{}{1}{}{}{}
+{16}{J'aurais besoin de lavande pour mettre dans l'armoire des draps. LairBorris devrait en avoir. Voici 20 pièces.}{}{}{}{}{}
+{17}{Bien sûr, je vais vous en acheter tout de suite.}{}{1}{}{10}{qu1011 2,$$20 }
+{18}{Qu'est ce que vous avez tous à me prendre pour le coursier de service. Non, non et non.}{}{1}{}{10}{qu1011 2,re-10 }
+{19}{Merci, tenez, 20 pièces pour votre peine. }{}{}{}{}{}
+{20}{Merci.}{}{1}{}{10}{$$20 ,qu1011 4,in3801 }

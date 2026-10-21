@@ -1,0 +1,88 @@
+// [LABEL] Bonjour
+{1}{Bonjour, vous êtes sur une cabine de Québec city...qui voulez vous appeler ?}{Bonjour, vous êtes sur une cabine de Québec city...qui voulez vous appeler ?}{}{1}{}{}
+{2}{Vincent Lagaf}{}{1}{}{21}{}
+{3}{Joel Robuchon}{}{1}{}{41}{}
+{4}{3615 MEN}{}{1}{}{81}{}
+{5}{Allô ciné}{}{1}{}{241}{}
+{6}{personne}{}{1}{}{}{}
+
+// [LABEL] Lagaf
+{21}{Tuuuut... Oui, bonjour, pas là pour l'instant, laissez l'message après le bip....BIIP}{Tuuuut... Oui, bonjour, pas là pour l'instant, laissez l'message après le bip....BIIP}{}{2}{}{}
+{22}{Euh j'a fait une erreur, pardon, salut}{}{1}{}{}{}
+{23}{J'espère que vous allez bientôt rentrer, je dois vous parler...A+}{}{1}{}{}{}
+
+// [LABEL] Robuch
+{41}{Tuuuut...Allô ? oui ?}{Tuuuut...Allô ? oui ?}{}{3}{}{}
+{42}{Bonjour monsieur Robuchon je vous appelle pour vous demander la recette de la pintade aux noix de saint Jacques de l'autre jour...}{}{1}{}{61}{}
+{43}{Euh rien je me suis trompé.}{}{1}{}{}{}
+
+// [LABEL] sorry
+{61}{Non, excusez moi je n'ai pas le temps de vous la donner, voyons. Je dois préparer mon émission dans 15 minutes. Allez, au revoir, et bon appétit quand même !}{Non, excusez moi je n'ai pas le temps de vous la donner, voyons. Je dois préparer mon émission dans 15 minutes. Allez, au revoir, et bon appétit quand même !}{}{4}{}{}
+{62}{au revoir}{}{1}{}{}{}
+
+// [LABEL] 3615 Men
+{81}{Tuuuut...bienvenue sur le forum 3615 MEN spécial pour les hommes.     Si tu veux faire des rencontres tapes 1 si tu veux consulter tes messages tape 2}{Tuuuut...bienvenue sur le forum 3615 MEN spécial pour les hommes.     Si tu veux faire des rencontres tapes 1 si tu veux consulter tes messages tape 2}{}{5}{}{}
+{82}{Tape 1 [rencontres]}{1}{1}{}{101}{}
+{83}{2 [messagerie]}{1}{1}{}{161}{}
+{84}{raccroche}{}{1}{}{}{}
+
+// [LABEL] chat
+{101}{Exprime ton message et les autres l'entendront :}{Exprime ton message et les autres l'entendront :}{}{6}{}{}
+{102}{Bonjour, je voudrais parler avec Steevy, svp, mon nom c'est @pcname@}{1}{1}{}{121}{}
+{103}{Je voudrais savoir si y'a des gars pour parler tranquillement et rencontre, mon nom c'est @pcname@  [après tout vous faites ce que vous voulez...]}{1}{1}{}{141}{}
+{104}{Salut je cherche des beaux mecs pour une rencontre...mon nom c'est @pcname@}{0}{1}{}{181}{}
+
+// [LABEL] steevy
+{121}{VOUS avez été EXCLU du forum : pas de message atteignant à la vie privée des personnes (surtout les stars).}{VOUS avez été EXCLU du forum : pas de message atteignant à la vie privée des personnes (surtout les stars).}{}{7}{}{}
+{122}{raccroche}{}{1}{}{}{}
+
+// [LABEL] Réponses
+{141}{Vous avez reçu 2 réponses : qui choisissez vous parmi ces 2 personnes ? Alphonso ?  Jean-Roger ?}{Vous avez reçu 2 réponses : qui choisissez vous parmi ces 2 personnes ? Alphonso ?  Jean-Roger ?}{}{8}{}{}
+{142}{Alphonso}{}{1}{}{201}{}
+{143}{Jean Roger}{}{1}{}{221}{}
+{144}{raccroche}{}{1}{}{}{}
+
+// [LABEL] messages
+{161}{Vous n'avez aucun message, désolé}{Vous n'avez aucun message, désolé}{}{9}{}{}
+{162}{raccroche}{}{1}{}{}{}
+
+// [LABEL] excluE
+{181}{VOUS avez été EXLCUE du forum : uniquement réservé aux hommes !}{VOUS avez été EXLCUE du forum : uniquement réservé aux hommes !}{}{10}{}{}
+{182}{raccroche}{}{1}{}{}{}
+
+// [LABEL] alphonso
+{201}{Salut, d'où tu es mon chou ?}{Salut, d'où tu es mon chou ?}{}{11}{}{}
+{202}{Hé, j'aime pas qu'on m'appelle comme ça, toi ! va te faire ! [raccroche]}{}{1}{}{}{}
+
+// [LABEL] Jeanroger
+{221}{Salut, moi c'est Jean Roger. C'est un beau nom, @pcname@ je trouve. Y'a moyen de se voir , paske tu m'as l'air sympa, t'as qu'à me dire où....mais que ?.....AAARRRRGHH, AAA , SECOURS [vous entendez des grognements et des bruits horribles] crkchhhhhh.....tut, tut , tut}{Salut, moi c'est Jean Roger. C'est un beau nom, @pcname@ je trouve. Y'a moyen de se voir , paske tu m'as l'air sympa, t'as qu'à me dire où....mais que ?.....AAARRRRGHH, AAA , SECOURS [vous entendez des grognements et des bruits horribles] crkchhhhhh.....tut, tut , tut}{}{12}{}{}
+{222}{Oh, marde, c'est horrible [vous raccrochez]}{}{1}{}{}{}
+
+// [LABEL] allociné
+{241}{Bienvenue sur Allô Ciné. de Quel film voulez vous des conseils pour aller le voir ?}{Bienvenue sur Allô Ciné. de Quel film voulez vous des conseils pour aller le voir ?}{}{13}{}{}
+{242}{SCREAM3}{}{1}{}{261}{}
+{243}{SCARY MOVIE}{}{1}{}{281}{}
+{244}{MASSACRE à LA TRONçONNEUSE}{}{1}{}{301}{}
+{245}{BANDITS}{}{1}{}{321}{}
+{246}{rien je me suis trompé}{}{1}{}{}{}
+
+// [LABEL] Scream3
+{261}{SCREAM 3 : une daube sans nom mais mieux que SCREAM2, après tout chacun ses goûts mais c'est clair qu'y a mieux !  un autre film ?}{SCREAM 3 : une daube sans nom mais mieux que SCREAM2, après tout chacun ses goûts mais c'est clair qu'y a mieux !  un autre film ?}{}{14}{}{}
+{262}{Oui}{}{1}{}{241}{}
+{263}{non[vous raccorchez]}{}{1}{}{}{}
+
+// [LABEL] Scary movie
+{281}{SCARY MOVIE : un film à ne surtout pas prendre au sérieux pour en profiter au maximum, une bonne parodie, en résumé. autre chose ?}{SCARY MOVIE : un film à ne surtout pas prendre au sérieux pour en profiter au maximum, une bonne parodie, en résumé. autre chose ?}{}{15}{}{}
+{282}{Oui}{}{1}{}{241}{}
+{283}{Non merci}{}{1}{}{}{}
+
+// [LABEL] Malatronc
+{301}{MASSACRE à la tronçonneuse : un très vieux film mais qui reste un classique, même s'il ne brille pas par son scénario ni ses effets spéciaux. autre chose ?}{MASSACRE à la tronçonneuse : un très vieux film mais qui reste un classique, même s'il ne brille pas par son scénario ni ses effets spéciaux. autre chose ?}{}{16}{}{}
+{302}{Oui}{}{1}{}{241}{}
+{303}{non}{}{1}{}{}{}
+
+// [LABEL] Bandits
+{321}{BANDITS : Bruce Willis et BB Thornton arrivent à sortir le film de la misère avec un peu d'humour. à ne pas rater : le légendaire "NOBODY MOVE" au début. autre chose ?}{BANDITS : Bruce Willis et BB Thornton arrivent à sortir le film de la misère avec un peu d'humour. à ne pas rater : le légendaire "NOBODY MOVE" au début. autre chose ?}{}{17}{}{}
+{322}{oui}{}{1}{}{241}{}
+{323}{non}{}{1}{}{}{}
+

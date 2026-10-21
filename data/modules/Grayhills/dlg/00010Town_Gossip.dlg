@@ -1,0 +1,139 @@
+// Tim Stellmach, Prowling trainer, gives PC read amtut book quest
+// Never met before
+{1}{Well, well, well, a new face in town! Pray sir, what brings you to the town of Grayhills?}{Well, well, well, a new face in town! Pray madame, what brings you to the town of Grayhills?}{}{}{}{}
+{2}{I was called in by the Mayor to deal with the Mummy.}{}{5}{}{20}{}
+{3}{Me be heer to get da Mummy!}{}{-4}{}{20}{}
+{4}{I’m just here on holiday.}{}{5}{}{120}{}
+{5}{Uhhh... Me just heer on holiday.}{}{-4}{}{120}{}
+{6}{What I’m doing here is none of your business.}{}{5}{}{130}{}
+{7}{Dat be none of yoor biz-ness.}{}{-4}{}{130}{}
+
+{20}{My, my! You’ll be our hero! If you make it out alive... So, what can Tim Stellmach do for you Mr, er... What was your name?}{My, my! You’ll be our hero! If you make it out alive... So, what can Tim Stellmach do for you Mrs, er... What was your name?}{}{}{}{}
+{21}{I didn’t tell you my name.}{}{5}{}{30}{}
+{22}{Me not tell you name.}{}{-4}{}{30}{}
+{23}{@pcname@.}{}{1}{}{40}{}
+{24}{Just call me ‘The Saviour of Grayhills’.}{}{5}{}{50}{}
+{25}{Just kall me 'Savyor of Grayhills'.}{}{-4}{}{50}{}
+
+{30}{Well, surely you will tell me now? You scratch my back, I’ll scratch yours so they say!}{Well, surely you will tell me now? You scratch my back, I’ll scratch yours so they say!}{}{}{}{}
+{31}{Okay, I’m @pcname@.}{}{5}{}{40}{}
+{32}{Okay, me be @pcname@.}{}{-4}{}{40}{}
+{33}{You can refer to me as ‘The Saviour of Grayhills’.}{}{5}{}{50}{}
+{34}{Me be da 'Savyor of Grayhills'.}{}{-4}{}{50}{}
+
+{40}{It is a pleasure to meet you @pcname@. Now, you wouldn’t be talking to Tim if you didn’t think Tim could help you out! So, what can Tim do for you?}{It is a pleasure to meet you @pcname@. Now, you wouldn’t be talking to Tim if you didn’t think Tim could help you out! So, what can Tim do for you?}{}{}{}{}
+// I need to check for (gv0 2) and (gv0 3) because Mayor may still be walking home.
+{41}{The Mayor told me that you knew something about the Mummy.}{}{5}{gv0 2}{60}{}
+{42}{The Mayor told me that you knew something about the Mummy.}{}{5}{gv0 3}{60}{}
+{43}{Mayor say you 'no 'bout da Mummy.}{}{-4}{gv0 2}{60}{}
+{44}{Mayor say you 'no 'bout da Mummy.}{}{-4}{gv0 3}{60}{}
+{45}{Tim can stop referring to himself in the third person.}{}{5}{}{110}{}
+{46}{E:}{}{1}{}{0}{}
+
+{50}{Of course, of course ‘The Saviour of Grayhills’! But I need to know more than that! Come on, spill the beans, what’s your REAL name??}{Of course, of course ‘The Saviour of Grayhills’! But I need to know more than that! Come on, spill the beans, what’s your REAL name??}{}{}{}{}
+{51}{Fine. I’m @pcname@.}{}{5}{}{40}{}
+{52}{Okay, me be @pcname@.}{}{-4}{}{40}{}
+
+{60}{Yes, yes... The Mummy problem rears its ugly head once again! Well, Tim knows a lot about the Mummy Tim does! In fact... Tim knows something that may interest you greatly. A book, written by the last adventurer to come here. Might help you it might!}{Yes, yes... The Mummy problem rears its ugly head once again! Well, Tim knows a lot about the Mummy Tim does! In fact... Tim knows something that may interest you greatly. A book, written by the last adventurer to come here. Might help you it might!}{}{}{}{}
+{61}{A book? Can I read it?}{}{5}{}{70}{}
+{62}{Book? Kan me reed it?}{}{-4}{}{80}{}
+
+{70}{Well, that all depends on if you can actually read doesn’t it? Anyway, about a month ago now, an adventurer who called himself DarkUnderlord came through here and tried to help us out. He went up into the old mines outside of town and looked for the Mummy. Didn’t find anything though. Came back here to re-supply and then just ran off and left us! But... He did leave us his journal to put in the Public Library. }{Well, that all depends on if you can actually read doesn’t it? Anyway, about a month ago now, an adventurer who called himself DarkUnderlord came through here and tried to help us out. He went up into the old mines outside of town and looked for the Mummy. Didn’t find anything though. Came back here to re-supply and then just ran off and left us! But... He did leave us his journal to put in the Public Library. }{}{}{}{}
+{71}{Good, can I get the journal from the Library?}{}{5}{}{90}{}
+
+{80}{Well, reading might be a bit of a struggle for you! But I’m sure you can at least try! Anyway, about a month ago now, an adventurer who called himself DarkUnderlord came through here and tried to help us out. He went up into the old mines outside of town and looked for the Mummy. Didn’t find anything though. Came back here to re-supply and then just ran off and left us! But... He did leave us his journal to put in the Public Library.}{Well, reading might be a bit of a struggle for you! But I’m sure you can at least try! Anyway, about a month ago now, an adventurer who called himself DarkUnderlord came through here and tried to help us out. He went up into the old mines outside of town and looked for the Mummy. Didn’t find anything though. Came back here to re-supply and then just ran off and left us! But... He did leave us his journal to put in the Public Library.}{}{}{}{}
+{81}{Kan me get jernal from Ly-brair-eee?}{}{-4}{}{90}{}
+
+{90}{You’d think so, wouldn’t you? Of course, you’re right. You want the book, go to the Library and talk to the Librarian. Ask her for ‘The Story of Amtut’. It’s the published journal of that adventurer I told you about. Once you've read it, come back here and tell me. Okay? Heh! At least this guy was left alive to write a book!}{You’d think so, wouldn’t you? Of course, you’re right. You want the book, go to the Library and talk to the Librarian. Ask her for ‘The Story of Amtut’. It’s the published journal of that adventurer I told you about. Once you've read it, come back here and tell me. Okay? Heh! At least this guy was left alive to write a book!}{}{}{}{qu1001 2}	
+{91}{Er.. This guy??}{}{5}{}{140}{}
+{92}{Uhhh... Dis guy??}{}{-4}{}{140}{}
+{93}{A:}{}{1}{}{0}{}
+
+// NPC met PC before...
+{100}{Hello again @pcname@! Do you have any news to tell me?}{Hello again @pcname@! Do you have any news to tell me?}{}{}{}{}
+{101}{The Mayor told me that you knew something about the Mummy.}{}{5}{qu1001 0, gv0 2}{60}{}
+{102}{The Mayor told me that you knew something about the Mummy.}{}{5}{qu1001 0, gv0 3}{60}{}
+{103}{Mayor say you 'no 'bout da Mummy.}{}{-4}{qu1001 0, gv0 2}{60}{}
+{104}{Mayor say you 'no 'bout da Mummy.}{}{-4}{qu1001 0, gv0 3}{60}{}
+{105}{I've read 'The Story of Amtut'.}{}{5}{qu1001 3}{250}{}
+{106}{Me red dat book 'Da Storee of Amtut'.}{}{-4}{qu1001 3}{250}{}
+{107}{K:}{}{1}{}{240}{}
+{108}{E:}{}{1}{}{0}{}
+
+{110}{What? Tim doesn’t understand what you mean?}{What? Tim doesn’t understand what you mean?}{}{}{}{}
+// I need to check for (gv0 2) and (gv0 3) because Mayor may still be walking home.
+{111}{Err... The Mayor told me that you knew something about the Mummy.}{}{5}{gv0 2}{60}{}
+{112}{Err... The Mayor told me that you knew something about the Mummy.}{}{5}{gv0 3}{60}{}
+{115}{E:}{}{1}{}{0}{}
+
+{120}{Oh come now, I know you! You came in on ‘The Crescent Wave’. You’re here to get rid of the Mummy aren’t you?}{Oh come now, I know you! You came in on ‘The Crescent Wave’. You’re here to get rid of the Mummy aren’t you?}{}{}{}{}
+{121}{All right, yes I am.}{}{5}{}{20}{}
+{122}{Uhuh. Dat be me!}{}{-4}{}{20}{}
+
+{130}{None of my business? None of my business! Why sir, EVERYTHING is Tim Stellmachs business! Of course, I’d understand you’d want to keep it hush hush and all. Seeing as you’re here to save our town from the Mummy!}{None of my business? None of my business! Why sir, EVERYTHING is Tim Stellmachs business! Of course, I’d understand you’d want to keep it hush hush and all. Seeing as you’re here to save our town from the Mummy!}{}{}{}{}
+{131}{How did... But... I never...}{}{5}{}{20}{}
+{132}{How you... But... Me not...}{}{-4}{}{20}{}
+
+{140}{Yes, this guy. Didn’t I tell you? We had another adventurer wander through town about two weeks before DarkUnderlord. Claimed he was looking for some ‘Half-Ogre Breeding Farm’. Anyway, he went up into the old mines and never came out. Eventually though, his body mysteriously appeared near one of the farms. No-one will talk about it now. He was buried in the forest somewhere.}{Yes, this guy. Didn’t I tell you? We had another adventurer wander through town about two weeks before DarkUnderlord. Claimed he was looking for some ‘Half-Ogre Breeding Farm’. Anyway, he went up into the old mines and never came out. Eventually though, his body mysteriously appeared near one of the farms. No-one will talk about it now. He was buried in the forest somewhere.}{}{}{}{}
+{141}{A:}{}{1}{}{0}{}
+
+{150}{Well now, that's a secret of the trade that is! But... I'll make an exception for you. You see, people don't talk to Tim 'cause Tim listens too much. Tim always knows what's going on, even when people don't tell him!}{Well now, that's a secret of the trade that is! But... I'll make an exception for you. You see, people don't talk to Tim 'cause Tim listens too much. Tim always knows what's going on, even when people don't tell him!}{}{}{}{}
+{151}{So how do you get your information?}{}{5}{}{160}{}
+{152}{How you get gossip den?}{}{-4}{}{160}{}
+
+{160}{By prowling of course! How am I going to stick my nose in other people's business if they hear me hiding in the bushes nearby? But, 'cause Tims a Master Prowler, people don't notice Tim.}{By prowling of course! How am I going to stick my nose in other people's business if they hear me hiding in the bushes nearby? But, 'cause Tims a Master Prowler, people don't notice Tim.}{}{}{}{lf0 1}
+{161}{Could you train me in Prowling?}{}{5}{}{170}{}
+{162}{Kan you trayne me to be Prowler?}{}{-4}{}{170}{}
+{163}{A:}{}{1}{}{240}{}
+
+{170}{Well... You seem to be a nice guy. Seeing as your helping save the town and all. Okay then, what level of Prowling Training would you like?}{Well... You seem to be a nice girl. Seeing as your helping save the town and all. Okay then, what level of Prowling Training would you like?}{}{}{}{}
+{171}{T: 6}{}{1}{}{240}{}
+{172}{Train me to be a Prowling Expert.}{}{5}{tr6 -1}{240}{et6 185} 
+{173}{Me need trayning to be Prowling Expert.}{}{-4}{tr6 -1}{240}{et6 185}
+{174}{I'd like to be a Master Prowler like you.}{}{5}{sk6 18, tr6 2, tr6 -2}{200}{}
+{175}{I'd like to be a Master Prowler like you.}{}{5}{sk6 18, tr6 -1}{220}{}
+{176}{I'd like to be a Master Prowler like you.}{}{5}{sk6 -17}{230}{}
+{177}{Me wunna be Master Prowler like you.}{}{-4}{sk6 18, tr6 2, tr6 -2}{200}{}
+{178}{Me wunna be Master Prowler like you.}{}{-4}{sk6 18, tr6 -1}{220}{}
+{179}{Me wunna be Master Prowler like you.}{}{-4}{sk6 -17}{230}{}
+{180}{E:}{}{1}{}{0}{}
+
+{185}{Sure, Tim will train you to be an Expert Prowler for 500 coin Tim will. How does that sound to @pcname@?}{Sure, Tim will train you to be an Expert Prowler for 500 coin Tim will. How does that sound to @pcname@?}{}{}{}{} 
+{186}{That's okay. [Give him 500 coin]}{}{5}{$$500}{190}{tr6 2, $$-500} 
+{187}{Dat okay. [Give him 500 coin]}{}{-4}{$$500}{190}{tr6 2, $$-500} 
+{188}{F:}{}{1}{}{240}{} 
+
+{190}{[Tim takes the coin from you] Ahhhh.... Well now, you see the secret to being an Expert Prowler is having the confidence to walk while Prowling! You see, by being able to walk, most people don't even notice you! They just think you're some unimportant person walking past. Tim has gotten lots of gossip using this trick Tim has.}{[Tim takes the coin from you] Ahhhh.... Well now, you see the secret to being an Expert Prowler is having the confidence to walk while Prowling! You see, by being able to walk, most people don't even notice you! They just think you're some unimportant person walking past. Tim has gotten lots of gossip using this trick Tim has.}{}{}{}{} 
+{191}{A:}{}{1}{}{240}{} 
+
+{200}{So you reckon you've got what it takes to let Tim train you to be a Master Prowler? [He studies for you a few moments before continuing] Tim thinks you've got what it takes to! How about I make you a Master Prowler for 1000 coin?}{So you reckon you've got what it takes to let Tim train you to be a Master Prowler? [He studies for you a few moments before continuing] Tim thinks you've got what it takes to! How about I make you a Master Prowler for 1000 coin?}{}{}{}{}
+{201}{That sounds like a fair price. [Give him 1000 coin]}{}{5}{$$1000}{210}{tr6 3, $$-1000}
+{202}{Uhuh. Dat sownd good. [Give him 1000 coin]}{}{-4}{$$1000}{210}{tr6 3, $$-1000}
+{203}{F:}{}{1}{}{240}{}
+
+// Master - conceal durting combat and opponent loses track of him, can also run whilst prowling
+
+{210}{All right then @pcname@ [He takes your 1000 coin]. Now you see, a Master Prowler has mastered the art of disappearing during combat. This has saved Tim many times it has! You must also be confident enough to Prowl and RUN at the same time! Good thing Tim can do that too! Nothing quite like disappearing during a fight and running away!}{All right then @pcname@ [He takes your 1000 coin]. Now you see, a Master Prowler has mastered the art of disappearing during combat. This has saved Tim many times it has! You must also be confident enough to Prowl and RUN at the same time! Good thing Tim can do that too! Nothing quite like disappearing during a fight and running away!}{}{}{}{} 
+{211}{A:}{}{1}{}{240}{}
+
+{220}{Listen, Tim can't train you to be a Master Prowler until you're an Expert first. [He looks you over] Tim reckons you've got the skill for Master training though. Tim thinks you should get some Expert training, then Tim'll see what Tim can do about making you a Master Prowler.}{Listen, Tim can't train you to be a Master Prowler until you're an Expert first. [He looks you over] Tim reckons you've got the skill for Master training though. Tim thinks you should get some Expert training, then Tim'll see what Tim can do about making you a Master Prowler.}{}{}{}{}
+{221}{A:}{}{1}{}{240}{}
+
+{230}{I'm sorry, but Tim says you don't have the necessary skill to be trained as a Master. You need to have a solid Prowling skill before Tim can just go and train you to be a Master. How about you come back to Tim once you've got the right skills?}{I'm sorry, but Tim says you don't have the necessary skill to be trained as a Master. You need to have a solid Prowling skill before Tim can just go and train you to be a Master. How about you come back to Tim once you've got the right skills?}{}{}{}{} 
+{231}{A:}{}{1}{}{240}{}
+
+{240}{So, what can Tim help you with?}{So, what can Tim help you with?}{}{}{}{}
+{241}{How do you get your gossip?}{}{5}{lf0 0}{150}{}
+{242}{How kome you 'no so much?}{}{-4}{lf0 0}{150}{}
+{243}{Can you train me in Prowling?}{}{5}{lf0 1, tr6 -2}{170}{}
+{244}{You trayne me to be Prowler?}{}{-4}{lf0 1, tr6 -2}{170}{}
+{245}{E:}{}{1}{}{0}{}
+
+{250}{You have! Well then, as you know, one of the local Sheep Farmers attacked the Mummy one night. Tim thinks you should talk to him. His name's Mr Pollock.}{You have! Well then, as you know, one of the local Sheep Farmers attacked the Mummy one night. Tim thinks you should talk to him. His name's Mr Pollock.}{}{}{}{qu1001 4}
+{251}{Where do I find this Mr Pollock?}{}{5}{}{260}{}
+{252}{Where me find da Mr Pollock?}{}{-4}{}{260}{}
+
+{260}{Tim says you should check out Shearers Drive, it's most likely Mr Pollock is down there cutting firewood. You'll find Shearers Drive on the southern outskirts of town.}{Tim says you should check out Shearers Drive, it's most likely Mr Pollock is down there cutting firewood. You'll find Shearers Drive on the southern outskirts of town.}{}{}{}{qu1004 2}
+{261}{A:}{}{1}{}{0}{}
+
+// {Y}{}{}{INT}{}{XXX}{}

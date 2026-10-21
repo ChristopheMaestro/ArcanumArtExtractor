@@ -1,0 +1,26 @@
+// [LABEL] debut
+{1}{Oui? Que me voulez-vous?}{Oui? Que me voulez-vous?}{}{1}{}{}
+{2}{Je viens de la part d'Olivier. J'ai besoin du bouquin sur le transmachin thermique.}{}{1}{qu1009 2,ru-1004 }{21}{}
+{3}{Vous êtes le mari de Jennifer Lopez?}{}{1}{}{41}{ru1003}
+{4}{Rien au revoir}{}{1}{}{}{}
+{5}{Bon je vais quand même aller chercher le bouquin.}{}{1}{ru1004}{81}{}
+
+// [LABEL] Olivier
+{21}{Ah oui le bouquin sur le transregulateur thermique! Il y a un petit problème. J'ai perdu le bouquin dans les égouts.}{Ah oui le bouquin sur le transregulateur thermique! Il y a un petit problème. J'ai perdu le bouquin dans les égouts.}{}{2}{}{}
+{22}{Ben je vais aller le chercher alors.}{}{1}{}{}{ru1004, qu1009 3}
+{23}{Comment avez-vous fait pour perdre le bouquin dans les egouts?}{}{1}{}{61}{ru1004}
+{24}{Dans les egouts?! Comptez pas sur moi pour allez le chercher.}{}{1}{}{}{ru1004}
+
+// [LABEL] jennifer lopez
+{41}{Non je suis le mari de rudita Lopez. C'est une chanteuse de cabaret. Vous pouvez la voir au bar de Kikicity.}{Non je suis le mari de rudita Lopez. C'est une chanteuse de cabaret. Vous pouvez la voir au bar de Kikicity.}{}{3}{}{}
+{42}{Ok j'irais la voir.}{}{1}{}{}{}
+
+// [LABEL] boire
+{61}{Eh bien quand je suis rentre du bar le barbarpapa,j'etais un peu saoul et j'ai confondu le bouquin avec un mouchoir que j'ai balancé dans les egouts.}{Eh bien quand je suis rentre du bar le barbarpapa,j'etais un peu saoul et j'ai confondu le bouquin avec un mouchoir que j'ai balancé dans les egouts.}{}{4}{}{}
+{62}{Bon ben je vais aller chercher le livre.}{}{1}{}{}{qu1009 3}
+{63}{Comptez pas sur moi pour aller chercher ce fichu bouquin}{}{1}{}{}{}
+
+// [LABEL] cherche
+{81}{Tres bien}{Tres bien}{}{5}{}{}
+{82}{Bon je fais essayer de le trouver mais ca va pas etre facile.}{}{1}{}{}{qu1009 3}
+

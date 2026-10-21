@@ -1,0 +1,154 @@
+{1}{Que désire monsieur?}{Que désire madame?}{}{}{}{}
+{2}{W:}{}{1}{lf1 0}{30}{lf1 1}
+{3}{Quel est votre emploi ici?}{}{5}{lf2 0}{60}{lf2 1}
+{4}{Quoi toi faire ici?}{}{-4}{lf2 0}{60}{lf2 1}
+{5}{Connaissiez vous la femme du chatelain?}{}{5}{gf1003 1, lf3 0}{90}{lf3 1}
+{6}{Toi connaître femme de chatelain?}{}{-4}{gf1003 1, lf3 0}{90}{lf3 1}
+{7}{[Vous lui donnez les 30 pièces d'or qu'il vous demandait]}{}{1}{gf1004 1, $$ 30}{390}{gf1004 0, $$ -30}
+{8}{[Vous lui donnez les 60 pièces d'or qu'il vous demandait]}{}{1}{gf1005 1, $$ 60}{390}{gf1005 0, $$ -60}
+{9}{[Vous lui donnez les 90 pièces d'or qu'il vous demandait]}{}{1}{gf1006 1, $$ 90}{390}{gf1006 0, $$ -90}
+{10}{[Vous lui donnez les 120 pièces d'or qu'il vous demandait]}{}{1}{gf1007 1, $$ 120}{390}{gf1007 0, $$ -120}
+{11}{[Vous lui donnez les 1500 pièces d'or qu'il vous demandait]}{}{1}{gf1008 1, $$ 150}{390}{gf1008 0, $$ -150}
+{12}{E:}{}{1}{}{0}{}
+
+{30}{Mon nom est Ernest Manzagol, monsieur.}{Mon nom est Ernest Manzagol, madame.}{}{}{}{}
+{31}{W:}{}{1}{lf1 0}{30}{lf1 1}
+{32}{Quel est votre emploi ici?}{}{5}{lf2 0}{60}{lf2 1}
+{33}{Quoi toi faire ici?}{}{-4}{lf2 0}{60}{lf2 1}
+{34}{Connaissiez vous la femme du chatelain?}{}{5}{gf1003 1, lf3 0}{90}{lf3 1}
+{35}{Toi connaître femme de chatelain?}{}{-4}{gf1003 1, lf3 0}{90}{lf3 1}
+{36}{[Vous lui donnez les 30 pièces d'or qu'il vous demandait]}{}{1}{gf1004 1, $$ 30}{390}{gf1004 0, $$ -30}
+{37}{[Vous lui donnez les 60 pièces d'or qu'il vous demandait]}{}{1}{gf1005 1, $$ 60}{390}{gf1005 0, $$ -60}
+{38}{[Vous lui donnez les 90 pièces d'or qu'il vous demandait]}{}{1}{gf1006 1, $$ 90}{390}{gf1006 0, $$ -90}
+{39}{[Vous lui donnez les 120 pièces d'or qu'il vous demandait]}{}{1}{gf1007 1, $$ 120}{390}{gf1007 0, $$ -120}
+{40}{[Vous lui donnez les 150 pièces d'or qu'il vous demandait]}{}{1}{gf1008 1, $$ 150}{390}{gf1008 0, $$ -150}
+{41}{E:}{}{1}{}{0}{}
+
+{60}{Je suis le cuisinier du manoir, monsieur.}{Je suis le cuisinier du manoir, monsieur.}{}{}{}{}
+{61}{W:}{}{1}{lf1 0}{30}{lf1 1}
+{62}{Quel est votre emploi ici?}{}{5}{lf2 0}{60}{lf2 1}
+{63}{Quoi toi faire ici?}{}{-4}{lf2 0}{60}{lf2 1}
+{64}{Connaissiez vous la femme du chatelain?}{}{5}{gf1003 1, lf3 0}{90}{lf3 1}
+{65}{Toi connaître femme de chatelain?}{}{-4}{gf1003 1, lf3 0}{90}{lf3 1}
+{66}{[Vous lui donnez les 30 pièces d'or qu'il vous demandait]}{}{1}{gf1004 1, $$ 30}{390}{gf1004 0, $$ -30}
+{67}{[Vous lui donnez les 60 pièces d'or qu'il vous demandait]}{}{1}{gf1005 1, $$ 60}{390}{gf1005 0, $$ -60}
+{68}{[Vous lui donnez les 90 pièces d'or qu'il vous demandait]}{}{1}{gf1006 1, $$ 90}{390}{gf1006 0, $$ -90}
+{69}{[Vous lui donnez les 120 pièces d'or qu'il vous demandait]}{}{1}{gf1007 1, $$ 120}{390}{gf1007 0, $$ -120}
+{70}{[Vous lui donnez les 150 pièces d'or qu'il vous demandait]}{}{1}{gf1008 1, $$ 150}{390}{gf1008 0, $$ -150}
+{71}{E:}{}{1}{}{0}{}
+
+{90}{Oui, monsieur.}{Oui, madame.}{}{}{}{}
+{91}{Avait-elle parfois un comportement étrange?}{}{5}{lf4 0}{120}{lf4 1}
+{92}{Voyait-elle souvent du monde?}{}{5}{lf5 0}{150}{lf5 1}
+{93}{Elle avoir comportement étrange?}{}{-4}{{lf4 0}{120}{lf4 1}
+{94}{Elle voir souvent gens?}{}{-4}{lf5 0}{150}{lf5 1}
+{95}{Qui étaient ses amis proches?}{}{5}{lf7 0}{210}{lf7 1}
+{96}{Qui être amis proches de elle?}{}{-4}{lf7 0}{210}{lf7 1}
+{97}{Avait-elle un amant?}{}{5}{lf6 0}{180}{lf6 1}
+{98}{Elle avoir amant?}{}{-4}{lf6 0}{180}{lf6 1}
+
+{120}{Je ne sais à quoi monsieur fait allusion. [Il vous regarde d'un ton sévère]}{Je ne sais à quoi madame fait allusion. [Il vous regarde d'un ton sévère]}{}{}{}{re -5}
+{121}{Avait-elle parfois un comportement étrange?}{}{5}{lf4 0}{120}{lf4 1}
+{122}{Voyait-elle souvent du monde?}{}{5}{lf5 0}{150}{lf5 1}
+{123}{Elle avoir comportement étrange?}{}{-4}{{lf4 0}{120}{lf4 1}
+{124}{Elle voir souvent gens?}{}{-4}{lf5 0}{150}{lf5 1}
+{125}{Qui étaient ses amis proches?}{}{5}{lf7 0}{210}{lf7 1}
+{126}{Qui être amis proches de elle?}{}{-4}{lf7 0}{210}{lf7 1}
+{127}{Avait-elle un amant?}{}{5}{lf6 0}{180}{lf6 1}
+{128}{Elle avoir amant?}{}{-4}{lf6 0}{180}{lf6 1}
+{129}{[Vous sortez un petit billet de votre poche pour qu'il se confie davantage]}{}{1}{re 59, re -61}{240}{}
+{130}{[Vous sortez un petit billet de votre poche pour qu'il se confie davantage]}{}{1}{re 54, re -56}{270}{}
+{131}{[Vous sortez un petit billet de votre poche pour qu'il se confie davantage]}{}{1}{re 49, re -51}{300}{}
+{132}{[Vous sortez un petit billet de votre poche pour qu'il se confie davantage]}{}{1}{re 44, re -46}{330}{}
+{133}{[Vous sortez un petit billet de votre poche pour qu'il se confie davantage]}{}{1}{re 39, re -41}{360}{}
+
+{150}{Elle organisait souvent des soirées mondaines. Toute notre petite communauté y était conviée. [Il esquisse un très léger sourire]}{Elle organisait souvent des soirées mondaines. Toute notre petite communauté y était conviée. [Il esquisse un très léger sourire]}{}{}{}{re +5}
+{151}{Avait-elle parfois un comportement étrange?}{}{5}{lf4 0}{120}{lf4 1}
+{152}{Voyait-elle souvent du monde?}{}{5}{lf5 0}{150}{lf5 1}
+{153}{Elle avoir comportement étrange?}{}{-4}{{lf4 0}{120}{lf4 1}
+{154}{Elle voir souvent gens?}{}{-4}{lf5 0}{150}{lf5 1}
+{155}{Qui étaient ses amis proches?}{}{5}{lf7 0}{210}{lf7 1}
+{156}{Qui être amis proches de elle?}{}{-4}{lf7 0}{210}{lf7 1}
+{157}{Avait-elle un amant?}{}{5}{lf6 0}{180}{lf6 1}
+{158}{Elle avoir amant?}{}{-4}{lf6 0}{180}{lf6 1}
+{159}{[Vous sortez un petit billet de votre poche pour qu'il se confie davantage]}{}{1}{re 59, re -61}{240}{}
+{160}{[Vous sortez un petit billet de votre poche pour qu'il se confie davantage]}{}{1}{re 54, re -56}{270}{}
+{161}{[Vous sortez un petit billet de votre poche pour qu'il se confie davantage]}{}{1}{re 49, re -51}{300}{}
+{162}{[Vous sortez un petit billet de votre poche pour qu'il se confie davantage]}{}{1}{re 44, re -46}{330}{}
+{163}{[Vous sortez un petit billet de votre poche pour qu'il se confie davantage]}{}{1}{re 39, re -41}{360}{}
+
+{180}{Jamais je ne laisserai dire une telle absurdité à propos de madame! [Il vous fusille du regard]}{Jamais je ne laisserai dire une telle absurdité à propos de madame! [Il vous fusille du regard]}{}{}{}{re -5}
+{181}{Avait-elle parfois un comportement étrange?}{}{5}{lf4 0}{120}{lf4 1}
+{182}{Voyait-elle souvent du monde?}{}{5}{lf5 0}{150}{lf5 1}
+{183}{Elle avoir comportement étrange?}{}{-4}{{lf4 0}{120}{lf4 1}
+{184}{Elle voir souvent gens?}{}{-4}{lf5 0}{150}{lf5 1}
+{185}{Qui étaient ses amis proches?}{}{5}{lf7 0}{210}{lf7 1}
+{186}{Qui être amis proches de elle?}{}{-4}{lf7 0}{210}{lf7 1}
+{187}{Avait-elle un amant?}{}{5}{lf6 0}{180}{lf6 1}
+{188}{Elle avoir amant?}{}{-4}{lf6 0}{180}{lf6 1}
+{189}{[Vous sortez un petit billet de votre poche pour qu'il se confie davantage]}{}{1}{re 59, re -61}{240}{}
+{190}{[Vous sortez un petit billet de votre poche pour qu'il se confie davantage]}{}{1}{re 54, re -56}{270}{}
+{191}{[Vous sortez un petit billet de votre poche pour qu'il se confie davantage]}{}{1}{re 49, re -51}{300}{}
+{192}{[Vous sortez un petit billet de votre poche pour qu'il se confie davantage]}{}{1}{re 44, re -46}{330}{}
+{193}{[Vous sortez un petit billet de votre poche pour qu'il se confie davantage]}{}{1}{re 39, re -41}{360}{}
+
+{210}{Ses amis proches étaient peu nombreux. On comptait parmi eux le fossoyeur, le jardinier et le barman. Aucun autre. [Il sourit légèrement]}{Ses amis proches étaient peu nombreux. On comptait parmi eux le fossoyeur, le jardinier et le barman. Aucun autre. [Il sourit légèrement]}{}{}{}{re +5}
+{211}{Avait-elle parfois un comportement étrange?}{}{5}{lf4 0}{120}{lf4 1}
+{212}{Voyait-elle souvent du monde?}{}{5}{lf5 0}{150}{lf5 1}
+{213}{Elle avoir comportement étrange?}{}{-4}{{lf4 0}{120}{lf4 1}
+{214}{Elle voir souvent gens?}{}{-4}{lf5 0}{150}{lf5 1}
+{215}{Qui étaient ses amis proches?}{}{5}{lf7 0}{210}{lf7 1}
+{216}{Qui être amis proches de elle?}{}{-4}{lf7 0}{210}{lf7 1}
+{217}{Avait-elle un amant?}{}{5}{lf6 0}{180}{lf6 1}
+{218}{Elle avoir amant?}{}{-4}{lf6 0}{180}{lf6 1}
+{219}{[Vous sortez un petit billet de votre poche pour qu'il se confie davantage]}{}{1}{re 59, re -61}{240}{}
+{220}{[Vous sortez un petit billet de votre poche pour qu'il se confie davantage]}{}{1}{re 54, re -56}{270}{}
+{221}{[Vous sortez un petit billet de votre poche pour qu'il se confie davantage]}{}{1}{re 49, re -51}{300}{}
+{222}{[Vous sortez un petit billet de votre poche pour qu'il se confie davantage]}{}{1}{re 44, re -46}{330}{}
+{223}{[Vous sortez un petit billet de votre poche pour qu'il se confie davantage]}{}{1}{re 39, re -41}{360}{}
+
+{240}{[Il vous pdemande 30 pièces d'or]}{[Il vous demande 30 pièces d'or]}{}{}{}{gf1004 1}
+{241}{[Vous les lui donnez]}{}{1}{$$ 30}{390}{$$ -30, gf1004 0}
+{242}{Je reviendrai avec le compte.}{}{5}{$$ -29}{0}{fl 400}
+{243}{@pcname@ revenir avec argent.}{}{-4}{$$ -29}{0}{fl 400}
+{244}{Surement pas! Vous êtes bien trop gourmand!}{}{5}{}{0}{fl 400}
+{245}{Toi trop demander! @pcname@ pas d'accord!}{}{-4}{}{0}{fl 400}
+
+{270}{[Il vous pdemande 60 pièces d'or]}{[Il vous demande 60 pièces d'or]}{}{}{}{gf1005 1}
+{271}{[Vous les lui donnez]}{}{1}{$$ 60}{390}{$$ -60, gf1005 0}
+{272}{Je reviendrai avec le compte.}{}{5}{$$ -59}{0}{fl 400}
+{273}{@pcname@ revenir avec argent.}{}{-4}{$$ -59}{0}{fl 400}
+{274}{Surement pas! Vous êtes bien trop gourmand!}{}{5}{}{0}{fl 400}
+{275}{Toi trop demander! @pcname@ pas d'accord!}{}{-4}{}{0}{fl 400}
+
+{300}{[Il vous pdemande 90 pièces d'or]}{[Il vous demande 90 pièces d'or]}{}{}{}{gf1006 1}
+{301}{[Vous les lui donnez]}{}{1}{$$ 90}{390}{$$ -90, gf1006 0}
+{302}{Je reviendrai avec le compte.}{}{5}{$$ -89}{0}{fl 400}
+{303}{@pcname@ revenir avec argent.}{}{-4}{$$ -89}{0}{fl 400}
+{304}{Surement pas! Vous êtes bien trop gourmand!}{}{5}{}{0}{fl 400}
+{305}{Toi trop demander! @pcname@ pas d'accord!}{}{-4}{}{0}{fl 400}
+
+{330}{[Il vous pdemande 120 pièces d'or]}{[Il vous demande 120 pièces d'or]}{}{}{}{gf1007 1}
+{331}{[Vous les lui donnez]}{}{1}{$$ 120}{390}{$$ -120, gf1007 0}
+{332}{Je reviendrai avec le compte.}{}{5}{$$ -119}{0}{fl 400}
+{333}{@pcname@ revenir avec argent.}{}{-4}{$$ -119}{0}{fl 400}
+{334}{Surement pas! Vous êtes bien trop gourmand!}{}{5}{}{0}{fl 400}
+{335}{Toi trop demander! @pcname@ pas d'accord!}{}{-4}{}{0}{fl 400}
+
+{360}{[Il vous pdemande 150 pièces d'or]}{[Il vous demande 150 pièces d'or]}{}{}{}{gf1008 1}
+{361}{[Vous les lui donnez]}{}{1}{$$ 150}{390}{$$ -150, gf1008 0}
+{362}{Je reviendrai avec le compte.}{}{5}{$$ -149}{0}{fl 400}
+{363}{@pcname@ revenir avec argent.}{}{-4}{$$ -149}{0}{fl 400}
+{364}{Surement pas! Vous êtes bien trop gourmand!}{}{5}{}{0}{fl 400}
+{365}{Toi trop demander! @pcname@ pas d'accord!}{}{-4}{}{0}{fl 400}
+
+{390}{Parmi les amis de madame, un demi-elfe était plus présent que les autres...}{Parmi les amis de madame, un demi-elfe était plus présent que les autres...}{}{}{}{xp 1, ru 1003}
+{391}{W:}{}{1}{lf1 0}{30}{lf1 1}
+{392}{Quel est votre emploi ici?}{}{5}{lf2 0}{60}{lf2 1}
+{393}{Quoi toi faire ici?}{}{-4}{lf2 0}{60}{lf2 1}
+{394}{A:}{}{1}{}{0}{}
+
+{400}{A bientôt, monsieur.}{A bientôt, madame.}{}{}{}{}
+
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}

@@ -1,0 +1,29 @@
+// [LABEL] hello
+{1}{Que veux-tu ?}{Que veux-tu ?}{}{1}{}{}
+{2}{Je visite. Et toi ?}{}{1}{fo0 }{21}{}
+{3}{Rien, salut}{}{1}{fo1 }{}{}
+{4}{B:}{}{1}{fo1 }{}{}
+{5}{J'aimerais en savoir plus sur toi}{}{1}{fo1 }{}{ce }
+{6}{Tu devrais t'en aller pour le moment}{}{1}{fo1 }{}{wa }
+{7}{Non, rien en fait}{}{1}{}{}{}
+// [LABEL] fékoi
+{21}{Moi je suis ici en expédition pour trouver une certaine Marie Paule, avec mes amis Goldfinger, Kost, et Fred. Tu la connaitrais pas, par hasard ?}{Moi je suis ici en expédition pour trouver une certaine Marie Paule, avec mes amis Goldfinger, Kost, et Fred. Tu la connaitrais pas, par hasard ?}{}{2}{}{}
+{22}{En effet, je la cherche aussi. Quel est ton nom ?}{}{1}{}{41}{}
+{23}{je n'ai pas de temps à perdre, salut}{}{1}{}{}{}
+// [LABEL] nom
+{41}{Mon nom c'est Marie. Je viens de Paris, une ville de France. Mon équipe m'a envoyée ici dans l'espoir de retrouver Marie Paule, pour pouvoir lui parler. Kost, Goldfinger et Fred sont là pour m'accompagner.}{Mon nom c'est Marie. Je viens de Paris, une ville de France. Mon équipe m'a envoyée ici dans l'espoir de retrouver Marie Paule, pour pouvoir lui parler. Kost, Goldfinger et Fred sont là pour m'accompagner.}{}{3}{}{}
+{42}{Pourquoi cherchez-vous Marie Paule ?}{}{1}{}{61}{}
+{43}{E:}{}{1}{}{}{}
+// [LABEL] chchmar
+{61}{On la cherche pour lui parler. En fait, mes amis et moi, on l'appelle par téléphonne depuis environ 3 ans, et elle nous insulte. Elle nous amuse beaucoup. On a donc décidé de partir à sa recherche.}{On la cherche pour lui parler. En fait, mes amis et moi, on l'appelle par téléphonne depuis environ 3 ans, et elle nous insulte. Elle nous amuse beaucoup. On a donc décidé de partir à sa recherche.}{}{4}{}{}
+{62}{C'est vous, les niaiseux ? Vous êtes recherchés par les polices, c'est écrit dans le journal !}{}{1}{}{81}{}
+{63}{Je pense que je pourrais vous aider à la trouver, puisque moi aussi je la cherche ?}{}{1}{}{101}{}
+{64}{E:}{}{1}{}{}{}
+// [LABEL] niaise
+{81}{Ah bon !! Elle nous a fait rechercher ?? [elle rit] Elle est folle, on fait juste ça pour rigoler, pas pour la harceler. De toute façon on pourrait s'expliquer avec elle si on arrivait à la trouver.}{Ah bon !! Elle nous a fait rechercher ?? [elle rit] Elle est folle, on fait juste ça pour rigoler, pas pour la harceler. De toute façon on pourrait s'expliquer avec elle si on arrivait à la trouver.}{}{5}{}{}
+{82}{Dans ce cas, je pourrais vous aider à la trouver, je suis aussi à sa recherche.}{}{1}{}{101}{}
+{83}{E:}{}{1}{}{}{}
+// [LABEL] aider
+{101}{Oui, tu pourrais nous être utile. Si tu veux, on pourrait se ballader ensemble en attendant de la trouver. On visitera la ville, je viens d'arriver ici ce matin.}{Oui, tu pourrais nous être utile. Si tu veux, on pourrait se ballader ensemble en attendant de la trouver. On visitera la ville, je viens d'arriver ici ce matin.}{}{6}{}{}
+{102}{Eh bien allons-y }{}{1}{}{}{jo1 ,re+15 }
+{103}{Euh je préfère réfléchir avant}{}{1}{}{}{}

@@ -1,0 +1,19 @@
+//
+// Area -- List of areas in the module
+//   X-Coord, Y-Coord, WM-X-offset, WM-Y-offset /Name /Description./Radius:<#>
+//
+//   Coords are on the main world-map, in tiles.  Radius is detection radius
+// (in sectors), in other words, the # of sectors that the player must pass
+// near it on the WorldMap to make it visible if it isn't already known;
+// default value is 5.
+//   The WM-#-offset values are used to position the name text in the worldmap,
+// if it the worldmap is available.  User mods can leave these as "0, 0".
+//
+
+{0}{0, 0, 0, 0 /A Place Unimportant/This is the unknown area.}
+{1}{28591, 20839, -50, -10,  /Newberg/This is a small town called Newberg.}
+{2}{25865, 20387, -5, 0,  /Black Khans/The camp of the bandits known as the Black Khans.}
+{3}{29337, 20897, -100, 10,  /Salt Marshes/A vast saltwater swamp.}
+{4}{25410, 18243, 0, 0, /Portlandia/A long-ruined town with a single intact bridge- the gateway to the North.}
+{5}{29504, 16752, 0, 0, /D'nard's Cabin/The cabin of D'nard Arickson.}
+{6}{24860, 15260, 0, 0, /Tull/The dusty town of Tull.}

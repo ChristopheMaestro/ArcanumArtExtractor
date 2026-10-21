@@ -1,0 +1,64 @@
+// This message file contains text to be used in game-supplied newspapers
+// Only the message line numbers 1000 or higher are valid
+// Each new newspaper begins on a multiple of 10, and can use up to 10
+// lines, which must be consecutive. The first line is always the main 
+// headline, while the 9 remaining lines go into 4 columns of the paper.
+// Format: each line begins with a font number and justification letter,
+// followed by the text for that line.
+
+// Some font numbers to use:
+//	490 Extra Large Headline
+//	486 Large Headline
+//	492 Normal Headline
+//	483 Story Body
+//	488 Clip Art 0-6
+
+// Justification letters (you must use one)
+//	l = left
+//	c = center
+
+// NOTE: The first blocks, 0 thru 999, are reserved for UI use
+
+// News Paper Type 1
+{0}{EXTRA!}
+{1}{[ NEWS ]}
+{2}{35 cents}
+{3}{Reporting the news to Pheonix, Arizona}
+
+// News Paper Type 2
+{4}{[ Phoenix Journal ]}
+{5}{News that matters to you.}
+
+// filler articles
+{10}{492c _ WEATHER _}
+{11}{483l It's gonna be a warm one, folks. A mild summer is quickly shifting to a hot summer, and we're going to see sun all week long.}
+{12}{492c _ FUN FACT _}
+{13}{483l Did you know that in Asia, an estimated 2300 puppies are killed every minute for food?}
+{14}{492c _ PUBLIC SERVICE ANNOUNCEMENT _}
+{15}{483l There will be a zoning commission meeting to discuss the impact of the proximity of government facilities upon property values, and specifically the nuclear missile silos being erected in nearby Chickawa County. Cont. B4}
+{16}{492c _ JOE'S SHOES SUPERSALE _}
+{17}{483l Joe's is overstocked! Come see us today for the best deals in shoes, galoshes, boots, sneakers, sandals, and athleticwear.}
+{18}{492c _ ESCAPED FELON ALERT _}
+{19}{483l Authorities released a warning to press today stating that serial killer Jack LaRue has escaped confinement and is considered armed and dangerous. Cont. B-2}
+{20}{492c _ LOCAL CHARITY FIREBOMBED _}
+{21}{483l Mourners gathered last night for a candlelight vigil outside the ruins of the Good Sisters Shelter, which was burned nearly to the ground earlier this week. Authorities strongly suspect that the blaze was chemically accelerated, which implies arson. Why anyone would burn an empty charity collection center to the ground is something the authorities aren't sure of yet.}
+{22}{492c _ COOKING CORNER _}
+{23}{483l Today we'll discuss how to broil a hamburger. Or maybe boil it. I always get those two confused. They sound a lot the same and are both cooking related, so it's understandable, right? I mean, I'm not a total idiot or anything, right? Well, that's it for today folks, check out tomorrow's column where we discuss microwaved hotdogs.}
+{24}{492c _ YOUR RIGHTS _}
+{25}{483l ACLU in uproar over bill to give life imprisonment for marijauna possession. The bill was introduced last February and is expected to make it through the House. Cont. C-7}
+
+//Game Related Newspapers
+//Use lines 1000-4990
+//Generic Newspapers Start at line 5000
+
+{1000}{490c SAMPLE HEADLINE!}
+{1001}{492c _ Place subheading here _}
+{1002}{483l And here's the text of the story. It's pretty exciting!}
+
+
+{1010}{490c Clash of the Titans! Nuclear powers hostile!}
+{1011}{492c _ War looms imminent as Nuclear Powers Grow Tense _}
+{1012}{483l The Chinese Ambassador to the U.S. has threatened to close off its border and with them, a good portion of the trade routes through the east if the U.S. continues to develop anti-missile shield technology while refusing to dismantle existing arms. The Chinese government has made its opinion of the US' actions very clear: "To continue on this path is to guarantee war!" Will the US reinstate dismantling of their nuclear arms? Will China accept the idea of a planet where a single power is immune to nuclear attack? Perhaps the UN Council meeting next Tuesday will tell.}
+
+//Generic Newspapers
+

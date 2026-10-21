@@ -1,0 +1,21 @@
+//
+// Map List Info
+//
+
+// Types:
+//	START_MAP -- This is the starting map (there should only be one of these!)
+//	SHOPPING_MAP -- This is the shopping map used in character creation.  If not
+//		present, then this process is skipped during character creation.
+
+	// Starting Location (Convert for World by:)
+	// (54624 - 32) / 64 = 853
+	// (45408 - 32) / 64 = 709
+
+// Area: <#> -- This is the Index # in area.mes that the map maps to
+
+
+// List of valid maps for game & Starting X/Y position
+{5000}{ShopMap, 31, 29, Type: SHOPPING_MAP}
+{5001}{le mannoir, 2054, 2035, Type: START_MAP, WorldMap: 0}
+{5002}{souterrain 1, 2032, 2064,, WorldMap : 0}
+{5003}{arriver du train,2048,2038,, WorldMap : 0}

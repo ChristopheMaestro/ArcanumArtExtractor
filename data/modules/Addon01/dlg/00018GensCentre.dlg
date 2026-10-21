@@ -1,0 +1,45 @@
+{1}{G:}{}{}{}{}{}
+{2}{Bonjour, je me nomme @pcname@.}{}{1}{me0 }{4}{}
+{3}{Salut @npcname@, quoi de neuf ?}{}{1}{me1 }{6}{}
+{4}{Je suis @npcname@.}{}{}{}{}{}
+{5}{Qu'avez-vous à me dire d'intéressant ?}{}{1}{}{6}{}
+{6}{Voulez-vous troquer ou bien des renseignements ?}{}{}{}{}{}
+{7}{R: $0, 1050-1060}{}{1}{}{6}{}
+{8}{B:}{}{1}{}{6}{}
+{9}{Thym auriez-vous du travail ?}{}{1}{lc0 1,lc1 0}{37}{}
+{10}{Thym j'ai une racine de la passion.}{}{1}{lc0 1,lc1 0,in3609 }{39}{}
+{11}{Thym j'ai encore une racine de la passion.}{}{1}{lc0 1,lc1 1,in3609 }{39}{}
+{12}{La prison n'est pas gardée ?}{}{1}{lc0 13}{23}{}
+{13}{Avez-vous du travail Paysan ?}{}{1}{qb1016 1, lc0 10}{25}{}
+{14}{Paysan, j'ai tué vos monstres.}{}{1}{qu1016 3, lc0 10}{27}{}
+{15}{SansFiltre, d'après le Paysan vous auriez besoin d'aide.}{}{1}{qb1018 1, lc0 12, qa1016 4}{33}{}
+{16}{SansFiltre, vous pouvez allez ceuillir vos plantes. Enfin ce qu'il en reste.}{}{1}{qu1018 3, lc0 12}{35}{}
+{17}{J'aimerais que vous m'identifier quelque chose @npcname@.}{}{1}{lc0 12}{6}{ii }
+{18}{Tantine, d'après SansFiltre, vous rechercheriez de l'aide.}{}{1}{qb1017 1, lc0 14, qa1018 4}{29}{}
+{19}{Tantine, j'ai votre broche.}{}{1}{qu1017 2,lc0 14,in3001 }{31}{}
+{20}{Le Gouverneur s'inquiétait pour vous. Par bonheur vous êtes encore vivants.}{}{1}{lc0 17,qu1022 3}{42}{}
+{21}{Ne reçevant pas la livraison de viande, le Gouverneur s'est inquiété pour vous. Par bonheur vous êtes encore vivants.}{}{1}{lc0 18,qu1024 3}{44}{}
+{22}{E:}{}{1}{}{}{}
+{23}{Devant la prolifération des monstres, il n'y a pas assez eu de gardes. Les prisonniers ont reçu un jugement rapide. Le plus dangereux a été condamné à mort. Certains ont du payer une forte amende, et ont été relachés. Les autres ont eu le choix entre s'enroler dans la garde (le temps des évènements) ou être expulsés de la ville. Avec les monstres qui trainent, ils ont ,naturellement, tous optés pour la 1ère solution. La prison sert actuellement de dortoir et de cantine pour la Garde.}{}{}{}{}{}
+{24}{Autre chose.}{}{1}{}{6}{}
+{25}{Voyez-vous cher @pcname@, des monstres m'empèche d'entretenir mon champ. Vous serez aimaible de m'en débarraser.}{}{}{}{}{}
+{26}{Naturellement @npcname@.}{}{1}{}{6}{qu1016 2}
+{27}{Formidable @pcname@. Vous pouvez utiliser le cabanon près du champ pour dormir ou entreposer vos biens. La récolte est loin, je ne m'en servirais pas encore. D'ici là, vous serez sûrement parti pour d'autres aventures. Encore une chose, Allez voir la gitane SansFiltre, elle a peût-être du travail pour vous.}{}{}{}{}{}
+{28}{Merci, paysan. Ce me sera utile.}{}{1}{}{6}{qu1016 4,ru1014 }
+{29}{L'autre matin, mon chat s'est échappé, je suis allé voir vers les champs pour le chercher. Je l'ai trouvé mais un monstre le poursuivait. Nous avons couru tous deux vers la maison. Puis, je me suis rendu compte qu'il avait cessé de nous poursuivre, il a du voir des gens au loin. Le problème est que dans l'affolement, j'ai perdu ma broche. Si vous la trouvez, pourriez-vous me la ramener ?}{}{}{}{}{}
+{30}{Bien sûr Tantine, si je la trouve je vous la ramènerais.}{}{1}{}{6}{qu1017 2,rq1015 }
+{31}{Merci infiniment @pcname@, car j'y tiens beacoup. Elle me viens de ma mère qui la tenait de la sienne. Voici 50 pièces pour votre peine.}{}{}{}{}{}
+{32}{Mais de rien Tantine, c'est un plaisir de vous rendre service. Mais fallait pas [vous prenez l'argent].}{}{1}{}{6}{qu1017 4,$$50 ,in3001 }
+{33}{J'ai trouvé un pré qui regorge de plantes diverses. Malheureusement des bêtes se sont installées juste dessus. Suivez le chemin à côté de moi, celui qui descend vers le sud. Le pré est au bout.}{}{}{}{}{}
+{34}{Je reviendrais lorsque le pré sera nettoyé.}{}{1}{}{6}{qu1018 2,rq1014 }
+{35}{Merci @pcname@. Pour les plantes ne vous en faites pas, celles qui m'interressent le plus sont inconnues par le commun des mortels. Tenez 100 pièces pour votre peine. Encore un mot, allez voir Tantine, elle aurait perdu sa broche.}{}{}{}{}{}
+{36}{Faillait pas [vous empochez l'argent].}{}{1}{}{6}{qu1018 4,$$100 ,ru1015 }
+{37}{Avec les évènement actuels, il est difficile de ramasser des herbes. Je vous payerais 100 pièces pour chaque racine de la passion que vous me ramènerez.}{}{}{}{}{}
+{38}{C'est entendu Thym.}{}{1}{}{6}{lc1 1,ru1011 }
+{39}{Merci @pcnampe@. Tenez 100 pièces.}{}{}{}{}{}
+{40}{Merci Thym.}{}{1}{lc1 0}{6}{rq1011 ,xp1 ,lc1 1,$$100 ,in3609 }
+{41}{Merci Thym.}{}{1}{lc1 1}{6}{$$100 ,in3609 }
+{42}{Les bestioles se sont approchées mais elles ont vu à qui elles avaient à faire. Nous sommes tous des gardes à la retraite. Mais, si nous étions de taille pour les repousser, nous ne l'étions pas pour les attaquer et les exterminer. Merci à vous de l'avoir fait. Enfin, cette menace ne plane plus sur nous. Dites au Gouverneur que, maintenant, tout va bien.}{}{}{}{}{}
+{43}{Nous voilà rassurés sur votre sort. Nous allons, de ce pas, apporter la bonne nouvelle au Gouverneur.}{}{1}{}{6}{qu1022 4}
+{44}{Les monstres n'ont pas dépassé le mur. Ils ont du croire que c'était une place forte. S'ils savaient que ce n'est que protéger le bétail des loups...}{}{}{}{}{}
+{45}{Nous voilà rassurés sur votre sort. Nous allons, de ce pas, apporter la bonne nouvelle au Gouverneur.}{}{1}{}{6}{qu1024 4}

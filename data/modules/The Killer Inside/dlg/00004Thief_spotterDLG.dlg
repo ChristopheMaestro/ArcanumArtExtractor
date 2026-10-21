@@ -1,0 +1,73 @@
+// Thief spotter DLG - by DjUnique (just a tiny little bit by LD)
+//
+// This was supposed to be a simple dialogue, but it just kept on growing and growing
+// Now you have many ways to talk yourself out of this crap :)
+// or if yer a combat type, you can kick his ass, at least in this demo it won't
+// affect your reputation.
+// Who knows what I'll come up with for the final version ;)
+
+{1}{THIEF! CATCH THE THIEF! SHE'S ESCAPING THE SCENE!}{THIEF! CATCH THE THIEF! SHE'S ESCAPING THE SCENE!}{}{}{}{}
+{2}{What are you shouting about, sir?}{}{5}{}{21}{}
+{3}{Me ears hurt. Why yoo screem?}{}{-4}{ra 1}{21}{}
+{4}{No shout at @PCNAME@! I hurt ear! Why screem?}{}{-4}{ra 8}{21}{}
+{21}{There! Down the alley! A thief is running away! You must stop her! (He points frantically towards a window down the alley.)}{There! Down the alley! A thief is running away! You must stop her! (He points frantically towards a window down the alley.)}{}{}{}{}
+{22}{Okay, I'll catch her right away!}{}{5}{ch -9}{0}{gf5 1}
+{23}{Theef? Where? Wha? What yoo meen?}{}{-4}{ch -9}{141}{}
+{24}{Forget it, man. I'm in a hurry. Why don't you get her?}{}{5}{ch 10}{32}{}
+{25}{Nuh-uh. Me no can ketch theef. Me in her-e! U ketch theef!}{}{-4}{ch 10}{32}{}
+{26}{NO! ME NO KETCH THEEF! ME BASH YOU! ME STRONG!}{}{-4}{ra 8}{}{co, fl 29}
+{27}{I haven't got time for catching thieves. But I do feel the need to kick some butt!}{}{5}{}{}{co, fl 30}
+{28}{Uh, that thief is supposed to escape, what's the use of trying to catch her anyway?}{}{12}{}{162}{}
+
+{29}{Fine. If it's fight you want, then fight's what you get, neanderthal!}{Fine. If it's fight you want, then fight's what you get, neanderthal!}{}{}{}{}
+{30}{I can kick your butt any time, mister tough guy!}{I can kick your butt any time, miss tough girl!}{}{}{}{}
+
+
+{31}{Please hurry up, sir. She's bound to run away any minute now.}{Please hurry up, ma'am. She's bound to run away any minute now.}{}{}{}{}
+
+
+{32}{[He thinks for a moment.] I.. uh...I think I hear my wife calling...COMING, DEAR!}{[He thinks for a moment.] I.. uh...I think I hear my wife calling...COMING, DEAR!}{}{}{}{}
+{33}{See you later then, mr. Chicken!}{}{5}{}{-12}{gv1 83}
+{34}{Bye bye, silly meester guy sir!}{}{-4}{}{-12}{gv1 84}
+{41}{What's the matter with you? BAH! You're slower than a turtle stuck in a pile of mud! If we had one of Yotland Scards' finest here, she'd be caught in no time.}{What's the matter with you? BAH! You're slower than a turtle stuck in a pile of mud! If we had one of Yotland Scards' finest here, she'd be caught in no time.}{}{}{}{}
+{42}{I'm sorry, sir. She was too quick!}{}{5}{}{61}{}
+{43}{Me sor-ree. Me slow. She faster.}{}{-4}{}{71}{}
+// Nice try, no dice. This arrogant piece of shit ain't buying it. -dju
+{44}{Ahem, do you realize you're talking to a Yotland Scard detective, sir?}{}{5}{}{201}{}
+// 
+{61}{[He imitates you with a mocking voice] "I'm sorry sir, she was too quick" I could've caught her with my hands tied behind my back, you know.}{[He imitates you with a mocking voice] "I'm sorry sir, she was too quick" I could've caught her with my hands tied behind my back, you know.}{}{}{}{}
+{62}{Then why didn't you?}{}{5}{}{101}{}
+
+{71}{Damn right you're slow! And obviously it's not only your reflexes but your head seems pretty light as well.  I certainly hope we don't cross paths again.}{Damn right you're slow! And obviously it's not only your reflexes but your head seems pretty light as well. I certainly hope we don't cross paths again.}{}{}{}{}
+{72}{You so mean to me. Me go away now. }{}{1}{}{-6}{gv1 81}
+
+{81}{Oh, boo-hoo! ...why do they let these morons run free around the streets of our city..}{Oh, boo-hoo! ...why do they let these morons run free around the streets of our city..}{}{}{}{}
+{82}{BAH!}{BAH!}{}{}{}{}
+{83}{Oh, shut the hell up!}{Oh, shut the hell up!}{}{}{}{}
+{84}{Catch you later, retardo!}{Catch you later, retardo!}{}{}{}{}
+{85}{Nope, I don't believe you! I'm SO out of here.. "Yotland Scard.." BAH! That branch is strictly for high quality detectives, not for some damn slackers if you ask me..}{Nope, I don't believe you! I'm SO out of here.. "Yotland Scard.." BAH! That branch is strictly for high quality detectives, not for some damn slackers if you ask me..}{}{}{}{}
+{86}{Spare your pathetic mumbo jumbo to someone who cares, mister "detective", 'cos I don't. Care, that is. I'm going away now, if you follow me, I'll beat you up so bad you'll have a hard time figuring out who you are.}{Spare your pathetic mumbo jumbo to someone who cares, miss "detective", 'cos I don't. Care, that is. I'm going away now, if you follow me, I'll beat you up so bad you'll have a hard time figuring out who you are.}{}{}{}{}
+{101}{Well, I.. uh, was too busy at the moment. Now if you'll excuse me, I have some important business to attend to.}{Well, I.. uh, was too busy at the moment. Now if you'll excuse me, I have some important business to attend to.}{}{}{}{}
+{102}{Don't let me keep you then, I'm sure you're in a big hurry to get busy doing nothing.}{}{1}{}{-6}{gv1 82}
+
+
+{141}{STOP... THE... THIEF.. DOWN THE ALLEY! Understand?}{STOP... THE... THIEF.. DOWN THE ALLEY! Understand?}{}{}{}{}
+{142}{Huh?}{}{-4}{}{181}{}
+
+{151}{...what a numb nuts.. I hope he doesn't pass out from thinking too hard.}{...what a numb nuts.. I hope she doesn't pass out from thinking too hard.}{}{}{}{}
+
+{162}{[He thinks for a moment.] I.. uh...I think you're right...I'll just run over there and become an average generic NPC..}{[He thinks for a moment.] I.. uh...I think you're right...I'll just run over there and become an average generic NPC..}{}{}{}{}
+{163}{Yes, that would be good. Now get going, I have a meeting with Chief Shards soon.}{}{12}{}{-12}{gv1 164}
+
+{164}{Sure, sure. Whatever, sir.}{Sure, sure. Whatever, miss.}{}{}{}{}
+
+{181}{Sheesh! Are you that stupid? CATCH THE GOD DAMN THIEF!!! .. DO IT BEFORE SHE RUNS AWAY!!!}{Sheesh! Are you that stupid? CATCH THE GOD DAMN THIEF!!! .. DO IT BEFORE SHE RUNS AWAY!!!}{}{}{}{}
+{182}{O-tay. Me ketch theef..}{}{-4}{}{0}{gf5 1, fl 151}
+
+{201}{What? You? Yotland Scard? BAH! You couldn't even catch a damn cold, so why would someone as slow as you get a position in such a fine unit as Yotland Scard? Hmph. This is ridiculous.}{What? You? Yotland Scard? BAH! You couldn't even catch a damn cold, so why would someone as slow as you get a position in such a fine unit as Yotland Scard? Hmph. This is ridiculous.}{}{}{}{}
+{202}{But it's true. If you don't believe me, then don't.}{}{5}{}{-6}{gv1 85}
+{203}{Uh, I don't believe agility is a required attribute for a detective, sir..}{}{12}{}{}{}
+{204}{Let's see if you can catch this, you arrogant piece of turd...}{}{5}{}{}{co, fl 30}
+
+{221}{What the hell are you talking about? If you work in the police department, you must be quick enough to catch thieves, and that's final! I don't have time to debate about the obvious, so please let me go now!}{What the hell are you talking about? If you work in the police department, you must be quick enough to catch thieves, and that's final! I don't have time to debate about the obvious, so please let me go now!}{}{}{}{}
+{222}{But, you see, uh, well.. You're wrong, sir. Because...}{}{12}{}{}{gv2 86}

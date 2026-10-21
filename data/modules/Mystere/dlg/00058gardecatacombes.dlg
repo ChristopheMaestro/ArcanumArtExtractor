@@ -1,0 +1,40 @@
+{1}{Halte! Qui êtes vous?}{Halte! Qui êtes vous?}{}{1}{}{gf1020 1}
+{2}{Je m'appelle @pcname@.}{}{5}{}{30}{}
+{3}{@pcname@.}{}{-4}{}{30}{}
+{4}{Peu importe.}{}{5}{}{30}{re -10}
+{5}{Toi pas savoir.}{}{-4}{}{30}{re -10}
+
+{30}{Que faîtes-vous ici?}{Que faîtes-vous ici?}{}{2}{}{}
+{31}{Je veux reconquérir l'épée perdue de saint André.}{}{5}{ru1006 1}{60}{}
+{32}{@pcname@ vouloir reprendre épée de saint André.}{}{-4}{ru1006 1}{60}{}
+{33}{La communauté m'a condamné à errer dans les catacombes.}{1}{5}{}{60}{}
+{34}{La communauté m'a condamnée à errer dans les catacombes.}{0}{5}{}{60}{}
+{35}{Moines punir moi aller ici.}{}{-4}{}{60}{}
+{36}{Je n'ai pas de compte à vous rendre.}{}{5}{}{60}{re -10}
+{37}{Toi pas besoin savoir.}{}{-4}{}{60}{re -10}
+
+{60}{Savez-vous seulement ce que renferment les catacombes, pour venir ici?}{Savez-vous seulement ce que renferment les catacombes, pour venir ici?}{}{3}{}{}
+{61}{Apprenez-le moi, je vous écoute.}{}{5}{}{90}{}
+{62}{toi dire à moi.}{}{-4}{}{90}{}
+{63}{Je n'ai pas peur de crétaures maléfiques.}{}{5}{}{90}{re -5}
+{64}{@pcname@ pas peur crétaures maléfiques}{}{-4}{}{90}{re -5}
+
+{90}{Nul n'est revenu vivant pour décrire les horreurs qui se cachent dans l'ombre des catacombes, à part le prévôt Dorkan. Lui-même est terrifié à l'idée d'évoquer ces choses.}{Nul n'est revenu vivant pour décrire les horreurs qui se cachent dans l'ombre des catacombes, à part le prévôt Dorkan. Lui-même est terrifié à l'idée d'évoquer ces choses.}{}{4}{}{}
+{91}{E:}{}{1}{}{180}{}
+
+{180}{Je ne peux vous empêcher d'entrer dans les catacombes, mais soyez conscient que je ne vous en laisserez pas ressortir vivant, à moins que vous parveniez à rapporter l'épée de Saint André.}{Je ne peux vous empêcher d'entrer dans les catacombes, mais soyez conscient que je ne vous en laisserez pas ressortir vivant, à moins que vous parveniez à rapporter l'épée de Saint André.}{}{5}{}{}
+{181}{E:}{}{1}{}{0}{gf1021 1}
+
+{210}{}{}{}{}{}{}
+{211}{Je n'ai pas trouvé l'épée de Saint André.}{}{5}{ni 2201}{240}{}
+{212}{@pcname@ pas trouver épée Saint André.}{}{-4}{ni 2201}{240}{}
+{213}{J'ai trouvé l'épée de Saint André.}{}{5}{in 2201}{270}{}
+{214}{@pcname@ trouver épée Saint André.}{}{-4}{in 2201}{270}{}
+
+
+{240}{La règle est la même pour tous! En garde!}{La règle est la même pour tous! En garde!}{}{6}{}{}
+{241}{[Vous dégainez votre arme]}{}{1}{}{0}{co}
+
+{270}{Je n'en crois pas mes yeux! Comment est-ce possible!... Dépechez-vous de rapporter l'épée sainte au prévôt!}{Je n'en crois pas mes yeux! Comment est-ce possible!... Dépechez-vous de rapporter l'épée sainte au prévôt!}{}{7}{}{re +30}
+{271}{E:}{}{1}{}{0}{gf1019 0, gf1024 1}
+

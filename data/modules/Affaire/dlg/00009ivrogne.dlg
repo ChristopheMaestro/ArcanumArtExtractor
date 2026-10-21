@@ -1,0 +1,24 @@
+{1}{Si tu me payes une petite chopine, je te dévoile un secret!...}{Si tu me payes une petite chopine, je te dévoile un secret!...}{}{1}{}{lf1 1}
+{2}{[Vous lui donnez 5 pièces d'or pour qu'il s'achete une bouteille]}{}{1}{$$5}{30}{$$-5}
+{3}{Avez-vous trouvé une lettre dans les parages?}{}{5}{lf2 0, gf1000 1}{120}{}
+{4}{Toi avoir trouve lettre là?}{}{-4}{lf2 0, gf1000 1}{120}{}
+{5}{E:}{}{1}{}{0}{}
+
+{30}{Et ben, mon gars, tu me crois, tu me crois pas, j'ai vu un bateau fantôme, ouais!... Après tout, si tu ma payes une autre chopine, je te dévoile un autre secret... Formidable...}{Et ben, mon gars, tu me crois, tu me crois pas, j'ai vu un bateau fantôme, ouais!... Après tout, si tu ma payes une autre chopine, je te dévoile un autre secret... Formidable...}{}{2}{}{}
+{31}{[Vous lui donnez 5 pièces d'or pour qu'il s'achete une autre bouteille]}{}{1}{$$5}{60}{$$-5}
+{32}{E:}{}{1}{}{0}{}
+
+{60}{Toi, t'es un bon gars, j'vais te chanter une petite chansonnette! [...]}{Toi, t'es un bon gars, j'vais te chanter une petite chansonnette! [...]}{}{3}{}{}
+{61}{A:}{}{1}{}{0}{}
+
+{90}{Gardes! Emparez-vous de lui!...}{Gardes! Emparez-vous d'elle!...}{}{4}{}{}
+{91}{Avez-vous trouvé une lettre dans les parages?}{}{5}{lf2 0, gf1000 1}{120}{}
+{92}{Toi avoir trouve lettre là?}{}{-4}{lf2 0, gf1000 1}{120}{}
+{93}{A:}{}{1}{}{0}{}
+
+{120}{Si tu me payes une petite chopine... je te vide mes poches!...}{Si tu me payes une petite chopine... je te vide mes poches!...}{}{5}{}{}
+{121}{[Vous lui donnez 5 pièces d'or pour qu'il s'achete une bouteille]}{}{1}{$$5}{150}{$$-5, lf2 1}
+{122}{E:}{}{1}{}{0}{}
+
+{150}{Tiens... je te donne tout de bon coeur, l'ami... Hé, hé... J'ai mis tout ça dans un pot de fleurs, par là...}{Tiens... je te donne tout de bon coeur, l'amie... Hé, hé... J'ai mis tout ça dans un pot de fleurs, par là...}{}{6}{}{}
+{151}{A:}{}{1}{}{0}{in-5402, in-5801, in-5803, in-5804, in-5805, qu1006 4}

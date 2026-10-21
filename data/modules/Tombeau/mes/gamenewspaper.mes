@@ -1,0 +1,61 @@
+// This message file contains text to be used in game-supplied newspapers
+// Only the message line numbers 1000 or higher are valid
+// Each new newspaper begins on a multiple of 10, and can use up to 10
+// lines, which must be consecutive. The first line is always the main 
+// headline, while the 9 remaining lines go into 4 columns of the paper.
+// Format: each line begins with a font number and justification letter,
+// followed by the text for that line.
+
+// Some font numbers to use:
+//	490 Extra Large Headline
+//	486 Large Headline
+//	492 Normal Headline
+//	483 Story Body
+//	488 Clip Art 0-6
+
+// Justification letters (you must use one)
+//	l = left
+//	c = center
+
+// NOTE: The first blocks, 0 thru 999, are reserved for UI use
+
+// News Paper Type 1
+{0}{EXTRA!}
+{1}{[ NEWS ]}
+{2}{Price 2 Coins}
+{3}{The Best Source of News-worthy Items in Arcanum}
+
+// News Paper Type 2
+{4}{[ TIMES ]}
+{5}{All the News That is Fit to Print}
+
+// filler articles
+{10}{492c _ WEATHER _}
+{11}{483l The Meteorological Service Bureau of Tarant is Predicting sunny weather for the next Two to Three days, with an increasing Chance of Precipitation before the Passage of a Fortnight.}
+{12}{492c _ TAX INCREASE _}
+{13}{483l The Parliament is again considering Raising the Levy of Incomes in Tarant by another 2 coins for every 100 earned. The Speaker has refuted all Public Criticism of the Increase, by Citing the importance of Public Works projects currently underway.}
+{14}{492c _ PUBLIC SERVICE ANNOUNCEMENT _}
+{15}{483l There will be a City Council meeting this Friday which is Open to the Public. The Meeting will commence sharply at 7pm.}
+{16}{492c _ EDITORIAL REMINDER _}
+{17}{483l The Tarantian would like to take this Opportunity to remind its Gentle Reader that all letters to Editor do not necessarily Reflect the views of the Newspaper or its Owner, Sir William Willaby.}
+{18}{492c _ PROHIBITION _}
+{19}{483l The spectre of Prohibition has risen once again, as Parliament considers a Bill to ban the sales of Spirits in the confines of the City proper. Supporters of the Bill cite increased Crime and Work Absenteeism figures as the principle Show of Cause for the bill, while its Critics cite similiar Statistics during the last Prohibition era over 30 years ago.}
+{20}{492c _ UNIVERSITY COLLOQUIUM SERIES _}
+{21}{483l The Engineering School of the University of Tarant is holding a Distinguished Speaker Series this semester. Interested parties are invited to contact the University Registrar for more Information.}
+{22}{492c _ CHARITY BALL _}
+{23}{483l The Ladies Society of Tarant will once again hold a Charity Ball this Saturday evening. This Event will benefit Orphans and Survivors of Foreign Wars. Festivities will begin at 8pm. Strict dress code will be enforced.}
+{24}{492c _ TIDAL FIGURES _}
+{25}{483l High tides will occur at 6:15am and 7:30pm today, with low tides at approximately 1:05pm and 25 minutes after midnight. Full tidal charts can be found on page 8.}
+
+//Game Related Newspapers
+//Use lines 1000-4990
+//Generic Newspapers Start at line 5000
+
+{1000}{490c SAMPLE HEADLINE!}
+{1001}{492c _ Place subheading here _}
+{1002}{483l And here's the text of the story. It's pretty exciting!}
+
+
+
+//Generic Newspapers
+

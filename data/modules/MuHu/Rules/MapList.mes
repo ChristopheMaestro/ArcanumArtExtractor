@@ -1,0 +1,29 @@
+//
+// Map List Info
+//
+
+// Types:
+//	START_MAP -- This is the starting map (there should only be one of these!)
+//	SHOPPING_MAP -- This is the shopping map used in character creation.  If not
+//		present, then this process is skipped during character creation.
+
+	// Starting Location (Convert for World by:)
+	// (54624 - 32) / 64 = 853
+	// (45408 - 32) / 64 = 709
+
+// Area: <#> -- This is the Index # in area.mes that the map maps to
+
+
+// List of valid maps for game & Starting X/Y position
+{5000}{ShopMap, 31, 29, Type: SHOPPING_MAP}
+{5001}{village, 168, 161, Type: START_MAP, WorldMap: 0}
+{5002}{neige, 149, 154,, WorldMap: 0}
+{5003}{kikicity, 2051, 2030,, worldMap: 0}
+{5004}{pouriland, 1452, 1258,, worldMap: 0}
+{5005}{donjon, 205, 650,, worldMap: 0}
+{5006}{pauvre, 205, 650,, worldMap: 0}
+{5007}{Québec, 2047, 2046,, WorldMap: 1}
+{5008}{Egouts, 314, 311,, WorldMap: 2}
+{5009}{egoutkiki, 314, 311,, worldMap: 2}
+
+

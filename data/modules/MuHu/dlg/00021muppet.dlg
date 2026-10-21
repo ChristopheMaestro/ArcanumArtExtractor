@@ -1,0 +1,35 @@
+// [LABEL] debut
+{1}{Que faîtes-vous chez moi?}{Que faîtes-vous chez moi?}{}{1}{}{}
+{2}{Je viens pour vous tuer espèce de tarlouze!}{}{1}{}{}{co, fl 80}
+{3}{Je viens pour récuperer la clé de la cellule de Casimir}{}{1}{qu1008 2}{21}{}
+{4}{Désolé de vous avoir dérangé, au revoir.}{}{1}{}{}{}
+
+// [LABEL] clé
+{21}{Je vois, c'est Stan qui vous envoie. Il se sert de vous pour liberer un dangereux criminel. Il a déja cambriolé plusieurs banques.}{Je vois, c'est Stan qui vous envoie. Il se sert de vous pour liberer un dangereux criminel. Il a déja cambriolé plusieurs banques.}{}{2}{}{}
+{22}{Je ne vous crois pas. Je veux cette clé tout de suite sinon ca va chier.}{}{1}{}{41}{}
+{23}{Que dois-je faire alors pour l'empêcher d'aider son ami à s'évader?}{}{1}{}{101}{}
+
+// [LABEL] cavachier
+{41}{Ce n'est pas la peine de m'insulter. Et de toute façon, je n'ai pas cette clé. Je l'ai donné à quelqu'un d'autre.}{Ce n'est pas la peine de m'insulter. Et de toute façon, je n'ai pas cette clé. Je l'ai donné à quelqu'un d'autre.}{}{3}{}{}
+{42}{T'as interêt à me dire qui c'est sinon je te découpe en morceaux et je les donne aux cochons du quartier pauvre.}{}{1}{}{61}{}
+{43}{Ah, ben ce n'est pas grâve. Je reviendrais quand vous l'aurez.}{}{1}{}{}{}
+{44}{Y a t'il un moyen de la récuperer?}{}{1}{}{81}{}
+
+// [LABEL] decoupenemorceau
+{61}{Eh, depuis quand on se tutoie?}{Eh, depuis quand on se tutoie?}{}{4}{}{}
+{62}{Vous commencez à enervez le chien!}{}{1}{}{}{}
+{63}{Welcome to Paris Johnny!}{}{1}{}{}{}
+{64}{Bonjour c'est Benjamin Castaldi!}{}{1}{}{}{}
+{65}{Je suis ton père.}{}{1}{}{}{}
+{66}{Et un et deux et troisième homme!}{}{1}{}{}{}
+{67}{C'est fort en chocolat}{}{1}{}{}{}
+
+// [LABEL] recuperer clé
+{81}{Vous pouvez essayer de trouver robert hue mais je pense qu'il ne vous donnera pas la clé!}{Vous pouvez essayer de trouver robert hue mais je pense qu'il ne vous donnera pas la clé!}{}{5}{}{}
+{82}{Merci du renseignement, je vais aller chercher ce gros lard.}{}{1}{}{}{qu1008 3}
+
+// [LABEL] empecher de s'evader
+{101}{Vous devez prevenir le chef de la police de Kikicity. Il mettra Stan en prison avec son pote Casimir.}{Vous devez prevenir le chef de la police de Kikicity. Il mettra Stan en prison avec son pote Casimir.}{}{6}{}{}
+{102}{Très bien je cours voir le chef de la police.}{}{1}{}{}{qu1014 2, qu1008 5}
+{103}{Je prefere aider Stan.}{}{1}{}{21}{}
+

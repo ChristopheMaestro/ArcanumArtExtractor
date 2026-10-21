@@ -1,0 +1,81 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{W:}{}{1}{lf1 0}{30}{lf1 1}
+{3}{Que faîtes-vous ici?}{}{5}{lf2 0}{60}{lf2 1}
+{4}{Quoi toi faire sur île?}{}{-4}{lf2 0}{60}{lf2 1}
+{5}{J'aimerais m'entretenir avec l'esprit d'Henri Chapelier.}{}{5}{qu1002 2, lf3 0, lf2 1}{90}{}
+{6}{Moi vouloir parler mort Henri Chapelier.}{}{-4}{qu1002 2, lf3 0, lf2 1}{90}{}
+{7}{E:}{}{1}{}{0}{}
+
+{30}{Je m'appelle Conrad Ivanoff... Et vous êtes @pcname@, n'est-ce pas?...}{Je m'appelle Conrad Ivanoff... Et vous êtes @pcname@, n'est-ce pas?...}{}{}{}{}
+{31}{Que faîtes-vous ici?}{}{5}{lf2 0}{60}{lf2 1}
+{32}{Quoi toi faire sur île?}{}{-4}{lf2 0}{60}{lf2 1}
+{33}{J'aimerais m'entretenir avec l'esprit d'Henri Chapelier.}{}{5}{qu1002 2, lf3 0, lf2 1}{90}{}
+{34}{Moi vouloir parler mort Henri Chapelier.}{}{-4}{qu1002 2, lf3 0, lf2 1}{90}{}
+{35}{E:}{}{1}{}{0}{}
+
+{60}{Je suis voyant. Si vous souhaitez consulter les esprits des morts, vous êtes devant la bonne personne.}{Je suis voyant. Si vous souhaitez consulter les esprits des morts, vous êtes devant la bonne personne.}{}{}{}{}
+{61}{W:}{}{1}{lf1 0}{30}{lf1 1}
+{62}{J'aimerais m'entretenir avec l'esprit d'Henri Chapelier.}{}{5}{qu1002 2, lf3 0, lf2 1}{90}{}
+{63}{Moi vouloir parler mort Henri Chapelier.}{}{-4}{qu1002 2, lf3 0, lf2 1}{90}{}
+{64}{E:}{}{1}{}{0}{}
+
+{90}{Cela vous coûtera 300 pièces d'or.}{Cela vous coûtera 300 pièces d'or.}{}{}{}{}
+{91}{Je reviendrai quand j'aurai la somme.}{}{5}{$$-299}{0}{}
+{92}{@pcname@ revenir avec argent.}{}{-4}{$$-299}{0}{}
+{93}{[Vous lui donnez les 300 pièces d'or]}{}{1}{$$300}{120}{$$-300, lf3 1}
+{94}{J'ai changé d'avis.}{}{5}{$$300}{0}{}
+{95}{@pcname@ changé avis.}{}{-4}{$$300}{0}{}
+
+{120}{Je vais me concentrer. L'esprit du mort parlera par ma bouche.}{Je vais me concentrer. L'esprit du mort parlera par ma bouche.}{}{}{}{}
+{121}{[Suite]}{}{1}{}{122}{}
+
+{122}{[Le médium entre dans une concentration proche de la transe, passant quelques minutes à murmurer des paroles incompréhensibles. Soudain, sa voix devient forte et claire. Ce n'est plus sa voix, mais celle d'un autre!]}{[Le médium entre dans une concentration proche de la transe, passant quelques minutes à murmurer des paroles incompréhensibles. Soudain, sa voix devient forte et claire. Ce n'est plus sa voix, mais celle d'un autre!]}{}{}{}{}
+{123}{[Suite]}{}{1}{}{124}{}
+
+{124}{QUE ME VEUX-TU, MORTEL?}{QUE ME VEUX-TU, MORTELLE?}{}{}{}{}
+{125}{Je veux savoir qui vous a tué!}{}{5}{lf4 0}{150}{lf4 1}
+{126}{Moi vouloir savoir qui tuer toi!}{}{-4}{lf4 0}{150}{lf4 1}
+{127}{Pourquoi vous-a-ton assassiné?}{}{5}{lf5 0}{180}{lf5 1}
+{128}{Pourquoi toi être assassiné?}{}{-4}{lf5 0}{180}{lf5 1}
+{129}{De quel objet parlait Jack Silver, dans sa lettre de menace?}{}{5}{gf1003 1, lf7 0}{240}{lf7 1}
+{130}{Qoui parler Jack Silver, dans lettre menace?}{}{-4}{gf1003 1, lf7 0}{240}{lf7 1}
+
+{150}{UN MONSTRE DE FER M'A ATTAQUE A L'ENTREPÔT!... SA FORCE ETAIT PRODIGIEUSE... JE N'AI PAS PU LUTTER...}{UN MONSTRE DE FER M'A ATTAQUE A L'ENTREPÔT!... SA FORCE ETAIT PRODIGIEUSE... JE N'AI PAS PU LUTTER...}{}{}{}{}
+{151}{Qui commandait ce monstre?}{}{5}{lf6 0}{210}{lf6 1}
+{152}{Qui commander monstre?}{}{-4}{lf6 0}{210}{lf6 1}
+{153}{Pourquoi vous-a-ton assassiné?}{}{5}{lf5 0}{180}{lf5 1}
+{154}{Pourquoi toi être assassiné?}{}{-4}{lf5 0}{180}{lf5 1}
+{155}{De quel objet parlait Jack Silver, dans sa lettre de menace?}{}{5}{gf1003 1, lf7 0}{240}{lf7 1}
+{156}{Qoui parler Jack Silver, dans lettre menace?}{}{-4}{gf1003 1, lf7 0}{240}{lf7 1}
+{157}{J'identifierai votre assassin, monsieur Chapelier. Et je le ferai arrêter.}{}{5}{lf4 1, lf5 1, lf6 1}{270}{}
+{158}{Moi trouver assassin, toi monsieur Chapelier.}{}{-4}{lf4 1, lf5 1, lf6 1}{0}{fl270}
+
+{180}{JE NE SAIS PAS! JE N'AVAIS AUCUN ENNEMI QUI VEUILLE MA MORT...}{JE NE SAIS PAS! JE N'AVAIS AUCUN ENNEMI QUI VEUILLE MA MORT...}{}{}{}{}
+{181}{Je veux savoir qui vous a tué!}{}{5}{lf4 0}{150}{lf4 1}
+{182}{Moi vouloir savoir qui tuer toi!}{}{-4}{lf4 0}{150}{lf4 1}
+{183}{Qui commandait ce monstre?}{}{5}{lf6 0, lf4 1}{210}{lf6 1}
+{184}{Qui commander monstre?}{}{-4}{lf6 0, lf4 1}{210}{lf6 1}
+{185}{De quel objet parlait Jack Silver, dans sa lettre de menace?}{}{5}{gf1003 1, lf7 0}{240}{lf7 1}
+{186}{Qoui parler Jack Silver, dans lettre menace?}{}{-4}{gf1003 1, lf7 0}{240}{lf7 1}
+{187}{J'identifierai votre assassin, monsieur Chapelier. Et je le ferai arrêter.}{}{5}{lf4 1, lf5 1, lf6 1}{270}{}
+{188}{Moi trouver assassin, toi monsieur Chapelier.}{}{-4}{lf4 1, lf5 1, lf6 1}{0}{fl270}
+
+{210}{JE N'AI PU DISTINGUER QU'UNE OMBRE AU FOND DE L'ENTRPÔT.}{JE N'AI PU DISTINGUER QU'UNE OMBRE AU FOND DE L'ENTRPÔT.}{}{}{}{}
+{211}{Pourquoi vous-a-ton assassiné?}{}{5}{lf5 0}{180}{lf5 1}
+{212}{Pourquoi toi être assassiné?}{}{-4}{lf5 0}{180}{lf5 1}
+{213}{De quel objet parlait Jack Silver, dans sa lettre de menace?}{}{5}{gf1003 1, lf7 0}{240}{lf7 1}
+{214}{Qoui parler Jack Silver, dans lettre menace?}{}{-4}{gf1003 1, lf7 0}{240}{lf7 1}
+{215}{J'identifierai votre assassin, monsieur Chapelier. Et je le ferai arrêter.}{}{5}{lf4 1, lf5 1, lf6 1}{270}{}
+{216}{Moi trouver assassin, toi monsieur Chapelier.}{}{-4}{lf4 1, lf5 1, lf6 1}{0}{fl270}
+
+{240}{JE NE CONNAIS PAS CET HOMME. JAMAIS NE M'A-T-IL ECRIT...}{JE NE CONNAIS PAS CET HOMME. JAMAIS NE M'A-T-IL ECRIT...}{}{}{}{}
+{241}{Je veux savoir qui vous a tué!}{}{5}{lf4 0}{150}{lf4 1}
+{242}{Moi vouloir savoir qui tuer toi!}{}{-4}{lf4 0}{150}{lf4 1}
+{243}{Pourquoi vous-a-ton assassiné?}{}{5}{lf5 0}{180}{lf5 1}
+{244}{Pourquoi toi être assassiné?}{}{-4}{lf5 0}{180}{lf5 1}
+{245}{Qui commandait ce monstre?}{}{5}{lf6 0, lf4 1}{210}{lf6 1}
+{246}{Qui commander monstre?}{}{-4}{lf6 0, lf4 1}{210}{lf6 1}
+{247}{J'identifierai votre assassin, monsieur Chapelier. Et je le ferai arrêter.}{}{5}{lf4 1, lf5 1, lf6 1}{0}{fl270}
+{248}{Moi trouver assassin, toi monsieur Chapelier.}{}{-4}{lf4 1, lf5 1, lf6 1}{0}{fl270}
+
+{270}{MON NOM EST BASILE HAUCHECORNE!}{MON NOM EST BASILE HAUCHECORNE!}{}{}{}{ru1014}

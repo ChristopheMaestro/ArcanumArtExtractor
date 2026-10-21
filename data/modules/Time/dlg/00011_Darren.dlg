@@ -1,0 +1,183 @@
+{1}{Greetings. My name is Darren Reaves. Who are you and what brings you to my once quiet abode?}{Greetings ma'am. My name is Darren Reaves. Who are you and what brings you to my once quiet abode?}{}{}{}{lf 1 1}
+{2}{I'm @pcname@. I'm very lost -- could you help me?}{}{5}{}{10}{gf 4 1}
+{3}{I'm @pcname@. The mayor sent me to kill you, but…}{}{5}{qu 1002 2}{35}{gf 4 1}
+{4}{I'm @pcname@. I've come to kill you. Any last words?}{}{5}{qu 1002 2}{55}{}
+{5}{Hi! I'm @pcname@! And oh, I'm very lost -- help?}{}{-4}{}{10}{gf 4 1}
+{6}{I'm @pcname@ and mayor told me to come kill bad mage guy. You know?}{}{-4}{qu 1002 2}{35}{gf 4 1}
+{7}{}{}{}{}{}{}
+{8}{}{}{}{}{}{}
+{9}{}{}{}{}{}{}
+{10}{Lost? This isn't exactly a big place. The town's just up the road, and you'll want to avoid the old ruins. Not much else here really.}{Lost? This isn't exactly a big place. The town's just up the road, and you'll want to avoid the old ruins. Not much else here really.}{}{}{}{lf 4 1}
+{11}{Well, let me explain. [Tell him about your adventure through the ruins...]}{}{5}{}{15}{}
+{12}{No no no! [Tell him about your adventures through the ruins...]}{}{-4}{}{15}{}
+{13}{}{}{}{}{}{}
+{14}{}{}{}{}{}{}
+{15}{[He stares at you for a bit as you wind up your tale.] T-That's incredible! Do you still have that note? Or the "key" with you? }{[He stares at you for a bit as you wind up your tale.] T-That's incredible! Do you still have that note? Or the "key" with you? }{}{}{}{}
+{16}{[Show him the note.]}{}{1}{}{18}{}
+{17}{}{}{}{}{}{}
+{18}{[With trembling hands, he gingerly fingers the tattered old note.] I-It's incredible! I can't believe it! It's my handwriting. If what you say is true, then I've finally figured it out! [He pauses.] Of course it also means I met some sort of untimely demise without being able to destroy the demons... But still! I did it! I found a way to travel through time!}{[With trembling hands, he gingerly fingers the tattered old note.] I-It's incredible! I can't believe it! It's my handwriting. If what you say is true, then I've finally figured it out! [He pauses.] Of course it also means I met some sort of untimely demise without being able to destroy the demons... But still! I did it! I found a way to travel through time!}{}{}{}{}
+{19}{So you're saying I'm from the future, back to set things right in this time?}{}{5}{}{21}{}
+{20}{Uh... You're funny! }{}{-4}{}{21}{}
+{21}{Hmm, yes. I'll have to find a way to send you back. But I think I know how. But first thing's first - I must get rid of the demons in the ruins. Will you help?}{Hmm, I'll have to find a way to send you back. But I think I know how. But first thing's first - I must get rid of the demons in the ruins. Will you help?}{}{}{}{}
+{22}{Sure, let's be off then.}{}{5}{}{-35}{qu 1003 2}
+{23}{OK! We go fight bad evil thingles together!}{}{-4}{}{-35}{qu 1003 2}
+{24}{I'd rather go by myself. But Could I ask you some questions?}{}{5}{}{125}{qu 1003 1}
+{25}{Go? With you? HA! There's a price on your head, and I intend on collecting!}{}{5}{qa 1002 1}{-38}{}
+{26}{Go with you? No thanks, but did you know that the town wants your blood?}{}{5}{qa 1002 1}{35}{qu 1003 1}
+{27}{Uh, I don't wanna go anywhere with you. But I wanna ask you something!}{}{-4}{}{125}{qu 1003 1}
+{28}{HAHAHA! I'm gonna kill you and mayor will give me loot! Die mage person!}{}{-4}{qa 1002 1}{-38}{}
+{29}{Uh... You're really funny! Ha! You know mayor wants you dead?}{}{-4}{qa 1002 1}{35}{qu 1003 1}
+{30}{E:}{}{1}{}{0}{}
+{31}{}{}{}{}{}{}
+{32}{}{}{}{}{}{}
+{33}{}{}{}{}{}{}
+{34}{You'll fight with me? W-Why, that's excellent! I can't let you know just how grateful I am. Let us go then.}{You'll fight with me? W-Why, that's excellent! I can't let you know just how grateful I am. Let us go then.}{}{}{}{}
+{35}{Really? I knew that they had become more... untrusting, suspicious. I had not realized that they would go all out! If only they understood what I was doing here. Damn, no time for that now. I guess that also means I'll get no support from them when I go confront the demons.}{Really? I knew that they had become more... untrusting, suspicious. I had not realized that they would go all out! If only they understood what I was doing here. Damn, no time for that now. I guess that also means I'll get no support from them when I go confront the demons.}{}{}{}{}
+{36}{What do you mean "no support"? Like you, I too am fighting the demons!}{}{5}{lf 4 0}{45}{re +1, jo 1 45, qu 1003 2}
+{37}{Oh you've convinced me. I'll go with you...}{}{5}{lf 4 1}{-32}{qu 1003 2}
+{38}{Ha! Cease your pretenses. You're with the demons, and I intend to kill you!}{}{5}{}{-38}{}
+{39}{Wait, it gets better. Take a look at this [Show him the tattered note].}{}{5}{lf 4 0}{60}{lf 4 1}
+{40}{Hey! I fight too! We fight! Yeah yeah!}{}{-4}{lf 4 0}{}{re +1, jo 1 45, qu 1003 2}
+{41}{Ha, you big whiner silly head. I suppose I'll fight with you. Silly head!}{}{-4}{lf 4 1}{-32}{qu 1003 2}
+{42}{Yeah right! You think I big dummy? You a bad mage, I kill. Die!}{}{-4}{}{-38}{}
+{43}{Duh? You can't go fight by yourself! See? [Show him the tattered note.]}{}{-4}{lf 4 0}{60}{lf 4 1}
+{44}{}{}{}{}{}{}
+{45}{You'll fight with me? W-Why, that's excellent! I can't let you know just how grateful I am!}{You'll fight with me? W-Why, that's excellent! I can't let you know just how grateful I am!}{}{}{}{}
+{46}{K:}{}{1}{}{125}{}
+{47}{I need your help first. [Show him the note and tell him everything...]}{}{5}{lf 4 0}{60}{lf 4 1}
+{48}{Think nothing of it. Let's go.}{}{5}{}{0}{}
+{49}{Wait! I been to ruins before! [Show him the note while you babble...]}{}{-4}{lf 4 0}{60}{lf 4 1}
+{50}{}{}{}{}{}{}
+{51}{}{}{}{}{}{}
+{52}{}{}{}{}{}{}
+{53}{}{}{}{}{}{}
+{54}{}{}{}{}{}{}
+{55}{Kill me?! Why, I don't even know you. Did someone send you? What-why...}{Kill me?! Why, I don't even know you. Did someone send you? What-why...}{}{}{}{}
+{56}{The mayor sent me. You're in league with the demons!}{}{5}{qa 1002 1}{35}{gf 4 1}
+{57}{Interesting choice of last words. Prepare to die!}{}{5}{}{-38}{}
+{58}{}{}{}{}{}{}
+{59}{}{}{}{}{}{}
+{60}{[He stares at you for a bit as you wind up your tale.] T-That's incredible! May I see that note briefly? I don't suppose you still have the "key" with you?}{[He stares at you for a bit as you wind up your tale.] T-That's incredible! May I see that note briefly? I don't suppose you still have the "key" with you?}{}{}{}{}
+{61}{[Give him the note.] I'm afraid the key vanished.}{}{5}{}{63}{}
+{62}{[Give him the note.] Key go poof!}{}{-4}{}{63}{}
+{63}{[With trembling hands, he gingerly fingers the tattered old note.] I-It's incredible! I can't believe it! It's my handwriting. If what you say is true, then I've finally figured it out! [He pauses.] Of course it also means I met some sort of untimely demise without being able to destroy the demons... Still! I did it! I found a way to travel through time!}{[With trembling hands, he gingerly fingers the tattered old note.] I-It's incredible! I can't believe it! It's my handwriting. If what you say is true, then I've finally figured it out! [He pauses.] Of course it also means I met some sort of untimely demise without being able to destroy the demons... But still! I did it! I found a way to travel through time!}{}{}{}{}
+{64}{So you're saying I'm from the future, back to set things right in this time?}{}{5}{}{66}{}
+{65}{Uh... You're funny! }{}{-4}{}{66}{}
+{66}{Hmm, I'll have to find a way to send you back. But I think I know how. But first thing's first - we must get rid of the demons in the ruins. [He gives the note back to you.] Are you ready?}{Hmm, I'll have to find a way to send you back. But I think I know how. But first thing's first - we must get rid of the demons in the ruins. [He gives the note back to you.] Are you ready?}{}{}{}{}
+{67}{K:}{}{1}{}{125}{}
+{68}{Sure, let's be off then.}{}{5}{}{0}{}
+{69}{OK! We go fight bad evil thingles together!}{}{-4}{}{0}{}
+{70}{}{}{}{}{}{}
+{71}{}{}{}{}{}{}
+{72}{}{}{}{}{}{}
+{73}{}{}{}{}{}{}
+{74}{}{}{}{}{}{}
+{75}{Well, the demons are going and I suppose you need to go back to your own time. Are you ready?}{Well, the demons are going and I suppose you need to go back to your own time. Are you ready?}{}{}{}{}
+{76}{Yes. Farewell Darren.}{}{5}{}{-11}{lv}
+{77}{Wait, not yet!}{}{1}{}{}{fl 80}
+{78}{Byebye big D! I miss you!!!}{}{-4}{}{-11}{lv}
+{79}{}{}{}{}{}{}
+{80}{Oh, let me know when you're ready to go.}{Oh, let me know when you're ready to go.}{}{}{}{}
+{81}{[He starts to mutter but his voice fades out and everything before your eyes wavers.]}{[He starts to mutter but his voice fades out and everything before your eyes wavers.]}{}{}{}{}
+{82}{}{}{}{}{}{}
+{83}{}{}{}{}{}{}
+{84}{}{}{}{}{}{}
+{85}{}{}{}{}{}{}
+{86}{}{}{}{}{}{}
+{87}{}{}{}{}{}{}
+{88}{}{}{}{}{}{}
+{89}{}{}{}{}{}{}
+{90}{We did it my friend! This is most excellent! The curse is lifted, I can tell -- I feel lighter somehow. Hahaha! Now I can send you back to your own time. Just let me know when you're ready.}{We did it my friend! This is most excellent! The curse is lifted, I can tell -- I feel lighter somehow. Hahaha! Now I can send you back to your own time. Just let me know when you're ready.}{}{}{}{qu 1003 4}
+{91}{}{}{}{}{}{}
+{92}{}{}{}{}{}{}
+{93}{}{}{}{}{}{}
+{94}{}{}{}{}{}{}
+{95}{}{}{}{}{}{}
+{96}{}{}{}{}{}{}
+{97}{It will be good to have help by my side. Let's go.}{It will be good to have help by my side. Let's go.}{}{}{}{}
+{98}{Done.}{Done.}{}{}{}{}
+{99}{Very well. Let us continue onward.}{Very well. Let us continue onward.}{}{}{}{}
+{100}{Yes, @pcname@?}{Yes, @pcname@?}{}{}{}{}
+{101}{B:}{}{1}{wa 0}{}{}
+{102}{K:}{}{1}{}{125}{}
+{103}{Could you do something for me?}{}{5}{wa 0}{115}{}
+{104}{I'd like to know more about you and your skills.}{}{5}{wa 0}{}{ce}
+{105}{I need you to do stuff.}{}{-4}{wa 0}{115}{}
+{106}{Hey, what kind of stuff you can do? I wanna know!}{}{-4}{wa 0}{}{ce}
+{107}{You can stop waiting -- let's be off.}{}{5}{wa 1}{}{uw 1 0, fl 99}
+{108}{Hey, I need you again big D!}{}{-4}{wa 1}{}{uw 1 0, fl 99}
+{109}{E:}{}{1}{}{0}{}
+{110}{}{}{}{}{}{}
+{111}{}{}{}{}{}{}
+{112}{}{}{}{}{}{}
+{113}{}{}{}{}{}{}
+{114}{}{}{}{}{}{}
+{115}{Well what can I do for you @pcname@?}{Well what can I do for you @pcname@?}{}{}{}{}
+{116}{Stay back a bit.}{}{1}{}{}{so, fl 98}
+{117}{Stay closer.}{}{1}{}{}{sc, fl 98}
+{118}{Wait here.}{}{1}{wa 0}{}{wa}
+{119}{I think it's best for us to go our separate ways.}{}{5}{}{}{lv, fl 124}
+{120}{You go away. I wanna go my own way now. Bye!}{}{-4}{}{}{lv, fl 123}
+{121}{}{}{}{}{}{}
+{122}{}{}{}{}{}{}
+{123}{Hmm... Not a wise decision, but then again, nobody would ever accuse you of possessing acute intelligence. Farewell then.}{Hmm... Not a wise decision, but then again, nobody would ever accuse you of possessing acute intelligence. Farewell then.}{}{}{}{}
+{124}{Hmm... Not a wise decision, but as you wish.}{Hmm... Not a wise decision, but as you wish.}{}{}{}{}
+{125}{If I have the answers.}{If I have the answers.}{}{}{}{}
+{126}{What do you know about the town?}{}{5}{}{135}{}
+{127}{Do you know much about the townsfolk?}{}{5}{}{138}{}
+{128}{Tell me more about the old ruins.}{}{5}{}{141}{}
+{129}{What do you know about the demons?}{}{5}{lf 2 0}{148}{lf 2 1}
+{130}{Tell me about town!}{}{-4}{}{135}{}
+{131}{What's up with the town peeps?}{}{-4}{}{138}{}
+{132}{What are ruins?}{}{-4}{}{141}{}
+{133}{Tell me more about big bad evil thingles!}{}{-4}{lf 2 0}{148}{lf 2 1}
+{134}{E:}{}{1}{}{0}{}
+{135}{I don't know much about it. I came this way when I was looking for a quiet place to study. The town's not bad. It has the supplies I need. They don't really trust me, but I didn't mind. It's just an average small town I guess. }{I don't know much about it. I came this way when I was looking for a quiet place to study. The town's not bad. It has the supplies I need. They don't really trust me, but I didn't mind. It's just an average small town I guess. }{}{}{}{}
+{136}{K:}{}{1}{}{125}{}
+{137}{E:}{}{1}{}{}{fl 99}
+{138}{I don't interact with the townspeople often. There's a kid, Joe I think, who talks to me sometimes, asking questions and following me around. There's a gypsy who has some interesting magickal items, a blacksmith - he doesn't like me, and a general shop clerk. The general store's connected to the bar, and it's always noisy and crowded in there.}{I don't interact with the townspeople often. There's a kid, Joe I think, who talks to me sometimes, asking questions and following me around. There's a gypsy who has some interesting magickal items, a blacksmith - he doesn't like me, and a general shop clerk. The general store's connected to the bar, and it's always noisy and crowded in there.}{}{}{}{}
+{139}{K:}{}{1}{}{125}{}
+{140}{E:}{}{1}{}{}{fl 99}
+{141}{Well, I've always felt evil emanating from there, but I don't know much about it. It's been there way before the town I'm sure. I wish we could stay away from it, but I'm afraid we'll have to jump into the fire to put it out.}{Well, I've always felt evil emanating from there, but I don't know much about it. It's been there way before the town I'm sure. I wish we could stay away from it, but I'm afraid we'll have to jump into the fire to put it out.}{}{}{}{}
+{142}{K:}{}{1}{}{125}{}
+{143}{Huh? No no no! What's ruins?! }{}{-4}{}{145}{}
+{144}{E:}{}{1}{}{}{fl 99}
+{145}{You don't know what ruins are? They're old buildings that are umm... (How do I explain this to an idiot?) they're what's left after something's been destroyed. }{You don't know what ruins are? They're old buildings that are umm... (How do I explain this to an idiot?) they're what's left after something's been destroyed. }{}{}{}{}
+{146}{Oh! I get it. I wanna ask something else!}{}{-4}{}{125}{}
+{147}{Oh! I get it. Let's go then!}{}{-4}{}{}{fl 99}
+{148}{[He sighs.] If only I knew more about them! They're not my area of expertise you see - I study time magick. Still, I deduced that somehow a curse was placed on me - I have visions, or nightmares of them. They come out of thin air in hordes and raze everything in sight. It's horrible! Yet, there's been no organized attacked yet, at least, not that I can tell. But I don't know any details! It's frustrating!}{[He sighs.] If only I knew more about them! They're not my area of expertise you see - I study time magick. Still, I deduced that somehow a curse was placed on me - I have visions, or nightmares of them. They come out of thin air in hordes and raze everything in sight. It's horrible! Yet, there's been no organized attacked yet, at least, not that I can tell. But I don't know any details! It's frustrating!}{}{}{}{}
+{149}{I see. We'll get to the bottom of this! Let's go.}{}{5}{pa 6721}{}{re +5, fl 99}
+{150}{All right already! Stop whining. Let's go.}{}{5}{pa 6721}{}{re -5, fl 99}
+{151}{HA! I didn't understand a word you say! But let's go, ha!}{}{-4}{pa 6721}{}{fl 99}
+{152}{I see. We'll get to the bottom of this! But I want to ask you something else.}{}{5}{}{125}{re +5}
+{153}{Stop your whining already. I have to ask you something else.}{}{5}{}{125}{re -5}
+{154}{HA! I didn't understand a word you said! But I wanna ask more!}{}{-4}{}{125}{}
+{155}{}{}{}{}{}{}
+{156}{}{}{}{}{}{}
+{157}{}{}{}{}{}{}
+{158}{}{}{}{}{}{}
+{159}{}{}{}{}{}{}
+{160}{Please, I'm very busy with my preparations. }{Please, I'm very busy with my preparations. }{}{}{}{}
+{161}{Since we're both fighting the same enemy, let's travel together.}{}{5}{}{-35}{qu 1003 2}
+{162}{Let's go beat up bad demon together, OK?!}{}{-4}{}{-35}{qu 1003 2}
+{163}{I've decided to kill you after all. }{}{1}{}{-38}{}
+{164}{Can you tell me anything else? About the ruins, demons, or the town?}{}{5}{}{125}{}
+{165}{I wanna ask you about stuffs.}{}{-4}{}{125}{}
+{166}{}{}{}{}{}{}
+{167}{}{}{}{}{}{}
+{168}{}{}{}{}{}{}
+{169}{}{}{}{}{}{}
+{170}{No! The demons... The curse, you can't!}{No! The demons... The curse, you can't!}{}{}{}{}
+{171}{}{}{}{}{}{}
+{172}{}{}{}{}{}{}
+{173}{}{}{}{}{}{}
+{174}{}{}{}{}{}{}
+{175}{Don't worry about it sir. I'm glad that everything worked out well in the end. [He turns to you.] And yes, I'm sure I can figure out a way to send you back to your time. Afterall, Time is my area of expertise!}{Don't worry about it sir. I'm glad that everything worked out well in the end. [He turns to you.] And yes, I'm sure I can figure out a way to send you back to your time. Afterall, Time is my area of expertise!}{}{}{}{}
+{176}{That's good to hear Darren.}{}{5}{}{-17}{}
+{177}{Oh good good!}{}{-4}{}{-17}{}
+{178}{}{}{}{}{}{}
+{179}{I assure you sir, I mean no harm to anyone, much less this entire town! I only wished for a quiet place to study magicks pertaining to time, and the flow of time. }{I assure you sir, I mean no harm to anyone, much less this entire town! I only wished for a quiet place to study magicks pertaining to time, and the flow of time. }{}{}{}{}
+{180}{[Listen]}{}{1}{}{-23}{}
+{181}{}{}{}{}{}{}
+{182}{Think what you will. I will do my best, with @pcname@'s help to seek and destroy the root of all this evil. Farewell!}{Think what you will. I will do my best, with @pcname@'s help to seek and destroy the root of all this evil. Farewell!}{}{}{}{}
+{183}{Uh, right. [Wave goodbye to the mayor and leave.]}{}{1}{}{0}{}

@@ -1,0 +1,18 @@
+// add global messages starting at 0.  You may use up to 999
+
+// gv0 - Used to see what line we should float above Mayor. Also used to determine if we can speak to the Treasurer. Treasurer only floats if gv0 <= 1
+{0}{What's the Mayor doing? 0 = Waiting at Docks, 1 = Walking to Town Hall, 2 = Walking Home, 3 = Waiting at Home}
+{1}{The number of rats in the bartenders cellar that have been killed.}
+{2}{This is used in the Troika-ites dialogue float chatter, determines which NPC to find and float line above.}
+{3}{How much did the PC Haggle the Treasurer out of? 2000, 5000 or 10000. This is 0 if PC hasn't haggled yet.}
+{4}{What dialogue line to float above the Troika-ite NPC.}
+{5}{What was the last line of dialogue to float that we floated above a Troika-ite NPC? If this is the same as gv4, then we are floating the same line, in which case, the dialogue is all over, so turn it off.}
+{6}{Which Troika-ite does Sierra have to kill next?}
+
+//Change these to PC vars...
+// These gv's store the game HOUR that the rent of the bed expires on. The number stored depends on the time the bed was rented and also for how long the PC rented the bed (a day - 23 hours, or a week - 167 hours).
+// The only check we need to use the bed is to see if the time has expired.
+// If the PC never paid for the bed, or paid for another bed, then time is already expired.
+// Room to make beds rentable for any time period I like. Just have to alter innkeeper dialog and make some new lines changing 'lc0 HOURS'.
+{11}{Stores the HOUR that the PC can no longer use POOR bed number 1.}
+{12}{Stores the HOUR that the PC can no longer use GOOD bed number 2.}

@@ -1,0 +1,1022 @@
+// These are general NPC messages, said by female NPC's to male PC's
+
+// Offer directions messages start at 100 and end at 199
+
+{100}{Where do you need directions to?}
+{101}{Where are you looking to go?}
+{102}{What place are you seeking?}
+
+
+
+// Nearby directions start at 200. There are 8 rotations, rotation 0
+// is north, 1 is north-east, clockwise to 7 which is north-west. Each
+// rotation starts at a multiple of 10.
+
+{200}{It is just a stone's throw away to the north.}
+{201}{It is at no great distance from here. Just go north.}
+{202}{You are well nigh there. Go a little further north.}
+{203}{It is tolerably near, just go to the north.}
+
+
+{210}{It is just to the north-east. You are almost there.}
+{211}{It is at no great distance from here. Just go north-east.}
+{212}{Go a little further north-east. You are well nigh there.}
+{213}{It is particularly near. Over to the north-east there.}
+
+
+{220}{It is just a stone's throw away to the east.}
+{221}{Just go east. It is at no great distance from here.}
+{222}{You are well nigh there. Go a little further east.}
+{223}{Over to the east there. It is particularly near.}
+
+
+{230}{It is just a stone's throw away to the south-east.}
+{231}{It is at no great distance from here. Just go south-east.}
+{232}{Go a little further south-east. You are well nigh there.}
+{233}{It is particularly near. Over to the south-east there.}
+
+
+{240}{Just go to the south-east. It is awfully near}
+{241}{Just go south-east. It is at no great distance from here.}
+{242}{You are well nigh there. Go a little further south-east.}
+{243}{It is particularly near. Over to the south-east there.}
+
+
+{250}{It is awful near, just go to the south-east.}
+{251}{It is at no great distance from here. Just go south-east.}
+{252}{You are well nigh there. Go a little further south-east.}
+{253}{It is particularly near. Over to the south-east there.}
+{254}{A jaunt to the south-east, it is. You are on the verge of it already.}
+
+
+{260}{It is just a stone's throw away to the west.}
+{261}{Just go west. It is at no great distance from here.}
+{262}{You are well nigh there. Go a little further west.}
+{263}{It is particularly near. Over to the east there.}
+
+
+{270}{It is very near. Just to the north-west, there.}
+{271}{It is at no great distance from here. Just go north-west.}
+{272}{You are well nigh there. Go a little further north-west.}
+{273}{It is just over there, to the north-west.}
+
+
+
+// Medium directions start at 300. There are 8 rotations, rotation 0
+// is north, 1 is north-east, clockwise to 7 which is north-west. Each
+// rotation starts at a multiple of 10.
+
+{300}{It is to the north a ways.}
+{301}{Hmm. It might still be several days travel away to the north.}
+{302}{It is a goodly ways to the north.}
+{303}{Hmm. That is some distance to the north.}
+
+
+{310}{It is to the north-east a ways.}
+{311}{Go north-east. It is a few days travel, I would guess.}
+{312}{It is a goodly ways to the north-east.}
+{313}{Hmm. That is some distance to the north-east.}
+
+
+{320}{It is to the east a ways.}
+{321}{Go east. It is several days travel, I think.}
+{322}{It is a goodly ways to the east.}
+{323}{Hmm. Over yonder to the east a ways.}
+
+
+{330}{It is to the south-east a ways.}
+{331}{Go south-east. It is several days travel, it is.}
+{332}{It is a goodly ways to the south-east.}
+{333}{Hmm. That is some distance to the south-east.}
+
+
+{340}{It is to the south a ways.}
+{341}{It is several days travel away. Go south}
+{342}{It is a goodly ways to the south.}
+{343}{Hmm. That is some distance to the south.}
+
+
+{350}{It is to the south-west. Not too far away. Not too close either.}
+{351}{Go south-west. It is several days travel.}
+{352}{It is a goodly ways to the south-west.}
+{353}{I have family there. It is some distance to the south-west.}
+
+
+{360}{It is to the west a ways.}
+{361}{Go west. It is several days travel.}
+{362}{It is a goodly ways to the west.}
+{363}{Hmm. That is some distance to the west.}
+
+
+{370}{It is to the north-west a ways.}
+{371}{Straight north-west, I believe. Several days travel, it is.}
+{372}{It is a goodly ways to the north-west.}
+{373}{Hmm. That is some distance to the north-west.}
+
+
+
+// Far directions start at 400. There are 8 rotations, rotation 0
+// is north, 1 is north-east, clockwise to 7 which is north-west. Each
+// rotation starts at a multiple of 10.
+
+{400}{It is a long ways going to the north. A long ways.}
+{401}{You are very far away, very far. Go north.}
+{402}{That is a mighty long haul northward.}
+{403}{To be sure, that is over the hills and far away to the north.}
+
+
+{410}{It is a long ways going to the north-east. A long ways.}
+{411}{It is many, many leagues away to the north-east.}
+{412}{That is a mighty long haul north-eastward.}
+{413}{To be sure, that is over the hills and far away to the north-east.}
+
+
+{420}{You are quite far away. Go east. Frightfully far, it is.}
+{421}{It is many, many leagues away to the east.}
+{422}{That is a mighty long haul eastward.}
+{423}{To be sure, that is over the hills and far away to the east.}
+
+
+{430}{Go south-east. You are quite far away. Frightfully far, it is.}
+{431}{It is many, many leagues away to the south-east.}
+{432}{That is a mighty long haul south-east.}
+{433}{To be sure, that is over the hills and far away to the south-east.}
+
+
+{440}{Go south. That is very far away from here.}
+{441}{It is many, many leagues away to the south.}
+{442}{That is a mighty long haul southward.}
+{443}{To be sure, that is over the hills and far away to the south.}
+
+
+{450}{It is more leagues to the south-west than I care to count.}
+{451}{It is many, many leagues away to the south-west.}
+{452}{That is a mighty long haul south-westward.}
+{453}{To be sure, that is over the hills and far away to the south-west.}
+
+
+{460}{It is more leagues to the west than I care to count.}
+{461}{It is many, many leagues away to the west.}
+{462}{That is a mighty long haul westward.}
+{463}{To be sure, that is over the hills and far away to the west.}
+
+
+{470}{It is more leagues to the north-west than I care to count.}
+{471}{It is many, many leagues away to the north-west.}
+{472}{I am glad I do not have to travel that far! Go north-west.}
+{473}{To be sure, that is over the hills and far away to the north-west.}
+
+
+
+// Offer to mark map messages start at 500 and end at 599
+
+{500}{What place do you want marked on your map?}
+{501}{What point do you want scribed on your geographical chart?}
+{502}{Where should I mark the map?}
+{503}{What place should I mark on the map?}
+{504}{I can mark your map for you.}
+
+
+// Nearby map marking messages start at 600. There are 8 rotations,
+// rotation 0 is north, 1 is north-east, clockwise to 7 which is
+// north-west. Each rotation starts at a multiple of 10.
+
+{600}{It is very near. I have marked it just to the north.}
+{601}{You are close. Go north. It is marked on your map.}
+{602}{You are well nigh there. Go a little further north to this mark.}
+{603}{It is just a stone's throw away to the north, as marked.}
+
+{610}{It is awful near. I have marked it just to the north-east.}
+{611}{You are close. Go north-east. It's marked.}
+{612}{You are well nigh there. Go a little further north-east. To this mark.}
+{613}{It is particularly near. Over to the north-east there. See the mark?}
+
+
+{620}{It is certainly near. I have marked it just to the east.}
+{621}{You are close. Go east. It's marked.}
+{622}{You are well nigh there. Go a little further east to this mark.}
+{623}{It is at no great distance from here. Just go east. I marked it.}
+
+
+{630}{It is close by. I have marked it just to the south-east.}
+{631}{You are close. Go south-east. It's marked.}
+{632}{You are well nigh there. I marked it for you. Go a little further south-east.}
+{633}{It is particularly near. See my mark? Over to the south-east there.}
+
+
+{640}{It is very close by. I have marked it just to the south.}
+{641}{You are near. Go south. It is marked.}
+{642}{It is at no great distance from here. Just go south-east to my mark.}
+{643}{It is particularly near. I put a mark on it. Over to the south-east there.}
+{644}{You are on the verge of it already. A jump to the south-east, it is. See the mark?}
+
+
+{650}{It is awful near, just go to the south-east. I marked it.}
+{651}{It is at no great distance from here. Just go south-east to where I put this mark.}
+{652}{You are well nigh there. I put a mark on your map. Go a little further south-east.}
+{653}{It is particularly near. Over to the south-east there. See the mark on your map?}
+
+
+{660}{It is tolerably near. I have marked it just to the west.}
+{661}{You are close. Go west. It is marked.}
+{662}{You are well nigh there. Go a little further west, just as I marked.}
+{663}{It is particularly near. Over to the east there. See the mark?}
+
+{670}{It is very near. I marked it just to the north-west, there.}
+{671}{I marked it for you. It is no great distance from here. Just go north-west.}
+{672}{You are almost there. See this mark? Go a little further north-west.}
+{673}{It is particularly near. Over to the north-west there. I put a mark on the map.}
+
+
+
+// Non-nearby map marking messages start at 700. There are 8 rotations,
+// rotation 0 is north, 1 is north-east, clockwise to 7 which is
+// north-west. Each rotation starts at a multiple of 10 and includes
+// a distance %d which will be replaced with the number 2 or higher.
+
+{700}{It is marked on your map. Not more than %d leagues to the north.}
+{701}{It is just &d leagues that way, north. I marked it on your map.}
+{702}{Oh, about %d leagues north, it is. See where I marked your map?}
+{703}{To be sure, it is %d leagues away to the north. I put it on your map.}
+
+
+{710}{It is %d leagues to the north-east. It is marked on your map.}
+{711}{It is just &d leagues that way, north-east. I marked it on your map.}
+{712}{Oh, about %d leagues north-east, it is. See where I marked your map?}
+
+
+
+{720}{It is %d leagues to the east. It is marked on your map.}
+{721}{Very near to &d leagues that way, east. I marked it on your map.}
+{722}{Oh, about %d leagues east, it is. See where I marked your map?}
+{723}{Aye! It is %d leagues away to the east. I put it on your map.}
+
+
+{730}{Hmm. %d leagues to the south-east, I'd say. I marked your map, I did.}
+{731}{Very near to &d leagues away to the south-east. I marked it on your map.}
+{732}{See where I marked your map? About %d leagues south-east, it is.}
+{733}{It is %d leagues to the south-east, sir. I put it on your map.}
+{734}{About %d leagues south-east, I would say. I put a mark on your map.}
+
+
+{740}{Hmm. %d leagues to the south, I'd say. I marked your map, I did.}
+{741}{I would say it is &d leagues to the south. I marked it on your map.}
+{742}{Yes, about %d leagues south, it is. See where I marked your map?}
+{743}{It is %d leagues to the south. I put it on your map.}
+
+
+{750}{I marked your map for you. %d leagues to the south-west, I'd say.}
+{751}{I marked it on your map. I would say it is &d leagues to the south-west.}
+{752}{About %d leagues south-west, it is. See where I marked your map?}
+{753}{It is %d leagues to the south-west. I put it on your map.}
+
+
+{760}{I marked your map for you. %d leagues to the west, I'd say.}
+{761}{I marked it on your map. I would say it is &d leagues to the west.}
+{762}{About %d leagues west, it is. See where I marked your map?}
+{763}{I put it on your map. Go that way, sir, about %d leagues to the west.}
+{764}{I put a mark on your map. %d leagues west, I would say.}
+
+
+{770}{I marked your map for you. %d leagues to the north-west, I'd say.}
+{771}{I marked it on your map. I would say it is &d leagues to the north-west.}
+{772}{See where I marked your map? About %d leagues north-west, it is.}
+{773}{I put it on your map. Go that way, about %d leagues to the north-west.}
+{774}{I put a mark on your map. %d leagues north-west, I would say.}
+
+
+// Sell messages start at 800 and end at 899
+
+{800}{I will sell that for %d coins.}
+{801}{I will sell it for %d coins.}
+{802}{The selling price is %d coins.}
+{803}{I will let that go for %d coins.}
+{804}{It is yours for just %d coins!}
+{805}{Consider it yours for a mere %d coins.}
+{806}{I am asking only a paltry sum of %d coins for that.}
+{807}{For the trivial amount of %d coins, it will be yours.}
+{808}{For you, %d coins is all I ask.}
+{809}{For %d coins, a mere nothing, you can call it yours.}
+{810}{For this? I will charge you only %d coins.}
+{811}{This item will cost you only %d coins.}
+{812}{For the trifling matter of %d coins, it is yours.}
+{813}{A paltry %d coins is all I ask for that.}
+{814}{I could be persuaded to sell for %d coins.}
+
+
+
+// Will not sell messages start at 900 and end at 999
+
+{900}{I do not want to sell that.}
+{901}{Sorry. I do not want to sell that.}
+{902}{That is not for sale.}
+{903}{That is not for sale, sir.}
+{904}{I am not selling that.}
+{905}{I am not selling that, sir.}
+{906}{I will not sell that.}
+{907}{I will not sell that, sir.}
+{908}{No. I want to keep that.}
+{909}{No, sir. I want to keep that.}
+{910}{No. I value that too much to sell it.}
+{911}{I value that too much to sell it.}
+{912}{That is not for sale.}
+
+
+
+// Normally will not sell messages start at 1000 and end at 1099
+
+{1000}{I normally do not sell that.}
+{1001}{Usually that's not for sale.}
+{1002}{I wouldn't normally sell that, but for you, I will.}
+{1003}{I will sell it, but only because it is you.}
+{1004}{Most times I would say "No." But for you I will sell it.}
+{1005}{Normally, I would not sell that. But I like you.}
+{1006}{Hmm. Seeing as it is you, yes. I will sell it.}
+{1007}{For anyone else, no. But for you? It will be my pleasure.}
+{1008}{Nobody but you could convince me to sell that.}
+{1009}{To anyone else, no. But for you, yes.}
+{1010}{I will not sell this to anyone . . . anyone but you, that is.}
+{1011}{This would not be for sale to anyone but you.}
+{1012}{I normally will not sell that. However . . .}
+{1013}{That is not for sale . . . normally. But I will sell it to you.}
+{1014}{Normally I do not sell that. But for you I make an exception.}
+{1015}{I have a certain liking for you, otherwise I would not sell this.}
+{1016}{Nobody else could convince me to part with this.}
+
+
+// Buy messages start at 1100 and end at 1199
+
+{1100}{I will buy that for %d coins.}
+{1101}{I will give you %d coins.}
+{1102}{Would you take %d coins for it?}
+{1103}{Will you take %d coins for it?}
+{1104}{How about I give you %d coins for that?}
+{1105}{%d coins, and we have a deal.}
+{1106}{It is worth %d coins to me, to be sure.}
+{1107}{Oh, it is worth no more than %d coins to me.}
+{1108}{I will take it off your hands for %d coins.}
+{1109}{My offer is %d coins.}
+{1110}{I can offer you %d coins for it.}
+{1111}{I suppose . . . %d coins. That is my offer.}
+{1112}{%d coins, and not a coin more.}
+{1113}{I can afford to give you %d coins for it.}
+{1114}{Yes, it is worth %d coins. Do we have a deal?}
+{1115}{I will give you %d coins for that.}
+{1116}{I will buy it for %d coins.}
+{1117}{I will buy that for %d coins.}
+
+
+
+// Will not buy messages start at 1200 and end at 1299
+
+{1200}{I do not want that.}
+{1201}{I will not buy that.}
+{1202}{I will not buy that from you.}
+{1203}{I am not interested.}
+{1204}{No. Not interested.}
+{1205}{I have no interest in that.}
+{1206}{No. I do not need that.}
+{1207}{No. I do not need it.}
+{1208}{I have no need for it.}
+{1209}{I will not buy that.}
+{1210}{Sorry. I have no need for it.}
+{1211}{Sorry. I do not see that I have a need for it.}
+{1212}{Definitely a classy item, but I do not want it.}
+{1213}{A very nice item, it is. But I have no need for it.}
+{1214}{Probably worth something to someone. But not to me.}
+
+
+
+// Normally will not buy messages start at 1300 and end at 1399
+
+{1300}{I normally do not buy that, but for you . . .}
+{1301}{I usually do not buy that. However, you are very persuasive.}
+{1302}{I am not one to normally buy such things.}
+{1303}{These things do not usually turn my head, but . . .}
+{1304}{Odd. I do not usually care for such things. But I want this one.}
+{1305}{It is not my wont to buy such things. Not usually, anyway.}
+{1306}{It is not my habit to buy such articles, but this time . . .}
+{1307}{I am not in the habit of buying such things, you understand. But . . .}
+{1308}{I know I can trust you, otherwise I would not buy this.}
+{1309}{I have no need for such stuff, but to help you out I will buy it.}
+{1310}{I daresay I have no need for this, but for you, I will buy it.}
+{1311}{Why I will buy this, I do not know. But buy it, I will.}
+{1312}{It is not my habit to buy such articles, but this time . . .}
+{1313}{Yes, I will buy it. But only to help you out, you understand.}
+{1314}{As a favor to you, I will buy it.}
+{1315}{I will buy it, but only as a favor to you.} 
+{1316}{Normally, no. But for you, I will buy it.}
+{1317}{Usually I would not buy this, but for you I will.}
+
+
+
+
+// Buy for less messages start at 1400 and end at 1499
+
+{1400}{That is worth %d, but I can only afford %d.}
+{1401}{That may be worth %d, but I can only afford %d.}
+{1402}{It is worth %d. Will you take %d?}
+{1403}{It is worth %d. But I can afford only %d.}
+{1404}{Yes, it is worth %d. I will pay %d.}
+{1405}{I see it is worth about %d. I have only %d.}
+{1406}{It is definitely worth %d. But I have only %d.}
+{1407}{It is probably worth %d. I can spare only %d.}
+{1408}{Oh, yes. Most definitely worth %d. But I only have %d.}
+{1409}{Some might pay upwards of %d. But I can only give you %d.}
+{1410}{You might get %d elsewhere. I cannot pay more than %d.}
+{1411}{You might get %d if you look around. But I will pay %d right now.}
+{1412}{You can get %d elsewhere, maybe. I will give you %d.}
+{1413}{You can get %d from others, maybe. I can pay you %d.}
+{1414}{You might find somebody to pay you %d. I have %d for it, now.}
+{1415}{Maybe it is worth %d to some, but my need is not that great. %d coins?}
+{1416}{You can get %d if you look around. Will you take %d?}
+{1417}{You can probably get %d, if you look around. Will you take %d?}
+{1418}{You might get %d from somebody, if you are lucky. Will you take %d?}
+
+
+// The NPC is dead and has Speak With Dead cast upon it. These messages
+// start at 1500 and end at 1599
+
+{1500}{Goddess above! I am dead!}
+{1501}{Woe is me.}
+{1502}{Why do you disturb my eternal rest?}
+{1503}{This is not good.}
+{1504}{Where am I?}
+{1505}{What happened to me?}
+{1506}{Am I . . . dead?}
+{1507}{Don't leave me here!}
+{1508}{No! No! No!}
+{1509}{Aieee!}
+{1510}{Arrrgggh!}
+{1511}{Waaaaaaah!}
+{1512}{So. This is Death.}
+{1513}{The pain! Please, release me!}
+{1514}{Help me.}
+{1515}{Help me, please.}
+{1516}{Please help me.}
+{1517}{What is going on?}
+{1518}{I cannot see anything.}
+{1519}{I see everything!}
+{1520}{It's horrible!}
+{1521}{Go away.}
+{1522}{Leave me alone.}
+{1523}{I see . . . nothing.}
+{1524}{I see . . . death.}
+{1525}{Please.}
+{1526}{Why?}
+{1527}{Why me?}
+{1528}{No!}
+{1529}{Let me be!}
+{1530}{I am sorry.}
+{1531}{I did not know!}
+{1532}{Please forgive me!}
+{1533}{Forgive me.}
+{1534}{Please believe me. I am sorry.}
+{1535}{I will not hurt you.}
+{1536}{No! Demons!}
+{1537}{Aaaagh! The pain! Please, release me!}
+{1538}{Why do you disturb me?}
+
+
+
+// The NPC will not follow the PC because the PC is too good
+
+{1600}{Your righteousness is too disturbing for me to follow you.}
+{1601}{Do I look like a blithering church-goer? You are too soft for my likes.}
+{1602}{You do not have what it takes to lead. You are too polite and mannerly.}
+{1603}{We have nothing in common. I like to have a bit of fun, know what I mean?}
+{1604}{Me? Follow the saintly @pcname@? What a laugh, it is!}
+{1605}{I am not the kind to rush off saving damsels in distress, and the like.}
+{1606}{Trade my den of iniquity for your sanctuary of holiness? Not bloody likely.}
+{1607}{What would we do? Risk our lives saving people? Not me, I says.}
+{1608}{That is a laugh, it is. Me follow the angelic @pcname@?}
+{1609}{Listen, boy. I got nothing against you, but you are not, uh, spicy enough.}
+{1610}{And what would we do? Be all saintly and good? No, thank you.}
+{1611}{You are jesting, right? An evil, old dodger like me? With a clean, young angel like you?}
+{1612}{What? And give up my life of crime? Not bloody likely.}
+{1613}{Listen. I got a good racket going for me. Wearing a halo like yours is not a part of it.}
+{1614}{We could not trust each other.}
+{1615}{No. You and I are on opposite sides. I am hunted by your kind.}
+{1616}{No. I need more freedom than you would allow me. I do not follow your path of high morals.}
+{1617}{Ha! Now that is a joke if ever I heard one. Me, the scoundrel, with you, the saint?}
+{1618}{Leave me to my own kind. And I will leave you to your righteousness and your laws.}
+{1619}{I have no need of your morals, or your dreams of righteousness.}
+
+
+// The NPC will not follow the PC because the PC is too evil
+
+{1700}{You are pure evil. I will not be a part of that.}
+{1701}{I spit on you, and all your kind.}
+{1702}{Do not disgrace me by asking again.}
+{1703}{You stain my honor by assuming I would follow you.}
+{1704}{You are lucky I have no evidence to convict you of your evil deeds.}
+{1705}{What makes you think I want to follow a degenerate like yourself?}
+{1706}{No. I believe in Law and Righteousness -- things you run from.}
+{1707}{No. I help people. I am not evil like you.}
+{1708}{No. You are rotten through and through! I'll not have it.}
+{1709}{No. You are a common vandal. I will not follow you.}
+{1710}{No. You are a savage brute! I will not join you.}
+{1711}{No. You delight in spreading terror. I'll not be a part of it.}
+{1712}{No. You are a common ruffian. I will not associate with you.}
+{1713}{No. You are a vicious hooligan! I will not follow you.}
+{1714}{No. You are a miscreant and a scalawag! I'll not go with you.}
+{1715}{No. You are a swindler, and worse. I'll not pay heed to you.}
+{1716}{No. You are a libertine hellcat! I'll not partner with you.}
+{1717}{No. You are an infernal anarchist! I will not be party to that.}
+{1718}{No. You are a vicious oppressor! I will not take up with you.}
+{1719}{No. You are a petty rascal, and a common harridan!}
+{1720}{No. You are a diabolical turncoat! I do not trust you.}
+{1721}{No. I will not lower myself to your level.}
+{1722}{No. You are a sorry, seedy, little clot!}
+{1723}{No. You are a shallow, pitiful bit of sewage!}
+{1724}{No. You are an incorrigible louse!}
+{1725}{No. You are petty, hopeless delinquent!}
+{1726}{No. You are evil to a depth beyond redemption!}
+{1727}{No. You put an intractable curse upon everyone you meet.}
+{1728}{No. You are tactless, thoughtless, and inconsiderate!}
+{1729}{No. You are a faithless, mealymouthed, miserly ingrate!}
+
+
+
+// The NPC will not follow the PC because the NPC dislikes the PC
+
+{1800}{I do not like you.}
+{1801}{I think I actually might hate you.}
+{1802}{I do not care for the way you do things.}
+{1803}{I am not interested in associating with you.}
+{1804}{I have no interest in being associated with you.}
+{1805}{I am not impressed by you at all.}
+{1806}{Please! Whatever made you think I would join with you?}
+{1807}{No. I am not even faintly interested in working with you.}
+{1808}{I have no desire to be friendly with you.}
+{1809}{No. There is no common bond between us.}
+{1810}{Let's just say I dislike you, and leave it at that.}
+{1811}{No. I disapprove of your methods.}
+{1812}{Certainly not! Your reputation would be a stain upon my honor.}
+{1813}{I have no desire to be around you for any extended period.}
+{1814}{I would not put my life in your hands.}
+{1815}{I do not trust you to keep your oath of comradeship to me.}
+{1816}{What makes you think I like you enough to join you?}
+
+
+// Good farewells (the NPC is neutral or happy with the PC)
+
+{1900}{Goodbye.}
+{1901}{I hope to see you again.}
+{1902}{Do not hesitate to call on me.}
+{1903}{You know where to find me if you need me.}
+{1904}{Remember where to find me.}
+{1905}{Watch your back, now.}
+{1906}{Keep your eyes open.}
+{1907}{I will be departing now.}
+{1908}{Remember @npcname@ when you need a hand.}
+{1909}{I will remember you, @pcname@.}
+{1910}{If I may be of any assistance in the future, you know where to find me.}
+{1911}{It would indeed be a delight to continue on with you, but Fate plays a different tune.}
+{1912}{Such inimitable spirit you have! I shall miss you.}
+{1913}{Your ready wit shall be sorely missed, my friend.}
+{1914}{Be a good soul, and do not take any unnecessary risks.}
+{1915}{Take care of yourself.}
+{1916}{I will remember you with fondness.}
+
+
+// Bad farewells (the NPC is suspicious or worse of the NPC)
+
+{2000}{Good riddance to you!}
+{2001}{I hope to never set eyes on you again.}
+{2002}{When I joined you, how little did I think I would be so happy to leave.}
+{2003}{Finally! To be rid of you.}
+{2004}{You fancy yourself a bit too much, I think.}
+{2005}{My time with you has been most displeasurable.}
+{2006}{It was a wretched business, indeed. I am glad it is done.}
+{2007}{I am rid of you none too soon.}
+{2008}{Your actions are contemptible, and your morals are abominable. Good riddance.}
+{2009}{There is no end to the grievous consequences I wish upon you.}
+{2010}{I am happy to be rid of you.}
+{2011}{Never again, @pcname@. Never again.}
+{2012}{I had best leave now before we come to blows.}
+{2013}{I will leave before we end up at swords' points.}
+{2014}{I do not know how I persevered so long with you. I am glad to be off.}
+{2015}{It was my misfortune to ever fall in with you in the first place.}
+{2016}{You have ever been a thorn in my side. I am glad to be rid of you.}
+{2017}{A curse on you and your house for the way you have treated me.}
+{2018}{The next time you need help, ask someone else. I will not suffer you twice.}
+{2019}{I am just happy to be getting out of this alive. Stay far away from me in the future.}
+{2020}{Bah! Away with you!}
+{2021}{Yes, well, I have had enough of you also.}
+{2022}{Bloody awful time it was, being with you. Never thought it would end.}
+{2023}{You had best leave quickly, before I coarsely give way to the brute in me and teach you a lesson.}
+{2024}{If I were you, sir, I would leave while I am still in a good mood.}
+{2025}{It would indeed be a delight to leave you, once and for all.}
+{2026}{I am done with you, and glad of it.}
+{2027}{You are an odd man, and I will be glad to be rid of you.}
+{2028}{This is the most extraordinary conduct! This is how you reward me? Bah!}
+{2029}{After I risk my life for you, this is how you treat me? Bah!}
+
+
+// NPC is acknowledging an order from the PC
+
+{2100}{OK.}
+{2101}{OK, @pcname@.}
+{2102}{Will do.}
+{2103}{Will do, @pcname@.}
+{2104}{It is as good as done.}
+{2105}{It is as good as done, @pcname@.}
+{2106}{Right.}
+{2107}{Right, @pcname@.}
+{2108}{Of course.}
+{2109}{Of course, @pcname@.}
+{2110}{Yes.}
+{2111}{Already done.}
+{2112}{Anything else?}
+{2113}{Is that all?}
+
+
+// NPC cannot acknowledge an order from the PC
+
+{2200}{I cannot do that.}
+{2201}{Surely you jest, I will not be doing that.}
+{2202}{I don't think so.}
+{2203}{Certainly not.}
+{2204}{I'm afraid not.}
+{2205}{Under no circumstances.}
+{2206}{I think not.}
+{2207}{I am not about to do that.}
+{2208}{You do it.}
+{2209}{I don't want to do that.}
+{2210}{No.}
+{2211}{I got a bad feeling about this.}
+{2212}{There are some things I just will not do.}
+{2213}{That is not why I signed on here.}
+{2214}{That is not my job.}
+{2215}{I have to say no.}
+{2216}{You cannot order me to do that.}
+{2217}{Get someone else to do your dirty work.}
+{2218}{You cannot make me do that.}
+
+
+
+// NPC was accidentally hit by the PC
+
+{2300}{Hey! Watch it!}
+{2301}{You hit me!}
+{2302}{Watch where you aim!}
+{2303}{That had better not happen again!}
+{2304}{Who are we fighting here, anyways?}
+{2305}{Excuse me, sir, but the enemy is OVER THERE!}
+{2306}{Did you HAVE to do that?}
+{2307}{If that is your best, I have a BAD feeling about this.}
+{2308}{It is a good thing I like you, friend.}
+{2309}{Ouch!}
+{2310}{Whoa! Hold it! I'm on your side. Remember?}
+{2311}{Hey!!! Watch your aim!}
+{2312}{Are you sure you know what you're doing?}
+
+
+
+// NPC witnesses PC critical hit
+
+{2400}{Nice one!}
+{2401}{That will make them think!}
+{2402}{Impressive!}
+{2403}{Great hit!}
+{2404}{You are out of your depths, fool!}
+{2405}{Time to die!}
+{2406}{That will teach them some manners, @pcname@!}
+{2407}{You have quite the way of dealing out the damage, @pcname@!}
+{2408}{That's the way to put the hurt on them.}
+{2409}{That was quite the painful blow, @pcname@. Quite impressive!}
+{2410}{Quite impressive, sir!}
+{2411}{Your combat skills are most effective, sir.}
+
+
+// NPC witnesses PC critical miss
+{2500}{You sure you know what you are doing?}
+{2501}{That was damned pitiful, if I do say so myself.}
+{2502}{Are you ready to be serious, now, @pcname@?}
+{2503}{This is a serious situation, sir, not a time for your jests.}
+{2504}{I don't think it works like that, boss.}
+{2505}{That's not the way it's done, @pcname@.}
+{2506}{I pray you are not presently doing your best.}
+
+
+// The NPC will not follow the PC because the NPC is already grouped
+// with another PC who is at least as charismatic
+{2600}{To be sure, I like my current party better.}
+{2601}{I will stay with my current group.}
+{2602}{I have given my word and am not free to leave.}
+{2603}{Nothing personal, but I am quite pleased with my current situation.}
+{2604}{I cannot abandon my party for you.}
+{2605}{Hmm. I do not think so. I have it good here with this group.}
+{2606}{I have it good where I am, sir.}
+{2607}{I am better off where I am now, my friend.}
+{2608}{I will keep it in mind, but I have no reason to change at this time.}
+{2609}{A tempting offer, indeed. But I have given my word to my present group.}
+{2610}{I cannot leave my companions now.}
+{2611}{Nice to know you appreciate my talents, but I am not free to leave right now.}
+
+
+// The NPC will not follow the PC because the PC is at his charisma
+// limit (which is greater zero)
+{2700}{Your group looks too crowded for me.}
+{2701}{I prefer to adventure with less people.}
+{2702}{I am not sure I like the looks of your party.}
+{2703}{You seem to have enough people already.}
+{2704}{I think you have enough to handle right now with who you have.}
+{2705}{No. It is already a bit crowded around you.}
+{2706}{I like you. But I want to be with a smaller party than yours.}
+{2707}{You have one too many with you. If you lose one, look me up.}
+{2708}{You seem to have enough help already. If one of them leaves, come back for me.}
+{2709}{No. I think you have all the people you can handle.}
+{2710}{I would like to, but you seem overcrowded at the moment.}
+{2711}{I would if you had less people with you.}
+{2712}{If you, uh, lose one of the people with you, look me up again.}
+
+
+// The NPC will not follow the PC because the PC's charisma does not
+// allow for followers
+{2800}{I would rather not.}
+{2801}{Nobody in their right mind would follow you!}
+{2802}{I would not entrust my life to someone such as yourself.}
+{2803}{Please! I would laugh if it was not so implausible.}
+{2804}{I really cannot think of a reason to say "Yes."}
+{2805}{You do not have what it takes to be a leader, sir.}
+{2806}{Haven't you been turned down enough already?}
+{2807}{I do not think you have what I need in a leader.}
+{2808}{I simply do not like you enough to follow you anywhere.}
+{2809}{I really can see no reason I would want to join with you.}
+
+
+
+
+// The NPC is too high level for the PC to be a follower
+{2900}{You are too inexperienced for me.}
+{2901}{Come back when you have more experience.}
+{2902}{A little wet behind the ears for my money, you are.}
+{2903}{You are a bad risk. You need a mite more aging first.}
+{2904}{Perhaps later, when you have proven yourself.}
+{2905}{You lack the edge I require from someone I would travel with.}
+{2906}{Sorry. You would just bog me down.}
+{2907}{Ask again after you have made a name for yourself.}
+{2908}{I can do better without you. Maybe later.}
+{2909}{On the contrary, it is I who should be asking you.}
+{2910}{My apologies, sir, but your inexperience is likely to get me killed.}
+{2911}{You are not my equal, let alone my superior.}
+
+
+// The NPC is fleeing from a combatant
+{3000}{Help!}
+{3001}{Help! Help! Help!}
+{3002}{I must flee!}
+{3003}{Oh no!}
+{3004}{Guards! Guards!}
+{3005}{Please, the pain! Show mercy!}
+{3006}{I give up!}
+{3007}{AAAAAGH!}
+{3008}{I've had enough of this.}
+{3009}{Please don't kill me!}
+{3010}{Aiee!}
+{3011}{You win!}
+{3012}{By the gods, show me mercy!}
+{3013}{Please, show me mercy!}
+{3014}{Retreat! Retreat!}
+{3015}{Let me go! Please!}
+{3016}{Please don't hurt me anymore!}
+{3017}{Leave me alone!}
+{3018}{Leave me be!}
+{3019}{I'll not bother you any more! Just let me go!}
+
+
+ // gamble win messages
+{3100}{You win. Take it.}
+{3101}{You win!}
+{3102}{Rats! I lose! Go ahead and take it.}
+{3103}{No! I have no luck today. You win it.}
+{3104}{A right lucky one, you are. Go ahead, you won it.}
+{3105}{You win. I should have known better than to gamble with you!}
+{3106}{Ach! You win. Seems Lady Luck is your personal friend.}
+{3107}{<grumble> You win, I lose.}
+{3108}{You win.}
+{3109}{You win.}
+{3110}{You win.}
+{3111}{You win.}
+{3112}{You win.}
+{3113}{I lose.}
+{3114}{I lose.} 
+{3115}{I lose.} 
+{3116}{I lose.} 
+{3117}{I lose.} 
+
+
+// gamble lose messages
+{3200}{You lose! I take %d coins.}
+{3201}{You lose. I take %d coins.}
+{3202}{I win! I take %d coins.}
+{3203}{I win. I take %d coins.}
+{3204}{My luck is improving, 'eh? I take %d coins.}
+{3205}{Lady Luck smiled on me, for once! I take %d coins.}
+{3206}{Right, I win. Thank you very much. I'll take %d coins.}
+{3207}{Right, you lose. I take %d coins.}
+{3208}{I win. %d coins.}
+{3209}{What do you know? I win! %d coins, please.}
+{3210}{I win %d coins.}
+{3211}{I win %d coins.}
+{3212}{I win %d coins.}
+{3213}{I win %d coins.}
+{3214}{I win %d coins.}
+{3215}{You lose %d coins.}
+{3216}{You lose %d coins.}
+{3217}{You lose %d coins.}
+{3218}{You lose %d coins.}
+{3219}{You lose %d coins.}
+
+
+// gambling pc things
+{3300}{I do not want to gamble for your things.}
+{3301}{I would rather not gamble for your things.}
+{3302}{I do not think it necessary for me to gamble for your things.}
+{3303}{I do not think it is advisable for me to gamble for your things.}
+{3304}{I do not want to gamble for what you have.}
+{3305}{I would rather not gamble for what you have.}
+{3306}{No. I do not want to gamble for your things.}
+{3307}{Hmm. No. I do not want to gamble for anything you have.}
+{3308}{Nothing you have interests me enough to gamble for it.}
+{3309}{A rather poor selection. You've got nothing I want to gamble for.}
+{3310}{No. You have nothing to gamble for.}
+{3311}{No. You do not have anything to ante up that interests me.}
+{3312}{No. I want nothing you have. Find somebody else to gamble with.}
+
+
+// gambling with low rank or training
+{3400}{I do not think you are experienced enough in gambling for that.}
+{3401}{Hmm. This is a bit high stakes for you, I think.}
+{3402}{You are in too deep for your own good.}
+{3403}{This is too high stakes for you.}
+{3404}{You have guts, I'll say that, but you don't have the skill for this.}
+{3405}{This is too much for you.}
+{3406}{You do not have the skill for these stakes.}
+{3407}{You are not skilled enough to make it fair.}
+{3408}{It would be like taking candy from a child. You lack the skill.}
+{3409}{Come back later when you are more adept at gambling.}
+
+
+// gambling without enough money
+{3500}{You do not have enough money. I want %d coins if you lose.}
+{3501}{You do not have enough coin. I want %d coins if you lose.}
+{3502}{You are a bit short. It would cost you %d coins if you lose.}
+{3503}{You do not have enough cold, hard coin. I want %d coins if you lose.}
+{3504}{You do not have enough coins. I want %d if you lose.}
+{3505}{Your purse is light. I want %d coins if you lose.}
+{3506}{You do not have enough to ante up. I want %d coins if you lose.}
+
+
+// gambling for what NPC is wearing
+{3600}{I am wearing it. I will not gamble it.}
+{3601}{If I lose, what will I wear? No, sir. I will not gamble that.}
+{3602}{You like that, eh? So do I. I will not gamble for it.}
+{3603}{I think I will keep that safe from your gambling ways, I do.}
+{3604}{That would make a mighty fine prize. Which is why I will keep it.}
+{3605}{I am not gambling with you for my clothes.}
+{3606}{I am not gambling with you for my clothes.}
+{3607}{You take me for some sort of fool? I'm not gambling with you for my clothes.}
+{3608}{I am not gambling with you for my clothes.}
+{3609}{Are you daft? I'll not be gambling the clothes off my back, thank you very much.}
+
+// gambling for something the NPC really wants to keep
+{3700}{I do not want to gamble that.}
+{3701}{My mind is made up to be keeping this, if you don't mind.}
+{3702}{I do not want to risk losing that.}
+{3703}{I worked hard for that and do not want to lose it.}
+{3704}{No. That is special to me. I would not like to lose it.}
+{3705}{It would be a sad day for me if I were to lose that.}
+{3706}{It would be rather silly of me to lose that in a game of chance.}
+{3707}{I want very much to keep that, thank you.}
+{3708}{I do not think it would be wise for me to put this up in a game of chance.}
+{3709}{I will not be gambling for that.}
+{3710}{I would rather not gamble with this, please.}
+{3711}{I would rather not. This is important to me.}
+{3712}{My mind is made up. I will be keeping this. No bet.}
+
+
+// the NPC will not normally gamble, but is making an exception
+{3800}{I do not normally gamble these.}
+{3801}{Hmm. I would hate to lose this bet, but . . . OK.}
+{3802}{Normally, I would not do this, you understand? But, in this particular case I will.}
+{3803}{You have convinced me to take the chance!}
+{3804}{I do not normally take chances with my property . . . but I feel lucky.}
+{3805}{I will make an exception in this case, and I will gamble with you.}
+{3806}{I will make an exception this time, and I'll gamble with you.}
+{3807}{I will make an exception this once, and I will gamble with you.}
+{3808}{I will make an exception for you, and I'll gamble this once.}
+{3809}{I will make an exception in this instance, and I will gamble with you.}
+
+
+// the NPC makes a gamble offer
+{3900}{I will gamble that for %d coins.}
+{3901}{OK. I will gamble that for %d coins.}
+{3902}{For %d coins, I will gamble it.}
+{3903}{Put up %d coins, and we have a bet.}
+{3904}{Shall we gamble that for say . . . %d coins?}
+{3905}{Are you willing to chance %d coins? If so, put it up, and we have a bet.}
+{3906}{Put up %d coins and you have a bet.}
+{3907}{Put your money where your mouth is, I says. %d coins, and it is a bet}
+{3908}{Surely, %d coins on your side will make an even bet.}
+{3909}{I will put this up for a game of chance if you put up %d coins.}
+
+// the NPC is warning the listener to stop what they are doing
+{4000}{Stop that!}
+{4001}{Leave that alone!}
+{4002}{Get away from there!}
+{4003}{I am warning you to stop!}
+
+// the NPC is shouting about a newspaper he is selling
+{4100}{Read all about it!}
+{4101}{Read it here!}
+{4102}{Get your paper here!}
+
+// the NPC is asking the PC about buying newspapers
+{4200}{What newspaper are you looking for?}
+{4201}{What exactly are you looking for?}
+
+// the NPC wants to sell a particular newspaper
+{4300}{Do you want to buy this newspaper?}
+{4301}{Want to buy this?}
+
+// the NPC has no older newspapers for sale
+{4400}{I'm sorry. I don't have any older papers.}
+{4401}{I have no older newspapers in stock right now.}
+
+// the NPC is offer older newspapers for sale
+{4500}{I have these older newspapers for sale.}
+{4501}{These are the older newspapers I have in stock.}
+
+// the NPC is refusing to buy stolen goods
+{4600}{I won't buy that! It is obviously stolen!}
+{4601}{I don't buy stolen goods, sir.}
+{4602}{Do I look like a fence? I won't buy that!}
+
+// the NPC is offering to use his skill and do the task for the PC leader
+{4700}{I will handle that.}
+{4701}{Here, let me do that.}
+
+// the NPC is upset that the PC is attacking party members
+{4800}{Stop attacking party members!}
+{4801}{Cease your attacks! This is our friend!}
+
+// the NPC is upset the PC is attacking good creatures
+{4900}{Stop attacking good spirited creatures!}
+{4901}{I am upset that you attack things of good souls.}
+
+// the NPC is upset the PC is attacking townspeople from NPC's origin
+{5000}{Stop attacking these people! I grew up with them!}
+{5001}{Cease your attacks! This is my home!}
+
+// the NPC is upset the PC is attacking faction buddies
+{5100}{Stop attacking my old mates!}
+{5101}{Don't attack friends of mine!}
+
+// the NPC is warning the PC he is becoming too good
+{5200}{I think you are becoming too righteous.}
+{5201}{You are too good. I hate that.}
+
+// the NPC is warning the PC he is becoming too evil
+{5300}{Your actions are becoming questionable.}
+{5301}{Your morals are eroding.}
+
+// the NPC is warning the PC of low reaction to him
+{5400}{I am beginning to dislike you.}
+{5401}{Your actions are making me question this venture.}
+
+// the NPC follower is nearing death
+{5500}{This doesn't look good.}
+{5501}{We should run!}
+{5502}{I am about to die!}
+{5503}{I am badly hurt!}
+{5504}{Help me!}
+{5505}{I am in over my head here!}
+
+// the NPC is not skilled in gambling
+{5600}{I am not a gambling woman.}
+{5601}{I don't like to gamble.}
+{5602}{No, I do not want to gamble.}
+
+// the NPC does not need to identify an item (as it is already identified)
+{5700}{That item is already identified.}
+
+// the NPC wants money for identifying an item
+{5800}{I will identify that item for %d coins.}
+
+// the NPC cannot repair broken items
+{5900}{I cannot repair items that are broken.}
+
+// the NPC does not need to repair the item (it is not damaged)
+{6000}{That item is undamaged and does not need to be repaired.}
+
+// the NPC wants money for repairing the item
+{6100}{I will repair that item for %d coins.}
+
+// PC doesn't have enough skill points to be trained as expert
+{6200}{You do not have the skill necessary to be trained as an expert.}
+
+// PC doesn't have beginner training
+{6300}{You must be trained as an apprentice before you can receive expert training.}

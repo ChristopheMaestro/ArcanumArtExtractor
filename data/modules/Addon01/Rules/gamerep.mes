@@ -1,0 +1,30 @@
+// Game reputations start at 1000
+// Chaque réputations commence par une série de 3 chriffres qui correspondent aux 3 factions 
+// (possible) qui vous considèreront comme des leurs (0 signifie aucune faction). Cette série
+// doit être suivi d'une virgule.
+//
+// Chaque peut avoir jusqu'à 5 effets, chacun est suivi d'une virgule. Il est composé de 3 chiffres :
+// . le 1er est l'ajustement à la réation du PNJ (s'additionne à sa réation de base).
+// . le 2ème est le numéro de l'origine du PNJ (0 toutes)
+// . le 3ème est le numéro de la faction du PNJ(0 toutes)
+// 
+// ce fichier est associé à ..\mes\gamereplog.mes qui contient libellé qui apparaitra dans le livre section réputations.
+// 
+// Examples:
+//
+//	0 0 0, -20 1 0, +30 2 0
+//	The reputation grants no faction to the PC, but he has a -20
+//  reaction from any NPC from origin 1 and a +30 reaction from any
+//  NPC from origin 2
+//
+//
+// 150  Gens du Commerce
+// 151  Garde & Docker
+// 152  Gens des champs
+// 153  Gens des villes
+//
+//
+{1000}{0 0 0, +10 2 151}
+{1002}{151 0 0, +30 2 153}
+{1003}{0 0 0, +10 2 150, +30 2 152}
+{1004}{0 0 0, +10 0 0}

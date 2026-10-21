@@ -1,0 +1,37 @@
+//
+// Map List Info
+//
+
+// Types:
+//	START_MAP -- This is the starting map (there should only be one of these!)
+//	SHOPPING_MAP -- This is the shopping map used in character creation.  If not
+//		present, then this process is skipped during character creation.
+
+	// Starting Location (Convert for World by:)
+	// (54624 - 32) / 64 = 853
+	// (45408 - 32) / 64 = 709
+
+// Area: <#> -- This is the Index # in area.mes that the map maps to
+
+// Grayhills Town Locations:
+// On 'The Crescent Wave' - 2459, 2238
+// On Docks - 2444, 2241
+// In Town Hall - 2386, 2244
+// Outside Bar - 2436, 2205
+// In Bank - 2362, 2190
+// In Library - 2401, 2226
+
+// Grayhills 'Special' Locations:
+// On Yal'pretni Island - 2804, 2197
+// By Grave - 2163, 2306
+// At Gorillas in the Mist - 2150, 2210
+// Near Troika-ites - 2085, 2096
+
+// Grayhills Forest Locations:
+// Near Mr Pollock - 2277, 2302
+// Outside amtut caves - 1953, 2208
+// Crop Rotation Farm - 2240, 2115
+
+// List of valid maps for game & Starting X/Y position
+{5000}{ShopMap, 31, 29, Type: SHOPPING_MAP}
+{5001}{Grayhills, 2459, 2238, Type: START_MAP, WorldMap: 0}

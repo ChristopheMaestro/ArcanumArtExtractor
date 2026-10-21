@@ -1,0 +1,64 @@
+// This message file contains text to be used in game-supplied newspapers
+// Only the message line numbers 1000 or higher are valid
+// Each new newspaper begins on a multiple of 10, and can use up to 10
+// lines, which must be consecutive. The first line is always the main 
+// headline, while the 9 remaining lines go into 4 columns of the paper.
+// Format: each line begins with a font number and justification letter,
+// followed by the text for that line.
+
+// Some font numbers to use:
+//	490 Extra Large Headline
+//	486 Large Headline
+//	492 Normal Headline
+//	483 Story Body
+//	488 Clip Art 0-6
+
+// Justification letters (you must use one)
+//	l = left
+//	c = center
+
+// NOTE: The first blocks, 0 thru 999, are reserved for UI use
+
+// News Paper Type 1
+{0}{EXTRA!}
+{1}{[ NOUVELLES D'ARCANUM ]}
+{2}{Prix 2 pièces}
+{3}{La meilleure source d'informations d'Arcanum}
+
+// News Paper Type 2
+{4}{[ TIMES ]}
+{5}{All the News That is Fit to Print}
+
+// filler articles
+{10}{492c _ CALADON _}
+{11}{483l Sir Evelyn Baring rentrera à Caladon via Cendrebourg le 6 de ce mois. Pendant son absence, M Portal sera responsable du bureau diplomatique de Tarante.}
+{12}{492c _ UN TRAIN ATTAQUE _}
+{13}{483l Dans les Landes de Morbiliande, un train fut attaqué par des voleurs qui s'enfuirent en empruntant 15000 pièces volés dans ce train express.}
+{14}{492c _ APPEL A LA POPULATION _}
+{15}{483l La police de Cendrebourg invinte la population à communiquer tous rensei- gnements concernant les récents évènements de Whitechapel. Anonymat garanti.}
+{16}{492c _ NOUVEAU PERIODIQUE _}
+{17}{483l Le premier numéro de vérité et mensonges, bi-mensuel consacré à ce que son comité de rédaction appelle la "libre pensée" est sorti des presses aujourd'hui. Le maire de Cendrebourg en a ordonné la saisie.}
+{18}{492c _ UNIVERSITY COLLOQUIUM SERIES _}
+{19}{483l The Engineering School of the University of Tarant is holding a Distinguished Speaker Series this semester. Interested parties are invited to contact the University Registrar for more Information.}
+{20}{492c _ CHARITY BALL _}
+{21}{483l The Ladies Society of Tarant will once again hold a Charity Ball this Saturday evening. This Event will benefit Orphans and Survivors of Foreign Wars. Festivities will begin at 8pm. Strict dress code will be enforced.}
+{22}{492c _ TIDAL FIGURES _}
+{23}{483l High tides will occur at 6:15am and 7:30pm today, with low tides at approximately 1:05pm and 25 minutes after midnight. Full tidal charts can be found on page 8.}
+{24}{492c _ TIDAL FIGURES _}
+{25}{483l High tides will occur at 6:15am and 7:30pm today, with low tides at approximately 1:05pm and 25 minutes after midnight. Full tidal charts can be found on page 8.}
+
+//Game Related Newspapers
+//Use lines 1000-4990
+//Generic Newspapers Start at line 5000
+
+{1000}{490c SAMPLE HEADLINE!}
+{1001}{492c _ Place subheading here _}
+{1002}{483l And here's the text of the story. It's pretty exciting!}
+
+
+
+//Generic Newspapers
+
+{1000}{486c L'expédition Siegfried-Maginot sur le départ !}
+{1001}{492c _ LA VALLEE DES BANNIS : LEGENDE OU REALITE ? _}
+{1002}{483l Après de longs mois de préparatifs, les professeurs Siegfried et Maginot, hauts diplomés de l'Université d'archéologie de Tarante, sont sur le point de partir en expédition pour retrouver la (légendaire) vallée des bannis. Elle doit son nom du fait d'un petit peuple, les Boutchiks, qui sont censés y avoir vécu il y a des siècles de cela. Un peuple banni du reste du monde et exilé avec son roi, Malabar V, dans cette vallée prison. Long- temps oubliée de tous, la vallée semble avoir été redécouverte par nos deux scientifiques, aprés de longues recherches en bibliothèque. Leur ambition est de retrouver les vestiges de cette civilisation et de connaître les raisons qui ont poussé les Boutchiks à se résigner à cet exil. L'expédition ayant ouvert une large polémique sur la crédibilité scientifique d'une telle entreprise, les sieurs Siegfried et Maginot n'ont pas jugé nécessaire de dévoiler leur itinéraire, encore moins leur destination...}

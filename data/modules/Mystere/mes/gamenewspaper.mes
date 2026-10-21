@@ -1,0 +1,64 @@
+// This message file contains text to be used in game-supplied newspapers
+// Only the message line numbers 1000 or higher are valid
+// Each new newspaper begins on a multiple of 10, and can use up to 10
+// lines, which must be consecutive. The first line is always the main 
+// headline, while the 9 remaining lines go into 4 columns of the paper.
+// Format: each line begins with a font number and justification letter,
+// followed by the text for that line.
+
+// Some font numbers to use:
+//	490 Extra Large Headline
+//	486 Large Headline
+//	492 Normal Headline
+//	483 Story Body
+//	488 Clip Art 0-6
+
+// Justification letters (you must use one)
+//	l = left
+//	c = center
+
+// NOTE: The first blocks, 0 thru 999, are reserved for UI use
+
+// News Paper Type 1
+{0}{EXTRA!}
+{1}{[ NOUVELLES D'ARCANUM]}
+{2}{Prix 2 pièces}
+{3}{La meilleure source d'information d'Arcanum}
+
+// News Paper Type 2
+{4}{[NOUVELLES D'ARCANUM]}
+{5}{Toutes les nouvelles sont bonnes à être imprimées}
+
+// filler articles
+{10}{492c _ LIVRE ANCIEN _}
+{11}{483l Jean Baudouin, ethnologue, vient de retrouver un ancien grimoire de magie primitive qui, selon lui, révèlera de multiples informations sur les origines des différentes races d'Arcanum. Il donnera une conférence de presse mardi prochain à l'université de Tarante.}
+{12}{492c _ IMPOTS _}
+{13}{483l Le Parlement envisage une nouvelle levée des impôts de 2% à Tarante.}
+{14}{492c _ CAMBRIOLAGE _}
+{15}{483l  La banque de Tristes Collines a une nouvelle fois été victime d'un hold-up. Les autorités locales sont toutefois sur la piste des criminels. Il s'agiraît à priori de membres de la guilde des voleurs.}
+{16}{492c _ GASTRONOMIE _}
+{17}{483l A l'occasion de la sortie de son "livre de recettes de la famille Marmiton", Frédéric Marmiton, auteur et éditeur, offre un exemplaire du livre à ceux qui auront la réponse à la question suivante : dans quelle ville peut-on se restaurer à l'auberge des trois miches? Envoyez vos réponses au journal qui transmettra.}
+{18}{492c _ BONNES OEUVRES _}
+{19}{483l La société des Ladies de Tarante organise à bal samedi soir prochain, à but caritatif. Les bénéfices de l'évènement iront aux orphelins et survivants des guerre. Le bal ouvrira à 8h. Tenue de soirée exigée.}
+{20}{492c _ UNIVERSITY COLLOQUIUM SERIES _}
+{21}{483l The Engineering School of the University of Tarant is holding a Distinguished Speaker Series this semester. Interested parties are invited to contact the University Registrar for more Information.}
+{22}{492c _ CHARITY BALL _}
+{23}{483l The Ladies Society of Tarant will once again hold a Charity Ball this Saturday evening. This Event will benefit Orphans and Survivors of Foreign Wars. Festivities will begin at 8pm. Strict dress code will be enforced.}
+{24}{492c _ TIDAL FIGURES _}
+{25}{483l High tides will occur at 6:15am and 7:30pm today, with low tides at approximately 1:05pm and 25 minutes after midnight. Full tidal charts can be found on page 8.}
+
+//Game Related Newspapers
+//Use lines 1000-4990
+//Generic Newspapers Start at line 5000
+
+{1000}{490c SAMPLE HEADLINE!}
+{1001}{492c _ Place subheading here _}
+{1002}{483l And here's the text of the story. It's pretty exciting!}
+
+
+
+//Generic Newspapers
+
+{1000}{486c Disparitions inquiétantes à l'abbaye de Calice!}
+{1001}{492c _ DES FAMILLES SANS NOUVELLES DE LEUR PROCHE! _}
+{1002}{483l  Plusieurs moines de l'abbaye de Calice n'ont plus donné signe de vie depuis des semaines, voire des mois pour certains. Leur famille se présente réguilièrement au parloir de l'abbaye mais il semble que leur proche soit en cellule d'isolement ou qu'il ne soit jamais dipsonible. Les autorités de Tarante ont été alertées. Un enquêteur public devrait être nommé sous peu pour se rendre sur la petite île de Calice et demander des comptes au père prieur.}

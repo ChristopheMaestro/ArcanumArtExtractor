@@ -1,0 +1,153 @@
+// [LABEL] NewPage0001
+{1}{Oui?}{Oui?}{}{1}{}{}
+{2}{Je m'appelle @PCNAME@ et je viens pour parlementer avec vous.}{}{1}{me0 }{21}{}
+{3}{Je m'appelle @PCNAME@ et je viens pour vous tuer.}{}{1}{me0 }{}{co, fl 80}
+{4}{Alors Olivier ca va?}{}{1}{me1 }{301}{}
+{5}{J'ai le livre!}{}{1}{qu1009 4}{561}{}
+
+// [LABEL] question
+{21}{Je ne sais pas si vous êtes assez intelligent pour parler avec moi. Je vais vous poser une question, si vous repondez correctement, j'accepterais peut-être de discuter avec vous, sinon je vous tuerais. Ma question est: lequel de ces deux animaux est l'emblème du WWF: le panda ou le koala}{Je ne sais pas si vous êtes assez intelligent pour parler avec moi. Je vais vous poser une question, si vous repondez correctement, j'accepterais peut-être de discuter avec vous, sinon je vous tuerais. Ma question est: lequel de ces deux animaux est l'emblème du WWF: le panda ou le koala}{}{2}{}{}
+{22}{Le koala!}{}{1}{}{41}{}
+{23}{Le panda}{}{+7}{}{241}{}
+{24}{Obi-Wan Kenobi!}{}{1}{}{41}{}
+{25}{J'utilise un joker!}{}{1}{}{61}{}
+{26}{Euh, c'est quoi WWF?}{}{-5}{}{41}{}
+
+// [LABEL] mauvaise réponse
+{41}{Desolé, mais je dois vous tuer!}{Desolé, mais je dois vous tuer!}{}{3}{}{}
+{42}{Je vous tuerais avant!}{}{1}{}{}{co, fl 80}
+{43}{What' you doing? Oh no!}{}{1}{}{}{co, fl 80}
+
+// [LABEL] jokers
+{61}{Lequel des 3 jokers}{Lequel des 3 jokers}{}{4}{}{}
+{62}{Le public.}{}{1}{}{81}{}
+{63}{Le coup de fil à un ami.}{}{1}{}{101}{}
+{64}{Le 50/50}{}{1}{}{121}{}
+
+// [LABEL] public
+{81}{Public votez maintenant! Koala 81 pour cent, le panda 19 pour cent.}{Public votez maintenant! Koala 81 pour cent, le panda 19 pour cent.}{}{5}{}{}
+{82}{Le koala!}{}{1}{}{41}{}
+{83}{Le panda!}{}{1}{}{241}{}
+
+// [LABEL] fil
+{101}{Qui désirez-vous appeller?}{Qui désirez-vous appeller?}{}{6}{}{}
+{102}{Marie-Paule!}{}{1}{}{161}{}
+{103}{Mon père.}{}{1}{}{201}{}
+{104}{Obi-Wan Kenobi!}{}{1}{}{221}{}
+
+// [LABEL] 50/50
+{121}{Interdiction d'utiliser le 50/50 car il n'y a que deux réponses possibles.}{Interdiction d'utiliser le 50/50 car il n'y a que deux réponses possibles.}{}{7}{}{}
+{122}{Le public}{}{1}{}{81}{}
+{123}{Le coup de fil à un ami.}{}{1}{}{101}{}
+
+// [LABEL] coupdefil
+{141}{Qui désirez-vous appeller?}{Qui désirez-vous appeller?}{}{8}{}{}
+
+// [LABEL] Marie Paule
+{161}{Allo?}{Allo?}{}{9}{}{}
+{162}{Oui bonjour, j'ai besoin de vous pour répondre à une question très difficile.}{}{1}{}{181}{}
+
+// [LABEL] paule
+{181}{Criss moi la paix! Ostie de niaisieux (Tut tut ut). C'est fini, quel est votre réponse?}{Criss moi la paix! Ostie de niaisieux (Tut tut ut). C'est fini, quel est votre réponse?}{}{10}{}{}
+{182}{Le koala!}{}{1}{}{41}{}
+{183}{Le panda!}{}{1}{}{241}{}
+{184}{Obi-Wan Kenobi!}{}{1}{}{41}{}
+
+// [LABEL] NewPage0002
+{201}{Allô? Oui, je suis dans la voiture. Attend une minute, merde! (Vous entendez un bruit de casse et des crissements de pneux). Je crois que votre père ne répondra pas. Alors quel est votre réponse?}{Allô? Oui, je suis dans la voiture. Attend une minute, merde! (Vous entendez un bruit de casse et des crissements de pneux). Je crois que votre père ne répondra pas. Alors quel est votre réponse?}{}{11}{}{}
+{202}{Le koala!}{}{1}{}{41}{}
+{203}{le panda!}{}{1}{}{241}{}
+{204}{Obi-Wan Kenobi!}{}{1}{}{41}{}
+
+// [LABEL] obi-wan
+{221}{Je ne connais pas le numéro de cette personne, vous devez appeller quelqu'un d'autre.}{Je ne connais pas le numéro de cette personne, vous devez appeller quelqu'un d'autre.}{}{12}{}{}
+{222}{Marie-Paule!}{}{1}{}{161}{}
+{223}{Mon père!}{}{1}{}{201}{}
+
+// [LABEL] panda
+{241}{Tu es trop intelligent, tu dois mourir. C'est moi et moi seul qui suis le plus intelligent de la terre et de l'univers.AHAHAHAHAHAH!}{Tu es trop intelligent, tu dois mourir. C'est moi et moi seul qui suis le plus intelligent de la terre et de l'univers.AHAHAHAHAHAH!}{}{13}{}{}
+{242}{Tu ne serais pas un peu timbré?}{}{1}{}{}{co, fl 80}
+{243}{Je te tuerais bien avant!}{}{1}{}{}{co, fl 80}
+{244}{Attends, je sais que tu es le plus intelligent du monde. Donc pourquoi ne pas en faire profiter le monde? Je suis sur que tu serais recompensé pour cela.}{}{10}{}{261}{qu1002 3}
+{245}{Attends, je sais que tu es le plus intelligent du monde. Donc pourquoi ne pas en faire profiter le monde? Je suis sur que tu serais recompensé pour cela.}{}{1}{tr11 0}{261}{qu1002 3}
+
+// [LABEL] raisonner olivier
+{261}{Oui tu as raison, je vais aider les scientifiques dans leurs recherches. Grâce à mon intelligence superieure, le monde va faire un grand bond en avant. J'accepte donc de me rendre.}{Oui tu as raison, je vais aider les scientifiques dans leurs recherches. Grâce à mon intelligence superieure, le monde va faire un grand bond en avant. J'accepte donc de me rendre.}{}{14}{}{}
+{262}{Bon, content de t'avoir aider, a+.}{}{1}{}{}{}
+
+// [LABEL] autre debut
+{281}{Ah, vous revoila!}{Ah, vous revoila!}{}{15}{}{}
+{282}{Alors Olivier, ca progresse ces recherches?}{}{1}{}{301}{}
+{283}{E:}{}{1}{}{}{}
+
+// [LABEL] recherche
+{301}{Oui, ca va. Je me sens mieux depuis que je ne pense plus à cette émission de daube.}{Oui, ca va. Je me sens mieux depuis que je ne pense plus à cette émission de daube.}{}{16}{}{}
+{302}{Tu travailles sur un projet en ce moment?}{}{1}{qu1009 0}{321}{}
+{303}{Je viens de la part des pauvres. J'ai besoin des plans du ratus 2400.}{}{1}{qu1013 2}{381}{}
+{304}{Tant mieux. Au revoir.}{}{1}{}{}{}
+
+// [LABEL] train
+{321}{Je travaille sur le train. C'est une machine capable de transporter plusieurs personnes d'une ville à l'autre. Elle peut passer à travers le vortex, ce qui permet de ne plus utiliser ces maudites pierres de teletransportation.}{Je travaille sur le train. C'est une machine capable de transporter plusieurs personnes d'une ville à l'autre. Elle peut passer à travers le vortex, ce qui permet de ne plus utiliser ces maudites pierres de teletransportation.}{}{17}{}{}
+{322}{Mais c'est génial! Et elle fonctionne ta machine?}{}{1}{}{341}{}
+
+// [LABEL] problème du train
+{341}{Presque, il nous manque un bouquin qui nous explique comment faire fonctionner le transregulateur thermique.}{Presque, il nous manque un bouquin qui nous explique comment faire fonctionner le transregulateur thermique.}{}{18}{}{}
+{342}{Je peux peut-être t'aider.}{}{1}{}{361}{qu1009 1}
+{343}{Mouais c'est pas que ca m'ennuye mais on m'appelle ailleurs.}{}{1}{}{}{}
+
+// [LABEL] quete deu bouquin
+{361}{Oui, il faut que tu ailles chercher ce bouquin. Il se trouve à Kikicity, c'est une personne du nom de Lopez qui la possède.}{Oui, il faut que tu ailles chercher ce bouquin. Il se trouve à Kikicity, c'est une personne du nom de Lopez qui la possède.}{}{19}{}{}
+{362}{très bien je reviendrais avec le bouquin.}{}{1}{}{}{qu1009 2}
+
+// [LABEL] ratus
+{381}{Les plans de mon fameux ratus 2400?! Je ne les donnerais pour rien au monde.}{Les plans de mon fameux ratus 2400?! Je ne les donnerais pour rien au monde.}{}{20}{}{}
+{382}{Mais c'est pour aider les pauvres! s'ils ont ces plans, il pourront enfin vivre normalement.}{}{1}{}{421}{}
+{383}{Si tu ne me donnes pas ces plans, je te tuerais jusqu'à ce que tu sois mort.}{}{1}{}{401}{}
+{384}{OK, j'abandonne.}{}{1}{}{}{}
+
+// [LABEL] tuer
+{401}{Si tu me tues, tu ne sauras jamais où se trouves les plans!}{Si tu me tues, tu ne sauras jamais où se trouves les plans!}{}{21}{}{}
+{402}{Mais il faut que tu me les donnes, j'en ai besoin pour aider les pauvres.}{}{1}{}{421}{}
+{403}{Tant pis je prefere te tuer!}{}{1}{}{}{co, fl 80}
+{404}{j'abandonne.}{}{1}{}{}{}
+
+// [LABEL] aiderpauv
+{421}{M'en fous des pauvres, ils ont qu'à crever comme des cons.}{M'en fous des pauvres, ils ont qu'à crever comme des cons.}{}{22}{}{}
+{422}{Reflechis un peu, si tu leur donnes les plans, tu seras recompensés pour ta generosité}{}{1}{ps2 }{541}{ru1002}
+{423}{Si tu ne leur donnes pas le plan, les pauvres se revolteront et buteront tout le monde!}{}{1}{}{441}{}
+{424}{j'abandonne, t'as gagne.}{}{1}{}{}{}
+
+// [LABEL] revolte des pauv
+{441}{Tss, ils seront écrasés par les forces de police.}{Tss, ils seront écrasés par les forces de police.}{}{23}{}{}
+{442}{Les forces de polices ont été affaiblis par l'attaque des loups.}{}{1}{}{461}{}
+{443}{j'abandonne, t'as gagne bye.}{}{1}{}{}{}
+
+// [LABEL] forve affailbis
+{461}{Mmm, tu n'as pas tort. J'accepte de te dire qui a les plans si tu me donnes 500 pièces.}{Mmm, tu n'as pas tort. J'accepte de te dire qui a les plans si tu me donnes 500 pièces.}{}{24}{}{}
+{462}{Ok ca marche.}{}{1}{$$500 }{481}{ru1002}
+{463}{C'est trop cher pour moi. }{}{1}{}{501}{}
+
+// [LABEL] -500
+{481}{C'est Jacky qui possèdent les plans. Dis lui que tu les veux et il te les donnera.}{C'est Jacky qui possèdent les plans. Dis lui que tu les veux et il te les donnera.}{}{25}{}{}
+{482}{Pourquoi est-ce Jacky qui a les plans?}{}{1}{}{521}{}
+{483}{Merci, au revoir.}{}{1}{}{}{}
+
+// [LABEL] trop cher
+{501}{Et bien tant pis! Reviens quand tu auras l'argent.}{Et bien tant pis! Reviens quand tu auras l'argent.}{}{26}{}{}
+{502}{Je reviendrai avec le fric.}{}{1}{}{}{}
+{503}{Je prefere te tuer pour avoir les plans.}{}{1}{}{}{co}
+
+// [LABEL] pourquoi jacky?
+{521}{Et bien tu n'as qu'à lui demander.}{Et bien tu n'as qu'à lui demander.}{}{27}{}{}
+{522}{Très bien je le ferais, au revoir.}{}{1}{}{}{}
+
+// [LABEL] generosite
+{541}{Oui tu n'as pas tort. Va voir Jacky, c'est lui qui a les plans.}{Oui tu n'as pas tort. Va voir Jacky, c'est lui qui a les plans.}{}{28}{}{}
+{542}{Pourquoi est-ce Jacky qui possède les plans?}{}{1}{}{521}{}
+{543}{Merci au revoir.}{}{1}{}{}{}
+
+// [LABEL] quete reussi
+{561}{Genial! Le train va bientôt etre fini et cela grâce à toi. Tiens prend ces quelques pièces.}{Genial! Le train va bientôt etre fini et cela grâce à toi. Tiens prend ces quelques pièces.}{}{29}{}{$$500 ,in5252 }
+{562}{Merci Olivier. Au revoir}{}{1}{}{}{}
+{563}{Previens moi quand le train sera fini. Au revoir.}{}{1}{}{}{}
+

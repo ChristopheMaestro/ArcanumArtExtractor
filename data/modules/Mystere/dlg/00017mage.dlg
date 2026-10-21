@@ -1,0 +1,137 @@
+{1}{Bonjour, mon ami. Je m'appele Adelme. Je suis le mage de l'abbaye. A qui ai-je l'honneur?}{Bonjour, mon amie. Je m'appele Adelme. Je suis le mage de l'abbaye. A qui ai-je l'honneur?}{}{1}{}{lf1 1}
+{2}{Que vous importe mon nom?}{}{5}{}{30}{re -10, lf2 1}
+{3}{Pourquoi toi savoir?}{}{-4}{}{30}{re -10, lf2 1}
+{4}{Je m'appelle @pcname@.}{}{5}{}{60}{re +10}
+{5}{@pcname@.}{}{-4}{}{60}{re +10}
+
+{30}{Simple question de politesse, mon ami.}{Simple question de politesse, mon amie.}{}{2}{}{}
+{31}{En quoi consiste votre tâche au sein de l'abbaye?}{}{5}{lf3 0}{90}{lf3 1}
+{32}{Je cherche un moyen de lever le sort que vous avez lancé contre frère Garagrim Poingdefer.}{}{5}{qu1003 1, lf5 0}{150}{}
+{33}{B:}{}{1}{}{0}{}
+{34}{Quoi toi faire magie dans abbaye?}{}{-4}{lf3 0}{90}{lf3 1}
+{35}{Toi lancer sort sur Garagrim Poingdefer. Comment toi annuler maintenant?}{}{-4}{qu1003 1, lf5 0}{150}{}
+{36}{La magie et la technologie cohabitent-elles ici?}{}{5}{lf3 1, lf6 0}{210}{lf6 1}
+{37}{Magie et tochnelogie aimer ensemble ici?}{}{-4}{lf3 1, lf6 0}{210}{lf6 1}
+{38}{E:}{}{1}{lf2 0}{0}{}
+
+
+{60}{Enchanté de vous connaître! Que puis-je faire pour vous l'ami?}{Enchanté de vous connaître! Que puis-je faire pour vous l'amie?}{}{3}{}{}
+{61}{En quoi consiste votre tâche au sein de l'abbaye?}{}{5}{lf3 0}{90}{lf3 1}
+{62}{Je cherche un moyen de lever le sort que vous avez lancé contre frère Garagrim Poingdefer.}{}{5}{qu1003 1, lf5 0}{150}{}
+{63}{B:}{}{1}{}{0}{}
+{64}{Quoi toi faire magie dans abbaye?}{}{-4}{lf3 0}{90}{lf3 1}
+{65}{Toi lancer sort sur Garagrim Poingdefer. Comment toi annuler maintenant?}{}{-4}{qu1003 1, lf5 0}{150}{}
+{66}{La magie et la technologie cohabitent-elles ici?}{}{5}{lf3 1, lf6 0}{210}{lf6 1}
+{67}{Magie et tochnelogie aimer ensemble ici?}{}{-4}{lf3 1, lf6 0}{210}{lf6 1}
+{68}{E:}{}{1}{}{0}{}
+
+
+{90}{Je m'occupe de tout ce qui touche à la magie ici. Fabrication de potions, protections, bénédictions... Mes pouvoirs se limitent toutefois à l'exercice de la magie blanche et la nécromancie est formellement interdite dans l'abbaye.}{Je m'occupe de tout ce qui touche à la magie ici. Fabrication de potions, protections, bénédictions... Mes pouvoirs se limitent toutefois à l'exercice de la magie blanche et la nécromancie est formellement interdite dans l'abbaye.}{}{4}{}{}
+{91}{En quoi consiste votre tâche au sein de l'abbaye?}{}{5}{lf3 0}{90}{lf3 1}
+{92}{Je cherche un moyen de lever le sort que vous avez lancé contre frère Garagrim Poingdefer.}{}{5}{qu1003 1, lf5 0}{150}{}
+{93}{B:}{}{1}{}{0}{}
+{94}{Quoi toi faire magie dans abbaye?}{}{-4}{lf3 0}{90}{lf3 1}
+{95}{Toi lancer sort sur Garagrim Poingdefer. Comment toi annuler maintenant?}{}{-4}{qu1003 1, lf5 0}{150}{}
+{96}{La magie et la technologie cohabitent-elles ici?}{}{5}{lf3 1, lf6 0}{210}{lf6 1}
+{97}{Magie et tochnelogie aimer ensemble ici?}{}{-4}{lf3 1, lf6 0}{210}{lf6 1}
+{98}{E:}{}{1}{}{0}{}
+
+
+{150}{Je ne me souviens absolument pas de la formule que j'ai utlisée pour lancer ce fichu sortilège.}{Je ne me souviens absolument pas de la formule que j'ai utlisée pour lancer ce fichu sortilège.}{}{5}{}{}
+{151}{Faîtes un petit effort... [Vous tentez de le persuader]}{}{5}{ps 6, lf8 0}{330}{lf8 1}
+{152}{Faîtes un petit effort... [Vous tentez de le persuader]}{}{5}{ps -5, lf8 0}{160}{lf8 1, gf1003 1}
+{153}{Et si je demandais au père inquisiteur de vous faire retrouver la mémoire?}{}{5}{gf1005 1}{330}{}
+{154}{Faire effort, oui? [Vous tentez de le persuader]}{}{-4}{ps 6, lf8 0}{330}{lf8 1}
+{155}{Faire effort, oui? [Vous tentez de le persuader]}{}{-4}{ps -5, lf8 0}{160}{lf8 1, gf1003 1}
+{156}{Et si @pcname@ demander à inquisiteur toi parler?}{}{-4}{gf1005 1}{330}{}
+{157}{Parlons d'autre chose, je vous prie.}{}{5}{}{430}{}
+{157}{Parlez autre chose, oui?}{}{-4}{}{430}{}
+
+{160}{N'insistez pas, voyons! Je vous dis que je ne m'en souviens pas!}{N'insistez pas, voyons! Je vous dis que je ne m'en souviens pas!}{}{6}{}{}
+{161}{Faîtes un petit effort... [Vous tentez de le persuader]}{}{5}{ps 6, lf8 0}{330}{lf8 1}
+{162}{Faîtes un petit effort... [Vous tentez de le persuader]}{}{5}{ps -5, lf8 0}{160}{lf8 1, gf1003 1}
+{163}{Et si je demandais au père inquisiteur de vous faire retrouver la mémoire?}{}{5}{gf1005 1}{330}{}
+{164}{Faire effort, oui? [Vous tentez de le persuader]}{}{-4}{ps 6, lf8 0}{330}{lf8 1}
+{165}{Faire effort, oui? [Vous tentez de le persuader]}{}{-4}{ps -5, lf8 0}{160}{lf8 1, gf1003 1}
+{166}{Et si @pcname@ demander à inquisiteur toi parler?}{}{-4}{gf1005 1}{330}{}
+{167}{Parlons d'autre chose, je vous prie.}{}{5}{}{430}{}
+{167}{Parlez autre chose, oui?}{}{-4}{}{430}{}
+
+{210}{Ma foi, la cohabitation est bien difficile. Mais, je crois que mon confrère, Garagrim Poingdefer, le technologiste en chef de la communauté, est bien plus gêné que moi. Je suis bien plus puissant que lui, voyez-vous...}{Ma foi, la cohabitation est bien difficile. Mais, je crois que mon Garagrim, le technologiste en chef de la communauté est bien plus gêné que moi. Je suis bien plus puissant que lui, voyez-vous...}{}{7}{}{}
+{211}{En quoi consiste votre tâche au sein de l'abbaye?}{}{5}{lf3 0}{90}{lf3 1}
+{212}{Je cherche un moyen de lever le sort que vous avez lancé contre frère Garagrim Poingdefer.}{}{5}{qu1003 1, lf5 0}{150}{}
+{213}{B:}{}{1}{}{0}{}
+{214}{Quoi toi faire magie dans abbaye?}{}{-4}{lf3 0}{90}{lf3 1}
+{215}{Toi lancer sort sur Garagrim Poingdefer. Comment toi annuler maintenant?}{}{-4}{qu1003 1, lf5 0}{150}{}
+{216}{La magie et la technologie cohabitent-elles ici?}{}{5}{lf3 1, lf6 0}{210}{lf6 1}
+{217}{Magie et tochnelogie aimer ensemble ici?}{}{-4}{lf3 1, lf6 0}{210}{lf6 1}
+{218}{A:}{}{1}{}{0}{}
+
+
+{330}{Attendez!... Hum... En réalité je ne veux plus réouvrir mon vieux grimoire de magie où est inscrit le sortilège en question. Ce grimoire est maudit, vous comprenez? Dieu me garde de l'ouvrir à nouveau!!!}{Attendez!... Hum... En réalité je ne veux plus réouvrir mon vieux grimoire de magie où est inscrit le sortilège en question. Ce grimoire est maudit, vous comprenez? Dieu me garde de l'ouvrir à nouveau!!!}{}{8}{}{lf5 1}
+{331}{Où se trouve ce grimoire?}{}{5}{lf7 0}{350}{lf7 1}
+{332}{Que contient ce grimoire de si redoutable?}{}{5}{lf9 0}{370}{lf9 1}
+{333}{Où être grimoire?}{}{-4}{lf7 0}{350}{lf7 1}
+{334}{Quoi écrit dans grimoire?}{}{-4}{lf9 0}{370}{lf9 1}
+
+{350}{Je l'ai encore dans mes affaires. Je ne sais ce qui me retient de m'en débarasser. Le Diable surement...}{Je l'ai encore dans mes affaires. Je ne sais ce qui me retient de m'en débarasser. Le Diable surement...}{}{9}{}{}
+{351}{Où se trouve ce grimoire?}{}{5}{lf7 0}{350}{lf7 1}
+{352}{Que contient ce grimoire de si redoutable?}{}{5}{lf9 0}{370}{lf9 1}
+{353}{Où être grimoire?}{}{-4}{lf7 0}{350}{lf7 1}
+{354}{Quoi écrit dans grimoire?}{}{-4}{lf9 0}{370}{lf9 1}
+{355}{Je peux vous débarasser de ce grimoire...}{}{5}{lf7 1, lf9 1}{400}{}
+{356}{Moi pouvoir prendre grimore?}{}{-4}{lf7 1, lf9 1}{400}{}
+
+{370}{Des sortilèges que j'ai inventés avant d'entrer à l'abbaye. Je vivais bien loin de Dieu à cet époque là...}{Des sortilèges que j'ai inventés avant d'entrer à l'abbaye. Je vivais bien loin de Dieu à cet époque là...}{}{10}{}{}
+{371}{Où se trouve ce grimoire?}{}{5}{lf7 0}{350}{lf7 1}
+{372}{Que contient ce grimoire de si redoutable?}{}{5}{lf9 0}{370}{lf9 1}
+{373}{Où être grimoire?}{}{-4}{lf7 0}{350}{lf7 1}
+{374}{Quoi écrit dans grimoire?}{}{-4}{lf9 0}{370}{lf9 1}
+{375}{Je peux vous débarasser de ce grimoire...}{}{5}{lf7 1, lf9 1}{400}{}
+{376}{Moi pouvoir prendre grimore?}{}{-4}{lf7 1, lf9 1}{400}{}
+
+{400}{Hum... Je crois que j'en serai soulagé, oui. Tenez, voici la clef de ma cellule. Prenez le grimoire et faîtes-en ce que vous voudrez pourvu que je n'en entende plus jamais parler...}{Hum... Je crois que j'en serai soulagé, oui. Tenez, voici la clef de ma cellule. Prenez le grimoire et faîtes-en ce que vous voudrez pourvu que je n'en entende plus jamais parler...}{}{11}{}{in -4600}
+{401}{En quoi consiste votre tâche au sein de l'abbaye?}{}{5}{lf3 0}{90}{lf3 1}
+{402}{Je cherche un moyen de lever le sort que vous avez lancé sur le coffre de l'abbaye.}{}{5}{qu1003 1, lf5 0}{150}{}
+{403}{B:}{}{1}{}{0}{}
+{404}{Quoi toi faire magie dans abbaye?}{}{-4}{lf3 0}{90}{lf3 1}
+{405}{Toi lancer sort sur Garagrim Poingdefer. Comment toi annuler maintenant?}{}{-4}{qu1003 1, lf5 0}{150}{}
+{406}{La magie et la technologie cohabitent-elles ici?}{}{5}{lf3 1, lf6 0}{210}{lf6 1}
+{407}{Magie et tochnelogie aimer ensemble ici?}{}{-4}{lf3 1, lf6 0}{210}{lf6 1}
+{408}{A:}{}{1}{}{0}{}
+
+
+{430}{Oui?}{Oui?}{}{12}{}{}
+{431}{En quoi consiste votre tâche au sein de l'abbaye?}{}{5}{lf3 0}{90}{lf3 1}
+{432}{Je cherche un moyen de lever le sort que vous avez lancé contre frère Garagrim Poingdefer.}{}{5}{qu1003 1, lf5 0}{150}{}
+{433}{B:}{}{1}{}{0}{}
+{434}{Quoi toi faire magie dans abbaye?}{}{-4}{lf3 0}{90}{lf3 1}
+{435}{Toi lancer sort sur Garagrim Poingdefer. Comment toi annuler maintenant?}{}{-4}{qu1003 1, lf5 0}{150}{}
+{436}{La magie et la technologie cohabitent-elles ici?}{}{5}{lf3 1, lf6 0}{210}{lf6 1}
+{437}{Magie et tochnelogie aimer ensemble ici?}{}{-4}{lf3 1, lf6 0}{210}{lf6 1}
+{438}{A:}{}{1}{}{0}{}
+
+
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+
+

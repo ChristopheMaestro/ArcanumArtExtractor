@@ -1,0 +1,50 @@
+// [LABEL] debut
+{1}{Oui? Que voulez-vous?}{Oui? Que voulez-vous?}{}{1}{}{}
+{2}{Vous êtes monsieur Lee Jacob?}{}{1}{qu1010 2}{21}{}
+{3}{Rien de special, au revoir.}{}{1}{}{}{}
+{4}{Ca y est, j'ai denoncé le banquier à la police. Ce n'est plus qu'une question de temps.}{}{1}{qu1012 3}{181}{}
+
+// [LABEL] leejacob
+{21}{Oui, c'est bien moi.}{Oui, c'est bien moi.}{}{2}{}{}
+{22}{Je viens de la part du banquier vous devez rembourser votre dette.}{}{1}{}{41}{}
+{23}{Je viens vous tuer pour recuperer le fric que vous avez voler au banquier!}{}{1}{}{}{co}
+
+// [LABEL] dette
+{41}{Mais c'est n'importe quoi! Je l'ai deja remboursé il y a peine deux jours!}{Mais c'est n'importe quoi! Je l'ai deja remboursé il y a peine deux jours!}{}{3}{}{}
+{42}{Mais bien sûr. Et la marmote, elle met le chocolat dans le papier alu.}{}{1}{}{61}{}
+{43}{Pourtant le banquier affirme que vous ne l'avez pas rembourser. Comment expliquez-vous cela?}{}{1}{}{81}{}
+{44}{je m'en contre fous, je veux le fric un point c'est tout!}{}{1}{}{141}{}
+
+// [LABEL] papier alu
+{61}{Très dôle! Mais je vous jure que c'est la verité!}{Très dôle! Mais je vous jure que c'est la verité!}{}{4}{}{}
+{62}{Mais alors, pourquoi le banquier m'a dit ca ?}{}{1}{}{81}{}
+{63}{Je ne vous crois pas, donnez moi le fric!}{}{1}{}{141}{}
+
+// [LABEL] pourkoi le banquier a dit ca
+{81}{Tout simplement pour avoir plus d'argent en escroquant les honnêtes gens.}{Tout simplement pour avoir plus d'argent en escroquant les honnêtes gens.}{}{5}{}{}
+{82}{Arf, mais il faut en parler à Julien Courbet, apres on fera une émission là dessus et le banquier ira en tôle.}{}{1}{}{101}{}
+{83}{Je ne vous crois pas, donnez moi l'argent.}{}{1}{}{141}{}
+{84}{Que proposez-vous alors?}{}{1}{}{121}{}
+
+// [LABEL] juliencourbet
+{101}{Tres bien, il faut que vous aillez le voir. Il se trouve à quebec city, il est en vacance avec sa famille là bas.}{Tres bien, il faut que vous aillez le voir. Il se trouve à quebec city, il est en vacance avec sa famille là bas.}{}{6}{}{}
+{102}{Ok, ca marche je pars le voir.}{}{1}{}{}{qu1010 5,qu1011 2}
+
+// [LABEL] que proposez vous
+{121}{Ce banquier est un escroc. Il doit payer! Alors voir le chef de police de kikicity, pour qu'il le foute en tôle.}{Ce banquier est un escroc. Il doit payer! Alors voir le chef de police de kikicity, pour qu'il le foute en tôle.}{}{7}{}{}
+{122}{Très bien, je vais aller le voir.}{}{1}{}{}{qu1010 5,qu1012 2}
+
+// [LABEL] donnez moi l'argent
+{141}{Je l'ai deja rembourse et de toute facon, je n'ai pas d'argent. }{Je l'ai deja rembourse et de toute facon, je n'ai pas d'argent. }{}{8}{}{}
+{142}{Et bien, on va verifier ca en vous tuant!}{}{1}{}{}{co}
+{143}{Ne faites pas votre malin. Donnez moi l'argent et on en parle plus.}{}{1}{}{161}{}
+
+// [LABEL] DONer argent vite
+{161}{Pour la derniere fois, je vous dis que je n'ai pas d'argent. Vous m'enervez. Sortez de chez moi, sinon ca va chier.}{Pour la derniere fois, je vous dis que je n'ai pas d'argent. Vous m'enervez. Sortez de chez moi, sinon ca va chier.}{}{9}{}{}
+{162}{Tres bien je me tire.}{}{1}{}{}{}
+{163}{Je vous prendrais l'argent par la force alors!}{}{1}{}{}{co}
+
+// [LABEL] reussi
+{181}{Bravo, cet escroc va enfin payer pour tout ce qu'il a fait.}{Bravo, cet escroc va enfin payer pour tout ce qu'il a fait.}{}{10}{}{}
+{182}{Oui enfin. Ravi de vous avoir aider au revoir.}{}{1}{}{}{qu1012 4}
+

@@ -1,0 +1,65 @@
+// [LABEL] Salut
+{1}{Hello, que puis-je faire pour toi ?}{Hello, que puis-je faire pour toi ?}{}{1}{}{}
+{2}{Salut, comment tu t'appelles ?}{}{1}{}{21}{}
+{3}{Rien au revoir}{}{1}{}{}{}
+// [LABEL] bonjour
+{21}{Moi c'est Jane, et toi c'est comment que tu t'appelles ?}{Moi c'est Jane, et toi c'est comment que tu t'appelles ?}{}{2}{}{}
+{22}{Moi je m'appelle @pcname@, heureux de faire ta connaisance. Que fais tu ici ?}{1}{1}{}{41}{}
+{23}{Moi c'est @pcname@. Que fais tu ici ?}{0}{1}{}{41}{}
+// [LABEL] Fais ici
+{41}{Ben, je bois un coup avec mon chum, à côté de moi. Et toi qu'ess tu viens faire ici ?}{Ben, je bois un coup avec mon chum, à côté de moi. Et toi qu'ess tu viens faire ici ?}{}{3}{}{}
+{42}{Je me ballade, je visite la ville, en quelque sorte...}{}{1}{}{61}{}
+{43}{Euh, bon je dois y aller}{}{1}{}{}{}
+// [LABEL] Nouveau
+{61}{C'est bien ce qui me semblait, je t'avais jamais vu ici avant, t'es nouveau !  Tu viens d'où ?}{C'est bien ce qui me semblait, je t'avais jamais vue ici avant, t'es nouvelle !  Tu viens d'où ?}{}{4}{}{}
+{62}{Je viens juste de Pouriland...un bled pourri, mais avant j'étais à Ayecity.}{}{1}{}{81}{}
+{63}{Je préfère ne pas te le dire, salut}{}{1}{}{}{}
+// [LABEL] Bien
+{81}{Bon ben c'est bien...tu veux quoi ?}{Bon ben c'est bien...tu veux quoi ?}{}{5}{}{}
+{82}{Tu connais Marie Paule ?}{}{1}{}{101}{}
+{83}{Ton chum n'a pas l'air très causant...}{}{1}{}{121}{}
+{84}{Tu aimes Céline Dion ?}{}{1}{}{161}{re+5 }
+{85}{Rien, c'était juste pour faire connaissance, salut}{}{1}{}{}{}
+// [LABEL] Marie Paule
+{101}{Marie Paule ?....non ça me dit rien....bon j'ai plus le temps de parler, bonjour !}{Marie Paule ?....non ça me dit rien....bon j'ai plus le temps de parler, bonjour !}{}{6}{}{}
+{102}{Bonjour...}{}{1}{}{}{}
+// [LABEL] chum cause
+{121}{Ben non, il 'aime pas trop les nouveaux, en fait il leur fait pas confiance.}{Ben non, il a pas l'air de t'apprécier beaucoup. Tu n'es pas son genre de blonde je crois.}{}{7}{}{}
+{122}{Ok, je vois...il est raciste ?}{1}{1}{}{141}{}
+{123}{Ah bon ? c'est quoi son "style de blonde" à môssieur ??}{0}{1}{}{141}{}
+// [LABEL] Raciste
+{141}{Non po du tout... mais ce qu'il aime pas, c'est les nouveaux qui me causent à moi sans me connaître...alors tu ferais mieux de partir je crois, sinon il pas être très content...}{Ben son style de blonde, c'est MOI, pardi ! je pense que tu devrais partir, je le sens énervé ....}{}{8}{}{}
+{142}{Ah je vois...bon ben bonjour alors}{1}{1}{}{}{}
+{143}{Ah bon....eh bien vous êtes pas commodes tous les deux.... salut}{0}{1}{}{}{}
+// [LABEL] Céline Dion
+{161}{Céline Dion ?! Ben oui j'aime bien, c'est notre chanteuse préférée, à mon chum et à moi....}{Céline Dion ?! Ben oui j'aime bien, c'est notre chanteuse préférée, à mon chum et à moi....}{}{9}{}{}
+{162}{Eh ben tu me fais bien de la peine...}{}{1}{}{181}{}
+{163}{Je vous comprend, comme c'est romantique !}{}{1}{}{201}{re+10 }
+// [LABEL] de la peine
+{181}{Ah bon, ben moi j'y peux rien si c'est po ton style ! Allez ouste on a à faire....}{Ah bon, ben moi j'y peux rien si c'est po ton style ! Allez ouste on a à faire....}{}{10}{}{}
+{182}{Bonjour}{}{1}{}{}{}
+// [LABEL] romantique
+{201}{Ouais, tu vois ! J'adore cette chanteuse et mon chum aussi, on aime bien......danser avec ses chansons.}{Ouais, tu vois ! J'adore cette chanteuse et mon chum aussi, on aime bien......danser avec ses chansons.}{}{11}{}{}
+{202}{Quel beau couple !}{}{1}{}{221}{re+10 }
+{203}{Non mais je disais ça pour me moquer de toi, en fait je trouve ça nul.}{}{1}{}{181}{}
+{204}{Vous "dansez" sur des chansons de Céline Dion ? comment vous faites, explique moi.}{}{1}{}{241}{}
+// [LABEL] bo couple
+{221}{Ohh merci à toi. ça fait plaisir de rencontrer des gens qui ont de la compréhension, c'est rare de nos jours. Mais à présent nous avons à faire...bonne journée}{Ohh merci à toi. ça fait plaisir de rencontrer des gens qui ont de la compréhension, c'est rare de nos jours. Mais à présent nous avons à faire...bonne journée}{}{12}{}{}
+{222}{Bonne journée , les amoureux}{}{1}{}{}{}
+{223}{Ouais, c'est ça bonjour !}{}{1}{}{}{}
+// [LABEL] danse ?
+{241}{Ben, oui..euh comment dire [elle semble gênée et ne trouve pas ses mots] ....ben oui on danse sur des musiques de Céline Dion, avec mon chum de temps en temps, ça met de l'ambiance romantique, tu trouves pas ?}{Ben, oui..euh comment dire [elle semble gênée et ne trouve pas ses mots] ....ben oui on danse sur des musiques de Céline Dion, avec mon chum de temps en temps, ça met de l'ambiance romantique, tu trouves pas ?}{}{13}{}{}
+{242}{Bon...admettons...je dois y aller, salut}{}{1}{}{}{}
+{243}{J'aimerais savoir ce que tu appelles "danser"....}{}{1}{}{261}{}
+// [LABEL] Danser..ckoi
+{261}{Ben....je sais pas moi, on danse, on bouge, quoi ....}{Ben....je sais pas moi, on danse, on bouge, quoi ....}{}{14}{}{}
+{262}{Héhéé, je vois ce que tu veux dire, je n'appelle pas ça danser, moi...}{}{1}{}{281}{}
+{263}{Bon, je ne vois toujours pas comment danser sur du Céline Dion...salut}{}{1}{}{}{}
+// [LABEL] mal placé
+{281}{Oh tu as vraiment l'esprit mal placé !!! Ne dis pas n'importe quoi !!}{Oh tu as vraiment l'esprit mal placé !!! Ne dis pas n'importe quoi !!}{}{15}{}{}
+{282}{Bon ok je vous laisse rentrer chez vous pour danser.....tss}{}{1}{}{}{}
+{283}{Bon ok je veux pas m'imiscer dans votre vie privée, mille excuses... bonjour}{1}{1}{}{}{}
+{284}{Hé ! [vous chuchotez] tu peux me le dire, à moi. Entre filles, on se comprend, non ?}{0}{1}{}{301}{}
+// [LABEL] Non
+{301}{Non on ne doit pas bien se comprendre...allez ouste [elle semble avoir honte...]}{Non on ne doit pas bien se comprendre...allez ouste [elle semble avoir honte...]}{}{16}{}{}
+{302}{Ok, comme tu veux, bonjour}{}{1}{}{}{}

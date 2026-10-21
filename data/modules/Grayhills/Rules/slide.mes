@@ -1,0 +1,19 @@
+// This file enumerates the slide in the game. Slides can be added via the script slide
+// command in one of these scripts:
+//
+//	997 - called when a script has ended the game
+//	998 - called when the player has died
+//	999 - called when in-game credits are requested
+//
+// Note that NO script is called when the game ends through the player exiting the game.
+
+// Each slide lists a BMP and an MP3. The bmp is an 8-bit BMP located in the module's
+// Slide directory. The MP3 must be located in the module's Sound/Speech/Slide directory.
+
+// Note: slide 0 is the DEFAULT death slide. If the player dies and no slide is queued by
+// script 998, then slide 0 is used.
+
+{0}{death.bmp DeathSound.mp3}
+{1}{Credits.bmp 10second.mp3}
+{2}{TheEnd.bmp DeathSound.mp3}
+{45}{Credits.bmp 10second.mp3}

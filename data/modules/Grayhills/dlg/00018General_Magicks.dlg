@@ -1,0 +1,26 @@
+// lf0 1 = PC has asked about the stores poor quality, don't let them ask again.
+{1}{[You see a Halfling who looks far too small for the table in front of him] Yes? What do you want?}{[You see a Halfling who looks far too small for the table in front of him] Yes? What do you want?}{}{}{}{}
+{2}{Surely a magician should have a finer store than this?}{}{5}{lf0 0}{20}{}
+{3}{Uhh... Yoor store look bad. Koold be better.}{}{-4}{lf0 0}{20}{}
+{4}{B:}{}{1}{}{0}{}
+{5}{E:}{}{1}{}{0}{}
+
+{20}{Oh sure! That's easy for YOU to say! You aren't the one who had to shift all his wares into this dump!}{Oh sure! That's easy for YOU to say! You aren't the one who had to shift all his wares into this dump!}{}{}{}{lf0 1}
+{21}{Why did you have to move?}{}{5}{}{30}{}
+{22}{Why you haf' to moove?}{}{-4}{}{30}{}
+
+{30}{That Firearms salesman, Duke, I believe his name is. He sells far more than I do so he protested with the Council to have his store moved into Wharf Street. Well, they had to shift someone out of Wharf Street to do that didn't they?}{That Firearms salesman, Duke, I believe his name is. He sells far more than I do so he protested with the Council to have his store moved into Wharf Street. Well, they had to shift someone out of Wharf Street to do that didn't they?}{}{}{}{}
+{31}{So they forced you out?}{}{5}{}{40}{}
+{32}{So dey forse you owt?}{}{-4}{}{40}{}
+
+{40}{Yes, that... That... That Mayor persuaded me out here. Bloody good at doing that he is! Why, he could talk a murderer into giving himself up! And well, here I am. In my new store because people like Guns more than Magick. I suppose that's business though...}{Yes, that... That... That Mayor persuaded me out here. Bloody good at doing that he is! Why, he could talk a murderer into giving himself up! And well, here I am. In my new store because people like Guns more than Magick. I suppose that's business though...}{}{}{}{}
+{41}{Well, you have one customer, let's see what you've got.}{}{5}{}{50}{}
+{42}{Me buy stuff from you! Lemme see wat you got.}{}{-4}{}{50}{}
+{43}{Yes, that is business. Good day.}{}{5}{}{0}{}
+{44}{Yep! Dat be buziness. Buh-bye.}{}{-4}{}{0}{}
+
+{50}{You'll buy something from me! You mean, you're a customer! Oh goody! [He seems overjoyed at having a buyer for his goods]}{You'll buy something from me! You mean, you're a customer! Oh goody! [He seems overjoyed at having a buyer for his goods]}{}{}{}{re +10}
+{51}{B:}{}{1}{}{0}{}
+{52}{E:}{}{1}{}{0}{}
+
+// {Y}{}{}{INT}{}{XXX}{}

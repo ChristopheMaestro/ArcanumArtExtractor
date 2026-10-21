@@ -1,0 +1,96 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{What kind of goods do you sell?}{}{5}{}{30}{}
+{3}{B:}{}{1}{}{0}{}
+{4}{I seek training.  Can you help me?}{}{5}{}{10}{}
+{5}{Me like toys.  U got toys?}{}{-4}{}{210}{}
+{9}{E:}{}{1}{}{0}{}
+
+{10}{Certainly, sir.  What type of training do you require?}{Certainly, ma'am.  What type of training do you require?}{}{}{}{}
+{11}{The Bow is my weapon of choice.}{}{5}{}{180}{}
+{12}{Melee is certain to win me the day.}{}{5}{}{190}{}
+{13}{Never underestimate a nice hunk of steel that fires a projectile at astounding velocities!}{}{5}{}{200}{}
+{19}{F:}{}{1}{}{1}{}
+
+{30}{I sell weaponry and I specialize in firearms.  If you're looking for a firearm you've come to the right place, sir.}{I sell weaponry and I specialize in firearms.  If you're looking for a firearm you've come to the right place, ma'am.}{}{}{}{}
+{31}{B:}{}{1}{}{0}{}
+{32}{I seek training.  Can you help me?}{}{5}{}{10}{}
+{39}{E:}{}{1}{}{0}{}
+
+{40}{Is there anything else I can help you with?}{Is there anything else I can help you with?}{}{}{}{}
+{41}{B:}{}{1}{}{0}{}
+{42}{I seek training.  Can you help me?}{}{5}{}{10}{}
+{49}{E:}{}{1}{}{0}{}
+
+{50}{Training to be a Bow Expert will cost you 200 coin.}{Training to be a Bow Expert will cost you 200 coin.}{}{}{}{}
+{51}{I've got the money right here. [give him 200 coin]}{}{1}{$$200}{60}{$$-200, tr0 2}
+{59}{F:}{}{1}{}{0}{}
+
+{60}{[He shows you new ways of holding the bow that you've never thought of before] You're a Bow Expert now.}{[He shows you new ways of holding the bow that you've never thought of before] You're a Bow Expert now.}{}{}{}{}
+{69}{A:}{}{1}{}{0}{}
+
+{70}{Training to be a Bow Master takes the utmost in concentration.  If you are sure you're ready, the price is 300 coin.}{Training to be a Bow Master takes the utmost in concentration.  If you are sure you're ready, the price is 300 coin.}{}{}{}{}
+{71}{[After a moment of reflection] I think it is time I mastered the bow.}{}{1}{$$300}{80}{$$-300, tr0 3}
+{79}{F:}{}{1}{}{1}{}
+
+{80}{[There are secret techniques, and then there are long forgotten secret techniques.  He shows you all of the latter]  Congratulations, Bow Master.}{[There are secret techniques, and then there are long forgotten secret techniques.  He shows you all of the latter]  Congratulations, Bow Master.}{}{}{}{}
+{89}{A:}{}{1}{}{0}{} 
+
+{90}{How unfortunate, it appears that you lack the necessary requirements to become a Master. Perhaps if you improve and come back later?}{How unfortunate, it appears that you lack the necessary requirements to become a Master. Perhaps if you improve and come back later?}{}{}{}{}
+{99}{E:}{}{1}{}{0}{}
+
+{100}{If you seek to become a Melee Expert, the cost will be 200 coin.}{If you seek to become a Melee Expert, the cost will be 200 coin.}{}{}{}{}
+{101}{Here is the necessary coin.}{}{1}{$$200}{140}{$$-200, tr2 2}
+{109}{F:}{}{1}{}{0}{}
+
+{110}{A Melee Master becomes one with his weapon.  Only the most dedicated can receive this training.  It will cost you 300 coin.}{A Melee Master becomes one with her weapon.  Only the most dedicated can receive this training.  It will cost you 300 coin.}{}{}{}{}
+{111}{I've known for a long time that I was meant to be a Melee Master. [give him 300 coin]}{}{1}{$$300}{150}{$$-300, tr2 3}
+{119}{F:}{}{1}{}{1}{}
+
+{120}{A firearm is not a toy.  Be sure you are ready for this before we proceed.  The fee is 200 coin.}{A firearm is not a toy, my lady.  Be sure you are ready for this before we proceed.  The fee is 200 coin.}{}{}{}{}
+{121}{I'll be careful not to shoot my eye out. [give him 200 coin]}{}{1}{$$200}{160}{$$-200, tr13 2}
+{129}{F:}{}{1}{}{0}{}
+
+{130}{If you take on Master Firearms training from me, I expect nothing but your utmost focus and concentration.  My fee is 300 coin.}{If you take on Master Firearms training from me, I expect nothing but your utmost focus and concentration.  My fee is 300 coin.}{}{}{}{}
+{131}{[You take a deep breath and pat the holster of your gun.  Yes, you're definitely ready]  Here's your money. [give him 300 coin]}{}{1}{$$300}{170}{$$-300, tr13 3}
+{139}{F:}{}{1}{}{1}{}
+
+{140}{[You realize now you were holding your weapon like a novice all this time] You are truly a Melee Expert now.}{[You realize now you were holding your weapon like a novice all this time] You are truly a Melee Expert now.}{}{}{}{}
+{149}{A:}{}{1}{}{0}{}
+
+{150}{[Mastering the Melee weapon takes more focus than you ever imagined]  You are now one with your weapon.}{[Mastering the Melee weapon takes more focus than you ever imagined]  You are now one with your weapon.}{}{}{}{}
+{159}{A:}{}{1}{}{0}{} 
+
+{160}{[Wind velocity, distance, lighting - you realize now there is much more to firing a gun then you had previously accounted for] You are an expert at firearms, sir.}{[Wind velocity, distance, lighting - you realize now there is much more to firing a gun then you had previously accounted for] You are an expert at firearms, ma'am.}{}{}{}{}
+{169}{A:}{}{1}{}{0}{}
+
+{170}{I've truly never seen anyone as gifted with a firearm as yourself.  It has been an honor to train you as a Firearms Master. [He bows before you]}{I've truly never seen anyone as gifted with a firearm as yourself.  It has been an honor to train you as a Firearms Master. [He bows before you]}{}{}{}{}
+{179}{A:}{}{1}{}{0}{} 
+
+{180}{What level of training do you seek?}{What level of training do you seek?}{}{}{}{}
+{181}{T:0}{}{1}{}{30}{}
+{182}{Train me to be a Bow Expert.}{}{1}{tr0 -1}{1}{et0 50}
+{183}{Train me to be a Bow Master.}{}{1}{sk0 18, tr0 2, tr0 -2}{70}{}
+{184}{Train me to be a Bow Master.}{}{1}{tr0 -1}{90}{}
+{189}{F:}{}{1}{}{1}{}
+
+
+{190}{What level of training do you seek?}{What level of training do you seek?}{}{}{}{}
+{191}{T:2}{}{1}{}{30}{}
+{192}{Train me to be a Melee Expert.}{}{1}{tr2 -1}{1}{et2 100}
+{193}{Train me to be a Melee Master.}{}{1}{sk2 18, tr2 2, tr2 -2}{110}{}
+{194}{Train me to be a Melee Master.}{}{1}{tr2 -1}{90}{}
+{199}{F:}{}{1}{}{1}{}
+
+{200}{What level of training do you seek?}{What level of training do you seek?}{}{}{}{}
+{201}{T:13}{}{1}{}{30}{}
+{202}{Train me to be a Firearms Expert.}{}{1}{tr13 -1}{1}{et13 120}
+{203}{Train me to be a Firearms Master.}{}{1}{sk13 18, tr13 2, tr13 -2}{130}{}
+{204}{Train me to be a Firearms Master.}{}{1}{tr13 -1}{90}{}
+{209}{F:}{}{1}{}{1}{}
+
+{210}{Sorry, but I can't help you.  Here, take a biscuit and run along now.  [gives you a biscuit]}{Sorry, but I can't help you.  Here, take a biscuit and run along now.  [gives you a biscuit]}{}{}{}{}
+{211}{Yummy!}{}{-4}{}{0}{}
+
+{220}{Lord Doom would like to see you regarding a matter of the utmost urgency.}{Lord Doom would like to see you regarding a matter of the utmost urgency.}{}{}{}{}
+{221}{Very well.}{}{5}{}{1}{}
+{222}{Uh huh.}{}{-4}{}{1}{}

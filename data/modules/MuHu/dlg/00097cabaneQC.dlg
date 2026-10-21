@@ -1,0 +1,85 @@
+// [LABEL] HEY
+{1}{Que venez vous faire ici ? Qui êtes vous ?}{Que venez vous faire ici ? Qui êtes vous ?}{}{1}{}{}
+{2}{Je m'appelle @pcname@ et je visite la ville.}{}{1}{me0 }{21}{}
+{3}{Excusez moi je me suis trompé d'adresse....au revoir}{}{1}{me0 }{41}{}
+{4}{}{}{1}{qu1005 3}{281}{}
+{5}{Je reviens}{}{1}{qu1019 3}{}{}
+
+// [LABEL] présente
+{21}{D'accord, maintenant que je sais qui vous êtes, je peux vous traquer si vous faites le moindre faux pas avec moi. }{D'accord, maintenant que je sais qui vous êtes, je peux vous traquer si vous faites le moindre faux pas avec moi. }{}{2}{}{}
+{22}{Vous me faites peur, qu'est-ce que vous voulez dire ?}{}{1}{}{81}{}
+{23}{Eh oh , vous vous prenez pour qui ?}{}{1}{}{101}{}
+
+// [LABEL] Essaie de partir
+{41}{Non non, vous restez là, et vous me dites qui vous êtes tout de suite ! Vous ne pouvez pas vous être trompé d'adresse, arrêtez vos bobards.}{Non non, vous restez là, et vous me dites qui vous êtes tout de suite ! Vous ne pouvez pas vous être trompé d'adresse, arrêtez vos bobards.}{}{3}{}{}
+{42}{Ok je me présente, je suis @pcname@, je viste seulement la ville}{}{1}{}{21}{}
+{43}{Je ne vous connais pas, donc vous ne me connaitrez pas non plus ! Je dois partir maintenant.}{}{1}{}{61}{}
+
+// [LABEL] PARTIR
+{61}{NON !!!! J'ai dit de rester, tu restes ! Si tu te sauves, je te tue ! Et si tu arrives à m'échapper je te retrouverai et je te tuerai aussi ! C'est clair à présent ?}{NON !!!! J'ai dit de rester, tu restes ! Si tu te sauves, je te tue ! Et si tu arrives à m'échapper je te retrouverai et je te tuerai aussi ! C'est clair à présent ?}{}{4}{}{}
+{62}{Ok, calmez vous, je me présente, je suis @pcname@ je ne vous veux aucun mal}{}{1}{}{21}{}
+{63}{Non, c'est foncé, et je vais devoir vous égorgez puisque vous avez l'air si fort}{}{1}{}{}{co }
+
+// [LABEL] peur
+{81}{Je veux dire que si vous ne vouliez pas avoir peur il ne fallait pas venir ici. Je vous conseille de ne parler de moi à personne, sinon je serai obligé de vous supprimer, ainsi que tous ceux qui sont au courant.}{Je veux dire que si vous ne vouliez pas avoir peur il ne fallait pas venir ici. Je vous conseille de ne parler de moi à personne, sinon je serai obligé de vous supprimer, ainsi que tous ceux qui sont au courant.}{}{5}{}{}
+{82}{Au courant de quoi ? C'est vous qui me posez des questions, pour le moment, je ne sais rien de vous.}{}{1}{}{141}{}
+{83}{Je crois que vous devriez vous calmer. Faisons plus ample connaissance : qui êtes vous ?}{}{1}{}{121}{}
+{84}{Si tu te prends pour l'effaceur, c'est raté, parce que des comme toi j'en tue 2 par jour.}{}{1}{}{101}{}
+
+// [LABEL] Prend pour qui
+{101}{Et toi tu te prends pour qui ? Si tu continues à faire le malin je te fais une sépulture directe sous la neige à deux pas d'ici. Comme ça , ça t'irai ?}{Et toi tu te prends pour qui ? Si tu continues à faire le malin je te fais une sépulture directe sous la neige à deux pas d'ici. Comme ça , ça t'irai ?}{}{6}{}{}
+{102}{Oulà, euh....s'il vous plait calmez vous, et discutons : qui êtes vous ?}{}{1}{}{121}{}
+{103}{Ok tu fais le trou, je te mets dedans, pauvre minable.}{}{1}{}{}{co }
+
+// [LABEL] kichui
+{121}{Je suis quelqu'un que vous n'auriez jamais du venir voir aujourd'hui. Et je ne suis pas là pour rigoler, je n'ai pas à vous dire mon nom.}{Je suis quelqu'un que vous n'auriez jamais du venir voir aujourd'hui. Et je ne suis pas là pour rigoler, je n'ai pas à vous dire mon nom.}{}{7}{}{}
+{122}{Je vous ai dit mon nom, c'est à votre tour. Sinon c'est que vous manquez de courage, contrairement à moi.}{}{1}{}{161}{}
+{123}{Je n'insiste pas.}{}{1}{}{181}{}
+
+// [LABEL] sais rien
+{141}{Vous ne savez rien sur moi, et c'est tant mieux. Moins vous en saurez, mieux vous vous porterez. Si je vous fais une fleur en vous laissant partir, les autres se chargeraient de vous et vous forceraient à parler. La torture, je ne la souhaite à personne.}{Vous ne savez rien sur moi, et c'est tant mieux. Moins vous en saurez, mieux vous vous porterez. Si je vous fais une fleur en vous laissant partir, les autres se chargeraient de vous et vous forceraient à parler. La torture, je ne la souhaite à personne.}{}{8}{}{}
+{142}{Mais quels autres ? Qui ?}{}{1}{}{261}{}
+{143}{Je n'insiste pas, vous avez raison.}{}{1}{}{181}{}
+
+// [LABEL] INSISTE
+{161}{JE NE VOUS LE DIRAI PAS !!! Si vous me posez une nouvelle fois la question je serai forcé de vous tuer ! Est-ce que je me fais comprendre ?}{JE NE VOUS LE DIRAI PAS !!! Si vous me posez une nouvelle fois la question je serai forcé de vous tuer ! Est-ce que je me fais comprendre ?}{}{9}{}{}
+{162}{D'accord d'accord, j'ai eu tort, je ne vous veux pas de mal. Je n'insiste pas}{}{1}{}{181}{}
+{163}{Non, excusez moi je dois avoir un accès de folie mais j'ai tout à coup envie de vous tuer}{}{1}{}{}{co }
+
+// [LABEL] INSISTE PAS !
+{181}{Et vous faites bien de ne pas insister. Vous m'avez vu ici, ce qui est déjà trop ! A présent je dois savoir si je peux vous faire confiance pour ne le dire à personne.}{Et vous faites bien de ne pas insister. Vous m'avez vu ici, ce qui est déjà trop ! A présent je dois savoir si je peux vous faire confiance pour ne le dire à personne.}{}{10}{}{}
+{182}{Oui je suis honnête avec vous, ne vous inquiétez pas}{}{1}{}{201}{}
+{183}{Si vous ne m'aviez pas dit que c'était si important, j'aurai jamais parlé de vous à personne, je nee vous connais même pas}{}{1}{}{221}{}
+
+// [LABEL] Honnête
+{201}{Me dire ça serait trop facile. Il me faut une preuve de votre honnêteté.... je vais vous demander un service tout d'abord.}{Me dire ça serait trop facile. Il me faut une preuve de votre honnêteté.... je vais vous demander un service tout d'abord.}{}{11}{}{}
+{202}{Je vous écoute}{}{1}{}{241}{}
+{203}{J'imagine que je n'ai pas le choix}{}{1}{}{241}{}
+{204}{Non, c'est trop, vous exagérez, je préfère m'en aller. Et si vous ne voulez pas, je vous tue}{}{1}{}{}{co }
+
+// [LABEL] Important
+{221}{En effet, mais c'est très important, il faut que personne ne sache ma présence ici... }{En effet, mais c'est très important, il faut que personne ne sache ma présence ici... }{}{12}{}{}
+{222}{Comptez sur moi je serai honnête}{}{1}{}{201}{}
+{223}{Ne vous inquiétez pas, personne ne le saura, je vous aurai tué d'ici là}{}{1}{}{}{}
+
+// [LABEL] service
+{241}{Il faut que vous alliez dans le bar de Québec City, et que vous parliez à Terry Collins. Il devrait y être encore à cette heure ci. Adressez lui la parole et parlez lui de moi, lui seul a le droit d'avoir de mes nouvelles. ok ?}{Il faut que vous alliez dans le bar de Québec City, et que vous parliez à Terry Collins. Il devrait y être encore à cette heure ci. Adressez lui la parole et parlez lui de moi, lui seul a le droit d'avoir de mes nouvelles. ok ?}{}{13}{}{}
+{242}{D'accord je vais le voir. Je reviens dès que possible.}{}{1}{}{}{qu1019 2}
+
+// [LABEL] qui
+{261}{Arrêtez vos questions ! }{Arrêtez vos questions ! }{}{14}{}{}
+{262}{D'accord j'arrête}{}{1}{}{181}{}
+
+// [LABEL] parlé
+{281}{Ah, merci. Il a dit qu'il allait venir ?}{Ah, merci. Il a dit qu'il allait venir ?}{}{15}{}{}
+{282}{Non il m'a pas cru, il dit qu'il vous connait pas.}{}{1}{}{301}{}
+
+// [LABEL] conépo
+{301}{QUOI !?? Mais pourquoi ?  Vous lui avez dit qui j'étais au moins ?}{QUOI !?? Mais pourquoi ?  Vous lui avez dit qui j'étais au moins ?}{}{16}{}{}
+{302}{Ben je vous ai décrit, mais comme j'avais pas votre nom, il n'a pas pu savoir}{}{1}{}{321}{}
+
+// [LABEL] nom
+{321}{Euuuuuh....ah en effet j'avais oublié ce léger détail. Mais je ne dois pas vous dire mon nom, c'est ça le problème. Bon, vous allez retourner le voir et lui dire que...... Couli-couli veut lui parler. Il comprendra.}{Euuuuuh....ah en effet j'avais oublié ce léger détail. Mais je ne dois pas vous dire mon nom, c'est ça le problème. Bon, vous allez retourner le voir et lui dire que...... Couli-couli veut lui parler. Il comprendra.}{}{17}{}{}
+{322}{D'accord j'y vais}{}{1}{}{}{}
+{323}{Ah non j'en ai marre, je me tire}{}{1}{}{}{}
+

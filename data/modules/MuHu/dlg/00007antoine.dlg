@@ -1,0 +1,59 @@
+// [LABEL] 25
+{1}{qu'est-ce tu veux?}{qu'est-ce tu veux?}{}{1}{}{}
+{2}{Connaissez-vous une blague?}{}{1}{fo0 }{21}{}
+{3}{rien, desole de vous avoir derangé.}{}{1}{}{}{}
+{4}{Je suis d'accord pour parler à Anne Calandre.}{}{1}{qu1003 1}{161}{}
+{5}{Que dois-je faire déja?}{}{1}{qu1003 2}{121}{}
+{6}{J'ai parlé avec Anne Calandre.}{}{1}{qu1003 3}{181}{}
+{7}{Alors est-ce que tu as réussi à sortir avec Anne Calandre?}{}{1}{qu1003 4}{141}{}
+{8}{veux-tu te joindre à moi?}{}{1}{fo0 }{241}{jo 0 1201}
+{9}{Attend moi là.}{}{1}{14,fo1,wa0 }{261}{wa}
+{10}{C'est bon tu peux revenir.}{}{1}{wa1 }{281}{uw1 }
+{11}{B:}{}{1}{14,fo1}{}{}
+// [LABEL] 1
+{21}{c'est un mec qui rentre dans un cafe et plouf!}{c'est un mec qui rentre dans un cafe et plouf!}{}{2}{}{}
+{22}{tu connais une autre blague?}{}{1}{}{61}{}
+// [LABEL] NewPage0002
+{41}{C'est un mec qui rentre dans un cafe et plouf!}{C'est un mec qui rentre dans un cafe et plouf!}{}{3}{}{}
+{42}{tu en as d'autre non?}{}{1}{}{61}{}
+// [LABEL] NewPage0003
+{61}{C'est un camion qui transporte des trous. Il en perd un en route, il fait marche arriere pour le recuperer mais tombe dedans.}{C'est un camion qui transporte des trous. Il en perd un en route, il fait marche arriere pour le recuperer mais tombe dedans.}{}{4}{}{}
+{62}{As-tu d'autres blagues?}{}{1}{}{81}{}
+{63}{Je suis psy, tu peux me confier tes secrets.}{}{1}{qu1003 0}{101}{}
+{64}{Ok, à plus.}{}{1}{}{}{}
+// [LABEL] NewPage0005
+{81}{reviens plus tard.}{reviens plus tard.}{}{5}{}{}
+{82}{Ok}{}{1}{}{}{}
+// [LABEL] NewPage0006
+{101}{Tu connais Anne Calandre? Tu pourrais lui parler de moi?}{Tu connais Anne Calandre? Tu pourrais lui parler de moi?}{}{6}{}{qu1003 1}
+{102}{Non, ca me fait chier!}{}{1}{}{}{}
+{103}{D'accord!}{}{1}{}{161}{}
+// [LABEL] tudoisre
+{121}{Tu dois parler avec Anne Calandre pour savoir si elle veut bien sortir avec moi.}{Tu dois parler avec Anne Calandre pour savoir si elle veut bien sortir avec moi.}{}{7}{}{qu1003 2}
+{122}{Ok, je reviendrais quand je lui aurais parlé.}{}{1}{}{}{}
+// [LABEL] epilogue
+{141}{Je me suis inscrit sur la liste d'attente. J'espère que mon tour arrivera bientôt.}{Je me suis inscrit sur la liste d'attente. J'espère que mon tour arrivera bientôt.}{}{8}{}{}
+{142}{Je crois que tu peux attendre longtemps.}{}{1}{}{}{}
+{143}{Je vois, ne desespère pas. Salut.}{}{1}{}{}{}
+// [LABEL] super
+{161}{Super! Tu peux la trouver au bar inconnu. Essaye d'obtenir un rancard, je te revaudrais ca.}{Super! Tu peux la trouver au bar inconnu. Essaye d'obtenir un rancard, je te revaudrais ca.}{}{9}{}{qu1003 2}
+{162}{Je vais voir ce que je peux faire.}{}{1}{}{}{}
+// [LABEL] réussi
+{181}{Et qu'est-ce qu'elle a dit?}{Et qu'est-ce qu'elle a dit?}{}{10}{}{qu1003 4}
+{182}{Que tu es un pauv mec et qu'elle préferait se jeter par la fenêtre que sortir avec toi!}{}{1}{}{201}{}
+{183}{Il faut que tu t'inscrives sur la liste d'attente et que tu patiente environ une semaine.}{}{1}{}{221}{}
+// [LABEL] reussisuite
+{201}{Quoi ce n'est pas vrai! je n'ai plus de raison de vivre maintenant. Adieu.}{Quoi ce n'est pas vrai! je n'ai plus de raison de vivre maintenant. Adieu.}{}{11}{}{}
+{202}{Content de t'avoir connu.}{}{1}{}{}{nk }
+// [LABEL] reussibien
+{221}{Genial, je cours m'inscrire!}{Genial, je cours m'inscrire!}{}{12}{}{}
+{222}{Bye}{}{1}{}{}{}
+// [LABEL] joindre
+{241}{Ok}{Ok}{}{13}{}{}
+{242}{Allons-y!}{}{1}{}{}{}
+// [LABEL] attendre
+{261}{D'accord mais reviens vite.}{D'accord mais reviens vite.}{}{14}{}{}
+{262}{T'inquiete. A plus.}{}{1}{}{}{}
+// [LABEL] reviens
+{281}{Cool, allons-y!}{Cool, allons-y!}{}{15}{}{}
+{282}{Mouais mais t'excites pas trop quand même.}{}{1}{}{}{}

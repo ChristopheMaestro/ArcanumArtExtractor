@@ -1,0 +1,28 @@
+// This file contains parameters for AI packets in NPC's.
+// The numbers on each line have the following meaning:
+//	Given a line N with data D1 D2 D3 D4 D5...
+//	The values stand for:
+
+// ---- the first five are fleeing params
+//	D1:  percentage of NPC hit points below which NPC will flee
+//	D2:  number of people besides PC beyond which NPC will flee
+//	D3:  number of levels above NPC beyond which NPC will flee
+//	D4:  percentage of PC hit points below which NPC will never flee
+//	D5:  how far to flee, in tiles
+// ---- the next five are follow params
+//	D6:  the reaction level at which the NPC will not follow the PC
+//	D7:  how far PC align is above NPC align before NPC wont follow
+//	D8:  how far PC align is below NPC align before NPC wont follow
+//	D9:  how many levels the NPC can be above the PC and still join
+//	D10: how much an accidental hit will lower a follower's reaction
+// ---- the next two are kill-on-sight (KOS) params
+//	D11: NPC will attack if his reaction is below this
+//	D12: how different alignments can be before NPC attacks
+// ---- the next param controls spell use
+//	D13: chance of throwing defensive spell (as opposed to offensive)
+//	D14: chance of throwing a healing spell in combat
+	
+
+// Start your new packets at 100, and you can go up to 149
+
+{100}{0 1000 1000 101 1 20 1001 1000 2 0 0 1001 50 100}	// generic AI

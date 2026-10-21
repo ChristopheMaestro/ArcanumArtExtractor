@@ -1,0 +1,68 @@
+// [LABEL] debut
+{1}{Que voulez-vous?}{Que voulez-vous?}{}{1}{}{}
+{2}{J'aimerai en savoir plus sur la communauté des pauvres.}{}{1}{}{161}{}
+{3}{J'aimerai suivre un entrainement.}{}{1}{}{21}{}
+{4}{Rien au revoir.}{}{1}{}{}{}
+
+// [LABEL] entrainement
+{21}{En quoi?}{En quoi?}{}{2}{}{}
+{22}{Vol à la tire}{}{1}{}{41}{}
+{23}{Attaque sournoise.}{}{1}{}{81}{}
+{24}{Crochetage.}{}{1}{}{121}{}
+
+// [LABEL] coutvol
+{41}{Cela vous coutera 100 pieces.}{Cela vous coutera 100 pieces.}{}{3}{}{}
+{42}{Tres bien, ca marche.}{}{1}{sk5 1,$$100}{61}{$$-100,tr5 1}
+{43}{Très bien ca marche}{}{1}{sk5 -1}{241}{}
+{44}{Je n'ai pas assez sur moi, au revoir.}{}{1}{}{}{}
+{45}{C'est trop cher pour moi.}{}{1}{}{}{}
+
+// [LABEL] vol
+{61}{Shazam, vous voila apprenti.}{Shazam, vous voila apprenti.}{}{4}{}{}
+{62}{Merci au revoir.}{}{1}{}{}{}
+
+// [LABEL] coutdis
+{81}{Cela vous coutera 100 pièces.}{Cela vous coutera 100 pièces.}{}{5}{}{}
+{82}{Tres bien, ca marche}{}{1}{sk4 1,$$100 }{101}{$$-100,tr4 1}
+{83}{Très bien ca marche.}{}{1}{sk4 -1}{241}{}
+{84}{Je n'ai pas assez sur moi, au revoir.}{}{1}{}{}{}
+{85}{C'est trop cher pour moi.}{}{1}{}{}{}
+
+// [LABEL] dsi
+{101}{Shazam, vous voila apprenti.}{Shazam, vous voila apprenti.}{}{6}{}{}
+{102}{Merci au revoir.}{}{1}{}{}{}
+
+// [LABEL] coutcrch
+{121}{Cela vous coutera 100 pieces.}{Cela vous coutera 100 pieces.}{}{7}{}{}
+{122}{Tres bien ca marche.}{}{1}{sk14 1,$$100 }{141}{tr14 1,$$-100 }
+{123}{Très bien ca marche.}{}{1}{sk14 -1}{241}{}
+{124}{Je n'ai pas assez sur moi au revoir.}{}{1}{}{}{}
+{125}{C'est trop cher pour moi.}{}{1}{}{}{}
+
+// [LABEL] crochetazge
+{141}{Shazam vous voila apprenti.}{Shazam vous voila apprenti.}{}{8}{}{}
+{142}{Merci au revoir.}{}{1}{}{}{}
+
+// [LABEL] communaute des pauvres
+{161}{Les pauvres s'entraident et partagent toutes leurs dernières trouvailles. Si vous êtes bien qualifiez dans certains domaines, on vous confira des missions pour aider la communauté.}{Les pauvres s'entraident et partagent toutes leurs dernières trouvailles. Si vous êtes bien qualifiez dans certains domaines, on vous confira des missions pour aider la communauté.}{}{9}{}{}
+{162}{BIen, et à qui dois-je m'adresser pour les missions?}{}{1}{}{181}{}
+{163}{Pourquoi n'essayez-vous pas de trouver du boulot?}{}{1}{}{201}{}
+{164}{Merci pour l'info, au revoir.}{}{1}{}{}{}
+
+// [LABEL] s'adresser a
+{181}{Vous pouvez vous adresser à Tutu le caid.}{Vous pouvez vous adresser à Tutu le caid.}{}{10}{}{}
+{182}{Tres bien, je vais aller le voir.}{}{1}{}{}{}
+
+// [LABEL] du boulot
+{201}{Vous avez vu une ANPE quelque part?}{Vous avez vu une ANPE quelque part?}{}{11}{}{}
+{202}{Euh non.}{}{1}{}{221}{}
+
+// [LABEL] euh non
+{221}{Ben sans ANPE, ca va être dur de trouver du boulot.}{Ben sans ANPE, ca va être dur de trouver du boulot.}{}{12}{}{}
+{222}{Ah ok, bon ben au revoir.}{}{1}{}{}{}
+{223}{Et y a moyen de trouver du boulot quelque part dans la communauté?}{}{1}{}{181}{}
+
+// [LABEL] pas assez
+{241}{Reviens quand tu seras plus entrainé.}{Reviens quand tu seras plus entrainé.}{}{13}{}{}
+{242}{Très bien au revoir.}{}{1}{}{}{}
+

@@ -1,0 +1,12 @@
+// add global messages starting at 0. You can go up to 999
+
+{0}{1 = Log & Stump for tree 1 can appear}
+{1}{1 = Log & Stump for tree 2 can appear}
+{2}{1 = Log & Stump for tree 3 can appear}
+{3}{1 = Mayor of Grayhills is walking so we can't talk to him}
+
+// Beds available in Game. We don't use '0' because Counter 0 might be '0' to start off with?
+// Subtract '10' when you tie in a number to the 'counter 0' of the 'use' attachment point for the beds (ie. 11 becomes bed 1, 12 = 2, 13 = 3 etc...)
+// These are only used to check in dialog if the PC can rent a bed again or not.
+{11}{1 - PC has paid for POOR bed.}
+{12}{1 - PC has paid for GOOD bed.}

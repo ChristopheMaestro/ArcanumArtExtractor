@@ -1,0 +1,360 @@
+//
+// Scheme List file
+// 04/20/00
+//
+// See the SCHEMEINDEX.MES file that points into this file.
+//
+// SPECIFYING SOUND FILES:
+// ~~~~~~~~~~~~~~~~~~~~~~~
+//	Specify sound file with either .WAV or .MP3 extension
+//	SOON:  it will assume .WAV files
+//	SOON:  you can specify a sound file by #soundid# and it will look
+/		it up in the SND_*.MES file for you (as indexed by SND_00INDEX.MES).
+//
+// OPTIONS:
+// ~~~~~~~~
+// PARSE RULES:
+// ~~~~~~~~~~~~
+// 1. There sound's name or #Sound_ID must appear first
+// 2. Options must appear AFTER a single SPACE
+// 3. Options must have one space between each of them
+// 4. Options must have ZERO spaces within them (i.e.,:  /FREQ:50)
+// 5. See examples below
+// ACTUAL OPTIONS:
+// ~~~~~~~~~~~~~~~
+//	/LOOP - causes the sound to loop indefinitely (until that scheme is exited)
+//		(loop is exclusive of all other controls except VOL and TIME)
+//	/ANCHOR - this is a one-off song, play it immediately at the start of
+//		this scheme, do not continue playing it or anything.	
+//	/OVER - this is a one-off-song, and at its termination, it brings back
+//		the previously-playing scheme.
+//		WARNINGS:
+//			You can only have ONE /over type sound per scheme.  If you
+//			have multiple ones, the FIRST one that ends will cause the
+//			previous scheme to reload.
+//	/FREQ: - frequency of occurrence (0-100)             (default:  50)
+//			/FREQ:1			; very rare occurrence
+//			/FREQ:100		; very frequent occurrence
+//	/TIME: - range of times (in 24-hr units)             (default: 0-23 inclusive)
+//			/TIME:6-8		; from 6am to 8am
+//			/TIME:19-21		; from 7pm to 9pm
+//			/TIME:12		; only during the hour of noon
+//	/BAL:  - range of balance ((L)0-100(R))              (default:  50)
+//			/BAL:50			; always centered
+//			/BAL:30-70		; range from left to right a bit
+//			/BAL:0-100		; can scatter left/right anywhere
+//	/VOL:  - range of volume (0-100)                     (default: 100)
+//			/VOL:10-50		; ranges from pretty quiet to half-loud
+//			/VOL:80-100		; ranges from pretty loud to full volume
+//	/SCATTER: - range of scatter (sets /BAL and /VOL)    (default:  50)
+//			/SCATTER:0		; equivalent to:  /VOL:100 and /BAL:50 (this is default anyway)
+//			/SCATTER:50		; equivalent to:  /vol:50-100 and /BAL:25-75
+//			/SCATTER:100	; equivalent to:  /vol:50-100 and /BAL:0-100
+//			<programmer note: to change the above defaults, look for 
+//								"SCATTERCOMMAND" in SoundGame.C>
+//
+
+{0}{dummy - none}
+
+§§§ WILDERNESS (NICE) MUSIC §§§
+
+{100}{..\..\arcanum\sound\music\music\Wilderness.mp3 /loop /vol:50}
+
+       
+§§§ WILDERNESS (EVIL) MUSIC §§§
+
+{200}{..\..\arcanum\sound\music\music\Wilderness.mp3 /loop /vol:50}
+
+
+§§§ VILLAGE MUSIC §§§
+
+{300}{..\..\arcanum\sound\music\Villages.mp3 /loop /vol:50}
+
+
+§§§ TOWN MUSIC MUSIC §§§
+
+{400}{..\..\arcanum\sound\music\Towns.mp3 /loop /vol:50}
+
+
+
+§§§ CITY TARRANT MUSIC §§§
+
+{500}{..\..\arcanum\sound\music\Tarant.mp3 /loop /vol:50}
+
+
+
+§§§ CITY CALADON MUSIC §§§
+
+{600}{..\..\arcanum\sound\music\Caladon.mp3 /loop /vol:50}
+
+
+
+§§§ CITY DERHOLM MUSIC §§§
+
+{700}{..\..\arcanum\sound\music\Cities.mp3 /loop /vol:50}
+
+
+
+§§§ ELVEN MUSIC §§§
+
+{800}{..\..\arcanum\sound\music\Qintara.mp3 /loop /vol:50}
+
+
+
+§§§ DARK ELVEN MUSIC §§§
+
+{900}{..\..\arcanum\sound\music\Qintara.mp3 /loop /vol:50}
+
+
+
+§§§ DWARVEN MUSIC §§§
+
+{1000}{..\..\arcanum\sound\music\DwarvenMusic.mp3 /loop /vol:50}
+
+
+
+§§§ CHAMBER DARK 1 MUSIC §§§
+
+{1100}{..\..\arcanum\sound\music\Mines.mp3 /loop /vol:50}
+
+ 
+§§§ CHAMBER DARK 2 MUSIC §§§
+
+{1200}{..\..\arcanum\sound\music\Dungeons.mp3 /loop /vol:50}
+
+
+§§§ CHAMBER CHASE MUSIC §§§
+
+{1300}{..\..\arcanum\sound\music\Caladon_Catacombs.mp3 /loop /vol:50}
+
+
+§§§ DARK AMBIENT (HEAVY) MUSIC §§§
+
+{1400}{..\..\arcanum\sound\music\Void.mp3 /loop /vol:50}
+
+
+§§§ DARK AMBIENT (LIGHT) MUSIC §§§
+
+{1500}{..\..\arcanum\sound\music\Void.mp3 /loop /vol:50}
+
+
+§§§ CRASH SITE MUSIC §§§
+
+{1600}{..\..\arcanum\sound\music\Wilderness.mp3 /loop /vol:50}
+
+
+§§§ MIN'GOURAD'S LIAR MUSIC §§§
+
+{1700}{..\..\arcanum\sound\music\Void.mp3 /loop /vol:50}
+
+
+§§§ KREE MUSIC §§§
+
+{1800}{..\..\arcanum\sound\music\Isle_of_Despair.mp3 /loop /vol:50}
+
+
+§§§ TEMPLE OF THE DERIAN KA MUSIC §§§
+
+{1900}{..\..\arcanum\sound\music\Void.mp3 /loop /vol:50}
+
+
+§§§ THE DREDGE/IRON CLAN MUSIC §§§
+
+{2000}{..\..\arcanum\sound\music\Void.mp3 /loop /vol:50}
+
+
+§§§ THE VOID MUSIC §§§
+
+{2100}{..\..\arcanum\sound\music\Void.mp3 /loop}
+
+
+§§§ KERGHAN'S LIAR MUSIC §§§
+
+{2200}{..\..\arcanum\sound\music\Kerghan.mp3 /loop /vol:50}
+
+
+§§§ ISLE OF DESPAIR MUSIC §§§
+
+{2300}{..\..\arcanum\sound\music\Isle_of_Despair.mp3 /loop /vol:50}
+
+
+§§§ TULLA MUSIC §§§
+
+{2400}{..\..\arcanum\sound\music\Tulla.mp3 /loop /vol:50}
+
+
+RESERVED{2500}{..\..\arcanum\sound\music\Arcanum.mp3 /loop /vol:50}
+RESERVED{2600}{..\..\arcanum\sound\music\Arcanum.mp3 /loop /vol:50}
+RESERVED{2700}{..\..\arcanum\sound\music\Arcanum.mp3 /loop /vol:50}
+RESERVED{2800}{..\..\arcanum\sound\music\Arcanum.mp3 /loop /vol:50}
+RESERVED{2900}{}
+
+
+*** VILLAGE GENERAL ***
+
+{3000}{village_day.wav /loop}
+
+
+*** VILLAGE (ELVEN) ***
+
+{3100}{elf_village_day.wav /loop}
+
+
+*** VILLAGE (FARMING) ***
+
+{3200}{village_day.wav /loop}
+
+
+*** CITY ***
+
+{3300}{city_day.wav /loop}
+
+
+*** BAD PART OF TOWN ***
+
+{3400}{city_night.wav /loop}
+
+
+*** BUSY INTERIOR ***
+
+{3500}{pub_slow.wav /loop}
+
+
+*** MINE (ACTIVE) ***
+
+{3600}{mine_active.wav /loop}
+
+
+*** MINE (DESERTED) ***
+
+{3700}{mine_deserted.wav /loop}
+{3701}{DRIP1.WAV /bal:1-100 /vol:10-20 /freq:10}
+{3702}{DRIP2.WAV /bal:1-100 /vol:10-20 /freq:10}
+{3703}{DRIP3.WAV /bal:1-100 /vol:10-20 /freq:10}
+{3704}{DRIP4.WAV /bal:1-100 /vol:10-20 /freq:10}
+{3705}{DRIP5.WAV /bal:1-100 /vol:10-20 /freq:10}
+{3706}{DRIP6.WAV /bal:1-100 /vol:10-20 /freq:10}
+{3707}{ambient-howl01.wav /vol:10 /bal:1-100 /freq:5}
+
+
+*** DUNGEON (BUSTLING) ***
+
+{3800}{mine_deserted.wav /loop}
+
+
+*** DUNGEON (DEAD) ***
+
+{3900}{mine_deserted.wav /loop}
+
+
+*** FOREST ***
+
+// Day Time
+{4000}{birds1.wav /scatter:100 /time:5-20 /freq:15}
+{4001}{birds2.wav /scatter:100 /time:6-19 /freq:15}
+{4002}{birds3.wav /scatter:100 /time:7-18 /freq:15}
+{4003}{birds4.wav /scatter:100 /time:8-17 /freq:15}
+{4004}{birds5.wav /scatter:100 /time:9-16 /freq:15}
+{4005}{birds6.wav /scatter:100 /time:9-16 /freq:15}
+{4006}{birds7.wav /scatter:100 /time:9-16 /freq:15}
+{4007}{ambient-growl.wav /scatter:100 /freq:10}
+{4008}{ambient-howl01.wav /scatter:100 /freq:10}
+{4009}{ambient-howl02.wav /scatter:100 /freq:10}
+{4010}{ambient-howl01.wav /scatter:100 /freq:10 /time:21-23}
+{4011}{ambient-howl02.wav /scatter:100 /freq:10 /time:0-2}
+
+// Night Time
+{4012}{ambient-loop-crickets.wav /scatter:100 /time:19-23 /freq:80}
+{4013}{ambient-loop-crickets.wav /scatter:100 /time:19-23 /freq:80}
+{4014}{ambient-loop-crickets.wav /scatter:100 /time:0-6 /freq:80}
+{4015}{ambient-loop-crickets.wav /scatter:100 /time:0-6 /freq:80}
+{4016}{ambient-rooster-crow.wav /scatter:100 /freq:30 /time:6-8}
+{4017}{ambient-bird-hoot.wav /time:0-6 /freq:10}
+{4018}{ambient-bird-hoot.wav /time:19-23 /freq:10}   
+
+
+*** MOORS ***
+
+{4100}{highlands.wav /loop}
+
+
+*** ELVEN FOREST ***
+
+{4200}{dark_forest_day.wav /loop}
+
+
+*** WASTES ***
+
+{4300}{wastland_day.wav}
+
+
+*** PLAINS ***
+
+{4400}{grasslands_day.wav /loop}
+
+
+*** SWAMPS ***
+
+{4500}{swamp_day.wav /loop}
+
+
+*** SNOW ***
+
+{4600}{highlands.wav /loop}
+
+
+*** JUNGLE ***
+
+{4700}{dark_forest_night.wav /loop}
+
+
+*** SHORELINE ***
+
+{4800}{lakeside_day.wav /loop}
+
+
+*** CRASH SITE ***
+
+// Day Time
+{4900}{birds1.wav /scatter:100 /time:5-20 /freq:15}
+{4901}{birds2.wav /scatter:100 /time:6-19 /freq:15}
+{4902}{birds3.wav /scatter:100 /time:7-18 /freq:15}
+{4903}{birds4.wav /scatter:100 /time:8-17 /freq:15}
+{4904}{birds5.wav /scatter:100 /time:9-16 /freq:15}
+{4905}{birds6.wav /scatter:100 /time:9-16 /freq:15}
+{4906}{birds7.wav /scatter:100 /time:9-16 /freq:15}
+{4907}{ambient-growl.wav /scatter:100 /freq:10}
+{4908}{ambient-howl01.wav /scatter:100 /freq:10}
+{4909}{ambient-howl02.wav /scatter:100 /freq:10}
+{4910}{ambient-howl01.wav /scatter:100 /freq:10 /time:21-23}
+{4911}{ambient-howl02.wav /scatter:100 /freq:10 /time:0-2}
+
+
+// Night Time
+{4912}{ambient-loop-crickets.wav /scatter:100 /time:19-23 /freq:80}
+{4913}{ambient-loop-crickets.wav /scatter:100 /time:19-23 /freq:80}
+{4914}{ambient-loop-crickets.wav /scatter:100 /time:0-6 /freq:80}
+{4915}{ambient-loop-crickets.wav /scatter:100 /time:0-6 /freq:80}
+{4916}{ambient-rooster-crow.wav /scatter:100 /freq:30 /time:6-8}
+{4917}{ambient-bird-hoot.wav /time:0-6 /freq:10}
+{4918}{ambient-bird-hoot.wav /time:19-23 /freq:10}                              
+
+
+*** MINES W/ WOLVES ***
+
+{5000}{mine_deserted.wav /loop}
+{5001}{DRIP1.WAV /bal:1-100 /vol:10-20 /freq:10}
+{5002}{DRIP2.WAV /bal:1-100 /vol:10-20 /freq:10}
+{5003}{DRIP3.WAV /bal:1-100 /vol:10-20 /freq:10}
+{5004}{DRIP4.WAV /bal:1-100 /vol:10-20 /freq:10}
+{5005}{DRIP5.WAV /bal:1-100 /vol:10-20 /freq:10}
+{5006}{DRIP6.WAV /bal:1-100 /vol:10-20 /freq:10}
+{5007}{ambient-growl.wav /scatter:100 /freq:5}
+{5008}{ambient-howl01.wav /scatter:100 /freq:5}
+{5009}{ambient-howl02.wav /scatter:100 /freq:5}
+
+
+*** OceanShore ***
+
+{5100}{seashore_day.wav /loop}
+

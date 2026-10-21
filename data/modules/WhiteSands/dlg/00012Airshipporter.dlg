@@ -1,0 +1,68 @@
+{1}{What can I do for you?}{What can I do for you?}{}{}{}{}
+{2}{What do you do here?}{}{5}{}{10}{}
+{3}{What you be doing mister?}{}{-4}{}{10}{}
+{4}{Can I catch a flight?}{}{5}{}{100}{}
+{5}{Me want get air ride.}{}{-4}{}{100}{}
+{6}{E:}{}{1}{}{0}{}
+
+
+{10}{My name is Jonah, and I'm the air porter. I facilitate flights, landings, baggage transfers, and I give advice to new arrivals, like yourself, sir. Welcome to Newberg.}{My name is Jonah, and I'm the air porter. I facilitate flights, landings, baggage transfers, and I give advice to new arrivals, like yourself, ma'am. Welcome to Newberg.}{}{}{}{}
+{11}{Thank you Jonah. Where may I find my luggage? [Persuade him.]}{}{5}{gf11 0, ps 4}{20}{gf11 1}
+{12}{Thank you Jonah. Where may I find my luggage? [Bullshit him.]}{}{12}{gf11 0, ps -4}{20}{gf11 1}
+{13}{Thank you Jonah. Where may I find my luggage? [Bullshit him.]}{}{5}{gf11 0, ps -4}{50}{gf11 1}
+{15}{Wut advice you gots for me?}{}{-4}{}{60}{}
+{16}{Have you got any advice for me?}{}{5}{}{60}{}
+{17}{F:}{}{1}{}{1}{}
+
+
+{20}{Sir, we received no luggage with your arrival. Did you truly have luggage that did not arrive as scheduled?}{Ma'am, we received no luggage with your arrival. Did you truly have luggage that did not arrive as scheduled?}{}{}{}{}
+{21}{Yes indeed... I had my dead mother's Wedding ring in there. I was to give it my fiancee...}{}{5}{ps 4}{-6}{}
+{22}{Yes indeed... I had my dead mother's Wedding ring in there. I was to give it my fiancee...}{}{5}{ps -3}{45}{}
+{23}{Yes indeed... I had my coin pouch and all of my cash in it. 80 coin in all.}{}{5}{}{-2}{}
+{24}{Yes indeed... I had 10 gold bricks in a trunk! My father's lost fortune!}{}{5}{ps 8}{-10}{}
+{25}{Yes indeed... I had 10 gold bricks in a trunk! My father's lost fortune!}{}{5}{ps -7}{45}{}
+
+
+{30}{Oh my dear sir! Please, accept my apologies and reimbursement of your coin. [Counts you out 80 coin.]}{Oh my dear ma'am! Please, accept my apologies and reimbursement of your coin. [Counts you out 80 coin.]}{}{}{}{}
+{31}{Thanks!}{}{5}{}{0}{}
+{32}{Ya, bye bye.}{}{-4}{}{0}{}
+
+
+{35}{Oh my dear sir! Please, accept my apologies and reimbursement of your coin. [Counts you out 150 coin.]}{Oh my dear ma'am! Please, accept my apologies and reimbursement of your coin. [Counts you out 150 coin.]}{}{}{}{}
+{36}{Thanks!}{}{5}{}{0}{}
+{37}{Ya, bye bye.}{}{-4}{}{0}{}
+
+
+{40}{[He looks shocked.] Sir, we can only reimburse you for up to 300 coin, im afraid... but please, take the 300 with my sincerest apologies.}{He looks shocked.] Ma'am, we can only reimburse you for up to 300 coin, im afraid... but please, take the 300 with my sincerest apologies.}{}{}{}{}
+{41}{Thanks!}{}{5}{}{0}{}
+{42}{Ya, bye bye.}{}{-4}{}{0}{}
+
+
+{45}{[His face grows stony.] Sir, I do not appreciate being hustled. Now do us both a favor and leave.}{[His face grows stony.] Ma'am, I do not appreciate being hustled. Now do us both a favor and leave.}{}{}{}{}
+{46}{I'm afraid you need to die.}{}{5}{}{}{co}
+{47}{Bye.}{}{1}{}{0}{}
+
+{50}{I'm sorry sir, we received no luggage.}{I'm sorry ma'am, we received no luggage.}{}{}{}{}
+{51}{Bye.}{}{1}{}{1}{}
+
+{60}{Advice? Well, there's plenty to do in this town. Try talking to Aloran for some of the local trivia. He's right inside the Meeting Hall to the west.}{Advice? Well, there's plenty to do in this town. Try talking to Aloran for some of the local trivia. He's right inside the Meeting Hall to the west.}{}{}{}{}
+{61}{Thanks.}{}{1}{}{1}{}
+
+
+{100}{I'm sorry sir, but the flights come very rarely. Usually only when chartered by a noble. It could be months before we have another landing. Feel free to check back later, though.}{I'm sorry ma'am, but the flights come very rarely. Usually only when chartered by a noble. It could be months before we have another landing. Feel free to check back later, though.}{}{}{}{}
+{101}{Ok. Bye.}{}{1}{}{1}{}
+
+{110}{Sir! Welcome to the fair township of Newberg. I am Jonah, the Air Porter of Newberg. You must be tired after your long flight. Pardon my asking, but you've come after that Man in Black, the one who calls himself Walter, right?}{My lady! Welcome to the fair township of Newberg. I am Jonah, the Air Porter of Newberg. You must be tired after your long flight. Pardon my asking, but you've come after that Man in Black, the one who calls himself Walter, right?}{}{}{}{}
+{111}{As a matter of fact, yes, I have come seeking the Man in Black. Would you happen to know his wherebouts?}{}{5}{}{120}{gf10 1, qu 1000 2}
+{112}{Uhhhh... ya, me need to find Wallturr. Where he be?}{}{-4}{}{120}{gf10 1, qu 1000 2}
+{113}{Maybe that is who I seek, maybe it's not. Do you know what I am to do in this wretched burg, fool?}{}{5}{}{130}{gf10 1, qu 1000 2, re -5}
+{114}{You boring. Where me go now?}{}{-4}{}{120}{gf10 1, qu 1000 2, re -5}
+{115}{I'd like to talk to you about something else...}{}{5}{}{1}{gf10 1, qu 1000 2}
+{116}{We tokk about sumthin else...}{}{-4}{}{1}{gf10 1, qu 1000 2}
+{117}{E:}{}{1}{}{0}{gf10 1, qu 1000 2}
+
+{120}{Truthfully, I don't know. The Liaison to Gilead awaits you in the City hall to the west. I'd suggest you pursue your answers there.}{Truthfully, I don't know. The Liaison to Gilead awaits you in the City hall to the west. I'd suggest you pursue your answers there.}{}{}{}{}
+{121}{F:}{}{1}{}{1}{}
+
+{130}{[He glares at you.] Receiving abuse is not my job, sir. I'd suggest you speak with the Liaison in the City Hall, to the west. Good day.}{He glares at you.] Receiving abuse is not my job, sir. I'd suggest you speak with the Liaison in the City Hall, to the west. Good day.}{}{}{}{}
+{131}{E:}{}{1}{}{0}{}

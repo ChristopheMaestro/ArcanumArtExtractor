@@ -1,0 +1,102 @@
+{1}{G:}{}{}{}{}{}
+{2}{Bonjour, @npcname@.}{}{1}{me1}{6}{}
+{3}{W:}{}{1}{me0 }{4}{}
+{4}{Je suis Raimbo IX, Capitaine de la Garde des Zils. A qui ai-je l'honneur ?}{}{}{}{}{}
+{5}{Je me nomme Toto, un simple voyageur.}{}{1}{}{6}{}
+{6}{Que puis-pour vous ?}{}{}{}{}{}
+{7}{R: $0, 1001-1010}{}{1}{}{6}{}
+{8}{B:}{}{1}{}{6}{}
+{9}{T:0, 1, 2, 3}{}{1}{}{6}{}
+{10}{[suite]}{}{1}{}{12}{}
+{11}{E:}{}{1}{}{}{}
+{12}{Je vous écoute.}{}{}{}{}{}
+{13}{Je serais plutôt intéressé par l'expertise.}{}{1}{}{21}{}
+{14}{J'aimerais accéder au rang de Maître.}{}{1}{}{73}{}
+{15}{Avez-vous une mission à me confier ?}{}{1}{qu1002 0}{51}{}
+{16}{J'accepte de vous débarrasser des ces espions.}{}{1}{qu1002 1}{55}{qu1002 2}
+{17}{A propos des espions.}{}{1}{qa1002 2,qb1002 3}{57}{}
+{18}{La Route du Port au Centre est dégagé.}{}{1}{qu1014 3}{71}{}
+{19}{Vous aviez une autre mission à me confier ?}{}{1}{qa1002 4,qb1014 1}{69}{}
+{20}{[retour]}{}{1}{}{6}{}
+{21}{Voulez-vous devenir expert à l'arc, en esquive, au corps à corps ou au lancer.}{}{}{}{}{}
+{22}{Pouvez-vous m'aider à atteindre le grade d'expert à l'arc, monsieur ?}{}{5}{tr0 -1}{21}{et0 27}
+{23}{Pouvez-vous m'aider à atteindre le grade d'expert en esquive, monsieur ?}{}{5}{tr1 -1}{21}{et1 33}
+{24}{Pouvez-vous m'aider à atteindre le grade d'expert coprs à corps, monsieur ?}{}{5}{tr2 -1}{21}{et2 39}
+{25}{Pouvez-vous m'aider à atteindre le grade d'expert en lancer, monsieur ?}{}{5}{tr3 -1}{21}{et3 45}
+{26}{J'ai changé d'avis, parlons d'autre chose.}{}{1}{}{6}{}
+{27}{Je veux bien vous aider à devenir expert à l'arc pour 400 pièces d'or.}{}{}{}{}{}
+{28}{Tenez, c'est un bon investissement.}{}{1}{$$400 }{31}{}
+{29}{Certe je les ai mais je dois faire des emplêtes plus urgentes. A plus tard.}{}{1}{}{6}{}
+{30}{Désolé, je suis à court. A plus tard.}{}{1}{$$-399 }{6}{}
+{31}{Merci beaucoup, @pcname@. [Il vous explique comment viser et évaluer les distances, vous montre la meilleure façon de vous tenir et commente les quelques tirs que vous effectuez devant son oeil critique.] Voilà, vous savez tout. Vous êtes désormais expert à l'arc.}{}{}{}{}{}
+{32}{Merci, beaucoup. Puis-je vous demander autre chose.}{}{1}{}{6}{tr0 2,$$-400 }
+{33}{Je veux bien vous aider à devenir expert en esquive pour 400 pièces d'or.}{}{}{}{}{}
+{34}{Tenez, c'est un bon investissement.}{}{1}{$$400 }{37}{}
+{35}{Certe je les ai mais je dois faire des emplêtes plus urgentes. A plus tard.}{}{1}{}{6}{}
+{36}{Désolé, je suis à court. A plus tard.}{}{1}{$$-399 }{6}{}
+{37}{Merci beaucoup, @pcname@. [Il vous explique comment viser et évaluer les distances, vous montre la meilleure façon de vous tenir et commente les quelques lancers que vous effectuez devant son oeil critique.] Voilà, vous savez tout. Vous êtes désormais expert en lancer.}{}{}{}{}{}
+{38}{Merci, beaucoup. Puis-je vous demander autre chose.}{}{1}{}{6}{tr1 2,$$-400 }
+{39}{Je veux bien vous aider à devenir expert au corps à corps pour 400 pièces d'or.}{}{}{}{}{}
+{40}{Tenez, c'est un bon investissement.}{}{1}{$$400 }{43}{}
+{41}{Certe je les ai mais je dois faire des emplêtes plus urgentes. A plus tard.}{}{1}{}{6}{}
+{42}{Désolé, je suis à court. A plus tard.}{}{1}{$$-399 }{6}{}
+{43}{Merci beaucoup, @pcname@. Vous êtes désormais expert au corps à corps.}{}{}{}{}{}
+{44}{Merci, beaucoup. Puis-je vous demander autre chose.}{}{1}{}{6}{tr2 2,$$-400 }
+{45}{Je veux bien vous aider à devenir expert au lancer pour 400 pièces d'or.}{}{}{}{}{}
+{46}{Tenez, c'est un bon investissement.}{}{1}{$$400 }{49}{}
+{47}{Certe je les ai mais je dois faire des emplêtes plus urgentes. A plus tard.}{}{1}{}{6}{}
+{48}{Désolé, je suis à court. A plus tard.}{}{1}{$$-399 }{6}{}
+{49}{Merci beaucoup, @pcname@. [Il vous explique comment viser et évaluer les distances, vous montre la meilleure façon de vous tenir et commente les quelques lancers que vous effectuez devant son oeil critique.] Voilà, vous savez tout. Vous êtes désormais expert en lancer.}{}{}{}{}{}
+{50}{Merci, beaucoup. Puis-je vous demander autre chose.}{}{1}{}{6}{tr3 2,$$-400 }
+{51}{L'ennemi a des yeux partout. Débarrassez-moi des yeux du nord (au bout du Front de Mer), du nord-est (au bout du chemin des champs) et de l'est (au bout de l'avenue du Port). La récompense sera à la hauteur de la tache.}{}{}{}{}{}
+{52}{J'accepte volontier Monsieur.}{}{1}{}{55}{qu1002 2,al+50 ,gv1 1}
+{53}{Désolé, je tiens à ma peau}{}{1}{}{6}{al-50 ,qu1002 1}
+{54}{J'accepterais avec joie, mais je ne suis pas encore assez expérimenté.}{}{1}{}{6}{qu1002 1}
+{55}{Allez voir Nabot à la taverne. Il acceptera de vous aider. Il n'est pas très expérimenté, mais il a un bon potentiel, il apprendra vite. Maintenant que vous avez accepté une mission pour la défense du Port, ses habitants vous proposeront plus souvent du travail. Reparlez-leur. Surtout les commerçants, avec l'invasion, ils n'osent quitter leurs boutiques.}{}{}{}{}{}
+{56}{Autre chose avant d'y aller.}{}{1}{}{6}{}
+{57}{Alors avez-vous tué les espions ?}{}{}{}{}{}
+{58}{Non, il me reste les espions du nord.}{}{1}{gf1 0}{6}{}
+{59}{Non, il me reste les espions du nord-est.}{}{1}{gf2 0}{6}{}
+{60}{Non, il me reste les espions de l'est.}{}{1}{gf3 0}{6}{}
+{61}{Franchement, cette mission est trop difficile.}{}{1}{qb1002 2}{66}{}
+{62}{Oui, j'ai tué tous les espions.}{}{1}{gf1 1,gf2 1,gf3 1}{64}{qu1002 4}
+{63}{Changeons de sujet.}{}{1}{}{6}{}
+{64}{Félicitation, grâce à cette action d'éclat votre charisme à augmenté de 2 points. Reparlez-moi plus tard pour une autre mission.}{}{}{}{}{}
+{65}{Je vous remercie beaucoup.}{}{1}{}{-2}{rp1002 }
+{66}{Je peux vous donnez la clé de ma maison. Vous y trouverez de l'équipement. Mais ATTENTION, çà va se savoir. Par conséquent, vous perdrez 2 points de charisme. Acceptez-vous ?}{}{}{}{}{}
+{67}{Oui, je prends la clé car je ne vois pas comment faire autrement.}{}{1}{}{-5}{in-4602 }
+{68}{Deux points de charisme ! Non, je vais essayer de me débrouiller autrement.}{}{1}{}{6}{}
+{69}{Il s'agirait dégager la route du Port au Centre. Attention, tous ceux qui ont essayé ne sont jamais revenus.}{}{}{}{}{}
+{70}{Je vais voir ce que je peux faire.}{}{1}{}{}{qu1014 2}
+{71}{Bravo, toute l'île le saura, je m'en charge. Votre réputation grandissant, vous avez acquis un point de charisme. Puis, lorsque vous irez au Centre, parlez au Gouverneur.}{}{}{}{}{}
+{72}{Merci, cela me rendra bien service.}{}{1}{}{-8}{qu1014 4,rp1004 }
+{73}{Voulez-vous accéder au rang de maître à l'arc, en esquive, au corps à corps ou au lancer.}{}{}{}{}{}
+{74}{Pouvez-vous m'aider à atteindre le rang de maître à l'arc, monsieur ?}{}{5}{sk0 18}{21}{et0 79}
+{75}{Pouvez-vous m'aider à atteindre le rang de maître en esquive, monsieur ?}{}{5}{sk1 18}{21}{et1 85}
+{76}{Pouvez-vous m'aider à atteindre le rang de maître coprs à corps, monsieur ?}{}{5}{sk2 18}{21}{et2 91}
+{77}{Pouvez-vous m'aider à atteindre le rang de maître en lancer, monsieur ?}{}{5}{sk3 18}{21}{et3 97}
+{78}{F:}{}{1}{}{6}{}
+{79}{Je veux bien vous aider à devenir maître à l'arc pour 2000 pièces d'or.}{}{}{}{}{}
+{80}{Tenez, c'est un bon investissement.}{}{1}{$$2000 }{83}{}
+{81}{Certe je les ai mais je dois faire des emplêtes plus urgentes. A plus tard.}{}{1}{}{6}{}
+{82}{Désolé, je suis à court. A plus tard.}{}{1}{$$-1999 }{6}{}
+{83}{Merci beaucoup, @pcname@. [Il vous explique comment viser et évaluer les distances, vous montre la meilleure façon de vous tenir et commente les quelques tirs que vous effectuez devant son oeil critique. Il corrige votre position et vous montre comment mieux viser. Il vous apprend quelques nouvelles techniques pour améliorer votre tir] Voilà, vous savez tout. Vous êtes désormais expert à l'arc.}{}{}{}{}{}
+{84}{Merci, beaucoup. Puis-je vous demander autre chose.}{}{1}{}{6}{tr0 3,$$-2000 }
+{85}{Je veux bien vous aider à devenir maître au esquive pour 2000 pièces d'or.}{}{}{}{}{}
+{86}{Certe je les ai mais je dois faire des emplêtes plus urgentes. A plus tard.}{}{1}{}{6}{}
+{87}{Tenez, c'est un bon investissement.}{}{1}{$$2000 }{89}{}
+{88}{Désolé, je suis à court. A plus tard.}{}{1}{$$-1999 }{6}{}
+{89}{Merci beaucoup, @pcname@. [Il vous enseigne son art]. Voilà, vous savez tout.  Vous êtes désormais expert en lancer.}{}{}{}{}{}
+{90}{Merci, beaucoup. Puis-je vous demander autre chose.}{}{1}{}{6}{tr1 3,$$-2000 }
+{91}{Je veux bien vous aider à devenir maître au corps à corps pour 2000 pièces d'or.}{}{}{}{}{}
+{92}{Tenez, c'est un bon investissement.}{}{1}{$$2000 }{83}{}
+{93}{Certe je les ai mais je dois faire des emplêtes plus urgentes. A plus tard.}{}{1}{}{6}{}
+{94}{Désolé, je suis à court. A plus tard.}{}{1}{$$-1999 }{6}{}
+{95}{Merci beaucoup, @pcname@. Vous êtes désormais maître au corps à corps.}{}{}{}{}{}
+{96}{Merci, beaucoup. Puis-je vous demander autre chose.}{}{1}{}{6}{tr2 3,$$-2000 }
+{97}{Je veux bien vous aider à devenir maître au lancer pour 2000 pièces d'or.}{}{}{}{}{}
+{98}{Tenez, c'est un bon investissement.}{}{1}{$$2000 }{101}{}
+{99}{Certe je les ai mais je dois faire des emplêtes plus urgentes. A plus tard.}{}{1}{}{6}{}
+{100}{Désolé, je suis à court. A plus tard.}{}{1}{$$-1999 }{6}{}
+{101}{Merci beaucoup, @pcname@. [Il vous explique comment viser et évaluer les distances, vous montre la meilleure façon de vous tenir et commente les quelques tirs que vous effectuez devant son oeil critique. Il corrige votre position et vous montre comment mieux viser. Il vous apprend quelques nouvelles techniques pour améliorer votre tir]. Voilà, vous savez tout. Vous êtes désormais expert en lancer.}{}{}{}{}{}
+{102}{Merci, beaucoup. Puis-je vous demander autre chose.}{}{1}{}{6}{tr3 3,$$-2000 }

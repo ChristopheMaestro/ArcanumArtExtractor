@@ -1,0 +1,306 @@
+{1}{Excuse me sir. Are you the brave and fearless adventurer that is here to save our town from the Mummy?}{Excuse me ma'am. Are you the brave and fearless adventurer that is here to save our town from the Mummy?}{}{}{}{}
+{2}{Why yes, I am the brave and fearless adventurer!}{}{5}{ra 1}{25}{} // Human
+{3}{Why yes, I am the brave and fearless adventurer!}{}{5}{ra 2}{25}{} // Dwarf
+{4}{Why yes, I am the brave and fearless adventurer!}{}{5}{ra 3}{25}{} // Elf
+{5}{Why yes, I am the brave and fearless adventurer!}{}{5}{ra 4}{25}{} // Half-Elf
+{6}{Why yes, I am the brave and fearless adventurer!}{}{5}{ra 5}{90}{} // Gnome
+{7}{Why yes, I am the brave and fearless adventurer!}{}{5}{ra 6}{25}{} // Halfling
+{8}{Why yes, I am the brave and fearless adventurer!}{}{5}{ra 7}{60}{} // Half-Orc
+{9}{Why yes, I am the brave and fearless adventurer!}{}{5}{ra 8}{25}{} // Half-Ogre
+{10}{Duh-uh! Me brayve and feer-less!}{}{-4}{ra 1}{25}{} // Human
+{11}{Duh-uh! Me brayve and feer-less!}{}{-4}{ra 2}{25}{} // Dwarf
+{12}{Duh-uh! Me brayve and feer-less!}{}{-4}{ra 3}{25}{} // Elf
+{13}{Duh-uh! Me brayve and feer-less!}{}{-4}{ra 4}{25}{} // Half-Elf
+{14}{Duh-uh! Me brayve and feer-less!}{}{-4}{ra 5}{90}{} // Gnome
+{15}{Duh-uh! Me brayve and feer-less!}{}{-4}{ra 6}{25}{} // Halfling
+{16}{Duh-uh! Me brayve and feer-less!}{}{-4}{ra 7}{60}{} // Half-Orc
+{17}{Duh-uh! Me brayve and feer-less!}{}{-4}{ra 8}{25}{} // Half-Ogre
+{18}{Mu... Mu... Mummy? No one told me about a Mummy!}{}{5}{}{110}{}
+{19}{Mu... Mu... Mummy? No won tell me 'bout Mummy!}{}{-4}{}{110}{}
+{20}{Errr... No.... No. That's errr.. Someone else...}{}{5}{}{145}{}
+{21}{Uhhh.... No. Dat's ummm.. Dat not be me...}{}{-4}{}{145}{}
+
+{25}{Oh how wonderful! I have been expecting you. My name is Charles Gray III, Mayor of Grayhills. Descendant of the founding father of Grayhills, Mr Charles Gray [He puffs his chest out as he says this].}{Oh how wonderful! I had been told to expect a woman. I must say, female adventurers certainly are rare! I am indeed glad to meet one! My name is Charles Gray III, Mayor of Grayhills. Descendant of the founding father of Grayhills, Mr Charles Gray [He puffs his chest out as he says this].}{}{}{}{}
+{26}{It is a pleasure to meet you. I am @pcname@.}{}{5}{}{30}{re +5}
+{27}{That's nice. I'm @pcname@.}{}{5}{}{30}{re -5}
+{28}{Me be 'appy to meet yoo. Me be @pcname@.}{}{-4}{}{30}{re +5}
+{29}{Uhhh.. Me be @pcname@.}{}{-4}{}{30}{re -5}
+
+{30}{Well then, welcome to Grayhills @pcname@. As I'm sure you already know, the Mummy has been terrorising our town for several months now. We really do need your help. My people can't sleep at night for worry! All we need is for you to go up into the dark caves outside of town and deal with this threat.}{Well then, welcome to Grayhills @pcname@. As I'm sure you already know, the Mummy has been terrorising our town for several months now. We really do need your help. My people can't sleep at night for worry! All we need is for you to go up into the dark caves outside of town and deal with this threat.}{}{}{}{qu1000 1}
+{31}{That's no problem! It is what I'm here for after all!}{}{5}{}{40}{}
+{32}{Dat no problem! Me heer for dat!}{}{-4}{}{40}{}
+{33}{Umm... Dark caves? I don't like dark caves....}{}{5}{}{45}{}
+{34}{Uhhh... Me no like dark caves...}{}{-4}{}{45}{}
+{35}{Perhaps if you let me think about it....}{}{5}{}{55}{}
+{36}{Me wunna dink 'bout it.}{}{-4}{}{55}{}
+
+{40}{Great! The town will be honoured to have your assistance! I am sure that your long journey by sea has tired you and that you will be needing some rest.  There is an Inn in town called 'The Sleepy Hollow'. It is the finest establishment in town, apart from 'The Rathouse' of course! I suggest you go there to recover from your long trip.}{Great! The town will be honoured to have your assistance! I am sure that your long journey by sea has tired you and that you will be needing some rest.  There is an Inn in town called 'The Sleepy Hollow'. It is the finest establishment in town, apart from 'The Rathouse' of course! I suggest you go there to recover from your long trip.}{}{}{}{qu1000 2}
+{41}{Er... What about the matter of my payment?}{}{5}{}{43}{}
+{42}{Uhh... Wat 'bout me money?}{}{-4}{}{43}{}
+
+{43}{Ohhh.. Why yes, yes of course! [The Mayor looks a little uneasy] For that, we will have to talk to the Treasurer over at the Town Hall. Follow me and we'll go there now. I'm sure we will be able to arrange a payment that is... Err... Fair compensation for your efforts!}{Ohhh.. Why yes, yes of course! [The Mayor looks a little uneasy] For that, we will have to talk to the Treasurer over at the Town Hall. Follow me and we'll go there now. I'm sure we will be able to arrange a payment that is... Err... Fair compensation for your efforts!}{}{}{}{}
+{44}{[Follow him]}{}{1}{}{-15}{} // Call script to make Mayor walk to Town Hall.
+
+{45}{What! Are you afraid? But the town needs your help! If you don't go up into the caves and stop this Mummy from threatening our town then no-one will! The Mummy could strike at any moment! It has already frightened our farmers out of their wits! People are afraid to venture out at night! Please sir! We need your help!}{What! Are you afraid? But the town needs your help! If you don't go up into the caves and stop this Mummy from threatening our town then no-one will! The Mummy could strike at any moment! It has already frightened our farmers out of their wits! People are afraid to venture out at night! Please ma'am! We need your help!}{}{}{}{}
+{46}{Okay. I'll do it. I'll help you.}{}{5}{}{40}{}
+{47}{Uhh... Okay! Me help you!}{}{-4}{}{40}{}
+{48}{No.... I'm sorry, I can't do this.}{}{5}{}{50}{}
+{49}{Nuhh... Me kan't do dis.}{}{-4}{}{50}{}
+
+{50}{Then sir, you are nothing but a coward! Obviously we have put our trust in the wrong man. I bid you good day and hope that you sail back to Tarant on the ship you came in on!}{Then sir, you are nothing but a coward! Obviously we have put our trust in the wrong woman. I bid you good day and hope that you sail back to Tarant on the ship you came in on!}{}{}{}{}
+{51}{E:}{}{1}{}{0}{}
+
+{55}{All right then, I suppose that's okay... But please! We do need your help.}{All right then, I suppose that's okay... But please! We do need your help.}{}{}{}{}
+{56}{E:}{}{1}{}{0}{}
+
+{60}{Oh... Er... [He studies you for a moment] You're a Half-Orc! I must admit that I wasn't quite expecting that. Hmmm.... Not to worry, not to worry! My name is Charles Gray III, Mayor of Grayhills. Descendant of the founding father of Grayhills, Mr Charles Gray [He puffs his chest out as he says this]. I'm sure the towns people will accept you just as long as you're here to help. Er... You are here to help aren't you?}{Oh... Er... [He studies you for a moment] You're a Half-Orc! I must admit that I wasn't quite expecting that. Hmmm.... Not to worry, not to worry! My name is Charles Gray III, Mayor of Grayhills. Descendant of the founding father of Grayhills, Mr Charles Gray [He puffs his chest out as he says this]. I'm sure the towns people will accept you just as long as you're here to help. Er... You are here to help aren't you?}{}{}{}{}
+{61}{Of course I'm here to help! Why else would I be here?}{}{5}{}{70}{}
+{62}{Uhhh.. Me heer to help! Why else me be heer?}{}{-4}{}{70}{}
+{63}{No. I'm here to kill you [Sarcasm].}{}{5}{}{85}{}
+{64}{No. I'm here to kill you [Truth].}{}{5}{}{0}{fl 66, co}
+{65}{Nuh! Me be heer to kill you!}{}{-4}{}{0}{fl 66, co}
+
+{66}{Guards! Guards!}{Guards! Guards!}{}{}{}{}
+
+{70}{Okay, okay! I am merely concerned that some of the other towns people may not be so... so... Appreciative of a Half-Orcs' help. Should you come across some people who are slightly er.... unfriendly towards you, just tell them that you're here with my blessing.}{Okay, okay! I am merely concerned that some of the other towns people may not be so... so... Appreciative of a Half-Orcs' help. Should you come across some people who are slightly er.... unfriendly towards you, just tell them that you're here with my blessing.}{}{}{}{}
+{71}{I don't need your blessing.}{}{5}{}{75}{}
+{72}{You not need to bless me.}{}{-4}{}{75}{}
+{73}{Thankyou. I'll do that.}{}{5}{}{80}{}
+{74}{Okay. Me do dat.}{}{-4}{}{80}{}
+
+{75}{Very well. Have that attitude if you must. However, seeing as you are here to help us, by what name shall you be known?}{Very well. Have that attitude if you must. However, seeing as you are here to help us, by what name shall you be known?}{}{}{}{}
+{76}{My name is @pcname@.}{}{5}{}{30}{}
+{77}{Me be @pcname@.}{}{-4}{}{30}{}
+
+{80}{Very good. Very good. Well then, may I ask the name of the adventurer who is here to help us?}{Very good. Very good. Well then, may I ask the name of the adventurer who is here to help us?}{}{}{}{}
+{81}{Certainly. My name is @pcname@.}{}{5}{}{30}{}
+{82}{Okay. me be @pcname@.}{}{-4}{}{30}{}
+
+{85}{[The Mayor looks straight into your eyes] Ahhhh.... I see you are being sarcastic. I am merely concerned that some of the other towns people may not be so... so... Appreciative of a Half-Orcs' help. Should you come across some people who are slightly er... Unfriendly towards you, just tell them that you're here with my blessing.}{[The Mayor looks straight into your eyes] Ahhhh.... I see you are being sarcastic. I am merely concerned that some of the other towns people may not be so... so... Appreciative of a Half-Orcs' help. Should you come across some people who are slightly er... Unfriendly towards you, just tell them that you're here with my blessing.}{}{}{}{}
+{86}{I don't need your blessing.}{}{5}{}{75}{}
+{87}{You not need to bless me.}{}{-4}{}{75}{}
+{88}{Thankyou. I'll do that.}{}{5}{}{80}{}
+{89}{Okay. Me do dat.}{}{-4}{}{80}{}
+
+{90}{Ahhh... An adventurous Gnome! You certainly are very unique you know! Most Gnomes I know usually stay indoors all day and count their gold! You must be a rare breed indeed to come here looking for adventure. Personally, I hate dangerous places. That's why I'm the Mayor. Fantastic at organising things I am! When something in Grayhills needs to be done, it's always me they call for! Why, I'm getting carried away with myself again and I don't even know your name!}{Ahhh... An adventurous Gnome! You certainly are very unique you know! Most Gnomes I know usually stay indoors all day and count their gold! You must be a rare breed indeed to come here looking for adventure. Personally, I hate dangerous places. That's why I'm the Mayor. Fantastic at organising things I am! When something in Grayhills needs to be done, it's always me they call for! Why, I'm getting carried away with myself again and I don't even know your name!}{}{}{}{}
+{91}{That's okay. My name is @pcname@.}{}{5}{}{30}{}
+{92}{Me be @pcname@.}{}{-4}{}{30}{}
+
+{100}{Where can he be? I hope he gets here soon...}{Where can she be? I hope she gets here soon...}{}{}{}{}
+
+{110}{That's odd. I'm almost certain that it was mentioned in the telegram that I sent. Did you receive it?}{That's odd. I'm almost certain that it was mentioned in the telegram that I sent. Did you receive it?}{}{}{}{}
+{111}{Ohhh.. THAT telegram. Yes I did.}{}{5}{}{120}{}
+{112}{Yep! Me got dat!}{}{-4}{}{120}{}
+{113}{Heheheh. I must have lost it.}{}{5}{in 5401}{125}{} // HAS GOT IT
+{114}{Uhhhh. Me lost it.}{}{-4}{in 5401}{125}{} // HAS GOT IT
+{115}{Heheheh. I must have lost it.}{}{5}{ni 5401}{135}{} // HASN'T GOT IT
+{116}{Uhhhh. Me lost it.}{}{-4}{ni 5401}{135}{} // HASN'T GOT IT
+{117}{I haven't had the chance to read it yet.}{}{5}{in 5401}{140}{}
+{118}{Me not good at reedin'.}{}{-4}{in 5401}{140}{}
+
+{120}{Well then, the telegram mentions the trouble we are in. We really do need your help. Anway, my name is Charles Gray III, Mayor of Grayhills. Descendant of the founding father of Grayhills, Mr Charles Gray [He puffs his chest out as he says this]. What is your name adventurer?}{Well then, the telegram mentions the trouble we are in. We really do need your help. Anway, my name is Charles Gray III, Mayor of Grayhills. Descendant of the founding father of Grayhills, Mr Charles Gray [He puffs his chest out as he says this]. What is your name adventurer?}{}{}{}{}
+{121}{My name is @pcname@.}{}{5}{}{30}{}
+{122}{Me be @pcname@.}{}{-4}{}{30}{}
+
+{125}{Are you sure? Here let me see... [He rumages through your gear]. Here it is! [He holds up the telegram and skim reads it] Yes... Yes.. See [He points at the telegram] Here it is. Right there. [He reads from the Telegram]'A Mummy was sited on the outskirts of our town by a local farmer STOP We fear that the Mummy poses a serious threat to our safety STOP'.}{Are you sure? Here let me see... [He rumages through your gear]. Here it is! [He holds up the telegram and skim reads it] Yes... Yes.. See [He points at the telegram] Here it is. Right there. [He reads from the Telegram]'A Mummy was sited on the outskirts of our town by a local farmer STOP We fear that the Mummy poses a serious threat to our safety STOP'.}{}{}{}{in 5401}
+{126}{Oh... You mean THAT telegram. Could I have it back please?}{}{5}{}{130}{}
+{127}{Uhh... You meen dat telegram. Kan me have it bak?}{}{-4}{}{130}{}
+
+{130}{Why certainly. Here you go [He hands the telegram back to you]. Well, anyway, at least you are here. My name is Charles Gray III, Mayor of Grayhills. Descendant of the founding father of Grayhills, Mr Charles Gray [He puffs his chest out as he says this]. What is your name adventurer?}{Why certainly. Here you go [He hands the telegram back to you]. Well, anyway, at least you are here. My name is Charles Gray III, Mayor of Grayhills. Descendant of the founding father of Grayhills, Mr Charles Gray [He puffs his chest out as he says this]. What is your name adventurer?}{}{}{}{in -5401}
+{131}{My name is @pcname@.}{}{5}{}{30}{}
+{132}{Me be @pcname@.}{}{-4}{}{30}{}
+
+{135}{Hmmm.... No matter, no matter. You have come here after all so it has served its purpose. My name is Charles Gray III, Mayor of Grayhills. Descendant of the founding father of Grayhills, Mr Charles Gray [He puffs his chest out as he says this]. What is your name adventurer?}{Hmmm.... No matter, no matter. You have come here after all so it has served its purpose. My name is Charles Gray III, Mayor of Grayhills. Descendant of the founding father of Grayhills, Mr Charles Gray [He puffs his chest out as he says this]. What is your name adventurer?}{}{}{}{}
+{136}{My name is @pcname@.}{}{5}{}{30}{}
+{137}{Me be @pcname@.}{}{-4}{}{30}{}
+
+{140}{No matter. You are here anyway. Although I do recommend that you at least TRY and read the telegram. My name is Charles Gray III, Mayor of Grayhills. Descendant of the founding father of Grayhills, Mr Charles Gray [He puffs his chest out as he says this]. What is your name adventurer?}{No matter. You are here anyway. Although I do recommend that you at least TRY and read the telegram. My name is Charles Gray III, Mayor of Grayhills. Descendant of the founding father of Grayhills, Mr Charles Gray [He puffs his chest out as he says this]. What is your name adventurer?}{}{}{}{}
+{141}{My name is @pcname@.}{}{5}{}{30}{}
+{142}{Me be @pcname@.}{}{-4}{}{30}{}
+
+{145}{Are you sure? We were told that our brave hero would be arriving today to vanquish the Mummy who hides up in the caves and I haven't seen anyone else come off of the ship.}{Are you sure? We were told that our brave heroine would be arriving today to vanquish the Mummy who hides up in the caves and I haven't seen anyone else come off of the ship.}{}{}{}{}
+{146}{Are you sure? Maybe there is another ship coming in later?}{}{5}{}{155}{}
+{147}{Maybe 'nuther ship come and person be on dat?}{}{-4}{}{155}{}
+{148}{Ohhh... THAT Mummy. Yes, I'm here for that.}{}{5}{}{150}{}
+{149}{Uhhh... Yep! Dat be me. Me heer for dat!}{}{-4}{}{150}{}
+
+{150}{Oh thank goodness for that! My name is Charles Gray III, Mayor of Grayhills. Descendant of the founding father of Grayhills, Mr Charles Gray [He puffs his chest out as he says this]. What is your name adventurer?}{Oh thank goodness for that! My name is Charles Gray III, Mayor of Grayhills. Descendant of the founding father of Grayhills, Mr Charles Gray [He puffs his chest out as he says this]. What is your name adventurer?}{}{}{}{}
+{151}{My name is @pcname@.}{}{5}{}{30}{}
+{152}{Me be @pcname@.}{}{-4}{}{30}{}
+
+{155}{No.. No... The only ship coming in today is the 'The Crescent Wave' with Captain Ahab at the helm. Grayhills is a small town and doesn't receive that many ships anymore. It used to receive quite a few when the mines were still operating. But alas! Those days are long gone. Anyway, I've been waiting here all day and so far the only person I've seen come off of the ship is you.}{No.. No... The only ship coming in today is the 'The Crescent Wave' with Captain Ahab at the helm. Grayhills is a small town and doesn't receive that many ships anymore. It used to receive quite a few when the mines were still operating. But alas! Those days are long gone. Anyway, I've been waiting here all day and so far the only person I've seen come off of the ship is you.}{}{}{}{}
+{156}{All right, you got me. I'm here for the Mummy.}{}{5}{}{160}{}
+{157}{Okay. Me give up! Me be heer for Mummy.}{}{-4}{}{160}{}
+{158}{Maybe your adventurer is still on the ship?}{}{5}{}{165}{}
+{159}{Uhhh.... Maybe person still be on ship?}{}{-4}{}{165}{}
+
+{160}{Well why didn't you say so in the first place? You adventurers certainly are very strange people! Anyway, my name is Charles Gray III, Mayor of Grayhills. Descendant of the founding father of Grayhills, Mr Charles Gray [He puffs his chest out as he says this]. What is your name adventurer?}{Well why didn't you say so in the first place? You adventurers certainly are very strange people! Anyway, my name is Charles Gray III, Mayor of Grayhills. Descendant of the founding father of Grayhills, Mr Charles Gray [He puffs his chest out as he says this]. What is your name adventurer?}{}{}{}{}
+{161}{My name is @pcname@.}{}{5}{}{30}{}
+{162}{Me be @pcname@.}{}{-4}{}{30}{}
+
+{165}{No, that wouldn't make sense. According to the customs telegram that was transmitted before the ship sailed [He reaches into his shirt pocket and pulls out a telegram], there is only one person listed as a passenger. The only way our adventurer could still be on the ship is if he is hiding on it somewhere. That's the only way he could've avoided the Tarant Customs Officers.}{No, that wouldn't make sense. According to the customs telegram that was transmitted before the ship sailed [He reaches into his shirt pocket and pulls out a telegram], there is only one person listed as a passenger. The only way our adventurer could still be on the ship is if he is hiding on it somewhere. That's the only way he could've avoided the Tarant Customs Officers.}{}{}{}{}
+{166}{Actually, I did hear some strange noises coming from the cargo hold...}{}{5}{}{195}{}
+{167}{Well, me did heer funny t'ings on ship!}{}{-4}{}{195}{}
+{168}{Hmmm... Perhaps you are mistaken?}{}{5}{}{170}{}
+{169}{Err... Maybe you be 'rong?}{}{-4}{}{170}{}
+
+{170}{Err.... Excuse me sir. But are you calling me a liar?}{Err.... Excuse me ma'am. But are you calling me a liar?}{}{}{}{}
+{171}{No, I said you were 'mistaken'.}{}{5}{}{180}{}
+{172}{Nuhuh! Me say you maybe 'rong.}{}{-4}{}{180}{}
+{173}{Yes! I am calling you a liar you little pig!}{}{5}{}{175}{}
+{174}{Yep! Me say you be liar!}{}{-4}{}{175}{}
+
+{175}{You insult me and dare to call me a liar sir? Apologise at once or face the consequences!}{You insult me and dare to call me a liar sir? Apologise at once or face the consequences!}{}{}{}{}
+{176}{Then I apologise sir. I am sincerely sorry.}{}{5}{}{180}{}
+{177}{Okay. Me be sorry.}{}{-4}{}{180}{}
+{178}{Never! It is you who must face the consequences!}{}{5}{}{0}{fl 66, co}
+{179}{No! Me not be sorry! You haf to die!}{}{-4}{}{0}{fl 66, co}
+
+{180}{Very well... I will let you go just this once. However, if you are not our adventurer, then why have you come to our town?}{}{}{}{}{}
+{181}{Oh, I'm just here for a good time.}{}{5}{}{185}{}
+{182}{Errr... Ummm... Me just be heer for good time!}{}{-4}{}{185}{}
+{183}{That's none of your business.}{}{5}{}{190}{}
+{184}{Dat not your bizz-i-ness.}{}{-4}{}{190}{}
+
+{185}{Hmmm.. Very well then. I will let you go on your way}{Hmmm.. Very well then. I will let you go on your way}{}{}{}{}
+{186}{E:}{}{1}{}{0}{}
+
+{190}{Very well then. But be warned, I do not like your attitude and as such I will be 	keeping a close eye on you.}{Very well then. But be warned, I do not like your attitude and as such I will be keeping a close eye on you.}{}{}{}{re -5}
+{191}{E:}{}{1}{}{0}{}
+
+{195}{You did? Well then! That must be our adventurer! I wonder why he's hiding in the cargo hold? [The Mayor rubs his chin] Hmmm.... Never mind! Thankyou my good sir. I will leave you alone and await the 'Saviour of Grayhills'. Good day to you.}{You did? Well then! That must be our adventurer! I wonder why she's hiding in the cargo hold? [The Mayor rubs his chin] Hmmm.... Never mind! Thankyou my good lady. I will leave you alone and await the 'Saviour of Grayhills'. Good day to you.}{}{}{}{}
+{196}{E:}{}{1}{}{0}{}
+
+// Quest 1000 in state 0. The Player told the Mayor that the real adventurer must be hiding on the ship. Mayor has NOT mentioned quest.
+{200}{Oh.... You again. What do you want?}{Oh.... You again. What do you want?}{}{}{}{}
+{201}{Have you found your adventurer yet?}{}{5}{}{205}{}
+{202}{You find ad-ven-too-rar yet?}{}{-4}{}{205}{}
+{203}{E:}{}{1}{}{0}{}
+
+{205}{No. No I haven't and it's beginning to concern me.}{No. No I haven't and it's beginning to concern me.}{}{}{}{}
+{206}{Perhaps I could be of assistance?}{}{5}{}{210}{}
+{207}{Maybe me coold help?}{}{-4}{}{210}{}
+{208}{E:}{}{1}{}{0}{}
+
+{210}{You? Oh no! No I couldn't allow that! I have to wait for our adventurer to come. If I give you the task then I'll be in all sorts of trouble. I don't think the adventurer would like having his job passed off to someone else!}{You? Oh no! No I couldn't allow that! I have to wait for our adventurer to come. If I give you the task then I'll be in all sorts of trouble. I don't think the adventurer would like having her job passed off to someone else!}{}{}{}{}
+{211}{Er.... Actually, I have something to tell you...}{}{5}{}{215}{}
+{212}{Ummm... Me haf to tell you some'ting 'bout dat...}{}{-4}{}{215}{}
+{213}{Yes, I guess you're right. Goodbye.}{}{5}{}{0}{}
+{214}{Uhh... I dink you be rite. Buh-bye.}{}{-4}{}{0}{}
+
+{215}{Yes? What is it? What do you have to tell me?}{Yes? What is it? What do you have to tell me?}{}{}{}{}
+{216}{I'm the adventurer that you're waiting for.}{}{5}{}{225}{}
+{217}{Me be da person you want.}{}{-4}{}{225}{}
+{218}{There's a bit of food stuck in your teeth.}{}{5}{}{250}{}
+{219}{You got food stuk in yoor teef.}{}{-4}{}{250}{}
+{220}{I've decided that it's time for me to come out of the closet.}{}{5}{}{255}{}
+{221}{Me dink it be time fer me to come out of da kloset.}{}{-4}{}{255}{}
+{222}{I'd like a doughnut.}{}{5}{}{260}{}
+{223}{Me wunna donut.}{}{-4}{}{260}{}
+{224}{F:}{}{1}{}{0}{}
+
+{225}{You? But you said that the man I want is hiding in the cargo hold of the ship! Are you playing games with me? If you are the adventurer that I'm waiting for, then prove it.}{You? But you said that the woman I want is hiding in the cargo hold of the ship! Are you playing games with me? If you are the adventurer that I'm waiting for, then prove it.}{}{}{}{}
+{226}{I have this telegram from you [show him the telegram].}{}{5}{in 5401}{235}{}
+{227}{Me got dis telgram from you [show him the telegram].}{}{-4}{in 5401}{235}{}
+{228}{I've got a big weapon. Does that count?}{}{5}{}{240}{}
+{229}{Me got big weepon. Dat count?}{}{-4}{}{240}{}
+{230}{I haven't got anything to prove it with.}{}{5}{}{245}{}
+{231}{Me got nuffin' to proove it.}{}{-4}{}{245}{}
+
+{235}{Hmmmm.... [The Mayor rubs his chin] This seems to be authentic. [He hands the telegram back to you] Well then. It appears that you are telling the truth. In that case, My name is Charles Gray III, Mayor of Grayhills. Descendant of the founding father of Grayhills, Mr Charles Gray [He puffs his chest out as he says this]. What is your name adventurer?}{Hmmmm.... [The Mayor rubs his chin] This seems to be authentic. [He hands the telegram back to you] Well then. It appears that you are telling the truth. In that case, My name is Charles Gray III, Mayor of Grayhills. Descendant of the founding father of Grayhills, Mr Charles Gray [He puffs his chest out as he says this]. What is your name adventurer?}{}{}{}{}
+{236}{My name is @pcname@.}{}{5}{}{30}{}
+{237}{Me be @pcname@.}{}{-4}{}{30}{}
+
+{240}{I suppose it counts for something. But it doesn’t prove that you are the man I’m waiting for. Perhaps if you showed me the telegram that I sent the adventurer asking for help.}{I suppose it counts for something. But it doesn’t prove that you are the woman I’m waiting for. Perhaps if you showed me the telegram that I sent the adventurer asking for help.}{}{}{}{}
+{241}{Certainly, here it is [show him the telegram].}{}{5}{in 5401}{235}{}
+{242}{Uhuh. Heer it be [show him the telegram].}{}{-4}{in 5401}{235}{}
+{243}{I haven’t got the telegram.}{}{5}{ni 5401}{245}{}
+{244}{Me not got telgram.}{}{-4}{ni 5401}{245}{}
+
+{245}{Well then come back when you do. I have no time for your games.}{Well then come back when you do. I have no time for your games.}{}{}{}{re -5}
+{246}{E:}{}{1}{}{0}{}
+
+{250}{Is there? Oh thanks for that! [He moves his tongue along his teeth] Did I get it?}{Is there? Oh thanks for that! [He moves his tongue along his teeth] Did I get it?}{}{}{}{}
+{251}{Yeah, it’s gone now. Goodbye.}{}{5}{}{0}{}
+{252}{Uhuh. You got it. Buh-bye.}{}{-4}{}{0}{}
+
+{255}{I wasn’t aware that you were in a closet. Is this some strange foreign talk? I don’t understand what you mean.}{I wasn’t aware that you were in a closet. Is this some strange foreign talk? I don’t understand what you mean.}{}{}{}{}
+{256}{Er... It’s when... Oh never mind.}{}{5}{}{0}{}
+{257}{Ummm.. It be wen... Umm.. Forget it.}{}{-4}{}{0}{}
+
+{260}{I’m sorry, I don’t know what a doughnut is. I’m almost certain I haven’t heard of them in Grayhills. Are they anything like Sweet Cakes?}{I’m sorry, I don’t know what a doughnut is. I’m almost certain I haven’t heard of them in Grayhills. Are they anything like Sweet Cakes?}{}{}{}{}
+{261}{It’s kind of like.... Oh never mind.}{}{5}{}{0}{}
+{262}{Umm.. It be like... Uhh... Forget it.}{}{-4}{}{0}{}
+
+// If player has quest MENTIONED but has NOT accepted quest to remove the threat of the mummy
+{300}{Hello @pcname@! Have you decided to help us? We would be grateful if you did.}{Hello @pcname@! Have you decided to help us? We would be grateful if you did.}{}{}{}{}
+{301}{Yes, I have decided to help you.}{}{5}{}{40}{}
+{302}{Uhuh! Me wunna help!}{}{-4}{}{40}{}
+{303}{E:}{}{1}{}{0}{}
+
+// If player HAS accepted quest to remove mummy but has NOT done so yet
+{400}{How are you going @pcname@? Have you dealt with the Mummy yet?}{How are you going @pcname@? Have you dealt with the Mummy yet?}{}{}{}{}
+{401}{I am yet to solve the Mummy problem.}{}{5}{}{405}{}
+{402}{Nuhuh. Me hafn't done dat yet.}{}{-4}{}{405}{}
+{403}{E:}{}{1}{}{0}{}
+
+{405}{Well then hurry up and do! Our town will not last long with the fear of a mummy bearing down on us all!}{Well then hurry up and do! Our town will not last long with the fear of a mummy bearing down on us all!}{}{}{}{}
+{406}{E:}{}{1}{}{0}{}
+
+// If player HAS accepted mummy quest and HAS completed it
+{500}{Word has spread that you have dealt with the Mummy. Is it true?}{Word has spread that you have dealt with the Mummy. Is it true?}{}{}{}{}
+{501}{Yes, I have dealt with the Mummy!}{}{5}{}{505}{}
+{502}{Yup! Me deel wit' da Mummy!}{}{-4}{}{505}{}
+{503}{E:}{}{1}{}{0}{}
+
+{505}{Why thankyou! We are forever grateful! Here is XXX coins as agreed [He hands you XXX coins].}{Why thankyou! We are forever grateful! Here is XXX coins as agreed [He hands you XXX coins].}{}{}{}{}
+{506}{E:}{}{1}{}{0}{}
+
+{600}{Wait until we get to the Treasurer. I'll talk to you there.}{Wait until we get to the Treasurer. I'll talk to you there.}{}{}{}{}
+{601}{Can't it wait until I get back to my office?}{Can't it wait until I get back to my office?}{}{}{}{}
+
+{700}{Here we are @pcname@. May I introduce to you the Treasurer of Grayhills, Mrs Lisa Guiliani. Mrs Guiliani, please welcome to our town the 'Saviour of Grayhills', @pcname@.}{Here we are @pcname@. May I introduce to you the Treasurer of Grayhills, Mrs Lisa Guiliani. Mrs Guiliani, please welcome to our town the 'Saviour of Grayhills', @pcname@.}{}{}{}{}
+{701}{I am pleased to meet you Treasurer.}{}{5}{}{-21}{pv0 110} // Call script and make Treasurer talk to PC at dialog line 110 (pv0 110)
+{702}{Hallo Tresharor!}{}{-4}{}{-21}{pv0 110}
+
+{705}{Mrs Guiliani! This man is here to save our town! Show some respect woman!}{Mrs Guiliani! This woman is here to save our town! Show some respect!}{}{}{}{}
+{706}{No, really, it's not necessary...}{}{5}{}{-21}{pv0 120}
+{707}{Uhh.... Dat not be nessessairy.}{}{-4}{}{-21}{pv0 120} 
+{708}{Yes woman, I demand some respect!}{}{5}{}{-21}{pv0 130}
+{709}{Yeah! Me wan' respekt!}{}{-4}{}{-21}{pv0 130}
+
+{710}{[The Mayor seems troubled.] Oh my, no! We couldn't have that! But err... Mrs Guiliani, if you wouldn't mind, I would like to discuss the small financial matter of compensation for our heroic adventurer here [he indicates you with a nod of his head].}{[The Mayor seems troubled.] Oh my, no! We couldn't have that! But err... Mrs Guiliani, if you wouldn't mind, I would like to discuss the small financial matter of compensation for our heroic adventurer here [he indicates you with a nod of his head].}{}{}{}{}
+{711}{Yes, I would like to discuss payment arrangements.}{}{5}{}{-21}{pv0 140}
+{712}{Yep! Me want coin!}{}{-4}{}{-21}{pv0 140}
+
+{720}{Reasonable? You would risk your neck for a lousy 200 coin? Mrs Guiliani, surely we can afford a larger payment than that?}{Reasonable? You would risk your neck for a lousy 200 coin? Mrs Guiliani, surely we can afford a larger payment than that?}{}{}{}{}
+{721}{[Listen]}{}{1}{}{-21}{pv0 150}
+
+{730}{Of course he hasn't dealt with the Mummy yet! I've only just met @pcname@ at the docks! The small matter of financial compensation was raised and I decided that it was in my... OUR... best interests to arrange some form of payment now, so that our adventurer can have something to look forward to when he's finished his task.}{Of course she hasn't dealt with the Mummy yet! I've only just met @pcname@ at the docks! The small matter of financial compensation was raised and I decided that it was in my... OUR... best interests to arrange some form of payment now, so that our adventurer can have something to look forward to when she's finished her task.}{}{}{}{}
+{731}{Yes, that's right.}{}{5}{}{-21}{pv0 170}
+{732}{Uhuh!}{}{-4}{}{-21}{pv0 170}
+
+{740}{Okay [the Mayor takes the pen from Mrs Guiliani and talks out loud as he writes]. I, the Mayor of Grayhills, Charles Gray III, descendant of the founding father of Grayhills, Mr Charles Gray, do hereby authorise the Town of Grayhills to make whatever financial arrangements are necessary in order to pay @pcname@ the sum of 2,000 coin for services rendered. [He signs his name at the bottom].}{Okay [the Mayor takes the pen from Mrs Guiliani and talks out loud as he writes]. I, the Mayor of Grayhills, Charles Gray III, descendant of the founding father of Grayhills, Mr Charles Gray, do hereby authorise the Town of Grayhills to make whatever financial arrangements are necessary in order to pay @pcname@ the sum of 2,000 coin for services rendered. [He signs his name at the bottom].}{}{}{}{}
+{741}{[Wait]}{}{1}{}{-21}{pv0 320, gv3 2000}
+
+{750}{Okay [the Mayor takes the pen from Mrs Guiliani and talks out loud as he writes]. I, the Mayor of Grayhills, Charles Gray III, descendant of the founding father of Grayhills, Mr Charles Gray, do hereby authorise the Town of Grayhills to make whatever financial arrangements are necessary in order to pay @pcname@ the sum of 5,000 coin for services rendered. [He signs his name at the bottom].}{Okay [the Mayor takes the pen from Mrs Guiliani and talks out loud as he writes]. I, the Mayor of Grayhills, Charles Gray III, descendant of the founding father of Grayhills, Mr Charles Gray, do hereby authorise the Town of Grayhills to make whatever financial arrangements are necessary in order to pay @pcname@ the sum of 5,000 coin for services rendered. [He signs his name at the bottom].}{}{}{}{}
+{751}{[Wait]}{}{1}{}{-21}{pv0 320, gv3 5000}
+
+{760}{Okay [the Mayor takes the pen from Mrs Guiliani and talks out loud as he writes]. I, the Mayor of Grayhills, Charles Gray III, descendant of the founding father of Grayhills, Mr Charles Gray, do hereby authorise the Town of Grayhills to make whatever financial arrangements are necessary in order to pay @pcname@ the sum of 10,000 coin for services rendered. [He signs his name at the bottom].}{Okay [the Mayor takes the pen from Mrs Guiliani and talks out loud as he writes]. I, the Mayor of Grayhills, Charles Gray III, descendant of the founding father of Grayhills, Mr Charles Gray, do hereby authorise the Town of Grayhills to make whatever financial arrangements are necessary in order to pay @pcname@ the sum of 10,000 coin for services rendered. [He signs his name at the bottom].}{}{}{}{}
+{761}{[Wait]}{}{1}{}{-21}{pv0 320, gv3 10000}
+
+{770}{Well, I'm glad that we've sorted all of that out. Now, @pcname@, if you would be so kind as to deal with the Mummy. Grayhills has been threatened by it for long enough! Of course, I won't be able to provide you with much assistance as I... Er... Have some very important work to do at.. Umm.. My office. Yes, at my office. So if you'll excuse me...}{Well, I'm glad that we've sorted all of that out. Now, @pcname@, if you would be so kind as to deal with the Mummy. Grayhills has been threatened by it for long enough! Of course, I won't be able to provide you with much assistance as I... Er... Have some very important work to do at.. Umm.. My office. Yes, at my office. So if you'll excuse me...}{}{}{}{}
+{771}{Just a minute, is there anyone I can talk to about the Mummy?}{}{5}{}{780}{}
+{772}{Uhhh... Be dere someone who me kan talk to 'bout da Mummy?}{}{-4}{}{780}{}
+
+{780}{Oh my, yes, there is. A local at the Inn, I forget his name, but he will be able to help you out a bit. He’s up with all the local gossip and knows pretty much everything that’s going on in town here. Unfortunately, I can’t help you out much more than that because as I said, I have some pressing matters to attend to. So, if you’ll excuse me, I’ll leave you now.}{Oh my, yes, there is. A local at the Inn, I forget his name, but he will be able to help you out a bit. He’s up with all the local gossip and knows pretty much everything that’s going on in town here. Unfortunately, I can’t help you out much more than that because as I said, I have some pressing matters to attend to. So, if you’ll excuse me, I’ll leave you now.}{}{}{}{ru 1000}
+{781}{A:}{}{1}{}{-27}{}
+
+{790}{You’ve already dealt with the Mummy @pcname@?!? Incredible! So that’s where you’ve been for the past few days! Here I was waiting patiently for you to arrive so that we could discuss payment and you’ve been off dealing with the Mummy! Why I say, good job!}{You’ve already dealt with the Mummy @pcname@?!? Incredible! So that’s where you’ve been for the past few days! Here I was waiting patiently for you to arrive so that we could discuss payment and you’ve been off dealing with the Mummy! Why I say, good job!}{}{}{}{}
+{791}{E:}{}{1}{}{0}{}
+
+//PC has quest 1000 in some unknown condition (3, 5 or 6)
+{1000}{What can I do for you?}{What can I do for you?}{}{}{}{}
+{1001}{E:}{}{1}{}{0}{}
+
+// {Y}{}{}{INT}{}{XXX}{}

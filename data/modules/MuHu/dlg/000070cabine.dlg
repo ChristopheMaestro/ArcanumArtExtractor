@@ -1,0 +1,62 @@
+// [LABEL] Bonjour client
+{1}{Bonjour, vous êtes sur une cabine de Québec city, qui désirez vous appeler dans votre liste d'amis ?}{Bonjour, vous êtes sur une cabine de Québec city, qui désirez vous appeler dans votre liste d'amis ?}{}{1}{}{}
+{2}{Polices Sûreté de Québec city.}{}{1}{}{21}{}
+{3}{La compagnie BELL }{}{1}{}{101}{}
+{4}{Marie Paule}{}{1}{}{201}{}
+{5}{Personne [vous raccrochez]}{}{1}{}{}{}
+
+// [LABEL] Police
+{21}{Tuuuut ! Allô , ici Polices de Québec city, j'écoute !}{Tuuuut ! Allô , ici Polices de Québec city, j'écoute !}{}{2}{}{}
+{22}{Je voudrais signaler quelque chose !}{}{1}{}{41}{}
+{23}{Oups, j'ai fait un faux numéro, au revoir}{}{1}{}{}{}
+
+// [LABEL] Signaler
+{41}{Oui, nous vous écoutons, que se passe -t-il ?}{Oui, nous vous écoutons, que se passe -t-il ?}{}{3}{}{}
+{42}{Euh, rien, c'était une blague, au revoir}{}{1}{}{61}{}
+{43}{Euh, excusez moi mais j'ai oublié ce que je voulais dire. au revoir}{}{1}{}{81}{}
+
+// [LABEL] Blague
+{61}{Oui, bon ben évitez les niaiseries à l'avenir ! Bonjour !}{Oui, bon ben évitez les niaiseries à l'avenir ! Bonjour !}{}{4}{}{}
+{62}{Bonjour}{}{1}{}{}{}
+
+// [LABEL] Rappelle pu
+{81}{Bon, alors ne nous dérangez plus pour rien dorénavant ! Bonjour !}{Bon, alors ne nous dérangez plus pour rien dorénavant ! Bonjour !}{}{5}{}{}
+{82}{Bonjour}{}{1}{}{}{}
+
+// [LABEL] BELL
+{101}{Tuuuuuut..       BELL services j'écoute }{Tuuuuuut..       BELL services j'écoute }{}{6}{}{}
+{102}{Ce serait pour obtenir un numéro , svp}{}{1}{}{121}{}
+{103}{Oups, j'ai fait un faux numéro}{}{1}{}{}{}
+
+// [LABEL] Numéro
+{121}{Bien sûr, veuillez préciser le nom de la personne...}{Bien sûr, veuillez préciser le nom de la personne...}{}{7}{}{}
+{122}{Obi Wan Kenobi}{}{1}{}{241}{}
+{123}{Céline Dion}{}{1}{}{161}{}
+{124}{Vincent Lagaf}{}{1}{}{181}{}
+{125}{J'ai changé d'avis. Bonjour !}{}{1}{}{}{}
+
+// [LABEL] Obi wan Kenobi
+{141}{ok...alors......Obi Wan Kenobi : il n'habite pas ici, désolé.}{ok...alors......Obi Wan Kenobi : il n'habite pas ici, désolé.}{}{8}{}{}
+{142}{C'est pas grave, bonjour}{}{1}{}{}{}
+
+// [LABEL] Céline
+{161}{Céline Dion ? ah, c'est un numéro confidentiel, vous devez lui demander en personne.}{Céline Dion ? ah, c'est un numéro confidentiel, vous devez lui demander en personne.}{}{9}{}{}
+{162}{Ok, merci. Bonjour !}{}{1}{}{}{}
+
+// [LABEL] Lagaf
+{181}{Alors....ah ! Vincent Lagaf ! Notez : 01.69.55.25.02.  Si vous voulez l'appeler, utilisez une autre cabine, car sur celle ci la ligne est en réparation. Bonne journée}{Alors....ah ! Vincent Lagaf ! Notez : 01.69.55.25.02.  Si vous voulez l'appeler, utilisez une autre cabine, car sur celle ci la ligne est en réparation. Bonne journée}{}{10}{}{}
+{182}{Merci, vous aussi ! Bonjour}{}{1}{}{}{}
+
+// [LABEL] Marie Paule.
+{201}{Tuuuuut....crk... Moui ?}{Tuuuuut....crk... Moui ?}{}{11}{}{}
+{202}{Allô, Marie Paule ?!}{}{1}{}{221}{}
+{203}{Oups, au revoir}{}{1}{}{}{}
+
+// [LABEL] MP prénom
+{221}{HEY ! Ch'te r'connais toué ! crisse moi la paix, rappelle pu !! CLAC ! [elle vous raccroche au nez].....tuut......tuut}{HEY ! Ch'te r'connais toué ! crisse moi la paix, rappelle pu !! CLAC ! [elle vous raccroche au nez].....tuut......tuut}{}{12}{}{}
+{222}{[vous raccrochez]}{}{1}{}{}{}
+
+// [LABEL] Obi wan
+{241}{Nous n'avons pas le numéro de cette personne, désolés}{Nous n'avons pas le numéro de cette personne, désolés}{}{13}{}{}
+{242}{Ok bye}{}{1}{}{}{}
+

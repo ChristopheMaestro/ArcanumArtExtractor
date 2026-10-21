@@ -1,0 +1,116 @@
+{1}{What are you doing down here?}{What are you doing down here?}{}{}{}{}
+{2}{I was about to ask you the same question!}{}{5}{}{210}{}
+{3}{Having a look around.  Why?  Do you own the sewers?}{}{5}{}{220}{}
+{4}{Do you know of any way into the Fortress?}{}{5}{}{230}{}
+{5}{I'm looking for training.  Can you help me?}{}{5}{}{10}{}
+{6}{I've returned with the Bow of Fire}{}{5}{qu1008 2}{250}{}
+{7}{U live in stinky place!!}{}{-4}{}{280}{}
+{9}{E:}{}{1}{}{0}{}
+
+{10}{Depends on what you're looking for.  I specialize in the more subtle arts - Backstabbing, Pickpocketing, and Prowling. [she give you a devious grin]}{Depends on what you're looking for.  I specialize in the more subtle arts - Backstabbing, Pickpocketing, and Prowling. [she give you a devious grin]}{}{}{}{}
+{11}{I may find the need to destroy an enemy from behind.  Teach me Backstabbing.}{}{5}{}{180}{}
+{12}{I believe some people have more than they need.  I'd like to learn the fine art of Pickpocketing.}{}{5}{}{190}{}
+{13}{I'd rather not be seen OR heard.  Teach me to Prowl in the shadows.}{}{5}{}{200}{}
+{19}{F:}{}{1}{}{1}{}
+
+{30}{Is there something else?}{Is there something else?}{}{}{}{}
+{39}{E:}{}{1}{}{0}{}
+
+{50}{Training to be a Backstabbing Expert will cost you 200 coin.}{Training to be a Backstabbing Expert will cost you 200 coin.}{}{}{}{}
+{51}{I've got the money right here. [give her 200 coin]}{}{1}{$$200}{60}{$$-200, tr4 2}
+{59}{F:}{}{1}{}{0}{}
+
+{60}{You're a Backstabbing Expert now.}{You're a Backstabbing Expert now.}{}{}{}{}
+{69}{A:}{}{1}{}{0}{}
+
+{70}{Training to be a Backstabbing Master takes the utmost in concentration.  If you are sure you're ready, the price is 300 coin.}{Training to be a Backstabbing Master takes the utmost in concentration.  If you are sure you're ready, the price is 300 coin.}{}{}{}{}
+{71}{[After a moment of reflection] I think it is time I mastered Backstabbing.}{}{1}{$$300}{80}{$$-300, tr4 3}
+{79}{F:}{}{1}{}{1}{}
+
+{80}{[There are secret techniques, and then there are long forgotten secret techniques.  She shows you all of the latter]  Congratulations, Backstabbing Master.}{[There are secret techniques, and then there are long forgotten secret techniques.  She shows you all of the latter]  Congratulations, Backstabbing Master.}{}{}{}{}
+{89}{A:}{}{1}{}{0}{} 
+
+{90}{How unfortunate, it appears that you lack the necessary requirements to become a Master. Perhaps if you improve and come back later?}{How unfortunate, it appears that you lack the necessary requirements to become a Master. Perhaps if you improve and come back later?}{}{}{}{}
+{99}{E:}{}{1}{}{0}{}
+
+{100}{If you seek to become a Pick Pocket Expert, the cost will be 200 coin.}{If you seek to become a Pick Pocket Expert, the cost will be 200 coin.}{}{}{}{}
+{101}{Here is the necessary coin.}{}{1}{$$200}{140}{$$-200, tr5 2}
+{109}{F:}{}{1}{}{0}{}
+
+{110}{A Pick Pocket Master becomes one with his target pocket.  Only the most dedicated can receive this training.  It will cost you 300 coin.}{A Pick Pocket Master becomes one with her pocket.  Only the most dedicated can receive this training.  It will cost you 300 coin.}{}{}{}{}
+{111}{I've known for a long time that I was meant to be a Pick Pocket Master. [give her 300 coin]}{}{1}{$$300}{150}{$$-300, tr5 3}
+{119}{F:}{}{1}{}{1}{}
+
+{120}{Prowling Expert?  The fee is 200 coin.}{Prowling Expert?  The fee is 200 coin.}{}{}{}{}
+{121}{[give her 200 coin]}{}{1}{$$200}{160}{$$-200, tr6 2}
+{129}{F:}{}{1}{}{0}{}
+
+{130}{Prowling Master?  My fee is 300 coin.}{Prowling Master?  My fee is 300 coin.}{}{}{}{}
+{131}{Here's your money. [give her 300 coin]}{}{1}{$$300}{170}{$$-300, tr6 3}
+{139}{F:}{}{1}{}{1}{}
+
+{140}{You are truly a Pick Pocket Expert now.}{You are truly a Pick Pocket Expert now.}{}{}{}{}
+{149}{A:}{}{1}{}{0}{}
+
+{150}{You are now one with your pocket.}{You are now one with your pocket.}{}{}{}{}
+{159}{A:}{}{1}{}{0}{} 
+
+{160}{You are an expert at Prowling now.}{You are an expert at Prowling now.}{}{}{}{}
+{169}{A:}{}{1}{}{0}{}
+
+{170}{Prowling Master - I can barely see you!}{Prowling Master - I can barely see you!}{}{}{}{}
+{179}{A:}{}{1}{}{0}{} 
+
+{180}{What level of training do you want?}{What level of training do you want?}{}{}{}{}
+{181}{T:4}{}{1}{}{30}{}
+{182}{Train me to be a Backstabbing Expert.}{}{1}{tr4 -1}{1}{et4 50}
+{183}{Train me to be a Backstabbing Master.}{}{1}{sk4 18, tr4 2, tr4 -2}{70}{}
+{184}{Train me to be a Backstabbing Master.}{}{1}{tr4 -1}{90}{}
+{189}{F:}{}{1}{}{1}{}
+
+{190}{What level of training do you seek?}{What level of training do you seek?}{}{}{}{}
+{191}{T:5}{}{1}{}{30}{}
+{192}{Train me to be a Pick Pocket Expert.}{}{1}{tr5 -1}{1}{et5 100}
+{193}{Train me to be a Pick Pocket Master.}{}{1}{sk5 18, tr5 2, tr5 -2}{110}{}
+{194}{Train me to be a Pick Pocket Master.}{}{1}{tr5 -1}{90}{}
+{199}{F:}{}{1}{}{1}{}
+
+{200}{What level of training do you seek?}{What level of training do you seek?}{}{}{}{}
+{201}{T:6}{}{1}{}{30}{}
+{202}{Train me to be a Prowling Expert.}{}{1}{tr6 -1}{1}{et6 120}
+{203}{Train me to be a Prowling Master.}{}{1}{sk6 18, tr6 2, tr6 -2}{130}{}
+{204}{Train me to be a Prowling Master.}{}{1}{tr6 -1}{90}{}
+{209}{F:}{}{1}{}{1}{}
+
+{210}{That's my own business.}{That's my own business.}{}{}{}{}
+{219}{E:}{}{1}{}{0}{}
+
+{220}{No. But I do spend some time down here.  And you don't.}{No.  But I do spend some time down here.  And you don't.}{}{}{}{}
+{229}{E:}{}{1}{}{0}{}
+
+{230}{Perhaps.  But why should I tell you?}{Perhaps.  But why should I tell you?}{}{}{}{}
+{231}{Maybe I could make it worth your wile.}{}{5}{}{240}{}
+{232}{Tell you what.  You get me into that fortress, and I'll find out information you would have never learned otherwise.}{}{5}{ps 4}{290}{}
+{239}{E:}{}{1}{}{0}{}
+
+{240}{[she thinks for a moment]  There is something I'd very much like to have.  It is a rare weapon, called the Bow of Fire.  The Latverian Police Sergeant owns it, and he will not part with it willingly.  Tell you what, if you can get me that bow, I'll get you access to a room in the basement of the Fortress.}{[she thinks for a moment]  There is something I'd very much like to have.  It is a rare weapon, called the Bow of Fire.  The Latverian Police Sergeant owns it, and he will not part with it willingly.  Tell you what, if you can get me that bow, I'll get you access to a room in the basement of the Fortress.}{}{}{}{qu1008 1}
+{241}{The Bow of Fire it is.}{}{5}{}{0}{qu1008 2}
+{249}{F:}{}{1}{}{0}{}
+
+{250}{Give me the bow and I'll give you access to the Fortress.}{Give me the bow and I'll give you access to the Fortress.}{}{}{}{}
+{251}{[give her the bow]}{}{5}{}{-2}{}
+{259}{F:}{}{1}{}{0}{}
+
+{260}{Ahh!  It feels so good in my hands!  Here, take the key to the Fortress above!}{Ahh!  It feels so good in my hands!  Here, take the key to the Fortress above!}{}{}{}{xp 20, xp 20, qu1008 4}
+{261}{[take the key]}{}{1}{}{-5}{}
+
+{270}{You don't have the bow.  Leave me be.  Return when you have it.}{You don't have the bow.  Leave me be.  Return when you have it.}{}{}{}{}
+{271}{Alright.}{}{1}{}{0}{}
+
+{280}{You sure that isn't your diaper?}{You sure that isn't your diaper?}{}{}{}{}
+{281}{Me no where die per sense last year! HA HA!}{}{-4}{}{0}{}
+
+{290}{[she stares at you for a moment, then she smiles]  Alright.  Take the key to the Fortress above.  Let me know if you find anything interesting.}{[she stares at you for a moment, then she smiles]  Alright.  Take the key to the Fortress above.  Let me know if you find anything interesting.}{}{}{}{}
+{291}{[take the key]}{}{5}{}{-5}{xp 20, xp 20}
+
+{}{}{}{}{}{}{}

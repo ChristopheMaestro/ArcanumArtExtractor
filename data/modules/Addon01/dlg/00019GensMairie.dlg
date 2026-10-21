@@ -1,0 +1,27 @@
+{1}{Bonjour @pcname@}{}{}{}{}{}
+{2}{Comment connaissez-vous nom nom?}{}{1}{me0 }{13}{}
+{3}{Salut @npcname@, quoi de neuf ?}{}{1}{me1 }{4}{}
+{4}{Que désirez-vous ?}{}{}{}{}{}
+{5}{R: $0, 1001-1010}{}{1}{}{11}{}
+{6}{Gouverneur, le Capitaine Rambo m'a conseillé de vous parler.}{}{1}{lc0 2,lc1 0}{18}{}
+{7}{Avez-vous une deuxième mission à me confier Gouverneur ?}{}{1}{lc0 2,qb1022 1}{20}{}
+{8}{Avez-vous une troisième mission à me confier Gouverneur ?}{}{}{lc0 2,qb1024 1}{22}{}
+{9}{Avez-vous quatrième mission à me confier Gouverneur ?}{}{1}{lc0 2,qa1022 4,qa1024 4}{24}{}
+{10}{Vos administrés peuvent aller librement au cimetière, Gouverneur.}{}{1}{lc0 2,qu1023 3}{26}{}
+{11}{Avez-vous une autre mission à me confier Gouverneur ?}{}{1}{lc0 2,qb1015 1,qa1099 4}{15}{}
+{12}{E:}{}{1}{}{}{}
+{13}{Votre réputation vous a précédé, @pcname@ pourfendeur de monstres. C'est une joie de vous rencontrer enfin. Je suis @npcname@.}{}{}{}{}{}
+{14}{Je vous remercie de ces éloges. Je suis également enchanté de vous connaître.}{}{1}{}{4}{}
+{15}{Vous tombez bien. Des monstres se sont infiltrés dans les égouts. J'ai donné l'ordre de celler toutes les issus sauf une, devant laquelle sont postés 24h/24 trois gardes et un devant la porte du local. Mais ils ne veulent pas sortir par là. Et aucun des gardes n'a envie de descendre les chercher. A leur défense que c'est truffé d'endroits propices à une embuscade là-dessous. Voici la clé du local.}{}{}{}{}{}
+{16}{Je me ferais un plaisir de m'en charger [vous prenez la clé].}{}{1}{}{4}{qu1015 2,in-4603 }
+{17}{Vous me croyez plus fou que vos gardes ? S'ils trouvent dangereux de descendre, moi aussi.}{Vous me croyez plus folle que vos gardes ? S'ils trouvent dangereux de descendre, moi aussi.}{1}{}{4}{qu1015 ,re-5 }
+{18}{Nous avons trois ermites sur Centril. Pour leur protection, veuillez les trouver et les ramener DANS la Prison. Je n'ai pas d'autres logements à leur fournir. Mon sécrétaire va inscrire le détail de ces missions sur votre livre de quête. Puis retournez me voir lorsque vous aurez fini.}{}{}{}{}{}
+{19}{J'y vais de ce pas, Gouverneur. J'espère les trouver vivants.}{}{1}{}{4}{lc1 1,qu1019 2,qu1020 2,qu1021 2}
+{20}{Nous n'avons plus de nouvelles du hameau sud. Le chemin est bloqué et je n'ai pas suffisamment d'hommes disponibles pour m'en charger. Dégagez le terrain et allez voir s'ils vont bien. Il faut absolument, pour leur moral, leur parler APRES avoir tué les monstres.}{}{}{}{}{}
+{21}{Bien Gouverneur.}{}{1}{}{4}{qu1022 2}
+{22}{Nous n'avons pas reçu notre ravitaillemnt en viande de l'hameau ouest. Suivez l'avenue Nord à l'ouest, puis le chemin. Pour le moral de ses habitants, vous devez leur parler APRES avoir dégagé la route.}{}{}{}{}{}
+{23}{Se sera fait, Gouverneur.}{}{1}{}{4}{qu1024 2}
+{24}{Les centrois (dé pijot) ne peuvent plus aller prier sur la tombe de leurs ancêtres car des monstres y sont. Malheureusement, cela affecte aussi le moral des gardes. Veuillez régler le problème et revenez m'en rendre compte.}{}{}{}{}{}
+{25}{Entendu Gouverneur.}{}{1}{}{4}{qu1023 2}
+{26}{Merci @pcname@. Prenez ces quelques pièces pour entretenir votre équipement. Je ne peux faire plus en ces temps difficiles. [il vous donne 1000 pièces].}{}{}{}{}{}
+{27}{Merci Gouverneur. J'en fairais bon usage.}{}{1}{}{4}{qu1023 4,$$1000 }

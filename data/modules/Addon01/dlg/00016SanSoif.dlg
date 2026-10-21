@@ -1,0 +1,23 @@
+{1}{G:}{}{}{}{}{}
+{2}{Bonjour @npcname@, toujours pas le droit de servir des boissons alcoolisées?}{}{1}{me1 }{8}{}
+{3}{Bonjour, Mon nom est @pcname@. Je suis arrivé par le bateau.}{}{1}{me0 }{4}{}
+{4}{Je suis @npcname@, le barmaid. Le Capitaine de la Garde a fermé le bar. Il dit qu'il a assez de problèmes avec les monstres. Je peux quand même vous vendre des boissons, mais il vous faudra boire ailleurs.}{}{}{}{}{}
+{5}{Comment çà, des monstres ?}{}{1}{}{6}{}
+{6}{Vous n'êtes donc pas au courant ! Il y a quelque jours une nouvelle galerie de la mine a débouché sur une grotte qui a déversé des centaines de monstres.}{}{}{}{}{}
+{7}{Mon Dieu, c'est terrible.}{}{1}{}{8}{}
+{8}{Que puis-je pour vous ?}{}{}{}{}{}
+{9}{Du travail.}{}{1}{qa1002 2,qb1010 1}{19}{}
+{10}{J'ai votre absinthe.}{}{1}{qu1010 3,in3804 }{22}{}
+{11}{Le Capitaine du bateau m'a chargé de lui ramener du Rhum.}{}{1}{qu1004 2,$$15 }{15}{}
+{12}{R: $0, 1001-1010}{}{1}{}{8}{}
+{13}{B:}{}{1}{}{8}{}
+{14}{E:}{}{1}{}{}{}
+{15}{De la cuvée spéciale pour le Capitaine! Vous savez qu'elle va se faire rare. Elle est fabriquée sur une autre île et avec les évènements ... 15 pièces svp.}{}{}{}{}{}
+{16}{Voilà [vous lui donnez 15 pièces et prenez la bouteille]. Merci.}{}{1}{}{8}{in-3802 ,$$-15 ,qu1004 3}
+{17}{Je reviens avec l'argent.}{}{1}{}{8}{}
+{18}{Désolé, il ne m'a pas donné d'argent.}{}{1}{}{8}{al-10 }
+{19}{Avant que le Capitaine Rambo ferme le bar, les clients se sont rués ici en apprennant que des monstres avaient débarqué. Il m'ont vidé tout mon stock d'absinthe. J'en n'ai même plus pour moi. Pouvez-vous demander à Lépicier s'il peut me dépanner d'un caisse. Dites-lui que je lui rendrais quand je serais livré.}{}{}{}{}{}
+{20}{Bien sûr.}{}{1}{}{8}{qu1010 2}
+{21}{Vous me prenez pour un coursier ou quoi ? Non.}{}{1}{}{8}{re-10 ,qu1010 }
+{22}{Merci, j'ai failli mourir déshydraté. Tenez 40 pièces pour votre peine.}{}{}{}{}{}
+{23}{Merci à vous [vous empochez la somme].}{}{1}{}{8}{qu1010 4,in3804 ,$$40 }

@@ -1,0 +1,22 @@
+{1}{G:}{}{}{}{}{}
+{2}{Bonjour, je m'appelle @PcName@. Je viens d'arriver par le bateau.}{}{1}{me0 }{4}{}
+{3}{Bonjour, @npcname@}{}{1}{me1 }{6}{}
+{4}{Je suis .}{}{}{}{}{}
+{5}{Puis-je vous poser quelques questions ?}{}{1}{}{6}{}
+{6}{Que désirez-vous, des renseignements, du travail ...}{}{}{me1 }{}{}
+{7}{A propos du passe...}{}{1}{qu1001 2}{15}{}
+{8}{Du travail.}{}{1}{qb1001 1}{12}{}
+{9}{T:4,  6, 9, 13}{}{1}{qu1001 4}{6}{}
+{10}{FaireAilleurs demande si vous avez pas d'objets cassés.}{}{1}{qu1008 2}{21}{}
+{11}{E:}{}{1}{}{}{}
+{12}{Vous voyez l'entrepôt, avec les deux charettes vides devant la porte, cela fait longtemps qu'il est inutilisé. Maintenant, il est infesté de rats. Dans le coffre, au fond, vous trouverez le passe pour ouvrir tous les entrepots. Pouvez-vous me le ramener ?}{}{}{}{}{}
+{13}{Oui, bien sûr.}{}{1}{}{6}{qu1001 2}
+{14}{Plus tard, si vous le voulez bien}{}{1}{}{6}{qu1001 1}
+{15}{Alors, l'avez-vous ?}{}{}{}{}{}
+{16}{Oui, bien sûr, le voici.}{}{1}{in4601 }{18}{in4601 ,qu1001 4,rp1000 }
+{17}{Non, pas encore}{}{1}{}{6}{}
+{18}{Super ! En remerciement, je vous permet de dormir dans l'entrepôt et d'y déposer des objets dans les coffres. J'allais oublier, vous pouvez garder tous ce que vous avez trouvé dans l'entrepôt.}{}{}{}{}{}
+{19}{A:}{}{1}{}{6}{}
+{20}{E:}{}{1}{}{}{}
+{21}{En effet, voici.}{}{}{}{}{}
+{22}{Merci, je lui porte immédiatement.}{}{1}{}{6}{in-5802 ,qu1008 3}

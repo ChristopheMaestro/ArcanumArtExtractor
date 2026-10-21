@@ -1,0 +1,38 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{What do you sell, ma'am?}{}{5}{}{30}{}
+{3}{B:}{}{1}{}{0}{}
+{4}{I seek training.  Can you help me?}{}{5}{}{10}{}
+{5}{Prit tee lay dee.  Me like u dress!}{}{-4}{}{100}{}
+{9}{E:}{}{1}{}{0}{}
+
+{10}{Sure.  What level of training do you seek?}{Sure.  What level of training do you seek?}{}{}{}{}
+{11}{T: 11}{}{1}{}{1}{}
+{12}{Train me to be a Persuasion Expert.}{}{1}{tr11 -1}{1}{et11 50}
+{13}{Train me to be a Persuasion Master.}{}{1}{sk11 18, tr11 2, tr11 -2}{70}{}
+{14}{Train me to be a Persuasion Master.}{}{1}{tr11 -1}{90}{}
+{19}{F:}{}{1}{}{1}{}
+
+{30}{I deal with all of the Clothing for the General Store.  My husband over there [glares in his direction] deals with junk. [she smiles at you]}{I deal with all of the Clothing for the General Store.  My husband over there [glares in his direction] deals with junk. [she smiles at you]}{}{}{}{}
+{31}{B:}{}{1}{}{0}{}
+{32}{I seek training.  Can you help me?}{}{5}{}{10}{}
+{39}{E:}{}{1}{}{0}{}
+
+{50}{That will be 200 coin to be exact.}{That will be 200 coin to be exact.}{}{}{}{}
+{51}{Goodbye, hard earned coin.  It's been nice knowing you. [give her 200 coin]}{}{1}{$$200}{60}{$$-200, tr11 2}
+{59}{F:}{}{1}{}{0}{}
+
+{60}{Very nicely done.  You're a Persuasion Expert now.}{Very nicely done.  You're a Persuasion Expert now.}{}{}{}{}
+{69}{A:}{}{1}{}{0}{}
+
+{70}{To become a Persuasion Master will require 300 coin.}{To become a Persuasion Master will require 300 coin.}{}{}{}{}
+{71}{[give her 300 coin]}{}{1}{$$300}{80}{$$-300, tr11 3}
+{79}{F:}{}{1}{}{1}{}
+
+{80}{There is nothing more I can teach you, Persuasion Master.}{There is nothing more I can teach you, Persuasion Master.}{}{}{}{}
+{89}{A:}{}{1}{}{0}{}
+
+{90}{How unfortunate, it appears that you lack the necessary requirements to become a Master. Perhaps if you improve and come back later?}{How unfortunate, it appears that you lack the necessary requirements to become a Master. Perhaps if you improve and come back later?}{}{}{}{}
+{99}{E:}{}{1}{}{0}{}
+
+{100}{Thank you.  Here, take a breath mint - you could use one.  [hands you a breath mint]}{Thank you.  Here, take a breath mint - you could use one.  [hands you a breath mint]}{}{}{}{}
+{101}{[gobble mint]  yum yum!  me likey!}{}{-4}{}{0}{}

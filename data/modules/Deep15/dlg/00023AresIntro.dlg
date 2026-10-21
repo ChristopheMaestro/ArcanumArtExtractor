@@ -1,0 +1,151 @@
+//Beginning of the main dialog tree.
+{1}{What can I do for you?}{What can I do for you?}{}{}{}{}
+{2}{I have a few questions about this Deep World...}{}{5}{}{125}{}
+{3}{I wanna ask you sumptin bout this Deep Werld.}{}{-4}{}{125}{}
+{4}{Let me ask you some things about yourself...}{}{5}{}{20}{}
+{5}{Me ask you. About you.}{}{-4}{}{20}{}
+{6}{Do you know why I can't remember anything?}{}{5}{lf6 0}{75}{}
+{7}{Hey. You know why me not remember nothing?}{}{-4}{lf6 0}{75}{}
+{12}{Q:1001}{}{1}{}{}{}
+{15}{Bye.}{}{1}{}{0}{}
+{20}{So what do you want to know?}{So what do you want to know?}{}{}{}{}
+{21}{Who are you again?}{}{1}{}{30}{}
+{22}{How did you get here?}{}{5}{}{35}{}
+{23}{What did you do before you went into coldsleep here?}{}{5}{}{50}{}
+{24}{What you do before you go to long-sleep here?}{}{-4}{}{50}{}
+{28}{Me want talk bout somethin else.}{}{-4}{}{1}{}
+{29}{Let's discuss another topic.}{}{5}{}{1}{}
+{30}{My name is Ares Quick. I'm an information systems specialist by trade.}{My name is Ares Quick. I'm an information systems specialist by trade.}{}{}{}{}
+{31}{That's right. Let me ask you something else...}{}{5}{}{20}{}
+{32}{Me ask you sumtin else.}{}{-4}{}{20}{}
+{35}{I was in coldsleep like you... oh that's right, you won't remember. Well, it might come back to you. In any case, there was some kind of major malfunction in the coldsleep clusters, a power surge. My coffin was activated and it ejected me immediately. When I came to, I wandered around for a bit in the Clusters- had to crawl through a vent out of the Recovery Room.}{I was in coldsleep like you... oh that's right, you won't remember. Well, it might come back to you. In any case, there was some kind of major malfunction in the coldsleep clusters, a power surge. My coffin was activated and it ejected me immediately. When I came to, I wandered around for a bit in the Clusters- had to crawl through a vent out of the Recovery Room.}{}{}{}{}
+{36}{And then?}{}{5}{}{38}{}
+{37}{Wut happen next?!?}{}{-4}{}{38}{}
+{38}{Well, the elevator was busted, so I snuck through the residential area, and then crawled through the vent into the shafts down here. I explored a bit, but holed up in this room after a particularly nasty encounter.}{Well, the elevator was busted, so I snuck through the residential area, and then crawled through the vent into the shafts down here. I explored a bit, but holed up in this room after a particularly nasty encounter.}{}{}{}{}
+{39}{What sort of encounter?}{}{5}{ru-1009 }{42}{}
+{40}{A incowder???!?}{}{-4}{ru-1009 }{42}{}
+{41}{Enough of this. Let's talk about something else.}{}{1}{}{1}{}
+{42}{Around the corner and through the tunnels a bit, I found a storeroom that was all locked up. I also found a big spider robot that used a projected hologram as an ally in combat. The robot didn't seem too tough, but I was too afraid of it's holographic slave to attack. So I ran. It's still there, for all I know. Anyway, it looked like it had claimed a victim before me, because there was a dead body there.}{Around the corner and through the tunnels a bit, I found a storeroom that was all locked up. I also found a big spider robot that used a projected hologram as an ally in combat. The robot didn't seem too tough, but I was too afraid of it's holographic slave to attack. So I ran. It's still there, for all I know. Anyway, it looked like it had claimed a victim before me, because there was a dead body there.}{}{}{}{ru1009 1}
+{43}{Hm. Let's talk about something else...}{}{1}{}{20}{}
+{50}{I was a information systems specialist. Networking matrices, low-level router programming, protocol development. I was supposed to help rebuild the world's network infrastructure after the bomb.... ha!}{I was a information systems specialist. Networking matrices, low-level router programming, protocol development. I was supposed to help rebuild the world's network infrastructure after the bomb.... ha!}{}{}{}{}
+{51}{Interesting. So you know a fair bit about computers, huh?}{}{5}{}{55}{}
+{52}{Oh-ho, so you are mistar computar smarty man huh? }{}{-4}{}{55}{}
+{55}{Yeah, I guess you could say that.}{Yeah, I guess you could say that.}{}{}{}{}
+{56}{Let's talk about something else...}{}{1}{}{20}{}
+{75}{I'm not sure, but I'll bet it's related the power surge into the Coldsleep Clusters. It could have done all kinds of things to your system. Who knows, maybe it will return with time...}{I'm not sure, but I'll bet it's related the power surge into the Coldsleep Clusters. It could have done all kinds of things to your system. Who knows, maybe it will return with time...}{}{}{}{}
+{76}{Yes, I ran a diagnostic scan... it looks like some brain damage. It might heal, or it might not.}{}{5}{gf25 1}{85}{}
+{77}{Interesting theory. Let's discuss something else...}{}{5}{}{1}{}
+{78}{Uh... maybe. We talk bout somethin else.}{}{-4}{}{1}{}
+{85}{That's terrible, but really, you're lucky to be alive. Did you want to talk about anything else?}{That's terrible, but really, you're lucky to be alive. Did you want to talk about anything else?}{}{}{}{lf6 1}
+{86}{Yes.}{}{1}{}{1}{}
+{87}{No.}{}{1}{}{0}{}
+//Beginning of hostile dialog
+{100}{You've burnt your bridges with me, sir. I suggest you find another place to hang about.}{You've burnt your bridges with me, ma'am. I suggest you find another place to hang about.}{}{}{}{}
+{101}{Look, I'm really really sorry about this. We got off on the wrong foot...}{}{5}{ps4 ,lf0 0}{110}{lf1 0}
+{102}{Oh mistar, me so very sorry. I apologize to you mistar!!!}{}{-4}{ps4 ,lf0 0}{110}{lf1 0}
+{103}{Bye, then.}{}{1}{}{0}{}
+{110}{Hm. Well, I apologize as well. It's been a little stressful hiding down here... So, will you tell me your story so far?}{Hm. Well, I apologize as well. It's been a little stressful hiding down here... So, will you tell me your story so far?}{}{}{}{}
+{111}{[Tell him what has occurred since you regained consciousness.]}{}{1}{}{230}{}
+{112}{Forget it! I'm not telling you anything!}{}{1}{}{0}{fl300 1,lf0 1}
+//Beginning of D15 Q's
+{125}{What do you want to know about this place?}{What do you want to know about this place?}{}{}{}{}
+{126}{What can you tell me about the layout of this facility?}{}{5}{}{150}{}
+{127}{Okie. I want know everything you know 'bout where tings are down here.}{}{-4}{}{150}{}
+{128}{What can you tell me about this Liebert fellow?}{}{5}{qb1001 0}{400}{}
+{129}{Uh... what you know bout Docter Leebert?}{}{-4}{qb1001 0}{400}{}
+{135}{Bye.}{}{1}{}{0}{}
+{150}{Well, I haven't ventured out to explore much yet- the robots are too dangerous. When we were all arriving to enter Coldsleep, things were too crazy to get much of a look around. Besides, all we got to see on the way in is the Ground Floor and the elevator shaft really, anyway.}{Well, I haven't ventured out to explore much yet- the robots are too dangerous. When we were all arriving to enter Coldsleep, things were too crazy to get much of a look around. Besides, all we got to see on the way in is the Ground Floor and the elevator shaft really, anyway.}{}{}{}{}
+{151}{I understand... can you tell me what you have learned, then?}{}{5}{}{155}{}
+{152}{Okie okie, me get it... so, you tell me what is around here?}{}{-4}{}{155}{}
+{153}{Nevermind. Let me ask you about Deep15...}{}{1}{}{125}{}
+{155}{Alright. Well, this area was mainly used for maintenance and storage as far as I can tell, so there are a couple of storerooms about. That elevator you might have noticed in the Coldsleep Clusters can take you up to levels 2, 3, and the Ground Level. There are also several different ventilation shafts scattered about that can take you to other areas... it's kind of a maze.}{Alright. Well, this area was mainly used for maintenance and storage as far as I can tell, so there are a couple of storerooms about. That elevator you might have noticed in the Coldsleep Clusters can take you up to levels 2, 3, and the Ground Level. There are also several different ventilation shafts scattered about that can take you to other areas... it's kind of a maze.}{}{}{}{}
+{156}{Hm. Not very helpful.}{}{5}{}{125}{}
+{157}{Uh. You no help.}{}{-4}{}{125}{}
+//Beginning of Intro
+{200}{Stop right where you are, mister! Don't come any closer! Who are you? What do you want?}{Stop right where you are, lady! Don't come any closer! Who are you? What do you want?}{}{}{}{}
+{201}{I'm not telling you anything until you tell me who *you* are.}{}{5}{}{210}{}
+{202}{I am @PCNAME@.  What's your name?}{}{5}{}{215}{}
+{203}{Me am @PCNAME@. Who you?}{}{-4}{}{215}{}
+{204}{Well, I was just in the neighborhood, and well, you know...}{}{5}{}{250}{}
+{205}{Um, me was um, just, taking a walk...}{}{-4}{}{250}{}
+{206}{Nevermind. I'm leaving.}{}{5}{}{220}{}
+{210}{Fair enough. I suppose if you've come to kill me, I'm as good as dead anyway. My name is Ares Quick. Now, may I ask who you are and what you're doing here?}{Fair enough. I suppose if you've come to kill me, I'm as good as dead anyway. My name is Ares Quick. Now, may I ask who you are and what you're doing here?}{}{}{}{}
+{211}{I'm @PCNAME@. I haven't a clue what I'm doing here. I can't remember much... I had strange dreams. I woke up on the floor in a cold room.}{}{5}{}{230}{}
+{212}{Me called @PCNAME@. I wake up all wet in the cold room. With the big beds.}{}{-4}{}{230}{}
+{213}{I not tell you anything! Good bye!}{}{-4}{}{220}{}
+{214}{I'd be a fool to give information freely to a stranger. Goodbye. }{}{5}{}{220}{}
+{215}{My name is Ares Quick. I assumed all of the inhabitants of this Deep World were either dead or fled. You seem to be neither. May I ask where you came from?}{My name is Ares Quick. I assumed all of the inhabitants of this Deep World were either dead or fled. You seem to be neither. May I ask where you came from?}{}{}{}{}
+{216}{I'm not exactly sure. I had a bizarre dream, and then woke up on the floor in a chilly room.}{}{5}{}{230}{}
+{217}{I'm not telling you anything more. Goodbye.}{}{5}{}{225}{}
+{218}{I not know for sure... wake up in cold room, after bad dreams. Cold and wet.}{}{-4}{}{230}{}
+{219}{I don' want talk to you anymore. Bye.}{}{-4}{}{225}{}
+{220}{Wait a second, where are you going? Look, because of... circumstances, I need to know who you are before I can help you. Will you trust me this far?}{Wait a second, where are you going? Look, because of... circumstances, I need to know who you are before I can help you. Will you trust me this far?}{}{}{}{}
+{221}{Fine. I'm @PCNAME@.}{}{5}{}{215}{}
+{222}{Hmmm... me guess so. I called @PCNAME@.}{}{-4}{}{215}{}
+{223}{No. Leave me alone.}{}{5}{}{0}{lf1 1, fl 300}
+{224}{No. You leave me 'lone now.}{}{-4}{}{0}{fl300 ,lf1 1}
+{225}{Ok, let me ask you something- are you confused? Having trouble remembering things? Remembering why you're here?}{Ok, let me ask you something- are you confused? Having trouble remembering things? Remembering why you're here?}{}{}{}{}
+{226}{...Yes.}{}{1}{}{240}{}
+{227}{Nope. Just stay away from me.}{}{1}{}{0}{fl 300, lf 1 1}
+{230}{That sounds like the coldsleep ejection room... My god, you must have somehow survived the coldsleep shutdown... then there could be others! My god, I didn't even stop to check!}{That sounds like the coldsleep ejection room... My god, you must have somehow survived the coldsleep shutdown... then there could be others! My god, I didn't even stop to check!}{}{}{}{lf2 1}
+{231}{Ok, I've answered your questions. Now you tell me something about this place...}{}{5}{}{125}{}
+{232}{Okie,  I tell you the stuff you ask me! Now I want to ask you bout this place!}{}{-4}{}{125}{}
+{240}{Just as I thought. Did you perhaps wake up in a room, alone? A room with some beds and such?}{Just as I thought. Did you perhaps wake up in a room, alone? A room with some beds and such?}{}{}{}{}
+{241}{...Yes.}{}{1}{}{245}{}
+{242}{No. Leave me alone!}{}{1}{}{0}{fl 300, lf 1 1}
+{245}{It sounds like you must have somehow survived the coldsleep shutdown! Then there may still be others... }{It sounds like you must have somehow survived the coldsleep shutdown! Then there may still be others... }{}{}{}{lf2 1}
+{246}{Alright, now it's my turn to ask you a few things about this place...}{}{5}{}{125}{}
+{247}{Okie! Now me ask you stuffs about Deep 50!!!!!!}{}{-4}{}{125}{}
+{250}{Right. In an underground habitat that's been almost completely sealed for nearly sixty years. How bout the truth?}{Right. In an underground habitat that's been almost completely sealed for nearly sixty years. How bout the truth?}{}{}{}{}
+{251}{I'm not telling you anything until you tell me who *you* are.}{}{5}{}{210}{}
+{252}{I am @PCNAME@.  What's your name?}{}{5}{}{215}{}
+{253}{Me am @PCNAME@. Who you?}{}{-4}{}{215}{}
+{254}{Nevermind. I'm leaving.}{}{5}{}{220}{}
+//Beginning of Floats
+{300}{Fine. Get ripped to shreds by the giant killer machines. It's your choice.}{Fine. Get ripped to shreds by the giant killer machines. It's your choice.}{}{}{}{}
+//Beginning of Liebert talk
+{400}{[He glares at the mention of Liebert's name.] Ah. Yes, Well, I guess the conversation had to get around to this sooner or later, eh? He's the bastard that's got me hiding like a rat down here. Most of the personnel files and logs have been erased, I would assume by him, but from what I have cobbled together, he just took this place over from the staff and colonists a few weeks ago. I don't know if any of em are left, hiding out or whatnot, but this place feels... empty.}{[He glares at the mention of Liebert's name.] Ah. Yes, Well, I guess the conversation had to get around to this sooner or later, eh? He's the bastard that's got me hiding like a rat down here. Most of the personnel files and logs have been erased, I would assume by him, but from what I have cobbled together, he just took this place over from the staff and colonists a few weeks ago. I don't know if any of em are left, hiding out or whatnot, but this place feels... empty.}{}{}{}{}
+{401}{Wow, that's a nasty turn of events. }{}{5}{}{420}{}
+{402}{I don't see what that has to do with me.}{}{5}{}{415}{}
+{403}{Oh, that sounds very very bad! }{}{-4}{}{420}{}
+{404}{Me not care! That not my problem!}{}{-4}{}{415}{}
+{415}{Well, it actually should be of very great significance to you, since Liebert's drones will undoubtedly kill you on sight just like they did to all the other humans here. And Liebert isn't letting anyone leave, either.}{Well, it actually should be of very great significance to you, since Liebert's drones will undoubtedly kill you on sight just like they did to all the other humans here. And Liebert isn't letting anyone leave, either.}{}{}{}{}
+{416}{Can he be reasoned with?}{}{5}{}{430}{}
+{417}{We talk him out of hurting us maybe?}{}{-4}{}{430}{}
+{418}{Well, I think we need to get find a way out of here then!}{}{5}{}{440}{}
+{419}{Okie den, we need to find a way out of here!}{}{-4}{}{440}{}
+{420}{Indeed. His drones would most likely execute you on sight.}{Indeed. His drones would most likely execute you on sight.}{}{}{}{}
+{421}{Can he be reasoned with?}{}{5}{}{430}{}
+{422}{We talk him out of hurting us maybe?}{}{-4}{}{430}{}
+{423}{Well, I think we need to get find a way out of here then!}{}{5}{}{440}{}
+{424}{Okie den, we need to find a way out of here!}{}{-4}{}{440}{}
+{430}{I don't know. Even if there is a chance he may be willing to let us go, I think it's too risky to try to contact him. I'd rather just find a way to get the hell out of here... tell me. Can I count on you to work with me to get out of here? }{I don't know. Even if there is a chance he may be willing to let us go, I think it's too risky to try to contact him. I'd rather just find a way to get the hell out of here... tell me. Can I count on you to work with me to get out of here?}{}{}{}{qu1001 1}
+{431}{You can count on me. [Truth]}{}{1}{}{500}{qu1001 2}
+{432}{You can count on me. [Lie]}{}{1}{}{500}{qu1001 2}
+{433}{Sorry, I can't do that right now. Maybe I'll be back later.}{}{1}{}{550}{}
+{500}{[Ares grins at you.] Spectacular! I know we can get this done, working together. I've been hammering at Liebert's security for days now, but I really need more information to obtain access to the security systems. }{[Ares grins at you.] Spectacular! I know we can get this done, working together. I've been hammering at Liebert's security for days now, but I really need more information to obtain access to the security systems.}{}{}{}{}
+{501}{Information?}{}{5}{}{505}{}
+{502}{Inframashun?}{}{-4}{}{505}{}
+{505}{Up on Ground Level, there's a small storage room which contains all the manuals and documentation for the security. I'm no good in a fight or sneaking about, but you look like you could get up there safely...}{Up on Ground Level, there's a small storage room which contains all the manuals and documentation for the security. I'm no good in a fight or sneaking about, but you look like you could get up there safely...}{}{}{}{}
+{506}{Alright, I'll give it a try... anything I should know?}{}{5}{}{520}{}
+{507}{Okie, me try... me guess. You gots any more useful things to tell me?}{}{-4}{}{520}{}
+{508}{No. Find someone else to do your tasks. I'll find my own way out.}{}{5}{}{550}{}
+{509}{Ha! Me not you slave, me find own way out! Bossy person!}{}{-4}{}{550}{}
+{520}{Well, last I checked the elevator wasn't even running. So getting to the ground floor won't be easy. You'll either have to restore power to the elevator, or work your way up through the vents and maintenance tunnels. Here's a key I found in the Recovery Chambers. It's labelled "Arms". Sounds like it could be useful, eh?}{Well, last I checked the elevator wasn't even running. So getting to the ground floor won't be easy. You'll either have to restore power to the elevator, or work your way up through the vents and maintenance tunnels. Here's a key I found in the Recovery Chambers. It's labelled "Arms". Sounds like it could be useful, eh?}{}{}{}{in-4602 }
+{521}{Certainly. Any tips on restoring power to the elevator?}{}{5}{}{530}{}
+{522}{Thanks! Now, how me give power back to elvader?}{}{-4}{}{530}{}
+{523}{I'd like to try to go through the tunnels. Any suggestions?}{}{5}{}{540}{}
+{524}{Me gonna try tunnels. Where to go?}{}{-4}{}{540}{}
+{530}{You'll need to do it from the Circuit Controller box. It's around the corner and through the north tunnels, near that corpse I found.}{You'll need to do it from the Circuit Controller box. It's around the corner and through the north tunnels, near that corpse I found.}{}{}{}{}
+{531}{What corpse?}{}{1}{}{42}{}
+{532}{Tell me how to get through these tunnels...}{}{5}{}{540}{}
+{532}{Okie, can you tell me how to get through back way now?}{}{-4}{}{540}{}
+{534}{Let's discuss something else...}{}{5}{}{1}{}
+{535}{We talk bout somethin else now.}{}{-4}{}{1}{}
+{540}{I suppose you could try that maintenance door to the west, but its locked and I don't know where the key is to be found. }{I suppose you could try that maintenance door to the west, but its locked and I don't know where the key is to be found. }{}{}{}{}
+{541}{Okie. Now me ask you bout way to fix elvader.}{}{-4}{}{530}{}
+{542}{Alright. Now how can I get this elevator working?}{}{5}{}{530}{}
+{543}{Thanks. Let's discuss something else.}{}{5}{}{1}{}
+{544}{Thank you very much! We talk bout something else now.}{}{-4}{}{1}{}
+{550}{Suit yourself. Somehow I doubt Liebert will be interested in an alliance, but if you think you can take him on... feel free.}{Suit yourself. Somehow I doubt Liebert will be interested in an alliance, but if you think you can take him on... feel free.}{}{}{}{}
+{551}{Bye.}{}{1}{}{0}{}

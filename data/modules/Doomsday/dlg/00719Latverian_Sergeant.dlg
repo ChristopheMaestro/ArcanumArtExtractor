@@ -1,0 +1,45 @@
+{1}{Yes?  What can I do for you sir?}{Yes?  What can I do for you sir?}{}{}{}{}
+{2}{Who are you?}{}{5}{}{10}{}
+{3}{What are you doing here?}{}{5}{}{20}{}
+{4}{I've found Private Rosenburg.  Unfortunately he's dead.}{}{5}{qu1010 3}{70}{}
+{9}{E:}{}{1}{}{0}{}
+
+{10}{I am the Latverian Sergeant at Arms.  I make sure our troops are equipped and ready for battle.}{I am the Latverian Sergeant at Arms.  I make sure our troops are equipped and ready for battle.}{}{}{}{}
+{11}{Okay.  So are they ready?}{}{5}{qu1010 0}{30}{}
+{12}{What are you doing here?}{}{5}{}{20}{}
+{19}{E:}{}{1}{}{0}{}
+
+{20}{I am training the Latverian troops to be disciplined and efficient in their battle tactics.}{I am training the Latverian troops to be disciplined and efficient in their battle tactics.}{}{}{}{}
+{21}{So are they getting it?}{}{5}{qu1010 0}{30}{}
+{29}{E:}{}{1}{}{0}{}
+
+{30}{Of course they are!  Well, all except one of them.}{Of course they are!  Well, all except one of them.}{}{}{}{}
+{31}{Who?}{}{5}{}{40}{}
+{39}{E:}{}{1}{}{0}{}
+
+{40}{A Private Rosenburg.  I sent him over to the Soldier Training grounds just east of town.  He was due back yesterday, but he never returned.}{A Private Rosenburg.  I sent him over to the Soldier Training grounds just east of town.  He was due back yesterday, but he never returned.}{}{}{}{}
+{41}{So why haven't you gone looking for him?}{}{5}{}{50}{}
+{49}{E:}{}{1}{}{0}{}
+
+{50}{He's a big boy, he can take care of himself.  Besides we haven't had any time to go wandering after him.  Perhaps you could help us with this matter?}{He's a big boy, he can take care of himself.  Besides we haven't had any time to go wandering after him.  Perhaps you could help us with this matter?}{}{}{}{qu1010 1}
+{51}{Sure.  What do you want me to do?}{}{5}{}{60}{qu1010 2}
+{59}{E:}{}{1}{}{0}{}
+
+{60}{Just go check out the Soldier Training grounds to the east of town and let me know if you find him.}{Just go check out the Soldier Training grounds to the east of town and let me know if you find him.}{}{}{}{}
+{61}{Alright.  I'll let you know if I find him.}{}{5}{}{0}{}
+{62}{If I'm going to do this, some armour would be paramount to my success.}{}{5}{qu1010 2, ps 4}{80}{}
+{69}{E:}{}{1}{}{0}{}
+
+{70}{[shakes his head]  I told that boy to be careful.  He obviously tried to take on more than he could handle.  Thank you for your efforts.  Here, take a key to my chest in the barracks.  It's the one in the private room.  Help yourself to some equipment - you've earned it.}{[shakes his head]  I told that boy to be careful.  He obviously tried to take on more than he could handle.  Thank you for your efforts.  Here, take a key to my chest in the barracks.  It's the one in the private room.  Help yourself to some equipment - you've earned it.}{}{}{}{xp 20, xp 20, qu1010 4}
+{71}{Thanks.  [take his key]}{}{5}{}{-2}{}
+
+{80}{Here.  Take these boots.  They should help protect you at the training grounds.}{Here.  Take these boots.  They should help protect you at the training grounds.}{}{}{}{}
+{81}{Okay.  I'll let you know if I find anything.  [take the boots]}{}{5}{}{-4}{xp 20, xp 20, xp 20}
+
+{90}{Lord Doom would like to see you regarding a matter of the utmost urgency.}{Lord Doom would like to see you regarding a matter of the utmost urgency.}{}{}{}{}
+{91}{Very well.}{}{5}{}{1}{}
+{92}{Uh huh.}{}{-4}{}{1}{}
+
+
+
+{}{}{}{}{}{}{}

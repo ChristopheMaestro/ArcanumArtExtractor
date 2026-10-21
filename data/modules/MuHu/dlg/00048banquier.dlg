@@ -1,0 +1,52 @@
+// [LABEL] debut
+{1}{Bonjour monsieur. Que puis-je pour vous?}{Bonjour monsieur. Que puis-je pour vous?}{}{1}{}{}
+{2}{Je voudrais te tuer. Est-ce possible?}{}{1}{}{21}{}
+{3}{Ben, j'aimerai avoir de l'argent.}{}{1}{qu1010 0}{61}{}
+{4}{Rien a+}{}{1}{}{}{}
+{5}{Ahah, je vous ai balancé au flics. Ils ne vont pas tarder à venir vous chercher.}{}{1}{qu1012 4}{141}{}
+{6}{J'ai du tuer Lee Jacob, mais il n'avait rien sur lui.}{}{1}{qu1010 3}{161}{}
+
+// [LABEL] te tuer
+{21}{Je ne crains que ce ne soit pas possible. Desole monsieur.}{Je ne crains que ce ne soit pas possible. Desole monsieur.}{}{2}{}{}
+{22}{Ah ben merde alors. Bon ben tant pis. Au revoir.}{}{1}{}{}{}
+{23}{C'est vraiment nulle comme banque on peut rien faire.}{}{1}{}{41}{}
+{24}{Ben je vais comme même vous tuer, pasque je m'embete un peu et que j'ai besoin de distraction.}{}{1}{}{}{co}
+
+// [LABEL] nulle comme banque
+{41}{Desole monsieur mais c'est la règle. Vous desirez autre chose?}{Desole monsieur mais c'est la règle. Vous desirez autre chose?}{}{3}{}{}
+{42}{Ben du fric.}{}{1}{qu1010 0}{61}{}
+{43}{Non rien au revoir.}{}{1}{}{}{}
+
+// [LABEL] du fric
+{61}{Je vois, monsieur est a cours d'argent. Bien si vous faites quelque chose pour moi on pourra arranger cela.}{Je vois, monsieur est a cours d'argent. Bien si vous faites quelque chose pour moi on pourra arranger cela.}{}{4}{}{}
+{62}{Et que dois-je faire?}{}{1}{}{81}{}
+{63}{Ca ne m'interesse pas. Au revoir.}{}{1}{}{}{}
+
+// [LABEL] que dois faire
+{81}{Bien, un client à moi ne m'a pas remboursé, j'aimerai que vous aillez le voir et que vous l'obligiez à me rembourser.}{Bien, un client à moi ne m'a pas remboursé, j'aimerai que vous aillez le voir et que vous l'obligiez à me rembourser.}{}{5}{}{qu1010 1}
+{82}{Ok, ca marche je reviens avec le fric, où se trouve le client recalcitrant?}{}{1}{}{101}{}
+{83}{Et s'il ne veut pas rembourser?}{}{1}{}{121}{}
+{84}{Ca ne m'interesse pas, au revoir}{}{1}{}{}{}
+
+// [LABEL] client
+{101}{IL se trouve à Kikicity. Il s'appelle Lee Jacob.}{IL se trouve à Kikicity. Il s'appelle Lee Jacob.}{}{6}{}{}
+{102}{Ok je reviens avec son fric.}{}{1}{}{}{qu1010 2}
+
+// [LABEL] pas rembourser
+{121}{Je m'en fiche, va chercher Lee Jacob à Kikicity. Je veux mon argent un point c'est tout!}{Je m'en fiche, va chercher Lee Jacob à Kikicity. Je veux mon argent un point c'est tout!}{}{7}{}{}
+{122}{Tres bien je reviens avec l'argent.}{}{1}{}{}{qu1010 2}
+{123}{ca ne m'interesse pas, au revoir.}{}{1}{}{}{}
+
+// [LABEL] blance
+{141}{Comment as-tu osé, fils de chacal puant!}{Comment as-tu osé, fils de chacal puant!}{}{8}{}{}
+{142}{Ahahahah, you never win mouahahahah}{}{1}{}{}{}
+
+// [LABEL] tuer Lee
+{161}{Je le savais deja qu'il n'avait rien sur lui. Cet homme m'avait vu escroquer certaines personnes et il allait bientôt porter plainte à la police. Il fallait absolument le tuer et vous vous en êtes charger avec brio.}{Je le savais deja qu'il n'avait rien sur lui. Cet homme m'avait vu escroquer certaines personnes et il allait bientôt porter plainte à la police. Il fallait absolument le tuer et vous vous en êtes charger avec brio.}{}{9}{}{}
+{162}{Quoi! Il était innocent! Tu vas payer pour cela!}{}{1}{}{}{co}
+{163}{Mmm, ce n'est pas grâve. Avez-vous l'argent comme promis?}{}{1}{}{181}{}
+
+// [LABEL] avezvous l'argent
+{181}{Oui, tenez voila vote du. N'hesitez surtout pas à revenir si vous voulez plus d'argent.}{Oui, tenez voila vote du. N'hesitez surtout pas à revenir si vous voulez plus d'argent.}{}{10}{}{}
+{182}{Je n'y manquerais pas. Au revoir.}{}{1}{}{}{$$1000}
+

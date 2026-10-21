@@ -1,0 +1,132 @@
+// General store trader, also sells special/hard to find items.
+// Guns: Flame Thrower, Tranquilizer Gun, Grenade Launcher
+// Swords/Axes: Envenomed Sword, Barbarians Heavy Blade, Charged Axe
+// Useful Items: Steam Engine, Large Gears, Dynamite, Shovel
+// Gift Ideas: Music Box, Vase, Pocket Watch, Morning Star Perfume, (Use in a gift quest?)
+// 3 Throwing Daggers included free with EVERY purchase :)
+{1}{Hello there sir, can I help you or are you just browsing? Perhaps I can interest you in a 'unique' item?}{Hello there ma'am, can I help you or are you just browsing? Perhaps I can interest you in a 'unique' item?}{}{}{}{}
+{2}{What kind of 'unique' items do you sell?}{}{5}{lf0 0}{20}{}
+{3}{Wat kind of 'yoo-neek' stuff you sell?}{}{-4}{lf0 0}{20}{}
+{4}{Can I have a look at your 'unique' goods?}{}{5}{lf0 1}{30}{}
+{5}{Me wunna see yoor 'yoo-neek' stuff.}{}{-4}{lf0 1}{30}{}
+{6}{B:}{}{1}{}{0}{}
+{7}{Can you train me to be a good salesman like yourself?}{}{5}{lf1 1, tr9 -2}{110}{}
+{8}{Me wunna be sailsman like you! Kan me get trayning?}{}{-4}{lf1 1, tr9 -2}{110}{}
+// I need to buy a new stove for Mrs XXX
+{9}{E:}{}{1}{}{0}{}
+
+{20}{Ahhh.... I sell all sorts of things! Anything that is 'unique' and is usually hard to find I sell right here. For a price of course! As a special offer, I throw in a set of Throwing Daggers with every purchase.}{Ahhh.... I sell all sorts of things! Anything that is 'unique' and is usually hard to find I sell right here. For a price of course! As a special offer, I throw in a set of Throwing Daggers with every purchase.}{}{}{}{lf0 1}
+{21}{I'd like to look at your 'unique' goods.}{}{5}{}{30}{}
+{22}{Me wunna see yoor 'yoo-neek' stuff.}{}{-4}{}{30}{}
+{23}{B:}{}{1}{}{0}{}
+{24}{E:}{}{1}{}{0}{}
+
+{30}{Certainly sir, which area of 'unique' merchandise interests you in particular? I have some hard to find Firearms, a range of Melee Weapons, a superb collection of always Useful Items and a swag of Gift Ideas! An absolutely free set of Throwing Daggers is included with every purchase. No conditions apply!}{Certainly sir, which area of 'unique' merchandise interests you in particular? I have some hard to find Firearms, a range of Melee Weapons, a superb collection of always Useful Items and a swag of Gift Ideas! An absolutely free set of Throwing Daggers is included with every purchase. No conditions apply!}{}{}{}{}
+{31}{I'd like to see your Firearms.}{}{5}{}{40}{}
+{32}{Me wunna see yoor Firearms.}{}{-4}{}{40}{}
+{33}{May I see your range of Melee Weapons?}{}{5}{}{50}{}
+{34}{Kan me see yoor Melee Weapons?}{}{-4}{}{50}{}
+{35}{I think I'm in need of a Useful Item.}{}{5}{}{60}{}
+{36}{Me dink me need a Yooseful Iytem.}{}{-4}{}{60}{}
+{37}{I'm interested in your Gift Ideas.}{}{5}{}{70}{}
+{38}{Ooohh! Me wunna see Gift Iydeas.}{}{-4}{}{70}{}
+{39}{F:}{}{1}{}{80}{}
+
+// Firearms: {6041}{Flame Thrower}, {6159}{Tranquilizer Gun}, {6155}{Grenade Launcher}
+{40}{Fancy yourself a bit of a Firearms enthusiast? Well then sir, I have three very fine weapons to choose from. There's everybody's favourite, the Flamethrower for 3330 coin. The pacifists choice of the Tranquilizer Gun for 5110 coin and the ultimate weapon of mass destruction, the Grenade Launcher for 7260 coin.}{Fancy yourself a bit of a Firearms enthusiast? Well then sir, I have three very fine weapons to choose from. There's everybody's favourite, the Flamethrower for 3330 coin. The pacifists choice of the Tranquilizer Gun for 5110 coin and the ultimate weapon of mass destruction, the Grenade Launcher for 7260 coin.}{}{}{}{}
+{41}{I'll take the Flamethrower. [Pay 3330 coin]}{}{5}{$$3330}{-2}{$$-3330, pv1 6041}
+{42}{Ooohh! Me want Flaymefrower! [Pay 3330 coin]}{}{-4}{$$3330}{-2}{$$-3330, pv1 6041}
+{43}{The Tranquilizer Gun sounds good. [Pay 5110 coin]}{}{5}{$$5110}{-2}{$$-5110, pv1 6159}
+{44}{Me haf' da Traynkwillizer Gun. [Pay 5110 coin]}{}{-4}{$$5110}{-2}{$$-5110, pv1 6159}
+{45}{I'd like to wreak havoc with the Grenade Launcher. [Pay 7260 coin]}{}{5}{$$7260}{-2}{$$-7260, pv1 6155}
+{46}{I wunna blow t'ings up wit da Grenayde Lawncha. [Pay 7260 coin]}{}{-4}{$$7260}{-2}{$$-7260, pv1 6155}
+{47}{F:}{}{1}{}{80}{}
+
+// Melee Weapons: {6038}{Envenomed Sword}, {6093}{Barbarian's Heavy Blade}, {6132}{Charged Axe}
+{50}{Hand to hand combat is a fine art sir! Now, I have three exquisite weapons to choose from. An Envenomed Sword for 1645 coin, The Barbarian's Heavy Blade for 1271 coin and a wonderful Charged Axe for 2350 coin. Which would you like?}{Hand to hand combat is a fine art sir! Now, I have three exquisite weapons to choose from. An Envenomed Sword for 1645 coin, The Barbarian's Heavy Blade for 1271 coin and a wonderful Charged Axe for 2350 coin. Which would you like?}{}{}{}{}
+{51}{I'll take the Envenomed Sword. [Pay 1645 coin]}{}{5}{$$1645}{-2}{$$-1645, pv1 6038}
+{52}{Me wunna haf' Envenomed Sword. [Pay 1645 coin]}{}{-4}{$$1645}{-2}{$$-1645, pv1 6038}
+{53}{The Barbarian's Heavy Blade sounds good. [Pay 1271 coin]}{}{5}{$$1271}{-2}{$$-1271, pv1 6093}
+{54}{Ooohhh! Barbearian's Hevee Blayde pleese. [Pay 1271 coin]}{}{-4}{$$1271}{-2}{$$-1271, pv1 6093}
+{55}{I'd like the Charged Axe. [Pay 2350 coin]}{}{5}{$$2350}{-2}{$$-2350, pv1 6132}
+{56}{Me want Charged Axe. [Pay 2350 coin]}{}{-4}{$$2350}{-2}{$$-2350, pv1 6132}
+{57}{F:}{}{1}{}{80}{}
+
+
+// Useful Items: {15090}{Small Steam Engine}, {15091}{Large Gears}, {15134}{Dynamite}, {15126}{Shovel}
+{60}{Ahhhh... I have a fine selection of Useful Items. Can I interest you in a Steam Engine for 7342 coin? Perhaps you'd like some Large Gears for 1374 coin or maybe some Dynamite for 522 coin? If you're interested, I have a special offer on Shovels, only 175 coin each!}{Ahhhh... I have a fine selection of Useful Items. Can I interest you in a Steam Engine for 7342 coin? Perhaps you'd like some Large Gears for 1374 coin or maybe some Dynamite for 522 coin? If you're interested, I have a special offer on Shovels, only 175 coin each!}{}{}{}{}
+{61}{I'll take a Steam Engine. [Pay 7342 coin]}{}{5}{$$7342}{-2}{$$-7342, pv1 15090}
+{62}{Me haf' Steam Engine. [Pay 7342 coin]}{}{-4}{$$7342}{-2}{$$-7342, pv1 15090}
+{63}{I need some Large Gears please. [Pay 1374 coin]}{}{5}{$$1374}{-2}{$$-1374, pv1 15091}
+{64}{Me need Large Gears pleese. [Pay 1374 coin]}{}{-4}{$$1374}{-2}{$$-1374, pv1 15091}
+{65}{Ooohhh! I've gotta have some Dynamite! [Pay 522 coin]}{}{5}{$$522}{-2}{$$-522, pv1 15134}
+{66}{Oohhh! Me wunna get Dynarmiyte! [Pay 522 coin]}{}{-4}{$$522}{-2}{$$-522, pv1 15134}
+{67}{I require a Shovel. [Pay 175 coin]}{}{5}{$$175}{-2}{$$-175, pv1 15126}
+{68}{Kan me haf' Shovel? [Pay 175 coin]}{}{-4}{$$175}{-2}{$$-175, pv1 15126}
+{69}{F:}{}{1}{}{80}{}
+
+// Gift Ideas: {15105}{Music Box}, {15117}{Pocket Watch}, {15104}{Vase}, {10094}{Morning Star Perfume}
+{70}{Superb sir! I have many wonderful Gift Ideas. I have Music Boxes for only 78 coin each, Pocket Watches for 129 coin, Vases to keep your flowers in for 30 coin each and Morning Star Perfume for only 9 coin a bottle!}{Superb sir! I have many wonderful Gift Ideas. I have Music Boxes for only 78 coin each, Pocket Watches for 129 coin, Vases to keep your flowers in for 30 coin each and Morning Star Perfume for only 9 coin a bottle!}{}{}{}{}
+{71}{Music Box. [Pay 78 coin]}{}{5}{$$78}{-2}{$$-78, pv1 15105}
+{72}{Music Box. [Pay 78 coin]}{}{-4}{$$78}{-2}{$$-78, pv1 15105}
+{73}{Pocket Watch. [Pay 129 coin]}{}{5}{$$129}{-2}{$$-129, pv1 15117}
+{74}{Pocket Watch. [Pay 129 coin]}{}{-4}{$$129}{-2}{$$-129, pv1 15117}
+{75}{Vase. [Pay 30 coin]}{}{5}{$$30}{-2}{$$-30, pv1 15104}
+{76}{Vase. [Pay 30 coin]}{}{-4}{$$30}{-2}{$$-30, pv1 15104}
+{77}{Morning Star Perfume. [Pay 9 coin]}{}{5}{$$9}{-2}{$$-9, pv1 10094}
+{78}{Morning Star Perfume. [Pay 9 coin]}{}{-4}{$$9}{-2}{$$-9, pv1 10094}
+{79}{F:}{}{1}{}{80}{}
+
+{80}{Well then sir, is there anything else I can help you with? A vase to keep your flowers in perhaps?}{Well then madame, is there anything else I can help you with? A vase to keep your flowers in perhaps?}{}{}{}{}
+{81}{I'd like to look at your 'unique' items.}{}{5}{}{30}{}
+{82}{Me wunna look at yoor 'yoo-neek' stuff.}{}{-4}{}{30}{}
+{83}{B:}{}{1}{}{0}{}
+{84}{You're a good salesman, perhaps you could train me?}{}{5}{lf1 1, tr9 -2}{110}{}
+{85}{You be good sailsman. Kan you trayne me?}{}{-4}{lf1 1, tr9 -2}{110}{}
+{86}{E:}{}{1}{}{0}{}
+
+// This line is shown after PC makes a purchase. PC has to make a purchase in order to get training as an option. {6052}{Throwing Dagger}
+{100}{There you go sir! But wait.... There's more! Here, have your free set of Throwing Daggers as well, included for absolutely no additional charge! [He gives you some Throwing Daggers] Now, will there be anything else?}{There you go madame! But wait.... There's more! Here, have your free set of Throwing Daggers as well, included for absolutely no additional charge! [He gives you some Throwing Daggers] Now, will there be anything else?}{}{}{}{lf1 1}
+{101}{B:}{}{1}{}{0}{}
+{102}{I'd like to look at your 'unique' items.}{}{5}{}{30}{}
+{103}{Me wunna look at yoor 'yoo-neek' stuff.}{}{-4}{}{30}{}
+{104}{You're a good salesman, perhaps you could train me?}{}{5}{tr9 -2}{110}{}
+{105}{You be good sailsman. Kan you trayne me?}{}{-4}{tr9 -2}{110}{}
+{106}{E:}{}{1}{}{0}{}
+
+{110}{So, you want to learn how to Haggle like a Master do you sir? What kind of training can I interest you in?}{So, you want to learn how to Haggle like a Master do you madame? What kind of training can I interest you in?}{}{}{}{}
+{111}{T: 9}{}{1}{tr9 -1}{80}{}
+{112}{Train me to be a Haggle Expert.}{}{5}{tr9 -1}{80}{et9 125} 
+{113}{Me need trayning to be Haggle Expert.}{}{-4}{tr9 -1}{80}{et9 125}
+{114}{I'd like to be a Master of Haggle like you.}{}{5}{sk9 18, tr9 2, tr9 -2}{140}{}
+{115}{I'd like to be a Master of Haggle like you.}{}{5}{sk9 18, tr9 -1}{160}{}
+{116}{I'd like to be a Master of Haggle like you.}{}{5}{sk9 -17}{170}{}
+{117}{Me wunna be Master of Haggle like you!}{}{-4}{sk9 18, tr9 2, tr9 -2}{140}{}
+{118}{Me wunna be Master of Haggle like you!}{}{-4}{sk9 18, tr9 -1}{160}{}
+{119}{Me wunna be Master of Haggle like you!}{}{-4}{sk9 -17}{170}{}
+{120}{E:}{}{1}{}{0}{}
+
+
+{125}{Well, you've certainly got what it takes to be an Expert. How about I train you to be an Expert in Haggle for the bargain basement price of 400 coin. You won't find cheaper training in ALL of Arcanum!}{Well, you've certainly got what it takes to be an Expert. How about I train you to be an Expert in Haggle for the bargain basement price of 400 coin. You won't find cheaper training in ALL of Arcanum!}{}{}{}{} 
+{126}{That sounds like a good deal. [Give him 400 coin]}{}{5}{$$400}{130}{tr9 2, $$-400} 
+{127}{Dat be okay. [Give him 400 coin]}{}{-4}{$$400}{130}{tr9 2, $$-400} 
+{128}{F:}{}{1}{}{80}{} 
+
+{130}{[He takes the 400 coin] All right then. The key to being an Expert is getting the other person to buy anything you want to sell. The trick you've got to use is to convince them that this is a once-in-a-lifetime offer and if they wait, they'll miss out. I use this trick all the time and it ALWAYS works!}{[He takes the 400 coin] All right then. The key to being an Expert is getting the other person to buy anything you want to sell. The trick you've got to use is to convince them that this is a once-in-a-lifetime offer and if they wait, they'll miss out. I use this trick all the time and it ALWAYS works!}{}{}{}{} 
+{131}{A:}{}{1}{}{80}{} 
+
+{140}{Hmmm... [He looks you over] You're certainly skilled enough for Master Training in Haggle. Tell you what, I'll give you Master training for the special price of 750 coin. What do you say?}{Hmmm... [He looks you over] You're certainly skilled enough for Master Training in Haggle. Tell you what, I'll give you Master training for the special price of 750 coin. What do you say?}{}{}{}{}
+{141}{That sounds agreeable. [Give him 750 coin]}{}{5}{$$750}{150}{tr9 3, $$-750}
+{142}{Okay. [Give him 750 coin]}{}{-4}{$$750}{150}{tr9 3, $$-750}
+{143}{F:}{}{1}{}{80}{}
+
+{150}{[He takes the coin] Well then, the key to successful Master Haggling is all in the way you act. You see, you've got to act POOR. If you act all rich and upper class like, then you're guaranteed to be overcharged. Next time you're making a deal, try your hardest to look poor. It NEVER fails!}{[He takes the coin] Well then, the key to successful Master Haggling is all in the way you act. You see, you've got to act POOR. If you act all rich and upper class like, then you're guaranteed to be overcharged. Next time you're making a deal, try your hardest to look poor. It NEVER fails!}{}{}{}{} 
+{151}{A:}{}{1}{}{80}{}
+
+{160}{Listen, you can't have Master Haggle training until you're an Expert first. [He looks you over] It looks like you've got the skill for Master training though. So how about you get some Expert training, then I'll see what I can do about making you a Master Haggler.}{Listen, you can't have Master Haggle training until you're an Expert first. [He looks you over] It looks like you've got the skill for Master training though. So how about you get some Expert training, then I'll see what I can do about making you a Master Haggler.}{}{}{}{}
+{161}{A:}{}{1}{}{80}{}
+
+{170}{I'm sorry, but you don't have the necessary skill to be trained as a Master. You need to be pretty good at Haggling before I can just go and train you to be a Master. How about you come back once you've got the right skills.}{I'm sorry, but you don't have the necessary skill to be trained as a Master. You need to be pretty good at Haggling before I can just go and train you to be a Master. How about you come back once you've got the right skills.}{}{}{}{} 
+{171}{A:}{}{1}{}{80}{}
+
+// {Y}{}{}{INT}{}{XXX}{}

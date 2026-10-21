@@ -1,0 +1,40 @@
+{1}{Oui?}{Oui?}{}{1}{}{}
+{2}{W:}{}{1}{lf1 0}{30}{lf1 1}
+{3}{B:}{}{1}{lf1 1}{0}{}
+{4}{En quelle matière les épées les plus résistantes sont-elles forgées?}{}{5}{lf1 1, ru1010 1, lf2 0}{60}{lf2 1}
+{5}{@pcname@ chercher épéee résistante beaucoup beaucoup.}{}{-4}{lf1 1, ru1010 1, lf2 0}{60}{lf2 1}
+{6}{Je vous apporte du pur alliage.}{}{5}{lf2 1, in5622, lf3 0}{-2}{in5622, lf3 1}
+{7}{Voilà pur alliage.}{}{-4}{lf2 1, in5622, lf3 0}{-2}{in5622, lf3 1}
+{8}{[Vous lui tendez les 50 pièces pour acheter l'épée forgée]}{}{1}{$$50, lf3 1, lf4 1}{-5}{$$-50}
+{9}{E:}{}{1}{}{0}{}
+
+{30}{Je m'appelle Vincent bellefesse. Je suis forgeron. Si vous cherchez une bonne lame, vous êtes au bon endroit, l'ami.}{Je m'appelle Vincent bellefesse. Je suis forgeron. Si vous cherchez une bonne lame, vous êtes au bon endroit, l'amie.}{}{2}{}{}
+{31}{B:}{}{1}{lf1 1}{0}{}
+{32}{En quelle matière les épées les plus résistantes sont-elles forgées?}{}{5}{lf1 1, ru1010 1, lf2 0}{60}{lf2 1}
+{33}{@pcname@ chercher épéee résistante beaucoup beaucoup.}{}{-4}{lf1 1, ru1010 1, lf2 0}{60}{lf2 1}
+{34}{Voici du pur alliage, justement.}{}{5}{lf2 1, in5622, lf3 0}{-2}{in5622, lf3 1}
+{35}{Voilà pur alliage.}{}{-4}{lf2 1, in5622, lf3 0}{-2}{in5622, lf3 1}
+{36}{E:}{}{1}{}{0}{}
+
+{60}{Les lames les plus solides sont forgées à partir de pur alliage, pour sûr! Si vous m'en fournissez, je pourrai vous forger une épée de qualité.}{Les lames les plus solides sont forgées à partir de pur alliage, pour sûr! Si vous m'en fournissez, je pourrai vous forger une épée de qualité.}{}{3}{}{}
+{61}{B:}{}{1}{lf1 1}{0}{}
+{62}{Voici du pur alliage, justement.}{}{5}{lf2 1, in5622, lf3 0}{-2}{in5622, lf3 1}
+{63}{Voilà pur alliage.}{}{-4}{lf2 1, in5622, lf3 0}{-2}{in5622, lf3 1}
+{64}{E:}{}{1}{}{0}{}
+
+{90}{[Le gnome vous arrache des mains le pur alliage et se met à forger comme un forçonné]}{[Le gnome vous arrache des mains le pur alliage et se met à forger comme un forçonné]}{}{}{}{}
+{91}{[Suite]}{}{1}{}{100}{lf4 1}
+
+{100}{Voilà! Votre épée est prête. Je vous la vends pour 50 pièces d'or seulement, puisque vous m'avez apporté le pur alliage.}{Voilà! Votre épée est prête. Je vous la vends pour 50 pièces d'or seulement, puisque vous m'avez apporté le pur alliage.}{}{4}{}{}
+{110}{[Vous lui tendez les 50 pièces]}{}{1}{$$50}{-5}{$$-50, lf4 0}
+{111}{Je reviendrai quand j'aurai l'argent.}{}{5}{$$-49}{0}{}
+{112}{@pcname@ revenir avec argent.}{}{5}{$$-49}{0}{}
+{113}{N:}{}{1}{}{0}{}
+
+{130}{Voici l'épée, l'ami! Faîtes en bonne usage!}{Voici l'épée, l'ami! Faîtes en bonne usage!}{}{5}{}{}
+{131}{B:}{}{1}{}{0}{}
+{132}{A:}{}{1}{}{0}{}
+
+
+
+

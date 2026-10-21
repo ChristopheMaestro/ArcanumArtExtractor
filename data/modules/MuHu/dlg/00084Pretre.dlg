@@ -1,0 +1,56 @@
+// [LABEL] bjour
+{1}{Bonjour mon fils.}{Bonjour ma fille.}{}{1}{}{}
+{2}{Bonjour, pouvez vous me renseigner ?}{}{1}{}{21}{}
+{3}{Si j'étais vraiment ton fils, j'aurais honte.}{1}{1}{}{41}{}
+{4}{Si j'étais vraiment ta fille j'aurais honte.}{0}{1}{}{41}{}
+{5}{E:}{}{1}{}{}{}
+
+// [LABEL] Renseigner
+{21}{Bien sûr, quels renseignements puis-je vous donner ?}{Bien sûr, quels renseignements puis-je vous donner ?}{}{2}{}{}
+{22}{C'est quoi cet endroit ?}{}{1}{}{61}{}
+{23}{E:}{}{1}{}{}{}
+
+// [LABEL] honte
+{41}{Mon Dieu, quelle horreur ! veuillez sortir d'ici tout de suite, on ne profère pas de telles paroles devant moi !}{Mon Dieu, quelle horreur ! veuillez sortir d'ici tout de suite, on ne profère pas de telles paroles devant moi !}{}{3}{}{}
+{42}{C'est ça, bon débarras vieux fou !}{}{1}{}{}{}
+{43}{Excusez moi, c'était juste de l'humour, je veux juste des infos...}{}{1}{}{21}{}
+
+// [LABEL] endroit
+{61}{Cet endroit est un foyer pour handicapés mentaux, ceux que vous voyez autour de vous en sont de bons exemples...}{Cet endroit est un foyer pour handicapés mentaux, ceux que vous voyez autour de vous en sont de bons exemples...}{}{4}{}{}
+{62}{Mais quelles sont les causes de leur maladie ?}{}{1}{}{81}{}
+{63}{E:}{}{1}{}{}{}
+
+// [LABEL] kozmaladi
+{81}{Oh, les pauvres ont tous subi la même chose : les malheureux ont tous regardé le "Hit Machine" une émission de cette satanée télévision... Evidemment ils arrivent encore à dire bonjour comme ils peuvent mais ils ne réfléchissent plus à ce qu'ils font...}{Oh, les pauvres ont tous subi la même chose : les malheureux ont tous regardé le "Hit Machine" une émission de cette satanée télévision... Evidemment ils arrivent encore à dire bonjour comme ils peuvent mais ils ne réfléchissent plus à ce qu'ils font...}{}{5}{}{}
+{82}{C'est terrible...Mais comment en sont-ils arrivés là !?}{}{1}{}{101}{}
+{83}{Vous n'aimez pas la télévision ?}{}{1}{}{121}{}
+{84}{Pourquoi des tombes devant l'asi...le foyer ?}{}{1}{}{161}{}
+{85}{E:}{}{1}{}{}{}
+
+// [LABEL] arrivélà
+{101}{Hé bien à force d'écouter les conneries (excusez moi pour le gros mot) dites par les animateurs, leur cerveau a totalement disjoncté et maintenant voilà le résultat....quel gâchis.}{Hé bien à force d'écouter les conneries (excusez moi pour le gros mot) dites par les animateurs, leur cerveau a totalement disjoncté et maintenant voilà le résultat....quel gâchis.}{}{6}{}{}
+{102}{C'est dommage en effet...je vais devoir y aller. Bonne chance.}{}{1}{}{}{}
+
+// [LABEL] palatélé
+{121}{Je déteste ça ! les gens sont abrutis par cette machine et personne ne réagit ! scandaleux ! Je me demande où nous allons !}{Je déteste ça ! les gens sont abrutis par cette machine et personne ne réagit ! scandaleux ! Je me demande où nous allons !}{}{7}{}{}
+{122}{Vous exagérez un peu, quand même. }{}{1}{}{141}{}
+{123}{Eh-oh faut se calmer un peu ! Tu te prends pour qui pour parler comme ça ?}{}{1}{}{181}{}
+{124}{E:}{}{1}{}{}{}
+
+// [LABEL] exageyre
+{141}{Vous trouvez ? Moi je pense que vu mon intelligence je puis me permettre de dire cela. En plus je suis un homme d'Eglise je pense que mes paroles sont véridiques.}{Vous trouvez ? Moi je pense que vu mon intelligence je puis me permettre de dire cela. En plus je suis un homme d'Eglise je pense que mes paroles sont véridiques.}{}{8}{}{}
+{142}{Mouais, bon...je vais y aller. Au revoir}{}{1}{}{}{}
+{143}{Dites, ça va les chevilles ? pas trop enflées j'espère ?}{}{1}{}{201}{}
+
+// [LABEL] tombe
+{161}{Ces tombes....nous avons retrouvé plusieurs de nos malades tués dans la nature avec une sorte de glue dans la bouche, c'était horrible.... Ils reposent maintenant en paix, les pauvres. Mais nous déplorons 2 disparus et nous ne savons rien de leur sort...}{Ces tombes....nous avons retrouvé plusieurs de nos malades tués dans la nature avec une sorte de glue dans la bouche, c'était horrible.... Ils reposent maintenant en paix, les pauvres. Mais nous déplorons 2 disparus et nous ne savons rien de leur sort...}{}{9}{}{}
+{162}{Si je les vois je vous fais signe. A+}{}{1}{}{}{}
+
+// [LABEL] prendpouki ?
+{181}{Oh ! vous me décevez ! Je vais vous demander de quitter les lieux, et comme je suis gentil, je ne porte pas plainte contre vous au tribunal ! Maintenant disparaissez !}{Oh ! vous me décevez ! Je vais vous demander de quitter les lieux, et comme je suis gentil, je ne porte pas plainte contre vous au tribunal ! Maintenant disparaissez !}{}{10}{}{}
+{182}{Ok, j'y vais}{}{1}{}{}{}
+
+// [LABEL] Chevilles
+{201}{De quel droit osez-vous traiter un prêtre de la sorte ? Je vous somme de quitter les lieux au plus vite !}{De quel droit osez-vous traiter un prêtre de la sorte ? Je vous somme de quitter les lieux au plus vite !}{}{11}{}{}
+{202}{Ok à +}{}{1}{}{}{}
+

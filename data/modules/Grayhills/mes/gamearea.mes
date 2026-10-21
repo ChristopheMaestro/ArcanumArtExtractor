@@ -1,0 +1,13 @@
+//
+// Area -- List of areas in the module
+//   X-Coord, Y-Coord, WM-X-offset, WM-Y-offset /Name /Description./Radius:<#>
+//
+//   Coords are on the main world-map, in tiles.  Radius is detection radius
+// (in sectors), in other words, the # of sectors that the player must pass
+// near it on the WorldMap to make it visible if it isn't already known;
+// default value is 5.
+//   The WM-#-offset values are used to position the name text in the worldmap,
+// if it the worldmap is available.  User mods can leave these as "0, 0".
+//
+
+{0}{0, 0, 0, 0 /A Place Unimportant/This is the unknown area.}

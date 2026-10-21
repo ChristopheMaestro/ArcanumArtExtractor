@@ -1,0 +1,50 @@
+// [LABEL] 1
+{1}{G:}{G:}{}{1}{}{}
+// Line 2 only seen if quest 1000 is NOT mentioned or accepted or anything (state '0')
+{2}{T'as pas du boulot}{}{1}{qu1000 0}{21}{}
+// Line 3 only seen if quest has been mentioned but NOT accepted (state '1')
+{3}{D'accord je le ferai}{}{1}{qu1000 1}{41}{}
+// Line 4 only seen if quest is accepted (state '2')
+{4}{Où est ce loup déja?}{}{1}{qu1000 2}{61}{}
+// Line 5 only seen if quest is completed but NOT reported (state '3')
+{5}{J'ai tué le loup}{}{1}{qu1000 3}{81}{}
+// Line 6 only seen if quest is completed (state '4')
+{6}{est-ce que je t'ai dit que j'avais tué le loup}{}{1}{qu1000 4}{101}{}
+// Line 7 is only here for an example at a botched quest (state '6')
+// Quest has to be accepted so we can botch it. (It's hard to botch a simple rat kill quest)
+{7}{J'ai fait fuir le loup}{}{1}{qu1000 2}{121}{}
+// NOTE: State '5' is missed because that's a multiplayer thing.
+{8}{E:}{}{1}{}{}{}
+
+// [LABEL] 20
+// NPC mentions quest (quest 1000 is set to state '1' = mentioned)
+{21}{Si, Il y a un loup gris qui terrorise la région, pourrais-tu le tuer}{Si, Il y a un loup gris qui terrorise la région, pourrais-tu le tuer}{}{2}{}{qu1000 1}
+{22}{Ok, je le ferai}{}{1}{}{41}{}
+{23}{Laisse moi y réfléchir.}{}{1}{}{}{}
+
+// [LABEL] 30
+// Quest 1000 is ACCEPTED (state '2' = accepted)
+{41}{Tu vas le faire! Super, le loup gris se trouve au Sud.}{Tu vas le faire! Super, le loup gris se trouve au Sud.}{}{3}{}{qu1000 2}
+{42}{A:}{}{1}{}{}{}
+
+// [LABEL] 40
+// PC has accepted the quest and is asking what they were supposed to do again
+{61}{Il se trouve au Sud.}{Il se trouve au Sud.}{}{4}{}{qu1000 2}
+{62}{A:}{}{1}{}{}{}
+
+// [LABEL] 50
+// PC has killed rat so quest 1000 becomes COMPLETED (state '4')
+{81}{Tu l'as tué, c'est génial. Désolé, mais je n'ai rien à te donner.}{Tu l'as tué, c'est génial. Désolé, mais je n'ai rien à te donner.}{}{5}{}{qu1000 4}
+{82}{A:}{}{1}{}{}{}
+
+// [LABEL] 60
+// PC tells NPC that he killed the rat again
+{101}{Oui, tu me l'as déja dit}{Oui, tu me l'as déja dit}{}{6}{}{}
+{102}{A:}{}{1}{}{}{}
+
+// [LABEL] 70
+// PC told NPC that he scared rat away so we botch the quest.
+{121}{Quoi? Tu devais le tuer, sale lâche! Maintenant, c'est foutu!}{Quoi? Tu devais le tuer, sale lâche! Maintenant, c'est foutu!}{}{7}{}{qu1000 6}
+{122}{Je préfère te tuer!}{}{1}{}{}{co, fl 80}
+{123}{E:}{}{1}{}{}{}
+

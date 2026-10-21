@@ -1,0 +1,98 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Hello. I'd like to rent a room, madame.}{}{5}{}{50}{}
+{3}{How many shinies to rent room?}{}{-4}{}{50}{}
+{4}{Hi, I've got a delivery of meat for a Mrs. Engstrom.}{}{5}{gf7 0, gf9 1, qu 1004 2}{100}{}
+{5}{Uh, me got meat to give for Mrs Endbroom.}{}{-4}{gf7 0, gf9 1, qu 1004 2}{120}{}
+{6}{Yes, my name is Dale Cooper, and I'm an agent of the Royal Investigators. Currently, we are investigating the circumstances of his death.}{}{5}{gf7 0, ps 4, qu 1004 2}{150}{}
+{7}{Me am working for police, me am investigator! Me want to talk bout your husband!}{}{-4}{gf7 0, ps 4, qu 1004 2}{150}{}
+{9}{What can you tell me about the location of the Dark River?}{}{5}{gf7 0, qu 1004 2}{200}{}
+{10}{What yoo know bout Dark River?}{}{-4}{gf7 0, qu 10044 2}{200}{}
+{11}{What do you know about the man I am hunting, Walter?}{}{5}{lf3 0}{20}{lf3 1}
+{12}{What yoo know about Man in Black? Wallturr?}{}{-4}{lf3 0}{20}{lf3 1}
+{13}{R:$0,1000-1002}{}{1}{}{1}{}
+{14}{T:9,11}{}{1}{}{0}{}
+{15}{E:}{}{1}{}{0}{}
+{20}{I know that he came to town a while back and ever since it's been nothing but fuss! What DID he do, anyway, to get everyone so riled up?}{I know that he came to town a while back and ever since it's been nothing but fuss! What DID he do, anyway, to get everyone so riled up?}{}{}{}{}
+{21}{He has been implicated in the deaths of several courtiers and conspiracy to commit treason against the Crown.}{}{5}{}{30}{re +1}
+{22}{Importent peeple in Gilyad think he killed sum peeple, and he was gonna do treason on the king!!!}{}{-4}{}{30}{re +1}
+{23}{He is wanted for questioning in connection to some deaths.}{}{5}{}{30}{re -2}
+{24}{Gilyad want talk to him.}{}{-4}{}{30}{re -2}
+{25}{That's classified, ma'am.}{}{5}{}{35}{}
+{30}{Oh! Well! What terrible charges! He was a bit... offputting. But he was dashing as well.}{Oh! Well! What terrible charges! He was a bit... offputting. But he was dashing as well.}{}{}{}{}
+{31}{Do you remember anything else about his visit to your Inn?}{}{5}{}{40}{}
+{32}{Yoo remember anythin' else about Walturr?}{}{-4}{}{40}{}
+{33}{F:}{}{1}{}{1}{}
+{34}{E:}{}{1}{}{1}{}
+{35}{Well, if you say so.}{Well, if you say so.}{}{}{}{}
+{36}{Do you remember anything else about his visit to your Inn?}{}{5}{}{40}{}
+{37}{Yoo remember anythin' else about Walturr?}{}{-4}{}{40}{}
+{38}{F:}{}{1}{}{1}{}
+{39}{E:}{}{1}{}{1}{}
+{40}{He wore a black cloak over black shirt and slacks. He was quite tall, and pale... a very handsome man, but chilling just the same. When he came in, I assumed he was interested in renting a room. But he just looked around until he found Seamus, spoke to him for a moment, and then left. I couldn't hear what he said.}{He wore a black cloak over black shirt and slacks. He was quite tall, and pale... a very handsome man, but chilling just the same. When he came in, I assumed he was interested in renting a room. But he just looked around until he found Seamus, spoke to him for a moment, and then left. I couldn't hear what he said.}{}{}{}{gf22 1}
+{41}{Where can I find Seamus?}{}{5}{}{45}{}
+{42}{Me want talk to Seamus. Where he be?}{}{-4}{}{45}{}
+{43}{F:}{}{1}{}{1}{}
+{45}{Well, he's staying here at the Inn, but he sleeps all day and only comes out of his room at night. But he's usually slinking around in here during the nighttime hours.}{Well, he's staying here at the Inn, but he sleeps all day and only comes out of his room at night. But he's usually slinking around in here during the nighttime hours.}{}{}{}{}
+{46}{Thanks for the info. I had something else...}{}{5}{}{1}{}
+{47}{Me want ask somethin else...}{}{-4}{}{1}{}
+{48}{E:}{}{1}{}{0}{}
+{50}{Well sir, the cost for a room is 10 coins per night. Would you like to pay now? [She smiles pleasantly at you.]}{Very well ma'am, the cost for a room is 10 coins. Would you like to pay now?}{}{}{}{}
+{51}{Yes, please. [Give Phoebe 10 coins]}{}{5}{$$ 10}{-14}{}
+{52}{Here, give me room! [Give Phoebe 10 coins]}{}{-4}{$$ 10}{-14}{}
+{53}{I don't have enough money.}{}{5}{$$ -10}{65}{}
+{54}{Uhm, I not have enuf monies.}{}{-4}{$$ -10}{65}{}
+{55}{F:}{}{1}{}{1}{}
+{65}{Well, please come back when you have enough money, then.}{Well, please come back when you have enough money, then.}{}{}{}{}
+{66}{Ok.}{}{1}{}{1}{}
+{67}{Whatever.}{}{1}{}{1}{}
+{100}{[She looks startled for a second, then says under her breath...] A new boy, hmm? And early as well. Follow me back to my rooms...}{[She looks startled for a second, then says under her breath...] A new boy, hmm? And early as well. Follow me back to my rooms...}{}{}{}{}
+{101}{Done.}{}{1}{}{0}{}
+{120}{[She looks puzzled for a moment, then her face lights up as she realizes what the hell you were talking about.] Ooh, a new boy this week. And so brutish! [She giggles.] Well, follow me back to my rooms...}{[She looks puzzled for a moment, then her face lights up as she realizes what the hell you were talking about.] Ooh, a new boy this week. And so brutish! [She giggles.] Well, follow me back to my rooms...}{}{}{}{}
+{121}{Done.}{}{1}{}{0}{}
+{150}{What? That's been done with for years. What could there be left to discuss? He died in public in a horse-kicking accident.}{What? That's been done with for years. What could there be left to discuss? He died in public in a horse-kicking accident.}{}{}{}{}
+{151}{Uh, well, uh, we had some questions for the murderer...}{}{5}{}{165}{}
+{152}{You quiet now! Me catch killer!}{}{-4}{}{165}{}
+{153}{Well, it's not so much his death, as, uh, some unsettled matters he was involved in before his death. It's very complicated. And top-secret.}{}{5}{}{175}{}
+{155}{F:}{}{1}{}{1}{gf7 1}
+{165}{The horse??? What could the horse have to do with this? It's a dumb animal! Who are you? Do you really work for the Royal Investigators?}{The horse??? What could the horse have to do with this? It's a dumb animal! Who are you? Do you really work for the Royal Investigators?}{}{}{}{}
+{166}{Look, over there! It's a giant killer squirrel![Run away]}{}{5}{}{0}{re -10, gf7 1}
+{167}{Me see long lost friend over there, got to go, see you later!}{}{-4}{}{0}{re -10, gf7 1}
+{175}{Ah, I see. Well, what could I do to help you?}{Ah, I see. Well, what could I do to help you?}{}{}{}{}
+{176}{Could I look through any of his old things that you might have?}{}{5}{}{185}{}
+{178}{F:}{}{1}{}{0}{gf7 1}
+{185}{Certainly, sir. Here is the key to my bedroom, feel free to look for anything that might help. My room is the first one on the right as you enter the Staff's Quarters.}{Certainly, sir. Here is the key to my bedroom, feel free to look for anything that might help. My room is the first one on the right as you enter the Staff's Quarters.}{}{}{}{}
+{186}{Thank you.}{}{5}{}{-2}{gf7 1}
+{187}{I go now.}{}{-4}{}{-2}{gf7 1}
+{188}{Haha, sucker! I'm going to rob you blind now!}{}{5}{}{}{co, fl 0, gf7 1}
+{189}{Bye.}{}{1}{}{-2}{gf7 1}
+{200}{The Dark River? How is that relevant to my husband?}{The Dark River? How is that relevant to my husband?}{}{}{}{}
+{201}{Well, Wink Rathburn is rumored to have died there, and with him died all his magical secrets. }{}{5}{}{250}{}
+{202}{F:}{}{1}{}{1}{}
+{203}{Man with lots of money and treasure is there! But he dead. So me find his stuff!}{}{-4}{}{250}{}
+{204}{Tell me what you know, you lying bitch!}{}{5}{}{300}{gf7 1, re -10}
+{250}{Well now. That is appealing. I'm not much for magic, but magic can fetch a pretty price and I'm always eager for coin. How could I help you?}{Well now. That is appealing. I'm not much for magic, but magic can fetch a pretty price and I'm always eager for coin. How could I help you?}{}{}{}{}
+{251}{I heard that your husband may have known something. I would like to look through what's left of his belongings. Would that be acceptable?}{}{5}{}{275}{}
+{252}{Tell me everything you know, and be quick about it!}{}{5}{}{300}{}
+{253}{Me want to search your stuff.}{}{-4}{ps 4}{275}{}
+{254}{Me want to search your stuff.}{}{-4}{ps -3}{300}{}
+{255}{F:}{}{1}{}{1}{}
+{275}{Well, if I'm to be giving you something, shouldn't I be getting something in return? How bout, perhaps, 100 coins?}{Well, if I'm to be giving you something, shouldn't I be getting something in return? How bout, perhaps, 100 coins?}{}{}{}{}
+{276}{Aye, 100 coins it is. [Pay her 100 coins for the key to her room.]}{}{5}{$$ 100, ha -3}{-4}{gf7 1}
+{277}{How about 75 coins?}{}{5}{ha 4}{290}{}
+{278}{Okie, 100 coins...I pay. [Pay her 100 coins for the key to her room.]}{}{-4}{$$ 100, ha -3}{-4}{gf7 1}
+{279}{Me think it worth 75.}{}{-4}{ha 4}{290}{}
+{280}{Not enough money.}{}{1}{$$ -99}{1}{}
+{281}{F:}{}{1}{}{1}{}
+{290}{Ok, 75 coins it is. You drive a hard bargain, though.}{Ok, 75 coins it is. You drive a hard bargain, though.}{}{}{}{}
+{291}{Deal.[Pay her 75 coins for the key to her room.]}{}{5}{$$ 75}{-9}{gf7 1}
+{292}{Okie.[Pay her 75 coins for the key to her room.]}{}{-4}{$$ 75}{-9}{gf7 1}
+{293}{I don't have enough money.}{}{1}{$$ -74}{65}{}
+{294}{F:}{}{1}{}{1}{}
+{300}{I'm afraid not. I can't let just anyone go rifling through my husband's things.}{I'm afraid not. I can't let just anyone go rifling through my husband's things.}{}{}{}{}
+{301}{F:}{}{1}{}{1}{}
+{350}{You are free to search my room for anything you find relevant to Dark River. My room is the first one on the right as you enter the Staff's Quarters.}{You are free to search my room for anything you find relevant to Dark River. My room is the first one on the right as you enter the Staff's Quarters.}{}{}{}{}
+{351}{E:}{}{1}{}{0}{}
+{400}{I'm sorry sir, you currently have a room with us. You cannot rent another room until your current rental has expired.}{I'm sorry ma'am, you currently have a room with us. You cannot rent another room until your current rental has expired.}{}{}{}{}
+{401}{E:}{}{1}{}{0}{}
+{425}{Thank you for renting at the Rusty Doorknob. Your room is the unoccupied one on the far north side of the Inn- room number 1.}{Thank you for renting at the Rusty Doorknob. Your room is the unoccupied one on the far north side of the Inn- room number 1.}{}{}{}{}
+{426}{E:}{}{1}{}{0}{}

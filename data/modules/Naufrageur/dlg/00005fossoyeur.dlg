@@ -1,0 +1,59 @@
+{1}{[Le gnome qui est en face de vous se prépare à opérer le corps sans vie étendu sur la table de pierre.] Que me voulez-vous, monsieur?}{[Le gnome qui est en face de vous se prépare à opérer le corps sans vie étendu sur la table de pierre.] Que me voulez-vous, madame?}{}{}{}{}
+{2}{Vous êtes le maître embaumeur?}{}{5}{lf1 0}{30}{lf1 1}
+{3}{Toi être maître embaumeur?}{}{-4}{lf1 0}{30}{lf1 1}
+{4}{E:}{}{1}{}{0}{}
+
+{30}{Je suis Drago, son disciple, le fossoyeur.}{Je suis Drago, son disciple, le fossoyeur.}{}{}{}{}
+{31}{Pourquoi vous occupez-vous de sa tâche?}{}{5}{}{60}{}
+{32}{J'aimerais parler au maître embaumeur. Où puis-je le trouver?}{}{5}{}{60}{}
+{33}{Pourquoi toi faire travail de lui maître embaumeur?}{}{-4}{}{60}{}
+{34}{@pcname@ vouloir parler à maître embaumeur. Où moi trouver?}{}{-4}{}{60}{}
+
+{60}{Demandez lui par vous-même. [Il vous désigne du doigt le cadavre sur la table.]}{Demandez lui par vous-même. [Il vous désigne du doigt le cadavre sur la table.]}{}{}{}{}
+{61}{Le maître embaumeur est mort! Il fallait que je lui parle impérativement!}{}{5}{lf2 0}{120}{lf2 1}
+{62}{Où habitait-il, à l'ordinaire?}{}{5}{lf3 0}{90}{lf3 1}
+{63}{Lui maître embaumeur mort! Comment @pcname@ faire pour parler à lui?!}{}{-4}{lf2 0}{120}{lf2 1}
+{64}{Où lui habiter?}{}{-4}{lf3 0}{90}{lf3 1}
+{65}{Comment le maître embaumeur est-il mort?}{}{5}{ru1003 1}{180}{}
+{66}{@pcname@ vouloir savoir comment maître embaumeur mort.}{}{-4}{ru1003 1}{180}{}
+
+{90}{Il habitait sous le mausolée où nous sommes. Les catacombes lui servaient de lieu de domicile. Il a toujours vécu éloigné du monde, préférant la compagnie des morts à celle des vivants...}{Il habitait sous le mausolée où nous sommes. Les catacombes lui servaient de lieu de domicile. Il a toujours vécu éloigné du monde, préférant la compagnie des morts à celle des vivants...}{}{}{}{}
+{91}{Il fallait que je lui parle impérativement!}{}{5}{lf2 0}{120}{lf2 1}
+{92}{Comment @pcname@ faire pour parler à lui?!}{}{-4}{lf2 0}{120}{lf2 1}
+{93}{Comment le maître embaumeur est-il mort?}{}{5}{ru1003 1}{180}{}
+{94}{@pcname@ vouloir savoir comment maître embaumeur mort.}{}{-4}{ru1003 1}{180}{}
+{95}{E:}{}{1}{lf2 1, lf3 1}{0}{}
+
+{120}{Vous ne perdez rien à ne pas lui parler... Entre nous, je n'ai jamais vraiment compris ce qu'il racontait... Il passait la plupart de son temps à prier dans la chapelle. Certains l'auraient alors vu entrer en transe et discuter avec des êtres invisibles... Sans que personne ne les ait jamais entendu, bien sûr...}{Vous ne perdez rien à ne pas lui parler... Entre nous, je n'ai jamais vraiment compris ce qu'il racontait... Il passait la plupart de son temps à prier dans la chapelle. Certains l'auraient alors vu entrer en transe et discuter avec des êtres invisibles... Sans que personne ne les ait jamais entendu, bien sûr...}{}{}{}{ru1002}
+{121}{Où habitait-il, à l'ordinaire?}{}{5}{lf3 0}{90}{lf3 1}
+{122}{Où lui habiter?}{}{-4}{lf3 0}{90}{lf3 1}
+{123}{Comment le maître embaumeur est-il mort?}{}{5}{ru1003 1}{180}{}
+{124}{@pcname@ vouloir savoir comment maître embaumeur mort.}{}{-4}{ru1003 1}{180}{}
+{125}{E:}{}{1}{lf2 1, lf3 1}{0}{}
+
+{150}{Je n'ai pas de temps à vous consacrer, monsieur.}{Je n'ai pas de temps à vous consacrer, madame.}{}{}{}{}
+{151}{Comment le maître embaumeur est-il mort?}{}{5}{}{180}{}
+{152}{@pcname@ vouloir savoir comment maître embaumeur mort.}{}{-4}{}{180}{}
+{153}{E:}{}{1}{}{0}{}
+
+{180}{La magie des morts a consumé son pauvre esprit... Il y a succombé.}{La magie des morts a consumé son pauvre esprit... Il y a succombé.}{}{}{}{}
+{181}{Un témoin vous a vu l'assassiner.}{}{5}{ps 4}{230}{re -10}
+{182}{Un témoin vous a vu l'assassiner.}{}{5}{ps -3}{200}{re -10}
+{183}{Avoue ton acte ou tu auras affaire à moi! [Vous retroussez vos manches]}{}{5}{}{-6}{re -10}
+{184}{Tu as tué ton maître, misérable! Meurs!}{}{5}{}{0}{co}
+{185}{Toi dire ou moi fâcher! [Vous retroussez vos manches]}{}{-4}{}{-6}{re -10}
+{186}{@pcname@ te tuer!}{}{-4}{}{0}{co}
+
+{200}{Vous divaguez complètement! Hors de ma vue maintenant ou j'appelle la garde!}{Vous divaguez complètement! Hors de ma vue maintenant ou j'appelle la garde!}{}{}{}{}
+{201}{Je fais partie de la garde de Tarn-el-Sadar.}{}{5}{gf1035 1}{230}{}
+{202}{Moi être garde de Tarn-el-Sadar.}{}{-4}{gf1035 1}{230}{}
+{203}{Tu as tué ton maître, misérable! Meurs!}{}{5}{}{0}{co}
+{204}{@pcname@ te tuer!}{}{-4}{}{0}{co}
+{205}{E:}{}{1}{}{0}{lf4 1, lf1 1}
+
+{230}{[Il semble soudain très embarassé] Hum... C'était un accident... Je n'ai pas voulu... Si cela se sait toute la ville se retournera contre moi... Alors que je suis innocent... J'ai enterré mes économies au pied d'un arbre derrière la prison. Prenez les, mais par pitié! ne dites rien à personne!... }{[Il semble soudain très embarassé] Hum... C'était un accident... Je n'ai pas voulu... Si cela se sait toute la ville se retournera contre moi... Alors que je suis innocent... J'ai enterré mes économies au pied d'un arbre derrière la prison. Prenez les, mais par pitié! ne dites rien à personne!...  }{}{}{}{gf1007 1}
+{231}{E:}{}{1}{}{0}{lf4 1, lf1 1}
+
+{300}{Nous n'avons plus rien à nous dire, il me semble.}{Nous n'avons plus rien à nous dire, il me semble.}{}{}{}{}
+
+{310}{Je n'ai pas de temps à vous consacrer, monsieur.}{Je n'ai pas de temps à vous consacrer, madame.}{}{}{}{}

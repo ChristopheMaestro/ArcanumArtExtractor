@@ -1,0 +1,63 @@
+// [LABEL] debut
+{1}{Bonjour, Que voulez-vous?}{Bonjour, Que voulez-vous?}{}{1}{}{}
+{2}{Mais vous êtes un mendiant!}{}{1}{}{21}{}
+{3}{C'est quoi cette pièce de merde.}{}{1}{}{41}{}
+{4}{Je ne parle pas au loque degage!}{}{1}{}{}{}
+
+// [LABEL] mendiant
+{21}{Mais non, je suis Robert Hue, je suis quelqu'un de très connu.}{Mais non, je suis Robert Hue, je suis quelqu'un de très connu.}{}{2}{}{}
+{22}{Ben pourquoi vous êtes habillé comme une loque?}{}{1}{}{61}{}
+{23}{J'ai un problème avec Casimir.}{}{1}{qu1008 3}{141}{}
+
+// [LABEL] cette piece
+{41}{Ben c'est le parti communiste.}{Ben c'est le parti communiste.}{}{3}{}{}
+{42}{Ah! Y a pas grand monde dites-moi.}{}{1}{}{81}{}
+{43}{Et vous êtes qui, un bouffon qui avait envie d'en finir avec la vie, alors tu t'es inscrit au PC?}{}{1}{}{21}{}
+
+// [LABEL] comme une loque
+{61}{Ben, on a pas recolte beaucoup d'argent ces temps-ci, alors on est obligé de faire des économies.}{Ben, on a pas recolte beaucoup d'argent ces temps-ci, alors on est obligé de faire des économies.}{}{4}{}{}
+{62}{C'est vrai que vu le carton que vous avez fait au presidentielle et au legislatives, fallait s'attendre à faire des économies.}{}{1}{}{121}{}
+{63}{De toute façon, vous avez toujours ressemblez à une loque.}{}{1}{}{}{}
+
+// [LABEL] pas grand monde
+{81}{Ben oui, tout le monde a deserte après nos scores minables aux legislatives.}{Ben oui, tout le monde a deserte après nos scores minables aux legislatives.}{}{5}{}{}
+{82}{Ils ont enfin compris que le PC, c'est de la merde. C'est pas trop tôt!}{}{1}{}{}{}
+{83}{Je peux essayer de ramener du monde pour le PC, si vous voulez.}{}{1}{}{101}{}
+
+// [LABEL] ramener du monde
+{101}{Oui ca m'arrangerait bien. Faites le tour des bars et essayez de ramener du monde; si vous vous debrouillez bien, j'aurai peut-être d'autre jobs pour vous.}{Oui ca m'arrangerait bien. Faites le tour des bars et essayez de ramener du monde; si vous vous debrouillez bien, j'aurai peut-être d'autre jobs pour vous.}{}{6}{}{}
+{102}{ok, ca marche.}{}{1}{}{}{}
+{103}{Vous croyez vraiment que j'allais travailler pour le PC?! Muhuhuhuhuhu.}{}{1}{}{}{}
+
+// [LABEL] reslutat legislative
+{121}{Oui, mais je ne prefère pas en parler. De toute facon, nous nous rattraperons aux prochaines élections.}{Oui, mais je ne prefère pas en parler. De toute facon, nous nous rattraperons aux prochaines élections.}{}{7}{}{}
+{122}{"nous", je ne vois qu'une personne dans cette salle.}{}{1}{}{81}{}
+{123}{Ouais, ben faut pas trop rêver non plus.}{}{1}{}{}{}
+{124}{}{}{}{8}{}{}
+
+// [LABEL] Casimir
+{141}{Et c'est quoi ce problème?}{Et c'est quoi ce problème?}{}{8}{}{}
+{142}{Il a été enfermé par erreur. Ce n'est pas lui le coupable!}{}{1}{}{201}{}
+{143}{C'est un gros con et j'aimerai qu'il se fasse buter.}{}{1}{}{161}{}
+
+// [LABEL] c'est un gros co
+{161}{Ah desolé mais c'est interdit par la loi.}{Ah desolé mais c'est interdit par la loi.}{}{9}{}{}
+{162}{C'est vraiment de la merde vos lois. On peut tuer personne sans avoir d'ennuis.}{}{1}{}{181}{}
+
+// [LABEL] lois=merde
+{181}{Desole mais j'y peux rien.}{Desole mais j'y peux rien.}{}{10}{}{}
+{182}{Ca ne m'étonne pas de vous. Bon je me casse vous me donnez envie de gerber.}{}{1}{}{}{}
+
+// [LABEL] enferme par erreur
+{201}{Vous avez une preuve de son innocence?}{Vous avez une preuve de son innocence?}{}{11}{}{}
+{202}{Oui son pote temoigne pour dire que ce n'est pas lui.}{}{1}{}{241}{}
+{203}{Non.}{}{1}{}{221}{}
+
+// [LABEL] non pas de preuve
+{221}{Dans ce cas là, je ne peux rien faire, desolé.}{Dans ce cas là, je ne peux rien faire, desolé.}{}{12}{}{}
+{222}{Pfff, vous servez vraiment à rien, je me casse.}{}{1}{}{}{}
+
+// [LABEL] son pote temoigne
+{241}{Ce n'est pas suffisant. Vous devez retrouver le vrai coupable.}{Ce n'est pas suffisant. Vous devez retrouver le vrai coupable.}{}{13}{}{}
+{242}{Très bien, je vais essayer de le trouver.}{}{1}{}{}{}
+

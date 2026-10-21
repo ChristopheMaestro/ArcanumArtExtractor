@@ -1,0 +1,133 @@
+{1}{Yeah, whadda ya want?}{Yeah, whadda ya want?}{}{}{}{lf0 0}
+{2}{I'll have a drink thanks.}{}{5}{}{20}{}
+{3}{Me wan' drink.}{}{-4}{}{20}{}
+{4}{T:8, 11}{}{1}{}{40}{}
+{5}{I’ve come to collect an overdue book from the Library.}{}{5}{qu1002 2, qu1003 0}{50}{}
+{6}{Me wan' da book you haf' from da librareee.}{}{-4}{qu1002 2, qu1003 0}{50}{}
+{7}{I’ve decided to exterminate the rats in your cellar.}{}{5}{qu1003 1}{130}{}
+{8}{Me wanna kill da rats in yoor sellar.}{}{-4}{qu1003 1}{130}{}
+{9}{I’ve killed all the rats in your cellar.}{}{5}{qu1003 2}{-5}{}
+{10}{I forgot to ask you about the late fee for the overdue book.}{}{5}{qu1003 4, pf3 0}{170}{}
+{11}{Me forget to ask you 'bout da layte fee on da overdoo book.}{}{-4}{qu1003 4, pf3 0}{170}{}
+{12}{E:}{}{1}{}{0}{}
+
+{20}{All right sir, that'll be 10 coin.}{All right miss, that'll be 10 coin.}{}{}{}{}
+{21}{Sure, Here you are. [Pay 10 coin]]}{}{5}{$$10}{30}{$$-10}
+{22}{Okay, heer.. [Pay 10 coin]}{}{-4}{$$10}{30}{$$-10}
+{23}{Actually, could I have your special mixture?}{}{5}{qu1003 4}{160}{}
+{24}{Akshulley, kan me haf' yoor speshul mixshtoor?}{}{-4}{qu1003 4}{160}{}
+{25}{F:}{}{1}{}{0}{}
+
+{30}{[He takes a bottle of alcohol from behind the counter and fills an empty glass] There you go sir. [He hands you a drink.]}{[He takes a bottle of alcohol from behind the counter and fills an empty glass] There you go miss. [He hands you a drink.]}{}{}{}{lf0 1}
+{31}{Thank you. [You drink it down.]}{}{5}{}{-2}{}
+{32}{T'anks! [You drink it down.]}{}{-4}{}{-2}{}
+
+{40}{Now then, can I get you anything else, sir?}{Now then, can I get you anything else, miss?}{}{}{}{}
+{41}{I'll have another drink thanks.}{}{5}{lf0 1}{20}{}
+{42}{Me wan' nuther drink t'anks.}{}{-4}{lf0 1}{20}{}
+{43}{Yes, I'd like a drink please.}{}{5}{lf0 0}{20}{}
+{44}{Yup! Me wan' drink pleese.}{}{-4}{lf0 0}{20}{}
+{45}{T:8, 11}{}{1}{}{40}{}
+{46}{E:}{}{1}{}{0}{}
+
+{50}{Oh.... Er.... You have? [He looks uneasy] Er... There’s just a... Well, there’s a slight problem with that.}{Oh.... Er.... You have? [He looks uneasy] Er... There’s just a... Well, there’s a slight problem with that.}{}{}{}{}
+{51}{And that problem is??}{}{5}{}{60}{}
+{52}{Wat be da problem?}{}{-4}{}{60}{}
+{53}{Listen, you’ve got 3 seconds to give me the book or face the consequences.}{}{5}{}{120}{}
+{54}{You got free sekonds to give me da book or else!}{}{-4}{}{120}{}
+
+{60}{Well... You see... [The bartender looks uneasily around the room at his customers and lowers his voice] The book is in the cellar and the cellar is full of RATS!! Hundreds of rats! Thousands of rats! They’re everywhere! Crawling all over my cellar, eating their way through the barrels of my good wine. Why, I haven’t been down there for WEEKS because of the rats and now, I’m almost out of supplies!}{Well... You see... [The bartender looks uneasily around the room at his customers and lowers his voice] The book is in the cellar and the cellar is full of RATS!! Hundreds of rats! Thousands of rats! They’re everywhere! Crawling all over my cellar, eating their way through the barrels of my good wine. Why, I haven’t been down there for WEEKS because of the rats and now, I’m almost out of supplies!}{}{}{}{}
+{61}{Errr... Why not kill all the rats?}{}{5}{}{70}{}
+{62}{Why not kill da rats?}{}{-4}{}{70}{}
+
+{70}{Well... I er.... Would... But er... Running a bar can be quite... Er... Time consuming... And I er... just haven’t been able to find a spare moment to er... Run down there and um.... Get rid of them all. Er... Particularly when I’ve got so many ummm.... Customers to look after [he motions his arm around as if to indicate everyone in the room].}{Well... I er.... Would... But er... Running a bar can be quite... Er... Time consuming... And I er... just haven’t been able to find a spare moment to er... Run down there and um.... Get rid of them all. Er... Particularly when I’ve got so many ummm.... Customers to look after [he motions his arm around as if to indicate everyone in the room].}{}{}{}{}
+{71}{Well, perhaps I could help?}{}{5}{}{80}{}
+{72}{Okay, mabbe me kan help?}{}{-4}{}{80}{}
+{73}{Oh I see... You’re afraid of the rats aren’t you?}{}{5}{sk11 4}{100}{}
+{74}{Oh me see... You be skared of da rats arn’t you?}{}{-4}{sk11 4}{100}{}
+{75}{Oh I see... You’re afraid of the rats aren’t you?}{}{5}{sk11 -3}{110}{}
+{76}{Oh me see... You be skared of da rats arn’t you?}{}{-4}{sk11 -3}{110}{}
+
+{80}{You? [He looks you up and down] Why yes... You do seem to be a bit of the adventurous type. Okay, but you’ll have to kill them all mind you. I don’t want any left over. I want them dead. All dead. D. E. A. D. Dead. Will you do it?}{You? [He looks you up and down] Why yes... You do seem to be a bit of the adventurous type. Okay, but you’ll have to kill them all mind you. I don’t want any left over. I want them dead. All dead. D. E. A. D. Dead. Will you do it?}{}{}{}{qu1003 1}
+{81}{Sure, if it means I’ll get the overdue book.}{}{5}{}{90}{}
+{82}{Uhuh, if it meens me kan get da overdoo book.}{}{-4}{}{90}{}
+{83}{Hmmm... I’d have to think about it. Give me a moment.}{}{5}{}{0}{}
+{84}{Uhhh... Me haf' ta dink 'bout it. Me be back later.}{}{-4}{}{0}{}
+
+{90}{Oh of course! The book is in the safe in my study down there. Here [he writes something down on a piece of paper and gives it to you] this is the combination to the safe. Don’t worry, I’ll change the combination once you’ve killed all the rats. Also, here’s the key to the back room [he hands you a key]. The trapdoor down to the cellar is in there. That key will also open up the heavy metal doors in the cellar. Good luck! And make sure you get them ALL!}{Oh of course! The book is in the safe in my study down there. Here [he writes something down on a piece of paper and gives it to you] this is the combination to the safe. Don’t worry, I’ll change the combination once you’ve killed all the rats. Also, here’s the key to the back room [he hands you a key]. The trapdoor down to the cellar is in there. That key will also open up the heavy metal doors in the cellar. Good luck! And make sure you get them ALL!}{}{}{}{in -5402, in -4605, qu1003 2}
+{91}{A:}{}{1}{}{0}{}
+
+{95}{You nasty bastard! How DARE you!}{You nasty bitch! How DARE you!}{}{}{}{}
+
+{100}{Hah! Me? [He looks at you and lowers his voice again] Sssshhhhhh!!!! Keep it down. I can’t have everyone in here know about it. Why, I’d be a laughing stock! An absolute disgrace! I could never live it down! Plus, the authorities would most likely close down my bar! I couldn’t let them do that!}{Hah! Me? [He looks at you and lowers his voice again] Sssshhhhhh!!!! Keep it down. I can’t have everyone in here know about it. Why, I’d be a laughing stock! An absolute disgrace! I could never live it down! Plus, the authorities would most likely close down my bar! I couldn’t let them do that!}{}{}{}{}
+{101}{Okay, you’re secret’s safe with me. Perhaps I can help with the rats?}{}{5}{}{80}{}
+{102}{Okay, you sekret be saf' wit me. Mabbe me kan help wit da rats?}{}{-4}{}{80}{}
+{103}{[Raising your voice] Hey everyone! The bartender’s scared of RATS!!}{}{5}{}{0}{co, fl 95}
+{104}{[Raising your voice] Hey evereewon! Da bartender be skared of RATS!!}{}{-4}{}{0}{co, fl 95}
+
+{110}{Hah! Me? A.. Afraid of ra.. rats? Never! Er... My only problem is my lack of time. And ahh... You see, running a bar can be... Ummm... Quite time consuming... Particularly with this many customers [he motions his arm around as if to indicate everyone in the room]. I er... Just haven’t been able to find the time to run down there and get rid of them all.}{Hah! Me? A.. Afraid of ra.. rats? Never! Er... My only problem is my lack of time. And ahh... You see, running a bar can be... Ummm... Quite time consuming... Particularly with this many customers [he motions his arm around as if to indicate everyone in the room]. I er... Just haven’t been able to find the time to run down there and get rid of them all.}{}{}{}{}
+{111}{Well then, perhaps I could help?}{}{5}{}{80}{}
+{112}{Okay, mabbe me kan help?}{}{-4}{}{80}{}
+
+{115}{I told you I DON'T HAVE THE BOOK!!!}{I told you I DON'T HAVE THE BOOK!!!}{}{}{}{}
+
+{120}{Hey! I would give you the book if I had it! Honest! It’s just that... Er... Well....}{Hey! I would give you the book if I had it! Honest! It’s just that... Er... Well....}{}{}{}{}
+{121}{All right... What is it?}{}{5}{}{60}{}
+{122}{Okay... Wat da problem?}{}{-4}{}{60}{}
+{123}{Time's up!}{}{5}{}{0}{co, fl 115}
+{124}{Time up!}{}{-4}{}{0}{co, fl 115}
+
+{130}{You have! Oh that’s fantastic! Now here [he writes something down on a piece of paper] this is the combination to the safe [he hands you the piece of paper]. The overdue book is in there and don’t worry, I’ll change the combination once you’ve killed all the rats. Also, here’s the key to the back room [he hands you a key]. The trapdoor down to the cellar is in there and this [he hands you another key], will open up the heavy metal doors down in the cellar. Good luck! And make sure you get them ALL!}{You have! Oh that’s fantastic! Now here [he writes something down on a piece of paper] this is the combination to the safe [he hands you the piece of paper]. The overdue book is in there and don’t worry, I’ll change the combination once you’ve killed all the rats. Also, here’s the key to the back room [he hands you a key]. The trapdoor down to the cellar is in there and this [he hands you another key], will open up the heavy metal doors down in the cellar. Good luck! And make sure you get them ALL!}{}{}{}{qu1003 2}
+{131}{E:}{}{1}{}{0}{}
+
+{140}{No you haven’t. I know because I just had one run out of a hole up here and then turn around and run back down. Look, go back down there and make sure you get ALL of them.}{No you haven’t. I know because I just had one run out of a hole up here and then turn around and run back down. Look, go back down there and make sure you get ALL of them.}{}{}{}{}
+{141}{E:}{}{1}{}{0}{}
+
+{150}{You have! Oh that’s fantastic! I hope you got that overdue book. I’ve been meaning to return it. Listen, how about a free drink? It’s a special mixture of mine. Guaranteed to knock you off your boots! What do you say?}{You have! Oh that’s fantastic! I hope you got that overdue book. I’ve been meaning to return it. Listen, how about a free drink? It’s a special mixture of mine. Guaranteed to knock you off your boots! What do you say?}{}{}{}{re +20, qu1003 4}
+{151}{Sure, why not? I’ve earned it.}{}{5}{}{160}{}
+{152}{Uhuh, why not? Me ern it.}{}{-4}{}{160}{}
+{153}{No thanks, maybe some other time.}{}{5}{}{0}{}
+{154}{Nuhuh, mabbe some uvver tiym.}{}{-4}{}{0}{}
+
+{155}{That sure hit the spot didn’t it?}{That sure hit the spot didn’t it?}{}{}{}{}
+
+{160}{Sure thing! You've done me a real service by removing those nasty critters from my cellar. Now, just a moment then [the bartender opens a few bottles behind the counter and mixes them together, he then puts a sprinkle of something, you’re not sure what, into the concoction]. Here you go! A ‘Rathouse Special’!}{Sure thing miss! You've done me a real service by removing those nasty critters from my cellar. Now, just a moment then [the bartender opens a few bottles behind the counter and mixes them together, he then puts a sprinkle of something, you’re not sure what, into the concoction]. Here you go! A ‘Rathouse Special’!}{}{}{}{}
+{161}{Thanks! [You gulp it down.]}{}{5}{}{-7}{}
+{162}{T'anks! [You gulp it down.]}{}{-4}{}{-7}{}
+
+// 161.  Call script, make player ‘prone’ and cast spell on player to give a good effect (check spell list and find a good one). Fl 155 
+
+{170}{Oh that! Er.... [the bartender looks uneasy]. Well, you see, the bar hasn’t been doing that well lately. I know, I know, all of the customers in here might tell a different story but trust me, the bar just hasn’t been making such a great profit. Look, I’d give you the money if I had it, but I just don’t at the moment. How about you spot me for it instead?}{Oh that! Er.... [the bartender looks uneasy]. Well, you see, the bar hasn’t been doing that well lately. I know, I know, all of the customers in here might tell a different story but trust me, the bar just hasn’t been making such a great profit. Look, I’d give you the money if I had it, but I just don’t at the moment. How about you spot me for it instead?}{}{}{}{pf3 1}
+{171}{Okay, I’ll pay it for you.}{}{5}{}{180}{}
+{172}{Okay, me pay it for you.}{}{-4}{}{180}{}
+{173}{No way! I can’t afford 50 coin!}{}{5}{}{190}{}
+{174}{Nuhuh! Me kan’t pay 50 coin!}{}{-4}{}{190}{}
+{175}{Either you’re gonna give me the money, or you’re gonna die.}{}{5}{sk2 8}{200}{}
+{176}{You gonna give me da money, or me gonna kill you.}{}{-4}{sk2 8}{200}{}
+{177}{Either you’re gonna give me the money, or you’re gonna die.}{}{5}{sk2 -7}{210}{}
+{178}{You gonna give me da money, or me gonna kill you.}{}{-4}{sk2 -7}{210}{}
+
+{180}{Thanks! You’re a great help!}{Thanks! You’re a great help!}{}{}{}{}
+{181}{E:}{}{1}{}{0}{}
+
+{190}{Well, listen. Just try and talk the Librarian out of the late fee, okay? I’m sure she won’t mind.}{Well, listen. Just try and talk the Librarian out of the late fee, okay? I’m sure she won’t mind.}{}{}{}{}
+{191}{How about I take it off of your corpse instead?}{}{5}{sk2 8}{200}{}
+{192}{How 'bout me tayke it off yoor korpse insted?}{}{-4}{sk2 8}{200}{}
+{193}{How about I take it off of your corpse instead?}{}{5}{sk2 -7}{210}{}
+{194}{How 'bout me tayke it off yoor korpse insted?}{}{-4}{sk2 -7}{210}{}
+{195}{Okay, I’ll try that.}{}{5}{}{0}{pf1 1}
+{196}{Okay, me do dat.}{}{-4}{}{0}{pf1 1}
+
+{200}{[The bartender looks at you and can see that you are indeed a capable fighter.] Okay! Okay! Er.... [He rumages through his pockets.] Well what do you know? Here’s 50 coin after all! [He hands you 50 coin.] No harm done then?}{[The bartender looks at you and can see that you are indeed a capable fighter.] Okay! Okay! Er.... [He rumages through his pockets.] Well what do you know? Here’s 50 coin after all! [He hands you 50 coin.] No harm done then?}{}{}{}{$$50}
+{201}{No, but I think I’ll kill you anyway.}{}{5}{}{0}{co, fl 95}
+{202}{Nuhuh, but me dink me kill you anyway.}{}{-4}{}{0}{co, fl 95}
+{203}{E:}{}{1}{}{0}{}
+
+{205}{You're right about that sunshine! I AM the only one thinking around here!}{You're right about that sunshine! I AM the only one thinking around here!}{}{}{}{}
+
+{210}{[The bartender looks at you.] Hah! You? You’ve got less combat skills than a cow! If you think you can threaten me out of 50 coin you have to think again pal!}{[The bartender looks at you.] Hah! You? You’ve got less combat skills than a cow! If you think you can threaten me out of 50 coin you have to think again pal!}{}{}{}{}
+{211}{No, the only one thinking again is YOU!}{}{5}{}{0}{co, fl 95}
+{212}{Nuhuh, da only won dat be dinking be YOU!}{}{-4}{}{0}{co, fl 205}
+{213}{E:}{}{1}{}{0}{}
+
+// {Y}{}{}{INT}{}{XXX}{}

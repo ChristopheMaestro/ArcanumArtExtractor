@@ -1,0 +1,31 @@
+// [LABEL] debut
+{1}{Oui?}{Oui?}{}{1}{}{}
+{2}{Pourquoi y a t-il une scene derrière vous avec des guitares dessus?}{}{1}{qu1004 0}{21}{qu1004 1}
+{3}{Que pouvez-vous me dire sur la disparition du groupe Travis?}{}{1}{qu1004 2}{101}{}
+{4}{Que pouvez-vous me dire sur la disparition du groupe Travis?}{}{1}{qu1004 1}{101}{}
+{5}{Rien au revoir.}{}{1}{}{}{}
+
+// [LABEL] scene
+{21}{C'est la scene du concert de Travis. Le groupe a disparu juste apres leur representation. Une lumière a aveuglé la scène puis le groupe a disparu.}{C'est la scene du concert de Travis. Le groupe a disparu juste apres leur representation. Une lumière a aveuglé la scène puis le groupe a disparu.}{}{2}{}{}
+{22}{Mais c'est terrible! Vous n'avez pas d'autres infos sur leur disparition?}{}{1}{}{41}{}
+{23}{Merci pour l'info. Au revoir.}{}{1}{}{}{}
+
+// [LABEL] d'autre infos
+{41}{Si! Tout le monde a été aveuglé par la lumière sauf moi car je possedais des lunettes de soleil. Et j'ai tout vu!}{Si! Tout le monde a été aveuglé par la lumière sauf moi car je possedais des lunettes de soleil. Et j'ai tout vu!}{}{3}{}{}
+{42}{Mais qu'est-ce que vous foutiez avec des lunettes de soleil en plein concert?}{}{1}{}{61}{}
+{43}{Et vous avez vu quoi?}{}{1}{}{101}{}
+
+// [LABEL] lunettedesoleil
+{61}{Ben, j'aime bien porter des lunettes de soleil. Ca fait style!}{Ben, j'aime bien porter des lunettes de soleil. Ca fait style!}{}{4}{}{}
+{62}{Ben vous faites bien pitié!}{}{1}{}{81}{}
+{63}{Et vous avez vu quoi?}{}{1}{}{101}{}
+
+// [LABEL] faitpitie
+{81}{Non mais oh! Je fais ce que je veux.}{Non mais oh! Je fais ce que je veux.}{}{5}{}{}
+{82}{Oh ca va je rigolais! Bon vous avez vu quoi?}{}{1}{}{101}{}
+{83}{Tu crains je me casse.}{}{1}{}{}{}
+
+// [LABEL] vu quoi
+{101}{J'ai vu des squelettes enlever le groupe. Ils se dirigaient vers le nord-est.}{J'ai vu des squelettes enlever le groupe. Ils se dirigaient vers le nord-est.}{}{6}{}{}
+{102}{Très bien je vais aller voir ca!}{}{1}{}{}{qu1004 2}
+

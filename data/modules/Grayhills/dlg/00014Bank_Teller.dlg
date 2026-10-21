@@ -1,0 +1,223 @@
+// Bank Teller of 'Grayhills Savings and Loans'
+// lf0 = 1 PC has asked about the Bank.
+// pf0 = 1 the PC has an account
+// pv2 = This PCs Bank Balance
+
+{1}{Welcome to Grayhills Savings and Loans. How may I help you sir?}{Welcome to Grayhills Savings and Loans. How may I help you madame?}{}{}{}{}
+{2}{Savings and Loans? So this is a Bank... Right?}{}{5}{lf0 0}{20}{}
+{3}{Sayvings an' Lones? Err... Dis be Bank... Rite?}{}{-4}{lf0 0}{20}{}
+{4}{Can you tell me about the Bank again?}{}{5}{lf0 1}{50}{}
+{5}{Kan you tell me 'bout da Bank 'gain?}{}{-4}{lf0 1}{50}{}
+{6}{What kind of services does the Bank provide?}{}{5}{}{90}{}
+{7}{Wat sort a' serviss doez da Bank give?}{}{-4}{}{90}{}
+{8}{I'd like to open an account.}{}{5}{pf0 0}{60}{}
+{9}{Me wunna get akkownt.}{}{-4}{pf0 0}{60}{}
+{10}{I'd like to make an account transaction.}{}{5}{pf0 1}{140}{}
+{11}{Me wunna mayke akkownt transakshun.}{}{-4}{pf0 1}{140}{}
+{12}{E:}{}{1}{}{0}{}
+
+{20}{That's correct sir, Grayhills Savings and Loans is a financial institute that was established in 1832 when the then Mayor of Grayhills persuaded several top business men to deposit their money in a local establishment. }{That's correct madame, Grayhills Savings and Loans is a financial institute that was established in 1832 when the then Mayor of Grayhills persuaded several top business men to deposit their money in a local establishment. }{}{}{}{lf0 1}
+{21}{A:}{}{1}{}{30}{}
+
+{30}{So, how can we here at Grayhills Savings and Loans be of assistance to you sir?}{So, how can we here at Grayhills Savings and Loans be of assistance to you madame?}{}{}{}{}
+{31}{Savings and Loans? So this is a Bank... Right?}{}{5}{lf0 0}{20}{}
+{32}{Sayvings an' Lones? Err... Dis be Bank... Rite?}{}{-4}{lf0 0}{20}{}
+{33}{Can you tell me about the Bank again?}{}{5}{lf0 1}{50}{}
+{34}{Kan you tell me 'bout da Bank 'gain?}{}{-4}{lf0 1}{50}{}
+{35}{What kind of services does the Bank provide?}{}{5}{}{90}{}
+{36}{Wat sort a' serviss doez da Bank give?}{}{-4}{}{90}{}
+{37}{I'd like to open an account.}{}{5}{pf0 0}{60}{}
+{38}{Me wunna get akkownt.}{}{-4}{pf0 0}{60}{}
+{39}{I'd like to make an account transaction.}{}{5}{pf0 1}{140}{}
+{40}{Me wunna mayke akkownt transakshun.}{}{-4}{pf0 1}{140}{}
+{41}{E:}{}{1}{}{0}{}
+
+{50}{Certainly sir, established in 1832 by the then Mayor of Grayhills, Mr Charles Gray II, Grayhills Savings and Loans is a financial institute created so that several of Grayhills top business men could deposit their money in a local establishment.}{Certainly madame, established in 1832 by the then Mayor of Grayhills, Mr Charles Gray II, Grayhills Savings and Loans is a financial institute created so that several of Grayhills top business men could deposit their money in a local establishment.}{}{}{}{}
+{51}{A:}{}{1}{}{30}{}
+
+// PC wants to open an account.
+{60}{Well, to establish a new account, there is an account setup fee of 100 coin. We also require an opening deposit of 1000 coin. Are you sure you wish to open a new account?}{Well, to establish a new account, there is an account setup fee of 100 coin. We also require an opening deposit of 1000 coin. Are you sure you wish to open a new account?}{}{}{}{}
+{61}{Yes, I would like to open a new account. [Give her 1100 coin]}{}{5}{$$1100}{70}{$$-1100}
+{62}{Yep, Me wunna open new akkownt. [Give her 1100 coin]}{}{-4}{$$1100}{70}{$$-1100}
+{63}{I've changed my mind, I don't want an account.}{}{5}{}{30}{}
+{64}{Uhhh... Me not wan' akkownt now.}{}{-4}{}{30}{}
+
+{70}{Certainly then sir [She reaches into a drawer and pulls out some paperwork]. You are required to fill in these forms. Once you have completed them, I will be able to open your account [She hands you the forms].}{Certainly then sir [She reaches into a drawer and pulls out some paperwork]. You are required to fill in these forms. Once you have completed them, I will be able to open your account [She hands you the forms].}{}{}{}{}
+{71}{[Complete the paperwork]}{}{1}{}{80}{}
+
+{80}{[She takes the forms back from you and looks them over] Yes... Yes... These all seem to be in order. Well then @pcname@, you now have an account at Grayhills Savings and Loans. As a member of our fine institute, you are entitled to several of the banks other services. If you require any assistance, don't hesitate to ask.}{[She takes the forms back from you and looks them over] Yes... Yes... These all seem to be in order. Well then @pcname@, you now have an account at Grayhills Savings and Loans. As a member of our fine institute, you are entitled to several of the banks other services. If you require any assistance, don't hesitate to ask.}{}{}{}{pf0 1, pv2 1000}
+{81}{A:}{}{1}{}{30}{}
+
+// What kind of services does the bank offer? - Talk about Safety Deposit Boxes, bank interest, loans and accounts.
+{90}{Grayhills Savings and Loans provides every service that is expected of todays modern banks. As well as providing the usual account keeping services, we have Safety Deposit Boxes for rent and members are also entitled to take out loans. We also pay a very high rate of interest on all our accounts.}{Grayhills Savings and Loans provides every service that is expected of todays modern banks. As well as providing the usual account keeping services, we have Safety Deposit Boxes for rent and members are also entitled to take out loans. We also pay a very high rate of interest on all our accounts.}{}{}{}{}
+{91}{Tell me about bank accounts.}{}{5}{}{100}{}
+{92}{Tell me 'bout bank akkownts.}{}{-4}{}{100}{}
+{93}{What sort of interest rates do you pay?}{}{5}{}{110}{}
+{94}{Wat kinda intrest raytes do you pay?}{}{-4}{}{110}{}
+{95}{Could you tell me about the Safety Deposit Boxes?}{}{5}{}{120}{}
+{96}{Kan you tell me 'bout da Sayfty Depozit Boxes?}{}{-4}{}{120}{}
+{97}{How would I go about getting a loan?}{}{5}{}{130}{}
+{98}{How me go 'bout getting a lone?}{}{-4}{}{130}{}
+{99}{A:}{}{1}{}{30}{}
+
+// NPC explains Bank Accounts.
+{100}{Certainly sir, an account with Grayhills Savings and Loans is a fine way to keep all your coin in one safe, easy and convenient place. Rather than carrying thousands of coin around with you, by depositing your coin in an account here, not only is it safe, but you also earn interest on it as well.}{Certainly madame, an account with Grayhills Savings and Loans is a fine way to keep all your coin in one safe, easy and convenient place. Rather than carrying thousands of coin around with you, by depositing your coin in an account here, not only is it safe, but you also earn interest on it as well.}{}{}{}{}
+{101}{What sort of interest rates do you pay?}{}{5}{}{110}{}
+{102}{Wat kinda intrest raytes you pay?}{}{-4}{}{110}{}
+{103}{Could you tell me about the Safety Deposit Boxes?}{}{5}{}{120}{}
+{104}{Kan you tell me 'bout da Sayfty Depozit Boxes?}{}{-4}{}{120}{}
+{105}{How would I go about getting a loan?}{}{5}{}{130}{}
+{106}{How me go 'bout getting a lone?}{}{-4}{}{130}{}
+{107}{A:}{}{1}{}{30}{}
+
+// NPC talks about interest rates.
+{110}{Grayhills Savings and Loans pays an extremely high rate of interest. Every week, your account is credited with a payment of coin depending on the amount of coin that you have deposited with us. A higher amount of coin deposited will result in a higher interest payment made to your account.}{Grayhills Savings and Loans pays an extremely high rate of interest. Every week, your account is credited with a payment of coin depending on the amount of coin that you have deposited with us. A higher amount of coin deposited will result in a higher interest payment made to your account.}{}{}{}{}
+{111}{Tell me about bank accounts.}{}{5}{}{100}{}
+{112}{Tell me 'bout bank akkownts.}{}{-4}{}{100}{}
+{113}{Could you tell me about the Safety Deposit Boxes?}{}{5}{}{120}{}
+{114}{Kan you tell me 'bout da Sayfty Depozit Boxes?}{}{-4}{}{120}{}
+{115}{How would I go about getting a loan?}{}{5}{}{130}{}
+{116}{How me go 'bout getting a lone?}{}{-4}{}{130}{}
+{117}{A:}{}{1}{}{30}{}
+
+// NPC talks about Safety Deposit Boxes.
+{120}{Safety Deposit Boxes are rented from the Safety Deposit Box Master. You are allowed to store anything that you wish in your Safety Deposit Box. They are an excellent way of keeping all the valuable items that you may wish to hold on to for later use. You must have an account with us in order to rent a Safety Deposit Box.}{Safety Deposit Boxes are rented from the Safety Deposit Box Master. You are allowed to store anything that you wish in your Safety Deposit Box. They are an excellent way of keeping all the valuable items that you may wish to hold on to for later use. You must have an account with us in order to rent a Safety Deposit Box.}{}{}{}{}
+{121}{Tell me about bank accounts.}{}{5}{}{100}{}
+{122}{Tell me 'bout bank akkownts.}{}{-4}{}{100}{}
+{123}{What sort of interest rates do you pay?}{}{5}{}{110}{}
+{124}{Wat kinda intrest raytes you pay?}{}{-4}{}{110}{}
+{125}{How would I go about getting a loan?}{}{5}{}{130}{}
+{126}{How me go 'bout getting a lone?}{}{-4}{}{130}{}
+{127}{A:}{}{1}{}{30}{}
+
+// NPC explains how to get a loan.
+{130}{If you wish to take out a loan, you must first have an account with us. Once you have an account, you must talk to the Bank Manager about acquiring a loan. The amount that you are allowed to borrow will depend upon your current account balance. The higher your balance, the more you will be allowed to borrow.}{If you wish to take out a loan, you must first have an account with us. Once you have an account, you must talk to the Bank Manager about acquiring a loan. The amount that you are allowed to borrow will depend upon your current account balance. The higher your balance, the more you will be allowed to borrow.}{}{}{}{}
+{131}{Tell me about bank accounts.}{}{5}{}{100}{}
+{132}{Tell me 'bout bank akkownts.}{}{-4}{}{100}{}
+{133}{What sort of interest rates do you pay?}{}{5}{}{110}{}
+{134}{Wat kinda intrest raytes you pay?}{}{-4}{}{110}{}
+{135}{Could you tell me about the Safety Deposit Boxes?}{}{5}{}{120}{}
+{136}{Kan you tell me 'bout da Sayfty Depozit Boxes?}{}{-4}{}{120}{}
+{137}{A:}{}{1}{}{30}{}
+
+// PC wants to make a transaction.
+{140}{What kind of transaction would you like to make?}{What kind of transaction would you like to make?}{}{}{}{}
+{141}{I'd like to make a deposit.}{}{5}{}{150}{}
+{142}{Me wunna mayke a deposit.}{}{-4}{}{150}{}
+{143}{I need to make a withdrawal.}{}{5}{}{190}{}
+{144}{Me need to mayke a wifdrawall.}{}{-4}{}{190}{}
+{145}{How much is in my account?}{}{5}{}{-18}{}
+{146}{How much be in me akkownt?}{}{-4}{}{-18}{}
+{147}{I'd like to close my account.}{}{5}{}{XXX}{}
+{148}{Me wunna close me akkownt.}{}{-4}{}{XXX}{}
+{149}{F:}{}{1}{}{30}{}
+
+// PC wants to make a deposit.
+{150}{Certainly @pcname@, how much would you like to deposit into your account?}{Certainly @pcname@, how much would you like to deposit into your account?}{}{}{}{}
+{151}{1,000 coin.}{}{5}{$$1000}{-2}{$$-1000, pv0 1000, pv1 160}
+{152}{1,000 koin.}{}{-4}{$$1000}{-2}{$$-1000, pv0 1000, pv1 160}
+{153}{5,000 coin.}{}{5}{$$5000}{-2}{$$-5000, pv0 5000, pv1 170}
+{154}{5,000 koin.}{}{-4}{$$5000}{-2}{$$-5000, pv0 5000, pv1 170}
+{155}{10,000 coin.}{}{5}{$$10000}{-2}{$$-10000, pv0 10000, pv1 180}
+{156}{10,000 koin.}{}{-4}{$$10000}{-2}{$$-10000, pv0 10000, pv1 180}
+{157}{F:}{}{1}{}{30}{}
+
+// 160 - 1000 coin deposited
+{160}{Your deposit of 1,000 coin has been accepted. Your account has now been updated.}{Your deposit of 1,000 coin has been accepted. Your account has now been updated.}{}{}{}{}
+{161}{A:}{}{1}{}{30}{}
+
+// 170 - 5000 coin deposited
+{170}{Your deposit of 5,000 coin has been accepted. Your account has now been updated.}{Your deposit of 5,000 coin has been accepted. Your account has now been updated.}{}{}{}{}
+{171}{A:}{}{1}{}{30}{}
+
+// 180 - 10000 coin deposited
+{180}{Your deposit of 10,000 coin has been accepted. Your account has now been updated.}{Your deposit of 10,000 coin has been accepted. Your account has now been updated.}{}{}{}{}
+{181}{A:}{}{1}{}{30}{}
+
+// PC wants to make a withdrawal.
+{190}{Why of course, how much do you wish to withdraw from your account?}{Why of course, how much do you wish to withdraw from your account?}{}{}{}{}
+{191}{1,000 coin.}{}{5}{}{-5}{pv0 1000, pv1 200}
+{192}{1,000 koin.}{}{-4}{}{-5}{pv0 1000, pv1 200}
+{193}{5,000 coin.}{}{5}{}{-5}{pv0 5000, pv1 210}
+{194}{5,000 koin.}{}{-4}{}{-5}{pv0 5000, pv1 210}
+{195}{10,000 coin.}{}{5}{}{-5}{pv0 10000, pv1 220}
+{196}{10,000 koin.}{}{-4}{}{-5}{pv0 10000, pv1 220}
+{197}{F:}{}{1}{}{30}{}
+
+// 200 - 1000 coin withdrawal
+{200}{Here is your 1,000 coin sir. Thankyou for banking with Grayhills Savings and Loans.}{Here is your 1,000 coin madame. Thankyou for banking with Grayhills Savings and Loans.}{}{}{}{$$1000}
+{201}{A:}{}{1}{}{30}{}
+
+// 210 - 5000 coin withdrawal
+{210}{Here is your 5,000 coin sir. Thankyou for banking with Grayhills Savings and Loans.}{Here is your 5,000 coin madame. Thankyou for banking with Grayhills Savings and Loans.}{}{}{}{$$5000}
+{211}{A:}{}{1}{}{30}{}
+
+// 220 - 10000 coin withdrawal
+{220}{Here is your 10,000 coin sir. Thankyou for banking with Grayhills Savings and Loans.}{Here is your 10,000 coin madame. Thankyou for banking with Grayhills Savings and Loans.}{}{}{}{$$10000}
+{221}{A:}{}{1}{}{30}{}
+
+// No money in your account to withdraw.
+{230}{I'm sorry @pcname@. There is no money in your account for you to withdraw.}{I'm sorry @pcname@. There is no money in your account for you to withdraw.}{}{}{}{}
+{231}{A:}{}{1}{}{30}{}
+
+// 240 - Here's 1000 coin, your account is empty now
+{240}{Here is your 1,000 coin sir. Your account with Grayhills Savings and Loans is now empty.}{Here is your 1,000 coin sir. Your account with Grayhills Savings and Loans is now empty.}{}{}{}{$$1000}
+{241}{A:}{}{1}{}{30}{}
+
+// 250 - Here's 5000 coin, your account is empty now
+{250}{Here is your 5,000 coin sir. Your account with Grayhills Savings and Loans is now empty.}{Here is your 5,000 coin sir. Your account with Grayhills Savings and Loans is now empty.}{}{}{}{$$5000}
+{251}{A:}{}{1}{}{30}{}
+
+// 260 - Here's 10000 coin, your account is empty now
+{260}{Here is your 10,000 coin sir. Your account with Grayhills Savings and Loans is now empty.}{Here is your 10,000 coin sir. Your account with Grayhills Savings and Loans is now empty.}{}{}{}{$$10000}
+{261}{A:}{}{1}{}{30}{}
+
+// Not enough money in account to make that withdrawal.
+{270}{I'm sorry, there is not enough money in your account to make that withdrawal.}{I'm sorry, there is not enough money in your account to make that withdrawal.}{}{}{}{}
+{271}{A:}{}{1}{}{30}{}
+
+// PCs account is empty
+{280}{Your account is empty.}{Your account is empty.}{}{}{}{}
+{281}{A:}{}{1}{}{30}{}
+
+{290}{You have between 1 and 10,000 coin in your account.}{You have between 1 and 10,000 coin in your account.}{}{}{}{}
+{291}{A:}{}{1}{}{30}{}
+
+{300}{You have between 10,001 and 20,000 coin in your account.}{You have between 10,001 and 20,000 coin in your account.}{}{}{}{}
+{301}{A:}{}{1}{}{30}{}
+
+{310}{You have between 20,001 and 30,000 coin in your account.}{You have between 20,001 and 30,000 coin in your account.}{}{}{}{}
+{311}{A:}{}{1}{}{30}{}
+
+{320}{You have between 30,001 and 40,000 coin in your account.}{You have between 30,001 and 40,000 coin in your account.}{}{}{}{}
+{321}{A:}{}{1}{}{30}{}
+
+{330}{You have between 40,001 and 50,000 coin in your account.}{You have between 40,001 and 50,000 coin in your account.}{}{}{}{}
+{331}{A:}{}{1}{}{30}{}
+
+{340}{You have between 50,001 and 60,000 coin in your account.}{You have between 50,001 and 60,000 coin in your account.}{}{}{}{}
+{341}{A:}{}{1}{}{30}{}
+
+{350}{You have between 60,001 and 70,000 coin in your account.}{You have between 60,001 and 70,000 coin in your account.}{}{}{}{}
+{351}{A:}{}{1}{}{30}{}
+
+{360}{You have between 70,001 and 80,000 coin in your account.}{You have between 70,001 and 80,000 coin in your account.}{}{}{}{}
+{361}{A:}{}{1}{}{30}{}
+
+{370}{You have between 80,001 and 90,000 coin in your account.}{You have between 80,001 and 90,000 coin in your account.}{}{}{}{}
+{371}{A:}{}{1}{}{30}{}
+
+{380}{You have between 90,001 and 100,000 coin in your account.}{You have between 90,001 and 100,000 coin in your account.}{}{}{}{}
+{381}{A:}{}{1}{}{30}{}
+
+{390}{You have over 100,001 coin in your account.}{You have over 100,001 coin in your account.}{}{}{}{}
+{391}{A:}{}{1}{}{30}{}
+
+// PC wants to close the account.
+// Close the account - give all money in account to PC. Clear PC 'I have account' Flag.
+// IF PC has rented Safety Deposit box they must return key FIRST. Otherwise Bank will not close account.
+// IF PC has loan then PC MUST pay off loan first OTHERWISE Bank wil not close account.
+// {400}{}{}{}{}{}{}
+// {401}{}{}{INT}{}{XXX}{}
+
+// {Y}{}{}{INT}{}{XXX}{}

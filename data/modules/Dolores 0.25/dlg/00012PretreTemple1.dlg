@@ -1,0 +1,117 @@
+{1}{G:}{G:}{}{}{}{}
+// Vu si parlé au maire
+{2}{On m'a dit que je devais m'adresser à vous pour savoir où se trouve Laldar, le village des Elfes...}{}{5}{gf2 0, qu1002 2, gf6 1, ra -3, ra -2}{20}{gf2 1}
+{3}{Ou Laldar être ? ?}{}{-4}{gf2 0, qu1002 2, gf6 1}{30}{gf2 1}
+// Si PJ = Elfe
+{4}{Sauriez-vous où est le village de mes compatriotes les Elfes, Laldar ?}{}{5}{gf2 0, qu1002 2, gf6 1, ra 3}{140}{gf2 1}
+// Vu si PJ = Nain
+{5}{Heum.. Sauriez-vous où est Laldar ?}{}{5}{gf2 0, qu1002 2, gf6 1, ra 2}{230}{gf2 1}
+//Vu dans tous les cas
+{6}{W:}{}{5}{}{100}{}
+{7}{W:}{}{-4}{}{110}{}
+//Vu si demandé qui il était
+{8}{Pouvez-vous m'en dire plus sur cette religion ?}{}{5}{gf3 1}{120}{}
+{9}{Quoi ce temple ?}{}{-4}{gf3 1}{130}{}
+//Vu dans tous les cas
+{10}{E:}{}{1}{}{0}{}
+
+{20}{[Son visage se durcit] Hmm... Et pourquoi voudriez-vous y aller ?}{[Son visage se durcit] Hmm... Et pourquoi voudriez-vous y aller ?}{}{}{}{}
+{21}{Ma famille a été massacrée par les envahisseurs du continent.}{}{5}{}{40}{}
+
+{30}{Hum... Pourquoi toi vouloir y aller ?}{}{}{}{}{}
+{31}{Famille a moi tuée pendant invasion.}{}{-4}{}{50}{}
+
+{40}{Et ?}{Et ?}{}{}{}{}
+{41}{J'aimerais retrouver le chef du gouvernement et lui faire entendre raison quant à cette invasion.}{}{5}{}{60}{}
+{42}{Je veux me venger en massacrant à mon tour}{}{5}{}{70}{}
+
+{50}{Et ?}{Et ?}{}{}{}{}
+{51}{Moi veut dire a chef pas bien envahir !}{}{-4}{}{80}{}
+{52}{Moi veut tuer chef !}{}{-4}{}{90}{}
+
+{60}{Tout ce que je peux vous dire, c'est que leur village se trouve sur Choathien. Vous pouvez aller dans le temple d'Aliwen pour de plus amples renseignements, je ne vous en dirais pas plus.}{Tout ce que je peux vous dire, c'est que leur village se trouve sur Choathien. Vous pouvez aller dans le temple d'Aliwen pour de plus amples renseignements, je ne vous en dirais pas plus.}{}{}{}{gf8 1, qu1003 4, ru1002}
+{61}{Très bien. Je vous remercie beaucoup pour cette information. Au revoir.}{}{5}{}{0}{}
+
+{70}{[Son attitude devient hautaine] Malheureusement, je ne sais pas où est Laldar. Vous allez devoir vous débrouiller seul. Je ne préconise pas la violence.}{[Son attitude devient hautaine] Malheureusement, je ne sais pas où est Laldar. Vous allez devoir vous débrouiller seul. Je ne préconise pas la violence.}{}{}{}{gf4 1, re -10}
+{71}{Très bien. De toute façon je n'ai pas besoin de votre aide.}{}{5}{}{0}{}
+{72}{Alors, meurs !}{}{5}{}{0}{co}
+
+{80}{Va à Aliwen. Va dans le temple.}{Va à Aliwen. Va dans le temple.}{}{}{}{gf8 1, qu1003 4, ru1002}
+{81}{A:}{}{-4}{}{0}{}
+
+{90}{[Son attituse devient hautaine] Je ne sais pas où est Laldar. Je n'aime pas la violence. Pars.}{[Son attituse devient hautaine] Je ne sais pas où est Laldar. Je n'aime pas la violence. Pars.}{}{}{}{gf4 1, re -10}
+{91}{Tant pis.}{}{-4}{}{0}{}
+{92}{Moi tuer toi alors !}{}{-4}{}{0}{}
+
+{100}{Mon nom est Lobreberiel, et je suis le premier Prêtre de ce temple. Nous sommes deux prêtres, un bon, un mauvais. Autre chose ?}{Mon nom est Lobreberiel, et je suis le premier Prêtre de ce temple. Nous sommes deux prêtres, un bon, un mauvais. Autre chose ?}{}{}{}{gf3 1}
+{101}{K:}{}{5}{}{1}{}
+
+{110}{Moi, Lobreberiel. Moi, premier prêtre dans ce temple.}{Moi, Lobreberiel. Moi, premier prêtre dans ce temple.}{}{}{}{gf3 1}
+{111}{K:}{}{-4}{}{1}{}
+
+{120}{Cette religion a été fondée par Jevaberiel, notre père fondateur. Il croyait en la dualité des êtres vivants. Comme quoi un être fondamentalement mauvais pouvait faire le bien si il le voulait, aussi bien que l'inverse. Yrercin était son maître, celui qui lui a tout appris.}{Cette religion a été fondée par Jevaberiel, notre père fondateur. Il croyait en la dualité des êtres vivants. Comme quoi un être fondamentalement mauvais pouvait faire le bien si il le voulait, aussi bien que l'inverse. Yrercin était son maître, celui qui lui a tout appris.}{}{}{}{}
+{121}{K:}{}{5}{}{1}{}
+
+{130}{Ce temple a été fondé par Jevaberiel. Il croyait que quiconque pouvait faire soit le bien, soit le mal, indépendament de sa nature. Yrercin était son maître, celui qui lui a tout appris.}{Ce temple a été fondé par Jevaberiel. Il croyait que quiconque pouvait faire soit le bien, soit le mal, indépendament de sa nature. Yrercin était son maître, celui qui lui a tout appris.}{}{}{}{}
+{131}{Huh... Moi rien compris... Autres questions !}{}{-4}{}{1}{}
+
+{140}{Ha ha ha ! Vous êtes un Elfe, et vous ne savez pas où vous habitez ? Ha ha ha ! Excusez-moi, mais c'est trop drôle !}{Ha ha ha ! Vous êtes une Elfe, et vous ne savez pas où vous habitez ? Ha ha ha ! Excusez-moi, mais c'est trop drôle !}{}{}{}{}
+{141}{En fait, je ne suis pas natif de là-bas... J'ai été élevé ici, et je n'ai aucune idée de mes racines...}{}{1}{ps9}{150}{}
+{142}{Evitez ce genre de remarques à l'avenir pour ne pas qu'elles vous rentrent dans la gorge...}{}{1}{}{220}{al -2, re-10}
+
+{150}{Ha... D'accord... Mais pourquoi voulez-vous donc y aller ?}{Ha... D'accord... Mais pourquoi voulez-vous donc y aller ?}{}{}{}{}
+{151}{Ma famille a été massacrée par les envahisseurs.}{}{1}{}{160}{}
+{152}{Quelle importance ? Je veux voir mes compatriotes...}{}{1}{}{200}{}
+
+{160}{Et vous voulez vous venger ?}{Et vous voulez vous venger ?}{}{}{}{}
+{161}{Oui, c'est exactement ça.}{}{1}{}{170}{re-5}
+{162}{Non, pas tout à fait. Je veux juste les raisonner.}{}{1}{}{190}{re10}
+
+{170}{Eh bien c'est vraiment pas de chance, parce que je ne sais pas où cette île se trouve.}{Eh bien c'est vraiment pas de chance, parce que je ne sais pas où cette île se trouve.}{}{}{}{gf4 1}
+{171}{Ah oui, vraiment ? [Vous faites mine de sortir votre arme]}{}{}{}{180}{re-10}
+{172}{Eh bien, adieu alors}{}{1}{}{0}{}
+
+{180}{Vous ne m'aurez pas par la force. Sortez ou je serais obligé d'appeler les gardes.}{}{}{}{}{}
+{181}{Très bien. Je reviendrais...}{}{1}{}{0}{}
+{182}{[Attaquez-le]}{}{1}{}{0}{co}
+
+{190}{Ah... C'est différent... Eh bien, Laldar se trouve sur Choathien. Quelqu'un pourra certainement vous y emmener, sur l'île...}{Ah... C'est différent... Eh bien, Laldar se trouve sur Choathien. Quelqu'un pourra certainement vous y emmener, sur l'île...}{}{}{}{qu1003 4, ru1002, gf8 1}
+{191}{Merci beaucoup pour cette information.}{}{1}{}{0}{}
+
+{200}{Vos compatriotes, hm ? [Il vous examine] Vous en êtes certain ?}{Vos compatriotes, hm ? [Il vous examine] Vous en êtes certaine ?}{}{}{}{}
+{201}{Non, en fait, ma famille a été massacrée par les envahisseurs.}{}{1}{}{160}{}
+{202}{Vous doutez de ma parole ?}{}{1}{ps2}{210}{}
+
+{210}{Mmhh... Soit. Laldar est sur Choathien. Débrouillez-vous pour y aller, vous êtes grand.}{Mmhh... Soit. Laldar est sur Choathien. Débrouillez-vous pour y aller, vous êtes grande.}{}{}{}{qu1003 4, ry1002}
+{211}{Grand merci... Au revoir !}{}{1}{}{0}{}
+
+{220}{Hem... Soit. Pourquoi voulez-vous aller à Laldar ?}{Hem... Soit. Pourquoi voulez-vous aller à Laldar ?}{}{}{}{}
+{221}{Ma famille a été massacrée par les envahisseurs.}{}{1}{}{160}{}
+{222}{Quelle importance ? Je veux voir mes compatriotes...}{}{1}{}{200}{}
+
+{230}{Allons bon. Un Nain veut aller faire une visite aux Elfes. Et pourquoi donc, je vous prie ?}{Quoi ? Tu vas me faire croire que t'es une Naine ? Allons bon, encore un pu*** de bug du jeu... Ou de mon dialogue... Les naines ne sont pas représentées en tant que races jouables au cas ou tu le saches pas.}{}{}{}{}
+{231}{On m'a dit qu'ils détenaient une information capitale pour moi.}{}{1}{}{240}{}
+{232}{En quoi cela vous regarde-t-il ?}{}{1}{}{260}{}
+
+{240}{Ah ? Et Quel genre d'information ?}{Ah ? Et Quel genre d'information ?}{}{}{}{}
+{241}{En quoi cela vous regarde-t-il ?}{}{1}{}{260}{}
+{242}{Des informations sur le Gouvernement des Arcanes.}{}{1}{}{250}{}
+
+{250}{Et pourquoi voulez-vous ce genre d'informations ?}{Et pourquoi voulez-vous ce genre d'informations ?}{}{}{}{}
+{251}{Ma famille a été massacrée par les envahisseurs.}{}{1}{}{160}{}
+{252}{Mais qu'est-ce que c'est que cet interrogatoire ? Je refuse d'en dire plus !}{}{1}{}{260}{}
+
+{260}{Ecoutez, vous comprendrez que je doive protéger les miens. Vous conviendrez qu'un Nain voulant voir les Elfes, c'est peu courant...}{Ecoutez, vous comprendrez que je doive protéger les miens. Vous conviendrez qu'un Nain voulant voir les Elfes, c'est peu courant...}{}{}{}{}
+{261}{Et alors ? J'en ai bien le droit, non ?}{}{1}{}{270}{}
+{262}{Mais s'il vous plaît ! J'ai un besoin capital de ces informations !}{}{1}{ps2}{280}{}
+
+{270}{Certes, certes... Mais pourquoi Diable voulez-vous voir ces Elfes ?}{Certes... Mais pourquoi Diable voulez-vous voir ces Elfes ?}{}{}{}{}
+{271}{Ma famille a été massacrée par les envahisseurs.}{}{1}{}{160}{}
+{272}{F:}{}{1}{}{0}{}
+
+{280}{Et quelles sont ces informations ?}{Et quelles sont ces informations ?}{}{}{}{}
+{281}{Si je les cherche, c'est bien que je ne les connaît pas !}{}{1}{}{290}{}
+{282}{Qu'est-ce que ça peut vous faire ?}{}{1}{}{260}{}
+
+{290}{Certes... Mais encore ?}{Certes... Mais encore ?}{}{}{}{}
+{291}{Je dois trouver le Gouvernement des Arcanes, qui a assassiné ma famille.}{}{1}{}{160}{}

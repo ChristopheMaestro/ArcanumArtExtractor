@@ -1,0 +1,35 @@
+// [LABEL] debut
+{1}{Qui êtes-vous et que voulez-vous?}{Qui êtes-vous et que voulez-vous?}{}{1}{}{}
+{2}{Je m'appelle @pcname@ et je suis là parce que je cherche les membres du groupe Travis. Les avez-vous vu?}{}{1}{qu1004 2}{21}{}
+{3}{Je m'appelle @pcname@ et je suis là parce que je cherche les membres du groupe Travis. Les avez-vous vu?}{}{1}{qu1004 1}{}{}
+{4}{Desole je me suis gouré de chemin, je me casse.}{}{1}{}{}{}
+{5}{Je suis le mec qui va te tailler en morceau.}{}{1}{}{}{co,qu1004 3}
+
+// [LABEL] travis
+{21}{Oui ils sont enfermés dans la cage derriere moi.}{Oui ils sont enfermés dans la cage derriere moi.}{}{2}{}{}
+{22}{Ben pourquoi les avez-vous enfermez?}{}{1}{}{41}{}
+{23}{Ah tant mieux, je les deteste. Merci du coup de main. Bye.}{}{1}{}{}{}
+
+// [LABEL] pourquoi enferme
+{41}{Ben moi et mes potes les streums, on se fait chier dans notre donjon de merde alors j'ai ramener un groupe pour mettre un peu d'ambiance.}{Ben moi et mes potes les streums, on se fait chier dans notre donjon de merde alors j'ai ramener un groupe pour mettre un peu d'ambiance.}{}{3}{}{}
+{42}{Je m'en fous de vos problèmes, je veux recuperer le groupe.}{}{1}{}{61}{}
+{43}{Je comprends votre ennui dans ce donjon, mais le groupe doit revenir à la surface. Ils sont malheureux dans cette cage toute triste.}{}{1}{}{81}{}
+
+// [LABEL] m'en fous de vos bleme
+{61}{Je ne vous laisserai pas reprendre le groupe. IL faudra me passer sur le corps}{Je ne vous laisserai pas reprendre le groupe. IL faudra me passer sur le corps}{}{4}{}{}
+{62}{Très bien. Prepare toi à clamser golem de merde!}{}{1}{}{}{}
+
+// [LABEL] pacifisme
+{81}{Que proposez-vous alors?}{Que proposez-vous alors?}{}{5}{}{}
+{82}{Ben vous et vos potes, vous serez invités gratos à tout les concerts de Travis si vous les liberez.}{}{1}{ps1 }{121}{}
+{83}{Oh et puis gardez-les. Ils avaient qu'à faire attention.}{}{1}{}{}{}
+{84}{Je vous donne 1000 balles et vous liberez le groupe.}{}{1}{$$1000 }{101}{}
+
+// [LABEL] 1000 balles
+{101}{Ok ca mache tope-la mon frère}{Ok ca mache tope-la mon frère}{}{6}{}{}
+{102}{Yo men, c'est cool}{}{1}{}{}{$$-1000,qu1004 3,in-4426 }
+
+// [LABEL] concerts
+{121}{Ok, ca marche. Vous pouvez leur dire qu'ils sont libres.}{Ok, ca marche. Vous pouvez leur dire qu'ils sont libres.}{}{7}{}{}
+{122}{Cool, bon j'y vais}{}{1}{}{}{qu1004 3,in-4426}
+

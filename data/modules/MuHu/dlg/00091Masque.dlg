@@ -1,0 +1,82 @@
+// [LABEL] masque
+{1}{[d'une grosse voix rauque] Ehh, kess vous faites ici, vous ?}{[d'une grosse voix rauque] Ehh, kess vous faites ici, vous ?}{}{1}{}{}
+{2}{Euh je me ballladais...dans les égoûts...}{}{1}{me0 }{21}{}
+{3}{Vous êtes la dernière vermine qui reste dans les égoûts, je vous tue}{}{1}{me0 }{}{co }
+{4}{Je dois y aller...}{}{1}{}{41}{}
+{5}{Ce n'est que moi, @pcname@}{}{1}{me1 }{321}{}
+// [LABEL] Ballade
+{21}{Ah bon...? Nous allons jouer à un jeu : si tu réponds bien, tu pourras partir, sinon, AHAHAHAHAH ! tu mourras !}{Ah bon...? Nous allons jouer à un jeu : si tu réponds bien, tu pourras partir, sinon, AHAHAHAHAH ! tu mourras !}{}{2}{}{}
+{22}{Ok, allons-y}{}{1}{}{61}{}
+{23}{Qu'est-ce qu'il y a de drôle ?}{}{1}{}{81}{}
+// [LABEL] bye
+{41}{Non non, tu pars pas !! Il ne fallait pas venir ici !! Nous allons jouer à un jeu : si tu réponds bien, tu peux partir, sinon, tu meurs !! AHAHAHA}{Non non, tu pars pas !! Il ne fallait pas venir ici !! Nous allons jouer à un jeu : si tu réponds bien, tu peux partir, sinon, tu meurs !! AHAHAHA}{}{3}{}{}
+{42}{Ok, allons-y}{}{1}{}{61}{}
+{43}{Qu'est-ce qu'il y a de drôle ?}{}{1}{}{81}{}
+// [LABEL] Question !
+{61}{QUEL EST ton FILM d'HORREUR préféré ?}{QUEL EST ton FILM d'HORREUR préféré ?}{}{4}{}{}
+{62}{Scream}{}{1}{}{101}{}
+{63}{Souviens-toi l'été dernier}{}{1}{}{121}{}
+{64}{Scary Movie}{}{1}{}{141}{}
+{65}{Ta mère en short}{}{1}{}{161}{}
+// [LABEL] drole
+{81}{Euhh...rien c'est pour faire bien.... Bon, on y va, ou je te tue tout de suite ?}{Euhh...rien c'est pour faire bien.... Bon, on y va, ou je te tue tout de suite ?}{}{5}{}{}
+{82}{Ok pose ta question}{}{1}{}{61}{}
+{83}{Je te bute en un clin d'oeil ! ALLEZ VIENS }{}{1}{}{}{co }
+// [LABEL] Cream
+{101}{Bonne réponse. Question suivante, car y'en a une autre si tu veux survivre !!}{Bonne réponse. Question suivante, car y'en a une autre si tu veux survivre !!}{}{6}{}{}
+{102}{Encore ??!! Bon allez vas-y}{}{1}{}{181}{}
+{103}{Non je préfère te buter}{}{1}{}{}{co }
+// [LABEL] stld
+{121}{Réponse, disons correcte... Question suivante, eh oui il y en a une autre !}{Réponse, disons correcte... Question suivante, eh oui il y en a une autre !}{}{7}{}{}
+{122}{Bon, ok vas-y}{}{1}{}{181}{}
+{123}{Te buter sera mieux, je crois}{}{1}{}{}{co }
+// [LABEL] Scary movie
+{141}{Très bonne réponse !!! Mais il te faudra répondre à celle-ci aussi si tu veux survivre}{Très bonne réponse !!! Mais il te faudra répondre à celle-ci aussi si tu veux survivre}{}{8}{}{}
+{142}{Ok, alors fais vite}{}{1}{}{181}{}
+{143}{Oh non tu m'fais chiey, je te tue tout de suite !}{}{1}{}{}{co }
+// [LABEL] mèrenshort
+{161}{MAUVAISE REPONSE !! tu n'aurais pas dû dire ça !! Et comme je suis invincible, tu vas crever très vite !}{MAUVAISE REPONSE !! tu n'aurais pas dû dire ça !! Et comme je suis invincible, tu vas crever très vite !}{}{9}{}{}
+{162}{Ok alors on va quand même vérifier ça !}{}{1}{}{}{co }
+// [LABEL] QUESTION 2
+{181}{Au cinéma, quel personnage a été le plus joué ??}{Au cinéma, quel personnage a été le plus joué ??}{}{10}{}{}
+{182}{Megret}{}{1}{}{201}{}
+{183}{James Bond}{}{1}{}{201}{}
+{184}{Sherlock Holmes}{}{1}{}{221}{}
+{185}{Le Noir sympa qui se fait toujours tuer avant la fin du film}{}{1}{}{201}{}
+// [LABEL] FAUX !
+{201}{Ehhh non, c'est faux !! Tu vas donc crever la gueule ouverte, muhahaha}{Ehhh non, c'est faux !! Tu vas donc crever la gueule ouverte, muhahaha}{}{11}{}{}
+{202}{Ok, on va bien voir ça tiens !}{}{1}{}{}{co }
+// [LABEL] CORRECT Q2 + Q3
+{221}{Bonne réponse !!! Question suivante : Laquelle de ces affirmations est vraie ?}{Bonne réponse !!! Question suivante : Laquelle de ces affirmations est vraie ?}{}{12}{}{}
+{222}{Chevènement voit des morts}{}{1}{}{201}{}
+{223}{Le PDG de Ikéa est un ancien partisan  nazi }{}{1}{}{241}{}
+{224}{Manger des potirons donne le cancer du foie}{}{1}{}{201}{}
+{225}{Les vaches volantes existent }{}{1}{}{201}{}
+// [LABEL] BON Q3 + OK
+{241}{Bon, tu as su répondre aux questions, je te laisse donc partir si tu veux. Sauf si tu as autre chose à me dire !}{Bon, tu as su répondre aux questions, je te laisse donc partir si tu veux. Sauf si tu as autre chose à me dire !}{}{13}{}{}
+{242}{Non c'est bon, j'y vais. Bonne journée}{}{1}{}{}{}
+{243}{Pourquoi y'a des gens morts dans les égoûts ?}{}{1}{}{261}{}
+// [LABEL] morts
+{261}{Ah, eux.... ils doivent rechercher ma drogue si convoitée en ville, mais ils ont dû se faire bouffer par les rats ou se faire poignarder par mon humble personne...}{Ah, eux.... ils doivent rechercher ma drogue si convoitée en ville, mais ils ont dû se faire bouffer par les rats ou se faire poignarder par mon humble personne...}{}{14}{}{}
+{262}{Vous dites fournir de la drogue ?}{}{1}{}{281}{}
+{263}{Merci pour l'info. salut}{}{1}{}{}{}
+// [LABEL] dope
+{281}{Bien sûr ! j'en fournis aux habitants une fois par semaine... même si dans cette ville ma drogue n'est pas très appréciée, certains la convoitent depuis quelques temps...}{Bien sûr ! j'en fournis aux habitants une fois par semaine... même si dans cette ville ma drogue n'est pas très appréciée, certains la convoitent depuis quelques temps...}{}{15}{}{}
+{282}{Ah ! c'est donc vous ! je vais vous tuer !}{}{1}{}{}{co }
+{283}{Et pourquoi cachez-vous votre visage derrière ce masque en tête de mort ?}{}{1}{}{301}{}
+{284}{E:}{}{1}{}{}{}
+// [LABEL] Masque
+{301}{Ben...parce que j'ai envie ! Je veux pas qu'on me voie fournir de la drogue à tout le monde et tuer des gens en connaissant mon visage}{Ben...parce que j'ai envie ! Je veux pas qu'on me voie fournir de la drogue à tout le monde et tuer des gens en connaissant mon visage}{}{16}{}{}
+{302}{Ah, je comprends. Au revoir}{}{1}{}{}{}
+// [LABEL] non non
+{321}{Ah, ok ! Bon alors tu veux quoi cette fois ?}{Ah, ok ! Bon alors tu veux quoi cette fois ?}{}{17}{}{}
+{322}{Avez vous de la drogue pour moi ?}{}{1}{}{341}{}
+{323}{Quel est votre but dans la vie ?}{}{1}{}{361}{}
+{324}{Euh rien, je m'en vais}{}{1}{}{}{}
+// [LABEL] dropumoué
+{341}{Ah, non, rupture de stock. Si vous voulez un tuyau, vous pouvez aller chez mes "fournisseurs" ils habitent vers la salle de conférence, ils font pousser ça chez eux.}{Ah, non, rupture de stock. Si vous voulez un tuyau, vous pouvez aller chez mes "fournisseurs" ils habitent vers la salle de conférence, ils font pousser ça chez eux.}{}{18}{}{}
+{342}{Merci de l'info, salut}{}{1}{}{}{}
+// [LABEL] butvie
+{361}{Je m'détends....en tuant... . Sinon ben je mange des chips et je me drogue pour faire passer le temps. Je bois de la bière aussi.}{Je m'détends....en tuant... . Sinon ben je mange des chips et je me drogue pour faire passer le temps. Je bois de la bière aussi.}{}{19}{}{}
+{362}{Euh, merci de l'info, salut}{}{1}{}{}{}
+{363}{Je voudrais en savoir plus sur vous}{}{1}{}{}{ce }

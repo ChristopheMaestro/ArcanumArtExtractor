@@ -1,0 +1,117 @@
+// first meeting is 1, all else is 100
+
+{1}{G:}{G:}{}{}{}{}
+{2}{Good day. I am @pcname@.}{}{5}{}{10}{}
+{3}{Hi! Me is @pcname@!}{}{-4}{}{10}{}
+{4}{E:}{}{1}{}{0}{}
+
+{10}{Good day, sir. I am Chun, the high priest of this temple. How may I help you?}{Good day, madam. I am Chun, the high priest of this temple. How may I help you?}{}{}{}{gf 2 1}
+{11}{Chun, you say? What happened to Habor?}{}{5}{}{20}{}
+{12}{I am here to pick up something.}{}{5}{}{30}{}
+{13}{Me need book from Habor!}{}{-4}{}{40}{}
+
+{20}{The good Habor passed away last week. I am his replacement.}{The good Habor passed away last week. I am his replacement.}{}{}{}{}
+{21}{I was supposed to pick up something up from him.}{}{1}{}{30}{}
+{22}{I am so sorry to hear that.}{}{1}{}{110}{}
+
+{30}{And what were you supposed to pick up?}{And what were you supposed to pick up?}{}{}{}{}
+{31}{A book. It's called the Pnakotic Manuscripts or Fragments or something like that.}{}{1}{}{40}{}
+{32}{Oh, I guess it doesn't matter now.}{}{1}{}{110}{}
+
+{40}{[Chun pales.] I know nothing of such a book.}{[Chun pales.] I know nothing of such a book.}{}{}{}{}
+{41}{Please, sir. You obviously have heard of it!}{}{5}{}{50}{}
+{42}{How odd. Oh well, no matter then.}{}{5}{}{110}{}
+{43}{Oh...duh...okay.}{}{-4}{}{110}{}
+
+{50}{I told you, sir, I know nothing.}{I told you, madam, I know nothing.}{}{}{}{}
+{51}{Ok, ok, I believe you.}{}{1}{}{110}{}
+{52}{Please sir! I must know!}{}{1}{ps -3}{60}{}
+{53}{Please sir! I must know!}{}{1}{ps 4}{70}{}
+
+{60}{No! I will speak no more about this!}{No! I will speak no more about this!}{}{}{}{}
+{61}{Fine.}{}{1}{}{110}{}
+{62}{E:}{}{1}{}{0}{}
+
+{70}{[Chun lowers his head.] We did as Habor wished. We buried him with it.}{[Chun lowers his head.] We did as Habor wished. We buried him with it.}{}{}{}{}
+{71}{What! I must have that book! I must exhume the body at once!}{}{1}{}{120}{}
+{72}{Well, I guess that's for the best then.}{}{1}{}{110}{}
+
+{100}{G:}{G:}{}{}{}{}
+{101}{I need to talk to you, Chun.}{}{1}{}{110}{}
+{102}{E:}{}{1}{}{0}{}
+
+{110}{Is there anything I can do for you today, sir?}{Is there anything I can do for you today, madam?}{}{}{}{}
+{111}{What is going on in your cemetary?}{}{5}{}{120}{}
+{112}{I have a question about Habor's will.}{}{5}{gf 1 1}{160}{}
+{113}{H:}{}{1}{}{100}{}
+{114}{Me still looking for book!}{}{-4}{}{250}{}
+{115}{I am looking for Habor's Ebon Blade.}{}{5}{gf 3 1}{270}{}
+{116}{Me need Habor's bladey thingie.}{}{-4}{gf 3 1}{270}{}
+{117}{E:}{}{1}{}{0}{}
+
+{120}{There are...problems. Undead roam freely at night, so we are keeping the gates locked at all times, for our safety.}{There are...problems. Undead roam freely at night, so we are keeping the gates locked at all times, for our safety.}{}{}{}{}
+{121}{Can't I go in? I will not hold you responsible.}{}{1}{}{130}{}
+{122}{What if I solve this little problem for you?}{}{1}{}{130}{}
+{123}{Yikes! I will steer clear of there!}{}{1}{}{110}{}
+
+{130}{No. This is a church matter. I have contacted the bishop and I await his reply.}{No. This is a church matter. I have contacted the bishop and I await his reply.}{}{}{}{}
+{131}{I must protest, Chun.}{}{1}{}{140}{}
+{132}{I see your mind is made up.}{}{1}{}{110}{}
+
+{140}{[Chun draws himself up.] Sir! Do not jeopardize us all by entering the cemetary! I forbid it!}{[Chun draws himself up.] Madam! Do not jeopardize us all by entering the cemetary! I forbid it!}{}{}{}{}
+{141}{We will see, Chun. We will see.}{}{1}{}{150}{}
+{142}{I hear you, Chun.}{}{1}{}{110}{}
+
+{150}{Sir, I warn you. I am responsible for this temple, and I will not stand idly by while you meddle with events you do not understand. The guards will be ordered to watch you closely.}{Madam, I warn you. I am responsible for this temple, and I will not stand idly by while you meddle with events you do not understand. The guards will be ordered to watch you closely.}{}{}{}{}
+{151}{Don't interfere with me, Chun. I also have duties. Goodbye.}{}{1}{}{0}{}
+{152}{I will heed your warning, Chun.}{}{1}{}{110}{}
+
+{160}{What do you need to know about it?}{What do you need to know about it?}{}{}{}{}
+{161}{Did you execute his wishes?}{}{1}{}{170}{}
+{162}{Did you bury his book with him?}{}{1}{}{70}{}
+
+{170}{Of course! He is interred in the cemetary, and he must not be disturbed!}{Of course! He is interred in the cemetary, and he must not be disturbed!}{}{}{}{}
+{171}{No, I mean did you follow his instructions EXACTLY?}{}{1}{}{180}{}
+{172}{You're a good man, Chun.}{}{1}{}{110}{}
+
+{180}{What do you mean? We buried his book with him.}{What do you mean? We buried his book with him.}{}{}{}{}
+{181}{Good. Thanks.}{}{1}{}{140}{}
+{182}{Did you consecrate his tomb immediately?}{}{1}{}{190}{}
+
+{190}{[Chun hesitates.] Well, yes and no. It was raining very hard that night, so I consecrated it in the morning.}{[Chun hesitates.] Well, yes and no. It was raining very hard that night, so I consecrated it in the morning.}{}{}{}{}
+{191}{We should go check that tomb right now!}{}{1}{}{130}{}
+{192}{So the book sat all night in his tomb?}{}{1}{}{200}{}
+
+{200}{Yes, we placed it in his sarcophagus that night.}{Yes, we placed it in his sarcophagus that night.}{}{}{}{}
+{201}{Chun, you fool! The book spent a night unprotected?}{}{1}{}{210}{re -10}
+{202}{I fear you may have erred, Chun.}{}{1}{}{210}{}
+
+{210}{No harm was done. I consecrated the ground the next day.}{No harm was done. I consecrated the ground the next day.}{}{}{}{}
+{211}{I hope that was soon enough.}{}{1}{}{110}{}
+{212}{What about the undead in the cemetary?}{}{1}{}{220}{}
+
+{220}{[Chun looks worried.] Habor said those undead have beeen there for years, since soon after his arrival here.}{[Chun looks worried.] Habor said those undead have beeen there for years, since soon after his arrival here.}{}{}{}{}
+{221}{Then why are you so nervous about them?}{}{1}{}{230}{}
+{222}{Please let me in there. I can handle them.}{}{1}{}{130}{}
+
+{230}{They have become more numerous since Habor's death. But the bishop has been informed, and I will do nothing until I hear from him.}{They have become more numerous since Habor's death. But the bishop has been informed, and I will do nothing until I hear from him.}{}{}{}{}
+{231}{I am going in there. I am responsible for retrieving that book!}{}{1}{}{150}{}
+{232}{I fear a connection between the undead and the book, Chun.}{}{1}{}{240}{}
+
+{240}{Leave the undead to me, sir, and let Habor and his book lie in peace.}{Leave the undead to me, madam, and let Habor and his book lie in peace.}{}{}{}{}
+{241}{I will think about it, Chun.}{}{1}{}{110}{}
+{242}{E:}{}{1}{}{0}{}
+
+{250}{Well, stay out of the cemetary! There are bad monsters in there!}{Well, stay out of the cemetary! There are bad monsters in there!}{}{}{}{}
+{251}{Okay!}{}{-4}{}{110}{}
+{252}{Me kill monsters!}{}{-4}{}{260}{}
+
+{260}{No! Stay out of there, you moron! I will have it taken care of!}{No! Stay out of there, you moron! I will have it taken care of!}{}{}{}{}
+{261}{Duh...okay.}{}{1}{}{110}{}
+{262}{E:}{}{1}{}{0}{}
+
+{270}{You may not have the Ebon Blade! I have locked it away in the library!}{You may not have the Ebon Blade! I have locked it away in the library!}{}{}{}{gf 3 0}
+{271}{Hmm...}{}{1}{}{110}{}
+{272}{E:}{}{1}{}{0}{}
+
+//{}{}{}{}{}{}{}

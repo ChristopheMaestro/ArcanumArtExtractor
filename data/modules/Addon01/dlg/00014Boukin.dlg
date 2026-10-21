@@ -1,0 +1,33 @@
+{1}{Que désirez-vous @pcname@ ? Acheter des marchandises, des livres ou encore entendre les derniers potins ?}{Que désirez-vous @pcname@ ? Acheter des marchandises, des livres ou encore entendre les derniers potins ?}{}{}{}{}
+{2}{Comment connaissez-vous mon nom ?}{}{1}{lc1 0}{30}{}
+{3}{R:$0, 1000-1010}{}{1}{}{1}{}
+{4}{B:}{}{1}{}{1}{}
+{5}{Je serais interessé par ces manuels si c'est bien ceux qui permettent de fabriquer des objets sans qu'on ai le niveau.}{}{1}{}{7}{}
+{6}{E:}{}{1}{}{}{}
+{7}{Voulez-vous m'acherter des manuels technique ? C'est 1000 pièces.}{}{}{}{}{}
+{8}{C'est un peu cher, à Tarante, ils ne coûtent que 750,  mais d'accord. J'en ai trop besoin.}{}{1}{$$1000 }{12}{}
+{9}{Non, c'est trop cher.}{}{1}{}{10}{}
+{10}{Tant pis, une autre fois peut-être ?}{}{}{}{}{}
+{11}{E:}{}{1}{}{0}{}
+{12}{Quels manuels souhaitez-vous acheter... ?}{Quels manuels souhaitez-vous acheter... ?}{}{}{}{}
+{13}{Des manuels de chimie...}{}{1}{}{-2}{$$-1000}
+{14}{Des manuels sur les explosifs...}{}{1}{}{-5}{$$-1000}
+{15}{Des manuels de botanique...}{}{1}{}{-8}{$$-1000}
+{16}{Des manuels de forgeron...}{}{1}{}{-11}{$$-1000}
+{17}{[Plus.]}{}{1}{}{18}{}
+{18}{Quels manuels souhaitez-vous acheter... ?}{Quels manuels souhaitez-vous acheter... ?}{}{}{}{}
+{19}{Des manuels de thérapeutique...}{}{1}{}{-14}{$$-1000}
+{20}{Des manuels d'armurier...}{}{1}{}{-17}{$$-1000}
+{21}{Des manuels d'électricité...}{}{1}{}{-20}{$$-1000}
+{22}{Des manuels de mécanique...}{}{1}{}{-23}{$$-1000}
+{23}{[Plus.]}{}{1}{}{24}{}
+{24}{Quels manuels souhaitez-vous acheter... ?}{Quels manuels souhaitez-vous acheter... ?}{}{}{}{}
+{25}{[Retour.]}{}{1}{}{12}{}
+{26}{E:}{}{1}{}{0}{}
+{27}{[Elle vous tend le livre.] Y a-t-il autre chose ?}{[Elle vous tend le livre.] Y a-t-il autre chose ?}{}{}{}{}
+{28}{Je souhaiterais acheter un autre manuel...}{}{1}{}{20}{}
+{29}{E:}{}{1}{}{0}{}
+{30}{Je suis ravie de vous voir enfin. Vous savez, les rumeurs vont vite, @pcname@. Mon nom est @npcname@, je suis la femme de Linventeur. Et à temps perdu, je mets au propre et classe les notes de mon mari. Je vends aussi des manuels, mon mari est si occupé. Et puis, il faut bien trouver de l'argent pour financer ses recherches.}{}{}{}{}{}
+{31}{Enchanté de vous connaître @npcname@. Puisque vous sembler être au courant de tout, pourquoi toutes les plaque d'égouts semblent rouillées ?}{}{1}{}{32}{lc1 1}
+{32}{Il y a une 20aine d'années, le préposé au nettoyage à avoué, lors d'une beuverie, qu'il n'entretenait jamais les égouts. Naturellement il à été renvoyé. Mais surprise, les égouts étaient loin d'être bouchés. Le responsable du Port en a conclu que la marée faisait tout le travail. Depuis, plus personne ne s'en occupe. Il n'y a qu'une visite de routine tous les 5 ans par la mer, quand la marée est au plus bas.}{}{}{}{}{}
+{33}{Je vous remerci pour cette petite anecdote. Parlons d'autre chose.}{}{1}{}{1}{}

@@ -1,0 +1,64 @@
+// main dialog starts at 10
+
+{10}{I am Zeebo!}{I am Zeebo!}{}{}{}{}
+{11}{You are awfully small for a zombie, aren't you?}{}{5}{wa 0, fo 0, wt 0}{20}{}
+{12}{What are you doing here?}{}{5}{wa 0, fo 0, wt 0}{50}{}
+{13}{You tiny!}{}{-4}{wa 0, fo 0, wt 0}{20}{}
+{14}{I need to ask you something Zeebo.}{}{5}{fo 1, wt 0}{100}{}
+{15}{Me ask you somethin...}{}{-4}{fo 1, wt 0}{100}{}
+{16}{You can stop waiting now, Zeebo.}{}{5}{wa 1, wt 0}{110}{uw 1 120}
+{17}{You no wait no more.}{}{-4}{wa 1, wt 0}{110}{uw 1 120}
+{18}{Sorry I was gone so long Zeebo. Wanna play some more?}{}{5}{wt 1}{70}{}
+{19}{Me gone long time. Sorry. Let's play!}{}{-4}{wt 1}{70}{}
+
+{20}{I may be little but I am tough!}{I may be little but I am tough!}{}{}{}{}
+{21}{Oh yeah? Prove it!}{}{5}{}{30}{}
+{22}{Really? I could use a tough sidekick...}{}{5}{}{70}{}
+{23}{Hehe. You funny!}{}{-4}{}{50}{}
+
+{30}{Ha! I killed this dragon here all by myself!}{Ha! I killed this dragon here all by myself!}{}{}{}{}
+{31}{Hrumph. This dragon skeleton is centuries old.}{}{1}{}{40}{}
+{32}{I see. You *are* tough. Wanna join me?}{}{1}{}{70}{}
+
+{40}{So am I! I died a whole long time ago!}{So am I! I died a whole long time ago!}{}{}{}{}
+{41}{What do you do down here?}{}{1}{}{50}{}
+{42}{How wonderful for you. Goodbye.}{}{1}{}{0}{}
+
+{50}{The other zombies won't let me play with them!}{The other zombies won't let me play with them!}{}{}{}{}
+{51}{Other zombies? Are there a lot down here?}{}{5}{}{60}{}
+{52}{I can see why. Bye, Zeebo.}{}{5}{}{0}{}
+{53}{You wanna play with me?}{}{-4}{}{70}{}
+
+{60}{There are a whole bunch, made by the big vampire guy!}{There are a whole bunch, made by the big vampire guy!}{}{}{}{}
+{61}{Would you like to play with me then?}{}{1}{}{70}{}
+{62}{Vampire? What does that vampire do?}{}{1}{}{80}{}
+
+{70}{Yay! I would love to play with you!}{Yay! I would love to play with you!}{}{}{}{}
+{71}{Ok, come with me.}{}{1}{}{110}{jo 1 120}
+{72}{Maybe later. See ya!}{}{1}{}{0}{}
+
+{80}{He is boring! He has been here a long time, waiting to get some book. Now he has it and is even more boring!}{He is boring! He has been here a long time, waiting to get some book. Now he has it and is even more boring!}{}{}{}{}
+{81}{What book?! The Pnakotic Manuscript?}{}{1}{}{90}{}
+{82}{Where is this vampire?}{}{1}{}{90}{}
+
+{90}{I don't know! I don't care! I want to play!}{}{}{}{}{}
+{91}{Wanna play with me, Zeebo?}{}{1}{}{70}{}
+{92}{Well, I am busy. Goodbye.}{}{1}{}{0}{}
+
+{100}{What do you want?}{What do you want?}{}{}{}{}
+{101}{B:}{}{1}{}{0}{}
+{102}{Wait here, Zeebo.}{}{5}{}{0}{wa}
+{103}{You here stay, ok?}{}{-4}{}{0}{wa}
+{104}{Go play with someone else, Zeebo.}{}{5}{}{0}{lv}
+{105}{Me no want you no more, Zeebo. Go away!}{}{-4}{}{0}{lv}
+{106}{F:}{}{1}{}{0}{}
+
+{110}{Oh well, see you later!}{Oh well, see you later!}{}{}{}{}
+{111}{E:}{}{1}{}{0}{}
+
+{120}{Yay! Let's explore!}{Yay! Let's explore!}{}{}{}{}
+{121}{Wait, I have something to ask you.}{}{5}{}{100}{}
+{122}{Uh...me ask you somethin.}{}{-4}{}{100}{}
+{123}{Ok.}{}{1}{}{0}{}
+
+//{}{}{}{}{}{}{}

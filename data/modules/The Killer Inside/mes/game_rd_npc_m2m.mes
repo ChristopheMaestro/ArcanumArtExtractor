@@ -1,0 +1,21 @@
+// This section is for RUMORS in the game.
+// THESE ONLY GET USED BY THE RUMOR OPCODE
+// start at 20000
+// rumors start at rumor number * 20
+// the first message is the logbook message
+// all others are filled in based on NPC's social class
+	
+{20000}{}
+
+{40000}{I tried to stop a rather attractive looking thief dressed in purple just outside of Entirely Jess' Entirely Everything Shop. She has some nerve breaking into a building in broad daylight. After a desperate case, she managed to escape my grasp with relative ease. I suspect we may yet meet again.}
+
+// NOTE for 40020:
+// If the player chose the Idiot Savant Background, I need to have this here also
+// because the background affects dialogue options only (speaks like a retard, but is actually intelligent..)
+//
+{40020}{I should report to Chief Shards in the Yotland Scard Special Branch of Nodnol by 12PM.}
+{40040}{Chief Shards gave me some hard time just because I showed up a little late. I wasn't even able to explain about my attempts to stop the thief back at the Entirely Jess' Entirely Everything shop, he just showed me the door and told me to talk to Lord Davidian. Dave's supposed to give me details on my first case. I'm not sure I'm going to get along with Shards very well, with all this crap he's given me already.}
+{40060}{My first assignment as a detective in the Yotland Scard Special Branch is to go to Lady Mi's at Kensington and Fairmont and find out what I can from her regarding the recently murdered ladies who used to work for her. When this is done, I have to report back to Davidian.}
+{40080}{The officer who came to bring me a telegram told me that I should report to Chief Shards by 12PM.}
+{40100}{After reporting to Davidian, he told me that I could have a little time off until needed further.}
+{40120}{Lady Mi's man servant, Aig Strav, has asked me to retrieve a specially made imported dress made of a material that should not cause him any allergic reactions. I couldn't comprehend much of his incoherent babbling but I pretended to know what he was saying. His way of talking gives me a headache, really.}

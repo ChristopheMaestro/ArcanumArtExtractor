@@ -1,0 +1,69 @@
+{1}{What can I do for you, sir?}{What can I do for you, m'lady?}{}{}{}{}
+{2}{What can you tell me about this town?}{}{-5}{}{20}{}
+{3}{Wut yoo tell me bout Nubarg?}{}{-4}{}{20}{}
+{4}{What do you do here?}{}{5}{}{30}{}
+{5}{Hey guy wut is your job heer?}{}{-4}{}{30}{}
+{6}{Tina is dead.}{}{1}{gf28 1,qu1009 6,lf5 0}{200}{gf28 0,lf5 1}
+{7}{Seamus is dead.}{}{1}{gf28 1,qu1005 6,lf6 0}{200}{gf28 0,lf6 1}
+{8}{I'd like to report a crime!}{}{5}{}{40}{}
+{9}{Me have crime to report!}{}{-4}{}{40}{}
+{10}{T:0-2}{}{1}{}{1}{}
+{15}{E:}{}{1}{}{0}{}
+{20}{Newberg? It's a beautiful little town. The jewel of the far Western baronies. It's small, but we've got a lot of favor from the Kingdom here. And none of that nasty war that's afflicting so many of the other baronies.}{Newberg? It's a beautiful little town. The jewel of the far Western baronies. It's small, but we've got a lot of favor from the Kingdom here. And none of that nasty war that's afflicting so many of the other baronies.}{}{}{}{}
+{21}{Nice. Let me ask you something else...}{}{5}{}{1}{}
+{22}{Okie. Let's talk bout somethin else.}{}{-4}{}{1}{}
+{30}{I'm the captain of the Newberg Guard. We are the only law enforcement in town and all of our actions are subject to Council approval. Mostly, we stop petty thieves and handle them who gets too drunk.}{I'm the captain of the Newberg Guard. We are the only law enforcement in town and all of our actions are subject to Council approval. Mostly, we stop petty thieves and handle them who gets too drunk.}{}{}{}{}
+{31}{I see. Let me ask you something else...}{}{5}{}{1}{}
+{32}{Okie. Let me ask you sumthin else...}{}{-4}{}{1}{}
+{40}{What seems to be the problem, sir? A crime, you said?}{What seems to be the problem, ma'am? A crime, you said?}{}{}{}{}
+{41}{There is a thief in Newberg!}{}{5}{qa 1009 1, qb 1009 4}{50}{}
+{42}{I see the robber in Nooberg!!!}{}{-4}{qa 1009 1, qb 1009 4}{50}{}
+{43}{There's been foul play in the Landers residence...}{}{5}{lf2 0,gf29 1}{100}{lf2 1}
+{44}{Sumthing bad happen to Landers family.}{}{-4}{lf2 0,gf29 1}{100}{lf2 1}
+{46}{Someone is trying to solicit a murder in the Inn!}{}{5}{qb 1005 2, qa 1005 1}{150}{}
+{47}{A man tried to get me to kill sumwun in da inn!}{}{-4}{qb 1005 2, qa 1005 1}{150}{}
+{48}{F:}{}{1}{}{1}{}
+{50}{A thief? Who is this thief? How do you know they are a thief?}{A thief? Who is this thief? How do you know they are a thief?}{}{}{}{}
+{51}{Tina Cooley. She tried to get me to recover some loot from a stash of hers.}{}{5}{pa -8011}{60}{}
+{52}{Teena Cooey! She want me to get stuff for her from her hiding place!}{}{-4}{pa -8011}{60}{}
+{53}{Tina Cooley. Here, go ahead and handcuff her, she's right here. [Hand Tina over to the Guards.]}{}{5}{pa 8011}{-2}{}
+{54}{Teena Cooey! And me got her rite heer fer yoo! [Hand Tina over to the Guards.]}{}{-4}{pa 8011}{-2}{}
+{55}{F:}{}{1}{}{0}{re -1}
+{60}{Do you have any proof of this? We have suspected her for a long time...}{Do you have any proof of this? We have suspected her for a long time...}{}{}{}{}
+{61}{Yes, I've got the statue she asked me to recover right here.}{}{5}{in 5802}{70}{in 5802}
+{62}{Ya, me got da loot here! Me got statue she ask me to get for her!}{}{-4}{in 5802}{70}{in 5802}
+{63}{No, but just let me explain my story...[Persuasion]}{}{5}{ps 4}{75}{}
+{64}{No...}{}{1}{}{80}{}
+{70}{Well, let me see the statue. Yes, it's the one that was stolen last week. Let me take that. Now, would you be so kind as to fetch her from wherever you last saw her?}{Well, let me see the statue. Yes, it's the one that was stolen last week. Let me take that. Now, would you be so kind as to fetch her from wherever you last saw her?}{}{}{}{}
+{71}{Ok.}{}{1}{}{0}{qu 1009 6}
+{75}{Well, you've certainly got me convinced. Now, would you be so kind as to fetch her from wherever you last saw her?}{Well, you've certainly got me convinced. Now, would you be so kind as to fetch her from wherever you last saw her?}{}{}{}{}
+{76}{Ok.}{}{1}{}{0}{qu 1009 6, fl 78}
+{78}{Script Executed.}{Script Executed.}{}{}{}{}
+{80}{Ok, then come back when you've got some proof. Otherwise it's just your word against hers, and that's not enough for me to act on.}{Ok, then come back when you've got some proof. Otherwise it's just your word against hers, and that's not enough for me to act on.}{}{}{}{}
+{81}{Ok.}{}{1}{}{0}{}
+{100}{What is it? Something has happened to the Landers?}{What is it? Something has happened to the Landers?}{}{}{}{}
+{101}{Yes, they're all dead.}{}{5}{}{110}{}
+{102}{Ya. The hole familee ded.}{}{-4}{}{110}{}
+{110}{What? Really? Thank you for reporting this. Do you know who could do something like this?}{What? Really? Thank you for reporting this. Do you know who could do something like this?}{}{}{}{}
+{111}{The Man in Black. His spirit spoke to me through a rat.}{}{5}{}{120}{}
+{112}{I think it was the Man in Black. He left me a sign admitting as much.}{}{5}{}{120}{}
+{113}{Me tink it was Man in Black.}{}{-4}{}{120}{}
+{114}{Dunno.}{}{1}{}{115}{}
+{115}{Hm. Well, thanks for your help, anyway. You've assisted us greatly.}{Hm. Well, thanks for your help, anyway. You've assisted us greatly.}{}{}{}{}
+{116}{E:}{}{1}{}{0}{}
+{120}{Walter, the man you search for? The timing is right, and what with your witness and all... What a sick man he must be to have done something like this...}{Walter, the man you search for? The timing is right, and what with your witness and all... What a sick man he must be to have done something like this...}{}{}{}{}
+{121}{He is no man... good day.}{}{8}{}{0}{}
+{122}{A very very sick man indeed.}{}{5}{}{0}{}
+{123}{Ya ya. Bubye.}{}{-4}{}{0}{}
+{124}{E:}{}{1}{}{0}{}
+{150}{What? Killing? What do you mean?}{What? Killing? What do you mean?}{}{}{}{}
+{151}{I was hired to kill a man by Seamus in the Rusty Doorknob Inn.}{}{5}{}{160}{}
+{152}{Uhhh, Seamus ask me to kill guy in Tull...}{}{-4}{}{160}{}
+{153}{Seamus in the Rusty Doorknob hired me to kill a man.}{}{5}{}{160}{}
+{160}{Seamus? I knew he was trouble... Thanks for reporting the incident.}{Seamus? I knew he was trouble... Thanks for reporting the incident.}{}{}{}{}
+{161}{Just doing my duty, sir.}{}{5}{}{0}{al +1, re +3, qu 1005 6}
+{162}{No pwoblem.}{}{-4}{}{0}{al +1, re +3, qu 1005 6}
+{180}{You bastard! How dare you rat me out!}{You bitch! How dare you rat me out!}{}{}{}{}
+{200}{Ah, well, I"m sorry it had to come to that, but what's done is done, and the people thank you for your hard work. Here is fifty gold, and let it be known to all that @PCNAME@ is an Honorary Deputy of Newberg.}{Ah, well, I"m sorry it had to come to that, but what's done is done, and the people thank you for your hard work. Here is fifty gold, and let it be known to all that @PCNAME@ is an Honorary Deputy of Newberg.}{}{}{}{}
+{201}{Yay!}{}{1}{}{0}{rp1001 }
+{202}{Whatever. Bye.}{}{1}{}{0}{rp1001 }

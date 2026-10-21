@@ -1,0 +1,56 @@
+// [LABEL] Bonjour
+{1}{Bonjour, je me présente, Armando Duvalier. Que voulez vous ?}{Bonjour, je me présente, Armando Duvalier. Que voulez vous ?}{}{1}{}{}
+{2}{Que faites vous ici, mr Duvalier ?}{}{1}{}{21}{}
+{3}{Ouh lààà, vous m'avez l'air bien snob pour habiter dans le coin. Je flaire le pourri à plein nez.}{}{1}{}{41}{}
+{4}{Bon, ok au revoir}{}{1}{}{}{}
+{5}{Je suis d'accord pour aller chercher votre gus.}{}{1}{qu1000 1}{161}{}
+{6}{Ou a l'habitude d'aller votre ouvrier ? je pourrais le trouver où, vous croyez ?}{}{1}{qu1006 2}{181}{}
+{7}{Euh j'ai de mauvaises nouvelles. Votre ouvrier est mort et son pote aussi. Ils ont été massacrés par un orc. Je les ai retrouvés à deux pas d'ici dans un cagibi.}{}{1}{qu1006 3}{201}{}
+
+// [LABEL] Que faites vous
+{21}{Eh bien...disons que j'ai embauché les 3 mendiants au fond de la salle pour travailler à l'usine. Mais cette usine n'est pas encore construite, car le contremaître a disparu depuis 2 jours.}{Eh bien...disons que j'ai embauché les 3 mendiants au fond de la salle pour travailler à l'usine. Mais cette usine n'est pas encore construite, car le contremaître a disparu depuis 2 jours.}{}{2}{}{}
+{22}{Ok. Comment s'appelait ce contremaître ?}{}{1}{qu1006 0}{61}{}
+{23}{C'est qui le nabot à côté de vous ?}{}{1}{}{81}{}
+{24}{Il était tout seul pour construire l'usine ???!!}{}{1}{}{101}{}
+
+// [LABEL] air snob, pourri
+{41}{Muhuhu, vous devez être nouveau dans le coin, car on ne me parle pas de la sorte, jeune ami.}{Muhuhu, vous devez être nouveau dans le coin, car on ne me parle pas de la sorte, jeune ami.}{}{3}{}{}
+{42}{Ah oups, excusez moi pour cette boulette. }{}{1}{}{}{}
+{43}{Non mais tu te prends pour qui , saleté ? Je me doutais que tu étais un trou duc dans ce genre.}{}{1}{}{141}{}
+
+// [LABEL] Le contremaître
+{61}{Cet homme s'appelle Chris Bus-envache. Il a une femme qui s'appelle Adriana, il me semble. Il est assez pauvre vous savez. Mais fénéant puisqu'il ne vient plus depuis 2 jours.}{Cet homme s'appelle Chris Bus-envache. Il a une femme qui s'appelle Adriana, il me semble. Il est assez pauvre vous savez. Mais fénéant puisqu'il ne vient plus depuis 2 jours.}{}{4}{}{qu1006 1}
+{62}{Il lui est peut être arrivé quelque chose, et vous ne devriez pas parler de lui de la sorte, ce n'est pas sain. Etrange comportement pour quelqu'un de votre genre, je trouve...}{}{1}{}{121}{}
+{63}{Je m'en vais le secouer vous allez voir qu'il reviendra vite.}{}{1}{}{161}{}
+
+// [LABEL] Le nabot à côté
+{81}{QUOI ?! ce "nabot" est mon assistant , mr Jean Raoul Guitono. Il pourrait vous faire expulser d'un claquement de doigts par les 3 gardes derrière lui. Un peu de respect , malotru.}{QUOI ?! ce "nabot" est mon assistant , mr Jean Raoul Guitono. Il pourrait vous faire expulser d'un claquement de doigts par les 3 gardes derrière lui. Un peu de respect , malotru.}{}{5}{}{}
+{82}{Ah, ok, ce sont vos gardes. Ne m'en voulez pas mais je ne contrôle pas toujours ce que je dis.}{}{1}{}{}{}
+{83}{Ah ! J'attends de voir ça, tiens ! Tes gardes, je les réduis en pâtée pour chiens, moi, k'ess tu crois, mec !}{}{1}{}{141}{}
+{84}{Parler avec vous relève de l'exploit, je m'en vais donc.}{}{1}{}{}{}
+
+// [LABEL] Seul pour construire
+{101}{Non, il a un ami : Didier Dupré mais lui aussi a disparu, sans venir faire les fondations de la maison. C'est un gnome il me semble.}{Non, il a un ami : Didier Dupré mais lui aussi a disparu, sans venir faire les fondations de la maison. C'est un gnome il me semble.}{}{6}{}{}
+{102}{Je vais tirer ça au clair, je reviens le plus vite possible.}{}{1}{}{}{}
+
+// [LABEL] Etrangesfaçons
+{121}{C'est mon ouvrier, je parle de lui comme je veux.}{C'est mon ouvrier, je parle de lui comme je veux.}{}{7}{}{}
+{122}{Ok, je m'incline et je m'en vais.}{}{1}{}{}{}
+{123}{Pff, allez vous m'énervez trop, je m'en vais.}{}{1}{}{}{}
+
+// [LABEL] Oups
+{141}{Dégagez, tout de suite !!! allez !}{Dégagez, tout de suite !!! allez !}{}{8}{}{}
+{142}{Ok...}{}{1}{}{}{}
+
+// [LABEL] Ok gus
+{161}{Ah merci, j'ai enfin trouvé quelqu'un pour aller lui secouer les puces.}{Ah merci, j'ai enfin trouvé quelqu'un pour aller lui secouer les puces.}{}{9}{}{qu1006 2}
+{162}{Salut}{}{1}{}{}{}
+
+// [LABEL] Ou va le mr
+{181}{Il va souvent chez son pote gnome, mais essayer autre part.}{Il va souvent chez son pote gnome, mais essayer autre part.}{}{10}{}{}
+{182}{Ok, j'y court}{}{1}{}{}{}
+
+// [LABEL] Bad news
+{201}{Oh, c'est dommage pour lui. Bon, heureusement il me reste 3 gentils ch'tits n'ouvriers pour construire mon usine. Merci kamem, tenez, voici vos points d'XP.}{Oh, c'est dommage pour lui. Bon, heureusement il me reste 3 gentils ch'tits n'ouvriers pour construire mon usine. Merci kamem, tenez, voici vos points d'XP.}{}{11}{}{qu1006 4}
+{202}{De rien. salut}{}{1}{}{}{}
+

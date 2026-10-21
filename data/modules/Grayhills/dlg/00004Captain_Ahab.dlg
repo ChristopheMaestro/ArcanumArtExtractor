@@ -1,0 +1,51 @@
+// lf0 1 - PC has already asked about Grayhills.
+// lf1 1 - PC asked to sail back to Tarant.
+// lf2 1 - PC still wants to sail back to Tarant.
+
+{1}{'ere we are @pcname@! Well, that was a long journey! Sorry 'bout that storm we 'ad back there but I 'aven't seen anythin' like that for more than twenty years! Anyway, 'ere ye' be all safe and sound. Welcome to Grayhills.}{'ere we are @pcname@! Well, that was a long journey! Sorry 'bout that storm we 'ad back there but I 'aven't seen anythin' like that for more than twenty years! Anyway, 'ere ye' be all safe and sound. Welcome to Grayhills.}{}{}{}{lf0 0, lf1 0, lf2 0}
+{2}{What can you tell me about Grayhills Captain Ahab?}{}{5}{}{20}{}
+{3}{W'at you no 'bout Grayhills?}{}{-4}{}{20}{}
+{4}{I've changed my mind, let's sail back to Tarant.}{}{5}{}{30}{}
+{5}{Me wanna go back to Tarant.}{}{-4}{}{30}{}
+{6}{E:}{}{1}{}{50}{}
+
+{20}{Hmmm... Don't rightly know much about it 'cept that recently, all the towns folk are terrified o' somethin' they reckon lives up in the caves 'round 'ere. 'part from that, only other thing I know is to go to the bar if you want a drink that'll really knock your socks off!}{Hmmm... Don't rightly know much about it 'cept that recently, all the towns folk are terrified o' somethin' they reckon lives up in the caves 'round 'ere. 'part from that, only other thing I know is to go to the bar if you want a drink that'll really knock your socks off!}{}{}{}{lf0 1}
+{21}{I don't like the sound of that. Let's sail back to Tarant.}{}{5}{lf1 0}{30}{}
+{22}{Me not like dat! Me wanna go back to Tarant!}{}{-4}{lf1 0}{30}{}
+{23}{Are you sure we can't sail back to Tarant?}{}{5}{lf1 1, lf2 0}{40}{}
+{24}{Uhh... You shure me kan't go back to Tarant?}{}{-4}{lf1 1, lf2 0}{40}{}
+{25}{And you're positive that we can't sail back to Tarant?}{}{5}{lf2 1}{70}{}
+{26}{You be reel shure dat me not go back to Tarant?}{}{-4}{lf2 1}{70}{}
+{27}{E:}{}{1}{}{50}{}
+
+{30}{Back to Tarant! Then why in the name of the Void did ye' come with me and sail all the way out 'ere for? Do ye' enjoy takin' sailin' trips? Actually... [The Captain rubs his chin] That WAS a rather enjoyable trip. Hah! That storm sure was somethin' hey?}{Back to Tarant! Then why in the name of the Void did ye' come with me and sail all the way out 'ere for? Do ye' enjoy takin' sailin' trips? Actually... [The Captain rubs his chin] That WAS a rather enjoyable trip. Hah! That storm sure was somethin' hey?}{}{}{}{lf1 1}
+{31}{Yes it was. Now can we sail back to Tarant?}{}{5}{}{40}{}
+{32}{Uhuh. Now me go back to Tarant?}{}{-4}{}{40}{}
+{33}{It sure was. So, what can you tell me about Grayhills?}{}{5}{lf0 0}{20}{}
+{34}{Okay! Wat you 'no 'bout Grayhills?}{}{-4}{lf0 0}{20}{}
+{35}{E:}{}{1}{}{50}{}
+
+{40}{No can do I'm afraid. I have to stock up on supplies. Not only that, but me ship was damaged slightly in the storm and she may take some time to repair. Besides, while I'm 'ere, I can't possibly pass up the opportunity fer a good drink! If you really want to go back to Tarant, ye'll have to swim at the moment I'm afraid.}{No can do I'm afraid. I have to stock up on supplies. Not only that, but me ship was damaged slightly in the storm and she may take some time to repair. Besides, while I'm 'ere, I can't possibly pass up the opportunity fer a good drink! If you really want to go back to Tarant, ye'll have to swim at the moment I'm afraid.}{}{}{}{lf2 1}
+{41}{Alright then. What can you tell me about Grayhills?}{}{5}{lf0 0}{20}{}
+{42}{Okay den. Wat you 'no 'bout Grayhills?}{}{-4}{lf0 0}{20}{}
+{43}{I'm sorry, what did you say about Grayhills?}{}{5}{lf0 1}{60}{}
+{44}{Uhhh.. Wat dat you say 'bout Grayhills?}{}{-4}{lf0 1}{60}{}
+{45}{E:}{}{1}{}{50}{}
+
+{50}{Oh! Hang on a minute @pcname@! I almost forgot. Ye' wanted me to hold onto this telegram for ye'. I kept it nice'n safe for ye' just like ye' wanted me to [The Captain hands you a telegram]. 'ave a nice time 'ere! If'n ye' be wantin' me, I'll either be 'ere on me ship, or I'll be in the local bar.}{Oh! Hang on a minute @pcname@! I almost forgot. Ye' wanted me to hold onto this telegram for ye'. I kept it nice'n safe for ye' just like ye' wanted me to [The Captain hands you a telegram]. 'ave a nice time 'ere! If'n ye' be wantin' me, I'll either be 'ere on me ship, or I'll be in the local bar.}{}{}{}{in -5401}
+{51}{A:}{}{1}{}{0}{}
+
+{60}{Like I told ye', I don't rightly know much 'bout it 'cept that the towns folk be scared o' somethin' up in the caves and the local bar be the place to go if'n you be wantin' a good drink.}{Like I told ye', I don't rightly know much 'bout it 'cept that the towns folk be scared o' somethin' up in the caves and the local bar be the place to go if'n you be wantin' a good drink.}{}{}{}{}
+{61}{And you're positive that we can't sail back to Tarant?}{}{5}{lf2 1}{70}{}
+{62}{You be reel shure dat me not go back to Tarant?}{}{-4}{lf2 1}{70}{}
+{63}{A:}{}{1}{}{50}{}
+
+{70}{Unless by some miracle, ye' 'appen to 'ave fixed me ship already and re-supplied 'er, then we can't go back to Tarant just yet. Ye'll have to look fer another way if'n ye be wantin' to go back right now. Either that or ye' wait'n 'til I fix me ship.}{Unless by some miracle, ye' 'appen to 'ave fixed me ship already and re-supplied 'er, then we can't go back to Tarant just yet. Ye'll have to look fer another way if'n ye be wantin' to go back right now. Either that or ye' wait'n 'til I fix me ship.}{}{}{}{}
+{71}{I'm sorry, what did you say about Grayhills?}{}{5}{lf0 1}{60}{}
+{72}{Uhhh.. Wat dat you say 'bout Grayhills?}{}{-4}{lf0 1}{60}{}
+{73}{A:}{}{1}{}{50}{}
+
+{100}{'allo @pcname@! Anythin' I can do fer ye'?}{'allo @pcname@! Anythin' I can do fer ye'?}{}{}{}{}
+{101}{E:}{}{1}{}{0}{}
+
+// {Y}{}{}{INT}{}{XXX}{}

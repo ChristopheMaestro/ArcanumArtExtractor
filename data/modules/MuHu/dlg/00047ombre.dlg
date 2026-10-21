@@ -1,0 +1,77 @@
+// [LABEL] debut
+{1}{(Il ne semble pas vous avoir vu. Sa capuche vous empêche de voir son visage)}{(Il ne semble pas vous avoir vu. Sa capuche vous empêche de voir son visage)}{}{1}{}{}
+{2}{Euh... Excusez moi.}{}{1}{qu1015 0}{21}{}
+{3}{(Vous vous tirez en 4ème vitesse)}{}{1}{}{}{}
+{4}{J'ai les parchemins!}{}{1}{qu1015 3}{241}{qu1015 4,in4005 }
+
+// [LABEL] debutsuite
+{21}{(sa tete se lève lentement, il vous fixe du regard) Oui? Que voulez-vous?}{(sa tete se lève lentement, il vous fixe du regard) Oui? Que voulez-vous?}{}{2}{}{}
+{22}{Que faites-vous ici?}{}{1}{}{41}{}
+{23}{Vous semblez bien mysterieux.}{}{1}{}{261}{}
+{24}{Au revoir.}{}{1}{}{}{}
+
+// [LABEL] je ke ce fais
+{41}{Je que je fais ici, ne vous regarde pas. D'ailleurs, vous êtes bien imprudent d'oser me parler.}{Je que je fais ici, ne vous regarde pas. D'ailleurs, vous êtes bien imprudent d'oser me parler.}{}{3}{}{}
+{42}{Ah bon, pourquoi?}{}{1}{}{61}{}
+{43}{Vous avez pas un chti boulot pour moi?}{}{1}{}{121}{}
+
+// [LABEL] oser me parler
+{61}{Je pourrai vous tuer sur le champ sans que vous ne bougiez le petit doigt. Alors faites gaffe à ce que vous dîtes!}{Je pourrai vous tuer sur le champ sans que vous ne bougiez le petit doigt. Alors faites gaffe à ce que vous dîtes!}{}{4}{}{}
+{62}{Je dis ce que je veux, tarlouze d'elf noir!}{}{1}{}{81}{}
+{63}{Euh, excusez moi alors.}{}{1}{}{}{}
+{64}{eh va von collo! je fais ce que je veux!}{}{1}{}{101}{}
+
+// [LABEL] va von colo
+{81}{Quoi! tu oses m'insulter! Excuse-toi tout de suite sinon tu periras}{Quoi! tu oses m'insulter! Excuse-toi tout de suite sinon tu periras}{}{5}{}{}
+{82}{m'excuser? Et puis quoi  encore! Tu crois que tu me fais peur.}{}{1}{}{101}{}
+{83}{Ok ca va, je m'excuse.}{}{1}{}{}{}
+
+// [LABEL] mourir
+{101}{Très bien, tu vas perir pour ton insolence!}{Très bien, tu vas perir pour ton insolence!}{}{6}{}{}
+{102}{You never win! mouhahahah!}{}{1}{}{}{co, fl80}
+
+// [LABEL] chti boulot
+{121}{oui, peut-être, ca depend de tes capacités. Sais-tu voler et crocheter sans problème?}{oui, peut-être, ca depend de tes capacités. Sais-tu voler et crocheter sans problème?}{}{7}{}{}
+{122}{C'est dans mes cordes.}{}{1}{}{161}{}
+{123}{Non, je ne pratique pas le vol.}{}{1}{}{141}{}
+
+// [LABEL] pas boulot
+{141}{Dans ca cas là, je ne peux rien pour toi.}{Dans ca cas là, je ne peux rien pour toi.}{}{8}{}{}
+{142}{Bon, ben tant pis, au revoir.}{}{1}{}{}{}
+
+// [LABEL] oui au boulot
+{161}{(il esquisse un sourire) Très bien, je pense avoir un boulôt qui te conviendrait parfaitement.}{(il esquisse un sourire) Très bien, je pense avoir un boulôt qui te conviendrait parfaitement.}{}{9}{}{}
+{162}{Et qu'est-ce que c'est?}{}{1}{}{181}{}
+
+// [LABEL] description du boulot
+{181}{Voila, j'aimerais que tu prennes des parchemins de magie. Ils appartiennent à un certains Keno, c'est le president de la banque et également le maire de kikicity.}{Voila, j'aimerais que tu prennes des parchemins de magie. Ils appartiennent à un certains Keno, c'est le president de la banque et également le maire de kikicity.}{}{10}{}{qu1015 1}
+{182}{Pouvez-vous me donnez des conseils?}{}{1}{}{201}{}
+{183}{Très bien je reviendrais avec les parchemins.}{}{1}{}{}{qu1015 2}
+
+// [LABEL] conseils
+{201}{Oui, il garde ses parchemins dans son coffre et c'est lui qui en possède la clé.}{Oui, il garde ses parchemins dans son coffre et c'est lui qui en possède la clé.}{}{11}{}{}
+{202}{rien d'autres?}{}{1}{}{221}{}
+
+// [LABEL] conseils bis
+{221}{non, partez et ne revenez qu'avec les parchemins.}{non, partez et ne revenez qu'avec les parchemins.}{}{12}{}{}
+{222}{Très bien je reviendrais bientot.}{}{1}{}{}{qu1015 2}
+
+// [LABEL] quete reussi
+{241}{Magnifique, je pensais vous avoir sous estimé. Vous êtes plus fort que je ne le pensais. Pour la peine vous pouvez gardez un des deux parchemins. Revenez plus tard, j'aurais peut-être d'autres travails pour vous.}{Magnifique, je pensais vous avoir sous estimé. Vous êtes plus fort que je ne le pensais. Pour la peine vous pouvez gardez un des deux parchemins. Revenez plus tard, j'aurais peut-être d'autres travails pour vous.}{}{13}{}{}
+{242}{Très bien, je n'y manquerai pas.}{}{1}{}{}{}
+
+// [LABEL] bien mysteriuex
+{261}{Et alors?}{Et alors?}{}{14}{}{}
+{262}{Ben rien, c'etait juste une remarque.}{}{1}{}{281}{}
+{263}{Ben ca fait con.}{}{1}{}{281}{}
+
+// [LABEL] juste une remarque
+{281}{Si j'étais toi, j'eviterai de jouer au malin. Tu pourrais le regretter.}{Si j'étais toi, j'eviterai de jouer au malin. Tu pourrais le regretter.}{}{15}{}{}
+{282}{Vous ne me faites pas peur!}{}{1}{}{301}{}
+{283}{Euh... d'accord. Bon je me tire y a quelqu'un qui m'appelle.}{}{1}{}{}{}
+
+// [LABEL] fais pas peur
+{301}{Eh bien tu devrais avoir peur! Je pourrais te tuer si facilement que tu ne t'en rendrais même pas compte!}{Eh bien tu devrais avoir peur! Je pourrais te tuer si facilement que tu ne t'en rendrais même pas compte!}{}{16}{}{}
+{302}{Et bien, j'attends de voir ca!}{}{1}{}{}{co, fl 80}
+{303}{Desole je regrette ce que j'ai dis. Au revoir.}{}{1}{}{}{}
+

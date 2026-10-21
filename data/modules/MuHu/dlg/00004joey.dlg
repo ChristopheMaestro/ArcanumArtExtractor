@@ -1,0 +1,106 @@
+// [LABEL] NewPage0001
+{1}{Qu'il y a t-il?}{Qu'il y a t-il?}{}{1}{}{}
+{2}{Que peux-tu me dire sur ce monde?}{}{1}{}{201}{}
+{3}{Que se passe t-il en ville?}{}{1}{}{21}{}
+{4}{Peux-tu m'entrainer?}{}{1}{}{61}{}
+{5}{Au revoir}{}{1}{}{}{}
+
+// [LABEL] NewPage0002
+{21}{Un vieux fou s'est installe dans une maison vers le sud. N'y aller pas, il est tres agressif, il tentera de vous tuer!}{Un vieux fou s'est installe dans une maison vers le sud. N'y aller pas, il est tres agressif, il tentera de vous tuer!}{}{2}{}{ru1000}
+{22}{rien d'autre?}{}{1}{}{41}{}
+
+// [LABEL] NewPage0003
+{41}{Si, un vieux mathematicien vit a l'ouest d'ici, il s'appelle Bobin, je crois.}{Si, un vieux mathematicien vit a l'ouest d'ici, il s'appelle Bobin, je crois.}{}{3}{}{}
+{42}{Merci au revoir}{}{1}{}{}{}
+
+// [LABEL] entrainement
+{61}{Oui, mais en quoi?}{Oui, mais en quoi?}{}{4}{}{}
+{62}{Corps à corps.}{}{1}{}{81}{}
+{63}{Esquive.}{}{1}{}{121}{}
+{64}{Lancer.}{}{1}{}{141}{}
+{65}{Arc}{}{1}{}{321}{}
+
+// [LABEL] apprenti
+{81}{Cela va te couter 100 pièces.}{Cela va te couter 100 pièces.}{}{5}{}{}
+{82}{Ok, j'accepte}{}{1}{$$100 ,sk2 1}{101}{$$-100 }
+{83}{OK, j'accepte}{}{1}{sk2 -1}{301}{}
+{84}{Non c'est trop cher pour moi. Salut}{}{1}{}{}{}
+
+// [LABEL] shazam
+{101}{Pouf! Te voila apprenti.}{Pouf! Te voila apprenti.}{}{6}{}{tr2 1}
+{102}{Merci pour ton aide, bye.}{}{1}{}{}{}
+
+// [LABEL] appresquive
+{121}{Cela va te couter 100 pièces.}{Cela va te couter 100 pièces.}{}{7}{}{}
+{122}{Ok, ca marche}{}{1}{$$100 ,sk1 1}{161}{$$-100 }
+{123}{OK, ca marche.}{}{1}{sk1 -1}{301}{}
+{124}{C'est trop cher pour moi. Salut.}{}{1}{}{}{}
+
+// [LABEL] apprlancer
+{141}{Cela va te couter cent pièces.}{Cela va te couter cent pièces.}{}{8}{}{}
+{142}{Ok, ca marche.}{}{1}{$$100 ,sk3 1}{181}{$$-100 }
+{143}{OK, ca marche.}{}{1}{sk3 -1}{301}{}
+{144}{C'est trop cher pour moi. Salut.}{}{1}{}{}{}
+
+// [LABEL] shazamesquive
+{161}{Pouf! Te voila apprenti!}{Pouf! Te voila apprenti!}{}{9}{}{tr1 1}
+{162}{merci pour ton aide. Bye}{}{1}{}{}{}
+{163}{Connaissez-vous des rumeurs?}{}{1}{}{21}{}
+
+// [LABEL] shazamlancer
+{181}{Pouf! Te voila apprenti!}{Pouf! Te voila apprenti!}{}{10}{}{tr3 1}
+{182}{Connaissez-vous des rumeurs?}{}{1}{}{}{}
+{183}{Merci de ton aide. Bye}{}{1}{}{}{}
+{184}{Un donjon a ete apercu près de la scène du concert de Travis à Kikicity.}{}{}{11}{}{ru20002}
+{185}{rien d'autres?}{}{1}{}{41}{}
+
+// [LABEL] ce monde
+{201}{Et bien, ce monde est divisé en quatre villes : Ayecity, Kikicity, Pouriland et Quebec city. Tu peux facilement y acceder en utilisant les pierres de teleportation.}{Et bien, ce monde est divisé en quatre villes : Ayecity, Kikicity, Pouriland et Quebec city. Tu peux facilement y acceder en utilisant les pierres de teleportation.}{}{11}{}{}
+{202}{Que peux-tu me dire sur Ayecity?}{}{1}{}{221}{}
+{203}{Que peux-tu me dire sur Kikicity?}{}{1}{}{241}{}
+{204}{Que peux-tu me dire sur Pouriland?}{}{1}{}{261}{}
+{205}{Que peux-tu me dire sur Quebec city?}{}{1}{}{}{}
+{206}{Merci pour l'info au revoir.}{}{1}{}{}{}
+
+// [LABEL] ayecity
+{221}{Ayecity est une petite ville tranquille. Il y a un bar sympa, un QG des pauvres, une baque etc...}{Ayecity est une petite ville tranquille. Il y a un bar sympa, un QG des pauvres, une baque etc...}{}{12}{}{}
+{222}{Et sur Kikicity?}{}{1}{}{241}{}
+{223}{Et sur Pouriland?}{}{1}{}{261}{}
+{224}{Et sur Quebec city?}{}{1}{}{281}{}
+{225}{Merci pour ces infos,au revoir.}{}{1}{}{}{}
+
+// [LABEL] kikicity
+{241}{C'est une ville en plein desert. Le bar est un repaire de brigands, evite d'y aller. Pour l'instant la ville n'est pas très developpé mais ca ne saurait tardé.}{C'est une ville en plein desert. Le bar est un repaire de brigands, evite d'y aller. Pour l'instant la ville n'est pas très developpé mais ca ne saurait tardé.}{}{13}{}{}
+{242}{Et sur Ayecity?}{}{1}{}{221}{}
+{243}{Et sur Pouriland?}{}{1}{}{261}{}
+{244}{Et sur Quebec city?}{}{1}{}{281}{}
+{245}{Merci pour ces infos au revoir.}{}{1}{}{}{}
+
+// [LABEL] Pouriland
+{261}{C'est un petit village bien pourri rempli de pauvres. Il n'y a pas grand chose a visiter. Sauf peut-être la boulangerie ou l'usine.}{C'est un petit village bien pourri rempli de pauvres. Il n'y a pas grand chose a visiter. Sauf peut-être la boulangerie ou l'usine.}{}{14}{}{}
+{262}{Et sur Ayecity?}{}{1}{}{221}{}
+{263}{Et sur Kikicity?}{}{1}{}{241}{}
+{264}{Et sur Quebec city?}{}{1}{}{281}{}
+{265}{Merci pour ces infos au revoir.}{}{1}{}{}{}
+
+// [LABEL] Quebec city
+{281}{C'est la ville la plus high tech de ce monde. Il y a plein de chose à voir : le bar le niaseux,  la secte de Rael etc...}{C'est la ville la plus high tech de ce monde. Il y a plein de chose à voir : le bar le niaseux,  la secte de Rael etc...}{}{15}{}{}
+{282}{Et sur Ayecity?}{}{1}{}{221}{}
+{283}{Et sur kikicity?}{}{1}{}{241}{}
+{284}{Et sur Pouriland?}{}{1}{}{261}{}
+{285}{Merci pour ces infos, aurevoir.}{}{1}{}{}{}
+
+// [LABEL] pas assez
+{301}{Reviens quand tu seras plus entrainé.}{Reviens quand tu seras plus entrainé.}{}{16}{}{}
+{302}{E:}{}{1}{}{}{}
+
+// [LABEL] arc
+{321}{Cela va te couter 100 pièces.}{Cela va te couter 100 pièces.}{}{17}{}{}
+{322}{Ok, ca marche.}{}{1}{sk0 1,$$100 }{341}{}
+{323}{Ok, ca marche}{}{1}{sk0 -1}{301}{}
+{324}{C'est trop cher pour moi au revoir.}{}{1}{}{}{}
+
+// [LABEL] apprentiarc
+{341}{Pouf te voila apprenti.}{Pouf te voila apprenti.}{}{18}{}{tr0 1}
+{342}{Merci au revoir.}{}{1}{}{}{}
+

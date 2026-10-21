@@ -1,0 +1,123 @@
+
+// This message file contains text to be used in game-supplied newspapers
+// Only the message line numbers 1000 or higher are valid
+// Each new newspaper begins on a multiple of 10, and can use up to 10
+// lines, which must be consecutive. The first line is always the main 
+// headline, while the 9 remaining lines go into 4 columns of the paper.
+// Format: each line begins with a font number and justification letter,
+// followed by the text for that line.
+
+// Some font numbers to use:
+//	490 Extra Large Headline
+//	486 Large Headline
+//	492 Normal Headline
+//	483 Story Body
+//	488 Clip Art 0-6
+
+// Justification letters (you must use one)
+//	l = left
+//	c = center
+
+// NOTE: The first blocks, 0 thru 999, are reserved for UI use
+
+// News Paper Type 1
+{0}{EXTRA!}
+{1}{[ NEWS ]}
+{2}{Price 2 Coins}
+{3}{The Best Source of News-worthy Items in Arcanum}
+
+// News Paper Type 2
+{4}{[ TIMES ]}
+{5}{All the News That is Fit to Print}
+
+// filler articles
+{10}{492c _ WEATHER _}
+{11}{483l The Meteorological Service Bureau of Tarant is Predicting sunny weather for the next Two to Three days, with an increasing Chance of Precipitation before the Passage of a Fortnight.}
+{12}{492c _ TAX INCREASE _}
+{13}{483l The Parliament is again considering Raising the Levy of Incomes in Tarant by another 2 coins for every 100 earned. The Speaker has refuted all Public Criticism of the Increase, by Citing the importance of Public Works projects currently underway.}
+{14}{492c _ PUBLIC SERVICE ANNOUNCEMENT _}
+{15}{483l There will be a City Council meeting this Friday which is Open to the Public. The Meeting will commence sharply at 7pm.}
+{16}{492c _ EDITORIAL REMINDER _}
+{17}{483l The Tarantian would like to take this Opportunity to remind its Gentle Reader that all letters to Editor do not necessarily Reflect the views of the Newspaper or its Owner, Sir William Willaby.}
+{18}{492c _ PROHIBITION _}
+{19}{483l The spectre of Prohibition has risen once again, as Parliament considers a Bill to ban the sales of Spirits in the confines of the City proper. Supporters of the Bill cite increased Crime and Work Absenteeism figures as the principle Show of Cause for the bill, while its Critics cite similiar Statistics during the last Prohibition era over 30 years ago.}
+{20}{492c _ UNIVERSITY COLLOQUIUM SERIES _}
+{21}{483l The Engineering School of the University of Tarant is holding a Distinguished Speaker Series this semester. Interested parties are invited to contact the University Registrar for more Information.}
+{22}{492c _ CHARITY BALL _}
+{23}{483l The Ladies Society of Tarant will once again hold a Charity Ball this Saturday evening. This Event will benefit Orphans and Survivors of Foreign Wars. Festivities will begin at 8pm. Strict dress code will be enforced.}
+{24}{492c _ TIDAL FIGURES _}
+{25}{483l High tides will occur at 6:15am and 7:30pm today, with low tides at approximately 1:05pm and 25 minutes after midnight. Full tidal charts can be found on page 8.}
+
+//Game Related Newspapers
+//Use lines 1000-4990
+//Generic Newspapers Start at line 5000
+
+{1000}{490c SAMPLE HEADLINE!}
+{1001}{492c _ Place subheading here _}
+{1002}{483l And here's the text of the story. It's pretty exciting!}
+
+
+
+//Generic Newspapers
+
+{1010}{490c Attaque de loups à Ayecity}
+{1011}{492c La RUMEUR est elle VRAIE ?}
+{1012}{483l Il y a de quoi se poser des questions! En effet le mathématicien agrégé MICHEL BOBIN arrivé récemment en ville, a affirmé qu'une attaque de loups aurait lieu dans les prochains jours. Justement ce matin, à l'heure où nous écrivons ces lignes, les loups rôdent déjà autour de la ville. Nous avons prévenu les gardes et le maire de ces évènements futurs mais
+            ils n'ont pas l'air inquiets. Nous espérons qu'ils feront le nécessaire pour protéger la ville. EN tout cas, si malheur devait arriver, nous vous conseillons vivement de prendre la fuite et d'aller dans une autre ville. Ayecity, le 19/02/02.}
+
+{1020}{490c UN HUMORISTE à AYECITY}
+{1021}{492c Interview d'ANTOINE VDW}
+{1022}{483l Nous sommes fier d'avoir rencontré un jeune humoriste, prénommé Antoine, qui fait ses débuts à AYECITY. Il nous vient tout droit de la ville des Ulis, ville que nous ne connaissons pas ici. Même s'il n'est pas tout à fait au point, ses blagues ont déjà fait rire plusieurs citoyens de AYECITY. Vous pouvez l'écouter sur la place publique de la ville, il y 
+            est 24h/24. Il est surtout venu ici pour suivre une jeune fille, qu'il dit observer, mais il n'a pas osé nous dire qui c'était. Ayecity, le 15/02/02.}
+
+{1030}{490c MEUTRE EN SERIE}
+{1031}{492c Un autre candidat mort}
+{1032}{483l Tout le monde connait le célèbre jeu du maillon faible animée par Laurence boccolini. Mais depuis quelque jours nous assistons au meutre de plusieurs candidats, il s'agit pour la plupart d'entre eux de candidats nuls qui n'avaient répondu a aucune questions même les plus simples. Cependant il y aurait un lien entre les victimes: elles ont été toutes designées
+            comme étant le maillon faible par le même candidat.Il s'agirait d'un dénommé Olivier. Si vous possedé des renseignements à son sujet, veuillez avertir le maire.} 
+
+{1040}{490c UNE MAISON ETRANGE}
+{1041}{492c Enquête sur l'Est de la ville}
+{1042}{483l Vous l'avez peut être remarqué, une des maisons à l'Est de la ville, abandonnée depuis environ 5 ans, abrite aujourd'hui un individu étrange. Nous n'avons pu l'identifier mais en observant à sa fenêtre, nous avons remarqué qu'il pratiquait le Raelisme, religion sectaire originaire du Canada. Le plus inquiétant, c'est que nous n'avons pu identifier cet homme et
+            que celui-ci semble être hostile envers les citoyens d'Ayecity. Surnommé l'Enfoiré, cet homme semble surveiller les étoiles chaque nuit dans l'espoir d'apercevoir les extra terrestres. Il ne sort jamais de cette maison qu'il habite depuis 1 semaine. Comment se nourrit-t-il ? Aucun moyen de le savoir. "Il a surement apporté des réserves avec lui" affirme le maire
+            mais cela paraît peu probable. Si vous apprenez du nouveau sur lui ou que vous lui avez parlé (ne mentez pas SVP) écrivez au journal de AYECITY : 5bis rue LMF, 91580 AYECITY.  AYECITY le 18/02/02.}
+
+{1050}{490c UN MOYEN DE TRANSPORT ORIGINAL}
+{1051}{492c Les Pierres téléporteurs.}
+{1052}{483l Cela fait maintenant un mois que les pierres téléporteurs ont été inventées, et les résultats sont vraiment bons ! Voyages ultra rapides, pas fatigants : bref, de haute qualité et gratuits !! Heureusement qu'elles ont été inventées car le vortex qui s'était installé depuis quelques temps commençait à gêner sérieusement la population. A ce propos, nous signalons
+            que les victimes emportées dans le vortex n'ont pas été retrouvées et ne le seront jamais à notre avis. QUelques conseils : ne vous éloignez JAMAIS trop de la ville car le vortex est insvisible. Si vous y mettez un pied, tout le reste sera absorbé aussi ! restez vigilents ! Nous ne savons pas où mène le vortex mais nous sommes sur le point d'avoir une interview
+            avec plusieurs mages spécialistes pour qu'ils nous expliquent cet étrange phénomène.}
+
+{1060}{490c UFO INCIDENT}
+{1061}{492c un groupe envolé}
+{1062}{483l le 15/06/1715: tout le monde connait le groupe Travis qui grâce à sa chanson sing connut un succès fulgurant. Eh bien la nuit dernière, plusieurs personnes ont apercus d'étrange lumières provenant de kikicity. C'est dans cette ville que le groupe faisait son concert. Certaines personnes auraient même apercu des O.V.N.I. Quand les lumières disparurent, le groupe n'était plus là. Selon des proches du groupe, ils se sont faits enlevés par des extraterrestres. D'autres disent qu'ils en avaient marre de chanter toujours la même chanson devant un public d'abruti. Si vous avez des renseignements concernant cette affaire veuillez contactez Juju la carotte.}
+
+{5020}{490c IL NE SE PASSE RIEN à POURILAND}
+{5021}{492c UN CITOYEN TEMOIGNE}
+{5022}{483l "En effet, depuis plusieurs semaines, rien ne se passe dans notre petit bled et c'est bien triste" s'exclame le facteur de la région, qui semble vraiment attristé par les évènements. Il a ajouté "et je pense que ce village perd de sa valeur car plus personne n'y vient et il ne reste que quelques demeurés ici".
+             Quelles sont les causes de ce malheur ? Peut être que la pauvrté en est une. Mais nous nous penchons plus sur l'hipothèse de l'émigration vers de plus grandes villes des alentours. C'est pourquoi nous nous devons de mettre de l'animation ici sous pein de dépopulaion complète !!! Nous comptons donc sur vous et
+             vos concitoyens pour participer à cette action humanitaire par solidarité envers ce village qui vous abrite dpuis des années. Bonne chance, vous réussirez !!}
+
+{5030}{490c L'EPICIER FAIT FAILLITE}
+{5031}{492c TEMOIGNAGE D'UN CLIENT :}
+{5032}{483l Hier, HENRY GOLANT, l'épicier du coin, a fait faillite car personne ne venait acheter de marchandises depuis 1 mois. Il s'est suicidé dans son arrière boutique et quelqu'un l'a retrouvé ce matin.
+            "C'était HORRIBLE !" dit Hubert Auriol, le boulanger, "Nous travaillions depuis 10 ans ici et je m'entendais bien avec lui" ajoute t'il. Mais que faire devant cela ? RIEN. En effet, il n'ya pas
+            de solution étant donné qu'il n'y a pas de police ni de médecin au village, le corps d'HENRY GOLANT est resté chez lui, pourissant. Cela n'augmente pas la cote du village ! Qui nous aidera ??..
+            POURILAND, le 19 février 2002.}
+
+{5040}{490c Québec city,ville Hightech}
+{5041}{492c Installation de cabines téléphoniques}
+{5042}{483l Depuis quelques semaines, l'installation de cabines téléphoniques dans la ville fait des heureux. Evidemment c'est très pratique pour communiquer avec ses amis, sa famille, et c'est moins fatigant que de venir les voir ou écrire une lettre. Les éspérances du maire sont donc confirmées : il y a encore plus de gens
+            heureux à Québec city. En plus ce service est gratuit donc même les plus démunis peuvent en profiter ! En tout cas, de plus en plus d'entre vous utilise ces cabines, une bonne chose donc. Un projet est en cours de construction : "et si chacun avait un téléphone chez soi ?" pense la maire. Bien que très ingénieuse
+            cette idée sera coûteuse car une cabine coûte environ 2000$ can. donc cela entraînera une légère hausse des impôts puisque ce nouveau service sera aussi gratuit. Sur ce, je vous dis bonjour et à bientôt... Québec city, fev.02}
+
+{5050}{490c DES NIAISERIES à Québec city}
+{5051}{492c Plainte d'une habitante !}
+{5052}{483l Info ou parano ? On se demande : Voilà environ 3 ans que Marie Paule Stantot, habitante de Québec city d'une bonne cinquantaine d'années, reçoit des coups de fils de gens cherchant à la niaiser au bout du fil. D'après elle, il s'agissait de Jeannot Trembley, son voisin, mais celui-ci a toujours démenti les faits
+            dont il est accusé. Marie Paule a raconté : " les niaiseux, y se sont fait passer pour le père Noel pour essayer dem'niaiser, alors moué j'y ai cru." En effet, après s'être faits passer pour le père Noel et ayant promis des cadeaux à toute la famille Stantot, les blagueurs n'ont rien envoyé et continuent de la
+            harceler au téléphonne ! Depuis 3 ans cela dure, aucun moyen n'est possible pour retrouver le coupable ! les Stantot croient toujours à Jeannot Tremblay mais celui-ci n'a pas l'air d'y être pour grand chose. Depuis quelques temps, il semblerait que Marie Paule soit aussi appelée par une femme avec une voix qui
+            dit lui rappeler quelque chose. Cette dame, inconnue, l'insulte et lui dit de manger sa marde à chaque fois, ce qui énerve de plus en plus Marie Paule. Evidemment, celle-ci charge elle aussi les niaiseuxx d'insultes à chaque coup de fil, ce qui les fait rappeler de plus belle ! Un jour peut être trouverons nous
+            la clef du mystère..... Québec city 02/02}
+      
+
+
+

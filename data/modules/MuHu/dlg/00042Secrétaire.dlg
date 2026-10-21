@@ -1,0 +1,154 @@
+// [LABEL] Bonjour
+{1}{Bonjour, mon bon monsieur, que puis-je faire pour vous ?}{Bonjour, ma bonne dame, que puis-je faire pour vous ?}{}{1}{}{}
+{2}{Les journaux dans votre coffre sont ils des faux ?}{}{1}{}{21}{}
+{3}{Rien, salut}{}{1}{}{}{}
+
+// [LABEL] Réponse
+{21}{Euh, vous allez devoir faire quelque chose pour moi avant.}{Je ne puis vous répondre, voyez monsieur le rédac chef, svp.}{}{2}{}{}
+{22}{Ah bon ? quoi ?}{1}{1}{}{41}{}
+{23}{Ok, au revoir}{0}{1}{}{}{}
+
+// [LABEL] faire qqch
+{41}{Eh bien....[elle vous lance un regard séducteur] approchez vous de moi, que je vous dise un secret.}{Eh bien....[elle vous lance un regard séducteur] approchez vous de moi, que je vous dise un secret.}{}{3}{}{}
+{42}{Euh...oui, ok...}{}{1}{}{61}{}
+{43}{J'ai pas le temps pour vos conneries, salut}{}{1}{}{}{}
+
+// [LABEL] Approché
+{61}{Mhhh, monsieur vous voudriez bien me suivre jusque chez moi ? là bas nous pourrions discuter plus tranquilles .....}{Mhhh, monsieur vous voudriez bien me suivre jusque chez moi ? là bas nous pourrions discuter plus tranquilles .....}{}{4}{}{}
+{62}{Ben, euh, ok on y va}{}{1}{}{81}{ru1005 }
+{63}{Euh, non je refuse, au revoir}{}{1}{}{}{}
+
+// [LABEL] attendez
+{81}{Je préfère que nous attendions ce soir que je sois rentrée de mon travail. Passez me voir.}{Je préfère que nous attendions ce soir que je sois rentrée de mon travail. Passez me voir.}{}{5}{}{}
+{82}{Ok je viendrai}{}{1}{}{}{}
+
+// [LABEL] Bonsoir
+{101}{Bonsoir.}{Bonsoir. }{}{6}{}{}
+{102}{Je suis venu.}{}{1}{ru1005 }{121}{}
+{103}{je faisais semblant, au revoir}{}{1}{}{}{}
+
+// [LABEL] venu
+{121}{Et c'est d'ailleurs très gentil à vous. Bon alors, où en étions nous ?}{Et c'est d'ailleurs très gentil à vous. Bon alors, où en étions nous ?}{}{7}{}{}
+{122}{Eh bien vous deviez me dire un secret sur ces journaux dans le coffre .}{}{1}{}{141}{}
+{123}{Et bien vous étiez en train de me faire une proposition assez alléchante}{}{1}{}{181}{}
+
+// [LABEL] journaux
+{141}{Ah oui je me souviens. Je vais vous dire : en fait ces journaux c'est le patron qui les commande à une ville d'un univers parallèle : Tarante. C'est assez peu crédible mais c'est pourtant la vérité.}{Ah oui je me souviens. Je vais vous dire : en fait ces journaux c'est le patron qui les commande à une ville d'un univers parallèle : Tarante. C'est assez peu crédible mais c'est pourtant la vérité.}{}{8}{}{}
+{142}{Ne vous inquiétez pas je vous crois. J'ai bien vu des pierre téléporteuses vous savez .....}{}{1}{}{161}{}
+{143}{Ah oui en effet. Si vous m'avez fait venir pour me sortir des énormités pareilles....}{}{1}{}{}{}
+
+// [LABEL] crois
+{161}{Merci beaucoup. [elle vous fait un sourire] . Alors c'est tout ce que vous vouliez savoir ?}{Merci beaucoup. [elle vous fait un sourire] . Alors c'est tout ce que vous vouliez savoir ?}{}{9}{}{}
+{162}{Euh oui merci. Au revoir}{}{1}{}{}{}
+{163}{Nous pouvons continuer à parler si vous voulez.}{}{1}{}{221}{}
+
+// [LABEL] proposition indécente
+{181}{Ah oui je me souviens.... [elle vous sourit] . Alors maintenant que nous sommes seuls, qu'avez vous envie de faire ?}{Ah oui je me souviens.... [elle vous sourit] . Alors maintenant que nous sommes seuls, qu'avez vous envie de faire ?}{}{10}{}{}
+{182}{Eh bien j'aimerais discuter avec vous de théorie de la relativité d'Einstein, un sujet très intéressant.}{}{1}{}{201}{}
+{183}{J'aimerais que vous et moi nous ayons un peu de bon temps.}{}{1}{}{361}{}
+
+// [LABEL] einstein
+{201}{Euh.....c'est pas franchement le genre de trucs qui m'intéresse, vous savez. Vous avez pas une proposition plus intéressante à faire ?}{Euh.....c'est pas franchement le genre de trucs qui m'intéresse, vous savez. Vous avez pas une proposition plus intéressante à faire ?}{}{11}{}{}
+{202}{Je plaisantais bien sûr. Vous ne voudriez pas qu'on passe un bon moment ensemble ?}{}{1}{}{361}{}
+{203}{Non j'ai rien d'autre à dire, au revoir.}{}{1}{}{}{}
+
+// [LABEL] parler
+{221}{Ah, oui vous avez raison. Faisons plus ample connaissance. Je m'appelle Natasha. Je travaille comme vous le savez au journal, c'est le patron qui m'a recueillie à l'âge de mes 10 ans et je travaille pour lui depuis déjà un bon moment.}{Ah, oui vous avez raison. Faisons plus ample connaissance. Je m'appelle Natasha. Je travaille comme vous le savez au journal, c'est le patron qui m'a recueillie à l'âge de mes 10 ans et je travaille pour lui depuis déjà un bon moment.}{}{12}{}{}
+{222}{Pourquoi vous a t-il recueillie ?}{}{1}{}{241}{}
+{223}{Bon il faut que j'y aille, désolé. A la prochaine fois}{}{1}{}{}{}
+
+// [LABEL] recueil
+{241}{Eh bien parce que mes parents étaient des fous et j'ai du me sauver de chez moi. C'est donc mr le Journaliste qui m'a recueillie. Je suis arrivée dans une forêt et il était là en train de prendre des photos et il m'a recueilli chez lui, nous avons voyagé ensemble jusqu'ici, et nous nous sommes installés ici à Pouriland, où nous avons fondé ce journal.}{Eh bien parce que mes parents étaient des fous et j'ai du me sauver de chez moi. C'est donc mr le Journaliste qui m'a recueillie. Je suis arrivée dans une forêt et il était là en train de prendre des photos et il m'a recueilli chez lui, nous avons voyagé ensemble jusqu'ici, et nous nous sommes installés ici à Pouriland, où nous avons fondé ce journal.}{}{13}{}{}
+{242}{Ici ? dans ce bled paumé ? pourquoi ?}{}{1}{}{261}{}
+{243}{Bon je n'ai pas envie d'entrer dans votre vie privée, excusez moi. Au revoir}{}{1}{}{}{}
+
+// [LABEL] bled
+{261}{Parce qu'ici on est tranquilles, il n'y a presque personne. Vous savez dans les grandes villes, un homme qui se ballade avec une fille qui a dix ans de moins que lui, on trouve toujours ça suspect. Ici, tout le monde s'en fout. Il a 32 ans et moi 22. Mais ne vous inquiétez pas, nous sommes comme frères et soeur.}{Parce qu'ici on est tranquilles, il n'y a presque personne. Vous savez dans les grandes villes, un homme qui se ballade avec une fille qui a dix ans de moins que lui, on trouve toujours ça suspect. Ici, tout le monde s'en fout. Il a 32 ans et moi 22. Mais ne vous inquiétez pas, nous sommes comme frères et soeur.}{}{14}{}{}
+{262}{Il est sympa, alors. Et vous comptez rester ici toute votre vie ?}{}{1}{}{281}{}
+{263}{Une question me taraude......tous les deux, est-ce que......}{}{1}{}{301}{}
+
+// [LABEL] toute la vie
+{281}{Je ne sais pas. Je vois que le village se dégrade et que tout le monde déserte... D'une part, si le village est vide, nous aurons plein de maisons pour nous tous seuls, mais le village sera peut être squatté par les orcs qui trainent dans la région.}{Je ne sais pas. Je vois que le village se dégrade et que tout le monde déserte... D'une part, si le village est vide, nous aurons plein de maisons pour nous tous seuls, mais le village sera peut être squatté par les orcs qui trainent dans la région.}{}{15}{}{}
+{282}{Je crois que vous ne devriez pas rester ici, l'ennui vous guetterait}{}{1}{}{321}{}
+{283}{Ben si vous restez ici je vous plains. Moi je dois y aller, à+}{}{1}{}{}{}
+
+// [LABEL] together
+{301}{Ah ! je vois ce que vous voulez dire....[elle sourit]. Non non, rien du tout, je vous l'ai dit, on est comme frère et soeur. Et on va rester ici encore pour un bon moment pour que personne ne se pose se genre de questions.}{Ah ! je vois ce que vous voulez dire....[elle sourit]. Non non, rien du tout, je vous l'ai dit, on est comme frère et soeur. Et on va rester ici encore pour un bon moment pour que personne ne se pose se genre de questions.}{}{16}{}{}
+{302}{Mais à rester ici vous allez vous ennuyer c'est sûr.}{}{1}{}{321}{}
+{303}{Ouais ok. à+ j'y vais.}{}{1}{}{}{}
+
+// [LABEL] ennui
+{321}{Non non, on arrive à s'habituer à l'air frais de la campagne, et de toute façon, c'est ici qu'on se plait le plus, ailleurs on connait pas .}{Non non, on arrive à s'habituer à l'air frais de la campagne, et de toute façon, c'est ici qu'on se plait le plus, ailleurs on connait pas .}{}{17}{}{}
+{322}{Peut être devriez vous justement visiter d'autres contrées pour vous changer un peu ?}{}{1}{}{341}{}
+{323}{Bon d'accord. Moi je dois y aller. au revoir, à+}{}{1}{}{}{}
+
+// [LABEL] ailleurs
+{341}{Ouais bof. Ben vous m'avez l'air sympa, j'aimerais bien partir en ballade avec vous mais je dois m'occuper du journal, et de mon frèrot.... mais un jour peut être. En attendant je commence à avoir sommeil, vous allez devoir partir, désolée. Bonne nuit à vous.}{Ouais bof. Ben vous m'avez l'air sympa, j'aimerais bien partir en ballade avec vous mais je dois m'occuper du journal, et de mon frèrot.... mais un jour peut être. En attendant je commence à avoir sommeil, vous allez devoir partir, désolée. Bonne nuit à vous.}{}{18}{}{}
+{342}{C'est pas grave, on se reverra. à+ et bonne nuit}{}{1}{}{}{}
+
+// [LABEL] tmps moment
+{361}{Je serais d'accord, vous savez, ça me dérange absolument pas, au contraire.}{Je serais d'accord, vous savez, ça me dérange absolument pas, au contraire.}{}{19}{}{}
+{362}{Ben, euh....moi non plus justement...}{}{1}{}{381}{}
+{363}{Euh non finalement j'ai changé d'avis. Au revoir}{}{1}{}{}{}
+
+// [LABEL] alors ?
+{381}{Bon et bien ça tombe bien. [elle s'approche de vous] Bon alors, je vous laisse faire.}{Bon et bien ça tombe bien. [elle s'approche de vous] Bon alors, je vous laisse faire.}{}{20}{}{}
+{382}{Non, non allez-y je vous en prie}{}{1}{}{401}{}
+{383}{[vous lui faites un bisou]}{}{1}{}{501}{}
+
+// [LABEL] allez y
+{401}{Non ne soyez pas timide, voyons, dites moi un secret}{Non ne soyez pas timide, voyons, dites moi un secret}{}{21}{}{}
+{402}{HEIN ???!!!}{}{1}{}{421}{}
+
+// [LABEL] secret
+{421}{Ben oui, dites moi un secret, je suis assez près de vous maintenant, n'hésitez pas.}{Ben oui, dites moi un secret, je suis assez près de vous maintenant, n'hésitez pas.}{}{22}{}{}
+{422}{Mais !? je ne comprends pas ! nous devions passer un bon moment ensemble...}{}{1}{}{441}{}
+{423}{Bon j'y vais, j'ai pas de temps à perdre.}{}{1}{}{}{}
+
+// [LABEL] ben oui
+{441}{Ben oui, c'est ce qu'on fait : on se dit chacun un secret et comme ça on s'amuse bien. Allez y après je vous en dirai un}{Ben oui, c'est ce qu'on fait : on se dit chacun un secret et comme ça on s'amuse bien. Allez y après je vous en dirai un}{}{23}{}{}
+{442}{Quoi ! Mais c'est de l'arnaque !!}{}{1}{}{461}{}
+{443}{Ok je vous en dis un : je suis déçu par votre attitude, désolé...}{}{1}{}{481}{}
+
+// [LABEL] arnaque
+{461}{Eh oh ! Faut pas s'énerver, vous vous attendiez à quoi ?}{Eh oh ! Faut pas s'énerver, vous vous attendiez à quoi ?}{}{24}{}{}
+{462}{Bah euh.......je sais pas, jusqu'ici, ça avait l'air clair....}{}{1}{}{561}{}
+
+// [LABEL] déçu
+{481}{Déçu, pourquoi ? [elle semble étonnée]. J'ai dit quelque chose qui ne vous a pas plu ...?}{Déçu, pourquoi ? [elle semble étonnée]. J'ai dit quelque chose qui ne vous a pas plu ...?}{}{25}{}{}
+{482}{Oui, vous m'avez dragué pendant toute notre discute et là vous me laissez tomber}{}{1}{}{581}{}
+{483}{Non, c'est pas grave, c'est ma faute j'ai mal interprété ce que vous vouliez.}{}{1}{}{621}{}
+
+// [LABEL] bisou
+{501}{[Elle vous baffe] : hé ! ça va pas, non ?}{[Elle vous baffe] : hé ! ça va pas, non ?}{}{26}{}{}
+{502}{Ben quoi, qu'est-ce qu'il y a ??}{}{1}{}{521}{}
+
+// [LABEL] kekya
+{521}{Ben, pourquoi vous m'embrasser, vous êtes fou ? je voulais que vous me disiez un secret, pas que vous m'embrassiez !}{Ben, pourquoi vous m'embrasser, vous êtes fou ? je voulais que vous me disiez un secret, pas que vous m'embrassiez !}{}{27}{}{}
+{522}{Hein, attendez, je comprends rien. Pourquoi vous m'avez fait venir ici ?}{}{1}{}{541}{}
+
+// [LABEL] pkoi venir
+{541}{Ben, pour parler avec vous, vous aviez l'air gentil..... vous me décevez, franchement. Vous allez devoir partir immédiatement}{Ben, pour parler avec vous, vous aviez l'air gentil..... vous me décevez, franchement. Vous allez devoir partir immédiatement}{}{28}{}{}
+{542}{Euh, ok. Excusez moi. Au revoir}{}{1}{}{}{}
+
+// [LABEL] clair
+{561}{Ben faut croire que vous aviez mal compris....euh, désolée, je vous ai induit en erreur peut être ?? [elle semble génée]}{Ben faut croire que vous aviez mal compris....euh, désolée, je vous ai induit en erreur peut être ?? [elle semble génée]}{}{29}{}{}
+{562}{Apparamment oui. Bon ben j'y vais, alors. Au revoir}{}{1}{}{}{}
+
+// [LABEL] béton
+{581}{Euh, oups. Je vous ai pas dragué, je faisais semblant, c'était un jeu....excusez-moi, je croyais que vous aviez compris....}{Euh, oups. Je vous ai pas dragué, je faisais semblant, c'était un jeu....excusez-moi, je croyais que vous aviez compris....}{}{30}{}{}
+{582}{Euh, non j'avais pas compris en fait. Vous auriez pu faire attention, quand même.}{}{1}{}{601}{}
+
+// [LABEL] arreter
+{601}{Bon arrêtons cette discussion ici. Revenez un autre jour, je crois qu'on a assez parlé. Au revoir}{Bon arrêtons cette discussion ici. Revenez un autre jour, je crois qu'on a assez parlé. Au revoir}{}{31}{}{}
+{602}{Aurevoir}{}{1}{}{}{}
+
+// [LABEL] interprété
+{621}{Euh, excusez-moi j'ai peut être été un peu suggestive aussi....mais euh.... bon ben on a qu'à oublier ça, d'accord ?}{Euh, excusez-moi j'ai peut être été un peu suggestive aussi....mais euh.... bon ben on a qu'à oublier ça, d'accord ?}{}{32}{}{}
+{622}{Oui d'accord. Je veux bien oublier}{}{1}{}{641}{}
+{623}{Je préfère m'en aller}{}{1}{}{}{}
+
+// [LABEL] ok
+{641}{Bon, alors oublions ça. Il se fait tard je dois aller me coucher. A une prochaine fois, peut être}{Bon, alors oublions ça. Il se fait tard je dois aller me coucher. A une prochaine fois, peut être}{}{33}{}{}
+{642}{à+}{}{1}{}{}{}
+

@@ -1,0 +1,41 @@
+// [LABEL] debut
+{1}{G:}{G:}{}{1}{}{}
+{2}{Que se passe-t'il ici?}{}{1}{qu1002 0}{21}{}
+{3}{je suis d'accord pour vous aider}{}{1}{qu1002 2}{41}{}
+{4}{Que dois-je faire déja?}{}{1}{qu1002 1}{61}{}
+{5}{J'ai tué Olivier.}{}{1}{qu1002 6}{81}{}
+{6}{E:}{}{1}{}{}{}
+{7}{J'ai convaincu Olivier de se rendre. En plus il accepte de rendre service aux scientifiques.}{}{1}{qu1002 3}{101}{$$100 ,al+10,qu1002 4}
+{8}{Olivier m'a dit que vous possediez les plans du ratus 2400, j'en ai besoin.}{}{1}{ru1002,qu1013 2}{121}{in-4006,qu1013 3}
+
+// [LABEL] NewPage0002
+{21}{Nous sommes sur le point d'arrêter un dangereux criminel, il s'appelle Olivier et il a déja tué plusieurs candidat du maillon faible.}{Nous sommes sur le point d'arrêter un dangereux criminel, il s'appelle Olivier et il a déja tué plusieurs candidat du maillon faible.}{}{2}{}{qu1002 1}
+{22}{Puis-je vous aider?}{}{1}{}{41}{}
+{23}{On m'appelle ailleurs je crois.}{}{1}{}{}{}
+
+// [LABEL] NewPage0003
+{41}{Vous pouvez essayer de le convaincre de se rendre. Mais faites attention il est très dangereux. Il semble qu'il juge les gens sur leur intelligence.}{Vous pouvez essayer de le convaincre de se rendre. Mais faites attention il est très dangereux. Il semble qu'il juge les gens sur leur intelligence.}{}{3}{}{qu1002 1}
+{42}{Très bien je vais voir ce que je peux faire.}{}{1}{}{}{}
+{43}{J'ai changé d'avis, au revoir.}{}{1}{}{}{}
+
+// [LABEL] repet
+{61}{Tu dois trouver Olivier et l'obliger à se rendre.}{Tu dois trouver Olivier et l'obliger à se rendre.}{}{4}{}{qu1002 2}
+{62}{Ok}{}{1}{}{}{}
+
+// [LABEL] reussi
+{81}{C'est dommage qu'il ne se soit pas rendu, on aurait pu l'aider. Mais ce n'est pas grâve. Pour remercier, je vous donne quelques pièces. Faîtes en bonne usage.}{C'est dommage qu'il ne se soit pas rendu, on aurait pu l'aider. Mais ce n'est pas grâve. Pour remercier, je vous donne quelques pièces. Faîtes en bonne usage.}{}{5}{}{qu1002 4,$$50 }
+{82}{Oui, c'est une triste histoire, mais je n'avais pas d'autres choix. Au revoir}{}{1}{}{}{}
+
+// [LABEL] raisonner olivier
+{101}{Bravo! Je te felicite pour ton courage. Tiens je te donne un peu d'argent pour nous avoir aider.}{Bravo! Je te felicite pour ton courage. Tiens je te donne un peu d'argent pour nous avoir aider.}{}{6}{}{}
+{102}{Merci et content de vous avoir aider. Au revoir.}{}{1}{}{}{}
+
+// [LABEL] ratus2400
+{121}{Tenez les voici!}{Tenez les voici!}{}{7}{}{}
+{122}{Merci au revoir.}{}{1}{}{}{}
+{123}{Pourquoi avez-vous ces plans?}{}{1}{}{141}{}
+
+// [LABEL] pourquoi avoir plans
+{141}{Eh bien quand j'ai perquisitionné la maison d'olivier, j'ai trouve ces plans et je les ai gardés pour pouvoir faire chanter Olivier. Mais ca n'a pas marcher, il n'a rien voulu entendre. Je les ai quand même garder pour voir s'il cederai un jour.}{Eh bien quand j'ai perquisitionné la maison d'olivier, j'ai trouve ces plans et je les ai gardés pour pouvoir faire chanter Olivier. Mais ca n'a pas marcher, il n'a rien voulu entendre. Je les ai quand même garder pour voir s'il cederai un jour.}{}{8}{}{}
+{142}{Je vois. Merci pour cette info au revoir.}{}{1}{}{}{}
+

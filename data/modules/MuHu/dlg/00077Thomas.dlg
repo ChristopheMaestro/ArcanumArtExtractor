@@ -1,0 +1,14 @@
+// [LABEL] Bonjour
+{1}{Heureux de vous rencontrer, puis-je vous demander votre nom ?}{Heureux de vous rencontrer, puis-je vous demander votre nom ?}{}{rp1000 }{}{}
+{2}{Bien sûr, je suis @pcname@ et vous ?}{}{1}{rp1000 }{21}{}
+{3}{Oui mais une autre fois peut être...}{}{1}{}{}{}
+// [LABEL] Nom
+{21}{Moi mon nom c'est Thomas, heureux de faire votre connaissance ! Je sens que l'on va bien s'entendre, tous les deux ! }{Moi mon nom c'est Thomas, heureux de faire votre connaissance ! Je sens que l'on va bien s'entendre, tous les deux ! }{}{2}{}{}
+{22}{Oui t'as l'air sympa, je crois aussi. On peut se tutoyer, je crois.}{}{1}{}{41}{}
+// [LABEL] questions
+{41}{Tu es sympa, ouais... je crois qu'on va devenir potes, tous les deux. C'est dommage que j'aie pas le temps, je t'aurais emmené boire un coup au bar}{Tu es sympa et jolie, @pcname@ . Faudra que je t'emmène boire un verre un de ces jours}{}{3}{}{}
+{42}{J'aurais accepté volontiers. Bon je dois y aller, A+ gars.}{1}{1}{}{}{}
+{43}{Oui, j'aimerais bien, mais pour l'instant je dois encore m'adapter à mes nouveaux amis...}{0}{1}{}{61}{}
+// [LABEL] Friends
+{61}{Ouais je comprends..tu vas voir au début ça fait bizarre, mais une fois habituée, tu te sentiras très bien avec nous !}{Ouais je comprends..tu vas voir au début ça fait bizarre, mais une fois habituée, tu te sentiras très bien avec nous !}{}{4}{}{}
+{62}{Je n'en doute pas, au revoir, Thomas}{}{1}{}{}{}

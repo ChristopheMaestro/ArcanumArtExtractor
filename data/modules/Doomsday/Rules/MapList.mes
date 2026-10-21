@@ -1,0 +1,27 @@
+//
+// Map List Info
+//
+
+// Types:
+//	START_MAP -- This is the starting map (there should only be one of these!)
+//	SHOPPING_MAP -- This is the shopping map used in character creation.  If not
+//		present, then this process is skipped during character creation.
+
+	// Starting Location (Convert for World by:)
+	// (54624 - 32) / 64 = 853
+	// (45408 - 32) / 64 = 709
+
+// Area: <#> -- This is the Index # in area.mes that the map maps to
+
+
+// List of valid maps for game & Starting X/Y position
+{5000}{ShopMap, 31, 29, Type: SHOPPING_MAP}
+{5001}{Main, 829, 809, Type: START_MAP, WorldMap: 0}
+{5002}{Torture_Chamber, 1, 1,, WorldMap: 0}
+{5003}{Fortress_Upstairs, 1, 1,, WorldMap: 0}
+{5004}{Cave, 1, 1,, WorldMap: 0}
+{5005}{Inner_Circle, 1, 1,, WorldMap: 0}
+{5006}{Sewers, 1, 1,, WorldMap: 0}
+{5007}{Soldier_Training, 1, 1,, WorldMap: 0}
+{5008}{Ruins, 1, 1,, WorldMap: 0}
+{5009}{Cellar, 1, 1,, WorldMap: 0}

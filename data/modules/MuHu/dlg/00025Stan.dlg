@@ -1,0 +1,49 @@
+// [LABEL] pout
+{1}{Bonjour.}{Bonjour.}{}{1}{}{}
+{2}{Bonjour, puis-je vous demander qui vous êtes?}{}{1}{qu1008 0}{21}{}
+{3}{E:}{}{1}{}{}{}
+{4}{Que dois-je faire déja?}{}{1}{qu1008 2}{161}{}
+{5}{J'ai recuperé la clé}{}{1}{qu1008 3}{181}{}
+
+// [LABEL] identite
+{21}{Je m'appelle Stan. Pouvez-vous me rendre un service?}{Je m'appelle Stan. Pouvez-vous me rendre un service?}{}{2}{}{}
+{22}{Dites-moi d'abord de quoi il s'agit et je verais ensuite.}{}{1}{}{61}{}
+{23}{Non, ca me fait chier.}{}{1}{}{41}{}
+
+// [LABEL] mais
+{41}{Et si je vous disais qu'il y a une grosse somme d'argent à gagner?}{Et si je vous disais qu'il y a une grosse somme d'argent à gagner?}{}{3}{}{}
+{42}{Dans ce cas là ca change tout!}{}{1}{}{61}{}
+{43}{Non rien n'y fait, je ne suis pas interessé par l'argent.}{}{1}{}{}{}
+
+// [LABEL] quête
+{61}{Connaissez-vous l'affaire du père Castor?}{Connaissez-vous l'affaire du père Castor?}{}{4}{}{}
+{62}{Non.}{}{1}{}{81}{}
+
+// [LABEL] castor
+{81}{Il y a une semaine , la banque du père Castor a été cambriolé. Une importante somme d'argent a été volé. Des témoins ont apercu un demi-ogre qui s'enfuyait avec l'argent. Le lendemain, la police a interrogé tout les demi-ogres de la ville et comme mon ami Casimir correspondait au descriptif du voleur, ils l'ont arrêté.}{Il y a une semaine , la banque du père Castor a été cambriolé. Une importante somme d'argent a été volé. Des témoins ont apercu un demi-ogre qui s'enfuyait avec l'argent. Le lendemain, la police a interrogé tout les demi-ogres de la ville et comme mon ami Casimir correspondait au descriptif du voleur, ils l'ont arrêté.}{}{5}{}{qu1008 1}
+{82}{Que dois-je faire}{}{1}{}{101}{}
+
+// [LABEL] doit faire
+{101}{J'aimerais que vous délivriez mon ami de cette cellule morbide et que vous retrouviez le vrai coupable.}{J'aimerais que vous délivriez mon ami de cette cellule morbide et que vous retrouviez le vrai coupable.}{}{6}{}{}
+{102}{C'est d'accord, je veux bien vous aider.}{}{1}{}{161}{}
+{103}{Et si Casimir était le vrai voleur et que vouliez que je le délivre pour qu'il puisse voler à nouveau?}{}{1}{}{121}{}
+
+// [LABEL] quoi
+{121}{Si vous ne me croyez pas tant pis. Mais je vous dis la vérité.}{Si vous ne me croyez pas tant pis. Mais je vous dis la vérité.}{}{7}{}{}
+{122}{Bien sûr! Je vais vous denoncer immediatement aux flics!}{}{1}{}{141}{}
+{123}{Très bien je vous crois.}{}{1}{}{161}{}
+
+// [LABEL] flics
+{141}{Surtout ne fais pas ca! Sinon je serais obligé de te tuer.}{Surtout ne fais pas ca! Sinon je serais obligé de te tuer.}{}{8}{}{}
+{142}{Je vais me gener}{}{1}{}{}{co, fl 80}
+{143}{Je blaguais voyons!}{}{1}{}{}{}
+
+// [LABEL] voila
+{161}{Un certain mr Muppet détient la clé de la cellule. Il a tenu a la garde chez lui. Je ne sais pas pourquoi. Il faut que vous preniez cette clé et que vous me la rameniez.}{Un certain mr Muppet détient la clé de la cellule. Il a tenu a la garde chez lui. Je ne sais pas pourquoi. Il faut que vous preniez cette clé et que vous me la rameniez.}{}{9}{}{qu1008 2}
+{162}{Je reviendrais quand j'aurais la clé.}{}{1}{}{}{}
+{163}{Laissez moi y réfléchir.}{}{1}{}{}{}
+
+// [LABEL] reussi
+{181}{Super. Depêchez-vous d'ouvrir la porte de la cellule! Votre récompense se trouve également dedans.}{Super. Depêchez-vous d'ouvrir la porte de la cellule! Votre récompense se trouve également dedans.}{}{10}{}{}
+{182}{Merci.}{}{1}{}{}{}
+

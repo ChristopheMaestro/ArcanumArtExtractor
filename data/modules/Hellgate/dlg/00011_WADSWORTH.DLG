@@ -1,0 +1,71 @@
+{1}{YOU! Who are you and how did you get in here? [He seems more than surprised to see you.]}{YOU! How did you get in here? [He seems more than surprised to see you.]}{}{}{}{}
+{2}{I walked? Who are you?}{}{5}{}{75}{}
+{3}{None of your business. If you want to live, answer my questions.}{}{5}{qu 1001 1}{10}{re -3}
+{4}{That's not important. Do you know anything about the portal?}{}{5}{qu 1001 1}{15}{}
+{5}{I'm @pcname@, and I came from a mountain pass to close a portal.}{}{5}{qu 1001 1}{20}{}
+{6}{Duh... me just be here. You ask dumb stuff! Who you be?}{}{-4}{}{75}{}
+{7}{None no beeswax! Me ask stuffs, you answer me stuffs!}{}{-4}{qu 1001 1}{10}{re -3}
+{8}{Who care? You know stuffs 'bout pot-ho.}{}{-4}{qu 1001 1}{15}{}
+{9}{Me's @pcname@, from unner mo-tain to see pot-ho go boom!}{}{-4}{qu 1001 1}{20}{}
+{10}{[He pauses, considering something.] Very well. I'll answer your question if you'll answer mine. I am Mr. Wadsworth, Paddington Jonathan Wadsworth. Now, who are you and what are you doing here?}{Very well. I'll answer your question if you'll answer mine. My name Paddington Wadsworth. Now, who are you and what are you doing here?}{}{}{}{}
+{11}{I'm @pcname@, and I'm here to destroy the portal and whoever opened it.}{}{5}{}{20}{}
+{12}{I'm the only one asking questions here! Did you open the portal?}{}{5}{}{25}{re -4}
+{13}{I @pcname@ here to make pot-ho go boom and kill kill kill!}{}{-4}{}{20}{}
+{14}{You no talk! I ask you open pot-ho? Yoooo be bad man?}{}{-4}{}{25}{re -4}
+{15}{[He looks at you suspiciously.] I might. Who are you and why do you want to know?}{[He looks at you suspiciously.] I might. Who are you and why do you want to know?}{}{}{}{}
+{16}{I've been sent to destroy the portal and the one who opened it. Was it you?}{}{5}{}{30}{}
+{17}{I s'pose to make pot-ho go boom and find bad person. Yoooo bad person?}{}{-4}{}{30}{}
+{20}{Hmm... And who sent you? How is it that you knew that it was a portal and that SOMEONE was responsible for it?}{Hmm... And who sent you? How is it that you knew that it was a portal and that Someone was responsible for it?}{}{}{}{}
+{21}{An Elven monk told me everything.}{}{5}{}{45}{}
+{22}{I'M the one asking questions here! Now are you responsible for the portal?}{}{5}{}{25}{re -5}
+{23}{Funny ears monk man tells me 'bout pot-ho and stuffes.}{}{-4}{}{45}{}
+{24}{I talk! You no talk! Now uh... yoo be bad man open pot-ho?}{}{-4}{}{25}{re -5}
+{25}{[His eyes narrow in displeasure.] You're treading on thin ice stranger. But for the last time, I'll concede to answer you. No, I did not open the portal. I found out about it, and here I am researching it to see how I can shut it down. I'm sorry if my servants attacked you, but I placed them around for my own protection. Does this satisfy you?}{[His eyes narrow in displeasure.] You're treading on thin ice stranger. But for the last time, I'll concede to answer you. No, I did not open the portal. I found out about it, and here I am researching it to see how I can shut it down. I'm sorry if my servants attacked you, but I placed them around for my own protection. Does this satisfy you?}{}{}{}{}
+{26}{I suppose. Still, I need to find out who was responsible. What do you think?}{}{5}{gf 1 1}{45}{re +3}
+{27}{I suppose. Still, I need to find out who was responsible. What do you think?}{}{5}{gf 1 0}{35}{re +3}
+{28}{Duh... ok? But what you know 'bout bad person who opened pot-ho?}{}{-4}{gf 1 1}{45}{re +3}
+{29}{Duh... ok? But what you know 'bout bad person who opened pot-ho?}{}{-4}{gf 1 0}{35}{re +3}
+{30}{I? HA! You are very mistaken stranger. No, I did not open the portal. I found out about it, and here I am researching it to see how I can shut it down. I'm sorry if my servants attacked you, but I placed them around for my own protection. Does this satisfy you?}{I? HA! You are very mistaken stranger. No, I did not open the portal. I found out about it, and here I am researching it to see how I can shut it down. I'm sorry if my servants attacked you, but I placed them around for my own protection. Does this satisfy you?}{}{}{}{}
+{31}{I suppose. Still, I need to find out who was responsible. What do you think?}{}{5}{gf 1 1}{45}{re +3}
+{32}{I suppose. Still, I need to find out who was responsible. What do you think?}{}{5}{gf 1 0}{35}{re +3}
+{33}{Duh... ok? But what you know 'bout bad person who opened pot-ho?}{}{-4}{gf 1 1}{45}{re +3}
+{34}{Duh... ok? But what you know 'bout bad person who opened pot-ho?}{}{-4}{gf 1 0}{35}{re +3}
+{35}{Interesting. If you don't mind listening to my conjecture... Perhaps it was this so called "monk" who really opened up the portal? The thief who cries "thief" diverting all guilt away from himself, if you know my meaning. I suggest that you go back and confront him. I will stay here and continue to try to hold the demons back while you are gone.}{Interesting. If you don't mind listening to my conjecture... Perhaps it was this so called "monk" who really opened up the portal? The thief who cries "thief" diverting all guilt away from himself, if you know my meaning. I suggest that you go back and confront him. I will stay here and continue to try to hold the demons back while you are gone.}{}{}{}{gf 2 1}
+{36}{Fool! I trust the monk more than I trust you! I think you are the one - die!}{}{5}{}{}{co}
+{37}{I don't know which one of you is lying, but I'll get to the bottom of this!}{}{5}{}{0}{}
+{38}{Very well Mr. Wadsworth. I'll report back when I have dealt with the monk.}{}{5}{}{0}{re +3, qu 1002 1}
+{39}{You no talk 'bout monk man like that! You real bad man. I know! Die!}{}{-4}{}{}{co}
+{40}{DOH! Me all confoo'd an not know who good who bad. Arg. Me be back!}{}{-4}{}{0}{}
+{41}{Okely waddy wart. Me go kill monk man and me be back!}{}{-4}{}{0}{re +3, qu 1002 1}
+{45}{Interesting. If you don't mind listening to my conjecture... Perhaps it was this so called "monk" who really opened up the portal? The thief who cries "thief" diverting all guilt away from himself, if you know my meaning. I suggest that you go back and confront him. I will stay here and make sure no one tries to open up another portal while you are gone.}{Interesting. If you don't mind listening to my conjecture... Perhaps it was this so called "monk" who really opened up the portal? The thief who cries "thief" diverting all guilt away from himself, if you know my meaning. I suggest that you go back and confront him. I will stay here and make sure no one tries to open up another portal while you are gone.}{}{}{}{gf 2 1}
+{46}{Fool! I trust the monk more than I trust you! I think you are the one - die!}{}{5}{}{}{co}
+{47}{I don't know which one of you is lying, but I'll get to the bottom of this!}{}{5}{}{0}{qu 1002 1}
+{48}{Very well Mr. Wadsworth. I'll report back when I have dealt with the monk.}{}{5}{}{0}{re +3, qu 1002 1}
+{49}{You no talk 'bout monk man like that! You real bad man. I know! Die!}{}{-4}{}{}{co}
+{50}{DOH! Me all kunfoo'd an not know who good who bad. Arg. Me be back!}{}{-4}{}{0}{qu 1002 1}
+{51}{Okely waddy wart. Me go kill monk man and me be back!}{}{-4}{}{0}{re +3, qu 1002 1}
+{55}{You're back! Tell me what news?}{You're back! Tell me what news?}{}{}{}{}
+{56}{I think I killed an innocent man Mr. Wadsworth...}{}{5}{gf 4 1}{-5}{fl 65, co}
+{57}{He's dead... and now it's your turn!}{}{5}{gf 4 1}{-5}{fl 65, co, al -1}
+{58}{I think you're the evil behind all this...}{}{5}{gf 4 0}{66}{}
+{59}{I haven't killed him yet. Bye.}{}{5}{gf 4 0}{0}{}
+{60}{Me think monky man was good man...}{}{-4}{gf 4 1}{-5}{fl 65, co}
+{61}{He be dead! Now you be dead! Heh...}{}{-4}{gf 4 1}{-5}{fl 65, co, al -1}
+{62}{Nooo... but me think you be bad man. Die die die!}{}{-4}{gf 4 0}{66}{}
+{63}{Nope! Byeeeee!}{}{-4}{gf 4 0}{0}{}
+{65}{HAHAHA! You've killed the only one who had a real idea of what was going on! He might have been able to stop me. Fool! Now that you have done me this favor, I shall do you a favor - grant you eternal peace! HAHAHAHA!}{HAHAHA! You've killed the only one who had a real idea of what was going on! He might have been able to stop me. Fool! Now that you have done me this favor, I shall do you a favor - grant you eternal peace! HAHAHAHA!}{}{}{}{qu 1002 4}
+{66}{[He pauses, considering something, and then a malicious grin slowly begins to spread across his face.] I see I cannot fool you stranger. No matter! You're absolutely right! HA! Do you know what trouble I went through to get this pathetic little settlement started? I needed those lives, and the wildlife around here to open up the most wonderous Hellgate in the history of Arcanum! And I will not allow a simpering young fool like you to destroy my plans! }{[He pauses, considering something, and then a malicious grin slowly begins to spread across his face.] I see I cannot fool you stranger. No matter! You're absolutely right! HA! Do you know what trouble I went through to get this pathetic little settlement started? I needed those lives, and the wildlife around here to open up the most wonderous Hellgate in the history of Arcanum! And I will not allow a simpering young fool like you to destroy my plans! }{}{}{}{}
+{67}{I do not wish to kill you!}{}{5}{}{-5}{fl 71, co, al +1}
+{68}{Very well then. You leave me no choice but to kill you...}{}{5}{}{-5}{fl 71, co}
+{69}{Me not wanna kill you!}{}{-4}{}{-5}{fl 71, co, al +1}
+{70}{Me not die, yoooo die!}{}{-4}{}{-5}{fl 71, co}
+{71}{You may not wish to kill me but I wish to kill you! Die!}{You may not wish to kill me but I wish to kill you! Die!}{}{}{}{}
+{72}{I cannot let you leave after all that you may see here. DIE!}{I cannot let you leave after all that you may see here. DIE!}{}{}{}{}
+{73}{Nothing you say can save you now, Ha ha! Die!}{Nothing you say can save you now, Ha ha! Die!}{}{}{}{}
+{75}{Don't be impertinent. You tresspass into my house, my basement, and if you want to leave here in one piece, you will answer me.}{Don't be impertinent. You tresspass into my house, my basement, and if you want to leave here in one piece, you will answer me.}{}{}{}{}
+{76}{I'm @pcname@, and I surfaced here from a mountain pass.}{}{5}{}{80}{}
+{77}{I'm sorry. I'll be on my way then.}{}{5}{}{}{co, fl 72}
+{78}{I be @pcname@ and uhh… I came unner mo-tain pass!}{}{-4}{}{80}{}
+{79}{Doh! I sorry… uh.. Me go now.}{}{-4}{}{}{co, fl 72}
+{80}{So you stumbled here quite by accident? What have you seen? [You start to reply but he cuts you off] No matter. I cannot let you leave in one piece after all that you may see here. Besides, your death might even be… useful. [A wicked grin spreads across his face as he readies his sword.]}{So you stumbled here quite by accident? What have you seen? [You start to reply but he cuts you off] No matter. I cannot let you leave in one piece after all that you may see here. Besides, your death might even be… useful. [A wicked grin spreads across his face as he readies his sword.]}{}{}{}{}
+{81}{Wha… wait!}{}{1}{}{}{co, fl 73}

@@ -1,0 +1,42 @@
+// [LABEL] Bonjour
+{1}{Bonjour, que voulez vous ?}{Bonjour, que voulez vous ?}{}{1}{}{}
+{2}{Je suis @pcname@ et vous, qui êtes vous ?}{}{1}{}{21}{}
+{3}{Je voudrais que vous m'indiquiez un endroit où passer la nuit}{}{1}{}{41}{}
+{4}{Je ne veux rien, je me suis trompé.}{}{1}{}{}{}
+// [LABEL] present
+{21}{Je me présente, Gerard Bouchard, chercheur amateur. J'ai ici, avec mes collègues, un léger problème, puisque ce nain prétend avoir trouvé cet oeuf chez lui ! D'après lui il aurait multiplié son volume pour en arriver à cette taille ! Qu'en pensez vous?}{Je me présente, Gerard Bouchard, chercheur amateur. J'ai ici, avec mes collègues, un léger problème, puisque ce nain prétend avoir trouvé cet oeuf chez lui ! D'après lui il aurait multiplié son volume pour en arriver à cette taille ! Qu'en pensez vous?}{}{2}{}{}
+{22}{Je pense que ce doit être possible, et qu'il faut juste trouver la cause de cela.}{}{1}{}{61}{}
+{23}{Je pense qu'il s'agit d'une supercherie, et qu'il vaudrait mieux laisser tomber cette affaire}{}{1}{}{}{}
+{24}{Je n'ai pas d'opinion là dessus, je dois y aller}{}{1}{}{}{}
+// [LABEL] hotel
+{41}{Pourquoi vous me demandez ça à moi ?? Je ne suis pas censé être au courant, demandez à un aubergiste, comme tout le monde !}{Pourquoi vous me demandez ça à moi ?? Je ne suis pas censé être au courant, demandez à un aubergiste, comme tout le monde !}{}{3}{}{}
+{42}{Ah oui j'y avais pas pensé. Merci, au revoir}{}{1}{}{}{}
+// [LABEL] possible
+{61}{Muhuhuhu ! Vous croyez donc cette histoire invraisemblable !  Eh bien je vous laisse chercher, mais je crois que vous pourrez chercher longtemps, si vous ne trouvez pas le matériel qui lui a servi à construire cet oeuf avant ! muhuhu}{Muhuhuhu ! Vous croyez donc cette histoire invraisemblable !  Eh bien je vous laisse chercher, mais je crois que vous pourrez chercher longtemps, si vous ne trouvez pas le matériel qui lui a servi à construire cet oeuf avant ! muhuhu}{}{4}{}{}
+{62}{Vous croyez qu'il a construit cet oeuf lui même ? comment un pauvre homme aurait-il pu faire un truc aussi ressemblant ?}{}{1}{}{121}{}
+{63}{Je trouverai une preuve ! et là vous l'aurez bien dans le cul !}{}{1}{}{141}{re-5}
+{64}{Bon je préfère y aller}{}{1}{}{}{}
+// [LABEL] supercherie
+{81}{Ah, vous me rejoignez donc dans ma théorie. En effet, il lui a suffit de trouver du bon matériel et de peindre cet "oeuf" pour nous y faire croire ! mais nous ne sommes pas duppes !}{Ah, vous me rejoignez donc dans ma théorie. En effet, il lui a suffit de trouver du bon matériel et de peindre cet "oeuf" pour nous y faire croire ! mais nous ne sommes pas duppes !}{}{5}{}{}
+{82}{Vous avez raison ! Je vais le convaincre d'arrêter de vous faire perde votre temps !}{}{1}{}{}{}
+{83}{Je pense qu'il aurait plutot fallu qu'on le dénonce à la police}{}{1}{}{101}{}
+// [LABEL] flic
+{101}{Vous allez peut être un peu loin, mais il est vrai que cela servirait d'exemple pour tous ceux qui font perde du temps à de braves gens comme nous autres pour toucher de l'argent.}{Vous allez peut être un peu loin, mais il est vrai que cela servirait d'exemple pour tous ceux qui font perde du temps à de braves gens comme nous autres pour toucher de l'argent.}{}{6}{}{}
+{102}{Ne vous inquiétez pas je vais tout de suite le dénoncer }{}{1}{}{}{}
+{103}{Mouais finalement, je vais laisser tomber pour le moment}{}{1}{}{}{}
+// [LABEL] comment construire
+{121}{Il lui a suffi de collecter quelques bons matériaux, de sculpter cet oeuf, en pierre par exemple, puis de le peindre. Ainsi nous obtenons cet oeuf, qui ne semble guère réaliste d'ailleurs.}{Il lui a suffi de collecter quelques bons matériaux, de sculpter cet oeuf, en pierre par exemple, puis de le peindre. Ainsi nous obtenons cet oeuf, qui ne semble guère réaliste d'ailleurs.}{}{7}{}{}
+{122}{Ah oui c'est vrai que ça se tient ! Je vais le convaincre de laisser tomber cela}{}{1}{}{}{}
+{123}{Ne soyez pas stupide ! Il est impossible à un pauvre paysan de faire quelque chose de la sorte !}{}{1}{}{161}{}
+{124}{E:}{}{1}{}{}{}
+// [LABEL] danlcul
+{141}{Ne soyez pas si vulgaire ! Je pense que la preuve du contraire vous servirait de leçon, et vous cesseriez de faire preuve d'autant de naïveté ! Vous ne voyez donc pas que nous sommes pris pour des imbéciles ?}{Ne soyez pas si vulgaire ! Je pense que la preuve du contraire vous servirait de leçon, et vous cesseriez de faire preuve d'autant de naïveté ! Vous ne voyez donc pas que nous sommes pris pour des imbéciles ?}{}{8}{}{}
+{142}{Si c'est moi que tu traites d'imbécile tu pourras bientot te déplacer en fauteuil roulant}{}{1}{}{}{re-7}
+{143}{Bon d'accord, je préfère arrêter cette discussion tout de suite. Au revoir.}{}{1}{}{}{}
+// [LABEL] impossible ??
+{161}{Comment le savez vous ? On voit que vous ne connaissez pas les paysans, vous ! Ils pensent juste à un moyen facile d'obtenir de l'argent !}{Comment le savez vous ? On voit que vous ne connaissez pas les paysans, vous ! Ils pensent juste à un moyen facile d'obtenir de l'argent !}{}{9}{}{}
+{162}{Et vous, qu'est-ce que vous cherchez avec votre travail ?}{}{1}{}{181}{}
+{163}{Si on tombe dans les préjugés, je préfère vous quitter tout de suite}{}{1}{}{}{}
+// [LABEL] EUH
+{181}{Euuuuuuuhh........Ne changez pas de sujet ! je suis un honnête homme, je travaille dur et ce n'est pas la peine de me faire perdre mon temps.}{Euuuuuuuhh........Ne changez pas de sujet ! je suis un honnête homme, je travaille dur et ce n'est pas la peine de me faire perdre mon temps.}{}{10}{}{}
+{182}{D'accord, au revoir.}{}{1}{}{}{}

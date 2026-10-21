@@ -1,0 +1,60 @@
+// [LABEL] Bonjour
+{1}{Oui ?}{Oui ?}{}{1}{}{}
+{2}{Vous êtes qui ?}{}{1}{me0 }{21}{}
+{3}{Salut, Rael !}{}{1}{re99 }{201}{}
+// [LABEL] Rael
+{21}{Permettez moi de me présenter : je m'appelle RAEL et je vis avec ma communauté paisiblement dans plusieurs maisons de la ville. Voulez vous vous joindre à nous ? Ainsi vous vivrez heureux parmi nous !}{Permettez moi de me présenter : je m'appelle RAEL et je vis avec ma communauté paisiblement dans plusieurs maisons de la ville. Voulez vous vous joindre à nous ? Ainsi vous vivrez heureuse parmi nous !}{}{2}{}{}
+{22}{On verra plus tard... pourquoi tant de gens autour de vous ?}{}{1}{}{41}{}
+{23}{Oh ça m'intéresse ! comment puis-je vous rejoindre ?}{}{1}{}{141}{}
+{24}{Tiens ! un fou ! ça faisait longtemps que j'en avais pas vu un ! bon allez j'ai pas de temps à perdre...salut}{}{1}{}{}{re-11 }
+// [LABEL] Gens autour
+{41}{Oh, eux ?! ce sont les autres membres de ma communauté qui ont eu l'idée merveilleuse de me rejoindre. Nous vivons heureux ensemble !}{Oh, eux ?! ce sont les autres membres de ma communauté qui ont eu l'idée merveilleuse de me rejoindre. Nous vivons heureux ensemble !}{}{3}{}{}
+{42}{ça serait pas une secte votre truc ?}{}{1}{}{61}{re-5 }
+{43}{Je vois. Que faites vous dans cette communauté ?}{}{1}{}{81}{}
+{44}{Au revoir, j'ai à faire}{}{1}{}{}{}
+// [LABEL] Secte
+{61}{UNE SECTE ?!!! comment osez-vous dire ça ? nous sommes heureux et oui, nous revendiquons le fait d'être une communauté peu ordinaire. Et alors, pourquoi ne vous joignez vous pas à nous ?}{UNE SECTE ?!!! comment osez-vous dire ça ? nous sommes heureux et oui, nous revendiquons le fait d'être une communauté peu ordinaire. Et alors, pourquoi ne vous joignez vous pas à nous ?}{}{4}{}{}
+{62}{Paske vous êtes tous des timbrés et que j'ai pas envie de finir comme vous..!}{}{1}{}{}{}
+{63}{Mais paske....donnez moi une bonne raison de venir !}{}{1}{}{81}{}
+// [LABEL] Communauté
+{81}{Dans notre communauté, nous sommes libres mais nous croyons aux extra terrestres ! car ils existent bien évidemment ! Sur quel sujet voulez vous savoir plus ?}{Dans notre communauté, nous sommes libres mais nous croyons aux extra terrestres ! car ils existent bien évidemment ! Sur quel sujet voulez vous savoir plus ?}{}{5}{}{}
+{82}{Extra terrestres}{}{1}{}{101}{}
+{83}{Vos libertés}{}{1}{}{121}{}
+{84}{Sur rien merci au revoir}{}{1}{}{}{}
+// [LABEL] Aliens
+{101}{Les extra terrestres sont là et ils nous observent ! Ce n'est pas dieu qui nous a créés ! c'est EUX et EUX SEULS ! nous devons donc nous préparer pour les recevoir dignement le jour où ils viendront !}{Les extra terrestres sont là et ils nous observent ! Ce n'est pas dieu qui nous a créés ! c'est EUX et EUX SEULS ! nous devons donc nous préparer pour les recevoir dignement le jour où ils viendront !}{}{6}{}{}
+{102}{Oui, enfin que des conneries, quoi...}{}{1}{}{}{}
+{103}{Ah oui, je pense ça aussi ! comment vous rejoint-on ?}{}{1}{}{141}{}
+// [LABEL] Libertés
+{121}{Nos libertés ? facile : nous nous considérons tous comme amis et frères et nous avons devoir de solidarité envers les autres. Nous sommes libres de nous prêter du fric sans contrainte, de coucher tous les uns avec les autres si on veut, de faire des manifs pour recruter des gens.... et beaucoup d'autres choses....}{Nos libertés ? facile : nous nous considérons tous comme amis et frères et nous avons devoir de solidarité envers les autres. Nous sommes libres de nous prêter du fric sans contrainte, de coucher tous les uns avec les autres si on veut, de faire des manifs pour recruter des gens.... et beaucoup d'autres choses....}{}{7}{}{}
+{122}{Alors, là c'est sûr je vous rejoint ! que dois-je faire pour vous rejoindre ?}{}{1}{}{141}{}
+{123}{Mais vous êtes tous tarés là dedans ! je refuse d'en entendre plus, aurevoir !}{}{1}{}{}{}
+// [LABEL] Rejoindre
+{141}{Ahh, enfin de bonnes paroles. Si vous signez ce papier [il vous tend une page pleine d'écriture] vous serez des nôtres. Attention, si vous signez et que vous nous trahissez vous en subirez les conséquences !}{Ahh, enfin de bonnes paroles. Si vous signez ce papier [il vous tend une page pleine d'écriture] vous serez des nôtres. Attention, si vous signez et que vous nous trahissez vous en subirez les conséquences !}{}{8}{}{}
+{142}{NON ! j'ai changé d'avis, j'ai réfléchi et ça m'a ouvert les yeux ! vous pouvez le bouffer votre papier}{}{1}{}{}{}
+{143}{Oui, je signe [vous signez]}{}{1}{}{161}{re110,rp1000}
+{144}{Je vous donnerai mon avis après avoir réfléchi, à + tard}{}{1}{}{}{}
+// [LABEL] Membre
+{161}{Ah...[il affiche un grand sourire] Je suis heureux d'accueillir un beau jeune homme comme vous dans ma communauté ! bienvenue !}{Ah...[il affiche un grand sourire] Je suis heureux d'accueillir une jolie jeune femme  comme vous dans ma communauté ! bienvenue !}{}{9}{}{al-5 }
+{162}{C'est un plaisir, mr Rael. Et maintenant que faisons nous ?}{}{1}{}{181}{}
+// [LABEL] Que faisons nous
+{181}{Eh bien je vous laisse vous présenter avec les autres... à plus tard}{Eh bien je vous laisse vous présenter avec les autres... à plus tard}{}{10}{}{}
+{182}{Ok, A+}{}{1}{}{}{}
+// [LABEL] Soeur\frère
+{201}{Oh, salutations, frère @pcname@ puis-je t'être utile ?}{Oh, salutations, soeur @pcname@ puis-je t'être utile ?}{}{11}{}{}
+{202}{J'aimerais savoir quelque chose }{}{1}{}{221}{}
+{203}{Euh en fait non, au revoir !}{}{1}{}{}{}
+// [LABEL] Savoir
+{221}{Oui, je t'écoute, vas-y...}{Oui, je t'écoute, vas-y...}{}{12}{}{}
+{222}{Quand aura lieu la prochaine manif ?}{}{1}{}{241}{}
+{223}{Quand aura lieu la prochaine orgie ?}{}{1}{}{261}{}
+{224}{Quand les extra terrestres viendront ils ?}{}{1}{}{281}{}
+// [LABEL] Manif
+{241}{Ah je vois que du adoptes vite nos coutumes, c'est bien ! La manif n'aura lieu que dans 6 mois malheureusement...}{Ah je vois que du adoptes vite nos coutumes, c'est bien ! La manif n'aura lieu que dans 6 mois malheureusement...}{}{13}{}{}
+{242}{Merci de l'info, A+}{}{1}{}{}{}
+// [LABEL] orgie
+{261}{Héhééé...je vois que tu es pressé, mais tu devras attendre Samedi soir !}{Héhééé...je vois que tu es pressée,petite coquine, mais tu devras attendre Samedi soir !}{}{14}{}{}
+{262}{Ok merci de l'info !}{}{1}{}{}{}
+// [LABEL] Aliens2
+{281}{EUh...je sais pas mais je te dirai dès que je saurai !}{EUh...je sais pas mais je te dirai dès que je saurai !}{}{15}{}{}
+{282}{Ok, A+}{}{1}{}{}{}

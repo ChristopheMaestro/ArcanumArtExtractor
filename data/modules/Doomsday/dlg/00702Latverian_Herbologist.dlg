@@ -1,0 +1,54 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{What do you sell, ma'am?}{}{5}{}{30}{}
+{3}{B:}{}{1}{}{0}{}
+{4}{I seek training.  Can you help me?}{}{5}{}{10}{}
+{5}{I would like healing.}{}{5}{}{110}{}
+{6}{[sniff sniff]  mmm!  me sniff geenka root!}{}{-4}{}{120}{}
+{9}{E:}{}{1}{}{0}{}
+
+{10}{Yes, sir.  What level of training do you seek?}{Yes, ma'am.  What level of training do you seek?}{}{}{}{}
+{11}{T:10}{}{1}{}{40}{}
+{12}{Train me to be a Heal Expert.}{}{1}{tr10 -1}{1}{et10 50}
+{13}{Train me to be a Heal Master.}{}{1}{sk10 18, tr10 2, tr10 -2}{70}{}
+{14}{Train me to be a Heal Master.}{}{1}{tr10 -1}{90}{}
+{19}{F:}{}{1}{}{1}{}
+
+{30}{I am the Latverian Herbologist and Doctor.  I can provide you with healing, and supplies for Herbology or Therapeutics.}{I am the Latverian Herbologist and Doctor.  I can provide you with healing, and supplies for Herbology or Therapeutics.}{}{}{}{}
+{31}{B:}{}{1}{}{0}{}
+{32}{I seek training.  Can you help me?}{}{5}{}{10}{}
+{39}{E:}{}{1}{}{0}{}
+
+{40}{Is there anything else I can help you with?}{Is there anything else I can help you with?}{}{}{}{}
+{41}{B:}{}{1}{}{0}{}
+{42}{I seek training.  Can you help me?}{}{5}{}{10}{}
+{43}{I would like healing.}{}{5}{}{110}{}
+{49}{E:}{}{1}{}{0}{}
+
+{50}{The fee for Heal Expert training is 200 coin.}{The fee for Heal Expert training is 200 coin.}{}{}{}{}
+{51}{I've got the money right here. [give her 200 coin]}{}{1}{$$200}{60}{$$-200, tr10 2}
+{59}{F:}{}{1}{}{0}{}
+
+{60}{[She teaches you the fine art of healing] You are a very quick study.  Congratulations, Heal Expert.}{[She teaches you the fine art of healing] You learned more than I expected.  Congratulations, Heal Expert.}{}{}{}{}
+{69}{A:}{}{1}{}{0}{}
+
+{70}{Training to be a Heal Master requires taking the Hippocratic Oath - vowing to use your new abilities to help, not hurt.  Will you take this oath?  If you do the price is 300 coin.}{Training to be a Heal Expert requires taking the Hippocratic Oath - vowing to use your new abilities to help, not hurt.  Will you take this oath?  If you do the price is 300 coin.}{}{}{}{}
+{71}{Yes, I will take the oath.}{}{1}{}{100}{}
+{79}{F:}{}{1}{}{1}{}
+
+{80}{[She nods at you, and then a smile comes over her face.]  I believe this is the highest honor any person can achieve, Heal Master.}{[She nods at you, and then a smile comes over her face.]  I believe this is the highest honor any person can achieve, Heal Master}{}{}{}{}
+{89}{A:}{}{1}{}{0}{} 
+
+{90}{How unfortunate, it appears that you lack the necessary requirements to become a Master. Perhaps if you improve and come back later?}{How unfortunate, it appears that you lack the necessary requirements to become a Master. Perhaps if you improve and come back later?}{}{}{}{}
+{99}{E:}{}{1}{}{0}{}
+
+{100}{Please repeat after me:  I swear by the Technology Gods, to keep according to my ability and my judgment, the following Oath:  I will prescribe regimens for the good of my patients and never do harm to anyone.  To please no one will I prescribe a deadly drug nor give advice which may cause his or her death.  If I keep this oath faithfully, may I enjoy my life and practice my art, respected by all men and in all times; but if I swerve from or violate it, may the reverse be my lot.}{Please repeat after me:  I swear by the Technology Gods, to keep according to my ability and my judgment, the following Oath:  I will prescribe regimens for the good of my patients and never do harm to anyone.  To please no one will I prescribe a deadly drug nor give advice which may cause his or her death.  If I keep this oath faithfully, may I enjoy my life and practice my art, respected by all men and in all times; but if I swerve from or violate it, may the reverse be my lot.}{}{}{}{}
+{101}{[Repeat after her truthfully]}{}{1}{$$300}{80}{$$-300, tr10 3}
+{102}{[Repeat after her without meaning it]}{}{1}{$$300}{80}{$$-300, tr10 3}
+{109}{F:}{}{1}{}{1}{}
+
+{110}{Very well.  The charge is 50 coin.}{Very well.  The charge is 50 coin.}{}{}{}{}
+{111}{[give her 50 coin]}{}{5}{$$50}{-2}{$$-50}
+{119}{F:}{}{1}{}{40}{}
+
+{120}{Right.  Ginka Root isn't very good raw.}{Right.  Ginka Root isn't very good raw.}{}{}{}{}
+{121}{Geenka go krunch!}{}{-4}{}{0}{}

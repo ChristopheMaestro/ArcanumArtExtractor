@@ -1,0 +1,78 @@
+// This message file contains text to be used in game-supplied newspapers
+// Only the message line numbers 1000 or higher are valid
+// Each new newspaper begins on a multiple of 10, and can use up to 10
+// lines, which must be consecutive. The first line is always the main 
+// headline, while the 9 remaining lines go into 4 columns of the paper.
+// Format: each line begins with a font number and justification letter,
+// followed by the text for that line.
+
+// Some font numbers to use:
+//	490 Extra Large Headline
+//	486 Large Headline
+//	492 Normal Headline
+//	483 Story Body
+//	488 Clip Art 0-6
+
+// Justification letters (you must use one)
+//	l = left
+//	c = center
+
+// NOTE: The first blocks, 0 thru 999, are reserved for UI use
+
+// News Paper Type 1
+{0}{СУПЕР!}
+{1}{[ NEWS ]}
+{2}{Цена 2 Монеты}
+{3}{Лучший источник Новостей в Аркануме}
+
+// News Paper Type 2
+{4}{[ TIMES ]}
+{5}{Все Новости, которые стоит напечатать}
+
+// filler articles
+{10}{492c _ WEATHER _}
+{11}{483l Метеорологическое бюро Таранта предсказывает солнечную погоду на следующие два-три дня, с увеличивающейся вероятностью выпадения осадков в течении двух недель.}
+{12}{492c _ TAX INCREASE _}
+{13}{483l Парламент вновь рассматривает увеличение налогов на прибыль в Таранте еще на 2 монеты с каждых 100 заработанных. Спикер отверг все выступления против увеличения, делая акцент на важности проводимых общественных работ.}
+{14}{492c _ PUBLIC SERVICE ANNOUNCEMENT _}
+{15}{483l В эту пятницу состоится открытое заседание Городского Совета. Заседание начнется ровно в 19,00.}
+{16}{492c _ EDITORIAL REMINDER _}
+{17}{483l Тарантианец хочет воспользоваться этой возможностью, чтобы напомнить Уважаемому Читателю, что письма Редактору не обязательно отражают точку зрения Газеты или ее Владельца, Сэра Вильяма Уиллогсби.}
+{18}{492c _ PROHIBITION _}
+{19}{483l Список запретов вновь пополнился, после того как Парламент принял закон о запрете продажи спиртных напитков в черте города. Сторонники закона говорят о преступности и прогулах как основных причинах его принятия, а его противники твердят, что те же показатели сохраняются уже в течении 30 лет.}
+{20}{492c _ UNIVERSITY COLLOQUIUM SERIES _}
+{21}{483l Инженерная школа при Тарантском университете проводит цикл лекций высокого стиля. Заинтересованные лица могут получить более подробную информацию в справочной университета.}
+{22}{492c _ CHARITY BALL _}
+{23}{483l Женское Сообщество Таранта вновь устраивает Благотворительный бал в субботу вечером. Вся полученная прибыль пойдет на нужды сирот и ветеранов войн. Торжество начнется в 20,00. Обязательны строгие вечерние платья.}
+{24}{492c _ TIDAL FIGURES _}
+{25}{483l Высокий прилив будет в 6:15 и 19:30 сегодня, а небольшой в 13:05 и 0:25. Полное расписание приливов на странице 8.}
+
+//Game Related Newspapers
+//Use lines 1000-4990
+//Generic Newspapers Start at line 5000
+
+{1000}{490c SAMPLE HEADLINE!}
+{1001}{492c _ Place subheading here _}
+{1002}{483l А вот и весь текст истории. Очень захватывающе!}
+
+{1020}{490c ОГРАБЛЕНИЕ ГАРРИНСБУРГА!\nКАРТИНА ПОХИЩЕНА!}
+{1021}{492c _ THIEVES STILL AT LARGE _}
+{1022}{483l Поздним вечером во вторник, в поместье мистера Джеймса и миссис Евелин Гарринсбург, на Девонширской Дороге 37, проникли воры, сообщили источники близкие к семье.  Среди прочего была похищена известная 'Керган и Персефона', руки Пизарро.  Купленная в прошлом году на Ренаудском аукционе за 50,000 золотых монет, картина являлась жемчужиной коллекции Гарринсбурна.\nМистер Гарринсбург, многолетний член Джентльменского Клуба Веллингтона, сказал следующее--"Вы можете быть уверены, что виновники этого гнусного преступления предстанут перед правосудием и ответят за содеянное."  Миссис Гарринсбург воздержалась от комментариев.\nГарринсбурги предложили 300 золотых награды.  Это преступление последнее в серии преступлений связанных с произведениями искусства, такими как статуя "Возлежащий Лорек" и ваза Блендома.}
+
+	
+
+	
+
+
+//Generic Newspapers
+
+{5000}{490c ПРОТЕСТ ПРОТИВ ТЕХНОЛОГИИ\nЗАБРАЛ 3 ЖИЗНИ}
+{5001}{492c _ EXCESSIVE USE OF FORCE? _}
+{5002}{483l 	Вчера, Гвардия Таранта была вызвана для контроля за толпой, протестующей на ступенях Мэрии.  Организовавшая демонстрацию группа Друзей Магии, начала собираться с утра, выкрикивая ругательства и бросаясь технологическими предметами.\nОхрана, привлеченная жалобами на демонстрантов, прибыла через час после начала демонстрации, вооруженная ружьями и дубинками.  Через несколько минут ситуация превратилась в хаос.  Когда дым рассеялся трое протестовавших остались лежать мертвыми.\nПротест был связан с растущим количеством фабрик в Таранте и негативными последствиями для воздуха с этим связанными.  "Мы не намерены с этим мириться," заявил Джозеа Хуммел, представитель Друзей.  "Тарант это и наш город."\nКапитан Гвардии Таранта сказал следующее.  "Гвардия защищает город, каким бы ни был воздух.  Все остальные горячие головы в Таранте могут ожидать того же обращения."}
+
+
+{5010}{490c СЛУХИ О ЛЕТАЮЩЕЙ МАШИНЕ ЗАТИХАЮТ}
+{5011}{492c _ LEARNED MAGE SPEAKS OUT _}
+{5012}{483l	As of late there have been many rumors concerning the sightings and indeed the very existence of what have come to be called "heavier than air craft". Many of these accounts describe craft that are "bird shaped", and create quite a clamor. Because we here at the Tarantian have received so many letters concerning these "sightings" or phenomena, we decided to consult an expert in the field, Master Mage Krolus Brajercliff. 
+	He is a master in both the colleges' of Air and Conveyance. When asked about these mysterious craft, Master Brajercliff informed us that such a contrivance was simply not possible, and he supplied us with the following. "Even a commoner knows that birds' bones are hollow, and filled with air. Even so, does it not have to exert itself greatly? Even the best of those retched new "engines" wouldn't have one tenth the power needed. No I'm afraid that the only way the common man can achieve flight is through the use of one of those most dangerous and inconvenient lighter-than-air ships, or through the rigorous study of Magick."
+	We at the Tarantian thank Master Brajercliff for sharing his thoughts and insights concerning this.}

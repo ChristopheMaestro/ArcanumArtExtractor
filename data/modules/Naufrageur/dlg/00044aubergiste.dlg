@@ -1,0 +1,46 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{J'aimerais vous acheter une bouteille de vin, tavernier.}{}{5}{}{30}{}
+{4}{Sauriez-vous où je pourrais trouver du travail?}{}{5}{lf1 0}{60}{lf1 1}
+{5}{R:$0, 1005-1007}{}{1}{}{90}{}
+{6}{@pcname@ acheter bouteille.}{}{-4}{}{30}{}
+{7}{Moi chercher travail.}{}{-4}{lf1 0}{60}{lf1 1}
+{8}{Avez-vous remarqué des nouveaux venus en ville?}{}{5}{gf1026 1, lf9 0}{120}{lf9 1}
+{9}{Toi avoir vu nouveaux gens en ville?}{}{-4}{gf1026 1, lf9 0}{120}{lf9 1}
+{10}{E:}{}{1}{}{0}{}
+
+{30}{Avec grand plaisir, monsieur. La bouteille coûte 15 PO. Cela vous sied-il?}{Avec grand plaisir, madame. La bouteille coûte 15 PO. Cela vous sied-il?}{}{}{}{}
+{31}{Je reviendrai quand j'aurai le compte. Merci.}{}{5}{$$-14}{60}{}
+{32}{@pcname@ revenir avec argent. Toi merci.}{}{-4}{$$-14}{60}{}
+{33}{[Vous lui donnez les 15 PO]}{}{1}{$$15}{-2}{$$ -15}
+{34}{Sauriez-vous où je pourrais trouver du travail?}{}{5}{lf1 0}{60}{lf1 1}
+{35}{R:$0, 1005-1007}{}{1}{}{90}{}
+{36}{Moi chercher travail.}{}{-4}{lf1 0}{60}{lf1 1}
+{37}{Avez-vous remarqué des nouveaux venus en ville?}{}{5}{gf1026 1, lf9 0}{120}{lf9 1}
+{38}{Toi avoir vu nouveaux gens en ville?}{}{-4}{gf1026 1, lf9 0}{120}{lf9 1}
+{39}{E:}{}{1}{}{0}{}
+
+{60}{Le capitaine de la garde a des problèmes avec une bande de hors-la-loi. Peut-être aurait-il besoin d'un peu de renfort?... }{Le capitaine de la garde a des problèmes avec une bande de hors-la-loi. Peut-être aurait-il besoin d'un peu de renfort?... }{}{}{}{ru1009}
+{61}{J'aimerais vous acheter une bouteille de vin, tavernier.}{}{5}{}{30}{}
+{62}{@pcname@ acheter bouteille.}{}{-4}{}{30}{}
+{63}{R:$0, 1005-1007}{}{1}{}{90}{}
+{64}{Avez-vous remarqué des nouveaux venus en ville?}{}{5}{gf1026 1, lf9 0}{120}{lf9 1}
+{65}{Toi avoir vu nouveaux gens en ville?}{}{-4}{gf1026 1, lf9 0}{120}{lf9 1}
+{66}{E:}{}{1}{}{0}{}
+
+{90}{Autre chose?}{Autre chose?}{}{}{}{}
+{91}{J'aimerais vous acheter une bouteille de vin, tavernier.}{}{5}{}{30}{}
+{92}{R:$0, 1005-1007}{}{1}{}{90}{}
+{93}{@pcname@ acheter bouteille.}{}{-4}{}{30}{}
+{94}{Sauriez-vous où je pourrais trouver du travail?}{}{5}{lf1 0}{60}{lf1 1}
+{95}{Moi chercher travail.}{}{-4}{lf1 0}{60}{lf1 1}
+{96}{Avez-vous remarqué des nouveaux venus en ville?}{}{5}{gf1026 1, lf9 0}{120}{lf9 1}
+{97}{Toi avoir vu nouveaux gens en ville?}{}{-4}{gf1026 1, lf9 0}{120}{lf9 1}
+{98}{E:}{}{1}{}{0}{}
+
+{120}{A part vous, personne, monsieur.}{A part vous, personne, madame.}{}{}{}{}
+{121}{J'aimerais vous acheter une bouteille de vin, tavernier.}{}{5}{}{30}{}
+{122}{R:$0, 1005-1007}{}{1}{}{90}{}
+{123}{@pcname@ acheter bouteille.}{}{-4}{}{30}{}
+{124}{Sauriez-vous où je pourrais trouver du travail?}{}{5}{lf1 0}{60}{lf1 1}
+{125}{Moi chercher travail.}{}{-4}{lf1 0}{60}{lf1 1}
+{126}{E:}{}{1}{}{0}{}
