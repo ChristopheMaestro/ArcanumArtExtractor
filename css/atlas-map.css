@@ -1,0 +1,52 @@
+/* Atlas map frame (index.html?view=map): the world map and its filter bar. Was an inline <style> of index.html. */
+:root { --bg: #0e0d0c; --surface: #211c14; --surface-2: #362e22; --border: #4a3e2e; --ink: #d4c5a1; --ink-muted: #b3a685; --ink-faint: #8a7d62; --atlas: #e8c66a; --magick: #6fa8ff; }
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; background: var(--bg); color: var(--ink); font: 13px/1.45 system-ui, sans-serif; overflow: hidden; user-select: none; -webkit-user-select: none; }
+html.over, body.over { background: transparent; }
+button { font: inherit; color: inherit; cursor: pointer; }
+.app { display: flex; height: 100%; }
+.side { width: 250px; flex: none; background: var(--surface); border-right: 1px solid var(--border); display: flex; flex-direction: column; min-height: 0; }
+.side h1 { margin: 0; padding: 12px 14px 4px; font: 600 16px Cinzel, Georgia, serif; color: #f1e4c3; }
+.side .sub { padding: 0 14px 8px; font-size: 11.5px; color: var(--ink-faint); }
+.places { flex: 1; overflow-y: auto; padding: 0 6px 12px; }
+.grp { margin: 10px 8px 3px; font: 600 9.5px ui-monospace, monospace; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); }
+.place { display: flex; width: 100%; border: 0; background: none; padding: 4px 8px; border-radius: 3px; text-align: left; font: 12.5px Cinzel, Georgia, serif; color: var(--ink-muted); }
+.place:hover { background: #2a241a; color: var(--ink); }
+.place.on { background: var(--surface-2); color: #f1e4c3; box-shadow: inset 2px 0 0 var(--atlas); }
+.place span { margin-left: auto; font: 10px ui-monospace, monospace; color: var(--ink-faint); }
+.stage { flex: 1; position: relative; min-width: 0; }
+canvas { position: absolute; inset: 0; width: 100%; height: 100%; cursor: grab; touch-action: none; }
+canvas.drag { cursor: grabbing; }
+.pins { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.placename { position: absolute; transform: translate(-50%, -50%); pointer-events: auto; cursor: pointer; font: 700 17px 'Times New Roman', Times, 'Liberation Serif', serif; color: #fff; text-shadow: 0 0 4px #000, 0 0 2px #000, 0 0 8px #000; white-space: nowrap; }
+/* the game writes the names of its world map in NewTimes16Font (art 840, wmap_ui.c): a Times serif. Settlements bold, other places smaller and plain, secret areas the same size in italic */
+.placename.small { font-size: 13px; font-weight: 400; }
+.placename.secret { font-style: italic; }
+.legend { position: absolute; left: 10px; bottom: 10px; display: none; padding: 8px 10px; background: rgba(21,17,12,.92); border: 1px solid var(--border); border-radius: 5px; font-size: 11.5px; }
+body.check .legend { display: block; }
+.legend div { display: flex; align-items: center; gap: 7px; }
+.legend i { width: 10px; height: 10px; border-radius: 2px; background: var(--c); }
+.legend b { margin-left: auto; padding-left: 12px; font-weight: 500; color: var(--ink-faint); }
+.nav { position: absolute; top: 10px; left: 10px; }
+.nav button { border: 1px solid var(--border); background: rgba(33,28,20,.94); border-radius: 4px; padding: 5px 10px; font: 11.5px Cinzel, Georgia, serif; color: var(--ink-muted); }
+.filters { position: absolute; left: 50%; bottom: 12px; transform: translateX(-50%); display: flex; gap: 6px; padding: 5px; background: rgba(21,17,12,.88); border: 1px solid var(--border); border-radius: 9px; }
+.filters button { width: 36px; height: 36px; padding: 0; border: 1px solid var(--border); background: rgba(33,28,20,.94); border-radius: 6px; font-size: 18px; line-height: 1; opacity: .6; transition: opacity .6s, box-shadow .9s, border-color .6s, background .6s; }
+.filters button:hover { opacity: 1; }
+.filters button.on { opacity: 1; border-color: var(--c); background: rgba(60,48,34,.96); box-shadow: 0 0 9px 1px var(--c); }
+.filters .ficon { display: block; margin: auto; background-image: url("../atlas/graphics/portraits/portraits-base.png"); background-repeat: no-repeat; }
+body.embed #checkBtn { display: none; }
+.tip { position: absolute; display: none; transform: translate(-50%, -100%); padding: 2px 7px; background: rgba(21,17,12,.94); border: 1px solid var(--border); border-radius: 3px; color: #f1e4c3; font: 11.5px Cinzel, Georgia, serif; white-space: normal; width: max-content; max-width: 320px; text-align: center; pointer-events: none; z-index: 5; }
+.panel { width: 320px; flex: none; background: var(--surface); border-left: 1px solid var(--border); overflow-y: auto; padding: 14px 16px; }
+.panel h2 { margin: 0 0 2px; font: 600 18px Cinzel, Georgia, serif; color: #f1e4c3; }
+.panel .meta { font-size: 12px; color: var(--ink-muted); }
+.panel h3 { margin: 14px 0 6px; font: 600 12px Cinzel, Georgia, serif; color: var(--atlas); }
+.panel .desc { font-family: Georgia, serif; font-style: italic; color: var(--ink-muted); }
+.panel .empty { color: var(--ink-faint); }
+.chk { margin-top: 16px; padding: 9px 10px; border: 1px dashed #6b5a3f; border-radius: 4px; font: 11.5px ui-monospace, monospace; color: var(--ink-muted); display: none; }
+body.check .chk { display: block; }
+.inv span { display: inline-block; margin: 0 4px 4px 0; padding: 2px 7px; border: 1px solid var(--border); border-radius: 10px; font-size: 11.5px; }
+.inv span.magick { color: var(--magick); border-color: var(--magick); }
+.hud { position: absolute; right: 52px; bottom: 10px; padding: 4px 9px; background: rgba(33,28,20,.94); border: 1px solid var(--border); border-radius: 4px; font: 11px ui-monospace, monospace; color: var(--ink-muted); }
+body.embed .side, body.embed .panel, body.embed .legend { display: none; }
+.panel .items div { display: flex; justify-content: space-between; padding: 2px 0; border-bottom: 1px dotted #3a3122; }   /* the public Atlas: no review tools */
+#msg { position: absolute; inset: 0; display: none; place-items: center; padding: 30px; text-align: center; }

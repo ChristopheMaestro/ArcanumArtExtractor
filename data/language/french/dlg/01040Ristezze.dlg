@@ -1,0 +1,413 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Et à qui ai-je l'honneur, mon bon monsieur ?}{}{5}{me 0, re 41}{15}{}
+{3}{Salutations, Ristezze. Vous avez un moment ?}{}{5}{me 1, re 41}{30}{}
+{4}{Monsieur ! Pourquoi des mots si durs alors que nous venons à peine de nous rencontrer ?}{}{5}{me 0, re -40}{467}{}
+{5}{Ristezze ! Que se passe-t-il donc ?}{}{5}{me 1, re -40}{467}{}
+{6}{Moi avoir peu d'intelligence.}{}{-4}{me 0, re 41}{407}{}
+{7}{Hé, bonhomme rigolo !}{}{-4}{me 1, re 41}{417}{}
+{8}{Moi pas connaître vous ! Pourquoi vous dire choses méchantes à moi ?}{}{-4}{me 0, re -40}{467}{}
+{9}{Bonhomme rigolo ? Quoi vouloir dire mots ?}{}{-4}{me 1, re -40}{467}{}
+{10}{E:}{}{5}{}{0}{}
+{11}{Moi partir.}{}{-4}{}{0}{}
+{15}{Je suis Ristezze, importateur de produits de qualité et d'objets rares venus des quatre coins du monde. Nulle part ailleurs, il ne vous sera donné de voir un tel assortiment d'objets fabuleux en provenance de tout Arcanum ! Vous recherchez quelque chose de précis, n'est-ce pas ?}{Je suis Ristezze, importateur de produits de qualité et d'objets rares venus des quatre coins du monde. Nulle part ailleurs, il ne vous sera donné de voir un tel assortiment d'objets fabuleux en provenance de tout Arcanum ! Vous recherchez quelque chose de précis, n'est-ce pas ?}{}{}{}{}
+{16}{Euh... Non. Je passe ici par hasard...}{}{5}{lf2 0}{20}{lf2 1}
+{17}{Passionnant. Pourriez-vous répondre à quelques questions ?}{}{5}{}{30}{re +5}
+{18}{E:}{}{5}{}{0}{}
+{20}{Personne ne vient " par hasard " chez Ristezze... Ristezze a toujours quelque chose pour tout un chacun, n'est-ce pas ? Jetez un oeil...}{Personne ne vient " par hasard " chez Ristezze... Ristezze a toujours quelque chose pour tout un chacun, n'est-ce pas ? Jetez un oeil...}{}{}{}{}
+{21}{Etes-vous vraiment obligé de parler à la troisième personne ?}{}{5}{}{25}{}
+{22}{Ecoutez, Ristezze, j'ai juste une question ou deux...}{}{5}{}{30}{}
+{23}{E:}{}{5}{}{0}{}
+{25}{Hein ? Ristezze est Ristezze, n'est-ce pas ? Ristezze ne peut être que Ristezze, à savoir lui-même. Ristezze...}{Eh ? Ristezze est Ristezze, n'est-ce pas ? Ristezze ne peut être que Ristezze, à savoir lui-même. Ristezze...}{}{}{}{}
+{26}{Assez parlé, mon bon monsieur. J'ai quelques questions...}{}{5}{}{30}{}
+{27}{E:}{}{5}{}{0}{}
+{30}{Qu'est-ce que Ristezze peut faire pour vous ?}{Qu'est-ce que Ristezze peut faire pour vous ?}{}{}{}{}
+{31}{En fait, j'ai quelques questions à vous poser...}{}{5}{}{42}{}
+{32}{Que pouvez-vous me dire au sujet de cet anneau ? [Vous le lui montrez.]}{}{5}{in 2804, ss -1}{102}{}
+{33}{Voyez-vous, j'avais un anneau en ma possession... [Vous décrivez l'anneau.]}{}{5}{ni 2804, ss -1}{102}{lf14 1}
+{34}{Je viens vous parler de votre offre pour acheter l'anneau...}{}{5}{lf7 1, lf8 0}{186}{}
+{35}{Parlons de Schuyler & Fils.}{}{5}{lf10 1, lf11 0, qb1037 2, gf2697 0}{202}{}
+{36}{Quels étaient ces objets que vous vouliez, déjà ?}{}{5}{lf13 1, lf18 0, qb1037 2, ni 5606, ni 5607, gf2697 0}{357}{}
+{37}{J'ai rapporté l'appareil photo dont nous avons parlé... Faisons affaire...}{}{5}{ni 5606, in 5607, qb1037 3, lf13 1, gf2697 0}{-8}{in 5607}
+{38}{J'ai trouvé quelque chose concernant Elisa Pionnier... Faisons affaire...}{}{5}{in 5606, ni 5607, qb1037 3, lf13 1, gf2697 0}{-16}{in 5606}
+{39}{J'ai ramené les deux objets que vous désiriez...}{}{5}{in5606, in5607, qb1037 3, lf13 1, gf2697 0}{374}{}
+{40}{B:}{}{5}{}{}{}
+{41}{E:}{}{5}{}{0}{}
+{42}{Ristezze fera de son mieux pour répondre...}{Ristezze fera de son mieux pour répondre...}{}{}{}{}
+{43}{D'où êtes-vous originaire ?}{}{5}{lf3 0}{48}{lf3 1}
+{44}{Que pouvez-vous me dire au sujet de Tristes Collines ?}{}{5}{}{51}{}
+{45}{Quelles sortes de marchandises vendez-vous et achetez-vous ?}{}{5}{}{54}{}
+{46}{J'aimerais vous entretenir au sujet de quelques affaires...}{}{5}{}{30}{}
+{47}{E:}{}{5}{}{0}{}
+{48}{Ristezze ! Ristezze est de partout et de nulle part à la fois ! Un nomade parcourant les contrées à la recherche de marchandises telles qu'on n'en a jamais vu...}{Ristezze ? Ristezze est de partout et de nulle part à la fois ! Un nomade parcourant les contrées à la recherche de marchandises telles qu'on n'en a jamais vu...}{}{}{}{}
+{49}{Grands dieux ! Oubliez ce que je vous ai demandé. Encore quelques questions...}{}{5}{}{42}{}
+{50}{E:}{}{5}{}{0}{}
+{51}{Tristes Collines ? Peuh ! C'est une petite ville, une ville trop petite pour le fabuleux Ristezze ! Si je n'avais pas quelques problèmes... hum, quelques problèmes financiers momentanés, je serais déjà parti. Si vous voulez en savoir plus sur cette minuscule localité des plus ennuyeuses, demandez au bourgmestre du coin.}{Tristes Collines ? Peuh ! C'est une petite ville, une ville trop petite pour le fabuleux Ristezze ! Si je n'avais pas quelques problèmes... hum, quelques problèmes financiers momentanés, je serais déjà parti. Si vous voulez en savoir plus sur cette minuscule localité des plus ennuyeuses, demandez au bourgmestre du coin.}{}{}{}{}
+{52}{Je vois. Encore une ou deux choses...}{}{5}{}{42}{}
+{53}{E:}{}{5}{}{0}{}
+{54}{Ristezze vend de nombreux articles, tous différents et tous très particuliers. Ristezze est un expert en objets magiques et en objets technologiques ! Ristezze peut vous dire...}{Ristezze vend de nombreux articles, tous différents et tous très particuliers. Ristezze est un expert en objets magiques et en objets technologiques ! Ristezze peut vous dire...}{}{}{}{}
+{55}{Attendez ! Qu'est-ce qui caractérise les objets magiques ?}{}{5}{}{60}{}
+{56}{Attendez un petit instant. Expliquez-moi ce qu'est la " technologie " ?}{}{5}{}{83}{}
+{57}{Quelle est la différence entre la magie et la technologie ?}{}{5}{}{78}{}
+{58}{Intéressant. Encore quelques questions...}{}{5}{}{42}{}
+{59}{E:}{}{5}{}{0}{}
+{60}{Magiques ? Vous savez bien... Un mage prétentieux jette un sort sur quelque chose et cela le rend magique. Il peut aussi avoir des effets bizarres sur les gens ou il colore les arbres en bleu ou vous fait pousser un nouveau bras... Enfin, c'est de la sorcellerie quoi !}{Magiques ? Vous savez bien... Un mage prétentieux jette un sort sur quelque chose et cela le rend magique. Il peut aussi avoir des effets bizarres sur les gens ou il colore les arbres en bleu ou vous fait pousser un nouveau bras... Enfin, c'est de la sorcellerie quoi !}{}{}{}{}
+{61}{Je vois. Et comment devient-on un " mage prétentieux " ?}{}{5}{}{66}{}
+{62}{Je n'en doute pas. Parlons un peu de la technologie...}{}{5}{}{83}{}
+{63}{Tout à fait. Encore quelques questions d'ordre général...}{}{5}{}{42}{}
+{64}{Quelle est la différence entre la magie et la technologie ?}{}{5}{}{78}{}
+{65}{E:}{}{5}{}{0}{}
+{66}{Un mage ? Pourquoi voudriez-vous faire une chose pareille ? Ristezze pense qu'il doit suffire de psalmodier des incantations toute la journée ou de tracer une rune dans la terre avec un bâton... et, surtout, de se tenir à l'écart de tout ce qui se rapporte à la technologie !}{Un mage ? Pourquoi voudriez-vous faire une chose pareille ? Ristezze pense qu'il doit suffire de psalmodier des incantations toute la journée ou de tracer une rune dans la terre avec un bâton... et, surtout, de se tenir à l'écart de tout ce qui se rapporte à la technologie !}{}{}{}{}
+{67}{Dois-je savoir autre chose pour devenir mage ?}{}{5}{}{72}{}
+{68}{C'est intrigant. Pourquoi faut-il se tenir à l'écart de la technologie ?}{}{5}{}{78}{}
+{69}{J'aimerais en savoir plus sur la technologie.}{}{5}{}{83}{}
+{70}{Encore quelques questions d'ordre général...}{}{5}{}{42}{}
+{71}{E:}{}{5}{}{0}{}
+{72}{Ristezze a connu de nombreux mages à une époque, tous plus prétentieux les uns que les autres. Toujours le nez dans les livres ou à se vanter auprès de Ristezze de leur incroyable intelligence. S'il est une chose importante pour un mage, c'est bien l'intelligence.}{Ristezze a connu de nombreux mages à une époque, tous plus prétentieux les uns que les autres. Toujours le nez dans les livres ou à se vanter auprès de Ristezze de leur incroyable intelligence. S'il est une chose importante pour un mage, c'est bien l'intelligence.}{}{}{}{}
+{73}{Merci. J'ai quelques questions au sujet de la technologie...}{}{5}{}{83}{}
+{74}{Vous avez dit qu'il fallait se tenir à l'écart de la technologie...}{}{5}{}{78}{}
+{75}{Encore quelques questions d'ordre général...}{}{5}{}{42}{}
+{76}{E:}{}{5}{}{0}{}
+{78}{La magie et la technologie sont les deux faces d'une même pièce, n'est-ce pas ? La magie modèle la nature et la technologie l'utilise. C'est pour cela qu'elles ne font pas bon ménage... L'une semble toujours détruire l'autre, n'est-ce pas ? Ristezze dispose de différents rayonnages pour les deux...}{La magie et la technologie sont les deux faces d'une même pièce, n'est-ce pas ? La magie modèle la nature et la technologie l'utilise. C'est pour cela qu'elles ne font pas bon ménage... L'une semble toujours détruire l'autre, n'est-ce pas ? Ristezze dispose de différents rayonnages pour les deux...}{}{}{}{}
+{79}{J'aimerais que vous me parliez des objets magiques.}{}{5}{}{60}{}
+{80}{J'ai quelques questions au sujet de la technologie.}{}{5}{}{83}{}
+{81}{Encore quelques questions d'ordre général...}{}{5}{}{42}{}
+{82}{E:}{}{5}{}{0}{}
+{83}{La technologie ? Ristezze en sait long sur la technologie ! Les engrenages, les pistons, les roues et les poulies ! D'anciens objets fabriqués par les nains ! Les sciences de l'homme ! Les machines de la nature et leurs forces ! De fantastiques bidules pour en mettre plein les mirettes...}{La technologie ? Ristezze en sait long sur la technologie ! Les engrenages, les pistons, les roues et les poulies ! D'anciens objets fabriqués par les nains ! Les sciences de l'homme ! Les machines de la nature et leurs forces ! De fantastiques bidules pour en mettre plein les mirettes...}{}{}{}{}
+{84}{D'accord, d'accord. Peut-on fabriquer ces choses ?}{}{5}{}{89}{}
+{85}{Je voudrais que vous m'expliquiez ce que vous entendez par " objets magiques "...}{}{5}{}{60}{}
+{86}{Quelle est la différence entre la magie et la technologie ?}{}{5}{}{78}{}
+{87}{Quelques questions moins spécifiques...}{}{5}{}{42}{}
+{88}{E:}{}{5}{}{0}{}
+{89}{Oui... Je ne suis pas un expert en sciences mais pour maîtriser l'une de ces disciplines, il faut beaucoup étudier ! Mais surtout gardez vos distances avec les mages et tout ce qui est magique !}{Oui... Je ne suis pas un expert en sciences mais pour maîtriser l'une de ces disciplines, il faut beaucoup étudier ! Mais surtout gardez vos distances avec les mages et tout ce qui est magique !}{}{}{}{}
+{90}{Pourquoi dois-je garder mes distances avec tout ce qui est magique ?}{}{5}{}{78}{}
+{91}{Ce qui est magique ? Qu'est-ce que vous appelez des objets magiques ?}{}{5}{}{60}{}
+{92}{Encore quelques questions d'ordre général...}{}{5}{}{42}{}
+{93}{E:}{}{5}{}{0}{}
+{102}{Intéressant. Hum... Un bijou de grande qualité. Qu'attendez-vous au juste de Ristezze ?}{Intéressant. Hum... Un bijou de grande qualité. Qu'attendez-vous au juste de Ristezze ?}{}{}{}{}
+{103}{De quelle matière est-il constitué ?}{}{5}{lf9 0, lf14 0}{108}{}
+{104}{Savez-vous à qui appartiennent les initiales G.B. ?}{}{5}{}{119}{}
+{105}{J'aimerais que vous me parliez de cette estampille Schuyler & Fils...}{}{5}{lf11 0}{202}{lf10 1}
+{106}{Combien vaut cette chose à votre avis ?}{}{5}{lf4 0, lf14 0}{164}{lf4 1}
+{107}{E:}{}{5}{}{0}{}
+{108}{Je n'en suis pas tout à fait sûr, mais Ristezze dirait qu'il est en argent. Et d'une qualité exceptionnelle également... Regardez comme il brille. Ristezze ajouterait qu'il n'a pas été fabriqué dans la région de Tristes Collines... Un produit d'une telle qualité ne peut venir de cet endroit...}{Je n'en suis pas tout à fait sûr, mais Ristezze dirait qu'il est en argent. Et d'une qualité exceptionnelle également... Regardez comme il brille. Ristezze ajouterait qu'il n'a pas été fabriqué dans la région de Tristes Collines... Un produit d'une telle qualité ne peut venir de cet endroit...}{}{}{}{}
+{109}{Où pourrait-on avoir extrait cet argent ?}{}{5}{}{114}{}
+{110}{Savez-vous à qui appartiennent les initiales G.B. ?}{}{5}{}{119}{}
+{111}{J'aimerais que vous me parliez de cette estampille Schuyler & Fils...}{}{5}{lf11 0}{202}{lf10 1}
+{112}{Combien vaut cette chose à votre avis ?}{}{5}{lf4 0, lf14 0}{164}{lf4 1}
+{113}{E:}{}{5}{}{0}{}
+{114}{Certainement pas de la mine d'Elisa Pionnier, ici, à Tristes Collines. Elisa Pionnier... Ha ! Maudites soient Elisa Pionnier et Tristes Collines ! Rien que d'y penser...}{Certainement pas de la mine d'Elisa Pionnier, ici, à Tristes Collines. Elisa Pionnier... Ha ! Maudites soient Elisa Pionnier et Tristes Collines ! Rien que d'y penser...}{}{}{}{}
+{115}{Du calme, Ristezze. Parlons un peu des initiales G.B...}{}{5}{}{119}{}
+{116}{J'aimerais que vous me parliez de cette estampille Schuyler & Fils...}{}{5}{lf11 0}{202}{}
+{117}{Combien vaut cette chose à votre avis ?}{}{5}{lf4 0, lf14 0}{164}{lf4 1}
+{118}{E:}{}{5}{}{0}{}
+{119}{G.B. ? Je ne connais personne ayant ces initiales. Qui plus est, il est impossible que quelqu'un ici, à Tristes Collines, possède un bijou d'une telle qualité. On le fondrait et on utiliserait le métal pour fabriquer des clous... Oh, je n'ose même pas y penser ! Combien Ristezze se morfond ici, mon ami...}{G.B. ? Je ne connais personne ayant ces initiales. Qui plus est, il est impossible que quelqu'un ici, à Tristes Collines, possède un bijou d'une telle qualité. On le fondrait et on utiliserait le métal pour fabriquer des clous... Oh, je n'ose même pas y penser ! Combien Ristezze se morfond ici, mon amie...}{}{}{}{}
+{120}{Quelqu'un d'autre en ville pourrait-il savoir à qui cela pourrait appartenir ?}{}{5}{lf6 0}{125}{lf6 1}
+{121}{Revenons à nos moutons. De quelle matière est-il constitué ?}{}{5}{lf9 0, lf14 0}{108}{}
+{122}{J'aimerais que vous me parliez de cette estampille Schuyler & Fils...}{}{5}{lf11 0}{202}{lf10 1}
+{123}{Combien pensez-vous qu'une chose pareille puisse valoir ?}{}{5}{lf4 0, lf14 0}{164}{lf4 1}
+{124}{E:}{}{5}{}{0}{}
+{125}{Attendez une minute, mon ami. Peut-être Ristezze peut-il vous poser quelques questions ? Où une personne comme vous a-t-elle bien pu trouver un tel objet ?}{Attendez une minute, mon amie. Peut-être Ristezze peut-il vous poser quelques questions ? Où une personne comme vous a-t-elle bien pu trouver un tel objet ?}{}{}{}{}
+{126}{Il m'a été donné par une victime de la catastrophe du dirigeable.}{}{5}{lf5 0}{130}{lf5 1}
+{127}{Qu'insinuez-vous, Ristezze ?}{}{5}{lf5 0}{142}{lf5 1}
+{128}{Cela ne vous regarde pas, mon ami.}{}{5}{lf5 0}{151}{lf5 1}
+{129}{E:}{}{5}{}{0}{}
+{130}{La catastrophe du dirigeable ? Quelle catastrophe ? Quelqu'un aurait-il l'amabilité de prévenir Ristezze quand il se produit une tragédie ? Vous allez bien ? Y a-t-il eu d'autres survivants ?}{La catastrophe du dirigeable ? Quelle catastrophe ? Quelqu'un aurait-il l'amabilité de prévenir Ristezze quand il se produit une tragédie ? Vous allez bien ? Y a-t-il eu d'autres survivants ?}{}{}{}{}
+{131}{Euh... Je ne sais pas exactement. }{}{5}{}{134}{}
+{132}{Non. Il semble qu'il n'y ait que moi qui ait eu cette chance.}{}{5}{}{134}{}
+{133}{E:}{}{5}{}{0}{}
+{134}{Je vois. Eh bien, Ristezze est toujours disposé à aider ceux qui sont dans le besoin. Acceptez cette petite obole. Ristezze est un homme d'affaires, mais il n'est pas sans coeur. Dites-moi... Y avait-il là-bas des objets qui semblaient... comment dire... abandonnés... ?}{Je vois. Eh bien, j'espère qu'il n'y a pas eu trop de dégâts. Ristezze est un homme d'affaires, mais il n'est pas sans coeur. Dites-moi... Y avait-il là-bas des objets qui semblaient... comment dire... abandonnés... ?}{}{}{}{$$50}
+{135}{Peut-être... Nous reparlerons de ça un peu plus tard...}{}{5}{}{159}{re +10}
+{136}{Il me semble que la plupart des objets qui se trouvent là-bas devraient être envoyés à leurs familles respectives...}{}{5}{}{138}{}
+{137}{E:}{}{5}{}{0}{}
+{138}{Bien sûr ! Bien sûr ! Je ne vous demande cela que par égards pour les malheureux qui y sont restés. Cela ne viendrait jamais à l'idée de Ristezze d'aller détrousser les morts. Maintenant, si quelqu'un d'autre amenait toutes ces choses à Ristezze...}{Bien sûr ! Bien sûr ! Je ne vous demande cela que par égards pour les malheureux qui y sont restés. Cela ne viendrait jamais à l'idée de Ristezze d'aller détrousser les morts. Maintenant, si quelqu'un d'autre amenait toutes ces choses à Ristezze...}{}{}{}{}
+{139}{Oui, oui. Les affaires sont les affaires.}{}{5}{}{159}{re +10}
+{140}{Ristezze ! Je préfère ne pas parler de ça...}{}{5}{}{154}{}
+{141}{E:}{}{5}{}{0}{}
+{142}{Rien ! Rien... C'est juste que Ristezze aime savoir d'où viennent les marchandises avant de les acheter...}{Rien ! Rien... C'est juste que Ristezze aime savoir d'où viennent les marchandises avant de les acheter...}{}{}{}{}
+{143}{Qui a dit que je vendais ?}{}{5}{lf4 1}{145}{}
+{144}{Qui a dit que je vendais ?}{}{5}{lf4 0}{148}{}
+{145}{Eh bien, vous avez demandé à Ristezze combien cela pouvait valoir...}{Eh bien, vous avez demandé à Ristezze combien cela pouvait valoir...}{}{}{}{}
+{146}{Eh bien, peut-être reparlerons-nous de cela plus tard...}{}{5}{}{159}{}
+{147}{E:}{}{5}{}{0}{}
+{148}{Qui vient chez Ristezze sans intention de vendre ? Ristezze propose les meilleurs prix et possède les plus incroyables...}{Qui vient chez Ristezze sans intention de vendre ? Ristezze propose les meilleurs prix et possède les plus incroyables... !}{}{}{}{}
+{149}{Assez. Peut-être en reparlerons-nous plus tard...}{}{5}{}{159}{}
+{150}{E:}{}{5}{}{0}{}
+{151}{Je comprends. Les affaires sont les affaires... Mais je suis moins disposé à acheter une marchandise si je ne sais pas d'où elle vient...}{Je comprends. Les affaires sont les affaires... Mais je suis moins disposé à acheter une marchandise si je ne sais pas d'où elle vient...}{}{}{}{}
+{152}{Qui a dit que je vendais ?}{}{5}{lf4 1}{145}{}
+{153}{Qui a dit que je vendais ?}{}{5}{lf4 0}{148}{}
+{154}{Non, bien sûr que non. En quoi d'autre puis-je vous être utile ?}{Non, bien sûr que non. En quoi d'autre puis-je vous être utile ?}{}{}{}{}
+{155}{De quelle matière est-il constitué ?}{}{5}{lf9 0, lf14 0}{108}{}
+{156}{J'aimerais que vous me parliez de cette estampille Schuyler & Fils...}{}{5}{lf11 0}{202}{lf10 1}
+{157}{Combien pensez-vous qu'une chose pareille puisse valoir ?}{}{5}{lf4 0, lf9 1, lf14 0}{164}{lf4 1}
+{158}{E:}{}{5}{}{0}{}
+{159}{Aaah ! Un homme comme les aime Ristezze ! Eh bien, en quoi d'autre Ristezze peut-il vous être utile ?}{Aaah ! Une femme comme je les aime ! Eh bien, en quoi d'autre Ristezze peut-il vous être utile ?}{}{}{}{}
+{160}{De quelle matière est-il constitué ?}{}{5}{lf9 0, lf14 0}{108}{}
+{161}{J'aimerais que vous me parliez de cette estampille Schuyler & Fils...}{}{5}{lf11 0}{202}{lf10 1}
+{162}{Combien pensez-vous qu'une chose pareille puisse valoir ?}{}{5}{lf4 0, lf14 0}{164}{lf4 1}
+{163}{E:}{}{5}{}{0}{}
+{164}{Hum... Quelque chose de ce genre... Je ne sais pas. C'est un peu risqué... Je ne peux pas vous en offrir plus de 150 pièces d'or. Et je vous fais un cadeau, mon ami ! Avec la chance que j'ai, il s'agit probablement d'un faux ou d'un objet volé... ! Mais je vous en propose 150 pièces d'or !}{Hum... Quelque chose de ce genre... Je ne sais pas. C'est un peu risqué... Je ne peux pas vous en offrir plus de 150 pièces d'or. Et je vous fais un cadeau, mon amie ! Avec la chance que j'ai, il s'agit probablement d'un faux ou d'un objet volé... ! Mais je vous en propose 150 pièces d'or !}{}{}{}{}
+{165}{Marché conclu !}{}{5}{}{189}{}
+{166}{Je pense que cela vaut un peu plus...}{}{5}{ha 3}{169}{}
+{167}{Oubliez ça. Encore quelques questions...}{}{5}{}{192}{}
+{169}{Je vois. Quel est votre prix ?}{Je vois. Quel est votre prix ?}{}{}{}{}
+{170}{Je pourrais envisager de m'en défaire pour 160 pièces d'or...}{}{5}{ha -3}{177}{}
+{172}{Je ne peux me résoudre à m'en séparer pour moins de 170 pièces d'or...}{}{5}{ha 4, ha -4}{180}{}
+{174}{Une telle rareté ? 180 pièces d'or.}{}{5}{ha 5}{183}{}
+{176}{Oubliez ça. Encore quelques questions...}{}{5}{}{192}{}
+{177}{Hum... C'est un anneau magnifique. Marché conclu !}{Hum. C'est un anneau magnifique. Marché conclu !}{}{}{}{in 2804, $$ 160}
+{178}{Merci bien. Encore une petite chose...}{}{5}{}{192}{}
+{179}{E:}{}{5}{}{0}{}
+{180}{Vous vous y entendez en affaires ! Ristezze a trouvé plus fort que lui ! Marché conclu !}{Vous vous y entendez en affaires ! Ristezze a trouvé plus fort que lui ! Marché conclu !}{}{}{}{in 2804, $$ 170}
+{181}{Merci bien. Encore une petite chose...}{}{5}{}{192}{}
+{182}{E:}{}{5}{}{0}{}
+{183}{Incroyable ! Ristezze reste sans voix... Je suis vaincu. Marché conclu !}{Incroyable ! Ristezze reste sans voix... Je suis vaincu. Marché conclu !}{}{}{}{in 2804, $$ 180}
+{184}{Merci bien. Encore une petite chose...}{}{5}{}{192}{}
+{185}{E:}{}{5}{}{0}{}
+{186}{Je ne discuterai pas le prix. Je vous en offre 150 pièces d'or.}{Je ne discuterai pas le prix. Je vous en offre 150 pièces d'or.}{}{}{}{lf7 1}
+{187}{C'est d'accord.}{}{5}{}{189}{lf8 1}
+{188}{Je vais y réfléchir. Encore quelques questions...}{}{5}{}{192}{}
+{189}{Alors, marché conclu pour 150 pièces d'or ! Voici votre argent.}{Alors, marché conclu pour 150 pièces d'or ! Voici votre argent.}{}{}{}{in 2804, $$ 150, lf9 1}
+{190}{Merci. J'ai quelques questions si vous voulez bien...}{}{5}{}{192}{}
+{191}{E:}{}{5}{}{0}{}
+{192}{Naturellement. Ristezze est ici pour vous servir...}{Naturellement. Ristezze est ici pour vous servir...}{}{}{}{}
+{193}{De quelle matière est-il constitué ?}{}{5}{lf9 0, lf14 0}{108}{}
+{194}{J'aimerais que vous me parliez de cette estampille Schuyler & Fils...}{}{5}{lf11 0}{202}{lf10 1}
+{195}{Savez-vous à qui appartiennent les initiales G.B. ?}{}{5}{}{119}{}
+{196}{E:}{}{5}{}{0}{}
+{202}{Hum ! Schuyler & Fils ? Une pièce essentielle du puzzle, n'est-ce pas ? Ristezze a été bon informateur sans rien vous demander en échange, vous ne trouvez pas ? Qu'avez-vous à offrir à Ristezze ?}{Hum ! Schuyler & Fils ? Une pièce essentielle du puzzle, n'est-ce pas ? Ristezze a été bon informateur sans rien vous demander en échange, vous ne trouvez pas ? Qu'avez-vous à offrir à Ristezze ?}{}{}{}{}
+{203}{Vous avez été d'une grande aide... et vous êtes tellement bien informé !}{}{5}{ps 4, lf17 0}{209}{re +5}
+{204}{Vous avez été d'une grande aide... et vous êtes tellement bien informé !}{}{5}{ps -3, lf17 0}{345}{}
+{205}{Que désirez-vous en échange ?}{}{5}{qb1037 1}{353}{}
+{206}{Aaah. Peut-être n'en savez-vous pas autant que je le pensais.}{}{5}{}{333}{re -5}
+{207}{E:}{}{5}{}{0}{}
+{209}{Ah, oui. La flatterie vous mènera loin avec Ristezze. Mais Ristezze ne se laisse pas faire aussi facilement, mon ami à la langue bien pendue. Maintenant, pour en revenir à ce que Ristezze pourrait bien vouloir en échange...}{Ah, oui. La flatterie vous mènera loin avec Ristezze. Mais Ristezze ne se laisse pas faire aussi facilement, mon amie à la langue bien pendue. Maintenant, pour en revenir à ce que Ristezze pourrait bien vouloir en échange...}{}{}{}{}
+{210}{Mettons les affaires de côté pendant quelque temps. Parlons un peu de vous...}{}{5}{}{215}{lc1 0}
+{211}{Que sont quelques services entre amis ? Au sujet de Schuyler & Fils...}{}{5}{}{285}{}
+{212}{Très bien... Que voulez-vous exactement ?}{}{5}{qb1037 1}{353}{}
+{213}{Peut-être vaudrait-il mieux que je m'adresse à un autre spécialiste...}{}{5}{}{333}{}
+{214}{E:}{}{5}{}{0}{}
+{215}{Oui. Mon sujet préféré. Que souhaiteriez-vous savoir au juste ? Il y a tant à dire...}{Oui. Mon sujet préféré. Que souhaiteriez-vous savoir au juste ? Il y a tant à dire...}{}{}{}{}
+{216}{Qui sont vos meilleurs clients ? Les elfes, les nains... ?}{}{5}{}{291}{}
+{217}{Quelles sortes de merveilles avez-vous vues ? Et où ?}{}{5}{}{221}{                  }
+{218}{Comment se fait-il qu'un individu aussi important que vous travaille dans un tel endroit ?}{}{5}{}{333}{}
+{219}{E:}{}{5}{}{0}{}
+{221}{Oh ! Si vous saviez les choses que Ristezze a vues, mon ami ! Les plus profondes anciennes galeries de nains, où les diamants sont suspendus comme de grands chandeliers et où l'or scintille dans des filons plus larges que des rivières...}{Oh ! Si vous saviez les choses que Ristezze a vues, mon amie ! Les plus profondes anciennes galeries de nains, où les diamants sont suspendus comme de grands chandeliers et où l'or scintille dans des filons plus larges que des rivières...}{}{}{}{}
+{222}{Bizarre... Généralement, les nains ne tolèrent pas les humains chez eux...}{}{5}{}{297}{}
+{223}{Si vous étiez marchand de fariboles, vous seriez riche !}{}{5}{}{333}{}
+{224}{Absolument fascinant... Vos descriptions sont captivantes...}{}{5}{}{227}{}
+{225}{E:}{}{5}{}{0}{}
+{227}{Vous le pensez vraiment ? Laissez-moi vous parler des elfes et de leurs maisons sculptées dans le bois des anciennes forêts, où les ombres sont aussi épaisses que les feuilles et où l'air embaume un doux parfum de terre. Des voix harmonieuses comme la lumière du soleil, des silhouettes élégantes vêtues de sagesse et de grâce...}{Vous le pensez vraiment ? Laissez-moi vous parler des elfes et de leurs maisons sculptées dans le bois des anciennes forêts, où les ombres sont aussi épaisses que les feuilles et où l'air embaume un doux parfum de terre. Des voix harmonieuses comme la lumière du soleil, des silhouettes élégantes vêtues de sagesse et de grâce...}{}{}{}{}
+{228}{Je crois ne jamais avoir entendu un tel ramassis d'inepties.}{}{5}{}{333}{}
+{229}{Je vous en prie, attendez, c'est trop... Je défaille...}{}{5}{}{233}{}
+{230}{Tout le monde sait qu'aucun homme n'a jamais vu les cités elfes...}{}{5}{}{303}{}
+{231}{E:}{}{5}{}{0}{}
+{233}{Et les cités, mon ami ! Les cités humaines ! La vieille Caladon, où se dresse le temple Panarii tout de marbre vêtu, les anciens docks de pierre qui ont résisté à la furie des océans pendant des milliers d'années...}{Et les cités, mon amie ! Les cités humaines ! La vieille Caladon, où se dresse le temple Panarii tout de marbre vêtu, les anciens docks de pierre qui ont résisté à la furie des océans pendant des milliers d'années...}{}{}{}{}
+{234}{Et vous, Ristezze ! Ils doivent vous connaître dans ces cités !}{}{5}{}{239}{}
+{235}{Les docks étaient en réparation aux dernières nouvelles...}{}{5}{}{308}{}
+{236}{E:}{}{5}{}{0}{}
+{239}{Ristezze est connu partout ! Ristezze, qui autrefois voyageait dans l'attelage constellé de gemmes des Garringsbourg, qui foulait les jardins suspendus de l'antique Arlande accompagné de barons et de potentats, qui participait aux traques aux loups à Valchasse...}{Ristezze est connu partout ! Ristezze, qui autrefois voyageait dans l'attelage constellé de gemmes des Garringsbourg, qui foulait les jardins suspendus de l'antique Arlande accompagné de barons et de potentats, qui participait aux traques aux loups à Valchasse...}{}{}{}{}
+{240}{Les Garringsbourg de Westingue ou de Falsbourg ?}{}{5}{}{313}{}
+{241}{Valchasse n'est-il pas un asile de fous aujourd'hui ?}{}{5}{}{313}{}
+{242}{Et parmi les marchands, vous faisiez pâlir le soleil...}{}{5}{}{245}{}
+{243}{E:}{}{5}{}{0}{}
+{245}{Oui ! Ristezze était un dieu ! Tous les membres de la dynastie de Saule étaient comme des enfants pour Ristezze, qui venaient sans cesse lui réclamer des jouets. Ristezze était autrefois l'heureux propriétaire du plus convoité des emplacements de la boutique de Meloren, où les concubines se bousculaient pour acheter leur soie et leurs parfums avec des rubis et des diamants...}{Oui ! Ristezze était un dieu ! Tous les membres de la dynastie de Saule étaient comme des enfants pour Ristezze, qui venaient sans cesse lui réclamer des jouets. Ristezze était autrefois l'heureux propriétaire du plus convoité des emplacements de la boutique de Meloren, où les concubines se bousculaient pour acheter leur soie et leurs parfums avec des rubis et des diamants...}{}{}{}{}
+{246}{Continuez, je vous prie... Il devait y avoir d'autres personnes comme vous...}{}{5}{}{251}{}
+{251}{Il y en avait tant ! Les Derringer de Cumbria, les Beauregard et les Alexis d'Urbanie orientale, les Rutiland de Grandecourbe...}{Il y en avait tant ! Les Derringer de Cumbria, les Beauregard et les Alexis d'Urbanie orientale, les Rutiland de Grandecourbe...}{}{}{}{}
+{252}{Et les Schuyler ! D'où venaient-ils ?}{}{5}{}{318}{}
+{253}{Dites-moi... Où les hommes comme vous sont-ils les plus influents ? A Caladon ?}{}{5}{}{257}{}
+{254}{E:}{}{5}{}{0}{}
+{257}{Non ! A Tarante ! La plus grande de toutes les cités ! Tarante, telle une noble créature dormant paisiblement dans les eaux peu profondes du golfe de Morbiliande. Tarante, cité marquée par les batailles, avec ses rues et ses boulevards sillonnant le paysage émaillé de châteaux et de bâtiments de commerce colossaux ! }{Non ! A Tarante ! La plus grande de toutes les cités ! Tarante, telle une noble créature dormant paisiblement dans les eaux peu profondes du golfe de Morbiliande. Tarante, cité marquée par les batailles, avec ses rues et ses boulevards sillonnant le paysage émaillé de châteaux et de bâtiments de commerce colossaux ! }{}{}{}{}
+{258}{Vous êtes tombé tellement bas, O Grand Ristezze !}{}{5}{}{323}{}
+{259}{S'il vous plaît, parlez-moi des industriels... Comment sont-ils ?}{}{5}{}{263}{}
+{260}{E:}{}{5}{}{0}{}
+{263}{Tels des princes ! Des rois et des princes avec leurs navires remplis de vivres et de marchandises, tributs des contrées voisines et lointaines ! }{Tels des princes ! Des rois et des princes avec leurs navires remplis de vivres et de marchandises, tributs des contrées voisines et lointaines ! }{}{}{}{}
+{264}{Et les Schuyler ! Ils devaient être les plus grands de tous !}{}{5}{}{328}{}
+{265}{Votre histoire est tellement fascinante. Qui sont ces personnages si illustres ?}{}{5}{}{269}{}
+{266}{E:}{}{5}{}{0}{}
+{269}{Il y en a tant à Tarante ! Les Dangien, les Priscillien, les Tarrelond-Dunne. Et les Schuyler au 44, rue de la Providence ! Ces étranges Schuyler qui, comme moi-même, s'occupent de tout ce qui est rare et peu commun...}{Il y en a tant à Tarante ! Les Dangien, les Priscillien, les Tarrelond-Dunne. Et les Schuyler au 44, rue de la Providence ! Ces étranges Schuyler qui, comme moi-même, s'occupent de tout ce qui est rare et peu commun...}{}{}{}{qu1010 4}
+{270}{Cela a l'air tellement curieux. J'aimerais me rendre à Tarante...}{}{5}{}{275}{}
+{275}{Oh ! Vous devriez ! Ne serait-ce qu'une fois pour admirer ses rivières et ses ponts, ses usines, son ciel constellé de machines volantes et ses entrailles sillonnées de voies de chemin de fer...}{Oh ! Vous devriez ! Ne serait-ce qu'une fois pour admirer ses rivières et ses ponts, ses usines, son ciel constellé de machines volantes et ses entrailles sillonnées de voies de chemin de fer...}{}{}{}{}
+{276}{Je ne sais pas trop où se trouve Tarante... Pourriez-vous me l'indiquer sur ma carte ?}{}{5}{}{281}{}
+{281}{Mais bien entendu. Si vous vous y rendez, transmettez-lui mes hommages ! Bon courage, mon ami !}{Mais bien entendu. Si vous vous y rendez, transmettez-lui mes hommages ! Bon courage, mon amie !}{}{}{}{mm 21, ss 1, xp 3, ru 2031, gf2697 1}
+{282}{A vous aussi, Ristezze. }{}{5}{}{}{lf11 1}
+{285}{Ne mélangeons pas plaisir et affaires, mon ami. Finissons-en d'abord avec ce qui nous préoccupe... Que vais-je bien pouvoir vous demander contre mes informations...}{Ne mélangeons pas plaisir et affaires, mon amie. Finissons-en d'abord avec ce qui nous préoccupe... Que vais-je bien pouvoir vous demander contre mes informations...}{}{}{}{}
+{286}{Oui, bien sûr. Où sont mes manières ? Et si nous parlions plutôt de vous...}{}{5}{}{215}{lc1 1}
+{287}{Je n'en doute pas le moins du monde. De quoi avez-vous besoin au juste ?}{}{5}{qb1037 1}{353}{}
+{288}{Vos manières laissent à désirer...}{}{5}{}{333}{}
+{289}{E:}{}{5}{}{0}{}
+{291}{Mes meilleurs clients ? Ristezze est un homme d'affaires ! Ristezze ne trahirait jamais leur confiance. Maintenant, revenons à ce que Ristezze va bien pouvoir vous demander...}{Mes meilleurs clients ? Ristezze est un homme d'affaires ! Ristezze ne trahirait jamais leur confiance. Maintenant, revenons à ce que Ristezze va bien pouvoir vous demander...}{}{}{}{}
+{292}{Je regrette, vraiment. Parlons du monde de Ristezze !}{}{5}{lc1 0}{221}{lc1 1}
+{293}{Je regrette, vraiment. Parlons du monde de Ristezze !}{}{5}{lc1 1}{333}{lf17 1}
+{294}{Je n'en doute pas le moins du monde. De quoi avez-vous besoin au juste ?}{}{5}{qb1037 1}{353}{}
+{295}{Vos manières laissent à désirer...}{}{5}{}{333}{}
+{296}{E:}{}{5}{}{0}{}
+{297}{Doutez-vous de ma compétence dans ce domaine ?}{Doutez-vous de ma compétence dans ce domaine ?}{}{}{}{}
+{298}{Jamais ! Vos paroles... Elles sont si fascinantes...}{}{5}{lc1 0}{227}{lc1 1}
+{299}{Jamais ! Vos paroles... Elles sont si fascinantes...}{}{5}{lc1 1}{333}{lf17 1}
+{300}{E:}{}{5}{}{}{}
+{303}{Me traitez-vous de menteur ?}{Me traitez-vous de menteur ?}{}{}{}{}
+{304}{Bien sûr que non... Veuillez excuser mes mauvaises manières. Poursuivez...}{}{5}{lc1 0}{233}{lc1 1}
+{305}{Bien sûr que non... Veuillez excuser mes mauvaises manières. Poursuivez...}{}{5}{lc1 1}{333}{lf17 1}
+{306}{E:}{}{5}{}{0}{}
+{308}{Comment ? Peut-être... Oh ! Zut ! A cause de vous, Ristezze ne sait plus où il en était...}{Comment ? Peut-être... Oh ! Zut ! A cause de vous, Ristezze ne sait plus où il en était...}{}{}{}{}
+{309}{Je m'excuse ! Etiez-vous connu dans les cités, Ristezze ?}{}{5}{lc1 0}{239}{lc1 1}
+{310}{Je m'excuse ! Etiez-vous connu dans les cités, Ristezze ?}{}{5}{lc1 1}{333}{lf17 1}
+{311}{E:}{}{5}{}{0}{}
+{313}{Quelle importance peuvent avoir les détails quand Ristezze raconte ses souvenirs ? N'avez-vous aucun coeur ? Ou peut-être devrions-nous en revenir à ce dont nous parlions juste avant...}{Quelle importance peuvent avoir les détails quand Ristezze raconte ses souvenirs ? N'avez-vous aucun coeur ? Ou peut-être devrions-nous en revenir à ce dont nous parlions juste avant...}{}{}{}{}
+{314}{Non ! Veuillez poursuivre ! Vous étiez le plus grand des marchands ?}{}{5}{lc1 0}{245}{lc1 1}
+{315}{Non ! Veuillez poursuivre ! Vous étiez le plus grand des marchands ?}{}{5}{lc1 1}{333}{lf17 1}
+{316}{E:}{}{5}{}{0}{}
+{318}{Les Schuyler... ? Attendez ! Pourquoi me parlez-vous d'eux ? Mais nous parlions d'eux auparavant, n'est-ce pas ?}{Les Schuyler... ? Attendez ! Pourquoi me parlez-vous d'eux ? Mais nous parlions d'eux auparavant, n'est-ce pas ?}{}{}{}{}
+{319}{Je ne crois pas, non. Les Laforge étaient-ils à Dernholm ou à Bingham ?}{}{5}{lc1 0}{257}{lc1 1}
+{320}{Je ne crois pas, non. Les Laforge étaient-ils à Dernholm ou à Bingham ?}{}{5}{lc1 1}{333}{lf17 1}
+{321}{E:}{}{5}{}{0}{}
+{323}{Que voulez-vous dire ? Vous montrez-vous désobligeant envers Ristezze ? ...}{Que voulez-vous dire ? Vous montrez-vous désobligeante envers Ristezze ? ...}{}{}{}{}
+{324}{Bien sûr que non ! Dites-moi à quoi ressemblent les marchands à Tarante !}{}{5}{lc1 0}{263}{lc1 1}
+{325}{Bien sûr que non ! Dites-moi à quoi ressemblent les marchands à Tarante !}{}{5}{lc1 1}{333}{lf17 1}
+{326}{E:}{}{5}{}{0}{}
+{328}{Les Schuyler... ? Attendez ! Pourquoi me parlez-vous d'eux ? Mais nous parlions d'eux auparavant, n'est-ce pas ?}{Les Schuyler... ? Attendez ! Pourquoi me parlez-vous d'eux ? Mais nous parlions d'eux auparavant, n'est-ce pas ?}{}{}{}{}
+{329}{Oubliez-les... Parlons plutôt des grands hommes de Tarante !}{}{5}{lc1 0}{269}{lc1 1}
+{330}{Oubliez-les... Parlons plutôt des grands hommes de Tarante !}{}{5}{lc1 1}{333}{lf17 1}
+{331}{E:}{}{5}{}{0}{}
+{333}{Ristezze voit bien qu'on ne vous a jamais enseigné les subtilités du monde des affaires. Allons droit au but, alors... Ristezze possède des informations dont vous avez besoin. Ristezze a besoin de quelque chose en échange.}{Ristezze voit bien qu'on ne vous a jamais enseigné les subtilités du monde des affaires. Allons droit au but, alors... Ristezze possède des informations dont vous avez besoin. Ristezze a besoin de quelque chose en échange.}{}{}{}{}
+{334}{Bien. Que recherchez-vous ?}{}{5}{qb1037 1}{353}{}
+{335}{Je ne saurais tolérer vos plaisanteries de bouffon.}{}{5}{}{338}{re -10}
+{336}{Peut-être ai-je dépassé mes limites. Bonne journée...}{}{5}{}{0}{}
+{338}{Quoi ? Surveillez vos paroles, étranger ! Cela fait des années que Ristezze n'a pas manié la rapière, mais Ristezze peut vous garantir que sa maîtrise dans ce domaine est formidable...}{Quoi ? Surveillez vos paroles, étrangère ! Cela fait des années que Ristezze n'a pas manié la rapière, mais Ristezze peut vous garantir que sa maîtrise dans ce domaine est formidable...}{}{}{}{}
+{339}{Pardonnez-moi. S'il vous plaît, dites-moi ce que vous aimeriez avoir...}{}{5}{qb1037 1}{353}{}
+{340}{Je vous en prie, épargnez-moi vos commentaires. Vous auriez quelques problèmes à retenir votre respiration.}{}{5}{}{}{re -10,co, fl 343}
+{341}{Je dois vous quitter.}{}{5}{}{0}{}
+{343}{En garde, imbécile ! Tâtez de la lame de Ristezze !}{En garde, imbécile ! Tâtez de la lame de Ristezze !}{}{}{}{}
+{345}{Ristezze voit clair dans votre pitoyable tentative de le corrompre par la flatterie. Je ne suis pas né de la dernière pluie. Alors, allons droit au but... Ristezze possède des informations dont vous avez besoin. Ristezze a besoin de quelque chose en échange.}{Ristezze voit clair dans votre pitoyable tentative de le corrompre par la flatterie. Je ne suis pas né de la dernière pluie. Alors, allons droit au but... Ristezze possède des informations dont vous avez besoin. Ristezze a besoin de quelque chose en échange.}{}{}{}{}
+{346}{Bien. Que recherchez-vous ?}{}{5}{qb1037 1}{353}{}
+{347}{Je ne saurais tolérer vos plaisanteries de bouffon.}{}{5}{}{338}{re -10}
+{348}{Peut-être ai-je dépassé mes limites. Bonne journée...}{}{5}{}{0}{}
+{353}{Eh bien... Ristezze collectionne tout ce qui est étrange et merveilleux... Peut-être possédez-vous quelques objets qui pourraient compléter la collection de Ristezze ?}{Eh bien... Ristezze collectionne tout ce qui est étrange et merveilleux... Peut-être possédez-vous quelques objets qui pourraient compléter la collection de Ristezze ?}{}{}{}{}
+{354}{Quelles sortes de choses recherchez-vous exactement ?}{}{5}{}{357}{}
+{355}{E:}{}{5}{}{0}{}
+{357}{En fait, deux choses. Si vous pouvez me dénicher un appareil photo (cette petite merveille technologique !) ou un objet appartenant à Elisa Pionnier, Ristezze vous parlera de Schuyler & Fils et vous indiquera où vous pourrez les trouver...}{En fait, deux choses. Si vous pouvez me dénicher un appareil photo (cette petite merveille technologique !) ou un objet appartenant à Elisa Pionnier, Ristezze vous parlera de Schuyler & Fils et vous indiquera où vous pourrez les trouver...}{}{}{}{qu1037 1, lf 13 1}
+{358}{Cela me paraît honnête. Je reviendrai avec l'un ou l'autre, voire même les deux.}{}{5}{}{0}{lf18 1, qu1037 2}
+{359}{Où vais-je trouver un appareil photo ?}{}{5}{ni 5607}{397}{}
+{360}{Qui est Elisa Pionnier ?}{}{5}{ni 5606}{378}{}
+{361}{J'ai déjà l'appareil photo en ma possession. Faisons affaire...}{}{5}{in 5607, ni 5606}{-8}{in 5607}
+{362}{Il se trouve que je possède un objet appartenant à Elisa Pionnier. Faisons affaire...}{}{5}{in 5606, ni 5607}{-16}{in 5606}
+{363}{Par chance, je possède les deux.}{}{5}{in 5606, in 5607}{374}{}
+{364}{E:}{}{5}{}{0}{}
+{367}{Fantastique ! Alors Ristezze pourra vous dire ce que vous voulez savoir. Les Schuyler sont des bijoutiers respectés de Tarante. Une famille étrange, mais leur travail est toujours irréprochable. Et tenez... Ristezze va également compléter votre carte. Ils habitent au 44, rue de la Providence. Bonne chance, mon ami !}{Fantastique ! Alors Ristezze pourra vous dire ce que vous voulez savoir. Les Schuyler sont des bijoutiers respectés de Tarante. Une famille étrange, mais leur travail est toujours irréprochable. Et tenez... Ristezze va également compléter votre carte. Ils habitent au 44, rue de la Providence. Bonne chance, mon amie !}{}{}{}{mm 21, qu1037 4, lf11 1, ss 1, ru 2031, qu1010 4}
+{368}{Merci, Ristezze. Bonne journée...}{}{5}{}{0}{}
+{370}{Fantastique ! Alors Ristezze pourra vous dire ce que vous voulez savoir. Schuyler et Fils sont des bijoutiers respectés de Tarante. Une famille étrange, mais leur travail est toujours irréprochable. Et tenez... Ristezze va également compléter votre carte. Ils habitent au 44, rue de la Providence. Bonne chance, mon ami !}{Fantastique ! Alors Ristezze pourra vous dire ce que vous voulez savoir. Schuyler et Fils sont des bijoutiers respectés de Tarante. Une famille étrange, mais leur travail est toujours irréprochable. Et tenez... Ristezze va également compléter votre carte. Ils habitent au 44, rue de la Providence. Bonne chance, mon amie !}{}{}{}{mm 21, qu1037 4, lf11 1, ss 1, ru 2031, qu1010 4}
+{371}{Merci, Ristezze. Bonne journée...}{}{5}{}{0}{}
+{374}{Excellent, mon ami. Et lequel échangeriez-vous contre des informations sur Schuyler & Fils ?}{Excellent, mon amie. Et lequel échangeriez-vous contre des informations sur Schuyler & Fils ?}{}{}{}{}
+{375}{L'appareil photo, je pense. Tenez...}{}{5}{}{-8}{in 5607}
+{376}{La botte d'Elisa Pionnier fera l'affaire... Tenez...}{}{5}{}{-16}{in 5606}
+{378}{Elisa Pionnier était la propriétaire de la vieille mine au nord de la ville. La rumeur veut, qu'un jour, elle soit entrée dans la mine, qu'elle ait licencié tous les employés et qu'elle ait disparu dans les galeries. On ne l'a plus jamais revue...}{Elisa Pionnier était la propriétaire de la vieille mine au nord de la ville. La rumeur veut, qu'un jour, elle soit entrée dans la mine, qu'elle ait licencié tous les employés et qu'elle ait disparu dans les galeries. On ne l'a plus jamais revue...}{}{}{}{}
+{379}{Ca m'a l'air d'être une vieille sorcière.}{}{5}{}{386}{}
+{380}{Où pourrais-je trouver des objets lui appartenant ? Dans la mine ?}{}{5}{}{392}{}
+{381}{Et l'appareil photo ? Où puis-je m'en procurer un ?}{}{5}{}{397}{}
+{382}{E:}{}{5}{}{0}{}
+{386}{Oui, mais c'est une légende à Tristes Collines... et il semble que les mythes ruraux et tout ce qui s'y rattache font un malheur à Tarante ces jours-ci... Si Ristezze vous décrivait l'exposition qu'il a vue au Temple des Merveilles d'Hector Parnell, vous n'en croiriez pas vos oreilles...}{Oui, mais c'est une légende à Tristes Collines... et il semble que les mythes ruraux et tout ce qui s'y rattache font un malheur à Tarante ces jours-ci... Si Ristezze vous décrivait l'exposition qu'il a vue au Temple des Merveilles d'Hector Parnell, vous n'en croiriez pas vos oreilles.}{}{}{}{}
+{387}{Entendu. Je reviendrai quand j'aurai trouvé l'un ou l'autre de ces objets, voire même les deux.}{}{5}{}{0}{lf18 1, qu1037 2}
+{388}{Où pourrais-je trouver des objets lui appartenant ? Dans la mine ?}{}{5}{}{392}{}
+{389}{Et l'appareil photo ? Où puis-je m'en procurer un ?}{}{5}{}{397}{}
+{390}{Je vais y réfléchir et je reviendrai...}{}{5}{}{0}{}
+{392}{Oui. Ristezze dirait que c'est le meilleur endroit où chercher.}{Oui. Ristezze dirait que c'est le meilleur endroit où chercher.}{}{}{}{}
+{393}{Entendu. Je reviendrai quand j'aurai trouvé l'un ou l'autre de ces objets, voire même les deux.}{}{5}{}{0}{lf18 1, qu1037 2}
+{394}{Et l'appareil photo ? Où puis-je m'en procurer un ?}{}{5}{}{397}{}
+{395}{Je vais y réfléchir et je reviendrai...}{}{5}{}{0}{}
+{397}{Un appareil photo ? Je n'en ai aucune idée... Ristezze sait que personne à Tristes Collines n'en possède un. Mais c'est ce dont Ristezze a besoin, il vous faut donc vous débrouiller pour en trouver un...}{Un appareil photo ? Je n'en ai aucune idée... Ristezze sait que personne à Tristes Collines n'en possède un. Mais c'est ce dont Ristezze a besoin, il vous faut donc vous débrouiller pour en trouver un...}{}{}{}{}
+{398}{Entendu. Je reviendrai quand j'aurai trouvé l'un ou l'autre de ces objets, voire même les deux.}{}{5}{}{0}{lf18 1, qu1037 2}
+{399}{Et qui était Elisa Pionnier ?}{}{5}{}{378}{}
+{400}{Je vais y réfléchir et je reviendrai...}{}{5}{}{0}{}
+{407}{Dieux du ciel ! Un imbécile ! Hors de chez Ristezze... Allez ouste ! Je n'ai pas de temps à perdre et aucune affaire à traiter avec un demeuré !}{Dieux du ciel ! Une imbécile ! Hors de chez Ristezze... Allez ouste ! Je n'ai pas de temps à perdre et aucune affaire à traiter avec une demeurée !}{}{}{}{}
+{408}{Moi vouloir nous amis ! Moi bien aimer bonhomme rigolo !}{}{-4}{}{417}{}
+{409}{[Sniff.] Moi chagrin. Moi laisser tranquille homme rigolo...}{}{-4}{}{0}{}
+{417}{Oh ! D'accord... Ristezze n'est pas sans coeur... De quoi avez-vous besoin ?}{Oh ! D'accord... Ristezze n'est pas sans coeur... De quoi avez-vous besoin ?}{}{}{}{}
+{418}{B:}{}{-4}{}{}{}
+{419}{Moi avoir questions sur anneau ! [Vous montrez ou décrivez l'anneau.]}{}{-4}{ss -1}{424}{}
+{420}{Moi trouver engin à photos, homme rigolo ! [Vous lui donnez...]}{}{-4}{ni 5606, in 5607, qu1037 2}{-8}{in 5607}
+{421}{Moi avoir botte à vieille femme ! Vous regarder ! [Vous lui donnez...]}{}{-4}{in 5606, ni 5607, qu1037 2}{-16}{in 5606}
+{422}{Moi avoir engin à photos et chose à vieille femme ! Vous vouloir voir ? [Vous lui donnez...]}{}{-4}{in 5606, in 5607, qu1037 2}{-24}{in 5606, in 5607}
+{423}{Ar'voir !}{}{-4}{}{0}{}
+{424}{Intéressant. Ristezze ignore où quelqu'un d'aussi balourd que vous a bien pu obtenir un tel anneau, mais qu'importe... Euh, que voulez-vous savoir ?}{Intéressant. Ristezze ignore où quelqu'un d'aussi balourde que vous a bien pu obtenir un tel anneau, mais qu'importe... Euh, que voulez-vous savoir ?}{}{}{}{}
+{425}{C'est quoi " Ch-ui-lèrrre " ?}{}{-4}{lf16 0}{440}{}
+{426}{C'est quoi Gé Bé ? Q-q-ui Gé Bé ?}{}{-4}{}{430}{}
+{427}{Vous acheter anneau Pis-s-tez-z-e ?}{}{-4}{in 2804, lf15 0}{435}{}
+{428}{Moi partir. Ar'voir.}{}{-4}{}{0}{}
+{430}{G.B. ? Les initiales de quelqu'un apparemment. Euh ?... Je ne sais pas. (C'est tellement humiliant...)}{G.B.? Les initiales de quelqu'un apparemment. Euh ?... Je ne sais pas. (C'est tellement humiliant...)}{}{}{}{}
+{431}{C'est quoi " Ch-ui-lèrrre " ?}{}{-4}{qb1037 1}{440}{}
+{432}{Vous acheter anneau Pis-s-tez-z-e ?}{}{-4}{in 2804, lf15 0}{435}{}
+{433}{Moi partir.}{}{-4}{}{0}{}
+{435}{Ristezze ! C'est Ristezze ! Pas Pisst... Oh et puis zut. Ristezze veut-il vous acheter votre anneau ? Oui ! Lui offrir bon prix ! 15 pièces d'or ! Du bon gros or !}{Ristezze ! C'est Ristezze ! Pas Pisst... Oh et puis zut. Ristezze veut-il vous acheter votre anneau ? Oui ! Lui offrir bon prix ! 15 pièces d'or ! Du bon gros or !}{}{}{}{}
+{436}{Oui ! Des sous, des sous, des sous ! Prendre anneau ! }{}{-4}{}{455}{lf15 1}
+{437}{Euh... Non, moi aimer joli anneau. Moi garder ! C'est quoi Gé Bé ?}{}{-4}{}{430}{}
+{438}{Moi partir. Ar'voir.}{}{-4}{}{0}{}
+{440}{Hum. Schuyler & Fils ? Eh bien... Euh... Ristezze veut que vous faire quelque chose... Après Ristezze parler de Schuyler... Vous avez compris ?}{Hum. Schuyler & Fils ? Eh bien... Euh... Ristezze veut que vous faire quelque chose... Après Ristezze parler de Schuyler... Vous avez compris ?}{}{}{}{qu1037 1}
+{441}{Euh... Oui ! Moi aider gentil monsieur ! Quoi vous avoir besoin moi ?}{}{-4}{}{445}{}
+{442}{C'est quoi Gé Bé ? Q-q-ui Gé Bé ?}{}{-4}{}{430}{}
+{443}{Vous acheter anneau Pis-s-tez-z-e ?}{}{-4}{in 2804, lf15 0}{435}{}
+{444}{Moi m'ennuyer. Moi partir.}{}{-4}{}{0}{}
+{445}{(Ristezze n'a jamais vu quelque chose d'aussi pathétique...) Euh... Vous trouver appareil photo pour Ristezze et Ristezze aider vous ! Ou vous trouver objet à Elisa Pionnier (Ca va être coton pour lui expliquer ça...) et Ristezze aider vous. Ou les deux !}{(Ristezze n'a jamais vu quelque chose d'aussi pathétique...) Euh... Vous trouver appareil photo pour Ristezze et Ristezze aider vous ! Vous trouver objet à Elisa Pionnier (Ca va être coton pour lui expliquer ça...) et Ristezze aider vous.}{}{}{}{}
+{446}{Elle-Isa Panier ? Qui être ça ?}{}{-4}{ni 5606, ni 5607}{452}{}
+{447}{Accord ! Moi trouver et revenir ! Ar'voir !}{}{-4}{ni 5606, ni 5607}{0}{qu1037 2}
+{448}{Moi avoir appareil à photos, gentil monsieur ! [Vous lui donnez...]}{}{-4}{ni 5606, in 5607}{-8}{in 5607}
+{449}{Euh... Moi avoir botte à vieille femme ! Vous regarder ! [Vous lui donnez...]}{}{-4}{in 5606, ni 5607}{-16}{in 5606}
+{450}{Moi avoir appareil à photos et botte à vieille femme ! Vous vouloir voir ? [Vous lui donnez...]}{}{-4}{in 5606, in 5607}{-24}{in 5606, in 5607}
+{451}{Non... pas drôle. Moi partir maintenant.}{}{-4}{}{0}{}
+{452}{Elisa Pionnier, vieille femme morte. Peut-être vous trouver quelque chose dans mine ? Moi avoir peur mine ! }{Elisa Pionnier, vieille femme morte. Peut-être vous trouver quelque chose dans mine ? Moi avoir peur mine ! }{}{}{}{}
+{453}{Moi pas peur ! Moi ramener appareil à photos ou chose à vieille femme ! Peut-être les deux ! Ar'voir !}{}{-4}{}{0}{qu1037 2}
+{454}{Non... Vous aller chercher. Moi jouer.}{}{-4}{}{0}{}
+{455}{Merci ! Vous avez d'autres questions ? (Une toutes les heures...)}{Merci ! Vous avez d'autres questions ? (Une toutes les heures...)}{}{}{}{$$15}
+{456}{C'est quoi " Ch-ui-lèrrre " ?}{}{-4}{lf16 0}{440}{}
+{457}{C'est quoi Gé Bé ? Q-q-ui Gé Bé ?}{}{-4}{}{430}{}
+{458}{E:}{}{-4}{}{0}{}
+{459}{(Fantastique...) Parfait ! Merci ! (Hé ! hé !). D'accord ! Eh bien... Schuyler & Fils est une entreprise... Elle vend des jolies choses !}{(Fantastique...) Parfait ! Merci ! (Hé ! hé !). D'accord ! Eh bien... Schuyler & Fils est une entreprise... Elle vend des jolies choses !}{}{}{}{qu1037 4}
+{460}{Euh... Accord...}{}{-4}{}{461}{}
+{461}{Elle est à Tarante ! Grande cité !}{Elle est à Tarante ! Grande cité !}{}{}{}{, qu1010 4}
+{462}{Terre-hante ?}{}{-4}{}{464}{}
+{464}{Pour l'amour du ciel... Même la patience de Ristezze a des limites... Tenez, je vais vous l'indiquer sur votre carte. L'adresse est le 44, rue de la Providence !}{Pour l'amour du ciel... Même la patience de Ristezze a des limites... Tenez, je vais vous l'indiquer sur votre carte. L'adresse est le 44, rue de la Providence !}{}{}{}{mm 21, ss 1, xp 3, ru 2031}
+{465}{Merci, gentil monsieur !}{}{-4}{}{0}{}
+{467}{Ristezze est un homme bon mais quelque chose en vous lui déplaît fortement. Hors d'ici... !}{Ristezze est un homme bon mais quelque chose en vous lui déplaît fortement. Hors d'ici... !}{}{}{}{}
+{468}{Allons... Essayons de nous entendre...}{}{5}{}{476}{re +10}
+{469}{Vous allez le payer très cher...}{}{5}{}{}{re -10, co, fl 343}
+{470}{Moi faire choses bêtes mais moi aimable... !}{}{-4}{}{417}{re +10}
+{471}{Drôle de monsieur parler comme fille ! Ha ! ha ! ha !}{}{-4}{}{}{re -10, co, fl 343}
+{472}{Je vois qu'il n'y a pas moyen de vous faire changer d'avis. Au revoir.}{}{5}{}{0}{}
+{473}{[Sniff, sniff.] Accord... Moi chagrin... Ar'voir.}{}{-4}{}{0}{}
+{476}{Euh... Peut-être. Vous êtes encore assez répugnant mais il est possible que vous ne puissiez rien y faire...}{Euh... Peut-être. Vous êtes encore assez répugnante mais il est possible que vous ne puissiez rien y faire...}{}{}{}{}
+{477}{Je fais de mon mieux pour vous faire bonne impression...}{}{5}{}{481}{re +5}
+{478}{Vos entrailles seront véritablement un spectacle répugnant...}{}{5}{}{}{re -10, co, fl 343}
+{479}{Je regrette que vous voyiez les choses de cette façon. Je m'en vais.}{}{5}{}{0}{}
+{481}{Oh, d'accord... Vous avez gagné. Il n'est peut-être pas si difficile de vous supporter...}{Oh, d'accord... Vous avez gagné. Il n'est peut-être pas si difficile de vous supporter.}{}{}{}{}
+{482}{J'en suis bien aise. Puis-je vous demander qui vous êtes ?}{}{5}{me 0}{15}{}
+{483}{Merci, Ristezze. Puis-je vous poser quelques questions ?}{}{5}{me 1}{30}{}
+{484}{E:}{}{1}{}{0}{}
+{485}{Ohh... Où suis-je ? Qu'est-il arrivé à Ristezze ? Ristezze souffre ! Oh... Cette douleur !...}{Ohh... Où suis-je ? Qu'est-il arrivé à Ristezze ? Ristezze souffre ! Oh... Cette douleur !...}{}{}{}{}
+{486}{Vous êtes mort, marchand. Il est temps de parler...}{}{5}{}{491}{}
+{487}{Vous mort, Pistezze ! Vous répondre questions, maintenant !}{}{-4}{}{491}{}
+{488}{E:}{}{5}{}{0}{}
+{489}{E:}{}{-4}{}{0}{}
+{491}{Oh, grands dieux ! Non ! Ristezze ne peut pas être mort ! Et cette douleur ! Comme j'ai mal... Ristezze ne veut pas mourir... !}{Oh, grands dieux ! Non ! Ristezze ne peut pas être mort ! Et cette douleur ! Comme j'ai mal... Ristezze ne veut pas mourir... !}{}{}{}{}
+{492}{Assez ! Plus vite vous parlerez, plus vite vous serez soulagé...}{}{5}{}{497}{}
+{493}{Vous assez ! Vous répondre questions...}{}{-4}{}{497}{}
+{494}{E:}{}{5}{}{0}{}
+{495}{E:}{}{-4}{}{0}{}
+{497}{Bien ! Ristezze vous dira tout ce qu'il sait ! Mais arrêtez ce supplice, s'il vous plaît !}{Bien ! Ristezze vous dira tout ce qu'il sait ! Mais arrêtez ce supplice, s'il vous plaît !}{}{}{}{}
+{498}{Schuyler & Fils... Qui sont-ils ?}{}{5}{}{503}{}
+{499}{Qui être Schuyler & Fils... ?}{}{-4}{}{503}{}
+{500}{E:}{}{5}{}{0}{}
+{501}{E:}{}{-4}{}{0}{}
+{503}{Aaah ! Ce sont des marchands ! Ils sont spécialisés dans les bijoux et les oeuvres d'art particulièrement rares ! Aaah !}{Aaah ! Ce sont des marchands ! Ils sont spécialisés dans les bijoux et les oeuvres d'art particulièrement rares ! Aaah !}{}{}{}{}
+{504}{Et où peut-on les trouver ?}{}{5}{}{509}{}
+{505}{Où être Schuyler & Fils... ?}{}{-4}{}{509}{}
+{506}{E:}{}{5}{}{0}{}
+{507}{E:}{}{-4}{}{0}{}
+{509}{A Tarante ! A Tarante ! S'il vous plaît ! Laissez Ristezze partir ! Si vous saviez... !}{A Tarante ! A Tarante ! S'il vous plaît ! Laissez Ristezze partir ! Si vous saviez... !}{}{}{}{, qu1010 4}
+{510}{Où se trouve Tarante ? Cela ne m'amuse pas plus que vous...}{}{5}{}{515}{}
+{511}{Vous pas pleurnicher comme un bébé ! Où être Tarante ?}{}{-4}{}{515}{}
+{512}{E:}{}{5}{}{0}{}
+{513}{E:}{}{-4}{}{0}{}
+{515}{Oui ! Oui ! Je vous dirai tout ce que vous voulez savoir ! Tenez... Je vais vous montrer... [Le fantôme vous indique un endroit sur la carte.] Je vous en prie ! Laissez-moi partir...}{Oui ! Oui ! Je vous dirai tout ce que vous voulez savoir ! Tenez... Je vais vous montrer... [Le fantôme vous indique un endroit sur la carte.] Je vous en prie ! Laissez-moi partir...}{}{}{}{mm 21, ss 1, lf12 1, xp 3}
+{516}{Parfait... Vous êtes libre de partir...}{}{5}{}{0}{}
+{517}{Ar'voir, Pistezze...}{}{-4}{}{0}{}
+{519}{Ristezze ne sait rien d'autre ! Laissez-moi reposer en paix !}{Ristezze ne sait rien d'autre ! Laissez-moi reposer en paix !}{}{}{}{}
+

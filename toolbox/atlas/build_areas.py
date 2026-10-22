@@ -44,6 +44,12 @@ FP_JS = DATA_JS / 'fp-areas.js'
 RU_MES = ROOT / 'data' / 'mods' / 'Russian Mod 2012 RC9' / 'mes' / 'gamearea.mes'
 RU_WORLD = ROOT / 'data' / 'mods' / 'Russian Mod 2012 RC9' / 'maps' / bs.WORLD
 RU_JS = DATA_JS / 'ru-areas.js'
+TIN_WORLD = ROOT / 'data' / 'mods' / 'Terra Incognita' / 'maps' / bs.WORLD       # (the mod ships no gamearea.mes: its area list is the base game's)
+TIN_JS = DATA_JS / 'tin-areas.js'
+TIN_SECRET = {                    # the user's names (by tile), the same two places as the Russian mod's; the other 7 are still "Secret Area (n)"
+    (84512, 115424): 'Cattan Grove',
+    (3296, 123808): 'Testing Location',
+}
 CAR_SETTLEMENTS = {'Vaselan', 'Haunted Village', 'The Assassins village', 'Half-orc village', 'Undead city', 'Shady Grove'}      # the mod's areas that are villages
 CAR_SECRET = {                    # the user's names for Carcanum's unnamed places (by tile), or the town a place belongs to ("with")
     (44309, 66029): {'name': 'Ashbury West Prison'},
@@ -213,6 +219,44 @@ def main():
     build_carcanum(areas, places)
     build_fp(areas, places)
     build_ru(places)
+    build_tin(areas, places)
+    build_rb(areas, places)
+
+
+def build_tin(base_areas, places):
+    """js/atlas/data/tin-areas.js (window.ArcanumTINAreas), same shape as fp-areas.js, for Terra Incognita. The mod ships no gamearea.mes, so the list is the base
+    game's; what it adds to the world (sectors no area is near) are "Secret Area (n)" places for the user to name."""
+    areas = [a for _, a in sorted(read_lines(MES).items()) if a['name'] and on_map(a)]
+    link(areas, places)
+    number_same_names(areas)
+    have = {nk(a['name']) for a in areas}
+    secret = [s for s in read_secret(WORLD, TIN_WORLD) if nk(s['name']) not in have]
+    secret += unnamed_places(TIN_WORLD, areas + secret)
+    secret = [{**s, 'name': TIN_SECRET.get(tuple(s['tile']), s['name'])} for s in secret]
+    mark_changed(areas, base_areas)
+    note = ('Same shape as ce-areas.js, for Terra Incognita: areas = the base game\'s gamearea.mes (the mod has none); secret = the "Secret Area - " folders of the base game '
+            'and the mod, plus "Secret Area (n)" for sectors of the mod no area is near')
+    write_js(TIN_JS, 'ArcanumTINAreas', note, areas=areas, secret=secret)
+    print(f'Terra Incognita: {len(areas)} areas, {len(secret)} secret areas')
+    print('  secret areas of the mod: ' + ', '.join(f'{s["name"]} {s["tile"]}' for s in secret if s['name'].startswith('Secret Area (')))
+
+
+def build_rb(base_areas, places):
+    """js/atlas/data/rb-areas.js (window.ArcanumRBAreas), same shape as tin-areas.js, for Arcanum ReBulid (no gamearea.mes either: the base game's list, plus
+    "Secret Area (n)" places for the mod's sectors no area is near)."""
+    world = ROOT / 'data' / 'mods' / 'Arcanum ReBulid' / 'maps' / bs.WORLD
+    areas = [a for _, a in sorted(read_lines(MES).items()) if a['name'] and on_map(a)]
+    link(areas, places)
+    number_same_names(areas)
+    have = {nk(a['name']) for a in areas}
+    secret = [s for s in read_secret(WORLD, world) if nk(s['name']) not in have]
+    secret += unnamed_places(world, areas + secret)
+    mark_changed(areas, base_areas)
+    note = ('Same shape as ce-areas.js, for Arcanum ReBulid: areas = the base game\'s gamearea.mes (the mod has none); secret = the "Secret Area - " folders of the base game '
+            'and the mod, plus "Secret Area (n)" for sectors of the mod no area is near')
+    write_js(DATA_JS / 'rb-areas.js', 'ArcanumRBAreas', note, areas=areas, secret=secret)
+    print(f'Arcanum ReBulid: {len(areas)} areas, {len(secret)} secret areas')
+    print('  secret areas of the mod: ' + ', '.join(f'{s["name"]} {s["tile"]}' for s in secret if s['name'].startswith('Secret Area (')))
 
 
 def build_ce(base_areas, places):

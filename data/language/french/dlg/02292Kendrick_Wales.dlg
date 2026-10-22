@@ -1,0 +1,78 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Mes salutations, monsieur. Puis-je vous demander qui vous êtes ?}{}{5}{me 0, re 41}{36}{lf1 1}
+{3}{Bonjour, Quentin. Puis-je vous importuner quelques instants ?}{}{5}{me 1, re 41}{41}{}
+{4}{Monsieur ! Nous venons à peine de nous rencontrer ! Que faites-vous des règles de savoir-vivre ?}{}{5}{me 0, re -40}{12}{}
+{5}{Monsieur Galles ! Pourquoi me traitez-vous de la sorte ?}{}{5}{me 1, re -40}{12}{}
+{7}{'jour ! Moi peux vous demander qui vous être ?}{}{-4}{me 0}{36}{}
+{8}{'jour Quentin ! Moi pouvoir demander questions ?}{}{-4}{me 1}{41}{}
+{9}{E:}{}{1}{}{0}{}
+{12}{Je n'arrive pas à faire abstraction de votre apparence, votre simple vue me dégoûte, monsieur. Veuillez quitter ces lieux immédiatement !}{Je n'arrive pas à faire abstraction de votre apparence, votre simple vue me dégoûte, madame. Veuillez quitter ces lieux immédiatement !}{}{}{}{}
+{13}{Pardon ? Etes-vous vraiment sûr de cette opinion, monsieur ?}{}{5}{ch 15}{31}{}
+{14}{Monsieur ! Je m'excuse de vous importuner. Pouvez-vous m'accorder quelques instants ?}{}{5}{me 0}{26}{re +15}
+{15}{Monsieur Galles ! Je pensais que nous étions amis !}{}{5}{me 1}{26}{re +15}
+{16}{A votre place, j'éviterais de parler sur ce ton...}{}{5}{}{19}{re -5}
+{17}{E:}{}{5}{}{0}{}
+{19}{Vraiment ? Comme si je me souciais de votre opinion, monsieur ! Je gâche ma salive en m'adressant à vous !}{Vraiment ? Comme si je me souciais de votre opinion, madame ! Je gâche ma salive en m'adressant à vous !}{}{}{}{}
+{20}{Vous avez raison. Je vous en prie, faites preuve d'indulgence...}{}{5}{}{26}{re +15}
+{21}{Je vois. Et moi, je vais gâcher vos tripes, gnome...}{}{5}{}{}{co, fl 24}
+{22}{E:}{}{5}{}{0}{}
+{24}{Ah ! Voyons ce que vous avez dans le ventre, vermine !}{Ha ! Voyons ce que vous avez dans le ventre, traîtresse !}{}{}{}{}
+{26}{[Il vous lance un regard perçant.] Je suppose que je pourrais me laisser convaincre de tolérer votre présence quelques instants. Du moment que vous vous conduisez de façon acceptable...}{[Il vous lance un regard perçant.] Je suppose que je pourrais me laisser convaincre de tolérer votre présence quelques instants. Du moment que vous vous conduisez de façon acceptable...}{}{}{}{}
+{27}{Je vous remercie infiniment. Puis-je vous demander qui vous êtes ?}{}{5}{me 0}{36}{re +5}
+{28}{Vous êtes très compréhensif, Quentin. Vous avez un moment ?}{}{5}{me 1}{41}{}
+{29}{E:}{}{1}{}{0}{}
+{31}{[Le gentilhomme semble vous voir sous un jour nouveau.] Ah ! Veuillez accepter mes plus humbles excuses, cher monsieur ! Je ne savais pas que vous étiez de si bonne famille ! Je vous prie de m'excuser !}{[Le gentilhomme semble vous voir sous un jour nouveau.] Ah ! Veuillez accepter mes plus humbles excuses, madame ! Je ne savais pas que vous étiez de si bonne éducation ! Je vous prie de m'excuser !}{}{}{}{}
+{32}{Je comprends parfaitement. Puis-je vous demander qui vous êtes ?}{}{5}{me 0}{36}{}
+{33}{Oublions cela, Quentin. Puis-je vous parler un instant ?}{}{5}{me 1}{41}{}
+{34}{E:}{}{1}{}{0}{}
+{36}{Je m'appelle, euh... Quentin Galles, érudit et écrivain. Et vous êtes ?}{Je m'appelle, euh... Quentin Galles, érudit et écrivain. Et vous êtes ?}{}{}{}{}
+{37}{Je m'appelle @PCNAME@. Puis-je vous poser quelques questions ?}{}{5}{}{41}{}
+{38}{'jour ! Moi @PCNAME@ ! Moi pouvoir demander questions ?}{}{-4}{}{41}{}
+{39}{E:}{}{1}{}{0}{}
+{41}{Certainement...}{Certainement...}{}{}{}{}
+{42}{Vous m'avez dit que vous étiez un érudit ? Qu'étudiez-vous, monsieur ?}{}{5}{lf1 0}{50}{}
+{43}{Pouvez-vous me rappeler le sujet de votre livre, monsieur ?}{}{5}{lf1 1}{55}{}
+{44}{Quentin, je dois vous parler de T'sen-Ang...}{}{5}{ss 12}{70}{}
+{45}{Qui vous a dit que Victor Mistik avait un exemplaire de ce livre, Quentin ?}{}{5}{qa1052 1}{79}{}
+{46}{Euh... Quoi vous faire, Cantine ?}{}{-4}{}{50}{}
+{47}{Cantine ! Moi besoin aide pour trouver T'sen-Ang !}{}{-4}{ss 12}{70}{}
+{48}{E:}{}{1}{}{0}{}
+{50}{Moi ? Oh, je suis un spécialiste de l'histoire elfique. J'ai enseigné dans plusieurs universités quand j'étais jeune, mais, depuis cinq ans, je travaille sur mon premier ouvrage. Il vient de partir à la presse !}{Moi ? Oh, je suis un spécialiste de l'histoire elfique. J'ai enseigné dans plusieurs universités quand j'étais jeune, mais, depuis cinq ans, je travaille sur mon premier ouvrage. Il vient de partir à la presse !}{}{}{}{}
+{51}{C'est vrai ? De quoi parle-t-il ?}{}{5}{}{55}{lf1 1}
+{52}{Hein ? Vous écrire livre ?}{}{-4}{}{55}{lf1 1}
+{53}{E:}{}{1}{}{0}{}
+{55}{Eh bien, je ne suis pas vraiment censé en parler. Mais je peux vous dire qu'il s'intitule " La Malédiction de T'sen-Ang " et qu'il devrait être mis en vente d'un jour à l'autre ! Je ne suis pas du genre à faire mon propre éloge, mais je dois bien admettre que c'est un chef-d'oeuvre ! L'exemple par excellence du résultat de la recherche universitaire !}{Eh bien, je ne suis pas vraiment censé en parler. Mais je peux vous dire qu'il s'intitule " La Malédiction de T'sen-Ang " et qu'il devrait être mis en vente d'un jour à l'autre ! Je ne suis pas du genre à faire mon propre éloge, mais je dois bien admettre que c'est un chef-d'oeuvre ! L'exemple par excellence du résultat de la recherche universitaire !}{}{}{}{}
+{56}{Pouvez-vous m'en parler, Quentin ?}{}{5}{ss -11}{62}{}
+{57}{C'est intéressant... Je cherche T'sen-Ang...}{}{5}{ss 12}{70}{}
+{58}{Euh... hein ?}{}{-4}{ss -11}{66}{}
+{59}{Hé ! Moi besoin trouver T'sen-Ang !}{}{-4}{ss 12}{70}{}
+{60}{E:}{}{1}{}{0}{}
+{61}{}{}{}{}{}{}
+{62}{Je regrette, mon garçon. Je suis sous contrat et je ne peux rien en dire. Je suis sûr que vous pourrez le trouver très prochainement dans toutes les bonnes librairies. Un peu de patience...}{Désolé, madame. Je suis sous contrat et je ne peux rien en dire. Je suis sûr que vous pourrez le trouver très prochainement dans toutes les bonnes librairies. Un peu de patience...}{}{}{}{}
+{63}{Je vois. Puis-je vous poser quelques questions supplémentaires ?}{}{5}{}{41}{}
+{64}{E:}{}{1}{}{0}{}
+{66}{[Il rit.] Pas très intellectuellement ouvert, on dirait, l'ami ? Ce n'est pas grave... Le livre sera de toute façon un peu trop compliqué pour vous. Vous devriez sans doute vous cantonner à des choses plus terre-à-terre...}{[Il rit.] Pas très intellectuellement ouverte, on dirait, l'amie ? Ce n'est pas grave... Le livre sera de toute façon un peu trop compliqué pour vous. Vous devriez sans doute vous cantonner à des choses plus terre-à-terre...}{}{}{}{}
+{67}{Euh... Autres questions ?}{}{-4}{}{41}{}
+{68}{E:}{}{1}{}{0}{}
+{70}{Que voulez-vous savoir sur cet horrible endroit ? Je vous conseille de ne pas trop poser de questions à ce sujet... Elles semblent porter malheur aux gens qui les posent.}{Que voulez-vous savoir sur cet horrible endroit ? Je vous conseille de ne pas trop poser de questions à ce sujet... Elles semblent porter malheur aux gens qui les posent.}{}{}{}{}
+{71}{Il faut absolument que je la trouve. Savez-vous où elle se trouve ?}{}{5}{}{74}{}
+{72}{Moi besoin y aller ! Vous m'aider ?}{}{-4}{}{74}{}
+{74}{Vous n'avez pas lu mon livre ? Il se trouve justement que personne ne sait où se trouve cet endroit ! " Effroi chez les Elfes Noirs " est censé contenir une carte, mais c'est Victor Mistik, le collectionneur bibliophile caladonien, qui détient le dernier exemplaire ! Si vous voulez trouver T'sen-Ang, je vous conseille d'aller lui parler...}{Vous n'avez pas lu mon livre ? Il se trouve justement que personne ne sait où se trouve cet endroit ! " Effroi chez les Elfes Noirs " est censé contenir une carte, mais c'est Victor Mistik, le collectionneur bibliophile caladonien, qui détient le dernier exemplaire ! Si vous voulez trouver T'sen-Ang, je vous conseille d'aller lui parler...}{}{}{}{}
+{75}{Je vois. Puis-je vous poser quelques questions supplémentaires ?}{}{5}{}{41}{}
+{76}{Euh... Accord ! Encore des questions ?}{}{-4}{}{41}{}
+{77}{E:}{}{1}{}{0}{}
+{79}{[Il vous regarde d'un air soupçonneux.] Pourquoi voulez-vous savoir ?}{[Il vous regarde d'un air soupçonneux.] Pourquoi voulez-vous savoir ?}{}{}{}{}
+{80}{J'ai mes raisons. Qui était-ce ?}{}{5}{}{82}{}
+{82}{[Ses traits se durcissent.] Vous ne vous attendez tout de même pas à ce que je vous révèle mes sources ? Vous croyez vraiment que j'irais trahir le secret journalistique ? Ce sont mes affaires et je n'en parlerai plus...}{[Ses traits se durcissent.] Vous ne vous attendez tout de même pas à ce que je vous révèle mes sources ? Vous croyez vraiment que j'irais trahir le secret journalistique ? Ce sont mes affaires et je n'en parlerai plus...}{}{}{}{}
+{83}{Je comprends. Encore quelques questions...}{}{5}{}{41}{}
+{84}{Vous n'avez pas l'air de comprendre. Je ne vous le demande pas, Quentin...}{}{5}{}{87}{re -5}
+{85}{E:}{}{1}{}{0}{}
+{87}{Je vous interdis de me menacer, monsieur ! Je vais appeler les autorités qui ne tarderont pas à arriver ! Je ne le répéterai pas... Rien au monde ne me fera trahir cette confiance. Est-ce bien clair, monsieur ?}{Je vous interdis de me menacer, madame ! Je vais appeler les autorités qui ne tarderont pas à arriver ! Je ne le répéterai pas... Rien au monde ne me fera trahir cette confiance. Est-ce bien clair, madame ?}{}{}{}{}
+{88}{Je vois. Alors j'ai quelques questions supplémentaires...}{}{5}{}{41}{}
+{89}{Très clair... Soit vous me le dites, soit vous mourez en regrettant de ne pas l'avoir fait.}{}{5}{}{92}{re -10}
+{90}{E:}{}{1}{}{0}{}
+{92}{[Il paraît résolu.] Non, monsieur. Faites ce que vous avez à faire !}{[Il semble résolu.] Non, madame. Faites ce que vous avez à faire !}{}{}{}{}
+{93}{Bien. Encore quelques questions...}{}{5}{}{41}{}
+{94}{Eh bien, va pour la mort, vieil homme.}{}{5}{}{}{co, fl 24}
+{95}{E:}{}{5}{}{0}{}
+

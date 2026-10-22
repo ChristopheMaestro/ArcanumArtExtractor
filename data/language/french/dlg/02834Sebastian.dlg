@@ -1,0 +1,246 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Mes salutations, monsieur. Puis-je vous demander qui vous êtes ?}{}{5}{me 0, re 41}{32}{}
+{3}{Bonjour, Sébastien. Puis-je vous poser quelques questions ?}{}{5}{me 1, re 41}{36}{}
+{4}{Monsieur ! Ai-je bien entendu ? Qu'ai-je donc fait pour vous offenser de la sorte ?}{}{5}{me 0, re -40}{8}{}
+{5}{Sébastien ! Ai-je fait quelque chose qui vous ait offensé ?}{}{5}{me 1, re -40}{8}{}
+{8}{Je pense que vous avez très bien entendu, mon ami. Je ne vous aime pas et c'est ainsi. Je vous conseille donc de quitter ces lieux au plus vite. }{Je pense que vous avez très bien entendu, madame. Je ne vous aime pas et c'est ainsi. Je vous conseille donc de quitter les lieux au plus vite.}{}{}{}{}
+{9}{Etes-vous vraiment sûr de cette opinion, monsieur ?}{}{5}{ch 15}{27}{}
+{10}{Monsieur ! Je ne doute pas que nous trouverons le moyen d'oublier cela...}{}{5}{me 0}{22}{re +15}
+{11}{Sébastien ! N'y a-t-il aucun moyen de nous entendre ?}{}{5}{me 1}{22}{re +15}
+{12}{Continuez sur ce ton et vous êtes bon pour une correction...}{}{5}{}{15}{re -5}
+{13}{E:}{}{5}{}{0}{}
+{15}{[Il se campe devant vous d'un air menaçant.] Je suis votre homme, c'est quand vous voulez.}{[Il se campe devant vous d'un air menaçant.] Je suis votre homme, c'est quand vous voulez.}{}{}{}{}
+{16}{Peut-être ai-je fait preuve d'un peu trop d'impulsivité. Veuillez accepter mes excuses...}{}{5}{}{22}{re +15}
+{17}{Vous en avez trop dit aujourd'hui, imbécile, vous allez payer.}{}{5}{}{}{co, fl 20}
+{18}{E:}{}{5}{}{0}{}
+{20}{Très bien. Vous êtes un homme mort...}{Très bien. Vous allez mourir, madame.}{}{}{}{}
+{22}{[Il vous lance un regard en biais, puis réfléchit.] Peut-être suis-je allé un peu trop vite en besogne, mais je ne suis pas homme à mâcher mes mots. Exposez-moi votre affaire sans tarder...}{[Il vous lance un regard en biais, puis réfléchit.] Peut-être suis-je allé un peu trop vite en besogne, mais je ne suis pas homme à mâcher mes mots. Exposez-moi votre affaire sans tarder...}{}{}{}{}
+{23}{Bien sûr, monsieur. Je me demandais qui vous étiez... ?}{}{5}{me 0}{32}{re +5}
+{24}{Certainement, Sébastien. Puis-je vous poser une ou deux questions ?}{}{5}{me 1}{36}{}
+{25}{E:}{}{5}{}{0}{}
+{27}{[L'homme prend un instant pour réfléchir, puis acquiesce.] Mes mots ont dépassé ma pensée, étranger. Maintenant que j'ai reconnu mon erreur, tirons un trait là-dessus... }{[L'homme prend un instant pour réfléchir, puis acquiesce.] Mes mots ont dépassé ma pensée, étrangère. Maintenant que j'ai reconnu mon erreur, tirons un trait là-dessus...}{}{}{}{}
+{28}{Oui je comprends. Puis-je connaître votre nom, monsieur ?}{}{5}{me 0}{32}{}
+{29}{Bien entendu, Sébastien. Vous avez un moment ?}{}{5}{me 1}{36}{}
+{30}{E:}{}{5}{}{0}{}
+{32}{Je m'appelle Sébastien.}{Je m'appelle Sébastien.}{}{}{}{}
+{33}{Mes salutations, monsieur. Vous avez un moment ?}{}{5}{}{36}{}
+{36}{De quoi avez-vous besoin ?}{De quoi avez-vous besoin ?}{}{}{}{}
+{37}{J'ai parlé de vous avec Edouard Saule...}{}{5}{}{56}{}
+{38}{Parlez-moi un peu de la Fosse, Sébastien...}{}{5}{lf2 1, qu1161 0, gf2187 0, lf6 0}{97}{}
+{39}{Rappelez-moi pourquoi vous êtes ici, Sébastien...}{}{5}{lf3 1, qu1161 0, gf2187 0, lf6 0}{112}{}
+{40}{Je pourrais peut-être régler ce " problème ", Sébastien...}{}{5}{lf4 1, qu1161 1, gf2187 0, lf6 0}{187}{}
+{41}{Je n'ai pas encore réglé ce " problème ", Sébastien...}{}{5}{qu1161 2, gf2187 0, lf6 0}{202}{}
+{42}{J'ai réglé ce " problème ", Sébastien...}{}{5}{qu1161 2, gf2187 1, lf6 0}{207}{}
+{43}{Je pourrais peut-être régler ce " problème ", Sébastien...}{}{5}{lf4 1, qu1162 1, gf2188 0, lf6 0}{187}{}
+{44}{Je n'ai pas encore réglé ce " problème ", Sébastien...}{}{5}{qu1162 2, gf2188 0, lf6 0}{202}{}
+{45}{J'ai réglé ce " problème ", Sébastien...}{}{5}{qu1162 2, gf2188 1, lf6 0}{209}{}
+{46}{Vous vous disiez être prêt à m'aider, Sébastien ?}{}{5}{lf6 1, lf7 0}{212}{}
+{47}{Etes-vous sûr de ne pas vouloir vous joindre à moi, Sébastien ?}{}{5}{lf7 1}{242}{jo 0 237}
+{48}{E:}{}{5}{}{0}{}
+{56}{Oui... Monsieur Saule m'a dit que quelqu'un viendrait peut-être boire un verre ici. [Il regarde alentour.] J'ai du respect pour ceux qui ont assez de cran pour venir dans la Fosse...}{Oui... Monsieur Saule m'a dit que quelqu'un viendrait peut-être boire un verre ici. [Il regarde alentour.] J'ai du respect pour celles qui ont assez de cran pour venir dans la Fosse...}{}{}{}{}
+{57}{Eh bien... Voyez en moi quelqu'un de " concerné "...}{}{5}{}{61}{}
+{58}{E:}{}{5}{}{0}{}
+{61}{[Il vous lance un regard méfiant.] Je vois. Monsieur Saule vous a parlé de ses... " projets "... concernant la Fosse ?}{[Il vous lance un regard méfiant.] Je vois. Monsieur Saule vous a parlé de ses... " projets "... concernant la Fosse ?}{}{}{}{}
+{62}{Il les a évoqués. Peut-être pourriez-vous développer... ?}{}{5}{}{66}{}
+{63}{E:}{}{5}{}{0}{}
+{66}{Eh bien... [Il baisse la voix et se penche vers vous.]... Monsieur Saule s'inquiète de ce qui se passe dans la Fosse. Que savez-vous de ce lieu ?}{Eh bien... [Il baisse la voix et se penche vers vous.]... Monsieur Saule s'inquiète de ce qui se passe dans la Fosse. Que savez-vous de ce lieu ?}{}{}{}{}
+{67}{J'y ai fait un tour...}{}{5}{}{71}{re +5}
+{68}{Pas grand-chose à vrai dire...}{}{5}{}{76}{re -5}
+{69}{E:}{}{5}{}{0}{}
+{71}{[Il hoche la tête en signe d'approbation.] Eh bien, je suis sûr que vous savez ce qui se passe entre les clans Mauge et Pilchard... }{[Il hoche la tête en signe d'approbation.] Eh bien, je suis sûr que vous savez ce qui se passe entre les clans Mauge et Pilchard... }{}{}{}{}
+{72}{Evidemment... Qui ne le sait pas ?}{}{5}{}{107}{re +5}
+{73}{Eh bien... Peut-être pourriez-vous me rafraîchir la mémoire...}{}{5}{lf1 0}{76}{lf1 1, re -5}
+{74}{Eh bien... Peut-être pourriez-vous me rafraîchir la mémoire...}{}{5}{lf1 1}{97}{}
+{75}{E:}{}{5}{}{0}{}
+{76}{[Sébastien semble un peu déçu par votre ignorance.] Hum. Vous ne survivrez pas dans la Fosse sans savoir de quoi il retourne. C'est d'ailleurs le cas quasiment partout. Souvenez-vous-en... ça pourrait bien vous sauver la vie un jour... }{[Sébastien semble un peu déçu par votre ignorance.] Hum. Vous ne survivrez pas dans la Fosse sans savoir de quoi il retourne. C'est d'ailleurs le cas quasiment partout. Souvenez-vous-en... ça pourrait bien vous sauver la vie un jour...}{}{}{}{}
+{77}{Merci du conseil, Sébastien. Vous disiez ?}{}{5}{}{97}{re +5}
+{78}{Je ne vous ai rien demandé, l'ami. Gardez vos conseils pour vous la prochaine fois...}{}{5}{}{93}{re -5}
+{79}{[Avec un petit sourire narquois.] C'était juste un test, camarade. Jusqu'à présent, vous ne m'impressionnez guère...}{}{5}{ps 12}{86}{re +5}
+{80}{[Avec un petit sourire narquois.] C'était juste un test, camarade. Jusqu'à présent, vous ne m'impressionnez guère...}{}{5}{ps -11}{89}{}
+{81}{E:}{}{5}{}{0}{}
+{86}{[Sébastien sourit ; votre ruse semble avoir réussi.] J'aime votre technique, l'ami. Je dois admettre que... vous m'avez surpris. Bien joué...}{[Sébastien sourit ; votre ruse semble avoir réussi.] J'aime votre technique, l'amie. Je dois admettre que... vous m'avez surpris. Bien joué...}{}{}{}{}
+{87}{Merci. Pourquoi ne me dites-vous pas ce que vous pensez de cet endroit... ?}{}{5}{}{97}{}
+{89}{[Sébastien a un petit sourire narquois ; votre ruse semble ne pas avoir réussi.] Bien essayé, l'ami, mais vous ne blufferez personne ici. Je ne suis pas sûr d'apprécier le tour que prend cette conversation... Il semblerait que Monsieur Saule se soit trompé en vous dirigeant vers moi...}{[Sébastien a un petit sourire narquois ; votre ruse semble ne pas avoir réussi.] Bien essayé, l'amie, mais vous ne blufferez personne ici. Je ne suis pas sûr d'apprécier le tour que prend cette conversation... Il semblerait que Monsieur Saule se soit trompé en vous dirigeant vers moi...}{}{}{}{}
+{90}{Veuillez accepter mes excuses. J'ai hâte d'entendre ce que vous avez à me dire...}{}{5}{}{97}{}
+{91}{Hum. Il ferait mieux de vous diriger directement vers la morgue, imbécile.}{}{5}{}{}{co, fl 20}
+{92}{Cela n'aura servi qu'à me faire perdre mon temps. Au revoir.}{}{5}{}{0}{}
+{93}{[La colère brille dans ses yeux, puis fait place à la résolution.] Très bien, étranger. Peu m'importe que vous finissiez saignant comme un porc dans le caniveau. Peut-être vaut-il mieux mettre un terme à cette conversation...}{[La colère brille dans ses yeux, puis fait place à la résolution.] Très bien, étrangère. Peu m'importe que vous finissiez saignant comme un porc dans le caniveau. Peut-être vaut-il mieux mettre un terme à cette conversation...}{}{}{}{}
+{94}{Veuillez accepter mes excuses. J'ai hâte d'entendre ce que vous avez à me dire...}{}{5}{}{97}{re +5}
+{95}{Non, vous vous trompez. C'est moi qui vais vous saigner comme un porc...}{}{5}{}{}{co, fl 20}
+{96}{Oui. Bonne idée. Adieu.}{}{5}{}{0}{re -5}
+{97}{Eh bien, la Fosse est un endroit très dur. Deux gangs se partagent la place et contrôlent la plupart des activités criminelles... l'un est le clan Mauge, l'autre le clan Pilchard.}{Eh bien, la Fosse est un endroit très dur. Deux gangs se partagent la place et contrôlent la plupart des activités criminelles... l'un est le clan Mauge, l'autre le clan Pilchard.}{}{}{}{lf2 1}
+{98}{Je vois. Dites-m'en plus à leur sujet...}{}{5}{}{102}{}
+{99}{K:}{}{5}{}{36}{}
+{100}{E:}{}{5}{}{0}{}
+{102}{Eh bien, le clan Pilchard est un groupe de racailles qui contrôlent le sud de la Fosse. Le clan Mauge a ses quartiers au vieil hôtel Bentley qui se trouve au nord d'ici. Ils sont un peu plus futés que ceux du clan Pilchard, mais pas moins dangereux...}{Eh bien, le clan Pilchard est un groupe de racailles qui contrôlent le sud de la Fosse. Le clan Mauge a ses quartiers au vieil hôtel Bentley qui se trouve au nord d'ici. Ils sont un peu plus futés que ceux du clan Pilchard, mais pas moins dangereux...}{}{}{}{}
+{103}{Poursuivez.}{}{5}{}{107}{}
+{104}{E:}{}{5}{}{0}{}
+{107}{Comme vous pouvez l'imaginer, le clan Mauge et le clan Pilchard ne s'aiment pas vraiment. Les quelques accrochages qui ont eu lieu entre les membres des clans se sont toujours soldés par des morts...}{Comme vous pouvez l'imaginer, le clan Mauge et le clan Pilchard ne s'aiment pas vraiment. Les quelques accrochages qui ont eu lieu entre les membres des clans se sont toujours soldés par des morts...}{}{}{}{}
+{108}{Intéressant... Qu'est-ce que Monsieur Saule a à voir avec tout cela ?}{}{5}{}{112}{}
+{109}{E:}{}{5}{}{0}{}
+{112}{Eh bien, Monsieur Saule est un homme important dans cette ville. Son inquiétude réside dans le fait que ces " éléments " de la Fosse pourraient contaminer les meilleurs quartiers de Tarante. Et, bien sûr, il fera tout pour que cela ne se produise pas...}{Eh bien, Monsieur Saule est un homme important dans cette ville. Son inquiétude réside dans le fait que ces " éléments " de la Fosse pourraient contaminer les meilleurs quartiers de Tarante. Et, bien sûr, il fera tout pour que cela ne se produise pas...}{}{}{}{lf3 1}
+{113}{Je parie que c'est là que vous faites votre entrée ?}{}{5}{}{117}{}
+{114}{E:}{}{5}{}{0}{}
+{117}{[Sébastien affiche un sourire carnassier.] Exactement.}{[Sébastien affiche un sourire carnassier.] Exactement.}{}{}{}{}
+{118}{Hum. Tout à fait le genre de situation qui m'intéresse...}{}{5}{}{122}{}
+{119}{Bonne chance alors, Sébastien. Bonne journée...}{}{5}{}{0}{}
+{122}{[Sébastien vous regarde en plissant les yeux.] Vraiment ? Pensez-vous être de taille pour ce type de travail, l'ami ?}{[Sébastien vous regarde en plissant les yeux.] Vraiment ? Pensez-vous être de taille pour ce type de travail, l'amie ?}{}{}{}{}
+{123}{Vous voulez tester mon courage ? Je vous le déconseille...}{}{5}{}{-11}{}
+{124}{Je pense que c'est un travail pour moi...}{}{5}{}{142}{}
+{125}{Que voulez-vous dire par... " ce type de travail " ?}{}{5}{}{137}{}
+{126}{E:}{}{5}{}{0}{}
+{127}{[Il vous lance un regard dur, puis acquiesce.] Oui, vous semblez savoir vous y prendre pour éviter les affrontements. N'y voyez rien de personnel... }{[Il vous lance un regard dur, puis acquiesce.] Oui, vous semblez savoir vous y prendre pour éviter les affrontements. N'y voyez rien de personnel...}{}{}{}{}
+{128}{C'est un peu vrai. Maintenant... le travail...}{}{5}{}{142}{}
+{130}{[Sébastien rit, pas du tout impressionné.] Vous ne vous en sortirez pas avec vos belles paroles, mon garçon. Et tout particulièrement avec moi. Est-ce bien clair ?}{[Sébastien rit, pas du tout impressionné.] Vous ne vous en sortirez pas avec vos belles paroles, jeune fille. Et tout particulièrement avec moi. Est-ce bien clair ?}{}{}{}{}
+{131}{Oui, sans doute. Mais je souhaite quand même travailler avec vous...}{}{5}{}{142}{}
+{132}{Menacez-moi encore une fois et vous gagnerez votre place au cimetière...}{}{5}{}{}{co, fl 20}
+{133}{Cette conversation a assez duré. Bonne journée...}{}{5}{}{0}{}
+{137}{Vous me demandez quel type de travail ? [Sébastien vous décoche un regard dur.] Eh bien, à quel type de travail pensez-vous, l'ami ? Il y a une infestation ici dans la Fosse... quelqu'un doit s'en occuper.}{Vous me demandez quel type de travail ? [Sébastien vous décoche un regard dur.] Eh bien, à quel type de travail pensez-vous, l'amie ? Il y a une infestation ici dans la Fosse... quelqu'un doit s'en occuper.}{}{}{}{}
+{138}{Ah. Très bien, je vous écoute Sébastien.}{}{5}{}{142}{}
+{139}{Je ne pense pas que ce type de travail m'intéresse. Bonne journée...}{}{5}{}{0}{}
+{142}{Bien, bien. Ecoutez, je ne sais pas grand-chose sur vous... Monsieur Saule sait pas mal de choses sur ce qui se passe à Tarante et au-delà et il me tient régulièrement informé. Je ne sais pas exactement ce que vous recherchez, mais je peux peut-être vous aider.}{Bien, bien. Ecoutez, je ne sais pas grand-chose sur vous... Monsieur Saule sait pas mal de choses sur ce qui se passe à Tarante et au-delà et il me tient régulièrement informé. Je ne sais pas exactement ce que vous recherchez, mais je peux peut-être vous aider.}{}{}{}{}
+{143}{Que me proposez-vous, Sébastien ?}{}{5}{}{147}{}
+{147}{En fait, voilà où je veux en venir... Si vous m'aidez à résoudre mon problème ici, dans la Fosse, je serai peut-être enclin à vous aider. Qu'en pensez-vous ?}{En fait, voilà où je veux en venir... Si vous m'aidez à résoudre mon problème ici, dans la Fosse, je serai peut-être enclin à vous aider. Qu'en pensez-vous ?}{}{}{}{}
+{148}{C'est intéressant. Continuez...}{}{5}{}{157}{re +5}
+{149}{Malheureusement, je n'ai pas besoin de votre aide. Merci quand même. Au revoir...}{}{5}{}{0}{re -5}
+{157}{[Sébastien acquiesce, puis baisse la voix.] Comme vous le savez, Damien Mauge et Pilchard ont toujours régné en maîtres sur la Fosse. Je compte changer cela...}{[Sébastien acquiesce, puis baisse la voix.] Comme vous le savez, Damien Mauge et Pilchard ont toujours régné en maîtres sur la Fosse. Je compte changer cela...}{}{}{}{}
+{158}{En fait, j'ai déjà pris soin de Pilchard...}{}{5}{gf2187 1, gf2188 0}{167}{re + 5}
+{159}{En fait, j'ai déjà pris soin de Damien Mauge...}{}{5}{gf2187 0, gf2188 1}{170}{re + 5}
+{160}{Dommage, mon vieux. Mais je les ai déjà tués tous les deux...}{}{5}{gf2187 1, gf2188 1}{173}{re +10}
+{161}{Je vois. Que comptez-vous faire ?}{}{5}{gf2187 0, gf2188 0}{176}{}
+{167}{Vraiment ? C'était vous ? Je vous tire mon chapeau, monsieur. J'ai entendu parler de ce travail... plutôt salissant...}{ Vraiment ? C'était vous ? Je vous tire mon chapeau, madame. J'ai entendu parler de ce travail... plutôt salissant...}{}{}{}{}
+{168}{Merci. Alors, que comptez-vous faire ?}{}{5}{}{180}{}
+{170}{Vraiment ? C'était vous ? Je vous tire mon chapeau, monsieur. J'ai entendu parler de ce travail... plutôt salissant...}{ Vraiment ? C'était vous ? Je vous tire mon chapeau, madame. J'ai entendu parler de ce travail... plutôt salissant...}{}{}{}{}
+{171}{Merci. Alors, que comptez-vous faire ?}{}{5}{}{182}{}
+{173}{Comment ? J'étais au courant pour Pilchard, mais Mauge, c'était vous aussi ? [Sébastien semble très impressionné.] Eh bien, il semblerait que vous ayez déjà rempli une partie du contrat, mon ami...}{Comment ? J'étais au courant pour Pilchard, mais Mauge, c'était vous aussi ? [Sébastien semble très impressionné.] Eh bien, il semblerait que vous ayez déjà rempli une partie du contrat, mon amie...}{}{}{}{}
+{174}{Ce n'était rien. Et si nous parlions de vous, Sébastien ?}{}{5}{}{212}{}
+{176}{Eh bien, habituellement avec tous les affrontements qui se déroulent ici, les clans ont tendance à s'anéantir eux-mêmes. Mais ces derniers temps, on dit que le clan Mauge devient chaque jour plus puissant... ce n'est qu'une question de temps avant que Damien Mauge ne contrôle toute la Fosse... }{Eh bien, habituellement avec tous les affrontements qui se déroulent ici, les clans ont tendance à s'anéantir eux-mêmes. Mais ces derniers temps, on dit que le clan Mauge devient chaque jour plus puissant... ce n'est qu'une question de temps avant que Damien Mauge ne contrôle toute la Fosse... }{}{}{}{}
+{177}{Et alors ?}{}{5}{}{178}{}
+{178}{Si Mauge parvient à renforcer son pouvoir dans la Fosse sans rencontrer aucune opposition, qu'est-ce qui l'empêchera de corrompre le reste de la ville ? Vous me recevez, camarade ? }{Si Mauge parvient à renforcer son pouvoir dans la Fosse sans rencontrer aucune opposition, qu'est-ce qui l'empêchera de corrompre le reste de la ville ? Vous me recevez, camarade ?}{}{}{}{}
+{179}{Parfaitement. Vous voulez vous débarrasser de Mauge.}{}{5}{}{187}{}
+{180}{Eh bien, Pilchard mort, Mauge a réussi à renforcer son pouvoir dans la Fosse.  Que faire pour l'empêcher de corrompre la ville en utilisant la même méthode ? Vous me recevez, camarade ? }{Eh bien, Pilchard mort, Mauge a réussi à renforcer son pouvoir dans la Fosse.  Que faire pour l'empêcher de corrompre la ville en utilisant la même méthode ? Vous me recevez, camarade ?}{}{}{}{}
+{181}{Parfaitement. Vous voulez vous débarrasser de Mauge.}{}{5}{}{187}{}
+{182}{Eh bien, Mauge mort, Pilchard a réussi à renforcer son pouvoir dans la Fosse.  Que faire pour l'empêcher de corrompre la ville en utilisant la même méthode ? Vous me recevez, camarade ? }{Eh bien, Mauge mort, Pilchard a réussi à renforcer son pouvoir dans la Fosse.  Que faire pour l'empêcher de corrompre la ville en utilisant la même méthode ? Vous me recevez, camarade ?}{}{}{}{}
+{183}{Parfaitement. Vous voulez vous débarrasser de Pilchard.}{}{5}{}{197}{}
+{187}{Je vous propose ceci. Vous vous débarrassez de Damien Mauge pour moi et je vous aide à résoudre votre problème... quel qu'il soit...}{Oui. Je vous propose ceci. Vous vous débarrassez de Damien Mauge pour moi et je vous aide à résoudre votre problème... quel qu'il soit...}{}{}{}{qu1162 1}
+{188}{C'est d'accord.}{}{5}{}{192}{qu1162 2}
+{189}{Avez-vous perdu la tête ? Moi ! Trahir mon clan  ! Mourez, imbécile !}{}{5}{rp 1002}{}{co,fl 20}
+{190}{Hum. Intéressant... Je reviendrai vous voir après y avoir réfléchi...}{}{5}{}{}{lf4 1, fl 191}
+{191}{Oui, réfléchissez. Je suis ici si vous voulez qu'on en discute de nouveau...}{ Oui, réfléchissez. Je suis ici si vous voulez qu'on en discute de nouveau...}{}{}{}{}
+{192}{Bien. Lorsque vous aurez résolu le problème, revenez me voir, nous pourrons poursuivre notre discussion...}{Bien. Lorsque vous aurez résolu le problème, revenez me voir, nous pourrons poursuivre notre discussion...}{}{}{}{}
+{193}{E:}{}{5}{}{0}{}
+{197}{Je vous propose ceci. Vous vous débarrassez de Pilchard pour moi et je vous aide à résoudre votre problème... quel qu'il soit...}{Je vous propose ceci. Vous vous débarrassez de Pilchard pour moi et je vous aide à résoudre votre problème... quel qu'il soit...}{}{}{}{qu1161 1}
+{198}{C'est d'accord.}{}{5}{}{192}{qu1161 2}
+{199}{Avez-vous perdu la tête ? Moi ! Trahir mon clan ! Mourez, imbécile !}{}{5}{rp 1003}{}{co,fl 20}
+{200}{Hum. Intéressant... Je reviendrai vous voir après y avoir réfléchi...}{}{5}{}{}{lf4 1, fl 191}
+{202}{Eh bien, bonne chance à vous...  Revenez ici une fois que vous aurez terminé... }{Eh bien, bonne chance à vous.  Revenez ici une fois que vous aurez terminé...}{}{}{}{}
+{203}{E:}{}{5}{}{0}{}
+{207}{Oui... j'en ai entendu parler. Bien joué.}{Oui.. j'en ai entendu parler. Bien joué.}{}{}{}{qu1161 4}
+{208}{Alors... vous vous disiez prêt à m'aider ?}{}{5}{}{212}{}
+{209}{Oui... j'en ai entendu parler. Bien joué.}{Oui.. j'en ai entendu parler. Bien joué.}{}{}{}{qu1162 4}
+{210}{Alors... vous vous disiez prêt à m'aider ?}{}{5}{}{212}{}
+{212}{Oui... vous m'avez l'air de quelqu'un d'efficace. Dans quoi êtes-vous impliqué ?}{Oui... vous m'avez l'air de quelqu'un d'efficace. Dans quoi êtes-vous impliquée ?}{}{}{}{lf6 1}
+{213}{C'est une longue histoire... [Vous la lui racontez.]}{}{5}{}{222}{}
+{214}{Je regrette, je ne peux rien dire... Mais j'attends de vous que vous honoriez votre engagement...}{}{5}{}{217}{}
+{215}{Nous parlerons de tout cela plus tard... Bonne journée...}{}{5}{}{0}{}
+{217}{[Il secoue la tête, puis regarde sa bière.] Je regrette, l'ami. Quelle que soit la situation, je ne m'engage jamais sans savoir où je vais. Si vous vous entêtez à ne pas parler, vous poursuivrez tout seul... }{[Il secoue la tête, puis regarde sa bière.] Je regrette, l'amie. Quelle que soit la situation, je ne m'engage jamais sans savoir où je vais. Si vous vous entêtez à ne pas parler, vous poursuivrez toute seule... }{}{}{}{}
+{218}{D'accord. C'est une longue histoire... [Vous la lui racontez.]}{}{5}{}{222}{}
+{219}{Oubliez ça. Ca ne faisait pas partie du marché. Bonne journée à vous.}{}{5}{}{0}{}
+{220}{Nous parlerons de tout cela plus tard... Bonne journée...}{}{5}{}{0}{}
+{222}{[Il attend un instant avant de poursuivre.] Donc. Vous êtes en train de me dire que tout cela est arrivé simplement parce que vous êtes le seul survivant de l'accident du Zéphyr ?}{[Il attend un instant avant de poursuivre.] Donc. Vous êtes en train de me dire que tout cela est arrivé simplement parce que vous êtes la seule survivante de l'accident du Zéphyr ?}{}{}{}{}
+{223}{Oui.}{}{5}{}{232}{}
+{224}{Non... mais c'était une bonne blague, n'est-ce pas mon vieux ?}{}{5}{}{227}{}
+{225}{E:}{}{5}{}{0}{}
+{227}{[Sébastien a l'air troublé.] Hum. Votre histoire me semble invraisemblable, l'ami. Peut-être vaudrait-il mieux que nous allions chacun de notre côté...}{[Sébastien a l'air troublé.] Hum. Votre histoire me semble invraisemblable, l'amie. Peut-être vaudrait-il mieux que nous allions chacun de notre côté...}{}{}{}{}
+{228}{E:}{}{5}{}{0}{}
+{232}{Eh bien, je ne suis peut-être pas un héros, mais j'aime me battre. Vous me semblez digne de confiance et je suis tout disposé à vous prêter main-forte.. }{Eh bien, je ne suis peut-être pas un héros, mais j'aime me battre. Vous me semblez digne de confiance et je suis tout disposé à vous prêter main-forte...}{}{}{}{}
+{233}{Alors, voulez-vous vous joindre à moi ?}{}{5}{}{242}{jo 0 237}
+{237}{Certainement, l'ami. Allons-y...}{Certainement, l'amie. Allons-y...}{}{}{}{}
+{238}{Bienvenue à bord, Sébastien.}{}{5}{}{0}{}
+{242}{Y avait-il autre chose ?}{Y avait-il autre chose ?}{}{}{}{lf7 1}
+{243}{K:}{}{5}{}{36}{}
+{244}{E:}{}{5}{}{0}{}
+{256}{Que puis-je faire pour vous ?}{Que puis-je faire pour vous ?}{}{}{}{}
+{257}{B:}{}{5}{wa 0}{}{}
+{258}{J'ai quelques questions à vous poser, Sébastien...}{}{5}{wa 0}{264}{}
+{259}{J'aimerais que vous fassiez quelque chose pour moi, Sébastien...}{}{5}{wa 0}{354}{}
+{260}{Que savez-vous faire, Sébastien ?}{}{5}{wa 0}{}{su}
+{261}{Vous n'avez plus besoin d'attendre, Sébastien...}{}{5}{wa 1}{376}{uw 0 362}
+{262}{E:}{}{5}{}{0}{}
+{263}{Euh...}{}{-4}{}{}{fl 550}
+{264}{Que désirez-vous savoir ?}{Que désirez-vous savoir ?}{}{}{}{}
+{265}{J'aimerais connaître deux ou trois choses à votre sujet, Sébastien...}{}{5}{}{}{ce}
+{266}{Sébastien, que pouvez-vous me dire sur l'île de Thanatos ?}{}{5}{ss 17, ss -17}{541}{}
+{267}{Sébastien ! Qu'allons-nous faire maintenant ?}{}{5}{ss 24, ss -24}{545}{}
+{268}{Que savez-vous sur cet endroit ? [Tristes Collines.]}{}{5}{ia 1}{388}{}
+{269}{Que savez-vous sur cet endroit ? [Tarante.]}{}{5}{ia 21}{392}{}
+{270}{Que savez-vous sur cet endroit ? [Racine Noire.]}{}{5}{ia 3}{396}{}
+{271}{Que savez-vous sur cet endroit ? [Eaux Dormantes.]}{}{5}{ia 10}{400}{}
+{272}{Que savez-vous sur cet endroit ? [Thanatos.]}{}{5}{ia 23}{405}{}
+{273}{Vous avez l'air fâché contre moi, Sébastien ! Y a-t-il quelque chose que je puisse faire pour vous ?}{}{5}{re -20}{330}{}
+{274}{E:}{}{5}{}{0}{}
+{330}{La tournure des événements ne me satisfait pas vraiment, l'ami. Bien sûr, noyer ses problèmes dans le vin pourrait être une solution... }{La tournure des événements ne me satisfait pas vraiment, l'amie. Bien sûr, noyer ses problèmes dans le vin pourrait être une solution... }{}{}{}{}
+{331}{Allons, Sébastien... est-ce vraiment nécessaire ?}{}{5}{ch 20}{336}{re +20}
+{332}{Je vois. J'en ai justement ici...}{}{5}{in 3608, ch -19}{-17}{re +20}
+{333}{Je vais essayer de vous en trouver, Sébastien...}{}{5}{in -3608, ch -19}{344}{}
+{334}{Oh, nos rêves sont parfois tellement idiots ! Partons, voulez-vous ?}{}{5}{}{}{re -5, fl 346}
+{336}{[Sébastien vous lance un regard malicieux, puis sourit.] Hum. Je ne vais peut-être pas être raisonnable cette fois-ci. Oubliez ce que je viens de dire...}{[Sébastien vous lance un regard malicieux, puis sourit.] Hum. Je ne vais peut-être pas être raisonnable cette fois-ci. Oubliez ce que je viens de dire...}{}{}{}{}
+{337}{E:}{}{5}{}{0}{}
+{338}{[Il prend la bouteille et la vide d'un trait.] Ah. Continuons, voulez-vous ?}{[Il prend la bouteille et la vide d'un trait.] Ah. Continuons, voulez-vous ?}{}{}{}{}
+{339}{Vous joindrez vous à moi cette fois encore, Sébastien ?}{}{5}{}{376}{jo 0 378}
+{340}{E:}{}{5}{}{0}{}
+{344}{Le plus tôt sera le mieux, l'ami... }{Le plus tôt sera le mieux, l'amie...}{}{}{}{}
+{345}{E:}{}{5}{}{0}{}
+{346}{Je vois. Nous avons tous des choix à faire, l'ami...}{Je vois. Nous avons tous des choix à faire, l'amie...}{}{}{}{}
+{354}{Que voulez-vous que je fasse ?}{Que voulez-vous que je fasse ?}{}{}{}{}
+{355}{Allez-vous-en, Sébastien.}{}{5}{}{0}{so}
+{356}{Rapprochez-vous un peu, Sébastien.}{}{5}{}{0}{sc}
+{357}{Attendez ici quelques temps...}{}{5}{wa 0}{365}{wa}
+{358}{Vous n'avez plus besoin d'attendre, Sébastien.}{}{5}{wa 1}{376}{uw 0 362}
+{359}{Je pense qu'il vaudrait mieux que vous quittiez le groupe.}{}{5}{}{368}{lv}
+{360}{[Retour]}{}{5}{}{256}{}
+{362}{Continuons...}{Continuons...}{}{}{}{}
+{363}{E:}{}{5}{}{0}{}
+{365}{Je vous attendrai ici quelques temps, mais ne tardez pas trop... }{Je vous attendrai ici quelques temps, mais ne tardez pas trop...}{}{}{}{}
+{366}{E:}{}{5}{}{0}{}
+{368}{Je vois. Eh bien, bonne chance à vous.}{Je vois. Eh bien, bonne chance à vous.}{}{}{}{lf31 1}
+{369}{E:}{}{5}{}{0}{}
+{371}{Salutations, l'ami. Qu'est-ce qui vous amène ici à nouveau ?}{Salutations, l'amie. Qu'est-ce qui vous amène ici à nouveau ?}{}{}{}{}
+{372}{Voulez-vous vous joindre à moi ?}{}{5}{}{376}{jo 0 378}
+{373}{Vous avez l'air fâché contre moi, Sébastien ! Y a-t-il quelque chose que je puisse faire pour vous ?}{}{5}{re -20}{330}{}
+{374}{E:}{}{5}{}{0}{}
+{375}{Euh...}{}{-4}{}{}{fl 550}
+{376}{Y avait-il autre chose ?}{Y avait-il autre chose ?}{}{}{}{}
+{377}{E:}{}{5}{}{0}{}
+{378}{Oui, ça me semble être une bonne idée. Allons-y...}{Oui, ça me semble être une bonne idée. Allons-y...}{}{}{}{lf31 0}
+{379}{E:}{}{5}{}{0}{}
+{381}{Hum. Vous m'avez fait attendre longtemps, vous ne trouvez pas ?}{Hum. Vous m'avez fait attendre longtemps, vous ne trouvez pas ?}{}{}{}{}
+{382}{Je regrette Sébastien. Voulez-vous vous joindre à nous une fois encore ?}{}{5}{}{376}{jo 0 386}
+{383}{Vous avez l'air fâché contre moi, Sébastien ! Y a-t-il quelque chose que je puisse faire pour vous ?}{}{5}{re -20}{330}{}
+{384}{E:}{}{5}{}{0}{}
+{385}{Euh...}{}{-4}{}{}{fl 550}
+{386}{Oui, je pense que je suis prêt...}{Oui, je pense que je suis prêt...}{}{}{}{}
+{387}{E:}{}{1}{}{0}{}
+{388}{Tristes Collines... une petite ville minière... Autant que je sache, il ne se passe pas grand-chose ici...}{Tristes Collines... une petite ville minière... Autant que je sache, il ne se passe pas grand-chose ici...}{}{}{}{}
+{389}{K:}{}{1}{}{256}{}
+{390}{E:}{}{1}{}{0}{}
+{392}{Voici Tarante ! Cette ville dispose d'à peu près tout ce dont vous pouvez avoir besoin... c'est un lieu intéressant pour un technologiste. [Sébastien sourit d'un air sombre.] En outre, le travail ne manque pas pour qui n'a pas peur de se salir les mains...}{Voici Tarante ! Cette ville dispose d'à peu près tout ce dont vous pouvez avoir besoin... c'est un lieu intéressant pour une technologiste. [Sébastien sourit d'un air sombre.] En outre, le travail ne manque pour qui n'a pas peur de se salir les mains...}{}{}{}{}
+{393}{K:}{}{1}{}{256}{}
+{394}{E:}{}{1}{}{0}{}
+{396}{Voici Racine Noire ! Prenez garde... cet endroit est peuplé de marins ivres qui n'ont rien d'autre à faire que chercher des crosses. Si vous voulez glaner des informations, allez au Vieux Loup de Mer, dans le quartier des Docks, c'est un bon endroit pour commencer...}{Voici Racine Noire ! Prenez garde... cet endroit est peuplé de marins ivres qui n'ont rien d'autre à faire que chercher des crosses. Si vous voulez glaner des informations, allez au Vieux Loup de Mer, dans le quartier des Docks, c'est un bon endroit pour commencer...}{}{}{}{}
+{397}{K:}{}{1}{}{256}{}
+{398}{E:}{}{1}{}{0}{}
+{400}{Eaux Dormantes ? Ils fabriquent de bonnes armes par ici... C'est tout ce que je sais. Et un homme comme moi est toujours à l'affût d'une bonne arme...}{Eaux Dormantes ? Ils fabriquent de bonnes armes par ici... C'est tout ce que je sais. Et une homme comme moi est toujours à l'affût d'une bonne arme...}{}{}{}{}
+{401}{K:}{}{1}{}{256}{}
+{402}{E:}{}{1}{}{0}{}
+{405}{Ce que je sais au sujet de Thanatos ? A peu près tout ce qu'il y a à en savoir, mon vieux. Des territoires inexplorés, des créatures diaboliques qui dévorent les humains, plus de mythes et de légendes qu'un foutu historien elfe pourrait en raconter ! Ha, ha ! C'est l'endroit que je rêve de visiter !}{Ce que je sais au sujet de Thanatos ? A peu près tout ce qu'il y a à en savoir, ma petite dame. Des territoires inexplorés, des créatures diaboliques qui dévorent les humains, plus de mythes et de légendes qu'un foutu historien elfe pourrait en raconter ! Ha, ha ! C'est l'endroit que je rêve de visiter !}{}{}{}{}
+{406}{K:}{}{1}{}{256}{}
+{407}{E:}{}{1}{}{0}{}
+{541}{Thanatos ? Peu de choses, hormis que c'est supposé être le lieu le plus dangereux qui soit. Je ne suis pas de ceux qu'on effraie facilement, mais je ne tiens pas particulièrement à le visiter...}{Thanatos ? Peu de choses, hormis que c'est supposé être le lieu le plus dangereux qui soit. Je ne suis pas de ceux qu'on effraie facilement, mais je ne tiens pas particulièrement à le visiter...}{}{}{}{}
+{542}{Encore une ou deux choses...}{}{5}{}{256}{}
+{543}{E:}{}{1}{}{0}{}
+{545}{Qu'allons-nous faire ? Mettons fin à ce petit jeu, éteignons l'ordinateur et allons nous coucher ! Vous avez de ces idées parfois !}{Qu'allons-nous faire ? Mettons fin à ce petit jeu, éteignons l'ordinateur et allons nous coucher ! Vous avez de ces idées parfois !}{}{}{}{}
+{546}{Encore une ou deux choses...}{}{5}{}{256}{}
+{547}{E:}{}{1}{}{0}{}
+{550}{[Sébastien vous lance un regard courroucé, désapprouvant votre état d'esprit.]}{[Sébastien vous lance un regard courroucé, désapprouvant votre état d'esprit.]}{}{}{}{}
+

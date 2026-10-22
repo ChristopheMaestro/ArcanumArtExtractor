@@ -1,0 +1,61 @@
+{1}{[Cet étrange vieil homme s'adresse à vous en grognant.] Quoi, qu'est-ce que vous voulez ?}{Quoi, qu'est-ce que vous voulez ?}{}{}{}{ }
+{2}{Euh... Puis-je vous demander votre nom, monsieur ?}{}{5}{lf1 0}{10}{lf1 1 }
+{3}{Votre ton ne me plaît guère.}{}{5}{lf1 0}{70}{lf1 1, re-5 }
+{4}{W:}{}{-4}{}{0}{fl 90}
+{5}{Archibald ? Gladys m'a demandé de vous interroger au sujet d'un anneau...}{}{5}{lf1 1, gf2620 1, lf10 0}{60}{lf10 1 }
+{9}{E:}{}{1}{}{0}{ }
+{10}{Je m'appelle Archibald. Et alors ?}{Je m'appelle Archibald. Et alors ?}{}{}{}{ }
+{11}{C'est Gladys qui m'envoie. Elle pense que vous pouvez savoir quelque chose au sujet d'un anneau.}{}{5}{gf2620 1}{60}{ }
+{19}{Rien, juste une visite de courtoisie. Bonne journée.}{}{5}{}{0}{ }
+{20}{[Il vous regarde, ne sachant pas s'il a bien entendu.] J'aurais encore pu vous croire il y a quelque temps, mais plus aujourd'hui. Voyons, regardez-moi.}{[Il vous regarde, ne sachant pas s'il a bien entendu.] J'aurais encore pu vous croire il y a quelque temps, mais plus aujourd'hui. Voyons, regardez-moi.}{}{}{}{ }
+{21}{Elle m'a confié que vous ne lui étiez pas indifférent.}{}{5}{}{30}{ }
+{22}{Vous avez raison, vous êtes assez dégoûtant à regarder.}{}{5}{}{0}{fl 161 ,co}
+{23}{Allez, vous êtes encore un beau gars !}{}{5}{}{140}{re-5 }
+{30}{Honnêtement ? Vous pensez qu'elle me... parlerait si je lui rendais l'anneau ?}{Honnêtement ? Vous pensez qu'elle me... parlerait si je lui rendais l'anneau ?}{}{}{}{ }
+{32}{Probablement pas, vous êtes tellement stupide. }{}{5}{}{0}{fl 161 ,co}
+{33}{Il me semble évident qu'elle voudra vous témoigner sa... " gratitude ".}{}{5}{}{40}{ }
+{40}{Voudriez-vous lui rendre l'anneau et lui dire que j'aimerais lui parler ?}{Voudriez-vous lui rendre l'anneau et lui dire que j'aimerais lui parler ?}{}{}{}{ }
+{41}{Je pourrais me laisser convaincre, moyennant une petite rémunération.}{}{5}{ps8}{50}{ }
+{42}{Avec grand plaisir.}{}{5}{}{0}{in-2801, gf1001 1 }
+{43}{Je pourrais me laisser convaincre, moyennant une petite rémunération.}{}{5}{ps-7}{170}{re-5 }
+{50}{Je n'ai pas grand-chose, mais je pourrais vous offrir 50 pièces.}{Je n'ai pas grand-chose, mais je pourrais vous offrir 50 pièces.}{}{}{}{ }
+{51}{L'affaire est faite, camarade.}{}{5}{}{0}{$$50, in-2801, gf1001 1 }
+{52}{Je ne peux accepter votre argent, je le ferai pour rien.}{}{5}{}{0}{al+50 , in-2801, gf1001 1 }
+{53}{50 pièces ? Pour cette somme, je n'accepterais même pas de vous cracher dessus !}{}{5}{}{0}{fl 161 ,co}
+{60}{Gladys ?! Dites à cette vieille sorcière que je ne lui rendrai jamais son anneau ! Jamais ! Si vous revenez dans le coin, mon fils Bernard vous donnera une bonne correction !}{Gladys ?! Dites à cette vieille sorcière que je ne lui rendrai jamais son anneau ! Jamais ! Si vous revenez dans le coin, mon fils Bernard vous donnera une bonne correction !}{}{}{}{gf2618 1 }
+{61}{Je ne peux croire que vous seriez aussi cruel envers une vieille dame, monsieur !}{}{5}{}{80}{re-5 }
+{62}{Vous allez me donner l'anneau ou je vous réduis en charpie !}{}{5}{}{80}{re-10 }
+{70}{Ah ouais ? Eh bien, Archibald J. Sloane se fiche pas mal de savoir ce que vous aimez ou pas !}{Ah ouais ? Eh bien, Archibald J. Sloane se fiche de savoir ce que vous aimez ou pas !}{}{}{}{ }
+{71}{Etes-vous Archibald ? C'est Gladys qui m'envoie.}{}{5}{gf2620 1}{60}{ }
+{72}{Monsieur ! Je demande réparation pour cette insulte ! [Vous le frappez.]}{}{5}{}{0}{fl 161 ,co}
+{79}{Je vois. Veuillez pardonner cette intrusion.}{}{5}{}{0}{ }
+{80}{Vous allez quitter de ce pas ma demeure ou j'appelle mon fils Bernard ! Vous m'entendez ?}{Vous allez quitter de ce pas ma demeure ou j'appelle mon fils Bernard ! Vous m'entendez ?}{}{}{}{ }
+{81}{Vous serez mort avant qu'il n'arrive !}{}{5}{}{0}{gf2618 0, fl 161 ,co}
+{89}{Très bien, je m'en vais.}{}{5}{}{0}{ }
+{90}{Je n'ai nulle envie de m'entendre avec vous, imbécile ! Fichez-moi la paix !}{Je n'ai nulle envie de m'entendre avec vous, imbécile ! Fichez-moi la paix !}{}{}{}{ }
+{100}{Oh ! C'est vous. Qu'est-ce que vous voulez maintenant ? Est-ce la vieille sorcière qui vous renvoie ici ?}{Oh ! C'est vous. Qu'est-ce que vous voulez maintenant ? Est-ce la vieille sorcière qui vous renvoie ici ?}{}{}{}{ }
+{101}{Non. J'ai eu une petite conversation avec votre fils...}{}{5}{lf3 0}{110}{ }
+{102}{J'ai décidé de rapporter l'anneau à Gladys et ce, gratuitement.}{}{5}{lf3 1}{0}{re+5, in-2801, gf1001 1, fl 180}
+{109}{E:}{}{5}{}{0}{ }
+{110}{[Il semble triste.] Qu'est-ce que ce jeune écervelé vous a raconté ? Il est incapable de tenir sa langue.}{[Il semble triste.] Qu'est-ce que ce jeune écervelé vous a raconté ? Il est incapable de tenir sa langue !}{}{}{}{ }
+{111}{Je sais ce qui se passe entre vous et Gladys.}{}{5}{}{120}{ }
+{120}{Q... quoi ?! Qu'insinuez-vous ? Je ne veux rien avoir à faire avec elle, je vous l'affirme !}{Q... quoi ?! Qu'insinuez-vous ? Je ne veux rien avoir à faire avec elle, je vous l'affirme !}{}{}{}{ }
+{121}{Je pense que vous plaisez à Gladys.}{}{5}{ps4}{20}{re+5 }
+{122}{Je pense que vous plaisez à Gladys.}{}{5}{ps-3}{0}{re-5, fl 130}
+{123}{Elle est plutôt déplaisante à regarder, n'est-ce pas ?}{}{5}{}{0}{re-5, fl 160}
+{130}{[Il réfléchit un instant puis répond en grognant.] Absurde ! Je ne vous laisserai pas débiter vos âneries dans ma propre demeure ! Sortez ! Et dites à cette sorcière qu'elle ne reverra jamais son anneau ! Jamais !}{[Il réfléchit un instant puis répond en grognant.] Absurde ! Je ne vous laisserai pas débiter vos âneries dans ma propre demeure ! Sortez ! Et dites à cette sorcière qu'elle ne reverra jamais son anneau ! Jamais !}{}{}{}{ }
+{140}{Comment osez-vous vous moquer de moi ! Je sais de quoi j'ai l'air ! Me prenez-vous pour un imbécile ?!}{Comment osez-vous vous moquer de moi ! Je sais de quoi j'ai l'air ! Me prenez-vous pour un imbécile ?!}{}{}{}{ }
+{141}{Je ne fais que rapporter ses propos.}{}{5}{}{0}{re-5, fl 130}
+{142}{Toutes mes excuses. Je pense que vous êtes trop dur avec vous-même...}{}{5}{}{150}{ }
+{150}{Je suppose que je suis devenu trop revêche. Je crois que j'ai vécu seul trop longtemps. Mon fils essaye parfois de m'aider à sortir de ma solitude, mais j'ai perdu l'habitude de parler aux gens...}{Je suppose que je suis devenu trop revêche. Je crois que j'ai vécu seul trop longtemps. Mon fils essaye parfois de m'aider à sortir de ma solitude, mais j'ai perdu l'habitude de parler aux gens...}{}{}{}{ }
+{151}{Il me semble évident que Gladys veut être votre amie.}{}{5}{}{40}{ }
+{152}{Vous m'ennuyez, monsieur. Je ne vous ai pas demandé de me raconter votre vie...}{}{5}{}{0}{fl 161 ,co}
+{160}{Comment osez-vous parler ainsi de cette charmante... euh... fichez-moi la paix ! Je ne veux plus vous parler !}{Comment osez-vous parler ainsi de cette charmante... euh... fichez-moi la paix ! Je ne veux plus vous parler !}{}{}{}{ }
+{161}{Meurs, sauvage !}{Meurs, sauvage !}{}{}{}{ }
+{162}{Merci de m'avoir offert votre aide pour régler cette affaire d'anneau.}{Merci de m'avoir offert votre aide pour régler cette affaire d'anneau.}{}{}{}{ }
+{170}{Fichez le camp d'ici, maudite crapule ! S'en prendre ainsi aux pauvres vieux !}{Fichez le camp d'ici, maudite crapule ! S'en prendre ainsi aux pauvres vieux !}{}{}{}{ }
+{171}{Excusez-moi. Je lui rapporterai l'anneau et ce, gratuitement.}{}{5}{}{0}{re+5, in-2801, gf1001 1, fl 180}
+{172}{Monsieur ! Je demande réparation pour cette insulte ! [Vous le frappez.]}{}{5}{}{0}{fl 161 ,co}
+{179}{Si c'est comme ça que vous le prenez, je m'en vais.}{}{5}{}{0}{lf3 1 }
+{180}{Merci. Excusez-moi de m'être montré aussi désagréable avec vous. Voici l'anneau et, s'il vous plaît, transmettez-lui mes amitiés...}{Merci. Excusez-moi de m'être montré aussi désagréable avec vous. Voici l'anneau et, s'il vous plaît, transmettez-lui mes amitiés...}{}{}{}{ }
+

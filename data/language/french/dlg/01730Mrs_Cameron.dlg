@@ -1,0 +1,171 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Re-bonjour, Madame Camargue. Puis-je vous poser quelques questions ?}{}{5}{lf1 1, re 41}{24}{}
+{3}{Veuillez m'excuser de vous avoir offensée. Pardonnez-moi. Puis-je vous demander votre nom ?}{}{5}{lf1 1, re -40}{19}{}
+{4}{Quelle joie de vous rencontrer, chère madame. Puis-je vous demander votre nom ?}{}{5}{lf1 0, re 41}{19}{}
+{5}{Je ne voulais pas vous offenser, Madame Camargue. J'ai quelques questions...}{}{5}{lf1 0, re -40}{35}{}
+{6}{Je vais essayer de trouver votre fils, Madame Camargue.}{}{5}{qu1119 1}{85}{}
+{7}{Je n'ai pas encore trouvé Lambert, Madame Camargue.}{}{5}{qu1119 2}{93}{}
+{8}{J'ai des nouvelles de Lambert, Madame Camargue.}{}{5}{qu1119 3}{97}{}
+{9}{J'ai détruit le portail.}{}{5}{qu1119 4, qu1120 4}{169}{}
+{10}{'jour M'dame Camargue. Moi demander vous kék'chose ?}{}{-4}{lf1 1, re 41}{24}{}
+{11}{Moi triste vous pas aimer moi... Vous dire moi qui vous être ?}{}{-4}{lf1 1, re -40}{19}{}
+{12}{'jour, m'dame ! Quoi être votre nom ?}{}{-4}{lf1 0, re 41}{19}{}
+{13}{Moi triste vous pas bien, m'dame. Moi demander vous kék'chose ?}{}{-4}{lf1 0, re -40}{35}{}
+{14}{Moi aller chercher Lambert.}{}{-4}{qu1119 1}{85}{}
+{15}{Moi pas encore avoir trouvé Lambert, M'dame Camargue.}{}{-4}{qu1119 2}{93}{}
+{16}{Moi parler à vous de Lambert ?}{}{-4}{qu1119 3}{97}{}
+{17}{J'ai détruit le portail.}{}{-4}{qu1119 4, qu1120 4, lf5 0}{169}{}
+{18}{E:}{}{1}{}{0}{}
+{19}{Je suis Madame Camargue, étranger. Vous semblez avoir beaucoup voyagé. Dites-moi... Avez-vous vu mon fils ?}{Je suis Madame Camargue, étrangère. Vous semblez avoir beaucoup voyagé. Dites-moi... Avez-vous vu mon fils ?}{}{}{}{lf1 1}
+{20}{Votre fils ? Qui est votre fils ?}{}{5}{}{60}{}
+{21}{Fils à vous ? Moi pas savoir qui être fils à vous...}{}{-4}{}{60}{}
+{22}{E:}{}{1}{}{0}{}
+{23}{A l'aide ! Gardes ! A l'aide ! A l'aide !}{A l'aide ! Gardes ! A l'aide ! A l'aide !}{}{}{}{}
+{24}{En quoi puis-je vous être utile ?}{En quoi puis-je vous être utile ?}{}{}{}{}
+{25}{Parlez-moi de votre fils...}{}{5}{qu1119 0}{60}{}
+{26}{Pouvez-vous me former pour atteindre le grade d'expert en réparation ?}{}{5}{tr12 1, tr12 -1, sk12 10}{46}{}
+{27}{Comment êtes-vous devenue aussi douée en réparation ?}{}{5}{qu1119 1, lf2 0}{56}{}
+{28}{Moi vouloir savoir choses sur fils à vous...}{}{-4}{qu1119 0}{60}{}
+{29}{Moi vouloir devenir expert réparation. Vous entraîner moi ?}{}{-4}{tr12 1, tr12 -1, sk12 10}{46}{}
+{30}{Comment vous bien réparer choses ?}{}{-4}{qu1119 1, lf2 0}{56}{}
+{31}{Pouvez-vous effectuer une réparation pour moi ?}{}{5}{}{0}{ri}
+{32}{Vous réparer choses pour moi ?}{}{-4}{}{0}{ri}
+{33}{C:}{}{1}{}{35}{}
+{34}{E:}{}{1}{}{0}{}
+{35}{Naturellement. En quoi d'autre puis-je vous être utile ?}{Naturellement. En quoi d'autre puis-je vous être utile}{}{}{}{}
+{36}{Parlez-moi de votre fils...}{}{5}{qu1119 0}{60}{}
+{37}{Pouvez-vous me former pour atteindre le grade d'expert en réparation ?}{}{5}{tr12 1, tr12 -1, sk12 10}{46}{}
+{38}{Comment êtes-vous devenue aussi douée en réparation ?}{}{5}{qu1119 1, lf2 0}{56}{}
+{39}{Moi vouloir savoir choses sur fils à vous...}{}{-4}{qu1119 0}{60}{}
+{40}{Moi vouloir devenir expert réparation. Vous entraîner moi ?}{}{-4}{tr12 1, tr12 -1, sk12 10}{46}{}
+{41}{Comment vous bien réparer choses ?}{}{-4}{qu1119 1, lf2 0}{56}{}
+{42}{Pouvez-vous effectuer une réparation pour moi ?}{}{5}{}{0}{ri}
+{43}{Vous réparer choses pour moi ?}{}{-4}{}{0}{ri}
+{44}{C:}{}{1}{}{35}{}
+{45}{E:}{}{1}{}{0}{}
+{46}{Oui, bien entendu. Je demande 500 pièces pour ce travail.}{Oui, bien entendu. Je demande 500 pièces pour ce travail.}{}{}{}{}
+{47}{Tenez.}{}{5}{$$ 500}{52}{$$ -500}
+{48}{C'est un peu trop cher pour moi. Je reviendrai plus tard.}{}{5}{$$ -500}{35}{}
+{49}{Tenez. Moi avoir argent.}{}{-4}{$$ 500}{52}{$$ -500}
+{50}{Oh. Beaucoup argent ça être. Moi amasser plus d'argent.}{}{-4}{$$ -500}{35}{}
+{51}{E:}{}{1}{}{0}{}
+{52}{Merci, monsieur. Vous voici désormais expert dans l'art de la réparation. Si vous voulez accéder au rang de maître, il vous faut aller voir Jérôme Maxime. Il vit à Caladon. Son usine se trouve juste avant l'entrée de la cité.}{Merci, madame. Vous voici désormais expert dans l'art de la réparation. Si vous voulez accéder au rang de maître, il vous faut aller voir Jérôme Maxime. Il vit à Caladon. Son usine se trouve juste avant l'entrée de la cité.}{}{}{}{tr12 2, ru 2171}
+{53}{Merci, Madame Camargue. Puis-je vous poser une autre question ?}{}{5}{}{35}{}
+{54}{Marsi, M'dame Camargue. Moi demander autre question ?}{}{-4}{}{35}{}
+{55}{E:}{}{1}{}{0}{}
+{56}{Feu mon époux, puisse-t-il reposer en paix, ne cessait de bricoler ceci ou cela. Il avait une petite boutique de réparation et, après sa mort, j'ai pris sa succession pendant quelque temps. Il semble qu'à force de l'observer toutes ces années, j'ai pris le tour de main pour ce genre de choses.}{Feu mon époux, puisse-t-il reposer en paix, ne cessait de bricoler ceci ou cela. Il avait une petite boutique de réparation et, après sa mort, j'ai pris sa succession pendant quelque temps. Il semble qu'à force de l'observer toutes ces années, j'ai pris le tour de main pour ce genre de choses.}{}{}{}{lf2 1}
+{57}{Oui. Vous en savez beaucoup sur l'art de réparer les choses. Une autre question ?}{}{5}{}{35}{}
+{58}{Ouais. Vous savoir beaucoup. Moi demander autre question ?}{}{-4}{}{35}{}
+{59}{E:}{}{1}{}{0}{}
+{60}{Lambert. Mon fils, Lambert Camargue, l'inventeur. Cela fait presque deux mois que je ne l'ai pas vu. Cela ne lui ressemble pas... Je me demandais si vous étiez passé par son atelier au cours de vos voyages ?}{Lambert. Mon fils, Lambert Camargue, l'inventeur. Cela fait presque deux mois que je ne l'ai pas vu. Cela ne lui ressemble pas... Je me demandais si vous étiez passée par son atelier au cours de vos voyages ?}{}{}{}{}
+{61}{Son atelier ? Je crains que cette route n'ait pas été la mienne.}{}{5}{ni5240}{68}{}
+{62}{Oh ! Ainsi, vous êtes la mère de Lambert... J'ai son journal...}{}{5}{in5240, gf2316 0}{155}{qu1119 1}
+{63}{Oh ! C'est bien triste, madame, mais je crains qu'il ne soit mort... J'ai son journal...}{}{5}{in5240, gf2316 1}{159}{qu1119 1}
+{64}{A Telier ? Non. Moi pas voir à Telier...}{}{-4}{ni5240}{68}{}
+{65}{Oh ! Vous mère à lui. Moi avoir journal où lui écrire...}{}{-4}{in5240, gf2316 0}{155}{qu1119 1}
+{66}{Oh ! Moi chagrin. Vous triste. Moi avoir livre à lui...}{}{-4}{in5240, gf2316 1}{159}{qu1119 1}
+{67}{E:}{}{1}{}{0}{}
+{68}{C'est un bricoleur, comme l'était son père. Toujours le nez dans les réparations. Pour ne pas être dérangé, il s'est construit un atelier dans les bois, à environ trois jours d'ici.}{C'est un bricoleur, comme l'était son père. Toujours le nez dans les réparations. Pour ne pas être dérangé, il s'est construit un atelier dans les bois, à environ trois jours d'ici.}{}{}{}{}
+{69}{Et il a disparu ?}{}{5}{}{73}{}
+{70}{Et vous ne l'avez pas vu depuis quelque temps ?}{}{5}{}{73}{}
+{71}{Pourquoi vous chercher lui ?}{}{-4}{}{73}{}
+{72}{E:}{}{1}{}{0}{}
+{73}{Il a l'habitude de venir ici une fois par mois, pour me rendre visite et faire des provisions... Cela fait bientôt deux mois que je n'ai toujours pas de nouvelles de lui. Avec toutes ces choses étranges qui se produisent dans les bois, je suis très inquiète.}{Il a l'habitude de venir ici une fois par mois, pour me rendre visite et faire des provisions... Cela fait bientôt deux mois que je n'ai toujours pas de nouvelles de lui. Avec toutes ces choses étranges qui se produisent dans les bois, je suis très inquiète.}{}{}{}{}
+{74}{Choses étranges ?}{}{5}{}{79}{}
+{75}{Je comprends pourquoi vous êtes inquiète. Voudriez-vous que je parte à sa recherche ?}{}{5}{}{85}{qu1119 1}
+{76}{Choses étranges ?}{}{-4}{}{79}{}
+{77}{Moi comprendre pourquoi vous inquiète. Vous vouloir moi trouver lui ?}{}{-4}{}{85}{qu1119 1}
+{78}{E:}{}{1}{}{0}{}
+{79}{Mais oui ! On a aperçu d'étranges bêtes dans les bois. Des bêtes toutes différentes et pas qu'une seule fois. Deux citadins ont même été tués.  C'est assez inquiétant. J'espérais tant que vous auriez des nouvelles de Lambert !}{Mais oui ! On a aperçu d'étranges bêtes dans les bois. Des bêtes toutes différentes et pas qu'une seule fois. Deux citadins ont même été tués.  C'est assez inquiétant. J'espérais tant que vous auriez des nouvelles de Lambert !}{}{}{}{qu1119 1}
+{80}{Voudriez-vous que j'essaie de le retrouver ?}{}{5}{}{85}{}
+{81}{Non. Je regrette, mais je ne l'ai pas vu. Puis-je vous poser une question ?}{}{5}{}{35}{}
+{82}{Vous vouloir moi trouver lui ?}{}{-4}{}{85}{}
+{83}{Nan. Moi pas avoir vu lui. Moi regretter. Moi demander vous kék'chose ?}{}{-4}{}{35}{}
+{84}{E:}{}{1}{}{0}{}
+{85}{Vous le feriez ? Je vous en serai tellement reconnaissante ! Je me rends bien compte qu'une mère s'inquiète toujours pour son enfant. Mais cela ne ressemble pas à Lambert. J'apprécierais vraiment que vous tentiez de le retrouver.}{Vous le feriez ? Je vous en serai tellement reconnaissante ! Je me rends bien compte qu'une mère s'inquiète toujours pour son enfant. Mais cela ne ressemble pas à Lambert. J'apprécierais vraiment que vous tentiez de le retrouver.}{}{}{}{}
+{86}{Tenez, indiquez-moi sur ma carte où se trouve son atelier.}{}{5}{}{89}{}
+{87}{Ca être carte à moi. Vous montrer moi où Telier être ?}{}{-4}{}{89}{}
+{88}{E:}{}{1}{}{0}{}
+{89}{Oh. Tenez. C'est là. [Elle vous indique un endroit sur la carte.]}{Oh. Tenez. C'est là. [Elle vous indique un endroit sur la carte.]}{}{}{}{MM 42, qu1119 2}
+{90}{Je vous tiendrai au courant.}{}{5}{}{0}{}
+{91}{Moi aller voir quoi arriver à lui...}{}{-4}{}{0}{}
+{92}{E:}{}{1}{}{0}{}
+{93}{Oh ! Je suis tellement inquiète ! Par pitié, trouvez-le, @pcname@. Je prie pour qu'il aille bien.}{Oh ! Je suis tellement inquiète ! Par pitié, trouvez-le, @pcname@. Je prie pour qu'il aille bien.}{}{}{}{}
+{94}{Je vais poursuivre mes recherches.}{}{5}{}{0}{}
+{95}{Moi encore chercher.}{}{-4}{}{0}{}
+{96}{E:}{}{1}{}{0}{}
+{97}{Quelles sont les nouvelles ? Où se trouve-t-il ?}{Quelles sont les nouvelles ? Où se trouve-t-il ?}{}{}{}{}
+{98}{Je regrette. Il a été tué par une des bêtes qui rôdent dans la forêt.}{}{5}{gf 2316 1}{103}{qu1119 4}
+{99}{Je ne l'ai pas encore retrouvé. Mais j'ai trouvé son journal. Cela s'annonce sous les plus sombres auspices...}{}{5}{gf 2316 0}{145}{}
+{100}{Moi chagrin. Lambert mort. Bête étrange tuer lui.}{}{-4}{gf 2316 1}{103}{qu1119 4}
+{101}{Moi pas avoir trouvé lui. Mais moi trouver livre à lui. Moi penser lui mort...}{}{-4}{gf 2316 0}{145}{}
+{102}{E:}{}{1}{}{0}{}
+{103}{Non ! [Elle laisse échapper un long cri de douleur.] Mon enfant ! Mon pauvre enfant ! [Elle se met à pleurer dans son tablier.] Je suis seule. Il ne me reste plus personne... plus personne...}{Non ! [Elle laisse échapper un long cri de douleur.] Mon enfant ! Mon pauvre enfant ! [Elle se met à pleurer dans son tablier.] Je suis seule. Il ne me reste plus personne... plus personne...}{}{}{}{}
+{104}{Il est mort en tentant d'arrêter ces créatures. Il est mort en héros.}{}{5}{gf2316 1}{109}{}
+{105}{Je sais que c'est un espoir dérisoire... mais il se peut qu'il soit encore en vie...}{}{5}{gf2316 0}{149}{}
+{106}{Lui mort en combattant méchants monstres. Lui un héros.}{}{-4}{gf2316 1}{109}{}
+{107}{Moi savoir vous triste... mais peut-être lui encore en vie... peut-être...}{}{-4}{gf2316 0}{149}{}
+{108}{E:}{}{1}{}{0}{}
+{109}{Mais elles l'ont tué et elles rôdent encore ! [sanglots] Il est mort en vain...}{Mais elles l'ont tué et elles rôdent encore ! [sanglots] Il est mort en vain...}{}{}{}{}
+{110}{Non. Pas en vain. C'est son invention qui m'a permis de les arrêter.}{}{5}{qu1120 4}{115}{}
+{111}{Non. Pas vain... Lui avoir chose aider moi à arrêter bêtes pour de bon.}{}{-4}{qu1120 4}{115}{}
+{112}{Mais il est mort courageusement. En essayant d'arrêter les bêtes.}{}{5}{qa1120 1, qb1120 2}{163}{}
+{113}{Mais lui mourir comme héros... Lui tenter arrêter méchantes bêtes.}{}{-4}{qa1120 1, qb1120 2}{163}{}
+{114}{E:}{}{1}{}{0}{}
+{115}{Vraiment ? [sanglots] Sa mort n'a pas été vaine ?}{Vraiment ? [sanglots] Sa mort n'a pas été vaine ?}{}{}{}{re +15}
+{116}{Sans votre fils, la ville aurait été envahie par les bêtes !}{}{5}{in 5240}{123}{}
+{117}{Sans votre fils, la ville aurait été envahie par les bêtes !}{}{5}{ni 5240, ta-1}{137}{}
+{118}{Sans votre fils, la ville aurait été envahie par les bêtes !}{}{5}{ni 5240, ta 2}{141}{}
+{119}{Ville pleine de bêtes sans votre fils !}{}{-4}{ni 5240, ta-1}{137}{}
+{120}{Ville pleine de bêtes sans votre fils !}{}{-4}{ni 5240, ta 2}{141}{}
+{121}{Ville pleine de bêtes sans votre fils !}{}{-4}{in 5240}{123}{}
+{122}{E:}{}{1}{}{0}{}
+{123}{Il va tant me manquer. Au moins, il ne sera pas mort en vain.}{Il va tant me manquer. Au moins, il ne sera pas mort en vain.}{}{}{}{}
+{124}{Tenez. J'ai trouvé son journal à l'atelier. Il voulait que vous l'ayez.}{}{5}{in 5240, ta-1}{129}{in 5240, qu1119 4}
+{125}{Tenez. J'ai trouvé son journal à l'atelier. Il voulait que vous l'ayez.}{}{5}{in 5240, ta 2}{133}{in 5240, qu1119 4}
+{126}{Moi trouver livre à lui dans atelier. Lui dire que vous l'avoir.}{}{-4}{in 5240, ta-1}{129}{in 5240, qu1119 4}
+{127}{Moi trouver livre à lui dans atelier. Lui dire que vous l'avoir.}{}{-4}{in 5240, ta 2}{133}{in 5240, qu1119 4}
+{128}{E:}{}{1}{}{0}{}
+{129}{[le serrant contre son coeur] Merci. Je vous suis reconnaissante d'avoir pris de tels risques pour me le ramener. Tenez. Prenez cette dague, un maigre témoignage de ma reconnaissance.}{[le serrant contre son coeur] Merci. Je vous suis reconnaissante d'avoir pris de tels risques pour me le ramener. Tenez. Prenez cette dague, un maigre témoignage de ma reconnaissance.}{}{}{}{in -2023}
+{130}{Merci. Veuillez accepter mes condoléances. Au revoir.}{}{5}{}{0}{}
+{131}{Marsi. Moi chagrin lui mort. Ar'voir.}{}{-4}{}{0}{}
+{132}{E:}{}{1}{}{0}{}
+{133}{[le serrant contre son coeur] Merci. Je vous suis reconnaissante d'avoir pris de tels risques pour me le ramener. Tenez. Prenez ce chapeau, un maigre témoignage de ma reconnaissance. C'est une des premières inventions de Lambert.}{[le serrant contre son coeur] Merci. Je vous suis reconnaissante d'avoir pris de tels risques pour me le ramener. Tenez. Prenez ce chapeau, un maigre témoignage de ma reconnaissance. C'est une des premières inventions de Lambert.}{}{}{}{in -2856}
+{134}{Merci. Veuillez accepter mes condoléances. Au revoir.}{}{5}{}{0}{}
+{135}{Marsi. Moi chagrin lui mort. Ar'voir.}{}{-4}{}{0}{}
+{136}{E:}{}{1}{}{0}{}
+{137}{Merci. Merci d'avoir pris tant de risques pour retrouver mon fils. Tenez. Prenez cette dague, un maigre témoignage de ma reconnaissance.}{Merci. Merci d'avoir pris tant de risques pour retrouver mon fils. Tenez. Prenez cette dague, un maigre témoignage de ma reconnaissance.}{}{}{}{in -2023}
+{138}{Merci. Veuillez accepter mes condoléances. Au revoir.}{}{5}{}{0}{}
+{139}{Marsi. Moi chagrin lui mort. Ar'voir.}{}{-4}{}{0}{}
+{140}{E:}{}{1}{}{0}{}
+{141}{Merci. Merci d'avoir pris tant de risques pour retrouver mon fils. Tenez. Prenez ce chapeau, un maigre témoignage de ma reconnaissance. C'est une des premières inventions de Lambert.}{Merci. Merci d'avoir pris tant de risques pour retrouver mon fils. Tenez. Prenez ce chapeau, un maigre témoignage de ma reconnaissance. C'est une des premières inventions de Lambert.}{}{}{}{in -2856}
+{142}{Merci. Veuillez accepter mes condoléances. Au revoir.}{}{5}{}{0}{}
+{143}{Marsi. Moi chagrin lui mort. Ar'voir.}{}{-4}{}{0}{}
+{144}{E:}{}{1}{}{0}{}
+{145}{Non ! Il ne peut pas être mort... C'est impossible ! Donnez-moi ce journal ! [Elle le prend et le feuillette rapidement.]... Oh ! Mon pauvre enfant ! Qu'as-tu fait ? Toujours en train d'essayer de sauver le monde ! [Elle lève les yeux vers vous.] Vous n'avez trouvé aucune trace de lui ?}{Non ! Il ne peut pas être mort... C'est impossible ! Donnez-moi ce journal ! [Elle le prend et le feuillette rapidement.]... Oh ! Mon pauvre enfant ! Qu'as-tu fait ? Toujours en train d'essayer de sauver le monde ! [Elle lève les yeux vers vous.] Vous n'avez trouvé aucune trace de lui ?}{}{}{}{}
+{146}{Non. Je ne l'ai pas vu. Mais les créatures dangereuses ne manquent pas...}{}{5}{}{149}{}
+{147}{Moi pas avoir vu lui. Mais moi voir beaucoup créatures dangereuses...}{}{-4}{}{149}{}
+{148}{E:}{}{1}{}{0}{}
+{149}{Je dois me cramponner à l'espoir qu'il est toujours en vie. Continuerez-vous à le chercher ? Il est fait mention d'un portail dans son journal... Accepteriez-vous d'aller voir s'il s'y trouve et de détruire le portail ?}{Je dois me cramponner à l'espoir qu'il est toujours en vie. Continuerez-vous à le chercher ? Il est fait mention d'un portail dans son journal... Accepteriez-vous d'aller voir s'il s'y trouve et de détruire le portail ?}{}{}{}{}
+{150}{Oui. Je vais poursuivre mes recherches. Je reviendrai.}{}{5}{}{0}{qu1120 2}
+{151}{Je ne crois pas pouvoir accomplir cette quête. Je regrette. Au revoir.}{}{5}{}{0}{}
+{152}{Ouais. Moi continuer recherches. Moi revenir.}{}{-4}{}{0}{qu1120 2}
+{153}{Moi penser pas pouvoir faire ça. Moi chagrin. Ar'voir.}{}{-4}{}{0}{}
+{154}{E:}{}{1}{}{0}{}
+{155}{Son journal ? Vous avez donc été à son atelier. Donnez, laissez-moi le consulter... [Elle le prend et le feuillette rapidement. Elle pâlit en lisant la dernière inscription.] Oh, non ! Mon pauvre enfant ! Qu'as-tu fait ? [Elle lève les yeux vers vous.] Vous n'avez trouvé aucune trace de lui ?}{Son journal ? Vous avez donc été à son atelier. Donnez, laissez-moi le consulter... [Elle le prend et le feuillette rapidement. Elle pâlit en lisant la dernière inscription.] Oh, non ! Mon pauvre enfant ! Qu'as-tu fait ? [Elle lève les yeux vers vous.] Vous n'avez trouvé aucune trace de lui ?}{}{}{}{in 5240, qu1119 4}
+{156}{Non. Je regrette. L'atelier était abandonné depuis quelque temps.}{}{5}{}{149}{}
+{157}{Non. Moi chagrin. A Telier à lui abandonné longtemps...}{}{-4}{}{149}{}
+{158}{E:}{}{1}{}{0}{}
+{159}{Oh, non ! Que s'est-il passé ? Laissez-moi voir son journal... [Elle le prend et le feuillette rapidement. Elle pâlit en lisant la dernière inscription.] Oh, non ! Mon pauvre enfant ! Qu'as-tu fait ? [Elle lève les yeux vers vous.] Vous n'avez trouvé aucune trace de lui ?}{Oh, non ! Que s'est-il passé ? Laissez-moi voir son journal... [Elle le prend et le feuillette rapidement. Elle pâlit en lisant la dernière inscription.] Oh, non ! Mon pauvre enfant ! Qu'as-tu fait ? [Elle lève les yeux vers vous.] Vous n'avez trouvé aucune trace de lui ?}{}{}{}{in 5240, qu1119 4}
+{160}{J'ai le regret de vous dire que j'ai trouvé son corps... près du portail.}{}{5}{}{103}{}
+{161}{Moi chagrin. Moi voir lui mort. Lui mort près portail.}{}{-4}{}{103}{}
+{162}{E:}{}{1}{}{0}{}
+{163}{Mais les bêtes continuent à rôder dans la forêt ? Qu'allons-nous faire ? [sanglots] Mon enfant est mort... Il était notre meilleur espoir face à cet étrange ennemi. Qui va nous sauver maintenant ? Qui ira fermer le portail et arrêter les bêtes ?}{Mais les bêtes continuent à rôder dans la forêt ? Qu'allons-nous faire ? [sanglots] Mon enfant est mort... Il était notre meilleur espoir face à cet étrange ennemi. Qui va nous sauver maintenant ? Qui ira fermer le portail et arrêter les bêtes ?}{}{}{}{}
+{164}{Je le ferai. J'irai fermer le portail et je reviendrai bientôt.}{}{5}{}{0}{qu1120 2}
+{165}{J'espère que vous trouverez quelqu'un qui puisse s'en charger très rapidement. Les bêtes deviennent de plus en plus fortes.}{}{5}{}{0}{}
+{166}{Moi le faire ! Moi aller fermer... Moi sauver vous !}{}{-4}{}{0}{qu1120 2}
+{167}{Moi espérer vous trouver quelqu'un vite. Choses devenir grosses !}{}{-4}{}{0}{}
+{168}{E:}{}{1}{}{0}{}
+{169}{Merci, @pcname@. Je vous serai éternellement reconnaissante.}{Merci, @pcname@. Je vous serai éternellement reconnaissante.}{}{re -80}{}{re +5, lf5 1}
+{170}{E:}{}{1}{}{0}{}
+

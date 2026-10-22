@@ -12,10 +12,13 @@ import { escapeHtml } from '../core/util.js';
 import { SEC_ISO_HALF_W } from '../sec/sec-iso.js';
 import { loadLightSchemeNames, loadMapList, loadTownMapNames } from '../sec/sec-map-data.js';
 import { loadSecRoofNames, secRoofNum } from '../sec/sec-roofs.js';
-import { roofPieceAround } from './sec-house-plan.js';
 import { blockedSectorBytes, jumpFileBytes, startLocBytes } from './sec-map-files.js';
 import { secEnsureExtras, secExtrasDiffer, secSetTileBlocked, secSetTileScript, secTileBlocked, secTileScriptAt } from './sec-sector-extras.js';
 import { SEC_NO_ROOF, secIsRoofId } from './sec-writer.js';
+
+// sec-house-plan.js (with its 0.8 MB of generated data) is loaded lazily by sec-folder-viewer.js, which hands it over here.
+let roofPieceAround;
+export function useHousePlan(plan) { ({ roofPieceAround } = plan); }
 
 export const EXTRA_TOOLS = ['stamp', 'roof', 'light', 'block', 'sector', 'mapdata'];
 

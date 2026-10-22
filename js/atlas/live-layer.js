@@ -2,6 +2,8 @@
 // (<stem>.atlassec: the list of pictures to draw + the light) and shared art shards (art<k>.webp + art.json).
 // Built by toolbox/atlas/live/live_pack.py. world-atlas.js asks this module for a sector's picture at the size the zoom needs and
 // draws it where it drew its own picture; everything else (tiles at a distance, people, containers, pins) is unchanged.
+// A map's people, creatures, items, containers and doors (the O layer; F: the people the game keeps switched off) are in <stem>.atlasmob files, one per sector that
+// has any (live_objects.py; art.json "o" / "f" list them): drawn from 1/4 size as pictures of their own, with their own light, and never aliased with another sector.
 // A sector is drawn in a pool of web workers (at most half the cores, 1 to 3) at 1/16, 1/4, 1/2 or full size, blurriest first.
 (function () {
   const DIRS = {};                                                      // the maps that have live files: key -> folder (atlas/live-maps.json, written by live_pack.py)
@@ -128,6 +130,87 @@
         tl.forEach((t, k) => emit(sc, bs[k], [...t, tl.length, cw, ch], N, performance.now() - t0, t2 - t0));
       }
     }
+    // an .atlasmob: the objects layers of one sector (O: people, creatures, items, containers, doors; F: the people and creatures the game keeps switched off), compiled
+    // by toolbox/atlas/live/live_objects.py: u32 header length | header JSON {n: [O solid, O glows, F solid, F glows], ex, z, lo, lf} | deflated op planes (as the
+    // .atlassec's) | the O layer's light planes (lo bytes) | the F layer's (lf). Each layer is lit with its own gains (fitted from lit and unlit renders of the layer, so a
+    // creature in a dark room keeps the light the game gave it) and sent as a picture of its own, from 1/4 size: they show from 20 % zoom.
+    async function renderMob(buf, scs, emit, off) {
+      const dv = new DataView(buf), hl = dv.getUint32(0, true), head = JSON.parse(new TextDecoder().decode(new Uint8Array(buf, 4, hl)));
+      const ops = await inflate(new Uint8Array(buf, 4 + hl, head.z));
+      let at = 4 + hl + head.z;
+      const planes = {};
+      if (head.lo) { planes.O = await inflate(new Uint8Array(buf, at, head.lo)); at += head.lo; }
+      if (head.lf) { planes.F = await inflate(new Uint8Array(buf, at, head.lf)); at += head.lf; }
+      const N = head.n[0] + head.n[1] + head.n[2] + head.n[3];
+      let art = new Uint16Array(ops.buffer.slice(0, N * 2));
+      if (off) art = Uint32Array.from(art, v => v + off);
+      await need(art);
+      const dxs = new Int16Array(ops.buffer.slice(N * 2, N * 4)), dys = new Int16Array(ops.buffer.slice(N * 4, N * 6));
+      const X = new Float64Array(N), Y = new Float64Array(N); let ax = 0, ay = 0;
+      for (let i = 0; i < N; i++) { ax += dxs[i]; ay += dys[i]; X[i] = ax / 2; Y[i] = ay / 2; }
+      const ex = new Map(head.ex.map(e => [e[0], e]));
+      const sz = i => { const r = rects[art[i]], e = ex.get(i); return [e ? e[1] : r[2], e ? e[2] : r[3]]; };
+      const run = (g, a, b) => { for (let i = a; i < b; i++) { const [w, h] = sz(i); g.drawImage(bms.get(art[i]), X[i], Y[i], w, h); } };
+      const cols = W / BS, rows = Math.floor(H / BS), n = cols * rows;
+      const gainsOf = pl => {
+        if (!pl) return null;
+        const c = new OffscreenCanvas(cols, rows), x = c.getContext('2d', RF), m = x.createImageData(cols, rows);
+        for (let i = 0; i < n; i++) { m.data[i * 4] = pl[i]; m.data[i * 4 + 1] = pl[n + i]; m.data[i * 4 + 2] = pl[2 * n + i]; m.data[i * 4 + 3] = 255; }
+        x.putImageData(m, 0, 0);
+        return c;
+      };
+      const lcs = { O: gainsOf(planes.O), F: gainsOf(planes.F) };
+      const o1 = head.n[0] + head.n[1], o2 = o1 + head.n[2];
+      const layers = [['O', 0, head.n[0], o1], ['F', o1, o2, N]].filter(l => l[3] > l[1]);
+      for (const sc of [...scs].filter(s => s >= 0.25).sort((a, b) => a - b)) {
+        const cw = Math.round(W * sc), ch = Math.round(H * sc);
+        for (const [lay, a, b, c] of layers) {
+          // A layer is a few sprites: everything below is done on the box they cover (at this size, 2 px around, inside the picture), not on a whole 5504 x 3008 picture.
+          let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
+          for (let i = a; i < c; i++) { const [w, h] = sz(i); x0 = Math.min(x0, X[i]); y0 = Math.min(y0, Y[i]); x1 = Math.max(x1, X[i] + w); y1 = Math.max(y1, Y[i] + h); }
+          const bx = Math.max(0, Math.floor(x0 * sc) - 2), by = Math.max(0, Math.floor(y0 * sc) - 2);
+          const bw = Math.min(cw, Math.ceil(x1 * sc) + 2) - bx, bh = Math.min(ch, Math.ceil(y1 * sc) + 2) - by;
+          if (bw <= 0 || bh <= 0) continue;
+          const layer = () => { const cv = new OffscreenCanvas(bw, bh), g = cv.getContext('2d', RF); g.setTransform(sc, 0, 0, sc, -bx, -by); g.imageSmoothingEnabled = sc < 1; g.imageSmoothingQuality = 'medium'; return g; };
+          const lo = layer(); run(lo, a, b);
+          let oi;
+          if (c > b) {                                                  // glows: on a layer of their own, then added (as the ground's)
+            const gl = layer(); run(gl, b, c);
+            oi = lo.getImageData(0, 0, bw, bh); const gb = gl.getImageData(0, 0, bw, bh), od = oi.data, os = gb.data;
+            for (let i = 0; i < od.length; i += 4) {
+              if (!os[i + 3]) continue;
+              const m = Math.max(os[i], os[i + 1], os[i + 2]); if (!m) continue;
+              const A = od[i + 3] / 255, ao = Math.max(A, m / 255);
+              for (let q = 0; q < 3; q++) od[i + q] = Math.min(255, (od[i + q] * A + os[i + q]) / ao);
+              od[i + 3] = Math.round(ao * 255);
+            }
+          } else oi = lo.getImageData(0, 0, bw, bh);
+          const od = oi.data;
+          if (lcs[lay]) {                                               // the layer's own light (none fitted: drawn as it is): the gains of this box only, enlarged smoothly as the ground's are
+            const gg = new OffscreenCanvas(bw, bh).getContext('2d', RF); gg.imageSmoothingEnabled = true;
+            gg.drawImage(lcs[lay], bx / (BS * sc), by / (BS * sc), bw / (BS * sc), bh / (BS * sc), 0, 0, bw, bh);
+            const gd = gg.getImageData(0, 0, bw, bh).data;
+            for (let i = 0; i < od.length; i += 4) {
+              if (!od[i + 3]) continue;
+              const r = (od[i] * gd[i]) >> 6, gr = (od[i + 1] * gd[i + 1]) >> 6, bl = (od[i + 2] * gd[i + 2]) >> 6;
+              od[i] = r > 255 ? 255 : r; od[i + 1] = gr > 255 ? 255 : gr; od[i + 2] = bl > 255 ? 255 : bl;
+            }
+          }
+          lo.setTransform(1, 0, 0, 1, 0, 0); lo.putImageData(oi, 0, 0);
+          // sent as tiles of the picture (x, y, w, h, count, picture w, picture h), here at the box's place: the page draws them where they belong and the rest is clear
+          const ot = [];
+          for (let y = 0; y < bh; y += TS) for (let x = 0; x < bw; x += TS) {
+            const w = Math.min(TS + 1, bw - x), h = Math.min(TS + 1, bh - y); let any = false;
+            for (let yy = y; yy < y + h && !any; yy++) for (let xx = x, i = (yy * bw + x) * 4 + 3; xx < x + w; xx++, i += 4) if (od[i]) { any = true; break; }
+            if (any) ot.push([x, y, w, h]);
+          }
+          if (!ot.length) ot.push([0, 0, Math.min(TS + 1, bw), Math.min(TS + 1, bh)]);
+          const obs = await Promise.all(ot.map(([x, y, w, h]) => createImageBitmap(lo.canvas, x, y, w, h)));
+          ot.forEach((t, k) => emit(sc, obs[k], [bx + t[0], by + t[1], t[2], t[3], ot.length, cw, ch], N, 0, 0, lay));
+        }
+      }
+    }
+
     // pictures are asked from the main thread (it holds the one decoded atlas) only when a sector needs them, and kept least recently used
     const pend = new Map(); let reqNo = 0, active = 0;
     const MAXB = 1500;
@@ -146,7 +229,7 @@
         if (data.addrects) { rects = rects.concat(data.addrects); self.postMessage({ id: data.id, ok: 1 }); return; }
         active++;
         try {
-          await render(data.buf, data.scs, (sc, bm, tile, ops, ms, draw) => self.postMessage({ id: data.id, sc, bm, tile, ops, ms, draw }, [bm]), data.off);
+          await (data.mob ? renderMob : render)(data.buf, data.scs, (sc, bm, tile, ops, ms, draw, lay) => self.postMessage({ id: data.id, sc, bm, tile, ops, ms, draw, lay }, [bm]), data.off);
           self.postMessage({ id: data.id, done: 1 });
         } finally {
           if (!--active) for (const [k, b] of bms) { if (bms.size <= MAXB) break; b.close(); bms.delete(k); }
@@ -160,27 +243,31 @@
   function create(key, env) {
     const dir = new URL(DIRS[key], document.baseURI).href;
     const cache = new Map(), running = new Map(), failed = new Set(), bad = new Set(), landing = [], seen = new Map();
+    const fineBudget = env.fine || FINE_BUDGET;                          // (the Layers panel runs several instances at once: each gets less)
     let frameNo = 0, want = 2, disposed = false, pool = null, waitFor = new Map(), msgId = 0, workerUrl = null;
     let last = '', lastMove = 0, rough = false, timer = 0;
 
     const getFile = async url => { const r = await fetch(url); if (!r.ok) throw new Error(`${url}: HTTP ${r.status}`); return r.arrayBuffer(); };
     let has = null;                                          // the stems that have a file (art.json lists them; until it is read, every sector is tried)
-    const meta = getFile(dir + 'art.json').then(b => { const j = JSON.parse(new TextDecoder().decode(b)); has = new Set(j.s); allRects = j.r; env.schedule(); return j; });
+    const lays = { O: null, F: null };                       // the stems that have an objects layer inside their file (art.json "o" / "f"; absent: the map's O / F are still the old pictures)
+    let extras = [];                                         // sectors that have objects layers but no ground file (no .sec under them): [[sector x, sector y, stem]...] (art.json "m")
+    const seenMob = new Map();                               // the sectors whose objects layers were drawn this frame (a sector in `extras` has no ground to be `seen` by)
+    const meta = getFile(dir + 'art.json').then(b => { const j = JSON.parse(new TextDecoder().decode(b)); has = new Set(j.s); allRects = j.r; if (j.o) { lays.O = new Set(j.o); lays.F = new Set(j.f || []); } extras = j.m || []; env.schedule(); return j; });
     meta.catch(() => {});
     // Terrain templates (atlas/terrain/, tpl_* stems) were built with the world's art ids: a map that does not list a template in its own art.json
     // (every map but the world) draws it from the world's shards. The world's rects follow the map's own in allRects (shard keys 'w<k>'), ids shifted by off.
-    const worldDir = DIRS.World && new URL(DIRS.World, document.baseURI).href;
+    const worldDir = DIRS.World && new URL(DIRS.World, document.baseURI).href, poolDir = worldDir && new URL('../graphics/art-shards/', worldDir).href;      // (rect shard keys "w<k>" = the world's art<k>.webp, "p<k>" = atlas/graphics/art-shards/art<k>.webp: the pictures several maps share that the world does not have)
     let allRects = [], wHas = null, wmeta = null, off = 0, worldReady = null;
     const worldMeta = () => wmeta || (wmeta = getFile(worldDir + 'art.json').then(b => { const j = JSON.parse(new TextDecoder().decode(b)); wHas = new Set(j.s); env.schedule(); return j; }));
     const viaWorld = stem => stem.startsWith('tpl_') && !!worldDir && dir !== worldDir && !!has && !has.has(stem);
     // the art is in shards (art<k>.webp, shard 0 = the common pictures), each decoded once when a sector needs a picture in it; the regional ones
     // are dropped least recently used first, so a view of one area holds a few of them instead of the whole world's art
     const shards = new Map(); let shardTick = 0;
-    const MAXSH = 7;
+    const SHARD_PX = 25e6;                                             // decoded pixels the regional shards may hold together (7 shards of 12 MB, or 60 of 1.5 MB)
     function shard(k) {
       let s = shards.get(k);
       if (!s) {
-        s = { p: getFile(typeof k === 'string' ? `${worldDir}art${k.slice(1)}.webp` : `${dir}art${k}.webp`).then(b => createImageBitmap(new Blob([b]))), last: 0, busy: 0 };
+        s = { p: getFile(typeof k === 'string' ? `${k[0] === 'p' ? poolDir : worldDir}art${k.slice(1)}.webp` : `${dir}art${k}.webp`).then(async b => { const bm = await createImageBitmap(new Blob([b])); s.px = bm.width * bm.height; return bm; }), last: 0, busy: 0, px: 0 };
         s.p.catch(() => shards.get(k) === s && shards.delete(k));
         shards.set(k, s);
       }
@@ -194,16 +281,17 @@
         return await Promise.all(ids.map(i => { const r = rects[i]; return createImageBitmap(bm.get(r[4]), r[0], r[1], r[2], r[3]); }));
       } finally {
         ss.forEach(s => s.busy--);
-        const old = [...shards].filter(([k, s]) => k && !s.busy).sort((a, b) => a[1].last - b[1].last);
-        for (let n = [...shards.keys()].filter(k => k).length; n > MAXSH && old.length; n--) { const [k, s] = old.shift(); shards.delete(k); s.p.then(b => b.close(), () => {}); }
+        const old = [...shards].filter(([k, s]) => k && k !== 'w0' && !s.busy).sort((a, b) => a[1].last - b[1].last);
+        for (let px = [...shards].reduce((a, [k, s]) => a + (k && k !== 'w0' ? s.px : 0), 0); px > SHARD_PX && old.length;) { const [k, s] = old.shift(); px -= s.px; shards.delete(k); s.p.then(b => b.close(), () => {}); }
       }
     }
     function workers() {
       return pool || (pool = (async () => {
         const rects = (await meta).r;
-        await shard(0).p;                                              // (the pictures most sectors use: always there)
+        const first = rects.some(r => r[4] === 0) ? 0 : rects.some(r => r[4] === 'w0') ? 'w0' : null;
+        if (first !== null) await shard(first).p;                      // (the pictures most sectors use: always there; a pooled map's own art may have no shard 0, the base world's is then the one)
         workerUrl = URL.createObjectURL(new Blob([`(${sectorWorker})()`], { type: 'text/javascript' }));
-        const ws = Array.from({ length: Math.max(1, Math.min(3, Math.floor((navigator.hardwareConcurrency || 4) / 2))) }, () => {
+        const ws = Array.from({ length: Math.max(1, Math.min(env.workers || 3, Math.floor((navigator.hardwareConcurrency || 4) / 2))) }, () => {
           const w = new Worker(workerUrl); w.busy = 0;
           w.onmessage = ({ data }) => {
             if (data.need) {                                           // each picture is its own bitmap: drawn scaled down they filter like separate images (no bleed from the atlas neighbours)
@@ -212,7 +300,7 @@
               return;
             }
             const p = waitFor.get(data.id);
-            if (data.bm) { p.each(data.sc, data.bm, data.tile); return; }        // one size of a sector done; more may follow
+            if (data.bm) { p.each(data.sc, data.bm, data.tile, data.lay); return; }        // one size of a sector done (lay: of its objects layer, 'O' / 'F'); more may follow
             waitFor.delete(data.id); w.busy--; data.error ? p.reject(new Error(data.error)) : p.resolve(data);
           };
           return w;
@@ -231,6 +319,12 @@
       const o = viaWorld(stem) ? await worldRects(ws) : 0;
       const w = ws.reduce((a, b) => b.busy < a.busy ? b : a);
       await new Promise((resolve, reject) => { const id = ++msgId; waitFor.set(id, { resolve, reject, each }); w.busy++; w.postMessage({ id, buf, scs, off: o }, [buf]); });
+    }
+    // the objects layers of a sector from its .atlasmob (not aliased: it holds this map's own people, which another map's sector with the same ground may not have)
+    async function renderMob(stem, scs, each) {
+      const ws = await workers(), buf = await getFile(dir + stem + '.atlasmob');
+      const w = ws.reduce((a, b) => b.busy < a.busy ? b : a);
+      await new Promise((resolve, reject) => { const id = ++msgId; waitFor.set(id, { resolve, reject, each }); w.busy++; w.postMessage({ id, buf, scs, mob: 1 }, [buf]); });
     }
     // gives the workers (once) the world's picture rects after the map's own, returns the shift of the world's ids
     function worldRects(ws) {
@@ -254,9 +348,9 @@
       const px = bm.width * bm.height; e.px += px;
       if (!fine) return;
       fineTot += px;
-      if (fineTot <= FINE_BUDGET) return;
+      if (fineTot <= fineBudget) return;
       for (const [kk, o] of [...cache].filter(([, o]) => o.fine && o.tiles.length >= o.total && o.last < frameNo - 1).sort((a, b) => a[1].last - b[1].last)) {
-        if (fineTot <= FINE_BUDGET * 0.8) break;
+        if (fineTot <= fineBudget * 0.8) break;
         fineTot -= o.px; cache.delete(kk); o.tiles.forEach(x => x.bm.close());
       }
     }
@@ -264,7 +358,9 @@
 
     // jobs: the sectors in view, the blurry 1/16 first; then, for a sector that has it, everything else the zoom wants (1/4 on the way for a finer one)
     // in one job (the file is read and the ground drawn once); nearest the middle first
-    let nrun = 0;
+    let nrun = 0, nmob = 0;
+    const OBJECTS_FROM_Z = 0.2, MAXMOB = 3;                    // (world-atlas.js draws the objects layers from this zoom)
+    const mobRunning = new Set(), mobFailed = new Set(), mobEmpty = new Set();
     const thumbs = new Set();
     function pump() {
       if (disposed) return;
@@ -284,14 +380,35 @@
         if (nrun >= MAXRUN) break;
         nrun++; for (const s of j.scs) running.set(`${j.stem}:${s}`, j.cls);
         const landed = [];
-        renderSector(j.stem, j.scs, (sc, bm, t) => {
-          if (sc < 0.25) { put(`${j.stem}:${sc}`, bm, false, t); landed.push(Promise.resolve()); env.schedule(); return; }      // (the small ones are put at once: the map's tiles may be drawn with no sector frame to land them)
-          landed.push(new Promise(res => landing.push(() => { if (disposed) bm.close(); else put(`${j.stem}:${sc}`, bm, sc >= 0.25, t); res(); })));
+        const each = (sc, bm, t, lay) => {
+          const key = `${j.stem}:${sc}${lay ? ':' + lay : ''}`;                  // (an objects layer has a key of its own: <stem>:<size>:O / :F)
+          if (sc < 0.25) { put(key, bm, false, t); landed.push(Promise.resolve()); env.schedule(); return; }      // (the small ones are put at once: the map's tiles may be drawn with no sector frame to land them)
+          landed.push(new Promise(res => landing.push(() => { if (disposed) bm.close(); else put(key, bm, sc >= 0.25, t); res(); })));
           env.schedule();
-        })
+        };
+        renderSector(j.stem, j.scs, each)
           .then(() => Promise.all(landed), e => { for (const s of j.scs) { const k = `${j.stem}:${s}`, o = cache.get(k); failed.add(k); if (o && !whole(o)) { cache.delete(k); o.tiles.forEach(t => t.bm.close()); } } bad.add(j.stem); console.warn('live: ' + j.stem, e); })
           .finally(() => { nrun--; for (const s of j.scs) running.delete(`${j.stem}:${s}`); pump(); env.schedule(); });
         env.schedule();
+      }
+      // The objects layers (.atlasmob) of the sectors in view: only where the page draws them (from 20 % zoom), a job of their own per sector (not tied to the ground's: a slow
+      // one must not hold the ground job's slot or its place in the landing queue), at most MAXMOB at once, and their small bitmaps are put at once.
+      if (lays.O && env.view.z >= OBJECTS_FROM_Z) {
+        const sizes = wanted.filter(s => s >= 0.25);
+        for (const stem of [...seen.keys(), ...seenMob.keys()]) {
+          if (nmob >= MAXMOB) break;
+          const kinds = ['O', 'F'].filter(l => lays[l] && lays[l].has(stem));
+          if (!kinds.length) continue;
+          const miss = sizes.filter(s => { const k = `${stem}:${s}`; return !mobRunning.has(k) && !mobFailed.has(k) && kinds.some(l => !cache.has(`${k}:${l}`) && !mobEmpty.has(`${k}:${l}`)); });
+          if (!miss.length) continue;
+          nmob++; for (const s of miss) mobRunning.add(`${stem}:${s}`);
+          renderMob(stem, miss, (sc, bm, t, lay) => {
+            if (disposed) { bm.close(); return; }
+            put(`${stem}:${sc}:${lay}`, bm, true, t); env.schedule();
+          }).then(() => { for (const s of miss) for (const l of kinds) if (!cache.has(`${stem}:${s}:${l}`)) mobEmpty.add(`${stem}:${s}:${l}`); },
+            e => { for (const s of miss) mobFailed.add(`${stem}:${s}`); console.warn('live: objects of ' + stem, e); })
+            .finally(() => { nmob--; for (const s of miss) mobRunning.delete(`${stem}:${s}`); pump(); env.schedule(); });
+        }
       }
     }
 
@@ -319,7 +436,7 @@
       },
       // before and after the sectors of a frame: lvl is the level the zoom wants (2, 1, 0.5, 0)
       begin(lvl) {
-        frameNo++; seen.clear(); want = lvl;
+        frameNo++; seen.clear(); seenMob.clear(); want = lvl;
         const v = env.view, now = performance.now(), sig = `${v.z}|${v.ox}|${v.oy}`;
         if (sig !== last) { last = sig; lastMove = now; }
         rough = now - lastMove < 200;                          // while the view moves, pictures are shrunk with the cheap filter; once, with the good one, when it stops
@@ -328,6 +445,28 @@
         return rough;
       },
       end() { pump(); },
+      // the objects layers inside the sector files: does this map have them, and does this sector have the layer lay ('O': people, creatures, items, containers, doors;
+      // 'F': the people and creatures switched off)
+      hasObjects: () => !!lays.O,
+      extras: () => extras,
+      hasLayer: (stem, lay) => !!lays[lay] && lays[lay].has(stem),
+      // draws that layer of the sector where draw() drew its ground (the wanted size, else a finer, else a coarser one; none under 1/4)
+      drawLayer(ctx, stem, dx, dy, dw, dh, lay) {
+        seenMob.set(stem, 1);                                // (asks for the layer's job: a sector with no ground file is never `seen` by draw())
+        let part = null;
+        const tiles = (e, kx, ky) => { for (const t of e.tiles) ctx.drawImage(t.bm, dx + t.x * kx, dy + t.y * ky, t.w * kx, t.h * ky); };
+        for (const s of PREF[want]) {
+          if (s < 0.25) break;
+          const e = cache.get(`${stem}:${s}:${lay}`); if (!e) continue;
+          e.last = frameNo;
+          if (!whole(e)) { part = part || e; continue; }
+          tiles(e, dw / e.cw, dh / e.ch);
+          if (part) tiles(part, dw / part.cw, dh / part.ch);
+          return true;
+        }
+        if (part) { tiles(part, dw / part.cw, dh / part.ch); return true; }
+        return false;
+      },
       // draws the sector (false: nothing ready yet): the wanted size, else a finer one, else a coarser one
       draw(ctx, stem, dx, dy, dw, dh, d) {
         seen.set(stem, d);

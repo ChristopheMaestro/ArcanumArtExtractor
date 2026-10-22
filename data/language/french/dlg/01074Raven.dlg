@@ -1,0 +1,841 @@
+{50}{G:}{G:}{}{2}{}{}
+{51}{Je regrette, je ne crois pas que nous nous connaissions...}{}{5}{me 0, re 41}{91}{}
+{52}{Bonjour, Orfraie. Vous avez un instant, je veux vous parler...}{}{5}{me 1, re 41}{101}{}
+{53}{Madame ! Je ne vous connais même pas ! Pourquoi me traitez-vous de la sorte ?}{}{5}{me 0, re -40}{70}{}
+{54}{Orfraie ! Qu'ai-je fait pour vous offenser ?}{}{5}{me 1, re -40}{70}{}
+{55}{Euh... Moi pas connaître vous !}{}{-4}{me 0}{825}{re -5}
+{56}{Hé, jolie demoiselle ! Moi demander vous questions ?}{}{-4}{me 1}{835}{}
+{57}{E:}{}{1}{}{0}{}
+{70}{Je regrette, mais il m'est impossible de passer outre vos défauts manifestes. Je vous en prie, laissez-moi tranquille... }{Je regrette, mais il m'est impossible de passer outre vos défauts manifestes. Je vous en prie, laissez-moi tranquille...}{}{3}{}{}
+{71}{Hum. Vous souhaitez peut-être revenir sur votre décision, madame ?}{}{5}{ch 16}{76}{re +10}
+{72}{Pardonnez-moi, je vous en prie. Vous pourriez peut-être faire une exception pour moi... ?}{}{5}{}{86}{re +10}
+{73}{Vous êtes en train de commettre une terrible erreur, madame...}{}{5}{}{81}{re -5}
+{74}{E:}{}{5}{}{0}{}
+{76}{Oh, veuillez m'excuser. Je vous supplie de me pardonner... Vous avez bon caractère, je n'en doute pas un seul instant... }{Oh, veuillez m'excuser. Je vous supplie de me pardonner... Vous avez bon caractère, je n'en doute pas un seul instant...}{}{4}{}{}
+{77}{C'est oublié, madame. Puis-je vous demander votre nom ?}{}{5}{me 0}{94}{}
+{78}{Bien entendu, Orfraie. Pourrions-nous converser un moment ?}{}{5}{me 1}{101}{}
+{79}{E:}{}{5}{}{0}{}
+{81}{Oh, pensez-vous ? Je ne sais pas si vous réalisez dans quoi vous vous engagez... }{Oh, pensez-vous ? Je ne sais pas si vous réalisez dans quoi vous vous engagez...}{}{5}{}{}
+{82}{Vous avez peut-être raison. Pardonnez-moi, je vous en prie...}{}{5}{}{86}{re +10}
+{83}{Vos menaces s'adressent à la mauvaise personne, madame...}{}{5}{}{}{co, fl 251}
+{84}{E:}{}{5}{}{0}{}
+{86}{[Elle esquisse un léger sourire.] Hmmm. Oui, je pense pouvoir passer outre vos défauts pour l'instant. Que me voulez-vous ?}{[Elle esquisse un léger sourire.] Hmmm. Oui, je pense pouvoir passer outre vos défauts pour l'instant. Que me voulez-vous ?}{}{6}{}{}
+{87}{Puis-je vous demander votre nom, madame ?}{}{5}{me 0}{94}{}
+{88}{Auriez-vous un instant, je souhaite vous parler, Orfraie...}{}{5}{me 1}{101}{}
+{89}{E:}{}{5}{}{0}{}
+{91}{Non... Vous avez raison. Nous ne nous sommes jamais rencontrés... [Cette femme elfe vous regarde sans ciller. Sous une chevelure rouge foncé, presque noire, sa peau semble translucide. Elle est belle, mais semble très dure.]}{Non... Vous avez raison. Nous ne nous sommes jamais rencontrés... [Cette femme elfe vous regarde sans ciller. Sous une chevelure rouge foncé, presque noire, sa peau semble translucide. Elle est belle, mais semble très dure.]}{}{7}{}{}
+{92}{Euh... D'accord. Quel votre nom, madame ?}{}{5}{}{94}{}
+{94}{Mon nom est très ancien et très long.  [Elle réfléchit un instant, ses yeux verts brillant.] Mais si j'essaie de le traduire dans votre langue, le terme qui me paraît le plus fidèle est " Orfraie ".}{Mon nom est très ancien et très long.  [Elle réfléchit un instant, ses yeux verts brillant.] Mais si j'essaie de le traduire dans votre langue, le terme qui me paraît le plus fidèle est " Orfraie ".}{}{8}{}{}
+{95}{Intéressant. Avez-vous un moment à m'accorder ?}{}{5}{}{97}{}
+{97}{Bien sûr. }{Bien sûr.}{}{9}{}{}
+{98}{J'aimerais vous poser quelques questions...}{}{5}{}{101}{}
+{101}{Certainement. En quoi puis-je vous aider ?}{Certainement  En quoi puis-je vous aider ?}{}{10}{}{}
+{102}{Je dois m'entretenir avec la Dame d'Argent...}{}{5}{lf6 0, lf7 0, qb1019 1, lf11 0, lf22 0}{139}{}
+{103}{Je suis de retour... Avez-vous un peu de temps à me consacrer ?}{}{5}{lc2 0, lf6 1, qb1019 3, lf22 0}{256}{lc2 1}
+{104}{Je suis de retour... Avez-vous un peu de temps à me consacrer ?}{}{5}{lc2 1, lf6 1, qb1019 3, lf22 0}{256}{lc2 2}
+{105}{Je suis de retour... Avez-vous un peu de temps à me consacrer ?}{}{5}{lc2 2, lf6 1, qb1019 3, lf22 0}{128}{}
+{106}{Je suis de retour... Avez-vous un peu de temps à me consacrer ?}{}{5}{lc3 0, lf7 1, qb1019 3, lf22 0}{263}{lc3 1}
+{107}{Je suis de retour... Avez-vous un peu de temps à me consacrer ?}{}{5}{lc3 1, lf7 1, qb1019 3, lf22 0}{263}{lc3 2}
+{108}{Je suis de retour... Avez-vous un peu de temps à me consacrer ?}{}{5}{lc3 2, lf7 1, qb1019 3, lf22 0}{128}{}
+{109}{J'ai affronté les humains au Supplice de l'Aigle...}{}{5}{gf1071 1, gf1070 0, qu1019 2, lf14 1, lf22 0}{270}{}
+{110}{J'ai débarrassé Le Supplice de l'Aigle des humains...}{}{5}{gf1070 1, lf11 0, lf14 1, lf22 0}{280}{}
+{111}{Votre mère et moi-même avons eu un entretien à propos des récents évènements...}{}{5}{gf1084 1, gf1086 0, qb1046 1, lf22 0}{295}{}
+{112}{J'aimerais reprendre notre conversation à propos des visions de votre mère...}{}{5}{qa1046 2, gf1097 0, lf22 0}{300}{}
+{113}{J'ai des informations sur le village des elfes noirs...}{}{5}{qu1020 4, lf12 1,  lf17 0, lf18 0, gf1098 0, gf2003 0, lf22 0, ss 15}{522}{}
+{114}{J'ai des informations sur le village des elfes noirs...}{}{5}{qu1020 4, lf12  0, lf17 0, lf18 0, gf1098 0, gf2003 0, lf22 0, ss 15}{516}{}
+{115}{J'ai des informations sur le village des elfes noirs...}{}{5}{qu1025 2, gf2003 1, lf22 0, ss 15}{799}{lf12 0, gf2364 0}
+{116}{Parlons à nouveau des elfes noirs...}{}{5}{qu1020 4, lf17 1, lf18 0, gf1098 0, gf2003 0, lf22 0}{710}{}
+{117}{Parlons à nouveau des elfes noirs...}{}{5}{qu1020 4, lf17 0, lf18 1, gf1098 0, gf2003 0, lf22 0}{721}{}
+{118}{J'ai conversé avec votre mère d'Arronax...}{}{5}{gf1088 1, lf22 0, lf24 0}{735}{lf24 1}
+{119}{Je me demandais si vous accepteriez de vous joindre à moi, Orfraie...}{}{5}{lf12 0, lf22 1}{796}{jo 0 762}
+{120}{Je me demandais si vous accepteriez de vous joindre à moi, Orfraie...}{}{5}{lf12 1, lf22 1}{796}{jo 0 776}
+{121}{E:}{}{5}{}{0}{}
+{128}{Je regrette, mais si vous voulez voir ma mère,  je crains que vous n'ayez pas d'autre choix que de m'aider. Qu'en dites-vous ?}{Je regrette, mais si vous voulez voir ma mère,  je crains que vous n'ayez pas d'autre choix que de m'aider. Qu'en dites-vous ?}{}{11}{}{}
+{129}{Je vois que je n'ai pas le choix. Que dois-je faire ?}{}{5}{}{189}{}
+{130}{Je n'aime pas beaucoup cela. Cela m'ennuierait d'avoir à utiliser la force pour entrer...}{}{5}{}{133}{re -5}
+{131}{Bien. Je préfère m'en aller. Au revoir.}{}{5}{}{0}{}
+{133}{[Son regard se durcit.] A votre place, je ne plaisanterais pas, étranger. Sinon, vous mourrez avant d'avoir réalisé ce qui vous arrive. Allez-vous nous aider, oui ou non ? Si la réponse est non, je vous conseille de partir...}{[Son regard se durcit.] A votre place, je ne plaisanterais pas, étrangère. Sinon, vous mourrez avant d'avoir réalisé ce qui vous arrive. Allez-vous nous aider, oui ou non ? Si la réponse est non, je vous conseille de partir...}{}{12}{}{}
+{134}{D'accord, d'accord. Que dois-je faire ?}{}{5}{}{189}{}
+{135}{Vos menaces me fatiguent. Je vais m'employer à y mettre fin...}{}{5}{}{}{co, fl 251}
+{136}{Alors je m'en vais. Au revoir.}{}{5}{}{0}{}
+{139}{La Dame d'Argent ? Oh... Vous parlez de ma mère. [Son regard se durcit.] C'est une requête de taille que vous exprimez là, à laquelle je n'accède pas facilement...}{La Dame d'Argent ? Oh... Vous parlez de ma mère. [Son regard se durcit.] C'est une requête de taille que vous exprimez là, à laquelle je n'accède pas facilement...}{}{13}{}{}
+{140}{Vous devez me croire, Orfraie... Elle voudra me parler...}{}{5}{ra -2, ra -3}{154}{}
+{141}{Vous devez me croire, Orfraie... Elle voudra me parler...}{}{5}{ra 2}{149}{}
+{142}{Je fais partie des vôtres pourtant... je suis elfe.}{}{5}{ra 3}{144}{}
+{144}{C'est bien possible... Mais vous n'êtes pas d'ici, et je suis d'une extrême prudence en ce qui concerne l'identité des individus qui souhaitent obtenir une entrevue avec ma mère. Elle est peut-être notre souveraine, mais c'est moi qui supervise les affaires quotidiennes de Qintarra...}{C'est bien possible... Mais vous n'êtes pas d'ici, et je suis d'une extrême prudence en ce qui concerne l'identité des individus qui souhaitent obtenir une entrevue avec ma mère. Elle est peut-être notre souveraine, mais c'est moi qui supervise les affaires quotidiennes de Qintarra...}{}{14}{}{}
+{145}{Je vois. Comment puis-vous convaincre de l'urgence de ma requête... ?}{}{5}{}{159}{}
+{146}{Elle devrait peut-être confier la responsabilité à quelqu'un d'autre...}{}{5}{}{241}{re -5}
+{147}{E:}{}{5}{}{0}{}
+{149}{C'est bien possible... Mais ne m'en veuillez pas si je refuse à un nain inconnu le droit de parler à ma mère. Elle est peut-être notre souveraine, mais c'est moi qui supervise les affaires quotidiennes de Qintarra...}{C'est bien possible... Mais ne m'en veuillez pas si je refuse à un nain inconnu le droit de parler à ma mère. Elle est peut-être notre souveraine, mais c'est moi qui supervise les affaires quotidiennes de Qintarra...}{}{15}{}{}
+{150}{Je vois. Comment puis-vous convaincre de l'urgence de ma requête... ?}{}{5}{}{159}{}
+{151}{Elle devrait peut-être confier la responsabilité à quelqu'un d'autre...}{}{5}{}{241}{re -5}
+{152}{E:}{}{5}{}{0}{}
+{154}{Et croyez-moi lorsque je vous affirme que personne n'a le droit de voir ma mère tant que je ne l'ai pas jugé nécessaire. Elle est peut-être notre souveraine, mais c'est moi qui supervise les affaires quotidiennes de Qintarra...}{Et croyez-moi lorsque je vous affirme que personne n'a le droit de voir ma mère tant que je ne l'ai pas jugé nécessaire. Elle est peut-être notre souveraine, mais c'est moi qui supervise les affaires quotidiennes de Qintarra...}{}{16}{}{}
+{155}{Je vois. Comment puis-vous convaincre de l'urgence de ma requête... ?}{}{5}{}{159}{}
+{156}{Elle devrait peut-être confier la responsabilité à quelqu'un d'autre...}{}{5}{}{241}{re -5}
+{157}{E:}{}{5}{}{0}{}
+{159}{J'accède à votre requête. Pardonnez-moi si je vous semble d'un abord assez abrupt, mais j'ai fort à faire aujourd'hui. Une fois que je me serai débarrassée de quelques-unes des affaires les plus urgentes, nous discuterons ensemble de vos préoccupations...}{J'accède à votre requête. Pardonnez-moi si je vous semble d'un abord assez abrupt, mais j'ai fort à faire aujourd'hui. Une fois que je me serai débarrassée de quelques-unes des affaires les plus urgentes, nous discuterons ensemble de vos préoccupations...}{}{17}{}{}
+{160}{Je comprends. Je pourrais peut-être faire quelque chose ?}{}{5}{ra 1}{183}{}
+{161}{Je comprends. Je pourrais peut-être faire quelque chose ?}{}{5}{ra 2}{177}{}
+{162}{Je comprends. Je pourrais peut-être faire quelque chose ?}{}{5}{ra 3}{172}{}
+{163}{Je comprends. Je pourrais peut-être faire quelque chose ?}{}{5}{ra -1, ra -2, ra -3}{167}{}
+{164}{Je vois. Dois-je revenir plus tard ?}{}{5}{}{256}{}
+{165}{E:}{}{5}{}{0}{}
+{167}{Votre offre est la bienvenue, mon ami... Nous apprécierions grandement tout service que vous voudrez bien nous accorder...}{Votre offre est la bienvenue, mon amie... Nous apprécierions grandement tout service que vous voudrez bien nous accorder...}{}{18}{}{}
+{168}{Le plaisir est pour moi... Que puis-je faire ?}{}{5}{}{189}{re +10}
+{169}{Peut-être vaut-il mieux que je ne me mêle pas à cette affaire. Dois-je revenir plus tard ?}{}{5}{}{256}{}
+{172}{Eh bien, oui. C'est toujours un plaisir de collaborer avec l'un de nos frères elfes venu des contrées voisines... Nous apprécierions grandement votre soutien... [Elle affiche un sourire radieux.]}{Pourquoi pas ? C'est toujours un plaisir de collaborer avec l'une de nos soeurs elfes venue des contrées voisines... Nous apprécierions grandement votre soutien... [Elle affiche un sourire radieux.]}{}{19}{}{}
+{173}{Le plaisir est pour moi... Que puis-je faire ?}{}{5}{}{189}{re +10}
+{174}{Peut-être vaut-il mieux que je ne me mêle pas à cette affaire. Dois-je revenir plus tard ?}{}{5}{}{256}{}
+{177}{Hum. Je ne sais pas... Vous êtes un nain, après tout. Je ne vous juge pas vous en tant que personne, mais les elfes et les nains ne partagent pas toujours le même point de vue...}{Hmmm. Je ne sais pas... Vous êtes un nain, après tout. Je ne vous juge pas vous en tant que personne, mais les elfes et les nains ne partagent pas toujours le même point de vue...}{}{20}{}{}
+{178}{J'accepte de passer outre ces différences pour l'instant...}{}{5}{}{189}{re +10}
+{179}{Vos manières expliquent pourquoi il en est ainsi...}{}{5}{}{236}{re -10}
+{180}{J'ai changé d'avis. Dois-je revenir plus tard ?}{}{5}{}{256}{}
+{183}{Hum. C'est possible... Vous êtes humain et l'un de nos problèmes concerne les humains. N'y voyez aucune offense, mais pour moi, votre race reste un mystère...}{Hmmm. C'est possible... Vous êtes humaine et l'un de nos problèmes concerne les humains. Sans vouloir vous offenser, je dirais que votre race est un mystère pour moi...}{}{21}{}{}
+{184}{Il n'y a pas de mal. Qu'est-ce qui ne va pas ?}{}{5}{}{189}{re +10}
+{185}{Vos mauvaises manières ne font qu'épaissir ce mystère...}{}{5}{}{236}{re -10}
+{186}{J'ai changé d'avis. Dois-je revenir plus tard ?}{}{5}{}{256}{}
+{189}{Un groupe d'humains campe à quelques journées de voyage d'ici. La raison de leur présence nous est étrangère, mais, où qu'il soit, l'humain est toujours source de problèmes.}{Un groupe d'humains campe à quelques journées de voyage d'ici. La raison de leur présence nous est étrangère, mais, où qu'il soit, l'humain est toujours source de problèmes.}{}{22}{}{}
+{190}{Que souhaiteriez-vous que je fasse ?}{}{5}{}{194}{}
+{194}{L'endroit où ils ont établi leur campement s'appelle Le Supplice de l'Aigle. Or il s'agit d'un lieu sacré pour les elfes de Qintarra. Nous aimerions que vous découvriez la raison de leur présence, et que vous nous débarrassiez d'eux...}{L'endroit où ils ont établi leur campement s'appelle Le Supplice de l'Aigle. Or il s'agit d'un lieu sacré pour les elfes de Qintarra. Nous aimerions que vous découvriez la raison de leur présence, et que vous nous débarrassiez d'eux...}{}{23}{}{lf5 1, qu1019 1}
+{195}{C'est déjà fait...}{}{5}{gf1070 1}{280}{}
+{196}{J'ai quelques questions à ce sujet...}{}{5}{}{200}{}
+{197}{Je vais le faire...}{}{5}{}{227}{qu1019 2, lf14 1}
+{198}{Ca ne m'intéresse pas. Dois-je revenir plus tard ?}{}{5}{}{263}{}
+{200}{Bien entendu... Que souhaiteriez-vous savoir ?}{Bien entendu... Que souhaiteriez-vous savoir ?}{}{24}{}{}
+{201}{Le Supplice de l'Aigle... Quelle sorte d'endroit est-ce ?}{}{5}{}{208}{lf1 1}
+{202}{Ces humains... Comment faire pour me " débarrasser " d'eux ?}{}{5}{}{218}{lf2 1}
+{203}{Comment puis-je aller au Supplice de l'Aigle ?}{}{5}{}{222}{lf3 1, lf4 1}
+{204}{Je n'ai pas d'autres questions. Je reviendrai lorsque j'aurai rempli ma mission.}{}{5}{qu1019 2, lf4 1}{0}{}
+{205}{J'accepte cette mission...}{}{5}{lf4 1}{227}{qu1019 2, lf14 1}
+{206}{Je reviendrai plus tard, lorsque j'aurai réfléchi à votre proposition.}{}{5}{}{0}{}
+{208}{Le Supplice de l'Aigle, est, je le répète, un lieu sacré pour les elfes. Il y a fort longtemps régnait une reine elfe qui répondait au nom d'Aigle. Un jour, alors qu'elle chassait dans la forêt, elle atteignit un cerf de l'une de ses flèches. Lorsqu'elle eut enfin rejoint sa proie, celle-ci gisait près d'une source, le sang s'écoulant lentement de sa blessure au flanc... [La voix d'Orfraie est mélodieuse... Par des gestes, elle illustre la scène...]}{Le Supplice de l'Aigle, est, je le répète, un lieu sacré pour les elfes. Il y a fort longtemps régnait une reine elfe qui répondait au nom d'Aigle. Un jour, alors qu'elle chassait dans la forêt, elle atteignit un cerf de l'une de ses flèches. Lorsqu'elle eut enfin rejoint sa proie, celle-ci gisait près d'une source, le sang s'écoulant lentement de sa blessure au flanc... [La voix d'Orfraie est mélodieuse... Par des gestes, elle illustre la scène...]}{}{25}{}{}
+{209}{Que s'est-il passé ?}{}{5}{}{211}{}
+{211}{Le cerf s'est mis à lui parler, car des esprits elfes avaient investi son âme. Avec sa flèche, elle avait transpercé à la fois le coeur de l'animal et le leur. Et ils étaient en même temps tristes et effrayés, car leur vie était suspendue à celle du cerf, dont la mort marquerait également la leur...}{Le cerf s'est mis à lui parler, car des esprits elfes avaient investi son âme. Avec sa flèche, elle avait transpercé à la fois le coeur de l'animal et le leur. Et ils étaient en même temps tristes et effrayés, car leur vie était suspendue à celle du cerf, dont la mort marquerait également la leur...}{}{26}{}{}
+{212}{Qu'a fait Aigle ?}{}{5}{}{214}{}
+{214}{[Orfraie semble perdue dans ses pensées, ses yeux trahissant une vieille douleur.] Elle n'a rien pu faire. Elle resta assise, la tête du cerf dans ses bras, lui racontant des histoires et versant des larmes sur ses blessures. Et la douleur grandissait dans son coeur à mesure que les voix des elfes faiblissaient... A tel point que lorsqu'ils finirent par s'éteindre, elle s'éteignit avec eux...}{[Orfraie semble perdue dans ses pensées, ses yeux trahissant une vieille douleur.] Elle n'a rien pu faire. Elle resta assise, la tête du cerf dans ses bras, lui racontant des histoires et versant des larmes sur ses blessures. Et la douleur grandissait dans son coeur à mesure que les voix des elfes faiblissaient... A tel point que lorsqu'ils finirent par s'éteindre, elle s'éteignit avec eux...}{}{27}{}{}
+{215}{C'est une bien triste histoire. Encore quelques questions à propos de cette mission que vous m'avez confiée...}{}{5}{}{200}{}
+{216}{E:}{}{5}{}{0}{}
+{218}{Peu m'importe la façon dont vous vous y prenez, mais il faut que vous compreniez quelque chose : à aucun prix, vous ne devez verser de sang sur cette terre. Dans ce lieu, les esprits ont un prix, si lourd que nul ne peut le payer... Comprenez-vous ? N'en faites pas souffrir un de plus...}{Peu m'importe la façon dont vous vous y prenez, mais il faut que vous compreniez quelque chose : à aucun prix, vous ne devez verser de sang sur cette terre. Dans ce lieu, les esprits ont un prix, si lourd que nul ne peut le payer... Comprenez-vous ? N'en faites pas souffrir un de plus...}{}{28}{}{}
+{219}{Très bien... Encore quelques questions à propos de cette mission que vous m'avez confiée...}{}{5}{}{200}{}
+{222}{Ce n'est pas très loin d'ici... J'inscris l'endroit sur votre carte...}{Ce n'est pas très loin d'ici... J'inscris l'endroit sur votre carte..}{}{29}{}{mm 12}
+{223}{Merci. Encore quelques questions à ce sujet...}{}{5}{}{200}{}
+{224}{Merci. Je reviendrai lorsque j'aurai rempli ma mission...}{}{5}{lf4 1}{0}{qu1019 2, lf14 1}
+{227}{Formidable. [Elle sourit chaleureusement.] Saisissez-vous bien tout ce qui doit être fait ? Il y a certaines choses qu'il est très important que vous sachiez...}{Formidable. [Elle sourit chaleureusement.] Saisissez-vous bien tout ce qui doit être fait ? Il y a certaines choses qu'il est très important que vous sachiez...}{}{30}{}{ru 2052}
+{228}{A la réflexion, je souhaiterais vous poser quelques questions...}{}{5}{}{200}{}
+{229}{Je pense que vous m'avez tout dit. Je reviendrai lorsque j'aurai accompli ma mission...}{}{5}{lf1 1, lf2 1, lf3 1}{232}{lf14 1}
+{230}{J'ai simplement besoin de savoir où se trouve cet endroit...}{}{5}{lf4 0}{222}{lf4 1}
+{232}{Bien. Je vous remercie pour votre aide. [Elle pose doucement sa main sur votre bras.] Bonne chance. J'attendrai votre retour...}{Bien. Je vous remercie pour votre aide. Bonne chance. J'attendrai votre retour...}{}{31}{}{}
+{233}{E:}{}{5}{}{0}{}
+{236}{Mes manières et ce que vous pouvez en penser importent peu en regard de la sécurité de ce village. Si cela vous pose problème, je vous conseille vivement de vous en aller...}{Mes manières, et ce que vous pouvez en penser, importent peu en regard de la sécurité de ce village. Si cela vous pose problème, je vous conseille vivement de vous en aller...}{}{32}{}{}
+{237}{Compris. Vous êtes certaine que je ne peux pas vous aider ?}{}{5}{}{189}{}
+{238}{Vos manquements à l'étiquette pourraient bien vous coûter cher, madame...}{}{5}{}{246}{lc1 1}
+{239}{Il semble que nous ayons pris un mauvais départ. Au revoir...}{}{5}{}{0}{}
+{241}{Ah oui, vraiment ? Vous êtes en train d'abuser de mon hospitalité et d'épuiser ma patience. Il existe un moyen beaucoup plus rapide de redescendre sur Terre... Voulez-vous que je vous indique le chemin ?}{Ah oui, vraiment ? Vous êtes en train d'abuser de mon hospitalité et d'épuiser ma patience. Il existe un moyen beaucoup plus rapide de redescendre sur Terre... Voulez-vous que je vous indique le chemin ?}{}{33}{}{}
+{242}{Pardonnez-moi... Pourrais-je vous convaincre du caractère urgent de ma requête... ?}{}{5}{}{159}{re +5}
+{243}{Vous ne survivrez pas à cette entrevue, Orfraie...}{}{5}{}{246}{re -10, lc1 1}
+{244}{Il semble que nous ayons pris un mauvais départ. Au revoir...}{}{5}{}{0}{}
+{246}{Une insulte ou une menace de plus, étranger, et je vous jure que vous ne verrez plus jamais le jour se lever...}{Une insulte ou une menace de plus, étrangère, et je vous jure que vous ne verrez plus jamais le jour se lever...}{}{34}{}{}
+{247}{Pardonnez-moi... Pourrais-je vous convaincre du caractère urgent de ma requête... ?}{}{5}{}{159}{re +5}
+{248}{Je vais épargner votre temps et le mien par la même occasion... Vous êtes d'une stupidité sans bornes...}{}{5}{}{}{co, fl 251}
+{249}{Je ferais mieux de partir...}{}{5}{}{0}{}
+{251}{Imbécile ! Vous allez regretter le jour où vous avez posé le pied sur le sol de Qintarra !}{Imbécile ! Vous allez regretter le jour où vous avez posé le pied sur le sol de Qintarra !}{}{35}{}{}
+{256}{J'ai fort à faire et je ne peux vous dire avec certitude combien de temps vous devrez attendre, mais n'hésitez pas à visiter Qintarra... Et revenez me voir plus tard...}{J'ai fort à faire et je ne peux vous dire avec certitude combien de temps vous devrez attendre, mais n'hésitez pas à visiter Qintarra... Et revenez me voir plus tard...}{}{36}{}{}
+{257}{J'y vais de ce pas...}{}{5}{}{0}{lf6 1}
+{258}{Attendez ! Je vais peut-être vous aider...}{}{5}{ra 1}{183}{}
+{259}{Attendez ! Je vais peut-être vous aider...}{}{5}{ra 2}{177}{}
+{260}{Attendez ! Je vais peut-être vous aider...}{}{5}{ra 3}{172}{}
+{261}{Attendez ! Je vais peut-être vous aider...}{}{5}{ra -1, ra -2, ra -3}{167}{}
+{263}{J'ai fort à faire et je ne peux vous dire avec certitude combien de temps vous devrez attendre, mais n'hésitez pas à visiter Qintarra... Et revenez me voir plus tard...}{J'ai fort à faire et je ne peux vous dire avec certitude combien de temps vous devrez attendre, mais n'hésitez pas à visiter Qintarra... Et revenez me voir plus tard...}{}{37}{}{}
+{264}{J'y vais de ce pas...}{}{5}{}{0}{lf7 1}
+{265}{Attendez ! J'ai bien réfléchi, j'accepte de faire le travail...}{}{5}{lf5 0}{189}{qu1019 2}
+{266}{Attendez ! J'ai bien réfléchi, j'accepte de faire le travail...}{}{5}{lf5 1}{227}{qu1019 2}
+{270}{Oui ? Qui étaient-ils ?}{Oui ? Qui étaient-ils ?}{}{38}{}{}
+{271}{Des géomètres au service d'une société d'exploitation forestière...}{}{5}{}{273}{}
+{273}{Et les avez-vous chassés ?}{Et les avez-vous chassés ?}{}{39}{}{}
+{274}{Non... Ils ne veulent pas partir. Que dois-je faire ?}{}{5}{}{}{fl 276}
+{276}{C'est votre affaire, mon ami. Vous connaissez les règles... Ne levez jamais la main sur eux. Réfléchissez-y bien. Je suis sûre que vous trouverez une idée...}{C'est votre affaire, mon amie. Vous connaissez les règles... Ne levez jamais la main sur eux. Réfléchissez-y bien. Je suis sûre que vous trouverez une idée...}{}{40}{}{}
+{280}{Merci beaucoup... J'apprécie grandement votre soutien dans cette affaire. Donc, à quel sujet souhaitiez-vous vous entretenir avec ma mère ?}{Merci beaucoup... J'apprécie grandement votre soutien dans cette affaire. Donc, à quel sujet souhaitiez-vous vous entretenir avec ma mère ?}{}{41}{}{qu1019 4, lf11 1}
+{281}{C'est une longue histoire, Orfraie... [Vous lui racontez.]}{}{5}{}{283}{}
+{283}{[Orfraie reste songeuse, puis poursuit.] Une sombre histoire chargée de douleur. Et il semble que la faute incombe à nous, les elfes...}{[Orfraie reste songeuse, puis poursuit.] Une sombre histoire chargée de douleur. Et il semble que la faute incombe à nous, les elfes...}{}{42}{}{}
+{284}{Certains elfes sont impliqués... Connaissez-vous le nom de M'in Gorad ?}{}{5}{}{286}{}
+{286}{Non, et aucun des elfes qui vivent ici ne le porte. Mais cela m'inquiète beaucoup et mon coeur et mon esprit en souffrent. Mais il existe une autre solution, à laquelle je préférerais ne pas penser...}{Non, et aucun des elfes qui vivent ici ne le porte. Mais cela m'inquiète beaucoup et mon coeur et mon esprit en souffrent. Mais il existe une autre solution, à laquelle je préférerais ne pas penser...}{}{43}{}{}
+{287}{Qu'est-ce, Orfraie ? Vous savez où je pourrais trouver M'in Gorad ?}{}{5}{}{289}{}
+{289}{Non... Vous devez vous entretenir avec ma mère à ce sujet... Elle saura quoi faire...}{Non... Vous devez vous entretenir avec ma mère à ce sujet... Elle saura quoi faire...}{}{44}{}{}
+{290}{Très bien... Où puis-je la trouver ?}{}{5}{}{292}{}
+{292}{Elle se trouve derrière cette grande porte dans mon dos. Mais je dois vous avertir... Ma mère est un être magique d'une grande puissance. Son esprit nage dans le courant et elle appartient parfois plus à ce monde-là qu'au nôtre. Ce qu'elle voit ne correspond pas toujours à ce que nous voyons, c'est pourquoi ses réponses pourraient vous sembler étranges. Demandez ce que vous voulez savoir, puis écoutez. Lorsque vous aurez fini de vous entretenir avec elle, venez me trouver...}{Elle se trouve derrière cette grande porte dans mon dos. Mais je dois vous avertir... Ma mère est un être magique d'une grande puissance. Son esprit nage dans le courant et elle appartient parfois plus à ce monde-là qu'au nôtre. Ce qu'elle voit ne correspond pas toujours à ce que nous voyons, c'est pourquoi ses réponses pourraient vous sembler étranges. Demandez ce que vous voulez savoir, puis écoutez. Lorsque vous aurez fini de vous entretenir avec elle, venez me trouver...}{}{45}{}{ru 2053}
+{293}{Oui, Orfraie. Merci pour votre aide...}{}{5}{}{}{}
+{295}{Et que lui avez-vous demandé ?}{Et que lui avez-vous demandé ?}{}{46}{}{}
+{296}{Pas grand-chose, pour le moment...}{}{5}{gf1082 0, gf1083 0}{304}{}
+{297}{Je l'ai interrogée au sujet du Clan du Mont Noir...}{}{5}{gf1082 1}{308}{}
+{298}{Je l'ai interrogée au sujet de M'in Gorad.}{}{5}{gf1083 1}{315}{}
+{300}{Mais naturellement... De quoi voulez-vous que nous parlions ?}{Mais naturellement... De quoi voulez-vous que nous parlions ?}{}{47}{}{}
+{301}{Parlons des visions qu'elle a eues du Clan du Mont Noir...}{}{5}{gf1082 1}{308}{}
+{302}{Parlons des visions qu'elle a eues de M'in Gorad...}{}{5}{gf1083 1}{315}{}
+{304}{Je vois... Eh bien, revenez me voir lorsque vous lui aurez parlé. Je pourrai peut-être vous aider à déchiffrer le sens de ses paroles...}{Je vois... Eh bien, revenez me voir lorsque vous lui aurez parlé. Je pourrai peut-être vous aider à déchiffrer le sens de ses paroles...}{}{48}{}{}
+{305}{D'accord. J'ai encore quelques questions, cependant...}{}{5}{}{101}{}
+{306}{E:}{}{5}{}{0}{}
+{308}{Le Clan du Mont Noir... Qu'a-t-elle vu ?}{Le Clan du Mont Noir... Qu'a-t-elle vu ?}{}{49}{}{}
+{309}{Elle a vu des corbeaux, des éclairs, et une violente tempête...}{}{5}{}{328}{}
+{310}{Le Clan du Mont Noir et un petit enfant ressemblant à une machine...}{}{5}{}{334}{}
+{311}{Une flamme consumant un champ de blé et une mare d'eau...}{}{5}{}{340}{}
+{312}{Un endroit obscur, avec un feu sombre... et une plaine qui se reflète....}{}{5}{}{346}{}
+{313}{E:}{}{5}{}{0}{}
+{315}{M'in Gorad... Qu'a-t-elle vu ?}{M'in Gorad... Qu'a-t-elle vu ?}{}{50}{}{}
+{316}{Un homme sans yeux, en proie à la douleur, sculptant une clé... Un loup donnant la patte...}{}{5}{}{352}{}
+{317}{Un rideau déchiré... Un doigt cassé, entouré d'un anneau, montrant la direction de l'Est...}{}{5}{}{361}{}
+{318}{Une main aveugle qui voit... Un homme drapé de la vérité qui porte un masque...}{}{5}{}{367}{}
+{319}{Des enfants perdus, qui se cachent... Un homme s'échappe du groupe et laisse tomber des feuilles...}{}{5}{qb1046 1}{399}{}
+{320}{Des enfants perdus, qui se cachent... Un homme s'échappe du groupe et laisse tomber des feuilles...}{}{5}{qa1046 2}{}{}
+{321}{E:}{}{5}{}{0}{}
+{323}{Comme nous l'avons dit, l'homme qui court pourrait représenter Renford Terwilliger, un chercheur qui a été capturé par les elfes noirs, puis a réussi à leur échapper. Pour les feuilles, leur signification nous échappe, mais je pense qu'il serait bon de rendre visite à Monsieur Terwilliger à Tarante.}{Comme nous l'avons dit, l'homme qui court pourrait représenter Renford Terwilliger, un chercheur qui a été capturé par les elfes noirs, puis a réussi à leur échapper. Pour les feuilles, leur signification nous échappe, mais je pense qu'il serait bon de rendre visite à Monsieur Terwilliger à Tarante.}{}{51}{}{}
+{324}{Elle a eu d'autres visions de M'in Gorad...}{}{5}{}{315}{}
+{325}{Elle a également eu des visions du Clan du Mont Noir...}{}{5}{}{308}{}
+{326}{Je vous laisse donc pour l'instant...}{}{5}{}{510}{}
+{328}{Des corbeaux et une tempête ? Et pourquoi la tempête s'est-elle calmée avant de se déchaîner à nouveau ? Rien dans les visions de ma mère ne correspond à ce qu'il paraît à première vue... Nous devons les interpréter. }{Des corbeaux et une tempête ? Et pourquoi la tempête s'est-elle calmée avant de se déchaîner à nouveau ? Rien dans les visions de ma mère ne correspond à ce qu'il paraît à première vue... Nous devons les interpréter. }{}{52}{}{}
+{329}{Elle a eu d'autres visions du Clan du Mont Noir...}{}{5}{}{308}{}
+{330}{Elle a également eu des visions de M'in Gorad...}{}{5}{}{315}{}
+{331}{Je vous laisse donc pour l'instant...}{}{5}{qb1046 1}{506}{}
+{332}{Je vous laisse donc pour l'instant...}{}{5}{qa1046 2}{510}{}
+{334}{Comme vous lui avez dit, ce doit être l'homme que vous connaissez sous le nom de Gilbert Bastien. Elle l'a vu car il a joué un rôle clé dans leur destin...}{Comme vous lui avez dit, ce doit être l'homme que vous connaissez sous le nom de Gilbert Bastien. Elle l'a vu car il a joué un rôle clé dans leur destin...}{}{53}{}{}
+{335}{Elle a eu d'autres visions du Clan du Mont Noir...}{}{5}{}{308}{}
+{336}{Elle a également eu des visions de M'in Gorad...}{}{5}{}{315}{}
+{337}{Je vous laisse donc pour l'instant...}{}{5}{qb1046 1}{506}{}
+{338}{Je vous laisse donc pour l'instant...}{}{5}{qa1046 2}{510}{}
+{340}{Je ne suis pas certaine de ce que cela représente, mais je sais que le feu, dans ses visions, correspond souvent à la magie. Et l'eau, dites-vous, l'a éteint ? Ou la flamme est-elle morte toute seule... ?}{Je ne suis pas certaine de ce que cela représente, mais je sais que le feu, dans ses visions, correspond souvent à la magie. Et l'eau, dites-vous, l'a éteint ? Ou la flamme est-elle morte toute seule... ?}{}{54}{}{}
+{341}{Elle a eu d'autres visions du Clan du Mont Noir...}{}{5}{}{308}{}
+{342}{Elle a également eu des visions de M'in Gorad...}{}{5}{}{315}{}
+{343}{Je vous laisse donc pour l'instant...}{}{5}{qb1046 1}{506}{}
+{344}{Je vous laisse donc pour l'instant...}{}{5}{qa1046 2}{510}{}
+{346}{Il s'agit de deux visions distinctes. La flamme, donc, symbolise la magie... Mais cette flamme est déformée en quelque sorte, sa lueur est sombre. Vous avez dit que le Clan du Mont Noir se trouvait non loin de cette flamme ? La plaine qui se reflète, un ciel pâle, une silhouette isolée. Les mondes de chaque côté de ce miroir sont les mêmes... Qui pourrait affirmer lequel est le monde réel ? Etrange. [Elle vous regarde d'un air singulier...]}{Il s'agit de deux visions distinctes. La flamme, donc, symbolise la magie... Mais cette flamme est déformée en quelque sorte, sa lueur est sombre. Vous avez dit que le Clan du Mont Noir se trouvait non loin de cette flamme ? La plaine qui se reflète, un ciel pâle, une silhouette isolée. Les mondes de chaque côté de ce miroir sont les mêmes... Qui pourrait affirmer lequel est le monde réel ? Etrange. [Elle vous regarde d'un air singulier...]}{}{55}{}{}
+{347}{Elle a eu d'autres visions du Clan du Mont Noir...}{}{5}{}{308}{}
+{348}{Elle a également eu des visions de M'in Gorad...}{}{5}{}{315}{}
+{349}{Je vous laisse donc pour l'instant...}{}{5}{qb1046 1}{506}{}
+{350}{Je vous laisse donc pour l'instant...}{}{5}{qa1046 2}{510}{}
+{352}{Quant à ce que représentent l'homme qui crie et sa clé, je n'en ai aucune idée... Mais je sais que le symbole officiel de la cité de Caladon est un loup donnant la patte...}{Quant à ce que représentent l'homme qui crie et sa clé, je n'en ai aucune idée... Mais je sais que le symbole officiel de la cité de Caladon est un loup donnant la patte...}{}{56}{}{}
+{353}{C'est peut-être de là que nous devrions partir, Orfraie...}{}{5}{}{355}{}
+{355}{Je n'en suis pas si sûre. Souvenez-vous, les visions de ma mère ne sont entravées par aucune contrainte de réalité visuelle ou temporelle... Les événements qu'elle décrit peuvent correspondre soit au passé, soit au futur... Etudions tout ce qu'elle a dit avant d'aller plus loin...}{Je n'en suis pas si sûre. Souvenez-vous, les visions de ma mère ne sont entravées par aucune contrainte de réalité visuelle ou temporelle... Les événements qu'elle décrit peuvent correspondre soit au passé, soit au futur... Etudions tout ce qu'elle a dit avant d'aller plus loin...}{}{57}{}{}
+{356}{Elle a eu d'autres visions de M'in Gorad...}{}{5}{}{315}{}
+{357}{Elle a également eu des visions du Clan du Mont Noir...}{}{5}{}{308}{}
+{358}{Je vous laisse donc pour l'instant...}{}{5}{qb1046 1}{506}{}
+{359}{Je vous laisse donc pour l'instant...}{}{5}{qa1046 2}{510}{}
+{361}{Quelque chose dans cette vision fait ressurgir des souvenirs en moi... Surtout l'anneau. Je vais y réfléchir...}{Quelque chose dans cette vision fait ressurgir des souvenirs en moi... Surtout l'anneau. Je vais y réfléchir...}{}{58}{}{}
+{362}{Elle a eu d'autres visions de M'in Gorad...}{}{5}{}{315}{}
+{363}{Elle a également eu des visions du Clan du Mont Noir...}{}{5}{}{308}{}
+{364}{Je vous laisse donc pour l'instant...}{}{5}{qb1046 1}{506}{}
+{365}{Je vous laisse donc pour l'instant...}{}{5}{qa1046 2}{510}{}
+{367}{Je ne vois vraiment pas...}{Je ne vois vraiment pas...}{}{59}{}{}
+{368}{Attendez ! Cela ressemble au symbole que j'ai vu sur une amulette...}{}{5}{gf1045 1}{374}{}
+{369}{Elle a eu d'autres visions de M'in Gorad...}{}{5}{}{315}{}
+{370}{Elle a également eu des visions du Clan du Mont Noir...}{}{5}{}{308}{}
+{371}{Je vous laisse donc pour l'instant...}{}{5}{qb1046 1}{506}{}
+{372}{Je vous laisse donc pour l'instant...}{}{5}{qa1046 2}{510}{}
+{374}{Intéressant. C'est le symbole ancien de la Main de Moloch. Le connaissez-vous ?}{Intéressant. C'est le symbole ancien de la Main de Moloch. Le connaissez-vous ?}{}{60}{}{}
+{375}{Revenons à nos moutons... Que signifie cette vision ?}{}{5}{}{393}{}
+{376}{Oui, je sais, c'était un ancien ordre d'assassins...}{}{5}{gf1085 1}{379}{}
+{377}{Non... Pourriez-vous m'en dire plus ?}{}{5}{gf1085 0}{379}{}
+{379}{La Main de Moloch regroupait des assassins au service du Derian Ka... l'ancien Ordre des Morts...}{La Main de Moloch regroupait des assassins au service du Derian Ka... l'ancien Ordre des Morts...}{}{61}{}{gf1085 1}
+{380}{L'Ordre des Morts ? De quoi s'agit-il ?}{}{5}{gf1087 0}{384}{}
+{381}{Magnus Poing d'Argile en a fait mention...}{}{5}{gf1087 1}{384}{}
+{382}{Intéressant... Mais je préférerais connaître la signification de la vision...}{}{5}{}{393}{}
+{384}{Le Derian Ka était un groupe mystérieux qui s'est formé au temps de l'Ere des Légendes. Le nom de ses membres ainsi que ses activités sont toujours restés des secrets bien gardés. Je sais peu de choses à leur sujet, en dehors de l'essentiel, mais des rumeurs circulent depuis toujours à propos de leur identité et de leurs agissements...}{Le Derian Ka était un groupe mystérieux qui s'est formé au temps de l'Ere des Légendes. Le nom de ses membres ainsi que ses activités sont toujours restés des secrets bien gardés. Je sais peu de choses à leur sujet, en dehors de l'essentiel, mais des rumeurs circulent depuis toujours à propos de leur identité et de leurs agissements...}{}{62}{}{}
+{385}{Et quelle relation entretenaient-ils avec la Main de Moloch ?}{}{5}{}{387}{}
+{387}{Comme je vous l'ai expliqué, la Main de Moloch regroupait les assassins qui étaient à leur service. D'après ce que j'ai pu lire sur eux, la Main a été exclue de l'Ordre des Morts pour raison de différences de doctrine... Il y eut une courte lutte puis la Main disparut. Des rumeurs circulent à propos de sa réapparition, mais à ma connaissance, il ne s'agit que de bruits qui courent...}{Comme je vous l'ai expliqué, la Main de Moloch regroupait les assassins qui étaient à leur service. D'après ce que j'ai pu lire sur eux, la Main a été exclue de l'Ordre des Morts pour raison de différences de doctrine... Il y eut une courte lutte puis la Main disparut. Des rumeurs circulent à propos de sa réapparition, mais à ma connaissance, il ne s'agit que de bruits qui courent...}{}{63}{}{}
+{388}{Ces amulettes et la tentative de meurtre dont j'ai été victime semblent prouver le contraire...}{}{5}{}{390}{}
+{390}{Je vous l'accorde... Mais je ne vois pas ce qu'ils viendraient faire dans cette histoire. Très intéressant...}{Je vous l'accorde... Mais je ne vois pas ce qu'ils viendraient faire dans cette histoire. Très intéressant...}{}{64}{}{}
+{391}{D'après vous, que signifie cette vision en elle-même ?}{}{5}{}{393}{}
+{393}{Je n'ai pas d'idée précise, bien que cela puisse signifier qu'on essaie de les induire en erreur... Dans les visions de ma mère, la cécité correspond parfois au mensonge. Quant à l'homme au masque drapé de la vérité ? Je ne vois pas...}{Je n'ai pas d'idée précise, bien que cela puisse signifier qu'on essaie de les induire en erreur... Dans les visions de ma mère, la cécité correspond parfois au mensonge. Quant à l'homme au masque drapé de la vérité ? Je ne vois pas...}{}{65}{}{}
+{394}{Elle a eu d'autres visions de M'in Gorad...}{}{5}{}{315}{}
+{395}{Elle a également eu des visions du Clan du Mont Noir...}{}{5}{}{308}{}
+{396}{Je vous laisse donc pour l'instant...}{}{5}{qb1046 1}{506}{}
+{397}{Je vous laisse donc pour l'instant...}{}{5}{qa1046 2}{510}{}
+{399}{Cette vision est la plus intéressante de toutes. Et il semble bien que mes craintes soient justifiées...}{Cette vision est la plus intéressante de toutes. Et il semble bien que mes craintes soient justifiées...}{}{66}{}{}
+{400}{Pourquoi, Orfraie ? D'après vous, qu'est-ce que cela signifie ?}{}{5}{}{402}{}
+{402}{Vous vous souvenez lorsque je vous ai dit que le nom de M'in Gorad me perturbait ? Eh bien, je pense que c'est peut-être parce que le nom de M'in Gorad évoque la noirceur...}{Vous vous souvenez lorsque je vous ai dit que le nom de M'in Gorad me perturbait ? Eh bien, je pense que c'est peut-être parce que le nom de M'in Gorad évoque la noirceur...}{}{67}{}{}
+{403}{Qu'entendez-vous par " noirceur " ?}{}{5}{}{405}{}
+{405}{C'est un nom d'elfe noir. Vous avez entendu parler des elfes noirs ?}{C'est un nom d'elfe noir. Vous avez entendu parler des elfes noirs ?}{}{68}{}{ru 2054}
+{406}{Je ne sais que peu de choses à leur sujet... Pourriez-vous m'éclairer sur ce point ?}{}{5}{}{409}{}
+{407}{Le sujet ne m'intéresse guère. J'aimerais simplement trouver M'in Gorad...}{}{5}{}{433}{}
+{409}{C'est une longue histoire, mais à une époque, au temps de l'Ere des Légendes, de nombreuses années avant la naissance de ma mère, un groupe d'elfes s'est séparé du nôtre... Nous cultivions des philosophies différentes et ils n'étaient plus les bienvenus dans nos forêts... Ces elfes devinrent les elfes noirs...}{C'est une longue histoire, mais à une époque, au temps de l'Ere des Légendes, de nombreuses années avant la naissance de ma mère, un groupe d'elfes s'est séparé du nôtre... Nous cultivions des philosophies différentes et ils n'étaient plus les bienvenus dans nos forêts... Ces elfes devinrent les elfes noirs...}{}{69}{}{}
+{410}{Quelles étaient ces différences ?}{}{5}{}{418}{}
+{411}{Qu'est-ce que l' " Ere des Légendes " ?}{}{5}{}{413}{}
+{413}{L'Ere des Légendes fait référence à une époque dans l'histoire d'Arcanum où les choses étaient bien différentes de maintenant. Un conseil elfique régnait alors sur toutes les races et la magie occupait une grande place dans la vie de chacun. C'était le temps des héros et du flamboiement du Bien, mais aussi du Mal. C'était avant l'avènement de la technologie, avant les guerres de clans entre nains, avant que les mages partent pour Tulla...}{L'Ere des Légendes fait référence à une époque dans l'histoire d'Arcanum où les choses étaient bien différentes de maintenant. Un conseil elfique régnait alors sur toutes les races et la magie occupait une grande place dans la vie de chacun. C'était le temps des héros et du flamboiement du Bien, mais aussi du Mal. C'était avant l'avènement de la technologie, avant les guerres de clans entre nains, avant que les mages partent pour Tulla...}{}{70}{}{}
+{414}{Je vois... Et quelles sont les différences entre vous et les elfes noirs ?}{}{5}{gf1098 0}{418}{}
+{415}{Que pouvez-vous me dire de plus sur l'histoire d'Arronax... ?}{}{5}{gf1098 1}{688}{}
+{416}{Le Néant ? Qu'est-ce que le Néant ?}{}{5}{gf1098 1}{681}{}
+{418}{Ils pensent que ce monde et toutes les races qui le composent doivent obéir aux lois elfiques. Ils pensent que les elfes sont supérieurs du fait de notre lien très profond à la nature, de nos pouvoirs magiques et de la longévité de notre vie physique. Pour eux, les autres races sont des enfants titubants, ayant besoin de nos conseils, quel que soit le prix à payer pour cela...}{Ils pensent que ce monde et toutes les races qui le composent doivent obéir aux lois elfiques. Ils pensent que les elfes sont supérieurs du fait de notre lien très profond à la nature, de nos pouvoirs magiques et de la longévité de notre vie physique. Pour eux, les autres races sont des enfants titubants, qui ont besoin de nos conseils, quel que soit le prix à payer pour cela...}{}{71}{}{}
+{419}{Et les elfes de Qintarra ? Que pensent-ils ?}{}{5}{}{422}{}
+{420}{Et vous ? Quelle est votre opinion ?}{}{5}{}{429}{}
+{422}{Les elfes de Qintarra... c'est-à-dire tous les autres elfes... pensent que toute chose et tout être occupent une place légitime dans l'expérience qui forme cette réalité. Pour les elfes, quasiment rien ne se produit qui ne fasse partie de l'évolution naturelle de cet état. Ils ne se sentent pas supérieurs en raison de leurs... avantages... Leur rôle est celui qui leur a été assigné...}{Les elfes de Qintarra... c'est-à-dire tous les autres elfes... pensent que toute chose et tout être occupent une place légitime dans l'expérience qui forme cette réalité. Pour les elfes, quasiment rien ne se produit qui ne fasse partie de l'évolution naturelle de cet état. Ils ne se sentent pas supérieurs en raison de leurs... avantages... Leur rôle est celui qui leur a été assigné...}{}{72}{}{}
+{423}{Les elfes noirs ne sont-ils pas perçus comme un outrage ?...}{}{5}{}{425}{}
+{425}{Malheureusement non. Les elfes noirs sont traités à l'égal des autres... Ils ont leur rôle et ils l'assument...}{Malheureusement non. Les elfes noirs sont traités à l'égal des autres... Ils ont leur rôle et ils l'assument...}{}{73}{}{}
+{426}{Je vois. Revenons à la vision de votre mère.}{}{5}{}{433}{}
+{427}{Vous avez dit " malheureusement ". Quelle est votre opinion, Orfraie ?}{}{5}{}{429}{}
+{429}{[Son visage se durcit] Mon opinion... Eh bien, disons que je ne vois pas les choses de la même façon que les elfes de Qintarra en ce qui concerne la " place légitime " des elfes noirs. Mon rôle est de les protéger. Et je m'y emploierai, quel que soit le prix à payer.}{[Son visage se durcit] Mon opinion... Eh bien, disons que je ne vois pas les choses de la même façon que les elfes de Qintarra en ce qui concerne la " place légitime " des elfes noirs. Mon rôle est de les protéger. Et je m'y emploierai, quel que soit le prix à payer.}{}{74}{}{}
+{430}{Je vois. Revenons à la vision de votre mère.}{}{5}{}{433}{}
+{431}{Que pensent réellement les elfes de Qintarra de tout cela ?}{}{5}{}{422}{}
+{433}{La vision des enfants perdus qu'a eue ma mère faisait référence, à mon sens, aux elfes noirs. Ils échappaient à sa vue car ils échappent à la vue de nous tous... A cause de la magie et de l'isolement, cela fait presque cinq cents ans que nous ignorons où ils vivent...}{La vision des enfants perdus qu'a eue ma mère faisait référence, à mon sens, aux elfes noirs. Ils échappaient à sa vue car ils échappent à la vue de nous tous... A cause de la magie et de l'isolement, cela fait presque cinq cents ans que nous ignorons où ils vivent...}{}{75}{}{}
+{434}{Mais qui était l'homme qui s'échappait de leur groupe ?}{}{5}{}{436}{}
+{436}{Un homme... il y a plusieurs années de cela... était venu dans la Forêt Scintillante pour faire une étude sur les elfes, et je me souviens que les elfes noirs l'intéressaient tout particulièrement. On racontait qu'il s'était fait capturer par eux, mais qu'il était ensuite parvenu à leur échapper...}{Un homme... il y a plusieurs années de cela... était venu dans la Forêt Scintillante pour faire une étude sur les elfes, et je me souviens que les elfes noirs l'intéressaient tout particulièrement. On racontait qu'il s'était fait capturer par eux, mais qu'il était ensuite parvenu à leur échapper...}{}{76}{}{}
+{437}{Qui était-il ?}{}{5}{}{439}{}
+{439}{Comme je vous l'ai expliqué, il était chercheur... Un étrange petit homme, toujours trop bien habillé, mais avec le coeur sur la main et très intelligent... J'étais jeune à l'époque, j'avais dans les cent soixante ans... C'était le premier humain que je voyais... [Elle esquisse un léger sourire.]}{Comme je vous l'ai expliqué, il était chercheur... Un étrange petit homme, toujours trop bien habillé, mais avec le coeur sur la main et très intelligent... J'étais jeune à l'époque, j'avais dans les cent soixante ans... C'était le premier humain que je voyais... [Elle esquisse un léger sourire.]}{}{77}{}{}
+{440}{Vous rappelez-vous son nom ?}{}{5}{}{445}{lf8 1}
+{445}{Son nom... Cela remonte à loin... Mais je m'en souviens, parce qu'il le répétait souvent... J'ai l'impression que les humains aiment entendre le son de leur propre nom. [Elle a un petit rire.] Terwilliger... Docteur Renford Terwilliger... Je l'entends encore le dire... [Elle rit à nouveau...]}{Son nom... Cela remonte à loin... Mais je m'en souviens, parce qu'il le répétait souvent... J'ai l'impression que les humains aiment entendre le son de leur propre nom. [Elle a un petit rire.] Terwilliger... Docteur Renford Terwilliger... Je l'entends encore le dire... [Elle rit à nouveau...]}{}{78}{}{gf1086 1, ss 10, ru 2055}
+{446}{Qu'étaient ces " feuilles " qu'il laissait choir ?}{}{5}{lf9 0}{451}{lf9 1}
+{447}{Qu'est-ce que ce " lieu de fumée et d'eau " ?}{}{5}{lf10 0}{468}{lf10 1}
+{448}{Eh bien, qu'y a-t-il ?}{}{5}{lf81 , lf9 1, lf10 1, qb1046 1}{474}{}
+{451}{Je n'en sais rien. Dans la vision, il semblait presque que le vol d'oiseaux qui l'avalait était davantage intéressé par les feuilles... Et ma mère a même dit qu'il fallait chercher ce qu'il laissait derrière lui... Ces feuilles pourraient bien être ce que nous cherchons...}{Je n'en sais rien. Dans la vision, il semblait presque que le vol d'oiseaux qui l'avalait était davantage intéressé par les feuilles... Et ma mère a même dit qu'il fallait chercher ce qu'il laissait derrière lui... Ces feuilles pourraient bien être ce que nous cherchons...}{}{79}{}{}
+{452}{J'ai établi un lien intéressant entre les deux visions...}{}{16}{}{457}{}
+{454}{Qu'est-ce que ce " lieu de fumée et d'eau " ?}{}{5}{lf10 0}{468}{lf10 1}
+{455}{Eh bien, qu'y a-t-il ?}{}{5}{lf81 , lf9 1, lf10 1, qb1046 1}{474}{}
+{457}{Qu'avez-vous donc vu ?}{Qu'avez-vous donc vu ?}{}{80}{}{}
+{458}{Dans la plupart des visions, il y avait un vol d'oiseaux...}{}{5}{}{460}{}
+{460}{Oui ?}{Oui ?}{}{81}{}{}
+{461}{Ceux-ci représentent généralement les elfes noirs...}{}{5}{}{463}{}
+{463}{Intéressant... Cela forme un tableau intrigant, susceptible de changer notre opinion sur certains d'entre eux... Les corbeaux décrivant des cercles dans la tempête, l'homme qui se fait arracher les yeux par les oiseaux, et maintenant cet individu qui laisse tomber des feuilles... Intéressant...}{Intéressant... Cela forme un tableau intrigant, susceptible de changer notre opinion sur certains d'entre eux... Les corbeaux décrivant des cercles dans la tempête, l'homme qui se fait arracher les yeux par les oiseaux, et maintenant cet individu qui laisse tomber des feuilles... Intéressant...}{}{82}{}{}
+{465}{Qu'est-ce que ce " lieu de fumée et d'eau " ?}{}{5}{lf10 0}{468}{lf10 1}
+{466}{Eh bien, qu'y a-t-il ?}{}{5}{lf81 , lf9 1, lf10 1, qb1046 1}{474}{}
+{468}{Cela peut désigner n'importe quel endroit, mais à la réflexion, je pense qu'elle voulait parler de la cité humaine de Tarante. Elle se situe dans le golfe de Morbiliande où ses, comment dites-vous, usines ? Ses usines crachent de la fumée dans le ciel. Voilà un premier point, et en outre... [Elle cligne de l'oeil et sourit d'un air entendu] je sais que Terwilliger venait de là-bas...}{Cela peut désigner n'importe quel endroit, mais à la réflexion, je pense qu'elle voulait parler de la cité des humains de Tarante. Elle se situe dans le golfe de Morbiliande où ses, comment dites-vous, usines ? Ses usines crachent de la fumée dans le ciel. Voilà un premier point, et en outre... [Elle cligne de l'oeil et sourit d'un air entendu] je sais que Terwilliger venait de là-bas...}{}{83}{}{}
+{470}{Qu'étaient ces " feuilles " qu'il laissait choir ?}{}{5}{lf9 0}{451}{lf9 1}
+{471}{Eh bien, qu'y a-t-il ?}{}{5}{lf81 , lf9 1, lf10 1, qb1046 1}{474}{}
+{474}{Voilà l'endroit où commencer vos recherches, mon ami. Si vous voulez retrouver ce M'in Gorad, vous devez d'abord trouver le village des elfes noirs. La seule personne susceptible de savoir où ils se trouvent est le docteur Renford Terwilliger. Dieu seul sait s'il se trouve ou non à Tarante, mais en tout cas, c'est un point de départ...}{Voilà l'endroit où commencer vos recherches, mon amie. Si vous voulez retrouver ce M'in Gorad, vous devez d'abord trouver le village des elfes noirs. La seule personne susceptible de savoir où ils se trouvent est le docteur Renford Terwilliger. Dieu seul sait s'il se trouve ou non à Tarante, mais en tout cas, c'est un point de départ...}{}{84}{}{qu1020 1, qu1021 1}
+{475}{Je trouverai les elfes noirs. Je m'en vais de ce pas à Tarante...}{}{5}{}{476}{qu1020 2, qu1021 2}
+{476}{Vous m'impressionnez, mon ami. [Elle vous prend la main.] Rares sont ceux qui accepteraient comme vous d'endosser un tel fardeau. Vous avez gagné mon estime...}{Vous m'impressionnez, mon amie. Rares sont ceux qui accepteraient comme vous d'endosser un tel fardeau. Vous avez gagné mon estime...}{}{85}{}{}
+{477}{Je n'ai aucun mérite... Mon seul souhait, c'est que les gens arrêtent d'attenter à ma vie...}{}{5}{}{487}{}
+{478}{Votre estime me donne encore plus de coeur à l'ouvrage...}{0}{5}{}{490}{}
+{479}{Votre estime me donne encore plus de coeur à l'ouvrage...}{1}{5}{}{-31}{}
+{486}{Bref. Cela vous ennuierait-il de me lâcher la main afin que je puisse partir ?}{}{5}{}{501}{}
+{487}{[Elle dégage sa main.] Je me suis peut-être fait des idées sur votre compte... Mais peu importe. Vos actions, quelles que soient leurs motivations, sont nobles. Bonne chance. Revenez me voir lorsque vous aurez trouvé les elfes noirs pour me faire part de vos découvertes...}{Je me suis peut-être fait des idées sur votre compte... Mais peu importe. Vos actions, quelles que soient leurs motivations, sont nobles. Bonne chance. Revenez quand vous aurez trouvé les elfes noirs pour me faire part de vos découvertes...}{}{86}{}{qu1046 1}
+{488}{Je reviendrai quand j'en saurai davantage... Adieu...}{}{5}{}{0}{qu1046 2}
+{490}{[Elle vous regarde dans les yeux.] Les femmes de notre trempe cultivent en général des liens très forts. Bonne chance. Revenez quand vous aurez trouvé les elfes noirs pour me faire part de vos découvertes...}{[Elle vous regarde dans les yeux.] Les femmes de notre trempe cultivent en général des liens très forts. Bonne chance. Revenez quand vous aurez trouvé les elfes noirs pour me faire part de vos découvertes...}{}{87}{}{qu1046 1}
+{491}{Je reviendrai quand j'en saurai davantage... Adieu...}{}{5}{}{0}{qu1046 2}
+{493}{[Elle sourit.] Merci pour le compliment. Il semble que nous nous destinions à devenir bons amis, @PCNAME@.  Lorsque vous aurez trouvé les elfes noirs, revenez me voir pour me dire ce que vous aurez découvert. Nous aurons beaucoup de choses à nous dire à votre retour...}{[Elle sourit.] Merci pour le compliment. Il semble que nous nous destinions à devenir bonnes amies, @PCNAME@.  Lorsque vous aurez trouvé les elfes noirs, revenez me voir pour me dire ce que vous aurez découvert. Nous aurons beaucoup de choses à nous dire à votre retour...}{}{88}{}{qu1046 1}
+{494}{Je reviendrai quand j'en saurai davantage... Adieu...}{}{5}{}{0}{qu1046 2}
+{498}{[Orfraie rougit, puis se rapproche en murmurant.] Lorsque vous aurez trouvé les elfes noirs, revenez me voir pour me faire part de vos découvertes. [Et, dans un souffle.] Nous aurons beaucoup de choses à nous dire...}{[Orfraie rougit, puis se rapproche en murmurant.] Lorsque vous aurez trouvé les elfes noirs, revenez me voir pour me faire part de vos découvertes. [Et, dans un souffle.] Nous aurons beaucoup de choses à nous dire...}{}{89}{}{qu1046 1, lf12 1, gf2364 1}
+{499}{Je reviendrai lorsque j'en saurai plus, Orfraie... A bientôt...}{}{5}{}{0}{qu1046 2}
+{501}{[Se raidissant, elle relâche votre main.] Ou-oui, bien sûr. Pardonnez-moi. Je ne vous retiendrai pas plus longtemps. Revenez quand vous aurez trouvé les elfes noirs pour me faire part de vos découvertes...}{ [Se raidissant.] Ou-oui, bien sûr. Pardonnez-moi. Je ne vous retiendrai pas plus longtemps. Revenez quand vous aurez trouvé les elfes noirs pour me faire part de vos découvertes...}{}{90}{}{qu1046 1}
+{502}{Je reviendrai lorsque j'aurai plus d'informations à ce sujet...}{}{5}{}{}{qu1046 2}
+{506}{Très bien... Mais revenez vite ! Nous devons approfondir le sens de ces visions. On ne sait pas encore ce qu'on cherche au juste...}{Très bien... Mais revenez vite ! Nous devons approfondir le sens de ces visions. On ne sait pas encore ce qu'on cherche au juste...}{}{91}{}{}
+{507}{Bien entendu... Mais j'ai encore quelques questions, d'ordre plus général...}{}{5}{}{101}{}
+{508}{Oui, Orfraie...}{}{5}{}{0}{}
+{510}{D'accord. Mais revenez à chaque fois que vous voudrez en discuter. Y a-t-il autre chose ?}{C'est entendu. Mais revenez à chaque fois que vous voudrez en discuter. Y a-t-il autre chose ?}{}{92}{}{}
+{511}{J'ai encore quelques questions, d'ordre plus général...}{}{5}{}{101}{}
+{512}{E:}{}{5}{}{0}{}
+{516}{Je suis si heureuse que vous soyez de retour. Avez-vous trouvé le village des elfes noirs ? Que s'est-il passé depuis que vous nous avez quittés ?}{Je suis si heureuse que vous soyez de retour. Avez-vous trouvé le village des elfes noirs ? Que s'est-il passé depuis que vous nous avez quittés ?}{}{93}{}{qu1046 4}
+{517}{J'ai voyagé jusqu'à Tarante et... [Vous lui racontez comment vous avez trouvé T'sen-Ang.]}{}{5}{}{552}{}
+{522}{Je suis si heureuse que vous soyez revenu sain et sauf, @PCNAME@, si soulagée... [Elle prend vos mains dans les siennes, vous inspectant de la tête aux pieds.] Vous êtes blessé ? Vous avez peut-être besoin de soins... ?}{Je suis si heureuse que vous soyez revenue saine et sauve, @PCNAME@, si soulagée... [Elle prend vos mains dans les siennes, vous inspectant de la tête aux pieds.] Vous êtes blessée ? Vous avez peut-être besoin de soins... ?}{}{94}{}{qu1046 4}
+{523}{Non, Orfraie. Je vais bien. Mais que c'est bon de vous revoir...}{}{5}{}{527}{re +5}
+{524}{Votre offre est généreuse, Orfraie. J'apprécierais grandement cette faveur...}{}{5}{}{530}{re +5}
+{525}{Des affaires urgentes nous attendent... Je vous rapporte des nouvelles...}{}{5}{}{539}{lf12 0, re -5, gf2364 0}
+{527}{Très bien, une autre fois peut-être. [Elle sourit doucement, son regard se fait insistant.] Quelles nouvelles rapportez-vous de M'in Gorad ? L'avez-vous trouvé ?}{Très bien, une autre fois peut-être. [Elle sourit doucement, son regard se fait insistant.] Quelles nouvelles rapportez-vous de M'in Gorad ? L'avez-vous trouvé ?}{}{95}{}{}
+{528}{J'apporte des nouvelles des elfes noirs...}{}{5}{}{542}{}
+{530}{Je vais m'y employer... [Elle se rapproche, glisse ses mains sur vos épaules et appuie son front sur votre poitrine. Elle respire lentement et profondément... Ses mains vous agrippent et elle vous tire à elle. La chaleur croît entre vous -- Vous entendez comme un bourdonnement. Elle murmure...] Etes-vous prêt ?}{Je vais m'y employer... [Elle se rapproche, glisse ses mains sur vos épaules et appuie son front sur votre poitrine. Elle respire lentement et profondément... Ses mains vous agrippent et elle vous tire à elle. La chaleur croît entre vous -- Vous entendez comme un bourdonnement. Elle murmure...] Etes-vous prête ?}{}{96}{}{}
+{531}{Oui...}{}{5}{}{-49}{}
+{536}{Voilà... [Elle recule, souriant, laissant ses mains sur vos épaules avant de les faire retomber.] Vous rapportez des nouvelles, dites-vous ?}{Voilà... [Elle recule, souriant, laissant ses mains sur vos épaules avant de les faire retomber.] Vous rapportez des nouvelles, dites-vous ?}{}{98}{}{}
+{537}{J'apporte des nouvelles des elfes noirs...}{}{5}{}{542}{}
+{539}{[Se raidissant.] Ou-oui, bien sûr. [Elle retire prestement ses mains et recule.] Qu'avez-vous découvert ?}{[Se raidissant.] Ou-oui, bien sûr. [Elle retire prestement ses mains et recule.] Qu'avez-vous découvert ?}{}{99}{}{}
+{540}{J'apporte des nouvelles des elfes noirs...}{}{5}{}{542}{}
+{542}{Avez-vous trouvé le village des elfes noirs ? Racontez-moi ce qui s'est passé...}{Avez-vous trouvé le village des elfes noirs ? Racontez-moi ce qui s'est passé...}{}{100}{}{}
+{543}{J'ai voyagé jusqu'à Tarante et... [Vous lui racontez comment vous avez trouvé T'sen-Ang.]}{}{5}{}{545}{}
+{545}{Quelle aventure... Mais vous semblez avoir trouvé ce que vous cherchiez. Et ce M'in Gorad ? L'avez-vous trouvé ? Vous a-t-il raconté ce qu'il est advenu du Clan du Mont Noir ?}{Quelle aventure... Mais vous semblez avoir trouvé ce que vous cherchiez. Et ce M'in Gorad ? L'avez-vous trouvé ? Vous a-t-il raconté ce qu'il est advenu du Clan du Mont Noir ?}{}{101}{}{lc4 1}
+{546}{Oui, elle se trouvait au village. J'ai parlé avec elle...}{}{5}{lf12 1, gf2001 1}{568}{}
+{547}{Oui, elle se trouvait au village. J'ai parlé avec elle...}{}{5}{lf12  0, gf2001 1}{552}{}
+{548}{Oui, elle se trouvait au village...}{}{5}{gf2001 0, lf12 0}{552}{}
+{549}{Oui, elle se trouvait au village...}{}{5}{gf2001 0, lf12 1}{568}{}
+{550}{Nous parlerons de cela plus tard...}{}{5}{}{700}{}
+{552}{Ainsi donc, M'in Gorad est une femme. [Le visage d'Orfraie se durcit, son front se plisse.] J'aimerais beaucoup la rencontrer...}{Ainsi donc, M'in Gorad est une femme. [Le visage d'Orfraie se durcit, son front se plisse.] J'aimerais beaucoup la rencontrer...}{}{102}{}{}
+{553}{Il va être difficile de planifier une entrevue. Je l'ai tuée...}{}{5}{gf1097 1}{562}{}
+{554}{Je souhaite que vous y parveniez....}{}{5}{gf1097 0}{556}{}
+{556}{Moi aussi. Et que vous a raconté cette M'in Gorad... ?}{Moi aussi. Et que vous a raconté cette M'in Gorad... ?}{}{103}{}{lc4 2}
+{557}{Elle m'a parlé du Clan du Mont Noir...[Vous racontez à Orfraie ce que vous savez.]}{}{5}{gf2000 1, gf2001 1}{653}{}
+{558}{J'ai récupéré cette note...}{}{5}{ gf1099 1}{645}{}
+{559}{Je préférerais que nous parlions de cela plus tard...}{}{5}{}{700}{}
+{562}{Vous l'avez tuée ? C'est vraiment regrettable, les valeurs elfiques étant ce qu'elles sont... [Elle se penche vers vous et chuchote...] Bien joué. Eh bien, que vous a-t-elle dit ?}{Vous l'avez tuée ? C'est vraiment regrettable, les valeurs elfiques étant ce qu'elles sont... [Elle se penche vers vous et chuchote...] Bien joué. Eh bien, que vous a-t-elle dit ?}{}{104}{}{lc4 2}
+{563}{Voilà tout ce qu'elle a dit : " Vous ne pouvez pas l'arrêter maintenant. Arronax... "}{}{5}{gf2000 0}{658}{}
+{564}{Elle m'a parlé du Clan du Mont Noir...[Vous racontez à Orfraie ce que vous savez.]}{}{5}{gf2000 1}{653}{}
+{565}{J'ai récupéré cette note...}{}{5}{ gf1099 1}{645}{}
+{566}{Je préférerais que nous parlions de cela plus tard...}{}{5}{}{700}{}
+{568}{Elle ? [Les yeux d'Orfraie se rétrécissent et elle hausse les épaules.] Et qu'avait-elle donc à dire ? Vous avez passé beaucoup de temps là-bas... Apparemment, vous aviez beaucoup de choses à vous raconter...}{Elle ? [Les yeux d'Orfraie se rétrécissent et elle hausse les épaules.] Et qu'avait-elle donc à dire ? Vous avez passé beaucoup de temps là-bas... Apparemment, vous aviez beaucoup de choses à vous raconter...}{}{105}{}{}
+{569}{Pas exactement. Elle n'a pas eu le temps de dire grand-chose avant que je la tue...}{}{5}{gf1097 1}{579}{re +10}
+{570}{Oui... Nous avons parlé de la dédicace figurant dans le livre de Monsieur Terwilliger...}{}{5}{ru 2001, lf15 0}{585}{lf15 1}
+{571}{Simplement le temps nécessaire... J'avais de bonnes raisons de vouloir rentrer rapidement...}{}{5}{}{575}{re +10}
+{572}{Allez-vous m'écouter, jeune fille ! Le destin du monde est dans la balance !}{}{5}{}{593}{lf12 0, re -10, gf2364 0}
+{575}{Ceci, @PCNAME@, est peut-être le compliment le plus flatteur que j'aie jamais reçu. Je vous remercie... [Elle agrippe à nouveau votre main...] Parlez-moi de cette M'in Gorad... Que vous a-t-elle dit ?}{Ceci, @PCNAME@, est peut-être le compliment le plus flatteur que j'aie jamais reçu. Je vous remercie... [Elle agrippe à nouveau votre main...] Parlez-moi de cette M'in Gorad... Que vous a-t-elle dit ?}{}{106}{}{}
+{576}{Avant ou après que je la tue ?}{}{5}{gf1097 1}{579}{re +5}
+{577}{Elle m'a parlé du Clan du Mont Noir...[Vous racontez à Orfraie ce que vous savez.]}{}{5}{gf2000 1}{653}{}
+{579}{Tuée ? [Orfraie réprime un sourire.] Etait-ce vraiment nécessaire, je veux dire... D'après nos valeurs... [Elle se penche vers vous et vous chuchote...] Je suis sûre qu'elle l'a bien mérité. Que vous a-t-elle dit ?}{Tuée ? [Orfraie réprime un sourire.] Etait-ce vraiment nécessaire, je veux dire... D'après nos valeurs... [Elle se penche vers vous et vous chuchote...] Je suis sûre qu'elle l'a bien mérité. Que vous a-t-elle dit ?}{}{107}{}{lc4 2}
+{580}{Voilà tout ce qu'elle a dit : " Vous ne pouvez pas l'arrêter maintenant. Arronax... "}{}{5}{gf1097 1}{658}{}
+{581}{Elle m'a parlé du Clan du Mont Noir...[Vous racontez à Orfraie ce que vous savez.]}{}{5}{gf1097 1, gf2000 1}{653}{}
+{582}{J'ai récupéré cette note...}{}{5}{ gf1099 1}{645}{}
+{583}{Je préférerais que nous parlions de cela plus tard...}{}{5}{}{700}{}
+{585}{Une dédicace... ? Il a écrit quelque chose... ? Je veux dire, dans quel but... ? [Manifestement troublée] Que, hum, que disait-elle... ?}{Une dédicace... ? Il a écrit quelque chose... ? Je veux dire, dans quel but... ? [Manifestement troublée] Que, hum, que disait-elle... ?}{}{108}{}{}
+{586}{[Vous lui racontez ce que disait la dédicace...]}{}{5}{}{588}{}
+{588}{[Rougissant.] Quelles paroles magnifiques... [Elle regarde au loin avec nostalgie, puis repose son regard sur vous...] Il faisait toujours preuve d'une infinie délicatesse...}{[Rougissant.] Quelles paroles magnifiques... [Elle regarde au loin avec nostalgie, puis repose son regard sur vous...] Il faisait toujours preuve d'une infinie délicatesse...}{}{109}{}{}
+{589}{[Sur un ton taquin.] Et que s'est-il passé entre vous deux ?}{}{5}{}{600}{}
+{590}{Ca suffit. Cela appartient au passé. Revenons à nos moutons...}{}{5}{}{597}{lf12 0, gf2364 0}
+{591}{J'en ai assez de cette conversation... Nous la reprendrons plus tard...}{}{5}{}{705}{lf12 0, gf2364 0}
+{593}{Bien sûr... Veuillez accepter toutes mes excuses pour vous avoir fait perdre votre temps. [Sur un ton un peu froid.] Donc ? Qu'en est-il de cette femme, M'in Gorad ? Que vous a-t-elle dit ?}{Bien sûr... Veuillez accepter toutes mes excuses pour vous avoir fait perdre votre temps. [Sur un ton un peu froid.] Donc ? Qu'en est-il de cette femme, M'in Gorad ? Que vous a-t-elle dit ?}{}{110}{}{}
+{594}{Je l'ai tuée...}{}{5}{}{562}{re +5}
+{595}{Elle m'a parlé du Clan du Mont Noir...[Vous racontez à Orfraie ce que vous savez.]}{}{5}{}{}{}
+{597}{Bien sûr... Veuillez accepter toutes mes excuses pour vous avoir fait perdre votre temps. [Sur un ton froid.] Donc ? Et Renford ? Comment va-t-il ? Réside-t-il toujours à Tarante ?}{Bien sûr... Veuillez accepter toutes mes excuses pour vous avoir fait perdre votre temps. [Sur un ton froid.] Donc ? Et Renford ? Comment va-t-il ? Réside-t-il toujours à Tarante ?}{}{111}{}{}
+{598}{Non, Orfraie. Il est mort depuis longtemps...}{}{5}{}{617}{}
+{600}{Oh, rien... C'était il y a longtemps. Cela ne vous ennuie pas, j'espère ?}{Oh, rien... C'était il y a longtemps. Cela ne vous ennuie pas, j'espère ?}{}{112}{}{}
+{601}{Bien sûr que non. Si son souvenir vous fait sourire, je m'en réjouis...}{}{5}{}{613}{re +10}
+{602}{Bien sûr que non. Le marivaudage est-il chose courante chez les elfes ?}{}{5}{}{605}{}
+{603}{J'en ai assez de cette conversation... Nous la reprendrons plus tard...}{}{5}{}{705}{lf12 0, gf2364 0}
+{605}{Marivaudage ! Vous osez proférer un tel jugement à mon sujet ? Vous allez trop loin...}{Marivaudage ! Vous osez proférer un tel jugement à mon sujet ? Vous allez trop loin...}{}{113}{}{}
+{606}{Pardonnez-moi, Orfraie. Ecoutez, j'ai de mauvaises nouvelles à propos de Renford...}{}{5}{}{617}{}
+{607}{Je ne suis pas du genre à mâcher mes mots...}{}{5}{}{609}{lf12 0, gf2364 0}
+{609}{Et il semble bien que j'aie surestimé votre caractère. [Sur un ton froid.] Très bien. Et Renford ? Réside-t-il toujours à Tarante ?}{Et il semble bien que j'aie surestimé votre caractère. [Sur un ton froid.] Très bien. Et Renford ? Réside-t-il toujours à Tarante ?}{}{114}{}{}
+{610}{Non, Orfraie. Il est mort depuis longtemps...}{}{5}{}{617}{}
+{611}{J'en ai assez de cette conversation... Nous la reprendrons plus tard...}{}{5}{}{705}{lf12 0, gf2364 0}
+{613}{Ceci, @PCNAME@, est peut-être le compliment le plus flatteur que j'aie jamais reçu. Je vous remercie... [Elle agrippe à nouveau votre main...] Je vous en prie, dites-moi... Avez-vous trouvé Renford ? Comment va-t-il ? }{Ceci, @PCNAME@, est peut-être le compliment le plus flatteur que j'aie jamais reçu. Je vous remercie... [Elle agrippe à nouveau votre main...] Je vous en prie, dites-moi... Avez-vous trouvé Renford ? Comment va-t-il ?}{}{115}{}{}
+{614}{Je regrette d'avoir à vous dire cela, Orfraie. Il est mort depuis longtemps...}{}{5}{}{617}{}
+{617}{Non... [Ses yeux se remplissent de larmes.] Que s'est-il passé ? A-t-il été tué par les elfes noirs ? " Avalé ", comme dans la vision de ma mère... ?}{Non... [Ses yeux se remplissent de larmes.] Que s'est-il passé ? A-t-il été tué par les elfes noirs ? " Avalé ", comme dans la vision de ma mère... ?}{}{116}{}{}
+{618}{Il est mort de façon mystérieuse, mais il semble bien que ce soit le cas...}{}{5}{}{620}{}
+{620}{Pauvre Renford... Il avait encore toute la vie devant lui...}{Pauvre Renford... Il avait encore toute la vie devant lui...}{}{117}{}{}
+{621}{Pas vraiment... Il est mort de vieillesse...}{}{5}{ra 1, lf12 1}{632}{}
+{622}{Pas vraiment... Il est mort de vieillesse...}{}{5}{ra -1, lf12 1}{628}{}
+{623}{Pas vraiment... Il est mort de vieillesse...}{}{5}{lf12 0}{625}{}
+{625}{Oui, naturellement. C'était un humain, après tout. J'oublie toujours à quel point leur vie est courte... Pauvre Renford... [Elle regarde au loin, séchant ses larmes...] Et qu'avez-vous trouvé à T'sen-Ang ?}{Oui, naturellement. C'était un humain, après tout. J'oublie toujours à quel point leur vie est courte... Pauvre Renford... [Elle regarde au loin, séchant ses larmes...] Et qu'avez-vous trouvé à T'sen-Ang ?}{}{118}{}{}
+{626}{Comme je disais, j'ai retrouvé M'in Gorad...}{}{5}{}{653}{}
+{628}{Un vieil homme ? Oh, mince... Oui, j'avais oublié. Les humains disposent de si peu de temps... Ils sont si différents de toutes les autres races. [Elle lâche votre main] Renford me manquera. Et qu'avez-vous trouvé à T'sen-Ang ?}{Un vieil homme ? Oh, mince... Oui, j'avais oublié. Les humains disposent de si peu de temps... Ils sont si différents de toutes les autres races. [Elle lâche votre main] Renford me manquera. Et qu'avez-vous trouvé à T'sen-Ang ?}{}{119}{}{}
+{629}{Comme je disais, j'ai retrouvé M'in Gorad...}{}{5}{}{638}{}
+{632}{Un vieil homme ? Oh, mince... Oui, j'avais oublié. [Elle vous regarde tristement, lâchant votre main.] Vous autres humains disposez de si peu de temps...}{Un vieil homme ? Oh, mince... Oui, j'avais oublié. [Elle vous regarde tristement, lâchant votre main.] Vous autres humains disposez de si peu de temps...}{}{120}{}{gf2366 1}
+{633}{Orfraie, je...}{}{5}{}{635}{}
+{635}{Non... Nous parlerons de cela plus tard. [Séchant ses larmes.] Et qu'avez-vous trouvé à T'sen-Ang ?}{Non... Nous parlerons de cela plus tard. [Séchant ses larmes.] Et qu'avez-vous trouvé à T'sen-Ang ?}{}{121}{}{}
+{636}{Comme je disais, j'ai retrouvé M'in Gorad...}{}{5}{}{638}{}
+{638}{Et que vous a-t-elle dit ?}{Et que vous a-t-elle dit ?}{}{122}{}{lc4 2}
+{639}{Vous voulez dire avant ou après que je la tue ?}{}{5}{gf1097 1, lf12 0}{562}{}
+{640}{Vous voulez dire avant ou après que je la tue ?}{}{5}{gf1097 1, lf12 1}{579}{}
+{641}{Elle m'a parlé du Clan du Mont Noir...[Vous racontez à Orfraie ce que vous savez.]}{}{5}{gf2000 1, gf2001 1}{653}{}
+{642}{J'ai récupéré cette note...}{}{5}{ gf1099 1}{645}{}
+{643}{Je préférerais que nous parlions de cela plus tard...}{}{5}{}{700}{}
+{645}{Que dit-elle ?}{Que dit-elle ?}{}{123}{}{lc4 3}
+{646}{Elle parle du Clan du Mont Noir et d'un homme du nom d'Arronax... [Vous lui montrez.]}{}{5}{}{653}{lf13 1}
+{653}{Ainsi, le Clan du Mont Noir a été banni dans le seul but d'aider Arronax à affaiblir le périmètre de défense. Il est donc de retour. Nous les elfes sommes une race de mages, nous maîtrisons l'art des runes et de la prophétie, mais jamais je n'aurais cru... Malgré tout, il nous faut agir. Vous devez vous entretenir avec ma mère... Elle saura probablement quoi faire...}{Ainsi, le Clan du Mont Noir a été banni dans le seul but d'aider Arronax à affaiblir le périmètre de défense. Il est donc de retour. Nous les elfes sommes une race de mages, nous maîtrisons l'art des runes et de la prophétie, mais jamais je n'aurais cru... Malgré tout, il nous faut agir. Vous devez vous entretenir avec ma mère... Elle saura probablement quoi faire...}{}{124}{}{gf1098 1, lc4 3}
+{654}{Je vais m'entretenir avec elle, Orfraie, et je reviendrai.}{}{5}{}{0}{lf17 1}
+{655}{Attendez... J'ai quelques questions au sujet d'Arronax...}{}{5}{}{673}{}
+{656}{Que signifie cette référence à Vendigroth ?}{}{5}{lf13 1}{695}{lf19 1}
+{658}{Arronax ? Que viendrait-il faire dans cette histoire ?...}{Arronax ? Que viendrait-il faire dans cette histoire ?...}{}{125}{}{}
+{659}{Stennar Tailleroche a parlé du retour de quelque chose...}{}{5}{}{661}{}
+{661}{Oui, et maintenant M'in Gorad affirme " Vous ne pouvez pas l'arrêter " et évoque le nom d'Arronax... Ceci est peut-être beaucoup plus grave qu'aucun d'entre nous ne l'imagine...}{Oui, et maintenant M'in Gorad affirme " Vous ne pouvez pas l'arrêter " et évoque le nom d'Arronax... Ceci est peut-être beaucoup plus grave qu'aucun d'entre nous ne l'imagine...}{}{126}{}{gf1098 1}
+{662}{Qui est Arronax ?}{}{5}{}{673}{}
+{663}{Que devons-nous faire ?}{}{5}{}{667}{}
+{664}{J'ai pu également lire un mot qu'elle avait...}{}{5}{gf1099 1, lf13 0}{645}{}
+{665}{Et la référence à Vendigroth dans le mot ?}{}{5}{gf1099 1, lf13 1, lf19 0}{695}{lf19 1}
+{667}{Ma mère saura ce que nous devons faire... Elle sera capable de déchiffrer tout cela et de nous éclairer sur la façon d'agir...}{Ma mère saura ce que nous devons faire... Elle sera capable de déchiffrer tout cela et de nous éclairer sur la façon d'agir...}{}{127}{}{gf1098 1}
+{668}{Je vais m'entretenir avec elle, Orfraie, et je reviens.}{}{5}{}{0}{lf17 1}
+{669}{Que pouvez-vous me dire au sujet d'Arronax ?}{}{5}{}{673}{}
+{670}{J'ai pu également lire un mot qu'elle avait...}{}{5}{gf1099 1, lf13 0}{645}{}
+{671}{Et la référence à Vendigroth dans le mot ?}{}{5}{gf1099 1, lf13 1, lf19 0}{695}{lf19 1}
+{673}{L'histoire d'Arronax remonte à loin... C'était un elfe puissant qui vivait au temps de l'Ere des Légendes. A cette époque, un Conseil Elfique régnait sur le pays et Arronax le défia. Une grande lutte les opposa, puis Arronax fut banni dans le Néant. L'histoire, bien sûr, est bien plus complexe que cela, mais je vous la raconte dans les grandes lignes...}{L'histoire d'Arronax remonte à loin... C'était un elfe puissant qui vivait au temps de l'Ere des Légendes. A cette époque, un Conseil Elfique régnait sur le pays et Arronax le défia. Une grande lutte les opposa, puis Arronax fut banni dans le Néant. L'histoire, bien sûr, est bien plus complexe que cela, mais je vous la raconte dans les grandes lignes...}{}{128}{}{}
+{674}{Le Néant ? Qu'est-ce que le Néant ?}{}{5}{}{681}{}
+{675}{Que voulez-vous dire par l'Ere des légendes ?}{}{5}{}{413}{}
+{676}{Quelle est la suite de cette histoire ?}{}{5}{}{688}{}
+{677}{Que devons-nous faire ?}{}{5}{}{667}{}
+{678}{J'ai pu également lire un mot qu'elle avait...}{}{5}{gf1099 1, lf13 0}{645}{}
+{679}{Et la référence à Vendigroth dans le mot ?}{}{5}{gf1099 1, lf13 1, lf19 0}{695}{lf19 1}
+{681}{Le Néant est le lieu où se retrouvent les bannis. Ne m'en demandez pas plus... Je ne sais pas à quoi ce lieu ressemble. En fait nul ne le sait car personne n'en est jamais revenu. }{Le Néant est le lieu où se retrouvent les bannis. Ne m'en demandez pas plus... Je ne sais pas à quoi ce lieu ressemble. En fait nul ne le sait car personne n'en est jamais revenu. }{}{129}{}{}
+{682}{Que voulez-vous dire par l'Ere des légendes ?}{}{5}{}{413}{}
+{683}{Que pouvez-vous me dire de plus sur l'histoire d'Arronax... ?}{}{5}{}{688}{}
+{684}{Que devons-nous faire ?}{}{5}{}{667}{}
+{685}{J'ai pu également lire un mot qu'elle avait...}{}{5}{gf1099 1, lf13 0}{645}{}
+{686}{Et la référence à Vendigroth dans le mot ?}{}{5}{gf1099 1, lf13 1, lf19 0}{695}{lf19 1}
+{688}{D'autres que moi en savent plus long sur cette histoire. Arronax est une préoccupation centrale dans la religion Panarii... Leur prophétie annonce son retour. Si vous avez des questions, ils possèdent des temples dans tout Arcanum... N'importe quel prêtre pourra vous fournir des informations...}{D'autres que moi en savent plus long sur cette histoire. Arronax est une préoccupation centrale dans la religion Panarii... Leur prophétie annonce son retour. Si vous avez des questions, ils possèdent des temples dans tout Arcanum... N'importe quel prêtre pourra vous fournir des informations...}{}{130}{}{}
+{689}{Que voulez-vous dire par l'Ere des légendes ?}{}{5}{}{413}{}
+{690}{Le Néant ? Qu'est-ce que le Néant ?}{}{5}{}{681}{}
+{691}{Que devons-nous faire ?}{}{5}{}{667}{}
+{692}{J'ai pu également lire un mot qu'elle avait...}{}{5}{gf1099 1, lf13 0}{645}{}
+{693}{Et la référence à Vendigroth dans le mot ?}{}{5}{gf1099 1, lf13 1, lf19 0}{695}{lf19 1}
+{695}{Vendigroth ? Je sais que les Landes de Vendigroth se trouvent dans le Nord et que Vendigroth occupe une place importante dans les légendes Panarii à propos d'Arronax. On ne sait s'il s'agit d'une véritable ville ou plutôt d'un lieu symbolique. Il semblerait que les elfes noirs ainsi que ce K'an Hua aient découvert quelque chose à cet endroit...}{Vendigroth ? Je sais que les Landes de Vendigroth se trouvent dans le Nord et que Vendigroth occupe une place importante dans les légendes Panarii à propos d'Arronax. On ne sait s'il s'agit d'une véritable ville ou plutôt d'un lieu symbolique. Il semblerait que les elfes noirs ainsi que ce K'an Hua aient découvert quelque chose à cet endroit...}{}{131}{}{}
+{696}{J'ai quelques questions au sujet d'Arronax...}{}{5}{}{673}{}
+{697}{Que devons-nous faire ?}{}{5}{}{667}{}
+{700}{Très bien... Mais revenez vite ! Nous avons encore beaucoup de choses à nous dire...}{Très bien... Mais revenez vite ! Nous avons encore beaucoup de choses à nous dire...}{}{132}{}{lf18 0}
+{701}{Oui, Orfraie. }{}{5}{}{}{lf17 1}
+{705}{Oui, peut-être vaudrait-il mieux que nous reprenions cette conversation plus tard. Votre compagnie m'ennuie quelque peu. [Avec froideur.] Revenez lorsque vous serez de meilleure humeur.}{Oui, peut-être vaudrait-il mieux que nous reprenions cette conversation plus tard. Votre compagnie m'ennuie quelque peu. [Avec froideur.] Revenez lorsque vous serez de meilleure humeur.}{}{133}{}{lf17 0}
+{706}{Au revoir, Orfraie.}{}{5}{}{}{lf18 1}
+{710}{Oui, je pense que nous devons discuter de cela... Où en étions-nous ?}{Oui, je pense que nous devons discuter de cela... Où en étions-nous ?}{}{134}{}{}
+{711}{J'ai parlé à M'in Gorad... Elle était très intéressante...}{}{5}{lf12 1, gf2001 1, lc4 1}{568}{}
+{712}{J'ai parlé à M'in Gorad... Elle était très intéressante...}{}{5}{lf12  0, gf2001 1, lc4 1}{552}{}
+{713}{M'in Gorad... Elle était très intéressante...}{}{5}{gf2001 0, lf12 0, lc4 1}{552}{}
+{714}{M'in Gorad... Elle était très intéressante...}{}{5}{gf2001 0, lf12 1, lc4 1}{568}{}
+{715}{Voilà tout ce que M'in Gorad a dit : " Vous ne pouvez pas l'arrêter maintenant. Arronax... "}{}{5}{gf2000 0, gf2001 1, lc4 2}{658}{}
+{716}{Elle m'a parlé du Clan du Mont Noir...[Vous racontez à Orfraie ce que vous savez.]}{}{5}{gf2000 1, gf2001 1, lc4 2}{653}{}
+{717}{Je ne lui ai pas parlé, mais j'ai découvert cette note....}{}{5}{gf2001 0, gf1099 1, lc4 2}{645}{}
+{718}{Maintenant que nous savons pour Arronax, que devons-nous faire ?}{}{5}{lc4 3}{667}{}
+{719}{Je regrette. Je préférerais en parler plus tard...}{}{5}{}{0}{}
+{721}{Bon, très bien. Peut-être nos échanges peuvent-ils prendre un caractère plus courtois. Où en étions-nous ?}{Bon, très bien. Peut-être nos échanges peuvent-ils prendre un caractère plus courtois. Où en étions-nous ?}{}{135}{}{}
+{722}{J'ai parlé à M'in Gorad... Elle était très intéressante...}{}{5}{lf12  0, gf2001 1, lc4 1}{552}{}
+{723}{M'in Gorad... Elle était très intéressante...}{}{5}{gf2001 0, lf12 0, lc4 1}{552}{}
+{724}{Voilà tout ce que M'in Gorad a dit : " Vous ne pouvez pas l'arrêter maintenant. Arronax... "}{}{5}{gf2000 0, gf2001 1, lc4 2}{658}{}
+{725}{Elle m'a parlé du Clan du Mont Noir...[Vous racontez à Orfraie ce que vous savez.]}{}{5}{gf2000 1, gf2001 1, lc4 2}{653}{}
+{726}{Je ne lui ai pas parlé, mais j'ai découvert cette note....}{}{5}{gf2001 0, gf1099 1, lc4 2}{645}{}
+{727}{Maintenant que nous savons pour Arronax, que devons-nous faire ?}{}{5}{lc4 3}{667}{}
+{728}{Je regrette. Je préférerais en parler plus tard...}{}{5}{}{0}{}
+{735}{Vraiment ? Et que vous a-t-elle dit, @PCNAME@ ?}{Vraiment ? Et que vous a-t-elle dit, @PCNAME@ ?}{}{136}{}{}
+{736}{Elle m'a dit " Cherchez votre réponse auprès de Nasrudin... "}{}{5}{}{738}{}
+{738}{C'est vraiment très étrange...}{C'est vraiment très étrange...}{}{137}{}{}
+{739}{Pourquoi ?}{}{5}{}{741}{}
+{741}{Car Nasrudin est mort il y a plus de deux mille ans...}{Car Nasrudin est mort il y a plus de deux mille ans...}{}{138}{}{}
+{742}{Ceci risque de compliquer légèrement les choses...}{}{5}{}{744}{}
+{744}{[Elle esquisse un sourire ironique.] Il semble bien que oui.}{[Elle esquisse un sourire ironique.] Il semble bien que oui.}{}{139}{}{}
+{745}{Nasrudin et le Conseil... Ils ont banni Arronax...}{}{5}{}{747}{}
+{747}{Oui, je sais. C'est du moins ce que l'on raconte. Comme je vous l'ai dit, j'ignore les détails de cette affaire...}{Oui, je sais. C'est du moins ce que l'on raconte. Comme je vous l'ai dit, j'ignore les détails de cette affaire...}{}{140}{}{}
+{748}{Eh bien, me voilà dans une impasse. Je suis à la recherche d'un mort...}{}{5}{lf12 0}{753}{}
+{749}{Eh bien, me voilà dans une impasse. Je suis à la recherche d'un mort...}{}{5}{lf12 1}{768}{}
+{753}{Oui, tout cela est très étrange. Je vous conseille de vous rendre à Caladon. Vous y trouverez le premier temple du Panarii, et peut-être certaines réponses...}{Oui, tout cela est très étrange. Je vous conseille de vous rendre à Caladon. Vous y trouverez le premier temple du Panarii, et peut-être certaines réponses...}{}{141}{}{ru 2056}
+{754}{Ceci me semble être une riche idée. Voulez-vous vous joindre à moi ?}{}{5}{}{796}{lf22 1, jo 0 762}
+{755}{J'y vais de ce pas, Orfraie. Merci beaucoup pour votre aide...}{}{5}{}{}{fl 757}
+{757}{Bonne chance, @PCNAME@. J'espère que tout ceci tournera à notre avantage... à notre avantage à tous...}{Bonne chance, @PCNAME@. J'espère que tout ceci tournera à notre avantage... à notre avantage à tous...}{}{142}{}{}
+{759}{J'ai fort à faire ici, à Qintarra. Mais ma pensée ainsi que ma gratitude vous accompagnent. J'espère que tout ceci tournera à notre avantage... à notre avantage à tous...}{J'ai fort à faire ici, à Qintarra. Mais ma pensée ainsi que ma gratitude vous accompagnent. J'espère que tout ceci tournera à notre avantage... à notre avantage à tous...}{}{143}{}{}
+{760}{Merci, Orfraie. Au revoir.}{}{5}{}{0}{}
+{762}{[Elle se rapproche, et, à voix basse...] J'espérais que vous me le demanderiez. [Puis plus fort, afin que tous puissent entendre...] J'ai beaucoup de responsabilités ici à Qintarra, mais je crois que ma place est avec vous. Ce problème concerne tous les habitants d'Arcanum et plus particulièrement les elfes. Oui, @PCNAME@, je vous accompagnerai et je ferai le nécessaire, si vous souhaitez m'avoir à vos côtés...}{[Elle se rapproche, et, à voix basse...] J'espérais que vous me le demanderiez. [Puis plus fort, afin que tous puissent entendre...] J'ai beaucoup de responsabilités ici à Qintarra, mais je crois que ma place est avec vous. Ce problème concerne tous les habitants d'Arcanum et plus particulièrement les elfes. Oui, @PCNAME@, je vous accompagnerai et je ferai le nécessaire, si vous souhaitez m'avoir à vos côtés...}{}{144}{}{}
+{763}{Oui, Orfraie. Ce serait un honneur de vous avoir avec moi...}{}{5}{}{765}{}
+{765}{Et c'est un honneur pour moi de m'associer avec un être faisant preuve d'un tel courage et d'une telle honnêteté. Partons.}{Et c'est un honneur pour moi de m'associer avec quelqu'un qui possède un tel courage et une telle honnêteté. Partons.}{}{145}{}{}
+{766}{Oui, partons...}{}{5}{}{0}{}
+{768}{Oui, tout cela est très étrange. Nous devrions nous rendre à Caladon. Nous y trouverons le premier temple du Panarii, et peut-être quelques-unes des réponses à nos questions...}{Oui, tout cela est très étrange. Nous devrions nous rendre à Caladon. Nous y trouverons le premier temple du Panarii, et peut-être quelques-unes des réponses à nos questions...}{}{146}{}{}
+{769}{Je vous demande pardon... Vous avez bien dit " nous " ?}{}{5}{}{771}{}
+{771}{Oui, c'est exact. [Son regard vous défie.] Ce problème concerne tous les habitants d'Arcanum et plus particulièrement les elfes. Où est ma place, sinon là où l'on a le plus besoin de moi ?}{Oui, c'est exact. [Son regard vous défie.] Ce problème concerne tous les habitants d'Arcanum et plus particulièrement les elfes. Où est ma place, sinon là où l'on a le plus besoin de moi ?}{}{147}{}{}
+{772}{Je n'avais pas l'intention de contester votre décision. Ainsi, vous voulez vous joindre à moi ?}{}{5}{}{796}{lf22 1, jo 0 776}
+{773}{Cela me convient, si vous gardez à l'esprit qui commande et qui obéit...}{}{5}{}{782}{re -10, lf12  0, gf2364 0}
+{774}{Je regrette, Orfraie. C'est ici que nos chemins se séparent...}{}{5}{}{792}{lf12 0, gf2364 0}
+{776}{[Elle vous gratifie d'un sourire radieux.] Bien entendu... Je serais ravie de me joindre à vous. Et vous, souhaiteriez-vous m'avoir à vos côtés ?}{[Elle vous gratifie d'un sourire radieux.] Bien entendu... Je serais ravie de me joindre à vous. Et vous, souhaiteriez-vous m'avoir à vos côtés ?}{}{148}{}{}
+{777}{C'est tout ce que je désire...}{}{5}{}{779}{}
+{779}{[Elle se rapproche de vous et glisse lentement sa main dans la vôtre.] Alors, partons ensemble affronter les dangers qui nous attendent...}{[Elle se rapproche de vous et glisse lentement sa main dans la vôtre.] Alors, partons ensemble affronter les dangers qui nous attendent...}{}{149}{}{}
+{780}{Oui, partons...}{}{5}{}{0}{}
+{782}{Qui commande et qui obéit... Comment osez-vous ? Je suis la fille de la Reine des Elfes ! Je n'accepterai d'ordres de personne ! Vous feriez bien de ne pas me contrarier, @PCNAME@ !}{Qui commande et qui obéit... Comment osez-vous ? Je suis la fille de la Reine des Elfes ! Je n'accepterai d'ordres de personne ! Vous feriez bien de ne pas me contrarier, @PCNAME@ !}{}{150}{}{}
+{783}{Pardonnez-moi... Nous voyagerons de concert. Voulez-vous vous joindre à moi ?}{}{5}{}{796}{lf22 1, jo 0 786}
+{784}{Maintenant que j'y pense, je crois que je préférerais faire cavalier seul...}{}{5}{}{792}{}
+{786}{[Elle prend un ton quelque peu détaché.] Vous souhaitez donc m'avoir à vos côtés, mon ami ?}{[Elle prend un ton quelque peu détaché.] Vous souhaitez donc m'avoir à vos côtés, mon amie ?}{}{151}{}{}
+{787}{Oui...}{}{5}{}{789}{}
+{789}{Alors, partons. J'ai hâte de me rendre utile...}{Alors, partons. J'ai hâte de me rendre utile...}{}{152}{}{}
+{790}{Moi aussi... On y va... ?}{}{5}{}{0}{}
+{792}{Vraiment ? [Sur un ton froid.] Je vois. Eh bien, je vous souhaite bonne chance dans votre quête, mon ami. J'espère que tout ceci tournera à notre avantage... à notre avantage à tous.}{Vraiment ? [Sur un ton froid.] Je vois. Eh bien, je vous souhaite bonne chance dans votre quête, mon amie. J'espère que tout ceci tournera à notre avantage... à notre avantage à tous.}{}{153}{}{}
+{793}{Adieu, Orfraie.}{}{5}{}{0}{}
+{796}{Y a-t-il autre chose ? J'ai fort à faire ici, à Qintarra...}{Y a-t-il autre chose ? J'ai fort à faire ici, à Qintarra...}{}{154}{}{}
+{797}{E:}{}{5}{}{0}{}
+{799}{Attendez... Quelque chose ne va pas... Vous semblez avoir changé...}{Attendez... Quelque chose ne va pas... Vous semblez avoir changé...}{}{155}{}{}
+{800}{Quoi ? Que voulez-vous dire ?}{}{5}{}{802}{}
+{801}{Euh ? Quoi ça veut dire ?}{}{-4}{}{977}{}
+{802}{Vous avez négocié avec eux, n'est-ce pas ? Les elfes noirs ! J'ai compris... Vous avez accepté de les aider ! C'est incroyable. Je croyais que vous étiez différent...}{Vous avez négocié avec eux, n'est-ce pas ? Les elfes noirs ! J'ai compris... Vous avez accepté de les aider ! C'est incroyable. Je croyais que vous étiez différente...}{}{156}{}{}
+{803}{Attendez, Orfraie ! J'ai accepté dans le seul but de revenir ici !}{}{5}{}{806}{}
+{804}{Oui ? Et alors ? Qu'avez-vous l'intention de faire ?}{}{5}{}{806}{}
+{806}{[Orfraie recule d'un pas, les poings serrés.] Faites votre choix. Tout de suite. Etes-vous avec nous ou contre nous ?}{[Orfraie recule d'un pas, les poings serrés.] Faites votre choix. Tout de suite. Etes-vous avec nous ou contre nous ?}{}{157}{}{}
+{807}{Je suis avec vous !}{}{5}{}{825}{}
+{808}{Nul ne peut m'obliger à choisir...}{}{5}{}{810}{}
+{810}{[L'atmosphère autour d'Orfraie commence à luire d'un éclat rougeoyant -- ses yeux brillent du même éclat.] Faites votre choix. Maintenant.}{[L'atmosphère autour d'Orfraie commence à luire d'un éclat rougeoyant -- ses yeux brillent du même éclat.] Faites votre choix. Maintenant.}{}{158}{}{}
+{811}{Très bien, très bien... Je suis avec vous.}{}{5}{}{825}{}
+{812}{Quel dommage, ma chère. Je regrette, mais je vais devoir vous tuer...}{}{5}{}{}{co, fl 820}
+{814}{Très bien... [Elle se détend.] Je vous crois, @PCNAME@. Mais vous devrez me prouver que vous n'avez conclu aucune alliance avec les elfes noirs. Partez. Tuez M'in Gorad et revenez me voir...}{Très bien... [Elle se détend.] Je vous crois, @PCNAME@. Mais vous devrez me prouver que vous n'avez conclu aucune alliance avec les elfes noirs. Partez. Tuez M'in Gorad et revenez me voir...}{}{159}{}{}
+{815}{Mais vous ne savez même pas ce qui s'est passé...}{}{5}{}{817}{}
+{817}{Suffit ! Je ne vous dirai plus rien tant que vous n'aurez pas fait cela. Ne revenez pas tant que vous n'aurez pas tué M'in Gorad.}{Suffit ! Je ne vous dirai plus rien tant que vous n'aurez pas fait cela. Ne revenez pas tant que vous n'aurez pas tué M'in Gorad.}{}{160}{}{}
+{818}{Très bien... Je reviendrai une fois ma mission accomplie...}{}{5}{}{0}{gf2002 1}
+{820}{Je ne tolérerai aucune exaction à Qintarra ! L'heure de votre mort a sonné...}{Je ne tolérerai aucune exaction à Qintarra ! L'heure de votre mort a sonné...}{}{161}{}{}
+{825}{Moi non plus, je ne vous connais pas. [Cette jeune femelle elfe est belle mais semble malheureuse avec vous. Sans en avoir la certitude, vous pensez que cela est dû à vos déficiences mentales.]}{Moi non plus, je ne vous connais pas. [Cette jeune femelle elfe est belle mais semble malheureuse avec vous. Sans en avoir la certitude, vous pensez que cela est dû à vos déficiences mentales.]}{}{162}{}{}
+{826}{Euh... Comment vous appeler, elfe jolie ?}{}{-4}{ch 16}{829}{re +10}
+{827}{Euh... Comment vous appeler, elfe jolie ?}{}{-4}{ch -15}{832}{}
+{829}{[Son visage s'adoucit, et vous croyez apercevoir l'ombre d'un sourire.] Vous ne comprendriez pas mon vrai nom. Appelez-moi Orfraie.}{[Son visage s'adoucit, et vous croyez apercevoir l'ombre d'un sourire.] Vous ne comprendriez pas mon vrai nom. Appelez-moi Orfraie.}{}{163}{}{}
+{830}{D'accord jolie elfe ! Moi demander vous questions ?}{}{-4}{}{835}{}
+{832}{[Le visage de cette jeune fille semble dur.] Epargnez-moi ces effusions. Mon nom n'a aucune importance, mais vous pouvez m'appeler Orfraie si vous y tenez.}{[Le visage de cette jeune fille semble dur.] Epargnez-moi ces effusions. Mon nom n'a aucune importance, mais vous pouvez m'appeler Orfraie si vous y tenez.}{}{164}{}{}
+{833}{D'accord jolie elfe ! Moi demander vous questions ?}{}{-4}{}{835}{}
+{835}{S'il le faut...}{S'il le faut...}{}{165}{}{}
+{836}{J'ai besoin d'aide ! Il se passe de mauvaises choses !}{}{-4}{qu1019 0}{848}{}
+{837}{J'ai besoin d'aide ! Il se passe de mauvaises choses !}{}{-4}{qu1019 1}{870}{}
+{838}{J'ai besoin d'aide ! Il se passe de mauvaises choses !}{}{-4}{qu1019 2, gf1070 0, gf1071 0}{}{fl 874}
+{839}{Méchants humains pas vouloir partir !}{}{-4}{gf1071 1, gf1070 0, qu1019 2}{}{fl 876}
+{840}{Méchants humains partis !}{}{-4}{gf1070 1, qb1020 1}{878}{}
+{841}{Moi chercher elfes noirs !}{}{-4}{qu1021 2}{}{fl 902}
+{842}{Moi trouvé elfes noirs !}{}{-4}{qu1025 2, gf2003 1}{977}{}
+{843}{Moi trouvé elfes noirs !}{}{-4}{qu1020 4, gf1088 0, lf20 0, gf2003 0}{904}{}
+{844}{Moi trouvé elfes noirs !}{}{-4}{lf20 1, gf1088 0, gf2003 0}{}{fl 941}
+{845}{Moi avoir parlé avec maman !}{}{-4}{gf1088 1, lf21 0, lf24 0}{943}{lf24 1}
+{846}{Moi trouver Nasroudin !}{}{-4}{lf21 1}{}{fl 952}
+{847}{Moi partir maintenant.}{}{-4}{}{0}{}
+{848}{Toutes mes excuses... mais j'ai fort à faire pour le moment. Peut-être pourrons-nous parler plus tard, j'ai fort à faire pour le moment. A moins, bien entendu, que vous ne vouliez proposer votre aide ?}{Toutes mes excuses... mais j'ai fort à faire pour le moment. Peut-être pourrons-nous parler plus tard, j'ai fort à faire pour le moment. A moins, bien entendu, que vous ne vouliez proposer votre aide ?}{}{166}{}{}
+{849}{D'accord jolie elfe ! Moi aider !}{}{-4}{}{853}{re +5}
+{850}{Euh... Moi revenir plus tard...}{}{-4}{}{0}{}
+{851}{E:}{}{-4}{}{0}{}
+{853}{[Elle esquisse un léger sourire, manifestement ravie.] Très bien. Un groupe d'humains campe non loin d'ici... L'endroit se nomme Le Supplice de l'Aigle... Je vais vous le montrer sur la carte. C'est une terre sacrée pour les elfes. Vous comprenez ?}{[Elle esquisse un léger sourire, manifestement ravie.] Très bien. Un groupe d'humains campe non loin d'ici... L'endroit se nomme Le Supplice de l'Aigle... Je vais vous le montrer sur la carte. C'est une terre sacrée pour les elfes. Vous comprenez ?}{}{167}{}{mm 12}
+{854}{Une t-t-ter-re sa-sa-sa.... ?}{}{-4}{}{856}{}
+{856}{Eh bien... Cette terre est particulière, j'y tiens énormément. D'accord ?}{Eh bien... Cette terre est particulière, j'y tiens énormément. D'accord ?}{}{168}{}{}
+{857}{D'accord ! Particulière pour la jolie elfe !}{}{-4}{}{859}{}
+{859}{Oui, oui. Vous devez découvrir la raison de leur présence là-bas puis vous assurer qu'ils partent. Mais attention ! Ceci est très important ! En aucun cas vous ne devez lever la main sur eux... Il y a des esprits à cet endroit, qui font des vilaines choses aux gens qui sont méchants avec les autres... Vous comprenez ?}{Oui, oui. Vous devez découvrir la raison de leur présence là-bas puis vous assurer qu'ils partent. Mais attention ! Ceci est très important ! En aucun cas vous ne devez lever la main sur eux... Il y a des esprits à cet endroit, qui font des vilaines choses aux gens qui sont méchants avec les autres... Vous comprenez ?}{}{169}{}{qu1019 1}
+{860}{Euhhh....}{}{-4}{gf1070 0}{863}{}
+{861}{Moi avoir déjà accompli mission ! Eux partis !}{}{-4}{gf1070 1}{878}{}
+{863}{Pas frapper ! D'accord ? Pas frapper !}{Pas frapper ! D'accord ? Pas frapper !}{}{170}{}{}
+{864}{Oui ! Moi compris ! Pas frapper ! Moi les faire partir !}{}{-4}{}{867}{qu1019 2}
+{865}{Euh... Moi pas vouloir faire ça tout de suite. Moi revenir plus tard.}{}{-4}{}{0}{}
+{867}{Je vous remercie, brave camarade. Il se trouve là... [Elle vous montre l'endroit sur la carte.] Faites preuve de prudence ! Et revenez une fois votre mission accomplie...}{Je vous remercie, brave camarade. Il se trouve là... [Elle vous montre l'endroit sur la carte.] Faites preuve de prudence ! Et revenez une fois votre mission accomplie...}{}{171}{}{ru 2052, mm 12}
+{868}{Je le ferai ! Je le ferai ! Ar'voir !}{}{-4}{}{0}{}
+{870}{Comme je vous l'ai dit... Nous avons besoin d'aide au Supplice de l'Aigle. Etes-vous partant ? }{Comme je vous l'ai dit... Nous avons besoin d'aide au Supplice de l'Aigle. Etes-vous partante ? }{}{172}{}{}
+{871}{Oui ! Je vais le faire !}{}{-4}{}{867}{}
+{872}{Non... Moi revenir plus tard...}{}{-4}{}{0}{}
+{874}{Vous devez vous occuper des humains qui se trouvent au Supplice de l'Aigle... Ensuite, revenez me trouver...}{Vous devez vous occuper des humains qui se trouvent au Supplice de l'Aigle... Ensuite, revenez me trouver...}{}{173}{}{}
+{876}{Je n'ai pas dit que ce serait chose aisée, mais vous devez trouver un moyen de vous débarrasser d'eux ! Ne les frappez pas !}{Je n'ai pas dit que ce serait chose aisée, mais vous devez trouver un moyen de vous débarrasser d'eux ! Ne les frappez pas !}{}{174}{}{}
+{878}{Très bien ! Merci beaucoup... A présent, comment puis-je vous aider ?}{Très bien ! Merci beaucoup... A présent, comment puis-je vous aider ?}{}{175}{}{qu1019 4}
+{879}{Il se passe de mauvaises choses ! [Vous racontez à Orfraie tout ce qui s'est passé.]}{}{-4}{}{881}{}
+{881}{[Orfraie reste songeuse. Puis...] Une sombre histoire chargée de douleur. Et il semble que la faute incombe à nous, les elfes...}{[Orfraie reste songeuse Puis...] Une sombre histoire chargée de douleur. Et il semble que la faute incombe à nous, les elfes...}{}{176}{}{}
+{882}{Euh... Moi devoir trouver M'in Gorad...}{}{-4}{}{884}{}
+{884}{Je regrette, mais je ne connais pas d'elfe portant ce nom. En temps normal, je vous autoriserais à parler à ma mère, mais je ne peux consentir à laisser quelqu'un dans votre état mental discuter avec la Reine des Elfes. Il existe une solution...}{Je regrette, mais je ne connais pas d'elfe portant ce nom. En temps normal, je vous autoriserais à parler à ma mère, mais je ne peux consentir à laisser quelqu'un dans votre état mental discuter avec la Reine des Elfes. Il existe une autre solution...}{}{177}{}{}
+{885}{Laquelle, jolie elfe ?}{}{-4}{}{887}{}
+{887}{M'in Gorad est peut-être un elfe noir. Vous pourriez essayer de trouver les elfes noirs, M'in Gorad se trouve peut-être parmi eux...}{M'in Gorad est peut-être un elfe noir. Vous pourriez essayer de trouver les elfes noirs, M'in Gorad se trouve peut-être parmi eux...}{}{178}{}{ru 2100}
+{888}{E-e-el-fe n-n-noir ? Elfe noir quoi être ? Elfe noir être où ?}{}{-4}{}{890}{}
+{890}{Les elfes noirs sont très différents de nous... Ils sont méchants... Ils ont de mauvaises pensées. Je ne sais pas où ils se trouvent : nous ne pouvons les voir, pas même ma mère. Je regrette, mais vous devrez vous débrouiller par vous-même pour les trouver...}{Les elfes noirs sont très différents de nous... Ils sont méchants... Ils ont de mauvaises pensées. Je ne sais pas où ils se trouvent : nous ne pouvons les voir, pas même ma mère. Je regrette, mais vous devrez vous débrouiller par vous-même pour les trouver...}{}{179}{}{qu1020 1}
+{891}{Euh... D'accord. Moi aller trouver eux !}{}{-4}{}{893}{qu1020 2}
+{893}{Attendez ! J'ai peut-être un indice à vous livrer...}{Attendez ! J'ai peut-être un indice à vous livrer...}{}{180}{}{}
+{894}{Oui ? Quoi ?}{}{-4}{}{896}{}
+{896}{Il y a plusieurs années de cela, un homme qui cherchait les elfes noirs est venu ici. C'était un humain très intelligent et un peu trop bien habillé. [Elle se sourit à elle-même.] Il s'appelait Renford... Renford Terwilliger. J'ignore où il est et ce qu'il est advenu de lui, mais si vous arrivez à le retrouver, il se peut qu'il sache certaines choses au sujet des elfes noirs...}{Il y a plusieurs années de cela, un homme qui cherchait les elfes noirs est venu ici. C'était un humain très intelligent et un peu trop bien habillé. [Elle se sourit à elle-même.] Il s'appelait Renford... Renford Terwilliger. J'ignore où il est et ce qu'il est advenu de lui, mais si vous arrivez à le retrouver, il se peut qu'il sache certaines choses au sujet des elfes noirs...}{}{181}{}{qu1021 1, ss 10, ru 2055}
+{897}{Moi trouver lui ! Où être Terre-ouili-grrr ?}{}{-4}{}{899}{qu1021 2}
+{899}{Je l'ignore, mais à votre place je chercherais du côté des grandes cités humaines. Revenez me voir si vous trouvez le village des elfes noirs. Je souhaiterais vraiment savoir s'ils sont derrière cette affaire. Bonne chance !}{Je l'ignore, mais à votre place je chercherais du côté des grandes cités humaines. Revenez me voir si vous trouvez le village des elfes noirs. Je souhaiterais vraiment savoir s'ils sont derrière cette affaire. Bonne chance !}{}{182}{}{gf1046 1}
+{900}{D'accord ! Moi revenir lorsque moi trouver eux, jolie elfe ! Au revoir !}{}{-4}{}{0}{gf1046 2}
+{902}{J'aimerais pouvoir vous aider davantage. Trouvez Renford Terwilliger... Il doit se trouver dans l'une des grandes cités humaines. Bonne chance !}{J'aimerais pouvoir vous aider davantage. Trouvez Renford Terwilliger... Il doit se trouver dans l'une des grandes cités humaines. Bonne chance !}{}{183}{}{}
+{904}{Vous les avez trouvés ! Félicitations ! Peut-être vos facultés mentales ne sont-elles pas un tel handicap après tout ! Et avez-vous trouvé M'in Gorad ?}{Vous les avez trouvés ! Félicitations ! Peut-être vos facultés mentales ne sont-elles pas un tel handicap après tout ! Et avez-vous trouvé M'in Gorad ?}{}{184}{}{}
+{905}{Euh... Non. Moi pas parler à M'in Gorad.}{}{-4}{gf1097 0, gf1099 0}{912}{}
+{906}{Euh... Moi pas parler à M'in Gorad, mais moi trouver papier ! [Vous lui racontez.]}{}{-4}{gf1097 0, gf1099 1}{918}{}
+{907}{Oui ! Je l'ai tuée, elle aussi !}{}{-4}{gf1097 1}{928}{}
+{908}{Euh... J'va y aller.}{}{-4}{}{0}{}
+{912}{Vous n'avez trouvé aucune information dans le village ?}{Vous n'avez trouvé aucune information dans le village ?}{}{185}{}{}
+{913}{Euhhh... Hum... Ooohhh..}{}{-4}{}{915}{}
+{915}{Alors, revenez lorsque vous en saurez davantage. Repartez. Trouvez M'in Gorad, ou n'importe quel indice qui nous permettra de comprendre ce qui se passe exactement sur place. (Peut-être cette histoire n'est-elle que le fruit de l'imagination délirante d'un imbécile. Du moins je l'espère.) Bonne chance....}{Alors, revenez lorsque vous en saurez davantage. Repartez. Trouvez M'in Gorad, ou n'importe quel indice qui nous permettra de comprendre ce qui se passe exactement sur place. (Peut-être cette histoire n'est-elle que le fruit de l'imagination délirante d'un imbécile. Du moins je l'espère.) Bonne chance....}{}{186}{}{}
+{916}{Ar'voir...}{}{-4}{}{0}{}
+{918}{Intéressant. Il semble que le Clan du Mont Noir ait été banni dans le seul but d'aider Arronax à affaiblir le périmètre de défense. Il est donc de retour. Nous autres elfes sommes une race de mages, nous maîtrisons l'art des runes et de la prophétie, mais jamais je n'aurais cru... Malgré tout, il nous faut agir.}{Intéressant. Il semble que le Clan du Mont Noir ait été banni dans le seul but d'aider Arronax à affaiblir le périmètre de défense. Il est donc de retour. Nous les elfes sommes une race de mages, nous maîtrisons l'art des runes et de la prophétie, mais jamais je n'aurais cru... Malgré tout, il nous faut agir.}{}{187}{}{}
+{919}{Quoi nous devoir faire, jolie elfe ?}{}{-4}{}{922}{}
+{920}{Euh... Quoi Arronax ?}{}{-4}{}{935}{}
+{922}{Après votre départ, j'ai parlé de vous à ma mère, la Dame d'Argent. Elle m'a dit qu'à votre retour, il fallait absolument que vous veniez la trouver...}{Après votre départ, j'ai parlé de vous à ma mère, la Dame d'Argent. Elle m'a dit qu'à votre retour, il fallait absolument que vous veniez la trouver...}{}{188}{}{gf1098 1}
+{923}{La D-d-dame d'Ar-ar-gent... ?}{}{-4}{}{925}{}
+{925}{Oui, la Dame d'Argent. Allez la voir... Elle se trouve juste derrière ces deux grandes portes. Faites preuve de franchise... Demandez-lui ce que vous devez faire par la suite. Espérons qu'elle aura la réponse. Revenez me trouver lorsque vous lui aurez parlé...}{Oui, la Dame d'Argent. Allez la voir... Elle se trouve juste derrière ces deux grandes portes. Faites preuve de franchise... Demandez-lui ce que vous devez faire par la suite. Espérons qu'elle aura la réponse. Revenez me trouver lorsque vous lui aurez parlé...}{}{189}{}{lf20 1, gf1098 1}
+{926}{D'accord ! Je reviendrai après !}{}{-4}{}{0}{}
+{928}{Elle ? C'était une femme ? [La colère brille dans ses yeux.] Vous n'auriez peut-être pas dû vous occuper d'elle. J'aurais aimé rencontrer cette M'in Gorad. Peu importe... Qu'a-t-elle dit ?}{Elle ? C'était une femme ? [La colère brille dans ses yeux.] Vous n'auriez peut-être pas dû vous occuper d'elle. J'aurais aimé rencontrer cette M'in Gorad. Peu importe... Qu'a-t-elle dit ?}{}{190}{}{}
+{929}{Euh... juste dit... euh... A-a-ar-r-on-naxe ?}{}{-4}{gf1099 0}{932}{}
+{930}{Pas grand-chose... mais moi trouver papier ! [Vous lui racontez.]}{}{-4}{gf1099 1}{918}{}
+{932}{Arronax ! Arronax, dites-vous ?}{Arronax ! Arronax, dites-vous ?}{}{191}{}{}
+{933}{Oui ! Arronax ! Euh... Quoi Arronax ?}{}{-4}{}{935}{}
+{935}{Arronax est un vieil elfe, mon ami. Un vieil elfe qui fut banni... Expulsé... Il y a de nombreuses années de cela. Il semble qu'il soit sur le point de revenir, conformément aux prophéties. Si vous avez d'autres questions à son sujet, allez dans un temple Panarii. Les prêtres là-bas pourront vous aider...}{Arronax est un vieil elfe, mon amie. Un vieil elfe qui fut banni... Expulsé... Il y a de nombreuses années de cela. Il semble qu'il soit sur le point de revenir, conformément aux prophéties. Si vous avez d'autres questions à son sujet, allez dans un temple Panarii. Les prêtres là-bas pourront vous aider...}{}{192}{}{}
+{936}{Pa-n-na-r-ii ?}{}{-4}{}{938}{}
+{938}{Oubliez ça. Je suis sûre que vous finirez par trouver.}{Oubliez ça. Je suis sûre que vous finirez par trouver.}{}{193}{}{}
+{939}{Quoi nous devoir faire, jolie elfe ?}{}{-4}{}{922}{}
+{941}{Je sais, je sais... Mais vous devez parler à ma mère sans plus tarder ! Revenez lorsque vous aurez fini...}{Je sais, je sais... Mais vous devez parler à ma mère sans plus tarder ! Revenez lorsque vous aurez fini...}{}{194}{}{}
+{943}{Vraiment ? Et que vous a-t-elle dit ?}{Vraiment ? Et que vous a-t-elle dit ?}{}{195}{}{}
+{944}{Euh... Chercher réponse... euh... Nas-r-u-d-in-n... ?}{}{-4}{}{946}{}
+{946}{Cherchez votre réponse auprès de Nasrudin ? Ceci est très étrange, esprit simple. Nasrudin est mort il y a plus de deux mille ans...}{Cherchez votre réponse auprès de Nasrudin ? Ceci est très étrange, esprit simple. Nasrudin est mort il y a plus de deux mille ans...}{}{196}{}{}
+{947}{Euhhh... Hum... Ooohhh..}{}{-4}{}{949}{}
+{949}{Oui, oui. Oui je comprends. [Elle rit.] Je vous conseille de débuter vos recherches dans le premier temple du Panarii, qui se trouve à Caladon. Là, vous en apprendrez plus sur Nasrudin et Arronax. Bonne chance et bon voyage. Je suis de tout coeur avec vous...}{Oui, oui. Oui je comprends. [Elle rit.] Je vous conseille de débuter vos recherches dans le premier temple du Panarii, qui se trouve à Caladon. Là, vous en apprendrez plus sur Nasrudin et Arronax. Bonne chance et bon voyage. Je suis de tout coeur avec vous...}{}{197}{}{lf21 1, ru 2056}
+{950}{Moi trouver Nasrudin, jolie elfe ! Ar'voir !}{}{-4}{}{0}{}
+{952}{Oui, j'en ai la certitude. Souvenez-vous... Rendez-vous au premier temple du Panarii à Caladon... Vous y trouverez davantage d'informations à propos de Nasrudin et d'Arronax... Bonne chance !}{Oui, j'en ai la certitude. Souvenez-vous... Rendez-vous au premier temple du Panarii à Caladon... Vous y trouverez davantage d'informations à propos de Nasrudin et d'Arronax... Bonne chance !}{}{198}{}{}
+{960}{[L'esprit d'Orfraie vous jette un regard froid.] Ainsi donc, me voilà face à un assassin et qui plus est, le mien. Vous avez l'audace de me rappeler des terres de ma mère où je repose désormais. Vous n'avez aucun pouvoir sur moi...}{[L'esprit d'Orfraie vous jette un regard froid.] Ainsi donc, me voilà face à une meurtrière et qui plus est, la mienne. Vous avez l'audace de me rappeler des terres de ma mère où je repose désormais. Vous n'avez aucun pouvoir sur moi...}{}{199}{}{}
+{961}{Alors pourquoi êtes-vous ici ? Partez...}{}{5}{}{963}{}
+{962}{E:}{}{5}{}{0}{}
+{963}{Vous savez que je ne peux pas. Mais je n'ai aucunement l'intention de vous aider davantage. Je suis capable d'attendre longtemps ici...}{Vous savez que je ne peux pas. Mais je n'ai aucunement l'intention de vous aider davantage. Je suis capable d'attendre longtemps ici...}{}{200}{}{}
+{964}{Je n'ai besoin que d'une seule réponse, Orfraie. }{}{5}{}{966}{}
+{965}{E:}{}{5}{}{0}{}
+{966}{Et pourquoi devrais-je répondre, bourreau d'elfe ? Non, pardonnez-moi. Je vous en prie... Posez votre question.}{Et pourquoi devrais-je répondre, bourreau d'elfe ? Non, pardonnez-moi. Je vous en prie... Posez votre question.}{}{201}{}{}
+{967}{Où puis-je trouver M'in Gorad ?}{}{5}{}{969}{}
+{968}{E:}{}{5}{}{0}{}
+{969}{[Orfraie reste silencieuse pendant un long moment. Puis elle se met à rire, un rire sourd et sans joie.] Cherchez l'être que j'aime, bourreau. Cherchez l'être que j'aime...}{[Orfraie reste silencieuse pendant un long moment. Puis elle se met à rire, un rire sourd et sans joie.] Cherchez l'être que j'aime, bourreau. Cherchez l'être que j'aime...}{}{202}{}{}
+{970}{Qui ? Qui est-ce ?}{}{5}{}{972}{}
+{971}{E:}{}{5}{}{0}{}
+{972}{[Orfraie est silencieuse. Elle ne dit rien...]}{[Orfraie est silencieuse. Elle ne dit rien...]}{}{203}{}{lf16 1}
+{973}{Orfraie ! Qui est-ce ?}{}{5}{}{972}{}
+{974}{E:}{}{5}{}{0}{}
+{975}{[Orfraie est silencieuse. Elle ne dit rien...]}{[Orfraie est silencieuse. Elle ne dit rien...]}{}{204}{}{}
+{977}{Vous avez négocié avec eux, n'est-ce pas ? Les elfes noirs ! J'ai compris... Vous avez accepté de les aider ! C'est incroyable. Je croyais que vous étiez différent...}{Vous avez négocié avec eux, n'est-ce pas ? Les elfes noirs ! J'ai compris... Vous avez accepté de les aider ! C'est incroyable. Je croyais que vous étiez différente...}{}{205}{}{}
+{978}{Moi avoir fait ça pour pouvoir revenir ici... !}{}{-4}{}{981}{}
+{979}{Euh... Et alors ? Qu'est-ce qu'VOUS pouvez bien y faire ?}{}{-4}{}{981}{}
+{981}{[Orfraie recule d'un pas, les poings serrés.] Faites votre choix. Tout de suite. Etes-vous avec nous ou contre nous ?}{[Orfraie recule d'un pas, les poings serrés.] Faites votre choix. Tout de suite. Etes-vous avec nous ou contre nous ?}{}{206}{}{}
+{982}{D'accord ! D'accord ! Moi avec vous ! Moi avec vous !}{}{-4}{}{989}{}
+{983}{Moi pas être à vos ordres, demoiselle elfe !}{}{-4}{}{985}{}
+{985}{[L'atmosphère autour d'Orfraie commence à luire d'un éclat rougeoyant -- ses yeux brillent du même éclat.] Faites votre choix. Maintenant.}{[L'atmosphère autour d'Orfraie commence à luire d'un éclat rougeoyant -- ses yeux brillent du même éclat.] Faites votre choix. Maintenant.}{}{207}{}{}
+{986}{Bien ! Moi avec vous !}{}{-4}{}{989}{}
+{987}{Dommage que je doive vous tuer, demoiselle elfe...}{}{-4}{}{}{co, fl 820}
+{989}{Très bien... [Elle se détend.] Je vous crois, @PCNAME@. Mais vous devrez me prouver que vous n'avez conclu aucune alliance avec les elfes noirs. Partez. Tuez M'in Gorad et revenez me voir...}{Très bien... [Elle se détend.] Je vous crois, @PCNAME@. Mais vous devrez me prouver que vous n'avez conclu aucune alliance avec les elfes noirs. Partez. Tuez M'in Gorad et revenez me voir...}{}{208}{}{}
+{990}{Euh... Il faut d'abord que je vous parle !}{}{-4}{}{992}{}
+{992}{Suffit ! Je ne vous dirai plus rien tant que vous n'aurez pas fait cela. Ne revenez pas tant que vous n'aurez pas tué M'in Gorad.}{Suffit ! Je ne vous dirai plus rien tant que vous n'aurez pas fait cela. Ne revenez pas tant que vous n'aurez pas tué M'in Gorad.}{}{209}{}{}
+{993}{D'accord. J'y vais maintenant...}{}{-4}{}{0}{gf2002 1}
+{1040}{Que puis-je faire pour vous ?}{Que puis-je faire pour vous ?}{}{210}{}{}
+{1041}{B:}{}{5}{wa 0}{}{}
+{1042}{J'ai quelques questions à vous poser, Orfraie...}{}{5}{wa 0}{1079}{}
+{1043}{J'aimerais que vous fassiez quelque chose pour moi, Orfraie...}{}{5}{wa 0}{1161}{}
+{1045}{Vous n'avez plus besoin d'attendre, Orfraie...}{}{5}{wa 1, pa -6613}{1198}{uw 0 1169}
+{1046}{Vous n'avez plus besoin d'attendre, Orfraie...}{}{5}{wa 1, pa 6613}{1183}{}
+{1047}{E:}{}{5}{}{0}{}
+{1048}{Ben...}{}{-4}{}{}{fl 1070}
+{1070}{[Orfraie vous lance un regard hautain, vos déficiences mentales semblent visiblement la contrarier. Elle garde le silence.]}{[Orfraie vous lance un regard hautain, vos déficiences mentales semblent visiblement la contrarier. Elle garde le silence.]}{}{}{}{}
+{1079}{Dans ce cas, je vais faire de mon mieux pour vous répondre...}{Dans ce cas, je vais faire de mon mieux pour vous répondre...}{}{211}{}{}
+{1080}{J'aimerais en savoir plus sur vous, Orfraie...}{}{1}{}{}{ce}
+{1094}{Que pouvez-vous me dire au sujet d'Arronax, Orfraie ?}{}{1}{ss 15, ss -15, lf12 0}{1400}{}
+{1095}{Que pouvez-vous me dire au sujet d'Arronax, Orfraie ?}{}{1}{ss 15, ss -15, lf12 1}{1404}{}
+{1097}{Que savez-vous au sujet de Nasrudin, Orfraie ?}{}{1}{ss 16, ss -16}{1408}{}
+{1100}{Que savez-vous au sujet du Cirque de Brodgar, Orfraie ?}{}{1}{ss 19, ss -19}{1412}{}
+{1102}{Que savez-vous au sujet du Néant, Orfraie ?}{}{1}{ss 21, ss -21}{1416}{}
+{1104}{Orfraie, que savez-vous au sujet de Kerghan ?}{}{1}{ss 23, ss -23}{1420}{}
+{1105}{Orfraie ! Qu'allons-nous faire maintenant ?}{}{1}{ss 24, ss -24}{1429}{}
+{1107}{Que savez-vous sur ces lieux ?}{}{1}{ia 21, lf12 0, gf2364 0}{1213}{}
+{1108}{Que savez-vous sur ces lieux ?}{}{1}{ia 21, lf12 1, gf2364 1}{1217}{}
+{1110}{Que savez-vous sur ces lieux ?}{}{1}{ia 4, lf12 0, gf2364 0}{1221}{}
+{1113}{Que savez-vous sur ces lieux ?}{}{1}{ia 4, lf12 1, gf2364 1}{1225}{}
+{1116}{Que savez-vous sur ces lieux ?}{}{1}{ia 9}{1239}{}
+{1118}{Que savez-vous sur ces lieux ?}{}{1}{ia 11, lf12 0, gf2364 0}{1243}{}
+{1119}{Que savez-vous sur ces lieux ?}{}{1}{ia 11, lf12 1, gf2364 1}{1247}{}
+{1122}{Que savez-vous sur ces lieux ?}{}{1}{ia 16}{1257}{}
+{1124}{Que savez-vous sur ces lieux ?}{}{1}{ia 20, lf12 0, gf2364 0}{1261}{}
+{1125}{Que savez-vous sur ces lieux ?}{}{1}{ia 20, lf12 1, gf2364 1, lf26 0}{1265}{lf26 1}
+{1126}{Que savez-vous sur ces lieux ?}{}{1}{ia 22}{1290}{}
+{1127}{Que savez-vous sur ces lieux ?}{}{1}{ia 23,lf12 0, gf2364 0}{1294}{}
+{1128}{Que savez-vous sur ces lieux ?}{}{1}{ia 23, lf12 1, gf2364 1}{1298}{}
+{1129}{Orfraie, je vous ai contrariée ? Est-ce que je peux faire quelque chose ?}{}{1}{re -20}{1140}{}
+{1130}{E:}{}{1}{}{0}{}
+{1140}{[Orfraie vous lance un regard méprisant.] Ce voyage ne tourne pas du tout comme je l'avais imaginé. J'ai peut-être manqué de sagesse en vous choisissant. Cependant, je dois avouer qu'une bonne gorgée d'eau de source elfique m'aide toujours à voir les choses de façon positive...}{[Orfraie vous lance un regard méprisant.] Ce voyage ne tourne pas du tout comme je l'avais imaginé. J'ai peut-être manqué de sagesse en vous choisissant. Cependant, je dois avouer qu'une bonne gorgée d'eau de source elfique m'aide toujours à voir les choses de façon positive...}{}{253}{}{}
+{1141}{Chère Orfraie, vous êtes sûre que tout va bien... ?}{}{1}{ch 20}{1147}{re +20}
+{1142}{C'est une chance, Orfraie : j'en ai justement sur moi...}{}{1}{in 3615, ch -19}{-53}{re +20}
+{1143}{Intéressant. Je vais aller vous en chercher...}{}{1}{in -3615, ch -19}{1156}{}
+{1144}{Hum. C'est beau d'avoir des rêves, aussi stupides soient-ils...}{}{1}{}{}{gf2364  0, re -5, fl 1159}
+{1147}{[Orfraie essaie de lutter contre votre puissant charisme, en vain.] Oui, je suppose que vous avez raison. Peut-être me suis-je montrée quelque peu irritable. Continuons...}{[Orfraie essaie de lutter contre votre puissant charisme, en vain.] Oui, je suppose que vous avez raison. Peut-être me suis-je montrée quelque peu irritable. Continuons...}{}{254}{}{}
+{1148}{Oui, partons...}{}{1}{}{0}{}
+{1150}{[Orfraie prend la bouteille et la vide d'un trait.] Ah, oui ! Voilà qui est mieux. Je dois avouer que je me trouve dans de bien meilleures dispositions. Merci...}{[Orfraie prend la bouteille et la vide d'un trait.] Ah, oui ! Voilà qui est mieux. Je dois avouer que je me trouve dans de bien meilleures dispositions. Merci...}{}{255}{}{}
+{1151}{Je me demandais si vous ne voudriez pas vous joindre à moi de nouveau Orfraie...}{}{1}{pa -6613, pa -6426}{1198}{jo 0 1201}
+{1152}{Je me demandais si vous ne voudriez pas vous joindre à moi de nouveau Orfraie...}{}{1}{pa 6613, pa -6426}{1183}{}
+{1153}{Je vous en prie. On y va... ?}{}{1}{}{0}{}
+{1156}{Bien. Et j'espère qu'il n'est pas trop tard, mon ami...}{Bien. Et j'espère qu'il n'est pas trop tard, mon amie...}{}{256}{}{}
+{1157}{Je regarderai ça de plus près. Allons-y...}{}{1}{}{0}{}
+{1159}{Eh bien ! Si les choses prennent cette tournure, je ne sais pas si je vais vous accompagner encore longtemps...}{Eh bien ! Si les choses prennent cette tournure, je ne sais pas si je vais vous accompagner encore longtemps...}{}{257}{}{}
+{1161}{Oui ? Que souhaiteriez-vous que je fasse ? }{Oui ? Que souhaiteriez-vous que je fasse ?}{}{212}{}{}
+{1162}{Eloignez-vous, Orfraie.}{}{1}{}{0}{so}
+{1163}{Rapprochez-vous un peu, Orfraie.}{}{1}{}{0}{sc}
+{1164}{Attendez ici un instant...}{}{1}{wa 0}{1172}{wa}
+{1165}{Vous n'avez plus besoin d'attendre, Orfraie...}{}{1}{wa 1, pa -6613}{1198}{uw 0 1169}
+{1166}{Vous n'avez plus besoin d'attendre, Orfraie...}{}{1}{wa 1, pa 6613}{1183}{}
+{1167}{Je pense qu'il serait mieux que vous quittiez le groupe.}{}{1}{}{1174}{lv}
+{1168}{[Retour]}{}{1}{}{1040}{}
+{1169}{Nous partons quand vous voulez...}{Nous partons quand vous voulez...}{}{213}{}{}
+{1170}{E:}{}{1}{}{0}{}
+{1172}{Oui, je vais vous attendre ici. Mais ne me faites pas languir...}{Oui, je vais vous attendre ici. Mais ne me faites pas languir...}{}{214}{}{}
+{1173}{E:}{}{1}{}{0}{}
+{1174}{Quoi ? Je... Eh bien, je suppose que c'est à vous de prendre cette décision. Je vous souhaite bonne chance, où que votre voyage vous mène...}{Quoi ? Je... Eh bien, je suppose que c'est à vous de prendre cette décision. Je vous souhaite bonne chance, où que votre voyage vous mène...}{}{215}{}{lf31 1}
+{1175}{E:}{}{1}{}{0}{}
+{1176}{Salutations. [Orfraie semble distante.] Qu'est-ce qui vous amène encore ? Vous ne faites que passer, ou c'est à propos de quelque chose de plus important... ?}{Salutations. [Orfraie semble distante.] Qu'est-ce qui vous amène encore ? Vous ne faites que passer, ou c'est à propos de quelque chose de plus important... ?}{}{216}{}{}
+{1177}{Je me demandais si vous ne voudriez pas vous joindre à moi de nouveau Orfraie...}{}{5}{pa -6613}{1198}{jo 0 1201}
+{1178}{Je me demandais si vous ne voudriez pas vous joindre à moi de nouveau Orfraie...}{}{5}{pa 6613}{1183}{}
+{1179}{Orfraie, je vous ai contrariée ? Est-ce que je peux faire quelque chose ?}{}{5}{re -20}{1140}{}
+{1180}{E:}{}{5}{}{0}{}
+{1181}{Ben...}{}{-4}{}{}{fl 1070}
+{1183}{[Orfraie jette un oeil à Z'an Al'urin et son regard se durcit.] Je n'irai nulle part avec une elfe noire. Si elle est des vôtres, alors je n'en suis pas.... C'est aussi simple que cela...}{[Orfraie jette un oeil à Z'an Al'urin et son regard se durcit.] Je n'irai nulle part avec une elfe noire. Si elle est des vôtres, alors je n'en suis pas.... C'est aussi simple que cela...}{}{217}{}{}
+{1184}{Orfraie, ma seule présence suffit à éclipser celle de Z'an Al'urin...}{}{1}{ch 20, lf23 0}{1195}{lf23 1}
+{1185}{Orfraie ! Elle n'est pas comme les autres ! Vous ne me croyez pas ?}{}{1}{ch -19, lf23 0}{1189}{lf23 1}
+{1186}{C'est vous que je choisis, Orfraie. Attendez un moment, le temps que je me débarrasse d'elle...}{}{1}{lf23 1}{0}{}
+{1187}{Alors vous pouvez nous faire vos adieux, Orfraie...}{}{1}{lf23 1}{1174}{lf12 0, gf2364 0, lv}
+{1188}{E:}{}{1}{lf23 1}{0}{}
+{1189}{Je regrette, mais vous ignorez totalement de quoi les individus de son espèce sont capables. Réfléchissez un peu ! Tout ce qui est arrivé est la faute de ces maudits elfes noirs !}{Je regrette, mais vous ignorez totalement de quoi les individus de son espèce sont capables. Réfléchissez un peu ! Tout ce qui est arrivé est la faute de ces maudits elfes noirs !}{}{218}{}{}
+{1190}{Peut-être, mais Z'an Al'urin n' a rien à voir là-dedans... !}{}{1}{}{1192}{}
+{1192}{C'est une elfe noire, et c'est tout ce qui importe. N'a-t-elle pas vécu avec eux ? Eté éduquée par eux ? Vous ne pouvez pas lui faire confiance ! Elle se retournera contre vous... Elle ne sert que ses propres intérêts. Regardez-la dans les yeux, et dites-moi que tout ceci n'est pas vrai...}{C'est une elfe noire, et c'est tout ce qui importe. N'a-t-elle pas vécu avec eux ? Eté éduquée par eux ? Vous ne pouvez pas lui faire confiance ! Elle se retournera contre vous... Elle ne sert que ses propres intérêts. Regardez-la dans les yeux, et dites-moi que tout ceci n'est pas vrai...}{}{219}{}{}
+{1193}{[Vous écoutez.]}{}{1}{}{-17}{}
+{1195}{[Orfraie semble déchirée, mais hoche la tête.] Oui, vous avez raison. Je vais essayer d'ignorer le fait que vous traitez avec une telle... racaille...}{[Orfraie semble déchirée, mais hoche la tête.] Oui, vous avez raison. Je vais essayer d'ignorer le fait que vous traitez avec une telle... racaille...}{}{220}{}{}
+{1196}{Donc, vous acceptez de vous joindre à nouveau à moi ?}{}{1}{pa -6426}{1198}{jo 0 1201}
+{1197}{Bien, maintenant Z'an Al'urin...}{}{1}{pa 6426}{-41}{}
+{1198}{Y a-t-il autre chose ?}{Y a-t-il autre chose ?}{}{221}{}{}
+{1199}{E:}{}{1}{}{0}{}
+{1201}{[Orfraie feint le désintéressement...] Eh bien, je suppose. [... puis affiche un large sourire.] Oui, bien sûr, je viendrai avec vous. Je savais que, tôt ou tard, vous réaliseriez que vous êtes dans l'erreur. On y va... ?}{[Orfraie feint le désintéressement...] Eh bien, je suppose. [... puis affiche un large sourire.] Oui, bien sûr, je viendrai avec vous. Je savais que, tôt ou tard, vous réaliseriez que vous êtes dans l'erreur. On y va... ?}{}{222}{}{lf31 0}
+{1202}{E:}{}{1}{}{0}{}
+{1203}{[Les yeux d'Orfraie lancent des éclairs.] Vous avez l'audace de revenir me voir après m'avoir fait attendre tout ce temps ! Je ne saurais être traitée ainsi ! Vous feriez mieux de tourner les talons et de retourner là d'où vous venez... !}{[Les yeux d'Orfraie lancent des éclairs.] Vous avez l'audace de revenir me voir après m'avoir fait attendre tout ce temps ! Je ne saurais être traitée ainsi ! Vous feriez mieux de tourner les talons et de retourner là d'où vous venez... !}{}{223}{}{}
+{1204}{Je vous en prie, Orfraie... Pardonnez-moi. Voulez-vous vous joindre à moi de nouveau ?}{}{5}{pa -6613}{1198}{jo 0 1209}
+{1205}{Je vous en prie, Orfraie... Pardonnez-moi. Voulez-vous vous joindre à moi de nouveau ?}{}{5}{pa 6613}{1183}{}
+{1206}{Orfraie, je vous ai contrariée ? Est-ce que je peux faire quelque chose ?}{}{5}{re -20}{1140}{}
+{1207}{E:}{}{5}{}{0}{}
+{1208}{Ben...}{}{-4}{}{}{fl 1070}
+{1209}{[Elle vous lance un regard glacial.] Oui, je vais vous accompagner. Mais s'il vous reprend l'envie de me traiter de la sorte... La prochaine fois, vous ne vous en tirerez pas aussi bien... }{[Elle vous lance un regard glacial.] Oui, je vais vous accompagner. Mais s'il vous reprend l'envie de me traiter de la sorte... La prochaine fois, vous ne vous en tirerez pas aussi bien... }{}{224}{}{}
+{1210}{E:}{}{1}{}{0}{}
+{1213}{N'est-ce pas Tarante ? Renford m'en parlait souvent, il m'avait invitée à venir le voir là-bas...}{N'est-ce pas Tarante ? Renford m'en parlait souvent, il m'avait invitée à venir le voir là-bas...}{}{225}{}{}
+{1214}{K:}{}{1}{}{1040}{}
+{1215}{E:}{}{1}{}{0}{}
+{1217}{N'est-ce pas Tarante ? Renford m'en parlait souvent, il m'avait invitée à venir le voir là-bas... [Elle vous regarde en murmurant.] Bien entendu, je suis ravie d'être ici avec vous...}{N'est-ce pas Tarante ? Renford m'en parlait souvent, il m'avait invitée à venir le voir là-bas... [Elle vous regarde en murmurant.] Bien entendu, je suis ravie d'être ici avec vous...}{}{226}{}{}
+{1218}{K:}{}{1}{}{1040}{}
+{1219}{E:}{}{1}{}{0}{}
+{1221}{C'est Caladon. Le premier Temple du Panarii est ici. Si nous recherchons des réponses au sujet de Nasrudin, voici l'endroit où aller.}{C'est Caladon. Le premier Temple du Panarii est ici. Si nous recherchons des réponses au sujet de Nasrudin, voici l'endroit où aller...}{}{227}{}{}
+{1222}{K:}{}{1}{}{1040}{}
+{1223}{E:}{}{1}{}{0}{}
+{1225}{C'est Caladon. Le premier Temple du Panarii est ici. Si nous recherchons des réponses au sujet de Nasrudin, voici l'endroit où aller. [Elle se penche vers vous et chuchote.] On m'a parlé de la splendeur de la côte la nuit et je ne vois aucune autre personne avec qui je préférerais partager ce spectacle. Si seulement nous avions moins de préoccupations...}{C'est Caladon. Le premier Temple du Panarii est ici. Si nous recherchons des réponses au sujet de Nasrudin, voici l'endroit où aller. [Elle se penche vers vous et chuchote.] On m'a parlé de la splendeur de la côte la nuit et je ne vois aucune autre personne avec qui je préférerais partager ce spectacle. Si seulement nous avions moins de préoccupations...}{}{228}{}{}
+{1226}{Orfraie, cessez vos bêtises. Nous devons sauver le monde !}{}{5}{lf25 0}{1231}{lf12 0, gf2364 0, re -10, lf25 1}
+{1227}{Et je ne connais rien de plus splendide que vous...}{}{5}{lf25 0}{1235}{re +10, lf25 1}
+{1228}{K:}{}{1}{}{1040}{}
+{1229}{E:}{}{1}{}{0}{}
+{1231}{[Se raidissant.] Ou-oui, bien sûr. Quelle imbécile je suis, je vous fais perdre un temps précieux. Cela ne se reproduira plus...}{[Se raidissant.] Ou-oui, bien sûr. Quelle imbécile je suis, je vous fais perdre un temps précieux. Cela ne se reproduira plus...}{}{229}{}{}
+{1232}{K:}{}{1}{}{1040}{}
+{1233}{E:}{}{1}{}{0}{}
+{1235}{Mmmm. Vous me rendez la tâche difficile. Vous et moi devrions revenir ici au terme de notre voyage...}{Mmmm. Vous me rendez la tâche difficile. Vous et moi devrions revenir ici au terme de notre voyage...}{}{230}{}{}
+{1236}{K:}{}{1}{}{1040}{}
+{1237}{E:}{}{1}{}{0}{}
+{1239}{Nous sommes dans les cavernes du Clan de la Roue, foyer du Roi des Nains. Je n'apprécie pas particulièrement les foyers de nains... Ils sont si... étroits. Je me sens si enfermée. Et, comme vous devez le savoir, elfes et nains ne s'apprécient guère. Nous sommes des créatures de la magie, et eux, ce sont... eh bien... ce sont des nains...}{Nous sommes dans les cavernes du Clan de la Roue, le foyer du Roi des Nains. Je n'apprécie pas particulièrement les foyers de nains... Ils sont si... étroits. Je me sens si enfermée. Et, comme vous devez le savoir, elfes et nains ne s'apprécient guère. Nous sommes des créatures de la magie, et eux, ce sont... eh bien... ce sont des nains...}{}{231}{}{}
+{1240}{K:}{}{1}{}{1040}{}
+{1241}{E:}{}{1}{}{0}{}
+{1243}{Voici la légendaire Tulla... la Cité des mages. C'est une très belle cité qui recèle des merveilles et est habitée par la magie. Siméon Léminent est le plus grand mage ici... Peut-être devrions-nous nous mettre à sa recherche...}{Voici la légendaire Tulla... la Cité des mages. C'est une très belle cité qui recèle des merveilles et est habitée par la magie. Siméon Léminent est le plus grand mage ici... Peut-être devrions-nous nous mettre à sa recherche...}{}{232}{}{}
+{1244}{K:}{}{1}{}{1040}{}
+{1245}{E:}{}{1}{}{0}{}
+{1247}{Voici la légendaire Tulla... la Cité des mages. C'est une très belle cité qui recèle des merveilles et est habitée par la magie. Siméon Léminent est le plus grand mage ici... Peut-être devrions-nous Peut-être devrions-nous nous mettre à sa recherche. [Puis, en chuchotant.] Vous savez, cet endroit est vraiment merveilleux... D'autant plus que vous êtes là avec moi...}{Voici la légendaire Tulla... la Cité des mages. C'est une très belle cité qui recèle des merveilles et est habitée par la magie. Siméon Léminent est le plus grand mage ici... Peut-être devrions-nous Peut-être devrions-nous nous mettre à sa recherche. [Puis, en chuchotant.] Vous savez, cet endroit est vraiment merveilleux... D'autant plus que vous êtes là avec moi...}{}{233}{}{}
+{1248}{Orfraie, cessez vos bêtises. Nous devons sauver le monde !}{}{5}{lf26 0}{1231}{lf12 0, gf2364 0, re -10, lf26 1}
+{1249}{Et vous avec moi, ma très chère Orfraie...}{}{5}{lf26 0}{1253}{re +5, lf26 1}
+{1250}{K:}{}{1}{}{1040}{}
+{1251}{E:}{}{1}{}{0}{}
+{1253}{Et vos paroles sont pure merveille, comme toujours. [Elle jette un coup d'oeil alentour et rougit.] Revenons à nos préoccupations...}{Et vos paroles sont pure merveille, comme toujours. [Elle jette un coup d'oeil alentour et rougit.] Revenons à nos préoccupations...}{}{234}{}{}
+{1254}{K:}{}{1}{}{1040}{}
+{1255}{E:}{}{1}{}{0}{}
+{1257}{Voici T'sen-Ang, le foyer des elfes noirs. Leur seule présence me fait horreur. Quittons cet endroit le plus vite possible...}{Voici T'sen-Ang, le foyer des elfes noirs. Leur seule présence me fait horreur. Quittons cet endroit le plus vite possible...}{}{235}{}{}
+{1258}{K:}{}{1}{}{1040}{}
+{1259}{E:}{}{1}{}{0}{}
+{1261}{Je pense qu'il s'agit de Racine Noire... Une petite ville de pêcheurs sur la côte est. Je crains de ne pouvoir vous apprendre grand-chose sur cet endroit...}{Je pense qu'il s'agit de Racine Noire... Une petite ville de pêcheurs sur la côte est. Je crains de ne pouvoir vous apprendre grand-chose sur cet endroit...}{}{236}{}{}
+{1262}{K:}{}{1}{}{1040}{}
+{1263}{E:}{}{1}{}{0}{}
+{1265}{Je pense qu'il s'agit de Racine Noire... Une petite ville de pêcheurs sur la côte est. Je crains de ne pouvoir vous apprendre grand-chose sur cet endroit... [Elle se penche vers vous en chuchotant.] J'ai beaucoup pensé à vous... Enfin, à nous, plutôt. Quand tout cela sera fini, je veux dire...}{Je pense qu'il s'agit de Racine Noire... Une petite ville de pêcheurs sur la côte est. Je crains de ne pouvoir vous apprendre grand-chose sur cet endroit... [Elle se penche vers vous en chuchotant.] J'ai beaucoup pensé à vous... Enfin, à nous, plutôt. Quand tout cela sera fini, je veux dire...}{}{237}{}{}
+{1266}{Orfraie ! Concentrez-vous sur les raisons de notre présence ici... !}{}{5}{}{1231}{lf12 0, gf2364 0, re -10}
+{1267}{Oui ? A quoi pensiez-vous... ?}{}{5}{}{1271}{}
+{1268}{K:}{}{1}{}{1040}{}
+{1269}{E:}{}{1}{}{0}{}
+{1271}{Oh... A rien. C'est juste que... Eh bien, j'apprécie vraiment votre compagnie. Peut-être pourrions-nous passer un peu de temps ensemble une fois que nous aurons fini ?... A condition que vous soyez d'accord, je veux dire...}{Oh... A rien. C'est juste que... Eh bien, j'apprécie vraiment votre compagnie. Peut-être pourrions-nous passer un peu de temps ensemble une fois que nous aurons fini ?... A condition que vous soyez d'accord, je veux dire...}{}{238}{}{}
+{1272}{Oubliez ça. Nous ne sommes pas ici pour faire du sentiment...}{}{1}{}{1278}{lf12 0, gf2364 0, re -10}
+{1273}{Peut-être. Nous en reparlerons une fois que cette affaire sera réglée...}{}{1}{}{1282}{}
+{1274}{Naturellement. Comment pourrais-je refuser... ?}{}{1}{}{1286}{}
+{1275}{K:}{}{1}{}{1040}{}
+{1276}{E:}{}{1}{}{0}{}
+{1278}{[Froidement.] Oh. Je vois. Je suis désolée, ça m'a échappé. Partons d'ici...}{[Froidement.] Oh. Je vois. Je suis désolée, ça m'a échappé. Partons d'ici...}{}{239}{}{}
+{1279}{K:}{}{1}{}{1040}{}
+{1280}{E:}{}{1}{}{0}{}
+{1282}{Je suis d'accord. Mais j'aimerais beaucoup que nous en discutions...}{Je suis d'accord. Mais j'aimerais beaucoup que nous en discutions...}{}{240}{}{}
+{1283}{K:}{}{1}{}{1040}{}
+{1284}{E:}{}{1}{}{0}{}
+{1286}{[Elle rougit.] Vous... vous me comblez. Malgré la perspective des obstacles qui nous attendent. Je vous suis si reconnaissante...}{[Elle rougit.] Vous... vous me comblez. Malgré la perspective des obstacles qui nous attendent. Je vous suis si reconnaissante...}{}{241}{}{}
+{1287}{K:}{}{1}{}{1040}{}
+{1288}{E:}{}{1}{}{0}{}
+{1290}{Je crois que ce sont les ruines du vieux Vendigroth. Des rumeurs et des légendes ont toujours circulé au sujet de son existence, mais je n'aurais jamais espéré le voir un jour de mes propres yeux. [Elle a l'air inquiet.] Cet endroit est sinistre... et maléfique. Nous devons nous acquitter de notre tâche et partir au plus tôt...}{Je crois que ce sont les ruines du vieux Vendigroth. Des rumeurs et des légendes ont toujours circulé au sujet de son existence, mais je n'aurais jamais espéré le voir un jour de mes propres yeux. [Elle a l'air inquiet.] Cet endroit est sinistre... et maléfique. Nous devons nous acquitter de notre tâche et partir au plus tôt...}{}{242}{}{}
+{1291}{K:}{}{1}{}{1040}{}
+{1292}{E:}{}{1}{}{0}{}
+{1294}{Thanatos ? L'île de la Mort ? J'en sais très peu, en dehors de sa réputation. Nous devons faire preuve d'une grande prudence...}{Thanatos ? L'île de la Mort ? J'en sais très peu, en dehors de sa réputation. Nous devons faire preuve d'une grande prudence...}{}{243}{}{}
+{1295}{K:}{}{1}{}{1040}{}
+{1296}{E:}{}{1}{}{0}{}
+{1298}{Thanatos ? L'île de la Mort ? J'en sais très peu, en dehors de sa réputation. Nous devons faire preuve d'une grande prudence. [Elle se penche vers vous en murmurant.] Quant à vous... Restez près de moi. Je ne laisserai rien ni personne vous faire du mal...}{Thanatos ? L'île de la Mort ? J'en sais très peu, en dehors de sa réputation. Nous devons faire preuve d'une grande prudence. [Elle se penche vers vous en murmurant.] Quant à vous... Restez près de moi. Je ne laisserai rien ni personne vous faire du mal...}{}{244}{}{}
+{1299}{K:}{}{1}{}{1040}{}
+{1300}{E:}{}{1}{}{0}{}
+{1400}{Arronax ? C'est un elfe très puissant de l'Ere des légendes qui semble revenir du Néant. Par ailleurs, il semble ne pas vous aimer beaucoup...}{Arronax ? C'est un elfe très puissant de l'Ere des légendes qui semble revenir du Néant. Par ailleurs, il semble ne pas vous aimer beaucoup...}{}{245}{}{}
+{1401}{K:}{}{1}{}{1040}{}
+{1402}{E:}{}{1}{}{0}{}
+{1404}{Arronax ? C'est un elfe très puissant de l'Ere des légendes qui semble revenir du Néant. Par ailleurs, il semble ne pas vous aimer beaucoup. [Puis, dans un murmure.] Bien sûr, il devra passer sur mon corps avant de pouvoir toucher au moindre de vos cheveux...}{Arronax ? C'est un elfe très puissant de l'Ere des légendes qui semble revenir du Néant. Par ailleurs, il semble ne pas vous aimer beaucoup. [Puis, dans un murmure.] Bien sûr, il devra passer sur mon corps avant de pouvoir toucher au moindre de vos cheveux...}{}{246}{}{}
+{1405}{K:}{}{1}{}{1040}{}
+{1406}{E:}{}{1}{}{0}{}
+{1408}{Nasrudin ? C'était le chef du Conseil Elfique au temps de l'Ere des Légendes. Et puisque ma mère affirme que nos réponses dépendent de lui, je propose que nous tâchions d'en savoir le plus possible à son sujet...}{Nasrudin ? C'était le chef du Conseil Elfique au temps de l'Ere des Légendes. Et puisque ma mère affirme que nos réponses dépendent de lui, je propose que nous tâchions d'en savoir le plus possible à son sujet...}{}{247}{}{}
+{1409}{K:}{}{1}{}{1040}{}
+{1410}{E:}{}{1}{}{0}{}
+{1412}{Le Cirque de Brodgar est le lieu où Arronax a été banni dans le Néant... Les pierres à l'intérieur du cirque lui-même délimitent son périmètre d'action. Cet endroit est ancien, mais vide. Lorsque vous y êtes, vous sentez le vide généré par le bannissement...}{Le Cirque de Brodgar est le lieu où Arronax a été banni dans le Néant... Les pierres à l'intérieur du cirque lui-même délimitent son périmètre d'action. Cet endroit est ancien, mais vide. Lorsque vous y êtes, vous sentez le vide généré par le bannissement...}{}{248}{}{}
+{1413}{K:}{}{1}{}{1040}{}
+{1414}{E:}{}{1}{}{0}{}
+{1416}{On ne peut pas dire que je sache grand-chose sur cet endroit. Cela ne ressemble à rien que je connaisse... C'est si étrange, et si calme... Il semble que ni les rayons du soleil ni le souffle du vent ne parviennent jusqu'ici. D'où peut bien venir la lumière ? C'est comme si le temps lui-même avait oublié ce lieu...}{On ne peut pas dire que je sache grand-chose sur cet endroit. Cela ne ressemble à rien que je connaisse... C'est si étrange, et si calme... Il semble que ni les rayons du soleil ni le souffle du vent ne parviennent jusqu'ici. D'où peut bien venir la lumière ? C'est comme si le temps lui-même avait oublié ce lieu...}{}{249}{}{}
+{1417}{K:}{}{1}{}{1040}{}
+{1418}{E:}{}{1}{}{0}{}
+{1420}{Kerghan ? Je sais seulement qu'il fut le premier à pratiquer la Nécromancie Noire, et qu'il a été banni pour cette raison. Il semble qu'il veuille se venger... et nous seuls sommes assez puissants pour contrecarrer ses plans. Pour ma part, je suis prête à m'engager dans la bataille...}{Kerghan ? Je sais seulement qu'il fut le premier à pratiquer la Nécromancie Noire, et qu'il a été banni pour cette raison. Il semble qu'il veuille se venger... et nous seuls sommes assez puissants pour contrecarrer ses plans. Pour ma part, je suis prête à m'engager dans la bataille...}{}{250}{}{}
+{1421}{Et je serai à vos côtés, mon amour...}{}{5}{lf12 1, gf2364 1, lf27 0}{1425}{re +5, lf27 1}
+{1422}{K:}{}{1}{}{1040}{}
+{1423}{E:}{}{1}{}{0}{}
+{1425}{Je sais, mon amour. Je sais...}{Je sais, mon amour. Je sais...}{}{251}{}{}
+{1426}{K:}{}{1}{}{1040}{}
+{1427}{E:}{}{1}{}{0}{}
+{1429}{Quelle question idiote. Il est temps d'éteindre l'ordinateur et d'aller se coucher. Autrement dit, la partie est finie. Il n'y a rien d'autre à faire. Bonne nuit...}{Quelle question idiote. Il est temps d'éteindre l'ordinateur et d'aller se coucher. Autrement dit, la partie est finie. Il n'y a rien d'autre à faire. Bonne nuit...}{}{252}{}{}
+{1430}{K:}{}{1}{}{1040}{}
+{1431}{E:}{}{1}{}{0}{}
+

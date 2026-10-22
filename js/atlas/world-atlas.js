@@ -32,7 +32,7 @@
   // used (notices.js, toolbox/atlas/build_notices.py).
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   // obj: the object (or tile) the script hangs on, for the Advanced view
-  // image: the picture a diagram or mural opens (atlas/pictures/)
+  // image: the picture a diagram or mural opens (atlas/graphics/pictures/)
   // The labels of a map only a mod has (Vorakia Sewers in CE Restored and Forgotten Places) wait in modLabels: that map joins MP.maps
   // only when the mod is switched in (syncCEMaps), which then gives them their map and puts them with the others.
   const modLabels = [];
@@ -117,13 +117,13 @@
   }
   // the filter buttons show the game's interface pictures (portraits.png) in place of their emoji, fitted to the button
   const FICONS = (window.ArcanumPortraits || {}).filterIcons || {};
-  document.head.insertAdjacentHTML('beforeend', `<style>html .filters .ficon{background-image:url("${(window.ArcanumPortraits || {}).sheet || 'atlas/portraits.png'}")}</style>`);      // (this version's sheet)
+  document.head.insertAdjacentHTML('beforeend', `<style>html .filters .ficon{background-image:url("${(window.ArcanumPortraits || {}).sheet || (window.ArcanumPortraits || {}).baseSheet || 'atlas/graphics/portraits/portraits-base.png'}")}</style>`);      // (this version's sheet)
   for (const b of document.querySelectorAll('#filters button[data-icon]')) {
     const box = FICONS[b.dataset.icon];
     if (!box) continue;
-    const [x, y, w, h] = box, s = 30 / Math.max(w, h), size = window.ArcanumPortraits.size;
+    const [x, y, w, h, inBase] = box, s = 30 / Math.max(w, h), PTS = window.ArcanumPortraits, size = inBase ? PTS.baseSize : PTS.size;      // (inBase: the picture lies in the base game's sheet)
     const i = document.createElement('span'); i.className = 'ficon';
-    i.style.cssText = `width:${w * s}px;height:${h * s}px;background-size:${size[0] * s}px ${size[1] * s}px;background-position:-${x * s}px -${y * s}px`;
+    i.style.cssText = `${inBase ? `background-image:url("${PTS.baseSheet}");` : ''}width:${w * s}px;height:${h * s}px;background-size:${size[0] * s}px ${size[1] * s}px;background-position:-${x * s}px -${y * s}px`;
     b.replaceChildren(i);
   }
   // what is switched on is remembered between visits
@@ -183,11 +183,15 @@
   // not a map of their own) become places, and the secret areas - spots no area points to - a group of their own.
   let ceOn = new URLSearchParams(location.search).has('ce');          // CE Restored or Carcanum (the version menu in the Atlas): see setCE
   // Each mod has its own data under the names the code below reads (ArcanumCE, ArcanumCEMaps...): useMod puts the chosen one there
-  const MOD_KEYS = ['ArcanumCE', 'ArcanumCEMaps', 'ArcanumCEAreas', 'ArcanumCEMobs', 'ArcanumCEGlows', 'ArcanumCEAlias'];
-  const MODS = { ce: Object.fromEntries(MOD_KEYS.map(k => [k, window[k]])), car: { ArcanumCE: window.ArcanumCarcanum, ArcanumCEMaps: window.ArcanumCarcanumMaps, ArcanumCEAreas: window.ArcanumCarcanumAreas, ArcanumCEMobs: window.ArcanumCarcanumMobs, ArcanumCEGlows: window.ArcanumCarcanumGlows },
-    fp: { ArcanumCE: window.ArcanumFP, ArcanumCEMaps: window.ArcanumFPMaps, ArcanumCEAreas: window.ArcanumFPAreas, ArcanumCEMobs: window.ArcanumFPMobs, ArcanumCEGlows: window.ArcanumFPGlows, ArcanumCEAlias: window.ArcanumCEAlias },      // (Forgotten Places is built on CE Restored: CE's pictures are still deduplicated through CE's alias list)
-    ru: { ArcanumCE: window.ArcanumRU, ArcanumCEMaps: window.ArcanumRUMaps, ArcanumCEAreas: window.ArcanumRUAreas, ArcanumCEMobs: window.ArcanumRUMobs, ArcanumCEGlows: window.ArcanumRUGlows } };
+  const MOD_KEYS = ['ArcanumCE', 'ArcanumCEMaps', 'ArcanumCEAreas', 'ArcanumCEMobs'];
+  const MODS = { ce: Object.fromEntries(MOD_KEYS.map(k => [k, window[k]])), car: { ArcanumCE: window.ArcanumCarcanum, ArcanumCEMaps: window.ArcanumCarcanumMaps, ArcanumCEAreas: window.ArcanumCarcanumAreas, ArcanumCEMobs: window.ArcanumCarcanumMobs },
+    fp: { ArcanumCE: window.ArcanumFP, ArcanumCEMaps: window.ArcanumFPMaps, ArcanumCEAreas: window.ArcanumFPAreas, ArcanumCEMobs: window.ArcanumFPMobs },
+    ru: { ArcanumCE: window.ArcanumRU, ArcanumCEMaps: window.ArcanumRUMaps, ArcanumCEAreas: window.ArcanumRUAreas, ArcanumCEMobs: window.ArcanumRUMobs },
+    tin: { ArcanumCE: window.ArcanumTIN, ArcanumCEMaps: window.ArcanumTINMaps, ArcanumCEAreas: window.ArcanumTINAreas, ArcanumCEMobs: window.ArcanumTINMobs },
+    rb: { ArcanumCE: window.ArcanumRB, ArcanumCEMaps: window.ArcanumRBMaps, ArcanumCEAreas: window.ArcanumRBAreas, ArcanumCEMobs: window.ArcanumRBMobs } };
   let modVer = 'ce';
+  let cmp = null;      // the Layers panel's opacities ({terrain, ce, car...}, drawing order), or null when it is off
+  const FINE_CMP = 128e6 / 4 / 3;      // pixels of 1/4 or finer pictures each compared layer keeps
   function useMod(ver) { modVer = MODS[ver] ? ver : 'ce'; for (const k of MOD_KEYS) window[k] = MODS[modVer][k]; }
   // The maps only CE Restored has join the list while it is on (appended, so the other maps keep their index) and leave it when it is off
   // and so do the locations it adds to the world (ce-maps.js: named as on the map, a place each, opened on the spot where it lies)
@@ -369,15 +373,13 @@
   // prev: the layer of the same map from the other source (CE Restored on or off). Its decoded pictures are taken over by file name,
   // so only the sectors whose picture differs are fetched again, and it stays on screen until this one can draw.
   function makePictures(src, prev) {
-    const inh = prev ? prev.share() : null;
     let stale = prev || null;
     const C = src.common, M = src.map;
     const IMGW = C.img.w, IMGH = C.img.h, SW = C.sector.w, HW = SW / 2, HH = C.sector.h / 2, PD = C.pad, A = C.atlas;
     const GW = M.gridW, GH = M.gridH, images = M.images, ORX = M.bounds.minX, ORY = M.bounds.minY;
     const X0 = HW * (ORY - ORX), Y0 = HH * (ORX + ORY);       // world px of the grid's first sector (absolute sector numbers)
     const LEVEL_W = { 0: IMGW, 1: IMGW / +C.levels[1], 2: IMGW / +C.levels[2] };
-    // SMALL: the objects layers that have a 1/4 picture (a small map keeps only the sizes it needs, build_map_pictures.prune_levels)
-    const SMALL = new Set(M.small ?? ['O', 'F']), PC = C.pieces;
+    const PC = C.pieces;
     let cells = null, disposed = false, LV = null, LVm = null;
     // The ground (levels 2, 1, 0.5, 0 and the tiles' 1/16 pictures) is drawn from the map's live files (LV, live-layer.js): the base game's sectors
     // from them, the sectors a version (CE Restored...) adds or changes from that version's (LVm, registry key <version>:<map>); a sector with
@@ -391,6 +393,40 @@
       if (wantM && !LVm) LVm = L.create(mk, { view, schedule });
       return [LV, LVm].filter(Boolean);
     }
+    // The Layers panel (atlas-layers): `cmp` = {terrain: 0..1, ce: 0..1...} in drawing order. Each layer above 0 is its own set of live files (the base game's
+    // for "terrain", else registry key <version>:<map>) drawn over the one below at that opacity; at 0 it is neither loaded nor drawn.
+    // "terrain" = the templates of terrain.tdf alone, in every sector of the grid (what the game generates where no .sec is: atlas/terrain/grid.json,
+    // world only, drawn from the world's live files); "base" = the base game's own sectors; then the versions' own sectors. Layers of the same
+    // files share one instance.
+    const LVc = new Map();
+    let tgrid = null, tgridP = null;
+    function terrainGrid() {
+      return tgridP || (tgridP = fetch(new URL('atlas/terrain/grid.json', document.baseURI)).then(r => r.json()).then(async j => {
+        const raw = new Uint8Array(atob(j.g).split('').map(c => c.charCodeAt(0)));
+        const buf = await new Response(new Blob([raw]).stream().pipeThrough(new DecompressionStream('deflate'))).arrayBuffer();
+        tgrid = { w: j.w, h: j.h, t: j.t, ids: new Uint16Array(buf) }; schedule();
+      }).catch(() => { tgrid = { w: 0, h: 0, t: [], ids: new Uint16Array(0) }; }));
+    }
+    function compareLayers() {
+      const L = window.ArcanumLive, out = [], want = new Set();
+      for (const [v, a] of Object.entries(cmp)) {
+        const key = v === 'terrain' || v === 'base' ? src.key : `${v}:${src.key}`;
+        if (!L || !(a > 0) || !L.has(key) || (v === 'terrain' && src.key !== 'World')) continue;
+        if (v === 'terrain') { terrainGrid(); if (!tgrid) continue; }
+        want.add(key);
+        if (!LVc.has(key)) LVc.set(key, L.create(key, { view, schedule, workers: 2, fine: FINE_CMP }));
+        out.push({ lv: LVc.get(key), a, terrain: v === 'terrain', mod: v !== 'terrain' && v !== 'base' });
+      }
+      if (out.some(e => e.mod) && L && L.has(src.key)) {      // a version's layer shows only what differs from the terrain + base game, which are loaded for that even at 0 %
+        if (src.key === 'World') terrainGrid();
+        want.add(src.key);
+        if (!LVc.has(src.key)) LVc.set(src.key, L.create(src.key, { view, schedule, workers: 2, fine: FINE_CMP }));
+        out.ref = LVc.get(src.key);
+      }
+      for (const [k, o] of [...LVc]) if (!want.has(k)) { o.dispose(); LVc.delete(k); }
+      return out;
+    }
+    let cmpNow = null, cmpCv = null, cmpRef = null;
     const liveOf = i => images[i].kind !== 'sec' && images[i].kind !== 'tpl' ? null : ceOn && src.ceMap && images[i].kind === 'sec' && (!src.old || images[i].ce) ? LVm : LV;
     const ready = (async () => {      // (a mod's map of the base game's size has only the cells it changes: gridPatch over the base game's grid)
       // (the world's grid is written as its low bytes, then its high bytes: gridPlanes, build_map_pictures.write_index_files)
@@ -442,17 +478,6 @@
     // (CE Restored: a picture flagged ce is in the CE folder, the others of the combined map in the base game's)
     // (Forgotten Places: a combined map lies over three folders, so each of its pictures names its own, d)
     const baseOf = i => images[i].kind === 'tpl' ? C.terrain + '/' : images[i].d ? images[i].d + '/' : src.old && !images[i].ce ? src.old : src.base;
-    // a picture that is the same as another is stored once: its URL becomes the copy's (CE pictures: toolbox/atlas/dedupe_ce.py, ce-alias.js;
-    // all the others: dedupe_pictures.py, pic-alias*.js, asked second since a CE alias can name a picture that moved;
-    // a copy ending in '/' is the file of the same name in that folder)
-    const aliasUrl = u => {
-      for (const A of [window.ArcanumCEAlias, window.ArcanumPicAlias]) {
-        const i = u.lastIndexOf('/'), d = A && A[u.slice(6, i)], f = u.slice(i + 1), t = d && d[f];
-        if (t) u = 'atlas/' + (t.endsWith('/') ? t + f : t);
-      }
-      return u;
-    };
-
     // the atlas picture (1/64 of every sector): far away, and where a sector has no live file
     let frameNo = 0, atlasImg = null;
     const atlas = new Image(); atlas.onload = () => { atlasImg = atlas; schedule(); }; atlas.src = src.atlasUrl;
@@ -635,11 +660,79 @@
         const rx = (v - u) / 2, ry = (v + u) / 2; if (rx < 0 || ry < 0 || rx >= GW || ry >= GH) continue;
         const n = cells[ry * GW + rx]; if (n) vis.push([rx, ry, n - 1]);
       }
-      const lives = lvlWant !== 3 ? liveLayers() : [];           // Live: the ground of the sectors that have live files comes from them (levels 2, 1, 0.5, 0)
+      cmpNow = lvlWant !== 3 && cmp ? compareLayers() : null;
+      if (!cmp && LVc.size) { for (const o of LVc.values()) o.dispose(); LVc.clear(); }
+      if (cmpNow === null && cmp) { for (const o of LVc.values()) o.dispose(); LVc.clear(); }      // (zoomed out to the overview: the layers' pictures are let go)
+      const lives = cmpNow ? [...new Set([...cmpNow.map(x => x.lv), ...(cmpNow.ref ? [cmpNow.ref] : [])])] :lvlWant !== 3 ? liveLayers() : [];           // Live: the ground of the sectors that have live files comes from them (levels 2, 1, 0.5, 0)
       let rough = false;
       for (const l of lives) rough = l.begin(lvlWant) || rough;
       ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = rough ? 'low' : 'medium';
-      for (const [rx, ry, i] of vis) {
+      if (cmpNow) {          // the Layers panel: each layer over the last, at its opacity (no average-colour stand-ins: they would show through a layer set to 0)
+        let tvis = null;      // every sector of the terrain grid in view, with its template's stem
+        if (cmpNow.some(e => e.terrain)) {
+          tvis = [];
+          for (let v = Math.max(0, v0); v <= Math.min(GW + GH - 2, v1); v++) for (let u = u0 + (((u0 + v) & 1) ? 1 : 0); u <= u1; u += 2) {
+            const rx = (v - u) / 2, ry = (v + u) / 2; if (rx < 0 || ry < 0 || rx >= GW || ry >= GH) continue;
+            const sx = rx + ORX, sy = ry + ORY; if (sx < 0 || sy < 0 || sx >= tgrid.w || sy >= tgrid.h) continue;
+            const t = tgrid.ids[sy * tgrid.w + sx]; if (t) tvis.push([rx, ry, tgrid.t[t - 1]]);
+          }
+        }
+        // Each layer is mixed in at its slider (below + slider * (layer - below)): ground that is the same in two layers stays as it is instead of
+        // doubling ('lighter' did), and darker or brighter differences both show ('lighten' hid the darker ones). Each is first drawn alone with normal blending, so the neighbours'
+        // overlapping bands inside one layer do not add up along the sector seams.
+        const lc = (cmpCv ||= document.createElement('canvas')), ow = ctx.canvas.width, oh = ctx.canvas.height;
+        if (lc.width !== ow || lc.height !== oh) { lc.width = ow; lc.height = oh; }
+        const lg = lc.getContext('2d'), tf = ctx.getTransform();
+        const refStem = (rx, ry, i) => {      // the picture the terrain + base game has for this sector: its own sector file, else the terrain template
+          const rl = cmpNow.ref;
+          if (images[i].kind === 'sec' && rl.ok(images[i].stem)) return images[i].stem;
+          if (!tgrid) return null;
+          const sx = rx + ORX, sy = ry + ORY, t = sx >= 0 && sy >= 0 && sx < tgrid.w && sy < tgrid.h ? tgrid.ids[sy * tgrid.w + sx] : 0;
+          return t && rl.ok(tgrid.t[t - 1]) ? tgrid.t[t - 1] : null;
+        };
+        let refPx = null;      // the terrain + base game's pixels of this view (made once per frame, only when a version layer is on)
+        const refPixels = () => {
+          if (refPx) return refPx;
+          const rc = (cmpRef ||= document.createElement('canvas'));
+          if (rc.width !== ow || rc.height !== oh) { rc.width = ow; rc.height = oh; }
+          const rg = rc.getContext('2d', { willReadFrequently: true });
+          rg.setTransform(1, 0, 0, 1, 0, 0); rg.clearRect(0, 0, ow, oh); rg.setTransform(tf);
+          rg.imageSmoothingEnabled = true; rg.imageSmoothingQuality = rough ? 'low' : 'medium';
+          const rl = cmpNow.ref;
+          for (const [rx, ry, i] of vis) {
+            const dx = view.ox + z * (X0 + HW * (ry - rx) - HW - PD.l), dy = view.oy + z * (Y0 + HH * (rx + ry) - 20 - PD.t), dw = IMGW * z, dh = IMGH * z;
+            if (dx > cw || dy > ch || dx + dw < 0 || dy + dh < 0) continue;
+            const stem = refStem(rx, ry, i);
+            if (stem) rl.draw(rg, stem, dx, dy, dw, dh, Math.hypot(dx + dw / 2 - cw / 2, dy + dh / 2 - ch / 2));
+          }
+          return refPx = rg.getImageData(0, 0, ow, oh).data;
+        };
+        for (const { lv, a, terrain, mod } of cmpNow) {
+          lg.setTransform(1, 0, 0, 1, 0, 0); lg.clearRect(0, 0, ow, oh); lg.setTransform(tf);
+          lg.imageSmoothingEnabled = true; lg.imageSmoothingQuality = rough ? 'low' : 'medium';
+          for (const [rx, ry, i] of terrain ? tvis : vis) {
+            let stem = terrain ? i : images[i].stem, from = lv;
+            if (!terrain && (images[i].kind !== 'sec' || !lv.ok(stem))) {      // a sector this version leaves alone is drawn from the terrain + base game, so the overlapping soft edges of the neighbours' pictures blend as in the reference
+              if (!mod || !cmpNow.ref) continue;
+              stem = refStem(rx, ry, i); from = cmpNow.ref;
+            }
+            const dx = view.ox + z * (X0 + HW * (ry - rx) - HW - PD.l), dy = view.oy + z * (Y0 + HH * (rx + ry) - 20 - PD.t), dw = IMGW * z, dh = IMGH * z;
+            if (dx > cw || dy > ch || dx + dw < 0 || dy + dh < 0 || !stem || !from.ok(stem)) continue;
+            from.draw(lg, stem, dx, dy, dw, dh, Math.hypot(dx + dw / 2 - cw / 2, dy + dh / 2 - ch / 2));
+          }
+          if (mod && cmpNow.ref) {      // only what this version adds: the pixels equal to the terrain + base game (a version that reverts another's change) are cleared
+            const rp = refPixels(); lg.setTransform(1, 0, 0, 1, 0, 0);
+            const im = lg.getImageData(0, 0, ow, oh), d = im.data;
+            for (let k = 0; k < d.length; k += 4) {
+              if (d[k + 3] < 64) d[k + 3] = 0;      // the faint soft edge of a picture that reaches past its sector (nothing under it in the reference)
+              else if (rp[k + 3] > 200 && Math.abs(d[k] - rp[k]) < 14 && Math.abs(d[k + 1] - rp[k + 1]) < 14 && Math.abs(d[k + 2] - rp[k + 2]) < 14) d[k + 3] = 0;
+            }
+            lg.putImageData(im, 0, 0);
+          }
+          ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalCompositeOperation = 'source-over'; ctx.globalAlpha = a; ctx.drawImage(lc, 0, 0); ctx.restore();
+        }
+      }
+      else for (const [rx, ry, i] of vis) {
         const cx = view.ox + z * (X0 + HW * (ry - rx)), cy = view.oy + z * (Y0 + HH * (rx + ry) + HH - 20), hw = z * HW, hh = z * HH;
         if (cx + hw + 2 < 0 || cx - hw - 2 > cw || cy + hh + 2 < 0 || cy - hh - 2 > ch) continue;
         const lv = lives.length ? liveOf(i) : null;
@@ -647,7 +740,7 @@
         ctx.fillStyle = css(images[i]);
         fillDiamond(ctx, cx, cy, hw, hh, Math.max(1.5 / hw, 1 / hh), sidesAt(rx, ry));
       }
-      for (const [rx, ry, i] of vis) {
+      if (!cmpNow) for (const [rx, ry, i] of vis) {
         const dx = view.ox + z * (X0 + HW * (ry - rx) - HW - PD.l), dy = view.oy + z * (Y0 + HH * (rx + ry) - 20 - PD.t), dw = IMGW * z, dh = IMGH * z;
         if (dx > cw || dy > ch || dx + dw < 0 || dy + dh < 0) continue;
         const d = Math.hypot(dx + dw / 2 - cw / 2, dy + dh / 2 - ch / 2);
@@ -655,87 +748,46 @@
         if ((!lv || !lv.ok(images[i].stem) || !lv.draw(ctx, images[i].stem, dx, dy, dw, dh, d)) && atlasImg) ctx.drawImage(atlasImg, images[i].atlas[0] * A.w, images[i].atlas[1] * A.h, A.w, A.h, dx, dy, dw, dh);
       }
       for (const l of lives) l.end();
-      if (z >= OBJECTS_FROM_Z && (objMask.size || offMask.size)) drawObjects(z, vis);
-      piecePump();
+      if (z >= OBJECTS_FROM_Z && lives.some(l => l.hasObjects())) drawObjects(z, vis);
     }
-    // the objects layers' pieces and 1/4 pictures: only those on screen are fetched, a few at a time, nearest the centre first,
-    // each decoded off the main thread before it is first drawn; the oldest dropped under a budget
-    const P_BUDGET = 400 * 1024 * 1024, pcache = new Map(), OBJECTS_LATER = 1e5;
-    let pBytes = 0, pActive = 0;
-    function pieceNeed(key, url, bytes, d) {
-      let e = pcache.get(key);
-      if (!e) {
-        url = aliasUrl(url);
-        if (disposed) return null;
-        const taken = inh && inh.pc.get(url);
-        e = taken ? { ...taken, key, used: frameNo, d } : { key, url, img: null, state: 'queued', bytes, used: frameNo, d };
-        if (taken) pBytes += bytes;
-        pcache.set(key, e);
-      }
-      e.used = frameNo; e.d = d;
-      return e.state === 'ready' ? e : null;
-    }
-    function piecePump() {
-      while (pActive < 6) {
-        let best = null;
-        for (const e of pcache.values()) if (e.state === 'queued' && e.used >= frameNo - 1 && (!best || e.d < best.d)) best = e;
-        if (!best) break;
-        const e = best; e.state = 'loading'; pActive++;
-        const done = ok => {
-          pActive--;
-          if (ok && !disposed) { e.state = 'ready'; pBytes += e.bytes; evictPieces(); } else { e.state = 'failed'; e.img = null; }
-          piecePump(); schedule();
-        };
-        loadPiece(e).then(() => done(true), () => done(false));
-      }
-      for (const [k, e] of pcache) if (e.state === 'queued' && e.used < frameNo - 1) pcache.delete(k);   // asked for, then scrolled away
-    }
-    // a piece stored as an overlay (toolbox/atlas/build_overlays.py, overlay.js) is the base piece with the file's pixels drawn over it
-    function loadPiece(e) {
-      const i = e.url.lastIndexOf('/'), base = (window.ArcanumOverlay || {})[e.url.slice(6, i)]?.[e.url.slice(i + 1)];
-      const top = new Image(); top.src = e.url;
-      if (!base) { e.img = top; return top.decode(); }
-      const under = new Image(); under.src = aliasUrl('atlas/' + base);
-      return Promise.all([top.decode(), under.decode()]).then(() => {
-        const c = document.createElement('canvas'); c.width = under.naturalWidth; c.height = under.naturalHeight;
-        const g = c.getContext('2d'); g.drawImage(under, 0, 0); g.drawImage(top, 0, 0, c.width, c.height);
-        e.img = c;
-      });
-    }
-    function evictPieces() {
-      if (pBytes <= P_BUDGET) return;
-      for (const e of [...pcache.values()].filter(e => e.state === 'ready' && e.used < frameNo).sort((a, b) => a.used - b.used)) {
-        if (pBytes <= P_BUDGET * 0.8) break; pcache.delete(e.key); pBytes -= e.bytes; e.img = null;
-      }
-    }
-
     // people, creatures, items, containers and doors: a clear picture per sector, over the ground, only from 20% and only
     // for the sectors in view: the 1/4 picture at middle distance, close up the full-size layer's 8 x 4 pieces (the 1/4
     // picture standing in meanwhile)
-    const OBJECTS_FROM_Z = 0.2, OBJ_COLS = 8, OBJ_ROWS = 4, TW = IMGW / OBJ_COLS, TH = IMGH / OBJ_ROWS;
+    const OBJECTS_FROM_Z = 0.2;
     // The people and creatures the game keeps switched off until the story brings them in are a layer of their own (F0 / F1),
     // drawn over each sector's objects only while the 💤 button is on.
-    const objMask = new Map((M.objects || []).map((i, k) => [i, (M.objectMasks || [])[k] >>> 0]));
-    const offMask = new Map((M.offObjects || []).map((i, k) => [i, (M.offObjectMasks || [])[k] >>> 0]));
     function drawObjects(z, vis) {
-      const far = IMGW * z <= LEVEL_W[1] * 1.25, w1 = LEVEL_W[1], h1 = w1 * IMGH / IMGW;
       const dw = IMGW * z, dh = IMGH * z;
-      const layers = showOff ? [[objMask, 'O'], [offMask, 'F']] : [[objMask, 'O']];
-      for (const [rx, ry, i] of vis) for (const [masks, L] of layers) {
-        if (!masks.has(i)) continue;
-        const dx = view.ox + z * (X0 + HW * (ry - rx) - HW - PD.l), dy = view.oy + z * (Y0 + HH * (rx + ry) - 20 - PD.t);
-        if (dx > cw || dy > ch || dx + dw < 0 || dy + dh < 0) continue;
-        const d = Math.hypot(dx + dw / 2 - cw / 2, dy + dh / 2 - ch / 2), stem = images[i].stem;
-        const small = SMALL.has(L) ? pieceNeed(L + '1/' + i, `${baseOf(i)}${L}1/${stem}.${src.ext}`, w1 * h1 * 4, d + OBJECTS_LATER) : null;
-        if (far && SMALL.has(L)) { if (small) ctx.drawImage(small.img, dx, dy, dw, dh); continue; }
-        const mask = masks.get(i);
-        for (let r = 0; r < OBJ_ROWS; r++) for (let c = 0; c < OBJ_COLS; c++) {
-          if (!(mask >>> (r * OBJ_COLS + c) & 1)) continue;
-          const x0 = Math.round(dx + c * TW * z), x1 = Math.round(dx + (c + 1) * TW * z), y0 = Math.round(dy + r * TH * z), y1 = Math.round(dy + (r + 1) * TH * z);
-          if (x0 > cw || y0 > ch || x1 < 0 || y1 < 0) continue;
-          const t = pieceNeed(`${L}0/${i}/${c}/${r}`, `${baseOf(i)}${L}0/${stem}_${c}_${r}.${src.ext}`, TW * TH * 4, OBJECTS_LATER + Math.hypot((x0 + x1) / 2 - cw / 2, (y0 + y1) / 2 - ch / 2));
-          if (t) ctx.drawImage(t.img, x0, y0, x1 - x0, y1 - y0);
-          else if (small) ctx.drawImage(small.img, c * TW / 4, r * TH / 4, TW / 4, TH / 4, x0, y0, x1 - x0, y1 - y0);   // the quarter-size picture meanwhile
+      const layers = showOff ? ['O', 'F'] : ['O'];
+      for (const [rx, ry, i] of vis) for (const L of layers) {
+        // a map whose sector files hold the objects layers (the .atlasmob files, live-layer.js) draws them from there
+        if (cmpNow) {          // the Layers panel: each layer's people, containers and doors at its opacity
+          const ldx = view.ox + z * (X0 + HW * (ry - rx) - HW - PD.l), ldy = view.oy + z * (Y0 + HH * (rx + ry) - 20 - PD.t);
+          if (ldx > cw || ldy > ch || ldx + dw < 0 || ldy + dh < 0) continue;
+          for (const { lv: clv, a, terrain } of cmpNow) if (!terrain && clv.hasObjects() && clv.ok(images[i].stem) && clv.hasLayer(images[i].stem, L)) { ctx.globalAlpha = a; clv.drawLayer(ctx, images[i].stem, ldx, ldy, dw, dh, L); }
+          ctx.globalAlpha = 1;
+          continue;
+        }
+        const lv = liveOf(i);
+        if (lv && lv.hasObjects()) {
+          if (!lv.ok(images[i].stem) || !lv.hasLayer(images[i].stem, L)) continue;
+          const ldx = view.ox + z * (X0 + HW * (ry - rx) - HW - PD.l), ldy = view.oy + z * (Y0 + HH * (rx + ry) - 20 - PD.t);
+          if (ldx > cw || ldy > ch || ldx + dw < 0 || ldy + dh < 0) continue;
+          lv.drawLayer(ctx, images[i].stem, ldx, ldy, dw, dh, L);
+          continue;
+        }
+      }
+      // Sectors that have people or things but no .sec under them have no ground picture and are not in the grid: live_objects.py lists them in art.json ("m") and the
+      // map's objects layers are drawn there by the sector's number (no ground behind them: they stand on the map's black).
+      const mineX = LVm && LVm.hasObjects() ? new Set(LVm.extras().map(e => e[2])) : null;      // a version's own list of such sectors replaces the base game's for the same sector
+      if (!cmpNow) for (const lv of [LV, LVm]) {
+        if (!lv || !lv.hasObjects()) continue;
+        for (const [sx, sy, stem] of lv.extras()) {
+          if (lv === LV && mineX && mineX.has(stem)) continue;
+          const rx = sx - ORX, ry = sy - ORY;
+          const ldx = view.ox + z * (X0 + HW * (ry - rx) - HW - PD.l), ldy = view.oy + z * (Y0 + HH * (rx + ry) - 20 - PD.t);
+          if (ldx > cw || ldy > ch || ldx + dw < 0 || ldy + dh < 0) continue;
+          for (const L of layers) if (lv.hasLayer(stem, L)) lv.drawLayer(ctx, stem, ldx, ldy, dw, dh, L);
         }
       }
     }
@@ -743,11 +795,6 @@
     return {
       box, ready,
       has: (tx, ty) => !!cells && filled((tx >> 6) - ORX, (ty >> 6) - ORY),      // is this tile on a sector the map has (after `ready`)
-      share() {          // what is decoded and ready, by file name, for the layer that takes over
-        const pc = new Map();
-        for (const e of pcache.values()) if (e.state === 'ready') pc.set(e.url, e);
-        return { pc };
-      },
       draw(z) {
         if (stale && (!cells || !atlasImg)) { stale.draw(z); return; }       // the map it replaces, until this one has its grid and atlas
         if (stale) { stale.dispose(); stale = null; }
@@ -764,7 +811,7 @@
         else if (sectorPx * dpr < TILES_BELOW_PX) { ctx.imageSmoothingEnabled = true; ctx.imageSmoothingQuality = 'low'; if (drawTiles(z, sectorPx * dpr)) schedule(); }
         else drawSectors(z);
       },
-      dispose() { disposed = true; if (LV) { LV.dispose(); LV = null; } if (LVm) { LVm.dispose(); LVm = null; } if (stale) { stale.dispose(); stale = null; } pcache.clear(); for (const s of sheets) s.c.width = 0; tiles.clear(); levels.clear(); atlas.src = ''; },
+      dispose() { disposed = true; for (const o of LVc.values()) o.dispose(); LVc.clear(); if (LV) { LV.dispose(); LV = null; } if (LVm) { LVm.dispose(); LVm = null; } if (stale) { stale.dispose(); stale = null; } for (const s of sheets) s.c.width = 0; tiles.clear(); levels.clear(); atlas.src = ''; },
     };
   }
   // the pictures of a map (null: none yet)
@@ -957,33 +1004,59 @@
   // clear sheets); the oval above is for what has no art of its own, and while a sheet is loading.
   // (CE Restored's own, ce-glows.js, go first while it is on: its people stand where the base game's did not)
   const tinted = new Map(), SHAPES_FROM_Z = 0.2;   // the objects' art shows from 20 %
-  // glow-shapes.js and the mod's set (2 MB together) are fetched the first time a glow is drawn zoomed in, not with the page: the oval
-  // stands in until they are there
-  let GD = null, glowsAsked = false;
-  const MOD_GLOWS = { ce: 'ArcanumCEGlows', car: 'ArcanumCarcanumGlows', fp: 'ArcanumFPGlows', ru: 'ArcanumRUGlows' };
+  // Only glow-shards.js (the map of the shards, 11 kB) is fetched the first time a glow is drawn zoomed in, not with the page: the oval
+  // stands in until the shards of the place are there
+  let glowsAsked = false;
   function loadGlows() {
     if (glowsAsked) return;
     glowsAsked = true;
-    const urls = ['js/atlas/data/glow-shapes.js', ...window.AtlasData.modUrls('glows')];
-    let left = urls.length;
-    const done = () => {
-      if (--left) return;
-      for (const [v, k] of Object.entries(MOD_GLOWS)) if (MODS[v] && window[k]) MODS[v].ArcanumCEGlows = window[k];
-      if (ceOn) window.ArcanumCEGlows = MODS[modVer].ArcanumCEGlows;
-      GD = window.ArcanumGlows || { at: {}, shapes: {} };
-      schedule();
-    };
-    for (const u of urls) { const s = document.createElement('script'); s.src = u; s.onload = s.onerror = done; document.head.appendChild(s); }
+    const s = document.createElement('script');
+    s.src = 'js/atlas/data/glow-shards.js';
+    s.onload = s.onerror = () => { const S = window.ArcanumGlowShards; if (S) { GLOWS.scale = S.scale; GLOWS.margin = S.margin; } glowGen++; schedule(); };
+    document.head.appendChild(s);
   }
-  // A glow is one picture in the shared pool (atlas/glows/pool/<hash>.webp): the halo at the left, the art's outline at its right.
-  // Each object has its own: at[map]["X,Y"][kind] = [[hash, dx, dy, object], ...], the object being what the rows know it by
+  // A glow is one picture: the halo at the left, the art's outline at its right. Each object has its own:
+  // at[map]["X,Y"][kind] = [[hash, dx, dy, object], ...], the object being what the rows know it by
   // (a .mob's lower-case file name, or p<prototype> for an object of a .sec); a mod's set lists only what it changes.
-  const glowDir = D => D.dir || 'atlas/glows/pool';
-  const poolImgs = new Map();
+  // Both the index and the pictures come in shards (glow-shards.js, toolbox/atlas/build_glow_shards.py): one file holds what a part of one
+  // map needs (the base game's part, or the mod's own), so a place is fetched when a glow on it is first drawn, and the common shard
+  // (the figures seen everywhere) once.
+  const GLOWS = { shapes: {}, scale: 0, margin: 0 };           // picture -> [w, h, mask w, mask h]; how the halos are drawn
+  const AT = {};                                            // part (b, ce, ...) -> map -> "X,Y" -> kind -> [[picture, dx, dy, object], ...]
+  const poolImgs = new Map(), shardsAsked = new Set(), shardsDone = new Set();
+  let glowGen = 0;                                          // (counts the shards that have arrived: what was not found may be there now)
   function poolImage(D, hash) {
-    let im = poolImgs.get(hash);
-    if (!im) { im = new Image(); im.onload = () => { im.ready = true; schedule(); }; im.src = `${glowDir(D)}/${hash}.webp`; poolImgs.set(hash, im); }
-    return im.ready ? im : null;
+    const im = poolImgs.get(hash);
+    return im && im.ready ? im : null;
+  }
+  async function loadShard(name, part, S) {
+    try {
+      const buf = await (await fetch(`${S.dir}/${name}.bin`)).arrayBuffer(), n = new DataView(buf).getUint32(4, true);
+      const head = JSON.parse(await new Response(new Blob([new Uint8Array(buf, 8, n)]).stream().pipeThrough(new DecompressionStream('deflate'))).text()), at = 8 + n;
+      for (const [map, t] of Object.entries(head.at)) Object.assign((AT[part] = AT[part] || {})[map] = AT[part][map] || {}, t);
+      await Promise.all(Object.entries(head.p).map(async ([h, [o, l, w, ht, mw, mh]]) => {
+        GLOWS.shapes[h] = [w, ht, mw, mh];
+        if (poolImgs.has(h)) return;
+        const bm = await createImageBitmap(new Blob([new Uint8Array(buf, at + o, l)], { type: 'image/webp' }));
+        bm.ready = true; poolImgs.set(h, bm);
+      }));
+    } catch (e) { console.warn('glow shard', name, e); }
+    shardsDone.add(name); glowGen++; schedule();
+  }
+  // the shards of the place a tile is on (the cut tree of its map): asked for if not yet, true once the index of them is there
+  function glowPlace(key, tile, part) {
+    const S = window.ArcanumGlowShards, tree = S && S.maps[key];
+    if (tree == null) return true;                          // (a map with no glows)
+    let n = tree;
+    while (typeof n !== 'number') n = (n[0] ? tile[0] + tile[1] : tile[0] - tile[1]) < n[1] ? n[2] : n[3];
+    const cell = S.cells[n];
+    let ready = true;
+    for (const [name, p] of [[S.common, null], [cell.b, 'b'], [part && cell[part], part]]) {
+      if (!name) continue;
+      if (!shardsAsked.has(name)) { shardsAsked.add(name); loadShard(name, p, S); }
+      if (p && !shardsDone.has(name)) ready = false;
+    }
+    return ready;
   }
   const fileName = f => (f || '').slice((f || '').lastIndexOf('/') + 1).toLowerCase();
   function oidOf(m) {
@@ -992,21 +1065,22 @@
     return f ? fileName(f) : null;
   }
   function shapeOf(m, kind) {
-    if (!GD) { loadGlows(); return null; }
-    const key =cur >= 0 ? MP.maps[cur].key : 'World', CEG = ceOn && window.ArcanumCEGlows;
-    // (asked for every mark at every frame: the answer is kept on the mark until the map or the glow sets change)
+    if (!window.ArcanumGlowShards) { loadGlows(); return null; }
+    const key = cur >= 0 ? MP.maps[cur].key : 'World', part = ceOn ? modVer : null;
+    // (asked for every mark at every frame: the answer is kept on the mark until the map, the version or the shards change)
     const was = m.shapeFor;
-    if (was && was[0] === key && was[1] === GD && was[2] === CEG && was[3] === kind) return was[4];
-    const found = findShape(m, kind, key, CEG);
-    m.shapeFor = [key, GD, CEG, kind, found];
+    if (was && was[0] === key && was[1] === glowGen && was[2] === part && was[3] === kind) return was[4];
+    if (!glowPlace(key, m.tile, part)) return null;         // (the oval stands in until the place's index is there)
+    const found = findShape(m, kind, key, part);
+    m.shapeFor = [key, glowGen, part, kind, found];
     return found;
   }
-  function findShape(m, kind, key, CEG) {
+  function findShape(m, kind, key, part) {
     const xy = m.tile[0] + ',' + m.tile[1], oid = oidOf(m);
     // only the thing itself glows: people, containers, items on the floor, signs, waypoints
     const g = m.n ? 'n' : m.c ? 'c' : m.g ? 'i' : kind === 'people' || kind === 'creature' ? 'n' : kind === 'chest' ? 'c' : kind === 'item' ? 'i' : kind === 'way' ? 'w' : 's';
-    const sets = (CEG ? [CEG, GD] : [GD]).filter(Boolean);      // (the mod on now: useMod swaps it)
-    const lists = sets.map(D => [D, D.at[key] && D.at[key][xy] && D.at[key][xy][g]]).filter(([, l]) => l && l.length);
+    const D = GLOWS, sets = (part ? [part, 'b'] : ['b']).map(p => AT[p]);          // (the mod on now first)
+    const lists = sets.map(at => [D, at && at[key] && at[key][xy] && at[key][xy][g]]).filter(([, l]) => l && l.length);
     const title = g === 's' && m.l ? m.l.text : null;                          // (a sign's glow knows what the notice is called: two boards of one prototype on a tile)
     for (const [D, l] of lists) {                                                // the entry of this very object, the mod's first
       const s = (title && (l.find(e => e[4] === title && e[3] === oid) || l.find(e => e[4] === title))) || (oid && l.find(e => e[3] === oid));
@@ -1073,8 +1147,10 @@
           hits.push({ x: tx, y: ty, rx: 6, ry: 6, tx, ty, tw, th, m, active, faint, color, a: active ? 1 : fa, dot: true });
           continue;
         }
+        const far = 600 * z;                                                     // (a glow reaches this far from its tile; the shard of a place is fetched only when it is in view)
+        if (!active && (tx < -far || ty < -far || tx > cw + far || ty > ch + far)) continue;
         const found = shapeOf(m, kind);
-        if (found) {                                                             // the halo of its art: [shape, dx, dy, mask] from the tile's centre
+        if (found) {                                                           // the halo of its art: [shape, dx, dy, mask] from the tile's centre
           const s = found.s, D = found.D, [w, h] = D.shapes[s[0]], sw = w * D.scale * z, sh = h * D.scale * z, x0 = tx + s[1] * z, y0 = ty + s[2] * z;
           if (x0 > cw || y0 > ch || x0 + sw < 0 || y0 + sh < 0) continue;
           hits.push({ x: x0 + sw / 2, y: y0 + sh / 2, rx: sw * 0.4, ry: sh * 0.4, x0, y0, sw, sh, D, shape: s[0], dx: s[1], dy: s[2], mask: s[0], tx, ty, tw, th, m, active, faint, color, a: active ? 1 : fa });
@@ -1276,6 +1352,7 @@
   window.addEventListener('message', e => {
     if (e.data && e.data.type === 'atlas-unselect') { activeLabel = activeChest = activeNpc = null; schedule(); }   // its panel was closed
     if (e.data && e.data.type === 'atlas-opaque') { over = false; document.documentElement.classList.remove('over'); document.body.classList.remove('over'); schedule(); }
+    if (e.data && e.data.type === 'atlas-layers') { cmp = e.data.on ? e.data.a : null; schedule(); }
     if (e.data && e.data.type === 'atlas-ce') setCE(!!e.data.on, e.data.ver);
     if (e.data && e.data.type === 'atlas-go') {
       goPlace(e.data.place, e.data.tile);

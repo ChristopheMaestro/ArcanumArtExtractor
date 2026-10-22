@@ -1,0 +1,459 @@
+{1}{Bonjour. Bienvenue chez Madame Lily, l'établissement le plus raffiné de Tarante.}{Bienvenue chez Madame Lily, petite.}{}{}{}{re 50}
+{2}{Seriez-vous Madame Lily ?}{1}{5}{lf1 0}{78}{}
+{3}{C'est vous, Madame Lily ?}{1}{5}{lf1 0}{78}{}
+{4}{Etes-vous Madame Lily ?}{0}{5}{lf1 0}{78}{}
+{5}{Bonjour, Madame Lily.}{}{5}{lf1 1, QB1128 3}{181}{}
+{6}{Bonjour, Madame Lily.}{}{5}{lf1 1, QU1128 4}{233}{}
+{7}{Je n'ai pas encore le collier.}{}{5}{QU1125 2, ni2826}{294}{}
+{8}{J'ai le collier de Cassie.}{1}{5}{Qa1125 2, in 2826}{297}{}
+{9}{J'ai le collier de Cassie.}{0}{5}{Qa1125 2, in 2826}{300}{}
+{10}{Le collier de Cassie est brisé.}{}{5}{QU1125 6}{71}{}
+{11}{Je n'ai pas encore l'argent de Monsieur Langlois.}{}{5}{QU1126 2}{313}{}
+{12}{J'ai l'argent de Monsieur Langlois !}{1}{5}{QU1126 3, $$400}{316}{}
+{13}{J'ai l'argent de Monsieur Langlois !}{0}{5}{QU1126 3, $$400}{319}{}
+{14}{J'ai l'argent de Monsieur Langlois !}{}{5}{QU1126 6, $$400}{}{co, fl 64}
+{15}{Je n'ai pas encore livré le colis.}{1}{5}{QU1127 2}{332}{}
+{16}{J'ai remis le cadeau à Madame Lannier}{1}{5}{QU1127 3, ni5667}{335}{}
+{17}{J'ai remis le cadeau à Madame Lannier}{1}{5}{QU1127 6, ni5667}{}{co, fl 64}
+{18}{Je regrette, mais j'ai fait tomber le cadeau.}{1}{5}{QU1127 2, ni5667}{65}{}
+{19}{Je cherche toujours le médaillon.}{}{5}{QU1128 2, ni2827}{350}{}
+{20}{J'ai le médaillon.}{1}{5}{QU1128 2, in2827}{353}{}
+{21}{J'ai le médaillon.}{0}{5}{QU1128 2, in2827}{356}{}
+{22}{Je n'ai pas encore vu Monsieur Charles.}{0}{5}{QU1129 2}{457}{}
+{23}{J'ai vu Monsieur Charles.}{0}{5}{QU1129 3}{462}{}
+{24}{J'ai vu Monsieur Charles.}{0}{5}{QU1129 6}{}{co, fl 64}
+{25}{J'aimerais acquérir l'expertise dans l'art de la persuasion...}{}{5}{tr11 1, tr11-1}{472}{}
+{34}{Vous être M'dame Lily ?}{}{-4}{lf1 0}{78}{}
+{35}{'jour, m'dame.}{}{-4}{lf1 1, QB1128 3}{181}{}
+{36}{'jour, m'dame.}{}{-4}{lf1 1, QU1128 4}{233}{}
+{37}{Moi pas encore avoir collier.}{}{-4}{QU1125 2}{294}{}
+{38}{Moi avoir collier !}{1}{-4}{QU1125 3, in 2826}{297}{}
+{39}{Moi avoir collier !}{0}{-4}{QU1125 3, in 2826}{300}{}
+{40}{Collier cassé...}{}{-4}{QU1125 6, in 2826}{71}{}
+{41}{Moi pas encore avoir sous...}{}{-4}{QU1126 2}{313}{}
+{42}{Moi avoir sous !}{1}{-4}{QU1126 3, $$400}{316}{}
+{43}{Moi avoir sous !}{0}{-4}{QU1126 3, $$400}{319}{}
+{44}{Moi avoir sous !}{}{-4}{QU1126 6, $$400}{}{co, fl 64}
+{45}{Moi pas encore avoir donné cadeau...}{1}{-4}{QU1127 2}{332}{}
+{46}{Moi avoir donné cadeau à M'dame Lannier...}{1}{-4}{QU1127 3, ni5667}{335}{}
+{47}{Moi avoir donné cadeau à M'dame Lannier...}{1}{-4}{QU1127 6, ni5667}{}{co, fl 64}
+{48}{Euh... Moi avoir fait tomber cadeau...}{1}{-4}{QU1127 2, ni5667}{65}{}
+{49}{Moi pas encore avoir trouvé médaillon...}{}{-4}{QU1128 2, ni2827}{350}{}
+{50}{Moi avoir médaillon !}{1}{-4}{QU1128 2, in2827}{353}{}
+{51}{Moi avoir médaillon !}{0}{-4}{QU1128 2, in2827}{356}{}
+{52}{Moi pas encore avoir vu M'sieur Charles...}{}{-4}{QU1129 2}{457}{}
+{53}{Moi avoir vu M'sieur Charles.}{}{-4}{QU1129 3}{462}{}
+{54}{Moi avoir vu M'sieur Charles.}{}{-4}{QU1129 6}{}{co, fl 64}
+{55}{Moi pouvoir avoir interstice en perfusion ?}{}{-4}{tr11 1, tr11-1}{472}{}
+{63}{E:}{}{1}{}{0}{}
+{64}{Monstre ! Vous allez mourir, vous aussi !}{}{}{}{}{}
+{65}{Oh non ! Ce vase était si beau ! Et si fragile... Je n'arrive pas à croire que vous l'ayez cassé ! Il a coûté une petite fortune ! [Elle a l'air extrêmement agité.] J'ai bien peur de ne plus avoir besoin de vos services. Si l'une de mes filles vous intéresse, il vous faudra payer le prix fort, @pcname@.}{}{}{}{}{}
+{66}{Je m'excuse.}{}{5}{}{0}{}
+{67}{Dans ce cas, je m'en vais.}{}{5}{}{0}{}
+{68}{Moi demander pardon.}{}{-4}{}{0}{}
+{69}{'tupide cadeau...}{}{-4}{}{0}{}
+{70}{E:}{}{1}{}{0}{}
+{71}{Oh non ! Ce collier était si beau ! Il était si finement ouvragé, et serti de si belles pierres précieuses... Je n'arrive pas à croire que vous l'ayez cassé ! Il a coûté une petite fortune ! [Elle a l'air extrêmement agité.] J'ai bien peur de ne plus avoir besoin de vos services. Si l'une de mes filles vous intéresse, il vous faudra payer le prix fort, @pcname@.}{}{}{}{}{}
+{72}{Je m'excuse.}{}{5}{}{0}{}
+{73}{Dans ce cas, je m'en vais.}{}{5}{}{0}{}
+{74}{Moi demander pardon.}{}{-4}{}{0}{}
+{75}{'tupide collier...}{}{-4}{}{0}{}
+{76}{E:}{}{1}{}{0}{}
+{77}{Nicolas ! Débarrassez-moi de cet énergumène !}{Nicolas ! Débarrassez-moi de cette traînée !}{}{}{}{}
+{78}{Tout à fait. Je suis bien Madame Lily.}{C'est bien moi, oui.}{}{}{}{lf1 1}
+{79}{C'est un plaisir de vous rencontrer. Pouvez-vous me parler de ce lieu ?}{}{5}{}{112}{}
+{80}{Chez Madame Lily ? De quelle sorte d'établissement s'agit-il ?}{}{5}{}{112}{}
+{81}{Il me semblait bien que c'était vous. Quel est cet endroit ?}{}{5}{}{112}{}
+{82}{Chez M'dame Lily ? Quoi faire ici ?}{}{-4}{}{112}{}
+{83}{Euh... 'jour. Quoi faire ici ?}{}{-4}{}{112}{}
+{84}{E:}{}{1}{}{0}{}
+{85}{Que puis-je pour vous ?}{Puis-je vous être utile ?}{}{}{}{}
+{86}{Combien pour une fille ?}{}{5}{lf2 0, lf4 0}{118}{}
+{87}{Combien pour une fille ?}{}{5}{lf2 0, lf4 1}{383}{}
+{88}{Je peux en avoir deux ?}{}{5}{lf4 0}{157}{}
+{89}{Je peux en avoir deux ?}{}{5}{lf4 1}{409}{}
+{90}{J'ai des goûts plutôt inhabituels. Auriez-vous autre chose à me proposer ?}{}{5}{}{140}{}
+{91}{Je cherche du travail...}{0}{5}{lf4 0, QU1125 0, QU1129 0}{429}{}
+{92}{Je cherche du travail...}{0}{5}{lf4 1, QU1125 0, QU1129 0}{438}{}
+{98}{Combien fille coûter ?}{}{-4}{lf2 0, lf4 0}{118}{}
+{99}{Combien fille coûter ?}{}{-4}{lf2 0, lf4 1}{383}{}
+{100}{Et deux... Combien coûter ?}{}{-4}{lf4 0}{157}{}
+{101}{Et deux... Combien coûter ?}{}{-4}{lf4 1}{409}{}
+{102}{Moi pas vouloir fille... Moi vouloir aut'chose... Vous avoir aut'chose ?}{}{-4}{}{140}{}
+{103}{Moi travailler ?}{0}{-4}{lf4 0, QU1125 0, QU1129 0}{429}{}
+{104}{Moi travailler ?}{0}{-4}{lf4 1, QU1125 0, QU1129 0}{438}{}
+{105}{E:}{}{1}{}{0}{}
+{112}{Certainement. Mon établissement est la meilleure maison de tolérance de Tarante. La décoration y est raffinée, l'atmosphère détendue, et j'y ai réuni les jeunes femmes les plus exquises qui soient, tout cela pour votre seul plaisir.}{Certainement. Mon établissement est la meilleure maison de tolérance de Tarante. La décoration y est raffinée, l'atmosphère détendue, et j'y ai réuni les jeunes femmes les plus exquises qui soient, tout cela pour le plaisir de nos clients.}{}{}{}{lf0 1}
+{113}{Ca, c'est le genre d'endroit que j'adore !}{1}{5}{}{85}{}
+{114}{Oh ! Cela explique l'absence de vêtements...}{0}{5}{}{85}{}
+{115}{Oh...}{0}{-4}{}{85}{}
+{116}{Oh ! Moi aimer !}{1}{-4}{}{85}{}
+{117}{E:}{}{1}{}{0}{}
+{118}{Mes filles sont les plus raffinées de Tarante. Vous verrez qu'elles sont extrêmement douées dans les arts charnels. Il suffit que vous leur disiez ce que vous souhaitez et elles feront tout pour vous satisfaire. Pour 100 pièces d'or, vous pouvez avoir celle de votre choix.}{Ahh, toutes mes excuses. Je ne vous imaginais pas ainsi, mais mes filles seront heureuses de vous satisfaire, ma chère. Pour 100 pièces d'or, vous pouvez avoir celle de votre choix.}{}{}{}{lf2 1}
+{119}{J'aimerais bien en essayer une. Voici vos 100 pièces d'or.}{}{5}{$$ 100}{126}{}
+{120}{J'aimerais bien en essayer une. Voici vos 100 pièces d'or.}{}{5}{$$ -99}{132}{}
+{121}{C'est un peu excessif. Avez-vous quelque chose de moins cher à me proposer ?}{}{5}{}{140}{}
+{122}{Moi prendre une. V'là 100 pièces.}{}{-4}{$$ 100}{126}{}
+{123}{Moi prendre une. V'là 100 pièces.}{}{-4}{$$ -99}{132}{}
+{124}{Ca beaucoup ! Vous avoir kék'chose moins cher ?}{}{-4}{}{140}{}
+{125}{E:}{}{1}{}{0}{}
+{126}{Faites votre choix...}{Faites votre choix...}{}{}{}{$$-100, GF2334 1, GF2338 1}
+{127}{Je vous remercie, Madame Lily.}{}{5}{}{0}{}
+{128}{Marsi, m'dame.}{}{-4}{}{0}{}
+{129}{Faites votre choix...}{Faites votre choix...}{}{}{}{$$-50, GF2334 1, GF2338 1}
+{130}{Je vous remercie, Madame Lily.}{}{5}{}{0}{}
+{131}{Marsi, m'dame.}{}{-4}{}{0}{}
+{132}{Je vois qu'il vous manque un peu d'argent. Peut-être seriez-vous intéressé par quelque chose de moins cher ?}{Je vois qu'il vous manque un peu d'argent. Hum...}{}{}{}{}
+{133}{Oh, oui !}{1}{5}{$$-99}{140}{}
+{134}{Oh, oui !}{1}{5}{$$100, $$-174}{118}{}
+{135}{Avez-vous quelque chose de moins cher à me proposer ?}{0}{5}{}{140}{}
+{136}{Euh... Ouais.}{1}{-4}{$$-99}{140}{}
+{137}{Euh... Ouais.}{1}{-4}{$$100, $$-174}{118}{}
+{138}{Y a rien moins cher ?}{0}{-4}{}{140}{}
+{139}{E:}{}{1}{}{0}{}
+{140}{Eh bien, pour 25 pièces d'or, nous avons de quoi satisfaire nos clients les plus pervers. Belle, notre brebis.}{Eh bien, pour 25 pièces d'or, nous avons de quoi satisfaire nos clients les plus pervers. Belle, notre brebis. Mais je vois mal en quoi elle pourrait vous intéresser, mademoiselle.}{}{}{}{lf6 1}
+{141}{Oh, c'est exactement ce qu'il me faut. Je la prends. Voici l'argent.}{}{5}{$$ 25}{150}{}
+{142}{Oh, c'est exactement ce qu'il me faut. Je la prends. Voici l'argent.}{1}{5}{$$ -24, QU1125 0, QU1129 0}{153}{}
+{143}{Euh... Je n'ai pas assez. Je reviendrai plus tard.}{1}{5}{$$ -24}{0}{}
+{144}{Euh... Non, ce n'est pas ce que je veux dire...}{}{5}{QU1125 0}{177}{}
+{145}{Ca bien ! Moi la prendre. V'là les sous.}{}{-4}{$$ 25}{150}{}
+{146}{Ca bien ! Moi la prendre. V'là les sous.}{1}{-4}{$$ -24, QU1125 0, QU1129 0}{153}{}
+{147}{Moi pas avoir assez sous. Moi revenir.}{1}{-4}{$$ -24}{0}{}
+{148}{Euh... Nan, moi pas vouloir dire ça...}{}{-4}{QU1125 0}{177}{}
+{149}{F:}{}{1}{}{0}{}
+{150}{Merci, monsieur. Passez derrière, elle se trouve dans l'autre chambre. Vous ne regretterez pas votre choix.}{Euh... Merci, mademoiselle. Passez derrière, elle se trouve dans l'autre chambre. Euh... Amusez-vous bien.}{}{}{}{$$-25, GF2335 1, GF2338 1}
+{151}{Je vous remercie, Madame Lily.}{}{5}{}{0}{}
+{152}{Marsi, m'dame.}{}{-4}{}{0}{}
+{153}{Bonté divine. Il vous manque vraiment beaucoup. Il me vient une idée... J'aurais peut-être un petit travail à vous confier en échange d'un peu de bon temps avec l'une de mes filles. Cela vous intéresse-t-il ?}{Bonté divine. Il vous manque vraiment beaucoup. Il me vient une idée... J'aurais peut-être un petit travail à vous confier en échange d'un peu de bon temps avec l'une de mes filles. Cela vous intéresse-t-il ?}{}{}{}{}
+{154}{Oui. Que voulez-vous que je fasse ?}{}{5}{}{283}{}
+{155}{Ouais. Quoi moi faire ?}{}{-4}{}{283}{}
+{156}{E:}{}{1}{}{0}{}
+{157}{Ahh. Oui en effet. Vous pouvez avoir deux filles pour 175 pièces d'or. Je vous assure que c'est une expérience que vous n'oublierez pas de sitôt.}{Ahh, toutes mes excuses. Je ne vous imaginais pas ainsi. Oui, bien sûr. Vous pouvez en choisir deux pour 175 pièces d'or. Je ne doute pas qu'elles apprécieront l'expérience autant que vous.}{}{}{}{lf5 1}
+{158}{Ah, oui ! Voici l'argent.}{}{5}{$$ 175}{171}{}
+{159}{Ah, oui ! Voici l'argent.}{}{5}{$$-174}{132}{}
+{160}{Oh. Et combien coûte une fille ?}{}{5}{}{118}{}
+{161}{Accord ! V'là les sous !}{}{-4}{$$ 175}{171}{}
+{162}{Accord ! V'là les sous !}{}{-4}{$$-174}{132}{}
+{163}{Ca beaucoup ! Combien pour une ?}{}{-4}{}{118}{}
+{164}{E:}{}{1}{}{0}{}
+{165}{Ahh. Oui, en effet, @pcname@. Cela fera 85 pièces d'or, je vous prie.}{Ahh. Oui, @pcname@. Cela fera 85 pièces d'or, je vous prie.}{}{}{}{}
+{166}{Voici l'argent.}{}{5}{$$85}{174}{}
+{167}{Voici l'argent.}{}{5}{$$-84}{132}{}
+{168}{V'là les sous.}{}{-4}{$$85}{174}{}
+{169}{V'là les sous.}{}{-4}{$$-84}{132}{}
+{170}{E:}{}{1}{}{0}{}
+{171}{Merci, @pcname@. Choisissez-en deux. Croyez-moi, vous allez passer un très agréable moment.}{Merci, @pcname@. Choisissez-en deux. Croyez-moi, vous allez passer un très agréable moment.}{}{}{}{$$-175, GF2336 1, GF2338 1}
+{172}{Je vous remercie, Madame Lily.}{}{5}{}{0}{}
+{173}{Marsi, m'dame.}{}{-4}{}{0}{}
+{174}{Merci, @pcname@. Choisissez-en deux. Croyez-moi, vous allez passer un très agréable moment.}{Merci, @pcname@. Choisissez-en deux. Croyez-moi, vous allez passer un très agréable moment.}{}{}{}{$$-85, GF2336 1, GF2338 1}
+{175}{Je vous remercie, Madame Lily.}{}{5}{}{0}{}
+{176}{Marsi, m'dame.}{}{-4}{}{0}{}
+{177}{Il me vient une idée... J'aurais peut-être un petit travail à vous confier en échange d'un peu de bon temps avec l'une de mes filles. Cela vous intéresse-t-il ?}{Il me vient une idée... J'aurais peut-être un petit travail à vous confier en échange d'un peu de bon temps avec l'une de mes filles. Cela vous intéresse-t-il ?}{}{}{}{}
+{178}{Oui. Que voulez-vous que je fasse ?}{}{5}{}{283}{}
+{179}{Ouais. Quoi moi faire ?}{}{-4}{}{283}{}
+{180}{E:}{}{1}{}{0}{}
+{181}{Bonjour, @pcname@. C'est bien agréable de vous revoir. Que puis-je pour vous ?}{Eh bien, comme on se retrouve, @pcname@. Que puis-je pour vous ?}{}{}{}{}
+{182}{Combien pour une fille ?}{}{5}{lf2 0, lf4 0}{118}{}
+{183}{Combien pour une fille ?}{}{5}{lf2 0, lf4 1}{383}{}
+{184}{Je voudrais une fille...}{}{5}{lf2 1, lf4 0, $$100}{245}{}
+{185}{Je voudrais une fille...}{}{5}{lf2 1, lf4 1, $$150}{253}{}
+{186}{Puis-je avoir deux filles ?}{}{5}{lf5 0, lf4 0}{157}{}
+{187}{Puis-je avoir deux filles ?}{}{5}{lf5 0, lf4 1}{409}{}
+{188}{Je voudrais deux filles...}{}{5}{lf5 1, lf4 0, $$175}{261}{}
+{189}{Je voudrais deux filles...}{}{5}{lf5 1, lf4 1, $$300}{267}{}
+{190}{J'ai des goûts plutôt inhabituels. Auriez-vous autre chose à me proposer ?}{}{5}{lf6 0}{140}{}
+{191}{J'aimerais passer un peu de temps avec Belle.}{}{5}{lf6 1, $$25}{273}{}
+{192}{Puis-je travailler pour vous en échange d'un peu de temps avec une de vos filles ? Je ne suis guère en fonds, ces temps-ci...}{1}{5}{QU1125 0}{177}{}
+{193}{Y a-t-il autre chose que je pourrais faire en échange d'un peu de bon temps avec une de vos filles ?}{1}{5}{QU1125 4, QU1126 0}{305}{}
+{194}{Y a-t-il autre chose que je pourrais faire en échange d'un peu de bon temps avec une de vos filles ?}{1}{5}{QU1126 4, QU1127 0}{324}{}
+{195}{Y a-t-il autre chose que je pourrais faire en échange d'un peu de bon temps avec une de vos filles ?}{1}{5}{QU1127 4, QU1128 0}{338}{}
+{196}{Y a-t-il autre chose que je pourrais faire en échange d'un peu de bon temps avec une de vos filles ?}{1}{5}{QU1128 4}{361}{}
+{197}{Je cherche du travail...}{0}{5}{lf4 0, QU1125 0, QU1129 0}{429}{}
+{198}{Je cherche du travail...}{0}{5}{lf4 1, QU1125 0, QU1129 0}{438}{}
+{199}{Puis-je faire autre chose ?}{0}{5}{QU1125 4, QU1126 0, QU1129 0}{305}{}
+{200}{Puis-je faire autre chose ?}{0}{5}{QU1129 4, QU1126 0}{305}{}
+{201}{Puis-je faire autre chose ?}{0}{5}{QU1126 4, QU1128 0}{338}{}
+{202}{Puis-je faire autre chose ?}{0}{5}{QU1128 4}{361}{}
+{207}{Combien fille coûter ?}{}{-4}{lf2 0, lf4 0}{118}{}
+{208}{Combien fille coûter ?}{}{-4}{lf2 0, lf4 1}{383}{}
+{209}{Moi vouloir fille...}{}{-4}{lf2 1, lf4 0, $$100}{245}{}
+{210}{Moi vouloir fille...}{}{-4}{lf2 1, lf4 1, $$150}{253}{}
+{211}{Combien deux filles coûter ?}{}{-4}{lf5 0, lf4 0}{157}{}
+{212}{Combien deux filles coûter ?}{}{-4}{lf5 0, lf4 1}{409}{}
+{213}{Moi vouloir deux filles...}{}{-4}{lf5 1, lf4 0, $$175}{261}{}
+{214}{Moi vouloir deux filles...}{}{-4}{lf5 1, lf4 1, $$300}{267}{}
+{215}{Moi pas vouloir fille... Moi vouloir aut'chose... Vous avoir aut'chose ?}{}{-4}{lf6 0}{140}{}
+{216}{Moi vouloir Bêêêl...}{}{-4}{lf6 1}{273}{}
+{217}{Moi pas avoir sous. Moi pouvoir faire kêk'chose pour avoir fille ?}{1}{-4}{QU1125 0}{177}{}
+{218}{Moi faire aut'chose pour avoir fille ?}{1}{-4}{QU1125 4, QU1126 0}{305}{}
+{219}{Moi faire aut'chose pour avoir fille ?}{1}{-4}{QU1126 4, QU1127 0}{324}{}
+{220}{Moi faire aut'chose pour avoir fille ?}{1}{-4}{QU1127 4, QU1128 0}{338}{}
+{221}{Moi faire aut'chose pour avoir fille ?}{1}{-4}{QU1128 4}{361}{}
+{222}{Moi travailler ?}{0}{-4}{lf4 0, QU1125 0, QU1129 0}{429}{}
+{223}{Moi travailler ?}{0}{-4}{lf4 1, QU1125 0, QU1129 0}{438}{}
+{224}{Encore travailler ?}{0}{-4}{QU1125 4, QU1126 0, QU1129 0}{305}{}
+{225}{Encore travailler ?}{0}{-4}{QU1129 4, QU1126 0}{305}{}
+{226}{Encore travailler ?}{0}{-4}{QU1126 4, QU1128 0}{338}{}
+{227}{Encore travailler ?}{0}{-4}{QU1128 4}{361}{}
+{232}{E:}{}{1}{}{0}{}
+{233}{Bonjour, @pcname@. C'est bien agréable de vous revoir. Que puis-je pour vous ?}{Bonjour, @pcname@. C'est bien agréable de vous revoir. Que puis-je pour vous ?}{}{}{}{}
+{234}{Je voudrais une fille...}{}{5}{lf4 0}{277}{}
+{235}{Je voudrais une fille...}{}{5}{lf4 1}{391}{}
+{236}{Je voudrais deux filles...}{}{5}{lf4 0}{165}{}
+{237}{Je voudrais deux filles...}{}{5}{lf4 1}{417}{}
+{238}{Je voudrais Belle...}{}{5}{}{375}{}
+{239}{Moi vouloir fille...}{}{-4}{lf4 0}{277}{}
+{240}{Moi vouloir fille...}{}{-4}{lf4 1}{391}{}
+{241}{Moi vouloir deux filles...}{}{-4}{lf4 0}{165}{}
+{242}{Moi vouloir deux filles...}{}{-4}{lf4 1}{417}{}
+{243}{Moi vouloir Bêêêl...}{}{-4}{}{375}{}
+{244}{E:}{}{1}{}{0}{}
+{245}{Mais bien sûr. Cela fera 100 pièces d'or, je vous prie.}{Mais bien sûr. Cela fera 100 pièces d'or, je vous prie.}{}{}{}{}
+{246}{Voilà.}{}{5}{}{126}{}
+{247}{Peut-être Belle serait-elle davantage dans mes moyens...}{}{5}{lf6 1}{273}{}
+{248}{C'est un peu excessif. Avez-vous quelque chose de moins cher à me proposer ?}{}{5}{lf6 0}{140}{}
+{249}{V'là 100 pièces.}{}{-4}{}{126}{}
+{250}{P'têt Bêêêl mieux pour moi...}{}{-4}{lf6 1}{273}{}
+{251}{Ca beaucoup ! Vous avoir kék'chose moins cher ?}{}{-4}{lf6 0}{140}{}
+{252}{F:}{}{1}{}{0}{}
+{253}{Mais bien sûr. Cela fera 150 pièces d'or, je vous prie.}{Mais bien sûr. Cela fera 150 pièces d'or, je vous prie.}{}{}{}{}
+{254}{Voilà.}{}{5}{}{397}{}
+{255}{Peut-être Belle serait-elle davantage dans mes moyens...}{}{5}{lf6 1}{273}{}
+{256}{C'est un peu excessif. Avez-vous quelque chose de moins cher à me proposer ?}{}{5}{lf6 0}{140}{}
+{257}{V'là 150 pièces.}{}{-4}{}{397}{}
+{258}{P'têt Bêêêl mieux pour moi...}{}{-4}{lf6 1}{273}{}
+{259}{Ca beaucoup ! Vous avoir kék'chose moins cher ?}{}{-4}{lf6 0}{140}{}
+{260}{F:}{}{1}{}{0}{}
+{261}{Certainement. Cela fera 175 pièces d'or, je vous prie.}{Certainement. Cela fera 175 pièces d'or, je vous prie.}{}{}{}{}
+{262}{Voilà.}{}{5}{}{171}{}
+{263}{Peut-être qu'une seule serait davantage dans mes moyens...}{}{5}{lf6 1}{245}{}
+{264}{Voici vos 175 pièces d'or.}{}{-4}{}{171}{}
+{265}{P'têt que une mieux pour moi...}{}{-4}{lf6 1}{245}{}
+{266}{F:}{}{1}{}{0}{}
+{267}{Certainement. Cela fera 300 pièces d'or, je vous prie.}{Certainement. Cela fera 300 pièces d'or, je vous prie.}{}{}{}{}
+{268}{Voilà.}{}{5}{}{423}{}
+{269}{Peut-être qu'une seule serait davantage dans mes moyens...}{}{5}{lf6 1}{253}{}
+{270}{V'là 300 pièces.}{}{-4}{}{423}{}
+{271}{Ca beaucoup... P'têt que une mieux pour moi...}{}{-4}{lf6 1}{253}{}
+{272}{F:}{}{1}{}{0}{}
+{273}{Comme vous voulez, monsieur. Cela fera 25 pièces d'or, je vous prie.}{Euh... comme vous voulez, @pcname@. Cela fera 25 pièces d'or, je vous prie.}{}{}{}{}
+{274}{Voilà.}{}{5}{}{150}{}
+{275}{Là.}{}{-4}{}{150}{}
+{276}{F:}{}{1}{}{0}{}
+{277}{Tout ce que vous voudrez, @pcname@. Cela fera 50 pièces d'or, je vous prie.}{Tout ce que vous voudrez, @pcname@. Cela fera 50 pièces d'or, je vous prie.}{}{}{}{}
+{278}{Voilà.}{}{5}{$$50}{129}{}
+{279}{Je ne suis guère en fonds, ces temps-ci. Je reviendrai plus tard.}{}{5}{$$-49}{0}{}
+{280}{V'là 50 pièces.}{}{-4}{$$50}{129}{}
+{281}{Moi aller chercher plus sous... Vite revenir.}{}{-4}{$$-49}{0}{}
+{282}{E:}{}{1}{}{0}{}
+{283}{Cassie est allée chez Monsieur Lalande la semaine dernière, et elle y a oublié un superbe collier serti de rubis. Si vous pouviez me le rapporter, je ferais en sorte que l'une de mes filles vous fasse passer un moment inoubliable. Il y a un petit problème, toutefois...}{Cassie est allée chez Monsieur Lalande la semaine dernière, et elle y a oublié un superbe collier serti de rubis. Si vous pouviez me le rapporter, je ferais en sorte que l'une de mes filles vous fasse passer un moment inoubliable, à moins que vous ne préfériez une récompense de 100 pièces d'or. Il y a un petit problème, toutefois...}{}{}{}{}
+{284}{Quoi ?}{}{5}{}{286}{}
+{285}{Quoi ?}{}{-4}{}{286}{}
+{286}{Madame Lalande doit ignorer le motif de votre visite. Si elle apprenait que son mari a reçu l'une de mes pensionnaires, elle le prendrait très mal. Leur maison se trouve rue de la Providence, entre la rue Vermillon et le boulevard du Centre. Etes-vous intéressé ?}{Madame Lalande doit ignorer le motif de votre visite. Si elle apprenait que son mari a reçu l'une de mes pensionnaires, elle le prendrait très mal. Leur maison se trouve rue de la Providence, entre la rue Vermillon et le boulevard du Centre. Etes-vous intéressée ?}{}{}{}{}
+{287}{Je comprends. C'est comme si c'était fait.}{}{5}{}{0}{QU1125 2}
+{288}{Accord. Moi aller chercher.}{}{-4}{}{0}{QU1125 2}
+{289}{En fait, il se trouve que je possède déjà le collier en question. Là.}{1}{5}{in2826}{297}{}
+{290}{Euh... Moi déjà avoir collier... Moi donner à m'dame. Là.}{1}{-4}{in2826}{297}{}
+{291}{En fait, il se trouve que je possède déjà le collier en question. Là.}{0}{5}{in2826}{300}{}
+{292}{Euh... Moi déjà avoir collier... Moi donner à m'dame. Là.}{0}{-4}{in2826}{300}{}
+{293}{F:}{}{1}{}{0}{}
+{294}{Je vous en prie, récupérez-le aussi rapidement que possible. Ce serait affreux si Madame Lalande venait à le trouver !}{Je vous en prie, récupérez-le aussi rapidement que possible. Ce serait affreux si Madame Lalande venait à le trouver !}{}{}{}{}
+{295}{Ne vous inquiétez pas, vous aurez bientôt l'argent.}{}{5}{}{0}{}
+{296}{Moi trouver.}{}{-4}{}{0}{}
+{297}{Oh, excellent ! [Elle vous prend le collier des mains.] Comme promis, vous pouvez passer un peu de bon temps avec la fille de votre choix. Amusez-vous bien.}{}{}{}{}{in 2826, GF2334 1, QU1125 4, GF2338 1, gf2335 0, gf2336 0}
+{298}{Je vous remercie, Madame Lily.}{}{5}{}{0}{}
+{299}{Marsi, m'dame.}{}{-4}{}{0}{}
+{300}{}{Oh, excellent ! [Elle vous prend le collier des mains.] Alors, préférez-vous l'une de mes filles ou 100 pièces d'or ?}{}{}{}{in 2826, QU1125 4, GF2338 1}
+{301}{L'argent, s'il vous plaît.}{}{5}{}{445}{}
+{302}{Je crois que je préfère la fille...}{}{5}{}{442}{}
+{303}{Euh... Sous !}{}{-4}{}{445}{}
+{304}{Euh... Fille !}{}{-4}{}{442}{}
+{305}{Hum... Laissez-moi réfléchir... [Elle reste quelques instants songeuse.] Oui, ce serait parfait. Un de nos clients a pris du retard sur ses règlements depuis quelque temps. Si vous pouviez le persuader de payer ses dettes...}{Hum... Laissez-moi réfléchir... [Elle reste quelques instants songeuse.] Oui, ce serait parfait. Un de nos clients a pris du retard sur ses règlements depuis quelque temps. Si vous pouviez le persuader de payer ses dettes... Je vous offrirais 200 pièces d'or, ou un peu de bon temps avec l'une de mes filles, au choix.}{}{}{}{}
+{306}{Pas de problème. Où puis-je le trouver ?}{}{5}{}{309}{}
+{307}{Accord. Où lui être ?}{}{-4}{}{309}{}
+{308}{E:}{}{1}{}{0}{}
+{309}{Il se nomme Monsieur Langlois ; c'est le portier de l'Auberge de la Vallée. Il a accumulé une dette de 400 pièces d'or et ne semble pas disposé à la payer. Veillez à le faire changer d'avis, je vous prie. Mais ne lui faites pas de mal, surtout. Il n'est pas dans nos habitudes de brutaliser nos clients.}{Il se nomme Monsieur Langlois ; c'est le portier de l'Auberge de la Vallée. Il a accumulé une dette de 400 pièces d'or et ne semble pas disposé à la payer. Veillez à le faire changer d'avis, je vous prie. Mais ne lui faites pas de mal, surtout. Il n'est pas dans nos habitudes de brutaliser nos clients.}{}{}{}{}
+{310}{Je m'en occupe sans tarder.}{}{5}{}{0}{QU1126 2}
+{311}{Moi aller chercher lui.}{}{-4}{}{0}{QU1126 2}
+{312}{E:}{}{1}{}{0}{}
+{313}{Réglez cette situation rapidement, je vous prie. Je ne voudrais pas que l'on pense que mes clients peuvent prendre du bon temps sans payer.}{Réglez cette situation rapidement, je vous prie. Je ne voudrais pas que l'on pense que mes clients peuvent prendre du bon temps sans payer.}{}{}{}{}
+{314}{Ne vous inquiétez pas, vous aurez bientôt l'argent.}{}{5}{}{0}{}
+{315}{Moi trouver.}{}{-4}{}{0}{}
+{316}{Merci, @pcname@ ! [Elle vous prend l'argent des mains.] Comme promis, vous pouvez passer un peu de bon temps avec la fille de votre choix. Amusez-vous bien.}{}{}{}{}{$$-400, GF2334 1, QU1126 4, GF2338 1, gf2335 0, gf2336 0}
+{317}{Je vous remercie, Madame Lily.}{}{5}{}{0}{}
+{318}{Marsi, m'dame.}{}{-4}{}{0}{}
+{319}{}{Merci, @pcname@ ! [Elle vous prend l'argent des mains.] Préférez-vous la fille ou les 200 pièces d'or ?}{}{}{}{$$ -400, QU1126 4, GF2338 1}
+{320}{L'argent, s'il vous plaît.}{}{5}{}{448}{}
+{321}{Je crois que je préfère la fille...}{}{5}{}{442}{}
+{322}{Euh... Sous !}{}{-4}{}{448}{}
+{323}{Euh... Fille !}{}{-4}{}{442}{}
+{324}{J'ai en effet du travail pour vous. L'un de nos clients les plus fidèles, Monsieur Lannier, s'est disputé avec sa femme. Cela devrait être une bonne nouvelle, mais ce monsieur n'est pas un client ordinaire : il fréquente mon établissement avec une assiduité accrue lorsque ses relations avec son épouse sont au beau fixe.}{}{}{}{}{}
+{325}{Qu'attendez-vous de moi ?}{}{5}{}{328}{}
+{326}{Quoi vous vouloir moi faire ?}{}{-4}{}{328}{}
+{327}{E:}{}{1}{}{0}{}
+{328}{J'aimerais que vous apportiez ce cadeau à Madame Lannier. Dites-lui bien que c'est de la part de son mari. Et surtout, veillez à ce qu'elle n'apprenne pas que vous venez de ma part. Les Lannier habitent à l'angle de la rue de la Providence et de la rue Vermillon. [Elle regarde le petit colis.] Ceci devrait les réconcilier...}{}{}{}{}{}
+{329}{Je m'en occupe sans tarder.}{}{5}{}{0}{QU1127 2, in -5667}
+{330}{Moi aller voir elle.}{}{-4}{}{0}{QU1127 2, in -5667}
+{331}{E:}{}{1}{}{0}{}
+{332}{Vous devez le lui remettre sans tarder.}{}{}{}{}{}
+{333}{J'y vais de suite.}{}{5}{}{0}{}
+{334}{Moi aller.}{}{-4}{}{0}{}
+{335}{Cela lui a plu, j'imagine ? [Vous acquiescez.] Parfait. Comme convenu, vous pouvez prendre un peu de bon temps avec la fille de votre choix. Au revoir.}{}{}{}{}{GF2334 1, QU1127 4, GF2338 1, gf2335 0, gf2336 0}
+{336}{Je vous remercie, Madame Lily.}{}{5}{}{0}{}
+{337}{Marsi, m'dame.}{}{-4}{}{0}{}
+{338}{J'apprécie votre clientèle, @pcname@... [Elle réfléchit quelques instants.] Mais savez-vous ce que j'aimerais vraiment ?}{J'apprécie votre clientèle, @pcname@... [Elle réfléchit quelques instants.] Mais savez-vous ce que j'aimerais vraiment ?}{}{}{}{}
+{339}{Quoi ?}{}{5}{}{342}{}
+{340}{Quoi ?}{}{-4}{}{342}{}
+{341}{E:}{}{1}{}{0}{}
+{342}{[Elle poursuit dans un souffle.] Un médaillon de beauté ! Il s'agit d'un bijou très rare, extrêmement difficile à trouver... Ces objets sont en rapport avec la magie noire, voyez-vous. Rapportez-m'en un et je vous offrirai... deux filles ! Voilà qui sera assurément une expérience mémorable. Qu'en dites-vous ?}{[Elle poursuit dans un souffle.] Un médaillon de beauté ! Il s'agit d'un bijou très rare, extrêmement difficile à trouver... Ces objets sont en rapport avec la magie noire, voyez-vous. Rapportez-m'en un et je vous offrirai 600 pièces d'or ou deux de mes filles.... Ce qui serait assurément une expérience mémorable, vous en conviendrez. Vous pourrez choisir la récompense que vous préférez. Qu'en dites-vous ?}{}{}{}{}
+{343}{Marché conclu !}{}{5}{ni 2827}{0}{QU1128 2}
+{344}{Il se trouve que j'ai justement un tel médaillon sur moi...}{1}{5}{in 2827}{353}{QU1128 2}
+{345}{Il se trouve que j'ai justement un tel médaillon sur moi...}{0}{5}{in 2827}{356}{QU1128 2}
+{346}{Accord.}{}{-4}{ni 2827}{0}{QU1128 2}
+{347}{Moi déjà avoir un.}{1}{-4}{in 2827}{353}{QU1128 2}
+{348}{Moi déjà avoir un.}{0}{-4}{in 2827}{356}{QU1128 2}
+{349}{E:}{}{1}{}{0}{}
+{350}{Oh, hâtez-vous, je vous prie ! Je ne supporte plus d'attendre !}{Oh, hâtez-vous, je vous prie ! Je ne supporte plus d'attendre !}{}{}{}{}
+{351}{Ne vous inquiétez pas. Vous l'aurez bientôt.}{}{5}{}{0}{}
+{352}{Accord.}{}{-4}{}{0}{}
+{353}{Oh ! C'est fabuleux ! Montrez-le moi ! [Elle vous arrache le médaillon des mains.] Il est si beau ! Merci mille fois... [Elle est incapable de quitter le médaillon des yeux.] Allez-y, choisissez les deux filles que vous voulez... Vous les avez amplement méritées.}{}{}{}{}{GF2336 1, QU1128 4, in2827, GF2338 1, gf2334 0, gf2335 0}
+{354}{Je vous remercie, Madame Lily.}{}{5}{}{0}{}
+{355}{Marsi, m'dame.}{}{-4}{}{0}{}
+{356}{}{Oh ! C'est fabuleux ! Montrez-le moi ! [Elle vous arrache le médaillon des mains.] Il est si beau ! Merci mille fois... [Elle est incapable de quitter le médaillon des yeux.] Allez-y, choisissez, l'argent ou les deux filles... Vous avez amplement mérité votre récompense.}{}{}{}{QU1128 4, in2827, GF2338 1}
+{357}{L'argent, s'il vous plaît.}{}{5}{}{451}{}
+{358}{Je crois que je préfère les filles.}{}{5}{}{454}{}
+{359}{Euh... Sous !}{}{-4}{}{451}{}
+{360}{Euh... Filles !}{}{-4}{}{454}{}
+{361}{Je suis désolée, @pcname@, mais je ne vois pas ce que vous pourriez faire d'autre pour moi. Je vais vous dire... Vous m'avez été d'une aide si précieuse et vous m'avez rapporté un si beau médaillon que dorénavant, vous ne paierez plus que demi-tarif à chacune de vos visites. N'hésitez pas à venir aussi souvent que vous le souhaitez... Deux ou trois de mes filles ne jurent plus que par vous !}{Je suis désolée, @pcname@, mais je ne vois pas ce que vous pourriez faire d'autre pour moi. Mais je vais vous dire... Vous m'avez été d'une aide si précieuse et vous m'avez rapporté un si beau médaillon... Si mes filles vous intéressent, je vous fais demi-tarif à partir d'aujourd'hui. Je crois bien que deux ou trois d'entre elles sont folles de vous, d'ailleurs...}{}{}{}{}
+{362}{Merci, madame. J'aimerais profiter de votre offre sans attendre.}{}{5}{lf4 0}{277}{}
+{363}{Merci, madame. J'aimerais profiter de votre offre sans attendre.}{}{5}{lf4 1}{391}{}
+{364}{Merci. L'offre est également valable pour deux filles ?}{}{5}{lf4 0}{165}{}
+{365}{Merci. L'offre est également valable pour deux filles ?}{}{5}{lf4 1}{417}{}
+{366}{Combien pour Belle ?}{}{5}{}{375}{}
+{367}{Non merci, madame. Je dois m'en aller. Au revoir.}{0}{5}{}{0}{}
+{368}{Marsi, m'dame. Moi vouloir fille, alors.}{}{-4}{lf4 0}{277}{}
+{369}{Marsi, m'dame. Moi vouloir fille, alors.}{}{-4}{lf4 1}{391}{}
+{370}{Marsi, m'dame. Moi pouvoir avoir deux filles, aussi ?}{}{-4}{lf4 0}{165}{}
+{371}{Marsi, m'dame. Moi pouvoir avoir deux filles, aussi ?}{}{-4}{lf4 1}{417}{}
+{372}{Combien Bêêêl coûter, maint'nant ?}{}{-4}{}{375}{}
+{373}{Non marsi, m'dame. Moi partir maint'nant. Ar'voir.}{0}{-4}{}{0}{}
+{374}{E:}{}{1}{}{0}{}
+{375}{Pour vous ? Allez-y, c'est gratuit, et revenez aussi souvent que vous voudrez. Avez-vous besoin d'elle maintenant ?}{Euh... [Elle vous regarde étrangement.] Eh bien, si vous la voulez vraiment... euh... la maison vous l'offre. Faites appel à ses services aussi souvent que vous le souhaitez. Souhaitez-vous passer un peu de temps avec elle, maintenant ?}{}{}{}{}
+{376}{Oui.}{}{5}{}{380}{}
+{377}{Peut-être plus tard.}{}{5}{}{0}{}
+{378}{Ouais.}{}{-4}{}{380}{}
+{379}{P'têt' plus tard.}{}{-4}{}{0}{}
+{380}{Passez derrière, elle se trouve dans l'autre chambre @pcname@. Amusez-vous bien ! Au revoir...}{Euh... Merci, @pcname@. Passez derrière, elle se trouve dans l'autre chambre. Euh... Amusez-vous bien !}{}{}{}{GF2335 1, GF2338 1}
+{381}{Je vous remercie, Madame Lily.}{}{5}{}{0}{}
+{382}{Marsi, m'dame.}{}{-4}{}{0}{}
+{383}{Mes filles sont les plus raffinées de Tarante. Vous verrez qu'elles sont extrêmement douées dans les arts charnels. Hum... Vous n'êtes pas un Apollon, vous savez... Il faudra sans doute que je les paye un peu plus cher pour qu'elles acceptent de s'occuper de vous... [Elle réfléchit un instant.] Pour 150 pièces d'or, vous pouvez avoir la fille de votre choix.}{Ahh, toutes mes excuses. Je ne vous imaginais pas ainsi, mais mes filles seront heureuses de vous satisfaire, ma chère. [Elle réfléchit un instant.] Pour 150 pièces d'or, vous pouvez avoir la fille de votre choix.}{}{}{}{lf2 1}
+{384}{J'aimerais bien en essayer une. Voici vos 150 pièces d'or.}{}{5}{$$150}{397}{}
+{385}{J'aimerais bien en essayer une. Voici vos 150 pièces d'or.}{}{5}{$$-149}{403}{}
+{386}{C'est un peu excessif. Avez-vous quelque chose de moins cher à me proposer ?}{}{5}{lf6 0}{140}{}
+{387}{Moi prendre une. V'là 150 pièces.}{}{-4}{$$150}{397}{}
+{388}{Moi prendre une. V'là 150 pièces.}{}{-4}{$$-149}{403}{}
+{389}{Ca beaucoup ! Vous avoir kék'chose moins cher ?}{}{-4}{lf6 0}{140}{}
+{390}{E:}{}{1}{}{0}{}
+{391}{Tout ce que vous voudrez, @pcname@. Cela fera 75 pièces d'or, je vous prie.}{Tout ce que vous voudrez, @pcname@. Cela fera 75 pièces d'or, je vous prie.}{}{}{}{}
+{392}{Voilà.}{}{5}{$$75}{400}{}
+{393}{Je ne suis pas très en fonds, ces temps-ci. Je reviendrai.}{}{5}{$$-74}{0}{}
+{394}{V'là 75 pièces.}{}{-4}{$$75}{400}{}
+{395}{Moi chercher plus sous... Vite revenir.}{}{-4}{$$-74}{0}{}
+{396}{E:}{}{1}{}{0}{}
+{397}{Merci. Faites votre choix.}{Merci. Faites votre choix.}{}{}{}{$$-150, GF2334 1, GF2338 1, gf2335 0, gf2336 0}
+{398}{Je vous remercie, Madame Lily.}{}{5}{}{0}{}
+{399}{Marsi, m'dame.}{}{-4}{}{0}{}
+{400}{Faites votre choix...}{Faites votre choix...}{}{}{}{$$-75, GF2334 1, GF2338 1, gf2335 0, gf2336 0}
+{401}{Je vous remercie, Madame Lily.}{}{5}{}{0}{}
+{402}{Marsi, m'dame.}{}{-4}{}{0}{}
+{403}{Je vois qu'il vous manque un peu d'argent. Peut-être seriez-vous intéressé par quelque chose de moins onéreux ? Et je puis vous assurer que la... pensionnaire a qui je pense n'aura absolument rien à redire à votre... euh... physique.}{Je vois qu'il vous manque un peu d'argent. Peut-être seriez-vous intéressée par quelque chose de moins onéreux ? Et je puis vous assurer que la... pensionnaire à laquelle je pense n'aura absolument rien à redire à votre... euh... physique.}{}{}{}{}
+{404}{Oh, oui !}{}{5}{$$-149}{140}{}
+{405}{Oh, oui !}{}{5}{$$150, $$-299}{383}{}
+{406}{Euh... Ouais.}{}{-4}{$$-149}{140}{}
+{407}{Euh... Ouais.}{}{-4}{$$150, $$-299}{383}{}
+{408}{F:}{}{1}{}{0}{}
+{409}{Ahh. Oui en effet. Hum... Vous êtes un peu fruste. Cela coûtera un peu plus cher si vous voulez que les filles se montrent vraiment ardentes. Pour deux filles, cela fera un total de 300 pièces d'or. Je puis vous assurer que vous n'oublierez pas cette expérience de sitôt.}{Ahh, toutes mes excuses. Je ne vous imaginais pas ainsi. Eh bien, votre aspect est un peu... euh... enfin, vous voyez ce que je veux dire... Il vous en coûtera 300 pièces d'or pour un peu de bon temps avec deux de mes filles. Je puis vous assurer que vous ne le regretterez pas.}{}{}{}{}
+{410}{Ah, oui ! Voici l'argent.}{}{5}{$$300}{423}{}
+{411}{Ah, oui ! Voici l'argent.}{}{5}{$$-299}{403}{}
+{412}{Oh... Et c'est combien, pour une seulement ?}{}{5}{}{383}{}
+{413}{Accord ! V'là les sous !}{}{-4}{$$300}{423}{}
+{414}{Accord ! V'là les sous !}{}{-4}{$$-299}{403}{}
+{415}{Ca beaucoup ! Combien pour une ?}{}{-4}{}{383}{}
+{416}{E:}{}{1}{}{0}{}
+{417}{Ahh. Oui, en effet, @pcname@. Cela fera 150 pièces d'or, je vous prie.}{Ahh. Oui, en effet, @pcname@. Cela fera 150 pièces d'or, je vous prie.}{}{}{}{}
+{418}{Voici l'argent.}{}{5}{$$150}{426}{}
+{419}{Je ne suis pas très en fonds, ces temps-ci. Je reviendrai.}{}{5}{-149}{0}{}
+{420}{V'là les sous.}{}{-4}{$$150}{426}{}
+{421}{Moi chercher plus sous... Vite revenir.}{}{-4}{-149}{0}{}
+{422}{E:}{}{1}{}{0}{}
+{423}{Merci, @pcname@. Choisissez-en deux. Croyez-moi, vous allez passer un très agréable moment.}{Merci, @pcname@. Choisissez-en deux. Croyez-moi, vous allez passer un très agréable moment.}{}{}{}{$$-300, GF2336 1, GF2338 1}
+{424}{Je vous remercie, Madame Lily.}{}{5}{}{0}{}
+{425}{Marsi, m'dame.}{}{-4}{}{0}{}
+{426}{Merci, @pcname@. Choisissez-en deux. Croyez-moi, vous allez passer un très agréable moment.}{Merci, @pcname@. Choisissez-en deux. Croyez-moi, vous allez passer un très agréable moment.}{}{}{}{$$-150, GF2336 1, GF2338 1}
+{427}{Je vous remercie, Madame Lily.}{}{5}{}{0}{}
+{428}{Marsi, m'dame.}{}{-4}{}{0}{}
+{429}{}{[Elle vous observe de pied en cap, comme pour vous jauger.] Eh bien... J'ai un client dont les goûts sont plutôt... inhabituels... Vous correspondez tout à fait à son type. Le salaire est généreux... 300 pièces d'or. Cela vous intéresse-t-il ?}{}{}{}{}
+{430}{300 ? D'accord, j'accepte.}{}{5}{}{469}{QU1129 2}
+{431}{Euh... Ce n'est pas de ce genre de travail que je parlais...}{}{5}{}{435}{}
+{432}{Ooohhh, moi d'accord !}{}{-4}{}{469}{QU1129 2}
+{433}{Euh... Nan ! Ca pas être ce que je vouloir dire...}{}{-4}{}{435}{}
+{434}{F:}{}{1}{}{0}{}
+{435}{}{Oh, toutes mes excuses. Toute de même, quel gâchis...  Eh bien. J'ai quelques menus travaux à vous proposer. Je suppose que vous préférez des tâches plus terre à terre ?}{}{}{}{}
+{436}{Oui.}{}{1}{}{283}{}
+{437}{F:}{}{1}{}{0}{}
+{438}{}{[Elle vous observe de pied en cap, comme pour vous jauger.] Hum... J'ai bien peur que votre prestance ne vous permette guère de faire carrière dans notre profession. Une tâche plus terre à terre, peut-être ?}{}{}{}{}
+{439}{Oui.}{}{5}{}{283}{}
+{440}{Ouais.}{}{-4}{}{283}{}
+{441}{F:}{}{1}{}{0}{}
+{442}{}{Faites votre choix.}{}{}{}{GF2334 1, GF2338 1, gf2335 0, gf2336 0}
+{443}{Je vous remercie, Madame Lily.}{}{5}{}{0}{}
+{444}{Marsi, m'dame.}{}{-4}{}{0}{}
+{445}{}{Voilà.}{}{}{}{$$ 100, GF2338 1}
+{446}{Je vous remercie, Madame Lily.}{}{5}{}{0}{}
+{447}{Marsi, m'dame.}{}{-4}{}{0}{}
+{448}{}{Voilà.}{}{}{}{$$ 200, GF2338 1}
+{449}{Je vous remercie, Madame Lily.}{}{5}{}{0}{}
+{450}{Marsi, m'dame.}{}{-4}{}{0}{}
+{451}{}{Voilà. Merci mille fois !}{}{}{}{$$ 600, GF2338 1}
+{452}{Je vous remercie, Madame Lily.}{}{5}{}{0}{}
+{453}{Marsi, m'dame.}{}{-4}{}{0}{}
+{454}{}{Allez-y ! Choisissez-en deux. Merci mille fois !}{}{}{}{GF2336 1, GF2338 1, gf2335 0, gf2334 0}
+{455}{Je vous remercie, Madame Lily.}{}{5}{}{0}{}
+{456}{Marsi, m'dame.}{}{-4}{}{0}{}
+{457}{}{Dépêchez-vous, ma petite ! Je l'ai informé de votre visite !}{}{}{}{}
+{458}{Je vais m'occuper de lui sans tarder.}{}{5}{}{0}{}
+{459}{Moi aller.}{}{-4}{}{0}{}
+{460}{Euh... J'ai changé d'avis.}{}{5}{}{465}{}
+{461}{Moi plus vouloir...}{}{-4}{}{465}{}
+{462}{}{Excellent. Il a été très satisfait de vos services. J'espère que l'expérience a également été agréable pour vous, du moins un peu. Voici les 300 pièces d'or promises. Merci.}{}{}{}{$$300, GF2338 1, qu 1129 4}
+{463}{Je vous remercie, Madame Lily.}{}{5}{}{0}{}
+{464}{Marsi, m'dame.}{}{-4}{}{0}{}
+{465}{}{Un revirement de dernière minute, hein ? Je ne peux pas vous en vouloir... Il faut bien reconnaître que ce n'est pas le plus séduisant des petits cochons à qui nous avons affaire. Peut-être une tâche plus terre à terre vous intéresserait-elle davantage ?}{}{}{}{QU1129 5}
+{466}{Oui.}{}{5}{}{283}{}
+{467}{Ouais.}{}{-4}{}{283}{}
+{468}{F:}{}{1}{}{0}{}
+{469}{}{Excellent. Il s'appelle Monsieur Charles. Il vit à l'angle de la rue Vermillon et de la rue de la Faucheuse. Il n'est guère attirant mais disons qu'il a été plus que gâté par la nature dans d'autres domaines. Essayez de passer un moment agréable. Revenez quand vous aurez terminé et je vous donnerai l'argent, @pcname@.}{}{}{}{}
+{470}{Je reviendrai plus tard.}{}{5}{}{0}{}
+{471}{Moi revenir.}{}{-4}{}{0}{}
+{472}{Oui, @pcname@. Je peux faire de vous un expert. Il vous en coûtera 500 pièces d'or. Ce prix vous convient-il ?}{Oui, @pcname@. Je peux faire de vous une experte. Il vous en coûtera 500 pièces d'or. Ce prix vous convient-il ?}{}{}{}{}
+{473}{Il me faut davantage d'argent. Je reviendrai.}{}{5}{}{0}{}
+{474}{Oui. Cela me semble acceptable.}{}{5}{sk11 9, $$500}{489}{}
+{475}{Oui. Cela me semble acceptable.}{}{5}{sk11 9, $$-499}{482}{}
+{476}{Oui. Cela me semble acceptable.}{}{5}{sk11 -8}{485}{}
+{477}{Moi devoir avoir plus argent. Moi revenir.}{}{-4}{}{0}{}
+{478}{Euh... Ouais. Moi d'accord.}{}{-4}{sk11 9, $$500}{489}{}
+{479}{Euh... Ouais. Moi d'accord.}{}{-4}{sk11 9, $$-499}{482}{}
+{480}{Euh... Ouais. Moi d'accord.}{}{-4}{sk11 -8}{485}{}
+{481}{F:}{}{1}{}{0}{}
+{482}{Il vous manque un peu d'argent, @pcname@. Revenez quand vous en aurez assez.}{Il vous manque un peu d'argent, @pcname@. Revenez quand vous en aurez assez.}{}{}{}{}
+{483}{E:}{}{1}{}{0}{}
+{484}{F:}{}{1}{}{0}{}
+{485}{Vous devez vous améliorer avant que je puisse vous entraîner, @pcname@. Revenez quand vous aurez progressé.}{Vous devez vous améliorer avant que je puisse vous entraîner, @pcname@. Revenez quand vous aurez progressé.}{}{}{}{}
+{486}{Je n'y manquerai pas. Merci, madame.}{}{5}{}{0}{}
+{487}{Euh... Accord.}{}{-4}{}{0}{}
+{488}{E:}{}{1}{}{0}{}
+{489}{[Elle vous prend l'argent des mains et vous chuchote ses secrets professionnels dans le creux de l'oreille.] Merci, @pcname@. Vous voici désormais expert dans l'art de la persuasion. Si vous souhaitez approfondir vos connaissances et passer maître dans cet art, il vous faudra trouver Monsieur Saule. Il possède une maison ici, à Tarante, mais ses affaires l'amènent souvent à Caladon.}{[Elle vous prend l'argent des mains et vous chuchote ses secrets professionnels dans le creux de l'oreille.] Merci, @pcname@. Vous voici désormais experte dans l'art de la persuasion. Si vous souhaitez approfondir vos connaissances et passer maître dans cet art, il vous faudra trouver Monsieur Saule. Il possède une maison ici, à Tarante, mais ses affaires l'amènent souvent à Caladon.}{}{}{}{$$-500, TR11 2, ru 2157}
+{490}{Je vous remercie, Madame Lily.}{}{5}{}{0}{}
+{491}{Marsi, m'dame.}{}{-4}{}{0}{}
+{492}{E:}{}{1}{}{0}{}
+

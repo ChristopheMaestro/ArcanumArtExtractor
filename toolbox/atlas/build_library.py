@@ -9,7 +9,7 @@ from art/interface, picked by number through art/interface/interface.mes:
   * every line of gamebook / gamenewspaper / gameplaque .mes begins with a font number and a justification letter
     ("492c _ WEATHER _"); the page furniture (newspaper title, telegram headings) names fonts in the C source.
 A font is one ART frame per character (frame = character code - 31); the game draws the grey ramp in the font's colour:
-black everywhere, white on the plaque. This script turns the pictures used into lossless WebP files (atlas/library/, a pool
+black everywhere, white on the plaque. This script turns the pictures used into lossless WebP files (atlas/graphics/library/, a pool
 shared by the versions; a font is its black strip, the page tints it white) named by js/atlas/data/library.js, and copies
 the text of the five .mes files; index.html lays the text out with the same rectangles as written_ui.c. Re-run it rather
 than editing the output:  py build_library.py
@@ -27,7 +27,7 @@ import arcanum_objects as ao
 
 DATA_JS = ao.DATA_JS
 OUT_JS = DATA_JS / 'library.js'
-POOL = ao.PROJECT / 'atlas' / 'library'
+POOL = ao.PROJECT / 'atlas' / 'graphics' / 'library'
 ART = ao.DATA / 'art' / 'interface'
 FIRST_CHAR = 31                       # tig_font: frame 0 is character 31
 MES = {0: 'gamebook.mes', 1: 'gamenote.mes', 2: 'gamenewspaper.mes', 3: 'gametelegram.mes', 6: 'gameplaque.mes'}
@@ -84,13 +84,13 @@ def art_frames(path):
     return out
 
 
-def picture(img):
-    """The picture as a lossless WebP in the shared pool (atlas/library/<md5>.webp: every version's library.js points there, a picture they
+def picture(img, kind):
+    """The picture as a lossless WebP in the shared pool (atlas/graphics/library/<md5>.webp: every version's library.js points there, a picture they
     have alike is one file) -> its path for the page. Loaded on the Library's first use (atlas-app.js libLoad), not with the data."""
     buf = io.BytesIO()
     img.convert('RGBA').save(buf, 'WEBP', lossless=True, quality=100, method=6)
     b = buf.getvalue()
-    p = POOL / f'{hashlib.md5(b).hexdigest()[:16]}.webp'
+    p = POOL / f'{kind}-{hashlib.md5(b).hexdigest()[:8]}.webp'
     if not p.is_file():
         POOL.mkdir(parents=True, exist_ok=True)
         p.write_bytes(b)
@@ -104,10 +104,24 @@ def prune_pool():
     for js in {OUT_JS, base / 'library.js', *base.glob('*/library.js')}:
         if not js.is_file():
             continue
-        used |= set(re.findall(r'atlas/library/([0-9a-f]{16}\.webp)', js.read_text(encoding='utf-8')))
+        used |= set(re.findall(r'atlas/graphics/library/([a-z]+-[0-9a-f]{8}\.webp)', js.read_text(encoding='utf-8')))
     for p in POOL.glob('*.webp'):
         if p.name not in used:
             p.unlink()
+
+
+def sheet(entries, images, kind):
+    """Packs the pictures into one WebP, stacked top to bottom: each entry gets its 'src' (the sheet) and 'y' (its top row)."""
+    keys = list(images)
+    out = Image.new('RGBA', (max(images[k].width for k in keys), sum(images[k].height for k in keys)), (0, 0, 0, 0))
+    y, tops = 0, {}
+    for k in keys:
+        out.paste(images[k].convert('RGBA'), (0, y))
+        tops[k] = y
+        y += images[k].height
+    src = picture(out, kind)
+    for k in keys:
+        entries[k].update({'src': src, 'y': tops[k]})
 
 
 def background(path):
@@ -115,7 +129,7 @@ def background(path):
     img = Image.new('P', (w, h))
     img.putdata(bytes(idx))
     img.putpalette([c for rgb in pal for c in rgb])
-    return {'w': w, 'h': h, 'src': picture(img)}
+    return {'w': w, 'h': h}, img
 
 
 def font(path):
@@ -133,7 +147,7 @@ def font(path):
             black.paste(tile, (x, 0))
         glyphs[n + FIRST_CHAR] = [x, w, hx]
         x += w
-    return {'h': height, 'glyphs': glyphs, 'src': picture(black)}      # (the white ink of the plaque: the page tints this strip)
+    return {'h': height, 'glyphs': glyphs}, black      # (the white ink of the plaque: the page tints this strip)
 
 
 def stock_blocks(mod_texts):
@@ -280,14 +294,18 @@ def main():
                 m = re.match(r'^\s*(\d+)[lcLC]', line)
                 if m:
                     wanted.add(int(m.group(1)))
-    fonts, missing = {}, []
+    fonts, strips, missing = {}, {}, []
     for num in sorted(wanted):
         name = interface.get(num, '').strip()
         try:
-            fonts[num] = font(find(name))
+            fonts[num], strips[num] = font(find(name))
         except (StopIteration, struct.error, ValueError, IndexError):
             missing.append(num)
-    bgs = {n: background(find(interface[n].strip())) for n in BACKGROUNDS}
+    sheet(fonts, strips, 'fonts')                                             # all fonts in one picture, all backgrounds in another
+    bgs, pics = {}, {}
+    for n in BACKGROUNDS:
+        bgs[n], pics[n] = background(find(interface[n].strip()))
+    sheet(bgs, pics, 'backgrounds')
     docs = documents(texts)
     mes = {str(sub): {str(k): v.replace('\r', '') for k, v in t.items()} for sub, t in texts.items()}
     # a module's texts (its own mes/gamebook.mes ...): the page puts them over the game's headings and fillers (the lines below 1000)
@@ -306,7 +324,7 @@ def main():
     data = {'source': 'toolbox/atlas/build_library.py',
             'note': 'backgrounds / fonts are keyed by interface art number (art/interface/interface.mes); fonts: h = line '
                     'height, glyphs[code] = [x in the strip, width, advance]; src = the strip in black (white: the page tints '
-                    'it), every src a file of atlas/library/. mes[kind][line] = text of gamebook / gamenote / gamenewspaper / gametelegram / '
+                    'it); src = one sheet of atlas/graphics/library/ for all fonts and one for all backgrounds, y = the picture\'s top row in it (w x h or the strip\'s height h). mes[kind][line] = text of gamebook / gamenote / gamenewspaper / gametelegram / '
                     'gameplaque (kind = the written subtype 0 / 1 / 2 / 3 / 6). docs: k = kind, s = first line, v = the '
                     'Vendigroth Times, n = names of the items that carry it, f = [place, world map?, tile, held by, copies].',
             'docs': docs, 'backgrounds': bgs, 'fonts': fonts, 'mes': mes, 'moduleMes': module_mes}

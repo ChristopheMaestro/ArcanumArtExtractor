@@ -1,0 +1,71 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Puis-je vous demander qui vous êtes, madame ?}{}{5}{re 41, me 0}{44}{}
+{3}{Madame ! Pourquoi me parlez-vous ainsi ?}{}{5}{re -40, me 0}{17}{}
+{6}{Bonjour, Marie Guillomet. Vous avez un moment ?}{}{5}{re 41, me 1}{51}{}
+{7}{Madame Guillomet ! Qu'ai-je donc fait pour mériter un tel traitement ?}{}{5}{re -40, me 1}{17}{}
+{8}{'jour ! Moi pas avoir beaucoup intelligence. Vous qui ?}{}{-4}{me 0}{44}{}
+{9}{'jour, Marie ! Moi pouvoir poser questions ?}{}{-4}{me 1}{51}{}
+{10}{E:}{}{1}{me 1}{0}{}
+{17}{Je suis désolée, monsieur, mais je ne parle pas aux inconnus et encore moins à vous...}{Je suis désolée, madame, mais je ne parle pas aux inconnues et encore moins à vous...}{}{}{}{}
+{18}{Madame, en êtes-vous sûre ?}{}{5}{ch 16}{23}{re +15}
+{19}{Je ne suis pas ici pour vous poser des problèmes, madame...}{}{5}{}{27}{re +10}
+{20}{Je vous déconseille de vous adresser à moi de la sorte, jeune femme...}{}{5}{}{35}{re -5}
+{21}{E:}{}{5}{}{0}{}
+{23}{[Le regard plein de malice, elle esquisse un sourire.] Peut-être avez-vous raison. Pardonnez-moi, monsieur... Parfois, mon caractère m'empêche d'apprécier les gens à leur juste valeur. Vous êtes de toute évidence une personne agréable...}{[Le regard plein de malice, elle esquisse un sourire.] Peut-être avez-vous raison. Pardonnez-moi, madame... Parfois, mon caractère m'empêche d'apprécier les gens à leur juste valeur. Vous êtes de toute évidence une personne agréable...}{}{}{}{}
+{24}{N'en parlons plus, madame. Puis-je vous demander qui vous êtes ?}{}{5}{me 0}{44}{}
+{25}{C'est oublié, Marie. Vous avez un moment ?}{}{5}{me 1}{51}{}
+{27}{[La femme se détend quelque peu.] Je suis désolée, monsieur. Nous avons la vie dure par ici. Pardonnez mon emportement...}{[La femme se détend quelque peu.] Je suis désolée, madame. Nous avons la vie dure par ici. Pardonnez mon emportement...}{}{}{}{}
+{28}{N'en parlons plus, madame. Puis-je vous demander qui vous êtes ?}{}{5}{me 0}{44}{}
+{29}{C'est oublié, Marie. Vous avez un moment ?}{}{5}{me 1}{51}{}
+{35}{[Elle crache au sol.] Etes-vous en train de me menacer, monsieur ? Vous ne me faites pas peur ! Pour nous, les Guillomet, la vie est dure, et j'ai déjà puni plus d'un étranger venu s'aventurer par ici. Alors allez traîner vos guêtres ailleurs !}{[Elle crache au sol.] Etes-vous en train de me menacer, madame ? Vous ne me faites pas peur ! Pour nous, les Guillomet, la vie est dure, et j'ai déjà puni plus d'un étranger venu s'aventurer par ici. Alors allez traîner vos guêtres ailleurs !}{}{}{}{}
+{36}{Je ne pense pas que ce soit nécessaire. Je vous prie d'accepter mes excuses...}{}{5}{}{27}{re +10}
+{37}{La vie va devenir encore plus dure pour vous, madame...}{}{5}{}{}{co, fl 40}
+{38}{E:}{}{5}{}{0}{}
+{40}{Sale intrus ! Je vais vous montrer de quel bois je me chauffe !}{Sale intruse ! Je vais vous montrer de quel bois je me chauffe !}{}{}{}{}
+{44}{Mon nom est Marie Guillomet, monsieur...}{Mon nom est Marie Guillomet, madame...}{}{}{}{}
+{45}{C'est un plaisir, Marie. Auriez-vous un instant, je souhaite vous parler...}{}{5}{}{51}{}
+{48}{Moi @PCNAME@ ! Moi demander vous questions ?}{}{-4}{}{51}{}
+{51}{Pas de problème. Que voulez-vous savoir ?}{Pas de problème. Que voulez-vous savoir ?}{}{}{}{}
+{52}{Que faites-vous ici, Marie ?}{}{5}{lf2 0}{65}{}
+{53}{Je cherche encore le trésor et les boucles...}{}{5}{lf2 1, ni 5624, ni 5625}{101}{}
+{54}{Je cherche encore le trésor et les boucles...}{}{5}{lf2 1, in 5624, ni 5625}{101}{}
+{55}{Je cherche encore le trésor et les boucles...}{}{5}{lf2 1, ni 5624, in 5625}{101}{}
+{56}{J'ai apporté le trésor et les boucles...}{}{5}{lf2 1, in 5624, in 5625}{104}{in 5624, in 5625}
+{57}{Quoi vous faire ici, Mariri ?}{}{-4}{lf2 0}{65}{}
+{58}{Moi chercher encore trésor et boucles !}{}{-4}{lf2 1, ni 5624, ni 5625}{101}{}
+{59}{Moi chercher encore trésor et boucles !}{}{-4}{lf2 1, in 5624, ni 5625}{101}{}
+{60}{Moi chercher encore trésor et boucles !}{}{-4}{lf2 1, ni 5624, in 5625}{101}{}
+{61}{Moi apporter trésor et boucles... !}{}{-4}{lf2 1, in 5624, in 5625}{104}{in 5624, in 5625}
+{62}{E:}{}{1}{}{0}{}
+{65}{Eh bien, monsieur... Ici, au milieu de nulle part, on vit avec pas grand-chose. Nous mangeons ce que l'océan veut bien nous donner, nous fabriquons nous-même nos vêtements et nous nous satisfaisons de peu. Le clan Guillomet n'a jamais eu beaucoup d'argent. Du moins, pas depuis ce qui est arrivé à mon arrière-grand-père, Jonas Guillomet...}{Eh bien, madame... Ici, au milieu de nulle part, on vit avec pas grand-chose. Nous mangeons ce que l'océan veut bien nous donner, nous fabriquons nous-même nos vêtements et nous nous satisfaisons de peu. Le clan Guillomet n'a jamais eu beaucoup d'argent. Du moins, pas depuis ce qui est arrivé à mon arrière-grand-père, Jonas Guillomet...}{}{}{}{lf1 1}
+{66}{En fait, c'est pour ça que je suis ici...}{}{5}{qa1054 1}{83}{}
+{67}{J'ai du mal à comprendre... Que s'est-il passé ?}{}{5}{qu1054 0}{74}{}
+{68}{Ca pourquoi moi ici !}{}{-4}{qa1054 1}{83}{}
+{69}{Euh... Quoi passer ?}{}{-4}{qu1054 0}{74}{}
+{72}{E:}{}{1}{}{0}{}
+{74}{Eh bien, à cette époque-là, nous n'étions pas fortunés mais nous vivions bien... Nous avions de la terre et un jolie maison. Mais, un jour, le vieux pirate Pierre Latige a débarqué en ville et a assassiné mon arrière-grand-père Jonas en plein milieu de la rue. La légende dit que le vieux Latige riait de bon coeur lorsqu'il l'a tué et lorsqu'il lui a dérobé les boucles d'argent de ses bottes !}{Eh bien, à cette époque-là, nous n'étions pas fortunés mais nous vivions bien... Nous avions de la terre et un jolie maison. Mais, un jour, le vieux pirate Pierre Latige a débarqué en ville et a assassiné mon arrière-grand-père Jonas en plein milieu de la rue. La légende dit que le vieux Latige riait de bon coeur lorsqu'il l'a tué et lorsqu'il lui a dérobé les boucles d'argent de ses bottes !}{}{}{}{}
+{75}{Je vois. Tragique histoire...}{}{5}{}{78}{}
+{76}{Ca très triste...}{}{-4}{}{78}{}
+{78}{Ouais... C'est pas vraiment ce qu'on pourrait appeler un conte de fées, monsieur. Les Guillomet... Nous avons traversé une période de vaches maigres, après cela. Sans homme pour travailler, nous avons été obligés de céder la terre et la maison. Ma famille vit dans ce taudis depuis près de cent ans. Pas un jour ne passe sans que je maudisse le nom de ce satané Pierre Latige ! [Elle crache par terre.]}{Ouais... C'est pas vraiment ce qu'on pourrait appeler un conte de fées, madame. Les Guillomet... Nous avons traversé une période de vaches maigres, après cela. Sans homme pour travailler, nous avons été obligés de céder la terre et la maison. Ma famille vit dans ce taudis depuis près de cent ans. Pas un jour ne passe sans que je maudisse le nom de ce satané Pierre Latige ! [Elle crache par terre.]}{}{}{}{}
+{79}{K:}{}{1}{}{51}{}
+{80}{E:}{}{1}{}{0}{}
+{83}{De quoi parlez-vous ?}{De quoi parlez-vous ?}{}{}{}{}
+{84}{Je sais que cela paraît étrange, mais... [Vous lui racontez l'histoire.]}{}{5}{}{87}{}
+{85}{Euh... [Vous lui racontez l'histoire.]}{}{-4}{}{87}{}
+{87}{Très bien. [La femme secoue la tête.] J'en ai entendu des vertes et des pas mûres. Mais, celle-là, c'est la meilleure, monsieur. Que le fantôme d'un vieux pirate se repente de ce qu'il a fait il y a près de 200 ans...}{Très bien. [La femme secoue la tête.] J'en ai entendu des vertes et des pas mûres. Mais, celle-là, c'est la meilleure, madame. Que le fantôme d'un vieux pirate se repente de ce qu'il a fait il y a près de 200 ans...}{}{}{}{}
+{88}{Oui, je sais, c'est assez incroyable...}{}{5}{}{91}{}
+{89}{Ouais... Etrange, non ?}{}{-4}{}{91}{}
+{91}{Ainsi... Vous m'avez apporté ce vieux trésor et les boucles ?}{Ainsi... Vous m'avez apporté ce vieux trésor et les boucles ?}{}{}{}{}
+{92}{Oui. [Vous les lui donnez.]}{}{5}{in 5624, in 5625}{104}{in 5624, in 5625}
+{93}{Oui ! [Vous les lui donnez.]}{}{-4}{in 5624, in 5625}{104}{in 5624, in 5625}
+{94}{Euh... Pas encore. Bientôt, oui....}{}{5}{}{101}{lf2 1}
+{95}{Euh... Pas encore. Mais bientôt !}{}{-4}{}{101}{lf2 1}
+{96}{En fait, je pense que je vais vous tuer et garder le trésor...}{}{5}{}{}{co, fl 99}
+{97}{Moi penser que moi tuer vous ! Moi garder trésor pour moi !}{}{-4}{}{}{co, fl 99}
+{99}{Vous êtes en train de commettre une grossière erreur ! Nous, les Guillomet, nous ne nous laissons pas faire !}{Vous êtes en train de commettre une grossière erreur ! Nous, les Guillomet, nous ne nous laissons pas faire !}{}{}{}{}
+{101}{Hein. Eh bien, si vous le trouvez, je suppose que nous saurons quoi en faire...}{Hein. Eh bien, si vous le trouvez, je suppose que nous saurons quoi en faire...}{}{}{}{}
+{102}{E:}{}{1}{}{0}{}
+{104}{Eh bien, merci. Je suppose que ce vieux Latige n'était pas si mauvais que ça, après tout. Au revoir, monsieur...}{Eh bien, merci. Je suppose que ce vieux Latige n'était pas si mauvais que ça, après tout. Au revoir, madame...}{}{}{}{lf3 1, gf2748 1}
+{105}{E:}{}{1}{}{0}{}
+{107}{Merci beaucoup, monsieur. Ce trésor serait bien utile aux Guillomet...}{Merci beaucoup, madame. Ce trésor serait bien utile aux Guillomet...}{}{}{}{}
+

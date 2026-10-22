@@ -1,0 +1,284 @@
+{1}{Savez-vous jouer aux dés ?}{Savez-vous jouer aux dés ?}{}{}{}{lf 17 1} 
+{2}{Oui. J'y ai déjà joué.}{}{5}{}{235}{ } 
+{3}{Non, pouvez-vous m'expliquer les règles ?}{}{5}{}{24}{ } 
+{4}{Ouais ouais.}{}{-4}{}{235}{ } 
+{5}{Moi pas savoir. Moi vouloir savoir.}{}{-4}{}{24}{ } 
+{6}{E:}{}{1}{}{0}{lf 17 1} 
+{9}{Vous avez perdu une belle somme. Je pense que vous devriez arrêter avant de perdre davantage.}{Vous avez déjà perdu une belle somme. Je pense que vous devriez arrêter avant de perdre davantage.}{}{}{}{lf 16 1} 
+{10}{E:}{}{1}{}{-153}{lf 17 1} 
+{17}{Quelle guigne. Il faut que j'arrête de jouer si je veux éviter la ruine !}{Quelle guigne. Il faut que j'arrête de jouer si je veux éviter la ruine !}{}{}{}{lf 16 1} 
+{18}{E:}{}{1}{}{-153}{lf 17 1} 
+{24}{Ca se joue avec deux dés. Vous devez lancer les dés plusieurs fois. Retenez le nombre de points obtenu au premier coup, puis relancez les dés pour refaire ce total.}{Ca se joue avec deux dés. Vous devez lancer les dés plusieurs fois. Retenez le nombre de points obtenu au premier coup, puis relancez les dés pour refaire ce total.}{}{}{}{ } 
+{25}{Pouvez-vous me fournir plus de détails ?}{}{5}{}{30}{ } 
+{26}{Oui, oui... Je connais ce jeu. Quels sont les enjeux ?}{}{5}{}{235}{ } 
+{27}{Quoi vous dire ?}{}{-4}{}{30}{ } 
+{28}{Ouais ouais.}{}{-4}{}{235}{ } 
+{30}{Vous pouvez gagner dès le premier coup. Si vous faites Sept ou Onze avec les dés, vous avez gagné. Si vous faites un Double Un, un Deux, vous avez perdu. Si vous n'avez ni gagné, ni perdu au premier coup, vous devez mémoriser le nombre de points obtenu au premier lancer de dés, qui devient votre objectif.}{Vous pouvez gagner dès le premier coup. Si vous faites Sept ou Onze avec les dés, vous avez gagné. Si vous faites un Double Un, un Deux, vous avez perdu. Si vous n'avez ni gagné, ni perdu au premier coup, vous devez mémoriser le nombre de points obtenu au premier lancer de dés, qui devient votre objectif.}{}{}{}{ } 
+{31}{Oui.}{}{5}{}{33}{ } 
+{32}{Ugh !}{}{-4}{}{33}{ } 
+{33}{Une fois votre objectif défini, vous devez essayer de refaire ce score. Si vous faites un Sept ou un Double Un avant, vous avez perdu. Nous jouons la même somme chacun.}{Une fois votre objectif défini, vous devez essayer de refaire ce score. Si vous faites un Sept ou un Double Un avant, vous avez perdu. Nous jouons la même somme chacun.}{}{}{}{ } 
+{34}{Quels sont les enjeux ?}{}{5}{}{235}{ } 
+{35}{Combien payer pour jouer ?}{}{-4}{}{235}{ } 
+{36}{Ar'voir.}{}{1}{}{0}{lf 17 1} 
+{37}{Vous avez obtenu deux Six.}{Vous avez obtenu deux Six.}{}{}{}{ } 
+{38}{[Relancer les dés]}{}{5}{lf1 1, lf12 0}{-6}{ } 
+{39}{Un Double Six ! Misère ! Je n'y arriverai pas.}{}{5}{lf1 0}{-6}{lf1 1, lf12 1 } 
+{40}{Pas de chance. Je suis imbattable !}{}{5}{lf1 1,lf12 1}{-53}{ } 
+{41}{[Relancer les dés]}{}{-4}{lf1 1, lf12 0}{-6}{ } 
+{42}{Moi vouloir encore essayer.}{}{-4}{lf1 0}{-6}{lf1 1, lf12 1 } 
+{43}{Moi gagner !}{}{-4}{lf1 1,lf12 1}{-53}{ } 
+{44}{Vous avez obtenu un Six et un Cinq.}{Vous avez obtenu un Six et un Cinq.}{}{}{}{ } 
+{45}{[Relancer les dés]}{}{5}{lf 7 0, lf1 1}{-6}{ } 
+{46}{Onze, gagné ! Quel jeu plaisant !}{}{5}{lf 7 0, lf1 0}{-53}{ } 
+{47}{Qui ne tente rien n'a rien. A moi la victoire !}{}{5}{lf 7 1}{-53}{ } 
+{48}{[Relancer les dés]}{}{-4}{lf 7 0, lf1 1}{-6}{ } 
+{49}{Moi gagner !}{}{-4}{lf 7 0, lf1 0}{-53}{ } 
+{50}{Moi gagner !}{}{-4}{lf 7 1}{-53}{ } 
+{51}{Vous avez obtenu un Six et un Quatre.}{Vous avez obtenu un Six et un Quatre}{}{}{}{ } 
+{52}{[Relancer les dés]}{}{5}{lf1 1, lf10 0}{-6}{ } 
+{53}{Un total de dix. Je me sens en veine. Allez !}{}{5}{lf1 0}{-6}{lf1 1, lf10 1 } 
+{54}{Oh oui. Oh oui. Personne ne peut me battre.}{}{5}{lf1 1,lf10 1}{-53}{ } 
+{55}{[Relancer les dés]}{}{-4}{lf1 1, lf10 0}{-6}{ } 
+{56}{Moi vouloir encore essayer.}{}{-4}{lf1 0}{-6}{lf1 1, lf10 1 } 
+{57}{Moi gagner !}{}{-4}{lf1 1,lf10 1}{-53}{ } 
+{58}{Vous avez obtenu un Six et un Trois.}{Vous avez obtenu un Six et un Trois.}{}{}{}{ } 
+{59}{[Relancer les dés]}{}{5}{lf1 1, lf9 0}{-6}{ } 
+{60}{Sapristi ! Pas facile de faire un Neuf.}{}{5}{lf1 0}{-6}{lf1 1, lf9 1 } 
+{61}{Oh là là ! Quelle chance !}{}{5}{lf1 1,lf9 1}{-53}{ } 
+{62}{[Relancer les dés]}{}{-4}{lf1 1, lf9 0}{-6}{ } 
+{63}{Moi vouloir encore essayer.}{}{-4}{lf1 0}{-6}{lf1 1, lf9 1 } 
+{64}{Moi gagner !}{}{-4}{lf1 1,lf9 1}{-53}{ } 
+{65}{Vous avez obtenu un Six et un Deux.}{Vous avez obtenu un Six et un Deux.}{}{}{}{ } 
+{66}{[Relancer les dés]}{}{5}{lf1 1, lf8 0}{-6}{ } 
+{67}{Un huit ! Cela ne devrait pas être difficile à obtenir.}{}{5}{lf1 0}{-6}{lf1 1, lf8 1 } 
+{68}{La chance est avec moi ! J'ai gagné.}{}{5}{lf1 1,lf8 1}{-53}{ } 
+{69}{[Relancer les dés]}{}{-4}{lf1 1, lf8 0}{-6}{ } 
+{70}{Moi vouloir encore essayer.}{}{-4}{lf1 0}{-6}{lf1 1, lf8 1 } 
+{71}{Moi gagner !}{}{-4}{lf1 1,lf8 1}{-53}{ } 
+{72}{Vous avez obtenu un Six et un Un.}{Vous avez obtenu un Six et un Un.}{}{}{}{ } 
+{73}{On dirait que les dieux sont avec moi !}{}{5}{lf 7 0, lf1 0}{-53}{ } 
+{74}{Mince. J'ai perdu.}{}{5}{lf 7 0, lf1 1}{-56}{ } 
+{75}{Il semble que la chance me sourie, monsieur !}{}{5}{lf 7 1}{-53}{ } 
+{76}{Moi gagner !}{}{-4}{lf 7 0, lf1 0}{-53}{ } 
+{77}{Moi perdu ! Oh non !}{}{-4}{lf 7 0, lf1 1}{-56}{ } 
+{78}{Moi gagner !}{}{-4}{lf 7 1}{-53}{ } 
+{79}{Vous avez obtenu deux Cinq.}{Vous avez obtenu deux Cinq.}{}{}{}{ } 
+{80}{[Relancer les dés]}{}{5}{lf1 1, lf10 0}{-6}{ } 
+{81}{Il semble que je doive employer les grands moyens pour gagner.}{}{5}{lf1 0}{-6}{lf1 1, lf10 1 } 
+{82}{Et voilà ! Un coup gagnant !}{}{5}{lf1 1,lf10 1}{-53}{ } 
+{83}{[Relancer les dés]}{}{-4}{lf1 1, lf10 0}{-6}{ } 
+{84}{Moi vouloir encore essayer.}{}{-4}{lf1 0}{-6}{lf1 1, lf10 1 } 
+{85}{Moi gagner !}{}{-4}{lf1 1,lf10 1}{-53}{ } 
+{86}{Vous avez obtenu un Cinq et un Quatre.}{Vous avez obtenu un Cinq et un Quatre.}{}{}{}{ } 
+{87}{[Relancer les dés]}{}{5}{lf1 1, lf9 0}{-6}{ } 
+{88}{Neuf. C'est un coup difficile.}{}{5}{lf1 0}{-6}{lf1 1, lf9 1 } 
+{89}{Merci mon Dieu ! J'ai gagné !}{}{5}{lf1 1,lf9 1}{-53}{ } 
+{90}{[Relancer les dés]}{}{-4}{lf1 1, lf9 0}{-6}{ } 
+{91}{Moi vouloir encore essayer.}{}{-4}{lf1 0}{-6}{lf1 1, lf9 1 } 
+{92}{Moi gagner !}{}{-4}{lf1 1,lf9 1}{-53}{ } 
+{93}{Vous avez obtenu un Cinq et un Trois.}{Vous avez obtenu un Cinq et un Trois.}{}{}{}{ } 
+{94}{[Relancer les dés]}{}{5}{lf1 1, lf8 0}{-6}{ } 
+{95}{Huit ! Un autre coup facile !}{}{5}{lf1 0}{-6}{lf1 1, lf8 1 } 
+{96}{J'espère que vous avez plus d'argent. Ce jeu est d'une facilité déconcertante !}{}{5}{lf1 1,lf8 1}{-53}{ } 
+{97}{[Relancer les dés]}{}{-4}{lf1 1, lf8 0}{-6}{ } 
+{98}{Moi vouloir encore essayer.}{}{-4}{lf1 0}{-6}{lf1 1, lf8 1 } 
+{99}{Moi gagner !}{}{-4}{lf1 1,lf8 1}{-53}{ } 
+{100}{Vous avez obtenu un Cinq et un Deux.}{Vous avez obtenu un Cinq et un Deux.}{}{}{}{ } 
+{101}{La chance me sourit aujourd'hui ! Un coup gagnant.}{}{5}{lf1 0, lf 7 0}{-53}{ } 
+{102}{Quelle guigne ! J'ai perdu.}{}{5}{lf1 1, lf 7 0}{-56}{ } 
+{103}{C'est moi qui gagne. Décidément ! C'est la fin pour vous.}{}{5}{lf 7 1}{-53}{ } 
+{104}{Moi gagner !}{}{-4}{lf1 0, lf 7 0}{-53}{ } 
+{105}{Moi perdu ! Oh non !}{}{-4}{lf1 1, lf 7 0}{-56}{ } 
+{106}{Moi gagner !}{}{-4}{lf 7 1}{-53}{ } 
+{107}{Vous avez obtenu un Cinq et un Un.}{Vous avez obtenu un Cinq et un Un.}{}{}{}{ } 
+{108}{[Relancer les dés]}{}{5}{lf1 1, lf6 0}{-6}{ } 
+{109}{Préparez-vous à me rendre encore plus riche !}{}{5}{lf1 0}{-6}{lf1 1, lf6 1 } 
+{110}{Il est temps de passer à la caisse ! Comme c'est ennuyeux de gagner aussi facilement.}{}{5}{lf1 1,lf6 1}{-53}{ } 
+{111}{[Relancer les dés]}{}{-4}{lf1 1, lf6 0}{-6}{ } 
+{112}{Moi vouloir encore essayer.}{}{-4}{lf1 0}{-6}{lf1 1, lf6 1 } 
+{113}{Moi gagner !}{}{-4}{lf1 1,lf6 1}{-53}{ } 
+{114}{Vous avez obtenu deux Quatre.}{Vous avez obtenu deux Quatre.}{}{}{}{ } 
+{115}{[Relancer les dés]}{}{5}{lf1 1, lf8 0}{-6}{ } 
+{116}{Oh oui. Un joli petit Huit. Attention les yeux !}{}{5}{lf1 0}{-6}{lf1 1, lf8 1 } 
+{117}{C'était un coup facile. J'ai gagné.}{}{5}{lf1 1,lf8 1}{-53}{ } 
+{118}{[Relancer les dés]}{}{-4}{lf1 1, lf8 0}{-6}{ } 
+{119}{Moi vouloir encore essayer.}{}{-4}{lf1 0}{-6}{lf1 1, lf8 1 } 
+{120}{Moi gagner !}{}{-4}{lf1 1,lf8 1}{-53}{ } 
+{121}{Vous avez obtenu un Quatre et un Trois.}{Vous avez obtenu un Quatre et un Trois.}{}{}{}{ } 
+{122}{Sept, mon chiffre fétiche ! On dirait que les dieux sont avec moi !}{}{5}{lf1 0, lf 7 0}{-53}{ } 
+{123}{Un Sept ! Maudits dés ! J'ai perdu.}{}{5}{lf1 1, lf 7 0}{-56}{ } 
+{124}{Et c'est qui le maître maintenant ?}{}{5}{lf 7 1}{-53}{} 
+{125}{Moi gagner !}{}{-4}{lf1 0, lf 7 0}{-53}{ } 
+{126}{Moi perdu ! Oh non !}{}{-4}{lf1 1, lf 7 0}{-56}{ } 
+{127}{Moi gagner !}{}{-4}{lf 7 1}{-53}{} 
+{128}{Vous avez obtenu un Quatre et un Deux.}{Vous avez obtenu un Quatre et un Deux.}{}{}{}{ } 
+{129}{[Relancer les dés]}{}{5}{lf1 1, lf6 0}{-6}{ } 
+{130}{Un Six. Coup facile ! Petit petit petit !}{}{5}{lf1 0}{-6}{lf1 1, lf6 1 } 
+{131}{Un Six ! Nouveau coup gagnant !}{}{5}{lf1 1,lf6 1}{-53}{ } 
+{132}{[Relancer les dés]}{}{-4}{lf1 1, lf6 0}{-6}{ } 
+{133}{Moi vouloir encore essayer.}{}{-4}{lf1 0}{-6}{lf1 1, lf6 1 } 
+{134}{Moi gagner !}{}{-4}{lf1 1,lf6 1}{-53}{ } 
+{135}{Vous avez obtenu un Quatre et un Un.}{Vous avez obtenu un Quatre et un Un.}{}{}{}{ } 
+{136}{[Relancer les dés]}{}{5}{lf1 1, lf5 0}{-6}{ } 
+{137}{Un Cinq. On dirait bien que vous allez devoir délier les cordons de votre bourse.}{}{5}{lf1 0}{-6}{lf1 1, lf5 1 } 
+{138}{Le Cinq est un coup gagnant ! Youpi !}{}{5}{lf1 1,lf5 1}{-53}{ } 
+{139}{[Relancer les dés]}{}{-4}{lf1 1, lf5 0}{-6}{ } 
+{140}{Moi vouloir encore essayer.}{}{-4}{lf1 0}{-6}{lf1 1, lf5 1 } 
+{141}{Moi gagner !}{}{-4}{lf1 1,lf5 1}{-53}{ } 
+{142}{Vous avez obtenu deux Trois.}{Vous avez obtenu deux Trois.}{}{}{}{ } 
+{143}{[Relancer les dés]}{}{5}{lf1 1, lf6 0}{-6}{ } 
+{144}{Un Six. Je me sens en veine.}{}{5}{lf1 0}{-6}{lf1 1, lf6 1 } 
+{145}{Un Six ! Ma tactique fonctionne à merveille.}{}{5}{lf1 1,lf6 1}{-53}{ } 
+{146}{[Relancer les dés]}{}{-4}{lf1 1, lf6 0}{-6}{ } 
+{147}{Moi vouloir encore essayer.}{}{-4}{lf1 0}{-6}{lf1 1, lf6 1 } 
+{148}{Moi gagner !}{}{-4}{lf1 1,lf6 1}{-53}{ } 
+{149}{Vous avez obtenu un Trois et un Deux.}{Vous avez obtenu un Trois et un Deux.}{}{}{}{ } 
+{150}{[Relancer les dés]}{}{5}{lf1 1, lf5 0}{-6}{ } 
+{151}{C'est un coup difficile.}{}{5}{lf1 0}{-6}{lf1 1, lf5 1 } 
+{152}{Un Cinq ! Vous me pardonnerez de vous prendre votre argent à nouveau !}{}{5}{lf1 1,lf5 1}{-53}{ } 
+{153}{[Relancer les dés]}{}{-4}{lf1 1, lf5 0}{-6}{ } 
+{154}{Moi vouloir encore essayer.}{}{-4}{lf1 0}{-6}{lf1 1, lf5 1 } 
+{155}{Moi gagner !}{}{-4}{lf1 1,lf5 1}{-53}{ } 
+{156}{Vous avez obtenu un Trois et un Un.}{Vous avez obtenu un Trois et un Un.}{}{}{}{ } 
+{157}{[Relancer les dés]}{}{5}{lf1 1, lf4 0}{-6}{ } 
+{158}{Pas un Quatre ! Je tente le tout pour le tout.}{}{5}{lf1 0}{-6}{lf1 1, lf4 1 } 
+{159}{Un Quatre ! Vous me pardonnerez de vous prendre votre argent à nouveau !}{}{5}{lf1 1,lf4 1}{-53}{ } 
+{160}{[Relancer les dés]}{}{-4}{lf1 1, lf4 0}{-6}{ } 
+{161}{Moi vouloir encore essayer.}{}{-4}{lf1 0}{-6}{lf1 1, lf4 1 } 
+{162}{Moi gagner !}{}{-4}{lf1 1,lf4 1}{-53}{ } 
+{163}{Vous avez obtenu Deux et Deux.}{Vous avez obtenu Deux et Deux.}{}{}{}{ } 
+{164}{[Relancer les dés]}{}{5}{lf1 1, lf4 0}{-6}{ } 
+{165}{Cela va être un coup difficile !}{}{5}{lf1 0}{-6}{lf1 1, lf4 1 } 
+{166}{Oh oui, un petit Quatre et c'est la victoire !}{}{5}{lf1 1,lf4 1}{-53}{ } 
+{167}{[Relancer les dés]}{}{-4}{lf1 1, lf4 0}{-6}{ } 
+{168}{Moi vouloir encore essayer.}{}{-4}{lf1 0}{-6}{lf1 1, lf4 1 } 
+{169}{Moi gagner !}{}{-4}{lf1 1,lf4 1}{-53}{ } 
+{170}{Vous avez obtenu un Deux et un Un.}{Vous avez obtenu un Deux et un Un.}{}{}{}{ } 
+{171}{[Relancer les dés]}{}{5}{lf1 1, lf3 0}{-6}{ } 
+{172}{Ciel ! Pas un Trois ! C'est minable !}{}{5}{lf1 0}{-6}{lf1 1, lf3 1 } 
+{173}{Un Trois ! C'était impossible et pourtant je l'ai fait ! }{}{5}{lf1 1,lf3 1}{-53}{ } 
+{174}{[Relancer les dés]}{}{-4}{lf1 1, lf3 0}{-6}{ } 
+{175}{Moi vouloir encore essayer.}{}{-4}{lf1 0}{-6}{lf1 1, lf3 1 } 
+{176}{Moi gagner !}{}{-4}{lf1 1,lf3 1}{-53}{ } 
+{177}{Double Un ! Vous avez obtenu deux Un.}{Vous avez obtenu deux Un.}{}{}{}{ } 
+{178}{Maudits dés !}{}{5}{lf2 0}{-56}{ } 
+{179}{Maudits dés !}{}{5}{lf2 1}{-56}{ } 
+{180}{Oh noooooon !}{}{-4}{lf2 0}{-56}{ } 
+{181}{Oh noooooon !}{}{-4}{lf2 1}{-56}{ } 
+{185}{Vous avez gagné, camarade.}{Vous avez gagné, camarade.}{}{}{}{ } 
+{186}{On recommence ?}{}{5}{gv1019 5}{-59}{$$ 5} 
+{187}{On recommence ?}{}{5}{gv1019 10}{-59}{$$ 10} 
+{188}{Enko' une fois !}{}{-4}{gv1019 5}{-59}{$$ 5} 
+{189}{Enko' une fois !}{}{-4}{gv1019 10}{-59}{$$ 10} 
+{196}{Vous avez perdu, camarade.}{Vous avez perdu, camarade.}{}{}{}{ } 
+{197}{On recommence ?}{}{5}{gv1019 5, $$ 10}{-59}{$$ -5} 
+{198}{On recommence ?}{}{5}{gv1019 10, $$ 20}{-59}{$$ -10} 
+{199}{On recommence ?}{}{5}{gv1019 5, $$ -9}{231}{$$ -5} 
+{200}{On recommence ?}{}{5}{gv1019 10, $$ -19}{231}{$$ -10} 
+{201}{Encore ! Encore !}{}{-4}{gv1019 5, $$ 10}{-59}{$$ -5} 
+{202}{Encore ! Encore !}{}{-4}{gv1019 10, $$ 20}{-59}{$$ -10} 
+{203}{Encore ! Encore !}{}{-4}{gv1019 5, $$ -9}{231}{$$ -5} 
+{204}{Encore ! Encore !}{}{-4}{gv1019 10, $$ -19}{231}{$$ -10} 
+{209}{J'aimerais faire une partie ou deux pour 5 pièces. Combien misez-vous ? }{J'aimerais faire une partie ou deux pour 5 pièces. Combien misez-vous ? }{}{}{}{ } 
+{210}{[5 pièces la partie]}{}{5}{$$ 10}{216}{gv1019 5} 
+{211}{[10 pièces la partie]}{}{5}{$$ 20}{216}{gv1019 10} 
+{212}{Je ne peux pas jouer cette somme.}{}{5}{$$ -9}{231}{ } 
+{213}{[5 pièces la partie]}{}{-4}{$$ 10}{216}{gv1019 5} 
+{214}{[10 pièces la partie]}{}{-4}{$$ 20}{216}{gv1019 10} 
+{215}{Moi pas argent.}{}{-4}{$$ -9}{231}{ } 
+{216}{D'accord, votre premier lancer de dés détermine votre objectif.}{D'accord, votre premier lancer de dés détermine votre objectif.}{}{}{}{ } 
+{217}{[Vous lancez les dés.]}{}{1}{lf 7 0}{-9}{lf1 0, lf3 0, lf4 0, lf5 0, lf6 0, lf8 0, lf9 0, lf10 0, lf 12 0 } 
+{218}{[Vous lancez les dés.]}{}{1}{lf 7 1, lc 2 0}{177}{lf1 0, lf3 0, lf4 0, lf5 0, lf6 0, lf8 0, lf9 0, lf10 0, lf 12 0, lf 7 0 } 
+{219}{[Vous lancez les dés.]}{}{1}{lf 7 1, lc 2 6}{72}{lf1 0, lf3 0, lf4 0, lf5 0, lf6 0, lf8 0, lf9 0, lf10 0, lf 12 0, lc 2 7 } 
+{220}{[Vous lancez les dés.]}{}{1}{lf 7 1, lc 2 7}{100}{lf1 0, lf3 0, lf4 0, lf5 0, lf6 0, lf8 0, lf9 0, lf10 0, lf 12 0, lc 2 8 } 
+{221}{[Vous lancez les dés.]}{}{1}{lf 7 1, lc 2 8}{44}{lf1 0, lf3 0, lf4 0, lf5 0, lf6 0, lf8 0, lf9 0, lf10 0, lf 12 0, lc 2 9 } 
+{222}{[Vous lancez les dés.]}{}{1}{lf 7 1, lc 2 9}{121}{lf1 0, lf3 0, lf4 0, lf5 0, lf6 0, lf8 0, lf9 0, lf10 0, lf 12 0, lc 2 10 } 
+{223}{Changez les enjeux.}{}{1}{lf 7 0}{209}{ } 
+{224}{Changez les enjeux.}{}{1}{lf 7 1}{209}{ } 
+{225}{Je dois me retirer.}{}{5}{}{0}{lf 17 1} 
+{226}{Moi partir maintenant.}{}{-4}{}{0}{lf 17 1} 
+{229}{Dommage ! Je me sentais en veine ! Revenez quand vous pourrez : j'aimerais tenter ma chance contre vous.}{Dommage ! Je me sentais en veine ! Revenez quand vous pourrez : j'aimerais tenter ma chance contre vous.}{}{}{}{ } 
+{230}{E:}{}{1}{}{0}{lf 17 1} 
+{231}{Je joue pour de l'argent. Pas d'argent, pas de partie. Ce n'était pas votre jour de chance, monsieur.}{Je joue pour de l'argent. Pas d'argent, pas de partie. Ce n'était pas votre jour de chance, madame.}{}{}{}{ } 
+{232}{Changeons les enjeux.}{}{5}{$$ 10}{209}{} 
+{233}{Plus d'argent, plus d'argent maintenant !}{}{-4}{$$ 10}{209}{ } 
+{234}{E:}{}{1}{}{0}{lf 17 1} 
+{235}{C'est vous qui fixez la mise. Je ne joue que pour de l'argent. J'ai l'habitude de jouer des petites mises.}{C'est vous qui fixez la mise. Je ne joue que pour de l'argent. J'ai l'habitude de jouer des petites mises.}{}{}{}{ } 
+{236}{J'ai pratiquement tout perdu, je ne peux pas tenter le diable.}{}{5}{$$ -9}{229}{ } 
+{237}{J'ai quelques pièces. J'aimerais tenter ma chance.}{}{5}{$$ 10}{209}{ } 
+{238}{Moi pas argent.}{}{-4}{$$ -9}{229}{ } 
+{239}{Moi avoir sous.}{}{-4}{$$ 10}{209}{ } 
+{240}{E:}{}{1}{}{0}{lf 17 1} 
+{241}{G:}{}{}{}{}{}
+{242}{Que savez-vous, camarade ?}{}{5}{}{-179}{}
+{243}{Euh... Quoi se passer ?}{}{-4}{}{-179}{}
+{245}{Je prends juste un verre. Hé... Accepteriez-vous de jouer à une devinette ? Je vous parie 20 pièces que vous ne saurez pas répondre à ma question. Qu'est-ce que vous en dites ?}{Je prends juste un verre. Hé... Accepteriez-vous de jouer à une devinette ? Je vous parie 20 pièces que vous ne saurez pas répondre à ma question. Qu'est-ce que vous en dites ?}{}{}{}{}
+{246}{Entendu...}{}{5}{$$20}{-208}{lf 17 1}
+{247}{Je n'ai pas 20 pièces sur moi. Vous ne voulez pas faire une partie de dés plutôt ?}{}{5}{$$-19, lf 16 0}{1}{}
+{248}{Je préférerais jouer aux dés...}{}{5}{$$10, lf 16 0}{1}{}
+{249}{Euh... Accord !}{}{-4}{$$20}{-208}{lf 17 1}
+{250}{Moi pas avoir argent... Jouer dés ?}{}{-4}{$$-19, lf 16 0}{1}{}
+{251}{Vous vouloir jouer aux dés avec moi ?}{}{-4}{$$10, lf 16 0}{1}{}
+{252}{E:}{}{1}{}{-214}{lf 17 1}
+{253}{T: 8, 11}{}{1}{}{338}{}
+{257}{Oh, pas grand-chose. C'est terrible cet accident du Zéphyr, vous ne trouvez pas ? Vous savez quelque chose à ce sujet, camarade ?}{Oh, pas grand-chose. C'est terrible cet accident du Zéphyr, vous ne trouvez pas ? Vous savez quelque chose à ce sujet, camarade ?}{}{}{}{}
+{258}{Et comment. Je suis la seule personne qui s'en soit sortie... [Vous racontez ce qui s'est passé.]}{}{5}{}{-198}{}
+{259}{Non. Non, pas vraiment...}{}{5}{}{263}{}
+{260}{Euh... Ouais ! Moi être sur Zéphyr ! [Vous racontez l'histoire.]}{}{-4}{}{-198}{}
+{261}{Non... Moi rien savoir...}{}{-4}{}{263}{}
+{263}{Je vois. Eh bien, quelle tragédie. En fait, j'ai entendu dire que l'un des passagers avait survécu, mais qui sait ? Il ne s'agit probablement que d'une simple rumeur. Bonne journée, monsieur...}{Je vois. Eh bien, quelle tragédie. En fait, j'ai entendu dire que l'un des passagers avait survécu, mais qui sait ? Il ne s'agit probablement que d'une simple rumeur. Bonne journée, madame...}{}{}{}{}
+{264}{E:}{}{1}{}{-214}{lf 17 1}
+{277}{Hé ! C'est vous qui avez survécu à l'accident ! J'ai lu votre histoire dans le Tarantien !}{Hé ! C'est vous qui avez survécu à l'accident ! J'ai lu votre histoire dans le Tarantien !}{}{}{}{}
+{278}{Oui... C'était moi.}{}{5}{}{-198}{}
+{279}{Excusez-moi, mais il y a erreur sur la personne...}{}{5}{ps 8}{287}{}
+{280}{Excusez-moi, mais il y a erreur sur la personne...}{}{5}{ps -7}{290}{}
+{281}{Euh... Ouais ! Ca être moi !}{}{-4}{}{-198}{}
+{282}{Ca pas moi. Kékun d'aut'...}{}{-4}{ps 8}{287}{}
+{283}{Ca pas moi. Kékun d'aut'...}{}{-4}{ps -7}{290}{}
+{287}{Oh. Vous avez peut-être raison. La ressemblance est troublante, pourtant. Eh bien... Je vous souhaite une bonne journée, monsieur...}{Oh. Vous avez peut-être raison. La ressemblance est troublante, pourtant. Bien, bonne journée à vous, madame.}{}{}{}{}
+{288}{E:}{}{1}{}{-214}{lf 17 1}
+{290}{Non, je ne peux pas me tromper. Et j'ai horreur qu'on me mente. Passez votre chemin je vous prie...}{Non, je ne peux pas me tromper. Et je déteste qu'on me mente, madame. Passez votre chemin je vous prie... }{}{}{}{}
+{291}{E:}{}{1}{}{-214}{lf 17 1}
+{297}{Fantastique ! C'est un miracle ! Toutes mes félicitations, camarade ! Puis-je vous offrir un verre ?}{Fantastique ! C'est un miracle ! Toutes mes félicitations, camarade ! Puis-je vous offrir un verre ?}{}{}{}{}
+{298}{Oh oui ! [Vous le buvez.]}{}{5}{}{-195}{}
+{299}{Je regrette, je ne bois pas. C'est très aimable de votre part, en tout cas...}{}{5}{}{303}{}
+{300}{Ouais ! Moi boire ! [Vous le buvez.]}{}{-4}{}{-195}{}
+{301}{Euh... Moi pas boire...}{}{-4}{}{303}{}
+{303}{C'est votre droit le plus légitime. Bonne continuation !}{C'est votre droit le plus légitime. Bonne continuation !}{}{}{}{}
+{304}{E:}{}{1}{}{-214}{lf 17 1}
+{306}{Vous êtes bien sympathique ! Ce fut un plaisir de boire un verre avec vous ! Et bonne chance, où que vous mènent vos prochains périples...}{Vous êtes bien sympathique ! Ce fut un plaisir de boire un verre avec vous ! Et bonne chance, où que vous mènent vos prochains périples...}{}{}{}{}
+{307}{E:}{}{1}{}{-214}{lf 17 1}
+{309}{Quelle histoire extraordinaire ! Vous avez vécu un véritable cauchemar. Je vous en prie, permettez-moi de soulager un peu votre fardeau. Acceptez ces 100 pièces... de la part de quelqu'un qui vous veut du bien. [Vous recevez 100 pièces.]}{Quelle histoire extraordinaire ! Vous avez vécu un véritable cauchemar. Je vous en prie, permettez-moi de soulager un peu votre fardeau. Acceptez ces 100 pièces... de la part de quelqu'un qui vous veut du bien. [Vous recevez 100 pièces.]}{}{}{}{$$100}
+{310}{Merci...}{}{5}{}{-214}{lf 17 1}
+{311}{Marsi...}{}{-4}{}{-214}{lf 17 1}
+{313}{Ah ! Merveilleux ! Ce fut un plaisir ! Je vous souhaite de connaître des jours meilleurs !}{Ah ! Merveilleux ! Ce fut un plaisir ! Je vous souhaite de connaître des jours meilleurs !}{}{}{}{}
+{314}{Merci...}{}{5}{}{-214}{lf 17 1}
+{315}{Marsi...}{}{-4}{}{-214}{lf 17 1}
+{317}{Vous êtes au courant pour Monsieur Bastien ? C'est terrible, ce qui lui est arrivé... Voir son nom étalé dans tous les journaux...}{Vous êtes au courant pour Monsieur Bastien ? C'est terrible, ce qui lui est arrivé... Voir son nom étalé dans tous les journaux...}{}{}{}{}
+{318}{Je ne suis au courant de rien de tout cela...}{}{5}{}{323}{}
+{319}{Oui, c'est bien triste...}{}{5}{}{333}{}
+{320}{Moi pas saouar de quoi vous parler...}{}{-4}{}{323}{}
+{321}{Euh, oui, ça être triste...}{}{-4}{}{333}{}
+{323}{Enfin, c'est la vie. A la santé de Monsieur Bastien ! Puis-je vous offrir un verre, pour que nous puissions porter un toast ?}{Enfin, c'est la vie. A la santé de Monsieur Bastien ! Puis-je vous offrir un verre, pour que nous puissions porter un toast ?}{}{}{}{}
+{324}{D'accord, j'accepte de prendre un verre avec vous. [Vous le buvez.]}{}{5}{}{-195}{}
+{325}{Je regrette, je ne bois pas. C'est très aimable de votre part, en tout cas...}{}{5}{}{303}{}
+{326}{Ouais ! Moi boire ! [Vous le buvez.]}{}{-4}{}{-195}{}
+{327}{Euh... Moi pas boire...}{}{-4}{}{303}{}
+{329}{Je bois juste un verre, camarade. Ne vous offusquez pas, mais je préférerais qu'on me laisse tranquille...}{Je bois juste un verre, camarade. Ne vous offusquez pas, mais je préférerais qu'on me laisse tranquille...}{}{}{}{}
+{330}{E:}{}{1}{}{0}{lf 17 1}
+{332}{Bonne journée, camarade...}{Bonne journée, madame...}{}{}{}{}
+{333}{En effet, c'est terrible... Je vais vous dire... Je ne sais pas si c'est vraiment convenable, mais laissez-moi vous offrir un verre pour que nous buvions à la santé de Monsieur Bastien. Etes-vous d'accord, monsieur ?}{En effet, c'est terrible... Je vais vous dire... Je ne sais pas si c'est vraiment convenable, mais laissez-moi vous offrir un verre pour que nous buvions à la santé de Monsieur Bastien. Etes-vous d'accord, madame ?}{}{}{}{}
+{334}{D'accord, j'accepte de prendre un verre avec vous... [Vous le buvez.]}{}{5}{}{-195}{}
+{335}{Je regrette, je ne bois pas. C'est très aimable de votre part, en tout cas...}{}{5}{}{303}{}
+{336}{Ouais ! Moi boire ! [Vous le buvez.]}{}{-4}{}{-195}{}
+{337}{Euh... Moi pas boire...}{}{-4}{}{303}{}
+{338}{Ca vous dirait, une petite devinette ? Je vous parie 20 pièces que vous ne saurez pas répondre à ma question. Qu'est-ce que vous en dites ?}{Ca vous dirait, une petite devinette ? Je vous parie 20 pièces que vous ne saurez pas répondre à ma question. Qu'est-ce que vous en dites ?}{}{}{}{}
+{339}{Entendu...}{}{5}{$$20}{-208}{lf 17 1}
+{340}{Je n'ai pas 20 pièces sur moi. Vous ne voulez pas faire une partie de dés plutôt ?}{}{5}{$$-19, lf 16 0}{1}{}
+{341}{Je préférerais jouer aux dés...}{}{5}{$$10, lf 16 0}{1}{}
+{342}{Euh... Accord !}{}{-4}{$$20}{-208}{lf 17 1}
+{343}{Moi pas avoir argent... Jouer dés ?}{}{-4}{$$-19, lf 16 0}{1}{}
+{344}{Vous vouloir jouer aux dés avec moi ?}{}{-4}{$$10, lf 16 0}{1}{}
+{345}{E:}{}{1}{}{-214}{lf 17 1}
+{346}{T: 8, 11}{}{1}{}{338}{}
+

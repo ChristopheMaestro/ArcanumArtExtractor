@@ -1,0 +1,89 @@
+{1}{G: 9 160}{G: 9 160}{}{}{}{ }
+{2}{Puis-je vous être utile en quoi que ce soit ?}{}{5}{qu1003 0}{10}{ }
+{3}{J'ai réfléchi au sujet de votre anneau.}{}{5}{qu1003 1}{50}{ }
+{4}{Je suis toujours à la recherche de votre anneau, m'dame.}{}{5}{qu1003 2, ni2801}{70}{ }
+{5}{Je regrette pour votre anneau, m'dame.}{}{5}{qu1003 6}{0}{fl 211}
+{6}{J'ai trouvé votre anneau.}{}{5}{qa1003 1, in2801}{100}{ }
+{7}{Archibald vous a traitée de sorcière et il a ajouté qu'il ne se séparerait jamais votre anneau.}{}{5}{gf2622 1}{215}{ }
+{8}{J'ai eu une conversation avec Archibald. Il a votre anneau.}{}{5}{gf2618 1, qa1003 1, ni2801, gf2619 0}{290}{ }
+{9}{E:}{}{1}{}{0}{ }
+{10}{Nous ne nous connaissons pas, je ne voudrais pas vous ennuyer avec mes soucis.}{Nous ne nous connaissons pas, je ne voudrais pas vous ennuyer avec mes soucis.}{}{}{}{ }
+{11}{Mais si, racontez-moi. Je peux peut-être vous venir en aide ?}{}{5}{}{20}{ }
+{12}{C'est heureux car le fait de parler avec vous est un fardeau bien suffisant.}{}{5}{}{0}{lf2 1, re-15, fl 210}
+{19}{E:}{}{1}{}{0}{ }
+{20}{On m'a dérobé un héritage familial. Un anneau d'argent qui appartenait à ma grand-mère.}{On m'a dérobé un héritage familial. Un anneau d'argent qui appartenait à ma grand-mère.}{}{}{}{qu1003 1 }
+{21}{Avez-vous une quelconque idée concernant l'identité du voleur ?}{}{5}{}{30}{ }
+{22}{Quand avez-vous vu cet anneau pour la dernière fois ?}{}{5}{lf0 0}{80}{lf0 1 }
+{30}{Non. Il a disparu depuis des années. Je crains de trépasser avant de le revoir.}{Non. Il a disparu depuis des années. Je crains de trépasser avant de le revoir.}{}{}{}{ }
+{31}{Quand l'avez vous vu pour la dernière fois ?}{}{5}{lf0 0}{80}{lf0 1 }
+{32}{Combien m'offrez-vous pour que je retrouve cet anneau ?}{}{5}{}{60}{ }
+{39}{C'est tout à fait navrant. Oh ! Tant pis. Bonne journée.}{}{5}{}{0}{re-5 }
+{40}{Merci, mon bon monsieur !}{Merci, ma bonne dame !}{}{}{}{qu1003 2 }
+{41}{Quand avez-vous vu cet anneau pour la dernière fois ?}{}{5}{lf0 0}{80}{lf0 1 }
+{49}{Je serai de retour très vite.}{}{5}{lf0 1}{0}{ }
+{50}{Allez-vous m'aider ? Pouvez-vous retrouver mon anneau ? S'il vous plaît !}{Allez-vous m'aider ? Pouvez-vous retrouver mon anneau ? S'il vous plaît !}{}{}{}{ }
+{51}{Y a-t-il une quelconque récompense ?}{}{5}{}{60}{ }
+{52}{Naturellement, comment puis-je refuser ?}{}{5}{}{40}{re+5 }
+{53}{Vous me faites pitié car vous êtes une pauvre créature pathétique.}{}{5}{}{0}{lf2 1, re-15, fl 210}
+{59}{Je ne crois pas. Bonne journée.}{}{5}{}{0}{re-5 }
+{60}{Je suis juste une pauvre vieille femme. Je n'ai rien à vous offrir.}{Je suis juste une pauvre vieille femme. Je n'ai rien à vous offrir.}{}{}{}{ }
+{61}{Alors c'est ce que vous aurez : rien.}{}{5}{}{0}{lf2 1, re-10, fl 210}
+{62}{Qu'importe, je vous aiderai.}{}{5}{}{40}{re+5 }
+{63}{Ce n'est pas grave. Quand avez-vous vu cet anneau pour la dernière fois ?}{}{5}{lf0 0}{80}{lf0 1 }
+{70}{Je comprends. Je l'ai attendu pendant 20 longues années, je peux bien attendre encore un peu.}{Je comprends. Je l'ai attendu pendant 20 longues années, je peux bien attendre encore un peu.}{}{}{}{ }
+{71}{Quand avez-vous vu cet anneau pour la dernière fois ?}{}{5}{lf0 0}{80}{lf0 1 }
+{79}{E:}{}{1}{lf0 1}{0}{ }
+{80}{Je l'ai confié à la garde de mon fils avant qu'il trépasse.}{Je l'ai confié à la garde de mon fils avant qu'il trépasse.}{}{}{}{ }
+{81}{Quand est-il mort ?}{}{5}{}{90}{ }
+{90}{Il y a de cela vingt années. La peste m'a ravi mon fils et mon époux. Depuis, je suis seule.}{Il y a de cela vingt années. La peste m'a ravi mon fils et mon époux. Depuis, je suis seule.}{}{}{}{ }
+{92}{A qui puis-je m'adresser au sujet de votre fils ?}{}{5}{}{180}{ }
+{100}{Vraiment ? Comment l'avez-vous trouvé ? Oh ! Soyez béni. Puis-je l'avoir ?}{Vraiment ? Comment l'avez-vous trouvé ? Oh ! Soyez bénie. Puis-je l'avoir ?}{}{}{}{ }
+{101}{Euh, Archibald... me l'a remis.}{}{5}{in2801, gf1001 0}{250}{in 2801 }
+{102}{Archibald me l'a remis, avec l'expression de son meilleur souvenir.}{}{5}{in2801, gf1001 1}{130}{in 2801 }
+{103}{J'ai occis la fripouille qui vous l'avait volé !}{}{5}{in2801, gf1001 0, gf2621 1}{0}{lf5 1, qu1003 6, re-20, fl 270}
+{110}{Merci pour votre peine...}{Merci pour votre peine...}{}{}{}{qu1003 4, re+10, al+50 }
+{111}{Ce fut un plaisir, madame.}{}{5}{}{0}{ }
+{130}{Vraiment ? Comme c'est gentil de sa part d'avoir pensé à moi.}{Vraiment ? Comme c'est gentil de sa part d'avoir pensé à moi.}{}{}{}{qu1003 4, re+25, al+50 }
+{131}{Vous devriez lui adresser vos salutations.}{}{5}{}{200}{xp1 }
+{140}{Je suis juste une pauvre vieille femme, je ne possède rien qui ait de la valeur. S'il vous plaît, donnez-moi l'anneau.}{Je suis juste une pauvre vieille femme, je ne possède rien qui ait de la valeur. S'il vous plaît, donnez-moi l'anneau.}{}{}{}{ }
+{141}{Naturellement, le voici.}{}{5}{in2801}{110}{in 2801 }
+{142}{Je le garde jusqu'à ce que vous trouviez 50 pièces.}{}{5}{}{0}{qu1003 6, lf2 1, re-20, al-50, fl 212}
+{150}{Merci de m'avoir rapporté mon anneau.}{Merci de m'avoir rapporté mon anneau.}{}{}{}{ }
+{160}{[Cette vieille femme pleure.]... Bonjour...}{[Cette vieille femme pleure.]... Bonjour...}{}{}{}{ }
+{161}{Puis-je vous être utile en quoi que ce soit ?}{}{5}{qu1003 0}{10}{ }
+{162}{J'ai réfléchi au sujet de votre anneau.}{}{5}{qu1003 1}{50}{ }
+{163}{Je suis toujours à la recherche de votre anneau, m'dame.}{}{5}{qu1003 2, ni2801}{70}{ }
+{164}{Je regrette pour votre anneau, m'dame.}{}{5}{qu1003 6}{0}{fl 211}
+{165}{J'ai trouvé votre anneau.}{}{5}{qa1003 1, in2801}{100}{ }
+{166}{J'ai eu une conversation avec Archibald. Il a votre anneau.}{}{5}{gf2618 1, qa1003 1, ni2801, gf2619 0}{290}{ }
+{167}{Je sais tout du petit jeu auquel vous vous livrez.}{}{5}{gf2619 1, ni2801, lf15 0}{300}{lf15 1 }
+{169}{E:}{}{1}{}{0}{ }
+{170}{Oh ! Que c'est triste, une pauvre créature bredouillante.}{Oh ! Que c'est triste, une pauvre créature bredouillante.}{}{}{}{ }
+{171}{Argh.}{}{1}{}{0}{ }
+{180}{Un homme nommé Archibald s'était lié d'amitié avec mon fils avant sa mort.}{Un homme nommé Archibald s'était lié d'amitié avec mon fils avant sa mort.}{}{}{}{gf2620 1, ru2212 }
+{181}{Où puis-je trouver cet Archibald ?}{}{5}{}{190}{ }
+{190}{La dernière fois que j'en ai entendu parler, il vivait près des docks.}{La dernière fois que j'en ai entendu parler, il vivait près des docks.}{}{}{}{ }
+{191}{Je vais aller lui parler. Peut-être sait-il quelque chose.}{}{5}{}{40}{re+5 }
+{199}{Je vois. Eh bien, je dois y aller.}{}{5}{}{0}{ }
+{200}{Quelle excellente idée ! C'est ce que je vais faire. Merci encore, jeune homme.}{Quelle excellente idée ! C'est ce que je vais faire. Merci encore, mademoiselle.}{}{}{}{gf1002 1 }
+{209}{Bonne chance.}{}{5}{}{0}{ }
+{210}{Vous n'êtes qu'un odieux jeune homme !}{Vous n'êtes qu'une jouvencelle effrontée !}{}{}{}{ }
+{211}{[Elle se met à pleurer à chaudes larmes.]}{[Elle se met à pleurer à chaudes larmes.]}{}{}{}{ }
+{212}{Sortez d'ici ! Vous n'aurez rien !}{Sortez d'ici ! Vous n'aurez rien !}{}{}{}{ }
+{213}{Laissez-moi, maudite crapule !}{Laissez-moi, maudite crapule !}{}{}{}{ }
+{215}{Je n'en attendais pas moins de la part de cet animal !}{Je n'en attendais pas moins de la part de cet animal !}{}{}{}{ }
+{216}{Avez-vous une idée quelconque pour me permettre de récupérer l'anneau ?}{}{5}{}{0}{fl 240}
+{239}{E:}{}{1}{}{0}{ }
+{240}{Non, je ne vois pas.}{Non, je ne vois pas.}{}{}{}{ }
+{250}{Vraiment ? [Elle semble triste.] Je vois. Oh ! Très bien, je vous remercie. Puis-je avoir l'anneau, s'il vous plaît ?}{Vraiment ? [Elle semble triste.] Je vois. Oh ! Très bien, je vous remercie. Puis-je avoir l'anneau, s'il vous plaît ?}{}{}{}{ }
+{260}{Je ne peux m'en défaire à moins de 50 pièces.}{}{5}{}{140}{ }
+{261}{Naturellement, le voici.}{}{5}{}{110}{in 2801 }
+{270}{Quoi ?! Comment avez-vous osé tuer ce brave homme ! Sortez d'ici, je ne veux plus jamais vous revoir, ni vous ni cet anneau !}{Quoi ?! Comment avez-vous osé tuer ce brave homme ! Sortez d'ici, je ne veux plus jamais vous revoir, ni vous ni cet anneau !}{}{}{}{ }
+{280}{Eloignez-vous de moi, misérable !}{Eloignez-vous de moi, misérable !}{}{}{}{ }
+{290}{Vraiment ?! Je suis stupéfaite ! Quel goujat !}{Vraiment ?! Je suis stupéfaite ! Quel goujat !}{}{}{}{ }
+{291}{Avez-vous une idée quelconque pour me permettre de récupérer l'anneau ?}{}{5}{}{0}{fl 240}
+{299}{E:}{}{1}{}{0}{ }
+{300}{Mais... Euh... De quoi parlez-vous ?}{Mais... Euh... De quoi parlez-vous ?}{}{}{}{ }
+{301}{Vous avez toujours su que c'était Archibald qui avait l'anneau ! Vous n'avez fait que me manipuler.}{}{5}{}{0}{fl 310}
+{310}{Je n'ai, euh... aucune idée de ce dont vous parlez. Je vous en prie, rapportez-moi mon anneau...}{Je n'ai, euh... aucune idée de ce dont vous parlez. Je vous en prie, rapportez-moi mon anneau...}{}{}{}{ }
+

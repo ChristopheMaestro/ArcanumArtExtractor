@@ -1,0 +1,158 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Vous êtes un peu revêche pour un prêtre, non ?}{}{5}{re-40}{10}{re41}
+{3}{On ne s'attend pas à voir un prêtre dans un tel établissement.}{}{5}{re41}{100}{}
+{4}{H:}{}{5}{re41}{300}{}
+{5}{Je crois que j'ai trouvé un plan. Voulez-vous vous joindre à moi ?}{}{5}{lf1 1, qu1000 2}{201}{lf4 1, jo 0  140}
+{9}{E:}{}{1}{}{0}{}
+{10}{Vous seriez tout aussi revêche si vous n'étiez pas le bienvenu en votre pays. Mais ce n'est pas une raison pour manquer de respect envers autrui. Mes excuses, monsieur.}{Vous seriez tout aussi revêche si vous n'étiez pas la bienvenue en votre pays. Mais ce n'est pas une raison pour manquer de respect envers autrui. Mes excuses, madame.}{}{}{}{}
+{11}{D'où êtes-vous originaire ?}{}{5}{}{20}{}
+{12}{Je deviendrai certainement revêche si je devais regarder votre visage dans un miroir tous les matins.}{}{5}{ch13}{171}{}
+{13}{Peut-être nous reverrons-nous lorsque vous serez dans de meilleures dispositions.}{}{5}{}{0}{re-5, fl 170}
+{14}{Veuillez changer de ton ou je vous apprendrai les bonnes manières.}{}{5}{}{180}{re-15}
+{20}{Je viens de Dernholm, la capitale de Cumbria. J'ai atterri ici après avoir été chassé de ma chère Cumbria.}{Je viens de Dernholm, la capitale de Cumbria. J'ai atterri ici après avoir été chassé de ma chère Cumbria.}{}{}{}{}
+{21}{Pourtant, Racine Noire est aussi une province de Cumbria.}{}{5}{gv1001 0, gf1000 0, qa1000 1}{30}{}
+{22}{Vous feriez mieux de faire vos valises. Racine Noire s'est ralliée à Cumbria.}{}{5}{gf1000 1}{190}{}
+{23}{A quoi bon rester ? Pourquoi ne pas quitter ces lieux ?}{}{5}{gv1001 1, gf1000 0}{50}{}
+{24}{Ne craignez-vous pas que l'on vous chasse aussi de Racine Noire ?}{}{5}{gv1001 0, gf1000 0}{30}{}
+{25}{Peut-être puis-je vous être utile ?}{}{5}{}{335}{}
+{29}{Mes condoléances monsieur. Peut-être à une autre fois.}{}{5}{}{0}{}
+{30}{Ha ! De toute évidence, vous n'êtes pas là depuis longtemps. Le maire de Racine Noire a trahi Praetor et conclu une alliance avec Tarante.}{Ha ! De toute évidence, vous n'êtes pas là depuis longtemps. Le maire de Racine Noire a trahi Praetor et conclu une alliance avec Tarante.}{}{}{}{gv1001 1}
+{31}{Quelle honte ! Je me dois d'en avertir Praetor sur-le-champ !}{}{5}{qu1000 2}{40}{}
+{32}{Le roi Praetor appréciera sans doute d'apprendre cette nouvelle.}{}{5}{qu1000 1}{40}{}
+{33}{A quoi bon rester ? Pourquoi ne pas quitter ces lieux ?}{}{5}{}{50}{}
+{34}{Tant mieux. Cumbria est tout sauf mort, les dieux en soient loués.}{}{5}{}{150}{re-10}
+{35}{Quelqu'un doit faire comprendre au maire qu'il agit de manière inconsidérée.}{}{5}{qa1000 1}{160}{re+10}
+{39}{E:}{}{5}{}{0}{}
+{40}{Nombreux sont ceux qui se sont efforcés de lui faire prendre conscience de ses erreurs, mais cela n'a fait qu'éveiller son courroux. Croyez-moi, j'ai essayé.}{Nombreux sont ceux qui se sont efforcés de lui faire prendre conscience de ses erreurs, mais cela n'a fait qu'éveiller son courroux. Croyez-moi, j'ai essayé.}{}{}{}{}
+{41}{Qu'est-ce qu'un prêtre comme vous fait dans une taverne ?}{}{5}{}{100}{}
+{42}{Quelqu'un doit apprendre les bonnes manières à Praetor.}{}{5}{}{150}{re-10}
+{43}{Pourquoi ne pas quitter Cumbria pour de bon ?}{}{5}{}{50}{}
+{49}{E:}{}{5}{}{0}{}
+{50}{J'ai vécu à Cumbria toute ma vie durant. J'y suis chez moi. Je suis... j'étais à la tête de l'Eglise de Cumbria.}{J'ai vécu à Cumbria toute ma vie durant. J'y suis chez moi. Je suis... j'étais à la tête de l'Eglise de Cumbria.}{}{}{}{}
+{51}{Pourquoi n'êtes-vous plus à la tête de l'Eglise de Cumbria ?}{}{5}{}{60}{}
+{52}{La religion vous a apporté plein de bonnes choses, n'est-ce pas, mon frère ?}{}{5}{}{180}{re-15}
+{59}{E:}{}{5}{}{0}{}
+{60}{Le roi Praetor n'a plus toute sa tête. Quand l'économie de Cumbria est devenue incontrôlable, il s'en est pris à ses conseillers. Lorsque j'ai essayé de le raisonner, il m'a banni.}{Le roi Praetor n'a plus toute sa tête. Quand l'économie de Cumbria est devenue incontrôlable, il s'en est pris à ses conseillers. Lorsque j'ai essayé de le raisonner, il m'a banni.}{}{}{}{lf3 1}
+{61}{Le roi Praetor n'a jamais eu toute sa tête.}{}{5}{}{150}{re-15}
+{62}{Vous êtes stupide de vouloir ramener un fou à la raison.}{}{5}{}{180}{re-15}
+{63}{Je ne me trompe donc pas en supputant que vous n'aimez pas Praetor ?}{}{5}{}{70}{}
+{64}{Pourriez-vous m'aider ? Je viens percevoir les taxes pour Praetor ?}{}{5}{qu1000 2}{201}{lf4 1, jo 0 80}
+{65}{Pouvez-vous m'indiquer où se trouve Dernholm ?}{}{5}{ar-5}{355}{}
+{69}{E:}{}{5}{}{0}{}
+{70}{Pas du tout. Praetor a plus que jamais besoin d'aide, maintenant qu'il n'a plus toutes ses facultés. Même en exil, je défendrai mon roi jusqu'à mon dernier souffle.}{Pas du tout. Praetor a plus que jamais besoin d'aide, maintenant qu'il n'a plus toutes ses facultés. Même en exil, je défendrai mon roi jusqu'à mon dernier souffle.}{}{}{}{}
+{71}{Pourriez-vous m'aider ? Je viens percevoir les taxes pour Praetor ?}{}{5}{qu1000 2}{201}{lf4 1, jo 0 80}
+{72}{J'ai décidé de percevoir les taxes de Praetor. Pourriez-vous m'aider ?}{}{5}{qu1000 1, ps13}{201}{qu1000 2, jo 0 80}
+{73}{J'ai décidé de percevoir les taxes de Praetor. Pourriez-vous m'aider ?}{}{5}{qu1000 1, ps-12}{90}{}
+{74}{J'aimerais l'accompagner jusqu'à sa tombe.}{}{5}{}{150}{re-10}
+{75}{Pouvez-vous m'indiquer où se trouve Dernholm ?}{}{5}{ar-5}{355}{}
+{79}{E:}{}{5}{}{0}{}
+{80}{Oui, cela pourrait améliorer mes relations avec Praetor. Je le ferai avec les dieux pour témoins.}{Oui, cela pourrait améliorer mes relations avec Praetor. Je le ferai avec les dieux pour témoins.}{}{}{}{}
+{81}{Allons-y alors !}{}{5}{}{0}{}
+{82}{J'aimerais vous demander quelque chose.}{}{5}{}{220}{}
+{83}{A la vérité, je ne vous crois pas digne de m'aider.}{}{5}{}{130}{re-15}
+{90}{Je ne crois pas que Praetor apprécierait que je m'immisce dans ses affaires.}{Je ne crois pas que Praetor apprécierait que je m'immisce dans ses affaires.}{}{}{}{}
+{91}{C'est pour vous le meilleur moyen de prouver votre loyauté.}{}{5}{}{201}{re+10, lf4 1, jo 0 80}
+{92}{Je ne pense pas que vous ayez assez de cran pour entreprendre une telle tâche, en tout cas.}{}{5}{ps13}{120}{}
+{93}{Il ne serait pas en mesure de gouverner si personne ne s'immisçait dans ses affaires.}{}{5}{ch13}{110}{re+15}
+{94}{Vous êtes apparemment trop débile pour penser par vous-même.}{}{5}{ch-12}{130}{re-15}
+{95}{Je ne pense pas que vous ayez assez de cran pour entreprendre une telle tâche, en tout cas.}{}{5}{ps-12}{130}{re-15}
+{99}{Vous avez peut-être raison. Bonne journée.}{}{5}{}{0}{}
+{100}{C'est ma seconde maison. En fait, c'est le seul endroit où ma présence soit encore acceptée.}{C'est ma seconde maison. En fait, c'est le seul endroit où ma présence soit encore acceptée.}{}{}{}{}
+{101}{Je le comprends aisément, à en juger par l'odeur fétide que vous dégagez.}{}{5}{}{180}{re-15}
+{102}{Et où se trouve votre vraie maison ?}{}{5}{lf2 0}{20}{}
+{103}{D'autres villes pourraient vous accueillir, pourquoi ne pas quitter Cumbria ?}{}{5}{lf2 1}{50}{}
+{109}{Entendre ceci me désole. Au revoir.}{}{5}{}{0}{}
+{110}{Ha ! C'est plus que vrai, mon cher ami. Eh bien, la situation ne saurait être pire, n'est-ce pas ?}{Ha  C'est plus que vrai, ma chère amie. Eh bien, la situation ne saurait être pire, n'est-ce pas ?}{}{}{}{}
+{111}{Cela pourrait effectivement améliorer votre situation.}{}{5}{}{201}{jo 0 80}
+{112}{On dirait que vous êtes incapable de faire quoi que ce soit.}{}{5}{}{180}{re-15}
+{113}{A la vérité, je ne vous crois pas digne de m'aider.}{}{5}{}{130}{re-15}
+{119}{E:}{}{5}{}{0}{}
+{120}{Vous osez douter de ma capacité à m'engager, monsieur ? Je saurai vaincre les épreuves que le destin m'infligera.}{Vous osez douter de ma capacité à m'engager, madame ? Je saurai vaincre les épreuves que le destin m'infligera.}{}{}{}{}
+{121}{Alors je vous défie de me suivre, si vous en êtes capable.}{}{5}{}{201}{lf4 1, jo 0 140}
+{122}{Voyons voir si vous pouvez résister à une éventration.}{}{5}{}{0}{fl 200 ,co}
+{123}{J'en doute sincèrement. Au revoir.}{}{5}{}{0}{re-10}
+{129}{E:}{}{5}{}{0}{}
+{130}{Vous osez mettre ma parole en doute ?! Allez-vous-en avant que je ne vous étrangle, obséquieux personnage !}{Vous osez mettre ma parole en doute ?! Allez-vous-en avant que je ne vous étrangle, obséquieuse créature !}{}{}{}{}
+{131}{Si vous voulez me suivre, il faudra savoir résister à autre chose qu'à des paroles insultantes.}{}{5}{ps10}{201}{re+10, lf4 1, jo 0 140}
+{132}{Je ne peux pas me permettre de douter des personnes qui s'apprêtent à me suivre.}{}{5}{ps-9}{201}{re-10}
+{133}{Vous mourrez avant d'avoir pu faire un pas en ma direction.}{}{5}{}{0}{fl 200 ,co}
+{140}{Bien joué ! J'admire les hommes qui n'ont pas peur de montrer de quoi ils sont capables. Que tous ceux qui se dresseront en travers de notre route soient damnés ! Allez-y, monsieur, je vous suis.}{Bien joué ! J'admire les femmes qui n'ont pas peur de montrer de quoi elles sont capables. Que tous ceux qui se dresseront en travers de notre route soient damnés ! Allez-y, madame, je vous suis.}{}{}{}{}
+{141}{Allons-y alors !}{}{5}{}{0}{}
+{142}{J'aimerais vous demander quelque chose.}{}{5}{}{220}{}
+{150}{Vous feriez mieux de ne pas parler à tort et à travers. J'ai beau être en exil, je demeure un citoyen loyal de Cumbria.}{Vous feriez mieux de ne pas parler à tort et à travers. J'ai beau être en exil, je demeure un citoyen loyal de Cumbria.}{}{}{}{}
+{151}{Vous ne me ferez pas croire que vous ne nourrissez aucune animosité envers Praetor.}{}{5}{lf3 1}{70}{}
+{152}{Vous serez un peu moins loquace lorsque je vous aurai arraché la langue.}{}{5}{}{0}{fl 200 ,co}
+{153}{Comment se fait-il que vous soyez en exil ?}{}{5}{lf3 0}{60}{}
+{159}{Mille excuses, je vais prendre congé.}{}{5}{}{0}{}
+{160}{Bravo ! Bravo ! Avez-vous un plan d'action à suggérer ?}{Ecoutez ! Bravo ! Avez-vous un plan d'action à suggérer ?}{}{}{}{}
+{161}{Je percevrai la taxe de Praetor, que cela plaise ou non au maire.}{}{5}{}{201}{lf4 1, jo 0 140}
+{162}{Oui, et il vous réserve d'intenses souffrances.}{}{5}{}{0}{fl 200 ,co}
+{163}{Pas pour le moment. Si j'en trouve un, je vous le ferai savoir. Bonne journée.}{}{5}{}{0}{lf1 1}
+{170}{Bon débarras, vermine hautaine.}{Bon débarras, vermine hautaine.}{}{}{}{}
+{171}{Hé hé ! Vous êtes trop intelligent pour moi, monsieur. Je vous tire mon chapeau.}{Hé hé ! Vous êtes trop intelligente pour moi, madame. Je vous tire mon chapeau.}{}{}{}{}
+{172}{D'où êtes-vous originaire ?}{}{5}{}{20}{}
+{173}{On ne s'attend pas à voir un prêtre dans un tel établissement.}{}{5}{}{100}{}
+{174}{C'est chose aisée de berner les gens qui n'ont pas grand-chose dans la tête.}{}{5}{}{180}{re-15}
+{179}{Je n'ai pas de temps à consacrer à des joutes verbales. Je dois vous laisser.}{}{5}{}{0}{}
+{180}{Vous feriez bien de garder vos sarcasmes pour vous, monsieur.}{Vous feriez bien de garder vos sarcasmes pour vous, madame.}{}{}{}{}
+{181}{Je vous demande pardon. Où habitez-vous exactement ?}{}{5}{lf2 0, gf1000 0}{20}{}
+{182}{Je vous demande pardon. Mais pourquoi avoir été chassé de Cumbria ?}{}{5}{lf2 1, gf1000 0}{60}{}
+{183}{Je regrette. Vous devez donc en vouloir à Praetor de vous avoir banni, non ?}{}{5}{lf3 1, gf1000 0}{70}{}
+{184}{Je serai sarcastique si tel est mon désir, ignare !}{}{5}{}{0}{fl 200 ,co}
+{190}{Quoi ?! Peut-être le temps est-il venu pour moi de faire le deuil de ce cher Cumbria.}{Quoi ?! Peut-être le temps est-il venu pour moi de faire le deuil de ce cher Cumbria.}{}{}{}{}
+{191}{Ou simplement de vous défendre, espèce de couard.}{}{5}{}{180}{re-15}
+{192}{C'est un coup bas, vieil ami. Bien, peut-être vous reverrai-je.}{}{5}{}{0}{}
+{200}{J'espère que vous êtes en paix avec les dieux, car l'heure est venue de vous présenter devant eux !}{J'espère que vous êtes en paix avec les dieux, car l'heure est venue de vous présenter devant eux !}{}{}{}{}
+{201}{Y a-t-il autre chose ?}{Y a-t-il autre chose ?}{}{}{}{}
+{202}{Je n'aime pas les pleurnichards comme vous, monsieur.}{}{5}{}{0}{fl 200 ,co}
+{209}{E:}{}{5}{}{0}{}
+{210}{Y a-t-il autre chose ?}{Y a-t-il autre chose ?}{}{}{}{}
+{211}{H:}{}{5}{}{210}{}
+{212}{Je me dois de vous guider.}{}{5}{}{310}{}
+{213}{B:}{}{5}{}{210}{}
+{219}{E:}{}{5}{}{0}{}
+{220}{En quoi puis-je vous être utile ?}{En quoi puis-je vous être utile ?}{}{}{}{}
+{221}{H:}{}{5}{}{210}{}
+{222}{J'aimerais que vous fassiez quelque chose pour moi.}{}{5}{}{310}{}
+{223}{B:}{}{5}{}{210}{}
+{224}{J'aimerai savoir une ou deux choses à votre sujet, Dante.}{}{5}{}{0}{ce}
+{229}{E:}{}{5}{}{0}{}
+{255}{C'est bien agréable de vous revoir, monsieur. Peut-être puis-je encore vous être utile ?}{C'est bien agréable de vous revoir, madame. Peut-être puis-je encore vous être utile ?}{}{}{}{}
+{256}{Oui, voudriez-vous m'accompagner de nouveau dans mes quêtes ?}{}{5}{qu1000 2, gf1003 0}{201}{jo 0 270}
+{259}{Je crains que non, je dois partir.}{}{5}{}{0}{}
+{270}{J'espérais bien que vous renouvelleriez votre invitation. Quel honneur !}{J'espérais bien que vous renouvelleriez votre invitation. Quel honneur !}{}{}{}{}
+{271}{Splendide ! Allons-y.}{}{5}{}{0}{}
+{272}{H:}{}{5}{}{210}{}
+{273}{B:}{}{5}{}{210}{}
+{274}{J'aimerais que vous fassiez quelque chose pour moi, Dante.}{}{5}{}{310}{}
+{275}{Qu'est-ce que vous voulez encore ? Je vous prie de me laisser tranquille.}{Qu'est-ce que vous voulez encore ? Je vous prie de me laisser tranquille.}{}{}{}{}
+{277}{Je veux voir votre cadavre se décomposer et pourrir au soleil.}{}{5}{}{0}{fl 200 ,co}
+{278}{Comme vous voudrez. Bonne journée.}{}{5}{}{0}{}
+{300}{Y a-t-il autre chose ?}{Y a-t-il autre chose ?}{}{}{}{}
+{301}{On n'a pas l'habitude de voir un prêtre dans un tel établissement.}{}{5}{}{100}{}
+{302}{Vous êtes un peu revêche pour un prêtre, non ?}{}{5}{}{10}{}
+{303}{N:}{}{5}{}{10}{}
+{310}{Que voulez-vous que je fasse ?}{Que voulez-vous que je fasse ?}{}{}{}{}
+{311}{Pourriez-vous vous éloigner un peu ?}{}{1}{}{210}{so}
+{312}{Ne restez pas si loin de moi.}{}{1}{}{210}{sc}
+{313}{Pouvez-vous attendre ici ?}{}{1}{wa 0}{0}{wa, fl 325}
+{314}{Consentiriez-vous à me rejoindre ?}{}{1}{wa 1}{201}{uw1 270}
+{315}{Je crois que nos routes se séparent ici, Dante.}{}{1}{}{0}{lv, fl 326}
+{316}{Rien en effet.}{}{1}{}{210}{}
+{325}{Bien sûr.}{Bien sûr.}{}{}{}{}
+{326}{Peut-être nos chemins se recroiseront-ils un jour ou l'autre.}{Peut-être nos chemins se recroiseront-ils un jour ou l'autre.}{}{}{}{}
+{329}{C'est bien agréable de vous revoir, monsieur.}{C'est bien agréable de vous revoir, madame.}{}{}{}{}
+{330}{Oui, c'est là que j'habite. Je vous suis reconnaissant de m'avoir aidé à retourner à Cumbria pour pouvoir à nouveau servir mon pays.}{Oui, c'est là que se trouve ma maison. Je vous suis reconnaissant de m'avoir aidé à retourner à Cumbria pour pouvoir à nouveau servir mon pays.}{}{}{}{lf30 1, lv}
+{331}{Peut-être vous reverrai-je un jour ou l'autre.}{}{5}{}{-16}{}
+{335}{Je crains que non... Je ne peux pas vous aider.}{Je crains que non... Je ne peux pas vous aider.}{}{}{}{}
+{336}{Pouvez-vous au moins m'indiquer où se trouve Dernholm ?}{}{5}{ar-5}{345}{}
+{337}{Vous feriez mieux de faire vos valises. Racine Noire s'est ralliée à Cumbria.}{}{5}{gf1000 1}{190}{}
+{338}{A quoi bon rester ? Pourquoi ne pas quitter ces lieux ?}{}{5}{gv1001 1, gf1000 0}{50}{}
+{344}{Mes condoléances monsieur. Peut-être à une autre fois.}{}{5}{}{0}{}
+{345}{Bien sûr, voilà. [Il marque la carte.]}{Bien sûr, voilà. [Il marque la carte.]}{}{}{}{mm5}
+{346}{Je regrette d'avoir à vous le dire, mais Racine Noire s'est ralliée à Cumbria.}{}{5}{gf1000 1}{190}{}
+{347}{A quoi bon rester ? Pourquoi ne pas quitter ces lieux ?}{}{5}{gv1001 1, gf1000 0}{50}{}
+{354}{Merci. Au revoir.}{}{5}{}{0}{}
+{355}{Bien sûr, voilà. [Il marque la carte.]}{Bien sûr, voilà. [Il marque la carte.]}{}{}{}{mm5}
+{364}{Merci. Au revoir.}{}{5}{}{0}{}
+

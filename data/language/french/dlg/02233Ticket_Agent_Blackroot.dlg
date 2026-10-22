@@ -1,0 +1,396 @@
+{1}{Oui, je peux vous aider.}{Oui, je peux vous aider.}{}{}{}{}
+{2}{ Je souhaiterais réserver des places.}{}{5}{gf 2487 1}{62}{}
+{3}{ Je souhaiterais réserver des places.}{}{5}{gf 2487 0}{67}{}
+{4}{Combien coûte une réservation ?}{}{5}{gf 2487 0}{11}{}
+{5}{Quelles sont les règles qui régissent l'usage de la magie dans le train ?}{}{12}{lf 4 0, gf 2487 0}{329}{lf 4 1}
+{6}{Je souhaite me faire rembourser.}{}{5}{}{337}{}
+{7}{Moi aller Racinoua.}{}{-4}{gf 2487 1}{62}{}
+{8}{Moi aller Racinoua.}{}{-4}{gf 2487 0}{67}{}
+{9}{Vous rendre argent moi.}{}{-4}{}{337}{}
+{10}{E:}{}{1}{}{-1}{}
+{11}{La réservation coûte 75 pièces par voyageur.}{La réservation coûte 75 pièces par voyageur.}{}{}{}{}
+{12}{Je souhaite réserver des places pour Racine Noire.}{}{5}{gf 2487 1}{62}{}
+{13}{Je souhaite réserver des places pour Racine Noire.}{}{5}{gf 2487 0}{67}{}
+{14}{Quelles sont les règles qui régissent l'usage de la magie dans le train ?}{}{12}{lf 4 0}{85}{lf 4 1}
+{15}{E:}{}{1}{}{-1}{}
+{16}{Le tarif est de 75 pièces par voyageur. Combien de places souhaitez-vous réserver pour votre groupe ?}{Le tarif est de 75 pièces par voyageur. Combien de places souhaitez-vous réserver pour votre groupe ?}{}{}{}{}
+{17}{Une.}{}{1}{gv 1035 1}{163}{gv 1066 1}
+{18}{Deux.}{}{1}{gv 1035 2}{177}{gv 1066 2}
+{19}{Trois.}{}{1}{gv 1035 3}{191}{gv 1066 3}
+{20}{Quatre.}{}{1}{gv 1035 4}{205}{gv 1066 4}
+{21}{Cinq.}{}{1}{gv 1035 5}{219}{gv 1066 5}
+{22}{Six.}{}{1}{gv 1035 6}{233}{gv 1066 6}
+{23}{Sept.}{}{1}{gv 1035 7}{247}{gv 1066 7}
+{24}{Huit.}{}{1}{gv 1035 8}{261}{gv 1066 8}
+{25}{Neuf.}{}{1}{gv 1035 9}{275}{gv 1066 9}
+{26}{Dix.}{}{1}{gv 1035 10}{282}{gv 1066 10}
+{27}{Onze.}{}{1}{gv 1035 11}{289}{gv 1066 11}
+{28}{Douze.}{}{1}{gv 1035 12}{296}{gv 1066 12}
+{29}{Quel est le tarif pour les groupes importants ?}{}{1}{gv 1035 13}{303}{gv 1066 13}
+{30}{Le prix est élevé ! Proposez-vous des tarifs plus abordables ?}{}{5}{ha 12}{59}{}
+{31}{N'y a-t-il pas de tarif de groupe plus abordable ?}{}{5}{gv 1035 13, ha 12}{59}{}
+{32}{Le prix est élevé ! Proposez-vous des tarifs plus abordables ?}{}{5}{ha -11}{54}{}
+{33}{E:}{}{5}{}{-1}{}
+{34}{E:}{}{-4}{}{-1}{}
+{35}{La réservation d'une place coûte 50 pièces. Combien de places souhaitez-vous réserver pour votre groupe ?}{La réservation d'une place coûte 50 pièces. Combien de places souhaitez-vous réserver pour votre groupe ?}{}{}{}{}
+{36}{Une.}{}{1}{gv 1035 1}{156}{gv 1066 1}
+{37}{Deux.}{}{1}{gv 1035 2}{170}{gv 1066 2}
+{38}{Trois.}{}{1}{gv 1035 3}{177}{gv 1066 3}
+{39}{Quatre.}{}{1}{gv 1035 4}{184}{gv 1066 4}
+{40}{Cinq.}{}{1}{gv 1035 5}{198}{gv 1066 5}
+{41}{Six.}{}{1}{gv 1035 6}{205}{gv 1066 6}
+{42}{Sept.}{}{1}{gv 1035 7}{212}{gv 1066 7}
+{43}{Huit.}{}{1}{gv 1035 8}{226}{gv 1066 8}
+{44}{Neuf.}{}{1}{gv 1035 9}{233}{gv 1066 9}
+{45}{Dix.}{}{1}{gv 1035 10}{240}{gv 1066 10}
+{46}{Onze.}{}{1}{gv 1035 11}{254}{gv 1066 11}
+{47}{Douze.}{}{1}{gv 1035 12}{261}{gv 1066 12}
+{48}{Quel est le tarif pour les groupes importants ?}{}{1}{gv 1035 13}{268}{gv 1066 13}
+{49}{C'est encore trop cher.}{}{5}{}{-1}{}
+{50}{Moi pas avoir argent pour train.}{}{-4}{}{-1}{}
+{51}{}{}{}{}{}{}
+{52}{}{}{}{}{}{}
+{53}{}{}{}{}{}{}
+{54}{Non, il n'y a pas d'autres places disponibles. Le prix d'une réservation est de 75 pièces. Puis-je vous aider, oui ou non ?}{Non, il n'y a pas d'autres places disponibles. Le prix d'une réservation est de 75 pièces. Puis-je vous aider, oui ou non ?}{}{}{}{}
+{55}{D'accord, on ne risque rien à essayer de marchander.}{}{5}{}{16}{}
+{56}{Je ne peux voyager à ce prix.}{}{5}{}{-1}{}
+{57}{Moi essayer bon prix. Hé, hé, hé.}{}{-4}{}{16}{}
+{58}{Moi pas avoir argent pour train.}{}{-4}{}{-1}{}
+{59}{Vous avez raison ! Des places se libèrent parfois suite à des annulations. [Elle vérifie.] Justement, il nous reste quelques réservations disponibles à bas prix. C'est votre jour de chance !}{Vous avez raison ! Des places se libèrent parfois suite à des annulations. [Elle vérifie.] Justement, il nous reste quelques réservations disponibles à bas prix. C'est votre jour de chance !}{}{}{}{}
+{60}{Excellent, quel est le prix ?}{}{5}{}{35}{}
+{61}{Youpi ! Youpiiii ! Moi faire bonne affaire !}{}{-4}{}{35}{}
+{62}{Veuillez m'excuser, monsieur, mais je vois que vous avez déjà une réservation.}{Veuillez, m'excuser madame, mais je vois que vous avez déjà une réservation}{}{}{}{}
+{63}{Euh... J'ai changé d'avis. Je souhaite me faire rembourser.}{}{5}{}{337}{}
+{64}{Vous rendre argent moi.}{}{-4}{}{337}{}
+{65}{F:}{}{1}{}{-1}{}
+{66}{E:}{}{1}{}{-1}{}
+{67}{Excellent ! Mais avant tout, les règles de la compagnie exigent que je vous pose quelques questions. Votre sécurité ainsi que celle des autres passagers dépendent de l'honnêteté de vos réponses.}{Excellent ! Mais avant tout, les règles de la compagnie exigent que je vous pose quelques questions. Votre sécurité ainsi que celle des autres passagers dépendent de l'honnêteté de vos réponses.}{}{}{}{}
+{68}{Certainement.}{}{5}{}{85}{lf 15 1}
+{69}{Est-ce vraiment nécessaire ?}{}{5}{lf 15 1, ps -14}{78}{}
+{70}{Est-ce vraiment nécessaire ?}{}{5}{lf 15 1, ps 15}{334}{}
+{71}{Euh.}{}{-4}{}{85}{}
+{72}{E:}{}{1}{}{-1}{}
+{73}{}{}{}{}{}{}
+{74}{Que puis-je faire pour vous ?}{Que puis-je faire pour vous ?}{}{}{}{}
+{75}{Je souhaite réserver des places pour Racine Noire.}{}{5}{}{67}{}
+{76}{Je souhaite me faire rembourser.}{}{5}{}{337}{}
+{77}{E:}{}{1}{}{-1}{}
+{78}{Je regrette, mais le règlement est le règlement ! Un peu de patience, voyons. Cela ne prendra qu'un moment et c'est dans votre intérêt.}{Je regrette, mais le règlement est le règlement ! Un peu de patience, voyons. Cela ne prendra qu'un moment et c'est dans votre intérêt.}{}{}{}{}
+{79}{Dans ce cas, posez-moi donc vos satanées questions !}{}{5}{}{85}{re -5}
+{80}{Je comprends.}{}{5}{}{85}{}
+{81}{D'accord.}{}{5}{}{85}{}
+{82}{Guh.}{}{-4}{}{85}{}
+{83}{Euh.}{}{-4}{}{85}{}
+{84}{Hum.}{}{-4}{}{85}{}
+{85}{Y a-t-il dans votre groupe un adepte de la magie ou une personne d'origine elfique ?}{Y a-t-il dans votre groupe un adepte de la magie ou une personne d'origine elfique ?}{}{}{}{lf 4 1}
+{86}{Non.}{}{5}{}{99}{}
+{87}{Oui.}{}{5}{}{92}{}
+{88}{Nooooon.}{}{-4}{}{99}{}
+{89}{Ouais, ouais.}{}{-4}{}{92}{}
+{90}{E:}{}{1}{}{-1}{}
+{91}{}{}{}{}{}{}
+{92}{Comment définiriez-vous le membre de votre groupe le plus versé dans la magie ?}{Comment définiriez-vous le membre de votre groupe le plus versé dans la magie ?}{}{}{}{}
+{93}{Comme un adepte de magie faiblement complexe.}{}{5}{}{99}{}
+{94}{Comme un adepte de magie modérément complexe.}{}{5}{}{99}{}
+{95}{Comme un adepte de magie très complexe.}{}{5}{}{142}{}
+{96}{Faire magie la, la, la...}{}{-4}{}{99}{}
+{97}{Faire magie boum, boum ...}{}{-4}{}{142}{}
+{98}{E:}{}{1}{}{-1}{}
+{99}{Transportez-vous des articles magiques ? Des personnes extérieures au groupe vous ont-elles demandé de transporter des articles magiques ?}{Transportez-vous des articles magiques ? Des personnes extérieures au groupe vous ont-elles demandé de transporter des articles magiques ?}{}{}{}{}
+{100}{Non.}{}{5}{}{114}{}
+{101}{Oui.}{}{5}{}{107}{}
+{102}{Moi penser non.}{}{-4}{}{114}{}
+{103}{Moi penser oui.}{}{-4}{}{107}{}
+{104}{E:}{}{1}{}{-1}{}
+{105}{}{}{}{}{}{}
+{106}{}{}{}{}{}{}
+{107}{Les articles magiques que vous transportez sont-ils chargés en énergie, feu explosif, chaleur, froid ou électricité ?}{Les articles magiques que vous transportez sont-ils chargés en énergie, feu explosif, chaleur, froid ou électricité ?}{}{}{}{}
+{108}{Non.}{}{5}{}{114}{}
+{109}{Oui, j'en ai bien peur.}{}{5}{}{142}{}
+{110}{Moi dire non.}{}{-4}{}{114}{}
+{111}{Moi dire oui.}{}{-4}{}{142}{}
+{112}{E:}{}{1}{}{-1}{}
+{113}{}{}{}{}{}{}
+{114}{Dans laquelle de ces catégories classeriez-vous votre âge physique ? A - Moins de 100 ans. B - Entre 100 et 200 ans. C - Entre 200 et 500 ans. D - Plus de 500 ans.}{Dans laquelle de ces catégories classeriez-vous votre âge physique ? A - Moins de 100 ans. B - Entre 100 et 200 ans. C - Entre 200 et 500 ans. D - Plus de 500 ans.}{}{}{}{}
+{115}{A - Moins de 100 ans.}{}{1}{}{121}{}
+{116}{B - Entre 100 et 200 ans.}{}{1}{}{121}{}
+{117}{C - Entre 200 et 500 ans.}{}{1}{}{142}{}
+{118}{D - Plus de 500 ans.}{}{1}{}{142}{}
+{119}{E:}{}{1}{}{-1}{}
+{120}{}{}{}{}{}{}
+{121}{Voyagez-vous avec des élémentaires invoqués, des morts-vivants, des envoûtés, des pétrifiés ou des personnes physiquement diminuées qui auront besoin de temps et d'assistance pour monter dans le train ?}{Voyagez-vous avec des élémentaires invoqués, des morts-vivants, des envoûtés, des pétrifiés ou des personnes physiquement diminuées qui auront besoin de temps et d'assistance pour monter dans le train ?}{}{}{}{}
+{122}{Non.}{}{5}{}{128}{}
+{123}{Oui.}{}{5}{}{142}{}
+{124}{Euh... Hum... Moi dire non.}{}{-4}{}{128}{}
+{125}{Ouais, ouais, ouais.}{}{-4}{}{142}{}
+{126}{E:}{}{1}{}{-1}{}
+{127}{}{}{}{}{}{}
+{128}{Avez-vous la connaissance ou l'usage, ou bien possédez-vous des parchemins ou des articles magiques chargés des sortilèges suivants :  Boule de Feu, Incarnation de Feu, Appel d'un élémentaire du Feu, Choc électrique, Eclair, Désintégration, Altération temporelle, Stase, Hâte ou Tempus Fugit ? }{Avez-vous la connaissance ou l'usage, ou bien possédez-vous des parchemins ou des articles magiques chargés des sortilèges suivants :  Boule de Feu, Incarnation de Feu, Appel d'un élémentaire du Feu, Choc électrique, Eclair, Désintégration, Altération temporelle, Stase, Hâte ou Tempus Fugit ? }{}{}{}{}
+{129}{Non.}{}{5}{}{149}{}
+{130}{Oui.}{}{5}{}{142}{}
+{131}{Moi dire non.}{}{-4}{}{149}{}
+{132}{Moi dire ouais, ouais.}{}{-4}{}{142}{}
+{133}{E:}{}{1}{}{-1}{}
+{134}{}{}{}{}{}{}
+{135}{}{}{}{}{}{}
+{136}{}{}{}{}{}{}
+{137}{}{}{}{}{}{}
+{138}{}{}{}{}{}{}
+{139}{}{}{}{}{}{}
+{140}{}{}{}{}{}{}
+{141}{}{}{}{}{}{}
+{142}{Je vous remercie pour vos réponses. Vous allez devoir voyager dans le wagon des mages. Celui-ci est situé en queue de train. Le contrôleur responsable vous aidera à monter à bord.}{Je vous remercie pour vos réponses. Vous allez devoir voyager dans le wagon des mages. Celui-ci est situé en queue de train. Le contrôleur responsable vous aidera à monter à bord.}{}{}{}{}
+{143}{Oui, cela me paraît fort raisonnable.}{}{5}{}{16}{}
+{144}{Je comprends. Je souhaiterais réserver des places.}{}{5}{}{16}{}
+{145}{Je refuse de voyager autrement qu'en première classe.}{}{5}{}{-1}{}
+{146}{Moi devoir donc moi faire.}{}{-4}{}{16}{}
+{147}{Moi pas aller.}{}{-4}{}{-1}{}
+{148}{E:}{}{1}{}{-1}{}
+{149}{Je vous remercie pour vos réponses. Vous êtes admissible en première classe. Le contrôleur en tête de train va vous assister.}{Je vous remercie pour vos réponses. Vous êtes admissible en première classe. Le contrôleur en tête de train va vous assister.}{}{}{}{}
+{150}{Excellent.}{}{5}{}{16}{}
+{151}{Je souhaiterais réserver des places.}{}{5}{}{16}{}
+{152}{Moi devoir donc moi faire.}{}{-4}{}{16}{}
+{153}{Moi pas aller.}{}{-4}{}{-1}{}
+{154}{E:}{}{1}{}{-1}{}
+{155}{}{}{}{}{}{}
+{156}{Le montant total de vos réservations s'élève à 50 pièces.}{Le montant total de vos réservations s'élève à 50 pièces.}{}{}{}{}
+{157}{Oui, confirmez la réservation, je vous prie.}{}{5}{$$ 50}{310}{$$ -50, gf 2487 1}
+{158}{Moi aller Racinoua.}{}{-4}{$$ 50}{310}{$$ -50, gf 2487 1}
+{159}{Je n'ai pas suffisamment d'argent.}{}{5}{$$-49}{-1}{gv1066 0,    fl 313}
+{160}{Moi pas avoir argent.}{}{-4}{$$-49}{-1}{gv1066 0,    fl 313}
+{161}{F:}{}{1}{}{-1}{gv1066 0,    fl 313}
+{162}{}{}{}{}{}{}
+{163}{Le montant total de vos réservations s'élève à 75 pièces.}{Le montant total de vos réservations s'élève à 75 pièces.}{}{}{}{}
+{164}{Oui, confirmez la réservation, je vous prie.}{}{5}{$$ 75}{310}{$$ -75, gf 2487 1}
+{165}{Moi aller Racinoua.}{}{-4}{$$ 75}{310}{$$ -75, gf 2487 1}
+{166}{Je n'ai pas suffisamment d'argent.}{}{5}{$$-74}{-1}{gv1066 0,    fl 313}
+{167}{Moi pas avoir argent.}{}{-4}{$$-74}{-1}{gv1066 0,    fl 313}
+{168}{F:}{}{1}{}{-1}{gv1066 0,    fl 313}
+{169}{}{}{}{}{}{}
+{170}{Le montant total de vos réservations s'élève à 100 pièces.}{Le montant total de vos réservations s'élève à 100 pièces.}{}{}{}{}
+{171}{Oui, confirmez la réservation, je vous prie.}{}{5}{$$ 100}{310}{$$ -100, gf 2487 1}
+{172}{Moi aller Racinoua.}{}{-4}{$$ 100}{310}{$$ -100, gf 2487 1}
+{173}{Je n'ai pas suffisamment d'argent.}{}{5}{$$-99}{-1}{gv1066 0,    fl 313}
+{174}{Moi pas avoir argent.}{}{-4}{$$-99}{-1}{gv1066 0,    fl 313}
+{175}{F:}{}{1}{}{-1}{gv1066 0,    fl 313}
+{176}{}{}{}{}{}{}
+{177}{Le montant total de vos réservations s'élève à 150 pièces.}{Le montant total de vos réservations s'élève à 150 pièces.}{}{}{}{}
+{178}{Oui, confirmez la réservation, je vous prie.}{}{5}{$$ 150}{310}{$$-150, gf 2487 1}
+{179}{Moi aller Racinoua.}{}{-4}{$$ 150}{310}{$$-150, gf 2487 1}
+{180}{Je n'ai pas suffisamment d'argent.}{}{5}{$$-149}{-1}{gv1066 0,    fl 313}
+{181}{Moi pas avoir argent.}{}{-4}{$$-149}{-1}{gv1066 0,    fl 313}
+{182}{F:}{}{1}{}{-1}{gv1066 0,    fl 313}
+{183}{}{}{}{}{}{}
+{184}{Le montant total de vos réservations s'élève à 200 pièces.}{Le montant total de vos réservations s'élève à 200 pièces.}{}{}{}{}
+{185}{Oui, confirmez la réservation, je vous prie.}{}{5}{$$ 200}{310}{$$-200, gf 2487 1}
+{186}{Moi aller Racinoua.}{}{-4}{$$ 200}{310}{$$-200, gf 2487 1}
+{187}{Je n'ai pas suffisamment d'argent.}{}{5}{$$-199}{-1}{gv1066 0,    fl 313}
+{188}{Moi pas avoir argent.}{}{-4}{$$-199}{-1}{gv1066 0,    fl 313}
+{189}{F:}{}{1}{}{-1}{gv1066 0,    fl 313}
+{190}{}{}{}{}{}{}
+{191}{Le montant total de vos réservations s'élève à 225 pièces.}{Le montant total de vos réservations s'élève à 225 pièces.}{}{}{}{}
+{192}{Oui, confirmez la réservation, je vous prie.}{}{5}{$$ 225}{310}{$$-225, gf 2487 1}
+{193}{Moi aller Racinoua.}{}{-4}{$$ 225}{310}{$$-225, gf 2487 1}
+{194}{Je n'ai pas suffisamment d'argent.}{}{5}{$$-224}{-1}{gv1066 0,    fl 313}
+{195}{Moi pas avoir argent.}{}{-4}{$$-224}{-1}{gv1066 0,    fl 313}
+{196}{F:}{}{1}{}{-1}{gv1066 0,    fl 313}
+{197}{}{}{}{}{}{}
+{198}{Le montant total de vos réservations s'élève à 250 pièces.}{Le montant total de vos réservations s'élève à 250 pièces.}{}{}{}{}
+{199}{Oui, confirmez la réservation, je vous prie.}{}{5}{$$ 250}{310}{$$-250, gf 2487 1}
+{200}{Moi aller Racinoua.}{}{-4}{$$ 250}{310}{$$-250, gf 2487 1}
+{201}{Je n'ai pas suffisamment d'argent.}{}{5}{$$-249}{-1}{gv1066 0,    fl 313}
+{202}{Moi pas avoir argent.}{}{-4}{$$-249}{-1}{gv1066 0,    fl 313}
+{203}{F:}{}{1}{}{-1}{gv1066 0,    fl 313}
+{204}{}{}{}{}{}{}
+{205}{Le montant total de vos réservations s'élève à 300 pièces.}{Le montant total de vos réservations s'élève à 300 pièces.}{}{}{}{}
+{206}{Oui, confirmez la réservation, je vous prie.}{}{5}{$$ 300}{310}{$$-300, gf 2487 1}
+{207}{Moi aller Racinoua.}{}{-4}{$$ 300}{310}{$$-300, gf 2487 1}
+{208}{Je n'ai pas suffisamment d'argent.}{}{5}{$$-299}{-1}{gv1066 0,    fl 313}
+{209}{Moi pas avoir argent.}{}{-4}{$$-299}{-1}{gv1066 0,    fl 313}
+{210}{F:}{}{1}{}{-1}{gv1066 0,    fl 313}
+{211}{}{}{}{}{}{}
+{212}{Le montant total de vos réservations s'élève à 350 pièces.}{Le montant total de vos réservations s'élève à 350 pièces.}{}{}{}{}
+{213}{Oui, confirmez la réservation, je vous prie.}{}{5}{$$ 350}{310}{$$-350, gf 2487 1}
+{214}{Moi aller Racinoua.}{}{-4}{$$ 350}{310}{$$-350, gf 2487 1}
+{215}{Je n'ai pas suffisamment d'argent.}{}{5}{$$-349}{-1}{gv1066 0,    fl 313}
+{216}{Moi pas avoir argent.}{}{-4}{$$-349}{-1}{gv1066 0,    fl 313}
+{217}{F:}{}{1}{}{-1}{gv1066 0,    fl 313}
+{218}{}{}{}{}{}{}
+{219}{Le montant total de vos réservations s'élève à 375 pièces.}{Le montant total de vos réservations s'élève à 375 pièces.}{}{}{}{}
+{220}{Oui, confirmez la réservation, je vous prie.}{}{5}{$$ 375}{310}{$$-375, gf 2487 1}
+{221}{Moi aller Racinoua.}{}{-4}{$$ 375}{310}{$$-375, gf 2487 1}
+{222}{Je n'ai pas suffisamment d'argent.}{}{5}{$$-374}{-1}{gv1066 0,    fl 313}
+{223}{Moi pas avoir argent.}{}{-4}{$$-374}{-1}{gv1066 0,    fl 313}
+{224}{F:}{}{1}{}{-1}{gv1066 0,    fl 313}
+{225}{}{}{}{}{}{}
+{226}{Le montant total de vos réservations s'élève à 400 pièces.}{Le montant total de vos réservations s'élève à 400 pièces.}{}{}{}{}
+{227}{Oui, confirmez la réservation, je vous prie.}{}{5}{$$ 400}{310}{$$-400, gf 2487 1}
+{228}{Moi aller Racinoua.}{}{-4}{$$ 400}{310}{$$-400, gf 2487 1}
+{229}{Je n'ai pas suffisamment d'argent.}{}{5}{$$-399}{-1}{gv1066 0,    fl 313}
+{230}{Moi pas avoir argent.}{}{-4}{$$-399}{-1}{gv1066 0,    fl 313}
+{231}{F:}{}{1}{}{-1}{gv1066 0,    fl 313}
+{232}{}{}{}{}{}{}
+{233}{Le montant total de vos réservations s'élève à 450 pièces.}{Le montant total de vos réservations s'élève à 450 pièces.}{}{}{}{}
+{234}{Oui, confirmez la réservation, je vous prie.}{}{5}{$$ 450}{310}{$$-450, gf 2487 1}
+{235}{Moi aller Racinoua.}{}{-4}{$$ 450}{310}{$$-450, gf 2487 1}
+{236}{Je n'ai pas suffisamment d'argent.}{}{5}{$$-449}{-1}{gv1066 0,    fl 313}
+{237}{Moi pas avoir argent.}{}{-4}{$$-449}{-1}{gv1066 0,    fl 313}
+{238}{F:}{}{1}{}{-1}{gv1066 0,    fl 313}
+{239}{}{}{}{}{}{}
+{240}{Le montant total de vos réservations s'élève à 500 pièces.}{Le montant total de vos réservations s'élève à 500 pièces.}{}{}{}{}
+{241}{Oui, confirmez la réservation, je vous prie.}{}{5}{$$ 500}{310}{$$-500, gf 2487 1}
+{242}{Moi aller Racinoua.}{}{-4}{$$ 500}{310}{$$-500, gf 2487 1}
+{243}{Je n'ai pas suffisamment d'argent.}{}{5}{$$-499}{-1}{gv1066 0,    fl 313}
+{244}{Moi pas avoir argent.}{}{-4}{$$-499}{-1}{gv1066 0,    fl 313}
+{245}{F:}{}{1}{}{-1}{gv1066 0,    fl 313}
+{246}{}{}{}{}{}{}
+{247}{Le montant total de vos réservations s'élève à 525 pièces.}{Le montant total de vos réservations s'élève à 525 pièces.}{}{}{}{}
+{248}{Oui, confirmez la réservation, je vous prie.}{}{5}{$$ 525}{310}{$$-525, gf 2487 1}
+{249}{Moi aller Racinoua.}{}{-4}{$$ 525}{310}{$$-525, gf 2487 1}
+{250}{Je n'ai pas suffisamment d'argent.}{}{5}{$$-524}{-1}{gv1066 0,    fl 313}
+{251}{Moi pas avoir argent.}{}{-4}{$$-524}{-1}{gv1066 0,    fl 313}
+{252}{F:}{}{1}{}{-1}{gv1066 0,    fl 313}
+{253}{}{}{}{}{}{}
+{254}{Le montant total de vos réservations s'élève à 550 pièces.}{Le montant total de vos réservations s'élève à 550 pièces.}{}{}{}{}
+{255}{Oui, confirmez la réservation, je vous prie.}{}{5}{$$ 550}{310}{$$-550, gf 2487 1}
+{256}{Moi aller Racinoua.}{}{-4}{$$ 550}{310}{$$-550, gf 2487 1}
+{257}{Je n'ai pas suffisamment d'argent.}{}{5}{$$-549}{-1}{gv1066 0,    fl 313}
+{258}{Moi pas avoir argent.}{}{-4}{$$-549}{-1}{gv1066 0,    fl 313}
+{259}{F:}{}{1}{}{-1}{gv1066 0,    fl 313}
+{260}{}{}{}{}{}{}
+{261}{Le montant total de vos réservations s'élève à 600 pièces.}{Le montant total de vos réservations s'élève à 600 pièces.}{}{}{}{}
+{262}{Oui, confirmez la réservation, je vous prie.}{}{5}{$$ 600}{310}{$$-600, gf 2487 1}
+{263}{Moi aller Racinoua.}{}{-4}{$$ 600}{310}{$$-600, gf 2487 1}
+{264}{Je n'ai pas suffisamment d'argent.}{}{5}{$$-599}{-1}{gv1066 0,    fl 313}
+{265}{Moi pas avoir argent.}{}{-4}{$$-599}{-1}{gv1066 0,    fl 313}
+{266}{F:}{}{1}{}{-1}{gv1066 0,    fl 313}
+{267}{}{}{}{}{}{}
+{268}{Le montant total de vos réservations s'élève à 650 pièces.}{Le montant total de vos réservations s'élève à 650 pièces.}{}{}{}{}
+{269}{Oui, confirmez la réservation, je vous prie.}{}{5}{$$ 650}{310}{$$-650, gf 2487 1}
+{270}{Moi aller Racinoua.}{}{-4}{$$ 650}{310}{$$-650, gf 2487 1}
+{271}{Je n'ai pas suffisamment d'argent.}{}{5}{$$-649}{-1}{gv1066 0,    fl 313}
+{272}{Moi pas avoir argent.}{}{-4}{$$-649}{-1}{gv1066 0,    fl 313}
+{273}{F:}{}{1}{}{-1}{gv1066 0,    fl 313}
+{274}{}{}{}{}{}{}
+{275}{Le montant total de vos réservations s'élève à 675 pièces.}{Le montant total de vos réservations s'élève à 675 pièces.}{}{}{}{}
+{276}{Oui, confirmez la réservation, je vous prie.}{}{5}{$$ 675}{310}{$$-675, gf 2487 1}
+{277}{Moi aller Racinoua.}{}{-4}{$$ 675}{310}{$$-675, gf 2487 1}
+{278}{Je n'ai pas suffisamment d'argent.}{}{5}{$$-674}{-1}{gv1066 0,    fl 313}
+{279}{Moi pas avoir argent.}{}{-4}{$$-674}{-1}{gv1066 0,    fl 313}
+{280}{F:}{}{1}{}{-1}{gv1066 0,    fl 313}
+{281}{}{}{}{}{}{}
+{282}{Le montant total de vos réservations s'élève à 750 pièces.}{Le montant total de vos réservations s'élève à 750 pièces.}{}{}{}{}
+{283}{Oui, confirmez la réservation, je vous prie.}{}{5}{$$ 750}{310}{$$-750, gf 2487 1}
+{284}{Moi aller Racinoua.}{}{-4}{$$ 750}{310}{$$-750, gf 2487 1}
+{285}{Je n'ai pas suffisamment d'argent.}{}{5}{$$-749}{-1}{gv1066 0,    fl 313}
+{286}{Moi pas avoir argent.}{}{-4}{$$-749}{-1}{gv1066 0,    fl 313}
+{287}{F:}{}{1}{}{-1}{gv1066 0,    fl 313}
+{288}{}{}{}{}{}{}
+{289}{Le montant total de vos réservations s'élève à 825 pièces.}{Le montant total de vos réservations s'élève à 825 pièces.}{}{}{}{}
+{290}{Oui, confirmez la réservation, je vous prie.}{}{5}{$$ 825}{310}{$$-825, gf 2487 1}
+{291}{Moi aller Racinoua.}{}{-4}{$$ 825}{310}{$$-825, gf 2487 1}
+{292}{Je n'ai pas suffisamment d'argent.}{}{5}{$$-824}{-1}{gv1066 0,    fl 313}
+{293}{Moi pas avoir argent.}{}{-4}{$$-824}{-1}{gv1066 0,    fl 313}
+{294}{F:}{}{1}{}{-1}{gv1066 0,    fl 313}
+{295}{}{}{}{}{}{}
+{296}{Le montant total de vos réservations s'élève à 900 pièces.}{Le montant total de vos réservations s'élève à 900 pièces.}{}{}{}{}
+{297}{Oui, confirmez la réservation, je vous prie.}{}{5}{$$ 900}{310}{$$-900, gf 2487 1}
+{298}{Moi aller Racinoua.}{}{-4}{$$ 900}{310}{$$-900, gf 2487 1}
+{299}{Je n'ai pas suffisamment d'argent.}{}{5}{$$-899}{-1}{gv1066 0,    fl 313}
+{300}{Moi pas avoir argent.}{}{-4}{$$-899}{-1}{gv1066 0,    fl 313}
+{301}{F:}{}{1}{}{-1}{gv1066 0,    fl 313}
+{302}{}{}{}{}{}{}
+{303}{Le montant total de vos réservations s'élève à 975 pièces.}{Le montant total de vos réservations s'élève à 975 pièces.}{}{}{}{}
+{304}{Oui, confirmez la réservation, je vous prie.}{}{5}{$$ 975}{310}{$$-975, gf 2487 1}
+{305}{Moi aller Racinoua.}{}{-4}{$$ 975}{310}{$$-975, gf 2487 1}
+{306}{Je n'ai pas suffisamment d'argent.}{}{5}{$$-974}{-1}{gv1066 0,    fl 313}
+{307}{Moi pas avoir argent.}{}{-4}{$$-974}{-1}{gv1066 0,    fl 313}
+{308}{F:}{}{1}{}{-1}{gv1066 0,    fl 313}
+{309}{}{}{}{}{}{}
+{310}{Vos réservations sont faites. Le quai se trouve sur votre gauche.}{Vos réservations sont faites. Le quai se trouve sur votre gauche.}{}{}{}{}
+{311}{Merci.}{}{5}{}{-1}{}
+{312}{Euh...}{}{-4}{}{-1}{}
+{313}{Je regrette, monsieur, mais vous devrez revenir lorsque vous aurez l'argent.}{Je regrette, madame, mais vous devrez revenir lorsque vous aurez l'argent.}{}{}{}{}
+{314}{}{}{}{}{}{}
+{315}{}{}{}{}{}{}
+{316}{}{}{}{}{}{}
+{317}{}{}{}{}{}{}
+{318}{}{}{}{}{}{}
+{319}{}{}{}{}{}{}
+{320}{J'ai peur de ne pas trouver trace de votre réservation. Dans ces conditions, je ne peux pas vous rembourser. Vous devez faire erreur, monsieur.}{J'ai peur de ne pas trouver trace de votre réservation. Dans ces conditions, je ne peux pas vous rembourser. Vous devez faire erreur, madame.}{}{}{}{}
+{321}{F:}{}{5}{}{-1}{}
+{322}{E:}{}{5}{}{-1}{}
+{323}{F:}{}{-4}{}{-1}{}
+{324}{E:}{}{-4}{}{-1}{}
+{325}{[Elle vous rend votre argent.] Voici votre remboursement, monsieur. A l'avenir, veuillez éviter de faire des réservations inutiles, je vous prie. Les annulations peuvent créer des problèmes et causer des désagréments aux autres voyageurs. Vous me comprenez, n'est-ce pas ? Merci de votre coopération, monsieur.}{[Elle vous rend votre argent.] Voici votre remboursement, madame. A l'avenir, veuillez éviter de faire des réservations inutiles, je vous prie. Les annulations peuvent créer des problèmes et causer des désagréments aux autres voyageurs. Vous me comprenez, n'est-ce pas ? Merci de votre coopération, madame.}{}{}{}{}
+{326}{E:}{}{5}{}{-1}{}
+{327}{E:}{}{-4}{}{-1}{}
+{328}{}{}{}{}{}{}
+{329}{Merci d'avoir posé la question. Les forces magiques affectent le bon fonctionnement des appareils mécaniques. La locomotive de notre train utilise une machinerie extrêmement complexe, qui pourrait ne pas fonctionner en présence de forces magiques. Dans le cas d'un train, cela pourrait se révéler désastreux !}{Merci d'avoir posé la question. Les forces magiques affectent le bon fonctionnement des appareils mécaniques. La locomotive de notre train utilise une machinerie extrêmement complexe, qui pourrait ne pas fonctionner en présence de forces magiques. Dans le cas d'un train, cela pourrait se révéler désastreux !}{}{}{}{}
+{330}{Oui.}{}{5}{}{332}{}
+{331}{Dites-m'en plus.}{}{5}{}{332}{}
+{332}{Par conséquent, nous interrogeons tous les passagers afin d'évaluer leur nature magique. Les personnes montrant un potentiel magique important doivent voyager aussi loin que possible de la locomotive afin de minimiser les risques d'accident. Voilà pourquoi la dernière voiture du train est appelée wagon des mages.}{Par conséquent, nous interrogeons tous les passagers afin d'évaluer leur nature magique. Les personnes montrant un potentiel magique important doivent voyager aussi loin que possible de la locomotive afin de minimiser les risques d'accident. Voilà pourquoi la dernière voiture du train est appelée wagon des mages.}{}{}{}{}
+{333}{Je vois, je vous remercie pour ces renseignements.}{}{5}{}{74}{}
+{334}{Eh bien je vais faire une exception pour vous... [clin d'oeil] J'ai la certitude que vous ne nous causerez aucun problème.}{Eh bien je vais faire une exception pour vous... [clin d'oeil] J'ai la certitude que vous ne nous causerez aucun problème.}{}{}{}{}
+{335}{Mais bien sûr.}{}{5}{}{16}{}
+{336}{}{}{}{}{}{}
+{337}{[Soupir.] Vraiment ? Il existe des frais non remboursables de 25 pièces par réservation, ceci pour la plupart des billets.}{[Soupir.] Vraiment ? Il existe des frais non remboursables de 25 pièces par réservation, ceci pour la plupart des billets.}{}{}{}{}
+{338}{D'accord.}{}{1}{}{339}{}
+{339}{Quel peut bien être le problème ?}{Quel peut bien être le problème ?}{}{}{}{}
+{340}{Ils n'ont pas accepté que je monte dans le train.}{}{5}{gv 1066 1}{325}{$$ 50, gv1066 0, gf2487 0}
+{341}{Ils n'ont pas accepté que nous montions dans le train.}{}{5}{gv 1066 2}{325}{$$ 100, gv1066 0, gf2487 0}
+{342}{Ils n'ont pas accepté que nous montions dans le train.}{}{5}{gv 1066 3}{325}{$$ 150, gv1066 0, gf2487 0}
+{343}{Ils n'ont pas accepté que nous montions dans le train.}{}{5}{gv 1066 4}{325}{$$ 200, gv1066 0, gf2487 0}
+{344}{Ils n'ont pas accepté que nous montions dans le train.}{}{5}{gv 1066 5}{325}{$$ 250, gv1066 0, gf2487 0}
+{345}{Ils n'ont pas accepté que nous montions dans le train.}{}{5}{gv 1066 6}{325}{$$ 300, gv1066 0, gf2487 0}
+{346}{Ils n'ont pas accepté que nous montions dans le train.}{}{5}{gv 1066 7}{325}{$$ 350, gv1066 0, gf2487 0}
+{347}{Ils n'ont pas accepté que nous montions dans le train.}{}{5}{gv 1066 8}{325}{$$ 400, gv1066 0, gf2487 0}
+{348}{Ils n'ont pas accepté que nous montions dans le train.}{}{5}{gv 1066 9}{325}{$$ 450, gv1066 0, gf2487 0}
+{349}{Ils n'ont pas accepté que nous montions dans le train.}{}{5}{gv 1066 10}{325}{$$ 500, gv1066 0, gf2487 0}
+{350}{Ils n'ont pas accepté que nous montions dans le train.}{}{5}{gv 1066 11}{325}{$$ 550, gv1066 0, gf2487 0}
+{351}{Ils n'ont pas accepté que nous montions dans le train.}{}{5}{gv 1066 12}{325}{$$ 600, gv1066 0, gf2487 0}
+{352}{Ils n'ont pas accepté que nous montions dans le train.}{}{5}{gv 1066 13}{325}{$$ 650, gv1066 0, gf2487 0}
+{353}{Ils n'ont pas accepté que nous montions dans le train.}{}{5}{gv 1066 0}{320}{}
+{354}{Homme dire pas monter tchou tchou.}{}{-4}{gv 1066 1}{325}{$$ 50, gv1066 0, gf2487 0}
+{355}{Homme dire pas monter tchou tchou.}{}{-4}{gv 1066 2}{325}{$$ 100, gv1066 0, gf2487 0}
+{356}{Homme dire pas monter tchou tchou.}{}{-4}{gv 1066 3}{325}{$$ 150, gv1066 0, gf2487 0}
+{357}{Homme dire pas monter tchou tchou.}{}{-4}{gv 1066 4}{325}{$$ 200, gv1066 0, gf2487 0}
+{358}{Homme dire pas monter tchou tchou.}{}{-4}{gv 1066 5}{325}{$$ 250, gv1066 0, gf2487 0}
+{359}{Homme dire pas monter tchou tchou.}{}{-4}{gv 1066 6}{325}{$$ 300, gv1066 0, gf2487 0}
+{360}{Homme dire pas monter tchou tchou.}{}{-4}{gv 1066 7}{325}{$$ 350, gv1066 0, gf2487 0}
+{361}{Homme dire pas monter tchou tchou.}{}{-4}{gv 1066 8}{325}{$$ 400, gv1066 0, gf2487 0}
+{362}{Homme dire pas monter tchou tchou.}{}{-4}{gv 1066 9}{325}{$$ 450, gv1066 0, gf2487 0}
+{363}{Homme dire pas monter tchou tchou.}{}{-4}{gv 1066 10}{325}{$$ 500, gv1066 0, gf2487 0}
+{364}{Homme dire pas monter tchou tchou.}{}{-4}{gv 1066 11}{325}{$$ 550, gv1066 0, gf2487 0}
+{365}{Homme dire pas monter tchou tchou.}{}{-4}{gv 1066 12}{325}{$$ 600, gv1066 0, gf2487 0}
+{366}{Homme dire pas monter tchou tchou.}{}{-4}{gv 1066 13}{325}{$$ 650, gv1066 0, gf2487 0}
+{367}{Homme dire pas monter tchou tchou.}{}{-4}{gv 1066 0}{320}{}
+{368}{Nos plans ont changé.}{}{5}{gv 1066 1}{325}{$$ 50, gv1066 0, gf2487 0}
+{369}{Nos plans ont changé.}{}{5}{gv 1066 2}{325}{$$ 100, gv1066 0, gf2487 0}
+{370}{Nos plans ont changé.}{}{5}{gv 1066 3}{325}{$$ 150, gv1066 0, gf2487 0}
+{371}{Nos plans ont changé.}{}{5}{gv 1066 4}{325}{$$ 200, gv1066 0, gf2487 0}
+{372}{Nos plans ont changé.}{}{5}{gv 1066 5}{325}{$$ 250, gv1066 0, gf2487 0}
+{373}{Nos plans ont changé.}{}{5}{gv 1066 6}{325}{$$ 300, gv1066 0, gf2487 0}
+{374}{Nos plans ont changé.}{}{5}{gv 1066 7}{325}{$$ 350, gv1066 0, gf2487 0}
+{375}{Nos plans ont changé.}{}{5}{gv 1066 8}{325}{$$ 400, gv1066 0, gf2487 0}
+{376}{Nos plans ont changé.}{}{5}{gv 1066 9}{325}{$$ 450, gv1066 0, gf2487 0}
+{377}{Nos plans ont changé.}{}{5}{gv 1066 10}{325}{$$ 500, gv1066 0, gf2487 0}
+{378}{Nos plans ont changé.}{}{5}{gv 1066 11}{325}{$$ 550, gv1066 0, gf2487 0}
+{379}{Nos plans ont changé.}{}{5}{gv 1066 12}{325}{$$ 600, gv1066 0, gf2487 0}
+{380}{Nos plans ont changé.}{}{5}{gv 1066 13}{325}{$$ 650, gv1066 0, gf2487 0}
+{381}{Moi dire pas partir. Moi pas comprendre. Vous rendre argent moi !}{}{-4}{gv 1066 1}{325}{$$ 50, gv1066 0, gf2487 0}
+{382}{Moi dire pas partir. Moi pas comprendre. Vous rendre argent moi !}{}{-4}{gv 1066 2}{325}{$$ 100, gv1066 0, gf2487 0}
+{383}{Moi dire pas partir. Moi pas comprendre. Vous rendre argent moi !}{}{-4}{gv 1066 3}{325}{$$ 150, gv1066 0, gf2487 0}
+{384}{Moi dire pas partir. Moi pas comprendre. Vous rendre argent moi !}{}{-4}{gv 1066 4}{325}{$$ 200, gv1066 0, gf2487 0}
+{385}{Moi dire pas partir. Moi pas comprendre. Vous rendre argent moi !}{}{-4}{gv 1066 5}{325}{$$ 250, gv1066 0, gf2487 0}
+{386}{Moi dire pas partir. Moi pas comprendre. Vous rendre argent moi !}{}{-4}{gv 1066 6}{325}{$$ 300, gv1066 0, gf2487 0}
+{387}{Moi dire pas partir. Moi pas comprendre. Vous rendre argent moi !}{}{-4}{gv 1066 7}{325}{$$ 350, gv1066 0, gf2487 0}
+{388}{Moi dire pas partir. Moi pas comprendre. Vous rendre argent moi !}{}{-4}{gv 1066 8}{325}{$$ 400, gv1066 0, gf2487 0}
+{389}{Moi dire pas partir. Moi pas comprendre. Vous rendre argent moi !}{}{-4}{gv 1066 9}{325}{$$ 450, gv1066 0, gf2487 0}
+{390}{Moi dire pas partir. Moi pas comprendre. Vous rendre argent moi !}{}{-4}{gv 1066 10}{325}{$$ 500, gv1066 0, gf2487 0}
+{391}{Moi dire pas partir. Moi pas comprendre. Vous rendre argent moi !}{}{-4}{gv 1066 11}{325}{$$ 550, gv1066 0, gf2487 0}
+{392}{Moi dire pas partir. Moi pas comprendre. Vous rendre argent moi !}{}{-4}{gv 1066 12}{325}{$$ 600, gv1066 0, gf2487 0}
+{393}{Moi dire pas partir. Moi pas comprendre. Vous rendre argent moi !}{}{-4}{gv 1066 13}{325}{$$ 650, gv1066 0, gf2487 0}
+{394}{F:}{}{1}{}{-1}{}
+{395}{}{}{}{}{}{}
+

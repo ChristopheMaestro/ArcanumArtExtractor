@@ -1,0 +1,195 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Mes salutations, cher monsieur. Puis-je vous demander quelle position vous occupez ?}{}{5}{lf1 0, re 41}{54}{}
+{3}{Monsieur ! Vous accueillez toujours vos clients de cette manière ?!}{}{5}{lf1 0, re -40, ch -10}{29}{}
+{4}{Monsieur ! Vous accueillez toujours vos clients de cette manière ?!}{}{5}{lf1 0, re -40, ch 11}{46}{}
+{5}{Salutations, Monsieur Hallaway. Pouvez-vous m'accorder quelques instants ?}{}{5}{lf1 1, lf2 0, Re 41}{74}{}
+{6}{Vous n'êtes pas obligé de vous montrer grossier, Monsieur Hallaway.}{}{5}{lf1 1, lf2 0, Re -40}{80}{}
+{7}{Vous n'êtes pas obligé de vous montrer grossier, Monsieur Hallaway.}{}{5}{lf2 1, re -40, re 25}{}{re -5, fl 45}
+{8}{Vous n'êtes pas obligé de vous montrer grossier, Monsieur Hallaway.}{}{5}{lf2 1, re -24}{}{co, fl 44}
+{9}{Je pourrais récupérer ce coffre-fort pour vous...}{}{5}{qu1083 1, ni 5645}{103}{}
+{10}{Je n'ai pas encore récupéré le coffre-fort...}{}{5}{qu1083 2, ni 5645}{110}{}
+{11}{J'ai récupéré le coffre-fort.}{}{5}{qa1083 1, qb1083 3,  in 5645}{144}{}
+{15}{Vous être qui ?}{}{-4}{lf1 0, re 41}{54}{}
+{16}{Hé ! Ca pas gentil.}{}{-4}{lf1 0, re -40, ch -10}{29}{}
+{17}{Hé ! Ca pas gentil.}{}{-4}{lf1 0, re -40, ch 11}{46}{}
+{18}{Moi demander quelque chose Monsieur Hallaway ?}{}{-4}{lf1 1, lf2 0, Re 41}{74}{}
+{19}{Moi demander kék'chose ?}{}{-4}{lf1 1, lf2 0, Re -40}{80}{}
+{20}{Moi demander kék'chose ?}{}{-4}{lf2 1, re -40, re 25}{}{re -5, fl 45}
+{21}{Moi demander kék'chose ?}{}{-4}{lf2 1, re -24}{}{co, fl 44}
+{22}{Accord. Moi aller récupérer le coffre pour vous...}{}{-4}{qu1083 1, ni 5645}{103}{}
+{23}{Moi pas encore récupérer le coffre...}{}{-4}{qu1083 2, ni 5645}{110}{}
+{24}{Moi avoir coffre ! Moi avoir coffre !}{}{-4}{qa1083 1, qb1083 3,  in 5645}{144}{}
+{25}{E:}{}{-4}{}{0}{}
+{29}{On ne sert pas les individus de votre espèce ici. Débarrassez-moi le plancher ou je serai forcé d'appeler le garde.}{On ne sert pas les individus de votre espèce ici. Débarrassez-moi le plancher ou je serai forcé d'appeler le garde.}{}{}{}{}
+{30}{S'il vous plaît, gentil gnome, je n'ai que quelques questions à vous poser.}{}{5}{}{50}{}
+{31}{Vous feriez mieux de me parler sur un autre ton.}{}{5}{sk2 -11}{37}{re -5}
+{32}{Vous feriez mieux de me parler sur un autre ton.}{}{5}{sk2 12}{46}{}
+{33}{Euh... Moi pas vouloir déranger. Juste demander questions...}{}{-4}{}{50}{}
+{34}{[menaçant] Moi penser que vous devoir être aimable maintenant.}{}{-4}{sk2 -11}{37}{re -5}
+{35}{[menaçant] Moi penser que vous devoir être aimable maintenant.}{}{-4}{sk2 12}{46}{}
+{36}{E:}{}{1}{}{0}{}
+{37}{Est-ce une menace, monsieur ?}{Est-ce une menace, madame ?}{}{}{}{}
+{38}{Non, non... Je ne voulais pas vous offenser. Veuillez accepter mes excuses.}{}{5}{}{50}{}
+{39}{[D'un air hostile] Oui, c'en est une, espèce de bouffon arrogant.}{}{5}{}{}{re -5, lf2 1, fl 43}
+{40}{Oh ! Non... Non... Moi pas vouloir offenser vous. Moi demander pardon. Moi demander question ?}{}{-4}{}{50}{}
+{41}{[D'un air hostile] Ouais... Vous peut-être pas si bête après tout...}{}{-4}{}{}{re -5, lf2 1, fl 43}
+{42}{E:}{}{1}{}{0}{}
+{43}{Quittez mon établissement. Personne ne s'adresse à Monsieur Hallaway de la sorte ! Si vous m'adressez encore une fois la parole, j'appelle les gardes !}{Quittez mon établissement. Personne ne s'adresse à Monsieur Hallaway de la sorte ! Si vous m'adressez encore une fois la parole, j'appelle les gardes !}{}{}{}{}
+{44}{Gardes ! Gardes !}{Gardes ! Gardes !}{}{}{}{}
+{45}{Ce n'étaient pas des paroles en l'air. Si vous continuez à me harceler, je me verrai dans l'obligation de vous faire arrêter !}{Ce n'étaient pas des paroles en l'air. Si vous continuez à me harceler, je me verrai dans l'obligation de vous faire arrêter !}{}{}{}{}
+{46}{Oh !... Je, euh... Je veux dire, veuillez accepter mes excuses, monsieur ! Je vous confondais avec une autre personne. En quoi puis-je vous aider ?}{Oh !... Je, euh ne euh, je veux dire, veuillez accepter mes excuses madame ! Je vous confondais avec une autre personne. En quoi puis-je vous aider ?}{}{}{}{re+10}
+{47}{Puis-je vous demander qui vous êtes ?}{}{5}{}{54}{}
+{48}{Quoi être nom à vous ?}{}{-4}{}{54}{}
+{49}{E:}{}{1}{}{0}{}
+{50}{[Il vous jette un regard plein de dédain] Qu'y a-t-il ? Soyez bref. Je n'ai pas de temps à perdre avec vous.}{[Il vous jette un regard plein de dédain] Qu'y a-t-il ? Soyez brève. Je n'ai pas de temps à perdre avec vous.}{}{}{}{}
+{51}{Puis-je vous demander qui vous êtes ?}{}{5}{}{54}{}
+{52}{Quoi être nom à vous ?}{}{-4}{}{54}{}
+{53}{E:}{}{1}{}{0}{}
+{54}{Je suis Monsieur Hallaway, le propriétaire de ce bel établissement.}{Je suis Monsieur Hallaway, le propriétaire de ce bel établissement.}{}{}{}{lf1 1}
+{55}{C'est un plaisir, Monsieur Hallaway. Qu'avez-vous à proposer aux voyageurs ?}{}{5}{re 41}{60}{}
+{56}{C'est un établissement de qualité, Monsieur Hallaway ?}{}{5}{re-40}{68}{}
+{57}{Monsieur Hallaway ? Euhhhh...... Moi chercher endroit bien... Ici endroit bien ?}{}{-4}{re 41}{60}{}
+{58}{Monsieur Hallaway ? Euhhhh...... Moi chercher endroit bien... Ici endroit bien ?}{}{-4}{re-40}{68}{}
+{59}{E:}{}{1}{}{0}{}
+{60}{Oh, certainement, monsieur ! Nous offrons des chambres de luxe, dotées de tout le confort moderne. Nos chambres sont toutes décorées avec goût et sont dotées de coffres pour ranger vos objets de valeur. En outre, nous employons des gardes pour assurer la sécurité de nos clients, le tout pour la modique somme de 25 pièces par nuit.}{Oh, certainement, madame ! Nous offrons des chambres de luxe, dotées de tout le confort moderne. Nos chambres sont toutes décorées avec goût et sont dotées de coffres pour ranger vos objets de valeur. En outre, nous employons des gardes pour assurer la sécurité de nos clients, le tout pour la modique somme de 25 pièces par nuit.}{}{}{}{lf3 1}
+{61}{Cela a l'air parfait, mais c'est plus que je ne puis me permettre.}{}{5}{lf 10 0, gf 2400 0}{86}{}
+{62}{Cela a l'air très moderne. Peut-être une autre fois. Merci.}{}{5}{lf 10 0, gf 2400 0}{0}{}
+{63}{Je voudrais une chambre pour une nuit.}{}{5}{$$25, lf 10 0, gf 2400 0}{118}{}
+{64}{Oh, ça être bien ! Hum.... Trop cher.}{}{-4}{lf 10 0, gf 2400 0}{86}{}
+{65}{Moi vouloir chambre pour nuit.}{}{-4}{$$25, lf 10 0, gf 2400 0}{118}{}
+{66}{K:}{}{1}{}{74}{}
+{67}{E:}{}{1}{}{0}{}
+{68}{Diantre ! Que savez-vous de la " qualité " ? Je vais vous dire quelque chose... Une nuit dans ce bel établissement ne vous coûtera pas moins de 35 pièces. Ca, c'est sûr ! Rien qu'en vous regardant, je parierais que vous ne disposez même pas de cette somme. Quittez mon établissement, vagabond !}{Diantre ! Que savez-vous de la " qualité " ? Je vais vous dire quelque chose... Une nuit dans ce bel établissement ne vous coûtera pas moins de 35 pièces. Ca, c'est sûr ! Rien qu'en vous regardant, je parierais que vous ne disposez même pas de cette somme. Quittez mon établissement, vagabonde !}{}{}{}{lf3 1}
+{69}{Peut-être une autre fois. Au revoir.}{}{5}{lf 10 0, gf 2400 0}{0}{}
+{70}{J'ai l'argent. Tenez !}{}{5}{$$35, lf 10 0, gf 2400 0}{-2}{$$-35, lf 11 1 , lf 10 1, gf 2326 0}
+{71}{Euh... Trop cher. Moi partir maintenant.}{}{-4}{lf 10 0, gf 2400 0}{0}{}
+{72}{Moi avoir argent ! Vous voir ? [Vous lui montrez l'argent] Ici 35 pièces pour nuit.}{}{-4}{$$35, lf 10 0, gf 2400 0}{-2}{$$-35, lf 11 1, lf 10 1, gf 2326 0}
+{73}{F:}{}{1}{}{0}{re-1}
+{74}{Mais bien sûr. Que puis-je faire pour vous... ?}{Pas de problème. Que puis-je faire pour vous... ?}{}{}{}{}
+{75}{T:9, 11}{}{1}{}{74}{}
+{76}{Je voudrais une chambre pour une nuit.}{}{5}{lf 10 0, gf 2400 0}{118}{}
+{77}{Moi rester ici pour la nuit ?}{}{-4}{lf 10 0, gf 2400 0}{118}{}
+{78}{R:$0, 1175-1184}{}{1}{}{74}{}
+{79}{E:}{}{1}{}{0}{}
+{80}{[Il semble très irrité.] Qu'y a-t-il encore ?}{[Il semble très irrité.] Qu'y a-t-il encore ?}{}{}{}{}
+{81}{T:9, 11}{}{1}{}{80}{}
+{82}{Combien coûte une chambre pour une nuit ?}{}{5}{lf 10 0, gf 2400 0}{125}{}
+{83}{Moi rester ici pour nuit ? Combien ?}{}{-4}{lf 10 0, gf 2400 0}{125}{}
+{84}{R:$0, 1175-1184}{}{1}{}{80}{}
+{85}{E:}{}{1}{}{0}{}
+{86}{[Il vous observe, comme pour mesurer vos capacités.] Eh bien, les affaires ne vont pas fort en ce moment. Je vous offre la chambre si vous acceptez d'effectuer une mission pour moi.}{[Il vous observe, comme pour mesurer vos capacités.] Eh bien, les affaires ne vont pas fort en ce moment. Je vous offre la chambre si vous acceptez d'effectuer une mission pour moi.}{}{}{}{}
+{87}{Cela dépend de la mission....}{}{5}{}{91}{}
+{88}{Que voulez-vous que moi faire ?}{}{-4}{}{91}{}
+{89}{K:}{}{1}{}{74}{}
+{90}{E:}{}{1}{}{0}{}
+{91}{Il y a quelque temps de cela, j'ai amené mon coffre-fort à réparer chez Clément, le forgeron local. Il a dit qu'il pourrait le réparer pour 50 pièces et j'ai accepté pour ce prix. Quand je suis venu le récupérer, il m'a demandé 137 pièces. J'ai refusé de payer, je ne me laisserai pas escroquer par cette canaille ! Toutefois, il s'agit d'un héritage familial ancien et je souhaite le récupérer.}{Il y a quelque temps de cela, j'ai amené mon coffre-fort à réparer chez Clément, le forgeron local. Il a dit qu'il pourrait le réparer pour 50 pièces et j'ai accepté pour ce prix. Quand je suis venu le récupérer, il m'a demandé 137 pièces. J'ai refusé de payer, je ne me laisserai pas escroquer par cette canaille ! Toutefois, il s'agit d'un héritage familial ancien et je souhaite le récupérer.}{}{}{}{}
+{92}{Vous avez donc besoin de mon aide pour le récupérer ?}{}{5}{}{103}{}
+{93}{Il ne vous a donné aucune explication pour cette soudaine augmentation ?}{}{5}{}{99}{}
+{94}{Je crois que je suis en possession du coffre dont vous me parlez.}{}{5}{in 5645}{113}{re -10}
+{95}{Moi ramener coffre ?}{}{-4}{}{103}{}
+{96}{Oh, plus cher.... Ca pas bon.}{}{-4}{}{99}{}
+{97}{Moi avoir coffre ! Moi avoir coffre !}{}{-4}{in 5645}{113}{re -10}
+{98}{E:}{}{1}{}{0}{}
+{99}{Il a tenté de me faire avaler que j'avais demandé des travaux de réparation supplémentaires, ce qui n'est pas vrai, que cela avait pris plus de temps que prévu et qu'à cause de cela, il avait laissé passer d'autres travaux qu'on lui proposait. J'ai essayé de négocier, mais il n'y a aucun moyen de ramener cette brute à la raison !}{Il a tenté de me faire avaler que j'avais demandé des travaux de réparation supplémentaires, ce qui n'est pas vrai, que cela avait pris plus de temps que prévu et qu'à cause de cela, il avait laissé passer d'autres travaux qu'on lui proposait. J'ai essayé de négocier, mais il n'y a aucun moyen de ramener cette brute à la raison !}{}{}{}{}
+{100}{Vous avez besoin de mon aide pour le récupérer, c'est ça ?}{}{5}{}{103}{}
+{101}{Peut-être moi pouvoir aider Monsieur Hallaway ?}{}{-4}{}{103}{}
+{102}{E:}{}{1}{}{0}{}
+{103}{Oui... Je vous en serai très reconnaissant. Si vous récupérez le coffre pour moi, je vous donnerai une chambre gratuite en récompense. En fait, si vous me le ramenez... je vous offrirai une chambre pour le temps que vous voudrez.}{Oui... Je vous en serai très reconnaissant. Si vous récupérez le coffre pour moi, je vous donnerai une chambre gratuite en récompense. En fait, si vous me le ramenez... je vous offrirai une chambre pour le temps que vous voudrez.}{}{}{}{qu1083 1}
+{104}{Cela me convient. C'est comme si c'était fait !}{}{5}{}{108}{qu1083 2}
+{105}{Je vais y réfléchir. Bonne journée...}{}{5}{}{0}{}
+{106}{Ouah ! Moi accord !}{}{-4}{}{108}{qu1083 2}
+{107}{Moi pas savoir, nous en parler plus tard...}{}{-4}{}{0}{}
+{108}{C'est une excellente affaire, monsieur. J'attends votre retour.}{C'est une excellente affaire, madame. J'attends impatiemment votre retour.}{}{}{}{}
+{109}{E:}{}{1}{}{0}{}
+{110}{Si vous pouviez le récupérer aussi vite que possible, je vous en serais très reconnaissant...}{Si vous pouviez le récupérer aussi vite que possible, je vous en serais très reconnaissant...}{}{}{}{}
+{111}{K:}{}{1}{}{74}{}
+{112}{E:}{}{1}{}{0}{}
+{113}{Vous êtes en possession de mon coffre-fort ? Mais ? Comment est-ce possible ? [Il semble soudain réaliser quelque chose] Au voleur ! [Il vous arrache le coffre des mains] Au voleur ! Gardes !}{Vous êtes en possession de mon coffre-fort ? Mais ? Comment est-ce possible ? [Il semble soudain réaliser quelque chose] Au voleur ! [Il vous arrache le coffre des mains] Au voleur ! Gardes !}{}{}{}{qu1083 6, in 5645 }
+{114}{Je croyais que vous seriez content de récupérer votre coffre-fort...}{}{5}{}{}{co, fl 44}
+{115}{Oh oh..... Pas content avoir le coffre ?}{}{-4}{}{}{co, fl 44}
+{116}{Vous n'aviez pas besoin d'en arriver là.}{}{5}{}{}{co, fl 44}
+{117}{Monsieur Hallaway pas gentil... Pas appeler les gardes...}{}{-4}{}{}{co, fl 44}
+{118}{Oh, mais bien sûr, monsieur. Cela vous fera 25 pièces, s'il vous plaît.}{Oh, mais bien sûr, madame. Cela vous fera 25 pièces, s'il vous plaît.}{}{}{}{}
+{119}{Voilà.}{}{5}{lf 10 0, gf 2400 0}{-2}{$$ -25, lf 11 0, lf 10 1, gf 2326 1}
+{120}{Oh ! C'est un petit peu cher... C'est votre dernier prix ?}{}{5}{qu1083 0, lf 10 0, gf 2400 0}{86}{}
+{121}{Hum, voilà.}{}{-4}{lf 10 0, gf 2400 0}{-2}{$$ -25, lf 11 0, lf 10 1, gf 2326 1}
+{122}{Oh ! Ca beaucoup ! Vous prendre moins pour chambre ?}{}{-4}{qu1083 0, lf 10 0, gf 2400 0}{86}{}
+{123}{K:}{}{1}{}{74}{re -5}
+{124}{E:}{}{1}{}{0}{}
+{125}{35 pièces. Et pas un sou de moins ! Je parie que le scélérat que vous êtes ne dispose même pas de cette somme-là !}{35 pièces. Et pas un sou de moins ! Je parie que la scélérate que vous êtes ne dispose même pas de cette somme-là !}{}{}{}{}
+{126}{J'ai l'argent...}{}{5}{$$35 , lf 10 0, gf 2400 0}{-2}{$$-35, lf 11 1, lf 10 1, gf 2326 0}
+{127}{Le jeu n'en vaut probablement pas la chandelle, de toute façon. Au revoir.}{}{5}{lf 10 0, gf 2400 0}{0}{0}
+{128}{Moi avoir argent ! Vous voir ? [Vous lui montrez l'argent] Ici 35 pièces pour nuit.}{}{-4}{$$35, lf 10 0, gf 2400 0}{-2}{$$-35, lf 11 1, lf 10 1, gf 2326 0}
+{129}{Cet endroit pas valoir 35 pièces ! Moi avoir chambre ! Voila !}{}{-4}{lf 10 0, gf 2400 0}{0}{0}
+{130}{K:}{}{1}{}{80}{re -5}
+{131}{F:}{}{1}{}{0}{}
+{132}{Comme convenu, je vous offre la chambre. Vous pouvez l'utiliser à votre convenance. Une suite charmante vous attend au bout de ce couloir. J'espère que vous apprécierez votre séjour et encore merci.}{Comme convenu, je vous offre la chambre. Vous pouvez l'utiliser à votre convenance. Une suite charmante vous attend au bout de ce couloir. J'espère que vous apprécierez votre séjour et encore merci.}{}{}{}{GF2400 1, gf2326 1}
+{133}{C'est un plaisir de faire des affaires avec vous.}{}{5}{}{0}{}
+{134}{Merci. J'ai encore quelques questions...}{}{5}{}{74}{}
+{135}{Marsi.}{}{-4}{}{0}{}
+{136}{Marsi. Moi demander autre question ?}{}{-4}{}{74}{}
+{137}{Merci, monsieur ! Votre chambre est juste à droite. J'espère que votre séjour sera agréable.}{Merci, madame ! Votre chambre est juste à droite. J'espère que votre séjour sera agréable.}{}{}{}{}
+{138}{Merci.}{}{5}{}{0}{}
+{139}{Euh.... Marsi.}{}{-4}{}{0}{}
+{140}{K:}{}{1}{}{74}{}
+{141}{Eh bien ! Pour une surprise... Je suppose que vous pouvez avoir la chambre qui se trouve à votre gauche. [Il murmure : " Cette chambre ne peut pas sentir plus mauvais, de toute façon. "] Tenez-vous pendant votre séjour. Je garderai un oeil sur vous...}{Eh bien ! Pour une surprise... Je suppose que vous pouvez avoir la chambre qui se trouve à votre gauche. [Il murmure : " Cette chambre ne peut pas sentir plus mauvais, de toute façon. "] Tenez-vous pendant votre séjour. Je garderai un oeil sur vous...}{}{}{}{re +3}
+{142}{K:}{}{1}{}{80}{}
+{143}{E:}{}{1}{}{0}{}
+{144}{Oh, excellent ! Faites voir. [Il vous le prend des mains.] Il n'a pas dû être facile de négocier avec ce bandit. Dites-moi... Comment avez-vous réussi à le lui arracher des mains ?}{Oh, excellent ! Faites voir. [Il vous le prend des mains.] Il n'a pas dû être facile de négocier avec ce bandit. Dites-moi... Comment avez-vous réussi à le lui arracher des mains ?}{}{}{}{in 5645}
+{145}{C'est un dur à cuire, mais je crois que j'ai négocié un bon prix.}{}{5}{}{155}{qu1083 4}
+{146}{Je crois que cet imbécile ne s'est pas encore aperçu que je le lui ai subtilisé.}{}{5}{}{161}{re -5}
+{147}{Il ne s'est pas avisé de m'escroquer.}{}{5}{}{155}{qu1083 4}
+{148}{Disons simplement qu'il ne vous ennuiera plus jamais...}{}{5}{}{176}{re -5}
+{149}{Clément vous présente ses excuses et vous rend le coffre sans frais.}{}{5}{}{158}{qu1083 4, re +10}
+{150}{Ouais. Ca pas facile. Mais moi penser avoir un bon prix.}{}{-4}{}{155}{qu1083 4}
+{151}{Moi penser lui pas encore remarquer que coffre plus là.}{}{-4}{}{161}{re -5}
+{152}{Lui voir moi pas facile à escroquer.}{}{-4}{}{155}{qu1083 4}
+{153}{Lui plus ennuyer vous... Jamais.}{}{-4}{}{176}{re -5}
+{154}{Lui désolé vous en colère. Lui rendre coffre gratuitement.}{}{-4}{}{158}{qu1083 4, re +10}
+{155}{Très bien ! Je suis si content que vous ayez pu le récupérer !}{Très bien ! Je suis si content que vous ayez pu le récupérer !}{}{}{}{}
+{156}{Et au sujet de notre accord ?}{}{5}{}{132}{}
+{157}{Moi avoir chambre maintenant ?}{}{-4}{}{132}{}
+{158}{Il me l'a " donné " ! C'est incroyable ! Vous savez manier les mots ! Vous m'impressionnez. Peut-être Clément n'est-il pas si bête que je le croyais...}{Il me l'a " donné " ! C'est incroyable ! Vous savez manier les mots ! Vous m'impressionnez. Peut-être Clément n'est-il pas si bête que je le croyais...}{}{}{}{}
+{159}{Ce fut un plaisir de vous aider. Et au sujet de notre accord ?}{}{5}{}{132}{}
+{160}{Moi aimer aider. Moi avoir chambre maintenant ?}{}{-4}{}{132}{}
+{161}{Vous l'avez volé ?}{Vous l'avez volé ?}{}{}{}{}
+{162}{Oui.}{}{5}{}{166}{re -5}
+{163}{C'est un peu fort. Je n'ai fait que le rendre à son propriétaire, c'est tout.}{}{5}{}{166}{re -5}
+{164}{Ouais. Moi prendre.}{}{-4}{}{166}{re -5}
+{165}{Moi pas aimer quoi vous dire. Moi simplement rendre coffre à propriétaire.}{}{-4}{}{166}{re -5}
+{166}{Je ne pensais pas que vous utiliseriez de telles méthodes. Je ne sais que faire. Vous n'avez pas réglé mon problème ! Vous n'avez fait qu'aggraver les choses ! Ne comprenez-vous donc pas qu'il se retournera directement contre moi lorsqu'il s'apercevra du tour que vous lui avez joué !?!}{Je ne pensais pas que vous utiliseriez de telles méthodes. Je ne sais que faire. Vous n'avez pas réglé mon problème ! Vous n'avez fait qu'aggraver les choses ! Ne comprenez-vous donc pas qu'il se retournera directement contre moi lorsqu'il s'apercevra du tour que vous lui avez joué !?!}{}{}{}{}
+{167}{Pourquoi ferait-il une chose pareille ? Il ne sait pas que vous l'avez récupéré.}{}{5}{}{171}{}
+{168}{Il n'a aucune idée de l'endroit où se trouve le coffre. Pourquoi se retournerait-il contre vous ?}{}{5}{}{171}{}
+{169}{Pourquoi lui faire ça ? Lui pas savoir vous avoir coffre.}{}{-4}{}{171}{}
+{170}{Lui pas savoir que le coffre est ici. Vous être la dernière personne à qui lui vouloir parler !}{}{-4}{}{171}{}
+{171}{[Il réfléchit un instant.]... Je suppose que vous avez raison. Il ne m'associerait pas avec sa disparition n'est-ce pas ? [Soudain l'air amusé.] Et quand je lui demanderai où est mon coffre, il sera obligé de reconnaître qu'il a disparu. Ensuite je lui ferai payer le prix fort ! Les choses prennent un bon tour !}{[Il réfléchit un instant.]... Je suppose que vous avez raison. Il ne m'associerait pas avec sa disparition n'est-ce pas ? [Soudain l'air amusé.] Et quand je lui demanderai où est mon coffre, il sera obligé de reconnaître qu'il a disparu. Ensuite je lui ferai payer le prix fort ! Les choses prennent un bon tour !}{}{}{}{re +15}
+{172}{Oui. Je savais que vous seriez content. Maintenant, revenons à notre accord.}{}{5}{}{132}{qu1083 4}
+{173}{Au sujet de notre accord ?}{}{5}{}{132}{qu1083 4}
+{174}{Ouais. Moi savoir vous content.  Moi avoir chambre maintenant ?}{}{-4}{}{132}{qu1083 4}
+{175}{Moi avoir chambre maintenant ?}{}{-4}{}{132}{qu1083 4}
+{176}{Vous... Vous l'avez tué ? [sous le choc] Je voulais juste récupérer le coffre pour un prix raisonnable... Je ne voulais pas qu'il se fasse tuer ! Vous avez perdu la tête ?}{Vous... Vous l'avez tué ? [sous le choc] Je voulais juste récupérer le coffre pour un prix raisonnable... Je ne voulais pas qu'il se fasse tuer ! Vous avez perdu la tête ?}{}{}{}{}
+{177}{C'était un accident. Je regrette que les choses aient mal tourné.}{}{5}{}{183}{}
+{178}{Cette fripouille méritait de mourir ! Ce n'était qu'un voleur !}{}{5}{}{183}{}
+{179}{Vous avez votre coffre. Ma méthode importe peu.}{}{5}{}{183}{}
+{180}{Moi demander pardon. Ca accident.}{}{-4}{}{183}{}
+{181}{Lui mauvais ! Lui devoir mourir !}{}{-4}{}{183}{}
+{182}{Vous avoir coffre. Pas important comment moi avoir lui.}{}{-4}{}{183}{}
+{183}{Je dois vous dénoncer aux autorités. Vous ne pouvez pas tuer les gens comme ça !}{Je dois vous dénoncer aux autorités. Vous ne pouvez pas tuer les gens comme ça !}{}{}{}{}
+{184}{[D'un ton menaçant] Je ne le ferais pas si j'étais vous... Nous avions un marché.}{}{5}{}{195}{}
+{185}{Vous ne voulez pas qu'ils découvrent deux cadavres, hein ? Revenons à notre accord...}{}{5}{}{195}{}
+{186}{Non. Non. Je vais partir. Vous n'avez pas besoin de faire cela...}{}{5}{}{190}{}
+{187}{[D'un ton menaçant] Vous pas faire ça... Nous avoir accord...}{}{-4}{}{195}{}
+{188}{Vous pas vouloir que eux trouver deux cadavres, hein ?  Moi vouloir la chambre...}{}{-4}{}{195}{}
+{189}{Non. Pas dénoncer. Moi partir.}{}{-4}{}{190}{}
+{190}{Quittez mon établissement. Et ne revenez plus. Si vous m'adressez encore une fois la parole, j'appelle les gardes !}{Quittez mon établissement. Et ne revenez plus. Si vous m'adressez encore une fois la parole, j'appelle les gardes !}{}{}{}{}
+{191}{Je m'en vais de ce pas.}{}{5}{}{0}{lf2 1, qu1083 4}
+{192}{[D'un ton menaçant] Je ne le ferais pas si j'étais vous... Nous avions un marché.}{}{5}{}{195}{}
+{193}{Moi partir maintenant.}{}{-4}{}{0}{lf2 1, qu1083 4}
+{194}{[D'un ton menaçant] Vous pas faire ça... Nous avoir accord...}{}{-4}{}{195}{}
+{195}{[Il pâlit.] Euh... Oui... C'est vrai. Euh... Votre [Il tousse.] Votre chambre est juste là, à droite... Utilisez-la à votre guise. Je suis... euh... très [Il tousse.] content de vous avoir ici.}{[Il pâlit] Euh... Oui... C'est vrai. Euh... Votre [Il tousse.] Votre chambre est juste là, à droite... Utilisez-la à votre guise. Je suis... euh... [Il tousse.] ravi de vous voir ici.}{}{}{}{GF2400 1, gf 2326 1}
+{196}{Je préfère ça. Au revoir.}{}{5}{}{0}{qu1083 4}
+{197}{Moi préférer ça. Ar'voir.}{}{-4}{}{0}{qu1083 4}
+{198}{}{}{}{}{}{}
+{199}{}{}{}{}{}{}
+{200}{}{}{}{}{}{}
+

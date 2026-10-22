@@ -101,8 +101,10 @@
   }
 
   // the listed boxes get the bar inside the page's layout; any other scrolling box of the page (lists and panels that come and go) is found like on another page
-  function start() { document.querySelectorAll(SCROLLERS).forEach(el => attach(el)); dressPage(document, !!document.querySelector('style') && /\.gsb\s*\{/.test([...document.querySelectorAll('style')].map(s => s.textContent).join(''))); }
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
+  // (the Atlas's bars are styled by its own sheet, css/atlas.css, or by an inline <style>: either has a `.gsb {` rule)
+  const hasBarCss = () => [...document.styleSheets].some(sh => { try { return [...sh.cssRules].some(r => /\.gsb\b/.test(r.selectorText || '')); } catch (_) { return false; } });
+  function start() { document.querySelectorAll(SCROLLERS).forEach(el => attach(el)); dressPage(document, hasBarCss()); }
+  const startWhenReady = () => document.readyState === 'loading' ? document.addEventListener('DOMContentLoaded', start) : start();   // (called below, once PAGE_CSS exists)
 
   // ---- another page (the Asset Browser in Files) -------------------------------------------------------------------------
   // Its scrolling boxes come and go as files open, so they are found from its style sheets: every rule that lets a box scroll
@@ -124,6 +126,7 @@
 .gs-track { position: relative; flex: 1; min-height: 0; cursor: default; touch-action: none; }
 .gs-thumb { position: absolute; left: 0; right: 0; background: linear-gradient(90deg, #6d5632, #ffd700 45%, #6d5632); border-top: 2px solid #ffe066; border-bottom: 3px solid #3a2f20; box-sizing: border-box; }
 .gsb.drag .gs-thumb { filter: brightness(1.25); }`;
+  startWhenReady();
 
   function scrollingSelectors(doc) {
     const out = new Set(['[style*="overflow"]']);

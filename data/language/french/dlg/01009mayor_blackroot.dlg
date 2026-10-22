@@ -1,0 +1,248 @@
+// need a gang of thieves on outskirts of Black Root
+// need a silver dagger with name 2002 on a thief above
+// need a case of 5 gold bars with name 5601 on Mayor
+// newspaper with name 5201 must be available somewhere (perhaps in Tarant)
+// in all 10 Tarant Black Root guards' death scripts: increment global 1003
+
+// lines 120,260,350 and 390 need a global FLAG added to say that Black root has rejoined Cumbria
+
+//lf1 1 - already asked Mayor for taxes
+
+//lf2 1 - talked to Mayor before
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+{1}{G:}{G:}{}{}{}{}
+	{2}{Je viens de la part du roi Praetor.}{}{5}{lf1 0, qu 1000 2}{30}{lf2 1, lf1 1}
+	{3}{J'ai décidé de retrouver votre dague.}{}{5}{qu 1005 1}{90}{qu 1005 2}
+	{4}{J'ai récupéré votre dague.}{}{5}{qb 1005 3, in 2002}{100}{}
+	{5}{T:11}{}{5}{qu1005 4, re 41}{20}{}
+	{6}{Je vous en prie, monsieur, je ne voulais pas vous offenser.}{}{5}{ch-9, re-40}{470}{re41}	
+	{7}{Prae-tor. Impôôôts.}{}{-4}{qu 1000 2}{360}{lf2 1}
+	{8}{guurf.}{}{-4}{}{0}{}
+	{9}{Qui êtes-vous ?}{}{5}{re41, lf2 0}{400}{lf2 1}
+	{10}{Vous ne bénéficiez plus de la protection de Tarante, Monsieur le maire.}{}{5}{qb1000 3, gv 1003 6}{200}{}
+	{11}{Je n'ai pas encore retrouvé votre dague.}{}{5}{qu 1005 2, ni2002}{20}{}
+	{12}{Je voulais que vous sachiez que j'ai la recette de vos impôts.}{}{5}{qb1000 3, in 5601, lf5 0}{140}{re -15}
+	{13}{Je ne crois pas vous avoir bien entendu, monsieur.}{}{5}{ch10, re-40}{490}{re50}
+	{14}{E:}{}{5}{}{0}{}
+	
+{20}{Y a-t-il autre chose ?}{Y a-t-il autre chose ?}{}{}{}{}
+	{21}{N:}{}{5}{}{0}{}
+	{23}{Vous avez peut-être réfléchi de nouveau à la possibilité de me donner la recette des impôts ?}{}{5}{}{420}{re +5}
+
+{30}{Qu'est-ce que vous voulez ?}{Qu'est-ce que vous voulez ?}{}{}{}{}
+	{31}{Je suis ici pour percevoir les impôts de Racine Noire.}{}{5}{}{40}{lf 1 1}
+	{32}{Vous ne bénéficiez plus de la protection de Tarante, Monsieur le maire.}{}{5}{gv 1003 6}{200}{}
+	{33}{A mon avis, cet éditorial de journal devrait vous intéresser.}{}{5}{gv 1001 1, in 5201}{150}{}
+	{34}{Je voulais que vous sachiez que j'ai la recette de vos impôts.}{}{5}{in 5601}{140}{re -15}
+	{35}{F:}{}{5}{}{0}{}
+
+{40}{Racine Noire fait maintenant partie du Royaume-Unifié. Je perçois uniquement les impôts de Tarante.}{Racine Noire fait maintenant partie du Royaume-Unifié. Je perçois uniquement les impôts de Tarante.}{}{}{}{gv 1001 1}
+	{41}{Le roi Praetor ne serait pas d'accord.}{}{5}{}{50}{}
+	{42}{J'emploierai tous les moyens possibles pour récupérer ces impôts.}{}{5}{}{50}{re -15}
+
+{50}{Je me fiche de Praetor et de vous, monsieur. Cumbria nous a laissé nous débrouiller seuls pendant trop longtemps. Nous sommes sous la protection de Tarante maintenant.}{Je me fiche de Praetor et de vous, madame. Cumbria nous a laissé nous débrouiller seuls pendant trop longtemps. Nous sommes sous la protection de Tarante maintenant.}{}{}{}{}
+	{51}{Permettez-moi de vous contredire.}{}{5}{}{300}{re -10}
+	{52}{Alors les gardes de Tarante assurent la sécurité de Racine Noire ?}{}{5}{}{60}{}
+	{53}{Quel effet cela fait-il d'être le chien chien de Tarante ?}{}{5}{ps -7}{300}{re -15}
+      {54}{Quel effet cela fait-il d'être le chien chien de Tarante ?}{}{5}{ps 8}{290}{re +10}
+
+{60}{C'est exact. Ils ont leurs propres procédures, mais ils protègent notre bonne ville dans la mesure de leurs capacités.}{C'est exact. Ils ont leurs propres procédures, mais ils protègent notre bonne ville dans la mesure de leurs capacités.}{}{}{}{}
+	{61}{Dans la mesure de leurs capacités ? Qu'est-ce que cela signifie ?}{}{5}{}{210}{}
+	{62}{Ils ont l'air de manquer de courage et de force.}{}{5}{ps 8}{70}{}
+
+{70}{Les gardes ne peuvent arrêter personne sans preuve. En tout cas, c'est ce qu'ils disent.}{Les gardes ne peuvent arrêter personne sans preuve. En tout cas, c'est ce qu'ils disent.}{}{}{}{}
+	{71}{Quel genre de preuve ?}{}{5}{}{80}{}
+	{72}{Vos doléances ne m'intéressent pas, monsieur. Et ces impôts ?}{}{5}{}{310}{re -15}
+	{73}{De quelles preuves ces rustres ont-ils besoin ?}{}{5}{ps 8}{80}{}
+
+{80}{Des voleurs m'ont volé mon insigne, une dague de cérémonie en argent. Si vous réussissez à la reprendre, c'est la seule preuve dont j'aurai besoin pour les faire arrêter.}{Des voleurs m'ont volé mon insigne, une dague de cérémonie en argent. Si vous réussissez à la reprendre, c'est la seule preuve dont j'aurai besoin pour les faire arrêter.}{}{}{}{qu 1005 1}
+	{81}{J'accepte votre requête, mon bon monsieur.}{}{5}{}{90}{qu 1005 2}
+	{82}{Vos petites affaires ne m'intéressent pas.}{}{5}{}{0}{re -10, fl 1020}
+	{83}{Je vais devoir y réfléchir plus longuement. Bonne journée.}{}{5}{}{0}{}
+        {84}{Justement, j'ai déjà récupéré votre dague.}{}{5}{in 2002}{100}{}
+
+{90}{On sait que les voleurs rôdent dans les faubourgs de la ville. Leur chef est un elfe répondant au nom de D'ak Taan, je crois. Bonne chance, monsieur.}{On sait que les voleurs rôdent dans les faubourgs de la ville. Leur chef est un elfe répondant au nom de D'ak Taan, je crois. Bonne chance, madame.}{}{}{}{}
+	{91}{E:}{}{5}{}{0}{}
+
+{100}{Excellent. Donnez-moi la dague et je m'occupe de faire arrêter les voleurs sur-le-champ.}{Excellent. Donnez-moi la dague et je m'occupe de faire arrêter les voleurs sur-le-champ.}{}{}{}{}
+	{101}{Vos gardes ne sont même pas capables de vous protéger contre des chapardeurs.}{}{5}{}{110}{}
+	{102}{La voici.}{}{5}{}{430}{qu 1005 4, in 2002}
+	{103}{Pas avant que vous acceptiez de changer d'allégeance.}{}{5}{ch 13}{340}{}
+
+{110}{Je le sais bien, mais que voulez-vous que j'y fasse ?}{Je le sais bien, mais que voulez-vous que j'y fasse ?}{}{}{}{}
+	{111}{Donnez-moi la recette des impôts et alignez-vous sur Cumbria.}{}{5}{}{120}{}
+	{112}{Est-ce que vous agissez toujours comme un imbécile incapable, maraud ?}{}{5}{}{0}{fl 1010, co} 
+
+{120}{J'accepte votre proposition... à condition que vous me rendiez la dague de cérémonie.}{J'accepte votre proposition... à condition que vous me rendiez la dague de cérémonie.}{}{}{}{}
+	{121}{Voici votre dague, monsieur.}{}{5}{}{130}{gf 1000 1, qu 1005 4, qu 1000 3, in -5601, in 2002, lf5 1}
+	{122}{Vous ne pensez donc qu'à cette bon sang de dague ?}{}{5}{ch 13}{350}{re - 5}
+
+{130}{Merci, @pcname@. Votre habileté est impressionnante.}{Merci, @pcname@. Votre habileté est impressionnante.}{}{}{}{}
+	{131}{A:}{}{5}{}{0}{}
+	{132}{E:}{}{5}{}{0}{}
+
+{140}{Quoi ?! Au voleur !}{Quoi ?! Au voleur !}{}{}{}{}
+	{141}{Calmez-vous, j'ai une proposition à vous faire.}{}{5}{}{230}{}
+	{142}{Votre heure est venue, je crois.}{}{5}{}{0}{co}
+
+{150}{Qu'est-ce qui vous fait croire que cette histoire m'intéresse ?}{Qu'est-ce qui vous fait croire que cette histoire m'intéresse ?}{}{}{}{}
+	{151}{Il énumère les difficultés qui opposent actuellement Caladon et Tarante.}{}{5}{}{160}{}
+	{152}{J'ai fait une erreur, excusez-moi. Bonne journée.}{}{5}{}{0}{}
+
+{160}{Je vois.}{Je vois.}{}{}{}{}
+	{161}{Il pousse Tarante à déclarer la guerre à Caladon.}{}{5}{}{170}{}
+
+{170}{Quoi ? Le Royaume-Unifié envahirait Caladon pour annexer ce territoire ?}{Quoi ? Le Royaume-Unifié envahirait Caladon pour annexer ce territoire ?}{}{}{}{}
+	{171}{Vous avez intérêt à ne pas être mêlé au conflit qui se prépare.}{}{5}{ps -6}{0}{fl 1000, re -10}
+	{172}{Vous avez intérêt à ne pas être mêlé au conflit qui se prépare.}{}{5}{ps 8}{180}{}
+	{173}{Cet éditorial est le fruit du travail d'un journaliste respecté.}{}{5}{ps -7}{280}{}
+
+{180}{C'est catastrophique ! Nous n'aurions jamais dû repousser la protection de Cumbria !}{C'est catastrophique ! Nous n'aurions jamais dû repousser la protection de Cumbria !}{}{}{}{}
+	{181}{Donnez-moi la recette des impôts et vous pourrez bénéficier de cette protection de nouveau.}{}{5}{}{190}{}
+
+{190}{Allez-y, je vous en prie ! Envoyez mes salutations avec les impôts... et il vaut peut-être mieux que le vieux Praetor ne sache rien sur la situation à Tarante ?}{Allez-y, je vous en prie ! Envoyez mes salutations avec les impôts... et il vaut peut-être mieux que le vieux Praetor ne sache rien sur la situation à Tarante ?}{}{}{}{qu 1000 3, in -5601}
+	{191}{Bien sûr. C'est un réel plaisir de faire des affaires avec vous. Bonne journée.}{}{5}{}{0}{}
+
+{200}{Qu'est-ce que vous voulez dire ?}{Qu'est-ce que vous voulez dire ?}{}{}{}{}
+	{201}{Tous les gardes sont morts. Les impôts seront payés. Maintenant.}{}{5}{}{190}{}
+
+{210}{Eh bien, il existe certaines règles de bienséance. Vous savez, en général, les méfaits ne sont pas commis par hasard.}{Eh bien, il existe certaines règles de bienséance. Vous savez, en général, les méfaits ne sont pas commis par hasard.}{}{}{}{}
+	{211}{Est-ce qu'ils ont des problèmes dont ils ne réussissent pas à se sortir ?}{}{5}{}{220}{}
+	{212}{E:}{}{5}{}{0}{}
+
+{220}{Ils résoudront notre problème de cambriolage en temps voulu, sans nul doute.}{Ils résoudront notre problème de cambriolage en temps voulu, sans nul doute.}{}{}{}{}
+	{221}{Pourquoi pas maintenant ?}{}{5}{}{70}{}
+	{222}{Je me charge de résoudre tout problème de cambriolage auquel vous êtes susceptible d'être confronté.}{}{5}{}{80}{}
+	{223}{E:}{}{5}{}{0}{} 
+
+{230}{Quelle proposition venant de vous pourrait bien m'intéresser ?}{Quelle proposition venant de vous pourrait bien m'intéresser ?}{}{}{}{}
+	{231}{Je peux voler les impôts annuels ou vous pouvez les payer de votre plein gré.}{}{5}{}{240}{}
+
+{240}{Vermine ! Je devrais envoyer les gardes vous chercher !}{Vermine ! Je devrais envoyer les gardes vous chercher !}{}{}{}{}
+	{241}{Vos gardes ne sont même pas capables de vous protéger contre des chapardeurs.}{}{5}{}{250}{}
+
+{250}{Il y a du vrai dans ce que vous dites, fripouille. Que proposez-vous ?}{Il y a du vrai dans ce que vous dites, fripouille. Que proposez-vous ?}{}{}{}{}
+	{251}{Vous devriez revenir vers Cumbria.}{}{5}{}{260}{}
+
+{260}{Sapristi, je crois que vous avez raison, monsieur. Au diable ces fainéants de Tarante, hein ?}{Sapristi, je crois que vous avez raison, madame. Au diable ces fainéants de Tarante, hein ?}{}{}{}{gf 1000 1}
+	{261}{Je suis de tout coeur avec vous.}{}{5}{}{270}{}
+
+{270}{Envoyez mes salutations avec les impôts... et il vaut peut-être mieux que le vieux Praetor ne sache rien de ce qui se passe à Tarante ?}{Envoyez mes salutations avec les impôts... et il vaut peut-être mieux que le vieux Praetor ne sache rien de ce qui se passe à Tarante ?}{}{}{}{}
+	{271}{Bien sûr. C'est un réel plaisir de faire des affaires avec vous. Bonne journée.}{}{5}{}{0}{}
+
+{280}{Vous me prenez pour un imbécile ? Ce ne sont que des bêtises écrites par de minables journalistes !}{Vous me prenez pour un imbécile ? Ce ne sont que des bêtises écrites par de minables journalistes !}{}{}{}{}
+	{281}{Je reviens de Tarante et ils se préparent pour la guerre.}{}{5}{}{180}{}
+	{282}{Vous avez raison. Pardon pour le dérangement.}{}{5}{}{0}{}
+
+{290}{Vous êtes malin, mon vieux. Mais votre ruse ne vous mènera nulle part, car nous sommes satisfaits de notre arrangement avec Tarante.}{Vous êtes maligne, madame. Mais votre ruse ne vous mènera nulle part, car nous sommes satisfaits de notre arrangement avec Tarante.}{}{}{}{}
+	{291}{Ainsi donc, vous n'avez rien à reprocher aux gardes de Tarante ?}{}{5}{}{60}{}
+	{292}{E:}{}{5}{}{0}{}
+
+{300}{Vous feriez mieux de surveiller vos paroles. J'ai peu de patience pour les imbéciles à la langue bien pendue.}{Vous feriez mieux de surveiller vos paroles. J'ai peu de patience pour les imbéciles à la langue bien pendue}{}{}{}{}
+	{301}{Ainsi donc, vous n'avez rien à reprocher aux gardes de Tarante ?}{}{5}{}{60}{}
+	{302}{Et moi, j'ai peu de patience pour les imbéciles encore en vie, imbécile.}{}{5}{}{0}{fl 1010, co}
+	{303}{E:}{}{5}{}{0}{}
+
+{310}{Espèce de bâtard !}{Traînée !}{}{}{}{}
+	{311}{Veuillez excuser mon manque de respect, monsieur.}{}{5}{}{320}{re +5}
+	{312}{Je demande réparation, monsieur ! [Vous le frappez.]}{}{5}{}{0}{}
+
+{320}{Surveillez votre langage, monsieur. Et vous pouvez dire à Praetor que les impôts iront désormais à Tarante.}{Surveillez votre langage, madame. Et vous pouvez dire à Praetor que les impôts iront désormais à Tarante.}{}{}{}{}
+	{321}{Ainsi donc, le fait d'être sous le contrôle de Tarante ne vous pose aucun problème ?}{}{5}{}{330}{}
+	{322}{La recette des impôts va devoir être extirpée de vos entrailles.}{}{5}{}{0}{fl 1010, co}
+
+{330}{Ils résoudront notre problème de cambriolage en temps voulu, sans nul doute.}{Ils résoudront notre problème de cambriolage en temps voulu, sans nul doute.}{}{}{}{}
+	{331}{Je me charge de résoudre tout problème de cambriolage auquel vous êtes susceptible d'être confronté.}{}{5}{}{80}{}
+	{332}{E:}{}{5}{}{0}{}
+
+{340}{Pourquoi est-ce que je ferais ça ?}{Pourquoi est-ce que je ferais ça ?}{}{}{}{}
+	{341}{Les gardes ne sont même pas capables de récupérer votre dague.}{}{5}{}{110}{} 
+	{342}{F:}{}{5}{}{0}{}
+
+{350}{C'est un insigne, monsieur. Et prenez garde, car votre esprit m'ennuie de plus en plus.}{C'est un insigne, mademoiselle. Et prenez garde, car votre esprit m'ennuie de plus en plus.}{}{}{}{} 
+	{351}{Voici votre dague, monsieur.}{}{5}{}{130}{gf 1000 1, qu 1005 4, qu 1000 3, in -5601, in 2002}
+	{352}{E:}{}{5}{}{0}{}
+	{353}{Dans ce cas, je m'exprimerai au travers de mon couteau !}{}{5}{}{0}{co}
+
+{360}{Je vois que Praetor a dépêché l'un de ses conseillers. Mais Racine Noire est alliée avec le Royaume-Unifié maintenant. Je perçois uniquement les impôts de Tarante.}{Je vois que Praetor a dépêché l'un de ses conseillers. Mais Racine Noire est alliée avec le Royaume-Unifié maintenant. Je perçois uniquement les impôts de Tarante.}{}{}{}{}
+	{361}{Moi prendre impôts.}{}{-4}{}{fl 370}{re -10}
+	{362}{Grrr...}{}{-4}{}{0}{}
+      {363}{Gardes morts. Donner impôts.}{}{-4}{gv 1003 6}{380}{}
+
+{370}{Oui, je n'en doute pas. Mais circulez, imbécile.}{Oui, je n'en doute pas. Mais circulez, imbécile.}{}{}{}{}
+
+{380}{Pardi ! Tenez, les voici. Je vous en prie, ne me faites pas de mal. Je ferai ce que vous voudrez.}{Pardi ! Tenez, les voici. Je vous en prie, ne me faites pas de mal. Je ferai ce que vous voudrez.}{}{}{}{}
+	{381}{Marsi. Encore avec Cumbria ?}{}{-4}{}{0}{fl 390}
+	{382}{Vous mort. Maintenant.}{}{-4}{}{0}{co}
+
+{390}{Oui, oui, c'est ça. S'il vous plaît, partez.}{Oui, oui, c'est ça. S'il vous plaît, partez.}{}{}{}{gf 1000 1}
+
+{400}{Je suis le maire de Racine Noire. Et puis-je vous demander qui vous êtes ?}{Je suis le maire de Racine Noire. Et puis-je vous demander qui vous êtes ?}{}{}{}{lf2 1}
+	{401}{Je suis @pcname@. Je cherche du travail. Avez-vous quelque chose à me proposer ?}{}{5}{qu 1000 0}{410}{}
+	{402}{Je suis @pcname@. Je cherche du travail. Avez-vous quelque chose à me proposer ?}{}{5}{qu 1000 1}{410}{}
+	{403}{Je viens de la part du roi Praetor.}{}{5}{qu 1000 2, lf1 0}{30}{lf1 1, lf2 1}
+	{404}{J'ai décidé de retrouver votre dague.}{}{5}{qu 1005 1}{90}{qu 1005 2}
+	{405}{J'ai récupéré votre dague.}{}{5}{qu 1005 2, in 2002}{100}{}
+	{406}{E:}{}{5}{}{0}{}
+	{407}{Je suis la dernière personne que vous aurez l'occasion de voir, canaille.}{}{5}{}{0}{fl 1010, co}
+
+{410}{Pas pour le moment. Revenez me voir plus tard.}{Pas pour le moment. Revenez me voir plus tard.}{}{}{}{}
+	{411}{E:}{}{5}{}{0}{} 
+
+{420}{Ha ! ha ! Vous êtes amusant. Mais la réponse reste non.}{Ha ha ! Vous êtes amusante. Mais la réponse reste non.}{}{}{}{}
+	{421}{Bonne journée, alors.}{}{5}{}{0}{}
+	{422}{Dommage, je vais devoir vous étriper.}{}{5}{}{0}{fl 1010, co}
+
+{430}{Merci beaucoup, monsieur. Permettez-moi de vous offrir une compensation pour le dérangement.}{Merci beaucoup, madame. Permettez-moi de vous offrir une compensation pour le dérangement.}{}{}{}{}
+	{431}{Le paiement des impôts constituera une compensation suffisante.}{}{5}{}{440}{}
+	{432}{200 pièces me conviendraient parfaitement.}{}{5}{ha 13}{460}{}
+
+{440}{J'ai peur de devoir refuser. La recette des impôts ira à Tarante, mais voici 100 pièces pour vous.}{J'ai peur de devoir refuser. La recette des impôts ira à Tarante, mais voici 100 pièces pour vous.}{}{}{}{$$100}
+	{441}{Sans les gardes, vous ne me refuseriez pas la recette des impôts.}{}{5}{}{450}{re -15}
+	{442}{Vos gardes sont bien incapables de m'empêcher de voler la recette des impôts.}{}{5}{}{450}{re -15}
+	{443}{Merci et bonne journée.}{}{5}{}{0}{}
+
+{450}{Peut-être, mais vous n'avez pas les moyens de mettre vos menaces à exécution, ce qui signifie que nous ne le saurons jamais, n'est-ce pas ? Et maintenant, disparaissez de ma vue.}{Peut-être, mais vous n'avez pas les moyens de mettre vos menaces à exécution, ce qui signifie que nous ne le saurons jamais, n'est-ce pas ? Et maintenant, disparaissez de ma vue.}{}{}{}{}
+	{451}{Je suppose que vous n'avez rien à craindre dans ce cas. Bonne journée.}{}{5}{}{0}{}
+
+{460}{D'accord pour 200 pièces. Merci pour votre aide , monsieur.}{D'accord pour 200 pièces. Merci pour votre aide, madame.}{}{}{}{$$200}
+	{461}{A:}{}{5}{}{0}{}
+
+{470}{Oui, oui, je suppose que vous êtes comme vous êtes. Que puis-je faire pour vous ?}{Oui, oui, je suppose que vous êtes comme vous êtes. Que puis-je faire pour vous ?}{}{}{}{}
+	{471}{Je viens de la part du roi Praetor.}{}{5}{lf1 0, qu 1000 2}{30}{lf2 1, lf1 1}
+	{472}{J'ai décidé de retrouver votre dague.}{}{5}{qu 1005 1}{90}{qu 1005 2}
+	{473}{J'ai récupéré votre dague.}{}{5}{qu 1005 3, in 2002}{100}{}
+	{474}{T:11}{}{5}{qu1005 4, re 41}{20}{}
+	{476}{Prae-tor. Impôôôts.}{}{-4}{qu 1000 2}{360}{}
+	{477}{guurf.}{}{-4}{}{0}{}
+	{478}{Qui êtes-vous ?}{}{5}{lf2 0}{400}{lf2 1}
+	{479}{Vous ne bénéficiez plus de la protection de Tarante, Monsieur le maire.}{}{5}{lf5 0, qb1000 3, gv 1003 6}{200}{}
+	{480}{Je n'ai pas encore retrouvé votre dague.}{}{5}{qu 1005 2}{20}{}
+	{481}{Je voulais que vous sachiez que j'ai la recette de vos impôts.}{}{5}{qb1000 3, in 5601, lf5 0}{140}{re -15}
+	{482}{E:}{}{5}{}{0}{}
+
+{490}{Oui, oui, je suppose que vous êtes comme vous êtes. Que puis-je faire pour vous ?}{Oui, oui, je suppose que vous êtes comme vous êtes. Que puis-je faire pour vous ?}{}{}{}{}
+	{491}{Je viens de la part du roi Praetor.}{}{5}{lf1 0, qu 1000 2}{30}{lf1 1, lf2 1}
+	{492}{J'ai décidé de retrouver votre dague.}{}{5}{qu 1005 1}{90}{qu 1005 2}
+	{493}{J'ai récupéré votre dague.}{}{5}{qu 1005 3, in 2002}{100}{}
+	{494}{T:11}{}{5}{qu1005 4, re 41}{20}{}
+	{496}{Prae-tor. Impôôôts.}{}{-4}{qu 1000 2}{360}{}
+	{497}{guurf.}{}{-4}{}{0}{}
+	{498}{Qui êtes-vous ?}{}{5}{lf2 0}{400}{lf2 1}
+	{499}{Vous ne bénéficiez plus de la protection de Tarante, Monsieur le maire.}{}{5}{lf5 0, qb1000 3, gv 1003 6}{200}{}
+	{500}{Je n'ai pas encore retrouvé votre dague.}{}{5}{qu 1005 2}{20}{}
+	{501}{Je voulais que vous sachiez que j'ai la recette de vos impôts.}{}{5}{qb1000 3, in 5601}{140}{re -15}
+	{502}{E:}{}{5}{}{0}{}
+
+
+
+//npc floats
+
+{1000}{Vous me prenez pour un imbécile ? Ce ne sont que des bêtises écrites par de minables journalistes ! Laissez-moi tranquille.}{Vous me prenez pour un imbécile ? Ce ne sont que des bêtises écrites par de minables journalistes ! Laissez-moi tranquille.}{}{}{}{}
+
+{1010}{Vermine de Cumbria ! Mourez !}{Vermine de Cumbria ! Mourez !}{}{}{}{}
+
+{1020}{Hors de ma vue, maraud !}{Hors de ma vue, maraude !}{}{}{}{}

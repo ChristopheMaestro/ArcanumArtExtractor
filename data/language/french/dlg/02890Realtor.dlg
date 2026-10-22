@@ -1,0 +1,73 @@
+{1}{G:}{G:}{}{}{}{ }
+{2}{W:}{}{5}{lf1 0, re41}{20}{lf1 1 }
+{3}{J'ai dû mal entendre...}{}{5}{re-40, ch10}{120}{re50 }
+{4}{Je vous prie de m'excuser, monsieur. Je ne voulais pas vous offenser.}{}{5}{re-40, ch-9}{130}{ }
+{5}{Parlez-moi une fois encore sur ce ton et je vous tuerai.}{}{5}{re-40, sk2 12}{160}{re45 }
+{6}{W:}{}{-4}{lf1 0}{110}{re45 }
+{7}{J'aimerais vous parler de la résidence de Bastien.}{}{5}{lf1 1, re41}{90}{ }
+{8}{Moi vouloir parler vous maison !}{}{-4}{lf1 1}{90}{ }
+{19}{E:}{}{1}{}{0}{ }
+{20}{Je m'appelle William Thomas Moreau. Je suis ici, dans cette ville abandonnée des dieux, pour vendre la maudite résidence de Bastien. Je crains de rester bloqué ici pour toujours : à qui viendrait-il à l'idée d'acheter pareille monstruosité ?!}{Je m'appelle William Thomas Moreau. Je suis ici, dans cette ville abandonnée des dieux, pour vendre la maudite résidence de Bastien. Je crains de rester bloqué ici pour toujours : à qui viendrait-il à l'idée d'acheter pareille monstruosité ?!}{}{}{}{ }
+{21}{Elle pourrait m'intéresser. Combien la vendez-vous ?}{}{5}{}{30}{ }
+{29}{E:}{}{1}{}{0}{ }
+{30}{[Il arbore un grand sourire.] Cette magnifique propriété est à vous pour la modique somme de 100000 pièces !}{[Il arbore un grand sourire.] Cette magnifique propriété est à vous pour la modique somme de 100000 pièces !}{}{}{}{lf4 1 }
+{31}{100000 pièces ! Cela fait un peu cher, non ? Que dites-vous de 75000 ?}{}{5}{sk9 20, tr9 -2}{40}{ }
+{32}{100000 pièces ! Cela fait un peu cher, non ? Que dites-vous de 50000 ?}{}{5}{tr9 3}{50}{ }
+{33}{Marché conclu.}{}{5}{$$100000}{60}{$$-100000 }
+{34}{Je n'ai pas tant d'argent. Peut-être pouvons-nous trouver un arrangement ?}{}{5}{}{70}{ }
+{36}{Ca trop !}{}{-4}{}{70}{ }
+{37}{D'accord !}{}{-4}{$$100000}{60}{$$-100000 }
+{38}{Moi partir.}{}{-4}{}{0}{ }
+{39}{Ridicule ! Bonne journée, monsieur !}{}{5}{}{0}{ }
+{40}{Hum. Je ne devrais même pas y penser... Mais vous m'avez l'air honnête ! [Il réfléchit un moment.] D'accord ! C'est d'accord pour 75000 !}{Hum. Je ne devrais même pas y penser... Mais vous m'avez l'air d'être une femme de goût ! [Il réfléchit un moment.] D'accord ! C'est d'accord pour  75000 !}{}{}{}{ }
+{41}{Marché conclu.}{}{5}{$$75000}{60}{$$-75000 }
+{42}{Je n'ai pas assez d'argent pour le moment. Je reviendrai.}{}{5}{}{0}{lf2 1 }
+{50}{Hum. Je ne devrais même pas y penser... Mais vous m'avez l'air honnête ! [Il réfléchit un moment.] D'accord ! C'est d'accord pour 50000 !}{Hum. Je ne devrais même pas y penser... Mais vous m'avez l'air d'être une femme de goût ! [Il réfléchit un moment.] D'accord ! C'est d'accord pour 50000 !}{}{}{}{ }
+{51}{Marché conclu.}{}{5}{$$50000}{60}{$$-50000 }
+{52}{Je n'ai pas assez d'argent pour le moment. Je reviendrai.}{}{5}{}{0}{lf3 1 }
+{60}{Excellent ! Elle est à vous ! Voici la clé de l'entrée principale.}{Excellent ! Elle est à vous ! Voici la clé de l'entrée principale.}{}{}{}{gf2676 1, re+25, in-4423, rp1069 }
+{61}{A:}{}{1}{}{0}{ }
+{70}{Je n'ai pas mon mot à dire au sujet du prix. Je ne suis qu'un agent, je travaille pour la banque. Le prix est de 100000, pas plus, pas moins.}{Je n'ai pas mon mot à dire au sujet du prix. Je ne suis qu'un agent, je travaille pour la banque. Le prix est de 100000, pas plus, pas moins.}{}{}{}{ }
+{71}{Vraiment ? Cela fait un peu cher, non ? Que dites-vous de 75000 ?}{}{5}{sk9 20, tr9 -2}{40}{ }
+{72}{Vraiment ? Cela fait un peu cher, non ? Que dites-vous de 50000 ?}{}{5}{tr9 3}{50}{ }
+{73}{D'accord, l'affaire est conclue.}{}{5}{$$100000}{60}{$$-100000 }
+{74}{D'accord !}{}{-4}{$$100000}{60}{$$-100000 }
+{78}{E:}{}{-4}{}{0}{ }
+{79}{Je vois. Au revoir.}{}{5}{}{0}{ }
+{90}{Oui ?}{Oui ?}{}{}{}{ }
+{91}{J'ai apporté l'argent pour pouvoir l'acheter.}{}{5}{lf2 1, $$75000}{60}{$$-75000 }
+{92}{J'ai apporté l'argent pour pouvoir l'acheter.}{}{5}{lf3 1, $$50000}{60}{$$-50000 }
+{93}{J'aimerais vous faire une contre-proposition.}{}{5}{lf4 1, lf3 0, lf2 0, tr9 3}{100}{ }
+{94}{J'aimerais vous faire une contre-proposition.}{}{5}{lf4 1, lf3 0, lf2 0, sk9 20, tr9 -2}{100}{ }
+{95}{J'ai apporté l'argent pour pouvoir l'acheter.}{}{5}{lf4 1, lf3 0, lf2 0, sk9 -19, $$100000}{60}{$$-100000 }
+{96}{Moi avoir argent pour maison !}{}{-4}{$$100000}{60}{$$-100000 }
+{97}{Combien pour la résidence de Bastien ?}{}{5}{lf4 0, lf3 0, lf2 0}{30}{ }
+{98}{Combien pour maison ?}{}{-4}{lf4 0, lf3 0, lf2 0}{30}{ }
+{99}{Rien. Au revoir.}{}{5}{}{0}{ }
+{100}{Et quelle est-elle ?}{Et quelle est-elle ?}{}{}{}{ }
+{101}{75000.}{}{5}{sk9 20, tr9 -2}{40}{ }
+{102}{50000.}{}{5}{tr9 3}{50}{ }
+{110}{Oh, mon Dieu, un imbécile. Je suis ici pour vendre la résidence de Bastien, vous comprenez ? Que voulez-vous ?}{Oh, mon Dieu, une imbécile. Je suis ici pour vendre la résidence de Bastien, vous comprenez ? Que voulez-vous ?}{}{}{}{ }
+{111}{Maison ? Moi vouloir ach'ter !}{}{-4}{}{30}{ }
+{119}{E:}{}{1}{}{0}{ }
+{120}{Excusez-moi, où avais-je la tête ? Je vous demande pardon... Que puis-je faire pour vous ?}{Excusez-moi, où avais-je la tête ? Je vous demande pardon... Que puis-je faire pour vous ?}{}{}{}{ }
+{121}{W:}{}{5}{lf1 0}{20}{lf1 1 }
+{122}{Je souhaite m'entretenir avec vous de la résidence de Bastien.}{}{5}{lf1 1}{90}{lf4 1, fl }
+{129}{E:}{}{1}{}{0}{ }
+{130}{Oui, eh bien, il est rare que j'entretienne des rapports avec des personnes de si faible... qualité.}{Oui, eh bien, il est rare que j'entretienne des rapports avec des personnes de si faible... qualité.}{}{}{}{ }
+{131}{Je réclame seulement un peu de votre temps, monsieur...}{}{5}{}{140}{re41 }
+{132}{Et combien de fois vous êtes-vous fait rosser par des personnes de ma " qualité ", espèce d'ours mal léché ?}{}{5}{}{0}{co }
+{139}{E:}{}{1}{}{0}{ }
+{140}{Bon, d'accord. Qu'y a-t-il ?}{Bon, d'accord. Qu'y a-t-il ?}{}{}{}{ }
+{141}{Puis-je vous demander qui vous êtes, monsieur ?}{}{5}{lf1 0}{150}{lf1 1 }
+{142}{J'aimerais vous parler de la résidence de Bastien.}{}{5}{lf1 1}{90}{re45 }
+{149}{E:}{}{1}{}{0}{ }
+{150}{Je m'appelle William Thomas Moreau. Je suis ici, dans cette ville abandonnée des dieux, pour vendre la maudite résidence de Bastien. Maintenant, si vous le voulez bien, j'ai d'autres choses à faire...}{Je m'appelle William Thomas Moreau. Je suis ici, dans cette ville abandonnée des dieux, pour vendre la maudite résidence de Bastien. Maintenant, si vous le voulez bien, j'ai d'autres choses à faire...}{}{}{}{ }
+{151}{Elle pourrait m'intéresser. Combien la vendez-vous ?}{}{5}{}{30}{re50 }
+{159}{E:}{}{1}{}{0}{ }
+{160}{[Votre menace semble le secouer un peu.] Ho, ho ! C'était juste une plaisanterie. Hé ! Hé !... Je vous prie de m'excuser de vous avoir offensé. Que puis-je faire pour vous ?}{[Votre menace semble le secouer un peu.] Ho, ho ! C'était juste une plaisanterie. Hé ! Hé !... Je vous prie de m'excuser de vous avoir offensée. Que puis-je faire pour vous ?}{}{}{}{ }
+{161}{W:}{}{5}{lf1 0}{20}{lf1 1 }
+{162}{J'aimerais vous parler de la résidence de Bastien.}{}{5}{lf1 1}{90}{ }
+{163}{Vous allez mourir !}{}{5}{}{0}{co }
+{169}{E:}{}{1}{}{0}{ }
+

@@ -1,0 +1,374 @@
+{1}{G:}{G:}{}{1}{}{}
+{2}{Je vous salue, monsieur. Puis-je vous demander qui vous êtes ?}{}{5}{me 0, re 41}{39}{}
+{3}{Bonjour, Perrin. Puis-je vous importuner quelques instants ?}{}{5}{me 1, re 41}{45}{}
+{5}{Monsieur ! Nous venons à peine de nous rencontrer ! Vous n'avez donc aucun savoir-vivre ?}{}{5}{me 0, re -40}{13}{}
+{6}{Monsieur Laforge ! Qu'aurais-je fait pour vous offenser ?}{}{5}{me 1, re -40}{13}{}
+{8}{'jour ! Vous être qui ?}{}{-4}{me 0}{39}{}
+{9}{'jour, Prin ! Moi pouvoir demander questions ?}{}{-4}{me 1}{45}{}
+{10}{E:}{}{1}{}{0}{}
+{13}{Je regrette, mais vous ne m'êtes guère sympathique, monsieur. Sans doute vaudrait-il mieux que nous en restions là...}{Je regrette, mais vous ne m'êtes guère sympathique, madame. Sans doute vaudrait-il mieux que nous en restions là...}{}{2}{}{}
+{14}{Pardon ? Peut-être souhaiteriez-vous reformuler vos propos, monsieur...}{}{5}{ch 15}{32}{}
+{15}{Monsieur ! Je ne doute pas que nous trouverons le moyen d'oublier cela...}{}{5}{me 0}{27}{re +15}
+{16}{Perrin ! Nous nous sommes toujours si bien entendus...}{}{5}{me 1}{27}{re +15}
+{17}{De tels propos pourraient nuire à votre santé, mage...}{}{5}{}{20}{re -5}
+{18}{E:}{}{5}{}{0}{}
+{20}{Pardonnez-moi... Ai-je bien entendu, monsieur ? Personne n'est assez stupide pour menacer un mage de Tulla, si ?}{Pardonnez-moi... Ai-je bien entendu, madame ? Personne n'est assez stupide pour menacer un mage de Tulla, si ?}{}{3}{}{}
+{21}{Peut-être ai-je fait preuve d'une trop grande impulsivité. Veuillez accepter mes excuses...}{}{5}{}{27}{re +15}
+{22}{Vous êtes peut-être natif de Tulla, mais c'est à Tarante que vous serez inhumé...}{}{5}{}{}{co, fl 25}
+{23}{E:}{}{5}{}{0}{}
+{25}{J'ai bien peur que cette leçon ne soit guère à votre goût, monsieur...}{J'ai bien peur que cette leçon ne soit guère à votre goût, madame...}{}{4}{}{}
+{27}{[Manifestement gêné, le jeune mage devient rouge comme une pivoine.] Une fois encore, il semble que je me sois laissé emporter par mon impulsivité. Je vous en prie, discutons comme les êtres civilisés que nous sommes.}{[Manifestement gêné, le jeune mage devient rouge comme une pivoine.] Une fois encore, il semble que je me sois laissé emporter par mon impulsivité. Je vous en prie, discutons comme les êtres civilisés que nous sommes.}{}{5}{}{}
+{28}{Je suis on ne peut plus d'accord, monsieur. Puis-je vous demander qui vous êtes ?}{}{5}{me 0}{39}{re +5}
+{29}{Certes. Vous avez un moment, Perrin ?}{}{5}{me 1}{45}{}
+{30}{E:}{}{5}{}{0}{}
+{32}{[Le jugement que le jeune homme portait sur vous semble avoir changé.] Peut-être avez-vous raison, monsieur. Je me suis emporté et sans doute m'étais-je fait une fausse opinion de vous. Veuillez pardonner mes propos hâtifs...}{[Le jugement que le jeune homme portait sur vous semble avoir changé.] Peut-être avez-vous raison, madame. Je me suis emporté et sans doute m'étais-je fait une fausse opinion de vous. Veuillez pardonner mes propos hâtifs...}{}{6}{}{}
+{33}{C'est oublié. Puis-je vous demander votre nom ?}{}{5}{me 0}{39}{}
+{34}{C'est oublié. Puis-je vous poser quelques questions ?}{}{5}{me 1}{45}{}
+{35}{E:}{}{5}{}{0}{}
+{36}{Ah, oui ! Bonjour, mon bon ami ! Quel plaisir que de vous revoir ! Et ici, à Caladon ! Le destin nous réserve parfois de ces surprises, n'est-ce pas ?}{Ah, oui ! Bonjour, chère madame ! Quel plaisir que de vous revoir ! Et ici, à Caladon ! Le destin nous réserve parfois de ces surprises, n'est-ce pas ?}{}{7}{}{}
+{37}{Avez-vous quelques instants à m'accorder, Perrin ?}{}{5}{}{45}{}
+{38}{E:}{}{5}{}{0}{}
+{39}{Bien sûr ! Je me nomme Perrin Laforge, récemment diplômé en arcanes de l'illusion et représentant de Tulla, la Cité des Mages. Enchanté de faire votre connaissance, monsieur.}{Bien sûr ! Je me nomme Perrin Laforge, récemment diplômé en arcanes de l'illusion et représentant de Tulla, la Cité des Mages. Enchanté de faire votre connaissance, madame.}{}{8}{}{}
+{40}{Moi de même, monsieur. Vous avez un moment ?}{}{5}{}{45}{}
+{41}{'jour ! Moi @PCNAME@ !}{}{-4}{}{42}{}
+{42}{Euh, oui... Salut ! Vous n'êtes pas une lumière, n'est-ce pas ? Mais je ne suis pas du genre à me moquer de quelqu'un sous prétexte que les dieux ne lui ont pas attribué sa part de matière grise. Heureux de faire votre connaissance, mon brave. En quoi puis-je vous être utile ?}{Euh, oui... Salut ! Vous n'êtes pas une lumière, n'est-ce pas ? Mais je ne suis pas du genre à me moquer de quelqu'un sous prétexte que les dieux ne lui ont pas attribué sa part de matière grise. Heureux de faire votre connaissance, ma brave dame. En quoi puis-je vous être utile ?}{}{9}{}{}
+{43}{Moi pouvoir demander questions, Prin ?}{}{-4}{}{45}{}
+{44}{E:}{}{-4}{}{0}{}
+{45}{Certainement...}{Certainement...}{}{10}{}{}
+{46}{Qu'est-ce qui vous amène à Tarante, Perrin ?}{}{5}{lf1 0}{60}{lf1 1}
+{47}{Parlez-moi de Tulla... Comment est-ce ?}{}{5}{lf1 1}{67}{lf2 1}
+{48}{Pourquoi avez-vous quitté Tulla ?}{}{5}{lf1 1}{89}{lf3 1}
+{49}{Peut-être pourrions-nous voyager ensemble ?}{}{5}{lf4 0, lf2 1, lf3 1}{112}{}
+{50}{Peut-être pourrions-nous voyager ensemble ?}{}{5}{lf4 1, lf2 1, lf3 1}{153}{}
+{51}{Consentiriez-vous à m'enseigner l'art de la guérison  ?}{}{5}{tr 10 -1}{58}{et 10 160}
+{52}{Quoi vous faire à Tarante, Prin ?}{}{-4}{lf1 0}{60}{lf1 1}
+{53}{Euh... Vous pouvoir parler à moi d'Eutula ?}{}{-4}{lf1 1}{67}{lf2 1}
+{54}{Pourquoi vous partir d'Eutula, Prin ?}{}{-4}{lf1 1}{89}{lf3 1}
+{55}{Vous venir avec moi, Prin ?}{}{-4}{lf4 0, lf2 1, lf3 1}{112}{}
+{56}{Vous venir avec moi, Prin ?}{}{-4}{lf4 1, lf2 1, lf3 1}{153}{}
+{57}{E:}{}{1}{}{0}{}
+{58}{Y avait-il autre chose ?}{Y avait-il autre chose ?}{}{}{}{}
+{59}{K:}{}{1}{}{45}{}
+{60}{Aucune raison particulière, en fait. J'avais juste envie de voyager, c'est tout. Il y a quelques semaines à peine, je n'étais encore jamais sorti de Tulla. [Le jeune mage sourit, tout penaud.] J'ai pour ainsi dire toujours vécu dans un cocon...}{Aucune raison particulière, en fait. J'avais juste envie de voyager, c'est tout. Il y a quelques semaines à peine, je n'étais encore jamais sorti de Tulla. [Le jeune mage sourit, tout penaud.] J'ai pour ainsi dire toujours vécu dans un cocon...}{}{11}{}{}
+{61}{Intéressant. Parlez-moi de Tulla... Comment est-ce ?}{}{5}{}{67}{lf2 1}
+{62}{Pourquoi avez-vous quitté Tulla ?}{}{5}{}{89}{lf3 1}
+{63}{Euh... Vous pouvoir parler à moi d'Eutula ?}{}{-4}{}{67}{lf2 1}
+{64}{Pourquoi vous partir d'Eutula, Prin ?}{}{-4}{}{89}{lf3 1}
+{65}{E:}{}{1}{}{0}{}
+{67}{Tulla ? C'est une ville absolument é-pous-tou-flan-te ! Elle se trouve au coeur de l'Oasis des Brumes, qui l'a cachée des siècles durant aux yeux du monde extérieur. La tour noire et sans fenêtre de Siméon Léminent y est entourée des demeures en pierre des maîtres mages pratiquant les arts les plus puissants et les plus anciens qui soient...}{Tulla ? C'est une ville absolument é-pous-tou-flan-te ! Elle se trouve au coeur de l'Oasis des Brumes, qui l'a cachée des siècles durant aux yeux du monde extérieur. La tour noire et sans fenêtre de Siméon Léminent y est entourée des demeures en pierre des maîtres mages pratiquant les arts les plus puissants et les plus anciens qui soient...}{}{12}{}{}
+{68}{Quoi d'autre ?}{}{5}{}{71}{}
+{69}{Aut'chose ?}{}{-4}{}{71}{}
+{71}{Le centre de la Grande cour s'orne de la Fontaine de Pélogien, conjurateur d'antan dont on prétend que l'esprit protège encore les apprentis en ce lieu. Et, en début de soirée, quand le soleil se couche sur les Landes de Vendigroth, résonne la mélopée envoûtante des chanteurs mystiques tissant leurs mélodies avec leur âme soeur de l'au-delà.}{Le centre de la Grande cour s'orne de la Fontaine de Pélogien, conjurateur d'antan dont on prétend que l'esprit protège encore les apprentis en ce lieu. Et, en début de soirée, quand le soleil se couche sur les Landes de Vendigroth, résonne la mélopée envoûtante des chanteurs mystiques tissant leurs mélodies avec leur âme soeur de l'au-delà.}{}{13}{}{}
+{72}{Où se trouve Tulla, Perrin ?}{}{5}{}{82}{}
+{73}{Merci, Perrin. Pourquoi en êtes-vous parti ?}{}{5}{}{89}{lf3 1}
+{74}{Vous avez évoqué la tour de Siméon Léminent... De qui s'agit-il ?}{}{5}{}{105}{}
+{75}{Encore quelques questions d'ordre général...}{}{5}{}{45}{}
+{76}{Où être Eutula ?}{}{-4}{}{82}{}
+{77}{Merci, Prin ! Pourquoi vous partir d'Eutula ?}{}{-4}{}{89}{lf3 1}
+{78}{Euh... Qui être Simon Laminant ?}{}{-4}{}{105}{}
+{79}{Moi encore avoir questions...}{}{-4}{}{45}{}
+{80}{E:}{}{1}{}{0}{}
+{82}{Tulla ? Désolé, camarade, mais j'ai fait le serment de ne jamais révéler ce secret...}{Tulla ? Désolé, camarade, mais j'ai fait le serment de ne jamais révéler ce secret...}{}{14}{}{}
+{83}{Je vois. Pourquoi en êtes-vous parti ?}{}{5}{}{89}{lf3 1}
+{84}{Encore quelques questions d'ordre général...}{}{5}{}{45}{}
+{85}{Je vois. Pourquoi vous partir d'Eutula ?}{}{-4}{}{89}{lf3 1}
+{86}{Moi encore avoir questions...}{}{-4}{}{45}{}
+{87}{E:}{}{1}{}{0}{}
+{89}{Oh, j'ai été envoyé à Tarante en... comment dire... eh bien, en mission, j'imagine. Maître Siméon pensait que j'étais idéalement qualifié pour ce travail ; c'est ce qui explique que je sois parti pour Tarante. Et j'ai passé les deux dernières semaines en compagnie de monsieur Saule, à me remettre de ma... mission. Quelle aventure cela a été !}{Oh, j'ai été envoyé à Tarante en... comment dire... eh bien, en mission, j'imagine. Maître Siméon pensait que j'étais idéalement qualifié pour ce travail ; c'est ce qui explique que je sois parti pour Tarante. Et j'ai passé les deux dernières semaines en compagnie de monsieur Saule, à me remettre de ma... mission. Quelle aventure cela a été !}{}{15}{}{}
+{90}{Que s'est-il passé ?}{}{5}{}{98}{}
+{91}{Je n'ai aucune certitude à ce sujet. Qui est ce " Maître Siméon " ?}{}{5}{}{105}{}
+{92}{Encore quelques questions d'ordre général...}{}{5}{}{45}{}
+{93}{Quoi arriver ?}{}{-4}{}{98}{}
+{94}{Euh... Qui être Maît' Simon ?}{}{-4}{}{105}{}
+{95}{Moi encore avoir questions...}{}{-4}{}{45}{}
+{96}{E:}{}{1}{}{0}{}
+{98}{Tenez, ce journal détaille toute l'histoire. [Il vous le tend.] Personnellement, je préfère ne pas en parler. Pourtant ! J'ai été contacté par un gentilhomme qui semble désireux d'écrire un livre sur ce qui s'est passé. Un certain Charles-Louis Dangien, ou un nom approchant. Un individu pour le moins importun, mais très persévérant...}{Tenez, ce journal détaille toute l'histoire. [Il vous le tend.] Personnellement, je préfère ne pas en parler. Pourtant ! J'ai été contacté par un gentilhomme qui semble désireux d'écrire un livre sur ce qui s'est passé. Un certain Charles-Louis Dangien, ou un nom approchant. Un individu pour le moins importun, mais très persévérant...}{}{16}{}{in -5227}
+{99}{Je regarderai si je le trouve. Vous avez mentionné un certain " Maître Siméon "... De qui s'agit-il ?}{}{5}{}{105}{}
+{100}{Encore quelques questions d'ordre général...}{}{5}{}{45}{}
+{101}{Euh... Qui être Maît' Simon ?}{}{-4}{}{105}{}
+{102}{Moi encore avoir questions...}{}{-4}{}{45}{}
+{103}{E:}{}{1}{}{0}{}
+{105}{Maître Siméon Léminent ? C'est le plus puissant mage de tout Arcanum ! En tant que dirigeant de l'Assemblée de Tulla, il est responsable de tout ce qui se déroule à l'intérieur des murs de la cité... et d'une grande partie de ce qui se produit à l'extérieur ! C'est un homme sévère mais juste, et extrêmement puissant. C'est un maître accompli des arcanes de l'invocation et autres disciplines.}{Maître Siméon Léminent ? C'est le plus puissant mage de tout Arcanum ! En tant que dirigeant de l'Assemblée de Tulla, il est responsable de tout ce qui se déroule à l'intérieur des murs de la cité... et d'une grande partie de ce qui se produit à l'extérieur ! C'est un homme sévère mais juste, et extrêmement puissant. C'est un maître accompli des arcanes de l'invocation et autres disciplines.}{}{17}{}{}
+{106}{Intéressant. Parlez-moi de Tulla... Comment est-ce ?}{}{5}{}{67}{lf2 1}
+{107}{Encore quelques questions d'ordre général...}{}{5}{}{45}{}
+{108}{Euh... Comment être Eutula, Prin ?}{}{-4}{}{67}{lf2 1}
+{109}{Moi encore avoir questions...}{}{-4}{}{45}{}
+{110}{E:}{}{1}{}{0}{}
+{112}{Hum... Voilà une proposition qui n'est pas dénuée d'intérêt... Vous semblez avoir beaucoup voyagé, camarade... Mais qu'est-ce qui vous pousse à parcourir le monde de la sorte ? Qu'est-ce qui vous amène à Tarante ?}{Hum... Voilà une proposition qui n'est pas dénuée d'intérêt... Vous semblez avoir beaucoup voyagé, camarade... Mais qu'est-ce qui vous pousse à parcourir le monde de la sorte ? Qu'est-ce qui vous amène à Tarante ?}{}{18}{}{}
+{113}{C'est une longue histoire, Perrin... [Vous lui racontez tout.]}{}{5}{}{119}{}
+{114}{Je ne fais que voyager sans but, comme vous, mon vieux...}{}{5}{}{143}{}
+{115}{Ca être très longue histoire, Prin... [Vous lui racontez tout.]}{}{-4}{}{119}{}
+{116}{Euh... Moi balader et faire trucs, quoi...}{}{-4}{}{143}{}
+{117}{E:}{}{1}{}{0}{}
+{119}{Je vois. [Il garde un instant le silence, comme pour mieux réfléchir à ce que vous venez de lui apprendre.] Autrement dit, vous cherchez à m'expliquer que toute cette aventure découle d'un malencontreux accident qui vous est arrivé alors que vous vous trouviez à bord du Zéphyr ?}{Je vois... [Il garde un instant le silence, comme pour mieux réfléchir à ce que vous venez de lui apprendre.] Autrement dit, vous cherchez à m'expliquer que toute cette aventure découle d'un malencontreux accident qui vous est arrivé alors que vous vous trouviez à bord du Zéphyr ?}{}{19}{}{}
+{120}{Oui.}{}{5}{}{126}{}
+{121}{Non, ce n'était qu'une métaphore, évidemment...}{}{5}{}{143}{lf4 1}
+{122}{Ouais !}{}{-4}{}{126}{}
+{123}{Nan, moi plaisanter !}{}{-4}{}{143}{lf4 1}
+{124}{E:}{}{1}{}{0}{}
+{126}{Eh bien, je dois dire que je n'ai jamais entendu d'histoire aussi passionnante ! Et moi qui croyais avoir vécu une terrible expérience...}{Eh bien, je dois dire que je n'ai jamais entendu d'histoire aussi passionnante ! Et moi qui croyais avoir vécu une terrible expérience...}{}{20}{}{}
+{127}{Alors, souhaitez-vous vous joindre à  moi ?}{}{5}{pa -6577}{133}{jo 0 139}
+{128}{Vous joindrez-vous à moi, Perrin ?}{}{5}{pa 6577}{318}{}
+{129}{Vous venir avec moi, Prin ?}{}{-4}{pa -6577}{133}{jo 0 139}
+{130}{Vous venir avec moi, Prin ?}{}{-4}{pa 6577}{318}{}
+{131}{K:}{}{1}{}{45}{}
+{132}{E:}{}{1}{}{0}{}
+{133}{Y avait-il autre chose ?}{Y avait-il autre chose ?}{}{21}{}{}
+{134}{Encore quelques questions d'ordre général...}{}{5}{}{45}{}
+{135}{Moi encore avoir questions...}{}{-4}{}{45}{}
+{136}{E:}{}{1}{}{0}{}
+{139}{Oui, bien entendu ! Je serais très honoré de vous accompagner et de voir ce qu'il adviendra de nous. Je crois que Maître Siméon souhaiterait qu'un émissaire de Tulla fasse partie des sauveurs du monde... [Il vous adresse un large sourire.]}{Oui, bien entendu ! Je serais très honoré de vous accompagner et de voir ce qu'il adviendra de nous. Je crois que Maître Siméon souhaiterait qu'un émissaire de Tulla fasse partie des sauveurs du monde... [Il vous adresse un large sourire.]}{}{22}{}{}
+{140}{Dans ce cas, allons-y...}{}{5}{}{0}{}
+{141}{Allons-y !}{}{-4}{}{0}{}
+{143}{Ah, je vois... [Perrin semble hésiter.] Eh bien, dans l'état actuel des choses...}{Ah, je vois... [Perrin semble hésiter.] Eh bien, dans l'état actuel des choses...}{}{23}{}{}
+{144}{Alors, souhaitez-vous vous joindre à  moi ?}{}{5}{pa 6577}{150}{}
+{146}{Vous venir avec moi, Prin ?}{}{-4}{pa -6577}{150}{}
+{148}{K:}{}{1}{}{45}{}
+{149}{E:}{}{1}{}{0}{}
+{150}{Je ne crois pas. Je ne suis pas expert en la matière, mais il me semble que les compagnons de voyage devraient se faire une confiance mutuelle. Peut-être vaudrait-il mieux que nous suivions chacun notre chemin...}{Je ne pense pas. Je ne suis pas expert en la matière, mais il me semble que les compagnons de voyage devraient se faire une confiance mutuelle. Peut-être vaudrait-il mieux que nous suivions chacun notre chemin...}{}{24}{}{}
+{151}{E:}{}{1}{}{0}{}
+{153}{Eh bien, je ne sais pas vraiment...  Ne m'avez-vous rien caché de vos intentions ? Qu'est-ce qui vous amène à Tarante ?}{Eh bien, je ne sais pas vraiment...  Ne m'avez-vous rien caché de vos intentions ? Qu'est-ce qui vous amène à Tarante ?}{}{25}{}{}
+{154}{C'est une longue histoire, Perrin... [Vous lui racontez tout.]}{}{5}{}{126}{}
+{155}{Comme je vous l'ai dit, je ne fais que voyager là où mes pas me portent, tout comme vous, mon vieux...}{}{5}{}{143}{}
+{156}{Accord... Mais histoire être longue, Perrin. [Vous lui racontez tout.]}{}{-4}{}{126}{}
+{157}{Ben, moi déjà dire, moi balader...}{}{-4}{}{143}{}
+{158}{E:}{}{1}{}{0}{}
+{160}{Avec grand plaisir ! Ce serait un honneur pour moi. Ne le prenez pas mal, mais la coutume veut que je vous demande 500 pièces d'or pour cela. Vous avez l'argent ? }{Avec grand plaisir ! Ce serait un honneur pour moi. Ne le prenez pas mal, mais la coutume veut que je vous demande 500 pièces d'or pour cela. Vous avez l'argent ?}{}{26}{}{}
+{161}{Oui. Je vais payer mon entraînement sans attendre.}{}{5}{$$500}{166}{}
+{162}{Oui, mais une autre fois, peut-être... Encore quelques questions...}{}{5}{$$500}{45}{}
+{163}{Non. Nous en reparlerons plus tard... Encore quelques questions...}{}{5}{$$-499}{45}{}
+{164}{E:}{}{5}{}{0}{}
+{166}{Dans ce cas, parfait ! Permettez-moi de vous montrer certaines choses...[Il joint le geste à la parole.]... Et voilà ! Vous êtes désormais expert dans l'art de la guérison ! C'est du bon travail ! Si jamais vous cherchez à passer maître dans cet art, allez à Qintarra et adressez-vous à Biche.}{Dans ce cas, parfait ! Permettez-moi de vous montrer certaines choses...[Il joint le geste à la parole.]... Et voilà ! Vous êtes désormais experte dans l'art de la guérison ! C'est du bon travail ! Si jamais vous cherchez à passer maître dans cet art, allez à Qintarra et adressez-vous à Biche.}{}{27}{}{$$-500, tr 10 2, ru2170}
+{167}{Merci. Encore quelques questions...}{}{5}{}{45}{}
+{168}{E:}{}{5}{}{0}{}
+{170}{Euh, excusez-moi, mais je connais ce gentilhomme... Monsieur Cendre-Tarellond était étudiant à Tulla du temps où j'y étais, moi aussi. Il a quitté l'école avant d'avoir achevé ses études... J'imagine que cela vous en dit long sur sa personnalité. Je ne lui fais pas la moindre confiance, et je vous conseille de faire de même.}{Euh, excusez-moi, mais je connais ce gentilhomme... Monsieur Cendre-Tarellond était étudiant à Tulla du temps où j'y étais, moi aussi. Il a quitté l'école avant d'avoir achevé ses études... J'imagine que cela vous en dit long sur sa personnalité. Je ne lui fais pas la moindre confiance, et je vous conseille de faire de même.}{}{28}{}{}
+{171}{J'y réfléchirai... Eh bien, Geoffroy, que faites-vous ici ?}{}{5}{}{-22}{}
+{172}{Euh... Accord. Jeffroi ! Quoi vous faire ici ?}{}{-4}{}{-22}{}
+{174}{Que puis-je faire pour vous ?}{Que puis-je faire pour vous ?}{}{29}{}{}
+{175}{B:}{}{1}{wa 0}{}{}
+{176}{K:}{}{1}{wa 0}{195}{}
+{177}{J'aimerais que vous fassiez quelque chose pour moi, Perrin...}{}{5}{wa 0}{289}{}
+{178}{Vous faire kêk'chose pour moi, Prin !}{}{-4}{wa 0}{289}{}
+{179}{Consentiriez-vous à m'apprendre l'art de la guérison, Perrin ?}{}{5}{tr 10 -1, wa 0}{332}{et 10  610}
+{180}{Vous n'avez plus besoin d'attendre, Perrin...}{}{5}{wa 1, pa -6577}{332}{uw 0 303}
+{181}{Vous plus attendre, Prin !}{}{-4}{wa 1, pa -6577}{332}{uw 0 303}
+{182}{Vous n'avez plus besoin d'attendre, Perrin...}{}{5}{wa 1, pa 6577}{318}{}
+{183}{Vous plus attendre, Prin !}{}{-4}{wa 1, pa 6577}{318}{}
+{184}{E:}{}{1}{}{0}{}
+{195}{Quelles questions souhaitiez-vous me poser ?}{Quelles questions souhaitiez-vous me poser ?}{}{30}{}{}
+{196}{J'aimerais en apprendre davantage à votre sujet, Perrin...}{}{5}{}{}{ce}
+{197}{Que pouvez-vous me dire sur Schuyler & Fils ?}{}{5}{ss 1, ss -1}{534}{}
+{198}{Perrin, que savez-vous au sujet de Gilbert Bastien ?}{}{5}{ss 2, ss -2}{538}{}
+{199}{Perrin, que savez-vous au sujet de Gilbert Bastien ?}{}{5}{ss 3, ss -3}{538}{}
+{200}{Savez-vous où se trouve l'Ile du Désespoir, Perrin ?}{}{5}{ss 5, ss -5}{542}{}
+{201}{Que pouvez-vous me dire au sujet de l'Ile du Désespoir, Perrin ?}{}{5}{ss 6, ss -6}{546}{}
+{202}{Que savez-vous au sujet du Clan de la Roue ?}{}{5}{ss 7, ss -7}{550}{}
+{204}{Que pouvez-vous me dire au sujet de Qintarra, Perrin ?}{}{5}{ss 9, ss -9}{558}{}
+{205}{Savez-vous quoi que ce soit au sujet de Caladon, Perrin ?}{}{5}{ss 12, ss -12}{562}{}
+{206}{Que pouvez-vous me dire au sujet des elfes noirs, Perrin ?}{}{5}{ss 14, ss -14}{566}{}
+{207}{Que savez-vous au sujet de ce bonhomme, Arronax ?}{}{5}{ss 15, ss -15}{570}{}
+{208}{Nasrudin, Perrin ? Vous détenez des informations intéressantes à son sujet ?}{}{5}{ss 16, ss -16}{574}{}
+{209}{Que pouvez-vous me dire sur l'Ile de Thanatos, Perrin ?}{}{5}{ss 17, ss -17}{578}{}
+{210}{Que pouvez-vous m'apprendre au sujet des ruines de Vendigroth, Perrin ?}{}{5}{ss 18, ss -18}{582}{}
+{211}{Que savez-vous sur le Cirque de Brodgar, Perrin ?}{}{5}{ss 19, ss -19}{590}{}
+{212}{Comment allons-nous trouver Arronax ?}{}{5}{ss 20, ss -20}{}{}
+{213}{Que pouvez-vous me dire sur le Néant, Perrin ?}{}{5}{ss 21, ss -21}{594}{}
+{214}{Que savez-vous au sujet de Kerghan, Perrin ?}{}{5}{ss 23, ss -23}{598}{}
+{215}{Perrin ! Qu'allons-nous faire, maintenant ?}{}{5}{ss 24, ss -24}{602}{}
+{216}{Que savez-vous sur ce lieu ?}{}{5}{ia 1}{352}{}
+{217}{Que savez-vous sur ce lieu ?}{}{5}{ia 21}{356}{}
+{218}{Que savez-vous sur ce lieu ?}{}{5}{ia 3}{360}{}
+{219}{Que savez-vous sur ce lieu ?}{}{5}{ia 5}{364}{}
+{220}{Que savez-vous sur ce lieu ?}{}{5}{ia 8}{368}{}
+{221}{Que savez-vous sur ce lieu ?}{}{5}{ia 10}{372}{}
+{222}{Que savez-vous sur ce lieu ?}{}{5}{ia 11}{376}{}
+{223}{Que savez-vous sur ce lieu ?}{}{5}{ia 16}{380}{}
+{224}{Moi vouloir savoir plus sur vous, Prin.}{}{-4}{}{}{ce}
+{225}{Euh... Vous connaître Pèche Huilère, Prin ?}{}{-4}{ss 1, ss -1}{534}{}
+{226}{Euh... Vous savoir quoi sur Gilbière Baston ?}{}{-4}{ss 2, ss -2}{538}{}
+{227}{Euh... Vous savoir quoi sur Gilbière Baston ?}{}{-4}{ss 3, ss -3}{538}{}
+{228}{Prin ! Où être Ile du Despouar ?}{}{-4}{ss 5, ss -5}{542}{}
+{229}{Vous savoir quoi sur Ile du Despouar ?}{}{-4}{ss 6, ss -6}{546}{}
+{230}{Vous connaître Clan d'la Roue ?}{}{-4}{ss 7, ss -7}{550}{}
+{231}{Vous savoir comment aller à Couine-Tara ?}{}{-4}{ss 8, ss -8}{554}{}
+{232}{Vous savoir quoi sur Couine-Tara, Prin ?}{}{-4}{ss 9, ss -9}{558}{}
+{233}{Vous connaître Qu'a-la-Dent ?}{}{-4}{ss 10, ss -10}{562}{}
+{234}{Vous parler Zelfes noirs à moi, Prin.}{}{-4}{ss 13, ss -13}{566}{}
+{235}{Vous savoir quoi sur Areu-Max, Prin ?}{}{-4}{ss 15, ss -15}{570}{}
+{236}{Prin ! Vous savoir quoi sur Nasseroutine ?}{}{-4}{ss 16, ss -16}{574}{}
+{237}{Euh... Moi vouloir savoir trucs sur Tanalos...}{}{-4}{ss 17, ss -17}{578}{}
+{238}{Euh... Vous parler à moi rouines Vendredigotte ?}{}{-4}{ss 18, ss -18}{582}{}
+{239}{Vous savoir quoi sur Ciq Brodeugar ?}{}{-4}{ss 19, ss -19}{590}{}
+{240}{Ah ! Prin ! Vous savoir quoi sur Niant ?}{}{-4}{ss 20, ss -20}{594}{}
+{241}{Vous savoir quoi sur Kerghun ?}{}{-4}{ss 22, ss -22}{598}{}
+{242}{Prin ! Quoi nous faire, maint'nant ?}{}{-4}{ss 24, ss -24}{602}{}
+{243}{Vous savoir quoi sur cet endroit ?}{}{-4}{ia 1}{352}{}
+{244}{Vous savoir quoi sur cet endroit ?}{}{-4}{ia 21}{356}{}
+{245}{Vous savoir quoi sur cet endroit ?}{}{-4}{ia 3}{360}{}
+{246}{Vous savoir quoi sur cet endroit ?}{}{-4}{ia 4}{364}{}
+{247}{Vous savoir quoi sur cet endroit ?}{}{-4}{ia 5}{364}{}
+{248}{Vous savoir quoi sur cet endroit ?}{}{-4}{ia 8}{368}{}
+{249}{Vous savoir quoi sur cet endroit ?}{}{-4}{ia 9}{372}{}
+{250}{Vous savoir quoi sur cet endroit ?}{}{-4}{ia 10}{372}{}
+{251}{Vous savoir quoi sur cet endroit ?}{}{-4}{ia 11}{376}{}
+{252}{Vous savoir quoi sur cet endroit ?}{}{-4}{ia 16}{380}{}
+{253}{Vous semblez en colère contre moi, Perrin. Est-ce que je peux faire quelque chose ?}{}{5}{re -20}{268}{}
+{254}{Euh... Vous colère contre moi ?}{}{-4}{re -20}{268}{}
+{255}{E:}{}{1}{}{0}{}
+{268}{Eh bien, je dois dire que les événements prennent un tour qui me ne plaît guère. Mais si vous me trouviez du thé Earl Grey, mon humeur s'en trouverait instantanément améliorée.}{Eh bien, je dois dire que les événements prennent un tour qui me ne plaît guère. Mais si vous me trouviez du thé Earl Grey, mon humeur s'en trouverait instantanément améliorée.}{}{69}{}{}
+{269}{Allons, Perrin, est-ce vraiment nécessaire ?}{}{5}{ch 20}{276}{re +20}
+{270}{Excellent choix, mon ami ! D'ailleurs, j'en ai justement sur moi...}{}{5}{in 3616, ch -19}{-30}{re +20}
+{271}{Je vais essayer de vous en trouver, Perrin.}{}{5}{in -3616, ch -19}{285}{}
+{272}{Oh, nos rêves sont parfois tellement fous ! Partons, voulez-vous ?}{}{5}{}{}{re -5, fl 287}
+{273}{Moi avoir, Prin.}{}{-4}{in 3616, ch -19}{-30}{re +20}
+{274}{Euh... Moi voir si moi pouvoir trouver, Prin...}{}{-4}{in -3616, ch -19}{285}{}
+{275}{Vous pas avoir. Nous partir...}{}{-4}{}{}{re -5, fl 287}
+{276}{[Perrin fronce les sourcils puis sourit d'un air penaud, incapable de résister à votre charisme.] Oui, on dirait que j'ai un comportement un peu infantile, n'est-ce pas ? Oublions cela, voulez-vous ?}{[Perrin fronce les sourcils puis sourit d'un air penaud, incapable de résister à votre charisme.] Oui, on dirait que j'ai un comportement un peu infantile, n'est-ce pas ? Oublions cela, voulez-vous ?}{}{70}{}{}
+{277}{E:}{}{1}{}{0}{}
+{278}{[Il vous l'arrache des mains et s'en sert une tasse, qu'il boit sans attendre.] Ahhhh ! Les petits plaisirs de la vie sont toujours les meilleurs, pas vrai ? Je n'étais pas si en colère que cela contre vous, de toute façon... Nous y allons ?}{[Il vous l'arrache des mains et s'en sert une tasse, qu'il boit sans attendre.] Ahhhh ! Les petits plaisirs de la vie sont toujours les meilleurs, pas vrai ? Je n'étais pas si en colère que cela contre vous, de toute façon... Nous y allons ?}{}{71}{}{}
+{279}{Vous joindrez-vous à moi cette fois encore, Perrin ?}{}{5}{pa 6577, pa -6591}{332}{jo 0 335}
+{280}{Vous joindrez-vous à moi cette fois encore, Perrin ?}{}{5}{pa -6577, pa -6591}{318}{}
+{281}{Alors, vous venir avec moi, Prin ?}{}{-4}{pa 6577, pa -6591}{332}{jo 0 335}
+{282}{Alors, vous venir avec moi, Prin ?}{}{-4}{pa -6577, pa -6591}{318}{}
+{283}{E:}{}{1}{}{0}{}
+{285}{Bien, bien... Nous avons tous nos petites lubies, n'est-ce pas...}{Bien, bien... Nous avons tous nos petites lubies, n'est-ce pas...}{}{72}{}{}
+{286}{E:}{}{1}{}{0}{}
+{287}{[D'un air boudeur.] Oh... Alors, c'est comme cela que vous voyez les choses, hein ? Je commence déjà à regretter d'avoir accepté de vous accompagner...}{[D'un air boudeur.] Oh... Alors, c'est comme cela que vous voyez les choses, hein ? Je commence déjà à regretter d'avoir accepté de vous accompagner...}{}{73}{}{}
+{288}{}{}{}{}{}{}
+{289}{Qu'aviez-vous en tête ?}{Qu'aviez-vous en tête ?}{}{31}{}{}
+{290}{Eloignez-vous, Perrin.}{}{5}{}{0}{so}
+{291}{Vous plus loin, Prin !}{}{-4}{}{0}{so}
+{292}{Rapprochez-vous un peu, Perrin.}{}{5}{}{0}{sc}
+{293}{Vous plus près, Prin !}{}{-4}{}{0}{sc}
+{294}{Attendez ici un instant...}{}{5}{wa 0}{306}{wa}
+{295}{Vous attendre ici, Prin !}{}{-4}{wa 0}{306}{wa}
+{296}{Vous n'avez plus besoin d'attendre, Perrin...}{}{5}{wa 1, pa -6577}{332}{uw 0 303}
+{297}{Vous plus attendre, Prin !}{}{-4}{wa 1, pa -6577}{332}{uw 0 303}
+{298}{Vous n'avez plus besoin d'attendre, Perrin...}{}{5}{wa 1, pa 6577}{318}{}
+{299}{Vous plus attendre, Prin !}{}{-4}{wa 1, pa 6577}{318}{}
+{300}{Je pense qu'il serait préférable que vous quittiez le groupe.}{}{5}{}{309}{lv}
+{301}{Moi plus vouloir vous !}{}{-4}{}{309}{lv}
+{302}{[Retour]}{}{5}{}{174}{}
+{303}{Oui, naturellement. Nous pourrons partir dès que vous le souhaiterez.}{Oui, naturellement. Nous pourrons partir dès que vous le souhaiterez.}{}{32}{}{}
+{304}{E:}{}{1}{}{0}{}
+{306}{Oui, naturellement. J'attends ici. Mais essayez de ne pas me faire attendre trop longtemps. On ne sait jamais ce qui pourrait arriver...}{Oui, naturellement. J'attends ici. Mais essayez de ne pas me faire attendre trop longtemps. On ne sait jamais ce qui pourrait arriver...}{}{33}{}{}
+{307}{E:}{}{1}{}{0}{}
+{309}{Ca alors, pour une surprise ! Voilà qui est pour le moins inattendu ! Je vous avoue que je ne suis guère heureux de me séparer de vous, camarade. Je dois dire que j'ai apprécié le temps que nous avons passé ensemble. Qui sait, peut-être nos routes se croiseront-elles de nouveau... Je vous souhaite bien le bonjour...}{Ca alors, pour une surprise ! Voilà qui est pour le moins inattendu ! Je vous avoue que je ne suis guère heureux de me séparer de vous, camarade. Je dois dire que j'ai apprécié le temps que nous avons passé ensemble. Qui sait, peut-être nos routes se croiseront-elles de nouveau... Je vous souhaite bien le bonjour...}{}{34}{}{lf31 1}
+{310}{E:}{}{1}{}{0}{}
+{312}{Bonjour, bonjour... Quelle joie de vous revoir, camarade ! Qu'est-ce qui vous amène par ici ?}{Bonjour, bonjour... Quelle joie de vous revoir, camarade ! Qu'est-ce qui vous amène par ici ?}{}{35}{}{}
+{313}{Voulez-vous vous joindre à  moi ?}{}{1}{pa -6577}{332}{jo 0 335}
+{314}{Voulez-vous vous joindre à  moi ?}{}{1}{pa 6577}{318}{}
+{315}{Vous semblez en colère contre moi, Perrin. Est-ce que je peux faire quelque chose ?}{}{5}{re -20}{268}{}
+{316}{Euh... Vous colère contre moi ? Moi pouvoir faire kék'chose pour vous, Prin ?}{}{-4}{re -20}{268}{}
+{317}{E:}{}{1}{}{0}{}
+{318}{[Perrin observe Geoffroy en fronçant les sourcils.] Désolé, mais je refuse de voyager en compagnie de Geoffroy Cendre-Tarellond. Cet homme est un fauteur de troubles notoire.}{[Perrin observe Geoffroy en fronçant les sourcils.] Désolé, mais je refuse de voyager en compagnie de Geoffroy Cendre-Tarellond. Cet homme est un fauteur de troubles notoire.}{}{36}{}{}
+{319}{Perrin ! Geoffroy a toujours été un ami, euh... loyal...}{}{1}{lf5 0}{328}{lf5 1}
+{320}{Allons, vous ferez bien une exception pour moi, Perrin...}{}{1}{lf5 1, ch 20}{326}{}
+{321}{Je vois. Attendez quelques instants, que je me débarrasse de Geoffroy...}{}{1}{lf5 1}{0}{lv}
+{322}{Dans ce cas, on dirait que vous allez devoir nous quitter, Perrin...}{}{1}{lf5 1}{309}{lv}
+{323}{Vous semblez en colère contre moi, Perrin. Est-ce que je peux faire quelque chose ?}{}{5}{re -20}{268}{}
+{324}{Euh... Vous colère contre moi ? Moi pouvoir faire kék'chose pour vous, Prin ?}{}{-4}{re -20}{268}{}
+{325}{E:}{}{1}{lf5 1}{0}{}
+{326}{[Perrin semble partagé mais finit par acquiescer.] Oui, je pense que vous avez raison... Mais je vous aurais donné mon avis ! Cendre-Tarellond n'est l'ami de personne !}{[Perrin semble partagé mais finit par acquiescer.] Oui, je pense que vous avez raison... Mais je vous aurais donné mon avis ! Cendre-Tarellond n'est l'ami de personne !}{}{37}{}{}
+{327}{Voulez-vous vous joindre à  moi ?}{}{1}{}{318}{jo 0 336}
+{328}{Je ne doute pas qu'il ait réussi à vous convaincre de sa bonne foi. Mais, à la vérité, ce n'est qu'une crapule, un nécromancien au coeur noir. En plus, il n'a pas eu le courage de finir ses études à Tulla. Et cela, c'est impardonnable, si vous voulez mon avis. Non, j'ai bien peur qu'il vous faille choisir entre nous deux.}{Je ne doute pas qu'il ait réussi à vous convaincre de sa bonne foi. Mais, à la vérité, ce n'est qu'une crapule, un nécromancien au coeur noir. En plus, il n'a pas eu le courage de finir ses études à Tulla. Et cela, c'est impardonnable, si vous voulez mon avis. Non, j'ai bien peur qu'il vous faille choisir entre nous deux.}{}{38}{}{}
+{329}{Mais, Perrin....}{}{5}{}{-15}{}
+{330}{Euh, Prin...}{}{-4}{}{-15}{}
+{332}{Y avait-il autre chose ?}{Y avait-il autre chose ?}{}{39}{}{}
+{333}{K:}{}{1}{}{174}{}
+{334}{E:}{}{1}{}{0}{}
+{335}{Mais oui ! Mon existence est tellement moins exaltante quand vous n'êtes pas là ! Allons, en route !}{Mais oui ! Mon existence est tellement moins exaltante quand vous n'êtes pas là ! Allons, en route !}{}{40}{}{lf31 0}
+{336}{E:}{}{1}{}{0}{}
+{338}{Eh bien, vous voilà ? Et moi qui croyais que vous m'aviez abandonné pour de bon ! Je ne puis vous dire à quel point cela me fait plaisir de vous revoir en bonne santé. Aviez-vous besoin de quelque chose ?}{Eh bien, vous voilà ? Et moi qui croyais que vous m'aviez abandonné pour de bon ! Je ne puis vous dire à quel point cela me fait plaisir de vous revoir en bonne santé. Aviez-vous besoin de quelque chose ?}{}{41}{}{}
+{339}{J'espérais que vous vous joindriez de nouveau à moi, Perrin.}{}{1}{pa -6577}{332}{jo 0 344}
+{340}{J'espérais que vous vous joindriez de nouveau à moi, Perrin.}{}{1}{pa 6577}{318}{}
+{341}{E:}{}{1}{}{0}{}
+{344}{Oui ! Je me réjouis de me joindre à vous si vous voulez de moi ! Allons-y !}{Oui ! Je me réjouis de me joindre à vous si vous voulez de moi ! Allons-y !}{}{42}{}{}
+{345}{E:}{}{1}{}{0}{}
+{352}{Je ne suis jamais venu ici, mais j'ai lu quelques ouvrages décrivant ce lieu... Si je me rappelle bien, il s'agit des Tristes Collines... Il me semble qu'elles sont liées aux prophéties Panarii... D'ailleurs, je crois savoir qu'un splendide temple consacré à la religion Panarii se trouve dans les environs. J'ai ouï dire que les fidèles l'avaient déserté...}{Je ne suis jamais venu ici, mais j'ai lu quelques ouvrages décrivant ce lieu... Si je me rappelle bien, il s'agit des Tristes Collines... Il me semble qu'elles sont liées aux prophéties Panarii... D'ailleurs, je crois savoir qu'un splendide temple consacré à la religion Panarii se trouve dans les environs. J'ai ouï dire que les fidèles l'avaient déserté...}{}{43}{}{}
+{353}{K:}{}{1}{}{195}{}
+{354}{E:}{}{1}{}{0}{}
+{356}{Voici Tarante, camarade ! L'une des plus grandes villes de toute l'histoire d'Arcanum ! Une importante population humaine, grandement influencée par les technologies nouvelles et répugnant à utiliser la magie... Comme quoi personne n'est parfait...  J'ai toujours rêvé de voir l'université de Tarante.}{Voici Tarante, camarade ! L'une des plus grandes villes de toute l'histoire d'Arcanum ! Une importante population humaine, grandement influencée par les technologies nouvelles et répugnant à utiliser la magie... Comme quoi personne n'est parfait...  J'ai toujours rêvé de voir l'université de Tarante.}{}{44}{}{}
+{357}{K:}{}{1}{}{195}{}
+{358}{E:}{}{1}{}{0}{}
+{360}{Je crois qu'il s'agit de Racine Noire. Un petit port et village de pêcheurs... Il y a eu une guerre ici, voici de nombreuses années. Le roi de Cumbria, Praetor, a attaqué le village et l'a incendié. Les habitants ont tout reconstruit, mais cela ne s'est pas fait en un jour.}{Je crois qu'il s'agit de Racine Noire. Un petit port et village de pêcheurs... Il y a eu une guerre ici, voici de nombreuses années. Le roi de Cumbria, Praetor, a attaqué le village et l'a incendié. Les habitants ont tout reconstruit, mais cela ne s'est pas fait en un jour.}{}{45}{}{}
+{361}{K:}{}{1}{}{195}{}
+{362}{E:}{}{1}{}{0}{}
+{364}{Voici Dernholm, la capitale du Royaume de Cumbria. Le roi Praetor y a exercé son règne pendant plus de cinquante années, mais il semblerait que la puissance du royaume se soit effritée au fil des ans... Cumbria a subi une défaite écrasante à la fin de la guerre contre Tarante et le père de Praetor a péri lors de la bataille. Le royaume ne s'en est jamais relevé...}{Voici Dernholm, la capitale du Royaume de Cumbria. Le roi Praetor y a exercé son règne pendant plus de cinquante années, mais il semblerait que la puissance du royaume se soit effritée au fil des ans... Cumbria a subi une défaite écrasante à la fin de la guerre contre Tarante et le père de Praetor a péri lors de la bataille. Le royaume ne s'en est jamais relevé...}{}{46}{}{}
+{365}{K:}{}{1}{}{195}{}
+{366}{E:}{}{1}{}{0}{}
+{368}{Cendrebourg ? Oh, pas grand-chose, j'en ai bien peur. Je sais qu'il s'agit d'un port important et qu'un vieux château se trouve non loin, relique de l'ancienne monarchie. Voyez-vous, Cendrebourg fait partie du Royaume-Unifié, au même titre que Tarante. [Il émet un gloussement.] Peut-être en savais-je plus que je ne le pensais, finalement...}{Cendrebourg ? Oh, pas grand-chose, j'en ai bien peur. Je sais qu'il s'agit d'un port important et qu'un vieux château se trouve non loin, relique de l'ancienne monarchie. Voyez-vous, Cendrebourg fait partie du Royaume-Unifié, au même titre que Tarante. [Il émet un gloussement.] Peut-être en savais-je plus que je ne le pensais, finalement...}{}{47}{}{}
+{369}{K:}{}{1}{}{195}{}
+{370}{E:}{}{1}{}{0}{}
+{372}{Je crois qu'il s'agit d'Eaux Dormantes, une petite ville minière. Elle est principalement connue pour son monstre mythique, le Géant d'Eaux Dormantes. Une légende typique des communautés rurales... des bébés enlevés et dévorés, ce genre de choses... Un tissu de superstitions, sans aucun doute. [Il jette un oeil alentour.] Mais on ne sait jamais ce qui peut rôder dans ces vieilles montagnes...}{Je crois qu'il s'agit d'Eaux Dormantes, une petite ville minière. Elle est principalement connue pour son monstre mythique, le Géant d'Eaux Dormantes. Une légende typique des communautés rurales... des bébés enlevés et dévorés, ce genre de choses... Un tissu de superstitions, sans aucun doute. [Il jette un oeil alentour.] Mais on ne sait jamais ce qui peut rôder dans ces vieilles montagnes...}{}{48}{}{}
+{373}{K:}{}{1}{}{195}{}
+{374}{E:}{}{1}{}{0}{}
+{376}{Eh bien, mais c'est Tulla ! C'est là que j'ai vécu pendant vingt ans ! Il n'existe pas de lieu plus intéressant dans tout Arcanum ! Le maître mage se nomme Siméon Léminent. C'est un homme sévère mais juste. Il n'existe probablement pas de mage plus puissant au monde ! Et il y a tant de choses à voir, ici : la Fontaine de Pélogien, les demeures des grands mages, et... Oh, pardon ! Il m'arrive parfois de me laisser aller...}{Eh bien, mais c'est Tulla ! C'est là que j'ai vécu pendant vingt ans ! Il n'existe pas de lieu plus intéressant dans tout Arcanum ! Le maître mage se nomme Siméon Léminent. C'est un homme sévère mais juste. Il n'existe probablement pas de mage plus puissant au monde ! Et il y a tant de choses à voir, ici : la Fontaine de Pélogien, les demeures des grands mages, et... Oh, pardon ! Il m'arrive parfois de me laisser aller...}{}{49}{}{}
+{377}{K:}{}{1}{}{195}{}
+{378}{E:}{}{1}{}{0}{}
+{380}{On dirait le mythique T'sen-Ang ! Le pays des elfes noirs ! Je n'aurais jamais pensé qu'il existait vraiment, et encore moins que je m'y rendrais un jour ! [Il regarde alentour d'un air inquiet.] Notez que je ne suis pas sûr d'être heureux de me retrouver ici... Soyons prudents et n'adressons pas la parole à n'importe qui.}{On dirait le mythique T'sen-Ang ! Le pays des elfes noirs ! Je n'aurais jamais pensé qu'il existait vraiment, et encore moins que je m'y rendrais un jour ! [Il regarde alentour d'un air inquiet.] Notez que je ne suis pas sûr d'être heureux de me retrouver ici... Soyons prudents et n'adressons pas la parole à n'importe qui.}{}{50}{}{}
+{381}{K:}{}{1}{}{195}{}
+{382}{E:}{}{1}{}{0}{}
+{534}{Je ne peux pas vous dire grand-chose au sujet de cette société, camarade. Je n'ai pas passé beaucoup de temps hors des murs de Tulla. Mais je suis passé devant leur boutique, l'autre jour. Il y a un symbole étrange sur l'enseigne. Il est manifestement ancien et fort inquiétant.}{Je ne peux pas vous dire grand-chose au sujet de cette société, camarade. Je n'ai pas passé beaucoup de temps hors des murs de Tulla. Mais je suis passé devant leur boutique, l'autre jour. Il y a un symbole étrange sur l'enseigne. Il est manifestement ancien et fort inquiétant.}{}{51}{}{}
+{535}{K:}{}{1}{}{195}{}
+{536}{E:}{}{1}{}{0}{}
+{538}{Gilbert Bastien ? Il a quelque chose à voir avec cette satanée technologie, n'est-ce pas ? Si le choix m'en était laissé, je n'aurais jamais aucun contact avec ces gens-là...}{Gilbert Bastien ? Il a quelque chose à voir avec cette satanée technologie, n'est-ce pas ? Si le choix m'en était laissé, je n'aurais jamais aucun contact avec ces gens-là...}{}{52}{}{}
+{539}{K:}{}{1}{}{195}{}
+{540}{E:}{}{1}{}{0}{}
+{542}{Je sais qu'elle se trouve au large de la côte est, mais j'ignore comment s'y rendre exactement...}{Je sais qu'elle se trouve au large de la côte est, mais j'ignore comment s'y rendre exactement...}{}{53}{}{}
+{543}{K:}{}{1}{}{195}{}
+{544}{E:}{}{1}{}{0}{}
+{546}{L'Ile du Désespoir ? Il s'agit bien d'une colonie pénitentiaire, non ? Un endroit affreux, d'après ce que j'en ai lu. Les livres d'histoire rapportent qu'un exil y aurait eu lieu... Une affaire qui fit scandale, si je ne m'abuse...}{L'Ile du Désespoir ? Il s'agit bien d'une colonie pénitentiaire, non ? Un endroit affreux, d'après ce que j'en ai lu. Les livres d'histoire rapportent qu'un exil y aurait eu lieu... Une affaire qui fit scandale, si je ne m'abuse...}{}{54}{}{}
+{547}{K:}{}{1}{}{195}{}
+{548}{E:}{}{1}{}{0}{}
+{550}{Oui, bien entendu ! C'est là que réside le roi des nains, Loghaire Pierrefoudre. Quelques anciens de Tulla ont fait sa connaissance, mais je ne crois pas que quiconque l'ait vu depuis bien longtemps...}{Oui, bien sûr ! C'est là que réside le roi des nains, Loghaire Pierrefoudre. Quelques anciens de Tulla ont fait sa connaissance, mais je ne crois pas que quiconque l'ait vu depuis bien longtemps...}{}{55}{}{}
+{551}{K:}{}{1}{}{195}{}
+{552}{E:}{}{1}{}{0}{}
+{554}{Evidemment que non, mon vieux ! Rares sont ceux qui, parmi les êtres qui n'ont pas de sang elfe dans les veines, savent où se trouve la cité-arbre. J'ai entendu dire qu'il s'agissait d'un lieu absolument fabuleux, où l'on trouve les enchantements les plus anciens qui soient...}{Evidemment que non, madame ! Rares sont ceux qui, parmi les êtres qui n'ont pas de sang elfe dans les veines, savent où se trouve la cité-arbre. J'ai entendu dire qu'il s'agissait d'un lieu absolument fabuleux, où l'on trouve les enchantements les plus anciens qui soient...}{}{56}{}{}
+{555}{K:}{}{1}{}{195}{}
+{556}{E:}{}{1}{}{0}{}
+{558}{Je sais que la reine des elfes y réside. Son nom est en langue elfique, mais je crois qu'il se traduit par Dame d'Argent. Il me semble également qu'elle a une fille, mais je dois avouer que je ne suis pas expert en histoire elfique...}{Je sais que la reine des elfes y réside. Son nom est en langue elfique, mais je crois qu'il se traduit par Dame d'Argent. Il me semble également qu'elle a une fille, mais je dois avouer que je ne suis pas expert en histoire elfique...}{}{57}{}{}
+{559}{K:}{}{1}{}{195}{}
+{560}{E:}{}{1}{}{0}{}
+{562}{Oh, sûrement ! Je ne m'y suis jamais rendu, mais j'ai lu énormément de choses à ce sujet. C'est l'une des plus grandes monarchies de tout Arcanum, même si je crois qu'elle commence à s'ouvrir à la technologie. Chacun ses goûts, n'est-ce pas... Oh ! Et il me semble que la religion Panarii a également bâti son plus grand temple dans cette région.}{Oh, sûrement ! Je ne m'y suis jamais rendu, mais j'ai lu énormément de choses à ce sujet. C'est l'une des plus grandes monarchies de tout Arcanum, même si je crois qu'elle commence à s'ouvrir à la technologie. Chacun ses goûts, n'est-ce pas... Oh ! Et il me semble que la religion Panarii a également bâti son plus grand temple dans cette région.}{}{58}{}{}
+{563}{K:}{}{1}{}{195}{}
+{564}{E:}{}{1}{}{0}{}
+{566}{Eh bien, ils ont tout d'une légende, non ? Enfin, je veux dire, ce n'est pas comme s'ils avaient coutume d'annoncer leur présence...  Je crois me souvenir qu'un ancien disait qu'il y avait un livre traitant des elfes noirs dans les archives de Tulla. Mais, un jour, l'ouvrage a disparu et plus personne ne l'a jamais revu. Etrange, ne trouvez-vous pas ?}{Eh bien, ils ont tout d'une légende, non ? Enfin, je veux dire, ce n'est pas comme s'ils avaient coutume d'annoncer leur présence...  Je crois me souvenir qu'un ancien disait qu'il y avait un livre traitant des elfes noirs dans les archives de Tulla. Mais, un jour, l'ouvrage a disparu et plus personne ne l'a jamais revu. Etrange, ne trouvez-vous pas ?}{}{59}{}{}
+{567}{K:}{}{1}{}{195}{}
+{568}{E:}{}{1}{}{0}{}
+{570}{Arronax ? Oh, c'était un elfe de l'Ere des légendes. Voyons voir... il devait être membre du Conseil Elfique... dans le camp des radicaux, si ma mémoire est bonne. Il me semble qu'il a déclenché une guerre contre Nasrudin et qu'il a été banni peu après. Oh, et il a également l'air de souhaiter votre mort, pas vrai ?}{Arronax ? Oh, c'était un elfe de l'Ere des légendes. Voyons voir... il devait être membre du Conseil Elfique... dans le camp des radicaux, si ma mémoire est bonne. Il me semble qu'il a déclenché une guerre contre Nasrudin et qu'il a été banni peu après. Oh, et il a également l'air de souhaiter votre mort, pas vrai ?}{}{60}{}{}
+{571}{K:}{}{1}{}{195}{}
+{572}{E:}{}{1}{}{0}{}
+{574}{C'était le chef du Conseil Elfique durant l'Ere des légendes. Un puissant mage et un philosophe. Depuis, la religion Panarii l'a quasiment élevé au rang de dieu, d'après ce que l'on sait de leurs croyances. Il me semble me rappeler que sa dépouille se trouverait quelque part à Caladon.}{C'était le chef du Conseil Elfique durant l'Ere des légendes. Un puissant mage et un philosophe. Depuis, la religion Panarii l'a quasiment élevé au rang de dieu, d'après ce que l'on sait de leurs croyances. Il me semble me rappeler que sa dépouille se trouverait quelque part à Caladon.}{}{61}{}{}
+{575}{K:}{}{1}{}{195}{}
+{576}{E:}{}{1}{}{0}{}
+{578}{Thanatos ? Il n'existe guère d'ouvrages traitant de ce lieu, j'en ai bien peur... Sans doute est-ce parce que personne n'en est jamais revenu vivant. L'île grouille littéralement de monstres maléfiques en tout genre, si j'en juge par les rares témoignages écrits que j'ai lus à ce sujet. Il n'est pas dans mes habitudes de laisser passer l'occasion de découvrir un nouveau lieu, mais je dois dire que l'idée de m'y rendre ne m'enthousiasme guère...}{Thanatos ? Il n'existe guère d'ouvrages traitant de ce lieu, j'en ai bien peur... Sans doute est-ce parce que personne n'en est jamais revenu vivant. L'île grouille littéralement de monstres maléfiques en tout genre, si j'en juge par les rares témoignages écrits que j'ai lus à ce sujet. Il n'est pas dans mes habitudes de laisser passer l'occasion de découvrir un nouveau lieu, mais je dois dire que l'idée de m'y rendre ne m'enthousiasme guère...}{}{62}{}{}
+{579}{K:}{}{1}{}{195}{}
+{580}{E:}{}{1}{}{0}{}
+{582}{Je n'ai jamais entendu parler d'eux, mais il doit bien y avoir quelqu'un à Tulla qui saura nous dire où les trouver.}{Je n'ai jamais entendu parler d'eux, mais il doit bien y avoir quelqu'un à Tulla qui saura nous dire où les trouver.}{}{63}{}{}
+{583}{Vraiment ? Pouvez-vous m'indiquer où se trouve Tulla ?}{}{5}{}{586}{}
+{584}{Euh... Vous dire à moi où c'est ?}{}{-4}{}{586}{}
+{586}{J'aimerais autant ne pas le faire, mais je suppose que je n'ai pas le choix, compte tenu des circonstances. C'est là. [Il indique un point sur votre carte.] J'espère que vous saurez vous tenir quand nous y arriverons... Je l'espère sincèrement...}{J'aimerais autant ne pas le faire, mais je suppose que je n'ai pas le choix, compte tenu des circonstances. C'est là. [Il indique un point sur votre carte.] J'espère que vous saurez vous tenir quand nous y arriverons... Je l'espère sincèrement...}{}{64}{}{mm 11}
+{587}{K:}{}{1}{}{195}{}
+{588}{E:}{}{1}{}{0}{}
+{590}{Oh ! C'est une merveilleuse légende ! Il s'agirait du lieu où se serait déroulée l'ultime bataille opposant Nasrudin et Arronax. Bien sûr, il est impossible de démêler le vrai du faux, mais c'est là une histoire fascinante, ne trouvez-vous pas ? }{Oh ! C'est une merveilleuse légende ! Il s'agirait du lieu où se serait déroulée l'ultime bataille opposant Nasrudin et Arronax. Bien sûr, il est impossible de démêler le vrai du faux, mais c'est là une histoire fascinante, ne trouvez-vous pas ? }{}{65}{}{}
+{591}{K:}{}{1}{}{195}{}
+{592}{E:}{}{1}{}{0}{}
+{594}{Le Néant ? Non, mais c'est sans aucun doute le lieu le plus déplaisant qu'il m'ait été donné de fréquenter. Jamais les murs de Tulla ne m'ont autant manqué !}{Le Néant ? Non, mais c'est sans aucun doute le lieu le plus déplaisant qu'il m'ait été donné de fréquenter. Jamais les murs de Tulla ne m'ont autant manqué !}{}{66}{}{}
+{595}{K:}{}{1}{}{195}{}
+{596}{E:}{}{1}{}{0}{}
+{598}{Kerghan ? Peu de choses ont été écrites au sujet du vieux nécromancien... Je sais qu'il faisait partie du Conseil Elfique - c'est d'ailleurs le seul humain à y avoir jamais siégé - et qu'il a été banni quand on a découvert qu'il s'intéressait aux arts interdits. Ce n'est pas le genre d'individu dont j'aimerais me faire un ennemi, si vous voyez ce que je veux dire...}{Kerghan ? Peu de choses ont été écrites au sujet du vieux nécromancien... Je sais qu'il faisait partie du Conseil Elfique - c'est d'ailleurs le seul humain à y avoir jamais siégé - et qu'il a été banni quand on a découvert qu'il s'intéressait aux arts interdits. Ce n'est pas le genre d'individu dont j'aimerais me faire un ennemi, si vous voyez ce que je veux dire...}{}{67}{}{}
+{599}{K:}{}{1}{}{195}{}
+{600}{E:}{}{1}{}{0}{}
+{602}{Maintenant ? Eh bien, je dirais que vous pouvez arrêter le jeu et aller vous coucher ! C'est terminé ! Nous avons gagné ! Ne le prenez pas mal, surtout, mais il y a vraiment des moments où vous faites preuve d'une désespérante lenteur d'esprit...}{Maintenant ? Eh bien, je dirais que vous pouvez arrêter le jeu et aller vous coucher ! C'est terminé ! Nous avons gagné ! Ne le prenez pas mal, surtout, mais il y a vraiment des moments où vous faites preuve d'une désespérante lenteur d'esprit...}{}{68}{}{}
+{603}{K:}{}{1}{}{195}{}
+{604}{E:}{}{1}{}{0}{}
+{610}{Avec grand plaisir ! Ce serait un honneur pour moi. Ne le prenez pas mal, mais la coutume veut que je vous demande 500 pièces d'or pour cela. Vous avez l'argent ? }{Avec grand plaisir ! Ce serait un honneur pour moi. Ne le prenez pas mal, mais la coutume veut que je vous demande 500 pièces d'or pour cela. Vous avez l'argent ?}{}{74}{}{}
+{611}{Oui. Je vais payer mon entraînement sans attendre.}{}{5}{$$500}{615}{}
+{612}{Oui, mais une autre fois, peut-être... Encore une petite chose...}{}{5}{$$500}{174}{}
+{613}{Non. Nous en reparlerons plus tard... Encore une petite chose...}{}{5}{$$-499}{174}{}
+{614}{E:}{}{5}{}{0}{}
+{615}{Dans ce cas, parfait ! Permettez-moi de vous montrer certaines choses...[Il joint le geste à la parole.]... Et voilà ! Vous êtes désormais expert dans l'art de la guérison ! C'est du bon travail !}{Dans ce cas, parfait ! Permettez-moi de vous montrer certaines choses...[Il joint le geste à la parole.]... Et voilà ! Vous êtes désormais experte dans l'art de la guérison ! C'est du bon travail !}{}{75}{}{$$-500, tr 10 2}
+{616}{Merci. Encore une petite chose...}{}{5}{}{174}{}
+{617}{E:}{}{5}{}{0}{}
+

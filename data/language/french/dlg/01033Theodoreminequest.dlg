@@ -1,0 +1,112 @@
+{1}{G:}{G:}{}{}{}{ }
+{2}{Y a-t-il des aventures à vivre par ici ?}{}{5}{qu1008 0, re 41}{10}{ }
+{3}{J'ai décidé d'explorer la maison du scienticien pour vous.}{}{5}{qu1008 1}{50}{qu1008 2 }
+{4}{Je n'ai pas encore récupéré votre armure.}{}{5}{ni 2803, qu1008 2}{90}{ }
+{5}{J'ai votre armure.}{}{5}{qu1008 2, in 2803}{100}{ }
+{6}{Pardon, excusez-moi monsieur.}{}{5}{re-40, ch-9}{215}{re45 }
+{7}{Je vous demande pardon ?}{}{5}{re-40, ch10}{226}{re50 }
+{8}{Si vous me parlez encore sur ce ton, vous ne pourrez bientôt plus proférer une seule parole !}{}{5}{re-40, ch-9, sk2 8}{240}{re45 }
+{9}{E:}{}{1}{}{0}{ }
+{10}{C'est amusant que vous me posiez cette question. J'ai un petit problème...}{C'est amusant que vous me posiez cette question. J'ai un petit problème...}{}{}{}{ }
+{11}{Laissez-moi deviner. Vous avez besoin de mon aide.}{}{5}{}{80}{re -5 }
+{12}{Ca se voit.}{}{5}{sk2 -7}{80}{re-15 }
+{13}{J'écoute.}{}{5}{}{20}{ }
+{14}{Ca se voit.}{}{5}{sk2 8}{250}{ }
+{19}{E:}{}{1}{}{0}{ }
+{20}{Un scienticien quelque peu excentrique vit en ville. Nous n'avons aucune nouvelle de lui depuis une quinzaine de jours.}{Un scienticien quelque peu excentrique vit en ville. Nous n'avons aucune nouvelle de lui depuis une quinzaine de jours.}{}{}{}{ }
+{21}{En quoi cela me regarde-t-il ?}{}{5}{}{30}{ }
+{30}{J'avais engagé cet homme pour qu'il utilise sa " technologie " sur une vieille armure que j'avais en ma possession, afin d'en améliorer la qualité.}{J'avais engagé cet homme pour qu'il utilise sa " technologie " sur une vieille armure que j'avais en ma possession, afin d'en améliorer la qualité.}{}{}{}{ }
+{31}{Pourquoi avez-vous besoin de mon aide ?}{}{5}{}{200}{ }
+{40}{C'est trop difficile pour moi, mais quelqu'un d'aussi ingénieux que vous pourrait facilement s'introduire chez lui et récupérer mon armure.}{C'est trop difficile pour moi, mais une personne aussi ingénieuse que vous pourrait facilement s'introduire chez lui et récupérer mon armure.}{}{}{}{qu1008 1 }
+{41}{Qu'est-ce que j'en tirerai ?}{}{5}{}{50}{ }
+{42}{Pas question. Ca sent le traquenard.}{}{5}{}{60}{ }
+{50}{Je vous donnerai 200 pièces si vous récupérez mon armure.}{Je vous donnerai 200 pièces si vous récupérez mon armure.}{}{}{}{ }
+{51}{C'est contraire à mes principes, mais c'est d'accord.}{}{5}{}{70}{qu1008 2 }
+{52}{Je regrette, mais je ne risquerai pas ma vie pour si peu.}{}{5}{lf0 0}{60}{ }
+{53}{Je ne risquerai pas ma vie pour si peu. Bonne journée.}{}{5}{lf0 1}{0}{ }
+{60}{Quel dommage. Cela nous aurait pourtant rapporté à tous les deux.}{Quel dommage. Cela nous aurait pourtant rapporté à tous les deux.}{}{}{}{ }
+{61}{Hum. D'accord, je m'en occupe.}{}{5}{}{70}{lf0 1 }
+{62}{E:}{}{5}{}{0}{ }
+{70}{Bien ! J'attendrai votre retour ici.}{Bien ! J'attendrai votre retour ici.}{}{}{}{ }
+{71}{E:}{}{5}{}{0}{ }
+{80}{Je n'ai que faire de votre comportement narquois et de vos commentaires, monsieur.}{Je n'ai que faire de votre comportement narquois et de vos commentaires, madame.}{}{}{}{ }
+{81}{Mes excuses. Quel est le problème ?}{}{5}{}{20}{ }
+{82}{Et de votre rossée imminente ?}{}{5}{}{0}{fl 210 ,co}
+{83}{E:}{}{5}{}{0}{ }
+{90}{Tenez-moi informé de vos progrès.}{Tenez-moi informé de vos progrès.}{}{}{}{ }
+{91}{E:}{}{5}{}{0}{ }
+{100}{Excellent ! Donnez-la-moi.}{Excellent ! Donnez-la-moi.}{}{}{}{ }
+{101}{Tenez.}{}{5}{}{110}{in 2803, qu1008 4 }
+{102}{Je devrais recevoir beaucoup plus de 200 pièces pour avoir réussi à traverser cette épreuve.}{}{5}{ha4}{120}{ }
+{103}{J'ai décidé de ne pas m'en séparer.}{}{5}{}{160}{re-15 }
+{110}{Voilà vos 200 pièces. Bonne journée monsieur.}{Voilà vos 200 pièces. Bonne journée madame.}{}{}{}{$$200 }
+{111}{A:}{}{5}{}{0}{ }
+{120}{Bien entendu ! Je vous donnerai 300 pièces en récompense. Et maintenant, je vous prie de me remettre l'armure.}{Bien entendu ! Je vous donnerai 300 pièces en récompense. Et maintenant, je vous prie de me remettre l'armure.}{}{}{}{ }
+{121}{Tenez.}{}{5}{}{140}{in 2803, qu1008 4 }
+{122}{J'ai décidé de ne pas m'en séparer.}{}{5}{}{170}{ }
+{123}{Je pense pouvoir en tirer 400 pièces dans une armurerie.}{}{5}{ha8}{130}{ }
+{130}{Alors voilà 400 pièces. Mais c'est ma dernière offre.}{Alors voilà 400 pièces. Mais c'est ma dernière offre.}{}{}{}{ }
+{131}{Marché conclu.}{}{5}{}{150}{in 2803, qu1008 4 }
+{132}{J'ai finalement décidé de la garder.}{}{5}{}{0}{fl 210 ,co}
+{140}{Voilà vos 300 pièces. Bonne journée monsieur.}{Voilà vos 300 pièces. Bonne journée madame.}{}{}{}{$$300 }
+{141}{A:}{}{5}{}{0}{ }
+{150}{Voilà vos pièces. Bonne journée monsieur.}{Voilà vos pièces. Bonne journée madame.}{}{}{}{$$400 }
+{151}{A:}{}{5}{}{0}{ }
+{160}{Donnez-la-moi. Je vous donnerai 250 pièces.}{Donnez-la-moi. Je vous donnerai 250 pièces.}{}{}{}{ }
+{161}{Marché conclu.}{}{5}{}{180}{in 2803, qu1008 4 }
+{162}{N:}{}{5}{}{0}{fl 210 ,co}
+{170}{Donnez-la-moi. Je vous donnerai 350 pièces.}{Donnez-la-moi. Je vous donnerai 350 pièces.}{}{}{}{ }
+{171}{Marché conclu.}{}{5}{}{190}{in 2803, qu1008 4 }
+{172}{N:}{}{5}{}{0}{fl 210 ,co}
+{180}{Voilà vos pièces. Bonne journée monsieur.}{Voilà vos pièces. Bonne journée madame.}{}{}{}{$$250 }
+{181}{A:}{}{5}{}{0}{ }
+{190}{Voilà vos pièces. Bonne journée monsieur.}{Voilà vos pièces. Bonne journée madame.}{}{}{}{$$350 }
+{191}{A:}{}{5}{}{0}{ }
+{200}{Je suis passé chez lui il y a deux jours pour essayer de le voir. Comme sa porte n'était pas fermée à clé, je suis entré. Toutes sortes de gadgets m'ont sauté dessus et j'ai dû m'enfuir.}{Je suis passé chez lui il y a deux jours pour essayer de le voir. Comme sa porte n'était pas fermée à clé, je suis entré. Toutes sortes de gadgets m'ont sauté dessus et j'ai dû m'enfuir.}{}{}{}{ }
+{201}{Vous me demandez d'y aller pour vous ?}{}{5}{}{40}{ }
+{202}{Franchement, j'ai mieux à faire qu'affronter les inventions d'un scienticien fou.}{}{5}{}{60}{ }
+{210}{Barbare ! J'aurai votre peau pour ça !}{Barbare ! J'aurai votre peau pour ça !}{}{}{}{ }
+{215}{Qu'est-ce qu'un méprisable individu tel que vous peut bien venir faire ici ?}{Qu'est-ce qu'une dépravée telle que vous peut bien venir faire ici ?}{}{}{}{ }
+{216}{Laissez-moi vous parler, juste pour quelques instants, monsieur.}{}{5}{}{220}{re+5 }
+{217}{Je veux vous voir souffrir mille morts.}{}{5}{}{0}{fl 210 ,co}
+{220}{A en juger par la déférence dont vous faites preuve, c'est le moins que je puisse faire. De quoi souhaitiez-vous me parler ?}{A en juger par la déférence dont vous faites preuve, c'est le moins que je puisse faire. De quoi souhaitiez-vous me parler ?}{}{}{}{ }
+{221}{Y a-t-il des aventures à vivre par ici ?}{}{5}{qu1008 0, re 41}{10}{ }
+{222}{J'ai décidé d'explorer la maison du scienticien pour vous.}{}{5}{qu1008 1}{50}{qu1008 2 }
+{223}{Je n'ai pas encore récupéré votre armure.}{}{5}{ni 2803, qu1008 2}{90}{ }
+{224}{J'ai votre armure.}{}{5}{qu1008 2, in 2803}{100}{ }
+{225}{Veuillez me pardonner, mais il faut que j'y aille.}{}{5}{}{0}{ }
+{226}{Je vous prie d'excuser ma grossièreté, monsieur. J'ai commis un impair. Je ne sais pas ce qui a bien pu me passer par la tête. Que puis-je faire pour vous ?}{Je vous prie d'excuser ma grossièreté, madame. J'ai commis un impair. Je ne sais pas ce qui a bien pu me passer par la tête. Que puis-je faire pour vous ?}{}{}{}{ }
+{227}{Y a-t-il des aventures à vivre par ici ?}{}{5}{qu1008 0, re 41}{10}{ }
+{228}{J'ai décidé d'explorer la maison du scienticien pour vous.}{}{5}{qu1008 1}{50}{qu1008 2 }
+{229}{Je n'ai pas encore récupéré votre armure.}{}{5}{ni 2803, qu1008 2}{90}{ }
+{230}{J'ai votre armure.}{}{5}{qu1008 2, in 2803}{100}{ }
+{231}{Veuillez me pardonner, mais il faut que j'y aille.}{}{5}{}{0}{ }
+{240}{Je vous en prie, ne me faites pas de mal, monsieur. Je ne sais pas ce qui a pu me passer par la tête. Puis-je faire quelque chose pour vous ?}{Je vous en prie, ne me faites pas de mal, madame. Je ne sais pas ce qui a pu me passer par la tête. Y a-t-il quelque chose que je puisse faire pour vous ?}{}{}{}{ }
+{241}{Y a-t-il des aventures à vivre par ici ?}{}{5}{qu1008 0, re 41}{10}{ }
+{242}{J'ai décidé d'explorer la maison du scienticien pour vous.}{}{5}{qu1008 1}{50}{qu1008 2 }
+{243}{Je n'ai pas encore récupéré votre armure.}{}{5}{ni 2803, qu1008 2}{90}{ }
+{244}{J'ai votre armure.}{}{5}{qu1008 2, in 2803}{100}{ }
+{245}{Je pars.}{}{5}{}{0}{ }
+{249}{}{}{}{}{}{ }
+{250}{Hé, hé. C'est bien vrai, monsieur.}{Hé, hé. C'est bien vrai, madame.}{}{}{}{ }
+{251}{Quel est votre problème ?}{}{5}{}{20}{ }
+{260}{Hé ! C'est mon armure que vous portez !}{Hé ! C'est mon armure que vous portez !}{}{}{}{ }
+{261}{Et alors ?}{}{5}{sk2 8}{270}{ }
+{262}{Et alors ?}{}{5}{sk2 -7}{290}{ }
+{263}{C'est vrai. Tenez. [Vous lui donnez.]}{}{5}{}{110}{in 2803, qu1008 4 }
+{264}{Vous l'aurez pour 400 pièces.}{}{5}{ha4}{}{ }
+{270}{[Il recule.] Hum... rien ! C'est juste que je, euh... je voudrais la récupérer ?...}{[Il recule.] Hum... rien ! C'est juste que je, euh... je voudrais la récupérer ?...}{}{}{}{ }
+{271}{Certainement. Cela vous coûtera 400 pièces.}{}{5}{}{280}{ }
+{272}{Bien sûr. Tenez. [Vous lui donnez.]}{}{5}{}{110}{in 2803, qu1008 4 }
+{280}{Mais c'est deux fois le montant que je vous avais promis !}{Mais c'est deux fois le montant que je vous avais promis !}{}{}{}{ }
+{281}{C'est le taux en vigueur. Je pourrais vous passer à tabac et me servir si j'en avais envie.}{}{5}{}{300}{ }
+{282}{Vous avez raison, excusez-moi. Tenez. [Vous lui donnez.]}{}{5}{}{110}{in 2803, qu1008 4 }
+{290}{J'emploierai la force s'il le faut pour la récupérer.}{J'emploierai la force s'il le faut pour la récupérer.}{}{}{}{ }
+{291}{Vous pouvez toujours essayer.}{}{5}{}{0}{fl 210 ,co}
+{292}{Il n'y a pas de raison d'en arriver là. Tenez. [Vous lui donnez.]}{}{5}{}{110}{in 2803, qu1008 4 }
+{300}{Hé ! C'est mon armure que porte votre camarade !}{Hé ! C'est mon armure que porte votre camarade !}{}{}{}{ }
+{301}{Et alors ?}{}{5}{sk2 8}{270}{ }
+{302}{Et alors ?}{}{5}{sk2 -7}{290}{ }
+{303}{C'est vrai. Tenez. [Vous lui donnez.]}{}{5}{}{110}{in 2803, qu1008 4 }
+{304}{Vous l'aurez pour 400 pièces.}{}{5}{ha4}{}{ }
+

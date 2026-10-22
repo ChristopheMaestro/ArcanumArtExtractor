@@ -1,0 +1,358 @@
+// This file contains NPC responses to being asked about the current
+// story state. Each block begins at a multiple of 100, based on
+// the story state. Within each block, there is one line for each
+// race.
+
+0 humain
+1 nain
+2 elfe
+3 demi-elfe
+4 gnome
+5 halfelin
+6 demi-orque
+7 demi-ogre
+8 elfe noir
+9 ogre
+10 orque
+
+// Story state is 0
+
+{0}{Je ne suis pas spécialiste en la matière. Peut-être devriez vous vous adresser à un marchand.}
+{1}{Il semblerait que cela soit en argent de qualité...}
+{2}{Je sais que cela n'est pas d'origine elfe. Mis à part cela, je ne peux pas vous dire grand-chose.}
+{3}{C'est un beau bijou.}
+{4}{Très bel anneau, camarade ! Conservez-le précieusement !}
+{5}{Ce genre de choses ne m'intéresse pas...}
+{6}{Rien. Rien du tout.}
+{7}{Je n'en ai aucune idée.}
+{8}{Allez poser vos questions ailleurs.}
+{9}{J'aimerais pouvoir vous aider.}
+{10}{Rien. Rien du tout.}
+
+// Story state is 1
+
+{100}{Je crois qu'il s'agit d'une entreprise, mais je ne sais pas exactement où elle se trouve.}
+{101}{Une entreprise. Une entreprise dirigée par des humains, je dirais.}
+{102}{Hum... C'est un nom intéressant pour une entreprise. C'est un nom très très ancien...}
+{103}{A première vue... je dirais qu'il s'agit d'une entreprise.}
+{104}{Une entreprise très respectée. Je ne saurais vous dire où elle se trouve exactement.}
+{105}{On dirait quelque chose de la grande ville...}
+{106}{Des ordures richissimes, je dirais. Ca m'en a tout l'air.}
+{107}{Je n'en ai aucune idée.}
+{108}{Ce genre de choses ne me concerne pas.}
+{109}{Je n'en ai aucune idée.}
+{110}{Des ordures richissimes, je dirais. Ca m'en a tout l'air.}
+
+// Story state is 2
+{200}{Bastien ! C'est un génie ! Il a inventé la machine à vapeur !}
+{201}{Je ne veux plus entendre parler de lui, c'est compris ?}
+{202}{Un fouineur de technologiste. Regardez ce qu'il a fait à ce pays...}
+{203}{Il est assez intelligent, pour un humain... Toutes ces machines qu'il fabrique...}
+{204}{C'est un technologiste hors du commun. Il m'a permis de faire fortune l'année dernière...}
+{205}{C'est un humain très affairé, toujours occupé à fabriquer des machines bruyantes.}
+{206}{On m'a dit qu'il traitait mal ses ouvriers.}
+{207}{J'ai un demi-frère qui travaillait pour lui.}
+{208}{Je préférerais ne pas parler de Monsieur Bastien.}
+{209}{J'ai un demi-frère qui travaillait pour lui.}
+{210}{On m'a dit qu'il traitait mal ses ouvriers.}
+
+
+// Story state is 3
+{300}{Quelle tragédie ! On l'a assassiné récemment...}
+{301}{Pauvre Monsieur Bastien. Nous sommes tous responsables de sa mort, au fond.}
+{302}{Un fouineur de technologiste. Il n'a eu que ce qu'il méritait...}
+{303}{Triste fin que la sienne. On dirait que quelqu'un lui voulait du mal.}
+{304}{Ce fut un mauvais jour pour l'industrie lorsqu'on l'a retrouvé mort. Bastien était un véritable bourreau de travail.}
+{305}{Je sais seulement qu'il a été récemment assassiné dans des circonstances mystérieuses.}
+{306}{Je viens de lire un article à sensation dans le journal à propos de sa mort. Fascinant !}
+{307}{Je me demande à qui il a légué sa fortune ?}
+{308}{Monsieur Bastien. Il semblerait que le hasard fasse bien les choses.}
+{309}{Je me demande à qui il a légué sa fortune ?}
+{310}{Je viens de lire un article à sensation dans le journal à propos de sa mort. Fascinant !}
+
+
+// Story state is 4
+{400}{Le Clan du Mont Noir ? J'ai l'impression qu'il y a un rapport avec des nains...}
+{401}{Ne demandez pas aux nains de vous parler de leurs clans. Et surtout pas de celui-là.}
+{402}{Je trouve que c'est plutôt déplacé de votre part de vous enquérir de la vie privée des gens...}
+{403}{Je ne sais pas... les nains préfèrent rester entre eux.}
+{404}{Les nains. Ciel ! Ce sont des hommes d'affaires sans pitié...}
+{405}{Il me semble avoir entendu parler une fois d'un clan...}
+{406}{Les nains parlent rarement de leur demeure...}
+{407}{Ne me posez pas de questions. Demandez à un nain.}
+{408}{Question suivante.}
+{409}{Ne me posez pas de questions. Demandez à un nain.}
+{410}{Les nains parlent rarement de leur demeure...}
+
+
+// Story state is 5
+{500}{Vous voulez dire l'Ile Noire ? Je ne sais pas trop...}
+{501}{Nous ne savons que peu de choses sur ce qui se passe en mer...}
+{502}{C'est un endroit dont il ne vaut mieux pas parler... je vous conseille de ne pas vous y aventurer.}
+{503}{Je pense que c'est quelque part au large de la côte est...}
+{504}{Je n'en ai aucune idée. Il n'y a pas d'argent à gagner là-bas, alors qui s'en soucierait ?}
+{505}{Une île ? Vous voulez dire une île au milieu de l'eau ? Argh... Toute cette eau...}
+{506}{J'ai connu un docker qui y est allé. Mais le pauvre bougre s'est noyé.}
+{507}{Je ne sais pas.}
+{508}{Occupez-vous de vos affaires, étrangère.}
+{509}{Je ne sais pas.}
+{510}{J'ai connu un docker qui y est allé. Mais le pauvre bougre s'est noyé.}
+
+// Story state is 6
+{600}{Je ne sais pas grand-chose. C'est peut-être en rapport avec une prison ?}
+{601}{Une colonie pénitentiaire. Un endroit sordide, d'après ce qu'on en dit.}
+{602}{C'est un endroit étrange, c'est étonnant que vous en parliez.}
+{603}{Je n'ai aucun détail qui me vienne à l'esprit.}
+{604}{C'est un endroit pratiquement dépourvu de ressources naturelles, sans monnaie...}
+{605}{A part vous dire que cet endroit est effrayant ? Je ne sais pas grand-chose.}
+{606}{On a envoyé un de mes cousins là-bas sans raison... Il était innocent...}
+{607}{Rien.}
+{608}{Rien que je veuille partager avec vous.}
+{609}{Rien.}
+{610}{On a envoyé un de mes cousins là-bas sans raison... Il était innocent...}
+
+
+// Story state is 7
+{700}{Je sais très peu de choses au sujet des nains.}
+{701}{Ce ne sont pas des informations dont vous avez besoin, camarade.}
+{702}{Les chefs des clans nains. Ils vivent reclus}
+{703}{Ils vivent à l'écart de la société...}
+{704}{J'ai essayé, sans succès, de faire affaire avec eux une fois...}
+{705}{Juste quelques nains de plus, je crois.}
+{706}{Jamais entendu parler d'eux.}
+{707}{Des gars de petite taille.}
+{708}{Rien. Rien du tout. Ne posez plus de questions.}
+{709}{Des gars de petite taille.}
+{710}{Jamais entendu parler d'eux.}
+
+
+// Story state is 8
+{800}{Je n'en ai pas la moindre idée. Les elfes sont muets comme des carpes lorsqu'on vient à leur parler de leurs maisons...}
+{801}{C'est au plus profond de la Forêt Scintillante. Vous ne pourrez jamais trouver cet endroit.}
+{802}{Nous ne parlons pas de ce genre de choses.}
+{803}{Je crois que mon arrière-arrière grand-mère vivait là...}
+{804}{J'aimerais beaucoup le savoir... Il y a du beau bois là-bas.}
+{805}{Je ne sais pas trop... J'ai déjà du mal à trouver ma propre maison...}
+{806}{Pas la moindre idée !!!}
+{807}{Je ne sais pas.}
+{808}{Ne posez jamais de questions à un elfe sur sa maison. En aucun cas.}
+{809}{Je ne sais pas.}
+{810}{Pas la moindre idée !!!}
+
+
+// Story state is 9
+{900}{Je sais, à ce que l'on dit, que les elfes y vivraient...}
+{901}{Pratiquement rien, et je ne m'en porte pas plus mal.}
+{902}{Rien. Je ne dirai jamais rien sur l'endroit où vivent les elfes.}
+{903}{Seulement que mes ancêtres sont originaires de là-bas...}
+{904}{Pas grand-chose, j'en ai bien peur.}
+{905}{Pratiquement rien, pour sûr. Les elfes sont des personnes très agréables.}
+{906}{Aucune idée, j'en sais rien du tout.}
+{907}{Demandez à un elfe.}
+{908}{Nous ne parlons pas de ce genre de choses.}
+{909}{Demandez à un elfe.}
+{910}{Aucune idée, j'en sais rien du tout.}
+
+
+// Story state is 10
+{1000}{Hum... Vous avez essayé le cimetière ? Vous pouvez également essayer aux Archives. Ils pourront peut-être vous être utiles dans ce domaine.}
+{1001}{Je n'en sais rien.}
+{1002}{Oui, j'ai déjà entendu ce nom. Je crois qu'il est mort dans des circonstances tragiques. Il a eu droit à une belle pierre tombale, au cimetière.}
+{1003}{Aucune idée, vraiment. Attendez... Je crains que vous ne deviez vérifier au cimetière. Ou aux Archives. Ils centralisent les renseignements sur les personnes décédées à Tarante.}
+{1004}{Terwilliger... Terwilliger.. Ce nom me dit quelque chose. Oh ! Vous avez essayé le cimetière ?}
+{1005}{Ce nom a l'air humain....}
+{1006}{Aucune idée.}
+{1007}{Les gens, ça m'intéresse pas.}
+{1008}{Ne prononcez jamais ce nom en ma présence...}
+{1009}{Aucune idée.}
+{1010}{Les gens, ça m'intéresse pas.}
+
+
+
+// Story state is 11
+{1100}{Non... Mais il y a beaucoup de livres à la bibliothèque de Tarante.}
+{1101}{Comment ? Est-ce un livre ? Je n'en ai aucune idée...}
+{1102}{Avez-vous demandé au libraire local ou à la bibliothèque ?}
+{1103}{Je pense que c'est quelque chose que vous pourrez trouver à la bibliothèque...}
+{1104}{Je me posais exactement la même question...}
+{1105}{Cela n'a pas l'air très rassurant ! Gardez-le loin de moi si vous le trouvez !}
+{1106}{Essayez la bibliothèque. Il n'y a pas de meilleur endroit où trouver des livres.}
+{1107}{Je ne lis pas beaucoup.}
+{1108}{[Avec malice.] Non... Mais, faites-moi savoir si vous en trouvez un.}
+{1109}{Je ne lis pas beaucoup.}
+{1110}{Essayez la bibliothèque. Il n'y a pas de meilleur endroit où trouver des livres.}
+
+// Story state is 12
+{1200}{Un ancien port, qui se trouve à l'extrémité sud du continent. Le voyage est long pour y aller, à ce qu'on m'a dit.}
+{1201}{Ce que je peux vous dire sur ce port ? Je ne sais pas grand-chose.}
+{1202}{Je sais que c'est le berceau de cette étrange religion Panarii. Mais vous devrez trouver un bateau solide pour vous y emmener.}
+{1203}{Sur la côte ouest, il me semble. C'est une belle ville.}
+{1204}{C'est une cité avec laquelle on a du mal à faire du commerce... Elle n'est pas accessible par le train...  On peut l'atteindre uniquement par la voie maritime.}
+{1205}{C'est trop loin à mon goût. La mer, c'est pas pour moi.}
+{1206}{Cela ne me concerne pas.}
+{1207}{Pas grand-chose.}
+{1208}{Je n'ai rien d'intéressant à dire à propos de cet endroit.}
+{1209}{Pas grand-chose.}
+{1210}{Cela ne me concerne pas.}
+
+// Story state is 13
+{1300}{Ce nom me dit quelque chose. Est-il en rapport avec un livre ?}
+{1301}{Je ne sais pas.}
+{1302}{Je ne connais pas cet humain.}
+{1303}{Je crois qu'on en a parlé aux actualités... Caladon, peut-être... ?}
+{1304}{On a parlé de lui récemment... un objet de valeur... ?}
+{1305}{Absolument rien.}
+{1306}{Rien du tout.}
+{1307}{Je ne sais rien du tout.}
+{1308}{Oui. Je connais l'histoire de Monsieur Mistik. Non. Je ne vous dirai rien.}
+{1309}{Je ne sais rien du tout.}
+{1310}{Rien du tout.}
+
+
+// Story state is 14
+{1400}{Rien. Je ne crois pas qu'ils existent.}
+{1401}{De sales fauteurs de trouble.}
+{1402}{Ce n'est pas quelque chose qu'on demande à un elfe, camarade.}
+{1403}{Nombre de mythes et de légendes. De simples conjectures, je pense.}
+{1404}{Ils existent ?}
+{1405}{Je ne sais rien et ne veux rien savoir.}
+{1406}{Rien... Comme si on pouvait croire à leur existence !}
+{1407}{Je ne sais pas grand-chose.}
+{1408}{Posez-moi encore cette question et vous allez voir...}
+{1409}{Je ne sais pas grand-chose.}
+{1410}{Rien... Comme si on pouvait croire à leur existence !}
+
+// Story state is 15
+{1500}{Vous feriez mieux d'aller demander à l'un de ces fanatiques de la religion Panarii...}
+{1501}{Des boniments religieux d'elfe.}
+{1502}{Il y a beaucoup de choses que je pourrais vous dire,  mais je ne vous dirai rien.}
+{1503}{Une importante figure religieuse ? Allez demander à un prêtre de l'ordre Panarii...}
+{1504}{Rien. Le temple Panarii local vous sera d'une bien meilleure aide.}
+{1505}{Je ne crois pas connaître ce gentleman.}
+{1506}{Vous me posez la question, à moi ? Aucune idée.}
+{1507}{Rien du tout.}
+{1508}{Vous avez dit quelque chose ?}
+{1509}{Rien du tout.}
+{1510}{Vous me posez la question, à moi ? Aucune idée.}
+
+
+// Story state is 16
+{1600}{Vous feriez mieux d'aller demander à l'un de ces fanatiques de la religion Panarii...}
+{1601}{Une légende elfique... une sorte de divinité, je crois.}
+{1602}{Il y a beaucoup de choses que je pourrais vous dire,  mais je ne vous dirai rien.}
+{1603}{Une importante figure religieuse ? Allez demander à un prêtre de l'ordre Panarii...}
+{1604}{Rien. Le temple Panarii local vous sera d'une bien meilleure aide.}
+{1605}{Je ne crois pas connaître ce gentleman.}
+{1606}{Vous me posez la question, à moi ? Aucune idée.}
+{1607}{Rien du tout.}
+{1608}{Vous avez dit quelque chose ?}
+{1609}{Rien du tout.}
+{1610}{Vous me posez la question, à moi ? Aucune idée.}
+
+
+// Story state is 17
+{1700}{Je ne suis pas spécialiste en géographie, mais c'est assez loin en direction de l'est.}
+{1701}{C'est par-delà l'océan, à l'est. C'est tout ce que je sais.}
+{1702}{C'est une île étrange, peuplée de bêtes sauvages et peut-être d'autres choses encore pires... ?}
+{1703}{Je crois avoir déjà entendu parler de cela... quelque chose en rapport avec des monstres... ?}
+{1704}{On n'envoie jamais rien là-bas. Quelques expéditions perdues...}
+{1705}{Je n'en ai jamais entendu parler.}
+{1706}{Je ne connais pas cet endroit.}
+{1707}{Hum... Ca me dit rien du tout.}
+{1708}{Rien que je veuille partager avec vous.}
+{1709}{Hum... Ca me dit rien du tout.}
+{1710}{Je ne connais pas cet endroit.}
+
+
+// Story state is 18
+{1800}{Des ruines ? Tout ce que je sais, c'est que les Landes de Vendigroth se trouvent assez loin en direction du nord-est.}
+{1801}{C'est un endroit maudit, souillé de sang. En direction du nord-est.}
+{1802}{Vendigroth, une très ancienne cité. Je ne savais pas qu'il y avait des ruines.}
+{1803}{Quelque part en direction du nord-est, je pense.}
+{1804}{Ce nom ne me dit rien du tout.}
+{1805}{Vendigroth ? Oh mais bien sûr ! C'est quelque part, juste au-dessus de Leahbo !}
+{1806}{Vers le nord-est, je dirais. Amenez des amis. Plein d'amis.}
+{1807}{Euh... rien. Rien du tout.}
+{1808}{Pourquoi voulez-vous savoir cela ? Je ne dirai rien.}
+{1809}{Euh... rien. Rien du tout.}
+{1810}{Vers le nord-est, je dirais. Amenez des amis. Plein d'amis.}
+
+
+// Story state is 19
+{1900}{Un véritable attrape-nigaud ! Je vous conseille d'éviter la boutique de souvenirs !}
+{1901}{Cela se trouve non loin de Caladon, en direction du nord. Un sanctuaire... ?}
+{1902}{Un endroit empli d'histoire et de pouvoir. Juste au nord de Caladon.}
+{1903}{Juste au nord du vieux Caladon, non loin du Piton Noir...}
+{1904}{C'est lié aux adeptes du Panarii, n'est-ce pas ?}
+{1905}{Je n'ai pas la moindre idée de ce dont vous parlez.}
+{1906}{Pas loin de Caladon. Je connaissais quelqu'un qui travaillait dans le magasin de souvenirs...}
+{1907}{Un anneau ? J'y connais rien moi aux bijoux...}
+{1908}{Ne me questionnez pas à propos de cet endroit. Vous ne pouvez pas comprendre.}
+{1909}{Un anneau ? J'y connais rien moi aux bijoux...}
+{1910}{Pas loin de Caladon. Je connaissais quelqu'un qui travaillait dans le magasin de souvenirs...}
+
+// Story state is 20
+{2000}{Son antre se trouve à l'est du carrefour...}
+{2001}{Je ne sais pas, mais il est responsable de tout ceci...}
+{2002}{L'ancêtre n'habite pas très loin, mais il ne désire voir personne...}
+{2003}{Prenez à gauche au carrefour... le monstre...}
+{2004}{Son antre n'est pas très loin du carrefour...}
+{2005}{Si vous le voulez bien, je préfère rester en dehors de tout ceci...}
+{2006}{Pauvre folle d'elfe ! Je ne sais pas et je ne veux pas le savoir.}
+{2007}{Qui ça ?}
+{2008}{Le maître n'est pas loin, mais il ne veut voir personne...}
+{2009}{Qui ça ?}
+{2010}{Pauvre folle d'elfe ! Je ne sais pas et je ne veux pas le savoir.}
+
+
+// Story state is 21
+{2100}{C'est un endroit très dur à vivre....}
+{2101}{Il n'y a que mort et désespoir ici, étrangère.}
+{2102}{Un destin pire que la mort.}
+{2103}{Personne ne mérite la vie que nous vivons ici.}
+{2104}{Il n'y a rien de pire que de vivre ici.}
+{2105}{Un endroit horrible. Comme ma demeure me manque...}
+{2106}{Regardez autour de vous. Bienvenue en enfer.}
+{2107}{Un endroit horrible, horrible.}
+{2108}{Si j'avais su que ceci était la récompense...}
+{2109}{Un endroit horrible, horrible.}
+{2110}{Regardez autour de vous. Bienvenue en enfer.}
+
+// Story state is 22
+{2200}{Il a vaincu Arronax, et nous avons tous été maudits...}
+{2201}{Un être maléfique, vraiment maléfique. Que les dieux nous viennent en aide !}
+{2202}{C'est un ensorceleur puissant. Gardez vos distances avec lui.}
+{2203}{C'est lui qui est à l'origine de la guerre qui a eu lieu ici, il y a des années de cela. C'est un détraqué !}
+{2204}{Je ne sais pas grand-chose, hormis le fait qu'il est responsable de...}
+{2205}{Rien ! Je ne sais rien !}
+{2206}{Ce sale tyran ! Arrêtez-le !}
+{2207}{Euh... Qui c'est ?}
+{2208}{Il contrôle le Néant maintenant.}
+{2209}{Euh... Qui c'est ?}
+{2210}{Ce sale tyran ! Arrêtez-le !}
+
+// Story state is 23
+{2300}{Quelque part dans les ruines de la cité du Néant, je crois...}
+{2301}{De la sorcellerie. Personnellement, je préfère garder mes distances...}
+{2302}{De la sorcellerie ancestrale, encore plus ancienne que celle des elfes...}
+{2303}{J'en ai entendu parler... enterré quelque part dans la cité du Néant...}
+{2304}{Effectuez vos recherches dans les ruines de l'ancienne cité du Néant.}
+{2305}{Je n'en ai aucune idée, étrangère. Pardonnez-moi.}
+{2306}{Quelque part dans la cité du Néant ?}
+{2307}{Je ne sais plus...}
+{2308}{J'ai entendu dire qu'on l'avait perdu, mais essayez de le chercher dans les ruines de la cité du Néant.}
+{2309}{Je ne sais plus...}
+{2310}{Quelque part dans la cité du Néant ?}
+
+// Story state is 24
+{2400}{C'est la fin de la partie camarade.}
+{2401}{Essayez ceci. Redémarrez la partie.}
+{2402}{Que faites-vous, bougre d'imbécile ? La partie est terminée.}
+{2403}{Arrêtez la partie ici et recommencez-en une.}
+{2404}{Oh, comme c'est triste. Il ne vous reste plus qu'à arrêter la partie.}
+{2405}{Vous plaisantez. Vous avez déjà gagné ! Allez vous coucher !}
+{2406}{Vous entendez ? La partie est terminée !}
+{2407}{Hein ? Je croyais que la partie était terminée.}
+{2408}{Il n'y a pas que ça dans la vie, vous savez ?}
+{2409}{Hein ? Je croyais que la partie était terminée.}
+{2410}{Vous entendez ? La partie est terminée !}

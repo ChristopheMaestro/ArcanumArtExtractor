@@ -1,0 +1,124 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Puis-je vous demander qui vous êtes, monsieur ?}{}{5}{re 41, me 0}{38}{}
+{3}{Excusez-moi, monsieur le forgeron ? Est-ce ainsi que vous accueillez des personnes étrangères ?}{}{5}{re -40, me 0}{17}{}
+{4}{Salutations, Richard. Vous avez un moment ?}{}{5}{re 41, me 1}{43}{}
+{5}{Monsieur Poirot ! Qu'ai-je fait pour vous offenser ?}{}{5}{re -40, me 1}{17}{}
+{6}{J'ai une forte envie de vous fracasser le crâne, forgeron. J'attends vos excuses.}{}{5}{re -40}{29}{}
+{12}{'jour ! Moi pas avoir beaucoup intelligence. Qui vous ?}{}{-4}{me 0}{38}{}
+{13}{'jour Poirot ! Moi avoir questions !}{}{-4}{me 1}{43}{}
+{14}{E:}{}{-4}{}{0}{}
+{17}{Je suis désolé, mais je ne vous aime pas du tout. Vous feriez mieux de repartir là d'où vous venez...}{Je suis désolé, mais je ne vous aime pas du tout. Vous feriez mieux de repartir là d'où vous venez...}{}{}{}{}
+{18}{Ne pourrions-nous pas nous parler correctement ? Nous sommes des gens civilisés, après tout.}{}{5}{}{22}{re +10}
+{19}{Les bonnes manières vous font défaut. Il en va de même pour ma patience...}{}{5}{}{29}{}
+{20}{E:}{}{5}{}{0}{}
+{22}{Oui... Peut-être me suis-je trompé sur votre compte. Pouvons-nous parler quelques instants ?}{Oui... Peut-être me suis-je trompé sur votre compte. Pouvons-nous parler quelques instants ?}{}{}{}{}
+{23}{Oui, j'aimerais bien. Puis-je vous demander qui vous êtes, monsieur ?}{}{5}{me 0}{38}{}
+{24}{Oui, j'aimerais bien. Vous avez un moment, Richard ?}{}{5}{me 1}{43}{}
+{25}{E:}{}{5}{}{0}{}
+{29}{[Le forgeron se rapproche de vous en fronçant les sourcils.] Ah oui, mon garçon ? Je vous conseille de surveiller votre langage. Nous sommes civilisés ici, à Eaux Dormantes, mais je n'hésiterai pas à vous donner une leçon si vous le méritez...}{[Le forgeron se rapproche de vous en fronçant les sourcils.] Ah oui, madame ? Je vous conseille de surveiller votre langage. Nous sommes civilisés ici, à Eaux Dormantes, mais je n'hésiterai pas à vous donner une leçon si vous le méritez...}{}{}{}{}
+{30}{Je ne pense pas que ce sera nécessaire. Je vous prie d'accepter mes excuses...}{}{5}{}{22}{re +10}
+{31}{Vos manières témoignent de la façon dont vous avez été éduqué...}{}{5}{}{}{co, fl 34}
+{32}{E:}{}{5}{}{0}{}
+{34}{Je suis désolé d'avoir à faire cela, mon garçon, mais c'est pour votre bien...}{Je suis désolé d'avoir à faire cela, madame, mais c'est pour votre bien...}{}{}{}{}
+{38}{Bonjour. Je suis Richard Poirot, le forgeron d'Eaux Dormantes. En quoi puis-je vous aider ?}{ Bonjour. Je suis Richard Poirot, le forgeron d'Eaux Dormantes. En quoi puis-je vous aider ?}{}{}{}{}
+{39}{Salutations, Richard. Puis-je vous poser quelques questions... ?}{}{5}{}{43}{}
+{41}{'jour Poirot ! Questions !}{}{-4}{}{43}{}
+{42}{E:}{}{1}{}{0}{}
+{43}{Que puis-je faire pour vous ?}{Que puis-je faire pour vous ?}{}{}{}{}
+{44}{Quels sont les services que vous proposez, Richard ?}{}{5}{}{171}{}
+{45}{Parlez-moi d'Eaux Dormantes...}{}{5}{qu1096 0, lf1 0}{67}{}
+{48}{Je pourrais peut-être rendre visite à votre ami l'ensorceleur...}{}{5}{qu1096 1, lf1 0}{128}{}
+{49}{Je n'ai pas encore trouvé votre ami l'ensorceleur...}{}{5}{qu1096 2, lf1 0, gf2198 0}{141}{}
+{50}{J'ai trouvé Cyrus... Un sale ogre l'a attaqué...}{}{5}{qu1096 2, gf2198 1, gf2199 0, lf1 0}{146}{}
+{51}{Je l'ai trouvé, mais mort... [Vous lui racontez ce qui s'est passé.]}{}{5}{qu1096 2, gf2198 1, gf2199 1, lf1 0}{165}{}
+{53}{Moi besoin ser-v-i-ices...}{}{-4}{}{171}{}
+{54}{Travail pour moi, Richard ?}{}{-4}{qu1096 0, lf1 0}{181}{}
+{55}{Euh... Moi peut-être chercher ensorceleur !}{}{-4}{qu1096 1, lf1 0}{181}{}
+{56}{Moi pas avoir trouvé ensorceleur...}{}{-4}{qu1096 2, lf1 0, gf2198 0}{141}{}
+{57}{Moi avoir trouvé ensorceleur ! Lui avec méchant, méchant ogre....}{}{-4}{qu1096 2, gf2198 1, gf2199 0, lf1 0}{146}{}
+{58}{Moi avoir trouvé ensorceleur ! Mais lui mort maintenant... [Vous lui racontez ce qui s'est passé.]}{}{-4}{qu1096 2, gf2198 1, gf2199 1, lf1 0}{165}{}
+{59}{E:}{}{1}{}{0}{}
+{60}{Puis-je faire autre chose pour vous ?}{Puis-je faire autre chose pour vous ?}{}{}{}{}
+{61}{K:}{}{1}{}{43}{}
+{62}{J'ai encore besoin de vos services...}{}{5}{}{171}{}
+{65}{Moi encore besoin ser-v-i-ices...}{}{-4}{}{171}{}
+{66}{E:}{}{1}{}{0}{}
+{67}{Eaux Dormantes ? Oh, c'est une toute petite ville. C'était un endroit célèbre à l'époque où Bastien avait construit sa première machine à vapeur... Les gens pensaient que la ville deviendrait aussi grande que Tarante ! Mais, comme vous pouvez le voir, Eaux Dormantes est restée la même... avec quelques boutiques et habitants en plus. En somme, c'est une petite ville assez calme...}{Eaux Dormantes ? Oh, c'est une toute petite ville. C'était un endroit célèbre à l'époque où Bastien avait construit sa première machine à vapeur... Les gens pensaient que la ville deviendrait aussi grande que Tarante ! Mais, comme vous pouvez le voir, Eaux Dormantes est restée la même... avec quelques boutiques et habitants en plus. En somme, c'est une petite ville assez calme...}{}{}{}{}
+{68}{Qu'y a-t-il à voir par ici ?}{}{5}{}{72}{}
+{69}{K:}{}{5}{}{43}{}
+{70}{E:}{}{5}{}{0}{}
+{72}{Oh, pas grand-chose. Nous avons une auberge et une taverne, si vous cherchez un endroit pour loger. A part nos belles armes manufacturées [Il vous montre ses marchandises en souriant.], je crois que la chose la plus célèbre que nous ayons par ici est le Géant d'Eaux Dormantes. Oh... Je crois que certaines gens considèrent que le Culte de Geshtianna est un peu étrange...}{Oh, pas grand-chose. Nous avons une auberge et une taverne, si vous cherchez un endroit pour loger. A part nos belles armes manufacturées [Il vous montre ses marchandises en souriant.], je crois que la chose la plus célèbre que nous ayons par ici est le Géant d'Eaux Dormantes. Oh... Je crois que certaines gens considèrent que le Culte de Geshtianna est un peu étrange...}{}{}{}{gf2197 1}
+{73}{Qu'est-ce que les armes qui sont fabriquées ici ont de particulier ?}{}{5}{}{78}{}
+{74}{Qui est ce Géant ?}{}{5}{}{87}{}
+{75}{Qu'est-ce que le Culte de Geshtianna ?}{}{5}{}{93}{}
+{76}{E:}{}{5}{}{0}{}
+{78}{Nous faisons beaucoup de commerce avec les nains... Ils possèdent le meilleur gisement de mithril de tout Arcanum, ce qui nous permet de fabriquer des armes bien équilibrées et enchantées. Ma famille fabrique des épées à Eaux Dormantes depuis près de 400 ans. Je ne veux pas paraître prétentieux, mon garçon, mais je serai surpris qu'il existe quelqu'un qui connaisse mieux que moi la fabrication des armes dans ce pays...}{Nous faisons beaucoup de commerce avec les nains... Ils possèdent le meilleur gisement de mithril de tout Arcanum, ce qui nous permet de fabriquer des armes bien équilibrées et enchantées. Ma famille fabrique des épées à Eaux Dormantes depuis près de 400 ans. Je ne veux pas paraître prétentieux, mademoiselle, mais je serai surpris qu'il existe quelqu'un qui connaisse mieux que moi la fabrication des armes dans ce pays...}{}{}{}{}
+{79}{C'est quelque peu présomptueux, ne croyez-vous pas ?}{}{5}{ch 16, lf2 0}{106}{re +10, lf2 1}
+{80}{C'est quelque peu présomptueux, ne croyez-vous pas ?}{}{5}{ch -15, lf2 0}{98}{re -5, lf2 1}
+{81}{Et êtes-vous capable de créer des armes magiques ?}{}{5}{lf3 0, qb1096 4}{119}{}
+{82}{Et êtes-vous capable de créer des armes magiques ?}{}{5}{lf3 1, qb1096 4}{113}{}
+{83}{Vous avez mentionné le Géant d'Eaux Dormantes... ?}{}{5}{}{87}{}
+{84}{Qu'est-ce que le Culte de Geshtianna ?}{}{5}{}{93}{}
+{85}{E:}{}{5}{}{0}{}
+{87}{Le Géant d'Eaux Dormantes ? Oh... C'est une légende locale, en fait. Les gens croient voir ce monstre depuis des années, mais ce ne sont que des fantaisies. Si vous voulez en savoir plus à ce sujet, allez voir le dénommé François-Xavier Hippington...}{Le Géant d'Eaux Dormantes ? Oh... C'est une légende locale, en fait. Les gens croient voir ce monstre depuis des années, mais ce ne sont que des fantaisies. Si vous voulez en savoir plus à ce sujet, allez voir le dénommé François-Xavier Hippington...}{}{}{}{}
+{88}{Vous disiez que certaines armes étaient enchantées... Vous êtes celui qui s'en charge ?}{}{5}{}{119}{}
+{89}{Qu'est-ce que le Culte de Geshtianna ?}{}{5}{}{93}{}
+{90}{E:}{}{5}{}{0}{}
+{93}{Le Culte ? Oh, c'est la nouvelle religion qui semble se développer par ici. Ils vénèrent une déesse de la fertilité et font de grandes célébrations... et ennuient généralement tout le monde. Des païens, si vous voulez mon avis. Mais, si vous voulez obtenir des informations à ce sujet, adressez-vous à Brigitte... C'est la grande prêtresse du Culte...}{Le Culte ? Oh, c'est la nouvelle religion qui semble se développer par ici. Ils vénèrent une déesse de la fertilité et font de grandes célébrations... et ennuient généralement tout le monde. Des païens, si vous voulez mon avis. Mais, si vous voulez obtenir des informations à ce sujet, adressez-vous à Brigitte... C'est la grande prêtresse du Culte...}{}{}{}{}
+{94}{Vous avez mentionné le Géant d'Eaux Dormantes... ?}{}{5}{}{87}{}
+{95}{Qu'est-ce que les armes qui sont fabriquées ici ont de particulier ?}{}{5}{}{78}{}
+{96}{E:}{}{5}{}{0}{}
+{98}{[Il vous fusille du regard.] Etes-vous en train de remettre en question mes compétences, mon garçon ? Je vous conseille de retirer ce que vous venez de dire... Je manie aussi bien ces armes que je sais les fabriquer...}{[Il vous fusille du regard.] Etes-vous en train de remettre en question mes compétences, ma fille ? Je vous conseille de retirer ce que vous venez de dire... Je manie aussi bien ces armes que je sais les fabriquer...}{}{}{}{}
+{99}{Pardonnez-moi. Et êtes-vous capable de créer des armes magiques ?}{}{5}{lf3 0, qb1096 4}{119}{re +5}
+{100}{Pardonnez-moi. Et êtes-vous capable de créer des armes magiques ?}{}{5}{lf3 1, qb1096 4}{113}{re +5}
+{101}{Veuillez accepter toutes mes excuses. Qu'en est-il de ce Géant d'Eaux Dormantes... ?}{}{5}{}{87}{re +5}
+{102}{Je regrette monsieur. Qu'est-ce que le Culte de Geshtianna ?}{}{5}{}{93}{re +5}
+{103}{Votre talent à l'épée ne peut pas être pire que votre travail mal fait...}{}{5}{}{}{co, fl 34}
+{104}{E:}{}{5}{}{0}{}
+{106}{[Il vous fusille du regard puis se met à sourire.] Rares sont ceux qui peuvent me dire cela sans recevoir une pluie de coups de poings, mais vous êtes différent... Parfois, il est bon que les gens me remettent à ma place. Je vous remercie, mon ami...}{[Il vous fusille du regard puis se met à sourire.] Rares sont ceux qui peuvent me dire cela sans recevoir une pluie de coups de poings, mais vous êtes différente... Parfois, il est bon que les gens me remettent à ma place. Je vous remercie, mon amie...}{}{}{}{}
+{107}{Et êtes-vous capable de créer des armes magiques ?}{}{5}{lf3 0, qb1096 4}{119}{}
+{108}{Et êtes-vous capable de créer des armes magiques ?}{}{5}{lf3 1, qb1096 4}{113}{}
+{109}{Vous avez mentionné le Géant d'Eaux Dormantes... ?}{}{5}{}{87}{}
+{110}{Qu'est-ce que le Culte de Geshtianna ?}{}{5}{}{93}{}
+{111}{E:}{}{5}{}{0}{}
+{113}{Je vous l'ai déjà dit... C'est mon ami Cyrus qui les rend magiques pour moi. Je n'ai pas eu de nouvelles de lui depuis quelques jours, toutefois... [Il semble inquiet.]}{Je vous l'ai déjà dit... C'est mon ami Cyrus qui les rend magiques pour moi. Je n'ai pas eu de nouvelles de lui depuis quelques jours, toutefois... [Il semble inquiet.]}{}{}{}{}
+{114}{Peut-être pourrais-je aller lui rendre visite ?}{}{5}{qb1096 1}{128}{}
+{115}{Vous avez mentionné le Géant d'Eaux Dormantes... ?}{}{5}{}{87}{}
+{116}{Qu'est-ce que le Culte de Geshtianna ?}{}{5}{}{93}{}
+{117}{E:}{}{5}{}{0}{}
+{119}{Non... Je demande à un ensorceleur du coin de s'en charger... C'est un vieillard borné, mais nous nous entendons assez bien. Son nom est Cyrus. Il enchante mes armes et je vais le voir de temps en temps, pour lui faire des petits travaux, s'il en a besoin. En parlant de lui... Quel jour sommes-nous... ?}{Non... Je demande à un ensorceleur du coin de s'en charger... C'est un vieillard borné, mais nous nous entendons assez bien. Son nom est Cyrus. Il enchante mes armes et je vais le voir de temps en temps, pour lui faire des petits travaux, s'il en a besoin. En parlant de lui... Quel jour sommes-nous... ?}{}{}{}{}
+{120}{[Vous lui dites.]}{}{5}{}{122}{}
+{122}{C'est étrange. Le vieux Cyrus devait venir ici hier. Je n'ai pas eu le temps d'aller le voir et je suis aujourd'hui très occupé par une commande de la Garde de Caladon. [Richard paraît inquiet.] J'espère qu'il va bien...}{C'est étrange. Le vieux Cyrus devait venir ici hier. Je n'ai pas eu le temps d'aller le voir et je suis aujourd'hui très occupé par une commande de la Garde de Caladon. [Richard paraît inquiet.] J'espère qu'il va bien...}{}{}{}{lf3 1}
+{123}{Peut-être pourrais-je aller lui rendre visite ?}{}{5}{}{128}{}
+{124}{Vous avez mentionné le Géant d'Eaux Dormantes... ?}{}{5}{}{87}{}
+{125}{Qu'est-ce que le Culte de Geshtianna ?}{}{5}{}{93}{}
+{126}{E:}{}{5}{}{0}{}
+{128}{Hmmm. Oui, vous semblez digne de confiance. Voulez-vous vous assurer que rien ne lui est arrivé ? Et lorsque vous le verrez, dites-lui que j'aurais besoin de ses services le plus tôt possible... Ce chargement doit être livré avant la fin de la semaine. Si vous faites cela pour moi, je vous donnerai une épée d'Eaux Dormantes. Qu'est-ce que vous en dites, mon ami ? }{Hmmm. Oui, vous semblez digne de confiance.  Voulez-vous vous assurer que rien ne lui est arrivé ? Et lorsque vous le verrez, dites-lui que j'aurais besoin de ses services le plus tôt possible... Ce chargement doit être livré avant la fin de la semaine. Si vous faites cela pour moi, je vous donnerai une épée d'Eaux Dormantes. Qu'est-ce que vous en dites, mon amie ? }{}{}{}{qu1096 1}
+{129}{Cela me paraît honnête. Je m'en charge...}{}{5}{}{135}{qu1096 2}
+{130}{Je vais y réfléchir. Encore quelques questions...}{}{5}{}{43}{}
+{131}{Je l'ai délivré... Il avait été capturé par un ogre...}{}{5}{gf2198 1, gf2199 0}{146}{}
+{132}{Je l'ai trouvé, mais mort... [Vous lui racontez ce qui s'est passé.]}{}{5}{gf2198 1, gf2199 1}{165}{}
+{133}{E:}{}{5}{}{0}{}
+{135}{Je vous remercie, étranger. Sa maison se trouve au nord-ouest... Suivez le chemin qui mène hors de la ville. Lorsque vous vous serez assuré que le vieil ensorceleur va bien, revenez me voir...}{Je vous remercie, étrangère. Sa maison se trouve au nord-ouest... Suivez le chemin qui mène hors de la ville. Lorsque vous vous serez assuré que le vieil ensorceleur va bien, revenez me voir...}{}{}{}{}
+{136}{K:}{}{1}{}{43}{}
+{137}{E:}{}{1}{}{0}{}
+{141}{Je vois. J'espère que vous trouverez rapidement ce qui lui est arrivé...}{Je vois. J'espère que vous trouverez rapidement ce qui lui est arrivé...}{}{}{}{}
+{142}{K:}{}{1}{}{43}{}
+{143}{E:}{}{1}{}{0}{}
+{146}{Vraiment ? Vous devez certainement parler de Drog Dent Noire... Il vit en haut des collines depuis un certain temps, mais il est généralement inoffensif... Cette fois-ci, sa faim aura eu raison de lui. Bien joué, mon ami ! Voilà l'épée que je vous avais promise. [Il vous la donne.] Bonne journée...}{Vraiment ? Vous devez certainement parler de Drog Dent Noire... Il vit en haut des collines depuis un certain temps, mais il est généralement inoffensif... Cette fois-ci, sa faim aura eu raison de lui. Bien joué, mon amie ! Voilà l'épée que je vous avais promise. [Il vous la donne.] Bonne journée...}{}{}{}{qu1096 4, lf1 1, in -2018}
+{147}{K:}{}{1}{}{43}{}
+{148}{E:}{}{1}{}{0}{}
+{165}{[Il semble stupéfait.] Oh, dieux du ciel. Ce doit être le vieux Drog Dent Noire. Cet ogre vit dans les collines depuis des années, mais il n'avait jamais ennuyé personne. Je suppose que c'est sa faim qui aura eu raison de lui. Merci d'avoir essayé, mon ami. Je crains que cette épée ne vous revienne pas...}{[Il semble stupéfait.] Oh, dieux du ciel. Ce doit être le vieux Drog Dent Noire. Cet ogre vit dans les collines depuis des années, mais il n'avait jamais ennuyé personne. Je suppose que c'est sa faim qui aura eu raison de lui. Merci d'avoir essayé, mon amie. Je crains que cette épée ne vous revienne pas...}{}{}{}{lf1 1}
+{166}{K:}{}{1}{}{43}{}
+{167}{E:}{}{1}{}{0}{}
+{171}{Quels services recherchez-vous ?}{Quels services recherchez-vous ?}{}{}{}{}
+{172}{Pourriez-vous m'aider à réparer quelque chose ?}{}{5}{}{}{ri}
+{173}{Vous pouvoir réparer kek'chose pour moi ?}{}{-4}{}{}{ri}
+{174}{T: 12}{}{1}{}{60}{}
+{175}{B:}{}{1}{}{60}{}
+{176}{R: $10, 1090-1099}{}{1}{}{60}{}
+{177}{E:}{}{1}{}{0}{}
+{181}{Eh bien, monsieur, je dois être honnête... J'ai rencontré des animaux plus intelligents que vous... Mais peut-être pourriez-vous faire quelque chose pour moi. Je fabrique des épées ici, à Eaux Dormantes, et j'ai un vieil ami ensorceleur qui les enchante pour moi. Je n'ai pas vu ce vieux Cyrus depuis des jours... Si vous pouviez vous assurer que tout va bien pour lui, je vous ferais don d'une belle épée d'Eaux Dormantes...}{Eh bien, madame, je dois être honnête... J'ai rencontré des animaux plus intelligents que vous... Mais peut-être pourriez-vous faire quelque chose pour moi. Je fabrique des épées ici, à Eaux Dormantes, et j'ai un vieil ami ensorceleur qui les enchante pour moi. Je n'ai pas vu ce vieux Cyrus depuis des jours... Si vous pouviez vous assurer que tout va bien pour lui, je vous ferais don d'une belle épée d'Eaux Dormantes...}{}{}{}{qu10961 }
+{182}{Accord ! Moi aller voir ensorceleur ! }{}{-4}{}{135}{qu1096 2}
+{183}{Moi peut-être aider. Moi avoir autres questions !}{}{-4}{}{43}{}
+

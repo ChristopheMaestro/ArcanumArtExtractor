@@ -22,6 +22,7 @@
     return [data('module-index'), data('world-labels'), u('items'), u('demographics'), u('library'), data('npcs'), u('routines'), data('submaps'),
       ...D.modUrls('maps', ver), u('modules'), 'js/atlas/modules-merge.js', u('waypoints'), u('notices'), 'js/atlas/modules-merge-labels.js', data('areas'),
       ...(ver === 'ru' ? D.modUrls('areas', ver) : []), u('quests'), u('portraits'), u('sound'), ...(D.has('sound-own', ver) ? [u('sound-own')] : []),
+      'js/atlas/atlas-sound.js', 'js/atlas/atlas-library.js', 'js/atlas/atlas-frames.js',      // parts of the app (window.AtlasParts), run before it
       'js/atlas/atlas-app.js'];
   }
   const SCROLL = 'js/atlas/game-scroll.js';                  // (not a data file: it dresses the view, so it runs when the app is up)
@@ -57,19 +58,24 @@
       : base + 'left:50%;bottom:22px;transform:translateX(-50%);padding:8px 16px;border-radius:6px;box-shadow:0 4px 18px rgba(0,0,0,.5)';
   }
   // the welcome picture: a random one from atlas/welcome, another every 5 s; each is fetched only when its turn comes, and cross-fades in
-  let slideTimer = 0;
+  let slideTimer = 0, slideKeys = null;
   function startSlideshow() {
     const list = window.ArcanumHero || [], el = document.getElementById('heroMap');
-    if (!list.length || !el || slideTimer) return;
+    clearInterval(slideTimer); slideTimer = 0;                      // (a change of version makes the welcome markup again: the show begins on the new one)
+    if (slideKeys) { document.removeEventListener('keydown', slideKeys); slideKeys = null; }
+    if (!list.length || !el) return;
     const layers = [0, 1].map(() => { const d = document.createElement('div'); d.className = 'hero-slide'; el.appendChild(d); return d; });
     const cap = document.createElement('div'); cap.className = 'hero-caption'; el.appendChild(cap);
     let bag = [], seen = [], pos = -1, front = 0, first = true, token = 0;
     const pick = () => {
       if (!bag.length) {                                            // a fresh shuffle, never starting on the picture just shown
-        const last = seen[seen.length - 1]; bag = list.slice().sort(() => Math.random() - .5);
-        if (last && bag[bag.length - 1] === last && bag.length > 1) bag.unshift(bag.pop());
+        const last = seen[seen.length - 1];                         // (a picture with weight w is in the bag w times: w times the chance per round)
+        bag = list.flatMap(h => Array((h.w | 0) || 1).fill(h)).sort(() => Math.random() - .5);
+        if (last && bag[bag.length - 1] === last) { const i = bag.findIndex(h => h !== last); if (i >= 0) bag.push(bag.splice(i, 1)[0]); }
       }
-      return bag.pop();
+      let h = bag.pop();
+      if (h === seen[seen.length - 1]) { const i = bag.findIndex(x => x !== h); if (i >= 0) { const o = bag.splice(i, 1)[0]; bag.push(h); h = o; } }   // (never the same picture twice in a row)
+      return h;
     };
     const show = h => {
       const mine = ++token, img = new Image();
@@ -92,7 +98,7 @@
     };
     const restart = () => { clearInterval(slideTimer); slideTimer = setInterval(() => { if (!document.hidden) step(1); }, 5000); };
     step(1); restart();
-    document.addEventListener('keydown', e => {                     // left / right browse the pictures, on the welcome screen only
+    document.addEventListener('keydown', slideKeys = e => {         // left / right browse the pictures, on the welcome screen only
       if ((e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') || e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
       if (!document.body.classList.contains('screen-home') || e.target.closest('input, textarea, select, [contenteditable]')) return;
       e.preventDefault(); step(e.key === 'ArrowRight' ? 1 : -1); restart();

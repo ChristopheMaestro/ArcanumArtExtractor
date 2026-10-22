@@ -17,7 +17,7 @@ PROJECT = HERE.parent.parent
 import os  # noqa: E402
 DATA = Path(os.environ['ARCANUM_DATA']) if os.environ.get('ARCANUM_DATA') else PROJECT / 'data'
 DATA_JS = Path(os.environ['ATLAS_DATA_JS']) if os.environ.get('ATLAS_DATA_JS') else PROJECT / 'js' / 'atlas' / 'data'
-ASSET_DIR = Path(os.environ['ATLAS_ASSET_DIR']) if os.environ.get('ATLAS_ASSET_DIR') else PROJECT / 'atlas'      # where a version's own sheets go (item-icons.webp, portraits.png)
+ASSET_DIR = Path(os.environ['ATLAS_ASSET_DIR']) if os.environ.get('ATLAS_ASSET_DIR') else PROJECT / 'atlas'      # where a version's own sheets go (art-mes; the picture sheets go to atlas/graphics/item/ and portraits/)
 sys.path.insert(0, str(PROJECT / 'toolbox'))
 import extract_mob_prototypes as emp  # noqa: E402  (schema, object types, prototype numbers)
 

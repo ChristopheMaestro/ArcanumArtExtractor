@@ -1,0 +1,121 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{A qui ai-je l'honneur ?}{}{5}{ra -6, me 0, re 41}{26}{}
+{3}{A qui ai-je l'honneur ?}{}{5}{ra 6, me 0, re 41}{30}{}
+{4}{Voilà qui est fort malpoli, monsieur. Peut-être pourrions-nous nous comporter comme des gens bien élevés.}{}{5}{re -40}{12}{re +5}
+{5}{Votre ton ne me plaît pas, monsieur.}{}{5}{re -40}{19}{re -5}
+{6}{Bonjour, Jongle Dunne. Vous avez un moment ?}{}{5}{me 1, re 41}{46}{}
+{8}{Bonjour ! Moi débile ! Vous qui ?}{}{-4}{me 0, ra 6}{30}{}
+{9}{Bonjour ! Moi débile ! Vous qui ?}{}{-4}{me 0, ra -6}{26}{}
+{10}{'jour, Oncle Dunne ! Questions !}{}{-4}{me 1}{46}{}
+{11}{E:}{}{1}{}{0}{}
+{12}{[L'halfelin qui vous fait face vous observe froidement. Puis un léger sourire apparaît.] Je vois que vous êtes un homme de raison. Peut-être mes mots ont-ils dépassé ma pensée...}{[L'halfelin qui vous fait face vous observe froidement. Puis un léger sourire apparaît.] Je vois que vous êtes une femme de raison. Peut-être mes mots ont-ils dépassé ma pensée...}{}{}{}{}
+{13}{J'en suis fort aise. Qui êtes-vous ?}{}{5}{ra 6, me 0}{30}{}
+{14}{J'en suis fort aise. Qui êtes-vous ?}{}{5}{ra -6, me 0}{26}{}
+{15}{Bonjour, Jongle Dunne. Vous avez un moment ?}{}{5}{me 1}{46}{}
+{16}{E:}{}{5}{}{0}{}
+{19}{C'est vraiment dommage. Je vous conseille de partir sans plus attendre.}{C'est vraiment dommage. Je vous conseille de partir sans plus attendre.}{}{}{}{}
+{20}{D'accord. Dès que je vous aurai défoncé le crâne.}{}{5}{}{}{co, fl 24}
+{21}{S'il vous plaît. Je regrette sincèrement. Ne pouvons-nous pas nous entendre ?}{}{5}{}{12}{re +10}
+{22}{E:}{}{5}{}{0}{}
+{24}{Quoi ? Je refuse de me laisser insulter chez moi ! En garde !}{Quoi ? Je refuse de me laisser insulter chez moi ! En garde !}{}{}{}{}
+{26}{Je suis Jongle Dunne, ensorceleur, érudit et alchimiste. Si vous avez un problème lié à la magie à Tristes Collines, c'est à moi qu'il faut vous adresser. Mais vous arrivez au mauvais moment, mon ami. Peut-être pourrions-nous remettre notre entretien à plus tard...}{Je suis Jongle Dunne, ensorceleur, érudit et alchimiste. Si vous avez un problème lié à la magie à Tristes Collines, c'est à moi qu'il faut vous adresser. Mais vous arrivez au mauvais moment, mon amie. Peut-être pourrions-nous remettre notre entretien à plus tard...}{}{}{}{}
+{27}{C'est un plaisir de vous rencontrer. Puis-je vous être utile ?}{}{5}{}{36}{}
+{28}{Euh... 'jour ! Vous besoin aide, Jungle ?}{}{-4}{}{36}{}
+{30}{Je suis Jongle Dunne, ensorceleur, érudit et alchimiste. Si vous avez un problème lié à la magie à Tristes Collines, c'est à moi qu'il faut vous adresser. C'est toujours un plaisir de rencontrer un autre halfelin par ici, mais j'ai bien peur que vous arriviez au mauvais moment, frère. Peut-être pourrions-nous remettre notre entretien à plus tard...}{Je suis Jongle Dunne, ensorceleur, érudit et alchimiste. Si vous avez un problème lié à la magie à Tristes Collines, c'est à moi qu'il faut vous adresser. C'est toujours un plaisir de rencontrer une halfeline par ici, mais j'ai bien peur que vous arriviez au mauvais moment, ma soeur. Peut-être pourrions-nous remettre notre entretien à plus tard...}{}{}{}{}
+{31}{C'est un plaisir de vous rencontrer. Puis-je vous être utile ?}{}{5}{}{36}{}
+{32}{Euh... 'jour ! Vous besoin aide, Jungle ?}{}{-4}{}{36}{}
+{36}{Peut-être bien, oui... J'ai un problème très... délicat, ici, à Tristes Collines. C'est confidentiel, si vous voyez ce que je veux dire.}{Peut-être bien, oui... J'ai un problème très... délicat, ici, à Tristes Collines. C'est confidentiel, si vous voyez ce que je veux dire.}{}{}{}{}
+{37}{Parfaitement. Puis-je vous poser quelques questions à ce sujet ?}{}{5}{}{46}{}
+{38}{Il vaut probablement mieux que je reste en dehors de tout ça. Bonne journée.}{}{5}{}{0}{re -5}
+{39}{Moi aider vous !}{}{-4}{}{152}{}
+{40}{E:}{}{-4}{}{0}{}
+{46}{Certainement...}{Certainement...}{}{}{}{}
+{47}{T: 10, 11}{}{5}{}{64}{}
+{48}{Quelle est la nature de votre problème, Monsieur Dunne ?}{}{5}{qu1034 0}{75}{}
+{49}{Vous dites que vous êtes alchimiste... Qu'est-ce que cela signifie ?}{}{5}{lf3 0}{70}{}
+{50}{J'aimerais vous parler de la machine du bourgmestre...}{}{5}{qu1034 1, lf3 0}{104}{}
+{51}{Je travaille encore au problème de la machine à vapeur.}{}{5}{qu1034 2, gf1017 0, lf3 0}{115}{}
+{52}{Le problème que vous posait la machine à vapeur est réglé.}{}{5}{qu1034 2, gf1017 1, lf3 0}{121}{}
+{53}{Vous disiez que vous pourriez encore avoir besoin de moi ?}{}{5}{lf5 1, qu1058 0, lf3 0}{125}{}
+{54}{J'aimerais vous parler de ce paquet à récupérer...}{}{5}{qu1058 1, lf3 0}{146}{}
+{55}{Je n'ai pas encore récupéré le paquet.}{}{5}{qu1058 2, ni 5623, lf3 0}{115}{}
+{56}{Je vous ai ramené le paquet.}{}{5}{qu1058 2, in 5623, lf3 0}{139}{in 5623}
+{58}{T: 10, 11}{}{-4}{}{64}{}
+{59}{Euh... moi besoin travail, Jungle !}{}{-4}{qu1034 0, lf3 0}{152}{}
+{60}{Moi encore pouvoir casser machine, Jungle ?}{}{-4}{qu1034 1, lf3 0}{152}{}
+{61}{'jour, Jungle ! Moi encore essayer casser machine !}{}{-4}{qu1034 2, gf1017 0, lf3 0}{115}{}
+{62}{Moi cassé machine, Oncle Dunne !}{}{-4}{qu1034 2, gf1017 1, lf3 0}{158}{}
+{63}{E:}{}{1}{}{0}{}
+{64}{Puis-je encore vous aider ?}{Puis-je encore vous aider ?}{}{}{}{}
+{65}{K:}{}{1}{}{46}{}
+{66}{E:}{}{1}{}{0}{}
+{70}{Les alchimistes étudient les propriétés des objets et se livrent à des tests afin de déterminer leur réaction les uns par rapport aux autres. L'alchimie n'est pas vraiment de la magie ni de la science, mais un peu des deux. Je suis une sorte de génie touche-à-tout, spécialisé en tout et en rien. Vous me suivez ?}{Les alchimistes étudient les propriétés des objets et se livrent à des tests afin de déterminer leur réaction les uns par rapport aux autres. L'alchimie n'est pas vraiment de la magie ni de la science, mais un peu des deux. Je suis une sorte de génie touche-à-tout, spécialisé en tout et en rien. Vous me suivez ?}{}{}{}{}
+{71}{Parfaitement. Puis-je vous poser d'autres questions ?}{}{5}{}{46}{}
+{72}{E:}{}{5}{}{0}{}
+{75}{Eh bien... [Il se penche vers vous et regarde furtivement alentour.] Un complot se trame à Tristes Collines, un projet secret et malveillant...}{Eh bien... [Il se penche vers vous et regarde furtivement alentour.] Un complot se trame à Tristes Collines, un projet secret et malveillant...}{}{}{}{}
+{76}{Intéressant. Que se passe-t-il exactement ?}{}{5}{}{80}{}
+{77}{E:}{}{5}{}{0}{}
+{80}{La ville entière a décidé de se débarrasser de moi ! Le bourgmestre Dufrin a convaincu les habitants et ce n'est qu'une question de temps avant que je ne sois forcé de partir...}{La ville entière a décidé de se débarrasser de moi ! Le bourgmestre Dufrin a convaincu les habitants et ce n'est qu'une question de temps avant que je ne sois forcé de partir...}{}{}{}{}
+{81}{Je vois. Qu'est-ce que le bourgmestre vous a fait ?}{}{5}{}{85}{}
+{82}{E:}{}{5}{}{0}{}
+{85}{Ce qu'il m'a fait ? Il menace l'équilibre naturel qui me permet de gagner mon pain quotidien, voilà ce qu'il m'a fait ! Avez-vous la moindre idée de l'impact qu'a sa satanée machine à vapeur sur mes dons magiques ?}{Ce qu'il m'a fait ? Il menace l'équilibre naturel qui me permet de gagner mon pain quotidien, voilà ce qu'il m'a fait ! Avez-vous la moindre idée de l'impact qu'a sa satanée machine à vapeur sur mes dons magiques ?}{}{}{}{}
+{86}{Non. Que voulez-vous dire ?}{}{5}{}{92}{}
+{87}{Je vois. Vous voulez parler de la nature intrinsèque de la magie et de la technologie...}{}{5}{}{96}{}
+{88}{E:}{}{5}{}{0}{}
+{92}{Ces satanés gadgets technologiques ! Ils troublent les flux grâce auxquels je réalise mes miracles de magie et d'alchimie. La magie et la technologie sont très différentes... La première s'oppose aux lois naturelles, tandis que la seconde en dépend totalement. Ce qui signifie... Que cette machine m'empêche de lancer des sorts et de poursuivre mes expériences... et les affaires s'en ressentent !}{Ces satanés gadgets technologiques ! Ils troublent les flux grâce auxquels je réalise mes miracles de magie et d'alchimie. La magie et la technologie sont très différentes... La première s'oppose aux lois naturelles, tandis que la seconde en dépend totalement. Ce qui signifie... Que cette machine m'empêche de lancer des sorts et de poursuivre mes expériences... et les affaires s'en ressentent !}{}{}{}{}
+{93}{C'est bien dommage, surtout dans une grande ville comme Tristes Collines.}{}{5}{}{100}{re +5}
+{94}{E:}{}{5}{}{0}{}
+{96}{Evidemment ! Et ce maudit bourgmestre affaiblit mes pouvoirs. Il fut un temps où j'étais l'habitant le plus puissant de Tristes Collines...}{Evidemment ! Et ce maudit bourgmestre affaiblit mes pouvoirs. Il fut un temps où j'étais l'habitant le plus puissant de Tristes Collines...}{}{}{}{}
+{97}{Bonté divine ! Dans une grande ville comme celle-ci ! }{}{5}{}{100}{re +5}
+{98}{E:}{}{5}{}{0}{}
+{100}{[Il ne perçoit pas votre ton sarcastique.] Oui ! Si seulement quelqu'un faisait le nécessaire pour rectifier la situation... [Il vous lance un regard en coin.]}{[Il ne perçoit pas votre ton sarcastique.] Oui ! Si seulement quelqu'un faisait le nécessaire pour rectifier la situation... [Il vous lance un regard en coin.]}{}{}{}{}
+{101}{Que me proposez-vous au juste ?}{}{5}{}{104}{}
+{102}{E:}{}{5}{}{0}{}
+{104}{[Il chuchote.] Si vous trouviez le moyen de mettre cette machine infernale hors service, je pourrais vous donner quelques potions de guérison. Qu'en dites-vous ?}{[Il chuchote.] Si vous trouviez le moyen de mettre cette machine infernale hors service, je pourrais vous donner quelques potions de guérison. Qu'en dites-vous ?}{}{}{}{qu1034 1}
+{105}{Marché conclu.}{}{5}{gf1017 0}{108}{qu1034 2}
+{106}{C'est déjà fait...}{}{5}{gf1017 1}{121}{re +5, qu1034 2}
+{107}{Je regrette, Monsieur Dunne. Je me refuse à enfreindre la loi.}{}{5}{}{111}{re -5}
+{108}{Splendide ! J'attends de vos nouvelles avec impatience !}{Splendide ! J'attends de vos nouvelles avec impatience !}{}{}{}{}
+{109}{Bonne journée.}{}{5}{}{0}{}
+{111}{Je vois. Vous êtes libre de vos choix, après tout... Une autre fois, peut-être...}{Je vois. Vous êtes libre de vos choix, après tout... Une autre fois, peut-être...}{}{}{}{}
+{112}{Peut-être. Bonne journée...}{}{5}{}{0}{}
+{115}{Revenez ici quand vous l'aurez fait.}{Revenez ici quand vous l'aurez fait.}{}{}{}{}
+{116}{K:}{}{1}{}{46}{}
+{117}{E:}{}{1}{}{0}{}
+{121}{Vraiment ? C'est fantastique ! Voici votre dû. [Il vous tend quelques potions.] Vous êtes un jeune homme plein de ressources... Peut-être cela vous dirait-il de faire autre chose pour moi ?}{Vraiment ? C'est fantastique ! Voici votre dû. [Il vous tend quelques potions.] Vous êtes une jeune femme pleine de ressources... Peut-être cela vous dirait-il de faire autre chose pour moi ?}{}{}{}{in -3601, in -3601, qu1034 4, lf5 1}
+{122}{Bien sûr. Je suis à votre service.}{}{5}{}{125}{}
+{123}{Peut-être pourrons-nous en discuter une autre fois. Bonne journée.}{}{5}{}{0}{}
+{125}{Comme je vous l'ai dit, je suis alchimiste. J'étudie depuis très longtemps les propriétés chimiques du plomb et de l'or, et je crois bien avoir enfin découvert le secret permettant de passer de l'un à l'autre. Il ne me manque plus que l'ingrédient final...}{Comme je vous l'ai dit, je suis alchimiste. J'étudie depuis très longtemps les propriétés chimiques du plomb et de l'or, et je crois bien avoir enfin découvert le secret permettant de passer de l'un à l'autre. Il ne me manque plus que l'ingrédient final...}{}{}{}{}
+{126}{Qui est ?}{}{5}{}{128}{}
+{128}{Ah, je suis désolé, mais j'ai bien peur que cela ne vous regarde pas. Malheureusement, je n'ai pas accès à cet ingrédient à Tristes Collines, le seul homme qui le vend étant à Dernholm, à l'est. Je vais vous montrer sur la carte. [Il le fait.] Notre homme s'appelle Charles Dolan. Il tient une boutique à Dernholm.}{Ah, je suis désolé, mais j'ai bien peur que cela ne vous regarde pas. Malheureusement, je n'ai pas accès à cet ingrédient à Tristes Collines, le seul homme qui le vend étant à Dernholm, à l'est. Je vais vous montrer sur la carte. [Il le fait.] Notre homme s'appelle Charles Dolan. Il tient une boutique à Dernholm.}{}{}{}{mm 5}
+{129}{Que voudriez-vous que je fasse ?}{}{5}{}{132}{}
+{132}{Il suffit que vous alliez trouver ce Monsieur Dolan et que vous lui disiez que vous venez prendre un paquet de la part de Jongle Dunne. Je lui enverrai un télégramme afin de l'avertir de votre venue. Je vous paierai 70 pièces d'or pour le déplacement. Qu'en dites-vous ?}{Il suffit que vous alliez trouver ce Monsieur Dolan et que vous lui disiez que vous venez prendre un paquet de la part de Jongle Dunne. Je lui enverrai un télégramme afin de l'avertir de votre venue. Je vous paierai 70 pièces d'or pour le déplacement. Qu'en dites-vous ?}{}{}{}{qu1058 1}
+{133}{Ca m'a l'air honnête. J'accepte.}{}{5}{}{136}{qu1058 2}
+{134}{Peut-être. Je reviendrai plus tard.}{}{5}{}{0}{}
+{136}{Splendide ! J'envoie de suite un télégramme à Monsieur Dolan pour lui dire de vous attendre. Je vous retrouve ici à votre retour.}{Splendide ! J'envoie de suite un télégramme à Monsieur Dolan pour lui dire de vous attendre. Je vous retrouve ici à votre retour.}{}{}{}{}
+{137}{E:}{}{5}{}{0}{}
+{139}{Merci mille fois ! J'apprécie vraiment votre aide ! Un jour, vous pourrez regarder derrière vous et vous dire que vous avez aidé l'homme qui a changé le cours de l'histoire. Voilà votre argent.}{Merci mille fois ! J'apprécie vraiment votre aide ! Un jour, vous pourrez regarder derrière vous et vous dire que vous avez aidé l'homme qui a changé le cours de l'histoire.}{}{}{}{$$70, qu1058 4, lf3 1}
+{140}{Passionnant. Peut-être pourriez-vous partager ce secret avec moi ?}{}{5}{}{143}{}
+{141}{E:}{}{5}{}{0}{}
+{143}{Désolé, mon brave, mais le secret ne franchira pas mes lèvres. Je vous remercie, toutefois, et je vous souhaite bonne chance pour vos voyages.}{Désolé, ma brave dame, mais le secret ne franchira pas mes lèvres. Je vous remercie, toutefois, et je vous souhaite bonne chance pour vos voyages.}{}{}{}{}
+{144}{E:}{}{5}{}{0}{}
+{146}{Alors, vous avez décidé d'aller chercher le paquet chez Monsieur Dolan, à Dernholm, et de me le ramener ? Je vous rappelle que je vous en offre 70 pièces d'or. Cela vous paraît honnête ?}{Alors, vous avez décidé d'aller chercher le paquet chez Monsieur Dolan, à Dernholm, et de me le ramener ? Je vous rappelle que je vous en offre 70 pièces d'or. Cela vous paraît honnête ?}{}{}{}{}
+{147}{Oui. J'accepte.}{}{5}{}{136}{}
+{148}{Je ne crois pas. Une autre fois, peut-être...}{}{5}{}{0}{}
+{150}{C'est un plaisir de faire affaire avec vous.}{C'est un plaisir de faire affaire avec vous.}{}{}{}{}
+{152}{Euh... Bien sûr. (Ce type est un véritable demeuré). Ecoutez, l'ami. Le bourgmestre possède une machine à vapeur... Méchante machine ! Et j'ai besoin que quelqu'un la casse... euh, fasse boum machine. D'accord ? Je vous donne une potion de guérison si vous y arrivez !}{Euh... Bien sûr. (La pauvrette est complètement attardée). Ecoutez, l'amie. Le bourgmestre possède une machine à vapeur... Méchante machine ! Et j'ai besoin que quelqu'un la casse... euh, fasse boum machine. D'accord ? Je vous donne une potion de guérison si vous y arrivez !}{}{}{}{qu1034 1}
+{153}{Ouais ! Moi casser !}{}{-4}{}{156}{qu1034 2}
+{154}{Moi déjà cassé machine !}{}{-4}{gf1017 1}{158}{qu1034 2}
+{155}{Euh... Non. Moi partir maintenant.}{}{-4}{}{0}{}
+{156}{Splendide ! Revenez quand ce sera fait.}{Splendide ! Revenez quand ce sera fait.}{}{}{}{}
+{158}{Excellent, mon bon ami. Voici votre potion. Merci pour votre aide.}{Excellent, ma bonne amie. Voici votre potion. Merci pour votre aide.}{}{}{}{in -3601, qu1034 4, lf3 1}
+{159}{Ar'voir, Jungle !}{}{-4}{}{0}{}
+{161}{Vous ! Vous avez le toupet de revenir ici après ce que vous avez dit à ce couard de bourgmestre ? Vous avez intérêt à déguerpir sans demander votre reste, sans quoi je devrai faire appel à mes pouvoirs terrifiants !}{Vous ! Vous avez le toupet de revenir ici après ce que vous avez dit à ce couard de bourgmestre ? Vous avez intérêt à déguerpir sans demander votre reste, sans quoi je devrai faire appel à mes pouvoirs terrifiants !}{}{}{}{qu1034 6}
+{162}{Je regrette, Jongle. Je n'ai pas eu d'autre choix que d'agir honnêtement dans cette affaire.}{}{5}{}{}{lf4 1, fl 166}
+{163}{Je me fiche de ce que vous pensez, Jongle.}{}{5}{}{}{lf4 1, fl 166}
+{164}{Si vous continuez à me parler sur ce ton, vous êtes un homme mort.}{}{5}{}{}{co, fl 24}
+{166}{Je refuse d'en entendre davantage, traître ! Hors de ma maison !}{Je refuse d'en entendre davantage, traîtresse ! Hors de ma maison !}{}{}{}{}
+{170}{[Ses yeux se rétrécissent. Il est visiblement très en colère.] Je constate que vous avez aidé le bourgmestre à réparer sa machine à vapeur. Je crois que nous n'avons plus rien à nous dire, camarade. Bonne journée.}{[Ses yeux se rétrécissent. Il est visiblement très en colère.] Je constate que vous avez aidé le bourgmestre à réparer sa machine à vapeur. Je crois que nous n'avons plus rien à nous dire, camarade. Bonne journée.}{}{}{}{lf6 1, qu1058 6, qu1034 6 }
+{171}{E:}{}{1}{}{0}{}
+{175}{Laissez-moi tranquille.}{Laissez-moi tranquille.}{}{}{}{}
+

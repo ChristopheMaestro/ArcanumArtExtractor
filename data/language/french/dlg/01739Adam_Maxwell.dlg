@@ -1,0 +1,217 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Mes salutations, monsieur. Puis-je vous demander votre nom ?}{}{5}{lf1 0, re 41}{34}{}
+{3}{C'était très indélicat.}{}{5}{lf1 0, re -40}{47}{}
+{4}{Vous ai-je offensé, Adam ?}{}{5}{lf1 1, lf2 0}{58}{}
+{5}{Re-bonjour, Adam. Puis-je vous poser une question ?}{}{5}{lf1 1, lf2 1,re 41}{64}{}
+{6}{Vous ai-je offensé, Adam ?}{}{5}{lf1 1, lf2 1, re -40}{54}{}
+{7}{Je crois que je vais aller chercher ce livre pour vous, Adam. Quel salaire m'offrez-vous ?}{}{5}{qu1122 1}{102}{}
+{8}{J'essaye toujours d'obtenir le livre.}{}{5}{qu1122 2, ni 5241}{118}{}
+{9}{J'ai le livre. Voilà.}{}{5}{lf3 0,  in 5241}{121}{re +10, in5241}
+{10}{J'ai le livre. Voilà.}{}{5}{lf3 1,  in 5241}{126}{re +10, in5241}
+{11}{Je vais peut-être aller chercher ce collier... Combien m'offrez-vous ?}{}{5}{qu1123 1}{136}{}
+{12}{J'ai un peu de mal à récupérer le collier.}{}{5}{qu1123 2, ni 2825}{144}{}
+{13}{J'ai le collier. Tenez, prenez le.}{}{5}{lf4 0,   in 2825}{155}{re +10, in2825}
+{14}{J'ai le collier. Tenez, prenez le.}{}{5}{lf4 1,   in 2825}{160}{re +10, in2825}
+{15}{J'ai un colis pour vous.}{}{5}{qu1124 2, in 5666}{168}{lf1 1, lf2 1}
+{16}{Moi avoir sac pour vous.}{}{-4}{qu1124 2, in 5666}{168}{lf1 1, lf2 1}
+{17}{Hé, monsieur. Quoi être votre nom ?}{}{-4}{lf1 0, re 41}{34}{}
+{18}{Ca pas gentil...}{}{-4}{lf1 0, re -40}{47}{}
+{19}{'jour, Adam. Moi pouvoir demander question ?}{}{-4}{lf1 1, lf2 0}{58}{}
+{20}{'jour, Adam. Moi pouvoir demander question ?}{}{-4}{lf1 1, lf2 1}{64}{}
+{21}{Moi avoir livre pour vous. Combien payer ?}{}{-4}{qu1122 1}{102}{}
+{22}{Moi pas avoir livre encore.}{}{-4}{qu1122 2, ni 5241}{118}{}
+{23}{Moi avoir livre ! Voilà. Ca pour vous.}{}{-4}{lf3 0,  in 5241}{121}{re +10, in5241}
+{24}{Moi avoir livre ! Voilà. Ca pour vous.}{}{-4}{lf3 1,  in 5241}{126}{re +10, in5241}
+{25}{Peut-être moi chercher collier. Combien argent ?}{}{-4}{qu1123 1}{136}{}
+{26}{Collier difficile trouver !}{}{-4}{qu1123 2, ni 2825}{144}{}
+{27}{Moi avoir collier ! Voilà. Vous prendre.}{}{-4}{lf4 0,   in 2825}{155}{re +10, in2825}
+{28}{Moi avoir collier ! Voilà. Vous prendre.}{}{-4}{lf4 1,   in 2825}{160}{re +10, in2825}
+{29}{Consentiriez-vous à me faire acquérir le statut d'expert serrurier ?}{}{5}{tr14 -1}{0}{et14 174}
+{30}{Consentiriez-vous à me faire acquérir le statut d'expert en matière de désamorçage de pièges ?}{}{5}{tr15 -1}{0}{et15 197}
+{31}{Euh... Moi vouloir être espère avec serrures...}{}{-4}{tr14 -1}{0}{et14 174}
+{32}{Euh... Moi vouloir être espère pour casser pièges...}{}{-4}{tr15 -1}{0}{et15 197}
+{33}{E:}{}{1}{}{0}{}
+{34}{Je me nomme Adam Maxwell. A qui ai-je l'honneur ?}{Je me nomme Adam Maxwell. A qui ai-je l'honneur ?}{}{}{}{lf1 1}
+{35}{Je m'appelle @pcname@.}{}{5}{}{64}{lf2 1}
+{36}{Cela ne vous regarde pas.}{}{5}{}{41}{re-10}
+{37}{Je ne trouve pas particulièrement agréable de converser avec les races inférieures...}{}{5}{ra-1}{41}{re-15}
+{38}{Moi être @pcname@.}{}{-4}{}{64}{lf2 1}
+{39}{Nan.}{}{-4}{ra-8}{41}{re-10}
+{40}{Moi pas aimer vous, petit bonhomme.}{}{-4}{ra 8}{41}{re-15}
+{41}{Je ne vois pas pourquoi je supporterais un individu qui ignore tout des bonnes manières. Adieu.}{Je ne vois pas pourquoi je supporterais une personne qui ignore tout des bonnes manières. Adieu.}{}{}{}{}
+{42}{C'était très mal élevé de ma part, c'est vrai. Veuillez m'excuser. Je m'appelle @pcname@.}{}{5}{}{64}{re+5, lf2 1}
+{43}{Je crois que votre existence ne rime à rien. Je pense pouvoir résoudre ce problème.}{}{5}{}{}{co, fl 53}
+{44}{Pardon. Moi très méchant. Moi être @pcname@.}{}{-4}{}{64}{re+5, lf2 1}
+{45}{Moi penser vous bientôt mort.}{}{-4}{}{}{co, fl 53}
+{46}{E:}{}{1}{}{0}{}
+{47}{I:}{I:}{}{}{}{}
+{48}{Bien. Ce sera donc à moi de faire preuve de civilité, à ce que je vois. Puis-je connaître votre nom ?}{}{5}{}{34}{}
+{49}{Il suffit ! En garde !}{}{5}{}{}{co, fl 53}
+{50}{Hum... Euh, accord. Euh... Quoi être votre nom ?}{}{-4}{}{34}{}
+{51}{Vous méchant ! Moi tuer vous !}{}{-4}{}{}{co, fl 53}
+{52}{E:}{}{1}{}{0}{}
+{53}{La mort emporte si facilement les idiots...}{La mort emporte si facilement les idiots...}{}{}{}{}
+{54}{Je vois que vous ne supportez guère les sarcasmes. Très bien. Veuillez m'excuser. Continuez, je vous prie.}{Je vois que vous ne supportez guère les sarcasmes. Très bien. Veuillez m'excuser. Continuez, je vous prie.}{}{}{}{}
+{55}{Euh... J'ai une question.}{}{5}{}{64}{}
+{56}{Je vois que vous êtes d'une rare bêtise. J'ai une question...}{}{5}{}{64}{}
+{57}{E:}{}{5}{}{0}{}
+{58}{Je vous ai donné mon nom de mon plein gré. Si vous n'avez pas l'intention de faire de même, il est hors de question que j'accepte de vous parler.}{Je vous ai donné mon nom de mon plein gré. Si vous n'avez pas l'intention de faire de même, il est hors de question que j'accepte de vous parler.}{}{}{}{}
+{59}{Je regrette. Je m'appelle @pcname@.}{}{5}{}{64}{lf2 1}
+{60}{Dans ce cas, en garde !}{}{5}{}{}{co, fl, re -10 53}
+{61}{Moi demander pardon. Moi être @pcname@.}{}{-4}{}{64}{lf2 1}
+{62}{Alors, moi tuer vous !}{}{-4}{}{}{co, fl, re -10 53}
+{63}{E:}{}{1}{}{0}{}
+{64}{Eh bien, que me voulez-vous @pcname@ ?}{Eh bien, que me voulez-vous, @pcname@ ?}{}{}{}{}
+{65}{C:}{}{1}{}{75}{}
+{66}{T:4, 5, 6}{}{1}{}{75}{}
+{67}{Auriez-vous du travail à me proposer ?}{}{5}{rp 1001, qu1122 0}{86}{}
+{68}{Vous avoir travail pour moi ?}{}{-4}{rp 1001, qu1122 0}{86}{}
+{69}{Puis-je faire autre chose pour vous ?}{}{5}{rp1001, qu1122 4, qu1123 0}{131}{}
+{70}{Encore travail ?}{}{-4}{rp1001, qu1122 4, qu1123 0}{131}{}
+{71}{Dites-moi, pourquoi m'avez-vous demandé de récupérer un livre vierge ?}{}{5}{qa1122 3, qb 1122 4, lf0 0}{165}{}
+{72}{Pourquoi pas mots dans livre ?}{}{-4}{qa1122 3, qb 1122 4, lf0 0}{165}{}
+{74}{F:}{}{1}{}{0}{}
+{75}{De quoi d'autre avez-vous besoin, @pcname@?}{De quoi d'autre avez-vous besoin, @pcname@?}{}{}{}{}
+{76}{C:}{}{1}{}{75}{}
+{77}{T:4, 5, 6}{}{1}{}{75}{}
+{78}{Auriez-vous du travail à me proposer ?}{}{5}{rp 1001, qu1122 0}{86}{}
+{79}{Vous avoir travail pour moi ?}{}{-4}{rp 1001, qu1122 0}{86}{}
+{80}{Puis-je faire autre chose pour vous ?}{}{5}{rp1001, qu1122 4, qu1123 0}{131}{}
+{81}{Encore travail ?}{}{-4}{rp1001, qu1122 4, qu1123 0}{131}{}
+{82}{Dites-moi, pourquoi m'avez-vous demandé de récupérer un livre vierge ?}{}{5}{qa1122 3, qb 1122 4, lf0 0}{165}{}
+{83}{Pourquoi pas mots dans livre ?}{}{-4}{qa1122 3, qb 1122 4, lf0 0}{165}{}
+{84}{I:}{}{1}{re -40}{75}{re -5}
+{85}{F:}{}{1}{}{0}{}
+{86}{Ahh... Vous êtes membre de la Confrérie Secrète... Je me disais bien aussi que votre nom ne m'était pas inconnu. Il se trouve en effet que nous avons un contrat à honorer. Etes-vous disponible ?}{Ahh... Vous êtes membre de la Confrérie Secrète... Je me disais bien aussi que votre nom ne m'était pas inconnu. Il se trouve en effet que nous avons un contrat à honorer. Etes-vous disponible ?}{}{}{}{}
+{87}{Cela dépend du type de travail...}{}{5}{}{90}{}
+{88}{Quoi vous vouloir moi faire ?}{}{-4}{}{90}{}
+{89}{E:}{}{1}{}{0}{}
+{90}{La veuve Mistik vit ici, à Caladon. Sa maison contient une grande bibliothèque de livres rares qui appartenaient à son mari, récemment décédé. Un de nos clients souhaite récupérer l'un de ces volumes, qu'il juge particulièrement intéressant. Il s'agit d'un très vieux livre intitulé l'Art divinatoire de la magie en 10 leçons. Pouvez-vous me l'obtenir ?}{La veuve Mistik vit ici, à Caladon. Sa maison contient une grande bibliothèque de livres rares qui appartenaient à son mari, récemment décédé. Un de nos clients souhaite récupérer l'un de ces volumes, qu'il juge particulièrement intéressant. Il s'agit d'un très vieux livre intitulé l'Art divinatoire de la magie en 10 leçons. Pouvez-vous me l'obtenir ?}{}{}{}{qu1122 1}
+{91}{Oui. Quel salaire m'offrez-vous ?}{}{5}{}{102}{}
+{92}{Cela ne m'intéresse pas pour le moment. Peut-être plus tard...}{}{5}{}{96}{}
+{93}{Ouais. Moi faire. Combien argent ?}{}{-4}{}{102}{}
+{94}{Sais pas. Plus tard, p'têt'...}{}{-4}{}{96}{}
+{95}{E:}{}{1}{}{0}{}
+{96}{Je vois que vous n'êtes guère fidèle à la Confrérie Secrète. Ce n'est pas grave, je trouverai bien un élément plus motivé.}{Je vois que vous n'êtes guère fidèle à la Confrérie Secrète. Ce n'est pas grave, je trouverai bien un élément plus motivé.}{}{}{}{}
+{97}{Puis-je vous poser une autre question ?}{}{5}{}{75}{}
+{98}{Tout bien réfléchi, j'accepte. Quel est le salaire ?}{}{5}{}{102}{}
+{99}{Moi pouvoir demander encore question ?}{}{-4}{}{75}{}
+{100}{Hum... Moi bien vouloir ! Combien payer ?}{}{-4}{}{102}{}
+{101}{E:}{}{1}{}{0}{}
+{102}{Ce n'est pas un travail très important... Mais le client paye bien. 250 pièces d'or, cela vous paraît acceptable ?}{Ce n'est pas un travail très important... Mais le client paye bien. 250 pièces d'or, cela vous paraît acceptable ?}{}{}{}{}
+{103}{Marché conclu. Je vous le rapporte au plus vite.}{}{5}{}{0}{qu1122 2}
+{104}{J'accepte pour 350. C'est d'accord ?}{}{5}{ch -11}{110}{re -5}
+{105}{J'accepte pour 350. C'est d'accord ?}{}{5}{ch 12}{114}{re +5}
+{106}{Accord. Moi trouver. Revenir bientôt.}{}{-4}{}{0}{qu1122 2}
+{107}{Moi valoir plus. Moi vouloir 350. Accord ?}{}{-4}{ch -11}{110}{re -5}
+{108}{Moi valoir plus. Moi vouloir 350. Accord ?}{}{-4}{ch 12}{114}{re +5}
+{109}{E:}{}{1}{}{0}{}
+{110}{Récupérer un livre ne vaut pas tant ! Les 250 pièces d'or ne sont pas négociables. Si cela ne vous intéresse pas, fichez-moi le camp !}{Récupérer un livre ne vaut pas tant ! Les 250 pièces d'or ne sont pas négociables. Si cela ne vous intéresse pas, fichez-moi le camp !}{}{}{}{}
+{111}{J'accepte. Je vous rapporte ce livre au plus vite.}{}{5}{}{0}{qu1122 2}
+{112}{Accord. Moi aller chercher pour 250. Moi revenir vite.}{}{-4}{}{0}{qu1122 2}
+{113}{E:}{}{1}{}{0}{}
+{114}{C'est vrai qu'il pourrait être difficile à récupérer... D'accord. Va pour 350 ! Vous acceptez ?}{C'est vrai qu'il pourrait être difficile à récupérer... D'accord. Va pour 350 ! Vous acceptez ?}{}{}{}{lf3 1}
+{115}{Marché conclu. Je vous le rapporte au plus vite.}{}{5}{}{0}{qu1122 2}
+{116}{Accord. Moi trouver. Revenir bientôt.}{}{-4}{}{0}{qu1122 2}
+{117}{E:}{}{1}{}{0}{}
+{118}{Allez le chercher rapidement, je vous prie. Notre client commence à s'impatienter.}{Allez le chercher rapidement, je vous prie. Notre client commence à s'impatienter.}{}{}{}{}
+{119}{K:}{}{1}{}{75}{}
+{120}{E:}{}{1}{}{0}{}
+{121}{Bien joué ! Voici les 250 pièces d'or convenues. Merci de votre aide. Votre professionnalisme sera signalé à la Confrérie Secrète.}{Bien joué ! Voici les 250 pièces d'or convenues. Merci de votre aide. Votre professionnalisme sera signalé à la Confrérie Secrète.}{}{}{}{$$ 250,  qu1122 4}
+{122}{Je vous remercie, @npcname@. Au revoir.}{}{5}{}{0}{}
+{123}{Je vous remercie, @npcname@. Puis-je vous poser une question ?}{}{5}{}{75}{}
+{124}{Marsi, @npcname@. Ar'voir.}{}{-4}{}{0}{}
+{125}{Marsi, @npcname@. Moi pouvoir demander encore question ?}{}{-4}{}{75}{}
+{126}{Bien joué ! Voici les 350 pièces d'or convenues. Merci de votre aide. Votre professionnalisme sera signalé à la Confrérie Secrète.}{Bien joué ! Voici les 350 pièces d'or convenues. Merci de votre aide. Votre professionnalisme sera signalé à la Confrérie Secrète.}{}{}{}{$$ 350, qu1122 4}
+{127}{Je vous remercie, @npcname@. Au revoir.}{}{5}{}{0}{}
+{128}{Je vous remercie, @npcname@. Puis-je vous poser une question ?}{}{5}{}{75}{}
+{129}{Marsi, @npcname@. Ar'voir.}{}{-4}{}{0}{}
+{130}{Marsi, @npcname@. Moi pouvoir demander encore question ?}{}{-4}{}{75}{}
+{131}{Très bien. Votre professionnalisme est admirable. Oui. J'ai un autre travail à vous proposer. Il sera plus difficile que le précédent. Le collier de la reine K'na S'ea, un bijou qui n'a pas de prix tant il est unique, est conservé dans un coffre au musée de Caladon. Un de nos clients aimerait fort se le procurer. Cela vous intéresse-t-il ?}{Très bien. Votre professionnalisme est admirable. Oui. J'ai un autre travail à vous proposer. Il sera plus difficile que le précédent. Le collier de la reine K'na S'ea, un bijou qui n'a pas de prix tant il est unique, est conservé dans un coffre au musée de Caladon. Un de nos clients aimerait fort se le procurer. Cela vous intéresse-t-il ?}{}{}{}{qu1123 1}
+{132}{Cela me paraît réalisable. Quel est le salaire ?}{}{5}{}{136}{}
+{133}{Je ne sais pas vraiment. Cela a l'air nettement plus difficile...}{}{5}{}{144}{}
+{134}{Moi capable ! Combien argent ?}{}{-4}{}{136}{}
+{135}{Moi pas savoir. Ca p'têt' trop difficile.}{}{-4}{}{144}{}
+{136}{Je dois toutefois vous prévenir... Le musée est équipé d'un tout nouveau modèle de système de sécurité technologique. Je ne connais pas les détails, mais vous auriez intérêt à faire une première visite du musée avant de dérober le collier. C'est une mission dangereuse, payée 550 pièces d'or. Vous acceptez ?}{Je dois toutefois vous prévenir... Le musée est équipé d'un tout nouveau modèle de système de sécurité technologique. Je ne connais pas les détails, mais vous auriez intérêt à faire une première visite du musée avant de dérober le collier. C'est une mission dangereuse, payée 550 pièces d'or. Vous acceptez ?}{}{}{}{}
+{137}{Oui. J'accepte pour 550 pièces d'or. Je vous remercie de l'avertissement.}{}{5}{}{0}{qu1123 2}
+{138}{Cela a l'air très dangereux. Je veux 750 pièces d'or pour vous rapporter le collier.}{}{5}{ch -11}{151}{re -5}
+{139}{Cela a l'air très dangereux. Je veux 750 pièces d'or pour vous rapporter le collier.}{}{5}{ch 12}{148}{}
+{140}{Accord. Moi faire. Moi revenir vite.}{}{-4}{}{0}{qu1123 2}
+{141}{Ca faire peur. Moi vouloir 750 pièces.}{}{-4}{ch -11}{151}{re -5}
+{142}{Ca faire peur. Moi vouloir 750 pièces.}{}{-4}{ch 12}{148}{}
+{143}{E:}{}{1}{}{0}{}
+{144}{Je comprends. Les risques afférents à cette mission ont découragé plusieurs membres de la Confrérie. Merci quand même d'avoir rapporté le livre. Au revoir.}{Je comprends. Les risques afférents à cette mission ont découragé plusieurs membres de la Confrérie. Merci quand même d'avoir rapporté le livre. Au revoir.}{}{}{}{}
+{145}{Attendez ! Je veux bien essayer. Combien offrez-vous ?}{}{5}{}{136}{}
+{146}{Vous attendre ! Moi essayer ! Combien argent ?}{}{-4}{}{136}{}
+{147}{E:}{}{1}{}{0}{}
+{148}{Hum... Il est vrai que vous êtes le premier qui accepte de prendre le risque... Dans ces conditions, je suppose que 750 pièces d'or constitue une somme acceptable, en effet.}{Hum... Il est vrai que vous êtes la première qui accepte de prendre le risque... Dans ces conditions, je suppose que 750 pièces d'or constitue une somme acceptable, en effet.}{}{}{}{lf4 1}
+{149}{Ce sera réglé en un rien de temps.}{}{5}{}{0}{qu1123 2}
+{150}{Accord. Moi faire. Moi revenir vite.}{}{-4}{}{0}{qu1123 2}
+{151}{C'est totalement déraisonnable. Mon offre de 550 pièces d'or est extrêmement généreuse. Si cela ne vous suffit pas, je trouverai bien quelqu'un d'autre qui acceptera.}{C'est totalement déraisonnable. Mon offre de 550 pièces d'or est extrêmement généreuse. Si cela ne vous suffit pas, je trouverai bien quelqu'un d'autre qui acceptera.}{}{}{}{}
+{152}{D'accord. J'accepte pour 550 pièces d'or.}{}{5}{}{0}{qu1123 2}
+{153}{Accord. Moi faire.}{}{-4}{}{0}{qu1123 2}
+{154}{F:}{}{1}{}{0}{}
+{155}{Sapristi ! Vous êtes doué. Beau travail. Voici les 550 pièces d'or convenues. La Confrérie vous remercie.}{Sapristi ! Vous êtes douée. Beau travail. Voici les 550 pièces d'or convenues. La Confrérie vous remercie.}{}{}{}{$$ 550, qu1123 4}
+{156}{Je vous remercie, @npcname@. Au revoir.}{}{5}{}{0}{}
+{157}{Je vous remercie, @npcname@. Puis-je vous poser une question ?}{}{5}{}{75}{}
+{158}{Marsi, @npcname@. Ar'voir.}{}{-4}{}{0}{}
+{159}{Marsi, @npcname@. Moi pouvoir demander encore question ?}{}{-4}{}{75}{}
+{160}{Sapristi ! Vous êtes douée. Beau travail. Voici les 750 pièces d'or convenues. La Confrérie vous remercie.}{Sapristi ! Vous êtes douée. Beau travail. Voici les 750 pièces d'or convenues. La Confrérie vous remercie.}{}{}{}{$$ 750, qu1123 4}
+{161}{Je vous remercie, @npcname@. Au revoir.}{}{5}{}{0}{}
+{162}{Je vous remercie, @npcname@. Puis-je vous poser une question ?}{}{5}{}{75}{}
+{163}{Marsi, @npcname@. Ar'voir.}{}{-4}{}{0}{}
+{164}{Marsi, @npcname@. Moi pouvoir demander encore question ?}{}{-4}{}{75}{}
+{165}{Ah, vous êtes très observateur. Il a été bien caché, de manière à ce que ceux qui ne possèdent pas les connaissances nécessaires ne puissent s'en servir. Mais ne vous inquiétez pas, notre client saura en faire le meilleur usage. Il sera extrêmement satisfait que vous l'ayez récupéré. Merci.}{Ah, vous êtes très observatrice. Il a été bien caché, de manière à ce que ceux qui ne possèdent pas les connaissances nécessaires ne puissent s'en servir. Mais ne vous inquiétez pas, notre client saura en faire le meilleur usage. Il sera extrêmement satisfait que vous l'ayez récupéré. Merci.}{}{}{}{lf0 1}
+{166}{K:}{}{1}{}{75}{}
+{167}{E:}{}{1}{}{0}{}
+{168}{Ahh... Les joyaux... Oui. Je les attendais... Montrez-les moi. [Il prend le sac et regarde à l'intérieur.] Oui. Tout semble en ordre. Vous nous avez rendu un fier service en les faisant passer par une voie autre que celles que nous empruntons habituellement.}{Ahh... Les joyaux... Oui. Je les attendais... Montrez-les moi. [Il prend le sac et regarde à l'intérieur.] Oui. Tout semble en ordre. Vous nous avez rendu un fier service en les faisant passer par une voie autre que celles que nous empruntons habituellement.}{}{}{}{qu1124 4, in 5666}
+{169}{Cela m'a fait plaisir de pouvoir vous aider. On m'a dit que je recevrais une compensation...}{}{5}{}{171}{}
+{170}{Moi aimer aider. Lui dire moi gagner kêk'chose...}{}{-4}{}{171}{}
+{171}{Oui, oui... La compensation... On m'a demandé de vous donner un petit extra, compte tenu de l'importance de la marchandise que vous transportiez. Voici 350 pièces d'or pour vous récompenser de vos efforts. La Confrérie vous remercie.}{Oui, oui... La compensation... On m'a demandé de vous donner un petit extra, compte tenu de l'importance de la marchandise que vous transportiez. Voici 350 pièces d'or pour vous récompenser de vos efforts. La Confrérie vous remercie.}{}{}{}{$$ 350}
+{172}{K:}{}{1}{}{75}{}
+{173}{E:}{}{1}{}{0}{}
+{174}{Ouais... C'est faisable. Mais je veux 500 pièces d'avance, en guise d'honoraires. }{Ouais... C'est faisable. Mais je veux 500 pièces d'avance, en guise d'honoraires. }{}{}{}{}
+{175}{Cela me semble acceptable. L'entraînement peut commencer.}{}{5}{$$500, sk14 9}{188}{}
+{176}{Bien. Allons-y.}{}{5}{$$500, sk14 9}{188}{}
+{177}{Cela me semble acceptable. L'entraînement peut commencer.}{}{5}{$$500, sk14 -8}{184}{}
+{178}{Bien. Allons-y.}{}{5}{$$500, sk14 -8}{184}{}
+{179}{Je devrai revenir un peu plus tard avec plus d'argent. Au revoir.}{}{5}{$$-499}{0}{}
+{180}{Euh... Accord. Moi vouloir commencer.}{}{-4}{$$500, sk14 9}{188}{}
+{181}{Euh... Accord. Moi vouloir commencer.}{}{-4}{$$500, sk14 -8}{184}{}
+{182}{Euh... Moi aller chercher plus d'argent. Moi revenir.}{}{-4}{$$-499}{0}{}
+{183}{F:}{}{1}{}{0}{}
+{184}{[Il s'interrompt après vous avoir fait travailler quelques instants.] Pas si vite ! Vous avez manifestement " taquiné " quelques serrures, mais je ne crois pas que vous puissiez prétendre au rang d'expert. Pratiquez un peu plus et revenez me voir.}{[Il s'interrompt après vous avoir fait travailler quelques instants.] Pas si vite ! Vous avez manifestement " taquiné " quelques serrures, mais je ne crois pas que vous puissiez prétendre au rang d'expert. Pratiquez un peu plus et revenez me voir.}{}{}{}{}
+{185}{D'accord. Je serai vite de retour.}{}{5}{}{0}{}
+{186}{Accord. Moi revenir vite.}{}{-4}{}{0}{}
+{187}{F:}{}{1}{}{0}{}
+{188}{Merci. [Il empoche votre argent.] Laissez-moi vous montrer quelques trucs. [Il vous enseigne ce qu'il sait sur les nombreux types de serrures.] Voilà, @pcname@. Vous avez à présent acquis le statut d'expert serrurier. }{Merci. [Il empoche votre argent.] Laissez-moi vous montrer quelques trucs. [Il vous enseigne ce qu'il sait sur les nombreux types de serrures.] Voilà, @pcname@. Vous avez à présent acquis le statut d'expert serrurier. }{}{}{}{tr14 2, $$-500, rq2183}
+{189}{Merci. Dites-moi, où puis-je trouver le maître dans l'art du crochetage ?}{}{5}{}{191}{}
+{190}{Marsi. Où maît' sièges être ?}{}{-4}{}{191}{}
+{191}{[Il a l'air légèrement amusé.] Il se trouve que je sais parfaitement où il se trouve ! Théo Morgan est l'homme qu'il vous faut. Il est très facile à trouver, étant donné qu'il purge une peine de prison à vie à la prison de Caladon. Bonne chance, si vous voulez devenir maître serrurier ! Vous en aurez bien besoin !}{[Il a l'air légèrement amusé.] Il se trouve que je sais parfaitement où il se trouve ! Théo Morgan est l'homme qu'il vous faut. Il est très facile à trouver, étant donné qu'il purge une peine de prison à vie à la prison de Caladon. Bonne chance, si vous voulez devenir maître serrurier ! Vous en aurez bien besoin !}{}{}{}{ru2173}
+{192}{Eh bien... Cela risque de poser quelques problèmes... Merci quand même. Au revoir.}{}{5}{}{0}{}
+{193}{Il semble que j'en aurai besoin, en effet ! Merci pour l'entraînement. Au revoir.}{}{5}{}{0}{}
+{194}{Oh ! Ca pas bon.  Euh... Marsi pour 'traînement. Ar'voir.}{}{-4}{}{0}{}
+{195}{Euh... Moi avoir besoin chance ! Marsi pour 'traînement. Moi partir maint'nant. Ar'voir.}{}{-4}{}{0}{}
+{196}{E:}{}{1}{}{0}{}
+{197}{Ouais... C'est faisable. Mais je veux 500 pièces d'avance, en guise d'honoraires. }{Ouais... C'est faisable. Mais je veux 500 pièces d'avance, en guise d'honoraires. }{}{}{}{}
+{198}{Cela me semble acceptable. L'entraînement peut commencer.}{}{5}{$$500, sk15 9}{211}{}
+{199}{Bien. Allons-y.}{}{5}{$$500, sk15 9}{211}{}
+{200}{Cela me semble acceptable. L'entraînement peut commencer.}{}{5}{$$500, sk15 -8}{207}{}
+{201}{Bien. Allons-y.}{}{5}{$$500, sk15 -8}{207}{}
+{202}{Je devrai revenir un peu plus tard avec plus d'argent. Au revoir.}{}{5}{$$-499}{0}{}
+{203}{Euh... Accord. Moi vouloir commencer.}{}{-4}{$$500, sk15 9}{211}{}
+{204}{Euh... Accord. Moi vouloir commencer.}{}{-4}{$$500, sk15 -8}{207}{}
+{205}{Euh... Moi aller chercher plus d'argent. Moi revenir.}{}{-4}{$$-499}{0}{}
+{206}{F:}{}{1}{}{0}{}
+{207}{[Il s'interrompt après vous avoir fait travailler quelques instants.] Pas si vite ! Vous avez manifestement " taquiné " quelques pièges, mais je ne crois pas que vous puissiez prétendre au rang d'expert. Pratiquez un peu plus et revenez me voir.}{[Il s'interrompt après vous avoir fait travailler quelques instants.] Pas si vite ! Vous avez manifestement " taquiné " quelques pièges, mais je ne crois pas que vous puissiez prétendre au rang d'expert. Pratiquez un peu plus et revenez me voir.}{}{}{}{}
+{208}{D'accord. Je serai vite de retour.}{}{5}{}{0}{}
+{209}{Accord. Moi revenir vite.}{}{-4}{}{0}{}
+{210}{F:}{}{1}{}{0}{}
+{211}{Merci. [Il empoche votre argent.] Laissez-moi vous montrer quelques trucs. [Il vous enseigne ce qu'il sait sur les nombreuses façons de désamorcer les pièges.] Voilà, @pcname@. Vous avez à présent acquis le statut d'expert dans le domaine du désamorçage de pièges. }{Merci. [Il empoche votre argent.] Laissez-moi vous montrer quelques trucs. [Il vous enseigne ce qu'il sait sur les nombreuses façons de désamorcer les pièges.] Voilà, @pcname@. Vous avez à présent acquis le statut d'expert dans le domaine du désamorçage de pièges. }{}{}{}{tr15 2, $$-500, rq2184}
+{212}{Merci. Dites-moi, où puis-je trouver le maître ?}{}{5}{}{214}{}
+{213}{Marsi. Où être maître 'traîn'ment ?}{}{-4}{}{214}{}
+{214}{[Il a l'air légèrement amusé.] Il se trouve que je sais parfaitement où il se trouve ! Daniel McPherson est l'homme que vous cherchez. Il habite juste en face de chez moi, à Caladon, mais il est très occupé. Le roi ne cesse de lui demander de renforcer les défenses du château. Cela m'étonnerait qu'il ait encore le temps de donner des leçons...}{[Il a l'air légèrement amusé.] Il se trouve que je sais parfaitement où il se trouve ! Daniel McPherson est l'homme que vous cherchez. Il habite juste en face de chez moi, à Caladon, mais il est très occupé. Le roi ne cesse de lui demander de renforcer les défenses du château. Cela m'étonnerait qu'il ait encore le temps de donner des leçons...}{}{}{}{ru2174}
+{215}{Eh bien... Cela risque de poser quelques problèmes... Merci quand même. Au revoir.}{}{5}{}{0}{}
+{216}{Oh ! Ca pas bon.  Euh... Marsi pour 'traînement. Ar'voir.}{}{-4}{}{0}{}
+{217}{E:}{}{1}{}{0}{}
+

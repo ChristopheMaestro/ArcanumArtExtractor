@@ -1,0 +1,627 @@
+{1}{Permettez-moi de me présenter, je me nomme Gilbert Bastien, comme vous vous en doutiez très certainement. J'aimerais vous remercier, monsieur, d'avoir résolu les problèmes de mon usine. On m'a informé que vous vouliez me parler ?}{Permettez-moi de me présenter, je me nomme Gilbert Bastien, comme vous l'aviez certainement deviné. J'aimerais vous remercier, madame, d'avoir résolu les problèmes de mon usine. On m'a informé que vous vouliez me parler ?}{}{1}{}{ }
+{2}{Tout à fait. J'ai des questions à vous poser au sujet de cet anneau.}{}{5}{in 2804,  lf13 0}{10}{lf13 1 }
+{3}{ J'aimerais m'entretenir avec vous au sujet d'un anneau que j'avais en ma possession. [Vous décrivez l'anneau.]}{}{5}{ni 2804,  lf13 0}{10}{lf13 1 }
+{4}{Qu'avez-vous à me dire au sujet de la tentative de meurtre dont vous avez été récemment victime ?}{}{5}{gf1028 1, lf15 0}{1100}{lf15 1 }
+{9}{C'est exact, mais cela attendra. Bonne journée, monsieur.}{}{5}{}{0}{ }
+{10}{Grands dieux ! Comment avez-vous obtenu cet anneau ?}{Grands dieux ! Comment avez-vous obtenu cet anneau ?}{}{2}{}{ }
+{11}{Un gnome me l'a confié avant de mourir.}{}{5}{ra -5, ra -2}{20}{ }
+{12}{Un individu à l'allure bizarre me l'a donné.}{}{5}{ra 5}{30}{ }
+{13}{Un gnome à l'allure bizarre me l'a donné avant de mourir.}{}{5}{ra 2}{30}{ }
+{14}{Je préfère ne pas vous le dire.}{}{5}{}{1070}{ }
+{20}{Un gnome ! Que signifient ces âneries ? Etes-vous certain qu'il ne s'agissait pas d'un nain ?}{Un gnome ! Que signifient ces âneries ? Etes-vous certaine qu'il ne s'agissait pas d'un nain ?}{}{3}{}{ }
+{21}{Naturellement. Je n'ai jamais vu de nain maigrichon et sans barbe.}{}{5}{}{60}{ }
+{22}{Pourquoi un nain aurait-il eu votre anneau en sa possession ?}{}{5}{}{1090}{ }
+{30}{Bizarre ? Que voulez-vous dire par là ?}{Bizarre ? Que voulez-vous dire par là ?}{}{4}{}{ }
+{31}{Eh bien, pour un gnome il était plutôt laid, presque autant qu'un nain.}{}{5}{ra 5}{40}{ }
+{32}{Les gnomes ont ce regard de fouine si particulier mais le sien était pénétrant, comme celui des nains.}{}{5}{ra 2}{50}{ }
+{40}{Laid comme un nain ? Il s'agissait donc peut-être bien d'un nain ?}{Laid comme un nain ? Il s'agissait donc peut-être bien d'un nain ?}{}{5}{}{ }
+{41}{Trop maigrelet et sans barbe. Vous savez bien l'importance que les nains accordent à leur barbe ?}{}{5}{}{60}{ }
+{50}{Etes-vous sûr qu'il ne s'agissait pas d'un nain ?}{Etes-vous sûre qu'il ne s'agissait pas d'un nain ?}{}{6}{}{ }
+{51}{Pas de barbe. Nous préférerions nous trancher la gorge plutôt que de nous couper la barbe.}{}{5}{}{60}{ }
+{60}{Oui. Les nains... et leurs coutumes me sont familiers. Dites-moi, avez-vous remarqué quelque chose de particulier chez cet individu ?}{Oui. Les nains... et leurs coutumes me sont familiers. Dites-moi, avez-vous remarqué quelque chose de particulier chez cet individu ?}{}{7}{}{ }
+{61}{Il avait une cicatrice au-dessus de l'oeil gauche.}{}{5}{}{70}{ }
+{70}{Par Alberich ! Je le savais ! Ce n'était pas un gnome. C'était Stennar Tailleroche. [Il est visiblement bouleversé par cette révélation.]}{Par Alberich ! Je le savais ! Ce n'était pas un gnome. C'était Stennar Tailleroche. [Il est visiblement bouleversé par cette révélation.]}{}{8}{}{ru2016 }
+{71}{Un nain ? Rasé de près ? C'est impossible !}{}{5}{ra 2}{80}{ }
+{72}{Je suppose qu'il pouvait s'agir d'un nain malade, mais sa barbe...}{}{5}{ra -2}{80}{ }
+{73}{Qui est Stennar ? Pourquoi un nain aurait-il rasé sa barbe ?}{}{5}{ra -2}{1095}{ }
+{74}{Qui est Stennar ? Un nain n'aurait jamais rasé sa barbe !}{}{5}{ra 2}{1095}{ }
+{80}{Oui, je sais. C'est de la folie... mais, je vous en prie, dites-moi s'il vous a parlé avant de mourir ? A-t-il dit quelque chose à, euh... à mon sujet ?}{Oui, je sais. C'est de la folie... mais, je vous en prie, dites-moi s'il vous a parlé avant de mourir ? A-t-il dit quelque chose sur, euh... sur moi ?}{}{9}{}{ }
+{81}{Il a dit qu'il s'était échappé pour nous mettre en garde contre le mal...}{}{5}{}{1330}{ }
+{90}{Je ne sais pas. Même si les nains ne mesurent pas le temps de la même façon que les humains, il a bien dû réaliser que j'étais aujourd'hui un vieil homme. C'est peut-être parce que je n'étais qu'un jeune garçon quand... quand j'ai trahi sa confiance, il y a si longtemps.}{ Je ne sais pas. Même si les nains ne mesurent pas le temps de la même façon que les humains, il a bien dû réaliser que j'étais aujourd'hui un vieil homme. C'est peut-être parce que je n'étais qu'un jeune garçon quand... quand j'ai trahi sa confiance, il y a si longtemps.}{}{10}{}{ }
+{91}{Comment se fait-il que vous l'ayez trahi ?}{}{5}{}{1260}{ }
+{92}{Je sais tout de cette histoire. Je dois vous avouer que j'ai lu votre journal.}{}{5}{qu1014 2}{100}{re -5 }
+{100}{Je vois. J'espère que vous avez une raison valable pour que je ne fasse pas appel à mes gardes afin qu'ils vous règlent votre compte ?}{Je vois. J'espère que vous avez une raison valable pour que je ne fasse pas appel à mes gardes afin qu'ils vous règlent votre compte ?}{}{11}{}{ }
+{101}{Permettez-moi de vous le rendre, s'il vous plaît. J'ai compris mon erreur.}{}{5}{qb1039 1}{230}{re +5 }
+{102}{Duverger m'a confié pour mission de vous le voler mais j'ai changé d'avis.}{}{5}{qa1039 2}{110}{gf1012 1 }
+{103}{Si vous voulez qu'ils soient témoins de votre humiliation, faites donc !}{}{5}{}{0}{fl  1050 ,co}
+{110}{Je n'ignore pas sa duplicité qui finit par être lassante. Je crois qu'il est grand temps que je dépêche quelques gens chez monsieur Duverger. Mais j'aurais peut-être un petit travail pour quelqu'un de votre trempe.}{Je n'ignore pas sa duplicité qui finit par être lassante. Je crois qu'il est grand temps que je dépêche quelques gens chez monsieur Duverger. Mais j'aurais peut-être un petit travail pour quelqu'un de votre trempe.}{}{12}{}{np1060 1 }
+{111}{Mais encore ?}{}{5}{}{120}{ }
+{112}{Pourquoi Duverger vous hait-il tant ?}{}{5}{lf11 0}{1055}{lf11 1 }
+{119}{Je regrette, ça ne m'intéresse pas.}{}{5}{}{140}{re -10 }
+{120}{Puisque vous avez lu mon journal, vous n'êtes pas sans connaître mes relations avec le Clan du Mont Noir. J'aimerais que vous partiez fouiller leurs mines pour découvrir où est passé le clan.}{ Puisque vous avez lu mon journal, vous n'êtes pas sans connaître mes relations avec le Clan du Mont Noir. J'aimerais que vous partiez fouiller leurs mines pour découvrir où est passé le clan.}{}{13}{}{ }
+{121}{Vous avez éveillé mon intérêt. Je m'efforcerai de vous apporter des nouvelles.}{}{5}{}{130}{ }
+{122}{Je regrette, ça ne m'intéresse pas.}{}{5}{}{140}{re -10 }
+{130}{Votre entrain est un véritable baume de jouvence pour un vieil homme comme moi. Attendez, laissez-moi annoter votre carte. S'il vous plaît, revenez dès que vous aurez des informations, je ne serai pas ingrat.}{Votre entrain est un véritable baume de jouvence pour un vieil homme comme moi. Attendez, laissez-moi annoter votre carte. S'il vous plaît, revenez dès que vous aurez des informations, je ne serai pas ingrat.}{}{176}{}{mm 7, ss 4, gf1024 1 }
+{131}{Je reviendrai avec les informations que vous m'avez demandées.}{}{5}{}{170}{qu 1013 2 }
+{132}{Merci. Tenez, voici votre journal, vous aviez oublié de le prendre.}{}{5}{}{160}{re +10, al +25 }
+{140}{Vous avez l'audace de repousser mon offre après m'avoir dérobé des effets personnels ? Je vous suggère vivement de reconsidérer votre refus.}{Vous avez l'audace de repousser mon offre après m'avoir dérobé des effets personnels ? Je vous suggère vivement de reconsidérer votre refus.}{}{177}{}{ }
+{141}{Je dois dire que vous savez vous montrer convaincant. J'accepte votre proposition.}{}{5}{}{130}{re +5 }
+{142}{Je vous conseille d'adopter un autre ton, vieil homme.}{}{5}{}{150}{re -10 }
+{150}{Bien que votre insolence soit admirable, je n'en tolérerai pas davantage. Acceptez mon offre ou assumez les conséquences de votre refus.}{Bien que votre insolence soit admirable, je n'en tolérerai pas davantage. Acceptez mon offre ou assumez les conséquences de votre refus.}{}{178}{}{ }
+{151}{Comment puis-je repousser une requête aussi élégamment formulée ?}{}{5}{}{130}{re +5 }
+{152}{C'est vous qui allez subir les conséquences de "votre" impertinence !}{}{5}{}{0}{fl  1050 ,co}
+{160}{Ah ! Je n'ai plus toute ma tête... mais vous devriez le garder, il pourrait receler des indices que les années m'ont fait oublier. Cependant, je vous conseille d'en prendre soin sinon cela pourrait vous être... préjudiciable !}{Ah ! Je n'ai plus toute ma tête... mais vous devriez le garder, il pourrait receler des indices que les années m'ont fait oublier. Cependant, je vous conseille d'en prendre soin sinon cela pourrait vous être... préjudiciable.}{}{179}{}{ }
+{161}{Je reviendrai avec les informations que vous m'avez demandées.}{}{5}{}{170}{ }
+{162}{Vous seriez disposé à me faire confiance ? Votre fragile cervelle s'est sûrement déjà décomposée.}{}{5}{}{0}{fl  1050 ,co}
+{170}{Oh ! Une dernière chose... j'aimerais vous racheter mon anneau. Je vous en offre 200 pièces d'or. Mon père me l'a légué avant sa mort... il a une grande valeur à mes yeux.}{Oh ! Une dernière chose... j'aimerais vous racheter mon anneau. Je vous en offre 200 pièces d'or. Mon père me l'a légué avant sa mort... il a une grande valeur à mes yeux.}{}{180}{}{ }
+{171}{Certainement. Tenez le voici.}{}{5}{in 2804}{180}{in 2804, $$200, re+10 }
+{172}{Je ne l'ai pas sur moi, mais je vous le rapporterai à mon retour.}{}{5}{ni2804}{180}{lf 2 1 }
+{173}{C'est largement insuffisant !}{}{5}{in 2804, ha -11}{190}{re -10 }
+{174}{Je préférerais 300 pièces.}{}{5}{in 2804, ha 12}{220}{ }
+{180}{Merci mille fois. Nous reparlerons à votre retour.}{Merci mille fois. Nous reparlerons à votre retour.}{}{14}{}{ }
+{181}{K:}{}{5}{}{1290}{ }
+{182}{E:}{}{5}{}{0}{ }
+{190}{Veuillez excuser un vieil homme dont les facultés auditives s'amoindrissent avec l'âge. J'ai dû mal comprendre, j'ai cru que vous refusiez mon offre généreuse.}{Veuillez excuser un vieil homme dont les facultés auditives s'amoindrissent avec l'âge. J'ai dû mal comprendre, j'ai cru que vous refusiez mon offre généreuse.}{}{15}{}{ }
+{191}{Qui pensez-vous que je sois pour refuser une telle offre ? [Vous lui donnez l'anneau]}{}{5}{in 2804}{180}{in 2804, $$200 }
+{192}{Je ne l'ai pas sur moi, mais je vous le rapporterai à mon retour.}{}{5}{}{180}{lf2 1 }
+{193}{Ne vous jouez pas de moi, vieil homme. Votre offre était insultante.}{}{5}{}{200}{re -10 }
+{200}{Comment osez-vous ? J'en ai fait rosser pour moins que ça ! Donnez-moi l'anneau immédiatement ; vous n'en retirerez rien !}{Comment osez-vous ? J'en ai fait rosser pour moins que ça ! Donnez-moi l'anneau immédiatement ; vous n'en retirerez rien !}{}{16}{}{ }
+{201}{Par pitié, ne me faites pas rosser ! Voici votre anneau.}{}{5}{}{210}{in 2804 }
+{202}{Vous, vous allez en retirer quelque chose : mon pied dans votre fondement !}{}{5}{}{0}{fl  1050 ,co}
+{210}{Maintenant, disparaissez de ma vue et ramenez-moi des réponses !}{Maintenant, disparaissez de ma vue et ramenez-moi des réponses !}{}{17}{}{ }
+{211}{Oui, monsieur. Merci, monsieur.}{}{5}{}{0}{ }
+{212}{Vous avez vécu trop longtemps, voilà votre problème. Laissez-moi arranger ça.}{}{5}{}{0}{fl  1050 ,co}
+{220}{Oui, vous avez raison. Ce montant me semble honnête.}{Oui, vous avez raison. Ce montant me semble honnête.}{}{18}{}{ }
+{221}{Voici votre anneau.}{}{5}{}{180}{in 2804, $$300 }
+{230}{Vous l'avez volé dans ma demeure, n'est-ce pas ? Hum. Il se pourrait que j'aie une tâche à confier à un individu de votre genre.}{Vous l'avez volé dans ma demeure, n'est-ce pas ? Hum. Il se pourrait que j'aie une tâche à confier à un individu de votre genre.}{}{19}{}{ }
+{231}{Mais encore ?}{}{5}{}{120}{ }
+{232}{Je regrette, ça ne m'intéresse pas.}{}{5}{}{140}{re -10 }
+{240}{ Je ne vous reconnais pas, êtes-vous nouveau ici ?}{ Je ne vous reconnais pas, êtes-vous nouvelle ici ?}{}{20}{}{ }
+{241}{En fait, je ne suis au service de personne mais je dois impérativement vous parler.}{}{5}{ni 2804}{250}{gf1024 1 }
+{242}{Je ne suis au service de personne. Je dois vous entretenir de cet anneau.}{}{5}{in 2804}{10}{gf1024 1 }
+{249}{Oui, monsieur. Veuillez me pardonner de vous avoir interrompu, je me retire.}{}{5}{}{0}{ }
+{250}{Quelle sorte de stratagème est-ce là ? Comment êtes-vous entré ici ?}{Quelle sorte de stratagème est-ce là ? Comment êtes-vous entrée ici ?}{}{21}{}{ }
+{251}{C'est sans importance. Nous devons parler d'un anneau. [Vous décrivez l'anneau.]}{}{5}{ni 2804, lf13 0}{10}{lf13 1 }
+{252}{Cédric Duverger m'a confié la tâche de trouver un élément susceptible de conduire à votre perte.}{}{5}{qu1039 1, in 5202}{260}{re - 10 }
+{253}{Cédric Duverger m'a confié la tâche de trouver un élément susceptible de conduire à votre perte.}{}{5}{qu1039 2}{260}{re - 10 }
+{254}{La raison de ma présence en ces lieux est plus importante. Duverger veut votre perte.}{}{5}{qu1039 1, gf1006 0}{260}{gf1012 1 }
+{255}{C'est sans importance. Je suis ici pour parler de cet anneau. [Vous montrez l'anneau.]}{}{5}{in 2804, lf13 0}{10}{lf3 1 }
+{256}{La raison de ma présence en ces lieux est plus importante. Duverger veut votre perte.}{}{5}{ gf1006 1}{290}{gf1012 1 }
+{260}{Et pourquoi avoir choisi de me mettre dans la confidence ? En avez-vous assez de l'existence ?}{Et pourquoi avoir choisi de me mettre dans la confidence ? En avez-vous assez de l'existence ?}{}{22}{}{ }
+{261}{Il fallait que je puisse m'entretenir avec vous au sujet de cet anneau.}{}{5}{in 2804, lf13 0}{10}{lf13 1 }
+{262}{Il faut que je vous parle d'un anneau. [Vous décrivez l'anneau]}{}{5}{ni 2804, lf13 0}{10}{lf13 1 }
+{263}{Au contraire ! C'est vous qui devez être las de vivre pour me parler de la sorte !}{}{5}{ch 14}{270}{re -10 }
+{264}{Je voulais vous mettre en garde contre sa duplicité.}{}{5}{}{290}{gf1012 1 }
+{270}{Monsieur, vos facéties risqueraient bien de vous coûter la vie !}{Madame, vos facéties risqueraient bien de vous coûter la vie !}{}{23}{}{ }
+{271}{Je savais qu'une personne comme vous apprécierait une joute verbale !}{}{5}{re -59}{280}{re 60 }
+{272}{Je savais qu'une personne comme vous apprécierait une joute verbale !}{}{5}{re 60}{280}{re +15 }
+{273}{Vous prenez mes menaces pour des mots d'esprit. Il est temps d'en finir avec vous.}{}{5}{}{0}{fl  1050 ,co}
+{280}{Rien n'est plus vrai. Il est agréable de rencontrer quelqu'un qui ne craint pas de se mesurer à un individu occupant ma position. Mais dites-moi, qu'est-ce qui vous amène ici ?}{Rien n'est plus vrai. Il est agréable de rencontrer quelqu'un qui ne craint pas de se mesurer à un individu occupant ma position. Mais dites-moi, qu'est-ce qui vous amène ici ?}{}{24}{}{ }
+{281}{Il fallait que je puisse m'entretenir avec vous au sujet de cet anneau.}{}{5}{in 2804, lf13 0}{10}{lf13 1 }
+{282}{Il faut que je vous parle d'un anneau. [Vous décrivez l'anneau]}{}{5}{ni 2804, lf13 0}{10}{lf13 1 }
+{283}{Je crains que cela ne doive attendre. Au revoir.}{}{5}{}{0}{ }
+{290}{Je n'ignore pas sa duplicité qui finit par être lassante. Je crois qu'il est grand temps que je dépêche quelques gens chez monsieur Duverger.}{Je n'ignore pas sa duplicité qui finit par être lassante. Je crois qu'il est grand temps que je dépêche quelques gens chez monsieur Duverger.}{}{25}{}{np1060 1 }
+{291}{J'ai des questions à vous poser au sujet de cet anneau.}{}{5}{in 2804, lf13 0}{10}{lf13 1 }
+{292}{J'aimerais m'entretenir avec vous au sujet d'un anneau. [Vous décrivez l'anneau.]}{}{5}{ni 2804, lf13 0}{10}{lf13 1 }
+{293}{Pourquoi Duverger vous hait-il tant ?}{}{5}{lf12 0}{1055}{lf12 1 }
+{299}{Eh bien, je voulais juste vous mettre en garde. Au revoir.}{}{5}{}{0}{lf 1 1, re +10 }
+{300}{Votre impudence me sidère ! Comment osez-vous m'approcher, vermine !}{Votre impudence me sidère ! Comment osez-vous m'approcher, souillon !}{}{26}{}{ }
+{301}{J'ai autre chose qui va vous sidérer. [Vous lui montrez l'anneau.]}{}{5}{ch 14, in 2804}{10}{re 50, gf1024 1 }
+{302}{Je sais que je suis indigne de lacer vos bottines, mais je dois vous parler.}{}{5}{}{310}{re +5, gf1024 1 }
+{303}{Cela va vous sidérer encore plus. [Vous décrivez l'anneau.]}{}{5}{ch 14, ni 2804}{10}{re 50, gf1024 1 }
+{304}{J'ai autre chose qui va vous sidérer. [Engagez le combat.]}{}{5}{}{0}{fl  1050 ,co}
+{305}{Naturellement monseigneur, veuillez me pardonner, monseigneur. Je m'en vais de ce pas, monseigneur.}{}{5}{}{0}{ }
+{310}{Il vaudrait mieux que cela soit important ou il vous en cuira de m'avoir fait perdre mon temps !}{Il vaudrait mieux que cela soit important ou il vous en cuira de m'avoir fait perdre mon temps !}{}{27}{}{ }
+{311}{J'abuse de votre patience mais j'ai pensé que vous aimeriez voir cet anneau.}{}{5}{in 2804, lf13 0}{10}{re +5, lf13 1 }
+{312}{J'abuse de votre patience mais je dois vous entretenir d'un anneau que j'avais en ma possession. [Vous décrivez l'anneau.]}{}{5}{ni 2804, lf13 0}{10}{re +5, lf13 1 }
+{313}{Je veux vous entretenir un peu plus longuement de votre anneau.}{}{5}{lf13 1}{1245}{ }
+{314}{J'en ai assez de vos fanfaronnades. Je vais vous montrer à qui il "va en cuire".}{}{5}{}{0}{fl  1050 ,co}
+{320}{[Cet homme âgé s'approche, la main tendue vers vous en signe de bienvenue.] Bonjour à vous, monsieur. Je me nomme Gilbert Bastien, comme vous vous en doutiez très certainement. Mes gardes m'ont informé que vous vouliez me parler d'un problème ?}{[Cet homme âgé s'approche, la main tendue vers vous en signe de bienvenue.] Mes hommages, madame. Je me nomme Gilbert Bastien, comme vous vous en doutiez très certainement. Mes gardes m'ont informé que vous vouliez me parler d'un problème ?}{}{28}{}{ }
+{321}{Tout à fait. J'ai des questions à vous poser au sujet de cet anneau.}{}{5}{in 2804, gf1007 0, lf13 0}{10}{lf13 1 }
+{322}{ J'aimerais m'entretenir avec vous au sujet d'un anneau que j'avais en ma possession. [Vous décrivez l'anneau.]}{}{5}{ni 2804, gf1007 0, lf13 0}{10}{lf13 1 }
+{323}{Quels sont vos liens avec le Clan du Mont Noir ?}{}{5}{gf1007 1}{360}{ }
+{324}{Qu'avez-vous à me dire au sujet de la tentative de meurtre dont vous avez été récemment victime ?}{}{5}{gf1028 1}{1195}{lf15 1 }
+{329}{C'est exact, mais cela attendra. Bonne journée, monsieur.}{}{5}{}{0}{ }
+{330}{Stennar ! Attendez, vous n'êtes pas... quand mes gardes m'ont appris qu'il y avait un nain avec un anneau, j'ai pensé que... vous a-t-il envoyé ?}{Stennar ! Attendez, vous n'êtes pas... quand mes gardes m'ont appris qu'il y avait un nain avec un anneau, j'ai pensé que... vous a-t-il envoyée ?}{}{29}{}{ }
+{331}{Non, à moins qu'il ne s'agisse d'un gnome. Stennar est un nom de nain.}{}{5}{}{350}{ }
+{332}{Non. Je regrette, mais je dois partir.}{}{5}{}{340}{ }
+{340}{S'il vous plaît, ne partez pas. Je dois vous parler au sujet de Stennar. Cela fait si longtemps. Qu'est-il advenu de lui ?}{S'il vous plaît, ne partez pas. Je dois vous parler au sujet de Stennar. Cela fait si longtemps. Qu'est-il advenu de lui ?}{}{30}{}{ }
+{341}{Je n'en sais rien. J'aimerais vous entretenir d'un anneau que j'ai trouvé. [Vous décrivez l'anneau.]}{}{5}{ni 2804}{10}{ }
+{342}{Je ne connais pas Stennar, mais j'aimerais vous entretenir de cet anneau.}{}{5}{in 2804}{10}{ }
+{349}{Je m'excuse, je dois partir.}{}{5}{}{0}{ }
+{350}{Bien sûr que non ce n'est pas un gnome. Mais si vous ne le connaissez pas, comment se fait-il que vous ayez cet anneau ? Généralement, les nains ont assez de dignité pour ne pas se compromettre dans la rapine.}{Bien sûr que non ce n'est pas un gnome. Mais si vous ne le connaissez pas, comment se fait-il que vous ayez cet anneau ? Généralement, les nains ont assez de dignité pour ne pas se compromettre dans la rapine.}{}{31}{}{ }
+{351}{Un gnome à l'allure bizarre me l'a donné avant de mourir.}{}{5}{}{30}{ }
+{352}{Comment osez-vous m'accuser de vol ! Je ne suis pas gnome ! Bonne journée !}{}{5}{}{340}{ }
+{360}{Qu... qu'avez-vous dit ? Je, euh... jamais, c'est-à-dire que, je ne sais rien à ce... à ce sujet...}{Qu... qu'avez-vous dit ? Je, euh... jamais, c'est-à-dire que, je ne sais rien à ce... à ce sujet...}{}{32}{}{ }
+{361}{J'ai visité leurs mines de fond en comble. Je sais que vous avez été mêlé à cette affaire.}{}{5}{}{370}{ }
+{362}{J'ai dû me tromper. Au revoir.}{}{5}{}{0}{ }
+{370}{Vous êtes allé là-bas ? Savez-vous ce qu'il est advenu du clan ?}{Vous êtes allée là-bas ? Savez-vous ce qu'il est advenu du clan ?}{}{33}{}{ }
+{371}{Le clan a été banni sur l'Ile du Désespoir, par votre faute.}{}{5}{}{1065}{ }
+{380}{Et que me veut l'idiot du village ?}{Et que me veut l'idiote du village ?}{}{34}{}{ }
+{381}{Moi tuer chat botteurs.}{}{-4}{gf1007 0, qu1040 4}{390}{ }
+{382}{Clan Noir banni votre faute.}{}{-4}{me 0, gf1007 1}{480}{ }
+{383}{Vous anneau ? [Vous montrez l'anneau.]}{}{-4}{gf1007 0, qb1040 3, in 2804, lf13 0}{400}{lf13 1 }
+{384}{Moi avais anneau. [Vous tentez maladroitement de décrire l'anneau.]}{}{-4}{gf1007 0, qb1040 3, ni 2804, lf13 0}{400}{lf13 1 }
+{389}{Ougah ?}{}{-4}{}{0}{ }
+{390}{Quand mes gardes m'ont averti que vous veniez me parler, ils ont omis de me dire que vous étiez complètement idiot.}{Quand mes gardes m'ont averti que vous veniez me parler, ils ont omis de me dire que vous étiez complètement idiote.}{}{35}{}{ }
+{391}{Ca, votre anneau ?}{}{-4}{in 2804, lf13 0}{400}{lf13 1 }
+{392}{Moi avais anneau. [Vous tentez maladroitement de décrire l'anneau.]}{}{-4}{ni 2804, lf13 0}{400}{lf13 1 }
+{399}{Uhfgnmm.}{}{-4}{}{0}{ }
+{400}{Où avez-vous trouvé cet anneau ? Est-ce un nain qui vous l'a remis ?}{Où avez-vous trouvé cet anneau ? Est-ce un nain qui vous l'a remis ?}{}{36}{}{ }
+{401}{Non. Stupide gnome balafré donner moi. Puis mourir.}{}{-4}{}{405}{ }
+{405}{Une balafre ? Où se trouvait sa balafre ? Parle donc, imbécile !}{Une balafre ? Où se trouvait sa balafre ? Parle donc, imbécile !}{}{37}{}{ }
+{406}{Oeil.}{}{-4}{}{410}{ }
+{410}{Qu'ils aillent tous rôtir en enfer ! Que t'ont-ils fait, Stennar ?}{Qu'ils aillent tous rôtir en enfer ! Que t'ont-ils fait, Stennar ?}{}{38}{}{ }
+{411}{Moi pas Stennar.}{}{-4}{}{415}{ }
+{415}{Je sais que vous n'êtes pas Stennar, imbécile. Essayez juste de faire semblant de n'être pas complètement stupide et écoutez. Tant pis, il faut que je confie ceci à quelqu'un, même si vous n'en comprenez pas la moitié.}{Je sais que vous n'êtes pas Stennar, imbécile. Essayez juste de faire semblant de n'être pas complètement stupide et écoutez. Tant pis, il faut que je confie ceci à quelqu'un, même si vous n'en comprenez pas la moitié.}{}{39}{}{ }
+{416}{D'accord.}{}{-4}{}{-42}{ru2017 }
+{417}{Moi volé livre. Pas histoire.}{}{-4}{qu1014 2}{420}{ }
+{420}{Hum. Il se peut qu'il soit suffisamment idiot pour accepter de faire quelque chose pour moi. [haut] Vous aller aux mines du Mont Noir, je répète, du Mont Noir et découvrir où le clan est allé, compris ?}{Hum. Il se peut qu'elle soit suffisamment idiote pour accepter de faire quelque chose pour moi. [haut] Vous aller aux mines du Mont Noir, je répète, du Mont Noir et découvrir où le clan est allé, compris ?}{}{40}{}{ }
+{421}{Oui ?}{}{-4}{qu1014 2}{425}{ }
+{422}{Oui ?}{}{-4}{qb1014 1}{425}{qu1013 2 }
+{423}{Non !}{}{-4}{}{430}{ }
+{425}{Je vais mettre votre carte à jour. Maintenant, partez d'ici. Revenez quand vous aurez terminé.}{Je vais mettre votre carte à jour. Maintenant, partez d'ici. Revenez quand vous aurez terminé.}{}{41}{}{mm 7, ss 4, gf1024 1 }
+{426}{Rob'voir.}{}{-4}{}{0}{ }
+{430}{Vous osez ?! Je vous suggère de changer de ton, espèce de nigaud !}{Vous osez ?! Je vous suggère de changer de ton, espèce de gourde !}{}{42}{}{ }
+{431}{Oui !}{}{-4}{qu1014 2}{425}{ }
+{432}{Oui !}{}{-4}{qb1014 1}{425}{qu1013 2 }
+{433}{Non ?}{}{-4}{}{0}{fl  1050 ,co}
+{440}{Aucun d'eux n'est revenu avec des informations ayant une quelconque valeur et certains ne sont même jamais revenus du tout. Les survivants ont parlé de pièges mortels et de créatures guettant leurs proies dans les ténèbres. Au fur et à mesure que les rumeurs de leurs échecs se répandaient, il devenait de plus en plus difficile de trouver des individus assez braves pour relever ce défi.}{Aucun d'eux n'est revenu avec des informations ayant une quelconque valeur et certains ne sont même jamais revenus du tout. Les survivants ont parlé de pièges mortels et de créatures guettant leurs proies dans les ténèbres. Au fur et à mesure que les rumeurs de leurs échecs se répandaient, il devenait de plus en plus difficile de trouver des individus assez braves pour relever ce défi.}{}{43}{}{qu1012 4 }
+{441}{Mais pourquoi m'a-t-il dit de venir ici avec votre anneau ?}{}{5}{}{1270}{ }
+{442}{Quoi moi faire maintenant ?}{}{-4}{gf1007 0}{420}{ }
+{446}{Nains sont sur île plein de gens méchants.}{}{-4}{gf1007 1}{850}{ }
+{450}{Il me semble primordial de découvrir ce qu'il est advenu du Clan du Mont Noir. Merci d'avoir porté ceci à ma connaissance mais je dois me retirer pour réfléchir à ce que je vais faire. Bonne journée.}{Il me semble primordial de découvrir ce qui est advenu du Clan du Mont Noir. Merci d'avoir porté ceci à ma connaissance mais je dois me retirer pour réfléchir à ce que je vais faire. Bonne journée.}{}{44}{}{ }
+{451}{J'aimerais également résoudre cette énigme.}{}{5}{gf1007 0}{460}{ }
+{452}{A mon avis, il est maintenant impératif d'aller sur l'Ile du Désespoir.}{}{5}{gf1007 1}{680}{ }
+{459}{Je vous souhaite bonne chance. Au revoir.}{}{5}{}{0}{qu1013 1 }
+{460}{Vous semblez être une personne pleine de ressources. Je pense que vous pouvez faire l'affaire pour cette tâche. Je vous promets que vous ne le regretterez pas.}{Vous semblez être une personne pleine de ressources. Je pense que vous pouvez faire l'affaire pour cette tâche. Je vous promets que vous ne le regretterez pas.}{}{45}{}{ }
+{461}{J'accepte.}{}{5}{qb1014 1}{470}{qu1013 2 }
+{462}{J'accepte.}{}{5}{qu1014 2}{470}{ }
+{468}{J'ai parlé trop vite. Il faut que je m'en aille.}{}{5}{qu1014 2}{0}{ }
+{469}{J'ai parlé trop vite. Il faut que je m'en aille.}{}{5}{qb1014 1}{0}{qu1013 1 }
+{470}{Splendide ! Tenez, laissez-moi indiquer sur votre carte l'emplacement des mines du Mont Noir. Je suis certain que l'on peut y découvrir des indices. S'il vous plaît, revenez dès que vous aurez trouvé quelque chose.}{Magnifique ! Tenez, laissez-moi indiquer sur votre carte l'emplacement des mines du Mont Noir. Je suis certain que l'on peut y découvrir des indices. S'il vous plaît, revenez dès que vous aurez trouvé quelque chose.}{}{46}{}{mm 7, ss 4, gf1024 1 }
+{471}{Je reviendrai avec les informations que vous m'avez demandées.}{}{5}{in2804}{170}{ }
+{472}{Puis-je vous poser quelques questions avant de partir ?}{}{5}{}{1290}{ }
+{473}{Je reviendrai avec les informations que vous m'avez demandées.}{}{5}{ni2804}{0}{ }
+{480}{Bannis ? Où sont-ils ?}{Bannis ? Où sont-ils ?}{}{47}{}{ }
+{481}{Ile des z'espoirs ?}{}{-4}{}{-42}{ }
+{490}{Vous êtes de retour ! Racontez-moi, quelles sont les nouvelles ?}{Vous êtes de retour ! Racontez-moi, quelles sont les nouvelles ?}{}{48}{}{ }
+{491}{Les nains ont été bannis et envoyés sur l'Ile du Désespoir parce que, euh...}{}{5}{gf1007 1, lf1 0}{500}{lf1 1  }
+{492}{Je vous ai ramené l'anneau. [Vous lui donnez l'anneau.]}{}{5}{lf2 1, in 2804}{620}{in 2804 }
+{493}{J'ai décidé d'aller sur l'Ile du Désespoir. Comment fait-on pour s'y rendre ?}{}{5}{qu1013 4, qu1015 1, gf2542 1}{530}{qu1015 2 }
+{494}{Ils ne sont pas sur l'Ile du Désespoir. Ils n'y ont jamais été.}{}{5}{qu1015 4, qb1017 3, lf5 0}{630}{ }
+{495}{J'ai parlé à Loghaire, du Clan de la Roue.}{}{5}{qu1016 2, lf7 0}{690}{lf7 1 }
+{496}{Je dois vous entretenir de quelque chose d'important.}{}{5}{ qu1013 0, qb1014 1}{600}{ }
+{497}{J'ai décidé d'explorer les mines du Mont Noir pour vous aider.}{}{5}{qu1013 1}{470}{qu1013 2 }
+{498}{Le Clan du Mont Noir a été banni et envoyé dans le Néant par les elfes noirs.}{}{5}{qa1016 3, lf10 0}{970}{ }
+{499}{Je n'ai rien découvert de nouveau depuis notre dernière conversation.}{}{5}{}{0}{ }
+{500}{Par tout ce qui est sacré, allez-vous parler !}{Par tout ce qui est sacré, allez-vous parler, femme !}{}{49}{}{ }
+{501}{Ils ont fait preuve d'une grande irresponsabilité en permettant que leur technologie se répande chez les humains.}{}{5}{}{510}{qu1013 4 }
+{502}{A cause du détournement de leur technologie et de votre traîtrise, ils ont été condamnés.}{}{5}{re 39}{1030}{re -5, qu1013 4 }
+{503}{A cause du détournement de leur technologie et de votre traîtrise, ils ont été condamnés.}{}{5}{re -38}{0}{qu1013 4, fl  1050 ,co}
+{504}{Ils ont fait preuve d'une grande irresponsabilité en permettant que leur technologie se répande chez les humains.}{}{5}{qu1014 4}{510}{ }
+{510}{[Pendant qu'il réfléchit à ce que vous venez de dire, il semble troublé.] Par les dieux, c'est ce que j'ai toujours redouté ! Je les ai tous condamnés ! [Il se met à pleurer.] Qu'ai-je fait ? L'impertinence de la jeunesse... je... tenez... un peu d'or pour vous dédommager. [Il essaie de se reprendre.] Pourriez-vous... [Il retient ses larmes]... faire... autre chose pour moi ?}{[Pendant qu'il réfléchit à ce que vous venez de dire, il semble troublé.] Par les dieux, c'est ce que j'ai toujours redouté ! Je les ai tous condamnés ! [Il se met à pleurer.] Qu'ai-je fait ? L'impertinence de la jeunesse... je... tenez... un peu d'or pour vous dédommager. [Il essaie de se reprendre.] Pourriez-vous... [Il retient ses larmes]... faire... autre chose pour moi ?}{}{50}{}{$$ 300 }
+{511}{Vous aimeriez que je me rende sur l'Ile du Désespoir ?}{}{5}{}{520}{ }
+{512}{Je regrette mais 300 pièces d'or ne suffisent même pas à couvrir mes frais.}{}{5}{ps 15}{570}{ }
+{514}{Quoi faire ?}{}{-4}{}{850}{ }
+{520}{Si vous pouviez... je sais que je vous en ai déjà demandé beaucoup mais un vieil homme, pour trouver le repos, se doit d'apaiser son âme.}{Si vous pouviez... je sais que je vous en ai déjà demandé beaucoup mais un vieil homme, pour trouver le repos, se doit d'apaiser son âme.}{}{51}{}{gf2542 1 }
+{521}{Naturellement. Comment fait-on pour s'y rendre ?}{}{5}{}{530}{qu1015 2 }
+{522}{Qu'est-ce que l'Ile du Désespoir ?}{}{5}{}{580}{ }
+{523}{Je regrette mais il est hors de question que j'aille sur l'Ile du Désespoir.}{}{5}{}{0}{ }
+{530}{Allez aux docks de Cendrebourg, qui sont indiqués sur votre carte. Demandez à voir Edouard Enseigne, un vieux loup de mer bourru. Il est le capitaine d'un des navires auxquels j'ai recours pour des missions "spéciales".}{Allez aux docks de Cendrebourg, qui sont indiqués sur votre carte. Demandez à voir Edouard Enseigne, un vieux loup de mer bourru. Il est le capitaine d'un des navires auxquels j'ai recours pour des missions "spéciales".}{}{52}{}{mm 8, gf 1008 1 }
+{531}{Et il me conduira à destination ? Peut-on faire confiance à cet homme ?}{}{5}{}{540}{ }
+{540}{Il a toute ma confiance. Certaines rumeurs font état de sa carrière peu glorieuse en haute mer mais, en cas de difficulté, il est l'homme de la situation.}{Il a toute ma confiance. Certaines rumeurs font état de sa carrière peu glorieuse en haute mer mais, en cas de difficulté, il est l'homme de la situation.}{}{53}{}{ru2018 }
+{541}{Voilà qui est rassurant.}{}{5}{ch12}{-48}{ }
+{542}{Voilà qui est rassurant.}{}{5}{ch -11}{560}{ }
+{550}{Je vais télégraphier à Enseigne pour le prévenir de votre arrivée. [Il se tourne vers son garde du corps.] Chukka, ici présent, est assez utile si vous avez besoin de protection. Si cela vous intéresse, vous pouvez le persuader de vous accompagner pour votre voyage.}{Je vais télégraphier à Enseigne pour le prévenir de votre arrivée. [Il se tourne vers son garde du corps.] Chukka, ici présent, est assez utile si vous avez besoin de protection. Si cela vous intéresse, vous pouvez le persuader de vous accompagner pour votre voyage.}{}{54}{}{gf1008 1, gf1020 1 }
+{551}{K:}{}{5}{}{1290}{ }
+{559}{Je vous remercie de votre générosité. Je vous ferai savoir ce que j'ai découvert.}{}{5}{}{0}{qu1015 2 }
+{560}{Je vais télégraphier à Enseigne pour le prévenir de votre arrivée.}{Je vais télégraphier à Enseigne pour le prévenir de votre arrivée.}{}{55}{}{gf1008 1 }
+{561}{K:}{}{5}{}{1290}{ }
+{569}{Je vous remercie de votre générosité. Je vous ferai savoir ce que j'ai découvert.}{}{5}{}{0}{qu1015 2 }
+{570}{Naturellement, naturellement, voici 100 pièces d'or de plus. Accepteriez-vous de vous rendre sur l'Ile du Désespoir pour mon compte ?}{Naturellement, naturellement, voici 100 pièces d'or de plus. Accepteriez-vous de vous rendre sur l'Ile du Désespoir pour mon compte ?}{}{56}{}{$$ 100, qu1015 1, gf2542 1 }
+{571}{Naturellement.}{}{5}{}{520}{ }
+{572}{Qu'est-ce que l'Ile du Désespoir ?}{}{5}{}{580}{ }
+{573}{Peut-être plus tard. Bonne journée.}{}{5}{}{0}{ }
+{580}{L'Ile du Désespoir est une colonie pénitentiaire. Extrêmement dangereuse. Les criminels sont abandonnés sur les rives, puis livrés à eux-mêmes pour se protéger des éléments et des autres 'détenus'. Bien naturellement, cela ferait de moi votre débiteur.}{L'Ile du Désespoir est une colonie pénitentiaire. Extrêmement dangereuse. Les criminels sont abandonnés sur les rives, puis livrés à eux-mêmes pour se protéger des éléments et des autres 'détenus'. Bien naturellement, cela ferait de moi votre débiteur.}{}{57}{}{ }
+{581}{Je le ferai mais comment puis-je m'y rendre ?}{}{5}{}{530}{qu1015 2 }
+{582}{Seriez-vous disposé à débourser plus de 300 pièces d'or cette fois-ci ?}{}{5}{ps 12, lf6 0}{590}{ }
+{589}{Il me semble clair que vous ferez en sorte de m'organiser de belles funérailles. Non merci.}{}{5}{}{0}{ }
+{590}{Très certainement. Je pense que cela devrait compenser toutes les difficultés que vous pourriez rencontrer au cours de votre voyage.}{Très certainement. Je pense que cela devrait compenser toutes les difficultés que vous pourriez rencontrer au cours de votre voyage.}{}{58}{}{$$450 }
+{591}{Excellent. Comment fait-on pour s'y rendre ?}{}{5}{}{530}{qu1015 2 }
+{600}{A quoi ceci peut-il bien être lié ?}{A quoi ceci peut-il bien être lié ?}{}{59}{}{ }
+{601}{J'ai des questions à vous poser au sujet de cet anneau.}{}{5}{in 2804, ra -2}{10}{ }
+{602}{J'aimerais vous poser quelques questions au sujet d'un anneau que j'avais en ma possession. [Vous décrivez l'anneau.]}{}{5}{ni 2804, ra -2}{10}{ }
+{609}{F:}{}{5}{}{0}{ }
+{610}{Avez-vous des nouvelles ?}{Avez-vous des nouvelles ?}{}{60}{}{ }
+{611}{Les nains ont été bannis et envoyés sur l'Ile du Désespoir parce que, euh...}{}{5}{gf1007 1, lf11 0}{500}{lf11 1 }
+{612}{J'ai décidé d'aller sur l'Ile du Désespoir. Comment fait-on pour s'y rendre ?}{}{5}{qu1013 4, qu1015 1, gf2542 1}{530}{qu1015 2 }
+{613}{Ils ne sont pas sur l'Ile du Désespoir. Ils n'y ont jamais été.}{}{5}{qu1015 4, qb1017 3, lf5 0}{630}{ }
+{614}{J'ai parlé à Loghaire, du Clan de la Roue.}{}{5}{qu1016 2, lf7 0}{690}{lf7 1 }
+{615}{J'ai décidé d'explorer les mines du Mont Noir pour vous aider.}{}{5}{qu1013 1}{470}{ }
+{616}{Le Clan du Mont Noir a été banni et envoyé dans le Néant par les elfes noirs.}{}{5}{qa1016 3}{970}{ }
+{617}{Qu'avez-vous à me dire au sujet de la tentative de meurtre dont vous avez été récemment victime ?}{}{5}{gf1028 1, lf15 0}{1225}{lf15 1 }
+{619}{Je n'ai rien découvert de nouveau depuis notre dernière conversation.}{}{5}{}{0}{ }
+{620}{Splendide ! Voici votre or.}{Splendide ! Voici votre or.}{}{61}{}{$$200 }
+{621}{Je préférerais 300 pièces.}{}{5}{ps 15}{625}{ }
+{622}{A:}{}{5}{}{610}{ }
+{625}{Oui, vous avez raison. Ce montant me semble honnête.}{Oui, vous avez raison. Ce montant me semble honnête.}{}{62}{}{$$100 }
+{626}{A:}{}{5}{}{610}{ }
+{630}{Quelle sorte de complot démoniaque est-ce là ? Etes-vous certain de cela ?}{Quelle sorte de complot démoniaque est-ce là ? Etes-vous certaine de cela ?}{}{63}{}{ }
+{631}{Voici Thorvald. Il a été emprisonné là-bas pendant cent ans.}{}{5}{pa6410}{640}{ }
+{632}{J'ai parlé à un nain qui était là-bas depuis cent ans.}{}{5}{pa-6410}{640}{ }
+{640}{Par les dieux ! C'est un désastre ! Qu'allons-nous faire maintenant ?}{Par les dieux ! C'est un désastre ! Qu'allons-nous faire maintenant ?}{}{64}{}{ }
+{641}{Je vais m'entretenir avec Loghaire, du Clan de la Roue.}{}{5}{}{650}{ }
+{649}{Je suis également perplexe. Faites-le moi savoir, si vous les trouvez. Bonne journée.}{}{5}{}{0}{ }
+{650}{Oui, oui. C'est, en toute logique, notre prochaine étape. Y a-t-il quelque chose que je puisse faire pour vous ?}{Oui, oui. C'est, en toute logique, notre prochaine étape. Y a-t-il quelque chose que je puisse faire pour vous ?}{}{65}{}{ }
+{651}{Euh, vous avez oublié de me payer pour mes recherches sur l'Ile du Désespoir.}{}{5}{ps 15}{660}{ }
+{652}{Euh, vous avez oublié de me payer pour mes recherches sur l'Ile du Désespoir.}{}{5}{ps -14}{670}{ }
+{660}{Ah ! Les caprices des cerveaux trop vieux... veuillez me pardonner cet oubli, voici votre or.}{Ah ! Les caprices des cerveaux trop vieux... veuillez me pardonner cet oubli, voici votre or.}{}{66}{}{$$500, lf5 1 }
+{661}{K:}{}{5}{}{1290}{ }
+{669}{Je reviendrai après avoir obtenu une entrevue avec Loghaire.}{}{5}{}{0}{ }
+{670}{Ah ! Les caprices des cerveaux trop vieux... veuillez me pardonner cet oubli, voici votre or.}{Ah ! Les caprices des cerveaux trop vieux... veuillez me pardonner cet oubli, voici votre or.}{}{67}{}{$$400, lf5 1 }
+{671}{K:}{}{5}{}{1290}{ }
+{679}{Je reviendrai après avoir obtenu une entrevue avec Loghaire.}{}{5}{}{0}{ }
+{680}{Quelle excellente idée ! Jamais je n'aurais osé demander quelque chose d'aussi dangereux à quelqu'un mais, puisque vous vous proposez...}{Quelle excellente idée ! Jamais je n'aurais pu demander quelque chose d'aussi dangereux à quelqu'un mais, puisque vous vous proposez...}{}{68}{}{qu1015 1, gf2542 1 }
+{681}{Comment fait-on pour s'y rendre ?}{}{5}{}{530}{qu1015 2 }
+{682}{Dangereux ! Qu'est-ce exactement que l'Ile du Désespoir ?}{}{5}{}{580}{lf6 1  }
+{683}{Je regrette mais il est hors de question que j'aille sur l'Ile du Désespoir.}{}{5}{}{0}{ }
+{690}{Que vous a-t-il dit ?}{Que vous a-t-il dit ?}{}{69}{}{ }
+{691}{Il a dit que ce sont les elfes qui les ont bannis.}{}{5}{}{700}{ }
+{700}{Ils ont permis à des elfes de bannir des nains ?! Par tout ce qui est sacré, où donc va notre pauvre monde ?}{Ils ont permis à des elfes de bannir des nains ?! Par tout ce qui est sacré, où donc va notre pauvre monde ?}{}{70}{}{ }
+{701}{Il était également plutôt courroucé par cette affaire.}{}{5}{}{710}{ }
+{710}{Et que disent les elfes de tout ça ?}{Et que disent les elfes de tout ça ?}{}{71}{}{ }
+{711}{Je vais aller leur parler.}{}{5}{qb1018 2, re 49}{720}{ }
+{712}{Ils accusent les elfes noirs.}{}{5}{qa1020 3}{730}{ }
+{713}{J'espère que vous comprenez que je n'entretiens aucune relation avec ces elfes.}{}{5}{ra 3, re 49, qa1020 3}{750}{ }
+{714}{J'espère que vous comprenez que je n'entretiens aucune relation avec ces elfes.}{}{5}{ra 3, re -48, qa1020 3}{830}{ }
+{715}{Je vais aller leur parler.}{}{5}{qb1018 2, re -48}{820}{ }
+{720}{Excellent ! Voici un peu d'or afin de vous aider pour votre voyage.}{Voici un peu d'or afin de vous aider pour votre voyage}{}{72}{}{$$400 }
+{721}{K:}{}{5}{}{1290}{ }
+{729}{A:}{}{5}{}{0}{ }
+{730}{Bien entendu ! Cet écheveau de subterfuges et d'indices trompeurs pourrait rendre un homme complètement fou ! Nous devons découvrir toute la vérité !}{Bien entendu ! Cet écheveau de subterfuges et d'indices trompeurs pourrait rendre un homme complètement fou ! Nous devons découvrir toute la vérité !}{}{73}{}{ }
+{731}{Je suis d'accord. Je n'aurai de repos que lorsque toute cette affaire sera éclaircie.}{}{5}{}{740}{ }
+{732}{J'espère que vous comprenez que je n'entretiens aucune relation avec ces elfes.}{}{5}{ra 3, lf8 0, re 49, qa1020 3}{750}{lf8 1 }
+{733}{J'espère que vous comprenez que je n'entretiens aucune relation avec ces elfes.}{}{5}{ra 3, lf8 0, re -48, qa1020 3}{820}{lf8 1 }
+{740}{Qu'allez-vous faire maintenant ?}{Qu'allez-vous faire maintenant ?}{}{74}{}{ }
+{741}{Je vais aller parler à ces elfes noirs.}{}{5}{re 49}{720}{ }
+{742}{Je vais aller parler à ces elfes noirs.}{}{5}{re -48}{820}{ }
+{750}{Naturellement, mon ami, naturellement. Mais dites-moi, quelle excuse ont-ils inventée qu'ils espèrent nous faire avaler comme à des écolières naïves ?}{Naturellement, mon amie, naturellement. Mais dites-moi, quelle excuse ont-ils inventée qu'ils espèrent nous faire avaler comme à des écolières naïves ?}{}{75}{}{ }
+{751}{Je ne leur ai pas parlé. Je vais y aller de ce pas.}{}{5}{qb1018 2}{720}{ }
+{752}{Ils accusent les elfes noirs.}{}{5}{qa1018 3}{730}{ }
+{760}{Par tout ce qui est sacré, comment daignez-vous m'adresser la parole ? Je présume que vous avez quelques informations pertinentes à me communiquer.}{Par tout ce qui est sacré, comment daignez-vous m'adresser la parole ? Je présume que vous avez quelques informations pertinentes à me communiquer.}{}{76}{}{ }
+{761}{Les nains ont été bannis et envoyés sur l'Ile du Désespoir parce que, euh...}{}{5}{gf1007 1, lf11 0}{500}{lf11 1 }
+{762}{Je vous ai ramené l'anneau. [Vous lui donnez l'anneau.]}{}{5}{lf2 1, in 2804}{770}{re +10 }
+{763}{J'ai décidé d'aller sur l'Ile du Désespoir. Comment fait-on pour s'y rendre ?}{}{5}{qu1013 4, qu1015 1, gf2542 1}{780}{re +10, qu1015 2 }
+{764}{Ils ne sont pas sur l'Ile du Désespoir. Ils n'y ont jamais été.}{}{5}{qu1015 4, qb1017 3, lf5 0}{630}{re +10 }
+{765}{J'ai parlé à Loghaire, du Clan de la Roue.}{}{5}{qu1016 2, lf7 0}{690}{re +10 }
+{766}{Je dois vous entretenir de quelque chose d'important.}{}{5}{ qu1013 0}{310}{ }
+{767}{J'ai décidé d'explorer les mines du Mont Noir pour vous aider.}{}{5}{qu1013 1}{780}{re +10 }
+{768}{Le Clan du Mont Noir a été banni et envoyé dans le Néant par les elfes noirs.}{}{5}{qa1016 3}{970}{ }
+{769}{Je vous demande de me pardonner mais je n'ai rien à vous dire.}{}{5}{}{0}{re -5 }
+{770}{Je suppose que cela mérite des remerciements. Voici un témoignage de ma gratitude. [Il vous tend un peu d'or.]}{Je suppose que cela mérite des remerciements. Voici un témoignage de ma gratitude. [Il vous tend un peu d'or.]}{}{77}{}{$$100 }
+{771}{A:}{}{5}{}{610}{ in2804 }
+{772}{Quoi ! Espèce de rapiat ! 100 pièces, c'est une plaisanterie !}{}{5}{}{1020}{re -15 }
+{780}{Je ne suis pas encore sûr de savoir si je dois vous employer comme émissaire. Je ne vous apprécie guère et je m'inquiète de ce que pourraient penser les gens en voyant un tel représentant du nom de Bastien.}{Je ne suis pas encore sûr de savoir si je dois vous employer comme émissaire. Je ne vous apprécie guère et je m'inquiète de ce que pourraient penser les gens en voyant une telle représentante du nom de Bastien.}{}{78}{}{ }
+{781}{Je vous en prie, permettez-moi de prouver ma valeur.}{}{5}{ch 14}{800}{re +15 }
+{782}{Je vous en prie, permettez-moi de prouver ma valeur.}{}{5}{ch -14}{790}{ }
+{784}{Je ne sais pas encore si je dois vous éventrer ou vous décapiter.}{}{5}{}{0}{fl  1050 ,co}
+{790}{Comme il vous plaira, manant. Mais écoutez mon avertissement : si vous traînez mon nom dans la boue, je vous ferai traquer et abattre comme l'animal que vous êtes.}{Comme il vous plaira, péronnelle. Mais écoutez mon avertissement : si vous traînez mon nom dans la boue, je vous ferai traquer et abattre comme l'animal que vous êtes.}{}{79}{}{ }
+{791}{Merci de me donner cette occasion de faire mes preuves, monsieur.}{}{5}{qu1013 1}{810}{ }
+{792}{Merci de me donner cette occasion de faire mes preuves, monsieur.}{}{5}{qu1013 4, qb1015 3, gf2542 1}{530}{ }
+{799}{Je méditerai là-dessus en me curant les dents avec vos os.}{}{5}{}{0}{fl  1050 ,co}
+{800}{Certainement. Après tout, votre personne n'est pas aussi mauvaise que je l'avais imaginé.}{Certainement. Après tout, votre personne n'est pas aussi mauvaise que je l'avais imaginé.}{}{80}{}{ }
+{801}{Nous parlions de mon excursion pour votre compte au Clan du Mont Noir.}{}{5}{qu1013 1}{470}{ }
+{802}{Nous parlions de mon expédition sur l'Ile du Désespoir.}{}{5}{qu1013 4, qb1015 2, gf2542 1}{530}{ }
+{803}{Il est trop tard pour vous rétracter. Nous allons combattre jusqu'à la mort.}{}{5}{}{0}{fl  1050 ,co}
+{810}{Alors, en ce qui concerne les mines du Mont Noir, laissez-moi annoter quelques indications sur votre carte. Dès que vous aurez découvert quelque chose, revenez et je vous donnerai quelques pièces pour vous dédommager.}{Alors, en ce qui concerne les mines du Mont Noir, laissez-moi annoter quelques indications sur votre carte. Dès que vous aurez découvert quelque chose, revenez et je vous donnerai quelques pièces pour vous dédommager.}{}{81}{}{mm 7, ss 4, gf1024 1 }
+{811}{Je reviendrai avec les informations que vous m'avez demandées.}{}{5}{qb1014 2}{170}{qu1013 2 }
+{812}{Je reviendrai avec les informations que vous m'avez demandées.}{}{5}{qu1014 2}{170}{ }
+{820}{Je ne suis pas encore sûr de savoir vers qui va votre fidélité. Je vous surveillerai, ça vous pouvez en être certain.}{Je ne suis pas encore sûr de savoir vers qui va votre fidélité. Je vous surveillerai, ça vous pouvez en être certaine.}{}{82}{}{ }
+{821}{Merci de ce témoignage de confiance. Bonne journée.}{}{5}{}{0}{ }
+{822}{Vous avez percé mon secret à jour ! Enfer et damnation, maintenant vous allez mourir !}{}{5}{}{0}{fl  1050 ,co}
+{830}{Le temps nous le dira, le temps nous le dira. Quels mensonges d'elfes vous ont-ils demandé de me rapporter ?}{Le temps nous le dira, le temps nous le dira. Quels mensonges d'elfes vous ont-ils demandé de me rapporter ?}{}{83}{}{ }
+{831}{Je ne leur ai pas parlé. Je vais y aller de ce pas.}{}{5}{qb1018 2}{820}{ }
+{832}{Ils accusent les elfes noirs.}{}{5}{qa1018 3}{730}{ }
+{840}{Et qu'est-ce que l'idiot voudrait me dire maintenant ?}{Et qu'est-ce que l'idiote voudrait me dire maintenant ?}{}{84}{}{ }
+{841}{Vot'faute si p'tits nains bannis à il disispoir.}{}{-4}{gf1007 1, lf11 0}{510}{lf11 1, qu1013 4 }
+{843}{Comment aller ildu zespoir ?}{}{-4}{qu1013 4, qb1015 3, gf2542 1}{860}{qu1015 2 }
+{844}{Bonhommes nains pas sur île. Jamais.}{}{-4}{qu1015 4, qb1017 3, lf5 0}{870}{lf5 1 }
+{845}{Moi aller parler Loguère chef des nains.}{}{-4}{qu1016 2, lf7 0}{900}{ }
+{846}{Dire choses importantes.}{}{-4}{ qu1013 0}{380}{ }
+{847}{Moi aller Clan Mont Noir ?}{}{-4}{qu1013 1}{425}{ }
+{848}{Nains bannis dans Néant ! Nains bannis dans Néant !}{}{-4}{qa1016 3, lf9 0}{920}{lf9 1 }
+{849}{Moi savoir rien.}{}{-4}{}{0}{ }
+{850}{Comment ai-je pu oublier à qui je parlais ? [haut] Vous aller sur île où gens très méchants, c'est compris ?}{Comment ai-je pu oublier à qui je parlais ? [haut] Vous aller sur île où gens très méchants, c'est compris ?}{}{85}{}{ }
+{851}{Dac'-o-dac. Comment aller là-bas ?}{}{-4}{}{860}{ }
+{860}{Là Cendrebourg sur la carte. Aller chercher Capitaine Enseigne, d'accord ? Lui emmener vous, c'est compris ?}{Là Cendrebourg sur la carte. Aller chercher Capitaine Enseigne, d'accord ? Lui emmener vous, c'est compris ?}{}{86}{}{mm 8, gf1008 1, qu1015 2, ru2018 }
+{861}{Ouaip.}{}{-4}{}{0}{ }
+{870}{Vraiment ?}{Vraiment ?}{}{87}{}{ }
+{871}{Moi partir. Moi parler Loguère chef des nains.}{}{-4}{}{880}{ }
+{880}{Faites donc.}{Faites donc.}{}{88}{}{ }
+{881}{Moi peux avoir argent ?}{}{-4}{}{890}{ }
+{890}{Bien sûr, pourquoi pas. Voici un peu d'or. Maintenant, laissez-moi tranquille, s'il vous plaît.}{Bien sûr, pourquoi pas. Voici un peu d'or. Maintenant, laissez-moi tranquille, s'il vous plaît.}{}{89}{}{$$100 }
+{891}{Ouahou ! 100 pièces d'or ! Ar'voir.}{}{-4}{}{0}{ }
+{900}{Je n'ai pas de temps à perdre. Vous n'avez vraiment rien d'important à me dire, n'est-ce pas ?}{Je n'ai pas de temps à perdre. Vous n'avez vraiment rien d'important à me dire, n'est-ce pas ?}{}{90}{}{ }
+{901}{Loguère pas savoir non plus.}{}{-4}{}{910}{ }
+{910}{Je m'en doutais. Disparaissez maintenant ! C'est bien compris ?}{Je m'en doutais. Disparaissez maintenant ! C'est bien compris ?}{}{91}{}{ }
+{911}{Argent ?}{}{-4}{}{915}{ }
+{915}{Voici quelques pièces. Sortez d'ici.}{Voici quelques pièces Sortez d'ici.}{}{92}{}{$$50 }
+{916}{Marsi.}{}{-4}{}{0}{ }
+{920}{Par tous les dieux, que dites-vous ?}{Par tous les dieux, que dites-vous, femme ?}{}{93}{}{ }
+{921}{Je n'en sais rien.}{}{-4}{}{925}{ }
+{925}{Merci, vraiment, vous avez été d'une efficacité remarquable, espèce de bon à rien !}{Merci, vraiment, vous avez été d'une efficacité remarquable, espèce de gourde !}{}{94}{}{ }
+{926}{Argent ? Moi bien faire ?}{}{-4}{}{930}{ }
+{927}{Vous très méchant. Vous mourir maintenant.}{}{-4}{}{0}{fl  1050 ,co}
+{930}{Je vais vous donner de l'argent en espérant que vous ne remettrez plus jamais les pieds ici, d'accord ?}{Je vais vous donner de l'argent en espérant que vous ne remettrez plus jamais les pieds ici, d'accord ?}{}{95}{}{$$250 }
+{931}{Accord !}{}{-4}{}{0}{gf1011 1 }
+{940}{Que voulez-vous savoir ?}{Que voulez-vous savoir ?}{}{96}{}{ }
+{941}{Quelle est votre histoire ? Et qu'en est-il de cet anneau ?}{}{5}{in 2804, ss 2}{-42}{qu1012 4 }
+{942}{Où sont les mines du Clan du Mont Noir ?}{}{5}{qb1013 2, qu1012 4}{960}{ }
+{943}{Comment peut-on se rendre sur l'Ile du Désespoir ?}{}{5}{qu1012 4, gf1007 1, qb1015 2}{965}{ }
+{944}{Quelle est votre histoire ? Et qu'en est-il de cet anneau qui m'a été remis ?}{}{5}{ni 2804, ss 2}{-42}{qu1012 4 }
+{949}{Je vous rends la liberté.}{}{5}{}{0}{ }
+{950}{J'ai donné l'anneau à Stennar la dernière fois que je l'ai vu. Et maintenant nous sommes morts tous les deux...}{ J'ai donné cet anneau à Stennar la dernière fois que je l'ai vu. Et maintenant nous sommes morts tous les deux...}{}{97}{}{ }
+{951}{Où sont les mines du Clan du Mont Noir ?}{}{5}{qb1013 2, qu1012 4}{960}{ }
+{952}{Comment peut-on se rendre sur l'Ile du Désespoir ?}{}{5}{qu1012 4, gf1007 1, qu1015 1}{965}{ }
+{953}{E:}{}{5}{}{0}{ }
+{960}{L'emplacement du Clan du Mont Noir est indiqué sur votre carte.}{L'emplacement du Clan du Mont Noir est indiqué sur votre carte.}{}{98}{}{mm 7, ss 4, gf1024 1 }
+{961}{Comment peut-on se rendre sur l'Ile du Désespoir ?}{}{5}{qu1012 4, gf1007 1, qu1015 1}{965}{ }
+{962}{E:}{}{5}{}{0}{ }
+{965}{Capitaine Edouard Enseigne. Cendrebourg. Votre carte est mise à jour.}{Capitaine Edouard Enseigne. Cendrebourg. Votre carte est mise à jour.}{}{99}{}{mm 8, gf1008 1 }
+{966}{E:}{}{5}{}{0}{ }
+{970}{Cela... est impossible. Dans quel but cela a-t-il pu être fait ?}{Cela... est impossible. Dans quel but cela a-t-il pu être fait ?}{}{100}{}{ }
+{971}{Les elfes noirs attendaient la première occasion pour bannir les nains.}{}{5}{}{1000}{ }
+{972}{Je n'en sais rien. Oh ! Très bien, au revoir.}{}{5}{}{980}{ }
+{980}{Vous devez me le dire ! Vous ne pouvez pas partir comme ça !}{Vous devez me le dire ! Vous ne pouvez pas partir comme ça !}{}{101}{}{ }
+{981}{Je regrette, je n'ai rien d'autre à vous dire.}{}{5}{}{0}{al -50 }
+{982}{Je ne peux pas ? Pour quel résultat ai-je parcouru tout le continent ? Pour rien !}{}{5}{}{990}{ }
+{983}{Les elfes noirs attendaient la première occasion pour bannir les nains.}{}{5}{}{1000}{ }
+{990}{Vous êtes fou ! Je ne vous laisserai pas partir avant que vous ne m'ayez dit pourquoi tout cela est arrivé !}{Vous êtes folle ! Je ne vous laisserai pas partir avant que vous ne m'ayez dit pourquoi tout cela est arrivé !}{}{102}{}{ }
+{991}{Les elfes noirs attendaient la première occasion pour bannir les nains.}{}{5}{}{1000}{ }
+{992}{Essayez donc de m'arrêter, vieillard.}{}{5}{}{0}{fl  1050 ,co}
+{1000}{Mais pourquoi ?}{Mais pourquoi ?}{}{103}{}{ }
+{1001}{[Vous lui racontez toute l'histoire.]}{}{5}{}{1010}{gf1011 1 }
+{1002}{Découvrez-le vous-même. Bonne journée.}{}{5}{}{0}{fl  1050 ,co}
+{1010}{Et dire que j'ai vécu toute ma vie avec le poids d'une immense culpabilité à seule fin de servir les machinations diaboliques des elfes noirs. Cela me servira de leçon... mais tenez, prenez cet argent pour vous dédommager.}{Et dire que j'ai vécu toute ma vie avec le poids d'une immense culpabilité à seule fin de servir les machinations diaboliques des elfes noirs. Cela me servira de leçon... mais tenez, prenez cet argent pour vous dédommager.}{}{104}{}{$$500 }
+{1011}{A:}{}{5}{}{0}{lf10 1 }
+{1020}{Loin de moi l'idée de vous insulter, je me contenterai de garder cet argent puisque vous le prenez sur ce ton. Ma prochaine insulte vous sera quant à elle très pénible, physiquement parlant j'entends.}{Loin de moi l'idée de vous insulter, je me contenterai de garder cet argent puisque vous le prenez sur ce ton. Ma prochaine insulte vous sera quant à elle très pénible, physiquement parlant j'entends.}{}{105}{}{re -15 }
+{1021}{Naturellement, veuillez accepter mes excuses. Voici l'anneau.}{}{5}{}{610}{in2804 }
+{1022}{Non, pour vous. Que le combat commence !}{}{5}{}{0}{fl  1050 ,co}
+{1030}{Vous osez, monsieur ? Dois-je vous enseigner la manière de se bien comporter en société ?}{Vous osez, madame ? Dois-je vous enseigner la manière de se bien comporter en société ?}{}{106}{}{ }
+{1031}{Malgré les apparences, je n'avais nulle intention de me comporter de façon grossière. }{}{5}{ch 14}{510}{ }
+{1032}{Je regrette ma naïveté et ma sottise. S'il vous plaît, pardonnez mon manque de savoir-vivre.}{}{5}{}{510}{ }
+{1033}{Allez-y, je vous en prie, essayez de m'enseigner vos bonnes manières pendant que je vous règle votre compte.}{}{5}{}{0}{fl  1050 ,co}
+{1035}{ Je n'ai jamais dit que c'était le cas. C'est juste ce que les gens ont pensé. J'ai inventé un grand nombre d'appareils basés sur ce principe mais ce n'est pas moi qui ai conçu le premier.}{ Je n'ai jamais dit que c'était le cas. C'est juste ce que les gens ont pensé. J'ai inventé un grand nombre d'appareils basés sur ce principe mais ce n'est pas moi qui ai conçu le premier.}{}{107}{}{ }
+{1036}{N'est-ce pas malhonnête ? Vous avez retiré une gratification immense pour quelque chose que vous n'avez même pas fait !}{}{5}{}{1038}{ }
+{1037}{Que pensiez-vous qu'il arriverait quand vous avez vendu la machine ?}{}{5}{}{1310}{ }
+{1038}{Oui, ça l'est et cela me tourmente chaque jour. Je n'étais qu'un enfant quand les "êtres drapés" m'ont donné leur premier avertissement et j'étais terrifié. Ils m'ont clairement expliqué que je ne devais pas révéler les origines de la machine à vapeur.}{Oui, ça l'est et cela me tourmente chaque jour. Je n'étais qu'un enfant quand les "êtres drapés" m'ont donné leur premier avertissement et j'étais terrifié. Ils m'ont clairement expliqué que je ne devais pas révéler les origines de la machine à vapeur.}{}{108}{}{ }
+{1039}{K:}{}{5}{}{1290}{ }
+{1040}{Oui, cela doit être un vrai fardeau d'être aussi fabuleusement riche.}{}{5}{ch 14}{1042}{ }
+{1042}{Toute cette fortune ravive en permanence ma culpabilité. Cela me rappelle chaque jour l'abominable erreur commise dans ma jeunesse.}{Toute cette fortune ravive en permanence ma culpabilité. Cela me rappelle chaque jour l'abominable erreur commise dans ma jeunesse.}{}{109}{}{ }
+{1043}{K:}{}{5}{}{1290}{ }
+{1044}{J'ai décidé d'explorer les mines du Clan du Mont Noir pour vous aider.}{}{5}{qu1014 2, qb1013 1}{470}{ }
+{1045}{J'ai décidé d'explorer les mines du Clan du Mont Noir pour vous aider.}{}{5}{qb1014 1, qb1013 1}{470}{qu1013 2 }
+{1049}{Je dois prendre congé de vous, cher monsieur.}{}{5}{}{0}{ }
+{1050}{Chukka ! Attaque !}{Chukka ! Attaque !}{}{110}{}{ }
+{1051}{Je refuse de parler à quelqu'un d'aussi peu vêtu. Enfilez vos vêtements que diable.}{Je refuse de parler à quelqu'un d'aussi peu vêtu. Enfilez vos vêtements que diable.}{}{111}{}{ }
+{1052}{Je ne suis pas d'humeur à tolérer vos tours d'ensorceleur. Je refuse de vous parler tant que vous ne cesserez pas d'user de vos sortilèges.}{Je ne suis pas d'humeur à tolérer vos tours d'ensorceleuse. Je refuse de vous parler tant que vous ne cesserez pas d'user de vos sortilèges.}{}{112}{}{ }
+{1053}{Qui a laissé entrer cet animal ?}{Qui a laissé entrer cette créature ?}{}{113}{}{ }
+{1054}{Merci de votre aide précieuse. Je désire qu'on me laisse seul pour méditer en paix.}{Merci de votre aide précieuse. Je désire qu'on me laisse seul pour méditer en paix.}{}{114}{}{ }
+{1055}{Duverger est détraqué. Nous nous connaissons depuis notre plus tendre enfance, époque à laquelle nous étions amis. Cependant, quand j'ai commencé à breveter mes inventions, il est devenu de plus en plus agressif.}{Duverger est détraqué. Nous nous connaissons depuis notre plus tendre enfance, époque à laquelle nous étions amis. Cependant, quand j'ai commencé à breveter mes inventions, il est devenu de plus en plus agressif.}{}{115}{}{ }
+{1056}{Pourquoi cela ?}{}{5}{}{1058}{ }
+{1058}{Il racontait à qui voulait l'entendre comment il allait devenir un industriel fabuleusement riche, mais il n'est pas très intelligent. Au début, c'était juste pathétique, mais ces dernières années il est devenu vraiment dangereux.}{Il racontait à qui voulait l'entendre comment il allait devenir un industriel fabuleusement riche, mais il n'est pas très intelligent. Au début, c'était juste pathétique, mais ces dernières années il est devenu vraiment dangereux.}{}{116}{}{ }
+{1059}{A propos de ce travail dont vous parliez...}{}{5}{lf11 1}{120}{ }
+{1060}{J'ai des questions à vous poser au sujet de cet anneau.}{}{5}{in 2804, lf12 1}{10}{ }
+{1061}{J'aimerais m'entretenir avec vous au sujet d'un anneau. [Vous décrivez l'anneau.]}{}{5}{ni 2804, lf12 1}{10}{ }
+{1062}{Eh bien, je voulais juste vous mettre en garde. Au revoir.}{}{5}{lf12 1}{0}{lf 1 1, re +10 }
+{1065}{Bannis... par les dieux... à cause de moi ! [Il se met à pleurer silencieusement.] J'ai toujours redouté le pire...}{Bannis... par les dieux... à cause de moi ! [Il se met à pleurer silencieusement.] J'ai toujours redouté le pire...}{}{117}{}{ }
+{1066}{Comment vous êtes-vous retrouvé en affaire avec les nains ?}{}{5}{}{-42}{ }
+{1070}{Pourquoi ? Avez-vous quelque chose à cacher ? Peut-être l'avez-vous volé ? Dites-moi, où l'avez-vous trouvé ?}{Pourquoi ? Avez-vous quelque chose à cacher ? Peut-être l'avez-vous volé ? Dites-moi, où l'avez-vous trouvé ?}{}{118}{}{ }
+{1071}{Calmez-vous, je ne l'ai pas volé. Comment l'avez-vous perdu ?}{}{5}{}{1075}{ }
+{1072}{Je n'apprécie guère vos accusations, vieil homme.}{}{5}{}{1082}{re -5 }
+{1075}{Cela ne vous regarde pas. Je vous le demande pour la dernière fois, où avez-vous trouvé cet anneau ?}{Cela ne vous regarde pas. Je vous le demande pour la dernière fois, où avez-vous trouvé cet anneau ?}{}{119}{}{ }
+{1076}{Un gnome me l'a confié avant de mourir.}{}{5}{ra -5, ra -2}{20}{ }
+{1077}{Un individu à l'allure bizarre me l'a donné.}{}{5}{ra 5}{30}{ }
+{1078}{Un gnome à l'allure bizarre me l'a donné avant de mourir.}{}{5}{ra 2}{30}{ }
+{1079}{Vous feriez mieux de modérer votre langage. Ici, c'est moi qui pose les questions.}{}{5}{}{1082}{re -5 }
+{1082}{Pour cette fois-ci, je veux bien ne pas tenir compte de votre manque de respect, si vous me dites comment vous avez obtenu l'anneau.}{Pour cette fois-ci, je veux bien ne pas tenir compte de votre manque de respect, si vous me dites comment vous avez obtenu l'anneau.}{}{120}{}{ }
+{1083}{Un gnome me l'a confié avant de mourir.}{}{5}{ra -5, ra -2}{20}{ }
+{1084}{Un individu à l'allure bizarre me l'a donné.}{}{5}{ra 5}{30}{ }
+{1085}{Un gnome à l'allure bizarre me l'a donné avant de mourir.}{}{5}{ra 2}{30}{ }
+{1086}{Je vais vous faire regretter votre arrogance, vermine.}{}{5}{}{0}{fl 1050 ,co}
+{1090}{C'est une longue histoire qui ne vous regarde en rien. Disons simplement qu'il aurait dû être en la possession d'un nain.}{C'est une longue histoire qui ne vous regarde en rien. Disons simplement qu'il aurait dû être en la possession d'un nain.}{}{121}{}{ }
+{1091}{Eh bien, ce n'était pas un nain. Il était bien trop maigrelet et il n'avait pas de barbe.}{}{5}{}{60}{ }
+{1095}{Stennar était un vieil ami à moi... mais qu'il se soit coupé la barbe... par les dieux ! C'est impensable ! [Il s'interrompt.] Mais, je vous en prie, vous a-t-il dit quelque chose avant de mourir ? A-t-il dit quelque chose, euh... à mon sujet ?}{Stennar était un vieil ami à moi... mais qu'il se soit coupé la barbe... par les dieux ! C'est impensable ! [Il s'interrompt.] Mais, je vous en prie, vous a-t-il dit quelque chose avant de mourir ? A-t-il dit quelque chose, euh... à mon sujet ?}{}{122}{}{ }
+{1096}{Il a dit qu'il s'était échappé pour nous mettre en garde contre le mal...}{}{5}{}{1330}{ }
+{1100}{Il n'y a pas grand-chose à dire en réalité, Chukka prend excessivement à coeur son rôle de garde du corps. Il a occis l'intrus avant que je puisse l'interroger. On n'a trouvé sur lui qu'une amulette marquée du symbole de la Main de Moloch, l'oeil dans l'hexagramme.}{Il n'y a pas grand-chose à dire en réalité, Chukka prend excessivement à coeur son rôle de garde du corps. Il a occis l'intrus avant que je puisse l'interroger. On n'a trouvé sur lui qu'une amulette marquée du symbole de la Main de Moloch, l'oeil dans l'hexagramme.}{}{123}{}{gf1085 1 }
+{1101}{La Main de Moloch ?}{}{5}{}{1110}{lf15 1 }
+{1110}{C'était une secte d'assassins, il y a cinq cents ans. Des rumeurs à propos de leur existence resurgissent de temps à autre, mais ce ne sont généralement que des canulars. Je parie qu'il s'agit d'un nouveau groupe qui veut exploiter le prestige de ce nom.}{C'était une secte d'assassins, il y a cinq cents ans. Des rumeurs à propos de leur existence resurgissent de temps à autre, mais ce ne sont généralement que des canulars. Je parie qu'il s'agit d'un nouveau groupe qui veut exploiter le prestige de ce nom.}{}{124}{}{ru2019 }
+{1111}{Ils semblent en avoir après moi également.}{}{5}{gf1045 1}{1120}{ }
+{1112}{Eh bien, j'aimerais vous poser des questions à propos de cet anneau.}{}{5}{in 2804,  lf13 0}{10}{lf13 1 }
+{1113}{Intéressant. J'aimerais vous poser des questions au sujet d'un anneau. [Vous décrivez l'anneau.]}{}{5}{ni 2804,  lf13 0}{10}{lf13 1 }
+{1119}{E:}{}{5}{}{0}{ }
+{1120}{Je souhaite, pour notre salut à tous deux, qu'ils n'en revendiquent que le nom. Je n'aimerais pas que les véritables Molochéains en aient après moi.}{Je souhaite, pour notre salut à tous deux, qu'ils n'en revendiquent que le nom. Je n'aimerais pas que les véritables Molochéains en aient après moi.}{}{125}{}{ }
+{1121}{Eh bien, j'aimerais vous poser des questions à propos de cet anneau.}{}{5}{in 2804,  lf13 0}{10}{lf13 1 }
+{1122}{Intéressant. J'aimerais vous poser des questions au sujet d'un anneau. [Vous décrivez l'anneau.]}{}{5}{ni 2804,  lf13 0}{10}{lf13 1 }
+{1123}{K:}{}{5}{lf13 1}{1290}{ }
+{1124}{Pourquoi pensez-vous qu'ils ont tenté de nous tuer ?}{}{5}{lf13 1}{1380}{ }
+{1129}{Je resterai donc sur mes gardes. Bonne journée.}{}{5}{}{0}{ }
+{1130}{Il n'y a pas grand-chose à dire en réalité, Chukka prend excessivement à coeur son rôle de garde du corps. Il a occis l'intrus avant que je puisse l'interroger. On n'a trouvé sur lui qu'une amulette marquée du symbole de la Main de Moloch, l'oeil dans l'hexagramme.}{Il n'y a pas grand-chose à dire en réalité, Chukka prend excessivement à coeur son rôle de garde du corps. Il a occis l'intrus avant que je puisse l'interroger. On n'a trouvé sur lui qu'une amulette marquée du symbole de la Main de Moloch, l'oeil dans l'hexagramme.}{}{126}{}{gf1085 1 }
+{1131}{La Main de Moloch ?}{}{5}{}{1140}{lf15 1 }
+{1140}{C'était une secte d'assassins, il y a cinq cents ans. Des rumeurs à propos de leur existence resurgissent de temps à autre, mais ce ne sont généralement que des canulars. Je parie qu'il s'agit d'un nouveau groupe qui veut exploiter le prestige de ce nom.}{C'était une secte d'assassins, il y a cinq cents ans. Des rumeurs à propos de leur existence resurgissent de temps à autre, mais ce ne sont généralement que des canulars. Je parie qu'il s'agit d'un nouveau groupe qui veut exploiter le prestige de ce nom.}{}{127}{}{ru2019 }
+{1141}{Ils semblent en avoir après moi également.}{}{5}{gf1045 1}{1150}{ }
+{1144}{E:}{}{5}{}{0}{ }
+{1150}{Je souhaite, pour notre salut à tous deux, qu'ils n'en revendiquent que le nom. Je n'aimerais pas que les véritables Molochéains en aient après moi.}{Je souhaite, pour notre salut à tous deux, qu'ils n'en revendiquent que le nom. Je n'aimerais pas que les véritables Molochéains en aient après moi.}{}{128}{}{ }
+{1151}{Pourquoi pensez-vous qu'ils ont tenté de nous tuer ?}{}{5}{}{1380}{ }
+{1152}{K:}{}{5}{}{1290}{ }
+{1153}{Je resterai donc sur mes gardes. Bonne journée.}{}{5}{}{0}{ }
+{1160}{Il n'y a pas grand-chose à dire en réalité, Chukka prend excessivement à coeur son rôle de garde du corps. Il a occis l'intrus avant que je puisse l'interroger. On n'a trouvé sur lui qu'une amulette marquée du symbole de la Main de Moloch, l'oeil dans l'hexagramme.}{Il n'y a pas grand-chose à dire en réalité, Chukka prend excessivement à coeur son rôle de garde du corps. Il a occis l'intrus avant que je puisse l'interroger. On n'a trouvé sur lui qu'une amulette marquée du symbole de la Main de Moloch, l'oeil dans l'hexagramme.}{}{129}{}{gf1085 1 }
+{1161}{La Main de Moloch ?}{}{5}{}{1170}{lf15 1 }
+{1170}{C'était une secte d'assassins, il y a cinq cents ans. Des rumeurs à propos de leur existence resurgissent de temps à autre, mais ce ne sont généralement que des canulars. Je parie qu'il s'agit d'un nouveau groupe qui veut exploiter le prestige de ce nom.}{C'était une secte d'assassins, il y a cinq cents ans. Des rumeurs à propos de leur existence resurgissent de temps à autre, mais ce ne sont généralement que des canulars. Je parie qu'il s'agit d'un nouveau groupe qui veut exploiter le prestige de ce nom.}{}{130}{}{ru2019 }
+{1171}{Ils semblent en avoir après moi également.}{}{5}{gf1045 1}{1180}{ }
+{1174}{Intéressant mais je voudrais vous parler d'un anneau. [Vous décrivez l'anneau.]}{}{5}{ni 2804, lf13 0}{10}{lf13 1 }
+{1175}{Je vois. Mais, pour en revenir à l'essentiel, Duverger m'a confié la tâche de vous confondre.}{}{5}{qu1039 1, in 5202}{260}{re - 10 }
+{1176}{Je vois. Pour en revenir à l'essentiel, Duverger m'a confié la tâche de vous confondre.}{}{5}{qu1039 2}{260}{re - 10 }
+{1177}{En fait, je suis ici pour vous mettre en garde contre Duverger. Il veut vous nuire.}{}{5}{qu1039 1, gf1006 0, ni5202}{260}{gf1012 1 }
+{1178}{Intéressant mais je suis ici pour vous parler de cet anneau. [Vous montrez l'anneau.]}{}{5}{in 2804, lf13 0}{10}{lf3 1 }
+{1179}{En fait, je suis ici pour vous mettre en garde contre Duverger. Il veut vous nuire.}{}{5}{ gf1006 1}{290}{gf1012 1 }
+{1180}{Je souhaite, pour notre salut à tous deux, qu'ils n'en revendiquent que le nom. Je n'aimerais pas que les véritables Molochéains en aient après moi.}{Je souhaite, pour notre salut à tous deux, qu'ils n'en revendiquent que le nom. Je n'aimerais pas que les véritables Molochéains en aient après moi.}{}{131}{}{ }
+{1183}{Intéressant mais je voudrais vous parler d'un anneau. [Vous décrivez l'anneau.]}{}{5}{ni 2804, lf13 0}{10}{lf13 1 }
+{1184}{Je vois. Mais, pour en revenir à l'essentiel, Duverger m'a confié la tâche de vous confondre.}{}{5}{qu1039 1, in 5202}{260}{re - 10 }
+{1185}{Je vois. Pour en revenir à l'essentiel, Duverger m'a confié la tâche de vous confondre.}{}{5}{qu1039 2}{260}{re - 10 }
+{1186}{En fait, je suis ici pour vous mettre en garde contre Duverger. Il veut vous nuire.}{}{5}{qu1039 1, gf1006 0, ni5202}{260}{gf1012 1 }
+{1187}{Intéressant mais je suis ici pour vous parler de cet anneau. [Vous montrez l'anneau.]}{}{5}{in 2804, lf13 0}{10}{lf3 1 }
+{1188}{En fait, je suis ici pour vous mettre en garde contre Duverger. Il veut vous nuire.}{}{5}{ gf1006 1}{290}{gf1012 1 }
+{1190}{Pourquoi pensez-vous qu'ils ont tenté de nous tuer ?}{}{5}{lf13 1}{1380}{ }
+{1194}{Je resterai donc sur mes gardes. Bonne journée.}{}{5}{}{0}{ }
+{1195}{Il n'y a pas grand-chose à dire en réalité, Chukka prend excessivement à coeur son rôle de garde du corps. Il a occis l'intrus avant que je puisse l'interroger. On n'a trouvé sur lui qu'une amulette marquée du symbole de la Main de Moloch, l'oeil dans l'hexagramme.}{Il n'y a pas grand-chose à dire en réalité, Chukka prend excessivement à coeur son rôle de garde du corps. Il a occis l'intrus avant que je puisse l'interroger. On n'a trouvé sur lui qu'une amulette marquée du symbole de la Main de Moloch, l'oeil dans l'hexagramme.}{}{132}{}{gf1085 1 }
+{1196}{La Main de Moloch ?}{}{5}{}{1205}{lf15 1 }
+{1205}{C'était une secte d'assassins, il y a cinq cents ans. Des rumeurs à propos de leur existence resurgissent de temps à autre, mais ce ne sont généralement que des canulars. Je parie qu'il s'agit d'un nouveau groupe qui veut exploiter le prestige de ce nom.}{C'était une secte d'assassins, il y a cinq cents ans. Des rumeurs à propos de leur existence resurgissent de temps à autre, mais ce ne sont généralement que des canulars. Je parie qu'il s'agit d'un nouveau groupe qui veut exploiter le prestige de ce nom.}{}{133}{}{ru2019 }
+{1206}{Ils semblent en avoir après moi également.}{}{5}{gf1045 1}{1215}{ }
+{1207}{Eh bien, j'aimerais vous poser des questions à propos de cet anneau.}{}{5}{in 2804,  lf13 0}{10}{lf13 1 }
+{1208}{Intéressant. J'aimerais vous poser des questions au sujet d'un anneau. [Vous décrivez l'anneau.]}{}{5}{ni 2804,  lf13 0}{10}{lf13 1 }
+{1209}{Quels sont vos liens avec le Clan du Mont Noir ?}{}{5}{gf1007 1}{360}{ }
+{1214}{E:}{}{5}{}{0}{ }
+{1215}{Je souhaite, pour notre salut à tous deux, qu'ils n'en revendiquent que le nom. Je n'aimerais pas que les véritables Molochéains en aient après moi.}{Je souhaite, pour notre salut à tous deux, qu'ils n'en revendiquent que le nom. Je n'aimerais pas que les véritables Molochéains en aient après moi.}{}{134}{}{ }
+{1216}{Eh bien, j'aimerais vous poser des questions à propos de cet anneau.}{}{5}{in 2804,  lf13 0}{10}{lf13 1 }
+{1217}{Intéressant. J'aimerais vous poser des questions au sujet d'un anneau. [Vous décrivez l'anneau.]}{}{5}{ni 2804,  lf13 0}{10}{lf13 1 }
+{1218}{Quels sont vos liens avec le Clan du Mont Noir ?}{}{5}{gf1007 1}{360}{ }
+{1223}{Pourquoi pensez-vous qu'ils ont tenté de nous tuer ?}{}{5}{lf13 1}{1380}{ }
+{1224}{Je resterai donc sur mes gardes. Bonne journée.}{}{5}{}{0}{ }
+{1225}{Il n'y a pas grand-chose à dire en réalité, Chukka prend excessivement à coeur son rôle de garde du corps. Il a occis l'intrus avant que je puisse l'interroger. On n'a trouvé sur lui qu'une amulette marquée du symbole de la Main de Moloch, l'oeil dans l'hexagramme.}{Il n'y a pas grand-chose à dire en réalité, Chukka prend excessivement à coeur son rôle de garde du corps. Il a occis l'intrus avant que je puisse l'interroger. On n'a trouvé sur lui qu'une amulette marquée du symbole de la Main de Moloch, l'oeil dans l'hexagramme.}{}{135}{}{gf1085 1 }
+{1226}{La Main de Moloch ?}{}{5}{}{1235}{lf15 1 }
+{1235}{C'était une secte d'assassins, il y a cinq cents ans. Des rumeurs à propos de leur existence resurgissent de temps à autre, mais ce ne sont généralement que des canulars. Je parie qu'il s'agit d'un nouveau groupe qui veut exploiter le prestige de ce nom.}{C'était une secte d'assassins, il y a cinq cents ans. Des rumeurs à propos de leur existence resurgissent de temps à autre, mais ce ne sont généralement que des canulars. Je parie qu'il s'agit d'un nouveau groupe qui veut exploiter le prestige de ce nom.}{}{136}{}{gf1085 1, ru2019 }
+{1236}{Ils semblent en avoir après moi également.}{}{5}{gf1045 1}{1240}{ }
+{1239}{C'est très intéressant.}{}{5}{}{610}{ }
+{1240}{Je souhaite, pour notre salut à tous deux, qu'ils n'en revendiquent que le nom. Je n'aimerais pas que les véritables Molochéains en aient après moi.}{Je souhaite, pour notre salut à tous deux, qu'ils n'en revendiquent que le nom. Je n'aimerais pas que les véritables Molochéains en aient après moi.}{}{137}{}{ }
+{1244}{Je resterai donc sur mes gardes.}{}{5}{}{610}{ }
+{1245}{Pourquoi me dérangez-vous encore à ce sujet ?}{Pourquoi me dérangez-vous encore à ce sujet ?}{}{138}{}{ }
+{1246}{Je voudrais avoir comment vous êtes entré en relation avec Stennar Tailleroche.}{}{5}{}{1250}{ }
+{1247}{Pardonnez mon intrusion. Bonne journée.}{}{5}{}{0}{ }
+{1250}{Stennar ? Je l'ai rencontré quand je n'étais qu'un jeune homme. En vérité, c'est une sacrée histoire.}{Stennar ? Je l'ai rencontré quand je n'étais qu'un jeune homme. En vérité, c'est une sacrée histoire.}{}{139}{}{ }
+{1251}{Je vous écoute.}{}{5}{}{-42}{ }
+{1252}{Je vous prie de m'excuser mais je dois partir.}{}{5}{}{0}{ }
+{1260}{C'est une assez longue histoire... l'histoire de ma honte en vérité.}{C'est une assez longue histoire... l'histoire de ma honte en vérité.}{}{140}{}{ }
+{1261}{Je vous écoute.}{}{5}{}{-42}{ru2017 }
+{1270}{Il savait que cet anneau serait un gage d'authenticité pour votre histoire. J'ai donné l'anneau à Stennar la dernière fois que je l'ai vu. Et maintenant il est mort... [Il s'interrompt un instant, visiblement pour essayer de se ressaisir.] Si seulement nous savions ce qu'il entend par "le mal".}{Il savait que cet anneau serait un gage d'authenticité pour votre histoire. J'ai donné l'anneau à Stennar la dernière fois que je l'ai vu. Et maintenant il est mort... [Il s'interrompt un instant, visiblement pour essayer de se ressaisir.] Si seulement nous savions ce qu'il entend par "le mal".}{}{141}{}{ }
+{1272}{D'après la religion Panarii, le "mal" serait en rapport avec un certain Arronax.}{}{5}{gf2344 1}{1480}{ }
+{1273}{J'ai rencontré un adepte du Panarii qui pensait que cela avait une signification religieuse. Mais je ne sais pas si...}{}{5}{gf2004 1, gf2344 0, pa-6409}{1490}{ }
+{1274}{Virgile, ici présent, pense que cela a quelque chose à voir avec sa religion. Mais je ne sais pas si...}{}{5}{gf2344 0, pa6409}{1490}{ }
+{1278}{Que pouvons-nous faire maintenant ?}{}{5}{gf1007 0, gf2004 0, gf2344 0, pa-6409}{1280}{ }
+{1279}{Que pouvons-nous faire maintenant ?}{}{5}{gf1007 1, gf2004 0, gf2344 0}{450}{ }
+{1280}{Je suis certain qu'il doit y avoir un indice dans les mines du Mont Noir. Vous semblez être une personne pleine de ressources, seriez-vous intéressé pour explorer les mines afin de m'aider à découvrir ce qui s'est passé ? Je peux vous assurer que je saurai vous récompenser.}{Je suis certain qu'il doit y avoir un indice dans les mines du Mont Noir. Vous semblez être une personne pleine de ressources, seriez-vous intéressée pour explorer les mines afin de m'aider à découvrir ce qui s'est passé ? Je peux vous assurer que je saurai vous récompenser.}{}{142}{}{ }
+{1281}{J'aimerais également résoudre cette énigme. J'accepte.}{}{5}{qb1014 1}{470}{qu1013 2 }
+{1282}{J'aimerais également résoudre cette énigme. J'accepte.}{}{5}{qu1014 2}{470}{ }
+{1283}{J'aimerais vous poser d'autres questions avant de m'engager.}{}{5}{qb1014 1}{1290}{qu1013 1 }
+{1284}{J'aimerais vous poser d'autres questions avant de m'engager.}{}{5}{qu1014 2}{1290}{ }
+{1288}{Cela me semble un peu trop dangereux. Bonne journée, monsieur.}{}{5}{qu1014 2}{0}{ }
+{1289}{Cela me semble un peu trop dangereux. Bonne journée, monsieur.}{}{5}{qb1014 1}{0}{qu1013 1 }
+{1290}{Naturellement. Que voulez-vous me demander ?}{Naturellement. Que voulez-vous me demander ?}{}{143}{}{ }
+{1291}{En fait, vous n'êtes pas l'inventeur de la machine à vapeur ?}{}{5}{}{1035}{ }
+{1292}{Pourquoi cette volonté d'impressionner les nains alors qu'ils vous avaient rejeté ?}{}{5}{}{1320}{ }
+{1293}{Qu'avez-vous à me dire au sujet de la tentative de meurtre dont vous avez été récemment victime ?}{}{5}{gf1028 1, lf15 0}{1130}{lf15 1 }
+{1294}{Pourquoi pensez-vous que la Main de Moloch a tenté de nous tuer ?}{}{5}{lf15 1}{1380}{ }
+{1295}{Pouvez-vous m'en dire plus sur vos activités ?}{}{5}{}{1395}{ }
+{1307}{J'ai décidé d'explorer les mines du Clan du Mont Noir pour vous aider.}{}{5}{qu1014 2, qb1013 1}{470}{ }
+{1308}{J'ai décidé d'explorer les mines du Clan du Mont Noir pour vous aider.}{}{5}{qb1014 1, qb1013 1}{470}{qu1013 2 }
+{1309}{E:}{}{5}{}{0}{ }
+{1310}{La fougue de la jeunesse et mon impétuosité ont fait que je n'ai pas réfléchi aux conséquences de mes actes. Je ne pensais qu'à conquérir le respect des nains. C'était tout ce qui comptait.}{La fougue de la jeunesse et mon impétuosité ont fait que je n'ai pas réfléchi aux conséquences de mes actes. Je ne pensais qu'à conquérir le respect des nains. C'était tout ce qui comptait.}{}{144}{}{ }
+{1311}{Ce doit être perturbant de récolter tant de louanges pour l'invention de la machine à vapeur.}{}{5}{}{1038}{ }
+{1320}{Vous ne comprenez pas, j'ai été... j'ai été orphelin très jeune. Les nains représentaient tout ce que j'attendais d'une famille ; c'était un clan solide et soudé. Et j'avais un immense respect pour leur maîtrise de la technologie... j'ai fait une erreur de jeunesse... j'ai cru que mon intelligence me permettrait d'attirer l'estime des autres. J'avais besoin de faire partie d'un groupe, de prouver ma valeur.}{Vous ne comprenez pas, j'ai été... j'ai été orphelin très jeune. Les nains représentaient tout ce que j'attendais d'une famille ; c'était un clan solide et soudé. Et j'avais un immense respect pour leur maîtrise de la technologie... j'ai fait une erreur de jeunesse... j'ai cru que mon intelligence me permettrait d'attirer l'estime des autres. J'avais besoin de faire partie d'un groupe, de prouver ma valeur.}{}{145}{}{ }
+{1321}{Vous êtes orphelin ? Que s'est-il passé ?}{}{5}{}{1350}{ }
+{1322}{K:}{}{5}{}{1290}{ }
+{1329}{Je dois prendre congé de vous, cher monsieur.}{}{5}{}{0}{ }
+{1330}{Le mal ? Quel mal ? Et d'où s'est-il échappé ?}{Le mal ? Quel mal ? Et d'où s'est-il échappé ?}{}{146}{}{ }
+{1331}{Il ne l'a pas dit. J'espérais que vous comprendriez ce qu'il a voulu dire.}{}{5}{}{1340}{ }
+{1340}{Il a dû se passer quelque chose d'horrible après que je... après que je ...[Sa gorge se noue. A l'évidence, il est trop perturbé pour continuer.] A-t-il... a-t-il dit autre chose ?}{Il a dû se passer quelque chose d'horrible après que je... après que je ...[Sa gorge se noue. A l'évidence, il est trop perturbé pour continuer.] A-t-il... a-t-il dit autre chose ?}{}{147}{}{ }
+{1341}{Il a parlé de vous quand vous étiez enfant. Pourquoi d'après vous ?}{}{5}{}{90}{ }
+{1350}{Ma mère est morte en me mettant au monde. Je crois que mon père s'est éteint également à ce moment-là, même s'il a continué à errer de par le monde pendant encore huit années. Quand il n'a plus supporté de vivre, il a mis fin à ses jours.}{Ma mère est morte en me mettant au monde. Je crois que mon père s'est éteint également à ce moment-là, même s'il a continué à errer de par le monde pendant encore huit années. Quand il n'a plus supporté de vivre, il a mis fin à ses jours.}{}{148}{}{ }
+{1351}{Et il vous a abandonné comme ça...}{}{5}{}{1360}{ }
+{1360}{Il m'a laissé de quoi vivre décemment et comme, jour après jour, il perdait pied avec la réalité, je crois qu'il a dû penser que je serais plus en sécurité avec d'autres que lui. [Il secoue la tête, tristement.] La dernière chose qu'il ait faite dans cette vie fut de me donner cet anneau.}{Il m'a laissé de quoi vivre décemment et comme, jour après jour, il perdait pied avec la réalité, je crois qu'il a dû penser que je serais plus en sécurité avec d'autres que lui. [Il secoue la tête, tristement.] La dernière chose qu'il ait faite dans cette vie fut de me donner cet anneau.}{}{149}{}{ }
+{1361}{Puis vous l'avez donné à Stennar ?}{}{5}{}{1370}{ }
+{1362}{C'est une bien triste histoire. J'ai décidé d'explorer les mines du Clan du Mont Noir pour vous aider, monsieur.}{}{5}{qu1014 2, qb1013 1}{470}{ }
+{1363}{C'est une bien triste histoire. J'ai décidé d'explorer les mines du Clan du Mont Noir pour vous aider, monsieur.}{}{5}{qb1014 1, qb1013 1}{470}{qu1013 2 }
+{1370}{Ceci témoigne du prix que j'attachais à son amitié. J'ai été anéanti quand il a disparu avec le reste du clan. Je crois que je me suis senti encore plus seul et abandonné que quand mon père s'est donné la mort.}{Ceci témoigne du prix que j'attachais à son amitié. J'ai été anéanti quand il a disparu avec le reste du clan. Je crois que je me suis senti encore plus seul et abandonné que quand mon père s'est donné la mort.}{}{150}{}{ }
+{1371}{K:}{}{5}{}{1290}{ }
+{1379}{Je dois prendre congé de vous, cher monsieur.}{}{5}{}{0}{ }
+{1380}{Je ne sais pas. Mais je commence à croire qu'ils y sont pour quelque chose dans la mort de Stennar. Tout cela semble être lié à mes relations avec le Clan du Mont Noir, n'est-ce pas ? C'est pour cela que je pense qu'il est impératif de découvrir ce qui est arrivé au clan. A vrai dire, je pense que nos vies en dépendent.}{Je ne sais pas. Mais je commence à croire qu'ils y sont pour quelque chose dans la mort de Stennar. Tout cela semble être lié à mes relations avec le Clan du Mont Noir, n'est-ce pas ? C'est pour cela que je pense qu'il est impératif de découvrir ce qui est arrivé au clan. A vrai dire, je pense que nos vies en dépendent.}{}{151}{}{ }
+{1381}{K:}{}{5}{}{1290}{ }
+{1382}{Certaines vies plus que d'autres, on dirait ?}{}{5}{}{1390}{ }
+{1389}{E:}{}{5}{}{0}{ }
+{1390}{[Il jette un regard à son imposant garde du corps.] Oui, il semble que je sois assez bien protégé ici mais, plus on est entouré, plus il est facile de soudoyer quelqu'un ou de le remplacer par un assassin. De plus, ma notoriété fait de moi un prisonnier dans ma propre demeure. Ils sauront toujours où me trouver. Vous, en revanche, vous pouvez vous fondre dans la foule, si je puis dire.}{[Il jette un regard à son imposant garde du corps.] Oui, il semble que je sois assez bien protégé ici mais, plus on est entouré, plus il est facile de soudoyer quelqu'un ou de le remplacer par un assassin. De plus, ma notoriété fait de moi un prisonnier dans ma propre demeure. Ils sauront toujours où me trouver. Vous, en revanche, vous pouvez vous fondre dans la foule, si je puis dire.}{}{152}{}{ }
+{1391}{K:}{}{5}{}{1290}{ }
+{1394}{E:}{}{5}{}{0}{ }
+{1395}{Eh bien, comme vous le savez, je suis le plus grand constructeur de machines à vapeur d'Arcanum et je ne me connais aucun concurrent. Pour être plus précis, je travaille actuellement sur un prototype de machine plus performante et plus petite. J'ai également investi dans d'autres projets technologiques.}{Eh bien, comme vous le savez, je suis le plus grand constructeur de machines à vapeur d'Arcanum et je ne me connais aucun concurrent. Pour être plus précis, je travaille actuellement sur un prototype de machine plus performante et plus petite. J'ai également investi dans d'autres projets technologiques.}{}{153}{}{ }
+{1396}{Comment avez-vous réussi à éradiquer toute concurrence ?}{}{5}{}{1405}{ }
+{1397}{Avez-vous des problèmes particuliers de main-d'oeuvre dans vos usines ?}{}{5}{ra7}{1430}{re-5 }
+{1398}{Avez-vous des problèmes particuliers de main-d'oeuvre dans vos usines ?}{}{5}{ra-7}{1460}{ }
+{1399}{K:}{}{5}{}{1290}{ }
+{1404}{E:}{}{5}{}{0}{ }
+{1405}{Ce n'est pas vraiment un exploit quand votre principal concurrent se nomme Cédric Duverger. Pauvre Cédric. Il a toujours été un peu fou et maladroit. J'aurais vraiment aimé pouvoir le convaincre de venir travailler pour moi...}{Ce n'est pas vraiment un exploit quand votre principal concurrent se nomme Cédric Duverger. Pauvre Cédric. Il a toujours été un peu fou et maladroit. J'aurais vraiment aimé pouvoir le convaincre de venir travailler pour moi...}{}{154}{}{ }
+{1406}{Pourquoi ? Je veux dire, est-il tellement idiot ?}{}{5}{}{1410}{ }
+{1407}{K:}{}{5}{}{1290}{ }
+{1409}{E:}{}{5}{}{0}{ }
+{1410}{Enfants, Cédric et moi-même étions amis. Il était furieux que je refuse de le présenter aux nains... vous vous imaginez ? J'avais eu suffisamment de mal à gagner leur respect pour ne pas, en plus, m'encombrer de sa naïveté. Après que j'ai eu "inventé" la machine à vapeur, il s'est mis à me mépriser. C'est étrange mais, certains jours je souhaiterais qu'il soit encore mon ami.}{Enfants, Cédric et moi-même étions amis. Il était furieux que je refuse de le présenter aux nains... vous vous imaginez ? J'avais eu suffisamment de mal à gagner leur respect pour ne pas, en plus, m'encombrer de sa naïveté. Après que j'ai eu "inventé" la machine à vapeur, il s'est mis à me mépriser. C'est étrange, mais certains jours je souhaiterais qu'il soit encore mon ami.}{}{155}{}{ }
+{1411}{Duverger a tenté de m'engager pour que je vous dérobe quelque chose qui lui permettrait de vous compromettre.}{}{5}{qa1039 1, gf1012 0}{1420}{gf1012 1 }
+{1414}{K:}{}{5}{}{1290}{ }
+{1419}{E:}{}{5}{}{0}{ }
+{1420}{Cédric, espèce d'ordure ! Je suis las de ses intrigues... c'est bien triste, mais je crois qu'il est temps que quelqu'un lui rende une petite visite, avant qu'il n'ait le courage d'engager des gens pour me supprimer.}{Cédric, espèce d'ordure ! Je suis las de ses intrigues... c'est bien triste, mais je crois qu'il est temps que quelqu'un lui rende une petite visite, avant qu'il n'ait le courage d'engager des gens pour me supprimer.}{}{156}{}{ }
+{1421}{Avez-vous des problèmes particuliers de main-d'oeuvre dans vos usines ?}{}{5}{ra7}{1430}{re-5 }
+{1422}{Avez-vous des problèmes particuliers de main-d'oeuvre dans vos usines ?}{}{5}{ra-7}{1460}{ }
+{1423}{K:}{}{5}{}{1290}{ }
+{1429}{E:}{}{5}{}{0}{ }
+{1430}{[Il vous regarde avec méfiance.] Pourquoi me demandez-vous ça, [Il s'interrompt]... demi-orque ? Vous ne seriez pas un sympathisant de la classe ouvrière, par hasard ? " Syndicaliste " peut-être ? Je peux vous assurer que mes ouvriers sont très contents de leur sort. Je traite vos semblables bien mieux que n'importe quel industriel, ça je puis vous l'assurer.}{[Il vous regarde avec méfiance.] Pourquoi me demandez-vous ça, [Il s'interrompt]... demi-orque ? Vous ne seriez pas une sympathisante de la classe ouvrière, par hasard ? " Syndicaliste " peut-être ? Je peux vous assurer que mes ouvriers sont très contents de leur sort. Je traite vos semblables bien mieux que n'importe quel industriel, ça je puis vous l'assurer.}{}{157}{}{ }
+{1431}{Je ne voulais rien insinuer, monsieur. Simple curiosité.}{}{5}{}{1440}{re+5 }
+{1432}{Balivernes, vous avez un sacré culot espèce d'oppresseur raciste !}{}{5}{}{1450}{re-10 }
+{1433}{K:}{}{5}{}{1290}{ }
+{1439}{E:}{}{5}{}{0}{ }
+{1440}{Oui, je peux comprendre ça, avec toute cette vague de contestation véhiculée par la presse. Mais, pour répondre à votre première question, je crois que j'ai eu la chance d'échapper à bon nombre de problèmes que d'autres ont connus avec leurs ouvriers. Je pense que c'est parce que je traite mes ouvriers mieux que les autres. Figurez-vous que leurs conditions de travail sont presque humaines.}{Oui, je peux comprendre ça, avec toute cette vague de contestation véhiculée par la presse. Mais, pour répondre à votre première question, je crois que j'ai eu la chance d'échapper à bon nombre de problèmes que d'autres ont connus avec leurs ouvriers. Je pense que c'est parce que je traite mes ouvriers mieux que les autres. Figurez-vous que leurs conditions de travail sont presque humaines.}{}{158}{}{ }
+{1441}{K:}{}{5}{}{1290}{ }
+{1442}{Je ne tolérerai pas plus longtemps vos manières pompeuses ! A mort, la bourgeoisie !}{}{5}{}{0}{fl 1050 ,co}
+{1449}{E:}{}{5}{}{0}{ }
+{1450}{Comment osez-vous, monsieur ! Je ne tolérerai pas qu'un agitateur de race inférieure m'insulte dans ma propre demeure !}{Comment osez-vous, madame ! Je ne tolérerai pas qu'une agitatrice de race inférieure m'insulte dans ma propre demeure !}{}{159}{}{ }
+{1451}{Excusez-moi. Les individus de race inférieure comme moi-même sont prompts à la colère.}{}{5}{}{1455}{re+10 }
+{1452}{Je ne tolérerai pas plus longtemps vos manières pompeuses ! A mort, la bourgeoisie !}{}{5}{}{0}{fl 1050 ,co}
+{1455}{Oui, oui, c'est vrai. Les races inférieures manquent de retenue. Je suppose que vous n'êtes pas responsable de vos tares raciales.}{Oui, oui, c'est vrai. Les races inférieures manquent de retenue. Je suppose que vous n'êtes pas responsable de vos tares raciales.}{}{160}{}{ }
+{1456}{Je vais faire un exemple en vous faisant la peau, sale bourgeois !}{}{5}{}{0}{fl 1050 ,co}
+{1457}{K:}{}{5}{}{1290}{ }
+{1459}{E:}{}{5}{}{0}{ }
+{1460}{[Il vous regarde avec méfiance.] Pourquoi demandez-vous ça ? Vous ne seriez pas un sympathisant de la classe ouvrière, par hasard ? " Syndicaliste " peut-être ? Je peux vous assurer que mes ouvriers sont très contents de leur sort. Je traite tous les orques de la même façon, les pure race comme les hybrides ; bien mieux que d'autres industriels. Ca, je puis vous le certifier.}{[Il vous regarde avec méfiance.] Pourquoi demandez-vous ça ? Vous ne seriez pas une sympathisante de la classe ouvrière, par hasard ? " Syndicaliste " peut-être ? Je peux vous assurer que mes ouvriers sont très contents de leur sort. Je traite tous les orques de la même façon, les pure race comme les hybrides ; bien mieux que d'autres industriels. Ca, je puis vous le certifier.}{}{161}{}{ }
+{1461}{Je ne voulais rien insinuer, monsieur. Simple curiosité.}{}{5}{}{1440}{re+5 }
+{1462}{Balivernes, vous avez un sacré culot espèce d'oppresseur raciste !}{}{5}{}{1470}{re-10 }
+{1463}{K:}{}{5}{}{1290}{ }
+{1469}{E:}{}{5}{}{0}{ }
+{1470}{Comment osez-vous ! Je ne tolérerai pas qu'un agitateur m'insulte sous mon propre toit !}{Comment osez-vous ! Je ne tolérerai pas qu'une agitatrice m'insulte sous mon propre toit !}{}{162}{}{ }
+{1471}{Je vous prie de m'excuser, monsieur. Mon emportement était déplacé.}{}{5}{}{1475}{ }
+{1472}{Je ne tolérerai pas plus longtemps vos manières pompeuses ! A mort, la bourgeoisie !}{}{5}{}{0}{fl 1050 ,co}
+{1475}{Pour cette fois, je pense pouvoir passer sur votre grossièreté.}{Pour cette fois, je pense pouvoir passer sur votre grossièreté.}{}{163}{}{ }
+{1476}{K:}{}{5}{}{1290}{ }
+{1479}{J'apprécie votre clémence, monsieur. Cependant, je dois partir. Bonne journée.}{}{5}{}{0}{ }
+{1480}{Je n'accorde guère de crédit aux radotages religieux. Je me préoccupe plus de savoir qui a tué Stennar et pourquoi, et de découvrir en quoi mes liens avec le Clan du Mont Noir ont quelque chose à voir avec cette affaire.}{Je n'accorde guère de crédit aux radotages religieux. Je me préoccupe plus de savoir qui a tué Stennar et pourquoi, et de découvrir en quoi mes liens avec le Clan du Mont Noir ont quelque chose à voir avec cette affaire.}{}{164}{}{ }
+{1481}{Alors, que faut-il faire maintenant ?}{}{5}{gf1007 1}{450}{ }
+{1482}{Alors, que faut-il faire maintenant ?}{}{5}{gf1007 0}{1280}{ }
+{1490}{Moi non plus, je n'accorde guère de crédit aux radotages religieux. Mais, si vous estimez que cela peut vous aider à obtenir plus d'informations sur la religion Panarii, vous devriez vous rendre à leur temple, situé à l'extrémité nord de la Promenade du Lion. Je me préoccupe plus de savoir qui a tué Stennar et pourquoi, et de découvrir en quoi mes liens avec le Clan du Mont Noir ont quelque chose à voir avec cette affaire.}{Moi non plus, je n'accorde guère de crédit aux radotages religieux. Mais, si vous estimez que cela peut vous aider à obtenir plus d'informations sur la religion Panarii, vous devriez vous rendre à leur temple, situé à l'extrémité nord de la Promenade du Lion. Je me préoccupe plus de savoir qui a tué Stennar et pourquoi, et de découvrir en quoi mes liens avec le Clan du Mont Noir ont quelque chose à voir avec cette affaire.}{}{165}{}{ru2154 }
+{1491}{Alors, que faut-il faire maintenant ?}{}{5}{gf1007 1}{450}{ }
+{1492}{Alors, que faut-il faire maintenant ?}{}{5}{gf1007 0}{1280}{ }
+{1500}{Quelle ironie que ma plus grande erreur soit celle qui m'a procuré une telle richesse ! Quand j'étais jeune, je cultivais une véritable passion pour les nains et leur mode de vie, alors je me suis rendu au clan le plus proche pour tenter d'impressionner ses membres par mes connaissances dans leur technologie. Ils ont ri.}{Quelle ironie que ma plus grande erreur soit celle qui m'a procuré une telle richesse ! Quand j'étais jeune, je cultivais une véritable passion pour les nains et leur mode de vie, alors je me suis rendu au clan le plus proche pour tenter d'impressionner ses membres par mes connaissances dans leur technologie. Ils ont ri.}{}{166}{}{ }
+{1501}{[Suite]}{}{1}{}{1502}{ }
+{1502}{C'était, à l'évidence, quelque chose de nouveau pour eux : un humain ridicule qui avait une prédisposition naturelle pour la technologie. Je suppose, qu'à l'époque, du haut de mes quatorze ans, mon jeune âge n'a rien arrangé. Je devins un sujet de plaisanterie pour eux.}{C'était, à l'évidence, quelque chose de nouveau pour eux : un humain ridicule qui avait une prédisposition naturelle pour la technologie. Je suppose, qu'à l'époque, du haut de mes quatorze ans, mon jeune âge n'a rien arrangé. Je devins un sujet de plaisanterie pour eux.}{}{167}{}{ }
+{1503}{[Suite]}{}{1}{}{1504}{ }
+{1504}{Pendant toutes ces années, Stennar fut le seul qui m'ait vraiment considéré comme un ami et j'ai répondu à son amitié par la traîtrise. Ce fut lui qui, le premier, m'a montré leur machine à vapeur, car il savait que j'apprécierais la magnifique complexité de cet appareil.}{Pendant toutes ces années, Stennar fut le seul qui m'ait vraiment considéré comme un ami et j'ai répondu à son amitié par la traîtrise. Ce fut lui qui, le premier, m'a montré leur machine à vapeur, car il savait que j'apprécierais la magnifique complexité de cet appareil.}{}{168}{}{ }
+{1505}{[Suite]}{}{1}{}{1506}{ }
+{1506}{Ils l'avaient abandonné dans un coin, livré à la rouille, car ils avaient peu l'usage d'un appareil capable de se substituer à leur puissance physique. Imaginez un nain dépendant d'une machine pour creuser ses galeries ! C'est grotesque.}{Ils l'avaient abandonné dans un coin, livré à la rouille, car ils avaient peu l'usage d'un appareil capable de se substituer à leur puissance physique. Imaginez un nain dépendant d'une machine pour creuser ses galeries ! C'est grotesque.}{}{169}{}{ }
+{1507}{[Suite]}{}{1}{}{1508}{ }
+{1508}{J'ai demandé à Stennar si je pouvais le bricoler et peut-être l'améliorer, car je savais que c'était le seul moyen de faire mes preuves dans l'univers des nains. J'ai rapidement mis au point un système qui permettait de l'utiliser pour alimenter une pompe destinée à assécher les mines.}{J'ai demandé à Stennar si je pouvais le bricoler et peut-être l'améliorer, car je savais que c'était le seul moyen de faire mes preuves dans l'univers des nains. J'ai rapidement mis au point un système qui permettait de l'utiliser pour alimenter une pompe destinée à assécher les mines.}{}{170}{}{ }
+{1509}{[Suite]}{}{1}{}{1510}{ }
+{1510}{Quand j'ai tenté de leur expliquer à quoi servait mon appareil, encore une fois, ils se mirent à rire. Il fallait que je trouve un moyen de gagner leur respect, j'ai donc rapidement élaboré quelques schématiques et je me suis mis au travail pour prouver ma théorie.}{Quand j'ai tenté de leur expliquer à quoi servait mon appareil, encore une fois, ils se mirent à rire. Il fallait que je trouve un moyen de gagner leur respect, j'ai donc rapidement élaboré quelques schématiques et je me suis mis au travail pour prouver ma théorie.}{}{171}{}{ }
+{1511}{[Suite]}{}{1}{}{1512}{ }
+{1512}{La concession minière d'humains à laquelle j'apportai les plans m'offrit des actions de la mine en échange de ma pompe à vapeur ! J'étais aux anges ; je me fichais de leurs mines et de leur argent, je voulais juste prouver la véracité de mes théories !}{La concession minière d'humains à laquelle j'apportai les plans m'offrit des actions de la mine en échange de ma pompe à vapeur ! J'étais aux anges ; je me fichais de leurs mines et de leur argent, je voulais juste prouver la véracité de mes théories !}{}{172}{}{ }
+{1513}{[Suite]}{}{1}{}{1514}{ }
+{1514}{Quand je revins auprès des nains pour leur faire part de mes exploits et être admis au sein de leur clan... ils n'étaient plus là. Après cela, motivé par ma colère et mon désarroi, mes inventions fusèrent.}{Quand je revins auprès des nains pour leur faire part de mes exploits et être admis au sein de leur clan... ils n'étaient plus là. Après cela, motivé par ma colère et mon désarroi, mes inventions fusèrent.}{}{173}{}{ }
+{1515}{[Suite]}{}{1}{}{1516}{ }
+{1516}{Comment avaient-ils pu me refuser une place en leur sein après tous mes efforts ? Pourtant, j'avais la sensation de pouvoir encore leur prouver quelque chose. A mes heures perdues, je continuais à les rechercher, mais en vain. C'est alors qu'ils vinrent me trouver, les "êtres drapés".}{Comment avaient-ils pu me refuser une place en leur sein après tous mes efforts ? Pourtant, j'avais la sensation de pouvoir encore leur prouver quelque chose. A mes heures perdues, je continuais à les rechercher, mais en vain. C'est alors qu'ils vinrent me trouver, les "êtres drapés".}{}{174}{}{ }
+{1517}{[Suite]}{}{1}{}{1518}{ }
+{1518}{Une nuit, très tard, ils me sont apparus et ils m'ont averti de ne jamais parler et de ne jamais essayer de retrouver la trace des nains. Etant encore un jeune homme, vous pouvez imaginer la terreur qui m'habitait. Au fur et à mesure que ma puissance et ma fortune augmentaient, je m'affranchis de mes terreurs de jeunesse et j'engageai le premier d'une longue série d'enquêteurs chargés de retrouver Stennar et son clan.}{Une nuit, très tard, ils me sont apparus et ils m'ont averti de ne jamais parler et de ne jamais essayer de retrouver la trace des nains. Etant encore un jeune homme, vous pouvez imaginer la terreur qui m'habitait. Au fur et à mesure que ma puissance et ma fortune augmentaient, je m'affranchis de mes terreurs de jeunesse et j'engageai le premier d'une longue série d'enquêteurs chargés de retrouver Stennar et son clan.}{}{175}{}{ }
+{1519}{[Suite]}{}{1}{}{-46}{ }
+

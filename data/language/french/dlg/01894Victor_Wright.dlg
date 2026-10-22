@@ -1,0 +1,184 @@
+{1}{G:}{}{}{}{}{}
+{2}{Mes salutations, monsieur. Puis-je vous demander votre nom ?}{}{5}{lf1 0, re 41}{25}{}
+{3}{Ce n'est pas très aimable. Je veux seulement connaître votre nom.}{}{5}{lf1 0, re -40}{25}{}
+{4}{J'ai fait ou dit quelque chose qui vous a déplu, Monsieur Derval ?}{}{5}{lf1 1, lf2 0}{43}{}
+{5}{Re-bonjour, Monsieur Derval. Puis-je vous redemander de m'accorder quelques instants ?}{}{5}{lf1 1, lf2 1,re 41}{49}{}
+{6}{J'ai fait ou dit quelque chose qui vous a déplu, Monsieur Derval ?}{}{5}{lf1 1, lf2 1, re -40}{39}{}
+{7}{Je crois que je vais apporter cette note pour vous.}{}{5}{qu1134 1}{157}{}
+{8}{Je n'ai pas encore apporté la note...}{}{5}{qu1134 2}{160}{}
+{9}{J'ai apporté la note à Madame Lannier.}{}{5}{qu1134 3}{163}{re +5}
+{10}{Je peux vous raconter mon histoire si elle vous intéresse toujours...}{}{5}{lf4 1, gf2030 0, lf 8 0}{99}{}
+{11}{J'ai peut-être une histoire intéressante à vous raconter.}{}{5}{gf2030 0, lf3 1, lf 8 0}{77}{}
+{12}{Hé monsieur. Quoi être votre nom ?}{}{-4}{lf1 0, re 41}{25}{}
+{13}{Pas gentil... Moi juste vouloir connaître vot' nom...}{}{-4}{lf1 0, re -40}{25}{}
+{14}{'jour M'sieur Dervaleu. Moi demander question ?}{}{-4}{lf1 1, lf2 0}{43}{}
+{15}{'jour M'sieur Dervaleu. Moi demander question ?}{}{-4}{lf1 1, lf2 1,re 41}{49}{}
+{16}{Euh... pas gentil, M'sieur Dervaleu... Moi m'énerver ?}{}{-4}{lf1 1, lf2 1, re -40}{39}{}
+{17}{Moi apporter note pour vous.}{}{-4}{qu1134 1}{157}{}
+{18}{Moi pas encore avoir apporté note...}{}{-4}{qu1134 2}{160}{}
+{19}{Moi avoir apporté note pour M'dame Lannier.}{}{-4}{qu1134 3}{163}{re +5}
+{20}{Moi vous vendre histoire dirigeab', vous intéressé ?}{}{-4}{lf4 1, gf2030 0, lf 8 0}{99}{}
+{21}{Moi avoir histoire intéressante pour vous.}{}{-4}{gf2030 0, lf3 1, lf 8 0}{77}{}
+{22}{Je détiens les preuves de l'existence d'un complot.}{}{5}{lf1 1, in5247, gf2408 0, lf10 0}{180}{}
+{23}{Je souhaite vous parler de Samuel Longpuits !}{}{5}{Gf2408 1, lf10 1}{210}{}
+{24}{E:}{}{1}{}{0}{}
+{25}{Je suis Monsieur Derval. Rédacteur au Tarantien, le meilleur journal du pays. Qui êtes-vous ?}{Je suis Monsieur Derval. Rédacteur au Tarantien, le meilleur journal du pays. Qui êtes-vous ?}{}{}{}{lf1 1}
+{26}{Je m'appelle @pcname@.}{}{5}{}{49}{lf2 1}
+{27}{Cela ne vous regarde pas.}{}{5}{}{30}{re-5}
+{28}{Moi @pcname@.}{}{-4}{}{49}{lf2 1}
+{29}{Ca pas regarder vous...}{}{-4}{}{30}{re-5}
+{30}{Alors sortez de mon bureau !}{Alors sortez de mon bureau !}{}{}{}{}
+{31}{Je vous prie de m'excuser d'avoir été désagréable. J'ai eu une journée difficile... Je m'appelle @pcname@.}{}{5}{}{34}{re+5, lf2 1}
+{32}{Pardon. Moi désagréable. Journée pas facile... Moi @pcname@.}{}{-4}{}{34}{re+5, lf2 1}
+{33}{I:}{}{1}{}{0}{re-3}
+{34}{Ah... Je comprends. Cela m'arrive aussi. Que puis-je faire pour vous, @pcname@ ?}{Ah... Je comprends. Cela m'arrive aussi. Que puis-je faire pour vous @pcname@ ?}{}{}{}{}
+{35}{J'ai une question...}{}{5}{}{49}{}
+{36}{Moi demander question ?}{}{-4}{}{49}{}
+{37}{E:}{}{1}{}{0}{0}
+{38}{Gardes ! Gardes !}{Gardes ! Gardes !}{}{}{}{}
+{39}{Non... Non. Pardonnez-moi. Je ne vous avais pas reconnu, @pcname@.}{Non... Non. Pardonnez-moi. Je ne vous avais pas reconnue, @pcname@.}{}{}{}{}
+{40}{Je vous pardonne. J'ai une question...}{}{5}{}{49}{}
+{41}{Euh... Accord. Moi demander quelque chose...}{}{-4}{}{49}{}
+{42}{E:}{}{1}{}{0}{}
+{43}{Vous ne voulez pas me dire votre nom... Je n'ai pas le souvenir de vous avoir déjà vu par ici... et je n'aime pas parler aux étrangers.}{Vous ne voulez pas me dire votre nom... Je n'ai pas le souvenir de vous avoir déjà vue par ici... et je n'aime pas parler aux étrangers.}{}{}{}{}
+{44}{Je vous prie de m'excuser d'avoir été désagréable. J'ai eu une journée difficile... Je m'appelle @pcname@.}{}{5}{}{34}{re+5, lf2 1}
+{45}{Ca vous dirait de vous faire assassiner par eux ?}{}{5}{}{0}{co, fl 38}
+{46}{Pardon. Moi désagréable. Journée pas facile... Moi @pcname@.}{}{-4}{}{34}{re+5, lf2 1}
+{47}{Vous aimer étrangers tuer vous ?}{}{-4}{}{0}{co, fl 38}
+{48}{E:}{}{1}{}{0}{}
+{49}{En quoi puis-je vous être utile ?}{En quoi puis-je vous être utile ?}{}{}{}{}
+{50}{Auriez-vous un travail à me proposer ?}{}{5}{qu1134 0}{81}{}
+{51}{R:$0, 1040-1049}{}{5}{ss -6}{63}{}
+{52}{R:$0, 1040-1049}{}{5}{ss 7, ss -13}{63}{}
+{53}{R:$0, 1040-1049}{}{5}{ss 14}{63}{}
+{54}{R:$0, 1040-1049}{}{-4}{ss -6}{63}{}
+{55}{R:$0, 1040-1049}{}{-4}{ss 7 , ss -13}{63}{}
+{56}{R:$0, 1040-1049}{}{-4}{ss 14}{63}{}
+{57}{Puis-je faire autre chose ?}{}{5}{qa1134 4, gf2030 0}{81}{}
+{58}{Puis-je faire autre chose ?}{}{5}{qa1134 4, gf2030 1}{170}{}
+{59}{Vous avoir travail pour moi ?}{}{-4}{qu1134 0}{81}{}
+{60}{Travail encore ?}{}{-4}{qa1134 4, gf2030 1}{170}{}
+{61}{Travail encore ?}{}{-4}{qa1134 4, gf2030 0}{81}{}
+{62}{E:}{}{1}{}{0}{}
+{63}{De quoi d'autre avez-vous besoin, @pcname@?}{De quoi d'autre avez-vous besoin, @pcname@?}{}{}{}{}
+{64}{Auriez-vous un travail à me proposer ?}{}{5}{qu1134 0}{81}{}
+{65}{R:$0, 1040-1049}{}{5}{ss -6}{63}{}
+{66}{R:$0, 1040-1049}{}{5}{ss 7 , ss -13}{63}{}
+{67}{R:$0, 1040-1049}{}{5}{ss 14}{63}{}
+{68}{R:$0, 1040-1049}{}{-4}{ss -6}{63}{}
+{69}{R:$0, 1040-1049}{}{-4}{ss 7 , ss -13}{63}{}
+{70}{R:$0, 1040-1049}{}{-4}{ss 14}{63}{}
+{71}{Puis-je faire autre chose ?}{}{5}{qa1134 4, gf2030 0}{81}{}
+{72}{Puis-je faire autre chose ?}{}{5}{qa1134 4, gf2030 1}{170}{}
+{73}{Vous avoir travail pour moi ?}{}{-4}{qu1134 0}{81}{}
+{74}{Travail encore ?}{}{-4}{qa1134 4, gf2030 1}{170}{}
+{75}{Travail encore ?}{}{-4}{qa1134 4, gf2030 0}{81}{}
+{76}{E:}{}{1}{}{0}{}
+{77}{Eh bien, c'est Le Tarantien. Les actualités sont notre métier. Nous savons récompenser les bonnes histoires. Qu'avez-vous à me proposer ?}{Eh bien, c'est Le Tarantien. Les actualités sont notre métier. Nous savons récompenser les bonnes histoires. Qu'avez-vous à me proposer ?}{}{}{}{lf3 1}
+{78}{Eh bien, il ne reste que moi parmi les passagers qui étaient à bord du Zéphyr. Est-ce que ça vous intéresse ?}{}{5}{lf 8 0}{87}{}
+{79}{Pas y avoir autres survivants que moi dans accident dirigeab'. Bonne histoire pour journal ?}{}{-4}{lf 8 0}{87}{}
+{80}{F:}{}{1}{}{0}{}
+{81}{Eh bien, c'est Le Tarantien. Les actualités sont notre métier. La première chose qui me vient à l'esprit lorsque vous parlez travail, ce sont les actualités. Avez-vous des histoires intéressantes à me proposer ? Nous payons bien.}{Eh bien, c'est Le Tarantien. Les actualités sont notre métier. La première chose qui me vient à l'esprit lorsque vous parlez travail, ce sont les actualités. Avez-vous des histoires intéressantes à me proposer ? Nous payons bien.}{}{}{}{lf3 1}
+{82}{Eh bien, il ne reste que moi parmi les passagers qui étaient à bord du Zéphyr. Est-ce que ça vous intéresse ?}{}{5}{lf 8 0}{87}{}
+{83}{Euh, non... En fait, j'aurais préféré un poste au sein du journal.}{}{5}{qb1134 1}{152}{}
+{84}{Pas y avoir autres survivants que moi dans accident dirigeab'. Bonne histoire pour journal ?}{}{-4}{lf 8 0}{87}{}
+{85}{Euh... Non. Moi juste chercher travail.}{}{-4}{qb1134 1}{152}{}
+{86}{E:}{}{1}{}{0}{}
+{87}{Non ! Vous ? Vous êtes le seul survivant de la catastrophe du Zéphyr ? Quelle aubaine ! Vous devez me conter votre histoire ! Je vous paierai 500 pièces d'or de suite si vous répondez à mes questions. }{Non ! Vous ? Vous êtes la seule survivante de la catastrophe du Zéphyr ? Quelle aubaine ! Vous devez me conter votre histoire ! Je vous paierai 500 pièces d'or de suite si vous répondez à mes questions. }{}{}{}{}
+{88}{500 ! Marché conclu, Monsieur Derval ! Posez-moi vos questions !}{}{5}{lf 8 0}{103}{lf 4 1}
+{89}{Euh... Non merci. Je préfère rester dans l'ombre...}{}{5}{lf 8 0}{93}{}
+{90}{500 ! Ca beaucoup ! Moi vous raconter histoire tout d'suite !}{}{-4}{lf 8 0}{103}{lf 4 1}
+{91}{Euh... Non. Moi pas vouloir être dans journal. Moi demander pardon.}{}{-4}{lf 8 0}{93}{}
+{92}{E:}{}{1}{}{0}{}
+{93}{Oh... Vous êtes du genre gourmand, on dirait ? Bon, je suppose que cela peut se comprendre, si l'on considère que vous êtes le " seul " survivant. Je peux aller jusqu'à 800. Mais pas au-delà. Personne ne vous proposera plus... Personne !}{Oh... Vous êtes gourmande, on dirait ? Bon, je suppose que cela peut se comprendre, si l'on considère que vous êtes la " seule " survivante. Je peux aller jusqu'à 800. Mais pas au-delà. Personne ne vous proposera plus... Personne !}{}{}{}{}
+{94}{Bon, pour 800, vous avez l'histoire dans la poche !}{}{5}{lf 8 0}{103}{lf 5 1}
+{95}{Pas vraiment. Ca ne m'intéresse pas. Je cherche du travail...}{}{5}{qb1134 1}{152}{}
+{96}{Accord ! Vous avoir histoire pour 800 ! Ouah !}{}{-4}{lf 8 0}{103}{lf 5 1}
+{97}{Euh... Non. Vraiment. Moi juste vouloir travail. Pas vouloir être dans journal.}{}{-4}{qb1134 1}{152}{}
+{98}{E:}{}{1}{}{0}{}
+{99}{Oh oui @pcname@ ! Votre histoire intéresse beaucoup Le Tarantien. Etes-vous prêt à répondre à quelques questions ?}{Oh oui @pcname@ ! Votre histoire intéresse beaucoup Le Tarantien. Etes-vous prête à répondre à quelques questions ?}{}{}{}{lf 8 1}
+{100}{Oui, allez-y.}{}{5}{}{103}{}
+{101}{Euh... Accord.}{}{-4}{}{103}{}
+{102}{E:}{}{1}{}{0}{lf 8 0}
+{103}{Tout d'abord, j'imagine que cette histoire a été très traumatisante pour vous. Prenez votre temps. Si vous avez besoin de vous interrompre quelques instants, n'hésitez pas. Etes-vous prêt ?}{Tout d'abord, j'imagine que cette histoire a été très traumatisante pour vous. Prenez votre temps. Si vous avez besoin de vous interrompre quelques instants, n'hésitez pas. Etes-vous prête ?}{}{}{}{lf 8 1}
+{104}{Oui. Je vous remercie de votre compréhension. Nous pouvons commencer.}{}{5}{}{107}{}
+{105}{Euh... Marsi. Ouais. Moi vouloir commencer.}{}{-4}{}{107}{}
+{106}{E:}{}{1}{}{0}{lf 8 0}
+{107}{Donc, @pcname@, vous êtes le seul survivant de la terrible catastrophe du Zéphyr ?}{Donc, @pcname@, vous êtes la seule survivante de la terrible catastrophe du Zéphyr ?}{}{}{}{}
+{108}{Oui. Je le regrette profondément, personne d'autre n'a survécu.}{}{5}{}{111}{}
+{109}{Ouais. Personne autre vivant.}{}{-4}{}{111}{}
+{110}{E:}{}{1}{}{0}{lf 8 0}
+{111}{Avez-vous une idée de ce qui a pu provoquer la chute du dirigeable ?}{Avez-vous une idée de ce qui a pu provoquer la chute du dirigeable ?}{}{}{}{}
+{112}{Il y a eu une terrible explosion... qui a fait trembler le vaisseau tout entier.}{}{5}{}{115}{}
+{113}{Grand boom ! Ca faire bouger dirigeable de partout...}{}{-4}{}{115}{}
+{114}{E:}{}{1}{}{0}{lf 8 0}
+{115}{Oui....}{Oui....}{}{}{}{}
+{116}{Je n'ai rien vu dans le ciel, mais j'ai entendu des coups de feu...}{}{5}{}{119}{}
+{117}{Moi rien voir, mais avoir entendu grands coups d'feu...}{}{-4}{}{119}{}
+{118}{E:}{}{1}{}{0}{lf 8 0}
+{119}{Des coups de feu ? A cette altitude ? Comment est-ce possible ?}{Des coups de feu ? A cette altitude ? Comment est-ce possible ?}{}{}{}{}
+{120}{J'ai aussi entendu les moteurs... Je crois qu'il y en avait deux.}{}{5}{}{123}{}
+{121}{Moi entendre aussi moteurs. Deux moteurs.}{}{-4}{}{123}{}
+{122}{E:}{}{1}{}{0}{lf 8 0}
+{123}{Des moteurs ? Le Zéphyr n'en avait qu'un. Que pouvait-il y avoir d'autre là-haut avec vous ?}{Des moteurs ? Le Zéphyr n'en avait qu'un. Que pouvait-il y avoir d'autre là-haut avec vous ?}{}{}{}{}
+{124}{Il y avait aussi des débris, près du dirigeable. Un engin étrange...}{}{5}{}{-2}{}
+{125}{Moi voir aussi débris. Près dirigeab'. Autre engin volant...}{}{-4}{}{-2}{}
+{126}{E:}{}{1}{}{0}{lf 8 0}
+{127}{Un autre engin volant ? Incroyable ! [Il prend des notes avec frénésie.] Alors vous pensez que ce n'était pas un accident ? Mais plutôt un sabotage ?... Vous voulez dire qu'on a tiré sur le Zéphyr ? Et qu'il s'agirait d'un engin volant secret ?}{Un autre engin volant ? Incroyable ! [Il prend des notes avec frénésie.] Alors vous pensez que ce n'était pas un accident ? Mais plutôt un sabotage ?... Vous voulez dire qu'on a tiré sur le Zéphyr ? Et qu'il s'agirait d'un engin volant secret ?}{}{}{}{gf2030 1}
+{128}{Oui. C'est tout ce dont je me souviens.}{1}{5}{lf4 1, lf5 0}{136}{np 1150 1}
+{129}{Ouais. Moi avoir vu ça.}{1}{-4}{lf4 1, lf5 0}{136}{np 1170 1}
+{130}{Oui. C'est tout ce dont je me souviens.}{0}{5}{lf4 1, lf5 0}{136}{np 1160 1}
+{131}{Ouais. Moi avoir vu ça.}{0}{-4}{lf4 1, lf5 0}{136}{np 1180 1}
+{132}{Oui. C'est tout ce dont je me souviens.}{1}{5}{lf5 1}{144}{np 1150 1}
+{133}{Ouais. Moi avoir vu ça.}{1}{-4}{lf5 1}{144}{np 1170 1}
+{134}{Oui. C'est tout ce dont je me souviens.}{0}{5}{lf5 1}{144}{np 1160 1}
+{135}{Ouais. Moi avoir vu ça.}{0}{-4}{lf5 1}{144}{np 1180 1}
+{136}{[le visage transformé, mélange de choc et d'exultation] @pcname@ ! C'est une histoire à couper le souffle ! Merci mille fois ! Tenez... Voilà ce que je vous dois. Vous l'avez amplement mérité. Il faut que je transmette ces informations à la presse sans tarder ! Au revoir !}{[le visage transformé, mélange de choc et d'exultation] @pcname@ ! C'est une histoire à couper le souffle ! Merci mille fois ! Tenez... Voilà ce que je vous dois. Vous l'avez amplement mérité. Il faut que je transmette ces informations à la presse sans tarder ! Au revoir !}{}{}{}{$$500, np }
+{137}{Au revoir.}{}{5}{}{0}{}
+{138}{Attendez ! Je sais que vous n'avez pas le temps, mais dites-moi si je peux faire autre chose pour vous.}{}{5}{qu1134 0}{152}{}
+{139}{Attendez ! Je sais que vous n'avez pas le temps, mais dites-moi si je peux faire autre chose pour vous.}{}{5}{qa1134 1}{170}{}
+{140}{Ar'voir.}{}{-4}{}{0}{}
+{141}{Attendez ! Moi savoir vous partir... Mais moi vouloir plus de travail...}{}{-4}{qu1134 0}{152}{}
+{142}{Attendez ! Moi savoir vous partir... Mais moi vouloir plus de travail...}{}{-4}{qa1134 1}{170}{}
+{143}{E:}{}{1}{}{0}{}
+{144}{[le visage transformé, mélange de choc et d'exultation] @pcname@ ! C'est une histoire à couper le souffle ! Merci mille fois ! Tenez... Voilà ce que je vous dois. Vous l'avez amplement mérité. Il faut que je transmette ces informations à la presse sans tarder ! Au revoir !}{[le visage transformé, mélange de choc et d'exultation] @pcname@ ! C'est une histoire à couper le souffle ! Merci mille fois ! Tenez... Voilà ce que je vous dois. Vous l'avez amplement mérité. Il faut que je transmette ces informations à la presse sans tarder ! Au revoir !}{}{}{}{$$800}
+{145}{Au revoir.}{}{5}{}{0}{}
+{146}{Attendez ! Je sais que vous n'avez pas le temps, mais dites-moi si je peux faire autre chose pour vous.}{}{5}{qu1134 0}{152}{}
+{147}{Attendez ! Je sais que vous n'avez pas le temps, mais dites-moi si je peux faire autre chose pour vous.}{}{5}{qa1134 1}{170}{}
+{148}{Ar'voir.}{}{-4}{}{0}{}
+{149}{Attendez ! Moi savoir vous partir... Mais moi vouloir plus de travail...}{}{-4}{qu1134 0}{152}{}
+{150}{Attendez ! Moi savoir vous partir... Mais moi vouloir plus de travail...}{}{-4}{qa1134 1}{170}{}
+{151}{E:}{}{1}{}{0}{}
+{152}{Eh bien... Nous n'avons aucun poste vacant pour le moment. [Il réfléchit un instant.] Il y a bien un petit travail dont vous pourriez vous charger. Mais il n'est payé que 75 pièces. Cela vous intéresse ?}{Eh bien... Nous n'avons aucun poste vacant pour le moment. [Il réfléchit un instant.] Il y a bien un petit travail dont vous pourriez vous charger. Mais il n'est payé que 75 pièces. Cela vous intéresse ?}{}{}{}{}
+{153}{Oui. En effet.}{}{5}{}{157}{}
+{154}{Euh... Non merci. Au revoir.}{}{5}{}{0}{}
+{155}{Ouais. Moi accord.}{}{-4}{}{157}{}
+{156}{Euh... Non. Ar'voir.}{}{-4}{}{0}{}
+{157}{D'accord. Tenez. Il s'agit d'une note de frais. Je souhaite qu'elle soit apportée à Madame Lannier. Sa maison est située au coin des rues de la Providence et Vermillon. Revenez me voir après votre course et je vous donnerai les 75 pièces.}{Très bien. Tenez. Il s'agit d'une note de frais. Je souhaite qu'elle soit apportée à Madame Lannier. Sa maison est située au coin des rues de la Providence et Vermillon. Revenez me voir après votre course et je vous donnerai les 75 pièces.}{}{}{}{QU1134 2, in-5243}
+{158}{D'accord. Je reviendrai bientôt.}{}{5}{}{0}{}
+{159}{Euh... Accord. Moi partir.}{}{-4}{}{0}{}
+{160}{Ne tardez pas à la lui remettre. Le paiement de cette note de frais a du retard... ce qui explique que je vous autorise à l'apporter, @pcname@.}{Ne tardez pas à la remettre. Le paiement de cette note de frais a du retard... ce qui explique que je vous autorise à l'apporter, @pcname@.}{}{}{}{}
+{161}{D'accord. Je reviendrai bientôt.}{}{5}{}{0}{}
+{162}{Euh... Accord. Moi partir.}{}{-4}{}{0}{}
+{163}{Bravo. Merci @pcname@. Voilà les 75 pièces promises.}{Bravo. Merci @pcname@. Voilà les 75 pièces promises.}{}{}{}{$$75, qu1134 4}
+{164}{Je vous remercie Monsieur Derval. Au revoir.}{}{5}{}{0}{}
+{165}{Je vous remercie Monsieur Derval. Puis-je faire autre chose ?}{}{5}{gf2030 1}{170}{}
+{166}{Je vous remercie Monsieur Derval. Puis-je faire autre chose ?}{}{5}{gf2030 0}{81}{}
+{167}{Marsi M'sieur Dervaleu. Ar'voir.}{}{-4}{}{0}{}
+{168}{Marsi M'sieur Dervaleu. Plus de travail ?}{}{-4}{gf2030 1}{170}{}
+{169}{Marsi M'sieur Dervaleu. Plus de travail ?}{}{-4}{gf2030 0}{81}{}
+{170}{Non. Je regrette, @pcname@. C'est tout ce que j'avais.}{Non. Je regrette, @pcname@. C'est tout ce que j'avais.}{}{}{}{}
+{171}{D'accord. Merci. Au revoir.}{}{5}{}{0}{}
+{172}{Euh... Accord. Ar'voir.}{}{-4}{}{0}{}
+{180}{[Le doute s'affiche sur son visage.] Qu'entendez-vous par " complot " ? Est-ce une plaisanterie ?}{[Le doute s'affiche sur son visage.] Qu'entendez-vous par " complot " ? Est-ce une plaisanterie ?}{}{}{}{}
+{181}{Le Conseil industriel élève illégalement des demi-ogres !}{}{5}{}{190}{}
+{190}{Ha ! Et je suppose que vous avez des preuves ?}{Ha ! Et je suppose que vous avez des preuves ?}{}{}{}{}
+{191}{Oui, en effet. [Vous lui montrez le journal.]}{}{5}{}{200}{}
+{200}{Seigneur ! Vite, cachez-moi ça. [Il vous le rend.] C'est une affaire dangereuse, vous comprenez ? Je ne peux pas garder ça ici... Apportez-le à Samuel Longpuits, au bureau de Caladon, il pourra vous aider. L'adresse est le 7, avenue Toussaint. Dépêchez-vous ! Et ne parlez de cette affaire à personne....}{Seigneur ! Vite, cachez-moi ça. [Il vous le rend.] C'est une affaire dangereuse, vous comprenez ? Je ne peux pas garder ça ici... Apportez-le à Samuel Longpuits, au bureau de Caladon, il pourra vous aider. L'adresse est le 7, avenue Toussaint. Dépêchez-vous ! Et ne parlez de cette affaire à personne....}{}{}{}{lf10 1}
+{201}{Dans ce cas, je m'en vais.}{}{5}{}{0}{}
+{210}{Qui ? Je crains de ne connaître personne de ce nom.}{Qui ? Je crains de ne connaître personne de ce nom.}{}{}{}{}
+{211}{Vous m'avez dit de lui donner le journal !}{}{5}{}{220}{}
+{220}{Vous devez vous tromper. Je ne vous ai jamais rien dit de tel.}{Vous devez vous tromper. Je ne vous ai jamais rien dit de tel.}{}{}{}{}
+{221}{Oh, je comprends comment tout fonctionne maintenant. Bonne journée, monsieur !}{}{5}{}{0}{}
+{222}{Ordure ! Vous allez payer cette trahison !}{}{5}{}{0}{co}
+

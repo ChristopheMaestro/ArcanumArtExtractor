@@ -1,0 +1,103 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Et à qui ai-je l'honneur ?}{}{5}{me 0}{6}{}
+{3}{Bonjour, Grunwalde. Vous avez un moment ?}{}{5}{lf6 1}{10}{}
+{4}{E:}{}{5}{}{0}{}
+{6}{Je m'appelle Grunwalde.}{Je m'appelle Grunwalde.}{}{}{}{lf6 1}
+{7}{Bonjour, Grunwalde. Puis-je vous parler un instant ?}{}{5}{}{10}{}
+{8}{E:}{}{5}{}{0}{}
+{10}{Bien sûr...}{Bien sûr...}{}{}{}{}
+{11}{Que faites-vous ici, Grunwalde ?}{}{5}{}{23}{}
+{12}{J'aimerais acheter du poison.}{}{5}{qu 1007 2, lf5 0, lf1 0, lf2 0, lf3 0}{32}{lf8 1}
+{13}{Je suis de retour pour acheter le poison.}{}{5}{lf4 1, lf1 1, lf5 0}{63}{}
+{14}{Je suis de retour pour acheter le poison.}{}{5}{lf4 1, lf2 1, lf5 0}{68}{}
+{15}{Je suis de retour pour acheter le poison.}{}{5}{lf4 1, lf3 1, lf5 0}{68}{ }
+{16}{Je suis de retour pour acheter le poison.}{}{5}{lf4 1, lf1 0, lf2 0, lf3 0, lf5 0}{54}{}
+{17}{R: $0, 1175-1183}{}{5}{}{100}{}
+{18}{T: 3,10}{}{5}{}{100}{}
+{19}{E:}{}{5}{}{0}{}
+{23}{On m'appelle l'apothicaire, mais je suis alchimiste de profession. Il semble que les dieux m'aient conféré le don de fabriquer des poisons.}{On m'appelle l'apothicaire, mais je suis alchimiste de profession. Il semble que les dieux m'aient conféré le don de fabriquer des poisons.}{}{}{}{}
+{24}{Certains considèrent cela comme une malédiction.}{}{5}{}{28}{}
+{25}{C'est intéressant. C'est justement ce que je recherche.}{}{5}{qu 1007 2, lf5 0, lf1 0, lf2 0, lf3 0}{32}{}
+{26}{K:}{}{5}{}{10}{}
+{27}{E:}{}{5}{}{0}{}
+{28}{Oui, c'est vrai. Mais le monde a besoin d'hommes comme moi, au même titre qu'il a besoin de prêtres ou de guerriers. Nous jouons tous le rôle qui nous a été assigné...}{Oui, c'est vrai. Mais le monde a besoin d'hommes comme moi, au même titre qu'il a besoin de prêtres ou de guerriers. Nous jouons tous le rôle qui nous a été assigné...}{}{}{}{}
+{29}{Encore une faribole dans ce goût-là, et je vous expédie ad patres...}{}{5}{}{88}{re -10}
+{30}{K:}{}{5}{}{10}{}
+{31}{E:}{}{5}{}{0}{}
+{32}{Vraiment ? Et bien, je n'ai pas l'habitude de vendre à n'importe qui. Je suis un homme de principe, et je détesterais voir mes produits en de mauvaises mains...}{Vraiment ? Et bien, je n'ai pas l'habitude de vendre à n'importe qui. Je suis un homme de principe, et je détesterais voir mes produits en de mauvaises mains...}{}{}{}{}
+{33}{Ne vous faites pas de souci. Je vous promets d'en faire bon usage.}{}{5}{}{79}{}
+{34}{Je vous l'accorde. Je ne les donne qu'aux pires voleurs.}{}{5}{}{105}{re -5}
+{35}{Il semble que j'ai un problème d'infestation...}{}{5}{}{37}{}
+{36}{E:}{}{5}{}{0}{}
+{37}{Je pourrais peut-être vous aider. Quel est le problème ?}{Je pourrais peut-être vous aider. Quel est le problème ?}{}{}{}{}
+{38}{J'ai, euh... des rats. Une invasion de rats...}{}{5}{}{43}{}
+{39}{Les cafards se sont pris d'affection pour mon tiroir à sous-vêtements.}{}{5}{}{110}{}
+{40}{Cela ne vous regarde pas.}{}{5}{}{79}{re -5}
+{41}{K:}{}{5}{}{10}{}
+{42}{E:}{}{5}{}{0}{}
+{43}{Hum. Mes poisons sont puissants, camarade. De quelle grosseur sont-ils ?}{Hum. Mes poisons sont puissants, camarade. De quelle grosseur sont-ils ?}{}{}{}{}
+{44}{Euh... Ils sont gros comme des orques. Et ils leur ressemblent.}{}{5}{}{49}{}
+{45}{J'ai vu des souris plus grosses, mais ces rats sont vraiment méchants.}{}{5}{}{110}{}
+{46}{Contentez-vous de me vendre votre poison.}{}{5}{}{83}{re -5}
+{47}{E:}{}{5}{}{0}{}
+{49}{Des orques ! Pourquoi me l'avoir caché ? Je déteste ces crapules. Bien sûr que je vais vous en vendre.}{Des orques ! Pourquoi me l'avoir caché ? Je déteste ces crapules. Bien sûr que je vais vous en vendre.}{}{}{}{lf4 1}
+{50}{Formidable. Quel est votre prix ?}{}{5}{}{54}{}
+{51}{Qui a parlé de vendre ? Je prendrai ce que je veux...}{}{5}{}{88}{re -10}
+{52}{E:}{}{5}{}{0}{}
+{54}{100 pièces d'or. Ni plus, ni moins.}{100 pièces d'or. Ni plus, ni moins.}{}{}{}{}
+{55}{Ca m'a l'air bien.}{}{5}{$$100, ha -6}{63}{lf1 1}
+{56}{Ca m'a l'air bien.}{}{5}{$$-99, ha -6}{115}{lf1 1}
+{58}{Disons 75.}{}{5}{ha 10, ha -14}{68}{lf2 1}
+{60}{Il semble que 50 pièces seraient plus appropriées.}{}{5}{ha 15}{68}{lf3 1}
+{61}{E:}{}{5}{}{0}{}
+{63}{Le prix est de 100 pièces.}{Le prix est de 100 pièces.}{}{}{}{}
+{64}{Marché conclu.100 pièces.}{}{5}{ $$100}{74}{$$-100, lf1 1}
+{65}{Marché conclu.100 pièces}{}{5}{$$-99}{115}{lf1 1}
+{66}{J'ai changé d'avis. Sur ce, je vous laisse.}{}{5}{}{0}{}
+{68}{Je vous l'accorde. Ce sera mon prix. Entendu ?}{Je vous l'accorde. Ce sera mon prix. Entendu ?}{}{}{}{}
+{69}{Marché conclu. D'accord pour 75 pièces.}{}{5}{lf2 1, $$75}{74}{$$-75}
+{70}{Marché conclu. D'accord pour 75 pièces.}{}{5}{lf2 1, $$-74}{115}{}
+{71}{Marché conclu. D'accord pour 50 pièces.}{}{5}{lf3 1, $$50}{74}{$$-50}
+{72}{Marché conclu. D'accord pour 50 pièces.}{}{5}{lf3 1, $$-49}{115}{}
+{74}{Le poison est à vous. Bonne chance avec ces " rats ".}{Le poison est à vous. Bonne chance avec ces " rats ".}{}{}{}{in -3611, lf5 1}
+{75}{Merci et bonne journée.}{}{5}{}{0}{}
+{79}{Je crains de devoir refuser. Discrétion et poison font rarement bon ménage.}{Je crains de devoir refuser. Discrétion et poison font rarement bon ménage.}{}{}{}{}
+{80}{Mais mon épée dans vos entrailles, si. Donnez-le moi.}{}{5}{}{88}{}
+{81}{Pour tout vous dire, j'ai, euh, un problème de, euh... de rats.}{}{5}{}{43}{}
+{82}{E:}{}{5}{}{0}{}
+{83}{Votre silence ne vous apportera rien. Vous feriez mieux de partir.}{Votre silence ne vous apportera rien. Vous feriez mieux de partir.}{}{}{}{}
+{84}{Pas avant que je ne vous arrange le portrait.}{}{5}{}{88}{}
+{85}{Bien. Ces rats ont l'apparence et l'odeur des orques.}{}{5}{}{49}{}
+{86}{K:}{}{5}{}{10}{}
+{87}{E:}{}{5}{}{0}{}
+{88}{Ne le prenez pas sur ce ton, camarade. Mon épée est empoisonnée, et vous ne survivrez pas à sa morsure.}{Ne le prenez pas sur ce ton, camarade. Mon épée est empoisonnée, et vous ne survivrez pas à sa morsure.}{}{}{}{}
+{89}{Pitié. Cela me désole d'écouter des lamentations si vaines.}{}{5}{}{}{co, fl 80}
+{90}{Je vois que vous n'êtes pas du genre à plaisanter. Nous pouvons continuer ?}{}{5}{}{95}{}
+{91}{K:}{}{5}{}{10}{}
+{92}{E:}{}{5}{}{0}{}
+{93}{Quel dommage. Je crois que vous êtes tout désigné à prouver l'efficacité de mon poison.}{Quel dommage. Je crois que vous êtes toute désignée à prouver l'efficacité de mon poison.}{}{}{}{}
+{95}{J'imagine. Donc, quelle est la nature exacte de votre problème ?}{J'imagine. Donc, quelle est la nature exacte de votre problème ?}{}{}{}{}
+{96}{Très bien. Je dois m'occuper de quelques, euh... orques.}{}{5}{lf8 1}{49}{}
+{97}{Etant donné que c'est vous mon problème, je dirais que c'est la lâcheté.}{}{5}{}{}{co, fl 80}
+{98}{K:}{}{5}{}{10}{}
+{99}{E:}{}{5}{}{0}{}
+{100}{Autre chose ?}{Autre chose ?}{}{}{}{}
+{101}{K:}{}{5}{}{10}{}
+{102}{E:}{}{5}{}{0}{}
+{105}{Aux voleurs ! Avez-vous perdu la tête ? Avez-vous la moindre idée de ce que feraient les voleurs s'ils réussissaient à mettre la main sur mes poisons ?}{Aux voleurs ! Avez-vous perdu la tête ? Avez-vous la moindre idée de ce que feraient les voleurs s'ils réussissaient à mettre la main sur mes poisons ?}{}{}{}{}
+{106}{Naturellement. Exactement ce que je projette de vous faire à vous.}{}{5}{}{}{co, fl 88}
+{107}{Je plaisantais. Pour tout vous dire, j'ai, euh, un problème de, euh... de rats.}{}{5}{}{43}{}
+{108}{E:}{}{5}{}{0}{}
+{110}{Ce n'est que du menu gibier pour les poisons que je crée. Vous devriez vous adresser ailleurs.}{Ce n'est que du menu gibier pour les poisons que je crée. Vous devriez vous adresser ailleurs.}{}{}{}{}
+{111}{Eh bien, pour être honnête, ces bestioles ressemblent fortement à des orques.}{}{5}{}{49}{}
+{112}{Ouvrez-la une fois encore, et c'est votre créateur que vous irez rejoindre.}{}{5}{}{88}{re -10}
+{113}{E:}{}{5}{}{0}{}
+{115}{Je regrette. Il semble que les fonds vous manquent. Revenez lorsque vous aurez assez d'argent...}{Je regrette. Il semble que les fonds vous manquent. Revenez lorsque vous aurez assez d'argent...}{}{}{}{}
+{116}{E:}{}{5}{}{0}{}
+{120}{G:}{G:}{}{}{}{}
+{121}{Beuh...}{}{-4}{}{}{}
+{125}{Bonté divine ! Un demeuré dans ma boutique... Tenez, prenez ces 5 pièces. [Il vous les donne.] Les dieux apprécient ceux qui sont généreux avec les simples d'esprit tels que vous.}{Bonté divine ! Une demeurée dans ma boutique... Tenez, prenez ces 5 pièces. [Il vous les donne.] Les dieux apprécient ceux qui sont généreux avec les simples d'esprit tels que vous.}{}{}{}{$$5}
+{126}{Hein ? Moi pas de Muret ! Moi fracasser crâne à vous !}{}{-4}{}{}{co, fl 80}
+{127}{E:}{}{-4}{}{0}{lf7 1}
+{130}{Bonne chance. Puissent les dieux avoir pitié de votre pauvre âme...}{Bonne chance. Puissent les dieux avoir pitié de votre pauvre âme...}{}{}{}{}
+

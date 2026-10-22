@@ -1,0 +1,123 @@
+{1}{G:}{}{}{}{}{lf 11 0, lf 12 0 , lf 13 0, lf 14 0}
+{2}{Mes salutations cher monsieur.}{}{5}{lf1 0, re 41}{25}{lf1 1}
+{3}{Vous accueillez toujours vos clients de cette manière ?!}{}{5}{lf1 0, ch-10, re -40}{19}{lf1 1}
+{4}{Bonjour aubergiste. Puis-je vous importuner quelques instants ?}{}{5}{lf1 1, re 41}{25}{}
+{5}{Puis-je vous poser une question, aubergiste ?}{}{5}{lf1 1, ch-10, re -40}{19}{}
+{6}{Ce n'est pas la peine d'être impoli, monsieur.}{}{5}{lf1 1, ch11, re -40}{83}{}
+{7}{Vous accueillez toujours vos clients de cette manière ?!}{}{5}{lf1 0, ch11, re -40}{83}{lf1 1}
+{14}{'jour la compagnie.}{}{-4}{lf1 0, re 41}{25}{lf1 1}
+{15}{Vous type imbécile !}{}{-4}{lf1 0, re -40}{19}{lf1 1}
+{16}{Parler à bergiste ?}{}{-4}{lf1 1, re 41}{25}{}
+{17}{Moi demander question à bergiste ?}{}{-4}{lf1 1, re -40}{140}{}
+{18}{E:}{}{1}{}{0}{}
+{19}{On ne sert pas les individus de votre espèce ici. Débarrassez-moi le plancher ou je me verrai dans l'obligation d'appeler le garde.}{On ne sert pas les individus de votre espèce ici. Débarrassez-moi le plancher ou je me verrai dans l'obligation d'appeler le garde.}{}{}{}{}
+{20}{S'il vous plaît, monsieur, je ne veux qu'une chambre.}{}{5}{lf 10 0}{100}{}
+{21}{Non, vous devrez appeler les pompes funèbres.}{}{5}{}{0}{re -10, fl 130}
+{22}{Mais moi vouloir chambre.}{}{-4}{lf 10 0}{100}{}
+{23}{K:}{}{1}{lf 10 1}{25}{}
+{24}{F:}{}{1}{}{0}{}
+{25}{En quoi puis-je vous être utile ?}{En quoi puis-je vous être utile ?}{}{}{}{}
+{26}{J'aimerais réserver une chambre pour la nuit.}{}{5}{lf 10 0}{45}{}
+{27}{Je vais rester dans cette ville un certain temps. J'aimerais réserver une chambre pour la semaine.}{}{5}{ha7, lf 10 0}{52}{}
+{28}{Je vais rester dans cette ville un certain temps. J'aimerais réserver une chambre pour la semaine.}{}{5}{ha-6, lf 10 0}{57}{}
+{29}{Moi pouvoir rester pour nuit ?}{}{-4}{lf 10 0}{45}{}
+{30}{Moi rester ici longtemps peut-être. Moi pouvoir prendre chambre pour semaine ?}{}{-4}{ha7, lf 10 0}{52}{}
+{31}{Moi rester ici longtemps peut-être. Moi pouvoir prendre chambre pour semaine ?}{}{-4}{ha-6, lf 10 0}{57}{}
+{32}{C:}{}{1}{lf 14 0}{35}{lf 14 1}
+{33}{E:}{}{1}{}{0}{}
+{34}{}{}{}{}{}{}
+{35}{Autre chose ?}{Autre chose ?}{}{}{}{}
+{36}{J'aimerais réserver une chambre pour la nuit.}{}{5}{lf 10 0}{45}{}
+{37}{Je vais rester dans cette ville un certain temps. J'aimerais réserver une chambre pour la semaine.}{}{5}{ha7, lf 10 0}{52}{}
+{38}{Je vais rester dans cette ville un certain temps. J'aimerais réserver une chambre pour la semaine.}{}{5}{ha-6, lf 10 0}{57}{}
+{39}{Moi pouvoir rester ici c'te nuit ?}{}{-4}{lf 10 0}{45}{}
+{40}{Moi pouvoir prendre chambre pour semaine ?}{}{-4}{ha7, lf 10 0}{52}{}
+{41}{Moi pouvoir prendre chambre pour semaine ?}{}{-4}{ha-6, lf 10 0}{57}{}
+{42}{C:}{}{1}{lf 14 0}{35}{lf 14 1 }
+{43}{E:}{}{1}{}{0}{}
+{44}{}{}{}{}{}{}
+{45}{Oh, mais bien sûr, monsieur. Cela vous fera 25 pièces, s'il vous plaît.}{Oh, mais bien sûr, madame. 25 pièces, s'il vous plaît.}{}{}{}{}
+{46}{Voilà. [Vous lui donnez l'argent]}{}{5}{$$ 25}{-2}{$$-25, lf 13 0, lf 10 1}
+{47}{C'est un peu cher... [soupir] Tenez. [Vous lui donnez l'argent.]}{}{5}{$$ 25}{-2}{$$-25, lf 13 0, lf 10 1}
+{48}{Euh... V'là. [Vous lui donnez l'argent.]}{}{-4}{$$ 25}{-2}{$$-25, lf 13 0, lf 10 1}
+{49}{Ca beaucoup ! V'là. [Vous lui donnez l'argent.]}{}{-4}{$$ 25}{-2}{$$-25, lf 13 0, lf 10 1}
+{50}{K:}{}{1}{}{35}{}
+{51}{F:}{}{1}{}{0}{re-2}
+{52}{Mais bien sûr, monsieur ! Nous serions très heureux de vous avoir dans notre établissement pour un long séjour. Hum... [Il réfléchit un moment.] Comme vous êtes un client fidèle, j'ai décidé de vous faire un prix pour la semaine : 130 pièces et l'affaire est conclue.}{Mais bien sûr, madame ! Nous serions très heureux de vous avoir dans notre établissement pour un long séjour. Hum... [Il réfléchit un moment.] Comme vous êtes une cliente fidèle, j'ai décidé de vous faire un prix pour la semaine : 130 pièces et l'affaire est conclue.}{}{}{}{}
+{53}{Merci. Voilà. [Vous lui donnez l'argent.]}{}{5}{$$ 130}{-5}{$$-130, lf 13 1, lf 10 1}
+{54}{Euh... Marsi. V'là. [Vous lui donnez l'argent.]}{}{-4}{$$ 130}{-5}{$$-130, lf 13 1, lf 10 1}
+{55}{K:}{}{1}{}{35}{}
+{56}{F:}{}{1}{}{0}{re -2}
+{57}{Oh ! Pas de problème... Cela fera 175 pièces pour une semaine, monsieur.}{Oh ! Pas de problème... Cela fera 175 pièces pour une semaine, madame.}{}{}{}{}
+{58}{Merci. Voilà. [Vous lui donnez l'argent.]}{}{5}{$$ 175}{-5}{$$-175, lf 13 1, lf 10 1}
+{59}{Me feriez-vous un prix si je payais d'avance ?}{}{5}{}{78}{}
+{60}{Euh... Marsi. V'là. [Vous lui donnez l'argent.]}{}{-4}{$$ 175}{-5}{$$-175, lf 13 1, lf 10 1}
+{61}{Quoi ! Pas moins cher rester plus longtemps ?}{}{-4}{}{78}{}
+{62}{K:}{}{1}{}{35}{}
+{63}{F:}{}{1}{}{0}{re -2}
+{64}{Merci monsieur ! Votre chambre est au fond du couloir. Elle est réservée pour cette nuit seulement. La porte n'est pas fermée à clé. Je vous souhaite un excellent séjour.}{Merci m'dame ! Votre chambre est au fond du couloir. Elle est réservée pour cette nuit seulement. La porte n'est pas fermée à clé. Je vous souhaite un excellent séjour.}{}{}{}{}
+{65}{Merci.}{}{5}{}{0}{}
+{66}{Euh... Marsi.}{}{-4}{}{0}{}
+{67}{K:}{}{1}{}{35}{}
+{68}{C:}{}{1}{lf 14 0}{35}{lf 14 1 }
+{69}{E:}{}{1}{}{0}{}
+{70}{}{}{}{}{}{}
+{71}{Merci monsieur ! Votre chambre est au fond du couloir. Elle est réservée pour les sept prochaines nuits. La porte n'est pas fermée à clé. Je vous souhaite un excellent séjour.}{Merci m'dame ! Votre chambre est au fond du couloir. Elle est réservée pour les sept prochaines nuits. La porte n'est pas fermée à clé. Je vous souhaite un excellent séjour.}{}{}{}{}
+{72}{Merci.}{}{5}{}{0}{}
+{73}{Euh... Marsi.}{}{-4}{}{0}{}
+{74}{K:}{}{1}{}{35}{}
+{75}{C:}{}{1}{lf 14 0}{35}{lf 14 1 }
+{76}{E:}{}{1}{}{0}{}
+{77}{}{}{}{}{}{}
+{78}{Nous sommes désolés, monsieur. Nous avons eu beaucoup de réservations ces derniers temps. Il est même surprenant que nous ayons une chambre disponible. Si vous ne la voulez pas, d'autres la prendront.}{Nous sommes désolés, madame. Nous avons eu beaucoup de réservations ces derniers temps. Il est même surprenant que nous ayons une chambre disponible. Si vous ne la voulez pas, d'autres la prendront.}{}{}{}{}
+{79}{[soupir] Voilà. [Vous lui donnez l'argent.]}{}{5}{$$ 175}{-5}{$$-175, lf 13 1, lf 10 1}
+{80}{[soupir] V'là. [Vous lui donnez l'argent.]}{}{-4}{$$ 175}{-5}{$$-175, lf 13 1, lf 10 1}
+{81}{K:}{}{1}{}{35}{}
+{82}{F:}{}{1}{}{0}{re -2}
+{83}{Oh ! Je, euh... je veux dire, veuillez accepter mes excuses, monsieur ! Je vous avais pris pour quelqu'un d'autre. En quoi puis-je vous aider ?}{Oh ! Je, euh... je veux dire, veuillez accepter mes excuses, madame ! Je vous avais pris pour quelqu'un d'autre. En quoi puis-je vous aider ?}{}{}{}{}
+{84}{J'aimerais réserver une chambre pour la nuit.}{}{5}{lf 10 0}{45}{}
+{85}{Je vais rester dans cette ville un certain temps. J'aimerais réserver une chambre pour la semaine.}{}{5}{ha7, lf 10 0}{52}{}
+{86}{Je vais rester dans cette ville un certain temps. J'aimerais réserver une chambre pour la semaine.}{}{5}{ha-6, lf 10 0}{57}{}
+{87}{Moi pouvoir rester pour nuit ?}{}{-4}{lf 10 0}{45}{}
+{88}{Moi ici longtemps. Moi pouvoir prendre chambre pour semaine ?}{}{-4}{ha7, lf 10 0}{52}{}
+{89}{Moi ici longtemps. Moi pouvoir prendre chambre pour semaine ?}{}{-4}{ha-6, lf 10 0}{57}{}
+{90}{C:}{}{1}{lf 14 0}{35}{lf 14 1 }
+{91}{E:}{}{1}{}{0}{}
+{100}{[Il vous toise d'un air désapprobateur.] Eh bien, cela vous coûtera 30 pièces pour une nuit, soit 5 pièces de plus que d'ordinaire, parce que je vais devoir désinfecter la chambre des poux que vous y aurez laissés.}{[Il vous toise d'un air désapprobateur.] Eh bien, cela vous coûtera 30 pièces pour une nuit, soit 5 pièces de plus que d'ordinaire, parce que je vais devoir désinfecter la chambre des poux que vous y aurez laissés. Mais je doute que vous disposiez de cette somme.}{}{}{}{}
+{101}{Je vais prendre une chambre pour la nuit. [Vous lui donnez l'argent.]}{}{5}{$$30, lf 10 0}{-2}{$$-30, re +5, lf 12 1, lf 10 1}
+{102}{C'est combien pour la semaine ?}{}{5}{lf 10 0}{120}{}
+{103}{C'est plutôt vous qui devriez me payer pour rester ici, crapule !}{}{5}{}{0}{re -10, fl 130}
+{104}{30 pièces, c'est un peu cher, vous ne pensez pas ? Bonne journée.}{}{5}{}{0}{re -5}
+{105}{Vous avez raison, je n'ai pas assez d'argent. Bonne journée.}{}{5}{}{0}{}
+{106}{Moi avoir argent. Moi vouloir chambre. [Vous lui donnez l'argent.]}{}{-4}{$$30, lf 10 0}{-2}{$$-30, re +5, lf 12 1, lf 10 1}
+{107}{Moi vouloir chambre pour semaine ! Combien ça être ?}{}{-4}{lf 10 0}{120}{}
+{109}{Moi avoir argent, mais pas donner à type méchant !}{}{-4}{}{0}{re-5}
+{110}{Euh, moi partir maintenant.}{}{-4}{}{0}{}
+{120}{210 pièces, mais je doute que quelqu'un comme vous dispose de cette somme.}{210 pièces, mais je doute que quelqu'un comme vous dispose de cette somme.}{}{}{}{}
+{121}{Je peux et je vais prendre cette chambre. [Vous lui donnez l'argent.]}{}{5}{$$210}{-5}{$$-210, re 45, lf 11 1, lf 10 1}
+{122}{Moi avoir argent ! Moi prendre chambre ! [Vous lui donnez l'argent.]}{}{-4}{$$210}{-5}{$$-210, re 45, lf 11 1, lf 10 1}
+{123}{Elle n'en vaut même pas la moitié. Bonne journée, monsieur.}{}{5}{}{0}{re-5}
+{124}{Moi avoir assez, mais pas aimer auberge. A r'voir.}{}{-4}{}{0}{re-5}
+{127}{J'en ai assez de vous et de votre auberge infestée de puces ! Bonne journée !}{}{5}{}{0}{re-10}
+{128}{Euh, moi partir.}{}{-4}{}{0}{}
+{129}{Je vois. Peut-être reviendrai-je plus tard.}{}{5}{}{0}{}
+{130}{Vous trouvez cela amusant, monsieur ? Nous ne saurions accepter des gens comme vous dans notre établissement. Je vous somme de partir immédiatement avant que j'appelle les gardes.}{Vous trouvez cela amusant, madame ? Nous ne saurions accepter des gens comme vous dans notre établissement. Je vous somme de partir immédiatement avant que j'appelle les gardes.}{}{}{}{}
+{140}{[soupir] Qu'y a-t-il ?}{[soupir] Qu'y a-t-il ?}{}{}{}{}
+{141}{Moi pouvoir rester pour nuit ?}{}{-4}{lf 10 0}{45}{}
+{142}{Moi rester ici longtemps peut-être. Moi pouvoir prendre chambre pour semaine ?}{}{-4}{ha7, lf 10 0}{52}{}
+{143}{Moi rester ici longtemps peut-être. Moi pouvoir prendre chambre pour semaine ?}{}{-4}{ha-6, lf 10 0}{57}{}
+{144}{C:}{}{1}{lf 14 0}{35}{lf 14 1 }
+{145}{E:}{}{1}{}{0}{}
+{150}{[Il s'empare avidement de vos pièces.] Oh, pardonnez-moi, monsieur ! Je ne savais pas que vous aviez tant d'argent. Votre chambre est au fond du couloir. Elle est réservée pour les sept prochaines nuits. La porte n'est pas fermée à clé. J'espère que vous apprécierez votre séjour et que vous me pardonnerez de vous avoir offensé.}{[Il s'empare avidement de vos pièces.] Oh, pardonnez-moi, madame ! Je ne savais pas que vous aviez tant d'argent. Votre chambre est au fond du couloir. Elle est réservée pour les sept prochaines nuits. La porte n'est pas fermée à clé. J'espère que vous apprécierez votre séjour et que vous me pardonnerez de vous avoir offensée.}{}{}{}{}
+{151}{Merci.}{}{5}{}{0}{}
+{152}{Euh... Marsi.}{}{-4}{}{0}{}
+{153}{K:}{}{1}{}{35}{}
+{154}{C:}{}{1}{lf 14 0}{35}{lf 14 1 }
+{155}{E:}{}{1}{}{0}{}
+{160}{D'accord. Votre chambre est au fond du couloir. Vous ne pourrez l'occuper que ce soir. Ne faites pas d'histoires ou je vous mettrai à la porte. Oh, et la maison ne rembourse pas.}{D'accord. Votre chambre est au fond du couloir. Vous ne pourrez l'occuper que ce soir. Ne faites pas d'histoires ou je vous mettrai à la porte. Oh, et la maison ne rembourse pas.}{}{}{}{}
+{161}{Merci.}{}{5}{}{0}{}
+{162}{Euh... Marsi.}{}{-4}{}{0}{}
+{163}{K:}{}{1}{}{35}{}
+{164}{C:}{}{1}{lf 14 0}{35}{lf 14 1 }
+{165}{E:}{}{1}{}{0}{}
+

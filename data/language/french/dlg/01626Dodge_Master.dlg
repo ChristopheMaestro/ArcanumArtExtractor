@@ -1,0 +1,382 @@
+{1}{Halte ! Ne savez-vous pas que je sens votre présence, petit idiot ?}{Halte ! Ne savez-vous pas que je sens votre présence, petite idiote ?}{}{}{}{re 30 }
+{2}{Euh... bonjour, monsieur. Puis-je vous demander qui vous êtes ?}{}{5}{lf1 0}{16}{re 30 }
+{3}{Bonjour, Adam. Puis-je vous parler un instant ?}{}{5}{lf1 1}{154}{re 30 }
+{4}{Je vous apporte un cadeau de la part de Dame Druella.}{}{5}{in 3603, lf 14 0, qa 1115 1, qb 1115 2}{198}{re +50, lf 14 1 }
+{5}{J'ai les yeux de Monsieur de la Panse !}{}{5}{in 5660, lf 15 0, qu1105 3}{162}{re +50, lf 15 1 }
+{6}{J'ai les yeux de Monsieur de la Panse !}{}{5}{in 5660, lf 15 0, qu1116 3}{257}{re +50, lf 15 1 }
+{7}{J'ai amélioré mes compétences. Entraînez-moi, s'il vous plaît.}{}{5}{qu1116 4, tr1 2, tr1 -2, sk1 20}{271}{ }
+{8}{Moi mieux, maint'nant. Vous entraîner moi ?}{}{-4}{qu1116 4, tr1 2, tr1 -2, sk1 20}{271}{ }
+{9}{Moi avoir yeux ! Moi avoir yeux !}{}{-4}{in 5660, lf 15 0, qu1105 3}{162}{re +50, lf 15 1 }
+{10}{Moi avoir yeux ! Moi avoir yeux !}{}{-4}{in 5660, lf 15 0, qu1116 3}{257}{re +50, lf 15 1 }
+{11}{Euh... Ouais... Moi pouvoir demander kék'chose ?}{}{-4}{lf1 1}{154}{re 30 }
+{12}{Euh... Moi pas sentir bon ?}{}{-4}{lf1 0}{16}{re 30 }
+{13}{Gentille dame donner jolie bouteille à moi.}{}{-4}{in 3603, lf 14 0, qa 1115 1, qb 1115 2}{198}{re +50, lf 14 1 }
+{15}{E:}{}{1}{}{0}{ }
+{16}{Vous pensiez me prendre par surprise, n'est-ce pas ? Qui vous envoie ?}{Vous pensiez me prendre par surprise, n'est-ce pas ? Qui vous envoie ?}{}{}{}{ }
+{17}{Je ne vous veux aucun mal. Pouvez-vous me dire votre nom, monsieur ?}{}{5}{}{21}{ }
+{19}{Moi pas là pour... Euh, qui vous ?}{}{-4}{}{21}{ }
+{20}{E:}{}{1}{}{0}{ }
+{21}{Qu'est-ce qu'un nom ? Rien d'autre qu'un outil que nos ennemis peuvent utiliser pour nous détruire. Quel est celui qui causera votre perte ?}{Qu'est-ce qu'un nom ? Rien d'autre qu'un outil que nos ennemis peuvent utiliser pour nous détruire. Quel est celui qui causera votre perte ?}{}{}{}{ }
+{22}{Euh... Eh bien, je m'appelle @pcname@. Et vous ?}{}{5}{}{26}{ }
+{23}{Mon nom n'a pas plus d'importance que le vôtre.}{}{5}{}{0}{ }
+{24}{Aargh ?}{}{-4}{}{103}{ }
+{25}{E:}{}{1}{}{0}{ }
+{26}{Pourquoi êtes-vous venu déranger un vieil aveugle, @pcname@ ? Vous a-t-il chargé de m'achever ? Hein ?}{Pourquoi êtes-vous venue déranger un vieil aveugle, @pcname@ ? Vous a-t-il chargée de m'achever ? Hein ?}{}{}{}{ }
+{27}{J'ignore de quoi vous parlez. Personne ne m'envoie.}{}{5}{}{46}{ }
+{29}{Je vous ai juste demandé votre nom. Vous essayez de me mettre à l'épreuve...}{}{5}{}{33}{ }
+{30}{Moi pas comprendre.}{}{-4}{}{46}{ }
+{31}{Vous énerver moi pas répondre à moi !}{}{-4}{}{33}{ }
+{32}{Il est temps que je vous donne une leçon.}{Il est temps que je vous donne une leçon.}{}{}{}{re -15 }
+{33}{Allez-vous-en ! Je déteste les imbéciles qui fixent stupidement le masque grotesque qui jadis me donnait la vue. Cessez de m'importuner !}{Allez-vous-en ! Je déteste les imbéciles qui fixent stupidement le masque grotesque qui jadis me donnait la vue. Cessez de m'importuner !}{}{}{}{ }
+{35}{Qui cherche à vous nuire ?}{}{5}{}{46}{ }
+{36}{Je n'ai que faire d'un vieillard sénile ! Je m'en vais.}{}{5}{}{40}{ }
+{37}{Besoin aide ? Quelqu'un méchant avec m'sieur aveugle ?}{}{-4}{}{46}{ }
+{38}{Qui fait mal à m'sieur ?}{}{-4}{}{46}{ }
+{39}{Vous stupide ! Moi partir !}{}{-4}{}{40}{ }
+{40}{Attendez un instant ! Ecoutez-moi... Si jamais vous révélez que nous nous sommes rencontrés, votre nom se retrouvera inscrit à côté du mien, sur la liste d'exécution du malfaisant. [Il part d'un grand rire de dément.] Le malfaisant, oui... Le malfaisant ! Le voleur d'yeux ! Destructeur des innocents !}{Attendez un instant ! Ecoutez-moi... Si jamais vous révélez que nous nous sommes rencontrés, votre nom se retrouvera inscrit à côté du mien, sur la liste d'exécution du malfaisant. [Il part d'un grand rire de dément.] Le malfaisant, oui... Le malfaisant ! Le voleur d'yeux ! Destructeur des innocents !}{}{}{}{ }
+{41}{J'ai l'impression que vous êtes resté tout seul un peu trop longtemps...}{}{5}{}{0}{ }
+{42}{Aveugle ou pas, vous êtes trop enquiquinant pour qu'on vous laisse vivre.}{}{5}{}{}{co, fl 32}
+{44}{Vous stupide ! Moi partir !}{}{-4}{}{0}{ }
+{45}{Moi mourir ? Nan ! Vous mourir plutôt !}{}{-4}{}{}{co, fl 32}
+{46}{Jamais il ne m'a trouvé, vous savez, et jamais il n'y parviendra. Pas moi, non ! Le maître de l'esquive est trop rusé pour quelqu'un comme de la Panse. Jamais, jamais, jamais...}{Jamais il ne m'a trouvé, vous savez, et jamais il n'y parviendra. Pas moi, non ! Le maître de l'esquive est trop rusé pour quelqu'un comme de la Panse. Jamais, jamais, jamais... }{}{}{}{ }
+{47}{Vous êtes Adam Chambre, le maître de l'esquive ?}{}{5}{tr1 2, tr1 -2}{64}{lf1 1 }
+{48}{Maître de l'esquive ? C'est vous, le maître de l'esquive ?}{}{5}{tr1 -1}{55}{ }
+{49}{Vous êtes un maître ? Ha ! ha ! ha ! Vous en avez d'autres d'aussi drôles, l'estropié ?}{}{5}{tr1 -1}{55}{ }
+{50}{Vous maît' en esquif ? Adam Chamb' ? Moi chercher vous !}{}{-4}{tr1 2, tr1 -2}{64}{ }
+{53}{Ha ! ha ! ha ! L'est rigolo, m'sieur aveugle ! Qui vous être vraiment ?}{}{-4}{tr1 -1}{55}{ }
+{54}{E:}{}{1}{}{0}{ }
+{55}{Ignorez-vous à qui vous vous adressez, idiot ? Je suis Adam Chambre, maître de l'esquive !}{Ignorez-vous à qui vous vous adressez, idiote ? Je suis Adam Chambre, maître de l'esquive !}{}{}{}{lf1 1, gf2280 1 }
+{56}{Si vous êtes vraiment le " maître ", pourquoi ne me feriez-vous pas profiter de votre enseignement ?}{}{5}{}{81}{ }
+{57}{Le maître de l'esquive serait un aveugle qui a perdu la raison ? Prouvez-le moi !}{}{5}{}{}{co, fl 32}
+{58}{Puis-je vous poser une question, Monsieur Chambre ?}{}{5}{}{139}{ }
+{60}{Alors, vous maît', hein ? Si ça vrai, vous entraîner @pcname@ !}{}{-4}{}{81}{ }
+{61}{Accord, m'sieur rigolo... Si vous vraiment fort, vous éviter ça !}{}{-4}{}{}{co, fl 32}
+{62}{Moi demander kék' chose ?}{}{-4}{}{139}{ }
+{63}{E:}{}{1}{}{0}{ }
+{64}{Qui vous l'a appris ? Que savez-vous ? Je croyais que vous ne saviez rien, et maintenant vous connaissez mon nom... Menteur ! Mais je suis toujours le meilleur... Vous n'arriverez pas à me tuer !}{Qui vous l'a appris ? Que savez-vous ? Je croyais que vous ne saviez rien, et maintenant vous connaissez mon nom... Menteuse ! Mais je suis toujours le meilleur... Vous n'arriverez pas à me tuer !}{}{}{}{ }
+{65}{Je vous cherchais, mais pour que vous m'entraîniez, rien d'autre.}{}{5}{tr1 2, tr1 -2}{69}{ }
+{67}{Moi pas mentir ! Moi juste vouloir entraîner. Vous accord ?}{}{-4}{tr1 2, tr1 -2}{69}{ }
+{68}{E:}{}{1}{}{0}{ }
+{69}{Mensonges ! Il vous a chargé de m'achever ! N'est-ce pas ? Il ne lui a donc pas suffi de me voler Druella... Ou de m'aveugler et de me laisser pour mort...}{Mensonges ! Il vous a chargée de m'achever ! N'est-ce pas ? Il ne lui a donc pas suffi de me voler Druella... Ou de m'aveugler et de me laisser pour mort...}{}{}{}{ }
+{70}{Non, monsieur. Je recherche juste la sagesse que vous êtes capable de dispenser.}{}{5}{}{75}{ }
+{73}{Moi juste vouloir entraînement !}{}{-4}{}{75}{ }
+{74}{E:}{}{1}{}{0}{ }
+{75}{Vous voudriez que je croie que vous recherchiez un vieil aveugle pour qu'il vous permette de devenir maître dans l'art de l'esquive ? Vous devez vraiment me prendre pour un idiot !}{Vous voudriez que je croie que vous recherchiez un vieil aveugle pour qu'il vous permette de devenir maître dans l'art de l'esquive ? Vous devez vraiment me prendre pour un idiot !}{}{}{}{ }
+{76}{C'est pourtant vrai, monsieur. Ma présence ici n'a pas d'autre raison d'être.}{}{5}{}{81}{ }
+{79}{Monsieur aveugle toujours pouvoir entraîner ?  Ou trop dur pour lui ?}{}{-4}{}{81}{ }
+{80}{E:}{}{1}{}{0}{ }
+{81}{[Sarcastique] Comment puis-je savoir quel niveau vous avez atteint dans l'art de l'esquive ? Si vous êtes suffisamment doué, vous devriez pouvoir éviter ceci... [Son bras se détend subitement.]}{[Sarcastique] Comment puis-je savoir quel niveau vous avez atteint dans l'art de l'esquive ? Si vous êtes suffisamment douée, vous devriez pouvoir éviter ceci... [Son bras se détend subitement.]}{}{}{}{ }
+{82}{Qu'est-ce que... [Vous esquivez.]}{}{5}{tr1 2, tr1 -2, sk1 20}{179}{ }
+{83}{Qu'est-ce que... [Vous esquivez.]}{}{5}{tr1 2, tr1 -2, sk1 -19}{191}{ }
+{84}{Qu'est-ce que... [Vous esquivez.]}{}{5}{tr1 1, tr1 -1}{186}{ }
+{85}{Hé ! Vieux fou ! [Vous esquivez.]}{}{5}{tr1 -1}{186}{ }
+{86}{Aargh ? [Vous esquivez.]}{}{-4}{tr1 2, tr1 -2, sk1 20}{179}{ }
+{87}{Aargh ? [Vous esquivez.]}{}{-4}{tr1 2, tr1 -2, sk1 -19}{191}{ }
+{88}{Aargh ? [Vous esquivez.]}{}{-4}{tr1 1, tr1 -1}{186}{ }
+{89}{Hé ! Vous pas bien ? [Vous esquivez.]}{}{-4}{tr1 -1}{186}{ }
+{90}{Ah ! Bien ! Dans ce cas, je vous " crois ". Mais si vous souhaitez vraiment devenir maître dans l'art de l'esquive, j'ai une tâche à vous confier avant de vous transmettre mes secrets.}{Ah ! Bien ! Dans ce cas, je vous " crois ". Mais si vous souhaitez vraiment devenir maître dans l'art de l'esquive, j'ai une tâche à vous confier avant de vous transmettre mes secrets.}{}{}{}{ }
+{91}{Tout ce que vous voulez, maître.}{}{5}{}{96}{ }
+{92}{Que dois-je faire pour prouver ma valeur ?}{}{5}{}{96}{ }
+{94}{Quoi moi faire ?}{}{-4}{}{96}{ }
+{95}{E:}{}{1}{}{0}{ }
+{96}{La mort ! C'est la mort que je veux ! Tuez Monsieur de la Panse, maître du corps à corps ! Ha ! ha ! Voilà ! Prouvez-moi qu'il n'est pas votre maître et je vous récompenserai en vous dispensant mon enseignement. }{La mort ! C'est la mort que je veux ! Tuez Monsieur de la Panse, maître du corps à corps ! Ha ! ha ! Voilà ! Prouvez-moi qu'il n'est pas votre maître et je vous récompenserai en vous dispensant mon enseignement. }{}{}{}{qu1105 1 }
+{97}{Vous voulez que je tue le maître du corps à corps ? Mais pourquoi ?}{}{5}{gf2291 0}{107}{ }
+{98}{En quoi sa mort pourrait-elle vous aider ?}{}{5}{gf2291 0}{107}{ }
+{99}{J'ai déjà tué cet arrogant.}{}{5}{gf2291  1}{336}{ }
+{100}{Pourquoi moi tuer lui ?}{}{-4}{gf2291 0}{107}{ }
+{101}{Lui quoi faire à vous ?}{}{-4}{gf2291 0}{107}{ }
+{102}{Moi avoir tué méchant homme.}{}{-4}{gf2291  1}{336}{ }
+{103}{Ah ! Je vois qu'il a confié cette mission au crétin du village ! N'a-t-il donc trouvé personne d'autre ? Je vous ai demandé votre nom, imbécile !}{Ah ! Je vois qu'il a confié cette mission à la crétine du village ! N'a-t-il donc trouvé personne d'autre ? Je vous ai demandé votre nom, imbécile !}{}{}{}{ }
+{104}{Oh... @pcname@. Ca mon nom.}{}{-4}{}{26}{ }
+{105}{Moi pas imbécile ! Ca rendre moi colère ! Moi m'occuper de vous maint'nant !}{}{-4}{}{}{co, fl 32}
+{106}{E:}{}{-4}{}{0}{ }
+{107}{Pourquoi faut-il qu'il meure ? Vous osez me demander pourquoi ! Eh bien, je vais vous répondre : pour avoir détruit ma vie et m'avoir ôté la vue, idiot ! Druella était mienne ! Mienne, oui ! Il le savait... Il savait qu'elle m'aimait... C'est pour cela qu'il a voulu me la prendre !}{Pourquoi faut-il qu'il meure ? Vous osez me demander pourquoi ! Eh bien, je vais vous répondre : pour avoir détruit ma vie et m'avoir ôté la vue, idiote ! Druella était mienne ! Mienne, oui ! Il le savait... Il savait qu'elle m'aimait... C'est pour cela qu'il a voulu me la prendre !}{}{}{}{ }
+{108}{Il vous a aveuglé à cause d'une femme ?}{}{5}{}{112}{ }
+{110}{Vous vous battre pour fille ?}{}{-4}{}{112}{ }
+{111}{E:}{}{1}{}{0}{ }
+{112}{Nous avons toujours été rivaux... Et puis, un jour, il m'a défié en duel pour la main de Druella. J'étais fou de rage ! Quel porc arrogant ! N'écoutant que mon orgueil, j'ai accepté, malgré les protestations de Druella. Mais j'ignorais à quel point elle l'obsédait désormais...}{Nous avons toujours été rivaux... Et puis, un jour, il m'a défié en duel pour la main de Druella. J'étais fou de rage ! Quel porc arrogant ! N'écoutant que mon orgueil, j'ai accepté, malgré les protestations de Druella. Mais j'ignorais à quel point elle l'obsédait désormais...}{}{}{}{ }
+{113}{Comment se fait-il que vous ayez perdu la vue, mais pas la vie ?}{}{5}{}{118}{ }
+{116}{Lui aveugler vous pendant combat ? Ca pas normal.}{}{-4}{}{118}{ }
+{117}{E:}{}{-4}{}{0}{ }
+{118}{J'ai commis une erreur qui lui a permis de prendre le dessus. J'ai reconnu ma défaite, mais il ne s'est pas arrêté pour autant, exigeant que je clame qu'il était plus fort que moi. Quand j'ai refusé, il m'a dit qu'il allait faire en sorte que jamais plus je ne puisse prétendre être son égal. C'est alors qu'il m'a aveuglé à l'aide de son épée. Le cri d'angoisse de Druella est le dernier bruit que j'ai entendu avant de perdre connaissance...}{J'ai commis une erreur qui lui a permis de prendre le dessus. J'ai reconnu ma défaite, mais il ne s'est pas arrêté pour autant, exigeant que je clame qu'il était plus fort que moi. Quand j'ai refusé, il m'a dit qu'il allait faire en sorte que jamais plus je ne puisse prétendre être son égal. C'est alors qu'il m'a aveuglé à l'aide de son épée. Le cri d'angoisse de Druella est le dernier bruit que j'ai entendu avant de perdre connaissance...}{}{}{}{ }
+{119}{Que s'est-il passé ensuite ?}{}{5}{}{124}{ }
+{120}{Je vous vengerai ! Que dois-je vous rapporter comme preuve de sa mort ?}{}{5}{}{134}{qu1105 2 }
+{121}{Et après ?}{}{-4}{}{124}{ }
+{122}{Moi tuer lui pour vous ! }{}{-4}{}{134}{qu1105 2 }
+{124}{Alors que mes blessures se refermaient à l'infirmerie, ma haine pour de la Panse est devenue une rage dévorante. J'y pense désormais chaque seconde de mon existence. Vous êtes un instrument envoyé par le ciel. Vous serez mes yeux !}{Alors que mes blessures se refermaient à l'infirmerie, ma haine pour de la Panse est devenue une rage dévorante. J'y pense désormais chaque seconde de mon existence. Vous êtes un instrument envoyé par le ciel. Vous serez mes yeux !}{}{}{}{ }
+{125}{Je le tuerai en votre nom ! }{}{5}{}{134}{qu1105 2 }
+{126}{Moi tuer lui pour vous !}{}{-4}{}{134}{qu1105 2 }
+{127}{C'est un redoutable adversaire... Il faut que j'y réfléchisse...}{}{5}{}{0}{ }
+{128}{Lui costaud. Moi hésiter... Revenir plus tard.}{}{-4}{}{0}{ }
+{129}{J'ai entendu dire que Druella lui aurait échappé. C'est la seule lueur de joie qui subsiste dans mon existence. Peut-être la retrouverez-vous au cours de vos voyages... Si vous apprenez la moindre nouvelle à son sujet, je serais heureux que vous me la transmettiez. [Son obsession revient au galop.] Il va enfin payer pour avoir détruit notre vie, mon amour ! Il va enfin payer ! Partez ! Massacrez le démon qui se fait appeler Monsieur de la Panse et ramenez-moi ses yeux !}{J'ai entendu dire que Druella lui aurait échappé. C'est la seule lueur de joie qui subsiste dans mon existence. Peut-être la retrouverez-vous au cours de vos voyages... Si vous apprenez la moindre nouvelle à son sujet, je serais heureux que vous me la transmettiez. [Son obsession revient au galop.] Il va enfin payer pour avoir détruit notre vie, mon amour ! Il va enfin payer ! Partez ! Massacrez le démon qui se fait appeler Monsieur de la Panse et ramenez-moi ses yeux !}{}{}{}{ }
+{130}{J'y vais.}{}{5}{}{0}{ }
+{131}{Je n'y manquerai pas. J'aimerais encore vous poser une question avant de m'en aller...}{}{5}{}{139}{ }
+{132}{Moi tuer lui !}{}{-4}{}{0}{ }
+{133}{Oui ! Mais demander encore questions avant.}{}{-4}{}{139}{ }
+{134}{[Il ricane d'un air malfaisant.] Ramenez-moi ses yeux ! Cela me suffira comme preuve de sa mort.}{[Il ricane d'un air malfaisant.] Ramenez-moi ses yeux ! Cela me suffira comme preuve de sa mort.}{}{}{}{ }
+{135}{Considérez que vous les avez déjà en main. Si je puis me permettre, qu'est-il advenu de Druella ?}{}{5}{}{129}{ }
+{137}{Moi amener yeux à vous ! Et la fille ? Quoi arriver à elle ?}{}{-4}{}{129}{ }
+{138}{E:}{}{1}{}{0}{ }
+{139}{Qu'y a-t-il ?}{Qu'y a-t-il ?}{}{}{}{ }
+{140}{Consentiriez-vous à m'entraîner afin que je devienne maître dans l'art de l'esquive ?}{}{5}{qb 1105 0, qb 1116 0}{75}{ }
+{141}{H:}{}{5}{}{139}{ }
+{142}{E:}{}{5}{}{0}{ }
+{143}{Je tuerai de la Panse pour cela. }{}{5}{qu1105 1}{134}{qu1105 2 }
+{144}{J'ai les yeux de votre ennemi.}{}{5}{qu1105 3, in5660, lf 15 0}{162}{ }
+{145}{Je vous apporte un cadeau de la part de Dame Druella.}{}{5}{in 3603, lf 14 0, qa 1115 1, qb 1115 2}{198}{ }
+{146}{Moi avoir kék'chose pour vous... de votre m'dame.}{}{-4}{in 3603, lf 14 0, qa 1115 1, qb 1115 2}{198}{ }
+{147}{Vous entraîner moi, maît' en esquif ?}{}{-4}{qb 1105 0, qb 1116 0}{75}{ }
+{148}{H:}{}{-4}{}{139}{ }
+{149}{Moi tuer d'la Panse pour vous ! }{}{-4}{qu1105 1}{134}{qu1105 2 }
+{150}{Moi avoir yeux ! Moi avoir yeux !}{}{-4}{qu1105 3, in5660, lf 15 0}{162}{ }
+{151}{E:}{}{-4}{}{0}{ }
+{152}{Je n'ai pas encore les yeux de de la Panse.}{}{5}{qu1105 2, ni5660}{157}{ }
+{153}{Moi pas encore avoir yeux.}{}{-4}{qu1105 2, ni5660}{157}{ }
+{154}{Oh, c'est vous, @pcname@. Il me semblait bien reconnaître votre odeur !}{Oh, c'est vous, @pcname@. Il me semblait bien reconnaître votre parfum !}{}{}{}{ }
+{155}{J'ai une question...}{}{5}{}{139}{ }
+{156}{Moi poser question ?}{}{-4}{}{139}{ }
+{157}{Dans ce cas, que faites-vous ici ? Je n'ai rien à vous offrir tant que de la Panse vivra ! Tuez-le donc !}{Dans ce cas, que faites-vous ici ? Je n'ai rien à vous offrir tant que de la Panse vivra ! Tuez-le donc !}{}{}{}{ }
+{158}{K:}{}{5}{}{139}{ }
+{159}{E:}{}{5}{}{0}{ }
+{160}{K:}{}{-4}{}{139}{ }
+{161}{E:}{}{-4}{}{0}{ }
+{162}{[Il part d'un rire de dément.] Oui ! Oui, c'est cela ! Je n'ai jamais douté de vous ! Donnez-les moi !}{[Il part d'un rire de dément.] Oui ! Oui, c'est cela ! Je n'ai jamais douté de vous ! Donnez-les moi !}{}{}{}{lf 15 1 }
+{163}{Tenez, prenez-les.}{}{5}{}{167}{in 5660 }
+{164}{Débarrassez-moi de ces horreurs !}{}{5}{}{167}{in 5660 }
+{165}{Accord. Voilà.}{}{-4}{}{167}{in 5660 }
+{166}{Prenez, ça pas beau, berk !}{}{-4}{}{167}{in 5660 }
+{167}{[Il s'adresse aux yeux.] Je savais que le jour de la vengeance finirait par arriver. Tu as enfin payé pour tes crimes ! Je suis vengé ! [Il écrase les yeux dans ses mains sans cesser de rire.]}{[Il s'adresse aux yeux.] Je savais que le jour de la vengeance finirait par arriver. Tu as enfin payé pour tes crimes ! Je suis vengé ! [Il écrase les yeux dans ses mains sans cesser de rire.]}{}{}{}{ }
+{168}{Hum... Si nous parlions de mon entraînement, Monsieur Chambre ?}{}{5}{}{170}{ }
+{169}{Euh... Entraînement maint'nant ?}{}{-4}{}{170}{ }
+{170}{Oui, mon fils ! Je vous donnerai tout ce que vous voudrez pour avoir débarrassé le monde de cette ignoble créature ! En tuant de la Panse, vous avez prouvé que vous étiez doué pour notre art. Permettez-moi de vous conférer solennellement le titre de maître de l'esquive. Merci. Merci du fond du coeur.}{Oui, madame ! Je vous donnerai tout ce que vous voudrez pour avoir débarrassé le monde de cette ignoble créature ! En tuant de la Panse, vous avez prouvé que vous étiez douée pour notre art. Permettez-moi de vous conférer solennellement le titre de maître de l'esquive. Merci. Merci du fond du coeur.}{}{}{}{tr1 3, qu1105 4, rq2163 }
+{171}{Merci. Je vais poursuivre mes aventures.}{}{5}{}{-15}{ }
+{172}{Je dois désormais vous tuer. Il ne peut y avoir qu'un seul et unique maître.}{}{5}{}{}{co, fl 32}
+{173}{Je vous apporte un cadeau, de la part de Dame Druella.}{}{5}{ in3603, lf 14 0, qa1115 1, qb 1115 2}{198}{lf 14 1 }
+{175}{Merci, maître.}{}{-4}{}{-15}{ }
+{176}{Moi avoir kék'chose pour vous... de votre m'dame.}{}{-4}{ in3603, lf 14 0, qa1115 1, qb 1115 2}{198}{lf 14 1 }
+{177}{Accord. Maint'nant, vous mourir. Moi unique maît' !}{}{-4}{}{}{co, fl 32}
+{178}{E:}{}{1}{}{-15}{ }
+{179}{[Vous parvenez à éviter son coup.] Je vois que vous avez atteint le rang d'expert...}{[Vous parvenez à éviter son coup.] Je vois que vous avez atteint le rang d'expert...}{}{}{}{ }
+{180}{Je vous ai dit que je souhaitais juste profiter de votre enseignement !}{}{5}{}{90}{ }
+{181}{C'est ça, l'aveugle ! Défendez-vous !}{}{5}{}{}{co, fl 32}
+{183}{Hé ! Vous stupide, moi juste vouloir 'traînement !}{}{-4}{}{90}{ }
+{184}{Vous essayer tuer moi ! Moi tuer vous !}{}{-4}{}{}{co, fl 32}
+{185}{E:}{}{1}{}{0}{ }
+{186}{[Vous recevez le coup étonnamment puissant du vieil homme.] Ah ! Je savais bien que vous mentiez ! Vous êtes bien loin du niveau requis pour devenir maître dans notre art. Vous êtes certainement un espion ! Partez ou vous le regretterez !}{[Vous recevez le coup étonnamment puissant du vieil homme.] Ah ! Je savais bien que vous mentiez ! Vous êtes bien loin du niveau requis pour devenir maître dans notre art. Vous êtes certainement une espionne ! Partez ou vous le regretterez !}{}{}{}{ }
+{187}{Pas de doute, vous avez vraiment perdu la tête... Je m'en vais !}{}{5}{}{40}{ }
+{188}{Ca, vous allez me le payer, l'aveugle...}{}{5}{}{}{co, fl 32}
+{189}{Vous stupide ! Moi partir !}{}{-4}{}{40}{ }
+{190}{Hé ! Vous frapper moi ! Maint'nant, moi frapper vous !}{}{-4}{}{}{co, fl 32}
+{191}{[Vous tentez d'éviter le coup, mais la surprenante rapidité du vieil homme ne vous en laisse pas le temps.] Hmm... Je vois que vous avez atteint le rang d'expert dans l'art de l'esquive. Mais vos dons ne sont pas encore suffisamment développés pour espérer devenir maître. Améliorez-vous et peut-être que je vous entraînerai...}{[Vous tentez d'éviter le coup, mais la surprenante rapidité du vieil homme ne vous en laisse pas le temps.] Hmm... Je vois que vous avez atteint le rang d'expert dans l'art de l'esquive. Mais vos dons ne sont pas encore suffisamment développés pour espérer devenir maître. Améliorez-vous et peut-être que je vous entraînerai...}{}{}{}{ }
+{192}{Je reviendrai quand j'aurai amélioré mes compétences.}{}{5}{}{0}{ }
+{193}{C'est ça, l'aveugle ! Défendez-vous !}{}{5}{}{}{co, fl 32}
+{195}{Moi devenir mieux. Et après, revenir.}{}{-4}{}{0}{ }
+{196}{Vous essayer tuer moi ! Moi tuer vous !}{}{-4}{}{}{co, fl 32}
+{197}{E:}{}{1}{}{0}{ }
+{198}{Dame Druella ! Vous l'avez vue ! Que m'a-t-elle envoyé ?}{Dame Druella ! Vous l'avez vue ! Que m'a-t-elle envoyé ?}{}{}{}{ }
+{199}{Une potion. On m'a dit qu'elle vous rendrait la vue !}{}{5}{ gf2291 1}{203}{ }
+{200}{Euh... une possion. Pour que vous voir encore !}{}{-4}{gf2291 1}{203}{ }
+{201}{Une potion. On m'a dit qu'elle vous rendrait la vue !}{}{5}{gf2291 0}{-10}{ }
+{202}{Euh... une possion. Pour que vous voir encore !}{}{-4}{ gf2291 0}{-10}{ }
+{203}{Me rendre la vue ? Comment a-t-elle pu obtenir une telle chose ? S'agit-il d'une ruse ?}{Me rendre la vue ? Comment a-t-elle pu obtenir une telle chose ? S'agit-il d'une ruse ?}{}{}{}{ }
+{204}{De la Panse voulait se servir de la potion pour forcer Dame Druella à l'épouser.}{}{5}{}{206}{ }
+{205}{La Pense essayer épouser elle en échange.}{}{-4}{}{206}{ }
+{206}{Quel horrible monstre ! De quelle atrocité ne s'est-il pas montré coupable ? Vous avez bien fait de débarrasser le monde de sa présence. Qu'attendez-vous ? Donnez-moi la potion !}{Quel horrible monstre ! De quelle atrocité ne s'est-il pas montré coupable ? Vous avez bien fait de débarrasser le monde de sa présence. Qu'attendez-vous ? Donnez-moi la potion !}{}{}{}{ }
+{207}{Tenez. Buvez-la.}{}{5}{}{-10}{ }
+{209}{Voilà. Vous boire. }{}{-4}{}{-10}{ }
+{211}{J'y vois ! J'y vois ! Les dieux soient loués ! Je n'avais jamais entendu parler d'une telle magie ! Ce monstre a dû payer cher pour se procurer un tel breuvage ! Oh, soyez béni ! Et Druella ? Comment va-t-elle, je vous prie ?}{J'y vois ! J'y vois ! Les dieux soient loués ! Je n'avais jamais entendu parler d'une telle magie ! Ce monstre a dû payer cher pour se procurer un tel breuvage ! Oh, soyez bénie ! Et Druella ? Comment va-t-elle, je vous prie ?}{}{}{}{gf 2292 1, qu 1115 4, in 3603, al +100, fp }
+{212}{Elle se trouve à Dernholm... Elle avait peur que vous ne l'aimiez plus.}{}{5}{qu1114 4, gf2290 0, gf2291 1}{-19}{ }
+{213}{Elle a épousé de la Panse, en échange de la promesse que vous recouvreriez la vue.}{}{5}{qu1114 4, gf2290 0, gf2291 0}{400}{ }
+{214}{J'ai bien peur qu'elle ne soit plus de ce monde. Elle vous a aimé jusqu'à ses derniers instants.}{}{5}{gf2290 1}{229}{ }
+{215}{Elle m'importunait. Je l'ai donc tuée et je m'apprête à faire de même avec vous.}{}{5}{gf2290 1}{}{co, fl 234}
+{216}{Elle attendre à Dernholm. Elle pas savoir si vous aimer elle encore.}{}{-4}{qu1114 4, gf2290 0, gf2291 1}{-19}{ }
+{217}{Elle à Dernholm, épouser M'sieur la Pense pour que vous voir.}{}{-4}{qu1114 4, gf2290 0, gf2291 0}{400}{ }
+{218}{Moi regrette. Elle aimer vous jusqu'à mort de elle.}{}{-4}{gf2290 1}{229}{ }
+{219}{Elle enquiquinante. Moi tuer elle, et maint'nant, moi tuer vous !}{}{-4}{gf2290 1}{}{co, fl 234}
+{220}{L'amour que j'éprouve pour elle n'a jamais faibli. Je m'en vais de ce pas la rejoindre ! Merci de tout ce que vous avez fait pour nous. Vous êtes un guerrier honorable. Puissent les dieux bénir votre voyage. Au revoir !}{L'amour que j'éprouve pour elle n'a jamais faibli. Je m'en vais de ce pas la rejoindre ! Merci de tout ce que vous avez fait pour nous. Vous êtes une guerrière honorable. Puissent les dieux bénir votre voyage. Au revoir !}{}{}{}{ }
+{221}{Au revoir.}{}{5}{}{-15}{ }
+{222}{Il est une chose que vous pourriez faire pour moi, maître de l'esquive.}{}{5}{sk1 18, tr 1 2, tr 1 -2, gf2291 1, qu 1105 0}{350}{ }
+{223}{Je dois vous dire que Monsieur de la Panse est mort. J'ai ses yeux sur moi.}{}{5}{lf 15 0, in 5660, qu 1105 3}{162}{ }
+{224}{Et maintenant que le combat est équitable... Je vais vous tuer !}{}{5}{}{}{co, fl 32}
+{225}{La Pense mort ! Moi avoir ses yeux !}{}{-4}{lf 15 0, in 5660, qu 1105 3}{162}{ }
+{226}{Oui. Moi beaucoup bonheur ! Moi devenir maît' en esquif !}{}{-4}{sk1 18, tr 1 2, tr 1 -2, gf2291 1, qu 1105 0}{350}{ }
+{227}{Ar'voir.}{}{-4}{}{-15}{ }
+{228}{Maint'nant, vous voir moi tuer vous !}{}{-4}{}{}{co, fl 32}
+{229}{Non, ce n'est pas possible ! Dites-moi que ce n'est pas vrai ! Oh ! Quel horrible prix à payer pour recouvrer la vue ! Horrible, horrible... Je redeviendrais aveugle sans la moindre hésitation si cela pouvait lui rendre la vie. [Son corps est secoué par les sanglots.] Je vous en prie, laissez-moi, que je puisse la pleurer en paix...}{Non, ce n'est pas possible ! Dites-moi que ce n'est pas vrai ! Oh ! Quel horrible prix à payer pour recouvrer la vue ! Horrible, horrible... Je redeviendrais aveugle sans la moindre hésitation si cela pouvait lui rendre la vie. [Son corps est secoué par les sanglots.] Je vous en prie, laissez-moi, que je puisse la pleurer en paix...}{}{}{}{ }
+{230}{Je regrette, Adam. Je m'en vais. Au revoir.}{}{5}{}{0}{ }
+{231}{Voyons si vous êtes aussi facile à tuer qu'elle...}{}{5}{}{}{co, fl 234}
+{232}{Moi regrette, Adam. Ar'voir.}{}{-4}{}{0}{ }
+{233}{Moi voir si vous facile à tuer comme elle. Vous crier comme fille ?}{}{-4}{}{}{co, fl 234}
+{234}{Comment ? Vous ? Comment osez-vous revenir me narguer ? Je vais me venger de vous !}{Comment ? Vous ? Comment osez-vous revenir me narguer ? Je vais me venger de vous !}{}{}{}{ }
+{235}{}{}{}{}{}{ }
+{236}{}{}{}{}{}{ }
+{237}{}{}{}{}{}{ }
+{238}{}{}{}{}{}{ }
+{239}{}{}{}{}{}{ }
+{240}{Dame Druella ! Vous l'avez vue ! Que m'a-t-elle envoyé ?}{Dame Druella ! Vous l'avez vue ! Que m'a-t-elle envoyé ?}{}{}{}{ }
+{241}{Une potion. On m'a dit qu'elle vous rendrait la vue !}{}{5}{}{-10}{ }
+{242}{Euh... une possion. Pour que vous voir encore ! Voilà. Vous boire.}{}{-4}{}{-10}{ }
+{244}{}{}{}{}{}{ }
+{245}{}{}{}{}{}{ }
+{246}{}{}{}{}{}{ }
+{247}{}{}{}{}{}{ }
+{248}{}{}{}{}{}{ }
+{249}{}{}{}{}{}{ }
+{252}{[Il réfléchit quelques instants.] Ses yeux... [Il laisse échapper un rire malfaisant.] Oui. Ses yeux ! Voilà la preuve qu'il me faut ! Rapportez-moi les yeux de Monsieur de la Panse et je vous ferai devenir maître dans l'art de l'esquive.}{[Il réfléchit quelques instants.] Ses yeux... [Il laisse échapper un rire malfaisant.] Oui. Ses yeux ! Voilà la preuve qu'il me faut ! Rapportez-moi les yeux de Monsieur de la Panse et je vous ferai devenir maître dans l'art de l'esquive.}{}{}{}{ }
+{253}{Je vous les ramène sans perdre de temps.}{}{5}{}{0}{qu1116 2 }
+{254}{Je regrette. Je n'ai aucune intention de le tuer. Au revoir.}{}{5}{}{0}{ }
+{255}{Moi aller chercher. Moi bientôt revenir.}{}{-4}{}{0}{qu1116 2 }
+{256}{Nan. Moi pas vouloir tuer M'sieur la Pense. Ar'voir.}{}{-4}{}{0}{ }
+{257}{[Il part d'un rire de dément.] Oui ! Oui, c'est cela ! Je n'ai jamais douté de vous ! Donnez-les moi !}{[Il part d'un rire de dément.] Oui ! Oui, c'est cela ! Je n'ai jamais douté de vous ! Donnez-les moi !}{}{}{}{lf 15 1 }
+{258}{Tenez, prenez-les.}{}{5}{}{262}{in 5660 }
+{259}{Débarrassez-moi de ces horreurs !}{}{5}{}{262}{in 5660 }
+{260}{Accord. Voilà.}{}{-4}{}{262}{in 5660 }
+{261}{Prenez, ça pas beau, berk !}{}{-4}{}{262}{in 5660 }
+{262}{[Il s'adresse aux yeux.] Je savais que le jour de la vengeance finirait par arriver. Tu as enfin payé pour tes crimes ! Je suis vengé ! [Il écrase les yeux dans ses mains sans cesser de rire.]}{[Il s'adresse aux yeux.] Je savais que le jour de la vengeance finirait par arriver. Tu as enfin payé pour tes crimes ! Je suis vengé ! [Il écrase les yeux dans ses mains sans cesser de rire.]}{}{}{}{ }
+{263}{Hum... Adam, pourriez-vous m'entraîner maintenant ?}{}{5}{sk1 18, tr 1 2, tr 1 -2}{271}{ }
+{264}{Euh... Entraînement maint'nant ?}{}{-4}{sk1 18, tr 1 2, tr 1 -2}{271}{ }
+{265}{Hum... Adam, pourriez-vous m'entraîner maintenant ?}{}{5}{sk1 -17, tr 1 2, tr 1 -2}{285}{ }
+{266}{Euh... Entraînement maint'nant ?}{}{-4}{sk1 -17, tr 1 2, tr 1 -2}{285}{ }
+{267}{Hum... Adam, pourriez-vous m'entraîner maintenant ?}{}{5}{tr 1 -1}{285}{ }
+{268}{Euh... Entraînement maint'nant ?}{}{-4}{tr 1 -1}{285}{ }
+{271}{Oui, mon fils ! Je vous donnerai tout ce que vous voudrez pour avoir débarrassé le monde de cette ignoble créature ! En tuant de la Panse, vous avez prouvé que vous étiez doué pour notre art. Permettez-moi de vous conférer solennellement le titre de maître de l'esquive. Merci. Merci du fond du coeur. Et qu'en est-il de ma bien-aimée Druella ?}{Oui, ma fille ! Je vous donnerai tout ce que vous voudrez pour avoir débarrassé le monde de cette ignoble créature ! En tuant de la Panse, vous avez prouvé que vous étiez douée pour notre art. Permettez-moi de vous conférer solennellement le titre de maître de l'esquive. Merci. Merci du fond du coeur.  Et qu'en est-il de ma bien-aimée Druella ?}{}{}{}{tr1 3, qu1116 4, Rq2163 }
+{272}{Elle se trouve à Dernholm... Elle avait peur que vous ne l'aimiez plus.}{}{5}{qu1114 4, gf2290 0, gf2291 1}{-19}{ }
+{273}{Elle a épousé de la Panse, en échange de la promesse que vous recouvreriez la vue.}{}{5}{qu1114 4, gf2290 0, gf2291 0}{400}{ }
+{274}{J'ai bien peur qu'elle ne soit plus de ce monde. Elle vous a aimé jusqu'à ses derniers instants.}{}{5}{gf2290 1}{229}{ }
+{275}{Elle m'importunait. Je l'ai donc tuée et je m'apprête à faire de même avec vous.}{}{5}{gf2290 1}{}{co, fl 234}
+{276}{Elle attendre à Dernholm. Elle pas savoir si vous aimer elle encore.}{}{-4}{qu1114 4, gf2290 0, gf2291 1}{-19}{ }
+{277}{Elle à Dernholm, épouser M'sieur la Pense pour que vous voir.}{}{-4}{qu1114 4, gf2290 0, gf2291 0}{400}{ }
+{278}{Moi regrette. Elle aimer vous jusqu'à mort de elle.}{}{-4}{gf2290 1}{229}{ }
+{279}{Elle enquiquinante. Moi tuer elle, et maint'nant, moi tuer vous !}{}{-4}{gf2290 1}{}{co, fl 234}
+{280}{Mon savoir est hautement spécialisé. Je ne peux pas vous entraîner tant que vous n'aurez pas terminé votre apprentissage et votre entraînement d'expert, puis pratiqué suffisamment pour être digne de devenir maître grâce à mon enseignement. Je regrette. Mais c'est tout ce que je puis vous offrir.}{Mon savoir est hautement spécialisé. Je ne peux pas vous entraîner tant que vous n'aurez pas terminé votre apprentissage et votre entraînement d'expert, puis pratiqué suffisamment pour être digne de devenir maître grâce à mon enseignement. Je regrette. Mais c'est tout ce que je puis vous offrir.}{}{}{}{ }
+{281}{Je vais améliorer mes compétences. Quelle preuve de sa mort désirez-vous ?}{}{5}{}{252}{qu1116 2 }
+{283}{Moi devenir mieux. Moi tuer lui. Quoi vous vouloir pour preuve lui mort ?}{}{-4}{}{252}{qu1116 2 }
+{284}{E:}{}{1}{}{0}{ }
+{285}{Mon savoir est hautement spécialisé. Je ne peux pas vous entraîner tant que vous n'aurez pas terminé votre apprentissage et votre entraînement d'expert, puis pratiqué suffisamment pour être digne de devenir maître grâce à mon enseignement. Je regrette. Revenez me voir quand vous vous serez améliorée. Alors, je vous entraînerai.}{Mon savoir est hautement spécialisé. Je ne peux pas vous entraîner tant que vous n'aurez pas terminé votre apprentissage et votre entraînement d'expert, puis pratiqué suffisamment pour être digne de devenir maître grâce à mon enseignement. Je regrette. Revenez me voir quand vous vous serez améliorée. Alors, je vous entraînerai.}{}{}{}{ }
+{286}{Je reviendrai quand j'aurai amélioré mes compétences.}{}{5}{}{0}{ }
+{288}{Moi devenir mieux. Et après, revenir.}{}{-4}{}{0}{ }
+{289}{E:}{}{1}{}{0}{ }
+{292}{}{}{}{}{}{ }
+{293}{}{}{}{}{}{ }
+{294}{}{}{}{}{}{ }
+{295}{}{}{}{}{}{ }
+{296}{Oui, mon fils ! Je vous donnerai tout ce que vous voudrez pour avoir débarrassé le monde de cette ignoble créature ! En tuant de la Panse, vous avez prouvé que vous étiez douée au combat. Quand vous serez prête à recevoir mon enseignement... très bientôt, je l'espère... je vous décernerai solennellement le titre de maître de l'esquive. Merci. Merci du fond du coeur. Et qu'en est-il de ma bien-aimée Druella ?}{Oui, ma fille ! Je vous donnerai tout ce que vous voudrez pour avoir débarrassé le monde de cette ignoble créature ! En tuant de la Panse, vous avez prouvé que vous étiez douée au combat. Quand vous serez prête à recevoir mon enseignement... très bientôt, je l'espère... je vous décernerai solennellement le titre de maître de l'esquive. Merci. Merci du fond du coeur. Et qu'en est-il de ma bien-aimée Druella ?}{}{}{}{ }
+{297}{Elle se trouve à Dernholm... Elle avait peur que vous ne l'aimiez plus.}{}{5}{qu1114 4, gf2290 0, gf2291 1}{-19}{ }
+{298}{Elle a épousé de la Panse, en échange de la promesse que vous recouvreriez la vue.}{}{5}{qu1114 4, gf2290 0, gf2291 0}{400}{ }
+{299}{J'ai bien peur qu'elle ne soit plus de ce monde. Elle vous a aimé jusqu'à ses derniers instants.}{}{5}{gf2290 1}{229}{ }
+{300}{Elle m'importunait. Je l'ai donc tuée et je m'apprête à faire de même avec vous.}{}{5}{gf2290 1}{}{co, fl 260}
+{301}{Elle attendre à Dernholm. Elle pas savoir si vous aimer elle encore.}{}{-4}{qu1114 4, gf2290 0, gf2291 1}{-19}{ }
+{302}{Elle à Dernholm, épouser M'sieur la Pense pour que vous voir.}{}{-4}{qu1114 4, gf2290 0, gf2291 0}{400}{ }
+{303}{Moi regrette. Elle aimer vous jusqu'à mort de elle.}{}{-4}{gf2290 1}{229}{ }
+{304}{Elle enquiquinante. Moi tuer elle, et maint'nant, moi tuer vous !}{}{-4}{gf2290 1}{}{co, fl 260}
+{309}{Vous détenez enfin la compétence nécessaire. Je vous décerne le titre de maître de l'esquive !}{Vous détenez enfin la compétence nécessaire. Je vous décerne le titre de maître de l'esquive !}{}{}{}{tr1 3, qu1116 4, rq2163 }
+{310}{Je vous remercie de votre patience.}{}{5}{}{0}{ }
+{312}{Marsi, maît' !}{}{-4}{}{0}{ }
+{313}{E:}{}{1}{}{0}{ }
+{314}{G:}{G:}{}{}{}{ }
+{315}{J'ai les yeux de Monsieur de la Panse, comme vous l'aviez demandé.}{}{5}{in5660, lf 13 0}{262}{lf 13 1, in 5660 }
+{316}{Je cherche encore à tuer de la Panse et à vous rapporter ses yeux.}{}{5}{ni5660, lf 13 0}{0}{ }
+{317}{Je peux désormais recevoir mon entraînement de maître.}{}{5}{lf 13 1, tr 1 2, tr 1 -2, sk1 18}{309}{ }
+{318}{Je travaille encore mon entraînement.}{}{5}{tr 1 -1, tr 1 1}{0}{ }
+{319}{Je travaille encore mes compétences.}{}{5}{sk1 -17, tr 1 1}{0}{ }
+{320}{Je ne peux pas encore recevoir l'entraînement.}{}{5}{}{0}{ }
+{321}{Moi avoir yeux méchant homme.}{}{-4}{in5660, lf 13 0}{262}{lf 13 1, in 5660 }
+{322}{Moi bientôt avoir yeux méchant homme.}{}{-4}{ni5660, lf 13 0}{0}{ }
+{323}{Moi entraîner. Maint'nant !}{}{-4}{lf 13 1, tr 1 2, tr 1 -2, sk1 18}{309}{ }
+{324}{Moi pas entraîner. Moi besoin 'traînement. Moi partir maint'nant !}{}{-4}{tr 1 -1, tr 13 1}{0}{ }
+{325}{Moi pas entraîner. Moi besoin compétences. Moi partir maint'nant !}{}{-4}{sk1 -17, tr 13 1}{0}{ }
+{326}{Moi pas encore pouvoir apprendre.}{}{-4}{}{0}{ }
+{327}{Je ne remplirai pas ma part du marché tant que vous ne m'aurez pas rapporté les yeux de Monsieur de la Panse. Ramenez-les moi !}{Je ne remplirai pas ma part du marché tant que vous ne m'aurez pas rapporté les yeux de Monsieur de la Panse. Ramenez-les moi !}{}{}{}{ }
+{328}{E:}{}{5}{}{0}{ }
+{329}{E:}{}{-4}{}{0}{ }
+{330}{[Il éclate de rire.] Vous êtes déjà maître dans notre art ! Je vous souhaite bonne chance dans vos aventures.}{[Il éclate de rire.] Vous êtes déjà maître dans notre art ! Je vous souhaite bonne chance dans vos aventures.}{}{}{}{qu 1116 4 }
+{331}{E:}{}{5}{}{0}{ }
+{332}{E:}{}{-4}{}{0}{ }
+{335}{Tuez de la Panse ! Et ramenez-moi ses yeux !}{Tuez de la Panse ! Et ramenez-moi ses yeux !}{}{}{}{ }
+{336}{[Il reste bouche bée.] Que dites-vous ? De la Panse est mort ?}{[Il reste bouche bée.] Que dites-vous ? De la Panse est mort ?}{}{}{}{ }
+{337}{Oui.}{}{5}{}{339}{ }
+{338}{Ouais ! Lui mort.}{}{-4}{}{339}{ }
+{339}{Pouvez-vous m'apporter la preuve de ce que vous avancez ? Il était maître du corps à corps... Vous n'avez pas pu le vaincre si aisément...}{Pouvez-vous m'apporter la preuve de ce que vous avancez ? Il était maître du corps à corps... Vous n'avez pas pu le vaincre si aisément...}{}{}{}{ }
+{340}{Je vous certifie qu'il est mort. Doutez de mes dires à vos risques et périls.}{}{5}{}{343}{ }
+{341}{Mettriez-vous mon honneur en doute, monsieur ?}{}{5}{}{343}{ }
+{342}{Lui plus mort que mort. Ca être sûr !}{}{-4}{}{343}{ }
+{343}{[Il accepte ce que vous venez de lui apprendre.] Les dieux d'Arcanum me sont témoins, je savais que je finirais par avoir ma vengeance. Et aujourd'hui, je suis enfin vengé ! Ha ! ha ! ha !}{[Il accepte ce que vous venez de lui apprendre.] Les dieux d'Arcanum me sont témoins, je savais que je finirais par avoir ma vengeance. Et aujourd'hui, je suis enfin vengé ! Ha ! ha ! ha !}{}{}{}{ }
+{344}{Hum... Adam, pouvons-nous discuter de mon entraînement ?}{}{5}{sk1 18, tr 1 2, tr 1 -2}{271}{ }
+{345}{Euh... Entraînement maint'nant ?}{}{-4}{sk1 18, tr 1 2, tr 1 -2}{271}{ }
+{346}{Hum... Adam, pouvons-nous discuter de mon entraînement ?}{}{5}{sk1 -17, tr 1 2, tr 1 -2}{285}{ }
+{347}{Euh... Entraînement maint'nant ?}{}{-4}{sk1 -17, tr 1 2, tr 1 -2}{285}{ }
+{348}{Hum... Adam, pouvons-nous discuter de mon entraînement ?}{}{5}{tr 1 -1}{285}{ }
+{349}{Euh... Entraînement maint'nant ?}{}{-4}{tr 1 -1}{285}{ }
+{350}{Mais bien sûr. Après tout ce que vous avez fait pour moi, ce sera un honneur de vous révéler tous les secrets de l'esquive, @pcname@. Quelques heures seront nécessaires. Commençons sans tarder...}{Mais bien sûr. Après tout ce que vous avez fait pour moi, ce sera un honneur de vous révéler tous les secrets de l'esquive, @pcname@. Quelques heures seront nécessaires. Commençons sans tarder...}{}{}{}{ }
+{351}{[Commencer l'entraînement.]}{}{1}{}{0}{tr 1 3 , rq2163 }
+{352}{}{}{}{}{}{ }
+{353}{Je ne possède rien... Non, attendez ! Je suis extrêmement doué dans ma spécialité... C'est moi le maître de l'esquive, après tout. Je vous ferai devenir maître dans cet art si vous le tuez.}{Je ne possède rien... Non, attendez ! Je suis extrêmement doué dans ma spécialité... C'est moi le maître de l'esquive, après tout. Je vous ferai devenir maître dans cet art si vous le tuez.}{}{}{}{qu1116 1 }
+{354}{Je le tuerai pour vous. }{}{5}{sk1 18, tr 1 2, tr 1 -2}{252}{ }
+{355}{Je n'ai pas encore le niveau pour devenir maître.}{}{5}{sk1 -17, tr 1 2, tr 1 -2}{280}{ }
+{356}{Je refuse. Je ne suis pas un tueur à gages.}{}{5}{}{157}{ }
+{357}{Oh ! Moi aimer être maît'. Moi tuer lui. }{}{-4}{sk1 18, tr 1 2, tr 1 -2}{252}{ }
+{358}{Ca bonne idée. Mais moi pas encore capable être maît'.}{}{-4}{sk1 -17, tr 1 2, tr 1 -2}{280}{ }
+{359}{Moi pas vouloir tuer lui. Moi refuser.}{}{-4}{}{157}{ }
+{360}{}{}{}{}{}{ }
+{361}{Bonjour, @pcname@. Je ne sais comment vous remercier de votre bravoure. Je resterai toujours votre obligé.}{Bonjour, @pcname@. Je ne sais comment vous remercier de votre bravoure. Je resterai toujours votre obligé.}{}{}{}{ }
+{362}{Il est une chose que vous pourriez faire pour moi, maître de l'esquive.}{}{5}{sk1 18, tr 1 2, tr 1 -2, gf2291 1, qu 1105 0}{350}{ }
+{363}{Oui. Moi beaucoup bonheur ! Moi devenir maît' en esquif !}{}{-4}{sk1 18, tr 1 2, tr 1 -2, gf2291 1, qu 1105 0}{350}{ }
+{364}{Dans ce cas, accepteriez-vous de m'aider à accéder au rang de maître de l'esquive ?}{}{5}{sk1 18, tr 1 2, tr 1 -2, gf2291 0, qu 1105 0}{373}{ }
+{365}{Moi vouloir êt' maître de squive. Vous apprendre moi ?}{}{-4}{sk1 18, tr 1 2, tr 1 -2, gf2291 0, qu 1105 0}{373}{ }
+{366}{J'ai réfléchi à votre proposition, celle de tuer de la Panse.}{}{5}{sk1 18, tr 1 2, tr 1 -2, gf2291 0, qu 1105 1}{392}{ }
+{367}{Moi avoir réfléchi au sujet de moi tuer Pince.}{}{-4}{sk1 18, tr 1 2, tr 1 -2, gf2291 0, qu 1105 1}{392}{ }
+{368}{J'ai les yeux de Monsieur de la Panse !}{}{5}{qu1105 3, in5660, lf 15 0}{162}{ }
+{369}{Moi avoir yeux ! Moi avoir yeux !}{}{-4}{qu1105 3, in5660, lf 15 0}{162}{ }
+{370}{Je n'ai pas encore les yeux de de la Panse.}{}{5}{qu1105 2, ni5660}{157}{ }
+{371}{Moi pas encore avoir yeux.}{}{-4}{qu1105 2, ni5660}{157}{ }
+{372}{E:}{}{1}{}{0}{ }
+{373}{[songeur] Oui, mais à une condition... Ce Monsieur de la Panse doit mourir. Tuez-le et je vous entraînerai.}{[songeur] Oui, mais à une condition... Ce Monsieur de la Panse doit mourir. Tuez-le et je vous entraînerai.}{}{}{}{ }
+{374}{Si je le tue, accepterez-vous de m'entraîner en échange ?}{}{5}{}{383}{ }
+{375}{Nan. Je n'ai rien contre lui. Je refuse.}{}{5}{}{0}{ }
+{376}{C'est comme cela que vous le remerciez ? C'est vous qui allez mourir !}{}{5}{}{}{co, fl 32}
+{377}{Moi tuer lui puis vous traîner moi ?}{}{-4}{}{383}{ }
+{378}{Nan. Moi pas colère avec M'sieur la Pense. Moi pas tuer lui.}{}{-4}{}{0}{ }
+{379}{Hé, lui guérir vous ! Plutôt vous mourir !}{}{-4}{}{}{co, fl 32}
+{380}{}{}{}{}{}{ }
+{381}{}{}{}{}{}{ }
+{382}{}{}{}{}{}{ }
+{383}{Oui, je ferai de vous un maître de l'esquive, si vous le tuez.}{Oui, je ferai de vous un maître de l'esquive, si vous le tuez.}{}{}{}{qu1116 1 }
+{384}{Je le tuerai pour vous. }{}{5}{sk1 18, tr 1 2, tr 1 -2}{252}{ }
+{385}{Je refuse. Je ne suis pas un tueur à gages.}{}{5}{}{157}{ }
+{386}{Oh ! Moi aimer être maît'. Moi tuer lui. }{}{-4}{sk1 18, tr 1 2, tr 1 -2}{252}{ }
+{387}{Moi pas vouloir tuer lui. Moi refuser.}{}{-4}{}{157}{ }
+{388}{}{}{}{}{}{ }
+{389}{}{}{}{}{}{ }
+{390}{}{}{}{}{}{ }
+{391}{}{}{}{}{}{ }
+{392}{[Il ricane d'un air malfaisant.] Ramenez-moi ses yeux ! Cela me suffira comme preuve de sa mort.}{[Il ricane d'un air malfaisant.] Ramenez-moi ses yeux ! Cela me suffira comme preuve de sa mort.}{}{}{}{ }
+{393}{Considérez que vous les avez déjà en main.}{}{5}{}{0}{qu 1105 2 }
+{394}{E:}{}{5}{}{0}{ }
+{395}{Moi avoir yeux !}{}{-4}{}{0}{qu 1105 2 }
+{396}{E:}{}{1}{}{0}{ }
+{397}{}{}{}{}{}{ }
+{398}{}{}{}{}{}{ }
+{399}{}{}{}{}{}{ }
+{400}{[Il blêmit.] Non ! Quel horrible prix à payer pour recouvrer la vue ! Horrible, horrible... Jamais je ne lui aurais demandé d'épouser un tel monstre... Il faut qu'il meure ! Mais il a démontré que je n'étais pas de taille à l'affronter... Vous, vous avez l'air fort. Accepteriez-vous de mettre un terme à l'existence de ce démon ? Qu'en dites-vous ?}{[Il blêmit.] Non ! Quel horrible prix à payer pour recouvrer la vue ! Horrible, horrible... Jamais je ne lui aurais demandé d'épouser un tel monstre... Il faut qu'il meure ! Mais il a démontré que je n'étais pas de taille à l'affronter... Vous, vous avez l'air forte. Accepteriez-vous de mettre un terme à l'existence de ce démon ? Qu'en dites-vous ?}{}{}{}{ }
+{401}{Qu'avez-vous à m'offrir en échange ?}{}{5}{qu 1105 0}{353}{ }
+{402}{Un instant auparavant, vous m'avez suggéré de tuer de la Panse.}{}{5}{qa 1105 1, qb 1105 2}{414}{ }
+{403}{J'ai les yeux de Monsieur de la Panse !}{}{5}{qu1105 3, in5660, lf 15 0}{162}{ }
+{404}{Moi avoir yeux ! Moi avoir yeux !}{}{-4}{qu1105 3, in5660, lf 15 0}{162}{ }
+{405}{Nan. Je n'ai rien contre lui. Je refuse.}{}{5}{}{0}{ }
+{406}{C'est comme cela que vous le remerciez ? C'est vous qui allez mourir !}{}{5}{}{}{co, fl 32}
+{407}{Quoi vous donner moi pour tuer lui ?}{}{-4}{qu 1105 0}{353}{ }
+{408}{Vous déjà proposer moi de tuer Pince.}{}{-4}{qa 1105 1, qb 1105 2}{414}{ }
+{409}{Je n'ai pas encore les yeux de de la Panse.}{}{5}{qu1105 2, ni5660}{157}{ }
+{410}{Moi pas encore avoir yeux.}{}{-4}{qu1105 2, ni5660}{157}{ }
+{411}{Nan. Moi pas colère avec M'sieur la Pense. Moi pas tuer lui.}{}{-4}{}{0}{ }
+{412}{Hé, lui guérir vous ! Plutôt vous mourir !}{}{-4}{}{}{co, fl 32}
+{413}{E:}{}{1}{}{0}{ }
+{414}{Oui... Et mon désir de vengeance reste intact ! Tuez de la Panse et ramenez-moi ses yeux comme preuve ! Si vous acceptez, je vous permettrai d'accéder au titre de maître de l'esquive !}{Oui... Et mon désir de vengeance reste intact ! Tuez de la Panse et ramenez-moi ses yeux comme preuve ! Si vous acceptez, je vous permettrai d'accéder au titre de maître de l'esquive !}{}{}{}{ }
+{415}{Je reviendrai vous voir après l'avoir tué.}{}{5}{sk1 18, tr 1 2, tr 1 -2}{0}{qu 1105 2 }
+{416}{Je refuse. Je ne suis pas un tueur à gages.}{}{5}{}{0}{ }
+{417}{Oh ! Moi aimer être maît'. Moi tuer lui. }{}{-4}{sk1 18, tr 1 2, tr 1 -2}{0}{qu 1105 2 }
+{418}{Moi pas vouloir tuer lui. Moi refuser.}{}{-4}{}{0}{ }
+{419}{E:}{}{1}{}{0}{ }
+{420}{}{}{}{}{}{ }
+{421}{}{}{}{}{}{ }
+

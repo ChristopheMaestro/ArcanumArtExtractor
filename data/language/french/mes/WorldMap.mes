@@ -1,0 +1,79 @@
+// WorldMap Info 
+//
+
+
+
+{499}{Action}
+
+{500}{Plume d'écrivain}
+{501}{Vue de la carte} // WorldMap View 
+{502}{Vue du continent} // Zoom View 
+{503}{Vue du plan} // Town View 
+{510}{Faire défiler la carte}
+{511}{Supprimer l'itinéraire actuel}
+{512}{Suivre le chemin tracé}
+{520}{Afficher/masquer les repères généraux}
+{521}{Afficher/masquer les repères Têtes de mort}
+{522}{Afficher/masquer les repères Coffres}
+{523}{Afficher/masquer les repères Points d'interrogation}
+
+{600}{Impossible d'accéder à la carte du continent pendant le combat.}
+{601}{Votre chemin est obstrué. Vous devez trouver un pont, un col ou un moyen de transport pour vous rendre à cette destination.}
+
+{602}{Impossible d'accéder à la carte du continent pendant une rencontre.}
+
+{605}{Carte du continent indisponible.}
+
+// Used by TownMap Waypoint-UI 
+{610}{Votre chemin est obstrué. Essayez de cliquer le plus près possible du repère d'itinéraire précédent.}
+{611}{Vous avez atteint le nombre maximum de repères d'itinéraire autorisés et ne pouvez pas en ajouter d'autres.}
+
+
+// Used for Teleport-blocked regions 
+{640}{Vous ne pouvez pas vous téléporter jusqu'à cet endroit. Quelque chose vous en empêche.}
+
+
+{650}{Votre sort semble n'avoir aucun effet.}
+
+
+// Used for Worldmap System Font Color -- Don't translate!
+{655}{254, 248, 236}   // Default is all 250's 
+
+
+// Note: This file is currently NOT IN USE 4/14/00 JLR 
+//   Everything has been moved to module-specific worldmap files 
+
+// No Longer in USE!
+// World Latitude/Longitude Offsets (Base Values for (0, 0))
+{20}{0, 0}
+
+// No Longer in USE!
+// Width & Height Count of WorldMap Tiles 
+{50}{4, 2}
+
+// No Longer in USE!
+// WorldMap Tile Art-Idx Lookup:
+{100}{149, 157}
+{101}{150, 158}
+{102}{151, 159}
+{103}{152, 160}
+{104}{153, 161}
+{105}{154, 162}
+{106}{155, 163}
+{107}{156, 164}
+
+// No Longer in USE!
+
+// ---- Road Info ----
+// Road End-Points: (X, Y)
+{1000}{36128, 25696} // Tarant 
+{1001}{38432, 35232}
+{1002}{45472, 41632}
+{1003}{54496, 45344} // Shrouded Hills 
+{1004}{54624, 45408} // Crash Site 
+
+// Road Edges 
+{2000}{0, 1}
+{2001}{1, 2}
+{2002}{2, 3}
+{2003}{3, 0}

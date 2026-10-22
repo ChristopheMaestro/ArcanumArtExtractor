@@ -1,0 +1,79 @@
+{1}{Oui... Si vous pouviez parler à la foule, vous savez, les faire patienter le temps que je prenne des notes. En tant qu'inconnu, vous avez une plus grande marge de manoeuvre que moi. Si vous parvenez à un accord, eh bien, disons que, je suis le maire... et vous travaillez pour moi. Si vous échouez, eh bien, je pourrai toujours dire que vous étiez mal informé.}{Oui... Si vous pouviez parler à la foule, vous savez, les faire patienter le temps que je prenne des notes. En tant qu'inconnue, vous avez une plus grande marge de manoeuvre que moi. Si vous parvenez à un accord, eh bien, disons que, je suis le maire... et vous travaillez pour moi. Si vous échouez, eh bien, je pourrai toujours dire que vous étiez mal informée.}{}{}{}{qu 1076 1 }
+{2}{Voilà une proposition pour le moins intrigante. J'accepte !}{}{1}{}{20}{qu 1076 2}
+{9}{Je n'aime guère les déclarations publiques, mon vieux. Je dois refuser votre proposition.}{}{1}{}{96}{}
+{10}{Vous savez, notre conversation vient de me donner une idée.}{Vous savez, notre conversation vient de me donner une idée.}{}{}{}{}
+{11}{C'est vrai ?}{}{1}{}{1}{}
+{14}{J'apprécie votre offre, vraiment, mais cette affaire est du ressort du maire.}{J'apprécie votre offre, vraiment, mais cette affaire est du ressort du maire.}{}{}{}{}
+{15}{J'aimerais pouvoir vous aider si vous vouliez bien m'en donner l'occasion.}{}{5}{}{35}{}
+{19}{Bonne chance alors.}{}{1}{}{-14}{}
+{20}{Excellent ! Accompagnez-moi à l'hôtel de ville. Une fois là-bas, montez sur le podium et répondez aux questions de la foule. Nous reparlerons de tout ça après la réunion.}{Excellent ! Accompagnez-moi à l'hôtel de ville. Une fois là-bas, montez sur le podium et répondez aux questions de la foule. Nous reparlerons de tout ça après la réunion.}{}{}{}{}
+{21}{Aucun problème. Allons à la réunion.}{}{1}{}{-47}{}
+{25}{Eh bien, on peut dire que vous avez tout gâché, ils n'accepteront jamais de construire le monument à présent. Et je suis la risée de toute la ville ! Je ne me remettrai jamais d'un tel fiasco ! Au revoir, monsieur !}{Eh bien, on peut dire que vous avez tout gâché, ils n'accepteront jamais de construire le monument à présent. Et je suis la risée de toute la ville ! Je ne me remettrai jamais d'un tel fiasco ! Au revoir, madame !}{}{}{}{re -10, lf0 1, qu 1076 6, rq 1071}
+{26}{E:}{}{1}{}{0}{}
+{29}{Monsieur, je tiens à vous remercier pour votre concours ! Je crois que je n'aurais pas fait mieux. Vos efforts m'ont permis de connaître avec précision la position de mes adversaires ! Mais je dois partir, car il reste beaucoup à faire. Bonne journée à vous, monsieur.}{Madame, je tiens à vous remercier pour votre concours ! Je crois que je n'aurais pas fait mieux. Vos efforts m'ont permis de connaître avec précision la position de mes adversaires ! Mais je dois partir, car il reste beaucoup à faire. Bonne journée à vous, madame.}{}{}{}{ re +20 , lf0 1, qu 1076 4, rq 1071, rp1056}
+{30}{E:}{}{1}{}{0}{}
+{32}{Félicitations, mon vieux, vous avez dépassé mes attentes ! Je n'ai jamais rencontré une personne dotée d'une telle éloquence. Grâce à votre discours convaincant, les citoyens de Cendrebourg sont tout à fait favorables à la construction d'un monument. Mais je dois partir car il me reste beaucoup de travail. Bonne journée, monsieur.}{Félicitations, chère madame, vous avez dépassé mes attentes ! Je n'ai jamais rencontré une personne dotée d'une telle éloquence. Grâce à votre discours convaincant, les citoyens de Cendrebourg sont tout à fait favorables à la construction d'un monument. Mais je dois partir car il me reste beaucoup de travail. Bonne journée madame.}{}{}{}{re +40 , lf0 1 , xp 1, qu 1076 4, rq 1071, rp1056}
+{33}{Ce n'était vraiment pas grand-chose, monsieur. C'est un plaisir de vous rendre service.}{}{1}{}{0}{}
+{34}{}{}{}{}{}{}
+{35}{Je regrette, monsieur, mais ma réputation est en jeu. Je dois partir.}{Je regrette, madame, mais ma réputation est en jeu. Je dois partir.}{}{}{}{}
+{36}{E:}{}{1}{}{-14}{}
+{40}{Vous devez être nouveau par ici, car je n'ai pas eu le plaisir de faire votre connaissance.}{Vous devez être nouvelle par ici, car je n'ai pas eu le plaisir de faire votre connaissance.}{}{}{}{gf2191 1}
+{41}{Bonjour, je m'appelle @pcname@. C'est un plaisir de faire votre connaissance.}{}{5}{}{48}{}
+{42}{Moi @pcname@ ! Moi dire 'jour !}{}{-4}{}{52}{}
+{43}{Vous avez raison, nous n'avons pas été présentés...}{}{5}{}{56}{re -5}
+{47}{E:}{}{1}{}{-14}{gv1015  12}
+{48}{[Il semble un peu distrait avant de répondre.] C'est un plaisir de faire votre connaissance, @pcname@ ! Je m'appelle Charles Dumoulin, je suis le maire de Cendrebourg.}{[Il semble un peu distrait avant de répondre.] C'est un plaisir de faire votre connaissance, @pcname@ ! Je m'appelle Charles Dumoulin, je suis le maire de Cendrebourg.}{}{}{}{}
+{49}{Quelles sont les dernières nouvelles par ici ?}{}{5}{}{76}{}
+{50}{Vous semblez bouleversé, monsieur. Puis-je vous demander quelle en est la raison ?}{}{5}{ps 4}{63}{}
+{51}{E:}{}{1}{}{0}{}
+{52}{Je regrette mais je ne comprends rien à ce que vous racontez. [Il commence à s'éloigner, puis s'arrête et se tourne vers vous.] Oh... J'allais oublier, le maraudage est interdit dans cette ville, en particulier pour les gens comme vous. Au revoir.}{Je regrette mais je ne comprends rien à ce que vous racontez. [Il commence à s'éloigner, puis s'arrête et se tourne vers vous.] Oh... J'allais oublier, le maraudage est interdit dans cette ville, en particulier pour les gens comme vous. Au revoir.}{}{}{}{}
+{53}{E:}{}{1}{}{-14}{gv1015  12}
+{56}{Euh... Euh... Je constate que vous n'êtes pas très bavard. Puis-je vous indiquer le chemin... Ou êtes-vous seulement de passage ?}{Euh... Euh... Je constate que vous n'êtes pas très bavarde. Puis-je vous indiquer le chemin... Ou êtes-vous seulement de passage ?}{}{}{}{}
+{57}{Vous n'avez pas à savoir qui je suis ni où je vais.}{}{1}{}{96}{re -10}
+{58}{Je m'appelle @pcname@, et je parle quand j'ai quelque chose à dire.}{}{1}{}{76}{re 5}
+{59}{E:}{}{1}{}{-14}{gv1015  12}
+{63}{Une réunion se tient en ce moment pour discuter de la construction d'un monument à la mémoire de Lord Lamaxime, l'enfant le plus célèbre de Cendrebourg. Nous sommes des gens assez particuliers. Lorsque nous faisons quelque chose, nous tenons à le faire bien.}{Une réunion se tient en ce moment pour discuter de la construction d'un monument à la mémoire de Lord Lamaxime, l'enfant le plus célèbre de Cendrebourg. Nous sommes des gens assez particuliers. Lorsque nous faisons quelque chose, nous tenons à le faire bien.}{}{}{}{}
+{64}{Veuillez m'en dire plus.}{}{1}{}{67}{}
+{65}{Je n'ai pas de temps à perdre avec cela. Au revoir.}{}{1}{}{-14}{gv1015  12}
+{66}{}{}{}{}{}{}
+{67}{Eh bien, le problème, c'est que personne n'est d'accord. En tant que maire, je dois trouver une solution qui puisse contenter tout le monde. [Il secoue la tête.] C'est impossible !}{Eh bien, le problème, c'est que personne n'est d'accord. En tant que maire, je dois trouver une solution qui puisse contenter tout le monde. [Il secoue la tête.] C'est impossible !}{}{}{}{}
+{68}{Continuez, j'ai toujours adoré la politique en province.}{}{1}{}{71}{}
+{69}{Je n'ai plus qu'à vous souhaiter bonne chance, alors. Au revoir.}{}{1}{}{-14}{gv1015  12}
+{71}{Certains veulent que le monument soit érigé en plein centre-ville, d'autres à l'entrée de la ville et, qui plus est, personne ne sait qui financera l'opération ! Pour couronner le tout, aucun artisan local n'est capable de construire un tel monument, même si nous avions les fonds nécessaires !}{Certains veulent que le monument soit érigé en plein centre-ville, d'autres à l'entrée de la ville et, qui plus est, personne ne sait qui financera l'opération ! Pour couronner le tout, aucun artisan local n'est capable de construire un tel monument, même si nous avions les fonds nécessaires !}{}{}{}{}
+{72}{Puis-je faire quelque chose pour vous ?}{}{1}{ps4}{10}{}
+{73}{Puis-je faire quelque chose pour vous ?}{}{1}{ps-3}{14}{}
+{75}{Bonne chance, monsieur.}{}{1}{}{-14}{gv1015  12}
+{76}{J'aimerais vraiment pouvoir discuter avec vous, monsieur, mais une affaire publique m'attend. Après tout, je suis le maire.}{J'aimerais vraiment pouvoir discuter avec vous, madame, mais une affaire publique m'attend. Après tout, je suis le maire.}{}{}{}{}
+{77}{Quelle est cette réunion à laquelle vous vous rendez ?}{}{1}{}{63}{}
+{78}{Merci de m'avoir consacré un peu de votre temps.}{}{1}{}{-14}{gv1015  12}
+{96}{Je vous prie de m'excuser, monsieur. Je suis en retard.}{Je vous prie de m'excuser, madame. Je suis en retard.}{}{}{}{}
+{97}{E:}{}{1}{}{-14}{gv1015  12}
+{100}{G:}{G:}{}{}{}{}
+{101}{R:($0, 1070-1075)}{}{5}{re41}{100}{}
+{102}{Je crois ne pas avoir bien entendu, monsieur.}{}{5}{re-40, ch10}{130}{re50}
+{103}{Je ne veux pas vous offenser, monsieur.}{}{5}{re-40, ch-9}{140}{re41}
+{104}{'jour ! Moi aimer réunions avec peuple !}{}{-4}{}{150}{re50}
+{109}{E:}{}{1}{}{0}{}
+{110}{Je n'arrive pas à croire que vous ayez assez de cran pour revenir me parler. Bon débarras !}{Je n'arrive pas à croire que vous ayez assez de cran pour revenir me parler. Bon débarras !}{}{}{}{re -5}
+{119}{Je vous en prie, allez sur le podium... La foule est déchaînée !}{Je vous en prie, allez sur le podium... La foule est déchaînée !}{}{}{}{}
+{120}{Merci... Merci... Je vous en prie... S'il vous plaît... Calmons-nous et discutons tranquillement... Je sais que tout le monde est préoccupé par le monument de Lamaxime, alors calmez-vous pour que nous puissions commencer la réunion...}{Merci... Merci... Je vous en prie... S'il vous plaît... Calmons-nous et discutons tranquillement... Je sais que tout le monde est préoccupé par le monument de Lamaxime, alors calmez-vous pour que nous puissions commencer la réunion...}{}{}{}{}
+{121}{Nous avons évidemment beaucoup de problèmes à l'ordre du jour, aussi j'aimerais entrer tout de suite dans le vif du sujet. Y a-t-il des personnes qui souhaitent poser des questions ? Qui souhaite commencer ? Ah oui, Madame Dumarais ? Parlez, je vous prie. }{Nous avons évidemment beaucoup de problèmes à l'ordre du jour, aussi j'aimerais entrer tout de suite dans le vif du sujet. Y a-t-il des personnes qui souhaitent poser des questions ? Qui souhaite commencer ? Ah oui, Madame Dumarais ? Parlez, je vous prie. }{}{}{}{}
+{122}{Il est bon et juste que Cendrebourg rende hommage à ses héros.}{Il est bon et juste que Cendrebourg rende hommage à ses héros.}{}{}{}{}
+{123}{Lancez un concours de créateurs et élisez le meilleur.}{Lancez un concours de créateurs et élisez le meilleur.}{}{}{}{}
+{124}{Nous pouvons trouver un riche bienfaiteur à Cendrebourg.}{Nous pouvons trouver un riche bienfaiteur à Cendrebourg.}{}{}{}{}
+{125}{S'il ne tenait qu'à moi, j'engagerais les meilleurs artisans de Tarante !}{S'il ne tenait qu'à moi, j'engagerais les meilleurs artisans de Tarante !}{}{}{}{}
+{126}{Une statue de bronze, traitée pour résister à l'épreuve du temps, sur un piédestal de granit.}{Une statue de bronze, traitée pour résister à l'épreuve du temps, sur un piédestal de granit.}{}{}{}{}
+{127}{" Qui peut le moins peut le plus ".}{" Qui peut le moins peut le plus ".}{}{}{}{}
+{128}{Voilà qui clôt notre réunion. Je vous remercie pour votre participation.}{Voilà qui clôt notre réunion. Je vous remercie pour votre participation.}{}{}{}{lf 0 1}
+{130}{Oh, veuillez accepter mes excuses, monsieur. Je ne voulais pas vous offenser... Je vous ai pris pour une personne d'une... classe inférieure. Que puis-je faire pour vous ?}{Oh, veuillez accepter mes excuses, madame. Je ne voulais pas vous offenser... Je vous ai prise pour une personne d'une... classe inférieure. Que puis-je faire pour vous ?}{}{}{}{}
+{131}{R:($0, 1070-1075)}{}{5}{}{100}{}
+{139}{E:}{}{1}{}{0}{}
+{140}{Eh bien, j'ai peut-être une minute à consacrer, même à quelqu'un comme vous. Que puis-je faire pour vous ?}{Eh bien, j'ai peut-être une minute à consacrer, même à quelqu'un comme vous. Que puis-je faire pour vous ?}{}{}{}{}
+{141}{R:($0, 1070-1075)}{}{5}{}{100}{}
+{149}{E:}{}{1}{}{0}{}
+{150}{Oh, mon Dieu, un imbécile. Que puis-je faire pour vous, mon pauvre garçon ?}{Oh, mon Dieu, une imbécile. Que puis-je faire pour vous, ma pauvre fille ?}{}{}{}{}
+{151}{R:($0, 1070-1075)}{}{5}{}{100}{}
+{159}{E:}{}{1}{}{0}{}
+{160}{}{}{}{}{}{}
+{161}{}{}{}{}{}{}
+

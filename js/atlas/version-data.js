@@ -24,17 +24,18 @@
   window.AtlasData.url = url;
   window.AtlasData.has = (name, v = dv) => !!(own[v] && own[v].includes(name));
   window.AtlasData.optional = name => { if (own[dv] && own[dv].includes(name)) window.AtlasData(name); };     // (a file only some versions have)
-  // A mod's own picture index, alias lists, maps, areas, people and glows (js/atlas/data/<file>.js); world-atlas.js reads them under CE's
-  // names (useMod). Forgotten Places lies over CE Restored's pictures, so it asks CE's alias lists too.
+  // A mod's own picture index, maps, areas and people (js/atlas/data/<file>.js); world-atlas.js reads them under CE's names (useMod).
   const MOD_FILES = {
-    ce: { pictures: ['ce-restored', 'ce-alias', 'pic-alias-ce'], maps: ['ce-maps'], areas: ['ce-areas'], mobs: ['ce-mobs'], glows: ['ce-glows'] },
-    car: { pictures: ['carcanum', 'pic-alias-car'], maps: ['carcanum-maps'], areas: ['carcanum-areas'], mobs: ['carcanum-mobs'], glows: ['carcanum-glows'] },
-    fp: { pictures: ['fp', 'ce-alias', 'pic-alias-ce', 'pic-alias-fp'], maps: ['fp-maps'], areas: ['fp-areas'], mobs: ['fp-mobs'], glows: ['fp-glows'] },
-    ru: { pictures: ['ru', 'pic-alias-ru'], maps: ['ru-maps'], areas: ['ru-areas'], mobs: ['ru-mobs'], glows: ['ru-glows'] },
+    ce: { pictures: ['ce-restored'], maps: ['ce-maps'], areas: ['ce-areas'], mobs: ['ce-mobs'] },
+    car: { pictures: ['carcanum'], maps: ['carcanum-maps'], areas: ['carcanum-areas'], mobs: ['carcanum-mobs'] },
+    fp: { pictures: ['fp'], maps: ['fp-maps'], areas: ['fp-areas'], mobs: ['fp-mobs'] },
+    ru: { pictures: ['ru'], maps: ['ru-maps'], areas: ['ru-areas'], mobs: ['ru-mobs'] },
+    tin: { pictures: ['tin'], maps: ['tin-maps'], areas: ['tin-areas'], mobs: ['tin-mobs'] },
+    rb: { pictures: ['rb'], maps: ['rb-maps'], areas: ['rb-areas'], mobs: ['rb-mobs'] },
   };
   window.AtlasData.modUrls = (kind, v = dv) => ((MOD_FILES[v] || {})[kind] || []).map(f => 'js/atlas/data/' + f + '.js');      // (for a file loaded later)
   window.AtlasData.mod = (...kinds) => { for (const k of kinds) for (const u of window.AtlasData.modUrls(k)) tag(u); };
-  const MODS = { ce: ['Arcanum CE Restored', 'ce-restored'], car: ['Carcanum', 'carcanum'], fp: ['Forgotten Places 6.0', 'forgotten-places'], ru: ['Russian Mod 2012 RC9', 'russian-mod'] };
+  const MODS = { ce: ['Arcanum CE Restored', 'ce-restored'], car: ['Carcanum', 'carcanum'], fp: ['Forgotten Places 6.0', 'forgotten-places'], ru: ['Russian Mod 2012 RC9', 'russian-mod'], tin: ['Terra Incognita', 'terra-incognita'], rb: ['Arcanum ReBulid', 'arcanum-rebulid'] };
   let mod = null;
   const orig = window.fetch && window.fetch.bind(window);
   let hooked = false;
@@ -68,6 +69,6 @@
   }
   window.AtlasData.configure = configure;
   // how the header and the version menu name each version
-  window.AtlasData.names = { ce: 'CE Restored 1.61', base: 'Arcanum 1.0.7.4', ru: 'Russian Mod Pack 2012 RC9', car: 'Polished CAR Arcanum', fp: 'Forgotten Places 6.0' };
+  window.AtlasData.names = { ce: 'CE Restored 1.61', base: 'Arcanum 1.0.7.4', ru: 'Russian Mod Pack 2012 RC9', car: 'Polished CAR Arcanum', fp: 'Forgotten Places 6.0', tin: 'Terra Incognita', rb: 'Arcanum ReBulid' };
   configure(ver);
 })();

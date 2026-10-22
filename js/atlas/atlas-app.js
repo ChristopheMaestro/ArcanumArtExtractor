@@ -16,7 +16,7 @@ const WL = window.ArcanumWorldLabels;
 const IT = window.ArcanumItems;
 // the sheets of this version (a mod's own item icons and portraits): the style sheet names the base game's
 // (an item of a base game's module under a mod, not in the mod's list: ib, its icon in the base game's sheet; toolbox/atlas/splice_modules.py)
-document.head.insertAdjacentHTML('beforeend', `<style>html .spr{background-image:url("${IT.icons || 'atlas/item-icons.webp'}")}html .spr.ib{background-image:url("${IT.baseIcons || 'atlas/item-icons.webp'}")}html .face{background-image:url("${(window.ArcanumPortraits || {}).sheet || 'atlas/portraits.png'}")}</style>`);
+document.head.insertAdjacentHTML('beforeend', `<style>html .spr{background-image:url("${IT.icons || IT.baseIcons || 'atlas/graphics/item/item-icons-base.webp'}")}html .spr.ib{background-image:url("${IT.baseIcons || 'atlas/graphics/item/item-icons-base.webp'}")}html .face{background-image:url("${(window.ArcanumPortraits || {}).sheet || (window.ArcanumPortraits || {}).baseSheet || 'atlas/graphics/portraits/portraits-base.png'}")}</style>`);
 Object.assign(ICON, { chest: '📦', information: 'ℹ️', altar: '🕯️', bounty: '💰', master: '🎓' });
 const worldFrame = document.getElementById('worldFrame');
 // The map's frame has no src while the welcome screen is first drawn (index.html): its pictures and data would take the connection from the
@@ -63,8 +63,8 @@ IT.recipes.forEach((r, ri) => {
 function spr(i, box) {
   const it = IT.items[i];
   if (!it || !it.icon) return `<span class="ibox" style="--s:${box}px"><span class="ph"></span></span>`;
-  const [x, y, w, h] = it.icon, s = Math.min(1, box / Math.max(w, h)), [W, H] = it.ib ? IT.baseIconSheet : IT.iconSheet;
-  return `<span class="ibox" style="--s:${box}px"><span class="spr${it.ib ? ' ib' : ''}" style="width:${w * s}px;height:${h * s}px;background-size:${W * s}px ${H * s}px;background-position:-${x * s}px -${y * s}px"></span></span>`;
+  const [x, y, w, h, inBase] = it.icon, s = Math.min(1, box / Math.max(w, h)), [W, H] = it.ib || inBase ? IT.baseIconSheet : IT.iconSheet;
+  return `<span class="ibox" style="--s:${box}px"><span class="spr${it.ib || inBase ? ' ib' : ''}" style="width:${w * s}px;height:${h * s}px;background-size:${W * s}px ${H * s}px;background-position:-${x * s}px -${y * s}px"></span></span>`;
 }
 const cls = it => it.hexed ? ' hexed' : it.magick ? ' magick' : it.tech ? ' tech' : '';
 // a random list gives an item one chance per roll: [100, 100, 20] -> "100% ×2 · 20%"
@@ -244,9 +244,11 @@ function openPanel() { panelRef = null; labelAside.classList.add('open'); return
 // closing the panel also lets go of what it showed on the map (as in the Map Explorer)
 function closePanel() {
   if (!labelAside.classList.contains('open')) return;
-  labelAside.classList.remove('open');
+  const layers = document.getElementById('layersBtn').classList.contains('on');      // with Layers on, the sidebar never goes: it goes back to the sliders
+  if (!layers) labelAside.classList.remove('open');
   setPanelRef(null);
   worldFrame.contentWindow.postMessage({ type: 'atlas-unselect' }, '*');
+  if (layers) showLayers();
 }
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closePanel(); });
 const setPlacesHidden = (hidden, save) => {
@@ -388,8 +390,43 @@ const advBtn = document.getElementById('advBtn');
 advBtn.onclick = () => {
   const on = document.body.classList.toggle('advanced');
   advBtn.classList.toggle('on', on); advBtn.setAttribute('aria-pressed', String(on));
+  if (!on) { document.getElementById('healthPanel')?.remove(); if (layersBtn.classList.contains('on')) layersBtn.click(); }        // (the Data health and Layers buttons go with the Advanced view)
   fillAdvanced();
 };
+// Layers (next to the Advanced view): the right sidebar gets an opacity slider for the base game's terrain and for every mod; the map draws each
+// one's sector pictures over the last at that opacity (world-atlas.js, atlas-layers), a layer at 0 % is not loaded. Compare one sector across mods.
+const layerList = () => [['terrain', 'Terrain (what the game generates, world map)'], ['base', 'Arcanum (the base game)'], ...Object.entries(VER_NAME)];      // (VER_NAME is defined further down: read when the button is used)
+const layerPct = {};
+const layersBtn = document.getElementById('layersBtn');
+function sendLayers() {
+  const a = Object.fromEntries(layerList().map(([k]) => [k, (layerPct[k] ?? (k === 'base' ? 100 : 0)) / 100]));
+  const on = layersBtn.classList.contains('on');
+  try { worldFrame.contentWindow.postMessage({ type: 'atlas-layers', on, a }, '*'); } catch (_) {}
+  try { localStorage.setItem('atlas-layers', JSON.stringify({ on, pct: layerPct })); } catch (_) {}      // (kept: a reload opens the panel again with these)
+}
+// a reload with the panel open: Advanced view and the panel come back with the sliders as they were (once the rest of the script has run)
+setTimeout(() => {
+  let s = null; try { s = JSON.parse(localStorage.getItem('atlas-layers')); } catch (_) {}
+  if (!s || !s.on) return;
+  Object.assign(layerPct, s.pct);
+  if (!document.body.classList.contains('advanced')) advBtn.click();
+  if (!layersBtn.classList.contains('on')) layersBtn.click();
+}, 0);
+function showLayers() {
+  const p = openPanel(), LAYERS = layerList();
+  for (const [k] of LAYERS) layerPct[k] ??= k === 'base' ? 100 : 0;
+  p.innerHTML = `<div class="panel-head"><div><h3>Layers</h3><div class="meta">Strength of each version's sector pictures, laid over each other: what two layers share is shown once, any difference (brighter or darker) shows. 0 % loads nothing.</div></div></div>
+    <div class="sec layers">${LAYERS.map(([k, n]) => `<label class="lay-row"><span class="lay-n">${esc(n)}</span><input type="range" min="0" max="100" step="5" value="${layerPct[k]}" data-lay="${k}"><output>${layerPct[k]}%</output></label>`).join('')}</div>`;
+  p.querySelectorAll('input[data-lay]').forEach(r => r.oninput = () => { layerPct[r.dataset.lay] = +r.value; r.nextElementSibling.textContent = r.value + '%'; sendLayers(); });
+}
+layersBtn.onclick = () => {
+  const on = !layersBtn.classList.contains('on');
+  layersBtn.classList.toggle('on', on); layersBtn.setAttribute('aria-pressed', String(on));
+  if (on) showLayers(); else closePanel();
+  sendLayers();
+};
+// Data health (health-panel.js, loaded on the first click): what this version's data covers; the button shows only in the Advanced view
+document.getElementById('healthBtn').onclick = () => import(new URL('js/atlas/health-panel.js', location.href).href).then(m => m.toggleHealth()).catch(err => console.error(err));
 // the other maps of the game (castles, caves, cellars...), drawn from their pictures (map-pictures.js); every picture of the Map Explorer is a "section" of one
 const MP = window.ArcanumMaps || { maps: [], sections: [] };
 const SECT = new Map(MP.sections.map(s => [s.name, s]));
@@ -500,10 +537,10 @@ const modulesByCat = mods => MODULE_CATS.map(([c]) => [c, mods.filter(m => modul
 // (toolbox/atlas/splice_modules.py), so any module opens in the data loaded.
 const MI = window.AtlasModuleIndex || { owned: {} };
 const VER = window.AtlasVer || 'base';
-const VER_MAPS = { ce: window.ArcanumCEMaps, car: window.ArcanumCarcanumMaps, fp: window.ArcanumFPMaps, ru: window.ArcanumRUMaps }[VER];
+const VER_MAPS = { ce: window.ArcanumCEMaps, car: window.ArcanumCarcanumMaps, fp: window.ArcanumFPMaps, ru: window.ArcanumRUMaps, tin: window.ArcanumTINMaps, rb: window.ArcanumRBMaps }[VER];
 const OWNED = new Set([...(MI.owned[VER] || []), ...(VER_MAPS ? VER_MAPS.maps.filter(m => m.module).map(m => m.module) : [])]);      // (module maps only the mod has: Hell Day)
 const modOwns = g => VER !== 'base' && OWNED.has(g);
-const VER_NAME = { ce: 'CE Restored', car: 'Carcanum', fp: 'Forgotten Places', ru: 'The Russian Mod Pack' };
+const VER_NAME = { ce: 'CE Restored', car: 'Carcanum', fp: 'Forgotten Places', ru: 'The Russian Mod Pack', tin: 'Terra Incognita', rb: 'Arcanum ReBulid' };
 // the options of a game choice: Arcanum, then each category as a group of its modules (extra: loose options such as "Not in game")
 const gameOptions = (games, extra = []) => {
   const o = g => `<option value="${esc(g)}">${esc(g)}</option>`;
@@ -659,7 +696,7 @@ document.querySelectorAll('#modeTabs button[data-mode]').forEach(b => b.classLis
 const VERSIONS = AtlasData.names;
 // car -> data/mods/Carcanum (integrated like CE Restored: ce-style data in carcanum*.js), fp -> data/mods/Forgotten Places 6.0 (integrated the same way, fp*.js; it lies over CE Restored, so its lists carry CE's maps too)
 const atlasVer = VERSIONS[window.AtlasVer] ? window.AtlasVer : 'ce';             // (version-data.js decides, and loads only that version's mod files)
-const MODS = { ce: window.ArcanumCEMaps, car: window.ArcanumCarcanumMaps, fp: window.ArcanumFPMaps, ru: window.ArcanumRUMaps };      // the maps / locations each integrated mod adds
+const MODS = { ce: window.ArcanumCEMaps, car: window.ArcanumCarcanumMaps, fp: window.ArcanumFPMaps, ru: window.ArcanumRUMaps, tin: window.ArcanumTINMaps, rb: window.ArcanumRBMaps };      // the maps / locations each integrated mod adds
 let modVer = MODS[atlasVer] ? atlasVer : 'ce';                                  // the mod whose data is in the lists (while one is on)
 let ceOn = !!MODS[atlasVer];
 // The maps only CE Restored has (ce-maps.js) are listed while it is on: appended to ArcanumMaps, so the others keep their index
@@ -777,19 +814,20 @@ window.addEventListener('message', e => {
   if (e.data.type === 'atlas-container') selectContainer(e.data.index);
   if (e.data.type === 'atlas-item') showItem(e.data.item);
   if (e.data.type === 'atlas-npc') selectNpc(e.data.npc);
-  if (e.data.type === 'atlas-ready') { sendGivers(); if (wantedView && resendView) resendView(); }
+  if (e.data.type === 'atlas-ready') { sendGivers(); if (layersBtn.classList.contains('on')) sendLayers(); if (wantedView && resendView) resendView(); }
   if (e.data.type === 'atlas-ack') arrived();
   if (e.data.type === 'atlas-view') { lastView = e.data.view; viewReached(lastView); if (SND) SND.view(lastView); syncLink(); }
   if (e.data.type === 'atlas-encounter') showEncounter(e.data.tile);
 });
-worldFrame.addEventListener('load', () => sendGivers());
+worldFrame.addEventListener('load', () => { sendGivers(); if (layersBtn.classList.contains('on')) sendLayers(); });
 
 // someone who stands on the map but has no label of their own: what the game file says about them
 const NPC_AT = new Map(IT.npcs.filter(n => n.tile).map(n => [n.place + '|' + n.tile.join(','), n]));
 // the picture the game has for someone or something (portraits.js, toolbox/atlas/build_portraits.py): a person's own portrait, else
 // what the game shows when you examine them (undead / monster / animal / mechanical, else the icon of their race)
 const PT = window.ArcanumPortraits || { at: {}, raceIcons: [], kindIcons: {}, containerIcons: {} };
-const face = key => { const a = PT.at[key]; return a ? `<span class="face" style="background-position:-${a[0]}px -${a[1]}px"></span>` : ''; };
+// (a mod's sheet holds only what differs from the base game's: an entry ending in 1 lies in the base sheet)
+const face = key => { const a = PT.at[key]; return a ? `<span class="face" style="${a[2] ? `background-image:url('${PT.baseSheet}');` : ''}background-position:-${a[0]}px -${a[1]}px"></span>` : ''; };
 const npcFace = n => face(n.portrait > 0 && PT.at[n.portrait] ? n.portrait : n.kind ? PT.kindIcons[(n.kindName || '').toLowerCase()] : PT.raceIcons[Math.max(0, n.raceIdx)]);
 const boxFace = c => face(PT.containerIcons[c.kind] || PT.chestIcon);
 const rarelist = (list, n = 40) => `<div class="rlist">${list.slice(0, n).map(([i, r]) => `<button class="rrow${cls(IT.items[i])}" data-item="${i}">${spr(i, 22)}<span>${esc(IT.items[i].name)}</span><b>${rateTxt(r)}</b></button>`).join('')}
@@ -822,7 +860,7 @@ function selectNpc(n) {
   const ways = (window.ArcanumWaypoints ? window.ArcanumWaypoints.waypoints : []).filter(w => (w[0] == null ? w[1] : w[0]) === n.place && w[2] === n.tile[0] && w[3] === n.tile[1]
     && w[6] && /\.mob$/i.test(w[6][0]) && (!n.file || fileOf(w[6][0]) === fileOf(n.file)));
   const dests = ways.flatMap(w => w[5]);
-  if (dests.length) h += `<div class="sec"><div class="sec-t">Waypoint${ways[0][4] ? ` · ${esc(ways[0][4])}` : ''}</div>${dests.map((t, i) => `<button class="tbtn" data-travel="${i}">🚪 Travel to ${esc(t[4] || t[1])}</button>`).join('')}</div>`;
+  if (dests.length) h += `<div class="sec"><div class="sec-t">Waypoint${ways[0][4] ? ` · ${esc(ways[0][4])}` : ''}</div>${travelList(dests.map(t => t[4] || t[1]))}</div>`;
   if (carried && carried.items.length) h += `<div class="sec"><div class="sec-t">Carries</div><div class="inv">${carried.items.map(([i, q]) => tile(i, q)).join('')}</div></div>`;
   const s = carried && carried.source && IT.sources[carried.source];
   if (s && s.items.length) h += `<div class="sec"><div class="sec-t">Carries at random</div>${rarelist(byRate(s.items))}</div>`;
@@ -855,6 +893,11 @@ function shopHtml(carried, markup, typeHint) {
   if (stock.length) h += `<div class="sec"><div class="sec-t">In stock</div><div class="inv">${stock.map(([i, q]) => tile(i, q)).join('')}</div></div>`;
   if (s && s.items.length) h += `<div class="sec"><div class="sec-t">Restocks at random</div>${rarelist(byRate(s.items))}</div>`;
   return { head, stock: h };
+}
+// Teleport choices as a plain left-aligned list, A-Z; data-travel keeps the index into the unsorted array.
+function travelList(labels) {
+  return `<div class="travel">${labels.map((s, i) => [String(s), i]).sort((a, b) => a[0].localeCompare(b[0], undefined, { sensitivity: 'base' }))
+    .map(([s, i]) => `<a class="trow" role="button" tabindex="0" data-travel="${i}"><span class="ti">🚪</span><span>${esc(s)}</span></a>`).join('')}</div>`;
 }
 const roleHtml = r => !r ? '' : (r.j ? '<div class="sec"><div class="sec-t">Follower</div><div>Can join your party.</div></div>' : '')
   + (r.t ? `<div class="sec"><div class="sec-t">Trainer</div><div>${r.t.map(esc).join(' · ')}</div></div>` : '');
@@ -921,155 +964,8 @@ function showEncounter(tile) {
   h += '<div class="sec note">When the chance comes up, the game picks one of these by its share. A share marked with a level or a story event is what it gets once that is reached.</div>';
   p.innerHTML = h;
 }
-
-// ---- music and sounds of the place in view (sound.js, toolbox/atlas/build_sound.py; the game's gsound.c) ----------------------
-// Each map starts two sound schemes (its mapinfo), and a sector that names schemes switches to them when you walk in; a sector
-// that names none keeps what plays. A scheme has looping songs that play between two hours, and sounds fired at random. The
-// game cuts from one to the other in 25 ms; here a track that goes on in the next place keeps playing and the others cross-fade.
-const SND = (() => {
-  const S = window.ArcanumSound; if (!S) { document.querySelector('.sndbar').hidden = document.getElementById('sndHead').hidden = true; return null; }
-  const FADE_MUSIC = 3000, FADE_AMBIENT = 2000, TRAVEL_Z = 0.012, WALK = 12, NEAR = 4, HOURS = { day: 12, night: 22 };
-  const key = (x, y) => x + ',' + y;
-  const WORLD = new Map(S.world.sectors.map(r => [key(r[0], r[1]), r]));
-  const MAPS = {}; for (const [k, m] of Object.entries(S.maps)) MAPS[k] = new Map((m.sectors || []).map(r => [key(r[0], r[1]), r]));
-  let on = false, night = false, master = 0.7, pair = null, pairArea = null, where = null, place = '', active = true;
-  try { master = +(localStorage.getItem('atlas-snd-vol') ?? 70) / 100; night = localStorage.getItem('atlas-snd-night') === '1'; } catch (_) {}
-  const tracks = new Map();      // file -> { a: Audio, v: volume now, to: volume wanted, ms: fade length }
-  const hourIn = (t, h) => !t || (t[0] <= t[1] ? h >= t[0] && h <= t[1] : h >= t[0] || h <= t[1]);   // "19-0": till midnight, as meant
-  const ownSound = new Set(window.AtlasSoundOwn || []);       // (the sounds the mod on show has of its own: from its folder, the others from the base game's)
-  const url = f => (ownSound.has(f) && window.AtlasModDir ? window.AtlasModDir : 'data/') + 'sound/' + f.split('/').map(encodeURIComponent).join('/');
-  const schemesOf = p => p === 'travel' ? [] : [...new Set(p)].filter(s => S.schemes[s]).map(s => S.schemes[s]);
-  function wanted() {            // the songs that should play now, with their volume
-    const out = new Map(), h = night ? HOURS.night : HOURS.day;
-    if (!active || !on || !pair) return out;
-    if (pair === 'travel') { out.set(S.travel, 0.6); return out; }
-    for (const s of schemesOf(pair)) for (const e of s.list) if (e.song === 'loop' && hourIn(e.time, h)) out.set(e.f, Math.max(out.get(e.f) || 0, (e.vol || 100) / 100));
-    return out;
-  }
-  function refresh() {
-    const want = wanted();
-    for (const [f, t] of tracks) if (!want.has(f)) t.to = 0;
-    for (const [f, v] of want) {
-      let t = tracks.get(f);
-      if (!t) {
-        const a = new Audio(url(f)); a.loop = true; a.volume = 0; a.play().catch(() => {});
-        t = { a, v: 0, ms: f.startsWith('music/') ? FADE_MUSIC : FADE_AMBIENT }; tracks.set(f, t);
-      }
-      t.to = v;
-    }
-    showNow();
-  }
-  let last = performance.now();
-  setInterval(() => {            // fades
-    const now = performance.now(), dt = now - last; last = now;
-    for (const [f, t] of tracks) {
-      const step = dt / t.ms;
-      t.v = t.v < t.to ? Math.min(t.to, t.v + step) : Math.max(t.to, t.v - step);
-      t.a.volume = Math.max(0, Math.min(1, t.v * master));
-      if (t.v === 0 && t.to === 0) { t.a.pause(); t.a.removeAttribute('src'); t.a.load(); tracks.delete(f); }
-    }
-  }, 50);
-  let shots = 0;
-  setInterval(() => {            // the sounds fired at random: n in 1000 every 250 ms, like gsound_update
-    if (!active || !on || !pair || pair === 'travel' || shots >= 6) return;
-    const h = night ? HOURS.night : HOURS.day;
-    for (const s of schemesOf(pair)) for (const e of s.list) {
-      if (e.song || !hourIn(e.time, h) || Math.random() * 1000 >= e.freq) continue;
-      const v = e.vol ? e.vol[0] + Math.random() * (e.vol[1] - e.vol[0]) : 100;
-      const a = new Audio(url(e.f)); a.volume = Math.min(1, v / 100 * master); shots++;
-      a.onended = a.onerror = () => shots--; a.play().catch(() => shots--);
-    }
-  }, 250);
-  // the area a spot belongs to, as the game names it: a town when the sector has the town's townmap (area_from_loc),
-  // else a place the world map files the sector under, else the open country
-  function areaAt(sx, sy) {
-    const r = WORLD.get(key(sx, sy)), X = sx * 64 + 32, Y = sy * 64 + 32;
-    if (r && r[4]) {
-      const a = S.areas.reduce((b, a) => { const d = Math.max(Math.abs(a[1] - X), Math.abs(a[2] - Y)); return !b || d < b.d ? { a, d } : b; }, null);
-      if (a && a.a[4] === r[4]) return a.a[0].split(',')[0];
-    }
-    const folder = r ? S.world.folders[r[5]] : '';
-    return folder && S.areas.some(a => a[0] === folder) ? folder : 'Open country';
-  }
-  // where the view is -> the schemes the game would be playing there
-  function locate(v) {
-    if (!v || !v.tile) return;
-    const sx = Math.floor(v.tile[0] / 64), sy = Math.floor(v.tile[1] / 64), map = v.map || null;
-    if (!map && v.z < TRAVEL_Z) { where = null; return set('travel', 'The world map'); }
-    const secs = map ? MAPS[map] : WORLD, sets = r => r && (r[2] || r[3]) ? [r[2], r[3]] : null;
-    const def = map ? S.maps[map] && S.maps[map].def : S.world.def;
-    const area = map ? map : areaAt(sx, sy);
-    let p = null;
-    if (where && where.map === map && Array.isArray(pair) && Math.max(Math.abs(sx - where.sx), Math.abs(sy - where.sy)) <= WALK) {
-      // a short move is a walk: every sector on the way that names schemes switches to them, the last one stays...
-      const n = Math.max(Math.abs(sx - where.sx), Math.abs(sy - where.sy));
-      for (let i = 1; i <= n; i++) {
-        const x = Math.round(where.sx + (sx - where.sx) * i / n), y = Math.round(where.sy + (sy - where.sy) * i / n);
-        const q = secs && sets(secs.get(key(x, y)));
-        if (q) { p = q; pairArea = map ? map : areaAt(x, y); }
-      }
-      // ...but only within the area it was set in: the game would keep a town's music out in the open country when no
-      // sector on the way names other schemes; here leaving the area falls back to what is around
-      if (!p && pairArea === area) p = pair;
-    }
-    if (!p) {
-      // arriving: the sector itself, else (world map) the nearest sector around that names schemes, else the map's own
-      p = secs && sets(secs.get(key(sx, sy)));
-      for (let d = 1; !p && !map && d <= NEAR; d++)
-        for (let dy = -d; dy <= d && !p; dy++) for (let dx = -d; dx <= d && !p; dx++)
-          if (Math.max(Math.abs(dx), Math.abs(dy)) === d) p = sets(secs.get(key(sx + dx, sy + dy)));
-      p = p || def || (Array.isArray(pair) ? pair : S.world.def);    // a map with no scheme of its own keeps what played
-      pairArea = area;
-    }
-    where = { map, sx, sy };
-    set(p, map ? (MP.maps.find(m => m.key === map) || {}).name || map : area);
-  }
-  function set(p, name) {
-    if (Array.isArray(p) && p[0] === p[1]) p = [p[0], 0];                  // gsound_play_scheme: one scheme, once
-    pair = p; place = name; refresh();
-  }
-  function showNow() {
-    const el = document.getElementById('sndNow');
-    el.hidden = !on || !pair;
-    if (el.hidden) return;
-    const h = night ? HOURS.night : HOURS.day;
-    let what;
-    if (pair === 'travel') what = '♪ Arcanum (the travel map)';
-    else {
-      const parts = schemesOf(pair).map(s => {
-        const songs = s.list.filter(e => e.song === 'loop'), now = songs.filter(e => hourIn(e.time, h));
-        const music = now.find(e => e.f.startsWith('music/'));
-        if (music) return '♪ ' + music.f.slice(6, -4).replace(/_/g, ' ');
-        if (songs.some(e => e.f.startsWith('music/'))) return '♪ no music at night';
-        return s.list.length ? '≈ ' + s.name : '';
-      }).filter(Boolean);
-      what = parts.length ? parts.join(' · ') : 'silence';
-    }
-    el.innerHTML = `<b>${esc(place)}</b> · ${esc(what)}`;
-  }
-  const btn = document.getElementById('sndHead'), tbtn = document.getElementById('sndTime'), vol = document.getElementById('sndVol');
-  const paint = () => {
-    btn.innerHTML = `<span class="tb-ic">${on ? '🔊' : '🔈'}︎</span>`; btn.classList.toggle('on', on); btn.title = on ? 'Stop the music and sounds' : 'Play the music and the sounds of the place in view, as the game does';
-    tbtn.hidden = vol.hidden = !on; tbtn.textContent = night ? '☾ Night' : '☀ Day'; gauge();
-  };
-  // the volume as the game's option gauge: 0-10, an arrow moves one step and does not wrap round
-  const gbar = vol.querySelector('.gbar'), steps = () => Math.round(master * 10);
-  const gauge = () => {
-    gbar.firstChild.style.width = steps() * 10 + '%'; gbar.setAttribute('aria-valuenow', steps());
-    vol.querySelector('[data-d="-1"]').disabled = steps() <= 0; vol.querySelector('[data-d="1"]').disabled = steps() >= 10;
-  };
-  const setSteps = n => { master = Math.max(0, Math.min(10, n)) / 10; try { localStorage.setItem('atlas-snd-vol', Math.round(master * 100)); } catch (_) {} gauge(); };
-  vol.querySelectorAll('button').forEach(b => b.onclick = () => setSteps(steps() + +b.dataset.d));
-  gbar.onclick = e => { const r = gbar.getBoundingClientRect(); setSteps(Math.round((e.clientX - r.left) / r.width * 10)); };
-  btn.onclick = () => { on = !on; paint(); if (on && !pair) locate(lastView || { map: null, tile: [90226, 84176], z: 0.1 }); refresh(); };
-  tbtn.onclick = () => { night = !night; try { localStorage.setItem('atlas-snd-night', night ? '1' : '0'); } catch (_) {} paint(); refresh(); };
-  const activity = () => { active = !document.hidden && document.body.classList.contains('screen-atlas'); refresh(); };
-  document.addEventListener('visibilitychange', activity);
-  window.atlasSound = activity;
-  paint(); activity();
-  const stop = () => { for (const t of tracks.values()) { t.a.pause(); t.a.removeAttribute('src'); t.a.load(); } tracks.clear(); on = false; };      // (the app starts again: another version)
-  return { stop, view: v => { if (on) locate(v); else where = null; }, screen: activity, state: () => ({ on, night, pair, place, tracks: [...tracks].map(([f, t]) => [f, +t.v.toFixed(2), t.to]) }) };
-})();
+  // Music and sounds of the place in view (sound.js, toolbox/atlas/build_sound.py; the game's gsound.c) (moved to atlas-sound.js; the closure's state it needs is handed in)
+  const { SND } = window.AtlasParts.sound({ MP, esc, get lastView() { return lastView; } });
 
 // ---- links to a view of the map ---------------------------------------------------------------------------------------
 let lastView = null;       // what the map reports: { map (key of one of the other maps, or null), tile, z }
@@ -1182,7 +1078,7 @@ function selectLabel(l) {
     h += `<div class="sec"><div class="sec-t">Altar of ${esc(god)}</div><dl class="kv">${l.offering ? `<dt>Offering</dt><dd>${esc(l.offering)}</dd>` : ''}
       <dt>Blessing</dt><dd>${b ? `${esc(b[0])}<div class="note">${esc(b[1])}</div>` : esc(l.blessing || '')}</dd></dl></div>`;
   }
-  if (l.to) h += `<div class="sec"><div class="sec-t">Waypoint${l.what ? ` · ${esc(l.what)}` : ''}</div>${l.to.map((t, i) => `<button class="tbtn" data-travel="${i}">🚪 Travel to ${esc(t.label || t.place)}</button>`).join('')}</div>`;
+  if (l.to) h += `<div class="sec"><div class="sec-t">Waypoint${l.what ? ` · ${esc(l.what)}` : ''}</div>${travelList(l.to.map(t => t.label || t.place))}</div>`;
   if (l.lock) {          // a locked trap door: the lock of the container that stood on the same tile
     const keys = (l.lock.keys || []).map(k => `<button class="keylink" data-item="${k}">🔑 ${esc(IT.items[k].name)}</button>`).join(' ');
     h += `<div class="sec"><div class="sec-t">Lock</div><div>🔒 Locked${l.lock.locked ? ` · difficulty ${l.lock.locked}` : ''}</div>
@@ -1340,182 +1236,8 @@ const LIB_TELE_PARTS = [[481, 1000, 342, 35, 1], [481, 1001, 342, 41, 1], [481, 
   [479, 1005, 450, 36, 1], [479, 1006, 450, 61, 1], [481, 1007, 558, 35, 1], [481, 1008, 539, 50, 0], [481, 1009, 539, 60, 0], [481, 1010, 539, 69, 0]];
 const LIB_PAPER_PARTS = [[485, 0, 216, 44, 1], [484, 1, 453, 41, 1], [485, 0, 689, 44, 1], [482, 2, 194, 76, 0], [482, 3, 449, 76, 1], [482, 2, 712, 76, 2]];
 const LIB_VENDIGROTH_PARTS = [[485, 0, 216, 44, 1], [815, 4, 453, 41, 1], [485, 0, 689, 44, 1], [482, 2, 194, 76, 0], [482, 5, 449, 76, 1], [482, 2, 712, 76, 2]];
-
-// the pictures (atlas/library/): loaded once, on first use. A font is its strip in black; the white ink (the plaque) is that
-// strip with its ink coloured white
-let libReady = null;
-function libLoad() {
-  if (!libReady) {
-    const img = src => new Promise((ok, no) => { const im = new Image(); im.onload = () => ok(im); im.onerror = no; im.src = src; });
-    const tint = (im, color) => {
-      const c = document.createElement("canvas"); c.width = im.naturalWidth; c.height = im.naturalHeight;
-      const g = c.getContext("2d"); g.drawImage(im, 0, 0); g.globalCompositeOperation = "source-in"; g.fillStyle = color; g.fillRect(0, 0, c.width, c.height);
-      return c;
-    };
-    const jobs = [];
-    LB.pics = { bg: {}, font: {} };
-    for (const [n, b] of Object.entries(LB.backgrounds)) jobs.push(img(b.src).then(im => { LB.pics.bg[n] = im; }));
-    for (const [n, f] of Object.entries(LB.fonts)) jobs.push(img(f.src).then(im => { LB.pics.font[n] = { black: im, white: tint(im, "#fff") }; }));
-    libReady = Promise.all(jobs);
-  }
-  return libReady;
-}
-
-// a font's glyphs are numbered by the game's one-byte code page (Windows-1251 for the Russian Mod Pack, 1252 otherwise); the
-// texts are Unicode: a character above 255 (Cyrillic, curly quotes, dashes) is looked up by its byte in that code page
-const LIB_CP = (() => {
-  const m = new Map();
-  try { [...new TextDecoder(window.AtlasVer === "ru" ? "windows-1251" : "windows-1252").decode(Uint8Array.from({ length: 128 }, (_, i) => i + 128))].forEach((c, i) => m.set(c.charCodeAt(0), i + 128)); } catch (_) {}
-  return m;
-})();
-const libCode = ch => { const c = ch.charCodeAt(0); return c > 255 ? LIB_CP.get(c) ?? c : c; };
-// text in a bitmap font: the pen advances by each glyph's advance, the last glyph counts its own width
-const libAdv = (f, ch, last) => { const g = f.glyphs[libCode(ch)]; return g ? (last ? g[1] : g[2]) : 4; };
-const libWidth = (f, s) => { let w = 0; for (let i = 0; i < s.length; i++) w += libAdv(f, s[i], i === s.length - 1); return w; };
-function libWrap(f, text, maxW) {
-  const lines = [];
-  for (const hard of text.split("\n")) {
-    let line = "";
-    for (const word of hard.split(" ")) {
-      const next = line ? line + " " + word : word;
-      if (!line || libWidth(f, next) <= maxW) line = next; else { lines.push(line); line = word; }
-    }
-    lines.push(line);
-  }
-  return lines;
-}
-function libDrawLines(ctx, num, color, lines, r, centered) {
-  const f = LB.fonts[num], strip = LB.pics.font[num][color];
-  ctx.save();
-  ctx.beginPath(); ctx.rect(r.x - LIB_SIDEBAR, r.y, r.w, r.h); ctx.clip();
-  lines.forEach((line, row) => {
-    let x = r.x - LIB_SIDEBAR + (centered ? Math.floor((r.w - libWidth(f, line)) / 2) : 0);
-    const y = r.y + row * f.h;
-    for (let i = 0; i < line.length; i++) {
-      const g = f.glyphs[libCode(line[i])];
-      if (g && g[1]) ctx.drawImage(strip, g[0], 0, g[1], f.h, x, y, g[1], f.h);
-      x += libAdv(f, line[i], i === line.length - 1);
-    }
-  });
-  ctx.restore();
-}
-const libWrite = (ctx, text, num, color, r, centered) => libDrawLines(ctx, num, color, libWrap(LB.fonts[num], text, r.w), r, centered);
-function libElement(ctx, text, num, x, y, align) {              // one line placed by its left edge, centre or right edge
-  const f = LB.fonts[num], w = libWidth(f, text);
-  libDrawLines(ctx, num, "black", [text], R(align === 0 ? x : align === 1 ? x - Math.floor(w / 2) : x - w, y, w + 2, f.h), false);
-}
-// "492c text": font number, c = centred (anything else = left), then the text
-function libParse(s) {
-  let i = 0;
-  while (i < s.length && s[i] >= "0" && s[i] <= "9") i++;
-  const font = parseInt(s, 10) || 0, centered = s[i] === "c" || s[i] === "C";
-  if (i < s.length) i++;
-  if (/\s/.test(s[i] || "")) i++;
-  return [font, centered, s.slice(i)];
-}
-// a paragraph in a rectangle: { fit: true, used: height } or, when it does not fit, the part that does is drawn
-// and { fit: false, off: characters used } says where the next column or page goes on
-function libParagraph(ctx, str, num, centered, r, color) {
-  const f = LB.fonts[num];
-  if (!f) return { fit: true, used: 0 };
-  const height = s => libWrap(f, s, r.w).length * f.h;
-  if (height(str) > r.h) {
-    let cut = 0;
-    for (let pos = 0; pos < str.length; pos++) {
-      if (str[pos] === " " || str[pos] === "\n") { if (height(str.slice(0, pos)) > r.h) break; cut = pos; }
-    }
-    if (cut > 0) libDrawLines(ctx, num, color, libWrap(f, str.slice(0, cut), r.w), r, centered);
-    return { fit: false, off: cut };
-  }
-  libDrawLines(ctx, num, color, libWrap(f, str, r.w), r, centered);
-  return { fit: true, used: height(str) };
-}
-// a book page or a plaque: paragraphs one after another until one does not fit; returns where the next page starts
-function libPageLike(ctx, kind, base, r, at, color) {
-  const T = libText[kind];
-  let n = at.num;
-  if (n >= base + LIB_TEN || !(n in T)) return null;
-  let [fn, c, str] = libParse(T[n]);
-  let box = { ...r }, res = libParagraph(ctx, str.slice(at.off), fn, c, box, color);
-  if (!res.fit) return { num: n, off: at.off + res.off };
-  for (;;) {
-    box.y += res.used; box.h -= res.used;
-    n++;
-    if (n >= base + LIB_TEN || !(n in T)) return null;
-    [fn, c, str] = libParse(T[n]);
-    res = libParagraph(ctx, str, fn, c, box, color);
-    if (!res.fit) return { num: n, off: res.off };
-  }
-}
-function libBookPages(base) {                                   // where each page starts; two are shown at a time
-  const scratch = document.createElement("canvas").getContext("2d"), pages = [{ num: base, off: 0 }];
-  for (let i = 0; i < pages.length && pages.length < 100; i += 2) {
-    let at = pages[i];
-    for (let side = 0; side < 2 && at; side++) {
-      const next = libPageLike(scratch, 0, base, LIB_BOOK[side], at, "black");
-      at = next && (next.num !== at.num || next.off !== at.off) ? next : null;
-      if (at && pages.length === i + side + 1) pages.push(at);
-    }
-  }
-  return pages;
-}
-function libPaper(ctx, num, vendigroth) {                       // headline, then the story over the columns, then filler articles
-  const T = libText[2], rects = LIB_NEWS.map(r => ({ ...r }));
-  for (const [font, line, x, y, align] of vendigroth ? LIB_VENDIGROTH_PARTS : LIB_PAPER_PARTS) libElement(ctx, T[line] || "", font, x, y, align);
-  if (num in T) { const [fn, c, str] = libParse(T[num]); libParagraph(ctx, str, fn, c, rects[0], "black"); }
-  let n = num + 1;
-  if (!(n in T)) return;
-  let [fn, c, str] = libParse(T[n]), col = 1, box = { ...rects[1] }, res;
-  const flow = () => {                                          // false when the columns are full
-    while (!(res = libParagraph(ctx, str, fn, c, box, "black")).fit) {
-      if (++col >= rects.length) return false;
-      box = { ...rects[col] }; str = str.slice(res.off);
-    }
-    return true;
-  };
-  for (;;) {
-    if (!flow()) return;
-    box.y += res.used; box.h -= res.used;
-    if (++n >= num + LIB_TEN || !(n in T)) break;
-    [fn, c, str] = libParse(T[n]);
-  }
-  const fillers = Object.keys(T).filter(k => k >= 10 && k <= 999).length;
-  let f = Math.floor(num / LIB_TEN) + 10;
-  if (f >= fillers + 10) f = 10;
-  if (!(f in T)) return;
-  [fn, c, str] = libParse(T[f]);
-  for (let guard = 0; guard < 200; guard++) {
-    if (!flow()) return;
-    if (++f >= fillers + 10) f = 10;
-    if (!(f in T)) return;
-    [fn, c, str] = libParse(T[f]);
-    box.y += res.used; box.h -= res.used;
-  }
-}
-// draws a document into the 668 x 400 canvas; `page` is the left page of a book. Returns the number of book pages.
-function libDraw(canvas, d, page) {
-  libText = d.g ? LB.modMes[d.g] : LB.mes;
-  const ctx = canvas.getContext("2d"), T = libText[d.k], s = d.s;
-  canvas.width = LIB_W; canvas.height = LIB_H;
-  ctx.drawImage(LB.pics.bg[d.v ? LIB_BG_VENDIGROTH : LIB_BG[d.k]], 0, 0);
-  if (d.k === 0) {
-    const pages = libBookPages(s);
-    for (let side = 0; side < 2; side++) if (pages[page + side]) libPageLike(ctx, 0, s, LIB_BOOK[side], pages[page + side], "black");
-    return pages.length;
-  }
-  if (d.k === 1 || d.k === 3) {
-    let text = "";
-    for (let i = 0; i < LIB_TEN && (s + i) in T; i++) text += T[s + i] + (d.k === 1 ? "\n" : T[1012]);
-    if (d.k === 1) libWrite(ctx, text, 497, "black", LIB_NOTE, false);
-    else {
-      for (const [font, line, x, y, align] of LIB_TELE_PARTS) libElement(ctx, T[line] || "", font, x, y, align);
-      libWrite(ctx, T[1011], 481, "black", LIB_TELE_FINE, false);
-      libWrite(ctx, text, 480, "black", LIB_TELE_TEXT, false);
-    }
-  } else if (d.k === 2) libPaper(ctx, s, d.v);
-  else if (d.k === 6) libPageLike(ctx, 6, s, LIB_PLAQUE, { num: s, off: 0 }, "white");
-  return 1;
-}
+  // The library's bitmap-font text layout: the game's own fonts and papers drawn into a canvas (the Library screen of the Atlas) (moved to atlas-library.js; the closure's state it needs is handed in)
+  const { libLoad, libParse, libDraw } = window.AtlasParts.library({ LB, LIB_BG, LIB_BG_VENDIGROTH, LIB_BOOK, LIB_H, LIB_NEWS, LIB_NOTE, LIB_PAPER_PARTS, LIB_PLAQUE, LIB_SIDEBAR, LIB_TELE_FINE, LIB_TELE_PARTS, LIB_TELE_TEXT, LIB_TEN, LIB_VENDIGROTH_PARTS, LIB_W, R, get libText() { return libText; }, set libText(v) { libText = v; } });
 
 // ---- the list ---------------------------------------------------------------------------------------------
 const LIB_ONE_LINE = s => s.replace(/\s+/g, " ").trim();
@@ -1921,237 +1643,8 @@ function filterDemoToPlace() {
   demo.place = i >= 0 ? i : null; demo.race = demo.gender = null;
   if (i >= 0) { demo.game = PLACE_GAME[i]; document.getElementById('demoGame').value = demo.game; }
 }
-
-/* ------------------------------------------------------------------ files and workshop */
-// Both are the Asset Browser itself (the browser view of index.html, unchanged), each in a frame of its own, loaded the first time it opens.
-// Files shows every kind of file. The Workshop keeps to the maps: a map picked there opens straight in the map editor, and
-// "Exit edit" goes back to the maps. Files has no editing tools at all (no Edit, world editor or .ART packer). Each frame keeps its own GET link
-// (?mode=sec&path=..&editor=on), which the address bar repeats as #files&<link> / #workshop&<link>. The two share the Asset
-// Browser's last place (localStorage), so the Workshop always starts from a link of its own.
-const BROWSERS = {
-  files: { frame: document.getElementById('filesFrame'), note: document.getElementById('filesNote'), start: '', list: 'file list', query: '', seen: null },
-  workshop: { frame: document.getElementById('workFrame'), note: document.getElementById('workNote'), start: 'mode=sec', list: 'map list', query: '', seen: null },
-};
-const filesFrame = BROWSERS.files.frame;
-// a #files / #workshop link has started its frame already (index.html): that is its link
-for (const b of Object.values(BROWSERS)) { const src = b.frame.getAttribute('src'); if (src) b.query = src.split('?')[1] || ''; }
-function loadBrowser(screen, query) {
-  const b = BROWSERS[screen];
-  if (query && screen === 'files') { const p = new URLSearchParams(query); p.delete('editor'); query = String(p); }   // editing is the Workshop's
-  if (b.frame.getAttribute('src') && (!query || query === b.query)) return;
-  b.query = query || b.start; b.seen = null;
-  b.frame.style.visibility = 'hidden';                 // shown once dressed (the load handler)
-  b.frame.src = 'index.html' + (b.query ? '?' + b.query : '');
-}
-function openFiles(query) { loadBrowser('files', query); go('files'); }
-// One top bar: the Asset Browser's (file types, its tools, the map editor's menu), in the Atlas bar's dress. Its brand becomes
-// the Atlas's (a click goes to the welcome screen). Files adds the "in the Atlas"
-// button; the Workshop puts its own short menu where the file types were.
-const BAR_CSS = `
-:root { --topbar-h: 50px; }
-.topbar { background: linear-gradient(#2a2318, #211c14); border-bottom-color: #5c4b31; }
-.topbar .topbar-tabs, .topbar .tab-group { gap: 2px; }
-.topbar .tab-sep { height: 16px; margin: 0 6px; background: #5c4b31; }
-.topbar .topbar-tabs .file-mode-btn, #workNav button { border: 0; background: none; padding: 7px 13px; border-radius: 4px; box-shadow: none;
-  font: 600 12.5px/1.2 'Cinzel', Georgia, serif; letter-spacing: .03em; color: #b3a685; cursor: pointer; }
-.topbar .topbar-tabs .file-mode-btn:hover, .topbar .topbar-tabs .file-mode-btn:focus-visible, #workNav button:hover, #workNav button:focus-visible { background: none; border: 0; color: #f1e4c3; }
-.topbar .topbar-tabs .file-mode-btn.active, .topbar .topbar-tabs .file-mode-btn[aria-pressed="true"], #workNav button[aria-pressed="true"] { background: none; border: 0; color: #f1e4c3; box-shadow: inset 0 -2px 0 #e8c66a; }
-.topbar .tool-btn { font: 600 11px/1.2 'Cinzel', Georgia, serif; letter-spacing: .02em; }
-#filesAtlas { border-color: #e8c66a; color: #e8c66a; max-width: 320px; overflow: hidden; text-overflow: ellipsis; }
-#filesAtlas:hover { color: #ffe066; }
-#filesAtlas[hidden] { display: none; }
-/* the map editor's menu: its switches read as the bar's tabs (a gold line = on), Export / Exit edit as its buttons */
-.topbar-editor { gap: 10px; }
-.topbar-editor .sec-overlay-controls { gap: 0; border-left-color: #5c4b31; }
-.topbar-editor .sec-overlay-toggle, .topbar-editor .sec-view-btn { border: 0; border-radius: 4px; background: none; padding: 7px 8px; box-shadow: none;
-  font: 600 12px/1.2 'Cinzel', Georgia, serif; letter-spacing: .02em; color: #b3a685; }
-.topbar-editor .sec-overlay-toggle:hover, .topbar-editor .sec-overlay-toggle:focus-visible,
-.topbar-editor .sec-view-btn:hover, .topbar-editor .sec-view-btn:focus-visible { background: none; border: 0; color: #f1e4c3; }
-.topbar-editor .sec-overlay-toggle[aria-pressed="true"], .topbar-editor .sec-view-btn[aria-pressed="true"] { background: none; color: #f1e4c3; box-shadow: inset 0 -2px 0 #e8c66a; }
-.topbar-editor .sec-view-switch { border: 0; border-left: 1px solid #5c4b31; border-radius: 0; padding-left: 10px; overflow: visible; }
-.topbar-editor .sec-view-btn + .sec-view-btn { border-left: 0; }
-.topbar-editor .btn-back { margin: 0; padding: 6px 11px; border: 1px solid #5c4b31; border-radius: 4px; background: #2a2218; box-shadow: none; transform: none;
-  font: 600 11px/1.2 'Cinzel', Georgia, serif; letter-spacing: .02em; color: #d4c5a1; white-space: nowrap; }
-.topbar-editor .btn-back:hover:not(:disabled) { background: #362e22; color: #f1e4c3; transform: none; }
-.topbar-editor .sec-edit-export:not(:disabled), .topbar-editor .sec-edit-btn { border-color: #e8c66a; color: #e8c66a; }
-/* the file list folds away whole, as the Atlas's places list does, with the same slim tab on its edge (it moves with it) */
-body.sidebar-collapsed:not(.sec-edit-full) { --side-left-w: 0px; }
-.side-head .sidebar-toggle { display: none; }
-.workspace { position: relative; }
-#atlasEdge { position: absolute; left: var(--side-left-w); top: 50%; transform: translateY(-50%); z-index: 6; width: 14px; height: 64px; margin: 0; padding: 0;
-  border: 1px solid #4a3e2e; border-left: 0; border-radius: 0 4px 4px 0; background: #211c14; color: #d4c5a1; font: 18px/1 Arial, sans-serif;
-  display: flex; align-items: center; justify-content: center; cursor: pointer; transition: left .45s var(--ease, cubic-bezier(.4,0,.2,1)), background-color .18s, color .18s; }
-#atlasEdge:hover { background: #362e22; color: #e8c66a; }
-#atlasEdge::before { content: "‹"; }
-body.sidebar-collapsed #atlasEdge::before { content: "›"; }
-body.sec-edit-full #atlasEdge { display: none; }`;
-// Files only shows: the map editor (Edit), the world editor and the .ART packer are the Workshop's
-const FILES_CSS = `
-#topbarTools .sec-edit-btn, #packerLaunchBtn, #worldEditorLaunchBtn { display: none !important; }`;
-// the Workshop: maps only, so no file types; its menu (the maps, a new world, the .ART packer) stands in their place
-const WORK_CSS = `
-.topbar .topbar-tabs, #packerLaunchBtn, #worldEditorLaunchBtn { display: none !important; }
-#workNav { grid-column: 2; justify-self: center; display: flex; align-items: center; gap: 2px; }
-body.sec-edit-full #workNav { display: none; }
-body.sec-edit-full .viewer-backbar { display: none; }      /* "Exit edit" is the way back to the maps */
-.tb-ic { font-family: 'Segoe UI Symbol', 'Noto Sans Symbols 2', 'Apple Symbols', sans-serif; font-variant-emoji: text; font-weight: normal; }
-.tb-map { display: inline-block; width: 1.05em; height: 1.12em; vertical-align: -.2em; background: currentColor; -webkit-mask: url(atlas/map-icon.png) center / contain no-repeat; mask: url(atlas/map-icon.png) center / contain no-repeat; }
-.tool-back { display: none; }                                /* the Workshop's menu is the way back */`;
-function dressBar(doc, screen) {
-  if (doc.getElementById('atlasEmbed')) return;
-  const b = BROWSERS[screen];
-  // The page links its style.css / shell.css at the end of its body, and the sheet that comes last wins at equal weight: this one goes
-  // after them (at the end of the body, kept there if the page adds more), or the bar shows the browser's own boxed buttons
-  doc.body.insertAdjacentHTML('beforeend', `<style id="atlasEmbed">${BAR_CSS}${screen === 'workshop' ? WORK_CSS : FILES_CSS}</style>`);
-  const dress = doc.getElementById('atlasEmbed');
-  new doc.defaultView.MutationObserver(() => { if (doc.body.lastElementChild !== dress) doc.body.appendChild(dress); }).observe(doc.body, { childList: true });
-  const brand = doc.getElementById('appTitle');
-  brand.querySelector('.brand-title').textContent = 'Arcanum Asset Browser';
-  brand.title = 'Welcome screen';
-  doc.addEventListener('click', e => {               // before the Asset Browser's own handlers
-    if (e.target.closest('#appTitle')) { e.stopPropagation(); e.preventDefault(); go('home'); }   // the Atlas's welcome screen
-  }, true);
-  if (screen === 'files') doc.getElementById('topbarTools').insertAdjacentHTML('afterbegin', '<button type="button" class="tool-btn" id="filesAtlas" hidden></button>');
-  else dressWorkshop(doc);
-  // the edge tab works the Asset Browser's own fold button (which keeps the choice)
-  const fold = doc.getElementById('sidebarToggleBtn'), side = doc.getElementById('sideLeft');
-  if (fold && side) {
-    side.insertAdjacentHTML('afterend', '<button type="button" id="atlasEdge"></button>');
-    const edge = doc.getElementById('atlasEdge');
-    const label = () => { edge.title = edge.ariaLabel = (fold.getAttribute('aria-expanded') === 'false' ? 'Show the ' : 'Hide the ') + b.list; };
-    edge.onclick = () => { fold.click(); label(); };
-    label();
-  }
-  if (window.gameScroll) window.gameScroll(doc);       // the game's scrollbars, as in the Atlas (js/atlas/game-scroll.js)
-}
-// The Workshop's menu, and its rule: a map that opens goes into the editor, and leaving the editor goes back to the maps.
-function dressWorkshop(doc) {
-  const win = doc.defaultView, click = id => doc.getElementById(id)?.click();
-  doc.getElementById('topbarTabs').insertAdjacentHTML('afterend', `<nav id="workNav" aria-label="Workshop">
-    <button type="button" data-k="maps" aria-pressed="true" title="Pick a map to edit"><span class="tb-ic tb-map" aria-hidden="true"></span> Map editor</button>
-    <button type="button" data-k="world" title="Make a new world map and edit it, or load one made here"><span class="tb-ic" aria-hidden="true">🌍&#xFE0E;</span> New world</button>
-    <button type="button" data-k="packer" title="Build a .ART file from BMP / PNG frames"><span class="tb-ic" aria-hidden="true">🛠&#xFE0E;</span> .ART Packer</button>
-    <button type="button" data-k="translator" title="Review and edit the English of a translated dialog file"><span class="tb-ic" aria-hidden="true">💬&#xFE0E;</span> Translator</button></nav>`);
-  doc.getElementById('workNav').addEventListener('click', e => {
-    const k = e.target.closest('button')?.dataset.k;
-    if (!k) return;
-    if (k === 'maps') { doc.dispatchEvent(new win.CustomEvent('toolpage', { detail: 'close' })); click('secExploreBtn'); return; }
-    if (k === 'translator') { doc.dispatchEvent(new win.CustomEvent('toolpage', { detail: 'translator' })); return; }
-    click(k === 'world' ? 'worldEditorLaunchBtn' : 'packerLaunchBtn');
-  });
-  const tools = doc.getElementById('topbarTools');
-  let editing = false;
-  const check = () => {
-    if (doc.body.classList.contains('sec-edit-full')) { editing = true; return; }
-    if (editing) { editing = false; click('secExploreBtn'); return; }          // "Exit edit": back to the maps
-    const btn = tools.querySelector('.sec-edit-btn');
-    if (btn && !btn.disabled && !btn.dataset.auto) { btn.dataset.auto = '1'; btn.click(); }
-  };
-  new win.MutationObserver(check).observe(doc.body, { attributes: true, attributeFilter: ['class'] });
-  new win.MutationObserver(check).observe(tools, { childList: true, subtree: true, attributes: true, attributeFilter: ['disabled'] });
-  check();
-}
-// The page cannot reach into a file:// frame, and the browser keeps the viewers from reading the data folders there: then
-// Files and the Workshop explain how to start the local server.
-function onBrowserLoad(screen, b) {
-  let doc = null; try { doc = b.frame.contentDocument; } catch (_) {}
-  const ok = !!(doc && doc.getElementById('app'));
-  if (ok) {
-    try { dressBar(doc, screen); } catch (err) { console.error(`${screen}: could not dress the Asset Browser`, err); }
-    b.seen = null;                                       // a new page: the poll below takes up its link (and "in the Atlas")
-  }
-  // shown once its list area is up (main.js opens the first tab or the last place at once; 3 s at most)
-  const t0 = Date.now(), reveal = () => {
-    let up = !ok; try { up = up || !doc.querySelector('.explorer').hidden; } catch (_) { up = true; }
-    if (up || Date.now() - t0 > 3000) b.frame.style.visibility = ''; else requestAnimationFrame(reveal);
-  };
-  reveal();
-  // main.js marks the page once its modules run; a page that loaded without them cannot read the files
-  // (a slow start - a busy machine, the data still loading - is not a missing server: look again every half second, 20 s at most,
-  // and show the note only when the page never booted)
-  const started = Date.now();
-  const look = () => {
-    try { if (ok && b.frame.contentDocument !== doc) return; } catch (_) {}      // the frame went on to another page meanwhile
-    let booted = false; try { booted = ok && !doc.querySelector('.explorer').hidden; } catch (_) {}
-    if (booted || !ok || Date.now() - started > 20000) b.note.hidden = booted;
-    else setTimeout(look, 500);
-  };
-  setTimeout(look, 1500);
-}
-for (const [screen, b] of Object.entries(BROWSERS)) {
-  b.frame.addEventListener('load', () => onBrowserLoad(screen, b));
-  // started early by index.html, it may have loaded before this script ran (a frame the page cannot read, from file://,
-  // is taken as loaded: the handler then shows the note, and running it again on the real load does no harm)
-  if (!b.frame.getAttribute('src')) continue;
-  let early = true; try { const d = b.frame.contentDocument; early = !d || (d.readyState === 'complete' && b.frame.contentWindow.location.href !== 'about:blank'); } catch (_) {}
-  if (early) onBrowserLoad(screen, b);
-}
-// the .mob a person or a container of the Atlas comes from (npcs.js / submaps.js / items.js: paths under data/maps)
-const FILE_OWNER = new Map();
-for (const n of PEOPLE) if (n.file) FILE_OWNER.set(n.file.toLowerCase(), { npc: n });
-IT.containers.forEach((c, ci) => { if (c.file && !FILE_OWNER.has(c.file.toLowerCase())) FILE_OWNER.set(c.file.toLowerCase(), { ci }); });
-function showNpcOnMap(n) {
-  if (n.sub && MAP_BY_KEY.has(nkey(n.place))) focusTile(placeTitle(n.place), n.tile, n.name, n.place);   // inside a castle, cave, cellar...
-  else focusTile(n.place, n.tile, n.name);
-  selectNpc(n);
-}
-// Files -> Atlas: while a .mob of someone or something on the map is open, the top bar offers to show them there
-function showFilesOwner(q) {
-  const p = new URLSearchParams(q), file = p.get('file');
-  const o = p.get('mode') === 'mob' && file ? FILE_OWNER.get(((p.get('path') ? p.get('path') + '/' : '') + file).toLowerCase()) : null;
-  let filesAtlas = null; try { filesAtlas = filesFrame.contentDocument.getElementById('filesAtlas'); } catch (_) {}
-  if (!filesAtlas) return;
-  filesAtlas.hidden = !o;
-  if (!o) return;
-  const name = o.npc ? o.npc.name || 'Someone' : IT.containers[o.ci].name;
-  filesAtlas.textContent = `📍 ${name} in the Atlas`;
-  filesAtlas.title = `Show ${o.npc ? 'this person' : 'this container'} on the Atlas map`;
-  filesAtlas.onclick = () => o.npc ? showNpcOnMap(o.npc) : focusContainer(o.ci);
-}
-// the Asset Browser writes every place it opens to its own address bar: follow it
-setInterval(() => {
-  const b = BROWSERS[current];
-  if (!b || !b.frame.getAttribute('src')) return;
-  let q, doc; try { if (b.frame.contentWindow.location.href === 'about:blank') return; q = b.frame.contentWindow.location.search.slice(1); doc = b.frame.contentDocument; } catch (_) { return; }
-  if (current === 'workshop') {
-    const tool = ['world', 'packer', 'translator'].find(k => doc.body.classList.contains('ws-tool-' + k));
-    doc.querySelector('#workNav [data-k="maps"]')?.setAttribute('aria-pressed', String(!tool && new URLSearchParams(q).get('mode') === 'sec'));
-    for (const k of ['world', 'packer', 'translator']) doc.querySelector(`#workNav [data-k="${k}"]`)?.setAttribute('aria-pressed', String(tool === k));
-  }
-  if (q === b.seen) return;
-  b.seen = b.query = q; syncLink();
-  if (current === 'files') showFilesOwner(q);
-}, 400);
-
-/* ------------------------------------------------------------------ screens */
-const SCREENS = ['home', 'atlas', 'items', 'library', 'quests', 'people', 'files', 'workshop'];
-// (the welcome page's picture is chosen by atlas-boot.js: it is on screen before this app starts)
-
-function go(screen) {
-  current = screen;
-  if (screen !== 'home' && !BROWSERS[screen]) startWorldFrame();
-  document.body.classList.remove(...SCREENS.map(s => 'screen-' + s));
-  document.body.classList.add('screen-' + screen);
-  if (['items', 'people', 'library', 'quests'].includes(screen)) document.body.classList.add('screen-atlas');   // these pages are part of the Atlas
-  if (window.atlasSound) window.atlasSound();          // the Atlas's music stops in Files and Workshop
-  syncLink();
-  document.querySelectorAll('.workspace').forEach(w => w.classList.toggle('on', w.dataset.screen === screen));
-  document.querySelectorAll('#atlasNav button').forEach(b => b.classList.toggle('on', (screen === 'atlas' || screen === 'people' || screen === 'library' || screen === 'quests') && b.dataset.go === screen));
-  if (screen === 'people') renderDemo();
-  if (screen === 'quests') { renderQuests(); if (qv.sel != null) showQuest(qv.sel); }
-  if (screen === 'library') renderLibrary();
-  if (screen === 'items') renderItems();
-  if (BROWSERS[screen]) loadBrowser(screen);
-}
-document.querySelectorAll('[data-go]').forEach(b => b.addEventListener('click', () => {
-  if (b.dataset.go === 'items') itemView.filter = b.dataset.filter || (b.closest('#atlasNav') ? 'all' : itemView.filter);
-  // from the map, Demographics and Quests open on the place that is on show
-  if (current === 'atlas' && b.closest('#atlasNav')) {
-    if (b.dataset.go === 'people') filterDemoToPlace();
-    if (b.dataset.go === 'quests') filterQuestsToPlace();
-  }
-  go(b.dataset.go);
-}));
+  // The Files and Workshop screens: the Asset Browser in a frame of the Atlas, dressed with the Atlas's bar (see atlas-app.js) (moved to atlas-frames.js; the closure's state it needs is handed in)
+  const { BROWSERS, loadBrowser, openFiles, SCREENS, go } = window.AtlasParts.frames({ IT, MAP_BY_KEY, PEOPLE, filterDemoToPlace, filterQuestsToPlace, focusContainer, focusTile, itemView, nkey, placeTitle, qv, renderDemo, renderItems, renderLibrary, renderQuests, selectNpc, showQuest, startWorldFrame, syncLink, get current() { return current; }, set current(v) { current = v; } });
 // the whole Atlas box on the welcome screen opens the map (its own buttons go to their pages)
 document.querySelector('.hero').addEventListener('click', e => { if (!e.target.closest('button')) go('atlas'); });
 { // #files&mode=mob&path=... opens Files on that file, #workshop&mode=sec&path=...&editor=on the Workshop on that map

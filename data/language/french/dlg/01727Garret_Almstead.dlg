@@ -1,0 +1,236 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Mes salutations, monsieur. Etes-vous le forgeron local ?}{}{5}{re 41, lf1 0}{23}{}
+{3}{Bonjour, Clément. Pouvez-vous m'aider ?}{}{5}{re 41, lf1 1}{33}{}
+{4}{Ce n'était pas très aimable. Etes-vous le forgeron ?}{}{5}{re -40, lf1 0}{23}{}
+{5}{Euh... oui. Puis-je vous demander quelque chose, Clément ?}{}{5}{re -40, lf1 1}{27}{}
+{6}{Voulez-vous toujours rendre le coffre pour 50 pièces, Clément ?}{}{5}{lf4 1, qb1083 2}{134}{}
+{7}{Comme convenu, voici les 80 pièces pour le coffre, Clément.}{}{5}{lf5 1, qb1083 2}{154}{$$ -80}
+{8}{Avez-vous changé d'avis ? Baisserez-vous le prix pour le coffre-fort ?}{}{5}{lf6 1, qb1083 2}{138}{}
+{9}{Vous toujours me rendre coffre pour 50 pièces, Clément ?}{}{-4}{lf4 1, qb1083 2}{134}{}
+{10}{Tenez. Moi avoir 80 pièces. Moi ramener coffre à Monsieur Hallaway ? }{}{-4}{lf5 1, qb1083 2}{154}{$$ -80}
+{11}{Vous avoir réfléchi ? Vous baisser prix du coffre-fort ?}{}{-4}{lf6 1, qb1083 2}{138}{}
+{12}{Vous forgeron ?}{}{-4}{re 41, lf1 0}{23}{}
+{13}{Hé Clément... Moi demander quelque chose à vous ?}{}{-4}{re 41, lf1 1}{33}{}
+{14}{Vous forgeron ?}{}{-4}{re -40, lf1 0}{23}{}
+{15}{Hé ! Ca méchant, Clément... Moi poser question à vous ?}{}{-4}{re -40, lf1 1}{27}{}
+{16}{I:}{}{1}{re -40, lf2 0}{0}{lf2 1, re -5}
+{17}{I:}{}{1}{re -40, lf2 1}{0}{co, fl 45}
+{18}{J'aimerais atteindre le grade d'expert en réparation.}{}{5}{tr12-1}{39}{et12 216}
+{19}{Moi vouloir devenir espère de repas ration.}{}{-4}{tr12-1}{39}{et12 216}
+{20}{J'aimerais atteindre le grade d'expert en serrurerie.}{}{5}{tr14-1}{39}{et14 193}
+{21}{Moi vouloir devenir espère c'est rouillé.}{}{-4}{tr14-1}{39}{et14 193}
+{22}{E:}{}{1}{}{0}{}
+{23}{Oui. Mon nom est Clément Mansard.}{Oui. Mon nom est Clément Mansard.}{}{}{}{lf1 1}
+{24}{Puis-je vous poser une question ?}{}{5}{}{27}{}
+{25}{Moi demander question ?}{}{-4}{}{27}{}
+{26}{E:}{}{1}{}{0}{}
+{27}{Qu'y a-t-il ? Dépêchez-vous, je n'ai pas que ça à faire.}{Qu'y a-t-il ? Dépêchez-vous, je n'ai pas que ça à faire.}{}{}{}{}
+{28}{T:12, 14, 15}{}{1}{}{39}{}
+{29}{U:12}{}{1}{}{39}{}
+{30}{[plus]}{}{1}{}{46}{}
+{31}{B:}{}{1}{}{39}{}
+{32}{E:}{}{1}{}{0}{}
+{33}{Que puis-je faire pour vous, @pcname@ ?}{Que puis-je faire pour vous, @pcname@ ?}{}{}{}{}
+{34}{T:12, 14, 15}{}{1}{}{39}{}
+{35}{U:12}{}{1}{}{39}{}
+{36}{B:}{}{1}{}{39}{}
+{37}{[plus]}{}{1}{}{46}{}
+{38}{E:}{}{1}{}{0}{}
+{39}{Vous avez besoin d'autre chose ?}{Vous avez besoin d'autre chose ?}{}{}{}{}
+{40}{T:12, 14, 15}{}{1}{}{39}{}
+{41}{U:12}{}{1}{}{39}{}
+{42}{[plus]}{}{1}{}{46}{}
+{43}{B:}{}{1}{}{39}{}
+{44}{E:}{}{1}{}{0}{}
+{45}{I:}{I:}{}{}{}{}
+{46}{Autre chose ?}{Autre chose ?}{}{}{}{}
+{47}{Je reviens de l'auberge où j'ai parlé à Monsieur Hallaway.}{}{5}{qa1083 1, qb 1083 2}{70}{}
+{48}{On m'a dit que vous aviez quelque chose qui appartenait à Monsieur Hallaway, l'aubergiste.}{}{5}{qa1083 1, qb 1083 2}{70}{}
+{49}{Comment un demi-orque a-t-il pu devenir forgeron dans cette ville ?}{}{5}{lf3 0}{55}{}
+{50}{C:}{}{1}{}{39}{}
+{51}{Moi parler à M'sieur Hallaway à l'auberge...}{}{-4}{qa1083 1, qb 1083 2}{70}{}
+{52}{Hallaway dire que vous avoir chose à lui !}{}{-4}{qa1083 1, qb 1083 2}{70}{}
+{53}{Comment demi-orque pouvoir devenir forgeron ?}{}{-4}{lf3 0}{55}{}
+{54}{[retour]}{}{1}{}{39}{}
+{55}{Ce n'est pas la première fois qu'on me pose cette question. Je n'ai eu ni père ni mère. J'ai erré dans les rues pendant quelques années, glanant ou volant de quoi survivre. Je ne restais jamais longtemps au même endroit... Jusqu'à ce que j'arrive à Racine Noire.}{Ce n'est pas la première fois qu'on me pose cette question. Je n'ai eu ni père ni mère. J'ai erré dans les rues pendant quelques années, glanant ou volant de quoi survivre. Je ne restais jamais longtemps au même endroit... Jusqu'à ce que j'arrive à Racine Noire.}{}{}{}{}
+{57}{Qu'est-ce qui était différent à Racine Noire ?}{}{5}{}{60}{}
+{58}{Quoi passer quand vous arriver ici ?}{}{-4}{}{60}{}
+{59}{E:}{}{1}{}{0}{}
+{60}{Gurney, le vieux forgeron, n'avait pas d'enfants. Mais il avait besoin de quelqu'un pour reprendre le magasin après sa mort. Il cherchait un apprenti, il a eu pitié de moi et voilà. Il a mis tout son coeur dans la lourde tâche de mon apprentissage. C'était un honnête homme. Il est mort il y a quelques années de cela. Il me manque toujours.}{Gurney, le vieux forgeron, n'avait pas d'enfants. Mais il avait besoin de quelqu'un pour reprendre le magasin après sa mort. Il cherchait un apprenti, il a eu pitié de moi et voilà. Il a mis tout son coeur dans la lourde tâche de mon apprentissage. C'était un honnête homme. Il est mort il y a quelques années de cela. Il me manque toujours.}{}{}{}{}
+{61}{Eh oui, tout le monde meurt un jour ou l'autre. Quel dommage. J'ai une autre question...}{}{5}{}{39}{re -5, lf3 1}
+{62}{C'est une histoire intéressante. Puis-je vous poser une autre question ?}{}{5}{}{39}{lf3 1}
+{63}{Oh ! Vous n'avez pas eu la vie facile. Toutes mes condoléances.}{}{5}{}{67}{re +10, lf3 1}
+{64}{Euh... Ca vraiment pas bien pour vous. Moi demander autre question ?}{}{-4}{}{39}{re -5, lf3 1}
+{65}{Vous avoir vie difficile. Moi regretter que lui mort. Moi savoir que ça rendre triste vous...}{}{-4}{}{67}{re +10, lf3 1}
+{66}{E:}{}{1}{}{0}{lf3 1}
+{67}{Vous savez... La plupart des gens n'ont que faire de moi... Ils parlent toujours de moi comme d'un bâtard, d'un hybride. Certains ne se gênent même pas pour le dire en face. Rares sont ceux qui s'intéressent à moi pour me dire un mot gentil. Merci. Tenez... Prenez ça. C'est quelque chose que j'ai fait moi-même. C'est un présent, pour votre gentillesse.}{Vous savez... La plupart des gens n'ont que faire de moi... Ils parlent toujours de moi comme d'un bâtard, d'un hybride. Certains ne se gênent même pas pour le dire en face. Rares sont ceux qui s'intéressent à moi pour me dire un mot gentil. Merci. Tenez... Prenez ça. C'est quelque chose que j'ai fait moi-même. C'est un présent, pour votre gentillesse.}{}{}{}{in -2824}
+{68}{Oh, il ne fallait pas... Merci ! Puis-je vous poser une autre question ?}{}{5}{}{39}{}
+{69}{Oh ! Marsi ! Moi demander autre question ?}{}{-4}{}{39}{}
+{70}{Ce panier percé ! Je parie qu'il vous a raconté que j'essayais de lui faire payer trop cher son précieux coffre-fort, je me trompe ? Il habite la plus belle maison du coin et il chicane pour quelques pièces...}{Ce panier percé ! Je parie qu'il vous a raconté que j'essayais de lui faire payer trop cher son précieux coffre-fort, je me trompe ? Il habite la plus belle maison du coin et il chicane pour quelques pièces...}{}{}{}{}
+{71}{Il a fait mention de cet incident. Pouvez-vous me raconter ce qui s'est passé ?}{}{5}{}{75}{}
+{72}{Et alors, il vous a porté le coffre ?}{}{5}{}{75}{}
+{73}{Accord. Lui raconter à moi. Lui dire lui apporter le coffre et que vous le garder.}{}{-4}{}{75}{}
+{74}{E:}{}{1}{}{0}{}
+{75}{Il m'a apporté son coffre pour que je le répare. Il m'a dit que la serrure se bloquait et il m'a demandé de réparer ça. Je lui ai dit que la réparation coûterait 50 pièces environ. Puis, quand je l'ai eu, j'ai remarqué que les charnières étaient en mauvais état alors je les ai remplacées. Ensuite, j'ai vu qu'un angle était abîmé, alors je l'ai réparé. Le total des réparations s'élevait alors à 137 pièces.}{Il m'a apporté son coffre pour que je le répare. Il m'a dit que la serrure se bloquait et il m'a demandé de réparer ça. Je lui ai dit que la réparation coûterait 50 pièces environ. Puis, quand je l'ai eu, j'ai remarqué que les charnières étaient en mauvais état alors je les ai remplacées. Ensuite, j'ai vu qu'un angle était abîmé, alors je l'ai réparé. Le total des réparations s'élevait alors à 137 pièces.}{}{}{}{}
+{76}{Vous avez donc procédé à des réparations qu'il ne vous avait pas demandé d'effectuer ?}{}{5}{}{82}{}
+{77}{Il ne vous avait pas dit de faire ces réparations, alors ?}{}{5}{}{82}{}
+{78}{On dirait que vous avez essayé de l'escroquer...}{}{5}{}{82}{}
+{79}{Vous réparer des choses que lui pas demander ?}{}{-4}{}{82}{}
+{80}{Moi croire vous escroquer lui...}{}{-4}{}{82}{}
+{81}{E:}{}{1}{}{0}{}
+{82}{Ecoutez. Quand je fais quelque chose, je le fais bien. Il connaît la qualité de mon travail. S'il m'apportait ses affaires avant qu'elle ne soient complètement usées, alors ça lui coûterait moins cher de les faire réparer ! Ce coffre restera dans ma boutique tant qu'il ne m'aura pas payé !}{Ecoutez. Quand je fais quelque chose, je le fais bien. Il connaît la qualité de mon travail. S'il m'apportait ses affaires avant qu'elle ne soient complètement usées, alors ça lui coûterait moins cher de les faire réparer ! Ce coffre restera dans ma boutique tant qu'il ne m'aura pas payé !}{}{}{}{}
+{83}{Monsieur Hallaway est bon client depuis longtemps ?}{}{5}{ch 7}{94}{}
+{84}{Monsieur Hallaway est bon client depuis longtemps ?}{}{5}{ch -7}{157}{}
+{85}{[sur un ton menaçant] Je crois que vous feriez mieux de lui rendre le coffre... tout de suite.}{}{5}{na -50}{177}{re -5}
+{86}{[sur un ton menaçant] Je crois que vous feriez mieux de lui rendre le coffre... tout de suite.}{}{5}{na 49}{138}{}
+{87}{Je veux ce coffre... Ai-je besoin de recourir à la violence ?...}{}{5}{na -50}{177}{re -5}
+{88}{M'sieur Hallaway être vieux client ?}{}{-4}{ch 7}{94}{}
+{89}{M'sieur Hallaway être vieux client ?}{}{-4}{ch -7}{157}{}
+{90}{[sur un ton menaçant] Moi dire que vous rendre le coffre... maintenant.}{}{-4}{na -50}{177}{re -5}
+{91}{[sur un ton menaçant] Moi dire que vous rendre le coffre... maintenant.}{}{-4}{na 49}{138}{}
+{92}{Moi vouloir ce coffre. Vous le donner, ou moi frapper ?}{}{-4}{na -50}{177}{re -5}
+{93}{E:}{}{1}{}{0}{}
+{94}{Eh bien. Oui. C'est vrai. Il m'apporte du travail régulièrement. Il paye toujours rapidement. Il a assez d'argent, vous savez.}{Et bien. Oui. C'est vrai. Il m'apporte du travail régulièrement. Il paye toujours rapidement. Il a assez d'argent, vous savez.}{}{}{}{}
+{95}{Est-ce qu'il vous aide parfois ? Il vous envoie d'autres clients ?}{}{5}{ch 11}{100}{}
+{96}{Donc, s'il n'était plus en bons termes avec vous, votre affaire en prendrait un coup, c'est ça ?}{}{5}{ch -10}{104}{}
+{97}{Lui aider vous ? Lui envoyer clients de l'auberge chez vous ?}{}{-4}{ch 11}{100}{}
+{98}{Donc, si lui en colère contre vous, mauvais pour vous, pas que lui ?}{}{-4}{ch -10}{104}{}
+{99}{E:}{}{1}{}{0}{}
+{100}{A vrai dire... Si l'un de ses clients a besoin de faire réparer quelque chose, il lui conseille de s'adresser à moi.}{A vrai dire... Si l'un de ses clients a besoin de faire réparer quelque chose, il lui conseille de s'adresser à moi.}{}{}{}{}
+{101}{Donc, s'il n'était plus en bons termes avec vous, votre affaire en prendrait un coup, c'est ça ?}{}{5}{}{104}{}
+{102}{Donc, si lui en colère contre vous, mauvais pour vous, pas que lui ?}{}{-4}{}{104}{}
+{103}{E:}{}{1}{}{0}{}
+{104}{Hmm.  Je suppose que vous avez raison. Il serait peut-être bon de nous réconcilier. Que dois-je faire, d'après vous ?}{Hmm.  Je suppose que vous avez raison. Il serait peut-être bon de nous réconcilier. Que dois-je faire, d'après vous ?}{}{}{}{}
+{105}{Eh bien. Tout d'abord, pourquoi ne me laissez-vous pas lui ramener ce coffre ?}{}{5}{}{108}{}
+{106}{Moi penser que si vous rendre coffre, lui plus colère contre vous.}{}{-4}{}{108}{}
+{107}{E:}{}{1}{}{0}{}
+{108}{Gratuitement ?}{Gratuitement ?}{}{}{}{}
+{109}{En signe de bonne volonté. Vous ne voudriez pas le perdre...}{}{5}{ch 15}{146}{re +5}
+{110}{En signe de bonne volonté. Vous ne voudriez pas le perdre...}{}{5}{ch -14}{114}{re -5}
+{111}{Ca bon pour votre image. Vous pas vouloir lui pas revenir ?}{}{-4}{ch 15}{146}{re +5}
+{112}{Ca bon pour votre image. Vous pas vouloir lui pas revenir ?}{}{-4}{ch -14}{114}{re -5}
+{113}{E:}{}{1}{}{0}{}
+{114}{Je ne vois pas pourquoi je laisserais partir toutes ces heures de travail en fumée ! Je me fiche de perdre sa clientèle !}{Je ne vois pas pourquoi je laisserais partir toutes ces heures de travail en fumée ! Je me fiche de perdre sa clientèle !}{}{}{}{}
+{115}{Je comprends. Pourquoi ne pas lui faire payer 50 pièces, comme prévu ?}{}{5}{ch 11}{134}{}
+{116}{Je comprends. Pourquoi ne pas lui faire payer 50 pièces, comme prévu ?}{}{5}{ch 7, ch -10}{122}{re -5}
+{117}{Je comprends. Pourquoi ne pas lui faire payer 50 pièces, comme prévu ?}{}{5}{ch -6}{138}{re -10}
+{118}{Accord. Pourquoi vous pas demander 50 pièces, comme vous dire ?}{}{-4}{ch 11}{134}{}
+{119}{Accord. Pourquoi vous pas demander 50 pièces, comme vous dire ?}{}{-4}{ch 7, ch -10}{122}{re -5}
+{120}{Accord. Pourquoi vous pas demander 50 pièces, comme vous dire ?}{}{-4}{ch -6}{138}{re -10}
+{121}{E:}{}{1}{}{0}{}
+{122}{Hors de question. J'ai passé trop de temps sur ce coffre-fort. J'ai même refusé de réparer la charette de Monsieur Werther afin de pouvoir finir le travail. Pour sûr, je n'aimerais pas perdre un client comme lui. Et si je baissais le prix à 80 pièces ?}{Hors de question. J'ai passé trop de temps sur ce coffre-fort. J'ai même refusé de réparer la charette de Monsieur Werther afin de pouvoir finir le travail. Pour sûr, je n'aimerais pas perdre un client comme lui. Et si je baissais le prix à 80 pièces ?}{}{}{}{lf5 1}
+{123}{C'est plus raisonnable. Voilà l'argent. Je lui ramènerai le coffre-fort.}{}{5}{$$80}{154}{$$ -80}
+{124}{C'est encore beaucoup trop ! A mon avis, il n'acceptera pas !}{}{5}{}{128}{}
+{125}{Ca meilleur prix. Tenez. Moi avoir argent. Moi ramener coffre à lui.}{}{-4}{$$80}{154}{$$ -80}
+{126}{Ca trop ! Lui pas payer ça !}{}{-4}{}{128}{}
+{127}{E:}{}{1}{}{0}{}
+{128}{Alors, je crois que j'ai gagné un coffre-fort ancien ! Au revoir !}{Alors, je crois que j'ai gagné un coffre-fort ancien ! Au revoir !}{}{}{}{}
+{129}{Attendez ! 80 pièces feront l'affaire. Tenez. Prenez l'argent et je lui ramènerai le coffre.}{}{5}{$$80}{154}{$$ -80}
+{130}{Donnez-moi ce coffre, Clément !}{}{5}{}{138}{}
+{131}{Vous attendre ! Moi donner 80 pièces. Voilà. Moi ramener coffre à lui.}{}{-4}{$$80}{154}{$$ -80}
+{132}{Vous donner coffre à moi, Clément !}{}{-4}{}{138}{}
+{133}{E:}{}{1}{}{0}{}
+{134}{Je crois que je pourrais le rendre pour cette somme. Mais j'ai laissé passer un travail pour pouvoir terminer... Je n'aimerais pas perdre quand même tout cet argent. Cela dit, je dois avouer que ce serait pire de perdre un bon client comme Monsieur Hallaway. D'accord. Je le lui rendrai si je reçois les 50 pièces dont nous étions convenus.}{Je crois que je pourrais le rendre pour cette somme. Mais j'ai laissé passer un travail pour pouvoir terminer... Je n'aimerais pas perdre quand même tout cet argent. Cela dit, je dois avouer que ce serait pire de perdre un bon client comme Monsieur Hallaway. D'accord. Je le lui rendrai si je reçois les 50 pièces dont nous étions convenus.}{}{}{}{lf4 1}
+{135}{Il sera content. Tenez. J'ai l'argent. Je lui ramènerai le coffre-fort.}{}{5}{$$50}{154}{$$ -50}
+{136}{Lui content. Moi avoir argent. Moi ramener coffre à lui.}{}{-4}{$$50}{154}{$$ -50}
+{137}{E:}{}{1}{}{0}{}
+{138}{Ha ! Je ne crois pas. Dites à ce radin que s'il veut récupérer son coffre, il n'a qu'à me payer 137 pièces... plus les intérêts ! Dites-lui bien ça !}{Ha ! Je ne crois pas. Dites à ce radin que s'il veut récupérer son coffre, il n'a qu'à me payer 137 pièces... plus les intérêts ! Dites-lui bien ça !}{}{}{}{lf6 1, lf5 0, lf4 0}
+{139}{Je vous aurais prévenu... Faites vos prières !}{}{5}{}{}{co, fl 45}
+{140}{Tenez ! Je vais payer. C'est ridicule ! Voilà vos 140 pièces ! [Vous le payez.]}{}{5}{$$140}{171}{$$-140}
+{141}{[sur un ton menaçant] Je crois que vous feriez mieux de lui rendre le coffre... tout de suite.}{}{5}{na -50}{177}{re -5}
+{142}{[sur un ton menaçant] Je crois que vous feriez mieux de lui rendre le coffre... tout de suite.}{}{5}{na 49}{165}{re -5}
+{143}{Assez ! Moi tuer vous et prendre coffre ! Clément stupide...}{}{-4}{}{}{co, fl 45}
+{144}{Tenez ! Vous prendre sous. Moi donner lui. V'là 140 ! [Vous le payez.]}{}{-4}{$$140}{171}{$$-140}
+{145}{F:}{}{1}{}{0}{}
+{146}{Pensez-vous réellement que cela arrangerait les choses ?}{Pensez-vous réellement que cela arrangerait les choses ?}{}{}{}{}
+{147}{Je le pense, en effet. Donnez-moi le coffre. Je le lui ramènerai en lui transmettant vos salutations.}{}{5}{}{151}{}
+{148}{Et comment ! Laissez-moi le lui amener, en gage de votre amitié.}{}{5}{}{151}{}
+{149}{Ouais. Vous donner coffre. Moi ramener à lui. Cadeau de vous.}{}{-4}{}{151}{}
+{150}{E:}{}{1}{}{0}{}
+{151}{D'accord. Prenez le coffre et rendez-le à Monsieur Hallaway. Transmettez-lui toutes mes excuses pour ce malentendu. Le coffre se trouve dans la malle, à côté de la porte de ma chambre. Voici la clé. Merci, @pcname@. Votre aide m'aura été précieuse.}{D'accord. Prenez le coffre et rendez-le à Monsieur Hallaway. Transmettez-lui toutes mes excuses pour ce malentendu. Le coffre se trouve dans la malle, à côté de la porte de ma chambre. Voici la clé. Merci, @pcname@. Votre aide m'aura été précieuse.}{}{}{}{qu1083 3, gf 2325 1, in-4420}
+{152}{Il sera ravi. Vous ne regretterez pas votre geste.}{}{5}{}{0}{}
+{153}{Lui content. Marsi.}{}{-4}{}{0}{}
+{154}{D'accord. Prenez le coffre et rendez-le à Monsieur Hallaway. Dites-lui que je m'excuse pour ce malentendu et que j'espère pouvoir faire affaire avec lui à nouveau. Il se trouve dans la malle, à côté de la porte de ma chambre. Voici la clé.}{D'accord. Prenez le coffre et rendez-le à Monsieur Hallaway. Dites-lui que je m'excuse pour ce malentendu et que j'espère pouvoir faire affaire avec lui à nouveau. Il se trouve dans la malle, à côté de la porte de ma chambre. Voici la clé.}{}{}{}{qu1083 3, gf 2325 1, in-4420}
+{155}{Je le lui rendrai. Merci.}{}{5}{}{0}{}
+{156}{Marsi. Moi ramener à lui.}{}{-4}{}{0}{}
+{157}{Je n'ai que faire de sa clientèle. S'il ne paye pas... il n'aura pas son coffre !}{Je n'ai que faire de sa clientèle. S'il ne paye pas, il n'aura pas son coffre !}{}{}{}{}
+{158}{Allons... Soyez raisonnable... Pourquoi ne pas baisser un petit peu le prix ?}{}{5}{}{138}{}
+{159}{[sur un ton menaçant] Je crois que vous feriez mieux de lui rendre le coffre... tout de suite.}{}{5}{na -50}{177}{re -5}
+{160}{[sur un ton menaçant] Je crois que vous feriez mieux de lui rendre le coffre... tout de suite.}{}{5}{na 49}{165}{re -5}
+{161}{Siou plaît... Vous raisonnable... Vous baisser un petit peu le prix...}{}{-4}{}{138}{}
+{162}{[sur un ton menaçant] Moi dire que vous rendre le coffre... maintenant.}{}{-4}{na -50}{177}{re -5}
+{163}{[sur un ton menaçant] Moi dire que vous rendre le coffre... maintenant.}{}{-4}{na 49}{165}{re -5}
+{164}{E:}{}{1}{}{0}{}
+{165}{Qu'il paye la somme totale... Un point c'est tout !}{Qu'il paye la somme totale... Un point c'est tout !}{}{}{}{}
+{166}{Bien ! Vous l'aurez voulu ! Aux grands maux les grands remèdes...}{}{5}{}{}{co, fl 45}
+{167}{Assez ! Moi juste vous tuer et le prendre !}{}{-4}{}{}{co, fl 45}
+{168}{Bien ! Voilà 150 pièces. Cela devrait faire l'affaire. Donnez-moi le coffre !}{}{5}{$$150}{171}{$$ -150}
+{169}{Accord ! Voici 150 pièces. Ca assez ! Vous donner le coffre et moi le rendre !}{}{-4}{$$150}{171}{$$ -150}
+{170}{F:}{}{1}{}{0}{}
+{171}{Eh bien voilà ! Un petit plus pour le dérangement ? Allez-y, rapportez son coffre-fort à Monsieur Hallaway. Il se trouve dans la malle, à côté de la porte de ma chambre. Voici la clé. Dites-lui que la prochaine fois, il ferait mieux de ne pas envoyer un larbin régler ses dettes !}{Eh bien voilà ! Un petit plus pour le dérangement ? Allez-y, rapportez son coffre-fort à Monsieur Hallaway. Il se trouve dans la malle, à côté de la porte de ma chambre. Voici la clé. Dites-lui que la prochaine fois, il ferait mieux de ne pas envoyer une servante régler ses dettes !}{}{}{}{qu1083 3, gf 2325 1, in-4420}
+{172}{Au revoir !}{}{5}{}{0}{}
+{173}{Moi prendre le coffre et puis partir !}{}{-4}{}{0}{}
+{174}{C'en est trop ! J'en ai assez de vos insultes...}{}{5}{}{}{co, fl 45}
+{175}{Assez ! Vous trop méchant !}{}{-4}{}{}{co, fl 45}
+{176}{E:}{}{1}{}{0}{}
+{177}{Etes-vous en train de me menacer ?!?}{Etes-vous en train de me menacer ?!?}{}{}{}{}
+{178}{[menaçant] Ai-je l'air de plaisanter... }{}{5}{}{184}{re -10}
+{179}{[menaçant] Ah, vous êtes perspicace. Maintenant, donnez-moi ce coffre !}{}{5}{}{184}{re -10}
+{180}{Je croyais simplement que c'était un de vos bons clients. On dirait que ce n'est pas le cas.}{}{5}{}{94}{}
+{181}{Moi penser que lui bon client à vous. Pas le cas, apparemment.}{}{-4}{}{94}{}
+{182}{[menaçant] Ouais, ça être ce que moi faire...}{}{-4}{}{184}{re -10}
+{183}{E:}{}{1}{}{184}{}
+{184}{[soucieux] Ecoutez. Je ne veux pas d'histoires. La dernière des choses dont j'ai besoin, c'est bien d'avoir les gardes sur le dos... Mais je ne peux simplement pas vous donner le coffre pour rien... Cela m'a coûté de l'argent de le réparer... J'ai refusé un autre travail pour finir les réparations... On ne peut pas laisser les riches nous contrôler de la sorte... Nous ne pouvons pas nous laisser faire !}{[soucieux] Ecoutez. Je ne veux pas d'histoires. La dernière des choses dont j'ai besoin, c'est bien d'avoir les gardes sur le dos... Mais je ne peux simplement pas vous donner le coffre pour rien... Cela m'a coûté de l'argent de le réparer... J'ai refusé un autre travail pour finir les réparations... On ne peut pas laisser les riches nous contrôler de la sorte... Nous ne pouvons pas nous laisser faire !}{}{}{}{}
+{185}{Si vous ne me donnez pas le coffre, vous allez le regretter.}{}{5}{}{190}{re -5}
+{186}{Je n'ai que faire de vos petits tracas. Donnez-moi le coffre !}{}{5}{}{190}{re -5}
+{187}{Vous donner ce coffre à moi ou vous avoir des problèmes...}{}{-4}{}{190}{re -5}
+{188}{Problèmes à vous pas intéresser moi ! Vous donner ce coffre à moi !}{}{-4}{}{190}{re -5}
+{189}{E:}{}{1}{}{0}{}
+{190}{Bien ! Prenez-le ! Il se trouve dans la malle, à côté de la porte de ma chambre. Voici la clé. Prenez-le et allez-vous-en !}{Très bien ! Prenez-le ! Il se trouve dans la malle, à côté de la porte de ma chambre. Voici la clé. Prenez-le et allez-vous-en !}{}{}{}{qu1083 3, gf 2325 1, in-4420}
+{191}{Eh bien voilà. Ce fut un plaisir de collaborer avec vous, Clément.}{}{5}{}{0}{}
+{192}{Ca bien. Ar'voir, Clément.}{}{-4}{}{0}{}
+{193}{Oui... C'est possible. Mais l'entraînement vous coûtera 500 pièces. }{Oui... C'est possible. Mais l'entraînement vous coûtera 500 pièces. }{}{}{}{}
+{194}{Cela me semble acceptable. L'entraînement peut commencer.}{}{5}{$$500, sk14 9}{207}{}
+{195}{Bien. Allons-y.}{}{5}{$$500, sk14 9}{207}{}
+{196}{Cela me semble acceptable. L'entraînement peut commencer.}{}{5}{$$500, sk14 -8}{203}{}
+{197}{Bien. Allons-y.}{}{5}{$$500, sk14 -8}{203}{}
+{198}{Je reviendrai un peu plus tard avec plus d'argent. Au revoir.}{}{5}{$$-499}{0}{}
+{199}{Euh... Accord. Moi vouloir commencer.}{}{-4}{$$500, sk14 9}{207}{}
+{200}{Euh... Accord. Moi vouloir commencer.}{}{-4}{$$500, sk14 -8}{203}{}
+{201}{Euh... Moi aller chercher plus d'argent. Moi revenir.}{}{-4}{$$-499}{0}{}
+{202}{F:}{}{1}{}{0}{}
+{203}{Attendez un peu... [Il vous regarde attentivement] Vous avez apparemment des dons de serrurier, mais je ne crois pas que vous puissiez encore prétendre au titre d'expert. Allez donc améliorer votre compétence, ensuite nous pourrons discuter.}{Attendez un peu... [Il vous regarde attentivement] Vous avez apparemment des dons de serrurier, mais je ne crois pas que vous puissiez encore prétendre au titre d'expert. Allez donc améliorer votre compétence, ensuite nous pourrons discuter.}{}{}{}{}
+{204}{D'accord. Je serai de retour très vite.}{}{5}{}{0}{}
+{205}{Accord. Moi revenir.}{}{-4}{}{0}{}
+{206}{F:}{}{1}{}{0}{}
+{207}{Merci. [Il prend l'argent.] Laissez-moi vous montrer quelques astuces [Il se met à vous enseigner les divers procédés de serrurerie en détail.] ... Voilà, @pcname@. Vous êtes à présent expert serrurier. Merci pour l'argent.}{Merci. [Il prend l'argent.] Laissez-moi vous montrer quelques astuces [Il se met à vous enseigner les divers procédés de serrurerie en détail.] ... Voilà, @pcname@. Vous êtes à présent experte en serrurerie. Merci pour l'argent.}{}{}{}{tr14 2, $$-500, rq2183}
+{208}{Merci. Dites-moi, où puis-je trouver le maître serrurier ?}{}{5}{}{210}{}
+{209}{Marsi. Où être maître serrurier ?}{}{-4}{}{210}{}
+{210}{Hé ! [l'air amusé] Justement, je sais très bien où il se trouve celui-là ! Théo Morgan est votre homme. Il est très facile à trouver, il purge une peine de prison à vie à la prison de Caladon. Bonne chance si vous voulez devenir maître serrurier !}{Hé ! [l'air amusé] Justement, je sais très bien où il se trouve celui-là ! Théo Morgan est votre homme. Il est très facile à trouver, il purge une peine de prison à vie à la prison de Caladon. Bonne chance si vous voulez devenir maître serrurier !}{}{}{}{ru2173}
+{211}{Eh bien... Cela pourrait poser quelques problèmes. Merci quand même. Au revoir.}{}{5}{}{0}{}
+{212}{Il semble que j'en aurai besoin ! Merci pour l'entraînement. Au revoir.}{}{5}{}{0}{}
+{213}{Oh ! Ca pas bien.  Euh... Marsi pour entraînement. Ar'voir.}{}{-4}{}{0}{}
+{214}{Euh !... Moi avoir besoin chance peut-être ! Marsi pour entraînement. Moi partir maintenant. Ar'voir.}{}{-4}{}{0}{}
+{215}{E:}{}{1}{}{0}{}
+{216}{Oui... C'est possible. Mais l'entraînement vous coûtera 500 pièces. }{Oui... C'est possible. Mais l'entraînement vous coûtera 500 pièces. }{}{}{}{}
+{217}{Cela me semble acceptable. L'entraînement peut commencer.}{}{5}{$$500, sk12 9}{230}{}
+{218}{Bien. Allons-y.}{}{5}{$$500, sk12 9}{230}{}
+{219}{Cela me semble acceptable. L'entraînement peut commencer.}{}{5}{$$500, sk12 -8}{226}{}
+{220}{Bien. Allons-y.}{}{5}{$$500, sk12 -8}{226}{}
+{221}{Je reviendrai un peu plus tard avec plus d'argent. Au revoir.}{}{5}{$$-499}{0}{}
+{222}{Euh... Accord. Moi vouloir commencer.}{}{-4}{$$500, sk12 9}{230}{}
+{223}{Euh... Accord. Moi vouloir commencer.}{}{-4}{$$500, sk12 -8}{226}{}
+{224}{Euh... Moi aller chercher plus d'argent. Moi revenir.}{}{-4}{$$-499}{0}{}
+{225}{F:}{}{1}{}{0}{}
+{226}{[Après avoir travaillé un moment avec vous, il s'arrête.] Attendez... Vous semblez avoir des dons en réparation, mais je ne pense pas que vous soyez prêt à devenir expert. Allez donc améliorer votre compétence, ensuite nous pourrons discuter.}{[Après avoir travaillé un moment avec vous, il s'arrête.] Attendez... Vous semblez avoir des dons en réparation, mais je ne pense pas que vous soyez prête à atteindre le grade d'expert. Allez donc améliorer votre compétence, ensuite nous pourrons discuter.}{}{}{}{}
+{227}{D'accord. Je serai de retour très vite.}{}{5}{}{0}{}
+{228}{Accord. Moi revenir.}{}{-4}{}{0}{}
+{229}{F:}{}{1}{}{0}{}
+{230}{Merci. [Il prend l'argent.] Laissez-moi vous montrer quelques astuces  [Il se met à vous enseigner les divers procédés de réparation en détail.]. Voilà, @pcname@. Vous êtes à présent expert en réparation. Merci pour l'argent.}{Merci. [Il prend l'argent.] Laissez-moi vous montrer quelques astuces  [Il se met à vous enseigner les divers procédés de réparation en détail.]. Voilà, @pcname@. Vous avez atteint le grade d'expert en réparation. Merci pour l'argent.}{}{}{}{tr12 2, $$-500}
+{231}{Merci. Dites-moi, où puis-je trouver le maître en réparation ?}{}{5}{}{233}{}
+{232}{Marsi. Où être maître repas ration ?}{}{-4}{}{233}{}
+{233}{Vous devez chercher Jérôme Maxime. Il est propriétaire d'une grande usine à Caladon. Elle vaut le coup d'oeil.}{Vous devez chercher Jérôme Maxime. Il est propriétaire d'une grande usine à Caladon. Elle vaut le coup d'oeil.}{}{}{}{ru2171}
+{234}{J'espère la voir bientôt. Au revoir et merci.}{}{5}{}{0}{}
+{235}{Oh ! Moi vouloir voir ça ! Marsi. Ar'voir.}{}{-4}{}{0}{}
+{236}{E:}{}{1}{}{0}{}
+

@@ -1,0 +1,105 @@
+{1}{Veuillez patienter pendant que je vérifie vos réservations.}{Veuillez patienter pendant que je vérifie vos réservations.}{}{}{}{lf 10 0, lf 11 0, lf 12 0, lf 13 0 , lf 14 0}
+{2}{[vous lui coupez la parole] Voyez-vous beaucoup de personnes étranges passer ici ?}{}{12}{lf 2 0}{38}{}
+{3}{Oui.}{}{5}{}{-12}{}
+{4}{Dac-cord.}{}{-4}{}{-12}{}
+{5}{E:}{}{1}{}{-1}{}
+{6}{}{}{}{}{}{}
+{7}{}{}{}{}{}{}
+{8}{}{}{}{}{}{}
+{9}{Hé hé... Nous verrons bien cela ! En quoi puis-je vous être utile ?}{Hé hé... Nous verrons bien cela ! En quoi puis-je vous être utile ?}{}{}{}{}
+{10}{Je souhaiterais monter dans le train.}{}{5}{}{-12}{}
+{11}{Moi aller tchou tchou}{}{-4}{}{-12}{}
+{12}{E:}{}{1}{}{-1}{}
+{13}{Vous êtes dans la bonne voiture. Vous pouvez monter dans le train, mais restez dans le fourgon.}{Vous êtes dans la bonne voiture. Vous pouvez monter dans le train, mais restez dans le fourgon.}{}{}{}{}
+{14}{[Vous montez dans le train]}{}{1}{}{-10}{gf2328 0, gv 1038 0}
+{15}{Vous pouvez monter dans le train.}{Vous pouvez monter dans le train.}{}{}{}{}
+{16}{[Vous montez dans le train]}{}{1}{}{-10}{gf2328 0, gv 1038 0}
+{17}{}{}{}{}{}{}
+{18}{}{}{}{}{}{}
+{19}{}{}{}{}{}{}
+{20}{[Il vérifie vos réservations.] Oui tout est en ordre. }{[Il vérifie vos réservations.] Oui tout est en ordre. }{}{}{}{}
+{21}{Pouvons-nous monter alors ?}{}{5}{}{-16}{}
+{22}{Moi aller tchou tchou maintenant ?}{}{-4}{}{-16}{}
+{23}{Vous arrive-t-il d'accueillir des clients " spéciaux " en queue de train ?}{}{5}{lf2 0}{38}{}
+{24}{E:}{}{1}{}{-1}{}
+{25}{[Il semble remarquer une erreur] Il semble n'y avoir aucune trace de votre réservation. Pouvez-vous attester de façon certaine que vous avez effectué une réservation ? Allez démêler tout cela au guichet. Je n'ai pas le temps pour ce genre de tracasseries !}{[Il semble remarquer une erreur] Il semble n'y avoir aucune trace de votre réservation. Pouvez-vous attester de façon certaine que vous avez effectué une réservation ? Allez démêler tout cela au guichet. Je n'ai pas le temps pour ce genre de tracasseries !}{}{}{}{}
+{26}{E:}{}{1}{}{-1}{}
+{27}{}{}{}{}{}{}
+{28}{}{}{}{}{}{}
+{29}{[Il semble remarquer une erreur] Vous semblez être en plus grand nombre que ne l'indique votre réservation. Je vous suggère d'aller régler cela au guichet principal. Faites-vous rembourser, puis achetez un nouveau billet.}{[Il semble remarquer une erreur] Vous semblez être en plus grand nombre que ne l'indique votre réservation. Je vous suggère d'aller régler cela au guichet principal. Faites-vous rembourser, puis achetez un nouveau billet.}{}{}{}{}
+{30}{Euh veuillez m'excuser, je ne sais comment cela a pu se faire.}{}{5}{}{-1}{}
+{31}{Le personnel responsable des réservations a dû faire une erreur.}{}{5}{}{-1}{}
+{32}{Je vais de ce pas régler le problème et je reviens aussitôt.}{}{5}{}{-1}{}
+{33}{Moi pas savoir quoi se passer moi revenir}{}{-4}{}{-1}{}
+{34}{Moi partir maintenant.}{}{-4}{}{-1}{}
+{35}{}{}{}{}{}{}
+{36}{}{}{}{}{}{}
+{37}{}{}{}{}{}{}
+{38}{Hé hé... Vous avez raison. Beaucoup de gens bizarres essaient de monter dans ce train. C'est à moi qu'il revient de décider qui peut monter en toute sécurité. Ma petite montre que voici m'indique qui est adepte de la sorcellerie et qui ne l'est pas. Elle se détraque à proximité de forces magiques.}{Hé hé... Vous avez raison. Beaucoup de gens bizarres essaient de monter dans ce train. C'est à moi qu'il revient de décider qui peut monter en toute sécurité. Ma petite montre que voici m'indique qui est adepte de la sorcellerie et qui ne l'est pas. Elle se détraque à proximité de forces magiques.}{}{}{}{lf2 1}
+{39}{Eh bien, j'espère que vous m'autoriserez à monter dans le train.}{}{5}{}{9}{}
+{40}{Euh... Et qu'indique donc votre montre à mon égard ?}{}{5}{ma 50}{-12}{}
+{41}{Je souhaiterais monter dans le train.}{}{5}{}{-12}{}
+{42}{E:}{}{1}{}{-1}{}
+{43}{}{}{}{}{}{}
+{44}{}{}{}{}{}{}
+{45}{Le train va partir. Hâtez-vous d'embarquer. Je vous souhaite de vivre une agréable expérience à son bord.}{Le train va partir. Hâtez-vous d'embarquer. Je vous souhaite de vivre une agréable expérience à son bord.}{}{}{}{}
+{46}{[Il regarde sa montre à gousset] Je détecte dans votre groupe une forte présence magique. Ne savez-vous pas, pauvres simples d'esprit, ce qui pourrait arriver si vous approchiez d'un moteur à vapeur de la puissance de cette locomotive. Allez donc parler au contrôleur du wagon des mages ! Partez d'ici !}{[Il regarde sa montre à gousset] Je détecte dans votre groupe une forte présence magique. Ne savez-vous pas, pauvres simples d'esprit, ce qui pourrait arriver si vous approchiez d'un moteur à vapeur de la puissance de cette locomotive. Allez donc parler au contrôleur du wagon des mages ! Partez d'ici !}{}{}{}{}
+{47}{Mes capacités sont trop faibles pour risquer d'interférer avec la mécanique.}{}{5}{ma-40, ps 8}{54}{}
+{48}{Mes capacités sont trop faibles pour risquer d'interférer avec la mécanique.}{}{5}{ma41}{58}{re -5}
+{49}{Je lui parlerai. Merci.}{}{5}{}{-1}{}
+{50}{Moi monter, moi dire c'est bon, moi savoir, moi faire.}{}{-4}{ma-40, ps 8}{54}{}
+{51}{Moi monter, moi dire c'est bon, moi savoir, moi faire.}{}{-4}{ma41}{58}{re -5}
+{52}{Moi partir. Moi faire ce que vous dire.}{}{-4}{}{-1}{}
+{53}{E:}{}{1}{}{-1}{}
+{54}{[Il vous jauge scrupuleusement] Hmm... Oui. Vous devez avoir raison. Je vous autorise à prendre ce train.}{[Il vous jauge scrupuleusement] Hmm... Oui. Vous devez avoir raison. Je vous autorise à prendre ce train.}{}{}{}{}
+{55}{[Vous montez dans le train]}{}{5}{}{-10}{gf2328 0, gv 1038 0}
+{56}{[Vous montez dans le train]}{}{-4}{}{-10}{gf2328 0, gv 1038 0}
+{57}{E:}{}{1}{}{-1}{}
+{58}{Non monsieur ! Je ne mettrai pas de vie en danger pour vous faire plaisir. Partez d'ici, ou j'appelle les gardes ! Allez au bureau desréservations, vous obtiendrez peut-être un remboursement.}{Non madame ! Je ne mettrai pas de vie en danger pour vous faire plaisir. Partez d'ici, ou j'appelle les gardes ! Allez au bureau desréservations, vous obtiendrez peut-être un remboursement.}{}{}{}{}
+{59}{E:}{}{1}{}{-1}{}
+{60}{Merci d'avoir choisi le train. Nous vous souhaitons un agréable séjour à Tarante.}{Merci d'avoir choisi le train. Nous vous souhaitons un agréable séjour à Tarante.}{}{}{}{}
+{61}{Merci d'avoir choisi le train. Nous vous souhaitons un agréable séjour à Cendrebourg.}{Merci d'avoir choisi le train. Nous vous souhaitons un agréable séjour à Cendrebourg.}{}{}{}{}
+{62}{[Il regarde nerveusement sa montre] Monsieur, la force magique que je détecte est si grande que je ne peux décemment pas vous autoriser à monter dans le train ! C'est tout simplement trop risqué ! Je suis désolé, mais vous allez devoir vous faire rembourser et quitter cette gare sur-le-champ !}{[il regarde sa montre] Madame, la force magique que je détecte est si grande que je ne peux décemment pas vous autoriser à monter dans le train ! C'est tout simplement trop risqué ! Je suis désolé, mais vous allez devoir vous faire rembourser et quitter cette gare sur-le-champ !}{}{}{}{}
+{63}{Pouvez-vous faire une exception ? J'ai vraiment besoin d'aller à Cendrebourg.}{}{5}{ps 18}{54}{}
+{64}{Pouvez-vous faire une exception ? J'ai vraiment besoin d'aller à Cendrebourg.}{}{5}{ps -14}{58}{}
+{65}{Je vais me faire rembourser.}{}{5}{}{-1}{}
+{66}{Moi partir maintenant.}{}{-4}{}{-1}{}
+{67}{}{}{}{}{}{}
+{68}{}{}{}{}{}{}
+{69}{[Il semble remarquer une erreur] Vous semblez être en plus grand nombre que ne l'indique votre réservation. Je vous suggère d'aller régler cela au guichet principal. Faites-vous rembourser, puis achetez un nouveau billet.}{[Il semble remarquer une erreur] Vous semblez être en plus grand nombre que ne l'indique votre réservation. Je vous suggère d'aller régler cela au guichet principal. Faites-vous rembourser, puis achetez un nouveau billet.}{}{}{}{}
+{70}{I:}{}{5}{}{-1}{}
+{71}{E:}{}{5}{}{-1}{}
+{72}{I:}{}{-4}{}{-1}{}
+{73}{E:}{}{-4}{}{-1}{}
+{74}{Grands dieux, nous n'acceptons pas les morts-vivants dans le train ! Sortez-moi ça d'ici !}{Grands dieux, nous n'acceptons pas les morts-vivants dans le train ! Sortez-moi ça d'ici !}{}{}{}{}
+{75}{E:}{}{5}{}{-1}{}
+{76}{E:}{}{-4}{}{-1}{}
+{77}{}{}{}{}{}{}
+{78}{}{}{}{}{}{}
+{79}{}{}{}{}{}{}
+{80}{Je m'excuse, mais aucun animal n'est admis à bord.}{Je m'excuse, mais aucun animal n'est admis à bord.}{}{}{}{}
+{81}{E:}{}{5}{}{-1}{}
+{82}{E:}{}{-4}{}{-1}{}
+{83}{}{}{}{}{}{}
+{84}{}{}{}{}{}{}
+{85}{}{}{}{}{}{}
+{86}{[Il étudie sa montre.] Je détecte une présence magique dans votre groupe.}{[Il étudie sa montre.] Je détecte une présence magique dans votre groupe.}{}{}{}{}
+{87}{Eh bien... Me voici dans le wagon des mages. Puis-je monter dans le train ?}{}{5}{}{13}{}
+{88}{Moi dans bonne voiture moi partir tchou tchou}{}{-4}{}{13}{}
+{89}{E:}{}{1}{}{-1}{}
+{90}{[Il étudie sa montre.] Je détecte une présence magique dans votre groupe.}{[Il étudie sa montre.] Je détecte une présence magique dans votre groupe.}{}{}{}{}
+{91}{Eh bien... Me voici dans le wagon des mages. Puis-je monter dans le train ?}{}{5}{}{95}{}
+{92}{Moi dans bonne voiture moi partir tchou tchou}{}{-4}{}{95}{}
+{93}{E:}{}{1}{}{-1}{}
+{94}{}{}{}{}{}{}
+{95}{Vous êtes dans la bonne voiture. Vous pouvez monter dans le train, mais restez dans le fourgon. Interdiction absolue d'avancer dans les voitures de tête. Nous allons partir. En voiture !}{Vous êtes dans la bonne voiture. Vous pouvez monter dans le train, mais restez dans le fourgon. Interdiction absolue d'avancer dans les voitures de tête. Nous allons partir. En voiture !}{}{}{}{}
+{96}{[Vous montez dans le train]}{}{5}{}{-10}{gf2328 0, gv 1038 0}
+{97}{[Vous montez dans le train]}{}{-4}{}{-10}{gf2328 0, gv 1038 0}
+{98}{E:}{}{1}{}{-1}{}
+{99}{}{}{}{}{}{}
+{100}{[Il étudie sa montre.] Je détecte une présence magique dans votre groupe.}{[Il étudie sa montre.] Je détecte une présence magique dans votre groupe.}{}{}{}{}
+{101}{Eh bien... Me voici dans le wagon des mages. Puis-je monter dans le train ?}{}{5}{}{62}{}
+{102}{Moi dans bonne voiture moi partir tchou tchou}{}{-4}{}{62}{}
+{103}{E:}{}{1}{}{-1}{}
+{104}{}{}{}{}{}{}
+

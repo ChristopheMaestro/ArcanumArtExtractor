@@ -1,0 +1,713 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Bonjour, je souhaiterais louer une place sur votre bateau.}{}{5}{lf6 0, lf15 0}{27}{}
+{3}{Je dois me rendre sur l'Ile du Désespoir.}{}{5}{lf8 0, ss 5, ss -6}{542}{gv 1036 7}
+{4}{Pouvez-vous m'amener sur l'Ile du Désespoir ?}{}{5}{lf8 1, ss 5, ss -6}{654}{gv 1036 7}
+{5}{Je souhaite me rendre sur Thanatos.}{}{5}{lf3 0, ss 17, ss -17, gf2037 1}{527}{}
+{6}{Puis-je faire la traversée jusqu'à Thanatos ?}{}{5}{lf3 1, ss 17, ss -17, gf2037 1}{538}{}
+{7}{J'ai besoin que l'on m'amène à Caladon.}{}{5}{lf4 0, ss 12, ss -12}{44}{gv 1036 4, ss13}
+{8}{J'ai besoin que l'on m'amène à Caladon.}{}{5}{lf4 0, ss 13}{44}{gv 1036 4}
+{9}{Tarante est vraiment une ville sensationnelle !}{}{5}{lf21 1}{559}{}
+{10}{Que pouvez-vous me dire au sujet de Cendrebourg ?}{}{5}{lf8 1}{578}{}
+{11}{Les chantiers navals de Racine Noire sont très impressionnants.}{}{5}{lf3 1}{588}{}
+{12}{Quelles visites me conseillez-vous de faire ici, à Caladon ?}{}{5}{lf4 1}{595}{}
+{13}{Je recherche un bateau pour me rendre sur l'Ile des demi-ogres.}{}{5}{lf 6 0, qa1143 2}{44}{gv 1036 6}
+{14}{Je souhaite retourner à Caladon, je vous prie.}{}{5}{lf6 1}{705}{}
+{15}{Je souhaite retourner à Cendrebourg, je vous prie.}{}{5}{lf15 1}{705}{}
+{16}{Oh ! Tarante marrant !}{}{-4}{lf21 1}{559}{}
+{17}{Quoi vous savoir sur Cendeubour ?}{}{-4}{lf8 1}{578}{}
+{18}{Racine Noire avoir bonnes fabriques pour bateaux.}{}{-4}{lf3 1}{588}{}
+{19}{Quoi avoir bien à Caladon ?}{}{-4}{lf4 1}{595}{}
+{20}{Moi vouloir aller Tanatos.}{}{-4}{lf3 0, ss 17, ss -17, gf2037 1}{527}{}
+{21}{Moi vouloir aller Tanatos.}{}{-4}{lf3 1, ss 17, ss -17, gf2037 1}{538}{}
+{22}{Moi aller avec vous sur bateau ?}{}{-4}{lf6 0, lf15 0}{608}{}
+{23}{Moi revenir Caladon maint'nant ?}{}{-4}{lf6 1}{705}{}
+{24}{Moi revenir Cendeubour maint'nant ?}{}{-4}{lf15 1}{705}{}
+{25}{Moi revenir Tarante maint'nant ?}{}{-4}{lf21 0, lf4 1}{711}{}
+{26}{E:}{}{1}{}{0}{}
+{27}{Où est-c'que vous voulez aller ?}{Où est-c'que vous voulez aller ?}{}{}{}{}
+{28}{Je ne sais pas ! Où pourrais-je bien aller ?}{}{5}{ss -1}{0}{fl 516}
+{29}{Je souhaiterais me rendre à Tarante.}{}{5}{lf21 0, ss 2}{44}{gv 1036 1}
+{30}{Cendrebourg me semble la destination idéale.}{}{5}{lf8 0, lf21 0,ss 5}{44}{gv 1036 2}
+{31}{Je veux aller à Cendrebourg.}{}{5}{lf21 1,ss 5}{520}{gv 1036 2}
+{32}{Pourquoi pas Racine Noire ?}{}{5}{lf8 0, lf3 0, lf21 0, ss 3}{44}{gv 1036 3}
+{33}{A Racine Noire, je vous prie.}{}{5}{lf21 1, ss 3}{517}{gv 1036 3}
+{34}{Je souhaite me rendre à Caladon.}{}{5}{lf4 0, ss 12, ss -12}{44}{gv 1036 4, ss13}
+{35}{Je souhaite me rendre à Caladon.}{}{5}{lf4 0,  ss13}{44}{gv 1036 4}
+{36}{Pouvons-nous nous rendre sur Thanatos ?}{}{5}{lf3 0, ss 17, ss -17, gf2037 1}{527}{gv 1036 6}
+{37}{J'aimerais me rendre sur Thanatos.}{}{5}{lf3 1, ss 17, ss -17, gf2037 1}{538}{gv 1036 6}
+{38}{Moi vouloir aller Tanatos.}{}{-4}{lf3 0, ss 17, ss -17, gf2037 1}{527}{gv 1036 6}
+{39}{Moi vouloir aller Tanatos.}{}{-4}{lf3 1, ss 17, ss -17, gf2037 1}{538}{gv 1036 6}
+{40}{L'Ile du Désespoir, je vous prie.}{}{5}{lf15 0, lf8 0, ss 5, ss -6}{542}{gv 1036 7}
+{41}{Je souhaite me rendre sur l'Ile du Désespoir.}{}{5}{lf15 0, lf8 1, ss 5, ss -6}{654}{gv 1036 7}
+{42}{Je souhaite me rendre sur l'Ile des demi-ogres.}{}{5}{lf 6 0, qa1143 2}{44}{gv 1036 6}
+{43}{E:}{}{1}{}{0}{}
+{44}{La traversée coûte 100 pièces par personne.}{La traversée coûte 100 pièces par personne.}{}{}{}{}
+{45}{C'est pour une personne.}{}{1}{gv 1035 1}{81}{}
+{46}{C'est pour deux personnes.}{}{1}{gv 1035 2}{119}{}
+{47}{C'est pour trois personnes.}{}{1}{gv 1035 3}{157}{}
+{48}{C'est pour quatre personnes.}{}{1}{gv 1035 4}{195}{}
+{49}{C'est pour cinq personnes.}{}{1}{gv 1035 5}{233}{}
+{50}{C'est pour six personnes.}{}{1}{gv 1035 6}{271}{}
+{51}{C'est pour sept personnes.}{}{1}{gv 1035 7}{309}{}
+{52}{C'est pour huit personnes.}{}{1}{gv 1035 8}{347}{}
+{53}{C'est pour neuf personnes.}{}{1}{gv 1035 9}{385}{}
+{54}{C'est pour dix personnes.}{}{1}{gv 1035 10}{404}{}
+{55}{C'est pour onze personnes.}{}{1}{gv 1035 11}{423}{}
+{56}{C'est pour douze personnes.}{}{1}{gv 1035 12}{442}{}
+{57}{C'est pour treize personnes ou plus.}{}{1}{gv 1035 13}{461}{}
+{58}{C'est très cher ! N'avez-vous pas de meilleur tarif ?}{}{5}{ha 12}{485}{}
+{59}{C'est très cher ! N'avez-vous pas de meilleur tarif ?}{}{5}{ha -11}{480}{}
+{60}{Je souhaite me rendre autre part.}{}{5}{}{27}{}
+{61}{Euh... Moi pas vouloir aller là-bas. Moi aller ailleurs.}{}{-4}{}{27}{}
+{62}{Si c'est ce que vous voulez, ça fera 50 pièces.}{Si c'est ce que vous voulez, ça fera 50 pièces.}{}{}{}{}
+{63}{Je veux aller à Tarante.}{}{5}{gv 1036 1,$$ 50}{-20}{$$ -50}
+{64}{Je veux aller à Cendrebourg.}{}{5}{gv 1036 2,$$ 50}{-22}{$$ -50}
+{65}{Je veux aller à Racine Noire.}{}{5}{gv 1036 3,$$ 50}{-24}{$$ -50}
+{66}{Je veux aller à Caladon.}{}{5}{gv 1036 4,$$ 50}{-26}{$$ -50}
+{67}{Je veux aller sur l'Ile des demi-ogres.}{}{5}{gv 1036 6,$$ 50}{-30}{$$ -50}
+{68}{Je veux aller sur l'Ile du Désespoir.}{}{5}{gv 1036 7,$$ 50}{-32}{$$ -50}
+{69}{C'est bon, partons immédiatement.}{}{5}{$$ -49}{514}{}
+{70}{Je n'ai pas assez d'argent pour payer la traversée.}{}{5}{$$ -49}{644}{}
+{71}{Je reviendrai quand j'aurai tout ce qu'il faut.}{}{5}{}{0}{}
+{72}{Moi aller Tarante.}{}{-4}{gv 1036 1,$$ 50}{-20}{$$ -50}
+{73}{Moi aller Cendeubour.}{}{-4}{gv 1036 2,$$ 50}{-22}{$$ -50}
+{74}{Moi aller racine noare.}{}{-4}{gv 1036 3,$$ 50}{-24}{$$ -50}
+{75}{Moi aller caldon.}{}{-4}{gv 1036 4,$$ 50}{-26}{$$ -50}
+{76}{Moi aller Ile des d'mi-orgre.}{}{-4}{gv 1036 6,$$ 50}{-30}{$$ -50}
+{77}{Moi aller Ile du désespoar.}{}{-4}{gv 1036 7,$$ 50}{-32}{$$ -50}
+{78}{Moi vouloir partir.}{}{-4}{$$ -49}{514}{}
+{79}{Moi pas argent, moi vouloir monter sur bateau.}{}{-4}{$$ -49}{644}{}
+{80}{Moi revenir.}{}{-4}{}{0}{}
+{81}{Si c'est ce que vous voulez, ça fera 100 pièces.}{Si c'est ce que vous voulez, ça fera 100 pièces.}{}{}{}{}
+{82}{Je veux aller à Tarante.}{}{5}{gv 1036 1,$$ 100}{-20}{$$ -100}
+{83}{Je veux aller à Cendrebourg.}{}{5}{gv 1036 2,$$ 100}{-22}{$$ -100}
+{84}{Je veux aller à Racine Noire.}{}{5}{gv 1036 3,$$ 100}{-24}{$$ -100}
+{85}{Je veux aller à Caladon.}{}{5}{gv 1036 4,$$ 100}{-26}{$$ -100}
+{86}{Je veux aller sur l'Ile des demi-ogres.}{}{5}{gv 1036 6,$$ 100}{-30}{$$ -100}
+{87}{Je veux aller sur l'Ile du Désespoir.}{}{5}{gv 1036 7,$$ 100}{-32}{$$ -100}
+{88}{C'est bon, partons immédiatement.}{}{5}{$$ -99}{514}{}
+{89}{Je n'ai pas assez d'argent pour payer la traversée.}{}{5}{$$ -99}{644}{}
+{90}{Je reviendrai quand j'aurai tout ce qu'il faut.}{}{5}{}{0}{}
+{91}{Moi aller Tarante.}{}{-4}{gv 1036 1,$$ 100}{-20}{$$ -100}
+{92}{Moi aller Cendeubour.}{}{-4}{gv 1036 2,$$ 100}{-22}{$$ -100}
+{93}{Moi aller racine noare.}{}{-4}{gv 1036 3,$$ 100}{-24}{$$ -100}
+{94}{Moi aller caldon.}{}{-4}{gv 1036 4,$$ 100}{-26}{$$ -100}
+{95}{Moi aller Ile des d'mi-orgre.}{}{-4}{gv 1036 6,$$ 100}{-30}{$$ -100}
+{96}{Moi aller Ile du désespoar.}{}{-4}{gv 1036 7,$$ 100}{-32}{$$ -100}
+{97}{Moi vouloir partir.}{}{-4}{$$ -99}{514}{}
+{98}{Moi pas argent, moi vouloir monter sur bateau.}{}{-4}{$$ -99}{644}{}
+{99}{Moi revenir.}{}{-4}{}{0}{}
+{100}{Si c'est ce que vous voulez, ça vous fera 150 pièces.}{Si c'est ce que vous voulez, ça vous fera 150 pièces.}{}{}{}{}
+{101}{Je veux aller à Tarante.}{}{5}{gv 1036 1,$$ 150}{-20}{$$ -150}
+{102}{Je veux aller à Cendrebourg.}{}{5}{gv 1036 2,$$ 150}{-22}{$$ -150}
+{103}{Je veux aller à Racine Noire.}{}{5}{gv 1036 3,$$ 150}{-24}{$$ -150}
+{104}{Je veux aller à Caladon.}{}{5}{gv 1036 4,$$ 150}{-26}{$$ -150}
+{105}{Je veux aller sur l'Ile des demi-ogres.}{}{5}{gv 1036 6,$$ 150}{-30}{$$ -150}
+{106}{Je veux aller sur l'Ile du Désespoir.}{}{5}{gv 1036 7,$$ 150}{-32}{$$ -150}
+{107}{C'est bon, partons immédiatement.}{}{5}{$$ -149}{514}{}
+{108}{Je n'ai pas assez d'argent pour payer la traversée.}{}{5}{$$ -149}{644}{}
+{109}{Je reviendrai quand j'aurai tout ce qu'il faut.}{}{5}{}{0}{}
+{110}{Moi aller Tarante.}{}{-4}{gv 1036 1,$$ 150}{-20}{$$ -150}
+{111}{Moi aller Cendeubour.}{}{-4}{gv 1036 2,$$ 150}{-22}{$$ -150}
+{112}{Moi aller racine noare.}{}{-4}{gv 1036 3,$$ 150}{-24}{$$ -150}
+{113}{Moi aller caldon.}{}{-4}{gv 1036 4,$$ 150}{-26}{$$ -150}
+{114}{Moi aller Ile des d'mi-orgre.}{}{-4}{gv 1036 6,$$ 150}{-30}{$$ -150}
+{115}{Moi aller Ile du désespoar.}{}{-4}{gv 1036 7,$$ 150}{-32}{$$ -150}
+{116}{Moi vouloir partir.}{}{-4}{$$ -149}{514}{}
+{117}{Moi pas argent, moi vouloir monter sur bateau.}{}{-4}{$$ -149}{644}{}
+{118}{Moi revenir.}{}{-4}{}{0}{}
+{119}{Si c'est ce que vous voulez, ça vous fera 200 pièces.}{Si c'est ce que vous voulez, ça vous fera 200 pièces.}{}{}{}{}
+{120}{Je veux aller à Tarante.}{}{5}{gv 1036 1,$$ 200}{-20}{$$ -200}
+{121}{Je veux aller à Cendrebourg.}{}{5}{gv 1036 2,$$ 200}{-22}{$$ -200}
+{122}{Je veux aller à Racine Noire.}{}{5}{gv 1036 3,$$ 200}{-24}{$$ -200}
+{123}{Je veux aller à Caladon.}{}{5}{gv 1036 4,$$ 200}{-26}{$$ -200}
+{124}{Je veux aller sur l'Ile des demi-ogres.}{}{5}{gv 1036 6,$$ 200}{-30}{$$ -200}
+{125}{Je veux aller sur l'Ile du Désespoir.}{}{5}{gv 1036 7,$$ 200}{-32}{$$ -200}
+{126}{C'est bon, partons immédiatement.}{}{5}{$$ -199}{514}{}
+{127}{Je n'ai pas assez d'argent pour payer la traversée.}{}{5}{$$ -199}{644}{}
+{128}{Je reviendrai quand j'aurai tout ce qu'il faut.}{}{5}{}{0}{}
+{129}{Moi aller Tarante.}{}{-4}{gv 1036 1,$$ 200}{-20}{$$ -200}
+{130}{Moi aller Cendeubour.}{}{-4}{gv 1036 2,$$ 200}{-22}{$$ -200}
+{131}{Moi aller racine noare.}{}{-4}{gv 1036 3,$$ 200}{-24}{$$ -200}
+{132}{Moi aller caldon.}{}{-4}{gv 1036 4,$$ 200}{-26}{$$ -200}
+{133}{Moi aller Ile des d'mi-orgre.}{}{-4}{gv 1036 6,$$ 200}{-30}{$$ -200}
+{134}{Moi aller Ile du désespoar.}{}{-4}{gv 1036 7,$$ 200}{-32}{$$ -200}
+{135}{Moi vouloir partir.}{}{-4}{$$ -199}{514}{}
+{136}{Moi pas argent, moi vouloir monter sur bateau.}{}{-4}{$$ -199}{644}{}
+{137}{Moi revenir.}{}{-4}{}{0}{}
+{138}{Si c'est ce que vous voulez, ça vous fera 250 pièces.}{Si c'est ce que vous voulez, ça vous fera 250 pièces.}{}{}{}{}
+{139}{Je veux aller à Tarante.}{}{5}{gv 1036 1,$$ 250}{-20}{$$ -250}
+{140}{Je veux aller à Cendrebourg.}{}{5}{gv 1036 2,$$ 250}{-22}{$$ -250}
+{141}{Je veux aller à Racine Noire.}{}{5}{gv 1036 3,$$ 250}{-24}{$$ -250}
+{142}{Je veux aller à Caladon.}{}{5}{gv 1036 4,$$ 250}{-26}{$$ -250}
+{143}{Je veux aller sur l'Ile des demi-ogres.}{}{5}{gv 1036 6,$$ 250}{-30}{$$ -250}
+{144}{Je veux aller sur l'Ile du Désespoir.}{}{5}{gv 1036 7,$$ 250}{-32}{$$ -250}
+{145}{C'est bon, partons immédiatement.}{}{5}{$$ -249}{514}{}
+{146}{Je n'ai pas assez d'argent pour payer la traversée.}{}{5}{$$ -249}{644}{}
+{147}{Je reviendrai quand j'aurai tout ce qu'il faut.}{}{5}{}{0}{}
+{148}{Moi aller Tarante.}{}{-4}{gv 1036 1,$$ 250}{-20}{$$ -250}
+{149}{Moi aller Cendeubour.}{}{-4}{gv 1036 2,$$ 250}{-22}{$$ -250}
+{150}{Moi aller racine noare.}{}{-4}{gv 1036 3,$$ 250}{-24}{$$ -250}
+{151}{Moi aller caldon.}{}{-4}{gv 1036 4,$$ 250}{-26}{$$ -250}
+{152}{Moi aller Ile des d'mi-orgre.}{}{-4}{gv 1036 6,$$ 250}{-30}{$$ -250}
+{153}{Moi aller Ile du désespoar.}{}{-4}{gv 1036 7,$$ 250}{-32}{$$ -250}
+{154}{Moi vouloir partir.}{}{-4}{$$ -249}{514}{}
+{155}{Moi pas argent, moi vouloir monter sur bateau.}{}{-4}{$$ -249}{644}{}
+{156}{Moi revenir.}{}{-4}{}{0}{}
+{157}{Si c'est ce que vous voulez, ça vous fera 300 pièces.}{Si c'est ce que vous voulez, ça vous fera 300 pièces.}{}{}{}{}
+{158}{Je veux aller à Tarante.}{}{5}{gv 1036 1,$$ 300}{-20}{$$ -300}
+{159}{Je veux aller à Cendrebourg.}{}{5}{gv 1036 2,$$ 300}{-22}{$$ -300}
+{160}{Je veux aller à Racine Noire.}{}{5}{gv 1036 3,$$ 300}{-24}{$$ -300}
+{161}{Je veux aller à Caladon.}{}{5}{gv 1036 4,$$ 300}{-26}{$$ -300}
+{162}{Je veux aller sur l'Ile des demi-ogres.}{}{5}{gv 1036 6,$$ 300}{-30}{$$ -300}
+{163}{Je veux aller sur l'Ile du Désespoir.}{}{5}{gv 1036 7,$$ 300}{-32}{$$ -300}
+{164}{C'est bon, partons immédiatement.}{}{5}{$$ -299}{514}{}
+{165}{Je n'ai pas assez d'argent pour payer la traversée.}{}{5}{$$ -299}{644}{}
+{166}{Je reviendrai quand j'aurai tout ce qu'il faut.}{}{5}{}{0}{}
+{167}{Moi aller Tarante.}{}{-4}{gv 1036 1,$$ 300}{-20}{$$ -300}
+{168}{Moi aller Cendeubour.}{}{-4}{gv 1036 2,$$ 300}{-22}{$$ -300}
+{169}{Moi aller racine noare.}{}{-4}{gv 1036 3,$$ 300}{-24}{$$ -300}
+{170}{Moi aller caldon.}{}{-4}{gv 1036 4,$$ 300}{-26}{$$ -300}
+{171}{Moi aller Ile des d'mi-orgre.}{}{-4}{gv 1036 6,$$ 300}{-30}{$$ -300}
+{172}{Moi aller Ile du désespoar.}{}{-4}{gv 1036 7,$$ 300}{-32}{$$ -300}
+{173}{Moi vouloir partir.}{}{-4}{$$ -299}{514}{}
+{174}{Moi pas argent, moi vouloir monter sur bateau.}{}{-4}{$$ -299}{644}{}
+{175}{Moi revenir.}{}{-4}{}{0}{}
+{176}{Si c'est ce que vous voulez, ça vous fera 350 pièces.}{Si c'est ce que vous voulez, ça vous fera 350 pièces.}{}{}{}{}
+{177}{Je veux aller à Tarante.}{}{5}{gv 1036 1,$$ 350}{-20}{$$ -350}
+{178}{Je veux aller à Cendrebourg.}{}{5}{gv 1036 2,$$ 350}{-22}{$$ -350}
+{179}{Je veux aller à Racine Noire.}{}{5}{gv 1036 3,$$ 350}{-24}{$$ -350}
+{180}{Je veux aller à Caladon.}{}{5}{gv 1036 4,$$ 350}{-26}{$$ -350}
+{181}{Je veux aller sur l'Ile des demi-ogres.}{}{5}{gv 1036 6,$$ 350}{-30}{$$ -350}
+{182}{Je veux aller sur l'Ile du Désespoir.}{}{5}{gv 1036 7,$$ 350}{-32}{$$ -350}
+{183}{C'est bon, partons immédiatement.}{}{5}{$$ -349}{514}{}
+{184}{Je n'ai pas assez d'argent pour payer la traversée.}{}{5}{$$ -349}{644}{}
+{185}{Je reviendrai quand j'aurai tout ce qu'il faut.}{}{5}{}{0}{}
+{186}{Moi aller Tarante.}{}{-4}{gv 1036 1,$$ 350}{-20}{$$ -350}
+{187}{Moi aller Cendeubour.}{}{-4}{gv 1036 2,$$ 350}{-22}{$$ -350}
+{188}{Moi aller racine noare.}{}{-4}{gv 1036 3,$$ 350}{-24}{$$ -350}
+{189}{Moi aller caldon.}{}{-4}{gv 1036 4,$$ 350}{-26}{$$ -350}
+{190}{Moi aller Ile des d'mi-orgre.}{}{-4}{gv 1036 6,$$ 350}{-30}{$$ -350}
+{191}{Moi aller Ile du désespoar.}{}{-4}{gv 1036 7,$$ 350}{-32}{$$ -350}
+{192}{Moi vouloir partir.}{}{-4}{$$ -349}{514}{}
+{193}{Moi pas argent, moi vouloir monter sur bateau.}{}{-4}{$$ -349}{644}{}
+{194}{Moi revenir.}{}{-4}{}{0}{}
+{195}{Si c'est ce que vous voulez, ça vous fera 400 pièces.}{Si c'est ce que vous voulez, ça vous fera 400 pièces.}{}{}{}{}
+{196}{Je veux aller à Tarante.}{}{5}{gv 1036 1,$$ 400}{-20}{$$ -400}
+{197}{Je veux aller à Cendrebourg.}{}{5}{gv 1036 2,$$ 400}{-22}{$$ -400}
+{198}{Je veux aller à Racine Noire.}{}{5}{gv 1036 3,$$ 400}{-24}{$$ -400}
+{199}{Je veux aller à Caladon.}{}{5}{gv 1036 4,$$ 400}{-26}{$$ -400}
+{200}{Je veux aller sur l'Ile des demi-ogres.}{}{5}{gv 1036 6,$$ 400}{-30}{$$ -400}
+{201}{Je veux aller sur l'Ile du Désespoir.}{}{5}{gv 1036 7,$$ 400}{-32}{$$ -400}
+{202}{C'est bon, partons immédiatement.}{}{5}{$$ -399}{514}{}
+{203}{Je n'ai pas assez d'argent pour payer la traversée.}{}{5}{$$ -399}{644}{}
+{204}{Je reviendrai quand j'aurai tout ce qu'il faut.}{}{5}{}{0}{}
+{205}{Moi aller Tarante.}{}{-4}{gv 1036 1,$$ 400}{-20}{$$ -400}
+{206}{Moi aller Cendeubour.}{}{-4}{gv 1036 2,$$ 400}{-22}{$$ -400}
+{207}{Moi aller racine noare.}{}{-4}{gv 1036 3,$$ 400}{-24}{$$ -400}
+{208}{Moi aller caldon.}{}{-4}{gv 1036 4,$$ 400}{-26}{$$ -400}
+{209}{Moi aller Ile des d'mi-orgre.}{}{-4}{gv 1036 6,$$ 400}{-30}{$$ -400}
+{210}{Moi aller Ile du désespoar.}{}{-4}{gv 1036 7,$$ 400}{-32}{$$ -400}
+{211}{Moi vouloir partir.}{}{-4}{$$ -399}{514}{}
+{212}{Moi pas argent, moi vouloir monter sur bateau.}{}{-4}{$$ -399}{644}{}
+{213}{Moi revenir.}{}{-4}{}{0}{}
+{214}{Si c'est ce que vous voulez, ça vous fera 400 pièces.}{Si c'est ce que vous voulez, ça vous fera 400 pièces.}{}{}{}{}
+{215}{Je veux aller à Tarante.}{}{5}{gv 1036 1,$$ 450}{-20}{$$ -450}
+{216}{Je veux aller à Cendrebourg.}{}{5}{gv 1036 2,$$ 450}{-22}{$$ -450}
+{217}{Je veux aller à Racine Noire.}{}{5}{gv 1036 3,$$ 450}{-24}{$$ -450}
+{218}{Je veux aller à Caladon.}{}{5}{gv 1036 4,$$ 450}{-26}{$$ -450}
+{219}{Je veux aller sur l'Ile des demi-ogres.}{}{5}{gv 1036 6,$$ 450}{-30}{$$ -450}
+{220}{Je veux aller sur l'Ile du Désespoir.}{}{5}{gv 1036 7,$$ 450}{-32}{$$ -450}
+{221}{C'est bon, partons immédiatement.}{}{5}{$$ -449}{514}{}
+{222}{Je n'ai pas assez d'argent pour payer la traversée.}{}{5}{$$ -449}{644}{}
+{223}{Je reviendrai quand j'aurai tout ce qu'il faut.}{}{5}{}{0}{}
+{224}{Moi aller Tarante.}{}{-4}{gv 1036 1,$$ 450}{-20}{$$ -450}
+{225}{Moi aller Cendeubour.}{}{-4}{gv 1036 2,$$ 450}{-22}{$$ -450}
+{226}{Moi aller racine noare.}{}{-4}{gv 1036 3,$$ 450}{-24}{$$ -450}
+{227}{Moi aller caldon.}{}{-4}{gv 1036 4,$$ 450}{-26}{$$ -450}
+{228}{Moi aller Ile des d'mi-orgre.}{}{-4}{gv 1036 6,$$ 450}{-30}{$$ -450}
+{229}{Moi aller Ile du désespoar.}{}{-4}{gv 1036 7,$$ 450}{-32}{$$ -450}
+{230}{Moi vouloir partir.}{}{-4}{$$ -449}{514}{}
+{231}{Moi pas argent, moi vouloir monter sur bateau.}{}{-4}{$$ -449}{644}{}
+{232}{Moi revenir.}{}{-4}{}{0}{}
+{233}{Si c'est ce que vous voulez, ça vous fera 500 pièces.}{Si c'est ce que vous voulez, ça vous fera 500 pièces.}{}{}{}{}
+{234}{Je veux aller à Tarante.}{}{5}{gv 1036 1,$$ 500}{-20}{$$ -500}
+{235}{Je veux aller à Cendrebourg.}{}{5}{gv 1036 2,$$ 500}{-22}{$$ -500}
+{236}{Je veux aller à Racine Noire.}{}{5}{gv 1036 3,$$ 500}{-24}{$$ -500}
+{237}{Je veux aller à Caladon.}{}{5}{gv 1036 4,$$ 500}{-26}{$$ -500}
+{238}{Je veux aller sur l'Ile des demi-ogres.}{}{5}{gv 1036 6,$$ 500}{-30}{$$ -500}
+{239}{Je veux aller sur l'Ile du Désespoir.}{}{5}{gv 1036 7,$$ 500}{-32}{$$ -500}
+{240}{C'est bon, partons immédiatement.}{}{5}{$$ -499}{514}{}
+{241}{Je n'ai pas assez d'argent pour payer la traversée.}{}{5}{$$ -499}{644}{}
+{242}{Je reviendrai quand j'aurai tout ce qu'il faut.}{}{5}{}{0}{}
+{243}{Moi aller Tarante.}{}{-4}{gv 1036 1,$$ 500}{-20}{$$ -500}
+{244}{Moi aller Cendeubour.}{}{-4}{gv 1036 2,$$ 500}{-22}{$$ -500}
+{245}{Moi aller racine noare.}{}{-4}{gv 1036 3,$$ 500}{-24}{$$ -500}
+{246}{Moi aller caldon.}{}{-4}{gv 1036 4,$$ 500}{-26}{$$ -500}
+{247}{Moi aller Ile des d'mi-orgre.}{}{-4}{gv 1036 6,$$ 500}{-30}{$$ -500}
+{248}{Moi aller Ile du désespoar.}{}{-4}{gv 1036 7,$$ 500}{-32}{$$ -500}
+{249}{Moi vouloir partir.}{}{-4}{$$ -499}{514}{}
+{250}{Moi pas argent, moi vouloir monter sur bateau.}{}{-4}{$$ -499}{644}{}
+{251}{Moi revenir.}{}{-4}{}{0}{}
+{252}{Si c'est ce que vous voulez, ça vous fera 550 pièces.}{Si c'est ce que vous voulez, ça vous fera 550 pièces.}{}{}{}{}
+{253}{Je veux aller à Tarante.}{}{5}{gv 1036 1,$$ 550}{-20}{$$ -550}
+{254}{Je veux aller à Cendrebourg.}{}{5}{gv 1036 2,$$ 550}{-22}{$$ -550}
+{255}{Je veux aller à Racine Noire.}{}{5}{gv 1036 3,$$ 550}{-24}{$$ -550}
+{256}{Je veux aller à Caladon.}{}{5}{gv 1036 4,$$ 550}{-26}{$$ -550}
+{257}{Je veux aller sur l'Ile des demi-ogres.}{}{5}{gv 1036 6,$$ 550}{-30}{$$ -550}
+{258}{Je veux aller sur l'Ile du Désespoir.}{}{5}{gv 1036 7,$$ 550}{-32}{$$ -550}
+{259}{C'est bon, partons immédiatement.}{}{5}{$$ -549}{514}{}
+{260}{Je n'ai pas assez d'argent pour payer la traversée.}{}{5}{$$ -549}{644}{}
+{261}{Je reviendrai quand j'aurai tout ce qu'il faut.}{}{5}{}{0}{}
+{262}{Moi aller Tarante.}{}{-4}{gv 1036 1,$$ 550}{-20}{$$ -550}
+{263}{Moi aller Cendeubour.}{}{-4}{gv 1036 2,$$ 550}{-22}{$$ -550}
+{264}{Moi aller racine noare.}{}{-4}{gv 1036 3,$$ 550}{-24}{$$ -550}
+{265}{Moi aller caldon.}{}{-4}{gv 1036 4,$$ 550}{-26}{$$ -550}
+{266}{Moi aller Ile des d'mi-orgre.}{}{-4}{gv 1036 6,$$ 550}{-30}{$$ -550}
+{267}{Moi aller Ile du désespoar.}{}{-4}{gv 1036 7,$$ 550}{-32}{$$ -550}
+{268}{Moi vouloir partir.}{}{-4}{$$ -549}{514}{}
+{269}{Moi pas argent, moi vouloir monter sur bateau.}{}{-4}{$$ -549}{644}{}
+{270}{Moi revenir.}{}{-4}{}{0}{}
+{271}{Si c'est ce que vous voulez, ça vous fera 600 pièces.}{Si c'est ce que vous voulez, ça vous fera 600 pièces.}{}{}{}{}
+{272}{Je veux aller à Tarante.}{}{5}{gv 1036 1,$$ 600}{-20}{$$ -600}
+{273}{Je veux aller à Cendrebourg.}{}{5}{gv 1036 2,$$ 600}{-22}{$$ -600}
+{274}{Je veux aller à Racine Noire.}{}{5}{gv 1036 3,$$ 600}{-24}{$$ -600}
+{275}{Je veux aller à Caladon.}{}{5}{gv 1036 4,$$ 600}{-26}{$$ -600}
+{276}{Je veux aller sur l'Ile des demi-ogres.}{}{5}{gv 1036 6,$$ 600}{-30}{$$ -600}
+{277}{Je veux aller sur l'Ile du Désespoir.}{}{5}{gv 1036 7,$$ 600}{-32}{$$ -600}
+{278}{C'est bon, partons immédiatement.}{}{5}{$$ -599}{514}{}
+{279}{Je n'ai pas assez d'argent pour payer la traversée.}{}{5}{$$ -599}{644}{}
+{280}{Je reviendrai quand j'aurai tout ce qu'il faut.}{}{5}{}{0}{}
+{281}{Moi aller Tarante.}{}{-4}{gv 1036 1,$$ 600}{-20}{$$ -600}
+{282}{Moi aller Cendeubour.}{}{-4}{gv 1036 2,$$ 600}{-22}{$$ -600}
+{283}{Moi aller racine noare.}{}{-4}{gv 1036 3,$$ 600}{-24}{$$ -600}
+{284}{Moi aller caldon.}{}{-4}{gv 1036 4,$$ 600}{-26}{$$ -600}
+{285}{Moi aller Ile des d'mi-orgre.}{}{-4}{gv 1036 6,$$ 600}{-30}{$$ -600}
+{286}{Moi aller Ile du désespoar.}{}{-4}{gv 1036 7,$$ 600}{-32}{$$ -600}
+{287}{Moi vouloir partir.}{}{-4}{$$ -599}{514}{}
+{288}{Moi pas argent, moi vouloir monter sur bateau.}{}{-4}{$$ -599}{644}{}
+{289}{Moi revenir.}{}{-4}{}{0}{}
+{290}{Si c'est ce que vous voulez, ça vous fera 650 pièces.}{Si c'est ce que vous voulez, ça vous fera 650 pièces.}{}{}{}{}
+{291}{Je veux aller à Tarante.}{}{5}{gv 1036 1,$$ 650}{-20}{$$ -650}
+{292}{Je veux aller à Cendrebourg.}{}{5}{gv 1036 2,$$ 650}{-22}{$$ -650}
+{293}{Je veux aller à Racine Noire.}{}{5}{gv 1036 3,$$ 650}{-24}{$$ -650}
+{294}{Je veux aller à Caladon.}{}{5}{gv 1036 4,$$ 650}{-26}{$$ -650}
+{295}{Je veux aller sur l'Ile des demi-ogres.}{}{5}{gv 1036 6,$$ 650}{-30}{$$ -650}
+{296}{Je veux aller sur l'Ile du Désespoir.}{}{5}{gv 1036 7,$$ 650}{-32}{$$ -650}
+{297}{C'est bon, partons immédiatement.}{}{5}{$$ -649}{514}{}
+{298}{Je n'ai pas assez d'argent pour payer la traversée.}{}{5}{$$ -649}{644}{}
+{299}{Je reviendrai quand j'aurai tout ce qu'il faut.}{}{5}{}{0}{}
+{300}{Moi aller Tarante.}{}{-4}{gv 1036 1,$$ 650}{-20}{$$ -650}
+{301}{Moi aller Cendeubour.}{}{-4}{gv 1036 2,$$ 650}{-22}{$$ -650}
+{302}{Moi aller racine noare.}{}{-4}{gv 1036 3,$$ 650}{-24}{$$ -650}
+{303}{Moi aller caldon.}{}{-4}{gv 1036 4,$$ 650}{-26}{$$ -650}
+{304}{Moi aller Ile des d'mi-orgre.}{}{-4}{gv 1036 6,$$ 650}{-30}{$$ -650}
+{305}{Moi aller Ile du désespoar.}{}{-4}{gv 1036 7,$$ 650}{-32}{$$ -650}
+{306}{Moi vouloir partir.}{}{-4}{$$ -649}{514}{}
+{307}{Moi pas argent, moi vouloir monter sur bateau.}{}{-4}{$$ -649}{644}{}
+{308}{Moi revenir.}{}{-4}{}{0}{}
+{309}{Si c'est ce que vous voulez, ça vous fera 700 pièces.}{Si c'est ce que vous voulez, ça vous fera 700 pièces.}{}{}{}{}
+{310}{Je veux aller à Tarante.}{}{5}{gv 1036 1,$$ 700}{-20}{$$ -700}
+{311}{Je veux aller à Cendrebourg.}{}{5}{gv 1036 2,$$ 700}{-22}{$$ -700}
+{312}{Je veux aller à Racine Noire.}{}{5}{gv 1036 3,$$ 700}{-24}{$$ -700}
+{313}{Je veux aller à Caladon.}{}{5}{gv 1036 4,$$ 700}{-26}{$$ -700}
+{314}{Je veux aller sur l'Ile des demi-ogres.}{}{5}{gv 1036 6,$$ 700}{-30}{$$ -700}
+{315}{Je veux aller sur l'Ile du Désespoir.}{}{5}{gv 1036 7,$$ 700}{-32}{$$ -700}
+{316}{C'est bon, partons immédiatement.}{}{5}{$$ -699}{514}{}
+{317}{Je n'ai pas assez d'argent pour payer la traversée.}{}{5}{$$ -699}{644}{}
+{318}{Je reviendrai quand j'aurai tout ce qu'il faut.}{}{5}{}{0}{}
+{319}{Moi aller Tarante.}{}{-4}{gv 1036 1,$$ 700}{-20}{$$ -700}
+{320}{Moi aller Cendeubour.}{}{-4}{gv 1036 2,$$ 700}{-22}{$$ -700}
+{321}{Moi aller racine noare.}{}{-4}{gv 1036 3,$$ 700}{-24}{$$ -700}
+{322}{Moi aller caldon.}{}{-4}{gv 1036 4,$$ 700}{-26}{$$ -700}
+{323}{Moi aller Ile des d'mi-orgre.}{}{-4}{gv 1036 6,$$ 700}{-30}{$$ -700}
+{324}{Moi aller Ile du désespoar.}{}{-4}{gv 1036 7,$$ 700}{-32}{$$ -700}
+{325}{Moi vouloir partir.}{}{-4}{$$ -699}{514}{}
+{326}{Moi pas argent, moi vouloir monter sur bateau.}{}{-4}{$$ -699}{644}{}
+{327}{Moi revenir.}{}{-4}{}{0}{}
+{328}{Si c'est ce que vous voulez, ça vous fera 750 pièces.}{Si c'est ce que vous voulez, ça vous fera 750 pièces.}{}{}{}{}
+{329}{Je veux aller à Tarante.}{}{5}{gv 1036 1,$$ 750}{-20}{$$ -750}
+{330}{Je veux aller à Cendrebourg.}{}{5}{gv 1036 2,$$ 750}{-22}{$$ -750}
+{331}{Je veux aller à Racine Noire.}{}{5}{gv 1036 3,$$ 750}{-24}{$$ -750}
+{332}{Je veux aller à Caladon.}{}{5}{gv 1036 4,$$ 750}{-26}{$$ -750}
+{333}{Je veux aller sur l'Ile des demi-ogres.}{}{5}{gv 1036 6,$$ 750}{-30}{$$ -750}
+{334}{Je veux aller sur l'Ile du Désespoir.}{}{5}{gv 1036 7,$$ 750}{-32}{$$ -750}
+{335}{C'est bon, partons immédiatement.}{}{5}{$$ -749}{514}{}
+{336}{Je n'ai pas assez d'argent pour payer la traversée.}{}{5}{$$ -749}{644}{}
+{337}{Je reviendrai quand j'aurai tout ce qu'il faut.}{}{5}{}{0}{}
+{338}{Moi aller Tarante.}{}{-4}{gv 1036 1,$$ 750}{-20}{$$ -750}
+{339}{Moi aller Cendeubour.}{}{-4}{gv 1036 2,$$ 750}{-22}{$$ -750}
+{340}{Moi aller racine noare.}{}{-4}{gv 1036 3,$$ 750}{-24}{$$ -750}
+{341}{Moi aller caldon.}{}{-4}{gv 1036 4,$$ 750}{-26}{$$ -750}
+{342}{Moi aller Ile des d'mi-orgre.}{}{-4}{gv 1036 6,$$ 750}{-30}{$$ -750}
+{343}{Moi aller Ile du désespoar.}{}{-4}{gv 1036 7,$$ 750}{-32}{$$ -750}
+{344}{Moi vouloir partir.}{}{-4}{$$ -749}{514}{}
+{345}{Moi pas argent, moi vouloir monter sur bateau.}{}{-4}{$$ -749}{644}{}
+{346}{Moi revenir.}{}{-4}{}{0}{}
+{347}{Si c'est ce que vous voulez, ça vous fera 800 pièces.}{Si c'est ce que vous voulez, ça vous fera 800 pièces.}{}{}{}{}
+{348}{Je veux aller à Tarante.}{}{5}{gv 1036 1,$$ 800}{-20}{$$ -800}
+{349}{Je veux aller à Cendrebourg.}{}{5}{gv 1036 2,$$ 800}{-22}{$$ -800}
+{350}{Je veux aller à Racine Noire.}{}{5}{gv 1036 3,$$ 800}{-24}{$$ -800}
+{351}{Je veux aller à Caladon.}{}{5}{gv 1036 4,$$ 800}{-26}{$$ -800}
+{352}{Je veux aller sur l'Ile des demi-ogres.}{}{5}{gv 1036 6,$$ 800}{-30}{$$ -800}
+{353}{Je veux aller sur l'Ile du Désespoir.}{}{5}{gv 1036 7,$$ 800}{-32}{$$ -800}
+{354}{C'est bon, partons immédiatement.}{}{5}{$$ -799}{514}{}
+{355}{Je n'ai pas assez d'argent pour payer la traversée.}{}{5}{$$ -799}{644}{}
+{356}{Je reviendrai quand j'aurai tout ce qu'il faut.}{}{5}{}{0}{}
+{357}{Moi aller Tarante.}{}{-4}{gv 1036 1,$$ 800}{-20}{$$ -800}
+{358}{Moi aller Cendeubour.}{}{-4}{gv 1036 2,$$ 800}{-22}{$$ -800}
+{359}{Moi aller racine noare.}{}{-4}{gv 1036 3,$$ 800}{-24}{$$ -800}
+{360}{Moi aller caldon.}{}{-4}{gv 1036 4,$$ 800}{-26}{$$ -800}
+{361}{Moi aller Ile des d'mi-orgre.}{}{-4}{gv 1036 6,$$ 800}{-30}{$$ -800}
+{362}{Moi aller Ile du désespoar.}{}{-4}{gv 1036 7,$$ 800}{-32}{$$ -800}
+{363}{Moi vouloir partir.}{}{-4}{$$ -799}{514}{}
+{364}{Moi pas argent, moi vouloir monter sur bateau.}{}{-4}{$$ -799}{644}{}
+{365}{Moi revenir.}{}{-4}{}{0}{}
+{366}{Si c'est ce que vous voulez, ça vous fera 850 pièces.}{Si c'est ce que vous voulez, ça vous fera 850 pièces.}{}{}{}{}
+{367}{Je veux aller à Tarante.}{}{5}{gv 1036 1,$$ 850}{-20}{$$ -850}
+{368}{Je veux aller à Cendrebourg.}{}{5}{gv 1036 2,$$ 850}{-22}{$$ -850}
+{369}{Je veux aller à Racine Noire.}{}{5}{gv 1036 3,$$ 850}{-24}{$$ -850}
+{370}{Je veux aller à Caladon.}{}{5}{gv 1036 4,$$ 850}{-26}{$$ -850}
+{371}{Je veux aller sur l'Ile des demi-ogres.}{}{5}{gv 1036 6,$$ 850}{-30}{$$ -850}
+{372}{Je veux aller sur l'Ile du Désespoir.}{}{5}{gv 1036 7,$$ 850}{-32}{$$ -850}
+{373}{C'est bon, partons immédiatement.}{}{5}{$$ -849}{514}{}
+{374}{Je n'ai pas assez d'argent pour payer la traversée.}{}{5}{$$ -849}{644}{}
+{375}{Je reviendrai quand j'aurai tout ce qu'il faut.}{}{5}{}{0}{}
+{376}{Moi aller Tarante.}{}{-4}{gv 1036 1,$$ 850}{-20}{$$ -850}
+{377}{Moi aller Cendeubour.}{}{-4}{gv 1036 2,$$ 850}{-22}{$$ -850}
+{378}{Moi aller racine noare.}{}{-4}{gv 1036 3,$$ 850}{-24}{$$ -850}
+{379}{Moi aller caldon.}{}{-4}{gv 1036 4,$$ 850}{-26}{$$ -850}
+{380}{Moi aller Ile des d'mi-orgre.}{}{-4}{gv 1036 6,$$ 850}{-30}{$$ -850}
+{381}{Moi aller Ile du désespoar.}{}{-4}{gv 1036 7,$$ 850}{-32}{$$ -850}
+{382}{Moi vouloir partir.}{}{-4}{$$ -849}{514}{}
+{383}{Moi pas argent, moi vouloir monter sur bateau.}{}{-4}{$$ -849}{644}{}
+{384}{Moi revenir.}{}{-4}{}{0}{}
+{385}{Si c'est ce que vous voulez, ça vous fera 900 pièces.}{Si c'est ce que vous voulez, ça vous fera 900 pièces.}{}{}{}{}
+{386}{Je veux aller à Tarante.}{}{5}{gv 1036 1,$$ 900}{-20}{$$ -900}
+{387}{Je veux aller à Cendrebourg.}{}{5}{gv 1036 2,$$ 900}{-22}{$$ -900}
+{388}{Je veux aller à Racine Noire.}{}{5}{gv 1036 3,$$ 900}{-24}{$$ -900}
+{389}{Je veux aller à Caladon.}{}{5}{gv 1036 4,$$ 900}{-26}{$$ -900}
+{390}{Je veux aller sur l'Ile des demi-ogres.}{}{5}{gv 1036 6,$$ 900}{-30}{$$ -900}
+{391}{Je veux aller sur l'Ile du Désespoir.}{}{5}{gv 1036 7,$$ 900}{-32}{$$ -900}
+{392}{C'est bon, partons immédiatement.}{}{5}{$$ -899}{514}{}
+{393}{Je n'ai pas assez d'argent pour payer la traversée.}{}{5}{$$ -899}{644}{}
+{394}{Je reviendrai quand j'aurai tout ce qu'il faut.}{}{5}{}{0}{}
+{395}{Moi aller Tarante.}{}{-4}{gv 1036 1,$$ 900}{-20}{$$ -900}
+{396}{Moi aller Cendeubour.}{}{-4}{gv 1036 2,$$ 900}{-22}{$$ -900}
+{397}{Moi aller racine noare.}{}{-4}{gv 1036 3,$$ 900}{-24}{$$ -900}
+{398}{Moi aller caldon.}{}{-4}{gv 1036 4,$$ 900}{-26}{$$ -900}
+{399}{Moi aller Ile des d'mi-orgre.}{}{-4}{gv 1036 6,$$ 900}{-30}{$$ -900}
+{400}{Moi aller Ile du désespoar.}{}{-4}{gv 1036 7,$$ 900}{-32}{$$ -900}
+{401}{Moi vouloir partir.}{}{-4}{$$ -899}{514}{}
+{402}{Moi pas argent, moi vouloir monter sur bateau.}{}{-4}{$$ -899}{644}{}
+{403}{Moi revenir.}{}{-4}{}{0}{}
+{404}{Si c'est ce que vous voulez, ça vous fera 1000 pièces.}{Si c'est ce que vous voulez, ça vous fera 1000 pièces.}{}{}{}{}
+{405}{Je veux aller à Tarante.}{}{5}{gv 1036 1,$$ 1000}{-20}{$$ -1000}
+{406}{Je veux aller à Cendrebourg.}{}{5}{gv 1036 2,$$ 1000}{-22}{$$ -1000}
+{407}{Je veux aller à Racine Noire.}{}{5}{gv 1036 3,$$ 1000}{-24}{$$ -1000}
+{408}{Je veux aller à Caladon.}{}{5}{gv 1036 4,$$ 1000}{-26}{$$ -1000}
+{409}{Je veux aller sur l'Ile des demi-ogres.}{}{5}{gv 1036 6,$$ 1000}{-30}{$$ -1000}
+{410}{Je veux aller sur l'Ile du Désespoir.}{}{5}{gv 1036 7,$$ 1000}{-32}{$$ -1000}
+{411}{C'est bon, partons immédiatement.}{}{5}{$$ -999}{514}{}
+{412}{Je n'ai pas assez d'argent pour payer la traversée.}{}{5}{$$ -999}{644}{}
+{413}{Je reviendrai quand j'aurai tout ce qu'il faut.}{}{5}{}{0}{}
+{414}{Moi aller Tarante.}{}{-4}{gv 1036 1,$$ 1000}{-20}{$$ -1000}
+{415}{Moi aller Cendeubour.}{}{-4}{gv 1036 2,$$ 1000}{-22}{$$ -1000}
+{416}{Moi aller racine noare.}{}{-4}{gv 1036 3,$$ 1000}{-24}{$$ -1000}
+{417}{Moi aller caldon.}{}{-4}{gv 1036 4,$$ 1000}{-26}{$$ -1000}
+{418}{Moi aller Ile des d'mi-orgre.}{}{-4}{gv 1036 6,$$ 1000}{-30}{$$ -1000}
+{419}{Moi aller Ile du désespoar.}{}{-4}{gv 1036 7,$$ 1000}{-32}{$$ -1000}
+{420}{Moi vouloir partir.}{}{-4}{$$ -999}{514}{}
+{421}{Moi pas argent, moi vouloir monter sur bateau.}{}{-4}{$$ -999}{644}{}
+{422}{Moi revenir.}{}{-4}{}{0}{}
+{423}{Si c'est ce que vous voulez, ça vous fera 1100 pièces.}{Si c'est ce que vous voulez, ça vous fera 1100 pièces.}{}{}{}{}
+{424}{Je veux aller à Tarante.}{}{5}{gv 1036 1,$$ 1100}{-20}{$$ -1100}
+{425}{Je veux aller à Cendrebourg.}{}{5}{gv 1036 2,$$ 1100}{-22}{$$ -1100}
+{426}{Je veux aller à Racine Noire.}{}{5}{gv 1036 3,$$ 1100}{-24}{$$ -1100}
+{427}{Je veux aller à Caladon.}{}{5}{gv 1036 4,$$ 1100}{-26}{$$ -1100}
+{428}{Je veux aller sur l'Ile des demi-ogres.}{}{5}{gv 1036 6,$$ 1100}{-30}{$$ -1100}
+{429}{Je veux aller sur l'Ile du Désespoir.}{}{5}{gv 1036 7,$$ 1100}{-32}{$$ -1100}
+{430}{C'est bon, partons immédiatement.}{}{5}{$$ -1099}{514}{}
+{431}{Je n'ai pas assez d'argent pour payer la traversée.}{}{5}{$$ -1099}{644}{}
+{432}{Je reviendrai quand j'aurai tout ce qu'il faut.}{}{5}{}{0}{}
+{433}{Moi aller Tarante.}{}{-4}{gv 1036 1,$$ 1100}{-20}{$$ -1100}
+{434}{Moi aller Cendeubour.}{}{-4}{gv 1036 2,$$ 1100}{-22}{$$ -1100}
+{435}{Moi aller racine noare.}{}{-4}{gv 1036 3,$$ 1100}{-24}{$$ -1100}
+{436}{Moi aller caldon.}{}{-4}{gv 1036 4,$$ 1100}{-26}{$$ -1100}
+{437}{Moi aller Ile des d'mi-orgre.}{}{-4}{gv 1036 6,$$ 1100}{-30}{$$ -1100}
+{438}{Moi aller Ile du désespoar.}{}{-4}{gv 1036 7,$$ 1100}{-32}{$$ -1100}
+{439}{Moi vouloir partir.}{}{-4}{$$ -1099}{514}{}
+{440}{Moi pas argent, moi vouloir monter sur bateau.}{}{-4}{$$ -1099}{644}{}
+{441}{Moi revenir.}{}{-4}{}{0}{}
+{442}{Si c'est ce que vous voulez, ça vous fera 1200 pièces.}{Si c'est ce que vous voulez, ça vous fera 1200 pièces.}{}{}{}{}
+{443}{Je veux aller à Tarante.}{}{5}{gv 1036 1,$$ 1200}{-20}{$$ -1200}
+{444}{Je veux aller à Cendrebourg.}{}{5}{gv 1036 2,$$ 1200}{-22}{$$ -1200}
+{445}{Je veux aller à Racine Noire.}{}{5}{gv 1036 3,$$ 1200}{-24}{$$ -1200}
+{446}{Je veux aller à Caladon.}{}{5}{gv 1036 4,$$ 1200}{-26}{$$ -1200}
+{447}{Je veux aller sur l'Ile des demi-ogres.}{}{5}{gv 1036 6,$$ 1200}{-30}{$$ -1200}
+{448}{Je veux aller sur l'Ile du Désespoir.}{}{5}{gv 1036 7,$$ 1200}{-32}{$$ -1200}
+{449}{C'est bon, partons immédiatement.}{}{5}{$$ -1199}{514}{}
+{450}{Je n'ai pas assez d'argent pour payer la traversée.}{}{5}{$$ -1199}{644}{}
+{451}{Je reviendrai quand j'aurai tout ce qu'il faut.}{}{5}{}{0}{}
+{452}{Moi aller Tarante.}{}{-4}{gv 1036 1,$$ 1200}{-20}{$$ -1200}
+{453}{Moi aller Cendeubour.}{}{-4}{gv 1036 2,$$ 1200}{-22}{$$ -1200}
+{454}{Moi aller racine noare.}{}{-4}{gv 1036 3,$$ 1200}{-24}{$$ -1200}
+{455}{Moi aller caldon.}{}{-4}{gv 1036 4,$$ 1200}{-26}{$$ -1200}
+{456}{Moi aller Ile des d'mi-orgre.}{}{-4}{gv 1036 6,$$ 1200}{-30}{$$ -1200}
+{457}{Moi aller Ile du désespoar.}{}{-4}{gv 1036 7,$$ 1200}{-32}{$$ -1200}
+{458}{Moi vouloir partir.}{}{-4}{$$ -1199}{514}{}
+{459}{Moi pas argent, moi vouloir monter sur bateau.}{}{-4}{$$ -1199}{644}{}
+{460}{Moi revenir.}{}{-4}{}{0}{}
+{461}{Si c'est ce que vous voulez, ça vous fera 1300 pièces.}{Si c'est ce que vous voulez, ça vous fera 1300 pièces.}{}{}{}{}
+{462}{Je veux aller à Tarante.}{}{5}{gv 1036 1,$$ 1300}{-20}{$$ -1300}
+{463}{Je veux aller à Cendrebourg.}{}{5}{gv 1036 2,$$ 1300}{-22}{$$ -1300}
+{464}{Je veux aller à Racine Noire.}{}{5}{gv 1036 3,$$ 1300}{-24}{$$ -1300}
+{465}{Je veux aller à Caladon.}{}{5}{gv 1036 4,$$ 1300}{-26}{$$ -1300}
+{466}{Je veux aller sur l'Ile des demi-ogres.}{}{5}{gv 1036 6,$$ 1300}{-30}{$$-1300}
+{467}{Je veux aller sur l'Ile du Désespoir.}{}{5}{gv 1036 7,$$ 1300}{-32}{$$ -1300}
+{468}{C'est bon, partons immédiatement.}{}{5}{$$ -1299}{514}{}
+{469}{Je n'ai pas assez d'argent pour payer la traversée.}{}{5}{$$ -1299}{644}{}
+{470}{Je reviendrai quand j'aurai tout ce qu'il faut.}{}{5}{}{0}{}
+{471}{Moi aller Tarante.}{}{-4}{gv 1036 1,$$ 1300}{-20}{$$ -1300}
+{472}{Moi aller Cendeubour.}{}{-4}{gv 1036 2,$$ 1300}{-22}{$$ -1300}
+{473}{Moi aller racine noare.}{}{-4}{gv 1036 3,$$ 1300}{-24}{$$ -1300}
+{474}{Moi aller caldon.}{}{-4}{gv 1036 4,$$ 1300}{-26}{$$ -1300}
+{475}{Moi aller Ile des d'mi-orgre.}{}{-4}{gv 1036 6,$$ 1300}{-30}{$$ -1300}
+{476}{Moi aller Ile du désespoar.}{}{-4}{gv 1036 7,$$ 1300}{-32}{$$ -1300}
+{477}{Moi vouloir partir.}{}{-4}{$$ -1299}{514}{}
+{478}{Moi pas argent, moi vouloir monter sur bateau.}{}{-4}{$$ -1299}{644}{}
+{479}{Moi revenir.}{}{-4}{}{0}{}
+{480}{C'est l'tarif. A prendre ou à laisser... C'est pas un problème pour moi... Alors, qu'est-ce que vous décidez ?}{C'est l'tarif, ma p'tite dame. A prendre ou à laisser... C'est pas un problème pour moi...}{}{}{}{}
+{481}{Je vois. Pouvez-vous me répéter votre prix ?}{}{5}{}{44}{}
+{482}{F:}{}{5}{}{0}{}
+{483}{Euh... Combien sous ?}{}{-4}{}{44}{}
+{484}{F:}{}{-4}{}{0}{}
+{485}{Vous savez vous y prendre, monsieur. P'têt' que vous nous porterez chance sur les flots. J'accepte 50 pièces par personne... pour cette fois-ci... 50 pièces tout rond ! C'est ma dernière offre, vous feriez mieux d'accepter avant qu'je change d'avis.}{Vous savez vous y prendre, madame. P'têt' que vous nous porterez chance sur les flots. J'accepte 50 pièces par personne... pour cette fois-ci... 50 pièces tout rond ! C'est ma dernière offre. Alors vous feriez mieux d'accepter avant qu'je change d'avis.}{}{}{}{}
+{486}{Vous réalisez une bonne affaire, Capitaine. Vous ne le regretterez pas !}{}{5}{gv 1035 1}{62}{}
+{487}{Vous réalisez une bonne affaire, Capitaine. Vous ne le regretterez pas !}{}{5}{gv 1035 2}{81}{}
+{488}{Vous réalisez une bonne affaire, Capitaine. Vous ne le regretterez pas !}{}{5}{gv 1035 3}{100}{}
+{489}{Vous réalisez une bonne affaire, Capitaine. Vous ne le regretterez pas !}{}{5}{gv 1035 4}{119}{}
+{490}{Vous réalisez une bonne affaire, Capitaine. Vous ne le regretterez pas !}{}{5}{gv 1035 5}{138}{}
+{491}{Vous réalisez une bonne affaire, Capitaine. Vous ne le regretterez pas !}{}{5}{gv 1035 6}{157}{}
+{492}{Vous réalisez une bonne affaire, Capitaine. Vous ne le regretterez pas !}{}{5}{gv 1035 7}{176}{}
+{493}{Vous réalisez une bonne affaire, Capitaine. Vous ne le regretterez pas !}{}{5}{gv 1035 8}{195}{}
+{494}{Vous réalisez une bonne affaire, Capitaine. Vous ne le regretterez pas !}{}{5}{gv 1035 9}{214}{}
+{495}{Vous réalisez une bonne affaire, Capitaine. Vous ne le regretterez pas !}{}{5}{gv 1035 10}{233}{}
+{496}{Vous réalisez une bonne affaire, Capitaine. Vous ne le regretterez pas !}{}{5}{gv 1035 11}{252}{}
+{497}{Vous réalisez une bonne affaire, Capitaine. Vous ne le regretterez pas !}{}{5}{gv 1035 12}{271}{}
+{498}{Vous réalisez une bonne affaire, Capitaine. Vous ne le regretterez pas !}{}{5}{gv 1035 13}{290}{}
+{499}{F:}{}{5}{}{0}{}
+{500}{Cap'taine malin. Nous faire bonne affaire !}{}{-4}{gv 1035 1}{62}{}
+{501}{Cap'taine malin. Nous faire bonne affaire !}{}{-4}{gv 1035 2}{81}{}
+{502}{Cap'taine malin. Nous faire bonne affaire !}{}{-4}{gv 1035 3}{100}{}
+{503}{Cap'taine malin. Nous faire bonne affaire !}{}{-4}{gv 1035 4}{119}{}
+{504}{Cap'taine malin. Nous faire bonne affaire !}{}{-4}{gv 1035 5}{138}{}
+{505}{Cap'taine malin. Nous faire bonne affaire !}{}{-4}{gv 1035 6}{157}{}
+{506}{Cap'taine malin. Nous faire bonne affaire !}{}{-4}{gv 1035 7}{176}{}
+{507}{Cap'taine malin. Nous faire bonne affaire !}{}{-4}{gv 1035 8}{195}{}
+{508}{Cap'taine malin. Nous faire bonne affaire !}{}{-4}{gv 1035 9}{214}{}
+{509}{Cap'taine malin. Nous faire bonne affaire !}{}{-4}{gv 1035 10}{233}{}
+{510}{Cap'taine malin. Nous faire bonne affaire !}{}{-4}{gv 1035 11}{252}{}
+{511}{Cap'taine malin. Nous faire bonne affaire !}{}{-4}{gv 1035 12}{271}{}
+{512}{Cap'taine malin. Nous faire bonne affaire !}{}{-4}{gv 1035 13}{290}{}
+{513}{F:}{}{-4}{}{0}{}
+{514}{Aargh ! Vous z'avez pas l'argent ! Si j'loupe la marée à cause de vous... J'vous aurai... Vous pouvez compter d'ssus ! Maint'nant descendez d'mon navire ! }{Aargh ! Vous z'avez pas l'argent ! Si j'loupe la marée à cause de vous... J'vous aurai... Vous pouvez compter d'ssus ! Maint'nant descendez d'mon navire ! }{}{}{}{re -5}
+{515}{E:}{}{5}{}{0}{}
+{516}{Descendez d'mon navire ! Et rev'nez pas si vous savez pas où aller.}{Descendez d'mon navire ! Et rev'nez pas si vous savez pas où aller.}{}{}{}{}
+{517}{Aargh ! Z'avez perdu la raison ? Ce bateau n'ira jamais là-bas !}{Aargh ! Z'avez perdu la raison ? Ce bateau n'ira jamais là-bas !}{}{}{}{}
+{518}{Euh... Peut-être devrais-je choisir une autre destination...}{}{5}{}{27}{}
+{519}{Pouvez-vous m'indiquer où se situe Racine Noire ?}{}{5}{}{535}{}
+{520}{Bah ! Cette foutue compagnie de chemins de fer a fait en sorte que mon bateau serve plus à rien à Cendrebourg ! Cette invention diabolique aura ma peau ! Vous pouvez me croire !}{Bah ! Cette foutue compagnie de chemins de fer a fait en sorte que mon bateau serve plus à rien à Cendrebourg ! Cette invention diabolique aura ma peau ! Vous pouvez me croire !}{}{}{}{}
+{521}{Peut-être devrais-je choisir une autre destination...}{}{5}{}{27}{}
+{522}{Pouvez-vous m'indiquer où se situe Cendrebourg ?}{}{5}{}{524}{}
+{523}{E:}{}{1}{}{0}{}
+{524}{C'est juste là. [Il vous montre un emplacement sur la carte.]}{C'est juste là. [Il vous montre un emplacement sur la carte.]}{}{}{}{mm 8}
+{525}{Puis-je choisir une autre destination ?}{}{5}{}{27}{}
+{526}{E:}{}{1}{}{0}{}
+{527}{Thanatos ! Vous ne trouverez pas un imbécile qui acceptera d'vous conduire là-bas à la ronde ! Tentez vot' chance à Racine Noire. Cet endroit est un nid de cinglés prêts à tout !}{Thanatos ! Vous ne trouverez pas un imbécile qui acceptera d'vous conduire là-bas à la ronde ! Tentez vot' chance à Racine Noire. Cet endroit est un nid de cinglés prêts à tout !}{}{}{}{}
+{529}{Puis-je choisir une autre destination ?}{}{5}{}{27}{}
+{530}{Euh... Moi monter sur bateau ?}{}{-4}{}{608}{}
+{531}{E:}{}{1}{}{0}{}
+{532}{Certainement. Laissez-moi r'garder vot' carte...}{Certainement. Laissez-moi r'garder vot' carte...}{}{}{}{}
+{533}{[Vous lui montrez votre carte]}{}{5}{}{535}{}
+{534}{F:}{}{1}{}{0}{}
+{535}{C'est là. [Il vous montre un emplacement sur la carte.]}{C'est là. [Il vous montre un emplacement sur la carte.]}{}{}{}{mm 3}
+{536}{Puis-je me rendre autre part ?}{}{5}{}{27}{}
+{537}{E:}{}{1}{}{0}{}
+{538}{Thanatos ? Z'avez perdu la raison ? Ce bateau n'ira jamais là-bas !}{Thanatos ? Z'avez perdu la raison ? Ce bateau n'ira jamais là-bas !}{}{}{}{}
+{539}{Puis-je choisir une autre destination ?}{}{5}{}{27}{}
+{540}{Euh... Moi monter sur bateau ?}{}{-4}{}{608}{}
+{541}{E:}{}{1}{}{0}{}
+{542}{L'Ile du Désespoir ? Si vous aviez un sou de jugeote, vous iriez pas sur c'rocher !}{L'Ile du Désespoir ? Si vous aviez un sou de jugeote, vous iriez pas sur c'rocher !}{}{}{}{}
+{543}{Pourquoi ? Quel genre d'endroit est-ce donc ?}{}{5}{}{545}{}
+{544}{E:}{}{1}{}{0}{}
+{545}{On raconte que jamais personne n'est revenu vivant de cette île. Les corps de ceux qu'ont essayé s'échouent à marée basse...}{On raconte que jamais personne n'est revenu vivant de cette île. Les corps de ceux qu'ont essayé s'échouent à marée basse...}{}{}{}{}
+{546}{Dieux du ciel. Puis-je choisir une autre destination ?}{}{5}{}{27}{}
+{547}{Je dois absolument me rendre sur l'île.}{}{5}{}{647}{}
+{548}{Finissons-en avec ça ! J'peux pas m'permettre de rester à quai toute la journée pendant qu'vous traînez là comme un pauvre ahuri !}{Finissons-en avec ça ! J'peux pas m'permettre de rester à quai toute la journée pendant qu'vous traînez là comme une pauvre ahurie !}{}{}{}{}
+{549}{Je souhaiterais louer une place sur votre bateau.}{}{5}{}{555}{}
+{550}{Je dois me rendre sur l'Ile du Désespoir.}{}{5}{lf8 0, ss 5, ss -6}{542}{}
+{551}{Je dois me rendre sur l'Ile du Désespoir.}{}{5}{lf8 1, ss 5, ss -6}{654}{}
+{552}{Je dois me rendre sur Thanatos.}{}{5}{lf3 0, ss 17, ss -17, gf2037 1}{527}{}
+{553}{Je dois me rendre sur Thanatos.}{}{5}{lf3 1, ss 17, ss -17, gf2037 1}{538}{}
+{554}{Je dois me rendre à Caladon.}{}{5}{lf4 0, ss 12, ss -12}{555}{}
+{555}{J'ai pas l'temps ! On doit décharger l'bateau et vous êtes sur l'chemin. Revenez plus tard.}{J'ai pas l'temps ! On doit décharger l'bateau et vous êtes sur l'chemin. Revenez plus tard.}{}{}{}{}
+{556}{E:}{}{1}{}{0}{}
+{557}{S:}{}{1}{}{0}{re 2}
+{558}{I:}{}{1}{}{0}{re -5}
+{559}{C'est ça... Z'avez pu voir cette grande bête en ferraille... le train ?}{C'est ça... Z'avez pu voir cette grande bête en ferraille... le train ?}{}{}{}{}
+{560}{Oui. C'est un véritable bijou des temps modernes.}{}{5}{}{566}{}
+{561}{Oui. Mais j'ai passé beaucoup de temps au Bougainville.}{}{5}{}{575}{}
+{562}{Non, je n'en ai pas eu le temps. J'ai entendu dire que c'est un excellent moyen de locomotion.}{}{5}{}{571}{}
+{563}{Ouais. Moi voir. machine très grosse ! ... Faire beaucoup bruit aussi !}{}{-4}{}{566}{}
+{564}{Non. Moi pas voir train. Moi entendre train bon pour voyage.}{}{-4}{}{571}{}
+{565}{E:}{}{1}{}{0}{}
+{566}{C'est vrai. C'est vrai. Mais rien à voir avec les sensations qu'on a en pleine mer. C'est pas pour moi, d'toute façon.}{C'est vrai. C'est vrai. Mais rien à voir avec les sensations qu'on a en pleine mer. C'est pas pour moi, d'toute façon.}{}{}{}{}
+{567}{Mais il offre aux masses un moyen de locomotion sûr et confortable.}{}{5}{}{571}{}
+{568}{Je suis tout à fait d'accord. Puis-je louer une place sur votre bateau ?}{}{5}{}{27}{}
+{569}{Ouais... Moi monter sur bateau ?}{}{-4}{}{608}{}
+{570}{E:}{}{1}{}{0}{}
+{571}{Tant qu'il n'y a pas de mages dans l'coin... Non. Moi j'pense que l'bateau reste le meilleur moyen de parcourir des grandes distances.}{Tant qu'il n'y a pas de mages dans l'coin... Non. Moi j'pense que l'bateau reste le meilleur moyen de parcourir des grandes distances.}{}{}{}{}
+{572}{Je vois. Puis-je louer une place sur votre bateau ?}{}{5}{}{27}{}
+{573}{E:}{}{1}{}{0}{}
+{574}{Ouais... Moi monter sur bateau ?}{}{-4}{}{608}{}
+{575}{J'vois qu'vous êtes l'genre de personne qui aime le raffin'ment...}{J'vois qu'vous êtes l'genre de personne qui aime le raffin'ment...}{}{}{}{}
+{576}{En effet... Puis-je louer une place sur votre bateau ?}{}{5}{}{27}{}
+{577}{E:}{}{1}{}{0}{}
+{578}{Cendrebourg... est une ville assez tranquille. Le site le plus intéressant dans le coin, c'est probablement le château hanté.}{Cendrebourg... est une ville assez tranquille. Le site le plus intéressant dans le coin, c'est probablement le château hanté.}{}{}{}{}
+{579}{Le château hanté ? Où le trouve-t-on ?}{}{5}{}{584}{}
+{580}{Oui. Une sacrée expérience. Puis-je vous louer une place ?}{}{5}{}{27}{}
+{581}{Où ça être ?}{}{-4}{}{584}{}
+{582}{Ouais... Moi monter sur bateau ?}{}{-4}{}{608}{}
+{583}{E:}{}{1}{}{0}{}
+{584}{Posez donc vot'question en ville. On vous indiquera l'chemin.}{Posez donc vot'question en ville. On vous indiquera l'chemin.}{}{}{}{}
+{585}{Plus tard peut-être. Je cherche une place sur un bateau.}{}{5}{}{27}{}
+{586}{E:}{}{1}{}{0}{}
+{587}{Ouais... Moi monter sur bateau ?}{}{-4}{}{608}{}
+{588}{Ca c'est vrai. Y'a pas d'plus beaux bateaux que ceux qu'on construit à Racine Noire. Voyez, celui-là vient d'Racine Noire. C'est l'meilleur sur lequel j'aie jamais navigué...}{Ca c'est vrai. Y'a pas d'plus beaux bateaux que ceux qu'on construit à Racine Noire. Voyez, celui-là vient d'Racine Noire. C'est l'meilleur sur lequel j'aie jamais navigué...}{}{}{}{}
+{589}{Il me semble solide en effet. Puis-je vous louer une place ?}{}{5}{}{27}{}
+{590}{E:}{}{1}{}{0}{}
+{591}{Il me semble récent. Cela fait longtemps que vous l'avez ?}{}{5}{re -80}{592}{re +5}
+{592}{Ca va faire huit ans. J'fais d'mon mieux pour lui garder sa forme. Vous vous rendez compte de sa valeur, vous avez un bon oeil.}{Ca va faire huit ans. J'fais d'mon mieux pour lui garder sa forme. Vous vous rendez compte de sa valeur, vous avez un bon oeil.}{}{}{}{}
+{593}{C'est du beau travail. Puis-je vous louer une place ?}{}{5}{}{27}{}
+{594}{E:}{}{1}{}{0}{}
+{595}{La plupart des gens viennent ici pour le temple. C'est le siège d'la religion Panarii ici.}{La plupart des gens viennent ici pour le temple. C'est le siège d'la religion Panarii ici.}{}{}{}{}
+{596}{Oui. Vous devez voir de nombreux pèlerins.}{}{5}{}{599}{}
+{597}{Euh... euh... Z'emmenez beaucoup pèlerins là-bas ?}{}{-4}{}{599}{}
+{598}{E:}{}{1}{}{0}{}
+{599}{Des pèlerins... Pas trop, en c'moment. Mais moi j'pense qu'y a surtout beaucoup d'imbéciles qui viennent juste s'émerveiller de sa splendeur.}{Des pèlerins... Pas trop, en c'moment. Mais moi j'pense qu'y a surtout beaucoup d'imbéciles qui viennent juste s'émerveiller de sa splendeur.}{}{}{}{}
+{600}{Dois-je en déduire que vous n'êtes pas un dévot ?}{}{5}{}{603}{}
+{601}{Ouais... être beau. Vous pas aimer Panarii ?}{}{-4}{}{603}{}
+{602}{E:}{}{1}{}{0}{}
+{603}{La mer... C'est ma déesse à moi. Elle m'offre tout ce dont j'ai besoin. Les Panarii [Il s'interrompt un moment et crache sur le côté] n'ont rien à offrir à un homme tel que moi...}{La mer... C'est ma déesse à moi. Elle m'offre tout ce dont j'ai besoin. Les Panarii [Il s'interrompt un moment et crache sur le côté] n'ont rien à offrir à un homme tel que moi...}{}{}{}{}
+{604}{Je vois. Puis-je louer une place sur votre bateau ?}{}{5}{}{27}{}
+{605}{Dommage... Puis-je louer une place sur votre bateau ?}{}{5}{}{27}{}
+{606}{Ouais... Moi monter sur bateau ?}{}{-4}{}{608}{}
+{607}{E:}{}{1}{}{0}{}
+{608}{Non, non. Je peux pas vous laisser monter à bord, désolé. Il faut payer pour monter sur mon beau bateau.}{Non, non. Je peux pas vous laisser monter à bord, désolé. Il faut payer pour monter sur mon beau bateau.}{}{}{}{}
+{609}{Moi payer !}{}{-4}{ss-4}{619}{}
+{610}{Moi payer !}{}{-4}{ss7, ss-11}{619}{}
+{611}{Moi payer !}{1}{-4}{ss5, ss-6}{621}{}
+{612}{Moi payer !}{0}{-4}{ss5, ss-6}{-37}{}
+{613}{Moi payer !}{0}{-4}{ss12, lf4 0}{-37}{}
+{614}{Moi payer !}{1}{-4}{ss12, ss-12, lf4 0}{621}{ss 13}
+{615}{Moi payer !}{1}{-4}{ss13, lf4 0}{621}{}
+{616}{Moi payer !}{}{-4}{lf 6 0, qa1143 2}{621}{}
+{617}{Moi payer !}{}{-4}{ss13, lf4 1}{695}{}
+{618}{E:}{}{1}{}{0}{}
+{619}{Oh ! Je commence à comprendre... [Pauvre imbécile] ... Je ne crois pas, non.}{Oh ! Je commence à comprendre... [Pauvre imbécile] ... Je ne crois pas, non.}{}{}{}{}
+{620}{E:}{}{1}{}{0}{}
+{621}{Oh ! Je comprends... [pauvre ignorant] Vous voulez payer votre voyage !  ... Eh bien... Vous m'avez l'air costaud. Je suppose que vous pourriez travailler pour payer la traversée. Je pars pour Caladon tout de suite. Je vous laisse embarquer si vous voulez travailler pour moi.}{Oh ! Je comprends... [pauvre ignorante] Vous voulez payer votre voyage ! Eh bien... Vous m'avez l'air costaude et je viens d'me rappeler que le cuisinier a besoin d'un compagnon d'galère. Je suppose que même une personne au cerveau ramolli comme vous est capable de laver des marmites et des poêles... [Il hésite.] Très bien, je vous autorise à travailler pour payer votre voyage. Je pars pour Caladon tout de suite.  Etes-vous prête à partir ?}{}{}{}{}
+{622}{Euh... Accord. Moi monter bateau.}{1}{-4}{ss13}{-26}{}
+{623}{Euh... Accord. Moi monter bateau.}{0}{-4}{ss13}{-26}{}
+{624}{Euh... Moi monter bateau.}{0}{-4}{ss12, ss-12}{665}{ss 13}
+{625}{Euh... moi aller Ile des d'mi-orgre ?}{}{-4}{lf 6 0, qa1143 2}{637}{}
+{626}{Euh... Moi aller sur Ile du désespoar ?}{}{-4}{ss5, ss-6, lf8 0}{640}{}
+{627}{Euh... Moi aller sur Ile du désespoar ?}{}{-4}{ss5, ss-6, lf8 1}{654}{}
+{628}{Euh... Moi aller Racine Nouare ?}{}{-4}{lf3 0}{700}{}
+{629}{Oh ! Je comprends... [pauvre ignorant] Vous voulez payer votre voyage !  ... Eh bien... Vous m'avez l'air costaud. Je suppose que vous pourriez travailler pour payer la traversée. Je pars pour Caladon tout de suite. Je vous laisse embarquer si vous voulez travailler pour moi.}{Oh ! Je comprends... Vous voulez payer votre voyage !  ... Eh bien... Vous me semblez euh... avoir un corps pas mal. Peut-être pourriez-vous le " mettre à contribution " pour payer votre voyage. Si vous voyez c'que j'veux dire. Je pars pour Caladon tout de suite. J'accepte de vous transporter si vous vous occupez d'moi et d'mes hommes. [Il semble pressé de partir] Pouvez-vous partir maintenant ?}{}{}{}{}
+{630}{Euh... Accord. Moi monter bateau.}{1}{-4}{ss13}{-26}{}
+{631}{Euh... Accord. Moi monter bateau.}{0}{-4}{ss13}{-26}{re +10}
+{632}{Euh... Moi monter bateau.}{0}{-4}{ss12, ss-12}{665}{ss 13, re +10}
+{633}{Euh... moi aller Ile des d'mi-orgre ?}{}{-4}{lf 6 0, qa1143 2}{637}{}
+{634}{Euh... Moi aller sur Ile du désespoar ?}{}{-4}{ss5, ss-6, lf8 0}{640}{}
+{635}{Euh... Moi aller sur Ile du désespoar ?}{}{-4}{ss5, ss-6, lf8 1}{654}{}
+{636}{Euh... Moi aller Racine Nouare ?}{}{-4}{lf 3 0}{700}{}
+{637}{Oh ! Je comprends... [pauvre ignorant] Vous voulez payer votre voyage ! Eh bien... Vous m'avez l'air costaud. Je suppose que vous pourriez travailler pour payer la traversée. Je pars pour l'Ile des demi-ogres maintenant. Je vous laisse embarquer si vous voulez travailler pour moi.}{Oh ! Je comprends... [pauvre ignorante] Vous voulez payer votre voyage !  ...Eh bien... Vous m'avez l'air costaude et je viens d'me rappeler que le cuisinier a besoin d'un compagnon d'galère. Je suppose que même une personne au cerveau ramolli comme vous est capable de laver des marmites et des poêles... [Il hésite.] Très bien, je vous autorise à travailler pour payer votre voyage. Je pars pour l'Ile des demi-ogres maintenant.  Etes-vous prête à partir ?}{}{}{}{}
+{638}{Euh... Accord. Moi monter bateau.}{}{-4}{}{-30}{}
+{639}{E:}{}{1}{}{0}{}
+{640}{L'Ile du Désespoir ? il faut être fou pour aller là-bas. Personne n'en est jamais revenu vivant ! Alors, vous voulez aller à Caladon ou pas ?}{L'Ile du Désespoir ? il faut être fou pour aller là-bas. Personne n'en est jamais revenu vivant ! Alors, vous voulez aller à Caladon ou pas ?}{}{}{}{}
+{641}{Euh... Accord. Moi monter bateau.}{}{-4}{ss13}{-26}{}
+{642}{Moi aller sur Ile du désespoar !}{}{-4}{ss5, ss-6}{647}{}
+{643}{E:}{}{1}{}{0}{}
+{644}{Si c'est trop cher pour vous, eh bien j'vous prends pas à mon bord. Rev'nez quand vous aurez les sous... Au r'voir.}{Si c'est trop cher pour vous, eh bien j'peux pas vous prendre à mon bord. Rev'nez quand vous aurez les sous... Au r'voir.}{}{}{}{}
+{645}{Moi payer, moi payer !}{}{-4}{}{608}{}
+{646}{E:}{}{1}{}{0}{}
+{647}{Vous devez avoir perdu la raison ! Eh bien... Essayez donc à Cendrebourg. P'têt' que vous trouverez un capitaine aussi crétin que vous. Oh, et puis arrêtez de m'faire perdre mon temps !}{Vous devez avoir perdu la raison ! Eh bien... Essayez donc à Cendrebourg. P'têt' que vous trouverez un capitaine aussi crétin que vous. Oh, et puis arrêtez de m'faire perdre mon temps !}{}{}{}{}
+{648}{Puis-je faire la traversée jusqu'à Cendrebourg ?}{}{5}{}{520}{}
+{649}{Euh... Vous amener moi Cendeubour ?}{}{-4}{}{651}{}
+{650}{E:}{}{1}{}{0}{}
+{651}{Bah ! Cette foutue compagnie de chemins de fer a fait en sorte que mon bateau serve plus à rien à Cendrebourg ! Cette invention diabolique aura ma peau ! Vous pouvez me croire !}{Bah ! Cette foutue compagnie de chemins de fer a fait en sorte que mon bateau serve plus à rien à Cendrebourg ! Cette invention diabolique aura ma peau ! Vous pouvez me croire !}{}{}{}{}
+{652}{E:}{}{1}{}{0}{}
+{653}{Où être Cendeubour ?}{}{-4}{}{698}{}
+{654}{L'Ile du Désespoir ? Si vous aviez un sou de jugeote, vous iriez pas sur c'rocher !}{L'Ile du Désespoir ? Si vous aviez un sou de jugeote, vous iriez pas sur c'rocher !}{}{}{}{}
+{655}{Dieux du ciel. Puis-je choisir une autre destination ?}{}{5}{}{27}{}
+{656}{Je dois absolument me rendre sur l'île.}{}{5}{gf2470 0}{661}{}
+{657}{Je dois absolument me rendre sur l'île.}{}{5}{gf2470 1}{668}{}
+{658}{Moi aller sur Ile du désespoar !}{}{-4}{gf2470 0}{661}{}
+{659}{Moi aller sur Ile du désespoar !}{}{-4}{gf2470 1}{668}{}
+{660}{E:}{}{1}{}{0}{}
+{661}{Allez parler à Enseigne. C'est l'capitaine de l'aut'bateau. Je le crois assez fou pour risquer son bateau... et sa peau !}{Allez parler à Enseigne. C'est l'capitaine de l'aut'bateau. Je le crois assez fou pour risquer son bateau... et sa peau !}{}{}{}{}
+{662}{Je vous remercie.}{}{5}{}{0}{}
+{663}{Euh... Accord. Marsi.}{}{-4}{}{0}{}
+{664}{E:}{}{1}{}{0}{}
+{665}{Vous m'comprenez... ? [Il hausse la voix et fait des grands gestes] J'accepte de vous amener à Caladon. Mais vous devrez travailler pour moi et mon équipage.}{Vous m'comprenez ? [Il hausse la voix et fait des grands gestes] J'accepte de vous amener à Caladon. Mais vous devrez travailler pour moi et mon équipage.}{}{}{}{}
+{666}{Euh... Ouais. Moi travailler. Moi monter bateau.}{}{-4}{}{-26}{}
+{667}{F:}{}{1}{}{0}{}
+{668}{On insiste ? Le Cap'taine Enseigne connaissait l'chemin. Mais c'est fini. L'pauvre imbécile y est allé et s'est fait tuer. Quel gâchis.}{On insiste ? Le Cap'taine Enseigne connaissait l'chemin. Mais c'est fini. L'pauvre imbécile y est allé et s'est fait tuer. Quel gâchis.}{}{}{}{}
+{669}{Que s'est-il passé ?}{}{5}{}{672}{}
+{670}{Quoi passer ?}{}{-4}{}{672}{}
+{671}{E:}{}{1}{}{0}{}
+{672}{Je sais pas précisément. On m'a raconté qu'il a accepté d'amener un étranger pour de l'argent. Un type dur, c't'Enseigne. Ca d'vait arriver un jour ou l'autre. Dommage.}{Je sais pas précisément. On m'a raconté qu'il a accepté d'amener un étranger pour de l'argent. Un type dur, c't'Enseigne. Ca d'vait arriver un jour ou l'autre. Dommage.}{}{}{}{}
+{673}{Connaissez-vous une personne susceptible de m'amener sur l'île ?}{}{5}{}{677}{}
+{674}{Je dois aller sur cette île !}{}{5}{}{677}{}
+{675}{Comment moi aller sur île maint'nant ?}{}{-4}{}{677}{}
+{676}{E:}{}{1}{}{0}{}
+{677}{Eh bien... Moi et Enseigne, on parlait parfois... On se retrouvait autour d'un verre à la taverne. M'a indiqué l'chemin... Ouais... J'peux p'têt' vous amener là-bas. Mais ça vous coûtera d'l'argent. Beaucoup d'argent...}{Eh bien... Moi et Enseigne, on parlait parfois... On se retrouvait autour d'un verre à la taverne. M'a indiqué l'chemin... Ouais... J'peux p'têt' vous amener là-bas. Mais ça vous coûtera d'l'argent. Beaucoup d'argent...}{}{}{}{}
+{678}{Combien ?}{}{5}{}{681}{}
+{679}{Combien sous ?}{}{-4}{}{681}{}
+{680}{F:}{}{1}{}{0}{}
+{681}{[Il vous regarde fixement] C'est une chose dangereuse que vous m'demandez de faire, m'sieur. Enseigne était à ma connaissance le seul homme à être revenu vivant d'cette maudite île...}{[Il vous regarde fixement] C'est une chose dangereuse que vous m'demandez de faire, m'dame. Enseigne était à ma connaissance le seul homme à être revenu vivant d'cette maudite île...}{}{}{}{}
+{682}{Combien !?}{}{5}{}{685}{}
+{683}{Combien argent !?}{}{-4}{}{685}{}
+{684}{F:}{}{1}{}{0}{}
+{685}{Pour risquer mon bateau, ma vie et celle de mon équipage... Cinq mille. Pas moins.}{Pour risquer mon bateau, ma vie et celle de mon équipage... Cinq mille. Pas moins.}{}{}{}{}
+{686}{C'est absurde !}{}{5}{}{691}{}
+{687}{C'est du vol ! Très bien ! Voici l'argent, en route !}{}{5}{$$5000}{-32}{}
+{688}{Ca être trop !}{}{-4}{}{691}{}
+{689}{Oh ! Ca être beaucoup... [Vous réfléchissez un moment] Accord. Vous prendre. Nous partir.}{}{-4}{$$5000}{-32}{}
+{690}{F:}{}{1}{}{0}{}
+{691}{C'est ma dernière offre. Ca m'étonnerait que vous en trouviez une meilleure. Qu'est-ce que vous en dites ?}{C'est ma dernière offre. Ca m'étonnerait que vous en trouviez une meilleure. Qu'est-ce que vous en dites ?}{}{}{}{}
+{692}{Très bien ! Voici l'argent, en route !}{}{5}{$$5000}{-32}{}
+{693}{[Vous réfléchissez un moment] Accord. Vous prendre. Nous partir maintenant.}{}{-4}{$$5000}{-32}{}
+{694}{F:}{}{1}{}{0}{}
+{695}{Oh ! Je comprends... [pauvre ignorant] Vous voulez payer votre voyage !  ... Eh bien... Vous m'avez l'air costaud. Je suppose que vous pourriez travailler pour payer la traversée. Je pars pour Tarante tout de suite. Je vous laisse embarquer si vous voulez travailler pour moi.}{Oh ! Je comprends... Vous voulez payer votre voyage !  ... Eh bien... Vous me semblez euh... avoir un corps pas mal. Peut-être pourriez-vous le " mettre à contribution " pour payer votre voyage. Si vous voyez c'que j'veux dire. Je pars pour Tarante tout de suite. J'accepte de vous transporter si vous vous occupez d'moi et d'mes hommes. Etes-vous prête à partir ?}{}{}{}{}
+{696}{Euh... Accord. Moi monter bateau.}{}{-4}{}{-20}{}
+{697}{E:}{}{1}{}{0}{}
+{698}{C'est juste là. [Il vous montre un emplacement sur la carte.]}{C'est juste là. [Il vous montre un emplacement sur la carte.]}{}{}{}{mm 8}
+{699}{E:}{}{1}{}{0}{}
+{700}{Aargh ! Z'avez perdu la raison ? Ce bateau n'ira jamais là-bas !}{Aargh ! Z'avez perdu la raison ? Ce bateau n'ira jamais là-bas !}{}{}{}{}
+{701}{Où être Racine Nouare ?}{}{-4}{}{703}{}
+{702}{E:}{}{1}{}{0}{}
+{703}{C'est là. [Il vous montre un emplacement sur la carte.]}{C'est là. [Il vous montre un emplacement sur la carte.]}{}{}{}{mm 3}
+{704}{E:}{}{1}{}{0}{}
+{705}{Argh... Que la marée nous soit favorable  Z'êtes prêt à partir ?}{Argh... Que la marée nous soit favorable. Z'êtes prête à partir ?}{}{}{}{}
+{706}{Oui.}{}{5}{lf6 1}{-26}{}
+{707}{Oui.}{}{5}{lf15 1}{-22}{}
+{708}{Euh... Ouais. Nous partir maintenant.}{}{-4}{lf6 1}{-26}{}
+{709}{Euh... Ouais. Nous partir maintenant.}{}{-4}{lf15 1}{-22}{}
+{710}{F:}{}{1}{}{0}{}
+{711}{Argh... C'est ma route. Aux mêmes conditions qu'la fois d'avant... C'est d'accord ?}{Argh... C'est ma route. Aux mêmes conditions qu'la fois d'avant... C'est d'accord ?}{}{}{}{}
+{712}{Euh... Accord. Moi monter bateau.}{}{-4}{}{-20}{}
+{713}{F:}{}{1}{}{0}{}
+

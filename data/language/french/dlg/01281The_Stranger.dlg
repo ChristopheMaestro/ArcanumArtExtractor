@@ -1,0 +1,59 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Salutations. Puis-je vous demander qui vous êtes, monsieur ?}{}{5}{me 0}{10}{}
+{3}{Bonjour la compagnie. Vous avez un moment ?}{}{5}{me 1}{81}{}
+{5}{Euh... Moi pas tout comprendre. Vous qui ?}{}{-4}{me 0}{10}{}
+{6}{Bonjour ! J'ai questions !}{}{-4}{me 1}{20}{}
+{7}{E:}{}{1}{}{0}{}
+{10}{[L'homme qui se tient devant vous porte un vêtement sombre. Il jette furtivement un oeil à droite et à gauche, puis vous regarde sans ciller, avec des yeux durs.] Vous feriez mieux de garder vos questions pour vous, camarade. Un type comme vous s'attire facilement des ennuis. Ne vous vexez pas... C'est simplement la façon dont les choses fonctionnent ici...}{[L'homme qui se tient devant vous porte un vêtement sombre. Il jette furtivement un oeil à droite et à gauche, puis vous regarde sans ciller, avec des yeux durs.] Vous feriez mieux de garder vos questions pour vous. Une demoiselle comme vous s'attire facilement des ennuis.}{}{}{}{}
+{11}{Merci du conseil, camarade.}{}{5}{}{20}{re +5 }
+{12}{Vraiment ? Vous pourriez être plus précis ?}{}{5}{}{55}{re -5}
+{14}{Euh... D'accord !}{}{-4}{}{20}{re +5 }
+{15}{Vous dire choses dures... Moi casser tête à vous...}{}{-4}{}{55}{re -5}
+{16}{E:}{}{1}{}{0}{}
+{20}{[L'homme vous toise d'un air calculateur... Puis semble se décider.] Est-ce que vous cherchez du travail, camarade ? Etes-vous un homme capable de tenir sa langue... et grand amateur d'or ?}{[L'homme vous toise d'un air calculateur... Puis semble se décider.] Est-ce que vous cherchez du travail, camarade ? Etes-vous une femme capable de tenir sa langue... et aimez-vous l'or ?}{}{}{}{}
+{21}{J'apprécierais beaucoup votre proposition de travail... Je ne connais personne ici...}{}{5}{}{30}{re +5}
+{22}{Je ne crois pas, mais merci quand même pour votre proposition. Bonne journée...}{}{5}{}{0}{}
+{23}{Comme si j'allais accepter de travailler pour un dégénéré comme vous...}{}{5}{lf4 0}{55}{re -5, lf4 1}
+{24}{Euh... oui ! Moi besoin argent !}{}{-4}{}{27}{}
+{25}{E:}{}{-4}{}{0}{}
+{27}{[Il s'approche, et son visage se durcit.] C'est pour un gros coup, camarade. Vous semblez avoir l'esprit un peu lent, mais n'allez pas croire que je vous laisserai partir en paix si vous gâchez l'affaire. Je ne tolère pas l'échec...}{[Il s'approche, et son visage se durcit.] C'est pour un gros coup, camarade. Vous semblez avoir l'esprit un peu lent, mais n'allez pas croire que je vous laisserai partir en paix si vous gâchez l'affaire. Je ne tolère pas l'échec...}{}{}{}{}
+{28}{Moi compris ! Je dois quoi faire ?}{}{-4}{}{40}{}
+{29}{Euh... Moi pas aimer ça. Préfère partir...}{}{-4}{}{35}{lf1 1}
+{30}{[Il s'approche, et son visage se durcit.] C'est pour un gros coup, camarade. Le travail n'est pas difficile, mais en cas d'échec, vous paierez de votre vie. Nous sommes bien d'accord ?}{[Il s'approche, et son visage se durcit.] C'est pour un gros coup, camarade. Le travail n'est pas difficile, mais en cas d'échec, vous paierez de votre vie. Nous sommes bien d'accord ?}{}{}{}{}
+{31}{Parfaitement... Que dois-je faire ?}{}{5}{}{40}{}
+{32}{Je ne suis peut-être pas la personne qu'il vous faut...}{}{5}{}{35}{lf1 1}
+{35}{[L'homme esquisse un léger sourire.] Cela vaut peut-être mieux, étranger. Ce n'est pas un travail à prendre à la légère. Mais, si vous changez d'avis, je serai dans le coin...}{[L'homme esquisse un léger sourire.] Cela vaut peut-être mieux, étrangère. Ce n'est pas un travail à prendre à la légère. Mais, si vous changez d'avis, je serai dans le coin...}{}{}{}{}
+{36}{E:}{}{1}{}{0}{}
+{40}{Voici la marche à suivre, camarade. Dans la main, j'ai une note cachetée. Vous la prendrez et la porterez directement à l'adresse que je vais vous donner. En aucun cas, vous ne devrez regarder cette note. Si vous le faites, nous le saurons immédiatement, et cela pourrait avoir de fâcheuses conséquences pour vous. Vous recevrez 100 pièces d'or pour votre peine. Vous ne poserez aucune question.}{Voici la marche à suivre, camarade. Dans la main, j'ai une note cachetée. Vous la prendrez et la porterez directement à l'adresse que je vais vous donner. En aucun cas, vous ne devrez regarder cette note. Si vous le faites, nous le saurons immédiatement, et cela pourrait avoir de fâcheuses conséquences pour vous. Vous recevrez 100 pièces d'or pour votre peine. Vous ne poserez aucune question.}{}{}{}{qu1061 1}
+{41}{Je suis votre homme.}{ 1}{5}{}{48}{qu1061 2}
+{42}{Je suis la personne qu'il vous faut.}{ 0}{5}{}{48}{qu1061 2}
+{43}{Je préférerais ne rien avoir à faire dans tout ceci.  Bonne journée...}{}{5}{}{35}{lf1 1}
+{44}{D'ac-cord.}{}{-4}{}{48}{qu1061 2}
+{45}{Euh... Moi pas vouloir faire travail...}{}{-4}{}{35}{lf1 1}
+{48}{Très bien. [Il vous tend la note.] Comme je vous l'ai expliqué, vous ne devez pas ouvrir cette note. Allez la porter au 36 cours du Derviche puis venez récupérer votre argent. Je vous souhaite une bonne journée.}{Très bien. [Il vous tend la note.] Comme je vous l'ai expliqué, vous ne devez pas ouvrir cette note. Allez la porter au 36 cours du Derviche puis venez récupérer votre argent. Je vous souhaite une bonne journée.}{}{}{}{in -5219}
+{49}{Bonne journée à vous.}{}{5}{}{0}{lf2 1}
+{50}{Ar'voir.}{}{-4}{}{0}{lf2 1}
+{55}{[L'homme adopte un ton menaçant.] Vous ne savez pas ce que vous faites, mon garçon. Je vous conseille vivement de disparaître.}{[L'homme adopte un ton menaçant.] Vous ne savez pas ce que vous faites, ma belle. Je vous conseille vivement de disparaître.}{}{}{}{}
+{56}{Et moi je vous conseille de vous défendre, lâche !}{}{5}{}{}{co, fl 61}
+{57}{Vous n'êtes manifestement pas à la hauteur du défi. Bonne journée à vous.}{}{5}{}{0}{lf3 1}
+{58}{Euh... Vous dire n'importe quoi. Moi partir maintenant.}{}{-4}{}{}{co, fl 61}
+{59}{Moi faire mourir vous !}{}{-4}{}{0}{lf3 1}
+{61}{Vous importunez la mauvaise personne, mon garçon.}{Vous importunez la mauvaise personne, ma belle.}{}{}{}{}
+{63}{Ah... Quelle langue bien pendue. Vous avez toujours autant de mal à la tenir, mon garçon ?}{Ah... Quelle langue bien pendue. Vous avez toujours autant de mal à la tenir, ma belle ?}{}{}{}{}
+{64}{Ecoutez... Nous avons peut-être pris un mauvais départ...}{}{5}{}{69}{re +5}
+{65}{Non... Je suis de retour pour en finir avec vous.}{}{5}{}{}{co, fl 61}
+{66}{Moi regrette début... Peut-être nous devenir amis ?}{}{-4}{}{69}{re +5}
+{67}{Euh, non... Moi juste revenir pour tuer vous.}{}{-4}{}{}{co, fl 61}
+{69}{Je vois. Oui, nous pouvons peut-être reprendre notre conversation...}{Je vois. Oui, nous pouvons peut-être reprendre notre conversation...}{}{}{}{}
+{70}{Ce serait formidable...}{}{5}{}{20}{lf3 0}
+{71}{Oui !}{}{-4}{}{20}{lf3 0}
+{73}{Vous êtes revenu ? Vous avez changé d'avis à propos du travail que je vous ai proposé ?}{Vous êtes revenue ? Vous avez changé d'avis à propos du travail que je vous ai proposé ?}{}{}{}{}
+{74}{Je crois que oui. Récapitulons la marche à suivre.}{}{5}{}{40}{}
+{76}{Euh... Quoi c'travail déjà ?}{}{-4}{}{40}{}
+{77}{E:}{}{1}{}{0}{}
+{79}{Nous n'avons rien à nous dire, camarade. En ce qui vous concerne, vous ne m'avez jamais rencontré.}{Nous n'avons rien à nous dire, camarade. En ce qui vous concerne, vous ne m'avez jamais rencontré.}{}{}{}{}
+{81}{Oui ?}{Oui ?}{}{}{}{}
+{82}{Je pensais que nous pourrions reprendre notre conversation...}{}{5}{}{20}{}
+{84}{Euh... Nous reparler ?}{}{-4}{}{20}{}
+{85}{E:}{}{-4}{}{0}{}
+

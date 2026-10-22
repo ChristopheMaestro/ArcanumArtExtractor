@@ -1,0 +1,113 @@
+{1}{G:}{}{}{}{}{lf 13 0, lf 14 0}
+{2}{Bonjour. }{}{5}{lf1 0, re 41}{25}{}
+{3}{Vous accueillez toujours vos clients de cette manière ?!}{}{5}{lf1 0, re -40}{19}{}
+{4}{Bonjour, aubergiste. Puis-je vous importuner quelques instants ?}{}{5}{lf1 1, re 41}{25}{}
+{5}{Euh... Puis-je vous poser une question, aubergiste ?}{}{5}{lf1 1, re -40}{25}{}
+{13}{Pouvez-vous répondre à quelques questions au sujet de cette boîte d'allumettes ?}{}{5}{in5671}{93}{}
+{14}{Vous être qui ?}{}{-4}{lf1 0, re 41}{25}{}
+{15}{Vous être qui, méchante ?}{}{-4}{lf1 0, re -40}{19}{}
+{16}{Moi pouvoir parler à aubergiste ?}{}{-4}{lf1 1, re 41}{25}{}
+{17}{Euh... Moi pouvoir demander kék'chose à aubergiste ?}{}{-4}{lf1 1, re -40}{25}{}
+{18}{E:}{}{1}{}{0}{}
+{19}{On ne sert pas les individus de votre espèce ici. Débarrassez-moi le plancher ou je serai forcé d'appeler le garde.}{On ne sert pas les créatures de votre espèce ici. Débarrassez-moi le plancher ou je serai forcé d'appeler le garde.}{}{}{}{}
+{20}{Euh... J'ai de l'argent...}{}{5}{}{83}{}
+{21}{Pff ! Tant pis, j'irai offrir mon argent à quelqu'un d'autre !}{}{5}{}{83}{}
+{22}{Euh... Moi avoir sous...}{}{-4}{}{83}{}
+{23}{Pff ! Moi offrir sous ailleurs alors !}{}{-4}{}{83}{}
+{24}{F:}{}{1}{}{0}{}
+{25}{En quoi puis-je vous être utile ?}{En quoi puis-je vous être utile ?}{}{}{}{}
+{26}{J'aimerais réserver une chambre pour la nuit.}{}{5}{lf 10 0}{45}{}
+{27}{Je vais rester dans cette ville un certain temps. J'aimerais réserver une chambre pour la semaine.}{}{5}{ha7, lf 10 0}{52}{}
+{28}{Je vais rester dans cette ville un certain temps. J'aimerais réserver une chambre pour la semaine.}{}{5}{ha-6, lf 10 0}{57}{}
+{29}{Moi pouar rester pou la nuit ?}{}{-4}{lf 10 0}{45}{}
+{30}{Moi ici peut-être longtemps. Moi pouvoir réserver chambre pour une semaine ?}{}{-4}{ha7, lf 10 0}{52}{}
+{31}{Moi ici peut-être longtemps. Moi pouvoir réserver chambre pour une semaine ?}{}{-4}{ha-6, lf 10 0}{57}{}
+{32}{C:}{}{1}{}{35}{}
+{33}{E:}{}{1}{}{0}{}
+{34}{}{}{}{}{}{}
+{35}{Désirez-vous autre chose ?}{Désirez-vous autre chose ?}{}{}{}{}
+{36}{J'aimerais réserver une chambre pour la nuit.}{}{5}{lf 10 0}{45}{}
+{37}{Je vais rester dans cette ville un certain temps. J'aimerais réserver une chambre pour la semaine.}{}{5}{ha7, lf 10 0}{52}{}
+{38}{Je vais rester dans cette ville un certain temps. J'aimerais réserver une chambre pour la semaine.}{}{5}{ha-6, lf 10 0}{57}{}
+{39}{Moi pouar rester pou la nuit ?}{}{-4}{lf 10 0}{45}{}
+{40}{Moi ici peut-être longtemps. Moi pouvoir réserver chambre pour une semaine ?}{}{-4}{ha7, lf 10 0}{52}{}
+{41}{Moi ici peut-être longtemps. Moi pouvoir réserver chambre pour une semaine ?}{}{-4}{ha-6, lf 10 0}{57}{}
+{42}{C:}{}{1}{lf 14 0}{35}{lf 14 1}
+{43}{E:}{}{1}{}{0}{}
+{44}{}{}{}{}{}{}
+{45}{Oh, mais bien sûr, monsieur. Cela vous fera 25 pièces, s'il vous plaît.}{Oh, mais bien sûr, madame. Cela vous fera 25 pièces, s'il vous plaît.}{}{}{}{}
+{46}{Voilà.}{}{5}{$$ 25}{-2}{$$-25, lf 10 1}
+{47}{Oh ! C'est un peu cher... [soupir] Tenez.}{}{5}{$$ 25}{-2}{$$-25, lf 10 1}
+{48}{Euh... Voilà.}{}{-4}{$$ 25}{-2}{$$-25, lf 10 1}
+{49}{Oh ! Ca être beaucoup... [soupir] Voilà.}{}{-4}{$$ 25}{-2}{$$-25, lf 10 1}
+{50}{Très bien, mais pour le moment, j'ai d'autres questions.}{}{5}{}{35}{}
+{51}{Euh... Moi avoir autres questions.}{}{-4}{}{35}{}
+{52}{Mais bien sûr, monsieur ! Nous serions très heureux de vous avoir dans notre établissement pour un long séjour. Hum... Comme vous êtes un client fidèle, j'ai décidé de vous faire un prix pour la semaine : 130 pièces et l'affaire est conclue.}{Mais bien sûr, madame ! Nous serions très heureux de vous avoir dans notre établissement pour un long séjour. Hum... Comme vous êtes une cliente fidèle, j'ai décidé de vous faire un prix pour la semaine : 130 pièces et l'affaire est conclue}{}{}{}{}
+{53}{Merci. Voilà.}{}{5}{$$ 130}{-5}{$$-130, lf 10 1}
+{54}{Euh... Marsi. Voilà.}{}{-4}{$$ 130}{-5}{$$-130, lf 10 1}
+{55}{Très bien, mais pour le moment, j'ai d'autres questions.}{}{5}{}{35}{}
+{56}{Euh... Moi avoir autres questions.}{}{-4}{}{35}{}
+{57}{Oh ! Mais naturellement... Cela fera 175 pièces pour une semaine, monsieur.}{Oh ! Mais naturellement... Cela fera 175 pièces pour une semaine, madame.}{}{}{}{}
+{58}{Merci. Voilà.}{}{5}{$$ 175}{-5}{$$-175, lf 10 1}
+{59}{Quoi ? Me feriez-vous un prix si je payais en avance ?}{}{5}{}{78}{}
+{60}{Euh... Marsi. Voilà.}{}{-4}{$$ 175}{-5}{$$-175, lf 10 1}
+{61}{Quoi ? Pas moins cher si rester plus longtemps ?}{}{-4}{}{78}{}
+{62}{Très bien, mais pour le moment, j'ai d'autres questions.}{}{5}{}{35}{}
+{63}{Euh... Moi avoir autres questions.}{}{-4}{}{35}{}
+{64}{Merci, monsieur ! Votre chambre est au fond du couloir. La porte ne sera pas fermée à clé. Je vous souhaite un agréable séjour.}{Merci, madame ! Votre chambre est au fond du couloir. La porte ne sera pas fermée à clé. Je vous souhaite un agréable séjour.}{}{}{}{}
+{65}{Merci.}{}{5}{}{0}{}
+{66}{Euh... Marsi.}{}{-4}{}{0}{}
+{67}{K:}{}{1}{}{35}{}
+{68}{C:}{}{1}{lf 14 0}{35}{lf 14 1}
+{69}{E:}{}{1}{}{0}{}
+{71}{Merci, monsieur ! Votre chambre est au fond du couloir. La porte ne sera pas fermée à clé. Je vous souhaite un agréable séjour.}{Merci, madame ! Votre chambre est au fond du couloir. La porte ne sera pas fermée à clé. Je vous souhaite un agréable séjour.}{}{}{}{}
+{72}{Merci.}{}{5}{}{0}{}
+{73}{Euh... Marsi.}{}{-4}{}{0}{}
+{74}{K:}{}{1}{}{35}{}
+{75}{C:}{}{1}{lf 14 0}{35}{lf 14 1}
+{76}{E:}{}{1}{}{0}{}
+{78}{Nous sommes désolés, monsieur. Nous avons eu beaucoup de réservations ces derniers temps. Nous n'avons plus qu'une chambre de libre, et encore, c'est une chance. Si vous ne la prenez pas, d'autres s'en chargeront.}{Nous sommes désolés, madame. Nous avons eu beaucoup de réservations ces derniers temps. Nous n'avons plus qu'une chambre de libre, et encore, c'est une chance. Si vous ne la prenez pas, d'autres s'en chargeront.}{}{}{}{}
+{79}{[soupir] Tenez.}{}{5}{$$ 175}{-5}{$$-175, lf 10 1}
+{80}{[soupir] Tenez.}{}{-4}{$$ 175}{-5}{$$-175, lf 10 1}
+{81}{Très bien, mais pour le moment, j'ai d'autres questions.}{}{5}{}{35}{}
+{82}{Euh... Moi avoir autres questions.}{}{-4}{}{35}{}
+{83}{Oh !... Veuillez accepter mes excuses, monsieur. Je vous confondais avec une autre personne. En quoi puis-je vous aider ?}{Oh !... Veuillez accepter mes excuses, madame. Je vous confondais avec une autre personne. En quoi puis-je vous aider ?}{}{}{}{}
+{84}{J'aimerais réserver une chambre pour la nuit.}{}{5}{lf 10 0}{45}{}
+{85}{Je vais rester dans cette ville un certain temps. J'aimerais réserver une chambre pour la semaine.}{}{5}{ha7, lf 10 0}{52}{}
+{86}{Je vais rester dans cette ville un certain temps. J'aimerais réserver une chambre pour la semaine.}{}{5}{ha-6, lf 10 0}{57}{}
+{87}{Moi pouar rester pou la nuit ?}{}{-4}{lf 10 0}{45}{}
+{88}{Moi ici peut-être longtemps. Moi pouvoir réserver chambre pour une semaine ?}{}{-4}{ha7, lf 10 0}{52}{}
+{89}{Moi ici peut-être longtemps. Moi pouvoir réserver chambre pour une semaine ?}{}{-4}{ha-6, lf 10 0}{57}{}
+{90}{C:}{}{1}{lf 14 0}{35}{lf 14 1}
+{91}{E:}{}{1}{}{0}{}
+{93}{Une boîte d'allumettes ? Oui... Elle vient bien d'ici. Que souhaitez-vous savoir concernant cet objet, monsieur ?}{Une boîte d'allumettes ? Oui... Elle vient bien d'ici. Que souhaitez-vous savoir concernant cet objet, madame ?}{}{}{}{}
+{94}{Je l'ai trouvée sur le cadavre d'un homme mort dans l'accident du Zéphyr. Sauriez-vous qui peut bien être cet individu ?}{}{5}{}{97}{}
+{95}{E:}{}{1}{}{0}{}
+{97}{Non... Je ne vois pas... Attendez ! Si... Si. Je connais une personne qui aurait pu...}{Non... Je ne vois pas... Attendez ! Si... Si. Je connais une personne qui aurait pu...}{}{}{}{}
+{98}{Qui ?}{}{5}{}{100}{}
+{99}{E:}{}{1}{}{0}{}
+{100}{Ma foi... C'est une bien curieuse histoire. Une nuit, j'ai remarqué des lumières et des bruits étranges provenant du Cirque. Lorsque tout ce tintamarre a enfin cessé, un homme hagard et complètement débraillé est arrivé ici et m'a demandé une chambre pour la nuit. Ce pauvre type ressemblait à un épouvantail.}{Ma foi... C'est une bien curieuse histoire. Une nuit, j'ai remarqué des lumières et des bruits étranges provenant du Cirque. Lorsque tout ce tintamarre a enfin cessé, un homme hagard et complètement débraillé est arrivé ici et m'a demandé une chambre pour la nuit. Ce pauvre type ressemblait à un épouvantail.}{}{}{}{}
+{101}{Vraiment ? Qu'avait-il de si étrange ?}{}{5}{}{104}{}
+{102}{A quoi ressemblait-il ?}{}{5}{}{104}{}
+{103}{E:}{}{1}{}{0}{}
+{104}{Il avait l'air curieux... Il était maigre, rasé de près, mais il avait des traits et des vêtements de nain... Et pourtant, il ne pouvait pas s'agir d'un nain ! En effet, je n'en connais aucun qui accepterait de se couper la barbe... Même aujourd'hui, je me pose encore des questions au sujet de sa race. }{Il avait l'air curieux... Il était maigre, rasé de près, mais il avait des traits et des vêtements de nain... Et pourtant, il ne pouvait pas s'agir d'un nain ! En effet, je n'en connais aucun qui accepterait de se couper la barbe... Même aujourd'hui, je me pose encore des questions au sujet de sa race. }{}{}{}{}
+{105}{Comme c'est étrange...}{}{5}{}{108}{}
+{106}{Que s'est-il passé d'autre ?}{}{5}{}{108}{}
+{107}{E:}{}{1}{}{0}{}
+{108}{Il n'avait pas d'argent sur lui. J'allais le mettre dehors quand il m'a proposé une superbe lame de nain en échange. C'était un objet magnifique, qui portait les initiales C.M.N. gravées dessus. Je l'ai revendue à très bon prix...}{Il n'avait pas d'argent sur lui. J'allais le mettre dehors quand il m'a proposé une superbe lame de nain en échange. C'était un objet magnifique, qui portait les initiales C.M.N. gravées dessus. Je l'ai revendue à très bon prix...}{}{}{}{}
+{109}{C'était sûrement un nain ! Que s'est-il passé ensuite ?}{}{5}{}{112}{}
+{110}{Vous a-t-il dit quelque chose ?}{}{5}{}{112}{}
+{111}{E:}{}{1}{}{0}{}
+{112}{Il m'a seulement demandé quel était le chemin le plus court pour aller à Tarante. Je lui ai répondu que la route était longue mais qu'il avait de la chance ! En effet, le Zéphyr était sur le point d'effectuer son premier vol à partir de Caladon. C'était sûrement le moyen le plus rapide pour se rendre à Tarante.}{Il m'a seulement demandé quel était le chemin le plus court pour aller à Tarante. Je lui ai répondu que la route était longue mais qu'il avait de la chance ! En effet, le Zéphyr était sur le point d'effectuer son premier vol à partir de Caladon. C'était sûrement le moyen le plus rapide pour se rendre à Tarante.}{}{}{}{}
+{113}{Ce n'est certainement pas la chance qui a conduit les gens à s'embarquer à bord de ce maudit dirigeable...}{}{5}{}{116}{}
+{114}{... et pour rejoindre l'au-delà.}{}{5}{}{116}{}
+{115}{E:}{}{1}{}{0}{}
+{116}{Oui... L'accident du Zéphyr a été une terrible tragédie. Ah oui... Je l'ai informé qu'il aurait besoin de fournir une pièce d'identité pour embarquer. Comme il m'avait l'air d'être le genre de type à ne pas avoir de papiers, je lui ai conseillé d'aller voir Monsieur Razzia, à Caladon, un individu assez louche mais très utile lorsqu'il s'agit d'obtenir un passeport...}{Oui... L'accident du Zéphyr a été une terrible tragédie. Ah oui... Je l'ai informé qu'il aurait besoin de fournir une pièce d'identité pour embarquer. Comme il m'avait l'air d'être le genre de type à ne pas avoir de papiers, je lui ai conseillé d'aller voir Monsieur Razzia, à Caladon, un individu assez louche mais très utile lorsqu'il s'agit d'obtenir un passeport...}{}{}{}{gf2410 1}
+{117}{Il a donc affirmé vouloir embarquer à bord du Zéphyr ? Vous en êtes sûre ?}{}{5}{}{120}{}
+{118}{Il a donc embarqué à bord du Zéphyr... Vous en êtes sûre ?}{}{5}{}{120}{}
+{119}{E:}{}{1}{}{0}{}
+{120}{Il m'a exprimé sa gratitude et s'est dirigé vers sa chambre. A mon réveil, le lendemain matin, sa chambre était vide. Il avait disparu sans un mot. Vous voyez, c'était vraiment un type étrange. C'est la seule personne que je connaisse qui ait pu embarquer à bord de ce maudit Zéphyr.}{Il m'a exprimé sa gratitude et s'est dirigé vers sa chambre. A mon réveil, le lendemain matin, sa chambre était vide. Il avait disparu sans un mot. Vous voyez, c'était vraiment un type étrange. C'est la seule personne que je connaisse qui ait pu embarquer à bord de ce maudit Zéphyr.}{}{}{}{}
+{121}{Merci pour ces informations.}{}{5}{}{0}{}
+{122}{K:}{}{5}{}{35}{}
+{123}{E:}{}{1}{}{0}{}
+

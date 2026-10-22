@@ -1,0 +1,113 @@
+{1}{G:}{G:}{}{}{}{ }
+{2}{W:}{}{5}{qu1078 0, re 41, lf1 0}{10}{lf1 1 }
+{3}{J'ai décidé de vous emmener à Tarante.}{}{5}{qu1078 1}{50}{qu1078 2 }
+{4}{Qu'en est-il de ce travail de guide dont vous m'avez parlé, alors ?}{}{5}{qu1078 0, lf2 1}{40}{ }
+{6}{Excusez-moi, je ne pensais pas à mal.}{}{5}{re-40, ch-13}{150}{re+10 }
+{7}{Je vous demande pardon ?}{}{5}{re-40, ch14}{130}{re+15 }
+{9}{E:}{}{1}{}{0}{ }
+{10}{Je m'appelle Preste. Vous êtes un aventurier, n'est-ce pas ?}{Je m'appelle Preste. Vous êtes une aventurière, n'est-ce pas ?}{}{}{}{ }
+{13}{Oui, en effet. Pourquoi cette question ?}{}{5}{}{20}{ }
+{14}{Non.}{}{5}{}{0}{fl 180}
+{19}{E:}{}{1}{}{0}{ }
+{20}{Dites-moi, connaissez-vous cette magnifique cité qu'est Tarante ?}{Dites-moi, connaissez-vous cette magnifique cité qu'est Tarante ?}{}{}{}{ }
+{21}{Oui, je la connais.}{}{5}{ar21}{30}{ }
+{22}{Non, je ne la connais pas.}{}{5}{ar-21}{160}{ }
+{23}{En quoi cela vous regarde-t-il, mademoiselle ?}{}{5}{}{190}{re-5 }
+{30}{Un travail de guide vous intéresserait-il ?}{Un travail de guide vous intéresserait-il ?}{}{}{}{lf2 1 }
+{31}{Pourriez-vous m'en dire plus ?}{}{5}{}{40}{ }
+{32}{Je ne pense pas que cela m'intéresse pour le moment.}{}{5}{}{60}{ }
+{40}{Je vous offrirai 300 pièces si vous m'emmenez à Tarante.}{Je vous offrirai 300 pièces si vous m'emmenez à Tarante.}{}{}{}{qu1078 1 }
+{41}{Le marché me semble intéressant.}{}{5}{ha-11}{50}{lf3 1, qu1078 2 }
+{42}{J'accepte ce travail pour 350 pièces.}{}{5}{ha12, ha-12}{80}{lf4 1, qu1078 2 }
+{43}{J'accepte ce travail pour 400 pièces.}{}{5}{ha13, ha-13}{80}{lf5 1, qu1078 2 }
+{44}{J'accepte ce travail pour 450 pièces.}{}{5}{ha14, ha-14}{80}{lf6 1, qu1078 2 }
+{45}{Pourquoi voulez-vous aller là-bas ?}{}{5}{lf7 0}{120}{lf7 1 }
+{49}{Cela ne m'intéresse pas. Bonne journée.}{}{5}{}{60}{ }
+{50}{Oooh ! Je vais aller à Tarante ! Que je suis heureuse ! [Elle sautille sur place puis vous serre dans ses bras.]}{Oooh ! Je vais aller à Tarante ! Que je suis heureuse ! [Elle sautille sur place puis vous serre dans ses bras.]}{}{}{}{ }
+{51}{Quel âge avez-vous, au juste ?}{}{5}{}{70}{ }
+{52}{Euh, d'accord. Pouvons-nous partir maintenant ?}{}{5}{}{0}{jo1 90}
+{60}{Pourquoi pas ? S'il vous plaît ! Il faut absolument que j'aille à Tarante !}{Pourquoi pas ? S'il vous plaît ! Il faut absolument que j'aille à Tarante !}{}{}{}{ }
+{61}{Cela vous coûtera 350 pièces, alors.}{}{5}{ha-11}{80}{lf4 1, qu1078 2 }
+{62}{Cela vous coûtera 400 pièces, alors.}{}{5}{ha12, ha-12}{80}{lf5 1, qu1078 2 }
+{63}{Cela vous coûtera 450 pièces, alors.}{}{5}{ha13, ha-13}{80}{lf6 1, qu1078 2 }
+{68}{Pourquoi voulez-vous aller là-bas ?}{}{5}{lf7 0}{120}{lf7 1 }
+{69}{Cela ne m'intéresse pas d'être guide. Bonne journée.}{}{5}{}{0}{ }
+{70}{J'ai 150 ans. Pourquoi ?}{J'ai 150 ans. Pourquoi ?}{}{}{}{ }
+{71}{Est-il bien raisonnable qu'une jeune elfe comme vous se promène ainsi seule ?}{}{5}{ra-3}{100}{re-5 }
+{72}{C'est un peu jeune pour sortir seule, non ?}{}{5}{ra3}{100}{re-5 }
+{73}{Je n'emmènerai pas une elfe immature à Tarante. Toutes mes excuses.}{}{5}{ra-3}{110}{re-10 }
+{74}{Je n'emmènerai pas quelqu'un d'aussi immature que vous à Tarante. Toutes mes excuses.}{}{5}{ra3}{110}{re-10 }
+{79}{Par simple curiosité. Pouvons-nous y aller ?}{}{5}{}{0}{jo1 90}
+{80}{C'est beaucoup trop cher ! [Elle réfléchit un moment.] Très bien, j'accepte. Mais je vous trouve vraiment sans coeur.}{C'est beaucoup trop cher ! [Elle réfléchit un moment.] Très bien, j'accepte. Mais je vous trouve vraiment sans coeur.}{}{}{}{ }
+{81}{Sans coeur ? Quel âge avez-vous, au juste ?}{}{5}{}{70}{ }
+{82}{Euh, d'accord. Pouvons-nous partir maintenant ?}{}{5}{}{0}{jo1 90}
+{90}{Oui.}{Oui.}{}{}{}{ }
+{91}{Allons-y, alors.}{}{5}{}{0}{ }
+{100}{Qu'insinuez-vous ? Je suis assez mature pour décider de ce que je dois faire !}{Qu'insinuez-vous ? Je suis assez mature pour décider de ce que je dois faire !}{}{}{}{ }
+{101}{Je n'en doute pas. Pouvons-nous y aller ?}{}{5}{}{0}{jo1 90}
+{102}{Cela reste à prouver.}{}{5}{}{110}{re-5 }
+{110}{[Elle éclate en sanglots.] Pourquoi êtes-vous si méchant avec moi ?}{[Elle éclate en sanglots.] Pourquoi êtes-vous si méchante avec moi ?}{}{}{}{ }
+{111}{Je ne fais pas preuve de méchanceté, je suis simplement réaliste. Je ne peux pas vous emmener.}{}{5}{}{0}{qu1078 6, fl 200}
+{112}{Je regrette. Je ne voulais pas vous faire de peine. Pouvons-nous y aller ?}{}{5}{}{0}{jo1 90}
+{113}{Ecoutez, crétine. Arrêtez de pleurnicher ou je ne vous emmène nulle part.}{}{5}{}{0}{qu1078 6, fl 210}
+{120}{Tout le monde y va ! J'en ai assez de cette forêt, j'ai besoin d'aventure, de piquant ! Acceptez-vous de m'emmener ?}{Tout le monde y va ! J'en ai assez de cette forêt, j'ai besoin d'aventure, de piquant ! Acceptez-vous de m'emmener ?}{}{}{}{ }
+{121}{Oui, j'accepte.}{}{5}{ha-11}{50}{lf3 1, qu1078 2 }
+{122}{J'accepte ce travail pour 350 pièces.}{}{5}{ha12, ha-12}{80}{lf4 1, qu1078 2 }
+{123}{J'accepte ce travail pour 400 pièces.}{}{5}{ha13, ha-13}{80}{lf5 1, qu1078 2 }
+{124}{J'accepte ce travail pour 450 pièces.}{}{5}{ha14, ha-14}{80}{lf6 1, qu1078 2 }
+{129}{Cela ne m'intéresse pas. Pardonnez-moi.}{}{5}{}{60}{ }
+{130}{Oh, vous êtes un aventurier, n'est-ce pas ? Je pensais que vous étiez encore l'un de ces ennuyeux touristes. Pardonnez ma grossièreté.}{Oh, vous êtes une aventurière, n'est-ce pas ? Je pensais que vous étiez encore l'un de ces ennuyeux touristes. Pardonnez ma grossièreté.}{}{}{}{ }
+{131}{Cela ne fait rien. A qui ai-je l'honneur ?}{}{5}{}{140}{lf1 1 }
+{132}{Quelle coïncidence ! Je pensais que vous n'étiez qu'une elfe ennuyeuse de plus.}{}{5}{ra-3}{0}{lf8 1, re-10, fl 200}
+{133}{Quelle coïncidence ! Je pensais que vous n'étiez qu'une ennuyeuse crétine de plus.}{}{5}{ra3}{0}{lf8 1, re-10, fl 200}
+{139}{E:}{}{5}{}{0}{ }
+{140}{Je m'appelle Preste. Vous êtes un aventurier, n'est-ce pas ?}{Je m'appelle Preste. Vous êtes une aventurière, n'est-ce pas ?}{}{}{}{ }
+{141}{Oui, en effet. Pourquoi cette question ?}{}{5}{}{20}{ }
+{142}{Non.}{}{5}{}{0}{fl 180}
+{147}{E:}{}{1}{}{0}{ }
+{150}{Pourquoi devrais-je souffrir votre présence ? Je crois que je ne vous aime pas beaucoup.}{Pourquoi devrais-je souffrir votre présence ? Je crois que je ne vous aime pas beaucoup.}{}{}{}{ }
+{151}{Cela ne fait rien. Je ne fais que passer, de toute façon.}{}{5}{}{130}{re+10 }
+{152}{Je préférerais vous frapper plutôt que discuter avec vous, de toute façon.}{}{5}{}{0}{fl 201 ,co}
+{160}{Oh. Quel dommage. J'avais besoin d'un guide pour m'emmener là-bas.}{Oh. Quel dommage. J'avais besoin d'un guide pour m'emmener là-bas.}{}{}{}{lf2 1 }
+{161}{Eh bien, si je trouve le chemin, je vous y emmènerai peut-être.}{}{5}{}{170}{ }
+{162}{E:}{}{5}{}{0}{ }
+{170}{Ce serait magnifique ! Merci.}{Ce serait magnifique ! Merci.}{}{}{}{ }
+{171}{E:}{}{5}{}{0}{ }
+{180}{Oh. Bon, alors je vous laisse. Bonne journée.}{Oh. Bon, alors je vous laisse. Bonne journée.}{}{}{}{ }
+{190}{Eh bien, quelle impolitesse ! Je crois que je ne vous aime pas beaucoup.}{Eh bien, quelle impolitesse ! Je crois que je ne vous aime pas beaucoup.}{}{}{}{ }
+{191}{Excusez-moi. Pour tout vous dire, je connais Tarante.}{}{5}{ar21}{30}{re+5 }
+{192}{Excusez-moi. Je dois vous laisser. Bonne journée.}{}{5}{ar-21}{0}{ }
+{193}{Je sais que je ne t'aime pas, traînée.}{}{5}{}{0}{lf8 1, re-10, fl 200}
+{194}{J'aime tuer les gens qui ne m'aiment pas.}{}{5}{}{0}{fl 201 ,co}
+{200}{Je ne vous aime pas ! Laissez-moi tranquille !}{Je ne vous aime pas ! Laissez-moi tranquille !}{}{}{}{ }
+{201}{Je vais vous tuer !}{Je vais vous tuer !}{}{}{}{ }
+{210}{Je n'irai nulle part avec vous ! Je vous déteste ! Laissez-moi tranquille !}{Je n'irai nulle part avec vous ! Je vous déteste ! Laissez-moi tranquille !}{}{}{}{ }
+{215}{Quoi ?}{Quoi ?}{}{}{}{ }
+{216}{Je ne vous ai jamais demandé pourquoi vous vouliez aller à Tarante.}{}{5}{lf7 0}{246}{lf7 1 }
+{219}{[Vous délivrez des instructions.]}{}{1}{}{236}{ }
+{220}{B:}{}{1}{}{226}{ }
+{225}{E:}{}{1}{}{0}{ }
+{226}{Autre chose ?}{Autre chose ?}{}{}{}{ }
+{229}{[Vous délivrez des instructions.]}{}{1}{}{236}{ }
+{230}{B:}{}{1}{}{226}{ }
+{235}{E:}{}{1}{}{0}{ }
+{236}{Que voulez-vous que je fasse ?}{Que voulez-vous que je fasse ?}{}{}{}{ }
+{237}{Eloignez-vous.}{}{1}{}{226}{so }
+{238}{Approchez-vous.}{}{1}{}{226}{sc }
+{239}{Attendez ici.}{}{1}{wa 0}{0}{wa, fl 245}
+{240}{Regroupez-vous.}{}{1}{wa 1}{0}{jo1 226}
+{241}{Dispersez-vous.}{}{1}{}{270}{lv, gf2177 1 }
+{244}{[Retour]}{}{1}{}{226}{ }
+{245}{Je vous attendrai ici.}{Je vous attendrai ici.}{}{}{}{ }
+{246}{Tout le monde y va ! J'en avais assez de Qintarra, j'avais besoin d'aventure, de piquant !}{Tout le monde y va ! J'en avais assez de Qintarra, j'avais besoin d'aventure, de piquant !}{}{}{}{ }
+{247}{Bien entendu, j'aurais dû m'en douter.}{}{5}{}{250}{ }
+{250}{Hein ? Que voulez-vous dire ?}{Hein ? Que voulez-vous dire ?}{}{}{}{ }
+{251}{Rien. Continuons notre chemin.}{}{5}{}{0}{ }
+{255}{Merci de m'avoir emmenée ici. Je vais vous laisser. Voilà l'argent que je vous ai promis.}{Merci de m'avoir emmenée ici. Je vais vous laisser. Voilà l'argent que je vous ai promis.}{}{}{}{lf9 1, qu1078 4 }
+{256}{Merci. Au revoir.}{}{5}{lf3 1}{0}{$$300, lv }
+{257}{Merci. Au revoir.}{}{5}{lf4 1}{0}{$$350, lv }
+{258}{Merci. Au revoir.}{}{5}{lf5 1}{0}{$$400, lv }
+{259}{Merci. Au revoir.}{}{5}{lf6 1}{0}{$$450, lv }
+{260}{Merci encore de m'avoir emmenée à Tarante.}{Merci encore de m'avoir emmenée à Tarante.}{}{}{}{ }
+{270}{Ne m'adressez pas la parole ! Vous m'aviez promis de m'emmener à Tarante et vous ne l'avez pas fait. Je vous déteste !}{Ne m'adressez pas la parole ! Vous m'aviez promis de m'emmener à Tarante et vous ne l'avez pas fait. Je vous déteste !}{}{}{}{ }
+

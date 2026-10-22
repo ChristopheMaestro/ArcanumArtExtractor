@@ -1,0 +1,145 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Puis-je vous demander qui vous êtes, monsieur ?}{}{5}{re 41, me 0}{44}{}
+{3}{Monsieur ! Qu'ai-je donc fait pour mériter un tel traitement ?}{}{5}{re -40, me 0}{17}{}
+{6}{Salutations, Edwin Bourbier. Puis-je vous parler un instant ?}{}{5}{re 41, me 1}{51}{}
+{7}{Monsieur Bourbier ! Pourquoi me parlez-vous ainsi ?}{}{5}{re -40, me 1}{17}{}
+{8}{'jour ! Moi pas avoir beaucoup intelligence. Vous qui ?}{}{-4}{me 0}{44}{}
+{9}{'jour Bourbier ! Moi demander vous questions ?}{}{-4}{me 1}{51}{}
+{10}{E:}{}{1}{me 1}{0}{}
+{17}{Je regrette, monsieur. Les prêtres de Vooriden sont compatissants mais le simple fait de vous regarder me donne envie de renoncer à ma vocation ! Allez-vous-en d'ici !}{Je regrette, madame. Les prêtres de Vooriden sont compatissants mais le simple fait de vous regarder me donne envie de renoncer à ma vocation ! Allez-vous-en d'ici !}{}{}{}{}
+{18}{Pardon ? Vous ne voulez pas changer d'avis ?}{}{5}{ch 16}{23}{re +15}
+{19}{S'il vous plaît, monsieur... Ayez pitié d'une misérable personne comme moi...}{}{5}{}{27}{re +10}
+{20}{Je n'aurais aucun mal à vous châtier, prêtre...}{}{5}{}{35}{re -5}
+{21}{E:}{}{5}{}{0}{}
+{23}{[Le prêtre semble déconcerté par vos paroles. Il s'incline légèrement.] Très bien, monsieur. Il semble que même un prêtre puisse se méprendre sur la véritable nature d'un homme. Je vous prie de bien vouloir me pardonner...}{[Le prêtre semble déconcerté par vos paroles. Il s'incline légèrement.] Très bien, madame. Il semble que même un prêtre puisse se méprendre sur la véritable nature d'une femme. Je vous prie de bien vouloir me pardonner...}{}{}{}{}
+{24}{Oublions cela, madame. Puis-je vous demander qui vous êtes ?}{}{5}{me 0}{44}{}
+{25}{C'est oublié, Marie. Vous avez un moment ?}{}{5}{me 1}{51}{}
+{27}{[Le prêtre esquisse un geste de bénédiction en votre direction. Il incline légèrement la tête.] Vous avez raison, mon enfant. Un prêtre se doit d'être patient et compréhensif. Je ferai de mon mieux pour ne pas tenir compte de vos tares...}{[Le prêtre fait un signe dans votre direction. Il incline légèrement la tête.] Vous avez raison, mon enfant. Un prêtre se doit d'être patient et compréhensif. Je ferai de mon mieux pour ne pas tenir compte de vos tares...}{}{}{}{}
+{28}{Merci. Puis-je vous demander qui vous êtes ?}{}{5}{me 0}{44}{}
+{29}{Vous êtes très généreux, Monsieur Bourbier. Vous avez un moment ?}{}{5}{me 1}{51}{}
+{35}{[Le prêtre fait un pas en arrière en fronçant les sourcils.] Je vous déconseille de me parler sur ce ton. Je suis peut-être un prêtre mais verser le sang d'un étranger ignorant ne me pose aucun cas de conscience...}{[Le prêtre fait un pas en arrière en fronçant les sourcils.] Je vous déconseille de me parler sur ce ton. Je suis peut-être un prêtre mais verser le sang d'une étrangère ignorante ne me pose aucun cas de conscience...}{}{}{}{}
+{36}{Je ne pense pas que ce soit nécessaire. Je vous prie d'excuser mes paroles un peu vives...}{}{5}{}{27}{re +10}
+{37}{J'espère que vous êtes en paix avec vos dieux, prêtre...}{}{5}{}{}{co, fl 40}
+{38}{E:}{}{5}{}{0}{}
+{40}{Je regrette vraiment que les choses aient tourné ainsi...}{Je regrette vraiment que les choses aient tourné ainsi...}{}{}{}{}
+{44}{Je suis Edwin Bourbier, prêtre de l'Ordre d'Halcyon de Vooriden. En quoi puis-je vous être utile ?}{Je suis Edwin Bourbier, prêtre de l'Ordre d'Halcyon de Vooriden. En quoi puis-je vous être utile ?}{}{}{}{}
+{45}{C'est un plaisir, Edwin. Auriez-vous un instant à me consacrer ?}{}{5}{}{51}{}
+{48}{'jour ! Moi demander questions ?}{}{-4}{}{51}{}
+{51}{Bien sûr...}{Bien sûr...}{}{}{}{}
+{52}{Parlez-moi de ce temple, Edwin...}{}{5}{}{66}{}
+{53}{J'ai quelques questions au sujet de votre religion...}{}{5}{lf1 1}{81}{}
+{54}{Peut-être pourrais-je m'occuper de votre problème d'autel.}{}{5}{lf2 1, lf3 0, lf4 0}{148}{}
+{55}{Je n'ai pas encore trouvé la pierre de l'autel...}{}{5}{lf3 1, lf4 0, ni 5621}{182}{}
+{56}{J'ai rapporté la pierre de l'autel...}{}{5}{qa1151 1, in 5621, lf3 1, lf4 0}{185}{}
+{57}{J'ai rapporté la pierre de l'autel...}{}{5}{qa1055 1, in 5621, lf3 1, lf4 0}{189}{}
+{58}{Quoi être ce temple...?}{}{-4}{}{66}{}
+{59}{Moi demander vous questions sur reu-li-sion... ?}{}{-4}{lf1 1}{81}{}
+{60}{Moi pouvoir aider vous avec pierre motel...}{}{-4}{lf2 1, lf3 0, lf4 0}{148}{}
+{61}{Moi pas encore trouver pierre motel...}{}{-4}{lf3 1, lf4 0, ni 5621}{182}{}
+{62}{Moi avoir pierre motel !}{}{-4}{qa1151 1, in 5621, lf3 1, lf4 0}{185}{}
+{63}{Moi avoir pierre motel !}{}{-4}{qa1055 1, in 5621, lf3 1, lf4 0}{189}{}
+{64}{E:}{}{1}{}{0}{}
+{65}{}{}{}{}{}{}
+{66}{Ce temple est très ancien, mon ami. Il est dédié au dieu Halcyon. Voyez-vous, il y a fort longtemps, il existait de nombreuses divinités et chacune d'elles représentait une vertu particulière. Il fallait choisir sa divinité avec beaucoup de soin... La religion était alors une chose très sérieuse...}{L'Ordre d'Halcyon est très ancien, mon amie. Il y a fort longtemps, il existait de nombreuses divinités et chacune d'elles représentait une vertu particulière. Il fallait choisir sa divinité avec beaucoup de soin... La religion était alors une chose très sérieuse...}{}{}{}{lf1 1}
+{67}{[Vous écoutez.]}{}{1}{}{69}{}
+{69}{Toutes les divinités avaient été créées par le Patriarche, qui régnait sur elles et veillait à ce qu'aucune ne prenne trop d'importance ou ne devienne prépondérante. L'équilibre entre les divinités était bien maintenu et aucune religion n'était plus puissante que les autres...}{Toutes les divinités avaient été créées par le Patriarche, qui régnait sur elles et veillait à ce qu'aucune ne prenne trop d'importance ou ne devienne prépondérante. L'équilibre entre les divinités était bien maintenu et aucune religion n'était plus puissante que les autres...}{}{}{}{}
+{70}{Que s'est-il passé ?}{}{5}{}{73}{}
+{71}{Quoi arriver ?}{}{-4}{}{73}{}
+{73}{Oh ! Les choses changent... La religion Panarii est apparue, révérant Nasrudin et sa sagesse. Cette religion était beaucoup plus attractive car elle était plus souple. Les anciennes divinités ne sont pas aussi indulgentes. Et, bien que leurs voix ne soient plus aujourd'hui qu'un murmure, on peut encore les entendre... et elles écoutent ceux qui s'adressent à elles. Nous autres, de l'Ordre d'Halcyon, nous vénérons encore le dieu Halcyon...}{Oh ! Les choses changent... La religion Panarii est apparue, révérant Nasrudin et sa sagesse. Cette religion était beaucoup plus attractive car elle était plus souple. Les anciennes divinités ne sont pas aussi indulgentes. Et, bien que leurs voix ne soient plus aujourd'hui qu'un murmure, on peut encore les entendre... et elles écoutent ceux qui s'adressent à elles. Nous autres, de l'Ordre d'Halcyon, nous vénérons encore le dieu Halcyon...}{}{}{}{}
+{74}{J'ai quelques questions au sujet de votre religion...}{}{5}{}{81}{}
+{75}{Moi demander vous questions sur reu-li-sion... ?}{}{-4}{}{81}{}
+{78}{K:}{}{1}{}{51}{}
+{79}{E:}{}{1}{}{0}{}
+{81}{Naturellement. Que puis-je vous apprendre sur notre dogme ?}{Naturellement. Que puis-je vous apprendre sur notre dogme ?}{}{}{}{}
+{82}{Parlez-moi des anciennes divinités...}{}{5}{}{99}{}
+{83}{Parlez-moi du dieu Halcyon...}{}{5}{}{106}{}
+{84}{Puis-je faire une offrande au dieu Halcyon ?}{}{5}{lf4 0}{115}{}
+{85}{Puis-je faire une offrande au dieu Halcyon ?}{}{5}{lf4 1}{94}{}
+{86}{J'ai encore quelques questions d'ordre général...}{}{5}{}{51}{}
+{87}{Vous parler moi vieux dieux !}{}{-4}{}{99}{}
+{88}{Vous parler moi dieu vous !}{}{-4}{}{106}{}
+{89}{Moi pouvoir faire of-feu-rande à dieu vous ?}{}{-4}{lf4 0}{115}{}
+{90}{Moi pouvoir faire of-feu-rande à dieu vous ?}{}{-4}{lf4 1}{94}{}
+{91}{Encore questions !}{}{-4}{}{51}{}
+{92}{E:}{}{1}{}{0}{}
+{94}{Oui... Si vous vous rendez à l'autel, vous saurez quoi faire...}{Oui... Si vous vous rendez à l'autel, vous saurez quoi faire...}{}{}{}{}
+{95}{Merci. Encore quelques questions...}{}{5}{}{51}{}
+{96}{Accord ! J'ai encore quelques questions...}{}{-4}{}{51}{}
+{97}{E:}{}{1}{}{0}{}
+{99}{Les anciennes divinités ? Il y en avait beaucoup, mais les noms de la plupart d'entre elles sont aujourd'hui tombés dans l'oubli. J'en connais quelques-uns, cependant... Shakar était le dieu de la guerre, Geshtianna la déesse de l'amour, Bolo le dieu des voleurs. Peu de gens s'intéressent encore à ces choses, mais j'ai entendu dire qu'il y avait un homme à l'université de Tarante qui étudiait les anciennes divinités... Il pourrait vous en dire plus...}{Les anciennes divinités ? Il y en avait beaucoup, mais les noms de la plupart d'entre elles sont aujourd'hui tombés dans l'oubli. J'en connais quelques-uns, cependant... Shakar était le dieu de la guerre, Geshtianna la déesse de l'amour, Bolo le dieu des voleurs. Peu de gens s'intéressent encore à ces choses, mais j'ai entendu dire qu'il y avait un homme à l'université de Tarante qui étudiait les anciennes divinités... Il pourrait vous en dire plus...}{}{}{}{}
+{100}{Et le dieu Halcyon ?}{}{5}{}{106}{}
+{101}{Encore quelques questions sur votre religion...}{}{5}{}{81}{}
+{102}{Et dieu vous ?}{}{-4}{}{106}{}
+{103}{Moi demander vous questions sur reu-li-sion... ?}{}{-4}{}{81}{}
+{104}{E:}{}{1}{}{0}{}
+{106}{Halcyon est le dieu de la vérité. Nous lui rendons hommage en essayant de trouver la vérité qui sommeille en chacun de nous. Nous nous débarrassons de tout ce qui peut corrompre cette vérité intérieure. Celle-ci est différente pour chaque individu... Halcyon n'exige qu'une chose, l'honnêteté envers soi-même. Seule une quête sincère peut permettre à l'Halcyon qui est en chacun de nous de se réveiller. [Il hoche de la tête en signe de respect envers son dieu.]}{Halcyon est le dieu de la vérité. Nous lui rendons hommage en essayant de trouver la vérité qui sommeille en chacun de nous. Nous nous débarrassons de tout ce qui peut corrompre cette vérité intérieure. Celle-ci est différente pour chaque individu... Halcyon n'exige qu'une chose, l'honnêteté envers soi-même. Seule une quête sincère peut permettre à l'Halcyon qui est en chacun de nous de se réveiller. [Il hoche de la tête en signe de respect envers son dieu.]}{}{}{}{}
+{107}{Puis-je faire une offrande à Halcyon ?}{}{5}{lf4 0}{115}{}
+{108}{Puis-je faire une offrande à Halcyon ?}{}{5}{lf4 1}{}{}
+{109}{Encore quelques questions sur votre religion...}{}{5}{}{81}{}
+{110}{Moi pouvoir faire of-feu-rande à dieu vous ?}{}{-4}{lf4 0}{115}{}
+{111}{Moi pouvoir faire of-feu-rande à dieu vous ?}{}{-4}{lf4 1}{}{}
+{112}{Moi demander vous questions sur reu-li-sion... ?}{}{-4}{}{81}{}
+{113}{E:}{}{1}{}{0}{}
+{115}{Non... J'en suis navré, mais ici, personne n'a véritablement fait d'offrande à Halcyon depuis presque 200 ans...}{Non... J'en suis navré, mais ici, personne n'a véritablement fait d'offrande à Halcyon depuis presque 200 ans...}{}{}{}{}
+{116}{Pourquoi ?}{}{5}{}{119}{}
+{117}{Euh... Pourquoi ?}{}{-4}{}{119}{}
+{119}{Eh bien, il y a environ deux siècles, vivait un pirate démoniaque nommé Pierre Latige. Il était totalement corrompu... Pas un acte de malveillance, de débauche ou d'irrévérence qu'il n'eut commis en écumant les mers d'Arcanum. Et le jour où il a jeté l'ancre à l'ouest d'ici et découvert notre petit village...}{Eh bien, il y a environ deux siècles, vivait un pirate démoniaque nommé Pierre Latige. Il était totalement corrompu... Pas un acte de malveillance, de débauche ou d'irrévérence qu'il n'eut commis en écumant les mers d'Arcanum. Et le jour où il a jeté l'ancre à l'ouest d'ici et découvert notre petit village...}{}{}{}{}
+{120}{[Vous écoutez.]}{}{1}{qu1055 0}{124}{}
+{121}{En fait, c'est la raison pour laquelle je suis ici...}{}{5}{qa1055 1}{169}{}
+{122}{Euh... Pour ça que moi venir ici...}{}{-4}{qa1055 1}{169}{}
+{124}{Lui et ses hommes détruisirent tout... Ils pillèrent et brûlèrent la ville. Quand ils découvrirent le temple... eh bien, disons juste que le vieux pirate fit des choses à notre autel dont il n'est pas nécessaire de parler. Depuis, cet autel n'a plus reçu la moindre offrande...}{Lui et ses hommes détruisirent tout... Ils pillèrent et brûlèrent la ville. Quand ils découvrirent le temple... eh bien, disons juste que le vieux pirate fit des choses à notre autel dont il n'est pas nécessaire de parler. Depuis, cet autel n'a plus reçu la moindre offrande.}{}{}{}{}
+{125}{Je vois. Pourquoi ne pas ériger un nouvel autel ?}{}{5}{}{131}{}
+{126}{Encore quelques questions sur votre religion...}{}{5}{}{81}{}
+{127}{Pourquoi pas faire nouveau motel ?}{}{-4}{}{131}{}
+{128}{Moi demander vous questions sur reu-li-sion... ?}{}{-4}{}{81}{}
+{129}{E:}{}{1}{}{0}{}
+{131}{Ce n'est pas aussi simple. Vous comprenez, il faut respecter certaines règles quand on élève un autel...}{Ce n'est pas aussi simple. Vous comprenez, il faut respecter certaines règles quand on élève un autel...}{}{}{}{}
+{132}{Quelles sont-elles ?}{}{5}{}{135}{}
+{133}{Euh... Quoi être règles ?}{}{-4}{}{135}{}
+{135}{Eh bien, il faut impérativement que la pierre dont il est constitué provienne de l'ancienne carrière naine de Torin. La route pour s'y rendre est dangereuse et la carrière elle-même est hantée par des monstres et des êtres maléfiques. Nous sommes des gens simples... Personne ici ne pourrait survivre à un tel voyage...}{Eh bien, il faut impérativement que la pierre dont il est constitué provienne de l'ancienne carrière naine de Torin. La route pour s'y rendre est dangereuse et la carrière elle-même est hantée par des monstres et des êtres maléfiques. Nous sommes des gens simples... Personne ici ne pourrait survivre à un tel voyage...}{}{}{}{}
+{136}{Je vois. Je peux peut-être vous aider ?}{}{5}{}{141}{}
+{137}{Encore quelques questions sur votre religion...}{}{5}{}{81}{}
+{138}{Moi peut-être pouvoir aller ?}{}{-4}{}{141}{}
+{139}{Moi demander vous questions sur reu-li-sion... ?}{}{-4}{}{81}{}
+{140}{E:}{}{1}{}{0}{}
+{141}{Hum... Peut-être, en effet. Il vous faut trouver une pierre suffisamment grande et lourde. Si vous n'êtes pas assez fort, je vous conseille d'aller trouver Murgo... C'est un demi-ogre qui travaille dans le coin... Il pourrait vous aider...}{Hum. Peut-être, en effet. Il vous faut trouver une pierre suffisamment grande et lourde. Si vous n'êtes pas assez forte, je vous conseille d'aller trouver Murgo... C'est un demi-ogre qui travaille dans le coin... Il pourrait vous aider...}{}{}{}{}
+{142}{Où se trouve la carrière de Torin ?}{}{5}{qa1055 1, ni 5621}{157}{}
+{143}{Où être carrière de Tarin ?}{}{-4}{qa1055 1, ni 5621}{157}{}
+{144}{Où se trouve la carrière de Torin ?}{}{5}{qu1055 0, ni 5621}{148}{}
+{145}{Où être carrière de Tarin ?}{}{-4}{qu1055 0, ni 5621}{148}{}
+{146}{Il se trouve que j'ai une pierre qui pourrait faire l'affaire...}{}{5}{qu1055 0, in 5621}{185}{}
+{147}{Vous attendre ! Moi avoir pierre !}{}{-4}{qu1055 0, in 5621}{185}{}
+{148}{La carrière de Torin se trouve à l'ouest, non loin de la chaîne de murailles. [Il indique un endroit sur la carte.] Vous devriez trouver une pierre de la taille qui convient par là-bas. Nous sommes des gens pauvres... Je ne peux vous offrir que nos remerciements...}{La carrière de Torin se trouve à l'ouest, non loin de la chaîne de murailles. [Il indique un endroit sur la carte.] Vous devriez trouver une pierre de la taille qui convient par là-bas. Nous sommes des gens pauvres... Je ne peux vous offrir que nos remerciements...}{}{}{}{mm 28, qu1151 1, lf2 1}
+{149}{Il se trouve que j'ai une pierre qui pourrait faire l'affaire...}{}{5}{qu1055 0, in 5621}{185}{}
+{150}{Vous attendre ! Moi avoir pierre !}{}{-4}{qu1055 0, in 5621}{185}{}
+{151}{Je n'en demande pas plus. Je vais faire ce que vous m'avez demandé...}{}{5}{}{166}{qu1151 2, lf3 1}
+{152}{Accord ! Moi faire !}{}{-4}{}{166}{qu1151 2, lf3 1}
+{153}{Je vais y réfléchir. Encore quelques questions...}{}{5}{}{51}{}
+{154}{P'têt. Encore questions !}{}{-4}{}{51}{}
+{155}{E:}{}{1}{}{0}{}
+{157}{La carrière de Torin se trouve à l'ouest, non loin de la chaîne de murailles. [Il indique un endroit sur la carte.] Vous devriez trouver une pierre de la taille qui convient par là-bas. Nous sommes des gens pauvres... Je ne peux vous offrir que nos remerciements...}{La carrière de Torin se trouve à l'ouest, non loin de la chaîne de murailles. [Il indique un endroit sur la carte.] Vous devriez trouver une pierre de la taille qui convient par là-bas. Nous sommes des gens pauvres... Je ne peux vous offrir que nos remerciements...}{}{}{}{mm 28, lf2 1}
+{158}{Il se trouve que j'ai une pierre qui pourrait faire l'affaire...}{}{5}{qa1055 1, in 5621}{189}{}
+{159}{Vous attendre ! Moi avoir pierre !}{}{-4}{qa1055 1, in 5621}{189}{}
+{160}{Je n'en demande pas plus. Je vais faire ce que vous m'avez demandé...}{}{5}{}{166}{lf3 1}
+{161}{Accord ! Moi faire !}{}{-4}{}{166}{lf3 1}
+{162}{Je vais y réfléchir. Encore quelques questions...}{}{5}{}{51}{}
+{163}{P'têt. Encore questions !}{}{-4}{}{51}{}
+{164}{E:}{}{1}{}{0}{}
+{166}{Merci beaucoup ! N'oubliez pas d'aller trouver Murgo si vous avez besoin d'aide. [Il vous adresse un signe de bénédiction.] Je vous souhaite bonne chance et qu'Halcyon vous bénisse...}{Merci beaucoup ! N'oubliez pas d'aller trouver Murgo si vous avez besoin d'aide. [Il vous adresse un signe de bénédiction.] Je vous souhaite bonne chance et qu'Halcyon vous bénisse...}{}{}{}{gf2434 1}
+{167}{E:}{}{1}{}{0}{}
+{169}{Que voulez-vous dire ? Comment pouviez-vous savoir que nous avions un problème avec notre autel ?}{Que voulez-vous dire ? Comment pouviez-vous savoir que nous avions un problème avec notre autel ?}{}{}{}{}
+{170}{Oh ! C'est une très longue histoire...[Vous lui racontez.]}{}{5}{}{173}{}
+{171}{[Vous lui racontez.]}{}{-4}{}{173}{}
+{173}{Eh bien ! Je dois avouer que je n'ai jamais rien entendu de semblable de toute ma vie. Le fantôme de Pierre Latige en personne, tentant de réparer le mal qu'il a fait...}{Eh bien ! Je dois avouer que je n'ai jamais rien entendu de semblable de toute ma vie. Le fantôme de Pierre Latige en personne, tentant de réparer le mal qu'il a fait...}{}{}{}{}
+{174}{C'est assez sidérant, en effet...}{}{5}{}{177}{}
+{175}{Ca bizarre, hein ?}{}{-4}{}{177}{}
+{177}{Ainsi... Vous êtes ici pour remplacer l'autel ?}{Ainsi... Vous êtes ici pour remplacer l'autel ?}{}{}{}{}
+{178}{Oui... Comment dois-je m'y prendre ?}{}{5}{}{131}{}
+{179}{Ouaip ! Quoi moi devoir faire ?}{}{-4}{}{131}{}
+{182}{Je vois. Je vous souhaite bonne chance dans vos recherches...}{Je vois. Je vous souhaite bonne chance dans vos recherches...}{}{}{}{}
+{183}{E:}{}{1}{}{0}{}
+{185}{Vous l'avez ! C'est fantastique ! Faites voir... [Il la prend.] Fichtre ! Comme elle est lourde ! Nous allons réparer cet autel en un rien de temps ! Merci infiniment ! Puisse Halcyon vous montrer la voie qui vous mènera à votre vérité intérieure...}{Vous l'avez ! C'est fantastique ! Faites voir... [Il la prend.] Fichtre ! Comme elle est lourde ! Merci infiniment ! Puisse Halcyon vous montrer la voie qui vous mènera à votre vérité intérieure...}{}{}{}{gf2749 1, in 5621, qu1151 4, lf4 1, gf2535 1, fp}
+{186}{E:}{}{1}{}{-2}{}
+{189}{Vous l'avez ! C'est fantastique ! Faites voir... [Il la prend.] Fichtre ! Comme elle est lourde ! Nous allons réparer cet autel en un rien de temps ! Merci infiniment ! Puisse Halcyon vous montrer la voie qui vous mènera à votre vérité intérieure...}{Vous l'avez ! C'est fantastique ! Faites voir... [Il la prend.] Fichtre ! Comme elle est lourde ! Merci infiniment ! Puisse Halcyon vous montrer la voie qui vous mènera à votre vérité intérieure...}{}{}{}{in 5621, lf4 1, gf2535 1, qu1055 4}
+{190}{E:}{}{1}{}{-2}{}
+
