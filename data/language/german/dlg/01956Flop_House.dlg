@@ -1,0 +1,89 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Hallo.  Kann ich Euch etwas fragen?}{}{5}{lf1 0, re 41}{25}{}
+{3}{Begrüßt Ihr mögliche "Gäste" immer auf diese Weise?}{}{5}{lf1 0, re -40}{19}{}
+{4}{Hallo.  Kann ich Euch etwas fragen?}{}{5}{lf1 1, re 41}{25}{}
+{5}{Ähm ...  Darf ich Euch eine Frage stellen?}{}{5}{lf1 1, re -40}{25}{}
+{14}{Wer Ihr?}{}{-4}{lf1 0, re 41}{25}{}
+{15}{Wer Ihr sein, Fiesie?}{}{-4}{lf1 0, re -40}{19}{}
+{16}{Ich was fragen, ja?}{}{-4}{lf1 1, re 41}{25}{}
+{17}{Äh ...  Ich was fragen, ja?}{}{-4}{lf1 1, re -40}{25}{}
+{18}{E:}{}{1}{}{0}{}
+{19}{[Sehr sarkastisch.] Ha!  Gäste!  ... Euresgleichen sehen wir gar nicht gern hier, Mister ...}{[Sehr sarkastisch.] Ha!  Gäste!  ... Euresgleichen sehen wir gar nicht gern hier, Lady ...}{}{}{}{}
+{20}{Äh ...  Ich "habe" Geld ...}{}{5}{}{76}{}
+{21}{Na ja!  Ich bin sicher, mein Geld wird woanders gern gesehen!  Lebt wohl!}{}{5}{}{0}{}
+{22}{Äh ...  Ich Münzens haben ...}{}{-4}{}{76}{}
+{23}{Pah!  Dann ich eben Münzens woanders ausgeben!}{}{-4}{}{0}{}
+{24}{F:}{}{1}{}{0}{}
+{25}{Was wollt Ihr?}{Was wollt Ihr?}{}{}{}{lf1 1}
+{26}{Ich hätte gern ein Bett für eine Nacht.}{}{5}{gf2399 0, lf 10 0}{45}{}
+{27}{Wie viel kostet eine Woche?}{}{5}{ha7, gf2399 0, lf 10 0}{52}{}
+{28}{Wie viel kostet eine Woche?}{}{5}{ha-6, gf2399 0, lf 10 0}{57}{}
+{29}{Ich hierbleiben ein Nach'?}{}{-4}{gf2399 0, lf 10 0}{45}{}
+{30}{Ich Bett kriegen für ein Woch'?}{}{-4}{ha7, gf2399 0, lf 10 0}{52}{}
+{31}{Ich Bett kriegen für ein Woch'?}{}{-4}{ha-6, gf2399 0, lf 10 0}{57}{}
+{32}{Ich möchte gern eine Experten-Ausbildung in Sachen Taschendiebstahl haben.}{}{5}{tr5 -1}{35}{et5 86}
+{33}{Äh ... Ich willen sein Exper' im Daschentieben.}{}{-4}{tr5 -1}{35}{et5 86}
+{34}{E:}{}{1}{}{0}{}
+{35}{Sonst noch was?}{Sonst noch was?}{}{}{}{}
+{36}{Ich hätte gern ein Bett für eine Nacht.}{}{5}{gf2399 0, lf 10 0}{45}{}
+{37}{Wie viel kostet eine Woche?}{}{5}{ha7, gf2399 0, lf 10 0}{52}{}
+{38}{Wie viel kostet eine Woche?}{}{5}{ha-6, gf2399 0, lf 10 0}{57}{}
+{39}{Ich hierbleiben ein Nach'?}{}{-4}{gf2399 0, lf 10 0}{45}{}
+{40}{Ich Bett kriegen für ein Woch'?}{}{-4}{ha7, gf2399 0, lf 10 0}{52}{}
+{41}{Ich Bett kriegen für ein Woch'?}{}{-4}{ha-6, gf2399 0, lf 10 0}{57}{}
+{42}{Ich möchte gern eine Experten-Ausbildung in Sachen Taschendiebstahl haben.}{}{5}{tr5 1, tr5 -1, sk5 9}{86}{}
+{43}{Äh ... Ich willen sein Exper' im Daschentieben.}{}{-4}{tr5 1, tr5 -1, sk5 9}{86}{}
+{44}{E:}{}{1}{}{0}{}
+{45}{Der Preis beträgt 13 Münzen.  Ja oder nein, Kumpel ...}{Der Preis beträgt 13 Münzen.  Ja oder nein, Lady ...}{}{}{}{}
+{46}{Bitte sehr ... [Du gibst ihm das Geld.]}{}{5}{$$ 13}{-2}{$$-13, lf 13 1, lf 10 1}
+{47}{[Du siehst dich um.] Scheint mir ein bisschen teuer ... aber was soll's. [Du gibst ihm das Geld.]}{}{5}{$$ 13}{-2}{$$-13, lf 13 1, lf 10 1}
+{48}{Äh ... hier.  [Du gibst ihm das Geld.]}{}{-4}{$$ 13}{-2}{$$-13, lf 13 1, lf 10 1}
+{49}{Für das!  Das sein viel ...  [Seufzer.] Hier.  [Du gibst ihm das Geld.]}{}{-4}{$$ 13}{-2}{$$-13, lf 13 1, lf 10 1}
+{50}{K:}{}{1}{}{35}{}
+{51}{F:}{}{1}{}{0}{re-2}
+{52}{Viel Glück unten an den Docks gehabt, was?  Muss schon toll sein, wenn man reich is'.  Hmm ... [Scheint einen Moment schwer zu kämpfen.] Hrmpf, war noch nie gut im Kopfrechnen, is' was für Pferde, die ham 'n größeren Kopf ...  Mal seh'n ...  [Er denkt angestrengt nach.] 'ne ganze Woche würd Euch 67 Münzen kosten.}{Viel Glück unten an den Docks gehabt, was?  Muss schon toll sein, wenn man reich is'.  Hmm ... [Scheint einen Moment schwer zu kämpfen.] Hrmpf, war noch nie gut im Kopfrechnen, is' was für Pferde, die ham 'n größeren Kopf ...  Mal seh'n ...  [Er denkt angestrengt nach.] 'ne ganze Woche würd Euch 67 Münzen kosten.}{}{}{}{}
+{53}{Hier. [Du gibst ihm das Geld.]}{}{5}{$$ 67}{-5}{$$-67, lf 13 0, lf 10 1}
+{54}{Äh ...  Dankie. Hier.  [Du gibst ihm das Geld.]}{}{-4}{$$ 67}{-5}{$$-67, lf 13 0, lf 10 1}
+{55}{K:}{}{1}{}{35}{}
+{56}{F:}{}{1}{}{0}{re-2}
+{57}{Viel Glück unten an den Docks gehabt, was?  Muss schon toll sein, wenn man reich is'.  Hmm ... [Scheint einen Moment schwer zu kämpfen.] Hrmpf, war noch nie gut im Kopfrechnen, is' was für Pferde, die ham 'n größeren Kopf ...  Mal seh'n ...  [Er denkt angestrengt nach.] 'ne ganze Woche würd Euch 90 Münzen kosten.}{Viel Glück unten an den Docks gehabt, was?  Muss schon toll sein, wenn man reich is'.  Hmm ... [Scheint einen Moment schwer zu kämpfen.] Hrmpf, war noch nie gut im Kopfrechnen, is' was für Pferde, die ham 'n größeren Kopf ...  Mal seh'n ...  [Er denkt angestrengt nach.] 'ne ganze Woche würd Euch 90 Münzen kosten.}{}{}{}{}
+{58}{Danke. Hier. [Du gibst ihm das Geld.]}{}{5}{$$ 90}{-5}{$$-90, lf 13 0, lf 10 1}
+{59}{Äh ...  Dankie. Hier.  [Du gibst ihm das Geld.]}{}{-4}{$$ 90}{-5}{$$-90, lf 13 0, lf 10 1}
+{60}{K:}{}{1}{}{35}{}
+{61}{F:}{}{1}{}{0}{re-2}
+{62}{Fein.  Geht und haut Euch einfach in 'n Bett, das frei is'.  Das Geld reicht aber nur für heute Nacht. Denkt dran ...  In diesem Haus wird nich' geprügelt und nich' geklaut, kapiert?  Kümmert Euch um Euren Kram, und alles geht klar.}{Fein.  Geht und haut Euch einfach in 'n Bett, das frei is'.  Das Geld reicht aber nur für heute Nacht. Denkt dran ...  In diesem Haus wird nich' geprügelt und nich' geklaut, kapiert?  Kümmert Euch um Euren Kram, und alles geht klar.}{}{}{}{}
+{63}{Vielen Dank.}{}{5}{}{0}{}
+{64}{Äh ...  Dankie.}{}{-4}{}{0}{}
+{65}{K:}{}{1}{}{35}{}
+{66}{Ich möchte gern eine Experten-Ausbildung in Sachen Taschendiebstahl haben.}{}{5}{tr5 1, tr5 -1, sk5 9}{86}{}
+{67}{Äh ... Ich willen sein Exper' im Daschentieben.}{}{-4}{tr5 1, tr5 -1, sk5 9}{86}{}
+{68}{E:}{}{1}{}{0}{}
+{69}{Fein.  Geht und haut Euch einfach in 'n Bett, das frei is'.  Das is' genug Geld für die nächsten sieben Nächte. Denkt dran ...  In diesem Haus wird nich' geprügelt und nich' geklaut, kapiert?  Kümmert Euch um Euren Kram, und alles geht klar.}{Fein.  Geht und haut Euch einfach in 'n Bett, das frei is'.  Das is' genug Geld für die nächsten sieben Nächte. Denkt dran ...  In diesem Haus wird nich' geprügelt und nich' geklaut, kapiert?  Kümmert Euch um Euren Kram, und alles geht klar.}{}{}{}{}
+{70}{Vielen Dank.}{}{5}{}{0}{}
+{71}{Äh ...  Dankie.}{}{-4}{}{0}{}
+{72}{K:}{}{1}{}{35}{}
+{73}{Ich möchte gern eine Experten-Ausbildung in Sachen Taschendiebstahl haben.}{}{5}{tr5 1, tr5 -1, sk5 9}{86}{}
+{74}{Äh ... Ich willen sein Exper' im Daschentieben.}{}{-4}{tr5 1, tr5 -1, sk5 9}{86}{}
+{75}{E:}{}{1}{}{0}{}
+{76}{Also ...  Wenn das so is' ...  Womit kann ich dienen?}{Also ...  Wenn das so is' ...  Womit kann ich dienen?}{}{}{}{}
+{77}{Ich hätte gern ein Bett für eine Nacht.}{}{5}{gf2399 0, lf 10 0}{45}{}
+{78}{Wie viel kostet eine Woche?}{}{5}{ha7, gf2399 0, lf 10 0}{52}{}
+{79}{Wie viel kostet eine Woche?}{}{5}{ha-6, gf2399 0, lf 10 0}{57}{}
+{80}{Ich hierbleiben ein Nach'?}{}{-4}{gf2399 0, lf 10 0}{45}{}
+{81}{Ich Bett kriegen für ein Woch'?}{}{-4}{ha7, gf2399 0, lf 10 0}{52}{}
+{82}{Ich Bett kriegen für ein Woch'?}{}{-4}{ha-6, gf2399 0, lf 10 0}{57}{}
+{83}{Ich möchte gern eine Experten-Ausbildung in Sachen Taschendiebstahl haben.}{}{5}{tr5 1, tr5 -1, sk5 9}{86}{}
+{84}{Äh ... Ich willen sein Exper' im Daschentieben.}{}{-4}{tr5 1, tr5 -1, sk5 9}{86}{}
+{85}{E:}{}{1}{}{0}{}
+{86}{Jaaa ...  Das geht.  Ich will allerdings 500 für die Ausbildung.  Habt Ihr das?}{Jaaa ...  Das geht.  Ich will allerdings 500 für die Ausbildung.  Habt Ihr das?}{}{}{}{}
+{87}{Ja.  Hier ist das Geld. [Du gibst ihm das Geld.]}{}{5}{$$500}{92}{}
+{88}{Ich muss zuerst etwas Geld auftreiben.  Ich komme wieder.}{}{5}{$$-499}{0}{}
+{89}{Äh ... jaaaa.  Hier Münzens.  [Du gibst ihm das Geld.]}{}{-4}{$$500}{92}{}
+{90}{Ich nich' Münzens haben.  Ich wieda herkommen.}{}{-4}{$$-499}{0}{}
+{91}{F:}{}{1}{}{0}{}
+{92}{[Er wirkt überrascht.] Danke, Kumpel.  [Er braucht einen Augenblick, um sich ein Bild von deinen Fertigkeiten zu machen, und demonstriert dann selbst ein paar neue Techniken.]  Da.  Jetzt könnt Ihr Euch als Experten im Taschendiebstahl betrachten.  Falls Ihr einmal Meister werden wollt, wendet Euch an Sammie White.  Er hängt immer bei der Metrostation herum.}{[Er wirkt überrascht.] Danke, Lady.  [Er braucht einen Augenblick, um sich ein Bild von deinen Fertigkeiten zu machen, und demonstriert dann selbst ein paar neue Techniken.]  Da.  Jetzt könnt Ihr Euch als Experten im Taschendiebstahl betrachten.  Falls Ihr einmal Meister werden wollt, wendet Euch an Sammie White.  Er hängt immer bei der Metrostation herum.}{}{}{}{$$-500, tr5 2, ru2160}
+{93}{Vielen Dank.  Lebt wohl.}{}{5}{}{0}{}
+{94}{K:}{}{1}{}{35}{}
+{95}{Dankie.  Tschö.}{}{-4}{}{0}{}
+{96}{E:}{}{1}{}{0}{}
+

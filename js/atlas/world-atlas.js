@@ -30,7 +30,7 @@
   // Nothing here is a hand-made label any more. Waypoints come from the game's scripts (waypoints.js, toolbox/atlas/build_waypoints.py),
   // one per door, ladder or tile that teleports; signs from the scripts that read something out when an object is examined or
   // used (notices.js, toolbox/atlas/build_notices.py).
-  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const esc = AtlasData.esc;
   // obj: the object (or tile) the script hangs on, for the Advanced view
   // image: the picture a diagram or mural opens (atlas/graphics/pictures/)
   // The labels of a map only a mod has (Vorakia Sewers in CE Restored and Forgotten Places) wait in modLabels: that map joins MP.maps
@@ -108,7 +108,7 @@
     addNpcs(window.ArcanumModuleCreatures, creatures, true);       // (the modules' maps)
     let left = 2;
     const done = () => { if (!--left) { creaturesLoading = false; creaturesLoaded(); markCache.clear(); schedule(); } };
-    for (const [file, global, sub] of [['js/atlas/data/creatures.js', 'ArcanumCreatures', false], ['js/atlas/data/subcreatures.js', 'ArcanumSubCreatures', true]]) {
+    for (const [file, global, sub] of [[window.AtlasData.url('creatures'), 'ArcanumCreatures', false], [window.AtlasData.url('subcreatures'), 'ArcanumSubCreatures', true]]) {      // (a standalone version has its own, empty creature lists: nothing of the base game)
       const s = document.createElement('script'); s.src = file;
       s.onload = () => { addNpcs(window[global], creatures, sub); done(); };
       s.onerror = () => { creaturesLoading = false; };
@@ -188,11 +188,18 @@
     fp: { ArcanumCE: window.ArcanumFP, ArcanumCEMaps: window.ArcanumFPMaps, ArcanumCEAreas: window.ArcanumFPAreas, ArcanumCEMobs: window.ArcanumFPMobs },
     ru: { ArcanumCE: window.ArcanumRU, ArcanumCEMaps: window.ArcanumRUMaps, ArcanumCEAreas: window.ArcanumRUAreas, ArcanumCEMobs: window.ArcanumRUMobs },
     tin: { ArcanumCE: window.ArcanumTIN, ArcanumCEMaps: window.ArcanumTINMaps, ArcanumCEAreas: window.ArcanumTINAreas, ArcanumCEMobs: window.ArcanumTINMobs },
-    rb: { ArcanumCE: window.ArcanumRB, ArcanumCEMaps: window.ArcanumRBMaps, ArcanumCEAreas: window.ArcanumRBAreas, ArcanumCEMobs: window.ArcanumRBMobs } };
+    rb: { ArcanumCE: window.ArcanumRB, ArcanumCEMaps: window.ArcanumRBMaps, ArcanumCEAreas: window.ArcanumRBAreas, ArcanumCEMobs: window.ArcanumRBMobs },
+    tr: { ArcanumCE: window.ArcanumTR, ArcanumCEMaps: window.ArcanumTRMaps, ArcanumCEAreas: window.ArcanumTRAreas, ArcanumCEMobs: window.ArcanumTRMobs },
+    dem: { ArcanumCE: window.ArcanumDEM, ArcanumCEMaps: window.ArcanumDEMMaps, ArcanumCEAreas: window.ArcanumDEMAreas, ArcanumCEMobs: window.ArcanumDEMMobs },
+  bpd: { ArcanumCE: window.ArcanumBPD, ArcanumCEMaps: window.ArcanumBPDMaps, ArcanumCEAreas: window.ArcanumBPDAreas, ArcanumCEMobs: window.ArcanumBPDMobs },
+    v064: { ArcanumCE: window.ArcanumV064, ArcanumCEMaps: window.ArcanumV064Maps, ArcanumCEAreas: window.ArcanumV064Areas, ArcanumCEMobs: window.ArcanumV064Mobs } };
   let modVer = 'ce';
   let cmp = null;      // the Layers panel's opacities ({terrain, ce, car...}, drawing order), or null when it is off
   const FINE_CMP = 128e6 / 4 / 3;      // pixels of 1/4 or finer pictures each compared layer keeps
   function useMod(ver) { modVer = MODS[ver] ? ver : 'ce'; for (const k of MOD_KEYS) window[k] = MODS[modVer][k]; }
+  // The page's version is known here (version-data.js, which loaded only that version's mod files): start in it, so the base game's world is
+  // not built (and its overview picture fetched) only to be replaced when the Atlas's 'atlas-ce' message arrives after the frame's load
+  if (MODS[window.AtlasVer] && MODS[window.AtlasVer].ArcanumCEMaps) { ceOn = true; useMod(window.AtlasVer); }
   // The maps only CE Restored has join the list while it is on (appended, so the other maps keep their index) and leave it when it is off
   // and so do the locations it adds to the world (ce-maps.js: named as on the map, a place each, opened on the spot where it lies)
   function syncCEMaps() {
@@ -207,12 +214,7 @@
     }
     if (!CE || have === ceOn) return;
     if (ceOn) {
-      const base = MP.maps.length;
-      // Forgotten Places: its caves and houses sit under the place they belong to (see atlas-app.js)
-      const fp = modVer === 'fp', FPG = { Brandybuck: 'Brandybuck', CaveOfBanishment: 'The Cavern of Madness', LeahboUnderground: 'Leahbo', Plainwicke: 'Plainwicke Plantation', 'Spider Cave': 'Spider Cave', TombOfHorrors: "Acererak's Tomb" };
-      const FPN = { Brandybuck: 'Brandybuck Houses', 'Spider Cave': 'Spider Cave - Inside' };
-      MP.maps.push(...CE.maps.map(m => fp && FPN[m.name] ? { ...m, name: FPN[m.name] } : m));
-      MP.sections.push(...CE.sections.map(s => ({ ...s, map: s.map + base, ...(fp && FPG[s.name] ? { group: FPG[s.name], ...(FPN[s.name] && { name: FPN[s.name] }) } : {}) })));
+      AtlasData.appendCEMaps(MP, CE, modVer === 'fp');
     } else {
       MP.maps.splice(MP.maps.findIndex(m => m.ce));
       for (let i = MP.sections.length - 1; i >= 0; i--) if (MP.sections[i].map >= MP.maps.length) MP.sections.splice(i, 1);
@@ -228,9 +230,10 @@
   syncCEMaps();
   const BASE_AR = window.ArcanumAreas || { areas: [], secret: [] };
   let AR = BASE_AR;
+  for (const s of MP.sections) if (['Qintarra', 'The Black Mountain Mines'].includes(s.name)) { if (MP.maps[s.map].name === s.name) MP.maps[s.map].name += ' - Inside'; s.name += ' - Inside'; }      // (the world spot keeps the name; the map is the one inside)
   const sectionNames = new Set(MP.sections.map(s => s.name));
   const QUEST_PLACES = new Set(['The Black Mountain Mines']);       // quest places the world labels do not group as such
-  for (const a of BASE_AR.areas) if (!a.place && !sectionNames.has(a.name)) { L.places.push({ name: a.name, modGroup: a.settlement ? 'Cities' : QUEST_PLACES.has(a.name) ? 'Quest locations' : 'Other locations', view: a.tile, labels: [], area: true }); a.place = a.name; }
+  for (const a of BASE_AR.areas) if (!a.place && !sectionNames.has(a.name)) { L.places.push({ name: a.name, modGroup: a.group || (a.settlement ? 'Cities' : QUEST_PLACES.has(a.name) ? 'Quest locations' : 'Other locations'), view: a.tile, labels: [], area: true }); a.place = a.name; }
   for (const s of BASE_AR.secret) L.places.push({ name: s.name, modGroup: 'Secret areas', view: s.tile, labels: [], area: true });
   // what the names on the map are: settlements (always there), other areas, secret areas. With CE Restored on, its own list (ce-areas.js:
   // the base game's with CE's changes and additions) stands in place of the base game's
@@ -324,6 +327,13 @@
     if (!embed) panel.innerHTML = '<p class="empty">Click a label on the map.</p>';     // (embedded, the page closes its own panel)
     document.getElementById('worldBtn').style.display = idx >= 0 && !MP.maps[idx].module ? '' : 'none';     // (a module's map has no world to go back to)
     document.getElementById('encBtn').style.display = idx >= 0 ? 'none' : '';      // encounters are a world-map thing
+    trimLayers();
+  }
+  // a map's pictures (its cache of bitmaps, art shards and a pool of workers) are let go when another map comes on show; only the world's stay
+  // (the way back), so visiting 60 maps holds two caches instead of sixty. A map not on show is made again when next opened.
+  function trimLayers() {
+    const keep = new Set(['World', cur >= 0 ? MP.maps[cur].key : 'World']);
+    for (const [key, l] of [...layers]) if (!keep.has(key)) { if (l) l.dispose(); layers.delete(key); }
   }
   function centreOn(X, Y, z) {
     if (!cw) { pending = () => centreOn(X, Y, z); return; } view.z = z; view.ox = cw / 2 - z * tileWX(X, Y); view.oy = ch / 2 - z * tileWY(X, Y); schedule(); }
@@ -427,7 +437,8 @@
       return out;
     }
     let cmpNow = null, cmpCv = null, cmpRef = null;
-    const liveOf = i => images[i].kind !== 'sec' && images[i].kind !== 'tpl' ? null : ceOn && src.ceMap && images[i].kind === 'sec' && (!src.old || images[i].ce) ? LVm : LV;
+    const own = !!(window.AtlasData && window.AtlasData.standalone);      // (a standalone version's terrain templates are its own, like its sectors)
+    const liveOf = i => images[i].kind !== 'sec' && images[i].kind !== 'tpl' ? null : ceOn && src.ceMap && (images[i].kind === 'sec' || own) && (!src.old || images[i].ce) ? LVm : LV;
     const ready = (async () => {      // (a mod's map of the base game's size has only the cells it changes: gridPatch over the base game's grid)
       // (the world's grid is written as its low bytes, then its high bytes: gridPlanes, build_map_pictures.write_index_files)
       const from = M.grid != null ? M : C.maps[src.key]?.grid != null ? C.maps[src.key] : null;
@@ -444,7 +455,7 @@
       for (let i = 0; i < P.length; i += 2) cells[P[i]] = P[i + 1];
       // only the world map shows terrain where a sector has no .sec; the base game's and CE Restored's other maps leave those cells empty (modules keep theirs)
       // (CE Restored's Hell Day keeps its terrain too)
-      if (src.key !== 'World' && !/^atlas\/modules|\/hell-day$/.test(String(M.dir)))
+      if (src.key !== 'World' && !own && !/^atlas\/modules|\/hell-day$/.test(String(M.dir)))
         for (let i = 0; i < cells.length; i++) if (cells[i] && images[cells[i] - 1].kind === 'tpl') cells[i] = 0;
       schedule();
     })();
@@ -925,8 +936,12 @@
   const nk = s => String(s).toLowerCase().replace(/[^a-z0-9]/g, '');
   function markGivers(givers) {
     const at = new Set(givers.map(g => nk(g.place) + '|' + g.tile.join(',')));
-    for (const l of new Set([...labels, ...modLabels])) l.quest = at.has(nk(l.map == null ? l.mapKey : mapKey(l.map, l.place)) + '|' + l.tile.join(','));
     for (const n of npcs) n.quest = at.has(nk(n.place) + '|' + n.tile.join(','));
+    const npcQuest = new Set(npcs.filter(n => n.quest).map(n => nk(n.place) + '|' + n.tile.join(',')));
+    for (const l of new Set([...labels, ...modLabels])) {
+      const k = nk(l.map == null ? l.mapKey : mapKey(l.map, l.place)) + '|' + l.tile.join(',');
+      l.quest = at.has(k) && !(catsOf(l).includes('information') && npcQuest.has(k));      // a sign on the giver's tile is not the giver
+    }
     markCache.clear(); schedule();
   }
 
@@ -935,7 +950,7 @@
   // selected (clicked, or sent by "show on the map") is ringed even when its filter is off.
   // A person who takes you somewhere (the Tarant coachmen, Captain Teach, the ferry wheels) is one thing, the person: they glow under the
   // waypoint filter too, and their panel carries the waypoint's buttons (atlas-app.js selectNpc). Found by the .mob the waypoint hangs on.
-  const fileOf = f => String(f || '').slice(String(f || '').lastIndexOf('/') + 1).toLowerCase();
+  const fileOf = AtlasData.fileOf;
   function personOf(l) {
     if (!l.to || !l.obj || !/\.mob$/i.test(l.obj[0])) return null;
     const f = fileOf(l.obj[0]);
@@ -1166,7 +1181,17 @@
       const sel = hits.find(h => h.active && h.mask != null && (!h.faint || showOff)), fig = sel && liftFigure(sel, z);
       ctx.save();
       ctx.globalCompositeOperation = 'lighter';                                  // the glow adds light to the art under it
+      // (one thing listed under several kinds or several times glows once: the brightest of its marks is drawn)
+      const best = new Map();
       for (const h of hits) {
+        if (h.dot) continue;
+        const k = h.shape != null ? h.shape + '@' + h.x0.toFixed(1) + ',' + h.y0.toFixed(1) : 'o@' + h.tx.toFixed(1) + ',' + h.ty.toFixed(1);
+        h.dupKey = k;
+        const o = best.get(k), s = (h.active ? 2 : 1) * h.a * (h.faint && !h.active ? 0.45 : 1);
+        if (!o || s > o.s) best.set(k, { h, s });
+      }
+      for (const h of hits) {
+        if (h.dupKey && best.get(h.dupKey).h !== h) continue;
         const t = h.shape != null && tintedShape(h.shape, h.color, h.D);
         ctx.globalAlpha = (h.faint && !h.active ? 0.45 : 1) * h.a;
         for (let k = h.active ? 2 : 1; k--;) {                                   // what is selected glows twice as bright

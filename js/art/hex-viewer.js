@@ -2,7 +2,11 @@
 
 import { artPaletteCount } from './art-decoder.js';
 import { log } from '../core/log.js';
-import { rgbToHex } from '../core/util.js';
+import { decodeMobBuffer, mobOidText } from '../mob/mob-decoder.js';
+import { MOB_OD_TYPES, mobObjectTypeName } from '../mob/mob-schema.js';
+import { resolveMobPrototype } from '../proto/proto-resolution.js';
+import { mountOverrideForm } from '../mob/mob-override.js';
+import { rgbToHex, saveFile, escapeHtml } from '../core/util.js';
 
 //
 // Shows the raw bytes of the currently open .art file. Uses a virtual
@@ -22,6 +26,11 @@ const hexScrollEl = document.getElementById('hexScroll');
 const hexSpacerEl = document.getElementById('hexSpacer');
 const hexRowsEl = document.getElementById('hexRows');
 const hexCloseBtn = document.getElementById('hexClose');
+const hexExportEl = document.getElementById('hexExport');
+let hexMobName = null;     // set while a .mob is shown: Export .mob saves the (edited) bytes under this name
+hexExportEl.addEventListener('click', () => {
+  if (hexBytes && hexMobName) saveFile(hexMobName, new Blob([hexBytes], { type: 'application/octet-stream' }));
+});
 
 let hexBytes = null;       // Uint8Array of the file currently shown
 export let hexActiveGroup = null; // the file-group the hex view belongs to
@@ -37,6 +46,8 @@ const HEADER_HIGHLIGHT_COLORS = [
   '#ffd166', '#8ecae6', '#90be6d', '#f4a261', '#e9c46a',
   '#cdb4db', '#a8dadc', '#ffafcc', '#bde0fe', '#b7e4c7'
 ];
+
+const escapeHtmlText = escapeHtml;
 
 function escapeHtmlChar(ch) {
   if (ch === '&') return '&amp;';
@@ -592,6 +603,8 @@ export function openHexViewer(group) {
     return;
   }
   hexBytes = new Uint8Array(group.rawBuffer);
+  hexMobName = null;
+  hexExportEl.hidden = true;
   hexActiveGroup = group;
   hexHighlight = null;
   hexHeaderHighlights = [];
@@ -607,6 +620,130 @@ export function openHexViewer(group) {
   hexMetaEl.textContent = `${hexBytes.length.toLocaleString()} bytes`;
   renderHeaderAnalysis();
   buildHexFrameStrip(group);
+  hexScrollEl.scrollTop = 0;
+  hexOverlayEl.classList.add('open');
+  document.body.classList.add('hex-view-open');
+  renderHexViewport();
+}
+
+let mobHexToken = 0;
+let hexShowInherited = false;   // sidebar option, kept while the page is open
+// .MOB files: the same byte view, with the decoded fields listed instead of the ART header/frames.
+export function openMobHex(decoded, buffer, addedField = null) {   // addedField: the override just set, shown in bold
+  hexBytes = new Uint8Array(buffer);
+  hexActiveGroup = null;
+  hexHighlight = null;
+  hexHeaderHighlights = [];
+  hexPaletteHighlights = [];
+  hexPinnedFrame = null;
+  hexPinnedPreviewEl = null;
+  hexSelectedFrame = null;
+  hexSelectedPalette = null;
+  hexTotalRows = Math.max(1, Math.ceil(hexBytes.length / HEX_BYTES_PER_ROW));
+  hexSpacerEl.style.height = `${hexTotalRows * HEX_ROW_HEIGHT}px`;
+  hexMobName = decoded.filename;
+  hexExportEl.hidden = false;
+  hexTitleEl.textContent = `${decoded.filename} — fields + hex`;
+  hexMetaEl.textContent = `${hexBytes.length.toLocaleString()} bytes`;
+  const token = ++mobHexToken;
+  let proto = null;                    // the decoded .pro, once resolved
+  let selectedField = addedField;      // the field the edit/erase form is on
+  const fmt = n => '0x' + n.toString(16).toUpperCase().padStart(4, '0');
+  // The header (everything before the first field): rows of the top panel, one item in the sidebar
+  const oid = b => mobOidText(b).split(' / raw=')[0];
+  const headerEnd = 58 + decoded.bitmap.length * 4;
+  const headerRows = [
+    [0x00, 4, 'Version', String(decoded.version), 'file format version; the game expects 119'],
+    [0x04, 24, 'Prototype OID', oid(decoded.protoOid), 'the .pro it is built on (A = number); fields not stored here come from it'],
+    [0x1C, 24, 'Object OID', oid(decoded.objectOid), "this object's own id (GUID)"],
+    [0x34, 4, 'Object type', `${mobObjectTypeName(decoded.objType)} (${decoded.objType})`, 'decides which fields can exist'],
+    [0x38, 2, 'Field count', String(decoded.numFields), 'number of fields stored after the header'],
+    [0x3A, decoded.bitmap.length * 4, 'Change bitmap', decoded.bitmap.map(x => x.toString(16).padStart(8, '0').toUpperCase()).join(' '), 'one bit per possible field: set = this file overrides it and stores it below'],
+  ];
+  // highlights are keyed 'h<row>' (header row), 'hdr' (whole header) or 'f<index>' (field)
+  const toggle = (key, start, end) => {
+    const at = hexHeaderHighlights.findIndex(h => h.key === key);
+    if (at !== -1) { hexHeaderHighlights.splice(at, 1); return; }
+    const used = new Set(hexHeaderHighlights.map(h => h.colorIndex));
+    let colorIndex = 0;
+    while (used.has(colorIndex) && colorIndex < HEADER_HIGHLIGHT_COLORS.length) colorIndex++;
+    if (colorIndex >= HEADER_HIGHLIGHT_COLORS.length) colorIndex = hexHeaderHighlights.length % HEADER_HIGHLIGHT_COLORS.length;
+    hexHeaderHighlights.push({ type: key === 'hdr' ? 'whole-header' : 'mob', key, start, end, colorIndex });
+    const rowTop = Math.floor(start / HEX_BYTES_PER_ROW) * HEX_ROW_HEIGHT;
+    hexScrollEl.scrollTop = Math.max(0, rowTop - hexScrollEl.clientHeight / 2 + HEX_ROW_HEIGHT);
+  };
+  const render = () => {
+    const sel = key => hexHeaderHighlights.find(h => h.key === key);
+    const rowsHtml = headerRows.map(([off, size, name, value, note], i) => {
+      const s = sel('h' + i);
+      return `<tr class="hex-analysis-row${s ? ` is-selected selected header-hl-${s.colorIndex}` : ''}" data-mob-key="h${i}" data-start="${off}" data-end="${off + size}" title="Click to ${s ? 'remove' : 'highlight'} this header field in the hex viewer">` +
+        `<td>${fmt(off)}</td><td>${size}</td><td>${name}</td><td>${escapeHtmlText(value)}</td><td>${note}</td></tr>`;
+    }).join('');
+    hexAnalysisEl.innerHTML = `
+      <div class="hex-override-host"></div>
+      <div class="hex-analysis-title">MOB header analysis <span class="hex-analysis-clickhint">Click rows to pin/unpin their byte ranges</span></div>
+      <div class="hex-analysis-summary">
+        <span><strong>Header:</strong> 0x0000–${fmt(headerEnd - 1)} (${headerEnd} bytes)</span>
+        <span><strong>File size:</strong> ${decoded.size} bytes</span>
+        <span><strong>Fields stored:</strong> ${decoded.fields.length}</span>
+        <span><strong>End offset:</strong> ${fmt(decoded.endOffset)}</span>
+      </div>
+      <div class="hex-analysis-table-wrap"><table class="hex-analysis-table">
+        <thead><tr><th>Offset</th><th>Size</th><th>Field</th><th>Decoded value</th><th>Meaning</th></tr></thead>
+        <tbody>${rowsHtml}</tbody></table></div>
+      <div class="hex-analysis-note">The header holds who the object is and which fields it overrides. The overridden fields themselves are listed in the left sidebar, in file order.</div>`;
+    hexAnalysisEl.querySelectorAll('[data-mob-key]').forEach(el => el.addEventListener('click', () => {
+      toggle(el.dataset.mobKey, Number(el.dataset.start), Number(el.dataset.end));
+      refresh();
+    }));
+    mountOverrideForm(hexAnalysisEl.querySelector('.hex-override-host'), {
+      decoded, bytes: hexBytes, filename: decoded.filename, proto, selected: selectedField,
+      onSelect: n => { selectedField = n; renderStrip(); },
+      onChange: (next, field) => openMobHex(decodeMobBuffer(next.slice().buffer, decoded.filename), next.slice().buffer, field),
+    });
+    hexAnalysisEl.hidden = false;
+  };
+  // Sidebar: the header, one line per stored field, and (when switched on) the fields the prototype supplies.
+  // Long names are cut with "…", never wrapped. Clicking a field also selects it in the edit/erase form above.
+  const ownSet = new Set(decoded.fields.map(f => f.field));
+  const renderStrip = () => {
+    const top = hexFrameStripEl.scrollTop;
+    const item = (key, label, tail, start, end, extra = '', field = '') => {
+      const s = hexHeaderHighlights.find(h => h.key === key);
+      const color = s ? HEADER_HIGHLIGHT_COLORS[s.colorIndex] : '';
+      return `<button type="button" class="hex-mob-item${s ? ' selected' : ''}${field === selectedField ? ' current' : ''}${extra}" data-mob-key="${key}" data-start="${start}" data-end="${end}" data-field="${field}"` +
+        `${color ? ` style="--item-color:${color}"` : ''} title="${escapeHtmlText(label)} · ${tail}"><span class="hex-mob-name">${escapeHtmlText(label)}</span><span class="hex-mob-off">${tail}</span></button>`;
+    };
+    const inherited = proto ? proto.fields.filter(f => f.available && !ownSet.has(f.field) && MOB_OD_TYPES[f.field] !== 14) : [];
+    hexFrameStripEl.innerHTML =
+      `<label class="hex-mob-toggle" title="List the fields this object gets from its prototype, to edit or erase them"><input type="checkbox"${hexShowInherited ? ' checked' : ''}> Show inherited fields${proto ? ` (${inherited.length})` : ''}</label>` +
+      item('hdr', 'Header', fmt(0), 0, headerEnd, ' hex-mob-header') +
+      decoded.fields.map((f, i) => item('f' + i, `#${f.field} ${f.name}`, fmt(f.offset), f.offset, f.offset + f.size, f.field === addedField ? ' hex-row-added' : '', f.field)).join('') +
+      (hexShowInherited ? `<div class="hex-mob-section">Inherited${proto ? ' from ' + escapeHtmlText(proto.filename) : ' (prototype not found)'}</div>` +
+        inherited.map(f => item('p' + f.field, `#${f.field} ${f.name}`, 'proto', '', '', ' hex-mob-inherited', f.field)).join('') : '');
+    hexFrameStripEl.scrollTop = top;
+    hexFrameStripEl.querySelector('.hex-mob-toggle input').addEventListener('change', e => { hexShowInherited = e.target.checked; renderStrip(); });
+    hexFrameStripEl.querySelectorAll('[data-mob-key]').forEach(el => el.addEventListener('click', () => {
+      if (el.dataset.field !== '') selectedField = Number(el.dataset.field);
+      if (el.dataset.start !== '') toggle(el.dataset.mobKey, Number(el.dataset.start), Number(el.dataset.end));
+      refresh();
+    }));
+  };
+  const refresh = () => {
+    renderStrip();
+    const wrap = hexAnalysisEl.querySelector('.hex-analysis-table-wrap'), wtop = wrap?.scrollTop;
+    render();
+    if (wtop) hexAnalysisEl.querySelector('.hex-analysis-table-wrap').scrollTop = wtop;
+    renderHexViewport();
+  };
+  renderStrip();
+  render();
+  hexFrameStripEl.querySelector('.hex-row-added')?.scrollIntoView({ block: 'nearest' });
+  resolveMobPrototype(decoded).then(r => {
+    if (token !== mobHexToken) return;   // another file (or an edit of this one) was opened meanwhile
+    proto = r.decodedProto;
+    if (proto) refresh();
+  }).catch(() => {});
   hexScrollEl.scrollTop = 0;
   hexOverlayEl.classList.add('open');
   document.body.classList.add('hex-view-open');

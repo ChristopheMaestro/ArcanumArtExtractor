@@ -150,6 +150,9 @@ export function createPathTools(env) {
       if (p.type === 0 || p.type === 1) kind[i] = PATH_CELL.HOUSE;
       else if ((p.type === 2 || p.type === 3) && !((p.objFlags | 0) & 0x401) && kind[i] !== PATH_CELL.HOUSE) kind[i] = PATH_CELL.OBSTACLE;
     }
+    // ground the town builder keeps paths off (a train station and its track), and the few tiles of it a path may walk over (not paint)
+    for (const r of edit.pathAvoid || []) for (let y = Math.max(r.c, y0); y < Math.min(r.e, y1 + 1); y++) for (let x = Math.max(r.a, x0); x < Math.min(r.b, x1 + 1); x++) kind[(y - y0) * w + (x - x0)] = PATH_CELL.HOUSE;
+    for (const [x, y] of edit.pathOpen || []) if (x >= x0 && x <= x1 && y >= y0 && y <= y1) kind[(y - y0) * w + (x - x0)] = PATH_CELL.STREET;
     // the room behind each chosen door is a house too (a floor of outdoor tiles has no other sign), but the tile in front of the door is not
     const specs = [];
     for (const d of doors) {
@@ -182,6 +185,10 @@ export function createPathTools(env) {
       if (setTile(x, y, raw)) ensureArt(raw);
       laid.push(x, y);
     }
+    edit.pathLaid = laid;   // for the town builder: where the guards walk
+    // a path cleans the scenery that stood on its tiles (the trees, rocks and grass the terrain scattered)
+    let cleaned = 0;
+    for (let i = 0; i < laid.length; i += 2) for (const p of objectsAt(laid[i], laid[i + 1]).slice()) if (p.type === 3 && p.staticSecObject && removeObject(p)) cleaned++;
     let blendCut = false;
     if (blend) for (let i = 0; i < laid.length; i += 2) {
       if ((i & 63) === 62 && performance.now() - t0 > PATH_TIME_LIMIT_MS) { blendCut = true; break; }   // never hang on a huge path
@@ -190,18 +197,49 @@ export function createPathTools(env) {
     const name = secTileNameMesMap?.get(terrain)?.name;
     const cut = plan.timedOut ? ` · stopped after ${PATH_TIME_LIMIT_MS / 1000} s: some doors have no path` : blendCut ? ' · stopped smoothing the edges after 5 s' : '';
     return !laid.length ? `Could not lay a path: the doors are shut in by houses, water or trees${cut}.`
-      : `${laid.length / 2} path tiles${name ? ` of ${name}` : ''} between ${plan.joined.length} doors${plan.failed.length && !plan.timedOut ? ` · ${plan.failed.length} door${plan.failed.length === 1 ? '' : 's'} could not be reached` : ''}${cut}${noArt ? ' · some tiles have no art' : ''}. Undo (Ctrl+Z) and press Draw paths again for another layout.`;
+      : `${laid.length / 2} path tiles${name ? ` of ${name}` : ''} between ${plan.joined.length} doors${plan.failed.length && !plan.timedOut ? ` · ${plan.failed.length} door${plan.failed.length === 1 ? '' : 's'} could not be reached` : ''}${cleaned ? ` · ${cleaned} scenery object${cleaned === 1 ? '' : 's'} cleared` : ''}${cut}${noArt ? ' · some tiles have no art' : ''}. Undo (Ctrl+Z) and press Draw paths again for another layout.`;
   };
   ui.pathClear.addEventListener('click', () => { edit.pathDoors = []; renderPathInfo(); env.scheduleCursor(); });
-  ui.pathDraw.addEventListener('click', () => {
-    if (edit.painting || edit.pathDoors.length < 2) return;
+  const runPaths = () => {
+    if (edit.painting || edit.pathDoors.length < 2) return '';
     edit.painting = true; edit.stroke = new Map(); edit.objOps = []; edit.strokeSeen = new Set(); edit.skippedMob = 0; edit.problem = null;
     let note = '';
     try { note = drawPaths(); } catch (err) { note = edit.problem = `Could not draw the paths: ${errText(err)}`; }
     edit.houseNote = note;
     endStroke();
     ui.pathInfo.textContent = note;
-  });
+    return note;
+  };
+  ui.pathDraw.addEventListener('click', runPaths);
+
+  // For the town builder: is the ground at (x, y) open (no water, no blocked terrain, no floor)?
+  const groundOpenAt = (x, y) => {
+    const at = sectorAtWorld(x, y); if (!at) return false;
+    const bm = at.sec.decoded.blockMask;
+    if (bm && ((bm[at.idx >> 5] >>> (at.idx & 31)) & 1)) return false;
+    const raw = at.sec.decoded.tiles[at.idx] >>> 0;
+    return !isHouseRaw(raw) && tileCorners(raw).every(t => classOf(t) === 0);
+  };
+  // The front door of each house (a rectangle { a, b, c, e }: the door whose outside lies beyond it), all joined by paths.
+  // `links` ({ ox, oy, ix, iy }: the tile in front of it and the tile behind) are further starts of the paths, like the piers of the docks.
+  const joinHouses = (rects, links = []) => {
+    edit.pathDoors = [];
+    for (const l of links) edit.pathDoors.push({ key: `link${l.ox},${l.oy}`, hx: l.ix, hy: l.iy, dir: 0, ox: l.ox, oy: l.oy, ix: l.ix, iy: l.iy });
+    for (const r of rects) {
+      let best = null, bd = Infinity;
+      const mx = (r.a + r.b) / 2, my = (r.c + r.e) / 2;
+      for (let y = r.c; y < r.e; y++) for (let x = r.a; x < r.b; x++) for (const p of objectsAt(x, y)) {
+        if (!isDoorPoint(p)) continue;
+        const rec = doorRecord(p);
+        if (rec.ox >= r.a && rec.ox < r.b && rec.oy >= r.c && rec.oy < r.e) continue;   // an inner door
+        const d = Math.hypot(rec.ox - mx, rec.oy - my);
+        if (d < bd) { bd = d; best = rec; }
+      }
+      if (best && !edit.pathDoors.some(d => d.key === best.key)) edit.pathDoors.push(best);
+    }
+    renderPathInfo();
+    return runPaths();
+  };
 
   const eraseTile = (wx, wy) => {
     const k = `e${wx},${wy}`;
@@ -233,5 +271,5 @@ export function createPathTools(env) {
   };
   const eraseFootprint = (wx, wy) => forFootprint(wx, wy, eraseTile);
 
-  return { tileRawAt, renderPathInfo, pickDoor, drawDoorMarks, eraseFootprint };
+  return { tileRawAt, renderPathInfo, pickDoor, drawDoorMarks, eraseFootprint, groundOpenAt, joinHouses };
 }

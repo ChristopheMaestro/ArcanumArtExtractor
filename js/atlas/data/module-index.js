@@ -4,6 +4,12 @@ window.AtlasModuleIndex = {
     "ce": ["Buried Secrets", "Dungeon Crawl 2", "Dusty Dunes", "Hellgate", "Lost Dungeon of Souls", "Vormantown", "Bourrin", "Deathmatch", "Time", "Woodmir Race", "Secret", "Tombeau", "Tresor", "Delirium of Evil", "Grayhills", "WhiteSands", "Hell Day"],
     "car": [],
     "fp": ["Vormantown"],
-    "ru": []
+    "ru": [],
+    "tin": [],
+    "rb": ["Dusty Dunes"],
+    "tr": [],
+    "dem": [],
+    "bpd": [],
+    "v064": []
   }
 };

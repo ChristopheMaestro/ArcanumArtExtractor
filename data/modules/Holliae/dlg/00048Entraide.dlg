@@ -1,0 +1,75 @@
+{1}{Bonjour. [Ce gnome à l'air misérable. Il est nettement affaibli par la faim et ne possède que des haillons et une dague rouillé dans la main droite.] Je suis Paul. C'est pour déposer une requête ?}{Bonjour. [Ce gnome à l'air misérable. Il est nettement affaibli par la faim et ne possède que des haillons et une dague rouillé dans la main droite.] Je suis Paul. C'est pour déposer une requête ?}{}{1}{}{}
+{2}{Qu'avez vous comme requête que dont je puis m'acquiter ?}{}{5}{}{10}{}
+{3}{Moi pouvoir faire quoi ?}{}{-4}{}{10}{}
+
+{10}{Je rêve ? [Un sourire se trace sur ses lèvres gersées] Cette agence marche bien, c'est pas les requêtes qui manquent mais plus personne ne s'en occupe. Ils croient que les résultats s'obsiennent par magie. Voilà ce qu'on a. [Il vous tend un papier.]}{Je rêve ? [Un sourire se trace sur ses lèvres gersées] Cette agence marche bien, c'est pas les requêtes qui manquent mais plus personne ne s'en occupe. Ils croient que les résultats s'obsiennent par magie. Voilà ce qu'on a. [Il vous tend un papier.]}{}{2}{}{}
+{11}{[Consultez la liste]}{}{1}{}{102}{}
+
+{13}{[Liste des requêtes]}{[Liste des requêtes]}{}{}{}{}
+{14}{[Retour]}{}{1}{}{102}{}
+{15}{[Perdu des outils]}{}{1}{qu1019 0}{123}{}
+{16}{[Mon mari a disparu]}{}{1}{qu1022 0}{127}{}
+{17}{[J'ai commandé un livre]}{}{1}{qu1023 0}{131}{}
+{18}{[Suite]}{}{1}{}{20}{}
+
+{20}{[Liste des requêtes]}{[Liste des requêtes]}{}{}{}{}
+{21}{[Retour]}{}{1}{}{13}{}
+{22}{[Ecoute moi]}{}{1}{qu1024 0}{135}{}
+{23}{[Un client étourdi]}{}{1}{qu1025 0}{139}{}
+{24}{[Trouve nous]}{}{1}{qu1027 0}{143}{}
+{25}{[Fin]}{}{1}{}{0}{}
+
+{30}{<<Apportez moi de la poudre de nacre, je vous donnerai 2000 pièces. Retrouvez moi près de la quincaillerie l'espérance. Je porterai une aube bleue.>>}{<<Apportez moi de la poudre de nacre, je vous donnerai 2000 pièces. Retrouvez moi près de la quincaillerie l'espérance. Je porterai une aube bleue.>>}{}{}{}{}
+{31}{[Répondre à la requête]}{}{1}{}{0}{fl100, qu1005 2, gf1017 1}
+{32}{[S'occuper d'une autre requête]}{}{1}{}{102}{}
+
+{34}{<<J'ai perdu ma clef, surement dans le quartier des entrepots. Venez me trouver chez moi, dans un commerce des entrepôts.>>}{<<J'ai perdu ma clef, surement dans le quartier des entrepots. Venez me trouver chez moi, dans un commerce des entrepôts.>>}{}{}{}{}
+{35}{[Répondre à la requête]}{}{1}{}{0}{fl100, qu1006 2, gf1017 1}
+{36}{[S'occuper d'une autre requête]}{}{1}{}{102}{}
+
+{38}{<<Venez me voir à l'herboristerie de l'île, je ne peux pas vous en parler ici.>>}{<<Venez me voir à l'herboristerie de l'île, je ne peux pas vous en parler ici.>>}{}{}{}{}
+{39}{[Répondre à la requête]}{}{1}{}{0}{fl100, ru1005, gf1017 1}
+{40}{[S'occuper d'une autre requête]}{}{1}{}{102}{}
+
+{42}{<<J'ai perdu un bracelet de valeur. Il y avait mes initiales dessus. Je m'apelle Bastien Loiseau. Vous me trouverz à l'auberge du petit cristal. Pour ce petit service, je vous donnerai 500 pièces d'or.>>}{<<J'ai perdu un bracelet de valeur. Il y avait mes initiales dessus. Je m'apelle Bastien Loiseau. Vous me trouverz à l'auberge du petit cristal. Pour ce petit service, je vous donnerai 500 pièces d'or.>>}{}{}{}{}
+{43}{[Répondre à la requête]}{}{1}{}{0}{fl100, qu1008 2, gf1017 1}
+{44}{[S'occuper d'une autre requête]}{}{1}{}{102}{}
+
+{100}{Bonne chance !}{Bonne chance !}{}{3}{}{}
+
+{102}{[Liste des requêtes]}{[Liste des requêtes]}{}{}{}{}
+{103}{Besoin de poudre}{}{1}{qu1005 0}{30}{}
+{104}{Trouve ma clef}{}{1}{qu1006 0}{34}{}
+{105}{Viens me voir}{}{1}{qu1007 0}{38}{}
+{106}{Trouve mon bracelet}{}{1}{qu1008 0}{42}{}
+{107}{[Suite]}{}{1}{}{13}{}
+
+{110}{Désolé, une requête à la fois.}{Désolé, une requête à la fois.}{}{4}{}{}
+{111}{F:}{}{1}{}{0}{}
+
+{120}{Re-bonjour. Voilà la liste. [Il vous montre la liste des requête]}{Re-bonjour. Voilà la liste. [Il vous montre la liste des requête]}{}{5}{}{}
+{121}{[Consultez la liste]}{}{1}{}{102}{}
+
+{123}{<<J'ai perdu des outils importants, venez me trouver dans la galerie technologique du musée.>>}{<<J'ai perdu des outils importants, venez me trouver dans la galerie technologique du musée.>>}{}{}{}{}
+{124}{[Répondre à la requête]}{}{1}{}{0}{fl100, qu1019 1, gf1017 1}
+{125}{[S'occuper d'une autre requête]}{}{1}{}{102}{}
+
+{127}{<<Mon mari a disparu, venez vite me voir chez moi derrière la mairie. Je vous donnerai tout ce que j'ai.>>}{<<Mon mari a disparu, venez vite me voir chez moi derrière la mairie. Je vous donnerai tout ce que j'ai.>>}{}{}{}{}
+{128}{[Répondre à la requête]}{}{1}{}{0}{fl100, qu1022 1, gf1017 1}
+{129}{[S'occuper d'une autre requête]}{}{1}{}{102}{}
+
+{131}{<<J'ai commandé un livre à la bibliiothèque mais je me suis bléssé et ne peux pas aller le chercher, venez me trouver dans la demeure au sud de ce bâtiment.>>}{<<J'ai commandé un livre à la bibliiothèque mais je me suis bléssé et ne peux pas aller le chercher, viens me trouver dans la demeure au sud de ce bâtiment.>>}{}{}{}{}
+{132}{[Répondre à la requête]}{}{1}{}{0}{fl100, qu1023 1, gf1017 1}
+{133}{[S'occuper d'une autre requête]}{}{1}{}{102}{}
+
+{135}{<<Je suis gardien du jardin zoologique au sud est de la mairie mais je m'ennuie. Venez me voir s'il vous plaît.>>}{<<Je suis gardien du jardin zoologique au sud est de la mairie mais je m'ennuie. Venez me voir s'il vous plaît.>>}{}{}{}{}
+{136}{[Répondre à la requête]}{}{1}{}{0}{fl100, qu1024 1, gf1017 1}
+{137}{[S'occuper d'une autre requête]}{}{1}{}{102}{}
+
+{139}{<<Je suis bibliothéquaire et j'ai prêté l'ouvrage "l'île des trépassés" au responsable du G.P.A. sur l'île mais il ne me l'a pas raporté dans les délais reglementaires. Venez me trouvez avec l'ouvrage, ne venez surtout pas sans.>>}{<<Je suis bibliothéquaire et j'ai prêté l'ouvrage "l'île des trépassés" au responsable du G.P.A. sur l'île mais il ne me l'a pas raporté dans les délais reglementaires. Venez me trouvez avec l'ouvrage, ne venez surtout pas sans.>>}{}{}{}{}
+{140}{[Répondre à la requête]}{}{1}{}{0}{fl100, qu1025 1, gf1017 1}
+{141}{[S'occuper d'une autre requête]}{}{1}{}{102}{}
+
+{143}{<<Viens nous voir au parc près du poste de renseignement. Une fois la bàs, tu viendras nous voir pour nous dire que tu es près à compter. On se cachera dans la ville et tu devras nous trouver. >>}{<<Viens nous voir au parc près du poste de renseignement. Une fois la bàs, tu viendras nous voir pour nous dire que tu es près à compter. On se cachera dans la ville et tu devras nous trouver.>>}{}{}{}{}
+{144}{[Répondre à la requête]}{}{1}{}{0}{fl100, qu1027 1, gf1017 1}
+{145}{[S'occuper d'une autre requête]}{}{1}{}{102}{}

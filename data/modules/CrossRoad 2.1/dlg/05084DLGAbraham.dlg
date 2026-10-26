@@ -1,0 +1,639 @@
+1=bonne présentation
+2=allumons une pipe
+3=j'ai du vin
+4=j'ai votre pipe
+5=j'ai votre pipe+je ne vous traque pas
+6=buvez du vin
+7=ascension de la cuisinière
+8=c'est elle qui m'envoie
+9=c'est elle qui offre le vin
+10=j'ai du tabac
+11=du Old Pinky pour vous
+12=deuxième verre
+13=je fume
+14=pyrotechnie
+15=capacité à transmettre des émotions
+16=vous ne voudriez pas être jugé
+17=troisième verre
+18=à quoi pensez vous
+19=évolution
+20=talent
+21=ami
+
+27=potentiel
+28=motivation
+
+{1}{Il semble captivé par le spectacle...}{Il semble captivé par le spectacle...}{}{}{}{}
+
+{3}{Spectacle ardent fort intéressant, je vous félicite. Je suis Abraham S. Truman, intendant au cercle 693, celui des gourmets d'exception. [L'homme qui vous fait fasse est plein de suffisance. Vous remarquez que ses cheveux grisonnants sont méticuleusement peignés. Sa voix grave renforce l'impression quelque peu tyrannique qu'il donne]}{Spectacle ardent fort intéressant, je vous félicite. Je suis Abraham S. Truman, intendant au cercle 693, celui des gourmets d'exception. [L'homme qui vous fait fasse est plein de suffisance. Vous remarquez que ses cheveux grisonnants sont méticuleusement peignés. Sa voix grave renforce l'impression quelque peu tyrannique qu'il donne]}{}{}{}{lf0 1, lf14 1, gf269 1}
+{4}{C'est un honneur de vous rencontrer. Je suis @pcname@.}{}{5}{}{20}{lf1 1}
+{5}{C'est un plaisir de vous rencontrer. Je suis @pcname@, employé du cercle 666.}{}{5}{}{30}{}
+{6}{C'est une véritable joie pour moi de rencontrer une personne aussi haut placée. Je me présente : @pcname@.}{}{5}{}{40}{}
+{7}{Neils Mc Hoseeing, grand intendant du cercle 666.}{}{5}{}{50}{}
+
+{10}{Bonjour à vous. Je suis Abraham S. Truman, intendant au cercle 693, celui des gourmets d'exception. [L'homme qui vous fait fasse est plein de suffisance. Vous remarquez que ses cheveux grisonnants sont méticuleusement peignés. Sa voix grave renforce l'impression quelque peu tyrannique qu'il donne]}{Bonjour à vous. Je suis Abraham S. Truman, intendant au cercle 693, celui des gourmets d'exception. [L'homme qui vous fait fasse est plein de suffisance. Vous remarquez que ses cheveux grisonnants sont méticuleusement peignés. Sa voix grave renforce l'impression quelque peu tyrannique qu'il donne]}{}{}{}{lf0 1, gf269 1}
+{11}{C'est un honneur de vous rencontrer. Je suis @pcname@.}{}{5}{}{20}{lf1 1}
+{12}{C'est un plaisir de vous rencontrer. Je suis @pcname@, employé du cercle 666.}{}{5}{}{30}{}
+{13}{C'est une véritable joie pour moi de rencontrer une personne aussi haut placée. Je me présente : @pcname@.}{}{5}{}{40}{}
+{14}{Neils Mc Hoseeing, grand intendant du cercle 666.}{}{5}{}{50}{}
+
+{20}{Très bien @pcname@. Je suppose que vous êtes venu dans ma cabine dans un but précis n'est-ce pas ? Pourrais-je le connaître ?}{Très bien @pcname@. Je suppose que vous êtes venu dans ma cabine dans un but précis n'est-ce pas ? Pourrais-je le connaître ?}{}{}{}{}
+{21}{Voyez-vous, je suis venu vous parler d'une amie qui cherche à travailler dans votre cercle.}{}{5}{}{60}{}
+{22}{C'est exact. Je suis venue vous parler de la maîtresse cuisinière de ce train.}{}{5}{}{70}{}
+{23}{Vous êtes perspicace monsieur. Cependant, je vous propose, avant d'en parler, d'allumer une bonne pipe.}{}{5}{ru 1050}{80}{lf2 1}
+{24}{Bien entendu. Seulement, avant cela, je vous ai apporté une bouteille de vin que nous pourrions partager.}{}{5}{in 5856}{90}{in 5856, lf3 1}
+
+{30}{Oh ? Vous venez du cercle 666. Quel cercle prestigieux... [Vous remarquez que, bien qu'il la dissimule habilement derrière ses paroles, son visage exprime la colère] Alors, @pcname@. Je suppose que vous êtes venu dans ma cabine dans un but précis n'est-ce pas ? Pourrais-je le connaître ?}{Oh ? Vous venez du cercle 666. Quel cercle prestigieux... [Vous remarquez que, bien qu'il la dissimule habilement derrière ses paroles, son visage exprime la colère] Alors, @pcname@. Je suppose que vous êtes venu dans ma cabine dans un but précis n'est-ce pas ? Pourrais-je le connaître ?}{}{}{}{}
+{31}{Voyez-vous, je suis venu vous parler d'une amie qui cherche à travailler dans votre cercle.}{}{5}{}{60}{}
+{32}{C'est exact. Je suis venue vous parler de la maîtresse cuisinière de ce train.}{}{5}{}{70}{}
+{33}{Vous êtes perspicace monsieur. Cependant, je vous propose, avant d'en parler, d'allumer une bonne pipe.}{}{5}{ru 1050}{80}{lf2 1}
+{34}{Bien entendu. Seulement, avant cela, je vous ai apporté une bouteille de vin que nous pourrions partager.}{}{5}{in 5856}{90}{in 5856, lf3 1}
+
+{40}{@pcname@ ? Je n'ai jamais entendu ce nom... Et pourtant, vous semblez avoir une raison toute particulière de rentrer dans mes bonnes grâces. [Son regard devient froid et méprisant] Je ne supporte pas les gens qui essaient de me caresser dans le sens du poil. Partez, @pcname@ !}{@pcname@ ? Je n'ai jamais entendu ce nom... Et pourtant, vous semblez avoir une raison toute particulière de rentrer dans mes bonnes grâces. [Son regard devient froid et méprisant] Je ne supporte pas les gens qui essaient de me caresser dans le sens du poil. Partez, @pcname@ !}}{}{}{}{qu1025 6,  lf29 1}
+{41}{Vous devriez au moins me laisser le temps de vous expliquer, monsieur, la raison de ma visite.}{}{5}{}{0}{fl 44}
+{42}{[Partir]}{}{1}{}{0}{}
+
+{44}{Je n'ai que faire de vos raisons. Disparaissez !}{Je n'ai que faire de vos raisons. Disparaissez !}{}{}{}{}
+
+{46}{Je vous ai demandé de partir...}{Je vous ai demandé de partir...}{}{}{}{}
+
+{50}{Non, c'est faux. Neils a l'apparence d'un Dragon noir. De plus, vous devriez savoir qu'en tant qu'intendant, je peux différencier les âmes et les identifier. Je ne sais pas ce que vous voulez, monsieur, mais vous ne l'obtiendrez pas. A présent, vous devriez vous retirer.}{Non, c'est faux. Neils a l'apparence d'un Dragon noir. De plus, vous devriez savoir qu'en tant qu'intendant, je peux différencier les âmes et les identifier. Je ne sais pas ce que vous voulez, madame, mais vous ne l'obtiendrez pas. A présent, vous devriez vous retirer.}{}{}{}{qu1025 6,  lf29 1}
+{51}{[Partir]}{}{1}{}{0}{}
+
+{60}{Vraiment ? Alors je suppose qu'il s'agit d'une cuisinière d'exception. Pourrais-je savoir de qui il s'agit ?}{Vraiment ? Alors je suppose qu'il s'agit d'une cuisinière d'exception. Pourrais-je savoir de qui il s'agit ?}{}{}{}{}
+{61}{De la chef cuisinière de ce train, Anaïs Pensior.}{}{5}{}{100}{}
+{62}{Pas encore, car je souhaite vous en parler avant que vous ne fassiez appel à la conscience collective.}{}{5}{}{110}{}
+{63}{Non. Son nom ne doit pas influencer votre décision.}{}{5}{}{120}{}
+
+{70}{Madame Pensior ? Je connais tout son parcours professionnel grâce à la conscience collective. Je dois vous avouer que je la surveille de près car elle a un potentiel intéressant mais... je pense deviner que vous êtes venu afin que je l'embauche dans notre cercle ?}{Madame Pensior ? Je connais tout son parcours professionnel grâce à la conscience collective. Je dois vous avouer que je la surveille de près car elle a un potentiel intéressant mais... je pense deviner que vous êtes venue afin que je l'embauche dans notre cercle ?}{}{}{}{}
+{71}{En effet, elle m'a demandé de vous parler d'elle.}{}{5}{}{130}{lf8 1}
+{72}{C'est exact. Bien qu'elle ignore tout de ma démarche.}{}{5}{}{140}{}
+{73}{Non, pas vraiment...}{}{5}{}{150}{}
+
+{80}{Ce serait avec joie mais malheureusement, j'ai égaré ma pipe en ébène.}{Ce serait avec joie mais malheureusement, j'ai égaré ma pipe en ébène.}{}{}{}{}
+{81}{Ah ? Alors oublions ça.}{}{5}{}{160}{}
+{82}{Je suis au courant. Mais j'ai su la retrouver.}{}{5}{in 5855}{170}{lf4 1, in 5855}
+{83}{Une pipe en ébène dites-vous ? Alors je pense l'avoir retrouvée.}{}{5}{in 5855}{180}{lf4 1, lf5 1, in 5855}
+
+{90}{[Il se saisit de la bouteille avant de l'examiner] C'est un excellent vin, en effet. Malheureusement, je ne possède qu'un verre dans ma cabine donc nous ne pourrons le partager... Cependant, soyez assuré que je le boirai plus tard avec plaisir...}{[Il se saisit de la bouteille avant de l'examiner] C'est un excellent vin, en effet. Malheureusement, je ne possède qu'un verre dans ma cabine donc nous ne pourrons le partager... Cependant, soyez assuré que je le boirai plus tard avec plaisir...}{}{}{}{}
+{91}{Bon, alors entrons dans le vif du sujet : je viens vous parler d'une amie qui souhaite travailler dans votre cercle.}{}{5}{}{60}{}
+{92}{Bien. Il est temps que je vous dise ce pourquoi je suis venu : je dois vous parler de la maîtresse cuisinière de ce train.}{}{5}{}{70}{}
+{93}{Parfait. Alors si nous commencions à discuter après avoir allumé une pipe ?}{}{5}{ru 1050}{80}{lf2 1}
+{94}{Ne souhaitez-vous pas le gouter immédiatement ?}{}{5}{}{190}{lf6 1}
+
+{100}{Anaïs Pensior ? Oui, je connais tout son parcours grâce à la conscience collective ? Je dois vous avouer que je la surveille de près car elle a un potentiel intéressant mais... je ne pense pas qu'elle soit prête à entrer dans notre cercle.}{Anaïs Pensior ? Oui, je connais tout son parcours grâce à la conscience collective ? Je dois vous avouer que je la surveille de près car elle a un potentiel intéressant mais... je ne pense pas qu'elle soit prête à entrer dans notre cercle.}{}{}{}{}
+{101}{Je comprends. En ce cas, je vais vous laisser.}{}{5}{}{200}{qu1025 6}
+{102}{Ne souhaitez-vous pas au moins la mettre au défi ?}{}{5}{}{210}{qu1025 6}
+
+{110}{Très bien, alors je vous écoute.}{Très bien, alors je vous écoute.}{}{}{}{}
+{111}{Elle a commencé à travailler dans un petit restaurant pour finir à un poste de cuisinière des plus prestigieux.}{}{5}{gf439 1}{220}{lf7 1}
+{112}{Elle a un talent exceptionnel pour choisir ses ingrédients : pour preuve elle a choisi ce vin pour vous l'offrir.}{}{5}{in 5856}{230}{in 5856, lf3 1, lf9 1}
+{113}{Elle a un talent exceptionnel pour choisir ses ingrédients : c'est elle qui a choisi le vin que je vous ai offert.}{}{5}{lf3 1}{380}{lf9 1}
+{114}{Son incroyable talent l'a conduite à diriger les cuisines de ce train.}{}{5}{}{240}{}
+{115}{Elle jouit d'une renommée de cuisinière dans tous les Enfers, sa réputation n'est plus à faire.}{}{5}{}{250}{}
+
+{120}{[Il semble irrité] Je ne peux me décider sans même savoir de qui il s'agit @pcname@. Mais je suppose que si vous tenez tant à la cacher, c'est que son passé de cuisinière ne doit pas être très glorieux... Je pense en avoir assez entendu, vous pouvez partir.}{[Il semble irrité] Je ne peux me décider sans même savoir de qui il s'agit @pcname@. Mais je suppose que si vous tenez tant à la cacher, c'est que son passé de cuisinière ne doit pas être très glorieux... Je pense en avoir assez entendu, vous pouvez partir.}{}{}{}{qu1025 6, lf29 1}
+{121}{Attendez ! Je vous assure que si vous lui laissez une chance, vous ne serez pas déçu.}{}{5}{}{0}{fl 124}
+{122}{[Partir]}{}{1}{}{0}{}
+
+{124}{Sa chance, c'est vous-même qui venez de la détruire @pcname@...}{Sa chance, c'est vous-même qui venez de la détruire @pcname@...}{}{}{}{}
+
+{130}{Alors si je peux vous parler franchement, je pense qu'elle n'est pas encore à la hauteur. Elle possède une technique exceptionnelle mais elle un peu de confiance en elle et peut de toute façon encore s'améliorer. Son art n'a pas atteint son paroxysme, ni le niveau pour venir travailler chez nous.}{Alors si je peux vous parler franchement, je pense qu'elle n'est pas encore à la hauteur. Elle possède une technique exceptionnelle mais elle un peu de confiance en elle et peut de toute façon encore s'améliorer. Son art n'a pas atteint son paroxysme, ni le niveau pour venir travailler chez nous.}{}{}{}{}
+{131}{Même si je vous disais qu'elle a choisi spécialement ce vin d'exception pour vous l'offrir ?}{}{5}{in 5856}{260}{in 5856, lf3 1, lf9 1}
+{132}{Même si je vous disais que le vin que je vous ai offert est en fait son choix ?}{}{5}{lf3 1}{350}{}
+{133}{Je vois, alors je vais devoir aller le lui annoncer.}{}{5}{}{270}{qu1025 6}
+{134}{Bien, si c'est là votre décision, je vais vous laisser.}{}{5}{}{0}{qu1025 6, lf31 1, fl135}
+
+{135}{Oui, au revoir @pcname@...}{Oui, au revoir @pcname@...}{}{}{}{}
+
+{137}{Je suis désolé que les choses se soient passées ainsi.}{Je suis désolé que les choses se soient passées ainsi.}{}{}{}{}
+
+{140}{Je vois, alors ce n'est même pas de son propre chef... [Il semble avoir du mal à vous croire sur ce point] Si je peux vous parler franchement, je pense qu'elle n'est pas encore à la hauteur. Elle possède une technique exceptionnelle mais elle un peu de confiance en elle et peut de toute façon encore s'améliorer. Son art n'a pas atteint son paroxysme, ni le niveau pour venir travailler chez nous.}{Je vois, alors ce n'est même pas de son propre chef... [Il semble avoir du mal à vous croire sur ce point] Si je peux vous parler franchement, je pense qu'elle n'est pas encore à la hauteur. Elle possède une technique exceptionnelle mais elle un peu de confiance en elle et peut de toute façon encore s'améliorer. Son art n'a pas atteint son paroxysme, ni le niveau pour venir travailler chez nous.}{}{}{}{}
+{141}{Bien, si c'est là votre décision, je vais vous laisser.}{}{5}{}{0}{qu1025 6, lf31 1, fl135}
+
+{150}{@pcname@, cacher vos intentions est inutile. De toute façon, ma décision est déjà prise : Anaïs Pensior n'est pas encore à la hauteur. Elle possède une technique exceptionnelle mais elle un peu de confiance en elle et peut de toute façon encore s'améliorer. Son art n'a pas atteint son paroxysme, ni le niveau pour venir travailler chez nous.}{@pcname@, cacher vos intentions est inutile. De toute façon, ma décision est déjà prise : Anaïs Pensior n'est pas encore à la hauteur. Elle possède une technique exceptionnelle mais elle un peu de confiance en elle et peut de toute façon encore s'améliorer. Son art n'a pas atteint son paroxysme, ni le niveau pour venir travailler chez nous.}{}{}{}{}
+{151}{Même si je vous disais qu'elle a choisi spécialement ce vin d'exception pour vous l'offrir ?}{}{5}{in 5856}{260}{in 5856, lf3 1, lf9 1}
+{152}{Même si je vous disais que le vin que je vous ai offert est en fait son choix ?}{}{5}{lf3 1}{350}{}
+{153}{Je vois, alors je vais devoir aller le lui annoncer.}{}{5}{}{270}{qu1025 6}
+{154}{Bien, si c'est là votre décision, je vais vous laisser.}{}{5}{}{0}{qu1025 6, lf31 1, fl135}
+
+{160}{Oui... Et si nous entrions enfin dans le vif du sujet ? De quoi souhaitez-vous m'entretenir ?}{Oui... Et si nous entrions enfin dans le vif du sujet ? De quoi souhaitez-vous m'entretenir ?}{}{}{}{}
+{161}{Oui. Je viens vous parler d'une amie qui souhaiterait travailler dans votre cercle.}{}{5}{}{60}{}
+{162}{De la maîtresse cuisinière qui officie dans ce train.}{}{5}{}{70}{}
+
+{170}{Ca alors ! [Il examine la pipe] C'est bien la mienne ! Mais comment savez-vous que je l'ai perdu ?}{Ca alors ! [Il examine la pipe] C'est bien la mienne ! Mais comment savez-vous que je l'ai perdu ?}{}{}{}{}
+{171}{Votre journal intime se trouvait ouvert sur le coffre-fort, je n'ai pas pu m'empêcher de lire cette phrase.}{}{5}{}{280}{}
+{172}{Je vous ai vu la faire tomber en montant dans le train et l'ai ramassée.}{}{5}{}{290}{}
+{173}{Ce détail n'a que peu d'importance non ? Le résultat est tout ce qui compte.}{}{5}{}{300}{}
+
+{180}{Ca alors ! [Il examine la pipe] C'est bien la mienne ! Je vous remercie @pcname@, sans elle, je ne savais que faire... Par contre, auriez-vous du tabac sur vous, je crains de ne plus en avoir ?}{Ca alors ! [Il examine la pipe] C'est bien la mienne ! Je vous remercie @pcname@, sans elle, je ne savais que faire... Par contre, auriez-vous du tabac sur vous, je crains de ne plus en avoir ?}{}{}{}{}
+{181}{Bien entendu. Voici du "Daily Blast", mon tabac préféré.}{}{5}{in 5852}{310}{in 5852, lf10 1}
+{182}{Je vous en prie. J'ai du "Old Pinky" sur moi.}{}{5}{in 5853}{320}{in 5853, lf10 1, lf11 1}
+{183}{Je crains que non, malheureusement.}{}{5}{}{330}{}
+
+{190}{Ma foi, rien ne s'y oppose... [Il passe sa bouteille de la main droite à la gauche puis tend l'index et le majeur droits. D'un geste d'une célérité qui le rend invisible, il tranche le haut de la bouteille de vin. Il saisit ensuite le verre de vin qui se trouvait sur son lit, en remplit le fond et fait légèrement tourner le vin avant de le boire] Il est excellent, en effet. Je vous remercie grandement de ce cadeau...}{Ma foi, rien ne s'y oppose... [Il passe sa bouteille de la main droite à la gauche puis tend l'index et le majeur droits. D'un geste d'une célérité qui le rend invisible, il tranche le haut de la bouteille de vin. Il saisit ensuite le verre de vin qui se trouvait sur son lit, en remplit le fond et fait légèrement tourner le vin avant de le boire] Il est excellent, en effet. Je vous remercie grandement de ce cadeau...}{}{}{}{}
+{191}{Bien. Je dois à présent vous dire : je suis venu vous parler d'une amie qui voudrait travailler dans votre cercle.}{}{5}{}{60}{}
+{192}{Il est temps que je rentre dans le vif du sujet : je dois vous parler de la maîtresse cuisinière de ce train.}{}{5}{}{70}{}
+{193}{Je pense que vous apprécierez d'autant plus sa saveur si vous la mêlez à l'odeur d'une pipe.}{}{5}{ru 1050}{340}{lf2 1}
+
+{200}{Oui. Je vous souhaite une bonne fin de voyage @pcname@.}{Oui. Je vous souhaite une bonne fin de voyage @pcname@.}{}{}{}{}
+{201}{Vous de même. Au revoir.}{}{5}{}{0}{lf31 1}
+{202}{[Partir]}{}{5}{}{0}{lf31 1}
+
+{210}{C'est déjà fait. Je me suis rendu au wagon restaurant et, je dois vous avouer que ce que j'y ai gouté, bien que ce fût très bien préparé et présenté, n'est pas encore digne de notre cercle.}{C'est déjà fait. Je me suis rendu au wagon restaurant et, je dois vous avouer que ce que j'y ai gouté, bien que ce fût très bien préparé et présenté, n'est pas encore digne de notre cercle.}{}{}{}{}
+{211}{Bien, si c'est là votre décision, je vais vous laisser.}{}{5}{}{0}{qu1025 6, lf31 1, fl135}
+
+{220}{Le talent est une condition sine qua non pour travailler chez nous, pas un plus. J'espère qu'il y a autre chose...}{Le talent est une condition sine qua non pour travailler chez nous, pas un plus. J'espère qu'il y a autre chose...}{}{}{}{}
+{221}{Ce talent l'a quand même fait choisir ce vin exceptionnel pour vous l'offrir.}{}{5}{in 5856}{230}{in 5856, lf3 1, lf9 1}
+{222}{Ce talent l'a quand même fait choisir ce vin exceptionnel que je vous ai offert.}{}{5}{lf3 1, lf9 0}{380}{lf9 1}
+{223}{Oui, ce poste de prestige est en fait la responsabilité des cuisines de ce train.}{}{5}{}{240}{}
+{224}{Oui, elle possède aussi une renommée dans tous les cercles des Enfers.}{}{5}{lf30 0}{250}{lf30 1}
+{225}{Je pense que ceci devrait alors vous persuader : il s'agit d'Anaïs Pensior.}{}{5}{}{360}{}
+{226}{Bien sûr que non, je pensais que ces arguments suffiraient.}{}{5}{}{370}{}
+
+{230}{[Il examine la bouteille] Le Dragon Rose est un vin d'exception, n'importe quel cuisinier le sait. Elle a certes accès à plus de ressources que les autres pour pouvoir trouver une bouteille de cette qualité mais cela ne présume en rien de ses qualités de cuisinière.}{[Il examine la bouteille] Le Dragon Rose est un vin d'exception, n'importe quel cuisinier le sait. Elle a certes accès à plus de ressources que les autres pour pouvoir trouver une bouteille de cette qualité mais cela ne présume en rien de ses qualités de cuisinière.}{}{}{}{}
+{231}{Ses qualités, elle en a fait montre en passant d'un petit restaurant à un poste des plus prestigieux.}{}{5}{gf439 1, lf7 0}{220}{lf7 1}
+{232}{Alors ceci devrait vous convaincre : ses qualités l'ont conduite à diriger les cuisines de ce train.}{}{5}{}{240}{}
+{233}{Elle possède cependant une réputation de cuisinière hors pair dans tous les Enfers.}{}{5}{lf30 0}{250}{lf30 1}
+{234}{Alors son nom devrait vous prouver ses qualités : je vous parle d'Anaïs Pensior.}{}{5}{}{360}{}
+{235}{He bien, je pensais pourtant que ces arguments suffiraient à réaliser l'ampleur de son talent.}{}{5}{}{370}{}
+
+{240}{Je vois... Vous vouliez cacher son nom mais vous me révélez son poste... Bref, concernant Anaïs Pensior, je pense qu'elle n'est pas encore à la hauteur. Elle possède une technique exceptionnelle mais elle un peu de confiance en elle et peut de toute façon encore s'améliorer. Son art n'a pas atteint son paroxysme, ni le niveau pour venir travailler chez nous.}{Je vois... Vous vouliez cacher son nom mais vous me révélez son poste... Bref, concernant Anaïs Pensior, je pense qu'elle n'est pas encore à la hauteur. Elle possède une technique exceptionnelle mais elle un peu de confiance en elle et peut de toute façon encore s'améliorer. Son art n'a pas atteint son paroxysme, ni le niveau pour venir travailler chez nous.}{}{}{}{}
+{241}{Même si je vous disais qu'elle a choisi spécialement ce vin d'exception pour vous l'offrir ?}{}{5}{in 5856}{260}{in 5856, lf3 1, lf9 1}
+{242}{Même si je vous disais que le vin que je vous ai offert est en fait son choix ?}{}{5}{lf3 1}{350}{}
+{243}{Je vois, alors je vais devoir aller le lui annoncer.}{}{5}{}{270}{qu1025 6}
+{244}{Bien, si c'est là votre décision, je vais vous laisser.}{}{5}{}{0}{qu1025 6, lf31 1, fl135}
+
+{250}{Ça, je pourrais en juger objectivement lorsque vous m'aurez dit son nom.}{Ça, je pourrais en juger objectivement lorsque vous m'aurez dit son nom.}{}{}{}{}
+{251}{Sinon, elle a un talent qui l'a projeté d'un travail dans un petit restaurant à un poste des plus prestigieux.}{}{5}{gf439 1, lf7 0}{220}{lf7 1}
+{252}{Bien. Alors laissez-moi vous donner ce vin exceptionnel qu'elle a choisi pour vous.}{}{5}{in 5856}{230}{in 5856, lf3 1, lf9 1}
+{253}{Bien. Alors laissez-moi ajouter que c'est elle qui a choisi le vin que je vous ai offert.}{}{5}{lf3 1, lf9 0}{380}{lf9 1}
+{254}{Le talent qu'elle possède en a fait la responsable des cuisines de ce train.}{}{5}{}{240}{}
+{255}{Bien. Il s'agit d'Anaïs Pensior.}{}{5}{}{360}{}
+
+{260}{[Il se saisit de la bouteille et l'examine] C'est un excellent choix, en effet. Cependant, le Dragon Rose est un vin d'exception, n'importe quel cuisinier le sait. Elle a certes accès à plus de ressources que les autres pour pouvoir trouver une bouteille de cette qualité mais cela ne sauraient rehausser l'estimation de ses qualités de cuisinière.}{[Il se saisit de la bouteille et l'examine] C'est un excellent choix, en effet. Cependant, le Dragon Rose est un vin d'exception, n'importe quel cuisinier le sait. Elle a certes accès à plus de ressources que les autres pour pouvoir trouver une bouteille de cette qualité mais cela ne sauraient rehausser l'estimation de ses qualités de cuisinière.}{}{}{}{}
+{261}{Bien, si je ne peux vous faire changer d'avis...}{}{5}{}{0}{qu1025 6, lf31 1, fl135}
+
+{270}{Oui, s'il vous plaît... Au revoir @pcname@.}{Oui, s'il vous plaît... Au revoir @pcname@.}{}{}{}{}
+{271}{Au revoir monsieur.}{}{5}{}{0}{lf31 1}
+{272}{[Partir]}{}{5}{}{0}{lf31 1}
+
+{280}{Vous l'avez lu... @pcname@, mon journal intime n'était pas ouvert. Je vous remercie d'avoir retrouvée ma pipe mais je vais devoir vous demander de partir à présent, il me faut réfléchir.}{Vous l'avez lu... @pcname@, mon journal intime n'était pas ouvert. Je vous remercie d'avoir retrouvée ma pipe mais je vais devoir vous demander de partir à présent, il me faut réfléchir.}{}{}{}{lf29 1, qu1025 6}
+{281}{Je comprends, excusez-moi.}{}{5}{}{0}{}
+{282}{Mais je vous assure que mes intentions étaient louables.}{}{5}{}{0}{fl 285}
+{283}{Attendez, je venais m'entretenir avec vous d'un sujet important.}{}{5}{}{0}{fl 287}
+{284}{Attendez ! Qui est ce "X" que vous traquez ?}{}{5}{}{0}{fl 289}
+
+{285}{Les intentions comptent moins que les actes. Partez à présent...}{Les intentions comptent moins que les actes. Partez à présent...}{}{}{}{}
+
+{287}{Eh bien ce sera pour plus tard. Au revoir !}{Eh bien ce sera pour plus tard. Au revoir !}{}{}{}{}
+
+{289}{Cela ne vous concerne pas. Partez à présent...}{Cela ne vous concerne pas. Partez à présent...}{}{}{}{}
+
+{290}{Je vois. Vous auriez pu me la remettre immédiatement, c’aurait été plus simple... Enfin passons. Par contre, auriez-vous du tabac sur vous, je crains de ne plus en avoir ?}{Je vois. Vous auriez pu me la remettre immédiatement, c’aurait été plus simple... Enfin passons. Par contre, auriez-vous du tabac sur vous, je crains de ne plus en avoir ?}{}{}{}{}
+{291}{Bien entendu. Voici du "Daily Blast", mon tabac préféré.}{}{5}{in 5852}{310}{in 5852, lf10 1}
+{292}{Je vous en prie. J'ai du "Old Pinky" sur moi.}{}{5}{in 5853}{320}{in 5853, lf10 1, lf11 1}
+{293}{Je crains que non, malheureusement.}{}{5}{}{330}{}
+
+{300}{Certes... [Il ne semble pas partager cette opinion] @pcname@, auriez-vous du tabac sur vous, je crains de ne plus en avoir ?}{Certes... [Il ne semble pas partager cette opinion] @pcname@, auriez-vous du tabac sur vous, je crains de ne plus en avoir ?}{}{}{}{}
+{301}{Bien entendu. Voici du "Daily Blast", mon tabac préféré.}{}{5}{in 5852}{310}{in 5852, lf10 1}
+{302}{Je vous en prie. J'ai du "Old Pinky" sur moi.}{}{5}{in 5853}{320}{in 5853, lf10 1, lf11 1}
+{303}{Je crains que non, malheureusement.}{}{5}{}{330}{}
+
+{310}{[Son visage esquisse une grimace qu'il tente manifestement de réprimer] Je vous remercie. Vous fumez @pcname@ ?}{[Son visage esquisse une grimace qu'il tente manifestement de réprimer] Je vous remercie. Vous fumez @pcname@ ?}{}{}{}{}
+{311}{Bien entendu. Cependant, je crains d'avoir cassé ma pipe récemment.}{}{5}{}{390}{}
+{312}{Non.}{}{5}{}{400}{}
+{313}{Bien entendu. [Vous sortez la pipe en chêne d'Heather]}{}{5}{in 5854}{410}{}
+
+{320}{Oh, enfin une personne de bon goût. Je vous remercie @pcname@, pour moi rien ne vaut un tabac puissant et parfumé tel que celui-ci. Vous fumez @pcname@ ?}{Oh, enfin une personne de bon goût. Je vous remercie @pcname@, pour moi rien ne vaut un tabac puissant et parfumé tel que celui-ci. Vous fumez @pcname@ ?}{}{}{}{}
+{321}{Bien entendu. Cependant, je crains d'avoir cassé ma pipe récemment.}{}{5}{}{390}{}
+{322}{Non.}{}{5}{}{400}{}
+{323}{Bien entendu. [Vous sortez la pipe en chêne d'Heather]}{}{5}{in 5854}{410}{}
+
+{330}{Ah... Alors oublions, cela ne fait rien : vous avez déjà retrouvé ma pipe, je vous en suis fort reconnaissant. Et si nous entrions enfin dans le vif sujet ? De quoi souhaitiez-vous m'entretenir ?}{Ah... Alors oublions, cela ne fait rien : vous avez déjà retrouvé ma pipe, je vous en suis fort reconnaissant. Et si nous entrions enfin dans le vif sujet ? De quoi souhaitiez-vous m'entretenir ?}{}{}{}{}
+{331}{Oui. Je viens vous parler d'une amie qui souhaiterait travailler dans votre cercle.}{}{5}{}{60}{}
+{332}{De la maîtresse cuisinière qui officie dans ce train.}{}{5}{}{70}{}
+
+{340}{En effet, je pense que son arome s'accorderait parfaitement avec du tabac. Malheureusement, j'ai égaré ma pipe en ébène.}{Ce serait avec joie mais malheureusement, j'ai égaré ma pipe en ébène.}{}{}{}{}
+{341}{Ah ? Alors oublions ça.}{}{5}{}{160}{}
+{342}{Je suis au courant. Mais j'ai su la retrouver.}{}{5}{in 5855}{170}{lf4 1, in 5855}
+{343}{Une pipe en ébène dites-vous ? Alors je pense l'avoir retrouvée.}{}{5}{in 5855}{180}{lf4 1, lf5 1, in 5855}
+
+{350}{Oui. Le Dragon Rose est un vin d'exception, n'importe quel cuisinier le sait. Elle a certes accès à plus de ressources que les autres pour pouvoir trouver une bouteille de cette qualité mais cela ne sauraient rehausser l'estimation de ses qualités de cuisinière.}{Oui. Le Dragon Rose est un vin d'exception, n'importe quel cuisinier le sait. Elle a certes accès à plus de ressources que les autres pour pouvoir trouver une bouteille de cette qualité mais cela ne sauraient rehausser l'estimation de ses qualités de cuisinière.}{}{}{}{}
+{351}{Bien, si je ne peux vous faire changer d'avis...}{}{5}{}{0}{qu1025 6, lf31 1, fl135}
+
+{360}{Je vois, Anaïs Pensior, la maîtresse cuisinière de ce train... Je suis désolé mais je pense sincèrement qu'elle n'est pas encore à la hauteur. Elle possède une technique exceptionnelle mais elle un peu de confiance en elle et peut de toute façon encore s'améliorer. Son art n'a pas atteint son paroxysme, ni le niveau pour venir travailler chez nous.}{Je vois, Anaïs Pensior, la maîtresse cuisinière de ce train... Je suis désolé mais je pense sincèrement qu'elle n'est pas encore à la hauteur. Elle possède une technique exceptionnelle mais elle un peu de confiance en elle et peut de toute façon encore s'améliorer. Son art n'a pas atteint son paroxysme, ni le niveau pour venir travailler chez nous.}{}{}{}{}
+{361}{Même si je vous disais qu'elle a choisi spécialement ce vin d'exception pour vous l'offrir ?}{}{5}{in 5856}{260}{in 5856, lf3 1, lf9 1}
+{362}{Même si je vous disais que le vin que je vous ai offert est en fait son choix ?}{}{5}{lf3 1}{350}{}
+{363}{Je vois, alors je vais devoir aller le lui annoncer.}{}{5}{}{270}{qu1025 6}
+{364}{Bien, si c'est là votre décision, je vais vous laisser.}{}{5}{}{0}{qu1025 6, lf31 1, fl135}
+
+{370}{Eh bien vous êtes loin du compte @pcname@. Cependant, peut-être que vous souhaitez me laisser son nom afin que j'étudie cette candidature ?}{Eh bien vous êtes loin du compte @pcname@. Cependant, peut-être que vous souhaitez me laisser son nom afin que j'étudie cette candidature ?}{}{}{}{}
+{371}{Bien entendu, il s'agit d'Anaïs Pensior.}{}{5}{}{360}{}
+{372}{Non, je pense qu'elle n'obtiendra rien de vous.}{}{5}{}{0}{qu1052 6, lf29 1, fl 374}
+
+{374}{Je vois, alors vous pouvez vous retirer...}{Je vois, alors vous pouvez vous retirer...}{}{}{}{}
+
+{380}{Je m'en doutais. Cependant, le Dragon Rose est un vin d'exception, n'importe quel cuisinier le sait. Elle a certes accès à plus de ressources que les autres pour pouvoir trouver une bouteille de cette qualité mais cela ne sauraient rehausser l'estimation de ses qualités de cuisinière.}{Je m'en doutais. Cependant, le Dragon Rose est un vin d'exception, n'importe quel cuisinier le sait. Elle a certes accès à plus de ressources que les autres pour pouvoir trouver une bouteille de cette qualité mais cela ne sauraient rehausser l'estimation de ses qualités de cuisinière.}{}{}{}{}
+{381}{Bien, si je ne peux vous faire changer d'avis...}{}{5}{}{0}{qu1025 6, lf31 1, fl135}
+
+{390}{Un bien mauvais jeu de mots, si je puis me permettre. Alors soit, je fumerai seul... [Il craque une allumette et se met à fumer, s'entourant rapidement de volutes de fumée] Bien, de quoi vouliez-vous m'entretenir ?}{Un bien mauvais jeu de mots, si je puis me permettre. Alors soit, je fumerai seul... [Il craque une allumette et se met à fumer, s'entourant rapidement de volutes de fumée] Bien, de quoi vouliez-vous m'entretenir ?}{}{}{}{}
+{391}{Avant cela, je me dois de vous offrir cette bouteille de vin.}{}{5}{in 5856}{420}{in 5856, lf3 1}
+{392}{Avant d'en parler, goutez donc l'alliance entre le vin et le tabac.}{}{5}{lf3 1}{430}{lf12 1}
+{393}{Quelqu'un m'a demandé de venir vous voir. De plus, il aimerait vous offrir cette bouteille de vin.}{}{5}{in 5856}{510}{in 5856, lf3 1, lf9 1}
+{394}{Voilà, je viens vous parler d'une personne qui aimerait beaucoup travaillé chez vous.}{}{5}{}{520}{}
+{395}{Je viens vous parler de la maîtresse cuisinière de ce train, qui voudrais travailler dans votre cercle.}{}{5}{}{440}{}
+
+{400}{Et pourtant vous possédez du tabac... [Il semble suspicieux] En tout cas, c'est une chance pour moi. [Il craque une allumette et se met à fumer, s'entourant rapidement de volutes de fumée] Bien, de quoi vouliez-vous m'entretenir ?}{Et pourtant vous possédez du tabac... [Il semble suspicieux] En tout cas, c'est une chance pour moi. [Il craque une allumette et se met à fumer, s'entourant rapidement de volutes de fumée] Bien, de quoi vouliez-vous m'entretenir ?}{}{}{}{}
+{401}{Avant cela, je me dois de vous offrir cette bouteille de vin.}{}{5}{in 5856}{420}{in 5856, lf3 1}
+{402}{Avant d'en parler, goutez donc l'alliance entre le vin et le tabac.}{}{5}{lf3 1}{430}{lf12 1}
+{403}{Quelqu'un m'a demandé de venir vous voir. De plus, il aimerait vous offrir cette bouteille de vin.}{}{5}{in 5856}{510}{in 5856, lf3 1, lf9 1}
+{404}{Voilà, je viens vous parler d'une personne qui aimerait beaucoup travailler chez vous.}{}{5}{}{520}{}
+{405}{Je viens vous parler de la maîtresse cuisinière de ce train, qui voudrais travailler dans votre cercle.}{}{5}{}{440}{}
+
+{410}{Attendez, je vais vous rendre votre paquet de tabac.}{Attendez, je vais vous rendre votre paquet de tabac.}{}{}{}{lf13 1}
+{411}{Non, c'est très aimable à vous mais j'en avais deux. [Vous remplissez la pipe de Daily Blast]}{}{5}{in 5852}{450}{in 5852}
+{412}{Volontiers.}{}{5}{lf11 1}{460}{}
+{413}{Volontiers.}{}{5}{lf11 0}{470}{}
+
+{420}{[Il saisit la bouteille] Quelle délicate attention que voilà. Du Dragon Rose 1869, c'est incroyable... Je n'ose imaginer la peine qu'il vous a fallu pour vous en procurer une bouteille.}{[Il saisit la bouteille] Quelle délicate attention que voilà. Du Dragon Rose 1869, c'est incroyable... Je n'ose imaginer la peine qu'il vous a fallu pour vous en procurer une bouteille.}{}{}{}{}
+{421}{Je vous en prie, goutez-le dont.}{}{5}{}{480}{lf6 1}
+{422}{En réalité, ce cadeau n'est pas de moi mais d'une personne dont je viens vous parler.}{}{5}{}{490}{lf9 1}
+{423}{Ce n'est rien, je tenais vraiment à vous faire ce cadeau.}{}{5}{}{500}{}
+
+{430}{Vous avez raison, nous avons tout notre temps alors prenons-le. [Il se sert un demi-verre de vin qu'il vide] En effet, ce vin est absolument divin avec du tabac. Bien, dites-moi dont à présent ce que vous désiriez me dire.}{Vous avez raison, nous avons tout notre temps alors prenons-le. [Il se sert un demi-verre de vin qu'il vide] En effet, ce vin est absolument divin avec du tabac. Bien, dites-moi dont à présent ce que vous désiriez me dire.}{}{}{}{}
+{431}{Oui. Il s'agit d'une amie pour qui travailler dans votre cercle est un rêve qu'elle mérite de réaliser.}{}{5}{}{520}{}
+{432}{Bien. La maîtresse cuisinière de ce train voudrait partir travailler dans votre cercle.}{}{5}{lf9 0}{440}{}
+{433}{Bien. La maîtresse cuisinière de ce train voudrait partir travailler dans votre cercle.}{}{5}{lf9 1}{570}{}
+{434}{Cela concerne la personne qui vous offre ce vin. Elle souhaiterait travailler dans votre cercle.}{}{5}{lf9 0}{530}{lf9 1}
+
+{440}{Anaïs Pensior ? En effet, elle peut légitimement prétendre à un poste vu qu'elle travaille maintenant dans ce prestigieux train. [Il inspire une bouffée de tabac]}{Anaïs Pensior ? En effet, elle peut légitimement prétendre à un poste vu qu'elle travaille maintenant dans ce prestigieux train. [Il inspire une bouffée de tabac]}{}{}{}{}
+{441}{[Suite]}{}{5}{}{442}{}
+
+{442}{Cependant, grâce à la conscience collective, je connais son histoire et, si je peux vous parler franchement, je pense qu'elle n'est pas encore à la hauteur. Elle possède une technique exceptionnelle mais elle un peu de confiance en elle et peut de toute façon encore s'améliorer. Son art n'a pas atteint son paroxysme, ni le niveau pour venir travailler chez nous.}{Cependant, grâce à la conscience collective, je connais son histoire et, si je peux vous parler franchement, je pense qu'elle n'est pas encore à la hauteur. Elle possède une technique exceptionnelle mais elle un peu de confiance en elle et peut de toute façon encore s'améliorer. Son art n'a pas atteint son paroxysme, ni le niveau pour venir travailler chez nous.}{}{}{}{}
+{443}{Même si je vous disais qu'elle a choisi spécialement ce vin d'exception pour vous l'offrir ?}{}{5}{in 5856}{260}{in 5856, lf3 1, lf9 1}
+{444}{Même si je vous disais que le vin que je vous ai offert est en fait son choix ?}{}{5}{lf3 1}{350}{}
+{445}{Je vois, alors je vais devoir aller le lui annoncer.}{}{5}{}{270}{qu1025 6}
+{446}{Bien, si c'est là votre décision, je vais vous laisser.}{}{5}{}{0}{qu1025 6, lf31 1, fl135}
+
+{450}{[L'intendant craque une allumette et allume et sa pipe, et la vôtre. Vous absorbez un peu de cette fumée au goût léger] Bien, @pcname@. Et si vous me disiez de quoi vous souhaitez me parler ?}{[L'intendant craque une allumette et allume et sa pipe, et la vôtre. Vous absorbez un peu de cette fumée au goût léger] Bien, @pcname@. Et si vous me disiez de quoi vous souhaitez me parler ?}{}{}{}{}
+{451}{Avant cela, je me dois de vous offrir cette bouteille de vin.}{}{5}{in 5856}{420}{in 5856, lf3 1}
+{452}{Avant d'en parler, goutez donc l'alliance entre le vin et le tabac.}{}{5}{lf3 1}{430}{lf12 1}
+{453}{Quelqu'un m'a demandé de venir vous voir. De plus, il aimerait vous offrir cette bouteille de vin.}{}{5}{in 5856}{510}{in 5856, lf3 1, lf9 1}
+{454}{Voilà, je viens vous parler d'une personne qui aimerait beaucoup travailler chez vous.}{}{5}{}{520}{}
+{455}{Je viens vous parler de la maîtresse cuisinière de ce train, qui voudrais travailler dans votre cercle.}{}{5}{}{440}{}
+
+{460}{[L'intendant vous redonne le paquet de "Old Pinky", vous remplissez votre pipe de ce tabac avant de redonner le paquet à l'intendant. Ce dernier craque une allumette et allume et sa pipe, et la vôtre. Vous absorbez un peu de cette fumée mais êtes pris d'une violente crise de toux] @pcname@, vous allez bien ?}{[L'intendant vous redonne le paquet de "Old Pinky", vous remplissez votre pipe de ce tabac avant de redonner le paquet à l'intendant. Ce dernier craque une allumette et allume et sa pipe, et la vôtre. Vous absorbez un peu de cette fumée mais êtes pris d'une violente crise de toux] @pcname@, vous allez bien ?}{}{}{}{}
+{461}{[Vous ne parvenez pas à répondre, vous avez l'impression que votre gorge est compressée]}{}{5}{}{462}{}
+
+{462}{@pcname@ ! Je vais appeler de l'aide.}{@pcname@ ! Je vais appeler de l'aide.}{}{}{}{}
+{463}{Je... je vais bien.}{}{5}{}{540}{}
+
+{470}{[L'intendant vous redonne le paquet de "Daily Blast", vous remplissez votre pipe de ce tabac avant de redonner le paquet à l'intendant. Ce dernier craque une allumette et allume et sa pipe, et la vôtre. Vous absorbez un peu de cette fumée au goût léger] Bien, @pcname@. Et si vous me disiez de quoi vous souhaitez me parler ?}{[L'intendant vous redonne le paquet de "Daily Blast", vous remplissez votre pipe de ce tabac avant de redonner le paquet à l'intendant. Ce dernier craque une allumette et allume et sa pipe, et la vôtre. Vous absorbez un peu de cette fumée au goût léger] Bien, @pcname@. Et si vous me disiez de quoi vous souhaitez me parler ?}{}{}{}{}
+{471}{Avant cela, je me dois de vous offrir cette bouteille de vin.}{}{5}{in 5856}{420}{in 5856, lf3 1}
+{472}{Avant d'en parler, goutez donc l'alliance entre le vin et le tabac.}{}{5}{lf3 1}{430}{lf12 1}
+{473}{Quelqu'un m'a demandé de venir vous voir. De plus, il aimerait vous offrir cette bouteille de vin.}{}{5}{in 5856}{510}{in 5856, lf3 1, lf9 1}
+{474}{Voilà, je viens vous parler d'une personne qui aimerait beaucoup travailler chez vous.}{}{5}{}{520}{}
+{475}{Je viens vous parler de la maîtresse cuisinière de ce train, qui voudrais travailler dans votre cercle.}{}{5}{}{440}{}
+
+{480}{Avec plaisir ! Après tout, rien ne s'y oppose. [Il passe sa bouteille de la main droite à la gauche puis tend l'index et le majeur droits. D'un geste d'une célérité qui le rend invisible, il tranche le haut de la bouteille de vin. Il saisit ensuite le verre de vin qui se trouvait sur son lit, en remplit le fond et fait légèrement tourner le vin avant de le boire] Il est excellent, en effet. Je vous remercie grandement de ce cadeau...}{Avec plaisir ! Après tout, rien ne s'y oppose. [Il passe sa bouteille de la main droite à la gauche puis tend l'index et le majeur droits. D'un geste d'une célérité qui le rend invisible, il tranche le haut de la bouteille de vin. Il saisit ensuite le verre de vin qui se trouvait sur son lit, en remplit le fond et fait légèrement tourner le vin avant de le boire] Il est excellent, en effet. Je vous remercie grandement de ce cadeau...}{}{}{}{}
+{481}{En réalité, ce cadeau n'est pas de moi mais d'une personne dont je dois vous parler.}{}{5}{}{550}{lf9 1}
+{482}{En fait, je dois vous avouer que ce cadeau vient d'Anaïs Pensior, la maîtresse cuisinière de ce train.}{}{5}{}{560}{lf9 1}
+{483}{Bien, il est peut-être temps que je vous parle : une amie souhaite travailler dans votre cercle.}{}{5}{}{520}{}
+{484}{Venons-en au fait à présent : Anaïs Pensior, la maîtresse cuisinière de ce train, souhaiterait travailler chez vous.}{}{5}{lf9 0}{440}{}
+{485}{Venons-en au fait à présent : Anaïs Pensior, la maîtresse cuisinière de ce train, souhaiterait travailler chez vous.}{}{5}{lf9 1}{570}{}
+
+{490}{Tiens, alors je suppose qu'il s'agit d'un cuisinier qui souhaite travailler dans mon cercle ?}{Tiens, alors je suppose qu'il s'agit d'un cuisinier qui souhaite travailler dans mon cercle ?}{}{}{}{}
+{491}{En effet, il s'agit d'Anaïs Pensior, la maîtresse cuisinière de ce train.}{}{5}{}{570}{}like440+merci vin
+{492}{Vous devinez juste. Pourquoi ne pas gouter ce vin ?}{}{5}{}{580}{lf6 1}
+{493}{C'est exact. Cependant permettez que je taise son nom pour l'instant afin que vous n'utilisiez pas la conscience collective.}{}{5}{}{590}{}
+
+{500}{Eh bien c'est très aimable à vous. Alors, si vous me disiez enfin de quoi vous souhaitiez me parler ?}{Eh bien c'est très aimable à vous. Alors, si vous me disiez enfin de quoi vous souhaitiez me parler ?}{}{}{}{}
+{501}{Avant cela, pourquoi ne pas gouter ce vin ?}{}{5}{}{480}{lf6 1}
+{502}{Oui : une amie souhaiterait travailler dans votre cercle.}{}{5}{}{520}{}
+{503}{Entendu : Anaïs Pensior, la maîtresse cuisinière de ce train, souhaiterait travailler chez vous.}{}{5}{}{440}{}
+
+{510}{[Il saisit la bouteille] Du Dragon Rose 1869, quelle délicate attention... Je suppose que ce cadeau provient d'un cuisinier qui souhaite travailler dans mon cercle ?}{[Il saisit la bouteille] Du Dragon Rose 1869, quelle délicate attention... Je suppose que ce cadeau provient d'un cuisinier qui souhaite travailler dans mon cercle ?}{}{}{}{}
+{511}{En effet, il s'agit d'Anaïs Pensior, la maîtresse cuisinière de ce train.}{}{5}{}{570}{}like440+merci vin
+{512}{Vous devinez juste. Pourquoi ne pas gouter ce vin ?}{}{5}{}{580}{lf6 1}
+{513}{C'est exact. Cependant permettez que je taise son nom pour l'instant afin que vous n'utilisiez pas la conscience collective.}{}{5}{}{590}{}
+
+{520}{Cela promet d'être intéressant. De qui s'agit-il ?}{Cela promet d'être intéressant. De qui s'agit-il ?}{}{}{}{}
+{521}{Il s'agit d'Anaïs Pensior, la maîtresse cuisinière de ce train.}{}{5}{lf9 0}{440}{}
+{521}{Il s'agit d'Anaïs Pensior, la maîtresse cuisinière de ce train.}{}{5}{lf9 1}{570}{}
+{522}{N'en prenez pas ombrage, je tairai son nom pour l'instant afin que la conscience collective ne vous donne pas d'a priori.}{}{5}{}{590}{}
+
+{530}{Cela n'est pas si surprenant, connaissant le mal que l'on a à se procurer cette bouteille. Très bien, cela promet d'être intéressant. De qui s'agit-il ?}{Cela n'est pas si surprenant, connaissant le mal que l'on a à se procurer cette bouteille. Très bien, cela promet d'être intéressant. De qui s'agit-il ?}{}{}{}{}
+{531}{Il s'agit d'Anaïs Pensior, la maîtresse cuisinière de ce train.}{}{5}{}{570}{}
+{532}{N'en prenez pas ombrage, je tairai son nom pour l'instant afin que la conscience collective ne vous donne pas d'a priori.}{}{5}{}{590}{}
+
+{540}{[Vous reprenez votre souffle peu à peu] Mais enfin, pourquoi avoir fait semblant de fumer @pcname@ ?}{[Vous reprenez votre souffle peu à peu] Mais enfin, pourquoi avoir fait semblant de fumer @pcname@ ?}{}{}{}{}
+{541}{Cela aurait dû m'aider...}{}{5}{}{600}{}
+{542}{Peu importe à présent. Il faut que je parte.}{}{5}{}{610}{}
+
+{550}{Je comprends mieux, même si connaissant le mal que l'on a à se procurer cette bouteille ainsi que la connaissance qu'il faut pour la choisir, je commençais à m'en douter. Très bien, cela promet d'être intéressant. De qui s'agit-il ?}{Je comprends mieux, même si connaissant le mal que l'on a à se procurer cette bouteille ainsi que la connaissance qu'il faut pour la choisir, je commençais à m'en douter. Très bien, cela promet d'être intéressant. De qui s'agit-il ?}{}{}{}{}
+{551}{Il s'agit d'Anaïs Pensior, la maîtresse cuisinière de ce train.}{}{5}{}{570}{}
+{552}{N'en prenez pas ombrage, je tairai son nom pour l'instant afin que la conscience collective ne vous donne pas d'a priori.}{}{5}{}{590}{}
+
+{560}{Anaïs Pensior ? Je vois, ce choix ainsi que cette façon de faire ne m'étonnent guère d'elle. En effet, elle peut légitimement prétendre à un poste vu qu'elle travaille maintenant dans ce prestigieux train. [Il inspire une bouffée de tabac]}{Anaïs Pensior ? Je vois, ce choix ainsi que cette façon de faire ne m'étonnent guère d'elle. En effet, elle peut légitimement prétendre à un poste vu qu'elle travaille maintenant dans ce prestigieux train. [Il inspire une bouffée de tabac]}{}{}{}{}
+{561}{[Suite]}{}{5}{}{562}{}
+
+{562}{Cependant, grâce à la conscience collective, je connais son histoire et, si je peux vous parler franchement, je pense qu'elle n'est pas encore à la hauteur. Elle possède une technique exceptionnelle mais elle un peu de confiance en elle et peut de toute façon encore s'améliorer. Son art n'a pas atteint son paroxysme, ni le niveau pour venir travailler chez nous. Je lui suis reconnaissant pour ce vin mais ma réponse est non.}{Cependant, grâce à la conscience collective, je connais son histoire et, si je peux vous parler franchement, je pense qu'elle n'est pas encore à la hauteur. Elle possède une technique exceptionnelle mais elle un peu de confiance en elle et peut de toute façon encore s'améliorer. Son art n'a pas atteint son paroxysme, ni le niveau pour venir travailler chez nous. Je lui suis reconnaissant pour ce vin mais ma réponse est non.}{}{}{}{}
+{563}{Je vois, alors je vais devoir aller le lui annoncer.}{}{5}{}{270}{qu1025 6}
+{564}{Bien, puisque c'est là votre décision, je vais vous laisser.}{}{5}{}{0}{qu1025 6, lf31 1, fl135}
+
+{570}{Anaïs Pensior ? Je vois, le choix de la bouteille ainsi que cette façon de faire ne m'étonnent guère d'elle. En effet, elle peut légitimement prétendre à un poste vu qu'elle travaille maintenant dans ce prestigieux train. [Il inspire une bouffée de tabac]}{Anaïs Pensior ? Je vois, le choix de la bouteille ainsi que cette façon de faire ne m'étonnent guère d'elle. En effet, elle peut légitimement prétendre à un poste vu qu'elle travaille maintenant dans ce prestigieux train. [Il inspire une bouffée de tabac]}{}{}{}{}
+{571}{[Suite]}{}{5}{}{562}{}
+
+{580}{C'est exact. Après tout, rien ne s'y oppose. [Il passe sa bouteille de la main droite à la gauche puis tend l'index et le majeur droits. D'un geste d'une célérité qui le rend invisible, il tranche le haut de la bouteille de vin. Il saisit ensuite le verre de vin qui se trouvait sur son lit, en remplit le fond et fait légèrement tourner le vin avant de le boire] Il est excellent, en effet. Alors, à qui dois-je ce mystérieux cadeau ?}{C'est exact. Après tout, rien ne s'y oppose. [Il passe sa bouteille de la main droite à la gauche puis tend l'index et le majeur droits. D'un geste d'une célérité qui le rend invisible, il tranche le haut de la bouteille de vin. Il saisit ensuite le verre de vin qui se trouvait sur son lit, en remplit le fond et fait légèrement tourner le vin avant de le boire] Il est excellent, en effet. Alors, à qui dois-je ce mystérieux cadeau ?}{}{}{}{}
+{581}{Il provient d'Anaïs Pensior, la maîtresse cuisinière de ce train.}{}{5}{}{570}{}like440+merci vin
+{582}{Vous permettrez que je taise son nom pour l'instant afin que la conscience collective ne vous donne pas d'a priori.}{}{5}{}{590}{}
+
+{590}{Soit, c'est une méthode qui me convient tout à fait. Alors dites-moi, qu'est-ce-qui, selon vous, démontre le plus le talent de cette personne qui souhaite travailler au cercle 693.}{Soit, c'est une méthode qui me convient tout à fait. Alors dites-moi, qu'est-ce-qui, selon vous, démontre le plus le talent de cette personne qui souhaite travailler au cercle 693.}{}{}{}{}
+{591}{Je pense qu'il s'agit de sa motivation : pour preuve elle savait quel train vous prendriez.}{}{5}{}{620}{lf28 1}
+{592}{Le choix du vin : ce cadeau venait en réalité d'elle.}{}{5}{lf9 0, lf3 1}{630}{lf9 1}
+{593}{Le choix du vin qu'elle vous a offert.}{}{5}{lf9 1}{640}{}
+{594}{Le choix de cette bouteille de vin qu'elle m'a demandé de vous offrir.}{}{5}{in 5856}{650}{in 5856, lf3 1, lf9 1}
+{595}{Le fait qu'elle ait commencé il y a peu dans un petit restaurant et qu'elle occupe aujourd'hui un poste prestigieux.}{}{5}{gf439 1}{660}{lf7 1}
+
+{600}{Je vois. Ainsi vous aviez une faveur à me demander @pcname@. [Il semble désolé, ce qui contraste beaucoup avec l'air autoritaire qu'il affichait il y a peu] Je pense que vous deviez partir @pcname@. Maintenant.}{Je vois. Ainsi vous aviez une faveur à me demander @pcname@. [Il semble désolé, ce qui contraste beaucoup avec l'air autoritaire qu'il affichait il y a peu] Je pense que vous deviez partir @pcname@. Maintenant.}{}{}{}{qu1025 6, lf31 1}
+{601}{Vous avez raison, au revoir.}{}{5}{}{0}{}
+{602}{[Partir]}{}{5}{}{0}{}
+
+{610}{[Il semble désolé, ce qui contraste beaucoup avec l'air autoritaire qu'il affichait il y a peu] Je crois avoir à peu près saisi votre situation @pcname@, et comprends que vous préfériez vous retirer. Au revoir...}{[Il semble désolé, ce qui contraste beaucoup avec l'air autoritaire qu'il affichait il y a peu] Je crois avoir à peu près saisi votre situation @pcname@, et comprends que vous préfériez vous retirer. Au revoir...}{}{}{}{qu1025 6, lf31 1}
+{611}{[Partir]}{}{5}{}{0}{}
+
+{620}{En effet. Bien que cela ne démontre pas son talent, la motivation est une chose importante. Cependant, si malgré le fait que nous la connaissions grâce à la conscience collective, nous ne l'avons pas encore engagée, c'est que son dossier est un peu faible pour nous, qu'en pensez-vous ?}{En effet. Bien que cela ne démontre pas son talent, la motivation est une chose importante. Cependant, si malgré le fait que nous la connaissions grâce à la conscience collective, nous ne l'avons pas encore engagée, c'est que son dossier est un peu faible pour nous, qu'en pensez-vous ?}{}{}{}{}
+{621}{Que vous surestimez la conscience collective. Elle ne permet de connaître des gens que ce qu'ils font, non ce que les autres en pensent.}{}{5}{}{670}{}
+{622}{En tant que cuisinier, je doute que vous apprécieriez que l'on vous juge par la magie plutôt que par le goût. Me tromperais-je ?}{}{8}{ps 8}{680}{}
+{623}{Que vous devriez juger son talent après avoir goutée sa cuisine, sinon cela n'a aucun sens.}{}{5}{}{690}{}
+{624}{Que même si son talent n'a pas atteint son paroxysme, son potentiel est exceptionnel.}{}{5}{}{700}{}
+
+{630}{Je vois. Cela ne m'étonne pas, vu la qualité de ce cru. Cependant, si malgré le fait que nous connaissions cette personne grâce à la conscience collective, nous ne l'avons pas encore engagée, c'est que son dossier est un peu faible pour nous, qu'en pensez-vous ?}{Je vois. Cela ne m'étonne pas, vu la qualité de ce cru. Cependant, si malgré le fait que nous connaissions cette personne grâce à la conscience collective, nous ne l'avons pas encore engagée, c'est que son dossier est un peu faible pour nous, qu'en pensez-vous ?}{}{}{}{}
+{631}{Que vous surestimez la conscience collective. Elle ne permet de connaître des gens que ce qu'ils font, non ce que les autres en pensent.}{}{5}{}{670}{}
+{632}{En tant que cuisinier, je doute que vous apprécieriez que l'on vous juge par la magie plutôt que par le goût. Me tromperais-je ?}{}{8}{ps 8}{680}{}
+{633}{Que vous devriez juger son talent après avoir goutée sa cuisine, sinon cela n'a aucun sens.}{}{5}{}{690}{}
+{634}{Que même si son talent n'a pas atteint son paroxysme, son potentiel est exceptionnel.}{}{5}{}{700}{}
+
+{640}{En effet, cette bouteille est d'une grande qualité, et il s'agit d'une preuve que j'ai moi-même acceptée... Cependant, si malgré le fait que nous connaissions cette personne grâce à la conscience collective, nous ne l'avons pas encore engagée, c'est que son dossier est un peu faible pour nous, qu'en pensez-vous ?}{En effet, cette bouteille est d'une grande qualité, et il s'agit d'une preuve que j'ai moi-même acceptée... Cependant, si malgré le fait que nous connaissions cette personne grâce à la conscience collective, nous ne l'avons pas encore engagée, c'est que son dossier est un peu faible pour nous, qu'en pensez-vous ?}{}{}{}{}
+{641}{Que vous surestimez la conscience collective. Elle ne permet de connaître des gens que ce qu'ils font, non ce que les autres en pensent.}{}{5}{}{670}{}
+{642}{En tant que cuisinier, je doute que vous apprécieriez que l'on vous juge par la magie plutôt que par le goût. Me tromperais-je ?}{}{8}{ps 8}{680}{}
+{643}{Que vous devriez juger son talent après avoir goutée sa cuisine, sinon cela n'a aucun sens.}{}{5}{}{690}{}
+{644}{Que même si son talent n'a pas atteint son paroxysme, son potentiel est exceptionnel.}{}{5}{}{700}{}
+
+{650}{[Il saisit la bouteille] Du Dragon Rose 1869, quelle délicate attention... En effet, il s'agit là d'un grand cru qui prouve son bon goût. Cependant, si malgré le fait que nous connaissions cette personne grâce à la conscience collective, nous ne l'avons pas encore engagée, c'est que son dossier est un peu faible pour nous, qu'en pensez-vous ?}{[Il saisit la bouteille] Du Dragon Rose 1869, quelle délicate attention... En effet, il s'agit là d'un grand cru qui prouve son bon goût. Cependant, si malgré le fait que nous connaissions cette personne grâce à la conscience collective, nous ne l'avons pas encore engagée, c'est que son dossier est un peu faible pour nous, qu'en pensez-vous ?}{}{}{}{}
+{651}{Que vous surestimez la conscience collective. Elle ne permet de connaître des gens que ce qu'ils font, non ce que les autres en pensent.}{}{5}{}{670}{}
+{652}{En tant que cuisinier, je doute que vous apprécieriez que l'on vous juge par la magie plutôt que par le goût. Me tromperais-je ?}{}{8}{ps 8}{680}{}
+{653}{Que vous devriez juger son talent après avoir goutée sa cuisine, sinon cela n'a aucun sens.}{}{5}{}{690}{}
+{654}{Que même si son talent n'a pas atteint son paroxysme, son potentiel est exceptionnel.}{}{5}{}{700}{}
+
+{660}{Je vois. Il s'agit en effet d'un début de carrière quasiment commun à tous les grands cuisiniers. Cependant, si malgré le fait que nous connaissions cette personne et son histoire grâce à la conscience collective, nous ne l'avons pas encore engagée, c'est que son dossier est un peu faible pour nous, qu'en pensez-vous ?}{Je vois. Il s'agit en effet d'un début de carrière quasiment commun à tous les grands cuisiniers. Cependant, si malgré le fait que nous connaissions cette personne et son histoire grâce à la conscience collective, nous ne l'avons pas encore engagée, c'est que son dossier est un peu faible pour nous, qu'en pensez-vous ?}{}{}{}{}
+{661}{Que vous surestimez la conscience collective. Elle ne permet de connaître des gens que ce qu'ils font, non ce que les autres en pensent.}{}{5}{}{670}{}
+{662}{En tant que cuisinier, je doute que vous apprécieriez que l'on vous juge par la magie plutôt que par le goût. Me tromperais-je ?}{}{8}{ps 8}{680}{}
+{663}{Que vous devriez juger son talent après avoir goutée sa cuisine, sinon cela n'a aucun sens.}{}{5}{}{690}{}
+{664}{Que même si son talent n'a pas atteint son paroxysme, son potentiel est exceptionnel.}{}{5}{}{700}{}
+
+{670}{Ce n'est pas faux, en effet. Juste une question à part @pcname@, selon vous, quelle est la qualité primordiale que nous recherchons chez nos candidats ?}{Ce n'est pas faux, en effet. Juste une question à part @pcname@, selon vous, quelle est la qualité primordiale que nous recherchons chez nos candidats ?}{}{}{}{}
+{671}{Le talent. Il est évident qu'ils doivent posséder une technique unique afin de pouvoir être qualifiés d'exceptionnels.}{}{5}{}{710}{}
+{672}{La volonté de se surpasser en permanence dans son art. Ainsi leur cuisine est en perpétuelle amélioration.}{}{5}{}{720}{}
+{673}{La capacité à transmettre des émotions à travers les plats. C'est là l'essence même de la cuisine.}{}{5}{}{730}{lf15 1}
+{674}{La motivation car ils doivent prouver qu'ils peuvent se surpasser pour atteindre leurs objectifs.}{}{5}{lf28 0}{740}{}
+{674}{La motivation car ils doivent prouver qu'ils peuvent se surpasser pour atteindre leurs objectifs.}{}{5}{lf28 1}{745}{}
+
+{680}{Non... Vous avez tout à fait raison @pcname@. Juste une question à part @pcname@, selon vous, quelle est la qualité primordiale que nous recherchons chez nos candidats ?}{Non... Vous avez tout à fait raison @pcname@. Juste une question à part @pcname@, selon vous, quelle est la qualité primordiale que nous recherchons chez nos candidats ?}{}{}{}{lf16 1}
+{681}{Le talent. Il est évident qu'ils doivent posséder une technique unique afin de pouvoir être qualifiés d'exceptionnels.}{}{5}{}{710}{}
+{682}{La volonté de se surpasser en permanence dans son art. Ainsi leur cuisine est en perpétuelle amélioration.}{}{5}{}{720}{}
+{683}{La capacité à transmettre des émotions à travers les plats. C'est là l'essence même de la cuisine.}{}{5}{}{730}{lf15 1}
+{684}{La motivation car ils doivent prouver qu'ils peuvent se surpasser pour atteindre leurs objectifs.}{}{5}{}{740}{}
+
+{690}{Peut-être bien, si ce n'est pas déjà fait... Juste une question à part @pcname@, selon vous, quelle est la qualité primordiale que nous recherchons chez nos candidats ?}{Peut-être bien, si ce n'est pas déjà fait... Juste une question à part @pcname@, selon vous, quelle est la qualité primordiale que nous recherchons chez nos candidats ?}{}{}{}{}
+{691}{Le talent. Il est évident qu'ils doivent posséder une technique unique afin de pouvoir être qualifiés d'exceptionnels.}{}{5}{}{710}{}
+{692}{La volonté de se surpasser en permanence dans son art. Ainsi leur cuisine est en perpétuelle amélioration.}{}{5}{}{720}{}
+{693}{La capacité à transmettre des émotions à travers les plats. C'est là l'essence même de la cuisine.}{}{5}{}{730}{lf15 1}
+{694}{La motivation car ils doivent prouver qu'ils peuvent se surpasser pour atteindre leurs objectifs.}{}{5}{}{740}{}
+
+{700}{En effet, le potentiel est une chose primordiale sur nos candidats mais nous en reparlerons juste après. Juste une question à part @pcname@, selon vous, quelle est la qualité primordiale que nous recherchons chez nos candidats ?}{En effet, le potentiel est une chose primordiale sur nos candidats mais nous en reparlerons juste après. Juste une question à part @pcname@, selon vous, quelle est la qualité primordiale que nous recherchons chez nos candidats ?}{}{}{}{lf27 1}
+{701}{Le talent. Il est évident qu'ils doivent posséder une technique unique afin de pouvoir être qualifiés d'exceptionnels.}{}{5}{}{710}{}
+{702}{La volonté de se surpasser en permanence dans son art. Ainsi leur cuisine est en perpétuelle amélioration.}{}{5}{}{720}{}
+{703}{La capacité à transmettre des émotions à travers les plats. C'est là l'essence même de la cuisine.}{}{5}{}{730}{lf15 1}
+{704}{La motivation car ils doivent prouver qu'ils peuvent se surpasser pour atteindre leurs objectifs.}{}{5}{}{740}{}
+
+{710}{Vous vous méprenez @pcname@. Cependant, je crois que nous nous éloignons du sujet. [Il se gratte la gorge]}{Vous vous méprenez @pcname@. Cependant, je crois que nous nous éloignons du sujet. [Il se gratte la gorge]}{}{}{}{}
+{711}{Nous avons beaucoup parlé. Marquons une pause où vous pourrez savourer un autre verre de vin.}{}{5}{lf9 1, lf12 0}{750}{lf12 1}
+{711}{Nous avons beaucoup parlé. Marquons une pause où vous pourrez savourer un autre verre de vin.}{}{5}{lf9 1, lf12 1}{760}{lf17 1}
+{712}{En effet. Poursuivons...}{}{5}{}{770}{}
+
+{720}{Ce n'est pas une mauvaise réponse mais... ce n'est pas tout à fait la bonne. Enfin, je crois que nous nous éloignons du sujet... [Il se gratte la gorge]}{Ce n'est pas une mauvaise réponse mais... ce n'est pas tout à fait la bonne. Enfin, je crois que nous nous éloignons du sujet... [Il se gratte la gorge]}{}{}{}{}
+{721}{Nous avons beaucoup parlé. Marquons une pause où vous pourrez savourer un autre verre de vin.}{}{10}{lf9 1, lf12 0}{750}{lf12 1}
+{721}{Nous avons beaucoup parlé. Marquons une pause où vous pourrez savourer un autre verre de vin.}{}{10}{lf9 1, lf12 1, ps 12}{760}{lf17 1}
+{722}{En effet. Poursuivons...}{}{5}{}{770}{}
+
+{730}{Vous feriez un bon recruteur @pcname@, c'est d'ailleurs sans aucun doute ce pourquoi vous êtes là devant moi. [Il se gratte la gorge]}{Vous feriez un bon recruteur @pcname@, c'est d'ailleurs sans aucun doute ce pourquoi vous êtes là devant moi. [Il se gratte la gorge]}{}{}{}{}
+{731}{Nous avons beaucoup parlé. Marquons une pause où vous pourrez savourer un autre verre de vin.}{}{10}{lf9 1, lf12 0}{750}{lf12 1}
+{731}{Nous avons beaucoup parlé. Marquons une pause où vous pourrez savourer un autre verre de vin.}{}{10}{lf9 1, lf12 1, ps 12}{760}{lf17 1}
+{732}{Je vous remercie. Poursuivons...}{}{5}{}{770}{}
+
+{740}{Croyez-vous que ce soit là le plus important ? Enfin, je crois que nous nous éloignons du sujet... [Il se gratte la gorge]}{Croyez-vous que ce soit là le plus important ? Enfin, je crois que nous nous éloignons du sujet... [Il se gratte la gorge]}{}{}{}{}
+{741}{Nous avons beaucoup parlé. Marquons une pause où vous pourrez savourer un autre verre de vin.}{}{10}{lf9 1, lf12 0}{750}{lf12 1}
+{741}{Nous avons beaucoup parlé. Marquons une pause où vous pourrez savourer un autre verre de vin.}{}{10}{lf9 1, lf12 1, ps 12}{760}{lf17 1}
+{742}{Je vous remercie. Poursuivons...}{}{5}{}{770}{}
+
+{750}{Vous avez raison, ne nous pressons pas et prenons le temps nécessaire à cet entretien. [Il se sert un demi-verre de vin qu'il vide] Bien. Pour répondre à cette question, je vais vous demander de vous projeter le plus exactement possible à la place de cette personne. Qu'est-ce que vous ressentez lorsque vous faites la cuisine ?}{Vous avez raison, ne nous pressons pas et prenons le temps nécessaire à cet entretien. [Il se sert un demi-verre de vin qu'il vide] Bien. Pour répondre à cette question, je vais vous demander de vous projeter le plus exactement possible à la place de cette personne. Qu'est-ce que vous ressentez lorsque vous faites la cuisine ?}{}{}{}{}
+{751}{Je pense à un million de choses qui me sont arrivées par le passé en rapport avec le plat et à tout ce qu'il pourrait provoquer.}{}{5}{lf27 0}{780}{lf18 1}
+{752}{Je pense à ce que va ressentir la personne qui va le gouter et à ce que ce plat va lui apporter.}{}{5}{lf27 0}{790}{}
+{753}{Je pense que la personne qui a inventé le plat que je prépare doit être un génie de la cuisine.}{}{5}{lf27 0}{800}{}
+{754}{Je pense à comment je pourrais améliorer ce plat pour que celui-ci soit encore meilleur.}{}{5}{lf27 0}{810}{}
+{755}{Je pense à un million de choses qui me sont arrivées par le passé en rapport avec le plat et à tout ce qu'il pourrait provoquer.}{}{5}{lf27 1}{820}{lf18 1}
+{756}{Je pense à ce que va ressentir la personne qui va le gouter et à ce que ce plat va lui apporter.}{}{5}{lf27 1}{830}{}
+{757}{Je pense que la personne qui a inventé le plat que je prépare doit être un génie de la cuisine.}{}{5}{lf27 1}{840}{}
+{758}{Je pense à comment je pourrais améliorer ce plat pour que celui-ci soit encore meilleur.}{}{5}{lf27 1}{850}{}
+
+{760}{Ce n'est pas le plus raisonnable qui soit mais... vous avez raison, ne nous pressons pas et prenons le temps nécessaire à cet entretien. [Le troisième verre qu'il se verse est bien plus rempli que le précédent. Cela ne l'empêche cependant pas de la vider avec autant d'aisance] Bien... Pour répondre à cette question, je vais vous demander de vous projeter le plus exactement possible à la place de cette personne. Qu'est-ce que vous ressentez lorsque vous faites la cuisine ?}{Ce n'est pas le plus raisonnable qui soit mais... vous avez raison, ne nous pressons pas et prenons le temps nécessaire à cet entretien. [Le troisième verre qu'il se verse est bien plus rempli que le précédent. Cela ne l'empêche cependant pas de la vider avec autant d'aisance] Bien... Pour répondre à cette question, je vais vous demander de vous projeter le plus exactement possible à la place de cette personne. Qu'est-ce que vous ressentez lorsque vous faites la cuisine ?}{}{}{}{}
+{761}{Je pense à un million de choses qui me sont arrivées par le passé en rapport avec le plat et à tout ce qu'il pourrait provoquer.}{}{5}{lf27 0}{780}{lf18 1}
+{762}{Je pense à ce que va ressentir la personne qui va le gouter et à ce que ce plat va lui apporter.}{}{5}{lf27 0}{790}{}
+{763}{Je pense que la personne qui a inventé le plat que je prépare doit être un génie de la cuisine.}{}{5}{lf27 0}{800}{}
+{764}{Je pense à comment je pourrais améliorer ce plat pour que celui-ci soit encore meilleur.}{}{5}{lf27 0}{810}{}
+{765}{Je pense à un million de choses qui me sont arrivées par le passé en rapport avec le plat et à tout ce qu'il pourrait provoquer.}{}{5}{lf27 1}{820}{lf18 1}
+{766}{Je pense à ce que va ressentir la personne qui va le gouter et à ce que ce plat va lui apporter.}{}{5}{lf27 1}{830}{}
+{767}{Je pense que la personne qui a inventé le plat que je prépare doit être un génie de la cuisine.}{}{5}{lf27 1}{840}{}
+{768}{Je pense à comment je pourrais améliorer ce plat pour que celui-ci soit encore meilleur.}{}{5}{lf27 1}{850}{}
+
+{770}{Oui. Pour répondre à cette question, je vais vous demander de vous projeter le plus exactement possible à la place de cette personne. Qu'est-ce que vous ressentez lorsque vous faites la cuisine ?}{Oui. Pour répondre à cette question, je vais vous demander de vous projeter le plus exactement possible à la place de cette personne. Qu'est-ce que vous ressentez lorsque vous faites la cuisine ?}{}{}{}{}
+{771}{Je pense à un million de choses qui me sont arrivées par le passé en rapport avec le plat et à tout ce qu'il pourrait provoquer.}{}{5}{lf27 0}{780}{lf18 1}
+{772}{Je pense à ce que va ressentir la personne qui va le gouter et à ce que ce plat va lui apporter.}{}{5}{lf27 0}{790}{}
+{773}{Je pense que la personne qui a inventé le plat que je prépare doit être un génie de la cuisine.}{}{5}{lf27 0}{800}{}
+{774}{Je pense à comment je pourrais améliorer ce plat pour que celui-ci soit encore meilleur.}{}{5}{lf27 0}{810}{}
+{775}{Je pense à un million de choses qui me sont arrivées par le passé en rapport avec le plat et à tout ce qu'il pourrait provoquer.}{}{5}{lf27 1}{820}{lf18 1}
+{776}{Je pense à ce que va ressentir la personne qui va le gouter et à ce que ce plat va lui apporter.}{}{5}{lf27 1}{830}{}
+{777}{Je pense que la personne qui a inventé le plat que je prépare doit être un génie de la cuisine.}{}{5}{lf27 1}{840}{}
+{778}{Je pense à comment je pourrais améliorer ce plat pour que celui-ci soit encore meilleur.}{}{5}{lf27 1}{850}{}
+
+{780}{C'est une chose originale ma foi. J'en viens maintenant à un point important pour le recrutement, le potentiel du candidat. En effet, puisque le candidat dont vous m'entretenez n'a pas encore été repéré pour son talent, je suppose qu'il possède un certain potentiel. Cependant, j'aimerais que vous me justifiez le fait que nous le recrutions maintenant plutôt que d'atteindre que ce potentiel de concrétise.}{C'est une chose originale ma foi. J'en viens maintenant à un point important pour le recrutement, le potentiel du candidat. En effet, puisque le candidat dont vous m'entretenez n'a pas encore été repéré pour son talent, je suppose qu'il possède un certain potentiel. Cependant, j'aimerais que vous me justifiez le fait que nous le recrutions maintenant plutôt que d'atteindre que ce potentiel de concrétise.}{}{}{}{}
+{781}{Eh bien, je pense qu'il est de votre devoir de cuisinier d'exception d'aider vos paires à évoluer.}{}{5}{}{860}{}
+{782}{Pour qu'une personne évolue, elle a besoin d'un environnement stimulant, d'être entouré de gens autant voire plus doués qu'elle.}{}{10}{}{870}{lf19 1}
+{783}{Son potentiel se développera de toute façon, pourquoi atteindre que son talent la fasse formuler des exigences ?}{}{5}{}{880}{}
+{784}{L'environnement de votre cercle est bien plus propice à l'évolution d'un cuisinier que n'importe quel autre.}{}{5}{}{890}{}
+
+{790}{Réaction classique. Mais ce n'est pas un point négatif. J'en viens maintenant à un point important pour le recrutement, le potentiel du candidat. En effet, puisque le candidat dont vous m'entretenez n'a pas encore été repéré pour son talent, je suppose qu'il possède un certain potentiel. Cependant, j'aimerais que vous me justifiez le fait que nous le recrutions maintenant plutôt que d'atteindre que ce potentiel de concrétise.}{Réaction classique. Mais ce n'est pas un point négatif. J'en viens maintenant à un point important pour le recrutement, le potentiel du candidat. En effet, puisque le candidat dont vous m'entretenez n'a pas encore été repéré pour son talent, je suppose qu'il possède un certain potentiel. Cependant, j'aimerais que vous me justifiez le fait que nous le recrutions maintenant plutôt que d'atteindre que ce potentiel de concrétise.}{}{}{}{}
+{791}{Eh bien, je pense qu'il est de votre devoir de cuisinier d'exception d'aider vos paires à évoluer.}{}{5}{}{860}{}
+{792}{Pour qu'une personne évolue, elle a besoin d'un environnement stimulant, d'être entouré de gens autant voire plus doués qu'elle.}{}{10}{}{870}{lf19 1}
+{793}{Son potentiel se développera de toute façon, pourquoi atteindre que son talent la fasse formuler des exigences ?}{}{5}{}{880}{}
+{794}{L'environnement de votre cercle est bien plus propice à l'évolution d'un cuisinier que n'importe quel autre.}{}{5}{}{890}{}
+
+{800}{Généralement, un grand cuisinier crée ses propres plats, mais je suppose que vous n'êtes pas vous-même cuisinier @pcname@... Passons. J'en viens maintenant à un point important pour le recrutement. Puisque le candidat dont vous m'entretenez n'a pas encore été repéré pour son talent, je suppose qu'il possède un certain potentiel. Cependant, j'aimerais que vous me justifiez le fait que nous le recrutions maintenant plutôt que d'atteindre que ce potentiel de concrétise.}{Généralement, un grand cuisinier crée ses propres plats, mais je suppose que vous n'êtes pas vous-même cuisinier @pcname@... Passons. J'en viens maintenant à un point important pour le recrutement. Puisque le candidat dont vous m'entretenez n'a pas encore été repéré pour son talent, je suppose qu'il possède un certain potentiel. Cependant, j'aimerais que vous me justifiez le fait que nous le recrutions maintenant plutôt que d'atteindre que ce potentiel de concrétise.}{}{}{}{}
+{801}{Eh bien, je pense qu'il est de votre devoir de cuisinier d'exception d'aider vos paires à évoluer.}{}{5}{}{860}{}
+{802}{Pour qu'une personne évolue, elle a besoin d'un environnement stimulant, d'être entouré de gens autant voire plus doués qu'elle.}{}{10}{}{870}{lf19 1}
+{803}{Son potentiel se développera de toute façon, pourquoi atteindre que son talent la fasse formuler des exigences ?}{}{5}{}{880}{}
+{804}{L'environnement de votre cercle est bien plus propice à l'évolution d'un cuisinier que n'importe quel autre.}{}{5}{}{890}{}
+
+{810}{Je vois, cette personne est donc perfectionniste... J'en viens maintenant à un point important pour le recrutement, le potentiel du candidat. En effet, puisque le candidat dont vous m'entretenez n'a pas encore été repéré pour son talent, je suppose qu'il possède un certain potentiel. Cependant, j'aimerais que vous me justifiez le fait que nous le recrutions maintenant plutôt que d'atteindre que ce potentiel de concrétise.}{Je vois, cette personne est donc perfectionniste... J'en viens maintenant à un point important pour le recrutement, le potentiel du candidat. En effet, puisque le candidat dont vous m'entretenez n'a pas encore été repéré pour son talent, je suppose qu'il possède un certain potentiel. Cependant, j'aimerais que vous me justifiez le fait que nous le recrutions maintenant plutôt que d'atteindre que ce potentiel de concrétise.}{}{}{}{}
+{811}{Eh bien, je pense qu'il est de votre devoir de cuisinier d'exception d'aider vos paires à évoluer.}{}{5}{}{860}{}
+{812}{Pour qu'une personne évolue, elle a besoin d'un environnement stimulant, d'être entouré de gens autant voire plus doués qu'elle.}{}{10}{}{870}{lf19 1}
+{813}{Son potentiel se développera de toute façon, pourquoi atteindre que son talent la fasse formuler des exigences ?}{}{5}{}{880}{}
+{814}{L'environnement de votre cercle est bien plus propice à l'évolution d'un cuisinier que n'importe quel autre.}{}{5}{}{890}{}
+
+{820}{C'est une chose originale ma foi. J'en viens maintenant au potentiel du candidat, dont nous parlions à l'instant. Vous m'avez dit que ce candidat possédait un potentiel particulièrement intéressant. Soit ! Cependant, j'aimerais que vous me justifiez le fait que nous le recrutions maintenant plutôt que d'atteindre que ce potentiel de concrétise.}{C'est une chose originale ma foi. J'en viens maintenant au potentiel du candidat, dont nous parlions à l'instant. Vous m'avez dit que ce candidat possédait un potentiel particulièrement intéressant. Soit ! Cependant, j'aimerais que vous me justifiez le fait que nous le recrutions maintenant plutôt que d'atteindre que ce potentiel de concrétise.}{}{}{}{}
+{821}{Eh bien, je pense qu'il est de votre devoir de cuisinier d'exception d'aider vos paires à évoluer.}{}{5}{}{860}{}
+{822}{Pour qu'une personne évolue, elle a besoin d'un environnement stimulant, d'être entouré de gens autant voire plus doués qu'elle.}{}{10}{}{870}{lf19 1}
+{823}{Son potentiel se développera de toute façon, pourquoi atteindre que son talent la fasse formuler des exigences ?}{}{5}{}{880}{}
+{824}{L'environnement de votre cercle est bien plus propice à l'évolution d'un cuisinier que n'importe quel autre.}{}{5}{}{890}{}
+
+{830}{Réaction classique. Mais ce n'est pas un point négatif. J'en viens maintenant au potentiel du candidat, dont nous parlions à l'instant. Vous m'avez dit que ce candidat possédait un potentiel particulièrement intéressant. Soit ! Cependant, j'aimerais que vous me justifiez le fait que nous le recrutions maintenant plutôt que d'atteindre que ce potentiel de concrétise.}{Réaction classique. Mais ce n'est pas un point négatif. J'en viens maintenant au potentiel du candidat, dont nous parlions à l'instant. Vous m'avez dit que ce candidat possédait un potentiel particulièrement intéressant. Soit ! Cependant, j'aimerais que vous me justifiez le fait que nous le recrutions maintenant plutôt que d'atteindre que ce potentiel de concrétise.}{}{}{}{}
+{831}{Eh bien, je pense qu'il est de votre devoir de cuisinier d'exception d'aider vos paires à évoluer.}{}{5}{}{860}{}
+{832}{Pour qu'une personne évolue, elle a besoin d'un environnement stimulant, d'être entouré de gens autant voire plus doués qu'elle.}{}{10}{}{870}{lf19 1}
+{833}{Son potentiel se développera de toute façon, pourquoi atteindre que son talent la fasse formuler des exigences ?}{}{5}{}{880}{}
+{834}{L'environnement de votre cercle est bien plus propice à l'évolution d'un cuisinier que n'importe quel autre.}{}{5}{}{890}{}
+
+{840}{Généralement, un grand cuisinier crée ses propres plats, mais je suppose que vous n'êtes pas vous-même cuisinier @pcname@... Passons. J'en viens maintenant au potentiel du candidat, dont nous parlions à l'instant. Vous m'avez dit que ce candidat possédait un potentiel particulièrement intéressant. Soit ! Cependant, j'aimerais que vous me justifiez le fait que nous le recrutions maintenant plutôt que d'atteindre que ce potentiel de concrétise.}{Généralement, un grand cuisinier crée ses propres plats, mais je suppose que vous n'êtes pas vous-même cuisinier @pcname@... Passons. J'en viens maintenant au potentiel du candidat, dont nous parlions à l'instant. Vous m'avez dit que ce candidat possédait un potentiel particulièrement intéressant. Soit ! Cependant, j'aimerais que vous me justifiez le fait que nous le recrutions maintenant plutôt que d'atteindre que ce potentiel de concrétise.}{}{}{}{}
+{841}{Eh bien, je pense qu'il est de votre devoir de cuisinier d'exception d'aider vos paires à évoluer.}{}{5}{}{860}{}
+{842}{Pour qu'une personne évolue, elle a besoin d'un environnement stimulant, d'être entouré de gens autant voire plus doués qu'elle.}{}{10}{}{870}{lf19 1}
+{843}{Son potentiel se développera de toute façon, pourquoi atteindre que son talent la fasse formuler des exigences ?}{}{5}{}{880}{}
+{844}{L'environnement de votre cercle est bien plus propice à l'évolution d'un cuisinier que n'importe quel autre.}{}{5}{}{890}{}
+
+{850}{Je vois, cette personne est donc perfectionniste... J'en viens maintenant au potentiel du candidat, dont nous parlions à l'instant. Vous m'avez dit que ce candidat possédait un potentiel particulièrement intéressant. Soit ! Cependant, j'aimerais que vous me justifiez le fait que nous le recrutions maintenant plutôt que d'atteindre que ce potentiel de concrétise.}{Je vois, cette personne est donc perfectionniste... J'en viens maintenant au potentiel du candidat, dont nous parlions à l'instant. Vous m'avez dit que ce candidat possédait un potentiel particulièrement intéressant. Soit ! Cependant, j'aimerais que vous me justifiez le fait que nous le recrutions maintenant plutôt que d'atteindre que ce potentiel de concrétise.}{}{}{}{}
+{851}{Eh bien, je pense qu'il est de votre devoir de cuisinier d'exception d'aider vos paires à évoluer.}{}{5}{}{860}{}
+{852}{Pour qu'une personne évolue, elle a besoin d'un environnement stimulant, d'être entouré de gens autant voire plus doués qu'elle.}{}{10}{}{870}{lf19 1}
+{853}{Son potentiel se développera de toute façon, pourquoi atteindre que son talent la fasse formuler des exigences ?}{}{5}{}{880}{}
+{854}{L'environnement de votre cercle est bien plus propice à l'évolution d'un cuisinier que n'importe quel autre.}{}{5}{}{890}{}
+
+{860}{En effet, c'est une idée qui se défend. Cependant, nous ne pouvons écarter la possibilité que son potentiel reste à l'état latent dans notre cercle et que nous soyons contraints de renvoyer cette personne. En quoi pensez-vous que ce prendre ce risque est-il meilleur que de la laisser évoluer en dehors du cercle quitte à ce que son évolution en soit ralentie ?}{En effet, c'est une idée qui se défend. Cependant, nous ne pouvons écarter la possibilité que son potentiel reste à l'état latent dans notre cercle et que nous soyons contraints de renvoyer cette personne. En quoi pensez-vous que ce prendre ce risque est-il meilleur que de la laisser évoluer en dehors du cercle quitte à ce que son évolution en soit ralentie ?}{}{}{}{}
+{861}{Je pense que pour réaliser son rêve, cette personne est prête à prendre tous les risques.}{}{5}{}{900}{}
+{862}{C'est simple, je sais que son talent fera qu'elle n'échouera pas.}{}{5}{}{910}{lf20 1}
+{863}{Je pense que même de manière éphémère, intégrer votre cercle la comblera de bonheur.}{}{5}{}{920}{}
+{864}{C'est ce qui s'appelle prendre un pari sur l'avenir, seuls ceux qui ont de l'audace réalisent l'impossible.}{}{5}{}{930}{}
+{865}{Je pense que ma vision personnelle des rêves ne devrait pas interférer sur cet entretien à propos de quelqu'un d'autre.}{}{5}{}{940}{}
+
+{870}{Je vois, vous pensez donc qu'elle évoluera plus rapidement dans notre cercle. Cependant, nous ne pouvons écarter la possibilité que son potentiel reste à l'état latent dans notre cercle et que nous soyons contraints de renvoyer cette personne. En quoi pensez-vous que ce prendre ce risque est-il meilleur que de la laisser évoluer en dehors du cercle quitte à ce que son évolution en soit ralentie ?}{Je vois, vous pensez donc qu'elle évoluera plus rapidement dans notre cercle. Cependant, nous ne pouvons écarter la possibilité que son potentiel reste à l'état latent dans notre cercle et que nous soyons contraints de renvoyer cette personne. En quoi pensez-vous que ce prendre ce risque est-il meilleur que de la laisser évoluer en dehors du cercle quitte à ce que son évolution en soit ralentie ?}{}{}{}{}
+{871}{Je pense que pour réaliser son rêve, cette personne est prête à prendre tous les risques.}{}{5}{}{900}{}
+{872}{C'est simple, je sais que son talent fera qu'elle n'échouera pas.}{}{5}{}{910}{lf20 1}
+{873}{Je pense que même de manière éphémère, intégrer votre cercle la comblera de bonheur.}{}{5}{}{920}{}
+{874}{C'est ce qui s'appelle prendre un pari sur l'avenir, seuls ceux qui ont de l'audace réalisent l'impossible.}{}{5}{}{930}{}
+{875}{Je pense que ma vision personnelle des rêves ne devrait pas interférer sur cet entretien à propos de quelqu'un d'autre.}{}{5}{}{940}{}
+
+{880}{Des exigences, pour venir travailler au cercle 693 ? [Il trouve manifestement cette idée inconcevable voire risible] Enfin... Nous ne pouvons écarter la possibilité que son potentiel reste à l'état latent dans notre cercle et que nous soyons contraints de renvoyer cette personne. En quoi pensez-vous que ce prendre ce risque est-il meilleur que de la laisser évoluer en dehors du cercle quitte à ce qu'elle "formule des exigences" ?}{Des exigences, pour venir travailler au cercle 693 ? [Il trouve manifestement cette idée inconcevable voire risible] Enfin... Nous ne pouvons écarter la possibilité que son potentiel reste à l'état latent dans notre cercle et que nous soyons contraints de renvoyer cette personne. En quoi pensez-vous que ce prendre ce risque est-il meilleur que de la laisser évoluer en dehors du cercle quitte à ce qu'elle "formule des exigences" ?}{}{}{}{}
+{881}{Je pense que pour réaliser son rêve, cette personne est prête à prendre tous les risques.}{}{5}{}{900}{}
+{882}{C'est simple, je sais que son talent fera qu'elle n'échouera pas.}{}{5}{}{910}{lf20 1}
+{883}{Je pense que même de manière éphémère, intégrer votre cercle la comblera de bonheur.}{}{5}{}{920}{}
+{884}{C'est ce qui s'appelle prendre un pari sur l'avenir, seuls ceux qui ont de l'audace réalisent l'impossible.}{}{5}{}{930}{}
+{885}{Je pense que ma vision personnelle des rêves ne devrait pas interférer sur cet entretien à propos de quelqu'un d'autre.}{}{5}{}{940}{}
+
+{890}{Ce n'est sans doute pas faux puisqu'il est conçu pour cela. Cependant, nous ne pouvons écarter la possibilité que son potentiel reste à l'état latent dans notre cercle et que nous soyons contraints de renvoyer cette personne. En quoi pensez-vous que ce prendre ce risque est-il meilleur que de la laisser évoluer en dehors du cercle quitte à ce que son évolution en soit ralentie ?}{Ce n'est sans doute pas faux puisqu'il est conçu pour cela. Cependant, nous ne pouvons écarter la possibilité que son potentiel reste à l'état latent dans notre cercle et que nous soyons contraints de renvoyer cette personne. En quoi pensez-vous que ce prendre ce risque est-il meilleur que de la laisser évoluer en dehors du cercle quitte à ce que son évolution en soit ralentie ?}{}{}{}{}
+{891}{Je pense que pour réaliser son rêve, cette personne est prête à prendre tous les risques.}{}{5}{}{900}{}
+{892}{C'est simple, je sais que son talent fera qu'elle n'échouera pas.}{}{5}{}{910}{lf20 1}
+{893}{Je pense que même de manière éphémère, intégrer votre cercle la comblera de bonheur.}{}{5}{}{920}{}
+{894}{C'est ce qui s'appelle prendre un pari sur l'avenir, seuls ceux qui ont de l'audace réalisent l'impossible.}{}{5}{}{930}{}
+{895}{Je pense que ma vision personnelle des rêves ne devrait pas interférer sur cet entretien à propos de quelqu'un d'autre.}{}{5}{}{940}{}
+
+{900}{En somme, vous pensez qu'un bonheur éphémère peut compenser la frustration bien plus intense qu'il risque d'engendrer... Je pense que j'en ai terminé de mes questions @pcname@. Cependant, avant que je ne vous demande le nom de cette personne pour statuer sur son cas, j'aurais une question à propos de vous : pourquoi aidez-vous cette personne ?}{En somme, vous pensez qu'un bonheur éphémère peut compenser la frustration bien plus intense qu'il risque d'engendrer... Je pense que j'en ai terminé de mes questions @pcname@. Cependant, avant que je ne vous demande le nom de cette personne pour statuer sur son cas, j'aurais une question à propos de vous : pourquoi aidez-vous cette personne ?}{}{}{}{}
+{901}{Elle mérite cette place, et je veux tout faire pour qu'elle l'obtienne.}{}{5}{}{950}{}
+{902}{Elle m'a demandé de vous parler en son nom, j'ai accepté. Ça ne va pas plus loin.}{}{5}{}{960}{}
+{903}{Mais pour la récompense qu'elle me donnera si j'arrive à la faire embaucher. Qu'est-ce qui me motiverait sinon ?}{}{5}{}{970}{}
+{904}{Parce qu'il s'agit de mon amie. Cette raison n'est-elle pas suffisante ?}{}{5}{}{980}{}
+
+{910}{La confiance que vous lui portez est rassurante, @pcname@...  Je pense que j'en ai terminé de mes questions @pcname@. Cependant, avant que je ne vous demande le nom de cette personne pour statuer sur son cas, j'aurais une question à propos de vous : pourquoi aidez-vous cette personne ?}{La confiance que vous lui portez est rassurante, @pcname@...  Je pense que j'en ai terminé de mes questions @pcname@. Cependant, avant que je ne vous demande le nom de cette personne pour statuer sur son cas, j'aurais une question à propos de vous : pourquoi aidez-vous cette personne ?}{}{}{}{}
+{911}{Elle mérite cette place, et je veux tout faire pour qu'elle l'obtienne.}{}{5}{}{950}{}
+{912}{Elle m'a demandé de vous parler en son nom, j'ai accepté. Ça ne va pas plus loin.}{}{5}{}{960}{}
+{913}{Mais pour la récompense qu'elle me donnera si j'arrive à la faire embaucher. Qu'est-ce qui me motiverait sinon ?}{}{5}{}{970}{}
+{914}{Parce qu'il s'agit de mon amie. Cette raison n'est-elle pas suffisante ?}{}{5}{}{980}{}
+
+{920}{Je vois. Ainsi vous éclipsez les risques afin de vous concentrer sur les bénéfices... Je pense que j'en ai terminé de mes questions @pcname@. Cependant, avant que je ne vous demande le nom de cette personne pour statuer sur son cas, j'aurais une question à propos de vous : pourquoi aidez-vous cette personne ?}{Je vois. Ainsi vous éclipsez les risques afin de vous concentrer sur les bénéfices... Je pense que j'en ai terminé de mes questions @pcname@. Cependant, avant que je ne vous demande le nom de cette personne pour statuer sur son cas, j'aurais une question à propos de vous : pourquoi aidez-vous cette personne ?}{}{}{}{}
+{921}{Elle mérite cette place, et je veux tout faire pour qu'elle l'obtienne.}{}{5}{}{950}{}
+{922}{Elle m'a demandé de vous parler en son nom, j'ai accepté. Ça ne va pas plus loin.}{}{5}{}{960}{}
+{923}{Mais pour la récompense qu'elle me donnera si j'arrive à la faire embaucher. Qu'est-ce qui me motiverait sinon ?}{}{5}{}{970}{}
+{924}{Parce qu'il s'agit de mon amie. Cette raison n'est-elle pas suffisante ?}{}{5}{}{980}{}
+
+{930}{Prendre des risques... Je comprends bien votre point de vue @pcname@, bien que ce ne soit pas ma façon habituelle de raisonner... Je pense que j'en ai terminé de mes questions @pcname@. Cependant, avant que je ne vous demande le nom de cette personne pour statuer sur son cas, j'aurais une question à propos de vous : pourquoi aidez-vous cette personne ?}{Prendre des risques... Je comprends bien votre point de vue @pcname@, bien que ce ne soit pas ma façon habituelle de raisonner... Je pense que j'en ai terminé de mes questions @pcname@. Cependant, avant que je ne vous demande le nom de cette personne pour statuer sur son cas, j'aurais une question à propos de vous : pourquoi aidez-vous cette personne ?}{}{}{}{}
+{931}{Elle mérite cette place, et je veux tout faire pour qu'elle l'obtienne.}{}{5}{}{950}{}
+{932}{Elle m'a demandé de vous parler en son nom, j'ai accepté. Ça ne va pas plus loin.}{}{5}{}{960}{}
+{933}{Mais pour la récompense qu'elle me donnera si j'arrive à la faire embaucher. Qu'est-ce qui me motiverait sinon ?}{}{5}{}{970}{}
+{934}{Parce qu'il s'agit de mon amie. Cette raison n'est-elle pas suffisante ?}{}{5}{}{980}{}
+
+{940}{Peut-être avez-vous raison... Je pense que j'en ai terminé de mes questions @pcname@. Cependant, avant que je ne vous demande le nom de cette personne pour statuer sur son cas et bien qu'il s'agisse encore d'une conception personnelle, j'aurais une question à propos de vous et de cette personne : pourquoi aidez-vous cette personne ?}{Peut-être avez-vous raison... Je pense que j'en ai terminé de mes questions @pcname@. Cependant, avant que je ne vous demande le nom de cette personne pour statuer sur son cas et bien qu'il s'agisse encore d'une conception personnelle, j'aurais une question à propos de vous et de cette personne : pourquoi aidez-vous cette personne ?}{}{}{}{}
+{941}{Elle mérite cette place, et je veux tout faire pour qu'elle l'obtienne.}{}{5}{}{950}{}
+{942}{Elle m'a demandé de vous parler en son nom, j'ai accepté. Ça ne va pas plus loin.}{}{5}{}{960}{}
+{943}{Mais pour la récompense qu'elle me donnera si j'arrive à la faire embaucher. Qu'est-ce qui me motiverait sinon ?}{}{5}{}{970}{}
+{944}{Parce qu'il s'agit de mon amie. Cette raison n'est-elle pas suffisante ?}{}{5}{}{980}{}
+
+{950}{Bien, en tout cas j'ai bien senti votre détermination pour qu'elle l'ait. Alors, qui est cette personne ?}{Bien, en tout cas j'ai bien senti votre détermination pour qu'elle l'ait. Alors, qui est cette personne ?}{}{}{}{}
+{951}{Anaïs Pensior, la maîtresse cuisinière de ce train.}{}{5}{}{990}{}
+{952}{Avant que je ne vous le dise, je vous suggère de gouter une dernière fois le vin qu'elle vous a offert.}{}{10}{lf9 1, lf12 1, lf17 0, ps 12}{1000}{lf17 1}
+{953}{Avant que je ne vous le dise, je vous suggère de gouter une deuxième fois le vin qu'elle vous a offert.}{}{10}{lf9 1, lf12 0}{1010}{lf12 1}
+
+{960}{Eh bien, m'attendais à ce que vous ayez une relation un peu plus... développée. Enfin, qu'à cela ne tienne, ça ne changera en rien ma décision... Alors, qui est cette personne ?}{Eh bien, m'attendais à ce que vous ayez une relation un peu plus... développée. Enfin, qu'à cela ne tienne, ça ne changera en rien ma décision... Alors, qui est cette personne ?}{}{}{}{}
+{961}{Anaïs Pensior, la maîtresse cuisinière de ce train.}{}{5}{}{990}{}
+{962}{Avant que je ne vous le dise, je vous suggère de gouter une dernière fois le vin qu'elle vous a offert.}{}{10}{lf9 1, lf12 1, lf17 0, ps 12}{1000}{lf17 1}
+{963}{Avant que je ne vous le dise, je vous suggère de gouter une deuxième fois le vin qu'elle vous a offert.}{}{10}{lf9 1, lf12 0}{1010}{lf12 1}
+
+{970}{En effet. Je comprends mieux votre motivation... Alors, qui est cette personne ?}{En effet. Je comprends mieux votre motivation... Alors, qui est cette personne ?}{}{}{}{}
+{971}{Anaïs Pensior, la maîtresse cuisinière de ce train.}{}{5}{}{990}{}
+{972}{Avant que je ne vous le dise, je vous suggère de gouter une dernière fois le vin qu'elle vous a offert.}{}{10}{lf9 1, lf12 1, lf17 0, ps 12}{1000}{lf17 1}
+{973}{Avant que je ne vous le dise, je vous suggère de gouter une deuxième fois le vin qu'elle vous a offert.}{}{10}{lf9 1, lf12 0}{1010}{lf12 1}
+
+{980}{Si, vous avez sans doute raison... Et cela justifie votre incroyable détermination... Alors, qui est cette personne ?}{Si, vous avez sans doute raison... Et cela justifie votre incroyable détermination... Alors, qui est cette personne ?}{}{}{}{lf21 1}
+{981}{Anaïs Pensior, la maîtresse cuisinière de ce train.}{}{5}{}{990}{}
+{982}{Avant que je ne vous le dise, je vous suggère de gouter une dernière fois le vin qu'elle vous a offert.}{}{10}{lf9 1, lf12 1, lf17 0, ps 12}{1000}{lf17 1}
+{983}{Avant que je ne vous le dise, je vous suggère de gouter une deuxième fois le vin qu'elle vous a offert.}{}{10}{lf9 1, lf12 0}{1010}{lf12 1}
+
+{990}{Anaïs Pensior ? [Il semble un instant réfléchir, entouré des circonvolutions que forme la fumée de sa pipe qui s'éteint] Le portrait que vous m'avez dressé d'elle diffère quelque peu de ce que la conscience collective me permettait de savoir d'elle. Et pourtant...}{Anaïs Pensior ? [Il semble un instant réfléchir, entouré des circonvolutions que forme la fumée de sa pipe qui s'éteint] Le portrait que vous m'avez dressé d'elle diffère quelque peu de ce que la conscience collective me permettait de savoir d'elle. Et pourtant...}{}{}{}{}
+{991}{[Vous attendez]}{}{1}{lf13 1}{1020}{}
+{992}{[Vous attendez]}{}{1}{lf13 0}{1023}{}
+
+{1000}{Ma foi, voilà une idée qui charmante. [Le troisième verre qu'il se verse est bien plus rempli que le précédent. Cela ne l'empêche cependant pas de la vider avec autant d'aisance] Vous aviez raison @pcname@ : ce vin est d'une qualité incroyable, on ne s'en lasse pas. Enfin... Il est temps de me révéler ce nom @pcname@.}{Ma foi, voilà une idée qui charmante. [Le troisième verre qu'il se verse est bien plus rempli que le précédent. Cela ne l'empêche cependant pas de la vider avec autant d'aisance] Vous aviez raison @pcname@ : ce vin est d'une qualité incroyable, on ne s'en lasse pas. Enfin... Il est temps de me révéler ce nom @pcname@.}{}{}{}{}
+{1001}{Soit. Il s'agit d'Anaïs Pensior, la maîtresse cuisinière de notre train.}{}{5}{}{990}{}
+
+{1010}{Ma foi, voilà une idée qui charmante. [Il se sert un demi-verre de vin qu'il vide] Vous aviez raison @pcname@ : ce vin est d'une qualité incroyable, on ne s'en lasse pas. Enfin... Il est temps de me révéler ce nom @pcname@.}{Ma foi, voilà une idée qui charmante. [Il se sert un demi-verre de vin qu'il vide] Vous aviez raison @pcname@ : ce vin est d'une qualité incroyable, on ne s'en lasse pas. Enfin... Il est temps de me révéler ce nom @pcname@.}{}{}{}{}
+{1011}{Soit. Il s'agit d'Anaïs Pensior, la maîtresse cuisinière de notre train.}{}{5}{}{990}{}
+
+{1020}{[L'intendant retire la pipe de sa bouche et la tape légèrement contre un cendrier qu'il vous tend ensuite]}{[L'intendant retire la pipe de sa bouche et la tape légèrement contre un cendrier qu'il vous tend ensuite]}{}{}{}{lf8 1}
+{1021}{[Vous videz votre pipe et la ranger]}{}{1}{}{1030}{}
+
+{1023}{[L'intendant retire la pipe de sa bouche et la tape légèrement contre un cendrier. Il prend manifestement le temps de vider jusqu'aux dernières cendres]}{[L'intendant retire la pipe de sa bouche et la tape légèrement contre un cendrier. Il prend manifestement le temps de vider jusqu'aux dernières cendres]}{}{}{}{lf8 1}
+{1024}{[Vous attendez]}{}{1}{}{1030}{}
+
+{1030}{[L'intendant repose le cendrier et sort de sa veste rouge et jaune un étui de bois exotique qu'il ouvre. A l'intérieur se trouve un écrin de soie rouge sur lequel il place sa pipe. Il range alors l'étui dans sa veste avant de vous regarder]}{[L'intendant repose le cendrier et sort de sa veste rouge et jaune un étui de bois exotique qu'il ouvre. A l'intérieur se trouve un écrin de soie rouge sur lequel il place sa pipe. Il range alors l'étui dans sa veste avant de vous regarder]}{}{}{}{}
+{1031}{[Vous attendez] (Décide-toi !)}{}{1}{}{-3}{}//No1040Y1050
+
+{1040}{@pcname@, je ne peux pas. J'ai beau réexaminer tous les arguments que vous m'avez donnés ainsi que toutes les données que je possède sur Anaïs Pensior, je pense qu'elle n'est pas à la hauteur de notre cercle et que son potentiel est insuffisant pour pouvoir prétendre vouloir y travailler pour l'instant. Je suis désolé...}{@pcname@, je ne peux pas. J'ai beau réexaminer tous les arguments que vous m'avez donnés ainsi que toutes les données que je possède sur Anaïs Pensior, je pense qu'elle n'est pas à la hauteur de notre cercle et que son potentiel est insuffisant pour pouvoir prétendre vouloir y travailler pour l'instant. Je suis désolé...}{}{}{}{qu1025 6}
+{1041}{Allons, ne pouvez-vous pas faire un effort pour elle ?}{}{5}{}{1060}{}
+{1042}{Je comprends, je vais devoir aller le lui annoncer.}{}{5}{}{0}{lf31 1, fl 1044}
+
+{1044}{Oui, s'il vous plaît. Au revoir, @pcname@...}{Oui, s'il vous plaît. Au revoir, @pcname@...}{}{}{}{}
+
+{1050}{Et pourtant je pense que vous avez raison. Anaïs Pensior mérite sa place parmi nous et nous la lui donnerons avec joie !}{Et pourtant je pense que vous avez raison. Anaïs Pensior mérite sa place parmi nous et nous la lui donnerons avec joie !}{}{}{}{qu1025 3, lf26 1}
+{1051}{Je vous remercie grandement M. Truman.}{}{5}{}{1070}{}
+{1052}{Mercie beaucoup, je vais le lui dire immédiatement.}{}{5}{}{0}{fl 1054}
+
+{1054}{Oui. Bonne fin de voyage @pcname@...}{Oui. Bonne fin de voyage @pcname@...}{}{}{}{}
+
+{1056}{Bonne fin de voyage @pcname@...}{Bonne fin de voyage @pcname@...}{}{}{}{}
+
+{1060}{Non @pcname@. Je ne peux rien faire de plus. Je ne suis qu'un intendant...}{Non @pcname@. Je ne peux rien faire de plus. Je ne suis qu'un intendant...}{}{}{}{}
+{1061}{Bon... Vous m'excuserez, je dois aller le lui annoncer.}{}{5}{}{0}{lf31 1, fl 1044}
+{1062}{Je vois. Au revoir alors.}{}{5}{}{0}{lf31 1, fl 1064}
+
+{1064}{Oui, au revoir @pcname@...}{Oui, au revoir @pcname@...}{}{}{}{}
+
+{1070}{C'est à moi de vous remercier, grâce à vous nous avons sans aucun doute engagé une cuisinière de talent. Mais très de bavardages, allez vite le lui-annoncer !}{C'est à moi de vous remercier, grâce à vous nous avons sans aucun doute engagé une cuisinière de talent. Mais très de bavardages, allez vite le lui-annoncer !}{}{}{}{}
+{1071}{Vous avez raison, au revoir !}{}{5}{}{0}{fl 1074}
+
+{1074}{Oui, et bon voyage à vous...}{Oui, et bon voyage à vous...}{}{}{}{}

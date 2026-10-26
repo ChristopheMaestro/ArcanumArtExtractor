@@ -134,29 +134,48 @@ document.addEventListener('explorermodechange', syncWorldEditorBtn);
 // No .sec exists until the editor's export.
 // Shows a world that exists only in memory and opens the editor on it. A world loaded from a .zip this tool exported
 // brings its sectors, and its own map.prp / terrain.tdf / mapinfo.txt go out again with the next export.
-async function openVirtualWorld(label, width, height, makeSectors, extraFiles, breadcrumb) {
+async function openVirtualWorld(label, width, height, makeSectors, extraFiles, breadcrumb, town = 0, townTerrain = null, townStation = false, docks = null, newWorld = false, temple = false) {
   const token = ++secMapToken;
+  // A "Generating…" screen over the whole page (the editor changes the layout under it) that stays until the editor reports
+  // that its sectors and town are in place, so the editor appears finished. One bar over all the stages.
   const loading = renderSecFolderLoading(label, width * height);
+  const card = loading.article;
+  card.style.cssText = 'position:fixed;inset:0;z-index:10000;overflow:auto;background:var(--bg,#1a1a1a);display:flex;align-items:center;justify-content:center';
+  card.querySelector('.sec-loading-title').textContent = 'Generating…';
+  card.querySelector('.sec-viewer-head').hidden = true;
+  const [sectorEl, fillEl, percentEl] = ['.sec-loading-sector', '.sec-loading-fill', '.sec-loading-percent'].map(s => card.querySelector(s));
+  const show = (text, fraction) => {
+    const pct = Math.round(Math.min(1, fraction) * 100);
+    sectorEl.textContent = text; fillEl.style.width = `${pct}%`; percentEl.textContent = `${pct}%`;
+  };
+  const withCount = (text, n, total) => (total > 1 ? `${text} · ${n} / ${total}` : text);
+  const bands = { 'Opening the editor': [0.4, 0.45], 'Loading sectors': [0.45, 0.85], 'Building the town': [0.85, 0.97], 'Drawing the map': [0.97, 1] };
+  const onStage = (text, n, total) => { const [a, b] = bands[text] || [0, 1]; show(withCount(text, n, total), a + (b - a) * (total ? n / total : 1)); };
+  const generating = { update: (n, total, r) => show(withCount(r?.filename || 'Generating sectors', n, total), 0.4 * (total ? n / total : 1)) };
+  document.body.appendChild(card);
+  const closeCard = () => card.remove();
   viewerEl.innerHTML = '';
-  viewerEl.appendChild(loading.article);
   viewerEl.hidden = false; viewerEl.classList.add('revealed'); gridEl.hidden = true;
   try {
     await new Promise(resolve => requestAnimationFrame(resolve));
-    const sectors = await makeSectors(loading);
-    const article = await renderSecFolderMap(label, label, sectors, null, { virtual: true, startEditing: true, extraFiles });
-    if (token !== secMapToken) { if (article) removeContextTools(article); return; }
+    const sectors = await makeSectors(generating);
+    show('Preparing the map', 0.4);
+    await new Promise(resolve => requestAnimationFrame(resolve));
+    const article = await renderSecFolderMap(label, label, sectors, null, { virtual: true, startEditing: true, extraFiles, town, townTerrain, townStation, docks, temple, newWorld, mapName: newWorld ? label : null, onStage, onReady: closeCard });
+    if (token !== secMapToken) { if (article) removeContextTools(article); closeCard(); return; }
     viewerEl.innerHTML = '';
     viewerEl.appendChild(article);
     secMapView = null;   // never matches a folder: this map is not on disk
     breadcrumbEl.textContent = breadcrumb;
   } catch (err) {
+    closeCard();
     showExplorerError(err);
   }
 }
 document.addEventListener('worldeditorcreate', e => {
-  const { width, height, terrain } = e.detail;
-  openVirtualWorld('New world', width, height, loading => createWorldSectors(width, height, terrain.id, (n, total) => loading.update(n, total, { filename: 'Generating sectors' })),
-    () => buildWorldFiles(width, height, terrain.id), `/maps/ (new world ${width} × ${height}, ${terrain.name})`);
+  const { name, width, height, ids, structures, terrainAt, trainStation, docks, temple } = e.detail;
+  openVirtualWorld(name || 'New world', width, height, loading => createWorldSectors(width, height, ids, (n, total) => loading.update(n, total, { filename: 'Generating sectors' })),
+    () => buildWorldFiles(width, height, ids), `/maps/ (new world ${width} × ${height})`, structures || 0, terrainAt, !!trainStation, docks || null, true, !!temple);
 });
 document.addEventListener('worldeditorload', e => {
   const { name, width, height, terrainId, sectors, worldFiles } = e.detail;

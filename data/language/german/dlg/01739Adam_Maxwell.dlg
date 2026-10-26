@@ -1,0 +1,217 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Seid gegrüßt, Sire.  Dürfte ich nach Eurem Namen fragen?}{}{5}{lf1 0, re 41}{34}{}
+{3}{Das war sehr ungezogen.}{}{5}{lf1 0, re -40}{47}{}
+{4}{Habe ich Euch etwas getan, Adam?}{}{5}{lf1 1, lf2 0}{58}{}
+{5}{Hallo, Adam.  Darf ich Euch eine Frage stellen?}{}{5}{lf1 1, lf2 1,re 41}{64}{}
+{6}{Habe ich Euch etwas getan, Adam?}{}{5}{lf1 1, lf2 1, re -40}{54}{}
+{7}{Ich glaube, ich habe das Buch für Euch, Adam.  Was gibt es dafür?}{}{5}{qu1122 1}{102}{}
+{8}{Ich versuche noch, das Buch zu bekommen ...}{}{5}{qu1122 2, ni 5241}{118}{}
+{9}{Ich habe das Buch.  Hier.}{}{5}{lf3 0,  in 5241}{121}{re +10, in5241}
+{10}{Ich habe das Buch.  Hier.}{}{5}{lf3 1,  in 5241}{126}{re +10, in5241}
+{11}{Vielleicht hole ich das Kollier ...  Was bezahlt Ihr mir?}{}{5}{qu1123 1}{136}{}
+{12}{Ich habe gewisse Probleme, das Kollier zu bekommen.}{}{5}{qu1123 2, ni 2825}{144}{}
+{13}{Ich habe das Kollier.  Hier ... nehmt.}{}{5}{lf4 0,   in 2825}{155}{re +10, in2825}
+{14}{Ich habe das Kollier.  Hier ... nehmt.}{}{5}{lf4 1,   in 2825}{160}{re +10, in2825}
+{15}{Ich habe ein Päckchen für Euch ...}{}{5}{qu1124 2, in 5666}{168}{lf1 1, lf2 1}
+{16}{Ich haben Beutel für Euch ...}{}{-4}{qu1124 2, in 5666}{168}{lf1 1, lf2 1}
+{17}{He, Ihr da.  Wie Ihr heiß'n?}{}{-4}{lf1 0, re 41}{34}{}
+{18}{Das sein abba nich' nettig ...}{}{-4}{lf1 0, re -40}{47}{}
+{19}{Hallo, Adam.  Ich was fragen?}{}{-4}{lf1 1, lf2 0}{58}{}
+{20}{Hallo, Adam.  Ich was fragen?}{}{-4}{lf1 1, lf2 1}{64}{}
+{21}{Ich haben Buch für Euch.  Was Ihr zahlen?}{}{-4}{qu1122 1}{102}{}
+{22}{Ich Buch noch nich' haben ...}{}{-4}{qu1122 2, ni 5241}{118}{}
+{23}{Ich Buch haben!  Hier.  Für Euch.}{}{-4}{lf3 0,  in 5241}{121}{re +10, in5241}
+{24}{Ich Buch haben!  Hier.  Für Euch.}{}{-4}{lf3 1,  in 5241}{126}{re +10, in5241}
+{25}{Ich vielleich' Koller kriegen.  Was Ihr mir zahlen?}{}{-4}{qu1123 1}{136}{}
+{26}{Koller nich' leich' zu kriegen!}{}{-4}{qu1123 2, ni 2825}{144}{}
+{27}{Ich Koller haben!  Hier.  Nehmen.}{}{-4}{lf4 0,   in 2825}{155}{re +10, in2825}
+{28}{Ich Koller haben!  Hier.  Nehmen.}{}{-4}{lf4 1,   in 2825}{160}{re +10, in2825}
+{29}{Könnt Ihr mich zum Schlosser-Experten ausbilden?}{}{5}{tr14 -1}{0}{et14 174}
+{30}{Könnt Ihr mich zum Experten der Fallenentschärfung ausbilden?}{}{5}{tr15 -1}{0}{et15 197}
+{31}{Äh ... ich willen Rausbilderung zum Keksper' mi' Schlössers ...}{}{-4}{tr14 -1}{0}{et14 174}
+{32}{Äh ... ich willen Rausbilderung zum Keksper' in Fallentscherflein.}{}{-4}{tr15 -1}{0}{et15 197}
+{33}{E:}{}{1}{}{0}{}
+{34}{Mein Name ist Adam Maxwell.  ... Und wer seid Ihr?}{Mein Name ist Adam Maxwell.  ... Und wer seid Ihr?}{}{}{}{lf1 1}
+{35}{Ich heiße @pcname@.}{}{5}{}{64}{lf2 1}
+{36}{Das geht Euch nichts an.}{}{5}{}{41}{re-10}
+{37}{Ich schätze Unterhaltungen mit niederen Kreaturen nicht besonders ...}{}{5}{ra-1}{41}{re-15}
+{38}{Ich @pcname@.}{}{-4}{}{64}{lf2 1}
+{39}{Nö.}{}{-4}{ra-8}{41}{re-10}
+{40}{Ich nich' magen Euch, kleinig Mann.}{}{-4}{ra 8}{41}{re-15}
+{41}{Ich habe keine Verwendung für jemanden ohne Manieren ... Lebt wohl.}{Ich habe keine Verwendung für jemanden ohne Manieren ... Lebt wohl.}{}{}{}{}
+{42}{Das war sehr taktlos.  Verzeihung.  Ich heiße @pcname@.}{}{5}{}{64}{re+5, lf2 1}
+{43}{Ich glaube, Ihr habt keine Verwendung für das Leben.  Das Problem kann ich, glaube ich, lösen ...}{}{5}{}{}{co, fl 53}
+{44}{Tut mir Leid.  Ich bösig.  Ich heißen @pcname@.}{}{-4}{}{64}{re+5, lf2 1}
+{45}{Ich glauben, Ihr gleich maustotig sein ...}{}{-4}{}{}{co, fl 53}
+{46}{E:}{}{1}{}{0}{}
+{47}{I:}{I:}{}{}{}{}
+{48}{Also gut ...  Ich schätze, dann werde ich wohl mal die Manieren zeigen.  Dürfte ich nach Eurem Namen fragen, Sire?}{}{5}{}{34}{}
+{49}{Das war's!  Verteidigt Euch!}{}{5}{}{}{co, fl 53}
+{50}{Hmm ...  Äh, fein.  Äh ...  Wie Ihr heiß'n?}{}{-4}{}{34}{}
+{51}{Ihr nur bösig!  Ich Euch kriegen!}{}{-4}{}{}{co, fl 53}
+{52}{E:}{}{1}{}{0}{}
+{53}{Narren finden ja so leicht den Tod ...}{Narren finden ja so leicht den Tod ...}{}{}{}{}
+{54}{Wie ich sehe habt Ihr keinen Sinn für Sarkasmus.  Nun gut.  Verzeihung.  Bitte fahrt fort ...}{Wie ich sehe habt Ihr keinen Sinn für Sarkasmus.  Nun gut.  Verzeihung.  Bitte fahrt fort ...}{}{}{}{}
+{55}{Errr ...  Ich habe eine Frage.}{}{5}{}{64}{}
+{56}{Wie ich sehe, seid Ihr ein Esel.  ... Ich habe eine Frage.}{}{5}{}{64}{}
+{57}{E:}{}{5}{}{0}{}
+{58}{Ich habe Euch meinen Namen freiwillig genannt.  Wenn Ihr das nicht auch tut, dann rede ich nicht mit Euch.}{Ich habe Euch meinen Namen freiwillig genannt.  Wenn Ihr das nicht auch tut, dann rede ich nicht mit Euch.}{}{}{}{}
+{59}{Es tut mir Leid.  Ich heiße @pcname@.}{}{5}{}{64}{lf2 1}
+{60}{Dann kämpft mit mir!}{}{5}{}{}{co, fl, re -10 53}
+{61}{Mich Leid tun.  Ich @pcname@.}{}{-4}{}{64}{lf2 1}
+{62}{Dann ich Euch totig machen!}{}{-4}{}{}{co, fl, re -10 53}
+{63}{E:}{}{1}{}{0}{}
+{64}{Also ...  Was wollt Ihr, @pcname@?}{Also ...  Was wollt Ihr, @pcname@?}{}{}{}{}
+{65}{C:}{}{1}{}{75}{}
+{66}{T:4, 5, 6}{}{1}{}{75}{}
+{67}{Habt Ihr wohl eine Arbeit, die ich erledigen könnte?}{}{5}{rp 1001, qu1122 0}{86}{}
+{68}{Ihr haben Abbei' für mir?}{}{-4}{rp 1001, qu1122 0}{86}{}
+{69}{Kann ich noch irgendetwas für Euch tun?}{}{5}{rp1001, qu1122 4, qu1123 0}{131}{}
+{70}{Mehr Abbei' für mir?}{}{-4}{rp1001, qu1122 4, qu1123 0}{131}{}
+{71}{Sagt mir, warum lasst Ihr mich ein leeres Buch holen?}{}{5}{qa1122 3, qb 1122 4, lf0 0}{165}{}
+{72}{Warum kein Wörters in Buch sein?}{}{-4}{qa1122 3, qb 1122 4, lf0 0}{165}{}
+{74}{F:}{}{1}{}{0}{}
+{75}{Was braucht Ihr sonst noch, @pcname@?}{Was braucht Ihr sonst noch, @pcname@?}{}{}{}{}
+{76}{C:}{}{1}{}{75}{}
+{77}{T:4, 5, 6}{}{1}{}{75}{}
+{78}{Habt Ihr wohl eine Arbeit, die ich erledigen könnte?}{}{5}{rp 1001, qu1122 0}{86}{}
+{79}{Ihr haben Abbei' für mir?}{}{-4}{rp 1001, qu1122 0}{86}{}
+{80}{Kann ich noch irgendetwas für Euch tun?}{}{5}{rp1001, qu1122 4, qu1123 0}{131}{}
+{81}{Mehr Abbei' für mir?}{}{-4}{rp1001, qu1122 4, qu1123 0}{131}{}
+{82}{Sagt mir, warum lasst Ihr mich ein leeres Buch holen?}{}{5}{qa1122 3, qb 1122 4, lf0 0}{165}{}
+{83}{Warum kein Wörters in Buch sein?}{}{-4}{qa1122 3, qb 1122 4, lf0 0}{165}{}
+{84}{I:}{}{1}{re -40}{75}{re -5}
+{85}{F:}{}{1}{}{0}{}
+{86}{Ahh ...  Ein Mitglied der Untergrundorganisation.  Euer Name kam mir gleich so bekannt vor.  Wir haben in der Tat einen Auftrag, der erledigt werden muss.  Seid Ihr verfügbar?}{Ahh ...  Ein Mitglied der Untergrundorganisation.  Euer Name kam mir gleich so bekannt vor.  Wir haben in der Tat einen Auftrag, der erledigt werden muss.  Seid Ihr verfügbar?}{}{}{}{}
+{87}{Das kommt ganz auf den Auftrag an ...}{}{5}{}{90}{}
+{88}{Was ich sollen tun?}{}{-4}{}{90}{}
+{89}{E:}{}{1}{}{0}{}
+{90}{Im Haus der Witwe Misk hier in Caladon befindet sich eine umfangreiche Bibliothek seltener und ungewöhnlicher Bücher, die ihrem jüngst verstorbenen Mann gehörten.  Einer unserer Klienten möchte einen Band haben, der ihn ganz besonders interessiert.  Es handelt sich um einen sehr alten Folianten mit dem Titel "Hellseherei und Magie für den angehenden Zauberer".  Könnt Ihr mir das beschaffen?}{Im Haus der Witwe Misk hier in Caladon befindet sich eine umfangreiche Bibliothek seltener und ungewöhnlicher Bücher, die ihrem jüngst verstorbenen Mann gehörten.  Einer unserer Klienten möchte einen Band haben, der ihn ganz besonders interessiert.  Es handelt sich um einen sehr alten Folianten mit dem Titel "Hellseherei und Magie für den angehenden Zauberer".  Könnt Ihr mir das beschaffen?}{}{}{}{qu1122 1}
+{91}{Ja, das kann ich. Wie hoch ist mein Lohn?}{}{5}{}{102}{}
+{92}{Im Augenblick bin ich nicht interessiert.  Vielleicht später ...}{}{5}{}{96}{}
+{93}{Jaaa.  Ich tun. Was Ihr mir zahl'n?}{}{-4}{}{102}{}
+{94}{Ich nich' wissen.  Ich vielleich' später tun.}{}{-4}{}{96}{}
+{95}{E:}{}{1}{}{0}{}
+{96}{Also ...  Wie ich sehe, ist Eure Treue zur Untergrundorganisation nicht gerade sehr ausgeprägt.  Egal ...  Ich werde jemanden finden, der geeigneter ist.}{Also ...  Wie ich sehe, ist Eure Treue zur Untergrundorganisation nicht gerade sehr ausgeprägt.  Egal ...  Ich werde jemanden finden, der geeigneter ist.}{}{}{}{}
+{97}{Kann ich Euch noch etwas fragen?}{}{5}{}{75}{}
+{98}{Aber wenn ich so drüber nachdenke ...  Ich tu's.  Was wird gezahlt?}{}{5}{}{102}{}
+{99}{Ich noch was fragen, ja?}{}{-4}{}{75}{}
+{100}{Hmmm ...  Ich holen!  Was Ihr zahlen?}{}{-4}{}{102}{}
+{101}{E:}{}{1}{}{0}{}
+{102}{Es ist keine große Aufgabe.  Aber der Klient hat die Brieftasche locker sitzen.  Sind 250 Münzen wohl akzeptabel?}{Es ist keine große Aufgabe.  Aber der Klient hat die Brieftasche locker sitzen.  Sind 250 Münzen wohl akzeptabel?}{}{}{}{}
+{103}{Einverstanden.  Ich werde in Kürze damit zurückkehren.}{}{5}{}{0}{qu1122 2}
+{104}{Ich werde es für 350 machen. Sind wir uns einig?}{}{5}{ch -11}{110}{re -5}
+{105}{Ich werde es für 350 machen. Sind wir uns einig?}{}{5}{ch 12}{114}{re +5}
+{106}{Fein.  Ich holen!  Baldig wieda da sein.}{}{-4}{}{0}{qu1122 2}
+{107}{Ich guttig.  Ich willen 350 Münzens.  Fein?}{}{-4}{ch -11}{110}{re -5}
+{108}{Ich guttig.  Ich willen 350 Münzens.  Fein?}{}{-4}{ch 12}{114}{re +5}
+{109}{E:}{}{1}{}{0}{}
+{110}{So viel ist es kaum wert, ein Buch zu beschaffen!  Die 250 sind nicht verhandelbar.  Akzeptiert entweder oder trollt Euch.}{So viel ist es kaum wert, ein Buch zu beschaffen!  Die 250 sind nicht verhandelbar.  Akzeptiert entweder oder trollt Euch.}{}{}{}{}
+{111}{Ich werde akzeptieren.  Ich bin bald mit dem Buch zurück.}{}{5}{}{0}{qu1122 2}
+{112}{Fein.  Ich das holen für 250. Sein baldig wieda da.}{}{-4}{}{0}{qu1122 2}
+{113}{E:}{}{1}{}{0}{}
+{114}{Also ...  Könnte schwierig sein, es zu bekommen. Also gut.  350, alles klar.  Nehmt Ihr den Auftrag an?}{Also ...  Könnte schwierig sein, es zu bekommen. Also gut.  350, alles klar.  Nehmt Ihr den Auftrag an?}{}{}{}{lf3 1}
+{115}{Einverstanden.  Ich werde in Kürze damit zurückkehren.}{}{5}{}{0}{qu1122 2}
+{116}{Fein.  Ich holen!  Baldig wieda da sein.}{}{-4}{}{0}{qu1122 2}
+{117}{E:}{}{1}{}{0}{}
+{118}{Bitte beschafft den Folianten umgehend.  Unser Klient hat das Warten allmählich satt.}{Bitte beschafft den Folianten umgehend.  Unser Klient hat das Warten allmählich satt.}{}{}{}{}
+{119}{K:}{}{1}{}{75}{}
+{120}{E:}{}{1}{}{0}{}
+{121}{Gut gemacht!  Hier sind die vereinbarten 250 Münzen.  Danke für Eure Hilfe.  Eure Treue wird in der Untergrundorganisation nicht unerwähnt bleiben.}{Gut gemacht!  Hier sind die vereinbarten 250 Münzen.  Danke für Eure Hilfe.  Eure Treue wird in der Untergrundorganisation nicht unerwähnt bleiben.}{}{}{}{$$ 250,  qu1122 4}
+{122}{Vielen Dank, @npcname@.  Lebt wohl.}{}{5}{}{0}{}
+{123}{Vielen Dank, @npcname@.  Kann ich Euch etwas fragen?}{}{5}{}{75}{}
+{124}{Dankie, @npcname@.  Tschö.}{}{-4}{}{0}{}
+{125}{Dankie, @npcname@.  Ich noch was fragen, ja?}{}{-4}{}{75}{}
+{126}{Gut gemacht!  Hier sind die vereinbarten 350 Münzen.  Danke für Eure Hilfe.  Eure Treue wird in der Untergrundorganisation nicht unerwähnt bleiben.}{Gut gemacht!  Hier sind die vereinbarten 350 Münzen.  Danke für Eure Hilfe.  Eure Treue wird in der Untergrundorganisation nicht unerwähnt bleiben.}{}{}{}{$$ 350, qu1122 4}
+{127}{Vielen Dank, @npcname@.  Lebt wohl.}{}{5}{}{0}{}
+{128}{Vielen Dank, @npcname@.  Kann ich Euch etwas fragen?}{}{5}{}{75}{}
+{129}{Dankie, @npcname@.  Tschö.}{}{-4}{}{0}{}
+{130}{Dankie, @npcname@.  Ich noch was fragen, ja?}{}{-4}{}{75}{}
+{131}{Sehr gut.  Eure Treue ist bewundernswert. Ja.  Da wäre noch ein Auftrag.  Der dürfte aber schwieriger werden.  Im Museum von Caladon liegt ein unermesslich kostbares Kollier im Safe, das Kollier der Königin K'na S'ea.  Wir haben einen Klienten, dem viel daran gelegen wäre, in den Besitz des Stückes zu kommen.  Seid Ihr interessiert?}{Sehr gut.  Eure Treue ist bewundernswert. Ja.  Da wäre noch ein Auftrag.  Der dürfte aber schwieriger werden.  Im Museum von Caladon liegt ein unermesslich kostbares Kollier im Safe, das Kollier der Königin K'na S'ea.  Wir haben einen Klienten, dem viel daran gelegen wäre, in den Besitz des Stückes zu kommen.  Seid Ihr interessiert?}{}{}{}{qu1123 1}
+{132}{Ich denke, das schaffe ich.  Was wird gezahlt?}{}{5}{}{136}{}
+{133}{Da bin ich mir nicht so sicher.  Klingt nach einer viel größeren Herausforderung ...}{}{5}{}{144}{}
+{134}{Ich das tun können.  Was Ihr mir zahlen?}{}{-4}{}{136}{}
+{135}{Ich nich' wissen.  Das vielleich' zu schwerig zu kriegen ...}{}{-4}{}{144}{}
+{136}{Ich muss Euch warnen.  Das Museum hat ein neuartiges technologisches Überwachungssystem erworben.  Ich kenne die Einzelheiten nicht, aber Ihr könntet gut beraten sein, Euch das Museum genauestens anzusehen, bevor Ihr das Kollier einsackt.  ... Das ist eine gefährliche Mission, daher beträgt der Lohn 550 Münzen.  Seid Ihr einverstanden?}{Ich muss Euch warnen.  Das Museum hat ein neuartiges technologisches Überwachungssystem erworben.  Ich kenne die Einzelheiten nicht, aber Ihr könntet gut beraten sein, Euch das Museum genauestens anzusehen, bevor Ihr das Kollier einsackt.  ... Das ist eine gefährliche Mission, daher beträgt der Lohn 550 Münzen.  Seid Ihr einverstanden?}{}{}{}{}
+{137}{Ja.  Ich mache es für 550. Danke für die Warnung.}{}{5}{}{0}{qu1123 2}
+{138}{Das klingt wirklich gefährlich.  Ich möchte 750, wenn ich die Juwelen holen soll.}{}{5}{ch -11}{151}{re -5}
+{139}{Das klingt wirklich gefährlich.  Ich möchte 750, wenn ich die Juwelen holen soll.}{}{5}{ch 12}{148}{}
+{140}{Fein.  Ich tun das.  Ich wieda her kommen.}{}{-4}{}{0}{qu1123 2}
+{141}{Das nich' guttig klingeln.  Ich willen 750 Münzens.}{}{-4}{ch -11}{151}{re -5}
+{142}{Das nich' guttig klingeln.  Ich willen 750 Münzens.}{}{-4}{ch 12}{148}{}
+{143}{E:}{}{1}{}{0}{}
+{144}{Ich verstehe.  Das enorme Risiko hat viele unserer Liga von dem Versuch abgeschreckt, das Kollier zu beschaffen.  Danke für Eure Hilfe mit dem Buch.  Lebt wohl.}{Ich verstehe.  Das enorme Risiko hat viele unserer Liga von dem Versuch abgeschreckt, das Kollier zu beschaffen.  Danke für Eure Hilfe mit dem Buch.  Lebt wohl.}{}{}{}{}
+{145}{Wartet! Ich werde es versuchen.  Was bezahlt Ihr mir?}{}{5}{}{136}{}
+{146}{Warten!  Ich versuchen es kriegen!  Was Ihr mir zahlen?}{}{-4}{}{136}{}
+{147}{E:}{}{1}{}{0}{}
+{148}{Hmm ...  Ihr seid das einzige Mitglied, das bereit ist, das Risiko einzugehen.  Aus diesem Grund scheinen mir 750 Münzen angemessen.}{Hmm ...  Ihr seid das einzige Mitglied, das bereit ist, das Risiko einzugehen.  Aus diesem Grund scheinen mir 750 Münzen angemessen.}{}{}{}{lf4 1}
+{149}{Ich habe sie im Handumdrehen weggeschafft!}{}{5}{}{0}{qu1123 2}
+{150}{Fein.  Ich tun das.  Ich wieda her kommen.}{}{-4}{}{0}{qu1123 2}
+{151}{Das ist vollkommen überzogen.  Ich halte 550 Münzen für ein äußerst großzügiges Angebot.  Wenn Euch das nicht reicht, suche ich jemand anderen für die Aufgabe.}{Das ist vollkommen überzogen.  Ich halte 550 Münzen für ein äußerst großzügiges Angebot.  Wenn Euch das nicht reicht, suche ich jemand anderen für die Aufgabe.}{}{}{}{}
+{152}{Na gut.  Für 550 werde ich es tun.}{}{5}{}{0}{qu1123 2}
+{153}{Fein.  Ich tun das.}{}{-4}{}{0}{qu1123 2}
+{154}{F:}{}{1}{}{0}{}
+{155}{Toll!  Ihr seid außerordentlich begabt.  Gute Arbeit.  Hier sind die 550 Münzen, die ich Euch versprochen habe.  Die Untergrundorganisation dankt Euch.}{Toll!  Ihr seid außerordentlich begabt.  Gute Arbeit.  Hier sind die 550 Münzen, die ich Euch versprochen habe.  Die Untergrundorganisation dankt Euch.}{}{}{}{$$ 550, qu1123 4}
+{156}{Vielen Dank, @npcname@.  Lebt wohl.}{}{5}{}{0}{}
+{157}{Vielen Dank, @npcname@.  Kann ich Euch etwas fragen?}{}{5}{}{75}{}
+{158}{Dankie, @npcname@.  Tschö.}{}{-4}{}{0}{}
+{159}{Dankie, @npcname@.  Ich noch was fragen, ja?}{}{-4}{}{75}{}
+{160}{Toll!  Ihr seid außerordentlich begabt.  Gute Arbeit.  Hier sind die 750 Münzen, die ich Euch versprochen habe.  Die Untergrundorganisation dankt Euch.}{Toll!  Ihr seid außerordentlich begabt.  Gute Arbeit.  Hier sind die 750 Münzen, die ich Euch versprochen habe.  Die Untergrundorganisation dankt Euch.}{}{}{}{$$ 750, qu1123 4}
+{161}{Vielen Dank, @npcname@.  Lebt wohl.}{}{5}{}{0}{}
+{162}{Vielen Dank, @npcname@.  Kann ich Euch etwas fragen?}{}{5}{}{75}{}
+{163}{Dankie, @npcname@.  Tschö.}{}{-4}{}{0}{}
+{164}{Dankie, @npcname@.  Ich noch was fragen, ja?}{}{-4}{}{75}{}
+{165}{Ahh ...  Wie scharfsinnig von Euch.  Der Inhalt ist verborgen, damit ihn niemand ohne das angemessene Wissen erkennt.  Aber seid unbesorgt, unser Klient ist durchaus mit der Handhabung vertraut.  Er wird überaus zufrieden sein, dass Ihr es beschafft habt.  Vielen Dank.}{Ahh ...  Wie scharfsinnig von Euch.  Der Inhalt ist verborgen, damit ihn niemand ohne das angemessene Wissen erkennt.  Aber seid unbesorgt, unser Klient ist durchaus mit der Handhabung vertraut.  Er wird überaus zufrieden sein, dass Ihr es beschafft habt.  Vielen Dank.}{}{}{}{lf0 1}
+{166}{K:}{}{1}{}{75}{}
+{167}{E:}{}{1}{}{0}{}
+{168}{Ahh ...  Die Juwelen. Ja.  Ich habe sie schon erwartet ...   Hier.  Lasst mich sie mal sehen.  [Er nimmt dir den Beutel ab und schaut hinein.] ... Ja.  Es scheint alles in Ordnung zu sein.  Ihr habt uns einen großen Dienst erwiesen, dass Ihr das hier über alternative Kanäle transportiert habt.}{Ahh ...  Die Juwelen. Ja.  Ich habe sie schon erwartet ...   Hier.  Lasst mich sie mal sehen.  [Er nimmt dir den Beutel ab und schaut hinein.] ... Ja.  Es scheint alles in Ordnung zu sein.  Ihr habt uns einen großen Dienst erwiesen, dass Ihr das hier über alternative Kanäle transportiert habt.}{}{}{}{qu1124 4, in 5666}
+{169}{Ich habe gern geholfen.  Man sagte mir, ich würde eine Aufwandsentschädigung bekommen?}{}{5}{}{171}{}
+{170}{Ich freuen Euch helfen.  Er sagen, ich was dafür kriegen?}{}{-4}{}{171}{}
+{171}{Nun ...  Ja.  Aufwandsentschädigung.  Man bat mich, Euch einen kleinen Bonus anzubieten, da Eure Fracht von so enormer Bedeutung war.  Hier habt Ihr 350 Münzen für Eure Bemühungen.  Die Untergrundorganisation dankt Euch.}{Nun ...  Ja.  Aufwandsentschädigung.  Man bat mich, Euch einen kleinen Bonus anzubieten, da Eure Fracht von so enormer Bedeutung war.  Hier habt Ihr 350 Münzen für Eure Bemühungen.  Die Untergrundorganisation dankt Euch.}{}{}{}{$$ 350}
+{172}{K:}{}{1}{}{75}{}
+{173}{E:}{}{1}{}{0}{}
+{174}{Jaaa ...  Das geht.  Ich will aber zuerst 500 Münzen, sozusagen als Schulungsgebühr. }{Jaaa ...  Das geht.  Ich will aber zuerst 500 Münzen, sozusagen als Schulungsgebühr. }{}{}{}{}
+{175}{Das ist akzeptabel.  Ich bin jetzt für die Ausbildung bereit.}{}{5}{$$500, sk14 9}{188}{}
+{176}{Also gut.  Dann mal los!}{}{5}{$$500, sk14 9}{188}{}
+{177}{Das ist akzeptabel.  Ich bin jetzt für die Ausbildung bereit.}{}{5}{$$500, sk14 -8}{184}{}
+{178}{Also gut.  Dann mal los!}{}{5}{$$500, sk14 -8}{184}{}
+{179}{Ich muss später noch einmal mit mehr Geld wiederkommen.  Lebt wohl.}{}{5}{$$-499}{0}{}
+{180}{Äh ...  Fein.  Ich fertig.}{}{-4}{$$500, sk14 9}{188}{}
+{181}{Äh ...  Fein.  Ich fertig.}{}{-4}{$$500, sk14 -8}{184}{}
+{182}{Äh ...  Ich mehr Münzens holen geh'n.  Ich zurück kommen.}{}{-4}{$$-499}{0}{}
+{183}{F:}{}{1}{}{0}{}
+{184}{[Nachdem er ein paar Minuten mit dir gearbeitet hat, hält er inne.]  Wartet einen Moment ...  Ihr habt zwar offensichtlich schon eine gewisse Fertigkeit als Schlosser, aber ich bin nicht der Meinung, dass Ihr schon zum Experten werden könnt.  Geht und verbessert Eure Fertigkeiten noch ein bisschen, dann sprechen wir uns wieder.}{[Nachdem er ein paar Minuten mit dir gearbeitet hat, hält er inne.]  Wartet einen Moment ...  Ihr habt zwar offensichtlich schon eine gewisse Fertigkeit als Schlosser, aber ich bin nicht der Meinung, dass Ihr schon zum Experten werden könnt.  Geht und verbessert Eure Fertigkeiten noch ein bisschen, dann sprechen wir uns wieder.}{}{}{}{}
+{185}{Na gut.  Ich werde in Kürze zurückkehren.}{}{5}{}{0}{}
+{186}{Fein.  Ich wieda herkommen.}{}{-4}{}{0}{}
+{187}{F:}{}{1}{}{0}{}
+{188}{Danke. [Er nimmt dein Geld an.] Hier, lasst mich Euch ein paar Tricks zeigen. [Er beginnt, deine Kenntnisse verschiedener Schließmechanismen in allen Einzelheiten zu vergrößern.]  ... Gut, @pcname@.  Ihr seid nun ein Schloss-Experte. }{Danke. [Er nimmt dein Geld an.] Hier, lasst mich Euch ein paar Tricks zeigen. [Er beginnt, deine Kenntnisse verschiedener Schließmechanismen in allen Einzelheiten zu vergrößern.]  ... Gut, @pcname@.  Ihr seid nun ein Schloss-Experte. }{}{}{}{tr14 2, $$-500, rq2183}
+{189}{Vielen Dank.  Und jetzt, wo finde ich den Schlossmeister?}{}{5}{}{191}{}
+{190}{Dankie.  Wo Meista-Schließa sein?}{}{-4}{}{191}{}
+{191}{[Er wirkt leicht amüsiert.] Ich weiß genau, wo er zu finden ist!  J. T. Morgan ist der, den Ihr sucht.  Ihr könnt ihn momentan ziemlich leicht finden, da er eine lebenslange Strafe gleich hier im Gefängnis von Caladon absitzt.  Viel Glück bei Eurem Vorhaben, Schlossmeister zu werden!  ... Ihr werdet es brauchen!}{[Er wirkt leicht amüsiert.] Ich weiß genau, wo er zu finden ist!  J. T. Morgan ist der, den Ihr sucht.  Ihr könnt ihn momentan ziemlich leicht finden, da er eine lebenslange Strafe gleich hier im Gefängnis von Caladon absitzt.  Viel Glück bei Eurem Vorhaben, Schlossmeister zu werden!  ... Ihr werdet es brauchen!}{}{}{}{ru2173}
+{192}{Oh ... das könnte problematisch werden.  Trotzdem vielen Dank.  Lebt wohl.}{}{5}{}{0}{}
+{193}{Hört sich an, als könnte ich es gebrauchen!  Vielen Dank für die Ausbildung.  Lebt wohl.}{}{5}{}{0}{}
+{194}{Oh!  Das nich' guttig.   Äh ...  Dankie für schlau machen mir. Tschö.}{}{-4}{}{0}{}
+{195}{Äh ...  Vielleich' ich brauchen Glück!  Dankie für Schule.  Ich jetz' geh'n tu.  Tschö.}{}{-4}{}{0}{}
+{196}{E:}{}{1}{}{0}{}
+{197}{Jaaa ...  Das geht.  Ich will aber zuerst 500 Münzen, sozusagen als Schulungsgebühr. }{Jaaa ...  Das geht.  Ich will aber zuerst 500 Münzen, sozusagen als Schulungsgebühr. }{}{}{}{}
+{198}{Das ist akzeptabel.  Ich bin jetzt für die Ausbildung bereit.}{}{5}{$$500, sk15 9}{211}{}
+{199}{Also gut.  Dann mal los!}{}{5}{$$500, sk15 9}{211}{}
+{200}{Das ist akzeptabel.  Ich bin jetzt für die Ausbildung bereit.}{}{5}{$$500, sk15 -8}{207}{}
+{201}{Also gut.  Dann mal los!}{}{5}{$$500, sk15 -8}{207}{}
+{202}{Ich muss später noch einmal mit mehr Geld wiederkommen.  Lebt wohl.}{}{5}{$$-499}{0}{}
+{203}{Äh ...  Fein.  Ich fertig.}{}{-4}{$$500, sk15 9}{211}{}
+{204}{Äh ...  Fein.  Ich fertig.}{}{-4}{$$500, sk15 -8}{207}{}
+{205}{Äh ...  Ich mehr Münzens holen geh'n.  Ich zurück kommen.}{}{-4}{$$-499}{0}{}
+{206}{F:}{}{1}{}{0}{}
+{207}{[Nachdem er ein paar Minuten mit dir gearbeitet hat, hält er inne.]  Wartet einen Moment ... Ihr besitzt zwar offensichtlich schon eine gewisse Fertigkeit in der Fallenentschärfung, aber ich bin nicht der Meinung, dass Ihr schon zum Experten werden könnt.  Geht und verbessert Eure Fertigkeiten noch ein bisschen, dann sprechen wir uns wieder.}{[Nachdem er ein paar Minuten mit dir gearbeitet hat, hält er inne.]  Wartet einen Moment ... Ihr besitzt zwar offensichtlich schon eine gewisse Fertigkeit in der Fallenentschärfung, aber ich bin nicht der Meinung, dass Ihr schon zum Experten werden könnt.  Geht und verbessert Eure Fertigkeiten noch ein bisschen, dann sprechen wir uns wieder.}{}{}{}{}
+{208}{Gut.  Ich werde in Kürze zurückkehren.}{}{5}{}{0}{}
+{209}{Fein.  Ich wieda herkommen.}{}{-4}{}{0}{}
+{210}{F:}{}{1}{}{0}{}
+{211}{Danke. [Er nimmt dein Geld an.] Hier, lasst mich Euch ein paar Tricks zeigen. [Er beginnt, deine Kenntnisse der Fallenentschärfung zu vergrößern und führt mehrere neue Methoden vor.]  ... Gut, @pcname@.  Ihr seid Experte in der Fallenentschärfung geworden. }{Danke. [Er nimmt dein Geld an.] Hier, lasst mich Euch ein paar Tricks zeigen. [Er beginnt, deine Kenntnisse der Fallenentschärfung zu vergrößern und führt mehrere neue Methoden vor.]  ... Gut, @pcname@.  Ihr seid Experte in der Fallenentschärfung geworden. }{}{}{}{tr15 2, $$-500, rq2184}
+{212}{Vielen Dank.  Und jetzt, wo finde ich den Meister?}{}{5}{}{214}{}
+{213}{Dankie.  Wo Meista-Rausbilder sein?}{}{-4}{}{214}{}
+{214}{[Er wirkt leicht amüsiert.] Ich weiß genau, wo er zu finden ist!  Daniel McPherson ist der Mann, den Ihr sucht.  Sein Haus liegt direkt gegenüber von meinem hier in Caladon, aber er ist stets beschäftigt.  Der König bittet ihn ständig zu sich, um die Sicherheit der Burg- und Schlossanlagen zu verbessern.  Mich würde überraschen, wenn er sich überhaupt noch die Zeit zum Unterrichten nehmen würde.}{[Er wirkt leicht amüsiert.] Ich weiß genau, wo er zu finden ist!  Daniel McPherson ist der Mann, den Ihr sucht.  Sein Haus liegt direkt gegenüber von meinem hier in Caladon, aber er ist stets beschäftigt.  Der König bittet ihn ständig zu sich, um die Sicherheit der Burg- und Schlossanlagen zu verbessern.  Mich würde überraschen, wenn er sich überhaupt noch die Zeit zum Unterrichten nehmen würde.}{}{}{}{ru2174}
+{215}{Oh ... das könnte problematisch werden.  Trotzdem vielen Dank.  Lebt wohl.}{}{5}{}{0}{}
+{216}{Oh!  Das nich' guttig.   Äh ...  Dankie für schlau machen mir. Tschö.}{}{-4}{}{0}{}
+{217}{E:}{}{1}{}{0}{}
+

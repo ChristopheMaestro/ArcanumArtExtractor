@@ -1,0 +1,83 @@
+{1}{Bienvenue dans notre boutique ferroviaire, je peux vous aider ?}{Bienvenue dans notre boutique ferroviaire, je peux vous aider ?}{}{}{}{}
+{2}{B:}{}{1}{}{0}{}
+{3}{Vendez-vous du tabac ?}{}{5}{ru 1052, lf0 0}{30}{lf0 1}
+{4}{Vous reste-il du tabac ?}{}{5}{lf0 1, lf3 1, lf4 0}{80}{lf4 1}
+{5}{Je reviens acheter du tabac.}{}{5}{lf2 1, lf3 0}{90}{}
+{6}{Non, pas pour l'instant, merci.}{}{5}{}{0}{}
+{7}{Nan, c'bon.}{}{-4}{}{0}{}
+
+{30}{Certainement monsieur, nous avons du "Old Pinky" ou plus conventionnel, le "Daily blast". Lequel désirez-vous ?}{Certainement monsieur, nous avons du "Old Pinky" ou plus conventionnel, le "Daily blast". Lequel désirez-vous ?}{}{}{}{}
+{31}{Du "Old Pinky" je vous prie.}{}{5}{}{-2}{lf3 1}// 40
+{32}{Du "Daily Blast" sera parfait.}{}{5}{}{-7}{lf3 1}// 50
+{33}{Je n'y connais rien, lequel me conseilleriez-vous ?}{}{7}{lf1 0}{60}{lf1 1}
+{34}{Ah, nouveau problème... Je repasserais pour vous dire.}{}{5}{}{70}{lf2 1}
+
+{40}{Très bon choix, vous pouvez vous servir : le paquet se trouve dans le cabinet monochrome... Vous avez besoin d'autre chose ?}{Très bon choix, vous pouvez vous servir : le paquet se trouve dans le cabinet monochrome... Vous avez besoin d'autre chose ?}{}{}{}{}
+{41}{B:}{}{1}{}{0}{}
+{42}{Non, merci beaucoup.}{}{5}{}{0}{}
+
+{50}{Vous êtes plutôt conventionnel ? Soit, vous pouvez vous servir : le paquet se trouve dans le cabinet monochrome... Si jamais vous avez besoin d'autre chose...}{Vous êtes plutôt conventionnelle ? Soit, vous pouvez vous servir : le paquet se trouve dans le cabinet monochrome... Si jamais vous avez besoin d'autre chose...}{}{}{}{}
+{51}{B:}{}{1}{}{0}{}
+{52}{Parfait, merci bien.}{}{5}{}{0}{}
+
+{60}{Ma foi, je ne suis pas un expert en tabac mais je dirais que si vous êtes un fumeur occasionnel, le "Daily Blast" vous conviendrait mieux. Le "Old Pinky" est très apprécié par certains fumeurs qui le disent supérieurs mais il ne fait pas l'unanimité...}{Ma foi, je ne suis pas un expert en tabac mais je dirais que si vous êtes un fumeur occasionnel, le "Daily Blast" vous conviendrait mieux. Le "Old Pinky" est très apprécié par certains fumeurs qui le disent supérieurs mais il ne fait pas l'unanimité...}{}{}{}{}
+{61}{Merci bien, en ca cas je vais prendre le "Old Pinky", il devrait lui convenir à la perfection.}{}{5}{}{-2}{lf3 1}// 40/100
+{62}{Ne prenons pas de risque, le "Daily blast" sera idéal.}{}{5}{}{-7}{lf3 1}// 50/110
+{63}{Je vous remercie, je vais y réfléchir tranquillement.}{}{5}{}{70}{lf2 1, ru 1062}
+
+{70}{Comme vous voulez, c'est vous le client... Vous désirez autre chose ?}{Comme vous voulez, c'est vous le client... Vous désirez autre chose ?}{}{}{}{}
+{71}{B:}{}{1}{}{0}{}
+{72}{Pas pour l'instant, non.}{}{5}{}{0}{}
+
+{80}{Je crains que non, j'ai vendu mon dernier paquet il y a quelques instants à peine. Il vous faudra attendre d'arriver à la gare des limbes.}{Je crains que non, j'ai vendu mon dernier paquet il y a quelques instants à peine. Il vous faudra attendre d'arriver à la gare des limbes.}{}{}{}{}
+{81}{B:}{}{1}{}{0}{}
+{82}{Tant pis, merci bien.}{}{5}{}{0}{}
+
+{90}{Et bien, que prenez-vous finalement ?}{Et bien, que prenez-vous finalement ?}{}{}{}{}
+{91}{Ce sera du "Old Pinky" s'il vous plaît.}{}{5}{}{-2}{lf3 1}// 100
+{92}{Je vais vous prendre du "Daily Blast".}{}{5}{}{-7}{lf3 1}// 110
+{93}{En fait, je n'y connais pas grand chose, pourriez vous me conseiller ?}{}{7}{lf1 0}{60}{lf1 1}
+{94}{En fait, je vais devoir vous prendre les deux.}{}{5}{ru 1203}{-12}{lf3 1, lf4 1}//120
+{95}{Non, en fait, je ne sais toujours pas, je reviendrais.}{}{5}{}{70}{}
+
+{100}{Du "Old Pinky", excellent choix. Vous pouvez vous servir : le paquet se trouve dans le cabinet monochrome; en espérant que vous l'apprécierez... Vous désirez autre chose ?}{Du "Old Pinky", excellent choix. Vous pouvez vous servir : le paquet se trouve dans le cabinet monochrome; en espérant que vous l'apprécierez... Vous désirez autre chose ?}{}{}{}{}
+{101}{B:}{}{1}{}{0}{}
+{102}{Non, merci beaucoup.}{}{5}{}{0}{}
+
+{110}{Une valeur sûre, je suis sûr que vous apprécierez ce tabac. Vous pouvez vous servir : le paquet se trouve dans le cabinet monochrome. Vous désirez autre chose ?}{Une valeur sûre, je suis sûr que vous apprécierez ce tabac. Vous pouvez vous servir : le paquet se trouve dans le cabinet monochrome. Vous désirez autre chose ?}{}{}{}{}
+{111}{B:}{}{1}{}{0}{}
+{112}{Non, c'est très aimable.}{}{5}{}{0}{}
+
+{120}{Mais je vous en prie, ce ne pose aucun souçi. Les paquets de tabac se trouvent dans le cabinet monochrome, vous pouvez vous servir. Vous désiriez autre chose ?}{Mais je vous en prie, ce ne pose aucun souçi. Les paquets de tabac se trouvent dans le cabinet monochrome, vous pouvez vous servir. Vous désiriez autre chose ?}{}{}{}{}
+{121}{B:}{}{1}{}{0}{}
+{122}{Non, c'est très aimable.}{}{5}{}{0}{}
+
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}

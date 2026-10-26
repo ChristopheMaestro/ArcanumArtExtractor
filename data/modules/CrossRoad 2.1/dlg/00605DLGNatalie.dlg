@@ -1,0 +1,156 @@
+{1}{Bienvenue à l'auberge de Natalie. Vous désirez une chambre ?}{Bienvenue à l'auberge de Natalie. Vous désirez une chambre ?}{}{}{}{}
+{2}{Oui s'il vous plaît.}{}{5}{}{10}{}
+{3}{Ouaips si 'ous plaît.}{}{-4}{}{10}{}
+{4}{Non, je viens pour autre chose.}{}{5}{}{21}{}
+{5}{Nan, moi v'nir pour aut'chose.}{}{-4}{}{21}{}
+{6}{Pas pour l'instant, merci.}{}{5}{}{0}{}
+{7}{Pas pour instant nan.}{}{-4}{}{0}{}
+
+{10}{Bien, toutes nos chambres sont actuellement libres, je vous propose la chambre bleue, la chambre rouge ou la chambre verte.}{Bien, toutes nos chambres sont actuellement libres, je vous propose la chambre bleue, la chambre rouge ou la chambre verte.}{}{}{}{}
+{11}{Il y a des différences ?}{}{5}{lf0 0}{31}{lf0 1}
+{12}{La chambre bleue me conviendra.}{}{5}{}{-2}{}//40 ou 50
+{13}{La chambre rouge sera parfaite.}{}{5}{}{-4}{}//60 ou 80
+{14}{Je prendrais la chambre verte.}{}{5}{}{-6}{}//90 ou 100
+{15}{Bleu !!!}{}{-4}{}{-2}{}
+{16}{Moi veux rouge !}{}{-4}{}{-4}{}
+{17}{Bah vert-euh.}{}{-4}{}{-6}{}
+{18}{Non, j'ai changé d'avis.}{}{5}{}{70}{}
+{19}{Nan, moi pas vouloir.}{}{-4}{}{70}{}
+
+{21}{Ah ? Je vous écoute.}{Ah ? Je vous écoute.}{}{}{}{}
+{22}{Auriez-vous entendu des rumeurs récentes ?}{}{5}{qu1020 2, lf1 0}{110}{lf1 1}
+{23}{Auriez-vous entendu des rumeurs récentes ?}{}{5}{qu1020 4, lf2 0}{120}{lf2 1}
+{24}{Vous savoir récentes rumeurs ?}{}{-4}{qu1020 2, lf1 0}{110}{lf1 1}
+{25}{Vous savoir récentes rumeurs ?}{}{-4}{qu1020 4, lf2 0}{120}{lf2 1}
+{26}{X}{}{5}{gf998 1}{0}{}
+{27}{X}{}{-4}{gf998 1}{0}{}
+{28}{Non, oubliez ça : je vais partir.}{}{5}{}{0}{}
+{29}{Nan, oubliez : moi partir !}{}{-4}{}{0}{}
+
+{31}{Quelques-unes : la chambre verte possède un billard, la chambre rouge est celle de l'amour et des jeux et la chambre bleue est une chambre pour toute la famille...}{Quelques-unes : la chambre verte possède un billard, la chambre rouge est celle de l'amour et des jeux et la chambre bleue est une chambre pour toute la famille...}{}{}{}{}
+{32}{Je prendrai la verte.}{}{5}{}{-6}{}
+{33}{Je choisis la rouge.}{}{5}{}{-4}{}
+{34}{La bleue m'a l'air parfaite.}{}{5}{}{-2}{}
+{35}{En fait, je ne pense pas prendre de chambre.}{}{5}{}{70}{}
+
+{40}{Bien, il me faudrait votre nom s'il vous plaît.}{Bien, il me faudrait votre nom s'il vous plaît.}{}{}{}{}
+{41}{@pcname@.}{}{1}{}{50}{lf3 1}
+{42}{En fait, je ne vais pas prendre de chambre.}{}{5}{}{70}{}
+{43}{Ah moi pas prendre en fait.}{}{-4}{}{70}{}
+
+{50}{Bien @pcname@, la chambre bleue est à vous. N'hésitez pas si vous avez besoin de qui que ce soit.}{Bien @pcname@, la chambre bleue est à vous. N'hésitez pas si vous avez besoin de qui que ce soit.}{}{}{}{gf239 1, gf240 1}
+{51}{Oui, j'aimerais connaître les dernières rumeurs.}{}{5}{qu1020 2, lf1 0}{110}{lf1 1}
+{52}{Oui, j'aimerais connaître les dernières rumeurs.}{}{5}{qu1020 4, lf2 0}{120}{lf2 1}
+{53}{Moi vouloir connaître dernières rues meurent.}{}{-4}{qu1020 2, lf1 0}{110}{lf1 1}
+{54}{Moi vouloir connaître dernières rues meurent.}{}{-4}{qu1020 4, lf2 0}{120}{lf2 1}
+{55}{X}{}{5}{gf998 1}{0}{}
+{56}{X}{}{-4}{gf998 1}{0}{}
+{57}{Merci bien.}{}{5}{}{0}{}
+{58}{Marsi.}{}{-4}{}{0}{}
+
+{60}{Bien, il me faudrait votre nom s'il vous plaît.}{Bien, il me faudrait votre nom s'il vous plaît.}{}{}{}{}
+{61}{@pcname@.}{}{1}{}{80}{lf3 1}
+{62}{En fait, je ne vais pas prendre de chambre.}{}{5}{}{70}{}
+{63}{Ah moi pas prendre en fait.}{}{-4}{}{70}{}
+
+{70}{Comme vous voulez... Vous désirez autre chose ?}{Comme vous voulez... Vous désirez autre chose ?}{}{}{}{}
+{71}{Oui, connaissez-vous les dernières rumeurs ?}{}{5}{qu1020 2, lf1 0}{110}{lf1 1}
+{72}{Oui, connaissez-vous les dernières rumeurs ?}{}{5}{qu1020 4, lf2 0}{120}{lf2 1}
+{73}{Ouais : vous savoir récentes rumeurs ?}{}{-4}{qu1020 2, lf1 0}{110}{lf1 1}
+{74}{Ouais : vous savoir récentes rumeurs ?}{}{-4}{qu1020 4, lf2 0}{120}{lf2 1}
+{75}{X}{}{5}{gf998 1}{0}{}
+{76}{X}{}{-4}{gf998 1}{0}{}
+{77}{Non, je dois partir.}{}{5}{}{0}{}
+{78}{Nan, moi d'voir partir.}{}{-4}{}{0}{}
+
+{80}{Bien @pcname@, la chambre rouge est à vous. N'hésitez pas si vous avez besoin de qui que ce soit.}{Bien @pcname@, la chambre rouge est à vous. N'hésitez pas si vous avez besoin de qui que ce soit.}{}{}{}{gf239 1, gf241 1}
+{81}{Oui, j'aimerais connaître les dernières rumeurs.}{}{5}{qu1020 2, lf1 0}{110}{lf1 1}
+{82}{Oui, j'aimerais connaître les dernières rumeurs.}{}{5}{qu1020 4, lf2 0}{120}{lf2 1}
+{83}{Moi vouloir connaître dernières rue meurent.}{}{-4}{qu1020 2, lf1 0}{110}{lf1 1}
+{84}{Moi vouloir connaître dernières rue meurent.}{}{-4}{qu1020 4, lf2 0}{120}{lf2 1}
+{85}{X}{}{5}{gf998 1}{0}{}
+{86}{X}{}{-4}{gf998 1}{0}{}
+{87}{Merci bien.}{}{5}{}{0}{}
+{88}{Marsi.}{}{-4}{}{0}{}
+
+{90}{Bien, il me faudrait votre nom s'il vous plaît.}{Bien, il me faudrait votre nom s'il vous plaît.}{}{}{}{}
+{91}{@pcname@.}{}{1}{}{100}{lf3 1}
+{92}{En fait, je ne vais pas prendre de chambre.}{}{5}{}{70}{}
+{93}{Ah moi pas prendre en fait.}{}{-4}{}{70}{}
+
+{100}{Bien @pcname@, la chambre verte est à vous. N'hésitez pas si vous avez besoin de qui que ce soit.}{Bien @pcname@, la chambre verte est à vous. N'hésitez pas si vous avez besoin de qui que ce soit.}{}{}{}{gf239 1, gf242 1}
+{101}{Oui, j'aimerais connaître les dernières rumeurs.}{}{5}{qu1020 2, lf1 0}{110}{lf1 1}
+{102}{Oui, j'aimerais connaître les dernières rumeurs.}{}{5}{qu1020 4, lf2 0}{120}{lf2 1}
+{103}{Moi vouloir connaître dernières rue meurent.}{}{-4}{qu1020 2, lf1 0}{110}{lf1 1}
+{104}{Moi vouloir connaître dernières rue meurent.}{}{-4}{qu1020 4, lf2 0}{120}{lf2 1}
+{105}{X}{}{5}{gf998 1}{0}{}
+{106}{X}{}{-4}{gf998 1}{0}{}
+{107}{Merci bien.}{}{5}{}{0}{}
+{108}{Marsi.}{}{-4}{}{0}{}
+
+{110}{Avez-vous vu la pendule à l'entrée de la gare ? Je la trouve vraiment mystérieuse : à chaque fois que je la regarde, il me vient une drôle de réflexion...}{Avez-vous vu la pendule à l'entrée de la gare ? Je la trouve vraiment mystérieuse : à chaque fois que je la regarde, il me vient une drôle de réflexion...}{}{}{}{}
+{111}{D'accord...}{}{5}{}{130}{}
+{112}{Okay...}{}{-4}{}{130}{}
+{113}{Huhum, je vais vous laisser...}{}{5}{gf239 1}{0}{fl 119}
+{114}{Huhum, moi partir hein ?}{}{-4}{gf239 1}{0}{fl 119}
+{115}{Huhum, je vais dormir...}{}{5}{gf239 0}{0}{fl 118}
+{116}{Huhum, moi aller dormir hein ?}{}{-4}{gf239 0}{0}{fl 118}
+
+{118}{Bien entendu, n'hésitez pas à revenir.}{Bien entendu, n'hésitez pas à revenir.}{}{}{}{}
+{119}{Je vous en prie, vous devez être fatigué...}{Je vous en prie, vous devez être fatiguée...}{}{}{}{}
+
+{120}{XXX [Rumeur en construction, désolé]}{XXX [Rumeur en construction, désolé]}{}{}{}{}
+{121}{YYY.}{}{1}{}{130}{}
+{}{}{}{}{}{}{}
+
+{130}{Je peux faire autre chose pour vous ?}{Je peux faire autre chose pour vous ?}{}{}{}{}
+{131}{Oui, j'aimerais une chambre.}{}{5}{gf239 0}{10}{}
+{132}{Ouais, moi vouloir chambre.}{}{-4}{gf239 0}{10}{}
+{133}{X}{}{5}{gf998 1}{0}{}
+{134}{X}{}{-4}{gf998 1}{0}{}
+{135}{Non, je vais vous laisser.}{}{5}{}{0}{}
+{136}{Nan, moi vous laisser.}{}{-4}{}{0}{}
+
+
+{500}{@pcname@, puis-je faire quoi que ce soit pour améliorer votre séjour chez nous ?}{@pcname@, puis-je faire quoi que ce soit pour améliorer votre séjour chez nous ?}{}{}{}{}
+{501}{Oui, j'aimerais connaître les dernières rumeurs.}{}{5}{qu1020 2, lf1 0}{110}{lf1 1}
+{502}{Oui, j'aimerais connaître les dernières rumeurs.}{}{5}{qu1020 4, lf2 0}{120}{lf2 1}
+{503}{Moi vouloir connaître dernières rue meurent.}{}{-4}{qu1020 2, lf1 0}{110}{lf1 1}
+{504}{Moi vouloir connaître dernières rue meurent.}{}{-4}{qu1020 4, lf2 0}{120}{lf2 1}
+{505}{X}{}{5}{gf998 1}{0}{}
+{506}{X}{}{-4}{gf998 1}{0}{}
+{507}{Oui, j'aimerais annuler ma réservation.}{}{5}{}{520}{}
+{508}{Ouais, moi vouloir annuler réservation.}{}{-4}{}{520}{}
+{509}{Tout est déjà parfait, merci.}{}{5}{}{0}{}
+{510}{Nan, tout bon.}{}{-4}{}{0}{}
+
+{520}{Vraiment ? Bien, c'est noté. Vous désirez autre chose ?}{Vraiment ? Bien, c'est noté. Vous désirez autre chose ?}{}{}{}{gf239 0, gf240 0, gf241 0, gf242 0}
+{521}{Oui, j'aimerais connaître les dernières rumeurs.}{}{5}{qu1020 2, lf1 0}{110}{lf1 1}
+{522}{Oui, j'aimerais connaître les dernières rumeurs.}{}{5}{qu1020 4, lf2 0}{120}{lf2 1}
+{523}{Moi vouloir connaître dernières rue meurent.}{}{-4}{qu1020 2, lf1 0}{110}{lf1 1}
+{524}{Moi vouloir connaître dernières rue meurent.}{}{-4}{qu1020 4, lf2 0}{120}{lf2 1}
+{525}{X}{}{5}{gf998 1}{0}{}
+{526}{X}{}{-4}{gf998 1}{0}{}
+{527}{Non merci.}{}{5}{}{0}{}
+{528}{Nan marsi.}{}{-4}{}{0}{}
+
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}

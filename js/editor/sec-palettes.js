@@ -13,7 +13,7 @@ import { escapeHtml } from '../core/util.js';
 import { mobOidTypeAndNumber } from '../proto/proto-resolution.js';
 import { loadCritterMapArt, resolveCritterArt } from '../objects/critter-art.js';
 import { mobObjectTypeName } from '../mob/mob-schema.js';
-import { SEC_FACADE_GROUPS } from './sec-facade-groups.js';
+import { FACADE_GROUPS } from './sec-facade-composites.js';
 import { SEC_FACADE_LAYOUTS } from './sec-facade-layouts.js';
 
 export function createPalettes(env) {
@@ -135,10 +135,10 @@ export function createPalettes(env) {
   // Facade palette (facadename.mes)
   // facade number -> its group (sec-facade-groups.js): { nums: every part, rep: the one listed for it }
   const facadeGroupOf = new Map();
-  for (const g of SEC_FACADE_GROUPS) {
+  for (const g of FACADE_GROUPS) {
     const nums = []; for (let i = 0; i < g.length; i += 3) nums.push(g[i]);
-    const grp = { nums, rep: Math.min(...nums) };
-    for (const n of nums) facadeGroupOf.set(n, grp);
+    const grp = { nums, rep: g.rep ?? Math.min(...nums), name: g.name };   // (a whole temple has a name of its own and shares Temple-07..13 with the vine one)
+    for (const n of nums) if (!facadeGroupOf.has(n)) facadeGroupOf.set(n, grp);
   }
   // the list entry to highlight: a part of a group that is listed once is shown by its first part
   const markActiveFacade = num => markActivePane('facade', num != null && pk.facade.whole.checked ? (facadeGroupOf.get(num)?.rep ?? num) : num);
@@ -172,7 +172,7 @@ export function createPalettes(env) {
     const artByFrame = new Map();
     await Promise.all(idxs.map(async fr => { const a = await loadSecFacadeArt(secMakeFacadeRaw(num, fr, lay.walkable, lay.keep)); if (a) artByFrame.set(fr, a); }));
     // the other parts of the thing this facade belongs to (sec-facade-groups.js), where the game puts them
-    const group = SEC_FACADE_GROUPS.find(g => { for (let i = 0; i < g.length; i += 3) if (g[i] === num) return true; return false; });
+    const group = FACADE_GROUPS.find(g => { for (let i = 0; i < g.length; i += 3) if (g[i] === num) return true; return false; });
     const parts = [];
     if (group) {
       let at = [0, 0];
@@ -224,9 +224,10 @@ export function createPalettes(env) {
       if (!name) return;
       count++;
       const grp = facadeGroupOf.get(num), first = grp && grp.rep === num;
-      const label = first ? `${num} · ${name} (+${grp.nums.length - 1})` : `${num} · ${name}`;
-      const btn = makePaletteButton(num, `${num} ${name}`, first ? `#${num} ${name}\nWhole structure: ${grp.nums.map(n => names[n]).join(', ')}` : `#${num} ${name}`, label);
-      if (first) btn.dataset.searchAll = grp.nums.map(n => `${n} ${names[n]}`).join(' ').toLowerCase();
+      const shown = first && grp.name ? grp.name : name;
+      const label = first ? `${num} · ${shown} (+${grp.nums.length - 1})` : `${num} · ${name}`;
+      const btn = makePaletteButton(num, `${num} ${shown}`, first ? `#${num} ${shown}\nWhole structure: ${grp.nums.map(n => names[n]).join(', ')}` : `#${num} ${name}`, label);
+      if (first) btn.dataset.searchAll = `${grp.name || ''} ${grp.nums.map(n => `${n} ${names[n]}`).join(' ')}`.toLowerCase();
       else if (grp) btn.dataset.member = '1';
       btn.addEventListener('click', () => selectFacade(num, name));
       P.list.appendChild(btn); P.obs.observe(btn);

@@ -1,0 +1,50 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Bitte, Sire. Dürfte ich eine Frage stellen?}{}{5}{re-40}{10}{}
+{3}{Dürfte ich Euch eine Frage stellen, Sire?}{}{5}{re41}{31}{}
+{4}{Äh ... ich was fragen, ja?}{}{-4}{re-40}{10}{}
+{5}{Äh ... ich was fragen?}{}{-4}{re41}{31}{}
+{9}{E:}{}{1}{}{0}{}
+{10}{Ich will hier keinen Ärger haben, Fremdling.  Denkt immer daran, dass ich Euch im Auge behalte ...  Also, was wollt Ihr?}{Ich will hier keinen Ärger haben, Fremdling.  Denkt immer daran, dass ich Euch im Auge behalte ...  Also, was wollt Ihr?}{}{}{}{}
+{11}{R:$0,1070-1080}{}{1}{}{46}{}
+{12}{C:}{}{1}{}{46}{}
+{13}{T:0, 1, 2, 3}{}{1}{}{46}{}
+{14}{Ich möchte die Kaution für Guido hinterlegen.}{}{5}{gf2679 1}{52}{}
+{15}{Ich möchte die Kaution für Mr. Aymes hinterlegen.}{}{5}{gf2680 1}{62}{}
+{16}{Äh ... ich geben Münzens für Gidoh?}{}{-4}{gf2679 1}{52}{}
+{17}{Äh ... ich geben Münzens für Mista Äims?}{}{-4}{gf2680 1}{62}{}
+{18}{F:}{}{1}{}{0}{}
+{31}{Ja?  Womit kann ich dienen, Sire?}{Ja?  Womit kann ich dienen, Madame?}{}{}{}{}
+{32}{R:$0,1070-1080}{}{1}{}{46}{}
+{33}{C:}{}{1}{}{46}{}
+{34}{T:0, 1, 2, 3}{}{1}{}{46}{}
+{36}{Ich möchte die Kaution für Guido hinterlegen.}{}{5}{gf2679 1}{52}{}
+{37}{Ich möchte die Kaution für Mr. Aymes hinterlegen.}{}{5}{gf2680 1}{62}{}
+{38}{Äh ... ich geben Münzens für Gidoh?}{}{-4}{gf2679 1}{52}{}
+{39}{Äh ... ich geben Münzens für Mista Äims?}{}{-4}{gf2680 1}{62}{}
+{40}{F:}{}{1}{}{0}{}
+{46}{Gibt es sonst noch etwas?}{Gibt es sonst noch etwas?}{}{}{}{}
+{47}{R:$0,1070-1080}{}{1}{}{46}{}
+{48}{C:}{}{1}{}{46}{}
+{49}{T:0, 1, 2, 3}{}{1}{}{46}{}
+{51}{Nein, danke. Guten Tag.}{}{1}{}{0}{}
+{52}{Dieser Dieb?  Er sitzt wegen eines geringfügigen Diebstahls. Seine Kaution beträgt 500 Münzen.  Seid Ihr sicher, dass Ihr sie zahlen wollt?}{Dieser Dieb?  Er sitzt wegen eines geringfügigen Diebstahls. Seine Kaution beträgt 500 Münzen.  Seid Ihr sicher, dass Ihr sie zahlen wollt?}{}{}{}{}
+{53}{Ja, das bin ich.}{}{5}{$$500}{57}{}
+{54}{Na ja ... vielleicht sollte ich noch mal darüber nachdenken.}{}{5}{$$-499}{0}{}
+{55}{Äh ... jaaaa.}{}{-4}{$$500}{57}{}
+{56}{Äh ... ich nachdenken.}{}{-4}{$$-499}{0}{}
+{57}{Tja, dann schätze ich, dass Geld für Euch wohl keine Rolle spielt.  Ich weiß ja nicht, was er Euch erzählt hat, aber er wird Euch das Geld NIE zurückzahlen, Kumpel.}{Tja, dann schätze ich, dass Geld für Euch wohl keine Rolle spielt.  Ich weiß ja nicht, was er Euch erzählt hat, aber er wird Euch das Geld NIE zurückzahlen, Lady.}{}{}{}{}
+{58}{Hier ist das Geld.}{}{5}{}{}{$$-500, gf2678 1, fl 61}
+{59}{Hier sein Münzens.}{}{-4}{}{}{$$-500, gf2678 1, fl 61}
+{60}{F:}{}{1}{}{0}{}
+{61}{[Er ruft in Richtung Guidos Zelle.]  He, Guido ...  Ich weiß nicht, was Ihr hier abziehen wollt, aber dieser Typ hat gerade Eure Kaution gezahlt!  Ihr dürft gehen.  Und ich will Euch hier nie wieder sehen!}{[Er ruft in Richtung Guidos Zelle.]  He, Guido ...  Ich weiß nicht, was Ihr hier abziehen wollt, aber diese Dame hat gerade Eure Kaution gezahlt!  Ihr dürft gehen.  Und ich will Euch hier nie wieder sehen!}{}{}{}{}
+{62}{Dieser Raufbold?  Der sitzt, weil er in einer Bar einen Seemann angegriffen hat ... seine Kaution beträgt 500 Münzen.  Seid Ihr sicher, dass Ihr sie zahlen wollt?}{Dieser Raufbold?  Der sitzt, weil er in einer Bar einen Seemann angegriffen hat ... seine Kaution beträgt 500 Münzen.  Seid Ihr sicher, dass Ihr sie zahlen wollt?}{}{}{}{}
+{63}{Ja, das bin ich.}{}{5}{$$500}{67}{}
+{64}{Na ja ... vielleicht sollte ich noch mal darüber nachdenken.}{}{5}{$$-499}{0}{}
+{65}{Äh ... jaaaa.}{}{-4}{$$500}{67}{}
+{66}{Äh ... ich nachdenken.}{}{-4}{$$-499}{0}{}
+{67}{Tja, dann schätze ich, dass Geld für Euch wohl keine Rolle spielt.  Ich weiß ja nicht, was er Euch erzählt hat, aber er wird Euch das Geld NIE zurückzahlen, Kumpel.}{Tja, dann schätze ich, dass Geld für Euch wohl keine Rolle spielt.  Ich weiß ja nicht, was er Euch erzählt hat, aber er wird Euch das Geld NIE zurückzahlen, Lady.}{}{}{}{}
+{68}{Hier ist das Geld.}{}{5}{}{}{$$-500, gf2677 1, fl 71}
+{69}{Hier sein Münzens.}{}{-4}{}{}{$$-500, gf2677 1, fl 71}
+{70}{F:}{}{1}{}{0}{}
+{71}{[Er ruft in Richtung Jerrolds Zelle.]  He, Jerrold ...  Ich weiß nicht, was Ihr hier abziehen wollt, aber dieser Typ hat gerade Eure Kaution gezahlt!  Ihr dürft gehen.  Und ich will Euch hier nie wieder sehen!}{[Er ruft in Richtung Jerrolds Zelle.]  He, Jerrold ...  Ich weiß nicht, was Ihr hier abziehen wollt, aber diese Dame hat gerade Eure Kaution gezahlt!  Ihr dürft gehen.  Und ich will Euch hier nie wieder sehen!}{}{}{}{}
+

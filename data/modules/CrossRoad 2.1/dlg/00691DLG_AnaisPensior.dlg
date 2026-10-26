@@ -1,0 +1,888 @@
+{1}{Bienvenue dans les cuisines, ici c'est le bout de monde (ou plutôt le bout du train). Je suis Anaïs Pensior, maîtresse cuisinière et à mes heures négociatrice.}{Bienvenue dans les cuisines, ici c'est le bout de monde (ou plutôt le bout du train). Je suis Anaïs Pensior, maîtresse cuisinière et à mes heures négociatrice.}{}{}{}{}
+{2}{Enchanté, je m'appelle @pcname@.}{1}{5}{}{10}{}
+{3}{Enchantée, je m'appelle @pcname@.}{0}{5}{}{10}{}
+{4}{Moi @pcname@.}{}{-4}{}{10}{}
+
+{10}{@pcname@, un nom très intéressant... J'ai connu quelqu'un qui s'appelait presque pareillement, il est mort quelques années avant moi mais je ne l'ai jamais revu aux Enfers. Il est au cercle... 297 je crois bien. Enfin bref, tout cela pour dire que votre nom me rappelle bien des souvenirs @pcname@. Je suis Anaïs Pensior et... [Elle s'interrompt] tiens, je crois m'être déjà présentée. Cela m'arrive souvent : je parle et l'instant d'après je ne sais plus ce que j'ai dit.}{@pcname@, un nom très intéressant... J'ai connu quelqu'un qui s'appelait presque pareillement, il est mort quelques années avant moi mais je ne l'ai jamais revu aux Enfers. Il est au cercle... 297 je crois bien. Enfin bref, tout cela pour dire que votre nom me rappelle bien des souvenirs @pcname@. Je suis Anaïs Pensior et... [Elle s'interrompt] tiens, je crois m'être déjà présentée. Cela m'arrive souvent : je parle et l'instant d'après je ne sais plus ce que j'ai dit.}{}{}{}{}
+{11}{Par pitié, cessez de parler pour ne rien dire, ma tête va exploser.}{}{5}{}{20}{lf0 1}
+{12}{Stop, vous arrêtez parler, moi vais mourir !}{}{-4}{}{20}{lf0 1}
+{13}{C'est très intéressant mais...}{}{5}{}{30}{}
+
+{20}{Ah, je suis vraiment navrée. Vous veniez pour quelque chose d'important ?}{Ah, je suis vraiment navrée. Vous veniez pour quelque chose d'important ?}{}{}{}{re -25}
+{21}{Oui et non : je voulais juste savoir si vous aviez noté quelque chose d'inhabituel.}{}{5}{lf2 0}{40}{lf2 1}
+{22}{A moitié : moi v'loir savoir si rien vu d'pas habituel !}{}{-4}{lf2 0}{40}{lf2 1}
+{23}{J'ai entendu dire qu'une marmite de potage avait disparue, je voulais en savoir plus.}{}{5}{ru 1039, lf1 0}{50}{lf1 1}
+{24}{Avoir entendu parler de marmiton potage.}{}{-4}{ru 1039, lf5 0}{60}{lf5 1}
+{25}{Vous avoir dit qu'être négociatrice ?}{}{-4}{lf4 0}{70}{lf4 1}
+{26}{Vous avez dit être aussi négociatrice ?}{}{5}{lf3 0}{80}{lf3 1}
+{27}{Non, je vais partir tout de suite.}{}{5}{}{0}{}
+{28}{Nan, moi partir.}{}{-4}{}{0}{}
+
+{}{}{}{}{}{}{}
+
+{30}{Enfin, ça n'ôte en rien le plaisir d'une conversation n'est-ce pas ? C'est ma tante qui m'a initié au secret des conversations, c'était d'ailleurs aussi ma marraine mais je l'appelais tout le temps "Tatie Noémie". Elle disait que chaque mot devait être juste et réfléchi mais elle même disait souvent n'importe quoi, surtout quand elle était ivre. Je suppose que cette règle ne s'applique que dans les conversations sérieuses et à jeun. Quoique dans le monde des affaires il est courant de discuter un peu éméché.}{Enfin, ça n'ôte en rien le plaisir d'une conversation n'est-ce pas ? C'est ma tante qui m'a initié au secret des conversations, c'était d'ailleurs aussi ma marraine mais je l'appelais tout le temps "Tatie Noémie". Elle disait que chaque mot devait être juste et réfléchi mais elle même disait souvent n'importe quoi, surtout quand elle était ivre. Je suppose que cette règle ne s'applique que dans les conversations sérieuses et à jeun. Quoique dans le monde des affaires il est courant de discuter un peu éméché.}{}{}{}{}
+{31}{Vous ne cessez donc jamais de parler ? Je n'en puis plus !}{}{5}{}{20}{lf0 1}
+{32}{Certes...}{}{5}{}{90}{}
+
+{40}{Je pense que les ragots locaux ne vous intéresseront pas donc... non !}{Je pense que les ragots locaux ne vous intéresseront pas donc... non !}{}{}{}{}
+{41}{Ne dites pas cela, je m'excuse pour tout à l'heure : je suis sûr qu'ils sont intéressants.}{}{7}{ps 4}{110}{re +5}
+{42}{Bon... Par contre, je ne vous ai pas encore rendu votre clef...}{}{5}{qu1024 4, in 5858, lf0 1}{1060}{in 5858}
+{43}{Tant pis... Par contre, j'ai entendu parler de la disparition d'une marmite de potage.}{}{5}{ru 1039, lf1 0}{50}{lf1 1}
+{44}{Bah. Et moi avoir entendu dire "marmiton potage".}{}{-4}{ru 1039, lf5 0}{60}{lf5 1}
+{45}{Je vois, alors peut-être pourriez-vous me parler de ce travail de négociatrice.}{}{5}{lf3 0}{80}{lf3 1}
+{46}{Alors vous me parler de négociatrice ?}{}{-4}{lf4 0}{70}{lf4 1}
+{47}{Bon... Cependant, je dois vous parler à propos de votre marmite de potage...}{}{5}{ru 1055, lf9 0}{2040}{lf9 1}
+{48}{Très bien, si c'est ainsi, je m'en vais.}{}{5}{}{0}{}
+{49}{Okay : moi partir.}{}{-4}{}{0}{}
+
+{}{}{}{}{}{}{}
+
+{50}{Ah oui, mon potage aux champignons. C'était un peu plus tôt dans la journée. Je l'ai déposé sur le passe-plat et les serveurs ne l'y ont jamais trouvé. Voilà toute l'histoire.}{Ah oui, mon potage aux champignons. C'était un peu plus tôt dans la journée. Je l'ai déposé sur le passe-plat et les serveurs ne l'y ont jamais trouvé. Voilà toute l'histoire.}{}{}{}{}
+{51}{Je pourrais peut-être essayer de la retrouver.}{}{5}{}{120}{re +5, qu1024 2}
+{52}{En fait ce n'est pas très passionnant comme histoire... Parlons d'autre chose.}{}{5}{}{130}{re -5}
+{53}{Plutôt étrange hein ? Bonne chance pour la retrouver, moi je dois partir...}{}{5}{}{0}{re -5}
+
+{60}{Je dois avouer que je ne vois pas de quoi vous voulez parler... Un marmiton ? Du potage ? Non, désolée mais je ne comprends pas. Mais peut-être aviez-vous autre chose à me demander ?}{Je dois avouer que je ne vois pas de quoi vous voulez parler... Un marmiton ? Du potage ? Non, désolée mais je ne comprends pas. Mais peut-être aviez-vous autre chose à me demander ?}{}{}{}{}
+{61}{Heu ouais : vous savoir truc pas normaux ?}{}{-4}{lf2 0}{40}{lf2 1}
+{62}{Oui-oui : vous dire "négociatrice" ?}{}{-4}{lf4 0}{70}{lf4 1}
+{63}{Nan, moi partir !}{}{-4}{}{0}{}
+
+{70}{En effet je l'ai dit. Cependant, pardonnez mon expression, vous semblez "peu éduqué" pour quelqu'un qui s'intéresserait à ce sujet. Je ne pense pas que vous saisiriez toutes les facettes d'une conversation autour d'un tel sujet. Aussi, je vous invite à aborder quelque chose de plus... simple.}{En effet je l'ai dit. Cependant, pardonnez mon expression, vous semblez "peu éduqué" pour quelqu'un qui s'intéresserait à ce sujet. Je ne pense pas que vous saisiriez toutes les facettes d'une conversation autour d'un tel sujet. Aussi, je vous invite à aborder quelque chose de plus... simple.}{}{}{}{}
+{71}{Ouais, mieux... Vous savoir truc pas normaux ?}{}{-4}{lf2 0}{40}{lf2 1}
+{72}{Oui, comme ce truc : marmiton potage.}{}{-4}{ru 1039, lf5 0}{60}{lf5 1}
+{73}{C'bon : moi y aller...}{}{-4}{}{0}{}
+
+{80}{Il est vrai que je cumule deux emplois, ce qui est plutôt rare aux Enfers. J'exerce alternativement les métiers de négociatrice et de cuisinière.}{Il est vrai que je cumule deux emplois, ce qui est plutôt rare aux Enfers. J'exerce alternativement les métiers de négociatrice et de cuisinière.}{}{}{}{}
+{81}{Et pourriez-vous m'en dire plus sur la négociation.}{}{5}{}{140}{}
+{82}{Je vois. Ca ne doit pas être facile. J'ai autre chose à vous demander...}{}{5}{}{150}{re -5}
+{83}{C'est tout à votre honneur. Bien, je dois partir.}{}{5}{}{0}{}
+
+{90}{Pour en revenir à ma tante,  elle était secrétaire de monsieur Saule à Tarante. C'était vraiment un gnome bien ce monsieur Saule; je ne l'ai rencontré qu'une seule fois mais il m'a fait une forte impression. Il était l'expert incontesté d'Arcanum dans l'art de la persuasion. Il est mort peu après moi j'ai appris mais j'ignore dans quel cercle il se trouve.}{Pour en revenir à ma tante,  elle était secrétaire de monsieur Saule à Tarante. C'était vraiment un gnome bien ce monsieur Saule; je ne l'ai rencontré qu'une seule fois mais il m'a fait une forte impression. Il était l'expert incontesté d'Arcanum dans l'art de la persuasion. Il est mort peu après moi j'ai appris mais j'ignore dans quel cercle il se trouve.}{}{}{}{}
+{91}{Bon, vous allez finir par vous taire ? Je n'ai pas que ça à faire...}{}{5}{}{20}{lf0 1}
+{92}{Vraiment ?}{}{5}{}{94}{}
+
+{94}{Oui, j'aimerais bien le revoir un jour... Ah, ce sacré monsieur Saule, il m'avait parlé de quelques-uns de ses trucs quand je l'ai vu. Il parlait notamment de l'alcool : faire boire quelqu'un est parfois très utile. Enfin, c'est ce qu'il disait... Pour ma part, je pense que l'alcool peut mettre tous les sentiments à nu, les bons comme les mauvais, il vaut mieux ne pas faire boire n'importe qui.}{Oui, j'aimerais bien le revoir un jour... Ah, ce sacré monsieur Saule, il m'avait parlé de quelques-uns de ses trucs quand je l'ai vu. Il parlait notamment de l'alcool : faire boire quelqu'un est parfois très utile. Enfin, c'est ce qu'il disait... Pour ma part, je pense que l'alcool peut mettre tous les sentiments à nu, les bons comme les mauvais, il vaut mieux ne pas faire boire n'importe qui.}{}{}{}{}
+{95}{Merci, ce fût très instructif.}{}{5}{ps 4}{160}{re +20, tr11 1}
+{96}{Bien, je suis désolé mais je dois vous parler de certaines choses.}{}{5}{}{170}{re +5}
+
+
+{110}{Bien. J'ai entendu dire qu'il y avait une étrange marque rouge dans une des cabines et que ce serait une marque des dieux eux-mêmes. J'ai aussi entendu parler du passager de la cabine numéro trois, il n'est pas sorti de sa cabine depuis le départ et il n'ouvre à personne; il cache peut-être quelque chose. Au dit aussi qu'un des passagers est cleptomane, forcément, avec tout ce qui disparaît en ce moment : des chaussettes de la numéro six, des boucles d'oreilles de la numéro dix...}{Bien. J'ai entendu dire qu'il y avait une étrange marque rouge dans une des cabines et que ce serait une marque des dieux eux-mêmes. J'ai aussi entendu parler du passager de la cabine numéro trois, il n'est pas sorti de sa cabine depuis le départ et il n'ouvre à personne; il cache peut-être quelque chose. Au dit aussi qu'un des passagers est cleptomane, forcément, avec tout ce qui disparaît en ce moment : des chaussettes de la numéro six, des boucles d'oreilles de la numéro dix...}{}{}{}{ru 1040, ru 1041, ru 1042}
+{111}{Je vous remercie. Je peux vous poser d'autres questions ?}{}{5}{}{180}{}
+{112}{Merci, je vais vous laisser à présent.}{}{5}{}{0}{}
+
+{120}{Vous pourriez en effet, mais je ne sais vraiment pas ce qu'il a pu devenir. Cependant je vous remercie de la chercher pour moi.}{Vous pourriez en effet, mais je ne sais vraiment pas ce qu'il a pu devenir. Cependant je vous remercie de la chercher pour moi.}{}{}{}{}
+{121}{Je peux encore vous embêter quelques instants ?}{}{5}{}{190}{}
+{122}{Je reviendrais avec.}{}{5}{}{0}{}
+
+{130}{[Elle semble un peu irritée] C'est comme vous voulez...}{[Elle semble un peu irritée] C'est comme vous voulez...}{}{}{}{}
+{131}{Par exemple, avez-vous eu connaissance de quelque fait non commun ?}{}{5}{lf2 0}{40}{lf2 1}
+{132}{Vous m'avez dit être aussi négociatrice, j'aimerais en savoir plus.}{}{5}{lf3 0}{80}{lf3 1}
+{133}{En fait, je vais partir à l'instant.}{}{5}{}{0}{}
+
+{140}{Mais bien sûr : je peux vous dire une chose capitale c'est que vous n'avez aucun talent pour cet... exercice mental. La prochaine fois, ayez le tact de ne pas couper la parole à votre interlocuteur.}{Mais bien sûr : je peux vous dire une chose capitale c'est que vous n'avez aucun talent pour cet... exercice mental. La prochaine fois, ayez le tact de ne pas couper la parole à votre interlocuteur.}{}{}{}{}
+{141}{Ah, je me suis mal comporté certes, mais ne pourriez vous pas passez l'éponge ?}{}{5}{ps 5}{200}{re +5}
+{142}{C'est bien dommage. Et si nous changions de sujet ?}{}{5}{}{210}{}
+{143}{Tant pis, je vais partir alors.}{}{5}{}{0}{}
+
+{150}{Je ferais de mon mieux pour y répondre succinctement.}{Je ferais de mon mieux pour y répondre succinctement.}{}{}{}{}
+{151}{Je cours après les choses qui sortent du quotidien, que se passe-t-il dans ce train ?}{}{5}{lf2 0}{40}{lf2 1}
+{152}{En fait, je ne vous avais pas encore rendu votre clef...}{}{5}{qu1024 4, in 5858, lf0 1}{1060}{in 5858}
+{153}{On m'a dit qu'il vous manquait une marmite de potage n'est-ce pas ?}{}{5}{ru 1039, lf1 0}{50}{lf1 1}
+{154}{Il me faut vous entretenir à propos de votre marmite de potage disparue...}{}{5}{ru 1055, lf9 0}{2040}{lf9 1}
+{155}{Finalement, je crois que je vais prendre congé immédiatement.}{}{5}{}{0}{}
+
+{}{}{}{}{}{}{}
+
+{160}{Oui, vous qui avez un certain potentiel dans l'art de la persuasion, je pense que cela pourrait vous être utile. Je vous demanderais juste  de ne pas divulguer ces informations au premier venu car elles viennent quand même de monsieur Saule.}{Oui, vous qui avez un certain potentiel dans l'art de la persuasion, je pense que cela pourrait vous être utile. Je vous demanderais juste  de ne pas divulguer ces informations au premier venu car elles viennent quand même de monsieur Saule.}{}{}{}{}
+{161}{Cela me paraît plus qu'évident. Et si vous avez besoin de mes talents un jour, n'hésitez pas.}{}{5}{lf6 0}{-8}{re +5, lf6 1} //Y 230, N 220
+{162}{Dites-moi, pourrais-je vous poser quelques questions ?}{}{5}{}{240}{}
+{163}{Je vais vous laisser tranquille pour l'instant.}{}{5}{}{0}{fl 168}
+
+{168}{Je vous en prie, ce fût un plaisir.}{Je vous en prie, ce fût un plaisir.}{}{}{}{}
+
+{170}{Ne le soyez pas, je vous en prie : je suis toute ouïe.}{Ne le soyez pas, je vous en prie : je suis toute ouïe.}{}{}{}{}
+{171}{Par exemple, y'a-t-il eu des évènements disons... peu communs ?}{}{5}{lf2 0}{250}{lf2 1}
+{172}{En fait, je ne vous avais pas encore rendu votre clef...}{}{5}{qu1024 4, in 5858, lf0 0}{2220}{in 5858}
+{173}{On m'a dit qu'une marmite de potage aux champignons avait disparue ?}{}{5}{ru 1039, lf1 0}{260}{lf1 1}
+{174}{Comment ce fait-il que vous soyez cuisinière et parallèlement négociatrice ?}{}{5}{lf3 0}{270}{lf3 1}
+{175}{En fait, je pense que je reviendrai plus tard.}{}{5}{}{0}{}
+{176}{Comment pouvez-vous être aussi suffisante et être négociatrice ? Vous êtes la honte de cette profession !}{}{5}{}{0}{re -25, lf8 1, fl 178}
+
+{}{}{}{}{}{}{}
+
+{178}{Je vois, et c'est vous qui n'avez pas une once de talent pour cette discipline qui venez me faire la leçon ? Vous paraissiez pourtant plus agréable il y a quelques minutes. Partez : vous n'êtes plus le bienvenu dans ces cuisines !}{Je vois, et c'est vous qui n'avez pas une once de talent pour cette discipline qui venez me faire la leçon ? Vous paraissiez pourtant plus agréable il y a quelques minutes. Partez : vous n'êtes plus la bienvenue dans ces cuisines !}{}{}{}{}
+
+{180}{C'est tout à fait envisageable. A quelle question puis-je répondre ?}{C'est tout à fait envisageable. A quelle question puis-je répondre ?}{}{}{}{}
+{181}{On m'a signalé la disparition d'une de vos marmites, que s'est-il passé ?}{}{5}{ru 1039, lf1 0}{50}{lf1 1}
+{182}{En fait, ce n'est pas une question mais je ne vous ai pas encore rendu votre clef...}{}{5}{qu1024 4, in 5858, lf0 1}{1060}{in 5858}
+{183}{Vous avez mentionné être négociatrice non ?}{}{5}{lf3 0}{80}{lf3 1}
+{184}{Cela concerne votre marmite de potage disparue...}{}{5}{ru 1055, lf9 0}{2040}{lf9 1}
+{185}{En fait, à aucune car je dois prendre congé à l'instant.}{}{5}{}{0}{}
+
+{}{}{}{}{}{}{}
+
+{190}{Certainement, vous avez d'autres questions ?}{Certainement, vous avez d'autres questions ?}{}{}{}{}
+{191}{Je m'intéresse aux éventuels faits inhabituels, que se passe-t-il dans ce train ?}{}{5}{lf2 0}{40}{lf2 1}
+{192}{Non mais par contre, il est temps que je vous rende votre clef...}{}{5}{qu1024 4, in 5858, lf0 1}{1060}{in 5858}
+{193}{Vous avez parlé de négociation, cela est-il un second métier pour vous ?}{}{5}{lf3 0}{80}{lf3 1}
+{194}{Oui, concernant votre marmite de potage...}{}{5}{ru 1055, lf9 0}{2040}{lf9 1}
+{195}{Non, réflexion faite, je vous ai assez embêtée, je vais partir}{}{5}{}{0}{}
+{196}{En fait non , je vous ai assez entendue.}{}{5}{}{0}{}
+
+{}{}{}{}{}{}{}
+
+{200}{Vous n'êtes finalement pas dénué de talent, si un jour vous parvenez à maîtrisez vos émotions, vous feriez peut-être un bon rival dans le monde des affaires. Je refuse de vous donner des conseils mais je vais tout de même vous donner un petit indice : si vous recherchez une formation en persuasion, ma principale rivale travaille aussi dans la restauration. C'est tout ce que je vous dirais.}{Vous n'êtes finalement pas dénuée de talent, si un jour vous parvenez à maîtrisez vos émotions, vous feriez peut-être un bon rival dans le monde des affaires. Je refuse de vous donner des conseils mais je vais tout de même vous donner un petit indice : si vous recherchez une formation en persuasion, ma principale rivale travaille aussi dans la restauration. C'est tout ce que je vous dirais.}{}{}{}{ru 1043}
+{201}{C'est déjà beaucoup, je vous remercie. Je peux encore vous embêter un petit peu ?}{}{5}{}{280}{}
+{202}{Ce sera suffisant pour trouver. Je vais vous laisser à présent.}{}{5}{}{0}{}
+{203}{Ne pourrais-je pas avoir un autre indice sur le lieu où elle travaille ?}{}{5}{}{290}{re +5}
+{204}{Maintenant que je sais ça, je puis vous dire adieu. Vous m'êtes plus que désagréable.}{}{5}{}{0}{re -25, lf8 1, fl 208}
+
+{208}{Vraiment ? Alors sachez que c'est réciproque. Partez, vous n'êtes plus le bienvenu dans ces cuisines.}{Vraiment ? Alors sachez que c'est réciproque. Partez, vous n'êtes plus la bienvenue dans ces cuisines.}{}{}{}{}
+
+{210}{C'est sans doute préférable en effet.}{C'est sans doute préférable en effet.}{}{}{}{}
+{211}{Auriez-vous, par exemple, entendu parler de quelque chose d'inhabituel ?}{}{5}{lf2 0}{40}{lf2 1}
+{212}{Vous pourriez me parler de cette marmite disparue.}{}{5}{ru 1039, lf1 0}{50}{lf1 1}
+{213}{Je dois par exemple vous parler de votre marmite de potage...}{}{5}{ru 1055, lf9 0}{2040}{lf9 1}
+{214}{Il est peut-être encore plus préférable que je m'en aille.}{}{5}{}{0}{}
+
+{220}{J'y réfléchirais mais vous ne me semblez pas encore à la hauteur du défi.}{J'y réfléchirais mais vous ne me semblez pas encore à la hauteur du défi.}{}{}{}{}
+{221}{C'est navrant. En ce cas pourrais-je vous importuner un peu plus longtemps ?}{}{5}{}{300}{re +5}
+{222}{C'est vraiment dommage. Je vais partir alors.}{}{5}{}{0}{}
+
+{230}{Quelle excellente idée que voilà, vous me semblez plus que prometteur en plus... Puis-je me permettre de vous faire passer un petit test pour m'assurer que vous êtres bien l'homme dont j'ai besoin ?}{Quelle excellente idée que voilà, vous me semblez plus que prometteur en plus... Puis-je me permettre de vous faire passer un petit test pour m'assurer que vous êtres bien la femme dont j'ai besoin ?}{}{}{}{lf7 1}
+{231}{Cela va de soi.}{}{5}{}{310}{re +5}
+{232}{Je ne suis pas sûr d'être à la hauteur mais pourquoi pas.}{}{5}{}{320}{}
+{233}{Je ne préfère pas, parlons d'autre chose.}{}{5}{}{330}{re -5}
+
+{240}{Ma réponse à cette question est toujours positive. J'ai toujours adoré répondre aux questions et cela n'est pas près de changer.}{Ma réponse à cette question est toujours positive. J'ai toujours adoré répondre aux questions et cela n'est pas près de changer.}{}{}{}{}
+{241}{Bien. Alors avez-vous entendu parler d'évènements sortant de l'ordinaire ?}{}{5}{lf2 0}{250}{lf2 1}
+{242}{Nous avons un peu oublié mais... ne serait-il pas temps de récupérer votre clef ?}{}{5}{qu1024 4, in 5858, lf0 0}{2220}{in 5858}
+{243}{C'est parfait. Pourriez-vous me parler de cette marmite de potage aux champignons qui a disparue ?}{}{5}{ru 1039, lf1 0}{260}{lf1 1}
+{244}{Alors dites moi : comment ce fait-il que vous soyez cuisinière et parallèlement négociatrice ?}{}{5}{lf3 0}{270}{lf3 1}
+{245}{Bien, alors j'en ai une à propos de votre marmite de potage...}{}{5}{ru 1055, lf9 0}{2040}{lf9 1}
+{246}{En fait, je reviendrais plus tard. Je dois partir.}{}{5}{}{0}{}
+{247}{Finalement, je pense vous avoir assez entendue.}{}{5}{}{0}{re -25, lf8 1, fl 248}
+
+{}{}{}{}{}{}{}
+
+{248}{Mêmes les personnes les plus agréables peuvent devenir odieuses; surtout elles en fait. Vous ne m'êtes plus sympathique du tout.}{Mêmes les personnes les plus agréables peuvent devenir odieuses; surtout elles en fait. Vous ne m'êtes plus sympathique du tout.}{}{}{}{}
+
+{250}{Oh, ce train en regorge. La première chose est qu'un employé au ménage m'a parlé d'une étrange marque rouge carmin dans l'une des cabines. Elle était apposée sur le mur avec une sorte de peinture. Il a eu beau essayer tous les dissolvants du monde, il n'a pas réussi à en enlever ne serait-ce qu'un bord. C'est peut-être un message des dieux. Ce genre d'histoires est particulièrement courant aux Enfers en ce moment.}{Oh, ce train en regorge. La première chose est qu'un employé au ménage m'a parlé d'une étrange marque rouge carmin dans l'une des cabines. Elle était apposée sur le mur avec une sorte de peinture. Il a eu beau essayer tous les dissolvants du monde, il n'a pas réussi à en enlever ne serait-ce qu'un bord. C'est peut-être un message des dieux. Ce genre d'histoires est particulièrement courant aux Enfers en ce moment.}{}{}{}{ru 1044}
+{251}{C'est fort instructif. Y'a-t-il autre chose ?}{}{5}{}{-14}{}//350 ou 440 (qu marmite finie)
+{252}{Je vous remercie. Puis-je vous poser d'autre questions ?}{}{5}{}{360}{}
+{253}{Ca peut être utile, je vais partir.}{}{5}{}{0}{}
+
+{260}{Oh oui, c'est une histoire des plus terribles. C'était un sublime potage aux champignons avec de la coriandre, quelques herbes aux propriétés gustatives et curatives et une phase liquide de plusieurs variétés de tomates soigneusement lavées, épluchées et coupées en dés si fins qu'ils ressemblaient à des sphères. Oh et un ingrédient des plus singuliers mais que je dois garder secret.}{Oh oui, c'est une histoire des plus terribles. C'était un sublime potage aux champignons avec de la coriandre, quelques herbes aux propriétés gustatives et curatives et une phase liquide de plusieurs variétés de tomates soigneusement lavées, épluchées et coupées en dés si fins qu'ils ressemblaient à des sphères. Oh et un ingrédient des plus singuliers mais que je dois garder secret.}{}{}{}{}
+{261}{[Vous écoutez]}{}{1}{}{263}{}
+
+{263}{Je m'en souviens parfaitement : je venais de finir ce chef d'oeuvre et j'ai retiré la marmite du feu. C'est un plat que l'on doit servir chaud et dans sa marmite pour qu'aucun des arômes ne se perde. J'ai donc déposé la marmite sur le passe plat comme à mon habitude. J'ai appelé le serveur pour qu'il la prenne et je suis revenu à mon plan de travail. Trente secondes après il m'a appelée au travers du passe-plat pour me demander ou était la commande et en effet elle avait disparue.}{Je m'en souviens parfaitement : je venais de finir ce chef d'oeuvre et j'ai retiré la marmite du feu. C'est un plat que l'on doit servir chaud et dans sa marmite pour qu'aucun des arômes ne se perde. J'ai donc déposé la marmite sur le passe plat comme à mon habitude. J'ai appelé le serveur pour qu'il la prenne et je suis revenu à mon plan de travail. Trente secondes après il m'a appelée au travers du passe-plat pour me demander ou était la commande et en effet elle avait disparue.}{}{}{}{}
+{264}{[Vous continuez d'écouter]}{}{1}{}{370}{}
+
+{270}{Holala, c'est toute une histoire vous savez. Il est vrai que c'est assez rare qu'un employé des Enfers cumule deux emplois ainsi. En fait à la base on m'a repéré pour mes talents de cuisinière et j'ai commencé dans un petit restaurant du cercle 666. Je crois que c'est devenu une friperie maintenant. Ensuite j'ai gagné des points et j'ai pu m'installer dans les quartiers intermédiaires et encore plus tard je suis venue pour exercer dans ce train.}{Holala, c'est toute une histoire vous savez. Il est vrai que c'est assez rare qu'un employé des Enfers cumule deux emplois ainsi. En fait à la base on m'a repéré pour mes talents de cuisinière et j'ai commencé dans un petit restaurant du cercle 666. Je crois que c'est devenu une friperie maintenant. Ensuite j'ai gagné des points et j'ai pu m'installer dans les quartiers intermédiaires et encore plus tard je suis venue pour exercer dans ce train.}{}{}{}{gf439 1}
+{271}{[Vous écoutez avec attention]}{}{1}{}{273}{}
+
+{273}{C'est vraiment un poste prestigieux car ce train est le plus luxueux qui existe. Même la nouvelle ligne Tarante-Caladon qui passe sous les montagnes grises fait pâle figue à côté. Et un jour, on m'a contacté pour remplacer un diplomate qui devait se rendre dans le cercle 510 et qui a eu un empêchement quelconque. J'ai réussi les tractations avec brio et on me demande de temps en temps de prêter main forte lors de négociations difficiles. C'est donc un "métier occasionnel" que celui de négociatrice.}{C'est vraiment un poste prestigieux car ce train est le plus luxueux qui existe. Même la nouvelle ligne Tarante-Caladon qui passe sous les montagnes grises fait pâle figue à côté. Et un jour, on m'a contacté pour remplacer un diplomate qui devait se rendre dans le cercle 510 et qui a eu un empêchement quelconque. J'ai réussi les tractations avec brio et on me demande de temps en temps de prêter main forte lors de négociations difficiles. C'est donc un "métier occasionnel" que celui de négociatrice.}{}{}{}{}
+{274}{Quelle histoire, c'est incroyable.}{}{5}{}{380}{}
+{275}{Je vois, ce fût instructif mais il me faut partir.}{}{5}{}{0}{fl 278}
+
+{278}{Je comprends, n'hésitez pas à revenir.}{Je comprends, n'hésitez pas à revenir.}{}{}{}{}
+
+{280}{Proposition acceptée. Je peux bien vous accorder encore un petit peu de temps.}{}{}{}{}{}
+{281}{Auriez-vous par exemple entendu parler de faits étranges ?}{}{5}{lf2 0}{40}{lf2 1}
+{282}{Alors il serait peut-être temps que je vous rende votre clef...}{}{5}{qu1024 4, in 5858, lf0 1}{1060}{in 5858}
+{283}{J'aimerais en savoir plus sur cette marmite de potage disparue.}{}{5}{ru 1039, lf1 0}{50}{lf1 1}
+{284}{Il me faut plus de renseignements sur la marmite de potage...}{}{5}{ru 1055, lf9 0}{2040}{lf9 1}
+{285}{En fait, je pense revenir plus tard.}{}{5}{}{0}{}
+
+{}{}{}{}{}{}{}
+
+{290}{Pas dans cette cuisine...}{Pas dans cette cuisine...}{}{}{}{}
+{291}{Je vois que vous êtes inflexible, c'est tout à votre honneur.}{}{5}{}{294}{}
+{292}{Soit, je chercherais moi-même. Au revoir...}{}{5}{}{0}{}
+
+{294}{C'est l'une des voies possibles dans ce métier. Vous souhaitiez m'entretenir d'autre chose ?}{C'est l'une des voies possibles dans ce métier. Vous souhaitiez m'entretenir d'autre chose ?}{}{}{}{}
+{295}{Peut-être avez-vous entendu parler de faits inhabituels ?}{}{5}{lf2 0}{40}{lf2 1}
+{296}{Oui, je crois ne pas vous avoir rendu votre clef...}{}{5}{qu1024 4, in 5858, lf0 1}{1060}{in 5858}
+{297}{On m'a dit qu'une marmite de potage avait disparue ?}{}{5}{ru 1039, lf1 0}{50}{lf1 1}
+{298}{Oui, de votre marmite de potage...}{}{5}{ru 1055, lf9 0}{2040}{lf9 1}
+{299}{Non, ce sera tout.}{}{5}{}{0}{}
+
+{}{}{}{}{}{}{}
+
+{300}{A cela en revanche je vous réponds oui. Si par quelque moyen que ce soit je puis vous aider, je le ferais.}{A cela en revanche je vous réponds oui. Si par quelque moyen que ce soit je puis vous aider, je le ferais.}{}{}{}{}
+{301}{En fait, il est temps de vous le dire... vous êtes prise au cercle 693 !}{}{5}{qu1025 3}{2320}{qu1025 4}
+{302}{Anaïs, je suis désolée mais je dois vous le dire : je n'ai pas pu vous faire embaucher au cercle 693.}{0}{5}{qu1025 6, lf11 0}{2340}{lf11 1}
+{303}{Anaïs, je suis désolé mais je dois vous le dire : je n'ai pas pu vous faire embaucher au cercle 693.}{1}{5}{qu1025 6, lf11 0}{2340}{lf11 1}
+{304}{Bien. Alors avez-vous entendu parler d'évènements sortant de l'ordinaire ?}{}{5}{lf2 0}{250}{lf2 1}
+{305}{En fait, je crois avoir oublié de vous restituer votre clef.}{}{5}{qu1024 4, in 5858, lf0 0}{2220}{in 5858}
+{306}{C'est parfait. Pourriez-vous me parler de cette marmite de potage aux champignons qui a disparue ?}{}{5}{ru 1039, lf1 0}{260}{lf1 1}
+{307}{Alors j'aurais une question à propos de votre marmite de potage...}{}{5}{ru 1055, lf9 0}{2040}{lf9 1}
+{308}{Alors dites moi : comment ce fait-il que vous soyez cuisinière et parallèlement négociatrice ?}{}{5}{lf3 0}{270}{lf3 1}
+{309}{En fait, je reviendrais plus tard. Je dois partir.}{}{5}{}{0}{}
+
+{}{}{}{}{}{}{}
+
+{310}{Bien, et si vous essayiez de me convaincre de quelque chose qui semble assez improbable ?}{Bien, et si vous essayiez de me convaincre de quelque chose qui semble assez improbable ?}{}{}{}{}
+{311}{Vous êtes en train de rêver : les Enfers n'existent pas.}{}{5}{}{390}{}
+{312}{Ce train n'est pas aussi "haute gamme" qu'il en a l'air.}{}{5}{}{400}{}
+{313}{Les automates contrôlent aujourd'hui les Enfers.}{}{5}{}{410}{}
+{314}{Votre collègue cuisinier est amoureux de vous.}{}{5}{}{420}{}
+
+{320}{Si vous envisagé ne serait-ce qu'une seconde que vous allez échouer il est trop tard : vous avez déjà failli à votre mission. Je ne pense pas pouvoir accorder ma confiance à quelqu'un qui ne s'accorde pas la sienne. C'est dommage...}{Si vous envisagé ne serait-ce qu'une seconde que vous allez échouer il est trop tard : vous avez déjà failli à votre mission. Je ne pense pas pouvoir accorder ma confiance à quelqu'un qui ne s'accorde pas la sienne. C'est dommage...}{}{}{}{}
+{321}{En ce cas, oublions cela et changeons de sujet.}{}{5}{}{430}{}
+{322}{Tant pis, il ne me reste qu'à partir.}{}{5}{}{0}{}
+
+{330}{Très bien, il vaut mieux ne pas tenter ce que l'on sait ne pas pouvoir réussir. J'ai connu quelqu'un qui vivait en appliquant cette devise chaque jour de sa vie. Bon, il a une fin malheureuse : il a fini par ne plus se nourrir et est mort de déshydratation mais bon... Nous pourrions peut-être parler d'un sujet plus joyeux...}{Très bien, il vaut mieux ne pas tenter ce que l'on sait ne pas pouvoir réussir. J'ai connu quelqu'un qui vivait en appliquant cette devise chaque jour de sa vie. Bon, il a une fin malheureuse : il a fini par ne plus se nourrir et est mort de déshydratation mais bon... Nous pourrions peut-être parler d'un sujet plus joyeux...}{}{}{}{}
+{331}{Bien. Alors avez-vous entendu parler d'évènements sortant de l'ordinaire ?}{}{5}{lf2 0}{250}{lf2 1}
+{332}{En effet. Pourriez-vous me parler de cette marmite de potage aux champignons qui a disparue ?}{}{5}{ru 1039, lf1 0}{260}{lf1 1}
+{333}{J'aurais une question à propos de votre marmite de potage...}{}{5}{ru 1055, lf9 0}{2040}{lf9 1}
+{334}{Alors dites moi : comment ce fait-il que vous soyez cuisinière et parallèlement négociatrice ?}{}{5}{lf3 0}{270}{lf3 1}
+{335}{Une autre fois peut-être...}{}{5}{}{0}{}
+
+{340}{Je n'ai pas souvenir de vous avoir pardonné. Veuillez quittez ces lieux !}{Je n'ai pas souvenir de vous avoir pardonnée. Veuillez quittez ces lieux !}{}{}{}{}
+
+{350}{J'ai aussi entendu parler par un autre employé que le passager de la cabine numéro trois n'était pas sorti depuis le départ du train. Il reste cloitré dans sa cabine et n'ouvre à personne. Il a sûrement quelque chose à cacher. Je me souviens avoir habité une fois non loin de chez un paria. On a fini par découvrir que c'était un lycanthrope. Ils avaient déjà tué de nombreuses personnes. C'est vraiment un mal terrible et les seuls remèdes existants sont hors de prix.}{J'ai aussi entendu parler par un autre employé que le passager de la cabine numéro trois n'était pas sorti depuis le départ du train. Il reste cloitré dans sa cabine et n'ouvre à personne. Il a sûrement quelque chose à cacher. Je me souviens avoir habité une fois non loin de chez un paria. On a fini par découvrir que c'était un lycanthrope. Ils avaient déjà tué de nombreuses personnes. C'est vraiment un mal terrible et les seuls remèdes existants sont hors de prix.}{}{}{}{ru 1041}
+{351}{Vraiment ? Y'a-t-il autre chose ?}{}{5}{}{440}{}
+{352}{Merci bien. Puis-je vous demander autre chose ?}{}{5}{}{360}{}
+{353}{J'en sais suffisamment, au revoir et merci.}{}{5}{}{0}{}
+
+{360}{Pourquoi refuserais-je ? Je vous en prie.}{Pourquoi refuserais-je ? Je vous en prie.}{}{}{}{}
+{361}{En fait, il est temps de vous le dire... vous êtes prise au cercle 693 !}{}{5}{qu1025 3}{2320}{qu1025 4}
+{362}{Anaïs, je suis désolée mais je dois vous le dire : je n'ai pas pu vous faire embaucher au cercle 693.}{0}{5}{qu1025 6, lf11 0}{2340}{lf11 1}
+{363}{Anaïs, je suis désolé mais je dois vous le dire : je n'ai pas pu vous faire embaucher au cercle 693.}{1}{5}{qu1025 6, lf11 0}{2340}{lf11 1}
+{364}{J'ai entendu parler d'une disparition : votre marmite de potage aux champignons.}{}{5}{ru 1039, lf1 0}{260}{lf1 1}
+{365}{En fait, je ne crois pas vous avoir encore rendu votre clef n'est-ce pas ?}{}{5}{qu1024 4, in 5858, lf0 0}{2220}{in 5858}
+{366}{Je suis curieux de savoir comment vous cumuler les emplois de cuisinière et de négociatrice.}{}{5}{lf3 0}{270}{lf3 1}
+{367}{C'est à propos de la marmite qui a disparue...}{}{5}{ru 1055, lf9 0}{2040}{lf9 1}
+{368}{En fait, il est temps que je parte.}{}{5}{}{0}{}
+
+{}{}{}{}{}{}{}
+
+{370}{C'est vraiment étrange n'est-ce pas ? C'est même terrifiant ! J'y suis retourné et la marmite n'était plus là, il n 'y a plus rien... Ce serveur est des plus sérieux, il ne m'aurait jamais joué un tour donc je ne sais vraiment pas où a pu passer cette marmite. J'ai regardé partout, même au plafond mais il n'y avait rien. Cette marmite et son précieux contenu ont bel et bien disparus... Le client a été compréhensif et a commandé un autre plat mais on ne peut pas laisser passer ce genre de chose dans notre train...}{C'est vraiment étrange n'est-ce pas ? C'est même terrifiant ! J'y suis retourné et la marmite n'était plus là, il n 'y a plus rien... Ce serveur est des plus sérieux, il ne m'aurait jamais joué un tour donc je ne sais vraiment pas où a pu passer cette marmite. J'ai regardé partout, même au plafond mais il n'y avait rien. Cette marmite et son précieux contenu ont bel et bien disparus... Le client a été compréhensif et a commandé un autre plat mais on ne peut pas laisser passer ce genre de chose dans notre train...}{}{}{}{ru 1045}
+{371}{Je pourrais tenter de retrouver cette marmite.}{}{5}{}{450}{re +5, qu1024 2}
+{372}{Je vois, c'est fort étrange en effet. Je peux vous poser une autre question ?}{}{5}{}{460}{}
+{373}{Quel étrange phénomène. Je vais partir à présent.}{}{5}{}{0}{fl 378}
+
+{378}{N'hésitez pas à revenir de temps en temps, on ne s'ennuie jamais dans les cuisines.}{N'hésitez pas à revenir de temps en temps, on ne s'ennuie jamais dans les cuisines.}{}{}{}{}
+
+{380}{Non non, aux Enfers, il est assez courant que des gens changent de carrière et énormément d'employés montent en grade puisqu'ils ont l'éternité pour s'améliorer. Un jour, je compte bien cuisiner dans les quartiers suprêmes réservés à l'élite du cercle 666. Enfin, ce n'est qu'un rêve... [Elle redresse la tête] Vous aviez peut-être autre chose dont vous souhaitiez parler ?}{Non non, aux Enfers, il est assez courant que des gens changent de carrière et énormément d'employés montent en grade puisqu'ils ont l'éternité pour s'améliorer. Un jour, je compte bien cuisiner dans les quartiers suprêmes réservés à l'élite du cercle 666. Enfin, ce n'est qu'un rêve... [Elle redresse la tête] Vous aviez peut-être autre chose dont vous souhaitiez parler ?}{}{}{}{}
+{381}{En fait, vous avez bien fait d'être cuisinière... vous êtes prise au cercle 693 !}{}{5}{qu1025 3}{2320}{qu1025 4}
+{382}{Anaïs, je suis désolée mais je dois vous le dire : je n'ai pas pu vous faire embaucher au cercle 693.}{0}{5}{qu1025 6, lf11 0}{2340}{lf11 1}
+{383}{Anaïs, je suis désolé mais je dois vous le dire : je n'ai pas pu vous faire embaucher au cercle 693.}{1}{5}{qu1025 6, lf11 0}{2340}{lf11 1}
+{381}{Certes, peut être avez vous entendu des rumeurs plutôt... étranges ?}{}{5}{lf2 0}{250}{lf2 1}
+{382}{Eh bien, il est peut-être temps que je vous rendre votre clef...}{}{5}{qu1024 4, in 5858, lf0 0}{2220}{in 5858}
+{383}{Oui, on m'a dit qu'une marmite de potage aux champignons était introuvable ?}{}{5}{ru 1039, lf1 0}{260}{lf1 1}
+{384}{Oui, c'est à propos de votre marmite de potage...}{}{5}{ru 1055, lf9 0}{2040}{lf9 1}
+{385}{Non, pas particulièrement, je vais partir.}{}{5}{}{0}{fl 378}
+
+{}{}{}{}{}{}{}
+
+{390}{Vous n'avez pas choisi la facilité. Mais je vous écoute, qu'est-ce qui me prouve que je sois en train de rêver ?}{Vous n'avez pas choisi la facilité. Mais je vous écoute, qu'est-ce qui me prouve que je sois en train de rêver ?}{}{}{}{}
+{391}{Ces lieux sont dépourvus de logique, c'est parce que le subconscient ne recherche pas la logique.}{}{7}{}{470}{}
+{392}{Vous avez créé ce lieu en rêve pour vous rassurer d'une crainte inconsciente de la mort.}{}{8}{ps 5}{480}{}
+{393}{Comment un train pourrait-il changer de dimension ? Rien de tout cela n'est réel.}{}{6}{}{490}{}
+{394}{On ne peut jamais le prouver, c'est bien le paradoxe des rêves éveillés.}{}{10}{}{500}{}
+{395}{Je ne trouve rien de convaincant.}{}{5}{}{520}{}
+
+{400}{Vraiment ? Quel défaut lui avez-vous trouvé ?}{Vraiment ? Quel défaut lui avez-vous trouvé ?}{}{}{}{}
+{401}{Les cabines sont infestées d'araignées.}{}{6}{}{510}{}
+{402}{De nos jours, les trains ne marchent plus à la vapeur mais à l'électricité.}{}{10}{}{530}{}
+{403}{Les passagers morts n'ont pas besoin de lits ou de restaurant, il devrait être plus compact et plus rapide.}{}{8}{}{540}{}
+{404}{Je suis sûr que je peux énerver le personnel et qu'il ne se montrera plus aussi attentionné.}{}{5}{ps 5}{550}{}
+{405}{Je ne trouve rien de convaincant.}{}{5}{}{520}{}
+
+{410}{Quelle terrible histoire, la science aurait donc évoluée à ce point pour que des machines soient capables de diriger ?}{Quelle terrible histoire, la science aurait donc évoluée à ce point pour que des machines soient capables de diriger ?}{}{}{}{}
+{411}{C'est évident, la création est tel le disciple : elle dépasse le maître et le créateur.}{}{8}{}{560}{}
+{412}{De nombreux clans nains ont disparu, il s'agit sans nul doute de l'oeuvre de leur machines.}{}{10}{ps 5}{570}{}
+{413}{C'est indubitable, avec l'arrivée de l'électricité, on peut reproduire des machines qui pensent.}{}{11}{}{580}{}
+{414}{Les hommes ont perverti l'oeuvre des nains et ont transformé les machines en êtres cupides.}{}{6}{}{590}{}
+{415}{Je ne trouve rien de convaincant.}{}{5}{}{520}{}
+
+{420}{Ca, ce n'est pas vraiment difficile à croire. Je vous ai demandé quelque chose de vraiment improbable...}{Ca, ce n'est pas vraiment difficile à croire. Je vous ai demandé quelque chose de vraiment improbable...}{}{}{}{}
+{421}{Vous êtes en train de rêver : les Enfers n'existent pas.}{}{6}{}{390}{}
+{422}{Ce train n'est pas aussi "haute gamme" qu'il en a l'air.}{}{6}{}{400}{}
+{423}{Les automates contrôlent aujourd'hui les Enfers.}{}{6}{}{410}{}
+{424}{Je suis désolé mais je ne trouve rien de valable. Je préfère renoncer.}{}{5}{}{330}{}
+
+{430}{Bien entendu, je reste votre amie. De quoi souhaitez vous parler ?}{Bien entendu, je reste votre amie. De quoi souhaitez vous parler ?}{}{}{}{}
+{431}{Peut-être avez vous entendu parler d'évènements sortant de l'ordinaire ?}{}{5}{lf2 0}{250}{lf2 1}
+{432}{En fait, je crois avoir encore en ma possession votre clef.}{}{5}{qu1024 4, in 5858, lf0 0}{2220}{in 5858}
+{433}{De cette marmite de potage aux champignons qui a disparue, est-ce bien vrai ?}{}{5}{ru 1039, lf1 0}{260}{lf1 1}
+{434}{Cela concerne la marmite disparue...}{}{5}{ru 1055, lf9 0}{2040}{lf9 1}
+{435}{Je me demande comment vous faites pour être cuisinière et parallèlement négociatrice ?}{}{5}{lf3 0}{270}{lf3 1}
+{436}{Je pense qu'il est temps de me retirer mais je reviendrais}{}{5}{}{0}{fl 438}
+
+{}{}{}{}{}{}{}
+
+{438}{Alors je vous attendrais...}{Alors je vous attendrais...}{}{}{}{}
+
+{440}{Et bien il est possible qu'un des passagers soit cleptomane, il y a de plus en de choses qui disparaissent dans le train. Il manquerait une paire de chaussettes dans la cabine numéro six ainsi que des boucles d'oreilles dans la numéro dix. C'est vraiment agaçant de ne pas retrouver ses affaires. Et puis, quel est l'intérêt de voler quelque chose quand tout est gratuit ?}{Et bien il est possible qu'un des passagers soit cleptomane, il y a de plus en de choses qui disparaissent dans le train. Il manquerait une paire de chaussettes dans la cabine numéro six ainsi que des boucles d'oreilles dans la numéro dix. C'est vraiment agaçant de ne pas retrouver ses affaires. Et puis, quel est l'intérêt de voler quelque chose quand tout est gratuit ?}{}{}{}{ru 1042}
+{441}{Vous parlez de disparition, je crois savoir qu'une marmite a disparue de chez vous ?}{}{5}{ru 1039, lf1 0}{260}{lf1 1}
+{442}{A propos de disparition, j'ai une question concernant votre marmite de potage...}{}{5}{ru 1055, lf9 0}{2040}{lf9 1}
+{443}{Merci pour tout...}{}{5}{}{445}{}
+
+{445}{C'est tout naturel, j'aime beaucoup les discussions du quotidien, de même que celles qui sortent de l'ordinaire. Vous aviez autre chose à me demander ?}{C'est tout naturel, j'aime beaucoup les discussions du quotidien, de même que celles qui sortent de l'ordinaire. Vous aviez autre chose à me demander ?}{}{}{}{}
+{446}{Oui, je suis curieux de savoir comment vous faites pour cumuler les emplois de cuisinière et de négociatrice.}{}{5}{lf3 0}{270}{lf3 1}
+{447}{Non, je pense que j'en sais assez, merci encore.}{}{5}{}{0}{}
+
+{450}{Vous ferriez ça ? Comme c'est gentil... Si vous pouviez retrouver le plat, ce serait déjà bien.}{Vous ferriez ça ? Comme c'est gentil... Si vous pouviez retrouver le plat, ce serait déjà bien.}{}{}{}{}
+{451}{Aucun problème. Puis-je vous poser une autre question ?}{}{5}{}{600}{}
+{452}{Je pars tout de suite.}{}{5}{}{0}{}
+{453}{Je ferais de mon mieux, au revoir.}{}{5}{}{0}{re +5, fl 458}
+
+{458}{J'attends de vos nouvelles avec impatience.}{J'attends de vos nouvelles avec impatience.}{}{}{}{}
+
+{460}{Assurément...}{Assurément...}{}{}{}{}
+{461}{En fait, il est temps que je vous dise que... vous êtes prise au cercle 693 !}{}{5}{qu1025 3}{2320}{qu1025 4}
+{462}{Anaïs, je suis désolée mais je dois vous le dire : je n'ai pas pu vous faire embaucher au cercle 693.}{0}{5}{qu1025 6, lf11 0}{2340}{lf11 1}
+{463}{Anaïs, je suis désolé mais je dois vous le dire : je n'ai pas pu vous faire embaucher au cercle 693.}{1}{5}{qu1025 6, lf11 0}{2340}{lf11 1}
+{464}{Bien. Alors avez-vous entendu parler d'évènements sortant de l'ordinaire ?}{}{5}{lf2 0}{250}{lf2 1}
+{465}{Alors dites moi : comment ce fait-il que vous soyez cuisinière et parallèlement négociatrice ?}{}{5}{lf3 0}{270}{lf3 1}
+{466}{Une autre fois peut-être...}{}{5}{}{0}{}
+
+{}{}{}{}{}{}{}
+
+{470}{Mais pourquoi un monde illogique ne pourrait-il pas exister ? Cet argument est bien pauvre : je crains que vous n'ayez échoué...}{Mais pourquoi un monde illogique ne pourrait-il pas exister ? Cet argument est bien pauvre : je crains que vous n'ayez échoué...}{}{}{}{}
+{471}{Votre stupidité n'a d'égal que votre incurie. Vous ne comprenez rien à rien !}{}{5}{}{0}{re -10, lf8 1, fl 478}
+{472}{J'aurais au moins essayé. Pouvons-nous quand même discuter encore un peu ?}{}{5}{}{430}{}
+{473}{Soit, je préfère partir.}{}{5}{}{0}{fl 476}
+
+{476}{N'hésitez pas à revenir, un échec n'est pas un grand mal aux Enfers.}{N'hésitez pas à revenir, un échec n'est pas un grand mal aux Enfers.}{}{}{}{}
+
+{478}{Et vous vous manquez cruellement de talent dans l'art de la diplomatie. Partez et que je ne vous revoie jamais !}{Et vous vous manquez cruellement de talent dans l'art de la diplomatie. Partez et que je ne vous revoie jamais !}{}{}{}{}
+
+{480}{Vraiment ? Alors je serais toujours en Arcanum ? Pourtant tout cela me semble si... réel.}{Vraiment ? Alors je serais toujours en Arcanum ? Pourtant tout cela me semble si... réel.}{}{}{}{}
+{481}{Et pourtant, si on y prête attention, certains détails ne collent pas.}{}{5}{}{610}{}
+{482}{Vous rappelez-vous comment vous êtes arrivé aux Enfers ?}{}{7}{ps 6}{620}{}
+{483}{Des cercles dans différentes dimensions, des êtres omniscients... cela vous semble être réel ?}{}{9}{}{630}{}
+{484}{Si les Enfers étaient réels, ils seraient surpeuplés.}{}{5}{}{640}{}
+{485}{C'est pourtant la vérité : tout cela... n'est qu'un songe.}{}{5}{}{650}{}
+
+{490}{Je suis sûr que le conducteur serait ravi de vous expliquer ce curieux phénomène mais en attendant, cela ne me convainc pas... Si vous n'avez pas pu trouver meilleur argument, vous n'êtes pas mon homme, j'en suis désolée.}{Je suis sûr que le conducteur serait ravi de vous expliquer ce curieux phénomène mais en attendant, cela ne me convainc pas... Si vous n'avez pas pu trouver meilleur argument, vous n'êtes pas la personne qu'il me faut, j'en suis désolée.}{}{}{}{}
+{491}{Vous vous permettez de me juger mais votre esprit est juste trop étroit pour accepter mes arguments !}{}{5}{}{0}{re -10, lf8 1, fl 478}
+{492}{J'aurais au moins essayé. Pouvons-nous quand même discuter encore un peu ?}{}{5}{}{430}{}
+{493}{Soit, je préfère partir.}{}{5}{}{0}{fl 476}
+
+{500}{En effet, c'est un sujet des plus délicats et vous réussiriez peut-être ainsi à semer le doute dans des esprits mais il me faut un petit quelque chose de plus. Un détail qui prouverait que tout cela n'est qu'un rêve.}{En effet, c'est un sujet des plus délicats et vous réussiriez peut-être ainsi à semer le doute dans des esprits mais il me faut un petit quelque chose de plus. Un détail qui prouverait que tout cela n'est qu'un rêve.}{}{}{}{}
+{501}{La nature même de ces lieux et ensuite leur esthétique onirique, c'est une preuve évidente.}{}{8}{}{660}{}
+{502}{De la simple graine de doute que je viens de jeter vous allez vous même réfléchir et trouver ce détail.}{}{10}{ps 6}{670}{}
+{503}{Mon nom : il vous est familier car il vient de votre subconscient...}{}{11}{}{680}{}
+{504}{L'impossible qui est devenu possible aux Enfers : la magie divine a tout rendue possible comme dans un rêve.}{}{7}{}{690}{}
+
+{510}{C'est ridicule, de personnel de nettoyage est des plus compétent : aucun esprit familier ne peut se trouver dans les cabines... Vous savez, lorsque vous affirmez quelque chose, assurez vous que ce soit quelque chose de crédible... Je ne peux pas vous engager.}{C'est ridicule, de personnel de nettoyage est des plus compétent : aucun esprit familier ne peut se trouver dans les cabines... Vous savez, lorsque vous affirmez quelque chose, assurez vous que ce soit quelque chose de crédible... Je ne peux pas vous engager.}{}{}{}{}
+{511}{Votre suffisance m'énerve par dessus tout. C'est vous qui n'êtes pas crédible en tant que juge !}{}{5}{}{0}{re -10, lf8 1, fl 478}
+{512}{J'aurais au moins essayé. Pouvons-nous quand même discuter encore un peu ?}{}{5}{}{430}{}
+{513}{Soit, je préfère partir.}{}{5}{}{0}{fl 476}
+
+{520}{Vraiment ? J'en attendais un peu plus de vous... Tant pis, il vaut peut-être mieux rater son départ et être disqualifié que d'arriver dernier.}{Vraiment ? J'en attendais un peu plus de vous... Tant pis, il vaut peut-être mieux rater son départ et être disqualifié que d'arriver dernier.}{}{}{}{}
+{521}{Et vous pensez que ces comparaisons minables vous donne l'air intelligente ?}{}{5}{}{0}{re -10, lf8 1, fl 528}
+{522}{C'est ce que je pense aussi. Pouvons nous quand même continuer notre conversation ?}{}{5}{}{430}{}
+{523}{C'est cela, au revoir.}{}{5}{}{0}{re -5}
+
+{528}{Ce n'est pas moi qui suis lamentable au point de ne plus savoir quoi dire ! Vous avez agit en lâche et vous continuez : partez !}{Ce n'est pas moi qui suis lamentable au point de ne plus savoir quoi dire ! Vous avez agit en lâche et vous continuez : partez !}{}{}{}{}
+
+{530}{Vraiment, les hommes ont à ce point progressé ? Mais en quoi cela est-il un avantage ?}{Vraiment, les hommes ont à ce point progressé ? Mais en quoi cela est-il un avantage ?}{}{}{}{}
+{531}{Ils sont bien plus rapides que les anciens modèles à vapeur.}{}{7}{}{700}{}
+{532}{Ils ne rejettent plus ces fumées noires désagréables.}{}{8}{ps 4}{710}{}
+{535}{L'usage de l'électricité rend le voyage beaucoup plus silencieux.}{}{8}{ps 6}{720}{}
+{536}{Les dernières technologies sont toujours synonymes de luxe pour les gens.}{}{6}{}{730}{}
+
+{540}{Mais justement, si on supprimait lits, restaurants et je ne sais quoi d'autre, ce train ne serait plus "haute gamme", ne vous contredisez-vous pas ? Je suis désolée mais cet argumentaire est bien facile à démonter, c'est n'est pas de vous dont j'ai besoin.}{Mais justement, si on supprimait lits, restaurants et je ne sais quoi d'autre, ce train ne serait plus "haute gamme", ne vous contredisez-vous pas ? Je suis désolée mais cet argumentaire est bien facile à démonter, c'est n'est pas de vous dont j'ai besoin.}{}{}{}{}
+{541}{Parce que vous trouvez le votre meilleur ? Vous n'êtes qu'une obscure diplomate qui se croit meilleure que tout le monde.}{}{5}{}{0}{re -15, lf8 1, fl 548}
+{542}{J'aurais au moins essayé. Pouvons-nous quand même discuter encore un peu ?}{}{5}{}{430}{}
+{543}{Soit, je préfère partir.}{}{5}{}{0}{fl 476}
+
+{548}{Suffit ! Vous n'êtes qu'une misérable larve dans ce domaine et vous pensez pouvoir me critiquer ? @pcname@, je vous déteste : quittez ma cuisine sur le champ !}{Suffit ! Vous n'êtes qu'une misérable larve dans ce domaine et vous pensez pouvoir me critiquer ? @pcname@, je vous déteste : quittez ma cuisine sur le champ !}{}{}{}{}
+
+{550}{Soit, alors essayez de m'énervez et vous m'aurez convaincue. Je vous pardonnerais tout ensuite.}{Soit, alors essayez de m'énervez et vous m'aurez convaincue. Je vous pardonnerais tout ensuite.}{}{}{}{}
+{551}{Vous passez votre temps à jacter et vous en êtes fière, c'est lamentable !}{}{5}{}{740}{}
+{552}{Vous êtes imbue de vous même et vous pensez supérieure à moi juste parce que vous avez rencontré monsieur Saule.}{}{8}{ps 6}{750}{}
+{553}{Vous et vos petites histoires de familles êtes pitoyables. Je parie que vous êtes aussi alcoolique que Tatie Noémie.}{}{7}{}{760}{}
+{554}{Vous allez tout faire pour ne pas vous énerver n'est-ce pas ? Le match est-il bien loyal ?}{}{5}{}{770}{}
+
+{560}{Non, vous ne pouvez pas comparer machines et humains, c'est une déformation des plus aberrantes et trop peu de gens sont capables de faire abstraction de leur fierté d'humanoïdes pour pouvoir accepter cet argument. Finalement, je pense que vous n'êtes pas la personne dont j'ai besoin, désolée.}{Non, vous ne pouvez pas comparer machines et humains, c'est une déformation des plus aberrantes et trop peu de gens sont capables de faire abstraction de leur fierté d'humanoïdes pour pouvoir accepter cet argument. Finalement, je pense que vous n'êtes pas la personne dont j'ai besoin, désolée.}{}{}{}{}
+{561}{Vous vous permettez de me juger mais votre esprit est juste trop étroit pour accepter mes arguments !}{}{5}{}{0}{re -10, lf8 1, fl 478}
+{562}{J'aurais au moins essayé. Pouvons-nous quand même discuter encore un peu ?}{}{5}{}{430}{}
+{563}{Soit, je préfère partir.}{}{5}{}{0}{fl 476}
+
+{570}{Mon Dieu, et la même chose serait en train de se passer aux Enfers ? Mais que font nos dirigeants ?}{Mon Dieu, et la même chose serait en train de se passer aux Enfers ? Mais que font nos dirigeants ?}{}{}{}{}
+{571}{Ils ont décidé de se ranger du côté des automates...}{}{7}{}{780}{}
+{572}{Certains sont complices de ce système, d'autre n'en ont pas connaissance.}{}{8}{}{790}{}
+{573}{Ils n'ont eu d'autre choix que d'accepter cette situation.}{}{8}{ps 6}{800}{}
+{574}{Ils n'en sont même pas conscients : les machines agissent dans l'ombre.}{}{6}{}{810}{}
+
+{580}{Je peine à y croire mais je n'y entends goutte en électricité donc je ne peux pas entièrement refuser cette théorie... Mais que font nos dirigeants ?}{Je peine à y croire mais je n'y entends goutte en électricité donc je ne peux pas entièrement refuser cette théorie... Mais que font nos dirigeants ?}{}{}{}{}
+{581}{Ils ont décidé de se ranger du côté des automates...}{}{7}{}{780}{}
+{582}{Certains sont complices de ce système, d'autre n'en ont pas connaissance.}{}{8}{}{790}{}
+{583}{Ils n'ont eu d'autre choix que d'accepter cette situation.}{}{8}{ps 6}{800}{}
+{584}{Ils n'en sont même pas conscients : les machines agissent dans l'ombre.}{}{6}{}{810}{}
+
+{590}{Non, des machines ne peuvent pas éprouver de sentiments, pas plus qu'elles ne peuvent réfléchir. Et même si elles le pouvaient, trop peu de gens seraient prêts à le croire. Vos arguments dépassent les limites des pensées acceptables pour les hommes. Je suis désolé mais vous ne correspondait pas à la personne que je recherche...}{Non, des machines ne peuvent pas éprouver de sentiments, pas plus qu'elles ne peuvent réfléchir. Et même si elles le pouvaient, trop peu de gens seraient prêts à le croire. Vos arguments dépassent les limites des pensées acceptables pour les hommes. Je suis désolé mais vous ne correspondait pas à la personne que je recherche...}{}{}{}{}
+{591}{Vous me rejetez parce que j'ai trop de talent ? Espèce de veille folle ! Je ne vois même pas comment vous avez pu devenir diplomate !}{}{5}{}{0}{re -10, lf8 1, fl 598}
+{592}{J'aurais au moins essayé. Pouvons-nous quand même discuter encore un peu ?}{}{5}{}{430}{}
+{593}{Soit, je préfère partir.}{}{5}{}{0}{fl 476}
+
+{598}{Et vous je ne vois pas comment vous pourriez le devenir avec une patience aussi limitée. Partez, je ne veux plus vous voir dans mes cuisines !}{Et vous je ne vois pas comment vous pourriez le devenir avec une patience aussi limitée. Partez, je ne veux plus vous voir dans mes cuisines !}{}{}{}{}
+
+{600}{Evidemment, et je serais ravie d'y répondre.}{Evidemment, et je serais ravie d'y répondre.}{}{}{}{}
+{601}{Bien. Alors avez-vous entendu parler d'évènements sortant de l'ordinaire ?}{}{5}{lf2 0}{250}{lf2 1}
+{602}{Alors dites moi : comment ce fait-il que vous soyez cuisinière et parallèlement négociatrice ?}{}{5}{lf3 0}{270}{lf3 1}
+{603}{En fait, peut-être une autre fois...}{}{5}{}{0}{}
+
+{610}{Non, stop ! Ca ne va pas : vous laissez l'interlocuteur relier les points à votre place. Si vous me parlez de ces détails, il faut les citer immédiatement... Tant pis, vous n'êtes pas la personne dont j'ai besoin.}{Non, stop ! Ca ne va pas : vous laissez l'interlocuteur relier les points à votre place. Si vous me parlez de ces détails, il faut les citer immédiatement... Tant pis, vous n'êtes pas la personne dont j'ai besoin.}{}{}{}{}
+{611}{Vous me jugez ainsi sur une parole ? Quelle prétention de votre part... Vous n'êtes pas digne de me juger !}{}{5}{}{0}{re -10, lf8 1, fl 618}
+{612}{J'aurais au moins essayé. Pouvons-nous quand même discuter encore un peu ?}{}{5}{}{430}{}
+{613}{Soit, je préfère partir.}{}{5}{}{0}{fl 476}
+
+{618}{Digne de vous juger ou non j'ai conclus que vous ne conveniez pas et qu'importe que je paraisse prétentieuse ou non. Dans un débat, l'énervement n'a pas sa place. Quittez ces cuisines car votre manque de talent m'est devenu insupportable !}{Digne de vous juger ou non j'ai conclus que vous ne conveniez pas et qu'importe que je paraisse prétentieuse ou non. Dans un débat, l'énervement n'a pas sa place. Quittez ces cuisines car votre manque de talent m'est devenu insupportable !}{}{}{}{}
+
+{620}{Maintenant que vous le dites... non, en effet. Je me souviens m'être réveillé mais il y a un énorme blanc avant... Comment suis-je arrivée ici ? [Elle semble réellement y réfléchir puis se reprend] Houlà, mais vous avez réussi : vous avez semé le doute en moi et vous m'avez poussée à considérer cette hypothèse que je savais pourtant fausse. Si cela n'avait pas été un exercice, je serais peut-être tombé dans un délire solipsiste. Vous êtes engagé...}{Maintenant que vous le dites... non, en effet. Je me souviens m'être réveillé mais il y a un énorme blanc avant... Comment suis-je arrivée ici ? [Elle semble réellement y réfléchir puis se reprend] Houlà, mais vous avez réussi : vous avez semé le doute en moi et vous m'avez poussée à considérer cette hypothèse que je savais pourtant fausse. Si cela n'avait pas été un exercice, je serais peut-être tombé dans un délire solipsiste. Vous êtes engagée...}{}{}{}{}
+{621}{Merci... Et engagé pour quoi faire ?}{1}{5}{}{820}{}
+{622}{Merci... Et engagée pour quoi faire ?}{0}{5}{}{820}{}
+
+{630}{Oui, quiconque aura voyagé un minimum dans Arcanum sait que la magie est quasi omnipotente. Superposer les dimensions n'est pas quelque chose d'inacceptable pour la pensée. Je suis désolée mais votre argument, bien qu'habile, est insuffisant.}{Oui, quiconque aura voyagé un minimum dans Arcanum sait que la magie est quasi omnipotente. Superposer les dimensions n'est pas quelque chose d'inacceptable pour la pensée. Je suis désolée mais votre argument, bien qu'habile, est insuffisant.}{}{}{}{}
+{631}{C'est vous qui êtes trop exigeante. En fait, convaincue de votre supériorité, vous n'avez jamais voulu m'engager.}{}{5}{}{0}{re -10, lf8 1, fl 638}
+{632}{J'aurais au moins essayé. Pouvons-nous quand même discuter encore un peu ?}{}{5}{}{430}{}
+{633}{Soit, je préfère partir.}{}{5}{}{0}{fl 476}
+
+{638}{J'y réfléchissais mais étant donnée votre attitude, cela est en effet devenu hors de question ! Lorsque que vous argumentez, qu'importe la réponse de l'adversaire : vous ne devez jamais vous énerver. Partez à présent, votre conduite est plus qu'irritante !}{J'y réfléchissais mais étant donnée votre attitude, cela est en effet devenu hors de question ! Lorsque que vous argumentez, qu'importe la réponse de l'adversaire : vous ne devez jamais vous énerver. Partez à présent, votre conduite est plus qu'irritante !}{}{}{}{}
+
+{640}{Pardon ? Là vous dites n'importe quoi ! Connaissez-vous le nombre de cercles ainsi que leur taille respective ? Ce sont des dimensions artificielles que l'on peut modifier et agrandir sur demande. Il n'y a donc aucune raison qu'ils soient surpeuplés. J'en suis désolée mais une telle erreur dans un débat est inacceptable : je ne peux pas vous engager.}{Pardon ? Là vous dites n'importe quoi ! Connaissez-vous le nombre de cercles ainsi que leur taille respective ? Ce sont des dimensions artificielles que l'on peut modifier et agrandir sur demande. Il n'y a donc aucune raison qu'ils soient surpeuplés. J'en suis désolée mais une telle erreur dans un débat est inacceptable : je ne peux pas vous engager.}{}{}{}{}
+{641}{Vous me jugez ainsi sur un seul mot ? Quelle prétention de votre part... Vous n'êtes pas digne de me juger !}{}{5}{}{0}{re -10, lf8 1, fl 618}
+{642}{J'aurais au moins essayé. Pouvons-nous quand même discuter encore un peu ?}{}{5}{}{430}{}
+{643}{Soit, je préfère partir.}{}{5}{}{0}{fl 476}
+
+{650}{Vous vous "asséchez" : il faut bien souvent plus d'un argument, aussi brillant soit-il, pour convaincre l'autre. C'est d'autant plus vrai si vous ne connaissez pas ou peu la personne en face de vous. C'est dommage, vous étiez bien parti mais je ne peux pas vous engager.}{Vous vous "asséchez" : il faut bien souvent plus d'un argument, aussi brillant soit-il, pour convaincre l'autre. C'est d'autant plus vrai si vous ne connaissez pas ou peu la personne en face de vous. C'est dommage, vous étiez bien partie mais je ne peux pas vous engager.}{}{}{}{}
+{651}{Vous dites cela mais vous-même n'auriez pas su que répondre. Vous n'êtes qu'une petite fille gâtée et prétentieuse !}{}{5}{}{0}{re -15, lf8 1, fl 658}
+{652}{J'aurais au moins essayé. Pouvons-nous quand même discuter encore un peu ?}{}{5}{}{430}{}
+{653}{Soit, je préfère partir.}{}{5}{}{0}{fl 476}
+
+{658}{Il y a toujours un moyen de continuer un débat, TOUJOURS ! A présent que je vous ai appris cela, vous êtes prié de partir car la "petite fille gâtée et prétentieuse" ne vous supporte plus !}{Il y a toujours un moyen de continuer un débat, TOUJOURS ! A présent que je vous ai appris cela, vous êtes priée de partir car la "petite fille gâtée et prétentieuse" ne vous supporte plus !}{}{}{}{}
+
+{660}{Une preuve de quoi ? Ils ont juste été créés pour s'approcher de la perfection et à défaut de l'idéal... Non, cet argument viens se heurter au fait que ce soit Vélorien qui ait construit les Enfers. Vous ne pouvez pas vous permettre une attaque à un des piliers de la pensée dans un débat de si petite importance... Je ne peux vous engager.}{Une preuve de quoi ? Ils ont juste été créés pour s'approcher de la perfection et à défaut de l'idéal... Non, cet argument viens se heurter au fait que ce soit Vélorien qui ait construit les Enfers. Vous ne pouvez pas vous permettre une attaque à un des piliers de la pensée dans un débat de si petite importance... Je ne peux vous engager.}{}{}{}{}
+{661}{Si vous me rejetez, c'est juste parce que votre esprit est trop étroit pour accepter d'autres arguments que les vôtres !}{}{5}{}{0}{re -10, lf8 1, fl 668}
+{662}{J'aurais au moins essayé. Pouvons-nous quand même discuter encore un peu ?}{}{5}{}{430}{}
+{663}{Soit, je préfère partir.}{}{5}{}{0}{fl 476}
+
+{668}{Vous n'êtes qu'un minable : vous vous énervez parce que vous avez échoué ! Quittez ces cuisines : mon esprit étroit refuse de vous y voir !}{Vous n'êtes qu'un minable : vous vous énervez parce que vous avez échoué ! Quittez ces cuisines : mon esprit étroit refuse de vous y voir !}{}{}{}{}
+
+{670}{C'est vrai pour la plupart des gens, ce genre de propos va les pousser à réfléchir à des preuves que tout est réel mais une fois qu'on ne peut plus prouver que ce n'est pas un rêve, tout est fini... Cependant, et j'en suis désolée, beaucoup de gens sont capables de réfléchir au delà : sur la durée du rêve par exemple, ou encore sur le fait que la mort ne provoque pas le réveil... Votre argumentaire est trop imparfait pour que je vous engage.}{C'est vrai pour la plupart des gens, ce genre de propos va les pousser à réfléchir à des preuves que tout est réel mais une fois qu'on ne peut plus prouver que ce n'est pas un rêve, tout est fini... Cependant, et j'en suis désolée, beaucoup de gens sont capables de réfléchir au delà : sur la durée du rêve par exemple, ou encore sur le fait que la mort ne provoque pas le réveil... Votre argumentaire est trop imparfait pour que je vous engage.}{}{}{}{}
+{671}{C'est vous qui êtes trop exigeante. En fait, convaincue de votre supériorité, vous n'avez jamais voulu m'engager.}{}{5}{}{0}{re -10, lf8 1, fl 638}
+{672}{J'aurais au moins essayé. Pouvons-nous quand même discuter encore un peu ?}{}{5}{}{430}{}
+{673}{Soit, je préfère partir.}{}{5}{}{0}{fl 476}
+
+{680}{En effet... [Elle semble perdue] Ce n'est pas qu'une simple question de ressemblance, votre nom, j'ai l'impression de le connaître. [Manifestement, cet argument l'a troublé mais elle se ressaisit] Houlà, mais vous avez réussi : vous avez semé le doute en moi et vous m'avez poussée à considérer cette hypothèse que je savais pourtant fausse. Si cela n'avait pas été un exercice, je serais peut-être tombé dans un délire solipsiste. Vous êtes engagé...}{En effet... [Elle semble perdue] Ce n'est pas qu'une simple question de ressemblance, votre nom, j'ai l'impression de le connaître. [Manifestement, cet argument l'a troublé mais elle se ressaisit] Houlà, mais vous avez réussi : vous avez semé le doute en moi et vous m'avez poussée à considérer cette hypothèse que je savais pourtant fausse. Si cela n'avait pas été un exercice, je serais peut-être tombé dans un délire solipsiste. Vous êtes engagée...}{}{}{}{}
+{681}{Merci... Et engagé pour quoi faire ?}{1}{5}{}{820}{}
+{682}{Merci... Et engagée pour quoi faire ?}{0}{5}{}{820}{}
+
+{690}{Mais c'est justement parce qu'il s'agit de magie, c'est dans la nature même de la magie de défier les lois physiques. [Elle marque une pause] J'ai bien réfléchi et je ne peux vous engager, votre argumentaire est un peu... limité.}{Mais c'est justement parce qu'il s'agit de magie, c'est dans la nature même de la magie de défier les lois physiques. [Elle marque une pause] J'ai bien réfléchi et je ne peux vous engager, votre argumentaire est un peu... limité.}{}{}{}{}
+{691}{Êtes-vous sûre que la limite n'est pas à chercher au niveau de votre intelligence ? Vous êtes définitivement abrutie !}{}{5}{}{0}{re -15, lf8 1, fl 698}
+{692}{J'aurais au moins essayé. Pouvons-nous quand même discuter encore un peu ?}{}{5}{}{430}{}
+{693}{Soit, je préfère partir.}{}{5}{}{0}{fl 476}
+
+{698}{[Elle semble hors d'elle] Vous... vous osez alors que vous venez de prouvez que vous aviez l'intelligence d'un ogre ! Sortez, je ne supporte pas l'imbécilité lorsqu'elle est aussi flagrante !}{[Elle semble hors d'elle] Vous... vous osez alors que vous venez de prouvez que vous aviez l'intelligence d'un ogre ! Sortez, je ne supporte pas l'imbécilité lorsqu'elle est aussi flagrante !}{}{}{}{}
+
+{700}{Leur rapidité fait que l'on a moins de temps pour apprécier le voyage et cela n'a rien à voir avec le luxe... Je doute que vous arriviez à convaincre qui que ce soit avec cet argument... Après réflexion, je pense ne pas pouvoir vous engager pour cette tâche...}{Leur rapidité fait que l'on a moins de temps pour apprécier le voyage et cela n'a rien à voir avec le luxe... Je doute que vous arriviez à convaincre qui que ce soit avec cet argument... Après réflexion, je pense ne pas pouvoir vous engager pour cette tâche...}{}{}{}{}
+{701}{Vous osez me juger ainsi ? Vous n'êtes qu'une vieille femme capricieuse et imbue du peu de savoir qu'elle possède !}{}{5}{}{0}{re -15, lf8 1, fl 708}
+{702}{J'aurais au moins essayé. Pouvons-nous quand même discuter encore un peu ?}{}{5}{}{430}{}
+{703}{Soit, je préfère partir.}{}{5}{}{0}{fl 476}
+
+{708}{Vraiment ? Et vous vous êtes un imbécile qui se croyait à la hauteur mais que j'ai piétiné tellement il était minable ! Partez, je ne veux plus vous voir !}{Vraiment ? Et vous vous êtes un imbécile qui se croyait à la hauteur mais que j'ai piétiné tellement il était minable ! Partez, je ne veux plus vous voir !}{}{}{}{}
+
+{710}{Je n'ai pas souvenir que la fumée ai été une gêne pour les voyageurs à l'intérieur du train. De plus, les esprits ne respirent pas. Je doute que vous arriviez à convaincre qui que ce soit avec cet argument... Après réflexion, je pense ne pas pouvoir vous engager pour cette tâche...}{Je n'ai pas souvenir que la fumée ai été une gêne pour les voyageurs à l'intérieur du train. De plus, les esprits ne respirent pas. Je doute que vous arriviez à convaincre qui que ce soit avec cet argument... Après réflexion, je pense ne pas pouvoir vous engager pour cette tâche...}{}{}{}{}
+{711}{Vous me critiquer alors que vous savez que j'ai raison, la mauvaise foi est un défaut que vous semblez appréciez...}{}{5}{}{0}{re -15, lf8 1, fl 708}
+{712}{J'aurais au moins essayé. Pouvons-nous quand même discuter encore un peu ?}{}{5}{}{430}{}
+{713}{Soit, je préfère partir.}{}{5}{}{0}{fl 476}
+
+{720}{Vraiment ? Des trains silencieux existent ? Ce doit être merveilleux de voyager dans le silence et... [Elle se reprend] Mais c'est que vous avez réussi : vous m'avez exposé un point de vue qui m'a conquis ! Si nous n'avions pas été dans un exercice, j'aurais bu la suite de vos paroles. Vous êtes engagé...}{Vraiment ? Des trains silencieux existent ? Ce doit être merveilleux de voyager dans le silence et... [Elle se reprend] Mais c'est que vous avez réussi : vous m'avez exposé un point de vue qui m'a conquis ! Si nous n'avions pas été dans un exercice, j'aurais bu la suite de vos paroles. Vous êtes engagée...}{}{}{}{}
+{721}{Merci... Et engagé pour quoi faire ?}{1}{5}{}{820}{}
+{722}{Merci... Et engagée pour quoi faire ?}{0}{5}{}{820}{}
+
+{730}{Je ne pense pas, il y a beaucoup de gens qui préfèrent voyager "à l'ancienne" même si cela leur coûtait plus cher à Arcanum. Il y aura toujours une clientèle d'irréductibles pour le train à vapeur.... Après réflexion, je pense ne pas pouvoir vous engager pour cette tâche...}{Je ne pense pas, il y a beaucoup de gens qui préfèrent voyager "à l'ancienne" même si cela leur coûtait plus cher à Arcanum. Il y aura toujours une clientèle d'irréductibles pour le train à vapeur.... Après réflexion, je pense ne pas pouvoir vous engager pour cette tâche...}{}{}{}{}
+{731}{Vous me jugez inférieur ? C'est juste vous qui, convaincue de votre supériorité, n'avez jamais envisagé de m'engager !}{}{5}{}{0}{re -10, lf8 1, fl 638}
+{732}{J'aurais au moins essayé. Pouvons-nous quand même discuter encore un peu ?}{}{5}{}{430}{}
+{733}{Soit, je préfère partir.}{}{5}{}{0}{fl 476}
+
+{740}{Il vous faudra bien plus que ce genre d'insulte de bas niveau pour m'atteindre. Pardonnez-moi mais c'est votre attaque qui est lamentable... Bref, vous n'êtes pas à la hauteur de cette tâche, je ne peux pas vous engager.}{Il vous faudra bien plus que ce genre d'insulte de bas niveau pour m'atteindre. Pardonnez-moi mais c'est votre attaque qui est lamentable... Bref, vous n'êtes pas à la hauteur de cette tâche, je ne peux pas vous engager.}{}{}{}{}
+{741}{Vous me jugez inférieur ? C'est juste vous qui, convaincue de votre supériorité, n'avez jamais envisagé de m'engager !}{}{5}{}{830}{}
+{742}{J'aurais au moins essayé. Pouvons-nous quand même discuter encore un peu ?}{}{5}{}{430}{}
+{743}{Soit, je préfère partir.}{}{5}{}{0}{fl 476}
+
+{750}{[Elle s'emporte] Je ne me pense pas supérieure à vous : je suis convaincue de l'être et... Oh, mais votre pique a marché : je me suis emportée. Finalement, vous êtes peut-être au moins mon égal, je dois avouer que je ne pensais pas que vous arriviez à m'énerver. Il faut un certain talent pour forcer quelqu'un à s'énerver alors qu'il sait que vous essayez, vous êtes engagé !}{[Elle s'emporte] Je ne me pense pas supérieure à vous : je suis convaincue de l'être et... Oh, mais votre pique a marché : je me suis emportée. Finalement, vous êtes peut-être au moins mon égale, je dois avouer que je ne pensais pas que vous arriviez à m'énerver. Il faut un certain talent pour forcer quelqu'un à s'énerver alors qu'il sait que vous essayez, vous êtes engagée !}{}{}{}{}
+{751}{Merci... Et engagé pour quoi faire ?}{1}{5}{}{820}{}
+{752}{Merci... Et engagée pour quoi faire ?}{0}{5}{}{820}{}
+
+{760}{Non, ni moi ni ma tante ne sommes alcooliques; quand vous insultez quelqu'un, il doit y avoir un fondement réel derrière votre attaque sinon il ne se sentira pas touché. De plus, il vous faut quelque chose de plus cruel, de plus fort. Avec votre talent actuel, je ne peux vous engager, désolée.}{Non, ni moi ni ma tante ne sommes alcooliques; quand vous insultez quelqu'un, il doit y avoir un fondement réel derrière votre attaque sinon il ne se sentira pas touché. De plus, il vous faut quelque chose de plus cruel, de plus fort. Avec votre talent actuel, je ne peux vous engager, désolée.}{}{}{}{}
+{761}{Vous me jugez inférieur ? C'est juste vous qui, convaincue de votre supériorité, n'avez jamais envisagé de m'engager !}{}{5}{}{830}{}
+{762}{J'aurais au moins essayé. Pouvons-nous quand même discuter encore un peu ?}{}{5}{}{430}{}
+{763}{Soit, je préfère partir.}{}{5}{}{0}{fl 476}
+
+{770}{Qu'importe qu'il le soit ou non, vous auriez du le gagner. Avouez votre désavantage voire votre impuissance à l'opposant scelle presque d'emblée l'issue de la conversation : votre défaite. Je ne peux engager quelqu'un qui agit ainsi...}{Qu'importe qu'il le soit ou non, vous auriez du le gagner. Avouez votre désavantage voire votre impuissance à l'opposant scelle presque d'emblée l'issue de la conversation : votre défaite. Je ne peux engager quelqu'un qui agit ainsi...}{}{}{}{}
+{771}{Des défis impossibles, des règles qu'on invente. Vous vous pensez peut-être supérieure mais vous n'êtes rien...}{}{5}{}{840}{}
+{772}{J'aurais au moins essayé. Pouvons-nous quand même discuter encore un peu ?}{}{5}{}{430}{}
+{773}{Soit, je préfère partir.}{}{5}{}{0}{fl 476}
+
+{780}{Non, stop ! Qui croirait cela. Vous savez, lorsque vous inventez une histoire, il y a deux technique possibles : l'une que je n'aime pas consiste à créer une histoire si extravagante qu'elle semble vécue, l'autre qui consiste à progresser par étapes dans l'inconcevable. Personne ne peut accepter coup sur coup que des machines pensent et que les dirigeants nous ont trahi, il faut une transition, quelque élément logique qui relie ces histoires. Cette leçon sera un cadeau de refus : je ne peux vous engager...}{Non, stop ! Qui croirait cela. Vous savez, lorsque vous inventez une histoire, il y a deux technique possibles : l'une que je n'aime pas consiste à créer une histoire si extravagante qu'elle semble vécue, l'autre qui consiste à progresser par étapes dans l'inconcevable. Personne ne peut accepter coup sur coup que des machines pensent et que les dirigeants nous ont trahi, il faut une transition, quelque élément logique qui relie ces histoires. Cette leçon sera un cadeau de refus : je ne peux vous engager...}{}{}{}{}
+{781}{Cessez de vous donner un air supérieur, vous n'êtes pas capables de reconnaître que mon talent est supérieur au vôtre !}{}{5}{}{0}{re -15, lf8 1, fl 788}
+{782}{J'aurais au moins essayé. Pouvons-nous quand même discuter encore un peu ?}{}{5}{}{430}{}
+{783}{Soit, je préfère partir.}{}{5}{}{0}{fl 476}
+
+{788}{Vous, supérieur à moi ? Dire que c'est un néophyte qui me fait la morale... Vous savez @pcname@, ma patience est entamée, je vous suggère de quitter à jamais ma cuisine... [Elle commence à crier] Compris ? Du balai !}{Vous, supérieure à moi ? Dire que c'est une néophyte qui me fait la morale... Vous savez @pcname@, ma patience est entamée, je vous suggère de quitter à jamais ma cuisine... [Elle commence à crier] Compris ? Du balai !}{}{}{}{}
+
+{790}{C'est impossible, vous ne pouvez pas continuer ainsi : les êtres pensants ont besoin de ce raccrocher à quelque chose, il est assez rare que briser tous leurs repères soient productifs dans une argumentation, sauf si vous leur apporter un nouveau repère mais contre nos dirigeants, je ne vois pas ce que vous pourriez offrir. Considérez cet apprentissage comme un cadeau de refus : je ne peux vous engager...}{C'est impossible, vous ne pouvez pas continuer ainsi : les êtres pensants ont besoin de ce raccrocher à quelque chose, il est assez rare que briser tous leurs repères soient productifs dans une argumentation, sauf si vous leur apporter un nouveau repère mais contre nos dirigeants, je ne vois pas ce que vous pourriez offrir. Considérez cet apprentissage comme un cadeau de refus : je ne peux vous engager...}{}{}{}{}
+{791}{"Les êtres pensants" et patati et patata... Une vieille femme aigrie qui se croit supérieure, c'est tout ce que vous êtes !}{}{5}{}{0}{re -15, lf8 1, fl 798}
+{792}{J'aurais au moins essayé. Pouvons-nous quand même discuter encore un peu ?}{}{5}{}{430}{}
+{793}{Soit, je préfère partir.}{}{5}{}{0}{fl 476}
+
+{798}{Et vous vous n'êtes qu'un bon à rien qui s'essaye partout car il ne sait rien faire ! Je n'ai que faire de votre avis de, primate, partez !}{Et vous vous n'êtes qu'un bon à rien qui s'essaye partout car il ne sait rien faire ! Je n'ai que faire de votre avis de, primate, partez !}{}{}{}{}
+
+{800}{Mon Dieu, c'est terrible. Nous devons vite prévenir tout le monde de cette situation et... [Elle se ressaisit] Mais attendez, tout cela... c'est vous qui l'avez inventé... Dire que vous m'avez convaincue alors que je savais qu'il s'agissait d'un exercice, vous êtes incroyable ! Vous savez que vous pourriez déclencher une révolution en quelques mots... Bref, vous êtes engagé, et haut la main !}{Mon Dieu, c'est terrible. Nous devons vite prévenir tout le monde de cette situation et... [Elle se ressaisit] Mais attendez, tout cela... c'est vous qui l'avez inventé... Dire que vous m'avez convaincue alors que je savais qu'il s'agissait d'un exercice, vous êtes incroyable ! Vous savez que vous pourriez déclencher une révolution en quelques mots... Bref, vous êtes engagée, et haut la main !}{}{}{}{}
+{801}{Merci... Et engagé pour quoi faire ?}{1}{5}{}{820}{}
+{802}{Merci... Et engagée pour quoi faire ?}{0}{5}{}{820}{}
+
+{810}{Stop ! Ce n'est pas crédible du tout. Les machines ne peuvent pas agir dans l'ombre vu qu'il y a quelqu'un qui les a créées et qui est donc conscient de leur existence. Il y a toujours un supérieur au dessus de chacun et ce jusqu'au grand Vélorien... Je ne peux vous engager pour une histoire aussi peu crédible...}{Stop ! Ce n'est pas crédible du tout. Les machines ne peuvent pas agir dans l'ombre vu qu'il y a quelqu'un qui les a créées et qui est donc conscient de leur existence. Il y a toujours un supérieur au dessus de chacun et ce jusqu'au grand Vélorien... Je ne peux vous engager pour une histoire aussi peu crédible...}{}{}{}{}
+{811}{La seule chose qui n'est pas crédible ici c'est votre jugement ! Vous et vos leçons ne valez pas la salive que j'ai gâchée !}{}{5}{}{0}{re -10, lf8 1, fl 818}
+{812}{J'aurais au moins essayé. Pouvons-nous quand même discuter encore un peu ?}{}{5}{}{430}{}
+{813}{Soit, je préfère partir.}{}{5}{}{0}{fl 476}
+
+{818}{Fort bien, alors je peux vous dire que vous ne valiez pas la moitié de celle que j'ai gâchée. Allez au diable @pcname@ !}{Fort bien, alors je peux vous dire que vous ne valiez pas la moitié de celle que j'ai gâchée. Allez au diable @pcname@ !}{}{}{}{}
+
+{820}{Pour négocier évidemment... L'un des intendants du cercle 693 se trouve dans la cabine n°9. Le cercle 693 est celui des gourmets exceptionnels et je meure d'envie d'y travailler mais j'ai bien trop peur d'aller lui en parler. Je vous en supplie, faites cela pour moi !}{Pour négocier évidemment... L'un des intendants du cercle 693 se trouve dans la cabine n°9. Le cercle 693 est celui des gourmets exceptionnels et je meure d'envie d'y travailler mais j'ai bien trop peur d'aller lui en parler. Je vous en supplie, faites cela pour moi !}{}{}{}{qu1025 1}
+{821}{C'est entendu, je ferais mon possible.}{}{5}{}{850}{re +20, qu1025 2}
+{822}{Non, cela ne m'intéresse pas.}{}{5}{}{860}{re -10, qu1025 6}
+{823}{Compris, j'essaierai.}{}{5}{}{870}{}
+
+{830}{Ce n'est pas entièrement faux cependant je puis vous assurer que je vais continuer à garder mon calme, vous devriez donc renoncer à être engagé.}{Ce n'est pas entièrement faux cependant je puis vous assurer que je vais continuer à garder mon calme, vous devriez donc renoncer à être engagée.}{}{}{}{}
+{831}{Qui ne tente rien à rien. Souhaitez-vous quand même continuer de discuter avec moi.}{}{5}{}{430}{}
+{832}{Très bien : je m'en vais.}{}{5}{}{0}{fl 476}
+
+{840}{[Elle semble fulminer] Moi je ne suis rien ? Je me "crois" supérieure ? Mais je le suis et de loin, vous vous n'êtes qu'un... [Elle se calme d'un coup] Oh, mais votre pique a fini par marcher : je me suis emportée. Finalement, vous êtes peut-être au moins mon égal, je dois avouer que je ne pensais pas que vous arriviez à m'énerver. Il faut un certain talent pour forcer quelqu'un à s'énerver alors qu'il sait que vous essayez, vous êtes engagé !}{[Elle semble fulminer] Moi je ne suis rien ? Je me "crois" supérieure ? Mais je le suis et de loin, vous vous n'êtes qu'un... [Elle se calme d'un coup] Oh, mais votre pique a fini par marcher : je me suis emportée. Finalement, vous êtes peut-être au moins mon égale, je dois avouer que je ne pensais pas que vous arriviez à m'énerver. Il faut un certain talent pour forcer quelqu'un à s'énerver alors qu'il sait que vous essayez, vous êtes engagée !}{}{}{}{}
+{841}{Merci... Et engagé pour quoi faire ?}{1}{5}{}{820}{}
+{842}{Merci... Et engagée pour quoi faire ?}{0}{5}{}{820}{}
+
+{850}{Faites plus que votre possible, je vous en prie. Rappelez-vous mes conseils, flattez-le, observez tout ce qui se trouve dans sa chambre avant de lui parler. Tout cela est capital ! Mon avenir dépend de vous !}{Faites plus que votre possible, je vous en prie. Rappelez-vous mes conseils, flattez-le, observez tout ce qui se trouve dans sa chambre avant de lui parler. Tout cela est capital ! Mon avenir dépend de vous !}{}{}{}{}
+{851}{Bien, alors j'y arriverais.}{}{5}{}{880}{re +5}
+{852}{Comme je vous l'ai dit, je ferais mon possible.}{}{5}{}{870}{}
+
+{860}{[Elle semble déçue mais pas abattue pour autant] Je comprends, ce n'est qu'un voeu égoïste. Je suis désolée que nous ayons fait tout cela pour rien...}{[Elle semble déçue mais pas abattue pour autant] Je comprends, ce n'est qu'un voeu égoïste. Je suis désolée que nous ayons fait tout cela pour rien...}{}{}{}{}
+{861}{Moi aussi mais avant de nous quitter, pourriez-vous répondre à quelques questions ?}{}{5}{}{890}{}
+{862}{Ce n'est rien. Par contre je dois prendre congé de vous.}{}{5}{}{0}{fl 868}
+
+{868}{Soit, n'hésitez pas à revenir de temps à autre...}{Soit, n'hésitez pas à revenir de temps à autre...}{}{}{}{}
+
+{870}{C'est si gentil de votre part. J'ai toute confiance en vous vous savez. [Cette dernière phrase paraît être un mensonge]}{C'est si gentil de votre part. J'ai toute confiance en vous vous savez. [Cette dernière phrase paraît être un mensonge]}{}{}{}{}
+{871}{Bien, avant que je ne parte, pourriez-vous répondre à quelques questions ?}{}{5}{}{890}{}
+{872}{C'est parfait, j'y vais de ce pas.}{}{5}{}{0}{}
+
+{880}{Je n'en doute plus une seule seconde. Que Vélorien vous bénisse !}{Je n'en doute plus une seule seconde. Que Vélorien vous bénisse !}{}{}{}{}
+{881}{Bien, avant que je ne parte, pourriez-vous répondre à quelques questions ?}{}{5}{}{890}{}
+{882}{Je reviendrais avec de bonnes nouvelles.}{}{5}{}{0}{}
+
+{890}{Naturellement, que voulez-vous savoir ?}{Naturellement, que voulez-vous savoir ?}{}{}{}{}
+{891}{En fait, je ne vous ai pas encore restitué votre clef n'est-ce pas ?}{}{5}{qu1024 4, in 5858, lf0 0}{2220}{in 5858}
+{892}{Peut-être avez-vous entendu parler d'évènements sortant de l'ordinaire ?}{}{5}{lf2 0}{250}{lf2 1}
+{893}{J'ai appris qu'une de vos marmites de potage aux champignons avait disparue ?}{}{5}{ru 1039, lf1 0}{260}{lf1 1}
+{894}{Comment avez-vous fait pour être et cuisinière et parallèlement négociatrice ?}{}{5}{lf3 0}{270}{lf3 1}
+{895}{Finalement, je vous les poserais plus tard.}{}{5}{}{0}{fl 898}
+
+{}{}{}{}{}{}{}
+
+{898}{Vous serez toujours le bienvenu aux cuisines.}{Vous serez toujours la bienvenue aux cuisines.}{}{}{}{}
+
+
+{900}{Si s'en est assez pour vous, ça l'est aussi pour moi. J'en ai assez de subir vos insultes : partez et ne revenez plus jamais !}{Si s'en est assez pour vous, ça l'est aussi pour moi. J'en ai assez de subir vos insultes : partez et ne revenez plus jamais !}{}{}{}{}
+
+{910}{Et c'est votre avis, à vous qui êtes probablement le passager le plus stupide de ce train, que je devrais prendre en compte ? J'en ai assez de vos insultes et de votre tête d'abruti : sortez de mes cuisines, et définitivement !}{Et c'est votre avis, à vous qui êtes probablement la passagère la plus stupide de ce train, que je devrais prendre en compte ? J'en ai assez de vos insultes et de votre tête d'abruti : sortez de mes cuisines, et définitivement !}{}{}{}{}
+
+{1000}{@pcname@, vous êtes revenu... Que se passe-t-il ?}{@pcname@, vous êtes revenu... Que se passe-t-il ?}{}{}{}{}
+{1001}{J'avais encore quelques questions à vous poser.}{}{5}{}{1010}{}
+{1002}{Oui, et je vous rapporte votre marmite.}{}{5}{in 3807}{1070}{in 3807, qu1024 4}
+{1003}{Je viens vous rendre la clef de votre malle.}{}{5}{qu1024 4, in 5858, lf0 1}{1060}{in 5858}
+{1004}{Moi avais encore questions !}{}{-4}{}{1010}{}
+{1005}{Rien, je passais par hasard.}{}{5}{}{0}{}
+{1006}{Mais cessez de me harceler dès que je passe près de vous ! C'en est assez !}{}{5}{}{0}{lf8 1, re -5, fl 900}
+{1007}{Nan, moi juste passer comme ça !}{}{-4}{}{0}{}
+{1008}{Mais t'arrêtes d'me parler dès j'rentre ici ? C't'un monde ça... Tu m'saoules !}{}{-4}{}{0}{lf8 1, re -5, fl 910}
+
+{1010}{Je vais tâchez d'y répondre alors...}{Je vais tâchez d'y répondre alors...}{}{}{}{}
+{1011}{Vous avez peut-être remarqué quelque chose d'inhabituel ?}{}{5}{lf2 0}{40}{lf2 1}
+{1012}{Vous p'têt savoir chose pas normales ?}{}{-4}{lf2 0}{40}{lf2 1}
+{1013}{J'ai entendu dire qu'une marmite de potage avait disparue, je voulais en savoir plus.}{}{5}{ru 1039, lf1 0}{50}{lf1 1}
+{1014}{Avoir entendu parler de marmiton potage.}{}{-4}{ru 1039, lf5 0}{60}{lf5 1}
+{1015}{Nous nous sommes mal compris la dernière fois mais je voulais vous parler de cette marmite de potage disparue.}{}{5}{lf5 1, lf1 0}{50}{lf1 1}
+{1016}{Vous avoir dit qu'être négociatrice ?}{}{-4}{lf4 0}{70}{lf4 1}
+{1017}{Vous avez dit être aussi négociatrice ?}{}{5}{lf3 0}{80}{lf3 1}
+{1018}{J'aurais voulu vous parler à nouveau de votre double métier.}{}{5}{lf4 1, lf3 0}{1030}{lf3 1}
+{1019}{C'est à propos de votre marmite de potage...}{}{5}{ru 1055, lf9 0}{2040}{lf9 1}
+{1020}{Non, je vais partir tout de suite.}{}{5}{}{0}{}
+{1021}{Nan, moi partir.}{}{-4}{}{0}{}
+
+{}{}{}{}{}{}{}
+
+{1030}{Vous savez, mis à part le fait que j'exerce les deux métiers de négociatrice et de cuisinière, il n'y a pas grand chose d'intéressant à en dire...}{Vous savez, mis à part le fait que j'exerce les deux métiers de négociatrice et de cuisinière, il n'y a pas grand chose d'intéressant à en dire...}{}{}{}{}
+{1031}{Et pourriez-vous m'en dire plus sur la négociation.}{}{5}{}{140}{}
+{1032}{Je vois. Ca ne doit pas être facile. J'ai autre chose à vous demander...}{}{5}{}{150}{re -5}
+{1033}{En effet... Bien, je dois partir.}{}{5}{}{0}{}
+
+
+//Marmite retrouvée, @pcname@ impoli
+{1040}{Ah, @pcname@ ! Bienvenu ! Je vous remercie infiniment : le passager de la cabine numéro 3 vient de me rapporter la marmite et m'a dit que c'est vous qui l'en aviez convaincu. Je ne vous croyez pas capable de ce genre de... tact. Enfin bref, voici pour votre peine. [Elle ramasse une bouteille d'huile qu'elle vous tend] Il s'agit d'une huile magique qui augment les pouvoirs magiques des armes ou des armures.}{Ah, @pcname@ ! Bienvenu ! Je vous remercie infiniment : le passager de la cabine numéro 3 vient de me rapporter la marmite et m'a dit que c'est vous qui l'en aviez convaincu. Je ne vous croyez pas capable de ce genre de... tact. Enfin bref, voici pour votre peine. [Elle ramasse une bouteille d'huile qu'elle vous tend] Il s'agit d'une huile magique qui augment les pouvoirs magiques des armes ou des armures.}{}{}{}{in-3808, qu1024 4}
+{1041}{Merci. Je peux vous poser une question au passage ?}{}{5}{}{1050}{}
+{1042}{Content d'avoir pu vous aider. Au revoir...}{}{5}{}{0}{}
+
+{1050}{Oui, pourquoi pas...}{Oui, pourquoi pas...}{}{}{}{}
+{1051}{En fait, je dois vous rendre votre clef...}{}{5}{qu1024 4, in 5858}{1060}{in 5858}
+{1052}{N'auriez vous pas remarqué quelque chose d'inhabituel ?}{}{5}{lf2 0}{40}{lf2 1}
+{1053}{Je crois que vous avez dit être aussi négociatrice ?}{}{5}{lf3 0}{80}{lf3 1}
+{1054}{J'aurais voulu vous parler à nouveau de votre double métier.}{}{5}{lf4 1, lf3 0}{1030}{lf3 1}
+{1055}{En fait, je vais partir...}{}{5}{}{0}{fl 1059}
+
+{}{}{}{}{}{}{}
+
+{1059}{Soit, au revoir alors...}{Soit, au revoir alors...}{}{}{}{}
+
+{1060}{Oh, c'est exact ! (J'avais totalement oublié que je la lui avais prêtée). Merci. Y'avait-il autre chose ?}{Oh, c'est exact ! (J'avais totalement oublié que je la lui avais prêtée). Merci. Y'avait-il autre chose ?}{}{}{}{}
+{1061}{Oui, n'auriez vous pas eu vent de quelque chose d'inhabituel ?}{}{5}{lf2 0}{40}{lf2 1}
+{1062}{Eh bien, je crois que vous avez mentionné être aussi négociatrice ?}{}{5}{lf3 0}{80}{lf3 1}
+{1063}{Oui, j'aurais souhaité vous entretenir à nouveau de votre double métier.}{}{5}{lf4 1, lf3 0}{1030}{lf3 1}
+{1064}{Non, il est temps pour moi de partir.}{}{5}{}{0}{fl 1069}
+
+{}{}{}{}{}{}{}
+
+{1069}{Au revoir alors...}{Au revoir alors...}{}{}{}{}
+
+
+{1070}{Oh mon Dieu, c'est incroyable ! [Elle récupère sa marmite] Attendez, ne bougez pas ! [Elle ramasse une bouteille d'huile qu'elle vous tend] Voici votre récompense pour ce que vous avez fait ! Il s'agit d'une huile magique qui augment les pouvoirs magiques des armes ou des armures.}{Oh mon Dieu, c'est incroyable ! [Elle récupère sa marmite] Attendez, ne bougez pas ! [Elle ramasse une bouteille d'huile qu'elle vous tend] Voici votre récompense pour ce que vous avez fait ! Il s'agit d'une huile magique qui augment les pouvoirs magiques des armes ou des armures.}{}{}{}{in-3808, qu1024 4}
+{1071}{Merci. Je peux vous poser une question au passage ?}{}{5}{}{1050}{}
+{1072}{Content d'avoir pu vous aider. Au revoir...}{}{5}{}{0}{}
+
+
+{1994}{Que de mystères... Vous m'en parlerez la prochaine fois !}{Que de mystères... Vous m'en parlerez la prochaine fois !}{}{}{}{}
+
+{1996}{Ce n'est rien, je comprends...}{Ce n'est rien, je comprends...}{}{}{}{}
+
+{1998}{Et je vous en remercie, j'aime toujours bavarder de temps à autre.}{Et je vous en remercie, j'aime toujours bavarder de temps à autre.}{}{}{}{}
+
+{2000}{@pcname@, c'est toujours un plaisir de vous parler !}{@pcname@, c'est toujours un plaisir de vous parler !}{}{}{}{}
+{2001}{Pourrais vous importuner à nouveau quelques instants ? J'ai quelques questions.}{}{5}{}{2020}{}
+{2002}{De même. Au fait, je dois vous restituer la clef de votre malle.}{}{5}{qu1024 4, in 5858, lf0 0}{2220}{in 5858}
+{2003}{Et vous allez en avoir un autre : je vous rapporte votre marmite.}{}{5}{in 3807}{2230}{in 3807, qu1024 4}
+{2004}{Attendez car cela ne fait que commencer : vous êtes prise au cercle 693 !}{}{5}{qu1025 3}{2320}{qu1025 4}
+{2005}{Anaïs, je suis désolée mais je n'ai pas réussi à vous faire embaucher au cercle 693.}{0}{5}{qu1025 6, lf11 0}{2340}{lf11 1}
+{2006}{Anaïs, je suis désolé mais je n'ai pas réussi à vous faire embaucher au cercle 693.}{1}{5}{qu1025 6, lf11 0}{2340}{lf11 1}
+{2007}{C'est ce que je me suis dit, aussi je fais une visite éclair.}{}{5}{}{0}{fl 1998}
+
+{}{}{}{}{}{}{}
+
+{2020}{Je les écouterais avec attention...}{Je les écouterais avec attention...}{}{}{}{}
+{2221}{En fait, il faut que je vous dise que... vous êtes prise au cercle 693 !}{}{5}{qu1025 3}{2320}{qu1025 4}
+{2022}{Anaïs, je suis désolée mais je dois vous le dire : je n'ai pas pu vous faire embaucher au cercle 693.}{0}{5}{qu1025 6, lf11 0}{2340}{lf11 1}
+{2023}{Anaïs, je suis désolé mais je dois vous le dire : je n'ai pas pu vous faire embaucher au cercle 693.}{1}{5}{qu1025 6, lf11 0}{2340}{lf11 1}
+{2024}{Peut-être avez vous eu connaissance de faits... étranges ?}{}{5}{lf2 0}{250}{lf2 1}
+{2025}{On m'a parlé d'une marmite de potage aux champignons disparue, est-ce vrai ?}{}{5}{ru 1039, lf1 0}{260}{lf1 1}
+{2026}{J'aimerais comprendre comment vous pouvez être cuisinière et parallèlement négociatrice.}{}{5}{lf3 0}{270}{lf3 1}
+{2027}{C'est à propos de votre marmite de potage...}{}{5}{ru 1055, lf9 0}{2040}{lf9 1}
+{2028}{Ah, une autre fois peut-être car je dois partir. Vraiment navrée...}{0}{5}{}{0}{fl 1996}
+{2029}{Ah, une autre fois peut-être car je dois partir. Vraiment navré...}{1}{5}{}{0}{fl 1996}
+
+{}{}{}{}{}{}{}
+
+{2040}{Ma marmite de potage ? Mais bien sûr, j'étais persuadée de vous avoir dit tout ce que je savais à propos de cette affaire mais il est possible qu'un détail m'ait échappé... En tout cas, si j'ai oublié de préciser quelque chose, demandez-moi.}{Ma marmite de potage ? Mais bien sûr, j'étais persuadée de vous avoir dit tout ce que je savais à propos de cette affaire mais il est possible qu'un détail m'ait échappé... En tout cas, si j'ai oublié de préciser quelque chose, demandez-moi.}{}{}{}{}
+{2041}{Voilà, si vous consentez à me révéler la nature de l'ingrédient secret, je pourrais la retrouver.}{}{8}{}{2050}{}
+{2042}{J'ai besoin que vous me parliez de l'ingrédient secret...}{}{5}{}{2060}{}
+{2043}{En fait, cela peut attendre. Je dois partir...}{}{5}{}{0}{lf9 0, fl 1994}
+
+{2050}{Vraiment ? Enfin... c'est à dire qu'il s'agit d'un secret traditionnel que je ne dois en principe révéler qu'à mon successeur aux fourneaux de ce train. Moi-même je le tiens de mon prédécesseur qui le tenait lui-même du sien... Cependant, cette affaire m'intrigue au plus au point, alors je consens à vous révéler mon secret à la condition que vous me promettiez de ne jamais le divulguer à qui que ce soit...}{Vraiment ? Enfin... c'est à dire qu'il s'agit d'un secret traditionnel que je ne dois en principe révéler qu'à mon successeur aux fourneaux de ce train. Moi-même je le tiens de mon prédécesseur qui le tenait lui-même du sien... Cependant, cette affaire m'intrigue au plus au point, alors je consens à vous révéler mon secret à la condition que vous me promettiez de ne jamais le divulguer à qui que ce soit...}{}{}{}{}
+{2051}{Je doute d'en être capable vous savez... Je préfère renoncer à ce savoir.}{}{5}{}{2070}{re +5}
+{2052}{Je ne puis m'y engager, mais si vous ne me dites rien, je ne pourrais pas trouver la marmite.}{}{5}{}{2080}{re -5}
+{2053}{C'est d'accord, je vous le promets.}{}{5}{}{2090}{re +5}
+
+{2060}{L'ingrédient... Cet ingrédient secret-ci, celui dont je vous ai tu le nom lorsque je vous parlais de ma recette ? Mais je ne peux pas enfin... pourquoi croyez-vous qu'on le dit secret ? C'est quelque chose que seul le cuisinier de ce train connait et qu'il ne peut transmettre qu'à son successeur et ce depuis fort longtemps... Pourrais-je au moins savoir pourquoi vous voulez le connaître ?}{L'ingrédient... Cet ingrédient secret-ci, celui dont je vous ai tu le nom lorsque je vous parlais de ma recette ? Mais je ne peux pas enfin... pourquoi croyez-vous qu'on le dit secret ? C'est quelque chose que seul le cuisinier de ce train connait et qu'il ne peut transmettre qu'à son successeur et ce depuis fort longtemps... Pourrais-je au moins savoir pourquoi vous voulez le connaître ?}{}{}{}{}
+{2061}{Il me permettra de retrouver la marmite grâce à la magie.}{}{5}{}{2100}{}
+{2062}{Simple curiosité, je me demandais ce que pouvait être votre secret...}{}{5}{}{2110}{}
+{2063}{Pour rien, oubliez ma demande, elle était déplacée...}{}{5}{}{2120}{re +5}
+{2064}{Que de mystères, ne seriez-vous bonne à rien sans cet ingrédient ?}{}{5}{}{-11}{}//2130
+
+{2070}{[Elle esquisse un sourire] Vous êtes quelqu'un de fort @pcname@, vous connaissez bien vos forces et vos faiblesses... Vous serez surement un employé des Enfers talentueux, et ce dans un futur pas si éloigné. J'aime les gens comme vous qui ne s'arrêtent que quand ils savent leur quête impossible mais qui savent toutefois s'arrêter. Même si je ne vous donne pas le nom de cet ingrédient, je vous crois capable de retrouver ma marmite...}{[Elle esquisse un sourire] Vous êtes quelqu'un de fort @pcname@, vous connaissez bien vos forces et vos faiblesses... Vous serez surement une employée des Enfers talentueuse, et ce dans un futur pas si éloigné. J'aime les gens comme vous qui ne s'arrêtent que quand ils savent leur quête impossible mais qui savent toutefois s'arrêter. Même si je ne vous donne pas le nom de cet ingrédient, je vous crois capable de retrouver ma marmite...}{}{}{}{}
+{2071}{Je vous remercie de votre confiance. Puis-je vous poser d'autres questions ?}{}{5}{}{2020}{}
+{2072}{Je vais essayer, merci de vos encouragements.}{}{5}{}{0}{}
+{2073}{Peut-être, je chercherais un autre moyen.}{}{5}{}{0}{}
+
+{2080}{[Elle semble hésiter] C'est bien dommage, cependant ce secret doit en rester un. Le simple fait que vous connaissiez l'existence de cet ingrédient est presque une entorse à notre règle alors je ne puis en dire davantage sans cette promesse. Oubliez cette marmite, je referais mon potage demain...}{[Elle semble hésiter] C'est bien dommage, cependant ce secret doit en rester un. Le simple fait que vous connaissiez l'existence de cet ingrédient est presque une entorse à notre règle alors je ne puis en dire davantage sans cette promesse. Oubliez cette marmite, je referais mon potage demain...}{}{}{}{qu1024 6}
+{2081}{C'est entendu, je peux encore vous poser quelques questions ? Ce ne sera pas long.}{}{5}{}{2020}{}
+{2082}{C'est vous qui voyez... Je retourne à mes occupations.}{}{5}{}{0}{re -5}
+{2083}{Si c'est ce que vous voulez, je n'insiste pas... Au revoir.}{}{5}{}{0}{fl 2088}
+
+{2088}{Au revoir @pcname@. N'hésitez pas à revenir, j'apprécie toujours votre compagnie...}{Au revoir @pcname@. N'hésitez pas à revenir, j'apprécie toujours votre compagnie...}{}{}{}{}
+
+{2090}{Et je vous fais confiance. [Elle s'approche de vous et vous chuchote à l'oreille quel est cet ingrédient mystérieux puis s'éloigne à nouveau] Je suis désolée d'insister mais il est de la plus haute importance que vous gardiez cela pour vous... Mais comment allez-vous retrouver ma marmite avec juste le nom de cet ingrédient ?}{Et je vous fais confiance. [Elle s'approche de vous et vous chuchote à l'oreille quel est cet ingrédient mystérieux puis s'éloigne à nouveau] Je suis désolée d'insister mais il est de la plus haute importance que vous gardiez cela pour vous... Mais comment allez-vous retrouver ma marmite avec juste le nom de cet ingrédient ?}{}{}{}{gf281 1}
+{2091}{Grâce à la magie... Il suffit que j'ai un peu de cet ingrédient pour retrouver la marmite.}{}{5}{}{2140}{re -5}
+{2092}{Par la magie. Mais le nom seul ne suffit pas, il me faut aussi un peu de cet ingrédient.}{}{5}{}{2150}{}
+{2093}{Ca, c'est mon secret... Par contre, il me faudrait aussi un peu de cet ingrédient.}{}{5}{}{2160}{re -10}
+
+{2100}{Vraiment ? [Elle réfléchit] En principe, je ne devrais pas vous le révéler, quelque soit l'enjeu de cette discussion. Cependant, vous m'êtes fort sympathique et cette histoire m'intrigue énormément; aussi, je serais prête à vous le divulguer si vous me promettez que jamais vous ne le direz à quiconque, jamais !}{Vraiment ? [Elle réfléchit] En principe, je ne devrais pas vous le révéler, quelque soit l'enjeu de cette discussion. Cependant, vous m'êtes fort sympathique et cette histoire m'intrigue énormément; aussi, je serais prête à vous le divulguer si vous me promettez que jamais vous ne le direz à quiconque, jamais !}{}{}{}{}
+{2101}{Je doute de pouvoir le taire à jamais... Je préfère renoncer à ce savoir.}{}{5}{}{2070}{re +5}
+{2102}{Je ne puis m'y engager, mais si vous ne me dites rien, je ne pourrais pas trouver la marmite.}{}{5}{}{2080}{re -5}
+{2103}{C'est d'accord, je vous le promets.}{}{5}{}{2170}{re +5}
+
+{2120}{[Votre réponse l'a visiblement étonnée] Vous êtes quelqu'un d'assez mystérieux @pcname@, c'est peut-être pour cela que vous m'êtes sympathique... [Elle sourit] Vous me rappelez vraiment cette personne que j'ai connue dans le cercle 297... Enfin, tout cela appartient au passé, vous êtes vous et non lui. [Elle semble nostalgique]. Excusez-moi, vous aviez peut-être d'autres questions ?}{[Votre réponse l'a visiblement étonnée] Vous êtes quelqu'un d'assez mystérieux @pcname@, c'est peut-être pour cela que vous m'êtes sympathique... [Elle sourit] Vous me rappelez vraiment cette personne que j'ai connue dans le cercle 297... Enfin, tout cela appartient au passé, vous êtes vous et non lui. [Elle semble nostalgique]. Excusez-moi, vous aviez peut-être d'autres questions ?}{}{}{}{}
+{2121}{Oui, en effet.}{}{5}{}{2020}{}
+{2122}{Non, je vais vous laisser...}{}{5}{}{0}{}
+
+{2130}{Je ne vous permets pas ! [Elle semble indignée] Ce secret n'a pas fait ma renommée, pas plus qu'il ne m'est indispensable. Mais tous les cuisiniers possèdent un secret qui rend leur cuisine si particulière et qui constitue sa signature. Cet ingrédient ne doit être utilisé que par le chef en fonction dans ce train et jamais vous n'en aurez le nom ! A présent, sortez de mes cuisines ! Vous ne m'êtes plus sympathique du tout !}{Je ne vous permets pas ! [Elle semble indignée] Ce secret n'a pas fait ma renommée, pas plus qu'il ne m'est indispensable. Mais tous les cuisiniers possèdent un secret qui rend leur cuisine si particulière et qui constitue sa signature. Cet ingrédient ne doit être utilisé que par le chef en fonction dans ce train et jamais vous n'en aurez le nom ! A présent, sortez de mes cuisines ! Vous ne m'êtes plus sympathique du tout !}{}{}{}{lf10 1}
+{2131}{[Partir]}{}{1}{}{0}{}
+{2132}{Vous voir vous énerver a été un grand plaisir. Au revoir Mme ronchonne.}{}{5}{}{0}{}
+
+{2138}{Vous n'êtes pas le bienvenu @pcname@ !}{Vous n'êtes pas la bienvenue @pcname@ !}{}{}{}{}
+
+{2140}{Donc le nom importait peu... [Elle semble froissée] Enfin, ce qui est fait est fait. Il s'agit d'un ingrédient secret, je ne le garde jamais en cuisine... Il est conservé dans le compartiment à bagages dans les malles réservées au personnel de bord. [Elle vous donne une petite clef en argent ciselé] Cette clef ouvre la malle qui porte mon nom. Je vous demande de me ramener cette clef quand vous aurez fini, je n'en ai pas de copie. Et veillez à bien refermez la malle à clef s'il vous plaît.}{Donc le nom importait peu... [Elle semble froissée] Enfin, ce qui est fait est fait. Il s'agit d'un ingrédient secret, je ne le garde jamais en cuisine... Il est conservé dans le compartiment à bagages dans les malles réservées au personnel de bord. [Elle vous donne une petite clef en argent ciselé] Cette clef ouvre la malle qui porte mon nom. Je vous demande de me ramener cette clef quand vous aurez fini, je n'en ai pas de copie. Et veillez à bien refermez la malle à clef s'il vous plaît.}{}{}{}{in-5858, ru 1061}
+{2141}{C'est entendu. Je peux vous poser d'autres questions ?}{}{5}{}{2020}{}
+{2142}{Je n'y manquerais pas, au revoir.}{}{5}{}{0}{}
+
+{2150}{Eh bien, c'est une magie bien compliquée que voilà. Je trouve que la magie ressemble à la cuisine par instants, à la différence qu'elle peut se révéler autrement plus dangereuse... Quoique la cuisine aussi, du moins pour ceux qui la mangent. Aux moins, aux Enfers on ne risque pas de mourir d'une indigestion ou d'un empoisonnement...}{Eh bien, c'est une magie bien compliquée que voilà. Je trouve que la magie ressemble à la cuisine par instants, à la différence qu'elle peut se révéler autrement plus dangereuse... Quoique la cuisine aussi, du moins pour ceux qui la mangent. Aux moins, aux Enfers on ne risque pas de mourir d'une indigestion ou d'un empoisonnement...}{}{}{}{}
+{2151}{[Vous l'écoutez sans l'interrompre]}{}{1}{}{2153}{}
+{2152}{Et donc, concernant l'ingrédient ?}{}{5}{}{2180}{re -5}
+
+{2153}{En tout cas, j'aurais aimé faire cuisinière à Tulla, mais pour cela il aurait fallu que Tulla ne soit pas perdu au milieu des landes de Vendigroth, il parait que c'est un endroit dangereux. Mais Tulla en plein coeur de Tarante ne serait plus vraiment Tulla je suppose... [Elle marque une pause et semble se rappeler le pourquoi de cette conversation] Ah oui, concernant l'ingrédient, il se trouve dans le compartiment à bagages.}{En tout cas, j'aurais aimé faire cuisinière à Tulla, mais pour cela il aurait fallu que Tulla ne soit pas perdu au milieu des landes de Vendigroth, il parait que c'est un endroit dangereux. Mais Tulla en plein coeur de Tarante ne serait plus vraiment Tulla je suppose... [Elle marque une pause et semble se rappeler le pourquoi de cette conversation] Ah oui, concernant l'ingrédient, il se trouve dans le compartiment à bagages.}{}{}{}{}
+{2154}{[Vous écoutez]}{}{1}{}{2190}{}
+
+{2160}{Ma foi, je ne pensais pas que vous feriez des mystères à propos de cette magie, je me demande même si vous la connaissez vous-même. Enfin bref, il vous en faut ? Comme il s'agit d'un secret, cet ingrédient ne se trouve pas en cuisine, il est conservé dans le compartiment à bagages dans les malles réservées au personnel de bord.}{Ma foi, je ne pensais pas que vous feriez des mystères à propos de cette magie, je me demande même si vous la connaissez vous-même. Enfin bref, il vous en faut ? Comme il s'agit d'un secret, cet ingrédient ne se trouve pas en cuisine, il est conservé dans le compartiment à bagages dans les malles réservées au personnel de bord.}{}{}{}{}
+{2161}{[Suite]}{}{1}{}{2163}{}
+
+{2163}{[Elle vous donne une petite clef en argent ciselé] Cette clef ouvre la malle qui porte mon nom. Par contre, je vous demanderais de bien vouloir me ramener cette clef quand vous vous serez servi parce que je n'en ai pas de copie. Il serait dommage que je sois obligée de forcer la serrure de ma propre malle. Et veillez à bien refermez la malle à clef s'il vous plaît.}{[Elle vous donne une petite clef en argent ciselé] Cette clef ouvre la malle qui porte mon nom. Par contre, je vous demanderais de bien vouloir me ramener cette clef quand vous vous serez servi parce que je n'en ai pas de copie. Il serait dommage que je sois obligée de forcer la serrure de ma propre malle. Et veillez à bien refermez la malle à clef s'il vous plaît.}{}{}{}{in-5858, ru 1061}
+{2164}{C'est entendu. Je peux vous poser d'autres questions ?}{}{5}{}{2020}{}
+{2165}{Je n'y manquerais pas, au revoir.}{}{5}{}{0}{}
+
+{2170}{Merci beaucoup, ce n'est pas que je n'ai pas confiance en vous mais il s'agit de quelque chose de vital... [Elle s'approche de vous et vous chuchote à l'oreille quel est cet ingrédient mystérieux puis s'éloigne à nouveau] Je suis désolée d'insister mais il est de la plus haute importance que vous gardiez cela pour vous... Je serais curieuse de savoir quelle magie vous allez employer grâce à ce nom.}{Merci beaucoup, ce n'est pas que je n'ai pas confiance en vous mais il s'agit de quelque chose de vital... [Elle s'approche de vous et vous chuchote à l'oreille quel est cet ingrédient mystérieux puis s'éloigne à nouveau] Je suis désolée d'insister mais il est de la plus haute importance que vous gardiez cela pour vous... Je serais curieuse de savoir quelle magie vous allez employer grâce à ce nom.}{}{}{}{gf281 1}
+{2171}{C'est on ne peut plus simple, il me suffit d'avoir un peu de cet ingrédient.}{}{5}{}{2140}{re -5}
+{2172}{Le nom seul ne me suffit certes pas, il me faut aussi un peu de cet ingrédient.}{}{5}{}{2150}{}
+
+{2180}{Ah oui, j'ai tendance à me laisser emporter quand je parle... Comme il s'agit d'un ingrédient secret, je ne le garde jamais en cuisine... Il est conservé dans le compartiment à bagages dans les malles réservées au personnel de bord. [Elle vous donne une petite clef en argent ciselé] Cette clef ouvre la malle qui porte mon nom. Je vous demande de me ramener cette clef quand vous aurez fini, je n'en ai pas de copie. Et veillez à bien refermez la malle à clef s'il vous plaît.}{Ah oui, j'ai tendance à me laisser emporter quand je parle... Comme il s'agit d'un ingrédient secret, je ne le garde jamais en cuisine... Il est conservé dans le compartiment à bagages dans les malles réservées au personnel de bord. [Elle vous donne une petite clef en argent ciselé] Cette clef ouvre la malle qui porte mon nom. Je vous demande de me ramener cette clef quand vous aurez fini, je n'en ai pas de copie. Et veillez à bien refermez la malle à clef s'il vous plaît.}{}{}{}{in-5858, ru 1061}
+{2181}{C'est entendu. Je peux vous poser d'autres questions ?}{}{5}{}{2020}{}
+{2182}{C'est compris, au revoir.}{}{5}{}{0}{}
+
+{2190}{Oui car il s'agit d'un ingrédient secret et toutes sortes de personnes peuvent défiler dans les cuisines. Vous par exemple, qui aurait pensé qu'un passager comme vous puisse nous soutirer autant d'informations... [Elle rigole légèrement] Bref, revenons à nos moutons ! Je l'ai laissé dans ma malle qui se trouve avec les autres bagages du personnel. [Elle vous donne une petite clef en argent ciselé] Voici la clef de ma malle.}{Oui car il s'agit d'un ingrédient secret et toutes sortes de personnes peuvent défiler dans les cuisines. Vous par exemple, qui aurait pensé qu'un passager comme vous puisse nous soutirer autant d'informations... [Elle rigole légèrement] Bref, revenons à nos moutons ! Je l'ai laissé dans ma malle qui se trouve avec les autres bagages du personnel. [Elle vous donne une petite clef en argent ciselé] Voici la clef de ma malle.}{}{}{}{in-5858, ru 1061, re +5}
+{2191}{[Vous l'écoutez parler]}{}{1}{}{2193}{}
+
+{2193}{Il vous sera très facile de l'identifier, il y a mon nom dessus. Il est inutile de forcer les affaires des autres employés n'est-ce pas. [Son ton léger prouve qu'elle plaisante] Je peux vous demander de me ramener ma clef quand vous aurez pris ce que vous cherchez ? Merci bien, en fait il se trouve que je n'en possède pas de copie. Encore un peu et je devrais forcer ma propre malle... Et refermez-la à clef s'il vous plaît, je ne voudrais pas qu'elle reste ouverte.}{Il vous sera très facile de l'identifier, il y a mon nom dessus. Il est inutile de forcer les affaires des autres employés n'est-ce pas. [Son ton léger prouve qu'elle plaisante] Je peux vous demander de me ramener ma clef quand vous aurez pris ce que vous cherchez ? Merci bien, en fait il se trouve que je n'en possède pas de copie. Encore un peu et je devrais forcer ma propre malle... Et refermez-la à clef s'il vous plaît, je ne voudrais pas qu'elle reste ouverte.}{}{}{}{}
+{2194}{Naturellement. Je peux vous poser d'autres questions ?}{}{5}{}{2020}{}
+{2195}{Je le ferais sans faute, au revoir...}{}{5}{}{0}{}
+
+
+//Marmite rapportée par Simon, @pcname@ gentil
+{2200}{Ah, @pcname@ ! Il faut que je vous dise, c'est incroyable ! Figurez-vous que le passager de la cabine numéro 3, eh bien il est venu se dénoncer de lui-même pour la marmite. N'est-ce pas incroyable ? Mais attendez, moi-même au début, j'avais tellement de mal à y croire mais c'est alors qu'il a prononcé votre nom ! J'ai alors tout de suite compris que vous aviez réussi à le convaincre de venir me voir.}{Ah, @pcname@ ! Il faut que je vous dise, c'est incroyable ! Figurez-vous que le passager de la cabine numéro 3, eh bien il est venu se dénoncer de lui-même pour la marmite. N'est-ce pas incroyable ? Mais attendez, moi-même au début, j'avais tellement de mal à y croire mais c'est alors qu'il a prononcé votre nom ! J'ai alors tout de suite compris que vous aviez réussi à le convaincre de venir me voir.}{}{}{}{qu1024 4}
+{2201}{[Suite]}{}{1}{}{2203}{}
+
+{2203}{C'est incroyable, vous êtes parvenu à convaincre ce gnome qui semblait si timide et tellement désolé. Ca n'a pas du être simple. En tout cas, je vous remercie infiniment. Vous êtes vraiment extraordinaire. Tenez, je vais vous donner ça pour vous remercier... [Elle attrape de l'une de ses huit pattes une bouteille d'huile qui se trouvait près de la gazinière]}{C'est incroyable, vous êtes parvenu à convaincre ce gnome qui semblait si timide et tellement désolé. Ca n'a pas du être simple. En tout cas, je vous remercie infiniment. Vous êtes vraiment extraordinaire. Tenez, je vais vous donner ça pour vous remercier... [Elle attrape de l'une de ses huit pattes une bouteille d'huile qui se trouvait près de la gazinière]}{}{}{}{}
+{2204}{[Suite]}{}{1}{}{2206}{}
+
+{2206}{Je comptais l'utiliser pour un plat spécial mais... je ne sais pas si le résultat aurait été si intéressant. Il s'agit de l'huile illusoire, une huile utilisée pour graisser armes et armures magiques afin d'augmenter leurs pouvoirs magiques. Je pense que vous ne serez pas déçu du résultat...}{Je comptais l'utiliser pour un plat spécial mais... je ne sais pas si le résultat aurait été si intéressant. Il s'agit de l'huile illusoire, une huile utilisée pour graisser armes et armures magiques afin d'augmenter leurs pouvoirs magiques. Je pense que vous ne serez pas déçue du résultat...}{}{}{}{in-3808}
+{2207}{Merci beaucoup. Je peux vous demander une chose avant de partir ?}{}{5}{}{2210}{}
+{2208}{Merci bien. Au revoir...}{}{5}{}{0}{ fl 2209}
+
+{2209}{Oui, et encore merci.}{Oui, et encore merci.}{}{}{}{}
+
+{2210}{Mais bien entendez, vous savez à quel point j'aime discuter. Demandez-moi tout ce que vous voulez.}{Mais bien entendez, vous savez à quel point j'aime discuter. Demandez-moi tout ce que vous voulez.}{}{}{}{}
+{2211}{En fait, il faut que je vous dise que... vous êtes prise au cercle 693 !}{}{5}{qu1025 3}{2320}{qu1025 4}
+{2012}{Anaïs, je suis désolée mais je dois vous le dire : je n'ai pas pu vous faire embaucher au cercle 693.}{0}{5}{qu1025 6, lf11 0}{2340}{lf11 1}
+{2013}{Anaïs, je suis désolé mais je dois vous le dire : je n'ai pas pu vous faire embaucher au cercle 693.}{1}{5}{qu1025 6, lf11 0}{2340}{lf11 1}
+{2214}{J'aimerais comprendre comment vous pouvez être cuisinière et parallèlement négociatrice.}{}{5}{lf3 0}{270}{lf3 1}
+{2215}{En fait, je vous ai rapporté votre clef.}{}{5}{qu1024 4, in 5858}{2220}{in 5858}
+{2216}{Ah ! J'ai oublié ma question. Je crois que je vais vous laisser.}{}{5}{}{0}{fl 2219}
+
+{}{}{}{}{}{}{}
+
+{2219}{Ce n'est rien, ça m'arrive souvent à moi aussi. Bonne fin de voyage @pcname@ !}{Ce n'est rien, ça m'arrive souvent à moi aussi. Bonne fin de voyage @pcname@ !}{}{}{}{}
+
+{2220}{[Elle récupère la clef que vous lui tendez] Je vous remercie, ça m'étais complètement sorti de la tête... Je crois que c'est cette nouvelle épice qui me rend amnésique, quoique... on ne m'a pas parlé d'effet secondaire mais elle a un goût particulier qui m'enivre dès que j'ouvre le pot. Mais je crois que ce n'est pas le sujet, n'est-ce pas ? [Elle rit légèrement] Vous vouliez peut-être me demander autre chose ?}{[Elle récupère la clef que vous lui tendez] Je vous remercie, ça m'étais complètement sorti de la tête... Je crois que c'est cette nouvelle épice qui me rend amnésique, quoique... on ne m'a pas parlé d'effet secondaire mais elle a un goût particulier qui m'enivre dès que j'ouvre le pot. Mais je crois que ce n'est pas le sujet, n'est-ce pas ? [Elle rit légèrement] Vous vouliez peut-être me demander autre chose ?}{}{}{}{}
+{2221}{En fait, cela m'intrigue : comment faites vous pour être cuisinière et parallèlement négociatrice.}{}{5}{lf3 0}{270}{lf3 1}
+{2222}{Non, mais je dois vous dire... Vous êtes embauchée au cercle 693.}{}{5}{qu1025 3}{2320}{qu1025 4}
+{2223}{Anaïs, je dois vous dire... Je n'ai pas réussi à vous faire engager au cercle 693.}{}{5}{qu1025 6, lf11 0}{2340}{lf11 1}=
+{2224}{Non, j'en ai terminé. Merci...}{}{5}{}{0}{fl 2229}
+
+{}{}{}{}{}{}{}
+
+{2229}{Soit, alors revenez me voir dès que vous voudrez discuter un peu...}{Soit, alors revenez me voir dès que vous voudrez discuter un peu...}{}{}{}{}
+
+
+{2230}{Oh, ça alors ! Vous êtes définitivement incroyable. [Elle s'empare de la marmite] Alors, narrez-moi comment vous avez pu la récupérer !}{Oh, ça alors ! Vous êtes définitivement incroyable. [Elle s'empare de la marmite] Alors, narrez-moi comment vous avez pu la récupérer !}{}{}{}{}
+{2231}{Le passager de la cabine numéro 3 l'avait volé, je l'ai pisté grâce à un sortilège de matérialisation olfactive.}{}{5}{}{2240}{}
+{2232}{L'un des passagers l'avait volé mais je préfère ne pas vous dire lequel.}{}{5}{}{2250}{}
+{2233}{Je suis navré mais je ne peux rien vous dire...}{1}{5}{}{2260}{}
+{2234}{Je suis navrée mais je ne peux rien vous dire...}{0}{5}{}{2260}{}
+{2235}{Un misérable rat avait réussi à la subtiliser mais je l'ai retrouvé.}{}{5}{}{2270}{}
+
+{2240}{Oh mon Dieu. Et alors ? Racontez-moi la suite !}{Oh mon Dieu. Et alors ? Racontez-moi la suite !}{}{}{}{}
+{2241}{Il ne voulait pas ouvrir sa porte mais je l'en ai convaincu.}{}{5}{}{2280}{}
+{2242}{Je crois qu'il n'y a rien a ajouté. Il m'a remis la marmite.}{}{5}{}{2290}{}
+{2243}{Il ne voulait pas avouer mais j'ai prétendu avoir des preuves.}{}{5}{}{2300}{}
+{2244}{J'ai du le menacer de tout révéler pour qu'il me la rende.}{}{5}{}{2310}{}
+
+{2250}{Vraiment ? Mais je ne vais rien lui faire vous savez. Du moment qu'il a apprécié mon plat... Et alors, que lui avez-vous dit pour la récupérer ?}{Vraiment ? Mais je ne vais rien lui faire vous savez. Du moment qu'il a apprécié mon plat... Et alors, que lui avez-vous dit pour la récupérer ?}{}{}{}{}
+{2251}{Il ne voulait pas ouvrir sa porte mais je l'en ai convaincu.}{}{5}{}{2280}{}
+{2252}{Je crois qu'il n'y a rien a ajouté. Il m'a juste remis la marmite.}{}{5}{}{2290}{}
+{2253}{Il ne voulait pas avouer mais j'ai prétendu avoir des preuves.}{}{5}{}{2300}{}
+{2254}{J'ai du le menacer de tout révéler pour qu'il me la rende.}{}{5}{}{2310}{}
+
+{2260}{Oh, vous êtes bien mystérieux... Très bien, après tout vous avez fait ce pour quoi je vous avez engagé. Ne bougez pas ! J'avais préparé votre récompense ici. [Elle attrape de l'une de ses huit pattes une bouteille d'huile qui se trouvait près de la gazinière] Il s'agit de l'huile illusoire, une huile utilisée pour graisser armes et armures magiques afin d'augmenter leurs pouvoirs magiques. Je pense que vous ne serez pas déçu du résultat...}{Oh, vous êtes bien mystérieux... Très bien, après tout vous avez fait ce pour quoi je vous avez engagé. Ne bougez pas ! J'avais préparé votre récompense ici. [Elle attrape de l'une de ses huit pattes une bouteille d'huile qui se trouvait près de la gazinière] Il s'agit de l'huile illusoire, une huile utilisée pour graisser armes et armures magiques afin d'augmenter leurs pouvoirs magiques. Je pense que vous ne serez pas déçu du résultat...}{}{}{}{in-3808}
+{2261}{Merci beaucoup. Je peux vous demander une chose avant de partir ?}{}{5}{}{2210}{}
+{2262}{Merci bien. Au revoir...}{}{5}{}{0}{ fl 2209}
+
+{2270}{Oh mon Dieu... Et alors ? Racontez-moi comment !}{Oh mon Dieu... Et alors ? Racontez-moi comment !}{}{}{}{}
+{2271}{Il ne voulait pas ouvrir sa porte mais j'ai difficilement fini par l'en convaincre.}{}{5}{}{2280}{}
+{2272}{Il ne voulait pas avouer mais j'ai prétendu avoir des preuves.}{}{5}{}{2300}{}
+{2273}{J'ai du le menacer de tout révéler pour qu'il me la rende.}{}{5}{}{2310}{}
+
+{2280}{Je vois, ça ne m'étonne pas de vous. En tout cas, je vous remercie pour tout ce que vous avez fait et... [Elle attrape de l'une de ses huit pattes une bouteille d'huile qui se trouvait près de la gazinière] je pense que ceci fera une bonne récompense. Il s'agit de l'huile illusoire, une huile utilisée pour graisser armes et armures magiques afin d'augmenter leurs pouvoirs magiques. Je pense que vous ne serez pas déçu du résultat...}{Je vois, ça ne m'étonne pas de vous. En tout cas, je vous remercie pour tout ce que vous avez fait et... [Elle attrape de l'une de ses huit pattes une bouteille d'huile qui se trouvait près de la gazinière] je pense que ceci fera une bonne récompense. Il s'agit de l'huile illusoire, une huile utilisée pour graisser armes et armures magiques afin d'augmenter leurs pouvoirs magiques. Je pense que vous ne serez pas déçu du résultat...}{}{}{}{in-3808}
+{2281}{Merci beaucoup. Je peux vous demander une chose avant de partir ?}{}{5}{}{2210}{}
+{2282}{Merci bien. Au revoir...}{}{5}{}{0}{ fl 2209}
+
+{2290}{Oh... Je m'attendais à un final plus... mouvementé. Je dois lire trop de livres d'actions. Enfin... [Elle attrape de l'une de ses huit pattes une bouteille d'huile qui se trouvait près de la gazinière] Je pense que ceci fera une bonne récompense. Il s'agit de l'huile illusoire, une huile utilisée pour graisser armes et armures magiques afin d'augmenter leurs pouvoirs magiques. Je pense que vous ne serez pas déçu du résultat...}{Oh... Je m'attendais à un final plus... mouvementé. Je dois lire trop de livres d'actions. Enfin... [Elle attrape de l'une de ses huit pattes une bouteille d'huile qui se trouvait près de la gazinière] Je pense que ceci fera une bonne récompense. Il s'agit de l'huile illusoire, une huile utilisée pour graisser armes et armures magiques afin d'augmenter leurs pouvoirs magiques. Je pense que vous ne serez pas déçu du résultat...}{}{}{}{in-3808}
+{2291}{Merci beaucoup. Je peux vous demander une chose avant de partir ?}{}{5}{}{2210}{}
+{2292}{Merci bien. Au revoir...}{}{5}{}{0}{ fl 2209}
+
+{2300}{Et alors ? Il a craqué sous la pression ? Oh @pcname@, vous êtes le meilleur ! Je vous adore... [Elle attrape de l'une de ses huit pattes une bouteille d'huile qui se trouvait près de la gazinière] Je pense que ceci fera une bonne récompense pour vos efforts. Il s'agit de l'huile illusoire, une huile utilisée pour graisser armes et armures magiques afin d'augmenter leurs pouvoirs magiques. Je pense que vous ne serez pas déçu du résultat...}{Et alors ? Il a craqué sous la pression ? Oh @pcname@, vous êtes la meilleure ! Je vous adore... [Elle attrape de l'une de ses huit pattes une bouteille d'huile qui se trouvait près de la gazinière] Je pense que ceci fera une bonne récompense pour vos efforts. Il s'agit de l'huile illusoire, une huile utilisée pour graisser armes et armures magiques afin d'augmenter leurs pouvoirs magiques. Je pense que vous ne serez pas déçu du résultat...}{}{}{}{in-3808}
+{2301}{Merci beaucoup. Je peux vous demander une chose avant de partir ?}{}{5}{}{2210}{}
+{2302}{Merci bien. Au revoir...}{}{5}{}{0}{ fl 2209}
+
+{2310}{Et donc ? Il a fini par craquer ? Incroyable ! @pcname@, vous êtes vraiment le meilleur ! Je vous adore... [Elle attrape de l'une de ses huit pattes une bouteille d'huile qui se trouvait près de la gazinière] Je pense que ceci fera une bonne récompense pour vos efforts. Il s'agit de l'huile illusoire, une huile utilisée pour graisser armes et armures magiques afin d'augmenter leurs pouvoirs magiques. Je pense que vous ne serez pas déçu du résultat...}{Et donc ? Il a fini par craquer ? Incroyable ! @pcname@, vous êtes vraiment la meilleure ! Je vous adore... [Elle attrape de l'une de ses huit pattes une bouteille d'huile qui se trouvait près de la gazinière] Je pense que ceci fera une bonne récompense pour vos efforts. Il s'agit de l'huile illusoire, une huile utilisée pour graisser armes et armures magiques afin d'augmenter leurs pouvoirs magiques. Je pense que vous ne serez pas déçu du résultat...}{}{}{}{in-3808}
+{2311}{Merci beaucoup. Je peux vous demander une chose avant de partir ?}{}{5}{}{2210}{}
+{2312}{Merci bien. Au revoir...}{}{5}{}{0}{ fl 2209}
+
+{2320}{[Instantanément, alors que vous venez à peine de prononcer ces mots, des larmes se mettent à couler abondamment le long de ses joues] Je... @pcname@... Je vous adore ! Jamais ne n'aurais cru que cela soit un jour possible, jamais ! [Les larmes qui s'infiltrent entre ses lèvres l'empêchent de prononcer le moindre mot de plus. Ainsi, elle teinte vainement d'avaler ces larmes qui ne cessent de s'écouler]}{[Instantanément, alors que vous venez à peine de prononcer ces mots, des larmes se mettent à couler abondamment le long de ses joues] Je... @pcname@... Je vous adore ! Jamais ne n'aurais cru que cela soit un jour possible, jamais ! [Les larmes qui s'infiltrent entre ses lèvres l'empêchent de prononcer le moindre mot de plus. Ainsi, elle teinte vainement d'avaler ces larmes qui ne cessent de s'écouler]}{}{}{}{}
+{2321}{Prenez un instant Anaïs.}{}{5}{}{2330}{}
+
+{2330}{[Elle s'essuie le visage de l'une de ses pattes carmin. Elle reprend tranquillement son souffle jusqu'à ce qu'enfin le débit des larmes s'amenuise] @pcname@, je ne pourrais absolument jamais vous remercier assez. Cependant, je pense que ceci vous sera plus qu'utile : Increasemycharisma. C'est le code numéro 5, celui du charisme.}{[Elle s'essuie le visage de l'une de ses pattes carmin. Elle reprend tranquillement son souffle jusqu'à ce qu'enfin le débit des larmes s'amenuise] @pcname@, je ne pourrais absolument jamais vous remercier assez. Cependant, je pense que ceci vous sera plus qu'utile : Increasemycharisma. C'est le code numéro 5, celui du charisme.}{}{}{}{ru 1231}
+{2331}{Je vous remercie, je vais vous laisser vous reposer un instant.}{}{5}{}{0}{fl 2335}
+
+{2335}{Oui... Revenez quand vous le voudrez !}{Oui... Revenez quand vous le voudrez !}{}{}{}{}
+
+{2340}{[Anaïs vous regarde d'un air triste] @pcname@, je suis sûre que vous avez fait de votre mieux alors n'en parlons plus. [Anaïs baisse la tête, elle a manifestement du mal à cacher sa tristesse]}{[Anaïs vous regarde d'un air triste] @pcname@, je suis sûre que vous avez fait de votre mieux alors n'en parlons plus. [Anaïs baisse la tête, elle a manifestement du mal à cacher sa tristesse]}{}{}{}{}
+{2341}{[Partir]}{}{1}{}{0}{}
+{2342}{Je suis vraiment navré. Je vais vous laisser.}{}{5}{}{0}{}
+
+
+//Qu intendant réussie
+
+{2398}{Bien, mais n'hésitez pas à revenir quand vous le souhaiterez !}{Bien, mais n'hésitez pas à revenir quand vous le souhaiterez !}{}{}{}{}
+
+{2400}{@pcname@, comme je suis heureuse de vous revoir ! Que-puis-je faire pour vous, dites moi tout ! (Absolument tout !)}{@pcname@, comme je suis heureuse de vous revoir ! Que-puis-je faire pour vous, dites moi tout ! (Absolument tout !)}{}{}{}{}
+{2401}{En fait, j'aimerais vous poser quelques questions.}{}{5}{}{2020}{}
+{2402}{Je viens vous restituer la clef de votre malle.}{}{5}{qu1024 4, in 5858, lf0 0}{2220}{in 5858}
+{2403}{En fait, je vous rapporte enfin votre marmite.}{}{5}{in 3807}{2230}{in 3807, qu1024 4}
+{2405}{Rien, c'est très gentil à vous.}{}{5}{}{0}{fl 2398}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}

@@ -1,0 +1,54 @@
+{1}{Bonjour monsieur, bienvenue au guichet de la gare du cercle 666. En quoi puis-je vous aider ?}{Bonjour madame, bienvenue au guichet de la gare du cercle 666. En quoi puis-je vous aider ?}{}{}{}{}
+{2}{Je dois partir pour les limbes.}{}{5}{gf252 0}{50}{}
+{3}{Moi d'voir partir pour les limbes.}{}{-4}{gf252 0}{50}{}
+{4}{Je souhaiterais faire annuler une réservation.}{}{5}{gf252 1}{60}{}
+{5}{Moi v'loir annuler voyage.}{}{-4}{gf252 1}{60}{}
+{6}{Rien, je réfléchis.}{}{5}{}{0}{}
+{7}{R'in, moi réfléchir.}{}{-4}{}{0}{}
+
+{50}{Bien, une réservation va être émise à votre nom. Puis-je vois votre fiche de renseignement ?}{Bien, une réservation va être émise à votre nom. Puis-je vois votre fiche de renseignement ?}{}{}{}{}
+{51}{[Vous la lui montrez]}{}{1}{in 5808}{70}{gf253 1, gf252 1}
+{52}{Mince, je dois aller la chercher.}{}{5}{}{0}{fl 58}
+{53}{Mince, moi d'voir aller chercher.}{}{-4}{}{0}{fl 58}
+{54}{En fait, j'ai changé d'avis.}{}{5}{}{100}{}
+{55}{Heu, moi changeais d'avis...}{}{-4}{}{100}{}
+
+{58}{Oui, c'est indispensable.}{Oui, c'est indispensable.}{}{}{}{}
+
+{60}{Pour où était votre réservation ?}{Pour où était votre réservation ?}{}{}{}{}
+{61}{Les limbes.}{}{5}{gf253 1}{80}{}
+{62}{Limbes.}{}{-4}{gf253 1}{80}{}
+{63}{Oubliez-cela.}{}{5}{}{100}{}
+{64}{Laissez tomber !}{}{-4}{}{100}{}
+
+{70}{Bien... @pcname@ ? Une réservation a été émise à votre nom. Vous pourrez prendre le prochain train à destination des limbes.}{Bien... @pcname@ ? Une réservation a été émise à votre nom. Vous pourrez prendre le prochain train à destination des limbes.}{}{}{}{}
+{71}{Merci bien.}{}{5}{}{0}{}
+{72}{Marsi.}{}{-4}{}{0}{}
+{73}{Parfait, je vais partir.}{}{5}{}{0}{}
+{74}{Bien, moi partir.}{}{-4}{}{0}{}
+
+{80}{Je peux voir votre fiche de renseignements ?}{Je peux voir votre fiche de renseignements ?}{}{}{}{}
+{81}{[Vous la lui montrez]}{}{1}{in 5808}{90}{gf253 0, gf252 0}
+{82}{Mince, je dois aller la chercher.}{}{5}{}{0}{fl 58}
+{83}{Mince, moi d'voir aller chercher.}{}{-4}{}{0}{fl 58}
+{84}{Non, j'ai changé d'avis.}{}{5}{}{100}{}
+{85}{Nan, moi plus vouloir...}{}{-4}{}{100}{}
+
+{90}{Bien, vous n'avez plus de réservation à bord de ce train. Souhaitez-vous prendre une autre réservation ?}{Bien, vous n'avez plus de réservation à bord de ce train. Souhaitez-vous prendre une autre réservation ?}{}{}{}{}
+{91}{Oui.}{}{1}{}{150}{}
+{92}{Non merci, je vous laisse.}{}{5}{}{0}{}
+{93}{Nan, moi partir.}{}{-4}{}{0}{}
+
+{100}{Je vois, désirez-vous autre chose ?}{Je vois, désirez-vous autre chose ?}{}{}{}{}
+{101}{Oui, je dois partir pour les limbes.}{}{5}{gf252 0}{50}{}
+{102}{Ouais, moi d'voir partir pour les limbes.}{}{-4}{gf252 0}{50}{}
+{103}{Oui, je souhaiterais faire annuler une réservation.}{}{5}{gf252 1}{60}{}
+{104}{Ouais, moi v'loir annuler voyage.}{}{-4}{gf252 1}{60}{}
+{105}{Non merci.}{}{5}{}{0}{}
+{106}{Nan, c'bon.}{}{-4}{}{0}{}
+
+{150}{Sur quel train ?}{Sur quel train ?}{}{}{}{}
+{151}{Celui à destination des limbes.}{}{5}{}{50}{}
+{152}{Le pour limbes.}{}{-4}{}{50}{}
+{153}{En fait non.}{}{5}{}{100}{}
+{154}{Bah en fait, nan.}{}{-4}{}{100}{}

@@ -1,0 +1,92 @@
+//
+// Area -- List of areas 
+//   X-Coord, Y-Coord, WM-X-offset, WM-Y-offset /Name /Description./Radius:<#>
+//
+//   Coords are on the main world-map.  Radius is detection radius (in sectors),
+// in other words, the # of sectors that the player must pass near it on the 
+// WorldMap to make it visible if it isn't already known; default value is 5.
+//   The WM-#-offset values are used to position the name text in the worldmap.
+//
+
+{0}{0, 0, 0, 0 /Un endroit sans importance/Il s'agit de la zone inconnue.}
+{1}{90226,84176, 0, 0 /Tristes Collines/Une petite ville minière.}
+{2}{92960,82592, 0, -5 /Lieu de l'accident/L'épave du dirigeable.}
+{3}{70218,92096, 0, 0 /Racine Noire/Une ville frontalière.}
+{4}{102768, 116894, 0, 5 /Caladon/Un royaume féodal florissant.}
+{5}{79163, 105618, 0, 0 /Dernholm, la capitale de Cumbria/Un royaume féodal moribond.}
+{6}{98922, 42009, 0, 0 /Qintarra/Une importante communauté d'elfes.}
+{7}{83690, 48174, -5, 15 /Les mines du Mont Noir/Le repaire abandonné du Clan du Mont Noir./Radius:-1}
+{8}{32320, 62472, 0, 0 /Cendrebourg/Une ville sur la côte est.}
+{9}{61050, 42562, 0, 0 /Clan de la Roue/Une société de nains établis dans les montagnes grises./Radius:-1}
+{10}{76113, 48162, 0, -10 /Eaux Dormantes/Une petite ville réputée pour ses épées.}
+{11}{28455, 31171, 0, 0 /Tulla/Une mystérieuse ville peuplée de mages au coeur des Landes de Vendigroth.} //Old Tulla 28319, 31202 
+{12}{104172,35969, 0, 0 /Le Supplice de l'Aigle/Terre sacrée des elfes à la lisière de la Forêt Scintillante.}
+{13}{112027, 96883, 0, 0 /Rosebourg/Une petite ville près du Cirque de Brodgar.}
+{14}{112279,94639, 0, 0 /Ruines anciennes/Ruines anciennes/Radius:5}//Old Ring of Brodgar 
+{15}{22184,41521, 0, 0 /Camp des elfes noirs/Le camp de base des elfes noirs près des ruines de Vendigroth.}
+{16}{96416, 18911, 0, 0 /T'sen-Ang/Demeure des elfes noirs./Radius:-1}
+{17}{82492, 45629, 0, 0 /Col de Harden/Un col enneigé très dangereux qui mène à la Forêt Scintillante.}
+{18}{96014,92287, 0, 0 /Col de Gorgoth/Un col oublié reliant les royaumes de Dernholm et de Caladon./Radius:5}
+{19}{20693, 56027, 0, 0 /Ile du Désespoir/Une colonie pénitentiaire.}
+{20}{29874,47350, 0, 0 /Passage vers les Landes/Un pont menant aux Landes de Vendigroth.} // Old Leahbo 29151,48287  
+{21}{62243,65664, 0, 0 /Tarante/La plus grande et la plus industrialisée des villes d'Arcanum.}
+{22}{19704,37452, 0, 0 /Ruines de Vendigroth/Les vestiges d'une ancienne cité./Radius:1}// entrance to ruins: 19689,37487 
+{23}{46198,120881, -60, 10 /Dernière demeure de Nasrudin/Endroit abritant les reliques de Nasrudin.}//old:46827,120680 
+{24}{43669, 85717, 0, 0 /La crique de Pierre Latige/Une crique hantée./Radius:-1}
+{25}{32602, 71189, 0, 0/Le domaine des Guillomet/Une baraque délabrée.}
+{26}{55779, 76127, 0, 0/Vooriden/Un petit village au sud de Tarante./Radius:20}
+{27}{75486, 18380, 0, -10/Les Profondeurs bangelliennes/La dernière demeure de la Terreur Bangellienne.}
+{28}{90818, 70319, 0, 0/Carrière de Torin/Une ancienne carrière de pierre tenue par des nains.}//90825, 70292 
+{29}{51705, 85747, -80, 10/Trésor de Pierre Latige/La dernière cachette du trésor de l'infâme pirate./Radius:-1}
+{30}{45527, 65394, 0, 10/Ruines elfiques/Un lieu pouvant receler de nombreuses richesses./Radius:1}
+{31}{20526, 53542, 0, 0/Demeure de Maximilien/Un étrange vieil homme vivant sur l'Ile du Désespoir.}
+{32}{22157, 52802, -40, -15/La plage des ombres/Un endroit réputé pour abriter de nombreux objets étranges.}
+{33}{17196, 52632, 0, -10/Le camp des femmes/Un petit village regroupant uniquement des femmes nomades.}
+{34}{75497, 20051, 0, 5/Le village bédokien/Un petit village peuplé de reptiles, situé dans les marais sombres./Radius:-1}
+{35}{77170, 17560, -120, -15/Le camp des braconniers/Le camp où vivent des braconniers chasseurs de bédokiens.}
+{36}{0, 0, 0, 0 /Un endroit sans importance/Il s'agit de la zone inconnue.}
+{37}{85994, 56686, 0, 0/Clan des Tailleurs de pierre/La demeure du Clan des Tailleurs de pierre.}
+{38}{101536, 116144, 0, 0/Un endroit mystérieux/Découvert sur le tableau dans l'Auberge du Champignon.}
+{39}{50845, 15901, 0, 0/La clairière de rubis/Un endroit ancien et inquiétant./Radius:-1}
+{40}{88650, 40995, 0, 0/Le château S'nel N'fa/Des ruines truffées de pièges, supposées abriter le bâton de K'an T'au./Radius:-1}
+{41}{75700, 101216, 0, 0/Le repaire des Tourmenteurs/La dernière demeure connue de la pauvre Dame Druella./Radius:-1}
+{42}{75470, 93736, 0, 0/Atelier de Lambert/Atelier de Lambert Camargue./Radius:3}
+{43}{40699, 76973, 0, 0/Kree/L'ancienne grande ville détruite par le Fléau de Kree./Radius:20}
+{44}{87403, 59823, 0, 0/Le puits des flammes/L'endroit où se cache la Lame de Xerxès.}
+{45}{59131, 108638, 0, 0/Ile des demi-ogres/Le lieu supposé du laboratoire d'élevage secret.}// old: 59028, 108560 
+{46}{0, 0, 0, 0/Un endroit sans importance/Il s'agit de la zone inconnue.}
+{47}{78754, 62751, 0, 0/Lieu de rendez-vous de Vollinger/Lieu de rendez-vous de Vollinger./Radius:-1}
+{48}{49267, 53559, 0, 0/Le repaire de Bellerogrim/Une grotte où a été découvert le dernier dragon d'Arcanum.}
+{49}{101152, 64478, 0, 0/Apparition de la wiverne mortelle/Le repaire supposé de la wiverne mortelle./Radius:-1}
+{50}{40223, 101945, 0, 0/Point de mouillage/Débarquement sur l'Ile de Thanatos.}
+{51}{47628, 108786, 0, 0/Village de la tribu des Cendropithèques/Village abritant une tribu primitive adoratrice d'une mystérieuse divinité.}
+{52}{41056, 112926, 0, 0/Le repaire du Bogaroth/Le fameux repaire du monstre qui a massacré la tribu des Cendropithèques.}
+{53}{65824, 84632, 0, 0/Ruines de Szabo/Anciennes ruines./Radius:1}
+{54}{46112, 120624, 0, 0/Pont/Début de la piste menant au dieu de Thanatos.}
+{55}{63608, 50488, 0, 0/Donjon du dragon blessé/Donjon du dragon blessé.}
+{56}{49718, 58743, 0, 0/Temple ancien/Un temple supposé renfermer des trésors.}
+{57}{96948, 75722, 0, -15/Entrée secrète du Clan des Forgerons/L'entrée du légendaire clan de nains./Radius:-1}
+{58}{91902, 39305, 0, 0/K'na Tha/Ancien lieu magique supposé renfermer l'Etoile d'Azram./Radius:-1}
+{59}{96319, 113312, 0, 0/La pointe du rasoir/Les bateaux craignent ces eaux tumultueuses qu'il faut traverser pour contourner la pointe d'Arcanum./Radius:20}
+{60}{31891, 56980, 0, 0/Epave/Les restes d'un ancien bateau pirate./Radius:10}
+{61}{67130, 44393, 0, 0/Grotte non répertoriée/Nul ne connaît les mystères que recèle cette grotte inexplorée./Radius:10}
+{62}{99225, 98206, 0, 0/Grotte des voleurs/Grotte des voleurs/Radius:25}
+{63}{87907,45024, 0, -10/Cérémonie étrange/On y entend une étrange mélopée.../Radius:5}
+{64}{84513,11425, 0, 0/Village caché/Lieu d'où se dégage une grande allégresse.../Radius:5}
+{65}{53341, 66079, 0, 0/Mine interdite/Mine dangereuse jonchée de squelettes et de veuves noires./Radius:10}
+{66}{92830, 84702, 0, 10/Bicoque de Simon Fahrkus/Bicoque de Simon Fahrkus./Radius:-1}
+{67}{92896, 83359, -150, 0/Demeure d'Arbalah/Demeure d'Arbalah./Radius:-1}
+{68}{78751, 97887, 0, 0/Grotte du loup/Grotte du loup./Radius:10}
+{69}{77797, 72805, 0, 0/Autel de Torg/Un vieil autel de pierre./Radius:15}
+{70}{56490, 26977, 0, 0/Autel de Kerlin/Un ancien autel en or./Radius:20}
+{71}{104104, 104610, 0, 0/Autel de Bolo/Un autel de pierre érodé./Radius:20}
+{72}{84586, 53037, 0, 0/Lieu-dit des Murmures/Lieu indiqué sur la carte dans le coffre du Clan des Forgerons./Radius:-1}
+{73}{30364, 44319, 0, 0/Ruines mystérieuses des Landes/Lieu indiqué par Weldo Rubin.}
+{74}{39588, 33621, 0, 0/Mare étrange/Une mare intrigante au milieu de nulle part./Radius:25}
+{75}{68876, 32889, 0, 0/La tourbière/Un endroit maléfique./Radius:25}
+{76}{104148, 77062, 0, 0/La cathédrale endommagée/Un lieu jonché de ruines./Radius:25}
+{77}{108504, 84356, 0, 0/Le vieux lagon/Un lagon éloigné./Radius:25}
+{78}{87527, 101345, 0, 0/Labyrinthe ancien/Un mystérieux ancien labyrinthe./Radius:25}
+{79}{103116, 90384, 0, 0/Le lieu gelé/Un endroit inquiétant./Radius:25}
+{80}{80738, 30497, 0, 0/Petit camp/Un petit camp visible de loin./Radius:25}
+{81}{102113, 56290, 0, 0/Petite mare/On peut y entendre des cris et des coups de fouet./Radius:25}

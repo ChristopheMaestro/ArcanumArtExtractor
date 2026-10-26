@@ -1,0 +1,1492 @@
+// Unless you are adding a prototype, DO NOT PLACE NEW MESSAGES IN THIS FILE
+// New descriptions and such go in a module-based file called gamedesc.mes
+
+{1000}{Wand}Rote Ziegelwand
+{1001}{Wand}Graue Ziegelwand
+{1002}{Wand}Solide Felswand
+{1003}{Wand}Leichte Holzwand
+{1004}{Wand}Schwere Holzwand
+{1005}{Wand}Holzzaun
+{1006}{Wand}Eisenzaun
+{1007}{Wand}Fassade
+
+{2008}{Eisentür}
+{2009}{Schwere Holztür}
+{2010}{Eisentor}
+{2011}{Eisentür}
+{2012}{Glastür}
+{2013}{Steintür}
+{2014}{Felsrutsch}
+{2015}{Fenster}
+{2016}{Nicht zu öffnende Fenster}
+{2017}{Vorhänge}
+{2018}{Verbarrikadierte Fenster}
+{2019}{Holzläden}
+{2020}{Eisentür}
+{2021}{Buntglas}
+{2022}{Vernageltes Fenster}
+
+{3023}{Abfallhaufen}
+{3024}{Holztruhe}
+{3025}{Fass}
+{3026}{Schwarze Truhe}
+{3027}{Truhe}
+{3028}{Truhe}
+{3029}{Intarsientruhe}
+{3030}{Intarsientruhe}
+{3031}{Holztruhe}
+{3032}{Schwarze Truhe}
+{3033}{Tresor}
+{3034}{Tresor}
+{3035}{Zaubertruhe}
+{3036}{Mysterientruhe}
+{3037}{Arkane Truhe}
+{3038}{Zaubertruhe}
+{3039}{Mysterientruhe}
+{3040}{Arkane Truhe}
+{3041}{Fabrikabfälle}
+{3042}{Ersatzteilkiste}
+{3043}{Überseekiste}
+{3044}{Vorratskiste}
+{3045}{Verpackte Komponenten}
+{3046}{Industriegüter}
+{3047}{Fabrikabfälle}
+{3048}{Ersatzteilkiste}
+{3049}{Überseekiste}
+{3050}{Vorratskiste}
+{3051}{Verpackte Komponenten}
+{3052}{Industriegüter}
+{3053}{Zwergentruhe}
+{3054}{Zwergentruhe}
+{3055}{Mülltonne}
+{3056}{Leiche}
+{3057}{Altar - gut}
+{3058}{Altar - neutral}
+{3059}{Altar - böse}
+{3060}{Pflanze}
+
+{4006}{Großer Baum}
+{4007}{Baum}
+{4008}{Kleiner Baum}
+{4009}{Abgestorbener Baum}
+{4010}{Pflanze}
+{4011}{Kleiner Metallgegenstand}
+{4012}{Metallgegenstand}
+{4013}{Großer Metallgegenstand}
+{4014}{Kleiner Stein}
+{4015}{Stein}
+{4016}{Großer Stein}
+{4017}{Kleiner Holzgegenstand}
+{4018}{Holzgegenstand}
+{4019}{Großer Holzgegenstand}
+{4020}{Etwas Kleines}
+{4021}{Etwas Mittelgroßes}
+{4022}{Etwas Großes}
+{4023}{Große Maschine}
+{4024}{Maschine}
+{4025}{Bett}
+{4026}{Licht}
+{4027}{Durchgang}
+{4028}{Blutlache}
+{4029}{Stinkende Wolke}
+{4030}{Energiewand}
+{4031}{Feuerwand}
+{4032}{Steinwand}
+{4033}{Nebelwolke}
+{4034}{Eissturm}
+{4035}{Licht}
+{4036}{Licht}
+{4037}{Licht}
+{4038}{Licht}
+{4039}{Licht}
+{4040}{Licht}
+{4041}{Licht}
+{4042}{Licht}
+{4043}{Licht}
+{4044}{Licht}
+{4045}{Licht}
+{4046}{Licht}
+{4047}{Scharfes Dynamit}
+{4048}{Rauch}
+{4049}{Tickende Zeitbombe}
+{4050}{}
+
+// Weapons
+
+{5028}{Geschoss}
+{6029}{Dolch}
+{6030}{Schwert}
+{6031}{Axt}
+{6032}{Streitkolben}
+{6033}{Revolver}
+{6034}{Breitschwert}
+{6035}{Bogen}
+{6036}{Schrotflinte}
+{6037}{Stab}
+{6038}{Vergiftetes Schwert}
+{6039}{Elefantenbüchse}
+{6040}{Tesla-Stab}
+{6041}{Flammenwerfer}
+{6042}{Verzaubertes Schwert}
+{6043}{UNBENUTZT}
+{6044}{Edler Revolver}
+{6045}{Repetiergewehr}
+{6046}{Jagdflinte}
+{6047}{Schienennagel}
+{6048}{Ausbalanciertes Schwert}
+{6049}{Bronwycks Gewehr}
+{6050}{Rostiger Dolch}
+{6051}{Edler Stahldolch}
+{6052}{Wurfdolch}
+{6053}{Mechanischer Dolch}
+{6054}{Magierdolch}
+{6055}{Dolch der Hast}
+{6056}{Rostiges Schwert}
+{6057}{Hochwertiges Schwert}
+{6058}{Caladon. Elite-Schwert}
+{6059}{Rapier}
+{6060}{Kurzschwert}
+{6061}{Krummsäbel}
+{6062}{Katana}
+{6063}{Krummschwert}
+{6064}{Schwert der Verteidigung}
+{6065}{Stillwater-Klinge}
+{6066}{Rostige Axt}
+{6067}{Hochwertige Axt}
+{6068}{Mächtige Axt}
+{6069}{Federleichte Axt}
+{6070}{Todesaxt}
+{6071}{Axt der Stärke}
+{6072}{Rostiger Streitkolben}
+{6073}{Hochwertiger Streitkolben}
+{6074}{Hammer}
+{6075}{Rostiger Hammer}
+{6076}{Hochwertiger Hammer}
+{6077}{Maschinenhammer}
+{6078}{Trümmerhammer}
+{6079}{Infernohammer}
+{6080}{Alter Revolver}
+{6081}{Steinschloßpistole}
+{6082}{Alte Steinschloßp.}
+{6083}{Hochwertiger Revolver}
+{6084}{Schalldämpferpistole}
+{6085}{Hochgeschw.-Pistole}
+{6086}{Schmuckpistole}
+{6087}{Schrecks Pistole}
+{6088}{Langstreckenpistole}
+{6089}{Hochwertiges Breitschwert}
+{6090}{Rostiges Breitschwert}
+{6091}{Claymore}
+{6092}{Flamberg}
+{6093}{Barbarengrobschwert}
+{6094}{Schwert der Luft}
+{6095}{Schwert der Seuchen}
+{6096}{Kompositbogen}
+{6097}{Kurzbogen}
+{6098}{Langbogen}
+{6099}{Elfenjäger-Bogen}
+{6100}{Bogen der Angst}
+{6101}{Klappgewehr}
+{6102}{Repetiergewehr Variante 1}
+{6103}{Repetiergewehr Variante 2}
+{6104}{Mechanisches Gewehr}
+{6105}{Gewehr mit Zielfernrohr}
+{6106}{Scharfschützengewehr}
+{6107}{Hebel-Maschinengewehr}
+{6108}{Gewehr}
+{6109}{Rostiges Gewehr}
+{6110}{Schockstab}
+{6111}{Hochwertiger Stab}
+{6112}{Heilstab}
+{6113}{Schamanenstab}
+{6114}{Magierstab}
+{6115}{Schalldämpferrevolver}
+{6116}{Handgearb. Steinschloss}
+{6117}{Großes Rohr}
+{6118}{Handkanone}
+{6119}{Clarington-Gewehr}
+{6120}{Fadenschwert}
+{6121}{Edler Dolch}
+{6122}{Bezauberter Dolch}
+{6123}{Magischer Dolch}
+{6124}{Mystischer Dolch}
+{6125}{Arkaner Dolch}
+{6126}{Geladenes Schwert}
+{6127}{Bezaubertes Schwert}
+{6128}{Magisches Schwert}
+{6129}{Mystisches Schwert}
+{6130}{Arkanes Schwert}
+{6131}{Vergiftete Axt}
+{6132}{Geladene Axt}
+{6133}{Pyrotechnikaxt}
+{6134}{Bezauberte Axt}
+{6135}{Magische Axt}
+{6136}{Mystische Axt}
+{6137}{Arkane Axt}
+{6138}{Bezauberter Streitkolben}
+{6139}{Magischer Streitkolben}
+{6140}{Mystischer Streitkolben}
+{6141}{Arkaner Streitkolben}
+{6142}{Bezaubertes Großschwert}
+{6143}{Magisches Großschwert}
+{6144}{Mystisches Großschwert}
+{6145}{Arkanes Großschwert}
+{6146}{Pyrotechnikbogen}
+{6147}{Vergifteter Bogen}
+{6148}{Bezauberter Bogen}
+{6149}{Magischer Bogen}
+{6150}{Mystischer Bogen}
+{6151}{Arkaner Bogen}
+{6152}{Gewehrkanone}
+{6153}{Säuregewehr}
+{6154}{Tesla-Gewehr}
+{6155}{Granatwerfer}
+{6156}{Gelad. Beschleunigergew.}
+{6157}{Klingenwerfer}
+{6158}{Pyrotechnikgewehr}
+{6159}{Betäubungsgewehr}
+{6160}{Bezauberter Stab}
+{6161}{Magischer Stab}
+{6162}{Mystischer Stab}
+{6163}{Arkaner Stab}
+{6164}{Bumerang}
+{6165}{Klingenbumerang}
+{6166}{Ausbalancierter Bumerang}
+{6167}{Chakram}
+{6168}{Gezacktes Chakram}
+{6169}{Mystisches Chakram}
+{6170}{Azrams Stern}
+{6171}{Luftenthaupter}
+{6172}{Schwert der Leere}
+{6173}{Drochs Kriegsbringer}
+{6174}{Großk. Vendigroth-Gewehr}
+{6175}{Axtgriff aus Eichenholz}
+{6176}{Stilett}
+{6177}{Knochendolch}
+{6178}{Drachenschwert}
+
+{7038}{Pfeil}
+{7039}{Kugel}
+{7040}{Batterie}
+{7041}{Treibstoff}
+{8042}{Dicke Wollkleidung}
+{8043}{Schutzlederkleidung}
+{8044}{Kettenpanzer}
+{8045}{Maschinen-Plattenrüstung}
+{8046}{Priestergewand}
+{8047}{Mithril-Plattenrüstung}
+{8048}{Schreckensrüstung}
+{8049}{Schöner Anzug}
+{8050}{Zerbeulter  Holzschild}
+{8051}{Helm}
+{8052}{Handschuhe}
+{8053}{Stiefel}
+{8054}{Ziselierter Ring}
+{8055}{Medaillon}
+{8056}{Lederhandschuhe}
+{8057}{Ladungsring}
+{8058}{Kleine dicke Wollkleidung}
+{8059}{Kleine Schutzlederkleidung}
+{8060}{Kleiner Kettenpanzer}
+{8061}{Kl. Maschinen-Plattenrst.}
+{8062}{Kleines Priestergewand}
+{8063}{Kl. Mithril-Plattenrst.}
+{8064}{Kleine Schreckensrüstung}
+{8065}{Kleiner schöner Anzug}
+{8066}{Große dicke Wollkleidung}
+{8067}{Große Schutzlederkleidung}
+{8068}{Gr. Mithril-Plattenrst.}
+{8069}{Großer schöner Anzug}
+{8070}{Wildlederjacke}
+{8071}{Geölte Diebeslederkleidung}
+{8072}{Mithril-Kettenpanzer}
+{8073}{Maschinen-Rüstung}
+{8074}{Schattengewand}
+{8075}{Standard-Plattenrüstung}
+{8076}{Bronze-Barbarenkleidung}
+{8077}{Smokingjackett}
+{8078}{Kleine Wildlederjacke}
+{8079}{Kl. geölte Diebeslederkl.}
+{8080}{Kl. Mithril-Kettenpanzer}
+{8081}{Kl. Maschinen-Plattenrst.}
+{8082}{Kleines Chamäleongewand}
+{8083}{Kl. Standard-Plattenrst.}
+{8084}{Kl. Bronze-Barbarenkl.}
+{8085}{Kleines Smokingjackett}
+{8086}{Schweres Lumpengewand}
+{8087}{Gr. geölte Diebeslederkl.}
+{8088}{Gr. Standard-Plattenrst.}
+{8089}{Smokingjackett}
+{8090}{Wolljacke}
+{8091}{Lederrüstung}
+{8092}{Geölter Kettenpanzer}
+{8093}{St.-Maschinen-Plattenrst.}
+{8094}{Gewand}
+{8095}{Bronze-Plattenrüstung}
+{8096}{Dunkle Barbarenkleidung}
+{8097}{Dienstbotenkleidung}
+{8098}{Kleine Wolljacke}
+{8099}{Kleine Lederrüstung}
+{8100}{Kl. geölter Kettenpanzer}
+{8101}{Kl. St.-Maschinen-Plrst.}
+{8102}{Kleines Gewand}
+{8103}{Kl. Bronze-Plattenrüstung}
+{8104}{Kl. dunkle Barbarenkl.}
+{8105}{Kleine Dienerkleidung}
+{8106}{Große Wolljacke}
+{8107}{Große Lederrüstung}
+{8108}{Gr. Bronze-Plattenrüstung}
+{8109}{Große Dienerkleidung}
+{8110}{Jacke}
+{8111}{Nieten-Lederkleidung}
+{8112}{Schutz-Kettenpanzer}
+{8113}{Schutz-Plattenrüstung}
+{8114}{Magisches Gewand}
+{8115}{Elite-Plattenrüstung}
+{8116}{Rote Barbarenkleidung}
+{8117}{Ländliches Prunkgewand}
+{8118}{Kleine Jacke}
+{8119}{Kl. Nieten-Lederkleidung}
+{8120}{Kl. Schutz-Kettenpanzer}
+{8121}{Kl. Schutz-Plattenrüstung}
+{8122}{Kleines magisches Gewand}
+{8123}{Kl. Elite-Plattenrüstung}
+{8124}{Kl. rote Barbarenkleidung}
+{8125}{Kl. ländl. Prunkgewand}
+{8126}{Lumpen}
+{8127}{Gr. Nieten-Lederkleidung}
+{8128}{Gr. Elite-Plattenrüstung}
+{8129}{Gr. ländl. Prunkgewand}
+{8130}{Federleichter Kettenpanzer}
+{8131}{Kl. federl. Kettenpanzer}
+{8132}{Kupferring}
+{8133}{Einfaches Kleid}
+{8134}{NICHT GUT}Kleine Stadtkleidung für Damen
+{8135}{NICHT GUT}Kleine Stadtkleidung für Damen
+{8136}{Elegantes Kleid}Smokingjackett für Damen
+{8137}{NICHT GUT}Kleines Smokingjackett für Damen
+{8138}{NICHT GUT}Großes Smokingjackett für Damen
+{8139}{Dienstbotenkleidung}WEIBLICH
+{8140}{NICHT GUT}Kleine Zofenkleidung
+{8141}{NICHT GUT}Große Zofenkleidung
+{8142}{Ländliches Gewand}WEIBLICH
+{8143}{NICHT GUT}Kleines ländliches Prunkgewand für Damen
+{8144}{NICHT GUT}Großes ländliches Prunkgewand für Damen
+{8145}{Giftschutzgewand}
+{8146}{Kleines Giftschutzgewand}
+{8147}{Großes Giftschutzgewand}
+{8148}{Genesungsjacke}
+{8149}{Kleine Genesungsjacke}
+{8150}{Große Genesungsjacke}
+{8151}{Drachenlederkleidung}
+{8152}{Kl. Drachenlederkleidung}
+{8153}{Gr. Drachenlederkleidung}
+{8154}{Schleich-Rüstung}
+{8155}{Caladon. Kettenpanzer Elite-Schutz-Kettenp.}
+{8156}{Zwergen-Kettenpanzer}
+{8157}{Elfen-Kettenpanzer}
+{8158}{Gnomen-Kettenpanzer}
+{8159}{Amulett der Moloch. Hand}
+{8160}{Schönheitsmedaillon}
+{8161}{Dorisches Amulett}
+{8162}{Hübscher Goldring}
+{8163}{Gilbert Bates' Ring}
+{8164}{Schutzring}
+{8165}{Schicksalsring}
+{8166}{Metallkappenstiefel}
+{8167}{Gute derbe Stiefel}
+{8168}{Schuhe}
+{8169}{Getragene Schuhe}
+{8170}{Getragene Stiefel}
+{8171}{Schicke Damenstiefel}
+{8172}{Getragene Damenstiefel}
+{8173}{Elfen-Stiefel}
+{8174}{Verzauberte Kampfstiefel}
+{8175}{Zwergische Handschuhe}
+{8176}{Maschinen-Handschuhe}
+{8177}{Kampfhandschuhe}
+{8178}{Kettenhandschuhe}
+{8179}{Leichtfinger-Handschuhe}
+{8180}{Handschuhe des Geschicks}
+{8181}{Edler Helm}
+{8182}{Gugelhelm}
+{8183}{Augenauf}
+{8184}{Brille}
+{8185}{Zylinder}
+{8186}{Helm der Visionen}
+{8187}{Hut der magn. Umkehrung}
+{8188}{Helm des Lichts}
+{8189}{Geleams Helm}
+{8190}{Holzschild}
+{8191}{Verbeulter Eisenschild}
+{8192}{Hochwertiger Eisenschild}
+{8193}{Drachenschild}
+{8194}{Stromspektrometer}
+{8195}{Schild der Kraft}
+{8196}{Schattenschild}
+{8197}{Zwergen-Plattenrüstung}
+{8198}{Wi. Plattenrst. d. Genes.}
+{8199}{Großer Helm}
+{8200}{Sonntagskleidung}
+{8201}{Offiziersuniform}
+{8202}{Kleine Offiziersuniform}
+{8203}{Amulett der Führerschaft}
+{8204}{Dunkelhelm}
+{8205}{Fuhrmannshandschuhe}
+{8206}{Schlangenkollier}
+{8207}{Rad-Clan-Brille}
+{8208}{Bezauberte Lederrüstung}
+{8209}{Kl. bezauberte Lederrst.}
+{8210}{Gr. bezauberte Lederrst.}
+{8211}{Magische Lederrüstung}
+{8212}{Kl. magische Lederrst.}
+{8213}{Gr. magische Lederrst.}
+{8214}{Mystische Lederrüstung}
+{8215}{Kl. mystische Lederrst.}
+{8216}{Gr. mystische Lederrst.}
+{8217}{Arkane Lederrüstung}
+{8218}{Kleine arkane Lederrüstung}
+{8219}{Große arkane Lederrüstung}
+{8220}{Quintarra-Kettenpanzer}
+{8221}{Bezauberter Kettenpanzer}
+{8222}{Kl. bezauberter Kettenp.}
+{8223}{Magischer Kettenpanzer}
+{8224}{Kl. magischer Kettenp.}
+{8225}{Mystischer Kettenpanzer}
+{8226}{Kl. mystischer Kettenp.}
+{8227}{Arkaner Kettenpanzer}
+{8228}{Kl. arkaner Kettenpanzer}
+{8229}{Elektrorüstung}
+{8230}{Kleine Elektrorüstung}
+{8231}{Große Elektrorüstung}
+{8232}{Bezaubertes Gewand}
+{8233}{Kl. bezaubertes Gewand}
+{8234}{Magisches Gewand}
+{8235}{Kl. magisches Gewand}
+{8236}{Mystisches Gewand}
+{8237}{Kl. mystisches Gewand}
+{8238}{Arkanes Gewand}
+{8239}{Kleines arkanes Gewand}
+{8240}{Bezauberter Reisemantel}
+{8241}{Kl. bezauberter Reiseman.}
+{8242}{Magischer Reisemantel}
+{8243}{Kl. magischer Reisemantel.}
+{8244}{Mystischer Reisemantel}
+{8245}{Kl. mystischer Reiseman.}
+{8246}{Arkaner Reisemantel}
+{8247}{Kl. arkaner Reisemantel}
+{8248}{Hochwertiges Gewand}
+{8249}{Kl. hochwertiges Gewand}
+{8250}{Bezauberte Plattenrüstung}
+{8251}{Kl. bezaub. Plattenrst.}
+{8252}{Magische Plattenrüstung}
+{8253}{Kl. magische Plattenrst.}
+{8254}{Mystische Plattenrüstung}
+{8255}{Kl. mystische Plattenrst.}
+{8256}{Arkane Plattenrüstung}
+{8257}{Kl. arkane Plattenrst.}
+{8258}{Strombrecherschild}
+{8259}{Bezauberter Schild}
+{8260}{Magischer Schild}
+{8261}{Mystischer Schild}
+{8262}{Arkaner Schild}
+{8263}{Grubenhelm}
+{8264}{Bezauberter Helm}
+{8265}{Magischer Helm}
+{8266}{Mystischer Helm}
+{8267}{Arkaner Helm}
+{8268}{Bezauberte Handschuhe}
+{8269}{Magische Handschuhe}
+{8270}{Mystische Handschuhe}
+{8271}{Arkane Handschuhe}
+{8272}{Bezauberter Ring}
+{8273}{Magischer Ring}
+{8274}{Mystischer Ring}
+{8275}{Arkaner Ring}
+{8276}{Vend. gef. Lederhandsch.}
+{8277}{Vendigroth-Kampfhandschuhe}
+{8278}{Ring der Leere}
+{8279}{Smaragdring}
+{8280}{Rubinring}
+{8281}{Saphirring}
+{8282}{Diamantring}
+{8283}{Holzring}
+{8284}{Silberring}
+{8285}{Mithrilring}
+{8286}{Smaragdkollier}
+{8287}{Rubinkollier}
+{8288}{Saphirkollier}
+{8289}{Diamantkollier}
+{8290}{Sichthelm}
+{8291}{Gr. Maschinen-Plattenrst.}
+{8292}{Gr. federl. Kettenpanzer}
+
+{9056}{Gold}
+
+// Food
+
+{10057}{Brot}
+{10058}{Wasser}
+{10059}{Heilbalsam}
+{10060}{Muntermacher}
+{10061}{Ginkawurzel}
+{10062}{Kadurastängel}
+{10063}{Kokablätter}
+{10064}{Tabakblätter}
+{10065}{Gift}
+{10066}{Elektrolytlösung}
+{10067}{Varhams Aqua Vitae}
+{10068}{Monroes Putzmittel}
+{10069}{Trank der Überzeugung}
+{10070}{Elixier der Körperkraft}
+{10071}{Kampheressenz}
+{10072}{Berühmte Blutpillen}
+{10073}{Ammoniak}
+{10074}{Heilung kleinerer Wunden}
+{10075}{Starkes Gift}
+{10076}{Allheilmittel}
+{10077}{Gegengift}
+{10078}{Energieadditiv}
+{10079}{Beschleunigte Genesung}
+{10080}{Hexenbann}
+{10081}{Mohnblumen}
+{10082}{Schlangenöl "Gr. Häuptling"}
+{10083}{Giftstoff}
+{10084}{Wunderdroge}
+{10085}{Rostsäure}
+{10086}{Tierköder}
+{10087}{Tierduft}
+{10088}{Bierhefe}
+{10089}{Peters Kohlensäure}
+{10090}{Hallizinit}
+{10091}{Pilze}
+{10092}{Schwefelpillen}
+{10093}{Wein}
+{10094}{"Morgenstern"-Parfüm}
+{10095}{Drachenduft}
+{10096}{Linghams Belladonna}
+{10097}{Vitalisierungsessenz}
+{10098}{Geistwunder}
+{10099}{Tonikum verb. Reflexe}
+{10100}{Energietinktur}
+{10101}{Doolittles Gylzerid}
+{10102}{Nervenpillen}
+{10103}{Elixier der Bewusstwerdung}
+{10104}{Nimms Phosphortinktur}
+{10105}{Chinin}
+{10106}{Hexenhaselextrakt}
+{10107}{Rheumamittel}
+{10108}{Migränemittel}
+{10109}{Arnikatinktur}
+{10110}{CK-Zucker}
+{10111}{Elixier der Hypnosuggestion}
+{10112}{Hirnvermehrer}
+{10113}{Muskelmacher}
+{10114}{Belebungstinktur}
+{10115}{Erweckungstinktur}
+{10116}{Wunderheilmittel}
+{10117}{Denkhemmer}
+{10118}{Nekromisator}
+{10119}{Stärkungsmittel}
+{10120}{Anästhetikum}
+{10121}{Paralyzit}
+{10122}{Zitrone}
+{10123}{Kartoffel}
+{10124}{Phiole mit Drachenblut}
+{10125}{Passionswurzel}
+{10126}{Chateau de Be'ron-Brandy}
+{10127}{Zwergischer Schnupftabak}
+{10128}{Elfenquellwasser}
+{10129}{Earl Grey-Tee}
+{10130}{Absinth}
+{10131}{Gebäck}
+{10132}{Vendigroth-Elixier}
+{10133}{Vivator}
+{10134}{Größere Heilung}
+{10135}{Leichter Muntermacher}
+{10136}{Stärkerer Muntermacher}
+{10137}{Heilgift}
+{10138}{Morganas Tränen}
+{10139}{Energieerhalter}
+{10140}{Geisteskraft-Essenz}
+{10141}{Eiltinktur}
+{10142}{Elixier der Hautverstärkung}
+{10143}{Kalispis Giftstoff}
+{10144}{Lebensbringer}
+
+//Scrolls
+
+{11059}{Entschärfung}
+{11060}{Öffnungszaubers}
+{11061}{Unsichtbare Kraft}
+{11062}{Raumkrümmung}
+{11063}{Teleportation}
+{11064}{Gesinnungserspürung}
+{11065}{Inhaltsbetrachtung}
+{11066}{Auraerkennung}
+{11067}{Fallen/Unsichtb.-Erspürung}
+{11068}{Göttliche Magie}
+{11069}{Lebenskraft von Luft}
+{11070}{Giftige Dämpfe}
+{11071}{Beschwörung der Winde}
+{11072}{Körper aus Luft}
+{11073}{Herbeirufung von Erdelementarwesen}
+{11074}{Kraft der Erde}
+{11075}{Steinwurf}
+{11076}{Steinwand}
+{11077}{Körper aus Stein}
+{11078}{Herbeirufung von Erdelementarwesen}
+{11079}{Behändigkeit von Feuer}
+{11080}{Feuerwand}
+{11081}{Feuerblitz}
+{11082}{Körper aus Feuer}
+{11083}{Herbeirufung von Feuerelementarwesen}
+{11084}{Reines Wasser}
+{11085}{Beschwörung des Nebels}
+{11086}{Eiswelle}
+{11087}{Körper aus Wasser}
+{11088}{Herbeirufung v. Wasserelementarwesen}
+{11089}{Schutzschild}
+{11090}{Stoß}
+{11091}{Energiewand}
+{11092}{Blitzschlag}
+{11093}{Zersetzung}
+{11094}{Bezauberung}
+{11095}{Betäubung}
+{11096}{Willensschwächung}
+{11097}{Alptraum}
+{11098}{Unterwerfung der Willenskraft}
+{11099}{Immunität gegen Magie}
+{11100}{Zerstreuung von Magie}
+{11101}{Dweomer-Schild}
+{11102}{Fesseln der Magie}
+{11103}{Reflektorschild}
+{11104}{Harte Hände}
+{11105}{Schwächen}
+{11106}{Schrumpfen}
+{11107}{Fleisch zu Stein}
+{11108}{Vielgestaltigkeit}
+{11109}{Bezauberung von Tieren}
+{11110}{Umschlingung}
+{11111}{Steuerung von Tieren}
+{11112}{Tierbeistand}
+{11113}{Genesung}
+{11114}{Schaden}
+{11115}{Beschwörung von Geistern}
+{11116}{Herbeizaubern von Untoten}
+{11117}{Erschaffung von Untoten}
+{11118}{Aussaugen des Lebens}
+{11119}{Kleinere Genesung}
+{11120}{Gegengift}
+{11121}{Große Genesung}
+{11122}{Zuflucht}
+{11123}{Auferstehung}
+{11124}{Erleuchtung}
+{11125}{Blitz}
+{11126}{Getrübte Sicht}
+{11127}{Phantasma-Dämon}
+{11128}{Unsichtbarkeit}
+{11129}{Insektenplage}
+{11130}{Ork-Helden}
+{11131}{Oger-Wächter}
+{11132}{Höllenpförtner}
+{11133}{Familiar}
+{11134}{Magierschloss}
+{11135}{Zeiteinfrierung}
+{11136}{Beschleunigung}
+{11137}{Starre}
+{11138}{Tempus Fugit}
+{11139}{Kerghans Tod}
+{11140}{Kerghans Angriff}
+{11141}{Verlassen}
+{11142}{Heilung durch Medi-Spinne}
+
+// Keys
+{12060}{Schlüssel}
+{12061}{Schlüssel des Eisen-Clans}
+{12062}{Schlüssel zum Vorman-Anwesen}
+
+// Key Rings
+{13061}{Schlüsselring}
+
+// Written
+{14062}{Buch}
+{14063}{Brief}
+{14064}{Tarantinische Zeitung}
+{14065}{Telegramm}
+{14066}{Gorads Brief}
+{14067}{Anleitung}
+{14068}{Bild}
+{14069}{Broschüre}
+{14070}{Die Legende von T'erre-d'-V'nt}
+{14071}{Professor Eakins' Telegramm}
+{14072}{Zeitung von Vendigroth}
+
+{14073}{Belebungstinktur}
+{14074}{Erweckungstinktur}
+{14075}{Mechano-Arzt}
+{14076}{Wunderheilmittel}
+{14077}{Denkhemmer}
+{14078}{Nekromisator}
+{14079}{Stärkungsmittel}
+{14080}{Treibstoff}
+{14081}{Lähmungstinktur}
+{14082}{Zitronen-und-Kartoffel-Ladungen}
+{14083}{Geladenes Schwert}
+{14084}{Strombrecher}
+{14085}{Tesla-Gewehr}
+{14086}{Klingler}
+{14087}{Elektrorüstung (mittel)}
+{14088}{Pyrotechnikbogen}
+{14089}{Betäubungsgas}
+{14090}{Halluzinogengranate}
+{14091}{Elektrogranate}
+{14092}{Granatwerfer}
+{14093}{Zeitbombe}
+{14094}{Traumagranate}
+{14095}{Paralysegranate}
+{14096}{Senfgasgranate}
+{14097}{Plastiksprengstoff}
+{14098}{Zünder}
+{14099}{Flammenwerfer}
+{14100}{Mechanisches Gewehr}
+{14101}{Säuregewehr}
+{14102}{Beschleunigergewehr}
+{14103}{Pyrotechnikgewehr}
+{14104}{Klingenwerfer}
+{14105}{Hochgeschwindigkeitspistole}
+{14106}{Schrecks mehrläufige Pistole}
+{14107}{Langstreckenpistole}
+{14108}{Betäubungsgewehr}
+{14109}{Giftspinne}
+{14110}{Roboter}
+{14111}{Kompositbogen}
+{14112}{Vergifteter Bogen}
+{14113}{Medi-Spinne}
+{14114}{Beleuchteter Lockvogel}
+{14115}{Explodierender Lockvogel}
+{14116}{Robotschütze}
+{14117}{Sichthelm}
+{14118}{Maschinen-Plattenrüstung}
+{14119}{Rad-Clan-Brille}
+{14120}{Vergiftetes Schwert}
+{14121}{Vergiftete Axt}
+{14122}{Grubenhelm}
+{14123}{Pyrotechnikaxt}
+{14124}{Gewehrkanone}
+{14125}{Mechanischer Dolch}
+{14126}{Elixier der Hypnosuggestion}
+{14127}{Hirnvermehrer}
+{14128}{Muskelmacher}
+{14129}{Kugeln}
+
+// Items
+
+{15065}{Standard-Gegenstand 1A}
+{15066}{Mechanische Spinne}
+{15067}{Stillwater-Falle (leer)}
+{15068}{Stillwater-Falle (voll)}
+{15069}{Metallplatten}
+{15070}{Elektro-Licht}
+{15071}{Glühfaden}
+{15072}{Laterne}
+{15073}{Kondensator}
+{15074}{Kaliumnitrat}
+{15075}{Kohle}
+{15076}{Magnesium}
+{15077}{Metallspäne}
+{15078}{Gewehrgestell}
+{15079}{Revolverkammer}
+{15080}{Stachelfalle}
+{15081}{Automatischer Dietrich}
+{15082}{Große Sprungfeder}
+{15083}{Kleine Sprungfeder}
+{15084}{Dietriche}
+{15085}{Reines Erz}
+{15086}{Eisenerz}
+{15087}{Stahl}
+{15088}{Edler Griff und Scheide}
+{15089}{Thermometer}
+{15090}{Kleine Dampfmaschine}
+{15091}{Große Zahnräder}
+{15092}{Mechanische Spinne (Gift)}
+{15093}{Uraltes Gewehrgestell}
+{15094}{Mithril-Erz}
+{15095}{Weinglas}
+{15096}{Leere Phiole}
+{15097}{Kamera von der Unfallstelle}
+{15098}{Kleine Statuette}
+{15099}{Goldtruhe}
+{15100}{Bärenfalle}
+{15101}{Metallklammer}
+{15102}{Fallenauslöser}
+{15103}{Teile einer Taschenuhr}
+{15104}{Vase}
+{15105}{Spieluhr}
+{15106}{Kerzenhalter}
+{15107}{Alte Zahnräder}
+{15108}{Elektroharnisch}
+{15109}{Großer Kondensator}
+{15110}{Tesla-Spule}
+{15111}{Schwarzpulver}
+{15112}{Feuerhindernis}
+{15113}{Durchladekammer}
+{15114}{Automatische Ladekammer}
+{15115}{Uhrenteile}
+{15116}{Aufziehbarer Lockvogel}
+{15117}{Taschenuhr}
+{15118}{Kleine Metallröhre}
+{15119}{Ledergurte}
+{15120}{Elektrische Komponente}
+{15121}{Fernrohr}
+{15122}{Zwergenerz}
+{15123}{Spule mit dickem Draht}
+{15124}{Axtgriff aus Eichenholz}//REPLACE ME PLEASE!!!!
+{15125}{Blech}
+{15126}{Schaufel}
+{15127}{Kristallkugel}
+{15128}{Ungeschliffener Saphir}
+{15129}{Ungeschliffener Smaragd}
+{15130}{Ungeschliffener Diamant}
+{15131}{Ungeschliffener Rubin}
+{15132}{Sprenggranate}
+{15133}{Roboter}
+{15134}{Dynamit}
+{15135}{Bromid}
+{15136}{Kaliumchlorid}
+{15137}{Kleine elektrische Teile}
+{15138}{Salpeter}
+{15139}{Nitroglyzerin}
+{15140}{Elektrische Spule}
+{15141}{Blechdose}
+{15142}{Auspufftopf}
+{15143}{Metallgehäuse}
+{15144}{Holzkohle}
+{15145}{Toms Dünger}
+{15146}{Stearinsäure}
+{15147}{Flüssige Seife}
+{15148}{Defekte Steinschlosspistole}
+{15149}{Kompass}
+{15150}{Blendgranate}
+{15151}{Rauchgranate}
+{15152}{Lähmgranate}
+{15153}{Feuerhindernis}
+{15154}{Revolverteile}
+{15155}{Zwergenstahl}
+{15156}{Kamera}
+{15157}{Komponente 1}
+{15158}{Komponente 2}
+{15159}{Zaubererstatuette aus Jade}
+{15160}{Kathor-Kristall}
+{15161}{Betäubungsgasgranate}
+{15162}{Halluzinogengranate}
+{15163}{Elektrogranate}
+{15164}{Traumagranate}
+{15165}{Paralysegranate}
+{15166}{Senfgasgranate}
+{15167}{Takelage}
+{15168}{Lärmender Lockvogel}
+{15169}{Mechano-Arzt}
+{15170}{Beleuchteter Lockvogel}
+{15171}{Explodierender Lockvogel}
+{15172}{Robotschütze}
+{15173}{Zeitbombe}
+{15174}{Plastiksprengstoff}
+{15175}{Zünder}
+{15176}{Medi-Spinne}
+{15177}{Kleine Dampfturbine}
+{15178}{Einfache Dietriche}
+{15179}{Bandagen}
+{15180}{Besitzurkunde für Bessie Toone-Mine}
+{15181}{Li'tani}
+{15182}{Herzstein}
+{15183}{Mnura-Münze}
+{15184}{Lavastein}
+{15185}{Olivenzweig}
+{15186}{Geode}
+{15187}{Schwarzer Diamant}
+{15188}{Chemie-Lehrbücher}
+{15189}{Sprengstoff-Lehrbücher}
+{15190}{Kräuterkunde-Lehrbücher}
+{15191}{Elektrik-Lehrbücher}
+{15192}{Therapiekunst-Lehrbücher}
+{15193}{Mechanik-Lehrbücher}
+{15194}{Schmiedekunst-Lehrbücher}
+{15195}{Waffenschmiedekunst-Lehrbücher}
+{15196}{Vendigroth-Blech}
+{15197}{Unbekannte chemische Verbindung}
+{15198}{Leerer Tierkadaver}
+{15199}{Authent. Pelz des Stillwater-Riesen}
+{15200}{Smaragd}
+{15201}{Rubin}
+{15202}{Saphir}
+{15203}{Diamant}
+{15204}{Sternrubin}
+{15205}{Sternsaphir}
+{15206}{Medizinpack}
+{15207}{Kerosin}
+{15208}{Lumpen}
+{15209}{Molotow-Cocktail}
+{15210}{Irrlicht-Essenz}
+{15211}{Fluglicht-Essenz}
+{15212}{Medi-Spinne}
+
+// Critter Names
+
+{16066}{Donn Throgg}
+{16067}{Magier Throgg}
+{16068}{Kämpfer Throgg}
+
+{17067}{Menschen-Adlige(r)} //Female
+{17068}{Menschen-Adlige(r)} //Male
+{17069}{Menschen-Priester(in)} //Female
+{17070}{Menschen-Priester(in)} //Male
+{17071}{Menschen-Zauberer(in)} //Female
+{17072}{Menschen-Zauberer(in)} //Male
+{17073}{Menschen-Technologe(in)} //Female
+{17074}{Menschen-Technologe(in)} //Male
+{17075}{Menschen-Ladenbesitzer(in)} //Female
+{17076}{Menschen-Ladenbesitzer(in)} //Male
+{17077}{Menschen-Wache} //Female
+{17078}{Menschen-Wache} //Male
+{17079}{Menschen-Stadtbewohner(in)} //Female
+{17080}{Menschen-Stadtbewohner(in)} //Male
+{17081}{Menschen-Dorfbewohner(in)} //Female
+{17082}{Menschen-Dorfbewohner(in)} //Male
+{17083}{Menschen-Bettler(in)} //Female
+{17084}{Menschen-Bettler(in)} //Male
+{17085}{Menschen-Dieb(in)} //Female
+{17086}{Menschen-Dieb(in)} //Male
+{17087}{Menschen-Gauner(in)} //Female
+{17088}{Menschen-Gauner(in)} //Male
+{17089}{Zwergen-Adlige(r)} //Female
+{17090}{Zwergen-Adlige(r)} //Male
+{17091}{Zwergen-Priester(in)} //Female
+{17092}{Zwergen-Priester(in)} //Male
+{17093}{Zwergen-Zauberer(in)} //Female
+{17094}{Zwergen-Zauberer(in)} //Male
+{17095}{Zwergen-Technologe(in)} //Female
+{17096}{Zwergen-Technologe(in)} //Male
+{17097}{Zwergen-Ladenbesitzer(in)} //Female
+{17098}{Zwergen-Ladenbesitzer(in)} //Male
+{17099}{Zwergen-Wache} //Female
+{17100}{Zwergen-Wache} //Male
+{17101}{Zwergen-Stadtbewohner(in)} //Female
+{17102}{Zwergen-Stadtbewohner(in)} //Male
+{17103}{Zwergen-Dorfbewohner(in)} //Female
+{17104}{Zwergen-Dorfbewohner(in)} //Male
+{17105}{Zwergen-Bettler(in)} //Female
+{17106}{Zwergen-Bettler(in)} //Male
+{17107}{Zwergen-Dieb(in)} //Female
+{17108}{Zwergen-Dieb(in)} //Male
+{17109}{Zwergen-Gauner(in)} //Female
+{17110}{Zwergen-Gauner(in)} //Male
+{17111}{Elfen-Adlige(r)} //Female
+{17112}{Elfen-Adlige(r)} //Male
+{17113}{Elfen-Priester(in)} //Female
+{17114}{Elfen-Priester(in)} //Male
+{17115}{Elfen-Zauberer(in)} //Female
+{17116}{Elfen-Zauberer(in)} //Male
+{17117}{Elfen-Technologe(in)} //Female
+{17118}{Elfen-Technologe(in)} //Male
+{17119}{Elfen-Ladenbesitzer(in)} //Female
+{17120}{Elfen-Ladenbesitzer(in)} //Male
+{17121}{Elfen-Wache} //Female
+{17122}{Elfen-Wache} //Male
+{17123}{Elfen-Stadtbewohner(in)} //Female
+{17124}{Elfen-Stadtbewohner(in)} //Male
+{17125}{Elfen-Dorfbewohner(in)} //Female
+{17126}{Elfen-Dorfbewohner(in)} //Male
+{17127}{Elfen-Bettler(in)} //Female
+{17128}{Elfen-Bettler(in)} //Male
+{17129}{Elfen-Dieb(in)} //Female
+{17130}{Elfen-Dieb(in)} //Male
+{17131}{Elfen-Gauner(in)} //Female
+{17132}{Elfen-Gauner(in)} //Male
+{17133}{Halb-Elfen-Adlige(r)} //Female
+{17134}{Halb-Elfen-Adlige(r)} //Male
+{17135}{Halb-Elfen-Priester(in)} //Female
+{17136}{Halb-Elfen-Priester(in)} //Male
+{17137}{Halb-Elfen-Zauberer(in)} //Female
+{17138}{Halb-Elfen-Zauberer(in)} //Male
+{17139}{Halb-Elfen-Technologe(in)} //Female
+{17140}{Halb-Elfen-Technologe(in)} //Male
+{17141}{Halb-Elfen-Ladenbesitzer(in)} //Female
+{17142}{Halb-Elfen-Ladenbesitzer(in)} //Male
+{17143}{Halb-Elfen-Wache} //Female
+{17144}{Halb-Elfen-Wache} //Male
+{17145}{Halb-Elfen-Stadtbewohner(in)} //Female
+{17146}{Halb-Elfen-Stadtbewohner(in)} //Male
+{17147}{Halb-Elfen-Dorfbewohner(in)} //Female
+{17148}{Halb-Elfen-Dorfbewohner(in)} //Male
+{17149}{Halb-Elfen-Bettler(in)} //Female
+{17150}{Halb-Elfen-Bettler(in)} //Male
+{17151}{Halb-Elfen-Dieb(in)} //Female
+{17152}{Halb-Elfen-Dieb(in)} //Male
+{17153}{Halb-Elfen-Gauner(in)} //Female
+{17154}{Halb-Elfen-Gauner(in)} //Male
+{17155}{Gnomen-Adlige(r)} //Female
+{17156}{Gnomen-Adlige(r)} //Male
+{17157}{Gnomen-Priester(in)} //Female
+{17158}{Gnomen-Priester(in)} //Male
+{17159}{Gnomen-Zauberer(in)} //Female
+{17160}{Gnomen-Zauberer(in)} //Male
+{17161}{Gnomen-Technologe(in)} //Female
+{17162}{Gnomen-Technologe(in)} //Male
+{17163}{Gnomen-Ladenbesitzer(in)} //Female
+{17164}{Gnomen-Ladenbesitzer(in)} //Male
+{17165}{Gnomen-Wache} //Female
+{17166}{Gnomen-Wache} //Male
+{17167}{Gnomen-Stadtbewohner(in)} //Female
+{17168}{Gnomen-Stadtbewohner(in)} //Male
+{17169}{Gnomen-Dorfbewohner(in)} //Female
+{17170}{Gnomen-Dorfbewohner(in)} //Male
+{17171}{Gnomen-Bettler(in)} //Female
+{17172}{Gnomen-Bettler(in)} //Male
+{17173}{Gnomen-Dieb(in)} //Female
+{17174}{Gnomen-Dieb(in)} //Male
+{17175}{Gnomen-Gauner(in)} //Female
+{17176}{Gnomen-Gauner(in)} //Male
+{17177}{Halbling-Adlige(r)} //Female
+{17178}{Halbling-Adlige(r)} //Male
+{17179}{Halbling-Priester(in)} //Female
+{17180}{Halbling-Priester(in)} //Male
+{17181}{Halbling-Zauberer(in)} //Female
+{17182}{Halbling-Zauberer(in)} //Male
+{17183}{Halbling-Technologe(in)} //Female
+{17184}{Halbling-Technologe(in)} //Male
+{17185}{Halbling-Ladenbesitzer(in)} //Female
+{17186}{Halbling-Ladenbesitzer(in)} //Male
+{17187}{Halbling-Wache} //Female
+{17188}{Halbling-Wache} //Male
+{17189}{Halbling-Stadtbewohner(in)} //Female
+{17190}{Halbling-Stadtbewohner(in)} //Male
+{17191}{Halbling-Dorfbewohner(in)} //Female
+{17192}{Halbling-Dorfbewohner(in)} //Male
+{17193}{Halbling-Bettler(in)} //Female
+{17194}{Halbling-Bettler(in)} //Male
+{17195}{Halbling-Dieb(in)} //Female
+{17196}{Halbling-Dieb(in)} //Male
+{17197}{Halbling-Gauner(in)} //Female
+{17198}{Halbling-Gauner(in)} //Male
+{17199}{Halb-Ork-Adlige(r)} //Female
+{17200}{Halb-Ork-Adlige(r)} //Male
+{17201}{Halb-Ork-Priester(in)} //Female
+{17202}{Halb-Ork-Priester(in)} //Male
+{17203}{Halb-Ork-Zauber(in)} //Female
+{17204}{Halb-Ork-Zauberer(in)} //Male
+{17205}{Halb-Ork-Technologe(in)} //Female
+{17206}{Halb-Ork-Technologe(in)} //Male
+{17207}{Halb-Ork-Ladenbesitzer(in)} //Female
+{17208}{Halb-Ork-Ladenbesitzer(in)} //Male
+{17209}{Halb-Ork-Wache} //Female
+{17210}{Halb-Ork-Wache} //Male
+{17211}{Halb-Ork-Stadtbewohner(in)} //Female
+{17212}{Halb-Ork-Stadtbewohner(in)} //Male
+{17213}{Halb-Ork-Dorfbewohner(in)} //Female
+{17214}{Halb-Ork-Dorfbewohner(in)} //Male
+{17215}{Halb-Ork-Bettler(in)} //Female
+{17216}{Halb-Ork-Bettler(in)} //Male
+{17217}{Halb-Ork-Dieb(in)} //Female
+{17218}{Halb-Ork-Dieb(in)} //Male
+{17219}{Halb-Ork-Gauner(in)} //Female
+{17220}{Halb-Ork-Gauner(in)} //Male
+{17221}{Halb-Oger-Adlige(r)} //Female
+{17222}{Halb-Oger-Adlige(r)} //Male
+{17223}{Halb-Oger-Priester(in)} //Female
+{17224}{Halb-Oger-Priester(in)} //Male
+{17225}{Halb-Oger-Zauberer(in)} //Female
+{17226}{Halb-Oger-Zauberer(in)} //Male
+{17227}{Halb-Oger-Technologe(in)} //Female
+{17228}{Halb-Oger-Technologe(in)} //Male
+{17229}{Halb-Oger-Ladenbesitzer(in)} //Female
+{17230}{Halb-Oger-Ladenbesitzer(in)} //Male
+{17231}{Halb-Oger-Wache} //Female
+{17232}{Halb-Oger-Wache} //Male
+{17233}{Halb-Oger-Stadtbewohner(in)} //Female
+{17234}{Halb-Oger-Stadtbewohner(in)} //Male
+{17235}{Halb-Oger-Dorfbewohner(in)} //Female
+{17236}{Halb-Oger-Dorfbewohner(in)} //Male
+{17237}{Halb-Oger-Bettler(in)} //Female
+{17238}{Halb-Oger-Bettler(in)} //Male
+{17239}{Halb-Oger-Dieb(in)} //Female
+{17240}{Halb-Oger-Dieb(in)} //Male
+{17241}{Halb-Oger-Gauner(in)} //Female
+{17242}{Halb-Oger-Gauner(in)} //Male
+{17243}{Dunkelelfen-Adlige(r)} //Female
+{17244}{Dunkelelfen-Adlige(r)} //Male
+{17245}{Dunkelelfen-Priester(in)} //Female
+{17246}{Dunkelelfen-Priester(in)} //Male
+{17247}{Dunkelelfen-Zauberer(in)} //Female
+{17248}{Dunkelelfen-Zauberer(in)} //Male
+{17249}{Dunkelelfen-Technologe(in)} //Female
+{17250}{Dunkelelfen-Technologe(in)} //Male
+{17251}{Dunkelelfen-Ladenbesitzer(in)} //Female
+{17252}{Dunkelelfen-Ladenbesitzer(in)} //Male
+{17253}{Dunkelelfen-Wache} //Female
+{17254}{Dunkelelfen-Wache} //Male
+{17255}{Dunkelelfen-Stadtbewohner(in)} //Female
+{17256}{Dunkelelfen-Stadtbewohner(in)} //Male
+{17257}{Dunkelelfen-Dorfbewohner(in)} //Female
+{17258}{Dunkelelfen-Dorfbewohner(in)} //Male
+{17259}{Dunkelelfen-Bettler(in)} //Female
+{17260}{Dunkelelfen-Bettler(in)} //Male
+{17261}{Dunkelelfen-Dieb(in)} //Female
+{17262}{Dunkelelfen-Dieb(in)} //Male
+{17263}{Dunkelelfen-Gauner(in)} //Female
+{17264}{Dunkelelfen-Gauner(in)} //Male
+{17265}{Oger-Adlige} //Female
+{17266}{Oger-Adliger} //Male
+{17267}{Oger-Priesterin} //Female
+{17268}{Oger-Priester} //Male
+{17269}{Oger-Zauberin} //Female
+{17270}{Oger-Zauberer} //Male
+{17271}{Oger-Technologin} //Female
+{17272}{Oger-Technologe} //Male
+{17273}{Oger-Ladenbesitzerin} //Female
+{17274}{Oger-Ladenbesitzer} //Male
+{17275}{Oger-Wache} //Female
+{17276}{Oger-Wache} //Male
+{17277}{Oger-Stadtbewohnerin} //Female
+{17278}{Oger-Stadtbewohner} //Male
+{17279}{Oger-Dorfbewohnerin} //Female
+{17280}{Oger-Dorfbewohner} //Male
+{17281}{Oger-Bettlerin} //Female
+{17282}{Oger-Bettler} //Male
+{17283}{Oger-Diebin} //Female
+{17284}{Oger-Dieb} //Male
+{17285}{Oger-Gauner(in)} 
+{17286}{Oger-Vernichter} 
+{17287}{Ork-Adlige(r)} //Female
+{17288}{Ork-Adlige(r)} //Male
+{17289}{Ork-Priester(in)} //Female
+{17290}{Ork-Priester(in)} //Male
+{17291}{Ork-Zauberer(in)} //Female
+{17292}{Ork-Zauberer(in)} //Male
+{17293}{Ork-Technologe(in)} //Female
+{17294}{Ork-Technologe(in)} //Male
+{17295}{Ork-Ladenbesitzer(in)} //Female
+{17296}{Ork-Ladenbesitzer(in)} //Male
+{17297}{Ork-Wache} //Female
+{17298}{Ork-Wache} //Male
+{17299}{Ork-Stadtbewohner(in)} //Female
+{17300}{Ork-Stadtbewohner(in)} //Male
+{17301}{Ork-Dorfbewohner(in)} //Female
+{17302}{Ork-Dorfbewohner(in)} //Male
+{17303}{Ork-Bettler(in)} //Female
+{17304}{Ork-Bettler(in)} //Male
+{17305}{Ork-Dieb(in)} //Female
+{17306}{Ork-Dieb(in)} //Male
+{17307}{Ork-Hauptmann}
+{17308}{Ork-Gauner}
+{17309}{Elfen-Händler}
+{17310}{Kopfgeldjäger} //Human  
+{17311}{Kopfgeldjäger} //Half Elf
+{17312}{Kopfgeldjäger} //Dwarf
+{17313}{Gefährlich wirkender Mann} //Human Malochean Hand Leader
+{17314}{Zwielichtiges Individuum } //Half Elf Malochean Hand Leader
+{17315}{Schlägertyp} //Malochean Hand Grunt
+{17316}{Vermummte Gestalt} //Malochean Hand Henchman
+
+// Traps
+
+{26000}{Magische Falle}
+{26001}{Mechanische Falle}
+{26002}{Pfeil-Falle}
+{26003}{Kugel-Falle}
+{26004}{Feuer-Falle}
+{26005}{Elektrische Falle}
+{26006}{Gift-Falle}
+{26007}{Quellen-Falle}
+
+// Basic Unique NPC's
+
+{27309}{Standard-NSC} //Female
+{27310}{Standard-NSC} //Male
+{27311}{Zeitungsjunge}
+{27312}{Schock-Araya}
+{27313}{Infernalischer Araya}
+{27314}{Großer Araya}
+{27315}{Kleiner Araya}
+{27316}{Sklavenhalter-Araya}
+{27317}{Araya-Sklave}
+{27318}{Abgrund-Araya}
+{27319}{Seelensklave}
+{27320}{Paladinsklave}
+{27321}{Niederer Wyvern}
+{27322}{Großer Wyvern}
+{27323}{Dragaron}
+{27324}{Phagen-Dragaron}
+{27325}{Frigidon}
+{27326}{Burnowar}
+{27327}{Voltax}
+{27328}{Niederer Gorat}
+{27329}{Großer Gorat}
+{27330}{Feralock}
+{27331}{Wargunn}
+{27332}{Zitterbestie}
+{27333}{Fieberbestie}
+{27334}{Höllenbestie}
+{27335}{Unheilshund}
+{27336}{Drachenspäher}
+{27337}{Drachenkrieger}
+{27338}{Drachenbogenschütze}
+{27339}{Drachenschamane}
+{27340}{Drachenberserker}
+{27341}{Niederer Krag}
+{27342}{Kragkrieger}
+{27343}{Kraghäuptling}
+{27344}{Kragschamane}
+{27345}{Kragberserker}
+{27346}{Niederer Lich}
+{27347}{Kreischender Jämmerling}
+{27348}{Pestilenz-Seele}
+{27349}{Grabhocker}
+{27350}{Übler Geist}
+{27351}{Hungermann}
+{27352}{Großer Lich}
+{27353}{Schandmaul}
+{27354}{Heiliger Beschmutzer}
+{27355}{Schwarzer Beschmutzer}
+{27356}{Herr der Verdammten}
+{27357}{Schänder}
+{27358}{Steinfrau}
+{27359}{Schlangenkönigin}
+{27360}{Mordaräne}
+{27361}{Epidemia}
+{27362}{Bolzenschlächter}
+{27363}{Geisterschlange}
+{27364}{Dunkelnatternkaiserin}
+{27365}{Lethe-Wyvern}
+{27366}{Geheimnisvolle Erscheinung}
+{27367}{Kerghan}
+{27368}{Kerghan}
+{27369}{Kerghan}
+{27370}{Sumpfschlurfer}
+{27371}{Familiar-Diener}
+{27372}{Familiar}
+{27373}{Familiar-Schlitzer}
+{27374}{Familiar-Blutkralle}
+{27375}{Stillwater-Riese}
+{27376}{Kuljin}
+{27377}{Sumpf-Dämon}
+{27378}{Wilder Ghul}
+{27379}{Blutleere Seele}
+{27380}{Unterwelt-Ghul}
+{27381}{Schlurfer}
+{27382}{Fleischhügel}
+{27383}{Kanalschlurfer}
+{27384}{Sturmsoldat}
+{27385}{Berserker}
+{27386}{Dunkler Held}
+{27387}{Blutgeist}
+{27388}{Schattenkrieger}
+{27389}{Verfluchter Paladin}
+{27390}{Knüppler}
+{27391}{Aufziehbarer Lockvogel}
+{27392}{Nackter Halbling}
+{27393}{Oren}
+
+// Monsters
+
+{28310}{Luftelementargeist}
+{28311}{Erdelementargeist}
+{28312}{Feuerelementargeist}
+{28313}{Wasserelementargeist}
+{28314}{Insekten}
+{28315}{Sklave des Heiligen Beschmutzers}
+{28316}{Sklave des Schwarzen Beschmutzers}
+{28317}{Schatten}
+{28318}{Dämon}
+{28319}{Wolf}
+{28320}{Spinne}
+{28321}{Niederes Skelett}
+{28322}{Zombie}
+{28323}{Mechanische Spinne}
+{28324}{Hase}
+{28325}{Todesritter}
+{28326}{Echsenmann}
+{28327}{Werratte}
+{28328}{Schlangenmann}
+{28329}{Waldaffe}
+{28330}{Grizzlybär}
+{28331}{Huhn}
+{28332}{Puma}
+{28333}{Schaf}
+{28334}{Tiger}
+{28335}{Schwein}
+{28336}{Kuh}
+{28337}{Mechanische Spinne (Gift)}
+{28338}{L'anamelach}
+{28339}{Räudiger Wolf}
+{28340}{Grauwolf}
+{28341}{Schauderbitt}
+{28342}{Gifthund}
+{28343}{Alpha-Wolf}
+{28344}{Reißzahnmonster}
+{28345}{Kleine Spinne}
+{28346}{Große Spinne}
+{28347}{Feuerspinne}
+{28348}{Sieder}
+{28349}{Geschmolzene Spinne}
+{28350}{Terrorspinne}
+{28351}{Schattenkriecher}
+{28352}{Witwer}
+{28353}{Kanalratte}
+{28354}{Mächtiges Ungeziefer}
+{28355}{Stinkendes Nagetier}
+{28356}{Felsratte}
+{28357}{Granitratte}
+{28358}{Feuerspringer}
+{28359}{Roboter}
+{28360}{Vorpalhase}
+{28361}{Ghul}
+{28362}{Blutwache}
+{28363}{Faulwandler}
+{28364}{Mumie}
+{28365}{Halb-Lich}
+{28366}{Große Mumie}
+{28367}{Schlammwandler}
+{28368}{Echsenfrau}
+{28369}{Echsenwache}
+{28370}{Reptilienzauberer}
+{28371}{Schuppenschlitzer}
+{28372}{Gossenkriecher}
+{28373}{Kriechwache}
+{28374}{Schlangenbeißer}
+{28375}{Elementargeistschlange}
+{28376}{Spektralphantom}
+{28377}{Flammenschatten}
+{28378}{Mystischer Dämon}
+{28379}{Schleimdämon}
+{28380}{Güldenschrecken}
+{28381}{Quecksilbermann}
+{28382}{Sturmwüterich}
+{28383}{Böser Sturm}
+{28384}{Giftghul}
+{28385}{Erzgolem}
+{28386}{Dämonensplitter}
+{28387}{Brodelmasse}
+{28388}{Affe}
+{28389}{Lepröser Affe}
+{28390}{Affenschwärmer}
+{28391}{Steinaffe}
+{28392}{Affenschamane}
+{28393}{Großer Gorilla}
+{28394}{Sumpfaffe}
+{28395}{Schädelquetscher}
+{28396}{Yeti}
+{28397}{Goldbär}
+{28398}{Eisbär}
+{28399}{Schwarzbär}
+{28400}{Goldbärwelpe}
+{28401}{Grizzlybärwelpe}
+{28402}{Eisbärwelpe}
+{28403}{Schwarzbärwelpe}
+{28404}{Ur-Bär}
+{28405}{Sturmsoldat}
+{28406}{Berserker}
+{28407}{Dunkler Held}
+{28408}{Blutgeist}
+{28409}{Schattenkrieger}
+{28410}{Verfluchter Paladin}
+{28411}{Knüppler}
+{28412}{Lord-Sklave}
+{28413}{Sirenenkönigin}
+{28414}{Sirenenspinne}
+{28415}{Arachnix-Mutter}
+{28416}{Arachnix-Kind}
+{28417}{Arachnix}
+{28418}{Insektenfrau}
+{28419}{Insektenfraujäger}
+{28420}{Pestweib}
+{28421}{Lykanthrop}
+{28422}{Heuler}
+{28423}{Schattenjäger}
+{28424}{Lycanix}
+{28425}{Mongrelon}
+{28426}{Grauer König}
+{28427}{Kleiner Eber}
+{28428}{Großer Eber}
+{28429}{Wütender Eber}
+{28430}{Tollwütiger Eber}
+{28431}{Niederer Dämon}
+{28432}{Großer Dämon}
+{28433}{Terrorklaue}
+{28434}{Feindaufschlitzer}
+{28435}{Grimmerschatten}
+{28436}{Kleine Echse der Leere}
+{28437}{Große Echse der Leere}
+{28438}{Schauderechse}
+{28439}{Todbringer}
+{28440}{Großes Skelett}
+{28441}{Zerlumpter Bogenschütze}
+{28442}{Knochenschäler}
+{28443}{Ork-Kämpfer}
+{28444}{Ork-Berserker}
+{28445}{Ork-Schamane}
+{28446}{Ork-Häuptling}
+{28447}{Dunkler Ritter}
+{28448}{Dunkler Berserker}
+{28449}{Dunkler Krieger-Priester}
+{28450}{Dunkler Kriegsherr}
+{28451}{Liebeslichter}
+{28452}{Irrlicht}
+{28453}{Fluglicht}
+{28454}{Todeslaterne}
+{28455}{Gyr Dolour}
+{28456}{Berglöwe}
+{28457}{Stinkende Hülle}
+{28458}{Bengol-Tiger}
+{28459}{Unsichtbarer Zerquetscher}
+{28460}{Mechanische Spinne}
+{28461}{Mechanische Spinne (Gift)}
+{28462}{Roboter}
+{28463}{Blaues Kaninchen?}
+{28464}{Großer Dämon}
+{28465}{Sumpfgeist}
+{28466}{Felsgeist}
+{28467}{Medi-Spinne}
+{28468}{Verwester Soldat}
+{28469}{Zerlumpter Kämpfer}
+{28470}{Skelett-Krieger}
+{28471}{Untoter Held}
+
+//Unknown Names start at 29000
+{29688}{Unidentifizierter Dolch}
+{29689}{Unidentifiziertes Schwert}
+{29690}{Unidentifizierter Streitkolb.}
+{29691}{Unidentifizierter Hammer}
+{29692}{Unidentifizierter Stab}
+{29693}{Unidentifizierter Bogen}
+{29694}{Unidentifizierter Bumerang}
+{29695}{Unidentifizierte Waffe}
+{29696}{Unidentifizierte Rüstung}
+{29697}{Unidentifizierter Anzug}
+{29698}{Unidentifiziertes Kleid}
+{29699}{Unidentifizierte Fetzen}
+{29701}{Unidentifizierte Kleidung}
+{29702}{Unidentifizierter Helm}
+{29703}{Unidentifizierter Hut}
+{29704}{Unidentifizierte Panzerhandschuhe}
+{29705}{Unidentifizierte Handschuhe}
+{29706}{Unidentifizierter Ring}
+{29707}{Unidentifiziertes Amulett}
+{29708}{Unidentifiziertes Medaillon}
+{29709}{Unidentifiziertes Kollier}
+{29700}{Unidentifizierte Schuhe}
+{29711}{Unidentifizierte Stiefel}
+{29712}{Unidentifizierter Schild}
+{29713}{Unidentifizierter Rundschild}
+{29714}{Unidentifizierter Gegenstand}
+{29715}{Unidentifiziertes Gewand}
+{29716}{Unidentifizierte kleine Rüstung}
+{29717}{Unidentifizierter kleiner Anzug}
+{29718}{Unidentifizierte kleine Kleidung}
+{29719}{Unidentifizierte große Rüstung}
+{29720}{Unidentifizierter großer Anzug}
+{29721}{Unidentifizierte große Kleidung}
+{29722}{Unidentifiziertes kleines Gewand}
+{29723}{Unidentifizierte Axt}
+
+

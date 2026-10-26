@@ -1,0 +1,56 @@
+// WARNING:  Each effect has a constraint of a maximum of *FIVE* changes per *type*
+// of change (so you could have 5 changes to stats *and* 5 changes to skills, but
+// not 6 changes to stats)
+
+// Start at 0, and go up to 49. The following line is an example:
+
+{0}{dx -5, speed -80%, cn -5, in -4, ch -4}
+{1}{pe +20}
+{2}{st +2, cn +2, dx +2, in +2, wp +2}
+{3}{pe +2}
+{4}{pe +1}
+{5}{maxhps +20}
+{6}{ac -3}
+{7}{ac -2, speed +2}
+{8}{ac -1, speed +5}
+{9}{resistmagic +15, resistdamage +15, resistpoison +15, resistfire +15, resistelectrical +15}
+{10}{maxfatigue +15}
+{11}{st -10, cn -10, dx -15, speed -90%, wp -10}
+{12}{techpts -20}
+{13}{resistelectrical min 95}
+{14}{pe -1}
+{15}{speed +100%}
+{16}{maxhps +20, maxfatigue -10}
+{17}{magicpts +3}
+{18}{damage max 50}
+{19}{be +2, speed -2}
+{20}{magicpts -20}
+{21}{wp +2}
+{22}{wp -1, in -1}
+{23}{wp -1, in -1, st +2}
+{24}{st +2, cn +2, dx +2}
+{25}{in -2, wp -2, pe -2}
+{26}{st -2, cn -2, dx -2}
+{27}{in +2, wp +2, pe +2}
+{28}{speed -5}
+{29}{resistmagic -65, resistdamage -65, resistpoison -65, resistfire -65, resistelectrical -65}
+{30}{st +10, dx +3}
+{31}{resistmagic -80, resistdamage -80, resistpoison -80, resistfire -80, resistelectrical -80}
+{32}{st +7, dx +2}
+{33}{resistmagic -95, resistdamage -95, resistpoison -95, resistfire -95, resistelectrical -95}
+{34}{st +5, dx +1}
+{35}{prowling +4}
+{36}{st -1, dx -1}
+{37}{st -1, dx -1, cn +1}
+{38}{st -1, dx -1, cn +2}
+{39}{cn +2}
+{40}{cn +3}
+{41}{speed -10}
+{42}{healrate +30%, maxfatigue +10}
+{43}{resistmagic +40, resistdamage -5, resistpoison -5, resistfire -5, resistelectrical -5}
+{44}{resistmagic +30, resistdamage -5, resistpoison -5, resistfire -5}
+{45}{resistmagic +15, resistdamage -5, resistpoison -5}
+{46}{speed -2, poisonrate *2}
+{47}{speed -1, poisonrate *2}
+{48}{poisonrate *2}
+{49}{speed +1, poisonrate *2}

@@ -50,6 +50,17 @@
         <span class="gauge" id="sndVol" title="Volume" hidden><button type="button" data-d="-1" aria-label="Quieter">◀</button><span class="gbar" role="meter" aria-label="Volume" aria-valuemin="0" aria-valuemax="10"><i></i></span><button type="button" data-d="1" aria-label="Louder">▶</button></span>
       </span>
       <button class="iconbtn" id="sndHead" title="Play the music and the sounds of the place in view, as the game does"><span class="tb-ic">🔈&#xFE0E;</span></button>
+      <button class="iconbtn" id="shotBtn" title="Save a PNG of the map as you see it now"><span class="tb-ic">📷&#xFE0E;</span></button>
+      <span class="langflags" role="group" aria-label="Language">
+        <button class="tbtn langcur" id="langBtn" aria-haspopup="true" aria-expanded="false" title="Language of the Atlas's text">
+          <span class="langcur-flag"></span><span class="langcur-name">English</span> <span class="langcur-caret" aria-hidden="true">▾</span>
+        </button>
+        <span class="langlist" id="langList" hidden>
+          <button class="tbtn" id="langEn" data-name="English" aria-pressed="true" title="English: the game's default text tables"><svg class="flag" viewBox="0 0 60 30" aria-hidden="true"><clipPath id="ukclip"><path d="M0 0v30h60V0z"/></clipPath><path d="M0 0v30h60V0z" fill="#012169"/><path d="M0 0l60 30m0-30L0 30" stroke="#fff" stroke-width="6"/><path d="M0 0l60 30m0-30L0 30" clip-path="url(#ukclip)" stroke="#c8102e" stroke-width="3" transform="translate(0 0)"/><path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10"/><path d="M30 0v30M0 15h60" stroke="#c8102e" stroke-width="6"/></svg><span>English</span></button>
+          <button class="tbtn" id="langFr" data-name="Français" aria-pressed="false" title="Français : les tables de texte du dossier data/language/french (jeu de base)"><svg class="flag" viewBox="0 0 3 2" aria-hidden="true"><rect width="1" height="2" fill="#0055a4"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ef4135"/></svg><span>Français</span></button>
+          <button class="tbtn" id="langDe" data-name="Deutsch" aria-pressed="false" title="Deutsch: die Texttabellen aus data/language/german (Basisspiel)"><svg class="flag" viewBox="0 0 5 3" aria-hidden="true"><rect width="5" height="1" fill="#000"/><rect y="1" width="5" height="1" fill="#dd0000"/><rect y="2" width="5" height="1" fill="#ffce00"/></svg><span>Deutsch</span></button>
+        </span>
+      </span>
       <button class="modlink" id="advBtn" aria-pressed="false" title="Show where each person and container comes from in the game files, with a link to the asset browser"><span class="tb-ic">🛠&#xFE0E;</span> Advanced view</button>
       <button class="modlink" id="layersBtn" aria-pressed="false" title="Compare a sector across the base game and the mods: an opacity slider for each, drawn one over the other"><span class="tb-ic">&#x25A4;&#xFE0E;</span> Layers</button>
       <button class="modlink" id="healthBtn" aria-haspopup="dialog" title="What the data of this version covers and what it leaves out: glows, layers, unreachable maps"><span class="tb-ic">&#x2695;&#xFE0E;</span> Data health</button>
@@ -173,7 +184,7 @@
   <!-- =================================================================== ATLAS -->
   <div class="workspace" data-screen="atlas">
     <aside class="side-left rel">
-      <div class="region-tabs" id="modeTabs"><div class="ver-wrap"><button class="on" data-mode="arcanum" id="verTab" aria-haspopup="listbox" aria-expanded="false" title="Which version of the game to show"><span id="verName">CE Restored 1.61</span> <span id="verArrow" class="ver-arrow">&#9662;</span></button><div class="ver-menu" id="verMenu" role="listbox" hidden><button role="option" data-ver="ce">CE Restored 1.61</button><button role="option" data-ver="base">Arcanum 1.0.7.4</button><button role="option" data-ver="ru">Russian Mod Pack 2012 RC9</button><button role="option" data-ver="car">Polished CAR Arcanum</button><button role="option" data-ver="fp">Forgotten Places 6.0</button><button role="option" data-ver="tin">Terra Incognita</button><button role="option" data-ver="rb">Arcanum ReBulid</button></div></div><button data-mode="modules">Modules</button></div>
+      <div class="region-tabs" id="modeTabs"><div class="ver-wrap"><button class="on" data-mode="arcanum" id="verTab" aria-haspopup="listbox" aria-expanded="false" title="Which version of the game to show"><span id="verName">CE Restored 1.61</span> <span id="verArrow" class="ver-arrow">&#9662;</span></button><div class="ver-menu" id="verMenu" role="listbox" hidden><button role="option" data-ver="ce">CE Restored 1.61</button><button role="option" data-ver="base">Arcanum 1.0.7.4</button><button role="option" data-ver="ru">Russian Mod Pack 2012 RC9</button><button role="option" data-ver="car">Polished CAR Arcanum</button><button role="option" data-ver="fp">Forgotten Places 6.0</button><button role="option" data-ver="tin">Terra Incognita</button><button role="option" data-ver="rb">Arcanum ReBulid</button><button role="option" data-ver="tr">Arcanum Total Rebalance</button><button role="option" data-ver="dem">Arcanum Demo</button><button role="option" data-ver="bpd">Arcanum Beta Press Demo</button><button role="option" data-ver="v064">Arcanum 1.0.6.4</button></div></div><button data-mode="modules">Modules</button></div>
       <div class="loclist" id="locList"><!-- filled from world-labels.js --></div>
     </aside>
 
@@ -244,6 +255,7 @@
 <!-- The welcome screen is drawn from the markup above. The data files (js/atlas/data/, listed in atlas-boot.js) load in the background, and the app
      (atlas-app.js) starts when they are in; a change of version starts it again (atlas-boot.js), so nothing here is reloaded. -->
 <script src="js/atlas/atlas-boot.js"></script>
+<script src="js/atlas/atlas-lang.js"></script>
 </template>
 
 <template id="view-map">
@@ -292,20 +304,20 @@
 </div>
 <script src="js/atlas/data/versions.js"></script>
 <script src="js/atlas/version-data.js"></script>
-<script src="js/atlas/data/map-pictures.js"></script>
+<script>AtlasData('map-pictures')</script>
 <!-- the mod of the version on show (nothing for the base game): pictures, alias lists, maps, areas, people (glows come in shards: world-atlas.js loadGlows) -->
 <script>AtlasData.mod('pictures', 'maps', 'areas', 'mobs')</script>
-<script src="js/atlas/data/world-labels.js"></script>
+<script>AtlasData('world-labels')</script>
 <script>AtlasData('items')</script>
-<script src="js/atlas/data/npcs.js"></script>
+<script>AtlasData('npcs')</script>
 <script>AtlasData('routines')</script>
-<script src="js/atlas/data/submaps.js"></script>
+<script>AtlasData('submaps')</script>
 <script>AtlasData('modules')</script>
 <script src="js/atlas/modules-merge.js"></script>
 <script>AtlasData('waypoints')</script>
 <script>AtlasData('notices')</script>
 <script src="js/atlas/modules-merge-labels.js"></script>
-<script src="js/atlas/data/areas.js"></script>
+<script>AtlasData('areas')</script>
 <script>AtlasData('portraits')</script>
 <script src="js/atlas/live-layer.js"></script>
 <script src="js/atlas/world-atlas.js"></script>
@@ -437,7 +449,11 @@
           <input type="search" id="explorerSearchInput" placeholder="Search .ART files by name…" aria-label="Search all folders">
           <button id="explorerSearchBtn" type="button" class="search-btn" title="Search" aria-label="Search">🔍</button>
         </div>
-        <button id="explorerSearchClear" type="button" class="search-btn search-clear" hidden>✕ Clear search</button>
+        <div class="search-scope" role="group" aria-label="Also search in">
+          <span>Search in:</span>
+          <select id="explorerSearchScope" multiple size="6" aria-label="Where to search: the base game, mods or modules (click to add or remove)"></select>
+        </div>
+        <button id="explorerSearchClear"type="button" class="search-btn search-clear" hidden>✕ Clear search</button>
         <select id="protoObjectTypeFilter" class="proto-object-type-filter" hidden aria-label="Filter .PRO files by object type"><option value="all">All object types</option></select>
       </div>
       <div class="side-panel is-empty" id="sidePanel">
@@ -543,6 +559,7 @@
   <div class="hex-header">
     <h2 id="hexTitle">Hex view</h2>
     <span class="hex-meta" id="hexMeta"></span>
+    <button class="hex-export" id="hexExport" type="button" hidden>Export .mob</button>
     <button class="hex-close" id="hexClose" type="button" aria-label="Close">×</button>
   </div>
   <div class="hex-workspace">

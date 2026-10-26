@@ -125,8 +125,8 @@ TOOLS = [
     },
     {
         'name': 'Build file indexes',
-        'tagline': 'data/file_index_<ext>.json: the folder trees the Files tool reads',
-        'detail': ['Rescans data/ and rewrites one file_index_<ext>.json per kind of file (art, pro, sec, mob, dlg, mes,',
+        'tagline': 'js/index/files/file_index_<ext>.json: the folder trees the Files tool reads',
+        'detail': ['Rescans data/ and rewrites one js/index/files/file_index_<ext>.json per kind of file (art, pro, sec, mob, dlg, mes,',
                    'scr, bmp). Run it after adding, renaming or removing files in data/.'],
         'script': 'file_index.py', 'needs': [], 'ask': args_confirm('Rewrite the file indexes under data/?'),
     },

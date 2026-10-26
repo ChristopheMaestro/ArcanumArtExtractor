@@ -1,0 +1,450 @@
+{1}{G:}{}{}{}{}{lf 14 0 } 
+{2}{Are you Gurin Rockharrow?}{}{5}{me 0,  tr 8 2,  rp -1009}{300}{ } 
+{3}{Hello, might I ask your name good sir?}{}{5}{me 0,  tr 8 -1,  rp -1009}{300}{ } 
+{4}{Greetings Mr. Rockharrow.}{}{5}{me 1,  lf 13 1,  rp -1009}{305}{ } 
+{5}{Nice to see you again.}{}{5}{me 1}{305}{} 
+{6}{Gurin, I have your money.}{}{5}{rp 1009, $$ 5000}{369}{rp -1009, $$ -5000 } 
+{7}{How about a game of Dice?}{}{5}{rp -1009, $$ 5000, qu1108 2}{369}{ } 
+{8}{How about a game of Dice?}{}{5}{rp 1009, $$ -5000}{393}{ } 
+{9}{I have thought about your offer to train me.}{}{5}{qu 1108 1}{243}{ } 
+{10}{me say hi}{}{-4}{me 0}{446}{ } 
+{11}{me say hi}{}{-4}{me 1}{305}{ } 
+{12}{E:}{}{1}{}{0}{ } 
+{13}{The @pcname@, the gambler?}{The @pcname@, the gambler?}{}{}{}{ } 
+{14}{Yes that's me.}{}{5}{}{17}{ } 
+{15}{}{}{}{}{}{ } 
+{16}{}{}{}{}{}{ } 
+{17}{Excuse my shortness. It is a pleasure to meet you @pcname@ I have heard good things about you. You supposedly have a talent for wagering. What brings you to the Club?}{Excuse my shortness. It is a pleasure to meet you @pcname@ I have heard good things about you. You supposedly have a talent for wagering. What brings you to the Club?}{}{}{}{re +20 } 
+{18}{You are the Master. I am here to learn.}{}{5}{sk 8 15}{243}{re+ 5 } 
+{19}{Damn right. I am here to take your money!}{}{5}{sk 8 -14}{438}{re -5 } 
+{20}{K:}{}{5}{}{}{ } 
+{21}{}{}{}{}{}{ } 
+{22}{}{}{}{}{}{ } 
+{23}{}{}{}{}{}{ } 
+{24}{Gentleman's dice is a game of chance. The game is played with two dice. It is played by making a series of rolls of the dice. You set a mark and try to re roll the mark.}{Gentlemans dice is a game of chance. The game is played with two dice. It is played by making a series of rolls of the dice.}{}{}{}{ } 
+{25}{I could use some more information.}{}{5}{}{30}{ } 
+{26}{Yes Yes... Not too different from how I play.}{}{5}{tr 8 2}{288}{ } 
+{27}{}{}{}{}{}{ } 
+{28}{}{}{}{}{}{ } 
+{29}{}{}{}{}{}{ } 
+{30}{Your first roll is special. If the total on the two dice that you roll adds up to SEVEN or ELEVEN on the first throw you win instantly. If you roll a TWO you lose instantly. If you don't win or lose on your first throw, the number that you rolled is SET as a MARK.}{Your first roll is special. If the total on the two dice that you roll adds up to SEVEN or ELEVEN on the first throw you win instantly. If you roll a TWO you lose instantly. If you haven't haven't won or lost on your first throw, the number that you rolled is set as a mark.}{}{}{}{ } 
+{31}{Yes}{}{1}{}{33}{ } 
+{32}{}{}{}{}{}{ } 
+{33}{On subsequent rolls, you try to roll the total of your MARK EXACTLY again, but if you roll a SEVEN or a TWO, snake eyes, you lose. We play for even money.}{On subsequent rolls, you try to roll your mark exactly again, but if you roll a SEVEN or a TWO, snake eyes, you lose. We play for even money. Do you understand.}{}{}{}{ } 
+{34}{What are the stakes.}{}{1}{}{288}{ } 
+{35}{}{}{}{}{}{ } 
+{36}{}{}{}{}{}{ } 
+{37}{You have rolled a SIX and a SIX.}{You have rolled a SIX and a SIX.}{}{}{}{ } 
+{38}{Roll again}{}{1}{lf1 1, lf12 0}{-6}{ } 
+{39}{A TWELVE!  Damnation! I will never make this.}{}{1}{lf1 0}{-6}{lf1 1, lf12 1 } 
+{40}{Sorry guy. I am unbeatable!}{}{1}{lf1 1,lf12 1}{-53}{ } 
+{41}{}{}{}{}{}{ } 
+{42}{}{}{}{}{}{ } 
+{43}{}{}{}{}{}{ } 
+{44}{You have rolled a SIX and a FIVE.}{You have rolled a SIX and a FIVE.}{}{}{}{ } 
+{45}{Roll again}{}{1}{lf 7 0, lf1 1}{-6}{ } 
+{46}{ELEVEN is a winner, How sweet it is!}{}{1}{lf 7 0, lf1 0}{-53}{ } 
+{47}{NO GUTS, NO GLORY. ANOTHER WINNER!}{}{1}{lf 7 1}{-53}{ } 
+{48}{}{}{}{}{}{ } 
+{49}{}{}{}{}{}{ } 
+{50}{}{}{}{}{}{ } 
+{51}{You have rolled a SIX and a FOUR.}{You have rolled a SIX and a FOUR.}{}{}{}{ } 
+{52}{Roll again}{}{1}{lf1 1, lf10 0}{-6}{ } 
+{53}{A mark of TEN. I feel lucky. Come on baby!}{}{1}{lf1 0}{-6}{lf1 1, lf10 1 } 
+{54}{Oh yeah. Oh yeah. I am the best.}{}{1}{lf1 1,lf10 1}{-53}{ } 
+{55}{}{}{}{}{}{ } 
+{56}{}{}{}{}{}{ } 
+{57}{}{}{}{}{}{ } 
+{58}{You have rolled a SIX and a THREE.}{You have rolled a SIX and a THREE.}{}{}{}{ } 
+{59}{Roll again}{}{1}{lf1 1, lf9 0}{-6}{ } 
+{60}{Drat! A mark of  NINE is tough to make.}{}{1}{lf1 0}{-6}{lf1 1, lf9 1 } 
+{61}{Wooo hoooo. A lucky winner!}{}{1}{lf1 1,lf9 1}{-53}{ } 
+{62}{}{}{}{}{}{ } 
+{63}{}{}{}{}{}{ } 
+{64}{}{}{}{}{}{ } 
+{65}{You have rolled a SIX and a TWO.}{You have rolled a SIX and a TWO.}{}{}{}{ } 
+{66}{Roll again}{}{1}{lf1 1, lf8 0}{-6}{ } 
+{67}{An EIGHT!  This should not be to difficult to make.}{}{1}{lf1 0}{-6}{lf1 1, lf8 1 } 
+{68}{Sweet success! I have won.}{}{1}{lf1 1,lf8 1}{-53}{ } 
+{69}{}{}{}{}{}{ } 
+{70}{}{}{}{}{}{ } 
+{71}{}{}{}{}{}{ } 
+{72}{You have rolled a SIX and a ONE.}{You have rolled a SIX and a ONE.}{}{}{}{ } 
+{73}{Looks Like I am a Winner!}{}{1}{lf 7 0, lf1 0}{-53}{ } 
+{74}{Confound it. I have lost.}{}{1}{lf 7 0, lf1 1}{-56}{ } 
+{75}{I SEEM TO HAVE FOUND MY LUCK SIR!}{}{1}{lf 7 1}{-53}{ } 
+{76}{}{}{}{}{}{ } 
+{77}{}{}{}{}{}{ } 
+{78}{}{}{}{}{}{ } 
+{79}{You have rolled a FIVE and a FIVE.}{You have rolled a FIVE and a FIVE.}{}{}{}{ } 
+{80}{Roll again}{}{1}{lf1 1, lf10 0}{-6}{ } 
+{81}{Looks like I am going to have to win the hard way.}{}{1}{lf1 0}{-6}{lf1 1, lf10 1 } 
+{82}{There it is! A winner!}{}{1}{lf1 1,lf10 1}{-53}{ } 
+{83}{}{}{}{}{}{ } 
+{84}{}{}{}{}{}{ } 
+{85}{}{}{}{}{}{ } 
+{86}{You have rolled a FIVE and a FOUR.}{You have rolled a FIVE and a FOUR.}{}{}{}{ } 
+{87}{Roll again}{}{1}{lf1 1, lf9 0}{-6}{ } 
+{88}{A mark of NINE. This is a tough mark to make.}{}{1}{lf1 0}{-6}{lf1 1, lf9 1 } 
+{89}{Oh come to papa! I have won!}{}{1}{lf1 1,lf9 1}{-53}{ } 
+{90}{}{}{}{}{}{ } 
+{91}{}{}{}{}{}{ } 
+{92}{}{}{}{}{}{ } 
+{93}{You have rolled a FIVE and a THREE.}{You have rolled a FIVE and a THREE.}{}{}{}{ } 
+{94}{Roll again}{}{1}{lf1 1, lf8 0}{-6}{ } 
+{95}{EIGHT!  Another easy mark!}{}{1}{lf1 0}{-6}{lf1 1, lf8 1 } 
+{96}{I hope you have more money. This is so easy!}{}{1}{lf1 1,lf8 1}{-53}{ } 
+{97}{}{}{}{}{}{ } 
+{98}{}{}{}{}{}{ } 
+{99}{}{}{}{}{}{ } 
+{100}{You have rolled a FIVE and a TWO.}{You have rolled a FIVE and a TWO.}{}{}{}{ } 
+{101}{Lady luck is shining on me today! A winner.}{}{1}{lf1 0, lf 7 0}{-53}{ } 
+{102}{Rotten Luck! I have lost.}{}{1}{lf1 1, lf 7 0}{-56}{ } 
+{103}{I AM VICTORIOUS. AGAIN! YOU'RE GOING DOWN.}{}{1}{lf 7 1}{-53}{ } 
+{104}{}{}{}{}{}{ } 
+{105}{}{}{}{}{}{ } 
+{106}{}{}{}{}{}{ } 
+{107}{You have rolled a FIVE and a ONE.}{You have rolled a FIVE and a ONE.}{}{}{}{ } 
+{108}{Roll again}{}{1}{lf1 1, lf6 0}{-6}{ } 
+{109}{Get ready to give me some more of your money!}{}{1}{lf1 0}{-6}{lf1 1, lf6 1 } 
+{110}{Time to pay up! I just hate to win like this.}{}{1}{lf1 1,lf6 1}{-53}{ } 
+{111}{}{}{}{}{}{ } 
+{112}{}{}{}{}{}{ } 
+{113}{}{}{}{}{}{ } 
+{114}{You have rolled a FOUR and a FOUR.}{You have rolled a FOUR and a FOUR.}{}{}{}{ } 
+{115}{Roll again}{}{1}{lf1 1, lf8 0}{-6}{ } 
+{116}{Oh yeah. A nice easy EIGHT. Here I come.}{}{1}{lf1 0}{-6}{lf1 1, lf8 1 } 
+{117}{That was easy enough.  I have won.}{}{1}{lf1 1,lf8 1}{-53}{ } 
+{118}{}{}{}{}{}{ } 
+{119}{}{}{}{}{}{ } 
+{120}{}{}{}{}{}{ } 
+{121}{You have rolled a FOUR and a THREE.}{You have rolled a FOUR and a THREE.}{}{}{}{ } 
+{122}{Luck number SEVEN! Looks Like I am a Winner!}{}{1}{lf1 0, lf 7 0}{-53}{ } 
+{123}{A SEVEN! Curse these dice! I have lost.}{}{1}{lf1 1, lf 7 0}{-56}{ } 
+{124}{WHO IS THE MASTER NOW!}{}{1}{lf 7 1}{-53}{qu 1108 4, tr 8 3 , rq 2168} 
+{125}{}{}{}{}{}{ } 
+{126}{}{}{}{}{}{ } 
+{127}{}{}{}{}{}{ } 
+{128}{You have rolled a FOUR and a TWO.}{You have rolled a FOUR and a TWO.}{}{}{}{ } 
+{129}{Roll again}{}{1}{lf1 1, lf6 0}{-6}{ } 
+{130}{A SIX. Easy mark! Here it comes.}{}{1}{lf1 0}{-6}{lf1 1, lf6 1 } 
+{131}{A SIX! Another winner!}{}{1}{lf1 1,lf6 1}{-53}{ } 
+{132}{}{}{}{}{}{ } 
+{133}{}{}{}{}{}{ } 
+{134}{}{}{}{}{}{ } 
+{135}{You have rolled a FOUR and a ONE.}{You have rolled a FOUR and a ONE.}{}{}{}{ } 
+{136}{Roll again}{}{1}{lf1 1, lf5 0}{-6}{ } 
+{137}{A FIVE. Looks like you going to owe me.}{}{1}{lf1 0}{-6}{lf1 1, lf5 1 } 
+{138}{A FIVE is a lucky winner! Hello!}{}{1}{lf1 1,lf5 1}{-53}{ } 
+{139}{}{}{}{}{}{ } 
+{140}{}{}{}{}{}{ } 
+{141}{}{}{}{}{}{ } 
+{142}{You have rolled a THREE and a THREE.}{You have rolled a THREE and a THREE.}{}{}{}{ } 
+{143}{Roll again}{}{1}{lf1 1, lf6 0}{-6}{ } 
+{144}{A SIX. I feel lucky.}{}{1}{lf1 0}{-6}{lf1 1, lf6 1 } 
+{145}{A SIX! My system is paying off.}{}{1}{lf1 1,lf6 1}{-53}{ } 
+{146}{}{}{}{}{}{ } 
+{147}{}{}{}{}{}{ } 
+{148}{}{}{}{}{}{ } 
+{149}{You have rolled a THREE and a TWO.}{You have rolled a THREE and a TWO.}{}{}{}{ } 
+{150}{Roll again}{}{1}{lf1 1, lf5 0}{-6}{ } 
+{151}{This is a tough mark to make.}{}{1}{lf1 0}{-6}{lf1 1, lf5 1 } 
+{152}{A FOUR! Sorry to take you money again!}{}{1}{lf1 1,lf5 1}{-53}{ } 
+{153}{}{}{}{}{}{ } 
+{154}{}{}{}{}{}{ } 
+{155}{}{}{}{}{}{ } 
+{156}{You have rolled a THREE and a ONE.}{You have rolled a THREE and a ONE.}{}{}{}{ } 
+{157}{Roll again}{}{1}{lf1 1, lf4 0}{-6}{ } 
+{158}{Not a FOUR! I am doing this the hard way.}{}{1}{lf1 0}{-6}{lf1 1, lf4 1 } 
+{159}{A FOUR! Sorry to take you money again!}{}{1}{lf1 1,lf4 1}{-53}{ } 
+{160}{}{}{}{}{}{ } 
+{161}{}{}{}{}{}{ } 
+{162}{}{}{}{}{}{ } 
+{163}{You have rolled a TWO and a TWO.}{You have rolled a TWO and a TWO.}{}{}{}{ } 
+{164}{Roll again}{}{1}{lf1 1, lf4 0}{-6}{ } 
+{165}{This is going to be a hard mark!}{}{1}{lf1 0}{-6}{lf1 1, lf4 1 } 
+{166}{Oh yes, a FOUR is victory!}{}{1}{lf1 1,lf4 1}{-53}{ } 
+{167}{}{}{}{}{}{ } 
+{168}{}{}{}{}{}{ } 
+{169}{}{}{}{}{}{ } 
+{170}{You have rolled a TWO and a ONE.}{You have rolled a TWO and a ONE.}{}{}{}{ } 
+{171}{Roll again}{}{1}{lf1 1, lf3 0}{-6}{ } 
+{172}{Egad! Not a THREE! This is a lousy mark.}{}{1}{lf1 0}{-6}{lf1 1, lf3 1 } 
+{173}{A THREE! It was impossible, but I did it anyway! }{}{1}{lf1 1,lf3 1}{-53}{ } 
+{174}{}{}{}{}{}{ } 
+{175}{}{}{}{}{}{ } 
+{176}{}{}{}{}{}{ } 
+{177}{Snake Eyes! You have rolled a ONE and a ONE.}{You have rolled a ONE and a ONE.}{}{}{}{ } 
+{178}{Confound these dice!}{}{1}{lf2 0}{-56}{ } 
+{179}{Confound these dice!}{}{1}{lf2 1}{-56}{ } 
+{180}{}{}{}{}{}{ } 
+{181}{}{}{}{}{}{ } 
+{182}{}{}{}{}{}{ } 
+{183}{}{}{}{}{}{ } 
+{184}{}{}{}{}{}{ } 
+{185}{You have won my friend.}{You have won my friend.}{}{}{}{ } 
+{186}{Are you ready to go again.}{}{1}{gv1019 5}{-59}{$$ 1 } 
+{187}{Are you ready to go again.}{}{1}{gv1019 10}{-59}{$$ 10 } 
+{188}{Are you ready to go again.}{}{1}{gv1019 100}{-59}{$$ 100 } 
+{189}{Are you ready to go again.}{}{1}{gv1019 1000}{-59}{$$ 1000 } 
+{190}{Are you ready to go again.}{}{1}{gv1019 2000}{-59}{$$ 2000 } 
+{191}{}{}{}{}{}{ } 
+{192}{}{}{}{}{}{ } 
+{193}{}{}{}{}{}{ } 
+{194}{}{}{}{}{}{ } 
+{195}{}{}{}{}{}{ } 
+{196}{You have lost my friend.}{You have lost my friend.}{}{}{}{ } 
+{197}{Are you ready to go again.}{}{1}{gv1019 5, $$ 10}{-59}{$$ -5 } 
+{198}{Are you ready to go again.}{}{1}{gv1019 10, $$ 20}{-59}{$$ -10 } 
+{199}{Are you ready to go again.}{}{1}{gv1019 100, $$ 200}{-59}{$$ -100 } 
+{200}{Are you ready to go again.}{}{1}{gv1019 1000, $$ 2000}{-59}{$$ -1000 } 
+{201}{Are you ready to go again.}{}{1}{gv1019 1, $$ -9}{347}{$$ -5 } 
+{202}{Are you ready to go again.}{}{1}{gv1019 10, $$ -19}{347}{$$ -10 } 
+{203}{Are you ready to go again.}{}{1}{gv1019 100, $$ -199}{347}{$$ -100 } 
+{204}{Are you ready to go again.}{}{1}{gv1019 1000, $$ -1999}{347}{$$ -1000 } 
+{205}{Are you ready to go again.}{}{1}{gv1019 2000, $$ 4000}{-59}{$$ -2000 } 
+{206}{Are you ready to go again.}{}{1}{gv1019 2000, $$ -3999}{347}{$$ -2000 } 
+{207}{}{}{}{}{}{ } 
+{208}{}{}{}{}{}{ } 
+{209}{Do you agree with these odds?}{Do you agree with these odds?}{}{}{}{ } 
+{210}{I agree to 1000 coins a game.}{}{1}{$$ 5000}{216}{gv1019 1000 } 
+{211}{Let's make it 2000 coins a game.}{}{1}{$$ 5000}{216}{gv1019 2000 } 
+{212}{I can't afford those odds.}{}{1}{$$ -4999, rp -1009}{231}{ } 
+{213}{I can't afford those odds.}{}{1}{$$ -4999, rp 1009}{414}{ } 
+{214}{}{}{}{}{}{ } 
+{215}{}{}{}{}{}{ } 
+{216}{Okay, this is your first roll of the dice to set your mark.}{Okay, this is your first roll of the dice to set your mark.}{}{}{}{ } 
+{217}{Roll.}{}{1}{lf 7 0}{-8}{lf1 0, lf3 0, lf4 0, lf5 0, lf6 0, lf8 0, lf9 0, lf10 0, lf 12 0 } 
+{218}{Roll.}{}{1}{lf 7 1, lc 2 0}{177}{lf1 0, lf3 0, lf4 0, lf5 0, lf6 0, lf8 0, lf9 0, lf10 0, lf 12 0, lf 7 0 } 
+{219}{Roll.}{}{1}{lf 7 1, lc 2 6}{72}{lf1 0, lf3 0, lf4 0, lf5 0, lf6 0, lf8 0, lf9 0, lf10 0, lf 12 0, lc 2 7 } 
+{220}{Roll.}{}{1}{lf 7 1, lc 2 7}{100}{lf1 0, lf3 0, lf4 0, lf5 0, lf6 0, lf8 0, lf9 0, lf10 0, lf 12 0, lc 2 8 } 
+{221}{Roll.}{}{1}{lf 7 1, lc 2 8}{44}{lf1 0, lf3 0, lf4 0, lf5 0, lf6 0, lf8 0, lf9 0, lf10 0, lf 12 0, lc 2 9 } 
+{222}{Roll.}{}{1}{lf 7 1, lc 2 9}{121}{lf1 0, lf3 0, lf4 0, lf5 0, lf6 0, lf8 0, lf9 0, lf10 0, lf 12 0, lc 2 10 } 
+{223}{Change the stakes.}{}{1}{lf 7 0}{209}{ } 
+{224}{Change the stakes.}{}{1}{lf 7 1}{209}{ } 
+{225}{I must retire.}{}{1}{}{0}{ } 
+{226}{}{}{}{}{}{ } 
+{227}{}{}{}{}{}{ } 
+{228}{}{}{}{}{}{ } 
+{229}{}{}{}{}{}{ } 
+{230}{}{}{}{}{}{ } 
+{231}{Here is some money to borrow.}{Here is some money to borrow.}{}{}{}{ } 
+{232}{Most sporting of you sir. I am in your debt.}{}{5}{rp -1009}{209}{$$ 5000 } 
+{233}{I'd rather not go into debt.}{}{5}{}{237}{ } 
+{234}{}{}{}{}{}{ } 
+{235}{}{}{}{}{}{ } 
+{236}{}{}{}{}{}{ } 
+{237}{It has been a pleasure throwing dice with you sir. I hope we can do it again very soon. You have style and some skill I look forward to future sessions.}{That was most unfortunate. I am terribly sorry Sir. But I can't allow this to continue.}{}{}{}{ } 
+{238}{I am sure you do.}{}{5}{}{316}{ } 
+{239}{}{}{}{}{}{ } 
+{240}{}{}{}{}{}{ } 
+{241}{}{}{}{}{}{ } 
+{242}{}{}{}{}{}{ } 
+{243}{I am gambler kid! And you don't learn that in a school. I shall permit you to associate with me here at the club. We will throw dice together. If your smart kid, you may even learn how to be as good as I am, though I have yet to meet the man to do it. If that day ever comes, you will be a master gambler also.}{I am gambler kid! And you don't learn that in a school. I shall permit you to associate with me here at the club. We will throw dice together. If your smart kid, you may even learn how to be as good as I am, though I have yet to meet the man to do it. If that day ever comes, you will be a master gambler also.}{}{}{}{qu 1108 1 } 
+{244}{I would be honored with such an opportunity.}{}{5}{}{250}{qu 1108 2 } 
+{245}{I don't think I could afford such a relationship.}{}{5}{}{305}{ } 
+{246}{}{}{}{}{}{ } 
+{247}{}{}{}{}{}{ } 
+{248}{}{}{}{}{}{ } 
+{249}{}{}{}{}{}{ } 
+{250}{I like your confidence kid. But, how good are you? What makes you special.}{I like your confidence kid. But, how good are you? What makes you special.}{}{}{}{ } 
+{251}{I am just lucky, that's all, very lucky.}{}{-12}{}{258}{lc 1 1 } 
+{252}{I am unbeatable, I always win.}{}{5}{}{258}{lc 1 2 } 
+{253}{I got a system that is guaranteed to win.}{}{5}{}{273}{lc 1 3 } 
+{254}{I notice things others don't. It gives me an edge.}{}{5}{pe 15}{281}{lc 1 4 } 
+{255}{I am smarter than average.}{}{13}{}{258}{lc 1 5  } 
+{256}{I am quick, which is usually enough.}{}{5}{sk 1 15}{268}{lc 1 6 } 
+{257}{}{}{}{}{}{ } 
+{258}{Hah!  If I could keep a coin for every time I heard that line. Kid whatever game your playing, that's got nothing to do with it! Ahhh to be young and innocent again. You are like a babe in the cradle @pcname@. I am almost going to regret taking your money.}{Hah!  If I could keep a coin for every time I heard that line. Kid whatever game your playing, that's got nothing to do with it! Ahhh to be young and innocent again. You are like a babe in the cradle @pcname@. I am almost going to regret taking your money.}{}{}{}{ } 
+{259}{Right almost as much as I regret taking yours.}{}{5}{}{278}{ } 
+{260}{Lets stop talking and get down to it Sir.}{}{5}{}{278}{ } 
+{261}{}{}{}{}{}{ } 
+{262}{}{}{}{}{}{ } 
+{263}{Right, everybody thinks they're smarter than the next guy. I'll hand it to you. You are sharp. But this is a game of guts, not smarts. I have seen all kinds of guys break under pressure. It has nothing to do with how smart or how dumb you are @pcname@.}{Right, everybody thinks they're smarter than the next guy. I'll hand it to you. You are sharp. But this is a game of guts, not smarts. I have seen all kinds of guys break under pressure. It has nothing to do with how smart or how dumb you are @pcname@.}{}{}{}{ } 
+{264}{That will never happen to me.}{}{5}{}{278}{ } 
+{265}{Intellectual talent will prevail Sir.}{}{5}{}{278}{ } 
+{266}{}{}{}{}{}{ } 
+{267}{}{}{}{}{}{ } 
+{268}{Right, Well if you try anything "quick" in here you'll be found floating in sewers, deceased of "mysterious causes" do I make myself clear. Furthermore kid, speed ain't got nothing to do with it. It is all about having the guts to play the game and take the risk. A risk with a big payoff.}{Right, Well if you try anything "quick" in here you'll be found floating in sewers, deceased of "mysterious causes" do I make myself clear. Futhermore kid, speed ain't got nothing to do with it. It is all about having the guts to play the game and take the risk. A risk with a big payoff.}{}{}{}{ } 
+{269}{Of course! Everything is on the level.}{}{5}{}{278}{ } 
+{270}{I'll pretend I didn't hear that Sir.}{}{5}{}{278}{ } 
+{271}{}{}{}{}{}{ } 
+{272}{}{}{}{}{}{ } 
+{273}{I have seen every system in the book kid. If you think that you got a special system then think again. Gambling is about having guts. If you loose your nerve then you loose you money! A system does not give you guts. Either you got it or you don't!}{I have seen every system in the book kid. If you think that you got a special system then think again. Gambling is about having guts. If you loose your nerve then you loose you money! A system does not give you guts. Either you got it or you don't!}{}{}{}{ } 
+{274}{We will see about that!}{}{5}{}{278}{ } 
+{275}{Lets put it to the test Sir.}{}{5}{}{278}{ } 
+{276}{}{}{}{}{}{ } 
+{277}{}{}{}{}{}{ } 
+{278}{Doubtless you have heard of a game called Gentleman's dice. It is the only game that I play.}{Doubtless you have heard of a game called Gentleman's dice. It is the only game that I play.}{}{}{}{ } 
+{279}{The rules vary so much, how do you play here in Tarant?}{}{5}{}{24}{ } 
+{280}{}{}{}{}{}{ } 
+{281}{Kid, you're smarter than I thought. A sharp eye will take you far in this business, but it all comes down to having the guts to take the big risk when it comes along.  Are you ready to play?}{Kid, you're smarter than I thought. A sharp eye will take you far in this business, but it all comes down to having the guts to take the big risk when it comes along.  Are you ready to play?}{}{}{}{ } 
+{282}{Yes.}{}{5}{}{278}{ } 
+{283}{}{}{}{}{}{ } 
+{284}{}{}{}{}{}{ } 
+{285}{Doubtless you have heard of a game called Gentleman's dice. It is the only game that I play.}{Doubtless you have heard of a game called Gentleman's dice. It is the only game that I play.}{}{}{}{ } 
+{286}{The rules are different from city to city. }{}{5}{}{24}{ } 
+{287}{}{}{}{}{}{ } 
+{288}{I play a high stakes game Sir. To play for less than 1000 coins a game is a waste of time. And I require a  starting purse of not less than 5000 coins. I hope you won't be wasting my time @pcname@. Or are you all talk and no action.}{I play a high stakes game Sir. To play for less than 1000 coins a game is a waste of time. Also you need to come the the table with a purse of not less than 5000 coins. I hope you won't be wasting my time @pcname@. Or are you all talk and no action.}{}{}{}{ } 
+{289}{I don't carry that kind of cash around.}{}{5}{$$ -4999}{376}{ } 
+{290}{I will be back. Good bye.}{}{5}{$$ -4999}{0}{ } 
+{291}{I have a sufficient purse for your game Sir.}{}{5}{$$ 5000}{209}{ } 
+{292}{You seem to be doing most of the talking.}{}{5}{$$ 5000}{209}{ } 
+{293}{}{}{}{}{}{ } 
+{294}{}{}{}{}{}{ } 
+{295}{}{}{}{}{}{ } 
+{296}{}{}{}{}{}{ } 
+{297}{}{}{}{}{}{ } 
+{298}{}{}{}{}{}{ } 
+{299}{}{}{}{}{}{ } 
+{300}{Yes what is it?  I am Gurin Rockharrow. I don't believe we have met.}{Yes what is it?  I am Gurin Rockharrow. I don't believe we have met.}{}{}{}{lf 13 1 } 
+{301}{I am @pcname@, Pleased to meet you.}{}{5}{tr 8 2}{13}{ } 
+{302}{I am @pcname@, Pleased to meet you.}{}{5}{ tr 8 -1}{305}{ } 
+{303}{Hello.}{}{5}{}{305}{ } 
+{304}{me @pcname@ me happy be here.}{}{-4}{}{305}{ } 
+{305}{What can I do for you?}{What can I do for you @pcname@?}{}{}{}{ } 
+{306}{Tell me about the Club?}{}{5}{lf11 0}{336}{lf11 1 } 
+{307}{What do you do?}{}{5}{}{342}{ } 
+{308}{Where do you keep the newspapers.}{}{5}{lf15 0}{331}{lf15 1 } 
+{309}{R:$0, 1040-1049}{}{5}{ss -6 , lf 14 0}{316}{lf14 1 } 
+{310}{R:$0, 1040-1049}{}{5}{ss 7 , ss -13 , lf 14 0}{316}{lf14 1 } 
+{311}{R:$0, 1040-1049}{}{5}{ss 14, lf 14}{316}{lf14 1 } 
+{312}{R:$0, 1040-1049}{}{-4}{ss -6, lf 14 0}{316}{lf14 1 } 
+{313}{What you do?}{}{-4}{}{342}{} 
+{314}{What this place?}{}{-4}{lf 11 0}{336}{lf11 1 } 
+{315}{E:}{}{1}{}{0}{ } 
+{316}{Anything else?}{Anything else?}{}{}{}{ } 
+{317}{Tell me about the Club?}{}{5}{lf11 0}{336}{lf11 1 } 
+{318}{What do you do?}{}{5}{}{342}{ } 
+{319}{Where do you keep the newspapers.}{}{5}{lf15 0}{331}{lf15 1 } 
+{320}{R:$0, 1040-1049}{}{5}{ss -6 , lf 14 0}{316}{lf14 1 } 
+{321}{R:$0, 1040-1049}{}{5}{ss 7 , ss -13 , lf 14 0}{316}{lf14 1 } 
+{322}{R:$0, 1040-1049}{}{5}{ss 14, lf 14}{316}{lf14 1 } 
+{323}{What you do?}{}{-4}{}{342}{} 
+{324}{What this place?}{}{-4}{lf 11 0}{336}{lf11 1 } 
+{325}{R:$0, 1040-1049}{}{-4}{ss -6, lf 14 0}{316}{lf14 1 } 
+{326}{R:$0, 1040-1049}{}{-4}{ss 7 , ss -13, lf 14 0}{316}{lf14 1 } 
+{327}{R:$0, 1040-1049}{}{-4}{ss 14, lf 14 0}{316}{lf14 1 } 
+{328}{E:}{}{1}{}{0}{ } 
+{329}{}{}{}{}{}{ } 
+{330}{}{}{}{}{}{ } 
+{331}{The newspapers are one of the perks of membership here. There is an excellent selection in the lounge area. It is an unwritten rule that you leave the papers for other members to read.}{The newspapers are one of the perks of membership here. There is an excellent selection in the lounge area. It is an unwritten rule that you leave the papers for other members to read.}{}{}{}{lf 15 1} 
+{332}{Thanks. I will take a look at them.}{}{5}{}{316}{ } 
+{333}{Thanks, but I don't waste my time with the news.}{}{5}{}{316}{ } 
+{334}{E:}{}{1}{}{0}{ } 
+{335}{}{}{}{}{}{ } 
+{336}{This club is the best in Tarant. Comfortable and peaceful surroundings. The staff is excellent. They are discreet and accommodating all at the same time. Simply marvelous.}{This club is the best in Tarant. Comfortable and peaceful surroundings. The staff is excellent. They are discreet and accommodating all at the same time. Simply marvelous.}{}{}{}{lf 11 1} 
+{337}{Yes it is nice.}{}{5}{}{316}{ } 
+{338}{ohhh I see.}{}{-4}{}{316}{ } 
+{339}{E:}{}{1}{}{0}{ } 
+{340}{}{}{}{}{}{ } 
+{341}{}{}{}{}{}{ } 
+{342}{ I am a professional gambler. My favorite game is Gentlemen's dice. I am quite good at it. In fact, I have never met my better.}{ I am a professional gambler. My favorite game is Gentlemens dice. I am quite good at it. In fact, I have never met my better.}{}{}{}{ } 
+{343}{That is good to know.}{}{5}{}{316}{ } 
+{344}{ohhh I see.}{}{-4}{}{316}{ } 
+{345}{E:}{}{1}{}{0}{ } 
+{346}{}{}{}{}{}{ } 
+{347}{It would seem that you are running low on funds. You have had a string of bad luck sir. I feel compelled to offer you an extension of credit so that you have a fair chance to regain your losses.}{It appears you don't have the funds to continue at that current stakes.}{}{}{}{ } 
+{348}{What are the terms of your credit.}{}{5}{rp -1009}{355}{ } 
+{349}{I am already in debt to you Sir.}{}{5}{rp 1009}{414}{ } 
+{350}{I accept your offer Sir. You are most generous.}{}{5}{rp -1009}{216}{lf7 1, $$ 5000, rp 1009 } 
+{351}{I must retire your offer is gracious, but no thank you.}{}{5}{}{237}{ } 
+{352}{}{}{}{}{}{ } 
+{353}{}{}{}{}{}{ } 
+{354}{}{}{}{}{}{ } 
+{355}{A simple Gentleman's agreement. Repay me when you are able. We will not throw dice again until you do repay the debt. I am not a bank. I don't charge interest. Honor dictates that I give you a chance to recoup your losses. I suggest an amount of 5000 coins so that we can continue.}{A simple Gentleman's agreement. Repay me when you are able. We will not throw dice again until you do repay the debt. I am not a bank. I don't charge interest. Honor dictates that I give you a chance to recoup your losses. I suggest an amount of 5000 coins so that we can continue.}{}{}{}{ } 
+{356}{I would rather not go into debt Sir.}{}{5}{}{362}{ } 
+{357}{I accept your offer Sir. You are most generous.}{}{5}{rp -1009}{216}{lf7 1, $$ 5000, rp 1009 } 
+{358}{}{}{}{}{}{ } 
+{359}{}{}{}{}{}{ } 
+{360}{}{}{}{}{}{ } 
+{361}{}{}{}{}{}{ } 
+{362}{I told you about this moment kid. This is where you find out if you have the guts to be the best. Either you do, or you don't.}{I told you about this moment kid. This is where you find out if you have the guts to be the best. Either you do, or you don't.}{}{}{}{ } 
+{363}{Your attempts to sway me are transparent Sir.}{}{15}{}{237}{ } 
+{364}{You right sir, bring it on. I accept your credit.}{}{5}{}{216}{lf7 1, $$ 5000, rp 1009 } 
+{365}{Still, Sir, I would rather not go into debt.}{}{5}{}{316}{ } 
+{366}{}{}{}{}{}{ } 
+{367}{}{}{}{}{}{ } 
+{368}{}{}{}{}{}{ } 
+{369}{I am ready if you are. You know I am just going to clean you out again like I did last time. Honestly Sir it pains me to take your money like this.}{I am ready if you are. You know I am just going to clean you out again like I did last time. Honestly Sir it pains me to take your money like this.}{}{}{}{ } 
+{370}{I feel lucky today.}{}{5}{}{288}{ } 
+{371}{We will have to see about that.}{}{5}{}{288}{ } 
+{372}{Such speculation is cheap. Lets play some dice.}{}{5}{}{288}{ } 
+{373}{E:}{}{1}{}{0}{ } 
+{374}{}{}{}{}{}{ } 
+{375}{}{}{}{}{}{ } 
+{376}{Come back when you have some more money. I would be pleased to throw some dice with you then.}{Come back when you have some more money. I would be pleased to throw some dice with you then.}{}{}{}{ } 
+{377}{K:}{}{5}{}{316}{ } 
+{378}{E:}{}{5}{}{0}{ } 
+{379}{}{}{}{}{}{ } 
+{380}{}{}{}{}{}{ } 
+{381}{Our friendly games have come to an end.  I simply cannot afford the pleasure at this rate! I wish you luck @pcname@.}{Our friendly games have come to an end.  I simply cannot afford the pleasure at this rate! I wish you luck @pcname@.}{}{}{}{ } 
+{382}{Thanks for training me Gurin.}{}{5}{}{0}{ } 
+{383}{I hope we can play again some time.}{}{5}{}{0}{ } 
+{384}{}{}{}{}{}{ } 
+{385}{}{}{}{}{}{ } 
+{386}{}{}{}{}{}{ } 
+{387}{Honestly Sir! If you could not have afforded the loss, you should not have wagered your funds. Of all the ingratitude! Good day.}{Honestly Sir! If you could not have afforded the loss, you should not have wagered your funds. Of all the ingratitude! Good day.}{}{}{}{ } 
+{388}{I shall take it by force then. Die fool!}{}{5}{}{}{co } 
+{389}{Good riddance Sir!}{}{5}{}{0}{ } 
+{390}{}{}{}{}{}{ } 
+{391}{}{}{}{}{}{ } 
+{392}{}{}{}{}{}{ } 
+{393}{I thought I was clear about NOT throwing dice with you until you repay your debt. I am firm on this policy. I am sure you understand.}{I thought I was clear about NOT throwing dice with you until you repay your debt. I am firm on this policy. I am sure you understand.}{}{}{}{ } 
+{394}{Well, I am not going to pay this debt.}{}{5}{}{400}{ } 
+{395}{K:}{}{5}{}{316}{ } 
+{396}{E:}{}{5}{}{0}{ } 
+{397}{}{}{}{}{}{ } 
+{398}{}{}{}{}{}{ } 
+{399}{}{}{}{}{}{ } 
+{400}{Honestly Sir, I you choose to become a deadbeat, I cannot stop you. I do not engage in brawling or dueling. I thought you were a man of your word. It is obvious that you are not! It is irrelevant to me what you do Sir. This whole affair is beginning to annoy me. I am considering canceling our agreement.}{Honestly Madam, I you choose to become a deadbeat, I cannot stop you. I do not engage in brawling or dueling. I thought you were a lady of your word. It is obvious that you are not! It is irrelevant to me what you do Madam. This whole affair is beginning to annoy me.}{}{}{}{ } 
+{401}{I will try to get your money. Good bye.}{}{5}{}{0}{ } 
+{402}{I am convinced that you cheated me. I am not paying.}{}{5}{}{0}{rp 1010, re -10 } 
+{403}{}{}{}{}{}{ } 
+{404}{}{}{}{}{}{ } 
+{405}{}{}{}{}{}{ } 
+{406}{}{}{}{}{}{ } 
+{407}{Enough is enough, Sir! You are amazing! At this rate you shall bankrupt me shortly. You have exhausted my funds and I admit today that I have met my match. You are a gambling master. Congratulations.}{Enough is enough, Sir! You are amazing! At this rate you shall bankrupt me shortly. You have exhausted my funds and I admit today that I have met my match. You are a gambling master. Congratulations.}{}{}{}{lc 2 0 } 
+{408}{I knew this day would come.}{}{1}{}{381}{ } 
+{409}{Your funds! Money you won from me! I demand satisfaction!}{}{1}{}{381}{ } 
+{410}{}{}{}{}{}{ } 
+{411}{}{}{}{}{}{ } 
+{412}{}{}{}{}{}{ } 
+{413}{}{}{}{}{}{ } 
+{414}{I have already extended you credit Sir. It is most unfortunate that you have been unable to recoup your losses. It is best if you would see to your finances and return with the money.}{I have already extended you credit Sir. It is most unfortunate that you have been unable to recoup your losses. It is best if you would see to your finances and return with the money.}{}{}{}{ } 
+{415}{I will try to get your money. Good bye.}{}{1}{}{0}{ } 
+{416}{You've been cheating I'm not going to pay!}{}{1}{}{400}{ } 
+{417}{}{}{}{}{}{ } 
+{418}{}{}{}{}{}{ } 
+{419}{}{}{}{}{}{ } 
+{420}{}{}{}{}{}{ } 
+{421}{}{}{}{}{}{ } 
+{422}{I am glad to have settled this affair. Now that your debt has been repaid, shall we have another try at the dice?}{I am glad to have settled this affair. Now that your debt has been repaid, shall we have another try at the dice?}{}{}{}{ } 
+{423}{I am ready if you are.}{}{1}{$$ 5000}{209}{ } 
+{424}{I cannot meet your stakes.}{}{1}{$$ -5000}{316}{ } 
+{425}{}{}{}{}{}{ } 
+{426}{}{}{}{}{}{ } 
+{427}{}{}{}{}{}{ } 
+{428}{}{}{}{}{}{ } 
+{429}{Excellent suggestion. I like your style @pcname@.}{Excellent suggestion. I like your style @pcname@.}{}{}{}{ } 
+{430}{You can't win big. If you don't bet big.}{}{1}{re -60}{216}{re +10 } 
+{431}{I like to make it interesting.}{}{1}{re -60}{216}{re +5 } 
+{432}{Lets shoot some dice.}{}{1}{}{216}{ } 
+{433}{}{}{}{}{}{ } 
+{434}{}{}{}{}{}{ } 
+{435}{}{}{}{}{}{ } 
+{436}{}{}{}{}{}{ } 
+{437}{}{}{}{}{}{ } 
+{438}{Hah! That is very amusing... I play a high stakes game, and I have found that it is best not to engage players with skill far below my own. Come back when you have a little more experience. We can talk about it then.}{Hah! That is very amusing... I play a high stakes game, and I have found that it is best not to engage players with skill far below my own. Come back when you have a little more experience. We can talk about it then.}{}{}{}{ } 
+{439}{Your frankness is appreciated.}{}{1}{re -80}{305}{re +5 } 
+{440}{We will see about that.}{}{1}{}{305}{ } 
+{441}{}{}{}{}{}{ } 
+{442}{}{}{}{}{}{ } 
+{443}{}{}{}{}{}{}
+{444}{}{}{}{}{}{}
+{445}{}{}{}{}{}{}
+{446}{Egad! [aside] How a simpleton like you got in here I can never guess. What can I do for you fella? Do you need the privy?}{Egad! [aside] How a simpleton like you got in here I can never guess. What can I do for you Missy? Do you need the privy?}{}{}{}{}
+{447}{me wanna know what this place?}{}{-4}{}{336}{}
+{448}{me wanna know who you ?}{}{-4}{}{342}{}
+{449}{E:}{}{1}{}{0}{}
+

@@ -221,6 +221,9 @@ body.sec-edit-full .side-right .explorer-search { max-height: 0; padding-top: 0;
 .search-row { display: flex; gap: 6px; }
 .side-right #explorerSearchInput { flex: 1 1 auto; min-width: 0; padding: 7px 9px; font-size: 12px; }
 .side-right .search-btn { padding: 7px 11px; font-size: 11.5px; border-radius: 4px; cursor: pointer; }
+.search-scope { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; font-size: 11.5px; color: var(--ink-muted); }
+.search-scope select { flex: 1 0 100%; padding: 2px; font-size: 11.5px; background: var(--surface-2); color: var(--ink); border: 1px solid var(--border); border-radius: 4px; }
+.search-scope select[hidden] { display: none; }
 .side-right .search-clear { align-self: flex-start; padding: 4px 9px; font-size: 11px; }
 .side-right .proto-object-type-filter {
   width: 100%; padding: 6px 8px; font: 12px var(--font-mono);

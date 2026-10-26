@@ -38,10 +38,11 @@ F_PORTRAIT, F_OBJ_FLAGS, OF_OFF = 231, 19, 0x2
 FAR = 1500                                   # an object this far from the middle of the map is a stray
 
 
-SHOWN = ('Buried Secrets','DarkRiver', 'Dungeon Crawl 2', 'Dusty Dunes', 'Hellgate', 'Lost Dungeon of Souls', 'Vormantown', 'Bourrin', 'MuHu', 'Deathmatch', 'Time', 'Woodmir Race', 'Affaire', 'Livre Ombres', 'Mystere', 'Naufrageur', 'Resident Eval', 'Secret', 'Tombeau', 'Tresor', 'Vallee', 'Battlearena', 'Deep15', 'Delirium of Evil', 'Doomsday', 'Dungeon of Quests', 'Escape Tarant', 'Grayhills', 'Terror', 'The Killer Inside', 'Virgil the Pervert', 'WhiteSands', 'Arcanum City', 'Hell Day', 'Addon01', 'Dolores 0.25')                   # the modules the Atlas offers so far
-MAIN_MAP = {'Vormantown': 'maps/Multiplayer-Map', 'Bourrin': 'maps/bourin', 'Buried Secrets': 'maps/MainMap', 'Dusty Dunes': 'maps/Dusty Dunes', 'Hellgate': 'maps/Main', 'Hell Day': 'maps/Main', 'Arcanum City': 'maps/Island Arcanum-City', 'Addon01': 'maps/village01', 'Lost Dungeon of Souls': 'maps/MainMap'}   # a full module (dlg, scr, maps/...): the map folder the Atlas shows (not its _original backup, not ShopMap)
-ALL_MAPS = ('MuHu', 'Deathmatch', 'Time', 'Woodmir Race', 'Affaire', 'Livre Ombres', 'Mystere', 'Naufrageur', 'Resident Eval', 'Secret', 'Tombeau', 'Tresor', 'Vallee', 'Battlearena', 'Deep15', 'Delirium of Evil', 'Doomsday', 'Dungeon of Quests', 'Escape Tarant', 'Grayhills', 'Terror', 'The Killer Inside', 'Virgil the Pervert', 'WhiteSands', 'Dolores 0.25')                     # a full module whose every map (maps/<name>, but ShopMap and the ones with no objects) is shown, as "<module> - <name>"
+SHOWN = ('Buried Secrets','DarkRiver', 'Dungeon Crawl 2', 'Dusty Dunes', 'Hellgate', 'Lost Dungeon of Souls', 'Vormantown', 'Bourrin', 'MuHu', 'Deathmatch', 'Time', 'Woodmir Race', 'Affaire', 'Livre Ombres', 'Mystere', 'Naufrageur', 'Resident Eval', 'Secret', 'Tombeau', 'Tresor', 'Vallee', 'Battlearena', 'Deep15', 'Delirium of Evil', 'Doomsday', 'Dungeon of Quests', 'Escape Tarant', 'Grayhills', 'Terror', 'The Killer Inside', 'Virgil the Pervert', 'WhiteSands', 'Arcanum City', 'Hell Day', 'Addon01', 'Dolores 0.25', 'UltimateArcanum', 'Dungeon Crawl 1', 'Holliae', 'CrossRoad 2.1')                   # the modules the Atlas offers so far
+MAIN_MAP = {'Vormantown': 'maps/Multiplayer-Map', 'Bourrin': 'maps/bourin', 'Buried Secrets': 'maps/MainMap', 'Dusty Dunes': 'maps/Dusty Dunes', 'Hellgate': 'maps/Main', 'Hell Day': 'maps/Main', 'Arcanum City': 'maps/Island Arcanum-City', 'Addon01': 'maps/village01', 'Lost Dungeon of Souls': 'maps/MainMap', 'UltimateArcanum': 'maps/Main', 'Dungeon Crawl 1': 'maps/start', 'Holliae': 'maps/Ile_principale'}   # a full module (dlg, scr, maps/...): the map folder the Atlas shows (not its _original backup, not ShopMap)
+ALL_MAPS = ('MuHu', 'Deathmatch', 'Time', 'Woodmir Race', 'Affaire', 'Livre Ombres', 'Mystere', 'Naufrageur', 'Resident Eval', 'Secret', 'Tombeau', 'Tresor', 'Vallee', 'Battlearena', 'Deep15', 'Delirium of Evil', 'Doomsday', 'Dungeon of Quests', 'Escape Tarant', 'Grayhills', 'Terror', 'The Killer Inside', 'Virgil the Pervert', 'WhiteSands', 'Dolores 0.25', 'CrossRoad 2.1')                     # a full module whose every map (maps/<name>, but ShopMap and the ones with no objects) is shown, as "<module> - <name>"
 NOT_SHOWN = {'ShopMap'}
+NOT_WAYS = {'Holliae': ('Passer le jour',)}      # module -> part of the name of scripts whose teleports are not shown as waypoints (user, 2026-10-25)
 
 
 def owned(key):
@@ -125,6 +126,11 @@ def doors_and_signs(module, folder, key, desc, keys, ver, mobs=None, secs=None):
     scr_dir, dlg_dir = ver.tree('scr'), ver.tree('dlg')
     tp = build_waypoints.teleports(scr_dir)
     ptp = build_waypoints.people_teleports(scr_dir)     # (the teleports that move the player: a person who takes you somewhere)
+    for n in NOT_WAYS.get(module.name, ()):             # (scripts whose teleport is no way anywhere: Holliae's "Passer le jour" on 437 tiles)
+        for f in Path(scr_dir).glob(f'*{n}*.scr') if Path(scr_dir).is_dir() else ():
+            num = int(re.match(r'\d+', f.name).group()) if re.match(r'\d+', f.name) else None
+            tp.pop(num, None)
+            ptp.pop(num, None)
     scripts = build_notices.read_scripts(scr_dir)
     ids = {}
     ml = module / 'Rules' / 'MapList.mes'

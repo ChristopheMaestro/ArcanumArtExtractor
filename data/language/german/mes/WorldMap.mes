@@ -1,0 +1,79 @@
+// WorldMap Info
+//
+
+
+
+{499}{Aktion}
+
+{500}{Nachrichten-Feder}
+{501}{Kartenansicht} // WorldMap View
+{502}{Kontinentansicht} // Zoom View
+{503}{Kartenansicht} // Town View
+{510}{Karte scrollen}
+{511}{Aktuellen Wegpunkt löschen}
+{512}{Wegpunktpfad beschreiten ein/aus}
+{520}{Allgemeine Markeransicht ein/aus}
+{521}{Schädel-Markeransicht ein/aus}
+{522}{Truhen-Markeransicht ein/aus}
+{523}{Frage-Markeransicht ein/aus}
+
+{600}{Du kannst im Kampf nicht zur Weltkarte umschalten.}
+{601}{Dein Pfad ist versperrt.  Du musst eine Brücke, einen Pass oder ein Transportmittel finden, das dir erlaubt, dieses Ziel zu erreichen.}
+
+{602}{Du kannst während einer Begegnung nicht zur Weltkarte umschalten.}
+
+{605}{Die Weltkarte ist nicht verfügbar.}
+
+// Used by TownMap Waypoint-UI
+{610}{Dein Pfad ist versperrt.  Versuche, näher am vorigen Wegpunkt zu klicken.}
+{611}{Du hast die maximale Anzahl der erlaubten Wegpunkte erreicht und kannst keine weiteren hinzufügen.}
+
+
+// Used for Teleport-blocked regions
+{640}{Du kannst nicht zu dieser Stelle teleportieren.  Irgendetwas blockiert dich.}
+
+
+{650}{Dein Zauberspruch scheint nicht zu wirken.}
+
+
+// Used for Worldmap System Font Color -- Don't translate!
+{655}{254, 248, 236}   // Default is all 250's
+
+
+// Note: This file is currently NOT IN USE 4/14/00 JLR
+//   Everything has been moved to module-specific worldmap files
+
+// No Longer in USE!
+// World Latitude/Longitude Offsets (Base Values for (0, 0))
+{20}{0, 0}
+
+// No Longer in USE!
+// Width & Height Count of WorldMap Tiles
+{50}{4, 2}
+
+// No Longer in USE!
+// WorldMap Tile Art-Idx Lookup:
+{100}{149, 157}
+{101}{150, 158}
+{102}{151, 159}
+{103}{152, 160}
+{104}{153, 161}
+{105}{154, 162}
+{106}{155, 163}
+{107}{156, 164}
+
+// No Longer in USE!
+
+// ---- Road Info ----
+// Road End-Points: (X, Y)
+{1000}{36128, 25696} // Tarant
+{1001}{38432, 35232}
+{1002}{45472, 41632}
+{1003}{54496, 45344} // Shrouded Hills
+{1004}{54624, 45408} // Crash Site
+
+// Road Edges
+{2000}{0, 1}
+{2001}{1, 2}
+{2002}{2, 3}
+{2003}{3, 0}

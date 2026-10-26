@@ -1,0 +1,354 @@
+// WARNING: Each effect has a constraint of a maximum of *FIVE* changes per *type* of change
+// (so you could have 5 changes to stats *and* 5 changes to skills, but not 6 changes to stats)
+
+{50}{be -1}  //scarring
+{51}{resistdamage min 95, resistpoison min 90, resistfire +10, resistelectrical +10, dx +8}     //Spell: Body of Air   - Changed by Positiff
+{52}{resistdamage min 60, resistpoison min 85, resistelectrical +30, st +9, dx -3}              //Spell: Body of Stone - Changed by Positiff
+{53}{resistfire min 95, resistpoison min 95, resistelectrical +15}                              //Spell: Body of Fire  - Changed by Positiff
+{54}{resistdamage min 75, resistelectrical min 90, resistfire +20, resistpoison +15, speed -5}  //Spell: Body of Water - Changed by Positiff
+{55}{wp +2}  //Tech Item: Willpower Boost (Made by Positiff)
+{56}{resistmagic +10}                                      //Spell: Resist Magic - Changed by Positiff
+{57}{speed /2}                                             //Spell: Slow         - Changed by Positiff
+{58}{speed +50%}                                           //Spell: Haste        - Changed by Positiff
+{59}{wp /2}                                                //Spell: Drain Will   - Changed by Positiff
+{60}{speed /2, damage /2}                                  //Spell: Shrink       - Changed by Positiff
+{61}{speed -5}                                             //Spell: Entangle, Plague of Insects
+{62}{ac +1}                                                //Spell: Energy Shield (part 1)
+{63}{resistdamage +1, resistfire +1, resistelectrical +1}  //Spell: Energy Shield (part 2)
+{64}{}	                                                                                                         //Race: Human
+{65}{st +1, cn +1, ch -1, dx -1, repair +2, firearms +2, picklock +2, armtrap +2, techpts +3, age +80}           //Race: Dwarf
+{66}{wp +1, dx +1, be +1, cn -2, st -1, repair -2, firearms -2, picklock -2, armtrap -2, magicpts +3, age +180}  //Race: Elf
+{67}{dx +1, be +1, cn -1, repair -1, firearms -1, picklock -1, armtrap -1, magicpts +1, age +15}                 //Race: Half Elf
+{68}{wp +2, haggle +3, badreactionadj +10, cn -2, age +70}                                                       //Race: Gnome - Changed by Positiff
+{69}{dx +2, prowling +2, dodge +1, crithitchance +5, st -3, age +30}                                             //Race: Halfling
+{70}{st +1, cn +2, melee +2, dodge +2, resistpoison +5, be -2, ch -2, age -5}                                    //Race: Half Orc - Changed by Positiff
+{71}{st +4, resistdamage +10, be -1, in -4, prowling -2}                                                         //Race: Half Ogre
+{72}{dx +1, be +1, repair -2, firearms -2, picklock -2, armtrap -2, magicpts +3, age +180}                       //Race: Dark Elf
+{73}{st +6, be -6, in -6, prowling -3, age +20}                                                                  //Race: Ogre
+{74}{st +2, cn +2, resistpoison +20, be -4, ch -4, in -1}                                                        //Race: Orc
+{75}{st -1, be +1}                       //—lass: Noble
+{76}{in +2, wp +2, ch +2}                //—lass: Priest
+{77}{st -2, in +4, cn +2}                //—lass: Wizard
+{78}{st +1, in +4, pe +1}                //—lass: Technologist
+{79}{in +1, pe +2, wp +2, ch +2}         //—lass: Shopkeeper
+{80}{st +2, dx +1, cn +2, pe +1, ch -1}  //—lass: Guard
+{81}{st -1, in +1}                       //—lass: City Dweller
+{82}{st +1, in -1}                       //—lass: Villager
+{83}{st -3, cn -2, be -3, pe +2}         //—lass: Beggar
+{84}{dx +2, in +1, pe +2}                //—lass: Thief
+{85}{st +2, dx +1, cn +2, ch -1, be -2}  //—lass: Bandit
+{86}{}                                                                               //Background: None
+{87}{resistpoison +10, poisonrate +1, be -1}                                         //Background: Raised by Snake Handlers - Changed by Positiff
+{88}{st +1, dx -2, repair +4, expertisesmithy +10}                                   //Background: Apprenticed to a Blacksmith - Changed by Positiff
+{89}{repair -2, firearms -2, picklock -2, armtrap -2}                                //Background: Raised by Elves, Clanless Dwarf - Changed by Positiff
+{90}{pe +1}                                                                          //Background: Raised by Monks
+{91}{badreactionadj *2}                                                              //Background: Son of a Hero
+{92}{wp -1}                                                                          //Background: Inheritance
+{93}{dx -1, persuasion +4}                                                           //Background: Foppish Elf - Changed by Positiff
+{94}{resistdamage +5, resistfire +5, be -1}                                          //Background: Tough Hide - Changed by Positiff (Moved by Positiff)
+{95}{haggle -3, st +1}                                                               //Background: Disenfranchised Gnome
+{96}{pickpocket +4, in -1}                                                           //Background: Orphaned Halfling - Changed by Positiff
+{97}{in -2, goodreactionadj *2}                                                      //Background: Mentally Retarded
+{98}{pe -1, throwing +4}                                                             //Background: Professional Knife Tosser - Changed by Positiff
+{99}{haggle +4, dx -1}                                                               //Background: Apprenticed to a Shopkeeper - Changed by Positiff
+{100}{be +1, ch +2, in -1, st -2}                                                    //Background: Sent to Charm School
+{101}{crithitchance -10, crithiteffect +15, critfailchance -10, critfaileffect +15}  //Background: Born Under a Sign
+{102}{badreactionadj -30, goodreactionadj +30}                                       //Background: Extreme Personality
+{103}{st +1}                                                                         //Background: Factory Escapee
+{104}{in -1, speed +2}                                                               //Background: Freed Bodyguard - Changed by Positiff
+{105}{in +1, pe -1}                                                                  //Background: Bookworm
+{106}{in -1, st +1}                                                                  //Background: Bully
+{107}{wp +1, ch -1}                                                                  //Background: Wild Half-Ogre
+{108}{in +2, st -1, cn -1}                                                           //Background: Rare Half-Ogre Birth
+{109}{be +2, ch -2}                                                                  //Background: Suppressed Orcish Looks
+{110}{repair -1, firearms -1, picklock -1, armtrap -1, magicpts +1}                  //Background: Elvish Blood
+{111}{ch -1, speed +1}                                                               //Background: Hyperactive
+{112}{st +1, dx -1, bow +1, melee +1}                                                //Background: Army Training
+{113}{firearms +2, ch -1}                                                            //Background: Bandit (Moved by Positiff)
+{114}{ch -2}  //Curse: Madame Toussaude
+{115}{ch +1}  //Blessing: Madame Toussaude
+{116}{persuasion +4}               //Tech Item: Elixir of Persuasion - Changed by Positiff
+{117}{st +2}                       //Tech Item: Strength Boost
+{118}{dx +1}                       //Tech Item: Charged Copper Ring
+{119}{pe max 1}
+{120}{dx +2, speed +50%}           //Tech Item: Dexterity Boost - Changed by Positiff
+{121}{pe +2}                       //Tech Item: Perception Boost
+{122}{in +1, pe +1, wp +1, ch +1}  //Tech Item: Mental Boost, Brain Builder (part 1) - Changed by Positiff
+{123}{st +1, dx +1, cn +1, be +1}  //Tech Item: Physical Boost, Muscle Maker (part 1) - Changed by Positiff
+{124}{damage +1}  //Armor: Magical Gloves (Made by Positiff)
+{125}{dx +1, cn +1, resistelectrical +3}  //Tech Item: Charged Mithril Ring (Made by Positiff)
+{126}{be +1}  //Blessing: Priestess Brigitte
+{127}{be +2, ch +1, dx -3}  //Geshtianna's Idol
+{128}{ac +1}  //Weapon: Sword of Defense
+{129}{dx +1, resistelectrical +3}  //Tech Item: Charged Silver Ring, Charged Gold Ring (Made by Positiff)
+{130}{prowling +1, pickpocket +1, spottrap +1}	//Armor: Magic Thieves Leather
+{131}{prowling +1, backstab +2}	                //Armor: Creep Jacket
+{132}{ch +3, st +1, pe +1, in +1, dx +1}  //Alchohol (part 1) - Changed by Positiff
+{133}{ch -1, wp -1, pe -1, in -2, dx -2}  //Alchohol (part 2) - Changed by Positiff
+{134}{be +1}                          //Armor: Medallion of Beauty
+{135}{crithitchance +5, gambling +2}  //Armor: Fated Ring - Changed by Positiff
+{136}{speed +1}                       //Armor: Enchanted War Boots, Mechanical Boots
+{137}{pickpocket -1, picklock -1}     //Armor: Gauntlets (various) - Changed by Positiff
+{138}{pickpocket +1}                  //Armor: Light-Fingered Gloves
+{139}{dx +1}                          //Armor: Gloves of Dexterity - Changed by Positiff
+{140}{pe +1}                          //Armor: Eye Glass, Eye Gear, Googled Helm
+{141}{pe -1}                          //Armor: Eye Glass, Helmet
+{142}{healrate +5%, poisonrate +5%}   //Armor: Minute Plate of Healing - Changed by Positiff
+{143}{prowling +1}                    //Armor: Robe of Shadowing, Ring of Silence
+{144}{st +1, be -5}                   //Armor: Demonic Armor
+{145}{be -1}                          //Armor: Demonic Scar
+{146}{be -1}                                       //Weapon: Dagger of Pain
+{147}{melee +2}                                    //Weapon: Dagger of Puissance
+{148}{st +2, cn +1, maxhps +15%, maxfatigue +10%}  //Weapon: Hammer of the Earth (part 1) - Changed by Positiff
+{149}{in -3, wp -3}                                //Weapon: Hammer of the Earth (part 2)
+{150}{dx +2}                                       //Weapon: Axe of the Winds
+{151}{poisonrate +20%}                             //Weapon: Staff of the Necromancer
+{152}{st +2}                       //Spell: Slaying Strength
+{153}{st +1, dx +1, cn +1, be +1}  //Spell: Steal Life
+{154}{resistdamage -1}             //Spell: Weaken (part 1)
+{155}{st -1}                       //Spell: Weaken (part 2)
+{156}{damage -50, in /2, dodge /2, melee /2, backstab /2}                                        //Spell: Polymorph (enemy) - Changed by Positiff
+{157}{st min 20, cn min 15, dx min 15, ac +10, resistdamage min 50, melee min 16, dodge min 16}  //Spell: Polymorph (party) - Changed by Positiff (Arcanum 1.5)
+{158}{speed -2}  //encumbrance
+{159}{ac +1}  //Spell: Blur Sight
+{160}{cn +1}  //Spell: Vitality of Air
+{161}{st +1}  //Spell: Strength of Earth
+{162}{dx +1}  //Spell: Agility of Fire
+{163}{be +1}  //Spell: Purity of Water
+{164}{be +2, ch +1}  //Jewel of Hebe Medallion
+{165}{gambling +2, haggle +1}  //Lucky Medallion
+{166}{st +1, maxhps -2}  //Armor: Machine Plate (Added by Randel Clawson) - Changed by Positiff
+{167}{repair +25%}  //Tech Item: Instruments (Made by Positiff)
+{168}{expertiseanatomical +1}    //Book Effect: Herbal
+{169}{expertisechemistry +1}     //Book Effect: Chemistry
+{170}{expertiseelectric +1}      //Book Effect: Electrical
+{171}{expertiseexplosives +1}    //Book Effect: Explosives
+{172}{expertisegun_smithy +1}    //Book Effect: Gun Smithy
+{173}{expertisemechanical +1}    //Book Effect: Mechanics
+{174}{expertisesmithy +1}        //Book Effect: Smithy
+{175}{expertisetherapeutics +1}  //Book Effect: Therapeutics
+{176}{cn -1, st -1, dx -1, be -1}  //Curse: Stringy Pete
+{177}{pe max 1, dx max 1}  //Total blindness
+{178}{be +2, ch +2, Persuasion +5}  //Lady Druella is with the PC
+{179}{ST -5, IN +2, WP +2, PE +1}                                                 //Background: Shelterd Childhood
+{180}{BE -3, CH -3, ST +3, CN +3}                                                 //Background: Troll Offspring         - Changed by Positiff
+{181}{ST +6, IN -2, WP -2, PE -2}                                                 //Background: Ranaway with the Circus - Changed by Positiff
+{182}{IN -4, ST +2, DX +2, Melee +2, Dodge +2, Bow +1, Throwing +1}               //Background: Raised in the Pit       - Changed by Positiff
+{183}{IN -3, CH -1, persuasion -1, haggle -1, DX +3, prowling +2, pickpocket +1}  //Background: Feral Child             - Changed by Positiff
+{184}{IN +6, ST -2, CN -4, DX -1}                                                 //Background: Sickly
+{185}{BE -6, ST +2, DX +2, WP +1, Melee +2, Dodge +2, Bow +2, Throwing +2}        //Background: Beat with an Ugly Stick - Changed by Positiff
+{186}{BE +6, CN -2, ST -2, DX -2}                                                 //Background: Lady's Man
+{187}{BE +3, CH +3, ST -2, DX -1, Melee -2, Dodge -2, Bow -2, Throwing -2}        //Background: Debutante               - Changed by Positiff
+{188}{CH -6, ST +2, PE +2, Melee +2, Dodge +2, Bow +2, Throwing +2}               //Background: Raised by Orcs          - Changed by Positiff
+{189}{CH +6, ST -2, CN -2, Melee -2, Dodge -2, Bow -2, Throwing -2}               //Background: Charlatan's Protege     - Changed by Positiff
+{190}{reaction +5}  //Armor: Nice Clothes, —ÚËÎ¸Ì˚Â Œ˜ÍË (Arcanum 1.5) - Changed by Positiff
+{191}{pe +1, bow +4}                                               //Blessing: Ter'el     - Changed by Positiff
+{192}{dx +1, throwing +4}                                          //Blessing: Makaal
+{193}{st +1, repair +4}                                            //Blessing: Alberich   - Changed by Positiff
+{194}{be +1, maxfollowers +1}                                      //Blessing: Geshtianna - Changed by Positiff
+{195}{wp +2, pe +2, heal +4, spottrap +4}                          //Blessing: Halcyon
+{196}{cn +1, carry +500}                                           //Blessing: Torg       - Changed by Positiff
+{197}{pickpocket +4, picklock +4}                                  //Blessing: Bolo
+{198}{haggle +4, persuasion +4}                                    //Blessing: Kerlin
+{199}{melee +4, dodge +4}                                          //Blessing: Shakar
+{200}{backstab +8, pickpocket +8, prowling +4, crithitchance +10}  //Blessing: Moorindal  - Changed by Positiff
+{201}{ch +2, be +1, persuasion +8, haggle +4, maxfollowers +1}     //Blessing: Kai'tan    - Changed by Positiff
+{202}{in +2, dx +2, maxhps +100, maxfatigue +100, resistmagic +15, resistdamage +15, resistfire +15, resistelectrical +15, resistpoison +15, bow +12, dodge +12, melee +12, throwing +12, firearms +12}  //Blessing: Velorien - Changed by Positiff
+{203}{pe -1, bow -4}               //Curse: Ter'el
+{204}{dx -1, throwing -4}          //Curse: Makaal - Changed by Positiff
+{205}{st -1}                       //Curse: Alberich
+{206}{be -1}                       //Curse: Geshtianna
+{207}{cn -1}                       //Curse: Torg
+{208}{pickpocket -4, picklock -4}  //Curse: Bolo
+{209}{haggle -4, persuasion -4}    //Curse: Kerlin
+{210}{melee -4, dodge -4}          //Curse: Shakar
+{211}{healrate +50%, st +1, cn +1}  //Staff of Restoration
+{212}{pe +2}                                                   //Armor: Trapmaker Spectacles - Changed by Positiff
+{213}{maxfollowers +1, badreactionadj *2, goodreactionadj *2}  //Armor: Amulet of Leadership
+{214}{poisonrate *2, badreactionadj -5}                        //Armor: Serpentine Necklace
+{215}{carry +500, wp -1}                                       //Armor: Teamster Gloves
+{216}{aptitude +20, alignment -200, reaction -20}              //Armor: Dark Helm (Edited + New Script and Description) - Made by Gentle_Giant
+{217}{dx -4}  //Black Stone Blade
+{218}{resistmagic /2}  //Flow Reaper
+{219}{resistmagic +1%, resistdamage +1%, resistpoison +1%, resistfire +1%, resistelectrical +1%}  //Used for Magic/Hexed items
+{220}{st -1}  //Used for Magic/Hexed items
+{221}{st +1}  //Used for Magic/Hexed items
+{222}{dx -1}  //Used for Magic/Hexed items
+{223}{dx +1}  //Used for Magic/Hexed items
+{224}{cn -1}  //Used for Magic/Hexed items
+{225}{cn +1}  //Used for Magic/Hexed items
+{226}{be -1}  //Used for Magic/Hexed items
+{227}{be +1}  //Used for Magic/Hexed items
+{228}{in -1}  //Used for Magic/Hexed items
+{229}{in +1}  //Used for Magic/Hexed items
+{230}{pe -1}  //Used for Magic/Hexed items
+{231}{pe +1}  //Used for Magic/Hexed items
+{232}{wp -1}  //Used for Magic/Hexed items
+{233}{wp +1}  //Used for Magic/Hexed items
+{234}{ch -1}  //Used for Magic/Hexed items
+{235}{ch +1}  //Used for Magic/Hexed items
+{236}{resistmagic -5%, resistdamage -5%, resistpoison -5%, resistfire -5%, resistelectrical -5%}  //Used for Magic/Hexed items
+{237}{resistmagic -5%}       //Used for Magic/Hexed items
+{238}{resistmagic +1%}       //Used for Magic/Hexed items
+{239}{resistdamage -5%}      //Used for Magic/Hexed items
+{240}{resistdamage +1%}      //Used for Magic/Hexed items
+{241}{resistfire -5%}        //Used for Magic/Hexed items
+{242}{resistfire +1%}        //Used for Magic/Hexed items
+{243}{resistelectrical -5%}  //Used for Magic/Hexed items
+{244}{resistelectrical +1%}  //Used for Magic/Hexed items
+{245}{resistpoison -5%}      //Used for Magic/Hexed items
+{246}{resistpoison +1%}      //Used for Magic/Hexed items
+{247}{backstab -1}           //Used for Magic/Hexed items
+{248}{backstab +1}           //Used for Magic/Hexed items
+{249}{pickpocket -1}         //Used for Magic/Hexed items
+{250}{pickpocket +1}         //Used for Magic/Hexed items
+{251}{prowling -1}           //Used for Magic/Hexed items
+{252}{prowling +1}           //Used for Magic/Hexed items
+{253}{spottrap -1}           //Used for Magic/Hexed items
+{254}{spottrap +1}           //Used for Magic/Hexed items
+{255}{bow -1}                //Used for Magic/Hexed items
+{256}{bow +1}                //Used for Magic/Hexed items
+{257}{dodge -1}              //Used for Magic/Hexed items
+{258}{dodge +1}              //Used for Magic/Hexed items
+{259}{melee -1}              //Used for Magic/Hexed items
+{260}{melee +1}              //Used for Magic/Hexed items
+{261}{throwing -1}           //Used for Magic/Hexed items
+{262}{throwing +1}           //Used for Magic/Hexed items
+{263}{haggle -1}             //Used for Magic/Hexed items
+{264}{haggle +1}             //Used for Magic/Hexed items
+{265}{heal -1}               //Used for Magic/Hexed items
+{266}{heal +1}               //Used for Magic/Hexed items
+{267}{persuasion -1}         //Used for Magic/Hexed items
+{268}{persuasion +1}         //Used for Magic/Hexed items
+{269}{gambling -1}           //Used for Magic/Hexed items
+{270}{gambling +1}           //Used for Magic/Hexed items
+{271}{repair -1}             //Used for Magic/Hexed items
+{272}{repair +1}             //Used for Magic/Hexed items
+{273}{firearms -1}           //Used for Magic/Hexed items
+{274}{firearms +1}           //Used for Magic/Hexed items
+{275}{picklock -1}           //Used for Magic/Hexed items
+{276}{picklock +1}           //Used for Magic/Hexed items
+{277}{armtrap -1}            //Used for Magic/Hexed items
+{278}{armtrap +1}            //Used for Magic/Hexed items
+{279}{maxhps -5%}            //Used for Magic/Hexed items
+{280}{maxhps +5%}            //Used for Magic/Hexed items
+{281}{maxfatigue -5%}        //Used for Magic/Hexed items
+{282}{maxfatigue +5%}        //Used for Magic/Hexed items
+{283}{reaction -1}           //Used for Magic/Hexed items
+{284}{reaction +1}           //Used for Magic/Hexed items
+{285}{badreactionadj -1}     //Used for Magic/Hexed items
+{286}{badreactionadj +1}     //Used for Magic/Hexed items
+{287}{crithiteffect -1}      //Used for Magic/Hexed items
+{288}{crithiteffect +1}      //Used for Magic/Hexed items
+{289}{goodreactionadj -1}    //Used for Magic/Hexed items
+{290}{goodreactionadj +1}    //Used for Magic/Hexed items
+{291}{critfaileffect -1}     //Used for Magic/Hexed items
+{292}{critfaileffect +1}     //Used for Magic/Hexed items
+{293}{carry -500}            //Used for Magic/Hexed items
+{294}{carry +500}            //Used for Magic/Hexed items
+{295}{ac -1}                 //Used for Magic/Hexed items
+{296}{ac +1}                 //Used for Magic/Hexed items
+{297}{speed -1}              //Used for Magic/Hexed items
+{298}{speed +1}              //Used for Magic/Hexed items
+{299}{crithitchance -1}      //Used for Magic/Hexed items
+{300}{crithitchance +1}      //Used for Magic/Hexed items
+{301}{critfailchance -1}     //Used for Magic/Hexed items
+{302}{critfailchance +1}     //Used for Magic/Hexed items
+{303}{healrate -5%}          //Used for Magic/Hexed items
+{304}{healrate +5%}          //Used for Magic/Hexed items
+{305}{poisonrate -5%}        //Used for Magic/Hexed items
+{306}{poisonrate +5%}        //Used for Magic/Hexed items
+{307}{maxfollowers -1}       //Used for Magic/Hexed items
+{308}{maxfollowers +1}       //Used for Magic/Hexed items
+{309}{alignment -50}         //Used for Magic/Hexed items
+{310}{alignment +50}         //Used for Magic/Hexed items
+{311}{aptitude -5}           //Used for Magic/Hexed items
+{312}{aptitude +5}           //Used for Magic/Hexed items
+{313}{maxhps -1}             //Used for Magic/Hexed items
+{314}{maxhps +1}             //Used for Magic/Hexed items
+{315}{maxfatigue -1}         //Used for Magic/Hexed items
+{316}{maxfatigue +1}         //Used for Magic/Hexed items
+{317}{st +1, cn +1, dx +1}  //Armor: Magnus' Iron Clan Guantlets
+{318}{maxhps +1, maxfatigue +1}    //Tech Item: Invigorator
+{319}{resistdamage +20}            //Tech Item: Fortifier - Changed by Positiff
+{320}{st -1, dx -1, cn -1, be -1}  //Tech Item: Brain Builder (part 2) - Changed by Positiff
+{321}{in -1, pe -1, wp -1, ch -1}  //Tech Item: Muscle Maker  (part 2) - Changed by Positiff
+{322}{ac -5%}  //Used for Magic/Hexed items
+{323}{ac +5%}  //Used for Magic/Hexed items
+{324}{pickpocket +25%, picklock +25%}  //Tech Item: Tincture of Coordination - Made by Positiff
+{325}{xpgain +10%, maxfollowers -1}                                           //Background: Fast Pupil           (Made by Gentle_Giant)
+{326}{repair +1, firearms +1, picklock +1, armtrap +1, magicpts -1, age -15}  //Background: Belong to Two Worlds (Made by Gentle_Giant)
+{327}{beautyreaction +5}  //Blessing: Arbalah
+{328}{maxfollowers -1}             //Background: Educator
+{329}{be +6, st -2, wp -2, in -2}  //Background: Super Model - Changed by Positiff
+{330}{st -1, cn +1}  //all females
+{331}{in +1}            //Potion: Essence of Intellect
+{332}{speed +1}         //Potion: Haste
+{333}{resistdamage +1}	//Potion: Liquid of Skin Thickening
+{334}{resistpoison +1}	//Potion: Kalispi's Venom
+{335}{resistdamage +15, resistfire +15, resistelectrical +15, resistpoison +15, reaction -20}     //Background: Escaped From The Madhouse - Changed by Positiff
+{336}{in +6, st -1, cn -1, dx -2, wp -2, gambling +3}                                             //Background: Idiot Savant
+{337}{st +1, cn -1}                                                                               //Background: Tomboy
+{338}{st +2, cn +1, in -1, ch -2, melee +1, haggle -2}	                                          //Background: Barbarian
+{339}{xpgain +10%, critfailchance +20}                                                            //Background: Nietzche
+{340}{wp +2, ch -2}                                                                               //Background: Dark Elf Follower
+{341}{magicpts +4, reaction -20, alignment -200, alignment max -200}                              //Background: Sold His Soul
+{342}{}	//INTENTIONALLY LEFT BLANK! Used for effects that are handled by the engine, but need an effect number
+{343}{ch +1, persuasion +4}                                                                       //Background: Hydrophobic - Changed by Positiff
+{344}{pe +2}                                                                                      //Background: Afraid of the Dark
+{345}{techpts +2}                                                                                 //Background: Magick Allergy
+{346}{expertiseexplosives +20, st -1, cn -1}                                                      //Background: Arsonist
+{347}{st +1, cn +1}                                                                               //Background: Technophobe
+{348}{wp +6, ch -4, st -1, haggle -2, persuasion -2}                                              //Background: Only Child - Changed by Positiff
+{349}{st +4, cn +4, dx -6, resistelectrical +30, resistpoison +20, resistfire -20}                //Background: Frankenstein's Monster
+{350}{be +4, cn +4, dx -4, resistelectrical +20, resistpoison +10, resistfire -10}                //Background: Bride of Frankenstein
+{351}{in +2, pe +2, resistelectrical +20, resistpoison +20, heal +4, be -1, ch -1, dx -2, cn -3}  //Background: Mad Doctor
+{352}{in +3, ch +3, pe +5, st -3, dx -3, cn -5}                                                   //Background: Miracle Operation
+{353}{pe -15}
+{354}{pe +15}
+{355}{resistfire +15}  //Tech Item: Fire-resistant Gel (Made by Positiff)
+{356}{melee +4, crithitchance +5, resistpoison +20, wp +1}  //Finger of Mannox - Changed by Positiff
+{357}{st +3, in -3, melee +2, dodge +2, persuasion -2, resistpoison +10}                //Background: Alcoholic       (Made by Gentle_Giant)
+{358}{dx +2, cn -2, backstab +2, pickpocket +2, prowling +2, spottrap +2, reaction -5}  //Background: Crime Authority (Made by Gentle_Giant)
+{359}{dx +1, cn -2, throwing +4, expertiseexplosives +10, techpts +1}                   //Background: Thrower of Fire (Made by Gentle_Giant)
+{360}{st +2, be -3, melee +2, dodge +2, backstab +2, resistdamage +10}                  //Background: Headhunter      (Made by Gentle_Giant)
+{361}{in +6, cn -3, wp -2, melee -2, dodge -2, firearms +3}                             //Background: Desertir        (Made by Gentle_Giant) - Changed by Positiff
+{362}{haggle -4, pickpocket -4, maxfollowers +1}                                        //Background: Simple Man      (Made by Gentle_Giant)
+{363}{pe +2, spottrap +2, armtrap +2, melee -2, dodge -2, reaction -10, ch -1}          //Background: Sapper          (Made by Gentle_Giant) - Changed by Positiff
+{364}{cn +2, in +2, wp +2, st -2, melee -4, dodge -4, firearms -4, badreactionadj *2}   //Background: Young Mage      (Made by Gentle_Giant)
+{365}{in +2, wp +2, pe +2, magicpts +4, techpts -4, gambling +6, haggle +6, persuasion +6}  // ÓÎ¸ˆÓ ƒÂ‚ÌËı ¡Ó„Ó‚ (Arcanum 1.5) - Changed by Positiff
+{366}{in +2, cn +2, dx +2, magicpts -4, techpts +4, repair +8, armtrap +8}                  // ÓÎ¸ˆÓ ◊ÂÌ˚ı √ÌÓÏÓ‚ (Arcanum 1.5) - Changed by Positiff
+{367}{repair -2, firearms -2, picklock -2, armtrap -2, magicpts +2}                     //Background: Disciple of Mage (Made by Gentle_Giant)
+{368}{st +1, cn +1, pe +2, resistmagic +10, resistdamage +10, resistpoison +10, resistfire +10, resistelectrical +10}  //ŸËÚ ≈‰ËÌÓÓ„‡ (Arcanum 1.5)
+{369}{st +2, pe -4, melee +3, dodge +3, resistelectrical -10, magicpts +3, age +20}     //Background: Tulla's Guardian (Made by Gentle_Giant)
+{370}{cn +1, dx +1, ac +1, speed +1, carry +500, resistfire +20}  //—‡ÔÓ„Ë ¿ÓÌ‡ÍÒ‡ (Arcanum 1.5)
+{371}{crithitchance +5}                        //Weapon crithit bonus (Arcanum Weapon & Technology Redux)
+{372}{firearms -1, bow -1, critfailchance +5}  //Penalty for small IN (Arcanum Weapon & Technology Redux) - Changed by Positiff
+{373}{firearms -2}                             //Penalty for small PE (Arcanum Weapon & Technology Redux) - Changed by Positiff
+{374}{poisonrate +5}  //Tech Item: Antidote Medallion (Made by Positiff)
+{375}{dx +1, ac +4, badreaction -10, badreactionadj -15}                                                              //Background: Runaway from Circus (Made by Gentle_Giant) - Changed by Positiff
+{376}{st -3, cn +3, wp +2, repair -4, firearms -4, picklock -4, armtrap -4, maxfatigue +10, aptitude +26, age -50}    //Background: Obstinate Dwarf     (Made by Gentle_Giant)
+{377}{dx +2, cn -2}                                                                                                   //Background: Fast Guy            (Made by Gentle_Giant)
+{378}{wp -1, repair +2, firearms +2, picklock +2, armtrap +2, aptitude -20, age -165}                                 //Background: City Elf            (Made by Gentle_Giant)
+{379}{ch +2, st -2, persuasion +4, magicpts -2}                                                                       //Background: Diplomat            (Made by Gentle_Giant)
+{380}{resistdamage min 60, magicpts +20}  //Ã‡„Ë˜ÂÒÍ‡ˇ ÒËÎ‡  Â„‡Ì‡ (Arcanum 1.5)
+{381}{st -1, magicpts -1, in +1, heal +5, reaction +5}                                                                //Background: Healer              (Made by Gentle_Giant) - Changed by Positiff
+{382}{cn +2, in +1, pe -2, repair -2, firearms -2, picklock -2, armtrap -2, magicpts +1, age +10}                     //Background: Bibliofil           (Made by Gentle_Giant)
+{383}{st -1, cn -1, speed -1}                                                                                         //Background: Oligarh             (Made by Gentle_Giant)
+{384}{firearms +2, prowling -2, techpts +1}                                                                           //Background: Tech Child          (Made by Gentle_Giant)
+{385}{be -2, carry +1000}                                                                                             //Background: Servant             (Made by Gentle_Giant)
+{386}{st +1, dx +2, reaction -10, alignment -300, age +15}                                                            //Background: Assassin            (Made by Gentle_Giant)
+{387}{ch +4, cn -3, reaction -10}                                                                                     //Background: Foundling           (Made by Gentle_Giant) - Changed by Positiff
+{388}{in +3, wp +1, st -3, repair -2, firearms -2, picklock -2, armtrap -2, magicpts +1}                              //Background: Unique Mage         (Made by Gentle_Giant)
+{389}{critfailchance +20, resistdamage +10, resistfire +10, resistelectrical +10, resistpoison +10, resistmagic +10}  //Background: Unhappy Lover       (Made by Gentle_Giant) - Changed by Positiff
+{390}{st +2, be -1}                                                                                                   //Background: Armrestler          (Made by Gentle_Giant)
+{391}{in +2, st -2}                                                                                                   //Background: Feminist            (Made by Gentle_Giant)
+{392}{be +4, ch +4, in +2, st -3, cn -3, resistpoison -30, goodreactionadj +10, badreactionadj -20}                   //Background: Femme Fatale        (Made by Gentle_Giant)
+{393}{wp +2, in +2, ch +2, be +2, maxfollowers -4}                                     //Background: Sent by Hiest Elves      (Arcanum 1.5) - Changed by Positiff
+{394}{repair -2, firearms -2, picklock -2, armtrap -2, be +1, ch +1, persuasion +2}    //Background: City Gnome               (Arcanum 1.5) - Changed by Positiff
+{395}{ch -2, prowling +3, backstab +4, alignment -500, alignment max -500}             //Background: Killer                   (Arcanum 1.5) - Changed by Positiff
+{396}{ch -3, wp +2, bow +4, dodge +4, melee +4, throwing +4}                           //Background: Chosen One               (Arcanum 1.5)
+{397}{in +4, pe +2, st -2, cn -4, firearms +4, reaction -10}                           //Background: Alien from Another World (Arcanum 1.5)
+{398}{ch -6, xpgain +30%, gambling max 0, haggle max 0, heal max 0, persuasion max 0}  //Background: Munchkin                 (Arcanum 1.5)
+{399}{cn +1, pe +1, st -1, wp -1, ch -1}  //Food: Tobacco (Made by Positiff)
+{400}{resistdamage +2}  //Tech Item: Magnetic Inversion (Made by Positiff)

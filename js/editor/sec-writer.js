@@ -28,7 +28,7 @@ const SEC_CATALOG_WALL_TYPES = new Set([0, 1, 3]);      // (their entries need a
 const SEC_QUANTITY_FIELD = { 6: 142, 8: 165 };          // ammo: F_AMMO_QUANTITY, gold: F_GOLD_QUANTITY
 export const secProtoCatalog = { byType: Object.fromEntries(SEC_CATALOG_TYPES.map(t => [t, []])), scanned: 0, total: 0, done: false, started: false, error: null, listeners: [] };
 function secProtoCatalogNotify() {
-  for (const fn of secProtoCatalog.listeners.slice()) { try { fn(secProtoCatalog); } catch (_) {} }
+  for (const fn of secProtoCatalog.listeners.slice()) { try { fn(secProtoCatalog); } catch (e) { console.warn('prototype catalog listener failed:', e); } }
 }
 export function secStartProtoScan() {
   if (secProtoCatalog.started) return;

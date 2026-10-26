@@ -1,0 +1,92 @@
+//
+// Area -- List of areas
+//   X-Coord, Y-Coord, WM-X-offset, WM-Y-offset /Name /Description./Radius:<#>
+//
+//   Coords are on the main world-map.  Radius is detection radius (in sectors),
+// in other words, the # of sectors that the player must pass near it on the
+// WorldMap to make it visible if it isn't already known; default value is 5.
+//   The WM-#-offset values are used to position the name text in the worldmap.
+//
+
+{0}{0, 0, 0, 0 /Ein unwichtiger Ort/Dies ist der unbekannte Bereich.}
+{1}{90226,84176, 0, 0 /Nebelbergen/Eine kleine Bergbaustadt.}
+{2}{92960,82592, 0, -5 /Absturzstelle/Das Wrack des abgestürzten Luftschiffs.}
+{3}{70218,92096, 0, 0 /Black Root/Eine Grenzstadt.}
+{4}{102768, 116894, 0, 5 /Caladon/Ein blühendes Feudal-Königreich.}
+{5}{79163, 105618, 0, 0 /Dernholm, Hauptstadt von Kumbrien/Ein sterbendes Feudal-Königreich.}
+{6}{98922, 42009, 0, 0 /Quintarra/Eine große Elfen-Gemeinde.}
+{7}{83690, 48174, -5, 15 /Die Schwarzberg-Minen/Die verlassene Heimat des Schwarzberg-Clans./Radius:-1}
+{8}{32320, 62472, 0, 0 /Ashbury/Eine Stadt an der Ostküste.}
+{9}{61050, 42562, 0, 0 /Rad-Clan/Eine Zwergengemeinschaft tief in den Grauen Bergen./Radius:-1}
+{10}{76113, 48162, 0, -10 /Stillwater/Eine Kleinstadt, berühmt für ihre Schwerter.}
+{11}{28455, 31171, 0, 0 /Tulla/Eine geheimnisvolle Stadt der Magier tief in der Vendigroth-Wüste.} //Old Tulla 28319, 31202
+{12}{104172,35969, 0, 0 /Falkenpein/Heiliger Ort der Elfen am Rande des Schimmerwaldes.}
+{13}{112027, 96883, 0, 0 /Roseborough/Eine Kleinstadt in der Nähe des Rings von Brodgar.}
+{14}{112279,94639, 0, 0 /Alte Ruinen/Alte Ruinen/Radius:5}//Old Ring of Brodgar
+{15}{22184,41521, 0, 0 /Lager der Dunkelelfen/Das Basislager der Dunkelelfen in der Nähe der Ruinen von Vendigroth.}
+{16}{96416, 18911, 0, 0 /T'sen-Ang/Heimat der Dunkelelfen./Radius:-1}
+{17}{82492, 45629, 0, 0 /Hardins Pass/Ein tückischer, schneebedeckter Pass, der in den Schimmerwald führt.}
+{18}{96014,92287, 0, 0 /Gorgoth-Pass/Ein lang vergessener Pass, der die Königreiche Kumbrien und Caladon miteinander verbindet./Radius:5}
+{19}{20693, 56027, 0, 0 /Insel der Verzweiflung/Eine Strafkolonie.}
+{20}{29874,47350, 0, 0 /Tor zur Wüste/Eine Brücke, die in die Vendigroth-Wüste führt.} // Old Leahbo 29151,48287  
+{21}{62243,65664, 0, 0 /Tarant/Die größte und am stärksten industrialisierte Stadt in Arcanum.}
+{22}{19704,37452, 0, 0 /Vendigroth-Ruinen/Die Überreste einer alten Stadt./Radius:1}// entrance to ruins: 19689,37487 
+{23}{46198,120881, -60, 10 /Nasrudins Ruhestätte/Angeblich die Stelle mit den sterblichen Überresten Nasrudins.}//old:46827,120680 
+{24}{43669, 85717, 0, 0 /Stringy Petes Bucht/Ein Ort, an dem es spukt./Radius:-1}
+{25}{32602, 71189, 0, 0/Das Heim der Williamsons/Eine heruntergekommene Hütte.}
+{26}{55779, 76127, 0, 0/Vooriden/Ein kleines Dorf südlich von Tarant./Radius:20}
+{27}{75486, 18380, 0, -10/Die Bangella-Tiefe/Die Ruhestätte der Bangellianischen Geißel.}
+{28}{90818, 70319, 0, 0/Torin-Steinbruch/Ein uralter Steinbruch der Zwerge.}//90825, 70292
+{29}{51705, 85747, -80, 10/Stringy Petes Schatz/Die letzte Ruhestätte des sagenhaften Piratenschatzes./Radius:-1}
+{30}{45527, 65394, 10, 0/Elfen-Ruinen/Ein Ort, der vielleicht unermessliche Reichtümer der Elfen birgt./Radius:1}
+{31}{20526, 53542, 0, 0/Das Heim von Maximillian/Ein merkwürdiger alter Mann auf der Insel der Verzweiflung.}
+{32}{22157, 52802, -40, -15/Schattenstrand/Ein Ort, der Gerüchten zufolge von merkwürdigen Dingen strotzen soll.}
+{33}{17196, 52632, 0, -10/Das Frauenlager/Ein kleines Dorf, in dem ausschließlich Nomadenfrauen leben.}
+{34}{75497, 20051, 0, 5/Das Bedokaan-Dorf/Ein kleines Dorf reptilienartiger Kreaturen in den Dunkelsümpfen./Radius:-1}
+{35}{77170, 17560, -120, -15/Das Wilddieblager/Das Lager einiger Bedokaan-Wilderer.}
+{36}{0, 0, 0, 0 /Ein unwichtiger Ort/Dies ist der unbekannte Bereich.}
+{37}{85994, 56686, 0, 0/Steinmetz-Clan/Die Heimat des Steinmetz-Clans.}
+{38}{101536, 116144, 0, 0/Ein mysteriöser Ort/Entdeckt auf dem Wandbild im Gasthaus "Zum Pilz".}
+{39}{50845, 15901, 0, 0/Die Rubin-Lichtung/Ein unheimlicher, alter Ort./Radius:-1}
+{40}{88650, 40995, 0, 0/Das Schloss S'nel N'fa/Eine von Fallen strotzende Ruine, in der angeblich der Stab von K'an T'au zu finden sein soll./Radius:-1}
+{41}{75700, 101216, 0, 0/Das Versteck der Gyr Dolour/Der letzte bekannte Aufenthaltsort der gequälten Lady Druella./Radius:-1}
+{42}{75470, 93736, 0, 0/Liams Werkstatt/Liam Camerons Werkstatt./Radius:3}
+{43}{40699, 76973, 0, 0/Kree/Die einst große, durch den Fluch von Kree zerstörte Stadt./Radius:20}
+{44}{87403, 59823, 0, 0/Die Feuergruben/Der Fundort der Klinge des Xerxes.}
+{45}{59131, 108638, 0, 0/Halb-Oger-Insel/Der vermutete Standort eines geheimen Zuchtlabors.}// old: 59028, 108560
+{46}{0, 0, 0, 0 /Ein unwichtiger Ort/Dies ist der unbekannte Bereich.}
+{47}{78754, 62751, 0, 0/Vollingers Treffpunkt/Vollingers Treffpunkt./Radius:-1}
+{48}{49267, 53559, 0, 0/Belerogrims Versteck/Eine Höhle, in der Arcanums letzter Drache entdeckt worden war.}
+{49}{101152, 64478, 0, 0/Sichtung eines Lethe-Wyvern/Angebliches Lager des Lethe-Wyvern./Radius:-1}
+{50}{40223, 101945, 0, 0/Bootssteg auf Thanatos/Anlegestelle für die Insel des Todes.}
+{51}{47628, 108786, 0, 0/Dorf des Aschlag-Stammes/Die Heimat eines primitiven Stammes, der eine mysteriöse Gottheit verehrt.}
+{52}{41056, 112926, 0, 0/Das Versteck des Bogaroth/Die vermutete Höhle des Ungeheuers, das den gesamten Aschlag-Stamm ausrottete.}
+{53}{65824, 84632, 0, 0/Ruinen von Szabo/Ein paar alte Ruinen./Radius:1}
+{54}{46112, 120624, 0, 0/Landbrücke/Beginn des Weges, der zur Gottheit von Thanatos führt.}
+{55}{63608, 50488, 0, 0/Drachenteich/Drachenteich.}
+{56}{49718, 58743, 0, 0/Alter Tempel/Ein Tempel, der angeblich unermessliche Schätze birgt.}
+{57}{96948, 75722, 0, -15/Geheimer Eingang zum Eisen-Clan/Der Eingang zu dem legendären Zwergen-Clan./Radius:-1}
+{58}{91902, 39305, 0, 0/K'na Tha/Ein Ort uralter Magie, an dem Gerüchten zufolge Azrams Stern zu finden sein soll./Radius:-1}
+{59}{96319, 113312, 0, 0/Schnitterspitze/Schiffe fürchten diese tückischen Gewässer, die durchfahren werden müssen, um die Spitze Arcanums zu umrunden./Radius:20}
+{60}{31891, 56980, 0, 0/Altes Schiffswrack/Die Überreste eines alten Piratenschiffs./Radius:10}
+{61}{67130, 44393, 0, 0/Unerforschte Höhle/Niemand weiß, welche Geheimnisse in dieser unerforschten Höhle zu entdecken sind./Radius:10}
+{62}{99225, 98206, 0, 0/Diebeshöhle/Diebeshöhle/Radius:25}
+{63}{87907,45024, 0, -10/Seltsame Zeremonie/Seltsame Gesänge sind in der Nähe zu hören .../Radius:5}
+{64}{84513,11425, 0, 0/Geheimes Dorf/Du hörst die schrill klingenden Geräusche einer ausgelassenen Feier .../Radius:5}
+{65}{53341, 66079, 0, 0/Verbotene Grube/Gefährlich wirkende Grube, die mit Spinnen gefüllt ist./Radius:10}
+{66}{92830, 84702, 0, 10/Hütte von Simon Fahrkus/Hütte von Simon Fahrkus/Radius:-1}
+{67}{92896, 83359, -140, 0/Arbalahs Haus/Arbalahs Haus./Radius:-1}
+{68}{78751, 97887, 0, 0/Wolfshöhle/Wolfshöhle/Radius:10}
+{69}{77797, 72805, 0, 0/Torgs Altar/Ein alter Steinaltar./Radius:15}
+{70}{56490, 26977, 0, 0/Kerlins Altar/Ein alter, goldener Altar./Radius:20}
+{71}{104104, 104610, 0, 0/Bolos Altar/Ein verwitterter Steinaltar./Radius:20}
+{72}{84586, 53037, 0, 0/Der Ort der verlorenen Stimmen/Ein Ort, den du auf der Karte in der Kiste des Eisen-Clans findest./Radius:-1}
+{73}{30364, 44319, 0, 0/Geheimnisvolle Wüsten-Ruinen/Ein Ort, den dir Weldo Rubin zeigt.}
+{74}{39588, 33621, 0, 0/Seltsamer Teich/Ein interessanter Teich mitten im Nirgendwo./Radius:25}
+{75}{68876, 32889, 0, 0/Der Morast/Ein übel aussehender Ort./Radius:25}
+{76}{104148, 77062, 0, 0/Die verfallene Kathedrale/Ein Ort, übersät mit alten Ruinen./Radius:25}
+{77}{108504, 84356, 0, 0/Die alte Lagune/Eine einsame Lagune./Radius:25}
+{78}{87527, 101345, 0, 0/Uraltes Labyrinth/Ein mysteriöses, altes Labyrinth./Radius:25}
+{79}{103116, 90384, 0, 0/Der kalte Ort/Ein ominöser Ort./Radius:25}
+{80}{80738, 30497, 0, 0/Kleines Lager/Ein kleines, von weitem sichtbares Lager./Radius:25}
+{81}{102113, 56290, 0, 0/Kleiner Teich/Du hörst Rufe und Peitschenknallen./Radius:25}

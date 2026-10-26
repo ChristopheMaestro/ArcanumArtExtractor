@@ -9,6 +9,29 @@ export function decodeText(buf) {
   catch (_) { return new TextDecoder('latin1').decode(buf); }
 }
 
+// The code page a file is really in, told by its content (the same rule as sniff_codec in toolbox/extract_mob_prototypes.py): valid UTF-8 with
+// accents -> utf-8; high bytes mostly in runs of 3+ (Cyrillic words) -> windows-1251; else the game's windows-1252. For reading only (search,
+// preview): the editors keep writing windows-1252.
+export function sniffCodepage(bytes) {
+  let high = 0, inRun = 0, runTotal = 0;
+  for (let i = 0; i <= bytes.length; i++) {
+    const b = i < bytes.length ? bytes[i] : 0;
+    if (b >= 0x80 && b !== 0xA7) high++;      // (the "§§§" banners of the sound lists are not text)
+    if (b >= 0xC0 || b === 0xA8 || b === 0xB8) { inRun++; continue; }    // (cp1251 letter bytes only)
+    if (inRun >= 3) runTotal += inRun;
+    inRun = 0;
+  }
+  if (!high) return 'windows-1252';
+  try { new TextDecoder('utf-8', { fatal: true }).decode(bytes); return 'utf-8'; } catch (_) { /* not UTF-8 */ }
+  return runTotal >= 0.6 * high ? 'windows-1251' : 'windows-1252';
+}
+
+export function decodeTextSniffed(buf) {
+  const bytes = buf instanceof Uint8Array ? buf : new Uint8Array(buf);
+  try { return new TextDecoder(sniffCodepage(bytes)).decode(bytes); }
+  catch (_) { return decodeText(buf); }
+}
+
 export async function fetchBuffer(url) {
   const resp = await fetch(url);
   if (!resp.ok) throw new Error(`HTTP ${resp.status} fetching ${url}`);
@@ -16,7 +39,7 @@ export async function fetchBuffer(url) {
 }
 
 export async function fetchText(url) {
-  return decodeText(await fetchBuffer(url));
+  return decodeTextSniffed(await fetchBuffer(url));
 }
 
 // Wrap an async loader so it runs once; concurrent callers share the promise

@@ -1,0 +1,591 @@
+// The line begin on multiples on 10. The first line (the multiple of 10)
+// is used as the schematic number in the game. So the first and second
+// learned anatomical schematics are 1000 and 1010. Each line holds
+// the following data:
+
+// 	0. Schematic name. (line number from the name from a message file)
+// 	1. Schematic description text. (line number from the text from a message file)
+// 	2. Schematic Drawing. (line number for the approprate .art from the interface.mes)
+// 	3. Needed Item 1. (prototype number for item 1)
+// 	4. Needed Item 2. (prototype number for item 2)
+//	5. Result Item. (prototype number for result item)
+
+example:
+[1000][10]	// Schematic name: this is a test
+[1001][11]	// Schematic description text
+[1002][366]	// Schematic Drawing
+[1003][8054]	// Needed Item 1: ring
+[1004][8055]	// Needed Item 2: medallion
+[1005][15066]	// Result Item: spiderbot
+
+//0-999 reserved for users **********************************
+
+//1000-1999 are Learned Schematics **************************
+
+//1000-1099 Anatomical Schematics (Learned)
+
+//Heal Lite
+{1000}{10} //Name
+{1001}{11} //Description
+{1002}{532} //Drawing
+{1003}{10061} //Componet 1
+{1004}{10062} //Componet 2
+{1005}{10059} //Result
+
+//Fatigue Restorer
+{1010}{12} //Name
+{1011}{13} //Description
+{1012}{525} //Drawing
+{1013}{10063} //Componet 1
+{1014}{10064} //Componet 2
+{1015}{10060} //Result
+
+//Poison Cure
+{1020}{14} //Name
+{1021}{15} //Description
+{1022}{517} //Drawing
+{1023}{10083} //Componet 1
+{1024}{10062} //Componet 2
+{1025}{10077} //Result
+
+//Fatigue Limiter
+{1030}{16} //Name
+{1031}{17} //Description
+{1032}{524} //Drawing
+{1033}{10060} //Componet 1
+{1034}{10080} //Componet 2
+{1035}{10078} //Result
+
+//Accelerate Healing
+{1040}{18} //Name
+{1041}{19} //Description
+{1042}{531} //Drawing
+{1043}{10059} //Componet 1
+{1044}{10063} //Componet 2
+{1045}{10079} //Result
+
+//Wonder Drug
+{1050}{20} //Name
+{1051}{21} //Description
+{1052}{554} //Drawing
+{1053}{10079} //Componet 1
+{1054}{10081} //Componet 2
+{1055}{10084} //Result
+
+//Cure All
+{1060}{22} //Name
+{1061}{23} //Description
+{1062}{516} //Drawing
+{1063}{10084} //Componet 1
+{1064}{10082} //Componet 2
+{1065}{10076} //Result
+
+//1100-1199 Chemistry Schematics (Learned)
+
+//Charges
+{1100}{24} //Name
+{1101}{25} //Description
+{1102}{590} //Drawing
+{1103}{10066} //Componet 1
+{1104}{15069} //Componet 2
+{1105}{7040} //Result
+
+//Poison
+{1110}{26} //Name
+{1111}{27} //Description
+{1112}{542} //Drawing
+{1113}{10067} //Componet 1
+{1114}{10068} //Componet 2
+{1115}{10065} //Result
+
+//Fuel
+{1120}{28} //Name
+{1121}{29} //Description
+{1122}{591} //Drawing
+{1123}{10093} //Componet 1
+{1124}{10088} //Componet 2
+{1125}{7041} //Result
+
+//Hallucinite
+{1130}{30} //Name
+{1131}{31} //Description
+{1132}{530} //Drawing
+{1133}{10091} //Componet 1
+{1134}{10067} //Componet 2
+{1135}{10090} //Result
+
+//Corrosive Acid
+{1140}{32} //Name
+{1141}{33} //Description
+{1142}{510} //Drawing
+{1143}{10089} //Componet 1
+{1144}{10092} //Componet 2
+{1145}{10085} //Result
+
+//Animal Scent 
+{1150}{34} //Name
+{1151}{35} //Description
+{1152}{512} //Drawing
+{1153}{15135} //Componet 1 
+{1154}{10094} //Componet 2
+{1155}{10087} //Result
+
+//Animal Lure 
+{1160}{36} //Name
+{1161}{37} //Description
+{1162}{511} //Drawing
+{1163}{15136} //Componet 1
+{1164}{10095} //Componet 2
+{1165}{10086} //Result
+
+//1200-1299 Electrical Schematics (Learned)
+
+//Electric Light
+{1200}{38} //Name
+{1201}{39} //Description
+{1202}{519} //Drawing
+{1203}{15072} //Componet 1
+{1204}{15071} //Componet 2
+{1205}{15070} //Result
+
+//Charged Ring
+{1210}{40} //Name
+{1211}{41} //Description
+{1212}{595} //Drawing
+{1213}{8132} //Componet 1
+{1214}{15073} //Componet 2
+{1215}{8057} //Result
+
+//Flow Specktrometer
+{1220}{42} //Name
+{1221}{43} //Description
+{1222}{538} //Drawing
+{1223}{15137} //Componet 1
+{1224}{15149} //Componet 2
+{1225}{8194} //Result
+
+//Shocking Staff
+{1230}{44} //Name
+{1231}{45} //Description
+{1232}{545} //Drawing
+{1233}{15109} //Componet 1
+{1234}{6037} //Componet 2
+{1235}{6110} //Result
+
+//Chapeau of Magnetic Inversion
+{1240}{46} //Name
+{1241}{47} //Description
+{1242}{536} //Drawing
+{1243}{15140} //Componet 1*******WRONG
+{1244}{8185} //Componet 2
+{1245}{8187} //Result
+
+//Healing Jacket
+{1250}{48} //Name
+{1251}{49} //Description
+{1252}{533} //Drawing
+{1253}{15108} //Componet 1
+{1254}{8091} //Componet 2
+{1255}{8148} //Result
+
+//Tesla Rod
+{1260}{50} //Name
+{1261}{51} //Description
+{1262}{550  } //Drawing ************** should be 550
+{1263}{15110} //Componet 1
+{1264}{6110} //Componet 2
+{1265}{6040} //Result
+
+
+//1300-1399 Explosives Schematics (Learned)
+
+//Bullets
+{1300}{52} //Name
+{1301}{53} //Description
+{1302}{589} //Drawing
+{1303}{15138} //Componet 1
+{1304}{15144} //Componet 2
+{1305}{7039} //Result
+
+//Flash Grenade
+{1310}{54} //Name
+{1311}{55} //Description
+{1312}{528} //Drawing
+{1313}{15076} //Componet 1
+{1314}{15077} //Componet 2
+{1315}{15150} //Result
+
+//Smoke Grenade
+{1320}{56} //Name
+{1321}{57} //Description
+{1322}{546} //Drawing
+{1323}{15145} //Componet 1 
+{1324}{10110} //Componet 2
+{1325}{15151} //Result *******WRONG
+
+//Stun Grenade
+{1330}{58} //Name
+{1331}{59} //Description
+{1332}{548} //Drawing
+{1333}{15146} //Componet 1 
+{1334}{15138} //Componet 2 
+{1335}{15152} //Result 
+
+//Explosive Grenade
+{1340}{60} //Name
+{1341}{61} //Description
+{1342}{523} //Drawing
+{1343}{15111} //Componet 1
+{1344}{15141} //Componet 2 
+{1345}{15132} //Result 
+
+//Fire Obstruction
+{1350}{62} //Name
+{1351}{63} //Description
+{1352}{527} //Drawing
+{1353}{7041} //Componet 1 *******WRONG
+{1354}{15147} //Componet 2 *******WRONG
+{1355}{15153} //Result
+
+//Dynamite
+{1360}{64} //Name
+{1361}{65} //Description
+{1362}{597} //Drawing
+{1363}{15139} //Componet 1
+{1364}{15138} //Componet  
+{1365}{15134} //Result
+
+//1400-1499 Gun Smithy Schematics (Learned)
+
+//Crude Flintlock Pistol
+{1400}{66} //Name
+{1401}{67} //Description
+{1402}{622} //Drawing
+{1403}{15148} //Componet 1
+{1404}{15118} //Componet 2
+{1405}{6116} //Result
+
+//Fine Pistol
+{1410}{68} //Name
+{1411}{69} //Description
+{1412}{621} //Drawing
+{1413}{15154} //Componet 1
+{1414}{15079} //Componet 2
+{1415}{6044} //Result
+
+//Repeater Rifle
+{1420}{70} //Name
+{1421}{71} //Description
+{1422}{544} //Drawing
+{1423}{6046} //Componet 1
+{1424}{15079} //Componet 2
+{1425}{6045} //Result
+
+//Hushed Revolver
+{1430}{72} //Name
+{1431}{73} //Description
+{1432}{618} //Drawing
+{1433}{6044} //Componet 1
+{1434}{15142} //Componet 2
+{1435}{6115} //Result
+
+//Looking-Glass Rifle
+{1440}{74} //Name
+{1441}{75} //Description
+{1442}{537} //Drawing
+{1443}{6106} //Componet 1
+{1444}{15121} //Componet 2
+{1445}{6105} //Result
+
+//Hand Cannon
+{1450}{76} //Name
+{1451}{77} //Description
+{1452}{526} //Drawing
+{1453}{6119} //Componet 1 
+{1454}{6086} //Componet 2
+{1455}{6118} //Result 
+
+
+//Elephant Gun
+{1460}{78} //Name
+{1461}{79} //Description
+{1462}{520} //Drawing
+{1463}{6046} //Componet 1
+{1464}{6117} //Componet 2
+{1465}{6039} //Result
+
+
+//1500-1599 Mechanical Schematics (Learned)
+
+//Spike Trap
+{1500}{80} //Name
+{1501}{81} //Description
+{1502}{599} //Drawing
+{1503}{6047} //Componet 1
+{1504}{15082} //Componet 2
+{1505}{15080} //Result
+
+//Auto Skeleton Key
+{1510}{82} //Name
+{1511}{83} //Description
+{1512}{593} //Drawing
+{1513}{15084} //Componet 1
+{1514}{15083} //Componet 2
+{1515}{15081} //Result
+
+//Trap Springer
+{1520}{84} //Name
+{1521}{85} //Description
+{1522}{600} //Drawing
+{1523}{15143} //Componet 1
+{1524}{15083} //Componet 2
+{1525}{15102} //Result
+
+//Bear Trap
+{1530}{86} //Name
+{1531}{87} //Description
+{1532}{594} //Drawing
+{1533}{15101} //Componet 1
+{1534}{15082} //Componet 2
+{1535}{15100} //Result
+
+//Clockwork Decoy
+{1540}{88} //Name
+{1541}{89} //Description
+{1542}{515} //Drawing
+{1543}{15115} //Componet 1
+{1544}{15083} //Componet 2
+{1545}{15116} //Result
+
+//Eye Gear
+{1550}{90} //Name
+{1551}{91} //Description
+{1552}{598} //Drawing
+{1553}{15103} //Componet 1
+{1554}{8184} //Componet 2
+{1555}{8183} //Result
+
+//Mechanized Arachnid
+{1560}{92}
+{1561}{93}
+{1562}{366}
+{1563}{15090}
+{1564}{15091}
+{1565}{15066}
+
+//1600-1699 Smithy Schematics (Learned)
+
+//Pure Ore
+{1600}{94} //Name
+{1601}{95} //Description
+{1602}{543} //Drawing
+{1603}{15086} //Componet 1
+{1604}{15087} //Componet 2
+{1605}{15085} //Result
+
+//Balanced Sword
+{1610}{96} //Name
+{1611}{97} //Description
+{1612}{549} //Drawing
+{1613}{15085} //Componet 1
+{1614}{15088} //Componet 2
+{1615}{6048} //Result
+
+//Ultralite Axe
+{1620}{98} //Name
+{1621}{99} //Description
+{1622}{552} //Drawing
+{1623}{15122} //Componet 1
+{1624}{15124} //Componet 2
+{1625}{6069} //Result
+
+//Dwarven Gauntlets
+{1630}{100} //Name
+{1631}{101} //Description
+{1632}{518} //Drawing
+{1633}{15125} //Componet 1
+{1634}{8056} //Componet 2
+{1635}{8175} //Result
+
+//Helmet of Vision
+{1640}{102} //Name
+{1641}{103} //Description
+{1642}{619} //Drawing
+{1643}{8199} //Componet 1
+{1644}{15119} //Componet 2
+{1645}{8186} //Result
+
+//Ultralite Chainmail
+{1650}{104} //Name
+{1651}{105} //Description
+{1652}{553} //Drawing
+{1653}{15123} //Componet 1
+{1654}{15119} //Componet 2
+{1655}{8130} //Result
+
+//Elite Plate Mail
+{1660}{106} //Name
+{1661}{107} //Description
+{1662}{521} //Drawing
+{1663}{15155} //Componet 1
+{1664}{8091} //Componet 2
+{1665}{8115} //Result
+
+//1700-1799 Theraputics Schematics (Learned)
+
+//Tincture of Superior Intellect
+{1700}{108} //Name
+{1701}{109} //Description
+{1702}{535} //Drawing
+{1703}{10108} //Componet 1
+{1704}{15089} //Componet 2
+{1705}{10069} //Result
+
+//Elixir of Physical Prowess
+{1710}{110} //Name
+{1711}{111} //Description
+{1712}{547} //Drawing
+{1713}{10072} //Componet 1*******WRONG
+{1714}{10071} //Componet 2
+{1715}{10070} //Result
+
+//Liquid of Awareness
+{1720}{112} //Name
+{1721}{113} //Description
+{1722}{541} //Drawing
+{1723}{10108} //Componet 1
+{1724}{10101} //Componet 2
+{1725}{10103} //Result
+
+//Tonic of Increased Reflexes
+{1730}{114} //Name
+{1731}{115} //Description
+{1732}{596} //Drawing
+{1733}{10109} //Componet 1
+{1734}{10107} //Componet 2
+{1735}{10099} //Result
+
+//Mind Marvel
+{1740}{116} //Name
+{1741}{117} //Description
+{1742}{514} //Drawing
+{1743}{10102} //Componet 1
+{1744}{10069} //Componet 2
+{1745}{10098} //Result
+
+//Energizer
+{1750}{118} //Name
+{1751}{119} //Description
+{1752}{522} //Drawing
+{1753}{10105} //Componet 1
+{1754}{10070} //Componet 2
+{1755}{10100} //Result
+
+//Revitalizer
+{1760}{120} //Name
+{1761}{121} //Description
+{1762}{592} //Drawing
+{1763}{10098} //Componet 1
+{1764}{10100} //Componet 2
+{1765}{10097} //Result
+
+//2000-2999 are Found Schematics *****************************
+
+//2000-2099 Anatomical Schematics (Found)
+
+//2100-2199 Chemistry Schematics (Found)
+
+//2200-2299 Electrical Schematics (Found)
+
+//2300-2399 Explosives Schematics (Found)
+
+//2400-2499 Gun Smithy Schematics (Found)
+
+//2500-2599 Mechanical Schematics (Found)
+
+//POISON Mechanical Arachnid
+{2500}{500} //Name
+{2501}{501} //Description
+{2502}{366} //Drawing
+{2503}{15066} //Componet 1
+{2504}{10065} //Componet 2
+{2505}{15092} //Result
+
+//Automaton
+{2510}{502} //Name
+{2511}{503} //Description
+{2512}{569} //Drawing
+{2513}{15066} //Componet 1
+{2514}{8073} //Componet 2
+{2515}{15133} //Result
+
+
+//2600-2699 Smithy Schematics (Found)
+
+//2700-2799 Theraputics Schematics (Found)
+
+//3000 Schmatic Title Pages
+
+//Herboligy
+{3000}{1000} //Name
+{3001}{1001} //Description
+{3002}{661} //Drawing
+{3003}{15157} //Componet 1
+{3004}{15158} //Componet 2
+{3005}{10059} //Result
+
+//Chemistry
+{3010}{1002} //Name
+{3011}{1003} //Description
+{3012}{657} //Drawing
+{3013}{15157} //Componet 1
+{3014}{15158} //Componet 2
+{3015}{10087} //Result
+
+//Electrical
+{3020}{1004} //Name
+{3021}{1005} //Description
+{3022}{658} //Drawing
+{3023}{15157} //Componet 1
+{3024}{15158} //Componet 2
+{3025}{15070} //Result
+
+//Explosives
+{3030}{1006} //Name
+{3031}{1007} //Description
+{3032}{659} //Drawing
+{3033}{15157} //Componet 1
+{3034}{15158} //Componet 2
+{3035}{15134} //Result
+
+//GunSmithy
+{3040}{1008} //Name
+{3041}{1009} //Description
+{3042}{660} //Drawing
+{3043}{15157} //Componet 1
+{3044}{15158} //Componet 2
+{3045}{6038} //Result
+
+//Mechanical
+{3050}{1010} //Name
+{3051}{1011} //Description
+{3052}{662} //Drawing
+{3053}{15157} //Componet 1
+{3054}{15158} //Componet 2
+{3055}{8183} //Result
+
+//Smithy
+{3060}{1012} //Name
+{3061}{1013} //Description
+{3062}{663} //Drawing
+{3063}{15157} //Componet 1
+{3064}{15158} //Componet 2
+{3065}{8115} //Result
+
+//Therupeutics
+{3070}{1014} //Name
+{3071}{1015} //Description
+{3072}{664} //Drawing
+{3073}{15157} //Componet 1
+{3074}{15158} //Componet 2
+{3075}{10097} //Result

@@ -1,0 +1,44 @@
+{1}{Bonjour, bienvenue dans mon herboristerie. Que puis-je pour vous ?}{Bonjour, bienvenue dans mon herboristerie. Que puis-je pour vous ?}{}{1}{}{}
+{2}{J'ai vu votre requête. Que se passe-t-il ?}{}{5}{ru1005, lf0 0}{10}{lf0 1}
+{3}{Moi avoir vu vot' requête, quoi y avoir ?}{}{-4}{ru1005, lf0 0}{10}{lf0 1}
+{4}{Racontez moi comment avez-vous eu l'idée de devenir herboriste.}{}{5}{lf9 0}{30}{lf9 1}
+{5}{J'ai la serviette.}{}{5}{in 5806, qu1007 2}{60}{in 5806, qu1007 4}
+{6}{Moi avoir paperasse.}{}{-4}{in 5806, qu1007 2}{60}{in 5806, qu1007 4}
+{7}{B:}{}{1}{}{0}{}
+{8}{E:}{}{1}{}{0}{}
+
+{10}{Eh bien voilà. Je suis sur qu'il y a quelque chose de louche à la mairie. L'an dernier, un homme a apporté une serviette au maire et ce dernier l'a enfermé dans son armoire. Je voudrais savoir ce qu'elle contient.}{Eh bien voilà. Je suis sur qu'il y a quelque chose de louche à la mairie. L'an dernier, un homme a apporté une serviette au maire et ce dernier l'a enfermé dans son armoire. Je voudrais savoir ce qu'elle contient.}{}{2}{}{}
+{11}{J'accepte de vous aider.}{}{5}{}{40}{qu1007 2}
+{12}{J'accepte de vous aider. [vous mentez]}{}{5}{}{40}{qu1007 2}
+{13}{Moi accepter.}{}{-4}{}{40}{qu1007 2}
+{14}{Moi accepter. [vous mentez]}{}{-4}{}{40}{qu1007 2}
+
+{30}{Je voulais m'occuper de la nature, et comme j'aime jardiner, je me suis dit que c'était le métier de mes rêves. De plus, je fournis le médecin de l'île qui est aussi pharmacien. C'est un bon chiffre d'affaires.}{Je voulais m'occuper de la nature, et comme j'aime jardiner, je me suis dit que c'était le métier de mes rêves. De plus, je fournis le médecin de l'île qui est aussi pharmacien. C'est un bon chiffre d'affaires.}{}{3}{}{}
+{31}{J'ai vu votre requête. Que se passe-t-il ?}{}{5}{ru1005, lf0 0}{10}{lf0 1}
+{32}{Moi avoir vu vot' requête, quoi y avoir ?}{}{-4}{ru1005, lf0 0}{10}{lf0 1}
+{33}{B:}{}{1}{}{0}{}
+{34}{E:}{}{1}{}{0}{}
+
+{40}{Formidable. Je vous conseille de vous introduir dans l'entrepôt derrière le secrétariat, sa chambre est gardée par quatres brutes. Mais vous devrez endormir la secrétaire. Une fois dedans, il devrait y avoir la clef de la salle de réunion qui donne sur sa chambre.}{Formidable. Je vous conseille de vous introduir dans l'entrepôt derrière le secrétariat, sa chambre est gardée par quatres brutes. Mais vous devrez endormir la secrétaire. Une fois dedans, il devrait y avoir la clef de la salle de réunion qui donne sur sa chambre.}{}{4}{}{}
+{41}{Très bien.}{}{5}{}{-2}{fl50}
+{42}{D'accord, c'est tout ce que je voulais savoir, je vais vous dénoncer.}{}{5}{}{0}{co, qu1007 6, gf1017 1}
+{43}{Okay.}{}{-4}{}{-2}{fl50}
+{44}{Moi tout savoir, moi vous dénoncer.}{}{-4}{}{0}{co, qu1007 6, gf1017 1}
+
+{50}{Bonne chance.}{Bonne chance.}{}{5}{}{}
+
+{60}{Donnez la moi; [il vous la prends des mains]...}{Donnez la moi; [il vous la prends des mains]...}{}{6}{}{}
+{61}{[Suite]}{}{1}{}{63}{}
+
+{63}{!}{!}{}{7}{}{}
+{64}{[Suite]}{}{1}{}{66}{}
+
+{66}{!!}{!!}{}{8}{}{}
+{67}{[Suite]}{}{1}{}{69}{}
+
+{69}{!!!}{!!!}{}{9}{}{}
+{70}{[Suite]}{}{1}{}{72}{}
+
+{72}{Il n'y a qu'une recette de cuisine mais au moins je suis fixé, tenez, prenez ces 2000 pièces d'or pour la cause. [Il vous les tend]}{Il n'y a qu'une recette de cuisine mais au moins je suis fixé, tenez, prenez ces 2000 pièces d'or pour la cause. [Il vous les tend]}{}{10}{}{}
+{73}{Au revoir.}{}{5}{}{0}{gf1017 0, $$+2000}
+{74}{R'voir.}{}{-4}{}{0}{gf1017 0, $$+2000}

@@ -45,12 +45,12 @@
 {57}{Je vous ai peut-être jugé un peu hâtivement, mon frère. Pardonnez-moi. C'est un plaisir de vous rencontrer ! Comment puis-je vous être utile ?}{Je vous ai peut-être jugée un peu hâtivement. Pardonnez-moi. C'est un plaisir de vous rencontrer ! Comment puis-je vous être utile ?}{}{12}{}{}
 {58}{Puis-je vous poser quelques questions ?}{}{5}{}{60}{}
 {60}{Que voulez-vous savoir ?}{Que voulez-vous savoir ?}{}{13}{}{}
-{61}{Que faites-vous là, devant ce magasin ?}{}{5}{ss 2, lf18 0}{119}{lf18 1}
+{61}{Que faites-vous là, devant ce magasin ?}{}{5}{ss 2, lf18 0, lf14 0, lf4 0}{119}{lf18 1}
 {62}{Connaissez-vous cet établissement ?}{}{5}{lf1 0, lf4 0, ss -1}{74}{lf 1 1}
 {63}{Que pouvez-vous me dire sur Schuyler & Fils ?}{}{5}{lf4 0, lf1 1, ss -1}{80}{}
 {64}{Que faites-vous là, devant ce magasin ?}{}{5}{lf2 1, lf4 0, lf7 0, ss -1}{119}{}
 {65}{Encore une fois, que faites-vous là, devant ce magasin ?}{}{5}{lf7 1, lf4 0, ss -1}{224}{}
-{66}{Souhaitez-vous vous joindre à moi ?}{}{5}{lf4 1, lf14 0, ss -1}{201}{jo 0 198}
+{66}{Souhaitez-vous vous joindre à moi ?}{}{5}{lf4 1, lf14 0}{201}{jo 0 198}
 {67}{Je me demandais si par hasard vous accepteriez de vous joindre à moi ?}{}{5}{ss 2, lf14 1}{342}{}
 {69}{E:}{}{5}{}{0}{}
 {74}{Oui. Et je maudis le jour où j'ai croisé les individus malfaisants qui en sont les propriétaires. Une sacrée bande de voyous... Dieu seul sait ce qui se trame derrière ces portes. Ce bâtiment abrite le quartier général des tristement célèbres Schuyler et Fils...}{Oui. Et je maudis le jour où j'ai croisé les individus malfaisants qui en sont les propriétaires. Une sacrée bande de voyous... Dieu seul sait ce qui se trame derrière ces portes. Ce bâtiment abrite le quartier général des tristement célèbres Schuyler et Fils...}{}{14}{}{}
@@ -211,7 +211,7 @@
 {314}{Oui, peut-être avez-vous raison. Bonne journée...}{}{5}{}{0}{}
 {316}{Je vais essayer, camarade. Tout va bien se passer, je n'en doute pas un seul instant. Eh bien, bonne chance à vous...}{Je vais essayer, camarade. Tout va bien se passer, je n'en doute pas un seul instant. Eh bien, bonne chance à vous...}{}{60}{}{}
 {317}{Hum. Peut-être souhaiteriez-vous me tenir compagnie Magnus ?}{}{5}{}{320}{lf4 1, jo 0 324}
-{318}{E:}{}{5}{}{0}{}
+{318}{E:}{}{5}{}{0}{lf4 1}
 {320}{Y avait-il autre chose... ?}{Y avait-il autre chose... ?}{}{61}{}{}
 {321}{E:}{}{5}{}{0}{}
 {324}{Hum. Oui... Vous ne m'avez pas l'air si antipathique que cela. Ce serait peut-être une bonne idée de voyager ensemble... Après tout, deux avis valent mieux qu'un, surtout s'il y a un nain dans le lot ! Ah ! Sur ce, allons-y...}{Hum. Oui... Vous ne m'avez pas l'air si antipathique que cela. Ce serait peut-être une bonne idée de voyager ensemble... Après tout, deux avis valent mieux qu'un, surtout s'il y a un nain dans le lot ! Ah ! Sur ce, allons-y...}{}{62}{}{}
@@ -237,8 +237,8 @@
 {402}{J'ai quelques questions à vous poser, Magnus...}{}{5}{wa 0}{440}{}
 {403}{J'aimerais que vous fassiez quelque chose pour moi, Magnus...}{}{5}{wa 0}{521}{}
 {404}{Que pouvez-vous faire pour moi, Magnus ?}{}{5}{}{}{su}
-{405}{Vous n'avez plus besoin d'attendre, Magnus...}{}{5}{pa -6616, gf1022 1, ss 2, wa 1}{559}{}
-{406}{Vous n'avez plus besoin d'attendre, Magnus...}{}{5}{pa -6616, gf1022 0, ss 2, wa 1}{629}{uw 0 530}
+{405}{Vous n'avez plus besoin d'attendre, Magnus...}{}{5}{pa -6616, gf1022 1, ss 2, wa 1}{629}{}
+{406}{Vous n'avez plus besoin d'attendre, Magnus...}{}{5}{pa -6616, gf1022 0, ss 2, wa 1}{559}{uw 0 530}
 {407}{Vous n'avez plus besoin d'attendre, Magnus...}{}{5}{pa -6616, ss -1, wa 1, lf16 0}{559}{uw 0 530}
 {408}{Vous n'avez plus besoin d'attendre, Magnus...}{}{5}{pa 6616, wa 1}{544}{}
 {410}{Vous avez l'air en colère contre moi, Magnus. Est-ce que je peux faire quelque chose ?}{}{5}{re -20}{490}{}
@@ -278,7 +278,7 @@
 {490}{Eh bien, les nains ne sont pas du genre à se plaindre, mais je dois dire que votre comportement commence à m'agacer sérieusement ces temps-ci. Il y a quelque chose qui me ferait plaisir cela dit... Les nains aiment bien renifler de temps à autre une bonne dose de leur tabac à priser... Disons qu'il s'agit là d'une sorte de calumet de la paix...}{Eh bien, les nains ne sont pas du genre à se plaindre, mais je dois dire que votre comportement commence à m'agacer sérieusement ces temps-ci. Il y a quelque chose qui me ferait plaisir cela dit... Les nains aiment bien renifler de temps à autre une bonne dose de leur tabac à priser... Disons qu'il s'agit là d'une sorte de calumet de la paix...}{}{124}{}{}
 {491}{Allons, Magnus... Est-ce vraiment nécessaire ?}{}{5}{ch 20}{497}{re +20}
 {492}{Bien sûr, Magnus... J'en ai justement sur moi...}{}{5}{in 3614, ch -19}{-49}{re +20}
-{493}{Je vais essayer de vous en trouver, Magnus...}{}{5}{in -3614, ch -19}{510}{}
+{493}{Je vais essayer de vous en trouver, Magnus...}{}{5}{ni 3614, ch -19}{510}{}
 {494}{Je ne tolérerai pas cela d'un membre de mon groupe. Allons-y...}{}{5}{}{}{re -5, fl 513}
 {497}{[Magnus essaie de résister à votre magnétisme, mais finit par céder.] Oh, ce n'est même pas la peine d'essayer avec vous... Je ne sais pas dire non. Mais attention ! Arrêtez de me prendre pour un pantin !}{[Magnus essaie de résister à votre magnétisme, mais finit par céder.] Oh, ce n'est même pas la peine d'essayer avec vous... Je ne sais pas dire non. Mais attention ! Arrêtez de me prendre pour un pantin !}{}{125}{}{}
 {498}{D'accord, Magnus. Allons-y...}{}{5}{}{0}{}

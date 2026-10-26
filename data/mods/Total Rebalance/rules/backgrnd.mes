@@ -1,0 +1,743 @@
+// Background rules.
+// Start at 0 and use 5 lines, and each block is spaced apart on multiples of 10.
+// Example shows that the meaning of each row:
+// 
+//	{80}{1008}       //Index into the description message file
+//	{81}{94}         //Index into the effect message file
+//	{82}{DWF DWM}    //The list of race-gender combinations for which the background is legal (list of codes is after this example)
+//	{83}{400}        //How much money the background gives the character
+//	{84}{6076 8263}  //The list of item prototype numbers separated by spaces (it should be left blank unless items are supplied)
+// 
+// If third line is left empty, all combinations can use the background. Otherwise the three letter codes are:
+//
+//	HUF - human female
+//	HUM - human male
+//	DWF - dwarf female
+//	DWM - dwarf male
+//	ELF - elf female
+//	ELM - elf male
+//	HEF - half elf female
+//	HEM - half elf male
+//	GNF - gnome female
+//	GNM - gnome male
+//	HAF - halfling female
+//	HAM - halfling male
+//	HOF - half orc female
+//	HOM - half orc male
+//	HGF - half ogre female
+//	HGM - half ogre male
+//	NPC - any NPC can use this background, regardless of their race or gender
+//	ANY - anyone can use this background (same as blank line, included for clarity)
+//
+
+{0}{1000}  //No Background
+{1}{86}
+{2}{}
+{3}{400}
+{4}{}
+
+{10}{1001}  //Raised by Snake Handlers
+{11}{87}
+{12}{}
+{13}{400}
+{14}{10082 10083 10083}  //Changed by Positiff
+
+{20}{1002}  //Apprenticed to a Blacksmith
+{21}{88}
+{22}{HUM DWM ELM HEM GNM HAM HOM HGM}  //Changed by Positiff
+{23}{400}
+{24}{6074}  //Changed by Positiff
+
+{30}{1003}  //Raised by Elves
+{31}{89}
+{32}{HUF HUM}
+{33}{400}
+{34}{8157}
+
+{40}{1004}  //Raised by Monks
+{41}{90}
+{42}{}
+{43}{100}
+{44}{}
+
+{50}{1005}  //Son of a Hero
+{51}{91}
+{52}{}
+{53}{300}  //Changed by Positiff
+{54}{6180}  //Paladin's Sword (Arcanum 1.5)
+
+{60}{1006}  //Inheritance
+{61}{92}
+{62}{}
+{63}{800}
+{64}{}
+
+{70}{1007}  //Foppish Elf
+{71}{93}
+{72}{ELF ELM}
+{73}{400}
+{74}{}
+
+{80}{1008}  //Clanless Dwarf
+{81}{89}  //Changed by Positiff
+{82}{DWF DWM}
+{83}{400}
+{84}{6076 8078}  //Changed by Positiff
+
+{90}{1009}  //Disenfranchised Gnome
+{91}{95}
+{92}{GNM}  //Changed by Positiff
+{93}{400}
+{94}{8118}  //Changed by Positiff
+
+{100}{1010}  //Orphaned Halfling
+{101}{96}
+{102}{HAF HAM}
+{103}{400}
+{104}{8125}  //Changed by Positiff
+
+{110}{1011}  //Mentally Retarded
+{111}{97}
+{112}{}
+{113}{400}
+{114}{}
+
+{120}{1012}  //Professional Knife Tosser
+{121}{98}
+{122}{}
+{123}{400}
+{124}{6052 6052 6052 6052 6052 6052}  //Changed by Positiff
+
+{130}{1013}  //Apprenticed to a Shopkeeper
+{131}{99}
+{132}{}
+{133}{500}
+{134}{}
+
+{140}{1014}  //Sent to Charm School
+{141}{100}
+{142}{HUF HEF}
+{143}{400}
+{144}{10094}  //Changed by Positiff
+
+{150}{1015}  //Born Under a Sign
+{151}{101}
+{152}{}
+{153}{400}
+{154}{}
+
+{160}{1016}  //Extreme Personality
+{161}{102}
+{162}{}
+{163}{400}
+{164}{}
+
+{170}{1017}  //Factory Escapee
+{171}{103}
+{172}{HOM HOF}
+{173}{50}
+{174}{8110}  //Changed by Positiff
+
+{180}{1018}  //Freed Bodyguard
+{181}{104}
+{182}{HGM}  //Changed by Positiff
+{183}{500}  //Changed by Positiff
+{184}{8106}  //Changed by Positiff
+
+{190}{1019}  //Bookworm
+{191}{105}
+{192}{HUF HUM DWF DWM ELF ELM HEF HEM GNM HAF HAM}  //Changed by Positiff
+{193}{450}  //Changed by Positiff
+{194}{8184}  //Changed by Positiff
+
+{200}{1020}  //Bully
+{201}{106}
+{202}{HUF HUM DWF DWM ELF ELM HEF HEM GNM HAF HAM}  //Changed by Positiff
+{203}{400}
+{204}{}
+
+{210}{1021}  //Wild Half-Ogre
+{211}{107}
+{212}{HGM}  //Changed by Positiff
+{213}{250}  //Changed by Positiff
+{214}{8126 8050}  //Changed by Positiff
+
+{220}{1022}  //Rare Half-Ogre Birth
+{221}{108}
+{222}{HGM HGF}
+{223}{400}
+{224}{}
+
+{230}{1023}  //Suppressed Orcish Looks
+{231}{109}
+{232}{HOM HOF}
+{233}{400}
+{234}{}
+
+{240}{1024}  //Elvish Blood
+{241}{110}
+{242}{HUF HUM GNF GNM HAF HAM HGM HGF}
+{243}{400}
+{244}{}
+
+{250}{1025}  //Hyperactive
+{251}{111}
+{252}{}
+{253}{450}  //Changed by Positiff
+{254}{}
+
+{260}{1026}  //Army Training
+{261}{112}
+{262}{HUF HUM DWF DWM ELF ELM GNF GNM HAF HAM HEF HEM HOF HOM}
+{263}{400}
+{264}{}
+
+{270}{1027}  //Tough Hide
+{271}{94}  //Changed by Positiff
+{272}{HOM HOF HGM HGF}
+{273}{350}  //Changed by Positiff
+{274}{}
+
+{280}{1028}  //Sheleterd Childhood
+{281}{179}
+{282}{HUF HUM HEF HEM HOF HOM GNF GNM HAF HAM ELF ELM}
+{283}{400}
+{284}{}
+
+{290}{1029}  //Troll Offspring
+{291}{180}
+{292}{}
+{293}{400}
+{294}{}
+
+{300}{1030}  //Ranaway with the Circus
+{301}{181}
+{302}{}
+{303}{400}
+{304}{}
+
+{310}{1031}  //Raised in the Pits
+{311}{182}
+{312}{}
+{313}{100}
+{314}{6066}
+
+{320}{1032}  //Feral Child
+{321}{183}
+{322}{HUF HUM HEF HEM HOF HOM GNF GNM HGF HGM}
+{323}{200}
+{324}{}
+
+{330}{1033}  //Sickly
+{331}{184}
+{332}{}
+{333}{275}  //Changed by Positiff
+{334}{10059 10059 10060 10077}  //Changed by Positiff
+
+{340}{1034}  //Beat with an Ugly Stick
+{341}{185}
+{342}{}
+{343}{400}
+{344}{}
+
+{350}{1035}  //Lady's Man
+{351}{186}
+{352}{HUM DWM ELM HEM GNM HAM HOM HGM}
+{353}{350}  //Changed by Positiff
+{354}{8168}  //Changed by Positiff
+
+{360}{1036}  //Debutante
+{361}{187}
+{362}{HUF DWF ELF HEF GNF HAF HOF HGF}
+{363}{500}  //Changed by Positiff
+{364}{}
+
+{370}{1037}  //Raised by Orcs
+{371}{188}
+{372}{HUF HUM HOF HOM GNF GNM HAF HAM HGF HGM}
+{373}{400}
+{374}{}
+
+{380}{1038}  //Charlatan's Protege
+{381}{189}
+{382}{HUF HUM DWF DWM ELF ELM HEF HEM GNF GNM HAF HAM}
+{383}{400}
+{384}{}
+
+
+{390}{1039}  //Merwin Tumblebrook
+{391}{}
+{392}{NPC}
+{393}{400}
+{394}{15178}
+
+{400}{1040}  //Godfrey Castleburger
+{401}{}
+{402}{NPC}
+{403}{400}
+{404}{}
+
+{410}{1041}  //Horace McGinley
+{411}{}
+{412}{NPC}
+{413}{400}
+{414}{}
+
+{420}{1042}  //Muck Evil Eye
+{421}{}
+{422}{NPC}
+{423}{400}
+{424}{}
+
+{430}{1043}  //D'ren Le'lor
+{431}{}
+{432}{NPC}
+{433}{400}
+{434}{}
+
+{440}{1044}  //Solomon Doone
+{441}{}
+{442}{NPC}
+{443}{400}
+{444}{}
+
+{450}{1045}  //Merik Luggerton
+{451}{}
+{452}{NPC}
+{453}{400}
+{454}{}
+
+{460}{1046}  //Lugard Bloodstone
+{461}{}
+{462}{NPC}
+{463}{400}
+{464}{}
+
+{470}{1047}  //Victoria Warrington
+{471}{}
+{472}{NPC}
+{473}{400}
+{474}{}
+
+{480}{1048}  //Bel'an T'Seraa
+{481}{}
+{482}{NPC}
+{483}{400}
+{484}{}
+
+{490}{1049}  //Clarisse Vorak
+{491}{}
+{492}{NPC}
+{493}{400}
+{494}{}
+
+{500}{1050}  //Ke'ree Melange
+{501}{}
+{502}{NPC}
+{503}{400}
+{504}{}
+
+
+{510}{1051}  //Educator
+{511}{328}
+{512}{}
+{513}{400}
+{514}{}
+
+{520}{1052}  //Super Model
+{521}{329}
+{522}{HUF DWF ELF HEF GNF HAF HOF HGF}
+{523}{300}  //Changed by Positiff
+{524}{8171}  //Changed by Positiff
+
+{530}{1053}  //Escaped From The Madhouse (male)
+{531}{335}
+{532}{HUM}
+{533}{0}
+{534}{8117}
+
+{540}{1053}  //Escaped From The Madhouse (female)
+{541}{335}
+{542}{HUF}
+{543}{0}
+{544}{8142}
+
+{550}{1054}  //Idiot Savant
+{551}{336}
+{552}{HUF HUM HEF HEM HOF HOM HGF HGM}
+{553}{0}
+{554}{}
+
+{560}{1055}  //Tomboy
+{561}{337}
+{562}{HUF DWF ELF HEF GNF HAF HOF HGF}
+{563}{400}
+{564}{}
+
+{570}{1056}  //Barbarian (normal)
+{571}{338}
+{572}{HUF HUM HEF HEM HOF HOM}
+{573}{100}
+{574}{8096}
+
+{580}{1056}  //Barbarian (small)
+{581}{338}
+{582}{DWF DWM GNF GNM HAF HAM}
+{583}{100}
+{584}{8104}
+
+{590}{1057}  //Nietzche
+{591}{339}
+{592}{}
+{593}{400}
+{594}{}
+
+{600}{1058}  //Dark Elf Follower
+{601}{340}
+{602}{ELF ELM}
+{603}{400}
+{604}{}
+
+{610}{1059}  //Sold His Soul
+{611}{341}
+{612}{}
+{613}{400}
+{614}{}
+
+{620}{1060}  //Day Mage
+{621}{342}
+{622}{HUF HUM ELF ELM HEF HEM GNF GNM HAF HAM HOF HOM HGF HGM}
+{623}{400}
+{624}{}
+
+{630}{1061}  //Night Mage
+{631}{342}
+{632}{HUF HUM ELF ELM HEF HEM GNF GNM HAF HAM HOF HOM HGF HGM}
+{633}{400}
+{634}{}
+
+{640}{1062}  //Heavenly Mage
+{641}{342}
+{642}{HUF HUM ELF ELM HEF HEM GNF GNM HAF HAM HOF HOM HGF HGM}
+{643}{400}
+{644}{}
+
+{650}{1063}  //Natural Mage
+{651}{342}
+{652}{HUF HUM ELF ELM HEF HEM GNF GNM HAF HAM HOF HOM HGF HGM}
+{653}{400}
+{654}{}
+
+{660}{1064}  //Agoraphobia
+{661}{342}
+{662}{HUF HUM DWF DWM GNF GNM HAF HAM}
+{663}{600}  //Changed by Positiff
+{664}{}
+
+{670}{1065}  //Hydrophobic
+{671}{343}
+{672}{HUF HUM DWF DWM GNF GNM HAF HAM HOF HOM}
+{673}{400}
+{674}{}
+
+{680}{1066}  //Afraid of the Dark
+{681}{344}
+{682}{HUF HUM HAF HAM}
+{683}{400}
+{684}{8134 7041}  //Changed by Positiff
+
+{690}{1067}  //Magick Allergy
+{691}{345}
+{692}{HUF HUM DWF DWM GNF GNM HAF HAM HOF HOM HGF HGM}
+{693}{400}
+{694}{}
+
+{700}{1068}  //Arsonist
+{701}{346}
+{702}{HUF HUM GNF GNM HAF HAM HOF HOM}
+{703}{400}
+{704}{7041 7041 15208 15208 15208 15208}  //Changed by Positiff
+
+{710}{1069}  //Bandit
+{711}{113}  //Changed by Positiff
+{712}{HUF HUM HOF HOM HEF HEM}
+{713}{0}
+{714}{8110 6083 7039 7039 7039 7039 7039}  //Changed by Positiff
+
+{720}{1070}  //Technophobe
+{721}{347}
+{722}{HUF HUM HEF HEM HAF HAM HOF HOM}
+{723}{300}  //Changed by Positiff
+{724}{15126}  //Changed by Positiff
+
+{730}{1071}  //Only Child
+{731}{348}
+{732}{}
+{733}{400}
+{734}{}
+
+{740}{1072}  //Frankenstein's Monster
+{741}{349}
+{742}{HUM HOM}
+{743}{0}
+{744}{}
+
+{750}{1073}  //Bride of Frankenstein
+{751}{350}
+{752}{HUF HOF}
+{753}{0}
+{754}{}
+
+{760}{1074}  //Mad Doctor
+{761}{351}
+{762}{}
+{763}{400}
+{764}{}
+
+{770}{1075}  //Miracle Operation
+{771}{352}
+{772}{}
+{773}{400}
+{774}{}
+
+{780}{1076}  //Dark Vision
+{781}{342}
+{782}{}
+{783}{400}
+{784}{}
+
+
+{790}{1077}  //Headhunter (Added by Gentle_Giant)
+{791}{360}
+{792}{}
+{793}{100}
+{794}{6051 10074 10074}
+
+{800}{1078}  //Desertir (Added by Gentle_Giant)
+{801}{361}
+{802}{HGM}  //Changed by Positiff
+{803}{0}
+{804}{8129 6109 7039 7039 7039}
+
+{810}{1079}  //Simple Man (Added by Gentle_Giant)
+{811}{362}
+{812}{}
+{813}{50}
+{814}{}
+
+{820}{1080}  //Sapper (Added by Gentle_Giant)
+{821}{363}
+{822}{}
+{823}{400}
+{824}{}
+
+{830}{1081}  //Young Mage (Added by Gentle_Giant)
+{831}{364}
+{832}{}
+{833}{400}
+{834}{}
+
+{840}{1082}  //Alcoholic (Added by Gentle_Giant)
+{841}{357}  //Changed by Positiff
+{842}{}
+{843}{0}
+{844}{10093}
+
+{850}{1083}  //Crime Authority (Added by Gentle_Giant)
+{851}{358}  //Changed by Positiff
+{852}{}
+{853}{300}
+{854}{15084 15080 15080}
+
+{860}{1084}  //Disciple of Mage (Added by Gentle_Giant)
+{861}{367}
+{862}{}
+{863}{0}
+{864}{6037 11069 11074 11079 11084 10135 10135}
+
+{870}{1085}  //Thrower of Fire (Added by Gentle_Giant)
+{871}{359}  //Changed by Positiff
+{872}{}
+{873}{250}  //Changed by Positiff
+{874}{15209 15209 15076 15076}  //Changed by Positiff
+
+{880}{1086}  //Tulla's Guardian (Added by Gentle_Giant)
+{881}{369}
+{882}{HUM ELM HEM}  //Changed by Positiff
+{883}{600}
+{884}{6042 8043 8170}  //Changed by Positiff
+
+{890}{1087}  //Unhappy Lover (Added by Gentle_Giant)
+{891}{389}  //Changed by Positiff
+{892}{HUM DWM ELM HEM GNM HAM HOM HGM}
+{893}{0}
+{894}{6029 7041 7040 10065 11114}  //Changed by Positiff
+
+{900}{1088}  //Armrestler (Added by Gentle_Giant)
+{901}{390}  //Changed by Positiff
+{902}{HUM DWM ELM HEM GNM HAM HOM HGM}
+{903}{100}
+{904}{}
+
+{910}{1089}  //Feminist (Added by Gentle_Giant)
+{911}{391}  //Changed by Positiff
+{912}{HUF DWF ELF HEF GNF HAF HOF HGF}
+{913}{400}
+{914}{8172}  //Changed by Positiff
+
+{920}{1090}  //Femme Fatale (Added by Gentle_Giant)
+{921}{392}  //Changed by Positiff
+{922}{HUF DWF ELF HEF GNF HAF HOF HGF}
+{923}{50}
+{924}{10137 10137}  //Changed by Positiff
+
+{930}{1091}  //Fast Pupil (Added by Gentle_Giant)
+{931}{325}  //Changed by Positiff
+{932}{HUF HUM}
+{933}{400}
+{934}{}
+
+{940}{1092}  //Runaway from Circus (Added by Gentle_Giant)
+{941}{375}
+{942}{HUF HUM}
+{943}{400}
+{944}{}
+
+{950}{1093}  //Obstinate Dwarf (Added by Gentle_Giant)
+{951}{376}
+{952}{DWF DWM}
+{953}{0}
+{954}{8102 6122 10135 10135}  //Changed by Positiff
+
+{960}{1094}  //Fast Guy (Added by Gentle_Giant)
+{961}{377}
+{962}{DWF DWM}
+{963}{400}
+{964}{}
+
+{970}{1095}  //City Elf (Added by Gentle_Giant)
+{971}{378}
+{972}{ELF ELM}
+{973}{200}
+{974}{}
+
+{980}{1096}  //Diplomat (Added by Gentle_Giant) - Changed by Positiff
+{981}{379}
+{982}{ELF}  //Changed by Positiff
+{983}{600}
+{984}{8171 8286}  //Changed by Positiff
+
+{990}{1096}  //Diplomat (Added by Gentle_Giant) - Changed by Positiff
+{991}{379}
+{992}{ELM}  //Changed by Positiff
+{993}{600}
+{994}{8168 8185 15117}  //Changed by Positiff
+
+{1000}{1097}  //Belong to Different Worlds (Added by Gentle_Giant)
+{1001}{326}  //Changed by Positiff
+{1002}{HEF HEM}
+{1003}{400}
+{1004}{8070}  //Changed by Positiff
+
+{1010}{1098}  //Healer (Added by Gentle_Giant)
+{1011}{381}
+{1012}{HEF HEM}
+{1013}{50}  //Changed by Positiff
+{1014}{8248 8170 15206 10108 15089}  //Changed by Positiff
+
+{1020}{1099}  //Bibliofil (Added by Gentle_Giant)
+{1021}{382}
+{1022}{GNF GNM}
+{1023}{400}
+{1024}{8062 8184}
+
+{1030}{1100}  //Oligarh (Added by Gentle_Giant)
+{1031}{383}
+{1032}{GNM}  //Changed by Positiff
+{1033}{1000}
+{1034}{8085 15117}  //Changed by Positiff
+
+{1040}{1101}  //Tech Child (Added by Gentle_Giant)
+{1041}{384}
+{1042}{HAF HAM}
+{1043}{200}
+{1044}{15154 8134 7041 15111 7039}  //Changed by Positiff
+
+{1050}{1102}  //Servant (Added by Gentle_Giant)
+{1051}{385}
+{1052}{HAF HAM}
+{1053}{500}
+{1054}{8105}
+
+{1060}{1103}  //Assassin (Added by Gentle_Giant)
+{1061}{386}
+{1062}{HOF HOM}
+{1063}{0}
+{1064}{8110 6029 10065 10065}
+
+{1070}{1104}  //Foundling (Added by Gentle_Giant)
+{1071}{387}
+{1072}{HOF HOM}
+{1073}{500}  //Changed by Positiff
+{1074}{}
+
+{1080}{1105}  //Unique Mage (Added by Gentle_Giant)
+{1081}{388}
+{1082}{HGF HGM}
+{1083}{200}
+{1084}{}
+
+
+{1090}{1106}  //Sent by Hiest Elves (Arcanum 1.5) - Changed by Positiff
+{1091}{393}
+{1092}{ELF ELM}
+{1093}{0}
+{1094}{8094}  //Changed by Positiff
+
+{1100}{1107}  //City Gnome (Arcanum 1.5) - Changed by Positiff
+{1101}{394}
+{1102}{DWF DWM}
+{1103}{500}  //Changed by Positiff
+{1104}{8169}  //Changed by Positiff
+
+{1110}{1108}  //Killer (Arcanum 1.5) - Changed by Positiff
+{1111}{395}
+{1112}{HUF HUM ELF ELM HEF HEM HOF HOM}  //Changed by Positiff
+{1113}{450}  //Changed by Positiff
+{1114}{6054 8094}  //Changed by Positiff
+
+{1120}{1108}  //Killer (Arcanum 1.5) - Changed by Positiff
+{1121}{395}
+{1122}{DWF DWM GNF GNM HAF HAM}  //Changed by Positiff
+{1123}{450}  //Changed by Positiff
+{1124}{6054 8102}  //Changed by Positiff
+
+{1130}{1108}  //Killer (Arcanum 1.5) - Changed by Positiff
+{1131}{395}
+{1132}{HGF HGM}  //Changed by Positiff
+{1133}{450}  //Changed by Positiff
+{1134}{6054 8126}  //Changed by Positiff
+
+{1140}{1109}  //Chosen One (Arcanum 1.5) - Changed by Positiff
+{1141}{396}
+{1142}{}
+{1143}{0}
+{1144}{}
+
+{1150}{1110}  //Alien from Another World (Arcanum 1.5) - Changed by Positiff
+{1151}{397}
+{1152}{HUF}  //Changed by Positiff
+{1153}{0}
+{1154}{8172}  //Changed by Positiff
+
+{1160}{1110}  //Alien from Another World (Arcanum 1.5) - Changed by Positiff
+{1161}{397}
+{1162}{HUM}  //Changed by Positiff
+{1163}{0}
+{1164}{8169}  //Changed by Positiff
+
+{1170}{1111}  //Munchkin (Arcanum 1.5) - Changed by Positiff
+{1171}{398}
+{1172}{}
+{1173}{0}
+{1174}{6094}

@@ -29,7 +29,7 @@ import { visit } from '../explorer/nav-history.js';
 import { matchFields, splitTerms } from '../explorer/match.js';
 import { artBaseName, loadProtoIndex } from '../proto/proto-index.js';
 
-// (the listing of each folder comes from data/file_index_art.json)
+// (the listing of each folder comes from js/index/files/file_index_art.json)
 export const ROOT_FOLDER_NAME = 'data';
 const ROOT_RELATIVE_PATH = '';
 

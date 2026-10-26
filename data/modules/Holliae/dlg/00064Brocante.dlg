@@ -1,0 +1,40 @@
+{1}{Bonjour mon jeune ami, un coup d'oeil n'engage à rien. [Il vous prend par le bras et vous montre une statue.] Voyez cette oeuvre d'art est au prix exceptionel de 199 pièces d'or toutes taxes comprises. Alors ?}{Bonjour mon jeune ami, un coup d'oeil n'engage à rien. [Il vous prend par le bras et vous montre une statue.] Voyez cette oeuvre d'art est au prix exceptionel de 199 pièces d'or toutes taxes comprises. Alors ?}{}{1}{}{}
+{2}{C'est d'accord. Je la prend.}{}{5}{$$ 199}{-2}{$$-199, gf1018 1, re+10}
+{3}{Non merci jeune homme.}{}{5}{}{0}{lf9 1}
+{4}{Moi la vouloir.}{}{-4}{$$ 199}{-2}{$$-199, gf1018 1, re+10}
+{5}{Pas vouloir.}{}{-4}{}{0}{lf9 1}
+
+{10}{Rebonjour, vous désirez autre chose ?}{Rebonjour, vous désirez autre chose ?}{}{2}{}{}
+{11}{Non merci. Si je continue, je n'aurai plus qu'à me faire brocanteur.}{}{5}{}{0}{}
+{12}{Nan.}{}{-4}{}{0}{}
+
+{15}{Et cette statue, vous la prenez ?}{Et cette statue, vous la prenez ?}{}{3}{}{}
+{16}{C'est d'accord. Je la prend.}{}{5}{$$ 199}{-2}{$$-199, gf1018 1, lf9 0, re+10}
+{17}{Non merci jeune homme.}{}{5}{}{0}{}
+{18}{Moi la vouloir.}{}{-4}{$$ 199}{-2}{$$-199, gf1018 1, lf9 0, re+10}
+{19}{Pas vouloir.}{}{-4}{}{0}{}
+
+{50}{[Il vous montre une petite statuette de pierre scuplté magnifiquement] Voyez cette magnifique statuette en pierre du XIVeme siècle, je vous la fait pour 99 pièces exactement. C'est une affaire unique et qu'on ne vous fera qu'une fois.}{[Il vous montre une petite statuette de pierre scuplté magnifiquement] Voyez cette magnifique statuette en pierre du XIVeme siècle, je vous la fait pour 99 pièces exactement. C'est une affaire unique et qu'on ne vous fera qu'une fois.}{}{4}{}{}
+{51}{C'est d'accord. Je la prend.}{}{5}{$$ 99}{-15}{$$-99, gf1019 1, re+10}
+{52}{Non merci jeune homme.}{}{5}{}{0}{lf9 1}
+{53}{Moi la vouloir.}{}{-4}{$$ 99}{-15}{$$-99, gf1019 1, re+10}
+{54}{Pas vouloir.}{}{-4}{}{0}{lf9 1}
+
+{60}{Et cette statuette du XIVeme, vous la prenez ?}{Et cette statuette du XIVeme, vous la prenez ?}{}{5}{}{}
+{61}{C'est d'accord. Je la prend.}{}{5}{$$ 99}{-15}{$$-99, gf1019 1, lf9 0, re+10}
+{62}{Non merci jeune homme.}{}{5}{}{0}{}
+{63}{Moi la vouloir.}{}{-4}{$$ 99}{-15}{$$-99, gf1019 1, lf9 0, re+10}
+{64}{Pas vouloir.}{}{-4}{}{0}{}
+
+{150}{[Comme à son habitude, il vous entraine voir un salon bleu cette fois.] Un ensemble d'une table et trois chaises assortis en bleu pour 149 pièces ?}{[Comme à son habitude, il vous entraine voir un salon bleu cette fois.] Un ensemble d'une table et trois chaises assortis en bleu pour 149 pièces ?}{}{6}{}{}
+{151}{C'est d'accord. Je la prend.}{}{5}{$$ 149}{-2}{$$-149, gf1020 1, re+10}
+{152}{Non merci jeune homme.}{}{5}{}{0}{lf9 1}
+{153}{Moi la vouloir.}{}{-4}{$$ 149}{-2}{$$-149, gf1020 1, re+10}
+{154}{Pas vouloir.}{}{-4}{}{0}{lf9 1}
+
+
+{160}{Et ce salon, vous me l'embarquez ? Allez, 149 pièces c'est rare une occasion comme ça.}{Et ce salon, vous me l'embarquez ? Allez, 149 pièces c'est rare une occasion comme ça.}{}{7}{}{}
+{161}{C'est d'accord. Je la prend.}{}{5}{$$ 149}{-2}{$$-149, gf1020 1, lf9 0, re+10}
+{162}{Non merci jeune homme.}{}{5}{}{0}{}
+{163}{Moi la vouloir.}{}{-4}{$$ 149}{-2}{$$-149, gf1020 1, lf9 0, re+10}
+{164}{Pas vouloir.}{}{-4}{}{0}{}

@@ -1,0 +1,42 @@
+//
+// Default ambient lighting scheme
+//
+
+//
+// 24 messages.  Each message number is an hour of the day (0-23), 
+// where 0 is 12 AM and 23 is 11 PM.
+//
+// Each message contains RGB values in the form: ro, go, bo, ri, gi, bi
+// where ro is red outdoor, ri is red indoor, etc.  Valid values are
+// in the range 0 - 255.
+//
+// All 24 messages _must_ exist.  However, an empty message (just braces)
+// will be automatically filled in with values interpolated from the 
+// closest non-empty messages surrounding it.  Neither the first nor last
+// message can be empty.
+//
+
+{0}{0, 0, 0, 0, 0, 0} 12AM
+{1}{0, 0, 0, 0, 0, 0} 1AM
+{2}{0, 0, 0, 0, 0, 0} 2AM
+{3}{0, 0, 0, 0, 0, 0} 3AM
+{4}{0, 0, 0, 0, 0, 0} 4AM
+{5}{0, 0, 0, 0, 0, 0} 5AM
+{6}{0, 0, 0, 0, 0, 0} 6AM
+{7}{0, 0, 0, 0, 0, 0} 7AM
+{8}{0, 0, 0, 0, 0, 0} 8AM
+{9}{0, 0, 0, 0, 0, 0} 9AM
+{10}{0, 0, 0, 0, 0, 0} 10AM
+{11}{0, 0, 0, 0, 0, 0} 11AM
+{12}{0, 0, 0, 0, 0, 0} 12PM
+{13}{0, 0, 0, 0, 0, 0} 1PM
+{14}{0, 0, 0, 0, 0, 0} 2PM
+{15}{0, 0, 0, 0, 0, 0} 3PM
+{16}{0, 0, 0, 0, 0, 0} 4PM
+{17}{0, 0, 0, 0, 0, 0} 5PM
+{18}{0, 0, 0, 0, 0, 0} 6PM
+{19}{0, 0, 0, 0, 0, 0} 7PM
+{20}{0, 0, 0, 0, 0, 0} 8PM
+{21}{0, 0, 0, 0, 0, 0} 9PM
+{22}{0, 0, 0, 0, 0, 0} 10PM
+{23}{0, 0, 0, 0, 0, 0} 11PM

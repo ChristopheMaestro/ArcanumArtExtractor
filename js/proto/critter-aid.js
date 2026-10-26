@@ -167,7 +167,7 @@ const MONSTER_UPPER_FOLDERS = new Set(['AIR', 'FIR', 'LIZ', 'PHA', 'RAT', 'SNA',
 const monsterFolderCache = new Map();
 onVersionChange(() => monsterFolderCache.clear());
 // Returns candidate URLs for a monster's ART, best first. Uses the folder's
-// file list in data/file_index_art.json when available (the animation letters differ per
+// file list in js/index/files/file_index_art.json when available (the animation letters differ per
 // monster: AIR has no 'aa' file, only ab/ad/af/...), otherwise guesses.
 async function monsterArtCandidates(info) {
   if (!info || !info.monster || !info.monsterFolder) return [];

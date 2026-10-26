@@ -1,0 +1,66 @@
+{1}{Bien, pour commencer, je vais vous poser quelques questions. Ne mentez pas, ce sera tellement plus simple pour nous deux. [Il sourit innocemment]}{Bien, pour commencer, je vais vous poser quelques questions. Ne mentez pas, ce sera tellement plus simple pour nous deux. [Il sourit innocemment]}{}{}{}{}
+{2}{Bien, allez-y.}{}{5}{}{10}{}
+{3}{C'est donc bien un interrogatoire, je suppose que je n'ai pas le choix : commencez !}{}{5}{}{10}{}
+
+{10}{Bien, êtes-vous un mage ?}{Bien, êtes-vous un mage ?}{}{}{}{}
+{11}{Non.}{}{5}{}{-2}{lf1 1}//20
+{12}{Oui.}{}{5}{}{-6}{}//30
+
+{20}{Et pourtant, vous vous intéressez à la magie. Mais je ne vous blâme pas, après tout moi aussi j'ai une certaine attirance pour la science. Bien, quelle est votre couleur préférée ?}{Et pourtant, vous vous intéressez à la magie. Mais je ne vous blâme pas, après tout moi aussi j'ai une certaine attirance pour la science. Bien, quelle est votre couleur préférée ?}{}{}{}{}
+{21}{Rouge.}{}{5}{}{60}{}
+{22}{Bleu.}{}{5}{}{60}{}
+{23}{Vert.}{}{5}{}{60}{}
+{24}{Jaune.}{}{5}{}{60}{}
+{25}{[Plus]}{}{1}{}{40}{}
+
+{30}{Je vois, donc vous savez employer la magie... Ensuite, quelle est votre couleur préférée ?}{Je vois, donc vous savez employer la magie... Ensuite, quelle est votre couleur préférée ?}{}{}{}{}
+{31}{Rouge.}{}{5}{}{60}{}
+{32}{Bleu.}{}{5}{}{60}{}
+{33}{Vert.}{}{5}{}{60}{}
+{34}{Jaune.}{}{5}{}{60}{}
+{35}{[Plus]}{}{1}{}{50}{}
+
+{40}{Et pourtant, vous vous intéressez à la magie. Mais je ne vous blâme pas, après tout moi aussi j'ai une certaine attirance pour la science. Bien, quelle est votre couleur préférée ?}{Et pourtant, vous vous intéressez à la magie. Mais je ne vous blâme pas, après tout moi aussi j'ai une certaine attirance pour la science. Bien, quelle est votre couleur préférée ?}{}{}{}{}
+{41}{[Retour]}{}{1}{}{20}{}
+{42}{Violet.}{}{5}{}{60}{}
+{43}{Gris.}{}{5}{}{60}{}
+{44}{Rose.}{}{5}{}{60}{}
+{45}{Blanc.}{}{5}{}{60}{}
+
+{50}{Je vois, donc vous savez employer la magie... Ensuite, quelle est votre couleur préférée ?}{Je vois, donc vous savez employer la magie... Ensuite, quelle est votre couleur préférée ?}{}{}{}{}
+{51}{[Retour]}{}{1}{}{30}{}
+{52}{Violet.}{}{5}{}{60}{}
+{53}{Gris.}{}{5}{}{60}{}
+{54}{Rose.}{}{5}{}{60}{}
+{55}{Blanc.}{}{5}{}{60}{}
+
+{60}{Très bien. Avez-vous déjà eu des animaux de compagnie ?}{Très bien. Avez-vous déjà eu des animaux de compagnie ?}{}{}{}{}
+{61}{Oui. [Vous mentez]}{}{5}{}{70}{lf0 1}
+{62}{Non.}{}{5}{}{70}{}
+
+{70}{Lequel de ces cinq personnages qui vous étaient contemporains ou que vous connaissez forcément admirez-vous le plus : Gilbert Bastien, La Dame d'argent, Olivier Lamaxime, Nasrudin, Alexandre l'Acolyte ?}{Lequel de ces cinq personnages qui vous étaient contemporains ou que vous connaissez forcément admirez-vous le plus : Gilbert Bastien, La Dame d'argent, Olivier Lamaxime, Nasrudin, Alexandre l'Acolyte ?}{}{}{}{}
+{71}{Gilbert Bastien}{}{5}{}{80}{}
+{72}{La Dame d'argent}{}{5}{}{80}{}
+{73}{Olivier Lamaxime}{}{5}{}{80}{}
+{74}{Nasrudin}{}{5}{}{80}{}
+{75}{Alexandre l'Acolyte}{}{5}{}{80}{}
+
+{80}{Je vois... Dernière question, je pense que ce sera suffisant : comment qualifieriez-vous le rapport entre la magie et la science ?}{Je vois... Dernière question, je pense que ce sera suffisant : comment qualifieriez-vous le rapport entre la magie et la science ?}{}{}{}{}
+{81}{Elles sont diamétralement opposées.}{}{5}{}{90}{lf0 1}
+{82}{Ce sont les deux faces d'un même tout.}{}{5}{}{90}{lf0 1}
+{83}{Ce sont deux approches de la perfection.}{}{5}{lf0 1}{90}{}
+{84}{Ce sont deux approches de la perfection.}{}{5}{lf0 0, lf1 0}{100}{}
+{85}{Ce sont deux approches de la perfection.}{}{5}{lf0 0, lf1 1}{110}{}
+{86}{Elles se complètent parfaitement.}{}{5}{}{90}{lf0 1}
+
+{90}{Je vois... Je suis désolé @pcname@ mais nous avons des opinions trop divergentes, aussi je ne peux rien vous dire de plus sur mes sortilèges pour le moment. [Il marque une pause et sourit] Je vais vous ramener à bord du train, adieu...}{Je vois... Je suis désolé @pcname@ mais nous avons des opinions trop divergentes, aussi je ne peux rien vous dire de plus sur mes sortilèges pour le moment. [Il marque une pause et sourit] Je vais vous ramener à bord du train, adieu...}{}{}{}{}
+{91}{[Suite]}{}{1}{}{-21}{}
+
+{100}{Bien, je vois que nous sommes sur la même longueur d'onde. Cependant, il y a une seconde partie à ce test. Elle n'est pas limitée dans le temps, vous allez devoir prouver votre maîtrise de la magie en sortant de cette dimension. La dimension possède trois sorties : la première est ce cercueil qui est la porte de l'abandon, la deuxième est un portail magique encore fermé, la dernière est un portail scientifique mais vous ne pourrez pas l'ouvrir.}{Bien, je vois que nous sommes sur la même longueur d'onde. Cependant, il y a une seconde partie à ce test. Elle n'est pas limitée dans le temps, vous allez devoir prouver votre maîtrise de la magie en sortant de cette dimension. La dimension possède trois sorties : la première est ce cercueil qui est la porte de l'abandon, la deuxième est un portail magique encore fermé, la dernière est un portail scientifique mais vous ne pourrez pas l'ouvrir.}{}{}{}{qu1038 1}
+{101}{[Vous écoutez]}{}{1}{}{-13}{}//120
+
+{110}{Bien, je vois que nous sommes sur la même longueur d'onde. Cependant, il y a une seconde partie à ce test. Elle n'est pas limitée dans le temps, vous allez devoir prouver votre maîtrise de la science en sortant de cette dimension. La dimension possède trois sorties : la première est ce cercueil qui est la porte de l'abandon, la deuxième est un portail scientifique encore fermé, la dernière est un portail magique mais vous ne pourrez pas l'ouvrir.}{Bien, je vois que nous sommes sur la même longueur d'onde. Cependant, il y a une seconde partie à ce test. Elle n'est pas limitée dans le temps, vous allez devoir prouver votre maîtrise de la science en sortant de cette dimension. La dimension possède trois sorties : la première est ce cercueil qui est la porte de l'abandon, la deuxième est un portail scientifique encore fermé, la dernière est un portail magique mais vous ne pourrez pas l'ouvrir.}{}{}{}{qu1039 1, gf384 1}
+{111}{[Vous écoutez]}{}{1}{}{-13}{}//120
+
+{120}{Je vous attendrais dans ma cabine, bonne chance... [Il claque des doigts et le cercueil s'ouvre, vous laissant apercevoir une échelle à l'intérieur]}{Je vous attendrais dans ma cabine, bonne chance... [Il claque des doigts et le cercueil s'ouvre, vous laissant apercevoir une échelle à l'intérieur]}{}{}{}{}
+{121}{[Vous le regardez]}{}{1}{}{-19}{}

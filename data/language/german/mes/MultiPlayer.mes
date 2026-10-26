@@ -1,0 +1,161 @@
+//
+// Multiplayer
+//
+// Index of MessageIDs
+// 0900-0999 : Multiplayer Server Starting Messages
+// 1000-1099 : Multiplayer Control UI Messages
+// 1100-1199 : Multiplayer Notice Messages
+// 1200-1299 : Multiplayer Chat Messages
+// 1900-1999 : Multiplayer Game Saving Messages
+// 2000-2099 : Multiplayer Party Messages
+// 3000-3099 : Multiplayer Internet Messages
+
+// Used with verification of packet info/etc.
+{10}{Erfolgreich}
+{11}{Fehlgeschlagen}
+
+// Used with (Multiplayer) Preferences Interface
+{50}{Ein}
+{51}{Aus}
+
+// Used with (Multiplayer) UI
+{60}{Offen}
+{61}{Geschlossen}
+
+{65}{Sterbend}
+
+
+// UI Window Titles
+{75}{Nichts}
+{76}{Verbindung wählen}
+{77}{Spiel wählen}
+{78}{Spieler-Einstellungen}
+{79}{Server-Einstellungen}
+{80}{Verbindungsaufbau}
+{81}{Server wird gestartet}
+
+// Choose Connection UI Buttons
+{100}{Einklinken in LAN-Spiel}
+{101}{Einklinken in Internet-Spiel}
+{102}{Spiel leiten}
+{103}{Spieler-Setup}
+{104}{Server-Optionen}
+{105}{Abbrechen}
+
+// Choose Game UI Buttons
+{120}{Einklinken}
+{121}{Abbrechen}
+
+// Choose Game UI Column Headings
+{170}{Server-Name}
+{171}{Ping}
+{172}{Anzahl Spieler}
+{173}{Szenario}
+{174}{Status}
+
+
+// Starting Server UI Column Headings
+{180}{Server-Name}
+{181}{Anzahl Spieler}
+{182}{Szenario}
+{183}{Status}
+
+{185}{Spieler-Name}
+{186}{Ping}
+
+// Starting Server UI Buttons
+{190}{Start}
+{191}{Abbrechen}
+
+
+// Connecting UI Buttons
+{195}{Abbrechen}
+
+
+//
+{200}{Verbindungsaufbau ...}
+{201}{Verbindung nicht möglich.}
+{202}{Server ausgelastet.}
+{203}{Du bist von diesem Server ausgeschlossen worden.}
+
+{240}{Verzögerung}
+{241}{Server-Verbindung unterbrochen.}
+
+// Joined, transferring startup data
+{300}{Warte auf Spielstatus ...}
+{301}{Warte auf Szenario-Info ...}
+{302}{Warte auf Objekt-Info ...}
+{303}{Warte auf Spielstart ...}
+
+// Debug information -- Statistical Information
+{350}{Ping: %d}
+{351}{Paketverlust: %d}
+// Debug Information -- Specific Errors
+{360}{Spielzeit-Differenz: %d}
+{361}{Runden-Differenz: %d}
+
+// (Multiplayer) Server Preferences Interface
+{500}{Namen ändern}
+{501}{Spieler gegen Spieler}
+{502}{Höchstzahl Spieler}
+{503}{Fertig}
+
+// Player Preferences Interface
+{600}{Name}
+{601}{Fertig}
+
+// 0900-0999 : Multiplayer Server Starting Messages
+{900}{Das Modul %s.dat wurde nicht gefunden. Bei Clients, die sich in unseren Server einklinken, könnten bei Datenabweichungen Probleme auftauchen.}
+{901}{Das angegebene Modul "%s.dat" konnte nicht geladen werden. Weiterbearbeitung nicht möglich.}
+{902}{Für dieses Modul wurde keine Start-Karte gefunden.}
+{903}{Keine PC-Daten gefunden. Dein Charakter hat evtl. einen Fehler. Es wird ein Standard-Charakter erstellt.}
+
+// 1000-1099 : Multiplayer Control UI Messages
+{1000}{Status: %s}
+{1001}{Bereit}
+{1002}{In Wartestellung ...}
+{1003}{Es wird geladen ...}
+{1090}{Verbindung unterbrechen}
+{1091}{Verbannen}
+
+// 1100-1199 : Multiplayer Notice  Messages
+{1100}{Spieler %s (%d) hat das Spiel verlassen.}
+{1101}{Spieler %s (%d) wurde aus dem Spiel ausgeschlossen.}
+{1102}{Spieler %s(%d) wurde verbannt. Verbindungen von diesem Host werden nicht zugelassen.}
+{1103}{Der Server hat unerwartet die Verbindung unterbrochen. Dein Spiel ist möglicherweise nicht verfügbar.}
+{1104}{Spieler hat sich in das Spiel eingeklinkt.}
+{1105}{Der Spieler hat eine Verbindung aufgebaut, das Spiel wird fortgesetzt.}
+{1106}{Bitte warten, ein Spieler klinkt sich in das Spiel ein.}
+
+// 1200-1299 : Multiplayer Chat Messages
+{1200}{%s: %s}
+{1210}{Wenn man tot ist, kann man nicht reden.}
+{1211}{Wenn man bewusstlos ist, kann man nicht reden.}
+
+// 1900-1999 : Multiplayer Game Saving Messages
+// 1900 - character that signifies yes in a dialog
+// 1901 - character that signifies no in a dialog
+{1900}{J}
+{1901}{N}
+{1902}{Möchtest du deinen Charakter speichern?}
+{1903}{Möchtest du deinen Charakter zum Multiplayer-Modus exportieren?}
+{1904}{Der Charakter %s existiert bereits. Die Datei überschreiben?}
+
+// 2000-2099 : Multiplayer Party Messages
+{2000}{%s hat sich in die Gruppe eingeklinkt.}
+{2001}{%s hat dich in seine Gruppe aufgenommen.}
+{2002}{%s hat die Gruppe verlassen.}
+{2003}{Du hast die Gruppe verlassen: %s}
+
+{2005}{Einklinken fehlgeschlagen: %s.}
+{2006}{Einklinken fehlgeschlagen: %s kann sich nicht selbst aufnehmen.}
+{2007}{Einklinken fehlgeschlagen: %s ist bereits Mitglied der Gruppe.}
+
+{2010}{Trennung fehlgeschlagen: %s.}
+{2011}{Trennung fehlgeschlagen: %s ist nicht Mitglied einer Gruppe.}
+{2012}{Trennung fehlgeschlagen: %s ist nicht Mitglied deiner Gruppe.}
+
+{3000}{Es wird auf Antwort von WON-Servern gewartet ...}
+{3001}{Es wird auf die Nachricht des Tages gewartet ...}
+{3002}{Es werden ARCANUM-Updates gesucht ...}
+{3003}{Es ist eine neuere Version von ARCANUM verfügbar (und für Internet-Spiele möglicherweise erforderlich). Upgrade starten?}

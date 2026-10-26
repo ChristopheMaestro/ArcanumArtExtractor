@@ -63,6 +63,12 @@ NOT_DISPLAYED = {                                # name -> (description number(s
     'crystal ball':  ('15127', 6, 0),
     'bed':           ('4025', 3, 0),
     'candle':        ('31009', 2, 1),
+    'fireplace':     ('30653', 0, 0),                # (user, 2026-10-26; counts not taken)
+    'crates':        ('30620', 0, 0),
+    'temple door':   ('30539', 0, 0),
+    'dresser':       ('30678', 0, 0),
+    'plastic couch': ('30683', 0, 0),
+    'table':         ('30791', 0, 0),
 }
 
 

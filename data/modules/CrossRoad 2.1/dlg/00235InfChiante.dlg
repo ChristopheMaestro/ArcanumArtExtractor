@@ -1,0 +1,48 @@
+{1}{[La jeune femme qui vous fait face est d'une beauté peu commune] Que me voulez-vous ?}{[La jeune femme qui vous fait face est d'une beauté peu commune] Que me voulez-vous ?}{}{}{}{}
+{2}{Madame, j'aurais quelques questions à vous poser.}{}{5}{lf0 0}{0}{lf0 1, fl 11}
+{3}{Moi aurai des questions.}{}{-4}{lf0 0}{0}{lf0 1, fl 11}
+{4}{En faut, je suis terriblement troublé par votre charme.}{1}{5}{lf1 0}{50}{lf1 1, re +20}
+{5}{Je suis venu vous prévenir que le concierge veut vous parler.}{}{5}{gf109 1}{60}{gf109 0}
+{6}{Je suis venu vous prévenir qu'Isa vous attend devant la cellule 33.}{}{5}{gf110 1}{70}{gf110 0}
+{7}{Moi v'nir prév'nir que Isa attend vous d'vant cellule 33.}{}{-4}{gf110 1}{70}{gf110 0}
+{8}{Non rien, je repasserai.}{}{5}{}{0}{}
+{9}{Nan, rien.}{}{-4}{}{0}{}
+
+{11}{Je serai ravie d'y répondre mais je suis actuellement très occupée. Pourriez-vous repassez ?}{Je serai ravie d'y répondre mais je suis actuellement très occupée. Pourriez-vous repassez ?}{}{}{}{}
+
+{50}{Vraiment ? J'en suis flattée.}{*}{}{}{}{}
+{51}{Que diriez vous d'abandonnez nos postes respectifs un instant ?}{}{5}{}{-7}{}  //BE<=7 -> 110, ELSE 120
+{52}{Mais malheureusement, je n'ai guère le temps pour ce genre de relation.}{}{5}{}{0}{fl 55}
+
+{55}{C'est peut-être plus sage ainsi.}{*}{}{}{}{}
+
+{60}{Vraiment ? Je vais de ce pas dans le hall alors.}{Vraiment ? Je vais de ce pas dans le hall alors.}{}{}{}{}
+{61}{[Suite]}{}{1}{}{-4}{gf108 1}
+
+{70}{Vraiment ? Elle aurait pu se déplacer quand même. Enfin, c'est gentil à vous de me prévenir, je vais y aller.}{Vraiment ? Elle aurait pu se déplacer quand même. Enfin, c'est gentil à vous de me prévenir, je vais y aller.}{}{}{}{}
+{71}{[Suite]}{}{1}{}{-4}{gf108 1}
+
+
+{100}{@pcname@ ? Je vous déconseille d'aller dans les conduits de ventilations, c'est un endroit très dangereux.}{@pcname@ ? Je vous déconseille d'aller dans les conduits de ventilations, c'est un endroit très dangereux.}{}{}{}{}
+{101}{Ah oui, merci du conseil.}{}{5}{}{0}{}
+{102}{Ah ouaip !}{}{-4}{}{0}{}
+
+{110}{C'est une proposition très alléchante que vous le faites là mais je dois avouer que vous n'êtes pas vraiment mon type d'homme.}{*}{}{}{}{}
+{111}{Tant pis, j'aurais au moins essayé.}{}{5}{}{0}{}
+
+{120}{C'est en effet une proposition très alléchante. J'espère que vous aimez les piqures.}{*}{}{}{}{}
+{121}{[Suite]}{}{1}{}{-10}{}
+
+{130}{Et bien, quelle aventure...}{*}{}{}{}{}
+{131}{A plus tard mon ange.}{}{5}{}{0}{}
+
+{150}{Un problème mon canari en sucre ?}{*}{}{}{}{}
+{151}{En fait, j'ai quelques questions à te poser.}{}{5}{lf0 0}{0}{lf0 1, fl 160}
+{152}{Je suis venu te prévenir que le concierge veut te parler.}{}{5}{gf109 1}{60}{gf109 0}
+{153}{Je suis venu te prévenir qu'Isa t'attend devant la cellule 33.}{}{5}{gf110 1}{170}{gf110 0}
+{154}{non ,je voulais juste te voir un peu.}{}{5}{}{0}{}
+
+{160}{Désolée mais je n'ai pas vraiment le temps là, tu repasses plus tard ?}{*}{}{}{}{}
+
+{170}{Vraiment ? Elle aurait pu se déplacer quand même. Mais bon, j'y vais.}{*}{}{}{}{}
+{171}{[Suite]}{}{1}{}{-4}{gf108 1}

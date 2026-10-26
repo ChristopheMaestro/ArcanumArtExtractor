@@ -1,0 +1,713 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Hallo, ich möchte eine Überfahrt an Bord Eures Schiffes buchen.}{}{5}{lf6 0, lf15 0}{27}{}
+{3}{Ich muss zur Insel der Verzweiflung übersetzen.}{}{5}{lf8 0, ss 5, ss -6}{542}{gv 1036 7}
+{4}{Könnt Ihr mich zur Insel der Verzweiflung übersetzen?}{}{5}{lf8 1, ss 5, ss -6}{654}{gv 1036 7}
+{5}{Ich möchte nach Thanatos.}{}{5}{lf3 0, ss 17, ss -17, gf2037 1}{527}{}
+{6}{Kann ich eine Überfahrt nach Thanatos buchen?}{}{5}{lf3 1, ss 17, ss -17, gf2037 1}{538}{}
+{7}{Ich brauche jemanden, der mich nach Caladon bringt.}{}{5}{lf4 0, ss 12, ss -12}{44}{gv 1036 4, ss13}
+{8}{Ich brauche jemanden, der mich nach Caladon bringt.}{}{5}{lf4 0, ss 13}{44}{gv 1036 4}
+{9}{Tarant ist wahrlich eine erstaunliche Stadt!}{}{5}{lf21 1}{559}{}
+{10}{Was könnt Ihr mir über Ashbury erzählen?}{}{5}{lf8 1}{578}{}
+{11}{Die Docks von Black Root sind ziemlich eindrucksvoll.}{}{5}{lf3 1}{588}{}
+{12}{Was gibt es hier in Caladon Interessantes zu sehen?}{}{5}{lf4 1}{595}{}
+{13}{Ich suche nach einer Überfahrt zur Halb-Oger-Insel.}{}{5}{lf 6 0, qa1143 2}{44}{gv 1036 6}
+{14}{Ich würde gern nach Caladon zurückkehren, bitte.}{}{5}{lf6 1}{705}{}
+{15}{Ich würde gern nach Ashbury zurückkehren, bitte.}{}{5}{lf15 1}{705}{}
+{16}{Oh!  Tarantel spaßig!}{}{-4}{lf21 1}{559}{}
+{17}{Was Ihr mir können zählen übba Aschbecher?}{}{-4}{lf8 1}{578}{}
+{18}{Bleck Ruh fein Schiffmachplatzens haben.}{}{-4}{lf3 1}{588}{}
+{19}{Was man kann kucken in Kalladumm?}{}{-4}{lf4 1}{595}{}
+{20}{Ich willen geh'n nach Tannentus.}{}{-4}{lf3 0, ss 17, ss -17, gf2037 1}{527}{}
+{21}{Ich willen geh'n nach Tannentus.}{}{-4}{lf3 1, ss 17, ss -17, gf2037 1}{538}{}
+{22}{Ich mi' Euer Schief fahr'n?}{}{-4}{lf6 0, lf15 0}{608}{}
+{23}{Ich jetz' geh'n zurück nach Kahledaun?}{}{-4}{lf6 1}{705}{}
+{24}{Ich jetz' geh'n zurück nach Aschbärli?}{}{-4}{lf15 1}{705}{}
+{25}{Ich jetz' geh'n zurück nach Tannran?}{}{-4}{lf21 0, lf4 1}{711}{}
+{26}{E:}{}{1}{}{0}{}
+{27}{Wo wollt Ihr denn gern hin?}{Wo wollt Ihr denn gern hin?}{}{}{}{}
+{28}{Das weiß ich nicht ... Wohin könnte ich denn?}{}{5}{ss -1}{0}{fl 516}
+{29}{Ich möchte gern nach Tarant.}{}{5}{lf21 0, ss 2}{44}{gv 1036 1}
+{30}{Ashbury scheint mir ein gutes Ziel zu sein.}{}{5}{lf8 0, lf21 0,ss 5}{44}{gv 1036 2}
+{31}{Ich möchte gern nach Ashbury.}{}{5}{lf21 1,ss 5}{520}{gv 1036 2}
+{32}{Wie wäre es mit Black Root?}{}{5}{lf8 0, lf3 0, lf21 0, ss 3}{44}{gv 1036 3}
+{33}{Black Root, bitte.}{}{5}{lf21 1, ss 3}{517}{gv 1036 3}
+{34}{Ich will nach Caladon.}{}{5}{lf4 0, ss 12, ss -12}{44}{gv 1036 4, ss13}
+{35}{Ich will nach Caladon.}{}{5}{lf4 0,  ss13}{44}{gv 1036 4}
+{36}{Kann ich nach Thanatos fahren?}{}{5}{lf3 0, ss 17, ss -17, gf2037 1}{527}{gv 1036 6}
+{37}{Ich möchte gern nach Thanatos.}{}{5}{lf3 1, ss 17, ss -17, gf2037 1}{538}{gv 1036 6}
+{38}{Ich willen geh'n nach Tannentus.}{}{-4}{lf3 0, ss 17, ss -17, gf2037 1}{527}{gv 1036 6}
+{39}{Ich willen geh'n nach Tannentus.}{}{-4}{lf3 1, ss 17, ss -17, gf2037 1}{538}{gv 1036 6}
+{40}{Die Insel der Verzweiflung, bitte.}{}{5}{lf15 0, lf8 0, ss 5, ss -6}{542}{gv 1036 7}
+{41}{Ich möchte gern zur Insel der Verzweiflung.}{}{5}{lf15 0, lf8 1, ss 5, ss -6}{654}{gv 1036 7}
+{42}{Ich möchte gern zur Halb-Oger-Insel.}{}{5}{lf 6 0, qa1143 2}{44}{gv 1036 6}
+{43}{E:}{}{1}{}{0}{}
+{44}{Die Überfahrt kost' Euch 100 Münzen pro Nase.}{Die Überfahrt kost' Euch 100 Münzen pro Nase.}{}{}{}{}
+{45}{Überfahrt nur eine Person.}{}{1}{gv 1035 1}{81}{}
+{46}{Überfahrt für zwei.}{}{1}{gv 1035 2}{119}{}
+{47}{Überfahrt für drei.}{}{1}{gv 1035 3}{157}{}
+{48}{Überfahrt für vier.}{}{1}{gv 1035 4}{195}{}
+{49}{Überfahrt für fünf.}{}{1}{gv 1035 5}{233}{}
+{50}{Überfahrt für sechs.}{}{1}{gv 1035 6}{271}{}
+{51}{Überfahrt für sieben.}{}{1}{gv 1035 7}{309}{}
+{52}{Überfahrt für acht.}{}{1}{gv 1035 8}{347}{}
+{53}{Überfahrt für neun.}{}{1}{gv 1035 9}{385}{}
+{54}{Überfahrt für zehn.}{}{1}{gv 1035 10}{404}{}
+{55}{Überfahrt für elf.}{}{1}{gv 1035 11}{423}{}
+{56}{Überfahrt für zwölf.}{}{1}{gv 1035 12}{442}{}
+{57}{Überfahrt für dreizehn oder mehr.}{}{1}{gv 1035 13}{461}{}
+{58}{Das ist aber teuer! Gibt es keine besseren Preise?}{}{5}{ha 12}{485}{}
+{59}{Das ist aber teuer! Gibt es keine besseren Preise?}{}{5}{ha -11}{480}{}
+{60}{Ich möchte lieber woanders hin.}{}{5}{}{27}{}
+{61}{Äh ...  Ich nich' da hin willen.  Geh'n lieba annerswo hin.}{}{-4}{}{27}{}
+{62}{Wenn Ihr rechnen könnt, dann wisst Ihr, dass das 50 Münzen sind.}{Wenn Ihr rechnen könnt, dann wisst Ihr, dass das 50 Münzen sind.}{}{}{}{}
+{63}{Ich bin bereit für die Reise nach Tarant.}{}{5}{gv 1036 1,$$ 50}{-20}{$$ -50}
+{64}{Ich bin bereit für die Reise nach Ashbury.}{}{5}{gv 1036 2,$$ 50}{-22}{$$ -50}
+{65}{Ich bin bereit für die Reise nach Black Root.}{}{5}{gv 1036 3,$$ 50}{-24}{$$ -50}
+{66}{Ich bin bereit für die Reise nach Caladon.}{}{5}{gv 1036 4,$$ 50}{-26}{$$ -50}
+{67}{Ich bin bereit für die Reise zur Halb-Oger-Insel.}{}{5}{gv 1036 6,$$ 50}{-30}{$$ -50}
+{68}{Ich bin bereit für die Reise zur Insel der Verzweiflung.}{}{5}{gv 1036 7,$$ 50}{-32}{$$ -50}
+{69}{Das ist akzeptabel. Machen wir uns sofort auf den Weg.}{}{5}{$$ -49}{514}{}
+{70}{Ich habe nicht genug Geld für die Überfahrt.}{}{5}{$$ -49}{644}{}
+{71}{Ich komme zurück, wenn ich für die Reise bereit bin.}{}{5}{}{0}{}
+{72}{Ich nach Tarantel geh'n.}{}{-4}{gv 1036 1,$$ 50}{-20}{$$ -50}
+{73}{Ich nach Aschen-pu-tel geh'n.}{}{-4}{gv 1036 2,$$ 50}{-22}{$$ -50}
+{74}{Ich nach Bleck Ruh geh'n.}{}{-4}{gv 1036 3,$$ 50}{-24}{$$ -50}
+{75}{Ich nach Kalladumm geh'n.}{}{-4}{gv 1036 4,$$ 50}{-26}{$$ -50}
+{76}{Ich nach Oggershalb-Pinsel geh'n.}{}{-4}{gv 1036 6,$$ 50}{-30}{$$ -50}
+{77}{Ich nach Issl Herz-weil-fumm geh'n.}{}{-4}{gv 1036 7,$$ 50}{-32}{$$ -50}
+{78}{Ich haben fertig für geh'n.}{}{-4}{$$ -49}{514}{}
+{79}{Ich nich' haben Münzens. Ich auf Schief geh'n willen.}{}{-4}{$$ -49}{644}{}
+{80}{Ich wieda da sein.}{}{-4}{}{0}{}
+{81}{Wenn Ihr rechnen könnt, dann wisst Ihr, dass das 100 Münzen sind.}{Wenn Ihr rechnen könnt, dann wisst Ihr, dass das 100 Münzen sind.}{}{}{}{}
+{82}{Ich bin bereit für die Reise nach Tarant.}{}{5}{gv 1036 1,$$ 100}{-20}{$$ -100}
+{83}{Ich bin bereit für die Reise nach Ashbury.}{}{5}{gv 1036 2,$$ 100}{-22}{$$ -100}
+{84}{Ich bin bereit für die Reise nach Black Root.}{}{5}{gv 1036 3,$$ 100}{-24}{$$ -100}
+{85}{Ich bin bereit für die Reise nach Caladon.}{}{5}{gv 1036 4,$$ 100}{-26}{$$ -100}
+{86}{Ich bin bereit für die Reise zur Halb-Oger-Insel.}{}{5}{gv 1036 6,$$ 100}{-30}{$$ -100}
+{87}{Ich bin bereit für die Reise zur Insel der Verzweiflung.}{}{5}{gv 1036 7,$$ 100}{-32}{$$ -100}
+{88}{Das ist akzeptabel. Machen wir uns sofort auf den Weg.}{}{5}{$$ -99}{514}{}
+{89}{Ich habe nicht genug Geld für die Überfahrt.}{}{5}{$$ -99}{644}{}
+{90}{Ich komme zurück, wenn ich für die Reise bereit bin.}{}{5}{}{0}{}
+{91}{Ich nach Tarantel geh'n.}{}{-4}{gv 1036 1,$$ 100}{-20}{$$ -100}
+{92}{Ich nach Aschen-pu-tel geh'n.}{}{-4}{gv 1036 2,$$ 100}{-22}{$$ -100}
+{93}{Ich nach Bleck Ruh geh'n.}{}{-4}{gv 1036 3,$$ 100}{-24}{$$ -100}
+{94}{Ich nach Kalladumm geh'n.}{}{-4}{gv 1036 4,$$ 100}{-26}{$$ -100}
+{95}{Ich nach Oggershalb-Pinsel geh'n.}{}{-4}{gv 1036 6,$$ 100}{-30}{$$ -100}
+{96}{Ich nach Issl Herz-weil-fumm geh'n.}{}{-4}{gv 1036 7,$$ 100}{-32}{$$ -100}
+{97}{Ich haben fertig für geh'n.}{}{-4}{$$ -99}{514}{}
+{98}{Ich nich' haben Münzens. Ich auf Schief geh'n willen.}{}{-4}{$$ -99}{644}{}
+{99}{Ich wieda da sein.}{}{-4}{}{0}{}
+{100}{Wenn Ihr rechnen könnt, dann wisst Ihr, dass das 150 Münzen sind.}{Wenn Ihr rechnen könnt, dann wisst Ihr, dass das 150 Münzen sind.}{}{}{}{}
+{101}{Ich bin bereit für die Reise nach Tarant.}{}{5}{gv 1036 1,$$ 150}{-20}{$$ -150}
+{102}{Ich bin bereit für die Reise nach Ashbury.}{}{5}{gv 1036 2,$$ 150}{-22}{$$ -150}
+{103}{Ich bin bereit für die Reise nach Black Root.}{}{5}{gv 1036 3,$$ 150}{-24}{$$ -150}
+{104}{Ich bin bereit für die Reise nach Caladon.}{}{5}{gv 1036 4,$$ 150}{-26}{$$ -150}
+{105}{Ich bin bereit für die Reise zur Halb-Oger-Insel.}{}{5}{gv 1036 6,$$ 150}{-30}{$$ -150}
+{106}{Ich bin bereit für die Reise zur Insel der Verzweiflung.}{}{5}{gv 1036 7,$$ 150}{-32}{$$ -150}
+{107}{Das ist akzeptabel. Machen wir uns sofort auf den Weg.}{}{5}{$$ -149}{514}{}
+{108}{Ich habe nicht genug Geld für die Überfahrt.}{}{5}{$$ -149}{644}{}
+{109}{Ich komme zurück, wenn ich für die Reise bereit bin.}{}{5}{}{0}{}
+{110}{Ich nach Tarantel geh'n.}{}{-4}{gv 1036 1,$$ 150}{-20}{$$ -150}
+{111}{Ich nach Aschen-pu-tel geh'n.}{}{-4}{gv 1036 2,$$ 150}{-22}{$$ -150}
+{112}{Ich nach Bleck Ruh geh'n.}{}{-4}{gv 1036 3,$$ 150}{-24}{$$ -150}
+{113}{Ich nach Kalladumm geh'n.}{}{-4}{gv 1036 4,$$ 150}{-26}{$$ -150}
+{114}{Ich nach Oggershalb-Pinsel geh'n.}{}{-4}{gv 1036 6,$$ 150}{-30}{$$ -150}
+{115}{Ich nach Issl Herz-weil-fumm geh'n.}{}{-4}{gv 1036 7,$$ 150}{-32}{$$ -150}
+{116}{Ich haben fertig für geh'n.}{}{-4}{$$ -149}{514}{}
+{117}{Ich nich' haben Münzens. Ich auf Schief geh'n willen.}{}{-4}{$$ -149}{644}{}
+{118}{Ich wieda da sein.}{}{-4}{}{0}{}
+{119}{Wenn Ihr rechnen könnt, dann wisst Ihr, dass das 200 Münzen sind.}{Wenn Ihr rechnen könnt, dann wisst Ihr, dass das 200 Münzen sind.}{}{}{}{}
+{120}{Ich bin bereit für die Reise nach Tarant.}{}{5}{gv 1036 1,$$ 200}{-20}{$$ -200}
+{121}{Ich bin bereit für die Reise nach Ashbury.}{}{5}{gv 1036 2,$$ 200}{-22}{$$ -200}
+{122}{Ich bin bereit für die Reise nach Black Root.}{}{5}{gv 1036 3,$$ 200}{-24}{$$ -200}
+{123}{Ich bin bereit für die Reise nach Caladon.}{}{5}{gv 1036 4,$$ 200}{-26}{$$ -200}
+{124}{Ich bin bereit für die Reise zur Halb-Oger-Insel.}{}{5}{gv 1036 6,$$ 200}{-30}{$$ -200}
+{125}{Ich bin bereit für die Reise zur Insel der Verzweiflung.}{}{5}{gv 1036 7,$$ 200}{-32}{$$ -200}
+{126}{Das ist akzeptabel. Machen wir uns sofort auf den Weg.}{}{5}{$$ -199}{514}{}
+{127}{Ich habe nicht genug Geld für die Überfahrt.}{}{5}{$$ -199}{644}{}
+{128}{Ich komme zurück, wenn ich für die Reise bereit bin.}{}{5}{}{0}{}
+{129}{Ich nach Tarantel geh'n.}{}{-4}{gv 1036 1,$$ 200}{-20}{$$ -200}
+{130}{Ich nach Aschen-pu-tel geh'n.}{}{-4}{gv 1036 2,$$ 200}{-22}{$$ -200}
+{131}{Ich nach Bleck Ruh geh'n.}{}{-4}{gv 1036 3,$$ 200}{-24}{$$ -200}
+{132}{Ich nach Kalladumm geh'n.}{}{-4}{gv 1036 4,$$ 200}{-26}{$$ -200}
+{133}{Ich nach Oggershalb-Pinsel geh'n.}{}{-4}{gv 1036 6,$$ 200}{-30}{$$ -200}
+{134}{Ich nach Issl Herz-weil-fumm geh'n.}{}{-4}{gv 1036 7,$$ 200}{-32}{$$ -200}
+{135}{Ich haben fertig für geh'n.}{}{-4}{$$ -199}{514}{}
+{136}{Ich nich' haben Münzens. Ich auf Schief geh'n willen.}{}{-4}{$$ -199}{644}{}
+{137}{Ich wieda da sein.}{}{-4}{}{0}{}
+{138}{Wenn Ihr rechnen könnt, dann wisst Ihr, dass das 250 Münzen sind.}{Wenn Ihr rechnen könnt, dann wisst Ihr, dass das 250 Münzen sind.}{}{}{}{}
+{139}{Ich bin bereit für die Reise nach Tarant.}{}{5}{gv 1036 1,$$ 250}{-20}{$$ -250}
+{140}{Ich bin bereit für die Reise nach Ashbury.}{}{5}{gv 1036 2,$$ 250}{-22}{$$ -250}
+{141}{Ich bin bereit für die Reise nach Black Root.}{}{5}{gv 1036 3,$$ 250}{-24}{$$ -250}
+{142}{Ich bin bereit für die Reise nach Caladon.}{}{5}{gv 1036 4,$$ 250}{-26}{$$ -250}
+{143}{Ich bin bereit für die Reise zur Halb-Oger-Insel.}{}{5}{gv 1036 6,$$ 250}{-30}{$$ -250}
+{144}{Ich bin bereit für die Reise zur Insel der Verzweiflung.}{}{5}{gv 1036 7,$$ 250}{-32}{$$ -250}
+{145}{Das ist akzeptabel. Machen wir uns sofort auf den Weg.}{}{5}{$$ -249}{514}{}
+{146}{Ich habe nicht genug Geld für die Überfahrt.}{}{5}{$$ -249}{644}{}
+{147}{Ich komme zurück, wenn ich für die Reise bereit bin.}{}{5}{}{0}{}
+{148}{Ich nach Tarantel geh'n.}{}{-4}{gv 1036 1,$$ 250}{-20}{$$ -250}
+{149}{Ich nach Aschen-pu-tel geh'n.}{}{-4}{gv 1036 2,$$ 250}{-22}{$$ -250}
+{150}{Ich nach Bleck Ruh geh'n.}{}{-4}{gv 1036 3,$$ 250}{-24}{$$ -250}
+{151}{Ich nach Kalladumm geh'n.}{}{-4}{gv 1036 4,$$ 250}{-26}{$$ -250}
+{152}{Ich nach Oggershalb-Pinsel geh'n.}{}{-4}{gv 1036 6,$$ 250}{-30}{$$ -250}
+{153}{Ich nach Issl Herz-weil-fumm geh'n.}{}{-4}{gv 1036 7,$$ 250}{-32}{$$ -250}
+{154}{Ich haben fertig für geh'n.}{}{-4}{$$ -249}{514}{}
+{155}{Ich nich' haben Münzens. Ich auf Schief geh'n willen.}{}{-4}{$$ -249}{644}{}
+{156}{Ich wieda da sein.}{}{-4}{}{0}{}
+{157}{Wenn Ihr rechnen könnt, dann wisst Ihr, dass das 300 Münzen sind.}{Wenn Ihr rechnen könnt, dann wisst Ihr, dass das 300 Münzen sind.}{}{}{}{}
+{158}{Ich bin bereit für die Reise nach Tarant.}{}{5}{gv 1036 1,$$ 300}{-20}{$$ -300}
+{159}{Ich bin bereit für die Reise nach Ashbury.}{}{5}{gv 1036 2,$$ 300}{-22}{$$ -300}
+{160}{Ich bin bereit für die Reise nach Black Root.}{}{5}{gv 1036 3,$$ 300}{-24}{$$ -300}
+{161}{Ich bin bereit für die Reise nach Caladon.}{}{5}{gv 1036 4,$$ 300}{-26}{$$ -300}
+{162}{Ich bin bereit für die Reise zur Halb-Oger-Insel.}{}{5}{gv 1036 6,$$ 300}{-30}{$$ -300}
+{163}{Ich bin bereit für die Reise zur Insel der Verzweiflung.}{}{5}{gv 1036 7,$$ 300}{-32}{$$ -300}
+{164}{Das ist akzeptabel. Machen wir uns sofort auf den Weg.}{}{5}{$$ -299}{514}{}
+{165}{Ich habe nicht genug Geld für die Überfahrt.}{}{5}{$$ -299}{644}{}
+{166}{Ich komme zurück, wenn ich für die Reise bereit bin.}{}{5}{}{0}{}
+{167}{Ich nach Tarantel geh'n.}{}{-4}{gv 1036 1,$$ 300}{-20}{$$ -300}
+{168}{Ich nach Aschen-pu-tel geh'n.}{}{-4}{gv 1036 2,$$ 300}{-22}{$$ -300}
+{169}{Ich nach Bleck Ruh geh'n.}{}{-4}{gv 1036 3,$$ 300}{-24}{$$ -300}
+{170}{Ich nach Kalladumm geh'n.}{}{-4}{gv 1036 4,$$ 300}{-26}{$$ -300}
+{171}{Ich nach Oggershalb-Pinsel geh'n.}{}{-4}{gv 1036 6,$$ 300}{-30}{$$ -300}
+{172}{Ich nach Issl Herz-weil-fumm geh'n.}{}{-4}{gv 1036 7,$$ 300}{-32}{$$ -300}
+{173}{Ich haben fertig für geh'n.}{}{-4}{$$ -299}{514}{}
+{174}{Ich nich' haben Münzens. Ich auf Schief geh'n willen.}{}{-4}{$$ -299}{644}{}
+{175}{Ich wieda da sein.}{}{-4}{}{0}{}
+{176}{Wenn Ihr rechnen könnt, dann wisst Ihr, dass das 350 Münzen sind.}{Wenn Ihr rechnen könnt, dann wisst Ihr, dass das 350 Münzen sind.}{}{}{}{}
+{177}{Ich bin bereit für die Reise nach Tarant.}{}{5}{gv 1036 1,$$ 350}{-20}{$$ -350}
+{178}{Ich bin bereit für die Reise nach Ashbury.}{}{5}{gv 1036 2,$$ 350}{-22}{$$ -350}
+{179}{Ich bin bereit für die Reise nach Black Root.}{}{5}{gv 1036 3,$$ 350}{-24}{$$ -350}
+{180}{Ich bin bereit für die Reise nach Caladon.}{}{5}{gv 1036 4,$$ 350}{-26}{$$ -350}
+{181}{Ich bin bereit für die Reise zur Halb-Oger-Insel.}{}{5}{gv 1036 6,$$ 350}{-30}{$$ -350}
+{182}{Ich bin bereit für die Reise zur Insel der Verzweiflung.}{}{5}{gv 1036 7,$$ 350}{-32}{$$ -350}
+{183}{Das ist akzeptabel. Machen wir uns sofort auf den Weg.}{}{5}{$$ -349}{514}{}
+{184}{Ich habe nicht genug Geld für die Überfahrt.}{}{5}{$$ -349}{644}{}
+{185}{Ich komme zurück, wenn ich für die Reise bereit bin.}{}{5}{}{0}{}
+{186}{Ich nach Tarantel geh'n.}{}{-4}{gv 1036 1,$$ 350}{-20}{$$ -350}
+{187}{Ich nach Aschen-pu-tel geh'n.}{}{-4}{gv 1036 2,$$ 350}{-22}{$$ -350}
+{188}{Ich nach Bleck Ruh geh'n.}{}{-4}{gv 1036 3,$$ 350}{-24}{$$ -350}
+{189}{Ich nach Kalladumm geh'n.}{}{-4}{gv 1036 4,$$ 350}{-26}{$$ -350}
+{190}{Ich nach Oggershalb-Pinsel geh'n.}{}{-4}{gv 1036 6,$$ 350}{-30}{$$ -350}
+{191}{Ich nach Issl Herz-weil-fumm geh'n.}{}{-4}{gv 1036 7,$$ 350}{-32}{$$ -350}
+{192}{Ich haben fertig für geh'n.}{}{-4}{$$ -349}{514}{}
+{193}{Ich nich' haben Münzens. Ich auf Schief geh'n willen.}{}{-4}{$$ -349}{644}{}
+{194}{Ich wieda da sein.}{}{-4}{}{0}{}
+{195}{Wenn Ihr rechnen könnt, dann wisst Ihr, dass das 400 Münzen sind.}{Wenn Ihr rechnen könnt, dann wisst Ihr, dass das 400 Münzen sind.}{}{}{}{}
+{196}{Ich bin bereit für die Reise nach Tarant.}{}{5}{gv 1036 1,$$ 400}{-20}{$$ -400}
+{197}{Ich bin bereit für die Reise nach Ashbury.}{}{5}{gv 1036 2,$$ 400}{-22}{$$ -400}
+{198}{Ich bin bereit für die Reise nach Black Root.}{}{5}{gv 1036 3,$$ 400}{-24}{$$ -400}
+{199}{Ich bin bereit für die Reise nach Caladon.}{}{5}{gv 1036 4,$$ 400}{-26}{$$ -400}
+{200}{Ich bin bereit für die Reise zur Halb-Oger-Insel.}{}{5}{gv 1036 6,$$ 400}{-30}{$$ -400}
+{201}{Ich bin bereit für die Reise zur Insel der Verzweiflung.}{}{5}{gv 1036 7,$$ 400}{-32}{$$ -400}
+{202}{Das ist akzeptabel. Machen wir uns sofort auf den Weg.}{}{5}{$$ -399}{514}{}
+{203}{Ich habe nicht genug Geld für die Überfahrt.}{}{5}{$$ -399}{644}{}
+{204}{Ich komme zurück, wenn ich für die Reise bereit bin.}{}{5}{}{0}{}
+{205}{Ich nach Tarantel geh'n.}{}{-4}{gv 1036 1,$$ 400}{-20}{$$ -400}
+{206}{Ich nach Aschen-pu-tel geh'n.}{}{-4}{gv 1036 2,$$ 400}{-22}{$$ -400}
+{207}{Ich nach Bleck Ruh geh'n.}{}{-4}{gv 1036 3,$$ 400}{-24}{$$ -400}
+{208}{Ich nach Kalladumm geh'n.}{}{-4}{gv 1036 4,$$ 400}{-26}{$$ -400}
+{209}{Ich nach Oggershalb-Pinsel geh'n.}{}{-4}{gv 1036 6,$$ 400}{-30}{$$ -400}
+{210}{Ich nach Issl Herz-weil-fumm geh'n.}{}{-4}{gv 1036 7,$$ 400}{-32}{$$ -400}
+{211}{Ich haben fertig für geh'n.}{}{-4}{$$ -399}{514}{}
+{212}{Ich nich' haben Münzens. Ich auf Schief geh'n willen.}{}{-4}{$$ -399}{644}{}
+{213}{Ich wieda da sein.}{}{-4}{}{0}{}
+{214}{Wenn Ihr rechnen könnt, dann wisst Ihr, dass das 450 Münzen sind.}{Wenn Ihr rechnen könnt, dann wisst Ihr, dass das 450 Münzen sind.}{}{}{}{}
+{215}{Ich bin bereit für die Reise nach Tarant.}{}{5}{gv 1036 1,$$ 450}{-20}{$$ -450}
+{216}{Ich bin bereit für die Reise nach Ashbury.}{}{5}{gv 1036 2,$$ 450}{-22}{$$ -450}
+{217}{Ich bin bereit für die Reise nach Black Root.}{}{5}{gv 1036 3,$$ 450}{-24}{$$ -450}
+{218}{Ich bin bereit für die Reise nach Caladon.}{}{5}{gv 1036 4,$$ 450}{-26}{$$ -450}
+{219}{Ich bin bereit für die Reise zur Halb-Oger-Insel.}{}{5}{gv 1036 6,$$ 450}{-30}{$$ -450}
+{220}{Ich bin bereit für die Reise zur Insel der Verzweiflung.}{}{5}{gv 1036 7,$$ 450}{-32}{$$ -450}
+{221}{Das ist akzeptabel. Machen wir uns sofort auf den Weg.}{}{5}{$$ -449}{514}{}
+{222}{Ich habe nicht genug Geld für die Überfahrt.}{}{5}{$$ -449}{644}{}
+{223}{Ich komme zurück, wenn ich für die Reise bereit bin.}{}{5}{}{0}{}
+{224}{Ich nach Tarantel geh'n.}{}{-4}{gv 1036 1,$$ 450}{-20}{$$ -450}
+{225}{Ich nach Aschen-pu-tel geh'n.}{}{-4}{gv 1036 2,$$ 450}{-22}{$$ -450}
+{226}{Ich nach Bleck Ruh geh'n.}{}{-4}{gv 1036 3,$$ 450}{-24}{$$ -450}
+{227}{Ich nach Kalladumm geh'n.}{}{-4}{gv 1036 4,$$ 450}{-26}{$$ -450}
+{228}{Ich nach Oggershalb-Pinsel geh'n.}{}{-4}{gv 1036 6,$$ 450}{-30}{$$ -450}
+{229}{Ich nach Issl Herz-weil-fumm geh'n.}{}{-4}{gv 1036 7,$$ 450}{-32}{$$ -450}
+{230}{Ich haben fertig für geh'n.}{}{-4}{$$ -449}{514}{}
+{231}{Ich nich' haben Münzens. Ich auf Schief geh'n willen.}{}{-4}{$$ -449}{644}{}
+{232}{Ich wieda da sein.}{}{-4}{}{0}{}
+{233}{Wenn Ihr rechnen könnt, dann wisst Ihr, dass das 500 Münzen sind.}{Wenn Ihr rechnen könnt, dann wisst Ihr, dass das 500 Münzen sind.}{}{}{}{}
+{234}{Ich bin bereit für die Reise nach Tarant.}{}{5}{gv 1036 1,$$ 500}{-20}{$$ -500}
+{235}{Ich bin bereit für die Reise nach Ashbury.}{}{5}{gv 1036 2,$$ 500}{-22}{$$ -500}
+{236}{Ich bin bereit für die Reise nach Black Root.}{}{5}{gv 1036 3,$$ 500}{-24}{$$ -500}
+{237}{Ich bin bereit für die Reise nach Caladon.}{}{5}{gv 1036 4,$$ 500}{-26}{$$ -500}
+{238}{Ich bin bereit für die Reise zur Halb-Oger-Insel.}{}{5}{gv 1036 6,$$ 500}{-30}{$$ -500}
+{239}{Ich bin bereit für die Reise zur Insel der Verzweiflung.}{}{5}{gv 1036 7,$$ 500}{-32}{$$ -500}
+{240}{Das ist akzeptabel. Machen wir uns sofort auf den Weg.}{}{5}{$$ -499}{514}{}
+{241}{Ich habe nicht genug Geld für die Überfahrt.}{}{5}{$$ -499}{644}{}
+{242}{Ich komme zurück, wenn ich für die Reise bereit bin.}{}{5}{}{0}{}
+{243}{Ich nach Tarantel geh'n.}{}{-4}{gv 1036 1,$$ 500}{-20}{$$ -500}
+{244}{Ich nach Aschen-pu-tel geh'n.}{}{-4}{gv 1036 2,$$ 500}{-22}{$$ -500}
+{245}{Ich nach Bleck Ruh geh'n.}{}{-4}{gv 1036 3,$$ 500}{-24}{$$ -500}
+{246}{Ich nach Kalladumm geh'n.}{}{-4}{gv 1036 4,$$ 500}{-26}{$$ -500}
+{247}{Ich nach Oggershalb-Pinsel geh'n.}{}{-4}{gv 1036 6,$$ 500}{-30}{$$ -500}
+{248}{Ich nach Issl Herz-weil-fumm geh'n.}{}{-4}{gv 1036 7,$$ 500}{-32}{$$ -500}
+{249}{Ich haben fertig für geh'n.}{}{-4}{$$ -499}{514}{}
+{250}{Ich nich' haben Münzens. Ich auf Schief geh'n willen.}{}{-4}{$$ -499}{644}{}
+{251}{Ich wieda da sein.}{}{-4}{}{0}{}
+{252}{Wenn Ihr rechnen könnt, dann wisst Ihr, dass das 550 Münzen sind.}{Wenn Ihr rechnen könnt, dann wisst Ihr, dass das 550 Münzen sind.}{}{}{}{}
+{253}{Ich bin bereit für die Reise nach Tarant.}{}{5}{gv 1036 1,$$ 550}{-20}{$$ -550}
+{254}{Ich bin bereit für die Reise nach Ashbury.}{}{5}{gv 1036 2,$$ 550}{-22}{$$ -550}
+{255}{Ich bin bereit für die Reise nach Black Root.}{}{5}{gv 1036 3,$$ 550}{-24}{$$ -550}
+{256}{Ich bin bereit für die Reise nach Caladon.}{}{5}{gv 1036 4,$$ 550}{-26}{$$ -550}
+{257}{Ich bin bereit für die Reise zur Halb-Oger-Insel.}{}{5}{gv 1036 6,$$ 550}{-30}{$$ -550}
+{258}{Ich bin bereit für die Reise zur Insel der Verzweiflung.}{}{5}{gv 1036 7,$$ 550}{-32}{$$ -550}
+{259}{Das ist akzeptabel. Machen wir uns sofort auf den Weg.}{}{5}{$$ -549}{514}{}
+{260}{Ich habe nicht genug Geld für die Überfahrt.}{}{5}{$$ -549}{644}{}
+{261}{Ich komme zurück, wenn ich für die Reise bereit bin.}{}{5}{}{0}{}
+{262}{Ich nach Tarantel geh'n.}{}{-4}{gv 1036 1,$$ 550}{-20}{$$ -550}
+{263}{Ich nach Aschen-pu-tel geh'n.}{}{-4}{gv 1036 2,$$ 550}{-22}{$$ -550}
+{264}{Ich nach Bleck Ruh geh'n.}{}{-4}{gv 1036 3,$$ 550}{-24}{$$ -550}
+{265}{Ich nach Kalladumm geh'n.}{}{-4}{gv 1036 4,$$ 550}{-26}{$$ -550}
+{266}{Ich nach Oggershalb-Pinsel geh'n.}{}{-4}{gv 1036 6,$$ 550}{-30}{$$ -550}
+{267}{Ich nach Issl Herz-weil-fumm geh'n.}{}{-4}{gv 1036 7,$$ 550}{-32}{$$ -550}
+{268}{Ich haben fertig für geh'n.}{}{-4}{$$ -549}{514}{}
+{269}{Ich nich' haben Münzens. Ich auf Schief geh'n willen.}{}{-4}{$$ -549}{644}{}
+{270}{Ich wieda da sein.}{}{-4}{}{0}{}
+{271}{Wenn Ihr rechnen könnt, dann wisst Ihr, dass das 600 Münzen sind.}{Wenn Ihr rechnen könnt, dann wisst Ihr, dass das 600 Münzen sind.}{}{}{}{}
+{272}{Ich bin bereit für die Reise nach Tarant.}{}{5}{gv 1036 1,$$ 600}{-20}{$$ -600}
+{273}{Ich bin bereit für die Reise nach Ashbury.}{}{5}{gv 1036 2,$$ 600}{-22}{$$ -600}
+{274}{Ich bin bereit für die Reise nach Black Root.}{}{5}{gv 1036 3,$$ 600}{-24}{$$ -600}
+{275}{Ich bin bereit für die Reise nach Caladon.}{}{5}{gv 1036 4,$$ 600}{-26}{$$ -600}
+{276}{Ich bin bereit für die Reise zur Halb-Oger-Insel.}{}{5}{gv 1036 6,$$ 600}{-30}{$$ -600}
+{277}{Ich bin bereit für die Reise zur Insel der Verzweiflung.}{}{5}{gv 1036 7,$$ 600}{-32}{$$ -600}
+{278}{Das ist akzeptabel. Machen wir uns sofort auf den Weg.}{}{5}{$$ -599}{514}{}
+{279}{Ich habe nicht genug Geld für die Überfahrt.}{}{5}{$$ -599}{644}{}
+{280}{Ich komme zurück, wenn ich für die Reise bereit bin.}{}{5}{}{0}{}
+{281}{Ich nach Tarantel geh'n.}{}{-4}{gv 1036 1,$$ 600}{-20}{$$ -600}
+{282}{Ich nach Aschen-pu-tel geh'n.}{}{-4}{gv 1036 2,$$ 600}{-22}{$$ -600}
+{283}{Ich nach Bleck Ruh geh'n.}{}{-4}{gv 1036 3,$$ 600}{-24}{$$ -600}
+{284}{Ich nach Kalladumm geh'n.}{}{-4}{gv 1036 4,$$ 600}{-26}{$$ -600}
+{285}{Ich nach Oggershalb-Pinsel geh'n.}{}{-4}{gv 1036 6,$$ 600}{-30}{$$ -600}
+{286}{Ich nach Issl Herz-weil-fumm geh'n.}{}{-4}{gv 1036 7,$$ 600}{-32}{$$ -600}
+{287}{Ich haben fertig für geh'n.}{}{-4}{$$ -599}{514}{}
+{288}{Ich nich' haben Münzens. Ich auf Schief geh'n willen.}{}{-4}{$$ -599}{644}{}
+{289}{Ich wieda da sein.}{}{-4}{}{0}{}
+{290}{Wenn Ihr rechnen könnt, dann wisst Ihr, dass das 650 Münzen sind.}{Wenn Ihr rechnen könnt, dann wisst Ihr, dass das 650 Münzen sind.}{}{}{}{}
+{291}{Ich bin bereit für die Reise nach Tarant.}{}{5}{gv 1036 1,$$ 650}{-20}{$$ -650}
+{292}{Ich bin bereit für die Reise nach Ashbury.}{}{5}{gv 1036 2,$$ 650}{-22}{$$ -650}
+{293}{Ich bin bereit für die Reise nach Black Root.}{}{5}{gv 1036 3,$$ 650}{-24}{$$ -650}
+{294}{Ich bin bereit für die Reise nach Caladon.}{}{5}{gv 1036 4,$$ 650}{-26}{$$ -650}
+{295}{Ich bin bereit für die Reise zur Halb-Oger-Insel.}{}{5}{gv 1036 6,$$ 650}{-30}{$$ -650}
+{296}{Ich bin bereit für die Reise zur Insel der Verzweiflung.}{}{5}{gv 1036 7,$$ 650}{-32}{$$ -650}
+{297}{Das ist akzeptabel. Machen wir uns sofort auf den Weg.}{}{5}{$$ -649}{514}{}
+{298}{Ich habe nicht genug Geld für die Überfahrt.}{}{5}{$$ -649}{644}{}
+{299}{Ich komme zurück, wenn ich für die Reise bereit bin.}{}{5}{}{0}{}
+{300}{Ich nach Tarantel geh'n.}{}{-4}{gv 1036 1,$$ 650}{-20}{$$ -650}
+{301}{Ich nach Aschen-pu-tel geh'n.}{}{-4}{gv 1036 2,$$ 650}{-22}{$$ -650}
+{302}{Ich nach Bleck Ruh geh'n.}{}{-4}{gv 1036 3,$$ 650}{-24}{$$ -650}
+{303}{Ich nach Kalladumm geh'n.}{}{-4}{gv 1036 4,$$ 650}{-26}{$$ -650}
+{304}{Ich nach Oggershalb-Pinsel geh'n.}{}{-4}{gv 1036 6,$$ 650}{-30}{$$ -650}
+{305}{Ich nach Issl Herz-weil-fumm geh'n.}{}{-4}{gv 1036 7,$$ 650}{-32}{$$ -650}
+{306}{Ich haben fertig für geh'n.}{}{-4}{$$ -649}{514}{}
+{307}{Ich nich' haben Münzens. Ich auf Schief geh'n willen.}{}{-4}{$$ -649}{644}{}
+{308}{Ich wieda da sein.}{}{-4}{}{0}{}
+{309}{Wenn Ihr rechnen könnt, dann wisst Ihr, dass das 700 Münzen sind.}{Wenn Ihr rechnen könnt, dann wisst Ihr, dass das 700 Münzen sind.}{}{}{}{}
+{310}{Ich bin bereit für die Reise nach Tarant.}{}{5}{gv 1036 1,$$ 700}{-20}{$$ -700}
+{311}{Ich bin bereit für die Reise nach Ashbury.}{}{5}{gv 1036 2,$$ 700}{-22}{$$ -700}
+{312}{Ich bin bereit für die Reise nach Black Root.}{}{5}{gv 1036 3,$$ 700}{-24}{$$ -700}
+{313}{Ich bin bereit für die Reise nach Caladon.}{}{5}{gv 1036 4,$$ 700}{-26}{$$ -700}
+{314}{Ich bin bereit für die Reise zur Halb-Oger-Insel.}{}{5}{gv 1036 6,$$ 700}{-30}{$$ -700}
+{315}{Ich bin bereit für die Reise zur Insel der Verzweiflung.}{}{5}{gv 1036 7,$$ 700}{-32}{$$ -700}
+{316}{Das ist akzeptabel. Machen wir uns sofort auf den Weg.}{}{5}{$$ -699}{514}{}
+{317}{Ich habe nicht genug Geld für die Überfahrt.}{}{5}{$$ -699}{644}{}
+{318}{Ich komme zurück, wenn ich für die Reise bereit bin.}{}{5}{}{0}{}
+{319}{Ich nach Tarantel geh'n.}{}{-4}{gv 1036 1,$$ 700}{-20}{$$ -700}
+{320}{Ich nach Aschen-pu-tel geh'n.}{}{-4}{gv 1036 2,$$ 700}{-22}{$$ -700}
+{321}{Ich nach Bleck Ruh geh'n.}{}{-4}{gv 1036 3,$$ 700}{-24}{$$ -700}
+{322}{Ich nach Kalladumm geh'n.}{}{-4}{gv 1036 4,$$ 700}{-26}{$$ -700}
+{323}{Ich nach Oggershalb-Pinsel geh'n.}{}{-4}{gv 1036 6,$$ 700}{-30}{$$ -700}
+{324}{Ich nach Issl Herz-weil-fumm geh'n.}{}{-4}{gv 1036 7,$$ 700}{-32}{$$ -700}
+{325}{Ich haben fertig für geh'n.}{}{-4}{$$ -699}{514}{}
+{326}{Ich nich' haben Münzens. Ich auf Schief geh'n willen.}{}{-4}{$$ -699}{644}{}
+{327}{Ich wieda da sein.}{}{-4}{}{0}{}
+{328}{Wenn Ihr rechnen könnt, dann wisst Ihr, dass das 750 Münzen sind.}{Wenn Ihr rechnen könnt, dann wisst Ihr, dass das 750 Münzen sind.}{}{}{}{}
+{329}{Ich bin bereit für die Reise nach Tarant.}{}{5}{gv 1036 1,$$ 750}{-20}{$$ -750}
+{330}{Ich bin bereit für die Reise nach Ashbury.}{}{5}{gv 1036 2,$$ 750}{-22}{$$ -750}
+{331}{Ich bin bereit für die Reise nach Black Root.}{}{5}{gv 1036 3,$$ 750}{-24}{$$ -750}
+{332}{Ich bin bereit für die Reise nach Caladon.}{}{5}{gv 1036 4,$$ 750}{-26}{$$ -750}
+{333}{Ich bin bereit für die Reise zur Halb-Oger-Insel.}{}{5}{gv 1036 6,$$ 750}{-30}{$$ -750}
+{334}{Ich bin bereit für die Reise zur Insel der Verzweiflung.}{}{5}{gv 1036 7,$$ 750}{-32}{$$ -750}
+{335}{Das ist akzeptabel. Machen wir uns sofort auf den Weg.}{}{5}{$$ -749}{514}{}
+{336}{Ich habe nicht genug Geld für die Überfahrt.}{}{5}{$$ -749}{644}{}
+{337}{Ich komme zurück, wenn ich für die Reise bereit bin.}{}{5}{}{0}{}
+{338}{Ich nach Tarantel geh'n.}{}{-4}{gv 1036 1,$$ 750}{-20}{$$ -750}
+{339}{Ich nach Aschen-pu-tel geh'n.}{}{-4}{gv 1036 2,$$ 750}{-22}{$$ -750}
+{340}{Ich nach Bleck Ruh geh'n.}{}{-4}{gv 1036 3,$$ 750}{-24}{$$ -750}
+{341}{Ich nach Kalladumm geh'n.}{}{-4}{gv 1036 4,$$ 750}{-26}{$$ -750}
+{342}{Ich nach Oggershalb-Pinsel geh'n.}{}{-4}{gv 1036 6,$$ 750}{-30}{$$ -750}
+{343}{Ich nach Issl Herz-weil-fumm geh'n.}{}{-4}{gv 1036 7,$$ 750}{-32}{$$ -750}
+{344}{Ich haben fertig für geh'n.}{}{-4}{$$ -749}{514}{}
+{345}{Ich nich' haben Münzens. Ich auf Schief geh'n willen.}{}{-4}{$$ -749}{644}{}
+{346}{Ich wieda da sein.}{}{-4}{}{0}{}
+{347}{Wenn Ihr rechnen könnt, dann wisst Ihr, dass das 800 Münzen sind.}{Wenn Ihr rechnen könnt, dann wisst Ihr, dass das 800 Münzen sind.}{}{}{}{}
+{348}{Ich bin bereit für die Reise nach Tarant.}{}{5}{gv 1036 1,$$ 800}{-20}{$$ -800}
+{349}{Ich bin bereit für die Reise nach Ashbury.}{}{5}{gv 1036 2,$$ 800}{-22}{$$ -800}
+{350}{Ich bin bereit für die Reise nach Black Root.}{}{5}{gv 1036 3,$$ 800}{-24}{$$ -800}
+{351}{Ich bin bereit für die Reise nach Caladon.}{}{5}{gv 1036 4,$$ 800}{-26}{$$ -800}
+{352}{Ich bin bereit für die Reise zur Halb-Oger-Insel.}{}{5}{gv 1036 6,$$ 800}{-30}{$$ -800}
+{353}{Ich bin bereit für die Reise zur Insel der Verzweiflung.}{}{5}{gv 1036 7,$$ 800}{-32}{$$ -800}
+{354}{Das ist akzeptabel. Machen wir uns sofort auf den Weg.}{}{5}{$$ -799}{514}{}
+{355}{Ich habe nicht genug Geld für die Überfahrt.}{}{5}{$$ -799}{644}{}
+{356}{Ich komme zurück, wenn ich für die Reise bereit bin.}{}{5}{}{0}{}
+{357}{Ich nach Tarantel geh'n.}{}{-4}{gv 1036 1,$$ 800}{-20}{$$ -800}
+{358}{Ich nach Aschen-pu-tel geh'n.}{}{-4}{gv 1036 2,$$ 800}{-22}{$$ -800}
+{359}{Ich nach Bleck Ruh geh'n.}{}{-4}{gv 1036 3,$$ 800}{-24}{$$ -800}
+{360}{Ich nach Kalladumm geh'n.}{}{-4}{gv 1036 4,$$ 800}{-26}{$$ -800}
+{361}{Ich nach Oggershalb-Pinsel geh'n.}{}{-4}{gv 1036 6,$$ 800}{-30}{$$ -800}
+{362}{Ich nach Issl Herz-weil-fumm geh'n.}{}{-4}{gv 1036 7,$$ 800}{-32}{$$ -800}
+{363}{Ich haben fertig für geh'n.}{}{-4}{$$ -799}{514}{}
+{364}{Ich nich' haben Münzens. Ich auf Schief geh'n willen.}{}{-4}{$$ -799}{644}{}
+{365}{Ich wieda da sein.}{}{-4}{}{0}{}
+{366}{Wenn Ihr rechnen könnt, dann wisst Ihr, dass das 850 Münzen sind.}{Wenn Ihr rechnen könnt, dann wisst Ihr, dass das 850 Münzen sind.}{}{}{}{}
+{367}{Ich bin bereit für die Reise nach Tarant.}{}{5}{gv 1036 1,$$ 850}{-20}{$$ -850}
+{368}{Ich bin bereit für die Reise nach Ashbury.}{}{5}{gv 1036 2,$$ 850}{-22}{$$ -850}
+{369}{Ich bin bereit für die Reise nach Black Root.}{}{5}{gv 1036 3,$$ 850}{-24}{$$ -850}
+{370}{Ich bin bereit für die Reise nach Caladon.}{}{5}{gv 1036 4,$$ 850}{-26}{$$ -850}
+{371}{Ich bin bereit für die Reise zur Halb-Oger-Insel.}{}{5}{gv 1036 6,$$ 850}{-30}{$$ -850}
+{372}{Ich bin bereit für die Reise zur Insel der Verzweiflung.}{}{5}{gv 1036 7,$$ 850}{-32}{$$ -850}
+{373}{Das ist akzeptabel. Machen wir uns sofort auf den Weg.}{}{5}{$$ -849}{514}{}
+{374}{Ich habe nicht genug Geld für die Überfahrt.}{}{5}{$$ -849}{644}{}
+{375}{Ich komme zurück, wenn ich für die Reise bereit bin.}{}{5}{}{0}{}
+{376}{Ich nach Tarantel geh'n.}{}{-4}{gv 1036 1,$$ 850}{-20}{$$ -850}
+{377}{Ich nach Aschen-pu-tel geh'n.}{}{-4}{gv 1036 2,$$ 850}{-22}{$$ -850}
+{378}{Ich nach Bleck Ruh geh'n.}{}{-4}{gv 1036 3,$$ 850}{-24}{$$ -850}
+{379}{Ich nach Kalladumm geh'n.}{}{-4}{gv 1036 4,$$ 850}{-26}{$$ -850}
+{380}{Ich nach Oggershalb-Pinsel geh'n.}{}{-4}{gv 1036 6,$$ 850}{-30}{$$ -850}
+{381}{Ich nach Issl Herz-weil-fumm geh'n.}{}{-4}{gv 1036 7,$$ 850}{-32}{$$ -850}
+{382}{Ich haben fertig für geh'n.}{}{-4}{$$ -849}{514}{}
+{383}{Ich nich' haben Münzens. Ich auf Schief geh'n willen.}{}{-4}{$$ -849}{644}{}
+{384}{Ich wieda da sein.}{}{-4}{}{0}{}
+{385}{Wenn Ihr rechnen könnt, dann wisst Ihr, dass das 900 Münzen sind.}{Wenn Ihr rechnen könnt, dann wisst Ihr, dass das 900 Münzen sind.}{}{}{}{}
+{386}{Ich bin bereit für die Reise nach Tarant.}{}{5}{gv 1036 1,$$ 900}{-20}{$$ -900}
+{387}{Ich bin bereit für die Reise nach Ashbury.}{}{5}{gv 1036 2,$$ 900}{-22}{$$ -900}
+{388}{Ich bin bereit für die Reise nach Black Root.}{}{5}{gv 1036 3,$$ 900}{-24}{$$ -900}
+{389}{Ich bin bereit für die Reise nach Caladon.}{}{5}{gv 1036 4,$$ 900}{-26}{$$ -900}
+{390}{Ich bin bereit für die Reise zur Halb-Oger-Insel.}{}{5}{gv 1036 6,$$ 900}{-30}{$$ -900}
+{391}{Ich bin bereit für die Reise zur Insel der Verzweiflung.}{}{5}{gv 1036 7,$$ 900}{-32}{$$ -900}
+{392}{Das ist akzeptabel. Machen wir uns sofort auf den Weg.}{}{5}{$$ -899}{514}{}
+{393}{Ich habe nicht genug Geld für die Überfahrt.}{}{5}{$$ -899}{644}{}
+{394}{Ich komme zurück, wenn ich für die Reise bereit bin.}{}{5}{}{0}{}
+{395}{Ich nach Tarantel geh'n.}{}{-4}{gv 1036 1,$$ 900}{-20}{$$ -900}
+{396}{Ich nach Aschen-pu-tel geh'n.}{}{-4}{gv 1036 2,$$ 900}{-22}{$$ -900}
+{397}{Ich nach Bleck Ruh geh'n.}{}{-4}{gv 1036 3,$$ 900}{-24}{$$ -900}
+{398}{Ich nach Kalladumm geh'n.}{}{-4}{gv 1036 4,$$ 900}{-26}{$$ -900}
+{399}{Ich nach Oggershalb-Pinsel geh'n.}{}{-4}{gv 1036 6,$$ 900}{-30}{$$ -900}
+{400}{Ich nach Issl Herz-weil-fumm geh'n.}{}{-4}{gv 1036 7,$$ 900}{-32}{$$ -900}
+{401}{Ich haben fertig für geh'n.}{}{-4}{$$ -899}{514}{}
+{402}{Ich nich' haben Münzens. Ich auf Schief geh'n willen.}{}{-4}{$$ -899}{644}{}
+{403}{Ich wieda da sein.}{}{-4}{}{0}{}
+{404}{Wenn Ihr rechnen könnt, dann wisst Ihr, dass das 1000 Münzen sind.}{Wenn Ihr rechnen könnt, dann wisst Ihr, dass das 1000 Münzen sind.}{}{}{}{}
+{405}{Ich bin bereit für die Reise nach Tarant.}{}{5}{gv 1036 1,$$ 1000}{-20}{$$ -1000}
+{406}{Ich bin bereit für die Reise nach Ashbury.}{}{5}{gv 1036 2,$$ 1000}{-22}{$$ -1000}
+{407}{Ich bin bereit für die Reise nach Black Root.}{}{5}{gv 1036 3,$$ 1000}{-24}{$$ -1000}
+{408}{Ich bin bereit für die Reise nach Caladon.}{}{5}{gv 1036 4,$$ 1000}{-26}{$$ -1000}
+{409}{Ich bin bereit für die Reise zur Halb-Oger-Insel.}{}{5}{gv 1036 6,$$ 1000}{-30}{$$ -1000}
+{410}{Ich bin bereit für die Reise zur Insel der Verzweiflung.}{}{5}{gv 1036 7,$$ 1000}{-32}{$$ -1000}
+{411}{Das ist akzeptabel. Machen wir uns sofort auf den Weg.}{}{5}{$$ -999}{514}{}
+{412}{Ich habe nicht genug Geld für die Überfahrt.}{}{5}{$$ -999}{644}{}
+{413}{Ich komme zurück, wenn ich für die Reise bereit bin.}{}{5}{}{0}{}
+{414}{Ich nach Tarantel geh'n.}{}{-4}{gv 1036 1,$$ 1000}{-20}{$$ -1000}
+{415}{Ich nach Aschen-pu-tel geh'n.}{}{-4}{gv 1036 2,$$ 1000}{-22}{$$ -1000}
+{416}{Ich nach Bleck Ruh geh'n.}{}{-4}{gv 1036 3,$$ 1000}{-24}{$$ -1000}
+{417}{Ich nach Kalladumm geh'n.}{}{-4}{gv 1036 4,$$ 1000}{-26}{$$ -1000}
+{418}{Ich nach Oggershalb-Pinsel geh'n.}{}{-4}{gv 1036 6,$$ 1000}{-30}{$$ -1000}
+{419}{Ich nach Issl Herz-weil-fumm geh'n.}{}{-4}{gv 1036 7,$$ 1000}{-32}{$$ -1000}
+{420}{Ich haben fertig für geh'n.}{}{-4}{$$ -999}{514}{}
+{421}{Ich nich' haben Münzens. Ich auf Schief geh'n willen.}{}{-4}{$$ -999}{644}{}
+{422}{Ich wieda da sein.}{}{-4}{}{0}{}
+{423}{Wenn Ihr rechnen könnt, dann wisst Ihr, dass das 1100 Münzen sind.}{Wenn Ihr rechnen könnt, dann wisst Ihr, dass das 1100 Münzen sind.}{}{}{}{}
+{424}{Ich bin bereit für die Reise nach Tarant.}{}{5}{gv 1036 1,$$ 1100}{-20}{$$ -1100}
+{425}{Ich bin bereit für die Reise nach Ashbury.}{}{5}{gv 1036 2,$$ 1100}{-22}{$$ -1100}
+{426}{Ich bin bereit für die Reise nach Black Root.}{}{5}{gv 1036 3,$$ 1100}{-24}{$$ -1100}
+{427}{Ich bin bereit für die Reise nach Caladon.}{}{5}{gv 1036 4,$$ 1100}{-26}{$$ -1100}
+{428}{Ich bin bereit für die Reise zur Halb-Oger-Insel.}{}{5}{gv 1036 6,$$ 1100}{-30}{$$ -1100}
+{429}{Ich bin bereit für die Reise zur Insel der Verzweiflung.}{}{5}{gv 1036 7,$$ 1100}{-32}{$$ -1100}
+{430}{Das ist akzeptabel. Machen wir uns sofort auf den Weg.}{}{5}{$$ -1099}{514}{}
+{431}{Ich habe nicht genug Geld für die Überfahrt.}{}{5}{$$ -1099}{644}{}
+{432}{Ich komme zurück, wenn ich für die Reise bereit bin.}{}{5}{}{0}{}
+{433}{Ich nach Tarantel geh'n.}{}{-4}{gv 1036 1,$$ 1100}{-20}{$$ -1100}
+{434}{Ich nach Aschen-pu-tel geh'n.}{}{-4}{gv 1036 2,$$ 1100}{-22}{$$ -1100}
+{435}{Ich nach Bleck Ruh geh'n.}{}{-4}{gv 1036 3,$$ 1100}{-24}{$$ -1100}
+{436}{Ich nach Kalladumm geh'n.}{}{-4}{gv 1036 4,$$ 1100}{-26}{$$ -1100}
+{437}{Ich nach Oggershalb-Pinsel geh'n.}{}{-4}{gv 1036 6,$$ 1100}{-30}{$$ -1100}
+{438}{Ich nach Issl Herz-weil-fumm geh'n.}{}{-4}{gv 1036 7,$$ 1100}{-32}{$$ -1100}
+{439}{Ich haben fertig für geh'n.}{}{-4}{$$ -1099}{514}{}
+{440}{Ich nich' haben Münzens. Ich auf Schief geh'n willen.}{}{-4}{$$ -1099}{644}{}
+{441}{Ich wieda da sein.}{}{-4}{}{0}{}
+{442}{Wenn Ihr rechnen könnt, dann wisst Ihr, dass das 1200 Münzen sind.}{Wenn Ihr rechnen könnt, dann wisst Ihr, dass das 1200 Münzen sind.}{}{}{}{}
+{443}{Ich bin bereit für die Reise nach Tarant.}{}{5}{gv 1036 1,$$ 1200}{-20}{$$ -1200}
+{444}{Ich bin bereit für die Reise nach Ashbury.}{}{5}{gv 1036 2,$$ 1200}{-22}{$$ -1200}
+{445}{Ich bin bereit für die Reise nach Black Root.}{}{5}{gv 1036 3,$$ 1200}{-24}{$$ -1200}
+{446}{Ich bin bereit für die Reise nach Caladon.}{}{5}{gv 1036 4,$$ 1200}{-26}{$$ -1200}
+{447}{Ich bin bereit für die Reise zur Halb-Oger-Insel.}{}{5}{gv 1036 6,$$ 1200}{-30}{$$ -1200}
+{448}{Ich bin bereit für die Reise zur Insel der Verzweiflung.}{}{5}{gv 1036 7,$$ 1200}{-32}{$$ -1200}
+{449}{Das ist akzeptabel. Machen wir uns sofort auf den Weg.}{}{5}{$$ -1199}{514}{}
+{450}{Ich habe nicht genug Geld für die Überfahrt.}{}{5}{$$ -1199}{644}{}
+{451}{Ich komme zurück, wenn ich für die Reise bereit bin.}{}{5}{}{0}{}
+{452}{Ich nach Tarantel geh'n.}{}{-4}{gv 1036 1,$$ 1200}{-20}{$$ -1200}
+{453}{Ich nach Aschen-pu-tel geh'n.}{}{-4}{gv 1036 2,$$ 1200}{-22}{$$ -1200}
+{454}{Ich nach Bleck Ruh geh'n.}{}{-4}{gv 1036 3,$$ 1200}{-24}{$$ -1200}
+{455}{Ich nach Kalladumm geh'n.}{}{-4}{gv 1036 4,$$ 1200}{-26}{$$ -1200}
+{456}{Ich nach Oggershalb-Pinsel geh'n.}{}{-4}{gv 1036 6,$$ 1200}{-30}{$$ -1200}
+{457}{Ich nach Issl Herz-weil-fumm geh'n.}{}{-4}{gv 1036 7,$$ 1200}{-32}{$$ -1200}
+{458}{Ich haben fertig für geh'n.}{}{-4}{$$ -1199}{514}{}
+{459}{Ich nich' haben Münzens. Ich auf Schief geh'n willen.}{}{-4}{$$ -1199}{644}{}
+{460}{Ich wieda da sein.}{}{-4}{}{0}{}
+{461}{Wenn Ihr rechnen könnt, dann wisst Ihr, dass das 1300 Münzen sind.}{Wenn Ihr rechnen könnt, dann wisst Ihr, dass das 1300 Münzen sind.}{}{}{}{}
+{462}{Ich bin bereit für die Reise nach Tarant.}{}{5}{gv 1036 1,$$ 1300}{-20}{$$ -1300}
+{463}{Ich bin bereit für die Reise nach Ashbury.}{}{5}{gv 1036 2,$$ 1300}{-22}{$$ -1300}
+{464}{Ich bin bereit für die Reise nach Black Root.}{}{5}{gv 1036 3,$$ 1300}{-24}{$$ -1300}
+{465}{Ich bin bereit für die Reise nach Caladon.}{}{5}{gv 1036 4,$$ 1300}{-26}{$$ -1300}
+{466}{Ich bin bereit für die Reise zur Halb-Oger-Insel.}{}{5}{gv 1036 6,$$ 1300}{-30}{$$-1300}
+{467}{Ich bin bereit für die Reise zur Insel der Verzweiflung.}{}{5}{gv 1036 7,$$ 1300}{-32}{$$ -1300}
+{468}{Das ist akzeptabel. Machen wir uns sofort auf den Weg.}{}{5}{$$ -1299}{514}{}
+{469}{Ich habe nicht genug Geld für die Überfahrt.}{}{5}{$$ -1299}{644}{}
+{470}{Ich komme zurück, wenn ich für die Reise bereit bin.}{}{5}{}{0}{}
+{471}{Ich nach Tarantel geh'n.}{}{-4}{gv 1036 1,$$ 1300}{-20}{$$ -1300}
+{472}{Ich nach Aschen-pu-tel geh'n.}{}{-4}{gv 1036 2,$$ 1300}{-22}{$$ -1300}
+{473}{Ich nach Bleck Ruh geh'n.}{}{-4}{gv 1036 3,$$ 1300}{-24}{$$ -1300}
+{474}{Ich nach Kalladumm geh'n.}{}{-4}{gv 1036 4,$$ 1300}{-26}{$$ -1300}
+{475}{Ich nach Oggershalb-Pinsel geh'n.}{}{-4}{gv 1036 6,$$ 1300}{-30}{$$ -1300}
+{476}{Ich nach Issl Herz-weil-fumm geh'n.}{}{-4}{gv 1036 7,$$ 1300}{-32}{$$ -1300}
+{477}{Ich haben fertig für geh'n.}{}{-4}{$$ -1299}{514}{}
+{478}{Ich nich' haben Münzens. Ich auf Schief geh'n willen.}{}{-4}{$$ -1299}{644}{}
+{479}{Ich wieda da sein.}{}{-4}{}{0}{}
+{480}{Das is' nu' mal mein Preis.  Greift zu oder lasst es bleiben ... Mir is' das egal ... Also, was nu'?}{Das is' nu' mal mein Preis, Mädel.  Greift zu oder lasst es bleiben ... Mir is' das Jacke wie Hose ...}{}{}{}{}
+{481}{Ich verstehe.  ... Wie hoch war der Preis noch mal?}{}{5}{}{44}{}
+{482}{F:}{}{5}{}{0}{}
+{483}{Äh ...  Wie viel Münzens?}{}{-4}{}{44}{}
+{484}{F:}{}{-4}{}{0}{}
+{485}{Ihr seid schon was Besonderes, Mister.  Vielleicht bringt Ihr uns Glück auf See.  Ich bin mit 50 pro Nase einverstanden ...  Diesmal ... Aber nich' eine Münze weniger!  Das is' mein letztes Angebot, Ihr solltet's besser annehmen, ehe ich's mir anders überlege.}{Ihr seid schon was Besonderes, Mädel.  Vielleicht bringt Ihr uns Glück auf See.  Ich bin mit 50 pro Nase einverstanden ...  Diesmal ...    Aber nich' eine Münze weniger! Das is' mein letztes Angebot. Ihr solltet's besser annehmen, ehe ich's mir anders überlege.}{}{}{}{}
+{486}{Das ist ein gutes Geschäft, Käpt'n. Ihr werdet es nicht bereuen!}{}{5}{gv 1035 1}{62}{}
+{487}{Das ist ein gutes Geschäft, Käpt'n. Ihr werdet es nicht bereuen!}{}{5}{gv 1035 2}{81}{}
+{488}{Das ist ein gutes Geschäft, Käpt'n. Ihr werdet es nicht bereuen!}{}{5}{gv 1035 3}{100}{}
+{489}{Das ist ein gutes Geschäft, Käpt'n. Ihr werdet es nicht bereuen!}{}{5}{gv 1035 4}{119}{}
+{490}{Das ist ein gutes Geschäft, Käpt'n. Ihr werdet es nicht bereuen!}{}{5}{gv 1035 5}{138}{}
+{491}{Das ist ein gutes Geschäft, Käpt'n. Ihr werdet es nicht bereuen!}{}{5}{gv 1035 6}{157}{}
+{492}{Das ist ein gutes Geschäft, Käpt'n. Ihr werdet es nicht bereuen!}{}{5}{gv 1035 7}{176}{}
+{493}{Das ist ein gutes Geschäft, Käpt'n. Ihr werdet es nicht bereuen!}{}{5}{gv 1035 8}{195}{}
+{494}{Das ist ein gutes Geschäft, Käpt'n. Ihr werdet es nicht bereuen!}{}{5}{gv 1035 9}{214}{}
+{495}{Das ist ein gutes Geschäft, Käpt'n. Ihr werdet es nicht bereuen!}{}{5}{gv 1035 10}{233}{}
+{496}{Das ist ein gutes Geschäft, Käpt'n. Ihr werdet es nicht bereuen!}{}{5}{gv 1035 11}{252}{}
+{497}{Das ist ein gutes Geschäft, Käpt'n. Ihr werdet es nicht bereuen!}{}{5}{gv 1035 12}{271}{}
+{498}{Das ist ein gutes Geschäft, Käpt'n. Ihr werdet es nicht bereuen!}{}{5}{gv 1035 13}{290}{}
+{499}{F:}{}{5}{}{0}{}
+{500}{Schlau Käppi. Wir jetz' guttig Geschäf' machen haben!}{}{-4}{gv 1035 1}{62}{}
+{501}{Schlau Käppi. Wir jetz' guttig Geschäf' machen haben!}{}{-4}{gv 1035 2}{81}{}
+{502}{Schlau Käppi. Wir jetz' guttig Geschäf' machen haben!}{}{-4}{gv 1035 3}{100}{}
+{503}{Schlau Käppi. Wir jetz' guttig Geschäf' machen haben!}{}{-4}{gv 1035 4}{119}{}
+{504}{Schlau Käppi. Wir jetz' guttig Geschäf' machen haben!}{}{-4}{gv 1035 5}{138}{}
+{505}{Schlau Käppi. Wir jetz' guttig Geschäf' machen haben!}{}{-4}{gv 1035 6}{157}{}
+{506}{Schlau Käppi. Wir jetz' guttig Geschäf' machen haben!}{}{-4}{gv 1035 7}{176}{}
+{507}{Schlau Käppi. Wir jetz' guttig Geschäf' machen haben!}{}{-4}{gv 1035 8}{195}{}
+{508}{Schlau Käppi. Wir jetz' guttig Geschäf' machen haben!}{}{-4}{gv 1035 9}{214}{}
+{509}{Schlau Käppi. Wir jetz' guttig Geschäf' machen haben!}{}{-4}{gv 1035 10}{233}{}
+{510}{Schlau Käppi. Wir jetz' guttig Geschäf' machen haben!}{}{-4}{gv 1035 11}{252}{}
+{511}{Schlau Käppi. Wir jetz' guttig Geschäf' machen haben!}{}{-4}{gv 1035 12}{271}{}
+{512}{Schlau Käppi. Wir jetz' guttig Geschäf' machen haben!}{}{-4}{gv 1035 13}{290}{}
+{513}{F:}{}{-4}{}{0}{}
+{514}{Argh!  Ihr habt das Geld nich'!  Wenn ich die Flut verpass, weil Ihr meine Zeit vergeudet ...  dann setzt es was ...  Darauf könnt Ihr Euch verlassen!  Und jetzt verschwindet von meinem Schiff! }{Argh!  Ihr habt das Geld nich'!  Wenn ich die Flut verpass, weil Ihr meine Zeit vergeudet ...  dann setzt es was ...  Darauf könnt Ihr Euch verlassen!  Und jetzt verschwindet von meinem Schiff! }{}{}{}{re -5}
+{515}{E:}{}{5}{}{0}{}
+{516}{Verschwindet von meinem Schiff!  Und lasst Euch erst wieder blicken, wenn Ihr wisst, wo ihr hin wollt.}{Verschwindet von meinem Schiff!  Und lasst Euch erst wieder blicken, wenn Ihr wisst, wo ihr hin wollt.}{}{}{}{}
+{517}{Argh!  Seid Ihr ganz bei Trost?  Dieses Schiff fährt niemals dorthin!}{Argh!  Seid Ihr ganz bei Trost?  Dieses Schiff fährt niemals dorthin!}{}{}{}{}
+{518}{Äh ...  Dann vielleicht woanders hin ...}{}{5}{}{27}{}
+{519}{Könnt Ihr mir sagen, wo Black Root liegt?}{}{5}{}{535}{}
+{520}{Pah!  Die verfluchte Dampfeisenbahn hat mein Schiff in Ashbury überflüssig gemacht!  Dieses verdammte neumodische Ding wird noch mein Tod sein!  Denkt an meine Worte!}{Pah!  Die verfluchte Dampfeisenbahn hat mein Schiff in Ashbury überflüssig gemacht!  Dieses verdammte neumodische Ding wird noch mein Tod sein!  Denkt an meine Worte!}{}{}{}{}
+{521}{Dann sollte ich vielleicht ein anderes Ziel ansteuern ...}{}{5}{}{27}{}
+{522}{Könnt Ihr mir sagen, wo Ashbury liegt?}{}{5}{}{524}{}
+{523}{E:}{}{1}{}{0}{}
+{524}{Das is' genau hier.  [Er zeigt auf eine Stelle deiner Karte.]}{Das is' genau hier.  [Er zeigt auf eine Stelle deiner Karte.]}{}{}{}{mm 8}
+{525}{Kann ich denn eine Überfahrt zu einem anderen Ort buchen?}{}{5}{}{27}{}
+{526}{E:}{}{1}{}{0}{}
+{527}{Thanatos!  Hier in der Gegend werdet Ihr kein' finden, der dumm genug is', Euch dorthin zu bringen!  Versucht es in Black Root.  Dieser Ort is' voll von absolut desperaten Narren!}{Thanatos!  Hier in der Gegend werdet Ihr kein' finden, der dumm genug is', Euch dorthin zu bringen!  Versucht es in Black Root.  Dieser Ort is' voll von absolut desperaten Narren!}{}{}{}{}
+{529}{Kann ich denn eine Überfahrt zu einem anderen Ort buchen?}{}{5}{}{27}{}
+{530}{Äh ...  Ich auf Schief geh'n?}{}{-4}{}{608}{}
+{531}{E:}{}{1}{}{0}{}
+{532}{Sicher.  Lasst mich mal einen Blick auf Eure Karte werfen ...}{Sicher.  Lasst mich mal einen Blick auf Eure Karte werfen ...}{}{}{}{}
+{533}{[Du zeigst ihm deine Karte.]}{}{5}{}{535}{}
+{534}{F:}{}{1}{}{0}{}
+{535}{Hier isses.  [Er zeigt auf eine Stelle deiner Karte.]}{Hier isses.  [Er zeigt auf eine Stelle deiner Karte.]}{}{}{}{mm 3}
+{536}{Könnte ich eine Überfahrt anderswo hin buchen?}{}{5}{}{27}{}
+{537}{E:}{}{1}{}{0}{}
+{538}{Thanatos?  Seid Ihr ganz bei Trost?  Dieses Boot fährt niemals dorthin!}{Thanatos?  Seid Ihr ganz bei Trost?  Dieses Boot fährt niemals dorthin!}{}{}{}{}
+{539}{Kann ich denn eine Überfahrt zu einem anderen Ort buchen?}{}{5}{}{27}{}
+{540}{Äh ...  Ich auf Schief geh'n?}{}{-4}{}{608}{}
+{541}{E:}{}{1}{}{0}{}
+{542}{Insel der Verzweiflung?  Wenn Ihr Eure Sinne beisammen habt, werdet Ihr dieses Fleckchen meiden!}{Insel der Verzweiflung?  Wenn Ihr Eure Sinne beisammen habt, werdet Ihr dieses Fleckchen meiden!}{}{}{}{}
+{543}{Warum?  Was für ein Ort ist das denn?}{}{5}{}{545}{}
+{544}{E:}{}{1}{}{0}{}
+{545}{Es heißt, dass noch keiner die Insel lebend verlassen hat.  Diejenigen, die es versucht haben, spült die Flut morgens tot ans Ufer ...}{Es heißt, dass noch keiner die Insel lebend verlassen hat.  Diejenigen, die es versucht haben, spült die Flut morgens tot ans Ufer ...}{}{}{}{}
+{546}{Oh ...  Kann ich denn eine Überfahrt zu einem anderen Ort buchen?}{}{5}{}{27}{}
+{547}{Ich muss wirklich dringend zu der Insel.}{}{5}{}{647}{}
+{548}{Na los!  Ich kann nich' den ganzen Tag hier warten, während Ihr dasteht und Maulaffen feil haltet!}{Na los!  Ich kann nich' den ganzen Tag hier warten, während Ihr dasteht und Maulaffen feil haltet!}{}{}{}{}
+{549}{Ich möchte eine Überfahrt an Bord Eures Schiffes buchen.}{}{5}{}{555}{}
+{550}{Jemand muss mich zur Insel der Verzweiflung bringen.}{}{5}{lf8 0, ss 5, ss -6}{542}{}
+{551}{Jemand muss mich zur Insel der Verzweiflung bringen.}{}{5}{lf8 1, ss 5, ss -6}{654}{}
+{552}{Jemand muss mich nach Thanatos bringen.}{}{5}{lf3 0, ss 17, ss -17, gf2037 1}{527}{}
+{553}{Jemand muss mich nach Thanatos bringen.}{}{5}{lf3 1, ss 17, ss -17, gf2037 1}{538}{}
+{554}{Jemand muss mich nach Caladon bringen.}{}{5}{lf4 0, ss 12, ss -12}{555}{}
+{555}{Ich hab keine Zeit für Euch!  Die Ladung muss gelöscht werden, und Ihr steht im Weg rum.  Kommt später wieder.}{Ich hab keine Zeit für Euch!  Die Ladung muss gelöscht werden, und Ihr steht im Weg rum.  Kommt später wieder.}{}{}{}{}
+{556}{E:}{}{1}{}{0}{}
+{557}{S:}{}{1}{}{0}{re 2}
+{558}{I:}{}{1}{}{0}{re -5}
+{559}{Aye, wohl wahr ...  Habt Ihr schon 'n Blick auf das große Eisending werfen können ... die Eisenbahn?}{Aye, wohl wahr ...  Habt Ihr schon 'n Blick auf das große Eisending werfen können ... die Eisenbahn?}{}{}{}{}
+{560}{Ja, oh ja.  Das ist wahrlich ein Wunder der modernen Mechanik.}{}{5}{}{566}{}
+{561}{Ja, oh ja.  Aber ich habe die meiste Zeit in Wellington verbracht.}{}{5}{}{575}{}
+{562}{Nein, ich hatte dafür keine Zeit.  Nach dem, was man so hört, soll das ein vorzügliches Fortbewegungsmittel sein.}{}{5}{}{571}{}
+{563}{Jaaa.  Ich seh'n.  Sehr großig sein!  ... Un' lärmig!}{}{-4}{}{566}{}
+{564}{Nein. Ich nich' Eisbahn seh'n.  Leutens sagen, sein guttig für Reisens.}{}{-4}{}{571}{}
+{565}{E:}{}{1}{}{0}{}
+{566}{Wohl wahr.  Wohl wahr.  Aber das Gefühl von Freiheit und Abenteuer auf dem Meer, das kann der Zug nicht bieten.  Mir jedenfalls nicht.}{Wohl wahr.  Wohl wahr.  Aber das Gefühl von Freiheit und Abenteuer auf dem Meer, das kann der Zug nicht bieten.  Mir jedenfalls nicht.}{}{}{}{}
+{567}{Aber für die Massen bietet er sichere und bequeme Beförderung.}{}{5}{}{571}{}
+{568}{Da stimme ich Euch voll und ganz zu.  Kann ich eine Überfahrt bei Euch buchen?}{}{5}{}{27}{}
+{569}{Jaaa ...  Ich auf Schief geh'n?}{}{-4}{}{608}{}
+{570}{E:}{}{1}{}{0}{}
+{571}{Solange keine Magier in der Nähe sind ...  Nein. Ich finde, Segeln ist die beste Möglichkeit, weite Strecken zu reisen.}{Solange keine Magier in der Nähe sind ...  Nein. Ich finde, Segeln ist die beste Möglichkeit, weite Strecken zu reisen.}{}{}{}{}
+{572}{Ich verstehe, was Ihr meint.  Kann ich eine Überfahrt bei Euch buchen?}{}{5}{}{27}{}
+{573}{E:}{}{1}{}{0}{}
+{574}{Jaaa ...  Ich auf Schief geh'n?}{}{-4}{}{608}{}
+{575}{Wie ich sehe, wisst Ihr die schönen Dinge zu schätzen, die das Leben so bietet ...}{Wie ich sehe, wisst Ihr die schönen Dinge zu schätzen, die das Leben so bietet ...}{}{}{}{}
+{576}{So ist es ...  Kann ich eine Überfahrt mit Eurem Schiff buchen?}{}{5}{}{27}{}
+{577}{E:}{}{1}{}{0}{}
+{578}{Ashbury ...  Das ist ein ziemlich ruhiger Ort.  Das Interessanteste, das der ganze Ort zu bieten hat, ist wahrscheinlich das Spukschloss.}{Ashbury ...  Das ist ein ziemlich ruhiger Ort.  Das Interessanteste, das der ganze Ort zu bieten hat, ist wahrscheinlich das Spukschloss.}{}{}{}{}
+{579}{Spukschloss?  Wo ist das?}{}{5}{}{584}{}
+{580}{Ja.  Das war vielleicht ein Erlebnis.  Kann ich eine Überfahrt buchen?}{}{5}{}{27}{}
+{581}{Wo das sein?}{}{-4}{}{584}{}
+{582}{Jaaa ...  Ich auf Schief geh'n?}{}{-4}{}{608}{}
+{583}{E:}{}{1}{}{0}{}
+{584}{Fragt in der Stadt.  Man wird es Euch bestimmt sagen.}{Fragt in der Stadt.  Man wird es Euch bestimmt sagen.}{}{}{}{}
+{585}{Vielleicht später.  Ich suche eine Überfahrt auf einem Schiff.}{}{5}{}{27}{}
+{586}{E:}{}{1}{}{0}{}
+{587}{Jaaa ...  Ich auf Schief geh'n?}{}{-4}{}{608}{}
+{588}{Wohl wahr.  Ihr werdet keine besseren Schiffe finden als die hier aus Black Root.  ... Sogar dieses Schiff hier wurde in Black Root gebaut.  Bin nie mit einem besseren Schiff gesegelt ...}{Wohl wahr.  Ihr werdet keine besseren Schiffe finden als die hier aus Black Root.  ... Sogar dieses Schiff hier wurde in Black Root gebaut.  Bin nie mit einem besseren Schiff gesegelt ...}{}{}{}{}
+{589}{Es macht einen recht stabilen Eindruck.  Kann ich eine Überfahrt an Bord buchen?}{}{5}{}{27}{}
+{590}{E:}{}{1}{}{0}{}
+{591}{Es macht einen recht neuen Eindruck.  Habt Ihr es schon lange?}{}{5}{re -80}{592}{re +5}
+{592}{Es befährt die Meere jetzt schon fast acht Jahre.  Ich geb mir alle Mühe, es tipptopp in Schuss zu halten.  Ihr habt ein gutes Auge, dass Ihr seine Qualitäten gleich bemerkt.}{Es befährt die Meere jetzt schon fast acht Jahre.  Ich geb mir alle Mühe, es tipptopp in Schuss zu halten.  Ihr habt ein gutes Auge, dass Ihr seine Qualitäten gleich bemerkt.}{}{}{}{}
+{593}{Das ist Euch sehr gut gelungen.  Kann ich eine Überfahrt buchen?}{}{5}{}{27}{}
+{594}{E:}{}{1}{}{0}{}
+{595}{Die meisten wollen den Tempel sehen.  Is' das Hauptquartier der Panarii-Religion.}{Die meisten wollen den Tempel sehen.  Is' das Hauptquartier der Panarii-Religion.}{}{}{}{}
+{596}{Ja.  Ich vermute, Ihr bekommt viele Pilger zu sehen.}{}{5}{}{599}{}
+{597}{Äh ... ja ...!  Ihr viel Pill'ngehers hin bringen?}{}{-4}{}{599}{}
+{598}{E:}{}{1}{}{0}{}
+{599}{Pilger ...  Das ist heutzutage selten geworden.  Aber ich glaub, es sind 'n Haufen Narren dabei, die nur die Pracht begaffen wollen.}{Pilger ...  Das ist heutzutage selten geworden.  Aber ich glaub, es sind 'n Haufen Narren dabei, die nur die Pracht begaffen wollen.}{}{}{}{}
+{600}{Ich gehe davon aus, dass Ihr kein gläubiger Jünger seid ...}{}{5}{}{603}{}
+{601}{Jaaa ... sein hübsch.  Ihr Kanari nich' magen?}{}{-4}{}{603}{}
+{602}{E:}{}{1}{}{0}{}
+{603}{Das Meer ... das ist meine Göttin.  Es hat alles, was ein Mann braucht.  Die Panarii [Er macht eine Pause und spuckt über die Reling.] haben einem Mann wie mir nichts zu bieten ...}{Das Meer ... das ist meine Göttin.  Es hat alles, was ein Mann braucht.  Die Panarii [Er macht eine Pause und spuckt über die Reling.] haben einem Mann wie mir nichts zu bieten ...}{}{}{}{}
+{604}{Ich verstehe, was Ihr meint.  Kann ich eine Überfahrt bei Euch buchen?}{}{5}{}{27}{}
+{605}{Zu dumm ...  Kann ich eine Überfahrt mit Eurem Schiff buchen?}{}{5}{}{27}{}
+{606}{Jaaa ...  Ich auf Schief geh'n?}{}{-4}{}{608}{}
+{607}{E:}{}{1}{}{0}{}
+{608}{Nein, nein. Ich fürchte, ich kann Euch leider nicht mitnehmen. Mein schönes Schiff dürfen nur zahlende Passagiere betreten.}{Nein, nein. Ich fürchte, ich kann Euch leider nicht mitnehmen. Mein schönes Schiff dürfen nur zahlende Passagiere betreten.}{}{}{}{}
+{609}{Ich zahlen!}{}{-4}{ss-4}{619}{}
+{610}{Ich zahlen!}{}{-4}{ss7, ss-11}{619}{}
+{611}{Ich zahlen!}{1}{-4}{ss5, ss-6}{621}{}
+{612}{Ich zahlen!}{0}{-4}{ss5, ss-6}{-37}{}
+{613}{Ich zahlen!}{0}{-4}{ss12, lf4 0}{-37}{}
+{614}{Ich zahlen!}{1}{-4}{ss12, ss-12, lf4 0}{621}{ss 13}
+{615}{Ich zahlen!}{1}{-4}{ss13, lf4 0}{621}{}
+{616}{Ich zahlen!}{}{-4}{lf 6 0, qa1143 2}{621}{}
+{617}{Ich zahlen!}{}{-4}{ss13, lf4 1}{695}{}
+{618}{E:}{}{1}{}{0}{}
+{619}{Oh!  Jetzt verstehe ich Euch ...  [Armer Einfaltspinsel!] ... Ich fürchte, das geht nich' ...}{Oh!  Jetzt verstehe ich Euch ...  [Was für ein dummes Weib!]  ... Ich fürchte, das geht nich'.}{}{}{}{}
+{620}{E:}{}{1}{}{0}{}
+{621}{Oh!  Jetzt verstehe ich Euch ...  [Armer Einfaltspinsel.] Ihr wollt für die Überfahrt arbeiten!   ... Tja ...  Ihr scheint mir recht kräftig gebaut zu sein.  Ich schätze, Ihr könntet die Überfahrt abarbeiten.  Ich laufe mit der nächsten Flut nach Caladon aus.  Wenn Ihr gleich aufbrechen könnt, lasse ich Euch arbeiten.}{Oh!  Jetzt verstehe ich Euch ...  [Was für ein dummes Weib!]  Ihr wollt für die Überfahrt arbeiten!   ... Tja ...  Ihr scheint mir recht kräftig gebaut zu sein und der Koch braucht, soweit ich weiß, Hilfe in der Kombüse. Selbst ein Schwachkopf wie Ihr kann wohl Töpfe und Pfannen schrubben ... [Zögernd.] Na gut, Ihr könnt die Überfahrt abarbeiten.  Ich laufe mit der nächsten Flut nach Caladon aus.   Könnt Ihr gleich aufbrechen?}{}{}{}{}
+{622}{Äh ...  Fein.  Ich jetz' auf Schief geh'n tu.}{1}{-4}{ss13}{-26}{}
+{623}{Äh ...  Fein.  Ich jetz' auf Schief geh'n tu.}{0}{-4}{ss13}{-26}{}
+{624}{Äh ...  Ich jetz' auf Schief geh'n tu.}{0}{-4}{ss12, ss-12}{665}{ss 13}
+{625}{Äh ...  Ich nach Oggershalb-Pinsel geh'n?}{}{-4}{lf 6 0, qa1143 2}{637}{}
+{626}{Äh ...  Ich nach Issl der Herz-weil-fumm geh'n?}{}{-4}{ss5, ss-6, lf8 0}{640}{}
+{627}{Äh ...  Ich nach Issl der Herz-weil-fumm geh'n?}{}{-4}{ss5, ss-6, lf8 1}{654}{}
+{628}{Äh ...  Ich geh'n Bleck Ruht?}{}{-4}{lf3 0}{700}{}
+{629}{Oh!  Jetzt verstehe ich Euch ...  [Armer Einfaltspinsel.] Ihr wollt für die Überfahrt arbeiten!   ... Tja ...  Ihr scheint mir recht kräftig gebaut zu sein.  Ich schätze, Ihr könntet die Überfahrt abarbeiten.  Ich laufe mit der nächsten Flut nach Caladon aus.  Wenn Ihr gleich aufbrechen könnt, lasse ich Euch arbeiten.}{Oh!  Jetzt verstehe ich Euch ...  Ihr wollt für die Überfahrt arbeiten!   ... Tja ...  Ihr scheint mir einen recht, ähem... ansehnlichen Körper zu haben.  Vielleicht könntet Ihr die Überfahrt "abarbeiten".  Wenn Ihr wisst, was ich meine.  Ich laufe mit der nächsten Flut nach Caladon aus.  Ihr könnt Eure Überfahrt abarbeiten, wenn Ihr mich und meine Männer bedient.  [Er scheint es kaum erwarten zu können, endlich aufzubrechen.] Könnt Ihr gleich abreisen?}{}{}{}{}
+{630}{Äh ...  Fein.  Ich jetz' auf Schief geh'n tu.}{1}{-4}{ss13}{-26}{}
+{631}{Äh ...  Fein.  Ich jetz' auf Schief geh'n tu.}{0}{-4}{ss13}{-26}{re +10}
+{632}{Äh ...  Ich jetz' auf Schief geh'n tu.}{0}{-4}{ss12, ss-12}{665}{ss 13, re +10}
+{633}{Äh ...  Ich nach Oggershalb-Pinsel geh'n?}{}{-4}{lf 6 0, qa1143 2}{637}{}
+{634}{Äh ...  Ich nach Issl der Herz-weil-fumm geh'n?}{}{-4}{ss5, ss-6, lf8 0}{640}{}
+{635}{Äh ...  Ich nach Issl der Herz-weil-fumm geh'n?}{}{-4}{ss5, ss-6, lf8 1}{654}{}
+{636}{Äh ...  Ich geh'n Bleck Ruht?}{}{-4}{lf 3 0}{700}{}
+{637}{Oh!  Jetzt verstehe ich Euch ...  [Armer Einfaltspinsel.] Ihr wollt für die Überfahrt arbeiten!   ... Tja ...  Ihr scheint mir recht kräftig gebaut zu sein.  Ich schätze, Ihr könntet die Überfahrt abarbeiten.  Ich laufe mit der nächsten Flut zur Halb-Oger-Insel aus.  Wenn Ihr gleich aufbrechen könnt, lasse ich Euch arbeiten.}{Oh!  Jetzt verstehe ich Euch ...  [Was für ein dummes Weib!]  Ihr wollt für die Überfahrt arbeiten!   ... Tja ...  Ihr scheint mir recht kräftig gebaut zu sein und der Koch braucht, soweit ich weiß, Hilfe in der Kombüse. Selbst ein Schwachkopf wie Ihr kann wohl Töpfe und Pfannen schrubben ... [Zögernd.] Na gut, Ihr könnt die Überfahrt abarbeiten.  Ich laufe mit der nächsten Flut zur Halb-Oger-Insel aus.   Könnt Ihr gleich aufbrechen?}{}{}{}{}
+{638}{Äh ...  Fein.  Ich jetz' auf Schief geh'n tu.}{}{-4}{}{-30}{}
+{639}{E:}{}{1}{}{0}{}
+{640}{Die Insel der Verzweiflung?  Niemand is' so verrückt, dorthin zu reisen.  Es kommt keiner je lebend zurück!  Also ... wollt Ihr jetzt nach Caladon oder nicht?}{Die Insel der Verzweiflung?  Niemand is' so verrückt, dorthin zu reisen.  Es kommt keiner je lebend zurück!  Also ... wollt Ihr jetzt nach Caladon oder nicht?}{}{}{}{}
+{641}{Äh ...  Fein.  Ich jetz' auf Schief geh'n tu.}{}{-4}{ss13}{-26}{}
+{642}{Ich nach Issl der Herz-weil-fumm geh'n!}{}{-4}{ss5, ss-6}{647}{}
+{643}{E:}{}{1}{}{0}{}
+{644}{Tja, wenn Ihr den Preis nich' bezahlen könnt, dann kann ich Euch auch nich' mitnehmen. Kommt zurück, wenn Ihr das Geld habt ... Lebt wohl.}{Tja, wenn Ihr den Preis nich' bezahlen könnt, dann kann ich Euch auch nich' mitnehmen. Kommt zurück, wenn Ihr das Geld habt ... Lebt wohl.}{}{}{}{}
+{645}{Ich zahlen, ich zahlen!}{}{-4}{}{608}{}
+{646}{E:}{}{1}{}{0}{}
+{647}{Ihr müsst wirklich blöde sein!  Tja ... versucht es in Ashbury.  Vielleicht findet Ihr da ja einen, der genauso blöde ist wie Ihr.  Argh ...  Und verschwendet nicht länger meine Zeit!}{Ihr müsst wirklich blöde sein!  Tja ... versucht es in Ashbury.  Vielleicht findet Ihr da ja einen, der genauso blöde ist wie Ihr.  Argh ...  Und verschwendet nicht länger meine Zeit!}{}{}{}{}
+{648}{Kann ich eine Überfahrt nach Ashbury buchen?}{}{5}{}{520}{}
+{649}{Äh ...  Ihr mir bringen nach Aschenbecher?}{}{-4}{}{651}{}
+{650}{E:}{}{1}{}{0}{}
+{651}{Pah!  Die verfluchte Dampfeisenbahn hat mein Schiff in Ashbury überflüssig gemacht!  Dieses verdammte neumodische Ding wird noch mein Tod sein!  Denkt an meine Worte!}{Pah!  Die verfluchte Dampfeisenbahn hat mein Schiff in Ashbury überflüssig gemacht!  Dieses verdammte neumodische Ding wird noch mein Tod sein!  Denkt an meine Worte!}{}{}{}{}
+{652}{E:}{}{1}{}{0}{}
+{653}{Wo sein Aschbecher?}{}{-4}{}{698}{}
+{654}{Insel der Verzweiflung?  Wenn Ihr Eure Sinne beisammen habt, werdet Ihr dieses Fleckchen meiden!}{Insel der Verzweiflung?  Wenn Ihr Eure Sinne beisammen habt, werdet Ihr dieses Fleckchen meiden!}{}{}{}{}
+{655}{Oh ...  Kann ich denn eine Überfahrt zu einem anderen Ort buchen?}{}{5}{}{27}{}
+{656}{Ich muss wirklich dringend zu der Insel.}{}{5}{gf2470 0}{661}{}
+{657}{Ich muss wirklich dringend zu der Insel.}{}{5}{gf2470 1}{668}{}
+{658}{Ich nach Issl der Herz-weil-fumm geh'n!}{}{-4}{gf2470 0}{661}{}
+{659}{Ich nach Issl der Herz-weil-fumm geh'n!}{}{-4}{gf2470 1}{668}{}
+{660}{E:}{}{1}{}{0}{}
+{661}{Geht und redet mit Teach.  Das ist der Käpt'n des anderen Schiffes hier.  Ich schätze, der könnt verrückt genug sein, sein Schiff zu riskieren ... und seinen Hals!}{Geht und redet mit Teach.  Das ist der Käpt'n des anderen Schiffes hier.  Ich schätze, der könnt verrückt genug sein, sein Schiff zu riskieren ... und seinen Hals!}{}{}{}{}
+{662}{Danke. Vielen Dank.}{}{5}{}{0}{}
+{663}{Äh ... fein.  Dankie.}{}{-4}{}{0}{}
+{664}{E:}{}{1}{}{0}{}
+{665}{Ihr versteht doch ... ja?  [Er spricht lauter und gestikuliert mit den Händen.] Ich bringe Euch nach Caladon.  Aber Ihr müsst für mich und meine Mannschaft arbeiten.}{Ihr versteht doch ... ja?  [Er spricht lauter und gestikuliert mit den Händen.] Ich bringe Euch nach Caladon.  Aber Ihr müsst für mich und meine Mannschaft arbeiten.}{}{}{}{}
+{666}{Äh ...  Jaaa.  Ich abbeiten.  Ich auf Schief geh'n ... jetz'.}{}{-4}{}{-26}{}
+{667}{F:}{}{1}{}{0}{}
+{668}{Ihr seid hartnäckig, was?  Käpt'n Teach kannte diese Route.  Aber jetzt nich' mehr.  Der arme Teufel is' ums Leben gekommen.  Was für eine Verschwendung.}{Ihr seid hartnäckig, was?  Käpt'n Teach kannte diese Route.  Aber jetzt nich' mehr.  Der arme Teufel is' ums Leben gekommen.  Was für eine Verschwendung.}{}{}{}{}
+{669}{Was ist passiert?}{}{5}{}{672}{}
+{670}{Was sein passieren?}{}{-4}{}{672}{}
+{671}{E:}{}{1}{}{0}{}
+{672}{Ich weiß es nich' genau.  Was ich gehört hab, hat er sich mit 'nem Fremden um Geld gestritten.  Na ja, Teach is' 'n ziemliches Raubein.  Musste ja mal so kommen.  Jammerschade, wenn Ihr mich fragt.}{Ich weiß es nich' genau.  Was ich gehört hab, hat er sich mit 'nem Fremden um Geld gestritten.  Na ja, Teach is' 'n ziemliches Raubein.  Musste ja mal so kommen.  Jammerschade, wenn Ihr mich fragt.}{}{}{}{}
+{673}{Gibt es noch jemand anderen, der mich zur Insel bringen könnte?}{}{5}{}{677}{}
+{674}{Ich muss zu dieser Insel!}{}{5}{}{677}{}
+{675}{Wie ich jetz' zu Issl kommen?}{}{-4}{}{677}{}
+{676}{E:}{}{1}{}{0}{}
+{677}{Also ...  Ich und Teach, wir ham uns immer unterhalten ... bei 'n paar Krügen in der Taverne.  Hat mir 'n Weg erklärt, jawoll.  Vielleicht könnt ich Euch hinbringen.  Aber das würd Euch 'ne Kleinigkeit kosten.  Das würd Euch eindeutig was kosten ...}{Also ...  Ich und Teach, wir ham uns immer unterhalten ... bei 'n paar Krügen in der Taverne.  Hat mir 'n Weg erklärt, jawoll.  Vielleicht könnt ich Euch hinbringen.  Aber das würd Euch 'ne Kleinigkeit kosten.  Das würd Euch eindeutig was kosten ...}{}{}{}{}
+{678}{Wie viel?}{}{5}{}{681}{}
+{679}{Wie viel Münzens?}{}{-4}{}{681}{}
+{680}{F:}{}{1}{}{0}{}
+{681}{[Er mustert dich eingehend.] Ihr verlangt da was nich' Ungefährliches von mir, Mister.  Teach war der Einzige, den ich kenn, der es geschafft hat, lebend von der verdammten Insel zurückzukommen ...}{[Er mustert dich eingehend.] Ihr verlangt da was nich' Ungefährliches von mir, Lady.  Teach war der Einzige, den ich kenn, der es geschafft hat, lebend von der verdammten Insel zurückzukommen ...}{}{}{}{}
+{682}{Wie viel!}{}{5}{}{685}{}
+{683}{Wie viel Münzens!}{}{-4}{}{685}{}
+{684}{F:}{}{1}{}{0}{}
+{685}{Dafür, dass ich mein Schiff, mein Leben und meine Mannschaft gefährde ...  Fünftausend Münzen.  Und keine einzige weniger.}{Dafür, dass ich mein Schiff, mein Leben und meine Mannschaft gefährde ...  Fünftausend Münzen.  Und keine einzige weniger.}{}{}{}{}
+{686}{Das ist eine Unverschämtheit!}{}{5}{}{691}{}
+{687}{Das ist Straßenraub!  Gut!  Hier.  Machen wir uns auf den Weg!}{}{5}{$$5000}{-32}{}
+{688}{Viel zu viel das!}{}{-4}{}{691}{}
+{689}{Oh!  Das sein viel ... [Einen Augenblick der Überlegung.] Fein. Hier.  Wir geh'n.}{}{-4}{$$5000}{-32}{}
+{690}{F:}{}{1}{}{0}{}
+{691}{Das ist mein einziges Angebot.  Ich bezweifle, dass Ihr 'n besseres bekommen werdet.  Nun?}{Das ist mein einziges Angebot.  Ich bezweifle, dass Ihr 'n besseres bekommen werdet.  Nun?}{}{}{}{}
+{692}{Gut!  Hier.  Machen wir uns auf den Weg!}{}{5}{$$5000}{-32}{}
+{693}{[Einen Augenblick der Überlegung.] Fein. Hier.  Wir jetz' geh'n.}{}{-4}{$$5000}{-32}{}
+{694}{F:}{}{1}{}{0}{}
+{695}{Oh!  Jetzt verstehe ich Euch ...  [Armer Einfaltspinsel.] Ihr wollt wegen der Überfahrt verhandeln!   ... Tja ...  Ihr scheint mir recht kräftig gebaut zu sein.  Ich schätze, Ihr könntet die Überfahrt abarbeiten.  Ich laufe mit der nächsten Flut nach Tarant aus.  Wenn Ihr gleich aufbrechen könnt, lasse ich Euch arbeiten.}{Oh!  Jetzt verstehe ich Euch ...  Ihr wollt wegen der Überfahrt verhandeln!   ... Tja ...  Ihr scheint mir einen recht, ähem... ansehnlichen Körper zu haben.  Vielleicht könntet Ihr die Überfahrt "abarbeiten".  Wenn Ihr wisst, was ich meine.  Ich laufe mit der nächsten Flut nach Tarant aus.  Ihr könnt Eure Überfahrt abarbeiten, wenn Ihr mich und meine Männer bedient.  Könnt Ihr gleich aufbrechen, Mädel?}{}{}{}{}
+{696}{Äh ...  Fein.  Ich jetz' auf Schief geh'n tu.}{}{-4}{}{-20}{}
+{697}{E:}{}{1}{}{0}{}
+{698}{Das is' genau hier.  [Er zeigt auf eine Stelle deiner Karte.]}{Das is' genau hier.  [Er zeigt auf eine Stelle deiner Karte.]}{}{}{}{mm 8}
+{699}{E:}{}{1}{}{0}{}
+{700}{Argh!  Seid Ihr ganz bei Trost?  Dieses Schiff fährt niemals dorthin!}{Argh!  Seid Ihr ganz bei Trost?  Dieses Schiff fährt niemals dorthin!}{}{}{}{}
+{701}{Wo sein Bleck Ruht?}{}{-4}{}{703}{}
+{702}{E:}{}{1}{}{0}{}
+{703}{Hier isses.  [Er zeigt auf eine Stelle deiner Karte.]}{Hier isses.  [Er zeigt auf eine Stelle deiner Karte.]}{}{}{}{mm 3}
+{704}{E:}{}{1}{}{0}{}
+{705}{Argh ...  Wir haben Flut.  Seid Ihr bereit zu segeln?}{Argh ...  Wir haben Flut.  Seid Ihr bereit zu segeln?}{}{}{}{}
+{706}{Ja, ich bin bereit.}{}{5}{lf6 1}{-26}{}
+{707}{Ja, ich bin bereit.}{}{5}{lf15 1}{-22}{}
+{708}{Äh ...  Jaaa.  Wir jetz' geh'n.}{}{-4}{lf6 1}{-26}{}
+{709}{Äh ...  Jaaa.  Wir jetz' geh'n.}{}{-4}{lf15 1}{-22}{}
+{710}{F:}{}{1}{}{0}{}
+{711}{Argh ...  Da fahre ich hin.  Dieselben Bedingungen wie bei der letzten Reise ...  Nun?}{Argh ...  Da fahre ich hin.  Dieselben Bedingungen wie bei der letzten Reise ...  Nun?}{}{}{}{}
+{712}{Äh ...  Fein.  Ich jetz' auf Schief geh'n tu.}{}{-4}{}{-20}{}
+{713}{F:}{}{1}{}{0}{}
+

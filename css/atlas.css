@@ -137,6 +137,14 @@ img { display: block; }
 .tbtn.files { border-color: rgba(32,178,170,.6); color: var(--teal); }
 .tbtn.workshop { border-color: rgba(255,143,132,.6); color: var(--rust); }
 .sndbar { display: inline-flex; align-items: center; gap: 6px; }
+.langflags { position: relative; display: inline-flex; align-items: center; }
+.langflags .tbtn { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+.langcur-flag { display: inline-flex; }
+.langlist { position: absolute; top: calc(100% + 4px); right: 0; z-index: 60; display: flex; flex-direction: column; gap: 3px; padding: 4px; background: rgba(21,17,12,.97); border: 1px solid var(--border); border-radius: 5px; box-shadow: 0 6px 18px rgba(0,0,0,.5); }
+.langlist[hidden] { display: none; }
+.langlist .tbtn { justify-content: flex-start; }
+.langlist .tbtn[hidden] { display: none; }
+.flag { width: 21px; height: 14px; display: block; border-radius: 1px; }
 .sndbar .tbtn.on, .iconbtn.on { border-color: var(--brass); color: var(--brass-strong); }
 /* The game's scrollbar (js/atlas/game-scroll.js, after ui/scrollbar_ui.c): the browser's own is hidden */
 .gs-scroller { scrollbar-width: none; }
@@ -296,7 +304,10 @@ body.screen-atlas .quest span { font-family: var(--font-display); }
 .welcome-head h1 { font-size: 15px; letter-spacing: .42em; color: #cdb98a; font-weight: 500; margin-top: 4px; }
 .welcome-head::after { content: ""; display: block; width: 320px; height: 1px; margin: 14px auto 0; background: linear-gradient(90deg, transparent, #c9a24a, transparent); }
 .hero { width: 100%; border-color: #5a4829; border-top-color: #c9a24a; border-radius: 10px; box-shadow: 0 24px 60px rgba(0,0,0,.55), inset 0 1px 0 rgba(255,215,120,.25); grid-template-columns: 1.25fr 1fr; background: linear-gradient(135deg, #2a2216, #1d170e); }
-.hero-map::after { background: linear-gradient(90deg, transparent 50%, #251e13 98%); }
+/* the screenshot fades out through a mask (eased, ending fully transparent) so the card background shows through and no edge is visible */
+.hero-map::after { display: none; }
+.hero-map { -webkit-mask-image: linear-gradient(90deg, #000 30%, rgba(0,0,0,.92) 42%, rgba(0,0,0,.72) 54%, rgba(0,0,0,.45) 66%, rgba(0,0,0,.2) 78%, rgba(0,0,0,.05) 90%, transparent 100%);
+  mask-image: linear-gradient(90deg, #000 30%, rgba(0,0,0,.92) 42%, rgba(0,0,0,.72) 54%, rgba(0,0,0,.45) 66%, rgba(0,0,0,.2) 78%, rgba(0,0,0,.05) 90%, transparent 100%); }
 .hero-body { justify-content: center; }
 .hero-body h2 { font-size: 34px !important; letter-spacing: .08em; background: linear-gradient(180deg, #fff2c4, #d9ac4a); -webkit-background-clip: text; background-clip: text; color: transparent !important; }
 .hero-body p { font-size: 14px; line-height: 1.6; color: #c2b38f !important; }

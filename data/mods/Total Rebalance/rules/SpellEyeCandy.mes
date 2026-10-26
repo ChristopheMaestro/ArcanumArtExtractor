@@ -1,0 +1,1685 @@
+//
+// Spell EyeCandy Effect List:
+//
+
+// Each Spell has 4 lines of information (currently). These are the Casting art,
+// the Projectile art (if it exists), the Destination (target) art, and 2ndary art
+// (Need to define that one better, I need to talk to Mike).
+
+// Each line consists of a sequence of descriptor fields.  These are:
+// Art: -- The Art # from the eyecandy.mes message file corresponding to this art
+// Palette: -- Which of the 4 palettes to use (currently 1-4, not 0-3)
+// Scale: -- What scale (25%-200%) to display the art at
+// Blend: -- Which of the various blending functions to use
+// Sound: -- The Sound #. This is the same as the number which is prepended to the .snd file in the sounds folder.
+// Flags: -- These specify various extra things:
+//     overlay_f    -- the art is a foreground overlay
+//     overlay_b    -- the art is a background overlay
+//     overlay_fb   -- the art has both foreground and background overlays
+//     underlay     -- the art is an underlay (flat under object)
+//     animates     -- the art should animate once
+//     anim_forever -- the art should continuously loop animating
+// Light: -- the art # from the art\light\light.mes file
+// Light Color: (red @ green @ blue)
+// Proj Speed: <value>
+
+// Note that there are 16 spell colleges with 80 base spells (player-castable)
+// as well as other, item-castable spells (these are hooked into magic-items)
+// at the end of the list.
+
+
+
+// College: [Conveyance] ------
+
+// 00 -- Disarm
+{0}{Art: 27, Palette: 1, Scale: 100%, Blend: Add, Sound: 9010, Flags: overlay_f | animates, Light: 1, Light Color: (187 @ 0 @ 215)}  //Cast
+{1}{Art: 11, Palette: 1, Scale: 50%, Blend: Add, Sound: 9014, Flags: overlay_f | animates, Light: 1, Light Color: (187 @ 0 @ 215)}   //Projectile
+{2}{Art: 15, Palette: 1, Scale: 100%, Blend: Add, Sound: Flags: overlay_fb | animates, Light: 1, Light Color: (187 @ 0 @ 215)}       //Destination
+{3}{}  //Secondary Destination
+{4}{}  //Secondary Casting
+
+// 01 -- Unlocking Cantrip
+{10}{Art: 10, Palette: 1, Scale: 75%, Blend: Add, Sound: 9020, Flags: overlay_fb | animates, Light: 1, Light Color: (187 @ 0 @ 215)}
+{11}{}
+{12}{Art: 16, Palette: 1, Scale: 100%, Blend: Add, Sound: 9025, Flags: overlay_f | animates, Light: 1, Light Color: (187 @ 0 @ 215)}
+{13}{}
+{14}{}
+
+// 02 -- Unseen Force
+{20}{Art: 27, Palette: 1, Scale: 100%, Blend: Add, Sound: 9010, Flags: overlay_f | animates, Light: 1, Light Color: (187 @ 0 @ 215)}
+{21}{Art: 11, Palette: 1, Scale: 50%, Blend: Add, Sound: 9014, Flags: overlay_f | animates, Light: 1, Light Color: (187 @ 0 @ 215)}
+{22}{Art: 15, Palette: 1, Scale: 100%, Blend: Add, Sound: 9015, Flags: overlay_fb | animates, Light: 1, Light Color: (187 @ 0 @ 215)}
+{23}{}
+{24}{}
+
+// 03 -- Spacial Distortion
+{30}{Art: 10, Palette: 1, Scale: 100%, Blend: Add, Sound: 9040, Flags: overlay_fb | animates, Light: 1, Light Color: (187 @ 0 @ 215)}
+{31}{}
+{32}{Art: 22, Palette: 1, Scale: 100%, Blend: Add, Sound: 9045, Flags: overlay_f | animates, Light: 1, Light Color: (187 @ 0 @ 215)}
+{33}{}
+{34}{}
+
+// 04 -- Teleportation
+{40}{Art: 25, Palette: 1, Scale: 100%, Blend: Add, Sound: 9053, Flags: overlay_fb | animates, Light: 1, Light Color: (187 @ 0 @ 215)}
+{41}{}
+{42}{Art: 25, Palette: 1, Scale: 100%, Blend: Add, Sound: 9053, Flags: overlay_fb | animates, Light: 1, Light Color: (187 @ 0 @ 215)}
+{43}{}
+{44}{}
+
+
+// College: [Divination] ------
+
+// 05 -- Sense Magic
+{50}{Art: 28, Palette: 1, Scale: 75%, Blend: Add, Sound: 10010, Flags: overlay_f | animates, Light: 1, Light Color: (150 @ 150 @ 150)}
+{51}{}
+{52}{}
+{53}{}
+{54}{}
+
+// 06 -- See Contents
+{60}{Art: 28, Palette: 1, Scale: 75%, Blend: Add, Sound: 10020, Flags: overlay_f | animates, Light: 1, Light Color: (150 @ 150 @ 150)}
+{61}{}
+{62}{Art: 35, Palette: 1, Scale: 100%, Blend: Add, Flags: underlay | animates, Light: 1, Light Color: (150 @ 150 @ 150)}
+{63}{Art: 35, Palette: 1, Scale: 100%, Blend: Add, Flags: underlay | animates | anim_forever}
+{64}{}
+
+// 07 -- Read Aura
+{70}{Art: 28, Palette: 1, Scale: 100%, Blend: Add, Sound: 10035, Flags: overlay_f | animates, Light: 1, Light Color: (150 @ 150 @ 150)}
+{71}{}
+{72}{}
+{73}{}
+{74}{}
+
+// 08 -- Sense Hidden
+{80}{Art: 28, Palette: 1, Scale: 100%, Blend: Add, Sound: 10040, Flags: overlay_f | animates, Light: 1, Light Color: (150 @ 150 @ 150)}
+{81}{}
+{82}{Art: 41, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates, Light: 1, Light Color: (150 @ 150 @ 150)}
+{83}{}
+{84}{}
+
+// 09 -- Identification
+{90}{Art: 28, Palette: 1, Scale: 125%, Blend: Add, Sound: 10055, Flags: overlay_f | animates, Light: 1, Light Color: (150 @ 150 @ 150)}
+{91}{}
+{92}{}
+{93}{}
+{94}{}
+
+
+// College: [Air] ------
+
+// 10 -- Vitality of Air
+{100}{Art: 47, Palette: 1, Scale: 50%, Blend: Add, Sound: 11010, Flags: overlay_fb | animates, Light: 1, Light Color: (108 @ 238 @ 242)}
+{101}{}
+{102}{Art: 362, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates | anim_forever}
+{103}{}
+{104}{}
+
+// 11 -- Poison Vapours
+{110}{Art: 68, Palette: 1, Scale: 75%, Blend: Add, Sound: 11020, Flags: overlay_f | animates, Light: 1, Light Color: (108 @ 238 @ 242)}
+{111}{}
+{112}{Art: 55, Palette: 3, Scale: 100%, Blend: Add, Sound: 11025, Flags: overlay_f | animates}  //Changed by Positiff
+{113}{Art: 55, Palette: 3, Scale: 100%, Blend: Add, Flags: overlay_f | animates | anim_forever}  //Changed by Positiff
+{114}{}
+
+// 12 -- Call Winds
+{120}{Art: 68, Palette: 1, Scale: 100%, Blend: Add, Sound: 11030, Flags: overlay_f | animates, Light: 1, Light Color: (108 @ 238 @ 242)}
+{121}{}
+{122}{Art: 48, Palette: 1, Scale: 100%, Blend: Add, Sound: 11035, Flags: overlay_fb | animates, Light: 1, Light Color: (108 @ 238 @ 242)}
+{123}{}
+{124}{}
+
+// 13 -- Body of Air
+{130}{Art:47, Palette: 1, Scale: 100%, Blend: Add, Sound: 11040, Flags: overlay_fb | animates, Light: 1, Light Color: (108 @ 238 @ 242)}
+{131}{}
+{132}{Art: 59, Palette: 1, Scale: 100%, Blend: Add, Sound: 11045, Flags: overlay_f | animates, Light: 1, Light Color: (108 @ 238 @ 242)}
+{133}{}
+{134}{}
+
+// 14 -- Call Air Elemental
+{140}{Art: 47, Palette: 1, Scale: 125%, Blend: Add, Sound: 11050, Flags: overlay_fb | animates, Light: 1, Light Color: (108 @ 238 @ 242)}
+{141}{}
+{142}{Art: 59, Palette: 1, Scale: 100%, Blend: Add, Sound: 11058, Flags: overlay_f | animates, Light: 1, Light Color: (108 @ 238 @ 242)}
+{143}{}
+{144}{}
+
+
+// College: [Earth] ------
+
+// 15 -- Strength of Earth
+{150}{Art: 69, Palette: 1, Scale: 75%, Blend: Add, Sound: 12010, Flags: overlay_fb | animates, Light: 1, Light Color: (201 @ 164 @ 64)}
+{151}{}
+{152}{Art: 363, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates | anim_forever}
+{153}{}
+{154}{}
+
+// 16 -- Stone Throw
+{160}{Art: 90, Palette: 1, Scale: 75%, Blend: Add, Sound: 12020, Flags: overlay_f | animates, Light: 1, Light Color: (201 @ 164 @ 64)}
+{161}{Art: 70, Palette: 1, Scale: 75%, Blend: Add, Sound: 12024, Flags: overlay_f | animates, Light: 1, Light Color: (201 @ 164 @ 64)}
+{162}{Art: 74, Palette: 1, Scale: 100%, Blend: None, Sound: 12025, Flags: overlay_f | animates, Light: 1, Light Color: (201 @ 164 @ 64)}
+{163}{}
+{164}{}
+
+// 17 -- Pass Through Wall (Made by Positiff)
+{170}{Art: 90, Palette: 1, Scale: 100%, Blend: Add, Sound: 12035, Flags: overlay_f | animates, Light: 1, Light Color: (201 @ 164 @ 64)}  //Changed by Positiff
+{171}{}
+{172}{Art: 78, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates, Light: 1, Light Color: (0 @ 96 @ 204)}  //Added by Positiff
+{173}{}
+{174}{}
+
+// 18 -- Body of Stone
+{180}{Art: 69, Palette: 1, Scale: 100%, Blend: Add, Sound: 12040, Flags: overlay_fb | animates, Light: 1, Light Color: (201 @ 164 @ 64)}
+{181}{}
+{182}{Art: 85, Palette: 1, Scale: 100%, Blend: Add, Sound: 12045, Flags: overlay_fb | animates, Light: 1, Light Color: (201 @ 164 @ 64)}
+{183}{}
+{184}{}
+
+// 19 -- Call Earth Elemental
+{190}{Art: 69, Palette: 1, Scale: 125%, Blend: Add, Sound: 12050, Flags: overlay_fb | animates, Light: 1, Light Color: (201 @ 164 @ 64)}
+{191}{}
+{192}{Art: 85, Palette: 1, Scale: 100%, Blend: Add, Sound: 12055, Flags: overlay_fb | animates, Light: 1, Light Color: (201 @ 164 @ 64)}
+{193}{}
+{194}{}
+
+
+// College: [Fire] ------
+
+// 20 -- Agility of Fire
+{200}{Art: 91, Palette: 1, Scale: 75%, Blend: Add, Sound: 13010, Flags: overlay_fb | animates, Light: 1, Light Color: (242 @ 165 @ 0)}
+{201}{}
+{202}{Art: 364, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates | anim_forever}
+{203}{}
+{204}{}
+
+// 21 -- Wall of Fire
+{210}{Art: 114, Palette: 1, Scale: 75%, Blend: Add, Sound: 13020, Flags: overlay_f | animates, Light: 1, Light Color: (242 @ 165 @ 0)}
+{211}{}
+{212}{Art: 95, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_fb | animates, Light: 3, Light Color: (242 @ 165 @ 0)}  //Ultimate Nightmare Mod (Changed by Positiff)
+{213}{Art: 451, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates | anim_forever, Light: 3, Light Color: (242 @ 165 @ 0)}  //Ultimate Nightmare Mod (Changed by Positiff)
+{214}{}
+
+// 22 -- Fireflash
+{220}{Art: 114, Palette: 1, Scale: 100%, Blend: Add, Sound: 13030, Flags: overlay_f | animates, Light: 2, Light Color: (242 @ 165 @ 0)}  //Changed by Positiff
+{221}{Art: 99, Palette: 1, Scale: 100%, Blend: Add, Sound: 13034, Flags: overlay_f | animates, Light: 2, Light Color: (242 @ 165 @ 0), Proj Speed: 4}  //Changed by Positiff
+{222}{Art: 98, Palette: 1, Scale: 100%, Blend: Add, Sound: 13035, Flags: overlay_f | animates, Light: 2, Light Color: (242 @ 165 @ 0)}  //Changed by Positiff
+{223}{Art: 349, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates}  //Smoke Effect: Note that this is used from code in several places, so if this changes, need to change there TOO!
+{224}{}
+
+// 23 -- Body of Fire
+{230}{Art: 91, Palette: 1, Scale: 125%, Blend: Add, Sound: 13040, Flags: overlay_fb | animates, Light: 1, Light Color: (242 @ 165 @ 0)}
+{231}{}
+{232}{Art: 105, Palette: 1, Scale: 100%, Blend: Add, Sound: 13045, Flags: overlay_f | animates, Light: 1, Light Color: (242 @ 165 @ 0)}
+{233}{Art: 451, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates | anim_forever, Light: 3, Light Color: (242 @ 165 @ 0)}  //Ultimate Nightmare Mod (Changed by Positiff)
+{234}{}
+
+// 24 -- Call Fire Elemental
+{240}{Art: 91, Palette: 1, Scale: 150%, Blend: Add, Sound: 13050, Flags: overlay_fb | animates, Light: 1, Light Color: (242 @ 165 @ 0)}
+{241}{}
+{242}{Art: 105, Palette: 1, Scale: 100%, Blend: Add, Sound: 13055, Flags: overlay_f | animates, Light: 1, Light Color: (242 @ 165 @ 0)}
+{243}{}
+{244}{}
+
+
+// College: [Water] ------
+
+// 25 -- Purity of Water
+{250}{Art: 115, Palette: 1, Scale: 75%, Blend: Add, Sound: 14010, Flags: overlay_fb | animates, Light: 1, Light Color: (0 @ 96 @ 204)}
+{251}{}
+{252}{Art: 365, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates | anim_forever}
+{253}{}
+{254}{}
+
+// 26 -- Call Fog
+{260}{Art: 135, Palette: 1, Scale: 75%, Blend: Add, Sound: 14020, Flags: overlay_f | animates, Light: 1, Light Color: (0 @ 96 @ 204)}
+{261}{}
+{262}{Art: 116, Palette: 1, Scale: 100%, Blend: Add, Sound: 14025, Flags: overlay_f | animates, Light: 1, Light Color: (0 @ 96 @ 204)}
+{263}{Art: 117, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates | anim_forever, Light: 1, Light Color: (0 @ 96 @ 204)}
+{264}{}
+
+// 27 -- Squall of Ice
+{270}{Art: 135, Palette: 1, Scale: 100%, Blend: Add, Sound: 14030, Flags: overlay_f | animates, Light: 1, Light Color: (0 @ 96 @ 204)}
+{271}{}
+{272}{Art: 123, Palette: 1, Scale: 100%, Blend: Add, Sound: 14035, Flags: overlay_f | animates, Light: 1, Light Color: (0 @ 96 @ 204)}
+{273}{Art: 124, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates | anim_forever, Light: 1, Light Color: (0 @ 96 @ 204)}
+{274}{}
+
+// 28 -- Body of Water
+{280}{Art: 115, Palette: 1, Scale: 100%, Blend: Add, Sound: 14040, Flags: overlay_fb | animates, Light: 1, Light Color: (0 @ 96 @ 204)}
+{281}{}
+{282}{Art: 126, Palette: 1, Scale: 100%, Blend: Add, Sound: 14045, Flags: overlay_f | animates, Light: 1, Light Color: (0 @ 96 @ 204)}
+{283}{}
+{284}{}
+
+// 29 -- Call Water Elemental
+{290}{Art: 115, Palette: 1, Scale: 125%, Blend: Add, Sound: 14050, Flags: overlay_fb | animates, Light: 1, Light Color: (0 @ 96 @ 204)}
+{291}{}
+{292}{Art: 126, Palette: 1, Scale: 100%, Blend: Add, Sound: 14055, Flags: overlay_f | animates, Light: 1, Light Color: (0 @ 96 @ 204)}
+{293}{Art: 9, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates, Light: 1, Light Color: (0 @ 96 @ 204)}
+{294}{}
+
+
+// College: [Force] ------
+
+// 30 -- Shield of Protection
+{300}{Art: 159, Palette: 1, Scale: 75%, Blend: Add, Sound: 15010, Flags: overlay_f | animates, Light: 1}
+{301}{}
+{302}{Art: 137, Palette: 1, Scale: 100%, Blend: Add, Sound: 15015, Flags: overlay_f | animates, Light: 1}
+{303}{Art: 138, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates | anim_forever}
+{304}{}
+{305}{Art: 139, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates}  //Changed by Positiff
+
+// 31 -- Jolt
+{310}{Art: 159, Palette: 1, Scale: 75%, Blend: Add, Sound: 15020, Flags: overlay_f | animates, Light: 1}
+{311}{}
+{312}{Art: 141, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_fb | animates, Light: 1}
+{313}{Art: 349, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates}
+{314}{}
+
+// 32 -- Wall of Force
+{320}{Art: 159, Palette: 1, Scale: 100%, Blend: Add, Sound: 15030, Flags: overlay_f | animates, Light: 1}
+{321}{}
+{322}{Art: 143, Palette: 1, Scale: 100%, Blend: Add, Sound: 15035,  Flags: overlay_f | animates, Light: 2, Light Color: (255 @ 255 @ 255)}
+{323}{Art: 144, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates | anim_forever, Light: 2, Light Color: (255 @ 255 @ 255)}
+{324}{}
+
+// 33 -- Bolt of Lightning
+{330}{Art: 159, Palette: 1, Scale: 125%, Blend: Add, Sound: 15040, Flags: overlay_f | animates, Light: 1}
+{331}{Art: 146, Palette: 1, Scale: 100%, Blend: Add, Sound: 15044, Flags: overlay_f | animates, Light: 1}
+{332}{Art: 150, Palette: 1, Scale: 100%, Blend: Add, Sound: 15045, Flags: overlay_fb | animates, Light: 8}
+{333}{Art: 349, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates}
+{334}{}
+
+// 34 -- Disintegrate
+{340}{Art: 136, Palette: 1, Scale: 125%, Blend: Add, Sound: 15050, Flags: overlay_fb | animates, Light: 1}
+{341}{Art: 154, Palette: 1, Scale: 100%, Blend: Add, Sound: 15054, Flags: overlay_f | animates, Light: 8}
+{342}{Art: 158, Palette: 1, Scale: 100%, Blend: Add, Sound: 15055, Flags: overlay_f | animates, Light: 8}
+{343}{Art: 432, Palette: 1, Scale: 100%, Blend: Add, Sound: 21055, Flags: overlay_f | animates}
+{344}{}
+
+
+// College: [Mental] ------
+
+// 35 -- Charm
+{350}{Art: 160, Palette: 1, Scale: 75%, Blend: Add, Sound: 16010, Flags: overlay_fb | animates, Light: 1, Light Color: (111 @ 181 @ 116)}
+{351}{}
+{352}{Art: 161, Palette: 1, Scale: 100%, Blend: Add, Sound: 16015, Flags: overlay_fb | animates, Light: 1, Light Color: (111 @ 181 @ 116)}
+{353}{Art: 161, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_fb | animates | anim_forever}
+{354}{}
+
+// 36 -- Stun
+{360}{Art: 175, Palette: 1, Scale: 75%, Blend: Add, Sound: 16020, Flags: overlay_f | animates, Light: 1, Light Color: (111 @ 181 @ 116)}
+{361}{}
+{362}{Art: 164, Palette: 1, Scale: 100%, Blend: Add, Sound: 16025, Flags: overlay_fb | animates, Light: 1, Light Color: (111 @ 181 @ 116)}
+{363}{}
+{364}{}
+
+// 37 -- Drain Will (WAS Stupefy)
+{370}{Art: 175, Palette: 1, Scale: 100%, Blend: Add, Sound: 16030, Flags: overlay_f | animates, Light: 1, Light Color: (111 @ 181 @ 116)}
+{371}{}
+{372}{Art: 167, Palette: 1, Scale: 100%, Blend: Add, Sound: 16035, Flags: overlay_fb | animates, Light: 1, Light Color: (111 @ 181 @ 116)}
+{373}{}
+{374}{}
+
+// 38 -- Nightmare
+{380}{Art: 160, Palette: 1, Scale: 100%, Blend: Add, Sound: 16040, Flags: overlay_fb | animates, Light: 1, Light Color: (111 @ 181 @ 116)}
+{381}{}
+{382}{Art: 170, Palette: 1, Scale: 100%, Blend: Add, Sound: 16045, Flags: overlay_fb | animates, Light: 1, Light Color: (111 @ 181 @ 116)}
+{383}{}
+{384}{}
+
+// 39 -- Dominate Will
+{390}{Art: 160, Palette: 1, Scale: 125%, Blend: Add, Sound: 16050, Flags: overlay_fb | animates, Light: 1, Light Color: (111 @ 181 @ 116)}
+{391}{}
+{392}{Art: 173, Palette: 1, Scale: 100%, Blend: Add, Sound: 16055, Flags: overlay_fb | animates, Light: 1, Light Color: (111 @ 181 @ 116)}
+{393}{Art: 174, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_fb | animates | anim_forever}
+{394}{}
+
+
+// College: [Meta] ------
+
+// 40 -- Resist Magic
+{400}{Art: 176, Palette: 1, Scale: 50%, Blend: Add, Sound: 17010, Flags: overlay_fb | animates, Light: 1, Light Color: (255 @ 141 @ 241)}
+{401}{}
+{402}{Art: 177, Palette: 1, Scale: 100%, Blend: Add, Sound: 17015, Flags: overlay_fb | animates, Light: 1, Light Color: (255 @ 141 @ 241)}
+{403}{Art: 178, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates | anim_forever}
+{404}{}
+
+// 41 -- Disperse Magic
+{410}{Art: 176, Palette: 1, Scale: 50%, Blend: Add, Sound: 17020, Flags: overlay_fb | animates, Light: 1, Light Color: (255 @ 141 @ 241)}
+{411}{}
+{412}{Art: 180, Palette: 1, Scale: 100%, Blend: Add, Sound: 17025, Flags: overlay_fb | animates, Light: 1, Light Color: (255 @ 141 @ 241)}
+{413}{}
+{414}{}
+
+// 42 -- Dweomer Shield
+{420}{Art: 176, Palette: 1, Scale: 75%, Blend: Add, Sound: 17030, Flags: overlay_fb | animates, Light: 1, Light Color: (255 @ 141 @ 241)}
+{421}{}
+{422}{Art: 183, Palette: 1, Scale: 100%, Blend: Add, Sound: 17035, Flags: overlay_fb | animates, Light: 1, Light Color: (255 @ 141 @ 241)}
+{423}{Art: 184, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates | anim_forever}
+{424}{}
+
+// 43 --  Bonds of Force
+{430}{Art: 176, Palette: 1, Scale: 75%, Blend: Add, Sound: 17040, Flags: overlay_fb | animates, Light: 1, Light Color: (255 @ 141 @ 241)}
+{431}{}
+{432}{Art: 191, Palette: 1, Scale: 100%, Blend: Add, Sound: 17045, Flags: overlay_f | animates, Light: 1, Light Color: (255 @ 141 @ 241)}
+{433}{Art: 192, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates | anim_forever}
+{434}{}
+
+// 44 -- Reflection Shield
+{440}{Art: 176, Palette: 1, Scale: 100%, Blend: Add, Sound: 17050, Flags: overlay_fb | animates, Light: 1, Light Color: (255 @ 141 @ 241)}
+{441}{}
+{442}{Art: 187, Palette: 1, Scale: 100%, Blend: Add, Sound: 17055, Flags: overlay_fb | animates, Light: 1, Light Color: (255 @ 141 @ 241)}
+{443}{Art: 188, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_fb | animates | anim_forever}
+{444}{}
+
+
+// College: [Morph] ------
+
+// 45 -- Hardened Hands
+{450}{Art: 195, Palette: 1, Scale: 75%, Blend: Add, Sound: 18010, Flags: overlay_fb | animates, Light: 1, Light Color: (150 @ 150 @ 150)}
+{451}{}
+{452}{}
+{453}{}
+{454}{}
+
+// 46 -- Weaken
+{460}{Art: 195, Palette: 1, Scale: 75%, Blend: Add, Sound: 18020, Flags: overlay_fb | animates, Light: 1, Light Color: (150 @ 150 @ 150)}
+{461}{}
+{462}{Art: 196, Palette: 1, Scale: 100%, Blend: Add, Sound: 18025, Flags: overlay_fb | animates, Light: 1, Light Color: (150 @ 150 @ 150)}
+{463}{Art: 196, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_fb | animates | anim_forever}
+{464}{}
+
+// 47 -- Flesh to Stone (Moved by Positiff)
+{470}{Art: 195, Palette: 1, Scale: 100%, Blend: Add, Sound: 18030, Flags: overlay_fb | animates, Light: 1, Light Color: (150 @ 150 @ 150)}
+{471}{}
+{472}{Art: 202, Palette: 1, Scale: 100%, Blend: Add, Sound: 18035, Flags: overlay_f | animates, Light: 1, Light Color: (150 @ 150 @ 150)}
+{473}{}
+{474}{}
+
+// 48 -- Shrink (Moved by Positiff)
+{480}{Art: 195, Palette: 1, Scale: 100%, Blend: Add, Sound: 18040, Flags: overlay_fb | animates, Light: 1, Light Color: (150 @ 150 @ 150)}
+{481}{}
+{482}{Art: 205, Palette: 1, Scale: 100%, Blend: Add, Sound: 18045, Flags: overlay_f | animates, Light: 1, Light Color: (150 @ 150 @ 150)}
+{483}{}
+{484}{}
+
+// 49 -- Polymorph
+{490}{Art: 195, Palette: 1, Scale: 125%, Blend: Add, Sound: 18050, Flags: overlay_fb | animates, Light: 1, Light Color: (150 @ 150 @ 150)}
+{491}{}
+{492}{Art: 205, Palette: 1, Scale: 100%, Blend: Add, Sound: 18055, Flags: overlay_f | animates, Light: 1, Light Color: (150 @ 150 @ 150)}
+{493}{}
+{494}{}
+
+
+// College: [Nature] ------
+
+// 50 -- Charm Beast
+{500}{Art: 211, Palette: 1, Scale: 75%, Blend: Add, Sound: 19020, Flags: overlay_fb | animates, Light: 1, Light Color: (0 @ 182 @ 25)}
+{501}{}
+{502}{Art: 215, Palette: 1, Scale: 100%, Blend: Add, Sound: 19025, Flags: overlay_f | animates, Light: 1, Light Color: (0 @ 182 @ 25)}
+{503}{}
+{504}{}
+
+// 51 -- Entangle
+{510}{Art: 234, Palette: 1, Scale: 100%, Blend: Add, Sound: 19010, Flags: overlay_f | animates, Light: 1, Light Color: (0 @ 182 @ 25)}
+{511}{}
+{512}{Art: 212, Palette: 1, Scale: 100%, Blend: Add, Sound: 19015, Flags: overlay_fb | animates, Light: 1, Light Color: (0 @ 182 @ 25)}
+{513}{Art: 213, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_fb | animates | anim_forever, Light: 1, Light Color: (0 @ 182 @ 25)}
+{514}{}
+
+// 52 -- Control Beast
+{520}{Art: 211, Palette: 1, Scale: 100%, Blend: Add, Sound: 19030, Flags: overlay_fb | animates, Light: 1, Light Color: (0 @ 182 @ 25)}
+{521}{}
+{522}{Art: 218, Palette: 1, Scale: 100%, Blend: Add, Sound: 19035, Flags: overlay_f | animates, Light: 1, Light Color: (0 @ 182 @ 25)}
+{523}{Art: 219, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates | anim_forever, Light: 1, Light Color: (0 @ 182 @ 25)}
+{524}{}
+
+// 53 -- Succor Beast
+{530}{Art: 211, Palette: 1, Scale: 100%, Blend: Add, Sound: 19040, Flags: overlay_fb | animates, Light: 1, Light Color: (0 @ 182 @ 25)}
+{531}{}
+{532}{Art: 211, Palette: 1, Scale: 50%, Blend: Add, Sound: 19055, Flags: overlay_fb | animates, Light: 1, Light Color: (0 @ 182 @ 25)}
+{533}{}
+{534}{}
+
+// 54 -- Regenerate
+{540}{Art: 211, Palette: 1, Scale: 125%, Blend: Add, Sound: 19050, Flags: overlay_fb | animates, Light: 1, Light Color: (0 @ 182 @ 25)}
+{541}{}
+{542}{Art: 221, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates, Light: 1, Light Color: (0 @ 182 @ 25)}
+{543}{Art: 222, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates | anim_forever, Light: 1, Light Color: (0 @ 182 @ 25)}
+{544}{}
+
+
+// College: [Necromantic (Evil)] ------
+
+// 55 -- Harm
+{550}{Art: 250, Palette: 0, Scale: 75%, Blend: Add, Sound: 20010, Flags: overlay_f | animates, Light: 1, Light Color: (255 @ 50 @ 50)}
+{551}{}
+{552}{Art: 236, Palette: 1, Scale: 100%, Blend: Add, Sound: 20015, Flags: overlay_fb | animates, Light: 1, Light Color: (255 @ 50 @ 50)}
+{553}{}
+{554}{}
+
+// 56 -- Conjure Spirit
+{560}{Art: 235, Palette: 0, Scale: 100%, Blend: Add, Sound: 20030, Flags: overlay_fb | animates, Light: 1, Light Color: (255 @ 50 @ 50)}
+{561}{}
+{562}{Art: 242, Palette: 1, Scale: 100%, Blend: Add, Sound: 20035, Flags: overlay_f | animates, Light: 1, Light Color: (255 @ 50 @ 50)}
+{563}{Art: 243, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates | anim_forever, Light: 1, Light Color: (255 @ 50 @ 50)}
+{564}{}
+
+// 56 -- Summon Undead
+{570}{Art: 235, Palette: 0, Scale: 100%, Blend: Add, Sound: 20040, Flags: overlay_fb | animates, Light: 1, Light Color: (255 @ 50 @ 50)}
+{571}{}
+{572}{Art: 246, Palette: 1, Scale: 100%, Blend: Add, Sound: 20045, Flags: overlay_f | animates, Light: 1, Light Color: (255 @ 50 @ 50)}
+{573}{}
+{574}{}
+
+// 58 -- Create Undead
+{580}{Art: 235, Palette: 0, Scale: 100%, Blend: Add, Sound: 20040, Flags: overlay_fb | animates, Light: 1, Light Color: (255 @ 50 @ 50)}
+{581}{}
+{582}{Art: 246, Palette: 1, Scale: 100%, Blend: Add, Sound: 20045, Flags: overlay_f | animates, Light: 1, Light Color: (255 @ 50 @ 50)}
+{583}{}
+{584}{}
+
+// 59 -- Quench Life
+{590}{Art: 235, Palette: 0, Scale: 125%, Blend: Add, Sound: 20050, Flags: overlay_fb | animates, Light: 1, Light Color: (255 @ 50 @ 50)}
+{591}{}
+{592}{Art: 248, Palette: 1, Scale: 100%, Blend: Add, Sound: 20055, Flags: overlay_fb | animates, Light: 1, Light Color: (255 @ 50 @ 50)}
+{593}{}
+{594}{}
+
+
+// College: [Necromantic (Good)] ------
+
+// 60 -- Minor Healing
+{600}{Art: 264, Palette: 1, Scale: 75%, Blend: Add, Sound: 21010, Flags: overlay_f | animates, Light: 1, Light Color: (27 @ 183 @ 255)}
+{601}{}
+{602}{Art: 252, Palette: 1, Scale: 100%, Blend: Add, Sound: 21015, Flags: overlay_f | animates, Light: 1, Light Color: (27 @ 183 @ 255)}
+{603}{}
+{604}{}
+
+// 61 -- Halt Poison
+{610}{Art: 264, Palette: 1, Scale: 100%, Blend: Add, Sound: 21020, Flags: overlay_f | animates, Light: 1, Light Color: (27 @ 183 @ 255)}
+{611}{}
+{612}{Art: 255, Palette: 1, Scale: 100%, Blend: Add, Sound: 21025, Flags: overlay_fb | animates, Light:3, Light Color: (27 @ 183 @ 255)}
+{613}{}
+{614}{}
+
+// 62 -- Major Healing
+{620}{Art: 235, Palette: 1, Scale: 100%, Blend: Add, Sound: 21030, Flags: overlay_fb | animates, Light: 1, Light Color: (27 @ 183 @ 255)}
+{621}{}
+{622}{Art: 258, Palette: 1, Scale: 100%, Blend: Add, Sound: 21045, Flags: overlay_fb | animates, Light: 1, Light Color: (27 @ 183 @ 255)}
+{623}{}
+{624}{}
+
+// 63 -- Sanctuary
+{630}{Art: 235, Palette: 1, Scale: 100%, Blend: Add, Sound:21040, Flags: overlay_fb | animates, Light: 1, Light Color: (27 @ 183 @ 255)}
+{631}{}
+{632}{Art: 259, Palette: 1, Scale: 100%, Blend: Add, Sound: 21035, Flags: overlay_fb | animates, Light: 1, Light Color: (27 @ 183 @ 255)}
+//-633--Art: 260, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_fb | animates | anim_forever, Light: 1, Light Color: (27 @ 183 @ 255)-
+{633}{Art: 260, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_fb | animates | anim_forever, Light: 1, Light Color: (27 @ 183 @ 255)}
+{634}{}
+
+// 64 -- Ressurrect
+{640}{Art: 235, Palette: 1, Scale: 125%, Blend: Add, Sound: 21050, Flags: overlay_fb | animates, Light: 1, Light Color: (27 @ 183 @ 255)}
+{641}{}
+{642}{Art: 263, Palette: 1, Scale: 100%, Blend: Add, Sound: 21055, Flags: overlay_fb | animates, Light: 1, Light Color: (27 @ 183 @ 255)}
+// Note: This following line is also used for *ANY* resist/effect (including Magic/Tech resists)
+//-643--Art: 349, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates-
+{643}{Art: 432, Palette: 1, Scale: 100%, Blend: Add, Sound: 21055, Flags: overlay_f | animates}
+{644}{}
+
+
+// College: [Phantasm] ------
+
+// 65 -- Illuminate
+{650}{Art: 265, Palette: 1, Scale: 75%, Blend: Add, Sound: 22010, Flags: overlay_fb | animates, Light: 1, Light Color: (166 @ 0 @ 176)}
+{651}{}
+{652}{Art: 266, Palette: 1, Scale: 100%, Blend: Add, Sound: 22015, Flags: overlay_f | animates, Light: 4, Light Color: (166 @ 0 @ 176)}
+{653}{Art: 266, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates | anim_forever, Light: 3, Light Color: (226 @ 60 @ 236)}  //Changed by Positiff
+{654}{}
+
+// 66 -- Flash
+{660}{Art: 265, Palette: 1, Scale: 75%, Blend: Add, Sound: 22020, Flags: overlay_fb | animates, Light: 1, Light Color: (166 @ 0 @ 176)}
+{661}{}
+{662}{Art: 290, Palette: 1, Scale: 100%, Blend: Add, Sound: 22055, Flags: overlay_f | animates, Light: 1, Light Color: (166 @ 0 @ 176)}  //Changed by Positiff
+{663}{}
+{664}{}
+
+// 67 -- Blur Sight
+{670}{Art: 265, Palette: 1, Scale: 100%, Blend: Add, Sound: 22030, Flags: overlay_fb | animates, Light: 1, Light Color: (166 @ 0 @ 176)}
+{671}{}
+{672}{Art: 276, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_fb | animates, Light: 1, Light Color: (166 @ 0 @ 176)}
+{673}{Art: 276, Palette: 1, Scale: 75%, Blend: Add, Flags: overlay_fb | animates | anim_forever}  //Changed by Positiff
+{674}{}
+
+// 68 -- Illusion
+{680}{Art: 265, Palette: 1, Scale: 100%, Blend: Add, Sound: 22040, Flags: overlay_fb | animates, Light: 1, Light Color: (166 @ 0 @ 176)}
+{681}{}
+{682}{Art: 283, Palette: 1, Scale: 100%, Blend: Add, Sound: 22045, Flags: overlay_f | animates, Light: 1, Light Color: (166 @ 0 @ 176)}
+{683}{}
+{684}{}
+
+// 69 -- Invisibility
+{690}{Art: 265, Palette: 1, Scale: 125%, Blend: Add, Sound: 22050, Flags: overlay_fb | animates, Light: 1, Light Color: (166 @ 0 @ 176)}
+{691}{}
+{692}{}
+{693}{}
+{694}{}
+
+
+// College: [Summon] ------
+
+// 70 -- Plague of Insects
+{700}{Art: 328, Palette: 1, Scale: 100%, Blend: Add, Sound: 23010, Flags: overlay_f | animates, Light: 1, Light Color: (50 @ 50 @ 255)}
+{701}{}
+{702}{Art: 299, Palette: 1, Scale: 100%, Blend: Add, Sound: 23015, Flags: overlay_fb | animates, Light: 1, Light Color: (50 @ 50 @ 255)}
+{703}{Art: 300, Palette: 1, Scale: 100%, Blend: None, Flags: overlay_fb | animates | anim_forever}
+{704}{}
+
+// 71 -- Orcish Grunt
+{710}{Art: 293, Palette: 1, Scale: 75%, Blend: Add, Sound: 23020, Flags: overlay_fb | animates, Light: 1, Light Color: (50 @ 50 @ 255)}
+{711}{}
+{712}{Art: 306, Palette: 1, Scale: 100%, Blend: Add, Sound: 23025, Flags: overlay_fb | animates, Light: 1, Light Color: (50 @ 50 @ 255)}
+{713}{}
+{714}{}
+
+// 72 -- Ogre Bandit
+{720}{Art: 293, Palette: 1, Scale: 100%, Blend: Add, Sound: 23030, Flags: overlay_fb | animates, Light: 1, Light Color: (50 @ 50 @ 255)}
+{721}{}
+{722}{Art: 313, Palette: 1, Scale: 100%, Blend: Add, Sound: 23035, Flags: overlay_fb | animates, Light:3, Light Color: (50 @ 50 @ 255)}
+{723}{}
+{724}{}
+
+// 73 -- Familiar (Moved by Positiff)
+{730}{Art: 293, Palette: 1, Scale: 125%, Blend: Add, Sound: 23050, Flags: overlay_fb | animates, Light:3, Light Color: (50 @ 50 @ 255)}
+{731}{}
+{732}{Art: 320, Palette: 1, Scale: 100%, Blend: Add, Sound: 23055, Flags: overlay_fb | animates, Light:3, Light Color: (50 @ 50 @ 255)}
+{733}{}
+{734}{}
+
+// 74 -- Ogre Destroyer (Moved by Positiff)
+{740}{Art: 293, Palette: 1, Scale: 100%, Blend: Add, Sound: 23040, Flags: overlay_fb | animates, Light: 1, Light Color: (50 @ 50 @ 255)}
+{741}{}
+{742}{Art: 327, Palette: 1, Scale: 100%, Blend: Add, Sound: 23045, Flags: overlay_fb | animates, Light: 1, Light Color: (50 @ 50 @ 255)}
+{743}{}
+{744}{}
+
+
+// College: [Temporal] ------
+
+// 75 -- Magelock
+{750}{Art: 329, Palette: 1, Scale: 75%, Blend: Add, Sound: 24010, Flags: overlay_fb | animates, Light: 1, Light Color: (210 @ 199 @ 67)}
+{751}{}
+{752}{Art: 330, Palette: 1, Scale: 100%, Blend: Add, Sound: 24015, Flags: overlay_f | animates, Light: 1, Light Color: (210 @ 199 @ 67)}
+{753}{Art: 331, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates | anim_forever}
+{754}{}
+
+// 76 -- Hasten (Moved by Positiff)
+{760}{Art: 329, Palette: 1, Scale: 100%, Blend: Add, Sound: 24040, Flags: overlay_fb | animates, Light: 1, Light Color: (210 @ 199 @ 67)}
+{761}{}
+{762}{Art: 339, Palette: 1, Scale: 100%, Blend: Add, Sound: 24045, Flags: overlay_fb | animates, Light: 1, Light Color: (210 @ 199 @ 67)}
+{763}{Art: 340, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_fb | animates | anim_forever}
+{764}{}
+
+// 77 -- Deceleration (Moved by Positiff)
+{770}{Art: 329, Palette: 1, Scale: 75%, Blend: Add, Sound: 24020, Flags: overlay_fb | animates, Light: 1, Light Color: (210 @ 199 @ 67)}
+{771}{}
+{772}{Art: 333, Palette: 1, Scale: 100%, Blend: Add, Sound: 24025, Flags: overlay_fb | animates, Light: 1, Light Color: (210 @ 199 @ 67)}
+{773}{Art: 334, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_fb | animates | anim_forever}
+{774}{}
+
+// 78 -- Stasis
+{780}{Art: 329, Palette: 1, Scale: 100%, Blend: Add, Sound: 24030, Flags: overlay_fb | animates, Light: 1, Light Color: (210 @ 199 @ 67)}
+{781}{}
+{782}{Art: 336, Palette: 1, Scale: 100%, Blend: Add, Sound: 24035, Flags: overlay_fb | animates, Light: 1, Light Color: (210 @ 199 @ 67)}
+{783}{Art: 337, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_fb | animates | anim_forever}
+{784}{}
+
+// 79 -- Tempus Fugit
+{790}{Art: 329, Palette: 1, Scale: 125%, Blend: Add, Sound: 24050, Flags: overlay_fb | animates, Light: 1, Light Color: (210 @ 199 @ 67)}
+{791}{}
+{792}{Art: 343, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_fb | animates | anim_forever}
+{793}{Art: 343, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_fb | animates}
+{794}{}
+
+
+
+// Item-Only Spells
+
+// 80 -- Food: Alchohol (Positive Effect)  //Moved by Positiff
+{800}{}
+{801}{}
+{802}{}
+{803}{}
+{804}{}
+
+// 81 -- Food: Alchohol (Negative Effect)  //Moved by Positiff
+{810}{}
+{811}{}
+{812}{}
+{813}{}
+{814}{}
+
+// 82 -- Fire Shield
+{820}{}
+{821}{}
+{822}{}
+{823}{Art: 349, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates}
+{824}{}
+
+// 83 -- Shield
+{830}{}
+{831}{}
+{832}{Art: 137, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates, Light: 1}
+{833}{Art: 138, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates | anim_forever}
+{834}{}
+{835}{Art: 139, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates}
+
+// 84 -- Invisibility, Continuing
+{840}{Art: 9, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates}
+{841}{}
+{842}{Art: 9, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates}
+{843}{}
+{844}{}
+
+// 85 -- Demonic Armor: Base
+{850}{}
+{851}{}
+{852}{Art: 349, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates}
+{853}{}
+{854}{}
+
+// 86 -- Demonic Armor: Shield
+{860}{}
+{861}{}
+{862}{}
+{863}{Art: 349, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates}
+{864}{}
+
+// 87 -- Electrical Shield
+{870}{}
+{871}{}
+{872}{Art: 358, Palette: 1, Scale: 75%, Blend: Add, Sound: 15010, Flags: overlay_f | animates}  //Changed by Positiff
+{873}{}
+{874}{}
+
+// 88 -- SnakeForm
+{880}{}
+{881}{}
+{882}{Art: 205, Palette: 1, Scale: 100%, Blend: Add, Sound: 18050, Flags: overlay_f | animates, Light: 1, Light Color: (150 @ 150 @ 150)}
+{883}{}
+{884}{}
+
+// 89 -- Earthquake
+{890}{}
+{891}{}
+{892}{Art: 74, Palette: 1, Scale: 100%, Blend: None, Flags: overlay_f | animates, Light: 1, Light Color: (201 @ 164 @ 64)}
+{893}{}
+{894}{}
+
+// 90 -- Harm Undead
+{900}{}
+{901}{}
+{902}{Art: 236, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_fb | animates, Light: 1, Light Color: (255 @ 50 @ 50)}
+{903}{}
+{904}{}
+
+// 91 -- Item: Throwing Dagger  //Made by Positiff
+{910}{}
+{911}{}
+{912}{}
+{913}{}
+{914}{}
+
+// 92 -- Holy Smiting
+{920}{}
+{921}{}
+{922}{Art: 236, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_fb | animates, Light: 1, Light Color: (255 @ 50 @ 50)}
+{923}{}
+{924}{}
+
+// 93 -- Slaying Strength
+{930}{}
+{931}{}
+{932}{}
+{933}{}
+{934}{}
+
+// 94 -- Hammer of the Earth
+{940}{}
+{941}{}
+{942}{}
+{943}{}
+{944}{}
+
+// 95 -- Axe of the Winds
+{950}{}
+{951}{}
+{952}{}
+{953}{}
+{954}{}
+
+// 96 -- Dagger of Pain
+{960}{}
+{961}{}
+{962}{}
+{963}{}
+{964}{}
+
+// 97 -- Food: Bread  //Made by Positiff
+{970}{}
+{971}{}
+{972}{}
+{973}{}
+{974}{}
+
+// 98 -- Food: Water  //Made by Positiff
+{980}{}
+{981}{}
+{982}{}
+{983}{}
+{984}{}
+
+// 99 -- Food: Tobacco  //Made by Positiff
+{990}{}
+{991}{}
+{992}{}
+{993}{}
+{994}{}
+
+// 100 -- Chemistry: Cleaner  //Moved by Positiff
+{1000}{}
+{1001}{}
+{1002}{Art: 368, Palette: 0, Scale: 100%, Blend: Add, Sound: 24070, Flags: overlay_f | animates}  //Changed by Positiff
+{1003}{}
+{1004}{}
+
+// 101 -- Chemistry: Venom  //Moved by Positiff
+{1010}{}
+{1011}{}
+{1012}{Art: 368, Palette: 0, Scale: 100%, Blend: Add, Sound: 24070, Flags: overlay_f | animates}
+{1013}{}
+{1014}{}
+
+// 102 -- Chemistry: Poison  //Moved by Positiff
+{1020}{}
+{1021}{}
+{1022}{Art: 368, Palette: 0, Scale: 100%, Blend: Add, Sound: 24070, Flags: overlay_f | animates}
+{1023}{}
+{1024}{}
+
+// 103 -- Chemistry: Aqua Vitae  //Moved by Positiff
+{1030}{}
+{1031}{}
+{1032}{Art: 239, Palette: 1, Scale: 100%, Blend: Add, Sound: 24070, Flags: overlay_fb | animates, Light: 1, Light Color: (255 @ 50 @ 50)}
+{1033}{}
+{1034}{}
+
+// 104 -- Hammer Bash  //Made by Positiff
+{1040}{}
+{1041}{}
+{1042}{}
+{1043}{}
+{1044}{}
+
+// 105 -- Unrevivifiable Undead
+{1050}{}
+{1051}{}
+{1052}{}
+{1053}{}
+{1054}{}
+
+// 106 -- Area Fear
+{1060}{}
+{1061}{}
+{1062}{}
+{1063}{}
+{1064}{}
+
+// 107 -- Identification Scroll
+{1070}{}
+{1071}{}
+{1072}{}
+{1073}{}
+{1074}{}
+
+// 108 -- Tech: Boost Willpower
+{1080}{}
+{1081}{}
+{1082}{}
+{1083}{}
+{1084}{}
+
+// 109 -- Area Reanimate
+{1090}{}
+{1091}{}
+{1092}{}
+{1093}{}
+{1094}{}
+
+// 110 -- Wolf Form
+{1100}{}
+{1101}{}
+{1102}{}
+{1103}{}
+{1104}{}
+
+// 111 -- Returning
+{1110}{}
+{1111}{}
+{1112}{}
+{1113}{}
+{1114}{}
+
+// 112 -- Staff of the Necromancer
+{1120}{}
+{1121}{}
+{1122}{}
+{1123}{}
+{1124}{}
+
+// 113 -- Item: Perfume (Negative Effect)  //Made by Positiff
+{1130}{}
+{1131}{}
+{1132}{}
+{1133}{}
+{1134}{}
+
+// 114 -- Item: Perfume (Positive Effect)
+{1140}{}
+{1141}{}
+{1142}{}
+{1143}{}
+{1144}{}
+
+// 115 -- Heal Light (Will'O'Wisp)
+{1150}{}
+{1151}{}
+{1152}{}
+{1153}{}
+{1154}{}
+
+
+
+// NOTE NOTE NOTE!!!  PADS HAVE BEEN MOVED TO SCRIPTEYECANDY.MES!!!!
+
+// 116 -- Reserved for Pad Lighting1 for scripts
+{1160}{}
+//-1160--Art: 401, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates | anim_forever-
+{1161}{Art: 402, Palette: 1, Scale: 100%, Blend: Add, Flags: underlay | animates | anim_forever}
+{1162}{Art: 403, Palette: 1, Scale: 100%, Blend: Add, Flags: underlay | animates | anim_forever}
+{1163}{Art: 404, Palette: 1, Scale: 100%, Blend: Add, Flags: underlay | animates | anim_forever}
+{1164}{Art: 405, Palette: 1, Scale: 100%, Blend: Add, Flags: underlay | animates | anim_forever}
+
+// 117 -- Reserved for Pad Lighting2 for scripts
+{1170}{Art: 406, Palette: 1, Scale: 100%, Blend: Add, Flags: underlay | animates | anim_forever}
+{1171}{Art: 407, Palette: 1, Scale: 100%, Blend: Add, Flags: underlay | animates | anim_forever}
+{1172}{Art: 408, Palette: 1, Scale: 100%, Blend: Add, Flags: underlay | animates | anim_forever}
+{1173}{Art: 409, Palette: 1, Scale: 100%, Blend: Add, Flags: underlay | animates | anim_forever}
+{1174}{Art: 410, Palette: 1, Scale: 100%, Blend: Add, Flags: underlay | animates | anim_forever}
+
+// 118 -- Reserved for Pad Lighting3 for scripts
+{1180}{Art: 411, Palette: 1, Scale: 100%, Blend: Add, Flags: underlay | animates | anim_forever}
+{1181}{Art: 412, Palette: 1, Scale: 100%, Blend: Add, Flags: underlay | animates | anim_forever}
+{1182}{Art: 413, Palette: 1, Scale: 100%, Blend: Add, Flags: underlay | animates | anim_forever}
+{1183}{Art: 414, Palette: 1, Scale: 100%, Blend: Add, Flags: underlay | animates | anim_forever}
+{1184}{Art: 415, Palette: 1, Scale: 100%, Blend: Add, Flags: underlay | animates | anim_forever}
+
+// 119 -- Reserved for Pad Lighting4 for scripts
+{1190}{Art: 416, Palette: 1, Scale: 100%, Blend: Add, Flags: underlay | animates | anim_forever}
+{1191}{Art: 417, Palette: 1, Scale: 100%, Blend: Add, Flags: underlay | animates | anim_forever}
+{1192}{Art: 418, Palette: 1, Scale: 100%, Blend: Add, Flags: underlay | animates | anim_forever}
+{1193}{Art: 419, Palette: 1, Scale: 100%, Blend: Add, Flags: underlay | animates | anim_forever}
+{1194}{Art: 420, Palette: 1, Scale: 100%, Blend: Add, Flags: underlay | animates | anim_forever}
+
+// 120 -- MISC EFFECTS
+{1200}{Art: 377, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates, Light: 1, Light Color: (255 @ 255 @ 255)}  //Left Pillar
+{1201}{Art: 378, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates, Light: 1, Light Color: (255 @ 255 @ 255)}  //Right Pillar
+{1202}{Art: 379, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_fb | animates, Light: 1, Light Color: (187 @ 0 @ 215)}   //Teleport Effect
+{1203}{Art: 380, Palette: 1, Scale: 100%, Blend: None, Flags: overlay_f | animates}  //Chest Breaking
+{1204}{}
+
+// 121 -- SuperHeal (SuperHeal)
+{1210}{}
+{1211}{}
+{1212}{Art: 261, Palette: 1, Scale: 100%, Blend: Add, Sound: 21045, Flags: overlay_fb | animates, Light: 1, Light Color: (27 @ 183 @ 255)}
+{1213}{}
+{1214}{}
+//Art: 263, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_fb | animates, Light: 1, Light Color: (27 @ 183 @ 255)
+//Art: 349, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates
+
+// 122 -- Araya Projectile
+{1220}{Art: 90, Palette: 1, Scale: 75%, Blend: Add, Sound: 12020, Flags: overlay_f | animates, Light: 1, Light Color: (201 @ 164 @ 64)}
+// NOTE: Currently re-using Stone Throw missile art!
+{1221}{Art: 70, Palette: 1, Scale: 75%, Blend: Add, Flags: overlay_f | animates, Light: 1, Light Color: (201 @ 164 @ 64)}
+{1222}{Art: 74, Palette: 1, Scale: 100%, Blend: None, Flags: overlay_f | animates, Light: 1, Light Color: (201 @ 164 @ 64)}
+{1223}{}
+{1224}{}
+
+// 123 -- Summon Seether
+// NOTE: Currently re-using Summon Ogre Art!
+{1230}{Art: 293, Palette: 1, Scale: 100%, Blend: Add, Sound: 23030, Flags: overlay_fb | animates, Light: 1, Light Color: (50 @ 50 @ 255)}
+{1231}{}
+{1232}{Art: 313, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_fb | animates, Light:3, Light Color: (50 @ 50 @ 255)}
+{1233}{}
+{1234}{}
+
+// 124 -- Summon Were-Rat
+// NOTE: Currently re-using Summon Ogre Art!
+{1240}{Art: 293, Palette: 1, Scale: 100%, Blend: Add, Sound: 23030, Flags: overlay_fb | animates, Light: 1, Light Color: (50 @ 50 @ 255)}
+{1241}{}
+{1242}{Art: 313, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_fb | animates, Light:3, Light Color: (50 @ 50 @ 255)}
+{1243}{}
+{1244}{}
+
+// 125 -- Summon Wargun
+// NOTE: Currently re-using Summon Ogre Art!
+{1250}{Art: 293, Palette: 1, Scale: 100%, Blend: Add, Sound: 23030, Flags: overlay_fb | animates, Light: 1, Light Color: (50 @ 50 @ 255)}
+{1251}{}
+{1252}{Art: 313, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_fb | animates, Light:3, Light Color: (50 @ 50 @ 255)}
+{1253}{}
+{1254}{}
+
+// 126 -- Summon Baleful Hound
+// NOTE: Currently re-using Summon Ogre Art!
+{1260}{Art: 293, Palette: 1, Scale: 100%, Blend: Add, Sound: 23030, Flags: overlay_fb | animates, Light: 1, Light Color: (50 @ 50 @ 255)}
+{1261}{}
+{1262}{Art: 313, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_fb | animates, Light:3, Light Color: (50 @ 50 @ 255)}
+{1263}{}
+{1264}{}
+
+// 127 -- Flesh To Stone (Duration)
+{1270}{Art: 195, Palette: 1, Scale: 100%, Blend: Add, Sound: 18030, Flags: overlay_fb | animates, Light: 1, Light Color: (150 @ 150 @ 150)}
+{1271}{}
+{1272}{Art: 202, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates, Light: 1, Light Color: (150 @ 150 @ 150)}
+{1273}{}
+{1274}{}
+
+// 128 -- Slow Party
+// NOTE: This is re-using the Congeal Time Art!
+{1280}{}
+{1281}{}
+{1282}{Art: 333, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_fb | animates, Light: 1, Light Color: (210 @ 199 @ 67)}
+{1283}{Art: 334, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_fb | animates | anim_forever}
+{1284}{}
+
+// 129 -- Poison DOT
+// NOTE: This is re-using the Poison Art!
+{1290}{}
+{1291}{}
+{1292}{Art: 239, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_fb | animates, Light: 1, Light Color: (255 @ 50 @ 50)}
+{1293}{}
+{1294}{}
+
+// 130 -- Fatigue DOT
+// NOTE: This is re-using the Poison Art!
+{1300}{}
+{1301}{}
+{1302}{Art: 239, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_fb | animates, Light: 1, Light Color: (255 @ 50 @ 50)}
+{1303}{}
+{1304}{}
+
+// 131 -- Call Winds (All)
+// NOTE: This is re-using the Call-Winds Art!
+{1310}{}
+{1311}{}
+{1312}{Art: 48, Palette: 1, Scale: 100%, Blend: Add, Sound: 0011, Flags: overlay_fb | animates, Light: 1, Light Color: (108 @ 238 @ 242)}
+{1313}{}
+{1314}{}
+
+// 132 -- Unseen Force (All)
+// NOTE: This is re-using the Unseen Force Art!
+{1320}{}
+{1321}{}
+{1322}{Art: 15, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_fb | animates, Light: 1, Light Color: (187 @ 0 @ 215)}
+{1323}{}
+{1324}{}
+
+// 133 -- Stasis (Duration)
+// NOTE: This is re-using the Stasis Art!
+{1330}{}
+{1331}{}
+{1332}{Art: 336, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_fb | animates, Light: 1, Light Color: (210 @ 199 @ 67)}
+{1333}{Art: 337, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_fb | animates | anim_forever}
+{1334}{}
+
+// 134 -- Freeze
+{1340}{Art: 195, Palette: 1, Scale: 100%, Blend: Add, Sound: 18030, Flags: overlay_fb | animates, Light: 1, Light Color: (150 @ 150 @ 150)}
+{1341}{}
+{1342}{Art: 202, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates, Light: 1, Light Color: (150 @ 150 @ 150)}
+{1343}{}
+{1344}{}
+
+// 135 -- Summon Undead
+// NOTE: Currently re-using Summon Ogre Art!
+{1350}{Art: 293, Palette: 1, Scale: 100%, Blend: Add, Sound: 23030, Flags: overlay_fb | animates, Light: 1, Light Color: (50 @ 50 @ 255)}
+{1351}{}
+{1352}{Art: 313, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_fb | animates, Light:3, Light Color: (50 @ 50 @ 255)}
+{1353}{}
+{1354}{}
+
+// 136 -- Conjure Spirit II Tulla Pool Guy
+{1360}{}
+{1361}{}
+{1362}{Art: 384, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates, Light: 1, Light Color: (255 @ 50 @ 50)}
+{1363}{Art: 385, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates | anim_forever, Light: 1, Light Color: (255 @ 50 @ 50)}
+{1364}{}
+
+// 137 -- Heal Potion
+{1370}{}
+{1371}{}
+{1372}{}
+{1373}{}
+{1374}{}
+
+// 138 -- Haste Boots
+{1380}{}
+{1381}{}
+{1382}{}
+{1383}{}
+{1384}{}
+
+// 139 -- MI # 59
+{1390}{}
+{1391}{}
+{1392}{}
+{1393}{}
+{1394}{}
+
+
+
+//
+// Tech Items:
+//
+
+
+// 140 -- Tech: Bear Trap
+{1400}{}
+{1401}{}
+{1402}{Art: 371, Palette: 1, Scale: 100%, Blend: None, Sound: 24065, Flags: overlay_fb | animates}
+{1403}{Art: 372, Palette: 1, Scale: 100%, Blend: None, Flags: overlay_fb | animates | anim_forever}
+{1404}{}
+
+// 141 -- Tech: Brain Builder
+{1410}{}
+{1411}{}
+{1412}{Art: 373, Palette: 1, Scale: 100%, Blend: Add, Sound: 24070, Flags: overlay_fb | animates}
+{1413}{}
+{1414}{}
+
+// 142 -- Tech: Hypnotic Suggestion
+{1420}{}
+{1421}{}
+{1422}{Art: 368, Palette: 1, Scale: 100%, Blend: Add, Sound: 24070, Flags: overlay_f | animates, Light: 1, Light Color: (210 @ 199 @ 67)}
+{1423}{}
+{1424}{}
+
+// 143 -- Tech: Basic Paralysis (Duration) Effect
+{1430}{}
+{1431}{}
+{1432}{Art: 368, Palette: 1, Scale: 100%, Blend: Add, Sound: 24070, Flags: overlay_f | animates, Light: 1, Light Color: (210 @ 199 @ 67)}
+{1433}{Art: 368, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates | anim_forever}
+{1434}{}
+
+// 144 -- Tech: Muscle Maker
+{1440}{}
+{1441}{}
+{1442}{Art: 373, Palette: 0, Scale: 100%, Blend: Add, Sound: 24070, Flags: overlay_fb | animates}  //Changed by Positiff
+{1443}{}
+{1444}{}
+
+// 145 -- Tech: Charged Ring
+{1450}{Art: 373, Palette: 1, Scale: 75%, Blend: Add, Sound: 24070, Flags: overlay_fb | animates, Light: 1, Light Color: (27 @ 183 @ 255)}
+{1451}{}
+{1452}{}
+{1453}{}
+{1454}{}
+
+// 146 -- Tech: Flow Spectrometer
+{1460}{}
+{1461}{}
+{1462}{}
+{1463}{}
+{1464}{}
+
+// 147 -- Tech: Shocking Staff
+{1470}{}
+{1471}{}
+{1472}{Art: 358, Palette: 1, Scale: 100%, Blend: Add, Sound: 4228, Flags: overlay_f | animates, Light: 1, Light Color: (225 @ 225 @ 255)}  //Changed by Positiff
+{1473}{}  //Changed by Positiff
+{1474}{}
+
+// 148 -- Tech: Explode (Hallucinate)
+{1480}{}
+{1481}{}
+{1482}{Art: 368, Palette: 1, Scale: 100%, Blend: Add, Sound: 5303, Flags: overlay_f | animates, Light: 1, Light Color: (210 @ 199 @ 67)}  //Changed by Positiff
+{1483}{}
+{1484}{}
+
+// 149 -- Tech: Fire-resistant Gel  //Made by Positiff
+{1490}{}
+{1491}{}
+{1492}{}
+{1493}{}
+{1494}{}
+
+// 150 -- Tech: Heal Light
+{1500}{}
+{1501}{}
+{1502}{Art: 373, Palette: 3, Scale: 100%, Blend: Add, Sound: 24070, Flags: overlay_fb | animates}  //Changed by Positiff
+{1503}{}
+{1504}{}
+
+// 151 -- Tech: Fatigue Restore
+{1510}{}
+{1511}{}
+{1512}{Art: 373, Palette: 3, Scale: 100%, Blend: Add, Sound: 24070, Flags: overlay_fb | animates}  //Changed by Positiff
+{1513}{}
+{1514}{}
+
+// 152 -- Tech: Cure Poison
+{1520}{}
+{1521}{}
+{1522}{Art: 373, Palette: 3, Scale: 100%, Blend: Add, Sound: 24070, Flags: overlay_fb | animates}  //Changed by Positiff
+{1523}{}
+{1524}{}
+
+// 153 -- Tech: Fatigue Limiter
+{1530}{}
+{1531}{}
+{1532}{Art: 373, Palette: 3, Scale: 100%, Blend: Add, Sound: 24070, Flags: overlay_fb | animates}  //Changed by Positiff
+{1533}{}
+{1534}{}
+
+// 154 -- Tech: Heal Accelerator
+{1540}{}
+{1541}{}
+{1542}{Art: 373, Palette: 3, Scale: 100%, Blend: Add, Sound: 24070, Flags: overlay_fb | animates}  //Changed by Positiff
+{1543}{}
+{1544}{}
+
+// 155 -- Tech: Wonder Drug
+{1550}{}
+{1551}{}
+{1552}{Art: 373, Palette: 3, Scale: 100%, Blend: Add, Sound: 24070, Flags: overlay_fb | animates}  //Changed by Positiff
+{1553}{}
+{1554}{}
+
+// 156 -- Tech: Cure All
+{1560}{}
+{1561}{}
+{1562}{Art: 373, Palette: 3, Scale: 100%, Blend: Add, Sound: 24070, Flags: overlay_fb | animates}  //Changed by Positiff
+{1563}{}
+{1564}{}
+
+// 157 -- Tech: Boost Persuasion
+{1570}{}
+{1571}{}
+{1572}{Art: 373, Palette: 1, Scale: 100%, Blend: Add, Sound: 24070, Flags: overlay_fb | animates, Light: 1, Light Color: (111 @ 181 @ 116)}  //Changed by Positiff
+{1573}{}
+{1574}{}
+
+// 158 -- Tech: Boost Strength
+{1580}{}
+{1581}{}
+{1582}{Art: 373, Palette: 0, Scale: 100%, Blend: Add, Sound: 24070, Flags: overlay_fb | animates, Light: 1, Light Color: (111 @ 181 @ 116)}
+{1583}{}
+{1584}{}
+
+// 159 -- Tech: Boost Perception
+{1590}{}
+{1591}{}
+{1592}{Art: 373, Palette: 1, Scale: 100%, Blend: Add, Sound: 24070, Flags: overlay_fb | animates, Light: 1, Light Color: (111 @ 181 @ 116)}  //Changed by Positiff
+{1593}{}
+{1594}{}
+
+// 160 -- Tech: Boost Dexterity
+{1600}{}
+{1601}{}
+{1602}{Art: 373, Palette: 1, Scale: 100%, Blend: Add, Sound: 24070, Flags: overlay_fb | animates, Light: 1, Light Color: (111 @ 181 @ 116)}  //Changed by Positiff
+{1603}{}
+{1604}{}
+
+// 161 -- Tech: Boost Mental
+{1610}{}
+{1611}{}
+{1612}{Art: 373, Palette: 1, Scale: 100%, Blend: Add, Sound: 24070, Flags: overlay_fb | animates, Light: 1, Light Color: (111 @ 181 @ 116)}  //Changed by Positiff
+{1613}{}
+{1614}{}
+
+// 162 -- Tech: Boost Physical
+{1620}{}
+{1621}{}
+{1622}{Art: 373, Palette: 0, Scale: 100%, Blend: Add, Sound: 24070, Flags: overlay_fb | animates, Light: 1, Light Color: (111 @ 181 @ 116)}  //Changed by Positiff
+{1623}{}
+{1624}{}
+
+// 163 -- Tech: Boost All
+{1630}{}
+{1631}{}
+{1632}{Art: 373, Palette: 0, Scale: 100%, Blend: Add, Sound: 24070, Flags: overlay_fb | animates, Light: 1, Light Color: (111 @ 181 @ 116)}
+{1633}{}
+{1634}{}
+
+// 164 -- Tech: Boost Willpower  //Made by Positiff
+{1640}{}
+{1641}{}
+{1642}{Art: 373, Palette: 1, Scale: 100%, Blend: Add, Sound: 24070, Flags: overlay_fb | animates, Light: 1, Light Color: (111 @ 181 @ 116)}
+{1643}{}
+{1644}{}
+
+// 165 -- Tech: Boost Coordination  //Made by Positiff
+{1650}{}
+{1651}{}
+{1652}{Art: 373, Palette: 1, Scale: 100%, Blend: Add, Sound: 24070, Flags: overlay_fb | animates, Light: 1, Light Color: (111 @ 181 @ 116)}
+{1653}{}
+{1654}{}
+
+// 166 -- Tech: Corrosive Acid
+{1660}{}
+{1661}{}
+{1662}{Art: 349, Palette: 1, Scale: 100%, Blend: Add, Sound: 5308, Flags: overlay_f | animates}  //Changed by Positiff
+{1663}{}
+{1664}{}
+
+// 167 -- Tech: Animal Scent
+{1670}{}
+{1671}{}
+{1672}{Art: 9, Palette: 1, Scale: 100%, Blend: Add, Sound: 24070, Flags: overlay_f | animates}
+{1673}{}
+{1674}{}
+
+// 168 -- Tech: Charged Regenerate
+{1680}{}
+{1681}{}
+{1682}{Art: 373, Palette: 1, Scale: 100%, Blend: Add, Sound: 24115, Flags: overlay_fb | animates, Light: 1, Light Color: (27 @ 183 @ 255)}
+{1683}{}
+{1684}{}
+
+// 169 -- Tech: Flow Neutralizer  //Made by gamer_777, Moved by Positiff
+{1690}{}
+{1691}{}
+{1692}{}
+{1693}{}
+{1694}{}
+
+// 170 -- Tech: Hallucinate  //Moved by Positiff
+{1700}{}
+{1701}{}
+{1702}{Art: 368, Palette: 1, Scale: 100%, Blend: Add, Sound: 24070, Flags: overlay_f | animates, Light: 1, Light Color: (210 @ 199 @ 67)}
+//-1703--Art: 368, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates | anim_forever-
+{1703}{}
+{1704}{}
+
+// 171 -- Tech: Strong Poison
+{1710}{}
+{1711}{}
+{1712}{Art: 368, Palette: 0, Scale: 100%, Blend: Add, Sound: 24070, Flags: overlay_f | animates}
+{1713}{}
+{1714}{}
+
+// 172 -- Tech: Envenomed Axe  //Made by Positiff
+{1720}{}
+{1721}{}
+{1722}{}
+{1723}{}
+{1724}{}
+
+// 173 -- Tech: Machined Plate  //Made by Positiff
+{1730}{}
+{1731}{}
+{1732}{Art: 445, Palette: 1, Scale: 25%, Blend: Add, Flags: overlay_f | animates | anim_forever}
+{1733}{}
+{1734}{}
+
+// 174 -- Tech: Charged Shield  //Made by Positiff
+{1740}{}
+{1741}{}
+{1742}{Art: 358, Palette: 1, Scale: 75%, Blend: Add, Sound: 4228, Flags: overlay_f | animates, Light: 1}
+{1743}{}
+{1744}{}
+
+// 175 -- Tech: Explosion (Grenade)
+{1750}{}
+{1751}{}
+{1752}{Art: 350, Palette: 1, Scale: 100%, Blend: Add, Sound: 5301, Flags: overlay_f | animates, Light: 2, Light Color: (242 @ 165 @ 0)}  //Changed by Positiff
+{1753}{Art: 349, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates}
+{1754}{}
+
+// 176 -- Tech: Explosion (Dynamite)
+{1760}{}
+{1761}{}
+{1762}{Art: 350, Palette: 1, Scale: 150%, Blend: Add, Sound: 8808, Flags: overlay_f | animates, Light: 5, Light Color: (242 @ 165 @ 0)}  //Changed by Positiff
+{1763}{Art: 349, Palette: 1, Scale: 150%, Blend: Add, Flags: overlay_f | animates}  //Changed by Positiff
+{1764}{}
+
+// 177 -- Tech: Explode (Flash)
+{1770}{}
+{1771}{}
+{1772}{Art: 369, Palette: 1, Scale: 75%, Blend: Add, Sound: 5302, Flags: overlay_f | animates, Light: 3, Light Color: (242 @ 165 @ 0)}  //Changed by Positiff
+{1773}{Art: 349, Palette: 1, Scale: 75%, Blend: Add, Flags: overlay_f | animates}  //Changed by Positiff
+{1774}{}
+
+// 178 -- Tech: Explode (Smoke)
+{1780}{}
+{1781}{Sound: 5303}  //Changed by Positiff
+{1782}{Art: 55, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates}  //Changed by Positiff
+{1783}{Art: 55, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates | anim_forever}
+//-1782--Art: 116, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates-
+//-1783--Art: 117, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates | anim_forever, Light: 1, Light Color: (0 @ 96 @ 204)-
+{1784}{}
+
+// 179 -- Tech: Explode (Stun)
+{1790}{}
+{1791}{}
+{1792}{Art: 369, Palette: 1, Scale: 100%, Blend: Add, Sound: 5304, Flags: overlay_f | animates, Light: 2, Light Color: (242 @ 165 @ 0)}  //Changed by Positiff
+{1793}{}
+{1794}{}
+
+// 180 -- Tech: Explode (Fire)
+{1800}{}
+{1801}{Art: 95, Palette: 1, Scale: 100%, Blend: Add, Sound: 5306, Flags: overlay_fb | animates, Light: 1, Light Color: (100 @ 100 @ 205)}  //Changed by Positiff
+{1802}{Art: 451, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates | anim_forever, Light: 3, Light Color: (226 @ 165 @ 0)}  //Ultimate Nightmare Mod (Moved by Positiff)
+{1803}{Sound: 5307}  //Added by Positiff
+{1804}{}
+
+// 181 -- Tech: Teleportation Device (Made by Gentle_Giant, Moved by Positiff)
+{1810}{Art:444, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_fb | animates, Light: 1, Light Color: (220 @ 180 @ 30)}  //Changed by Positiff
+{1811}{}
+{1812}{Art:444, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_fb | animates, Light: 1, Light Color: (220 @ 180 @ 30)}  //Changed by Positiff
+{1813}{}
+{1814}{}
+
+// 182 -- Tech: Magnetic Inversion
+{1820}{}
+{1821}{}
+{1822}{Art: 367, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates | anim_forever}
+{1823}{}
+{1824}{}
+{1825}{Art: 366, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates}
+
+// 183 -- Tech: Animal Lure
+{1830}{}
+{1831}{}
+{1832}{Art: 368, Palette: 2, Scale: 100%, Sound: 24070, Blend: Add, Flags: overlay_f | animates}
+{1833}{}
+{1834}{}
+
+// 184 -- Tech: Trap Springer
+{1840}{}
+{1841}{}
+{1842}{Sound: 8829}
+{1843}{}
+{1844}{}
+
+// 185 -- Tech: Plastid  //Changed by Positiff
+{1850}{}
+{1851}{}
+{1852}{Art: 350, Palette: 1, Scale: 150%, Blend: Add, Sound: 8808, Flags: overlay_f | animates, Light: 5, Light Color: (242 @ 165 @ 0)}  //Changed by Positiff
+{1853}{Art: 349, Palette: 1, Scale: 150%, Blend: Add, Flags: overlay_f | animates}  //Changed by Positiff
+{1854}{}
+
+// 186 -- Tech: Flash (Blindess effect on npcs, no art or sound needed)
+{1860}{}
+{1861}{}
+{1862}{}
+{1863}{}
+{1864}{}
+
+// 187 -- Tech: Molotov Cocktail  //Moved by Positiff
+{1870}{}
+{1871}{}
+{1872}{Art: 98, Palette: 1, Scale: 100%, Blend: Add, Sound: 5306, Flags: overlay_f | animates, Light: 2, Light Color: (242 @ 165 @ 0)}  //Changed by Positiff
+{1873}{Art: 349, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates}
+{1874}{}
+
+// 188 -- UNUSED
+{1880}{}
+{1881}{}
+{1882}{}
+{1883}{}
+{1884}{}
+
+// 189 -- Tech: mtTechInvigorator
+{1890}{}
+{1891}{}
+{1892}{Art: 373, Palette: 1, Scale: 100%, Blend: Add, Sound: 24070, Flags: overlay_fb | animates}
+{1893}{}
+{1894}{}
+
+// 190 -- Tech: mtTechReanimator
+{1900}{}
+{1901}{}
+{1902}{Art: 373, Palette: 1, Scale: 100%, Blend: Add, Sound: 24070, Flags: overlay_fb | animates}
+{1903}{}
+{1904}{}
+
+// 191 -- Tech: mtTechHealInjection
+{1910}{}
+{1911}{}
+{1912}{Art: 373, Palette: 3, Scale: 100%, Blend: Add, Sound: 24070, Flags: overlay_fb | animates}  //Changed by Positiff
+{1913}{}
+{1914}{}
+
+// 192 -- Tech: mtTechMiracleCure
+{1920}{}
+{1921}{}
+{1922}{Art: 373, Palette: 3, Scale: 100%, Blend: Add, Sound: 24070, Flags: overlay_fb | animates}  //Changed by Positiff
+{1923}{}
+{1924}{}
+
+// 193 -- Tech: mtTechMentalInhibitor
+{1930}{}
+{1931}{}
+{1932}{}
+{1933}{}
+{1934}{}
+
+// 194 -- Tech: mtTechNecromizer
+{1940}{}
+{1941}{}
+{1942}{}
+{1943}{}
+{1944}{}
+
+// 195 -- Tech: mtTechFortifier
+{1950}{}
+{1951}{}
+{1952}{Art: 373, Palette: 1, Scale: 100%, Blend: Add, Sound: 24070, Flags: overlay_fb | animates}
+{1953}{}
+{1954}{}
+
+// 196 -- Tech: mtTechSleepAid
+{1960}{}
+{1961}{}
+{1962}{Art: 349, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates, Light: 1}
+{1963}{}
+{1964}{}
+
+// 197 -- Tech: mtTechPotionOfParalysis
+{1970}{}
+{1971}{}
+{1972}{Art: 368, Palette: 1, Scale: 100%, Blend: Add, Sound: 24070, Flags: overlay_f | animates, Light: 1, Light Color: (210 @ 199 @ 67)}
+{1973}{Art: 368, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates | anim_forever}
+{1974}{}
+
+// 198 -- Tech: mtTechKnockOutGas
+{1980}{}
+{1981}{Sound: 5303}  //Changed by Positiff
+{1982}{Art: 55, Palette: 2, Scale: 100%, Blend: Add, Flags: overlay_f | animates}  //Changed by Positiff
+{1983}{}
+{1984}{}
+
+// 199 -- Tech: mtTechExplodeElectrical
+{1990}{}
+{1991}{}
+{1992}{Art: 150, Palette: 1, Scale: 100%, Blend: Add, Sound: 5305, Flags: overlay_fb | animates, Light: 8}  //Changed by Positiff
+{1993}{Art: 349, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates, Light: 1}
+{1994}{}
+
+// 200 -- Tech: mtTechMustardGas
+{2000}{}
+{2001}{Sound: 5303}  //Changed by Positiff
+{2002}{Art: 55, Palette: 0, Scale: 100%, Blend: Add, Flags: overlay_f | animates}  //Changed by Positiff
+{2003}{Art: 55, Palette: 0, Scale: 100%, Blend: Add, Flags: overlay_f | animates | anim_forever}  //Changed by Positiff
+{2004}{}
+
+// 201 -- Tech: mtTechExplodeConcussion
+{2010}{}
+{2011}{}
+{2012}{Art: 350, Palette: 1, Scale: 125%, Blend: Add, Sound: 5301, Flags: overlay_f | animates, Light: 3, Light Color: (242 @ 165 @ 0)}  //Changed by Positiff
+{2013}{Art: 349, Palette: 1, Scale: 125%, Blend: Add, Flags: overlay_f | animates}  //Changed by Positiff
+{2014}{}
+
+// 202 -- Tech: mtTechExplodeParalysis
+{2020}{}
+{2021}{}
+{2022}{Art: 368, Palette: 1, Scale: 100%, Blend: Add, Sound: 5303, Flags: overlay_f | animates, Light: 1, Light Color: (210 @ 199 @ 67)}  //Changed by Positiff
+{2023}{Art: 368, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates | anim_forever}
+{2024}{}
+
+// 203 -- Tech: Acid Gun  //Made by Positiff
+{2030}{}
+{2031}{}
+{2032}{Art: 349, Palette: 1, Scale: 75%, Blend: Add, Flags: overlay_f | animates}
+{2033}{}
+{2034}{}
+
+// 204 -- Tech:  Tranquilizer Gun
+{2040}{}
+{2041}{}
+{2042}{Art: 368, Palette: 1, Scale: 100%, Blend: Add, Sound: 24070, Flags: overlay_f | animates, Light: 1, Light Color: (210 @ 199 @ 67)}
+{2043}{}
+{2044}{}
+
+// 205 -- Tech: Grenade Launcher
+{2050}{}
+{2051}{}
+{2052}{Art: 350, Palette: 1, Scale: 100%, Blend: Add, Sound: 5301, Flags: overlay_f | animates, Light: 2, Light Color: (242 @ 165 @ 0)}  //Changed by Positiff
+{2053}{Art: 349, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates}
+{2054}{}
+
+// 206 -- UNUSED
+{2060}{}
+{2061}{}
+{2062}{}
+{2063}{}
+{2064}{}
+
+
+
+//
+// Item-Only Spells Part 2
+//
+
+
+// 207 -- Kerghan's Death Spell
+{2070}{Art: 392, Palette: 0, Scale: 100%, Blend: Add, Sound: 8825, Flags: overlay_fb | animates}
+{2071}{}
+{2072}{Art: 393, Palette: 1, Scale: 100%, Blend: Add, Sound: 8820, Flags: overlay_fb | animates, Light: 1, Light Color: (255 @ 10 @ 10)}
+{2073}{}
+{2074}{}
+
+// 208 -- Kerghan's Attack Spell
+{2080}{Art: 392, Palette: 0, Scale: 100%, Blend: Add, Sound: 8825, Flags: overlay_fb | animates}
+{2081}{}
+{2082}{Art: 396, Palette: 1, Scale: 100%, Blend: Add, Sound: 8821, Flags: overlay_f | animates, Light: 1, Light Color: (255 @ 50 @ 50)}
+{2083}{}
+{2084}{}
+
+// 209 -- Kerghan's Heal Spell
+{2090}{}
+{2091}{}
+{2092}{Art: 391, Palette: 1, Scale: 100%, Blend: Add, Sound: 8823, Flags: overlay_f | animates, Light: 1, Light Color: (27 @ 183 @ 255)}
+{2093}{Art: 390, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates | anim_forever, Light: 1, Light Color: (27 @ 183 @ 255)}
+{2094}{}
+{2095}{Art: 394, Palette: 1, Scale: 100%, Blend: Add, Sound: 8822, Flags: overlay_f | animates}
+
+// 210 -- mtMI2PotionFatigueSlower
+{2100}{}
+{2101}{}
+{2102}{Art: 9, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates, Light: 1, Light Color: (0 @ 96 @ 204)}
+{2103}{}
+{2104}{}
+
+// 211 -- mtMI2PotionEssenceOfIntellect
+{2110}{}
+{2111}{}
+{2112}{Art: 9, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates, Light: 1, Light Color: (0 @ 96 @ 204)}
+{2113}{}
+{2114}{}
+
+// 212 -- mtMI2PotionHaste
+{2120}{}
+{2121}{}
+{2122}{Art: 339, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_fb | animates, Light: 1, Light Color: (210 @ 199 @ 67)}
+{2123}{Art: 340, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_fb | animates | anim_forever}
+{2124}{}
+
+// 213 -- mtMI2PotionLiquidOfSkinThickening
+{2130}{}
+{2131}{}
+{2132}{Art: 9, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates, Light: 1, Light Color: (0 @ 96 @ 204)}
+{2133}{}
+{2134}{}
+
+// 214 -- mtMI2PotionKalispisVenom
+{2140}{}
+{2141}{}
+{2142}{Art: 9, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates, Light: 1, Light Color: (0 @ 96 @ 204)}
+{2143}{}
+{2144}{}
+
+// 215 -- mtMI2PotionRestorative
+{2150}{}
+{2151}{}
+{2152}{Art: 9, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates, Light: 1, Light Color: (0 @ 96 @ 204)}
+{2153}{}
+{2154}{}
+
+// 216 -- mtMI2ConjureSpiritPermanent
+{2160}{Art: 235, Palette: 0, Scale: 100%, Blend: Add, Sound: 20030, Flags: overlay_fb | animates, Light: 1, Light Color: (255 @ 50 @ 50)}
+{2161}{}
+{2162}{Art: 242, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates, Light: 1, Light Color: (255 @ 50 @ 50)}
+{2163}{Art: 243, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates | anim_forever, Light: 1, Light Color: (255 @ 50 @ 50)}
+{2164}{}
+
+// 217 -- Phantom Knight Death
+{2170}{}
+{2171}{}
+{2172}{Art: 428, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_f | animates, Light: 1, Light Color: (242 @ 165 @ 0)}
+{2173}{}
+{2174}{}
+
+// 218 -- Scroll: Teleport Exit
+{2180}{Art: 25, Palette: 1, Scale: 100%, Blend: Add, Sound: 9053, Flags: overlay_fb | animates, Light: 1, Light Color: (187 @ 0 @ 215)}
+{2181}{}
+{2182}{Art: 25, Palette: 1, Scale: 100%, Blend: Add, Sound: 9053, Flags: overlay_fb | animates, Light: 1, Light Color: (187 @ 0 @ 215)}
+{2183}{}
+{2184}{}
+
+// 219 -- Scroll: Identification  //Made by Positiff
+{2190}{Art: 28, Palette: 1, Scale: 125%, Blend: Add, Sound: 10055, Flags: overlay_f | animates, Light: 1, Light Color: (150 @ 150 @ 150)}
+{2191}{}
+{2192}{}
+{2193}{}
+{2194}{}
+
+// 220 -- Tech: Time Bomb
+{2200}{}
+{2201}{}
+{2202}{Art: 350, Palette: 1, Scale: 150%, Blend: Add, Sound: 8808, Flags: overlay_f | animates, Light: 5, Light Color: (242 @ 165 @ 0)}  //Changed by Positiff
+{2203}{Art: 349, Palette: 1, Scale: 150%, Blend: Add, Flags: overlay_f | animates}  //Changed by Positiff
+{2204}{}
+
+// 221 -- Quench Life (Full)
+{2210}{Art: 235, Palette: 0, Scale: 125%, Blend: Add, Sound: 20050, Flags: overlay_fb | animates, Light: 1, Light Color: (255 @ 50 @ 50)}
+{2211}{}
+{2212}{Art: 248, Palette: 1, Scale: 100%, Blend: Add, Flags: overlay_fb | animates, Light: 1, Light Color: (255 @ 50 @ 50)}
+{2213}{}
+{2214}{}
+
+// 222 -- Wolf Form (Permanent)
+{2220}{}
+{2221}{}
+{2222}{}
+{2223}{}
+{2224}{}

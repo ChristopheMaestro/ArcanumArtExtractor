@@ -1,0 +1,47 @@
+{1}{Bienvenue chez moi. Comment vous appelez-vous ?}{Bienvenue chez moi. Comment vous appelez-vous ?}{}{}{}{}
+{2}{@pcname@.}{}{1}{}{10}{}
+
+{10}{Bien @pcname@, voici le problème : j'ai trouvé il y a quelques mois un vieux livre d'alchimie dont je connaissais bon nombre de recettes. Mais l'une d'elles, intitulée "Elixir de Mornecrick" m'était inconnue. J'ai essayé pendant des mois de faire cette préparation mais sans succès; peut-être ne suis-je pas compatible avec cette recette. A l'heure actuelle, elle se trouve dans mon laboratoire qui est derrière moi il est fermé à clef et je ne sais pas où se trouve la clef.}{Bien @pcname@, voici le problème : j'ai trouvé il y a quelques mois un vieux livre d'alchimie dont je connaissais bon nombre de recettes. Mais l'une d'elles, intitulée "Elixir de Mornecrick" m'était inconnue. J'ai essayé pendant des mois de faire cette préparation mais sans succès; peut-être ne suis-je pas compatible avec cette recette. A l'heure actuelle, elle se trouve dans mon laboratoire qui est derrière moi il est fermé à clef et je ne sais pas où se trouve la clef.}{}{}{}{}
+{11}{[Suite]}{}{1}{}{20}{}
+
+{20}{Vous trouverez tous les ingrédients nécessaires et si vous en utilisez des rares et que vous n'en voyez plus à portée, venez me voir : je possède un petit stock de certains d'entres eux. Outre la recette, vous trouverez dans le laboratoire un chaudron en fonte qui ne contient pour l'instant que de l'eau et une baignoire pour le vider si vous vous tromper. [Il finit enfin de parler] Voilà, il ne me reste plus qu'à vous souhaiter bonne chance @pcname@.}{Vous trouverez tous les ingrédients nécessaires et si vous en utilisez des rares et que vous n'en voyez plus à portée, venez me voir : je possède un petit stock de certains d'entres eux. Outre la recette, vous trouverez dans le laboratoire un chaudron en fonte qui ne contient pour l'instant que de l'eau et une baignoire pour le vider si vous vous tromper. [Il finit enfin de parler] Voilà, il ne me reste plus qu'à vous souhaiter bonne chance @pcname@.}{}{}{}{}
+{21}{Merci.}{}{5}{}{0}{}
+{22}{M'rci.}{}{-4}{}{0}{}
+
+
+{100}{Alors @pcname@, avez-vous terminé ?}{Alors @pcname@, avez-vous terminé ?}{}{}{}{}
+{101}{Oui, voici mon élixir [vous le lui montrez]}{}{5}{in 5830}{140}{in 5830}//Bon élixir
+{102}{Que v'là ma élixir [vous le lui montrez]}{}{-4}{in 5830}{140}{in 5830}//Bon élixir
+{103}{Oui, voici mon élixir [vous le lui montrez]}{}{5}{in 5831}{120}{in 5831, in-5829}//mauvais élixir
+{104}{Que v'là ma élixir [vous le lui montrez]}{}{-4}{in 5831}{120}{in 5831, in-5829}//mauvais élixir
+{105}{J'ai utilisé un diamant pur mais il m'en faut un autre.}{}{5}{in-5827}{130}{in-5827}
+{106}{Je ne trouve plus de sachet de souffre.}{}{5}{in-5828}{150}{in-5828}
+{107}{Moi plus trouver diamant dur !}{}{-4}{in-5827}{130}{in-5827}
+{108}{Moi usé sachet de bouffe mais encore b'soin.}{}{-4}{in-5828}{150}{in-5828}
+{109}{Non, pas encore.}{}{5}{}{0}{}
+{110}{Nan, pas 'core.}{}{-4}{}{0}{}
+
+{120}{Ceci est... votre résultat ? [Il examine la fiole et son contenu sous tous les angles] Non, ceci n'est pas l'élixir de Mornecrick... [Il verse votre ébauche d'élixir par terre avant de vous rendre la fiole vide] Je vous demande de faire mieux pour votre prochain essai.}{Ceci est... votre résultat ? [Il examine la fiole et son contenu sous tous les angles] Non, ceci n'est pas l'élixir de Mornecrick... [Il verse votre ébauche d'élixir par terre avant de vous rendre la fiole vide] Je vous demande de faire mieux pour votre prochain essai.}{}{}{}{}
+{121}{Bien sûr, mais j'aurai besoin d'un autre diamant pur.}{}{5}{in-5827}{130}{in-5827}
+{122}{Certes, il me faut pour cela un sachet de souffre.}{}{5}{in-5828}{150}{in-5828}
+{123}{Yep, moi b'soin de diamant de pur pour ça !}{}{-4}{in-5827}{130}{in-5827}
+{124}{Ya mais moi d'voir avoir sachet d'poudre !}{}{-4}{in-5828}{150}{in-5828}
+{125}{Je vais essayer.}{}{5}{}{0}{}
+{126}{Moi essayer.}{}{-4}{}{0}{}
+
+{130}{[Il fouille dans sa poche et en sort un diamant qui brille de mille feux] En voici un, ne le perdez pas.}{[Il fouille dans sa poche et en sort un diamant qui brille de mille feux] En voici un, ne le perdez pas.}{}{}{}{}
+{131}{J'aurais aussi besoin d'un sachet de souffre.}{}{5}{in-5828}{150}{in-5828}
+{132}{Moi aussi besoin sachet d'souffre.}{}{-4}{in-5828}{150}{in-5828}
+{133}{Merci bien, je retourne à notre potion.}{}{5}{}{0}{}
+{134}{M'rci, moi r'tourner à not' potion.}{}{-4}{}{0}{}
+
+{140}{Ceci est... votre résultat ? [Il examine la fiole et son contenu sous tous les angles] C'est... c'est parfait ! Magnifique ! Prodigieux ! Je vous félicite @pcname@, vous êtes le meilleur alchimiste que je connaisse ! [Il vous prend dans ses bras] Vous êtes un véritable génie, encore merci !}{Ceci est... votre résultat ? [Il examine la fiole et son contenu sous tous les angles] C'est... c'est parfait ! Magnifique ! Prodigieux ! Je vous félicite @pcname@, vous êtes le meilleur alchimiste que je connaisse ! [Il vous prend dans ses bras] Vous êtes un véritable génie, encore merci !}{}{}{}{qu1017 4}
+{141}{[Le laisser à son délire et partir]}{}{1}{}{0}{gf208 1, gf226 1}
+
+{150}{[Il glisse une main dans sa poche intérieure et en ressort un petit sachet] Voici pour vous.}{[Il glisse une main dans sa poche intérieure et en ressort un petit sachet] Voici pour vous.}{}{}{}{}
+{151}{Il me faudrait aussi un diamant pur en fait.}{}{5}{in-5827}{130}{in-5827}
+{152}{En fait moi aussi b'soin d'diamant sûr.}{}{-4}{in-5827}{130}{in-5827}
+{153}{Parfait, je vais retenter l'élixir.}{}{5}{}{0}{}
+{154}{Préfet, moi r'faire l'potion !}{}{-4}{}{0}{}
+
+{160}{Encore merci @pcname@, je vais faire en sorte que tout le monde dans notre milieu vous connaisse !}{Encore merci @pcname@, je vais faire en sorte que tout le monde dans notre milieu vous connaisse !}{}{}{}{}

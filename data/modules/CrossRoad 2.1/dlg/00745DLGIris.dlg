@@ -1,0 +1,355 @@
+{1}{[La femme qui se tient devant vous semble pensive, son regard vide ne vous voit probablement pas. Elle ne dit pas un mot et semble attendre inlassablement]}{[La femme qui se tient devant vous semble pensive, son regard vide ne vous voit probablement pas. Elle ne dit pas un mot et semble attendre inlassablement]}{}{}{}{}
+{2}{Madame ?}{}{5}{}{10}{}
+{3}{M'dame ?}{}{-4}{}{10}{}
+{4}{[Partir]}{}{1}{}{0}{}
+
+{10}{[Elle ne répond pas]}{[Elle ne répond pas]}{}{}{}{}
+{11}{Eh oh ?}{}{1}{}{20}{}
+{12}{[Partir]}{}{1}{}{0}{}
+
+{20}{[Elle n'a pas l'air décidé à vous répondre]}{[Elle n'a pas l'air décidé à vous répondre]}{}{}{}{}
+{21}{[Partir]}{}{1}{}{0}{}
+
+
+{100}{[Cette femme ne semble toujours pas vous voir. Son regard vide semble passer au travers de vous]}{[Cette femme ne semble toujours pas vous voir. Son regard vide semble passer au travers de vous]}{}{}{}{}
+{101}{[Partir]}{}{1}{}{0}{}
+
+
+{200}{[Iris a le regard vide, elle ne semble pas vous voir plus qu'elle ne pourrait vous entendre ou vous parler.]}{[Iris a le regard vide, elle ne semble pas vous voir plus qu'elle ne pourrait vous entendre ou vous parler.]}{}{}{}{}
+{201}{[Partir]}{}{1}{}{0}{}
+
+
+{300}{[Iris semble désespérée, ses yeux expriment une grande tristesse, ses lèvres bougent mais ne disent rien]}{[Iris semble désespérée, ses yeux expriment une grande tristesse, ses lèvres bougent mais ne disent rien]}{}{}{}{lf0 1}
+{301}{[Partir]}{}{1}{}{310}{}
+
+{310}{[Elle vous empoigne le bras et la main puisse vous glisse un petit papier dans la main]}{[Elle vous empoigne le bras et la main puisse vous glisse un petit papier dans la main]}{}{}{}{in-5404}
+{311}{Qu'est-ce ?}{}{5}{}{320}{}
+{312}{[Partir]}{}{1}{}{0}{}
+
+{320}{[Elle vous lâche le bras sans vous donner aucune réponse]}{[Elle vous lâche le bras sans vous donner aucune réponse]}{}{}{}{}
+{321}{[Partir]}{}{1}{}{0}{}
+
+
+{400}{[Iris vous regarde, dans ses yeux vous lisez le désespoir. Les mouvements inaudibles de ses lèvres muettes sont faciles à décrypter, elle vous demande de lui rendre sa robe]}{[Iris vous regarde, dans ses yeux vous lisez le désespoir. Les mouvements inaudibles de ses lèvres muettes sont faciles à décrypter, elle vous demande de lui rendre sa robe]}{}{}{}{}
+{401}{Je suis désolé, je ne peux rien pour vous.}{1}{5}{lf1 0}{410}{lf1 1}
+{402}{Je suis désolée, je ne peux rien pour vous.}{0}{5}{lf1 0}{410}{lf1 1}
+{403}{[Partir]}{}{1}{}{0}{}
+
+{410}{[Elle ne comprend manifestement pas et répète de sa voix inexistante qu'elle veut sa robe]}{[Elle ne comprend manifestement pas et répète de sa voix inexistante qu'elle veut sa robe]}{}{}{}{}
+{411}{[Partir]}{}{1}{}{0}{}
+
+
+{1000}{[Iris a le regard vide, elle ne semble pas vous voir plus qu'elle ne pourrait vous entendre ou vous parler.]}{[Iris a le regard vide, elle ne semble pas vous voir plus qu'elle ne pourrait vous entendre ou vous parler.]}{}{}{}{}
+{1001}{[Vous lui donnez le crane]}{}{1}{in 5819}{1010}{lf2 1, in 5819, gf289 1}
+{1002}{[Vous lui donnez le relais]}{}{1}{in 5859}{1020}{in 5859}
+{1003}{[Partir]}{}{1}{}{0}{}
+
+{1010}{[Elle saisit le crâne qui irradie d'une lumière blanche, la lueur passe dans ses mains et remonte le long de ses bras puis de son thorax pour arriver jusqu'à sa tête qui brille fortement quelques instants. Elle ouvre la bouche, il s'en échappe une lueur] Où suis-je ?}{[Elle saisit le crâne qui irradie d'une lumière blanche, la lueur passe dans ses mains et remonte le long de ses bras puis de son thorax pour arriver jusqu'à sa tête qui brille fortement quelques instants. Elle ouvre la bouche, il s'en échappe une lueur] Où suis-je ?}{}{}{}{}
+{1011}{Vous êtes à bord d'un train.}{}{5}{}{1030}{}
+{1012}{Peu importe, l'important est ce que vous devez faire.}{}{5}{}{1040}{}
+{1013}{Vous venez de vous réveiller d'un long rêve.}{}{5}{}{1050}{}
+
+{1020}{[Elle saisit le relais qui irradie d'une lumière rouge sombre, la lueur passe dans ses mains et remonte le long de ses bras puis de son thorax pour arriver jusqu'à sa tête qui brille fortement quelques instants. Elle ouvre la bouche, il s'en échappe une lueur] Où suis-je ?}{[Elle saisit le relais qui irradie d'une lumière rouge sombre, la lueur passe dans ses mains et remonte le long de ses bras puis de son thorax pour arriver jusqu'à sa tête qui brille fortement quelques instants. Elle ouvre la bouche, il s'en échappe une lueur] Où suis-je ?}{}{}{}{}
+{1021}{Vous êtes à bord d'un train.}{}{5}{}{1030}{}
+{1022}{Peu importe, l'important est ce que vous devez faire.}{}{5}{}{1040}{}
+{1023}{Vous venez de vous réveiller d'un long rêve.}{}{5}{}{1050}{}
+
+{1030}{Qu'est-ce que je fais là ?}{Qu'est-ce que je fais là ?}{}{}{}{}
+{1031}{Vous êtes en train de guérir.}{}{5}{}{1060}{}
+{1032}{Là n'est pas le problème, ce qui compte c'est que vous devez faire à présent.}{}{5}{}{1070}{}
+{1033}{Votre mari et vous voyagez dans l'espoir de vous guérir.}{}{5}{ru1070}{1080}{}//Good
+
+{1040}{Ce que je dois faire ? Je ne comprends pas. [Elle regarde ses bras, semble paniquée puis regarde son torse] Ma robe, où est ma robe ? [Elle hurle] Donnez-moi ma robe !}{Ce que je dois faire ? Je ne comprends pas. [Elle regarde ses bras, semble paniquée puis regarde son torse] Ma robe, où est ma robe ? [Elle hurle] Donnez-moi ma robe !}{}{}{}{}
+{1041}{Calmez-vous et écoutez moi, cette robe est maudite.}{}{5}{}{1090}{}
+{1042}{Votre mari a du vous la retirer...}{}{5}{}{1100}{}
+{1043}{Je ne sais pas où elle est...}{}{5}{}{1110}{}
+
+{1050}{Un... rêve ? J'étais endormie ? Je ne me rappelle de rien... [Elle regarde ses bras, semble paniquée puis regarde son torse] Ma robe, où est ma robe ? [Elle hurle] Donnez-moi ma robe !}{Un... rêve ? J'étais endormie ? Je ne me rappelle de rien... [Elle regarde ses bras, semble paniquée puis regarde son torse] Ma robe, où est ma robe ? [Elle hurle] Donnez-moi ma robe !}{}{}{}{}
+{1051}{Calmez-vous et écoutez moi, cette robe est maudite.}{}{5}{}{1090}{}
+{1052}{Votre mari a du vous la retirer...}{}{5}{}{1100}{}
+{1053}{Je ne sais pas où elle est...}{}{5}{}{1110}{}
+
+{1060}{De guérir, serais-je malade ? Mais je suis déjà morte... [Elle regarde ses bras, semble paniquée puis regarde son torse] Ma robe, où est ma robe ? [Elle hurle] Donnez-moi ma robe !}{De guérir, serais-je malade ? Mais je suis déjà morte... [Elle regarde ses bras, semble paniquée puis regarde son torse] Ma robe, où est ma robe ? [Elle hurle] Donnez-moi ma robe !}{}{}{}{}
+{1061}{Ecoutez-moi, c'est cette robe qui vous a rendu malade...}{}{5}{}{1120}{}
+{1062}{Calmez-vous et écoutez moi, cette robe est maudite.}{}{5}{}{1090}{}
+{1063}{Votre mari a du vous la retirer...}{}{5}{}{1100}{}
+{1064}{Je ne sais pas où elle est...}{}{5}{}{1110}{}
+
+{1070}{Ce que je dois faire ? Dans un train ? Mais je n'en sais rien. Qui êtes vous vous ? [Elle regarde ses bras, semble paniquée puis regarde son torse] Ma robe, où est ma robe ? [Elle hurle] Donnez-moi ma robe !}{Ce que je dois faire ? Dans un train ? Mais je n'en sais rien. Qui êtes vous vous ? [Elle regarde ses bras, semble paniquée puis regarde son torse] Ma robe, où est ma robe ? [Elle hurle] Donnez-moi ma robe !}{}{}{}{}
+{1071}{Du calme, je suis un ami de votre mari.}{}{5}{}{1130}{}
+{1072}{Allons, écoutez moi ! Cette robe est maudite.}{}{5}{}{1090}{}
+{1073}{Votre mari a du vous la retirer...}{}{5}{}{1100}{}
+{1074}{Je ne sais pas où elle est...}{}{5}{}{1110}{}
+
+{1080}{Me guérir, serais-je malade ? Et vous, vous êtes mon médecin ?}{Me guérir, serais-je malade ? Et vous, vous êtes mon médecin ?}{}{}{}{}
+{1081}{Plus ou moins, je suis @pcname@.}{}{5}{}{1140}{}
+{1082}{Oui, je m'appelle @pcname@. Maintenant, écoutez-moi attentivement.}{}{5}{}{1150}{}
+{1083}{Non, je ne suis qu'un simple passager. Je me nomme @pcname@}{}{5}{lf2 1}{1160}{}
+{1084}{Non, je ne suis qu'un simple passager. Je me nomme @pcname@}{}{5}{lf2 0}{1224}{}
+
+{1090}{Non, vous mentez ! [Elle se tire les cheveux puis les relâche] Vous êtes de mèche avec mon mari, vous voulez me la voler. Mais vous n'y parviendrais pas ! Je suis ce que vous recherchez, je le sais et je vous en empêcherai ! CETTE ROBE EST A MOI, RENDEZ LA MOI !}{Non, vous mentez ! [Elle se tire les cheveux puis les relâche] Vous êtes de mèche avec mon mari, vous voulez me la voler. Mais vous n'y parviendrais pas ! Je suis ce que vous recherchez, je le sais et je vous en empêcherai ! CETTE ROBE EST A MOI, RENDEZ LA MOI !}{}{}{}{}
+{1091}{Si vous souhaitez disparaître, alors prenez là !}{}{7}{ps 4}{1170}{}
+{1092}{Je ne cherche qu'à vous guérir...}{}{5}{}{1180}{}
+{1093}{Très bien, j'en ai assez. Je vous laisse à vos délires.}{}{5}{}{1190}{qu1027 6}
+
+{1100}{Me la retirer ? Il me l'a volé ! [Elle se tire les cheveux puis les relâche] Ah le monstre ! Vous aussi vous êtes contre moi, avouez ! [Ses yeux s'agitent rapidement dans tous les sens] Oui, ils sont tous contre moi, tous ceux qui veulent ma robe... Oui, ils la veulent tous, mais pourquoi ? C'est ma robe, pas la leur... Ils n'ont qu’à s'en acheter une... Pourquoi est-ce ma robe qu'ils veulent ? [Elle hurle] CETTE ROBE EST A MOI, RENDEZ LA MOI !}{Me la retirer ? Il me l'a volé ! [Elle se tire les cheveux puis les relâche] Ah le monstre ! Vous aussi vous êtes contre moi, avouez ! [Ses yeux s'agitent rapidement dans tous les sens] Oui, ils sont tous contre moi, tous ceux qui veulent ma robe... Oui, ils la veulent tous, mais pourquoi ? C'est ma robe, pas la leur... Ils n'ont qu’à s'en acheter une... Pourquoi est-ce ma robe qu'ils veulent ? [Elle hurle] CETTE ROBE EST A MOI, RENDEZ LA MOI !}{}{}{}{}
+{1101}{Si vous souhaitez disparaître, alors prenez là !}{}{7}{ps 4}{1170}{}
+{1102}{Je ne peux vraiment pas...}{}{5}{}{1200}{}
+{1103}{Très bien, j'en ai assez. Je vous laisse à vos délires.}{}{5}{}{1190}{qu1027 6}
+
+{1110}{Vous ne le savez pas ? Alors trouvez là ! C'est ma robe vous comprenez, elle est à moi. Elle doit rester avec moi... [Elle vous regarde droit dans les yeux] C'est mon mari hein, c'est lui qui me l'a prise... Et vous, vous êtes là pour me retenir le temps qu'il la cache. Je sais ce que vous essayez de faire, je ne le permettrai pas ! CETTE ROBE EST A MOI, RENDEZ LA MOI !}{Vous ne le savez pas ? Alors trouvez là ! C'est ma robe vous comprenez, elle est à moi. Elle doit rester avec moi... [Elle vous regarde droit dans les yeux] C'est mon mari hein, c'est lui qui me l'a prise... Et vous, vous êtes là pour me retenir le temps qu'il la cache. Je sais ce que vous essayez de faire, je ne le permettrai pas ! CETTE ROBE EST A MOI, RENDEZ LA MOI !}{}{}{}{}
+{1111}{Si vous souhaitez disparaître, alors prenez là !}{}{7}{ps 4}{1170}{}
+{1112}{Je vous jure que j'ignore où elle se trouve...}{}{5}{}{1210}{}
+{1113}{Croyez-moi, je ne cherche qu'à vous guérir...}{}{5}{}{1180}{}
+{1114}{Très bien, j'en ai assez. Je vous laisse à vos délires.}{}{5}{}{1190}{qu1027 6}
+
+{1120}{Malade ? Mais je ne suis pas malade ! C'est vous qui cherchez à me voler ma robe ! [Ses yeux s'agitent rapidement dans tous les sens] Oui, tous, vous la voulez. Je ne sais pas pourquoi mais vous cherchez tous à me voler. Mais c'est ma robe, elle est à moi, pas à vous et encore moins à mon monstre de mari ! Vous essayez de me retenir le temps qu'il la cache n'est-ce pas ? Je sais ce que vous essayez de faire, je ne le permettrai pas ! CETTE ROBE EST A MOI, RENDEZ LA MOI !}{Malade ? Mais je ne suis pas malade ! C'est vous qui cherchez à me voler ma robe ! [Ses yeux s'agitent rapidement dans tous les sens] Oui, tous, vous la voulez. Je ne sais pas pourquoi mais vous cherchez tous à me voler. Mais c'est ma robe, elle est à moi, pas à vous et encore moins à mon monstre de mari ! Vous essayez de me retenir le temps qu'il la cache n'est-ce pas ? Je sais ce que vous essayez de faire, je ne le permettrai pas ! CETTE ROBE EST A MOI, RENDEZ LA MOI !}{}{}{}{}
+{1121}{Si vous souhaitez disparaître, alors prenez là !}{}{7}{ps 4}{1170}{}
+{1122}{Pas du tout, je ne cherche qu'à vous guérir...}{}{5}{}{1180}{}
+{1123}{Très bien, j'en ai assez. Je vous laisse à vos délires.}{}{5}{}{1190}{qu1027 6}
+
+{1130}{Un ami de mon mari ? Tout devient clair ! Il essaie encore de me voler ma robe pas vrai ? [Elle vous regarde droit dans les yeux] Oui, et vous êtes au courant... Ce lâche se sert de vous pour gagner du temps pendant qu'il la cache, c'est ça ? Ca lui ressemble bien, il n'a pas le courage d'agir seul. Je sais ce que vous essayez de faire, je ne le permettrai pas ! CETTE ROBE EST A MOI, RENDEZ LA MOI !}{Un ami de mon mari ? Tout devient clair ! Il essaie encore de me voler ma robe pas vrai ? [Elle vous regarde droit dans les yeux] Oui, et vous êtes au courant... Ce lâche se sert de vous pour gagner du temps pendant qu'il la cache, c'est ça ? Ca lui ressemble bien, il n'a pas le courage d'agir seul. Je sais ce que vous essayez de faire, je ne le permettrai pas ! CETTE ROBE EST A MOI, RENDEZ LA MOI !}{}{}{}{}
+{1131}{Si vous souhaitez disparaître, alors prenez là !}{}{7}{ps 4}{1170}{}
+{1132}{Pas du tout, je ne cherche qu'à vous guérir...}{}{5}{}{1180}{}
+{1133}{Très bien, j'en ai assez. Je vous laisse à vos délires.}{}{5}{}{1190}{qu1027 6}
+
+{1140}{Plus ou moins ? En général ça veux dire non... [Vous sentez de la suspicion dans sa voix. Elle regarde ses bras, semble paniquée puis regarde son torse] Ma robe, où est ma robe ? [Elle hurle] Rendez-moi ma robe !}{Plus ou moins ? En général ça veux dire non... [Vous sentez de la suspicion dans sa voix. Elle regarde ses bras, semble paniquée puis regarde son torse] Ma robe, où est ma robe ? [Elle hurle] Rendez-moi ma robe !}{}{}{}{}
+{1141}{Ecoutez-moi, c'est cette robe qui vous a rendu malade...}{}{5}{}{1120}{}
+{1142}{Calmez-vous et écoutez moi, cette robe est maudite.}{}{5}{}{1090}{}
+{1143}{Votre mari a du vous la retirer...}{}{5}{}{1100}{}
+{1144}{Je ne sais pas où elle est...}{}{5}{}{1110}{}
+
+{1150}{Je ne vous connais pas moi, vous n'êtes pas mon médecin habituel... [Vous sentez de la suspicion dans sa voix. Elle regarde ses bras, semble paniquée puis regarde son torse] Ma robe, où est ma robe ? [Elle hurle] Rendez-moi ma robe !}{Je ne vous connais pas moi, vous n'êtes pas mon médecin habituel... [Vous sentez de la suspicion dans sa voix. Elle regarde ses bras, semble paniquée puis regarde son torse] Ma robe, où est ma robe ? [Elle hurle] Rendez-moi ma robe !}{}{}{}{}
+{1151}{Ecoutez-moi, c'est cette robe qui vous a rendu malade...}{}{5}{}{1120}{}
+{1152}{Calmez-vous et écoutez moi, cette robe est maudite.}{}{5}{}{1090}{}
+{1153}{Votre mari a du vous la retirer...}{}{5}{}{1100}{}
+{1154}{Je ne sais pas où elle est...}{}{5}{}{1110}{}
+
+{1160}{Un simple passager... Mais alors pourquoi vous occupez-vous de moi ? [Elle remarque enfin le crane entre ses mains] Tiens, qu'est-ce ? [Au fur et à mesure qu'elle parle, la lueur qui émane de sa bouche faiblit]}{Un simple passager... Mais alors pourquoi vous occupez-vous de moi ? [Elle remarque enfin le crane entre ses mains] Tiens, qu'est-ce ? [Au fur et à mesure qu'elle parle, la lueur qui émane de sa bouche faiblit]}{}{}{}{lf3 1}
+{1161}{Je suis désolé mais nous avons peu de temps, je vais aller droit au but.}{1}{5}{}{1230}{}
+{1162}{Je suis désolée mais nous avons peu de temps, je vais aller droit au but.}{0}{5}{}{1230}{}
+{1163}{C'était destiné à vous guérir, vous aviez perdu la parole.}{}{5}{}{1240}{}
+{1164}{Rien d'important, ce qui compte c'est que vous guérissiez.}{}{5}{}{1230}{}
+
+{1170}{Oui, je préfèrerais disparaitre que de laisser mon mari me voler ma robe ! [La lueur qui émanait de sa bouche s'est éteinte. Ses lèvres continuent de bouger mais elle ne dit plus rien. Elle semble continuer de vous crier dessus sans même s'apercevoir qu'aucun son ne sort de sa bouche. Après quelques secondes, elle semble comprendre et place une main devant sa bouche puis l'enlève pour mettre un doigt dans son oreille avant de la faire tourner.]}{Oui, je préfèrerais disparaitre que de laisser mon mari me voler ma robe ! [La lueur qui émanait de sa bouche s'est éteinte. Ses lèvres continuent de bouger mais elle ne dit plus rien. Elle semble continuer de vous crier dessus sans même s'apercevoir qu'aucun son ne sort de sa bouche. Après quelques secondes, elle semble comprendre et place une main devant sa bouche puis l'enlève pour mettre un doigt dans son oreille avant de la faire tourner.]}{}{}{}{qu1027 6}
+{1171}{[Ne rien faire]}{}{5}{lf2 1}{1260}{}
+{1172}{[Ne rien faire]}{}{5}{lf2 0}{1270}{}
+{1173}{Je suis navré, j'ai échoué à vous sauver...}{1}{5}{lf2 1}{1260}{}
+{1174}{Je suis navré, j'ai échoué à vous sauver...}{1}{5}{lf2 0}{1270}{}
+{1175}{Je suis navrée, j'ai échoué à vous sauver...}{0}{5}{lf2 1}{1260}{}
+{1176}{Je suis navrée, j'ai échoué à vous sauver...}{0}{5}{lf2 0}{1270}{}
+
+{1180}{J'en ai assez de vos mensonges, disparaissez ! [La lueur qui émanait de sa bouche s'est éteinte. Ses lèvres continuent de bouger mais elle ne dit plus rien. Elle semble continuer de vous crier dessus sans même s'apercevoir qu'aucun son ne sort de sa bouche. Après quelques secondes, elle semble comprendre et place une main devant sa bouche puis l'enlève pour mettre un doigt dans son oreille avant de la faire tourner.]}{J'en ai assez de vos mensonges, disparaissez ! [La lueur qui émanait de sa bouche s'est éteinte. Ses lèvres continuent de bouger mais elle ne dit plus rien. Elle semble continuer de vous crier dessus sans même s'apercevoir qu'aucun son ne sort de sa bouche. Après quelques secondes, elle semble comprendre et place une main devant sa bouche puis l'enlève pour mettre un doigt dans son oreille avant de la faire tourner.]}{}{}{}{qu1027 6}
+{1181}{[Ne rien faire]}{}{5}{lf2 1}{1260}{}
+{1182}{[Ne rien faire]}{}{5}{lf2 0}{1270}{}
+{1183}{Je suis navré, j'ai échoué à vous sauver...}{1}{5}{lf2 1}{1260}{}
+{1184}{Je suis navré, j'ai échoué à vous sauver...}{1}{5}{lf2 0}{1270}{}
+{1185}{Je suis navrée, j'ai échoué à vous sauver...}{0}{5}{lf2 1}{1260}{}
+{1186}{Je suis navrée, j'ai échoué à vous sauver...}{0}{5}{lf2 0}{1270}{}
+
+{1190}{Mes délires ? Voleur de robes, monstre ! [La lueur qui émanait de sa bouche s'est éteinte. Ses lèvres continuent de bouger mais elle ne dit plus rien. Elle semble continuer de vous crier dessus sans même s'apercevoir qu'aucun son ne sort de sa bouche. Après quelques secondes, elle semble comprendre et place une main devant sa bouche puis l'enlève pour mettre un doigt dans son oreille avant de la faire tourner.]}{Mes délires ? Voleur de robes, monstre ! [La lueur qui émanait de sa bouche s'est éteinte. Ses lèvres continuent de bouger mais elle ne dit plus rien. Elle semble continuer de vous crier dessus sans même s'apercevoir qu'aucun son ne sort de sa bouche. Après quelques secondes, elle semble comprendre et place une main devant sa bouche puis l'enlève pour mettre un doigt dans son oreille avant de la faire tourner.]}{}{}{}{qu1027 6}
+{1191}{[Suite]}{}{5}{lf2 1}{1260}{}
+{1192}{[Suite]}{}{5}{lf2 0}{1270}{}
+
+{1200}{Alors disparaissez, je la retrouverais moi-même. Je ne veux plus voir ici et [La lueur qui émanait de sa bouche s'est éteinte. Ses lèvres continuent de bouger mais elle ne dit plus rien. Elle semble continuer de vous crier dessus sans même s'apercevoir qu'aucun son ne sort de sa bouche. Après quelques secondes, elle semble comprendre et place une main devant sa bouche puis l'enlève pour mettre un doigt dans son oreille avant de la faire tourner.]}{Alors disparaissez, je la retrouverais moi-même. Je ne veux plus voir ici et [La lueur qui émanait de sa bouche s'est éteinte. Ses lèvres continuent de bouger mais elle ne dit plus rien. Elle semble continuer de vous crier dessus sans même s'apercevoir qu'aucun son ne sort de sa bouche. Après quelques secondes, elle semble comprendre et place une main devant sa bouche puis l'enlève pour mettre un doigt dans son oreille avant de la faire tourner.]}{}{}{}{}
+{1201}{[Ne rien faire]}{}{5}{lf2 1}{1260}{}
+{1202}{[Ne rien faire]}{}{5}{lf2 0}{1270}{}
+{1203}{Je suis navré, j'ai échoué à vous sauver...}{1}{5}{lf2 1}{1260}{}
+{1204}{Je suis navré, j'ai échoué à vous sauver...}{1}{5}{lf2 0}{1270}{}
+{1205}{Je suis navrée, j'ai échoué à vous sauver...}{0}{5}{lf2 1}{1260}{}
+{1206}{Je suis navrée, j'ai échoué à vous sauver...}{0}{5}{lf2 0}{1270}{}
+
+{1210}{Menteur ! Et même si c'était vrai, vous ne m'êtes dans ce cas d'aucune utilité, disparaissez ! [La lueur qui émanait de sa bouche s'est éteinte. Ses lèvres continuent de bouger mais elle ne dit plus rien. Elle semble continuer de vous crier dessus sans même s'apercevoir qu'aucun son ne sort de sa bouche. Après quelques secondes, elle semble comprendre et place une main devant sa bouche puis l'enlève pour mettre un doigt dans son oreille avant de la faire tourner.]}{Menteur ! Et même si c'était vrai, vous ne m'êtes dans ce cas d'aucune utilité, disparaissez ! [La lueur qui émanait de sa bouche s'est éteinte. Ses lèvres continuent de bouger mais elle ne dit plus rien. Elle semble continuer de vous crier dessus sans même s'apercevoir qu'aucun son ne sort de sa bouche. Après quelques secondes, elle semble comprendre et place une main devant sa bouche puis l'enlève pour mettre un doigt dans son oreille avant de la faire tourner.]}{}{}{}{}
+{1211}{[Ne rien faire]}{}{5}{lf2 1, lf3 0}{1260}{}
+{1212}{[Ne rien faire]}{}{5}{lf2 0}{1270}{}
+{1213}{Je suis navré, j'ai échoué à vous sauver...}{1}{5}{lf2 1, lf3 0}{1260}{}
+{1214}{Je suis navré, j'ai échoué à vous sauver...}{1}{5}{lf2 0, lf3 0}{1270}{}
+{1215}{Je suis navrée, j'ai échoué à vous sauver...}{0}{5}{lf2 1, lf3 0}{1260}{}
+{1216}{Je suis navrée, j'ai échoué à vous sauver...}{0}{5}{lf2 0, lf3 0}{1270}{}
+{1217}{[Ne rien faire]}{}{5}{lf2 1, lf3 1}{1320}{}
+{1218}{[Ne rien faire]}{}{5}{lf2 0, lf3 1}{1330}{}
+{1219}{Je suis navré, j'ai échoué à vous sauver...}{1}{5}{lf2 1, lf3 1}{1320}{}
+{1220}{Je suis navré, j'ai échoué à vous sauver...}{1}{5}{lf2 0, lf3 1}{1330}{}
+{1221}{Je suis navrée, j'ai échoué à vous sauver...}{0}{5}{lf2 1, lf3 1}{1320}{}
+{1222}{Je suis navrée, j'ai échoué à vous sauver...}{0}{5}{lf2 0, lf3 1}{1330}{}
+
+{1224}{Un simple passager... Mais alors pourquoi vous occupez-vous de moi ? [Elle remarque enfin le relais entre ses mains] Tiens, qu'est-ce ? [Au fur et à mesure qu'elle parle, la lueur qui émane de sa bouche faiblit]}{Un simple passager... Mais alors pourquoi vous occupez-vous de moi ? [Elle remarque enfin le relais entre ses mains] Tiens, qu'est-ce ? [Au fur et à mesure qu'elle parle, la lueur qui émane de sa bouche faiblit]}{}{}{}{lf3 1}
+{1225}{Je suis désolé mais nous avons peu de temps, je vais aller droit au but.}{1}{5}{}{1280}{}//like1230
+{1226}{Je suis désolée mais nous avons peu de temps, je vais aller droit au but.}{0}{5}{}{1280}{}//like1230
+{1227}{C'était destiné à vous guérir, vous aviez perdu la parole.}{}{5}{}{1240}{}
+{1228}{Rien d'important, ce qui compte c'est que vous guérissiez.}{}{5}{}{1280}{}
+
+{1230}{Vous pourriez peut-être au moins m'expliquer pourquoi je tiens ce crâne entre mes mains... Mais au fait... [Elle regarde ses bras, semble paniquée puis regarde son torse] Ma robe, où est ma robe ? [Elle hurle] Rendez-moi ma robe !}{Vous pourriez peut-être au moins m'expliquer pourquoi je tiens ce crâne entre mes mains... Mais au fait... [Elle regarde ses bras, semble paniquée puis regarde son torse] Ma robe, où est ma robe ? [Elle hurle] Rendez-moi ma robe !}{}{}{}{}
+{1231}{Ecoutez-moi, c'est cette robe qui vous a rendu malade...}{}{5}{}{1120}{}
+{1232}{Calmez-vous et écoutez moi, cette robe est maudite.}{}{5}{}{1090}{}
+{1233}{Votre mari a du vous la retirer...}{}{5}{}{1100}{}
+{1234}{Je ne sais pas où elle est...}{}{5}{}{1110}{}
+
+{1240}{J'étais aphone ? Mais je ne me souviens de rien... Comment est-ce arrivé ?}{J'étais aphone ? Mais je ne me souviens de rien... Comment est-ce arrivé ?}{}{}{}{}
+{1241}{C'est arrivé à cause d'une robe que vous a offerte votre mari.}{}{5}{}{1290}{}
+{1242}{Je vous le dirais après, sachez déjà que votre mari a fait l'impossible pour vous guérir.}{}{7}{ps 8}{1300}{}
+{1243}{C'est la compensation d'avoir été guérie de folie.}{}{5}{}{1310}{}
+
+{1260}{[Elle frotte frénétiquement puis rouvre la bouche avant de se rendre à l'évidence. Elle vous foudroie alors du regard puis remarque enfin le crane qu'elle tient dans les mains. Elle vous le jette dessus avant de se mettre à pleurer. Elle rouvre une dernière fois la bouche, probablement pour demander sa robe.]}{[Elle frotte frénétiquement puis rouvre la bouche avant de se rendre à l'évidence. Elle vous foudroie alors du regard puis remarque enfin le crane qu'elle tient dans les mains. Elle vous le jette dessus avant de se mettre à pleurer. Elle rouvre une dernière fois la bouche, probablement pour demander sa robe.]}{}{}{}{}
+{1261}{[Partir]}{}{1}{}{0}{in-5819}
+
+{1270}{[Elle frotte frénétiquement puis rouvre la bouche avant de se rendre à l'évidence. Elle vous foudroie alors du regard puis remarque enfin le relais qu'elle tient dans les mains. Elle vous le jette dessus avant de se mettre à pleurer. Elle rouvre une dernière fois la bouche, probablement pour demander sa robe.]}{[Elle frotte frénétiquement puis rouvre la bouche avant de se rendre à l'évidence. Elle vous foudroie alors du regard puis remarque enfin le relais qu'elle tient dans les mains. Elle vous le jette dessus avant de se mettre à pleurer. Elle rouvre une dernière fois la bouche, probablement pour demander sa robe.]}{}{}{}{}
+{1271}{[Partir]}{}{1}{}{0}{in-5860}
+
+{1280}{Vous pourriez peut-être au moins m'expliquer pourquoi je tiens cette boite sinistre entre mes mains... Mais au fait... [Elle regarde ses bras, semble paniquée puis regarde son torse] Ma robe, où est ma robe ? [Elle hurle] Rendez-moi ma robe !}{Vous pourriez peut-être au moins m'expliquer pourquoi je tiens cette boite sinistre entre mes mains... Mais au fait... [Elle regarde ses bras, semble paniquée puis regarde son torse] Ma robe, où est ma robe ? [Elle hurle] Rendez-moi ma robe !}{}{}{}{}
+{1281}{Ecoutez-moi, c'est cette robe qui vous a rendu malade...}{}{5}{}{1120}{}
+{1282}{Calmez-vous et écoutez moi, cette robe est maudite.}{}{5}{}{1090}{}
+{1283}{Votre mari a du vous la retirer...}{}{5}{}{1100}{}
+{1284}{Je ne sais pas où elle est...}{}{5}{}{1110}{}
+
+{1290}{Ma robe ? Mais... [Elle regarde ses bras, semble paniquée puis regarde son torse] Ma robe, où est ma robe ? [Elle hurle] Rendez-moi ma robe !}{Ma robe ? Mais... [Elle regarde ses bras, semble paniquée puis regarde son torse] Ma robe, où est ma robe ? [Elle hurle] Rendez-moi ma robe !}{}{}{}{}
+{1291}{Ecoutez-moi, c'est cette robe qui vous a rendu malade...}{}{5}{}{1120}{}
+{1292}{Calmez-vous et écoutez moi, cette robe est maudite.}{}{5}{}{1090}{}
+{1293}{Votre mari a du vous la retirer...}{}{5}{}{1100}{}
+{1294}{Je ne sais pas où elle est...}{}{5}{}{1110}{}
+
+{1300}{Vraiment ? [Cela semble la rendre heureuse] Mais me direz-vous enfin ce que j'avais ?}{Vraiment ? [Cela semble la rendre heureuse] Mais me direz-vous enfin ce que j'avais ?}{}{}{}{}
+{1301}{La robe qu'il vous avait offerte était maudite, il a du s'en débarrasser.}{}{5}{}{1340}{}
+{1302}{Vous avez fait une très mauvaise chute qui vous a rendu amnésique.}{}{8}{}{1350}{}
+{1303}{Non, je ne peux pas vous le dire maintenant. Patientez encore un peu.}{}{5}{}{1360}{}
+
+{1310}{Je ne comprends plus rien vous savez, vous me dites que j'étais folle et que j'ai pu guérir en échange de ma voix et que mon mari a trouvé un moyen de me la rendre ?}{Je ne comprends plus rien vous savez, vous me dites que j'étais folle et que j'ai pu guérir en échange de ma voix et que mon mari a trouvé un moyen de me la rendre ?}{}{}{}{}
+{1311}{C'est cela.}{}{5}{}{1370}{}
+{1312}{Oui, mais ce n'est que temporaire.}{}{5}{}{1370}{}
+
+{1320}{[Elle frotte frénétiquement puis rouvre la bouche avant de se rendre à l'évidence. Elle vous foudroie alors du regard puis serre le crane qu'elle tient dans les mains. Sans une once d'hésitation, elle vous le jette dessus avant de se mettre à pleurer. Elle rouvre une dernière fois la bouche, probablement pour demander sa robe.]}{[Elle frotte frénétiquement puis rouvre la bouche avant de se rendre à l'évidence. Elle vous foudroie alors du regard puis serre le crane qu'elle tient dans les mains. Sans une once d'hésitation, elle vous le jette dessus avant de se mettre à pleurer. Elle rouvre une dernière fois la bouche, probablement pour demander sa robe.]}{}{}{}{}
+{1321}{[Partir]}{}{1}{}{0}{in-5819}
+
+{1330}{[Elle frotte frénétiquement puis rouvre la bouche avant de se rendre à l'évidence. Elle vous foudroie alors du regard puis serre le relais qu'elle tient dans les mains. Sans une once d'hésitation, elle vous le jette dessus avant de se mettre à pleurer. Elle rouvre une dernière fois la bouche, probablement pour demander sa robe.]}{[Elle frotte frénétiquement puis rouvre la bouche avant de se rendre à l'évidence. Elle vous foudroie alors du regard puis serre le relais qu'elle tient dans les mains. Sans une once d'hésitation, elle vous le jette dessus avant de se mettre à pleurer. Elle rouvre une dernière fois la bouche, probablement pour demander sa robe.]}{}{}{}{}
+{1331}{[Partir]}{}{1}{}{0}{in-5860}
+
+{1340}{Comment, ma robe ? [Elle regarde ses bras, semble paniquée puis regarde son torse] Ma robe, il m'a pris ma robe, où est-elle ? [Elle hurle] Rendez-moi ma robe !}{Comment, ma robe ? [Elle regarde ses bras, semble paniquée puis regarde son torse] Ma robe, il m'a pris ma robe, où est-elle ? [Elle hurle] Rendez-moi ma robe !}{}{}{}{}
+{1341}{Je vous l'ai dit, cette robe était maudite, il n'avait pas d'autre choix...}{}{5}{}{1090}{}
+{1342}{Il a fait ça pour vous, pour ne pas vous perdre.}{}{7}{ps 6}{1380}{}
+{1343}{Je ne sais pas où elle est mais ce n'est pas ce qui importe.}{}{5}{}{1110}{}
+
+{1350}{Vraiment ? Comme il est gentil à lui de s'occuper de moi... Mais au fait... [Elle regarde ses bras, semble paniquée puis regarde son torse] Ma robe, où est ma robe ? [Elle hurle] Rendez-moi ma robe !}{Vraiment ? Vraiment ? Comme il est gentil à lui de s'occuper de moi... Mais au fait... [Elle regarde ses bras, semble paniquée puis regarde son torse] Ma robe, où est ma robe ? [Elle hurle] Rendez-moi ma robe !}{}{}{}{}
+{1351}{Du calme, la vérité c'est que c'est cette robe qui vous a rendu malade...}{}{5}{}{1120}{}
+{1352}{Calmez-vous et écoutez moi, cette robe est maudite.}{}{5}{}{1090}{}
+{1353}{Je ne sais pas mais ce n'est pas ce qui importe pour l'heure...}{}{5}{}{1110}{}
+
+{1360}{Vous savez, même si j'ai été malade je ne le suis plus ... [Elle regarde ses bras, semble paniquée puis regarde son torse] Ma robe, où est ma robe ? [Elle hurle] Rendez-moi ma robe !}{Vous savez, même si j'ai été malade je ne le suis plus ... [Elle regarde ses bras, semble paniquée puis regarde son torse] Ma robe, où est ma robe ? [Elle hurle] Rendez-moi ma robe !}{}{}{}{}
+{1361}{Ecoutez-moi, c'est cette robe qui vous a rendu malade...}{}{5}{}{1120}{}
+{1362}{Calmez-vous et écoutez moi, cette robe est maudite.}{}{5}{}{1090}{}
+{1364}{Je ne sais pas où elle est mais écoutez...}{}{5}{}{1110}{}
+
+{1370}{[Elle ne semble pas vous écouté, elle a l'air paniqué. Elle regarde ses bras puis rapidement son torse] Ma robe, où est ma robe ? [Elle hurle] Rendez-moi ma robe !}{[Elle ne semble pas vous écouté, elle a l'air paniqué. Elle regarde ses bras puis rapidement son torse] Ma robe, où est ma robe ? [Elle hurle] Rendez-moi ma robe !}{}{}{}{}
+{1371}{Ecoutez-moi, c'est cette robe qui vous a rendu malade...}{}{5}{}{1120}{}
+{1372}{Calmez-vous et écoutez moi, cette robe est maudite.}{}{5}{}{1090}{}
+{1374}{Je ne sais pas où elle est mais écoutez...}{}{5}{}{1110}{}
+
+{1380}{Je ne lui ai rien demandé moi, où est ma robe ? [La lueur de sa bouche s'estompe de plus en plus, elle devient très faible]}{Je ne lui ai rien demandé moi, où est ma robe ? [La lueur de sa bouche s'estompe de plus en plus, elle devient très faible]}{}{}{}{}
+{1381}{Cette robe est maudite, il vous faut y renoncer pour guérir.}{}{5}{}{1090}{}
+{1382}{Il savait que vous risquiez de le détester ensuite mais il a tout fait pour vous sauver.}{}{5}{}{1390}{}
+{1383}{Il l'a mise en lui sûr, afin que plus jamais vous ne soyez en danger. Il l'a fait pour vous.}{}{5}{}{1400}{}
+
+{1390}{Il savait... que je le détesterais ? [Elle se calme un peu, de la lueur qui jaillissait de sa bouche, il ne reste qu'un infime point lumineux] Il a sacrifié l'amour que j'avais pour lui... pour me sauver ?}{Il savait... que je le détesterais ? [Elle se calme un peu, de la lueur qui jaillissait de sa bouche, il ne reste qu'un infime point lumineux] Il a sacrifié l'amour que j'avais pour lui... pour me sauver ?}{}{}{}{}
+{1391}{Oui, il savait ce qu'il risquait mais il vous a choisi vous, qu'importe comment vous le traiteriez.}{}{5}{}{1410}{}
+{1392}{Non, en réalité, il vous a enlevé cette robe pour vous énerver. Vous êtes trop bête...}{}{5}{}{1420}{}
+{1393}{En effet, il a choisi de préserver votre existence quitte à ce que vous le détestiez.}{}{5}{}{1430}{}
+
+{1400}{Pour moi ? Il a volé cette robe qu'il m'avait lui-même offerte pour moi ? Cessez vos mensonges @pcname@, avouez donc que vous cherchez à me voler ma robe ! [La lueur qui émanait de sa bouche s'est éteinte. Ses lèvres continuent de bouger mais elle ne dit plus rien. Elle semble continuer de vous crier dessus sans même s'apercevoir qu'aucun son ne sort de sa bouche. Après quelques secondes, elle semble comprendre et place une main devant sa bouche puis l'enlève pour mettre un doigt dans son oreille avant de la faire tourner.]}{Pour moi ? Il a volé cette robe qu'il m'avait lui-même offerte pour moi ? Cessez vos mensonges @pcname@, avouez donc que vous cherchez à me voler ma robe ! [La lueur qui émanait de sa bouche s'est éteinte. Ses lèvres continuent de bouger mais elle ne dit plus rien. Elle semble continuer de vous crier dessus sans même s'apercevoir qu'aucun son ne sort de sa bouche. Après quelques secondes, elle semble comprendre et place une main devant sa bouche puis l'enlève pour mettre un doigt dans son oreille avant de la faire tourner.]}{}{}{}{}
+{1401}{[Ne rien faire]}{}{5}{lf2 1}{1320}{}
+{1402}{[Ne rien faire]}{}{5}{lf2 0}{1330}{}
+{1403}{Je suis navré, j'ai échoué à vous sauver...}{1}{5}{lf2 1}{1320}{}
+{1404}{Je suis navré, j'ai échoué à vous sauver...}{1}{5}{lf2 0}{1330}{}
+{1405}{Je suis navrée, j'ai échoué à vous sauver...}{0}{5}{lf2 1}{1320}{}
+{1406}{Je suis navrée, j'ai échoué à vous sauver...}{0}{5}{lf2 0}{1330}{}
+
+{1410}{Il est... si gentil. [Ses yeux qui jusqu'alors étaient relativement inexpressif sont à présent emplis de joie] Je l'aime, oui je l'aime de tout mon coeur et je le traiterais toujours avec tout mon amour. Je me moque de cette robe, elle ne vaut pas mon mari ou ma raison. [Tout son corps se met à briller intensément de rouge avant de redevenir normal]}{Il est... si gentil. [Ses yeux qui jusqu'alors étaient relativement inexpressif sont à présent emplis de joie] Je l'aime, oui je l'aime de tout mon coeur et je le traiterais toujours avec tout mon amour. Je me moque de cette robe, elle ne vaut pas mon mari ou ma raison. [Tout son corps se met à briller intensément de rouge avant de redevenir normal]}{}{}{}{qu1027 3, gf296 1}
+{1411}{Ca y est, vous êtes guérie. J'ai fait mon office.}{}{5}{}{1440}{}
+{1412}{Si c'est ce que vous pensez, alors c'est que j'ai réussi à vous soigner.}{}{5}{}{1450}{}
+
+{1420}{Comment ? [Ses yeux brûlent de haine] Vous m'avez roulé ? Je vous déteste, vous... [La lueur qui émanait de sa bouche s'est éteinte. Ses lèvres continuent de bouger mais elle ne dit plus rien. Elle semble continuer de vous crier dessus sans même s'apercevoir qu'aucun son ne sort de sa bouche. Après quelques secondes, elle semble comprendre et place une main devant sa bouche puis l'enlève pour mettre un doigt dans son oreille avant de la faire tourner.]}{Comment ? [Ses yeux brûlent de haine] Vous m'avez roulé ? Je vous déteste, vous... [La lueur qui émanait de sa bouche s'est éteinte. Ses lèvres continuent de bouger mais elle ne dit plus rien. Elle semble continuer de vous crier dessus sans même s'apercevoir qu'aucun son ne sort de sa bouche. Après quelques secondes, elle semble comprendre et place une main devant sa bouche puis l'enlève pour mettre un doigt dans son oreille avant de la faire tourner.]}{}{}{}{}
+{1421}{[Suite]}{}{5}{lf2 1}{1320}{}
+{1422}{[Suite]}{}{5}{lf2 0}{1330}{}
+
+{1430}{Shion... Comment pourrais-je le détester ? [Ses yeux qui jusqu'alors étaient relativement inexpressif sont à présent emplis de joie] Je l'aime, oui je l'aime tellement... Je veux rester avec lui et que nous restions des jours entiers à contempler notre amour ! Je me moque de cette robe, elle ne vaut pas mon mari ou ma raison. [Tout son corps se met à briller intensément de rouge avant de redevenir normal]}{Shion... Comment pourrais-je le détester ? [Ses yeux qui jusqu'alors étaient relativement inexpressif sont à présent emplis de joie] Je l'aime, oui je l'aime tellement... Je veux rester avec lui et que nous restions des jours entiers à contempler notre amour ! Je me moque de cette robe, elle ne vaut pas mon mari ou ma raison. [Tout son corps se met à briller intensément de rouge avant de redevenir normal]}{}{}{}{qu1027 3, gf296 1}
+{1431}{Ca y est, vous êtes guérie. J'ai fait mon office.}{}{5}{}{1440}{}
+{1432}{Si c'est ce que vous pensez, alors c'est que j'ai réussi à vous soigner.}{}{5}{}{1450}{}
+
+{1440}{Guérie ? C'était si simple ? Je n'ai pas le moindre souvenir d'avoir été malade... Mais qu'importe, si vous le dites, je vous crois. Allez vite l'annoncer à mon mari le temps que je reprenne mes esprits... @pcname@, vous êtes bien plus qu'un "simple passager", vous m'avez révélé mes véritables sentiments, je me suis idiote de m'être attaché à cette robe plus qu'à mon mari. Si je peux faire quoi que ce soit pour vous, n'hésitez pas à venir me trouver.}{Guérie ? C'était si simple ? Je n'ai pas le moindre souvenir d'avoir été malade... Mais qu'importe, si vous le dites, je vous crois. Allez vite l'annoncer à mon mari le temps que je reprenne mes esprits... @pcname@, vous êtes bien plus qu'un "simple passager", vous m'avez révélé mes véritables sentiments, je me suis idiote de m'être attaché à cette robe plus qu'à mon mari. Si je peux faire quoi que ce soit pour vous, n'hésitez pas à venir me trouver.}{}{}{}{}
+{1441}{C'est entendu.}{}{5}{lf2 1}{1460}{}
+{1442}{C'est entendu.}{}{5}{lf2 0}{1470}{}
+
+{1450}{Je suis... soignée ? C'était si simple ? Je n'ai pas le moindre souvenir d'avoir été malade... Mais qu'importe, si vous le dites, je vous crois. Allez vite l'annoncer à mon mari le temps que je reprenne mes esprits... @pcname@, vous êtes bien plus qu'un "simple passager", vous m'avez révélé mes véritables sentiments, je me suis idiote de m'être attaché à cette robe plus qu'à mon mari. Si je peux faire quoi que ce soit pour vous, n'hésitez pas à venir me trouver.}{Je suis... soignée ? C'était si simple ? Je n'ai pas le moindre souvenir d'avoir été malade... Mais qu'importe, si vous le dites, je vous crois. Allez vite l'annoncer à mon mari le temps que je reprenne mes esprits... @pcname@, vous êtes bien plus qu'un "simple passager", vous m'avez révélé mes véritables sentiments, je me suis idiote de m'être attaché à cette robe plus qu'à mon mari. Si je peux faire quoi que ce soit pour vous, n'hésitez pas à venir me trouver.}{}{}{}{}
+{1451}{C'est entendu.}{}{5}{lf2 1}{1460}{}
+{1452}{C'est entendu.}{}{5}{lf2 0}{1470}{}
+
+{1460}{Et... [Elle vous tend le crâne] Concernant ce crane, je crois comprendre à quoi il servait à présent. Peut-être voudriez-vous le récupérer ? Je ne sens plus aucun pouvoir dedans à présent mais...}{Et... [Elle vous tend le crâne] Concernant ce crane, je crois comprendre à quoi il servait à présent. Peut-être voudriez-vous le récupérer ? Je ne sens plus aucun pouvoir dedans à présent mais...}{}{}{}{}
+{1461}{[Vous le prenez] Merci, c'est très aimable à vous.}{}{5}{}{0}{in-5819}
+{1462}{Gardez le en souvenir... Il sera le témoin de l'amour de votre mari.}{}{5}{}{0}{fl 1468}
+
+{1468}{Merci @pcname@, vous êtes vraiment quelqu'un d'extraordinaire.}{Merci @pcname@, vous êtes vraiment quelqu'un d'extraordinaire.}{}{}{}{}
+
+{1470}{Et... [Elle vous tend le relais] Concernant cette boîte, c'est un relais n'est-ce pas ? Je crois comprendre à quoi il servait à présent. Peut-être voudriez-vous le garder ? Je ne sens plus aucun pouvoir dedans à présent mais...}{Et... [Elle vous tend le relais] Concernant cette boîte, c'est un relais n'est-ce pas ? Je crois comprendre à quoi il servait à présent. Peut-être voudriez-vous le garder ? Je ne sens plus aucun pouvoir dedans à présent mais...}{}{}{}{}
+{1471}{[Vous le prenez] Merci, c'est très aimable à vous.}{}{5}{}{0}{in-5860}
+{1472}{Gardez le en souvenir... Il sera le témoin de l'amour de votre mari.}{}{5}{}{0}{fl 1468}
+
+
+{1500}{[Iris vous foudroie du regard, vous pouvez lire une grande tristesse sur son visage]}{[Iris vous foudroie du regard, vous pouvez lire une grande tristesse sur son visage]}{}{}{}{}
+
+
+{2000}{Rebonjour @pcname@. Je peux vous aider ?}{Rebonjour @pcname@. Je peux vous aider ?}{}{}{}{}
+{2001}{Pouvez-vous écrire un parchemin de matérialisation olfactive ?}{}{5}{ru 1056, gf305 0, lf4 0}{2020}{lf4 1}
+{2002}{Avez-vous entendu parler de choses étranges dans le train ?}{}{5}{lf5 0}{2030}{lf5 1}
+{2003}{Je vous apporte ce qu'il faut pour faire le parchemin. [Vous lui donnez l'ingrédient secret.]}{}{5}{in 5861, lf7 1, gf305 0}{2050}{in 5861, lf7 0}
+{2004}{Non, je venais m'assurer que vous vous sentiez mieux.}{}{5}{lf6 0}{2040}{lf6 1}
+{2005}{Non, je vais partir.}{}{5}{}{0}{}
+
+{}{}{}{}{}{}{}
+
+{2020}{Mais certainement, avez-vous quelque chose qui porte la senteur de ce que vous recherchez ?}{Mais certainement, avez-vous quelque chose qui porte la senteur de ce que vous recherchez ?}{}{}{}{}
+{2021}{Oui, voici. [Vous lui donnez l'ingrédient secret]}{}{5}{in 5861}{2050}{in 5861}
+{2022}{Ah, je vous rapporte ça tout de suite.}{}{5}{}{0}{fl 2028, lf7 1}
+
+{2028}{[Elle rit légèrement] Je ne vous croyais pas si tête en l'air...}{[Elle rit légèrement] Je ne vous croyais pas si tête en l'air...}{}{}{}{}
+
+{2030}{En fait... je ne suis pas encore sortie de notre cabine alors je ne sais pas grand chose.}{En fait... je ne suis pas encore sortie de notre cabine alors je ne sais pas grand chose.}{}{}{}{}
+{2031}{Ce n'est pas grave, je peux vous demander autre chose ?}{}{5}{}{2100}{}
+{2032}{Ce n'est rien, au revoir...}{}{5}{}{0}{}
+
+{2040}{C'est très gentil à vous, je vais mieux en effet. [Elle sourit comme pour vous remercier de ce que vous avez fait pour elle]}{C'est très gentil à vous, je vais mieux en effet. [Elle sourit comme pour vous remercier de ce que vous avez fait pour elle]}{}{}{}{}
+{2041}{Alors puis-je vous demander autre chose ?}{}{5}{}{2100}{}
+{2042}{Très bien, je suis rassuré. Au revoir...}{1}{5}{}{0}{fl 2048}
+{2043}{Très bien, je suis rassurée. Au revoir...}{0}{5}{}{0}{fl 2048}
+
+{2048}{Oui, ne vous faites plus de soucis pour moi, je vais bien...}{Oui, ne vous faites plus de soucis pour moi, je vais bien...}{}{}{}{}
+
+{2050}{Quelle étrange chose, je n'ai jamais rien vu de tel ! Bref, alors si je me rappelle bien... [Elle prend une feuille dans un des tiroirs de son bureau et la pose sur celui-ci. Elle prend ensuite une plume noire qu'elle trempe dans un encrier et commence à tracer des runes sur le papier. Elle secoue l'ingrédient au dessus de la feuille avant de le poser dessus, l'ingrédient se liquéfie alors et le papier absorbe ce liquide.]}{Quelle étrange chose, je n'ai jamais rien vu de tel ! Bref, alors si je me rappelle bien... [Elle prend une feuille dans un des tiroirs de son bureau et la pose sur celui-ci. Elle prend ensuite une plume noire qu'elle trempe dans un encrier et commence à tracer des runes sur le papier. Elle secoue l'ingrédient au dessus de la feuille avant de le poser dessus, l'ingrédient se liquéfie alors et le papier absorbe ce liquide.]}{}{}{}{}
+{2051}{[Suite]}{}{1}{}{2053}{}
+
+{2053}{[Elle repose la plume et roule le parchemin avant de l'entourer d'un ruban bleu et de vous le donner] Voilà, il est terminé et je pense l'avoir fait assez puissant. Utilisez-le sur un monocle pour l'enchanter et vous percevrez alors le parfum de ce que vous cherchez.}{[Elle repose la plume et roule le parchemin avant de l'entourer d'un ruban bleu et de vous le donner] Voilà, il est terminé et je pense l'avoir fait assez puissant. Utilisez-le sur un monocle pour l'enchanter et vous percevrez alors le parfum de ce que vous cherchez.}{}{}{}{in-5807, gf305 1}
+{2054}{Merci beaucoup, puis-je encore vous demander quelque chose ?}{}{5}{}{2100}{}
+{2055}{Merci à vous, je vais vous laisser.}{}{5}{}{0}{fl 2058}
+
+{2058}{C'est un plaisir de vous aider...}{C'est un plaisir de vous aider...}{}{}{}{}
+
+
+{2100}{Mais bien sûr, je vous en prie...}{Mais bien sûr, je vous en prie...}{}{}{}{}
+{2101}{Alors pourriez-vous écrire un parchemin de matérialisation olfactive ?}{}{5}{ru 1056, gf305 0, lf4 0}{2020}{lf4 1}
+{2102}{Je voulais savoir, n'avez-vous pas entendu parler d'évènements anormaux dans ce train ?}{}{5}{lf5 0}{2030}{lf5 1}
+{2103}{Alors pourriez-vous rédiger le parchemin ? [Vous lui donnez l'ingrédient secret.]}{}{5}{in 5861, lf7 1}{2050}{in 5861, lf7 0}
+{2104}{En fait, je dois partir.}{}{5}{}{0}{fl 2118}
+
+{}{}{}{}{}{}{}
+
+{2118}{Très bien, au revoir...}{Très bien, au revoir...}{}{}{}{}
+
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}

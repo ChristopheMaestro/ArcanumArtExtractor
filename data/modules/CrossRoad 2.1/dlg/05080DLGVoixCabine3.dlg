@@ -1,0 +1,191 @@
+{1}{[La porte est close]}{[La porte est close]}{}{}{}{}
+{2}{[Vous frappez à la porte]}{}{5}{}{10}{}
+{3}{[Vous cognez fortement la porte]}{}{5}{}{20}{}
+{4}{Ouvrez-moi, je sais que vous êtes là !}{}{5}{}{30}{}
+{5}{Monsieur, c'est le contrôleur. Je dois entrer un instant.}{1}{9}{ps 8}{40}{}
+{6}{Monsieur, c'est la femme de chambre. Je dois entrer un instant.}{0}{9}{ps 8}{40}{}
+{7}{[Vous frappez à la porte] Monsieur ?}{}{5}{}{50}{}
+
+{10}{[Personne ne répond]}{[Personne ne répond]}{}{}{}{}
+{11}{[Vous répétez l'opération]}{}{5}{}{60}{}
+{12}{[Vous frappez plus fort]}{}{5}{}{20}{}
+{13}{Je sais qu'il y a quelqu'un, ouvrez-moi !}{}{5}{}{30}{}
+{14}{Il y a quelqu'un ?}{}{5}{}{50}{}
+{15}{[Vous partez]}{}{5}{}{0}{}
+
+{19}{[Inutile d'insister, la personne à l'intérieur aura sans doute trop peur de vous pour ouvrir maintenant]}{[Inutile d'insister, la personne à l'intérieur aura sans doute trop peur de vous pour ouvrir maintenant]}{}{}{}{}
+
+{20}{[Vous entendez un petit cri de surprise à l'intérieur mais personne ne vous répond ensuite]}{[Vous entendez un petit cri de surprise à l'intérieur mais personne ne vous répond ensuite]}{}{}{}{}
+{21}{Inutile de faire semblant, je sais que vous êtes là !}{}{5}{}{80}{}
+{22}{[Vous frappez plusieurs coups brutaux sur la porte]}{}{5}{}{90}{}
+{23}{Si vous n'ouvrez pas, je vais devoir enfoncer la porte...}{}{5}{}{100}{}
+{24}{[Vous partez]}{}{1}{}{0}{lf0 1}
+
+{30}{[Personne ne vous répond]}{[Personne ne vous répond]}{}{}{}{}
+{31}{Monsieur, je sais ce que vous avez volé. Il est temps de rendre des comptes !}{}{5}{}{110}{}
+{32}{Si vous n'ouvrez pas, je vais devoir enfoncer la porte...}{}{5}{}{100}{}
+{33}{Si ce n'est pas vous qui m'ouvrez, je vais devoir aviser le personnel de bord de ce que vous avez fait.}{}{8}{ps 8}{120}{}
+{34}{[Partir]}{}{1}{}{0}{lf0 1}
+
+{40}{[Vous entendez une voix tremblante] Heu, c'est à dire que je ne suis pas habillé. Laissez-moi un peu de temps !}{[Vous entendez une voix tremblante] Heu, c'est à dire que je ne suis pas habillé. Laissez-moi un peu de temps !}{}{}{}{}
+{41}{C'est inutile. Où que vous cachiez la marmite je la retrouverai.}{}{5}{}{130}{}
+{42}{Il est inutile que vous dissimuliez la marmite, nulle sanction ne sera prise contre vous.}{}{5}{}{140}{}
+{43}{Si vous n'ouvrez pas immédiatement cette porte, je vais devoir le faire moi-même !}{}{5}{}{150}{}
+
+{50}{[Absolument personne ne répond]}{[Absolument personne ne répond]}{}{}{}{}
+{51}{[Vous frappez à nouveau à la porte]}{}{5}{}{60}{}
+{52}{[Vous frappez à la porte plus fort que précédemment]}{}{5}{}{20}{}
+{53}{Je sais qu'il y a quelqu'un, ouvrez cette porte !}{}{5}{}{30}{}
+{54}{[Vous partez]}{}{5}{}{0}{}
+
+{60}{[Il n'y a toujours aucune réponse]}{[Il n'y a toujours aucune réponse]}{}{}{}{}
+{61}{[Encore une fois, Vous frappez]}{}{5}{}{60}{}
+{62}{[Vous frappez à nouveau mais cette fois-ci avec violence]}{}{5}{}{20}{}
+{63}{Je sais qu'il y a quelqu'un, ouvrez cette porte !}{}{5}{}{30}{}
+{64}{[Vous partez]}{}{5}{}{0}{}
+
+{80}{Allez-vous en ! Il n'y a personne... [La voix est manifestement paniquée, c'est une voix grave et résonnante]}{Allez-vous en ! Il n'y a personne... [La voix est manifestement paniquée, c'est une voix grave et résonnante]}{}{}{}{}
+{81}{Cette-fois c'en est assez ! Si vous n'ouvrez pas cette porte, je l'enfonce !}{}{5}{}{160}{}
+{82}{Je partirai seulement lorsque vous m'aurez remis la marmite volée !}{}{5}{}{170}{}
+{83}{C'est entendu, mais je reviendrais alors avec un membre du personnel.}{}{8}{ps 8}{180}{}
+{84}{[Partir]}{}{1}{}{0}{lf0 1}
+
+{90}{[Cette fois-ci, vous n'entendez rien à l'intérieur]}{[Cette fois-ci, vous n'entendez rien à l'intérieur]}{}{}{}{}
+{91}{[Vous continuez de frapper comme un forcené]}{}{5}{}{190}{}
+{92}{Si vous n'ouvrez pas cette porte immédiatement, je vais être contraint de l'enfoncer !}{1}{5}{}{100}{}
+{93}{Si vous n'ouvrez pas cette porte immédiatement, je vais être contrainte de l'enfoncer !}{0}{5}{}{100}{}
+{94}{[Vous partez]}{}{1}{}{0}{lf0 1}
+
+{100}{Arrêtez ! Espèce de vandale ! [La voix grave et résonnante qui vous répond est apeurée] Qu'est-ce que vous me voulez ?}{Arrêtez ! Espèce de vandale ! [La voix grave et résonnante qui vous répond est apeurée] Qu'est-ce que vous me voulez ?}{}{}{}{} 
+{101}{Que vous rendiez ce que vous avez volé !}{}{5}{}{200}{}
+{102}{[Vous prenez une voix calme] Je souhaite seulement récupérer la marmite volée}{}{5}{}{210}{}
+{103}{Vous n'êtes pas en position de poser des questions. Ouvrez cette porte immédiatement !}{}{5}{}{220}{}
+
+{110}{Je n'ai rien volé ! [La voix qui vous répond est pleine de peur, il s'agit d'une voix grave et résonnante. Vous entendez un bruit de pas précipités qui s'éloignent de la porte et le bruit d'une personne qui saute sur un lit. La personne à l'intérieur est sans doute trop effrayée pour ne serait-ce que se lever...]}{Je n'ai rien volé ! [La voix qui vous répond est pleine de peur, il s'agit d'une voix grave et résonnante. Vous entendez un bruit de pas précipités qui s'éloignent de la porte et le bruit d'une personne qui saute sur un lit. La personne à l'intérieur est sans doute trop effrayée pour ne serait-ce que se lever...]}{}{}{}{}
+{111}{[Vous cognez à la porte avec force et insistance]}{}{1}{}{230}{}
+{112}{[Partir]}{}{1}{}{0}{lf0 1}
+
+{120}{S'il vous plaît non ! [La voix grave et résonnante qui s'échappe de la porte semble déformée par la peur] Un instant ! [Des bruits de pas lents et hésitants se font entendre]}{S'il vous plaît non ! [La voix grave et résonnante qui s'échappe de la porte semble déformée par la peur] Un instant ! [Des bruits de pas lents et hésitants se font entendre]}{}{}{}{ru 1200}
+{121}{[Patienter]}{}{1}{}{-3}{gf436 1}//124
+{122}{Dépêchez-vous d'ouvrir cette porte !}{}{5}{}{240}{}
+
+{124}{[Vous entende un bruit de verrou] Entrez...}{[Vous entende un bruit de verrou] Entrez...}{}{}{}{}
+
+{130}{Vous... Vous n'êtes pas le contrôleur, espèce de menteur ! [Vous entendez un bruit de pas précipités qui s'éloignent de la porte, la personne semble être effrayée]}{Vous... Vous n'êtes pas la femme de chambre, espèce de menteuse ! [Vous entendez un bruit de pas précipités qui s'éloignent de la porte, la personne semble être effrayée]}{}{}{}{}
+{131}{[Vous donnez un coup fort sur la porte]}{}{1}{}{250}{}
+{132}{[Partir]}{}{1}{}{0}{lf0 1}
+
+{140}{Que... vous êtes au courant ? [Sa voix paniquée devient peu à peu un peu plus calme]}{Que... vous êtes au courant ? [Sa voix paniquée devient peu à peu un peu plus calme]}{}{}{}{}
+{141}{Oui, et je vous assure que ce n'est pas un crime grave, rien ne vous arrivera si vous m'ouvrez maintenant.}{}{5}{}{260}{}
+{142}{En effet... C'est pour cela qu'il est inutile de tenter de la cacher.}{}{5}{}{270}{}
+
+{150}{[Un cri de panique s'échappe de la cabine] Vous... Vous n'êtes pas le contrôleur ! Espèce de menteur ! [Vous entendez un bruit de pas précipités qui s'éloignent de la porte, la personne semble être effrayée]}{[Un cri de panique s'échappe de la cabine] Vous... Vous n'êtes pas la femme de chambre ! Espèce de menteuse ! [Vous entendez un bruit de pas précipités qui s'éloignent de la porte, la personne semble être effrayée]}{}{}{}{}
+{151}{[Vous donnez un coup fort sur la porte]}{}{1}{}{250}{}
+{152}{[Partir]}{}{1}{}{0}{lf0 1}
+
+{160}{Arrêtez ! Espèce de vandale ! [La voix grave et résonnante qui vous répond est apeurée] Qu'est-ce que vous me voulez ?}{Arrêtez ! Espèce de vandale ! [La voix grave et résonnante qui vous répond est apeurée] Qu'est-ce que vous me voulez ?}{}{}{}{} 
+{161}{Que vous rendiez ce que vous avez volé !}{}{5}{}{200}{}
+{162}{[Vous prenez une voix calme] Je souhaite seulement récupérer la marmite volée}{}{5}{}{210}{}
+{163}{Vous n'êtes pas en position de poser des questions. Ouvrez cette porte immédiatement !}{}{5}{}{220}{}
+
+{170}{Je n'ai rien volé, rien du tout ! [Vous entendez un bruit de pas précipités qui s'éloignent de la porte et le bruit d'une personne qui saute sur un lit. La personne à l'intérieur est sans doute effrayée...]}{Je n'ai rien volé, rien du tout ! [Vous entendez un bruit de pas précipités qui s'éloignent de la porte et le bruit d'une personne qui saute sur un lit. La personne à l'intérieur est sans doute effrayée...]}{}{}{}{}
+{171}{[Vous cognez à la porte avec force et insistance]}{}{1}{}{230}{}
+{172}{[Partir]}{}{1}{}{0}{lf0 1}
+
+{180}{Attendez ! [La voix tremble] Que me voulez-vous ?}{Attendez ! [La voix tremble] Que me voulez-vous ?}{}{}{}{}
+{181}{[Vous prenez un ton autoritaire] Que vous rendiez ce que vous avez volé !}{}{5}{}{200}{}
+{182}{[Vous prenez une voix calme] Je souhaite seulement récupérer la marmite volée}{}{5}{}{210}{}
+{183}{Vous n'êtes pas en position de poser des questions. Si vous n'ouvrez cette porte, c'est le personnel qui le fera !}{}{5}{}{280}{}
+
+{190}{[Vous entendez un bruit de pas précipités à l'intérieur, ceux-ci s'éloigne de la porte. La personne à l'intérieur est sans doute effrayée]}{[Vous entendez un bruit de pas précipités à l'intérieur, ceux-ci s'éloigne de la porte. La personne à l'intérieur est sans doute effrayée]}{}{}{}{}
+{191}{[Vous ne cessez de cogner à la porte avec acharnement et force]}{}{1}{}{230}{}
+{192}{[Partir]}{}{1}{}{0}{lf0 1}
+
+{200}{Non ! [La voix semble quelque peu étouffée, par des larmes ou de la culpabilité peut-être] Je n'ai rien volé, absolument rien ![Vous entendez un bruit de pas précipités qui s'éloignent de la porte et le bruit d'une personne qui saute sur un lit]}{Non ! [La voix semble quelque peu étouffée, par des larmes ou de la culpabilité peut-être] Je n'ai rien volé, absolument rien ![Vous entendez un bruit de pas précipités qui s'éloignent de la porte et le bruit d'une personne qui saute sur un lit]}{}{}{}{}
+{201}{[Vous cognez à la porte avec force et insistance]}{}{1}{}{230}{}
+{202}{[Partir]}{}{1}{}{0}{lf0 1}
+
+{210}{Comment ? Mais je n'ai rien volé !}{Comment ? Mais je n'ai rien volé !}{}{}{}{}
+{211}{Inutile de le cacher. Aucune sanction ne sera retenue contre vous si vous la rendez vous savez...}{}{5}{}{290}{}
+{212}{Allons, cessez de jouer les ignorants. Nous y gagnerons tous les deux du temps.}{}{5}{}{300}{}
+{213}{Vraiment ? Alors laissez-moi entrer pour le vérifier...}{}{5}{}{310}{}
+{214}{Vous savez, nier ne fera qu'aggraver votre cas...}{}{5}{}{320}{}
+
+{220}{Non ! [Vous entendez un bruit de pas précipités qui s'éloignent de la porte]}{Non ! [Vous entendez un bruit de pas précipités qui s'éloignent de la porte]}{}{}{}{}
+{221}{[Vous ne cessez de cogner à la porte avec acharnement et force]}{}{1}{}{230}{}
+{222}{[Partir]}{}{1}{}{0}{lf0 1}
+
+{230}{[La porte ne bouge absolument pas. Vous n'entendez rien non plus venant de l'intérieur...]}{[La porte ne bouge absolument pas. Vous n'entendez rien non plus venant de l'intérieur...]}{}{}{}{}
+{232}{[Partir]}{}{1}{}{0}{lf0 1}
+
+{240}{Voilà, voilà, j'arrive...}{Voilà, voilà, j'arrive...}{}{}{}{}
+{241}{[Suite]}{}{1}{}{-3}{gf436 1}//124
+
+{250}{[La porte ne bouge absolument pas malgré que vous ayez mis toutes vos forces dans ce coup. Aucun son ne filtre plus depuis l'intérieur]}{[La porte ne bouge absolument pas malgré que vous ayez mis toutes vos forces dans ce coup. Aucun son ne filtre plus depuis l'intérieur]}{}{}{}{}
+{251}{[Partir]}{}{1}{}{0}{lf0 1}
+
+{260}{Vous dites vrai ? Je peux vous croire ?}{Vous dites vrai ? Je peux vous croire ?}{}{}{}{}
+{261}{Bien entendu.}{}{5}{}{-6}{gf436 1, ru 1201}//265
+{262}{Nous verrons cela quand je serais entré, cessez de me faire perdre du temps.}{1}{5}{}{330}{}
+{263}{Nous verrons cela quand je serais entrée, cessez de me faire perdre du temps.}{0}{5}{}{330}{}
+{264}{Vous préférez que j'avise le personnel de ce que vous avez fait ?}{}{5}{}{340}{}
+
+{265}{[Vous entende un bruit de verrou] Entrez...}{[Vous entende un bruit de verrou] Entrez...}{}{}{}{}
+
+{270}{Je ne voulais pas la cacher, je... Je suis désolé ! Je vous en prie, ne me dénoncez pas !}{Je ne voulais pas la cacher, je... Je suis désolé ! Je vous en prie, ne me dénoncez pas !}{}{}{}{}
+{271}{Tout dépend de vous : laissez-moi entrer et je ne dirais rien.}{}{5}{}{350}{}
+{272}{Mais enfin, ce n'est rien du tout ! Vous avez juste volé une marmite...}{}{5}{}{360}{}
+{273}{C'est un peu facile de pleurer parce que je vous ai découvert, je n'ai pas de pitié pour les voleurs !}{}{5}{}{370}{}
+
+{280}{C'est du chantage ! Je... je ne vous ouvrirai pas ! [Vous entendez un bruit de pas qui s'éloignent de la porte]}{C'est du chantage ! Je... je ne vous ouvrirai pas ! [Vous entendez un bruit de pas qui s'éloignent de la porte]}{}{}{}{}
+{281}{[Vous cognez à la porte avec force et insistance]}{}{1}{}{230}{}
+{282}{[Partir]}{}{1}{}{0}{lf0 1}
+
+{290}{Vraiment ? Vous dites vrai ? Je... je peux vous croire ?}{Vraiment ? Vous dites vrai ? Je... je peux vous croire ?}{}{}{}{}
+{291}{Bien entendu.}{}{5}{}{-6}{gf436 1, ru 1201}//265
+{292}{Nous verrons cela quand je serais entrée, cessez de me faire perdre du temps.}{0}{5}{}{330}{}
+{293}{Nous verrons cela quand je serais entré, cessez de me faire perdre du temps.}{1}{5}{}{330}{}
+{294}{Avez-vous le choix ? Je peux aussi aviser le personnel de ce que vous avez fait ?}{}{5}{}{340}{}
+
+{300}{[La peur qui se trouvait dans la voix qui vous parlait jusqu'à présent fait place à la colère] Je vous ai dit que je n'avais rien volé ! A présent fichez-moi la paix. [Vous entendez un bruit de pas qui s'éloignent de la porte]}{[La peur qui se trouvait dans la voix qui vous parlait jusqu'à présent fait place à la colère] Je vous ai dit que je n'avais rien volé ! A présent fichez-moi la paix. [Vous entendez un bruit de pas qui s'éloignent de la porte]}{}{}{}{}
+{301}{[Vous donnez un coup fort sur la porte]}{}{1}{}{250}{}
+{302}{[Partir]}{}{1}{}{0}{lf0 1}
+
+{310}{[La peur qui se trouvait dans la voix qui vous parlait jusqu'à présent fait place à la colère] Je n'ai aucune raison de vous laisser entrer. A présent, fichez-moi la paix ! [Vous entendez un bruit de pas qui s'éloignent de la porte]}{[La peur qui se trouvait dans la voix qui vous parlait jusqu'à présent fait place à la colère] Je n'ai aucune raison de vous laisser entrer. A présent, fichez-moi la paix ! [Vous entendez un bruit de pas qui s'éloignent de la porte]}{}{}{}{}
+{311}{[Vous donnez un coup fort sur la porte]}{}{1}{}{250}{}
+{312}{[Partir]}{}{1}{}{0}{lf0 1}
+
+{320}{[La peur qui se trouvait dans la voix qui vous parlait jusqu'à présent fait place à la colère] Je ne nie rien : je vous ai dit que je n'avais rien volé et c'est vrai ! A présent fichez-moi la paix. [Vous entendez un bruit de pas qui s'éloignent de la porte]}{[La peur qui se trouvait dans la voix qui vous parlait jusqu'à présent fait place à la colère] Je ne nie rien : je vous ai dit que je n'avais rien volé et c'est vrai ! A présent fichez-moi la paix. [Vous entendez un bruit de pas qui s'éloignent de la porte]}{}{}{}{}
+{321}{[Vous donnez un coup fort sur la porte]}{}{1}{}{250}{}
+{322}{[Partir]}{}{1}{}{0}{lf0 1}
+
+{330}{[La peur se fait à nouveau entendre dans sa voix] Non ! Je sais que vous mentez ! A présent, fichez-moi la paix : je ne vous ouvrirai pas ! [Vous entendez un bruit de pas précipités qui s'éloignent de la porte et le bruit d'une personne qui saute sur un lit]}{[La peur se fait à nouveau entendre dans sa voix] Non ! Je sais que vous mentez ! A présent, fichez moi la paix : je ne vous ouvrirai pas ! [Vous entendez un bruit de pas précipités qui s'éloignent de la porte et le bruit d'une personne qui saute sur un lit]}{}{}{}{}
+{331}{[Vous donnez un coup fort sur la porte]}{}{1}{}{250}{}
+{332}{[Partir]}{}{1}{}{0}{lf0 1}
+
+{340}{Non ! Bien sûr que non... Je vous ouvre.}{Non ! Bien sûr que non... Je vous ouvre.}{}{}{}{}
+{341}{[Suite]}{}{5}{}{-6}{gf436 1, ru 1201}//265
+
+{350}{Je... Je ne vous crois pas ! Vous voulez entrer pour avoir des preuves pas vrai ? [Vous entendez un bruit de pas précipités qui s'éloignent de la porte et le bruit d'une personne qui saute sur un lit] Fichez le camp, je ne vous ouvrirai pas !}{Je... Je ne vous crois pas ! Vous voulez entrer pour avoir des preuves pas vrai ? [Vous entendez un bruit de pas précipités qui s'éloignent de la porte et le bruit d'une personne qui saute sur un lit] Fichez le camp, je ne vous ouvrirai pas !}{}{}{}{}
+{351}{[Vous donnez un coup fort sur la porte]}{}{1}{}{250}{}
+{352}{[Partir]}{}{1}{}{0}{lf0 1}
+
+{360}{[La voix se calme] Ce n'est... pas grave ? Il n'y aura pas de sanction ?}{[La voix se calme] Ce n'est... pas grave ? Il n'y aura pas de sanction ?}{}{}{}{}
+{361}{Mais bien sûr que non voyons, tout ce que je veux c'est récupérer la marmite.}{}{5}{}{380}{}
+{362}{Mais enfin, je vous l'ai dit, vous n'avez rien fait de grave.}{}{5}{}{390}{}
+{363}{Ce n'est pas à moi de décider cela mais je pense que vous ne risquez rien.}{}{5}{}{400}{}
+{364}{Pas si vous ouvrez la porte immédiatement.}{}{5}{}{350}{}
+
+{370}{[Vous entendez des pleurs à l'intérieur] Je ne suis pas un voleur ! [Vous entendez des pas s'éloigner lentement de la porte] Fichez moi la paix, je ne veux plus vous parler !}{[Vous entendez des pleurs à l'intérieur] Je ne suis pas un voleur ! [Vous entendez des pas s'éloigner lentement de la porte] Fichez moi la paix, je ne veux plus vous parler !}{}{}{}{}
+{371}{[Vous donnez un coup fort sur la porte]}{}{1}{}{250}{}
+{372}{[Partir]}{}{1}{}{0}{lf0 1}
+
+{380}{Je... merci !}{Je... merci !}{}{}{}{}
+{381}{[Suite]}{}{5}{}{-6}{gf436 1, ru 1201}//265
+
+{390}{Ah... Je... Je suis désolé. Un instant !}{Ah... Je... Je suis désolé. Un instant !}{}{}{}{}
+{391}{[Suite]}{}{5}{}{-6}{gf436 1, ru 1201}//265
+
+{400}{Vous... pensez ? [La peur se fait à nouveau intense dans sa voix] Vous pensez ?! Et vous croyez que je vais vous faire confiance aveuglément ? Il n'en est pas question, il n'est pas question que l'on me juge pour... ça. Disparaissez ! Je ne vous ouvrirai pas !}{Vous... pensez ? [La peur se fait à nouveau intense dans sa voix] Vous pensez ?! Et vous croyez que je vais vous faire confiance aveuglément ? Il n'en est pas question, il n'est pas question que l'on me juge pour... ça. Disparaissez ! Je ne vous ouvrirai pas !}{}{}{}{}
+{401}{[Vous donnez un coup fort sur la porte]}{}{1}{}{250}{}
+{402}{[Partir]}{}{1}{}{0}{lf0 1}

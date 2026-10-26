@@ -1,0 +1,708 @@
+lf0 0 = j'ai pas dit mon nom mais ce pourquoi je suis là
+(lf1 = j'ai dit que je voulais demander quelque chose)
+lf2 = je ne sais pas ce que je fais là
+lf3 = impoli
+lf4 = j'ai bien changé / 0 = moins de services
+(lf5 = clef)
+(lf6 = engrenage)
+(lf7 = louches)
+(lf8 = chaussettes)
+(lf9 = il faut de l'argile)
+(lf10 = entraînez-moi)
+lf11 = Magenta en cours
+
+
+{1}{Bien le bonjour monsieur.}{Bien le bonjour madame.}{}{}{}{}
+{2}{Bonjour monsieur, je m'appelle @pcname@.}{}{5}{}{10}{lf0 1}
+{3}{Bonjour à vous, monsieur ?}{}{5}{}{20}{}
+{4}{Salut, moi @pcname@.}{}{-4}{}{10}{}
+{5}{B'jour. Vous êtes m'sieur ?}{}{-4}{}{20}{}
+
+{10}{Aristote Darkestman. [Il s'arrête un instant] Mais... @pcname@ ? L'employé maladroit que j'ai licencié de la mine de diamants il y a quelques années parce qu'il abîmait les pierres en les extrayant ? Ca alors, quelle surprise ! [Il vous sert chaleureusement la main]}{Aristote Darkestman. [Il s'arrête un instant] Mais... @pcname@ ? L'employée maladroite que j'ai licenciée de la mine de diamants il y a quelques années parce qu'elle abîmait les pierres en les extrayant ? Ca alors, quelle surprise ! [Il vous sert chaleureusement la main]}{}{}{}{ru 1195}
+{11}{[Suite]}{}{1}{}{-1}{}//Boop puis 30
+
+{18}{Très bien, alors au revoir...}{Très bien, alors au revoir...}{}{}{}{}
+
+{20}{Darkestman, Aristote Darkestman.}{Darkestman, Aristote Darkestman.}{}{}{}{}
+{21}{@pcname@.}{}{1}{}{40}{lf0 1}
+{22}{Darkestman ? Est-ce votre vrai nom ?}{}{5}{}{50}{}
+{23}{Darkestman ? Ca être vrai nom ?}{}{-4}{}{50}{}
+{24}{Monsieur Darkestman, puis-je vous demander quelque chose ?}{}{5}{}{60}{}
+{25}{Moi pouvoir vous d'mander quelque chose m'sieur ?}{}{-4}{}{60}{}
+{26}{Eh bien j'ai été enchantée de vous rencontrer monsieur Darkestman mais il me faut à présent prendre congé.}{0}{5}{}{0}{fl 18}
+{27}{Eh bien j'ai été enchanté de vous rencontrer monsieur Darkestman mais il me faut à présent prendre congé.}{1}{5}{}{0}{fl 18}
+{28}{Okay, moi content de voir connu vous mais dois partir...}{}{-4}{}{0}{fl 18}
+
+{30}{Alors, comment être vous mort ?}{Alors, comment être vous morte ?}{}{}{}{}
+{31}{Par noyade. [Vous lui racontez votre engagement chez les pirates et la conclusion du voyage]}{}{5}{}{70}{}
+{32}{Dans une explosion chimique. [Vous mentez]}{}{7}{}{70}{}
+{33}{Je préfère ne pas en parler...}{}{5}{}{80}{}
+{34}{Moi noyée par des pirates...}{0}{-4}{}{70}{}
+{35}{Moi noyé par des pirates...}{1}{-4}{}{70}{}
+{36}{Moi préfère pas en parler...}{}{-4}{}{80}{}
+
+{40}{[Votre nom semble lui être familier, son visage traduit qu'il essaie de se rappeler de vous] @pcname@ ? Vous l'employé maladroit que j'ai licencié de la mine de diamants il y a quelques années parce qu'il abîmait les pierres en les extrayant ? Ca alors, quelle surprise ! [Il vous sert chaleureusement la main]}{[Votre nom semble lui être familier, son visage traduit qu'il essaie de se rappeler de vous] @pcname@ ? Vous l'employée maladroite que j'ai licenciée de la mine de diamants il y a quelques années parce qu'elle abîmait les pierres en les extrayant ? Ca alors, quelle surprise ! [Il vous sert chaleureusement la main]}{}{}{}{ru 1195}
+{41}{[Suite]}{}{1}{}{-1}{}//Boop puis 30
+
+{50}{[Il semble étonné de votre question] Bien évidement... Je viens d'une famille de nains où révéler son nom n'est pas tabou. Et vous, vous êtes ?}{[Il semble étonné de votre question] Bien évidement... Je viens d'une famille de nains où révéler son nom n'est pas tabou. Et vous, vous êtes ?}{}{}{}{}
+{51}{@pcname@.}{}{1}{}{40}{lf0 1}
+{52}{Je suis désolée mais les circonstances font que je ne peux vous le dire...}{0}{5}{}{90}{}
+{53}{Je suis désolé mais les circonstances font que je ne peux vous le dire...}{1}{5}{}{90}{}
+{54}{Moi pas pouvoir vous l'dire...}{}{-4}{}{100}{}
+
+{60}{Je vous en prie. [Il s'interrompt] Excusez-moi mais je n'ai pas retenu votre nom...}{Je vous en prie. [Il s'interrompt] Excusez-moi mais je n'ai pas retenu votre nom...}{}{}{}{lf1 1}
+{61}{@pcname@.}{}{1}{}{40}{lf0 1}
+{62}{Je suis désolée mais les circonstances font que je ne peux vous le dire...}{0}{5}{}{90}{}
+{63}{Je suis désolé mais les circonstances font que je ne peux vous le dire...}{1}{5}{}{90}{}
+{64}{Moi pas pouvoir vous l'dire...}{}{-4}{}{100}{}
+{65}{C'est que je ne l'ai pas dit !}{}{6}{}{110}{}
+
+{70}{Oh mon Dieu, comme vous avez du souffrir... Personnellement, je suis mort dans l'éboulement de ma mine alors je n'ai pas eu le temps de ressentir quoi que ce soit. Et alors, qu'êtes vous devenu aux Enfers ? Personnellement, je suis mécanicien au cercle 217, celui des négociants impitoyables...}{Oh mon Dieu, comme vous avez du souffrir... Personnellement, je suis mort dans l'éboulement de ma mine alors je n'ai pas eu le temps de ressentir quoi que ce soit. Et alors, qu'êtes vous devenue aux Enfers ? Personnellement, je suis mécanicien au cercle 217, celui des négociants impitoyables...}{}{}{}{}
+{71}{Je suis employé au cercle 666, celui des employés ordinaires.}{1}{5}{}{120}{lf4 1}
+{72}{Je suis employée au cercle 666, celui des employés ordinaires..}{0}{5}{}{120}{lf4 1}
+{73}{Je suis un simple employé déployé sur diverses missions.}{1}{5}{}{130}{lf4 1}
+{74}{Je suis une simple employée déployée sur diverses missions.}{0}{5}{}{130}{lf4 1}
+{75}{Ne le prenez pas mal mais je ne peux vous le dire...}{}{5}{}{140}{}
+{76}{Moi être de cercle 666, celui des employés normaux.}{}{-4}{}{120}{lf4 1}
+{77}{Moi d'solé, moi pas devoir dire.}{1}{-4}{}{140}{}
+{78}{Moi d'solée, moi pas devoir dire.}{0}{-4}{}{140}{}
+
+{80}{Je vois, excusez-moi. [Il semble mal à l'aise] Et sinon, qu'êtes vous devenu aux Enfers ?}{Je vois, excusez-moi. [Il semble mal à l'aise] Et sinon, qu'êtes vous devenue aux Enfers ?}{}{}{}{}
+{81}{Je suis employé au cercle 666, celui des employés ordinaires.}{1}{5}{}{120}{lf4 1}
+{82}{Je suis employée au cercle 666, celui des employés ordinaires..}{0}{5}{}{120}{lf4 1}
+{83}{Je suis un simple employé déployé sur diverses missions.}{1}{5}{}{130}{lf4 1}
+{84}{Je suis une simple employée déployée sur diverses missions.}{0}{5}{}{130}{lf4 1}
+{85}{Ne le prenez pas mal mais je ne peux vous le dire...}{}{5}{}{140}{}
+{86}{Moi être de cercle 666, celui des employés normaux.}{}{-4}{}{120}{lf4 1}
+{87}{Moi d'solé, moi pas devoir dire.}{1}{-4}{}{140}{}
+{88}{Moi d'solée, moi pas devoir dire.}{0}{-4}{}{140}{}
+
+{90}{"Les circonstances" ? [Il semble pensif] Alors, peut-être me dirais vous ce pour quoi vous êtes venu ?}{"Les circonstances" ? [Il semble pensif] Alors, peut-être me dirais vous ce pour quoi vous êtes venue ?}{}{}{}{}
+{91}{J'aimerais vous demander quelque chose.}{}{5}{lf1 0}{150}{}
+{92}{Je vous l'ai dit : j'aimerais vous demander quelque chose.}{}{5}{lf1 1}{160}{}
+{93}{Pour être honnête, je ne le sais pas moi-même.}{}{5}{}{170}{lf2 1}
+
+{100}{[Il semble pensif] Je comprends... Alors, peut-être me dirais vous ce pour quoi vous êtes venu ?}{[Il semble pensif] Je comprends... Alors, peut-être me dirais vous ce pour quoi vous êtes venu ?}{}{}{}{}
+{101}{Moi voudrais vous demander quelque chose.}{}{-4}{lf1 0}{150}{}
+{102}{Moi l'avoir dit : devoir demander quek'chose...}{}{-4}{lf1 1}{160}{}
+{103}{En fait, moi pas bien savoir...}{}{-4}{}{170}{lf2 1}
+
+{110}{[Il semble vexé] Alors que je me suis présenté à vous à votre demande, vous ne faites preuve d'aucune civilité. Je pense que notre conversation touche à sa fin...}{[Il semble vexé] Alors que je me suis présenté à vous à votre demande, vous ne faites preuve d'aucune civilité. Je pense que notre conversation touche à sa fin...}{}{}{}{}
+{111}{C'est heureux, car vous êtes ennuyeux et futile...}{}{7}{}{0}{lf3 1}
+{112}{Parfait, adieu alors monsieur Darkestman.}{}{5}{}{0}{lf3 1}
+{113}{[Partir]}{}{5}{}{0}{lf3 1}
+
+{118}{[Le nain vous évite intentionnellement du regard]}{[Le nain vous évite intentionnellement du regard]}{}{}{}{}
+
+{120}{[Il vous examine] Vous avez bien changé @pcname@, je suis désolé de vous avoir mal jugé à l'époque. Si je puis vous aider, n'hésitez pas à demander...}{[Il vous examine] Vous avez bien changée @pcname@, je suis désolé de vous avoir mal jugée à l'époque. Si je puis vous aider, n'hésitez pas à demander...}{}{}{}{}
+{121}{A vrai dire, j'aimerais que vous répariez cette clef pour moi. [Vous lui montrez la clef d'argent brisée]}{}{5}{in5810, lf5 0}{180}{lf5 1}
+{122}{En fait, j'aurais aimé vous poser quelques questions...}{}{5}{}{400}{}
+{123}{C'est gentil à vous. Alors possédez-vous des engrenages ? Il en manque un à un mécanisme.}{}{5}{lf6 0, gf417 1}{200}{lf6 1}
+{124}{C'est très aimable à vous, je reviendrais si j'ai besoin.}{}{5}{}{0}{fl 128}
+{125}{En fait, moi aurait aimé vous posez quelques questions.}{}{-4}{}{400}{}
+{126}{Ca gentil, moi revenir si besoin.}{}{-4}{}{0}{fl 128}
+
+{}{}{}{}{}{}{}
+
+{130}{[Tout en écoutant vos paroles, il vous examine physiquement] Vous avez bien changé @pcname@, je suis désolé de vous avoir mal jugé à l'époque. Si je puis vous aider, n'hésitez pas à demander...}{[Tout en écoutant vos paroles, il vous examine physiquement] Vous avez bien changée @pcname@, je suis désolé de vous avoir mal jugée à l'époque. Si je puis vous aider, n'hésitez pas à demander...}{}{}{}{}
+{131}{A vrai dire, j'aimerais que vous répariez cette clef pour moi. [Vous lui montrez la clef d'argent brisée]}{}{5}{in5810, lf5 0}{180}{lf5 1}
+{132}{En fait, j'aurais aimé vous poser quelques questions...}{}{5}{}{400}{}
+{133}{C'est gentil à vous. Alors possédez-vous des engrenages ? Il en manque un à un mécanisme.}{}{5}{lf6 0, gf417 1}{200}{lf6 1}
+{134}{C'est très aimable à vous, je reviendrais si j'ai besoin.}{}{5}{}{0}{fl 128}
+{135}{En fait, moi aurait aimé vous posez quelques questions.}{}{-4}{}{400}{}
+{136}{Ca gentil, moi revenir si besoin.}{}{-4}{}{0}{fl 128}
+
+{}{}{}{}{}{}{}
+
+{140}{[Il vous observe d'un air inquisiteur] Je vois... Alors, pourquoi êtes vous venu me voir ?}{[Il vous observe d'un air inquisiteur] Je vois... Alors, pourquoi êtes vous venue me voir ?}{}{}{}{}
+{141}{A vrai dire, j'aimerais que vous répariez cette clef pour moi. [Vous lui montrez la clef d'argent brisée]}{}{5}{in5810, lf5 0}{210}{lf5 1}
+{142}{En fait, j'aurais aimé vous poser quelques questions...}{}{5}{}{190}{}
+{143}{Je suis à la recherche d'engrenages. Il en manque un à un mécanisme.}{}{5}{lf6 0, gf417 1}{220}{lf6 1}
+{144}{Pour être honnête, je ne le sais pas moi-même.}{}{5}{}{230}{lf2 1}//like170
+{145}{En fait, moi aurait aimé vous posez quelques questions.}{}{-4}{}{190}{}
+{146}{En fait, moi pas bien savoir...}{}{-4}{}{230}{lf2 1}//like170
+
+{}{}{}{}{}{}{}
+
+{149}{[Le nain ne répond pas mais vous lance un regard furieux]}{[Le nain ne répond pas mais vous lance un regard furieux]}{}{}{}{lf3 1}
+
+{150}{[Il semble s'impatienter] Alors faites donc...}{[Il semble s'impatienter] Alors faites donc...}{}{}{}{}
+{151}{Oui, j'aimerais que vous répariez cette clef pour moi. [Vous lui montrez la clef d'argent brisée]}{}{5}{in5810, lf5 0}{240}{lf5 1}
+{152}{Voilà. Avez-vous rencontré des personnes étranges dans ce train ?}{}{5}{lf7 0}{250}{lf7 1}
+{153}{On m'a dit que vous aviez signalé la disparition d'une paire de chaussettes, est-ce vrai ?}{}{5}{ru 1042, lf8 0}{260}{lf8 1, ru 1197}
+{154}{Possédez-vous des engrenages ? Il en manque un à un mécanisme.}{}{5}{lf6 0, gf417 1}{270}{lf6 1}
+{155}{[Plus]}{}{5}{}{340}{}
+{156}{Ouais, vous avoir vu personnes bizarres dans train ?}{}{-4}{lf7 0}{250}{lf7 1}
+{157}{En fait, moi r'venir plus tard.}{}{-4}{}{0}{fl 149}
+
+{160}{Ah oui, c'est exact. Demandez donc alors... [Il semble s'impatienter]}{Ah oui, c'est exact. Demandez donc alors... [Il semble s'impatienter]}{}{}{}{}
+{161}{Oui, j'aimerais que vous répariez cette clef pour moi. [Vous lui montrez la clef d'argent brisée]}{}{5}{in5810, lf5 0}{240}{lf5 1}
+{162}{Voilà. Avez-vous rencontré des personnes étranges dans ce train ?}{}{5}{lf7 0}{250}{lf7 1}
+{163}{On m'a dit que vous aviez signalé la disparition d'une paire de chaussettes, est-ce vrai ?}{}{5}{ru 1042, lf8 0}{260}{lf8 1, ru 1197}
+{164}{Possédez-vous des engrenages ? Il en manque un à un mécanisme.}{}{5}{lf6 0, gf417 1}{270}{lf6 1}
+{165}{[Plus]}{}{5}{}{360}{}
+{166}{Ouais, vous avoir vu personnes bizarres dans train ?}{}{-4}{lf7 0}{250}{lf7 1}
+{167}{En fait, moi r'venir plus tard.}{}{-4}{}{0}{fl 149}
+
+{170}{[Son visage passe d'une expression intriguée à une grimace de lassitude] Vous m'excuserez mais si vous ne savez pas ce pourquoi vous êtes là, je ne peux vous aider... Aussi je vous souhaite bon voyage et vous dit au revoir...}{[Son visage passe d'une expression intriguée à une grimace de lassitude] Vous m'excuserez mais si vous ne savez pas ce pourquoi vous êtes là, je ne peux vous aider... Aussi je vous souhaite bon voyage et vous dit au revoir...}{}{}{}{}
+{171}{Au revoir...}{}{5}{}{0}{}
+{172}{S'lut !}{}{-4}{}{0}{}
+{173}{[Partir]}{}{1}{}{0}{}
+
+{178}{[Le nain fait mine de ne pas vous voir, son regard évite le votre]}{[Le nain fait mine de ne pas vous voir, son regard évite le votre]}{}{}{}{}
+
+{180}{[Il prend les deux morceaux de la clef et les examine] En effet, elle est composé d'un alliage d'argent et de plomb, ce qui la rend fragile. Le plus simple serait de prendre son empreinte et d'en refaire une identique. Pourriez-vous me trouver de la terre glaise ?}{[Il prend les deux morceaux de la clef et les examine] En effet, elle est composé d'un alliage d'argent et de plomb, ce qui la rend fragile. Le plus simple serait de prendre son empreinte et d'en refaire une identique. Pourriez-vous me trouver de la terre glaise ?}{}{}{}{lf9 1}
+{181}{J'en ai justement sur moi... [Vous lui montrez la boîte d'argile thérapeutique]}{}{5}{in3802}{280}{in3802}
+{182}{Bien entendu, je vais chercher cela...}{}{5}{}{290}{ru 1196}
+{183}{Je vais essayer d'en trouver. Je vous laisse...}{}{5}{}{0}{fl 188, ru 1196}
+
+{186}{[L'amabilité qu'il affichait à votre égard semble avoir disparu. Il ne dit rien et détourne ses yeux énervés]}{[L'amabilité qu'il affichait à votre égard semble avoir disparu. Il ne dit rien et détourne ses yeux énervés]}{}{}{}{}
+
+{188}{Parfait, à bientôt alors...}{Parfait, à bientôt alors...}{}{}{}{}
+
+{190}{[Son expression intriguée se renforce] Eh bien, posez-les moi...}{[Son expression intriguée se renforce] Eh bien, posez-les moi...}{}{}{}{}
+{191}{Avez-vous rencontré des personnes étranges dans ce train ?}{}{5}{lf7 0}{300}{lf7 1}
+{192}{On m'a dit que vous aviez signalé la disparition d'une paire de chaussettes, est-ce vrai ?}{}{5}{ru 1042, lf8 0}{310}{lf8 1, ru 1197}
+{193}{Posséderiez-vous des engrenages ? J'ai remarqué un mécanisme où il en manquait un dans le train.}{}{5}{lf6 0, gf417 1}{220}{lf6 1}
+{194}{Seriez-vous capable de réparer cette clef d'argent ? Elle s'est brisée dans sa serrure.}{}{5}{in5810, lf5 0}{210}{lf5 1}
+{195}{[Plus]}{}{5}{}{370}{}
+{196}{Vous avoir rencontré personnes bizarres dans train ?}{}{5}{lf7 0}{300}{lf7 1}
+{197}{En fait, moi r'passer plus tard...}{}{-4}{}{0}{lf2 1, fl 186}
+
+{200}{J'en ai quelques-uns en effet. Où se trouve ce mécanisme que je l'observe ?}{J'en ai quelques-uns en effet. Où se trouve ce mécanisme que je l'observe ?}{}{}{}{}
+{201}{Dans le compartiment à bagages, derrière le tableau "Floating Vice"}{}{5}{}{320}{}
+{202}{En fait, je préfèrerais que vous ne le sachiez pas... Ne pourrais-je pas vous le décrire ?}{}{5}{}{330}{}
+
+{208}{Très bien, à plus tard alors, @pcname@...}{Très bien, à plus tard alors, @pcname@...}{}{}{}{}
+
+{210}{[Il prend les deux morceaux de la clef et les examine] En effet, elle est composé d'un alliage d'argent et de plomb, ce qui la rend fragile. Même si je la réparais, elle se recasserait... Je ne peux malheureusement rien faire avec cette clef... [Il vous rend les morceaux de clef] Y'avait-il autre chose ?}{[Il prend les deux morceaux de la clef et les examine] En effet, elle est composé d'un alliage d'argent et de plomb, ce qui la rend fragile. Même si je la réparais, elle se recasserait... Je ne peux malheureusement rien faire avec cette clef... [Il vous rend les morceaux de clef] Y'avait-il autre chose ?}{}{}{}{}
+{211}{Oui, auriez-vous rencontré des passagers étranges dans ce train ?}{}{5}{lf7 0}{300}{lf7 1}
+{212}{En effet : on m'a signalé la disparition d'une de vos paires de chaussettes, est-ce vrai ?}{}{5}{ru 1042, lf8 0}{310}{lf8 1, ru 1197}
+{213}{En fait, j'aimerais savoir si vous possédez-vous des engrenages. Un mécanisme de ce train est incomplet.}{}{5}{lf6 0, gf417 1}{220}{lf6 1}
+{214}{En effet : je vous ai ramené une photographie du mécanisme...}{}{5}{in5811, gf418 1}{460}{in5811}
+{215}{En effet, je me suis pris de passion pour tout ce qui est mécanismes, m'enseigneriez vos connaissances ?}{}{5}{lf10 0}{380}{lf10 1}
+{216}{Non, c'était tout. Je repasserais peut-être plus tard.}{}{5}{}{0}{fl 208}
+
+{}{}{}{}{}{}{}
+
+{220}{J'en ai quelques-uns en ma possession, je devrais être en mesure de le remplacer. Où se trouve ce mécanisme que je l'observe ?}{J'en ai quelques-uns en effet. Où se trouve ce mécanisme que je l'observe ?}{}{}{}{}
+{221}{Dans le compartiment à bagages, derrière le tableau "Floating Vice"}{}{5}{}{320}{}
+{222}{En fait, je préfèrerais que vous ne le sachiez pas... Ne pourrais-je pas vous le décrire ?}{}{5}{}{540}{}
+
+{230}{[Son visage passe d'une expression intriguée à une grimace de lassitude] Finalement, vous n'avez pas tant changé que ça @pcname@. Vous m'excuserez mais si vous ne savez pas ce pourquoi vous êtes là, je ne peux vous aider... Aussi je vous souhaite bon voyage et vous dit au revoir.}{[Son visage passe d'une expression intriguée à une grimace de lassitude] Finalement, vous n'avez pas tant changé que ça @pcname@. Vous m'excuserez mais si vous ne savez pas ce pourquoi vous êtes là, je ne peux vous aider... Aussi je vous souhaite bon voyage et vous dit au revoir.}{}{}{}{}
+{231}{Au revoir...}{}{5}{}{0}{}
+{232}{S'lut !}{}{-4}{}{0}{}
+{233}{[Partir]}{}{1}{}{0}{}
+
+{240}{[Il prend les deux morceaux de la clef et les examine] En effet, elle est composé d'un alliage d'argent et de plomb, ce qui la rend fragile. Même si je la réparais, elle se recasserait... Je ne peux malheureusement rien faire avec cette clef... [Il vous rend les morceaux de clef] Y'avait-il autre chose ?}{[Il prend les deux morceaux de la clef et les examine] En effet, elle est composé d'un alliage d'argent et de plomb, ce qui la rend fragile. Même si je la réparais, elle se recasserait... Je ne peux malheureusement rien faire avec cette clef... [Il vous rend les morceaux de clef] Y'avait-il autre chose ?}{}{}{}{}//Noname
+{241}{Oui, auriez-vous rencontré des passagers étranges dans ce train ?}{}{5}{lf7 0}{250}{lf7 1}
+{242}{En effet : on m'a signalé la disparition d'une de vos paires de chaussettes, est-ce vrai ?}{}{5}{ru 1042, lf8 0}{260}{lf8 1, ru 1197}
+{243}{En fait, j'aimerais savoir si vous possédez-vous des engrenages. Un mécanisme de ce train est incomplet.}{}{5}{lf6 0, gf417 1}{270}{lf6 1}
+{344}{En effet, je me suis pris de passion pour tout ce qui est mécanismes, m'enseigneriez vos connaissances ?}{}{5}{lf10 0}{350}{lf10 1}
+{245}{Non, c'était tout. Je repasserais peut-être plus tard.}{}{5}{}{0}{fl 248}
+
+{}{}{}{}{}{}{}
+
+{248}{[Cette perspective ne semble pas le réjouir] C'est entendu...}{[Cette perspective ne semble pas le réjouir] C'est entendu...}{}{}{}{}
+
+{250}{Ma foi, je ne crois pas... J'ai passé quelques instants ici et là à discuter avec d'autres passagers mais je n'ai rien remarqué d'étrange, hormis vous peut-être... Aviez-vous d'autres questions ? [Il semble fatigué de vous et espérer une réponse négative]}{Ma foi, je ne crois pas... J'ai passé quelques instants ici et là à discuter avec d'autres passagers mais je n'ai rien remarqué d'étrange, hormis vous peut-être... Aviez-vous d'autres questions ? [Il semble fatigué de vous et espérer une réponse négative]}{}{}{}{}
+{251}{En effet, j'espérais que vous seriez en mesure de réparer cette clef. [Vous lui montrez la clef d'argent brisée]}{}{5}{in5810, lf5 0}{240}{lf5 1}
+{252}{Peut-être. On m'a dit que vous aviez égaré une paire de chaussettes, est-ce vrai ?}{}{5}{ru 1042, lf8 0}{260}{lf8 1, ru 1197}
+{253}{Oui, il me faut un engrenage pour un mécanisme cassé et je pensais que vous pourriez en posséder.}{}{5}{lf6 0, gf417 1}{270}{lf6 1}
+{254}{Assurément : je m'intéresse à tout ce qui est mécanismes, pourriez-vous m'enseignez votre savoir technique ?}{}{5}{lf10 0}{350}{lf10 1}
+{255}{Non, je vous laisse en paix.}{}{5}{}{0}{fl 259}
+{256}{Nan, moi vous laisser.}{}{-4}{}{0}{fl 259}
+
+{}{}{}{}{}{}{}
+
+{259}{Au revoir alors...}{Au revoir alors...}{}{}{}{}
+
+{260}{[Il semble étonné que vous soyez au courant] En effet, je l'ai signalé mais je viens également de prévenir le personnel que je venais de la retrouver dans ma taie d'oreiller. Avez-vous encore quelque chose à me dire ?}{[Il semble étonné que vous soyez au courant] En effet, je l'ai signalé mais je viens également de prévenir le personnel que je venais de la retrouver dans ma taie d'oreiller. Avez-vous encore quelque chose à me dire ?}{}{}{}{}
+{261}{Oui, je voulais aussi vous confier la réparation de cette clef. [Vous lui montrez la clef d'argent brisée]}{}{5}{in5810, lf5 0}{240}{lf5 1}
+{262}{Oui, pouvez-vous me dire si vous avez rencontré des personnes étranges dans ce train ?}{}{5}{lf7 0}{250}{lf7 1}
+{263}{En effet, il me manque un engrenage pour réparer un mécanisme du train, n'en possédez-vous pas ?}{}{5}{lf6 0, gf417 1}{270}{lf6 1}
+{264}{Oui : je me passionne par tout ce qui trait aux mécanismes, ne voudriez-vous pas m'enseignez votre savoir ?}{}{5}{lf10 0}{350}{lf10 1}
+{265}{Non, j'en ai fini. Merci et au revoir.}{}{5}{}{0}{fl 269}
+
+{}{}{}{}{}{}{}
+
+{269}{C'est cela, au revoir...}{C'est cela, au revoir...}{}{}{}{}
+
+{270}{Malheureusement, je ne possède rien de tel... [Vous remarquez que son regard est empli de culpabilité] Attendiez-vous autre chose de moi ?}{Malheureusement, je ne possède rien de tel... [Vous remarquez que son regard est empli de culpabilité] Attendiez-vous autre chose de moi ?}{}{}{}{}
+{271}{Oui, je comptais aussi sur vous pour reforger cette clef. [Vous lui montrez la clef d'argent brisée]}{}{5}{in5810, lf5 0}{240}{lf5 1}
+{272}{En fait, j'aimerais savoir si vous n'avez pas aperçu des personnes étranges dans ce train.}{}{5}{lf7 0}{250}{lf7 1}
+{273}{Oui, j'y pense : je crois savoir que vous avez perdue une paire de chaussettes n'est-ce vrai ?}{}{5}{ru 1042, lf8 0}{260}{lf8 1, ru 1197}
+{274}{En effet il me reste une requête : je suis passionné de mécanique, consentiriez-vous à m'enseignez votre savoir ?}{1}{5}{lf10 0}{350}{lf10 1}
+{275}{En effet il me reste une requête : je suis passionnée de mécanique, consentiriez-vous à m'enseignez votre savoir ?}{0}{5}{lf10 0}{350}{lf10 1}
+{276}{Non, j'en ai terminé. Au revoir...}{}{5}{}{0}{fl 269}
+
+{}{}{}{}{}{}{}
+
+{280}{[Il ouvre le pot et examine l'argile brun-gris qu'il contient] Ca fera l'affaire, laissez-moi une minute...}{[Il ouvre le pot et examine l'argile brun-gris qu'il contient] Ca fera l'affaire, laissez-moi une minute...}{}{}{}{}
+{281}{[Vous patientez]}{}{1}{}{-7}{}//390
+
+{290}{Bien, revenez dès que vous l'aurez... Puis-je en attendant ce moment vous aider d'une autre manière ?}{Bien, revenez dès que vous l'aurez... Puis-je en attendant ce moment vous aider d'une autre manière ?}{}{}{}{}
+{291}{Oui, il me faut savoir : avez-vous rencontré des personnes étranges dans ce train ?}{}{5}{lf7 0}{480}{lf7 1}
+{292}{En fait, je crois savoir que vous avez signalé la disparition d'une paire de chaussettes, est-ce vrai ?}{}{5}{ru 1042, lf8 0}{410}{lf8 1, ru 1197}
+{293}{Oui : j'ai trouvé dans ce train un mécanisme où il manque un engrenage, n'en posséderiez-vous pas ?}{}{5}{lf6 0, gf417 1}{200}{lf6 1}
+{294}{En parlant de ramener quelque chose, j'ai pris la photographie du mécanisme...}{}{5}{in5811, gf418 1}{530}{in5811}
+{295}{En fait, peut-être cette argile fera-t-il l'affaire ? [Vous lui montrez le pot d'argile thérapeutique]}{}{5}{in5810, in3802, ru1196}{280}{in3802}
+{296}{Assurément : je dois vous avouer que je me passionne pour les mécanismes en tous genres, m'enseigneriez-vous vos connaissances ?}{}{5}{lf10 0}{420}{lf10 1}
+{297}{Non, vous avez déjà été fort aimable, je vais vous laisser...}{}{5}{}{0}{fl 299}
+
+{}{}{}{}{}{}{}
+
+{299}{Très bien, au plaisir de vous revoir...}{Très bien, au plaisir de vous revoir...}{}{}{}{}
+
+{300}{[Il sourit légèrement] En fait, vous êtes de loin la personne la plus étrange que j'ai vu depuis que je suis monté à bord. [Son sourire s'efface, il se gratte la tempe droite de son index] Non. J'ai discuté avec quelques passagers mais je n'ai absolument rien relevé d'anormal. [Il baisse son bras droit] Y'avait-il autre chose ?}{[Il sourit légèrement] En fait, vous êtes de loin la personne la plus étrange que j'ai vu depuis que je suis monté à bord. [Son sourire s'efface, il se gratte la tempe droite de son index] Non. J'ai discuté avec quelques passagers mais je n'ai absolument rien relevé d'anormal. [Il baisse son bras droit] Y'avait-il autre chose ?}{}{}{}{}
+{301}{Oui, j'ai eu vent que vous aviez égaré une paire de chaussettes, est-ce vrai ?}{}{5}{ru 1042, lf8 0}{310}{lf8 1, ru 1197}
+{302}{Oui, ne posséderiez-vous pas des engrenages ? Un mécanisme de ce train est incomplet.}{}{5}{lf6 0, gf417 1}{220}{lf6 1}
+{303}{En effet : je vous ai ramené une photographie du mécanisme cassé...}{}{5}{in5811, gf418 1}{460}{in5811}
+{304}{Oui, réparer cette clef est-il dans vos cordes ? [Vous lui tendez la clef d'argent brisée]}{}{5}{in5810, lf5 0}{210}{lf5 1}
+{305}{En effet : je m'intéresse de près aux mécanismes, pourriez-vous m'enseignez vos connaissances ?}{}{5}{lf10 0}{380}{lf10 1}
+{306}{Non, je pense que c'est tout. Au plaisir de vous revoir...}{}{5}{}{0}{fl 309}
+{307}{Nan, c'bon. Moi content d'avoir vu vous.}{}{-4}{}{0}{fl 309}
+
+{}{}{}{}{}{}{}
+
+{309}{De même. Au revoir...}{De même. Au revoir...}{}{}{}{}
+
+{310}{[Il semble étonné de votre question] J'ai en effet signalé la perte de cette paire de chaussettes mais je l'ai retrouvé et l'ai mentionné au personnel. En fait, elle se trouvait dans ma taie d'oreiller. (Allez savoir pourquoi...) [Il cesse de parler pour vous regarder] Vouliez-vous me demander autre chose ?}{[Il semble étonné de votre question] J'ai en effet signalé la perte de cette paire de chaussettes mais je l'ai retrouvé et l'ai mentionné au personnel. En fait, elle se trouvait dans ma taie d'oreiller. (Allez savoir pourquoi...) [Il cesse de parler pour vous regarder] Vouliez-vous me demander autre chose ?}{}{}{}{}
+{311}{Oui, pourrie-vous me dire si vous avez vu des personnes étranges dans ce train ?}{}{5}{lf7 0}{300}{lf7 1}
+{312}{Oui, ne seriez-vous pas en possession d'engrenages ? Un mécanisme du train est incomplet.}{}{5}{lf6 0, gf417 1}{220}{lf6 1}
+{313}{En fait, je vous ai ramené la photographie du mécanisme incomplet...}{}{5}{in5811, gf418 1}{460}{in5811}
+{314}{En effet, seriez-vous capable de reforger cette clef brisée ? [Vous lui tendez la clef d'argent brisée]}{}{5}{in5810, lf5 0}{210}{lf5 1}
+{315}{Oui. Je me suis pris de passion pour les mécanismes, consentiriez-vous à m'enseignez votre savoir ?}{}{5}{lf10 0}{380}{lf10 1}
+{316}{Non, j'en ai terminé de mes questions. Au revoir.}{}{5}{}{0}{fl 319}
+
+{}{}{}{}{}{}{}
+
+{320}{Bien, je vais l'examiner... [Il sort une lourde boîte à outils noire-bleue de derrière le meuble] Vous m'attendez ici ?}{Bien, je vais l'examiner... [Il sort une lourde boîte à outils noire-bleue de derrière le meuble] Vous m'attendez ici ?}{}{}{}{}
+{321}{Très bien.}{}{5}{}{-13}{}//lf4->430 ELSE 440
+
+{330}{Ce n'est pas impossible, seulement cela requiert certaines connaissances... [Il se tourne et fouille frénétiquement dans le meuble de bois pour en sortir un appareil photographique qu'il vous tend] Voici ! Avec ça je ne verrais que ce que vous voudrez me montrer.}{Ce n'est pas impossible, seulement cela requiert certaines connaissances... [Il se tourne et fouille frénétiquement dans le meuble de bois pour en sortir un appareil photographique qu'il vous tend] Voici ! Avec ça je ne verrais que ce que vous voudrez me montrer.}{}{}{}{in-5811}
+{331}{C'est très aimable à vous. Puis-je encore vous poser une question ?}{}{5}{}{450}{}
+{332}{Merci beaucoup, je reviendrai avec la photo. A tout à l'heure.}{}{5}{}{0}{fl 338}
+
+{338}{A tout à l'heure @pcname@...}{A tout à l'heure @pcname@...}{}{}{}{}
+
+{340}{[Il semble s'impatienter] Alors faites donc...}{[Il semble s'impatienter] Alors faites donc...}{}{}{}{}//noname
+{341}{[Retour]}{}{5}{}{150}{}
+{342}{Je me passionne pour tout ce qui est mécanismes, pourriez-vous m'enseignez votre savoir technique ?}{}{5}{lf10 0}{350}{lf10 1}
+{343}{En fait, nous verrons cela plus tard...}{}{5}{}{0}{fl 149}
+
+{}{}{}{}{}{}{}
+
+{350}{Malheureusement, je crains d'être un bien mauvais enseignant... [Il baisse timidement les yeux afin de relever la tête] Désolé mais je ne prends pas d'élèves. Aviez-vous encore une chose à me demander ?}{Malheureusement, je crains d'être un bien mauvais enseignant... [Il baisse timidement les yeux afin de relever la tête] Désolé mais je ne prends pas d'élèves. Aviez-vous encore une chose à me demander ?}{}{}{}{}
+{351}{Oui, êtes-vous en mesure de réparer cette clef ? [Vous lui montrez la clef d'argent brisée]}{}{5}{in5810, lf5 0}{240}{lf5 1}
+{352}{En fait, j'aimerais savoir si vous avez rencontré des personnes étranges dans ce train.}{}{5}{lf7 0}{250}{lf7 1}
+{353}{J'ai ouï dire que vous aviez constaté la disparition d'une paire de chaussettes, est-ce vrai ?}{}{5}{ru 1042, lf8 0}{260}{lf8 1, ru 1197}
+{354}{Auriez-vous en votre possession des engrenages ? Il en manque un à un mécanisme du train.}{}{5}{lf6 0, gf417 1}{270}{lf6 1}
+{355}{Non, j'en ai terminé. Je vous souhaite bon  voyage...}{}{5}{}{0}{fl 359}
+
+{}{}{}{}{}{}{}
+
+{359}{Vous de même, au revoir...}{Vous de même, au revoir...}{}{}{}{}
+
+{360}{Ah oui, c'est exact. Demandez donc alors... [Il semble s'impatienter]}{Ah oui, c'est exact. Demandez donc alors... [Il semble s'impatienter]}{}{}{}{}//noname
+{361}{[Retour]}{}{5}{}{160}{}
+{362}{Je me passionne pour tout ce qui est mécanismes, pourriez-vous m'enseignez votre savoir technique ?}{}{5}{lf10 0}{350}{lf10 1}
+{363}{En fait, nous verrons cela plus tard...}{}{5}{}{0}{fl 149}
+
+{}{}{}{}{}{}{}
+
+{370}{[Son expression intriguée se renforce] Eh bien, posez-les moi...}{[Son expression intriguée se renforce] Eh bien, posez-les moi...}{}{}{}{}//nocircle
+{371}{[Retour]}{}{1}{}{190}{}
+{372}{Voilà : je me passionne pour tout ce qui est mécanismes, pourriez-vous m'enseignez votre savoir technique ?}{}{5}{lf10 0}{380}{lf10 1}
+{373}{Finalement, je crois que je repasserais plus tard.}{}{5}{}{0}{lf2 1, fl 186}
+
+
+{}{}{}{}{}{}{}
+
+{380}{[Il vous observe un temps, ses yeux vides semblent regarder au travers de votre corps spirituel] Je suis désolé @pcname@, je ne prends pas d'élèves. [Il relève la tête] Puis-je vous aider d'une autre manière ?}{[Il vous observe un temps, ses yeux vides semblent regarder au travers de votre corps spirituel] Je suis désolé @pcname@, je ne prends pas d'élèves. [Il relève la tête] Puis-je vous aider d'une autre manière ?}{}{}{}{}
+{381}{En effet. Dites-moi : avez-vous rencontré des personnes étranges dans ce train ?}{}{5}{lf7 0}{300}{lf7 1}
+{382}{Pouvez-vous confirmer ? J'ai ouï dire que vous aviez signalé la disparition d'une paire de chaussettes ?}{}{5}{ru 1042, lf8 0}{310}{lf8 1, ru 1197}
+{383}{Par hasard, ne posséderiez-vous pas des engrenages ? J'ai remarqué dans ce train un mécanisme inachevé.}{}{5}{lf6 0, gf417 1}{220}{lf6 1}
+{384}{Oui : je vous ai ramené la photographie du mécanisme...}{}{5}{in5811, gf418 1}{460}{in5811}
+{385}{Possible : réparer cette clef brisée est-il dans vos cordes ? [Vous lui montrez la clef d'argent brisée]}{}{5}{in5810, lf5 0}{210}{lf5 1}
+{386}{Non, ce n'est pas nécessaire. Au revoir.}{}{5}{}{0}{fl 389}
+
+{}{}{}{}{}{}{}
+
+{389}{Oui, au revoir et bon voyage, @pcname@...}{Oui, au revoir et bon voyage, @pcname@...}{}{}{}{}
+
+{390}{[Il vous tend une clef chaude et bleutée] Et voilà ! Je l'ai forgée en acier nain, elle ne risque plus de se briser.}{[Il vous tend une clef chaude et bleutée] Et voilà ! Je l'ai forgée en acier nain, elle ne risque plus de se briser.}{}{}{}{}
+{391}{Je vous remercie. [Vous prenez la clef]}{}{5}{}{470}{}
+{392}{[Vous prenez la clef] Merci infiniment. Permettez que je vous quitte à présent.}{}{5}{}{0}{fl 399}
+
+{393}{Bien entendu. Au revoir et puisse cette clef vous servir.}{Bien entendu. Au revoir et puisse cette clef vous servir.}{}{}{}{}
+
+{395}{Bien entendu. Que voulez-vous me demander ?}{Bien entendu. Que voulez-vous me demander ?}{}{}{}{}//withcicle
+{396}{Voilà : je me passionne pour tout ce qui est mécanismes, pourriez-vous m'enseignez votre savoir technique ?}{}{5}{lf10 0}{420}{lf10 1}
+{397}{En fait, je pense que je repasserais plus tard pour vous poser mes questions.}{}{5}{}{0}{fl 409}
+{398}{[Retour]}{}{1}{}{400}{}
+
+{}{}{}{}{}{}{}
+
+{400}{Bien entendu. Que voulez-vous me demander ?}{Bien entendu. Que voulez-vous me demander ?}{}{}{}{}//withcicle
+{401}{Etes-vous en mesure de réparer cette clef ? [Vous lui montrez la clef d'argent brisée]}{}{5}{in5810, lf5 0}{180}{lf5 1}
+{402}{Auriez-vous en votre possession des engrenages ? Il en manque un à un mécanisme de ce train.}{}{5}{lf6 0, gf417 1}{200}{lf6 1}
+{403}{Auriez-vous par hasard rencontré des personnes étranges dans ce train ?}{}{5}{lf7 0}{480}{lf7 1}
+{404}{Je crois savoir que vous avez signalé la disparition d'une paire de chaussettes, est-ce vrai ?}{}{5}{ru 1042, lf8 0}{410}{lf8 1, ru 1197}
+{405}{[Plus]}{}{1}{}{395}{}
+{406}{Vous avoir pas vu gens étranges dans train ?}{}{-4}{lf7 0}{480}{lf7 1}
+{407}{Ca gentil, moi revenir si besoin.}{}{-4}{}{0}{fl 128}
+
+{409}{C'est entendu, à tout à l'heure @pcname@.}{C'est entendu, à tout à l'heure @pcname@.}{}{}{}{}
+
+{410}{En effet, c'est exact. [Il ne semble pas particulièrement étonné que vous soyez au courant] Cependant, je l'ai retrouvé... dans ma taie d'oreiller. [Il rougit presque imperceptiblement] J'ai déjà signalé cela au personnel du train, tout est donc réglé. Aviez-vous autre chose à me demander ?}{En effet, c'est exact. [Il ne semble pas particulièrement étonné que vous soyez au courant] Cependant, je l'ai retrouvé... dans ma taie d'oreiller. [Il rougit presque imperceptiblement] J'ai déjà signalé cela au personnel du train, tout est donc réglé. Aviez-vous autre chose à me demander ?}{}{}{}{}
+{411}{Oui, j'aimerais que vous répariez cette clef ? [Vous lui montrez la clef d'argent brisée]}{}{5}{in5810, lf5 0}{180}{lf5 1}
+{412}{Ne disposeriez-vous d'engrenages ? Un mécanisme de ce train est incomplet.}{}{5}{lf6 0, gf417 1}{200}{lf6 1}
+{413}{En fait, je vous ai ramené de la terre glaise pour mouler la clef. [Vous lui donnez la clef et l'argile thérapeutique]}{}{5}{in5810, in3802, ru1196}{280}{in3802}
+{414}{En fait, je vous ai pris la photographie du mécanisme...}{}{5}{in5811, gf418 1}{530}{in5811}
+{415}{En effet : peut-être avez-vous rencontré des personnes étranges dans ce train ?}{}{5}{lf7 0}{480}{lf7 1}
+{416}{Oui : à dire vrai je me passionne littéralement pour les mécanismes, pourriez-vous m'enseignez vos connaissances ?}{}{5}{lf10 0}{420}{lf10 1}
+{417}{Pas pour l'instant mais je repasserai à l'occasion...}{}{5}{}{0}{fl 419}
+
+{}{}{}{}{}{}{}
+
+{419}{Avec plaisir @pcname@...}{Avec plaisir @pcname@...}{}{}{}{}
+
+{420}{[Il semble particulièrement étonné de votre question] Décidément, vous n'êtes plus du tout le même @pcname@, et ce changement est tout à votre avantage. Cependant, je crains d'être un bien mauvais enseignant... [Il baisse timidement la tête avant de la relever] Pardonnez-moi, je ne prends pas d'élèves.}{[Il semble particulièrement étonné de votre question] Décidément, vous n'êtes plus du tout le même @pcname@, et ce changement est tout à votre avantage. Cependant, je crains d'être un bien mauvais enseignant... [Il baisse timidement la tête avant de la relever] Pardonnez-moi, je ne prends pas d'élèves.}{}{}{}{}
+{421}{Je vous le demande cependant, car j'aimerais améliorer mon potentiel...}{}{8}{}{-17}{}//Y 1000 No IN 500 No tech 510
+{422}{Bien, changeons de sujet alors...}{}{5}{}{520}{}
+{423}{Je suis désolé, je ne savais pas. Je vais vous laisser.}{1}{5}{}{0}{fl 429}
+{424}{Je suis désolée, je ne savais pas. Je vais vous laisser.}{0}{5}{}{0}{fl 429}
+
+{429}{Ce n'est rien. Revenez me voir quand vous voulez...}{Ce n'est rien. Revenez me voir quand vous voulez...}{}{}{}{}
+
+{430}{[Il revient, son costume toujours aussi propre] Ca y est, c'est réparé. Quel étrange mécanisme tout de même, je me demande à quoi il sert... [Il souffle légèrement] Puis-je encore vous aider @pcname@ ?}{[Il revient, son costume toujours aussi propre] Ca y est, c'est réparé. Quel étrange mécanisme tout de même, je me demande à quoi il sert... [Il souffle légèrement] Puis-je encore vous aider @pcname@ ?}{}{}{}{}
+{431}{Oui, j'aurais aussi besoin que vous répariez cette clef. [Vous lui montrez la clef d'argent brisée]}{}{5}{in5810, lf5 0}{180}{lf5 1}
+{432}{En fait, je vous ai aussi ramené de la terre glaise pour la clef. [Vous lui donnez la clef et l'argile thérapeutique]}{}{5}{in5810, in3802, ru1196}{280}{in3802}
+{433}{Oui, pourriez-vous me dire si vous avez rencontré des personnes étranges dans ce train ?}{}{5}{lf7 0}{480}{lf7 1}
+{434}{En fait, je crois que vous avez signalé la perte d'une paire de chaussettes, est-ce vrai ?}{}{5}{ru 1042, lf8 0}{410}{lf8 1, ru 1197}
+{435}{Si fait : je me suis pris de passion pour tout ce qui est mécanismes, pourriez-vous m'enseignez votre savoir ?}{1}{5}{lf10 0}{420}{lf10 1}
+{436}{Si fait : je me suis prise de passion pour tout ce qui est mécanismes, pourriez-vous m'enseignez votre savoir ?}{0}{5}{lf10 0}{420}{lf10 1}
+{437}{Vous en avez bien assez fait, merci et au revoir...}{}{5}{}{0}{fl 439}
+
+{}{}{}{}{}{}{}
+
+{439}{Ce fût un plaisir, au revoir @pcname@.}{Ce fût un plaisir, au revoir @pcname@.}{}{}{}{}
+
+{440}{[Il revient, son costume toujours aussi propre] Ca y est, c'est réparé. Quel étrange mécanisme tout de même, je me demande à quoi il sert... [Il souffle légèrement] Avez-vous besoin d'autre chose @pcname@ ?}{[Il revient, son costume toujours aussi propre] Ca y est, c'est réparé. Quel étrange mécanisme tout de même, je me demande à quoi il sert... [Il souffle légèrement] Avez-vous besoin d'autre chose @pcname@ ?}{}{}{}{}
+{441}{Oui, j'aimerais savoir si vous avez rencontré des personnes étranges dans ce train ?}{}{5}{lf7 0}{300}{lf7 1}
+{442}{En fait, j'ai cru comprendre que vous aviez signalé la disparition d'une paire de chaussettes, est-ce vrai ?}{}{5}{ru 1042, lf8 0}{310}{lf8 1, ru 1197}
+{443}{Je n'aimerais pas abuser mais seriez-vous capable de réparer cette clef ? [Vous lui montre la clef d'argent]}{}{5}{in5810, lf5 0}{210}{lf5 1}
+{444}{En fait, je me passionne pour les mécanismes, m'enseigneriez-vous votre savoir technique ?}{}{5}{lf10 0}{380}{lf10 1}
+{445}{Non, c'est parfait. Au revoir et merci.}{}{5}{}{0}{fl 439}
+
+{}{}{}{}{}{}{}
+
+{450}{Mais je vous en pris...}{Mais je vous en pris...}{}{}{}{}
+{451}{Voilà, j'aurais aimé que vous répariez cette clef brisée. [Vous lui montrez la clef d'argent brisée]}{}{5}{in5810, lf5 0}{180}{lf5 1}
+{452}{Cette terre glaise fera-t-elle l'affaire pour le moule ? [Vous lui donnez la clef et l'argile thérapeutique]}{}{5}{in5810, in3802, ru1196}{280}{in3802}
+{453}{Avez-vous au cours de ce voyage rencontré des personnes étranges ?}{}{5}{lf7 0}{480}{lf7 1}
+{454}{On m'a informé que vous avez égaré une paire de chaussettes, est-ce vrai ?}{}{5}{ru 1042, lf8 0}{410}{lf8 1, ru 1197}
+{455}{En fait, je m'intéresse de près aux mécanismes, pourriez-vous m'enseigner votre savoir ?}{1}{5}{lf10 0}{420}{lf10 1}
+{456}{En fait, vous en avez fait plus qu'assez, je vous remercie.}{}{5}{}{0}{fl 459}
+
+{}{}{}{}{}{}{}
+
+{459}{Ce n'est rien, au plaisir de vous revoir...}{Ce n'est rien, au plaisir de vous revoir...}{}{}{}{}
+
+{460}{[Il appuie sur un bouton et une photographie sort de l'appareil. Il la secoue et, après un instant, l'image du mécanisme se forme] Ma foi, il manque en effet un engrenage de manière flagrante. Je crois en avoir un qui ferait l'affaire par... ici ! [Il se retourne et prend un engrenage de ses affaires puis, après être revenu dans sa position initiale, vous le donne] Voilà, ce fût un plaisir de vous aider et revenez me voir s'il ne convenait pas.}{[Il appuie sur un bouton et une photographie sort de l'appareil. Il la secoue et, après un instant, l'image du mécanisme se forme] Ma foi, il manque en effet un engrenage de manière flagrante. Je crois en avoir un qui ferait l'affaire par... ici ! [Il se retourne et prend un engrenage de ses affaires puis, après être revenu dans sa position initiale, vous le donne] Voilà, ce fût un plaisir de vous aider et revenez me voir s'il ne convenait pas.}{}{}{}{in-5813}
+{461}{C'est très aimable à vous. [Vous prenez l'engrenage] Pourrais-je encore vous demander une chose ?}{}{5}{}{550}{}
+{462}{Merci beaucoup. [Vous prenez l'engrenage] Je vais l'essayer de ce pas.}{}{5}{}{0}{fl 469}
+
+{469}{Très bien, au revoir...}{Très bien, au revoir...}{}{}{}{}
+
+{470}{Ce n'est rien. Avez-vous encore besoin de quelque chose pendant qu'on y est ?}{Ce n'est rien. Avez-vous encore besoin de quelque chose pendant qu'on y est ?}{}{}{}{}
+{471}{En fait, je me demandais si vous n'aviez pas avec vous un engrenage ? Un mécanisme du train est incomplet.}{}{5}{lf6 0, gf417 1}{200}{lf6 1}
+{472}{Puisqu'on en parle, j'ai ramené la photographie du mécanisme incomplet.}{}{5}{in5811, gf418 1}{530}{in5811}
+{473}{Eh bien , si vous pouvez me dire : avez-vous rencontré des personnes étranges dans ce train ?}{}{5}{lf7 0}{480}{lf7 1}
+{474}{Peut-être : je crois savoir que vous avez perdu une paire de chaussettes. Est-ce vrai ?}{}{5}{ru 1042, lf8 0}{410}{lf8 1, ru 1197}
+{475}{En effet : je cherche un professeur car je me passionne pour tout ce qui est mécanismes.}{}{5}{lf10 0}{420}{lf10 1}
+{476}{Non, vous en avez fait plus qu'assez. Au revoir et encore merci.}{}{5}{}{0}{fl 479}
+
+{}{}{}{}{}{}{}
+
+{479}{Au revoir @pcname@, bon voyage.}{Au revoir @pcname@, bon voyage.}{}{}{}{}
+
+{480}{[Il rit légèrement dans sa barbe] Vous êtes de loin la personne la plus étrange que j'ai vue dans ce train... [Il se reprend et semble réfléchir un instant] Non, j'ai beau réfléchir, je n'ai rien noté de particulier. J'ai bien discuté avec quelques passagers mais il n'y avait rien de notable dans nos conversations. Je suis désolé de ne pas pouvoir vous aider plus. Mais peut-être aviez-vous autre chose à me demander ?}{[Il rit légèrement dans sa barbe] Vous êtes de loin la personne la plus étrange que j'ai vue dans ce train... [Il se reprend et semble réfléchir un instant] Non, j'ai beau réfléchir, je n'ai rien noté de particulier. J'ai bien discuté avec quelques passagers mais il n'y avait rien de notable dans nos conversations. Je suis désolé de ne pas pouvoir vous aider plus. Mais peut-être aviez-vous autre chose à me demander ?}{}{}{}{}
+{481}{Oui, si vous pouviez me réparer cette clef, cela m'aiderais grandement. [Vous lui montrez la clef d'argent brisée]}{}{5}{in5810, lf5 0}{180}{lf5 1}
+{482}{En fait oui : je vous ai trouvé de la terre glaise pour la clef. [Vous lui donnez la clef et l'argile thérapeutique]}{}{5}{in5810, in3802, ru1196}{280}{in3802}
+{483}{Oui, il me faut trouver un engrenage pour un des mécanismes du train. En avez-vous en votre possession ?}{}{5}{lf6 0, gf417 1}{200}{lf6 1}
+{484}{En fait, je vous ai pris la photographie du mécanisme incomplet.}{}{5}{in5811, gf418 1}{530}{in5811}
+{485}{Oui : n'auriez-vous pas perdu une paire de chaussettes dans ce train ?}{}{5}{ru 1042, lf8 0}{410}{lf8 1, ru 1197}
+{486}{Oui : j'aimerais que vous m’enseigniez votre connaissance des mécanismes. Je me suis prise de passion pour eux.}{0}{5}{lf10 0}{420}{lf10 1}
+{487}{Oui : j'aimerais que vous m’enseigniez votre connaissance des mécanismes. Je me suis pris de passion pour eux.}{1}{5}{lf10 0}{420}{lf10 1}
+{488}{Pas pour l'instant. Mais je reviendrai plus tard si besoin est.}{}{5}{}{0}{fl 489}
+
+{}{}{}{}{}{}{}
+
+{489}{Très bien, au revoir alors.}{Très bien, au revoir alors.}{}{}{}{}
+
+{499}{Vous n'avez rien fait de mal @pcname@. Revenez me voir... prochainement.}{Vous n'avez rien fait de mal @pcname@. Revenez me voir... prochainement.}{}{}{}{}
+
+{500}{[Il vous regarde droit dans les yeux un instant avant de détourner le regard] Je suis désolé mais même si j'y consentais, vous ne seriez pas encore à la hauteur de cet apprentissage. Un jour peut-être...}{[Il vous regarde droit dans les yeux un instant avant de détourner le regard] Je suis désolé mais même si j'y consentais, vous ne seriez pas encore à la hauteur de cet apprentissage. Un jour peut-être...}{}{}{}{}
+{501}{Bien, je n'insiste pas. Puis-je cependant vous demander autre chose ?}{}{5}{}{590}{}
+{502}{Je comprends. Je vais vous laisser.}{}{5}{}{0}{fl 509}
+
+{509}{N'hésitez pas à revenir @pcname@...}{N'hésitez pas à revenir @pcname@...}{}{}{}{}
+
+{510}{[Il vous regarde droit dans les yeux un instant, saisit vos deux mains et regarde vos paumes avant de vous les lâcher délicatement] Je suis désolé @pcname@ mais, même si je consentais à vous prendre comme élève, vous ne sauriez profiter pleinement de cet enseignement. Vous me semblez bien connaître la théorie mais la pratique vous fait défaut. Entraînez-vous seul pour l'instant et revenez me voir lorsque vous vous serez exercé.}{[Il vous regarde droit dans les yeux un instant, saisit vos deux mains et regarde vos paumes avant de vous les lâcher délicatement] Je suis désolé @pcname@ mais, même si je consentais à vous prendre comme élève, vous ne sauriez profiter pleinement de cet enseignement. Vous me semblez bien connaître la théorie mais la pratique vous fait défaut. Entraînez-vous seul pour l'instant et revenez me voir lorsque vous vous serez exercé.}{}{}{}{}
+{511}{Bien, je n'insisterai pas plus. Puis-je cependant vous demander autre chose ?}{}{5}{}{590}{}
+{512}{C'est entendu, nous nous reverrons un jour...}{}{5}{}{0}{fl 519}
+
+{519}{N'hésitez pas à repasser par ma cabine, je serai ravi de discuter avec vous...}{N'hésitez pas à repasser par ma cabine, je serai ravi de discuter avec vous...}{}{}{}{}
+
+{520}{Oui... De quoi désiriez-vous m'entretenir ?}{Oui... De quoi désiriez-vous m'entretenir ?}{}{}{}{}
+{521}{J'aimerais que vous me disiez : avez-vous rencontré des personnes étranges dans ce train ?}{}{5}{lf7 0}{480}{lf7 1}
+{522}{Si vous pouviez me réparer cette clef, cela me rendrais grandement service. [Vous lui montrez la clef d'argent brisée]}{}{5}{in5810, lf5 0}{180}{lf5 1}
+{523}{En fait : je vous ai rapporté de la terre glaise pour la clef. [Vous lui donnez la clef et l'argile thérapeutique]}{}{5}{in5810, in3802, ru1196}{280}{in3802}
+{524}{Possédez-vous en ce moment des engrenages ? Un mécanisme de ce train est incomplet.}{}{5}{lf6 0, gf417 1}{200}{lf6 1}
+{525}{En fait , je vous ai rapporté la photographie du mécanisme incomplet.}{}{5}{in5811, gf418 1}{530}{in5811}
+{526}{Je crois savoir que vous avez perdu une paire de chaussettes dans ce train n'est-ce pas ?}{}{5}{ru 1042, lf8 0}{410}{lf8 1, ru 1197}
+{527}{En fait, cela peut attendre. Je reviendrais plus tard.}{}{5}{}{0}{fl 529}
+
+{}{}{}{}{}{}{}
+
+{529}{C'est entendu, au revoir @pcname@...}{C'est entendu, au revoir @pcname@...}{}{}{}{}
+
+{530}{[Il appuie sur un bouton et une photographie sort de l'appareil. Il la secoue et, après un instant, l'image du mécanisme se forme] Ma foi, il manque en effet un engrenage de manière flagrante. Je crois en avoir un qui ferait l'affaire par... ici ! [Il se retourne et prend un engrenage de ses affaires puis, après être revenu dans sa position initiale, vous le donne] Voilà, je pense qu'il sera parfait pour vous mais revenez me voir s'il ne convenait pas.}{[Il appuie sur un bouton et une photographie sort de l'appareil. Il la secoue et, après un instant, l'image du mécanisme se forme] Ma foi, il manque en effet un engrenage de manière flagrante. Je crois en avoir un qui ferait l'affaire par... ici ! [Il se retourne et prend un engrenage de ses affaires puis, après être revenu dans sa position initiale, vous le donne] Voilà, je pense qu'il sera parfait pour vous mais revenez me voir s'il ne convenait pas.}{}{}{}{in-5813}
+{531}{C'est très aimable à vous. [Vous prenez l'engrenage] Pourrais-je encore vous demander une chose ?}{}{5}{}{600}{}
+{532}{Merci beaucoup. [Vous prenez l'engrenage] Je vais l'essayer de ce pas.}{}{5}{}{0}{fl 539}
+
+{539}{Très bien, au revoir et bonne chance.}{Très bien, au revoir et bonne chance.}{}{}{}{}
+
+{540}{Vous faites beaucoup de mystères @pcname@... [Il réfléchit un instant] Je vais nous simplifier la vie à tous les deux. [Il se tourne et fouille frénétiquement dans le meuble de bois pour en sortir un appareil photographique qu'il vous tend] Voici ! Avec ça je ne verrais que ce que vous voudrez me montrer.}{Vous faites beaucoup de mystères @pcname@... [Il réfléchit un instant] Je vais nous simplifier la vie à tous les deux. [Il se tourne et fouille frénétiquement dans le meuble de bois pour en sortir un appareil photographique qu'il vous tend] Voici ! Avec ça je ne verrais que ce que vous voudrez me montrer.}{}{}{}{in-5811}
+{541}{C'est très aimable à vous. Puis-je encore vous poser une question ?}{}{5}{}{610}{}
+{542}{Merci beaucoup, je reviendrai avec la photo. A tout à l'heure.}{}{5}{}{0}{fl 338}
+
+{550}{Mais bien entendu ! Je vous écoute.}{Mais bien entendu ! Je vous écoute.}{}{}{}{}
+{551}{Voilà, êtes-vous en mesure de réparez cette clef ? [Vous lui montrez la clef d'argent brisée]}{}{5}{in5810, lf5 0}{210}{lf5 1}
+{552}{Auriez-vous au cours du voyage rencontré des personnes étranges ?}{}{5}{lf7 0}{300}{lf7 1}
+{553}{Je crois que vous avez signalé la disparition d'une paire de chaussettes, est-ce exact ?}{}{5}{ru 1042, lf8 0}{310}{lf8 1, ru 1197}
+{554}{Voilà, je m'intéresse de près aux mécanismes, m'enseigneriez-vous votre savoir ?}{}{5}{lf10 0}{380}{lf10 1}
+{555}{En fait, je ne voudrais pas exagérez. Je reviendrai plus tard.}{}{5}{}{0}{fl 619}
+
+{}{}{}{}{}{}{}
+
+{560}{[Sa tristesse s'accentue un instant, vous remarquez qu'il essaie de la contenir. Il relève lentement la tête] Si je puis faire quoi que ce soit d'autre pour vous aider, demandez-moi !}{[Sa tristesse s'accentue un instant, vous remarquez qu'il essaie de la contenir. Il relève lentement la tête] Si je puis faire quoi que ce soit d'autre pour vous aider, demandez-moi !}{}{}{}{}
+{561}{Alors j'aimerais que vous me disiez : avez-vous rencontré des personnes étranges dans ce train ?}{}{5}{lf7 0}{480}{lf7 1}
+{562}{En ce cas, si vous pouviez réparer cette clef, cela me rendrais grandement service. [Vous lui montrez la clef d'argent brisée]}{}{5}{in5810, lf5 0}{180}{lf5 1}
+{563}{En fait : je vous ai rapporté de la terre glaise pour la clef. [Vous lui donnez la clef et l'argile thérapeutique]}{}{5}{in5810, in3802, ru1196}{280}{in3802}
+{564}{Très bien, possédez-vous en ce moment des engrenages ? Un mécanisme de ce train est incomplet.}{}{5}{lf6 0, gf417 1}{200}{lf6 1}
+{565}{En fait , je vous ai rapporté la photographie du mécanisme incomplet.}{}{5}{in5811, gf418 1}{530}{in5811}
+{566}{Alors dites-moi : je crois savoir que vous avez perdu une paire de chaussettes dans ce train n'est-ce pas ?}{}{5}{ru 1042, lf8 0}{410}{lf8 1, ru 1197}
+{567}{C'est gentil à vous mais je vais vous laisser...}{}{5}{}{0}{fl 569}
+
+{}{}{}{}{}{}{}
+
+{569}{Très bien, au plaisir...}{Très bien, au plaisir...}{}{}{}{}
+
+{570}{@pcname@, vous êtes réellement une personne hors du commun. Cependant, vous pouvez me croire quand je vous dis qu'un enseignement de ma part ne vous apporterait rien de bon... Et puis... je pense sincèrement que vous n'avez pas besoin de moi pour progresser. [Vous sentez que cette dernière phrase est un mensonge]}{@pcname@, vous êtes réellement une personne hors du commun. Cependant, vous pouvez me croire quand je vous dis qu'un enseignement de ma part ne vous apporterait rien de bon... Et puis... je pense sincèrement que vous n'avez pas besoin de moi pour progresser. [Vous sentez que cette dernière phrase est un mensonge]}{}{}{}{}
+{571}{Je vois... Puis-je vous demander autre chose ?}{}{5}{}{590}{}
+{572}{Bien. Je crois que je ferais mieux de vous laisser alors.}{}{5}{}{0}{fl 579}
+
+{579}{N'hésitez pas à revenir me voir. J'apprécie votre compagnie...}{N'hésitez pas à revenir me voir. J'apprécie votre compagnie...}{}{}{}{}
+
+{580}{[Il semble perturbé par vos déclarations, pendant quelques secondes il ne dit rien] C'est entendu @pcname@. Puisque vous avez compris, laissez-moi vous raconter ce qu'il s'est passé il y a trois ans en Arcanum...}{[Il semble perturbé par vos déclarations, pendant quelques secondes il ne dit rien] C'est entendu @pcname@. Puisque vous avez compris, laissez-moi vous raconter ce qu'il s'est passé il y a trois ans en Arcanum...}{}{}{}{}
+{581}{[Vous écoutez]}{}{1}{}{-23}{}//620
+
+{590}{Bien entendu voyons ! Je vous écoute.}{Bien entendu voyons ! Je vous écoute.}{}{}{}{}
+{591}{J'aimerais que vous me disiez : avez-vous rencontré des personnes étranges dans ce train ?}{}{5}{lf7 0}{480}{lf7 1}
+{592}{Seriez vous en mesure de réparer cette clef, cela me rendrais grandement service ? [Vous lui montrez la clef d'argent brisée]}{}{5}{in5810, lf5 0}{180}{lf5 1}
+{593}{En fait : je vous ai rapporté de la terre glaise pour la clef. [Vous lui donnez la clef et l'argile thérapeutique]}{}{5}{in5810, in3802, ru1196}{280}{in3802}
+{594}{Posséderiez-vous en ce moment des engrenages ? Un mécanisme de ce train est incomplet.}{}{5}{lf6 0, gf417 1}{200}{lf6 1}
+{595}{En fait , je vous ai rapporté la photographie du mécanisme incomplet.}{}{5}{in5811, gf418 1}{530}{in5811}
+{596}{Je crois savoir que vous avez perdu une paire de chaussettes dans ce train, est-ce exact ?}{}{5}{ru 1042, lf8 0}{410}{lf8 1, ru 1197}
+{597}{En fait, je crois que je reviendrais plus tard...}{}{5}{}{0}{fl 599}
+
+{}{}{}{}{}{}{}
+
+{599}{Très bien... A une prochaine fois @pcname@.}{Très bien... A une prochaine fois @pcname@.}{}{}{}{}
+
+{600}{Bien naturellement, que désirez-vous me demander ?}{Bien naturellement, que désirez-vous me demander ?}{}{}{}{}
+{601}{En fait, j'aurais aussi besoin que vous répariez cette clef. [Vous lui montrez la clef d'argent brisée]}{}{5}{in5810, lf5 0}{180}{lf5 1}
+{602}{En fait, je vous ai aussi ramené de la terre glaise pour la clef. [Vous lui donnez la clef et l'argile thérapeutique]}{}{5}{in5810, in3802, ru1196}{280}{in3802}
+{603}{J'aimerais savoir si vous avez rencontré des personnes étranges dans ce train.}{}{5}{lf7 0}{480}{lf7 1}
+{604}{En fait, je crois que vous avez signalé la perte d'une paire de chaussettes, est-ce vrai ?}{}{5}{ru 1042, lf8 0}{410}{lf8 1, ru 1197}
+{605}{Voilà : je me suis pris de passion pour tout ce qui est mécanismes, pourriez-vous m'enseignez votre savoir ?}{1}{5}{lf10 0}{420}{lf10 1}
+{606}{Voilà : je me suis prise de passion pour tout ce qui est mécanismes, pourriez-vous m'enseignez votre savoir ?}{0}{5}{lf10 0}{420}{lf10 1}
+{607}{En fait, je crois que vous en avez bien assez fait. Encore merci et au revoir...}{}{5}{}{0}{fl 609}
+
+{}{}{}{}{}{}{}
+
+{609}{Bien... Alors à plus tard @pcname@.}{Bien... Alors à plus tard @pcname@.}{}{}{}{}
+
+{610}{Bien entendu, demandez...}{Bien entendu, demandez...}{}{}{}{}
+{611}{Voilà, êtes-vous en mesure de réparez cette clef ? [Vous lui montrez la clef d'argent brisée]}{}{5}{in5810, lf5 0}{210}{lf5 1}
+{612}{Auriez-vous au cours du voyage rencontré des personnes étranges ?}{}{5}{lf7 0}{300}{lf7 1}
+{613}{Je crois que vous avez signalé la disparition d'une paire de chaussettes, est-ce exact ?}{}{5}{ru 1042, lf8 0}{310}{lf8 1, ru 1197}
+{614}{Voilà, je m'intéresse de près aux mécanismes, m'enseigneriez-vous votre savoir ?}{}{5}{lf10 0}{380}{lf10 1}
+{615}{En fait, je ne voudrais pas exagérez. Je reviendrai plus tard.}{}{5}{}{0}{fl 619}
+
+{}{}{}{}{}{}{}
+
+{619}{Très bien, à tout à l'heure alors.}{Très bien, à tout à l'heure alors.}{}{}{}{}
+
+{620}{Voilà... A cause de moi et de mon enseignement superflu et empirique, mon élève ainsi que de nombreuses autres personnes ont trouvé la mort. Vous comprenez donc pourquoi j'ai peur d'enseigner à nouveau, et que l'on soit aux Enfers ne supprime pas les risques pour autant !}{Voilà... A cause de moi et de mon enseignement superflu et empirique, mon élève ainsi que de nombreuses autres personnes ont trouvé la mort. Vous comprenez donc pourquoi j'ai peur d'enseigner à nouveau, et que l'on soit aux Enfers ne supprime pas les risques pour autant !}{}{}{}{}
+{621}{Et si je vous disais que pour m'approprier vos connaissances, j'accepterai de prendre tous les risques ?}{}{5}{}{630}{}
+{622}{Pourtant, il me semble que la machine qui a détruit votre mine n'était pas bâtie selon vos méthodes.}{}{5}{}{640}{}
+{623}{Et si m'enseigner votre art vous offrait une chance de vous racheter par rapport à votre passé ?}{}{5}{}{650}{}
+{624}{Je comprends vos sentiments mais m'enseigner votre art me permettrai d'aider de nombreuses personnes.}{}{5}{}{660}{}
+{625}{Oui, j'ai bien compris. Excusez-moi d'avoir insisté.}{}{5}{}{670}{}
+
+{630}{Tous les risques ? [Aristote semble pris de colère] Mais c'est justement de ce genre de motivation que j'ai peur ! [Il baisse à nouveau la tête et la secoue latéralement] N'insistez plus @pcname@, je ne changerai pas d'avis...}{Tous les risques ? [Aristote semble pris de colère] Mais c'est justement de ce genre de motivation que j'ai peur ! [Il baisse à nouveau la tête et la secoue latéralement] N'insistez plus @pcname@, je ne changerai pas d'avis...}{}{}{}{}
+{631}{Très bien... Puis-je cependant vous demander autre chose ?}{}{5}{}{680}{}
+{632}{Très bien, je vais vous laisser.}{}{5}{}{0}{fl 639}
+
+{639}{Merci. Revenez me voir si je peux vous être utile...}{Merci. Revenez me voir si je peux vous être utile...}{}{}{}{}
+
+{640}{En effet... Bien que le capteur de pression, le lance-flammes ou encore la mécanique des membres obéissaient aux schémas de mon école, leur assemblage en une seule machine était un défi inédit que Kévin voulait relever. Peut-être aurais-je du l'en empêcher... En fait, j'aurais du l'en empêcher. J'aurais du lui dire qu'une machine ne pouvait être la différence entre des nains, des barils de dynamiques ou de la roche. Tout est décidément de ma faute...}{En effet... Bien que le capteur de pression, le lance-flammes ou encore la mécanique des membres obéissaient aux schémas de mon école, leur assemblage en une seule machine était un défi inédit que Kévin voulait relever. Peut-être aurais-je du l'en empêcher... En fait, j'aurais du l'en empêcher. J'aurais du lui dire qu'une machine ne pouvait être la différence entre des nains, des barils de dynamiques ou de la roche. Tout est décidément de ma faute...}{}{}{}{}
+{641}{[Suite]}{}{1}{}{643}{}
+
+{643}{@pcname@, je sais que vous méritez mon enseignement et mes connaissances mais comprenez que je ne suis pas disposé à vous les donner malgré les risques.}{@pcname@, je sais que vous méritez mon enseignement et mes connaissances mais comprenez que je ne suis pas disposé à vous les donner malgré les risques.}{}{}{}{}
+{644}{Très bien, j'ai compris... Pourrais-je cependant vous demander autre chose ?}{}{5}{}{680}{}
+{645}{Bien... Je vais vous laisser vous reposer.}{}{5}{}{0}{fl 639}
+
+{650}{[L'espace d'un instant, vous croyez voir de la colère dans les yeux d'Aristote] J'ai tué 72 mineurs, je ne mérite nulle expiation ! Comment pourrais-je me racheter pour avoir interrompu autant d'existences prometteuses ? [Il secoue la tête latéralement] Je suis désolé @pcname@, mais jamais plus je ne pourrais donner un seul cours de mécanique...}{[L'espace d'un instant, vous croyez voir de la colère dans les yeux d'Aristote] J'ai tué 72 mineurs, je ne mérite nulle expiation ! Comment pourrais-je me racheter pour avoir interrompu autant d'existences prometteuses ? [Il secoue la tête latéralement] Je suis désolé @pcname@, mais jamais plus je ne pourrais donner un seul cours de mécanique...}{}{}{}{}
+{651}{Très bien, j'ai compris... Pourrais-je cependant vous demander autre chose ?}{}{5}{}{680}{}
+{652}{Bien... Excusez-moi d'avoir insisté, je vous laisse vous reposer à présent.}{}{5}{}{0}{fl 639}
+
+{660}{[Une lueur semble s'être allumée dans les yeux d'Aristote] @pcname@, ce que vous dites... est parfaitement juste. J'ai confiance en vous, je sais que vous utiliserez mes connaissances uniquement pour faire le bien ! Et si nous commencions tout de suite ? [Il tend le bras droit vers le petit écu rouge situé sur le meuble de bois] Derrière cet écu se trouve un mécanisme particulier, un mécanisme "Magentique".}{[Une lueur semble s'être allumée dans les yeux d'Aristote] @pcname@, ce que vous dites... est parfaitement juste. J'ai confiance en vous, je sais que vous utiliserez mes connaissances uniquement pour faire le bien ! Et si nous commencions tout de suite ? [Il tend le bras droit vers le petit écu rouge situé sur le meuble de bois] Derrière cet écu se trouve un mécanisme particulier, un mécanisme "Magentique".}{}{}{}{}
+{661}{[Suite]}{}{1}{}{663}{}
+
+{663}{C'est un mécanisme très courant depuis plusieurs centaines d'années aux Enfers. On en trouve cependant de moins en moins car leur secret commence à être répandu. Au dos se trouve le clavier pour les désactiver, celui-ci diffère entre les supports du mécanisme mais le principe reste d'écrire le nom du concepteur, "Magenta", grâce à ce clavier. Je vous laisse tenter de le désactiver.}{C'est un mécanisme très courant depuis plusieurs centaines d'années aux Enfers. On en trouve cependant de moins en moins car leur secret commence à être répandu. Au dos se trouve le clavier pour les désactiver, celui-ci diffère entre les supports du mécanisme mais le principe reste d'écrire le nom du concepteur, "Magenta", grâce à ce clavier. Je vous laisse tenter de le désactiver.}{}{}{}{lf11 1, gf426 1}
+{664}{Très bien, je vais essayer.}{}{5}{}{0}{}//Reprise 668 ou 700
+{665}{Ne voulez-vous pas m'en dire plus sur le clavier de celui-ci ?}{}{5}{}{690}{}
+
+{668}{Je pense que vous avez assez d'indices pour réussir @pcname@, prouvez-moi que j'ai eu raison de croire en votre potentiel !}{Je pense que vous avez assez d'indices pour réussir @pcname@, prouvez-moi que j'ai eu raison de croire en votre potentiel !}{}{}{}{}
+
+{670}{Non, ce n'est rien. Vous ne pouviez pas savoir et puis... non rien. [Il relève la tête, affichant une expression artificiellement neutre] Vous vouliez peut-être me demander autre chose ?}{Non, ce n'est rien. Vous ne pouviez pas savoir et puis... non rien. [Il relève la tête, affichant une expression artificiellement neutre] Vous vouliez peut-être me demander autre chose ?}{}{}{}{}
+{671}{Oui, j'aimerais que vous me disiez : avez-vous rencontré des personnes étranges dans ce train ?}{}{5}{lf7 0}{480}{lf7 1}
+{672}{Oui, j'aimerais savoir si vous êtes en mesure de réparer cette clef. [Vous lui montrez la clef d'argent brisée]}{}{5}{in5810, lf5 0}{180}{lf5 1}
+{673}{En fait : je vous ai rapporté de la terre glaise pour la clef. [Vous lui donnez la clef et l'argile thérapeutique]}{}{5}{in5810, in3802, ru1196}{280}{in3802}
+{674}{En fait oui, je recherche un engrenage pour un mécanisme de ce train qui est incomplet, n'en posséderiez-vous pas ?}{}{5}{lf6 0, gf417 1}{200}{lf6 1}
+{675}{En fait , je vous ai rapporté la photographie du mécanisme incomplet.}{}{5}{in5811, gf418 1}{530}{in5811}
+{676}{Oui, je crois savoir que vous avez perdu une paire de chaussettes dans ce train n'est-ce pas ?}{}{5}{ru 1042, lf8 0}{410}{lf8 1, ru 1197}
+{677}{Non, c'est très aimable à vous mais je pense que je vais me retirer.}{}{5}{}{0}{fl 679}
+
+{}{}{}{}{}{}{}
+
+{679}{Très bien, mais n'hésitez pas à revenir si vous avez besoin de mes services...}{Très bien, mais n'hésitez pas à revenir si vous avez besoin de mes services...}{}{}{}{}
+
+{680}{Oui, bien naturellement. De quoi avez-vous besoin ?}{Oui, bien naturellement. De quoi avez-vous besoin ?}{}{}{}{}
+{681}{J'aimerais que vous me disiez : avez-vous rencontré des personnes étranges dans ce train ?}{}{5}{lf7 0}{480}{lf7 1}
+{682}{Eh bien, si vous pouviez réparer cette clef, cela me rendrais grandement service. [Vous lui montrez la clef d'argent brisée]}{}{5}{in5810, lf5 0}{180}{lf5 1}
+{683}{En fait : je vous ai rapporté de la terre glaise pour la clef. [Vous lui donnez la clef et l'argile thérapeutique]}{}{5}{in5810, in3802, ru1196}{280}{in3802}
+{684}{Je suis à la recherche d'un engrenage pour un mécanisme de ce train qui est incomplet, n'en posséderiez-vous pas ?}{}{5}{lf6 0, gf417 1}{200}{lf6 1}
+{685}{En fait , je vous ai rapporté la photographie du mécanisme incomplet.}{}{5}{in5811, gf418 1}{530}{in5811}
+{686}{Je crois savoir que vous avez perdu une paire de chaussettes dans ce train n'est-il pas ?}{}{5}{ru 1042, lf8 0}{410}{lf8 1, ru 1197}
+{687}{En fait, je crains d'abuser. Aussi, je vais vous laisser pour l'instant.}{}{5}{}{0}{fl 689}
+
+{}{}{}{}{}{}{}
+
+{689}{Comme vous voulez... Mais n'hésitez pas à revenir si vous avez besoin de mes services, je me ferais une joie de vous aider !}{Comme vous voulez... Mais n'hésitez pas à revenir si vous avez besoin de mes services, je me ferais une joie de vous aider !}{}{}{}{}
+
+{690}{Ne vous inquiétez pas : c'est un ancien modèle facile à désactiver...}{Ne vous inquiétez pas : c'est un ancien modèle facile à désactiver...}{}{}{}{}
+{691}{Bon, je vais essayer alors.}{}{5}{}{0}{}
+
+{700}{@pcname@, je savais que vous pouviez réussir !}{@pcname@, je savais que vous pouviez réussir !}{}{}{}{ru 1198}
+{701}{Ce n'était pas très compliqué...}{}{5}{}{710}{}
+{702}{C'est gentil à vous, maître.}{}{5}{}{720}{}
+
+{710}{Et pourtant, cette astuce vous servira énormément... [Il réfléchit un instant] Je pense que vous avez hâte d'en apprendre plus mais je n'ai pas assez de matériel sur moi pour cela. Cependant, je vous enverrai sous peu un colis au cercle 666. Cela vous convient-il ?}{Et pourtant, cette astuce vous servira énormément... [Il réfléchit un instant] Je pense que vous avez hâte d'en apprendre plus mais je n'ai pas assez de matériel sur moi pour cela. Cependant, je vous enverrai sous peu un colis au cercle 666. Cela vous convient-il ?}{}{}{}{ru 1199}
+{711}{C'est parfait. Puis-je en attendant vous demander quelque chose ?}{}{5}{}{680}{}
+{712}{Merci à vous, j'attendrai votre colis avec impatience.}{}{5}{}{0}{fl 718}
+
+{718}{Très bien, je ferais vite. Bonne chance pour la suite @pcname@...}{Très bien, je ferais vite. Bonne chance pour la suite @pcname@...}{}{}{}{}
+
+{720}{Bien, je pense que cette astuce vous servira énormément par la suite, faites-en bon usage. [Il réfléchit un instant] Je pense que vous avez hâte d'en apprendre plus mais je n'ai pas assez de matériel sur moi pour cela. Cependant, je vous enverrai sous peu un colis au cercle 666. Cela vous convient-il ?}{Bien, je pense que cette astuce vous servira énormément par la suite, faites-en bon usage. [Il réfléchit un instant] Je pense que vous avez hâte d'en apprendre plus mais je n'ai pas assez de matériel sur moi pour cela. Cependant, je vous enverrai sous peu un colis au cercle 666. Cela vous convient-il ?}{}{}{}{ru 1199}
+{721}{C'est parfait. Puis-je en attendant vous demander quelque chose ?}{}{5}{}{680}{}
+{722}{Merci à vous, j'attendrai votre colis avec impatience.}{}{5}{}{0}{fl 718}
+
+
+//Protecteur nain
+{730}{Au fait @pcname@. Ce mécanisme a désactivé la protection qui entourait le présentoir... Prenez le bouclier qui se trouve dessus ! Il s'agit du protecteur nain, un type de bouclier unique fabriqué par mon clan. Je suis sûr qu'il vous sera utile.}{Au fait @pcname@. Ce mécanisme a désactivé la protection qui entourait le présentoir... Prenez le bouclier qui se trouve dessus ! Il s'agit du protecteur nain, un type de bouclier unique fabriqué par mon clan. Je suis sûr qu'il vous sera utile.}{}{}{}{}
+{731}{Merci beaucoup, j'en prendrai grand soin.}{}{5}{}{0}{fl 739}
+{732}{Entendu, merci à vous...}{}{5}{}{0}{}
+
+{739}{Je n'en doute pas.}{Je n'en doute pas.}{}{}{}{}
+
+
+//Demander avec le nom et le cercle
+{800}{@pcname@, c'est un plaisir que vous soyez de retour ! Puis-je vous aider d'une quelconque manière ?}{@pcname@, c'est un plaisir que vous soyez de retour ! Puis-je vous aider d'une quelconque manière ?}{}{}{}{}
+{801}{Eh bien j'aimerais que vous me disiez si vous avez rencontré des personnes étranges dans ce train ?}{}{5}{lf7 0}{480}{lf7 1}
+{802}{Oui, cela m'aiderais énormément si vous pouviez réparer cette clef. [Vous lui montrez la clef d'argent brisée]}{}{5}{in5810, lf5 0}{180}{lf5 1}
+{803}{Eh bien je vous ai rapporté de la terre glaise pour la clef. [Vous lui donnez la clef et l'argile thérapeutique]}{}{5}{in5810, in3802, ru1196}{280}{in3802}
+{804}{En effet, je suis à la recherche d'un engrenage pour un mécanisme de ce train, n'en posséderiez-vous pas ?}{}{5}{lf6 0, gf417 1}{200}{lf6 1}
+{805}{En fait oui : je vous ai pris une photographie du mécanisme incomplet.}{}{5}{in5811, gf418 1}{530}{in5811}
+{806}{[Plus]}{}{5}{}{810}{}
+{807}{Ouais, vous me dire si vous avoir vu gens étranges dans l'train.}{}{-4}{lf7 0}{480}{lf7 1}
+{808}{Nan, c'est cool mais moi b'soin rien.}{}{-4}{}{0}{fl 809}
+
+{809}{Bien, je vous laisse vaquer à vos occupations alors.}{Bien, je vous laisse vaquer à vos occupations alors.}{}{}{}{}
+
+{810}{@pcname@, c'est un plaisir que vous soyez de retour ! Puis-je vous aider d'une quelconque manière ?}{@pcname@, c'est un plaisir que vous soyez de retour ! Puis-je vous aider d'une quelconque manière ?}{}{}{}{}
+{811}{[Retour]}{}{5}{}{800}{}
+{813}{En fait, je crois savoir que vous avez perdu une paire de chaussettes dans ce train n'est-il pas ?}{}{5}{ru 1042, lf8 0}{410}{lf8 1, ru 1197}
+{814}{Il est temps de vous dire : je me passionne pour les mécanismes, consentiriez-vous à m'enseignez votre savoir ?}{}{5}{lf10 0}{420}{lf10 1}
+{815}{C'est fort aimable mais je n'ai besoin de rien pour l'instant.}{}{5}{}{0}{fl 809}
+
+{}{}{}{}{}{}{}
+
+
+//Demander avec le nom
+{850}{@pcname@, c'est un plaisir de vous revoir. Avez-vous besoin de mon aide ?}{@pcname@, c'est un plaisir de vous revoir. Avez-vous besoin de mon aide ?}{}{}{}{}
+{851}{Eh bien j'aimerais que vous me disiez si vous avez rencontré des personnes étranges dans ce train ?}{}{5}{lf7 0}{300}{lf7 1}
+{852}{He bien, vous vous étiez capable de réparer cette clef... [Vous lui montrez la clef d'argent brisée]}{}{5}{in5810, lf5 0}{210}{lf5 1}
+{853}{En effet, je suis à la recherche d'un engrenage pour un mécanisme de ce train, n'en posséderiez-vous pas ?}{}{5}{lf6 0, gf417 1}{220}{lf6 1}
+{854}{En fait oui : je vous ai pris une photographie du mécanisme incomplet.}{}{5}{in5811, gf418 1}{460}{in5811}
+{855}{[Plus]}{}{5}{}{860}{}
+{856}{Ouais, vous me dire si vous avoir vu gens étranges dans l'train.}{}{-4}{lf7 0}{300}{lf7 1}
+{857}{Nan, c'est cool mais moi b'soin rien.}{}{-4}{}{0}{fl 859}
+
+{859}{Bien, alors je vous laisse tranquille...}{Bien, alors je vous laisse tranquille...}{}{}{}{}
+
+{860}{@pcname@, c'est un plaisir que vous soyez de retour ! Puis-je vous aider d'une quelconque manière ?}{@pcname@, c'est un plaisir que vous soyez de retour ! Puis-je vous aider d'une quelconque manière ?}{}{}{}{}
+{861}{[Retour]}{}{5}{}{850}{}
+{863}{En fait, je crois savoir que vous avez perdu une paire de chaussettes dans ce train n'est-il pas ?}{}{5}{ru 1042, lf8 0}{310}{lf8 1, ru 1197}
+{864}{Il est temps de vous dire : je me passionne pour les mécanismes, consentiriez-vous à m'enseignez votre savoir ?}{}{5}{lf10 0}{380}{lf10 1}
+{865}{Non merci, je n'ai besoin de rien pour l'instant.}{}{5}{}{0}{fl 859}
+
+//Demander sans le nom
+{900}{Monsieur, vous êtes de retour ? De quoi avez-vous besoin ?}{Madame, vous êtes de retour ? De quoi avez-vous besoin ?}{}{}{}{}
+{901}{Êtes vous en mesure de réparez cette clef ? [Vous lui montrez la clef d'argent brisée]}{}{5}{in5810, lf5 0}{240}{lf5 1}
+{902}{Il me fau savoir. Avez-vous rencontré des personnes étranges dans ce train ?}{}{5}{lf7 0}{250}{lf7 1}
+{903}{Je crois savoir que vous avez signalé la disparition d'une paire de chaussettes, est-ce vrai ?}{}{5}{ru 1042, lf8 0}{260}{lf8 1, ru 1197}
+{904}{Auriez-vous en votre possession des engrenages ? Il en manque un à un mécanisme de ce train.}{}{5}{lf6 0, gf417 1}{270}{lf6 1}
+{905}{[Plus]}{}{5}{}{910}{}
+{906}{Vous pas avoir vu personnes bizarres dans l'train ?}{}{-4}{lf7 0}{250}{lf7 1}
+{907}{De rien, mais moi p’têt rev'nir p'us tard.}{}{-4}{}{0}{fl 909}
+
+{909}{Soit, à plus tard alors...}{Soit, à plus tard alors...}{}{}{}{}
+
+{910}{Monsieur, vous êtes de retour ? De quoi avez-vous besoin ?}{Madame, vous êtes de retour ? De quoi avez-vous besoin ?}{}{}{}{}
+{911}{[Retour]}{}{5}{}{900}{}
+{912}{En fait, je me passionne pour les mécanismes. Consentiriez-vous à m'enseignez votre savoir technique ?}{}{5}{lf10 0}{350}{lf10 1}
+{913}{De rien merci. Mais je repasserai peut-être plus tard...}{}{5}{}{0}{fl 919}
+
+{}{}{}{}{}{}{}
+
+
+//Bug 490
+{1000}{[Il baisse à nouveau les yeux] Je suis sincèrement navré mais je me dois de refuser. Vous ne semblez pas à la hauteur de cet apprentissage. [Vous remarquez une larme perler dans son oeil droit, elle ruisselle jusqu'à se perdre dans sa barbe] Allez-voir ailleurs, je ne prends pas d'élèves.}{[Il baisse à nouveau les yeux] Je suis sincèrement navré mais je me dois de refuser. Vous ne semblez pas à la hauteur de cet apprentissage. [Vous remarquez une larme perler dans son oeil droit, elle ruisselle jusqu'à se perdre dans sa barbe] Allez-voir ailleurs, je ne prends pas d'élèves.}{}{}{}{}
+{1001}{Très bien, je ne voulais pas me montrer impoli.}{1}{5}{}{560}{}
+{1002}{Très bien, je ne voulais pas me montrer impolie.}{0}{5}{}{560}{}
+{1003}{Vous mentez n'est-ce pas ? Vous savez que j'ai assez de talent mais vous avez peur de quelque chose.}{}{5}{ps 8}{570}{}
+{1004}{Monsieur, je ne connais pas votre passé bien que je crois le deviner. Nous ne sommes plus en Arcanum mais aux Enfers.}{}{11}{ps 12}{580}{}
+{1005}{Je suis désolé d'avoir insisté. Il vaut mieux que je parte à présent.}{1}{5}{}{0}{fl 499}
+{1006}{Je suis désolée d'avoir insisté. Il vaut mieux que je parte à présent.}{0}{5}{}{0}{fl 499}
+
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}

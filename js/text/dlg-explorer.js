@@ -13,7 +13,7 @@ import { fetchText, errText } from '../core/text-io.js';
 
 import { breadcrumbEl, gridEl, paginationEl, viewerEl } from '../core/dom.js';
 
-import { encPath, escapeHtml } from '../core/util.js';
+import { encPath, escapeHtml, createEl as dlgCreateEl } from '../core/util.js';
 
 import { beginDataExplorer, renderDataFolderGrid, showExplorerError } from '../explorer/data-explorer.js';
 
@@ -168,9 +168,6 @@ function dlgTargetText(option) {
   // at line -N (dialog_ui_execute_script()).
   if (option.response < 0) return `Ends dialog, runs NPC script line ${-option.response}`;
   return 'Ends conversation';
-}
-function dlgCreateEl(tag, cls, text) {
-  const el=document.createElement(tag); if(cls) el.className=cls; if(text!==undefined) el.textContent=text; return el;
 }
 function dlgRenderGameStage(stage, data) {
   stage.innerHTML='';

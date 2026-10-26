@@ -1,0 +1,31 @@
+// User reputations start at 1
+// Each reputation starts with 3 faction numbers, indicating the three
+// factions that will treat the reputation owner as being part of their
+// faction. One or all of these faction numbers can be zero, which is
+// the empty faction.
+// Each reputation can then have up to 5 effects, separated by commas
+// Each effect is 3 numbers, separated by spaces
+// The first number is a reaction adjustment
+// The second number is an origin (0 means ANY origin)
+// The third number is a faction (0 means ANY faction)
+// Examples:
+//
+//	0 0 0, -20 1 0, +30 2 0
+//	The reputation grants no faction to the PC, but he has a -20
+//  reaction from any NPC from origin 1 and a +30 reaction from any
+//  NPC from origin 2
+//
+//	1 10 0, -10 0 0
+//	Any NPC from factions 1 and 10 will treat the PC as being on that
+//  faction, and every NPC responds with a -10 reaction
+//
+//	1 0 0, +10 0 1
+//	Any NPC from faction 1 will treat the PC as being in that faction,
+//	and all NPC's belonging to faction 1 respond with a +10 reaction
+//
+//	0 0 0, +15 2 1
+//	The reputation grants no faction, but an NPC from origin 2
+//	belonging to faction 1 gets a +15 reaction to the PC
+
+
+{1}{0 0 0, +10 0 0}

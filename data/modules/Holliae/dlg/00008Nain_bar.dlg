@@ -1,0 +1,80 @@
+{1}{Salut monsieur.}{Salut m'dame.}{}{1}{}{}
+{2}{Y a-t-il des rumeurs qui circulent par ici ?}{}{5}{lf1 0}{20}{lf1 1}
+{3}{Puis-je me rendre utile d'une quelqonque manière ?}{}{5}{lf2 0}{30}{lf2 1}
+{4}{Moi aider vous pouvoir ?}{}{-4}{lf2 0}{30}{lf2 1}
+{5}{Quoi se passer par ici ?}{}{-4}{lf1 0}{20}{lf1 1}
+{6}{W:}{}{1}{lf0 0}{10}{lf0 1}
+{7}{E:}{}{1}{}{0}{}
+
+{10}{Je m'apelle Renge, coeur de pierre, et vous même ?}{Je m'apelle Renge, coeur de pierre, et vous même ?}{}{2}{}{}
+{11}{Monsieur @pcname@. Enchanté.}{1}{5}{}{40}{}
+{12}{Madame @pcname@. Ravi de faire votre connaissance.}{0}{5}{}{40}{}
+{13}{Je m'apelle Robert Pistache}{1}{5}{}{50}{rp1000}
+{14}{Je m'apelle Caroline Pistache.}{0}{5}{}{50}{rp1001}
+{15}{[Burb] @pcname@}{}{-4}{}{40}{}
+{16}{Le Yeti}{1}{-4}{}{60}{rp1002}
+{17}{Marie Crushet d'oignon}{0}{-4}{}{60}{rp1003}
+
+{20}{Un docker est mort hier en regagnant son navire, ça craint.}{Un docker est mort hier en regagnant son navire, ça craint.}{}{3}{}{}
+{21}{Puis-je me rendre utile d'une quelqonque manière ?}{}{5}{lf2 0}{30}{lf2 1, ru1002}
+{22}{Moi aider vous pouvoir ?}{}{-4}{lf2 0}{30}{lf2 1, ru1002}
+{23}{W:}{}{1}{lf0 0}{10}{lf0 1, ru1002}
+{24}{E:}{}{1}{}{0}{ru1002}
+
+{30}{Non, mais je te propose un p'tit jeu. Je te pose une question. Si tu réussi, t'as 20 pièces. Sinon, 20 pièces pour moi.}{Non, mais je te propose un p'tit jeu. Je te pose une question. Si tu réussi, t'as 20 pièces. Sinon, 20 pièces pour moi.}{}{4}{}{}
+{31}{Y:}{}{1}{$$ 20}{70}{}
+{32}{N:}{}{1}{}{80}{}
+
+{40}{Et qu'est ce que tu veux @pcname@ ?}{Et qu'est ce que tu veux @pcname@ ?}{}{5}{}{}
+{41}{Y a-t-il des rumeurs qui circulent par ici ?}{}{5}{lf1 0}{20}{lf1 1}
+{42}{Puis-je me rendre utile d'une quelqonque manière ?}{}{5}{lf2 0}{30}{lf2 1}
+{43}{Moi aider vous pouvoir ?}{}{-4}{lf2 0}{30}{lf2 1}
+{44}{Quoi se passer par ici ?}{}{-4}{lf1 0}{20}{lf1 1}
+{45}{E:}{}{1}{}{0}{}
+
+{50}{Et qu'est ce que tu veux Robert Pistache ?}{Et qu'est ce que tu veux Caroline pistache ?}{}{5}{}{}
+{51}{Y a-t-il des rumeurs qui circulent par ici ?}{}{5}{lf1 0}{20}{lf1 1}
+{52}{Puis-je me rendre utile d'une quelqonque manière ?}{}{5}{lf2 0}{30}{lf2 1}
+{53}{E:}{}{1}{}{0}{}
+
+
+{60}{Et qu'est ce que tu veux "Le yeti" ?}{Et qu'est ce que tu veux Marie Crushet d'Oignon ?}{}{5}{}{}
+{61}{Moi aider vous pouvoir ?}{}{-4}{lf2 0}{30}{lf2 1}
+{62}{Quoi se passer par ici ?}{}{-4}{lf1 0}{20}{lf1 1}
+{63}{E:}{}{1}{}{0}{}
+
+{70}{Qu'est-il écrit sur la statue de Cendrebourg ?}{Qu'est-il écrit sur la statue de Cendrebourg ?}{}{6}{}{}
+{71}{Mefiez vous des moutons à l'air suspect.}{}{5}{}{90}{$$-20}
+{72}{Qui peut le plus peut le moins.}{}{5}{}{100}{$$ 20}
+{73}{Vive Gilbert Bastien.}{}{5}{}{90}{$$-20}
+{74}{A notre fondateur : Sébastien Lessur}{}{5}{}{90}{$$-20}
+{75}{A notre fondateur : Lucain Nigaud}{}{5}{}{90}{$$-20}
+{76}{[Vous ne savez pas]}{}{-4}{}{90}{$$-20}
+
+{80}{Tant pis, au't chose ?}{Tant pis, au't chose ?}{}{7}{}{}
+{81}{Y a-t-il des rumeurs qui circulent par ici ?}{}{5}{lf1 0}{20}{lf1 1}
+{82}{Quoi se passer par ici ?}{}{-4}{lf1 0}{20}{lf1 1}
+{83}{W:}{}{1}{lf0 0}{10}{lf0 1}
+{84}{E:}{}{1}{}{0}{}
+
+{90}{Faux mon ami, 20 pièces pour moi. Et sinon, aut' chose ?}{Faux mon amie, 20 pièces pour moi. Et sinon, aut' chose ?}{}{8}{}{}
+{91}{Y a-t-il des rumeurs qui circulent par ici ?}{}{5}{lf1 0}{20}{lf1 1}
+{92}{Quoi se passer par ici ?}{}{-4}{lf1 0}{20}{lf1 1}
+{93}{W:}{}{1}{lf0 0}{10}{lf0 1}
+{94}{E:}{}{1}{}{0}{}
+
+{100}{En effet. Voilà vingts pièces.}{En effet. Voilà vingts pièces.}{}{9}{}{}
+{101}{Y a-t-il des rumeurs qui circulent par ici ?}{}{5}{lf1 0}{20}{lf1 1}
+{102}{Quoi se passer par ici ?}{}{-4}{lf1 0}{20}{lf1 1}
+{103}{W:}{}{1}{lf0 0}{10}{lf0 1}
+{104}{E:}{}{1}{}{0}{}
+
+{110}{Rebonjour Robert Pistache.}{Rebonjour Caroline Pistache.}{}{10}{}{}
+{111}{Y a-t-il des rumeurs qui circulent par ici ?}{}{5}{lf1 0}{20}{lf1 1}
+{112}{Puis-je me rendre utile d'une quelqonque manière ?}{}{5}{lf2 0}{30}{lf2 1}
+{113}{E:}{}{1}{}{0}{}
+
+{120}{Rebonjour "le yéti".}{Rebonjour Marie Crushet d'Oignon.}{}{10}{}{}
+{121}{Moi aider vous pouvoir ?}{}{-4}{lf2 0}{30}{lf2 1}
+{122}{Quoi se passer par ici ?}{}{-4}{lf1 0}{20}{lf1 1}
+{123}{E:}{}{1}{}{0}{}

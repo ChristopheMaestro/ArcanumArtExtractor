@@ -63,6 +63,14 @@ const versionResets = new Set();
 export function onVersionChange(reset) { versionResets.add(reset); return reset; }
 export function versionChanged() { for (const reset of versionResets) { try { reset(); } catch (_) {} } }
 
+// document.createElement with an optional class and text content.
+export function createEl(tag, cls, text) {
+  const el = document.createElement(tag);
+  if (cls) el.className = cls;
+  if (text !== undefined) el.textContent = text;
+  return el;
+}
+
 export function escapeHtml(text) {
   return String(text ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 }

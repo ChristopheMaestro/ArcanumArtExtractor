@@ -1,0 +1,32 @@
+//
+// Sound Parameters file
+// 05/09/00
+//
+// BEGIN Positional audio parameters.  All numbers are in screen coordinates.
+//
+// IF you remove one or more of these parameters, default values will be supplied.
+// The current default values are indicated below.
+//
+// Controls for volume of sound versus its radius.
+//
+// Sounds closer than this are full volume (not attenuated).
+// #10 defaults to 150
+{10}{150}
+//
+// Sounds FARTHER than this are zero volume (fully attenuated).
+// #20 defaults to 800
+// NOTE: since screen width is 800, this lets you hear a half-screen
+// off the edges of the screen.
+{20}{800}
+//
+// Controls for X-position (panning) of sound versus its lateral position (X-position).
+//
+// Sounds closer than this are played centered.
+// #30 defaults to 150
+{30}{150}
+//
+// Sounds at this X-range are played HARD to that side (fully-panned).
+// #40 defaults to 400
+{40}{400}
+//
+// END Positional audio parameters.

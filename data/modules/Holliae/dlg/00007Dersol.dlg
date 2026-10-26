@@ -1,0 +1,21 @@
+{1}{B'jour !}{B'jour !}{}{1}{}{}
+{2}{Comment vous appelez vous ?}{}{5}{lf0 0}{6}{lf0 1}
+{3}{Quoi vot' nom ?}{}{-4}{lf0 0}{6}{lf0 1}
+{4}{E:}{}{1}{lf0 1}{0}{}
+
+{6}{Dersol !}{Dersol !}{}{2}{}{}
+{7}{Puis vous être d'une quelqonque utilité ?}{}{5}{}{10}{}
+{8}{Moi pouvoir aider toi ?}{}{-4}{}{10}{}
+
+{10}{Nan, mais si t'as cinq pièces, j'te parie une bouteille de vin que je gagne au dé.}{Nan, mais si t'as cinq pièces, j'te parie une bouteille de vin que je gagne au dé.}{}{3}{}{}
+{11}{Y:}{}{1}{$$ 5}{14}{}
+{12}{N:}{}{1}{}{0}{}
+
+{14}{Si moi avoir quat', cinq ou six, moi gagné.}{Si moi avoir quat', cinq ou six, moi gagné.}{}{4}{}{}
+{15}{[Vous lancez le dé.]}{}{1}{}{-2}{}
+
+{17}{Ai gagné.}{Ai gagné.}{}{5}{}{}
+{18}{E:}{}{1}{}{0}{$$-5}
+
+{20}{Ai perdu [Il vous tend une bouteille]}{Ai perdu [Il vous tend une bouteille]}{}{6}{}{}
+{21}{E:}{}{1}{}{-5}{}

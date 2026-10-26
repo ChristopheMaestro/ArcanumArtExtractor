@@ -1,0 +1,122 @@
+lf0 1 J'ai pas le temps
+lf1 1 Pas intéressé
+lf2 1 Refus après récompense
+lf3 1 refus après comment
+
+{1}{Bien le bonjour, voyageur des Enfers. [L'esprit qui vous parle est translucide et bleuté, sa voix est douce et réconfortante]}{Bien le bonjour, voyageur des Enfers. [L'esprit qui vous parle est translucide et bleuté, sa voix est douce et réconfortante]}{}{}{}{}
+{2}{Qui êtes-vous ?}{}{5}{}{10}{}
+{3}{Vous qui ?}{}{-4}{}{10}{}
+
+{10}{Je suis un esprit du coffre, je me suis retrouvé coincé dans ce coffre par... accident.}{Je suis un esprit du coffre, je me suis retrouvé coincé dans ce coffre par... accident.}{}{}{}{}
+{11}{Ne serait-ce pas plutôt un maléfice ?}{}{10}{}{20}{}
+{12}{Et vous voudriez que je vous en libère c'est bien ça ?}{}{8}{}{30}{}
+{13}{En quoi cela me concerne-t-il ?}{}{5}{}{40}{}
+{14}{Je n'ai pas le temps d'écouter vos histoires.}{}{5}{}{0}{lf0 1, fl 18}
+{15}{Et pourquoi moi d'voir écouter vous ?}{}{-4}{}{40}{}
+{16}{Moi pas l'temps d'parler!}{}{-4}{}{0}{lf0 1, fl 18}
+
+{18}{C'est dommage, cela aurait pu vous rapporter gros... Enfin, revenez me voir si vous changez d'avis.}{C'est dommage, cela aurait pu vous rapporter gros... Enfin, revenez me voir si vous changez d'avis.}{}{}{}{}
+
+{20}{En quelque sorte. Mais appelez-cela comme bon vous plaira... Bien, vous l'aurez surement deviné mais il vous est possible de me sortir de ce coffre, ce que j'apprécierai fortement car je me sens un peu à l'étroit ici.}{En quelque sorte. Mais appelez-cela comme bon vous plaira... Bien, vous l'aurez surement deviné mais il vous est possible de me sortir de ce coffre, ce que j'apprécierai fortement car je me sens un peu à l'étroit ici.}{}{}{}{}
+{21}{Avant de me dire ça, il aurait été plus normal que vous me proposiez une récompense alléchante non ?}{}{5}{}{50}{}
+{22}{Et comment devrais-je m'y prendre ?}{}{5}{}{60}{}
+{23}{Je ne sais pas pourquoi mais je suis persuadé que c'est une mauvaise idée.}{1}{5}{}{70}{}
+{24}{Je ne sais pas pourquoi mais je suis persuadée que c'est une mauvaise idée.}{0}{5}{}{70}{}
+{25}{Je ne suis pas intéressé, merci.}{1}{5}{}{0}{lf1 1, fl 28}
+{26}{Je ne suis pas intéressée, merci.}{0}{5}{}{0}{lf1 1, fl 28}
+
+{28}{C'est dommage, dire que je vous aurais récompensé... Enfin, revenez me voir si vous changez d'avis.}{C'est dommage, dire que je vous aurais récompensée... Enfin, revenez me voir si vous changez d'avis.}{}{}{}{}
+
+{30}{C'est exact. Je me sens un peu à l'étroit là-dedans et un coup de main serait le bienvenu.}{C'est exact. Je me sens un peu à l'étroit là-dedans et un coup de main serait le bienvenu.}{}{}{}{}
+{31}{Bien, je suppose que ce service me rapporterait une récompense alléchante ?}{}{5}{}{50}{}
+{32}{Et comment devrais-je m'y prendre ?}{}{5}{}{60}{}
+{33}{Désolé, mais ce genre d'histoire ne me concerne pas. Au revoir.}{1}{5}{}{0}{lf1 1, fl 28}
+{34}{Désolée, mais ce genre d'histoire ne me concerne pas. Au revoir.}{0}{5}{}{0}{lf1 1, fl 28}
+
+{40}{Eh bien, puisque vous vous trouvez à l'extérieur, il vous serait aisé de me libérer. Je me sens un peu à l'étroit là-dedans et un coup de main serait le bienvenu.}{Eh bien, puisque vous vous trouvez à l'extérieur, il vous serait aisé de me libérer. Je me sens un peu à l'étroit là-dedans et un coup de main serait le bienvenu.}{}{}{}{}
+{41}{Bien, je suppose que ce service me rapporterait une récompense alléchante ?}{}{5}{}{50}{}
+{42}{Et comment devrais-je m'y prendre ?}{}{5}{}{60}{}
+{43}{Désolé, mais ce genre d'histoire ne me concerne pas. Au revoir.}{1}{5}{}{0}{lf1 1, fl 28}
+{44}{Désolée, mais ce genre d'histoire ne me concerne pas. Au revoir.}{0}{5}{}{0}{lf1 1, fl 28}
+{45}{Et moi s'rait récompensé pas vrai ?}{1}{-4}{}{50}{}
+{46}{Et moi s'rait récompensée pas vrai ?}{0}{-4}{}{50}{}
+{47}{Moi d'voir faire quoi pour ça ?}{}{-4}{}{60}{}
+{48}{Moi pas vouloir.}{}{-4}{}{0}{lf1 1, fl 28}
+
+{50}{Bien entendu, vous êtes quand même dans un RPG. Cependant, la récompense n'est nullement une dague impériale de la faucheuse céleste ou un bouclier d'argent d'un clan nain disparu. Il s'agit d'une surprise qui vous plaira... Alors, qu'en dites-vous ?}{Bien entendu, vous êtes quand même dans un RPG. Cependant, la récompense n'est nullement une dague impériale de la faucheuse céleste ou un bouclier d'argent d'un clan nain disparu. Il s'agit d'une surprise qui vous plaira... Alors, qu'en dites-vous ?}{}{}{}{}
+{51}{Que je vous libérerai si vous me dites ce que vous avez réellement fait pour être enfermé là-dedans.}{}{5}{ps 4}{80}{}
+{52}{C'est entendu, dites-moi comment vous libérer.}{}{5}{}{90}{}
+{53}{Je pense que vous mentez et qu'il n'y a jamais eu de récompense.}{}{5}{}{100}{}
+{54}{Je refuse. Cette conversation est finie.}{}{5}{}{0}{lf2 1, fl 59}
+{55}{Bon, moi d'voir vous libérer comment ?}{}{-4}{}{90}{}
+{56}{Non, moi refuser !}{}{-4}{}{0}{lf2 1, fl 59}
+
+{59}{Navrant... Venez me voir si vous changez d'avis, discuter est mon seul passe-temps.}{Navrant... Venez me voir si vous changez d'avis, discuter est mon seul passe-temps.}{}{}{}{}
+
+{60}{De la manière la plus simple qui soit, il vous suffit de briser le cadenas apposé sur le coffre. Bien entendu, en échange de ce service, je vous récompenserai (après tout, nous sommes dans un RPG).}{De la manière la plus simple qui soit, il vous suffit de briser le cadenas apposé sur le coffre. Bien entendu, en échange de ce service, je vous récompenserai (après tout, nous sommes dans un RPG).}{}{}{}{qu1044 1}
+{61}{Quelle est la nature ce cette récompense ?}{}{5}{}{110}{}
+{62}{Bien, je vais le faire. [Vous sortez votre arme et forcez le cadenas]}{}{5}{}{-3}{}
+{63}{Je ne suis pas motivée par ce genre de promesses, débrouillez-vous tout seul !}{0}{5}{}{0}{lf3 1, fl 69}
+{64}{Je ne suis pas motivé par ce genre de promesses, débrouillez-vous tout seul !}{1}{5}{}{0}{lf3 1, fl 69}
+{65}{Ca d'accord, moi l'faire. [Vous sortez votre arme et forcez le cadenas]}{}{-4}{}{-3}{}
+{66}{Moi pas vouloir la faire !}{}{-4}{}{0}{lf3 1, fl 69}
+
+{68}{[Il sourit] Merci beaucoup...}{[Il sourit] Merci beaucoup...}{}{}{}{}
+{69}{Dommage... Enfin, si vous changez d'avis, n'hésitez pas...}{Dommage... Enfin, si vous changez d'avis, n'hésitez pas...}{}{}{}{}
+
+{70}{Tout dépend du point de vue. De manière objective, me faire sortir d'ici n'est pas une "bonne idée" en soi mais, de votre point de vue, ça en devient une. En effet, si vous consentez à m'aider, je vous récompenserai comme il se doit. Alors, cela devient-il intéressant ?}{Tout dépend du point de vue. De manière objective, me faire sortir d'ici n'est pas une "bonne idée" en soi mais, de votre point de vue, ça en devient une. En effet, si vous consentez à m'aider, je vous récompenserai comme il se doit. Alors, cela devient-il intéressant ?}{}{}{}{}
+{71}{Soit : je vous libérerai si vous me dites ce que vous avez réellement fait pour être enfermé là-dedans.}{}{5}{ps 4}{80}{}
+{72}{En effet. Dites-moi comment vous libérer.}{}{5}{}{90}{}
+{73}{Non, car je pense que vous mentez et qu'il n'y aura pas de récompense.}{}{5}{}{100}{}
+{74}{Je refuse. Cette conversation est finie.}{}{5}{}{0}{lf2 1, fl 59}
+
+{80}{Eh bien en fait... j'ai oublié (-.-)" Ça doit bien faire 1300 que je suis ici... (Ou peut-être 3 jours, je ne sais vraiment plus)}{Eh bien en fait... j'ai oublié (-.-)" Ça doit bien faire 1300 que je suis ici... (Ou peut-être 3 jours, je ne sais vraiment plus)}{}{}{}{}
+{81}{Bref... Comment-suis-je censé m'y prendre pour vous délivrer ?}{}{5}{}{90}{}
+{82}{N'importe quoi ! Je ne compte pas vous aider dans ces conditions.}{}{5}{}{0}{lf2 1, fl 59}
+
+{90}{C'est fort simple : il vous suffit de briser le cadenas apposé sur le coffre.}{}{}{}{}{}
+{91}{Bien, alors je vais le faire. [Vous sortez votre arme et forcez le cadenas]}{}{5}{}{-3}{}
+{92}{Ca d'accord, moi l'faire. [Vous sortez votre arme et forcez le cadenas]}{}{-4}{}{-3}{}
+{93}{C'est simple mais, en fait... je ne pense pas le faire...}{}{5}{}{0}{lf3 1, fl 98}
+{94}{Bah, moi veux pas en fait !}{}{-4}{}{0}{lf3 1, fl 98}
+
+{98}{Flûte alors... Bon, si vous changez d'avis, je serai là.}{Flûte alors... Bon, si vous changez d'avis, je serai là.}{}{}{}{}
+
+{100}{Je suis un esprit de parole vous savez. Enfin, le choix vous appartient. Voulez-vous m'aider ?}{Je suis un esprit de parole vous savez. Enfin, le choix vous appartient. Voulez-vous m'aider ?}{}{}{}{}
+{101}{Dites-moi d'abord comment devrais-je m'y prendre ?}{}{5}{}{90}{}
+{102}{Non, je refuse.}{}{5}{}{0}{lf2 1, fl 59}
+
+{110}{Secret professionnel <3}{Secret professionnel <3}{}{}{}{}
+{111}{Bon... Je vais essayer. [Vous brisez le cadenas du coffre]}{}{5}{}{-3}{}
+{112}{Aucun intérêt. Je pars...}{0}{5}{}{0}{lf3 1, fl 69}
+
+{120}{Tiens, vous êtes revenu ? Auriez-vous trouvé le temps de venir me parler ?}{Tiens, vous êtes revenu ? Auriez-vous trouvé le temps de venir me parler ?}{}{}{}{}
+{121}{Trêve de bavardage! Vous voulez que je vous libère pas vrai ?}{}{8}{}{30}{lf0 0}
+{122}{Ne pardons pas plus de temps, qu'est-ce que vous me voulez ?}{}{5}{}{40}{lf0 0}
+{123}{Non, je pars.}{}{5}{}{0}{fl 140}
+{124}{Vous me dire quoi me vouloir ?}{}{-4}{}{40}{lf0 0}
+{125}{Nan, moi r'partir.}{}{-4}{}{0}{fl 140}
+
+{130}{Tiens, quelle bonne surprise de vous revoir. Voulez-vous finalement m'aider à sortir ?}{Tiens, quelle bonne surprise de vous revoir. Voulez-vous finalement m'aider à sortir ?}{}{}{}{}
+{131}{Eh bien, j'y serais disposée s'il y avait en échange une récompense.}{0}{5}{}{50}{lf1 0}
+{132}{Eh bien, j'y serais disposé s'il y avait en échange une récompense.}{1}{5}{}{50}{lf1 0}
+{133}{Possible. Comment serais-je censé m'y prendre si j'acceptais ?}{}{5}{}{60}{lf1 0}
+{134}{Absolument pas...}{}{5}{}{0}{fl 140}
+{135}{Ouais, si moi récompensée.}{1}{-4}{}{50}{lf1 0}
+{136}{Ouais, si moi récompensé.}{1}{-4}{}{50}{lf1 0}
+{137}{P'têt. Quoi moi faire pour sortir ?}{}{-4}{}{60}{lf1 0}
+{138}{Nan, t'jours pas.}{}{-4}{}{0}{fl 140}
+
+{140}{Bien, j'attendrai ici le temps qu'il faudra...}{Bien, j'attendrai ici le temps qu'il faudra...}{}{}{}{}
+
+{150}{Tiens, quelle bonne surprise de vous revoir. Voulez-vous finalement m'aider à sortir ?}{Tiens, quelle bonne surprise de vous revoir. Voulez-vous finalement m'aider à sortir ?}{}{}{}{}
+{151}{Possible, dites-moi comment vous libérer.}{}{5}{}{90}{lf2 0}
+{152}{Toujours pas non.}{}{5}{}{0}{fl 140}
+{153}{P'têt, moi devrait libérer vous comment ?}{}{-4}{}{90}{lf2 0}
+{154}{Non, non, non !}{}{-4}{}{0}{fl 140}
+
+{160}{Tiens, quelle bonne surprise de vous revoir. Voulez-vous finalement m'aider à sortir ?}{Tiens, quelle bonne surprise de vous revoir. Voulez-vous finalement m'aider à sortir ?}{}{}{}{}
+{161}{Oui. [Vous sortez votre arme et forcez le cadenas]}{}{5}{}{-3}{}
+{162}{Ouais. [Vous sortez votre arme et forcez le cadenas]}{}{-4}{}{-3}{}
+{163}{Non, absolument pas.}{}{5}{}{0}{fl 140}
+{164}{Nan !}{}{-4}{}{0}{fl 140}

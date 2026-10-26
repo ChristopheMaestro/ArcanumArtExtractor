@@ -60,8 +60,8 @@ from arcanum_objects import clean_map                             # noqa: E402  
 DATA_JS = ao.DATA_JS                   # the generated data the pages load
 MAPS = ROOT / 'data' / 'maps'
 MODULES = ROOT / 'data' / 'modules'            # the maps of the modules: one folder each, drawn like the game's own maps (--modules)
-MAIN_MAP = {'Vormantown': 'maps/Multiplayer-Map', 'Bourrin': 'maps/bourin', 'Buried Secrets': 'maps/MainMap', 'Dusty Dunes': 'maps/Dusty Dunes', 'Hellgate': 'maps/Main', 'Hell Day': 'maps/Main', 'Arcanum City': 'maps/Island Arcanum-City', 'Addon01': 'maps/village01', 'Lost Dungeon of Souls': 'maps/MainMap'}               # (same as build_modules.MAIN_MAP) a full module's map folder
-ALL_MAPS = ('MuHu', 'Deathmatch', 'Time', 'Woodmir Race', 'Affaire', 'Livre Ombres', 'Mystere', 'Naufrageur', 'Resident Eval', 'Secret', 'Tombeau', 'Tresor', 'Vallee', 'Battlearena', 'Deep15', 'Delirium of Evil', 'Doomsday', 'Dungeon of Quests', 'Escape Tarant', 'Grayhills', 'Terror', 'The Killer Inside', 'Virgil the Pervert', 'WhiteSands', 'Dolores 0.25')                                         # (same as build_modules.ALL_MAPS) modules shown as one map per maps/<name> folder, "<module> - <name>"
+MAIN_MAP = {'Vormantown': 'maps/Multiplayer-Map', 'Bourrin': 'maps/bourin', 'Buried Secrets': 'maps/MainMap', 'Dusty Dunes': 'maps/Dusty Dunes', 'Hellgate': 'maps/Main', 'Hell Day': 'maps/Main', 'Arcanum City': 'maps/Island Arcanum-City', 'Addon01': 'maps/village01', 'Lost Dungeon of Souls': 'maps/MainMap', 'UltimateArcanum': 'maps/Main', 'Dungeon Crawl 1': 'maps/start', 'Holliae': 'maps/Ile_principale'}               # (same as build_modules.MAIN_MAP) a full module's map folder
+ALL_MAPS = ('MuHu', 'Deathmatch', 'Time', 'Woodmir Race', 'Affaire', 'Livre Ombres', 'Mystere', 'Naufrageur', 'Resident Eval', 'Secret', 'Tombeau', 'Tresor', 'Vallee', 'Battlearena', 'Deep15', 'Delirium of Evil', 'Doomsday', 'Dungeon of Quests', 'Escape Tarant', 'Grayhills', 'Terror', 'The Killer Inside', 'Virgil the Pervert', 'WhiteSands', 'Dolores 0.25', 'CrossRoad 2.1')                                         # (same as build_modules.ALL_MAPS) modules shown as one map per maps/<name> folder, "<module> - <name>"
 MODULE_MAP = {}                                                  # a module map's id -> its folder under MODULES
 for _d in (sorted(MODULES.iterdir()) if MODULES.is_dir() else []):
     if not _d.is_dir():
@@ -76,6 +76,7 @@ MODULE_NAMES = sorted(MODULE_MAP)
 OUT = ROOT / 'atlas' / 'maps'                                   # the game's maps
 OUT_WORLD = ROOT / 'atlas' / 'world'                             # the world map (its own rules)
 OUT_TERRAIN = ROOT / 'atlas' / 'terrain'                         # one picture per terrain template (data/terrain), shared by every map whose terrain.tdf uses it
+TERRAIN_SRC = ROOT / 'data' / 'terrain'                          # where the templates are (a standalone version's own: mod_pictures.Mod.patch_renderer; its pictures then go to <its atlas folder>/terrain)
 OUT_MODULES = ROOT / 'atlas' / 'modules'                         # the modules' maps
 BLANK_SEC_MD5 = ('abf3ae75', 'f23dbda2')                          # the editor's two empty sector templates (Blk tile everywhere, nothing else): prune_blank_sectors.py
 
@@ -136,6 +137,16 @@ def base_of(folder):
     return MODULES / MODULE_MAP[folder] if folder in MODULE_MAP else MAPS / folder
 
 
+def map_props(folder):
+    """map.prp (map.c MapProperties: int base terrain, int pad, int64 width, int64 height, in tiles): (base terrain id, width, height in sectors), or None."""
+    for name in ('map.prp', 'MAP.PRP'):
+        p = base_of(folder) / name
+        if p.is_file() and p.stat().st_size >= 24:
+            base, _, w, h = struct.unpack_from('<iiqq', p.read_bytes(), 0)
+            return base, w // 64, h // 64
+    return None
+
+
 def terrain_size(folder):
     """(width, height) in sectors of a map's terrain.tdf, or None: no such file, or a 1 x 1 grid (the interiors' stubs)."""
     for name in ('terrain.tdf', 'TERRAIN.TDF'):
@@ -156,8 +167,8 @@ def blocked_terrains():
 
 
 def rel_of(folder):
-    """The map folder as the page reads it under /data/maps/ (a module's is reached from there)."""
-    return ('../modules/' + MODULE_MAP[folder]) if folder in MODULE_MAP else folder
+    """The map folder as the page reads it: a path under data/ (js/core/config.js SEC_ROOT; a module's is reached from maps/)."""
+    return 'maps/' + (('../modules/' + MODULE_MAP[folder]) if folder in MODULE_MAP else folder)
 
 
 class Dest:
@@ -194,6 +205,15 @@ def map_light_scheme(folder):
     return 1
 
 
+def rules_of(folder):
+    """A module's own Rules folder as the page reads it under data/ (its Lighting Schemes.mes numbers the light schemes its own way: Dungeon
+    Crawl 1 has Dungeon as 1 and Default as 2), or None: the game's."""
+    if folder not in MODULE_MAP:
+        return None
+    rules = Path('modules') / MODULE_MAP[folder].split('/')[0] / 'Rules'
+    return rules.as_posix() if (ROOT / 'data' / rules).is_dir() else None
+
+
 PAGE = r'''<!doctype html><html><head><meta charset="utf-8"><title>Atlas map pictures</title></head><body><script type="module">
 (async () => {
   try {
@@ -222,15 +242,30 @@ PAGE = r'''<!doctype html><html><head><meta charset="utf-8"><title>Atlas map pic
         else if (String(info?.name || '').trim().toUpperCase() !== 'BLK') console.warn('[PICTURES] tile art missing', where, raw);
       }));
     }
-    // the 24 hours of a light scheme (Rules/<name>.mes, light_scheme.c)
-    async function scheme(id) {
-      if (!schemeList) schemeList = parseMesText(await (await fetch('/data/Rules/' + encodeURIComponent('Lighting Schemes.mes'))).text());
-      if (!schemeCache.has(id)) {
-        const name = (schemeList.get(id) || schemeList.get(1)).trim();
-        const r = await fetch('/data/Rules/' + encodeURIComponent(name + '.mes'));
-        schemeCache.set(id, { name, table: L.parseLightSchemeText(await r.text()) });
+    // the 24 hours of a light scheme (Rules/<name>.mes, light_scheme.c). A module's own Rules folder comes first (job.rules, e.g.
+    // "modules/Dungeon Crawl 1/Rules": its Lighting Schemes.mes can number the schemes differently, and add or change scheme files),
+    // then the game's.
+    const schemeLists = new Map();
+    async function schemeFile(rules, file) {
+      for (const dir of rules ? [rules, 'Rules'] : ['Rules']) {
+        const r = await fetch('/data/' + enc(dir) + '/' + encodeURIComponent(file));
+        if (r.ok) return r;
       }
-      return schemeCache.get(id);
+      return null;
+    }
+    async function scheme(id, rules) {
+      rules = rules || '';
+      if (!schemeLists.has(rules)) {                        // (the 2000 beta calls the list LightingSchemes.mes)
+        const lr = (await schemeFile(rules, 'Lighting Schemes.mes')) || (await schemeFile(rules, 'LightingSchemes.mes'));
+        schemeLists.set(rules, parseMesText(await lr.text()));
+      }
+      const list = schemeLists.get(rules), key = rules + '|' + id;
+      if (!schemeCache.has(key)) {
+        const name = (list.get(id) || list.get(1)).trim();
+        const r = await schemeFile(rules, name + '.mes');
+        schemeCache.set(key, { name, table: L.parseLightSchemeText(await r.text()) });
+      }
+      return schemeCache.get(key);
     }
     function mobsOf(job) {
       if (!job.mobs) return Promise.resolve([]);
@@ -369,7 +404,7 @@ PAGE = r'''<!doctype html><html><head><meta charset="utf-8"><title>Atlas map pic
       }
       const lightStats = await L.ensureSecLightArt(nine, around);
       const own = center.decoded.sectorInfo?.lightScheme | 0;
-      const sch = await scheme(own > 0 ? own : job.mapScheme);
+      const sch = await scheme(own > 0 ? own : job.mapScheme, job.rules);
       const ambient = sch.table[job.hour];
 
       // with --light: the game's light (game/light.c via js/sec/sec-lighting.js)
@@ -421,14 +456,18 @@ PAGE = r'''<!doctype html><html><head><meta charset="utf-8"><title>Atlas map pic
       const [x, y] = job.at;
       const center = await readSector(job.url, job.file, { x, y });
       const diag = { decodeFailures: [], locationFailures: [], staticObjectCount: 0, staticObjectTypeCounts: {}, wallLoaded: 0 };
-      const all = (await loadSecStaticObjectPoints([center], diag)).concat((await mobsOf(job)).filter(o => o.sectorX === x && o.sectorY === y));
+      // job.extra: the neighbouring sectors that hold an object a waypoint / sign pick names (a door two tiles from the mark, across a sector's edge)
+      const extras = await Promise.all((job.extra || []).map(e => readSector(e.url, e.file, { x: e.at[0], y: e.at[1] }).then(s => ({ s, at: e.at }))));
+      const inSecs = o => (o.sectorX === x && o.sectorY === y) || extras.some(e => o.sectorX === e.at[0] && o.sectorY === e.at[1]);
+      const all = (await loadSecStaticObjectPoints([center, ...extras.map(e => e.s)], diag)).concat((await mobsOf(job)).filter(inSecs));
+      const mine = o => o.sectorX === x && o.sectorY === y;       // (the tiles of job.tiles are this sector's)
       // job.tiles: [tile x, tile y, kinds]; per kind only what it is about: n people / creatures, c containers, i items on the floor,
       // s signs and w waypoints (the objects job.pick names: tiers, the first that draws anything is the one)
       // One glow per object (n, c, i: each object of the tile; s: each piece job.pick names under "each"); w keeps its tiers.
       // group: {tx, ty, g, tiers: [[objects]], ids: the first object id of each tier}; the result says which tier drew (its id).
       const groups = new Map();
       for (const [tx, ty, kinds] of job.tiles) {
-        const here = all.filter(o => o.tileX === tx && o.tileY === ty);
+        const here = all.filter(o => mine(o) && o.tileX === tx && o.tileY === ty);
         for (const g of kinds) {
           if (g === 'n' || g === 'c' || g === 'i') {
             const sel = g === 'n' ? here.filter(o => o.type === 15 || o.type === 16) : g === 'c' ? here.filter(o => o.type === 2) : here.filter(o => o.type >= 5 && o.type <= 14);
@@ -453,7 +492,8 @@ PAGE = r'''<!doctype html><html><head><meta charset="utf-8"><title>Atlas map pic
         let used = -1;
         const px = 40 * (Y - X) + 2560 + job.pad.l, py = 20 * (X + Y) + 20 + job.pad.t;     // the tile's centre in the sector picture
         const ox = job.pad.l + one.x - mid.x - px + CX, oy = job.pad.t + one.y - mid.y - py + CY;
-        const view = { zoom: 1, offsetX: ox, offsetY: oy, loadedSectors: new Set([`${x},${y}`]), sectorMap: new Map([[`${x},${y}`, center]]) };
+        const view = { zoom: 1, offsetX: ox, offsetY: oy, loadedSectors: new Set([`${x},${y}`, ...extras.map(e => e.at.join(','))]),
+          sectorMap: new Map([[`${x},${y}`, center], ...extras.map(e => [e.at.join(','), e.s])]) };
         let x0 = SW, y0 = SH, x1 = -1, y1 = -1;
         for (let ti = 0; ti < tiers.length; ti++) {
           const objs = tiers[ti];
@@ -596,7 +636,8 @@ class MapJob:
             by_xy[sector_xy(p)] = p
         self.by_xy = by_xy
         self.scheme = map_light_scheme(folder)
-        mobs = [p.relative_to(base).as_posix() for p in sorted(base.rglob('*.mob'))]
+        self.rules = rules_of(folder)
+        mobs =[p.relative_to(base).as_posix() for p in sorted(base.rglob('*.mob'))]
         # the page reads .mob files under /data/maps/: a module's folder is reached from there
         self.mobs = {'key': folder, 'dir': ('../modules/' + MODULE_MAP[folder]) if folder in MODULE_MAP else folder, 'files': mobs} if mobs else None
         self._base, self._mob_xy, self._filler = base, None, {}
@@ -790,6 +831,12 @@ def draw_map(mj, args, signature, run, state, errors):
         secs = pick(secs, args.limit)
     partial = bool(args.limit or args.around)
     print(f'\n== {mj.key}: {len(secs)} sectors, light scheme {mj.scheme}' + (' (+ terrain)' if world else ''))
+    # what the map's own files say: map.prp (size, base terrain), terrain.tdf (the grid), the module's lighting rules (its Rules/Lighting Schemes.mes)
+    prp, tsize = map_props(mj.folder), terrain_size(mj.folder)
+    print(f'   map.prp: {"none" if not prp else f"{prp[1]} x {prp[2]} sectors, base terrain {prp[0]}"}; terrain.tdf: {"none (or a 1 x 1 stub)" if not tsize else f"{tsize[0]} x {tsize[1]} sectors"}; '
+          f'light rules: {getattr(mj, "rules", None) or "the game\'s"}')
+    if prp and tsize and (prp[1], prp[2]) != tsize:
+        print(f'   WARNING map.prp ({prp[1]} x {prp[2]}) and terrain.tdf ({tsize[0]} x {tsize[1]}) disagree on the map size: check which one the game uses')
     jobs = [('sec', xy, p) for xy, p in secs]
 
     # Terrain: a sector without a .sec of its own is the template its terrain.tdf names (as in the game). The templates'
@@ -817,6 +864,10 @@ def draw_map(mj, args, signature, run, state, errors):
     if terrain:
         bounds = grid_bounds
         T = terrain_dest(signature, args.force)
+        if TERRAIN_SRC != ROOT / 'data' / 'terrain':             # a standalone version has the templates its own folder has (not every one its terrain.tdf names): the others are empty ground
+            have = [i for i in tpls if (TERRAIN_SRC / terrain['templates'][i]['folder'] / f'{terrain["templates"][i]["file"]}.sec').is_file()]
+            print(f'   terrain templates of its own folder: {len(have)} of the {len(tpls)} its terrain.tdf names')
+            tpls = have
         if args.no_terrain:                                      # a test: keep the terrain pictures already made
             tpls = [i for i in tpls if tpl_stem(terrain['templates'][i]) in T.kept]
         if args.only_templates:                                  # a test: only the templates whose folder name has this in it
@@ -844,7 +895,7 @@ def draw_map(mj, args, signature, run, state, errors):
         if kind == 'tpl':
             tp = terrain['templates'][ref]
             stem = tpl_stem(tp)
-            src = ROOT / 'data' / 'terrain' / tp['folder'] / f'{tp["file"]}.sec'
+            src = TERRAIN_SRC / tp['folder'] / f'{tp["file"]}.sec'
             job = {'url': url_of(src), 'file': src.name, 'at': [0, 0], 'neighbours': [], 'mobs': None,
                    'wrap': ' to ' not in tp['folder'].lower()}    # (a transition template is not seamless with itself: wrapped, the far edge's other terrain shows in the band)
             what = f'terrain/{tp["path"]}'
@@ -859,7 +910,7 @@ def draw_map(mj, args, signature, run, state, errors):
             except ValueError:                                   # a sector read from a copy elsewhere (reports/sec-view)
                 what = f'{mj.folder}/{path.name}'
         # (a template is one picture for every map: it is always drawn with the world's light scheme)
-        job.update(mapScheme=map_light_scheme(WORLD) if kind == 'tpl' else mj.scheme, light=args.light, hour=args.hour, doors=args.doors, pad=PAD, size=[IMG_W, IMG_H], quality=QUALITY)
+        job.update(mapScheme=map_light_scheme(WORLD) if kind == 'tpl' else mj.scheme, rules=None if kind == 'tpl' else mj.rules, light=args.light, hour=args.hour, doors=args.doors, pad=PAD, size=[IMG_W, IMG_H], quality=QUALITY)
         state['what'] = what
         objects = stem in d.with_objects or (kind == 'sec' and mj.has_objects(ref, path))
         if stem in d.kept_black and not objects:
@@ -1072,6 +1123,7 @@ DOORLIKE = re.compile(r'door|gate|entrance|exit|stair|ladder|hatch|passage|manho
 
 
 _IMAGE_SCRIPTS = {}            # the base game's picture scripts (build_notices.read_images), read once
+PICK_SECTOR = {}               # object id -> its sector, of the last glow_picks (a pick can name an object across a sector's edge)
 
 
 def glow_picks(folder, by_sec, marks):
@@ -1101,10 +1153,12 @@ def glow_picks(folder, by_sec, marks):
     desc = ao.descriptions()
     base = base_of(folder)
     recs = []                                                    # one per portal / container / scenery in a sector with a mark
-    sectors = {(X >> 6, Y >> 6) for X, Y in want}
+    # (and the sectors next to them: a door 2 tiles from the mark can stand on the other side of a sector's edge)
+    sectors = {((X >> 6) + dx, (Y >> 6) + dy) for X, Y in want for dx in (-1, 0, 1) for dy in (-1, 0, 1)}
     def rec(o, ident):
         if o.type not in (1, 2, 3, *bw.PEOPLE) or not o.tile:        # (a person: only as a waypoint, the one whose script moves the player)
             return
+        PICK_SECTOR[ident] = (o.tile[0] >> 6, o.tile[1] >> 6)
         scripts = set(bw.scripts_of(o))
         own = (desc.get(o.get(23)) or '').strip() if o.get(23) else ''
         recs.append({'id': ident, 'type': o.type, 'x': o.tile[0], 'y': o.tile[1], 'scripts': scripts,
@@ -1254,8 +1308,11 @@ def draw_glows(folders, run, state, errors, only_kinds='', marks=None, glow_js=G
             if not path:
                 continue
             state['what'] = f'{mj.folder}/{path.name} glows'
-            job = {'url': url_of(path), 'file': path.name, 'at': list(xy), 'mobs': mj.mobs, 'tiles': local, 'pad': PAD,
-                   'pick': {k: v for k, v in picks.items() if (int(k.split(',')[0]) >> 6, int(k.split(',')[1]) >> 6) == xy}}
+            pick = {k: v for k, v in picks.items() if (int(k.split(',')[0]) >> 6, int(k.split(',')[1]) >> 6) == xy}
+            named = {i for v in pick.values() for tier in (v['each'] if isinstance(v, dict) else v) for i in tier}
+            nbrs = {PICK_SECTOR[i] for i in named if i in PICK_SECTOR} - {xy}
+            job = {'url': url_of(path), 'file': path.name, 'at': list(xy), 'mobs': mj.mobs, 'tiles': local, 'pad': PAD, 'pick': pick,
+                   'extra': [{'url': url_of(mj.by_xy[s]), 'file': mj.by_xy[s].name, 'at': list(s)} for s in sorted(nbrs) if s in mj.by_xy]}
             try:
                 res = run('(job) => window.__pictures.shapes(job)', job)
             except Exception as e:
@@ -1270,7 +1327,7 @@ def draw_glows(folders, run, state, errors, only_kinds='', marks=None, glow_js=G
                 shapes[key] = dims
                 if '#object' in r['id'] and protos is None:       # a static object: its prototype stands for it
                     import arcanum_objects as ao
-                    protos = {path.name: {i: o.proto for i, o in enumerate(ao.sec_objects(path))}}
+                    protos = {p.name: {i: o.proto for i, o in enumerate(ao.sec_objects(p))} for p in [path] + [mj.by_xy[s] for s in nbrs if s in mj.by_xy]}
                 X, Y = xy[0] * 64 + r['tile'][0], xy[1] * 64 + r['tile'][1]
                 at.setdefault(mj.key, {}).setdefault(f'{X},{Y}', {}).setdefault(r['g'], []).append([key, r['x'] - m, r['y'] - m, oid_of(r['id'], protos or {})] + ([title_of[r['id']]] if r['g'] == 's' and r['id'] in title_of else []))
                 found += 1

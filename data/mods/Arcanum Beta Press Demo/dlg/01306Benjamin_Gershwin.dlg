@@ -1,0 +1,107 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Hello, sir.  Might I ask who you are?}{}{5}{lf1 0, re 41}{27}{lf1 1}
+{3}{Good to see you, Benjamin.  Might I speak with a moment?}{}{5}{lf1 1, re 41}{63}{}
+{4}{Excuse me!  That's not way to speak before we've met!}{}{5}{lf1 0, re -40}{11}{lf1 1}
+{5}{Benjamin?  What seems to have you so upset?}{}{5}{lf1 1, re -40}{11}{}
+{6}{E:}{}{5}{}{0}{}
+{7}{Uh...who you be?}{}{-4}{lf1 0}{27}{lf1 1}
+{8}{Benji!  I got questions!}{}{-4}{lf1 1}{63}{}
+{9}{E:}{}{-4}{}{0}{}
+{11}{Forgive me for saying so, sir, but you've put me bad spirits.  Perhaps you'd better just leave...}{Forgive me for saying so, sir, but you've put me bad spirits.  Perhaps you'd better just leave...}{}{}{}{}
+{12}{I'm sorry...but perhaps you need look a little closer, sir...}{}{5}{ch 10}{20}{}
+{13}{Sir...let's try fo find some common ground, here...}{}{5}{}{24}{re +20}
+{14}{You're going to be even more upset if you keep mouthing off...}{}{5}{}{16}{re -5}
+{15}{E:}{}{5}{}{0}{}
+{16}{Oh really?  I'm not sure I appreciate your threats, stranger.  I'm no spring chicken, but I can still mix it up when the need arises...}{Oh really?  I'm not sure I appreciate your threats, stranger.  I'm no spring chicken, but I can still mix it up when the need arises...}{}{}{}{}
+{17}{I'm not here to start trouble.  Perhaps we can reconcile...?}{}{5}{}{24}{re +15}
+{18}{Let's find out, old man...}{}{5}{}{}{co, fl 23}
+{19}{E:}{}{5}{}{0}{}
+{20}{Hmmm?  Oh, yes!  Of, course!  Far be it from me to not say when I'm mistaken!  You're obviously an individual of outstanding character!  So sorry!}{Hmmm?  Oh, yes!  Of, course!  Far be it from me to not say when I'm mistaken!  You're obviously an individual of outstanding character!  So sorry!}{}{}{}{}
+{21}{It's forgotten.  Might I ask who you are, sir?}{}{5}{}{27}{}
+{22}{Its in the past, Benjamin.  Might I have a moment with you?}{}{5}{}{63}{}
+{23}{Fine!   And, for you, a hard-learned lesson!}{Fine!   And, for you, a hard-learned lesson!}{}{}{}{}
+{24}{Of course, of course...forgive me, sir.  You'd think that being a scientist would give a man control over his tongue, and his reason.  Well met!  I am Benjamin Gershwin, doctor of Phrenology.  How can I be of service?}{Of course, of course...forgive me, sir.  You'd think that being a scientist would give a man control over his tongue, and his reason.  Well met!  I am Benjamin Gershwin, doctor of Phrenology.  How can I be of service?}{}{}{}{}
+{25}{And you, sir.  What are you doing out here on the street?}{}{5}{}{33}{re +5}
+{26}{E:}{}{5}{}{0}{}
+{27}{I am Benjamin Gershwin, doctor of Phrenology.  How can I be of service?}{I am Benjamin Gershwin, doctor of Phrenology.  How can I be of service?}{}{}{}{}
+{28}{Nice to meet you, Benjamin.  Did you say phrenology?}{}{5}{}{33}{}
+{29}{E:}{}{5}{}{0}{}
+{30}{Hi!  What is f-r-enn-n-o-lo-je-e-?}{}{-4}{}{33}{}
+{31}{E:}{}{-4}{}{0}{}
+{33}{Phrenology?  It's a science of the head!  You see, every man and womans head is characterized by different bumps and ridges.  Through studying these, I attempt to extrapolate the personality of the individual involved.   Its dreadfully interesting, and phenomenally accurate...}{Phrenology?  It's a science of the head!  You see, every man and womans head is characterized by different bumps and ridges.  Through studying these, I attempt to extrapolate the personality of the individual involved.   Its dreadfully interesting, and phenomenally accurate...}{}{}{}{}
+{34}{Hmmm.  Will you read MY head?}{}{5}{}{85}{}
+{35}{What are you currently working on?}{}{5}{}{39}{}
+{36}{Uh...feel MY head!}{}{-4}{}{85}{}
+{37}{What you working on now? }{}{-4}{}{39}{}
+{39}{Its interesting that you ask...I'm about to start studying the skulls of the Jin and Xin, the famous Ren'ar siamese twins!  They were elvish debutantes who lived around 60 years ago, joined at the hip their whole lives.  Scandalous characters as well...stories of their exploits still float around the elite Tarantian social circles...}{Its interesting that you ask...I'm about to start studying the skulls of the Jin and Xin, the famous Ren'ar siamese twins!  They were elvish debutantes who lived around 60 years ago, joined at the hip their whole lives.  Scandalous characters as well...stories of their exploits still float around the elite Tarantian social circles...}{}{}{}{}
+{40}{Sounds intriguing.  Could I see the skulls?}{}{5}{}{45}{re +5}
+{41}{Well.  Every man his hobbies.  I leave you to yours...}{}{5}{}{0}{re -5}
+{42}{I wanna see skulls!}{}{-4}{}{45}{re +5}
+{43}{That sounds boring.  Buh-bye!}{}{-4}{}{0}{re -5}
+{45}{Well, that's going to be a bit of a problem...perhaps you'd could help me with it?  The skulls were on display at H.T. Parnell's for years, but he recently donated them to sceince, and they were sent to the Zoological Society for cleaning...could you pick them up?  Just talk to the man at the front desk.   I'll pay you 75 gold pieces for your trouble...}{Well, that's going to be a bit of a problem...perhaps you'd could help me with it?  The skulls were on display at H.T. Parnell's for years, but he recently donated them to sceince, and they were sent to the Zoological Society for cleaning...could you pick them up?  Just talk to the man at the front desk.   I'll pay you 75 gold pieces for your trouble...}{}{}{}{qu1069 1}
+{46}{Sure.  I'll do so and return...}{}{5}{}{53}{qu1069 2}
+{47}{I'll think about it.  Good day to you...}{}{5}{}{0}{}
+{48}{I've already got them...}{}{5}{in 5629, in 5630}{79}{}
+{49}{Yeah!  I pick up skulls!}{}{-4}{}{53}{qu1069 2}
+{50}{Mebbe.  I come back later.}{}{-4}{}{0}{}
+{51}{I already got 'em!}{}{-4}{in 5629, in 5630}{79}{}
+{53}{Thank you so much.  The information in these skulls might very well unlock the final phrenological secrets...help us to gain insight into the workings of the human mind!}{Thank you so much.  The information in these skulls might very well unlock the final phrenological secrets...help us to gain insight into the workings of the human mind!}{}{}{}{}
+{54}{I'm sure they will.  Good bye...}{}{5}{}{0}{}
+{55}{E:}{}{-4}{}{0}{}
+{63}{Of course...}{Of course...}{}{}{}{}
+{64}{What is it you do here, Benjamin...?}{}{5}{qu1069 0, ni 5629, ni 5630}{33}{}
+{65}{I might be able to pick up those skulls for you...}{}{5}{qu1069 1, ni 5629, ni 5630}{53}{}
+{66}{I've yet to pick up the skulls...}{}{5}{qu1069 2, ni 5629, ni 5630}{75}{}
+{67}{I picked up the skulls...[You give them to him.]}{}{5}{qu1069 2, in 5629, in 5630}{79}{in 5629, in 5630}
+{68}{E:}{}{5}{}{0}{}
+{69}{What you do here, Benji?}{}{-4}{qu1069 0, ni 5629, ni 5630}{33}{}
+{70}{Mebbe I get skulls for you?}{}{-4}{qu1069 1, ni 5629, ni 5630}{53}{}
+{71}{I still get to pick up skulls!}{}{-4}{qu1069 2, ni 5629, ni 5630}{75}{}
+{72}{I got skulls...[You give it to him.]}{}{-4}{qu1069 2, in 5629, in 5630}{79}{in 5629, in 5630}
+{73}{E:}{}{-4}{}{0}{}
+{75}{Hurry!  The sooner I see them, the sooner we can see what secrets they hold!}{Hurry!  The sooner I see them, the sooner we can see what secrets they hold!}{}{}{}{}
+{76}{E:}{}{5}{}{0}{}
+{77}{E:}{}{-4}{}{0}{}
+{79}{Splendid!  Here's your payment.  I'm going to commence my research right away!  Thank you so much for your help...}{Splendid!  Here's your payment.  I'm going to commence my research right away!  Thank you so much for your help...}{}{}{}{$$75, qu1069 4}
+{80}{E:}{}{5}{}{0}{lf2 1}
+{81}{E:}{}{-4}{}{0}{lf2 1}
+{83}{You've done phrenology, and the world, a great service!  Thank you once again!}{You've done phrenology, and the world, a great service!  Thank you once again!}{}{}{}{}
+{85}{Surely!  Here, if you'll just lower your head, and turn to the right...}{Surely!  Here, if you'll just lower your head, and turn to the right...}{}{}{}{}
+{86}{[Do so.]}{}{1}{ra 1}{95}{}
+{87}{[Do so.]}{}{1}{ra 2}{99}{}
+{88}{[Do so.]}{}{1}{ra 3}{103}{}
+{89}{[Do so.]}{}{1}{ra 4}{107}{}
+{90}{[Do so.]}{}{1}{ra 5}{111}{}
+{91}{[Do so.]}{}{1}{ra 6}{115}{}
+{92}{[Do so.]}{}{1}{ra 7}{119}{}
+{93}{[Do so.]}{}{1}{ra 8}{123}{}
+{95}{Ah...oh!  Quite interesting!  I would surmise, unquestionably, that you are indeed a human!}{Ah...oh!  Quite interesting!  I would surmise, unquestionably, that you are indeed a human!}{}{}{}{}
+{96}{You're powers amaze me, Benjamin...}{}{5}{}{127}{}
+{97}{Uh...yeah!  You right!  You smart!}{}{-4}{}{127}{}
+{99}{Ah...oh!  Quite interesting!  I would surmise, unquestionably, that you are indeed a dwarf!}{Ah...oh!  Quite interesting!  I would surmise, unquestionably, that you are indeed a dwarf!}{}{}{}{}
+{100}{You're powers amaze me, Benjamin...}{}{5}{}{127}{}
+{101}{Uh...yeah!  You right!  You smart!}{}{-4}{}{127}{}
+{103}{Ah...oh!  Quite interesting!  I would surmise, unquestionably, that you are indeed an elf!}{Ah...oh!  Quite interesting!  I would surmise, unquestionably, that you are indeed an elf!}{}{}{}{}
+{104}{You're powers amaze me, Benjamin...}{}{5}{}{127}{}
+{105}{Uh...yeah!  You right!  You smart!}{}{-4}{}{127}{}
+{107}{Ah...oh!  Quite interesting!  I would surmise, unquestionably, that you are indeed a half-elf!}{Ah...oh!  Quite interesting!  I would surmise, unquestionably, that you are indeed a half-elf!}{}{}{}{}
+{108}{You're powers amaze me, Benjamin...}{}{5}{}{127}{}
+{109}{Uh...yeah!  You right!  You smart!}{}{-4}{}{127}{}
+{111}{Ah...oh!  Quite interesting!  I would surmise, unquestionably, that you are indeed a gnome!}{Ah...oh!  Quite interesting!  I would surmise, unquestionably, that you are indeed a gnome!}{}{}{}{}
+{112}{You're powers amaze me, Benjamin...}{}{5}{}{127}{}
+{113}{Uh...yeah!  You right!  You smart!}{}{-4}{}{127}{}
+{115}{Ah...oh!  Quite interesting!  I would surmise, unquestionably, that you are indeed a halfling!}{Ah...oh!  Quite interesting!  I would surmise, unquestionably, that you are indeed a halfling!}{}{}{}{}
+{116}{You're powers amaze me, Benjamin...}{}{5}{}{127}{}
+{117}{Uh...yeah!  You right!  You smart!}{}{-4}{}{127}{}
+{119}{Ah...oh!  Quite interesting!  I would surmise, unquestionably, that you are indeed a half-orc!}{Ah...oh!  Quite interesting!  I would surmise, unquestionably, that you are indeed a half-orc!}{}{}{}{}
+{120}{You're powers amaze me, Benjamin...}{}{5}{}{127}{}
+{121}{Uh...yeah!  You right!  You smart!}{}{-4}{}{127}{}
+{123}{Ah...oh!  Quite interesting!  I would surmise, unquestionably, that you are indeed a half-ogre!}{Ah...oh!  Quite interesting!  I would surmise, unquestionably, that you are indeed a half-ogre!}{}{}{}{}
+{124}{You're powers amaze me, Benjamin...}{}{5}{}{127}{}
+{125}{Uh...yeah!  You right!  You smart!}{}{-4}{}{127}{}
+{127}{Yes, yes I know.   But remember!  Its not me, its science!  And phrenology is the science of the future...!}{Yes, yes I know.   But remember!  Its not me, its science!  And phrenology is the science of the future...!}{}{}{}{}
+{128}{Of course.  What are you currently working on?}{}{5}{}{39}{}
+{129}{E:}{}{5}{}{0}{}
+{130}{Okay!  What you working on now?}{}{-4}{}{39}{}
+{131}{E:}{}{-4}{}{0}{}
+

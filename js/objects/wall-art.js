@@ -76,7 +76,7 @@ export const loadWallStructureTable = memoAsync(async () => {
   return wallStructureTable;
 });
 
-// The exact-case names of the .art files in art/portal and art/wall (data/file_index_art.json).
+// The exact-case names of the .art files in art/portal and art/wall (js/index/files/file_index_art.json).
 export const loadPortalManifest = artNameIndex('art/portal');
 const loadWallManifest = artNameIndex('art/wall');
 

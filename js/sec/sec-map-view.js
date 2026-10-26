@@ -2,7 +2,7 @@
 
 import { errText, fetchBuffer, memoAsync } from '../core/text-io.js';
 
-import { DATA_ROOT, SEC_ROOT } from '../core/config.js';
+import { DATA_ROOT, INDEX_ROOT, SEC_ROOT } from '../core/config.js';
 
 import { encPath } from '../core/util.js';
 import { SEC_ISO_HALF_H, SEC_ISO_HALF_W, SEC_ISO_TILE_H, SEC_ISO_TILE_W, secIsoMetrics } from './sec-iso.js';
@@ -81,10 +81,10 @@ function parseSecSectorPosition(filename) {
   } catch (_) { return null; }
 }
 
-// A .sec stored once: its copies were moved away (toolbox/atlas/dedupe_sectors.py) and data/sec-aliases.tsv names the copy kept
+// A .sec stored once: its copies were moved away (toolbox/atlas/dedupe_sectors.py) and js/index/aliases/sec-aliases.tsv names the copy kept
 // ("moved path <tab> kept path", both under data/). Read on the first sector that is not there, so a folder without any costs nothing.
 const secAliases = memoAsync(async () => {
-  try { return new Map(new TextDecoder().decode(await fetchBuffer(`${DATA_ROOT}sec-aliases.tsv`)).split('\n').filter(Boolean).map(l => l.trimEnd().split('\t'))); }
+  try { return new Map(new TextDecoder().decode(await fetchBuffer(`${INDEX_ROOT}aliases/sec-aliases.tsv`)).split('\n').filter(Boolean).map(l => l.trimEnd().split('\t'))); }
   catch (_) { return new Map(); }
 });
 async function fetchSec(rel) {           // rel: under data/

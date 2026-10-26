@@ -23,7 +23,7 @@ const SND = (() => {
   function wanted() {            // the songs that should play now, with their volume
     const out = new Map(), h = night ? HOURS.night : HOURS.day;
     if (!active || !on || !pair) return out;
-    if (pair === 'travel') { out.set(S.travel, 0.6); return out; }
+    if (pair === 'travel') { if (S.travel) out.set(S.travel, 0.6); return out; }      // (a version may have no travel music: none plays)
     for (const s of schemesOf(pair)) for (const e of s.list) if (e.song === 'loop' && hourIn(e.time, h)) out.set(e.f, Math.max(out.get(e.f) || 0, (e.vol || 100) / 100));
     return out;
   }

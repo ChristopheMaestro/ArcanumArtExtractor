@@ -1,0 +1,125 @@
+//lf0 = Qui
+//lf1 = Enfers
+//lf2 = Mort
+//lf3 = Nom
+//lf4 = Mal
+
+{1}{Tu es revenu à toi @pcname@ ?}{Tu es revenu à toi @pcname@ ?}{}{}{}{qu1001 2}
+{2}{Hein ? Qui êtes vous ?}{}{5}{lf0 0}{20}{lf0 1}
+{3}{Hein , Vous qui ?}{}{-4}{lf0 0}{20}{lf0 1}
+{4}{Mais... où sommes nous ?}{}{5}{lf1 0}{200}{lf1 1}
+{5}{Heu... où nous être ?}{}{-4}{lf1 0}{200}{lf1 1}
+{6}{Quoi ? Que s'est-il passé ?}{}{5}{lf2 0}{230}{lf2 1}
+{7}{Hé, quoi s'être passé ?}{}{-4}{lf2 0}{230}{lf2 1}
+{8}{Que... comment connaissez vous mon nom ?}{}{5}{lf3 0}{140}{lf3 1}
+{9}{Comment vous avoir su nom de moi ?}{}{-4}{lf3 0}{140}{lf3 1}
+
+{20}{Moi ? Je suis le Passeur. Je conduis les âmes des morts jusqu'au royaume de l'autre côté.}{Moi ? Je suis le Passeur. Je conduis les âmes des morts jusqu'au royaume de l'autre côté.}{}{}{}{}
+{21}{Les âmes, les morts... Mais je ne suis pas mort enfin !}{}{5}{lf2 0}{50}{lf2 1}
+{22}{Les ananas des morts ? Mais moi pas mort !}{}{-4}{lf2 0}{50}{lf2 1}
+{23}{Le royaume de l'autre côté ?}{}{5}{lf1 0}{80}{lf1 1}
+{24}{Quoi c'est le roi jaune de l'aut' côté ?}{}{-4}{lf1 0}{80}{lf1 1}
+{25}{Comment connaissez-vous mon nom ?}{}{5}{lf3 0}{140}{lf3 1}
+{26}{Comment vous savoir nom à je ?}{}{-4}{lf3 0}{140}{lf3 1}
+{27}{Mais pourquoi irais-je aux Enfers ? Je n'ai rien fait de mal !}{}{5}{lf1 1, lf4 0}{110}{lf4 1}
+{28}{Mais pourquoi moi devrais aller Enfers, moi rien fait vilain !}{}{-4}{lf1 1, lf4 0}{110}{lf4 1}
+{29}{Mais si je suis morte, où sommes nous ?}{0}{5}{lf2 1, lf1 0}{200}{lf1 1}
+{30}{Mais si moi morte, où nous êtres ?}{0}{-4}{lf2 1, lf1 0}{200}{lf1 1}
+{31}{Mais si je suis mort, où sommes nous ?}{1}{5}{lf2 1, lf1 0}{200}{lf1 1}
+{32}{Mais si moi mort, où nous êtres ?}{1}{-4}{lf2 1, lf1 0}{200}{lf1 1}
+{33}{Je vois...}{}{5}{lf0 1, lf1 1, lf2 1, lf3 1, lf4 1}{1000}{}
+{34}{Moi compris...}{}{-4}{lf0 1, lf1 1, lf2 1, lf3 1, lf4 1}{1000}{}
+{35}{Et où sommes-nous ?}{}{5}{lf1 0, lf2 0}{200}{lf1 1}
+{36}{Et où nous être ?}{}{-4}{lf1 0, lf2 0}{200}{lf1 1}
+
+{50}{He bien en fait... il se trouve que si. Mais ne dramatise pas, ça arrive à tout le monde. Tu ne te souviens pas ? Tu as sauté d'une planche et après avoir nagé une demi-heure, tu à coulé comme une pierre. Quelqu'un a alors récupéré ton âme et moi j'ai eu pour mission de te faire traverser.}{He bien en fait... il se trouve que si. Mais ne dramatise pas, ça arrive à tout le monde. Tu ne te souviens pas ? Tu as sauté d'une planche et après avoir nagé une demi-heure, tu à coulé comme une pierre. Quelqu'un a alors récupéré ton âme et moi j'ai eu pour mission de te faire traverser.}{}{}{}{}
+{51}{Vous avez parlé du royaume de l'autre côté non ? Qu'est-ce c'est ?}{}{5}{lf0 1, lf1 0}{80}{lf1 1}
+{52}{Vous avoir parlé roi jaune de l'aut' côté. Quoi ça ?}{}{-4}{lf0 1, lf1 0}{80}{lf1 1}
+{53}{Et comment connaissez-vous mon nom ?}{}{5}{lf3 0}{140}{lf3 1}
+{54}{Et comment vous savoir nom à je ?}{}{-4}{lf3 0}{140}{lf3 1}
+{55}{Mais pourquoi irais-je aux Enfers ? Je n'ai rien fait de mal !}{}{5}{lf1 1, lf4 0}{110}{lf4 1}
+{56}{Mais pourquoi moi devrais aller Enfers, moi rien fait vilain !}{}{-4}{lf1 1, lf4 0}{110}{lf4 1}
+{57}{Mais si je suis morte, où sommes nous ?}{0}{5}{lf2 1, lf1 0}{200}{lf1 1}
+{58}{Mais si moi morte, où nous êtres ?}{0}{-4}{lf2 1, lf1 0}{200}{lf1 1}
+{59}{Mais si je suis mort, où sommes nous ?}{1}{5}{lf2 1, lf1 0}{200}{lf1 1}
+{60}{Mais si moi mort, où nous êtres ?}{1}{-4}{lf2 1, lf1 0}{200}{lf1 1}
+{61}{Je vois...}{}{5}{lf0 1, lf1 1, lf2 1, lf3 1, lf4 1}{1000}{}
+{62}{Moi compris...}{}{-4}{lf0 1, lf1 1, lf2 1, lf3 1, lf4 1}{1000}{}
+{63}{Et où sommes-nous ?}{}{5}{lf1 0, lf2 0}{200}{lf1 1}
+{64}{Et où nous être ?}{}{-4}{lf1 0, lf2 0}{200}{lf1 1}
+{65}{Mais qui êtes vous ?}{}{5}{lf0 0}{20}{lf0 1}
+{66}{Mais vous qui ?}{}{-4}{lf0 0}{20}{lf0 1}
+
+{80}{Oui, les Enfers. Nous sommes à l'entrée des Enfers, nous avons franchi la frontière juste avant que tu ne te réveilles. He bien, on les appelle aussi le "royaume de l'autre côté".}{Oui, les Enfers. Nous sommes à l'entrée des Enfers, nous avons franchi la frontière juste avant que tu ne te réveilles. He bien, on les appelle aussi le "royaume de l'autre côté".}{}{}{}{}
+{81}{Les Enfers ? mais je ne suis pas morte !}{0}{5}{lf2 0}{50}{lf2 1}
+{82}{Enfers ? Mais moi pas morte !}{0}{-4}{lf2 0}{50}{lf2 1}
+{83}{Les Enfers ? mais je ne suis pas mort !}{1}{5}{lf2 0}{50}{lf2 1}
+{84}{Enfers ? Mais moi pas mort !}{1}{-4}{lf2 0}{50}{lf2 1}
+{85}{Comment connaissez-vous mon nom ?}{}{5}{lf3 0}{140}{lf3 1}
+{86}{Comment vous savoir nom à je ?}{}{-4}{lf3 0}{140}{lf3 1}
+{87}{Mais pourquoi irais-je aux Enfers ? Je n'ai rien fait de mal !}{}{5}{lf1 1, lf4 0}{110}{lf4 1}
+{88}{Mais pourquoi moi devrais aller Enfers, moi rien fait vilain !}{}{-4}{lf1 1, lf4 0}{110}{lf4 1}
+{89}{Je vois...}{}{5}{lf0 1, lf1 1, lf2 1, lf3 1, lf4 1}{1000}{}
+{90}{Moi compris...}{}{-4}{lf0 1, lf1 1, lf2 1, lf3 1, lf4 1}{1000}{}
+{91}{Mais qui êtes vous ?}{}{5}{lf0 0}{20}{lf0 1}
+{92}{Mais vous qui ?}{}{-4}{lf0 0}{20}{lf0 1}
+
+{110}{Hahahahaha, tu n'as rien fait de mal ? Mais enfin, tout le monde à fait quelque chose de mal dans sa vie, ce n'est pas pour cela que tu vas aux Enfers. En fait, il se trouve que tout le monde y va. Allons, ne t'imagine pas que les Enfers sont un endroit horrible : regarde autour de toi, tends ton regard vers l'horizon.}{Hahahahaha, tu n'as rien fait de mal ? Mais enfin, tout le monde à fait quelque chose de mal dans sa vie, ce n'est pas pour cela que tu vas aux Enfers. En fait, il se trouve que tout le monde y va. Allons, ne t'imagine pas que les Enfers sont un endroit horrible : regarde autour de toi, tends ton regard vers l'horizon.}{}{}{}{}
+{111}{Que suis-je censé voir ?}{}{5}{}{114}{}
+{112}{Moi devoir voir quoi ?}{}{-4}{}{114}{}
+
+{114}{La beauté. L'incarnation de l'absolue beauté. As-tu déjà pu admirer ce genre de paysages ? Les Enfers... sont un endroit merveilleux.}{La beauté. L'incarnation de l'absolue beauté. As-tu déjà pu admirer ce genre de paysages ? Les Enfers... sont un endroit merveilleux.}{}{}{}{}
+{115}{En effet... Mais qui êtes vous ?}{}{5}{lf0 0}{20}{lf0 1}
+{116}{Ca vrai... Mais vous qui ?}{}{-4}{lf0 0}{20}{lf0 1}
+{117}{En effet... Mais au fait... je ne suis pas morte !}{0}{5}{lf2 0}{50}{lf2 1}
+{118}{Ca vrai... Mais au fait... moi pas morte !}{0}{-4}{lf2 0}{50}{lf2 1}
+{119}{En effet... Mais au fait... je ne suis pas mort !}{1}{5}{lf2 0}{50}{lf2 1}
+{120}{Ca vrai... Mais au fait... moi pas mort !}{1}{-4}{lf2 0}{50}{lf2 1}
+{121}{En effet... Mais comment connaissez-vous mon nom ?}{}{5}{lf3 0}{140}{lf3 1}
+{122}{Ca vrai... Mais comment vous savoir nom à je ?}{}{-4}{lf3 0}{140}{lf3 1}
+{123}{En effet...}{}{5}{lf0 1, lf1 1, lf2 1, lf3 1, lf4 1}{1000}{}
+{124}{Ca vrai...}{}{-4}{lf0 1, lf1 1, lf2 1, lf3 1, lf4 1}{1000}{}
+
+{140}{Ah... ça, ce n'est pas à moi de te le dire. Mais celle qui t'attends pourra répondre à ta question.}{Ah... ça, ce n'est pas à moi de te le dire. Mais celle qui t'attends pourra répondre à ta question.}{}{}{}{}
+{141}{D'accord... Vous avez parlé du royaume de l'autre côté non ? Qu'est-ce c'est ?}{}{5}{lf0 1, lf1 0}{80}{lf1 1}
+{142}{Okay... Vous avoir parlé roi jaune de l'aut' côté. Quoi ça ?}{}{-4}{lf0 1, lf1 0}{80}{lf1 1}
+{143}{D'accord...}{}{5}{lf0 1, lf1 1, lf2 1, lf3 1, lf4 1}{1000}{}
+{144}{Okay...}{}{-4}{lf0 1, lf1 1, lf2 1, lf3 1, lf4 1}{1000}{}
+{145}{Mais qui êtes vous ?}{}{5}{lf0 0}{20}{lf0 1}
+{146}{Mais vous qui ?}{}{-4}{lf0 0}{20}{lf0 1}
+{147}{Mais pourquoi irais-je aux Enfers ? Je n'ai rien fait de mal !}{}{5}{lf1 1, lf4 0}{110}{lf4 1}
+{148}{Mais pourquoi moi devrais aller Enfers, moi rien fait vilain !}{}{-4}{lf1 1, lf4 0}{110}{lf4 1}
+{149}{En effet... Mais au fait... je ne suis pas morte !}{0}{5}{lf2 0}{50}{lf2 1}
+{150}{Ca vrai... Mais au fait... moi pas morte !}{0}{-4}{lf2 0}{50}{lf2 1}
+{151}{En effet... Mais au fait... je ne suis pas mort !}{1}{5}{lf2 0}{50}{lf2 1}
+{152}{Ca vrai... Mais au fait... moi pas mort !}{1}{-4}{lf2 0}{50}{lf2 1}
+{153}{Et où sommes-nous ?}{}{5}{lf1 0, lf2 0}{200}{lf1 1}
+{154}{Et où nous être ?}{}{-4}{lf1 0, lf2 0}{200}{lf1 1}
+
+{200}{En voilà une étrange question... cela paraît si évident. Nous sommes à l'entrée des Enfers, nous avons franchi la frontière juste avant que tu ne te réveilles. On les appelle aussi le "royaume de l'autre côté".}{En voilà une étrange question... cela paraît si évident. Nous sommes à l'entrée des Enfers, nous avons franchi la frontière juste avant que tu ne te réveilles. On les appelle aussi le "royaume de l'autre côté".}{}{}{}{}
+{201}{Les Enfers ? mais je ne suis pas morte !}{0}{5}{lf2 0}{50}{lf2 1}
+{202}{Enfers ? Mais moi pas morte !}{0}{-4}{lf2 0}{50}{lf2 1}
+{203}{Les Enfers ? mais je ne suis pas mort !}{1}{5}{lf2 0}{50}{lf2 1}
+{204}{Enfers ? Mais moi pas mort !}{1}{-4}{lf2 0}{50}{lf2 1}
+{205}{Comment connaissez-vous mon nom ?}{}{5}{lf3 0}{140}{lf3 1}
+{206}{Comment vous savoir nom à je ?}{}{-4}{lf3 0}{140}{lf3 1}
+{207}{Mais pourquoi irais-je aux Enfers ? Je n'ai rien fait de mal !}{}{5}{lf1 1, lf4 0}{110}{lf4 1}
+{208}{Mais pourquoi moi devrais aller Enfers, moi rien fait vilain !}{}{-4}{lf1 1, lf4 0}{110}{lf4 1}
+{209}{Je vois...}{}{5}{lf0 1, lf1 1, lf2 1, lf3 1, lf4 1}{1000}{}
+{210}{Moi compris...}{}{-4}{lf0 1, lf1 1, lf2 1, lf3 1, lf4 1}{1000}{}
+{211}{Mais qui êtes vous ?}{}{5}{lf0 0}{20}{lf0 1}
+{212}{Mais vous qui ?}{}{-4}{lf0 0}{20}{lf0 1}
+
+{230}{He bien en fait... il se trouve que tu es mort. Mais ne dramatise pas, ça arrive à tout le monde. Tu ne te souviens pas ? Tu as sauté d'une planche et après avoir nagé une demi-heure, tu à coulé comme une pierre. Quelqu'un a alors récupéré ton âme et moi j'ai eu pour mission de te faire traverser.}{He bien en fait... il se trouve que tu es morte. Mais ne dramatise pas, ça arrive à tout le monde. Tu ne te souviens pas ? Tu as sauté d'une planche et après avoir nagé une demi-heure, tu à coulé comme une pierre. Quelqu'un a alors récupéré ton âme et moi j'ai eu pour mission de te faire traverser.}{}{}{}{}
+{231}{Et comment connaissez-vous mon nom ?}{}{5}{lf3 0}{140}{lf3 1}
+{232}{Et comment vous savoir nom à je ?}{}{-4}{lf3 0}{140}{lf3 1}
+{233}{Mais si je suis morte, où sommes nous ?}{0}{5}{lf1 0}{200}{lf1 1}
+{234}{Mais si moi morte, où nous êtres ?}{0}{-4}{lf1 0}{200}{lf1 1}
+{235}{Mais si je suis mort, où sommes nous ?}{1}{5}{lf1 0}{200}{lf1 1}
+{236}{Mais si moi mort, où nous êtres ?}{1}{-4}{lf1 0}{200}{lf1 1}
+{237}{Mais qui êtes vous ?}{}{5}{lf0 0}{20}{lf0 1}
+{238}{Mais vous qui ?}{}{-4}{lf0 0}{20}{lf0 1}
+
+{1000}{Bon, si tu n'as plus de questions, on peut se remettre en route ? Je ne voudrais pas la faire attendre et tu n'es pas mon seul client dans la journée.}{Bon, si tu n'as plus de questions, on peut se remettre en route ? Je ne voudrais pas la faire attendre et tu n'es pas mon seul client dans la journée.}{}{}{}{}
+{1001}{Ah, je vous en prie.}{}{5}{}{-2}{}
+{1002}{Ah, 'lez-y !}{}{-4}{}{-2}{}

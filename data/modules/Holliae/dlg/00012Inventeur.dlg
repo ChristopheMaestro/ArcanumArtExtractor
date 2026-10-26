@@ -1,0 +1,41 @@
+{1}{Bonjour.}{Bonjour madame.}{}{1}{}{}
+{2}{Que vendez vous ?}{}{5}{lf0 0}{11}{lf0 1}
+{3}{Quoi vous vendre ?}{}{-4}{lf0 0}{11}{lf0 1}
+{4}{Puis-je vous rendre service ?}{}{5}{lf1 0}{20}{lf1 1}
+{5}{Moi pouvoir aider vous ?}{}{-4}{lf1 0}{20}{lf1 1}
+{6}{J'ai la bobine.}{}{5}{in 5801, qu1003 2}{50}{in 5801, $$+100, qu1003 4}
+{7}{Moi avoir vot' machin.}{}{-4}{in 5801, qu 1003 2}{50}{in 5801, $$+100, qu1003 4}
+{8}{B:}{}{1}{}{0}{}
+{9}{E:}{}{1}{}{0}{}
+
+{11}{De tout ... et de rien. De la bricole. Electricité, mécanique, et caetera...}{De tout ... et de rien. De la bricole. Electricité, mécanique, et caetera...}{}{2}{}{}
+{12}{Puis-je vous rendre service ?}{}{5}{lf1 0}{20}{lf1 1}
+{13}{Moi pouvoir aider vous ?}{}{-4}{lf1 0}{20}{lf1 1}
+{14}{B:}{}{1}{}{0}{}
+{15}{E:}{}{1}{}{0}{}
+
+{20}{Oui, je te donnerais cents pièces pour une bobine electro-physique W8n}{Oui, je te donnerais cents pièces pour une bobine électro-physique W8n}{}{3}{}{}
+{21}{C'est d'accord.}{}{5}{}{40}{qu1003 2}
+{22}{Okay}{}{-4}{}{40}{qu1003 2}
+{23}{Peut-être.}{}{5}{}{40}{qu1003 1}
+{24}{J'verrai}{}{-4}{}{40}{qu1003 1}
+{25}{Non.}{}{5}{}{30}{qu1003 6}
+{26}{Nan}{}{-4}{}{30}{qu1003 6}
+{27}{Je ne vais pas me démener pour une bobine à la noix.}{}{5}{}{co, fl 50}{qu1003 6}
+{28}{M'en fous de ta bobinne pourie.}{}{-4}{}{co, fl 52}{qu1003 6}
+
+{30}{Dommage. Bon autre chose ?}{Dommage. Bon autre chose ?}{}{4}{}{}
+{31}{Que vendez vous ?}{}{5}{lf0 0}{11}{lf0 1}
+{32}{Quoi vous vendre ?}{}{-4}{lf0 0}{11}{lf0 1}
+{33}{B:}{}{1}{}{0}{}
+{34}{E:}{}{1}{}{0}{}
+
+{40}{Merci. Quoi d'autre ?}{Merci. Quoi d'autre ?}{}{5}{}{}
+{41}{Que vendez vous ?}{}{5}{lf0 0}{11}{lf0 1}
+{42}{Quoi vous vendre ?}{}{-4}{lf0 0}{11}{lf0 1}
+{43}{B:}{}{1}{}{0}{}
+{44}{E:}{}{1}{}{0}{}
+
+{50}{Merci. Chose promise, chose due. [Il vous tend cent pièces.]}{Merci. Chose promise, chose due. [Il vous tend cent pièces.]}{}{6}{}{}
+{51}{B:}{}{1}{}{-2}{}
+{52}{E:}{}{1}{}{-2}{}

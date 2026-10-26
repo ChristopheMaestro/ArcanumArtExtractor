@@ -1,0 +1,171 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Da bin ich wieder, Mrs. Cameron.  Dürfte ich Euch ein paar Fragen stellen?}{}{5}{lf1 1, re 41}{24}{}
+{3}{Tut mir Leid, wenn ich Euch beleidigt habe.  Bitte vergebt mir. Dürfte ich nach Eurem Namen fragen?}{}{5}{lf1 1, re -40}{19}{}
+{4}{Wie schön, Euch kennen zu lernen, gute Frau.  Dürfte ich nach Eurem Namen fragen?}{}{5}{lf1 0, re 41}{19}{}
+{5}{Tut mir Leid, wenn ich Euch beleidigt habe, Mrs. Cameron.  Ich hätte da einige Fragen ...}{}{5}{lf1 0, re -40}{35}{}
+{6}{Ich werde versuchen, Euren Sohn zu finden, Mrs. Cameron.}{}{5}{qu1119 1}{85}{}
+{7}{Ich habe Liam noch nicht gefunden, Mrs. Cameron.}{}{5}{qu1119 2}{93}{}
+{8}{Ich habe Neuigkeiten von Liam, Mrs. Cameron.}{}{5}{qu1119 3}{97}{}
+{9}{Ich habe das Portal zerstört.}{}{5}{qu1119 4, qu1120 4}{169}{}
+{10}{Hallo, Misses Cameron.  Ich mal was fragen?}{}{-4}{lf1 1, re 41}{24}{}
+{11}{Mir Leid tun, Ihr mich nich' magen ...  Ihr mir sagen, wie heiß'n?}{}{-4}{lf1 1, re -40}{19}{}
+{12}{Hallo, Frau!  Wie Ihr heiß'n?}{}{-4}{lf1 0, re 41}{19}{}
+{13}{Mich Leid tun, Ihr wütig, Lady.  Ich mal was fragen?}{}{-4}{lf1 0, re -40}{35}{}
+{14}{Ich Leim suchen geh'n.}{}{-4}{qu1119 1}{85}{}
+{15}{Ich Leim noch nich' finden, Misses Cameron.}{}{-4}{qu1119 2}{93}{}
+{16}{Ich mi' Euch über Leim reden?}{}{-4}{qu1119 3}{97}{}
+{17}{Ich das Portal zerstören haben.}{}{-4}{qu1119 4, qu1120 4, lf5 0}{169}{}
+{18}{E:}{}{1}{}{0}{}
+{19}{Ich bin Mrs. Cameron, Fremdling.  Ihr scheint mir wohl weit gereist zu sein.  Sagt mir ...  Habt Ihr vielleicht meinen Sohn gesehen?}{Ich bin Mrs. Cameron, Fremdling.  Ihr scheint mir wohl weit gereist zu sein.  Sagt mir ...  Habt Ihr vielleicht meinen Sohn gesehen?}{}{}{}{lf1 1}
+{20}{Euren Sohn?  Wer ist Euer Sohn?}{}{5}{}{60}{}
+{21}{Euer Sohn?  Ich nich' wissen, wer Sohn sein ...}{}{-4}{}{60}{}
+{22}{E:}{}{1}{}{0}{}
+{23}{Hilfe!  Wache!  Hilfe!  Hilfe!}{Hilfe!  Wache!  Hilfe!  Hilfe!}{}{}{}{}
+{24}{Womit kann ich Euch behilflich sein?}{Womit kann ich Euch behilflich sein?}{}{}{}{}
+{25}{Erzählt mir von Eurem Sohn ...}{}{5}{qu1119 0}{60}{}
+{26}{Könnt Ihr mich zum Reparatur-Experten ausbilden?}{}{5}{tr12 1, tr12 -1, sk12 10}{46}{}
+{27}{Wie habt Ihr dieses enorme Geschick im Reparieren von Gegenständen erlangt?}{}{5}{qu1119 1, lf2 0}{56}{}
+{28}{Ich wissen willen übba Euer Sohn ...}{}{-4}{qu1119 0}{60}{}
+{29}{Ihr mir rausbildern zu Repper-Exper'?}{}{-4}{tr12 1, tr12 -1, sk12 10}{46}{}
+{30}{Wieso Ihr können so guttig Zeugs repperieren?}{}{-4}{qu1119 1, lf2 0}{56}{}
+{31}{Könnt Ihr etwas für mich reparieren?}{}{5}{}{0}{ri}
+{32}{Ihr Sachens für mir heile machen?}{}{-4}{}{0}{ri}
+{33}{C:}{}{1}{}{35}{}
+{34}{E:}{}{1}{}{0}{}
+{35}{Natürlich.  Womit kann ich Euch noch behilflich sein?}{Natürlich.  Womit kann ich Euch noch behilflich sein?}{}{}{}{}
+{36}{Erzählt mir von Eurem Sohn ...}{}{5}{qu1119 0}{60}{}
+{37}{Könnt Ihr mich zum Reparatur-Experten ausbilden?}{}{5}{tr12 1, tr12 -1, sk12 10}{46}{}
+{38}{Wie habt Ihr dieses enorme Geschick im Reparieren von Gegenständen erlangt?}{}{5}{qu1119 1, lf2 0}{56}{}
+{39}{Ich wissen willen übba Euer Sohn ...}{}{-4}{qu1119 0}{60}{}
+{40}{Ihr mir rausbildern zu Repper-Exper'?}{}{-4}{tr12 1, tr12 -1, sk12 10}{46}{}
+{41}{Wieso Ihr können so guttig Zeugs repperieren?}{}{-4}{qu1119 1, lf2 0}{56}{}
+{42}{Könnt Ihr etwas für mich reparieren?}{}{5}{}{0}{ri}
+{43}{Ihr Sachens für mir heile machen?}{}{-4}{}{0}{ri}
+{44}{C:}{}{1}{}{35}{}
+{45}{E:}{}{1}{}{0}{}
+{46}{Aber gewiss kann ich das. Ich verlange dafür 500 Münzen.}{Aber gewiss kann ich das. Ich verlange dafür 500 Münzen.}{}{}{}{}
+{47}{Bitte sehr.}{}{5}{$$ 500}{52}{$$ -500}
+{48}{Das ist etwas mehr als ich mir leisten kann.  Ich muss später wieder zurückkommen.}{}{5}{$$ -500}{35}{}
+{49}{Hier.  Allens da.}{}{-4}{$$ 500}{52}{$$ -500}
+{50}{Oh.  Das viel Münzens sein.  Ich mehr besorgen mussen ...}{}{-4}{$$ -500}{35}{}
+{51}{E:}{}{1}{}{0}{}
+{52}{Vielen Dank, Sire.  Ihr seid nun ein Experte auf dem Gebiet der Reparatur.  Falls Ihr es jemals zum Meister bringen wollt, müsst Ihr Hieronymus Maxim aufsuchen.  Er lebt in Caladon. Seine Fabrik liegt gleich vor dem Stadttor.}{Danke, Miss. Ihr seid jetzt ein Experte auf dem Gebiet der Reparatur.  Falls Ihr es jemals zum Meister bringen wollt, müsst Ihr Hieronymus Maxim aufsuchen.  Er lebt in Caladon. Seine Fabrik liegt gleich vor dem Stadttor.}{}{}{}{tr12 2, ru 2171}
+{53}{Danke, Mrs. Cameron.  Darf ich Euch noch eine Frage stellen?}{}{5}{}{35}{}
+{54}{Dankie, Misses Cameron  Ich noch was fragen, ja?}{}{-4}{}{35}{}
+{55}{E:}{}{1}{}{0}{}
+{56}{Mein verschiedener Mann, er ruhe in Frieden, hat dauernd an Sachen herumgebastelt.  Er besaß eine kleine Reparaturwerkstatt, die ich nach seinem Tod eine Zeit lang übernommen habe.  Ich habe ihn jahrelang beobachtet und mir viele Fertigkeiten angeeignet.}{Mein verschiedener Mann, er ruhe in Frieden, hat dauernd an Sachen herumgebastelt.  Er besaß eine kleine Reparaturwerkstatt, die ich nach seinem Tod eine Zeit lang übernommen habe.  Ich habe ihn jahrelang beobachtet und mir viele Fertigkeiten angeeignet.}{}{}{}{lf2 1}
+{57}{Ja.  Ihr versteht viel vom Reparaturhandwerk.  Noch eine Frage?}{}{5}{}{35}{}
+{58}{Jaaa.  Ihr viel wissen.  Ich noch was fragen, ja?}{}{-4}{}{35}{}
+{59}{E:}{}{1}{}{0}{}
+{60}{Liam.  Mein Sohn ist Liam Cameron, der Erfinder.  Ich habe ihn seit fast zwei Monaten nicht mehr gesehen.  ... das passt so gar nicht zu ihm ...  Ich habe mich gefragt, ob Ihr auf Euren Reisen vielleicht an seiner Werkstatt vorbeigekommen seid?}{Liam.  Mein Sohn ist Liam Cameron, der Erfinder.  Ich habe ihn seit fast zwei Monaten nicht mehr gesehen.  ... das passt so gar nicht zu ihm ...  Ich habe mich gefragt, ob Ihr auf Euren Reisen vielleicht an seiner Werkstatt vorbeigekommen seid?}{}{}{}{}
+{61}{Seine Werkstatt?  Ich fürchte, ich muss einen anderen Weg genommen haben.}{}{5}{ni5240}{68}{}
+{62}{Oh!  Ihr seid also Liams Mutter ...  Ich habe sein Tagebuch ...}{}{5}{in5240, gf2316 0}{155}{qu1119 1}
+{63}{Oh!  Euer Verlust tut mir sehr Leid, Madame ...  Ich habe sein Tagebuch ...}{}{5}{in5240, gf2316 1}{159}{qu1119 1}
+{64}{Weckstatt?  Nein. Ich kein Weckstatt seh'n nich' ...}{}{-4}{ni5240}{68}{}
+{65}{Oh!  Ihr sein Mama.  Ich Buch von ihm haben ...}{}{-4}{in5240, gf2316 0}{155}{qu1119 1}
+{66}{Oh!  Mich Leid tun.  Ihr bald traurich sein ...  Ich sein Buch haben ...}{}{-4}{in5240, gf2316 1}{159}{qu1119 1}
+{67}{E:}{}{1}{}{0}{}
+{68}{Er ist ein Tüftler, genau wie sein Vater früher.  Immer arbeitet er an irgendeinem neuen Spielzeug.  Er hat sich drei Tagesreisen von hier eine Werkstatt im Wald gebaut, damit ihn niemand stört.}{Er ist ein Tüftler, genau wie sein Vater früher.  Immer arbeitet er an irgendeinem neuen Spielzeug.  Er hat sich drei Tagesreisen von hier eine Werkstatt im Wald gebaut, damit ihn niemand stört.}{}{}{}{}
+{69}{Und er wird vermisst?}{}{5}{}{73}{}
+{70}{Und Ihr habt ihn längere Zeit nicht mehr gesehen?}{}{5}{}{73}{}
+{71}{Warum Ihr nach ihm suchen?}{}{-4}{}{73}{}
+{72}{E:}{}{1}{}{0}{}
+{73}{Normalerweise kam er einmal im Monat hierher, um mich zu besuchen und Vorräte aufzufrischen.  Jetzt sind fast zwei vergangen und ich habe nichts von ihm gehört.  Ich mache mir große Sorgen, zumal im Wald seltsame Dinge geschehen.}{Normalerweise kam er einmal im Monat hierher, um mich zu besuchen und Vorräte aufzufrischen.  Jetzt sind fast zwei vergangen und ich habe nichts von ihm gehört.  Ich mache mir große Sorgen, zumal im Wald seltsame Dinge geschehen.}{}{}{}{}
+{74}{Seltsame Dinge?}{}{5}{}{79}{}
+{75}{Ich verstehe, weshalb Ihr Euch Sorgen macht.  Möchtet Ihr, dass ich ihn suche?}{}{5}{}{85}{qu1119 1}
+{76}{Seltsam Dingens?}{}{-4}{}{79}{}
+{77}{Ich verstehen, wieso Ihr denken, er weg.  Ich ihn finden sollen?}{}{-4}{}{85}{qu1119 1}
+{78}{E:}{}{1}{}{0}{}
+{79}{Oh ja!  Überall im Wald wurden seltsame Bestien gesichtet.  Ganz unterschiedliche Arten, und auch keine Einzelfälle.  Ein paar Bürger der Stadt sind schon ums Leben gekommen.   Das ist alles sehr beunruhigend.  Ich hatte gehofft, Ihr bringt Neuigkeiten von Liam!}{Oh ja!  Überall im Wald wurden seltsame Bestien gesichtet.  Ganz unterschiedliche Arten, und auch keine Einzelfälle.  Ein paar Bürger der Stadt sind schon ums Leben gekommen.   Das ist alles sehr beunruhigend.  Ich hatte gehofft, Ihr bringt Neuigkeiten von Liam!}{}{}{}{qu1119 1}
+{80}{Soll ich versuchen, ob ich ihn finden kann?}{}{5}{}{85}{}
+{81}{Nein. Tut mir Leid.  Ich habe ihn nicht gesehen.  Kann ich Euch etwas fragen?}{}{5}{}{35}{}
+{82}{Ich ihn finden sollen?}{}{-4}{}{85}{}
+{83}{So, so.  Ich ihn nich' seh'n. Mich Leid tun.  Ich mal was fragen?}{}{-4}{}{35}{}
+{84}{E:}{}{1}{}{0}{}
+{85}{Das würdet Ihr tun!?!  Ich wäre Euch sehr verbunden!  Mir ist klar, dass Mütter von Natur aus besorgt sind.  Aber das passt so gar nicht zu Liam.  Ich würde mich wirklich freuen, wenn Ihr versuchen würdet, ihn ausfindig zu machen.}{Das würdet Ihr tun!?!  Ich wäre Euch sehr verbunden!  Mir ist klar, dass Mütter von Natur aus besorgt sind.  Aber das passt so gar nicht zu Liam.  Ich würde mich wirklich freuen, wenn Ihr versuchen würdet, ihn ausfindig zu machen.}{}{}{}{}
+{86}{Hier, zeigt mir auf meiner Karte, wo seine Werkstatt liegt.}{}{5}{}{89}{}
+{87}{Das sein mein Kartens.  Ihr mir zeigen, wo Weckstatt sein?}{}{-4}{}{89}{}
+{88}{E:}{}{1}{}{0}{}
+{89}{Oh.  Hier.  Genau hier.  [Sie zeigt auf eine Stelle deiner Karte.]}{Oh.  Hier.  Genau hier.  [Sie zeigt auf eine Stelle deiner Karte.]}{}{}{}{MM 42, qu1119 2}
+{90}{Ich bringe Euch Neuigkeiten.}{}{5}{}{0}{}
+{91}{Ich rausfinden, was passieren sein ...}{}{-4}{}{0}{}
+{92}{E:}{}{1}{}{0}{}
+{93}{Oh, ich mache mir ja solche Sorgen!  Bitte findet ihn, @pcname@.  Ich bete, dass er wohlauf ist.}{Oh, ich mache mir ja solche Sorgen!  Bitte findet ihn, @pcname@.  Ich bete, dass er wohlauf ist.}{}{}{}{}
+{94}{Ich werde meine Suche fortsetzen.}{}{5}{}{0}{}
+{95}{Ich noch mehr such'n geh'n.}{}{-4}{}{0}{}
+{96}{E:}{}{1}{}{0}{}
+{97}{Was für Neuigkeiten?  Wo ist er?}{Was für Neuigkeiten?  Wo ist er?}{}{}{}{}
+{98}{Es tut mir Leid.  Er wurde von einer der Bestien getötet, die im Wald ihr Unwesen treiben.}{}{5}{gf 2316 1}{103}{qu1119 4}
+{99}{Er wird immer noch vermisst.  Ich habe dieses Tagebuch gefunden.  Es sieht nicht gut aus ...}{}{5}{gf 2316 0}{145}{}
+{100}{Mich Leid tun.  Leim totig.  Biestie ihn totig machen.}{}{-4}{gf 2316 1}{103}{qu1119 4}
+{101}{Ich ihn nich' finden.  Abba ich Buch finden.  Ich glauben, er nich' mehr lebig ...}{}{-4}{gf 2316 0}{145}{}
+{102}{E:}{}{1}{}{0}{}
+{103}{NEIN!!!  [Sie stößt einen langen, gellenden Schrei aus] Mein Sohn!  Mein Sohn!  [Sie schluchzt in ihre Schürze.] Ich bin ganz allein.  Ich habe niemanden mehr ...  Niemanden ...}{NEIN!!!  [Sie stößt einen langen, gellenden Schrei aus] Mein Sohn!  Mein Sohn!  [Sie schluchzt in ihre Schürze.] Ich bin ganz allein.  Ich habe niemanden mehr ...  Niemanden ...}{}{}{}{}
+{104}{Er starb beim Versuch, die Bestien aufzuhalten.  Er war ein Held.}{}{5}{gf2316 1}{109}{}
+{105}{Ich weiß, es sieht düster aus ...  Aber er könnte noch am Leben sein ...}{}{5}{gf2316 0}{149}{}
+{106}{Er sterben, wenn hauen bösig Monsters.  Er ein Held.}{}{-4}{gf2316 1}{109}{}
+{107}{Ich wissen, Ihr traurig ...  Abba vielleich' noch lebig ... vielleich' ...}{}{-4}{gf2316 0}{149}{}
+{108}{E:}{}{1}{}{0}{}
+{109}{Aber sie haben ihn getötet und sind immer noch frei!  [Schluchzt.] Er ist umsonst gestorben ...}{Aber sie haben ihn getötet und sind immer noch frei!  [Schluchzt.] Er ist umsonst gestorben ...}{}{}{}{}
+{110}{Nein. Nicht umsonst.  Seine Erfindung hat mir ermöglicht, die Bestien aufzuhalten.}{}{5}{qu1120 4}{115}{}
+{111}{Nö. Nich' umsons' ...  Er Dingens haben, wo mir helfen, sie aufhalten.}{}{-4}{qu1120 4}{115}{}
+{112}{Aber er starb tapfer.  Beim Versuch, die Bestien aufzuhalten.}{}{5}{qa1120 1, qb1120 2}{163}{}
+{113}{Abba er als Hel' sterben ... er versuchen, bösig Biesties aufhalten.}{}{-4}{qa1120 1, qb1120 2}{163}{}
+{114}{E:}{}{1}{}{0}{}
+{115}{Wirklich?  [Schluchzt.] Er ist nicht umsonst gestorben?}{Wirklich?  [Schluchzt.] Er ist nicht umsonst gestorben?}{}{}{}{re +15}
+{116}{Ohne Euren Sohn wäre diese Stadt von Bestien überrannt worden!}{}{5}{in 5240}{123}{}
+{117}{Ohne Euren Sohn wäre diese Stadt von Bestien überrannt worden!}{}{5}{ni 5240, ta-1}{137}{}
+{118}{Ohne Euren Sohn wäre diese Stadt von Bestien überrannt worden!}{}{5}{ni 5240, ta 2}{141}{}
+{119}{Stadt voll mi' bösig Biesties, wenn Sohn nich' sein!}{}{-4}{ni 5240, ta-1}{137}{}
+{120}{Stadt voll mi' bösig Biesties, wenn Sohn nich' sein!}{}{-4}{ni 5240, ta 2}{141}{}
+{121}{Stadt voll mi' bösig Biesties, wenn Sohn nich' sein!}{}{-4}{in 5240}{123}{}
+{122}{E:}{}{1}{}{0}{}
+{123}{Ich werde ihn ja so vermissen.  Aber wenigstens ist er nicht umsonst gestorben.}{Ich werde ihn ja so vermissen.  Aber wenigstens ist er nicht umsonst gestorben.}{}{}{}{}
+{124}{Hier. Ich habe sein Tagebuch in der Werkstatt gefunden. Er wollte, dass Ihr es bekommt.}{}{5}{in 5240, ta-1}{129}{in 5240, qu1119 4}
+{125}{Hier. Ich habe sein Tagebuch in der Werkstatt gefunden. Er wollte, dass Ihr es bekommt.}{}{5}{in 5240, ta 2}{133}{in 5240, qu1119 4}
+{126}{Ich Buch in Weckstatt finden.  Drin stehen, er willen, Ihr es haben.}{}{-4}{in 5240, ta-1}{129}{in 5240, qu1119 4}
+{127}{Ich Buch in Weckstatt finden.  Drin stehen, er willen, Ihr es haben.}{}{-4}{in 5240, ta 2}{133}{in 5240, qu1119 4}
+{128}{E:}{}{1}{}{0}{}
+{129}{[Sie drückt es fest an sich.] Danke.  Danke, dass Ihr der Gefahr getrotzt habt, um mir das zu bringen. Hier.  Nehmt diesen Dolch als kleines Zeichen meiner Dankbarkeit.}{[Sie drückt es fest an sich.] Danke.  Danke, dass Ihr der Gefahr getrotzt habt, um mir das zu bringen. Hier.  Nehmt diesen Dolch als kleines Zeichen meiner Dankbarkeit.}{}{}{}{in -2023}
+{130}{Vielen Dank.  Euer Verlust tut mir sehr Leid.  Lebt wohl.}{}{5}{}{0}{}
+{131}{Dankie.  Mir Leid tun, er totig.  Tschö.}{}{-4}{}{0}{}
+{132}{E:}{}{1}{}{0}{}
+{133}{[Sie drückt es fest an sich.] Danke.  Danke, dass Ihr der Gefahr getrotzt habt, um mir das zu bringen. Hier.  Nehmt diesen Hut als kleines Zeichen meiner Dankbarkeit.  Das war eine von Liams ersten Erfindungen.}{[Sie drückt es fest an sich.] Danke.  Danke, dass Ihr der Gefahr getrotzt habt, um mir das zu bringen. Hier.  Nehmt diesen Hut als kleines Zeichen meiner Dankbarkeit.  Das war eine von Liams ersten Erfindungen.}{}{}{}{in -2856}
+{134}{Vielen Dank.  Euer Verlust tut mir sehr Leid.  Lebt wohl.}{}{5}{}{0}{}
+{135}{Dankie.  Mir Leid tun, er totig.  Tschö.}{}{-4}{}{0}{}
+{136}{E:}{}{1}{}{0}{}
+{137}{Vielen Dank.  Danke, dass Ihr solche Gefahren auf Euch genommen habt, um meinen Sohn zu suchen. Hier.  Nehmt diesen Dolch als kleines Zeichen meiner Dankbarkeit.}{Vielen Dank.  Danke, dass Ihr solche Gefahren auf Euch genommen habt, um meinen Sohn zu suchen. Hier.  Nehmt diesen Dolch als kleines Zeichen meiner Dankbarkeit.}{}{}{}{in -2023}
+{138}{Vielen Dank.  Euer Verlust tut mir sehr Leid.  Lebt wohl.}{}{5}{}{0}{}
+{139}{Dankie.  Mir Leid tun, er totig.  Tschö.}{}{-4}{}{0}{}
+{140}{E:}{}{1}{}{0}{}
+{141}{Vielen Dank.  Danke, dass Ihr solche Gefahren auf Euch genommen habt, um meinen Sohn zu suchen. Hier.  Nehmt diesen Hut als kleines Zeichen meiner Dankbarkeit.  Das war eine von Liams ersten Erfindungen.}{Vielen Dank.  Danke, dass Ihr solche Gefahren auf Euch genommen habt, um meinen Sohn zu suchen. Hier.  Nehmt diesen Hut als kleines Zeichen meiner Dankbarkeit.  Das war eine von Liams ersten Erfindungen.}{}{}{}{in -2856}
+{142}{Vielen Dank.  Euer Verlust tut mir sehr Leid.  Lebt wohl.}{}{5}{}{0}{}
+{143}{Dankie.  Mir Leid tun, er totig.  Tschö.}{}{-4}{}{0}{}
+{144}{E:}{}{1}{}{0}{}
+{145}{NEIN!!!  Er kann nicht tot sein ...  Das kann nicht sein!  Gebt mir das Tagebuch!  [Sie nimmt es und blättert es hastig durch.] ... Oh!  Mein Sohn!  Was hast du nur getan!?!  Immerzu wollte er die Welt retten!  [Sie schaut zu dir auf.] Ihr habt keine Spur von ihm gesehen?}{NEIN!!!  Er kann nicht tot sein ...  Das kann nicht sein!  Gebt mir das Tagebuch!  [Sie nimmt es und blättert es hastig durch.] ... Oh!  Mein Sohn!  Was hast du nur getan!?!  Immerzu wollte er die Welt retten!  [Sie schaut zu dir auf.] Ihr habt keine Spur von ihm gesehen?}{}{}{}{}
+{146}{Nein. Ich habe ihn nicht gesehen.  Aber es sind viele gefährliche Kreaturen unterwegs ...}{}{5}{}{149}{}
+{147}{Ich ihn nich' seh'n.  Abba viel bösig Biesties seh'n ...}{}{-4}{}{149}{}
+{148}{E:}{}{1}{}{0}{}
+{149}{Ich darf die Hoffnung nicht aufgeben, dass er noch lebt.  Würdet Ihr weiter nach ihm suchen?  In seinem Tagebuch ist von einem Portal die Rede ...  Seid Ihr gewillt, ihn dort zu suchen und es zu zerstören?}{Ich darf die Hoffnung nicht aufgeben, dass er noch lebt.  Würdet Ihr weiter nach ihm suchen?  In seinem Tagebuch ist von einem Portal die Rede ...  Seid Ihr gewillt, ihn dort zu suchen und es zu zerstören?}{}{}{}{}
+{150}{Ja.  Ich werde meine Suche fortsetzen.  Ich werde zurückkehren.}{}{5}{}{0}{qu1120 2}
+{151}{Ich glaube nicht, dass ich so einer Aufgabe gewachsen bin.  Es tut mir Leid.  Lebt wohl.}{}{5}{}{0}{}
+{152}{Jaaa.  Ich noch mehr suchen geh'n.  Ich wieda her kommen.}{}{-4}{}{0}{qu1120 2}
+{153}{Das ich nich' können.  Mich Leid tun.  Tschö.}{}{-4}{}{0}{}
+{154}{E:}{}{1}{}{0}{}
+{155}{Sein Tagebuch?  Ihr seid also in seiner Werkstatt gewesen.  Bitte, lasst es mich sehen ...  [Sie nimmt das Buch und blättert es durch.  Als sie beim letzten Eintrag angelangt ist, wird sie leichenblass.]  Oh nein!  Mein Sohn!  Was hast du nur getan!?!  [Sie schaut zu dir auf.] Ihr habt keine Spur von ihm gesehen?}{Sein Tagebuch?  Ihr seid also in seiner Werkstatt gewesen.  Bitte, lasst es mich sehen ...  [Sie nimmt das Buch und blättert es durch.  Als sie beim letzten Eintrag angelangt ist, wird sie leichenblass.]  Oh nein!  Mein Sohn!  Was hast du nur getan!?!  [Sie schaut zu dir auf.] Ihr habt keine Spur von ihm gesehen?}{}{}{}{in 5240, qu1119 4}
+{156}{Nein. Es tut mir Leid.  Seine Werkstatt steht wohl schon eine ganze Weile leer.}{}{5}{}{149}{}
+{157}{Nö. Mich Leid tun.  Sein Weckstatt schon lang leer ...}{}{-4}{}{149}{}
+{158}{E:}{}{1}{}{0}{}
+{159}{Oh nein!  Was ist denn nur passiert!?!  Lasst mich sein Tagebuch sehen ...  [Sie nimmt das Buch und blättert es durch.  Als sie beim letzten Eintrag angelangt ist, wird sie leichenblass.]  Oh nein!  Mein Sohn!  Was hast du nur getan!?!  [Sie schaut zu dir auf.] Ihr habt keine Spur von ihm gesehen?}{Oh nein!  Was ist denn nur passiert!?!  Lasst mich sein Tagebuch sehen ...  [Sie nimmt das Buch und blättert es durch.  Als sie beim letzten Eintrag angelangt ist, wird sie leichenblass.]  Oh nein!  Mein Sohn!  Was hast du nur getan!?!  [Sie schaut zu dir auf.] Ihr habt keine Spur von ihm gesehen?}{}{}{}{in 5240, qu1119 4}
+{160}{Leider muss ich berichten, dass ich seine Leiche gefunden habe ...  Das war in der Nähe des Portals.}{}{5}{}{103}{}
+{161}{Mich Leid tun.  Ich ihn totig seh'n.  Er liegen neben Portal, ganz totig.}{}{-4}{}{103}{}
+{162}{E:}{}{1}{}{0}{}
+{163}{Und die Bestien streifen weiterhin durch den Wald?  Was sollen wir nur tun? [Schluchzt.] Mein Sohn ist tot ...  Er war unsere größte Hoffnung gegen diesen seltsamen Feind.  Wer soll uns jetzt noch retten?  Wer wird das Portal schließen und die Bestien aufhalten?}{Und die Bestien streifen weiterhin durch den Wald?  Was sollen wir nur tun? [Schluchzt.] Mein Sohn ist tot ...  Er war unsere größte Hoffnung gegen diesen seltsamen Feind.  Wer soll uns jetzt noch retten?  Wer wird das Portal schließen und die Bestien aufhalten?}{}{}{}{}
+{164}{Ich werde es tun.  Ich schließe das Portal und komme umgehend zurück.}{}{5}{}{0}{qu1120 2}
+{165}{Ich bete, dass Ihr bald jemanden findet.  Die Bestien werden immer stärker.}{}{5}{}{0}{}
+{166}{Ich tun das!  Ich zumachen ... Ich Euch retten!}{}{-4}{}{0}{qu1120 2}
+{167}{Ich hoffen, Ihr guttig Person finden.  Biesties viel großig sein!}{}{-4}{}{0}{}
+{168}{E:}{}{1}{}{0}{}
+{169}{Vielen Dank, @pcname@.  Ich bin auf ewig dankbar.}{Vielen Dank, @pcname@.  Ich bin auf ewig dankbar.}{}{re -80}{}{re +5, lf5 1}
+{170}{E:}{}{1}{}{0}{}
+

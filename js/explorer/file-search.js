@@ -10,7 +10,7 @@ import { decodeMobBuffer } from '../mob/mob-decoder.js';
 import { loadDescriptionMes, protoDescriptionInfo } from '../proto/proto-mes.js';
 import { joinPath, manifestFiles, manifestSubfolders } from '../core/manifest.js';
 import { breadcrumbEl, gridEl, paginationEl, searchClearBtnEl, searchInputEl, viewerEl } from '../core/dom.js';
-import { errText, fetchBuffer, fetchText, decodeText } from '../core/text-io.js';
+import { errText, fetchBuffer, fetchText, decodeTextSniffed } from '../core/text-io.js';
 import { encPath } from '../core/util.js';
 import { decodeScrBuffer } from '../scr/scr-decoder.js';
 import { loadExplainTables, simplifyRows } from '../scr/scr-explain.js';
@@ -19,19 +19,63 @@ import { dlgParseFields } from '../text/dlg-explorer.js';
 import { loadDynamicTables, resolveDynamic } from '../text/dlg-dynamic.js';
 import { matchFields, splitTerms } from './match.js';
 import { visit } from './nav-history.js';
+import { indexedValue } from './search-index.js';
 
 const RESULT_LIMIT = 400;
-const CONCURRENCY = 8;
+const CONCURRENCY = 32;   // GitHub Pages serves over HTTP/2: more files in flight hide the round trips of the files not in the search index
 
 let provider = null;   // { rootName, loadManifest, ext, fileIcon, openFile, restore, fields?, cards?, scope? }
 // Where a search starts: the data root, or what provider.scope(current folder) names (the MOB explorer lists the mods and modules too: reading the
 // 119 000 objects of all of them for every search would take minutes, so it searches the game, mod or module the folder belongs to).
-const searchStart = () => provider.scope ? provider.scope(provider.where?.().path || '') : '';
+// By default only the base game is searched; the list under the search field adds whole data/mods and data/modules or single mods / modules.
+const scopeEl = document.getElementById('explorerSearchScope');
+const BASE = '__base';
+const searchStarts = () => {
+  const start = provider.scope ? provider.scope(provider.where?.().path || '') : '';
+  const picked = scopeEl ? [...scopeEl.selectedOptions].map(o => o.value) : [BASE];
+  const starts = picked.filter(v => v !== BASE);
+  if (!starts.length || picked.includes(BASE)) starts.unshift(start);
+  return starts;
+};
+// From the data root, mods/ and modules/ are left out: the list adds them as starts of their own.
+const skipFolder = (path, name) => !path && (name === 'mods' || name === 'modules');
+
+// Fills the list with the folders of data/mods and data/modules, once.
+let scopeFilled = false;
+async function fillScopeList() {
+  if (scopeFilled || !scopeEl || !provider) return;
+  scopeFilled = true;
+  const groups = [['mods', 'Mods'], ['modules', 'Modules']];
+  const loaded = await Promise.all(groups.map(async ([dir]) => {
+    try { return manifestSubfolders(await provider.loadManifest(dir, dir)); } catch (_) { return []; }
+  }));
+  if (!loaded.some(subs => subs.length)) { scopeFilled = false; scopeEl.hidden = true; return; }
+  scopeEl.hidden = false;
+  scopeEl.appendChild(new Option('Base game', BASE, true, true));
+  groups.forEach(([dir, title], i) => {
+    if (!loaded[i].length) return;
+    const group = document.createElement('optgroup');
+    group.label = title;
+    group.appendChild(new Option(`All ${title.toLowerCase()}`, dir));
+    for (const sf of loaded[i]) group.appendChild(new Option(sf.folder_name, joinPath(dir, sf.relative_path || sf.folder_name)));
+    scopeEl.appendChild(group);
+  });
+}
+async function listAll(out) {
+  const visited = new Set();
+  // the base game, the mods and the modules are listed side by side (each listing is a round trip online), then joined in order
+  const parts = await Promise.all(searchStarts().map(async start => {
+    const part = [];
+    await listFiles(start, provider.rootName, part, visited);
+    return part;
+  }));
+  for (const part of parts) out.push(...part);
+}
 let searching = 0;
 // The last query of each category (by extension), so coming back to the category shows its results again.
 const lastQueries = new Map();
 
-export function registerSearchProvider(next) { provider = next; }
+export function registerSearchProvider(next) { provider = next; fillScopeList(); }
 
 // Shows the last search of the category registered now again. Returns false when there was none.
 export function resumeFileSearch() {
@@ -44,20 +88,25 @@ export function resumeFileSearch() {
 
 // Extra fields read from the files themselves. Each returns async (path, filename) => [{ label, text }].
 const fieldCache = new Map();
-function cachedFields(url, read) {
-  if (!fieldCache.has(url)) fieldCache.set(url, fetchBuffer(url).then(read).catch(() => []));
+// A file url ('data/dlg/x.dlg') as its path under data/, for the prebuilt search text (search-index.js).
+const dataPathOf = url => (url.startsWith(DATA_ROOT) ? decodeURIComponent(url.slice(DATA_ROOT.length)) : '');
+// `fromIndex` turns the value the search index holds for the file into its fields; without an entry the file is read.
+function cachedFields(url, read, fromIndex) {
+  if (!fieldCache.has(url)) {
+    fieldCache.set(url, indexedValue(dataPathOf(url)).then(v => (v === undefined ? fetchBuffer(url).then(read) : fromIndex(v))).catch(() => []));
+  }
   return fieldCache.get(url);
 }
 const fileUrl = (root, path, filename) => `${root}${path ? `${encPath(path)}/` : ''}${encPath(filename)}`;
 
 // .DLG / .MES: the whole text of the file.
 export const textFileFields = root => (path, filename) =>
-  cachedFields(fileUrl(root, path, filename), buf => [{ label: 'text', text: decodeText(buf) }]);
+  cachedFields(fileUrl(root, path, filename), buf => [{ label: 'text', text: decodeTextSniffed(buf) }], text => [{ label: 'text', text }]);
 // .SCR: the description written in the header, then every line told in plain English (the same text as
 // the Simplify view: quest names, item names, the words of the dialogue lines it shows…).
 export const scrFileFields = root => (path, filename) =>
   cachedFields(fileUrl(root, path, filename), async buf => {
-    const decoded = decodeScrBuffer(buf, filename);
+    const decoded = decodeScrBuffer(buf, filename, { sniff: true });
     const fields = [{ label: 'description', text: decoded.description }];
     try {
       const [dlg] = await Promise.all([scrDialogue(filename), loadExplainTables(), loadDynamicTables()]);
@@ -71,7 +120,7 @@ export const scrFileFields = root => (path, filename) =>
       if (text) fields.push({ label: 'script', text });
     } catch (_) { /* the tables are missing: the description alone is searched */ }
     return fields;
-  });
+  }, rows => rows.map(([label, text]) => ({ label, text })));
 // The .dlg that shares the script's file name.
 const scrDialogue = async filename => {
   try {
@@ -88,7 +137,7 @@ export const mobFileFields = root => (path, filename) =>
     await loadDescriptionMes();
     const text = protoDescriptionInfo(name.value).text;
     return text ? [{ label: 'description', text }] : [];
-  });
+  }, text => (text ? [{ label: 'description', text }] : []));
 
 export const DLG_FIELDS = textFileFields(DATA_ROOT);
 export const MES_FIELDS = textFileFields(DATA_ROOT);
@@ -102,7 +151,7 @@ async function listFiles(path, name, out, visited) {
   try { manifest = await provider.loadManifest(path, name); } catch (_) { return; }
   for (const filename of manifestFiles(manifest, provider.ext)) out.push({ filename, path });
   // sub-folders are read all at once (online each manifest is a round trip), their files kept in folder order
-  const subs = await Promise.all(manifestSubfolders(manifest).map(async sf => {
+  const subs = await Promise.all(manifestSubfolders(manifest).filter(sf => !skipFolder(path, sf.folder_name)).map(async sf => {
     const sub = [];
     await listFiles(joinPath(path, sf.relative_path || sf.folder_name), sf.folder_name, sub, visited);
     return sub;
@@ -135,7 +184,10 @@ function showCenterGrid() {
 const LINE_LIMIT = 1500;
 const lineCache = new Map();
 export const cachedLines = (url, read) => {
-  if (!lineCache.has(url)) lineCache.set(url, fetchBuffer(url).then(buf => read(decodeText(buf))).catch(() => []));
+  if (!lineCache.has(url)) {
+    lineCache.set(url, indexedValue(dataPathOf(url))
+      .then(text => (typeof text === 'string' ? read(text) : fetchBuffer(url).then(buf => read(decodeTextSniffed(buf))))).catch(() => []));
+  }
   return lineCache.get(url);
 };
 
@@ -161,7 +213,7 @@ function highlighted(text, terms) {
 
 async function runLineSearch(terms, shown, label, token) {
   const files = [];
-  await listFiles(searchStart(), provider.rootName, files, new Set());
+  await listAll(files);
   const groups = [];   // { filename, path, lines: [...] } in file order
   let total = 0, next = 0, checked = 0;
   const worker = async () => {
@@ -279,14 +331,18 @@ export async function runFileSearch(rawQuery) {
   const files = [];
   const hits = [];
   try {
-    await listFiles(searchStart(), provider.rootName, files, new Set());
+    await listAll(files);
     let next = 0, checked = 0;
     const worker = async () => {
       while (next < files.length && hits.length < RESULT_LIMIT && token === searching) {
         const file = files[next++];
         const fields = [{ label: 'name', text: file.filename }, { label: 'folder', text: file.path }];
-        if (provider.fields) fields.push(...await provider.fields(file.path, file.filename));
-        const hit = matchFields(fields, terms);
+        // The file is only read when its name and folder do not already answer every word (the name and folder come first, so the result is the same).
+        let hit = matchFields(fields, terms);
+        if (!hit && provider.fields) {
+          fields.push(...await provider.fields(file.path, file.filename));
+          hit = matchFields(fields, terms);
+        }
         if (hit) hits.push({ ...file, note: hit.note });
         if (++checked % 40 === 0 && token === searching) breadcrumbEl.textContent = `Searching ${label} files for "${shown}"… ${checked} / ${files.length}`;
       }
@@ -325,6 +381,18 @@ export async function runFileSearch(rawQuery) {
     cards?.decorate?.(card, filename, path);
   }
 }
+
+// A click toggles an entry (no Ctrl needed) and searches again with the query on show.
+scopeEl?.addEventListener('mousedown', ev => {
+  if (ev.target.tagName !== 'OPTION') return;
+  ev.preventDefault();
+  ev.target.selected = !ev.target.selected;
+  if (!scopeEl.selectedOptions.length) scopeEl.querySelector(`option[value="${BASE}"]`).selected = true;   // never nothing: back to the base game
+  scopeEl.dispatchEvent(new Event('change'));
+});
+scopeEl?.addEventListener('change', () => {
+  if (provider && searchInputEl.value.trim()) runFileSearch(searchInputEl.value);
+});
 
 export function clearFileSearch(searchInput) {
   searching++;

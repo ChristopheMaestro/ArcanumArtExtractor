@@ -1,0 +1,70 @@
+{1}{@pcname@ ?}{@pcname@ ?}{}{}{}{ru 1031, gf175 1}
+{2}{En effet.}{}{5}{}{10}{}
+{3}{[Vous hochez la tête]}{}{1}{}{10}{}
+
+{10}{Je... je... [Elle éclate en sanglots] Je vous en prie, vous devez m'aider.}{Je... je... [Elle éclate en sanglots] Je vous en prie, vous devez m'aider.}{}{}{}{}
+{11}{Allons, que se passe-t-il ?}{}{5}{}{20}{}
+{12}{Vraiment ?}{}{5}{}{30}{}
+{13}{Quoi se passer ?}{}{-4}{}{20}{}
+
+{20}{Je n'en peux plus ! Le directeur ! Le directeur ! Il... C'est lui le coupable !}{Je n'en peux plus ! Le directeur ! Le directeur ! Il... C'est lui le coupable !}{}{}{}{}
+{21}{Vraiment ?}{}{1}{}{40}{}
+{22}{Et qu'est-ce qui vous permet de l'affirmer ?}{}{5}{}{50}{}
+
+{30}{Oui ! Je... je sais qui est le coupable : c'est le directeur !}{Oui ! Je... je sais qui est le coupable : c'est le directeur !}{}{}{}{}
+{31}{Vraiment ?}{}{1}{}{40}{}
+{32}{Et qu'est-ce qui vous permet de l'affirmer ?}{}{5}{}{50}{}
+
+{40}{Oui je... en fait peut-être pas mais une chose est sûre, c'est qu'il s'agit d'un être tyranique : il terrorise tout le personnel. Personne n'osera surement le critiquer mais c'est la stricte vérité. Vous devez en parler à vos supérieurs, je vous en prie !}{Oui je... en fait peut-être pas mais une chose est sûre, c'est qu'il s'agit d'un être tyranique : il terrorise tout le personnel. Personne n'osera surement le critiquer mais c'est la stricte vérité. Vous devez en parler à vos supérieurs, je vous en prie !}{}{}{}{}
+{41}{Bon, je vais y réfléchir.}{}{5}{}{0}{}
+{42}{Vous pouvez compter sur moi.}{}{5}{}{0}{}
+{43}{Moi le faire.}{}{-4}{}{0}{}
+
+{50}{Rien je... en fait, ce n'est peut-être pas lui mais une chose est sûre, c'est qu'il s'agit d'un être tyranique : il terrorise tout le personnel. Personne n'osera surement le critiquer mais c'est la stricte vérité. Vous devez en parler à vos supérieurs, je vous en prie !}{Rien je... en fait, ce n'est peut-être pas lui mais une chose est sûre, c'est qu'il s'agit d'un être tyranique : il terrorise tout le personnel. Personne n'osera surement le critiquer mais c'est la stricte vérité. Vous devez en parler à vos supérieurs, je vous en prie !}{}{}{}{}
+{51}{Bon, je vais y réfléchir.}{}{5}{}{0}{re +10}
+{52}{Vous pouvez compter sur moi.}{}{5}{}{0}{re +20}
+{53}{Moi le faire.}{}{-4}{}{0}{re+ 15}
+
+
+{100}{Alors @pcname@, du nouveau ?}{Alors @pcname@, du nouveau ?}{}{}{}{}
+{101}{Oui, il nous faut des preuves de la culpabilité du directeur.}{}{5}{ru 1032, gf 131 0}{120}{gf98 1, re -5, gf131 1}
+{102}{Moi devoir preuves que lui coupable.}{}{-4}{ru 1032, gf 131 0}{120}{gf98 1, re -5, gf131 1}
+{103}{Oui, j'ai pu repérer un coffret suspect dans le bureau du directeur.}{}{5}{gf95 1}{-6}{gf95 0} //130
+{104}{Moi a repéré coffre dans b'reau de 'recteur.}{}{-4}{gf95 1}{-6}{gf95 0} //130
+{105}{J'ai repéré une grille d'aération dans le bureau du directeur.}{}{5}{gf106 1, lf0 1}{140}{gf106 0, lf0 0}
+{106}{Y a grille d'ration dans bureau.}{}{-4}{gf106 1, lf0 1}{140}{gf106 0, lf0 0}
+{107}{Nous avions raison, c'était bien le directeur le coupable.}{}{5}{gf134 0, gf133 1, lf1 0}{125}{lf1 1, re +20}
+{108}{Nous juste ! Lui coupable !}{}{-4}{gf134 0, gf133 1, lf1 0}{125}{lf1 1, re +20}
+{109}{Pas encore, chaque chose en son temps.}{}{5}{}{0}{}
+{110}{Pas t'encore.}{}{-4}{}{0}{}
+
+{120}{Ah ? Evidemment, vous ne pouvez rien faire tant qu'on n'est pas sûr de sa culpabilité. Je n'en suis pas sûre moi même à vrai dire. Cependant, il est actuellement dans son bureau, vous pouvez y aller et si vous remarquer un détail suspect, revenez en discuter avec moi.}{Ah ? Evidemment, vous ne pouvez rien faire tant qu'on n'est pas sûr de sa culpabilité. Je n'en suis pas sûre moi même à vrai dire. Cependant, il est actuellement dans son bureau, vous pouvez y aller et si vous remarquer un détail suspect, revenez en discuter avec moi.}{}{}{}{}
+{121}{Excellente idée, j'y vais de ce pas.}{}{5}{}{0}{}
+{122}{Je vais réfléchir à ce plan.}{}{5}{}{0}{}
+{123}{Moi faire ça !}{}{-4}{}{0}{}
+
+{125}{C'est vrai ? [Il semble que cela la réjouit] Je peux vous laisser vous occuper du reste alors...}{C'est vrai ? [Il semble que cela la réjouit] Je peux vous laisser vous occuper du reste alors...}{}{}{}{}
+{126}{Oui, comptez sur moi.}{}{5}{}{0}{fl 129}
+{127}{Yep, moi faire !}{}{-4}{}{0}{fl 129}
+
+{129}{Je me sens vraiment soulagée, merci beaucoup !}{Je me sens vraiment soulagée, merci beaucoup !}{}{}{}{}
+
+{130}{Vraiment ? Il contient peut-être nos preuves ! [Elle s'emballe] Bon est-ce que vous avez trouvé comment vous introduire dans son bureau pendant son absence ?}{Vraiment ? Il contient peut-être nos preuves ! [Elle s'emballe] Bon est-ce que vous avez trouvé comment vous introduire dans son bureau pendant son absence ?}{}{}{}{}
+{131}{Oui, il y a une grille d'aération dans son bureau.}{}{5}{gf106 1}{140}{gf106 0}
+{132}{Y a grille d'ration dans l'bureau.}{}{-4}{gf106 1}{140}{gf106 0}
+{133}{Non, pas encore.}{}{5}{}{0}{fl 138}
+{134}{Nan, pas 'core.}{}{-4}{}{0}{fl 138}
+
+{138}{Ah ? Mince. Vous devriez p'têt y retourner.}{Ah ? Mince. Vous devriez p'têt y retourner.}{}{}{}{lf0 1}
+
+{140}{Vraiment ? C'est parfait. Tout ce qu'il nous manque c'est comment accéder à l'aération. Il y a une bouche d'aération au rez-de-chaussée près de l'ascenseur mais il y a une infirmière en poste dans ce coin là. Mais ce n'est pas très important. Vous n'aurez qu'à lui dire que je la cherche partout et que je lui donne rendez-vous ici. Au fait, je m'appelle Isabelle mais tout le monde m'appelle "Isa".}{Vraiment ? C'est parfait. Tout ce qu'il nous manque c'est comment accéder à l'aération. Il y a une bouche d'aération au rez-de-chaussée près de l'ascenseur mais il y a une infirmière en poste dans ce coin là. Mais ce n'est pas très important. Vous n'aurez qu'à lui dire que je la cherche partout et que je lui donne rendez-vous ici. Au fait, je m'appelle Isabelle mais tout le monde m'appelle "Isa".}{}{}{}{}
+{141}{Bon, je vais faire comme ça.}{}{5}{}{145}{}
+{142}{Moi faire ça.}{}{-4}{}{145}{}
+
+{145}{Ah mais il nous reste d'autres problèmes. Tout d'abord, je ne sais pas grand chose sur la ventilation, vous devriez demander à Carl pour ça. Ensuite, il nous faut un parchemin de perception du contenu pour savoir ce qu'il y a dans ce coffre sinon nous introduire dans le bureau ne servira à rien.}{Ah mais il nous reste d'autres problèmes. Tout d'abord, je ne sais pas grand chose sur la ventilation, vous devriez demander à Carl pour ça. Ensuite, il nous faut un parchemin de perception du contenu pour savoir ce qu'il y a dans ce coffre sinon nous introduire dans le bureau ne servira à rien.}{}{}{}{}
+{146}{Bon, je m'occupe de tout ça alors.}{}{5}{}{0}{qu1012 2, fl 150, gf107 1, gf110 1}
+{147}{Bon, moi faire tout ça !}{}{-4}{}{qu1012 2, fl 150, gf107 1, gf110 1}
+
+{150}{Merci beaucoup, vraiment !}{Merci beaucoup, vraiment !}{}{}{}{}
+
+{1000}{@pcname@ ? Pourriez-vous revenir un peu plus tard ? Je suis vraiment terriblement occupée.}{@pcname@ ? Pourriez-vous revenir un peu plus tard ? Je suis vraiment terriblement occupée.}{}{}{}{}

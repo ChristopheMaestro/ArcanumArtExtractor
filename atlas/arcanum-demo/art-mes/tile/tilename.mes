@@ -1,0 +1,125 @@
+// NOTE: any 3-letter tile name prefix can have flags after the
+// name, following a / character. Valid flags are:
+//	b - tile blocks critter motion
+//	f - tile blocks critter motion but allows flying
+//	s - critters sink in this tile
+//	i - icy or slippery tile, critters may fall down
+//	n - natural (not man-made) tile
+//	p - soundproof (or almost so), sounds are deadened thru this tile
+//
+// After the name and any optional flags, put a space and a number. The
+// number is the sound type that footsteps will make on this type of
+// tile. Valid numbers are
+//
+// 	0 dirt
+//	1 sand
+//	2 snow
+//	3 stone
+//	4 water
+//	5 wood
+//
+// For clarity, please place a number. If it is missing however, a 0
+// will be assumed.
+
+
+// Outdoor flippable tile names start here, at 0
+{0}{drt/n 0} Dirt
+{1}{grs/n 0} Grass
+{2}{rck/n 3} Rocky Ground
+{3}{snw/n2} Snow
+{4}{dg1/n 0} Dead Grass 1
+{5}{bg1/n 0} Bog Shore 1
+{6}{bg2/s/n 4} /s Bog Shore 2
+{7}{bog/s/n 4} /s Bog Water
+{8}{sw1/n 0} Shallow Water 1
+{9}{sw2/s/n 4} /s Shallow Water 2
+{10}{sw3/s/n 4} /s Shallow Water 3
+{11}{swr/s/n 4} /s Shallow Water
+{12}{dwr/f/n 4} /f Deep Water
+{13}{rok/b/n/p 3} /b Solid Rock
+{14}{WK1 3}  Side Walk 1
+{15}{WK2 3} Side Walk 2
+{16}{ST1 3} Street1
+{17}{WD3 5} Outdoor Wood Planks
+{18}{Dst/n 1}Desert
+{19}{ssd/n 1}Shallow Sand
+{20}{dIs/n 1}Desert Island
+{21}{Jdt/n 0}Jungle Dirt
+{22}{Jgr/n 0}Jungle Grass
+{23}{SxW/f 0} /f Sea Wall
+{24}{sod/f 4} Outdoor sewer
+{25}{TS1 3} Tarant Street 1
+{26}{TS2 3} Tarant Street 2
+{27}{TDt/n 0} Tordded Dirt
+{28}{Blk/b/p 0} /b Black Yall
+{29}{VDR/n 0} Void Dirt
+{30}{FOG/b} Void Fog
+
+// Outdoor non-flippable tile names start here, at 100
+{100}{TST 0}
+{101}{Prh 5}
+{102}{Dks 5}
+{103}{TLa 3} Tulla walkways
+{104}{VWK 0}
+{105}{ICE/i/n 3}
+
+// Indoor flippable tile names start here, at 200
+{200}{fl1 3}
+{201}{wod 5}
+
+// Indoor non-flippable tile names start here, at 300
+{300}{Dn1 3}
+{301}{WI1 3}
+{302}{Dn2 3}
+{303}{CF1/n 0} Cavern Floor 1
+{304}{WD1 5}
+{305}{Sew/s 4} Sewer Water Floor
+{306}{WD2 5} Dark Wood Floors
+{307}{ILL 0} Illegal Tiles
+{308}{Dir/n 0} Dirt Indoor Floor
+{309}{cf2/n 0}
+{310}{STD 3} //Dungeon Floors
+{311}{VFL 0} //VoidFloors
+{312}{JIN/n 0} //Jungle Dirt inside
+
+// Edges start here, at 400
+// Note you only have to list an edge once. If you add a line
+// called GRSDRT, you don't need a DRTGRS (although it's OK
+// to have it, it's redundant)
+
+{400}{drtgrs}
+{401}{drtrck}
+{402}{rcksnw}
+{403}{drtdg1}
+{404}{drtbg1}
+{405}{bg1bg2}
+{406}{bg2bog}
+{407}{drtsw1}
+{408}{sw1sw2}
+{409}{sw2sw3}
+{410}{sw3swr}
+{411}{swrdwr}
+{412}{drtrok}
+{413}{drtWK1}
+{414}{drtWK2}
+{415}{drtST1}
+{416}{drtWD3}
+{417}{drtDst}
+{418}{swrssd}
+{419}{ssddIs}
+{420}{dIsJdt}
+{421}{JdtJgr}
+{422}{drtsod}
+{423}{drtSxW}
+{424}{drtTS1}
+{425}{TS1TS2}
+{426}{drtTDt}
+{427}{drtBlk}
+{428}{drtTST}
+{429}{drtPrh}
+{430}{dwrDks}
+{431}{dIsTLa}
+{432}{DrtFOG}
+{433}{DrtVDR}
+{434}{VDRVWK}
+{435}{SnwICE}

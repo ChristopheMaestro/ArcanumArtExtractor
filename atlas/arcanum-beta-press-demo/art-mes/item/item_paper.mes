@@ -1,0 +1,393 @@
+// Items on the paper doll (wielded in inventory)
+
+// weapons start at 0
+// subtypes begin at multiples of 20 and are values of TIG_Art_Weapon in art.h
+
+// --- daggers start at 40
+{40}{p_dagger01.ART}
+{41}{p_dagger02.ART}
+{42}{p_dagger03.ART}
+{43}{p_dagger04.ART}
+{44}{p_generic_dagger.ART}
+{45}{p_rusted_generic_dagger.ART}
+{46}{P_DaggerSpeed.art}
+{47}{P_magedagger.art}
+{48}{P_ThrowDagger.ART}
+{49}{P_KiteSword.art}
+{50}{p_spike01.ART}
+
+// --- one-handed swords start at 60
+{60}{p_1hsword01.ART}
+{61}{p_1hsword02.ART}
+{62}{p_1hsword03.ART}
+{63}{P_CalEliteGuardSword.art}
+{64}{p_sword_of_balance.ART}
+{65}{p_2hsword04.ART}
+{66}{p_2hsword05.ART}
+{67}{p_2hsword06.ART}
+{68}{p_2hsword07.ART}
+{69}{p_2hsword08.ART}
+{70}{p_2hsword09.ART}
+{71}{p_rusted_generic_sword.ART}
+{72}{p_generic_sword.ART}
+
+{73}{P_DefensSword.art}
+{74}{P_EnchantedSword.art}
+{75}{P_Falchion.art}
+{76}{P_Katana.art}
+{77}{P_Scimitar.art}
+{78}{P_SWSword.art}
+{79}{P_VenomSword.art}
+
+// --- axes start at 80
+{80}{p_axe01.ART}
+{81}{p_axe02.ART}
+{82}{p_axe03.ART}
+{83}{p_axe04.ART}
+{84}{needart.ART}
+{85}{p_rusted_generic_axe.ART}
+
+{86}{P_ReapersAxe.art}
+{87}{P_StrengthAxe.art}
+
+// --- maces/hammers start at 100
+{100}{p_hammer01.ART}
+{101}{p_generic_mace.ART}
+{102}{p_rusted_generic_mace.ART}
+{103}{p_magical_hammer.ART}
+{104}{p_magical_mace.ART}
+{105}{p_rusted_generic_hammer.ART}
+
+{106}{P_CrushingHammer.art}
+{107}{P_GoodHammer.art}
+{108}{P_GoodMace.art}
+{109}{P_IngernoHammer.art}
+{110}{P_MachinedHammer.art}
+{111}{p_big_pipe.art}
+
+// --- pistols start at 120
+{120}{p_pistol01.ART}
+{121}{p_pistol02.ART}
+{122}{p_pistol03.ART}
+{123}{p_pistol04.ART}
+{124}{p_pistol05.ART}
+{125}{p_pistol06.ART}
+{126}{p_pistol07.ART}
+{127}{needart.ART}
+{128}{p_new_generic_pistol.ART}
+{129}{p_rusted_generic_pistol.ART}
+
+{130}{p_pistol02.ART}
+{131}{P_OldFlintlockPistol.art}
+{132}{p_hushed_revolver.art}
+{133}{p_Crude_Flintlock.art}
+
+// --- two-handed swords start at 140
+{140}{p_2hsword01.ART}
+{141}{p_2hsword02.ART}
+{142}{p_2hsword03.ART}
+{143}{p_generic_2_h_sword.ART}
+{144}{p_rusted_generic_2_h_sword.ART}
+
+{145}{P_Claymore.art}
+{146}{P_BarbarianSword.art}
+{147}{P_AirSword.art}
+{148}{P_Flamberge.art}
+{149}{P_SicknessSword.art}
+
+// --- bows start at 160
+{160}{p_bow01.ART}
+{161}{p_bow02.ART}
+{162}{P_ElvenBow.art}
+{163}{P_LongBow.art}
+{164}{P_ShortBow.art}
+{165}{P_TerrorBow.art}
+
+// --- rifles/hi tech guns start at 200
+{200}{p_rifle01.ART}
+{201}{p_rifle02.ART}
+{202}{p_rifle03.ART}
+{203}{p_rifle04.ART}
+{204}{i_rifle_elephant_gun.ART}
+{205}{i_rifle_folding_rifle.ART}
+{206}{i_rifle_hunting_rifle.ART}
+{207}{i_rifle_looking_glass_rifle.ART}
+{208}{i_rifle_mechanized_gun.ART}
+{209}{i_rifle_marksman's_rifle.ART}
+{210}{i_rifle_repeater_rifle.ART}
+{211}{p_generic_rifle.ART}
+{212}{p_rusted_generic_rifle.ART}
+
+{213}{P_FlameThrower.art}
+
+// --- staffs start at 260
+{260}{p_staff01.ART}
+{261}{p_staff02.ART}
+{262}{p_staff03.ART}
+{263}{P_shocking_staff.ART}
+{264}{P_Tesla_Rod.ART}
+
+{265}{P_HealingStaff1.art}
+{266}{P_MageStaff1.art}
+{267}{P_ShamanStaff.art}
+
+// ammo starts at 1000, with subgroups increasing by 20
+// (paper doll art is used by the inventory transfer window)
+{1000}{P_Arrows.ART}
+
+{1020}{P_Bullets.ART}
+
+{1040}{P_Charges.ART}
+
+{1060}{P_Fuel.ART}
+
+// armor starts at 2000
+// subtypes begin at multiples of 20 and are values of TIG_Art_Armor in art.h
+
+// --- underwear starts at 2000
+
+// --- villager starts at 2020
+{2020}{p_CivBlu0.ART}
+{2021}{p_CivBlk0.ART}
+{2022}{p_CivGrn0.ART}
+{2023}{p_Armor_padded_cloth_brown.ART}
+{2024}{P_PoisonJacket.ART}
+{2025}{p_black_rag.ART}
+{2026}{p_green_rag.ART}
+{2027}{p_red_rag.ART}
+{2028}{p_white_rag.ART}
+
+// --- leather starts at 2040
+{2040}{p_leather01.ART}
+{2041}{p_leatherblue01.ART}
+{2042}{p_leatherbrown01.ART}
+{2043}{p_armor_leather_Black.ART}
+{2044}{p_armor_leather_Grey.ART}
+
+{2045}{P_DragonSkinJacket.art}
+{2046}{P_CreepJacket.art}
+{2047}{P_MThievesLeather.art}
+{2048}{P_healing_jacket.ART}
+
+// --- chain starts at 2060
+{2060}{p_armor_chainmail_blue.ART}
+{2061}{i_ultralite_chainmail.ART}
+{2062}{p_armor_chainmail_red.ART}
+{2063}{p_armor_ChainMail_White.ART}
+{2064}{p_armor_ChainMail_Orange.ART}
+{2065}{p_armor_ChainMail_ultralite_Orange.ART}
+
+{2066}{P_ChainSmall.art}
+{2067}{P_elvenchain.ART}
+{2068}{P_Caladon_chainmail_blue.ART}
+{2069}{P_DwarvenChain.art}
+{2070}{P_GnomishChain.art}
+{2071}{P_Mithril_chainmail.ART}
+
+// --- plate starts at 2080
+{2080}{i_Armor_TechPlate_Brown.ART}
+{2081}{i_armor_techplate_blue.ART}
+{2082}{i_tplate03.ART}
+{2083}{i_Armor_TechPlate_Red.ART}
+{2084}{i_tplate05.ART}
+{2085}{i_tplate06.ART}
+
+// --- robes starts at 2100
+{2100}{p_robe01.ART}
+{2101}{p_armor_robe_white.ART}
+{2102}{p_armor_robe_black.ART}
+{2103}{p_armor_robe_blue.ART}
+
+{2104}{P_ChameleonRobe.art}
+{2105}{P_MageRobe1.art}
+{2106}{P_shadowRobe.art}
+{2107}{p_robe02.ART}//green
+
+// --- plate classic starts at 2120
+{2120}{i_armor_plate_grey.ART.ART}
+{2121}{i_armor_plate_dark-grey.ART}
+{2122}{i_Armor_plate_yellow-purple.ART}
+{2123}{i_armor_plate_Blue.ART}
+{2124}{i_elite_plate_mail.ART}
+
+// --- barbarian starts at 2140
+{2140}{i_barb01.ART}
+{2141}{i_Armor_Barbarian_Bronze.ART}
+{2142}{i_Armor_Barbarian_Grey.ART}
+{2143}{i_Armor_Barbarian_Dark-Grey.ART}
+{2144}{i_Armor_Barbarian_Red.ART}
+
+// --- city dweller starts at 2160
+{2160}{p_armor_citydweller_suit_dark-grey.ART}
+{2161}{p_armor_citydweller_suit_red.ART}
+{2162}{p_armor_citydweller_suit_white.ART}
+{2163}{p_armor_citydweller_suit_brown.ART}
+{2164}{p_black_dress.ART}
+{2165}{p_blue_dress.ART}
+{2166}{p_green_dress.ART}
+{2167}{p_magenta_dress.ART}
+
+// shields begin at 2300
+{2300}{p_shield1.ART}
+{2301}{p_shield2.ART}
+{2302}{p_shield3.ART}
+{2303}{p_shield4.ART}
+{2304}{p_shield5.ART}
+
+{2305}{P_ForceShield.art}
+{2306}{P_ShadowShield.art}
+{2307}{P_detector02.ART}
+
+// helmets begin at 2400
+{2400}{i_helmet01.ART}
+{2401}{i_helmet02.ART}
+{2402}{i_helmet03.ART}
+{2403}{i_helmet04.ART}
+{2404}{p_eye_gear01.ART}
+{2405}{p_eye_glasses01.ART}
+{2406}{i_helmet_top_hat.ART}
+{2407}{i_helmet_fine_helmet.ART}
+{2408}{I_HelmofLight.art}
+{2409}{I_GeleamHelm.art}
+{2410}{i_inv_mag_hat.ART}
+{2411}{i_head_band.ART}
+
+// gauntlets begin at 2500
+{2500}{i_gauntlet01.ART}
+{2501}{i_gauntlet_dwarven_gauntlet.ART}
+
+{2502}{I_RegularGauntlets.art}
+{2503}{I_LeatherGloves.art}
+{2504}{I_ChainGloves.art}
+{2505}{I_LightFingeredGloves.art}
+{2506}{I_WarGauntlets.art}
+{2507}{I_DexGloves1.art}
+
+// boots begin at 2600
+{2600}{i_boot01.ART}
+{2601}{i_boot02.ART}
+
+{2602}{I_OldWomanBoot.art}
+{2603}{I_OldShoes.art}
+{2604}{I_ElvenBoots.art}
+{2605}{I_Boots.art}
+{2606}{I_WomanBoot.art}
+{2607}{I_EnchantWarBoot.art}
+{2608}{I_Shoes.art}
+{2609}{I_OldBoots.art}
+
+// rings begin at 2700
+{2700}{i_ring01.ART}
+{2701}{i_ring02.ART}
+{2702}{GBRing.ART}
+{2703}{i_charged_ring.ART}
+
+{2704}{I_RingofProtection.art}
+{2705}{I_FatedRing.art}
+{2706}{I_CopperRing.art}
+
+// medallions/necklaces begin at 2800
+{2800}{i_medal01.ART}
+{2801}{i_emblem.ART}
+{2802}{I_DorianAmulet.art}
+{2803}{I_BeautyMedalion.art}
+{2804}{I_finger_of_mannox.art}
+{2805}{I_conveyance.art}
+{2806}{I_divination.art}
+{2807}{I_earth.art}
+{2808}{I_fire.art}
+{2809}{I_force.art}
+{2810}{I_mental.art}
+{2811}{I_meta.art}
+{2812}{I_morph.art}
+{2813}{I_nature.art}
+{2814}{I_necroevil.art}
+{2815}{I_necrogood.art}
+{2816}{I_phantasm.art}
+{2817}{I_summoning.art}
+{2818}{I_temporal.art}
+{2819}{I_water.art}
+{2820}{I_air.art}
+
+// gold starts at 3000
+// (paper doll art is used by inventory transfer window)
+{3000}{P_Coins.ART}
+
+// food starts at 4000  THERE IS NEVER FOOD PAPER DOLL ART
+
+// scroll starts at 5000   THERE IS NEVER SCROLL PAPER DOLL ART
+
+// key starts at 6000   THERE IS NEVER KEY PAPER DOLL ART
+
+// key ring starts at 7000   THERE IS NEVER KEY RING PAPER DOLL ART
+
+// written starts at 8000
+
+// generic starts at 9000
+{9051}{p_big_pipe.ART}
+{9097}{p_Wisp-Essence.ART}
+
+// Destroyed items start here, at 10000
+
+// --- daggers start at 10040
+{10040}{dp_dagger01.ART}
+{10041}{dp_dagger01.ART}
+{10042}{dp_dagger01.ART}
+{10043}{dp_dagger01.ART}
+
+// --- one-handed swords start at 10060
+{10060}{dp_1hsword01.ART}
+{10061}{dp_1hsword01.ART}
+{10062}{dp_1hsword01.ART}
+{10063}{dp_1hsword01.ART}
+
+// --- axes start at 10080
+{10080}{dp_axe01.ART}
+{10081}{dp_axe01.ART}
+{10082}{dp_axe01.ART}
+{10083}{dp_axe01.ART}
+
+// --- maces/hammers start at 10100
+
+// --- pistols start at 10120
+{10120}{dp_pistol01.ART}
+{10121}{dp_pistol01.ART}
+{10122}{dp_pistol01.ART}
+{10123}{dp_pistol01.ART}
+{10124}{dp_pistol01.ART}
+{10125}{dp_pistol01.ART}
+{10126}{dp_pistol01.ART}
+
+// --- two-handed swords start at 10140
+{10140}{dp_2hsword01.ART}
+{10141}{dp_2hsword01.ART}
+{10142}{dp_2hsword01.ART}
+{10143}{dp_2hsword01.ART}
+{10144}{dp_2hsword01.ART}
+{10145}{dp_2hsword01.ART}
+{10146}{dp_2hsword01.ART}
+{10147}{dp_2hsword01.ART}
+{10148}{dp_2hsword01.ART}
+
+// --- bows start at 10160
+{10160}{dp_bow01.ART}
+{10161}{dp_bow01.ART}
+
+// --- rifles/hi tech guns start at 10200
+{10200}{dp_rifle01.ART}
+{10201}{dp_rifle01.ART}
+{10202}{dp_rifle01.ART}
+{10203}{dp_rifle01.ART}
+
+// --- staffs start at 10260
+{10260}{dp_staff01.ART}
+{10263}{dp_staff01.ART}
+{10262}{dp_staff01.ART}
+
+// shields begin at 12300
+{12300}{dp_shield01.ART}
+{12301}{dp_shield01.ART}
+{12302}{dp_shield01.ART}
+{12303}{dp_shield01.ART}
+{12304}{dp_shield01.ART}
+

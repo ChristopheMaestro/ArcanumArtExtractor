@@ -85,7 +85,7 @@ async function loadMapLightInfo(relativePath) {
 // the scheme's own file is missing, and saying so in `note`).
 export async function loadMapLighting(relativePath) {
   const info = await loadMapLightInfo(relativePath);
-  const listText = await fetchLightRulesFile('Lighting Schemes');
+  const listText = (await fetchLightRulesFile('Lighting Schemes')) || (await fetchLightRulesFile('LightingSchemes'));      // (the 2000 beta's name for the list)
   if (!listText) return { error: 'Lighting Schemes.mes not found (tried data/rules/, data/Rules/, data/mes/, data/)' };
   const list = parseMesText(listText);
   const tryScheme = async id => {

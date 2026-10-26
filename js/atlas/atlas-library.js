@@ -6,6 +6,7 @@
 // the pictures (atlas/graphics/library/): loaded once, on first use. A font is its strip in black; the white ink (the plaque) is that
 // strip with its ink coloured white
 let libReady = null;
+LB.fontsChanged = () => { libReady = null; };            // (atlas-lang.js puts another language's fonts in LB.fonts: the pictures are cut again at the next libLoad)
 function libLoad() {
   if (!libReady) {
     const img = src => new Promise((ok, no) => { const im = new Image(); im.onload = () => ok(im); im.onerror = no; im.src = src; });
@@ -37,7 +38,7 @@ function libLoad() {
 // texts are Unicode: a character above 255 (Cyrillic, curly quotes, dashes) is looked up by its byte in that code page
 const LIB_CP = (() => {
   const m = new Map();
-  try { [...new TextDecoder(window.AtlasVer === "ru" ? "windows-1251" : "windows-1252").decode(Uint8Array.from({ length: 128 }, (_, i) => i + 128))].forEach((c, i) => m.set(c.charCodeAt(0), i + 128)); } catch (_) {}
+  try { [...new TextDecoder(window.AtlasVer === "ru" || window.AtlasVer === "tr" ? "windows-1251" : "windows-1252").decode(Uint8Array.from({ length: 128 }, (_, i) => i + 128))].forEach((c, i) => m.set(c.charCodeAt(0), i + 128)); } catch (_) {}
   return m;
 })();
 const libCode = ch => { const c = ch.charCodeAt(0); return c > 255 ? LIB_CP.get(c) ?? c : c; };

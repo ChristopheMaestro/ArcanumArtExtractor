@@ -1,0 +1,103 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Und wer mögt Ihr wohl sein?}{}{5}{me 0}{6}{}
+{3}{Seid gegrüßt, Grünwald.  Habt Ihr wohl einen Moment Zeit?}{}{5}{lf6 1}{10}{}
+{4}{E:}{}{5}{}{0}{}
+{6}{Ich heiße Grünwald.}{Ich heiße Grünwald.}{}{}{}{lf6 1}
+{7}{Hallo, Grünwald.  Dürfte ich wohl für einen Augenblick mit Euch sprechen?}{}{5}{}{10}{}
+{8}{E:}{}{5}{}{0}{}
+{10}{Sicher ...}{Sicher ...}{}{}{}{}
+{11}{Was tut Ihr hier, Grünwald?}{}{5}{}{23}{}
+{12}{Ich wäre daran interessiert, ein bisschen Gift zu kaufen.}{}{5}{qu 1007 2, lf5 0, lf1 0, lf2 0, lf3 0}{32}{lf8 1}
+{13}{Ich bin zurück, um das Gift zu kaufen.}{}{5}{lf4 1, lf1 1, lf5 0}{63}{}
+{14}{Ich bin zurück, um das Gift zu kaufen.}{}{5}{lf4 1, lf2 1, lf5 0}{68}{}
+{15}{Ich bin zurück, um das Gift zu kaufen.}{}{5}{lf4 1, lf3 1, lf5 0}{68}{ }
+{16}{Ich bin zurück, um das Gift zu kaufen.}{}{5}{lf4 1, lf1 0, lf2 0, lf3 0, lf5 0}{54}{}
+{17}{R: $0, 1175-1183}{}{5}{}{100}{}
+{18}{T: 3,10}{}{5}{}{100}{}
+{19}{E:}{}{5}{}{0}{}
+{23}{Einige Leute bezeichnen mich als Apotheker, aber ich bin eigentlich Alchimist von Beruf.  Sieht so aus, als wäre ich mit der Gabe der Herstellung von Gift gesegnet.}{Einige Leute bezeichnen mich als Apotheker, aber ich bin eigentlich Alchimist von Beruf.  Sieht so aus, als wäre ich mit der Gabe der Herstellung von Gift gesegnet.}{}{}{}{}
+{24}{Einige Leute würden das als einen Fluch ansehen.}{}{5}{}{28}{}
+{25}{Das ist interessant.  Genau danach bin ich auf der Suche.}{}{5}{qu 1007 2, lf5 0, lf1 0, lf2 0, lf3 0}{32}{}
+{26}{K:}{}{5}{}{10}{}
+{27}{E:}{}{5}{}{0}{}
+{28}{Ja, das könnte gut sein.  Aber die Welt braucht Männer wie mich, genau so, wie sie Priester oder Krieger braucht.  Wir nehmen alle den Platz ein, der uns bestimmt ist ...}{Ja, das könnte gut sein.  Aber die Welt braucht Männer wie mich, genau so, wie sie Priester oder Krieger braucht.  Wir nehmen alle den Platz ein, der uns bestimmt ist ...}{}{}{}{}
+{29}{Wenn Ihr noch länger plappert, könnt Ihr Euren Platz im Jenseits einnehmen ...}{}{5}{}{88}{re -10}
+{30}{K:}{}{5}{}{10}{}
+{31}{E:}{}{5}{}{0}{}
+{32}{Wirklich?  Tja, ich verkaufe nicht an jedermann.  Ich bin ein Mann mit Prinzipien, und ich schätze es nicht, wenn meine Produkte in falsche Hände gelangen ...}{Wirklich?  Tja, ich verkaufe nicht an jedermann.  Ich bin ein Mann mit Prinzipien, und ich schätze es nicht, wenn meine Produkte in falsche Hände gelangen ...}{}{}{}{}
+{33}{Macht Euch keine Sorgen.  Ich versichere, dass es einem guten Zweck dienen wird.}{}{5}{}{79}{}
+{34}{Natürlich.  Ich gebe es bloß ein paar gefährlichen Dieben.}{}{5}{}{105}{re -5}
+{35}{Ich habe da dieses Ungezieferproblem ...}{}{5}{}{37}{}
+{36}{E:}{}{5}{}{0}{}
+{37}{Ich könnte Euch vielleicht dabei helfen.  Wo liegt denn das Problem?}{Ich könnte Euch vielleicht dabei helfen.  Wo liegt denn das Problem?}{}{}{}{}
+{38}{Ich habe ... äh ... Ratten.  Ich habe ein Problem mit Ratten ...}{}{5}{}{43}{}
+{39}{Die Schaben haben Gefallen an meinem Wäscheschrank gefunden.}{}{5}{}{110}{}
+{40}{Das geht Euch nichts an.}{}{5}{}{79}{re -5}
+{41}{K:}{}{5}{}{10}{}
+{42}{E:}{}{5}{}{0}{}
+{43}{Hmmm.  Meine Gifte sind ziemlich stark, wisst Ihr?  Wie groß sind sie denn?}{Hmmm.  Meine Gifte sind ziemlich stark, wisst Ihr?  Wie groß sind sie denn?}{}{}{}{}
+{44}{Äh ... so groß wie Orks.  Sie sehen auch aus wie Orks.}{}{5}{}{49}{}
+{45}{Ich habe schon größere Mäuse gesehen, aber diese Ratten sind gemeingefährlich.}{}{5}{}{110}{}
+{46}{Verkauft mir einfach das Gift, ja?}{}{5}{}{83}{re -5}
+{47}{E:}{}{5}{}{0}{}
+{49}{Orks!  Warum habt Ihr mir das nicht gesagt?  Für dieses Ungeziefer habe ich nichts übrig.  Natürlich bekommt Ihr das Gewünschte von mir verkauft!}{Orks!  Warum habt Ihr mir das nicht gesagt?  Für dieses Ungeziefer habe ich nichts übrig.  Natürlich bekommt Ihr das Gewünschte von mir verkauft!}{}{}{}{lf4 1}
+{50}{Großartig.  Was ist Euer Preis?}{}{5}{}{54}{}
+{51}{Wer hat etwas von verkaufen gesagt?  Ich NEHME mir, was ich brauche ...}{}{5}{}{88}{re -10}
+{52}{E:}{}{5}{}{0}{}
+{54}{100 Goldmünzen. Nicht mehr und nicht weniger.}{100 Goldmünzen. Nicht mehr und nicht weniger.}{}{}{}{}
+{55}{Hört sich gut an.}{}{5}{$$100, ha -6}{63}{lf1 1}
+{56}{Hört sich gut an.}{}{5}{$$-99, ha -6}{115}{lf1 1}
+{58}{Wir wäre es mit 75?}{}{5}{ha 10, ha -14}{68}{lf2 1}
+{60}{Ich finde, 50 hört sich vernünftiger an.}{}{5}{ha 15}{68}{lf3 1}
+{61}{E:}{}{5}{}{0}{}
+{63}{Der Preis beträgt 100 Münzen.}{Der Preis beträgt 100 Münzen.}{}{}{}{}
+{64}{Gemacht. 100 Münzen.}{}{5}{ $$100}{74}{$$-100, lf1 1}
+{65}{Gemacht. 100 Münzen.}{}{5}{$$-99}{115}{lf1 1}
+{66}{Ich hab es mir anders überlegt.  Und damit werde ich mich jetzt verabschieden.}{}{5}{}{0}{}
+{68}{Natürlich. Der Preis steht fest.  Sind wir uns einig?}{Natürlich. Der Preis steht fest.  Sind wir uns einig?}{}{}{}{}
+{69}{Gemacht. 75 Münzen. Abgemacht.}{}{5}{lf2 1, $$75}{74}{$$-75}
+{70}{Gemacht. 75 Münzen. Abgemacht.}{}{5}{lf2 1, $$-74}{115}{}
+{71}{Gemacht. 50 Münzen. Abgemacht.}{}{5}{lf3 1, $$50}{74}{$$-50}
+{72}{Gemacht. 50 Münzen. Abgemacht.}{}{5}{lf3 1, $$-49}{115}{}
+{74}{Das Gift gehört Euch.  Viel Glück mit Euren "Ratten".}{Das Gift gehört Euch.  Viel Glück mit Euren "Ratten".}{}{}{}{in -3611, lf5 1}
+{75}{Vielen Dank, und einen schönen Tag noch.}{}{5}{}{0}{}
+{79}{Ich fürchte, das ist nicht akzeptabel.  Verschwiegenheit und Gift sind selten gute Gefährten.}{Ich fürchte, das ist nicht akzeptabel.  Verschwiegenheit und Gift sind selten gute Gefährten.}{}{}{}{}
+{80}{Genauso wenig wie meine Klinge und Eure Eingeweide.  Gebt her.}{}{5}{}{88}{}
+{81}{Wenn Ihr es unbedingt wissen müsst, na ja, ich habe ein ... äh ... Rattenproblem.}{}{5}{}{43}{}
+{82}{E:}{}{5}{}{0}{}
+{83}{Euer Schweigen wird Euch nicht helfen.  Ihr solltet vielleicht lieber gehen.}{Euer Schweigen wird Euch nicht helfen.  Ihr solltet vielleicht lieber gehen.}{}{}{}{}
+{84}{Sofort, aber erst muss ich Euer Gesicht noch etwas verschönern.}{}{5}{}{88}{}
+{85}{Also gut.  Diese Ratten sehen wie Orks aus und riechen auch so.}{}{5}{}{49}{}
+{86}{K:}{}{5}{}{10}{}
+{87}{E:}{}{5}{}{0}{}
+{88}{Das würde ich lassen.  Meine Klinge ist vergiftet, und Ihr würdet ihren Biss wahrscheinlich nicht überleben.}{Das würde ich lassen.  Meine Klinge ist vergiftet, und Ihr würdet ihren Biss wahrscheinlich nicht überleben.}{}{}{}{}
+{89}{Bitte.  Solche leeren Behauptungen rühren mich zu Tränen.}{}{5}{}{}{co, fl 80}
+{90}{Ich sehe, mit Euch ist nicht zu spaßen.  Sollen wir fortfahren?}{}{5}{}{95}{}
+{91}{K:}{}{5}{}{10}{}
+{92}{E:}{}{5}{}{0}{}
+{93}{Wie schade.  Sieht so aus, als wäret Ihr das nächste Beispiel für die Effizienz meines Gifts ...}{Wie schade.  Sieht so aus, als wäret Ihr das nächste Beispiel für die Effizienz meines Gifts ...}{}{}{}{}
+{95}{Ich denke schon.  Worin genau besteht Euer Problem?}{Ich denke schon.  Worin genau besteht Euer Problem?}{}{}{}{}
+{96}{Na gut.  Ich muss ein paar ... äh ... Orks beseitigen.}{}{5}{lf8 1}{49}{}
+{97}{Da Ihr mein Problem seid, besteht mein Problem wohl vor allem aus Feigheit.}{}{5}{}{}{co, fl 80}
+{98}{K:}{}{5}{}{10}{}
+{99}{E:}{}{5}{}{0}{}
+{100}{Kann ich sonst noch etwas für Euch tun?}{Kann ich sonst noch etwas für Euch tun?}{}{}{}{}
+{101}{K:}{}{5}{}{10}{}
+{102}{E:}{}{5}{}{0}{}
+{105}{Diebe!  Seid Ihr verrückt?  Wisst Ihr eigentlich, was Diebe tun würden, wenn sie mein Gift in die Finger bekämen?}{Diebe!  Seid Ihr verrückt?  Wisst Ihr eigentlich, was Diebe tun würden, wenn sie mein Gift in die Finger bekämen?}{}{}{}{}
+{106}{Natürlich.  Es ist genau das, was ich mit Euch vorhabe.}{}{5}{}{}{co, fl 88}
+{107}{Ich habe nur Spaß gemacht.  Also in Wirklichkeit habe ich ein ... äh ... Rattenproblem.}{}{5}{}{43}{}
+{108}{E:}{}{5}{}{0}{}
+{110}{Dafür dürfte die Sorte Gift, die ich herstelle, etwas zu stark sein.  Ihr solltet Euch woanders umsehen.}{Dafür dürfte die Sorte Gift, die ich herstelle, etwas zu stark sein.  Ihr solltet Euch woanders umsehen.}{}{}{}{}
+{111}{Na ja, um ehrlich zu sein, diese Viecher sehen fast wie Orks aus.}{}{5}{}{49}{}
+{112}{Noch so eine unverschämte Bemerkung, und Ihr werdet kennen lernen, was ICH herstellen kann.}{}{5}{}{88}{re -10}
+{113}{E:}{}{5}{}{0}{}
+{115}{Tut mir Leid.  Es scheint, als wärt Ihr nicht flüssig.  Kommt zurück, wenn Ihr genug Geld bei Euch habt ...}{Tut mir Leid.  Es scheint, als wärt Ihr nicht flüssig.  Kommt zurück, wenn Ihr genug Geld bei Euch habt ...}{}{}{}{}
+{116}{E:}{}{5}{}{0}{}
+{120}{G:}{G:}{}{}{}{}
+{121}{Öh ...}{}{-4}{}{}{}
+{125}{Oh, wie traurig.  Da hat sich doch ein Schwachkopf in meinen Laden verirrt.  Hier ... nehmt diese 5 Münzen.  [Er gibt sie dir.]  Die Götter schenken denen Gnade, die Kreaturen wie Euch Güte bezeigen.}{Oh, wie traurig.  Da hat sich doch ein Schwachkopf in meinen Laden verirrt.  Hier ... nehmt diese 5 Münzen.  [Er gibt sie dir.]  Die Götter schenken denen Gnade, die Kreaturen wie Euch Güte bezeigen.}{}{}{}{$$5}
+{126}{Äh?  Ich nich' Schachkopp.  Ich Euer Kopp zerschmettern!}{}{-4}{}{}{co, fl 80}
+{127}{E:}{}{-4}{}{0}{lf7 1}
+{130}{Viel Glück auf Euren Wegen.  Mögen die Götter Erbarmen mit Eurer armen Seele haben ...}{Viel Glück auf Euren Wegen.  Mögen die Götter Erbarmen mit Eurer armen Seele haben ...}{}{}{}{}
+

@@ -1,0 +1,140 @@
+{1}{Bonsoir monsieur, soyez le bienvenu à la gare des limbes-est. En quoi puis-je vous aider ?}{Bonsoir madame, soyez la bienvenue à la gare des limbes-est. En quoi puis-je vous aider ?}{}{}{}{}
+{2}{Je souhaite partir au cercle 666.}{}{5}{gf252 0}{50}{}
+{3}{Moi d'voir aller cercle 666.}{}{-4}{gf252 0}{50}{}
+{4}{Je souhaiterais faire annuler une réservation.}{}{5}{gf252 1}{60}{}
+{5}{Moi v'loir annuler voyage.}{}{-4}{gf252 1}{60}{}
+{6}{J'aimerais faire envoyer ma malle au cercle 666.}{}{5}{lf0 0}{180}{}
+{7}{Moi voudrais faire envoyer malle cercle 666.}{}{-4}{lf0 0}{180}{}
+{8}{Rien pour l'instant, merci.}{}{5}{}{0}{}
+{9}{R'in, marsi.}{}{-4}{}{0}{}
+
+{}{}{}{}{}{}{}
+
+{50}{Très bien, je vais vous réserver une place sur le prochain train. Puis-je vois votre fiche de renseignement ?}{Très bien, je vais vous réserver une place sur le prochain train. Puis-je vois votre fiche de renseignement ?}{}{}{}{}
+{51}{[Vous la lui montrez]}{}{1}{in 5808}{70}{gf607 1, gf252 1}
+{52}{J'avais oublié. Je vais la chercher.}{}{5}{}{0}{fl 58}
+{53}{Mince, oubliée ! Vais la chercher.}{}{-4}{}{0}{fl 58}
+{54}{En fait, je ne vais pas prendre de billet.}{}{5}{}{100}{}
+{55}{Heu, moi changeais d'avis...}{}{-4}{}{100}{}
+
+{58}{Aucun problème, il vous reste un peu de temps avant le départ.}{Aucun problème, il vous reste un peu de temps avant le départ.}{}{}{}{}
+
+{60}{Très bien. Pour quelle destination était votre réservation ?}{Très bien. Pour quelle destination était votre réservation ?}{}{}{}{}
+{61}{Le cercle 666.}{}{5}{gf607 1}{80}{}
+{62}{Cercle 666.}{}{-4}{gf607 1}{80}{}
+{63}{Quoique... finalement je la garde.}{}{5}{}{100}{}
+{64}{Laissez tomber !}{}{-4}{}{100}{}
+
+{70}{Merci. Alors... @pcname@. Voilà, une réservation a été émise à votre nom. Vous pourrez prendre le prochain train à destination du cercle 666, celui-ci se trouve déjà à quai.}{Merci. Alors... @pcname@. Voilà, une réservation a été émise à votre nom. Vous pourrez prendre le prochain train à destination du cercle 666, celui-ci se trouve déjà à quai.}{}{}{}{}
+{71}{Merci bien.}{}{5}{}{0}{}
+{72}{Marsi.}{}{-4}{}{0}{}
+{73}{Parfait, je vais partir.}{}{5}{}{0}{}
+{74}{Bien, moi partir.}{}{-4}{}{0}{}
+
+{80}{Puis-je voir votre fiche de renseignements ?}{Puis-je voir votre fiche de renseignements ?}{}{}{}{}
+{81}{[Vous la lui montrez]}{}{1}{in 5808}{90}{gf607 0, gf252 0}
+{82}{J'avais oublié. Je vais la chercher.}{}{5}{}{0}{fl 58}
+{83}{Mince, oubliée ! Vais la chercher.}{}{-4}{}{0}{fl 58}
+{84}{Attendez. Tout compte fait, je vais garder cette réservation.}{}{5}{}{100}{}
+{85}{Heu, en fait moi la garder.}{}{-4}{}{100}{}
+
+{90}{Merci... Voilà, votre réservation à bord de ce train a été résiliée. Souhaitez-vous prendre une autre réservation ?}{Merci... Voilà, votre réservation à bord de ce train a été résiliée. Souhaitez-vous prendre une autre réservation ?}{}{}{}{}
+{91}{Oui s'il vous plaît.}{}{1}{}{150}{}
+{92}{Non merci. Au revoir.}{}{5}{}{0}{fl 99}
+{93}{Nan, moi partir.}{}{-4}{}{0}{fl 99}
+
+{99}{Très bien. Bonne soirée monsieur.}{Très bien. Bonne soirée madame.}{}{}{}{}
+
+{100}{Pas de problèmes. Désiriez-vous autre chose ?}{Pas de problèmes. Désiriez-vous autre chose ?}{}{}{}{}
+{101}{Oui, je dois partir pour le cercle 666.}{}{5}{gf252 0}{50}{}
+{102}{Ouais, moi d'voir partir pour cercle 666.}{}{-4}{gf252 0}{50}{}
+{103}{Oui, je dois annuler une réservation.}{}{5}{gf252 1}{60}{}
+{104}{Ouais, moi d'voir annuler voyage.}{}{-4}{gf252 1}{60}{}
+{105}{Oui. J'aimerais que ma malle soit expédiée au cercle 666.}{}{5}{lf0 0}{180}{}
+{106}{Ouais. Moi voudrais malle envoyée cercle 666.}{}{-4}{lf0 0}{180}{}
+{107}{Non merci, je vais partir.}{}{5}{}{0}{fl 99}
+{108}{Nan, c'bon.}{}{-4}{}{0}{fl 99}
+
+{}{}{}{}{}{}{}
+
+{150}{Sur quel train ?}{Sur quel train ?}{}{}{}{}
+{151}{Celui à destination du cercle 666.}{}{5}{}{50}{}
+{152}{Le pour 666.}{}{-4}{}{50}{}
+{153}{En fait, oubliez ça. Je vais rester ici encore un petit peu.}{}{5}{}{100}{}
+{154}{Bah en fait, nan.}{}{-4}{}{100}{}
+
+{}{}{}{}{}{}{}
+
+{180}{Bien sûr. Puis-je voir votre fiche de renseignements ?}{Bien sûr. Puis-je voir votre fiche de renseignements ?}{}{}{}{}
+{181}{[Vous la lui montrez]}{}{1}{in 5808}{190}{lf0 1}
+{182}{Certes, je vais la chercher.}{}{5}{}{0}{fl 188}
+{183}{Mince, oubliée ! Vais la chercher.}{}{-4}{}{0}{fl 188}
+{184}{Finalement, oubliez ça. La malle peut atteindre.}{}{5}{}{100}{}
+{185}{Heu, moi changeais d'avis...}{}{-4}{}{100}{}
+
+{188}{Très bien, au revoir...}{Très bien, au revoir...}{}{}{}{}
+{189}{Je vous en prie. Bonne soirée monsieur.}{Je vous en prie. Bonne soirée madame.}{}{}{}{}
+
+{190}{@pcname@ ? Très bien. Votre malle va être chargée dans le prochain train en partance pour le cercle 666 et sera livrée dans vos quartiers. Y-a-t-il autre chose pour cotre service ?}{@pcname@ ? Très bien. Votre malle va être chargée dans le prochain train en partance pour le cercle 666 et sera livrée dans vos quartiers. Y-a-t-il autre chose pour cotre service ?}{}{}{}{gf620 1}
+{191}{Oui, je souhaite également une place pour le cercle 666.}{}{5}{gf252 0}{50}{}
+{192}{Ouais, moi v'loir aussi partir pour cercle 666.}{}{-4}{gf252 0}{50}{}
+{193}{Oui, je dois annuler une réservation.}{}{5}{gf252 1}{60}{}
+{194}{Ouais, moi d'voir annuler voyage.}{}{-4}{gf252 1}{60}{}
+{195}{Non, je vais partir. Merci à vous.}{}{5}{}{0}{fl 189}
+{196}{Nan, c'bon. Marsi.}{}{-4}{}{0}{fl 189}
+
+{}{}{}{}{}{}{}
+
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}

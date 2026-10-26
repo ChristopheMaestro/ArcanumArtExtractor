@@ -13,7 +13,7 @@
   const SC = { 2: 1 / 16, 1: 1 / 4, 0.5: 1 / 2, 0: 1 };               // a level -> its scale
   // the sizes to try for a wanted level: that size, then finer ones (nearest first), then coarser ones
   const PREF = Object.fromEntries(Object.keys(SC).map(l => { const all = [1, 0.5, 0.25, 1 / 16], wi = all.indexOf(SC[l]); return [l, [all[wi], ...all.slice(0, wi).reverse(), ...all.slice(wi + 1)]]; }));
-  const FINE_BUDGET = 128e6 / 4;                                       // pixels of 1/4 or finer pictures kept (128 MB decoded)
+  const FINE_BUDGET = 96e6 / 4;                                        // pixels of 1/4 or finer pictures kept (96 MB decoded): the tiles nearest the screen
   const MAXRUN = 6;
 
   // ---------------------------------------------------------------- the worker: replays a sector's draw list
@@ -28,7 +28,7 @@
     const RF = { willReadFrequently: true };                             // every canvas here is read back (getImageData): kept in memory instead of the GPU, where each read stalls on the GPU the page draws with
     // scs: the sizes wanted, rendered smallest first from one replay of the ground; emit(sc, bitmap, ops, ms) is called as each is done
     async function render(buf, scs, emit, off) {
-      const t0 = performance.now(), dv = new DataView(buf), hl = dv.getUint32(0, true), head = JSON.parse(new TextDecoder().decode(new Uint8Array(buf, 4, hl)));
+      const t0 =performance.now(), dv = new DataView(buf), hl = dv.getUint32(0, true), head = JSON.parse(new TextDecoder().decode(new Uint8Array(buf, 4, hl)));
       const ops = await inflate(new Uint8Array(buf, 4 + hl, head.z)), light = await inflate(new Uint8Array(buf, 4 + hl + head.z, head.l));
       const N = head.n[0] + head.n[1] + head.n[2] + head.n[3];
       let art = new Uint16Array(ops.buffer.slice(0, N * 2));
@@ -259,7 +259,7 @@
     const worldDir = DIRS.World && new URL(DIRS.World, document.baseURI).href, poolDir = worldDir && new URL('../graphics/art-shards/', worldDir).href;      // (rect shard keys "w<k>" = the world's art<k>.webp, "p<k>" = atlas/graphics/art-shards/art<k>.webp: the pictures several maps share that the world does not have)
     let allRects = [], wHas = null, wmeta = null, off = 0, worldReady = null;
     const worldMeta = () => wmeta || (wmeta = getFile(worldDir + 'art.json').then(b => { const j = JSON.parse(new TextDecoder().decode(b)); wHas = new Set(j.s); env.schedule(); return j; }));
-    const viaWorld = stem => stem.startsWith('tpl_') && !!worldDir && dir !== worldDir && !!has && !has.has(stem);
+    const viaWorld = stem => stem.startsWith('tpl_') && !!worldDir && dir !== worldDir && !!has && !has.has(stem) && !(window.AtlasData && window.AtlasData.standalone);
     // the art is in shards (art<k>.webp, shard 0 = the common pictures), each decoded once when a sector needs a picture in it; the regional ones
     // are dropped least recently used first, so a view of one area holds a few of them instead of the whole world's art
     const shards = new Map(); let shardTick = 0;
@@ -312,7 +312,7 @@
     // renders the sizes scs of a sector from one read of its file; each(sc, bitmap) is called as every size is done
     async function renderSector(stem, scs, each) {
       await aliasesReady;
-      let url = (stem.startsWith('tpl_') && DIRS['@terrain'] ? new URL(DIRS['@terrain'], document.baseURI).href : dir) + stem + '.atlassec';     // (a terrain template's file is in atlas/terrain/, its art in the map's shards)
+      let url = (stem.startsWith('tpl_') && DIRS['@terrain'] && !(window.AtlasData && window.AtlasData.standalone) ? new URL(DIRS['@terrain'], document.baseURI).href : dir) + stem + '.atlassec';     // (a terrain template's file is in atlas/terrain/, its art in the map's shards; a standalone version has its own, in the map's folder)
       const root = new URL('./', document.baseURI).href, kept = url.startsWith(root) && ALIAS[decodeURI(url.slice(root.length))];     // a copy moved to atlas/temp: the kept identical file
       if (kept) url = root + kept;
       const ws = await workers(), buf = await getFile(url);
@@ -341,20 +341,63 @@
     let fineTot = 0;                                         // pixels of the finer pictures in the cache
     // a picture is one bitmap or, for the big sizes, tiles t = [x, y, w, h, count, picture w, picture h] that land one at a time; the picture
     // is whole when its count is there (until then the tiles that are there are drawn over a smaller size)
+    // The finer pictures are kept by distance from the screen: over the budget, the tile farthest from the view goes first (the sectors around the one on
+    // show, and theirs, stay as long as there is room). A tile let go leaves a hole (bm null) in its picture; when the hole comes into view the picture is made
+    // again and only the holes are filled.
+    const sectorAt = new Map();                              // stem -> [x, y, w, h] of its picture in world units, from the last time it was drawn
+    let port = [1200, 800];                                  // the canvas, in CSS px, of the last draw
+    const gap = (a0, a1, b0, b1) => Math.max(a0 - b1, b0 - a1, 0);
+    function away(stem, t, e) {                              // distance of a tile (or the whole picture, t null) from the screen, in px
+      const r = sectorAt.get(stem); if (!r) return Infinity;
+      const v = env.view, z = v.z;
+      const x0 = v.ox + z * (r[0] + (t ? t.x / e.cw : 0) * r[2]), y0 = v.oy + z * (r[1] + (t ? t.y / e.ch : 0) * r[3]);
+      const x1 = x0 + z * r[2] * (t ? t.w / e.cw : 1), y1 = y0 + z * r[3] * (t ? t.h / e.ch : 1);
+      return Math.max(gap(x0, x1, 0, port[0]), gap(y0, y1, 0, port[1]));
+    }
     function put(k, bm, fine, t) {
       let e = cache.get(k);
-      if (!e) cache.set(k, e = { tiles: [], total: t ? t[4] : 1, cw: t ? t[5] : bm.width, ch: t ? t[6] : bm.height, px: 0, last: frameNo, fine });
+      if (!e) cache.set(k, e = { tiles: [], total: t ? t[4] : 1, cw: t ? t[5] : bm.width, ch: t ? t[6] : bm.height, px: 0, last: frameNo, fine, holes: 0, refill: false });
+      const px = bm.width * bm.height;
+      if (e.refill) {                                        // the picture made again: its holes are filled, the tiles it still has are not doubled
+        const h = t && e.tiles.find(x => !x.bm && x.x === t[0] && x.y === t[1]);
+        (e.got ||= new Set()).add(t ? t[0] + ',' + t[1] : '0,0');
+        if (h) { h.bm = bm; e.holes--; e.px += px; if (fine) fineTot += px; } else bm.close();
+        if (fine) trim();
+        return;
+      }
       e.tiles.push(t ? { bm, x: t[0], y: t[1], w: t[2], h: t[3] } : { bm, x: 0, y: 0, w: bm.width, h: bm.height });
-      const px = bm.width * bm.height; e.px += px;
+      e.px += px;
       if (!fine) return;
       fineTot += px;
+      trim();
+    }
+    function trim() {
       if (fineTot <= fineBudget) return;
-      for (const [kk, o] of [...cache].filter(([, o]) => o.fine && o.tiles.length >= o.total && o.last < frameNo - 1).sort((a, b) => a[1].last - b[1].last)) {
-        if (fineTot <= fineBudget * 0.8) break;
-        fineTot -= o.px; cache.delete(kk); o.tiles.forEach(x => x.bm.close());
+      const stemOf = k => k.slice(0, k.indexOf(':'));
+      const units = [];                                      // [distance, last, entry, tile or null (the whole picture: an objects layer)]
+      for (const [k, o] of cache) {
+        if (!o.fine || o.tiles.length < o.total || o.refill) continue;      // (a picture being made again keeps what it has)
+        if (k.split(':').length > 2) { if (o.last < frameNo - 1) units.push([away(stemOf(k), null, o), o.last, o, null, k]); continue; }
+        const s = stemOf(k), sc = +k.split(':')[1], stale = sc !== SC[want] && !(want < 1 && sc === SC[1]) ? 1e9 : 0;      // (a size the zoom no longer asks for goes before any tile of the one it does)
+        if (stale) { const w = cache.get(`${s}:${SC[want]}`); if (!w || !whole(w) || w.vis) continue; }      // (until the size the zoom wants is there, the one it replaces is what shows)
+        for (const x of o.tiles) if (x.bm) units.push([stale ? stale + frameNo - o.last : away(s, x, o), o.last, o, x, k]);
+      }
+      units.sort((a, b) => b[0] - a[0] || a[1] - b[1]);
+      for (const [d, , o, x, k] of units) {
+        if (fineTot <= fineBudget * 0.85 || d === 0) break;  // (what is on screen stays, whatever the budget)
+        if (!x) { if (cache.get(k) !== o) continue; fineTot -= o.px; cache.delete(k); o.tiles.forEach(y => y.bm && y.bm.close()); continue; }
+        if (cache.get(k) !== o) continue;
+        const px = x.bm.width * x.bm.height; x.bm.close(); x.bm = null; o.holes++; o.px -= px; fineTot -= px;
+        if (o.holes >= o.tiles.length && !o.refill) cache.delete(k);       // nothing left of it
       }
     }
     const whole = e => e.tiles.length >= e.total;
+    // a hole of this picture that the screen shows (then it counts as partial: drawn over the next size down, and asked for again)
+    const holed = (e, dx, dy, kx, ky) => {
+      if (!e.holes) return false;
+      for (const t of e.tiles) if (!t.bm) { const x = dx + t.x * kx, y = dy + t.y * ky; if (x < port[0] && y < port[1] && x + t.w * kx > 0 && y + t.h * ky > 0) return true; }
+      return false;
+    };
 
     // jobs: the sectors in view, the blurry 1/16 first; then, for a sector that has it, everything else the zoom wants (1/4 on the way for a finer one)
     // in one job (the file is read and the ground drawn once); nearest the middle first
@@ -373,12 +416,12 @@
       for (const [stem, d] of seen) {
         const k16 = `${stem}:${SC[2]}`;
         if (!cache.has(k16)) { if (!running.has(k16) && !failed.has(k16)) jobs.push({ stem, scs: [SC[2]], cls: 0, d }); continue; }
-        const scs = wanted.filter(s => { const k = `${stem}:${s}`; return !(cache.has(k) || running.has(k) || failed.has(k)); });
+        const scs = wanted.filter(s => { const k = `${stem}:${s}`, e = cache.get(k); return !((e && !(e.vis && !e.refill)) || running.has(k) || failed.has(k)); });      // (a picture with a hole on screen is made again)
         if (scs.length) jobs.push({ stem, scs, cls: want >= 1 || scs.includes(SC[1]) ? 1 : 3, d });
       }
       for (const j of jobs.sort((a, b) => a.cls - b.cls || a.d - b.d)) {
         if (nrun >= MAXRUN) break;
-        nrun++; for (const s of j.scs) running.set(`${j.stem}:${s}`, j.cls);
+        nrun++; for (const s of j.scs) { running.set(`${j.stem}:${s}`, j.cls); const o = cache.get(`${j.stem}:${s}`); if (o) o.refill = true; }
         const landed = [];
         const each = (sc, bm, t, lay) => {
           const key = `${j.stem}:${sc}${lay ? ':' + lay : ''}`;                  // (an objects layer has a key of its own: <stem>:<size>:O / :F)
@@ -387,8 +430,21 @@
           env.schedule();
         };
         renderSector(j.stem, j.scs, each)
-          .then(() => Promise.all(landed), e => { for (const s of j.scs) { const k = `${j.stem}:${s}`, o = cache.get(k); failed.add(k); if (o && !whole(o)) { cache.delete(k); o.tiles.forEach(t => t.bm.close()); } } bad.add(j.stem); console.warn('live: ' + j.stem, e); })
-          .finally(() => { nrun--; for (const s of j.scs) running.delete(`${j.stem}:${s}`); pump(); env.schedule(); });
+          .then(() => Promise.all(landed), e => { for (const s of j.scs) { const k = `${j.stem}:${s}`, o = cache.get(k); failed.add(k); if (o && !whole(o)) { cache.delete(k); o.tiles.forEach(t => t.bm && t.bm.close()); } } bad.add(j.stem); console.warn('live: ' + j.stem, e); })
+          .finally(() => {
+            nrun--;
+            for (const s of j.scs) {
+              const k = `${j.stem}:${s}`, o = cache.get(k); running.delete(k);
+              if (o && o.refill) {
+                o.refill = false;
+                if (!failed.has(k) && o.got) {                // a hole the new picture has no tile for was empty; one it had a tile for, let go again since, stays a hole
+                  o.tiles = o.tiles.filter(x => x.bm || o.got.has(x.x + ',' + x.y)); o.total = o.tiles.length; o.holes = o.tiles.filter(x => !x.bm).length;
+                }
+                o.got = null; o.vis = false;
+              }
+            }
+            pump(); env.schedule();
+          });
         env.schedule();
       }
       // The objects layers (.atlasmob) of the sectors in view: only where the page draws them (from 20 % zoom), a job of their own per sector (not tied to the ground's: a slow
@@ -426,7 +482,7 @@
         return !has || has.has(stem);
       },
       // is a picture of this sector ready to draw (the average-colour stand-in under it is then not wanted: it would show through the band the picture leaves clear)
-      ready: stem => [1, 0.5, 0.25, 1 / 16].some(s => { const e = cache.get(`${stem}:${s}`); return e && whole(e); }),
+      ready: stem => [1, 0.5, 0.25, 1 / 16].some(s => { const e = cache.get(`${stem}:${s}`); return e && whole(e) && !e.vis; }),
       // the 1/16 picture of a sector (an ImageBitmap) for the map's tiles, or null while it is made (it is asked for)
       thumb(stem) {
         const k = `${stem}:${SC[2]}`, e = cache.get(k);
@@ -470,12 +526,16 @@
       // draws the sector (false: nothing ready yet): the wanted size, else a finer one, else a coarser one
       draw(ctx, stem, dx, dy, dw, dh, d) {
         seen.set(stem, d);
-        const tiles = (e, kx, ky) => { for (const t of e.tiles) ctx.drawImage(t.bm, dx + t.x * kx, dy + t.y * ky, t.w * kx, t.h * ky); };
+        const v = env.view, a = ctx.getTransform().a || 1;
+        port = [ctx.canvas.width / a, ctx.canvas.height / a];
+        sectorAt.set(stem, [(dx - v.ox) / v.z, (dy - v.oy) / v.z, dw / v.z, dh / v.z]);
+        const tiles = (e, kx, ky) => { for (const t of e.tiles) if (t.bm) ctx.drawImage(t.bm, dx + t.x * kx, dy + t.y * ky, t.w * kx, t.h * ky); };
         let part = null;                                     // (a size with only some of its tiles in: they go over the next size down)
         for (const s of PREF[want]) {
           const e = cache.get(`${stem}:${s}`); if (!e) continue;
           e.last = frameNo;
-          if (!whole(e)) { part = part || e; continue; }
+          e.vis = e.holes > 0 && holed(e, dx, dy, dw / e.cw, dh / e.ch);
+          if (!whole(e) || e.vis) { part = part || e; continue; }
           tiles(e, dw / e.cw, dh / e.ch);
           if (part) tiles(part, dw / part.cw, dh / part.ch);
           return true;
@@ -485,7 +545,7 @@
       },
       dispose() {
         disposed = true; clearTimeout(timer);
-        for (const e of cache.values()) e.tiles.forEach(t => t.bm.close());
+        for (const e of cache.values()) e.tiles.forEach(t => t.bm && t.bm.close());
         cache.clear(); fineTot = 0; landing.length = 0; seen.clear(); thumbs.clear();
         if (pool) pool.then(ws => { ws.forEach(w => w.terminate()); }).catch(() => {});
         for (const s of shards.values()) s.p.then(b => b.close(), () => {});

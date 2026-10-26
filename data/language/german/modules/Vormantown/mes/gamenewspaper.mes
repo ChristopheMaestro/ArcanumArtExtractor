@@ -1,0 +1,85 @@
+// This message file contains text to be used in game-supplied newspapers
+// Only the message line numbers 1000 or higher are valid
+// Each new newspaper begins on a multiple of 10, and can use up to 10
+// lines, which must be consecutive. The first line is always the main 
+// headline, while the 9 remaining lines go into 4 columns of the paper.
+// Format: each line begins with a font number and justification letter,
+// followed by the text for that line.
+
+// Some font numbers to use:
+//	490 Extra Large Headline
+//	486 Large Headline
+//	492 Normal Headline
+//	483 Story Body
+//	488 Clip Art 0-6
+
+// Justification letters (you must use one)
+//	l = left
+//	c = center
+
+// NOTE: The first blocks, 0 thru 999, are reserved for UI use
+
+// News Paper Type 1
+{0}{EXTRA}
+{1}{[ NACHRICHT ]}
+{2}{Preis 2 Münzen}
+{3}{Die heißesten Nachrichten Arcanums direkt von der Quelle}
+
+// News Paper Type 2
+{4}{[ SPIEGEL ]}
+{5}{Alle Neuigkeiten, die man drucken kann}
+
+// filler articles
+{10}{492c _ DAS WETTER _}
+{11}{483l Der Meteorologische Wetterdienst von Tarant sagt für die nächsten zwei oder drei Tage sonniges Wetter voraus, aber auch die wachsende Wahrscheinlichkeit eines Wettersturzes innerhalb der nächsten zwei Wochen.}
+{12}{492c _ STEUER-ERHÖHUNG _}
+{13}{483l Das Parlament denkt erneut über eine Erhöhung der Steuern in Tarant nach. Im Gespräch sind 2 Münzen zusätzlich pro 100 Münzen zu versteuerndem Einkommen. Der Sprecher hat jedwede öffentliche Kritik an der Erhöhung zurückgewiesen und an die Bedeutung der derzeitigen staatlichen Bauvorhaben erinnert.}
+{14}{492c _ ÖFFENTLICHE BEKANNTMACHUNGEN _}
+{15}{483l Diesen Freitag wird sich der Stadtrat zu einer öffentlichen Sitzung zusammenfinden. Die Sitzung wird pünktlich um 7 Uhr abends beginnen.}
+{16}{492c _ IN EIGENER SACHE _}
+{17}{483l Der Tarantiner Bote möchte die Gelegenheit nicht verstreichen lassen, seine werten Leser daran zu erinnern, dass Briefe an den Herausgeber nicht unbedingt die Meinung der Zeitung oder ihres Besitzers, Sir William Willaby, widerspiegeln.}
+{18}{492c _ ZUR PROHIBITION _}
+{19}{483l Das Schreckgespenst der Prohibition hat wieder einmal sein Haupt erhoben. Das Parlament berät über einen Gesetzentwurf, der den Verkauf alkoholischer Getränke innerhalb der Stadtgrenzen verbieten will. Die Verteidiger des Entwurfes führen die Häufung von Verbrechen und längere Fehlzeiten der Arbeitnehmer als ihre Hauptargumente ins Feld. Ihre Kritiker hingegen verweisen auf Statistiken aus der Epoche der letzten Prohibition vor über dreißig Jahren, wonach die Situation damals auch nicht signifikant besser gewesen wäre.}
+{20}{492c _ RINGVORLESUNG AN DER HOCHSCHULE _}
+{21}{483l An der Fakultät der Ingenieure der Universität Tarant findet dieses Semester eine Ringvorlesung mit berühmten Rednern statt. Interessierte Parteien wenden sich bitte an die Verwaltung der Universität, um Näheres zu erfahren.}
+{22}{492c _ WOHLTÄTIGKEITSBALL _}
+{23}{483l Die Gesellschaft der Damen von Tarant veranstaltet diesen Samstagabend wieder ihren beliebten Wohltätigkeitsball. Die Erlöse der Veranstaltung werden Waisen und Kriegsveteranen zugute kommen. Die Festlichkeit wird um 8 Uhr abends beginnen. Große Abendgarderobe ist unbedingt erwünscht.}
+{24}{492c _ DIE GEZEITEN _}
+{25}{483l Die Flut wird ihre Höchststände am heutigen Tage um 6.15 Uhr morgens und um 7.30 Uhr abends erreichen. Die Ebbe erreicht gegen 1.05 Uhr nachmittags und um 25 Minuten nach Mitternacht ihre Tiefststände. Die gesamte Gezeitentabelle ist auf Seite 8 zu finden.}
+
+//Game Related Newspapers
+//Use lines 1000-4990
+//Generic Newspapers Start at line 5000
+
+{1000}{490c Muster-Überschrift!}
+{1001}{492c _ Untertitel hier einfügen _}
+{1002}{483l Und hier ist der Text des Artikels. Ganz schön aufregend!}
+
+{1020}{490c Garringsburg-Raub! Gemälde gestohlen!}
+
+{1021}{492c _ DIEBE NOCH NICHT GEFASST _}
+{1022}{483l In der Nacht zum Mittwoch wurde das Anwesen von Mr. James Garringsburg und seiner Frau Evelyn am Devonshire Way Nr. 37 Opfer eines Raubüberfalls. Wie der Familie nahe stehende Kreise weiter berichteten,  fiel den Gangstern auch das berühmte Gemälde "Kerghan und Persephone" von Pizarro in die Hände.  Dieses Bild, erst letztes Jahr für - angeblich - 50.000 Goldstücke bei Renauds erstanden, war das Prunkstück der Galerie Garringsburg.
+Mr. Garringsburg, langjähriges Mitglied des Wellington Gentlemen's Club, äußerte sich gegenüber unserer Zeitung folgendermaßen: "Seien Sie versichert, die Täter werden vor Gericht gebracht. Ein solch ruchloses Verbrechen wird nicht ungesühnt bleiben."  Mrs. Garringsburg sah sich außerstande, das Geschehen unserer Zeitung gegenüber zu kommentieren.
+Die Garringsburgs haben eine Belohnung von 300 Goldstücken ausgesetzt.  Dieses Verbrechen ist nur das letzte einer ganzen Reihe von Kunstrauben, denen unter anderem die Statue "Lorek, ruhend" und die Blendom-Vase zum Opfer fielen.}
+
+	
+
+	
+
+
+//Generic Newspapers
+
+{5000}{490c Demonstration gegen Technologie - 3 Tote}
+
+{5001}{492c _ ÜBERTRIEBENER EINSATZ VON GEWALT? _}
+{5002}{483l 	Gestern wurde die Tarantiner Garde gerufen, um eine Protestdemonstration auf den Stufen des Rathauses aufzulösen, wo sich tumultartige Szenen abspielten.  Die Rädelsführer dieser Demonstration, die Freunde der Magie, hatten sich dort in aller Frühe eingefunden. Sie schrien Obszönitäten und warfen mit allen möglichen technischen Objekten.
+Die Garde reagierte prompt. Nach Eingang der ersten Beschwerden gegen die Demonstration wurde sie in Marsch gesetzt und erreichte den Schauplatz etwa eine Stunde nach Beginn der Ausschreitungen. Bei dem entschlossenen Eingreifen der Garde kamen Knüppel und Gewehre zum Einsatz.  Innerhalb von Minuten entstand ein riesiges Chaos, das von Agitatoren auf beiden Seiten angeheizt wurde.  Als sich der Rauch verzogen hatte, sah man, dass drei Demonstranten zu Tode gekommen waren.
+Diese Demonstration war ein Ausdruck des Protests gegen die wachsende Anzahl von Fabriken in Tarant und die widrigen Auswirkungen, die sie auf die Atmosphäre der Stadt haben.  "Wir werden das nicht länger hinnehmen", sagte Josiah Hummel, der Sprecher der Freunde,  "Tarant ist schließlich auch unsere Stadt!"
+Captain Wheeler von der Tarantiner Wache meinte dazu:  "Die Garde muss die Stadt beschützen, egal wie dick die Luft ist.  Jeder, dem die Stadt am Herzen liegt, kann dieselbe Behandlung erwarten."}
+
+
+{5010}{490c Gerüchte über Flugmaschine unterdrückt}
+{5011}{492c _ ERFAHRENER MAGIER SPRICHT KLARTEXT _}
+{5012}{483l	In letzter Zeit gab es immer wieder Gerüchte, die sich inzwischen fast zur Gewissheit verdichtet haben, dass Objekte gesichtet worden seien, für die sich die Bezeichnung "schwerer als ein Luftschiff" eingebürgert hat. Viele dieser Berichte sprechen von einem "vogelförmigen Schiff". Nur zu verständlich ist die helle Aufregung, die allenthalben spürbar wird. Aufgrund der zahlreichen Briefe, die unsere Redaktion vom Tarantiner Boten hierzu erreichten, haben wir bei einem Experten in Sachen "Sichtungen" und Erscheinungen nachgefragt, dem Meistermagier Krolus Brajercliff. 
+	Er ist Meister sowohl der Schule der Luft als auch jener des Transportes. Über das mysteriöse Schiff befragt, belehrte uns Meister Brajercliff, dass solch eine Erfindung schlicht nicht möglich sei, und belegte das mit folgenden Fakten. "Man muss kein Vogelkundler sein, um zu wissen, dass Vogelknochen hohl und luftgefüllt sind. Und dennoch muss ein Vogel, will er abheben, sich erheblich ins Zeug legen. Selbst die beste solcher neuen 'Maschinen' hätte nicht ein Zehntel der benötigten Energie. Nein, ich fürchte, es bleibt dabei: Wenn sich der einfache Mann von der Straße in die Lüfte erheben will, muss er entweder eines dieser äußerst gefährlichen Leichter-als-Luft-Schiffe benutzen oder sich dem beschwerlichen Studium der Magie verschreiben."
+	Wir vom Tarantiner Boten danken Meister Brajercliff für dieses Gespräch, in dem er uns in einer auch dem Laien verständlichen Sprache tiefe Einblicke in seine Gedanken und Einsichten erlaubt hat.}

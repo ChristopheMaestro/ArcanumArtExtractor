@@ -1,0 +1,158 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Ihr seid ziemlich mürrisch für einen Priester, findet Ihr nicht?}{}{5}{re-40}{10}{re41}
+{3}{An einem Ort wie diesem erwartet man keinen Priester.}{}{5}{re41}{100}{}
+{4}{H:}{}{5}{re41}{300}{}
+{5}{Ich glaube, ich habe einen Plan. Wollt Ihr mich begleiten?}{}{5}{lf1 1, qu1000 2}{201}{lf4 1, jo 0  140}
+{9}{E:}{}{1}{}{0}{}
+{10}{Ihr wärt auch mürrisch, wenn Ihr in Eurem Heimatland nicht mehr willkommen wärt. Aber das ist kein Grund dafür, anderen gegenüber unhöflich zu sein. Verzeihung, Sire.}{Ihr wärt auch mürrisch, wenn Ihr in Eurem Heimatland nicht mehr willkommen wärt. Aber das ist kein Grund dafür, anderen gegenüber unhöflich zu sein. Verzeihung, Madame.}{}{}{}{}
+{11}{Woher stammt Ihr?}{}{5}{}{20}{}
+{12}{Ich wäre auch mürrisch, wenn ich Euer Gesicht jeden Tag im Spiegel betrachten müsste.}{}{5}{ch13}{171}{}
+{13}{Vielleicht sollten wir uns wiedersehen, wenn Ihr besserer Laune seid.}{}{5}{}{0}{re-5, fl 170}
+{14}{Schlagt einen anderen Ton an, oder ich bringe Euch ein paar Manieren bei.}{}{5}{}{180}{re-15}
+{20}{Ich stamme aus Dernholm, der Hauptstadt von Kumbrien. Ich wurde aus meinem geliebten Kumbrien vertrieben, um hier zu enden.}{Ich stamme aus Dernholm, der Hauptstadt von Kumbrien. Ich wurde aus meinem geliebten Kumbrien vertrieben, um hier zu enden.}{}{}{}{}
+{21}{Aber Black Root ist doch jetzt auch eine Provinz von Kumbrien.}{}{5}{gv1001 0, gf1000 0, qa1000 1}{30}{}
+{22}{Ihr solltet besser Eure Koffer packen. Black Root hat sich wieder mit Kumbrien vereint.}{}{5}{gf1000 1}{190}{}
+{23}{Was hält Euch hier fest? Warum geht Ihr nicht ganz von hier fort?}{}{5}{gv1001 1, gf1000 0}{50}{}
+{24}{Fürchtet Ihr Euch nicht davor, auch aus Black Root vertrieben zu werden?}{}{5}{gv1001 0, gf1000 0}{30}{}
+{25}{Vielleicht kann ich Euch behilflich sein?}{}{5}{}{335}{}
+{29}{Es tut mir aufrichtig Leid, Sire. Vielleicht sehen wir uns noch einmal.}{}{5}{}{0}{}
+{30}{Ha! Ihr seid offenbar noch nicht sehr lange hier. Der Bürgermeister hat Praetor verraten und Black Root mit Tarant verbündet.}{Ha! Ihr seid offenbar noch nicht sehr lange hier. Der Bürgermeister hat Praetor verraten und Black Root mit Tarant verbündet.}{}{}{}{gv1001 1}
+{31}{Das ist schändlich! Das muss ich sofort Praetor berichten!}{}{5}{qu1000 2}{40}{}
+{32}{König Praetor wäre für diese Information bestimmt dankbar.}{}{5}{qu1000 1}{40}{}
+{33}{Was hält Euch hier fest? Warum geht Ihr nicht ganz von hier fort?}{}{5}{}{50}{}
+{34}{Schön für ihn. Kumbrien ist so gut wie tot, den Göttern sei Dank.}{}{5}{}{150}{re-10}
+{35}{Jemand muss dem Bürgermeister zeigen, dass es falsch ist, was er tut.}{}{5}{qa1000 1}{160}{re+10}
+{39}{E:}{}{5}{}{0}{}
+{40}{Schon viele haben versucht, es ihm zu erklären, aber das hat ihn nur zornig gemacht. Glaubt mir, ich habe es versucht.}{Schon viele haben versucht, es ihm zu erklären, aber das hat ihn nur zornig gemacht. Glaubt mir, ich habe es versucht.}{}{}{}{}
+{41}{Was hat ein Priester wie Ihr in einer Taverne zu suchen?}{}{5}{}{100}{}
+{42}{Jemand muss Praetor doch Manieren beibringen.}{}{5}{}{150}{re-10}
+{43}{Warum geht Ihr nicht ganz aus Kumbrien fort?}{}{5}{}{50}{}
+{49}{E:}{}{5}{}{0}{}
+{50}{Ich habe mein ganzes Leben in Kumbrien verbracht. Das ist meine Heimat. Ich bin ... war das Oberhaupt der Kirche von Kumbrien.}{Ich habe mein ganzes Leben in Kumbrien verbracht. Das ist meine Heimat. Ich bin ... war das Oberhaupt der Kirche von Kumbrien.}{}{}{}{}
+{51}{Warum seid Ihr nicht mehr Oberhaupt der Kirche von Kumbrien?}{}{5}{}{60}{}
+{52}{Ihr habt der Religion viel zu verdanken, was, Bruder?}{}{5}{}{180}{re-15}
+{59}{E:}{}{5}{}{0}{}
+{60}{König Praetor ist nicht ganz gesund. Als Kumbriens Wirtschaft ins Trudeln geriet, gab er seinen Beratern die Schuld und strafte sie hart. Ich versuchte, vernünftig mit ihm zu reden, doch da verbannte er auch mich.}{König Praetor ist nicht ganz gesund. Als Kumbriens Wirtschaft ins Trudeln geriet, gab er seinen Beratern die Schuld und strafte sie hart. Ich versuchte, vernünftig mit ihm zu reden, doch da verbannte er auch mich.}{}{}{}{lf3 1}
+{61}{König Praetor ist seit dem Tag seiner Geburt nicht ganz gesund.}{}{5}{}{150}{re-15}
+{62}{Ihr seid ein Narr, wenn Ihr versucht, einem Narren Vernunft beizubringen.}{}{5}{}{180}{re-15}
+{63}{Ich darf also annehmen, dass Ihr von Praetor nicht allzu viel haltet?}{}{5}{}{70}{}
+{64}{Könntet Ihr mir wohl helfen? Ich bin hier, um die Steuern für Praetor einzutreiben.}{}{5}{qu1000 2}{201}{lf4 1, jo 0 80}
+{65}{Könntet Ihr mir wohl sagen, wo Dernholm liegt?}{}{5}{ar-5}{355}{}
+{69}{E:}{}{5}{}{0}{}
+{70}{Absolut nicht. Praetor braucht jetzt Hilfe mehr denn je, da ihn seine geistigen Fähigkeiten langsam, aber sicher verlassen. Sogar im Exil werde ich meinen König bis zum letzten Atemzug verteidigen.}{Absolut nicht. Praetor braucht jetzt Hilfe mehr denn je, da ihn seine geistigen Fähigkeiten langsam, aber sicher verlassen. Sogar im Exil werde ich meinen König bis zum letzten Atemzug verteidigen.}{}{}{}{}
+{71}{Könntet Ihr mir wohl helfen? Ich bin hier, um die Steuern für Praetor einzutreiben.}{}{5}{qu1000 2}{201}{lf4 1, jo 0 80}
+{72}{Ich habe mich entschlossen, Praetors Steuern einzutreiben. Könntet Ihr mir wohl helfen?}{}{5}{qu1000 1, ps13}{201}{qu1000 2, jo 0 80}
+{73}{Ich habe mich entschlossen, Praetors Steuern einzutreiben. Könntet Ihr mir wohl helfen?}{}{5}{qu1000 1, ps-12}{90}{}
+{74}{Ich würde ihm liebend gern ins Grab verhelfen.}{}{5}{}{150}{re-10}
+{75}{Könntet Ihr mir wohl sagen, wo Dernholm liegt?}{}{5}{ar-5}{355}{}
+{79}{E:}{}{5}{}{0}{}
+{80}{Ja, das könnte meinen Stand bei Praetor verbessern. Ich werde es tun, mögen die Götter dies bezeugen.}{Ja, das könnte meinen Stand bei Praetor verbessern. Ich werde es tun, mögen die Götter dies bezeugen.}{}{}{}{}
+{81}{Also dann, gehen wir?}{}{5}{}{0}{}
+{82}{Ich würde Euch gern um etwas bitten.}{}{5}{}{220}{}
+{83}{Ich glaube wirklich nicht, dass Ihr würdig genug seid, mir zu helfen.}{}{5}{}{130}{re-15}
+{90}{Ich bin mir nicht sicher, ob Praetor es gutheißen würde, wenn ich mich in seine Angelegenheiten einmische.}{Ich bin mir nicht sicher, ob Praetor es gutheißen würde, wenn ich mich in seine Angelegenheiten einmische.}{}{}{}{}
+{91}{Das wäre eine sehr gute Gelegenheit, Eure Treue zu beweisen.}{}{5}{}{201}{re+10, lf4 1, jo 0 80}
+{92}{Ich glaube jedenfalls nicht, dass Ihr für diese Aufgabe tapfer genug seid.}{}{5}{ps13}{120}{}
+{93}{Er könnte gar nicht regieren, wenn sich nicht andere in seine Angelegenheiten mischen würden.}{}{5}{ch13}{110}{re+15}
+{94}{Ihr seid offenbar zu schwach, um selbst zu denken.}{}{5}{ch-12}{130}{re-15}
+{95}{Ich glaube jedenfalls nicht, dass Ihr für diese Aufgabe tapfer genug seid.}{}{5}{ps-12}{130}{re-15}
+{99}{Vielleicht habt Ihr Recht. Guten Tag.}{}{5}{}{0}{}
+{100}{Das ist mein wunderbares Zuhause in der Fremde. Oder besser, das ist der letzte Ort, an dem ich dieser Tage noch willkommen bin.}{Das ist mein wunderbares Zuhause in der Fremde. Oder besser, das ist der letzte Ort, an dem ich dieser Tage noch willkommen bin.}{}{}{}{}
+{101}{Das ist verständlich, Eurem abstoßenden Gestank nach zu urteilen.}{}{5}{}{180}{re-15}
+{102}{Und wo wäre Euer eigentliches Zuhause?}{}{5}{lf2 0}{20}{}
+{103}{Andere Städte würden Euch willkommen heißen, warum verlasst Ihr Kumbrien nicht?}{}{5}{lf2 1}{50}{}
+{109}{Es tut mir Leid, das zu hören. Auf Wiedersehen.}{}{5}{}{0}{}
+{110}{Ha! Das ist nur zu wahr, guter Mann. Viel schlimmer kann ich die Situation, in der ich mich befinde, wohl nicht machen, was?}{Ha! Das ist nur zu wahr, gute Frau. Viel schlimmer kann ich die Situation, in der ich mich befinde, wohl nicht machen, was?}{}{}{}{}
+{111}{Im Gegenteil, Eure Lage könnte sich verbessern.}{}{5}{}{201}{jo 0 80}
+{112}{Es hört sich nicht so an, als würdet Ihr überhaupt etwas tun können.}{}{5}{}{180}{re-15}
+{113}{Ich glaube wirklich nicht, dass Ihr würdig genug seid, mir zu helfen.}{}{5}{}{130}{re-15}
+{119}{E:}{}{5}{}{0}{}
+{120}{Ihr wagt es, mein Engagement in Frage zu stellen, Sire? Ich kann allem widerstehen, das Ihr mir möglicherweise entgegenwerfen könntet.}{Ihr wagt es, mein Engagement in Frage zu stellen, Madame? Ich kann allem widerstehen, das Ihr mir möglicherweise entgegenwerfen könntet.}{}{}{}{}
+{121}{Dann fordere ich Euch auf, mit mir Schritt zu halten, wenn Ihr könnt.}{}{5}{}{201}{lf4 1, jo 0 140}
+{122}{Dann sehen wir mal, wie Ihr damit umgeht, wenn ich Euch den Bauch aufschlitze.}{}{5}{}{0}{fl 200 ,co}
+{123}{Das bezweifle ich sehr. Auf Wiedersehen.}{}{5}{}{0}{re-10}
+{129}{E:}{}{5}{}{0}{}
+{130}{Ihr wagt es, an mir zu zweifeln? Fort mit Euch, bevor ich Euch den Hals umdrehe, Grünschnabel!}{Ihr wagt es, an mir zu zweifeln? Fort mit Euch, bevor ich Euch den Hals umdrehe, Schlampe!}{}{}{}{}
+{131}{Wenn Ihr Euch mir anschließen wollt, müsst Ihr mehr als ein paar harten Worten widerstehen können.}{}{5}{ps10}{201}{re+10, lf4 1, jo 0 140}
+{132}{Ich muss mir derer, die mich begleiten, einfach nur wirklich sicher sein.}{}{5}{ps-9}{201}{re-10}
+{133}{Ihr seid tot, bevor Ihr auch nur einen Schritt in meine Richtung machen könnt.}{}{5}{}{0}{fl 200 ,co}
+{140}{Gut, wirklich gut! Ich bewundere einen Mann, der sich nicht scheut, seinen Mut zu beweisen. Mögen alle, die sich uns in den Weg stellen, zur Hölle fahren! Geht voran, werter Herr.}{Gut, wirklich gut! Ich bewundere einen Mann, der sich nicht scheut, seinen Mut zu beweisen. Mögen alle, die sich uns in den Weg stellen, zur Hölle fahren! Geht voran, werte Dame.}{}{}{}{}
+{141}{Also dann, gehen wir?}{}{5}{}{0}{}
+{142}{Ich würde Euch gern um etwas bitten.}{}{5}{}{220}{}
+{150}{Ihr solltet besser Eure Zunge im Zaum halten. Ich mag zwar im Exil leben, aber ich bin immer noch ein treuer Bürger von Kumbrien.}{Ihr solltet besser Eure Zunge im Zaum halten. Ich mag zwar im Exil leben, aber ich bin immer noch ein treuer Bürger von Kumbrien.}{}{}{}{}
+{151}{Ihr könnt mir nicht weismachen, dass Ihr keinen Groll gegenüber Praetor hegt.}{}{5}{lf3 1}{70}{}
+{152}{Nein, Ihr könnt auf Eure Zunge achten, nachdem ich sie herausgeschnitten habe.}{}{5}{}{0}{fl 200 ,co}
+{153}{Warum wurdet Ihr ins Exil geschickt?}{}{5}{lf3 0}{60}{}
+{159}{Ich bitte vielmals um Verzeihung ... ich werde jetzt gehen.}{}{5}{}{0}{}
+{160}{Hört! Hört! Habt Ihr etwa einen Schlachtplan?}{Hört! Hört! Habt Ihr etwa einen Schlachtplan?}{}{}{}{}
+{161}{Ich werde Praetors Steuern bekommen, ob es dem Bürgermeister gefällt oder nicht.}{}{5}{}{201}{lf4 1, jo 0 140}
+{162}{Ja, und dazu gehört, Euch eine ordentliche Portion Schmerzen zuzufügen.}{}{5}{}{0}{fl 200 ,co}
+{163}{Momentan nicht. Ich werde Euch darüber in Kenntnis setzen, wenn ich einen habe. Guten Tag.}{}{5}{}{0}{lf1 1}
+{170}{Auf Nimmerwiedersehen, hochmütiges Ekel.}{Auf Nimmerwiedersehen, billige Schlampe.}{}{}{}{}
+{171}{Hi, hi! Eure Intelligenz hat mir den Wind aus den Segeln genommen, Sire. Ich ziehe meinen Hut vor Euch.}{Hi, hi! Eure Intelligenz hat mir den Wind aus den Segeln genommen, Madame. Ich ziehe meinen Hut vor Euch.}{}{}{}{}
+{172}{Woher stammt Ihr?}{}{5}{}{20}{}
+{173}{An einem Ort wie diesem erwartet man keinen Priester.}{}{5}{}{100}{}
+{174}{Es ist ziemlich simpel, jemanden auszustechen, der geistig minderbemittelt ist.}{}{5}{}{180}{re-15}
+{179}{Ich habe keine Zeit für diesen intellektuellen Quatsch. Ich muss mich auf den Weg machen.}{}{5}{}{0}{}
+{180}{Ihr solltet es Euch nochmals überlegen, ob Ihr mich in dieser Weise verspotten wollt, Sire.}{Ihr solltet es Euch nochmals überlegen, ob Ihr mich in dieser Weise verspotten wollt, Madame.}{}{}{}{}
+{181}{Ich bitte um Vergebung. Wo genau liegt Eure Heimat?}{}{5}{lf2 0, gf1000 0}{20}{}
+{182}{Ich bitte um Vergebung. Aber warum hat man Euch aus Kumbrien vertrieben?}{}{5}{lf2 1, gf1000 0}{60}{}
+{183}{Es tut mir Leid. Ihr verachtet Praetor demnach, weil er Euch verbannt hat?}{}{5}{lf3 1, gf1000 0}{70}{}
+{184}{Ich verspotte Euch, wie es mir beliebt, ignorante Kreatur.}{}{5}{}{0}{fl 200 ,co}
+{190}{Was?! Vielleicht wird es für mich wirklich langsam Zeit, mein geliebtes, altes Kumbrien zu verlassen.}{Was?! Vielleicht wird es für mich wirklich langsam Zeit, mein geliebtes, altes Kumbrien zu verlassen.}{}{}{}{}
+{191}{Oder beweist endlich mal etwas Rückgrat, weinerlicher Wurm.}{}{5}{}{180}{re-15}
+{192}{Pech, alter Junge. Tja, vielleicht laufen wir uns ja mal wieder über den Weg.}{}{5}{}{0}{}
+{200}{Ich hoffe, dass Ihr mit den Göttern Euren Frieden gemacht habt, weil Ihr bald schon vor sie treten werdet!}{Ich hoffe, dass Ihr mit den Göttern Euren Frieden gemacht habt, weil Ihr bald schon vor sie treten werdet!}{}{}{}{}
+{201}{Gibt es sonst noch etwas?}{Gibt es sonst noch etwas?}{}{}{}{}
+{202}{Wehleidige Kretins wie Euresgleichen kann ich nicht leiden, Sire.}{}{5}{}{0}{fl 200 ,co}
+{209}{E:}{}{5}{}{0}{}
+{210}{Gibt es sonst noch etwas?}{Gibt es sonst noch etwas?}{}{}{}{}
+{211}{H:}{}{5}{}{210}{}
+{212}{Ich muss Euch ein paar Anweisungen geben.}{}{5}{}{310}{}
+{213}{B:}{}{5}{}{210}{}
+{219}{E:}{}{5}{}{0}{}
+{220}{Ja, womit kann ich Euch behilflich sein?}{Ja, womit kann ich Euch behilflich sein?}{}{}{}{}
+{221}{H:}{}{5}{}{210}{}
+{222}{Ich möchte, dass Ihr etwas für mich tut.}{}{5}{}{310}{}
+{223}{B:}{}{5}{}{210}{}
+{224}{Ich würde gern ein paar Dinge über Euch wissen, Dante.}{}{5}{}{0}{ce}
+{229}{E:}{}{5}{}{0}{}
+{255}{Schön, Euch wiederzusehen, Sire. Könnte ich Euch vielleicht weiter behilflich sein?}{Schön, Euch wiederzusehen, Madame. Könnte ich Euch vielleicht weiter behilflich sein?}{}{}{}{}
+{256}{Ja, würdet Ihr mich wohl bei meinen Reisen wieder begleiten?}{}{5}{qu1000 2, gf1003 0}{201}{jo 0 270}
+{259}{Ich fürchte, das geht nicht, ich muss jetzt gehen.}{}{5}{}{0}{}
+{270}{Ich hatte gehofft, dass Ihr Eure Einladung wiederholen würdet. Es wäre mir eine Ehre.}{Ich hatte gehofft, dass Ihr Eure Einladung wiederholen würdet. Es wäre mir eine Ehre.}{}{}{}{}
+{271}{Wunderbar! Also los.}{}{5}{}{0}{}
+{272}{H:}{}{5}{}{210}{}
+{273}{B:}{}{5}{}{210}{}
+{274}{Ich möchte, dass Ihr etwas für mich tut, Dante.}{}{5}{}{310}{}
+{275}{Was wollt Ihr diesmal? Bitte lasst mich allein.}{Was wollt Ihr diesmal? Bitte lasst mich allein.}{}{}{}{}
+{277}{Ich möchte sehen, wie Euer Kadaver in der Sonne verdorrt.}{}{5}{}{0}{fl 200 ,co}
+{278}{Wie Ihr wollt. Guten Tag.}{}{5}{}{0}{}
+{300}{Gibt es sonst noch etwas?}{Gibt es sonst noch etwas?}{}{}{}{}
+{301}{An einem Ort wie diesem sieht man nicht oft einen Priester.}{}{5}{}{100}{}
+{302}{Ihr seid ziemlich mürrisch für einen Priester, findet Ihr nicht?}{}{5}{}{10}{}
+{303}{N:}{}{5}{}{10}{}
+{310}{Was soll ich tun?}{Was soll ich tun?}{}{}{}{}
+{311}{Würdet Ihr bitte ein wenig von mir abrücken?}{}{1}{}{210}{so}
+{312}{Haltet Euch in meiner Nähe.}{}{1}{}{210}{sc}
+{313}{Könntet Ihr hier wohl warten?}{}{1}{wa 0}{0}{wa, fl 325}
+{314}{Würdet Ihr Euch mir wohl wieder anschließen?}{}{1}{wa 1}{201}{uw1 270}
+{315}{Ich fürchte, der Moment ist gekommen, an dem wir uns trennen müssen, Dante.}{}{1}{}{0}{lv, fl 326}
+{316}{Momentan nichts.}{}{1}{}{210}{}
+{325}{Natürlich.}{Natürlich.}{}{}{}{}
+{326}{Vielleicht werden sich unsere Wege wieder einmal kreuzen.}{Vielleicht werden sich unsere Wege wieder einmal kreuzen.}{}{}{}{}
+{329}{Schön, Euch wiederzusehen, Sire.}{Schön, Euch wiederzusehen, Madame.}{}{}{}{}
+{330}{Ja, dort ist meine Heimat. Ich bin sehr dankbar, dass Ihr mir geholfen habt, zurückzukehren, um meinem geliebten Kumbrien wieder dienen zu dürfen.}{Ja, dort ist meine Heimat. Ich bin sehr dankbar, dass Ihr mir geholfen habt, zurückzukehren, um meinem geliebten Kumbrien wieder dienen zu dürfen.}{}{}{}{lf30 1, lv}
+{331}{Vielleicht werde ich Euch eines Tages wiedersehen.}{}{5}{}{-16}{}
+{335}{Ich fürchte, das wird nicht der Fall sein ... Mir kann niemand mehr helfen.}{Ich fürchte, das wird nicht der Fall sein ... Mir kann niemand mehr helfen.}{}{}{}{}
+{336}{Könntet Ihr mir wenigstens sagen, wo Dernholm liegt?}{}{5}{ar-5}{345}{}
+{337}{Ihr solltet besser Eure Koffer packen. Black Root hat sich wieder mit Kumbrien vereint.}{}{5}{gf1000 1}{190}{}
+{338}{Was hält Euch hier fest? Warum geht Ihr nicht ganz von hier fort?}{}{5}{gv1001 1, gf1000 0}{50}{}
+{344}{Es tut mir aufrichtig Leid, Sire. Vielleicht sehen wir uns noch einmal.}{}{5}{}{0}{}
+{345}{Aber natürlich ... bitte sehr. [Er markiert deine Karte.]}{Aber natürlich ... bitte sehr. [Er markiert deine Karte.]}{}{}{}{mm5}
+{346}{Gern sage ich Euch das ja nicht, aber Black Root hat sich wieder mit Kumbrien verbündet.}{}{5}{gf1000 1}{190}{}
+{347}{Was hält Euch hier fest? Warum geht Ihr nicht ganz von hier fort?}{}{5}{gv1001 1, gf1000 0}{50}{}
+{354}{Vielen Dank. Auf Wiedersehen.}{}{5}{}{0}{}
+{355}{Aber natürlich ... bitte sehr. [Er markiert deine Karte.]}{Aber natürlich ... bitte sehr. [Er markiert deine Karte.]}{}{}{}{mm5}
+{364}{Vielen Dank. Auf Wiedersehen.}{}{5}{}{0}{}
+

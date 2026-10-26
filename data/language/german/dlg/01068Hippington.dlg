@@ -1,0 +1,245 @@
+{1}{G: 1 23, 2 43, 3 43, 5 43, 6 43}{G: 1 23, 2 43, 3 43, 5 43, 6 43}{}{}{}{ }
+{2}{W:}{}{1}{me 0, re 41}{63}{ }
+{3}{Wie ich höre, seid Ihr der Mann, mit dem man über den Stillwater-Riesen reden sollte.}{}{5}{qa1043 1, re 41, lf1 0, me 0}{103}{lf1 1 }
+{4}{Ich habe beschlossen, den Stillwater-Riesen zu jagen.}{}{5}{re 41 qa1043 1, me 1, lf1 1, lf3 0, ni 5610, lf5 0}{143}{lf3 1 }
+{5}{Wie komme ich nahe genug an den Riesen heran, um ihn zu fangen?}{}{5}{lf6 1, lf4 0, re 41}{243}{ }
+{6}{Wo kann ich das Versteck des Stillwater-Riesen finden?}{}{5}{lf4 1, lf5 0, re 41}{263}{ }
+{7}{Ich habe den Riesen noch nicht gefunden.}{}{5}{re 41, lf5 1, ni 5610}{266}{ }
+{8}{Was könnt Ihr mir über den Stillwater-Riesen erzählen?}{}{5}{re 41, lf1 0, qa1043 1, me 1}{93}{lf1 1 }
+{9}{Ich habe den Stillwater-Riesen gefangen, Sire! [Du zeigst ihm den gefangenen Riesen.]}{}{5}{in 5610, lf8 0, re 41}{268}{ }
+{10}{Ich habe den ... Riesen zu meinem Mitarbeiter gebracht, und der sagt, es sei ein Kaninchen.}{}{5}{re 41, gf1053 1, gf1054 0}{286}{ }
+{11}{Ich habe den Pelz des Stillwater-Riesen in einem Tarantiner Museum gesehen.}{}{5}{gf1048 1, lf1 1, re 41, lf11 0}{153}{lf11 1 }
+{12}{Dr. Fenwick sagte, das wäre ein Kaninchen und der Riese einfach ein Riesenschwindel.}{}{5}{re 41, gf1054 1, lf9 0}{301}{lf9 1 }
+{13}{Verzeiht, aber habt Ihr mit mir geredet?}{}{5}{re -40, ch 15}{313}{re50 }
+{14}{Bitte, Sire, ich möchte Euch nur einige Fragen stellen, wenn ich darf.}{}{5}{re -40, ch -14}{326}{re41 }
+{15}{Was wagtet Ihr gerade, zu mir zu sagen?}{}{5}{re -40}{346}{re -10 }
+{16}{Ich habe das blaue Kaninchen getötet, aber es hat sich nicht in einen Riesen verwandelt.}{}{5}{gf2352 1, lf1 1}{415}{re-10 }
+{17}{Ich finden Riese?}{}{-4}{qa1043 1, lf3 0}{359}{ }
+{18}{Ich finden Riese!}{}{-4}{in 5610}{365}{ }
+{19}{Elf sagen, Riese sein Kaninchenhase.}{}{-4}{gf1053 1,gf1054 0}{367}{ }
+{20}{Großhirndoktor sagen, Riese sein falsch.}{}{-4}{gf1054 1}{301}{ }
+{21}{Ich Hasi totig machen!}{}{-4}{gf2352 1, lf1 1}{415}{re-10 }
+{22}{E:}{}{1}{}{0}{ }
+{23}{Hoch interessant. Würde es Euch etwas ausmachen, wenn ich Euer Werk etwas genauer unter die Lupe nähme? Ich habe so selten Gelegenheit, Wesen aus dem Reich der Magie zu studieren, wisst Ihr.}{Hoch interessant. Würde es Euch etwas ausmachen, wenn ich Euer Werk etwas genauer unter die Lupe nähme? Ich habe so selten Gelegenheit, Wesen aus dem Reich der Magie zu studieren, wisst Ihr.}{}{}{}{ }
+{24}{Absolut nicht. Darf ich wohl Euren Namen erfahren?}{}{5}{me 0}{63}{ }
+{25}{Absolut nicht. Wie ich höre, seid Ihr der Mann, der alles über den Stillwater-Riesen weiß.}{}{5}{qa1043 1, lf1 0, me 0}{103}{ }
+{26}{Absolut nicht. Ich bin hier, weil ich beschlossen habe, den Riesen zu jagen.}{}{5}{qa1043 1, me 1, lf1 1, lf3 0, ni 5610}{143}{lf3 1 }
+{27}{Absolut nicht. Ich habe den Riesen noch nicht gefunden.}{}{5}{ lf5 1, ni 5610}{266}{ }
+{28}{Absolut nicht. Was könnt Ihr mir über den Stillwater-Riesen erzählen?}{}{5}{ lf1 0, qa1043 1, me 1}{93}{lf1 1 }
+{29}{Ich habe den Stillwater-Riesen gefangen, Sire! [Du zeigst ihm den gefangenen Riesen.]}{}{5}{in 5610, lf8 0}{268}{ }
+{30}{Ich habe diesen "Riesen" zu meinem Mitarbeiter gebracht. Er sagt, es sei nur ein Kaninchen.}{}{5}{ gf1053 1, gf1054 0}{286}{ }
+{31}{Ich habe den Pelz des Stillwater-Riesen in einem Tarantiner Museum gesehen.}{}{5}{gf1048 1, lf1 1, lf11 0}{153}{lf11 1 }
+{32}{Dr. Fenwick sagte, das wäre ein Kaninchen und der Riese einfach ein Riesenschwindel.}{}{5}{gf1054 1, lf9 0}{301}{lf9 1 }
+{33}{Wie komme ich nahe genug an den Riesen heran, um ihn zu fangen?}{}{5}{lf6 1, lf4 0}{243}{ }
+{34}{Wo kann ich das Versteck des Stillwater-Riesen finden?}{}{5}{lf4 1, lf5 0}{263}{ }
+{42}{E:}{}{5}{}{0}{ }
+{43}{Bravo, Sire! Man erlebt nur selten einen Magier, der seine Talente so zur Schau stellt wie Ihr.}{Bravo, Madame! Man erlebt nur selten einen Magier, der seine Talente so zur Schau stellt wie Ihr.}{}{}{}{ }
+{44}{Darf ich wohl Euren Namen erfahren?}{}{5}{me 0}{63}{ }
+{45}{Wie ich höre, seid Ihr der Mann, der alles über den Stillwater-Riesen weiß.}{}{5}{qa1043 1, lf1 0, me 0}{103}{ }
+{46}{Ich habe beschlossen, den Stillwater-Riesen zu jagen.}{}{5}{qa1043 1, me 1, lf1 1, lf3 0, ni 5610}{143}{lf3 1 }
+{47}{Ich habe den Riesen noch nicht gefunden.}{}{5}{lf5 1, ni 5610}{266}{ }
+{48}{Was könnt Ihr mir über den Stillwater-Riesen erzählen?}{}{5}{ lf1 0, qa1043 1, me 1}{93}{lf1 1 }
+{49}{Ich habe den Stillwater-Riesen gefangen, Sire! [Du zeigst ihm den gefangenen Riesen.]}{}{5}{in 5610, lf8 0}{268}{ }
+{50}{Ich habe den ... Riesen zu meinem Mitarbeiter gebracht, und der sagt, es sei ein Kaninchen.}{}{5}{ gf1053 1, gf1054 0}{286}{ }
+{51}{Ich habe den Pelz des Stillwater-Riesen in einem Tarantiner Museum gesehen.}{}{5}{gf1048 1, lf1 1, lf11 0}{153}{lf11 1 }
+{52}{Dr. Fenwick sagte, das wäre ein Kaninchen und der Riese einfach ein Riesenschwindel.}{}{5}{gf1054 1, lf9 0}{301}{lf9 1 }
+{53}{Wie komme ich nahe genug an den Riesen heran, um ihn zu fangen?}{}{5}{lf6 1, lf4 0}{243}{ }
+{54}{Wo kann ich das Versteck des Stillwater-Riesen finden?}{}{5}{lf4 1, lf5 0}{263}{ }
+{62}{E:}{}{5}{}{0}{ }
+{63}{Stanley Xavier Hippington, anerkannter Kryptozoologe, zu Euren Diensten.}{Stanley Xavier Hippington, anerkannter Kryptozoologe, zu Euren Diensten.}{}{}{}{ }
+{64}{Kryptozoologe? Was ist das?}{}{5}{}{73}{ }
+{65}{Kryptozoologe? Jemand, der Phantasiewesen erforscht?}{}{15}{}{83}{ }
+{66}{Wie ich höre, seid Ihr der Mann, mit dem man über den Stillwater-Riesen reden sollte.}{}{5}{qa1043 1}{103}{ }
+{67}{Krüppozodingsda, was sein das?}{}{-4}{}{351}{ }
+{71}{Tschö.}{}{-4}{}{0}{ }
+{72}{E:}{}{5}{}{0}{ }
+{73}{Ein Kryptozoologe ist jemand, der Wesen erforscht, die nur sehr schwer zu fassen sind, ja von denen man manchmal gar nicht weiß, ob sie überhaupt existieren. Ich für meinen Teil bin Experte für den Gigantopithecus Arcanus, besser bekannt unter der Bezeichnung Stillwater-Riese.}{Ein Kryptozoologe ist jemand, der Wesen erforscht, die nur sehr schwer zu fassen sind, ja von denen man manchmal gar nicht weiß, ob sie überhaupt existieren. Ich für meinen Teil bin Experte für den Gigantopithecus Arcanus, besser bekannt unter der Bezeichnung Stillwater-Riese.}{}{}{}{ }
+{74}{Schwer zu fassen? Ich dachte immer, der Stillwater-Riese sei ein Schwindel?}{}{10}{}{83}{ }
+{75}{Der Stillwater-Riese?}{}{5}{lf1 0}{93}{lf1 1 }
+{77}{Ich habe den Pelz des Stillwater-Riesen in einem Tarantiner Museum gesehen.}{}{5}{gf1048 1, lf11 0}{153}{lf11 1 }
+{81}{Ich dachte, es sei jemand, der zu dumm ist, ein richtiger Zoologe zu sein.}{}{8}{ch10}{83}{re -5 }
+{82}{Es freut mich außerordentlich, Eure Bekanntschaft zu machen, aber leider muss ich jetzt gehen.}{}{5}{}{0}{ }
+{83}{Tja, die meisten Leute haben keine Ahnung, wie viel Fleiß und Geduld es erfordert, Wesen dieser Art zu erforschen. Sie verstehen nicht, dass es viele Jahre braucht, authentische, handgreifliche Beweise zu sammeln. Aber wie Ihr hier sehen könnt, habe ich eine ganze Reihe von Beweisen.}{Tja, die meisten Leute haben keine Ahnung, wie viel Fleiß und Geduld es erfordert, Wesen dieser Art zu erforschen. Sie verstehen nicht, dass es viele Jahre braucht, authentische, handgreifliche Beweise zu sammeln. Aber wie Ihr hier sehen könnt, habe ich eine ganze Reihe von Beweisen.}{}{}{}{ }
+{84}{Was für Beweise?}{}{5}{}{123}{ }
+{85}{Ich muss den Stillwater-Riesen fangen.}{}{5}{qa1043 1}{133}{ }
+{86}{Was könnt Ihr mir darüber erzählen?}{}{5}{}{93}{ }
+{92}{E:}{}{5}{}{0}{ }
+{93}{Der Stillwater-Riese, Gigantopithecus Arcanus, ist eine äußerst primitive Riesenart, die seit mehr als 25.000 Jahren ausgestorben sein soll.  Es handelte sich dabei um eine etwas merkwürdige Abart der Gigantopithecus-Familie.}{Der Stillwater-Riese, Gigantopithecus Arcanus, ist eine äußerst primitive Riesenart, die seit mehr als 25.000 Jahren ausgestorben sein soll.  Es handelte sich dabei um eine etwas merkwürdige Abart der Gigantopithecus-Familie.}{}{}{}{lf1 1 }
+{94}{Merkwürdig? Inwiefern?}{}{5}{}{113}{ }
+{96}{Ich habe gehört, es gibt sogar Streit darum, ob dieser Riese je existiert hat.}{}{13}{}{163}{ }
+{97}{Ich habe den Pelz des Stillwater-Riesen in einem Tarantiner Museum gesehen.}{}{5}{gf1048 1}{153}{ }
+{103}{Das ist korrekt. Ich bin eine absolute Koryphäe in Sachen Stillwater-Riese. Ich habe es mir zu meiner Lebensaufgabe gemacht, diese Kreatur aufzufinden.}{Das ist korrekt. Ich bin eine absolute Koryphäe in Sachen Stillwater-Riese. Ich habe es mir zu meiner Lebensaufgabe gemacht, diese Kreatur aufzufinden.}{}{}{}{ }
+{104}{Worum handelt es sich dabei eigentlich?}{}{5}{}{93}{ }
+{112}{E:}{}{5}{}{0}{ }
+{113}{Tja, neben der Tatsache, dass dieses Wesen für einen Riesen extrem haarig ist, hatte es auch noch große Hörner. Aber der faszinierendste Aspekt des Gigantopithecus Arcanus war seine Fähigkeit der Gestaltwandlung.}{Tja, neben der Tatsache, dass dieses Wesen für einen Riesen extrem haarig ist, hatte es auch noch große Hörner. Aber der faszinierendste Aspekt des Gigantopithecus Arcanus war seine Fähigkeit der Gestaltwandlung.}{}{}{}{lf2 1 }
+{114}{Ich muss es fangen.}{}{5}{qa 1043 1}{143}{ }
+{115}{Haarig? Was soll das bedeuten?}{}{5}{lf12 0}{378}{lf12 1 }
+{122}{Danke für die Informationen. Ich muss jetzt gehen.}{}{5}{}{0}{ }
+{123}{Tja, ich habe eine recht beachtliche Menge an Pelz- und Kotproben sowie ganzen und partiellen Fußabdrücken gesammelt. Ganz zu schweigen von den zahlreichen Akten über Leute, die dieses Wesen mit eigenen Augen gesehen haben!}{Tja, ich habe eine recht beachtliche Menge an Pelz- und Kotproben sowie ganzen und partiellen Fußabdrücken gesammelt. Ganz zu schweigen von den zahlreichen Akten über Leute, die dieses Wesen mit eigenen Augen gesehen haben!}{}{}{}{ }
+{124}{Was könnt Ihr mir darüber erzählen?}{}{5}{}{93}{ }
+{133}{Fangen? Wisst Ihr denn überhaupt etwas darüber?}{Fangen? Wisst Ihr denn überhaupt etwas darüber?}{}{}{}{ }
+{134}{Na ja, eigentlich nicht. Was könnt Ihr mir darüber erzählen?}{}{5}{}{93}{ }
+{135}{Ist das nicht eine primitive Riesenart? Was müsste man denn sonst noch wissen?}{}{12}{}{113}{ }
+{136}{Ich muss nur wissen, wie man das Ding fängt.}{}{5}{lf2 1}{143}{ }
+{143}{Dann ist es wahrhaftig ein Glück für uns beide, dass Ihr mich aufgesucht habt. Die meisten Leute glauben, den Stillwater-Riesen zu fangen sei ein Ding der Unmöglichkeit, aber ich habe eine Möglichkeit gefunden. Ich habe ihn bis zu seinem Versteck verfolgt, und nun suche ich noch einen verwegenen Großwildjäger, der meinen Plan umsetzt.}{Dann ist es wahrhaftig ein Glück für uns beide, dass Ihr mich aufgesucht habt. Die meisten Leute glauben, den Stillwater-Riesen zu fangen sei ein Ding der Unmöglichkeit, aber ich habe eine Möglichkeit gefunden. Ich habe ihn bis zu seinem Versteck verfolgt, und nun suche ich noch einen verwegenen Großwildjäger, der meinen Plan umsetzt.}{}{}{}{ }
+{144}{Warum benötigt Ihr einen Großwildjäger? Könntet Ihr das nicht auch selbst erledigen?}{}{5}{}{173}{ }
+{145}{Sagt mir, was ich tun muss.}{}{5}{}{193}{ }
+{153}{Ja, gesehen habe ich das Ding auch. Wirklich amüsant. Das ist eine ganz offensichtliche Fälschung, zusammengenäht aus mottenzerfressenen alten Bärenpelzen und mit einem falschen Geweih auf dem Kopf.}{Ja, gesehen habe ich das Ding auch. Wirklich amüsant. Das ist eine ganz offensichtliche Fälschung, zusammengenäht aus mottenzerfressenen alten Bärenpelzen und mit einem falschen Geweih auf dem Kopf.}{}{}{}{ }
+{154}{So etwas hatte ich auch vermutet. Was könnt Ihr mir über den echten Riesen erzählen?}{}{5}{lf1 0, lf2 0}{93}{ }
+{155}{Ich verstehe. Warum ist dieser Stillwater-Riese so einzigartig?}{}{5}{lf1 1, lf2 0}{113}{ }
+{156}{Ich habe beschlossen, den echten Stillwater-Riesen zu jagen.}{}{5}{lf2 1}{143}{ }
+{162}{Interessant. Tja, ich muss mich jetzt verabschieden.}{}{5}{}{0}{ }
+{163}{Einige meiner falsch informierten Kollegen mögen diesen Standpunkt noch immer einnehmen, aber die Vorreiter auf diesem Gebiet der Wissenschaft hegen überhaupt keinen Zweifel daran, dass es sich beim Gigantopithecus Arcanus um eine authentische Spezies handelt. Die Frage ist nun nur, ob es davon noch lebende Exemplare gibt.}{Einige meiner falsch informierten Kollegen mögen diesen Standpunkt noch immer einnehmen, aber die Vorreiter auf diesem Gebiet der Wissenschaft hegen überhaupt keinen Zweifel daran, dass es sich beim Gigantopithecus Arcanus um eine authentische Spezies handelt. Die Frage ist nun nur, ob es davon noch lebende Exemplare gibt.}{}{}{}{ }
+{164}{Was unterscheidet ihn denn eigentlich so speziell von den anderen Riesenarten?}{}{5}{}{113}{ }
+{173}{Ich wünschte, ich hätte die notwendigen Fähigkeiten, um dieses Wesen einzufangen, aber ich bin nur ein Wissenschaftler. Der Riese ist ein gefährliches Tier, und nur die verwegensten und erfahrensten Großwildjäger hätten eine Chance, seine furchtbaren Attacken zu überstehen.}{Ich wünschte, ich hätte die notwendigen Fähigkeiten, um dieses Wesen einzufangen, aber ich bin nur ein Wissenschaftler. Der Riese ist ein gefährliches Tier, und nur die verwegensten und erfahrensten Großwildjäger hätten eine Chance, seine furchtbaren Attacken zu überstehen.}{}{}{}{ }
+{174}{Ich fürchte, das schließt mich aus. Kann das nicht jemand anderes übernehmen?}{}{5}{}{183}{ }
+{175}{Sagt mir, was ich tun muss, um es zu fangen.}{}{5}{}{193}{ }
+{176}{Das hört sich aufregend an, aber ich muss mich leider verabschieden. Guten Tag.}{}{5}{}{0}{ }
+{183}{Ich suche jetzt schon seit geraumer Zeit nach der geeigneten Person für diese Aufgabe, aber bislang ohne Erfolg.}{Ich suche jetzt schon seit geraumer Zeit nach der geeigneten Person für diese Aufgabe, aber bislang ohne Erfolg.}{}{}{}{ }
+{184}{Tja, dann habe ich wohl keine Wahl. Ich tu's.}{}{5}{}{193}{ }
+{185}{Ich wünsche Euch Glück bei Eurer Suche. Guten Tag.}{}{5}{}{0}{ }
+{193}{Ausgezeichnet! Ich habe eine spezielle Falle konstruiert, hier, irgendwo ... Ah! Hier! Mit dieser Falle könnt Ihr den Riesen fangen. [Er gibt dir eine kleine Falle.]}{Ausgezeichnet! Ich habe eine spezielle Falle konstruiert, hier, irgendwo ... Ah! Hier! Mit dieser Falle könnt Ihr den Riesen fangen. [Er gibt dir eine kleine Falle.]}{}{}{}{in -5609, lf6 1 }
+{194}{Diese Falle ist ja lächerlich klein. Wie soll ich damit einen Riesen fangen?}{}{5}{}{203}{ }
+{203}{Aber das ist doch das Schöne an dem Plan. Wir machen uns die gestaltwandlerischen Fähigkeiten des Riesen zum Vorteil. Ein Wesen von solch enormen Ausmaßen zu ernähren, erfordert eine Menge Futter, daher verwandelt sich der Riese jedesmal in ein relativ kleines Tier, wenn er in seinem Versteck in Sicherheit ist. So spart er Energie.}{Aber das ist doch das Schöne an dem Plan. Wir machen uns die gestaltwandlerischen Fähigkeiten des Riesen zum Vorteil. Ein Wesen von solch enormen Ausmaßen zu ernähren, erfordert eine Menge Futter, daher verwandelt sich der Riese jedesmal in ein relativ kleines Tier, wenn er in seinem Versteck ist. So spart er Energie.}{}{}{}{ }
+{204}{Also muss ich mich nur anschleichen und diese Falle benutzen? Hört sich ja einfach an.}{}{5}{}{213}{ }
+{205}{Aber woher weiß ich, dass es sich um diese Kreatur handelt, wenn sie sich in ihrem kleinen Zustand befindet?}{}{5}{lf7 0}{223}{ }
+{213}{Es ist ganz einfach, solange das Wesen Euch nicht bemerkt hat. Daher ist das auch eine Aufgabe für einen erfahrenen Jäger. Denn wenn es Euch wittert, hört oder Eure Gegenwart auch nur spürt, wird es sich augenblicklich in einen Riesen verwandeln und zum Angriff übergehen.}{Es ist ganz einfach, solange das Wesen Euch nicht bemerkt hat. Daher ist das auch eine Aufgabe für einen erfahrenen Jäger. Denn wenn es Euch wittert, hört oder Eure Gegenwart auch nur spürt, wird es sich augenblicklich in einen Riesen verwandeln und zum Angriff übergehen.}{}{}{}{ }
+{214}{Und wie soll ich nahe genug an dieses Wesen heran kommen?}{}{5}{lf4 0}{243}{ }
+{215}{Aber woher weiß ich, dass es sich um diese Kreatur handelt, wenn sie sich in ihrem kleinen Zustand befindet?}{}{5}{lf7 0}{223}{ }
+{222}{Das alles ist so überwältigend. Darüber muss ich erst noch etwas nachdenken. Guten Tag.}{}{5}{}{0}{ }
+{223}{Man mag es kaum glauben, aber er hat dann sehr viel Ähnlichkeit mit einem Kaninchen. Das einzige, das ihn von einem gewöhnlichen Stallhasen unterscheidet, ist seine blaue Farbe.}{Man mag es kaum glauben, aber er hat dann sehr viel Ähnlichkeit mit einem Kaninchen. Das einzige, das ihn von einem gewöhnlichen Stallhasen unterscheidet, ist seine blaue Farbe.}{}{}{}{lf7 1, gf1091 1 }
+{224}{Kaninchen? Das ist nicht Euer Ernst! Ihr beliebt zu scherzen, stimmt's?}{}{5}{}{233}{ }
+{225}{Wie komme ich nahe genug heran, ohne die Kreatur aufzuschrecken?}{}{5}{lf4 0}{243}{ }
+{226}{Und warum sollte die Kreatur sich nicht in ihre große Variante verwandeln, nachdem sie in die Falle gegangen ist?}{}{5}{lf4 0}{271}{ }
+{227}{Ich habe es bereits getötet, aber es hat sich nicht in einen Riesen verwandelt.}{}{5}{gf2352 1}{415}{ }
+{232}{Das alles ist so überwältigend. Darüber muss ich erst noch etwas nachdenken. Guten Tag.}{}{5}{}{0}{ }
+{233}{Das ist kein Scherz, und Ihr solltet es auch nicht als solchen betrachten. Das Wesen spart so nicht nur Energie. Dieser kleine Zustand dient auch dazu, ahnungslose Beute anzulocken, denn in voller Größe ist die Kreatur nicht besonders schnell. Solltet ihr sie also aufschrecken, würde ich empfehlen, dass Ihr wegrennt, denn wahrscheinlich seid Ihr schneller.}{Das ist kein Scherz, und Ihr solltet es auch nicht als solchen betrachten. Das Wesen spart so nicht nur Energie. Dieser kleine Zustand dient auch dazu, ahnungslose Beute anzulocken, denn in voller Größe ist die Kreatur nicht besonders schnell. Solltet ihr sie also aufschrecken, würde ich empfehlen, dass Ihr wegrennt, denn wahrscheinlich seid Ihr schneller.}{}{}{}{ }
+{234}{Wie komme ich nahe genug heran, ohne die Kreatur aufzuschrecken?}{}{5}{lf4 0}{243}{ }
+{235}{Wo finde ich diese Kreatur?}{}{5}{lf4 1}{263}{ }
+{236}{Und warum sollte die Kreatur sich nicht in ihre große Variante verwandeln, nachdem sie in die Falle gegangen ist?}{}{5}{lf4 0}{271}{ }
+{243}{Hier habt Ihr eine Duftessenz, mit der Ihr Eure Witterung übertünchen könnt. Ich würde vorschlagen, Ihr nehmt Eure Rüstung ab und benutzt die Essenz, bevor Ihr Euch dem Wesen nähert. Ohne Rüstung könnt Ihr Euch viel leiser bewegen, und solltet Ihr das Wesen dennoch aufschrecken, besteht die vage Möglichkeit, dass es in Euch keine Bedrohung sieht.}{Hier habt Ihr eine Duftessenz, mit der Ihr Eure Witterung übertünchen könnt. Ich würde vorschlagen, Ihr nehmt Eure Rüstung ab und benutzt die Essenz, bevor Ihr Euch dem Wesen nähert. Ohne Rüstung könnt Ihr Euch viel leiser bewegen, und solltet Ihr das Wesen dennoch aufschrecken, besteht die vage Möglichkeit, dass es in Euch keine Bedrohung sieht.}{}{}{}{in -3610, lf4 1, ru2028 }
+{244}{Wo finde ich diese Kreatur?}{}{5}{lf7 1}{263}{ }
+{245}{Ich lege doch meine Rüstung nicht ab und trete diesem Monster ungeschützt gegenüber.}{}{5}{}{253}{ }
+{246}{Aber woher weiß ich, dass es sich um diese Kreatur handelt, wenn sie sich in ihrem kleinen Zustand befindet?}{}{5}{lf7 0}{223}{ }
+{253}{Dann werdet Ihr sehr wahrscheinlich sterben. Wenn Ihr dem Riesen im offenen Kampf begegnen wollt, so lobe ich Euren Mut, nicht aber Euren Verstand.}{Dann werdet Ihr sehr wahrscheinlich sterben. Wenn Ihr dem Riesen im offenen Kampf begegnen wollt, so lobe ich Euren Mut, nicht aber Euren Verstand.}{}{}{}{ }
+{254}{Wo finde ich diese Kreatur?}{}{5}{}{263}{ }
+{255}{Das hört sich für mich wie Selbstmord an. Ich muss leider ablehnen. Guten Tag.}{}{5}{}{0}{ }
+{263}{Aaah, das ist der einfachste Teil Eurer Aufgabe. Ich habe dieses Haus so nahe an seinem Versteck gebaut, wie ich es wagen konnte. Folgt einfach dem Pfad an der Rückseite. Er endet am Eingang der Höhle. Der Riese lebt irgendwo tief im Inneren des Labyrinths.}{Aaah, das ist der einfachste Teil Eurer Aufgabe. Ich habe dieses Haus so nahe an seinem Versteck gebaut, wie ich es wagen konnte. Folgt einfach dem Pfad an der Rückseite. Er endet am Eingang der Höhle. Der Riese lebt irgendwo tief im Inneren des Labyrinths.}{}{}{}{lf5 1 }
+{264}{A:}{}{5}{}{0}{ }
+{266}{Das überrascht mich nicht. Einige Leute haben ihr Leben lang danach gesucht.}{Das überrascht mich nicht. Einige Leute haben ihr Leben lang danach gesucht.}{}{}{}{ }
+{267}{E:}{}{5}{}{0}{ }
+{268}{Ja, ja, ich verstehe. [Er untersucht den Riesen.] Ausgezeichnet. Und jetzt brauchen wir eine Bestätigung.}{Ja, ja, ich verstehe. [Er untersucht den Riesen.] Ausgezeichnet. Und jetzt brauchen wir eine Bestätigung.}{}{}{}{ }
+{269}{Bestätigung? Ich dachte, Ihr sagtet, das wäre alles.}{}{5}{}{276}{ }
+{271}{Innerhalb der Falle gibt es ein schwach magisches Kraftfeld, das dem Wesen seine Fähigkeit zur Verwandlung nimmt.}{Innerhalb der Falle gibt es ein schwach magisches Kraftfeld, das dem Wesen seine Fähigkeit zur Verwandlung nimmt.}{}{}{}{ }
+{272}{Wie komme ich nahe genug heran, ohne die Kreatur aufzuschrecken?}{}{5}{}{243}{ }
+{276}{Hervorragend. Jetzt benötigen wir nur noch eine Bestätigung der wissenschaftlichen Gesellschaft in Tarant, um unseren Fund legitimieren zu lassen. Ohne ihre Unterstützung haben wir keine Chance, unsere Ergebnisse zu veröffentlichen. Bringt das zu Dr. Tristan Fenwick von der zoologischen Gesellschaft in Tarant. Er ist ein Genie. Ich bin mir sicher, dass er uns helfen wird.}{Hervorragend. Jetzt benötigen wir nur noch eine Bestätigung der wissenschaftlichen Gesellschaft in Tarant, um unseren Fund legitimieren zu lassen. Ohne ihre Unterstützung haben wir keine Chance, unsere Ergebnisse zu veröffentlichen. Bringt das zu Dr. Tristan Fenwick von der zoologischen Gesellschaft in Tarant. Er ist ein Genie. Ich bin mir sicher, dass er uns helfen wird.}{}{}{}{lf8 1, gf2125 1, ru2029 }
+{277}{Ich will gar nichts veröffentlichen, ich will sehen, wie sich das Ding verwandelt!}{}{5}{}{281}{ }
+{278}{Dann werde ich jetzt Dr. Fenwick besuchen.}{}{5}{}{0}{ }
+{281}{Habt Ihr den Verstand verloren? Dieses Ding würde uns in der Luft zerreißen, sobald wir es frei lassen! Bringt es zu Dr. Fenwick. Er wird ein passendes Gehege finden, wo wir die Verwandlung aus sicherer Entfernung beobachten können.}{Habt Ihr den Verstand verloren? Dieses Ding würde uns in der Luft zerreißen, sobald wir es frei lassen! Bringt es zu Dr. Fenwick. Er wird ein passendes Gehege finden, wo wir die Verwandlung aus sicherer Entfernung beobachten können.}{}{}{}{ }
+{282}{Dann werde ich jetzt Dr. Fenwick besuchen.}{}{5}{}{0}{ }
+{286}{Ich vermute, Euer Mitarbeiter ist kein Zoologe. Es gibt einige versteckte Hinweise darauf, dass es sich hier um einen Riesen handelt und nicht um ein Kaninchen. So ist zum Beispiel der Kopf länger und schmaler als bei einem echten Kaninchen, das Fell ist blau, und überhaupt ist das Wesen viel schwerer, als es sein sollte.}{Ich vermute, Euer Mitarbeiter ist kein Zoologe. Es gibt einige versteckte Hinweise darauf, dass es sich hier um einen Riesen handelt und nicht um ein Kaninchen. So ist zum Beispiel der Kopf länger und schmaler als bei einem echten Kaninchen, das Fell ist blau, und überhaupt ist das Wesen viel schwerer, als es sein sollte.}{}{}{}{ }
+{287}{Ich glaube fast, Ihr wollt mich für dumm verkaufen, Sire.}{}{5}{}{291}{ }
+{288}{Wollt Ihr damit ausdrücken, dass wir fündig wurden?}{}{5}{lf8 0}{276}{ }
+{291}{Glaubt, was Ihr wollt, ich sage die Wahrheit. Dr. Fenwick wird ebenfalls bestätigen, dass dies die bewusste Kreatur ist und keinesfalls ein Kaninchen.}{Glaubt, was Ihr wollt, ich sage die Wahrheit. Dr. Fenwick wird ebenfalls bestätigen, dass dies die bewusste Kreatur ist und keinesfalls ein Kaninchen.}{}{}{}{ }
+{292}{Dr. Fenwick?}{}{5}{lf8 0}{296}{ }
+{293}{Dann werde ich jetzt Dr. Fenwick besuchen.}{}{5}{lf 8 1}{0}{ }
+{296}{Dr. Tristan Fenwick von der zoologischen Gesellschaft in Tarant. Er ist ein Genie. Ich bin mir sicher, dass er uns helfen wird. Wir benötigen eine Bestätigung der wissenschaftlichen Gesellschaft in Tarant, um unseren Fund legitimieren zu lassen. Ohne ihre Unterstützung haben wir keine Chance, unsere Ergebnisse zu veröffentlichen.}{Dr. Tristan Fenwick von der zoologischen Gesellschaft in Tarant. Er ist ein Genie. Ich bin mir sicher, dass er uns helfen wird. Wir benötigen eine Bestätigung der wissenschaftlichen Gesellschaft in Tarant, um unseren Fund legitimieren zu lassen. Ohne ihre Unterstützung haben wir keine Chance, unsere Ergebnisse zu veröffentlichen.}{}{}{}{lf8 1, gf2125 1 }
+{297}{Dann werde ich jetzt Dr. Fenwick besuchen.}{}{5}{}{0}{ }
+{301}{Was ...? Er kann nicht ...? Aber äh ... er ist doch ein wissenschaftliches Genie! Das verstehe ich nicht.}{Was ...? Er kann nicht ...? Aber äh ... er ist doch ein wissenschaftliches Genie! Das verstehe ich nicht.}{}{}{}{lf10 1 }
+{302}{Er sagt, das Kaninchen wurde blau angemalt, und Ihr wärt verrückt.}{}{5}{}{307}{ }
+{303}{Das Kaninchen wurde angemalt! Ihr habt mich für dumm verkauft!}{}{5}{}{307}{ }
+{304}{Er sagen, Ihr dummig. Kaninchi blau haben machen.}{}{-4}{}{307}{ }
+{305}{Was gibt es da nicht zu verstehen? Ihr habt den Verstand verloren. Guten Tag.}{}{5}{}{0}{re -10 }
+{306}{Guten Tag, Sire.}{}{5}{}{0}{ }
+{307}{Lügen! Lauter Lügen! Man hat mich hereingelegt. Vielleicht habt Ihr ja das Wesen gegen ein Kaninchen ausgetauscht, hä? Nein, wartet, jetzt weiß ich es - Dr. Fenwick ist von Dämonen aus einer anderen Welt besessen, die mich vernichten wollen! Das muss es sein, es sei denn, er, äh ...}{Lügen! Lauter Lügen! Man hat mich hereingelegt. Vielleicht habt Ihr ja das Wesen gegen ein Kaninchen ausgetauscht, hä? Nein, wartet, jetzt weiß ich es - Dr. Fenwick ist von Dämonen aus einer anderen Welt besessen, die mich vernichten wollen! Das muss es sein, es sei denn, er, äh ...}{}{}{}{ }
+{308}{Ich finde schon selbst zur Tür.}{}{5}{}{0}{fl 312}
+{309}{Ich jetz' geh'n.}{}{-4}{}{0}{fl 312}
+{312}{Nein, keine Dämonen, er will meine Entdeckung vielmehr für sich selbst stehlen ... aus irgendeinem Grund fühle ich, dass Dämonen darin verwickelt sind ... dieser Riese kann Gedanken kontrollieren! Das war's! ... oder, äh ...}{Nein, keine Dämonen, er will meine Entdeckung vielmehr für sich selbst stehlen ... aus irgendeinem Grund fühle ich, dass Dämonen darin verwickelt sind ... dieser Riese kann Gedanken kontrollieren! Das war's! ... oder, äh ...}{}{}{}{ }
+{313}{[Er wirkt plötzlich entsetzt.] Oh, es tut mir schrecklich Leid. Ich, äh, ich ... ich wollte nichts Falsches sagen. Mir war nicht bewusst, dass, ähm ... Ich meine, äh, womit kann ich Euch behilflich sein?}{[Er wirkt plötzlich entsetzt.] Oh, es tut mir schrecklich Leid. Ich, äh, ich ... ich wollte nichts Falsches sagen. Mir war nicht bewusst, dass, ähm ... Ich meine, äh, womit kann ich Euch behilflich sein?}{}{}{}{re +10 }
+{314}{Wer seid Ihr?}{}{5}{me 0}{63}{ }
+{315}{Wie ich höre, seid Ihr der Mann, mit dem man über den Stillwater-Riesen reden sollte.}{}{5}{qa1043 1, lf1 0, me 0}{103}{lf1 1 }
+{316}{Ich habe beschlossen, den Stillwater-Riesen zu jagen.}{}{5}{qa1043 1, me 1, lf1 1, lf3 0, ni 5610}{143}{lf3 1 }
+{317}{Wie komme ich nahe genug an den Riesen heran, um ihn zu fangen?}{}{5}{lf6 1, lf4 0}{243}{ }
+{318}{Wo kann ich das Versteck des Stillwater-Riesen finden?}{}{5}{lf4 1, lf5 0}{263}{ }
+{319}{Ich habe den Riesen noch nicht gefunden.}{}{5}{lf5 1, ni 5610}{266}{ }
+{320}{Was könnt Ihr mir über den Stillwater-Riesen erzählen?}{}{5}{ lf1 0, qa1043 1, me 1}{93}{lf1 1 }
+{321}{Ich habe den Stillwater-Riesen gefangen, Sire! [Du zeigst ihm den gefangenen Riesen.]}{}{5}{in 5610, lf8 0}{268}{ }
+{322}{Ich habe den ... Riesen zu meinem Mitarbeiter gebracht, und der sagt, es sei ein Kaninchen.}{}{5}{ gf1053 1, gf1054 0}{286}{ }
+{323}{Ich habe den Pelz des Stillwater-Riesen in einem Tarantiner Museum gesehen.}{}{5}{gf1048 1, lf1 1, lf11 0}{153}{lf11 1 }
+{324}{Dr. Fenwick sagte, das wäre ein Kaninchen und der Riese einfach ein Riesenschwindel.}{}{5}{gf1054 1, lf9 0}{301}{lf9 1 }
+{325}{E:}{}{5}{}{0}{ }
+{326}{Ich habe nicht den ganzen Tag Zeit für armselige Kreaturen wie Euch. Ich bin ein viel beschäftigter Mann. Ich betreibe äußerst wichtige Feldstudien, die jemand wie Ihr wohl kaum begreifen dürfte.}{Ich habe nicht den ganzen Tag Zeit für armselige Kreaturen wie Euch. Ich bin ein viel beschäftigter Mann. Ich betreibe äußerst wichtige Feldstudien, die jemand wie Ihr wohl kaum begreifen dürfte.}{}{}{}{ }
+{327}{Ich suche nur Euren weisen Rat, ehrenwerter Herr.}{}{5}{}{332}{ }
+{328}{Ihr könnt ja mal mein Knie studieren, während ich Euch damit die Nase breche ...}{}{5}{}{0}{fl 330 ,co}
+{330}{Tod den ignoranten Massen!}{Tod den ignoranten Massen!}{}{}{}{ }
+{332}{Tja, ich könnte mir wohl einen Augenblick Zeit nehmen, da Ihr mir eine sehr aufgeweckte Person zu sein scheint, auch wenn Euer Äußeres eher das Gegenteil vermuten lässt.}{Tja, ich könnte mir wohl einen Augenblick Zeit nehmen, da Ihr mir eine sehr aufgeweckte Person zu sein scheint, auch wenn Euer Äußeres eher das Gegenteil vermuten lässt.}{}{}{}{ }
+{333}{Wer seid Ihr?}{}{5}{me 0}{63}{ }
+{334}{Wie ich höre, seid Ihr der Mann, mit dem man über den Stillwater-Riesen reden sollte.}{}{5}{qa1043 1,  lf1 0, me 0}{103}{lf1 1 }
+{335}{Ich habe beschlossen, den Stillwater-Riesen zu jagen.}{}{5}{ qa1043 1, me 1, lf1 1, lf3 0, ni 5610}{143}{lf3 1 }
+{336}{Wie komme ich nahe genug an den Riesen heran, um ihn zu fangen?}{}{5}{lf6 1, lf4 0}{243}{ }
+{337}{Wo kann ich das Versteck des Stillwater-Riesen finden?}{}{5}{lf4 1, lf5 0}{263}{ }
+{338}{Ich habe den Riesen noch nicht gefunden.}{}{5}{lf5 1, ni 5610}{266}{ }
+{339}{Was könnt Ihr mir über den Stillwater-Riesen erzählen?}{}{5}{ lf1 0, qa1043 1, me 1}{93}{lf1 1 }
+{340}{Ich habe den Stillwater-Riesen gefangen, Sire! [Du zeigst ihm den gefangenen Riesen.]}{}{5}{in 5610, lf8 0}{268}{ }
+{341}{Ich habe den ... Riesen zu meinem Mitarbeiter gebracht, und der sagt, es sei ein Kaninchen.}{}{5}{ gf1053 1, gf1054 0}{286}{ }
+{342}{Ich habe den Pelz des Stillwater-Riesen in einem Tarantiner Museum gesehen.}{}{5}{gf1048 1, lf1 1,  lf11 0}{153}{lf11 1 }
+{343}{Dr. Fenwick sagte, das wäre ein Kaninchen und der Riese einfach ein Riesenschwindel.}{}{5}{ gf1054 1, lf9 0}{301}{lf9 1 }
+{344}{Euer Äußeres lässt vermuten, dass Ihr gleich sterben werdet!}{}{5}{}{0}{fl 332 , co}
+{345}{E:}{}{5}{}{0}{ }
+{346}{Ich denke, Ihr habt mich schon verstanden, Sire. Es sei denn, Ihr wäret so taub wie dumm.}{Ich denke, Ihr habt mich schon verstanden, Sire. Es sei denn, Ihr wäret so taub wie dumm.}{}{}{}{ }
+{347}{Weder noch, obschon ich bereit bin, Euch so eins über den Schädel zu geben, dass IHR danach der Dumme seid.}{}{5}{sk2 8}{313}{re45 }
+{348}{Bitte verzeiht meine Unverschämtheit. Ich muss Euch einige Fragen stellen.}{}{5}{}{326}{re41 }
+{349}{Weder noch, obschon ich bereit bin, Euch so eins über den Schädel zu geben, dass IHR danach der Dumme seid.}{}{5}{sk2 -7}{0}{fl 332 , co}
+{350}{E:}{}{5}{}{0}{ }
+{351}{Ah, ein Schwachkopf. Traurig, traurig. Also, ich bin Wis-sen-schaft-ler. Ich suchen Stillwater-Riese.}{Ah, ein Schwachkopf. Traurig, traurig. Also, ich bin Wis-sen-schaft-ler. Ich suchen Stillwater-Riese.}{}{}{}{ }
+{352}{Riese?}{}{-4}{}{355}{ }
+{353}{Ich auch suchen Riese.}{}{-4}{qa1043, 1lf3 0}{359}{ }
+{354}{Tschö.}{}{-4}{}{0}{ }
+{355}{Ja, den Gigantopithecus ... ach, vergesst es. Das ist ein großer, haariger Riese mit Hörnern.}{Ja, den Gigantopithecus ... ach, vergesst es. Das ist ein großer, haariger Riese mit Hörnern.}{}{}{}{ }
+{356}{Ich Riese fangen?}{}{-4}{}{359}{ }
+{357}{Tschö.}{}{-4}{}{0}{ }
+{359}{Ich nehme an, Ihr wäret dumm genug, es zu versuchen. Hier ist eine Tierduftessenz und eine Falle, um den Riesen zu fangen. Legt Eure Rüstung ab, und reibt Euch mit der Duftessenz ein, so dass der Riese Euch weder hören noch wittern kann. Schleicht Euch an, und fangt den Riesen mit der Falle.}{Ich nehme an, Ihr wäret dumm genug, es zu versuchen. Hier ist eine Tierduftessenz und eine Falle, um den Riesen zu fangen. Legt Eure Rüstung ab, und reibt Euch mit der Duftessenz ein, so dass der Riese Euch weder hören noch wittern kann. Schleicht Euch an, und fangt den Riesen mit der Falle.}{}{}{}{in -3610, in -5609, lf3 1, ru2028 }
+{360}{Fall zu klein für Riese.}{}{-4}{}{361}{ }
+{361}{Riese kann sich klein machen, Gestalt verändern. Wenn er Euch nicht hört oder wittert, wird er ganz klein sein, wie ein blaues Kaninchen.}{Riese kann sich klein machen, Gestalt verändern. Wenn er Euch nicht hört oder wittert, wird er ganz klein sein, wie ein blaues Kaninchen.}{}{}{}{ }
+{362}{Riese sehen aus wie dummig Kaninchi? Hahaha.}{}{-4}{}{363}{ }
+{363}{Folgt einfach dem Pfad hinter meinem Haus bis zu seinem Ende, bis Ihr auf den Höhleneingang stoßt zu ... noch mehr Höhlen. Dort lebt der Riese. Habt Ihr das verstanden?}{Folgt einfach dem Pfad hinter meinem Haus bis zu seinem Ende, bis Ihr auf den Höhleneingang stoßt zu ... noch mehr Höhlen. Dort lebt der Riese. Habt Ihr das verstanden?}{}{}{}{ }
+{364}{Jawoll.}{}{-4}{}{0}{ }
+{365}{Ausgezeichnet. Ihr müsst die Kreatur zu Dr. Fenwick von der zoologischen Gesellschaft, äh, dem Ort zum Tiere studieren in Tarant bringen. Er wird bestätigen, dass dies der Riese ist.}{Ausgezeichnet. Ihr müsst die Kreatur zu Dr. Fenwick von der zoologischen Gesellschaft, äh, dem Ort zum Tiere studieren in Tarant bringen. Er wird bestätigen, dass dies der Riese ist.}{}{}{}{gf2125 1, ru2029 }
+{366}{Allens kla'.}{}{-4}{}{0}{ }
+{367}{Dieser Elf, von dem ihr da redet, treibt aufgrund Eurer begrenzten geistigen Fähigkeiten ganz offensichtlich sein Spielchen mit Euch. Er lacht Euch aus, weil Ihr dumm seid, kapiert?}{Dieser Elf, von dem ihr da redet, treibt aufgrund Eurer begrenzten geistigen Fähigkeiten ganz offensichtlich sein Spielchen mit Euch. Er lacht Euch aus, weil Ihr dumm seid, kapiert?}{}{}{}{ }
+{368}{Dummig Elf.}{}{-4}{}{0}{ }
+{375}{... Es ist ja alles so offensichtlich. Dr. Fenwick hat das Kaninchen blau angemalt und mir dann erzählt ... nein, wartet, er hat es dazu gebracht, seine Gestalt zu verwandeln und es dann zu mir geschickt, um mich anzugreifen oder sich mit mir zu paaren ... Hmmm ... und wo kommen da die Elfen ins Spiel ...? Fenwick will vielleicht testen, wie klug ich bin ...}{... Es ist ja alles so offensichtlich. Dr. Fenwick hat das Kaninchen blau angemalt und mir dann erzählt ... nein, wartet, er hat es dazu gebracht, seine Gestalt zu verwandeln und es dann zu mir geschickt, um mich anzugreifen oder sich mit mir zu paaren ... Hmmm ... und wo kommen da die Elfen ins Spiel ...? Fenwick will vielleicht testen, wie klug ich bin ...}{}{}{}{ }
+{378}{Verzeiht mir, ich vergaß, dass ich mit einem Laien spreche. Haarig bedeutet nichts weiter, als dass das Wesen einen ungewöhnlichen Haarwuchs hat. Habt Ihr das jetzt verstanden?}{Verzeiht mir, ich vergaß, dass ich mit einem Laien spreche. Haarig bedeutet nichts weiter, als dass das Wesen einen ungewöhnlichen Haarwuchs hat. Habt Ihr das jetzt verstanden?}{}{}{}{ }
+{379}{Ja, danke für die Erklärung. Ich muss es fangen.}{}{5}{qa 1043 1}{143}{ }
+{380}{Euer Ton beleidigt mich, Sire.}{}{5}{}{384}{ }
+{381}{Danke für die Informationen. Ich muss jetzt gehen.}{}{5}{}{0}{ }
+{384}{Ich wollte niemanden beleidigen, Sire. Es kann ja nicht jeder so intellektuell befähigt sein wie ich.}{Ich wollte niemanden beleidigen, Madame. Es kann ja nicht jeder so intellektuell befähigt sein wie ich.}{}{}{}{ }
+{385}{Entschuldigung angenommen. Ich brauche Eure Hilfe, um das Wesen zu fangen.}{}{5}{qa 1043 1}{143}{ }
+{386}{Ich hoffe, Ihr seid nicht beleidigt, wenn ich Euch gleich eine Tracht Prügel verpasse.}{}{5}{}{0}{fl 330 , co}
+{389}{Ich muss das alles noch einmal überdenken. Guten Tag.}{}{5}{}{0}{ }
+{390}{Erst verkürzt Ihr mein Leben, und dann zwingt Ihr mich in diese Ebene der Existenz zurück? Warum müsst Ihr mich so quälen?}{Erst verkürzt Ihr mein Leben, und dann zwingt Ihr mich in diese Ebene der Existenz zurück? Warum müsst Ihr mich so quälen?}{}{}{}{ }
+{391}{Ich muss den Stillwater-Riesen fangen.}{}{5}{qa1043 1, gf1057 0, ni 5609}{397}{ }
+{392}{Ich muss den Riesen dazu bringen, sich zu verwandeln.}{}{5}{gf1057 1}{430}{ }
+{393}{Ich wollte Euch nur mitteilen, dass Euer Lebenswerk eine Farce war.}{}{5}{gf1054 1, lf9 0}{435}{ }
+{394}{Dann kehrt doch einfach zu den Toten zurück ... Auf Wiedersehen.}{}{5}{}{0}{ }
+{397}{Folgt einfach dem Pfad hinter meinem Haus bis zu seinem Ende, bis Ihr auf den Eingang zu einem Höhlensystem stoßt. Dort lebt der Riese. Habt Ihr das verstanden? Mit dieser Falle könnt Ihr den Riesen fangen.}{Folgt einfach dem Pfad hinter meinem Haus bis zu seinem Ende, bis Ihr auf den Eingang zu einem Höhlensystem stoßt. Dort lebt der Riese. Habt Ihr das verstanden? Mit dieser Falle könnt Ihr den Riesen fangen.}{}{}{}{in -5609 }
+{398}{Diese Falle ist ziemlich klein.}{}{5}{}{400}{ }
+{400}{Dieser Riese ist ein Gestaltwandler. Wenn er ungestört ist, gleicht er einem blauen Kaninchen. Legt Eure Rüstung ab, bevor Ihr Euch ihm nähert und tragt diese Duftessenz auf. [Er reicht dir eine Flasche mit übel riechender Flüssigkeit.]}{Dieser Riese ist ein Gestaltwandler. Wenn er ungestört ist, gleicht er einem blauen Kaninchen. Legt Eure Rüstung ab, bevor Ihr Euch ihm nähert und tragt diese Duftessenz auf. [Er reicht dir eine Flasche mit übel riechender Flüssigkeit.]}{}{}{}{in -3610, ru2028 }
+{401}{Und warum sollte ich meine Rüstung ablegen und diese übel riechende Essenz verwenden?}{}{5}{}{405}{ }
+{402}{Ich erlöse Euch von dieser Welt. Auf Wiedersehen.}{}{5}{}{0}{ }
+{405}{Diese Essenz überdeckt Euren eigenen Geruch, und ohne Rüstung seid Ihr leiser. Und wenn Euch die Kreatur trotzdem sieht, dann betrachtet sie Euch ohne Rüstung vielleicht nicht als Bedrohung. Wenn Ihr bemerkt werdet, dann rennt weg, bevor die Kreatur sich verwandeln kann, sonst seid Ihr dem Tod geweiht.}{Diese Essenz überdeckt Euren eigenen Geruch, und ohne Rüstung seid Ihr leiser. Und wenn Euch die Kreatur trotzdem sieht, dann betrachtet sie Euch ohne Rüstung vielleicht nicht als Bedrohung. Wenn Ihr bemerkt werdet, dann rennt weg, bevor die Kreatur sich verwandeln kann, sonst seid Ihr dem Tod geweiht.}{}{}{}{ }
+{406}{Ihr dürft Euch jetzt entfernen. Auf Wiedersehen.}{}{5}{}{0}{ }
+{415}{Ihr habt WAS getan?! Mein Lebenswerk! Dahin!}{Ihr habt WAS getan?! Mein Lebenswerk! Dahin!}{}{}{}{ }
+{416}{Und was mache ich jetzt? Ich brauche noch immer einen Pelz.}{}{5}{}{0}{lf20 1, fl 420}
+{417}{Abba ich brauchen Riese.}{}{-4}{}{0}{lf20 1, fl 420}
+{420}{Das ist nicht mein Problem. Lasst mich in Ruhe.}{Das ist nicht mein Problem. Lasst mich in Ruhe.}{}{}{}{ }
+{421}{Bitte lasst mich allein.}{Bitte lasst mich allein.}{}{}{}{ }
+{422}{Der Riese war nicht tot. Ich habe ihn gefangen.}{}{5}{in 5610, lf8 0, re 41}{268}{lf20 0 }
+{423}{Riese nix totig. Ich haben Dingens.}{}{-4}{in 5610}{365}{lf20 0 }
+{429}{E:}{}{1}{}{0}{ }
+{430}{Habt Ihr den Verstand verloren? Dieses Ding würde uns in der Luft zerreißen, sobald wir es frei lassen! Bringt es zu Dr. Fenwick zur Zoologischen Gesellschaft in Tarant. Er wird ein passendes Gehege finden, wo wir uns die Verwandlung aus sicherer Entfernung ansehen können. Dr. Fenwick ist ein Genie. Er wird uns die Echtheit des Wesens auch bestätigen.}{Habt Ihr den Verstand verloren? Dieses Ding würde uns in der Luft zerreißen, sobald wir es frei lassen! Bringt es zu Dr. Fenwick zur Zoologischen Gesellschaft in Tarant. Er wird ein passendes Gehege finden, wo wir uns die Verwandlung aus sicherer Entfernung ansehen können. Dr. Fenwick ist ein Genie. Er wird uns die Echtheit des Wesens auch bestätigen.}{}{}{}{lf8 1, gf2125 1, ru2029 }
+{431}{Dann werde ich jetzt Dr. Fenwick besuchen.}{}{5}{}{0}{ }
+{435}{Was? Was redet Ihr da?}{Was? Was redet Ihr da?}{}{}{}{ }
+{436}{Dr. Fenwick sagte, das wäre ein Kaninchen und der Riese einfach ein Riesenschwindel.}{}{5}{}{301}{lf9 1 }
+{440}{Ich bin im Augenblick beschäftigt. Könntet Ihr wohl später wiederkommen?}{Ich bin im Augenblick beschäftigt. Könntet Ihr wohl später wiederkommen?}{}{}{}{ }
+

@@ -1,0 +1,63 @@
+{1}{Les clients n'ont en principe pas le droit de se trouver dans les cuisines vous savez. Qu'est-ce que vous voulez ?}{Les clients n'ont en principe pas le droit de se trouver dans les cuisines vous savez. Qu'est-ce que vous voulez ?}{}{}{}{}
+{2}{Je me demandais si vous pouviez m'entraîner en jeu ?}{}{5}{lf0 0}{-2}{}//20 ou 30
+{3}{Avez-vous entendu des ragots dignes d'intérêts ?}{}{5}{lf1 0}{10}{lf1 1}
+{4}{@pcname@. Claude m'a demandé de vous aider à rédiger votre lettre de motivation.}{}{5}{qu1049 2, lf2 0}{120}{lf2 1}
+{6}{Vous savoir "ragouts" intéressants ?}{}{-4}{lf1 0}{10}{lf1 1}
+{7}{Rien, je vous laisse.}{}{5}{}{0}{}
+{8}{Rien, moi partir.}{}{-4}{}{0}{}
+
+{10}{Je ne sors jamais de mes cuisines. Vous voulez autre chose ?}{Je ne sors jamais de mes cuisines. Vous voulez autre chose ?}{}{}{}{}
+{11}{Oui, pourriez-vous m'entraîner au jeu ?}{}{5}{lf0 0}{-2}{}
+{12}{En fait, Claude m'a demandé de venir vous aider à rédiger votre lettre de motivation.}{}{5}{qu1049 2, lf2 0}{130}{lf2 1}
+{13}{Non, je m'en vais.}{}{5}{}{0}{}
+{14}{Nan, moi partir.}{}{-4}{}{0}{}
+
+{20}{Oui, je suis joueur occasionnel et je peux vous apprendre les bases. [Il vous parle de la mise à placer face à différents types d'adversaires]}{Oui, je suis joueur occasionnel et je peux vous apprendre les bases. [Il vous parle de la mise à placer face à différents types d'adversaires]}{}{}{}{lf0 1, tr8 1}
+{21}{Je vous remercie pour tout.}{}{5}{}{40}{}
+
+{30}{Je ne pense pas que vous ayez de prédestinations pour cela.}{Je ne pense pas que vous ayez de prédestinations pour cela.}{}{}{}{}
+{31}{Ah... peut-être pas en effet.}{}{5}{}{40}{}
+
+{40}{Bon, vous avez encore des questions ? Je dois reprendre mon travail moi...}{Bon, vous avez encore des questions ? Je dois reprendre mon travail moi...}{}{}{}{}
+{41}{Oui, avez-vous entendu quelque chose d'intéressant ?}{}{5}{lf1 0}{10}{lf1 1}
+{42}{En fait, Claude m'a demandé de venir vous aider à rédiger votre lettre de motivation.}{}{5}{qu1049 2, lf2 0}{130}{lf2 1}
+{43}{Non, je vous laisse travailler.}{}{5}{}{0}{}
+
+{100}{Encore vous ? Vous avez élu domicile dans nos cuisines ? Que voulez-vous ?}{Encore vous ? Vous avez élu domicile dans nos cuisines ? Que voulez-vous ?}{}{}{}{}
+{101}{Je me demandais si vous pouviez m'entraîner en jeu ?}{}{5}{lf0 0}{-2}{}//20 ou 30
+{102}{Avez-vous entendu des ragots dignes d'intérêts ?}{}{5}{lf1 0}{10}{lf1 1}
+{103}{@pcname@. En fait Claude m'a demandé de vous aider à rédiger votre lettre de motivation.}{}{5}{qu1049 2, lf2 0}{120}{lf2 1}
+{104}{Vous savoir "ragouts" intéressants ?}{}{-4}{lf1 0}{10}{lf1 1}
+{105}{Pardon, je vous laisse.}{}{5}{}{0}{}
+{106}{Rien, moi partir.}{}{-4}{}{0}{}
+
+{120}{Ex... excusez-moi ! Maxime Bleester. Je vous remercie de votre aide.}{Ex... excusez-moi ! Maxime Bleester. Je vous remercie de votre aide.}{}{}{}{}
+{121}{Allons nous installer en haut, nous y serons plus à l'aise.}{}{5}{}{-5}{}
+
+{130}{Vraiment ? Veu... veuillez pardonner mes paroles. Je m'appelle Maxime Bleester. Je... je vous remercie de votre aide.}{Vraiment ? Veu... veuillez pardonner mes paroles. Je m'appelle Maxime Bleester. Je... je vous remercie de votre aide.}{}{}{}{}
+{131}{@pcname@. Mais allons nous installer en haut, nous y serons plus à l'aise.}{}{5}{}{-5}{}
+
+{140}{Alors @pcname@, n'avez-vous pas encore demandé son avis à madame Desmarées ?}{Alors @pcname@, n'avez-vous pas encore demandé son avis à madame Desmarées ?}{}{}{}{}
+
+{150}{Bien le bonjour @pcname@. Puis-je vous aider ?}{Bien le bonjour @pcname@. Puis-je vous aider ?}{}{}{}{}
+{151}{En fait, je me demandais si vous pouviez m'apprendre l'art du jeu ?}{}{5}{lf0 0}{-9}{}//160 (NO) ou 170 (YES)
+{152}{Eh bien, j'aimerais savoir si vous avez-vous entendu des ragots dignes d'intérêts ?}{}{5}{lf1 0}{180}{lf1 1}
+{153}{Non, pas pour l'instant.}{}{5}{}{0}{fl 158}
+
+{158}{Très bien, bonne journée à vous alors...}{Très bien, bonne journée à vous alors...}{}{}{}{}
+
+{160}{Malheureusement, je ne pense pas que vous ayez de prédestinations pour cela.}{Malheureusement, je ne pense pas que vous ayez de prédestinations pour cela.}{}{}{}{}
+{161}{Ah... peut-être pas en effet.}{}{5}{}{190}{}
+
+{170}{Oui, je suis joueur occasionnel et je peux bien vous apprendre les bases vu ce que vous avez fait pour moi. [Il vous parle de la mise à placer face à différents types d'adversaires]}{Oui, je suis joueur occasionnel et je peux bien vous apprendre les bases vu ce que vous avez fait pour moi. [Il vous parle de la mise à placer face à différents types d'adversaires]}{}{}{}{lf0 1, tr8 1}
+{171}{Je vous remercie.}{}{5}{}{190}{}
+
+{180}{Malheureusement, je ne sors strictement jamais de mes cuisines. Vouliez-vous autre chose ?}{Malheureusement, je ne sors strictement jamais de mes cuisines. Vouliez-vous autre chose ?}{}{}{}{}
+{181}{Oui, pourriez-vous m'entraîner au jeu ?}{}{5}{lf0 0}{-9}{}
+{182}{Non, je vais partir.}{}{5}{}{0}{}
+
+{190}{Y'avait-il autre chose ? Il va me falloir reprendre mon service.}{Y'avait-il autre chose ? Il va me falloir reprendre mon service.}{}{}{}{}
+{191}{Oui, avez-vous entendu quelque chose d'intéressant ?}{}{5}{lf1 0}{180}{lf1 1}
+{192}{Non, je vous laisse travailler.}{}{5}{}{0}{}
+
+{200}{@pcname@ ? Je n'ai guère de temps à vous accorder...}{@pcname@ ? Je n'ai guère de temps à vous accorder...}{}{}{}{}

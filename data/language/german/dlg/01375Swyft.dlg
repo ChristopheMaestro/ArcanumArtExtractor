@@ -1,0 +1,113 @@
+{1}{G:}{G:}{}{}{}{ }
+{2}{W:}{}{5}{qu1078 0, re 41, lf1 0}{10}{lf1 1 }
+{3}{Ich habe beschlossen, Euch nach Tarant zu bringen.}{}{5}{qu1078 1}{50}{qu1078 2 }
+{4}{Was ist denn nun mit diesem Fremdenführerjob, den Ihr erwähntet?}{}{5}{qu1078 0, lf2 1}{40}{ }
+{6}{Entschuldigung, ich wollte Euch nicht beleidigen.}{}{5}{re-40, ch-13}{150}{re+10 }
+{7}{Wie bitte?}{}{5}{re-40, ch14}{130}{re+15 }
+{9}{E:}{}{1}{}{0}{ }
+{10}{Mein Name ist Swyft. Ihr seid auf Abenteuerreise, stimmt's?}{Mein Name ist Swyft. Ihr seid auf Abenteuerreise, stimmt's?}{}{}{}{ }
+{13}{Ja, das bin ich. Warum fragt Ihr?}{}{5}{}{20}{ }
+{14}{Nein, bin ich nicht.}{}{5}{}{0}{fl 180}
+{19}{E:}{}{1}{}{0}{ }
+{20}{Bitte sagt doch, seid Ihr jemals in der berühmten Stadt Tarant gewesen?}{Bitte sagt doch, seid Ihr jemals in der berühmten Stadt Tarant gewesen?}{}{}{}{ }
+{21}{Ja, ich war einmal dort.}{}{5}{ar21}{30}{ }
+{22}{Nein, ich bin dort noch nie gewesen.}{}{5}{ar-21}{160}{ }
+{23}{Was geht Euch das an, Miss?}{}{5}{}{190}{re-5 }
+{30}{Wärt Ihr an einer Arbeit als Fremdenführer interessiert?}{Wärt Ihr an einer Arbeit als Fremdenführer interessiert?}{}{}{}{lf2 1 }
+{31}{An was denkt Ihr da beispielsweise?}{}{5}{}{40}{ }
+{32}{Ich denke nicht, dass mich das momentan interessiert.}{}{5}{}{60}{ }
+{40}{Ich werde Euch 300 Münzen zahlen, wenn Ihr mich sicher nach Tarant bringt.}{Ich werde Euch 300 Münzen zahlen, wenn Ihr mich sicher nach Tarant bringt.}{}{}{}{qu1078 1 }
+{41}{Das hört sich ganz nach einem annehmbaren Angebot an.}{}{5}{ha-11}{50}{lf3 1, qu1078 2 }
+{42}{Für 350 werde ich es tun.}{}{5}{ha12, ha-12}{80}{lf4 1, qu1078 2 }
+{43}{Für 400 werde ich es tun.}{}{5}{ha13, ha-13}{80}{lf5 1, qu1078 2 }
+{44}{Für 450 werde ich es tun.}{}{5}{ha14, ha-14}{80}{lf6 1, qu1078 2 }
+{45}{Warum wollt Ihr denn dorthin?}{}{5}{lf7 0}{120}{lf7 1 }
+{49}{Ich bin nicht interessiert. Guten Tag.}{}{5}{}{60}{ }
+{50}{Oooh! Ich komme nach Tarant! Ich bin ja so aufgeregt! [Sie hüpft begeistert herum und fällt dir dann um den Hals.]}{Oooh! Ich komme nach Tarant! Ich bin ja so aufgeregt! [Sie hüpft begeistert herum und fällt dir dann um den Hals.]}{}{}{}{ }
+{51}{Wie alt seid Ihr eigentlich?}{}{5}{}{70}{ }
+{52}{Äh, fein. Seid Ihr bereit, sofort loszuziehen?}{}{5}{}{0}{jo1 90}
+{60}{Warum nicht? Bitte? Ich muss nach Tarant gehen!}{Warum nicht? Bitte? Ich muss nach Tarant gehen!}{}{}{}{ }
+{61}{Das kostet Euch dann 350.}{}{5}{ha-11}{80}{lf4 1, qu1078 2 }
+{62}{Das kostet Euch dann 400.}{}{5}{ha12, ha-12}{80}{lf5 1, qu1078 2 }
+{63}{Das kostet Euch dann 450.}{}{5}{ha13, ha-13}{80}{lf6 1, qu1078 2 }
+{68}{Warum wollt Ihr denn dorthin?}{}{5}{lf7 0}{120}{lf7 1 }
+{69}{Ich bin nicht daran interessiert, Fremdenführer zu spielen. Guten Tag.}{}{5}{}{0}{ }
+{70}{Ich bin 150 Jahre alt. Warum?}{Ich bin 150 Jahre alt. Warum?}{}{}{}{ }
+{71}{Ist das nicht ein bisschen jung für eine Elfin, um schon auf sich allein gestellt zu sein?}{}{5}{ra-3}{100}{re-5 }
+{72}{Das ist ein bisschen jung, um schon auf eigenen Füßen zu stehen, findet Ihr nicht auch?}{}{5}{ra3}{100}{re-5 }
+{73}{Ich werde keine minderjährige Elfin nach Tarant bringen. Tut mir Leid.}{}{5}{ra-3}{110}{re-10 }
+{74}{Ich werde niemanden nach Tarant bringen, der so unreif ist wie Ihr. Tut mir Leid.}{}{5}{ra3}{110}{re-10 }
+{79}{Ich bin nur neugierig. Seid Ihr bereit zu gehen?}{}{5}{}{0}{jo1 90}
+{80}{Das ist viel zu viel! [Sie denkt einen Augenblick nach.] Na gut, ich werde es tun. Aber Ihr seid ganz schön gemein.}{Das ist viel zu viel! [Sie denkt einen Augenblick nach.] Na gut, ich werde es tun. Aber Ihr seid ganz schön gemein.}{}{}{}{ }
+{81}{Gemein? Wie alt seid Ihr eigentlich?}{}{5}{}{70}{ }
+{82}{Äh, fein. Seid Ihr bereit, sofort loszuziehen?}{}{5}{}{0}{jo1 90}
+{90}{Ja, das bin ich.}{Ja, das bin ich.}{}{}{}{ }
+{91}{Also dann, gehen wir.}{}{5}{}{0}{ }
+{100}{Was wollt Ihr damit sagen? Ich bin erwachsen genug, um meine eigenen Entscheidungen zu treffen!}{Was wollt Ihr damit sagen? Ich bin erwachsen genug, um meine eigenen Entscheidungen zu treffen!}{}{}{}{ }
+{101}{Sicher. Seid Ihr bereit zu gehen?}{}{5}{}{0}{jo1 90}
+{102}{Darüber kann man streiten.}{}{5}{}{110}{re-5 }
+{110}{[Sie bricht in Tränen aus.] Warum seid Ihr so gemein zu mir?}{[Sie bricht in Tränen aus.] Warum seid Ihr so gemein zu mir?}{}{}{}{ }
+{111}{Ich bin nicht gemein, nur realistisch. Ich kann Euch nicht mitnehmen.}{}{5}{}{0}{qu1078 6, fl 200}
+{112}{Es tut mir Leid. Ich wollte Euch nicht verärgern. Seid Ihr bereit zu gehen?}{}{5}{}{0}{jo1 90}
+{113}{Hört zu, kleines Dummerchen. Hört mit dem Geheule auf, oder ich bringe Euch nirgendwo hin.}{}{5}{}{0}{qu1078 6, fl 210}
+{120}{Alle gehen dorthin! Ich habe die Nase voll von diesem Wald, ich will Abenteuer, Abwechslung! Nehmt Ihr mich mit?}{Alle gehen dorthin! Ich habe die Nase voll von diesem Wald, ich will Abenteuer, Abwechslung! Nehmt Ihr mich mit?}{}{}{}{ }
+{121}{Ja, ich werde es tun.}{}{5}{ha-11}{50}{lf3 1, qu1078 2 }
+{122}{Für 350 werde ich es tun.}{}{5}{ha12, ha-12}{80}{lf4 1, qu1078 2 }
+{123}{Für 400 werde ich es tun.}{}{5}{ha13, ha-13}{80}{lf5 1, qu1078 2 }
+{124}{Für 450 werde ich es tun.}{}{5}{ha14, ha-14}{80}{lf6 1, qu1078 2 }
+{129}{Ich bin nicht interessiert. Tut mir Leid.}{}{5}{}{60}{ }
+{130}{Oh, Ihr seid auf Abenteuertour? Ich dachte schon, Ihr wärt von dieser langweiligen Sorte, die einfach nur rumreist. Es tut mir Leid, wenn ich rüde war.}{Oh, Ihr seid auf Abenteuertour? Ich dachte schon, Ihr wärt von dieser langweiligen Sorte, die einfach nur rumreist. Es tut mir Leid, wenn ich rüde war.}{}{}{}{ }
+{131}{Das geht schon in Ordnung. Und wer seid Ihr?}{}{5}{}{140}{lf1 1 }
+{132}{Was für ein Zufall! Ich dachte schon, Ihr würdet auch zu diesen langweiligen Elfen gehören.}{}{5}{ra-3}{0}{lf8 1, re-10, fl 200}
+{133}{Was für ein Zufall! Ich dachte schon, Ihr würdet auch zu diesen langweiligen Schwachköpfen gehören.}{}{5}{ra3}{0}{lf8 1, re-10, fl 200}
+{139}{E:}{}{5}{}{0}{ }
+{140}{Mein Name ist Swyft. Ihr seid auf Abenteuertour, stimmt's?}{Mein Name ist Swyft. Ihr seid auf Abenteuertour, stimmt's?}{}{}{}{ }
+{141}{Ja, das bin ich. Warum fragt Ihr?}{}{5}{}{20}{ }
+{142}{Nein, bin ich nicht.}{}{5}{}{0}{fl 180}
+{147}{E:}{}{1}{}{0}{ }
+{150}{Warum sollte ich mit Euch sprechen? Ich glaube nicht, dass ich Euch besonders gut leiden kann.}{Warum sollte ich mit Euch sprechen? Ich glaube nicht, dass ich Euch besonders gut leiden kann.}{}{}{}{ }
+{151}{Das ist in Ordnung. Ich bin sowieso nur auf der Durchreise.}{}{5}{}{130}{re+10 }
+{152}{Ich würde Euch ohnehin lieber verprügeln, als mich mit Euch unterhalten.}{}{5}{}{0}{fl 201 ,co}
+{160}{Oh. So ein Pech aber auch. Ich bräuchte einen Führer, der mich dorthin bringt.}{Oh. So ein Pech aber auch. Ich bräuchte einen Führer, der mich dorthin bringt.}{}{}{}{lf2 1 }
+{161}{Tja, wenn ich den Weg ausfindig machen könnte, würde ich Euch vielleicht hinbringen.}{}{5}{}{170}{ }
+{162}{E:}{}{5}{}{0}{ }
+{170}{Das wäre wunderbar! Vielen Dank.}{Das wäre wunderbar! Vielen Dank.}{}{}{}{ }
+{171}{E:}{}{5}{}{0}{ }
+{180}{Oh. Tja, ich muss dann jetzt gehen. Guten Tag.}{Oh. Tja, ich muss dann jetzt gehen. Guten Tag.}{}{}{}{ }
+{190}{Ihr seid wirklich ein echter Rüpel! Ich glaube nicht, dass ich Euch sehr mag.}{Ihr seid wirklich ein echter Rüpel! Ich glaube nicht, dass ich Euch sehr mag.}{}{}{}{ }
+{191}{Verzeihung. Wenn Ihr es unbedingt wissen müsst, ja, ich war in Tarant.}{}{5}{ar21}{30}{re+5 }
+{192}{Verzeihung. Ich muss mich auf den Weg machen. Guten Tag.}{}{5}{ar-21}{0}{ }
+{193}{Ich weiß, dass ich Euch nicht mag, Flittchen.}{}{5}{}{0}{lf8 1, re-10, fl 200}
+{194}{Ich töte gern Leute, die mich nicht mögen.}{}{5}{}{0}{fl 201 ,co}
+{200}{Ich mag Euch nicht! Lasst mich in Ruhe!}{Ich mag Euch nicht! Lasst mich in Ruhe!}{}{}{}{ }
+{201}{Ich werde Euch umbringen!}{Ich werde Euch umbringen!}{}{}{}{ }
+{210}{Mit Euch würde ich nirgendwo hingehen! Ich hasse Euch! Lasst mich in Ruhe!}{Mit Euch würde ich nirgendwo hingehen! Ich hasse Euch! Lasst mich in Ruhe!}{}{}{}{ }
+{215}{Was?}{Was?}{}{}{}{ }
+{216}{Ich habe Euch nie gefragt, warum Ihr eigentlich nach Tarant wollt.}{}{5}{lf7 0}{246}{lf7 1 }
+{219}{[Du erteilst Befehle.]}{}{1}{}{236}{ }
+{220}{B:}{}{1}{}{226}{ }
+{225}{E:}{}{1}{}{0}{ }
+{226}{Sonst noch etwas?}{Sonst noch etwas?}{}{}{}{ }
+{229}{[Du erteilst Befehle.]}{}{1}{}{236}{ }
+{230}{B:}{}{1}{}{226}{ }
+{235}{E:}{}{1}{}{0}{ }
+{236}{Was soll ich tun?}{Was soll ich tun?}{}{}{}{ }
+{237}{Geht weiter weg.}{}{1}{}{226}{so }
+{238}{Kommt näher.}{}{1}{}{226}{sc }
+{239}{Wartet hier.}{}{1}{wa 0}{0}{wa, fl 245}
+{240}{Kommt wieder mit.}{}{1}{wa 1}{0}{jo1 226}
+{241}{Verabschiedet Euch.}{}{1}{}{270}{lv, gf2177 1 }
+{244}{[zurück]}{}{1}{}{226}{ }
+{245}{Ich werde hier auf Euch warten.}{Ich werde hier auf Euch warten.}{}{}{}{ }
+{246}{Alle gehen dorthin! Quintarra hat mich gelangweilt, ich brauchte etwas Abenteuer, Abwechslung!}{Alle gehen dorthin! Quintarra hat mich gelangweilt, ich brauchte etwas Abenteuer, Abwechslung!}{}{}{}{ }
+{247}{Natürlich, das hätte ich mir denken können.}{}{5}{}{250}{ }
+{250}{Hä? Was wollt Ihr damit andeuten?}{Hä? Was wollt Ihr damit andeuten?}{}{}{}{ }
+{251}{Nichts. Machen wir uns auf den Weg.}{}{5}{}{0}{ }
+{255}{Danke, dass Ihr mich hierher gebracht habt. Ich mach' mich dann mal auf den Weg. Hier ist das Geld, das ich Euch versprochen hatte.}{Danke, dass Ihr mich hierher gebracht habt. Ich mach' mich dann mal auf den Weg. Hier ist das Geld, das ich Euch versprochen hatte.}{}{}{}{lf9 1, qu1078 4 }
+{256}{Vielen Dank. Wir sehen uns.}{}{5}{lf3 1}{0}{$$300, lv }
+{257}{Vielen Dank. Wir sehen uns.}{}{5}{lf4 1}{0}{$$350, lv }
+{258}{Vielen Dank. Wir sehen uns.}{}{5}{lf5 1}{0}{$$400, lv }
+{259}{Vielen Dank. Wir sehen uns.}{}{5}{lf6 1}{0}{$$450, lv }
+{260}{Nochmals danke, dass Ihr mich nach Tarant gebracht habt.}{Nochmals danke, dass Ihr mich nach Tarant gebracht habt.}{}{}{}{ }
+{270}{Ich will kein Wort von Euch hören! Ihr habt gesagt, dass Ihr mich mit nach Tarant nehmen würdet, aber das habt Ihr nicht getan. Ich hasse Euch!}{Ich will kein Wort von Euch hören! Ihr habt gesagt, dass Ihr mich mit nach Tarant nehmen würdet, aber das habt Ihr nicht getan. Ich hasse Euch!}{}{}{}{ }
+

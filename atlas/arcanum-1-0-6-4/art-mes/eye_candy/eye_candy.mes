@@ -1,0 +1,629 @@
+// this file holds the name of eye candy art files, i.e. overlays and
+// underlays. The files get the suffix of "_f", "_b", or "_u"
+// depending on whether they are foreground overlays, background
+// overlays, or underlays
+
+{0}{lagicon} // Used to be test
+// Eye-Candy Art for combat:
+
+{1}{blood}		// Blood splash overlay
+{2}{chunks}		// Chunk splash overlay
+{3}{bdecapblood}	// Big Decapitation Blood
+{4}{decapblood}		// Normal Decapitation Blood
+{5}{sdecapblood}	// Small Decapitation Blood
+{6}{bsevlegblood}	// Big Severed Leg Blood
+{7}{sevlegblood}	// Normal Severed Leg Blood
+{8}{ssevlegblood}	// Small Severed Leg Blood
+
+{9}{GenSpellEffect}		//
+
+// Eye-Candy Art for spells:
+
+
+//Conveyance
+
+{10}{CONVEYANCE-Conjure}	// Generic cast
+
+	{11}{CONVEYANCE-push-travel_0}	// 
+	{12}{CONVEYANCE-push-travel_1}	//
+	{13}{CONVEYANCE-push-travel_2}	// 
+	{14}{CONVEYANCE-push-travel_3}	//
+	{15}{CONVEYANCE-push-hit}	//
+
+	{16}{CONVEYANCE-unlock-hit}	// 
+	{17}{GenSpellEffect}	// 
+	{18}{GenSpellEffect}	// 
+
+	{19}{CONVEYANCE-Blink-Hit}	// 
+	{20}{GenSpellEffect}	// 
+	{21}{GenSpellEffect}	// 
+
+	{22}{CONVEYANCE-Dimension-Door-hit}	// 
+	{23}{GenSpellEffect}	// 
+	{24}{GenSpellEffect}	//
+
+	{25}{CONVEYANCE-Teleport-Mark}	// 
+	{26}{GenSpellEffect}	// 
+
+	{27}{CONVEYANCE-Blip}	// Fast Cast
+	
+//Divination
+
+{28}{DIVINATION-Conjure}	// Generic cast
+
+	{29}{HIGHLIGHT-Magically-Charged}	//
+	{30}{GenSpellEffect}	// 
+	{31}{GenSpellEffect}	//
+	{32}{GenSpellEffect}	// 
+	{33}{GenSpellEffect}	// 
+	{34}{GenSpellEffect}	//
+
+	{35}{Item-is-Trapped}	// 
+	{36}{GenSpellEffect}	// 
+	{37}{GenSpellEffect}	// 
+
+	{38}{GenSpellEffect}	// 
+	{39}{GenSpellEffect}	// 
+	{40}{GenSpellEffect}	// 
+
+	{41}{DIVINATION-Detect-Invisible}	// 
+	{42}{GenSpellEffect}	// 
+	{43}{GenSpellEffect}	// 
+
+	{44}{GenSpellEffect}	// 
+	{45}{GenSpellEffect}	// 
+	{46}{GenSpellEffect}	// 
+
+//Elemental Air
+
+{47}{ELM-AIR-conjure}	// Generic cast
+
+	{48}{ELM-AIR-gust}	// 
+	{49}{GenSpellEffect}	// 
+	{50}{GenSpellEffect}	// 
+	{51}{GenSpellEffect}	// 
+
+	{52}{ELM-AIR-Float-Hit}	// 
+	{53}{ELM-AIR-Float-Sustain}	//
+	{54}{GenSpellEffect}	// 
+
+	{55}{ELM-AIR-PoisonVapours-Hit}	// 
+	{56}{GenSpellEffect}	// 
+	{57}{GenSpellEffect}	// 
+	{58}{GenSpellEffect}	// 
+
+	{59}{ELM-AIR-Body-of-Air}	// 
+	{60}{GenSpellEffect}	// 
+	{61}{GenSpellEffect}	// 
+
+	{62}{GenSpellEffect}	// 
+	{63}{GenSpellEffect}	// 
+	{64}{GenSpellEffect}	// 
+	{65}{GenSpellEffect}	// 
+	{66}{GenSpellEffect}	//
+	{67}{GenSpellEffect}	// 
+
+	{68}{ELM-AIR-Blip}	//  Fast Cast
+
+//Elemental Earth
+
+{69}{ELM-Earth-conjure}	// Generic cast
+
+	
+	{70}{ELM-Earth-stonemissle-travel_0}	// 
+	{71}{ELM-Earth-stonemissle-travel_0}	// 
+	{72}{ELM-Earth-stonemissle-travel_0}	//
+	{73}{ELM-Earth-stonemissle-travel_0}	// 
+	{74}{ELM-Earth-stonemissle-hit}	// 
+	{75}{GenSpellEffect}	// 
+
+	{76}{ELM-Earth-Wall-O-Stone-Hit}	// 
+	{77}{ELM-Earth-Wall-O-Stone-Sustain}	// 
+	{78}{GenSpellEffect}	// 
+
+	{79}{GenSpellEffect}	// 
+	{80}{GenSpellEffect}	// 
+	{81}{GenSpellEffect}	// 
+
+	{82}{GenSpellEffect}	// 
+	{83}{GenSpellEffect}	// 
+	{84}{GenSpellEffect}	// 
+
+	{85}{ELM-EARTH-Body-of-Stone}	// 
+	{86}{GenSpellEffect}	//
+	{87}{GenSpellEffect}	// 
+	{88}{GenSpellEffect}	// 
+	{89}{GenSpellEffect}	// 
+
+	{90}{ELM-EARTH-Blip}	//   Fast Cast
+
+//Elemental Fire
+
+{91}{ELM-FIRE-conjure}	//
+	
+	
+	{92}{ELM-FIRE-Resist-Fire-Hit}	// 
+	{93}{ELM-FIRE-Resist-Fire-Sustain}	// 
+	{94}{GenSpellEffect}	//
+
+	{95}{ELM-Fire-Wall-O-Fire-Hit}	// 
+	{96}{ELM-Fire-Wall-O-Fire-Sustain}	// 
+	{97}{GenSpellEffect}	// 
+
+	{98}{ELM-FIRE-fireball-hit}	//
+	{99}{ELM-FIRE-fireball-trav_0}	//
+	{100}{ELM-FIRE-fireball-trav_1}	//
+	{101}{ELM-FIRE-fireball-trav_2}	//
+	{102}{ELM-FIRE-fireball-trav_3}	//
+	{103}{GenSpellEffect}	// 
+	{104}{GenSpellEffect}	//
+
+	{105}{ELM-FIRE-Body-of-Fire}	// 
+	{106}{GenSpellEffect}	// 
+	{107}{GenSpellEffect}	// 
+
+	{108}{GenSpellEffect}	// 
+	{109}{GenSpellEffect}	// 
+	{110}{GenSpellEffect}	// 
+	{111}{GenSpellEffect}	// 
+	{112}{GenSpellEffect}	// 
+	{113}{GenSpellEffect}	// 
+
+	{114}{ElM-FIRE-Blip}	//   Fast Cast
+
+//Elemental Water
+
+{115}{ELM-WATER-Conjure}	//
+
+	{116}{ELM-WATER-Fog-Hit}	// 
+	{117}{ELM-WATER-Fog-Sustain}	// 
+	{118}{GenSpellEffect}	// 
+	{119}{GenSpellEffect}	// 
+
+	{120}{ELM-WATER-Water-Walk-Hit}	// 
+	{121}{ELM-WATER-Water-Walk-Sustain}	// 
+	{122}{GenSpellEffect}	// 
+
+	{123}{ELM-WATER-Ice-Storm-Hit}	// 
+	{124}{ELM-WATER-Ice-Storm-Sustain}	// 
+	{125}{GenSpellEffect}	// 
+
+	{126}{ELM-WATER-Body-of-Water-Hit}	// 
+	{127}{GenSpellEffect}	//
+	{128}{GenSpellEffect}	// 
+
+	{129}{GenSpellEffect}	// 
+	{130}{GenSpellEffect}	//
+	{131}{GenSpellEffect}	// 
+	{132}{GenSpellEffect}	// 
+	{133}{GenSpellEffect}	// 
+	{134}{GenSpellEffect}	// 
+
+	{135}{ELM-WATER-Blip}	//   Fast Cast
+
+//Force
+
+{136}{FRC-conj}		//
+
+	{137}{FRC-shieldHit}		//
+	{138}{FRC-shieldsustain}	//
+	{139}{FRC-ShieldDamage}	// 
+
+	{140}{FRC-shocking-grasp-casting}	// 
+	{141}{FRC-shocking-grasp-hit}	// 
+	{142}{GenSpellEffect}	// 
+
+	{143}{FRC-Wall-O-Force-Hit}	// 
+	{144}{FRC-Wall-O-Force-Sustain}	//
+	{145}{GenSpellEffect}	// 
+
+	{146}{FRC-Lightning-Bolt-Trav_0}	// 
+	{147}{FRC-Lightning-Bolt-Trav_1}	// 
+	{148}{FRC-Lightning-Bolt-Trav_2}	// 
+	{149}{FRC-Lightning-Bolt-Trav_3}	// 
+	{150}{FRC-Lightning-Bolt-Hit}	// 
+	{151}{GenSpellEffect}	// 
+	{152}{GenSpellEffect}	// 
+
+	{153}{GenSpellEffect}	// 
+	{154}{FRC-disintegrate-travel}	// 
+	{155}{FRC-disintegrate-travel}	// 
+	{156}{FRC-disintegrate-travel}	//
+	{157}{FRC-disintegrate-travel}	// 
+	{158}{FRC-disintegrate-hit}	// 
+
+	{159}{FRC-Blip}	//   Fast Cast
+
+//Mental
+
+{160}{MENTAL-Conjure}	// 
+
+	{161}{MENTAL-Charm}	// 
+	{162}{GenSpellEffect}	// 
+	{163}{GenSpellEffect}	// 
+
+	{164}{MENTAL-Stun}	// 
+	{165}{GenSpellEffect}	// 
+	{166}{GenSpellEffect}	// 
+
+	{167}{MENTAL-Stupefy}	// 
+	{168}{GenSpellEffect}	// 
+	{169}{GenSpellEffect}	// 
+
+	{170}{MENTAL-Scare}	// 
+	{171}{GenSpellEffect}	// 
+	{172}{GenSpellEffect}	// 
+
+	{173}{MENTAL-Mind-Control-Hit}	//
+	{174}{MENTAL-Mind-Control-Sustain}	// 
+
+	{175}{MENTAL-Blip}	//   Fast Cast
+
+//Meta
+
+{176}{META-conjure}	// 
+
+	{177}{META-Resist-Magic-Hit}	// 
+	{178}{META-Resist-Magic-Sustain}	// 
+	{179}{GenSpellEffect}	// 
+
+	{180}{META-Dispel-Magic-Hit}	// 
+	{181}{GenSpellEffect}	// 
+	{182}{GenSpellEffect}	// 
+
+	{183}{META-anti-magic-shell-hit}	// 
+	{184}{META-anti-magic-shell-sustain}	// 
+	{185}{GenSpellEffect}	//
+	{186}{GenSpellEffect}	// 
+
+	{187}{META-anti-cast-hit}	// 
+	{188}{META-anti-cast-sustain}	//
+	{189}{GenSpellEffect}	// 
+	{190}{GenSpellEffect}	// 
+
+	{191}{META-Full-Reflection-Hit}	// 
+	{192}{META-Full-Reflection-Sustain}	// 
+	{193}{GenSpellEffect}	// 
+	{194}{GenSpellEffect}	// 
+
+//Morph
+
+{195}{MORPH-Conjure}	// 
+
+	{196}{MORPH-Weak}	// 
+	{197}{}	// 
+	{198}{GenSpellEffect}	// 
+
+	{199}{MORPH-Stone-to-Flesh}	// 
+	{200}{GenSpellEffect}	// 
+	{201}{GenSpellEffect}	//
+
+	{202}{MORPH-Flesh-to-Stone}	// 
+	{203}{GenSpellEffect}	// 
+	{204}{GenSpellEffect}	// 
+
+	{205}{MORPH-Shrink}	// 
+	{206}{GenSpellEffect}	// 
+	{207}{GenSpellEffect}	// 
+
+	{208}{MORPH-Polymorph}	// 
+	{209}{GenSpellEffect}	// 
+	{210}{GenSpellEffect}	// 
+
+//Nature
+
+{211}{NATURE-Conjure}	// 
+
+	{212}{NATURE-Entangle-Hit}	// 
+	{213}{NATURE-Entangle-Sustain}	// 
+	{214}{GenSpellEffect}	// 
+
+	{215}{NATURE-Animal-Friendship-Hit}	//
+	{216}{NATURE-Animal-Friendship-Sustain}	// 
+	{217}{GenSpellEffect}	// 
+
+	{218}{NATURE-Animal-Control-Hit}	// 
+	{219}{NATURE-Animal-Control-Sustain}	// 
+	{220}{GenSpellEffect}	// 
+
+	{221}{NATURE-Regenerate-Hit}	// 
+	{222}{NATURE-Regenerate-Sustain}	// 
+	{223}{GenSpellEffect}	// 
+	{224}{GenSpellEffect}	// 
+	{225}{GenSpellEffect}	// 
+	{226}{GenSpellEffect}	// 
+	{227}{GenSpellEffect}	//
+
+	{228}{GenSpellEffect}	// 
+	{229}{GenSpellEffect}	// 
+	{230}{GenSpellEffect}	//
+	{231}{GenSpellEffect}	// 
+	{232}{GenSpellEffect}	// 
+	{233}{GenSpellEffect}	// 
+
+	{234}{NATURE-Blip}	//   Fast Cast
+
+//Necromantic Evil
+
+{235}{NEC-EVIL-conjure}		//
+
+	{236}{NEC-EVIL-Cause-Light-Wounds}	// 
+	{237}{GenSpellEffect}	// 
+	{238}{GenSpellEffect}	//
+ 
+	{239}{NEC-EVIL-Poison-Hit}	// 
+	{240}{GenSpellEffect}	// 
+	{241}{GenSpellEffect}	// 
+
+	{242}{NEC-EVIL-Speak-with-Dead-hit}	// 
+	{243}{NEC-EVIL-Speak-with-Dead-sustain}	// 
+	{244}{GenSpellEffect}	//
+
+	{245}{GenSpellEffect}	// 
+	{246}{NEC-EVIL-Animate-Dead}	// 
+	{247}{GenSpellEffect}	// 
+
+	{248}{NEC-EVIL-deathspell-hit}	//
+	{249}{GenSpellEffect}	// 
+
+	{250}{NEC-EVIL-Blip}	//   Fast Cast
+
+//Necromantic Good
+
+-----NEC-EVIL-conjure palette 1
+
+	{251}{GenSpellEffect}	// 
+	{252}{NEC-GOOD-CureLight}	// 
+	{253}{GenSpellEffect}	// 
+
+	{254}{GenSpellEffect}	// 
+	{255}{NEC-GOOD-CurePoison}	// 
+	{256}{GenSpellEffect}	//
+
+	{257}{GenSpellEffect}	// 
+	{258}{NEC-GOOD-CureHeavy}	// 
+
+	{259}{NEC-GOOD-Sanc-Hit}	//
+	{260}{NEC-GOOD-Sanc-Sustain}	// 
+
+	{261}{NEC-GOOD-Heal}	// 
+	{262}{GenSpellEffect}	// 
+
+	{263}{NEC-GOOD-raisedead} // 
+
+	{264}{NEC-GOOD-Blip}	//   Fast Cast
+ 
+//Phantasm
+
+{265}{PHANTASM-Conjure}	// 
+
+	{266}{PHANTASM-Light}	// 
+	{267}{GenSpellEffect}	// 
+	{268}{GenSpellEffect}	// 
+	{269}{GenSpellEffect}	// 
+	{270}{GenSpellEffect}	// 
+	{271}{GenSpellEffect}	// 
+	{272}{GenSpellEffect}	//
+ 
+	{273}{GenSpellEffect}	//
+	{274}{GenSpellEffect}	// 
+	{275}{GenSpellEffect}	// 
+
+	{276}{PHANTASM-Blind-Spot-Hit}	// 
+	{277}{PHANTASM-Blind-Spot-Sustain}	// 
+	{278}{GenSpellEffect}	// 
+	{279}{GenSpellEffect}	// 
+	{280}{GenSpellEffect}	// 
+	{281}{GenSpellEffect}	// 
+	{282}{GenSpellEffect}	// 
+
+	{283}{PHANTASM-Illusionary-Monster}	// 
+	{284}{GenSpellEffect}	// 
+	{285}{GenSpellEffect}	//
+	{286}{GenSpellEffect}	// 
+	{287}{GenSpellEffect}	// 
+	{288}{GenSpellEffect}	//
+	{289}{GenSpellEffect}	// 
+
+	{290}{PHANTASM-Invis}	// 
+	{291}{GenSpellEffect}	// 
+	{292}{GenSpellEffect}	// 
+
+//Summoning
+
+{293}{SUMMON-conjure}	// 
+
+	{294}{GenSpellEffect}	// 
+	{295}{GenSpellEffect}	// 
+	{296}{GenSpellEffect}	// 
+	{297}{GenSpellEffect}	// 
+	{298}{GenSpellEffect}	// 
+	{299}{SUMMON-swarm}	// 
+	{300}{SUMMON-Swarm-Sustain}	// 
+
+	{301}{GenSpellEffect}	//
+	{302}{GenSpellEffect}	// 
+	{303}{GenSpellEffect}	// 
+	{304}{GenSpellEffect}	// 
+	{305}{GenSpellEffect}	// 
+	{306}{SUMMON-orc}	// 
+	{307}{GenSpellEffect}	// 
+
+	{308}{GenSpellEffect}	// 
+	{309}{GenSpellEffect}	// 
+	{310}{GenSpellEffect}	// 
+	{311}{GenSpellEffect}	// 
+	{312}{GenSpellEffect}	// 
+	{313}{SUMMON-ogre}	// 
+	{314}{GenSpellEffect}	// 
+
+	{315}{GenSpellEffect}	//
+	{316}{GenSpellEffect}	// 
+	{317}{GenSpellEffect}	// 
+	{318}{GenSpellEffect}	// 
+	{319}{GenSpellEffect}	// 
+	{320}{SUMMON-shadow}	// 
+	{321}{GenSpellEffect}	// 
+
+	{322}{GenSpellEffect}	// 
+	{323}{GenSpellEffect}	// 
+	{324}{GenSpellEffect}	// 
+	{325}{GenSpellEffect}	// 
+	{326}{GenSpellEffect}	// 
+	{327}{SUMMON-Demon}	//
+
+	{328}{SUMMON-Blip}	//   Fast Cast
+
+//Temporal
+
+{329}{TEMPORAL-Conjure}	// 
+
+	{330}{TEMPORAL-Magelock-Hit}	//
+	{331}{TEMPORAL-Magelock-Sustain}	// 
+	{332}{GenSpellEffect}	// 
+
+	{333}{TEMPORAL-Slow-Hit}	// 
+	{334}{TEMPORAL-Slow-Sustain}	// 
+	{335}{GenSpellEffect}	// 
+
+	{336}{TEMPORAL-Paralyze-Hit}	// 
+	{337}{TEMPORAL-Paralyze-Sustain}	// 
+	{338}{GenSpellEffect}	// 
+
+	{339}{TEMPORAL-Haste-Hit}	// 
+	{340}{TEMPORAL-Haste-Sustain}	// 
+	{341}{GenSpellEffect}	// 
+
+	{342}{TEMPORAL-Tempus-Fugit-Hit}	// 
+	{343}{TEMPORAL-Tempus-Fugit-Sustain}	// 
+	{344}{GenSpellEffect}	//
+	{345}{GenSpellEffect}	// 
+	{346}{GenSpellEffect}	// 
+	{347}{GenSpellEffect}	// 
+	{348}{GenSpellEffect}	// 
+
+//More Generic Combat Effects
+
+	{349}{generic-smoke-puff}	// 
+	{350}{Thrown-Grenade-Regular}	// 
+	{351}{trap_arrow}	// 
+	{352}{trap_elec}	// 
+	{353}{trap_fire}	// 
+	{354}{trap_gun}	// 
+	{355}{trap_magick}	// 
+	{356}{trap_mechanical}	//
+	{357}{trap_poison}	// 
+	{358}{hit-electric}	// 
+	{359}{hit-fire}		//
+	{360}{hit-poison}		// 
+	{361}{hit-undead}		// 
+	{362}{ELM-AIR-Buff}	// 
+	{363}{ELM-EARTH-Buff}	// 
+	{364}{ELM-FIRE-Buff}	// 
+	{365}{ELM-WATER-Buff}	// 
+	{366}{Tech-MagneticInversion-Hit}	// 
+	{367}{Tech-MagneticInversion}	// 
+	{368}{Tech-CloudHit}	// 
+	{369}{Tech-StunGrenade}	// 
+	{370}{Tech-GunGeneric}	// 
+	{371}{BearTrap-Springing}	// 
+	{372}{BearTrap-Sprung}	// 
+	{373}{TechBoost}	//
+	{374}{dynamite_lit}	// 
+	{375}{Tech-GunShotGun}	// 
+	{376}{Tech-GunHandCannon}	// 
+	{377}{TullaPillar-1}	// 
+	{378}{TullaPillar-2}	// 
+	{379}{TullaTransport}	// 
+	{380}{ContainerDestroy}	// 
+	{381}{BoxDestroy}	// 
+	{382}{VOID-PortalHit}	// 
+	{383}{TULLA-PoolGuy-Water}	// 
+	{384}{TULLA-PoolGuy-Hit}	// 
+	{385}{TULLA-PoolGuy-Sustain}	//
+	{386}{Void-Shield-End}	// 
+	{387}{Hexed}	// 
+	{388}{Kerg-Drag-Conceal-EyeCandy1}	//
+	{389}{Kerg-Drag-Conceal-EyeCandy2}	// 
+	{390}{Kerg-Drag-RegenShell}	// 
+	{391}{Kerg-Drag-RegenShell-Hit}	// 
+	{392}{Kerg-Drag-attackSpell}	//
+	{393}{Kerg-Drag-AttackSpell-Effect-Dest}	//  
+	{394}{Kerg-Drag-RegenShell-Damage}	// 
+	{395}{Kerg-Drag-Conceal}	// 
+	{396}{Kerg-Drag-AttackSpell-Gust}	//
+	{397}{Bronwycks-Gather}	//  
+	{398}{Bronwycks-Hit}	// 
+	{399}{GenSpellEffect}	// 
+	{400}{generic-smoke-puff}// GenericSpellFailure
+
+
+//Tulla Pad Light Effects
+
+Conveyance
+{401}{PADFX_Conveyance}
+{402}{TQ_Air_Rune_On}
+{403}{TQ_Divination_Rune_On}
+{404}{TQ_Earth_Rune_On}
+{405}{TQ_Fire_Rune_On}
+{406}{TQ_Force_Rune_On}
+{407}{TQ_Material_Rune_On}
+{408}{TQ_Mental_Rune_On}
+{409}{TQ_Meta_Rune_On}
+{410}{TQ_Morph_Rune_On}
+{411}{TQ_Nature_Rune_On}
+{412}{TQ_Necro_Black_Rune_On}
+{413}{TQ_Necro_White_Rune_On}
+{414}{TQ_Pelojians_Rune_On}
+{415}{TQ_Phantasm_Rune_On}
+{416}{TQ_Power_Rune_On}
+{417}{TQ_Spirit_Rune_On}
+{418}{TQ_Summon_Rune_On}
+{419}{TQ_Temporal_Rune_On}
+{420}{TQ_Truth_Rune_On}
+{421}{TQ_Water_Rune_On}
+
+//Generic Effects
+
+{422}{GUN-Elephant}
+{423}{Tech-Guns-FlameThrowerEffect}
+{424}{Phantom-Knight-Death}
+{425}{FAM-Attack}
+{426}{FAM-Attack-Slasher}
+{427}{FAM-Attack-Blood-Claw}
+{428}{PHANTOM-Knight-Death}
+{429}{blood1}
+{430}{blood2}
+{431}{blood3}
+{432}{Generic-Smoke-Dark}
+{433}{Combat-Circle}
+{434}{SMALL-Conjure-1}
+{435}{SMALL-Conjure-2}
+{436}{SMALL-Gen-Effect1-1}
+{437}{SMALL-Gen-Effect1-2}
+{438}{Kerg-Drag-Unconceal}
+{439}{Forest-Portal-Dest}
+{440}{Forest-Portal-Dest2}
+{441}{MultiPlayer-Flag}
+{442}{MultiPlayer-x}
+{443}{MultiPlayer-Round}
+
+
+//Effects for Scripts
+{500}{NEC-GOOD-CureLight}//Generic Light Heal Effect
+{501}{NEC-GOOD-CureLight}//Generic Parial Light Heal Effect NEC-GOOD-CureLight
+
+{502}{NEC-GOOD-CureHeavy}//Generic Major Heal Effect
+{503}{NEC-GOOD-CureHeavy}//Generic Parial Major Heal Effect
+
+{504}{TechBoost}//Generic Light Fatigue Restore Effect
+{505}{TechBoost}//Generic Parial Light Fatigue Restore Effect
+
+{506}{gencast}//Generic Major Fatigue Restore Effect
+{507}{gencast}//Generic Parial Major Fatigue Restore Effect
+
+{508}{NEC-GOOD-CurePoison}//Generic Cure Poison Effect
+{509}{NEC-GOOD-CurePoison}//Generic Parial Cure Poison Effect
+
+{510}{NEC-GOOD-raisedead}//Generic Full Healing Effect
+{511}{NEC-GOOD-raisedead}//Generic Parial Full Healing Effect

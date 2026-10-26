@@ -12,14 +12,14 @@ import { DATA_ROOT } from '../core/config.js';
 import { fetchText, errText } from '../core/text-io.js';
 
 import { breadcrumbEl, gridEl, paginationEl, viewerEl } from '../core/dom.js';
-import { encPath, escapeHtml } from '../core/util.js';
+import { encPath, escapeHtml, createEl as mesCreateEl } from '../core/util.js';
 
 import { beginDataExplorer, renderDataFolderGrid, showExplorerError } from '../explorer/data-explorer.js';
 
 import { saveDataExplorerState } from '../explorer/state-store.js';
 
 // The .MES files are spread over the whole data tree (mes/, art/, Rules/, the mods, the modules...): the explorer starts at data/.
-// data/file_index_mes.json (toolbox/file_index.py) lists only the folders that hold at least one .mes.
+// js/index/files/file_index_mes.json (toolbox/file_index.py) lists only the folders that hold at least one .mes.
 const MES_ROOT = DATA_ROOT;
 let mesCurrentPath = '';
 let mesCurrentFolderName = 'data';
@@ -101,7 +101,6 @@ function mesRenderViewer(filename, relativePath, parsed) {
   if(parsed.trailingComments.length){ const tail=mesCreateEl('div','mes-trailing-comments'); tail.appendChild(mesCreateEl('strong',null,'Comments at end of file')); parsed.trailingComments.forEach(c=>tail.appendChild(mesCreateEl('div',null,`Line ${c.line}: ${c.text}`))); wrap.appendChild(tail); }
   return wrap;
 }
-function mesCreateEl(tag,cls,text){ const el=document.createElement(tag); if(cls)el.className=cls; if(text!==undefined)el.textContent=text; return el; }
 function mesRenderTable(table,parsed){
   table.innerHTML='';
   const entries=parsed.entries.filter(e=>mesMatches(e,mesSearchQuery));

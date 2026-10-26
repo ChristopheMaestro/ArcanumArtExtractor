@@ -1,0 +1,45 @@
+// you can make 50 advancement schemes, numbered 50 to 99
+
+{50}-Necromancer			{necro_evil 3, cn 15, necro_evil 5, maxfatigue 300}
+{51}-Gun Technologist		{firearms 15, pe 15, dx 15, gun_smithy 6, repair 15}
+{52}-Air Elementalist		{air 3, cn 15, air 5, maxfatigue 300}
+{53}-Earth Elementalist		{earth 3, cn 15, earth 5, maxfatigue 300}
+{54}-Fire Elementalist		{fire 3, cn 15, fire 5, maxfatigue 300}
+{55}-Water Elementalist		{water 3, cn 15, water 5, maxfatigue 300}
+{56}-Guard				{melee 4, dodge 4, bow 4, dx 9, throwing 4, st 9, melee 8, dodge 8, bow 8, throwing 8, dx 12, melee 12, dodge 12, bow 12, throwing 12, dx 15, st 10, melee 16, dodge 16, bow 16, throwing 16, dx 18, st 12, melee 20, dodge 20, bow 20, throwing 20, st 14, dx20, st 20, maxhps 300}
+{57}-Shopkeeper			{haggle 4, gambling 4, dodge 4, melee 4, haggle 8, gambling 8, dodge 8, melee 8, st 12, haggle 12, gambling 12, dodge 12, melee 12, haggle 16, gambling 16, haggle 20, gambling 20, maxhps 300}
+{58}-Priest				{necro_good 1, necro_good 2, necro_good 3, necro_good 4, necro_good 5, cn 15, maxfatigue 300, heal 15}
+{59}-Druid				{nature 3, ch 12, necro_good 3, cn 15, nature 5, necro_good 5, maxfatigue 300}
+{60}-Summoner			{summoning 3, cn 15, summoning 5, maxfatigue 300}
+{61}-Force Mage			{force 3, cn 15, force 5, maxfatigue 300}
+{62}-Conveyance Mage		{conveyance 3, cn 15, conveyance 5, maxfatigue 300}
+{63}-Temporal Thaumaturgist	{temporal 3, cn 15, temporal 5, maxfatigue 300}
+{64}-Morph Mage			{morph 3, cn 15, morph 5, maxfatigue 300}
+{65}-Gunfighter Doctor		{firearms 10, heal 10, firearms 15, heal 15, firearms 20, heal 20}
+{66}-Warrior			{Melee 4, Dodge 4, St 10, Dx 10, melee 8, dodge 8, st 12, dx 12, wp 10, melee 12, dodge 12, st 15, dx 15, wp 12, melee 16, dodge 16, st 18, dx 18, wp 14, melee 20, dodge 20, st 20, st 18, wp 16, maxhps 300}
+{67}-Warrior Mage Good		{Melee 5, necro_good 2, Dodge 3, force 1, air 1, st 12, melee 10, dodge 10, necro_good 4,  melee 13, force 3, dodge 13, air 3, st 15, melee 18, dodge 18, force 5, air 5, melee 20, dodge 20, st 20}
+{68}-Warrior Mage Evil		{Melee 5, necro_evil 2, Dodge 3, force 1, fire 1, st 12, melee 10, dodge 10, necro_evil 4,  melee 13, summoning 2, dodge 13, fire 3, st 15, melee 18, dodge 18, necro_evil 5, fire 5, melee 20, dodge 20, st 20}
+{69}-Pure Melee Dodge		{Melee 4, Dodge 4, St 10, Dx 10, melee 8, dodge 8, st 12, dx 12, wp 10, melee 12, dodge 12, st 15, dx 15, wp 12, melee 16, dodge 16, st 18, dx 18, wp 14, melee 20, dodge 20, st 20, st 18, wp 16, maxhps 300}
+{70}-Standard NPC Scheme	{melee 5, dodge 5, heal 5, maxhps 50, maxfatigue 50, melee 10, dodge 10, heal 10, maxhps 75, maxfatigue 75, melee 15, dodge 15, heal 15, maxhps 100, maxfatigue 100, melee 20, dodge 20, heal 20, maxhps 300, maxfatigue 300}	// default level scheme
+{71}-Lower Class NPC		{st 14, cn 14, be 7, in 7, melee 14, throwing 14}
+{72}-Middle Class NPC		{st 10, cn 10, be 10, in 10, melee 10, throwing 10, haggle 8}
+{73}-Upper Class NPC		{st 7, cn 7, be 14, in 14, melee 7, throwing 7, haggle 14}
+{74}-Basic Thief			{picklock 4, melee 4, prowling 4, pickpocket 4, dx 10, melee 8, in 10, picklock 8, dodge 4, prowling 8, pickpocket 8, dx 12, in 12, st 11, picklock 12, dodge 8, prowling 12, pickpocket 12, dx 15, in 15, picklock 16, dodge 12, prowling 16, pickpocket 16, dx 18, in 18, picklock 20, prowling 20, pickpocket 20, dx 20, in 20, maxhp 300}
+{75}-Melee Heal Guns		{melee 5, heal 5, dodge 5, melee 10, heal 10, firearms 10, heal 15, melee 20, heal 20, firearms 20}
+{76}Merwin Tumblebrook		{Bow 4, picklock 4, dx 9, prowling 4, Bow 8, picklock 8, mechanical 1, throwing 4, haggle 4, Bow 12, picklock 12, mechanical 2, prowling 8, Bow 16, picklock 16, mechanical 3, throwing 8, prowling 12, mechanical 4, throwing 12, haggle 8, Bow 20, picklock 20, dx 19, mechanical 5, dx 20}
+{77}Godfrey Castleburger	{Persuasion 4, Heal 4, Firearms 4, Gun_smithy 1, Haggle 4, dx 9, repair 4, Persuasion 8, Firearms 8, Gun_smithy 2, Heal 8, repair 8, Persuasion 12, Haggle 8, Firearms 12, dx 10, Gun_smithy 3, repair 12, Persuasion 16, Firearms 16, Gun_smithy 4, Persuasion 20, Firearms 20, Gun_smithy 5, Gun_smithy 6, dx 12}
+{78}Horace McGinley		{Pickpocket 4, Melee 4, Bow 4, prowling 4, Conveyance 1, Temporal 1, Pickpocket 8, Bow 8, Conveyance 2, Temporal 2, prowling 8, Melee 8, Divination 1, Pickpocket 12, Bow 12, Melee 12, Conveyance 3, Temporal 3, Pickpocket 16, Bow 16, Divination 2, Pickpocket 16, Conveyance 4, Temporal 4, Bow 20, Divination 3, Conveyance 5}
+{79}Muck Evil Eye			{ST 9, Melee 4, Dodge 4, MaxHPS 1, CN 9, Throwing 4, ST 10, Melee 8, Dodge 8, MaxHPS 1, CN 10, ST 11, Melee 12, MaxHPS 1, Dodge 12, CN 11, Throwing 8, ST 12, Melee 16, MaxHPS 1, Dodge 16, CN 12, ST 13, MaxHPS 1, CN 13, Throwing 12, ST 14, MaxHPS 1, CN 14, ST 15, MaxHPS, CN 15, ST 16, MaxHPS 1, CN 16, ST 17, MaxHPS 1}
+{80}D’ren Le’lor			{Bow 4, Necro_good 1, CN 9, Nature 1, CN 10, CH 9, Necro_good 2, Air 1, CN 11, CH 10, Bow 8, Water 1, Nature 2, CN 12, CH 11, Necro_good 3, Air 2, CN 13, CH 12, Bow 12, Water 2, Nature 3, CN 14, Bow 16, Necro_good 4, Air 3, CN 15, Water 3, Nature 4, CN 17, Necro_good 5, CN 18, Water 4, Nature 5, Water 5}
+{81}Solomon Doone			{Melee 4, Necro_Evil 1, MaxFatigue 1, CN 9, Force 1, MaxFatigue 1, Fire 1, Necro_Evil 2, MaxFatigue 1, Summoning 1, Melee 8, CN 10, MaxFatigue 1, Fire 2, Melee 10, meta 1, Necro_Evil 3, MaxFatigue 1, Summoning 2, MaxFatigue 1, Fire 3, conveyance 1, Melee 12, Necro_Evil 4, CN 11, MaxFatigue 1, Summoning 3, MaxFatigue 1, Fire 4, Necro_Evil 5, CN 12, MaxFatigue 1, in 19, Summoning 4, MaxFatigue 1, Fire 5, Morph 1, CN 13, MaxFatigue 1, in 20, Summoning 5, MaxFatigue 1}
+{82}Merik Luggerton		{Melee 4, Dodge 4, Bow 4, st 9, Haggle 4, cn 9, Melee 8, st 10, Dodge 8, cn 10, Bow 8, Haggle 8, Melee 12, st 11, Dodge 12, cn 11, Bow 12, Melee 16, st 12, Dodge 16, cn 12, Bow 16, Melee 20, st 13, Dodge 20, cn 13, Bow 20, dx 19, st 14, dx 20, cn 14, st 15, cn 15, st 16, cn 16, st 17, cn 17, st 18, cn 18, st 20}
+{83}Lugard Bloodstone		{Firearms 4, Melee 4, Gun_Smithy 1, Mechanical 1, Haggle 4, Electric 1, st 9, Firearms 8, Melee 8, Gun_Smithy 2, Mechanical 2, Haggle 8, Electric 2, st 10, Firearms 12, Gun_Smithy 4, Mechanical 3, Electric 3, Firearms 16, Gun_Smithy 6, Mechanical 4, st 11, Electric 4, Firearms 20, Gun_Smithy 7, Mechanical 5, st 13, Electric 5, Mechanical 6, st 15, Electric 6, Mechanical 7, st 17, Electric 7, st 20}
+{84}Victoria Warrington		{BE 10, persuasion 4, haggle 4, mental 1, divination 1, BE 11, mental 2, gambling 4, BE 12, persuasion 8, haggle 8, divination 2, BE 13, mental 3, gambling 8, BE 14, persuasion 12, haggle 12, divination 3, BE 15, mental 4, BE 16, persuasion 16, divination 4, BE 17, persuasion 20, mental 5, BE 18, BE 19, BE 20}
+{85}Bel’an T’Seraa		{Melee 4, Nature 1, Necro_good 1, ST 9, Bow 4, air 1, Dodge 4, CH 10, Meta 1, Water 1, ST 10, force 1, Melee 8, Nature 3, Water 2, Bow 8, phantasm 1, fire 1, CH 11, Melee 12, Dodge 8, Water 3, ST 11, Bow 12, Melee 16, Earth 1, Nature 4, CH 12, Water 4, Nature 5, Water 5, Melee 20}
+{86}HOrc Female			{Melee 4, Heal 4, PE 9, Anatomical 2, Bow 4, Therapeutics 1, Anatomical 3, Chemistry 1, PE 10, Bow 8, Anatomical 4, Therapeutics 2, Melee 8, Anatomical 5, Chemistry 2, PE 12, Heal 8, Bow 12, Anatomical 6, Therapeutics 3, Chemistry 3, Therapeutics 4, PE 13, Chemistry 4, Therapeutics 5, PE 14, Bow 16, Chemistry 5, Melee 12, Therapeutics 6, Chemistry 6, Bow 20}
+{87}HElf Female			{Melee 4, Necro_good 1, Heal 4, Anatomical 1, Nature 1, Persuasion 8, Therapeutics 1, Meta 1, Necro_good 2, Anatomical 2, Nature 2, Persuasion 12, Therapeutics 2, CH 10, Meta 2, Necro_good 3, Anatomical 3, Nature 3, Therapeutics 3, Meta 3, Necro_good 4, Heal 8, Persuasion 16, Anatomical 4, Nature 4, Therapeutics 4, Anatomical 5, Nature 4, Therapeutics 5, Meta 4, Anatomical 6, Therapeutics 6, Persuasion 20, CH 20}
+{88}-Ruffian			{Melee 3, Dodge 3, Gambling 5, ST 10, CN 9, DX 9, Firearms 3, prowling 1, Haggle 2, MaxHPS 40, MaxFatigue 40, ST 11, CN 10, DX 10, Firearms 5, Melee 8, Dodge 8, Gambling 10, prowling 3, Heal 1, Haggle 5,  MaxHPS 45,  MaxFatigue 45, ST 13, CN 13,  DX 11, Firearms 7, Melee 12, Dodge 10, Gambling 15, prowling 5, Heal 3, MaxHPS 55, MaxFatigue 55, ST 14, CN 14, DX 12, WP 10, Firearms 10,  Melee 15, Dodge 10, Gambling 20, prowling 8, WP 15, MaxHPS 60, MaxFatigue 60, prowling 10, MaxHPS 70, MaxFatigue 70}
+{89}Bowman			{bow 5,dodge 5, st 10, bow 10,dodge 10, st 15, bow 15,dodge 15, st 20, bow 20,dodge 20}
+{90}Constable		{melee 4, dodge 4, firearms 4, dx 9, throwing 4, st 9, melee 8, dodge 8, throwing 8, firearms 8, dx 12, st 10, melee 12, dodge 12, throwing 12, firearms 12, dx 15, st 12, melee 16, dodge 16, throwing 16, firearms 16, dx 18, st 14, melee 20, dodge 20, throwing 20, firearms 20, st 16, dx20, st 20, maxhps 300}
+{91}Virgil			{necro_good 1, Heal 4, MaxHPS 36, Dodge 4, Melee 4, Picklock 4, Dodge 4, Melee 8, necro_good 2, Heal 8, Dodge 8, MaxHPS 62, Melee 12, necro_good 3, Heal 12, Picklock 8, Dodge 12, MaxHPS 90, Melee 16, necro_good 4, Heal 16, Dodge 16, MaxHPS 106, Melee 20, necro_good 5, Heal 20, Picklock 12, Dodge 20, MaxHPS 200}
+

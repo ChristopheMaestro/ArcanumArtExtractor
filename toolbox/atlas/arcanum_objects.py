@@ -42,7 +42,7 @@ def read_value(data, off, od):
         if not present:
             return None, off
         n = struct.unpack_from('<i', data, off)[0]
-        return data[off + 4:off + 4 + n].decode(RAW_ENC, 'replace').rstrip('\0'), off + 4 + n + 1
+        return decode_raw(bytes(data[off + 4:off + 4 + n])).rstrip('\0'), off + 4 + n + 1
     if od == 6:
         return (bytes(data[off:off + 24]) if present else None), off + (24 if present else 0)
     if od == 14:
@@ -136,8 +136,13 @@ def sec_objects(path):
         off += 4 + struct.unpack_from('<i', data, off)[0] * 0x18
         off += (12 if ph >= 0xAA0002 else 0) + (24 if ph >= 0xAA0003 else 0) + (512 if ph >= 0xAA0004 else 0)
     out = []
-    for i in range(struct.unpack_from('<i', data, len(data) - 4)[0]):
-        obj, off = read_object(data, off)
+    n = struct.unpack_from('<i', data, len(data) - 4)[0]
+    for i in range(n):
+        try:
+            obj, off = read_object(data, off)
+        except (IndexError, KeyError, struct.error):       # (a damaged record, e.g. UltimateArcanum 22011709402.sec #1050: the rest of the sector is left out)
+            print(f'   WARNING {path.name}: object {i} of {n} is unreadable, the {n - i} after it are left out', flush=True)
+            break
         obj.file = f'{path.name}#{i}'
         out.append(obj)
     return out
@@ -181,8 +186,19 @@ def codec_for(path):
     return 'cp1252'
 
 
+sniff_codec = emp.sniff_codec
+
+
+def decode_raw(data):
+    """A string kept inside a binary file (.pro name, .scr header): the mod's code page (RAW_ENC), or Windows-1251 when the bytes are Cyrillic
+    whatever the version is (a Russian module in the base game, whose names are cp1251)."""
+    enc = sniff_codec(data, RAW_ENC)
+    return data.decode(enc if enc != 'utf-8' else RAW_ENC, 'replace')
+
+
 def read_text(path):
-    return Path(path).read_bytes().decode(codec_for(path), 'replace')
+    data = Path(path).read_bytes()
+    return data.decode(sniff_codec(data, codec_for(path)), 'replace')
 
 
 # ---- .mes ----------------------------------------------------------------------------------------------------

@@ -152,8 +152,9 @@
     const bars = new Map();                            // scrolling box -> its bar
     let queued = false;
     const page = { place: () => queue() };
+    let sheets = -1;
     function find() {
-      if (!selectors) selectors = scrollingSelectors(doc);
+      if (!selectors || doc.styleSheets.length !== sheets) { sheets = doc.styleSheets.length; selectors = scrollingSelectors(doc); }   // a tool page adds its sheet when first opened
       for (const s of selectors) {
         let list; try { list = doc.querySelectorAll(s); } catch (_) { continue; }
         for (const el of list) {

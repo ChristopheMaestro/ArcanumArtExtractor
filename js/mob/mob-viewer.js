@@ -6,8 +6,10 @@ import { mobCurrentAidText, mobFieldValueText, mobHex, mobLocationInfo, mobOidTe
 import { backButton } from '../explorer/nav-history.js';
 import { mobObjectTypeName } from './mob-schema.js';
 import { descriptionLabel } from '../proto/proto-mes.js';
+import { openMobHex } from '../art/hex-viewer.js';
+import { addContextTool } from '../ui/shell.js';
 
-export function renderMobViewer(decoded) {
+export function renderMobViewer(decoded, buffer) {
   gridEl.hidden = true;
   paginationEl.hidden = true;
   viewerEl.innerHTML = '';
@@ -26,6 +28,13 @@ export function renderMobViewer(decoded) {
   header.className = 'file-group-header';
   header.innerHTML = `<h2>${escapeHtml(decoded.filename)}</h2><span class="meta">${decoded.fields.length} overridden field${decoded.fields.length === 1 ? '' : 's'}</span>`;
   article.appendChild(header);
+
+  if (buffer) {   // Hex sits in the top bar, as for .ART files
+    const hexBtn = document.createElement('button');
+    hexBtn.type = 'button'; hexBtn.className = 'art-tool-hex'; hexBtn.textContent = 'Hex';
+    hexBtn.addEventListener('click', () => openMobHex(decoded, buffer));
+    addContextTool(hexBtn, article);
+  }
 
   // The game's info box for the object (filled in once the prototype is known), and the jump buttons.
   const cardHost = document.createElement('div');

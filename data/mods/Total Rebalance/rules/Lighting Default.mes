@@ -1,0 +1,41 @@
+//
+// Default ambient lighting scheme
+//
+
+//
+// 24 messages.  Each message number is an hour of the day (0-23).
+//
+// Each message contains RGB values in the form: ro, go, bo, ri, gi, bi
+// where ro is red outdoor, ri is red indoor, etc.  Valid values are
+// in the range 0 - 255.
+//
+// All 24 messages _must_ exist.  However, an empty message (just braces)
+// will be automatically filled in with values interpolated from the 
+// closest non-empty messages surrounding it.  Neither the first nor last
+// message can be empty.
+//
+
+{0}{28, 34, 52, 30, 36, 54}
+{1}{}
+{2}{38, 44, 62, 40, 46, 64}
+{3}{}
+{4}{62, 68, 86, 74, 80, 98}
+{5}{}
+{6}{203, 182, 212, 203, 182, 212}
+{7}{}
+{8}{}
+{9}{255, 255, 246, 255, 255, 246}
+{10}{}
+{11}{}
+{12}{255, 255, 255, 255, 255, 255}
+{13}{}
+{14}{}
+{15}{255, 255, 246, 255, 255, 246}
+{16}{}
+{17}{}
+{18}{246, 186, 148, 246, 186, 148}
+{19}{}
+{20}{64, 70, 88, 74, 80, 98}
+{21}{}
+{22}{}
+{23}{28, 34, 52, 30, 36, 54}

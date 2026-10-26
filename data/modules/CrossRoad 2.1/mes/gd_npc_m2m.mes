@@ -1,0 +1,1025 @@
+// These are general NPC messages, said by male NPC's to male PC's
+
+// Offer directions messages start at 100 and end at 199
+
+{100}{Quelle direction voulez-vous que je vous indique ?}
+{101}{Où souhaitez-vous vous rendre ?}
+{102}{De quel endroit êtes-vous en quête ?}
+
+
+
+// Nearby directions start at 200. There are 8 rotations, rotation 0
+// is north, 1 is north-east, clockwise to 7 which is north-west. Each
+// rotation starts at a multiple of 10.
+
+{200}{C'est juste à deux pas d'ici au nord.}
+{201}{Ce n'est guère loin d'ici. Dirigez-vous vers le nord.}
+{202}{Vous en êtes très proche. Poursuivez un peu plus vers le nord.}
+{203}{C'est raisonnablement proche, allez vers le nord.}
+
+
+{210}{C'est juste au nord-est d'ici. Vous y êtes presque.}
+{211}{Ce n'est guère loin d'ici. Dirigez-vous vers le nord-est.}
+{212}{Poursuivez un peu plus vers le nord-est. Vous en êtes très proche.}
+{213}{C'est vraiment très proche. Là-bas, vers le nord-est.}
+
+
+{220}{C'est juste à deux pas d'ici à l'est.}
+{221}{Dirigez-vous à l'est. Ce n'est guère loin d'ici.}
+{222}{Vous en êtes très proche. Poursuivez un peu plus vers l'est.}
+{223}{Là-bas, c'est à l'est d'ici. C'est vraiment très proche.}
+
+
+{230}{C'est juste à deux pas d'ici au sud-est.}
+{231}{Ce n'est guère loin d'ici. Dirigez-vous vers le sud-est.}
+{232}{Poursuivez un peu plus vers le sud-est. Vous en êtes très proche.}
+{233}{C'est vraiment très proche. Là-bas, c'est au sud-est d'ici.}
+
+
+{240}{Dirigez-vous vers le sud. C'est vraiment tout proche.}
+{241}{Dirigez-vous vers le sud. Ce n'est guère loin d'ici.}
+{242}{Vous en êtes très proche. Poursuivez un peu plus vers le sud.}
+{243}{C'est vraiment très proche. Là-bas, c'est au sud d'ici.}
+
+
+{250}{C'est tout près, allez vers le sud-ouest.}
+{251}{Ce n'est guère loin d'ici. Dirigez-vous vers le sud-ouest.}
+{252}{Vous en êtes très proche. Poursuivez un peu plus vers le sud-ouest.}
+{253}{C'est vraiment très proche. Là-bas, c'est au sud-ouest d'ici.}
+{254}{C'est à peine à quelques foulées vers le sud-ouest. C'est vraiment à côté d'ici.}
+
+
+{260}{C'est juste à deux pas d'ici, à l'ouest.}
+{261}{Dirigez-vous vers l'ouest. Ce n'est guère loin d'ici.}
+{262}{Vous en êtes très proche. Poursuivez un peu vers l'ouest.}
+{263}{C'est vraiment très proche. Là-bas, c'est à l'est d'ici.}
+
+
+{270}{C'est tout près. Juste au nord-ouest, par là-bas.}
+{271}{Ce n'est guère loin d'ici. Dirigez-vous vers le nord-ouest.}
+{272}{Vous en êtes très proche. Poursuivez un peu plus vers le nord-ouest.}
+{273}{C'est là-bas, au nord-ouest d'ici.}
+
+
+
+// Medium directions start at 300. There are 8 rotations, rotation 0
+// is north, 1 is north-east, clockwise to 7 which is north-west. Each
+// rotation starts at a multiple of 10.
+
+{300}{C'est beaucoup plus loin vers le nord.}
+{301}{Hum. C'est encore à quelques jours vers le nord.}
+{302}{C'est assez loin vers le nord.}
+{303}{Hum. C'est à une bonne distance vers le nord.}
+
+
+{310}{C'est beaucoup plus loin vers le nord-est.}
+{311}{Allez au nord-est. Il me semble que c'est à quelques jours de route.}
+{312}{C'est encore assez loin vers le nord-est.}
+{313}{Hum. C'est à une bonne distance vers le nord-est.}
+
+
+{320}{C'est beaucoup plus loin vers l'est.}
+{321}{Poursuivez vers l'est. Il me semble que c'est à quelques jours de route.}
+{322}{C'est encore assez loin vers l'est.}
+{323}{Hum. Là-bas, très loin vers l'est.}
+
+
+{330}{C'est beaucoup plus loin, vers le sud-est.}
+{331}{Poursuivez vers le sud-est. C'est à quelques jours de route.}
+{332}{C'est encore assez loin vers le sud-est.}
+{333}{Hum. C'est à une bonne distance, vers le sud-est.}
+
+
+{340}{C'est beaucoup plus loin vers le sud.}
+{341}{C'est à plusieurs jours d'ici. Poursuivez vers le sud.}
+{342}{C'est encore assez loin vers le sud.}
+{343}{Hum. C'est à une bonne distance, vers le sud.}
+
+
+{350}{C'est au sud-ouest. Ce n'est pas très loin. Ni très proche.}
+{351}{Poursuivez vers le sud-ouest. C'est à quelques jours de route.}
+{352}{C'est très loin vers le sud-est.}
+{353}{J'ai de la famille là-bas. C'est à une bonne distance, vers le sud-ouest.}
+
+
+{360}{C'est beaucoup plus loin, vers l'ouest.}
+{361}{Poursuivez vers l'ouest. C'est à quelques jours de route.}
+{362}{C'est très loin vers l'ouest.}
+{363}{Hum. C'est à une bonne distance, vers l'ouest.}
+
+
+{370}{C'est beaucoup plus loin, vers le nord-ouest.}
+{371}{Tout droit vers le nord-ouest, il me semble. C'est à plusieurs jours de route.}
+{372}{C'est encore assez loin vers le nord-ouest.}
+{373}{Hum. C'est à une bonne distance, vers le nord-ouest.}
+
+
+
+// Far directions start at 400. There are 8 rotations, rotation 0
+// is north, 1 is north-east, clockwise to 7 which is north-west. Each
+// rotation starts at a multiple of 10.
+
+{400}{C'est un long voyage vers le nord. Un long voyage.}
+{401}{Vous en êtes très loin, très, très loin. Allez au nord.}
+{402}{C'est un très long voyage vers le nord.}
+{403}{Pour sûr, c'est de l'autre côté des collines et encore loin vers le nord.}
+
+
+{410}{C'est très très loin vers le nord-est. Un long voyage.}
+{411}{C'est à des lieues et des lieues vers le nord-est}
+{412}{C'est une longue route vers le nord-est.}
+{413}{Pour sûr, c'est de l'autre côté des collines et encore loin vers le nord-est.}
+
+
+{420}{Vous en êtes vraiment loin. Poursuivez vers l'est. C'est terriblement loin.}
+{421}{C'est à des lieues et des lieues vers l'est.}
+{422}{C'est un très long voyage vers l'est.}
+{423}{Pour sûr, c'est de l'autre côté des collines et loin vers l'est.}
+
+
+{430}{Poursuivez vers le sud-est. Vous en êtes vraiment loin. C'est terriblement loin.}
+{431}{C'est à des lieues et des lieues vers le sud-est}
+{432}{C'est une longue route vers le sud-est.}
+{433}{Pour sûr, c'est de l'autre côté des collines et encore loin vers le sud-est.}
+
+
+{440}{Poursuivez vers le sud. C'est très loin d'ici.}
+{441}{C'est à des lieues et des lieues vers le sud.}
+{442}{C'est un très long voyage vers le sud.}
+{443}{Pour sûr, c'est de l'autre côté des collines et encore loin vers le sud.}
+
+
+{450}{C'est à des milliers de lieues vers le sud-ouest.}
+{451}{C'est à des lieues et des lieues vers le sud-ouest.}
+{452}{C'est un très long voyage vers le sud-ouest.}
+{453}{Pour sûr, c'est de l'autre côté des collines et encore loin vers le sud-ouest.}
+
+
+{460}{C'est à des milliers de lieues vers l'ouest.}
+{461}{C'est à des lieues et des lieues vers l'ouest.}
+{462}{C'est un très long voyage vers l'ouest.}
+{463}{Pour sûr, c'est de l'autre côté des collines et encore loin vers l'ouest.}
+
+
+{470}{C'est à des milliers de lieues vers le nord-ouest.}
+{471}{C'est à des lieues et des lieues vers le nord-ouest.}
+{472}{Je suis bien aise de ne pas avoir à voyager aussi loin. Poursuivez vers le nord-ouest.}
+{473}{Pour sûr, c'est de l'autre côté des collines et encore loin vers le nord-ouest.}
+
+
+
+// Offer to mark map messages start at 500 and end at 599
+
+{500}{Quel lieu voulez-vous que j'indique sur votre carte ?}
+{501}{Quel endroit voulez-vous que j'inscrive sur votre carte géographique ?}
+{502}{Quel endroit dois-je marquer sur votre carte ?}
+{503}{Quel site voudriez-vous que j'indique sur la carte ?}
+{504}{Je peux le noter sur votre carte.}
+
+
+// Nearby map marking messages start at 600. There are 8 rotations,
+// rotation 0 is north, 1 is north-east, clockwise to 7 which is
+// north-west. Each rotation starts at a multiple of 10.
+
+{600}{C'est tout près. Je vous l'ai indiqué, c'est juste au nord.}
+{601}{Vous êtes très proche. Allez au nord. C'est noté sur votre carte.}
+{602}{Vous en êtes très proche. Poursuivez un petit peu plus vers le nord, jusqu'à cette marque.}
+{603}{C'est juste à deux pas d'ici, au nord, comme cela est indiqué.}
+
+{610}{C'est vraiment tout proche. Je vous l'ai indiqué, c'est au nord-est.}
+{611}{Vous êtes très proche. Allez au nord-est. C'est indiqué.}
+{612}{Vous en êtes très proche. Poursuivez un peu plus vers le nord-est. Vers ce point.}
+{613}{C'est vraiment très proche. Là-bas, vers le nord-est. Vous voyez ce point ?}
+
+
+{620}{C'est tout près d'ici. Je vous l'ai indiqué, c'est à l'est.}
+{621}{Vous êtes très proche. Poursuivez vers l'est. C'est indiqué.}
+{622}{Vous en êtes très proche. Poursuivez un petit peu plus vers l'est jusqu'à cette marque.}
+{623}{Ce n'est guère loin d'ici. Dirigez-vous à l'est. Je l'ai marqué.}
+
+
+{630}{C'est tout près. Je vous l'ai indiqué, c'est au sud-est.}
+{631}{Vous êtes très proche. Poursuivez vers le sud-est. C'est indiqué.}
+{632}{Vous en êtes très proche. Je vous l'ai marqué. Poursuivez un peu plus vers le sud-est.}
+{633}{C'est vraiment très proche. Vous voyez mon indication ? Là-bas, c'est au sud-est d'ici.}
+
+
+{640}{C'est vraiment tout près. Je vous l'ai indiqué, c'est au sud d'ici.}
+{641}{Vous êtes proche. Poursuivez vers le sud. C'est marqué.}
+{642}{Ce n'est guère loin d'ici. Poursuivez au sud vers le repère que j'ai indiqué.}
+{643}{C'est vraiment très proche. Je l'ai signalé par une marque. Là-bas, c'est au sud d'ici.}
+{644}{C'est vraiment à côté d'ici. C'est à un saut de puce vers le sud. Vous voyez ce point ?}
+
+
+{650}{C'est tout près, allez vers le sud-ouest. Je l'ai marqué.}
+{651}{Ce n'est guère loin d'ici. Poursuivez en direction du sud-ouest jusqu'à l'endroit indiqué par cette marque.}
+{652}{Vous en êtes très proche. Je l'ai noté sur votre carte. Poursuivez un peu plus vers le sud-ouest.}
+{653}{C'est vraiment très proche. Là-bas, c'est au sud-ouest d'ici. Vous voyez cette marque sur votre carte ?}
+
+
+{660}{Ce n'est pas très loin. Je vous l'ai marqué, c'est à l'ouest.}
+{661}{Vous êtes très proche. Poursuivez vers l'ouest. C'est marqué.}
+{662}{Vous en êtes très proche. Poursuivez encore un peu vers l'ouest comme je l'ai indiqué.}
+{663}{C'est vraiment très proche. Là-bas, c'est à l'ouest d'ici. Vous voyez ce point ?}
+
+{670}{C'est tout près. Je vous l'ai indiqué, là juste au nord-ouest.}
+{671}{Je vous l'ai marqué. Ce n'est guère loin d'ici. Dirigez-vous vers le nord-ouest.}
+{672}{Vous y êtes presque. Vous voyez cette marque ? Poursuivez un peu plus vers le nord-ouest.}
+{673}{C'est vraiment très proche. Là, vers le nord-ouest. Je fais une marque sur votre carte.}
+
+
+
+// Non-nearby map marking messages start at 700. There are 8 rotations,
+// rotation 0 is north, 1 is north-east, clockwise to 7 which is
+// north-west. Each rotation starts at a multiple of 10 and includes
+// a distance %d which will be replaced with the number 2 or higher.
+
+{700}{C'est noté sur votre carte. Pas plus de %d lieues vers le nord.}
+{701}{C'est juste à %d lieues dans cette direction, au nord. Je l'ai indiqué sur votre carte.}
+{702}{Oh ! C'est à environ %d lieues vers le nord. Vous voyez où j'ai annoté votre carte ?}
+{703}{Pour sûr, c'est à %d lieues vers le nord. Je l'ai noté sur votre carte.}
+
+
+{710}{C'est à %d lieues vers le nord-est. C'est noté sur votre carte.}
+{711}{C'est juste à &d lieues dans cette direction, vers le nord-est. Je l'ai indiqué sur votre carte.}
+{712}{Oh ! C'est à environ %d lieues vers le nord-est. Vous voyez où j'ai annoté votre carte ?}
+
+
+
+{720}{C'est à %d lieues vers l'est. C'est noté sur votre carte.}
+{721}{C'est très proche, à &d lieues dans cette direction, vers l'est. Je l'ai indiqué sur votre carte.}
+{722}{Oh! C'est à environ %d lieues vers l'est. Vous voyez où j'ai annoté votre carte ?}
+{723}{Oui ! C'est à %d lieues en direction de l'est. Je l'ai noté sur votre carte.}
+
+
+{730}{Hum. A %d lieues vers le sud-est, à mon avis. Je l'ai marqué sur votre carte.}
+{731}{C'est très proche, à &d lieues dans cette direction, vers le sud-est. Je l'ai indiqué sur votre carte.}
+{732}{Vous voyez où j'ai annoté votre carte ? C'est à environ %d lieues vers le sud-est.}
+{733}{C'est à %d lieues vers le sud-est, monsieur. Je l'ai noté sur votre carte.}
+{734}{Environ %d lieues vers le sud-est, à mon avis. Je l'ai noté sur votre carte.}
+
+
+{740}{Hum. Je dirais que c'est à %d lieues vers le sud. Je l'ai marqué sur votre carte.}
+{741}{Je dirais que c'est à &d lieues vers le sud. Je l'ai indiqué sur votre carte.}
+{742}{Oui, c'est à environ %d lieues vers le sud. Vous voyez où j'ai annoté votre carte ?}
+{743}{C'est à %d lieues vers le sud. Je l'ai noté sur votre carte.}
+
+
+{750}{Je l'ai marqué sur votre carte. A %d lieues vers le sud-ouest, à mon avis.}
+{751}{Je l'ai indiqué sur votre carte. Je dirais que c'est à &d lieues vers le sud-ouest.}
+{752}{C'est à environ %d lieues vers le sud-ouest. Vous voyez où j'ai annoté votre carte ?}
+{753}{C'est à %d lieues vers le sud-ouest. Je l'ai noté sur votre carte.}
+
+
+{760}{Je l'ai marqué sur votre carte. A %d lieues vers l'ouest, à mon avis.}
+{761}{Je l'ai indiqué sur votre carte. Je dirais que c'est à &d lieues vers l'ouest.}
+{762}{C'est à environ %d lieues vers l'ouest. Vous voyez où j'ai annoté votre carte ?}
+{763}{Je l'ai noté sur votre carte. Poursuivez par là, monsieur, sur environ %d lieues vers l'ouest.}
+{764}{Je l'ai noté sur votre carte. %d lieues vers l'ouest, à mon avis.}
+
+
+{770}{Je l'ai marqué sur votre carte. A %d lieues vers le nord-ouest, à mon avis.}
+{771}{Je l'ai indiqué sur votre carte. Je dirais que c'est à &d lieues vers le nord-ouest.}
+{772}{Vous voyez où j'ai annoté votre carte ? C'est à environ %d lieues vers le nord-ouest.}
+{773}{Je l'ai noté sur votre carte. Poursuivez par là, pendant environ %d lieues vers le nord-ouest.}
+{774}{Je l'ai noté sur votre carte. %d lieues vers le nord-ouest, à mon avis.}
+
+
+// Sell messages start at 800 and end at 899
+
+{800}{Je vous vends ça pour %d pièces.}
+{801}{Je vous cède ça pour %d pièces.}
+{802}{Le prix de vente est de %d pièces.}
+{803}{Je vous laisse ça pour %d pièces.}
+{804}{C'est à vous pour %d pièces !}
+{805}{Considérez que c'est à vous pour à peine %d pièces.}
+{806}{Je ne demande qu'une modique somme de %d pièces pour cet article.}
+{807}{Pour un montant dérisoire de %d pièces, c'est à vous.}
+{808}{Pour vous, je n'en demande que %d pièces.}
+{809}{Pour %d pièces, quasiment rien, c'est à vous.}
+{810}{Pour ça ? Je ne vous demande que %d pièces.}
+{811}{Ceci ne vous coûtera que %d pièces.}
+{812}{Pour une insignifiante somme de %d pièces, c'est à vous.}
+{813}{Je n'en demande que %d pièces, une misère.}
+{814}{Je pourrais vous laisser ça pour %d pièces.}
+
+
+
+// Will not sell messages start at 900 and end at 999
+
+{900}{Je ne veux pas vendre ça.}
+{901}{Je regrette. Je ne veux pas vendre ça.}
+{902}{Ce n'est pas à vendre.}
+{903}{Ce n'est pas à vendre, monsieur.}
+{904}{Je ne vends pas ça.}
+{905}{Je ne vends pas ça, monsieur.}
+{906}{Je ne vendrai pas ça.}
+{907}{Je ne vendrai pas ça, monsieur.}
+{908}{Non. Je veux garder ça.}
+{909}{Non monsieur ! Je veux garder ça.}
+{910}{Non. C'est trop précieux pour être vendu.}
+{911}{C'est trop précieux pour être vendu.}
+{912}{Ce n'est pas à vendre.}
+
+
+
+// Normally will not sell messages start at 1000 and end at 1099
+
+{1000}{D'habitude, je ne vends pas ça.}
+{1001}{Généralement, ceci n'est pas à vendre.}
+{1002}{D'ordinaire, je ne vendrais pas ça, mais puisque c'est vous...}
+{1003}{Je vous le vends mais uniquement parce que c'est vous.}
+{1004}{En principe, je refuserais, mais pour vous, je veux bien faire un effort.}
+{1005}{Normalement, je ne vendrais pas ça. Mais je vous aime bien.}
+{1006}{Hum. Puisque c'est vous, oui. Je vous le vendrai.}
+{1007}{Pour n'importe qui d'autre, non. Mais pour vous ? Ce sera un plaisir.}
+{1008}{Personne d'autre que vous ne pourrait me convaincre de vendre ça.}
+{1009}{A n'importe qui d'autre, non. Mais pour vous, oui.}
+{1010}{Je ne vendrai ceci à personne... sauf vous, bien sûr.}
+{1011}{Ce ne serait pas à vendre pour quelqu'un d'autre que vous.}
+{1012}{Normalement, je ne vendrai pas ça. Cependant...}
+{1013}{Ce n'est pas à vendre... en temps normal. Mais je vous le vendrai.}
+{1014}{Normalement, je ne vends pas ça. Mais pour vous je fais une exception.}
+{1015}{Je vous aime bien, sinon je ne vous vendrais pas ça.}
+{1016}{Personne d'autre n'aurait pu me convaincre de me séparer de ça.}
+
+
+// Buy messages start at 1100 and end at 1199
+
+{1100}{Je vous achète ça pour %d pièces.}
+{1101}{Je vous en donne %d pièces.}
+{1102}{Que diriez-vous de %d pièces pour ça ?}
+{1103}{Que dites-vous de %d pièces pour ça ?}
+{1104}{Et si je vous en offre %d pièces ?}
+{1105}{%d pièces et l'affaire est conclue.}
+{1106}{Pour moi, ça ne vaut pas plus de %d pièces.}
+{1107}{Oh ! Pour moi, ça ne vaut pas plus de %d pièces.}
+{1108}{Je vous en débarrasse pour %d pièces.}
+{1109}{Je vous en offre %d pièces.}
+{1110}{Je peux vous en offrir %d pièces.}
+{1111}{Je dirais... %d pièces. C'est mon offre.}
+{1112}{%d pièces et pas une de plus.}
+{1113}{Je peux me permettre de vous en offrir %d.}
+{1114}{Oui, ça vaut %d pièces. Affaire conclue ?}
+{1115}{Je vous propose %d pièces pour ça.}
+{1116}{Je vous l'achète pour %d pièces.}
+{1117}{Je vous achète ça pour %d pièces.}
+
+
+
+// Will not buy messages start at 1200 and end at 1299
+
+{1200}{Je ne veux pas de ça.}
+{1201}{Je n'achèterai pas ça.}
+{1202}{Je ne vous achèterai pas ça.}
+{1203}{Ca ne m'intéresse pas.}
+{1204}{Non. Non merci.}
+{1205}{Cela ne m'intéresse pas.}
+{1206}{Non. Je n'ai pas besoin de ça.}
+{1207}{Non. Je n'en ai pas besoin.}
+{1208}{Je n'ai aucun besoin de ça.}
+{1209}{Je n'achèterai pas ça.}
+{1210}{Je regrette. Je n'ai aucun besoin de ça.}
+{1211}{Je regrette. Je ne vois pas en quoi cela pourrait m'être utile.}
+{1212}{Vraiment un bel objet, mais je n'en veux pas.}
+{1213}{C'est un très bel objet. Mais je n'en ai pas l'usage.}
+{1214}{Cela a probablement de la valeur pour certains. Mais pas pour moi.}
+
+
+
+// Normally will not buy messages start at 1300 and end at 1399
+
+{1300}{Normalement, je n'achète pas ça mais pour vous...}
+{1301}{Généralement, je n'achète pas ça. Mais la persuasion est votre point fort.}
+{1302}{Je ne suis normalement pas du genre à acheter cette sorte d'article.}
+{1303}{Généralement, ces choses ne m'intéressent pas particulièrement, mais...}
+{1304}{C'est curieux, d'ordinaire, ce genre de choses m'importe peu, mais là j'en ai vraiment envie.}
+{1305}{Je n'ai pas coutume d'acheter ce genre de choses. Du moins, pas d'ordinaire.}
+{1306}{Ce n'est pas dans mon habitude d'acheter ce genre d'articles mais, pour une fois...}
+{1307}{Vous comprenez, ce n'est pas dans mes habitudes d'acheter ce genre de choses. Mais...}
+{1308}{Je sais que je peux vous faire confiance, sinon je n'achèterais pas ça.}
+{1309}{Je n'ai pas besoin de ça mais, pour vous aider, je vous en débarrasserai.}
+{1310}{Je crains de ne pas en avoir besoin, mais pour vous, je l'achèterai.}
+{1311}{Pourquoi l'achèterais-je, je n'en sais rien. Mais je vais l'acheter.}
+{1312}{Ce n'est pas dans mon habitude d'acheter ce genre d'articles mais, pour une fois...}
+{1313}{Oui, je vais l'acheter. Mais uniquement pour vous aider, vous comprenez.}
+{1314}{Pour vous rendre service, je vous l'achèterai.}
+{1315}{Je vais vous l'acheter, mais uniquement pour vous rendre service.} 
+{1316}{Normalement, non. Mais puisque c'est vous, je vais l'acheter.}
+{1317}{Généralement je n'achète pas ça, mais pour vous je le ferai.}
+
+
+
+
+// Buy for less messages start at 1400 and end at 1499
+
+{1400}{Cela vaut %d pièces, mais je ne peux vous en offrir que %d pièces.}
+{1401}{Cela peut bien valoir %d pièces, mais je ne peux vous en offrir que %d pièces.}
+{1402}{Cela vaut %d pièces. Que dites-vous de %d pièces ?}
+{1403}{Cela vaut %d pièces. Mais je ne peux vous en offrir que %d pièces.}
+{1404}{Oui, cela vaut %d pièces. Je vous en offre %d pièces.}
+{1405}{Je vois que cela vaut environ %d pièces. Je n'ai que %d pièces.}
+{1406}{Cela vaut vraiment %d pièces. Mais je n'ai que %d pièces.}
+{1407}{Cela vaut probablement %d pièces. Je ne peux vous en offrir que %d pièces.}
+{1408}{Oh oui ! Sans aucun doute, cela vaut %d pièces. Mais je n'ai que %d pièces.}
+{1409}{Certains pourraient vous en donner plus de %d pièces. Mais je ne peux vous en offrir que %d pièces.}
+{1410}{Vous pourriez en tirer %d pièces ailleurs. Je ne peux pas vous payer plus de %d pièces.}
+{1411}{En cherchant un peu, vous en obtiendrez %d pièces. Mais je vous en offre %d pièces tout de suite.}
+{1412}{Peut-être qu'ailleurs vous pourriez en tirer %d pièces. Je vous en donne %d pièces.}
+{1413}{Peut-être que d'autres peuvent vous en donner %d pièces. Je peux vous payer %d pièces.}
+{1414}{Il se peut que vous trouviez quelqu'un qui vous en offre %d pièces. Pour ça, je dispose de %d pièces.}
+{1415}{Peut-être que pour certains cela vaut %d pièces, mais je n'en ai pas besoin à ce point-là. %d pièces ?}
+{1416}{En cherchant un peu, vous pourrez en obtenir %d pièces. Que dites-vous de %d pièces ?}
+{1417}{En cherchant un peu, vous en obtiendrez %d pièces. Que dites-vous de %d pièces ?}
+{1418}{Avec de la chance, vous pourriez en tirer %d pièces. Que dites-vous de %d pièces ?}
+
+
+// The NPC is dead and has Speak With Dead cast upon it. These messages
+// start at 1500 and end at 1599
+
+{1500}{Par la grande déesse ! C'en est fini de moi !}
+{1501}{Pauvre de moi.}
+{1502}{Pourquoi troubler mon repos éternel ?}
+{1503}{Ce n'est pas bien.}
+{1504}{Où suis-je ?}
+{1505}{Que s'est-il passé ?}
+{1506}{C'est vraiment ça... la mort ?}
+{1507}{Ne me laissez pas ici !}
+{1508}{Non ! Non ! Non !}
+{1509}{Aïe !}
+{1510}{Arrrgggh !}
+{1511}{Ouaaaaahhh !}
+{1512}{Ainsi. C'est la mort.}
+{1513}{Quelle douleur ! S'il vous plaît, délivrez-moi !}
+{1514}{Aidez-moi.}
+{1515}{Aidez-moi, par pitié.}
+{1516}{S'il vous plaît, aidez-moi.}
+{1517}{Que se passe-t-il ?}
+{1518}{Je ne vois rien.}
+{1519}{Je vois tout !}
+{1520}{C'est horrible !}
+{1521}{Allez-vous en.}
+{1522}{Laissez-moi tranquille.}
+{1523}{Je vois... rien du tout.}
+{1524}{Je vois... la mort.}
+{1525}{S'il vous plaît.}
+{1526}{Pourquoi ?}
+{1527}{Pourquoi moi ?}
+{1528}{Non !}
+{1529}{Laissez-moi !}
+{1530}{Je regrette.}
+{1531}{Je ne savais pas !}
+{1532}{Pardonnez-moi, je vous en prie !}
+{1533}{Pardonnez-moi.}
+{1534}{Croyez-moi, s'il vous plaît. Je regrette.}
+{1535}{Je ne vous ferai aucun mal.}
+{1536}{Non ! Démons !}
+{1537}{Aaaargh ! Quelle douleur ! S'il vous plaît, délivrez-moi !}
+{1538}{Pourquoi me dérangez-vous ?}
+
+
+
+// The NPC will not follow the PC because the PC is too good
+
+{1600}{Votre droiture me trouble trop pour que je vous suive.}
+{1601}{Est-ce que j'ai l'air d'une grenouille de bénitier ? Votre apathie n'est pas à mon goût.}
+{1602}{Vous n'avez pas l'étoffe des héros. Trop de politesses et de chichis pour moi.}
+{1603}{Nous n'avons rien en commun. J'aime bien m'amuser de temps en temps, vous voyez ce que je veux dire ?}
+{1604}{Moi ? Suivre sa sainteté @pcname@ ? Quelle rigolade !}
+{1605}{Je ne suis pas du genre à me précipiter pour sauver les damoiselles en détresse ou d'autres trucs de ce genre.}
+{1606}{Renoncer à mon antre de débauche pour votre temple de sainteté ? Jamais de la vie.}
+{1607}{Que ferions-nous ? Risquer nos vies pour sauver des gens ? Sans moi.}
+{1608}{C'est une plaisanterie. Moi, suivre l'ange @pcname@ ?}
+{1609}{Ecoutez, mon garçon. Je n'ai rien contre vous mais vous n'êtes pas, hum, assez amusant.}
+{1610}{Et que ferions-nous ? Etre toute bonté et toute sainteté ? Non, merci.}
+{1611}{Vous plaisantez, n'est-ce pas ? Un vieux de la vieille comme moi ? Avec une oie blanche comme vous ?}
+{1612}{Quoi ? Et renoncer à ma vie criminelle ? Jamais de la vie.}
+{1613}{Ecoutez. Mes p'tites affaires roulent pas trop mal en ce moment, et je crains bien qu'une auréole comme la vôtre attire trop l'attention.}
+{1614}{On ne pourrait pas se faire confiance.}
+{1615}{Non. Vous et moi, on ne fait pas partie du même camp. Les gens comme vous me traquent.}
+{1616}{Non. J'ai besoin de plus de liberté que vous ne pourriez m'en donner. Je ne me plie pas à votre haute moralité.}
+{1617}{Ha ! En voilà une bien bonne. Moi la fripouille, avec vous, la sainteté personnifiée ?}
+{1618}{Laissez-moi avec ceux de mon espèce. Et je vous laisserai à votre vertu et à vos lois.}
+{1619}{Je n'ai nul besoin de votre morale ou de vos rêves de vertu.}
+
+
+// The NPC will not follow the PC because the PC is too evil
+
+{1700}{Vous êtes le mal à l'état pur. Je n'en serai pas complice.}
+{1701}{Je crache sur vous et sur ceux de votre espèce.}
+{1702}{Ne me faites pas injure en me reposant la question.}
+{1703}{Vous entachez mon honneur en imaginant que j'aurais pu vous suivre.}
+{1704}{Vous avez de la chance que, par manque de preuves, je ne puisse vous condamner pour vos méfaits.}
+{1705}{Qu'est-ce qui peut bien vous faire penser que je veuille suivre un être aussi dégénéré que vous ?}
+{1706}{Non. Je crois fondamentalement en la loi et en la vertu, des notions qui vous sont totalement étrangères.}
+{1707}{Non. J'aide les gens. Je ne sers pas le mal comme vous.}
+{1708}{Non. Vous n'êtes que pourriture jusqu'à la moelle ! Je ne pourrais le tolérer.}
+{1709}{Non. Vous n'êtes que vilenie. Je ne vous suivrai pas.}
+{1710}{Non. Vous n'êtes que sauvagerie ! Je ne me joindrai pas à vous.}
+{1711}{Non. Vous aimez répandre la terreur. Je n'en serai pas complice.}
+{1712}{Non. Vous n'êtes qu'une petite frappe. Je ne m'associerai pas avec vous.}
+{1713}{Non. Vous n'êtes que pur vice ! Je ne vous suivrai pas.}
+{1714}{Non. Vous êtes impie et obscène ! Je n'irai pas avec vous.}
+{1715}{Non. Vous escroquez ou même pire. Je ne vous prêterai pas allégeance.}
+{1716}{Non. Vous vous complaisez dans la débauche ! Je ne serai pas votre acolyte.}
+{1717}{Non. Vous êtes anarchiste ! Je n'en ferai pas partie.}
+{1718}{Non. Vous ne vivez que pour l'oppression ! Je ne me liguerai pas avec vous.}
+{1719}{Non. Vous n'êtes qu'une fripouille s'adonnant à la sorcellerie !}
+{1720}{Non. Vous portez la marque de la perfidie ! Je ne vous fais pas confiance.}
+{1721}{Non. Je ne m'abaisserai pas à votre niveau.}
+{1722}{Non. Vous êtes tellement stupide et minable !}
+{1723}{Non. Vous êtes tellement immonde que vous me faites pitié !}
+{1724}{Non. Ordure sans nom !}
+{1725}{Non. Votre voie est celle de la petite délinquance !}
+{1726}{Non. Vous êtes maléfique au-delà de toute rédemption !}
+{1727}{Non. Tous ceux que vous côtoyez sont maudits.}
+{1728}{Non. Grossièreté, négligence et inconséquence, voilà tout ce que vous incarnez !}
+{1729}{Non. Vous n'êtes qu'ingratitude, perfidie et couardise !}
+
+
+
+// The NPC will not follow the PC because the NPC dislikes the PC
+
+{1800}{Je ne vous aime pas.}
+{1801}{En fait, je crois que je vous hais.}
+{1802}{Vos méthodes me déplaisent.}
+{1803}{Votre accointance ne m'intéresse pas.}
+{1804}{Je n'ai aucune envie de m'acoquiner avec vous.}
+{1805}{Vous ne m'impressionnez pas du tout.}
+{1806}{S'il vous plaît ! Qu'est-ce qui peut bien vous faire penser que je pourrais me joindre à vous ?}
+{1807}{Non. Travailler pour vous ne m'intéresse pas le moins du monde.}
+{1808}{Je n'ai aucune envie de me lier d'amitié avec vous.}
+{1809}{Non. Nous n'avons rien en commun.}
+{1810}{Disons juste que je ne vous aime pas et restons-en là.}
+{1811}{Non. Je désapprouve vos méthodes.}
+{1812}{Certainement pas ! Votre réputation entacherait mon honneur.}
+{1813}{Je n'ai aucune envie de me trouver près de vous, même pour une période limitée.}
+{1814}{Je ne vous confierai pas ma vie.}
+{1815}{Je ne crois pas que vous puissiez respecter votre serment de camaraderie envers moi.}
+{1816}{Qu'est-ce qui peut bien vous faire croire que je vous apprécie assez pour me joindre à vous ?}
+
+
+// Good farewells (the NPC is neutral or happy with the PC)
+
+{1900}{Au revoir.}
+{1901}{J'espère vous revoir.}
+{1902}{N'hésitez pas à faire appel à moi.}
+{1903}{Vous savez où me trouver si vous avez besoin de moi.}
+{1904}{Rappelez-vous où vous pouvez me trouver.}
+{1905}{Surveillez vos arrières maintenant.}
+{1906}{Faites preuve de vigilance.}
+{1907}{Je m'en vais maintenant.}
+{1908}{Pensez à @npcname@ si vous avez besoin d'un coup de main.}
+{1909}{Je me souviendrai de vous, @pcname@.}
+{1910}{Si je puis vous aider à l'avenir, vous savez où me trouver.}
+{1911}{Cela aurait été un réel plaisir de continuer avec vous mais le destin en a décidé autrement.}
+{1912}{Vous êtes vraiment inimitable ! Vous me manquerez.}
+{1913}{Votre vivacité d'esprit me manquera, camarade.}
+{1914}{Soyez bonne âme et ne prenez aucun risque inutile.}
+{1915}{Prenez soin de vous.}
+{1916}{Je me souviendrai de vous avec tendresse.}
+
+
+// Bad farewells (the NPC is suspicious or worse of the NPC)
+
+{2000}{Bon débarras !}
+{2001}{J'espère ne plus jamais vous voir.}
+{2002}{Au début de notre collaboration, je ne pensais pas que vous quitter serait un tel soulagement.}
+{2003}{Enfin ! Bon débarras.}
+{2004}{Je crois que vous vous gargarisez un peu trop.}
+{2005}{Tout ce temps passé avec vous a été un calvaire.}
+{2006}{On peut dire que ça a été pénible. Quel bonheur que ce soit terminé.}
+{2007}{Ce n'est pas trop tôt.}
+{2008}{Vos actes sont méprisables et votre moralité abominable. Bon débarras.}
+{2009}{Je vous souhaite à jamais le pire des destins.}
+{2010}{Quelle joie d'avoir pu me débarrasser de vous.}
+{2011}{Plus jamais, @pcname@. Jamais plus.}
+{2012}{Je ferais mieux de partir maintenant, avant que l'on en vienne aux mains.}
+{2013}{Je vais partir avant que cela ne dégénère.}
+{2014}{Je ne comprends pas comment j'ai pu rester aussi longtemps avec vous. Quel bonheur d'en avoir fini.}
+{2015}{Mon malheur a été de me compromettre avec vous.}
+{2016}{Vous avez toujours été une écharde dans mon pied. Quel bonheur d'avoir pu me débarrasser de vous.}
+{2017}{Je vous maudis vous et votre lignée pour le mal que vous m'avez fait.}
+{2018}{La prochaine fois que vous aurez besoin d'aide, demandez à quelqu'un d'autre. Je ne vous subirai pas deux fois.}
+{2019}{Cela me ravit de pouvoir m'en sortir indemne. A l'avenir, restez loin de moi.}
+{2020}{Bah ! Allez-vous-en !}
+{2021}{Oui, eh bien, moi aussi j'en ai marre de vous.}
+{2022}{J'ai passé un très mauvais moment en votre compagnie. J'ai bien cru que cela n'allait jamais finir.}
+{2023}{Vous feriez mieux de partir rapidement avant que je déchaîne la brute qui est en moi et que je vous donne une bonne leçon.}
+{2024}{Si j'étais vous, monsieur, je partirais tant que je suis de bonne humeur.}
+{2025}{Ce serait vraiment un plaisir de vous quitter, une bonne fois pour toutes.}
+{2026}{J'en ai fini avec vous et je m'en réjouis.}
+{2027}{Vous êtes un vieux fou et me débarrasser de vous sera un vrai bonheur.}
+{2028}{Je n'en reviens pas de cette attitude ! C'est comme ça que vous me remerciez ? Bah !}
+{2029}{Après avoir risqué ma vie pour vous, c'est comme ça que vous me traitez ? Bah !}
+
+
+// NPC is acknowledging an order from the PC -> A TRADUIRE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+{2100}{Si ça peut t'aider...}
+{2101}{Tout de suite @pcname@.}
+{2102}{C'est un plaisir de t'aider.}
+{2103}{Si ça peut t'aider...}
+{2104}{Tout de suite @pcname@.}
+{2105}{C'est un plaisir de t'aider.}
+{2106}{Si ça peut t'aider...}
+{2107}{Tout de suite @pcname@.}
+{2108}{C'est un plaisir de t'aider.}
+{2109}{Si ça peut t'aider....}
+{2110}{Tout de suite @pcname@.}
+{2111}{C'est un plaisir de t'aider.}
+{2112}{Si ça peut t'aider...}
+{2113}{Tout de suite @pcname@.}
+
+
+// NPC cannot acknowledge an order from the PC
+
+{2200}{Je ne peux pas faire ça.}
+{2201}{Vous plaisantez, je ne ferai pas ça.}
+{2202}{Je ne pense pas.}
+{2203}{Certainement pas.}
+{2204}{Je crains que non.}
+{2205}{Sous aucun prétexte.}
+{2206}{Je ne pense pas.}
+{2207}{Je ne ferai pas cela.}
+{2208}{Faites-le vous-même.}
+{2209}{Je ne veux pas faire ça.}
+{2210}{Non.}
+{2211}{J'ai un mauvais pressentiment.}
+{2212}{Il y a certaines choses que je refuse de faire.}
+{2213}{Ce n'est pas pour ça que j'ai signé.}
+{2214}{Ce n'est pas dans mes cordes.}
+{2215}{Je dois refuser.}
+{2216}{Vous ne pouvez pas m'ordonner de faire ça.}
+{2217}{Trouvez quelqu'un d'autre pour faire votre sale boulot.}
+{2218}{Vous ne pouvez pas m'obliger à faire ça.}
+
+
+
+// NPC was accidentally hit by the PC
+
+{2300}{Hé ! Faites attention !}
+{2301}{Vous venez de me toucher !}
+{2302}{Faites attention où vous visez !}
+{2303}{Il vaudrait mieux que cela ne se reproduise jamais !}
+{2304}{Eh ! Qui est-ce qu'on combat ici ?}
+{2305}{Mille pardons, monsieur, mais l'ennemi est là-bas !}
+{2306}{Fallait-il vraiment que vous fassiez ça ?}
+{2307}{Si c'est tout ce que vous savez faire, je crains le pire.}
+{2308}{Vous avez de la chance que je vous aime bien, camarade.}
+{2309}{Aïe !}
+{2310}{Holà ! Attention ! Je suis de votre côté. Vous vous rappelez ?}
+{2311}{Hé !!! Faites attention quand vous visez !}
+{2312}{Savez-vous bien ce que vous faites ?}
+
+
+
+// NPC witnesses PC critical hit -> A TRADUIRE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+{2400}{Impressionnant !}
+{2401}{Tu deviens de plus en plus fort !}
+{2402}{Incroyable !}
+{2403}{Tu t'es amélioré @pcname@ !}
+{2404}{Impressionnant !}
+{2405}{Tu deviens de plus en plus fort !}
+{2406}{Incroyable !}
+{2407}{Tu t'es amélioré @pcname@ !}
+{2408}{Impressionnant !}
+{2409}{Tu deviens de plus en plus fort !}
+{2410}{Incroyable !}
+{2411}{Tu t'es amélioré @pcname@ !}
+
+
+// NPC witnesses PC critical miss -> A TRADUIRE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+{2500}{@pcname@, tu t'es fait mal ?}
+{2501}{Ca va ?}
+{2502}{Fait attention !}
+{2503}{Tu manques encore d'entraînement.}
+{2504}{@pcname@, tu t'es fait mal ?}
+{2505}{Ca va ?}
+{2506}{Fait attention !}
+
+
+// The NPC will not follow the PC because the NPC is already grouped
+// with another PC who is at least as charismatic
+{2600}{Pour sûr, je préfère le groupe avec lequel je suis.}
+{2601}{Je vais rester avec mon groupe actuel.}
+{2602}{J'ai donné ma parole et je ne suis pas libre.}
+{2603}{Ca n'a rien a voir avec vous, mais ma situation actuelle me convient très bien.}
+{2604}{Je ne peux abandonner mon groupe pour vous.}
+{2605}{Hum. Je ne pense pas. Je me plais bien avec ce groupe.}
+{2606}{Je suis très bien où je suis, monsieur.}
+{2607}{Je préfère rester où je suis, camarade.}
+{2608}{Je m'en souviendrai, mais je n'ai aucune raison de changer pour l'instant.}
+{2609}{Une proposition vraiment alléchante. Mais j'ai donné ma parole à mon groupe actuel.}
+{2610}{Je ne peux quitter mes compagnons pour le moment.}
+{2611}{Il est bon de savoir que vous appréciez mes talents mais je ne suis pas libre pour le moment.}
+
+
+// The NPC will not follow the PC because the PC is at his charisma
+// limit (which is greater zero)
+{2700}{Il y a trop de monde pour moi dans votre groupe.}
+{2701}{Je préfère partir à l'aventure avec moins de monde.}
+{2702}{Je doute que j'apprécierais votre groupe.}
+{2703}{Il me semble que vous avez suffisamment de monde.}
+{2704}{Je pense que vous avez bien assez à faire avec ceux que vous avez.}
+{2705}{Non. On se bouscule déjà assez autour de vous.}
+{2706}{Je vous aime bien. Mais je veux être avec un groupe plus petit que le vôtre.}
+{2707}{Vous avez une personne de trop avec vous. Si vous en perdez un, revenez me voir.}
+{2708}{Il me semble que vous avez déjà suffisamment d'aide. Si l'un d'entre eux part, revenez me voir.}
+{2709}{Non. Je crois que vous ne pouvez diriger davantage de personnes.}
+{2710}{J'aimerais bien, mais il semble qu'on se bouscule déjà autour de vous.}
+{2711}{Si vous aviez moins de monde autour de vous, ce serait avec plaisir.}
+{2712}{Si vous, heu, vous débarrassez de l'une des personnes qui sont avec vous, revenez me voir.}
+
+
+// The NPC will not follow the PC because the PC's charisma does not
+// allow for followers
+{2800}{Je ne préfère pas.}
+{2801}{Personne de sensé ne vous suivrait !}
+{2802}{Je ne confierai pas ma vie à quelqu'un comme vous.}
+{2803}{S'il vous plaît ! J'en rirais si ce n'était pas aussi invraisemblable.}
+{2804}{Je ne vois aucune raison pour que j'accepte.}
+{2805}{Vous n'avez pas ce qu'il faut pour être un bon chef, monsieur.}
+{2806}{N'avez-vous pas essuyé assez de refus comme cela ?}
+{2807}{Je ne crois pas que vous ayez le tempérament d'un chef.}
+{2808}{Je ne vous aime tout simplement pas assez pour vous suivre.}
+{2809}{Je ne vois vraiment pas pourquoi je me joindrais à vous.}
+
+
+
+
+// The NPC is too high level for the PC to be a follower
+{2900}{Vous n'avez pas assez d'expérience pour moi.}
+{2901}{Revenez quand vous aurez plus d'expérience.}
+{2902}{Vous êtes un peu trop jeune pour moi.}
+{2903}{On court trop de risques avec vous. Mûrissez un peu plus d'abord.}
+{2904}{Peut-être plus tard, quand vous aurez fait vos preuves.}
+{2905}{Il vous manque ce petit quelque chose d'indispensable à une personne avec laquelle je voyagerais.}
+{2906}{Je regrette. Vous ne feriez que me gêner.}
+{2907}{Reposez-moi la question quand vous vous serez fait un nom.}
+{2908}{Je m'en tirerai mieux sans vous. Peut-être plus tard.}
+{2909}{Bien au contraire, c'est moi qui devrais vous poser la question.}
+{2910}{Veuillez me pardonner, monsieur, mais votre inexpérience risque de m'être fatale.}
+{2911}{Vous ne m'arrivez même pas à la cheville.}
+
+
+// The NPC is fleeing from a combatant
+{3000}{Au secours !}
+{3001}{Au secours ! Au secours ! Au secours !}
+{3002}{Je dois fuir !}
+{3003}{Oh ! non !}
+{3004}{Gardes ! Gardes !}
+{3005}{Par pitié, quelle douleur ! Ayez pitié !}
+{3006}{Je me rends !}
+{3007}{Aaaaargh !}
+{3008}{Je n'en peux plus.}
+{3009}{S'il vous plaît, ne me tuez pas !}
+{3010}{Aïe !}
+{3011}{Vous avez gagné !}
+{3012}{Par les dieux, ayez pitié de moi !}
+{3013}{Je vous en prie, ayez pitié de moi !}
+{3014}{Retraite ! Retraite !}
+{3015}{Laissez-moi partir ! S'il vous plaît !}
+{3016}{S'il vous plaît, ne me faites plus de mal !}
+{3017}{Laissez-moi tranquille !}
+{3018}{Laissez-moi vivre !}
+{3019}{Je ne vous ennuierai plus ! Laissez-moi partir !}
+
+
+ // gamble win messages
+{3100}{Vous avez gagné. Prenez ce qui vous revient.}
+{3101}{Vous avez gagné !}
+{3102}{Flûte ! J'ai perdu ! Allez, prenez ce qui vous revient.}
+{3103}{Non ! Je n'ai pas de chance aujourd'hui. Vous l'avez gagné.}
+{3104}{Vous avez beaucoup de chance. Allez, vous l'avez gagné.}
+{3105}{Vous avez gagné. J'aurais mieux fait de ne pas jouer avec vous !}
+{3106}{Argh ! Vous avez gagné. Il semble que Dame Fortune soit avec vous.}
+{3107}{<ronchonnement> Vous avez gagné, j'ai perdu.}
+{3108}{Vous avez gagné.}
+{3109}{Vous avez gagné.}
+{3110}{Vous avez gagné.}
+{3111}{Vous avez gagné.}
+{3112}{Vous avez gagné.}
+{3113}{J'ai perdu.}
+{3114}{J'ai perdu.} 
+{3115}{J'ai perdu.} 
+{3116}{J'ai perdu.} 
+{3117}{J'ai perdu.} 
+
+
+// gamble lose messages
+{3200}{Vous avez perdu ! Je remporte %d pièces.}
+{3201}{Vous avez perdu.  Je remporte %d pièces.}
+{3202}{J'ai gagné ! Je remporte %d pièces.}
+{3203}{J'ai gagné. Je remporte %d pièces.}
+{3204}{Ma chance revient, hein ? Je remporte %d pièces.}
+{3205}{Dame Fortune me sourit pour une fois ! Je remporte %d pièces.}
+{3206}{Bien, j'ai gagné. Merci beaucoup. Je prends %d pièces.}
+{3207}{Bien, vous avez perdu. Je remporte %d pièces.}
+{3208}{J'ai gagné. %d pièces.}
+{3209}{Et alors ? J'ai gagné ! %d pièces, s'il vous plaît.}
+{3210}{J'ai gagné %d pièces.}
+{3211}{J'ai gagné %d pièces.}
+{3212}{J'ai gagné %d pièces.}
+{3213}{J'ai gagné %d pièces.}
+{3214}{J'ai gagné %d pièces.}
+{3215}{Vous avez perdu %d pièces.}
+{3216}{Vous avez perdu %d pièces.}
+{3217}{Vous avez perdu %d pièces.}
+{3218}{Vous avez perdu %d pièces.}
+{3219}{Vous avez perdu %d pièces.}
+
+
+// gambling pc things
+{3300}{Je ne veux pas que vous mettiez vos effets en jeu.}
+{3301}{Je préfère que vous ne mettiez pas vos effets en jeu.}
+{3302}{Je ne crois pas qu'il soit nécessaire de mettre vos effets en jeu.}
+{3303}{Il ne me semble pas conseillé de mettre vos effets personnels en jeu.}
+{3304}{Je ne veux pas miser sur vos effets personnels.}
+{3305}{J'aimerais mieux ne pas miser sur vos effets personnels.}
+{3306}{Non. Je ne veux pas que vous mettiez vos effets en jeu.}
+{3307}{Hum. Non. Rien de ce que vous avez ne me donne envie de jouer.}
+{3308}{Rien de ce que vous avez ne m'intéresse suffisamment pour que je joue.}
+{3309}{Un choix plutôt maigre. Vous n'avez rien qui puisse m'inciter à jouer.}
+{3310}{Non. Vous n'avez rien qui vaudrait une mise.}
+{3311}{Non. Vous n'avez rien à miser qui puisse m'intéresser.}
+{3312}{Non. Je ne veux rien de ce que vous avez. Trouvez quelqu'un d'autre pour jouer.}
+
+
+// gambling with low rank or training
+{3400}{Je ne crois pas que vous ayez assez d'expérience au jeu. }
+{3401}{Hum. Je crois que c'est un enjeu un peu trop élevé pour vous.}
+{3402}{Vous allez trop loin pour votre bien.}
+{3403}{C'est un trop gros enjeu pour vous.}
+{3404}{J'admets que vous avez du cran, mais vous n'avez pas assez d'expérience pour ça.}
+{3405}{C'est beaucoup trop pour vous.}
+{3406}{Vous n'avez pas le talent nécessaire pour cet enjeu.}
+{3407}{Vous n'avez pas l'expérience suffisante pour que ce soit honnête.}
+{3408}{Ce serait comme voler des sucreries à un enfant. Voyons, vous n'êtes pas à la hauteur.}
+{3409}{Revenez plus tard quand vous saurez mieux jouer.}
+
+
+// gambling without enough money
+{3500}{Vous n'avez pas assez d'argent Si vous perdez, je veux %d pièces.}
+{3501}{Vous n'avez pas assez de pièces. Si vous perdez, je veux %d pièces.}
+{3502}{Vous n'en avez pas assez. Si vous perdez cela vous coûtera %d pièces.}
+{3503}{Vous n'avez pas assez de monnaie sonnante et trébuchante. Si vous perdez, je veux %d pièces.}
+{3504}{Vous n'avez pas assez de pièces. Si vous perdez, je veux %d.}
+{3505}{Votre bourse n'est pas assez remplie. Si vous perdez, je veux %d pièces.}
+{3506}{Vous n'avez pas assez pour surenchérir. Si vous perdez, je veux %d pièces.}
+
+
+// gambling for what NPC is wearing
+{3600}{Je le porte. Je ne jouerai pas ça.}
+{3601}{Si je perds, qu'est-ce que je porterai ? Non monsieur ! Je ne jouerai pas ça.}
+{3602}{Vous aimez ça, hein ? Moi aussi, et je ne le mettrai pas en jeu.}
+{3603}{Je crois que je vais conserver ça à l'abri de vos méthodes de jeu.}
+{3604}{Cela ferait un sacré enjeu. C'est pourquoi je vais le garder.}
+{3605}{Je ne jouerai pas mes vêtements contre vous.}
+{3606}{Je ne jouerai pas mes vêtements contre vous.}
+{3607}{Vous me prenez pour qui ? Je ne jouerai pas mes vêtements contre vous.}
+{3608}{Je ne jouerai pas mes vêtements contre vous.}
+{3609}{Etes-vous stupide ? Non merci, je ne jouerai pas les vêtements que je porte. }
+
+// gambling for something the NPC really wants to keep
+{3700}{Je ne veux pas parier ça.}
+{3701}{Si cela ne vous fait rien, je ne peux me résoudre à m'en séparer.}
+{3702}{Je ne veux pas risquer de perdre ça.}
+{3703}{J'ai travaillé dur pour l'avoir et je ne veux pas risquer de le perdre.}
+{3704}{Non. Il compte beaucoup pour moi. Je n'aimerais pas le perdre.}
+{3705}{Ce serait une bien triste journée si je perdais ça.}
+{3706}{Ce serait stupide de ma part de perdre ça à un jeu de hasard.}
+{3707}{Je veux vraiment le garder, merci.}
+{3708}{Je ne pense pas que ce serait sage de miser ceci dans un jeu de hasard.}
+{3709}{Je ne jouerai pas pour ça.}
+{3710}{Je préférerais ne pas jouer ceci, s'il vous plaît.}
+{3711}{Je ne préfère pas. C'est important pour moi.}
+{3712}{J'ai pris ma décision. Je garde ça. Pas de mise.}
+
+
+// the NPC will not normally gamble, but is making an exception
+{3800}{Généralement, je ne mise pas ce genre de choses.}
+{3801}{Hum. Je n'aimerais pas perdre cette mise, mais ... D'accord.}
+{3802}{En temps normal, je ne ferais pas ça, vous comprenez ? Mais, dans ce cas particulier, j'accepte.}
+{3803}{Vous avez réussi à me convaincre de tenter ma chance !}
+{3804}{Généralement, je ne prends aucun risque avec ce qui m'appartient... mais je me sens en veine.}
+{3805}{Je vais faire une exception dans ce cas et je vais jouer avec vous.}
+{3806}{Je vais faire une exception cette fois-ci et je vais jouer avec vous.}
+{3807}{Je vais faire une exception pour une fois et je vais jouer avec vous.}
+{3808}{Je vais faire une exception pour vous et je vais jouer avec vous.}
+{3809}{Je vais faire une exception dans le cas présent et je vais jouer avec vous.}
+
+
+// the NPC makes a gamble offer
+{3900}{Je mets ça en jeu pour %d pièces.}
+{3901}{D'accord. Je mets ça en jeu pour %d pièces.}
+{3902}{Pour %d pièces, je le mets en jeu.}
+{3903}{Misez %d pièces et l'affaire est conclue.}
+{3904}{Peut-on jouer ça pour, mettons ... %d pièces ?}
+{3905}{Voulez-vous risquer %d pièces ? Si oui, misez et l'affaire est conclue.}
+{3906}{Misez %d pièces et l'affaire est conclue.}
+{3907}{Arrêtez de tergiverser. %d pièces et on est d'accord.}
+{3908}{Assurément, misez %d et le pari sera équitable.}
+{3909}{Je veux bien m'en remettre au hasard si vous misez %d pièces.}
+
+// the NPC is warning the listener to stop what they are doing
+{4000}{Ca suffit !}
+{4001}{Laissez ça !}
+{4002}{Fichez le camp d'ici !}
+{4003}{Je vous préviens, arrêtez !}
+
+// the NPC is shouting about a newspaper he is selling
+{4100}{Lisez toute l'affaire !}
+{4101}{A lire dans le journal !}
+{4102}{Achetez le journal !}
+
+// the NPC is asking the PC about buying newspapers
+{4200}{Quel journal cherchez-vous ?}
+{4201}{Que cherchez-vous exactement ?}
+
+// the NPC wants to sell a particular newspaper
+{4300}{Voulez-vous acheter ce journal ?}
+{4301}{Vous voulez l'acheter ?}
+
+// the NPC has no older newspapers for sale
+{4400}{Je regrette. Je n'ai pas de journaux plus anciens.}
+{4401}{Pour l'instant, je n'ai pas de journaux plus anciens en réserve.}
+
+// the NPC is offer older newspapers for sale
+{4500}{Je vends ces vieux journaux.}
+{4501}{Ce sont les journaux les plus vieux que j'aie en réserve.}
+
+// the NPC is refusing to buy stolen goods
+{4600}{C'est inacceptable ! Il est évident que ça a été volé !}
+{4601}{Je n'achète pas d'objets volés, monsieur.}
+{4602}{Ai-je l'air d'une fripouille ? C'est inacceptable !}
+
+// the NPC is offering to use his skill and do the task for the PC leader
+{4700}{Je vais m'en occuper.}
+{4701}{Attendez, laissez-moi faire.}
+
+// the NPC is upset that the PC is attacking party members
+{4800}{Cessez d'attaquer des membres du groupe !}
+{4801}{Cessez vos attaques ! C'est l'un des nôtres !}
+
+// the NPC is upset the PC is attacking good creatures
+{4900}{Arrêtez d'attaquer des créatures bien intentionnées !}
+{4901}{J'en ai assez que vous attaquiez de nobles âmes.}
+
+// the NPC is upset the PC is attacking townspeople from NPC's origin
+{5000}{Arrêtez d'attaquer ces gens ! J'ai grandi avec eux !}
+{5001}{Cessez vos attaques ! C'est chez moi ici !}
+
+// the NPC is upset the PC is attacking faction buddies
+{5100}{Arrêtez d'attaquer mes vieux camarades !}
+{5101}{N'attaquez pas mes amis !}
+
+// the NPC is warning the PC he is becoming too good
+{5200}{Je pense que vous en faites un peu trop.}
+{5201}{Vous faites preuve de trop de bonté. Je déteste ça.}
+
+// the NPC is warning the PC he is becoming too evil
+{5300}{Vos actions deviennent douteuses.}
+{5301}{Votre morale s'érode.}
+
+// the NPC is warning the PC of low reaction to him
+{5400}{Je commence à ne plus guère vous apprécier.}
+{5401}{Vos agissements me font remettre cette aventure en question.}
+
+// the NPC follower is nearing death
+{5500}{Cela s'annonce mal.}
+{5501}{Nous devrions fuir !}
+{5502}{Je vais mourir !}
+{5503}{J'ai de graves blessures !}
+{5504}{Aidez-moi !}
+{5505}{Je fiche le camp d'ici !}
+
+// the NPC is not skilled in gambling
+{5600}{Je ne suis pas un joueur.}
+{5601}{Je n'aime pas le jeu.}
+{5602}{Non, je ne veux pas jouer.}
+
+// the NPC does not need to identify an item (as it is already identified)
+{5700}{Cet objet est déjà identifié.}
+
+// the NPC wants money for identifying an item
+{5800}{J'accepte d'identifier cet objet pour %d pièces.}
+
+// the NPC cannot repair broken items
+{5900}{Je ne peux pas réparer des objets endommagés.}
+
+// the NPC does not need to repair the item (it is not damaged)
+{6000}{Cet objet ne nécessite pas de réparation.}
+
+// the NPC wants money for repairing the item
+{6100}{J'accepte de réparer cet objet pour %d pièces.}
+
+// PC doesn't have enough skill points to be trained as expert
+{6200}{Vous ne possédez pas la compétence nécessaire pour devenir expert.}
+
+// PC doesn't have beginner training
+{6300}{Vous devez atteindre le rang d'apprenti pour pouvoir prétendre à l'entraînement d'expert.}

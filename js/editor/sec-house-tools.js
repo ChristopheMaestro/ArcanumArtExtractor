@@ -372,7 +372,7 @@ export function createHouseTools(env) {
       placeHouseRoof(segs.house, plan.roof?.length ? plan.roof : null, roofNum);
       const { rugs, lights } = placePlaceholders(plan);
       setLastHouse({ house: segs.house, num, wallItem: item, shapes, seed: plan.seed, doorSide: plan.doorSide,
-        styleName: `${kind.name} (${plan.style.name})`, pts: edit.housePts, rugs, lights, kind: kind.id });
+        styleName: `${kind.name} (${plan.style.name})`, pts: edit.housePts, rugs, lights, kind: kind.id, tiles: houseTiles(segs.house, plan) });
       edit.housePts = null;
       if (!(edit.houseNote || '').includes('skipped')) edit.houseNote = `${kind.name}, ${plan.style.name} walls`;
       if (cleared) edit.houseNote += ` · ${cleared} object${cleared === 1 ? '' : 's'} that stood there removed`;

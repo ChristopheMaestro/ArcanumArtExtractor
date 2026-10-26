@@ -1,0 +1,58 @@
+// This file contains NPC responses to being asked about the current
+// story state. Each block begins at a multiple of 100, based on
+// the story state. Within each block, there is one line for each
+// race.
+
+0 human
+1 dwarf
+2 elf
+3 half elf
+4 gnome
+5 halfling
+6 half orc
+7 half ogre
+8 dark elf
+9 ogre
+10 orc
+
+// Story state is 0
+
+{0}{I’m no expert.  Maybe you should talk to a merchant.}
+{1}{Looks to made of quality silver…}
+{2}{I know its not elven.  Beyond that, I can tell you very little.}
+{3}{Looks like a nice piece of jewelry.}
+{4}{A very exquisite ring, my friend!  Hold on to it!}
+{5}{I’ve no interest in such things…}
+{6}{Nothing.  Nothing at all.}
+{7}{I've not a clue.}
+{8}{Take your questions elsewhere.}
+{9}{I wish I couls help you with that.}
+{10}{Nothing.  Nothing at all.}
+
+// Story state is 1
+
+{100}{That sounds like a company, but I’m not sure where they are.}
+{101}{Company.  HUMAN company, I’d say.}
+{102}{Hmmm.  Interesting name for a company.  Very OLD name…}
+{103}{I don’t know offhand…I’d venture to guess a company of sorts.}
+{104}{Well respected company.  I wouldn’t know exactly where their located.}
+{105}{Sounds like something from the big city…}
+{106}{Rich bastards, I’d say.  Just sound like it.}
+{107}{No idea.}
+{108}{Such things don’t concern me.}
+{109}{No idea.}
+{110}{Rich bastards, I’d say.  Just sound like it.}
+
+// Story state is 2
+{200}{Bates!  He’s a genius!  Invented the steam engine!}
+{201}{We’ll not speak of him again, understand?}
+{202}{Technological  meddler.  Look what he’s done to the land…}
+{203}{He’s fairly smart for a human…machines and what not.}
+{204}{Brilliant technologist.  Made me a fortune last year…}
+{205}{Busy human, always making those noisy machines.}
+{206}{Treats his workers badly, I’m told.}
+{207}{Have a half-brother who used to work for him.}
+{208}{I’d rather not speak of Mr. Bates.}
+{209}{Have a half-brother who used to work for him.}
+{210}{Treats his workers badly, I’m told.}
+

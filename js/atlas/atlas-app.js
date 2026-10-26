@@ -25,7 +25,27 @@ const worldFrame = document.getElementById('worldFrame');
 const startWorldFrame = () => { if (!worldFrame.getAttribute('src')) worldFrame.src = worldFrame.dataset.src; };
 { const first = location.hash.slice(1).split('&')[0]; if (first && first !== 'home' && first !== 'files' && first !== 'workshop') startWorldFrame(); }
 setTimeout(startWorldFrame, 200);
-const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+// While the visitor reads the welcome screen the files the map needs first are fetched into the browser's cache (nothing is decoded or kept in
+// memory: the map's workers find them there when it opens): the world's overview picture, its art lists and the shared art shard 0. Not on a
+// metered / "save data" connection, and only on the welcome screen (anywhere else the map is asked for at once).
+function prefetchMap() {
+  const first = location.hash.slice(1).split('&')[0], net = navigator.connection;
+  if ((first && first !== 'home') || location.protocol === 'file:' || (net && (net.saveData || /(^|-)2g$/.test(net.effectiveType || '')))) return;
+  const ver = window.AtlasVer, G = { ce: 'ArcanumCE', car: 'ArcanumCarcanum', fp: 'ArcanumFP', ru: 'ArcanumRU', tin: 'ArcanumTIN', rb: 'ArcanumRB', tr: 'ArcanumTR', dem: 'ArcanumDEM', bpd: 'ArcanumBPD', v064: 'ArcanumV064' };
+  const modWorld = window[G[ver]] && window[G[ver]].pictures && window[G[ver]].pictures.World, own = !!(window.AtlasData && window.AtlasData.standalone);
+  const get = u => fetch(new URL(u, document.baseURI), { priority: 'low' }).then(r => r.ok ? r.arrayBuffer() : null).catch(() => null);
+  fetch(new URL('atlas/live-maps.json', document.baseURI)).then(r => r.json()).then(dirs => {
+    const list = [];
+    if (modWorld && modWorld.atlasFile) list.push(modWorld.atlasFile);
+    const base = window.ArcanumPictures && window.ArcanumPictures.maps.World;
+    if (base && !(modWorld && own) && !(modWorld && modWorld.atlasFile)) list.push(base.dir + '/atlas.webp');
+    for (const key of [own && modWorld ? null : 'World', modWorld ? `${ver}:World` : null]) if (key && dirs[key]) list.push(dirs[key] + 'art.json');
+    if (dirs.World && !own) list.push(dirs.World + 'art0.webp');
+    return list.reduce((p, u) => p.then(() => get(u)), Promise.resolve());       // one after the other: the map's own files, if it is opened meanwhile, are not queued behind them
+  }).catch(() => {});
+}
+setTimeout(prefetchMap, 600);
+const esc = AtlasData.esc;
 // a.localeCompare(b) made once: the same order, many times faster when a long list is sorted
 const collate = new Intl.Collator().compare;
 
@@ -386,6 +406,18 @@ document.addEventListener('click', e => {
   if (!a || e.button || e.ctrlKey || e.metaKey || e.shiftKey) return;      // a middle or ctrl click still opens a tab of its own
   e.preventDefault(); openFiles(a.dataset.files);
 });
+// Screenshot (top bar): the map canvas as it is now (pictures, glows and pins are all drawn on it) saved as a PNG
+document.getElementById('shotBtn').onclick = () => {
+  let cv = null; try { cv = worldFrame.contentDocument.getElementById('stage'); } catch (_) {}
+  if (!cv || !cv.width) return;
+  cv.toBlob(b => {
+    if (!b) return;
+    const a = document.createElement('a'), t = new Date().toISOString().slice(0, 19).replace(/[-:T]/g, '');
+    a.href = URL.createObjectURL(b); a.download = `arcanum-atlas-${t}.png`;
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 10000);
+  }, 'image/png');
+};
 const advBtn = document.getElementById('advBtn');
 advBtn.onclick = () => {
   const on = document.body.classList.toggle('advanced');
@@ -429,6 +461,9 @@ layersBtn.onclick = () => {
 document.getElementById('healthBtn').onclick = () => import(new URL('js/atlas/health-panel.js', location.href).href).then(m => m.toggleHealth()).catch(err => console.error(err));
 // the other maps of the game (castles, caves, cellars...), drawn from their pictures (map-pictures.js); every picture of the Map Explorer is a "section" of one
 const MP = window.ArcanumMaps || { maps: [], sections: [] };
+// Qintarra and the Black Mountain Mines are places of the world map first: their name opens that spot, and the map of the same name is the one inside
+const INSIDE_OF = AtlasData.INSIDE_OF;
+for (const s of MP.sections) if (INSIDE_OF.includes(s.name)) { if (MP.maps[s.map].name === s.name) MP.maps[s.map].name += ' - Inside'; s.name += ' - Inside'; }
 const SECT = new Map(MP.sections.map(s => [s.name, s]));
 // a place the sidebar spells as the game's own typo (the key stays: the data names it so)
 const PLACE_DISPLAY = { 'Stringy Petes Cove': "Stringy Pete's Cove", 'CaveOfBanishment': 'Cave of Banishment', 'LeahboUnderground': 'Leahbo Underground', 'Plainwicke': 'Plainwicke Houses', 'TombOfHorrors': 'Tomb of Horrors', 'ShopMap': 'Shop Map' };
@@ -436,13 +471,14 @@ const PLACE_DISPLAY = { 'Stringy Petes Cove': "Stringy Pete's Cove", 'CaveOfBani
 // same number as the base game's, so `place` is the English name the lists go by). A version change reloads the page, so this is read once.
 { const ru = window.AtlasVer === 'ru' && window.ArcanumRUAreas, done = new Set();
   if (ru) for (const a of ru.areas) if (a.place && a.name && !done.has(a.place)) { PLACE_DISPLAY[a.place] = a.name; done.add(a.place); } }
+for (const n of INSIDE_OF) if (PLACE_DISPLAY[n]) PLACE_DISPLAY[n + ' - Inside'] = PLACE_DISPLAY[n] + ' - Inside';
 const shownName = name => PLACE_DISPLAY[name] || name;
 const byShownName = (a, b) => shownName(a.name).localeCompare(shownName(b.name));
 // the name a place goes by in the data, from the title on show (which is the display name)
 const shownPlace = () => { const t = document.getElementById('atlasTitle').textContent; return Object.keys(PLACE_DISPLAY).find(k => PLACE_DISPLAY[k] === t) || t; };
 const nkey = s => String(s || '').toLowerCase().replace(/â€™|[’'`]/g, '').replace(/[^\p{L}\p{N}]/gu, '');      // (any letter: the Russian Mod Pack's places are in Cyrillic)
 const MAP_BY_KEY = new Map(MP.maps.map((m, i) => [nkey(m.key), i]));      // how items.js and the quests name a map
-const placeTitle = name => { const m = MP.maps.find(x => x.key === name); return m ? m.name : name; };
+const placeTitle = name => { if (WL.places.some(p => p.name === name)) return name; const m = MP.maps.find(x => x.key === name); return m ? m.name : name; };
 function placeCrumb(name) {
   const p = WL.places.find(q => q.name === name); if (p) return `Arcanum › ${p.modGroup === 'Cities' ? 'Settlements' : p.modGroup}`;
   const s = SECT.get(name); if (s) return MP.maps[s.map].module ? `Modules › ${s.group}` : `Arcanum › Inside › ${s.group || 'Elsewhere'}`;
@@ -506,7 +542,7 @@ function goPlace(name) {
 // their own), as in the map's own page.
 const AR = window.ArcanumAreas || { areas: [], secret: [] };
 const QUEST_PLACES = new Set(['The Black Mountain Mines']);       // quest places the world labels do not group as such
-for (const a of AR.areas) if (!a.place && !SECT.has(a.name)) { WL.places.push({ name: a.name, modGroup: a.settlement ? 'Cities' : QUEST_PLACES.has(a.name) ? 'Quest locations' : 'Other locations', view: a.tile, labels: [], area: true }); a.place = a.name; }
+for (const a of AR.areas) if (!a.place && !SECT.has(a.name)) { WL.places.push({ name: a.name, modGroup: a.group || (a.settlement ? 'Cities' : QUEST_PLACES.has(a.name) ? 'Quest locations' : 'Other locations'), view: a.tile, labels: [], area: true }); a.place = a.name; }
 for (const s of AR.secret) WL.places.push({ name: s.name, modGroup: 'Secret areas', view: s.tile, labels: [], area: true });
 const AREA_OF = new Map([...AR.areas.map(a => [a.place || a.name, { ...a, kind: a.settlement ? 'settlement' : 'area' }]), ...AR.secret.map(s => [s.name, { ...s, kind: 'secret' }])]);
 // the card of an area: what the game says of it, and how it comes to be on the player's world map
@@ -525,9 +561,9 @@ function selectArea(a) {
 // The modules come in categories (left list of the Modules tab, and the game choice of Items, Quests, Library and Demographics);
 // inside a category they are in alphabetical order. A module named nowhere here is an "Other Module".
 const MODULE_CATS = [
-  ['Troika Modules', ['Buried Secrets', 'Dungeon Crawl 2', 'Dusty Dunes', 'Hellgate', 'Lost Dungeon of Souls', 'Vormantown', 'Deathmatch', 'Time', 'Woodmir Race']],
-  ['French Modules', ['Bourrin', 'MuHu', 'Affaire', 'Livre Ombres', 'Mystere', 'Naufrageur', 'Resident Eval', 'Secret', 'Tombeau', 'Tresor', 'Vallee', 'Addon01', 'Dolores 0.25']],
-  ['Russian Modules', ['Arcanum City', 'Hell Day']],      // (CE Restored's: they are there while CE Restored is on)
+  ['Troika Modules', ['Buried Secrets', 'Dungeon Crawl 1', 'Dungeon Crawl 2', 'Dusty Dunes', 'Hellgate', 'Lost Dungeon of Souls', 'Vormantown', 'Deathmatch', 'Time', 'Woodmir Race']],
+  ['French Modules', ['Bourrin', 'MuHu', 'Affaire', 'Livre Ombres', 'Mystere', 'Naufrageur', 'Resident Eval', 'Secret', 'Tombeau', 'Tresor', 'Vallee', 'Addon01', 'Dolores 0.25', 'Holliae', 'CrossRoad 2.1']],
+  ['Russian Modules', ['Arcanum City', 'Hell Day', 'UltimateArcanum']],      // (CE Restored's: they are there while CE Restored is on)
   ['Other Modules', []],
 ];
 const moduleCat = m => (MODULE_CATS.find(c => c[1].includes(m)) || MODULE_CATS[MODULE_CATS.length - 1])[0];
@@ -537,10 +573,10 @@ const modulesByCat = mods => MODULE_CATS.map(([c]) => [c, mods.filter(m => modul
 // (toolbox/atlas/splice_modules.py), so any module opens in the data loaded.
 const MI = window.AtlasModuleIndex || { owned: {} };
 const VER = window.AtlasVer || 'base';
-const VER_MAPS = { ce: window.ArcanumCEMaps, car: window.ArcanumCarcanumMaps, fp: window.ArcanumFPMaps, ru: window.ArcanumRUMaps, tin: window.ArcanumTINMaps, rb: window.ArcanumRBMaps }[VER];
+const VER_MAPS = { ce: window.ArcanumCEMaps, car: window.ArcanumCarcanumMaps, fp: window.ArcanumFPMaps, ru: window.ArcanumRUMaps, tin: window.ArcanumTINMaps, rb: window.ArcanumRBMaps, tr: window.ArcanumTRMaps, dem: window.ArcanumDEMMaps, bpd: window.ArcanumBPDMaps, v064: window.ArcanumV064Maps }[VER];
 const OWNED = new Set([...(MI.owned[VER] || []), ...(VER_MAPS ? VER_MAPS.maps.filter(m => m.module).map(m => m.module) : [])]);      // (module maps only the mod has: Hell Day)
 const modOwns = g => VER !== 'base' && OWNED.has(g);
-const VER_NAME = { ce: 'CE Restored', car: 'Carcanum', fp: 'Forgotten Places', ru: 'The Russian Mod Pack', tin: 'Terra Incognita', rb: 'Arcanum ReBulid' };
+const VER_NAME = { ce: 'CE Restored', car: 'Carcanum', fp: 'Forgotten Places', ru: 'The Russian Mod Pack', tin: 'Terra Incognita', rb: 'Arcanum ReBulid', tr: 'Arcanum Total Rebalance', dem: 'Arcanum Demo', bpd: 'Arcanum Beta Press Demo', v064: 'Arcanum 1.0.6.4' };
 // the options of a game choice: Arcanum, then each category as a group of its modules (extra: loose options such as "Not in game")
 const gameOptions = (games, extra = []) => {
   const o = g => `<option value="${esc(g)}">${esc(g)}</option>`;
@@ -556,7 +592,7 @@ try { if (localStorage.getItem('atlas-mode') === 'modules' && MP.sections.some(i
 function buildPlaceList() {
   const list = document.getElementById('locList');
   list.innerHTML = '';
-  const ceNames = new Set([...WL.places.filter(p => p.ceLoc).map(p => p.name), ...MP.maps.filter(m => m.ce).map(m => m.name)]);      // what CE Restored adds has its own colour
+  const ceNames = window.AtlasData.standalone ? new Set() : new Set([...WL.places.filter(p => p.ceLoc).map(p => p.name), ...MP.maps.filter(m => m.ce).map(m => m.name)]);      // what CE Restored adds has its own colour (a standalone version adds nothing to a game: all of it is its own, no colour)
   const btn = (name, n, go) => {
     const b = document.createElement('button');
     b.className = 'loc' + (name === 'Shrouded Hills' ? ' on' : '') + (ceNames.has(name) ? ' ce' : ''); b.dataset.place = name;
@@ -626,6 +662,7 @@ function buildPlaceList() {
       ps.push({ name, go: ss.includes(name) ? name : ss[0] });
     }
     ps.sort(byShownName);
+    if (!ps.length) continue;                                  // (a group with nothing in it is not shown)
     list.insertAdjacentHTML('beforeend', `<div class="locgroup">${GROUP_NAME[g] || g}</div>`);
     for (const p of ps) {
       const a = areaOf.get(nkey(p.name));
@@ -668,8 +705,7 @@ function buildPlaceList() {
     list.appendChild(d);
   }
 }
-buildPlaceList();
-// the switch over the list: Arcanum / Modules. Going to Modules opens the first module's map, back to Arcanum the world.
+buildPlaceList();// the switch over the list: Arcanum / Modules. Going to Modules opens the first module's map, back to Arcanum the world.
 function setAtlasMode(mode, go) {
   atlasMode = mode;
   try { localStorage.setItem('atlas-mode', mode); } catch (_) {}
@@ -696,7 +732,7 @@ document.querySelectorAll('#modeTabs button[data-mode]').forEach(b => b.classLis
 const VERSIONS = AtlasData.names;
 // car -> data/mods/Carcanum (integrated like CE Restored: ce-style data in carcanum*.js), fp -> data/mods/Forgotten Places 6.0 (integrated the same way, fp*.js; it lies over CE Restored, so its lists carry CE's maps too)
 const atlasVer = VERSIONS[window.AtlasVer] ? window.AtlasVer : 'ce';             // (version-data.js decides, and loads only that version's mod files)
-const MODS = { ce: window.ArcanumCEMaps, car: window.ArcanumCarcanumMaps, fp: window.ArcanumFPMaps, ru: window.ArcanumRUMaps, tin: window.ArcanumTINMaps, rb: window.ArcanumRBMaps };      // the maps / locations each integrated mod adds
+const MODS = { ce: window.ArcanumCEMaps, car: window.ArcanumCarcanumMaps, fp: window.ArcanumFPMaps, ru: window.ArcanumRUMaps, tin: window.ArcanumTINMaps, rb: window.ArcanumRBMaps, tr: window.ArcanumTRMaps, dem: window.ArcanumDEMMaps, bpd: window.ArcanumBPDMaps, v064: window.ArcanumV064Maps };      // the maps / locations each integrated mod adds
 let modVer = MODS[atlasVer] ? atlasVer : 'ce';                                  // the mod whose data is in the lists (while one is on)
 let ceOn = !!MODS[atlasVer];
 // The maps only CE Restored has (ce-maps.js) are listed while it is on: appended to ArcanumMaps, so the others keep their index
@@ -729,12 +765,7 @@ function syncCEMaps() {
     WL.places.push(...fpGone.splice(0));
   }
   if (ceOn) {
-    const base = MP.maps.length;
-    // Forgotten Places: its caves and houses are listed under the place they belong to (Brandybuck and Spider Cave get their own name, as a place of that name exists)
-    const fp = modVer === 'fp', FPG = { Brandybuck: 'Brandybuck', CaveOfBanishment: 'The Cavern of Madness', LeahboUnderground: 'Leahbo', Plainwicke: 'Plainwicke Plantation', 'Spider Cave': 'Spider Cave', TombOfHorrors: "Acererak's Tomb" };
-    const FPN = { Brandybuck: 'Brandybuck Houses', 'Spider Cave': 'Spider Cave - Inside' };
-    MP.maps.push(...CE.maps.map(m => fp && FPN[m.name] ? { ...m, name: FPN[m.name] } : m));
-    MP.sections.push(...CE.sections.map(s => ({ ...s, map: s.map + base, ...(fp && FPG[s.name] ? { group: FPG[s.name], ...(FPN[s.name] && { name: FPN[s.name] }) } : {}) })));
+    AtlasData.appendCEMaps(MP, CE, modVer === 'fp');
   } else {
     const title = shownPlace(), shown = SECT.get(title), first = MP.maps.findIndex(m => m.ce);
     MP.maps.splice(first);
@@ -856,7 +887,7 @@ function selectNpc(n) {
   h += roleHtml(n.role);
   h += routineHtml(n.file);
   // a person who takes you somewhere is one thing with the waypoint (waypoints.js: the row hangs on their .mob): the buttons are here
-  const fileOf = f => String(f || '').slice(String(f || '').lastIndexOf('/') + 1).toLowerCase();
+  const fileOf = AtlasData.fileOf;
   const ways = (window.ArcanumWaypoints ? window.ArcanumWaypoints.waypoints : []).filter(w => (w[0] == null ? w[1] : w[0]) === n.place && w[2] === n.tile[0] && w[3] === n.tile[1]
     && w[6] && /\.mob$/i.test(w[6][0]) && (!n.file || fileOf(w[6][0]) === fileOf(n.file)));
   const dests = ways.flatMap(w => w[5]);
@@ -1429,7 +1460,7 @@ const QKIND = { main: ['✨', 'Main story'], master: ['🎓', 'Master training']
 const qnorm = s => String(s || '').toLowerCase().replace(/[^a-z0-9]/g, '');
 // where a part can be shown: on the world map, or at the entrance of the separate map (castle, cave, cellar) it takes place in
 // (now that the other maps are on the atlas, a part inside one flies into it)
-const subMap = w => !w.world && w.mtile && MAP_BY_KEY.has(qnorm(w.place)) ? MAP_BY_KEY.get(qnorm(w.place)) : null;
+const subMap = w => !w.world && w.mtile && MAP_BY_KEY.has(nkey(w.place)) ? MAP_BY_KEY.get(nkey(w.place)) : null;   // (nkey keeps accents: "MuHu - Québec")
 const spotOf = w => w.world && w.tile ? { place: w.place, tile: w.tile }
   : subMap(w) != null ? { place: MP.maps[subMap(w)].name, tile: w.mtile, map: MP.maps[subMap(w)].key }
   : w.near ? { place: w.near.place, tile: w.near.tile, via: w.near.name } : null;

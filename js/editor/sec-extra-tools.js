@@ -244,7 +244,7 @@ export function createExtraTools(env) {
   // =============================================================== blocked tiles
   const block = { mode: 'block', stroke: null };
   panes.block.insertAdjacentHTML('beforeend', `
-    <p class="sec-eye-head">Blocked tiles are in the sector's block list: nobody can step on them, whatever the tile or the objects there. They show in red with the Blocked layer (bright red = this list; dark red = what the tile art and the objects block already).</p>
+    <p class="sec-eye-head">Blocked tiles are in the sector's block list: nobody can step on them, whatever the tile or the objects there. They show in red with the Special tiles layer (bright red = this list; dark red = what the tile art and the objects block already).</p>
     <div class="sec-edit-controls">
       ${modeRow('Do', [['block', 'Block', 'Mark the tiles you paint as blocked'], ['open', 'Open', 'Take the tiles you paint out of the block list']])}
       <div class="sec-house-actions sec-opt-wide"><button type="button" class="sec-block-ring" title="Block the tiles of the edge of the sector you press... (use the brush for the rest)">Block a sector's edge</button><button type="button" class="sec-block-clear" title="Take every tile of the sector you press out of the block list">Open a whole sector</button></div>
@@ -538,6 +538,20 @@ export function createExtraTools(env) {
     afterReplay() { if (env.getMapData && mp.orig) { renderMapList(); env.mapChanged(); } if (sect.sec) showSector(sect.sec); },
     // the files of the map-level data that changed
     mapFiles() { return mp.orig ? mapParts() : []; },
+    // the start tile of a generated world (map tile wx, wy): outside the undo history, saved as startloc.txt
+    setStart(wx, wy) {
+      mp.orig ??= mapSnapshot();
+      env.getMapData().start = { x: absX(wx), y: absY(wy) };
+      env.mapChanged();
+    },
+    // the Move tool drags the start: one history step
+    moveStart(wx, wy) {
+      mp.orig ??= mapSnapshot();
+      const m = env.getMapData(), before = m.start && { ...m.start }, after = { x: absX(wx), y: absY(wy) };
+      m.start = { ...after };
+      mapOp(fwd => { m.start = fwd ? { ...after } : before && { ...before }; });
+      env.mapChanged();
+    },
     cancel() { roof.drag = null; block.stroke = null; strokeOps.length = 0; },
 
     // what the cursor shows: `h.footprint(cells, fill, stroke)`

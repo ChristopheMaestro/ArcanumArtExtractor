@@ -19,8 +19,8 @@
   // ---- the files of a version, in the order the page ran them: what each one reads is in the ones before it
   function dataFiles(ver) {
     const u = name => D.url(name, ver), data = f => 'js/atlas/data/' + f + '.js';
-    return [data('module-index'), data('world-labels'), u('items'), u('demographics'), u('library'), data('npcs'), u('routines'), data('submaps'),
-      ...D.modUrls('maps', ver), u('modules'), 'js/atlas/modules-merge.js', u('waypoints'), u('notices'), 'js/atlas/modules-merge-labels.js', data('areas'),
+    return [u('map-pictures'), data('module-index'), u('world-labels'), u('items'), u('demographics'), u('library'), u('npcs'), u('routines'), u('submaps'),
+      ...D.modUrls('maps', ver), u('modules'), 'js/atlas/modules-merge.js', u('waypoints'), u('notices'), 'js/atlas/modules-merge-labels.js', u('areas'),
       ...(ver === 'ru' ? D.modUrls('areas', ver) : []), u('quests'), u('portraits'), u('sound'), ...(D.has('sound-own', ver) ? [u('sound-own')] : []),
       'js/atlas/atlas-sound.js', 'js/atlas/atlas-library.js', 'js/atlas/atlas-frames.js',      // parts of the app (window.AtlasParts), run before it
       'js/atlas/atlas-app.js'];
@@ -96,7 +96,8 @@
       else { seen.push(pick()); pos = seen.length - 1; }
       show(seen[pos]);
     };
-    const restart = () => { clearInterval(slideTimer); slideTimer = setInterval(() => { if (!document.hidden) step(1); }, 5000); };
+    // (only while the welcome screen is on show: on another screen nobody sees the pictures, and each costs a download and a decode)
+    const restart = () => { clearInterval(slideTimer); slideTimer = setInterval(() => { if (!document.hidden && document.body.classList.contains('screen-home')) step(1); }, 5000); };
     step(1); restart();
     document.addEventListener('keydown', slideKeys = e => {         // left / right browse the pictures, on the welcome screen only
       if ((e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') || e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;

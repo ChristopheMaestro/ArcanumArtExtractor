@@ -15,5 +15,9 @@ export const ART_ROOT = `${DATA_ROOT}art/`;
 
 export const SEC_ROOT = DATA_ROOT;
 
+// Lookup files built from data/ by the toolbox (file lists, search text, alias lists), not game data:
+// files/ (toolbox/file_index.py, module_template_index.py), search/ (search_text.py), aliases/ (dedupe_sectors.py, dedupe_art.py).
+export const INDEX_ROOT = 'js/index/';
+
 // Thumbnail sheets of the .ART grid (toolbox/build_art_thumbs.py), not game data.
 export const ART_THUMBS_ROOT = 'js/art/art-thumbs/';

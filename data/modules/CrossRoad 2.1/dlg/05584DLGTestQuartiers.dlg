@@ -1,0 +1,37 @@
+{1}{Vous êtes à la limite des quartiers inférieurs. Seules les personnes autorisées à se rendre dans les quartiers inférieurs peuvent passer. Veuillez rebrousser chemin.}{Vous êtes à la limite des quartiers inférieurs. Seules les personnes autorisées à se rendre dans les quartiers inférieurs peuvent passer. Veuillez rebrousser chemin.}{}{}{}{}
+
+{10}{[La créature à la peau bleue qui se tient dans cette pièce a les yeux fermés. Sur sa peau dansent des ombres nées des quatre braséros de la pièce] @pcname@ je suppose ? On m'a prévenu de votre arrivée.}{[La créature à la peau bleue qui se tient dans cette pièce a les yeux fermés. Sur sa peau dansent des ombres nées des quatre braséros de la pièce] @pcname@ je suppose ? On m'a prévenu de votre arrivée.}{}{}{}{}
+{11}{Je viens pour passer l'épreuve.}{}{5}{}{20}{}
+{12}{Moi v'nir passer l'épreuve.}{}{-4}{}{20}{}
+
+{20}{C'est entendu, nous allons la commencer. Cependant, sachez que les intendants ont déjà connaissance de vos capacités intellectuelles et physiques. Ce n'est donc sur pas sur elles que reposent cette épreuve. Etes vous prêt à passer cette épreuve ?}{C'est entendu, nous allons la commencer. Cependant, sachez que les intendants ont déjà connaissance de vos capacités intellectuelles et physiques. Ce n'est donc sur pas sur elles que reposent cette épreuve. Etes vous prête à passer cette épreuve ?}{}{}{}{}
+{21}{Je le suis.}{}{5}{}{30}{}
+{22}{Ouaips !}{}{-4}{}{30}{}
+{23}{En fait, il faut que je sauvegarde avant. Je reviens.}{}{5}{}{0}{lf0 1}//40
+{24}{Heu, moi dois d'abord sauver partie, j'reviens.}{}{-4}{}{0}{lf0 1}
+
+{30}{Très bien. Alors débutons...}{Très bien. Alors débutons...}{}{}{}{}
+{31}{[Suite]}{}{1}{}{-1}{}
+
+{40}{@pcname@. [Le gardien des portes a, comme la dernière fois, les yeux fermés] Etes vous prêt à passer l'épreuve ?}{@pcname@. [Le gardien des portes a, comme la dernière fois, les yeux fermés] Etes vous prête à passer l'épreuve ?}{}{}{}{}
+{41}{Oui.}{}{5}{}{30}{lf0 0}
+{42}{Ouaips !}{}{-4}{}{30}{lf0 0}
+{43}{Non, je préfère attendre encore un peu.}{}{5}{}{}{}
+{44}{Nan, moi préfères prendre plus de temps.}{}{-4}{}{0}{}
+
+
+{50}{[Le gardien se tient de nouveau avec les yeux clos. Il parle avec lenteur] @pcname@, vous l'aurez je pense compris, c'est question n'avaient qu'un seul but, celui que vous répondiez autrement que par un numéro. Il en est de même de mon intettuption au milieu du questionnaire. Cependant, vous avez réussi l'épreuve, félicitations.}{[Le gardien se tient de nouveau avec les yeux clos. Il parle avec lenteur] @pcname@, vous l'aurez je pense compris, c'est question n'avaient qu'un seul but, celui que vous répondiez autrement que par un numéro. Il en est de même de mon intettuption au milieu du questionnaire. Cependant, vous avez réussi l'épreuve, félicitations.}{}{}{}{}
+{51}{Merci, je vais partir.}{}{5}{}{-6}{}
+{52}{M'rci, moi partir !}{}{-4}{}{-6}{}
+{53}{Excusez-moi, mais cette épreuve n'est-elle pas trop facile ?}{}{5}{}{60}{}
+{54}{Vous voulez-dire que si je m'étais énervée... ?}{0}{5}{}{70}{}
+{55}{Vous voulez-dire que si je m'étais énervé... ?}{1}{5}{}{70}{}
+
+{60}{Fut-ce votre impression ? [Vous entendez encore de la culpabilité dans sa voix et réalisez à quel point il déteste probablement poser ces questions] Pourtant, je vous assure que bon nombre de personnes ne peuvent se contenir lors des dernières questions. Dans un tel cas, je suis obligé de leur refuser le passage et une nouvelle épreuve d'une nature différente leur sera présentée après de nouvelles missions. Mais ce n'est pas important, vous pouvez passer. Bonne journée @pcname@.}{Fut-ce votre impression ? [Vous entendez encore de la culpabilité dans sa voix et réalisez à quel point il déteste probablement poser ces questions] Pourtant, je vous assure que bon nombre de personnes ne peuvent se contenir lors des dernières questions. Dans un tel cas, je suis obligé de leur refuser le passage et une nouvelle épreuve d'une nature différente leur sera présentée après de nouvelles missions. Mais ce n'est pas important, vous pouvez passer. Bonne journée @pcname@.}{}{}{}{}
+{61}{Bien, alors au revoir...}{}{5}{}{-6}{}
+
+{70}{C'est très simple, j'aurais été contraint de vous refuser l'accès à ces quartiers. En tel cas les intendants attendent généralement quelques missions avant de renvoyer la personne devant moi où je lui fait subir une épreuve d'une autre nature. Mais passons, cela ne vous concerne pas puisque vous avez réussi... Bonne journée @pcname@.}{C'est très simple, j'aurais été contraint de vous refuser l'accès à ces quartiers. En tel cas les intendants attendent généralement quelques missions avant de renvoyer la personne devant moi où je lui fait subir une épreuve d'une autre nature. Mais passons, cela ne vous concerne pas puisque vous avez réussi... Bonne journée @pcname@.}{}{}{}{}
+{71}{Bien, alors au revoir...}{}{5}{}{-6}{}
+
+
+{80}{Vous êtes autorisé à passer @pcname@.}{Vous êtes autorisée à passer @pcname@.}{}{}{}{}

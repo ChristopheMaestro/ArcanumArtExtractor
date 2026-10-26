@@ -1,0 +1,213 @@
+WorldMap Random Encounter Info
+
+
+Saved World Width/Length (Used for when world size changes...)
+{100}{0, 0}
+
+Radii are in tiles.  Here are some usefull values:
+   1600  <-- 25  sectors
+   3160  <-- all the way from The Blimp to Shrouded Hills
+   6400  <-- 100 sectors
+  33550  <-- all the way from Shrouded Hills to Tarant
+
+When referencing a chart, the code uses the smallest circle that
+includes the current location.  This gives the effect of smaller
+circles being on top of larger circles.
+
+Frequency Chart
+{10000}{62243, 65664, 3500, 4%}   Tarant
+
+Power Chart -- Easy/Average/Powerful
+{20000}{62243, 65664, 3500, easy}   Tarant
+{20001}{90224, 84174, 3000, none}  // Shrouded Hills
+{20002}{92960, 82592, 2000, none}  // Blimp
+
+Encounter Index Chart
+{30000}{62243, 65664, 2000, 54}   Tarant
+
+Encounter Tables:
+
+Table Description: Frequency %, Critter Count, Base Proto Num, MinLevel: <value>, MaxLevel: <value>, GlobalFlag: <value>, TriggerCount: <value>
+Note: Frequencies do *NOT* have to add up to 100%, it will roll based on how many it actually gets
+
+(terrain - 1) * (powerMax - 1) * timeOfDayMax +
+(power - 1) * timeOfDayMax +
+timeOfDay
+
+2 * 3 * 9 = 54 terrain based tables
+2 * 3 = 6 tables per terrain
+
+{49999}{3}  // # of Distinct Encounter Tables
+
+  terrainLushGrasslands
+  powerEasy
+  Table 0 Grasslands Day Easy
+{50000}{50%, First: 28339, 1-2}  // Ailing Wolf
+  Table 1 Grasslands Night Easy
+{50100}{50%, First: 28339, 1-2}  // Ailing Wolf
+  powerAverage
+  Table 2 Grasslands Day Average
+{50200}{50%, First: 28339, 1-2}  // Ailing Wolf
+  Table 3 Grasslands Night Average
+{50300}{50%, First: 28339, 1-2}  // Ailing Wolf
+  powerPowerful
+  Table 4 Grasslands Day Powerful
+{50400}{50%, First: 28339, 1-2}  // Ailing Wolf
+  Table 5 Grasslands Night Powerful
+{50500}{50%, First: 28339, 1-2}  // Ailing Wolf
+
+  terrainPlains
+  powerEasy
+  Table 6 Plains Day Easy
+{50600}{50%, First: 28339, 1-2}  // Ailing Wolf
+  Table 7 Plains Night Easy
+{50700}{50%, First: 28339, 1-2}  // Ailing Wolf
+  powerAverage
+  Table 8 Plains Day Average
+{50800}{50%, First: 28339, 1-2}  // Ailing Wolf
+  Table 9 Plains Night Average
+{50900}{50%, First: 28339, 1-2}  // Ailing Wolf
+  powerPowerful
+  Table 10 Plains Day Powerful
+{51000}{50%, First: 28339, 1-2}  // Ailing Wolf
+  Table 11 Plains Night Powerful
+{51100}{50%, First: 28339, 1-2}  // Ailing Wolf
+
+  terrainSwamp
+  powerEasy
+  Table 12
+{51200}{50%, First: 28339, 1-2}  // Ailing Wolf
+  Table 13
+{51300}{50%, First: 28339, 1-2}  // Ailing Wolf
+  powerAverage
+  Table 14
+{51400}{50%, First: 28339, 1-2}  // Ailing Wolf
+  Table 15
+{51500}{50%, First: 28339, 1-2}  // Ailing Wolf
+  powerPowerful
+  Table 16
+{51600}{50%, First: 28339, 1-2}  // Ailing Wolf
+  Table 17
+{51700}{50%, First: 28339, 1-2}  // Ailing Wolf
+
+  terrainElvenForest
+  powerEasy
+  Table 18
+{51800}{50%, First: 28339, 1-2}  // Ailing Wolf
+  Table 19
+{51900}{50%, First: 28339, 1-2}  // Ailing Wolf
+  powerAverage
+  Table 20
+{52000}{50%, First: 28339, 1-2}  // Ailing Wolf
+  Table 21
+{52100}{50%, First: 28339, 1-2}  // Ailing Wolf
+  powerPowerful
+  Table 22
+{52200}{50%, First: 28339, 1-2}  // Ailing Wolf
+  Table 23
+{52300}{50%, First: 28339, 1-2}  // Ailing Wolf
+
+  terrainJungle
+  powerEasy
+  Table 24
+{52400}{50%, First: 28339, 1-2}  // Ailing Wolf
+  Table 25
+{52500}{50%, First: 28339, 1-2}  // Ailing Wolf
+  powerAverage
+  Table 26
+{52600}{50%, First: 28339, 1-2}  // Ailing Wolf
+  Table 27
+{52700}{50%, First: 28339, 1-2}  // Ailing Wolf
+  powerPowerful
+  Table 28
+{52800}{50%, First: 28339, 1-2}  // Ailing Wolf
+  Table 29
+{52900}{50%, First: 28339, 1-2}  // Ailing Wolf
+
+  terrainDesert
+  powerEasy
+  Table 30
+{53000}{50%, First: 28339, 1-2}  // Ailing Wolf
+  Table 31
+{53100}{50%, First: 28339, 1-2}  // Ailing Wolf
+  powerAverage
+  Table 32
+{53200}{50%, First: 28339, 1-2}  // Ailing Wolf
+  Table 33
+{53300}{50%, First: 28339, 1-2}  // Ailing Wolf
+  powerPowerful
+  Table 34
+{53400}{50%, First: 28339, 1-2}  // Ailing Wolf
+  Table 35
+{53500}{50%, First: 28339, 1-2}  // Ailing Wolf
+
+  terrainForest
+  powerEasy
+  Table 36
+{53600}{60%, First: 28339, 1-2}  // Ailing Wolf
+{53601}{20%, First: 28340, 1, MinLevel: 14}    Timber Wolf
+{53602}{24%, First: 28345, 2}  // Lesser Spider
+{53603}{5%, First: 28328, 1}  // Snake Man
+  Table 37
+{53700}{60%, First: 28339, 1-2}  // Ailing Wolf
+{53701}{20%, First: 28340, 1, MinLevel: 14}    Timber Wolf
+{53702}{24%, First: 28345, 2}  // Lesser Spider
+{53703}{5%, First: 28328, 1}  // Snake Man
+  powerAverage
+  Table 38
+{53800}{50%, First: 28339, 1-2}  // Ailing Wolf
+  Table 39
+{53900}{50%, First: 28339, 1-2}  // Ailing Wolf
+  powerPowerful
+  Table 40
+{54000}{50%, First: 28339, 1-2}  // Ailing Wolf
+  Table 41
+{54100}{50%, First: 28339, 1-2}  // Ailing Wolf
+
+  terrainSnowy
+  powerEasy
+  Table 42
+{54200}{50%, First: 28339, 1-2}  // Ailing Wolf
+  Table 43
+{54300}{50%, First: 28339, 1-2}  // Ailing Wolf
+  powerAverage
+  Table 44
+{54400}{50%, First: 28339, 1-2}  // Ailing Wolf
+  Table 45
+{54500}{50%, First: 28339, 1-2}  // Ailing Wolf
+  powerPowerful
+  Table 46
+{54600}{50%, First: 28339, 1-2}  // Ailing Wolf
+  Table 47
+{54700}{50%, First: 28339, 1-2}  // Ailing Wolf
+
+  terrainVoid
+  powerEasy
+  Table 48
+{54800}{50%, First: 28339, 1-2}  // Ailing Wolf
+  Table 49
+{54900}{50%, First: 28339, 1-2}  // Ailing Wolf
+  powerAverage
+  Table 50
+{55000}{50%, First: 28339, 1-2}  // Ailing Wolf
+  Table 51
+{55100}{50%, First: 28339, 1-2}  // Ailing Wolf
+  powerPowerful
+  Table 52
+{55200}{50%, First: 28339, 1-2}  // Ailing Wolf
+  Table 53
+{55300}{50%, First: 28339, 1-2}  // Ailing Wolf
+
+Start of User-Defined Tables:
+Remember to adjust the number of Distinct Encounter Tables at line 49999
+whenever you add a new table.
+
+  Table 54
+{55400}{50%, First: 28339, 1-2}  // Ailing Wolf
+
+  Table 55
+{55500}{50%, First: 28339, 1-2}  // Ailing Wolf
+
+  Table 56
+{55600}{50%, First: 28339, 1-2}  // Ailing Wolf
+

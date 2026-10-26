@@ -1,0 +1,27 @@
+{1}{}{}{}{}{}{}
+{2}{W:}{}{1}{lf0 0}{10}{lf0 1}
+{3}{J'aimerais adopter un animal, est-ce possible ?}{}{5}{lf2 0}{20}{}
+{4}{Moi vouloir avoir animal. Moi pouvoir ?}{}{-4}{lf2 0}{20}{}
+{5}{E:}{}{1}{}{0}{}
+
+{10}{Je suis la propriétaire du refuge de luxe pour animaux d'Holliae.}{Je suis la propriétaire du refuge de luxe pour animaux d'Holliae.}{}{1}{}{}
+{11}{J'aimerais adopter un animal, est-ce possible ?}{}{5}{lf2 0}{20}{}
+{12}{Moi vouloir avoir animal. Moi pouvoir ?}{}{-4}{lf2 0}{20}{}
+{13}{E:}{}{1}{}{0}{}
+
+{20}{Bien sur, quel animal voulait vous adopter ?}{Bien sur, quel animal voulait vous adopter ?}{}{2}{}{}
+{21}{Un chien.}{}{5}{gf1079 0}{30}{}
+{22}{Un chat.}{}{5}{gf1078 0}{40}{}
+{23}{P'tit cabot.}{}{-4}{gf1079 0}{30}{}
+{24}{Matou.}{}{-4}{gf1078 0}{40}{}
+{25}{F:}{}{1}{}{0}{}
+
+{30}{Un chien coûte 75 pièces.}{Un chien coûte 75 pièces.}{}{3}{}{}
+{31}{Y:}{}{1}{lf 1 1, $$75}{-2}{gf1079 1, lf2 1, $$-75}
+{32}{Y:}{}{1}{lf1 0}{-2}{gf1079 1, lf1 1}
+{33}{F:}{}{1}{}{0}{}
+
+{40}{Un chat coûte 75 pièces.}{Un chat coûte 75 pièces.}{}{4}{}{}
+{41}{Y:}{}{1}{lf 1 1}{-2, $$75}{gf1078 1, lf2 1, $$-75}
+{42}{Y:}{}{1}{lf1 0}{-2, $$75}{gf1078 1, lf1 1, $$-75}
+{43}{F:}{}{1}{}{0}{}

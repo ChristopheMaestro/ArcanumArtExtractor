@@ -1,0 +1,159 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Hallo.  Und wer mögt Ihr wohl sein?}{}{5}{me 0, re 41}{23}{}
+{3}{Seid gegrüßt, Maximillian.  Habt Ihr wohl einen Moment Zeit?}{}{5}{me 1, re 41}{26}{}
+{4}{Sire!  Ist das die Art eines Gentleman, einen anderen anzusprechen?}{}{5}{me 0, re -40}{13}{re +5}
+{5}{Ihr schreit nach Prügel mit Eurem Gerede ...}{}{5}{me 0, re -40}{17}{re -5}
+{6}{Maximillian!  Warum diese harten Worte?}{}{5}{me 1, re -40}{13}{}
+{7}{Ihr nehmt das besser zurück, oder Euch erwartet eine Tracht Prügel, Maximillian ...}{}{5}{me 1, re -40}{17}{}
+{9}{Äh, hallo!  Wer Ihr?}{}{-4}{me 0}{23}{}
+{10}{He, Max!  Fragens haben!}{}{-4}{me 1}{26}{}
+{11}{E:}{}{1}{}{0}{}
+{13}{[Er betrachtet dich einen Augenblick, dann nickt er dir zu.]  Ich sehe, Ihr seid eine Person von Rang und guter Erziehung.  Ich habe Euch falsch eingeschätzt, und das tut mir Leid ...}{[Er betrachtet dich einen Augenblick, dann nickt er dir zu.]  Ich sehe, Ihr seid eine Person von Rang und guter Erziehung.  Ich habe Euch falsch eingeschätzt, und das tut mir Leid ...}{}{}{}{}
+{14}{Das ist doch kein Problem, Sire. Dürfte ich wohl Euren Namen erfahren?}{}{5}{me 0}{23}{}
+{15}{Schon vergessen, Maximillian.  Darf ich Euch einige Fragen stellen?}{}{5}{me 1}{26}{}
+{17}{Wirklich?  [Er geht mit gerunzelter Stirn und geballten Fäusten auf dich zu.]  Und wer wird mir Eurer Meinung nach diese Prügel verabreichen, Jungchen?}{Wirklich?  [Er geht mit gerunzelter Stirn und geballten Fäusten auf dich zu.]  Und wer wird mir Eurer Meinung nach diese Prügel verabreichen, Weib?}{}{}{}{}
+{18}{Ich, alter Mann.  Macht Euch bereit ...}{}{5}{}{}{co, fl 21}
+{19}{Bitte ... können wir nicht wie zivilisierte Leute miteinander sprechen?}{}{5}{}{13}{re +10}
+{21}{Niemand spricht so mit Maximillian, Jungchen.  Das heißt Tod ...}{Niemand spricht so mit Maximillian, Weib.  Das heißt Tod ...}{}{}{}{}
+{23}{[Der Mann vor dir ist alt, wirkt jedoch stark und würdevoll.  Er scheint alles an dir mit einem Blick aufzunehmen und einzuschätzen, was er da vor sich sieht.]  Ich heiße Maximillian. }{[Der Mann vor dir ist alt, wirkt jedoch stark und würdevoll.  Er scheint alles an dir mit einem Blick aufzunehmen und einzuschätzen, was er da vor sich sieht.]  Ich heiße Maximillian. }{}{}{}{}
+{24}{Es ist mir ein Vergnügen, Maximillian.  Darf ich Euch einige Fragen stellen?}{}{5}{}{26}{}
+{25}{Hallo, Max!  Ich Euch Fragens fragen?}{}{-4}{}{26}{}
+{26}{Natürlich ...}{Natürlich ...}{}{}{}{}
+{27}{Was tut Ihr hier draußen?}{}{5}{lf1 0, lc1 0, lf3 0}{49}{}
+{28}{Ich habe mit Norian in der Stadt gesprochen ... Er erwähnte, dass Ihr hier draußen leben würdet ...}{}{5}{qu1070 1}{43}{re -5}
+{29}{Ich bringe Euch einen Krug Fusel von Norian ...}{}{5}{qu1070 2, in 3602, lf6 0}{37}{lf6 1, in 3602, re +5}
+{30}{Könnten wir unsere Unterhaltung von vorhin fortführen ...?}{}{5}{lf3 0, lf1 1}{180}{}
+{32}{Was Ihr hier draußen tun, Max?}{}{-4}{}{49}{}
+{33}{Ich Euch bringen Krug mi' Fussels!}{}{-4}{qu1070 2, in 3602}{37}{lf6 1, in 3602, re +5}
+{34}{E:}{}{1}{}{0}{}
+{37}{Wirklich?  Das heißt also, dass Norian nicht Manns genug ist, um ihn selbst zu liefern?  (Maximillian lacht.)  Ich kann ihm da keinen Vorwurf machen ... Die Wildnis ist kein Ort, an dem man seinen Hals für einen Krug Kartoffelschnaps riskiert.  Ich weiß das zu schätzen, Fremdling.  Er will doch bestimmt eine Quittung haben, was?  Aber natürlich ... hier, bitte sehr.  [Er gibt dir einen Zettel.]}{Wirklich?  Das heißt also, dass Norian nicht Manns genug ist, um ihn selbst zu liefern?  (Maximillian lacht.)  Ich kann ihm da keinen Vorwurf machen ... Die Wildnis ist kein Ort, an dem man seinen Hals für einen Krug Kartoffelschnaps riskiert.  Ich weiß das zu schätzen, Fremdling.  Er will doch bestimmt eine Quittung haben, was?  Aber natürlich ... hier, bitte sehr.  [Er gibt dir einen Zettel.]}{}{}{}{in -5223, lf5 1}
+{38}{Vielen Dank.  Darf ich Euch einige Fragen stellen?}{}{5}{}{26}{}
+{40}{Dankie!  Ich Euch paar Fragens fragen?}{}{-4}{}{26}{}
+{41}{E:}{}{1}{}{0}{}
+{43}{Wirklich?  [Er scheint ein bisschen ärgerlich.]  Wie kommt Norian dazu, über mich zu sprechen?  Ich will nur in Ruhe gelassen werden.  Sogar hier draußen in der Wildnis lässt man mich nicht in Frieden ...}{Wirklich?  [Er scheint ein bisschen ärgerlich.]  Wie kommt Norian dazu, über mich zu sprechen?  Ich will nur in Ruhe gelassen werden.  Sogar hier draußen in der Wildnis lässt man mich nicht in Frieden ...}{}{}{}{}
+{44}{Warum lebt Ihr so ganz allein hier draußen? }{}{5}{}{49}{}
+{45}{Ich verstehe.  Gut, dann werde ich Euch in Ruhe lassen.  Einen schönen Tag noch ...}{}{5}{}{0}{}
+{46}{Warum Ihr hier draußen so allein sein, Max?}{}{-4}{}{49}{}
+{47}{E:}{}{-4}{}{0}{}
+{49}{Das geht nur mich etwas an, Freund.  Die Insel der Verzweiflung ist kein Ort, an dem man einen Mann nach seiner Vergangenheit fragt.  Ich empfehle, dass Ihr Euch um Euren eigenen Kram kümmert, Sire.}{Das geht nur mich etwas an, Madame.  Die Insel der Verzweiflung ist kein Ort, an dem man einen Mann nach seiner Vergangenheit fragt.  Ich empfehle, dass Ihr Euch um Euren eigenen Kram kümmert.}{}{}{}{}
+{50}{Jeder Mann hat seine Geheimnisse.  Glaubt mir, ich verstehe das ...}{}{5}{}{74}{re +5}
+{51}{Vielleicht könnt Ihr mich etwas näher mit den Gedankengängen eines Verbrechers vertraut machen ...}{}{5}{}{57}{re -10}
+{52}{Ich zweifle nicht daran, dass Ihr eine Menge zu verbergen habt, Sire ...}{}{5}{}{67}{re -5}
+{54}{Äh ... fein!  Ich Euch noch paar Fragens fragen ...?}{}{-4}{}{26}{}
+{55}{E:}{}{1}{}{0}{}
+{57}{[Er tritt einen Schritt näher, baut sich vor dir auf.]  Was?  Wollt Ihr damit andeuten, dass ich ein Verbrecher wäre?  Ihr wisst überhaupt nichts über mich.  Ich rate Euch dringend, über Eure Worte nachzudenken ... Ich bin kein Mann, der sich beleidigen lässt ...}{[Er tritt einen Schritt näher, baut sich vor dir auf.]  Was?  Wollt Ihr damit andeuten, dass ich ein Verbrecher wäre?  Ihr wisst überhaupt nichts über mich.  Ich rate Euch dringend, über Eure Worte nachzudenken ... Ich bin kein Mann, der sich beleidigen lässt ...}{}{}{}{}
+{58}{Ich will keinen Ärger, wirklich nicht.  Wenn Ihr kein Verbrecher seid, was seid Ihr dann?}{}{5}{}{62}{}
+{59}{Ich kenne mich mit verbrecherischem Abschaum wie Euch aus.  Geht aus dem Weg.}{}{5}{}{}{co, fl 21}
+{60}{E:}{}{5}{}{0}{}
+{62}{Ich sagte es Euch doch bereits ... Ich möchte nicht darüber reden.  Besonders nicht mit den Bewohnern dieser gottverdammten Insel.  Nicht einer ist unter Euch, der verstehen würde, was ich durchgemacht habe ...}{Ich sagte es Euch doch bereits ... Ich möchte nicht darüber reden.  Besonders nicht mit den Bewohnern dieser gottverdammten Insel.  Nicht einer ist unter Euch, der verstehen würde, was ich durchgemacht habe ...}{}{}{}{}
+{63}{Ich bin davon überzeugt, dass Ihr Recht habt.  Ich habe selbst eine Menge durchgemacht ...}{}{5}{}{67}{}
+{64}{Euer Selbstmitleid geht mir auf die Nerven, alter Mann ...}{}{5}{}{}{co, fl 21}
+{65}{E:}{}{5}{}{0}{}
+{67}{[Er grinst dich an.]  Seid nicht gleich beleidigt, junger Mann, aber habt Ihr eigentlich die leiseste Ahnung davon, wie mein Leben hier ist oder wie es einmal war?  Zweifellos wurdet Ihr wegen eines schändlichen Vergehens hierher verschifft ... Diebstahl oder Mord vielleicht ...  Ihr seid doch alle gleich ...}{[Er grinst dich an.]  Seid nicht gleich beleidigt, junge Dame, aber habt Ihr eigentlich die leiseste Ahnung davon, wie mein Leben hier ist oder wie es einmal war?  Zweifellos wurdet Ihr wegen eines schändlichen Vergehens hierher verschifft ... Diebstahl oder Mord vielleicht ...  Ihr seid doch alle gleich ...}{}{}{}{}
+{68}{Ich bin eigentlich aus eigenem Antrieb hier ...}{}{5}{}{187}{}
+{69}{Ihr stellt ungerechtfertigte Vermutungen auf.  Typischer Fehler junger Menschen ...}{}{5}{ch 15}{74}{re +5}
+{70}{Ihr stellt ungerechtfertigte Vermutungen auf.  Typischer Fehler junger Menschen ...}{}{5}{ch -14}{79}{re -5}
+{71}{Alte Männer sind auch alle gleich ... senil und schwach ...}{}{5}{}{}{co, fl 21}
+{72}{E:}{}{5}{}{0}{}
+{74}{[Er scheint ein bisschen überrascht.  Er mustert dich mit scharfem Blick und beurteilt dich aufs Neue.]  Ihr habt Recht.  Bitte verzeiht mir meine Kurzsichtigkeit.  Zweifellos habt Ihr auch Dinge von Wert anzubieten.  Vielleicht haben wir ja doch noch etwas miteinander zu besprechen ...}{[Er scheint ein bisschen überrascht.  Er mustert dich mit scharfem Blick und beurteilt dich aufs Neue.]  Ihr habt Recht.  Bitte verzeiht mir meine Kurzsichtigkeit.  Zweifellos habt Ihr auch Dinge von Wert anzubieten.  Vielleicht haben wir ja doch noch etwas miteinander zu besprechen ...}{}{}{}{}
+{75}{Das würde mich freuen.  Erzählt mir von Euch, Maximillian ...}{}{5}{}{89}{}
+{76}{Das bezweifle ich.  Perversen wie Euch vertraue ich mich nicht an ...}{}{5}{}{}{co, fl 21}
+{77}{Vielleicht später.  Ich werde dann mal zurückkommen ...}{}{5}{}{0}{lf1 1}
+{79}{[Dein Kommentar verärgert ihn.]  Und wer seid Ihr, dass Ihr mich verurteilt?  Ihr besitzt nicht die Reife, um eine solche Ansicht zu vertreten, mein Junge.  Vielleicht ist es besser, wenn Ihr jetzt geht ...}{[Dein Kommentar verärgert ihn.]  Und wer seid Ihr, dass Ihr mich verurteilt?  Ihr besitzt nicht die Reife, um eine solche Ansicht zu vertreten, Mädchen.  Vielleicht ist es besser, wenn Ihr jetzt geht ...}{}{}{}{}
+{80}{Weisheit wird nicht nur anhand des Alters, sondern auch anhand der Worte gemessen ...}{}{5}{}{74}{re +10}
+{81}{Alter Wein ist süffig, aber noch älterer Wein sauer ...}{}{5}{}{}{re -5, fl 85}
+{82}{Ich habe genug von Euren Worten, alter Mann.  Ich werde jetzt damit Schluss machen ...}{}{5}{}{}{co, fl 21}
+{83}{E:}{}{5}{}{0}{}
+{85}{Diese Unterhaltung ist beendet.  Ihr geht besser, und zwar sofort.  Ich werde Euch nicht noch einmal warnen ...}{Diese Unterhaltung ist beendet.  Ihr geht besser, und zwar sofort.  Ich werde Euch nicht noch einmal warnen ...}{}{}{}{}
+{89}{Vielleicht ist jetzt der rechte Zeitpunkt für eine Geschichte.  Aber verzeiht mir, wenn ich mich in Gesellschaft nicht sehr wohl fühle.  Ich habe viele Jahre ganz allein hier draußen verbracht.  Dürfte ich Euch bitten, dass Ihr mir zunächst etwas von Euch erzählt, bevor ich beginne?}{Vielleicht ist jetzt der rechte Zeitpunkt für eine Geschichte.  Aber verzeiht mir, wenn ich mich in Gesellschaft nicht sehr wohl fühle.  Ich habe viele Jahre ganz allein hier draußen verbracht.  Dürfte ich Euch bitten, dass Ihr mir zunächst etwas von Euch erzählt, bevor ich beginne?}{}{}{}{}
+{90}{Ich möchte lieber nicht über meine Vergangenheit oder die Gründe meines Hierseins sprechen ...}{}{5}{}{}{lf2 1, re -5, fl 94}
+{91}{Natürlich.  Es begann vor langer Zeit ... [Du erzählst ihm deine Geschichte.]}{}{5}{}{96}{re +5}
+{92}{Vielleicht ein andermal.  Ich komme später zurück.}{}{5}{}{0}{lf1 1, lc1 1, fl 93}
+{93}{Ja ... ich wäre durchaus daran interessiert, noch einmal mit Euch zu sprechen ... Bitte kommt wieder ...}{Ja ... ich wäre durchaus daran interessiert, noch einmal mit Euch zu sprechen ... Bitte kommt wieder ...}{}{}{}{}
+{94}{Das tut mir wirklich Leid.  Vielleicht habe ich Euch falsch eingeschätzt.  Möglicherweise sollten wir uns lieber überhaupt nicht unterhalten.  Ich entbiete Euch einen schönen Tag ...}{Das tut mir wirklich Leid.  Vielleicht habe ich Euch falsch eingeschätzt.  Möglicherweise sollten wir uns lieber überhaupt nicht unterhalten.  Ich entbiete Euch einen schönen Tag ...}{}{}{}{}
+{95}{Ich denke, wir haben genug besprochen.  Lasst mich in Ruhe ...}{Ich denke, wir haben genug besprochen.  Lasst mich in Ruhe ...}{}{}{}{}
+{96}{[Er schweigt eine ganze Weile.  Dann ...]  Scheint, als wären düstere Zeiten über Arcanum hereingebrochen.  Und Ihr seid irgendwie in diese Probleme verstrickt.  Ihr seid sehr mutig, Sire.  Es gibt nur wenige, die getan hätten, was Ihr getan habt ...}{[Er schweigt eine ganze Weile.  Dann ...]  Scheint, als wären düstere Zeiten über Arcanum hereingebrochen.  Und Ihr seid irgendwie in diese Probleme verstrickt.  Ihr seid sehr mutig, Madame.  Es gibt nur wenige, die getan hätten, was Ihr getan habt ...}{}{}{}{}
+{97}{Ich möchte nur, dass die Leute damit aufhören, mich umbringen zu wollen ...}{}{5}{}{101}{}
+{98}{Tugend und Tapferkeit lassen gar keine andere Handlungsweise zu ...}{}{5}{}{104}{re +5}
+{99}{Meine Gründe gehen Euch nichts an.  Ihr solltet Euch über sie kein Urteil erlauben ...}{}{5}{}{101}{re -5}
+{101}{Wir haben alle unsere Gründe, nehme ich an.  Es liegt mir nicht, die eine oder andere Seite zu verurteilen.  Aber ich weiß, dass ein Mann am Ende immer das Ergebnis seiner Taten ist.  Auch Ihr werdet einst auf diese Weise beurteilt ...}{Wir haben alle unsere Gründe, nehme ich an.  Es liegt mir nicht, die eine oder andere Seite zu verurteilen.  Aber ich weiß, dass eine Person am Ende immer das Ergebnis ihrer Taten ist.  Auch Ihr werdet einst auf diese Weise beurteilt ...}{}{}{}{}
+{102}{Warum wollt Ihr mir Eure Geschichte nicht erzählen, Maximillian ...?}{}{5}{}{107}{}
+{104}{[Maximillian lächelt.]  Ihr wisst ja gar nicht, wie erfrischend es ist, jemanden in dieser edlen Art sprechen zu hören, Sire.  Es gab Jahre, in denen ich glaubte, dass es in diesem Land niemanden mehr geben würde, der überhaupt wusste, was diese Worte bedeuten ...}{[Maximillian lächelt.]  Ihr wisst ja gar nicht, wie erfrischend es ist, jemanden in dieser edlen Art sprechen zu hören, Madame.  Es gab Jahre, in denen ich glaubte, dass es in diesem Land niemanden mehr geben würde, der überhaupt wusste, was diese Worte bedeuten ...}{}{}{}{}
+{105}{Warum wollt Ihr mir Eure Geschichte nicht erzählen, Maximillian ...?}{}{5}{}{107}{}
+{107}{Ja ... es ist lang überfällig, dass ich jemandem meine Geschichte erzähle.  Sagt mir ... wisst Ihr irgendetwas über das Königreich Kumbrien?  Oder dessen Hauptstadt Dernholm?  König Praetor den Ersten?}{Ja ... es ist lang überfällig, dass ich jemandem meine Geschichte erzähle.  Sagt mir ... wisst Ihr irgendetwas über das Königreich Kumbrien?  Oder dessen Hauptstadt Dernholm?  König Praetor den Ersten?}{}{}{}{}
+{108}{Ich habe ein paar Dinge über diesen Ort gehört, aber ich weiß nur wenig darüber ...}{}{5}{}{112}{}
+{109}{Ich bin schon einmal dort gewesen ...}{}{5}{}{112}{}
+{110}{Ich weiß nichts über Kumbrien ...}{}{5}{}{112}{}
+{112}{Ich verstehe.  Das Kumbrien, von dem ich spreche, war ein komplett anderes Land ... ganz anders als das, was es heute ist, da bin ich mir sicher.  Ich spreche von einer Zeit, als Kumbrien noch ein mächtiges Königreich war, als Elfen und Zwerge kamen, um ihrem König Tribut zu zahlen.  Als die Banner der ruhmreichen Drachenritter noch respektiert und gefürchtet waren ...}{Ich verstehe.  Das Kumbrien, von dem ich spreche, war ein komplett anderes Land ... ganz anders als das, was es heute ist, da bin ich mir sicher.  Ich spreche von einer Zeit, als Kumbrien noch ein mächtiges Königreich war, als Elfen und Zwerge kamen, um ihrem König Tribut zu zahlen.  Als die Banner der ruhmreichen Drachenritter noch respektiert und gefürchtet waren ...}{}{}{}{}
+{113}{Ich nehme an, dieses Kumbrien gibt es heute nicht mehr?}{}{5}{}{116}{}
+{114}{Ich habe Kumbrien gesehen ... es ist nicht annähernd so, wie Ihr es beschreibt ...}{}{5}{}{116}{}
+{116}{Nein ... es gibt keinen Zweifel, dass Kumbrien nur noch ein Schatten seines ehemaligen Ruhmes ist.  Der Tag, an dem sein Schicksal besiegelt wurde, liegt schon lange zurück.  Es war der Tag, als die Technologie begann, gegen Magie zu rivalisieren, als die alten Sitten den neuen zum Opfer fielen ...}{Nein ... es gibt keinen Zweifel, dass Kumbrien nur noch ein Schatten seines ehemaligen Ruhmes ist.  Der Tag, an dem sein Schicksal besiegelt wurde, liegt schon lange zurück.  Es war der Tag, als die Technologie begann, gegen Magie zu rivalisieren, als die alten Sitten den neuen zum Opfer fielen ...}{}{}{}{}
+{117}{Was ist passiert?  Hat Kumbrien diesem Wandel widerstanden?}{}{5}{}{120}{}
+{118}{Wir sollten später darüber reden ...}{}{5}{}{}{lc1 2, fl 178}
+{120}{Ja, und zwar vehement.  Mein ... der König damals war Torren, ein weiser und mutiger Mann, aber unbeweglich in seiner Art. [Maximillian lächelt traurig.]  Er war aus härterem Holz geschnitzt, aber er war wie ein Felsen ... unerschütterlich, aber unflexibel.  Er sah nicht, dass Kumbrien wachsen, sich verändern musste ...}{Ja, und zwar vehement.  Mein ... der König damals war Torren, ein weiser und mutiger Mann, aber unbeweglich in seiner Art. [Maximillian lächelt traurig.]  Er war aus härterem Holz geschnitzt, aber er war wie ein Felsen ... unerschütterlich, aber unflexibel.  Er sah nicht, dass Kumbrien wachsen, sich verändern musste ...}{}{}{}{}
+{121}{Und dann?}{}{5}{}{123}{}
+{123}{Und dann verabschiedete er Gesetze, durch die Technologie in seinem Land für ungesetzlich erklärt wurde, und setzte ein Regierungsorgan aus beratenden Magiern an seiner Seite ein.  Über viele Jahre hinweg war Kumbrien immer noch stark und einflussreich, aber es war nur eine Frage der Zeit ...}{Und dann verabschiedete er Gesetze, durch die Technologie in seinem Land für ungesetzlich erklärt wurde, und setzte ein Regierungsorgan aus beratenden Magiern an seiner Seite ein.  Über viele Jahre hinweg war Kumbrien immer noch stark und einflussreich, aber es war nur eine Frage der Zeit ...}{}{}{}{}
+{124}{Was ist passiert?}{}{5}{}{127}{}
+{125}{Wir sollten später darüber reden ...}{}{5}{}{}{lc1 3, fl 178}
+{127}{Nun ja, Kumbrien wurde sowohl in puncto Handel als auch Macht überholt.  Als das mächtige Tarant verlangte, mehrere strittige Regionen freizugeben, wurde Kumbrien eine harte Lektion erteilt.  Die Armee von Kumbrien wurde niedergemetzelt, die Drachenritter vom Feuer der Gewehre und Kanonen umgemäht.  Der Ruhm früherer Tage war dahin ...}{Nun ja, Kumbrien wurde sowohl in puncto Handel als auch Macht überholt.  Als das mächtige Tarant verlangte, mehrere strittige Regionen freizugeben, wurde Kumbrien eine harte Lektion erteilt.  Die Armee von Kumbrien wurde niedergemetzelt, die Drachenritter vom Feuer der Gewehre und Kanonen umgemäht.  Der Ruhm früherer Tage war dahin ...}{}{}{}{}
+{128}{Und König Torren?  Was wurde aus ihm?}{}{5}{}{131}{}
+{131}{[Maximillian blickt geistesabwesend zum Horizont.]  Er wurde getötet.  Er führte die letzte Angriffswelle der Drachenritter an und wurde genau wie ein gewöhnlicher Soldat erschossen.  Unerschütterlich und mutig bis zum Schluss ...}{[Maximillian blickt geistesabwesend zum Horizont.]  Er wurde getötet.  Er führte die letzte Angriffswelle der Drachenritter an und wurde genau wie ein gewöhnlicher Soldat erschossen.  Unerschütterlich und mutig bis zum Schluss ...}{}{}{}{}
+{132}{Ich verstehe.  Was hat das alles mit Euch zu tun, Maximillian ...?}{}{5}{}{135}{}
+{133}{Wir sollten später darüber reden ...}{}{5}{}{}{lc1 4, fl 178}
+{135}{[Er scheint sich zu besinnen und sieht dich wieder an.]  Mit dem Tod von Torren begann ein Kampf um die Macht. Da waren diejenigen, die der Meinung waren, dass Kumbrien das neue Zeitalter willkommen heißen sollte, um einen besseren Weg zu finden und es so mächtig wie früher zu machen ...}{[Er scheint sich zu besinnen und sieht dich wieder an.]  Mit dem Tod von Torren begann ein Kampf um die Macht. Da waren diejenigen, die der Meinung waren, dass Kumbrien das neue Zeitalter willkommen heißen sollte, um einen besseren Weg zu finden und es so mächtig wie früher zu machen ...}{}{}{}{}
+{136}{Aber andere wiederum dachten da anders ...?}{}{5}{}{138}{}
+{138}{Ja.  Einige Leute können die Antwort nicht erkennen, selbst wenn sie in Gestalt eines toten Königs vor ihnen liegt.  Torren hatte zwei Söhne ... der ältere Sohn glaubte an die neuen Wege, und der jüngere Sohn glaubte an gar nichts.  Und deshalb stellte der Magier-Rat, den Torren ins Leben gerufen hatte, sich mit seinem Einfluss hinter den jüngeren Sohn ...}{Ja.  Einige Leute können die Antwort nicht erkennen, selbst wenn sie in Gestalt eines toten Königs vor ihnen liegt.  Torren hatte zwei Söhne ... der ältere Sohn glaubte an die neuen Wege, und der jüngere Sohn glaubte an gar nichts.  Und deshalb stellte der Magier-Rat, den Torren ins Leben gerufen hatte, sich mit seinem Einfluss hinter den jüngeren Sohn ...}{}{}{}{}
+{139}{War nicht der ältere Sohn durch das Geburtsrecht Erbe des Throns?}{}{5}{}{146}{}
+{140}{Wartet ... ich verstehe das Ganze noch nicht so ganz ...}{}{5}{}{143}{}
+{141}{Wir sollten später darüber reden ...}{}{5}{}{}{lc1 5, fl 178}
+{143}{Kumbrien war vor dem Aufblühen der Technologie ein mächtiges Königreich.  König Torren widerstand den Veränderungen, die sich in der Welt abzeichneten, und verbot die Benutzung von Technologie.  Er starb im Kampf gegen Tarant, und seine beiden Söhne stritten sich um den Thron.}{Kumbrien war vor dem Aufblühen der Technologie ein mächtiges Königreich.  König Torren widerstand den Veränderungen, die sich in der Welt abzeichneten, und verbot die Benutzung von Technologie.  Er starb im Kampf gegen Tarant, und seine beiden Söhne stritten sich um den Thron.}{}{}{}{}
+{144}{Vielen Dank.  Aber war nicht der ältere Sohn Erbe des Throns?}{}{5}{}{146}{}
+{146}{Ja, aber um an die Macht zu kommen, werden immer wieder alle möglichen Bösartigkeiten ersonnen.  Der Magier-Rat, der den jüngeren Sohn kontrollierte, stellte falsche Behauptungen gegenüber dem älteren Sohn auf, indem er ihn des Verrats bezichtigte.  Sie kamen in der Nacht, um ihn zu holen, und warfen ihn ins Gefängnis, wo er für den Rest seiner Tage verrotten sollte ...}{Ja, aber um an die Macht zu kommen, werden immer wieder alle möglichen Bösartigkeiten ersonnen.  Der Magier-Rat, der den jüngeren Sohn kontrollierte, stellte falsche Behauptungen gegenüber dem älteren Sohn auf, indem er ihn des Verrats bezichtigte.  Sie kamen in der Nacht, um ihn zu holen, und warfen ihn ins Gefängnis, wo er für den Rest seiner Tage verrotten sollte ...}{}{}{}{}
+{147}{Der ältere Sohn ... bei allen Göttern ...!}{}{5}{}{149}{}
+{149}{Ja, Fremdling.  Dieser ältere Sohn war ich. Ich wurde von meinem eigenen Bruder, König Praetor dem Ersten von Kumbrien hierher geschickt.  Und seitdem friste ich hier mein Leben ...}{Ja, Fremdling.  Dieser ältere Sohn war ich. Ich wurde von meinem eigenen Bruder, König Praetor dem Ersten von Kumbrien hierher geschickt.  Und seitdem friste ich hier mein Leben ...}{}{}{}{}
+{150}{Ich weiß nicht, was ich sagen soll.  Mir fehlen die Worte ...}{}{5}{}{154}{re +5}
+{151}{Das sind eben die Unwägbarkeiten der Politik, Maximillian.}{}{5}{}{158}{re -5}
+{152}{Das ist ja furchtbar, alter Junge.  Tja ... Und jetzt muss ich gehen ...}{}{5}{}{161}{re -5}
+{154}{Es sind keine Worte nötig.  Ihr habt genug für mich getan, indem Ihr hier gesessen und Euch meine Geschichte angehört habt.  Ich habe meinen Frieden mit meiner Vergangenheit gemacht ... Das Leben hier auf der Insel ist hart, aber ein Mann kann lernen, nur mit sich selbst zu leben und zu akzeptieren, was das Leben ihm bietet. }{Es sind keine Worte nötig.  Ihr habt genug für mich getan, indem Ihr hier gesessen und Euch meine Geschichte angehört habt.  Ich habe meinen Frieden mit meiner Vergangenheit gemacht ... Das Leben hier auf der Insel ist hart, aber ein Mann kann lernen, nur mit sich selbst zu leben und zu akzeptieren, was das Leben ihm bietet. }{}{}{}{}
+{155}{Aber das war einfach nicht fair.  Könnte ich Euch nicht vielleicht nach Hause bringen ...?}{}{5}{}{164}{}
+{156}{Ich verstehe.  Und jetzt muss ich gehen, Maximillian ...}{}{5}{}{161}{}
+{158}{Das ist eine ziemlich oberflächliche Einschätzung meiner Situation.  Ich habe kein weiteres Interesse daran, darüber zu sprechen ...}{Das ist eine ziemlich oberflächliche Einschätzung meiner Situation.  Ich habe kein weiteres Interesse daran, darüber zu sprechen ...}{}{}{}{}
+{159}{Ich ebenfalls nicht. Einen schönen Tag noch.}{}{5}{}{}{lf2 1, fl 94}
+{160}{Wartet ... verzeiht meine Beleidigung.  Könnte ich Euch nicht vielleicht nach Hause bringen ...?}{}{5}{}{164}{}
+{161}{[Er scheint ein bisschen enttäuscht, aber nicht übermäßig.]  Ich verstehe.  Tja, ich bin froh, dass Ihr hier wart, um Euch meine Geschichte anzuhören.  Jetzt kann ich in Frieden ruhen, da meine Erinnerungen nicht mit mir sterben werden. Dafür danke ich Euch ...}{[Er scheint ein bisschen enttäuscht, aber nicht übermäßig.]  Ich verstehe.  Tja, ich bin froh, dass Ihr hier wart, um Euch meine Geschichte anzuhören.  Jetzt kann ich in Frieden ruhen, da meine Erinnerungen nicht mit mir sterben werden. Dafür danke ich Euch ...}{}{}{}{}
+{162}{Einen schönen Tag noch, Maximillian ...}{}{5}{}{0}{lf4 1}
+{164}{Nein. Meine Zeit in Kumbrien ist vorbei.  Falls mein Bruder noch am Leben ist, bin ich sicher, dass er den Preis dafür schon bezahlt hat.  Er war jung und töricht ... Wenn jemand König ist, zeigt das Leben keine Gnade, wenn Ihr es so führt ...}{Nein. Meine Zeit in Kumbrien ist vorbei.  Falls mein Bruder noch am Leben ist, bin ich sicher, dass er den Preis dafür schon bezahlt hat.  Er war jung und töricht ... Wenn jemand König ist, zeigt das Leben keine Gnade, wenn Ihr es so führt ...}{}{}{}{}
+{165}{Aber Kumbrien ... vielleicht braucht Euch das Königreich heute immer noch ...}{}{5}{}{167}{}
+{167}{[Er blickt dich an und starrt anschließend nach Westen.]  Ich kann es immer noch in meinem Herzen fühlen, wisst Ihr ... die steinernen Mauern von Dernholm, die wogenden Hügel und Täler, der Trompetenschall der ins Gefecht ziehenden Drachenritter ...  Manchmal wache ich auf und vergesse, wo ich bin ...}{[Er blickt dich an und starrt anschließend nach Westen.]  Ich kann es immer noch in meinem Herzen fühlen, wisst Ihr ... die steinernen Mauern von Dernholm, die wogenden Hügel und Täler, der Trompetenschall der ins Gefecht ziehenden Drachenritter ...  Manchmal wache ich auf und vergesse, wo ich bin ...}{}{}{}{}
+{168}{Kommt mit mir zurück, Maximillian.  Es ist noch nicht zu spät ...}{}{5}{}{170}{}
+{170}{[Er blickt wieder fort.]  Möglicherweise.  Ich werde Euch um etwas bitten.  Der Hauptmann der Drachenritter war ein Mann namens Warren Pel Dar.  Er war mein einziger echter Freund.  Falls er noch am Leben sein sollte und es ihn interessiert, sagt ihm, dass ich hier lebe, und dass ich mich gern wieder seiner Anwesenheit erfreuen würde ...}{[Er blickt wieder fort.]  Möglicherweise.  Ich werde Euch um etwas bitten.  Der Hauptmann der Drachenritter war ein Mann namens Warren Pel Dar.  Er war mein einziger echter Freund.  Falls er noch am Leben sein sollte und es ihn interessiert, sagt ihm, dass ich hier lebe, und dass ich mich gern wieder seiner Anwesenheit erfreuen würde ...}{}{}{}{}
+{171}{Ich bin bereits über Warren Pel Dar im Bilde ... [Du erzählst ihm von Lianna.]}{}{5}{gf2750 1}{195}{}
+{172}{Das werde ich, Maximillian.  Ich schwöre es Euch ...}{}{5}{gf2750 0}{174}{qu1072 2, re +5}
+{173}{Ich werde mich der Sache annehmen, sobald es mir möglich ist ...}{}{5}{gf2750 0}{174}{qu1072 1}
+{174}{Ich danke Euch.  Und falls er tot sein sollte, dann vergesst mich. Ich habe nicht den Wunsch, nach Kumbrien zurückzukehren, wo es keine Männer seiner Art mehr gibt ...}{Ich danke Euch.  Und falls er tot sein sollte, dann vergesst mich. Ich habe nicht den Wunsch, nach Kumbrien zurückzukehren, wo es keine Männer seiner Art mehr gibt ...}{}{}{}{}
+{175}{Ich verstehe.  Darf ich Euch noch einige Fragen stellen?}{}{5}{}{26}{lf3 1}
+{176}{E:}{}{5}{}{0}{lf3 1}
+{178}{Ja.  Es gibt noch so viel, was ich Euch erzählen möchte.  Wir werden später noch einmal darüber sprechen ...}{Ja.  Es gibt noch so viel, was ich Euch erzählen möchte.  Wir werden später noch einmal darüber sprechen ...}{}{}{}{}
+{180}{Klar doch.  Wo waren wir stehen geblieben?}{Klar doch.  Wo waren wir stehen geblieben?}{}{}{}{}
+{181}{Ihr wolltet mir gerade von Eurer Vergangenheit erzählen ...}{}{5}{lc1 1}{89}{}
+{182}{Ihr spracht davon, wie Kumbrien den Veränderungen widerstand ...}{}{5}{lc1 2}{120}{}
+{183}{Ihr erzähltet mir davon, wie König Torren die Technologie für gesetzwidrig erklärte ...}{}{5}{lc1 3}{127}{}
+{184}{Ich habe mich gefragt, was Kumbrien wohl mit Euch zu tun hatte ...}{}{5}{lc1 4}{135}{}
+{185}{War nicht der ältere von Torrens zwei Söhnen der Erbe des Throns?}{}{5}{lc1 5}{146}{}
+{186}{E:}{}{5}{}{0}{}
+{187}{Niemand kommt aus eigenem Antrieb auf diese Insel ... Wir sind hier alle Gefangene, und Gefangene werden wir auch bleiben ...}{Niemand kommt aus eigenem Antrieb auf diese Insel ... Wir sind hier alle Gefangene, und Gefangene werden wir auch bleiben ...}{}{}{}{}
+{188}{Warum nehmt Ihr an, dass Ihr mich oder meine Geschichte kennt?}{}{5}{}{74}{re +5}
+{189}{Ihr sehe, dass Euch die Gefangenschaft bitter und blind gemacht hat ...}{}{5}{}{79}{re -5}
+{190}{Ich bin davon überzeugt, dass Ihr Recht habt.  Ich werde Euch in Ruhe lassen ...}{}{5}{}{0}{}
+{192}{Lebt wohl.  Vielleicht sehen wir uns eines Tages wieder ...}{Lebt wohl.  Vielleicht sehen wir uns eines Tages wieder ...}{}{}{}{}
+{195}{[Trauer überschattet sein Gesicht.]  Oh ... mein alter Freund ist tot.  Er wird uns sehr fehlen.  Aber diese Lianna ... seine Tochter, sagt Ihr?  Erzählt mir von ihr ... wie ist sie?}{[Trauer überschattet sein Gesicht.]  Oh ... mein alter Freund ist tot.  Er wird uns sehr fehlen.  Aber diese Lianna ... seine Tochter, sagt Ihr?  Erzählt mir von ihr ... wie ist sie?}{}{}{}{}
+{196}{Sie ist eine Kriegerin, genau wie ihr Vater ein Krieger war ...}{}{5}{gf2685 0}{200}{}
+{197}{Sie ist nicht besonders erwähnenswert.  Hatte ich erwähnt, dass ich sie getötet habe?}{}{5}{gf2685 1}{}{co, fl 210}
+{198}{Äh ... ich kann mich nicht erinnern, wirklich nicht ...}{}{5}{gf2685 1}{}{}
+{200}{Ich verstehe.  [Er lächelt.]  Vielleicht gibt es in Kumbrien doch noch ein tapferes Herz.  Wenn es Euch genehm ist, geht zu Lianna Pel Dar und sagt ihr, dass ich hier bin.  Wer weiß, wozu das gut sein wird ...  [Du siehst, wie sein Blick hart wird.  Stolz.]}{Ich verstehe.  [Er lächelt.]  Vielleicht gibt es in Kumbrien doch noch ein tapferes Herz.  Wenn es Euch genehm ist, geht zu Lianna Pel Dar und sagt ihr, dass ich hier bin.  Wer weiß, wozu das gut sein wird ...  [Du siehst, wie sein Blick hart wird.  Stolz.]}{}{}{}{qu1164 1}
+{201}{Das werde ich, Maximillian.  Ich schwöre es Euch ...}{}{5}{}{205}{qu1164 2, re +5}
+{202}{Ich werde mich der Sache annehmen, sobald es mir möglich ist ...}{}{5}{}{205}{qu1164 1}
+{205}{Das würde ich wirklich zu schätzen wissen.  Ich wünsche Euch viel Glück auf Euren Wegen, wo immer sie Euch auch hinführen mögen ...}{Das würde ich wirklich zu schätzen wissen.  Ich wünsche Euch viel Glück auf Euren Wegen, wo immer sie Euch auch hinführen mögen ...}{}{}{}{}
+{206}{Lebt wohl, Maximillian ...}{}{5}{}{}{lf3 1, fl 192}
+{210}{Was!?  Mörderische Kreatur!  Ich werde Euch hier auf der Stelle aufschlitzen!}{Was!?  Mörderische Kreatur!  Ich werde Euch hier auf der Stelle aufschlitzen!}{}{}{}{}
+

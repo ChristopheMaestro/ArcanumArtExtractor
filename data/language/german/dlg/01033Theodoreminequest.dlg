@@ -1,0 +1,112 @@
+{1}{G:}{G:}{}{}{}{ }
+{2}{Kann man hier irgendwelche Abenteuer erleben?}{}{5}{qu1008 0, re 41}{10}{ }
+{3}{Ich habe mich entschlossen, für Euch das Haus des Wissenschaftlers zu durchsuchen.}{}{5}{qu1008 1}{50}{qu1008 2 }
+{4}{Ich muss Eure Rüstung erst noch wiederfinden.}{}{5}{ni 2803, qu1008 2}{90}{ }
+{5}{Ich habe Eure Rüstung.}{}{5}{qu1008 2, in 2803}{100}{ }
+{6}{Bitte, Sire, ich bitte um Verzeihung.}{}{5}{re-40, ch-9}{215}{re45 }
+{7}{Wie bitte?}{}{5}{re-40, ch10}{226}{re50 }
+{8}{Wenn Ihr mich noch einmal so ungebührlich ansprecht, wird es Euer letztes Mal sein!}{}{5}{re-40, ch-9, sk2 8}{240}{re45 }
+{9}{E:}{}{1}{}{0}{ }
+{10}{Wie interessant, dass Ihr das fragt. Ich habe da ein kleines Problem ...}{Wie interessant, dass Ihr das fragt. Ich habe da ein kleines Problem ...}{}{}{}{ }
+{11}{Lasst mich raten. Ihr braucht meine Hilfe.}{}{5}{}{80}{re -5 }
+{12}{Das kann man Euch von der Nasenspitze ablesen.}{}{5}{sk2 -7}{80}{re-15 }
+{13}{Ich höre.}{}{5}{}{20}{ }
+{14}{Das kann man Euch von der Nasenspitze ablesen.}{}{5}{sk2 8}{250}{ }
+{19}{E:}{}{1}{}{0}{ }
+{20}{Hier in der Stadt lebt ein ziemlich exzentrischer Wissenschaftler. In den letzten vierzehn Tagen hat niemand auch nur eine Spur von ihm gesehen.}{Hier in der Stadt lebt ein ziemlich exzentrischer Wissenschaftler. In den letzten vierzehn Tagen hat niemand auch nur eine Spur von ihm gesehen.}{}{}{}{ }
+{21}{Was hat das mit Euch zu tun?}{}{5}{}{30}{ }
+{30}{Ich habe diesem Herrn den Auftrag erteilt, mit Hilfe seiner "Technologie" eine alte Plattenrüstung zu verbessern, die ich besaß.}{Ich habe diesem Herrn den Auftrag erteilt, mit Hilfe seiner "Technologie" eine alte Plattenrüstung zu verbessern, die ich besaß.}{}{}{}{ }
+{31}{Warum braucht Ihr meine Hilfe?}{}{5}{}{200}{ }
+{40}{Für mich ist das zu schwierig, aber jemand mit Eurem Einfallsreichtum könnte einfach so in sein Haus marschieren und mir meine Rüstung holen.}{Für mich ist das zu schwierig, aber jemand mit Eurem Einfallsreichtum könnte einfach so in sein Haus marschieren und mir meine Rüstung holen.}{}{}{}{qu1008 1 }
+{41}{Was bekomme ich dafür?}{}{5}{}{50}{ }
+{42}{Vergesst es. Das klingt nach einer Falle.}{}{5}{}{60}{ }
+{50}{Ich gebe Euch 200 Münzen, wenn Ihr mir meine Rüstung zurückbringt.}{Ich gebe Euch 200 Münzen, wenn Ihr mir meine Rüstung zurückbringt.}{}{}{}{ }
+{51}{Meine innere Stimme sagt mir zwar, dass das ein Fehler ist, aber ich werde es tun.}{}{5}{}{70}{qu1008 2 }
+{52}{Es tut mir Leid, aber das reicht mir nicht, um mein Leben dafür zu riskieren.}{}{5}{lf0 0}{60}{ }
+{53}{Das reicht mir nicht, um mein Leben dafür zu riskieren. Guten Tag.}{}{5}{lf0 1}{0}{ }
+{60}{So ein Pech aber auch. Es hätte sich für uns beide bestimmt ausgezahlt.}{So ein Pech aber auch. Es hätte sich für uns beide bestimmt ausgezahlt.}{}{}{}{ }
+{61}{Hmmm. Na gut, ich werde es tun.}{}{5}{}{70}{lf0 1 }
+{62}{E:}{}{5}{}{0}{ }
+{70}{Gut, wirklich gut! Ich warte hier draußen auf Eure Rückkehr.}{Gut, wirklich gut! Ich warte hier draußen auf Eure Rückkehr.}{}{}{}{ }
+{71}{E:}{}{5}{}{0}{ }
+{80}{Es besteht kein Grund für Euer abfälliges Benehmen oder Eure diesbezüglichen Kommentare, Sire.}{Es besteht kein Grund für Euer abfälliges Benehmen oder Eure diesbezüglichen Kommentare, Madame.}{}{}{}{ }
+{81}{Verzeiht mir, was habt Ihr für ein Problem?}{}{5}{}{20}{ }
+{82}{Wie wäre es mit einer Tracht Prügel?}{}{5}{}{0}{fl 210 ,co}
+{83}{E:}{}{5}{}{0}{ }
+{90}{Haltet mich über Euren Fortschritt auf dem Laufenden.}{Haltet mich über Euren Fortschritt auf dem Laufenden.}{}{}{}{ }
+{91}{E:}{}{5}{}{0}{ }
+{100}{Ausgezeichnet! Gebt her.}{Ausgezeichnet! Gebt her.}{}{}{}{ }
+{101}{Hier, bitte schön.}{}{5}{}{110}{in 2803, qu1008 4 }
+{102}{Der ganze Ärger war mehr als 200 Münzen wert.}{}{5}{ha4}{120}{ }
+{103}{Ich habe beschlossen, alles zu behalten.}{}{5}{}{160}{re-15 }
+{110}{Und hier sind Eure 200 Münzen. Guten Tag, Sire.}{Und hier sind Eure 200 Münzen. Guten Tag, Madame.}{}{}{}{$$200 }
+{111}{A:}{}{5}{}{0}{ }
+{120}{Natürlich! Ich gebe Euch 300 für Eure Bemühungen. Bitte gebt mir die Rüstung, und zwar sofort.}{Natürlich! Ich gebe Euch 300 für Eure Bemühungen. Bitte gebt mir die Rüstung, und zwar sofort.}{}{}{}{ }
+{121}{Hier, bitte schön.}{}{5}{}{140}{in 2803, qu1008 4 }
+{122}{Ich habe beschlossen, alles zu behalten.}{}{5}{}{170}{ }
+{123}{Ich glaube, in einer Rüstkammer könnte ich sogar 400 dafür bekommen.}{}{5}{ha8}{130}{ }
+{130}{Also dann 400. Aber das ist mein letztes Angebot.}{Also dann 400. Aber das ist mein letztes Angebot.}{}{}{}{ }
+{131}{Gut, einverstanden.}{}{5}{}{150}{in 2803, qu1008 4 }
+{132}{Ich habe beschlossen, doch lieber alles zu behalten.}{}{5}{}{0}{fl 210 ,co}
+{140}{Und hier sind Eure 300 Münzen. Guten Tag, Sire.}{Und hier sind Eure 300 Münzen. Guten Tag, Madame.}{}{}{}{$$300 }
+{141}{A:}{}{5}{}{0}{ }
+{150}{Und hier sind Eure Münzen. Guten Tag, Sire.}{Und hier sind Eure Münzen. Guten Tag, Madame.}{}{}{}{$$400 }
+{151}{A:}{}{5}{}{0}{ }
+{160}{Gebt sie mir bitte. Ich gebe Euch dafür 250 Münzen.}{Gebt sie mir bitte. Ich gebe Euch dafür 250 Münzen.}{}{}{}{ }
+{161}{Gut, einverstanden.}{}{5}{}{180}{in 2803, qu1008 4 }
+{162}{N:}{}{5}{}{0}{fl 210 ,co}
+{170}{Gebt sie mir bitte. Ich gebe Euch dafür 350 Münzen.}{Gebt sie mir bitte. Ich gebe Euch dafür 350 Münzen.}{}{}{}{ }
+{171}{Gut, einverstanden.}{}{5}{}{190}{in 2803, qu1008 4 }
+{172}{N:}{}{5}{}{0}{fl 210 ,co}
+{180}{Und hier sind Eure Münzen. Guten Tag, Sire.}{Und hier sind Eure Münzen. Guten Tag, Madame.}{}{}{}{$$250 }
+{181}{A:}{}{5}{}{0}{ }
+{190}{Und hier sind Eure Münzen. Guten Tag, Sire.}{Und hier sind Eure Münzen. Guten Tag, Madame.}{}{}{}{$$350 }
+{191}{A:}{}{5}{}{0}{ }
+{200}{Ich war vor zwei Tagen in seinem Haus, um nach ihm zu suchen. Seine Tür war nicht verschlossen, daher ging ich hinein. Ich wurde auf der Stelle von allen möglichen technischen Spielereien angegriffen und musste deshalb leider fliehen.}{Ich war vor zwei Tagen in seinem Haus, um nach ihm zu suchen. Seine Tür war nicht verschlossen, daher ging ich hinein. Ich wurde auf der Stelle von allen möglichen technischen Spielereien angegriffen und musste deshalb leider fliehen.}{}{}{}{ }
+{201}{Ihr erwartet, dass ich für Euch dort hineingehe?}{}{5}{}{40}{ }
+{202}{Ich habe keine Lust, mich mit den Erfindungen eines verrückten Wissenschaftlers herumzuschlagen.}{}{5}{}{60}{ }
+{210}{Unkultivierter Schwachkopf! Dafür werde ich Euch das Fell gerben!}{Unkultiviertes Weib! Dafür werde ich Euch das Fell gerben!}{}{}{}{ }
+{215}{Was könnte ein verachtenswertes Subjekt wie Ihr wohl von mir wollen?}{Was könnte ein verachtenswertes Subjekt wie Ihr wohl von mir wollen?}{}{}{}{ }
+{216}{Dürfte ich wohl für einen Augenblick mit Euch sprechen, Sire?}{}{5}{}{220}{re+5 }
+{217}{Ich will Euch Schmerzen ohne Ende bereiten.}{}{5}{}{0}{fl 210 ,co}
+{220}{Da ich sehe, dass Ihr Leute, die über Euch stehen, mit Respekt behandelt, ist das Mindeste, das ich tun könnte, Euch zu helfen. Worüber wolltet Ihr mit mir sprechen?}{Da ich sehe, dass Ihr Leute, die über Euch stehen, mit Respekt behandelt, ist das Mindeste, das ich tun könnte, Euch zu helfen. Worüber wolltet Ihr mit mir sprechen?}{}{}{}{ }
+{221}{Kann man hier irgendwelche Abenteuer erleben?}{}{5}{qu1008 0, re 41}{10}{ }
+{222}{Ich habe mich entschlossen, für Euch das Haus des Wissenschaftlers zu durchsuchen.}{}{5}{qu1008 1}{50}{qu1008 2 }
+{223}{Ich muss Eure Rüstung erst noch wiederfinden.}{}{5}{ni 2803, qu1008 2}{90}{ }
+{224}{Ich habe Eure Rüstung.}{}{5}{qu1008 2, in 2803}{100}{ }
+{225}{Entschuldigt mich, ich muss jetzt gehen.}{}{5}{}{0}{ }
+{226}{Verzeiht mir bitte meine Unhöflichkeit, Sire. Ich habe meine Worte nicht mit dem nötigen Respekt gewählt. Ich weiß nicht, was ich mir dabei gedacht habe. Womit kann ich Euch behilflich sein?}{Verzeiht mir bitte meine Unhöflichkeit, Madame. Ich habe meine Worte nicht mit dem nötigen Respekt gewählt. Ich weiß nicht, was ich mir dabei gedacht habe. Womit kann ich Euch behilflich sein?}{}{}{}{ }
+{227}{Kann man hier irgendwelche Abenteuer erleben?}{}{5}{qu1008 0, re 41}{10}{ }
+{228}{Ich habe mich entschlossen, für Euch das Haus des Wissenschaftlers zu durchsuchen.}{}{5}{qu1008 1}{50}{qu1008 2 }
+{229}{Ich muss Eure Rüstung erst noch wiederfinden.}{}{5}{ni 2803, qu1008 2}{90}{ }
+{230}{Ich habe Eure Rüstung.}{}{5}{qu1008 2, in 2803}{100}{ }
+{231}{Entschuldigt mich, ich muss jetzt gehen.}{}{5}{}{0}{ }
+{240}{Bitte, tut mir nichts zuleide, Sire. Ich weiß nicht, was ich mir dabei gedacht haben könnte. Kann ich irgendetwas für Euch tun?}{Bitte, tut mir nichts zuleide, Madame. Ich weiß nicht, was ich mir dabei gedacht haben könnte. Kann ich irgendetwas für Euch tun?}{}{}{}{ }
+{241}{Kann man hier irgendwelche Abenteuer erleben?}{}{5}{qu1008 0, re 41}{10}{ }
+{242}{Ich habe mich entschlossen, für Euch das Haus des Wissenschaftlers zu durchsuchen.}{}{5}{qu1008 1}{50}{qu1008 2 }
+{243}{Ich muss Eure Rüstung erst noch wiederfinden.}{}{5}{ni 2803, qu1008 2}{90}{ }
+{244}{Ich habe Eure Rüstung.}{}{5}{qu1008 2, in 2803}{100}{ }
+{245}{Ich muss jetzt weg.}{}{5}{}{0}{ }
+{249}{}{}{}{}{}{ }
+{250}{Hi, hi. Das ist ein guter Witz, Sire.}{Hi, hi. Das ist ein guter Witz, Madame.}{}{}{}{ }
+{251}{Was für ein Problem habt Ihr?}{}{5}{}{20}{ }
+{260}{He! Das ist meine Rüstung, die Ihr da habt!}{He! Das ist meine Rüstung, die Ihr da habt!}{}{}{}{ }
+{261}{Na und?}{}{5}{sk2 8}{270}{ }
+{262}{Na und?}{}{5}{sk2 -7}{290}{ }
+{263}{Wie wahr. Hier, bitte schön. [Du gibst ihm das Gewünschte.]}{}{5}{}{110}{in 2803, qu1008 4 }
+{264}{Gebt mir 400 Münzen, und Ihr seid der neue Besitzer.}{}{5}{ha4}{}{ }
+{270}{[Er windet sich.] Ähm ... nichts? Es ist nur, na ja, ich ... äh ... hätte das gern wieder zurück.}{[Er windet sich.] Ähm ... nichts? Es ist nur, na ja, ich ... äh ... hätte das gern wieder zurück.}{}{}{}{ }
+{271}{Sicher. Das kostet Euch 400 Münzen.}{}{5}{}{280}{ }
+{272}{Natürlich. Hier, bitte schön. [Du gibst ihm das Gewünschte.]}{}{5}{}{110}{in 2803, qu1008 4 }
+{280}{Aber das ist doppelt so viel, wie ich Euch dafür geben wollte!}{Aber das ist doppelt so viel, wie ich Euch dafür geben wollte!}{}{}{}{ }
+{281}{Das ist der momentane Kurs. Ich könnte Euch auch verprügeln und es mir einfach nehmen.}{}{5}{}{300}{ }
+{282}{Ihr habt Recht, mein Fehler. Hier, bitte schön. [Du gibst ihm das Gewünschte.]}{}{5}{}{110}{in 2803, qu1008 4 }
+{290}{Ich werde es mir falls nötig auch mit Gewalt nehmen.}{Ich werde es mir falls nötig auch mit Gewalt nehmen.}{}{}{}{ }
+{291}{Das könnt Ihr gern versuchen.}{}{5}{}{0}{fl 210 ,co}
+{292}{Das ist nun wirklich nicht nötig. Hier, bitte schön. [Du gibst ihm das Gewünschte.]}{}{5}{}{110}{in 2803, qu1008 4 }
+{300}{He! Das ist meine Rüstung, die Euer Freund da hat!}{He! Das ist meine Rüstung, die Euer Freund da hat!}{}{}{}{ }
+{301}{Na und?}{}{5}{sk2 8}{270}{ }
+{302}{Na und?}{}{5}{sk2 -7}{290}{ }
+{303}{Wie wahr. Hier, bitte schön. [Du gibst ihm das Gewünschte.]}{}{5}{}{110}{in 2803, qu1008 4 }
+{304}{Gebt mir 400 Münzen, und Ihr seid der neue Besitzer.}{}{5}{ha4}{}{ }
+

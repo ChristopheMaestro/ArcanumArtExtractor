@@ -1,0 +1,61 @@
+{1}{[Der boshafte, alte Mann knurrt etwas in deine Richtung.] Ja, was ist?}{Ja, was ist?}{}{}{}{ }
+{2}{Darf ich nach Eurem Namen fragen, werter Herr?}{}{5}{lf1 0}{10}{lf1 1 }
+{3}{Mir gefällt Euer Ton nicht.}{}{5}{lf1 0}{70}{lf1 1, re-5 }
+{4}{W:}{}{-4}{}{0}{fl 90}
+{5}{Archibald? Gladys hat mich geschickt, um ein paar Fragen über einen Ring zu stellen ...}{}{5}{lf1 1, gf2620 1, lf10 0}{60}{lf10 1 }
+{9}{E:}{}{1}{}{0}{ }
+{10}{Ich heiße Archibald. Worum geht's?}{Ich heiße Archibald. Worum geht's?}{}{}{}{ }
+{11}{Gladys hat mich geschickt. Sie glaubt, Ihr wüsstet etwas über einen Ring.}{}{5}{gf2620 1}{60}{ }
+{19}{Nichts, ich wollte nur höflich sein. Guten Tag.}{}{5}{}{0}{ }
+{20}{[Er sieht dich an, unschlüssig, ob er dich richtig verstanden hat.] Vor einiger Zeit hätte ich das noch geglaubt, aber jetzt nicht mehr. Ich meine, schaut mich doch nur an.}{[Er sieht dich an, unschlüssig, ob er dich richtig verstanden hat.] Vor einiger Zeit hätte ich das noch geglaubt, aber jetzt nicht mehr. Ich meine, schaut mich doch nur an.}{}{}{}{ }
+{21}{Sie vertraute mir an, dass sie an Euch interessiert gewesen sei.}{}{5}{}{30}{ }
+{22}{Ihr habt Recht, Ihr seid kein besonders erhebender Anblick.}{}{5}{}{0}{fl 161 ,co}
+{23}{Aber, aber. Ihr seid immer noch ein gut aussehender Mann!}{}{5}{}{140}{re-5 }
+{30}{Wirklich? Ihr meint, sie würde ... mit mir sprechen, wenn ich den Ring zurückgebe?}{Wirklich? Ihr meint, sie würde ... mit mir sprechen, wenn ich den Ring zurückgebe?}{}{}{}{ }
+{32}{Wahrscheinlich nicht, Ihr seid so ein abstoßender Trottel.}{}{5}{}{0}{fl 161 ,co}
+{33}{Ich bin sicher, dass sie Euch ihre ... "Dankbarkeit" zeigen würde.}{}{5}{}{40}{ }
+{40}{Würdet Ihr ihr den Ring bringen und ihr ausrichten, dass ich mit ihr sprechen möchte?}{Würdet Ihr ihr den Ring bringen und ihr ausrichten, dass ich mit ihr sprechen möchte?}{}{}{}{ }
+{41}{Für eine kleine Gebühr könntet Ihr mich dazu überreden.}{}{5}{ps8}{50}{ }
+{42}{Es wäre mir ein Vergnügen.}{}{5}{}{0}{in-2801, gf1001 1 }
+{43}{Für eine kleine Gebühr könntet Ihr mich dazu überreden.}{}{5}{ps-7}{170}{re-5 }
+{50}{Ich habe nicht viel, aber ich könnte Euch 50 Münzen geben.}{Ich habe nicht viel, aber ich könnte Euch 50 Münzen geben.}{}{}{}{ }
+{51}{Gut, einverstanden.}{}{5}{}{0}{$$50, in-2801, gf1001 1 }
+{52}{Ich kann Euer Geld nicht annehmen, ich erledige das auch so.}{}{5}{}{0}{al+50 , in-2801, gf1001 1 }
+{53}{50 Münzen? Für 50 Münzen würde ich nicht einmal aufstehen!}{}{5}{}{0}{fl 161 ,co}
+{60}{Gladys? Sagt der alten Schachtel, dass ich ihr den Ring niemals zurückgeben werde! Niemals! Wenn Ihr Euch hier noch einmal blicken lasst, wird Euch mein Sohn Bernard eine ordentliche Abreibung verpassen!}{Gladys? Sagt der alten Schachtel, dass ich ihr den Ring niemals zurückgeben werde! Niemals! Wenn Ihr Euch hier noch einmal blicken lasst, wird Euch mein Sohn Bernard eine ordentliche Abreibung verpassen!}{}{}{}{gf2618 1 }
+{61}{Ich kann es nicht fassen, dass Ihr so grausam zu einer alten Dame wärt, Sire!}{}{5}{}{80}{re-5 }
+{62}{Gebt mir den Ring, oder es setzt was!}{}{5}{}{80}{re-10 }
+{70}{Jaaa? Tja, Archibald J. Sloane schert sich einen Dreck darum, was Euch gefällt und was nicht!}{Jaaa? Tja, Archibald J. Sloane schert sich einen Dreck darum, was Euch gefällt und was nicht!}{}{}{}{ }
+{71}{Seid Ihr Archibald? Gladys hat mich geschickt.}{}{5}{gf2620 1}{60}{ }
+{72}{Sire! Für diese Bemerkungen verlange ich Genugtuung! [Du schlägst ihn.]}{}{5}{}{0}{fl 161 ,co}
+{79}{Ich verstehe. Also gut, verzeiht meine Aufdringlichkeit.}{}{5}{}{0}{ }
+{80}{Ihr verlasst sofort mein Haus, oder ich rufe meinen Sohn Bernard! Habt Ihr mich verstanden?}{Ihr verlasst sofort mein Haus, oder ich rufe meinen Sohn Bernard! Habt Ihr mich verstanden?}{}{}{}{ }
+{81}{Ihr seid tot, bevor er antrabt.}{}{5}{}{0}{gf2618 0, fl 161 ,co}
+{89}{Nun gut, ich gehe.}{}{5}{}{0}{ }
+{90}{Ich muss mich nicht mit einem Schwachsinnigen herumärgern! Lasst mich in Ruhe!}{Ich muss mich nicht mit einem Schwachsinnigen herumärgern! Lasst mich in Ruhe!}{}{}{}{ }
+{100}{Oh, Ihr seid es. Was wollt Ihr diesmal? Hat Euch die alte Vettel wieder zu mir geschickt?}{Oh, Ihr seid es. Was wollt Ihr diesmal? Hat Euch die alte Vettel wieder zu mir geschickt?}{}{}{}{ }
+{101}{Nein. Ich hatte eine Unterhaltung mit Eurem Sohn ...}{}{5}{lf3 0}{110}{ }
+{102}{Ich habe beschlossen, den Ring für Euch zu Gladys zu bringen ... kostenlos.}{}{5}{lf3 1}{0}{re+5, in-2801, gf1001 1, fl 180}
+{109}{E:}{}{5}{}{0}{ }
+{110}{[Er wirkt verletzt.] Was hat Euch dieser junge Gimpel erzählt? Er weiß einfach nicht, wann er sein Mundwerk halten soll!}{[Er wirkt verletzt.] Was hat Euch dieser junge Gimpel erzählt? Er weiß einfach nicht, wann er sein Mundwerk halten soll!}{}{}{}{ }
+{111}{Ich weiß, was zwischen Euch und Gladys passiert ist.}{}{5}{}{120}{ }
+{120}{W...was?! Was wollt Ihr damit sagen? Ich will nichts mit ihr zu tun haben, das kann ich Euch sagen!}{W...was?! Was wollt Ihr damit sagen? Ich will nichts mit ihr zu tun haben, das kann ich Euch sagen!}{}{}{}{ }
+{121}{Ich glaube, Gladys findet Euch recht attraktiv.}{}{5}{ps4}{20}{re+5 }
+{122}{Ich glaube, Gladys findet Euch recht attraktiv.}{}{5}{ps-3}{0}{re-5, fl 130}
+{123}{Sie bietet keinen besonders schönen Anblick, was?}{}{5}{}{0}{re-5, fl 160}
+{130}{[Er denkt einen Moment darüber nach und knurrt dich dann an.] Unsinn! Ich werde nicht zulassen, dass man sich in meinem eigenen Hause über mich lustig macht! Raus! Und sagt der alten Hexe, dass sie den Ring niemals zurückbekommen wird! Niemals!}{[Er denkt einen Moment darüber nach und knurrt dich dann an.] Unsinn! Ich werde nicht zulassen, dass man sich in meinem eigenen Hause über mich lustig macht! Raus! Und sagt der alten Hexe, dass sie den Ring niemals zurückbekommen wird! Niemals!}{}{}{}{ }
+{140}{Wie könnt Ihr es wagen, Euch über mich lustig zu machen! Ich weiß, wie ich aussehe! Haltet Ihr mich für einen alten Narren?}{Wie könnt Ihr es wagen, Euch über mich lustig zu machen! Ich weiß, wie ich aussehe! Haltet Ihr mich für einen alten Narren?}{}{}{}{ }
+{141}{Ich habe nur wiedergegeben, was sie zu mir sagte.}{}{5}{}{0}{re-5, fl 130}
+{142}{Verzeihung. Ich fand, Ihr würdet mit Euch selbst zu hart ins Gericht gehen ...}{}{5}{}{150}{ }
+{150}{Mein Verhalten der Welt gegenüber ist wohl etwas unfreundlich. Ich habe hier wohl schon zu lang allein gelebt. Mein Sohn versucht immer, mich herauszulocken und mich mit Leuten zusammenzubringen, aber ich weiß nicht so recht ...}{Mein Verhalten der Welt gegenüber ist wohl etwas unfreundlich. Ich habe hier wohl schon zu lang allein gelebt. Mein Sohn versucht immer, mich herauszulocken und mich mit Leuten zusammenzubringen, aber ich weiß nicht so recht ...}{}{}{}{ }
+{151}{Ich fand es recht offensichtlich, dass Gladys gern mit Euch befreundet wäre.}{}{5}{}{40}{ }
+{152}{Bitte, Sire, Ihr langweilt mich. Ich wollte nicht Eure gesamte Lebensgeschichte hören ...}{}{5}{}{0}{fl 161 ,co}
+{160}{Wie könnt Ihr es wagen, solche Worte über so eine feine Da... äh... Verschwindet! Ich möchte nicht weiter mit Euch reden!}{Wie könnt Ihr es wagen, solche Worte über so eine feine Da... äh... Verschwindet! Ich möchte nicht weiter mit Euch reden!}{}{}{}{ }
+{161}{Sterbt, elender Heide!}{Sterbt, elender Heide!}{}{}{}{ }
+{162}{Ich danke Euch, dass Ihr mir bei dieser Ringgeschichte geholfen habt.}{Ich danke Euch, dass Ihr mir bei dieser Ringgeschichte geholfen habt.}{}{}{}{ }
+{170}{Macht, dass Ihr rauskommt, übles Subjekt, das Ihr seid! Auf diese Weise die Alten und Armen auszunutzen!}{Raus hier, sofort, herzlose Gifthexe! Auf diese Weise die Alten und Armen auszunutzen!}{}{}{}{ }
+{171}{Verzeihung. Ich werde den Ring für Euch zu Gladys bringen ... kostenlos.}{}{5}{}{0}{re+5, in-2801, gf1001 1, fl 180}
+{172}{Sire! Für diese Bemerkungen verlange ich Genugtuung! [Du schlägst ihn.]}{}{5}{}{0}{fl 161 ,co}
+{179}{Wenn das Eure Meinung ist, dann gehe ich jetzt.}{}{5}{}{0}{lf3 1 }
+{180}{Vielen Dank. Bitte verzeiht mir meine anfängliche Unfreundlichkeit. Hier ist der Ring. Und bitte, grüßt sie von mir ...}{Vielen Dank. Bitte verzeiht mir meine anfängliche Unfreundlichkeit. Hier ist der Ring. Und bitte, grüßt sie von mir ...}{}{}{}{ }
+

@@ -1,0 +1,204 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{W:}{}{5}{lf1 0, re41}{20}{lf1 1}
+{3}{Ich habe Euch wohl nicht richtig verstanden ...}{}{5}{re-40, ch10}{380}{re50}
+{4}{Bitte verzeiht meine Anwesenheit, Sire. Ich wollte niemanden beleidigen.}{}{5}{re-40, ch-9}{390}{re41}
+{5}{Sprecht noch einmal so mit mir, und Ihr werdet es bitter bereuen.}{}{5}{re-40, sk2 12}{400}{re41}
+{6}{W:}{}{-4}{lf1 0}{260}{lf1 1}
+{7}{Ich habe beschlossen, nach dem Teil zu suchen, das Ihr wollt.}{}{5}{qu 1047 1}{100}{}
+{8}{Ich habe das Teil, das Ihr wollt.}{}{5}{qa1047 1, in 5605, qb1047 3}{250}{}
+{9}{K:}{}{1}{lf1 1, re41}{30}{}
+{10}{Ich nach Dingens suchen, Ihr haben willen!}{}{-4}{qu 1047 1}{100}{}
+{11}{Ich Dingens für Euch haben.}{}{-4}{qa1047 1, in 5605, qb1047 3}{250}{}
+{12}{Ich glaube nicht, dass Ihr einen Grund dafür habt, mich zu beleidigen, Sire.}{}{5}{re-40, sk2 12}{400}{re45}
+{14}{E:}{}{1}{}{0}{}
+{20}{Ich bin Weldo Rubin, der berühmte Halbling-Abenteurer, zu Euren Diensten, Sire.}{Ich bin Weldo Rubin, der berühmte Halbling-Abenteurer, zu Euren Diensten, Madame.}{}{}{}{}
+{21}{Was tut Ihr hier draußen, Weldo?}{}{5}{}{350}{}
+{22}{Ein Halbling-Abenteurer?}{}{5}{ra-2, ra-5, ra-6}{360}{re -5}
+{24}{E:}{}{1}{}{0}{}
+{30}{Was wünscht Ihr zu wissen?}{Was wünscht Ihr zu wissen?}{}{}{}{}
+{31}{Könnt Ihr mir etwas über Eure Abenteuer erzählen?}{}{5}{lf 0 0}{40}{lf0 1}
+{32}{Erzählt mir mehr über Eure Abenteuer.}{}{5}{lf 0 1}{40}{}
+{33}{Über die Stadt in der Wüste ...}{}{5}{lf10 1, ar-11}{50}{}
+{34}{Ich habe beschlossen, nach dem Teil zu suchen, das Ihr wollt.}{}{5}{qu 1047 1}{100}{}
+{35}{Ich habe das Teil, das Ihr wollt.}{}{5}{qu 1047 2, in 5605}{250}{}
+{36}{Ich mussen altig Stad' in Wüste finden!}{}{-4}{qa1027 1, ni 5616}{410}{lf10 1}
+{37}{Ich mussen altig Stad' in Wüste finden!}{}{-4}{qu1027 0, qa1051 1, ni5616}{410}{lf10 1}
+{38}{E:}{}{1}{}{0}{}
+{40}{Ich erzähle immer gern von meinen Abenteuern! Wovon kann ich Euch berichten?}{Ich erzähle immer gern von meinen Abenteuern! Wovon kann ich Euch berichten?}{}{}{}{}
+{41}{Habt Ihr auf Euren Reisen etwas Interessantes gefunden?}{}{5}{}{130}{lf3 1}
+{42}{Habt Ihr irgendwelche Städte in der Wüste gesehen?}{}{5}{lf10 0}{170}{lf10 1}
+{43}{Was für Ungeheuer habt Ihr in der Wüste gesehen?}{}{5}{}{210}{lf 0 1}
+{45}{E:}{}{1}{}{0}{}
+{50}{Ja, was ist?}{Ja, was ist?}{}{}{}{}
+{51}{Kommt mit mir, und wir reisen dorthin.}{}{5}{re 60}{460}{jo 0 60}
+{53}{Kommt mit mir, und wir reisen dorthin.}{}{5}{re -59}{70}{}
+{54}{Würdet Ihr mir bitte die Stelle auf meiner Karte zeigen?}{}{5}{re 60, lf25 0}{80}{}
+{55}{Würdet Ihr mir bitte die Stelle auf meiner Karte zeigen?}{}{5}{re 40, re -59, lf3 0, lf25 0}{480}{}
+{57}{Würdet Ihr mir bitte die Stelle auf meiner Karte zeigen?}{}{5}{re 40, re -59,  lf 3 1, lf25 0}{90}{}
+{58}{Würdet Ihr mir bitte die Stelle auf meiner Karte zeigen?}{}{5}{re -39, lf25 0}{110}{}
+{59}{E:}{}{1}{}{0}{}
+{60}{Hört sich großartig an! Ich würde gern neue Abenteuer erleben!}{Hört sich großartig an! Ich würde gern neue Abenteuer erleben!}{}{}{}{mm 11}
+{61}{Dann brechen wir doch auf.}{}{1}{}{0}{}
+{70}{Nein, danke, Sire. Ich ziehe es vor, allein auf Abenteuerreise zu gehen.}{Nein danke, Madame. Ich ziehe es vor, allein auf Abenteuerreise zu gehen.}{}{}{}{}
+{71}{Könntet Ihr mir wenigstens zeigen, wo ich fündig werden könnte?}{}{5}{re 60, lf25 0}{80}{}
+{72}{Könntet Ihr mir wenigstens zeigen, wo ich fündig werden könnte?}{}{5}{re 40, re -59, lf 10 1, lf25 0, lf10 0}{80}{}
+{73}{Könntet Ihr mir wenigstens zeigen, wo ich fündig werden könnte?}{}{5}{re 40, re -59, lf 3 1, lf25 0}{90}{}
+{75}{Könntet Ihr mir wenigstens zeigen, wo ich fündig werden könnte?}{}{5}{re -39, lf 3 0, lf25 0}{110}{}
+{79}{E:}{}{1}{}{0}{}
+{80}{Fein. Ich habe die Lage der Stadt in Eurer Karte eingezeichnet.}{Fein. Ich habe die Lage der Stadt in Eurer Karte eingezeichnet.}{}{}{}{mm 11, lf25 1}
+{81}{K:}{}{5}{}{30}{}
+{83}{Kommt mit mir, und wir reisen gemeinsam in die Wüstenstadt!}{}{5}{re 60}{460}{jo 0 60}
+{84}{Kommt mit mir, und wir reisen gemeinsam in die Wüstenstadt!}{}{5}{re -59}{70}{}
+{89}{E:}{}{1}{}{0}{}
+{90}{Ich werde die Stelle auf Eurer Karte einzeichnen, wenn Ihr mir ein Teil für das Gerät bringt, das ich Euch gezeigt habe. Ich glaube, ich brauche ein kleines Zahnrad aus Metall, das in der Nähe des Wracks heruntergefallen ist. Werdet Ihr das tun?}{Ich werde die Stelle auf Eurer Karte einzeichnen, wenn Ihr mir ein Teil für das Gerät bringt, das ich Euch gezeigt habe. Ich glaube, ich brauche ein kleines Zahnrad aus Metall, das in der Nähe des Wracks heruntergefallen ist. Werdet Ihr das tun?}{}{}{}{qu 1047 1}
+{91}{Ich tu's. Wo kann ich diese Ruinen finden?}{}{5}{}{100}{}
+{92}{Hört zu, kleiner Schwachkopf, Ihr sagt mir besser, was ich wissen will.}{}{5}{ra -2, ra -5, ra -6, ps 10, lf25 0}{80}{re -10}
+{93}{Ich frage mich langsam, ob Ihr wirklich wisst, wo die Stadt liegt.}{}{8}{ps 10}{120}{}
+{94}{Und wenn ich Euch bezahle?}{}{5}{}{270}{}
+{98}{Wie wäre es hiermit? [Du zeigst ihm das alte Zahnrad.]}{}{5}{in5605}{250}{}
+{99}{E:}{}{1}{}{0}{}
+{100}{Toll! Hier ist die Stelle, an der sich die Ruinen befinden. [Er markiert deine Karte.] Kommt mit dem Teil wieder, wenn Ihr es gefunden habt.}{Toll! Hier ist die Stelle, an der sich die Ruinen befinden. [Er markiert deine Karte.] Kommt mit dem Teil wieder, wenn Ihr es gefunden habt.}{}{}{}{mm73, qu 1047 2}
+{101}{E:}{}{1}{}{0}{}
+{110}{Nein. Ich traue Euch nicht. Das schienen nette Leute zu sein.}{Nein. Ich traue Euch nicht. Das schienen nette Leute zu sein.}{}{}{}{}
+{111}{Hört zu, kleiner Schwachkopf, Ihr sagt mir besser, was ich wissen will.}{}{5}{ra -2, ra -5, ra -6, ps 10}{80}{re -10}
+{112}{Kann ich etwas für die Information eintauschen?}{}{5}{lf3 0}{470}{}
+{113}{Ich frage mich langsam, ob Ihr wirklich wisst, wo die Stadt liegt.}{}{5}{ps 10}{120}{}
+{114}{Und wenn ich Euch bezahle?}{}{5}{}{270}{}
+{115}{Kann ich etwas für die Information eintauschen?}{}{5}{lf3 1}{90}{}
+{120}{Natürlich kenne ich die Stelle!}{Natürlich kenne ich die Stelle!}{}{}{}{}
+{121}{Dann beweist es mir. Das kann doch nicht schaden.}{}{5}{}{80}{}
+{123}{K:}{}{5}{}{30}{}
+{130}{Na ja, eigentlich schon. Bei einem Streifzug hier in der Nähe habe ich etwas Interessantes gefunden. [Er hält einen kleinen, eigentümlichen Gegenstand hoch, damit du ihn ansehen kannst.] Das habe ich in ein paar alten Ruinen draußen in der Wüste gefunden.}{Na ja, eigentlich schon. Bei einem Streifzug hier in der Nähe habe ich etwas Interessantes gefunden. [Er hält einen kleinen, eigentümlichen Gegenstand hoch, damit du ihn ansehen kannst.] Das habe ich in ein paar alten Ruinen draußen in der Wüste gefunden.}{}{}{}{}
+{131}{Wirklich?}{}{5}{}{140}{}
+{140}{Ja. Die Ruinen bestanden aus einem Metall, wie ich es noch nie gesehen habe. Ringsum und im Inneren konnte man allen möglichen Plunder finden. Beim Stöbern habe ich dann dieses Gerät gefunden.}{Ja. Die Ruinen bestanden aus einem Metall, wie ich es noch nie gesehen habe. Ringsum und im Inneren konnte man allen möglichen Plunder finden. Beim Stöbern habe ich dann dieses Gerät gefunden.}{}{}{}{}
+{141}{Ich verstehe.}{}{5}{}{150}{}
+{150}{Ein paar fiese Echsen scheinen darunter zu leben, denn sie kamen heraus, als sie den Lärm hörten, und ich musste ein ganzes Stück zurückweichen.}{Ein paar fiese Echsen scheinen darunter zu leben, denn sie kamen heraus, als sie den Lärm hörten, und ich musste ein ganzes Stück zurückweichen.}{}{}{}{}
+{151}{Klingt nicht gut.}{}{5}{}{160}{}
+{160}{Tja, in meiner Branche muss man mit Gefahr rechnen.}{Tja, in meiner Branche muss man mit Gefahr rechnen.}{}{}{}{}
+{161}{K:}{}{5}{}{30}{}
+{162}{E:}{}{1}{}{0}{}
+{170}{Tja, es ist ziemlich einsam da draußen, und so lange habe ich mich nicht umgesehen. Aber ich fand eine Stadt tief in der Wüste, von Wanderdünen umgeben. Straßen führten weder hinein noch hinaus.}{Tja, es ist ziemlich einsam da draußen, und so lange habe ich mich nicht umgesehen. Aber ich fand eine Stadt tief in der Wüste, von Wanderdünen umgeben. Straßen führten weder hinein noch hinaus.}{}{}{}{}
+{171}{Bitte fahrt fort.}{}{5}{}{180}{}
+{180}{Einen ersichtlichen Eingang gab es keinen, daher erklomm ich die Stadtmauer. Von dieser Warte aus konnte ich den gesamten Ort überblicken.}{Einen ersichtlichen Eingang gab es keinen, daher erklomm ich die Stadtmauer. Von dieser Warte aus konnte ich den gesamten Ort überblicken.}{}{}{}{}
+{181}{Hat da jemand gelebt?}{}{5}{}{190}{}
+{190}{Ja, es waren eine Menge Leute dort, viele verschiedene Völker. Alle trugen weite Gewänder und waren ausgesprochen höflich und so.}{Ja, es waren eine Menge Leute dort, viele verschiedene Völker. Alle trugen weite Gewänder und waren ausgesprochen höflich und so.}{}{}{}{}
+{191}{Seid Ihr hineingegangen?}{}{5}{}{200}{}
+{200}{Nein, ich kletterte wieder hinunter und verließ diesen Ort. Leute von größerer Gestalt haben so ihre Eigenheiten, und ich werde sie nicht stören.}{Nein, ich kletterte wieder hinunter und verließ diesen Ort. Leute von größerer Gestalt haben so ihre Eigenheiten, und ich werde sie nicht stören.}{}{}{}{}
+{201}{Wollt Ihr Euch mir anschließen und dorthin reisen?}{}{5}{re 60}{460}{jo 0 60}
+{202}{Wollt Ihr Euch mir anschließen und dorthin reisen?}{}{5}{re -59}{70}{}
+{204}{Würdet Ihr mir bitte die Stelle auf meiner Karte zeigen?}{}{5}{re 60, lf25 0}{80}{}
+{205}{Würdet Ihr mir bitte die Stelle auf meiner Karte zeigen?}{}{5}{re 40, re -59, lf3 0, lf25 0}{480}{}
+{206}{Würdet Ihr mir bitte die Stelle auf meiner Karte zeigen?}{}{5}{re 40, re -59,  lf 3 1, lf25 0}{90}{}
+{207}{Würdet Ihr mir bitte die Stelle auf meiner Karte zeigen?}{}{5}{re -39, lf25 0}{110}{}
+{209}{E:}{}{1}{}{0}{}
+{210}{Ich habe alle Arten von seltsamen Geschöpfen gesehen. Ich habe Riesenspinnen mit dem Oberkörper einer Frau gesehen! Aber das war längst nicht das Seltsamste.}{Ich habe alle Arten von seltsamen Geschöpfen gesehen. Ich habe Riesenspinnen mit dem Oberkörper einer Frau gesehen! Aber das war längst nicht das Seltsamste.}{}{}{}{}
+{211}{Was könnte seltsamer sein als das?}{}{5}{}{220}{}
+{220}{Einmal habe ich etwas wahrhaft Unglaubliches gesehen. Tief in der Wüste sah ich einen Felsen aufstehen und herumspazieren. Und ich schwöre, er hat mich auch angesehen.}{Einmal habe ich etwas wahrhaft Unglaubliches gesehen. Tief in der Wüste sah ich einen Felsen aufstehen und herumspazieren. Und ich schwöre, er hat mich auch angesehen.}{}{}{}{}
+{221}{Habt Ihr mit ihm gesprochen?}{}{5}{}{230}{}
+{222}{Habt Ihr angegriffen?}{}{5}{}{240}{}
+{230}{Seid nicht albern. Ich habe den Hut gezogen, mich artig verbeugt und ihn wieder sich selbst überlassen.}{Seid nicht albern. Ich habe den Hut gezogen, mich artig verbeugt und ihn wieder sich selbst überlassen.}{}{}{}{}
+{231}{K:}{}{5}{}{30}{}
+{232}{E:}{}{1}{}{0}{}
+{240}{Typisch, diese Frage ... nein, natürlich nicht. Ich bin gegangen.}{Typisch, diese Frage ... nein, natürlich nicht. Ich bin gegangen.}{}{}{}{}
+{241}{K:}{}{5}{}{30}{}
+{242}{E:}{}{1}{}{0}{}
+{250}{Das ist großartig! Gebt her, dann markiere ich Eure Karte.}{Das ist großartig! Gebt her, dann markiere ich Eure Karte.}{}{}{}{}
+{251}{Hier, bitte schön.}{}{5}{}{80}{qu 1047 4, in 5605}
+{252}{Hier!}{}{-4}{}{80}{qu 1047 4, in 5605}
+{258}{Ich nich' willen. Ich weg geh'n.}{}{-4}{}{0}{}
+{259}{Das glaube ich nicht. Guten Tag.}{}{5}{}{0}{}
+{260}{Ach je ... ein Schwachkopf. MEIN NAME IST WELDO RUBIN. ICH BIN ABENTEURER, WAS WOLLT IHR?}{Ach je ... ein Schwachkopf. MEIN NAME IST WELDO RUBIN. ICH BIN ABENTEURER, WAS WOLLT IHR?}{}{}{}{}
+{261}{Ich mussen altig Stad' in Wüste finden!}{}{-4}{qa1027 1, ni 5616}{410}{}
+{262}{Ich mussen altig Stad' in Wüste finden!}{}{-4}{qu1027 0, qa1051 1, ni5616}{410}{}
+{269}{Nix.}{}{-4}{}{0}{}
+{270}{Gebt mir 100 Münzen, dann markiere ich Eure Karte.}{Gebt mir 100 Münzen, dann markiere ich Eure Karte.}{}{}{}{}
+{271}{Na gut, hier sind 100 Münzen.}{}{5}{$$ 100}{80}{$$ -100}
+{272}{So viel Geld hab' ich nicht.}{}{5}{$$ -99}{280}{}
+{273}{Wie wäre es mit 50 Münzen?}{}{5}{ha 10, $$ 50}{80}{$$ -50}
+{274}{N:}{}{5}{}{280}{}
+{280}{Tja, das ist Pech für Euch.}{Tja, das ist Pech für Euch.}{}{}{}{}
+{281}{K:}{}{5}{}{30}{}
+{282}{E:}{}{5}{}{0}{}
+{290}{Wie kann ich Euch behilflich sein?}{Wie kann ich Euch behilflich sein?}{}{}{}{}
+{291}{B:}{}{5}{wa 0}{297}{}
+{292}{U: 12}{}{5}{wa 0}{297}{}
+{293}{K:}{}{5}{wa 0}{311}{}
+{294}{Ich möchte, dass Ihr etwas für mich tut ...}{}{5}{fo 1, wa 0}{304}{}
+{295}{Gehen wir.}{}{5}{wa 1}{297}{uw 0 297}
+{296}{Nichts, vergesst es einfach.}{}{5}{wa 0}{0}{}
+{297}{Gibt es sonst noch etwas?}{Gibt es sonst noch etwas?}{}{}{}{}
+{298}{B:}{}{5}{wa 0}{297}{}
+{299}{U: 12}{}{5}{wa 0}{297}{}
+{300}{K:}{}{5}{wa 0}{311}{}
+{301}{Ich möchte, dass Ihr etwas für mich tut ...}{}{5}{fo 1, wa 0}{304}{}
+{302}{Gehen wir.}{}{5}{wa 1}{297}{uw 0 297}
+{303}{Nein. Sonst nichts.}{}{5}{wa 0}{0}{}
+{304}{Was soll ich tun?}{Was soll ich tun?}{}{}{}{}
+{305}{Geht weiter weg.}{}{5}{}{297}{so}
+{306}{Kommt näher.}{}{5}{}{297}{sc}
+{307}{Wartet hier.}{}{5}{wa 0}{297}{wa }
+{308}{Verabschiedet Euch.}{}{5}{}{297}{lv}
+{309}{[zurück]}{}{5}{}{290}{}
+{310}{Gemacht.}{Gemacht.}{}{}{}{}
+{311}{Was wollt Ihr wissen?}{Was wollt Ihr wissen?}{}{}{}{}
+{330}{Was könnt Ihr mir über die Ruinen von Vendigroth erzählen?}{}{5}{ss 18,ss-18}{344}{}
+{339}{[zurück]}{}{5}{}{290}{}
+{340}{Nichts, vergesst es einfach.}{}{5}{}{0}{}
+{341}{Tut mir Leid, dabei kann ich Euch nicht helfen.}{Tut mir Leid, dabei kann ich Euch nicht helfen.}{}{}{}{}
+{342}{K:}{}{5}{}{311}{}
+{343}{E:}{}{1}{}{0}{}
+{344}{Nicht viel, fürchte ich. Ich weiß nur etwas über die Stadt in der Wüste.}{Nicht viel, fürchte ich. Ich weiß nur etwas über die Stadt in der Wüste.}{}{}{}{}
+{345}{K:}{}{5}{}{311}{}
+{346}{E:}{}{5}{}{0}{}
+{350}{Natürlich auf der Suche nach Abenteuern! Welcher Ort wäre ein lohnenderes Ziel für eine Erforschung als die gefürchtete Wüste von Vendigroth!}{Natürlich auf der Suche nach Abenteuern! Welcher Ort wäre ein lohnenderes Ziel für eine Erforschung als die gefürchtete Wüste von Vendigroth!}{}{}{}{}
+{351}{Habt Ihr vielleicht irgendwelche Städte draußen in der Wüste gesehen?}{}{5}{lf10 0}{170}{lf 0 1, lf 10 1}
+{352}{Habt Ihr auf Euren Reisen etwas Interessantes gefunden?}{}{5}{}{130}{lf 0 1, lf 3 1}
+{353}{Was für Ungeheuer habt Ihr in der Wüste gesehen?}{}{5}{}{210}{lf 0 1}
+{360}{[Er richtet sich zu voller Größe auf und versucht, dir in die Augen zu sehen.] Was wollt Ihr damit sagen? Ich kann es mit den besten Abenteurern aufnehmen!}{[Er richtet sich zu voller Größe auf und versucht, dir in die Augen zu sehen.] Was wollt Ihr damit sagen? Ich kann es mit den besten Abenteurern aufnehmen!}{}{}{}{}
+{361}{Die meisten Halblinge stehen nur nicht so sehr auf Abenteuer, das ist alles.}{}{5}{}{370}{}
+{370}{Oh. Tja, eigentlich finde ich die meisten Halblinge eher langweilig. Sie kennen keinen Nervenkitzel und wollen auch keinen.}{Oh. Tja, eigentlich finde ich die meisten Halblinge eher langweilig. Sie kennen keinen Nervenkitzel und wollen auch keinen.}{}{}{}{}
+{371}{K:}{}{5}{}{30}{}
+{379}{E:}{}{5}{}{0}{}
+{380}{Oh, bitte verzeiht mir meine Unhöflichkeit. Ich weiß nicht, was in mich gefahren ist. Wie kann ich Euch behilflich sein?}{Oh, bitte verzeiht mir meine Unhöflichkeit. Ich weiß nicht, was in mich gefahren ist. Wie kann ich Euch behilflich sein?}{}{}{}{}
+{381}{W:}{}{1}{lf1 0}{20}{lf1 1}
+{382}{K:}{}{1}{lf1 1}{30}{}
+{389}{E:}{}{1}{}{0}{}
+{390}{Tja, ich glaube, Ihr könnt wohl nichts dafür, dass Ihr so eine erbärmliche Kreatur seid. Womit kann ich Euch behilflich sein?}{Tja, ich glaube, Ihr könnt wohl nichts dafür, dass Ihr so eine erbärmliche Kreatur seid. Womit kann ich Euch behilflich sein?}{}{}{}{}
+{391}{W:}{}{1}{lf1 0}{20}{lf1 1}
+{392}{K:}{}{1}{lf1 1}{40}{}
+{393}{Ihr könnt um Gnade winseln, wenn ich Euch töte.}{}{5}{}{0}{co}
+{399}{E:}{}{1}{}{0}{}
+{400}{Schon gut, schon gut, ich entschuldige mich. Ihr müsst Euch nicht gleich so aufplustern! Was wünscht Ihr?}{Schon gut, schon gut, ich entschuldige mich. Ihr müsst Euch nicht gleich so aufplustern! Was wünscht Ihr?}{}{}{}{}
+{401}{W:}{}{1}{lf1 0}{20}{lf1 1}
+{402}{K:}{}{1}{lf1 1}{40}{}
+{403}{Ich möchte, dass Ihr um Gnade winselt, wenn ich Euch töte.}{}{5}{}{0}{co}
+{409}{Nichts. Guten Tag.}{}{5}{}{0}{}
+{410}{Bei meinen vielen Reisen durch die Wüste habe ich nur eine einzige Stadt gefunden ... aber ich weiß nicht, ob ich die Position dieses Ortes wirklich einem Schwachkopf wie Euch verraten möchte.}{Bei meinen vielen Reisen durch die Wüste habe ich nur eine einzige Stadt gefunden ... aber ich weiß nicht, ob ich die Position dieses Ortes wirklich einem Schwachkopf wie Euch verraten möchte.}{}{}{}{}
+{411}{Biiiiittte?}{}{-4}{}{420}{}
+{412}{Ich nich' Schwatzkopp! Ich nich' magen Euch jetz'.}{}{-4}{}{450}{}
+{420}{Hmmm. Es gibt da etwas, das ich bräuchte. Wenn Ihr es mir beschafft, dann verrate ich Euch, wo die Stadt liegt.}{Hmmm. Es gibt da etwas, das ich bräuchte. Wenn Ihr es mir beschafft, dann verrate ich Euch, wo die Stadt liegt.}{}{}{}{}
+{421}{Was das sein?}{}{-4}{}{430}{}
+{430}{Bei einem Streifzug hier in der Nähe habe ich etwas Interessantes gefunden. [Er hält einen kleinen, eigentümlichen Gegenstand hoch, damit du ihn ansehen kannst.] Das habe ich in ein paar alten Ruinen draußen in der Wüste gefunden.}{Bei einem Streifzug hier in der Nähe habe ich etwas Interessantes gefunden. [Er hält einen kleinen, eigentümlichen Gegenstand hoch, damit du ihn ansehen kannst.] Das habe ich in ein paar alten Ruinen draußen in der Wüste gefunden.}{}{}{}{}
+{431}{Hä?}{}{-4}{}{440}{}
+{440}{Genau. Ich konnte nicht alle Teile davon mitnehmen, weil ich von ein paar Echsen angegriffen wurde. Wenn Ihr mir das Teil bringt, das ich brauche, zeige ich Euch, wo die alte Stadt liegt.}{Genau. Ich konnte nicht alle Teile davon mitnehmen, weil ich von ein paar Echsen angegriffen wurde. Wenn Ihr mir das Teil bringt, das ich brauche, zeige ich Euch, wo die alte Stadt liegt.}{}{}{}{qu 1047 1}
+{441}{Fein!}{}{-4}{}{100}{qu1047 2}
+{442}{Das Teil sein? [Du zeigst ihm das Teil.]}{}{-4}{in5605}{250}{}
+{449}{Ich nich' willen. Ich weg geh'n.}{}{-4}{}{0}{}
+{450}{Hmmm. Es gibt da etwas, das ich bräuchte. Wenn Ihr es mir beschafft, dann verrate ich Euch, wo die Stadt liegt.}{Hmmm. Es gibt da etwas, das ich bräuchte. Wenn Ihr es mir beschafft, dann verrate ich Euch, wo die Stadt liegt.}{}{}{}{}
+{451}{Was das sein?}{}{-4}{}{430}{}
+{460}{Gibt es sonst noch etwas?}{Gibt es sonst noch etwas?}{}{}{}{}
+{461}{Könnt Ihr mir etwas über Eure Abenteuer erzählen?}{}{5}{lf 0 0}{40}{}
+{462}{Erzählt mir mehr über Eure Abenteuer.}{}{5}{lf 0 1}{40}{}
+{463}{Über die Stadt in der Wüste ...}{}{5}{lf10 1, ar-11}{50}{}
+{464}{Ich habe beschlossen, nach dem Teil zu suchen, das Ihr wollt.}{}{5}{qu 1047 1}{100}{}
+{465}{Ich habe das Teil, das Ihr wollt.}{}{5}{qu 1047 2, in 5605}{250}{}
+{468}{E:}{}{1}{}{0}{}
+{470}{Bei einem Streifzug hier in der Nähe habe ich etwas Interessantes gefunden. [Er hält einen kleinen, eigentümlichen Gegenstand hoch, damit du ihn ansehen kannst.] Das habe ich in ein paar alten Ruinen draußen in der Wüste gefunden. Das Problem ist, es fehlt ein Teil. So funktioniert es nicht.}{Bei einem Streifzug hier in der Nähe habe ich etwas Interessantes gefunden. [Er hält einen kleinen, eigentümlichen Gegenstand hoch, damit du ihn ansehen kannst.] Das habe ich in ein paar alten Ruinen draußen in der Wüste gefunden. Das Problem ist, es fehlt ein Teil. So funktioniert es nicht.}{}{}{}{}
+{471}{Ich höre.}{}{5}{}{90}{}
+{480}{Ich weiß nicht ... vielleicht, wenn Ihr mir vorher einen Gefallen tun würdet ...}{Ich weiß nicht ... vielleicht, wenn Ihr mir vorher einen Gefallen tun würdet ...}{}{}{}{}
+{481}{Hört zu, kleiner Schwachkopf, Ihr sagt mir besser, was ich wissen will.}{}{5}{ra -2, ra -5, ra -6, ps 10}{80}{re -10}
+{482}{Was wäre das?}{}{5}{lf3 1}{90}{}
+{483}{Ich frage mich langsam, ob Ihr wirklich wisst, wo die Stadt liegt.}{}{5}{ps 10}{120}{}
+{484}{Und wenn ich Euch stattdessen bezahle?}{}{5}{}{270}{}
+{485}{Was wäre das?}{}{5}{lf3 0}{470}{}
+

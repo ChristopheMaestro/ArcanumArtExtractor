@@ -1,0 +1,499 @@
+// This message file contains text to be used in game-supplied newspapers
+// Only the message line numbers 1000 or higher are valid
+// Each new newspaper begins on a multiple of 10, and can use up to 10
+// lines, which must be consecutive. The first line is always the main 
+// headline, while the 9 remaining lines go into 4 columns of the paper.
+// Format: each line begins with a font number and justification letter,
+// followed by the text for that line.
+
+// Some font numbers to use:
+//	490 Extra Large Headline
+//	486 Large Headline
+//	492 Normal Headline
+//	483 Story Body
+//	488 Clip Art 0-6
+
+// Justification letters (you must use one)
+//	l = left
+//	c = center
+
+// NOTE: The first blocks, 0 thru 999, are reserved for UI use
+
+// tarantian paper
+{0}{Exclusif!}
+{1}{[ Le Tarantien ]}
+{2}{Prix : 2 pièces}
+{3}{La meilleure source d'informations d'Arcanum}
+
+// vendigrothian paper
+{4}{[ La gazette de Vendigroth ]}
+{5}{Le panorama complet de toute l'actualité}
+
+// filler articles
+{10}{492c _ METEO _}
+{11}{483l L'office météorologique de Tarante prévoit un temps ensoleillé pour les deux ou trois prochains jours, avec un risque de précipitations dans les quinze jours.}
+{12}{492c _ HAUSSE DES IMPOTS _}
+{13}{483l Le parlement envisage une hausse de l'impôt sur le revenu de 2 pièces pour 100 pièces gagnées. Le président a réfuté les diverses critiques suscitées par cette mesure en soulignant l'importance des travaux publics en cours de réalisation.}
+{14}{492c _ ANNONCE PUBLIQUE _}
+{15}{483l Le public est invité à assister à une réunion du conseil municipal qui se tiendra vendredi. La réunion débutera à 19h00 précises.}
+{16}{492c _ RAPPEL DE LA REDACTION _}
+{17}{483l Le Tarantien tient à rappeler à ses fidèles lecteurs que les lettres adressées à la rédaction ne reflètent pas nécessairement l'opinion du journal, ni celle de son propriétaire, M. Guillaume Guillot.}
+{18}{492c _ PROHIBITION _}
+{19}{483l Le spectre de la prohibition réapparaît depuis que le parlement étudie une proposition de loi visant à interdire la vente d'alcool sur le territoire de la commune. Les partisans de cette proposition affirment que cette loi permettra de réduire les chiffres alarmants de la criminalité et de l'absentéisme, tandis que ses détracteurs objectent que la dernière période de prohibition, il y a plus de 30 ans, n'y avait rien changé.}
+{20}{492c _ CONCOURS D'ELOQUENCE DE L'UNIVERSITE _}
+{21}{483l L'Ecole d'ingénieurs de l'Université de Tarante organise un concours du meilleur orateur ce semestre. Les personnes intéressées sont priées de contacter le service de la scolarité de l'université pour plus d'informations.}
+{22}{492c _ BAL DE BIENFAISANCE _}
+{23}{483l L'association Dames de Tarante organise samedi soir un nouveau bal de bienfaisance. Les bénéfices seront reversés à des oeuvres caritatives dédiées aux orphelins et aux anciens combattants. Les festivités débuteront à 20h00. Tenue correcte exigée.}
+{24}{492c _ COEFFICIENTS DES MAREES _}
+{25}{483l Les marées hautes auront lieu aujourd'hui à 6h15 et 19h30, les marées basses vers 13h05 et environ 25 minutes après minuit. Un tableau complet des marées figure en page 8.}
+
+//Game Related Newspapers
+//Use lines 1000-4990
+//Generic Newspapers Start at line 5000
+
+{1000}{490c SAMPLE HEADLINE!}
+{1001}{492c _ Place subheading here _}
+{1002}{483l And here's the text of the story. It's pretty exciting!}
+
+{1020}{490c VOL CHEZ LES GARRINGSBOURG !}
+{1021}{492c _ UN TABLEAU A DISPARU ET LES VOLEURS COURENT TOUJOURS _}
+{1022}{483l Mardi en fin de soirée, la demeure de M. et Mme Garringsbourg, située au 37, rue de la Providence, a été cambriolée et mise à sac par des voleurs, selon des sources proches de la famille. Parmi les objets emportés figure le célèbre tableau " Kerghan et Perséphone " de Pizarro. Vendu l'année dernière chez Christoe's pour la somme de 50000 pièces d'or, le tableau constituait la plus belle pièce de la galerie Garringsbourg.
+M. Garringsbourg, membre de longue date du Bougainville Club, a déclaré : " Soyez certains que les auteurs de ce crime odieux seront traduits en justice et que le préjudice sera réparé ". Mme Garringsbourg n'a fait aucun commentaire.
+Les Garringsbourg ont promis une récompense de 300 pièces d'or à quiconque permettra de retrouver le tableau. Ce crime est le dernier d'une longue série de vols d'objets d'art parmi lesquels la statue " Lorek au repos " et le Vase de Blendom.}
+
+{1030}{490c DECOUVERTE DE TOMBES ELFIQUES !}
+{1031}{492c _ LE PROFESSEUR JACQUES A DECOUVERT PLUSIEURS TOMBEAUX DANS LES PLAINES DE MORBILIANDE _}
+{1032}{483l Le professeur Guillaume Harrimant se prépare pour une expédition dans les plaines de Morbiliande où plusieurs anciens tombeaux elfiques viennent d'être exhumés, dont un superbe exemple d'art funéraire préhistorique.}
+{1033}{488c 6}
+{1034}{483l Selon le professeur Jacques de l'Université de Tarante, actuellement sur les lieux, " ces tombeaux prouvent que la société préhistorique elfique enterrait ses morts comme nous le pensions ". Le professeur Jacques a découvert ces tombeaux alors qu'il sillonnait la région à la recherche d'autres fossiles pour compléter la magnifique collection exposée dans la salle polytechnique du muséum d'histoire naturelle. Cette première collaboration entre les professeurs Jacques et Harrimant constitue un événement unique dans l'histoire de leurs institutions et marquera peut-être le début d'une nouvelle ère de coopération entre ces deux organismes. Le public a particulièrement apprécié la décision judicieuse du professeur Jacques de faire part à M. Harrimant de sa découverte lorsqu'il s'est aperçu de son ampleur.}
+
+{1040}{490c ASSASSINAT DE GILBERT BASTIEN !}
+{1041}{492c _ LE CELEBRE INDUSTRIEL ASSASSINE PAR UN INCONNU _}
+{1042}{483l 	M. Gilbert Bastien, le " Père de l'industrie " comme on avait coutume de l'appeler, a été retrouvé mort aujourd'hui dans sa maison, vraisemblablement victime d'un acte criminel. L'assassin court toujours.}
+{1043}{483l		M. Bastien est célèbre dans tout le pays pour avoir inventé dans sa jeunesse la première machine à vapeur du monde. Humble et réservé, M. Bastien a souvent essayé de minimiser l'importance de ses découvertes, déclarant qu'il n'avait pas réellement inventé la machine à vapeur, mais qu'il avait simplement " rassemblé des idées émises depuis plusieurs siècles ". Il était d'ailleurs très surpris d'être le premier à avoir concrétisé cette méthode.
+	Cédric Duverger, connu pour être un rival et un détracteur du regretté M. Bastien, est actuellement considéré comme un suspect potentiel. Le chef de la police a déclaré que " ses dénonciations publiques à l'encontre de M. Bastien et de sa famille font de lui le principal suspect ".}
+{1044}{483l 	Des obsèques publiques auront lieu la semaine prochaine. L'heure et le lieu de la cérémonie seront communiqués ultérieurement.}
+
+{1050}{490c GILBERT BASTIEN ACCUSE D'IMPOSTURE !}
+{1051}{492c _ LE JOURNAL DE BASTIEN DIVULGUE A LA PRESSE CONTIENDRAIT LES PREUVES QUE LA MACHINE A VAPEUR A ETE INVENTEE PAR LES NAINS _}
+{1052}{483l 	La nouvelle a secoué tout le Royaume-Unifié : le journal de Gilbert Bastien révèle la véritable origine de la machine à vapeur, qui serait née au fin fond des cavernes du Clan du Mont Noir ! 
+	" J'ai toujours soutenu que ce n'était qu'un imposteur, et en voilà la preuve ! " a déclaré M. Duverger en brandissant le journal. " Remercions les dieux que cet imposteur ait été démasqué ! ".} 
+{1053}{483l		M. Bastien s'est abstenu de tout commentaire et a quitté son palace de Tarante pour une destination inconnue. Personne ne sait pour le moment où il est. L'opinion publique semble pourtant soutenir Gilbert Bastien, au grand dam de M. Duverger.
+	Un mystérieux personnage a également participé à la dénonciation publique de M. Bastien. Il s'agirait d'une sorte d'aventurier sur lequel on sait bien peu de choses (voir portrait-robot en page 2).}
+
+{1060}{490c ASSASSINAT DE CEDRIC DUVERGER !}
+{1061}{492c _ LE SCELERAT A SUCCOMBE A UN ACTE CRIMINEL _}
+{1062}{483l “L'inventeur” Cédric Duverger a été retrouvé mort hier soir dans son usine, vraisemblablement victime de ses propres machinations.
+	" M. Duverger n'a eu que ce qu'il méritait ", a déclaré l'agent de police sur le lieu du crime, " avec ses attaques incessantes contre M. Bastien, cela devait finir par lui arriver un jour ".
+	M. Bastien, toujours cordial, a déclaré en apprenant la mort de son rival : " Je regrette que Cédric en soit arrivé là. Il a peut-être été victime d'un client mécontent ". Pour le moment, la presse et M. Bastien font des gorges chaudes de cette affaire.}
+{1063}{483l		Un journaliste, pourtant, regrette la disparition de Cédric, car ses frasques lui donnaient une source d'inspiration de choix et l'occasion d'écrire quelques articles croustillants.
+	Duverger, célèbre pour ses pâles imitations des machines de Bastien, a toujours été soupçonné d'être impliqué dans les tentatives de sabotage du tout dernier prototype de son rival.}
+
+
+{1070}{490c CATASTROPHE FERROVIAIRE
+EN GARE DE VERMILLON !}
+{1071}{492c _ PLUSIEURS PERSONNES INTERPELLEES _}
+{1072}{483l Vendredi soir, le train de Bracquenton a déraillé suite à un acte de sorcellerie, blessant de nombreux passants et passagers. L'incident fait suite aux agressions dont ont été victimes le conseiller municipal Edouard Saule et Perrin Laforge, le mage de Tulla. Ces actes ont été commis par des bandits de la région. Le déraillement du train a été provoqué en réponse aux représailles de Laforge.
+Un peu plus tard dans la soirée, MM. Saule et Laforge ont été de nouveau approchés par des inconnus au domicile des Saule. L'intervention de Laforge et d'un gentilhomme non identifié a conduit à l'arrestation de plusieurs personnes, dont un ensorceleur aux pouvoirs très puissants. M. Saule s'est montré étrangement taciturne au sujet de cette affaire : 
+" Il s'agit d'une affaire privée que j'ai réglée à ma manière ". M. Laforge souhaite rester quelques jours encore en ville, en évitant cependant le quartier de la gare de Vermillon. Il a déclaré : " C'est vraiment affreux. Il vaut mieux oublier toute cette histoire ". }
+
+{1080}{490c L'EVENTREUR A ENCORE FRAPPE !}
+{1081}{492c _ LA POLICE, DEPASSEE, EN APPELLE A LA COOPERATION DE LA POPULATION DE WHYTECHURCH _}
+{1082}{483l 	" Nous demandons à tous les habitants de Caladon de nous fournir tout renseignement susceptible de permettre l'arrestation du coupable ", a déclaré ce matin l'inspecteur chef André aux journalistes. " Tous les moyens disponibles seront mis en oeuvre pour appréhender le criminel ".
+La police craint que d'autres crimes ne soient commis si le coupable n'est pas très rapidement interpellé.
+	Les informations divulguées par la police sont succintes, mais nous savons que le meurtrier s'attaque de préférence aux belles de nuit. " Nous devons cependant avertir l'ensemble de la population, " a précisé l'inspecteur chef André, " car le meurtrier pourrait choisir d'autres victimes et s'attaquer à nos épouses et à nos filles ".}
+{1083}{483l 	Toute personne qui détiendrait des informations concernant cette affaire est priée de contacter l'inspecteur chef André au 5, avenue Toussaint dans les plus brefs délais.}	
+
+{1090}{490c UN ELU DECLARE LA GUERRE A CALADON !}
+{1091}{492c	_ IL FAUT LES EMPECHER DE DETRUIRE NOTRE VIE _}
+{1092}{483l 	Dans un discours passionné, et parfois virulent, tenu au Conseil industriel, le conseiller Soufflet a demandé ni plus ni moins la reddition sans condition de Caladon, bien qu'aucune déclaration de guerre n'ait été formellement décrétée.
+	Il a déclaré avec véhémence : " Caladon est prête à soutenir les citoyens de Tarante qui luttent en faveur de la sorcellerie afin qu'ils s'emparent du pouvoir comme ils ont essayé de le faire lors des sanglantes émeutes des ensorceleurs, il y a une dizaine d'années ". " Comment peut-on croire à la monarchie, a fortiori lorsque celle-ci mêle sorcellerie et technologie ! Nous devons dès à présent annexer Caladon ! ".}
+{1093}{483l Notre reporter avoue entièrement partager les opinions de M. Soufflet. Il est grand temps de donner une bonne leçon à ces Caladoniens ! La rédaction du Tarantien espère que vous, fidèles lecteurs, nous aiderez à destituer le conseiller municipal Saule en faveur de M. Soufflet.}
+
+{1100}{490c ASSASSINAT DU
+ROI DE CALADON !}
+{1101}{492c _ CET INCIDENT COMPROMET LES PROCHAINS POURPARLERS _}
+{1102}{483l	Le roi Farad de Caladon a été retrouvé mort dans ses appartements, victime vraisemblablement d'un attentat perpétré par un ou plusieurs agresseurs. Cet assassinat intervient à la veille des négociations entre le Royaume-Unifié et Caladon, et compromet sérieusement la candidature de Caladon. Le prince Auguste Farad a déclaré : " Nous n'avons encore recueilli aucune preuve que cet acte serait lié aux négociations, mais une enquête est en cours. Mon père sera vengé ".
+	Clément De Blaye, capitaine de la garde royale caladonienne, a également fait une déclaration : " Le fait que le meurtre ait eu lieu dans les appartements du roi, sous nos yeux, renforce l'hypothèse d'un acte criminel prémédité. Plusieurs employés du château sont actuellement... euh... interrogés ".
+	Edouard Saule, président du Conseil industriel de Tarante, et son homologue, l'un des plus fervents partisans de la candidature de Caladon, n'ont fait aucun commentaire.}
+
+{1110}{490c MEURTRE D'UN CITOYEN CALADONIEN !}
+{1111}{492c _ Il laisse derrière lui un frère désemparé _}
+{1112}{483l	M. Laurent Brummond a été retrouvé mort hier soir dans son appartement. Il a succombé aux coups portés par un ou plusieurs agresseurs. La police ne suspecte personne pour le moment.
+	" C'est une affaire très curieuse ", a déclaré le détective Guillaume Prévost. " Aucun objet n'a été volé et ce n'est pourtant pas ce qui manquait. Selon les informations recueillies, M. Brummond était un citoyen honnête, issu d'une famille très respectée de Caladon. Quelqu'un lui en voulait et nous tâcherons de découvrir qui et pourquoi ".
+	La police est en train d'enquêter sur diverses théories selon lesquelles le meurtre serait lié à l'association de malfaiteurs de Caladon, dont le quartier général est, semble-t-il, à la taverne A l'Oignon qui pleure. Mais pour le moment, aucune preuve tangible n'a été découverte.
+	M. Brummond n'avait qu'un frère, Virgile, que la police cherche à joindre. " Nous espérons qu'il pourra nous apporter d'autres éléments sur cette affaire. Nous avons toutes les peines du monde à le retrouver ".}
+
+{1120}{490c RESTITUTION DU
+TABLEAU VOLE !}
+{1121}{492c _ Les voleurs déjoués par un héros _}
+{1122}{483l	Evelyne Garringsbourg a annoncé qu'un gentleman inconnu, plein d'ingéniosité et de courage, lui avait rapporté son tableau, le célèbre " Kerghan et Perséphone ". Ce dernier, retrouvé chemin du Désossé, avait été déclaré volé il y a une semaine par les Garringsbourg. 
+	Les circonstances de cette restitution restent vagues, mais Mme Garringsbourg a déclaré avoir une totale confiance en la personne qui lui a remis le tableau.
+	" Oh, c'était un homme charmant ! Naturellement, je l'ai récompensé pour son action, mais ses motivations étaient singulièrement chevaleresques ! Si tous les hommes de cette maudite ville étaient comme lui... ". M. Garringsbourg s'est abstenu de tout commentaire.
+	Nous tirons notre chapeau à l'étranger qui a retrouvé le tableau ! Cet acte bienveillant fait honneur aux habitants de Tarante.}
+
+{1130}{490c RESTITUTION DU
+TABLEAU VOLE !}
+{1131}{492c _ Les voleurs déjoués par une héroïne _}
+{1132}{483l	Evelyne Garringsbourg a annoncé qu'une femme inconnue, pleine d'ingéniosité et de courage, lui avait rapporté son tableau, le célèbre " Kerghan et Perséphone ". Ce dernier, retrouvé chemin du Désossé, avait été déclaré volé il y a une semaine par les Garringsbourg. 
+	Les circonstances de cette restitution restent vagues, mais Mme Garringsbourg a déclaré avoir une totale confiance en la personne qui lui a remis le tableau.
+	" Oh, c'était une femme charmante ! Naturellement, je l'ai récompensée pour son action, mais ses motivations étaient singulièrement désintéressées ! Si toutes les femmes de cette maudite ville étaient comme elle... ". M. Garringsbourg s'est abstenu de tout commentaire.
+	Nous tirons notre chapeau à l'étrangère qui a retrouvé le tableau ! Cet acte bienveillant fait honneur aux habitants de Tarante.}
+
+{1140}{490c THIS IS A MISTAKE!}
+{1141}{492c _ Chad forgets what story this was! _}
+{1142}{483l	Please make chad aware if you see this!}
+
+{1150}{490c LE MIRACLE DU ZEPHYR !
+UN SURVIVANT RACONTE !}
+{1151}{492c _ Un homme échappe à l'enfer des flammes ! _}
+{1152}{483l	Mes chers concitoyens ! C'est moi, Victor Derval, votre fidèle rédacteur, qui vient vous exposer une histoire exclusive que seul un journal de cette renommée et de cette qualité est en mesure de vous proposer ! 
+	Hier, nous avons reçu la visite de l'unique survivant de la catastrophe du dirigeable Zéphyr (voir photo en page 2), qui a bien voulu me raconter les terribles derniers instants de son voyage ! Attention ! Cette histoire peut choquer les âmes sensibles ! Il s'agit d'un événement véritablement effroyable qu'il convient de réserver aux personnes averties !
+	Voici ce que le gentleman nous a confié au sujet de cet atroce événement : " Il y a eu une terrible explosion... Tout le dirigeable a été secoué... Je n'ai rien vu dans les airs, mais j'ai entendu des coups de feu... Et aussi des bruits de moteur... Je crois qu'il y en avait deux sortes ". Aussi incroyable que cela puisse paraître, il semble que le Zéphyr ait été attaqué par un autre type d'appareil. Concernant l'atterrissage, le gentleman a déclaré " qu'il y avait une autre épave, à côté du dirigeable. Un appareil étrange... ", mais il n'a pas pu nous dire de quel type d'appareil il s'agissait.
+	Le destin du Zéphyr allait être scellé quelques instants après cette attaque. " Je regrette que personne d'autre n'ait survécu à l'accident ", a conclu notre interlocuteur. Il était encore visiblement très choqué par ces événements et j'ai préféré mettre un terme à notre entretien quelques minutes après.
+	Alors ! Mes chers amis ! Que pensez-vous de toute cette affaire ? Que sont ces étranges appareils ? Pourquoi ont-ils attaqué le Zéphyr ? Des pirates de l'air ? Ou quelque chose de plus maléfique et insidieux ? Ne sommes-nous plus en sécurité ? Même dans les airs ? Le Tarantien fera tout son possible pour découvrir ce qui se cache derrière cette affaire, et moi-même, Victor Derval, n'aurai de cesse de chercher la vérité qui se cache derrière ces étranges événements !}
+
+{1160}{490c LE MIRACLE DU ZEPHYR !
+UNE SURVIVANTE RACONTE !}
+{1161}{492c _ Une femme échappe à l'enfer des flammes !}
+{1162}{483l	Mes chers concitoyens ! C'est moi, Victor Derval, votre fidèle rédacteur, qui vient vous exposer une histoire exclusive que seul un journal de cette renommée et de cette qualité est en mesure de vous proposer ! 
+	Hier, nous avons reçu la visite de l'unique survivante de la catastrophe du dirigeable Zéphyr (voir photo en page 2), qui a bien voulu me raconter les terribles derniers instants de son voyage ! Attention ! Cette histoire peut choquer les âmes sensibles ! Il s'agit d'un événement véritablement effroyable qu'il convient de réserver aux personnes averties !
+	Voici ce que cette dame nous a confié au sujet de cet atroce événement : " Il y a eu une terrible explosion... Tout le dirigeable a été secoué... Je n'ai rien vu dans les airs, mais j'ai entendu des coups de feu... Et aussi des bruits de moteur... Je crois qu'il y en avait deux sortes ". Aussi incroyable que cela puisse paraître, il semble que le Zéphyr ait été attaqué par un autre type d'appareil. Concernant l'atterrissage, la dame a déclaré " qu'il y avait une autre épave, à côté du dirigeable. Un appareil étrange... ", mais elle n'a pas pu nous dire de quel type d'appareil il s'agissait.
+	Le destin du Zéphyr allait être scellé quelques instants après cette attaque. " Je regrette que personne d'autre n'ait survécu à l'accident ", a conclu notre interlocutrice. Elle était encore visiblement très choquée par ces événements et j'ai préféré mettre un terme à notre entretien quelques minutes après.
+	Alors ! Mes chers amis ! Que pensez-vous de toute cette affaire ? Que sont ces étranges appareils ? Pourquoi ont-ils attaqué le Zéphyr ? Des pirates de l'air ? Ou quelque chose de plus maléfique et insidieux ? Ne sommes-nous plus en sécurité ? Même dans les airs ? Le Tarantien fera tout son possible pour découvrir ce qui se cache derrière cette affaire, et moi-même, Victor Derval, n'aurai de cesse de chercher la vérité qui se cache derrière ces étranges événements !}
+
+{1170}{490c LE MIRACLE DU ZEPHYR !
+UN SURVIVANT RACONTE !}
+{1171}{492c _ Un homme échappe à l'enfer des flammes ! _}
+{1172}{483l	Mes chers concitoyens ! C'est moi, Victor Derval, votre fidèle rédacteur, qui vient vous exposer une histoire exclusive que seul un journal de cette renommée et de cette qualité est en mesure de vous proposer ! 
+	Hier, nous avons reçu la visite de l'unique survivant de la catastrophe du dirigeable Zéphyr (voir photo en page 2), qui a bien voulu me raconter les terribles derniers instants de son voyage ! Attention ! Cette histoire peut choquer les âmes sensibles ! Il s'agit d'un événement véritablement effroyable qu'il convient de réserver aux personnes averties !
+	Voici ce que cet homme nous a confié au sujet de cet atroce événement : " A eu grand boom ! Tout dirigeab' secoué... Moi pas voir, mais moi entendre coups de feu... Moi aussi entendre moteurs. Moi pense y avoir deux bruits moteur ". Aussi incroyable que cela puisse paraître, il semble que le Zéphyr ait été attaqué par un autre type d'appareil. Concernant l'atterrissage, l'homme a déclaré " avait aut' appareil tout cassé aussi. Près dirigeab'. Autre appareil bizarre ", mais il n'a pas pu nous dire de quel type d'appareil il s'agissait.
+	Le destin du Zéphyr allait être scellé quelques instants après cette attaque. " Pas d'aut' gens vivants quand dirigeab' écrasé ", a conclu notre interlocuteur. Bien que n'étant pas très intelligent, l'homme était néanmoins encore très choqué par ces événements et j'ai préféré mettre un terme à notre entretien quelques minutes après.
+	Alors ! Mes chers amis ! Que pensez-vous de toute cette affaire ? Que sont ces étranges appareils ? Pourquoi ont-ils attaqué le Zéphyr ? Des pirates de l'air ? Ou quelque chose de plus maléfique et insidieux ? Ne sommes-nous plus en sécurité ? Même dans les airs ? Le Tarantien fera tout son possible pour découvrir ce qui se cache derrière cette affaire, et moi-même, Victor Derval, n'aurai de cesse de chercher la vérité qui se cache derrière ces étranges événements !}
+
+{1180}{490c LE MIRACLE DU ZEPHYR !
+UNE SURVIVANTE RACONTE !}
+{1181}{492c _ Une femme échappe à l'enfer des flammes ! _}
+{1182}{483l	Mes chers concitoyens ! C'est moi, Victor Derval, votre fidèle rédacteur, qui vient vous exposer une histoire exclusive que seul un journal de cette renommée et de cette qualité est en mesure de vous proposer ! 
+	Hier, nous avons reçu la visite de l'unique survivante de la catastrophe du dirigeable Zéphyr (voir photo en page 2), qui a bien voulu me raconter les terribles derniers instants de son voyage ! Attention ! Cette histoire peut choquer les âmes sensibles ! Il s'agit d'un événement véritablement effroyable qu'il convient de réserver aux personnes averties !
+	Voici ce que cette pauvre dame nous a confié au sujet de cet atroce événement : " A eu grand boom ! Tout dirigeab' secoué... Moi pas voir, mais moi entendre coups de feu... Moi aussi entendre moteurs. Moi pense y avoir deux bruits moteur ". Aussi incroyable que cela puisse paraître, il semble que le Zéphyr ait été attaqué par un autre type d'appareil. Concernant l'atterrissage, la pauvre dame a déclaré " avait aut' appareil tout cassé aussi. Près dirigeab'. Autre appareil bizarre ", mais elle n'a pas pu nous dire de quel type d'appareil il s'agissait.
+	Le destin du Zéphyr allait être scellé quelques instants après cette attaque. " Pas d'aut' gens vivants quand dirigeab' écrasé ", a conclu notre interlocutrice. Bien que n'étant pas d'une intelligence exceptionnelle, elle était néanmoins encore très choquée par ces événements et j'ai préféré mettre un terme à notre entretien quelques minutes après.
+	Alors ! Mes chers amis ! Que pensez-vous de toute cette affaire ? Que sont ces étranges appareils ? Pourquoi ont-ils attaqué le Zéphyr ? Des pirates de l'air ? Ou quelque chose de plus maléfique et insidieux ? Ne sommes-nous plus en sécurité ? Même dans les airs ? Le Tarantien fera tout son possible pour découvrir ce qui se cache derrière cette affaire, et moi-même, Victor Derval, n'aurai de cesse de chercher la vérité qui se cache derrière ces étranges événements !}
+
+{1190}{490c DISPARITION DU ZEPHYR !}
+{1191}{492c _ QU'EST-IL ARRIVE AU GRAND DIRIGEABLE ? _}
+{1192}{483l	Le voyage inaugural du Zéphyr, le premier dirigeable " plus léger que l'air " de l'histoire d'Arcanum, vient de connaître une fin mystérieuse. Les premières informations provenant de la gare de Vermillon restent vagues, mais il semble que l'appareil ait été aperçu pour la dernière fois au-dessus des montagnes grises, près du petit village minier de Tristes Collines.
+	Nous n'avons pas encore été en mesure de joindre le village par télégraphe, mais le fait que le Zéphyr ne soit pas encore arrivé ici, à Tarante, est un mauvais présage. " Le dirigeable est conçu pour atterrir uniquement à des endroits précis et ses réserves de charbon ne lui permettent pas une autonomie en l'air aussi longue ", a déclaré le chef de la gare de Vermillon. " J'ai peur que cette logique n'explique le drame ".
+	Edouard Saule, président du Conseil industriel, et également l'un des principaux investisseurs de la gare de Vermillon, a pris la parole : " Evitons de penser que le pire est arrivé. Le capitaine du Zéphyr est un pilote émérite. Peut-être a-t-il réussi à poser l'appareil quelque part ? Je continue à espérer qu'ils sont tous sains et saufs, et mes pensées vont aux passagers du dirigeable ".
+	Cet événement fait suite à la catastrophe ferroviaire survenue il y a quelques jours en gare de Vermillon. Pourvu que le Zéphyr ne connaisse pas le même destin tragique que le train de Bracquenton.}
+
+{1200}{490c LAPAYNE A TUE LE DEMON !}
+{1201}{492c _ Lapayne, le célèbre aventurier, a mis fin à la série de meurtres de Whytechurch ! _}
+{1202}{483l		Oui, fidèles lecteurs, la sécurité de notre ville a été rétablie grâce au courage du chasseur de renommée mondiale Franck Lapayne !
+	Lorsqu'on lui a demandé s'il avait rencontré des difficultés à tuer la créature, Payne plaisanta en affirmant que " capturer un démon est toujours une bonne façon de commencer la journée ! Ha ! Il m'a donné du fil à retordre, mais rien de très méchant à vrai dire ".}
+{1203}{483l		Comme d'habitude, notre “vénérable” inspecteur chef n'a fait aucun commentaire pour expliquer l'incapacité de la police à neutraliser la créature. Il était également incapable de nous dire pourquoi il n'avait pas pu découvrir le caractère démoniaque du meurtrier.}
+{1204}{483l	Selon le professeur Auguste de l'université de Tarante, le démon a été invoqué à Tarante il y a près de 500 ans et se cachait depuis lors dans nos égouts désaffectés. Il a récemment réapparu lors de la construction du nouveau système d'égouts. 
+	Une fois de plus, la folie de Tarante porte préjudice à Caladon ! Il est temps de cesser tout contact avec Tarante avant que nous ne soyons tous définitivement perdus !}
+
+{1210}{490c MORT DE RENFORD TERWILLIGER !}
+{1211}{492c _ LE CELEBRE ECRIVAIN MEURT DANS D'ETRANGES CIRCONSTANCES _}
+{1212}{483l 	M. Renford Terwilliger, le célèbre écrivain, a été retrouvé mort aujourd'hui à son domicile dans des circonstances très étranges.}
+{1213}{483l		M. Terwilliger doit sa célébrité à la publication d'une nouvelle controversée, " Effroi chez les Elfes Noirs ", basée, selon ses affirmations, sur des faits réels. Cependant, à la grande surprise de M. Terwilliger, des esprits perspicaces ont affirmé que ce livre n'était que pure fiction. L'agent de M. Terwilliger a annoncé que son client suivait actuellement un traitement médical car il montrait des signes de paranoïa, persuadé qu'on avait cherché à l'assassiner pour l'empêcher de publier son livre.
+		Les autorités continuent leur enquête au sujet de la mort tragique de l'écrivain.}
+{1214}{483l 	Des obsèques privées auront lieu la semaine prochaine.}
+
+{1220}{490c ASSASSINAT DE MADAME PETTIBONE !}
+{1221}{492c _ LA VICTIME A ETE POIGNARDEE AVEC UN COUTEAU DE CEREMONIE _}
+{1222}{483l		Mme Cassandra Pettibone a été retrouvée morte tôt ce matin par sa servante, un couteau planté dans la poitrine. L'arme du crime serait une ancienne lame de cérémonie, peut-être d'origine elfique.}
+{1223}{483l		Le capitaine Leboucher de la garde de Tarante a déclaré : " Nous n'avons pour le moment aucune preuve, mais je ne serais pas étonné que cette affaire soit liée au récent engouement de la haute société pour les reliques elfiques ". 
+	Et il ajouta : " Le bruit court que plusieurs personnalités éminentes auraient récemment fait l'acquisition de certains objets par des moyens douteux. Que les habitants se rassurent, nous examinons attentivement toutes ces pistes ".}
+
+{1230}{490c DONATIEN THROGG TOUJOURS EN FUITE !}
+{1231}{492c _ L'INFAME DEMI-ORQUE RESTE INTROUVABLE _}
+{1232}{483l		Donatien Throgg, le tristement célèbre agitateur demi-orque, a disparu depuis que le capitaine Leboucher de la garde de Tarante a été contraint de prouver l'efficacité des nouveaux fusils de la garde pour repousser une bande d'anarchistes dans le Parc du Centre. Ce groupe d'orques et de demi-orques hors-la-loi aurait été commandité par Throgg pour semer la panique dans la ville. 
+	" Ce Throgg n'est qu'un fauteur de troubles ", a déclaré le capitaine Leboucher, " il s'agit d'un individu extrêmement dangereux. Si quelqu'un le rencontre, que cette personne ne cherche surtout pas à lui parler ou à entrer en contact avec lui de quelque manière que ce soit. Si vous pensez avoir aperçu Throgg, prévenez aussitôt la garde. Cette affaire est de notre ressort et nous prendrons les mesures qui s'imposent ".}
+{1233}{483l		Le capitaine Leboucher s'apprête à recevoir les éloges du Conseil industriel pour ses actes héroïques. Seuls les conseillers Saule, Loiseau et De Johan s'opposent à cette initiative.}
+
+{1240}{490c DES ANARCHISTES OCCUPENT L'USINE !}
+{1241}{492c _ LE CAPITAINE LEBOUCHER CONDAMNE CETTE PRISE DE POUVOIR ILLEGALE _}
+{1242}{483l		Plusieurs orques très agressifs dirigés par Donatien Throgg ont pris le contrôle de l'usine où ils travaillaient, située au 15, chemin des Dix Menottes, au fin fond du quartier des entrepôts. Le capitaine Leboucher se trouve actuellement sur place en compagnie de l'élite de la garde de Tarante. 
+	" Cette fois, Throgg ne va pas s'en tirer en toute impunité. Vous pouvez me croire ! ", a déclaré le capitaine Leboucher, " il représente une menace pour notre société et notre vie en général ".}
+{1243}{483l		Le conseiller municipal Loiseau s'est également rendu sur les lieux, mais il nous a donné un tout autre point de vue : " Nous ne devons pas traiter les orques et les demi-orques comme des animaux. Des mesures doivent être prises pour modifier un système qui discrimine certaines races ".
+	La rédaction pense, quant à elle, que M. Loiseau ferait mieux de s'occuper de ses affaires et de laisser le soin aux autorités compétentes, comme le capitaine Leboucher, de contrôler les races inférieures indisciplinées.}
+
+{1250}{490c LA FIN DU CAUCHEMAR THROGG !}
+{1251}{492c _ " LA VILLE PEUT ENFIN DORMIR EN PAIX ", A DECLARE LE CAPITAINE LEBOUCHER _}
+{1252}{483l		Nos très courageux et glorieux gardes de Tarante ont abattu hier de plusieurs balles l'agitateur Donatien Throgg. Throgg, accusé d'être à l'origine de plusieurs altercations violentes entre des manifestants et la garde, était considéré comme l'ennemi public numéro un par le Conseil industriel.
+	" Il était temps de punir cet infâme individu ", a déclaré le capitaine Leboucher, à la tête de la garde qui a mis fin à la misérable existence de Throgg.}
+{1253}{483l		Comme d'habitude, le conseiller Loiseau s'est élevé contre l'emploi de la violence à l'égard de ces voyous : " Nous venons d'assister à la mort d'un soi-disant monstre, fruit de l'imagination de la presse ! En réalité, M. Throgg voulait simplement faire entendre les revendications de ses camarades : le respect de leur personne et de leurs droits ". M. Loiseau a continué dans la même veine, mais nous préférons épargner à nos fidèles lecteurs ce genre d'idioties.}
+
+{1260}{490c LA FIN DU CAUCHEMAR THROGG !}
+{1261}{492c _ " LA VILLE PEUT ENFIN DORMIR EN PAIX ", A DECLARE LE CAPITAINE LEBOUCHER _}
+{1262}{483l		Un héros inconnu vient de tuer l'infâme Donatien Throgg et de mettre ainsi un terme à de longues années de trouble de l'ordre public, semées de manifestations illégales et d'appels à l'égalité. Throgg, accusé d'être à l'origine de plusieurs altercations violentes entre des manifestants et la garde, était considéré comme l'ennemi public numéro un par le Conseil industriel.
+	" Il était temps de punir cet infâme individu ", a déclaré le capitaine Leboucher, à la tête de la garde qui avait forcé Throgg à se retrancher dans un entrepôt, où le mystérieux justicier l'a finalement abattu.}
+{1263}{483l		Comme d'habitude, le conseiller Loiseau s'est élevé contre l'emploi de la violence à l'égard de ces voyous : " Nous venons d'assister à la mort d'un soi-disant monstre, fruit de l'imagination de la presse ! En réalité, M. Throgg voulait simplement faire entendre les revendications de ses camarades : le respect de leur personne et de leurs droits ". M. Loiseau a continué dans la même veine, mais nous préférons épargner à nos fidèles lecteurs ce genre d'idioties.}
+
+{1270}{490c THROGG ECHAPPE ENCORE A LA POLICE}
+{1271}{492c _ LE CAPITAINE LEBOUCHER DEPLORE L'INTERVENTION DU CONSEILLER LOISEAU ET D'UN INCONNU _}
+{1272}{483l		Alors qu'une opération soigneusement orchestrée était sur le point d'aboutir à la capture de l'infâme agitateur Donatien Throgg, le conseiller Loiseau, aidé d'un inconnu, a facilité la fuite du criminel. 
+	" Je n'arrive pas à croire que ce “cher” M. Loiseau ait eu l'impudence de se mêler des affaires de la garde ! Je vais engager des poursuites criminelles à son encontre ! ", a lâché le capitaine Leboucher de la garde de Tarante. Il a également ajouté : " Ce jour devait marquer d'une pierre blanche la fin des agissements de Donatien Throgg et, à cause de l'intervention de Loiseau, la menace pèse toujours sur Tarante ! ".
+	M. Loiseau nie connaître l'identité de celui que le capitaine Leboucher soupçonne être son complice. Il se refuse à tout commentaire au sujet de cette affaire, mais a néanmoins tenu à préciser " qu'il est grand temps de traiter toutes les races avec égalité et de condamner le racisme dont font preuve des gens comme le capitaine Leboucher ".}
+
+{1280}{490c LA SORCELLERIE MENACE VENDIGROTH !}
+{1281}{492c _ UN ENSORCELEUR FOU MET EN GARDE CONTRE LA TECHNOLOGIE _}
+{1282}{483l		Hier, un ensorceleur dépourvu de carte d'invitation a fait irruption dans le bureau du gouverneur pour le prévenir des dangereuses représailles dont Vendigroth risque d'être victime si la ville ne renonce pas à ses recherches technologiques. Cet ensorceleur, qui se fait appeler " Arronax " et prétend appartenir au " Conseil Elfique ", exige que nous respections les décisions de son conseil. 
+	Le Gouverneur Nikolaï a précisé à Arronax que Vendigroth était un pays totalement indépendant. Nous n'avons jamais demandé ni accepté une quelconque aide de la part du Conseil Elfique dont nous ne reconnaissons pas l'autorité. Arronax a commencé un long plaidoyer en faveur du droit des elfes à gouverner avant que le gouverneur ne lui demande de quitter les lieux. Avant son départ, Arronax nous a vivement conseillé de tenir compte de ses avertissements.
+	La rédaction de la Gazette de Vendigroth tient à féliciter l'attitude du gouverneur, que nous avons parfois critiqué par le passé, et souhaite mettre en garde la population contre d'éventuelles représailles de l'ensorceleur fou.}
+{1283}{492c _ LES SCIENTIFIQUES METTENT AU POINT UN NOUVEAU SYSTEME DE DEFENSE _}
+{1284}{483l		Nos scientifiques ont entamé la fabrication d'un appareil qui, espèrons-le, fera réfléchir à deux fois tout ensorceleur succeptible de nous attaquer. Suite à la visite impromptue d'Arronax, le gouverneur a accepté d'augmenter le budget alloué à la conception du nouvel appareil, comme les scientifiques en faisaient la demande depuis plusieurs mois.
+	La rédaction de la Gazette de Vendigroth a réussi à obtenir quelques informations concernant cet appareil, bien que les détails restent, bien évidemment, un secret d'état. L'appareil permettrait d'aspirer la force vitale des ensorceleurs ! Seule la science est capable de produire de tels miracles !}
+{1285}{492c _ LE GOUVERNEUR CONVOQUE UNE REUNION D'URGENCE DE SON CABINET _}
+{1286}{483l		Le gouverneur Nikolaï a convoqué aujourd'hui les membres de son cabinet pour une réunion d'urgence afin de mettre au point de nouvelles stratégies défensives.}
+
+{1290}{490c USINE ENSORCELEE A SCANLAN !}
+{1291}{492c _ " CE CRIME NE RESTERA PAS IMPUNI ! ", A PROMIS LE GOUVERNEUR _}
+{1292}{483l		L'ensorceleur qui avait menacé il y a deux semaines notre bien-aimé gouverneur est de retour, et cette fois, il est venu semer la mort... Après avoir sans pitié détruit l'usine de Scanlan (et causé ainsi la mort de nombreuses personnes), il a eu l'audace de menacer une nouvelle fois le gouverneur en déclarant : " Ce n'est que le début si vous persistez dans votre attitude ".
+	Le gouverneur, tout à son honneur, a refusé de céder aux menaces de l'infâme Arronax et lui a ordonné de quitter son bureau. Nous n'avons aucune information concernant la fin de cette entrevue, étant donné que le gouverneur se trouve actuellement à l'hôpital dans un état jugé critique. En attendant, le gouverneur adjoint assure l'intérim.
+}
+{1293}{492c _ L'ENGIN DE FREUHOFF EST ENFIN TERMINE ! _}
+{1294}{483l		" Notre première ligne de défense est prête ", s'est félicité le docteur Samuel Freuhoff en présentant ce que la presse a déjà appelé " l'engin de Freuhoff ". " Les ensorceleurs réfléchiront à deux fois avant d'oser s'attaquer à une civilisation capable d'extraire leur force vitale à tout jamais ", a-t-il ajouté.
+	Les scientifiques ont prévu la construction d'engins supplémentaires ainsi que d'autres appareils anti-sortilèges.
+
+}
+{1295}{492c _ ANNONCE PUBLIQUE _}
+{1296}{483l Une réunion d'urgence ouverte au public se tiendra vendredi. La réunion débutera à 19h00 précises et aura pour thème les possibilités de riposte à envisager en cas d'autres attaques d'ensorceleurs.}
+{1297}{492c _ RAPPEL DE LA REDACTION _}
+{1298}{483l La Gazette de Vendigroth tient à rappeler à ses fidèles lecteurs que les lettres adressées à la rédaction ne reflètent pas nécessairement l'opinion du journal ni celle de son propriétaire.}
+
+{1300}{490c ESSAI DU SUBMERSIBLE}
+{1301}{492c_ LA LIGUE SCIENTIFIQUE CONTESTE LES THEORIES DU PROFESSEUR HUNLEY _}
+{1302}{483l		Le professeur Aldous Hunley a prévu d'inaugurer demain à midi son nouveau submersible, mais ses collègues de la Ligue scientifique affirment que ses théories sont erronées et qu'il va au devant d'un grand danger.
+	" Ses théories concernant la flottabilité et le recyclage de l'air reposent sur des arguments solides, mais il tire des conclusions plutôt hâtives concernant sa capacité à maîtriser ces facteurs essentiels ", a déclaré son collègue, le professeur Jonathan Frink. Ce dernier a ajouté : " Je crains que son projet de rétablir la flottabilité de l'appareil par un système d'air sous pression ne soit voué à l'échec. Une fois son monstrueux appareil immergé, j'ai bien peur qu'il ne remonte jamais à la surface. Je lui ai imploré d'effectuer davantage de tests avant de mettre ses théories en pratique, mais il s'entête à vouloir à tout prix prouver l'exactitude de ses hypothèses ".
+	L'appareil du professeur Hunley, semblable à un énorme monstre marin, sera exposé à l'embarcadère Dixon dans le port sud, avant son inauguration demain.
+}
+{1303}{492c _ BAL DE BIENFAISANCE _}
+{1304}{483l L'association Dames de Vendigroth organise samedi soir un nouveau bal de bienfaisance. Les bénéfices seront reversés à des oeuvres caritatives dédiées aux orphelins et aux anciens combattants. Les festivités débuteront à 20h00. Tenue correcte exigée.}
+{1305}{492c _ DEGREVEMENT _}
+{1306}{483l Le gouverneur envisage de réduire les impôts des habitants de Vendigroth de 2 pièces pour 50 pièces gagnées. Le gouverneur a réfuté les diverses critiques formulées par son cabinet à l'encontre de cette mesure.}
+{1307}{492c _ COEFFICIENTS DES MAREES _}
+{1308}{483l Les marées hautes auront lieu aujourd'hui à 6h15 et 19h30, les marées basses vers 13h05 et environ 25 minutes après minuit. Un tableau complet des marées figure en page 8.}
+
+{1310}{490c DISPARITION DU PROFESSEUR HUNLEY !}
+{1311}{492c _ LE SUBMERSIBLE EXPERIMENTAL N'A PAS REFAIT SURFACE, LA POLICE REDOUTE LE PIRE ! _}
+{1312}{483l		Le professeur Aldous Hunley de la Ligue scientifique est porté disparu et présumé mort, son submersible expérimental n'ayant pas réussi à rentrer au port à l'heure prévue.
+	" C'est un sombre jour pour la science ", a commenté le professeur Jonathan Frink, l'un de ses anciens adversaires au sein du conseil municipal. " Nous n'étions pas toujours d'accord, mais nous avions beaucoup de considération pour nos opinions respectives. Il va beaucoup nous manquer ".
+	Le professeur Hunley avait inauguré son submersible expérimental il y a une semaine et il aurait dû rentrer au port avant-hier. Le professeur Frink, pressentant la tragédie, avait tenté de convaincre Hunley d'abandonner son projet. Sans succès... " Mon confrère doit désormais reposer au fond de l'océan ", a-t-il ajouté avant de quitter la conférence de presse qui avait annoncé la disparition de Hunley.
+}
+{1313}{492c _ L'UNIVERSITE A LA RECHERCHE D'UN REMPLACANT _}
+{1314}{483l 	L'Ecole d'ingénieurs de l'Université de Vendigroth recherche actuellement une personne susceptible de remplacer le professeur Hunley, présumé décédé. Tous les candidats sont priés de se présenter en personne.
+} 
+{1315}{492c _ PROHIBITION _}
+{1316}{483l Le spectre de la prohibition réapparaît depuis que le gouverneur étudie une proposition de loi visant à interdire la vente d'alcool sur le territoire de la commune. Les partisans de cette proposition affirment que cette loi permettra de réduire les chiffres alarmants de la criminalité et de l'absentéisme, tandis que ses détracteurs objectent que la dernière période de prohibition, il y a plus de 30 ans, n'y avait rien changé.}
+{1317}{492c _ METEO _}
+{1318}{483l 	Le service météorologique de Vendigroth prévoit des risques de précipitations pour les deux prochaines semaines, suivies d'une amélioration.}
+
+
+
+
+	
+
+	
+
+
+//Generic Newspapers
+
+{5000}{490c PROTESTATION CONTRE LA TECHNOLOGIE}
+{5001}{492c _ LE RECOURS A LA FORCE A-T-IL CONDUIT A UNE TRAGIQUE BAVURE ? _}
+{5002}{483l 	Hier, la garde de Tarante a été appelée pour maîtriser une manifestation hostile devant le perron de l'Hôtel de Ville. A l'origine de cette manifestation, les membres de  l'Amicale des Mages, s'étaient regroupés devant le bâtiment en début de matinée, en vociférant des obscénités et en jetant divers objets technologiques.
+La garde, alertée par les plaintes des riverains, est arrivée sur les lieux une heure après le début de la manifestation en brandissant des fusils et des matraques. Quelques minutes plus tard, la confrontation a dégénéré à cause de plusieurs agitateurs des deux camps. Trois manifestants ont trouvé la mort dans ces affrontements.
+Cette manifestation avait été organisée pour protester contre le nombre croissant d'usines à Tarante et la pollution générée par leurs activités. " L'heure est venue de dire stop ! ", a déclaré Josiah Hummel, porte-parole de l'Amicale. " Tarante est aussi notre ville ".
+Le capitaine de la garde de Tarante a, quant à lui, déclaré : " La mission de la garde est de protéger la ville peu importe la qualité de l'air. Les autres contestataires potentiels devront s'attendre au même traitement ".}
+
+
+{5010}{490c UN TERME AUX BRUITS QUI VOLENT !}
+{5011}{492c _ LES EXPLICATIONS D'UN MAGE SAVANT _}
+{5012}{483l	Dernièrement, de nombreux témoins déclarent avoir aperçu un étrange engin volant, confirmant ainsi la thèse de l'existence d'un " appareil plus lourd que l'air ". Plusieurs de ces témoignages décrivent un appareil " en forme d'oiseau ", ce qui a provoqué de vives réactions. La rédaction du Tarantien ayant reçu de nombreuses lettres concernant ces " phénomènes ", nous avons décidé de consulter un expert en la matière, le mage Krolus Brajercliff, 
+	un maître des arcanes de l'air et du déplacement. Interrogé au sujet de ce mystérieux appareil, maître Brajercliff nous a certifié qu'un tel engin n'était tout simplement pas concevable : " Chacun sait que les oiseaux possèdent des os creux et remplis d'air. Et malgré cela, ces animaux doivent faire bien des efforts pour voler ! Même la plus performante de ces horribles machines est incapable de produire le dixième de la force nécessaire. Je suis convaincu que, pour espérer voler, l'homme ne dispose que de deux solutions : l'utilisation de ces appareils dangereux et inconfortables que sont les dirigeables plus légers que l'air, et l'étude rigoureuse de la magie ".
+	La rédaction du Tarantien tient à remercier maître Brajercliff pour nous avoir fait partager ses réflexions au sujet de cette affaire.}
+
+{5020}{490c  PROLIFERATION DES RONGEURS}
+{5021}{492c _ L'ARRETE DU CONSEIL MUNICIPAL POURRA-T-IL ENRAYER CE FLEAU ? _}
+{5022}{483l La rédaction
+
+	Cette loi controversée faisait l'objet de vifs débats depuis près d'un an, sans que l'un des deux camps ne parvienne à imposer son point de vue. Finalement, le conseil a décidé de procéder à un vote afin de mettre un terme aux discussions, pour le meilleur et pour le pire. Le dépouillement des votes a donné la victoire à quelques voix près aux partisans de la proposition de loi. Les opposants ont aussitôt contesté ce résultat en demandant un nouveau dépouillement du scrutin qui n'a fait que confirmer l'adoption de la proposition de loi.
+	Les discussions ont commencé suite à la présence croissante de gros rats sillonnant les rues de Tarante. Ces rongeurs peuplaient jusqu'à présent le vaste système d'égouts qui quadrille la ville. Mais ces animaux sont devenus moins craintifs, s'aventurant même dans les rues en plein jour. Certains hauts responsables craignent que cette prolifération ne se traduise par des épidémies.
+	Selon le nouvel arrêté municipal, les petits animaux tels que les écureuils et les lapins ne devront être nourris que dans des zones délimitées de la ville, uniquement les dimanches entre 12h00 et 18h00. Celle loi progressiste vient compléter la décision de M. Charles Dunston d'isoler d'importants tronçons du réseau d'égouts. M. Dunston, directeur de la compagnie d'eau et d'électricité de Tarante, a pris cette initiative à la suite de plusieurs attaques mortelles attribuées aux rongeurs.}
+
+{5030}{490c ETRANGE PHENOMENE
+A CENDREBOURG}
+{5031}{492c _ DES CREATURES DES FORETS ELFIQUES AURAIENT ETE APERCUES _}
+{5032}{483l La rédaction
+
+	Certains habitants de Cendrebourg prétendent avoir aperçu des si'im tala, ou " lueurs de passion ", comme on a coutume de les appeler. Ces rumeurs ont atteint Tarante il y a environ une semaine. Un de nos journalistes a pris le train pour Cendrebourg. 
+	Il a interrogé les différentes personnes qui prétendent avoir aperçu les étranges créatures. Il semblerait qu'elles apparaissent le soir, par petits groupes, dans les jardins des habitants. Personne ne sait pourquoi ces créatures se trouvent à Cendrebourg, si loin de la Forêt Scintillante où elles se cachent habituellement. 
+	Nous avons consulté plusieurs experts de l'Académie de Tarante qui nous ont confirmé être au courant de ces rumeurs. Selon eux, ces créatures auraient été capturées et transportées ici par un ou plusieurs individus, ce qui expliquerait leur présence si loin de leur habitat d'origine. Ces experts n'ont aucune idée des motifs qui auraient poussé ces personnes à agir de la sorte.
+	Même si ce phénomène reste inexpliqué, les habitants de Cendrebourg sont enchantés de la venue de ces nouveaux visiteurs et espèrent qu'ils resteront définitivement parmi eux. Pour nos lecteurs qui souhaiteraient un complément d'information concernant les habitudes et le comportement des si'im tala, nous leur recommandons le livre " Les cités interdites du Nord " de Gregor Seamus Darton. Cet excellent ouvrage est disponible dans toutes les bonnes librairies de Tarante.}
+
+{5040}{490c LES PROGRES DE
+LA CRIMINOLOGIE}
+{5041}{492c _ L'INCROYABLE DECOUVERTE D'UN PROFESSEUR _}
+{5042}{483l La rédaction
+
+	Le professeur Benjamin Gershwin a été nommé docteur honoris causa de l'Université de Tarante pour son travail expérimental dans le domaine médico-légal. Phrénologue réputé, le professeur Gershwin enseigne dans la prestigieuse école depuis plus de 20 ans. 
+	La théorie du professeur Gershwin, découverte par hasard, propose une méthode intéressante pour confondre les criminels au moyen d'une technique appelée " prise d'empreintes digitales ". Nous avons interrogé le célèbre professeur afin qu'il nous expose sa théorie et voici ce qu'il a bien voulu nous confier :
+	" Je me trouvais chez moi, un soir, quand notre gouvernante a commencé à disputer les enfants pour avoir laissé des traces de doigts sur la table du salon qui venait d'être lustrée. C'est ainsi que l'idée m'a sauté aux yeux. Avant qu'elle n'ait pu prévenir le domestique pour qu'il essuie la table, je me suis précipité dans le salon afin d'examiner les traces de doigts. Après avoir récupéré sur mon bureau un parchemin bien sec, je l'ai appliqué contre les traces pour les transférer sur le papier. J'ai pu ainsi tranquillement les examiner à la loupe ".
+	" En comparant ces traces avec d'autres traces laissées par mes enfants un peu plus tard, le résultat obtenu a confirmé ce que je pensais : ces traces correspondaient exactement à celles recueillies sur la table du salon ". 
+	J'en ai alors conclu que si la police pouvait récupérer ce genre d'empreintes sur le lieu du crime, elle serait alors en mesure de les comparer à celles des suspects et obtenir ainsi la preuve formelle de l'identité de l'assassin ".
+	Le professeur travaille actuellement avec d'autres confrères et des membres de la police afin d'améliorer cette technique.}
+
+{5050}{490c MYSTERE SUR LE FLEUVE HADRIEN}
+{5051}{492c _ ENSORCELEUR SURPRIS ALORS QU'IL SE LIVRAIT A UN ETRANGE RITUEL _}
+{5052}{483l La rédaction
+	
+	La police a signalé un étrange incident qui a eu lieu sur les rives du fleuve Hadrien qui traverse Tarante. Un agent de police aurait aperçu un homme " au comportement particulièrement singulier ".
+	Cet agent a déclaré : " D'où j'étais posté, j'ai pu observer très attentivement cet homme pendant un long moment. Il tenait une sorte de sac d'où il tirait des plumes. Il prenait alors une plume dans sa main ouverte, devant son visage, et semblait lui insuffler quelque sortilège. La plume se transformait alors en flamme bleue pour disparaître ensuite de sa main. J'ai regardé plusieurs fois cet étrange rituel avant de me décider à tirer un coup de semonce au-dessus de sa tête. Malheureusement, aucun coup n'est parti ". 
+	L'agent expliqua ensuite que l'individu s'était échappé en laissant tomber, dans sa précipitation, le sac contenant les plumes. Ce sac renfermait plusieurs types de plumes. Leur examen par le célèbre professeur Tristan Fenugrec de la Société zoologique de Tarante a démontré qu'elles provenaient de plusieurs variétés d'oiseaux dont certaines espèces étaient jusqu'alors inconnues. 
+	Ces informations, associées aux déclarations de l'agent relatives à la défaillance de son arme (un effet secondaire fréquent dans un environnement imprégné de sorcellerie), ont conduit M. Fenugrec à penser que cet homme et son étrange rituel avaient un lien avec les migrations récentes qui ont eu lieu dans les volières, que certaines personnes, des adeptes de la sorcellerie pour la plupart, avaient attribué à la “contamination” du fleuve Hadrien par les usines locales. La police a annoncé qu'elle poursuivait son enquête.}
+
+{5060}{490c DES NAUFRAGES RECUPERES
+SUR UNE ILE !}
+{5061}{492c _ UNE FAMILLE PERDUE ENFIN RETROUVEE _}
+{5062}{483l La rédaction
+
+	Il y a 6 ans, le tristement célèbre navire La Fierté d'Hadrien emmenait passagers et marchandises de Caladon à Tarante. Il n'arriva jamais à destination et seule la divine providence nous permet aujourd'hui de connaître son funeste destin.
+	Edouard Enseigne, capitaine de " La Bohémienne ", parti de Cendrebourg, se retrouva par hasard à suivre le même cap que La Fierté d'Hadrien lorsque le bateau fut pris dans une terrible tempête et entraîné loin au sud de son itinéraire. Le capitaine et son équipage, tous des marins chevronnés, ne furent pas désorientés malgré la tempête. 
+	Lorsque le calme fut revenu, ils découvrirent une île qui n'était répertoriée sur aucune carte. Ils décidèrent de jeter l'ancre afin de partir en quête d'une source d'eau douce, car la tempête avait emporté une grande partie de leurs réserves. En s'approchant de la rive, ils remarquèrent la présence de plusieurs personnes sur le lieu où ils s'apprêtaient à débarquer.
+	A leur grande surprise, ils découvrirent qu'il s'agissait de la famille Borlindas qui habitait autrefois à Cendrebourg. M. Borlindas raconta dans le détail au capitaine de la Bohémienne qu'ils se trouvaient à bord de la Fierté d'Hadrien en route pour le port de Tarante, d'où ils devaient ensuite prendre un train pour rentrer chez eux à Cendrebourg. M. Borlindas décrivit au capitaine la tempête qui les avait amenés ici et toutes leurs aventures depuis qu'ils avaient élu domicile sur l'île.
+	Le capitaine Enseigne, de nature généreuse, se proposa de ramener M. Borlindas et sa famille à Tarante. M. Borlindas accepta volontiers et c'est ainsi qu'ils débarquèrent à Cendrebourg mardi dernier.}
+
+{5070}{490c LE BATEAU PIRATE
+A ENCORE FRAPPE !}
+{5071}{492c _ LE CONSEIL PREPARE SA RIPOSTE _}
+{5072}{483l La rédaction
+	
+	Un autre navire marchand parti de Tarante, L'Etoile filante, semble avoir été la dernière victime de la recrudescence de la piraterie qui perturbe ces temps-ci le commerce maritime de Tarante. 
+	Le bateau a été retrouvé à la dérive, à une journée de mer de Tarante, la coque défoncée et le pont couvert de sang, laissant supposer que de violents combats s'y sont déroulés. Les propriétaires de l'épave ont confirmé que toute la cargaison avait été pillée et qu'aucun corps n'avait été retrouvé.
+	Suite à cette tragédie, certains armateurs de la marine marchande de Tarante ont demandé une réunion d'urgence du Conseil industriel. Lors de cette réunion, ils proposèrent la construction d'un " navire de guerre blindé, rapide, intégrant les dernières innovations technologiques en matière de vapeur, et équipé d'un puissant armement ". Ce bateau servirait à patrouiller le long des routes commerciales afin de juguler une fois pour toutes ces agressions, selon les termes des marchands.
+	La question reste de savoir qui financera un tel projet. Les habitants de Tarante redoutent une hausse des impôts et, au vu des précédentes décisions prises par le Conseil, leurs inquiétudes semblent légitimes. " Nous devons prendre une décision, et le plus vite possible ", a déclaré Edouard Saule, président du Conseil.
+	L'identité des pirates n'a pas encore pu être révélée, bien qu'un pêcheur local, McCoy La Dent Dure, avance un argument intéressant : " Ca c'est un coup du fantôme de Pierre Latige. Il aime pas beaucoup les bateaux dans ses eaux et le sang va couler longtemps ". Pour ceux qui ne connaîtraient pas la légende de Pierre Latige, ce pirate semait la terreur sur les mers d'Arcanum il y a près de 200 ans. Pourvu que ce vieux pirate ait enfin décidé de prendre sa retraite après cette illustre carrière !}
+
+{5080}{490c LA LECON DU MAITRE ARMURIER}
+{5081}{492c _ DES THEORIES CONTROVERSEES QUI SUSCITENT DE VIFS DEBATS _}
+{5082}{483l Monsieur Alex Livingston
+
+	Richard Poirot, maître dans l'art de la fabrication des armes, a donné un cours magistral à Eaux Dormantes sur les similitudes existant entre les disciplines scientifiques et l'étude et la pratique des sortilèges. M. Poirot a affirmé que les traditions de la sorcellerie et de l'artifice n'étaient pas si éloignées des méthodes scientifiques modernes et progressistes.
+	" Le souci du détail, la spécificité des matériaux, le respect de la forme et de la taille, éléments considérés comme une seconde nature par le mage forgeur, se retrouvent dans les activités du forgeron ", a déclaré Richard Poirot. " Un mage considère un artefact comme un ouvrier ses outils. Leur objectif est le même : changer le monde de façon méthodique et adaptée ".
+	Malgré les sifflets d'une assistance composée en majorité d'elfes, M. Poirot resta calme et concentré tout au long de son exposé. Richard Poirot est réputé pour ses Lames d'Eaux Dormantes qu'il forge lui-même avant de les faire enchanter par l'ensorceleur local. " Il n'y a aucune raison pour que le technologiste et le mage entrent en conflit. Nous utilisons des techniques similaires et, pour cette raison, nous devrions avoir une grande considération pour nos arts respectifs ".}
+
+
+
+{5090}{490c LE PROFESSEUR QUI
+TENTE L'IMPOSSIBLE !}
+{5091}{492c _ PEUT-ON PARFOIS CONCILIER SORCELLERIE ET TECHNOLOGIE ? _}
+{5092}{483l David de Versatile
+	
+	Le professeur Jules Vorvinstern a demandé les services d'un ingénieur et d'un mage afin d'obtenir un amalgame de leurs sciences respectives. Il nomme sa découverte " arme à feu magique ". Selon lui, " Cet engin combinera les énigmes de la technologie et les arcanes de l'ésotérisme pour produire l'arme la plus puissante jamais créée ".   
+	Le professeur Vorvinstern a suivi pendant dix-sept ans les enseignements du mage Donovan Lefiert avant de s'intéresser à la technologie. " A cette époque, Jules était un idiot, et il l'est resté. Ses théories insignifiantes n'influenceront pas la magie ", a déclaré le mage Lefiert. L'ingénieur Herbert Bumbert, qui a participé à la conférence, reste quant à lui sceptique : " Si ça marche, tant mieux... Mais c'est impossible ". 
+	Faisant fi des réticences de ses pairs, le professeur Vorvinstern nous décrit la méthode qui sera utilisée pour fabriquer cette arme : " Je compte transformer un mousquet à canon lisse en l'associant à un démon à l'aide d'un appareil magique pour en augmenter la précision ". Le mage Lefiert et l'ingénieur Bumbert sont d'accord (fait assez rare pour être souligné) pour affirmer qu'une telle association est contre nature et ne devrait pas être tentée. Selon Lefiert, " Il a déjà du mal à tenir son pantalon ! Comment pourrait-il maîtriser un démon ? ". " Il court à la catastrophe ! ", a grommelé Bumbert.
+	Le professeur a prévu une démonstration de son produit aussitôt qu'il sera opérationnel.}
+
+{5100}{490c EXPERIENCE DEMONIAQUE}
+{5101}{492c _ DES THEORIES NON VERIFIEES A L'ORIGINE D'UNE FIN ATROCE _}
+{5102}{483l David de Versatile
+
+	Tous les habitants d'Arcanum pleurent la disparition du professeur Jules Vorvinstern, le père de " l'arme à feu magique ". En effectuant un dernier test de son appareil au Parc du Centre, le professeur Vorvinstern a succombé dans des circonstances tragiques et assez effrayantes. Selon le mage Lefiert, ancien mentor du professeur dans le domaine des sortilèges, " les forces magiques et technologiques se sont opposées, provoquant un phénomène extraordinaire ". L'ingénieur Herbert Bumbert a déclaré quant à lui : " Je l'avais prévenu que cela serait un échec ! Ces satanés ensorceleurs ont vraiment perdu la tête ! ". 
+	Selon des témoins, le professeur Vorvinstern parlait de différents hexagrammes, de sang de chauve-souris et de ratios d'inversion au moment où il a procédé au tir. A la lecture de ses dossiers, nous pouvons supposer qu'il envisageait d'inverser l'action de son démon pour obtenir ainsi une affinité technologique. Le démon, lassé par tous ces longs mois de servitude, refusa cette inversion et se jeta sur le professeur pour le tuer à l'aide d'un crayon pointu. Le démon a ensuite déclaré : " Un fusil magique ? Mais qui donc cela peut-il intéresser ? ", avant de disparaître dans un nuage de fumée. 
+	L'examen approfondi du mousquet n'a pas permis d'obtenir d'autres informations.}
+
+{5110}{490c UNE TARANTIENNE
+A LA MAIN VERTE}
+{5111}{492c _ UNE FLEUR DE TULLA ILLUMINE L'EXPOSITION _}
+{5112}{483l De notre reporter
+
+	Un remarquable spécimen floral entré en lice dans le concours organisé à l'occasion de l'Exposition florale et jardinière de Tarante a suscité de nombreuses réactions parmi les visiteurs.
+	Surnommée " Magnificence de Tulla ", la fleur ressemble à une orchidée avec une corolle de pétales rouge carmin bordés d'un liseré de jaune clair. Assez différente de la fameuse orchidée de Tarante, cette étrange fleur exhalerait des senteurs capiteuses et pénétrantes qui évoquent à beaucoup de visiteurs des souvenirs de jeunesse. Ces personnes, profondément émues, affirment qu'un tel parfum ne peut être obtenu que par sorcellerie.
+	C'est à cette occasion que Mme Florence Saule, épouse du président du conseil municipal de Tarante, fit son entrée. Loin d'écarter toute spéculation concernant la nature ensorcelée de la plante, Mme Saule se montra très enthousiaste au dire des spectateurs présents.
+	Plusieurs dames ayant dû quitter l'exposition en proie à des vertiges après avoir respiré le parfum de la Magnificence de Tulla, les juges du Comité floral féminin de Tarante, organisateur de l'exposition, ont officieusement prié Mme Saule de reprendre sa plante. Cette dernière s'est exécutée et a quitté les lieux en n'oubliant toutefois pas (comme l'indiquent certains témoignages) de délivrer quelques propos acerbes.
+	Mme Saule, comme certains s'en souviennent sûrement, a l'habitude des scandales. Il y a une douzaine d'années, elle souleva une vive indignation en se vantant, devant la haute société, d'avoir de lointaines origines elfiques. Peu après, l'honorable M. Saule nia publiquement les affirmations de son épouse, expliquant que celle-ci avait été victime d'un délire dû à une ingestion accidentelle d'herbes importées. Mme Saule suivit un long traitement médical avant de réintégrer, assez récemment, la haute société.}
+
+{5120}{490c LES LARCINS
+CONTINUENT !}
+{5121}{492c _ UN AGENT MENE L'ENQUETE _}
+{5122}{483l M. Kevin McDonald
+
+ 	La police locale a été récemment alertée par une recrudescence des vols de petits objets mécaniques à travers la ville. Bien que les adeptes de la sorcellerie soient les principaux suspects, l'agent Larik Verchale souligne que ces actes peuvent parfaitement avoir été commis par des citoyens ordinaires. 
+	Il aurait déclaré : " Il est fort probable que nous ayons affaire à une bande de prestidigitateurs désireux de saboter les technologies modernes, mais nous n'écartons aucune hypothèse concernant les auteurs de ces délits. Il peut également s'agir d'orques qui dérobent ces objets mécaniques pour satisfaire leur curiosité. Inutile de dire que ces criminels seront très vite arrêtés et jugés ".}
+{5123}{492c _ MEURTRE D'UNE CALADONIENNE _}
+{5124}{483l
+	Un cadavre a été retrouvé dans le quartier de Whytechurch à Caladon, portant à trois le nombre de victimes ce mois-ci. Caladon a été très secouée par ces meurtres, car la ville n'avait jusqu'ici jamais connu une tragédie de cette ampleur. L'inspecteur chef André craint que " nos concitoyens hésitent désormais à sortir de chez eux. Nous n'avions jamais été confrontés à des meurtres jusqu'à présent, et nous voilà soudain avec trois assassinats sur les bras. L'enquête suit son cours, mais j'ai bien peur que ces crimes ne soient que le début d'une longue série. Nos concitoyens devront en attendant faire face aux menaces du tueur fou ". Les autorités ont lancé des avertissements aux personnes qui se promènent seules dans les rues ou la nuit, car toutes les victimes étaient seules au moment de leur agression.}
+
+{5130}{490c OUVERTURE D'UNE
+NOUVELLE ACIERIE}
+{5131}{492c _ LES GARRINGSBOURG INAUGURENT UNE USINE MODERNE _}
+{5132}{483l M. Kevin McDonald
+	Le président du Conseil, Edouard Saule, a inauguré aujourd'hui la toute dernière grande unité de production implantée à Tarante. Cette nouvelle usine, propriété du magnat Jacques Garringsbourg, produira plus d'acier que n'importe quelle autre entreprise en activité. Garringsbourg aurait déclaré : " Avec la demande sans cesse croissante en matériaux de construction, l'aciérie Garringsbourg est fière de pouvoir proposer à Arcanum la meilleure qualité d'acier au meilleur prix ".
+	L'usine suscite cependant quelques polémiques concernant les conditions de travail de la main-d'oeuvre orque au sein de l'établissement. Sur ce point, M. Garringsbourg n'a pas souhaité faire de déclaration.}
+{5133}{492c _ BELLE RECOLTE A CENDREBOURG _}
+{5134}{483l
+	Une fois encore, la récolte de Cendrebourg a été abondante. Les habitants ont pourtant craint le pire, l'hiver dernier, lorsque les gelées tardives ont menacé les récoltes de printemps. Ils ont été soulagés de constater que la récolte de cette année s'annonce exceptionnelle. Le fermier Meegosh Nelram se réjouit de son excellente récolte : " Ouh ben, moi chais pas comment qu'ma récolte ala passé l'hiver. La g'lée était terrib' et j'ai ben cru qu'c'était la fin des haricots. Les mages y sont sûrement pour qu'ekchose, Dieu les bénisse. Avec la récolte, j'vais pouvoir envoyer l'fiston à l'université comme tous ses amis ". Nos fidèles lecteurs pourront ainsi profiter des céréales et des fruits qui arriveront de Cendrebourg par bateau la semaine prochaine.}
+
+{5140}{490c AUGMENTATION DE
+LA POLLUTION}
+{5141}{492c _ LE COMMENTAIRE D'UN ENTREPRENEUR LOCAL _}
+{5142}{483l
+	Un groupe de personnes représentant les quartiers est de la ville a rencontré hier le conseil municipal pour se plaindre de la pollution qui, selon elles, détruit leur cadre de vie. La plupart de ces personnes habitent le quartier situé entre le cours du Derviche et la promenade du Lion, près de la zone industrielle de Tarante. 
+	" Nos rues sont jonchées de déchets laissés par les transporteurs amenant les marchandises aux usines, et nos immeubles sont couverts de suie provenant de l'usine à charbon. Cette situation a assez duré ! ", a déclaré Madame Lily, propriétaire d'une maison dont la réputation soulève beaucoup de polémiques. " Non seulement nous devons subir la pollution, mais voilà que ces sales orques de l'usine harcèlent mes filles à longueur de journée ! ".
+	Le conseil municipal de Tarante n'a fait aucun commentaire sur cette affaire et s'est contenté de rassurer la population en affirmant que " tout était sous contrôle ".}
+{5143}{492c _ HOMMAGE A UN ARTISTE LOCAL _}
+{5144}{483l Mlle Geneviève Sykes
+
+	Un artiste de Tarante, originaire des quartiers est, accède aujourd'hui à la consécration en étant le premier humain depuis 153 ans à être exposé dans la grande galerie de Lord Brandoch. Depuis de nombreuses années, la célèbre galerie a permis à de grands artistes, la plupart d'origine elfique, de présenter leurs oeuvres. Perceval Fragrance rejoint désormais ces grands artistes que sont Bertolo et Remmer le Jeune dans la Galerie Brandoch. Les croquis de M. Fragrance représentant des travailleurs orques de l'usine de confection de Tarante ont été cités dans l'ouvrage " Etude des conditions de travail " de Morant et Fletcher, paru l'année dernière. L'accueil que les différentes communautés elfiques ont réservé à ce livre a contribué au succès du travail de M. Fragrance.
+	Certains membres de la communauté des marchands de Tarante ont été stupéfaits de la popularité des oeuvres de M. Fragrance, ce dernier ayant depuis quitté la ville pour s'installer ailleurs. Nous sommes agréablement surpris du succès que rencontre M. Fragrance dans d'autres contrées.}
+
+{5150}{490c  HOMMAGE A FRANCK LAPAYNE}
+{5151}{492c _ LA VILLE DE TARANTE LUI A REMIS LA LEGION D'HONNEUR POUR RECOMPENSER L'ENSEMBLE DE SON OEUVRE _}
+{5152}{483l Franck Lapayne a été décoré la nuit dernière de la Légion d'honneur de Tarante au cours du banquet organisé pour récompenser les citoyens qui se sont distingués pendant l'année. Après avoir reçu la prestigieuse distinction, M. Lapayne a régalé les invités présents de l'une de ses histoires piquantes.}
+{5153}{492c _ LETTRE A LA REDACTION _}
+{5154}{483l	Messieurs,
+	L'article de votre journal intitulé " Hommage à un artiste local ", paru la semaine dernière, est tout simplement honteux. La qualité des articles de votre journal a considérablement baissé depuis quelques mois. Le “papier” en question (ou devrais-je parler de “torchon”) est un parfait exemple de cette décadence. Mlle Sykes a fait montre d'un manque flagrant de maturité. Quoi de plus facile pour une jeune fille de se laisser abuser par une fervente rhétorique ! Je conseille vivement à ses parents de la placer au plus vite dans l'une des nombreuses écoles pour jeunes filles que compte notre belle ville. Elle y recevra l'éducation adaptée à une jeune fille bien élevée qui se destine à la plus belle des vocations : le mariage.
+	Le journal devrait avoir honte des personnes qui travaillent à sa rédaction. Vous avez fait preuve d'une grande légèreté pour avoir permis à cette jeune femme de rédiger de telles idioties. Et la publication de ces inepties témoigne de votre irresponsabilité. Le travail surfait de M. Fragrance constitue le pire épisode de l'infâme propagande anti-industrielle que votre journal a véhiculée l'année dernière. Sans ces odieux griffonnages, nous aurions pu éviter toute cette agitation qui a secoué la classe ouvrière analphabète. Si ces elfes ont vraiment décidé d'honorer cet homme, cela est sûrement dû à leur grande charité plutôt qu'aux talents artistiques de M. Fragrance.
+	Je m'interroge donc à la fois sur la véracité de vos propos et sur la nécessité de porter atteinte à la communauté artistique. Je suis profondément écoeurée par votre journal.
+Mme Célestine Paladin-Phildor.}
+
+
+{5160}{490c UNE INSPIRATION ASSASSINE !}
+{5161}{492c _ L'ASSISTANT DU MEDECIN ASSASSINE EST RECHERCHE POUR INTERROGATOIRE _}
+{5162}{483l Le docteur Théophile Wilford, l'un des plus éminents médecins de Tarante, a été retrouvé mort hier soir dans son bureau, victime semble-t-il d'un acte criminel. Les autorités nous ont appris que M. Wilford a été sauvagement poignardé dans le dos avec une plume d'écrivain.
+	Les enquêteurs pensent que le meurtrier possède certainement des connaissances approfondies en anatomie humaine car l'objet du crime a été enfoncé de manière à provoquer une mort certaine. Comme le savent nombre de nos lecteurs, M. Wilford venait de s'adjoindre les services d'un assistant, le docteur Edmond Lefourbe, qui devait l'aider à s'occuper de ses nombreux patients.
+	Le scandale provoqué par la découverte de l'origine orque du docteur Lefourbe avait profondément secoué l'opinion publique, et les autorités n'ont pas encore réussi à le retrouver pour l'interroger. Toute information concernant cet individu doit être immédiatement communiquée à la police. N'essayez pas d'appréhender le docteur Lefourbe sans l'aide de la garde, car l'homme est considéré comme étant extrêmement dangereux.}
+{5163}{492c _ " LA DANSE DU MIME " ENCHANTE ET INTRIGUE _}
+{5164}{483l Mlle Geneviève Sykes
+
+La dernière interprétation de " La Danse du Mime " par la troupe des Saltimbanques Associés hier soir au Théâtre du Vieux Marché fut un véritable enchantement. Après toutes les ennuyeuses représentations qui ont marqué la saison passée, la nouvelle interprétation de ce classique par une troupe pleine d'imagination apporte une touche de fraîcheur. Les acteurs ont réussi à transformer ce conte traditionnel en une romance moderne par l'utilisation de costumes et de dialogues d'aujourd'hui.
+	Pour ceux d'entre nous qui ont grandi avec les oeuvres de T. Bremmer et Matthias Poirot, cette interprétation réveillera votre amour pour les auteurs classiques. Pour ceux qui ne connaissent pas les récits traditionnels des anciennes sagas, cette pièce possède le caractère familier des histoires qui ne s'accommodent pas toujours d'un monde moderne souvent chaotique.}
+
+
+{5170}{490c DECLARATION DU CONSEILLER LOISEAU}
+{5171}{492c _ LE DEBAT SUR LE DROIT DE PASSAGE S'INTENSIFIE _}
+{5172}{483l 
+
+	La bataille actuelle que se livrent les autorités ferroviaires de Tarante et le Tribunal des Mages au sujet des terrains revient sur le devant de la scène. Depuis plusieurs mois, les autorités ferroviaires de Tarante réclament au conseil municipal la permission d'annexer des passages publics pour étendre leur infrastructure. Le terrain en question n'est autre que le quartier des sortilèges de Tarante.
+	Les autorités ferroviaires de Tarante affirment que ces terrains doivent servir à la construction d'un dépôt où seront construits et parqués les locomotives et les wagons. De nombreuses personnes s'interrogent sur les véritables motifs de cette demande et accusent les autorités ferroviaires de Tarante de vouloir nuire au Tribunal des Mages. En effet, les autorités ferroviaires redoutent la sorcellerie qui se dégage de cet endroit et craignent qu'elle ne finisse par contrarier leurs activités.
+	Lors d'un récent entretien, le conseiller municipal Loiseau nous a fait part d'un commentaire inattendu sur la situation. " A la lecture des informations fournies par les autorités ferroviaires de Tarante, j'en conclus qu'il est souhaitable, dans l'intérêt de notre ville, de transférer le quartier des sortilèges à un autre endroit de Tarante ". Le conseiller a précisé : " Notre principale préoccupation reste la sécurité de nos concitoyens. S'il existe le moindre risque que la proximité d'un tel quartier entraîne des nuisances pour les autorités ferroviaires, le quartier devra, dès que possible, être transféré ailleurs ".}
+
+{5180}{490c EDITION SPECIALE}
+{5181}{492c _ LETTRE A LA REDACTION _}
+{5182}{483l	Messieurs,
+	Je me vois contrainte de vous écrire de nouveau pour protester contre votre dernière chronique artistique faisant l'éloge de la sinistre interprétation de " La Danse du Mime" au Théâtre du Vieux Marché. Une fois de plus, cette pauvre Mlle Sykes se permet de glorifier les horreurs que nous propose la communauté artistique actuelle. La façon dont les anciens Contes du Mime ont été galvaudés est tout simplement scandaleuse. Mlle Sykes trouve que les nouveaux costumes sont " un véritable enchantement ". J'ai quant à moi très vite déchanté à la vue des tristes habits que ces imposteurs ont osé substituer aux magnifiques costumes et masques traditionnels. Mlle Sykes se réjouit également de l'utilisation " de dialogues d'aujourd'hui ". Prendre les merveilleux écrits de l'un des plus grands poètes de notre temps pour les transformer en vulgaire prose de mirliton destinée à la classe ouvrière est un acte de pur vandalisme.
+	Et comble de l'insulte, il me semble que l'acteur qui tenait le rôle du “gentil paysan” n'était qu'un vulgaire orque hybride. Voilà le genre d'insanités que votre journal se plaît à diffuser ! Mon époux étant un proche collaborateur de Monseigneur Beaumont, je ferai tout mon possible pour qu'il use de son influence afin que cessent toutes ces ignominies. Vous entendrez encore parler de moi.
+
+Mme Célestine Paladin-Phildor
+
+}
+{5183}{492c _ ANNONCE SPECIALE _}
+
+{5184}{483l		Nous sommes heureux de vous annoncer le début d'une correspondance avec notre nouvelle envoyée spéciale à l'étranger, Mlle Geneviève Sykes. Mlle Sykes se rendra à plusieurs reprises dans les pays voisins afin de nous présenter ces peuples et ces lieux fascinants qui nous entourent. Nous sommes persuadés que les récits de Mlle Sykes passionneront tous nos fidèles lecteurs à qui nous conseillons de ne surtout pas manquer les prochains épisodes.}
+
+
+
+

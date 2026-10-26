@@ -1,0 +1,248 @@
+//
+// Scheme List file
+// 04/20/00
+//
+// See the SCHEMEINDEX.MES file that points into this file.
+//
+// SPECIFYING SOUND FILES:
+// ~~~~~~~~~~~~~~~~~~~~~~~
+//	Specify sound file with either .WAV or .MP3 extension
+//	SOON:  it will assume .WAV files
+//	SOON:  you can specify a sound file by #soundid# and it will look
+/		it up in the SND_*.MES file for you (as indexed by SND_00INDEX.MES).
+//
+// OPTIONS:
+// ~~~~~~~~
+// PARSE RULES:
+// ~~~~~~~~~~~~
+// 1. There sound's name or #Sound_ID must appear first
+// 2. Options must appear AFTER a single SPACE
+// 3. Options must have one space between each of them
+// 4. Options must have ZERO spaces within them (i.e.,:  /FREQ:50)
+// 5. See examples below
+// ACTUAL OPTIONS:
+// ~~~~~~~~~~~~~~~
+//	/LOOP - causes the sound to loop indefinitely (until that scheme is exited)
+//		(loop is exclusive of all other time controls below)
+//	/ANCHOR - this is a one-off song, play it immediately at the start of
+//		this scheme, do not continue playing it or anything.	
+//	/OVER - this is a one-off-song, and at its termination, it brings back
+//		the previously-playing scheme.
+//		WARNINGS:
+//			You can only have ONE /over type sound per scheme.  If you
+//			have multiple ones, the FIRST one that ends will cause the
+//			previous scheme to reload.
+//	/FREQ: - frequency of occurrence (0-100)             (default:  50)
+//			/FREQ:1			; very rare occurrence
+//			/FREQ:100		; very frequent occurrence
+//	/TIME: - range of times (in 24-hr units)             (default: 0-23 inclusive)
+//			/TIME:6-8		; from 6am to 8am
+//			/TIME:19-21		; from 7pm to 9pm
+//			/TIME:12		; only during the hour of noon
+//	/BAL:  - range of balance ((L)0-100(R))              (default:  50)
+//			/BAL:50			; always centered
+//			/BAL:30-70		; range from left to right a bit
+//			/BAL:0-100		; can scatter left/right anywhere
+//	/VOL:  - range of volume (0-100)                     (default: 100)
+//			/VOL:10-50		; ranges from pretty quiet to half-loud
+//			/VOL:80-100		; ranges from pretty loud to full volume
+//	/SCATTER: - range of scatter (sets /BAL and /VOL)    (default:  50)
+//			/SCATTER:0		; equivalent to:  /VOL:100 and /BAL:50 (this is default anyway)
+//			/SCATTER:50		; equivalent to:  /vol:50-100 and /BAL:25-75
+//			/SCATTER:100	; equivalent to:  /vol:50-100 and /BAL:0-100
+//			<programmer note: to change the above defaults, look for 
+//								"SCATTERCOMMAND" in SoundGame.C>
+//
+
+{0}{dummy - none}
+
+// Crash Site Music
+
+// Crash Site Sounds
+
+	// Day Time
+
+{200}{birds1.wav /scatter:100 /time:5-20 /freq:15}
+{201}{birds2.wav /scatter:100 /time:6-19 /freq:15}
+{202}{birds3.wav /scatter:100 /time:7-18 /freq:15}
+{203}{birds4.wav /scatter:100 /time:8-17 /freq:15}
+{204}{birds5.wav /scatter:100 /time:9-16 /freq:15}
+{205}{birds6.wav /scatter:100 /time:9-16 /freq:15}
+{206}{birds7.wav /scatter:100 /time:9-16 /freq:15}
+{207}{ambient-growl.wav /scatter:100 /freq:10}
+{208}{ambient-howl01.wav /scatter:100 /freq:10}
+{209}{ambient-howl02.wav /scatter:100 /freq:10}
+{210}{ambient-howl01.wav /scatter:100 /freq:10 /time:21-23}
+{211}{ambient-howl02.wav /scatter:100 /freq:10 /time:0-2}
+
+	// Night Time
+
+{212}{ambient-loop-crickets.wav /scatter:100 /time:19-23 /freq:80}
+{213}{ambient-loop-crickets.wav /scatter:100 /time:19-23 /freq:80}
+{214}{ambient-loop-crickets.wav /scatter:100 /time:0-6 /freq:80}
+{215}{ambient-loop-crickets.wav /scatter:100 /time:0-6 /freq:80}
+{216}{ambient-rooster-crow.wav /scatter:100 /freq:30 /time:6-8}
+{217}{ambient-bird-hoot.wav /time:0-6 /freq:10}
+{218}{ambient-bird-hoot.wav /time:19-23 /freq:10}
+
+// Shrouded Hills Music
+
+// Shrouded Hills Sounds
+
+	// Day Time
+
+{400}{birds1.wav /scatter:100 /time:5-20 /freq:15}
+{401}{birds2.wav /scatter:100 /time:6-19 /freq:15}
+{402}{birds3.wav /scatter:100 /time:7-18 /freq:15}
+{403}{birds4.wav /scatter:100 /time:8-17 /freq:15}
+{404}{birds5.wav /scatter:100 /time:9-16 /freq:15}
+{405}{birds6.wav /scatter:100 /time:9-16 /freq:15}
+{406}{birds7.wav /scatter:100 /time:9-16 /freq:15}
+
+	// Night Time
+
+{412}{ambient-loop-crickets.wav /scatter:100 /time:19-23 /freq:80}
+{413}{ambient-loop-crickets.wav /scatter:100 /time:19-23 /freq:80}
+{414}{ambient-loop-crickets.wav /scatter:100 /time:0-6 /freq:80}
+{415}{ambient-loop-crickets.wav /scatter:100 /time:0-6 /freq:80}
+{416}{ambient-rooster-crow.wav /scatter:100 /freq:30 /time:6-8}
+{417}{ambient-bird-hoot.wav /time:0-6 /freq:10}
+{418}{ambient-bird-hoot.wav /time:19-23 /freq:10}
+
+//Black Mountain Clan Music
+
+{500}{music\Dungeons.mp3 /loop /vol:50}
+
+//Black Mountain Clan Sounds
+{600}{mine_deserted.wav /loop}
+{601}{DRIP1.WAV /bal:1-100 /vol:10-20 /freq:10}
+{602}{DRIP2.WAV /bal:1-100 /vol:10-20 /freq:10}
+{603}{DRIP3.WAV /bal:1-100 /vol:10-20 /freq:10}
+{604}{DRIP4.WAV /bal:1-100 /vol:10-20 /freq:10}
+{605}{DRIP5.WAV /bal:1-100 /vol:10-20 /freq:10}
+{606}{DRIP6.WAV /bal:1-100 /vol:10-20 /freq:10}
+{607}{ambient-howl01.wav /vol:10 /bal:1-100 /freq:5}
+
+// The Pit
+{700}{music\countdown.mp3 /loop /vol:50}
+
+// Mikey's Office
+{800}{music\rocklobster.mp3 /loop /vol:50}
+
+// KWD - for testing sound schemes just now...
+// open air map... the default?!
+{1000}{music\countdown.mp3 /loop}
+{1001}{birds1.wav /scatter:100}
+{1002}{birds2.wav /scatter:100}
+{1003}{birds3.wav /scatter:100}
+{1004}{birds4.wav /scatter:100}
+{1005}{birds5.wav /scatter:100}
+{1006}{birds6.wav /scatter:100}
+{1007}{birds7.wav /scatter:100}
+{1008}{shoot_pistol.wav /scatter:50}
+// random rifle shots (gotta nail all the damned birds)
+{1010}{#4040 /freq:25 /scatter:50}
+{1011}{#4060 /freq:15 /scatter:50}
+{1012}{#4080 /freq:15 /scatter:50}
+
+// a second test sound scheme, to play concurrently with the above
+{1100}{Button_Medium.wav /freq:100}
+{1101}{#4044}
+
+//Bessie Toones Music
+
+{1200}{Mines.mp3 /loop /vol:50}
+
+//Bessie Toones Sounds
+
+{1300}{mine_deserted.wav /loop}
+{1301}{DRIP1.WAV /bal:1-100 /vol:10-20 /freq:10}
+{1302}{DRIP2.WAV /bal:1-100 /vol:10-20 /freq:10}
+{1303}{DRIP3.WAV /bal:1-100 /vol:10-20 /freq:10}
+{1304}{DRIP4.WAV /bal:1-100 /vol:10-20 /freq:10}
+{1305}{DRIP5.WAV /bal:1-100 /vol:10-20 /freq:10}
+{1306}{DRIP6.WAV /bal:1-100 /vol:10-20 /freq:10}
+{1307}{ambient-growl.wav /scatter:100 /freq:5}
+{1308}{ambient-howl01.wav /scatter:100 /freq:5}
+{1309}{ambient-howl02.wav /scatter:100 /freq:5}
+
+// Arcanum General Music or Theme or Something 
+{1400}{music\Arcanum.mp3 /loop /vol:50}
+
+// Arcanum General Sounds
+{1500}{}
+
+// Caladon Music
+{1600}{music\Caladon.mp3 /loop /vol:50}
+
+// Caladon Sounds
+{1700}{}
+
+// Caladon Catacombs Music
+{1800}{music\Caladon_Catacombs.mp3 /loop /vol:50}
+
+// Caladon Catacombs Music
+{1900}{}
+
+// City Music General
+{2000}{music\Cities.mp3 /loop /vol:50}
+
+// City Sounds General
+{2100}{}
+
+// Dungeon Music
+{2200}{music\Dungeons.mp3 /loop /vol:50}
+
+// Dungeon Sounds
+{2300}{}
+
+// Isle of Despair Music
+{2400}{music\Isle_of_Despair.mp3 /loop /vol:50}
+
+// Isle of Despair Sounds
+{2500}{}
+
+// Tarant Music
+{2600}{music\Tarant.mp3 /loop /vol:50}
+
+// Tarant Sounds
+{2700}{}
+
+// Tarant Sewers Music
+{2800}{music\Tarant_Sewers /loop /vol:50}
+
+// Tarant Sewers Sounds
+{2900}{}
+
+// Towns Music
+{3000}{music\Towns.mp3 /loop /vol:50}
+
+// Towns Sounds
+{3100}{}
+
+// Tulla Music
+{3200}{music\Tulla.mp3 /loop /vol:50}
+
+// Tulla Sounds
+{3300}{}
+
+// Vendigroth Music
+{3400}{music\Vendigroth.mp3 /loop /vol:50}
+
+// Vendigroth Sounds
+{3500}{}
+
+// Villages Music
+{3600}{music\Villages.mp3 /loop /vol:50}
+
+// Villages Sounds
+{3700}{}
+
+// Wilderness Music
+{3800}{music\Wilderness.mp3 /loop /vol:50}
+
+// Wilderness Sounds
+{3900}{}
+
+// TESTING OVERSOUNDS - you can really only have ONE oversound per scheme.
+// 2000 music\fragment01.wav /over

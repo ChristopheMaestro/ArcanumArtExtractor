@@ -1,0 +1,569 @@
+//
+// MainMenu
+//
+
+
+// Main SplashScreen msg
+{1}{Arcanum wird geladen ...}
+
+
+// Loading Save Game
+{5}{Gesp. Sp. wird geladen...}
+
+
+// Main Menu
+{10}{Einzelspieler}
+{11}{Multiplayer}
+{12}{Optionen}
+{13}{Mitwirkende}
+{14}{Spiel verlassen}
+// Main Menu -- Hotkeys
+{20}{E}
+{21}{M}
+{22}{O}
+{23}{W}
+{24}{V}
+
+
+// Main Menu In Play
+{30}{Spiel speichern}
+{31}{Spiel laden}
+{32}{Optionen}
+{33}{Spiel beenden}
+{34}{Weiterspielen}
+// Main Menu -- Hotkeys
+{40}{S}
+{41}{L}
+{42}{O}
+{43}{B}
+{44}{W}
+
+// Single Player Menu
+{50}{Neues Spiel}
+{51}{Spiel laden}
+{52}{Letzte Speicherung}
+{53}{Intro ansehen}
+{54}{Abbrechen}
+// Single Player Menu -- Hotkeys
+{60}{N}
+{61}{L}
+{62}{S}
+{63}{I}
+{64}{A}
+
+// Main Menu In Play Locked
+{70}{Optionen}
+{71}{Spiel beenden}
+{72}{Weiterspielen}
+// Main Menu -- Hotkeys
+{80}{O}
+{81}{B}
+{82}{W}
+
+// New Game Menu
+// WIP! JLR! THIS IS WRONG!
+{100}{Charakter wählen}
+{101}{Charakter erstellen}
+{102}{Abbrechen}
+// New Game Menu
+// WIP! JLR! THIS IS WRONG!
+{110}{W}
+{111}{E}
+{112}{A}
+
+
+// Multiplayer Main Menu
+{200}{Netzwerk}
+{201}{Internet}
+{202}{Setup}
+{203}{Abbrechen}
+// Multiplayer Main Menu -- Hotkeys
+{210}{N}
+{211}{I}
+{212}{S}
+{213}{A}
+
+// Multiplayer Choose Server/Client
+{220}{Einklinken}
+{221}{Server}
+// Multiplayer Choose Server/Client -- Hotkeys
+{230}{E}
+{231}{S}
+
+// Multiplayer HUB
+{240}{Hauptmenü}
+{241}{Spiel suchen}
+{242}{Spiel leiten}
+{243}{Chat}
+{244}{Charakter}
+{245}{News}
+{246}{Treffpunkt}
+// Multiplayer HUB -- Hotkeys
+{250}{H}
+{251}{S}
+{252}{L}
+{253}{C}
+{254}{K}
+{255}{N}
+{256}{T}
+
+// Multiplayer Select Char
+{260}{Annehmen}
+{261}{Neuer Charakter}
+{270}{A}
+{271}{N}
+
+// WIP! JLR! REMOVE!
+// Multiplayer Join Start
+{280}{Einklinken}
+{281}{Abbrechen}
+// Multiplayer Join Start
+{290}{E}
+{291}{A}
+
+
+
+// Multiplayer Server options Start
+{400}{Hauptmenü}
+{401}{Spiel suchen}
+{402}{Chat}
+// Multiplayer Server options Start -- Hotkeys
+{410}{H}
+{411}{S}
+{412}{C}
+
+
+// Pick New or Pregen
+{420}{Charakter wählen}
+{421}{Neuer Charakter}
+{422}{Abbrechen}
+// Pick New or Pregen -- Hotkeys
+{430}{W}
+{431}{N}
+{432}{A}
+
+// Multiplayer Chat
+{440}{Hauptmenü}
+{441}{Spiel suchen}
+{442}{Spiel leiten}
+{450}{H}
+{451}{S}
+{452}{L}
+
+
+
+// Main Menu
+{460}{Einzelspieler}
+{461}{Optionen}
+{462}{Mitwirkende}
+{463}{Spiel verlassen}
+// Main Menu -- Hotkeys
+{470}{E}
+{471}{O}
+{472}{W}
+{473}{V}
+
+
+
+
+// Base, starting player name
+{500}{Namen wählen} // Player
+{505}{Du musst ein Porträt wählen.}
+{506}{Du musst einen Namen wählen.}
+
+
+
+// Pregenerated characters -- Global Script flag to set when picked (-1 means none)
+{550}{-1}
+{551}{2350}
+{552}{2351}
+{553}{2352}
+{554}{2353}
+{555}{2354}
+{556}{2355}
+{557}{2356}
+{558}{2357}
+{559}{2358}
+{560}{2359}
+{561}{2360}
+{562}{2361}
+
+
+// Used with pregenerated characters
+{610}{Charakter erstellen}
+
+// Pregenerated character descriptions
+// NOTE: The character-combinations "\t" and "\n" are used for formatting the text.
+//  In standard format, "\t" means TAB and "\n" means carriage-return and line-feed.
+{650}{\tEigenen Charakter erstellen.}
+
+
+
+// NO LONGER IN USE!
+// Race/Gender Combos -- Note: These lookup to values in Rules/MainMenu.mes
+{700}{Mensch/männlich}
+{701}{Mensch/weiblich}
+{702}{Elf/männlich}
+{703}{Elf/weiblich}
+{704}{Zwerg/männlich}
+{705}{Gnom/männlich}
+{706}{Halbling/männlich}
+{707}{Halb-Elf/männlich}
+{708}{Halb-Elf/weiblich}
+{709}{Halb-Ork/männlich}
+{710}{Halb-Ork/weiblich}
+{711}{Halb-Oger/männlich}
+
+// Basic Races
+{720}{Mensch}
+{721}{Zwerg}
+{722}{Elf}
+{723}{Halb-Elf}
+{724}{Gnom}
+{725}{Halbling}
+{726}{Halb-Ork}
+{727}{Halb-Oger}
+
+{739}{Anfangswerte}
+
+{740}{Weiblich}
+{741}{Männlich}
+{742}{Du gehörst zum weiblichen Geschlecht deiner Rasse. Du kannst Schmerzen, Erschöpfung und Giftstoffen besser widerstehen, als es Männern möglich ist, und du erhältst einen Bonus von +1 auf Konstitution. Dafür bist du etwas schwächer und erhältst einen Malus von -1 auf Stärke. }
+{743}{Du gehörst zum männlichen Geschlecht deiner Rasse. Du bist stärker als die Frauen, hast dafür aber eine schwächere Konstitution.}
+
+{745}{Rasse}
+
+
+// NO LONGER IN USE!  -- SEE BELOW!!!
+// Race/Gender Combo Descriptions
+{750}{Menschen verfügen nicht über besondere Modifikatoren für ihre Werte und Fertigkeiten. Sie sind das zahlenmäßig bei weitem größte und am weitesten verbreitete Volk, und die Menschen haben zahllose Städte und Königreiche auf der ganzen Welt gegründet. Sie sind den anderen Völkern gegenüber so offen wie die Gnome und paaren sich mit allen (daher Halb-Elfen, Halb-Oger und Halb-Orks). Menschen besitzen keine angeborene vorherrschende Neigung für Magie oder Technologie, sind aber beim jüngsten technologischen Wettlauf ganz vorn mit dabei. Da ihre Lebensspanne kürzer ist als die der meisten anderen Rassen und sie geniale Bastler sind, faszinieren sie wahrscheinlich die schnellen Gewinne, die technologischer Fortschritt verspricht.}
+{751}{Menschen verfügen nicht über besondere Modifikatoren für ihre Werte und Fertigkeiten. Sie sind das zahlenmäßig bei weitem größte und am weitesten verbreitete Volk, und die Menschen haben zahllose Städte und Königreiche auf der ganzen Welt gegründet. Sie sind den anderen Völkern gegenüber so offen wie die Gnome und paaren sich mit allen (daher Halb-Elfen, Halb-Oger und Halb-Orks). Menschen besitzen keine angeborene vorherrschende Neigung für Magie oder Technologie, sind aber beim jüngsten technologischen Wettlauf ganz vorn mit dabei. Da ihre Lebensspanne kürzer ist als die der meisten anderen Rassen und sie geniale Bastler sind, faszinieren sie wahrscheinlich die schnellen Gewinne, die technologischer Fortschritt verspricht.}
+{752}{Der Charakter erhält einen Bonus von +1 auf Geschicklichkeit und Schönheit.  Er erleidet einen Malus von -2 auf alle technologischen Fähigkeiten und unterliegt einer höheren Chance, dass technologische Gegenstände nicht funktionieren.  Elfen sind schlank und blass und besitzen eine angeborene exotische Schönheit, die andere Völker mit Neid erfüllt.  Die Elfen sind ein Volk von Philosophen, die Träumer und Dichter von Arcanum. Sie bevorzugen es, in der Nähe von Wäldern und Flüssen zu siedeln, und sie lieben Feste, Gespräche und Gesang. Elfen neigen gegenüber allen Völkern zur Arroganz, verachten Zwerge jedoch am meisten.}
+{753}{Der Charakter erhält einen Bonus von +1 auf Geschicklichkeit und Schönheit.  Sie erleidet einen Malus von -2 auf alle technologischen Fähigkeiten und unterliegt einer höheren Chance, dass technologische Gegenstände nicht funktionieren.  Elfen sind schlank und blass und besitzen eine angeborene exotische Schönheit, die andere Völker mit Neid erfüllt.  Die Elfen sind ein Volk von Philosophen, die Träumer und Dichter von Arcanum. Sie bevorzugen es, in der Nähe von Wäldern und Flüssen zu siedeln, und sie lieben Feste, Gespräche und Gesang. Elfen neigen gegenüber allen Völkern zur Arroganz, verachten Zwerge jedoch am meisten.}
+{754}{Der Charakter erhält einen Bonus von +1 auf Konstitution und einen Bonus von +2 auf alle technologischen Fertigkeiten.  Nicht so gut ist der Charakter auf dem Gebiet der Zauberei: Zaubersprüche kosten ihn doppelt so viel, und die Chance ist höher, dass magische Gegenstände nicht funktionieren.  Männliche Zwerge sind kleinwüchsig, gedrungen und stets bärtig. Obwohl sie für ihre Größe sehr korpulent wirken, sind Zwergenmänner muskulös, und nicht etwa dick. Sie arbeiten hart, sind sehr stolz und fast bis zur Humorlosigkeit verbissen, aber die meisten wissen einen guten Met zu schätzen. Zwerge neigen zu Vorurteilen und sind schnell in Rage zu bringen. Zwerge mögen keine Elfen, respektieren aber Menschen und Gnome.}
+{755}{Der Charakter erhält einen Bonus von +2 auf Willenskraft, 2 Stufen auf Feilschen und +10 auf alle negativen Reaktionen sowie einen Malus von -2 auf Konstitution.  Gnome sind von kleinem Wuchs und haben sehr große Nasen. Obwohl sie normalerweise nicht übergewichtig sind, neigen sie im Alter zu einem Bauchansatz.  Gnome sind ein hart arbeitendes Volk.  Sie fühlen sich in Städten, unter der Erde und im Wald gleichermaßen zu Hause.  Da sie sich mit fast allen anderen Völkern verstehen und den Wohlstand lieben, sind sie meist Kaufleute oder Händler. Sie haben, wie die Menschen, keine ausgeprägte Neigung zu Magie oder Technologie. Sie können beides anwenden, verzichten aber meistens auf beides.}
+{756}{Der Charakter erhält einen Bonus von +2 auf Geschicklichkeit, 2 Stufen auf Schleichen und +5% auf die Chance für kritische Treffer, aber einen Malus von -3 auf Stärke.  Halblinge sind ein kleinwüchsiges Volk, kleiner als Gnome und Zwerge. Sie haben Spaß am Kochen und Essen und neigen zu Übergewicht. Sie tragen keine Schuhe und verlassen sich stattdessen auf ihre haarigen Füße und schwieligen Sohlen. Das bedeutet auch, dass Halblinge sehr leise sein können, wenn sie wollen.  Halblinge sind ein ruhiges und erdverbundenes Volk, das sich für gewöhnlich weder mit Magie noch mit Technologie beschäftigt, obwohl Halblinge von ihren Erbanlagen her an keinem der beiden gehindert würden. Von den anderen Völkern werden sie zwar als faul angesehen, trotzdem sind sie meistens recht beliebt.}
+{757}{Der Charakter erhält einen Bonus von +1 auf Geschicklichkeit, verliert aber eine Stufe in jeder technologischen Fertigkeit. Halb-Elfen gleichen in Körperbau und Aussehen eher ihren menschlichen Elternteilen, einige besitzen jedoch die spitzen Ohren und die blassen, zarten Gesichtszüge der Elfenseite. Die Persönlichkeit der Halb-Elfen umfasst das gesamte Spektrum von Menschen und Elfen, aber die meisten haben eine Tendenz zur Natur und halten sich mit Vorliebe im Freien auf. Halb-Elfen wirken nicht ganz so arrogant auf andere Völker und werden im Allgemeinen allseits geschätzt.}
+{758}{Der Charakter erhält einen Bonus von +1 auf Geschicklichkeit, verliert aber eine Stufe in jeder technologischen Fertigkeit. Halb-Elfen gleichen in Körperbau und Aussehen eher ihren menschlichen Elternteilen, einige besitzen jedoch die spitzen Ohren und die blassen, zarten Gesichtszüge der Elfenseite. Die Persönlichkeit der Halb-Elfen umfasst das gesamte Spektrum von Menschen und Elfen, aber die meisten haben eine Tendenz zur Natur und halten sich mit Vorliebe im Freien auf. Halb-Elfen wirken nicht ganz so arrogant auf andere Völker und werden im Allgemeinen allseits geschätzt.}
+{759}{Der Charakter erhält einen Bonus von +1 auf Konstitution, +1 auf Stärke und 10% extra auf die Widerstandskraft gegen Gift, verliert dafür aber je 2 Punkte Schönheit und Charisma. Halb-Orks sind Nachkommen von Orks und Menschen, meist eines männlichen Orks und einer unwilligen Menschenfrau. Daher werden Halb-Orks von allen Menschen verachtet. Die meisten Halb-Orks könnte man für (hässliche) Menschen halten, in der Regel aber haben sie irgendein Charakteristikum, das ihr Ork-Blut verrät (Himmelfahrtsnase, übermäßige Behaarung, schlechte Laune). Meistens sind Menschen voreingenommen, wenn sie die Herkunft Angehöriger dieses Volkes entdecken. Halb-Orks sind so aufbrausend und brutal wie ihr Ork-Elternteil. Einige haben gelernt, sich zu beherrschen - statt unmittelbar anzugreifen, schmieden sie Rachepläne.}
+{760}{Der Charakter erhält einen Bonus von +1 auf Konstitution, +1 auf Stärke und 10% extra auf die Widerstandskraft gegen Gift, verliert dafür aber je 2 Punkte Schönheit und Charisma. Halb-Orks sind Nachkommen von Orks und Menschen, meist eines männlichen Orks und einer unwilligen Menschenfrau. Daher werden Halb-Orks von allen Menschen verachtet. Die meisten Halb-Orks könnte man für (hässliche) Menschen halten, in der Regel aber haben sie irgendein Charakteristikum, das ihr Ork-Blut verrät (Himmelfahrtsnase, übermäßige Behaarung, schlechte Laune). Meistens sind Menschen voreingenommen, wenn sie die Herkunft Angehöriger dieses Volkes entdecken. Halb-Orks sind so aufbrausend und brutal wie ihr Ork-Elternteil. Einige haben gelernt, sich zu beherrschen - statt unmittelbar anzugreifen, schmieden sie Rachepläne.}
+{761}{Der Charakter erhält einen Bonus von +4 auf Stärke und 10% extra auf die Widerstandskraft gegen Schaden, verliert dafür aber einen Punkt Schönheit, 4 Punkte Intelligenz und 2 Stufen auf Schleichen.  Halb-Oger sind halb Menschen, halb Oger, eine eher seltene Kombination. Sie sind meist groß und schwer und können daher selten Rüstungen tragen oder bestimmte technologische Gegenstände benutzen. Vom Aussehen her ähneln Halb-Oger ihrem Oger-Elternteil, sind aber nicht ganz so gewalttätig. Man kann sie nur schwer erzürnen, und sie sind sanft im Umgang mit kleineren Wesen; als Leibwächter jedoch verteidigen sie ihre Schützlinge bis zum Tod. Wegen ihrer enormen Körpergröße behandelt man sie in den Städten der Menschen nur selten mit offener Ablehnung.}
+
+
+// Human
+{770}{Menschen verfügen nicht über besondere Modifikatoren für ihre Werte und Fertigkeiten. Sie sind das zahlenmäßig bei weitem größte und am weitesten verbreitete Volk, und die Menschen haben zahllose Städte und Königreiche auf der ganzen Welt gegründet. Sie sind den anderen Völkern gegenüber so offen wie die Gnome und gehen auch Verbindungen mit den anderen Rassen ein(daher Halb-Elfen, Halb-Oger und Halb-Orks). Menschen besitzen keine angeborene vorherrschende Neigung für Magie oder Technologie, sind aber beim jüngsten technologischen Wettlauf ganz vorn mit dabei. Da ihre Lebensspanne kürzer ist als die der meisten anderen Rassen und sie geniale Bastler sind, faszinieren sie wahrscheinlich die schnellen Gewinne, die technologischer Fortschritt verspricht.}
+{771}{Menschen verfügen nicht über besondere Modifikatoren für ihre Werte und Fertigkeiten. Sie sind das zahlenmäßig bei weitem größte und am weitesten verbreitete Volk, und die Menschen haben zahllose Städte und Königreiche auf der ganzen Welt gegründet. Sie sind den anderen Völkern gegenüber so offen wie die Gnome und gehen auch Verbindungen mit den anderen Rassen ein(daher Halb-Elfen, Halb-Oger und Halb-Orks). Menschen besitzen keine angeborene vorherrschende Neigung für Magie oder Technologie, sind aber beim jüngsten technologischen Wettlauf ganz vorn mit dabei. Da ihre Lebensspanne kürzer ist als die der meisten anderen Rassen und sie geniale Bastler sind, faszinieren sie wahrscheinlich die schnellen Gewinne, die technologischer Fortschritt verspricht.}
+// Dwarves
+{772}{}
+{773}{Der Charakter erhält einen Bonus von +1 auf Stärke, 15% auf technologische Befähigung und 2 Stufen auf alle technologischen Fertigkeiten.  Der Charakter erhält einen Malus von jeweils -1 auf Charisma und Geschicklichkeit und ist nicht so gut auf dem Gebiet der Zauberei: Zaubersprüche kosten ihn jeweils doppelt so viel.  Männliche Zwerge sind kleinwüchsig, gedrungen und stets bärtig. Obwohl sie für ihre Größe sehr korpulent wirken, sind Zwergenmänner muskulös, und nicht etwa dick. Sie arbeiten hart, sind sehr stolz und fast bis zur Humorlosigkeit verbissen, aber die meisten wissen einen guten Met zu schätzen. Zwerge neigen zu Vorurteilen und sind schnell in Rage zu bringen. Zwerge mögen keine Elfen, respektieren aber Menschen und Gnome.}
+// Elves
+{774}{Der Charakter erhält einen Bonus von jeweils +1 auf Geschicklichkeit, Willenskraft und Schönheit sowie +15% auf magische Befähigung, verliert dafür aber 2 Punkte Konstitution, 1 Punkt Stärke und 2 Stufen in allen technologischen Fertigkeiten.  Elfen sind schlank und blass und besitzen eine angeborene exotische Schönheit, die andere Völker mit Neid erfüllt.  Die Elfen sind ein Volk von Philosophen, die Träumer und Dichter von Arcanum. Sie bevorzugen es, in der Nähe von Wäldern und Flüssen zu siedeln, und sie lieben Feste, Gespräche und Gesang. Elfen neigen gegenüber allen Völkern zur Arroganz, verachten Zwerge jedoch am meisten.}
+{775}{Der Charakter erhält einen Bonus von jeweils +1 auf Geschicklichkeit, Willenskraft und Schönheit sowie +15% auf magische Befähigung, verliert dafür aber 2 Punkte Konstitution, 1 Punkt Stärke und 2 Stufen in allen technologischen Fertigkeiten.  Elfen sind schlank und blass und besitzen eine angeborene exotische Schönheit, die andere Völker mit Neid erfüllt.  Die Elfen sind ein Volk von Philosophen, die Träumer und Dichter von Arcanum. Sie bevorzugen es, in der Nähe von Wäldern und Flüssen zu siedeln, und sie lieben Feste, Gespräche und Gesang. Elfen neigen gegenüber allen Völkern zur Arroganz, verachten Zwerge jedoch am meisten.}
+// Half-Elves
+{776}{Der Charakter erhält einen Bonus von jeweils +1 auf Geschicklichkeit und Schönheit sowie +5% auf magische Befähigung, verliert dafür aber 1 Punkt Konstitution und 1 Stufe in allen technologischen Fertigkeiten. Halb-Elfen gleichen in Körperbau und Aussehen eher ihren menschlichen Elternteilen, einige besitzen jedoch die spitzen Ohren und die blassen, zarten Gesichtszüge der Elfenseite. Die Persönlichkeit der Halb-Elfen umfasst das gesamte Spektrum von Menschen und Elfen, aber die meisten haben eine Tendenz zur Natur und halten sich mit Vorliebe im Freien auf. Halb-Elfen wirken nicht ganz so arrogant auf andere Völker und werden im Allgemeinen allseits geschätzt.}
+{777}{Der Charakter erhält einen Bonus von jeweils +1 auf Geschicklichkeit und Schönheit sowie +5% auf magische Befähigung, verliert dafür aber 1 Punkt Konstitution und 1 Stufe in allen technologischen Fertigkeiten. Halb-Elfen gleichen in Körperbau und Aussehen eher ihren menschlichen Elternteilen, einige besitzen jedoch die spitzen Ohren und die blassen, zarten Gesichtszüge der Elfenseite. Die Persönlichkeit der Halb-Elfen umfasst das gesamte Spektrum von Menschen und Elfen, aber die meisten haben eine Tendenz zur Natur und halten sich mit Vorliebe im Freien auf. Halb-Elfen wirken nicht ganz so arrogant auf andere Völker und werden im Allgemeinen allseits geschätzt.}
+// Gnomes
+{778}{}
+{779}{Der Charakter erhält einen Bonus von +2 auf Willenskraft, 2 Stufen auf Feilschen und +10 auf alle negativen Reaktionen sowie einen Malus von -2 auf Konstitution.  Gnome sind klein gewachsen mit sehr großen Nasen. Obwohl sie normalerweise nicht übergewichtig sind, neigen sie im Alter zu einem Bauchansatz.  Gnome sind ein hart arbeitendes Volk.  Sie fühlen sich in Städten, unter der Erde und im Wald gleichermaßen zu Hause.  Da sie sich mit fast allen anderen Völkern verstehen und den Wohlstand lieben, sind sie meist Kaufleute oder Händler. Sie haben, wie die Menschen, keine ausgeprägte Neigung zu Magie oder Technologie. Sie können beides anwenden, verzichten aber meistens auf beides.}
+// Halflings
+{780}{}
+{781}{Der Charakter erhält einen Bonus von +2 auf Geschicklichkeit, 2 Stufen auf Schleichen und +5% auf die Chance für kritische Treffer, aber einen Malus von -3 auf Stärke.  Halblinge sind ein kleinwüchsiges Volk, kleiner als Gnome und Zwerge. Sie haben Spaß am Kochen und Essen und neigen zu Übergewicht. Sie tragen keine Schuhe und verlassen sich stattdessen auf ihre haarigen Füße und schwieligen Sohlen. Das bedeutet auch, dass Halblinge sehr leise sein können, wenn sie wollen.  Halblinge sind ein ruhiges und erdverbundenes Volk, das sich für gewöhnlich weder mit Magie noch mit Technologie beschäftigt, obwohl Halblinge von ihren Erbanlagen her an keinem der beiden gehindert würden. Von den anderen Völkern werden sie zwar als faul angesehen, trotzdem sind sie meistens recht beliebt.}
+// Half-Orcs
+{782}{Charakter erhält Bonus von +1 auf Konstitution, +1 auf Stärke, jeweils 2 Stufen in Nahkampf und Ausweichen, 10% extra Widerstandskraft gegen Gift, verliert je 2 Punkte Schönheit und Charisma. Halb-Orks sind Nachkommen von Orks und Menschen, meist eines männlichen Orks und einer unwilligen Menschenfrau. Daher werden Halb-Orks von allen Menschen verachtet. Die meisten Halb-Orks könnte man für (hässliche) Menschen halten, in der Regel aber haben sie irgendein Charakteristikum, das ihr Ork-Blut verrät (Himmelfahrtsnase, übermäßige Behaarung, schlechte Laune). Meistens sind Menschen voreingenommen, wenn sie die Herkunft Angehöriger dieses Volkes entdecken. Halb-Orks sind so aufbrausend und brutal wie ihr Ork-Elternteil. Einige haben gelernt, sich zu beherrschen - statt direkt anzugreifen, schmieden sie Rachepläne.}
+{783}{Charakter erhält Bonus von +1 auf Konstitution, +1 auf Stärke, jeweils 2 Stufen in Nahkampf und Ausweichen, 10% extra Widerstandskraft gegen Gift, verliert je 2 Punkte Schönheit und Charisma. Halb-Orks sind Nachkommen von Orks und Menschen, meist eines männlichen Orks und einer unwilligen Menschenfrau. Daher werden Halb-Orks von allen Menschen verachtet. Die meisten Halb-Orks könnte man für (hässliche) Menschen halten, in der Regel aber haben sie irgendein Charakteristikum, das ihr Ork-Blut verrät (Himmelfahrtsnase, übermäßige Behaarung, schlechte Laune). Meistens sind Menschen voreingenommen, wenn sie die Herkunft Angehöriger dieses Volkes entdecken. Halb-Orks sind so aufbrausend und brutal wie ihr Ork-Elternteil. Einige haben gelernt, sich zu beherrschen - statt direkt anzugreifen, schmieden sie Rachepläne.}
+// Half-Ogres
+{784}{}
+{785}{Der Charakter erhält einen Bonus von +4 auf Stärke und 10% extra auf die Widerstandskraft gegen Schaden, verliert dafür aber einen Punkt Schönheit, 4 Punkte Intelligenz und 2 Stufen auf Schleichen.  Halb-Oger sind halb Menschen, halb Oger, eine eher seltene Kombination. Sie sind meist groß und schwer und können daher selten Rüstungen tragen oder bestimmte technologische Gegenstände benutzen. Vom Aussehen her ähneln Halb-Oger ihrem Oger-Elternteil, sind aber nicht ganz so gewalttätig. Man kann sie nur schwer erzürnen, und sie sind sanft im Umgang mit kleineren Wesen; als Leibwächter jedoch verteidigen sie ihre Schützlinge bis zum Tod. Wegen ihrer enormen Körpergröße behandelt man sie in den Städten der Menschen nur selten mit offener Ablehnung.}
+
+
+
+
+// Background title
+{800}{Hintergrund}
+
+
+// 2000-2999 Multiplayer MainMenu
+{2000}{Login-Name}
+{2001}{Passwort}
+{2002}{Passwort bestätigen}
+{2003}{Trage deine E-Mail-Adresse unten ein, wenn du Infos und Update-Benachrichtigungen zu ARCANUM und anderen Spielen erhalten möchtest. (Du musst dafür mindestens 13 Jahre alt sein und eine E-Mail-Adresse angeben).}
+{2004}{Verbindung}
+{2005}{Neuer WON-Account}
+{2006}{Level}
+{2007}{Passwörter stimmen nicht überein.}
+{2008}{Account kann nicht angelegt werden, weil ein Account dieses Namens bereits existiert.}
+{2010}{Alles in Ordnung}
+{2011}{Ungültiges Passwort}
+{2012}{Kein solcher Account}
+{2020}{ST: %02d}
+{2021}{GE: %02d}
+{2022}{KN: %02d}
+{2023}{SH: %02d}
+{2024}{IN: %02d}
+{2025}{WA: %02d}
+{2026}{WK: %02d}
+{2027}{CH: %02d}
+{2028}{Level: %d}
+{2029}{Gesinnung: %d}
+{2030}{Befähigung: %s %d}
+{2031}{Angriff gesamt: %d}
+{2032}{Verteidigung gesamt: %d}
+{2033}{Magie}
+{2034}{Technologie}
+{2035}{ }
+{2040}{Nachricht des Tages}
+{2050}{%s wirklich löschen?}
+{2051}{FEHLER! Datei-Informationen des gewählten Charakters sind nicht verfügbar! Löschen nicht möglich.}
+{2052}{Verbindung mit Internet-Servern konnte nicht aufgebaut werden.}
+
+{2100}{Server ließ Einklinken nicht zu.  Möglicherweise ausgelastet.}
+{2110}{Hauptmenü}
+{2111}{Chat}
+{2112}{Spiel leiten}
+{2120}{H}
+{2121}{C}
+{2122}{L}
+
+// 2200-2299 - ServerList strings
+{2200}{Hauptmenü}
+{2201}{Chat}
+{2202}{Spiel leiten}
+{2205}{Zum Einklinken anklicken.}
+{2206}{Fehlendes Modul}
+{2207}{Hier Passwort eingeben}
+{2208}{Warten auf Einklinken}
+{2209}{Einklinken fehlgeschlagen}
+
+{2210}{Name}
+{2211}{Typ}
+{2212}{Ping}
+{2213}{Spieler}
+{2214}{Aktiv seit}
+
+{2220}{Alle}
+{2221}{JGJ}
+{2222}{Kooperation}
+{2223}{Rollenspiel}
+{2224}{Als Favorit gesp.}
+
+{2230}{Modul: %s}
+{2231}{Level: %d-%d}
+{2232}{Player-Killing: %s}
+{2233}{Schaden durch Verbündete: %s}
+{2234}{Vertraulicher Chat: %s}
+{2235}{Spieler: %d(%d)}
+{2236}{Mehr ...}
+{2237}{Typ: %s}
+{2238}{EIN}
+{2239}{AUS}
+{2240}{Verbindungsaufbau mit Server ...}
+{2241}{Warten auf Server-Bestätigung ...}
+{2242}{Verbindung mit Server nicht möglich.
+Verbindungsversuch wird abgebrochen.}
+
+// this really should be 2210 but 2210 was already taken so, I'm
+// jumping around a little bit here
+{2250}{Ungültiges Passwort.}
+{2290}{Das eingegebene Passwort ist ungültig.}
+{2291}{Du wurdest von diesem Server verbannt und darfst dich nicht einklinken.}
+{2292}{Deine Protokoll-Version passt nicht zu der des Servers.}
+{2293}{Du erfüllst nicht die erforderlichen Kriterien, um dich in das Spiel einzuklinken, oder Spieler existiert bereits.}
+
+// 2300 - 2399 : Start Server Strings
+{2300}{Spielname}
+{2301}{Modul}
+{2302}{Typ}
+{2303}{Höchstzahl Spieler}
+{2304}{Mindestzahl Spieler}
+{2305}{Min.-Level}
+{2306}{Max.-Level}
+{2307}{Passwort}
+{2308}{Privater Chat}
+{2309}{Max. gespeicherte SCs}
+{2310}{Player-Killing}
+{2311}{Schaden durch Verbündete}
+{2312}{Autom. einklinken}
+{2313}{Autom. ausrüsten}
+{2314}{Schlüssel gemeinsam benutzen}
+{2320}{Jeder gegen jeden}
+{2321}{Kooperation}
+{2322}{Rollenspiel}
+{2330}{Aus}
+{2331}{Ein}
+{2332}{Keine Mods gefunden}
+{2333}{Anklicken, um Server zu starten.}
+{2334}{Umgebung}
+
+{2350}{Ein}
+{2351}{Aus}
+
+// 2400-2499 : Chat Strings
+{2400}{Raum erstellen}
+{2401}{Raum-Name}
+{2402}{Passwort}
+
+// Options Buttons
+{4000}{Spiel}
+{4001}{Grafik}
+{4002}{Sound}
+{4003}{Fertig}
+// Options Buttons -- Hotkeys
+{4010}{S}
+{4011}{G}
+{4012}{D}
+{4013}{F}
+
+// Combat Options Buttons
+{4100}{Rundenbasiert}
+{4101}{Automatischer Kampf}
+{4102}{Immer rennen}
+{4103}{Sprechblasen-Nachrichten}
+{4104}{Schneller RB-Kampf}
+{4105}{Gewaltfilter}
+
+
+// Load/Save Game Messages
+{5000}{Spiel erfolgreich geladen.}
+{5001}{Gespeichertes Spiel beschädigt!}
+{5002}{Spiel erfolgreich gespeichert.}
+{5003}{Gespeichertes Spiel beschädigt!}
+
+{5004}{Versionskonflikt!}
+{5005}{Leer}
+
+{5010}{Neuen Speicherspielstand erstellen}
+// Load/Save Info
+{5050}{Unbekannte Position.}  // An area unknown
+{5051}{Level %d}  // Player's Level
+{5055}{Neu}  // Create a New Save Game Slot
+{5056}{Autom. speichern}  // Auto-Save Save Game Slot
+{5057}{Schnelles Speichern}  // Quick-Save Save Game Slot
+{5058}{Slot}  // Auto-Save Save Game Slot
+
+{5060}{Es wird gespeichert ...}
+{5061}{Es wird geladen ...}
+{5062}{Speichervorgang abgeschlossen.}
+{5063}{Ladevorgang abgeschlossen.}
+{5064}{Den gespeicherten Spielstand wirklich überschreiben?}
+{5065}{Speichern bei rundenbasiertem Kampf nicht möglich, wenn du nicht an der Reihe bist.}
+
+// Quit Dialog Text
+{5100}{Dieses Spiel wirklich beenden?}
+
+// Delete Save game Text
+{5150}{Den gespeicherten Spielstand wirklich löschen?}
+
+
+// Misc Messages
+{6000}{Bitte warten ...}  // Used for waiting screen
+
+
+// Hover-Help Messages:
+{6999}{Aktion:}
+// PickPregen
+{7000}{Bild ansehen}
+{7001}{Beschreibung ansehen}
+{7002}{Voriges Fenster}
+{7003}{Nächstes Fenster}
+
+{7010}{Voriger Hintergrund}
+{7011}{Nächster Hintergrund}
+{7012}{Normale Bilder}
+{7013}{Benutzerdefinierte Bilder}
+
+{7020}{Spiel laden}
+{7021}{Spiel speichern}
+{7022}{Gespeichertes Spiel löschen}
+
+{7025}{Info-Anzeige ein/aus}
+
+// 10000-11000
+// Chat Messages and Help
+{10000}{ARCANUM- und WON.net-CHAT - Hilfedatei}
+{10001}{CHAT-BEFEHLE:}
+{10002}{/AFK - setzt Status "Nicht am Rechner" (Away From Keyboard).}
+{10003}{/BAN <Name> <Zeit> - verbannt einen Client, 'Zeit' kann aus jeder positiven}
+{10004}{                Zahl bestehen, es folgt D = Tage, H = Stunden, M = Minuten.}
+{10005}{/JOIN <Name oder Nummer> - Einklinken in den Kanal}
+{10006}{/HELP - Diese Infos einblenden.}
+{10007}{/I <Name> - Ein Client wird 'ignoriert' oder 'nicht mehr ignoriert'.}
+{10008}{/ME <Nachricht> - Nachricht mit Emoticon ergänzen.}
+{10009}{: <Nachricht> - Das Gleiche wie der /EM-Befehl.}
+{10010}{/MOD - Moderator-Status wechseln.}
+{10011}{/MUTE <Name> <Zeit> - Ein Client wird stumm geschaltet.}
+{10012}{/UNMUTE <Name> - Die Stummschaltung eines Clients wird aufgehoben.}
+{10013}{/W <Name> <Nachricht> - Flüstern. Eine vertrauliche Nachricht wird versandt.}
+{10014}{/WHO - Eine Liste aller Clients, die sich im aktuellen Chat-Raum aufhalten.}
+{10015}{In allen anderen Fällen wird der eingeg. Text im aktuel. Kanal veröffentlicht.}
+
+{10050}{Einklinken in Chat-Raum %d nicht möglich.}
+{10051}{Einklinken in Chat-Raum %s nicht möglich.}
+{10052}{Unbekannter Chat-Raum %s.}
+{10053}{Unbekannter Befehl. Mit /HELP versuchen.}
+{10054}{%s hat den Raum betreten.}
+{10055}{%s hat den Raum verlassen.}
+{10056}{Verbunden mit Chat-Server %s (%s)}
+{10057}{Verbindung mit Chat-Server %s (%s) nicht möglich.}
+{10058}{Es stehen keine Chat-Server zur Auswahl, bitte versuchen Sie es später.}
+{10059}{Es stehen keine Chat-Räume zur Auswahl, bitte versuchen Sie es später.}
+{10060}{Eingeklinkt in Chat-Raum %s (%d).}
+{10061}{Einklinken in Chat-Raum %s (%d) nicht möglich.}
+{10062}{Es hält sich niemand in diesem Chat-Raum auf. Komisch ...}
+{10063}{Eine Liste der Leute in diesem Chat-Raum ist nicht verfügbar.}
+{10064}{Chat-Raum kann nicht erstellt werden.}
+
+// Local (non-WON) chat commands
+{10100}{JOIN}
+{10101}{HELP}
+{10102}{WHO}
+{10103}{}
+
+// Chat flags as text
+{10200}{*Moderator*}
+{10201}{(Stumm)}
+{10202}{} // naughty word filter off
+{10203}{(ND)}
+{10204}{} // no firewall
+{10205}{}
+{10206}{}
+{10207}{}
+{10208}{}
+{10209}{}
+{10210}{}
+{10211}{}
+{10212}{}
+{10213}{}
+{10214}{}
+{10215}{}
+{10216}{}
+{10217}{}
+{10218}{}
+{10219}{}
+{10220}{}
+{10221}{}
+{10222}{}
+{10223}{}
+{10224}{}
+{10225}{}
+{10226}{}
+{10227}{}
+{10228}{}
+{10229}{}
+{10230}{}
+{10231}{}
+
+//     10232 + (flag * 2)
+// and 10232 + (flag * 2) + 1
+// are the toggle on/off of the flags listed above
+
+{10232}{%s ist jetzt ein Channel-Moderator.}
+{10233}{%s ist kein Channel-Moderator mehr.}
+{10234}{%s wurde stumm geschaltet.}
+{10235}{%s darf sich wieder frei äußern, ist nicht mehr stumm geschaltet.}
+{10236}{}// dirty word filter on
+{10237}{}// dirty word filter off
+{10238}{%s ist nicht am Rechner.}
+{10239}{%s ist zurückgekehrt.}
+{10240}{}// firewall on
+{10241}{}// firewall off
+

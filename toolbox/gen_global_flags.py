@@ -116,10 +116,8 @@ def _text(path):
 
 
 def _decode(b):
-    try:
-        return b.decode("utf-8")
-    except UnicodeDecodeError:
-        return b.decode("cp1252", "replace")
+    from extract_mob_prototypes import sniff_codec       # (by content: utf-8, Windows-1251 for a Russian mod / module's own files, else Windows-1252)
+    return b.decode(sniff_codec(b), "replace")
 
 
 def scr_description(buf):

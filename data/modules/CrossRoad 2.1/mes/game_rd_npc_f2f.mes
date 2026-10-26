@@ -1,0 +1,797 @@
+// This section is for RUMORS in the game.
+// THESE ONLY GET USED BY THE RUMOR OPCODE
+// start at 20000
+// rumors start at rumor number * 20
+// the first message is the logbook message
+// all others are filled in based on NPC's social class
+
+1001
+{20020}{Aujourd'hui, je suis mort. Eh oui, je suis aux Enfers et je dois rencontrer quelqu'un mais quant à savoir qui... mystère.}
+
+1002
+{20040}{J'ai retrouvé Boop aux Enfers. Quelle joie ça a été pour moi. Je ne veux plus jamais le quitter.}
+
+1003
+{20060}{La femme du Capitaine ne semble pas apprécier son mari outre mesure mais difficile d'en savoir plus.}
+
+1004
+{20080}{J'ai gagné le concours de boisson chez les pirates et ai gagné une boucle de ceinture en or.}
+
+1005
+{20100}{Dommage, j'ai perdu le concours de boisson chez les pirates.}
+
+1006
+{20120}{Helena m'a donné rendez-vous sur le pont cette nuit. Je vais enfin pouvoir perdre ma virginité.}
+
+1007
+{20140}{J'ai mis le capitaine au courant pour le rendez-vous avec Helena. Je ne dois donc pas  y aller.}
+
+1008
+{20160}{J'ai trouvé Helena Bandown mourante dans sa chambre. Je crois qu'elle s'est empoisonnée.}
+
+1009
+{20180}{A l'issu de l'audience, j'ai été admis au cercle 666, celui des employés des Enfers.}
+
+1010
+{20200}{Nos supérieurs auraient des problèmes au cercle 218.}
+
+1011
+{20220}{Aux Enfers, l'or ne vaut rien. On peut en obtenir à la banque et ce gratuitement.}
+
+1012
+{20240}{Code n°1 : Bouledecristal}
+
+1013
+{20260}{Le tableau "Kerghan et Perséphone" se trouve chez monsieur Garinsbourg qui réside dans les quartiers supérieurs du cercle 666.}
+
+1014
+{20280}{La standardiste du cercle 666 serait quand même relativement forte en esquive.}
+
+1015
+{20300}{Code n°2 : Ames}
+
+1016
+{20320}{Pour obtenir du travail non officiel, je devrais sortir des quartiers inférieurs.}
+
+1017
+{20340}{Il paraît que l'herboriste des quartiers inférieurs est très sensible.}
+
+1018
+{20360}{La boutique qui se trouve à la limite des quartiers inférieurs propose des marchandises de qualité supérieure par rapport au reste des quartiers inférieurs.}
+
+1019
+{20380}{Il est extrêmement déconseillé d'acheter une robe de mariée chez la couturière des quartiers inférieurs.}
+
+1020
+{20400}{Les commerçants tiennent une échoppe dans les différents quartiers en fonction du nombre de points qu'ils ont. Celui-ci est fonction de la qualité de leur marchandise.}
+
+1021
+{20420}{Les premières disparitions au cercle 218 ont eu lieu il y a deux mois.}
+
+1022
+{20440}{Les inquisiteurs du cercle 666 sont repartis du cercle 218 bredouilles.}
+
+1023
+{20460}{Les pensionnaires du cercle 218 sont actuellement tous plongés dans un état léthargique.}
+
+1024
+{20480}{Le concierge du cercle 218 a validé mon badge afin que je puisse me déplacer au rez-de-chaussée du cercle 218.}
+
+1025
+{20500}{L'accès au sous-sol et celui aux archives et interdit sauf autorisation du directeur.}
+
+1026
+{20520}{Le pensionnaire de la cellule 21, porté disparu, semblait effrayé juste avant les faits.}
+
+1027
+{20540}{Le directeur semble être une personne extrêmement mystérieuse. Le concierge le dit même effrayant.}
+
+1028
+{20560}{Carl dit être traité comme un jouet par le directeur, il est effrayé rien qu'à l'idée d'en parler.}
+
+1029
+{20580}{Le directeur semble être un suspect de tout premier ordre dans cette affaire.}
+
+1030
+{20600}{Il est nécessaire de trouver des preuves avant d'accuser le directeur.}
+
+1031
+{20620}{Une infirmière en pleurs a dit que le directeur était quelqu'un de tyrannique et qu'il était possible qu'il soit à l'origine des disparitions.}
+
+1032
+{20640}{Il est nécessaire de trouver des preuves avant d'accuser le directeur.}
+
+1033
+{20660}{Les cinq intendants du cercle 218 ne se sont pas montrés récemment.}
+
+1034
+{20680}{Le directeur dit n'être pour rien dans l'annulation de mon autorisation mais qu'il connaît le coupable. Je dois le rejoindre à l'escalier qui mène à l'étage de l'asile.}
+
+1035
+{20700}{Pour dormir à la gare, le mieux reste l'auberge de Natalie.}
+
+1036
+{20720}{Le maître cuisinier du train semble inhabituellement de mauvaise humeur. Y'a-t-il un rapport avec l'affaire en cours ?}
+
+1037
+{20740}{Je suis à bord du train à destination des limbes, on m'a attribué la cabine numéro 8.}
+
+1038
+{20760}{Le couteau de Florient Vassal possède une lame taillée dans une dent de Niddhög, celle-ci semble restituer la chance que le dragon dévoreur de racines à absorbée.}
+
+1039
+{20780}{Cela fait au moins deux heures que le couteau a disparu en même temps qu'une marmite de potage.}
+
+1040
+{20800}{Une étrange marque rouge se trouve dans l'une des cabines, ce serait l'oeuvre des dieux.}
+
+1041
+{20820}{Le passager de la cabine numéro trois semble être un paria : il n'ouvre à personne et ne sort jamais de sa cabine.}
+
+1042
+{20840}{De nombreuses affaires disparaîtraient dans le train : des chaussettes dans la cabine numéro six ou encore des boucles d'oreille dans la dix.}
+
+1043
+{20860}{Il est possible de suivre une formation en persuasion chez une femme travaillant dans la restauration mais je ne sais pas laquelle.}
+
+1044
+{20880}{Des marques rouges apparaîtraient souvent aux Enfers ces derniers temps. Elles semblent indélébiles. Il y en a une dans une des cabines du train.}
+
+1045
+{20900}{Le potage disparu contenait un ingrédient secret mais la cuisinière n'a pas souhaité me dire lequel.}
+
+1046
+{20920}{Code n°4 : Humiliation}
+
+1047
+{20940}{J'ai réussi à obtenir une bouteille de Dragon Rose, 1869 grâce à la sommelière.}
+
+1048
+{20960}{La maîtresse cuisinière du train serait une disciple de monsieur Saule. Et elle n'aurait pas était seule durant sa formation...}
+
+1049
+{20980}{Il y a un détective célèbre dans le train cabine numéro 5. Il pourrait peut-être m'aider...}
+
+1050
+{21000}{L'intendant du cercle 693 a perdu une pipe en ébène dans le train. Je pourrais essayer de la retrouver.}
+
+1051
+{21020}{"Quand deux personnes de talent sont dans une gare, la meilleure monte dans un train et la seconde reste sur le quai. C'est ce qui est arrivé à ma rivale" Ce sont des mots d'Anaïs Pensior, il y a peut-être un rapport avec ma formation en négociation.}
+
+1052
+{21040}{L'intendant a aussi oublié d'acheter du tabac à la gare, il n'en a probablement plus.}
+
+1053
+{21060}{Le couteau a très probablement transité par le passe-plat pour quitter la cuisine. Pour découvrir exactement comment il est arrivé là et ce qui s'est ensuite passé, le plus simple est la voyance, peut-être la magie...}
+
+1054
+{21080}{Le couteau a très probablement transité par le passe-plat pour quitter la cuisine. Pour découvrir ce qu'il est devenu ensuite, le plus simple reste la voyance, peut-être la magie...}
+
+1055
+{21100}{Pour retrouver la marmite, il me faut rassembler trois choses : un lorgnon, un parchemin de matérialisation olfactive et enfin une portion de l'ingrédient secret.}
+
+1056
+{21120}{Un magicien pourra sans doute rédiger le parchemin...}
+
+1057
+{21140}{Grâce à Heather, j'ai un lorgnon.}
+
+1058
+{21160}{Il va être probablement difficile de retrouver la marmite mais un mage le pourra peut-être.}
+
+1059
+{21180}{"Tout d'abord, au carrefour derrière vous, il y a une petite chaîne entre deux pierres du mur, tirez dessus ! Cela débloquera les portes latérales du carrefour mais bloquera les deux autres. Ce mécanisme est presque irréversible donc faites attention. Vous devriez rapidement arriver dans une salle carrée. Il y est préparée une énigme que j'ai moi-même renoncer à résoudre mais je suis sûr que la résoudre vous ouvrira un chemin vers le tombeau principal de la crypte et un passage relie celui-ci aux sous-sols de l'institut. Rejoindre le rez-de-chaussée de l'institut ne devrait alors pas vous poser de problèmes. C'est maintenant que ça devient amusant..."}
+1060
+{21200}{"Vous arriverez dans la zone 4 de l'asile. Dans un petit sceau, j'ai caché une clef. Elle débloque le point de passage nord, enfin, elle permet seulement d'y entrer. Une fois entré, vous constaterez que le lecteur de badges des portes qui mènent à la zone trois est dans un état lamentable. Un petit coup sur le ciboulot et il devrait vous ouvrir les portes. Enfin, il y a un pot de peinture dans cette zone, j'y ai encore caché une clef (je ne peux pas m'en empêcher). Elle débloquera l'accès au point de passage est, je vous attendrai là-bas."}
+
+1061
+{21220}{Je peux trouver l'ingrédient secret dans la malle au nom d'Anaïs Pensior dans le wagon à bagages.}
+
+1062
+{21240}{Le "Old Pinky" semble être un tabac plus apprécié par certains fumeurs mais tous ne l'aimeraient pas. A l'opposé, le "Daily blast" semble être apprécié par tous.}
+
+1063
+{21260}{Le passager de la cabine n°2, Shion Wictorian, est un devin du cercle 374.}
+
+1064
+{21280}{La femme de Shion Wictorian pratiquait autrefois la magie mais aujourd'hui, elle n'est "plus en état"...}
+
+1065
+{21300}{Le couteau se trouve dans l'une des cabines, dans un endroit sombre. Il sera apparemment retrouvé dans la locomotive plus tard.}
+
+1066
+{21320}{Je devrais informer Heather à propos de la prédiction.}
+
+1067
+{21340}{La femme de Shion pourrait guérir grâce au pouvoir du crâne de Ste Claudia.}
+
+1068
+{21360}{Pour guérir définitivement, la femme de Shion devra renoncer à la robe magique qu'il lui avait offerte...}
+
+1069
+{21380}{Biterspider, ancien employé du cercle 783, a déserté ce cercle pour s'adonner à des crimes. Il est recherché aux Enfers.}
+
+1070
+{21400}{Je sais tout de la vie d'Iris Wictorian.}
+
+1071
+{21420}{J'ai convaincu Shion Wictorian de continuer les recherches pour soigner sa femme. Il a tenu à me remercier en m'offrant l'hirondelle volant contre le vent.}
+
+1072
+{21440}{J'ai convaincu Shion Wictorian de continuer les recherches pour soigner sa femme.}
+
+1073
+{21460}{J'ai convaincu Shion Wictorian de continuer les recherches pour soigner sa femme. Il a tenu à me remercier en m'offrant l'hirondelle volant contre le vent.}
+
+1074
+{21480}{J'ai convaincu Shion Wictorian de continuer les recherches pour soigner sa femme.}
+
+1075
+{21500}{J'ai convaincu Shion Wictorian qu'il était temps d'en finir et que sa femme devait disparaitre. Il a tenu à m'offrir l'hirondelle volant contre le vent.}
+
+1076
+{21520}{J'ai convaincu Shion Wictorian qu'il était temps d'en finir et que sa femme devait disparaitre.}
+
+1077
+{21540}{J'ai échangé les quatre cartes à jouer à Heïdi Verk contre le rubis patriarcal du train. Bonne affaire...}
+
+1078
+{21560}{Il y a probablement quelqu'un qui peut lire l'avenir ou le passé dans les cabines 1 ou 2.}
+
+1079
+{21580}{Heïdi est spécialiste pour retrouver des personnes disparues.}
+
+1080
+{21600}{J'ai repoussé Heïdi Verk alors qu'elle tentait de m'embrasser, ai-je bien fait ?}
+
+1081
+{21620}{Je me suis noyée dans le plaisir dans la cabine d'Heïdi...}
+
+1082
+{21640}{J'ai refusé l'invitation de Heïdi Verk alors qu'elle m'enlaçait, ai-je bien fait ?}
+
+1083
+{21660}{Je me suis presque, non pas presque ! Je me suis prostituée pour qu'Heïdi m'écrive un parchemin de matérialisation olfactive.}
+
+1084
+{21680}{J'ai coupé les ponts avec Heïdi, son caractère et ses questions me sont devenus insupportables.}
+
+1085
+{21700}{Je me suis fâché avec Heïdi, je la trouve vraiment insupportable comme femme, toujours à poser des questions...}
+
+1086
+{21720}{J'ai demandé à Heïdi des renseignements sur "l'aiglon rouge" pour m'amuser, elle m'a parlé d'un roman de Georges Silencer.}
+
+1087
+{21740}{D'après Heather, le seul moyen de retrouver le couteau disparu est d'attendre qu'il ne réapparaisse dans la locomotive. Il ne reste donc plus qu'à attendre.}
+
+1088
+{21760}{Il est impossible de savoir quel passager a volé le couteau et "un endroit sombre" est une indication trop vague pour espérer pouvoir le retrouver. Il ne reste donc plus qu'à attendre que le couteau ne réapparaisse dans la locomotive...}
+
+1089
+{21780}{Je ne fais pas confiance à "Willowpage Sebastian", il pourrait très bien être Natanaël Evantide.}
+
+1090
+{21800}{Je ne fais pas confiance à "Willowpage Sebastian", il pourrait très bien être Alexie Evantide.}
+
+1091
+{21820}{Finalement, Willowpage Sebastian semble être digne de confiance.}
+
+1092
+{21840}{Le passeur soupçonne fortement la passagère de la cabine 10.}
+
+1093
+{21860}{Le passager de la cabine 3 semble faire semblant de ne pas être dans sa cabine.}
+
+1094
+{21880}{Apparemment, de nombreuses pistes s'étant avérée fausses, votre mission prend de l'importance. Ainsi Sebastian Willowpage a rejoint le train à la dernière minute pour vous aider à l'accomplir.}
+
+1095
+{21900}{Le train traverse 17 cercles avant d'arriver dans les limbes. Le dernier étant sous sécurité renforcé suite à une affaire indépendante, il est probable qu'Evantide descende au terminus.}
+
+1096
+{21920}{J'ai prétendu que Heather était "un passager comme les autres" à Sebastian, je ne veux pas attirer son attention sur elle.}
+
+1097
+{21940}{L'intelligence d'Heather me la fait soupçonner, cependant je n'ai pas communiqué son nom à Sebastian.}
+
+1098
+{21960}{J'ai dit à Sebastian qu'Heather occupait la cabine 5.}
+
+1099
+{21980}{Apparemment, toutes les cabines sont occupées.}
+
+1100
+{22000}{Une personne qui souhaitait monter dans le train s'est désistée au dernier moment, une enquête sur elle est en cours.}
+
+1101
+{22020}{Sebastian est opposé à la possibilité de prévenir Heather de la présence à bord d'un fugitif. Cela fait-il de lui un suspect ?}
+
+1102
+{22040}{Sebastian est opposé à la possibilité de prévenir Heather de la présence à bord d'une fugitive. Cela fait-il de lui un suspect ?}
+
+1103
+{22060}{Sebastian semble douter de la présence de Natanaël à bord mais moi, je veux chercher jusqu'au dernier kilomètre que fera le train.}
+
+1104
+{22080}{Sebastian semble douter de la présence d'Alexie à bord mais moi, je veux chercher jusqu'au dernier kilomètre que fera le train.}
+
+1105
+{22100}{Alexie Evantide est une espionne et une mage de génie.}
+
+1106
+{22120}{Heather Hollowthing semble être un nom plutôt connu. Elle est finalement peut-être plus talentueuse que ce que la tenue de sa cabine ne permettait d'imaginer (en tout cas, il vaut mieux que ce soit le cas...)}
+
+1107
+{22140}{Sebastian m'a formellement interdit de divulguer à quiconque des informations sur notre mission.}
+
+1108
+{22160}{Sebastian semble douter de la présence d'Evantide à bord, cependant il m'a demandé de ne pas me consacrer à d'autres choses qu'à sa recherche... C'est vraiment un bon employé !}
+
+1109
+{22180}{Sebastian semble fortement douter de la présence d'Evantide à bord, cependant il m'a demandé de ne pas perdre du temps pour des choses indépendantes de notre mission... C'est vraiment un bon employé !}
+
+1110
+{22200}{Natanaël Evantide est un artificier et un mage de génie.}
+
+1111
+{22220}{J'ai prétendu à Sebastian avoir confiance en lui pour lui soutirer des informations utiles.}
+
+1112
+{22240}{J'ai refusé de dire mon nom à la compagne du passeur.}
+
+1113
+{22260}{J'ai prétendu ne pas rechercher Alexie Evantide à la compagne du passeur.}
+
+1114
+{22280}{J'ai prétendu ne pas rechercher Natanaël Evantide à la compagne du passeur.}
+
+1115
+{22300}{J'ai préféré taire mon nom à la compagne du passeur mais elle m'appelle par mon vrai nom quand même, soit disant parce que ça lui plaît...}
+
+1116
+{22320}{J'ai préféré taire mon nom à la compagne du passeur mais elle quand même voulu m'appeler par mon vrai nom, soit disant parce que ça lui plaisait...}
+
+1117
+{22340}{J'ai avoué à Mélanie que j'enquêter aux côtés de son compagnon, Sebastian.}
+
+1118
+{22360}{Mélanie m'a baptisé X, c'est une attention sympathique de sa part...}
+
+1119
+{22380}{Mélanie n'utilise plus aucun nom pour m'appeler depuis que je lui ai dit ne pas vouloir du prénom qu'elle m'avait choisi.}
+
+1120
+{22400}{J'ai refusé l'aide de Mélanie Brumont à propos de l'enquête.}
+
+1121
+{22420}{J'ai promis à Mélanie de tout lui dire quand l'enquête sera terminée.}
+
+1122
+{22440}{J'ai dit à Mélanie me connaître puisqu’elle ne sait pas qui je suis (dit comme ça c'est pas clair)}
+
+1123
+{22460}{Je suis en froid avec Mélanie Brumont.}
+
+1124
+{22480}{Mélanie a posé comme condition pour m'expliquer ce pourquoi elle avait besoin de moi que je n'en parle à personne.}
+
+1125
+{22500}{Mélanie ne m'a pas jugée à la hauteur du travail qu'elle voulait me confier et m'a demandé de taire notre conversation.}
+
+1126
+{22520}{Je me suis fâché avec Mélanie Brumont au sujet de sa mystérieuse requête.}
+
+1127
+{22540}{Je me suis fâchée avec Mélanie Brumont au sujet de sa mystérieuse requête.}
+
+1128
+{22560}{Je dois retrouver Mélanie Brumont dans le Wagon dispensaire.}
+
+1129
+{22580}{Il semblerait que Mélanie ne souhaitait en fait que jouer avec moi, Sebastian va lui demander de me laisser travailler.}
+
+1130
+{22600}{Sebastian a ramené sa compagne dans sa cabine.}
+
+1131
+{22620}{J'ai rencontré Mélanie Brumont dans le dispensaire, elle m'a demandé de voler un objet dans la cabine numéro un mais j'ai refusé.}
+
+1132
+{22640}{J'ai rencontré Mélanie Brumont dans le dispensaire mais je n'ai même pas écouté sa demande et ai refusé de l'aider.}
+
+1133
+{22660}{Mélanie dit que l'anneau est inoffensif tant qu'on ne le passe pas au doigt mais refuse de me dire quels sont ses pouvoirs.}
+
+1134
+{22680}{Le passager de la cabine un est apparemment un archéologue qui a trouvé l'anneau. Cependant, il ne semble pas savoir grand-chose à propos de cet anneau.}
+
+1135
+{22700}{Mélanie a peur d'être surveillée par un certain "Wb".}
+
+1136
+{22720}{Suite à un mensonge, Mélanie Brumont pense que je la surveille.}
+
+1137
+{22740}{Traiter Mélanie de voleuse l'a indignée. Pourtant, elle comptait bien voler quelque chose...}
+
+1138
+{22760}{Mélanie compte dire à Sebastian que notre rendez-vous, sa série de questions et son mystérieux travail ne sont qu'un jeu...}
+
+1139
+{22780}{L'anneau que recherche Mélanie semble posséder un pouvoir mystérieux en rapport avec les arcanes lunaires.}
+
+1140
+{22800}{L'anneau convoité par Mélanie fut forgé par Abygail Desless. Il a disparu dans le cercle 357 il y a longtemps et fut retrouvé dans le cercle 487, celui des nomades de Morbiliande.}
+
+1141
+{22820}{Traiter Mélanie de voleuse l'a indignée. Pourtant, elle comptait bien me faire voler l'anneau...}
+
+1142
+{22840}{Mélanie m'a proposé de l'ambre elfique en échange de mon silence, elle doit vraiment craindre Wb.}
+
+1143
+{22860}{Mélanie m'a finalement avoué que l'anneau qu'elle convoitait permettait de se téléporter à loisir. Il semble qu'il tire sa puissance des mystérieux arcanes lunaires révoqués.}
+
+1144
+{22880}{Mélanie m'a finalement parlé de l'anneau qu'elle convoitait et il semble que ses pouvoirs proviennent des arcanes lunaires, des arcanes révoquées que seuls maitrisent encore partiellement quelques personnes possédant un don.}
+
+1145
+{22900}{Mélanie, en parlant de Wb, a laissé échapper sous le coup de la colère un mot : Winter. Est-ce un indice ou a-t-elle voulu brouillé les pistes ?}
+
+1146
+{22920}{Pour se libérer de mon emprise sur son bras, Mélanie n'a pas hésité à me tuer...}
+
+1147
+{22940}{Mélanie semble posséder un mystérieux pouvoir dont a voulu faire usage lorsque je lui ai serré le bras.}
+
+1148
+{22960}{En dernier argument, Mélanie m'a affirmé qu'une dispute entre Sebastian et elle ruinerait leur couple et empêcherait par voie de conséquence Sebastian de se concentrer sur l'enquête.}
+
+1149
+{22980}{Mélanie m'a promis de me laisser un colis en poste restante à la gare du cercle 666.}
+
+1150
+{23000}{Mélanie m'a suggéré comme ultime bravade de ne pas parler d'elle à Sebastian afin de ne pas le faire souffrir. Vais-je pour cela la laisser impunie ?}
+
+1151
+{23020}{Mélanie doit me remettre une relique au cercle 666 en échange de mon silence sur ses méfaits.}
+
+1152
+{23040}{J'ai parlé à Sebastian du rendez-vous avec Mélanie dans le wagon dispensaire.}
+
+1153
+{23060}{J'ai parlé à Sebastian du rendez-vous avec Mélanie dans le wagon dispensaire et de sa demande de vol.}
+
+1154
+{23080}{J'ai parlé à Sebastian du rendez-vous avec Mélanie dans le wagon dispensaire et de sa demande de voler l'anneau dans la cabine n°1.}
+
+1155
+{23100}{J'ai parlé à Sebastian du rendez-vous avec Mélanie dans le wagon dispensaire et de la surveillance de Wb.}
+
+1156
+{23120}{J'ai parlé à Sebastian du rendez-vous avec Mélanie dans le wagon dispensaire et de la surveillance de Wb (Winter).}
+
+1157
+{23140}{J'ai parlé à Sebastian du mystérieux pouvoir que Mélanie a utilisé pour me tuer.}
+
+1158
+{23160}{J'ai parlé à Sebastian du mystérieux pouvoir que Mélanie a tenté d'utiliser contre moi.}
+
+1159
+{23180}{J'ai rencontré la femme du passager de la cabine n°1.}
+
+1160
+{23200}{Mélanie m'a promis de m'embaucher à nouveau si elle avait besoin.}
+
+1161
+{23220}{Mélanie m'a promis de m'embaucher à nouveau si elle avait besoin mais j'ai décliné son offre.}
+
+1162
+{23240}{Mélanie m'a promis de m'embaucher à nouveau si elle avait besoin mais j'ai catégoriquement refusé son offre.}
+
+1163
+{23260}{Mélanie m'a apparemment laissé une chance de récupérer l'anneau innominé : il se trouvera dans le coffre-fort de sa cabine jusqu'au terminus.}
+
+1164
+{23280}{J'ai avoué à Sebastian avoir volé l'anneau innominé. Il va se charger de le rendre à son propriétaire.}
+
+1165
+{23300}{J'ai parlé à Sebastian de l'anneau que Mélanie m'a demandé de voler dans la cabine numéro un.}
+
+1166
+{23320}{J'ai fait croire à Sebastian que c'est Mélanie qui a volé l'anneau innominé.}
+
+1167
+{23340}{Mélanie va être obligée de déverrouiller le coffre de sécurité pour moi.}
+
+1168
+{23360}{Mélanie va être obligée de me donner la combinaison du coffre de sécurité.}
+
+1169
+{23380}{Sebastian a ouvert le coffre, l'anneau a dû être téléporté dans la main de Mélanie.}
+
+1170
+{23400}{Sebastian ayant révélé la combinaison (18 44), l'anneau ne se trouve plus dans le coffre.}
+
+1171
+{23420}{Mélanie a déverrouillé le coffre pour moi.}
+
+1172
+{23440}{J'ai dit à Sebastian que m'emparer de l'anneau était un jeu.}
+
+1173
+{23460}{J'ai rencontré Pfepper Aryalis, le contrôleur du train, ainsi que deux voyageurs en train de se disputer.}
+
+1174
+{23480}{Le serveur du train, Anthonin Verdjin, est un tout nouvel employé.}
+
+1175
+{23500}{Selon le contrôleur, il n'y a aucun passager de nom de Natanaël Evantide à bord du train.}
+
+1176
+{23520}{Selon le contrôleur, il n'y a aucun passager de nom d'Alexie Evantide à bord du train.}
+
+1177
+{23540}{Dans le train, le contrôleur joue le rôle de grand intendant mais n'a pas accès à la conscience collective.}
+
+1178
+{23560}{L'accès au compartiment à bagages est très règlementé, il faut être accompagné d'un employé pour entrer dans le compartiment à bagages.}
+
+1179
+{23580}{Durant son fonctionnement, le train est entouré d'un bouclier qui l'isole de l'extérieur. Entre les cercles, l’extérieur est constitué d'espaces aléatoires (parties d'anciens cercles abandonnés)}
+
+1180
+{23600}{Jason m'a proposé de le rejoindre dans sa cabine pour discuter.}
+
+1181
+{23620}{Jason a discuté quelques instants avec le "mage de la cabine n°2" et l'a trouvé très étrange.}
+
+1182
+{23640}{Jason est un créateur de sortilèges. Par contre, il ne pratique pas la magie.}
+
+1183
+{23660}{Madame Eloïse, la voyante, devrait être capable de localiser les esprits ayant volé l'âme de Jason.}
+
+1184
+{23680}{Les "monstres" qui ont volé l'âme de Jason sont en fait des Poltergeist.}
+
+1185
+{23700}{Les Poltergeist ont la faculté de devenir des esprits s'ils sont "compatibles" avec l'âme qu'ils ont volée.}
+
+1186
+{23720}{Les Poltergeist ont tous le même aspect de fantôme au halo bleuté sauf s'ils ont réussi à devenir des esprits.}
+
+1187
+{23740}{Harry Blake m'a invité à le rejoindre dans sa cabine afin que nous discutions de ses sortilèges.}
+
+1188
+{23760}{J'ai refusé de me soumettre à l'épreuve d'Harry Blake.}
+
+1189
+{23780}{Je peux envoyer mes trouvailles pour Harry Blake par la poste, dans le cercle 40.}
+
+1190
+{23800}{Jason Eastblade aurait dit que "le mage de la cabine n°2" était très étrange, probablement à Sebastian.}
+
+1191
+{23820}{Harry ne sait pas fabriquer d'objet magique, il ne sait pas non plus écrire de parchemins.}
+
+1192
+{23840}{Harry était très réticent à l'idée de m'enseigner les sortilèges qu'il a créés.}
+
+1193
+{23860}{"Cinq bougies isolées pour révéler le secret", ce message était gravé sur l'horloge du contrôleur.}
+
+1194
+{23880}{Le passager de la cabine numéro 6 semble être passionné de mécanique...}
+
+1195
+{23900}{Le passager de la cabine 6 est Aristote Darkestman, l'un de mes anciens employeurs que j'avais oublié...}
+
+1196
+{23920}{Aristote a besoin de Terre glaise afin de faire un moule pour la clef d'argent.}
+
+1197
+{23940}{Aristote Darkestman a finalement retrouvé ses chaussettes dans sa taie d'oreiller.}
+
+1198
+{23960}{Aristote m'a initié aux mécanismes "Magenta". La clef pour les activer est en fait d'écrire avec leur "clavier" le nom de leur créateur.}
+
+1199
+{23980}{Aristote m'a promis de m'envoyer un colis avec d'autres mécanismes pour m'entraîner au cercle 666.}
+
+1200
+{24000}{J'ai pu entrer dans la cabine numéro 3 en menaçant l'occupant de dire au personnel de qu'il avait fait.}
+
+1201
+{24020}{J'ai pu entrer dans la cabine numéro 3 en disant que le vol de la marmite n'entraînerait aucune sanction.}
+
+1202
+{24040}{Le passager de la cabine numéro un a été aperçu observant un anneau étrange sous une cloche de verre.}
+
+1203
+{24060}{Simon recommande le "Daily Blast" pour les personnes qui n'ont jamais fumé car il est doux et bien toléré et le "Old Pinky" pour les gros fumeurs.}
+
+1204
+{24080}{J'ai offert mon amitié à Simon Leecker.}
+
+1205
+{24100}{Heather m'a "discrètement" demandé d'entrer dans sa cabine.}
+
+1206
+{24120}{Heather pense que le couteau pourrait-être dans le compartiment à bagages.}
+
+1207
+{24140}{Chaque passager du train dispose d'une malle qui, une fois fermée par le passager, ne peut en aucun cas être ouverte autrement que par la clef du passager.}
+
+1208
+{24160}{"Garde, Léon, Foi, Idiot, Joie, Maison". Pour déchiffrer la combinaison du coffre, il faut changer la première lettre de chaque mot par le nombre de sa place dans l'alphabet, ce nombre doit être diminué de 1 pour chacune des autres lettres.}
+
+1209
+{24180}{Selon le contrôleur, conduire le train serait un exercice mental complexe qui accaparerait toute l'attention du conducteur.}
+
+1210
+{24200}{Le couteau en dent de Niddhög a été retrouvé dans la locomotive. Il a servi a exécuté un rituel de magie atonique afin de neutraliser le bouclier du train.}
+
+1211
+{24220}{J'ai prétendu que le couteau en dent de Niddhög m'appartenait.}
+
+1212
+{24240}{J'ai prétendu connaître le couteau en dent de Niddhög grâce à mes dons de voyances.}
+
+1213
+{24260}{Sebastian dit avoir été attaqué par Alexie Evantide, à visage découvert, en se rendant au wagon restaurant après la panne.}
+
+1214
+{24280}{Sebastian dit avoir été attaqué par Natanaël Evantide, à visage découvert, en se rendant au wagon restaurant après la panne.}
+
+1215
+{24300}{J'ai parlé à Sebastian du rituel de magie atonique exécuté par Evantide.}
+
+1216
+{24320}{J'ai parlé à Sebastian du rituel de magie atonique exécuté par Evantide mais je lui ai caché la nature du couteau.}
+
+1217
+{24340}{J'ai tout raconté à Heather à propos d'Evantide.}
+
+1218
+{24360}{Heather, après avoir écouté mon récit, a conclu que Sebastian était en réalité probablement Evantide et que sa blessure provenait du rituel de magie atonique.}
+
+1219
+{24380}{Heather avait raison : Sebastian était bien en réalité Alexie Evantide. Elle s'est à nouveau échappée mais se trouve forcément dans ce train.}
+
+1220
+{24400}{Heather avait raison : Sebastian était bien en réalité Natanaël Evantide. Il s'est à nouveau échappé mais se trouve forcément dans ce train.}
+
+1221
+{24420}{Heather m'a conseillé d'aller examiner la scène du rituel dans la locomotive.}
+
+1222
+{24440}{Pfepper m'a remis une photographie de la locomotive.}
+
+1223
+{24460}{Les "Neiges éternelles" d'Heïdi ont été retrouvées sur le lieu du rituel.}
+
+1224
+{24480}{Des boucles d'oreille ont été retrouvées sur le lieu du rituel.}
+
+1225
+{24500}{Pfepper m'a parlé d'une corde retrouvée dans la locomotive, il veut que je le retrouve devant le compartiment à bagages.}
+
+1226
+{24520}{Alexie Evantide et apparue dans le compartiment à bagages avec la "fausse" Mélanie Brumont qui avait pris l'apparence du contrôleur. Elle a invoqué un démon avant de s'enfuir à nouveau.}
+
+1227
+{24540}{Natanaël Evantide et apparu dans le compartiment à bagages avec la "fausse" Mélanie Brumont qui avait pris l'apparence du contrôleur. Il a invoqué un démon avant de s'enfuir à nouveau.}
+
+1228
+{24560}{Le démon qu'a invoqué Evantide a dit qu'il allait "s'occuper de la gare".}
+
+1229
+{24580}{La "fausse" Mélanie Brumont a appelé Evantide "Amber".}
+
+1230
+{24600}{Code n°6 : Thechurchyard}
+
+1231
+{24620}{Code n°5 : Increasemycharisma}
+
+1232
+{24640}{A Soulstones River, j'ai sauvé l'existence de Natanaël Evantide. Il s'est enfui pendant que j'étais évanoui.}
+
+1233
+{24660}{A Soulstones River, j'ai sauvé l'existence de Natanaël Evantide. Il s'est enfui pendant que j'étais évanouie.}
+
+1234
+{24680}{A Soulstones River, j'ai sauvé l'existence d'Alexie Evantide. Elle s'est enfuie pendant que j'étais évanoui.}
+
+1235
+{24700}{A Soulstones River, j'ai sauvé l'existence d'Alexie Evantide. Elle s'est enfuie pendant que j'étais évanouie.}
+
+1236
+{24720}{Suite à la mort de Natanaël Evantide, sa complice est entrée dans une colère noire et a pris le contrôleur en otage. Je dois la rejoindre au cimetière avant qu'elle ne le tue.}
+
+1237
+{24740}{Suite à la mort d'Alexie Evantide, sa complice est entrée dans une colère noire et a pris le contrôleur en otage. Je dois la rejoindre au cimetière avant qu'elle ne le tue.}
+
+1238
+{24760}{Code n°7 : Merryxmas}
+
+1239
+{24780}{Après avoir battu Mélanie Brumont, on plutôt Silverstealer, j'ai rencontré une personne qui a dit être leur chef. Il se fait appeler Resetregret, il m'a raconté énormément de choses, et principalement le fait que leur organisation, Christma Ethma, projette de renverser la hiérarchie actuelle des Enfers qu'il dit injuste. Pour ce faire, ils comptent déclencher une guerre prochainement et il m'a demandé de réfléchir au fait que je pourrais rejoindre leurs rangs. La condition sine qua non est que je ne parle de leur organisation à personne.}
+
+1240
+{24800}{Christma Ethma projette également de tuer Vélorien au cours de leur guère. Cependant, Resetregret n'a pas abordé ce sujet en détail avec moi.}
+
+1241
+{24820}{Enfin, il est à noter que, selon ses dires, Resetregret ne projette pas de prendre la place de Vélorien. Selon lui, peu importe qui lui succède du moment qu'il s'agit d'une personne plus "juste".}
+
+1242
+{24840}{J'ai délivré Pfepper dans un entrepôt au cimetière de Soulstones River.}
+
+1243
+{24860}{Je suis à présent autorisé à me rendre dans les quartiers intermédiaires du cercle 666, cependant il y a une épreuve à passer pour cela.}
+
+1244
+{24880}{Je suis à présent autorisée à me rendre dans les quartiers intermédiaires du cercle 666, cependant il y a une épreuve à passer pour cela.}
+
+1245
+{24900}{J'ai choisi de ne pas parler au Grand intendant de Resetregret et de Christma Ethma. Il est sans doute trop tard pour revenir en arrière, j'espère avoir pris la bonne décision.}
+
+1246
+{24920}{J'ai parlé au Grand intendant de Resetregret et des plans de Christma Ethma.}
+
+1247
+{24940}{Meallow, le technomancien, ainsi que Naga, le pilier du monde, sont probablement encore membres de l'Acme league et résident probablement dans les quartiers destinés à l'élite du cercle 666.}
+
+1248
+{24960}{Tout ce qui concerne l'Acme league doit être tenu secret au nom du "secret de préservation".}
+
+1249
+{24980}{L'Acme league est le classement des 10 meilleurs employés du cercle 666, et donc des Enfers. Les intendants et le grand intendant n'y sont pas classés mais sont du niveau des numéros 2 et 3 (Neils Mc Hoseeing en étant le numéro 4 avant de devenir grand intendant)}
+
+1250
+{25000}{Nidgel Klark, à la galerie des ombres, se propose pour "peindre mon âme" sur des tableaux si je lui apporte des rubis patriarcaux et ce, gratuitement.}
+
+1251
+{25020}{J'ai réussi l'épreuve pour entrer dans les quartiers intermédiaires.}
+
+1252
+{25040}{Un bijoutier serait surement capable de réparer le morceau de pendentif orné d'un saphir.}
+
+1253
+{25060}{L'institut de Dante est une société d'historiens faisant des recherches sur des phénomènes "échappant" à la conscience collective.}
+
+1254
+{25080}{Vous avez débloqué le deuxième plan de jeu à Tír na nÓg.}
+
+1255
+{25100}{Vous avez débloqué le troisième plan de jeu à Tír na nÓg.}
+
+1256
+{25120}{}
+
+1257
+{25140}{}
+
+1258
+{25160}{}
+
+1259
+{25180}{}
+
+1260
+{25200}{}
+
+1261
+{25220}{}
+
+1262
+{25240}{}
+
+1263
+{25260}{}
+
+1264
+{25280}{}

@@ -1,0 +1,627 @@
+{1}{Erlaubt mir, dass ich mich vorstelle: Ich bin Gilbert Bates, wie Ihr vielleicht schon vermutet habt. Ich möchte Euch danken, dass Ihr die Probleme in meiner Fabrik beseitigt habt, Sire. Man hat mich darüber informiert, dass Ihr etwas mit mir besprechen wollt.}{Erlaubt mir, dass ich mich vorstelle: Ich bin Gilbert Bates, wie Ihr vielleicht schon vermutet habt. Ich möchte Euch danken, dass Ihr die Probleme in meiner Fabrik beseitigt habt, Madame. Man hat mich darüber informiert, dass Ihr etwas mit mir besprechen wollt.}{}{1}{}{ }
+{2}{Genau so ist es. Ich würde Euch gern über diesen Ring befragen.}{}{5}{in 2804,  lf13 0}{10}{lf13 1 }
+{3}{ Ich würde Euch gern ein paar Fragen über einen Ring stellen, den ich einmal hatte. [Du beschreibst den Ring.]}{}{5}{ni 2804,  lf13 0}{10}{lf13 1 }
+{4}{Was könnt Ihr mir über den jüngsten Anschlag auf Euer Leben erzählen?}{}{5}{gf1028 1, lf15 0}{1100}{lf15 1 }
+{9}{Das ist richtig, aber dafür habe ich jetzt keine Zeit. Guten Tag, Sire.}{}{5}{}{0}{ }
+{10}{Große Götter! Wie seid Ihr an diesen Ring gekommen?}{Große Götter! Wie seid Ihr an diesen Ring gekommen?}{}{2}{}{ }
+{11}{Ein im Sterben liegender Gnom gab ihn mir.}{}{5}{ra -5, ra -2}{20}{ }
+{12}{Ein merkwürdig aussehender Kerl gab ihn mir.}{}{5}{ra 5}{30}{ }
+{13}{Ein im Sterben liegender, merkwürdig aussehender Gnom gab ihn mir.}{}{5}{ra 2}{30}{ }
+{14}{Das möchte ich lieber für mich behalten.}{}{5}{}{1070}{ }
+{20}{Ein Gnom! Was ist denn das für ein Unfug? Seid Ihr sicher, dass es kein Zwerg war?}{Ein Gnom! Was ist denn das für ein Unfug? Seid Ihr sicher, dass es kein Zwerg war?}{}{3}{}{ }
+{21}{Natürlich. Ich habe noch nie einen mageren Zwerg ohne Bart gesehen.}{}{5}{}{60}{ }
+{22}{Wie könnte ein Zwerg an Euren Ring gelangt sein?}{}{5}{}{1090}{ }
+{30}{Merkwürdig? Was um Himmels Willen wollt Ihr damit sagen?}{Merkwürdig? Was um Himmels Willen wollt Ihr damit sagen?}{}{4}{}{ }
+{31}{Na ja, er war ziemlich hässlich für einen Gnom, schon fast zwergenähnlich.}{}{5}{ra 5}{40}{ }
+{32}{Gnome haben diese glänzenden Knopfaugen, aber seine waren stark, durchdringend, zwergenähnlich.}{}{5}{ra 2}{50}{ }
+{40}{Zwergenähnlich? War er vielleicht ein Zwerg?}{Zwergenähnlich? War er vielleicht ein Zwerg?}{}{5}{}{ }
+{41}{Zu schlank und außerdem bartlos. Ihr wisst doch: Zwerge und ihre Bärte.}{}{5}{}{60}{ }
+{50}{Seid Ihr ganz sicher, dass es kein Zwerg war?}{Seid Ihr ganz sicher, dass es kein Zwerg war?}{}{6}{}{ }
+{51}{Kein Bart. Wir würden uns eher eine Hand abschneiden als unsere Bärte.}{}{5}{}{60}{ }
+{60}{Ja. Ich ... kenne mich mit Zwergen und ihren Bräuchen aus. Sagt mir, hatte dieser Kerl irgendwelche besonderen Merkmale?}{Ja. Ich ... kenne mich mit Zwergen und ihren Bräuchen aus. Sagt mir, hatte dieser Kerl irgendwelche besonderen Merkmale?}{}{7}{}{ }
+{61}{Er hatte eine Narbe über seinem linken Auge.}{}{5}{}{70}{ }
+{70}{Bei Alberich! Ich habe es gewusst - das war kein Gnom. Das war Stennar Steinschneider. [Diese Entdeckung nimmt ihn offensichtlich sehr mit.]}{Bei Alberich! Ich habe es gewusst - das war kein Gnom. Das war Stennar Steinschneider. [Diese Entdeckung nimmt ihn offensichtlich sehr mit.]}{}{8}{}{ru2016 }
+{71}{Ein Zwerg? Glatt rasiert? Unmöglich!}{}{5}{ra 2}{80}{ }
+{72}{Er könnte auch ein kränklicher Zwerg gewesen sein, aber sein Bart ...}{}{5}{ra -2}{80}{ }
+{73}{Wer ist dieser Stennar? Warum sollte sich ein Zwerg seinen Bart abrasieren?}{}{5}{ra -2}{1095}{ }
+{74}{Wer ist dieser Stennar? Ein Zwerg würde sich niemals seinen Bart abrasieren!}{}{5}{ra 2}{1095}{ }
+{80}{Ja, ich weiß. Das ist verrückt ... aber erzählt mir bitte, sagte er Euch noch etwas, bevor er starb? Sagte er etwas über ... äh ... mich?}{Ja, ich weiß. Das ist verrückt ... aber erzählt mir bitte, sagte er Euch noch etwas, bevor er starb? Sagte er etwas über ... äh ... mich?}{}{9}{}{ }
+{81}{Er sagte, dass er floh, um uns vor dem Bösen zu warnen ...}{}{5}{}{1330}{ }
+{90}{Das weiß ich nicht. Auch wenn Zwerge eine andere Zeitrechnung als Menschen benutzen, muss er doch gewusst haben, dass ich jetzt ein alter Mann bin. Vielleicht liegt es daran, dass ich noch ein kleiner Junge war, als ich ... als ich vor vielen Jahren sein Vertrauen missbrauchte.}{Das weiß ich nicht. Auch wenn Zwerge eine andere Zeitrechnung als Menschen benutzen, muss er doch gewusst haben, dass ich jetzt ein alter Mann bin. Vielleicht liegt es daran, dass ich noch ein kleiner Junge war, als ich ... als ich vor vielen Jahren sein Vertrauen missbrauchte.}{}{10}{}{ }
+{91}{Wie habt Ihr sein Vertrauen missbraucht?}{}{5}{}{1260}{ }
+{92}{Ich weiß alles darüber. Ich muss gestehen, dass ich Euer Tagebuch gelesen habe.}{}{5}{qu1014 2}{100}{re -5 }
+{100}{Ich verstehe. Ich nehme an, Ihr habt einen guten Grund dafür, dass ich nicht sofort meine Wache rufen lasse, um Euch eine ordentliche Abreibung verpassen zu lassen?}{Ich verstehe. Ich nehme an, Ihr habt einen guten Grund dafür, dass ich nicht sofort meine Wache rufen lasse, um Euch eine ordentliche Abreibung verpassen zu lassen?}{}{11}{}{ }
+{101}{Ich möchte Euch Euer Eigentum gern zurückgeben. Ich habe eingesehen, dass ich einen Fehler gemacht habe.}{}{5}{qb1039 1}{230}{re +5 }
+{102}{Appleby hat mich angeheuert, um den Diebstahl zu begehen, aber ich habe es mir anders überlegt.}{}{5}{qa1039 2}{110}{gf1012 1 }
+{103}{Wenn Ihr eine demütigende Züchtigung erfahren möchtet, fahrt nur fort.}{}{5}{}{0}{fl  1050 ,co}
+{110}{Sein Verrat ist mir wohl bekannt und auch lästig. Ich denke, es ist an der Zeit, dass ich ein paar Leute zu Mr. Appleby schicke, um ihm etwas auf den Zahn zu fühlen. Für eine einfallsreiche Person Eures Schlages habe ich jedoch mit Sicherheit eine gute Verwendung.}{Sein Verrat ist mir wohl bekannt und auch lästig. Ich denke, es ist an der Zeit, dass ich ein paar Leute zu Mr. Appleby schicke, um ihm etwas auf den Zahn zu fühlen. Für eine einfallsreiche Person Eures Schlages habe ich jedoch mit Sicherheit eine gute Verwendung.}{}{12}{}{np1060 1 }
+{111}{Und was wäre das?}{}{5}{}{120}{ }
+{112}{Warum hasst Appleby Euch so sehr?}{}{5}{lf11 0}{1055}{lf11 1 }
+{119}{Tut mir Leid, ich bin nicht daran interessiert.}{}{5}{}{140}{re -10 }
+{120}{Da Ihr mein Tagebuch gelesen habt, wisst Ihr auch über meine Verbindung zum Schwarzberg-Clan Bescheid. Ich möchte, dass Ihr seine Minen nach Hinweisen auf seinen Verbleib durchsucht.}{Da Ihr mein Tagebuch gelesen habt, wisst Ihr auch über meine Verbindung zum Schwarzberg-Clan Bescheid. Ich möchte, dass Ihr seine Minen nach Hinweisen auf seinen Verbleib durchsucht.}{}{13}{}{ }
+{121}{Das fängt an, mir zu gefallen. Ich werde mich bemühen, schon bald mit Nachrichten zurückzukehren.}{}{5}{}{130}{ }
+{122}{Tut mir Leid, ich bin nicht daran interessiert.}{}{5}{}{140}{re -10 }
+{130}{Euer Elan ist für einen alten Mann recht erfrischend. Hier, ich markiere alles auf Eurer Karte. Bitte kommt umgehend zurück, sobald Ihr irgendwelche Informationen habt. Es soll Euer Schaden nicht sein.}{Euer Elan ist für einen alten Mann recht erfrischend. Hier, ich markiere alles auf Eurer Karte. Bitte kommt umgehend zurück, sobald Ihr irgendwelche Informationen habt. Es soll Euer Schaden nicht sein.}{}{176}{}{mm 7, ss 4, gf1024 1 }
+{131}{Ich werde mit der von Euch gewünschten Information zurückkehren.}{}{5}{}{170}{qu 1013 2 }
+{132}{Vielen Dank. Hier habt Ihr Euer Tagebuch zurück, Ihr habt vergessen, es an Euch zu nehmen.}{}{5}{}{160}{re +10, al +25 }
+{140}{Ihr wagt es, mich abzuweisen, nachdem Ihr meine persönlichen Besitztümer gestohlen habt? Ich rate Euch dringend, noch einmal darüber nachzudenken.}{Ihr wagt es, mich abzuweisen, nachdem Ihr meine persönlichen Besitztümer gestohlen habt? Ich rate Euch dringend, noch einmal darüber nachzudenken.}{}{177}{}{ }
+{141}{Ihr tragt Eure Sache überzeugend vor. Ich nehme Euren Vorschlag an.}{}{5}{}{130}{re +5 }
+{142}{Ich rate Euch dringend, einen anderen Ton anzuschlagen, alter Mann.}{}{5}{}{150}{re -10 }
+{150}{Ich bewundere zwar Eure Impertinenz, aber jetzt habe ich genug davon. Nehmt mein Angebot an, oder tragt die Folgen.}{Ich bewundere zwar Eure Impertinenz, aber jetzt habe ich genug davon. Nehmt mein Angebot an, oder tragt die Folgen.}{}{178}{}{ }
+{151}{Wie könnte ich eine so elegant formulierte Bitte abschlagen?}{}{5}{}{130}{re +5 }
+{152}{Jetzt bekommt Ihr die Strafe für Eure Unverschämtheit!}{}{5}{}{0}{fl  1050 ,co}
+{160}{Ah, mein alter Kopf ist auch nicht mehr das Wahre ... Ihr solltet es behalten, es könnte Hinweise enthalten, die meinem vom Alter vernebelten Gehirn entfallen sind. Ich rate Euch, es nicht aus den Augen zu lassen, denn das könnte ziemlich ... ungesund sein.}{Ah, mein alter Kopf ist auch nicht mehr das Wahre ... Ihr solltet es behalten, es könnte Hinweise enthalten, die meinem vom Alter vernebelten Gehirn entfallen sind. Ich rate Euch, es nicht aus den Augen zu lassen, denn das könnte ziemlich ... ungesund sein.}{}{179}{}{ }
+{161}{Ich werde mit der von Euch gewünschten Information zurückkehren.}{}{5}{}{170}{ }
+{162}{Ihr würdet mir vertrauen? Euer schwachsinniges Gehirn muss total vertrocknet sein.}{}{5}{}{0}{fl  1050 ,co}
+{170}{Ach, noch eine Kleinigkeit ... Ich würde Euch gern meinen Ring wieder abkaufen. Ich gebe Euch 200 Goldstücke dafür. Er bedeutet mir sehr viel. Mein Vater gab ihn mir, kurz bevor er starb.}{Ach, noch eine Kleinigkeit ... Ich würde Euch gern meinen Ring wieder abkaufen. Ich gebe Euch 200 Goldstücke dafür. Er bedeutet mir sehr viel. Mein Vater gab ihn mir, kurz bevor er starb.}{}{180}{}{ }
+{171}{Sicher. Hier, bitte schön.}{}{5}{in 2804}{180}{in 2804, $$200, re+10 }
+{172}{Ich habe ihn nicht bei mir, aber ich bringe ihn Euch, wenn ich zurückgekehrt bin.}{}{5}{ni2804}{180}{lf 2 1 }
+{173}{Das ist nicht genug.}{}{5}{in 2804, ha -11}{190}{re -10 }
+{174}{300 wären mir lieber.}{}{5}{in 2804, ha 12}{220}{ }
+{180}{Herzlichen Dank. Ich werde mit Euch sprechen, wenn Ihr zurück seid.}{Herzlichen Dank. Ich werde mit Euch sprechen, wenn Ihr zurück seid.}{}{14}{}{ }
+{181}{K:}{}{5}{}{1290}{ }
+{182}{E:}{}{5}{}{0}{ }
+{190}{Seht es einem alten Mann nach, dessen Gehör nicht mehr das Allerbeste ist. Ich weiß genau, meine Ohren hätten niemals gehört, dass Ihr mein großzügiges Angebot abgelehnt hättet.}{Seht es einem alten Mann nach, dessen Gehör nicht mehr das Allerbeste ist. Ich weiß genau, meine Ohren hätten niemals gehört, dass Ihr mein großzügiges Angebot abgelehnt hättet.}{}{15}{}{ }
+{191}{Wofür haltet Ihr mich, dass ich ein solches Angebot ablehnen würde? [Du gibst ihm den Ring.]}{}{5}{in 2804}{180}{in 2804, $$200 }
+{192}{Ich habe ihn nicht bei mir, aber ich bringe ihn Euch, wenn ich zurückgekehrt bin.}{}{5}{}{180}{lf2 1 }
+{193}{Nehmt Euch in Acht, alter Mann! Euer Angebot ist eine Beleidigung.}{}{5}{}{200}{re -10 }
+{200}{Wie könnt Ihr es wagen? Ich habe schon Männer für weitaus weniger als das hier fast umgebracht! Ihr gebt mir SOFORT den Ring - gar nichts bekommt Ihr dafür!}{Wie könnt Ihr es wagen? Ich habe schon Frauen für weitaus weniger als das hier fast umgebracht! Ihr gebt mir SOFORT den Ring - gar nichts bekommt Ihr dafür!}{}{16}{}{ }
+{201}{Bitte, habt Erbarmen mit mir! Hier ist Euer Ring.}{}{5}{}{210}{in 2804 }
+{202}{Ihr bekommt Euren Lohn dafür - meinen Fuß an Eurem verlängerten Rückgrat!}{}{5}{}{0}{fl  1050 ,co}
+{210}{Und jetzt entfernt Eure erbärmliche, nichtsnutzige Erscheinung aus meinem Dunstkreis und beschafft mir ein paar Antworten!}{Und jetzt entfernt Eure erbärmliche, nichtsnutzige Erscheinung aus meinem Dunstkreis und beschafft mir ein paar Antworten!}{}{17}{}{ }
+{211}{Ja, Sire. Vielen Dank, Sire.}{}{5}{}{0}{ }
+{212}{Eurer Problem ist, dass Ihr zu lange gelebt habt. Dem kann ich abhelfen.}{}{5}{}{0}{fl  1050 ,co}
+{220}{Ja, Ihr habt Recht. Das scheint ein angemessener Betrag zu sein.}{Ja, Ihr habt Recht. Das scheint ein angemessener Betrag zu sein.}{}{18}{}{ }
+{221}{Hier ist Euer Ring.}{}{5}{}{180}{in 2804, $$300 }
+{230}{Ihr habt Euch also unbemerkt in mein Haus geschlichen. Hmmm. Ich glaube, dass ich für eine Person Eures Kalibers eine Aufgabe habe.}{Ihr habt Euch also unbemerkt in mein Haus geschlichen. Hmmm. Ich glaube, dass ich für eine Person Eures Kalibers eine Aufgabe habe.}{}{19}{}{ }
+{231}{Und was wäre das?}{}{5}{}{120}{ }
+{232}{Tut mir Leid, ich bin nicht daran interessiert.}{}{5}{}{140}{re -10 }
+{240}{ Ich kenne Euch nicht, seid Ihr neu hier?}{ Ich kenne Euch nicht, seid Ihr neu hier?}{}{20}{}{ }
+{241}{Um die Wahrheit zu sagen: Ich bin kein Dienstbote, aber es ist unbedingt erforderlich, dass ich mit Euch spreche.}{}{5}{ni 2804}{250}{gf1024 1 }
+{242}{Ich bin kein Dienstbote. Ich muss mit Euch über diesen Ring sprechen.}{}{5}{in 2804}{10}{gf1024 1 }
+{249}{Ja, das bin ich, Sire. Verzeiht mein Eindringen, aber ich werde jetzt gehen.}{}{5}{}{0}{ }
+{250}{Was sind denn das für Tricks? Wie seid Ihr hier hereingekommen?}{Was sind denn das für Tricks? Wie seid Ihr hier hereingekommen?}{}{21}{}{ }
+{251}{Das ist unwichtig. Wir müssen uns über einen Ring unterhalten. [Du beschreibst den Ring.]}{}{5}{ni 2804, lf13 0}{10}{lf13 1 }
+{252}{Cedric Appleby hat mich geschickt, um etwas zu finden, mit dem man Euch bloßstellen könnte.}{}{5}{qu1039 1, in 5202}{260}{re - 10 }
+{253}{Cedric Appleby hat mich geschickt, um etwas zu finden, mit dem man Euch bloßstellen könnte.}{}{5}{qu1039 2}{260}{re - 10 }
+{254}{Warum ich hier bin, ist viel wichtiger. Appleby ist darauf aus, Euch zu ruinieren.}{}{5}{qu1039 1, gf1006 0}{260}{gf1012 1 }
+{255}{Das ist unwichtig. Ich bin hier, um mit Euch über diesen Ring zu sprechen. [Du zeigst ihm den Ring.]}{}{5}{in 2804, lf13 0}{10}{lf3 1 }
+{256}{Warum ich hier bin, ist viel wichtiger. Appleby ist darauf aus, Euch zu ruinieren.}{}{5}{ gf1006 1}{290}{gf1012 1 }
+{260}{Und warum habt Ihr Euch dazu entschlossen, mich einzuweihen? Seid Ihr vielleicht lebensmüde?}{Und warum habt Ihr Euch dazu entschlossen, mich einzuweihen? Seid Ihr vielleicht lebensmüde?}{}{22}{}{ }
+{261}{Ich musste einfach eine Gelegenheit finden, mit Euch über diesen Ring zu sprechen.}{}{5}{in 2804, lf13 0}{10}{lf13 1 }
+{262}{Ich muss mit Euch über einen Ring sprechen. [Du beschreibst den Ring.]}{}{5}{ni 2804, lf13 0}{10}{lf13 1 }
+{263}{Ganz im Gegenteil! IHR habt wohl die Lust am Leben verloren, dass Ihr so mit mir sprecht!}{}{5}{ch 14}{270}{re -10 }
+{264}{Ich möchte Euch vor seinem Verrat warnen.}{}{5}{}{290}{gf1012 1 }
+{270}{Euer Witz wird Euch noch ins Grab bringen, Sire!}{Euer Witz wird Euch noch ins Grab bringen, Madame!}{}{23}{}{ }
+{271}{Ich wusste, dass jemand Eures Kalibers ein gutes Wortgefecht schätzen würde!}{}{5}{re -59}{280}{re 60 }
+{272}{Ich wusste, dass jemand Eures Kalibers ein gutes Wortgefecht schätzen würde!}{}{5}{re 60}{280}{re +15 }
+{273}{Ihr missversteht meine Drohung als Humor. Es ist Zeit zum Sterben.}{}{5}{}{0}{fl  1050 ,co}
+{280}{Wie wahr. Es ist erfrischend, jemandem zu begegnen, der sich nicht davor scheut, mit jemandem in meiner Position zu scherzen. Aber sagt mir, was führt Euch hierher?}{Wie wahr. Es ist erfrischend, jemandem zu begegnen, der sich nicht davor scheut, mit jemandem in meiner Position zu scherzen. Aber sagt mir, was führt Euch hierher?}{}{24}{}{ }
+{281}{Ich musste einfach eine Gelegenheit finden, mit Euch über diesen Ring zu sprechen.}{}{5}{in 2804, lf13 0}{10}{lf13 1 }
+{282}{Ich muss mit Euch über einen Ring sprechen. [Du beschreibst den Ring.]}{}{5}{ni 2804, lf13 0}{10}{lf13 1 }
+{283}{Ich fürchte, das muss warten. Lebt wohl.}{}{5}{}{0}{ }
+{290}{Sein Verrat ist mir wohl bekannt und auch lästig. Ich glaube, es wird langsam Zeit, dass ich ein paar Leute zu Mr. Appleby schicke, um ihm etwas auf den Zahn zu fühlen.}{Sein Verrat ist mir wohl bekannt und auch lästig. Ich glaube, es wird langsam Zeit, dass ich ein paar Leute zu Mr. Appleby schicke, um ihm etwas auf den Zahn zu fühlen.}{}{25}{}{np1060 1 }
+{291}{Ich würde Euch gern über diesen Ring befragen.}{}{5}{in 2804, lf13 0}{10}{lf13 1 }
+{292}{Ich würde gern mit Euch über einen Ring sprechen. [Du beschreibst den Ring.]}{}{5}{ni 2804, lf13 0}{10}{lf13 1 }
+{293}{Warum hasst Appleby Euch so sehr?}{}{5}{lf12 0}{1055}{lf12 1 }
+{299}{Na gut, ich wollte Euch nur warnen. Lebt wohl.}{}{5}{}{0}{lf 1 1, re +10 }
+{300}{Eure Unverfrorenheit überrascht mich! Wie könnt Ihr es wagen, Euch mir zu nähern, Lakai!}{Eure Unverfrorenheit überrascht mich! Wie könnt Ihr es wagen, Euch mir zu nähern, Lakai!}{}{26}{}{ }
+{301}{Ich habe noch etwas anderes, das Euch überraschen wird. [Du zeigst ihm den Ring.]}{}{5}{ch 14, in 2804}{10}{re 50, gf1024 1 }
+{302}{Ich weiß wohl, dass ich es nicht wert bin, auch nur Eure Stiefel zu putzen, aber ich muss mit Euch sprechen.}{}{5}{}{310}{re +5, gf1024 1 }
+{303}{Das wird Euch noch viel mehr überraschen. [Du beschreibst den Ring.]}{}{5}{ch 14, ni 2804}{10}{re 50, gf1024 1 }
+{304}{Ich habe noch etwas anderes, das Euch überraschen wird. [Du beginnst zu kämpfen.]}{}{5}{}{0}{fl  1050 ,co}
+{305}{Natürlich Sire, verzeiht mir, Sire. Ich empfehle mich, Sire.}{}{5}{}{0}{ }
+{310}{Das sollte besser der Mühe wert sein, sonst werdet Ihr die Verschwendung meiner kostbaren Zeit teuer bezahlen!}{Das sollte besser der Mühe wert sein, sonst werdet Ihr die Verschwendung meiner kostbaren Zeit teuer bezahlen!}{}{27}{}{ }
+{311}{Ich bitte um Geduld, aber ich dachte, dass Ihr diesen Ring wohl gern sehen würdet.}{}{5}{in 2804, lf13 0}{10}{re +5, lf13 1 }
+{312}{Ich bitte um Geduld, aber ich muss Euch zu einem Ring befragen, den ich einst besaß. [Du beschreibst den Ring.]}{}{5}{ni 2804, lf13 0}{10}{re +5, lf13 1 }
+{313}{Ich möchte mich noch ein bisschen über Euren Ring unterhalten.}{}{5}{lf13 1}{1245}{ }
+{314}{Ich habe mir Euren Unsinn lange genug angehört. Ich werde Euch lehren, "bitter zu bezahlen".}{}{5}{}{0}{fl  1050 ,co}
+{320}{[Ein älterer Mann kommt auf dich zu, die Hand zum Gruß ausgestreckt.] Einen schönen Tag auch, Sire. Ich bin Gilbert Bates, wie Ihr vielleicht schon vermutet habt. Meine Wachen haben mich darüber informiert, dass Ihr etwas mit mir besprechen wollt.}{[Ein älterer Mann kommt auf dich zu, die Hand zum Gruß ausgestreckt.] Einen schönen Tag auch, Madame. Ich bin Gilbert Bates, wie Ihr vielleicht schon vermutet habt. Meine Wachen haben mich darüber informiert, dass Ihr etwas mit mir besprechen wollt.}{}{28}{}{ }
+{321}{Genau so ist es. Ich würde Euch gern über diesen Ring befragen.}{}{5}{in 2804, gf1007 0, lf13 0}{10}{lf13 1 }
+{322}{ Ich würde Euch gern ein paar Fragen über einen Ring stellen, den ich einmal hatte. [Du beschreibst den Ring.]}{}{5}{ni 2804, gf1007 0, lf13 0}{10}{lf13 1 }
+{323}{Wie habt Ihr mit dem Schwarzberg-Clan zu tun?}{}{5}{gf1007 1}{360}{ }
+{324}{Was könnt Ihr mir über den jüngsten Anschlag auf Euer Leben erzählen?}{}{5}{gf1028 1}{1195}{lf15 1 }
+{329}{Das ist richtig, aber dafür habe ich jetzt keine Zeit. Guten Tag, Sire.}{}{5}{}{0}{ }
+{330}{Stennar! Wartet, Ihr seid nicht ... als meine Wachen sagten, dass dort ein Zwerg mit einem Ring wäre, dachte ich ... hat er Euch geschickt?}{Stennar! Wartet, Ihr seid nicht ... als meine Wachen sagten, dass dort ein Zwerg mit einem Ring wäre, dachte ich ... hat er Euch geschickt?}{}{29}{}{ }
+{331}{Nicht, wenn er ein Gnom ist. Stennar ist ein Zwergenname.}{}{5}{}{350}{ }
+{332}{Nein, das hat er nicht. Es tut mir Leid, ich muss jetzt gehen.}{}{5}{}{340}{ }
+{340}{Bitte, geht nicht fort. Ich muss mit Euch über Stennar sprechen. Es ist so lange her. Was ist mit ihm geschehen?}{Bitte, geht nicht fort. Ich muss mit Euch über Stennar sprechen. Es ist so lange her. Was ist mit ihm geschehen?}{}{30}{}{ }
+{341}{Ich weiß nicht so recht. Ich würde gerne mit Euch über einen Ring sprechen, den ich gefunden habe. [Du beschreibst den Ring.]}{}{5}{ni 2804}{10}{ }
+{342}{Ich kenne keinen Stennar, aber ich würde gern mit Euch über diesen Ring sprechen.}{}{5}{in 2804}{10}{ }
+{349}{Ich bitte um Verzeihung, aber ich muss gehen.}{}{5}{}{0}{ }
+{350}{Natürlich ist er kein Gnom. Aber wenn Ihr ihn nicht kennt, wie seid Ihr dann an diesen Ring gelangt? Es ist für Zwerge normalerweise unter ihrer Würde zu stehlen.}{Natürlich ist er kein Gnom. Aber wenn Ihr ihn nicht kennt, wie seid Ihr dann an diesen Ring gelangt? Es ist für Zwerge normalerweise unter ihrer Würde zu stehlen.}{}{31}{}{ }
+{351}{Ein im Sterben liegender, merkwürdig aussehender Gnom gab ihn mir.}{}{5}{}{30}{ }
+{352}{Wir könnt Ihr es wagen, mich des Diebstahls zu bezichtigen! Ich bin kein Gnom! Guten Tag!}{}{5}{}{340}{ }
+{360}{Was ... was habt Ihr gesagt? Ich ... äh ... ich meine, ich weiß nichts über ... über sie ...}{Was ... was habt Ihr gesagt? Ich ... äh ... ich meine, ich weiß nichts über ... über sie ...}{}{32}{}{ }
+{361}{Ich war tief in ihren Minen. Ich weiß, dass Ihr etwas damit zu tun hattet.}{}{5}{}{370}{ }
+{362}{Ich muss mich wohl geirrt haben. Lebt wohl.}{}{5}{}{0}{ }
+{370}{Ihr seid dort gewesen? Wisst Ihr, was mit ihnen geschehen ist?}{Ihr seid dort gewesen? Wisst Ihr, was mit ihnen geschehen ist?}{}{33}{}{ }
+{371}{Sie wurden Euretwegen auf die Insel der Verzweiflung verbannt.}{}{5}{}{1065}{ }
+{380}{Und warum will mich wohl der Dorftrottel sprechen?}{Und warum will mich wohl der Dorftrottel sprechen?}{}{34}{}{ }
+{381}{Ich all Sabber-türs totig machen haben.}{}{-4}{gf1007 0, qu1040 4}{390}{ }
+{382}{Schwatz-Clan verbanntet wegen Euch.}{}{-4}{me 0, gf1007 1}{480}{ }
+{383}{Euer Ring? [Du zeigst ihm den Ring.]}{}{-4}{gf1007 0, qb1040 3, in 2804, lf13 0}{400}{lf13 1 }
+{384}{Ich mal Ring haben. [Du unternimmst einen kläglichen Versuch, den Ring zu beschreiben.]}{}{-4}{gf1007 0, qb1040 3, ni 2804, lf13 0}{400}{lf13 1 }
+{389}{Ugha?}{}{-4}{}{0}{ }
+{390}{Als meine Wachen mir sagten, dass Ihr gekommen seid, um mit mir zu sprechen, vergaßen sie zu erwähnen, dass Ihr komplett schwachsinnig seid.}{Als meine Wachen mir sagten, dass Ihr gekommen seid, um mit mir zu sprechen, vergaßen sie zu erwähnen, dass Ihr komplett schwachsinnig seid.}{}{35}{}{ }
+{391}{Das Euer Ring?}{}{-4}{in 2804, lf13 0}{400}{lf13 1 }
+{392}{Ich mal Ring haben. [Du unternimmst einen kläglichen Versuch, den Ring zu beschreiben.]}{}{-4}{ni 2804, lf13 0}{400}{lf13 1 }
+{399}{Uhfgnmm.}{}{-4}{}{0}{ }
+{400}{Woher habt Ihr diesen Ring? Hat ein Zwerg ihn Euch gegeben?}{Woher habt Ihr diesen Ring? Hat ein Zwerg ihn Euch gegeben?}{}{36}{}{ }
+{401}{Nö. Dusslig Gnom mi' Narbens mir geben. Dann totig geh'n.}{}{-4}{}{405}{ }
+{405}{Narbe? Wo hatte er diese Narbe? Sprecht schon, ignoranter Tölpel!}{Narbe? Wo hatte er diese Narbe? Sprecht schon, ignoranter Tölpel!}{}{37}{}{ }
+{406}{Auge.}{}{-4}{}{410}{ }
+{410}{Die sollen alle zur Hölle fahren! Was haben sie Euch angetan, Stennar?}{Die sollen alle zur Hölle fahren! Was haben sie Euch angetan, Stennar?}{}{38}{}{ }
+{411}{Ich nix Stennar.}{}{-4}{}{415}{ }
+{415}{Ich weiß selbst, dass Ihr nicht Stennar seid, Trottel. Tut wenigstens so, als wärt Ihr nicht total verblödet, und hört mir zu. Ich muss mit jemandem darüber reden, und bei meinem Glück versteht Ihr sowieso nur die Hälfte davon.}{Ich weiß selbst, dass Ihr nicht Stennar seid, Trottel. Tut wenigstens so, als wärt Ihr nicht total verblödet, und hört mir zu. Ich muss mit jemandem darüber reden, und bei meinem Glück versteht Ihr sowieso nur die Hälfte davon.}{}{39}{}{ }
+{416}{Äh ... gutt.}{}{-4}{}{-42}{ru2017 }
+{417}{Ich Buch klau'n. Das wahr sein.}{}{-4}{qu1014 2}{420}{ }
+{420}{(Hmmm. Vielleicht ist er dumm genug, um etwas für mich zu erledigen.) IHR GEHT IN DIE SCHWARZBERG-MINEN UND FINDET HERAUS, WOHIN DER CLAN VERSCHWUNDEN IST, VERSTANDEN?}{(Hmmm. Vielleicht ist sie dumm genug, um etwas für mich zu erledigen.) IHR GEHT IN DIE SCHWARZBERG-MINEN UND FINDET HERAUS, WOHIN DER CLAN VERSCHWUNDEN IST, VERSTANDEN?}{}{40}{}{ }
+{421}{Ja?}{}{-4}{qu1014 2}{425}{ }
+{422}{Ja?}{}{-4}{qb1014 1}{425}{qu1013 2 }
+{423}{Nein!}{}{-4}{}{430}{ }
+{425}{Ich markiere Eure Karte. Jetzt raus hier. Kommt zurück, wenn Ihr es erledigt habt.}{Ich markiere Eure Karte. Jetzt raus hier. Kommt zurück, wenn Ihr es erledigt habt.}{}{41}{}{mm 7, ss 4, gf1024 1 }
+{426}{Tschö.}{}{-4}{}{0}{ }
+{430}{Wie könnt Ihr es wagen?! Ihr solltet Euch das noch einmal überlegen, Einfaltspinsel!}{Wie könnt Ihr es wagen?! Ihr solltet Euch das noch einmal überlegen, Einfaltspinsel!}{}{42}{}{ }
+{431}{Ja!}{}{-4}{qu1014 2}{425}{ }
+{432}{Ja!}{}{-4}{qb1014 1}{425}{qu1013 2 }
+{433}{Nein?}{}{-4}{}{0}{fl  1050 ,co}
+{440}{Keiner von ihnen ist jemals mit brauchbaren Informationen zurückgekehrt, und einige davon sind gar nicht mehr wiedergekommen. Diejenigen, die es geschafft haben, erzählten von hinterhältigen Fallen und Kreaturen, die sie aus den Schatten heraus angegriffen hätten. Als sich die Nachrichten über diese Fehlschläge ausbreiteten, wurde es zunehmend schwieriger, Leute zu finden, die mutig genug waren, diese Herausforderung anzunehmen.}{Keiner von ihnen ist jemals mit brauchbaren Informationen zurückgekehrt, und einige davon sind gar nicht mehr wiedergekommen. Diejenigen, die es geschafft haben, erzählten von hinterhältigen Fallen und Kreaturen, die sie aus den Schatten heraus angegriffen hätten. Als sich die Nachrichten über diese Fehlschläge ausbreiteten, wurde es zunehmend schwieriger, Leute zu finden, die mutig genug waren, diese Herausforderung anzunehmen.}{}{43}{}{qu1012 4 }
+{441}{Aber warum hat er mich mit Eurem Ring hierher geschickt?}{}{5}{}{1270}{ }
+{442}{Was ich jetz' tun?}{}{-4}{gf1007 0}{420}{ }
+{446}{Zwergens auf Bös-Leutens-Insel.}{}{-4}{gf1007 1}{850}{ }
+{450}{Es ist offensichtlich unerlässlich, herauszufinden, was mit dem Schwarzberg-Clan geschehen ist. Vielen Dank, dass Ihr mich darüber informiert habt, aber ich muss mich jetzt zurückziehen, um über meine nächsten Schritte nachzudenken. Guten Tag.}{Es ist offensichtlich unerlässlich, herauszufinden, was mit dem Schwarzberg-Clan geschehen ist. Vielen Dank, dass Ihr mich darüber informiert habt, aber ich muss mich jetzt zurückziehen, um über meine nächsten Schritte nachzudenken. Guten Tag.}{}{44}{}{ }
+{451}{Ich bin genauso daran interessiert, dieses Rätsel zu lösen.}{}{5}{gf1007 0}{460}{ }
+{452}{So wie ich es sehe, wird unser nächster Schritt wohl ein Besuch auf der Insel der Verzweiflung sein.}{}{5}{gf1007 1}{680}{ }
+{459}{Ich wünsche Euch alles Gute. Lebt wohl.}{}{5}{}{0}{qu1013 1 }
+{460}{Ihr scheint ein recht einfallsreiches Individuum zu sein. Ich glaube, dass Ihr für diese Aufgabe genau richtig seid. Ich versichere Euch, dass es Euer Schaden nicht sein wird.}{Ihr scheint ein recht einfallsreiches Individuum zu sein. Ich glaube, dass Ihr für diese Aufgabe genau richtig seid. Ich versichere Euch, dass es Euer Schaden nicht sein wird.}{}{45}{}{ }
+{461}{Angenommen.}{}{5}{qb1014 1}{470}{qu1013 2 }
+{462}{Angenommen.}{}{5}{qu1014 2}{470}{ }
+{468}{Ich habe wohl überstürzt gesprochen. Ich muss jetzt gehen.}{}{5}{qu1014 2}{0}{ }
+{469}{Ich habe wohl überstürzt gesprochen. Ich muss jetzt gehen.}{}{5}{qb1014 1}{0}{qu1013 1 }
+{470}{Wunderbar! Hier, ich markiere die Lage der Schwarzberg-Minen auf Eurer Karte. Ich bin sicher, dass es dort ein paar Hinweise geben wird. Kehrt bitte sofort zurück, sobald Ihr irgendetwas gefunden habt.}{Wunderbar! Hier, ich markiere die Lage der Schwarzberg-Minen auf Eurer Karte. Ich bin sicher, dass es dort ein paar Hinweise geben wird. Kehrt bitte sofort zurück, sobald Ihr irgendetwas gefunden habt.}{}{46}{}{mm 7, ss 4, gf1024 1 }
+{471}{Ich werde mit der von Euch gewünschten Information zurückkehren.}{}{5}{in2804}{170}{ }
+{472}{Dürfte ich Euch ein paar Fragen stellen, bevor ich gehe?}{}{5}{}{1290}{ }
+{473}{Ich werde mit der von Euch gewünschten Information zurückkehren.}{}{5}{ni2804}{0}{ }
+{480}{Verbannt? Wo?}{Verbannt? Wo?}{}{47}{}{ }
+{481}{Issel der Verzweifung?}{}{-4}{}{-42}{ }
+{490}{Ihr seid zurückgekehrt! Erzählt mir, was habt Ihr herausgefunden?}{Ihr seid zurückgekehrt! Erzählt mir, was habt Ihr herausgefunden?}{}{48}{}{ }
+{491}{Die Zwerge wurden auf die Insel der Verzweiflung verbannt wegen ... äh ...}{}{5}{gf1007 1, lf1 0}{500}{lf1 1  }
+{492}{Ich habe Euch den Ring mitgebracht. [Du gibst ihm den Ring.]}{}{5}{lf2 1, in 2804}{620}{in 2804 }
+{493}{Ich habe mich entschlossen, zur Insel der Verzweiflung zu reisen. Wie komme ich da hin?}{}{5}{qu1013 4, qu1015 1, gf2542 1}{530}{qu1015 2 }
+{494}{Sie sind nicht auf der Insel der Verzweiflung. Sie sind nie dort gewesen.}{}{5}{qu1015 4, qb1017 3, lf5 0}{630}{ }
+{495}{Ich habe mit Loghaire vom Rad-Clan gesprochen.}{}{5}{qu1016 2, lf7 0}{690}{lf7 1 }
+{496}{Ich habe etwas Wichtiges mit Euch zu besprechen.}{}{5}{ qu1013 0, qb1014 1}{600}{ }
+{497}{Ich habe mich entschlossen, für Euch die Schwarzberg-Minen zu erkunden.}{}{5}{qu1013 1}{470}{qu1013 2 }
+{498}{Der Schwarzberg-Clan wurde von den Dunkelelfen in die Leere verbannt.}{}{5}{qa1016 3, lf10 0}{970}{ }
+{499}{Ich habe seit unserer letzten Unterhaltung keine neuen Informationen gefunden.}{}{5}{}{0}{ }
+{500}{Um der Götter Willen, heraus damit, Mann!}{Um der Götter Willen, heraus damit, Frau!}{}{49}{}{ }
+{501}{Sie haben unvernünftigerweise zugelassen, dass Menschen in den Genuss ihrer Technologie kamen.}{}{5}{}{510}{qu1013 4 }
+{502}{Euer kaltblütiger Verrat und der Diebstahl ihrer Technologie ist ihnen zum Verhängnis geworden.}{}{5}{re 39}{1030}{re -5, qu1013 4 }
+{503}{Euer kaltblütiger Verrat und der Diebstahl ihrer Technologie ist ihnen zum Verhängnis geworden.}{}{5}{re -38}{0}{qu1013 4, fl  1050 ,co}
+{504}{Sie haben unvernünftigerweise zugelassen, dass Menschen in den Genuss ihrer Technologie kamen.}{}{5}{qu1014 4}{510}{ }
+{510}{[Er scheint einen Moment bestürzt, als er über das nachdenkt, was du soeben erzählt hast.] Bei den Göttern, genau das hatte ich immer befürchtet! Ich bin ihnen allen zum Verhängnis geworden! [Er bricht hemmungslos in Tränen aus.] Was habe ich nur angerichtet? Meine jugendliche Überheblichkeit ... ich ... hier habt Ihr ... Gold für Eure Mühen. [Er versucht, sich zusammenzureißen.] Würdet Ihr ... für mich ... zur Insel der Verzweiflung gehen? [Er drängt weitere Tränen zurück.]}{[Er scheint einen Moment bestürzt, als er über das nachdenkt, was du soeben erzählt hast.] Bei den Göttern, genau das hatte ich immer befürchtet! Ich bin ihnen allen zum Verhängnis geworden! [Er bricht hemmungslos in Tränen aus.] Was habe ich nur angerichtet? Meine jugendliche Überheblichkeit ... ich ... hier habt Ihr ... Gold für Eure Mühen. [Er versucht, sich zusammenzureißen.] Würdet Ihr ... für mich ... zur Insel der Verzweiflung gehen? [Er drängt weitere Tränen zurück.]}{}{50}{}{$$ 300 }
+{511}{Ihr wollt, dass ich zur Insel der Verzweiflung gehe?}{}{5}{}{520}{ }
+{512}{Es tut mir Leid, aber 300 Goldstücke decken nicht einmal meine Spesen ab.}{}{5}{ps 15}{570}{ }
+{514}{Was tun?}{}{-4}{}{850}{ }
+{520}{Wenn Ihr das tun würdet ... ich weiß, dass ich schon viel zu viel von Euch verlangt habe, aber ein alter Mann muss mit sich selbst ins Reine kommen.}{Wenn Ihr das tun würdet ... ich weiß, dass ich schon viel zu viel von Euch verlangt habe, aber ein alter Mann muss mit sich selbst ins Reine kommen.}{}{51}{}{gf2542 1 }
+{521}{Natürlich. Wie komme ich da hin?}{}{5}{}{530}{qu1015 2 }
+{522}{Was ist die Insel der Verzweiflung?}{}{5}{}{580}{ }
+{523}{Es tut mir Leid, aber ich werde keine Insel der Verzweiflung betreten.}{}{5}{}{0}{ }
+{530}{Geht zu den Docks von Ashbury, Ihr findet sie auf Eurer Karte. Fragt dort nach Edward Teach, einem zähen, alten Seebären. Er ist der Kapitän eines Schiffs, das ich für "Spezialaufgaben" benutze.}{Geht zu den Docks von Ashbury, Ihr findet sie auf Eurer Karte. Fragt dort nach Edward Teach, einem zähen, alten Seebären. Er ist der Kapitän eines Schiffs, das ich für "Spezialaufgaben" benutze.}{}{52}{}{mm 8, gf 1008 1 }
+{531}{Und er wird mich dort hinbringen? Kann man diesem Mann trauen?}{}{5}{}{540}{ }
+{540}{Ich vertraue ihm blind. Es kursieren zwar Gerüchte über eine wenig ruhmreiche Karriere auf See, aber er ist ein guter Mann, sollte es Schwierigkeiten geben.}{Ich vertraue ihm blind. Es kursieren zwar Gerüchte über eine wenig ruhmreiche Karriere auf See, aber er ist ein guter Mann, sollte es Schwierigkeiten geben.}{}{53}{}{ru2018 }
+{541}{Das ist ermutigend.}{}{5}{ch12}{-48}{ }
+{542}{Das ist ermutigend.}{}{5}{ch -11}{560}{ }
+{550}{Das ist Chukka. Er redet nicht viel, ist aber überaus loyal. Nehmt ihn zu Eurem Schutz mit. Ich werde Teach eine Nachricht kabeln, damit er Euch erwartet.}{Das ist Chukka. Er redet nicht viel, ist aber überaus loyal. Nehmt ihn zu Eurem Schutz mit. Ich werde Teach eine Nachricht kabeln, damit er Euch erwartet.}{}{54}{}{gf1008 1, gf1020 1 }
+{551}{K:}{}{5}{}{1290}{ }
+{559}{Vielen Dank für Eure Großzügigkeit. Ich werde Euch von meinen Erfolgen in Kenntnis setzen.}{}{5}{}{0}{qu1015 2 }
+{560}{Ich werde Teach eine Nachricht kabeln, damit er Euch erwartet.}{Ich werde Teach eine Nachricht kabeln, damit er Euch erwartet.}{}{55}{}{gf1008 1 }
+{561}{K:}{}{5}{}{1290}{ }
+{569}{Vielen Dank für Eure Großzügigkeit. Ich werde Euch von meinen Erfolgen in Kenntnis setzen.}{}{5}{}{0}{qu1015 2 }
+{570}{Natürlich, natürlich, hier habt Ihr noch 100. Würdet Ihr bitte für mich zur Insel der Verzweiflung gehen?}{Natürlich, natürlich, hier habt Ihr noch 100. Würdet Ihr bitte für mich zur Insel der Verzweiflung gehen?}{}{56}{}{$$ 100, qu1015 1, gf2542 1 }
+{571}{Natürlich.}{}{5}{}{520}{ }
+{572}{Was ist die Insel der Verzweiflung?}{}{5}{}{580}{ }
+{573}{Vielleicht später einmal. Guten Tag.}{}{5}{}{0}{ }
+{580}{Die Insel der Verzweiflung ist eine Strafkolonie. Extrem gefährlich. Die Verbrecher werden ohne großes Aufhebens an ihrem Ufer ausgesetzt und müssen sich allein gegen die Elemente und andere "Mitbewohner" zur Wehr setzen. Ich stünde wirklich zutiefst in Eurer Schuld.}{Die Insel der Verzweiflung ist eine Strafkolonie. Extrem gefährlich. Die Verbrecher werden ohne großes Aufhebens an ihrem Ufer ausgesetzt und müssen sich allein gegen die Elemente und andere "Mitbewohner" zur Wehr setzen. Ich stünde wirklich zutiefst in Eurer Schuld.}{}{57}{}{ }
+{581}{Ich werde es tun, aber wie komme ich dorthin?}{}{5}{}{530}{qu1015 2 }
+{582}{Tief genug, um mehr als diese 300 Goldstücke auszuspucken?}{}{5}{ps 12, lf6 0}{590}{ }
+{589}{Ich bin sicher, Ihr würdet mir ein hübsches Begräbnis ausrichten. Nein, danke.}{}{5}{}{0}{ }
+{590}{Aber gewiss doch! Ich denke, dieses Gold sollte Euch für die Unannehmlichkeiten unterwegs wohl entschädigen.}{Aber gewiss doch! Ich denke, dieses Gold sollte Euch für die Unannehmlichkeiten unterwegs wohl entschädigen.}{}{58}{}{$$450 }
+{591}{Ausgezeichnet. Wie komme ich da hin?}{}{5}{}{530}{qu1015 2 }
+{600}{Was hat das alles zu bedeuten?}{Was hat das alles zu bedeuten?}{}{59}{}{ }
+{601}{Ich würde Euch gern über diesen Ring befragen.}{}{5}{in 2804, ra -2}{10}{ }
+{602}{Ich würde Euch gern ein paar Fragen über diesen Ring stellen, den ich einmal besaß. [Du beschreibst den Ring.]}{}{5}{ni 2804, ra -2}{10}{ }
+{609}{F:}{}{5}{}{0}{ }
+{610}{Gibt es irgendwelche Neuigkeiten?}{Gibt es irgendwelche Neuigkeiten?}{}{60}{}{ }
+{611}{Die Zwerge wurden auf die Insel der Verzweiflung verbannt wegen ... äh ...}{}{5}{gf1007 1, lf11 0}{500}{lf11 1 }
+{612}{Ich habe mich entschlossen, zur Insel der Verzweiflung zu reisen. Wie komme ich da hin?}{}{5}{qu1013 4, qu1015 1, gf2542 1}{530}{qu1015 2 }
+{613}{Sie sind nicht auf der Insel der Verzweiflung. Sie sind nie dort gewesen.}{}{5}{qu1015 4, qb1017 3, lf5 0}{630}{ }
+{614}{Ich habe mit Loghaire vom Rad-Clan gesprochen.}{}{5}{qu1016 2, lf7 0}{690}{lf7 1 }
+{615}{Ich habe mich entschlossen, für Euch die Schwarzberg-Minen zu erkunden.}{}{5}{qu1013 1}{470}{ }
+{616}{Der Schwarzberg-Clan wurde von den Dunkelelfen in die Leere verbannt.}{}{5}{qa1016 3}{970}{ }
+{617}{Was könnt Ihr mir über den jüngsten Anschlag auf Euer Leben erzählen?}{}{5}{gf1028 1, lf15 0}{1225}{lf15 1 }
+{619}{Ich habe seit unserer letzten Unterhaltung keine neuen Informationen gefunden.}{}{5}{}{0}{ }
+{620}{Wunderbar! Hier ist Euer Gold.}{Wunderbar! Hier ist Euer Gold.}{}{61}{}{$$200 }
+{621}{300 wären mir lieber.}{}{5}{ps 15}{625}{ }
+{622}{A:}{}{5}{}{610}{ }
+{625}{Ja, Ihr habt Recht. Das scheint ein angemessener Betrag zu sein.}{Ja, Ihr habt Recht. Das scheint ein angemessener Betrag zu sein.}{}{62}{}{$$100 }
+{626}{A:}{}{5}{}{610}{ }
+{630}{Welche teuflische Verschwörung ist denn hier im Gange? Seid Ihr Euch dessen sicher?}{Welche teuflische Verschwörung ist denn hier im Gange? Seid Ihr Euch dessen sicher?}{}{63}{}{ }
+{631}{Das ist Thorwald. Er wurde dort über 100 Jahre lang gefangen gehalten.}{}{5}{pa6410}{640}{ }
+{632}{Ich habe mit einem Zwerg gesprochen, der dort über 100 Jahre gelebt hat.}{}{5}{pa-6410}{640}{ }
+{640}{Oh Götter! Das ist furchtbar! Was sollen wir jetzt tun?}{Oh Götter! Das ist furchtbar! Was sollen wir jetzt tun?}{}{64}{}{ }
+{641}{Ich bin unterwegs, um mit Loghaire vom Rad-Clan zu sprechen.}{}{5}{}{650}{ }
+{649}{Ich weiß mir selber keinen Rat. Lasst mich wissen, wenn Ihr sie gefunden habt. Guten Tag.}{}{5}{}{0}{ }
+{650}{Ja, ja. Das ist logischerweise unser nächster Schritt. Sagt mir, kann ich sonst noch irgendetwas für Euch tun?}{Ja, ja. Das ist logischerweise unser nächster Schritt. Sagt mir, kann ich sonst noch irgendetwas für Euch tun?}{}{65}{}{ }
+{651}{Äh, Ihr habt mich noch nicht dafür entlohnt, dass ich die Insel der Verzweiflung absuche.}{}{5}{ps 15}{660}{ }
+{652}{Äh, Ihr habt mich noch nicht dafür entlohnt, dass ich die Insel der Verzweiflung absuche.}{}{5}{ps -14}{670}{ }
+{660}{Ach, die Wunderlichkeit der alten Leute ... verzeiht mir meine Vergesslichkeit ... hier sind Eure 500 Goldstücke.}{Ach, die Wunderlichkeit der alten Leute ... verzeiht mir meine Vergesslichkeit ... hier sind Eure 500 Goldstücke.}{}{66}{}{$$500, lf5 1 }
+{661}{K:}{}{5}{}{1290}{ }
+{669}{Ich komme zurück, sobald ich mit Loghaire gesprochen habe.}{}{5}{}{0}{ }
+{670}{Ach, die Wunderlichkeit der alten Leute ... verzeiht mir meine Vergesslichkeit ... hier sind Eure 400 Goldstücke.}{Ach, die Wunderlichkeit der alten Leute ... verzeiht mir meine Vergesslichkeit ... hier sind Eure 400 Goldstücke.}{}{67}{}{$$400, lf5 1 }
+{671}{K:}{}{5}{}{1290}{ }
+{679}{Ich komme zurück, sobald ich mit Loghaire gesprochen habe.}{}{5}{}{0}{ }
+{680}{Was für ein grandioser Einfall. Ich hätte niemanden bitten können, etwas so Gefährliches für mich zu tun, aber da Ihr so freundlich wart, Euch mir anzutragen ...}{Was für ein grandioser Einfall. Ich hätte niemanden bitten können, etwas so Gefährliches für mich zu tun, aber da Ihr so freundlich wart, Euch mir anzutragen ...}{}{68}{}{qu1015 1, gf2542 1 }
+{681}{Wie komme ich da hin?}{}{5}{}{530}{qu1015 2 }
+{682}{Gefährlich? Was genau ist die Insel der Verzweiflung?}{}{5}{}{580}{lf6 1  }
+{683}{Es tut mir Leid, aber ich werde keine Insel der Verzweiflung betreten.}{}{5}{}{0}{ }
+{690}{Was hat er Euch erzählt?}{Was hat er Euch erzählt?}{}{69}{}{ }
+{691}{Er sagte, dass die Elfen die eigentliche Verbannung übernommen hätten.}{}{5}{}{700}{ }
+{700}{Sie haben Elfen erlaubt, Zwerge zu verbannen?! Was im Namen alles Heiligen geschieht nur mit dieser Welt?}{Sie haben Elfen erlaubt, Zwerge zu verbannen?! Was im Namen alles Heiligen geschieht nur mit dieser Welt?}{}{70}{}{ }
+{701}{Er war deswegen genauso aufgebracht.}{}{5}{}{710}{ }
+{710}{Also, was haben die Elfen dazu zu sagen?}{Also, was haben die Elfen dazu zu sagen?}{}{71}{}{ }
+{711}{Ich bin auf dem Weg, um mit ihnen zu sprechen.}{}{5}{qb1018 2, re 49}{720}{ }
+{712}{Sie schieben die Schuld auf die Dunkelelfen.}{}{5}{qa1020 3}{730}{ }
+{713}{Ich hoffe, Ihr glaubt mir, dass ich mit diesen Elfen nichts zu tun habe.}{}{5}{ra 3, re 49, qa1020 3}{750}{ }
+{714}{Ich hoffe, Ihr glaubt mir, dass ich mit diesen Elfen nichts zu tun habe.}{}{5}{ra 3, re -48, qa1020 3}{830}{ }
+{715}{Ich bin auf dem Weg, um mit ihnen zu sprechen.}{}{5}{qb1018 2, re -48}{820}{ }
+{720}{Ausgezeichnets! Hier ist noch etwas Gold, das Euch unterwegs helfen wird.}{Augezeichnet! Hier ist noch etwas Gold das Euch unterwegs helfen wird.}{}{72}{}{$$400 }
+{721}{K:}{}{5}{}{1290}{ }
+{729}{A:}{}{5}{}{0}{ }
+{730}{Natürlich tun sie das! Dieses verstrickte Gewirr aus in die Irre führenden Hinweisen und Ausflüchten kann einen wirklich in den Wahnsinn treiben! Wir müssen diesen Lügen auf den Grund gehen!}{Natürlich tun sie das! Dieses verstrickte Gewirr aus in die Irre führenden Hinweisen und Ausflüchten kann einen wirklich in den Wahnsinn treiben! Wir müssen diesen Lügen auf den Grund gehen!}{}{73}{}{ }
+{731}{Ja, gut. Ich werde nicht eher ruhen, bis diese ganze Angelegenheit aufgedeckt ist.}{}{5}{}{740}{ }
+{732}{Ich hoffe, Ihr glaubt mir, dass ich mit diesen Elfen nichts zu tun habe.}{}{5}{ra 3, lf8 0, re 49, qa1020 3}{750}{lf8 1 }
+{733}{Ich hoffe, Ihr glaubt mir, dass ich mit diesen Elfen nichts zu tun habe.}{}{5}{ra 3, lf8 0, re -48, qa1020 3}{820}{lf8 1 }
+{740}{Was werdet Ihr jetzt tun?}{Was werdet Ihr jetzt tun?}{}{74}{}{ }
+{741}{Ich werde mit den Dunkelelfen sprechen.}{}{5}{re 49}{720}{ }
+{742}{Ich werde mit den Dunkelelfen sprechen.}{}{5}{re -48}{820}{ }
+{750}{Natürlich. Aber sagt mir bitte, welche hirnrissige Entschuldigung sie uns dafür auftischen wollen?}{Natürlich. Aber sagt mir bitte, welche hirnrissige Entschuldigung sie uns dafür auftischen wollen?}{}{75}{}{ }
+{751}{Ich habe noch nicht mit ihnen geredet. Ich bin gerade auf dem Weg, um mit ihnen zu sprechen.}{}{5}{qb1018 2}{720}{ }
+{752}{Sie schieben die Schuld auf die Dunkelelfen.}{}{5}{qa1018 3}{730}{ }
+{760}{Was im Namen alles Heiligen hat Euch geritten, dass Ihr es wagt, Euch an mich zu wenden? Ich hoffe, Ihr wollt mir ein paar sachdienliche Hinweise zukommen lassen.}{Was im Namen alles Heiligen hat Euch geritten, dass Ihr es wagt, Euch an mich zu wenden? Ich hoffe, Ihr wollt mir ein paar sachdienliche Hinweise zukommen lassen.}{}{76}{}{ }
+{761}{Die Zwerge wurden auf die Insel der Verzweiflung verbannt wegen ... äh ...}{}{5}{gf1007 1, lf11 0}{500}{lf11 1 }
+{762}{Ich habe Euch den Ring mitgebracht. [Du gibst ihm den Ring.]}{}{5}{lf2 1, in 2804}{770}{re +10 }
+{763}{Ich habe mich entschlossen, zur Insel der Verzweiflung zu reisen. Wie komme ich da hin?}{}{5}{qu1013 4, qu1015 1, gf2542 1}{780}{re +10, qu1015 2 }
+{764}{Sie sind nicht auf der Insel der Verzweiflung. Sie sind nie dort gewesen.}{}{5}{qu1015 4, qb1017 3, lf5 0}{630}{re +10 }
+{765}{Ich habe mit Loghaire vom Rad-Clan gesprochen.}{}{5}{qu1016 2, lf7 0}{690}{re +10 }
+{766}{Ich habe etwas Wichtiges mit Euch zu besprechen.}{}{5}{ qu1013 0}{310}{ }
+{767}{Ich habe mich entschlossen, für Euch die Schwarzberg-Minen zu erkunden.}{}{5}{qu1013 1}{780}{re +10 }
+{768}{Der Schwarzberg-Clan wurde von den Dunkelelfen in die Leere verbannt.}{}{5}{qa1016 3}{970}{ }
+{769}{Ich bitte um Verzeihung, aber ich habe nichts zu berichten.}{}{5}{}{0}{re -5 }
+{770}{Ich schätze, dafür schulde ich Euch meinen Dank. Nehmt dies als Zeichen meiner Anerkennung. [Er gibt dir etwas Gold.]}{Ich schätze, dafür schulde ich Euch meinen Dank. Nehmt dies als Zeichen meiner Anerkennung. [Er gibt dir etwas Gold.]}{}{77}{}{$$100 }
+{771}{A:}{}{5}{}{610}{ in2804 }
+{772}{Moment mal, Ihr pfennigfuchsender Geizhals! 100 Goldstücke sind eine Beleidigung!}{}{5}{}{1020}{re -15 }
+{780}{Ich weiß nicht, ob ich Euch überhaupt in meine Dienste nehmen soll. Ich mag weder Euch, noch den Eindruck, den ihr als Repräsentant des Namens Bates bei den Leuten hinterlassen würdet.}{Ich weiß nicht, ob ich Euch überhaupt in meine Dienste nehmen soll. Ich mag weder Euch, noch den Eindruck, den ihr als Repräsentant des Namens Bates bei den Leuten hinterlassen würdet.}{}{78}{}{ }
+{781}{Gebt mir bitte die Möglichkeit, Euch meinen Wert unter Beweis zu stellen.}{}{5}{ch 14}{800}{re +15 }
+{782}{Gebt mir bitte die Möglichkeit, Euch meinen Wert unter Beweis zu stellen.}{}{5}{ch -14}{790}{ }
+{784}{Ich weiß nicht, ob ich Euch köpfen oder lieber vierteilen lassen sollte.}{}{5}{}{0}{fl  1050 ,co}
+{790}{Wie Ihr wollt, pah. Aber ich warne Euch: Falls Ihr meinem Haus Schande machen solltet, werde ich Euch jagen und wie einen räudigen Hund töten.}{Wie Ihr wollt, pah. Aber ich warne Euch: Falls Ihr meinem Haus Schande machen solltet, werde ich Euch jagen und wie einen räudigen Hund töten.}{}{79}{}{ }
+{791}{Danke, dass Ihr mir diese Gelegenheit gebt, Sire.}{}{5}{qu1013 1}{810}{ }
+{792}{Danke, dass Ihr mir diese Gelegenheit gebt, Sire.}{}{5}{qu1013 4, qb1015 3, gf2542 1}{530}{ }
+{799}{Ich werde über Eure Warnung nachdenken, während ich mir mit Euch die Stiefel poliere.}{}{5}{}{0}{fl  1050 ,co}
+{800}{Sicher. Ihr seid wohl doch keine so üble Person, wie ich zu Anfang dachte.}{Sicher. Ihr seid wohl doch keine so üble Person, wie ich zu Anfang dachte.}{}{80}{}{ }
+{801}{Sprachen wir nicht über meinen Ausflug zum Schwarzberg-Clan für Euch?}{}{5}{qu1013 1}{470}{ }
+{802}{Sprachen wir nicht über meinen Ausflug zur Insel der Verzweiflung?}{}{5}{qu1013 4, qb1015 2, gf2542 1}{530}{ }
+{803}{Es ist zu spät, um Eure Worte zurückzunehmen. Wir müssen bis zum Letzten kämpfen.}{}{5}{}{0}{fl  1050 ,co}
+{810}{Hier, ich markiere Euch die Schwarzberg-Minen auf Eurer Karte. Sobald Ihr etwas entdeckt, kehrt Ihr zurück, und ich werde Euch ein paar Münzen als Lohn für Eure Mühen zukommen lassen.}{Hier, ich markiere Euch die Schwarzberg-Minen auf Eurer Karte. Sobald Ihr etwas entdeckt, kehrt Ihr zurück, und ich werde Euch ein paar Münzen als Lohn für Eure Mühen zukommen lassen.}{}{81}{}{mm 7, ss 4, gf1024 1 }
+{811}{Ich werde mit der von Euch gewünschten Information zurückkehren.}{}{5}{qb1014 2}{170}{qu1013 2 }
+{812}{Ich werde mit der von Euch gewünschten Information zurückkehren.}{}{5}{qu1014 2}{170}{ }
+{820}{Ich weiß immer noch nicht genau, auf wessen Seite Ihr steht. Ich werde ein Auge auf Euch haben, dessen könnt Ihr sicher sein.}{Ich weiß immer noch nicht genau, auf wessen Seite Ihr steht. Ich werde ein Auge auf Euch haben, dessen könnt Ihr sicher sein.}{}{82}{}{ }
+{821}{Vielen Dank für Euer Vertrauen. Guten Tag.}{}{5}{}{0}{ }
+{822}{Ihr seid mir auf die Schliche gekommen! Fahrt zur Hölle, jetzt werdet Ihr sterben!}{}{5}{}{0}{fl  1050 ,co}
+{830}{Kommt Zeit, kommt Rat. Welche Lügen sollt Ihr mir im Auftrag der Elfen auftischen?}{Kommt Zeit, kommt Rat. Welche Lügen sollt Ihr mir im Auftrag der Elfen auftischen?}{}{83}{}{ }
+{831}{Ich habe noch nicht mit ihnen geredet. Ich bin gerade auf dem Weg, um mit ihnen zu sprechen.}{}{5}{qb1018 2}{820}{ }
+{832}{Sie schieben die Schuld auf die Dunkelelfen.}{}{5}{qa1018 3}{730}{ }
+{840}{Und was möchte unser kleiner Schwachkopf mir sonst noch erzählen?}{Und was möchte unser kleiner Schwachkopf mir sonst noch erzählen?}{}{84}{}{ }
+{841}{War nix mit Verbannig von Zwergens auf Verzweifinsel.}{}{-4}{gf1007 1, lf11 0}{510}{lf11 1, qu1013 4 }
+{843}{Wie geh'n nach Issell-Verdreifling?}{}{-4}{qu1013 4, qb1015 3, gf2542 1}{860}{qu1015 2 }
+{844}{Zwergens nich' auf Insel sein. Niemals nie nich'.}{}{-4}{qu1015 4, qb1017 3, lf5 0}{870}{lf5 1 }
+{845}{Ich mit Loghaar reden. Ober-Zwerg.}{}{-4}{qu1016 2, lf7 0}{900}{ }
+{846}{Willen was Wichtiges sagen.}{}{-4}{ qu1013 0}{380}{ }
+{847}{Ich geh'n zu Schwatzberg-Clan?}{}{-4}{qu1013 1}{425}{ }
+{848}{ZWERGENS IN LEERE VERBANNDET! ZWERGENS VERBANNDET IN LEERE!}{}{-4}{qa1016 3, lf9 0}{920}{lf9 1 }
+{849}{Ich nix wissen.}{}{-4}{}{0}{ }
+{850}{(Wir konnte ich nur vergessen, wen ich hier eigentlich vor mir habe?) IHR GEHT NACH INSEL, WO BÖSE LEUTE SIND.}{(Wir konnte ich nur vergessen, wen ich hier eigentlich vor mir habe?) IHR GEHT NACH INSEL, WO BÖSE LEUTE SIND.}{}{85}{}{ }
+{851}{Äh ... gutchen! Wie hinkommen?}{}{-4}{}{860}{ }
+{860}{HIER IST ASHBURY AUF DER KARTE. SUCHT KAPITÄN TEACH. ER BRINGT EUCH HIN.}{HIER IST ASHBURY AUF DER KARTE. SUCHT KAPITÄN TEACH. ER BRINGT EUCH HIN.}{}{86}{}{mm 8, gf1008 1, qu1015 2, ru2018 }
+{861}{Jawoll.}{}{-4}{}{0}{ }
+{870}{KAPIERT?}{KAPIERT?}{}{87}{}{ }
+{871}{Ich geh'n. Reden mit Ober-Zwerg Log.}{}{-4}{}{880}{ }
+{880}{Tut das.}{Tut das.}{}{88}{}{ }
+{881}{Ich Münzens haben können?}{}{-4}{}{890}{ }
+{890}{Sicher, warum nicht? Hier ist etwas Gold. Bitte lasst mich allein.}{Sicher, warum nicht? Hier ist etwas Gold. Bitte lasst mich allein.}{}{89}{}{$$100 }
+{891}{Huuhuu! 100 Goldi-Stückens! Tschö.}{}{-4}{}{0}{ }
+{900}{Dafür habe ich keine Zeit. Ihr habt bestimmt nichts Wichtiges für mich, stimmt's?}{Dafür habe ich keine Zeit. Ihr habt bestimmt nichts Wichtiges für mich, stimmt's?}{}{90}{}{ }
+{901}{Log wissen auch nix.}{}{-4}{}{910}{ }
+{910}{Das habe ich geahnt. GEHT JETZT. ALLES KLAR?}{Das habe ich geahnt. GEHT JETZT. ALLES KLAR?}{}{91}{}{ }
+{911}{Geld?}{}{-4}{}{915}{ }
+{915}{Hier sind ein paar Münzen. Raus hier.}{Hier sind ein paar Münzen. Raus hier.}{}{92}{}{$$50 }
+{916}{Dankie fein.}{}{-4}{}{0}{ }
+{920}{BEI DEN GÖTTERN, MANN, WAS SAGT IHR DA?}{BEI DEN GÖTTERN, WEIB, WAS SAGT IHR DA?}{}{93}{}{ }
+{921}{Ich weiß nicht so recht.}{}{-4}{}{925}{ }
+{925}{Danke, wirklich, Ihr wart mir eine wirklich große Hilfe. IHR SEID EIN ABSOLUTER VOLLTROTTEL!!!}{Danke, wirklich, Ihr wart mir eine wirklich große Hilfe. IHR SEID EIN ABSOLUTER VOLLTROTTEL!!!}{}{94}{}{ }
+{926}{Geld? Ich gutt machen?}{}{-4}{}{930}{ }
+{927}{Ihr fiesig. Ihr jetz' totig.}{}{-4}{}{0}{fl  1050 ,co}
+{930}{Ich gebe Euch diese Münzen, wenn Ihr mir nie wieder unter die Augen tretet, einverstanden?}{Ich gebe Euch diese Münzen, wenn Ihr mir nie wieder unter die Augen tretet, einverstanden?}{}{95}{}{$$250 }
+{931}{FEIN!}{}{-4}{}{0}{gf1011 1 }
+{940}{Worauf sucht Ihr eine Antwort?}{Worauf sucht Ihr eine Antwort?}{}{96}{}{ }
+{941}{Was für eine Geschichte verbirgt sich hinter Eurem Schicksal? Und was ist mit diesem Ring?}{}{5}{in 2804, ss 2}{-42}{qu1012 4 }
+{942}{Wo liegen die Minen des Schwarzberg-Clans?}{}{5}{qb1013 2, qu1012 4}{960}{ }
+{943}{Wie gelange ich zur Insel der Verzweiflung?}{}{5}{qu1012 4, gf1007 1, qb1015 2}{965}{ }
+{944}{Was für eine Geschichte verbirgt sich hinter Eurem Schicksal? Und was ist mit Eurem Ring, den ich bekommen habe?}{}{5}{ni 2804, ss 2}{-42}{qu1012 4 }
+{949}{Ich lasse Euch frei.}{}{5}{}{0}{ }
+{950}{Ich habe Stennar diesen Ring gegeben, als wir uns das letzte Mal sahen. Und jetzt sind wir beide tot ...}{ Ich habe Stennar diesen Ring gegeben, als wir uns das letzte Mal sahen. Und jetzt sind wir beide tot ...}{}{97}{}{ }
+{951}{Wo liegen die Minen des Schwarzberg-Clans?}{}{5}{qb1013 2, qu1012 4}{960}{ }
+{952}{Wie gelange ich zur Insel der Verzweiflung?}{}{5}{qu1012 4, gf1007 1, qu1015 1}{965}{ }
+{953}{E:}{}{5}{}{0}{ }
+{960}{Der Schwarzberg-Clan wurde auf Eurer Karte markiert.}{Der Schwarzberg-Clan wurde auf Eurer Karte markiert.}{}{98}{}{mm 7, ss 4, gf1024 1 }
+{961}{Wie gelange ich zur Insel der Verzweiflung?}{}{5}{qu1012 4, gf1007 1, qu1015 1}{965}{ }
+{962}{E:}{}{5}{}{0}{ }
+{965}{Kapitän Edward Teach, Ashbury. Ihr findet die Markierung auf der Karte.}{Kapitän Edward Teach, Ashbury. Ihr findet die Markierung auf der Karte.}{}{99}{}{mm 8, gf1008 1 }
+{966}{E:}{}{5}{}{0}{ }
+{970}{Das ... das kann nicht sein. Was sollte das für einen Zweck haben?}{Das ... das kann nicht sein. Was sollte das für einen Zweck haben?}{}{100}{}{ }
+{971}{Die Dunkelelfen haben doch nur auf einen Anlass gewartet, um Zwerge verbannen zu können.}{}{5}{}{1000}{ }
+{972}{Ich weiß nicht so recht. Tja nun, auf Wiedersehen.}{}{5}{}{980}{ }
+{980}{Ihr müsst es mir erzählen! Ihr könnt doch nicht einfach so gehen!}{Ihr müsst es mir erzählen! Ihr könnt doch nicht einfach so gehen!}{}{101}{}{ }
+{981}{Es tut mir Leid, ich kann Euch nicht mehr sagen.}{}{5}{}{0}{al -50 }
+{982}{Das kann ich nicht? Wofür bin ich denn eigentlich kreuz und quer durch das ganze Land gerannt? Nichts!}{}{5}{}{990}{ }
+{983}{Die Dunkelelfen haben doch nur auf einen Anlass gewartet, um Zwerge verbannen zu können.}{}{5}{}{1000}{ }
+{990}{Ihr habt den Verstand verloren! Ich werde Euch erst gehen lassen, wenn Ihr mir alles erzählt habt, was geschehen ist!}{Ihr habt den Verstand verloren! Ich werde Euch erst gehen lassen, wenn Ihr mir alles erzählt habt, was geschehen ist!}{}{102}{}{ }
+{991}{Die Dunkelelfen haben doch nur auf einen Anlass gewartet, um Zwerge verbannen zu können.}{}{5}{}{1000}{ }
+{992}{Versucht nur, mich aufzuhalten, alter Mann.}{}{5}{}{0}{fl  1050 ,co}
+{1000}{Aber warum denn?}{Aber warum denn?}{}{103}{}{ }
+{1001}{[Du erzählst ihm die ganze Geschichte.]}{}{5}{}{1010}{gf1011 1 }
+{1002}{Findet es doch selbst heraus, Geizhals. Guten Tag.}{}{5}{}{0}{fl  1050 ,co}
+{1010}{Die Vorstellung, dass ich nur wegen der üblen Machenschaften der Dunkelelfen mein ganzes Leben lang grundlos mit Schuldgefühlen gelebt habe ... Ich muss darüber nachdenken ... aber hier, bitte nehmt diese Münzen als Lohn für Eure Mühen an.}{Die Vorstellung, dass ich nur wegen der üblen Machenschaften der Dunkelelfen mein ganzes Leben lang grundlos mit Schuldgefühlen gelebt habe ... Ich muss darüber nachdenken ... aber hier, bitte nehmt diese Münzen als Lohn für Eure Mühen an.}{}{104}{}{$$500 }
+{1011}{A:}{}{5}{}{0}{lf10 1 }
+{1020}{Es liegt mir fern, Euch zu beleidigen, daher behalte ich einfach alles. Meine nächste Beleidigung wird eher handfester Art sein und einen Körper betreffen. Euren.}{Es liegt mir fern, Euch zu beleidigen, daher behalte ich einfach alles. Meine nächste Beleidigung wird eher handfester Art sein und einen Körper betreffen. Euren.}{}{105}{}{re -15 }
+{1021}{Natürlich, bitte nehmt meine Entschuldigung an. Hier ist der Ring.}{}{5}{}{610}{in2804 }
+{1022}{Nein, Euren. Soll der Kampf also beginnen.}{}{5}{}{0}{fl  1050 ,co}
+{1030}{Ihr wagt es, Sire? Muss ich Euch erst Manieren beibringen, und Euch zeigen, wie Ihr Euch in Gesellschaft zu verhalten habt?}{Ihr wagt es, Madame? Muss ich Euch erst Manieren beibringen, und Euch zeigen, wie Ihr Euch in Gesellschaft zu verhalten habt?}{}{106}{}{ }
+{1031}{Ich wollte das nicht so hart ausdrücken, wie es vielleicht geklungen hat.}{}{5}{ch 14}{510}{ }
+{1032}{Ich bin ein einfältiger Trottel. Bitte verzeiht mir meine schlechte Erziehung.}{}{5}{}{510}{ }
+{1033}{Bitte, versucht ruhig, mir etwas beizubringen, während ich Euch eine Lektion in Schmerzen erteile.}{}{5}{}{0}{fl  1050 ,co}
+{1035}{ Ich habe nie behauptet, das getan zu haben. Das waren nur Vermutungen der Leute. Ich habe eine Menge Maschinen entwickelt, die auf diesem Prinzip aufgebaut waren, aber die erste habe ich nicht erfunden.}{ Ich habe nie behauptet, das getan zu haben. Das waren nur Vermutungen der Leute. Ich habe eine Menge Maschinen entwickelt, die auf diesem Prinzip aufgebaut waren, aber die erste habe ich nicht erfunden.}{}{107}{}{ }
+{1036}{Ist das nicht Betrug? Die Lorbeeren für etwas einzuheimsen, das Ihr nicht vollbracht habt?}{}{5}{}{1038}{ }
+{1037}{Was dachtet Ihr denn, was passieren würde, als Ihr die Maschine verkauft habt?}{}{5}{}{1310}{ }
+{1038}{Ja, das ist es, und das quält mich jeden Tag aufs Neue. Ich war nur ein Kind, als die in Gewänder gekleideten Männer ihre düstere Warnung aussprachen, und ich hatte schreckliche Angst. Sie machten deutlich, dass ich die Herkunft der Dampfmaschine niemals verraten dürfte.}{Ja, das ist es, und das quält mich jeden Tag aufs Neue. Ich war nur ein Kind, als die in Gewänder gekleideten Männer ihre düstere Warnung aussprachen, und ich hatte schreckliche Angst. Sie machten deutlich, dass ich die Herkunft der Dampfmaschine niemals verraten dürfte.}{}{108}{}{ }
+{1039}{K:}{}{5}{}{1290}{ }
+{1040}{Ja, es muss für Euch eine echte Last sein, so märchenhaft reich zu sein.}{}{5}{ch 14}{1042}{ }
+{1042}{All dieser Reichtum ist wie ein Mühlstein an meinem Hals. Er erinnert mich jeden Tag an den schrecklichen Fehler aus meiner Jugend.}{All dieser Reichtum ist wie ein Mühlstein an meinem Hals. Er erinnert mich jeden Tag an den schrecklichen Fehler aus meiner Jugend.}{}{109}{}{ }
+{1043}{K:}{}{5}{}{1290}{ }
+{1044}{Ich habe beschlossen, für Euch die Schwarzberg-Minen zu erkunden.}{}{5}{qu1014 2, qb1013 1}{470}{ }
+{1045}{Ich habe beschlossen, für Euch die Schwarzberg-Minen zu erkunden.}{}{5}{qb1014 1, qb1013 1}{470}{qu1013 2 }
+{1049}{Ich muss jetzt gehen, werter Herr.}{}{5}{}{0}{ }
+{1050}{Chukka! Angriff!}{Chukka! Angriff!}{}{110}{}{ }
+{1051}{Ich weigere mich, mit einem halbnackten Individuum zu sprechen. Zieht Euch bitte etwas an.}{Ich weigere mich, mit einem halbnackten Individuum zu sprechen. Zieht Euch bitte etwas an.}{}{111}{}{ }
+{1052}{Ich bin nicht in der Stimmung für Zaubertricks. Ich werde erst mit Euch sprechen, wenn Ihr Eure magischen Aktivitäten einstellt.}{Ich bin nicht in der Stimmung für Zaubertricks. Ich werde erst mit Euch sprechen, wenn Ihr Eure magischen Aktivitäten einstellt.}{}{112}{}{ }
+{1053}{Wer hat dieses Tier hier hereingelassen?}{Wer hat dieses Tier hier hereingelassen?}{}{113}{}{ }
+{1054}{Danke für all Eure Hilfe. Ich wünsche allein gelassen zu werden, um über mein Leben zu sinnieren.}{Danke für all Eure Hilfe. Ich wünsche allein gelassen zu werden, um über mein Leben zu sinnieren.}{}{114}{}{ }
+{1055}{Appleby ist ein kranker Einfaltspinsel. Wir kennen uns, seit wir kurze Hosen trugen. Damals waren wir echte Freunde. Als ich begann, meine Erfindungen patentieren zu lassen, verhielt er sich mir gegenüber jedoch immer feindseliger.}{Appleby ist ein kranker Einfaltspinsel. Wir kennen uns, seit wir kurze Hosen trugen. Damals waren wir echte Freunde. Als ich begann, meine Erfindungen patentieren zu lassen, verhielt er sich mir gegenüber jedoch immer feindseliger.}{}{115}{}{ }
+{1056}{Wie kommt das?}{}{5}{}{1058}{ }
+{1058}{Er ritt laufend darauf herum, dass er einmal ein unglaublich reicher Fabrikant werden würde, aber er ist nicht besonders intelligent. Zuerst war das nur traurig, aber in den letzten Jahren ist er gefährlich aus dem Ruder gelaufen.}{Er ritt laufend darauf herum, dass er einmal ein unglaublich reicher Fabrikant werden würde, aber er ist nicht besonders intelligent. Zuerst war das nur traurig, aber in den letzten Jahren ist er gefährlich aus dem Ruder gelaufen.}{}{116}{}{ }
+{1059}{Kommen wir zu der Aufgabe zurück, von der ihr gesprochen habt ...}{}{5}{lf11 1}{120}{ }
+{1060}{Ich würde Euch gern über diesen Ring befragen.}{}{5}{in 2804, lf12 1}{10}{ }
+{1061}{Ich würde gern mit Euch über einen Ring sprechen. [Du beschreibst den Ring.]}{}{5}{ni 2804, lf12 1}{10}{ }
+{1062}{Na gut, ich wollte Euch nur warnen. Lebt wohl.}{}{5}{lf12 1}{0}{lf 1 1, re +10 }
+{1065}{Verbannt ... bei den Göttern ... und ich habe ihnen das angetan. Ich hatte immer das Schlimmste befürchtet ...}{Verbannt ... bei den Göttern ... und ich habe ihnen das angetan. Ich hatte immer das Schlimmste befürchtet ...}{}{117}{}{ }
+{1066}{Was habt Ihr mit Zwergen zu tun?}{}{5}{}{-42}{ }
+{1070}{Warum, habt Ihr etwas zu verbergen? Vielleicht habt Ihr ihn gestohlen - sagt mir, wie Ihr ihn bekommen habt.}{Warum, habt Ihr etwas zu verbergen? Vielleicht habt Ihr ihn gestohlen - sagt mir, wie Ihr ihn bekommen habt.}{}{118}{}{ }
+{1071}{Beruhigt Euch, ich habe ihn nicht gestohlen. Wie habt Ihr ihn verloren?}{}{5}{}{1075}{ }
+{1072}{Ich lasse mich von Euch nicht beschuldigen, alter Mann.}{}{5}{}{1082}{re -5 }
+{1075}{Das geht Euch nichts an. Ich frage Euch zum letzten Mal: Woher habt Ihr den Ring?}{Das geht Euch nichts an. Ich frage Euch zum letzten Mal: Woher habt Ihr den Ring?}{}{119}{}{ }
+{1076}{Ein im Sterben liegender Gnom gab ihn mir.}{}{5}{ra -5, ra -2}{20}{ }
+{1077}{Ein merkwürdig aussehender Kerl gab ihn mir.}{}{5}{ra 5}{30}{ }
+{1078}{Ein im Sterben liegender, merkwürdig aussehender Gnom gab ihn mir.}{}{5}{ra 2}{30}{ }
+{1079}{Ihr solltet Euch lieber eines anderen Tones befleißigen. Ich stelle hier die Fragen.}{}{5}{}{1082}{re -5 }
+{1082}{Ich werde einmal über Eure Unhöflichkeit hinwegsehen - vorausgesetzt, Ihr erzählt mir, wie Ihr an diesen Ring gelangt seid.}{Ich werde einmal über Eure Unhöflichkeit hinwegsehen - vorausgesetzt, Ihr erzählt mir, wie Ihr an diesen Ring gelangt seid.}{}{120}{}{ }
+{1083}{Ein im Sterben liegender Gnom gab ihn mir.}{}{5}{ra -5, ra -2}{20}{ }
+{1084}{Ein merkwürdig aussehender Kerl gab ihn mir.}{}{5}{ra 5}{30}{ }
+{1085}{Ein im Sterben liegender, merkwürdig aussehender Gnom gab ihn mir.}{}{5}{ra 2}{30}{ }
+{1086}{Ich werde Euch die Arroganz aus dem Leib peitschen.}{}{5}{}{0}{fl 1050 ,co}
+{1090}{Das ist eine lange Geschichte, die Euch nichts angeht. Es genügt, wenn ich Euch sage, dass er eigentlich im Besitz eines Zwerges sein sollte.}{Das ist eine lange Geschichte, die Euch nichts angeht. Es genügt, wenn ich Euch sage, dass er eigentlich im Besitz eines Zwerges sein sollte.}{}{121}{}{ }
+{1091}{Na ja, das war kein Zwerg. Er war zu mager und hatte keinen Bart.}{}{5}{}{60}{ }
+{1095}{Stennar war ein alter Freund von mir ... aber dass er sich seinen Bart abrasieren würde ... bei allen Göttern! Das ist undenkbar! [Er schweigt einen Moment.] Aber erzählt mir bitte, hat er Euch noch irgendetwas gesagt, bevor er starb? Sagte er etwas über ... äh ... mich?}{Stennar war ein alter Freund von mir ... aber dass er sich seinen Bart abrasieren würde ... bei allen Göttern! Das ist undenkbar! [Er schweigt einen Moment.] Aber erzählt mir bitte, hat er Euch noch irgendetwas gesagt, bevor er starb? Sagte er etwas über ... äh ... mich?}{}{122}{}{ }
+{1096}{Er sagte, dass er floh, um uns vor dem Bösen zu warnen ...}{}{5}{}{1330}{ }
+{1100}{Viel gibt es dazu nicht zu sagen, da Chukka etwas übereifrig ist, wenn es um den Schutz meiner Person geht. Er beförderte den Eindringling vom Leben zum Tode, bevor ich ihn befragen konnte. Außer einem Amulett mit dem Symbol der Molochäischen Hand, also dem Auge im Hexagramm, trug er nichts bei sich.}{Viel gibt es dazu nicht zu sagen, da Chukka etwas übereifrig ist, wenn es um den Schutz meiner Person geht. Er beförderte den Eindringling vom Leben zum Tode, bevor ich ihn befragen konnte. Außer einem Amulett mit dem Symbol der Molochäischen Hand, also dem Auge im Hexagramm, trug er nichts bei sich.}{}{123}{}{gf1085 1 }
+{1101}{Die Molochäische Hand?}{}{5}{}{1110}{lf15 1 }
+{1110}{Es handelte sich dabei um einen religiösen Orden von Meuchelmördern, der vor etwa 500 Jahren seine Blüte erlebte. Es taucht zwar mehr oder minder regelmäßig das Gerücht wieder auf, dass dieser Orden noch immer bestünde, doch werden solche Behauptungen gewöhnlich als Lügen entlarvt. Meiner Meinung nach dürfte dies eine neue Gruppe sein, die versucht, vom Prestige des Namens zu profitieren.}{Es handelte sich dabei um einen religiösen Orden von Meuchelmördern, der vor etwa 500 Jahren seine Blüte erlebte. Es taucht zwar mehr oder minder regelmäßig das Gerücht wieder auf, dass dieser Orden noch immer bestünde, doch werden solche Behauptungen gewöhnlich als Lügen entlarvt. Meiner Meinung nach dürfte dies eine neue Gruppe sein, die versucht, vom Prestige des Namens zu profitieren.}{}{124}{}{ru2019 }
+{1111}{Sie scheinen auch hinter mir her zu sein.}{}{5}{gf1045 1}{1120}{ }
+{1112}{Tja, ich würde Euch gern ein paar Fragen zu diesem Ring stellen.}{}{5}{in 2804,  lf13 0}{10}{lf13 1 }
+{1113}{Interessant. Ich würde Euch gern ein paar Fragen zu diesem Ring stellen. [Du beschreibst den Ring.]}{}{5}{ni 2804,  lf13 0}{10}{lf13 1 }
+{1119}{E:}{}{5}{}{0}{ }
+{1120}{In diesem Falle sollten wir um unser beider Leben willen hoffen, dass sie sich nur den Namen angeeignet haben. Es würde mir nicht sehr gefallen, wenn die echten Molochäer auf mein Blut aus wären.}{In diesem Falle sollten wir um unser beider Leben willen hoffen, dass sie sich nur den Namen angeeignet haben. Es würde mir nicht sehr gefallen, wenn die echten Molochäer auf mein Blut aus wären.}{}{125}{}{ }
+{1121}{Tja, ich würde Euch gern ein paar Fragen zu diesem Ring stellen.}{}{5}{in 2804,  lf13 0}{10}{lf13 1 }
+{1122}{Interessant. Ich würde Euch gern ein paar Fragen zu diesem Ring stellen. [Du beschreibst den Ring.]}{}{5}{ni 2804,  lf13 0}{10}{lf13 1 }
+{1123}{K:}{}{5}{lf13 1}{1290}{ }
+{1124}{Was glaubt Ihr, warum sie uns töten wollten?}{}{5}{lf13 1}{1380}{ }
+{1129}{Dann werde ich mal ein wachsames Auge auf meine Umgebung haben. Guten Tag.}{}{5}{}{0}{ }
+{1130}{Viel gibt es dazu nicht zu sagen, da Chukka etwas übereifrig ist, wenn es um den Schutz meiner Person geht. Er beförderte den Eindringling vom Leben zum Tode, bevor ich ihn befragen konnte. Außer einem Amulett mit dem Symbol der Molochäischen Hand, also dem Auge im Hexagramm, trug er nichts bei sich.}{Viel gibt es dazu nicht zu sagen, da Chukka etwas übereifrig ist, wenn es um den Schutz meiner Person geht. Er beförderte den Eindringling vom Leben zum Tode, bevor ich ihn befragen konnte. Außer einem Amulett mit dem Symbol der Molochäischen Hand, also dem Auge im Hexagramm, trug er nichts bei sich.}{}{126}{}{gf1085 1 }
+{1131}{Die Molochäische Hand?}{}{5}{}{1140}{lf15 1 }
+{1140}{Es handelte sich dabei um einen religiösen Orden von Meuchelmördern, der vor etwa 500 Jahren seine Blüte erlebte. Es taucht zwar mehr oder minder regelmäßig das Gerücht wieder auf, dass dieser Orden noch immer bestünde, doch werden solche Behauptungen gewöhnlich als Lügen entlarvt. Meiner Meinung nach dürfte dies eine neue Gruppe sein, die versucht, vom Prestige des Namens zu profitieren.}{Es handelte sich dabei um einen religiösen Orden von Meuchelmördern, der vor etwa 500 Jahren seine Blüte erlebte. Es taucht zwar mehr oder minder regelmäßig das Gerücht wieder auf, dass dieser Orden noch immer bestünde, doch werden solche Behauptungen gewöhnlich als Lügen entlarvt. Meiner Meinung nach dürfte dies eine neue Gruppe sein, die versucht, vom Prestige des Namens zu profitieren.}{}{127}{}{ru2019 }
+{1141}{Sie scheinen auch hinter mir her zu sein.}{}{5}{gf1045 1}{1150}{ }
+{1144}{E:}{}{5}{}{0}{ }
+{1150}{In diesem Falle sollten wir um unser beider Leben willen hoffen, dass sie sich nur den Namen angeeignet haben. Es würde mir nicht sehr gefallen, wenn die echten Molochäer auf mein Blut aus wären.}{In diesem Falle sollten wir um unser beider Leben willen hoffen, dass sie sich nur den Namen angeeignet haben. Es würde mir nicht sehr gefallen, wenn die echten Molochäer auf mein Blut aus wären.}{}{128}{}{ }
+{1151}{Was glaubt Ihr, warum sie uns töten wollten?}{}{5}{}{1380}{ }
+{1152}{K:}{}{5}{}{1290}{ }
+{1153}{Dann werde ich mal ein wachsames Auge auf meine Umgebung haben. Guten Tag.}{}{5}{}{0}{ }
+{1160}{Viel gibt es dazu nicht zu sagen, da Chukka etwas übereifrig ist, wenn es um den Schutz meiner Person geht. Er beförderte den Eindringling vom Leben zum Tode, bevor ich ihn befragen konnte. Außer einem Amulett mit dem Symbol der Molochäischen Hand, also dem Auge im Hexagramm, trug er nichts bei sich.}{Viel gibt es dazu nicht zu sagen, da Chukka etwas übereifrig ist, wenn es um den Schutz meiner Person geht. Er beförderte den Eindringling vom Leben zum Tode, bevor ich ihn befragen konnte. Außer einem Amulett mit dem Symbol der Molochäischen Hand, also dem Auge im Hexagramm, trug er nichts bei sich.}{}{129}{}{gf1085 1 }
+{1161}{Die Molochäische Hand?}{}{5}{}{1170}{lf15 1 }
+{1170}{Es handelte sich dabei um einen religiösen Orden von Meuchelmördern, der vor etwa 500 Jahren seine Blüte erlebte. Es taucht zwar mehr oder minder regelmäßig das Gerücht wieder auf, dass dieser Orden noch immer bestünde, doch werden solche Behauptungen gewöhnlich als Lügen entlarvt. Meiner Meinung nach dürfte dies eine neue Gruppe sein, die versucht, vom Prestige des Namens zu profitieren.}{Es handelte sich dabei um einen religiösen Orden von Meuchelmördern, der vor etwa 500 Jahren seine Blüte erlebte. Es taucht zwar mehr oder minder regelmäßig das Gerücht wieder auf, dass dieser Orden noch immer bestünde, doch werden solche Behauptungen gewöhnlich als Lügen entlarvt. Meiner Meinung nach dürfte dies eine neue Gruppe sein, die versucht, vom Prestige des Namens zu profitieren.}{}{130}{}{ru2019 }
+{1171}{Sie scheinen auch hinter mir her zu sein.}{}{5}{gf1045 1}{1180}{ }
+{1174}{Interessant, aber wir müssen uns über einen Ring unterhalten. [Du beschreibst den Ring.]}{}{5}{ni 2804, lf13 0}{10}{lf13 1 }
+{1175}{Ich verstehe. Was aber noch wichtiger ist - Appleby hat mich angeheuert, Euch bloßzustellen.}{}{5}{qu1039 1, in 5202}{260}{re - 10 }
+{1176}{Ich verstehe. Was aber noch wichtiger ist - Appleby hat mich angeheuert, Euch bloßzustellen.}{}{5}{qu1039 2}{260}{re - 10 }
+{1177}{Ich bin eigentlich hier, um Euch zu warnen, dass Appleby danach trachtet, Euch zu ruinieren.}{}{5}{qu1039 1, gf1006 0, ni5202}{260}{gf1012 1 }
+{1178}{Interessant, aber ich bin hier, um mit Euch über diesen Ring zu sprechen. [Du zeigst ihm den Ring.]}{}{5}{in 2804, lf13 0}{10}{lf3 1 }
+{1179}{Ich bin eigentlich hier, um Euch zu warnen, dass Appleby danach trachtet, Euch zu ruinieren.}{}{5}{ gf1006 1}{290}{gf1012 1 }
+{1180}{In diesem Falle sollten wir um unser beider Leben willen hoffen, dass sie sich nur den Namen angeeignet haben. Es würde mir nicht sehr gefallen, wenn die echten Molochäer auf mein Blut aus wären.}{In diesem Falle sollten wir um unser beider Leben willen hoffen, dass sie sich nur den Namen angeeignet haben. Es würde mir nicht sehr gefallen, wenn die echten Molochäer auf mein Blut aus wären.}{}{131}{}{ }
+{1183}{Interessant, aber wir müssen uns über einen Ring unterhalten. [Du beschreibst den Ring.]}{}{5}{ni 2804, lf13 0}{10}{lf13 1 }
+{1184}{Ich verstehe. Was aber noch wichtiger ist - Appleby hat mich angeheuert, Euch bloßzustellen.}{}{5}{qu1039 1, in 5202}{260}{re - 10 }
+{1185}{Ich verstehe. Was aber noch wichtiger ist - Appleby hat mich angeheuert, Euch bloßzustellen.}{}{5}{qu1039 2}{260}{re - 10 }
+{1186}{Ich bin eigentlich hier, um Euch zu warnen, dass Appleby danach trachtet, Euch zu ruinieren.}{}{5}{qu1039 1, gf1006 0, ni5202}{260}{gf1012 1 }
+{1187}{Interessant, aber ich bin hier, um mit Euch über diesen Ring zu sprechen. [Du zeigst ihm den Ring.]}{}{5}{in 2804, lf13 0}{10}{lf3 1 }
+{1188}{Ich bin eigentlich hier, um Euch zu warnen, dass Appleby danach trachtet, Euch zu ruinieren.}{}{5}{ gf1006 1}{290}{gf1012 1 }
+{1190}{Was glaubt Ihr, warum sie uns töten wollten?}{}{5}{lf13 1}{1380}{ }
+{1194}{Dann werde ich mal ein wachsames Auge auf meine Umgebung haben. Guten Tag.}{}{5}{}{0}{ }
+{1195}{Viel gibt es dazu nicht zu sagen, da Chukka etwas übereifrig ist, wenn es um den Schutz meiner Person geht. Er beförderte den Eindringling vom Leben zum Tode, bevor ich ihn befragen konnte. Außer einem Amulett mit dem Symbol der Molochäischen Hand, also dem Auge im Hexagramm, trug er nichts bei sich.}{Viel gibt es dazu nicht zu sagen, da Chukka etwas übereifrig ist, wenn es um den Schutz meiner Person geht. Er beförderte den Eindringling vom Leben zum Tode, bevor ich ihn befragen konnte. Außer einem Amulett mit dem Symbol der Molochäischen Hand, also dem Auge im Hexagramm, trug er nichts bei sich.}{}{132}{}{gf1085 1 }
+{1196}{Die Molochäische Hand?}{}{5}{}{1205}{lf15 1 }
+{1205}{Es handelte sich dabei um einen religiösen Orden von Meuchelmördern, der vor etwa 500 Jahren seine Blüte erlebte. Es taucht zwar mehr oder minder regelmäßig das Gerücht wieder auf, dass dieser Orden noch immer bestünde, doch werden solche Behauptungen gewöhnlich als Lügen entlarvt. Meiner Meinung nach dürfte dies eine neue Gruppe sein, die versucht, vom Prestige des Namens zu profitieren.}{Es handelte sich dabei um einen religiösen Orden von Meuchelmördern, der vor etwa 500 Jahren seine Blüte erlebte. Es taucht zwar mehr oder minder regelmäßig das Gerücht wieder auf, dass dieser Orden noch immer bestünde, doch werden solche Behauptungen gewöhnlich als Lügen entlarvt. Meiner Meinung nach dürfte dies eine neue Gruppe sein, die versucht, vom Prestige des Namens zu profitieren.}{}{133}{}{ru2019 }
+{1206}{Sie scheinen auch hinter mir her zu sein.}{}{5}{gf1045 1}{1215}{ }
+{1207}{Tja, ich würde Euch gern ein paar Fragen zu diesem Ring stellen.}{}{5}{in 2804,  lf13 0}{10}{lf13 1 }
+{1208}{Interessant. Ich würde Euch gern ein paar Fragen zu diesem Ring stellen. [Du beschreibst den Ring.]}{}{5}{ni 2804,  lf13 0}{10}{lf13 1 }
+{1209}{Wie habt Ihr mit dem Schwarzberg-Clan zu tun?}{}{5}{gf1007 1}{360}{ }
+{1214}{E:}{}{5}{}{0}{ }
+{1215}{In diesem Falle sollten wir um unser beider Leben willen hoffen, dass sie sich nur den Namen angeeignet haben. Es würde mir nicht sehr gefallen, wenn die echten Molochäer auf mein Blut aus wären.}{In diesem Falle sollten wir um unser beider Leben willen hoffen, dass sie sich nur den Namen angeeignet haben. Es würde mir nicht sehr gefallen, wenn die echten Molochäer auf mein Blut aus wären.}{}{134}{}{ }
+{1216}{Tja, ich würde Euch gern ein paar Fragen zu diesem Ring stellen.}{}{5}{in 2804,  lf13 0}{10}{lf13 1 }
+{1217}{Interessant. Ich würde Euch gern ein paar Fragen zu diesem Ring stellen. [Du beschreibst den Ring.]}{}{5}{ni 2804,  lf13 0}{10}{lf13 1 }
+{1218}{Wie habt Ihr mit dem Schwarzberg-Clan zu tun?}{}{5}{gf1007 1}{360}{ }
+{1223}{Was glaubt Ihr, warum sie uns töten wollten?}{}{5}{lf13 1}{1380}{ }
+{1224}{Dann werde ich mal ein wachsames Auge auf meine Umgebung haben. Guten Tag.}{}{5}{}{0}{ }
+{1225}{Viel gibt es dazu nicht zu sagen, da Chukka etwas übereifrig ist, wenn es um den Schutz meiner Person geht. Er beförderte den Eindringling vom Leben zum Tode, bevor ich ihn befragen konnte. Außer einem Amulett mit dem Symbol der Molochäischen Hand, also dem Auge im Hexagramm, trug er nichts bei sich.}{Viel gibt es dazu nicht zu sagen, da Chukka etwas übereifrig ist, wenn es um den Schutz meiner Person geht. Er beförderte den Eindringling vom Leben zum Tode, bevor ich ihn befragen konnte. Außer einem Amulett mit dem Symbol der Molochäischen Hand, also dem Auge im Hexagramm, trug er nichts bei sich.}{}{135}{}{gf1085 1 }
+{1226}{Die Molochäische Hand?}{}{5}{}{1235}{lf15 1 }
+{1235}{Es handelte sich dabei um einen religiösen Orden von Meuchelmördern, der vor etwa 500 Jahren seine Blüte erlebte. Es taucht zwar mehr oder minder regelmäßig das Gerücht wieder auf, dass dieser Orden noch immer bestünde, doch werden solche Behauptungen gewöhnlich als Lügen entlarvt. Meiner Meinung nach dürfte dies eine neue Gruppe sein, die versucht, vom Prestige des Namens zu profitieren.}{Es handelte sich dabei um einen religiösen Orden von Meuchelmördern, der vor etwa 500 Jahren seine Blüte erlebte. Es taucht zwar mehr oder minder regelmäßig das Gerücht wieder auf, dass dieser Orden noch immer bestünde, doch werden solche Behauptungen gewöhnlich als Lügen entlarvt. Meiner Meinung nach dürfte dies eine neue Gruppe sein, die versucht, vom Prestige des Namens zu profitieren.}{}{136}{}{gf1085 1, ru2019 }
+{1236}{Sie scheinen auch hinter mir her zu sein.}{}{5}{gf1045 1}{1240}{ }
+{1239}{Das ist sehr interessant.}{}{5}{}{610}{ }
+{1240}{In diesem Falle sollten wir um unser beider Leben willen hoffen, dass sie sich nur den Namen angeeignet haben. Es würde mir nicht sehr gefallen, wenn die echten Molochäer auf mein Blut aus wären.}{In diesem Falle sollten wir um unser beider Leben willen hoffen, dass sie sich nur den Namen angeeignet haben. Es würde mir nicht sehr gefallen, wenn die echten Molochäer auf mein Blut aus wären.}{}{137}{}{ }
+{1244}{Dann werde ich mal ein wachsames Auge auf meine Umgebung haben.}{}{5}{}{610}{ }
+{1245}{Warum belästigt Ihr mich schon wieder damit?}{Warum belästigt Ihr mich schon wieder damit?}{}{138}{}{ }
+{1246}{Ich möchte wissen, ob Ihr etwas mit Stennar Steinschneider zu tun hattet.}{}{5}{}{1250}{ }
+{1247}{Verzeiht meine Aufdringlichkeit. Guten Tag.}{}{5}{}{0}{ }
+{1250}{Stennar? Ich traf ihn, als ich noch ein junger Mann war. Das ist eigentlich schon die ganze Geschichte.}{Stennar? Ich traf ihn, als ich noch ein junger Mann war. Das ist eigentlich schon die ganze Geschichte.}{}{139}{}{ }
+{1251}{Ich höre.}{}{5}{}{-42}{ }
+{1252}{Ich bitte um Vergebung und werde jetzt gehen.}{}{5}{}{0}{ }
+{1260}{Das, das ist eine lange Geschichte ... die Geschichte meiner Schande.}{Das, das ist eine lange Geschichte ... die Geschichte meiner Schande.}{}{140}{}{ }
+{1261}{Ich höre.}{}{5}{}{-42}{ru2017 }
+{1270}{Er wusste, dass dieser Ring die Wahrheit Eurer Geschichte bestätigen würde. Ich habe Stennar diesen Ring gegeben, als wir uns das letzte Mal sahen. Und jetzt ist er tot ... [Er hält einen Moment inne, wohl um sich zusammenzureißen.] Wenn wir nur wüssten, was er mit dem "Bösen" gemeint hat.}{Er wusste, dass dieser Ring die Wahrheit Eurer Geschichte bestätigen würde. Ich habe Stennar diesen Ring gegeben, als wir uns das letzte Mal sahen. Und jetzt ist er tot ... [Er hält einen Moment inne, wohl um sich zusammenzureißen.] Wenn wir nur wüssten, was er mit dem "Bösen" gemeint hat.}{}{141}{}{ }
+{1272}{Die Panarii glauben, das "Böse" beziehe sich auf jemanden namens Arronax.}{}{5}{gf2344 1}{1480}{ }
+{1273}{Ich habe einen Panarii-Schüler kennen gelernt, der der Meinung war, dass darin eine religiöse Bedeutung zu suchen sei.}{}{5}{gf2004 1, gf2344 0, pa-6409}{1490}{ }
+{1274}{Virgil hier glaubt, dass es etwas mit seiner Religion zu tun habe.}{}{5}{gf2344 0, pa6409}{1490}{ }
+{1278}{Was können wir jetzt tun?}{}{5}{gf1007 0, gf2004 0, gf2344 0, pa-6409}{1280}{ }
+{1279}{Was können wir jetzt tun?}{}{5}{gf1007 1, gf2004 0, gf2344 0}{450}{ }
+{1280}{In den Schwarzberg-Minen muss es einen Hinweis geben, da bin ich mir ganz sicher. Ihr scheint ein einfallsreiches Individuum zu sein. Hättet Ihr Interesse daran, für mich die Minen nach einem Hinweis über ihren Verbleib zu durchsuchen? Es wird Euer Schaden nicht sein, das verspreche ich Euch.}{In den Schwarzberg-Minen muss es einen Hinweis geben, da bin ich mir ganz sicher. Ihr scheint ein einfallsreiches Individuum zu sein. Hättet Ihr Interesse daran, für mich die Minen nach einem Hinweis über ihren Verbleib zu durchsuchen? Es wird Euer Schaden nicht sein, das verspreche ich Euch.}{}{142}{}{ }
+{1281}{Ich brenne genauso darauf, dieses Rätsel zu lösen. Ich bin einverstanden.}{}{5}{qb1014 1}{470}{qu1013 2 }
+{1282}{Ich brenne genauso darauf, dieses Rätsel zu lösen. Ich bin einverstanden.}{}{5}{qu1014 2}{470}{ }
+{1283}{Ich würde Euch gern ein paar weitere Fragen stellen, bevor ich zusage.}{}{5}{qb1014 1}{1290}{qu1013 1 }
+{1284}{Ich würde Euch gern ein paar weitere Fragen stellen, bevor ich zusage.}{}{5}{qu1014 2}{1290}{ }
+{1288}{Das hört sich für meinen Geschmack zu gefährlich an. Guten Tag, Sire.}{}{5}{qu1014 2}{0}{ }
+{1289}{Das hört sich für meinen Geschmack zu gefährlich an. Guten Tag, Sire.}{}{5}{qb1014 1}{0}{qu1013 1 }
+{1290}{Natürlich. Was wollt Ihr mich fragen?}{Natürlich. Was wollt Ihr mich fragen?}{}{143}{}{ }
+{1291}{Ihr seid nicht der eigentliche Erfinder der Dampfmaschine?}{}{5}{}{1035}{ }
+{1292}{Warum wolltet Ihr die Zwerge unbedingt beeindrucken, nachdem sie Euch abgewiesen hatten?}{}{5}{}{1320}{ }
+{1293}{Was könnt Ihr mir über den jüngsten Anschlag auf Euer Leben erzählen?}{}{5}{gf1028 1, lf15 0}{1130}{lf15 1 }
+{1294}{Was glaubt Ihr, warum uns die Molochäische Hand töten wollte?}{}{5}{lf15 1}{1380}{ }
+{1295}{Könnt Ihr mir etwas über Eure Arbeit erzählen?}{}{5}{}{1395}{ }
+{1307}{Ich habe beschlossen, für Euch die Schwarzberg-Minen zu erkunden.}{}{5}{qu1014 2, qb1013 1}{470}{ }
+{1308}{Ich habe beschlossen, für Euch die Schwarzberg-Minen zu erkunden.}{}{5}{qb1014 1, qb1013 1}{470}{qu1013 2 }
+{1309}{E:}{}{5}{}{0}{ }
+{1310}{Es war wohl der Enthusiasmus oder vielleicht das Ungestüm der Jugend, warum ich nicht über die Konsequenzen meines Handelns nachgedacht hatte. Alles, was ich sah, war eine Möglichkeit, mir Respekt bei den Zwergen zu verschaffen. Nur das hat gezählt.}{Es war wohl der Enthusiasmus oder vielleicht das Ungestüm der Jugend, warum ich nicht über die Konsequenzen meines Handelns nachgedacht hatte. Alles, was ich sah, war eine Möglichkeit, mir Respekt bei den Zwergen zu verschaffen. Nur das hat gezählt.}{}{144}{}{ }
+{1311}{Es muss verwirrend sein, so viel Ruhm für die Dampfmaschine zu ernten.}{}{5}{}{1038}{ }
+{1320}{Ihr versteht das nicht, ich war ... Ich war noch sehr jung, als ich zu einem Waisen wurde. Die Zwerge repräsentierten alles, was ich mir als meine Familie immer wünschte - ein fest zusammenhaltender Clan. Und ich hatte großen Respekt vor ihrer brillanten Technologie ... Ich beging den typischen Fehler der Jugend, ich glaubte, dass Intelligenz mit Hingabe gleichzusetzen sei. Ich wollte irgendwohin gehören, ich wollte das Gefühl haben, etwas wert zu sein.}{Ihr versteht das nicht, ich war ... Ich war noch sehr jung, als ich zu einem Waisen wurde. Die Zwerge repräsentierten alles, was ich mir als meine Familie immer wünschte - ein fest zusammenhaltender Clan. Und ich hatte großen Respekt vor ihrer brillanten Technologie ... Ich beging den typischen Fehler der Jugend, ich glaubte, dass Intelligenz mit Hingabe gleichzusetzen sei. Ich wollte irgendwohin gehören, ich wollte das Gefühl haben, etwas wert zu sein.}{}{145}{}{ }
+{1321}{Ihr wurdet zu einer Waise? Was ist passiert?}{}{5}{}{1350}{ }
+{1322}{K:}{}{5}{}{1290}{ }
+{1329}{Ich muss jetzt gehen, werter Herr.}{}{5}{}{0}{ }
+{1330}{Das Böse? Welches Böse? Und woraus ist er geflohen?}{Das Böse? Welches Böse? Und woraus ist er geflohen?}{}{146}{}{ }
+{1331}{Das hat er nicht gesagt. Ich hatte gehofft, dass Ihr wissen würdet, was es bedeutet.}{}{5}{}{1340}{ }
+{1340}{Es muss etwas Furchtbares geschehen sein, nachdem ich ... nachdem ich ...   Hat er ... hat er sonst noch etwas gesagt?}{Es muss etwas Furchtbares geschehen sein, nachdem ich ... nachdem ich ...   Hat er ... hat er sonst noch etwas gesagt?}{}{147}{}{ }
+{1341}{Er sprach von Euch, als wärt Ihr noch ein Kind. Warum sollte er das tun?}{}{5}{}{90}{ }
+{1350}{Meine Mutter ist bei meiner Geburt gestorben. Ich glaube, mein Vater ist im selben Moment gestorben, auch wenn er noch weitere acht Jahre auf dieser Welt existierte. Als er das Leben nicht mehr länger ertragen konnte, beging er Selbstmord.}{Meine Mutter ist bei meiner Geburt gestorben. Ich glaube, mein Vater ist im selben Moment gestorben, auch wenn er noch weitere acht Jahre auf dieser Welt existierte. Als er das Leben nicht mehr länger ertragen konnte, beging er Selbstmord.}{}{148}{}{ }
+{1351}{Wie konnte er Euch nur auf diese Weise im Stich lassen ...}{}{5}{}{1360}{ }
+{1360}{Er ließ mich gut versorgt zurück, und da sein Realitätsverlust jeden Tag größer wurde, fühlte er meiner Meinung nach, dass es sicherer sei, mich in die Obhut anderer Leute zu geben. [Er schüttelt traurig den Kopf.] Seine letzte Handlung auf dieser Welt war, mir diesen Ring zu geben.}{Er ließ mich gut versorgt zurück, und da sein Realitätsverlust jeden Tag größer wurde, fühlte er meiner Meinung nach, dass es sicherer sei, mich in die Obhut anderer Leute zu geben. [Er schüttelt traurig den Kopf.] Seine letzte Handlung auf dieser Welt war, mir diesen Ring zu geben.}{}{149}{}{ }
+{1361}{Und dann gabt Ihr ihn Stennar?}{}{5}{}{1370}{ }
+{1362}{Das ist wirklich traurig. Ich habe beschlossen, den Schwarzberg-Clan für Euch zu suchen, Sire.}{}{5}{qu1014 2, qb1013 1}{470}{ }
+{1363}{Das ist wirklich traurig. Ich habe beschlossen, den Schwarzberg-Clan für Euch zu suchen, Sire.}{}{5}{qb1014 1, qb1013 1}{470}{qu1013 2 }
+{1370}{Aus diesem Grund bedeutet mir seine Freundschaft so viel. Als er mit dem Rest des Clans verschwand, brach für mich eine Welt zusammen. Ich glaube, dass ich mich einsamer und verlassener fühlte, als damals, als sich mein Vater das Leben nahm.}{Aus diesem Grund bedeutet mir seine Freundschaft so viel. Als er mit dem Rest des Clans verschwand, brach für mich eine Welt zusammen. Ich glaube, dass ich mich einsamer und verlassener fühlte, als damals, als sich mein Vater das Leben nahm.}{}{150}{}{ }
+{1371}{K:}{}{5}{}{1290}{ }
+{1379}{Ich muss jetzt gehen, werter Herr.}{}{5}{}{0}{ }
+{1380}{Das weiß ich nicht. Aber ich komme langsam zu der Überzeugung, dass sie hinter Stennars Tod stecken. Das alles scheint irgendwie mit meiner Beziehung zum Schwarzberg-Clan zusammenzuhängen. Darum glaube ich, es ist unerlässlich, etwas über sein Schicksal in Erfahrung zu bringen. Unser Leben scheint sogar davon abzuhängen.}{Das weiß ich nicht. Aber ich komme langsam zu der Überzeugung, dass sie hinter Stennars Tod stecken. Das alles scheint irgendwie mit meiner Beziehung zum Schwarzberg-Clan zusammenzuhängen. Darum glaube ich, es ist unerlässlich, etwas über sein Schicksal in Erfahrung zu bringen. Unser Leben scheint sogar davon abzuhängen.}{}{151}{}{ }
+{1381}{K:}{}{5}{}{1290}{ }
+{1382}{Das Leben des einen etwas mehr als das des anderen, was?}{}{5}{}{1390}{ }
+{1389}{E:}{}{5}{}{0}{ }
+{1390}{[Er sieht seinen Leibwächter an.] Ja, es sieht so aus, als würde ich hier ziemlich gut beschützt, aber je mehr Personal jemand besitzt, desto leichter ist es, einen der Diener zu bestechen oder durch einen Meuchelmörder zu ersetzen. Abgesehen davon bin ich wegen meines Bekanntheitsgrades quasi Gefangener in meinem eigenen Haus. Sie werden immer wissen, wo sie mich finden können. Ihr auf der anderen Seite könnt sozusagen in der Menge untertauchen.}{[Er sieht seinen Leibwächter an.] Ja, es sieht so aus, als würde ich hier ziemlich gut beschützt, aber je mehr Personal jemand besitzt, desto leichter ist es, einen der Diener zu bestechen oder durch einen Meuchelmörder zu ersetzen. Abgesehen davon bin ich wegen meines Bekanntheitsgrades quasi Gefangener in meinem eigenen Haus. Sie werden immer wissen, wo sie mich finden können. Ihr auf der anderen Seite könnt sozusagen in der Menge untertauchen.}{}{152}{}{ }
+{1391}{K:}{}{5}{}{1290}{ }
+{1394}{E:}{}{5}{}{0}{ }
+{1395}{Wie Ihr wohl wisst, bin ich der führende Hersteller von Dampfmaschinen in Arcanum, praktisch ohne Konkurrenz. Ich arbeite momentan an einem Prototyp für eine kleinere, noch effizientere Maschine. Darüber hinaus interessiere ich mich auch für andere technologische Bereiche.}{Wie Ihr wohl wisst, bin ich der führende Hersteller von Dampfmaschinen in Arcanum, praktisch ohne Konkurrenz. Ich arbeite momentan an einem Prototyp für eine kleinere, noch effizientere Maschine. Darüber hinaus interessiere ich mich auch für andere technologische Bereiche.}{}{153}{}{ }
+{1396}{Wie habt Ihr es geschafft, Eure Konkurrenten so gründlich aus dem Rennen zu werfen?}{}{5}{}{1405}{ }
+{1397}{Gibt es in Eurer Fabrik Probleme mit den Arbeitern?}{}{5}{ra7}{1430}{re-5 }
+{1398}{Gibt es in Eurer Fabrik Probleme mit den Arbeitern?}{}{5}{ra-7}{1460}{ }
+{1399}{K:}{}{5}{}{1290}{ }
+{1404}{E:}{}{5}{}{0}{ }
+{1405}{Das ist keine besondere Leistung, wenn nur der alte Cedric Appleby als Konkurrent zu sehen ist. Armer Cedric. Er war immer schon ein dilettantischer Narr. Ich wünschte wirklich, ich hätte ihn überreden können, für mich zu arbeiten ...}{Das ist keine besondere Leistung, wenn nur der alte Cedric Appleby als Konkurrent zu sehen ist. Armer Cedric. Er war immer schon ein dilettantischer Narr. Ich wünschte wirklich, ich hätte ihn überreden können, für mich zu arbeiten ...}{}{154}{}{ }
+{1406}{Warum? Ich meine, wenn er doch ein solcher Idiot ist?}{}{5}{}{1410}{ }
+{1407}{K:}{}{5}{}{1290}{ }
+{1409}{E:}{}{5}{}{0}{ }
+{1410}{Cedric und ich waren als Kinder enge Freunde. Er war schrecklich wütend, als ich ihn nicht den Zwergen vorstellen wollte ... Könnt Ihr Euch das vorstellen? Ich hatte schon ohne seine Beschränktheit genug Schwierigkeiten, ihren Respekt zu erlangen. Nachdem ich die Dampfmaschine "erfunden" hatte, begann er, mich zu verachten. Es ist eigenartig, aber manchmal wünsche ich mir, er wäre immer noch mein Freund.}{Cedric und ich waren als Kinder enge Freunde. Er war schrecklich wütend, als ich ihn nicht den Zwergen vorstellen wollte ... Könnt Ihr Euch das vorstellen? Ich hatte schon ohne seine Beschränktheit genug Schwierigkeiten, ihren Respekt zu erlangen. Nachdem ich die Dampfmaschine "erfunden" hatte, begann er, mich zu verachten. Es ist eigenartig, aber manchmal wünsche ich mir, er wäre immer noch mein Freund.}{}{155}{}{ }
+{1411}{Appleby hat versucht, mich anzuheuern, um etwas zu stehlen, mit dem er Euch bloßstellen könnte.}{}{5}{qa1039 1, gf1012 0}{1420}{gf1012 1 }
+{1414}{K:}{}{5}{}{1290}{ }
+{1419}{E:}{}{5}{}{0}{ }
+{1420}{Cedric, dieser Bastard! Ich habe genug von seinen Spielchen ... Es ist traurig, aber ich fürchte, es ist an der Zeit, dass ihm jemand einen Besuch abstattet, bevor er genug Mut fasst und damit beginnt, Leute für meine Ermordung zu rekrutieren.}{Cedric, dieser Bastard! Ich habe genug von seinen Spielchen ... Es ist traurig, aber ich fürchte, es ist an der Zeit, dass ihm jemand einen Besuch abstattet, bevor er genug Mut fasst und damit beginnt, Leute für meine Ermordung zu rekrutieren.}{}{156}{}{ }
+{1421}{Gibt es in Eurer Fabrik Probleme mit den Arbeitern?}{}{5}{ra7}{1430}{re-5 }
+{1422}{Gibt es in Eurer Fabrik Probleme mit den Arbeitern?}{}{5}{ra-7}{1460}{ }
+{1423}{K:}{}{5}{}{1290}{ }
+{1429}{E:}{}{5}{}{0}{ }
+{1430}{[Er blickt dich misstrauisch an.] Warum fragt Ihr, Halb-Ork? Ihr seid doch hoffentlich kein Gewerkschafts-Sympathisant? Vielleicht ein "Gewerkschafter"? Ich kann Euch versichern, dass meine Arbeiter mit den Jobs, die ich ihnen verschafft habe, sehr zufrieden sind. Ich behandle Eure Leute besser als alle anderen Fabrikbesitzer, das versichere ich Euch.}{[Er blickt dich misstrauisch an.] Warum fragt Ihr, Halb-Ork? Ihr seid doch hoffentlich kein Gewerkschafts-Sympathisant? Vielleicht ein "Gewerkschafter"? Ich kann Euch versichern, dass meine Arbeiter mit den Jobs, die ich ihnen verschafft habe, sehr zufrieden sind. Ich behandle Eure Leute besser als alle anderen Fabrikbesitzer, das versichere ich Euch.}{}{157}{}{ }
+{1431}{Ich wollte damit nicht das Geringste andeuten, Sire. Ich bin einfach nur neugierig.}{}{5}{}{1440}{re+5 }
+{1432}{Das glaubt Ihr doch selbst nicht, rassistischer Leuteschinder, der Ihr seid.}{}{5}{}{1450}{re-10 }
+{1433}{K:}{}{5}{}{1290}{ }
+{1439}{E:}{}{5}{}{0}{ }
+{1440}{Ja, das kann ich verstehen, bei all diesem Gerede über Probleme mit Arbeitern und Protesten. Aber um Eure ursprüngliche Frage zu beantworten: Ich glaube, dass ich mich glücklich schätzen kann, dass mir viele Probleme erspart geblieben sind, die andere mit ihren Arbeitern gehabt haben. Ich glaube, das kommt daher, weil ich meine Arbeiter besser als die meisten anderen behandele. Wirklich, sie haben fast menschlich zu nennende Arbeitsbedingungen.}{Ja, das kann ich verstehen, bei all diesem Gerede über Probleme mit Arbeitern und Protesten. Aber um Eure ursprüngliche Frage zu beantworten: Ich glaube, dass ich mich glücklich schätzen kann, dass mir viele Probleme erspart geblieben sind, die andere mit ihren Arbeitern gehabt haben. Ich glaube, das kommt daher, weil ich meine Arbeiter besser als die meisten anderen behandele. Wirklich, sie haben fast menschlich zu nennende Arbeitsbedingungen.}{}{158}{}{ }
+{1441}{K:}{}{5}{}{1290}{ }
+{1442}{Ich kann Eure Angeberei nicht länger ertragen! Tod der Bourgeoisie!}{}{5}{}{0}{fl 1050 ,co}
+{1449}{E:}{}{5}{}{0}{ }
+{1450}{Wie könnt Ihr es wagen, Sire! Ich muss mich von untermenschlichen Agitatoren in meinem eigenen Haus doch nicht beleidigen lassen!}{Wie könnt Ihr es wagen, Madame! Ich muss mich von untermenschlichen Agitatoren in meinem eigenen Haus doch nicht beleidigen lassen!}{}{159}{}{ }
+{1451}{Verzeihung. Untermenschen wie ich neigen nun einmal zu Gefühlsausbrüchen.}{}{5}{}{1455}{re+10 }
+{1452}{Ich kann Eure Angeberei nicht länger ertragen! Tod der Bourgeoisie!}{}{5}{}{0}{fl 1050 ,co}
+{1455}{Ja, ja, das ist wahr. Den niedrigeren Spezies fehlt einfach die Beherrschung. Ich denke, Eure genetisch bedingten Unzulänglichkeiten sind nicht Eure Schuld.}{Ja, ja, das ist wahr. Den niedrigeren Spezies fehlt einfach die Beherrschung. Ich denke, Eure genetisch bedingten Unzulänglichkeiten sind nicht Eure Schuld.}{}{160}{}{ }
+{1456}{Ich werde an Eurem Wichtigtuer-Hintern ein Exempel statuieren!}{}{5}{}{0}{fl 1050 ,co}
+{1457}{K:}{}{5}{}{1290}{ }
+{1459}{E:}{}{5}{}{0}{ }
+{1460}{[Er blickt dich misstrauisch an.] Warum fragt Ihr? Ihr seid doch hoffentlich kein Gewerkschafts-Sympathisant? Vielleicht ein "Gewerkschafter"? Ich kann Euch versichern, dass meine Arbeiter mit den Jobs, die ich ihnen verschafft habe, sehr zufrieden sind. Ich behandle alle Orks, Vollblüter und Mischlinge gleich, und zwar besser als alle anderen Fabrikbesitzer. Das kann ich Euch versichern.}{[Er blickt dich misstrauisch an.] Warum fragt Ihr? Ihr seid doch hoffentlich kein Gewerkschafts-Sympathisant? Vielleicht ein "Gewerkschafter"? Ich kann Euch versichern, dass meine Arbeiter mit den Jobs, die ich ihnen verschafft habe, sehr zufrieden sind. Ich behandle alle Orks, Vollblüter und Mischlinge gleich, und zwar besser als alle anderen Fabrikbesitzer. Das kann ich Euch versichern.}{}{161}{}{ }
+{1461}{Ich wollte damit nicht das Geringste andeuten, Sire. Ich bin einfach nur neugierig.}{}{5}{}{1440}{re+5 }
+{1462}{Das glaubt Ihr doch selbst nicht, rassistischer Leuteschinder, der Ihr seid.}{}{5}{}{1470}{re-10 }
+{1463}{K:}{}{5}{}{1290}{ }
+{1469}{E:}{}{5}{}{0}{ }
+{1470}{Wie könnt Ihr es wagen! Ich muss mich von Agitatoren in meinem eigenen Haus doch nicht beleidigen lassen!}{Wie könnt Ihr es wagen! Ich muss mich von Agitatoren in meinem eigenen Haus doch nicht beleidigen lassen!}{}{162}{}{ }
+{1471}{Verzeihung, Sire. Mein Ausbruch war völlig unangebracht.}{}{5}{}{1475}{ }
+{1472}{Ich kann Eure Angeberei nicht länger ertragen! Tod der Bourgeoisie!}{}{5}{}{0}{fl 1050 ,co}
+{1475}{Ich denke, ich kann dieses eine Mal über Eure Grobheit hinwegsehen.}{Ich denke, ich kann dieses eine Mal über Eure Grobheit hinwegsehen.}{}{163}{}{ }
+{1476}{K:}{}{5}{}{1290}{ }
+{1479}{Ich weiß Eure Großzügigkeit zu schätzen, Sire. Trotzdem muss ich jetzt gehen. Guten Tag.}{}{5}{}{0}{ }
+{1480}{Ich gebe nicht viel auf religiöses Geschwätz. Mich interessiert mehr, wer Stennar getötet hat und warum, und was das alles mit meiner Beziehung zum Schwarzberg-Clan zu tun hat.}{Ich gebe nicht viel auf religiöses Geschwätz. Mich interessiert mehr, wer Stennar getötet hat und warum, und was das alles mit meiner Beziehung zum Schwarzberg-Clan zu tun hat.}{}{164}{}{ }
+{1481}{Was ist jetzt also zu unternehmen?}{}{5}{gf1007 1}{450}{ }
+{1482}{Was ist jetzt also zu unternehmen?}{}{5}{gf1007 0}{1280}{ }
+{1490}{Ich selbst gebe nicht viel auf religiöses Geschwätz. Wenn Ihr allerdings der Meinung seid, dass Euch weitere Informationen über die Panarii helfen könnten, solltet Ihr deren Tempel am nördlichen Ende des Lion's Head Circle aufsuchen.  Mich interessiert mehr, wer Stennar getötet hat und warum, und was das alles mit meiner Beziehung zum Schwarzberg-Clan zu tun hat.}{Ich selbst gebe nicht viel auf religiöses Geschwätz. Wenn Ihr allerdings der Meinung seid, dass Euch weitere Informationen über die Panarii helfen könnten, solltet Ihr deren Tempel am nördlichen Ende des Lion's Head Circle aufsuchen.  Mich interessiert mehr, wer Stennar getötet hat und warum, und was das alles mit meiner Beziehung zum Schwarzberg-Clan zu tun hat.}{}{165}{}{ru2154 }
+{1491}{Was ist jetzt also zu unternehmen?}{}{5}{gf1007 1}{450}{ }
+{1492}{Was ist jetzt also zu unternehmen?}{}{5}{gf1007 0}{1280}{ }
+{1500}{Es ist paradox, dass ich meinen Reichtum ausgerechnet meinem größten Fehltritt zu verdanken habe. Als Jugendlicher war ich an allen von Zwergenhand geschaffenen Dingen brennend interessiert, daher suchte ich den nächstbesten Clan auf, um die Leute mit meinen Kenntnissen über ihre Technologie zu beeindrucken. Sie haben mich ausgelacht!}{Es ist paradox, dass ich meinen Reichtum ausgerechnet meinem größten Fehltritt zu verdanken habe. Als Jugendlicher war ich an allen von Zwergenhand geschaffenen Dingen brennend interessiert, daher suchte ich den nächstbesten Clan auf, um die Leute mit meinen Kenntnissen über ihre Technologie zu beeindrucken. Sie haben mich ausgelacht!}{}{166}{}{ }
+{1501}{[weiter]}{}{1}{}{1502}{ }
+{1502}{Das war für sie offenbar neu; ein lächerlicher Mensch mit einem natürlichen Hang zur Technologie. Die Tatsache, dass ich damals erst 14 Jahre alt war, war auch nicht gerade von Vorteil. Ich wurde so etwas wie ein wohl gelittener Alleinunterhalter für sie.}{Das war für sie offenbar neu: ein lächerlicher Mensch mit einem natürlichen Hang zur Technologie. Die Tatsache, dass ich damals erst 14 Jahre alt war, war auch nicht gerade von Vorteil. Ich wurde so etwas wie ein wohl gelittener Alleinunterhalter für sie.}{}{167}{}{ }
+{1503}{[weiter]}{}{1}{}{1504}{ }
+{1504}{Stennar war der Einzige, der mich in all diesen Jahren wirklich seinen Freund nannte, und ich habe ihm seine Freundschaft mit einem Verrat vergolten. Er war es, der mir als Erster die Dampfmaschine zeigte, da er wusste, dass ich die wunderbare Kompliziertheit ihres Designs zu würdigen wusste.}{Stennar war der Einzige, der mich in all diesen Jahren wirklich seinen Freund nannte, und ich habe ihm seine Freundschaft mit einem Verrat vergolten. Er war es, der mir als Erster die Dampfmaschine zeigte, da er wusste, dass ich die wunderbare Kompliziertheit ihres Designs zu würdigen wusste.}{}{168}{}{ }
+{1505}{[weiter]}{}{1}{}{1506}{ }
+{1506}{Sie ließen sie einfach so in einer Ecke verrosten, da sie keine Verwendung für eine Maschine hatten, die den Bedarf an schierer Muskelkraft reduzierte. Stellt Euch einen Zwerg vor, der eine Maschine für sich graben lässt! Das ist absurd!}{Sie ließen sie einfach so in einer Ecke verrosten, da sie keine Verwendung für eine Maschine hatten, die den Bedarf an schierer Muskelkraft reduzierte. Stellt Euch einen Zwerg vor, der eine Maschine für sich graben lässt! Das ist absurd!}{}{169}{}{ }
+{1507}{[weiter]}{}{1}{}{1508}{ }
+{1508}{Ich fragte ihn, ob ich ein bisschen daran herumbasteln dürfte, um sie vielleicht sogar zu verbessern. Ich wusste genau, dass dies der Schlüssel war, um wirklich ein Mitglied der Zwergengemeinschaft zu werden. Ich entwickelte in kurzer Zeit eine Möglichkeit, wie man damit die Minen entwässern konnte.}{Ich fragte ihn, ob ich ein bisschen daran herumbasteln dürfte, um sie vielleicht sogar zu verbessern. Ich wusste genau, dass dies der Schlüssel war, um wirklich ein Mitglied der Zwergengemeinschaft zu werden. Ich entwickelte in kurzer Zeit eine Möglichkeit, wie man damit die Minen entwässern konnte.}{}{170}{}{ }
+{1509}{[weiter]}{}{1}{}{1510}{ }
+{1510}{Als ich mich fast dabei überschlug, um ihnen die Funktionsweise der Maschine zu erklären, war Gelächter wieder einmal ihre einzige Antwort. Ich wusste, dass ich irgendwie ihren Respekt erringen musste, daher tüftelte ich in aller Eile ein paar Schemata aus, um meine Theorie zu untermauern.}{Als ich mich fast dabei überschlug, um ihnen die Funktionsweise der Maschine zu erklären, war Gelächter wieder einmal ihre einzige Antwort. Ich wusste, dass ich irgendwie ihren Respekt erringen musste, daher tüftelte ich in aller Eile ein paar Schemata aus, um meine Theorie zu untermauern.}{}{171}{}{ }
+{1511}{[weiter]}{}{1}{}{1512}{ }
+{1512}{Die kleine Bergbaugesellschaft der Menschen, der ich die Pläne vorstellte, bot mir schließlich als Gegenleistung für die Pumpe die Teilhaberschaft an! Ich war außer mir vor Freude - ihre Mine oder ihr Geld war mir egal, was ich wollte, war Bestätigung!}{Die kleine Bergbaugesellschaft der Menschen, der ich die Pläne vorstellte, bot mir schließlich als Gegenleistung für die Pumpe die Teilhaberschaft an! Ich war außer mir vor Freude - ihre Mine oder ihr Geld war mir egal, was ich wollte, war Bestätigung!}{}{172}{}{ }
+{1513}{[weiter]}{}{1}{}{1514}{ }
+{1514}{Als ich zu den Zwergen zurückkehrte, um mit meinen Errungenschaften zu prahlen und um in ihrem Clan willkommen geheißen zu werden ... war niemand mehr da. Kurz danach folgten die ersten Erfindungen, angestachelt durch meinen Ärger und meine Verwirrung.}{Als ich zu den Zwergen zurückkehrte, um mit meinen Errungenschaften zu prahlen und um in ihrem Clan willkommen geheißen zu werden ... war niemand mehr da. Kurz danach folgten die ersten Erfindungen, angestachelt durch meinen Ärger und meine Verwirrung.}{}{173}{}{ }
+{1515}{[weiter]}{}{1}{}{1516}{ }
+{1516}{Wie konnten sie es mir nach all meinen Bemühungen nur verwehren, meinen Platz unter ihnen einzunehmen? Irgendwie hatte ich damals das Gefühl, dass ich es ihnen immer noch beweisen könnte. Ich setzte meine Suche nach ihnen fort, wann immer ich etwas Zeit hatte, jedoch ohne Erfolg. Und dann kamen sie - die Gewandträger.}{Wie konnten sie es mir nach all meinen Bemühungen nur verwehren, meinen Platz unter ihnen einzunehmen? Irgendwie hatte ich damals das Gefühl, dass ich es ihnen immer noch beweisen könnte. Ich setzte meine Suche nach ihnen fort, wann immer ich etwas Zeit hatte, jedoch ohne Erfolg. Und dann kamen sie - die Gewandträger.}{}{174}{}{ }
+{1517}{[weiter]}{}{1}{}{1518}{ }
+{1518}{Sie näherten sich mir spät in der Nacht und warnten mich, dass ich nie wieder von den Zwergen sprechen oder nach ihnen suchen solle. Ich war immer noch ein Kind, daher könnt Ihr wohl meine Angst nachvollziehen. Während mein Reichtum und mein Einfluss wuchsen, schüttelte ich etwas von meiner jugendlichen Furcht ab und heuerte den ersten in einer langen Reihe von Detektiven an, um Stennar und seinen Clan zu finden.}{Sie näherten sich mir spät in der Nacht und warnten mich, dass ich nie wieder von den Zwergen sprechen oder nach ihnen suchen solle. Ich war immer noch ein Kind, daher könnt Ihr wohl meine Angst nachvollziehen. Während mein Reichtum und mein Einfluss wuchsen, schüttelte ich etwas von meiner jugendlichen Furcht ab und heuerte den ersten in einer langen Reihe von Detektiven an, um Stennar und seinen Clan zu finden.}{}{175}{}{ }
+{1519}{[weiter]}{}{1}{}{-46}{ }
+

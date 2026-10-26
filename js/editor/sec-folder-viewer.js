@@ -4,7 +4,7 @@ import { ART_TYPE, artType } from '../core/art-id.js';
 import { errText, mesTable } from '../core/text-io.js';
 import { exportCanvasPng } from '../art/art-export.js';
 import { parseArtBuffer } from '../art/art-decoder.js';
-import { DATA_ROOT, SEC_ROOT } from '../core/config.js';
+import { DATA_ROOT, INDEX_ROOT, SEC_ROOT } from '../core/config.js';
 import { breadcrumbEl } from '../core/dom.js';
 import { mapFolderPath, siblingMapPath } from '../core/file-index.js';
 import { encPath, escapeHtml, loadJSZip } from '../core/util.js';
@@ -47,14 +47,22 @@ import {
 } from '../sec/sec-tile-art.js';
 import { drawSecWallOverlay, secEdgeRotation, secWallPlacementNote } from '../sec/sec-walls.js';
 import { SEC_FACADE_FIELD_MASK, SEC_MOB_KINDS, secAidWithRotation, secBuildMobObject, secBuildSectorBytes, secBuildStaticObject, secGameProto, secObjectAt, secEdgeKey, secEnsureObjectBytes, secMakeFacadeRaw, secIsRoofId, secEnsureLights, secLightsDiffer, secLoadProtoOrderFields, secObjectListDiffers, secProtoCatalog, secRoofsDiffer, secStartProtoScan, secWallAid } from './sec-writer.js';
-import { buildOwnerInventory } from '../sec/sec-inventory.js';
+import { buildOwnerInventory, registerInventoryItem } from '../sec/sec-inventory.js';
+import { decodeProtoForSearch } from '../proto/proto-decoder.js';
+import { decodeMobBuffer } from '../mob/mob-decoder.js';
+import { dressGuard, GUARD_AID, GUARD_PROTO, GUARD_TIERS, guardCount, guardLevel, guardTier, planPatrols } from './town-guards.js';
 import { createMobEditPanel } from './mob-edit-panel.js';
+import * as ME from './mob-edit.js';
+import { TEMPLE_FRONT, TEMPLE_KEEP, templeTiles } from './sec-facade-composites.js';
 import { createExtraTools, useHousePlan } from './sec-extra-tools.js';
 import { secExtrasDiffer } from './sec-sector-extras.js';
 import { createDialogPanel, createQuestPanel } from './story-panel.js';
 import { dialogStem, storyFileCount, storyFiles } from './story-data.js';
 import { addContextTool, editorSlot, layoutSettled, toolRail } from '../ui/shell.js';
 import { createPathTools } from './sec-path-tools.js';
+import { planTown, townHouseCount, townWallStyle } from './sec-town-plan.js';
+import { BARREL_AID, DEEP_WATER, DKS, ORIENT, planDocks, PRH, QUAY_PROPS, sceneryAid } from './sec-docks.js';
+import { railTile, STATION_DOOR, STATION_H, STATION_PEOPLE, STATION_ROOF, STATION_TILES, STATION_W, STATION_WALLS, TUNNEL_TILES } from './sec-train-station.js';
 
 // Interface art number -> file (art/interface/interface.mes): the editor's map-data markers.
 const interfaceArtNames = mesTable(`${DATA_ROOT}art/interface/interface.mes`);
@@ -342,8 +350,28 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
   editBtn.title = 'Open the map editor: the window is used in full, zoom goes to 100% and the tools open on the right. Leave with "Exit edit".';
   const exportSecBtn = document.createElement('button');
   exportSecBtn.type = 'button'; exportSecBtn.className = 'btn-back sec-edit-export';
-  exportSecBtn.textContent = 'Export .SEC'; exportSecBtn.disabled = true;
-  exportSecBtn.title = 'Save the altered .sec file(s)';
+  exportSecBtn.textContent = 'Export'; exportSecBtn.disabled = true;
+  exportSecBtn.title = 'Nothing changed yet';
+  exportSecBtn.setAttribute('aria-haspopup', 'true'); exportSecBtn.setAttribute('aria-expanded', 'false');
+  // "Export" opens a small menu below it: the changed files alone, or a whole module (the module template with the map in it)
+  const exportWrap = document.createElement('span');
+  exportWrap.className = 'sec-export-wrap';
+  const exportMenu = document.createElement('div');
+  exportMenu.className = 'sec-export-menu'; exportMenu.hidden = true;
+  const exportItems = {};
+  for (const [key, label, title] of [
+    ['files', 'Export sec & mobs', 'Save the altered .sec, .mob and map files (as a .zip when there are several)'],
+    ['module', 'Export module', 'Save a whole module: the Module template folder with this map in its maps folder, named after the map']
+  ]) {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'btn-back'; b.textContent = label; b.title = title;
+    exportMenu.appendChild(b); exportItems[key] = b;
+  }
+  exportWrap.append(exportSecBtn, exportMenu);
+  const setExportMenu = on => { exportMenu.hidden = !on; exportSecBtn.setAttribute('aria-expanded', String(on)); };
+  exportSecBtn.addEventListener('click', () => setExportMenu(exportMenu.hidden));
+  document.addEventListener('pointerdown', e => { if (!exportMenu.hidden && !exportWrap.contains(e.target)) setExportMenu(false); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') setExportMenu(false); });
   // The editor switch lives in the top bar while this map is on screen.
   addContextTool(editBtn, article);
   // "Export .SEC" only exists in the editor (it is moved into the editor menu on entry).
@@ -400,7 +428,7 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
   for (const [key, label, title] of [
     ['jumps', 'Jumps', 'Jump points (map.jmp): the tiles that take you to another map · select one to go there'],
     ['scripts', 'Scripts', 'Tile scripts: scripts the game runs on a tile · select one to open its .scr'],
-    ['blocked', 'Blocked', 'Blocked tiles, as the editor shows them: bright red where placed (in the .sec), dark red where generated by the tile art or an object; hatched, the blocked sectors (map.sbf)'],
+    ['blocked', 'Special tiles', 'Blocked tiles, as the editor shows them: bright red where placed (in the .sec), dark red where generated by the tile art or an object; hatched, the blocked sectors (map.sbf). Also the NPCs\' waypoints (numbered) and the start point (green star)'],
     ['waypoints', 'Waypoints', "The NPCs' waypoints, numbered, one colour per NPC (isometric view, as in the game's editor)"],
     ['start', 'Start', 'Where the player starts on this map (startloc.txt)'],
   ]) {
@@ -771,9 +799,9 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
     const t0 = performance.now();
     const sinceLast = t0 - lastDrawAt; lastDrawAt = t0;
     updateZoomLabel();
-    drawSecFolderMap(canvas, valid, bounds, selected, mode, artTiles, view, mobPoints, mapBackground, overlayVisibility);
+    drawSecFolderMap(canvas, valid, bounds, edit.on ? null : selected, mode, artTiles, view, mobPoints, mapBackground, overlayVisibility);
     if (areaState.on && areaState.areas && mode === 'color') drawAreasTopDown();
-    if (Object.values(layers).some(Boolean) || (overlayVisibility.otherMobs && !edit.on)) drawMapLayers();
+    if (Object.values(layers).some(Boolean) || (overlayVisibility.otherMobs && !edit.on) || (edit.on && edit.tool === 'move')) drawMapLayers();
     if (drawCursorHook) drawCursorHook();
     const ms = performance.now() - t0;
     // What a lit frame costs: its own time, or the gap since the previous frame when frames run
@@ -1039,7 +1067,8 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
 
     // NPC waypoints (wp_draw(): isometric view only), numbered by the art's frames, in the NPC's colour.
     const wp = overlayArt?.wp?.iso;
-    if (layers.waypoints && iso_ && wp) {
+    const moving = edit.on && edit.tool === 'move';   // the Move tool shows what it can pick up: waypoints and the start
+    if ((layers.waypoints || layers.blocked || moving) && iso_ && wp) {
       ctx.save();
       ctx.globalCompositeOperation = 'lighter';
       for (const o of mobPoints) {
@@ -1061,7 +1090,7 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
         if (showLabels) for (const o of lit) label(o.file, centre(o.worldX, o.worldY), '#ffe9a8');
       }
     }
-    if (layers.start && startInMap) {
+    if ((layers.start || layers.blocked || moving) && startInMap) {
       const p = centre(mapData.start.x, mapData.start.y);
       if (onScreen(p, 200)) {
         ctx.beginPath(); ctx.arc(p.x, p.y, 6, 0, Math.PI * 2);
@@ -1348,14 +1377,7 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
   listenGlobal(window, 'mouseup', () => { dragging=false; canvas.style.cursor = edit.on ? (edit.pan ? 'grab' : 'crosshair') : 'crosshair'; endStroke(); });
   canvas.addEventListener('mousemove', event => {
     if (edit.on && edit.painting && !dragging) { continueStroke(event); return; }
-    if (edit.on && !dragging) {
-      const t = sectorAtPoint(event);
-      if (t) {
-        // the map only changes when the pointer reaches another tile
-        const same = selected && selected.sectorX === t.sectorX && selected.sectorY === t.sectorY && selected.tileX === t.tileX && selected.tileY === t.tileY;
-        selected = t; if (!same) scheduleEditRedraw();
-      }
-    }
+    // (editing: the tile under the pointer is outlined on the cursor layer, see drawCursor, so the map is not redrawn for it)
     if (dragging) { view.offsetX += event.clientX-dragX; view.offsetY += event.clientY-dragY; dragX=event.clientX; dragY=event.clientY; markGesture(); redraw(); scheduleVisibleArtLoad(); return; }
     const p = sectorAtPoint(event), sector = p && findSector(p.sectorX, p.sectorY);
     if (!sector?.decoded) {
@@ -1569,7 +1591,7 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
   const TOOL_GROUPS = [['tile', 'facade'], ['wall', 'portal'], ['roof', 'light'], ['block', 'sector', 'mapdata'], ['dialog', 'quest']];
   const TOOL_NAMES = { tile: 'Tiles', facade: 'Facades', wall: 'Walls', portal: 'Doors and windows', roof: 'Roofs', light: 'Lights', block: 'Blocked tiles', sector: 'Sector and tile scripts', mapdata: 'Map: start and jump points', dialog: 'Dialog', quest: 'Quest' };
   const TOOLS = [
-    { id: 'move', icon: ICON_MOVE, title: 'Move objects: press on a tile and drag - its scenery (else its walls with their doors and windows) goes to the tile where you release' },
+    { id: 'move', icon: ICON_MOVE, title: 'Move objects: press on a tile and drag - its scenery (else its walls with their doors and windows) goes to the tile where you release. The map\'s start point and the NPCs\' waypoints can be dragged too' },
     { id: 'eraser', icon: ICON_ERASER, title: 'Eraser: removes the scenery, then the portal, then the wall of a tile (never the tile or facade)' },
     { id: 'fill', icon: ICON_FILL, title: 'Fill: replaces the clicked tile and every identical tile connected to it (paint bucket)' },
     { id: 'eyedropper', icon: ICON_EYEDROPPER, title: 'Eyedropper: lists everything on a tile; click an entry to open its tool with it selected' },
@@ -1623,7 +1645,7 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
   editPanel.className = 'sec-edit-panel'; editPanel.hidden = true;
   editPanel.innerHTML = `
       <h3 class="sec-panel-title">Tile</h3>
-      <div class="sec-tool-bar" role="toolbar" aria-label="Editing tools"><button type="button" class="sec-tool sec-tool-mode" data-mode="pan" title="Move: while it is on, left-drag moves the map and nothing is placed (middle / right-drag always moves it)" aria-label="move" aria-pressed="false">${ICON_HAND}</button><span class="sec-tool-sep" aria-hidden="true"></span>${TOOLS.map(t =>
+      <div class="sec-tool-bar" role="toolbar" aria-label="Editing tools"><button type="button" class="sec-tool sec-tool-mode" data-mode="pan" title="Move (Tab turns it on and off): while it is on, left-drag moves the map and nothing is placed (middle / right-drag always moves it)" aria-label="move" aria-pressed="false">${ICON_HAND}</button><span class="sec-tool-sep" aria-hidden="true"></span>${TOOLS.map(t =>
       `${t.sep ? '<span class="sec-tool-sep" aria-hidden="true"></span>' : ''}<button type="button" class="sec-tool" data-tool="${t.id}" title="${t.title}" aria-label="${t.id}" aria-pressed="false">${t.icon || `<span class="sec-tool-label">${t.label}</span>`}</button>`).join('')}</div>
       <section class="sec-tool-pane" data-pane="tile" hidden>
         <div class="sec-edit-filters"><input type="search" class="sec-edit-search" placeholder="Search name or number…" aria-label="Search tiles"></div>
@@ -2093,7 +2115,7 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
       const diag = { decodeFailures: [], locationFailures: [], staticObjectCount: 0, staticObjectTypeCounts: {}, wallLoaded: 0 };
       const pseudo = { filename: sec.filename, position: sec.position, decoded: { staticObjects: [obj] } };
       const [p] = await loadSecStaticObjectPoints([pseudo], diag);
-      if (p) Object.assign(pt, p, { file: pt.file, name: pt.name, seq: -1, staticSecObject: false, __newMob: pt.__newMob });
+      if (p) Object.assign(pt, p, { file: pt.file, name: pt.name, seq: -1, staticSecObject: false, __newMob: pt.__newMob, __motion: pt.__motion, motion: pt.__motion || p.motion });
     } catch (_) { /* the placeholder point stays */ }
     redraw();
   };
@@ -2260,8 +2282,9 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
   const refreshEditUi = () => {
     const { sectors: n, mobs: m, story: s } = pendingCounts();
     exportSecBtn.disabled = n + m + s === 0;
-    exportSecBtn.textContent = m || s ? (n ? `Export (${n} + ${m + s} files)` : `Export ${m + s} files`) : n ? `Export .SEC (${n})` : 'Export .SEC';
-    exportSecBtn.title = n + m + s ? `Save ${pendingText({ sectors: n, mobs: m, story: s })}${n + m + s > 1 ? ' (as a .zip)' : ''}` : 'Nothing changed yet';
+    exportSecBtn.title = n + m + s ? `${pendingText({ sectors: n, mobs: m, story: s })} to export` : 'Nothing changed yet';
+    exportItems.files.title = n + m + s ? `Save ${pendingText({ sectors: n, mobs: m, story: s })}${n + m + s > 1 ? ' (as a .zip)' : ''}` : 'Nothing changed yet';
+    if (exportSecBtn.disabled) setExportMenu(false);
   };
   const setTile = (wx, wy, raw) => {
     const at = sectorAtWorld(wx, wy); if (!at) return false;
@@ -2345,8 +2368,12 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
       // pattern is written as a3 (not mirrored) or as the a3 with those corners swapped (mirrored). Not every pair
       // of terrains has the art for every a3 (a3 2, 9, 12 and 13 usually only exist as the mirror of 8, 3, 6, 7).
       makes.push(a4 => pairTileRaw(lo, hi, (c0 << 2) | (c1 << 1) | c3 | (c2 << 3), a4, 0));
-      if (c1 !== c2) makes.push(a4 => pairTileRaw(lo, hi, (c0 << 2) | (c2 << 1) | c3 | (c1 << 3), a4, 1));
-      else makes.push(a4 => pairTileRaw(lo, hi, (c0 << 2) | (c1 << 1) | c3 | (c2 << 3), a4, 1));
+      // (Only when both terrains are flippable, ids below 100: the game's maps never mirror a pair that has a non-flippable
+      // terrain - Dks, Prh... - and the engine draws such a tile unmirrored, so a mirrored one shows turned round.)
+      if (hi < 100) {
+        if (c1 !== c2) makes.push(a4 => pairTileRaw(lo, hi, (c0 << 2) | (c2 << 1) | c3 | (c1 << 3), a4, 1));
+        else makes.push(a4 => pairTileRaw(lo, hi, (c0 << 2) | (c1 << 1) | c3 | (c2 << 3), a4, 1));
+      }
     }
     let list = [];
     for (const make of makes) for (let a4 = 0; a4 < 8; a4++) { const raw = make(a4); if (tileArtExists(raw)) list.push({ a4, raw }); }
@@ -2442,7 +2469,7 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
     return changed > 0;
   };
   // Path to houses (the route-finding and the look of the strip are in sec-village-paths.js) (moved to ./sec-path-tools.js; the closure's state it needs is handed in)
-  const { tileRawAt, renderPathInfo, pickDoor, drawDoorMarks, eraseFootprint } = createPathTools({ blendAround, brushRawAt, cornersRaw, edgeKeyOf, edit, endStroke, ensureArt, forFootprint, getEdgeIndex, mapH, mapW, objectsAt, overlayVisibility, plainTileRaw, removeNewMob, removeObject, sectorAtWorld, setTile, stage, status, tileCorners, ui, worldFloat, wxOf, wyOf, get edgePath() { return edgePath; }, get mobPoints() { return mobPoints; }, get scheduleCursor() { return scheduleCursor; }, get tileCentre() { return tileCentre; }, get tileManifest() { return tileManifest; }, get tilePath() { return tilePath; } });
+  const { tileRawAt, renderPathInfo, pickDoor, drawDoorMarks, eraseFootprint, groundOpenAt, joinHouses } = createPathTools({ blendAround, brushRawAt, cornersRaw, edgeKeyOf, edit, endStroke, ensureArt, forFootprint, getEdgeIndex, mapH, mapW, objectsAt, overlayVisibility, plainTileRaw, removeNewMob, removeObject, sectorAtWorld, setTile, stage, status, tileCorners, ui, worldFloat, wxOf, wyOf, get edgePath() { return edgePath; }, get mobPoints() { return mobPoints; }, get scheduleCursor() { return scheduleCursor; }, get tileCentre() { return tileCentre; }, get tileManifest() { return tileManifest; }, get tilePath() { return tilePath; } });
 
   // ---- Move objects -------------------------------------------------------------------------------------------
   // What a press on (wx, wy) picks up, like the eraser's layers: the tile's scenery, else its walls with the doors and
@@ -2498,15 +2525,62 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
     indexAdd(np);
     return np;
   };
+  // The NPCs whose route has a waypoint on tile (wx, wy), and the map's start: the Move tool picks these up too (they are
+  // drawn while it is the tool). Waypoints are an array of F_NPC_WAYPOINTS_IDX in the NPC's .mob; the start is startloc.txt.
+  const waypointsAt = (wx, wy) => {
+    const ax = minX * 64 + wx, ay = minY * 64 + wy;
+    return mobPoints.filter(p => p.motion?.waypoints?.some(w => w.x === ax && w.y === ay));
+  };
+  const startAtTile = (wx, wy) => startInMap && !!mapData.start && mapData.start.x === minX * 64 + wx && mapData.start.y === minY * 64 + wy;
+  // Every waypoint of `pt` that lies on tile (ox, oy) goes to tile (nx, ny): the .mob is rewritten (a new one, or the map's own
+  // as a changed file). One history step, made when the file is read.
+  const moveWaypoints = async (pt, ox, oy, nx, ny) => {
+    if (!sectorAtWorld(nx, ny)) return false;
+    const rec = await mobRecordFor(pt); if (!rec) return false;
+    const absLoc = (x, y) => BigInt(minX * 64 + x) | (BigInt(minY * 64 + y) << 32n);
+    const oldLoc = absLoc(ox, oy), newLoc = absLoc(nx, ny);
+    const mob = ME.mobOpen(rec.bytes), entries = ME.arrayEntries(mob.get(287));
+    let n = 0;
+    for (const [i, b] of entries) {
+      if (new DataView(b.buffer, b.byteOffset, b.byteLength).getBigInt64(0, true) !== oldLoc) continue;
+      const nb = new Uint8Array(8); new DataView(nb.buffer).setBigInt64(0, BigInt.asIntN(64, newLoc), true); entries.set(i, nb); n++;
+    }
+    if (!n) return false;
+    const before = { bytes: rec.bytes, motion: pt.motion }, after = {
+      bytes: ME.mobRewrite(rec.bytes, new Map([[287, ME.encArray(8, entries)]])),
+      motion: { ...pt.motion, waypoints: pt.motion.waypoints.map(w => (w.x === minX * 64 + ox && w.y === minY * 64 + oy ? { x: minX * 64 + nx, y: minY * 64 + ny } : w)) }
+    };
+    const apply = fwd => {
+      const s = fwd ? after : before;
+      rec.bytes = s.bytes; pt.motion = pt.__motion = s.motion;
+      if (rec.shipped) {
+        const same = rec.bytes.length === rec.orig.length && rec.bytes.every((b, i) => b === rec.orig[i]);
+        if (same && !edit.kidMobs.some(k => k.owner === rec.name)) edit.modMobs.delete(rec.name); else edit.modMobs.set(rec.name, rec);
+      }
+    };
+    apply(true);
+    edit.undo.push([{ kind: 'fn', sec: null, apply }]); if (edit.undo.length > 300) edit.undo.shift();
+    edit.redo.length = 0; edit.unsaved = true; refreshEditUi(); redraw();
+    return true;
+  };
   const beginMove = f => {
-    const pts = movableAt(f.wx, f.wy);
-    if (!pts.length) { edit.problem = 'Nothing to move on that tile (scenery, or walls with their doors and windows).'; return; }
-    edit.moveDrag = { pts, wx: f.wx, wy: f.wy, tx: f.wx, ty: f.wy };
+    const wps = waypointsAt(f.wx, f.wy), start = startAtTile(f.wx, f.wy);
+    const pts = wps.length || start ? [] : movableAt(f.wx, f.wy);
+    if (!pts.length && !wps.length && !start) { edit.problem = 'Nothing to move on that tile (scenery, walls with their doors and windows, a waypoint or the start).'; return; }
+    edit.moveDrag = { pts, wps, start, wx: f.wx, wy: f.wy, tx: f.wx, ty: f.wy };
     scheduleCursor();
   };
   const commitMove = () => {
     const d = edit.moveDrag; edit.moveDrag = null;
     if (!d || (d.tx === d.wx && d.ty === d.wy)) return;
+    if (d.start || d.wps.length) {
+      if (d.start) extra.moveStart(d.tx, d.ty);
+      Promise.all(d.wps.map(p => moveWaypoints(p, d.wx, d.wy, d.tx, d.ty).catch(() => false))).then(r => {
+        const n = r.filter(Boolean).length;
+        status.textContent = d.start ? `Moved the start${n ? ` and ${n} waypoint${n === 1 ? '' : 's'}` : ''}` : n ? `Moved ${n} NPC's waypoint${n === 1 ? '' : 's'}` : 'The waypoints could not be moved (they come from the NPC\'s prototype)';
+      });
+      return;
+    }
     const dx = d.tx - d.wx, dy = d.ty - d.wy;
     let moved = 0;
     for (const p of d.pts) if (moveObject(p, wxOf(p) + dx, wyOf(p) + dy)) moved++;
@@ -2701,6 +2775,13 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
       edit.moveDrag = null; edit.painting = false; edit.stroke = null; edit.objOps = [];
       status.textContent = 'Cancelled'; scheduleCursor(); return;
     }
+    // Tab turns the hand (Move: pan) mode on and off; not while typing or dragging
+    if (edit.on && e.key === 'Tab' && !e.ctrlKey && !e.metaKey && !e.altKey && !e.shiftKey && !edit.painting && !/^(input|textarea|select)$/i.test(e.target?.tagName || '')) {
+      e.preventDefault(); e.stopPropagation();
+      if (e.repeat) return;
+      setPanMode(!edit.pan);
+      return;
+    }
     if (!edit.on || !(e.ctrlKey || e.metaKey) || e.altKey) return;
     // A text box that holds text keeps its own Ctrl+Z; everywhere else it undoes the map.
     const t = e.target;
@@ -2869,9 +2950,13 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
         // what is picked up, drawn where it would land; its old tile in red, the new one in yellow
         const dx = d.tx - d.wx, dy = d.ty - d.wy;
         for (const p of d.pts) drawObjectPreview(c, p, wxOf(p) + dx, wyOf(p) + dy);
+        if (d.start || d.wps.length) {
+          const q = tileCentre(d.tx, d.ty); c.save(); c.beginPath(); c.arc(q.x, q.y, 7, 0, Math.PI * 2);
+          c.fillStyle = d.start ? 'rgba(124,252,154,.8)' : 'rgba(32,178,170,.8)'; c.fill(); c.lineWidth = 1.5; c.strokeStyle = '#0d0c0a'; c.stroke(); c.restore();
+        }
         footprint([[d.wx, d.wy]], 'rgba(255,143,132,.18)', '#ff8f84');
         footprint([[d.tx, d.ty]], null, '#ffe066');
-      } else footprint([[f.wx, f.wy]], edit.objectsReady && movableAt(f.wx, f.wy).length ? 'rgba(255,224,102,.18)' : null, '#ffe066');
+      } else footprint([[f.wx, f.wy]], edit.objectsReady && (movableAt(f.wx, f.wy).length || waypointsAt(f.wx, f.wy).length || startAtTile(f.wx, f.wy)) ?'rgba(255,224,102,.18)' : null, '#ffe066');
     } else if (t === 'tile' || t === 'eraser') {
       const n = edit.size, o = brushOffset(), cells = [];
       for (let dy = 0; dy < n; dy++) for (let dx = 0; dx < n; dx++) cells.push([f.wx + dx - o, f.wy + dy - o]);
@@ -2911,6 +2996,7 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
       };
       if (t === 'wall' && edit.wallBrush === 'edge') drawSeg(edgeFromFloat(f), true);
       else {
+        footprint([[f.wx, f.wy]], null, '#ffe066');
         const dot = (i, j, r, col) => { const p = tileCentre(i - 0.5, j - 0.5); c.save(); c.beginPath(); c.arc(p.x, p.y, r, 0, Math.PI * 2); c.fillStyle = col; c.fill(); c.restore(); };
         const d = edit.wallDrag;
         if (d) {
@@ -3242,6 +3328,7 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
     let done = 0;
     for (let i = 0; i < todo.length && edit.on; i += 4) {
       status.textContent = `Edit mode · loading sectors… ${done}/${todo.length}`;
+      opts.onStage?.('Loading sectors', done, todo.length);
       await Promise.all(todo.slice(i, i + 4).map(sec => loadSectorTiles(sec).then(() => { done++; })));
     }
     if (edit.on) status.textContent = '';
@@ -3278,7 +3365,7 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
     for (const b of viewBtns) b.setAttribute('aria-pressed', String(b.dataset.mode === mode));
   };
   const moveToWorkspace = () => {
-    editorSlot.append(overlayControls, lightControls, viewSwitch, exportSecBtn, editBtn);
+    editorSlot.append(overlayControls, lightControls, viewSwitch, exportWrap, editBtn);
     toolRail.prepend(ui.toolBar);
     hint.replaceChildren(barText, barMsg, barZoom);
     mapCard.appendChild(hint);
@@ -3287,12 +3374,348 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
   const moveFromWorkspace = () => {
     viewSwitch.remove();
     ui.title.after(ui.toolBar);
-    exportSecBtn.remove();
+    exportWrap.remove();
     layoutToolbar();
     addContextTool(editBtn, article);
     hint.removeAttribute('title');
     hint.replaceChildren();
     hint.remove();
+  };
+
+  // "Add structures" of the new-world page: a little town on open ground - houses of the Generate tool on the roof grid,
+  // the front doors joined by dirt paths. How many houses follows the size of the map (planTown).
+  // A tile of a structure: the grass and bushes of the ground it covers go.
+  const stampTile = (wx, wy, raw) => {
+    if (wx < 0 || wy < 0 || wx >= mapW || wy >= mapH) return;
+    for (const pt of objectsAt(wx, wy).slice()) if (pt.type === 3 && pt.staticSecObject && pt.__obj) removeObject(pt);
+    setTile(wx, wy, raw >>> 0);
+  };
+  // The docks of sec-docks.js (planDocks): for every pier the planks, the small docks beside the ships, a ship at every anchor
+  // (Ashbury's facades for a pier running south, Tarant's for one running east) and barrels where it meets the land.
+  const stampDocks = site => {
+    const before = edit.tool;
+    edit.painting = true; edit.stroke = new Map(); edit.objOps = []; edit.strokeSeen = new Set(); edit.skippedMob = 0; edit.problem = null;
+    const waterAt = (x, y) => { const at = sectorAtWorld(x, y), c = at ? tileCorners(at.sec.decoded.tiles[at.idx] >>> 0) : null; return !!c && c.some(t => t >= 8 && t <= 12); };
+    const pick = (list, rnd) => { let t = rnd * list.reduce((s, p) => s + p[1], 0); for (const p of list) if ((t -= p[1]) < 0) return p; return list[list.length - 1]; };
+    try {
+      const proto = secGameProto(3, BARREL_AID);
+      for (const p of site.piers) {
+        const quaySet = new Set(), plankSet = new Set(), quayTiles = [];
+        // the quay on the land: Prh paving, never on the water
+        if (p.quay) for (let y = p.quay.y0; y <= p.quay.y1; y++) for (let x = p.quay.x0; x <= p.quay.x1; x++) {
+          if (waterAt(x, y)) continue;
+          stampTile(x, y, PRH + 0x200 * Math.floor(Math.random() * 8)); quaySet.add(y * mapW + x); quayTiles.push([x, y]);
+        }
+        for (const r of [p.pier, ...p.jetties]) for (let y = r.y0; y <= r.y1; y++) for (let x = r.x0; x <= r.x1; x++) { stampTile(x, y, DKS + 0x200 * Math.floor(Math.random() * 8)); plankSet.add(y * mapW + x); }
+        // the edges meet the ground and the water with the game's own transition tiles (Dks / water as in Dernholm and Ashbury,
+        // Prh / dirt as in Tarant); where the two meet, the tiles stay as they are
+        if (tileManifest?.size) for (const k of new Set([...quaySet, ...plankSet])) {
+          const x = k % mapW, y = (k / mapW) | 0, own = plankSet.has(k) ? plankSet : quaySet, other = own === plankSet ? quaySet : plankSet;
+          if (own.has(k - 1) && own.has(k + 1) && own.has(k - mapW) && own.has(k + mapW)) continue;
+          blendAround(x, y, own === plankSet ? 102 : 101, (nx, ny) => other.has(ny * mapW + nx) && !own.has(ny * mapW + nx));
+        }
+        // crates, barrels, carts, rope, nets and pottery on the quay, a lane left free for the path to the pier
+        if (p.quay && quayTiles.length) {
+          const vert = p.orient === 'v', edgeFrom = vert ? p.quay.y1 - 2 : p.quay.x1 - 2, lane = [p.c0 + 2, p.c0 + 4], used = [];
+          for (let n = Math.round(quayTiles.length * 0.035), tries = 0; n > 0 && tries < 400; tries++) {
+            const [x, y] = quayTiles[Math.floor(Math.random() * quayTiles.length)], along = vert ? y : x, across = vert ? x : y;
+            if (plankSet.has(y * mapW + x) || (across >= lane[0] && across <= lane[1]) || used.some(([ux, uy]) => Math.abs(ux - x) < 2 && Math.abs(uy - y) < 2)) continue;
+            const [art, , kind] = pick(QUAY_PROPS.filter(q => q[2] === 'any' || along >= edgeFrom), Math.random()), aid = sceneryAid(art), pr = secGameProto(3, aid);
+            tries = 0; n--;
+            if (!pr) continue;
+            used.push([x, y]); addObject(x, y, 3, { num: pr.num, label: 'Scenery' }, aid, 0);
+          }
+        }
+        for (const a of p.anchors) for (const [dy, dx, raws] of ORIENT[p.orient].tiles) raws.forEach((raw, i) => stampTile(a.x + dx + i, a.y + dy, raw));
+        for (const b of p.barrels) addObject(b.x, b.y, 3, { num: proto?.num ?? 4032, label: 'Barrel' }, BARREL_AID | 0, 0);
+      }
+    } finally { endStroke(); edit.tool = before; }
+    return true;
+  };
+  // What the 4 x 4 tiles of a cell are, for planDocks: 1 deep water, 2 open ground, 0 anything else.
+  const dockCells = new Uint8Array((mapW >> 2) * (mapH >> 2));
+  const dockCell = (cx, cy) => {
+    if (cx < 0 || cy < 0 || cx >= mapW >> 2 || cy >= mapH >> 2) return 0;
+    const k = cy * (mapW >> 2) + cx;
+    if (!dockCells[k]) {
+      const x = cx * 4 + 2, y = cy * 4 + 2, at = sectorAtWorld(x, y), corners = at ? tileCorners(at.sec.decoded.tiles[at.idx] >>> 0) : null;
+      dockCells[k] = (corners && corners.every(t => DEEP_WATER.includes(t))) ? 2 : groundOpenAt(x, y) ? 3 : 1;
+    }
+    return dockCells[k] - 1;
+  };
+  // The train station of Ashbury (sec-train-station.js) with its north corner on tile (x0, y0): the train and platform tiles,
+  // the walls of the ticket booth and the conductors and ticket agent (placed without scripts, see the data file).
+  // `rail` (from planTown): the track runs east from the station to rail.end, then into a mountain if rail.tunnel.
+  const stampStation = (x0, y0, rail) => {
+    const before = edit.tool, sel = edit.sel.npcs;
+    edit.tool = 'npcs';
+    edit.painting = true; edit.stroke = new Map(); edit.objOps = []; edit.strokeSeen = new Set(); edit.skippedMob = 0; edit.problem = null;
+    const put = stampTile;
+    try {
+      for (const [dy, dx, raws] of STATION_TILES) raws.forEach((raw, i) => put(x0 + dx + i, y0 + dy, raw));
+      if (rail) {
+        for (let wx = x0 + STATION_W; wx < rail.end; wx++) for (const dy of [4, 5, 6]) put(wx, y0 + dy, railTile(dy, wx - x0));
+        if (rail.tunnel) for (const [dy, dx, raws] of TUNNEL_TILES) raws.forEach((raw, i) => put(rail.end + dx + i, y0 + 4 + dy, raw));
+      }
+      for (const [num, aid, dx, dy] of STATION_WALLS) addObject(x0 + dx, y0 + dy, 0, { num, label: 'Wall' }, aid | 0, 1);
+      let roofed = false;
+      for (const [i, j, raw] of STATION_ROOF.cells) if (setRoofCell(((x0 + STATION_ROOF.dx) >> 2) + i, ((y0 + STATION_ROOF.dy) >> 2) + j, raw)) roofed = true;
+      if (roofed && overlayVisibility.roofs) ensureRoofArt();
+      for (const [num, label, dx, dy] of STATION_PEOPLE) placeDressed(num, label, x0 + dx, y0 + dy, OUTFIT_CITY);
+    } finally { endStroke(); edit.tool = before; edit.sel.npcs = sel; }
+    return true;
+  };
+
+  // The human NPC prototypes 17087-17108 come in pairs, female then male (noble, priest, wizard, technologist, shopkeeper, guard, city dweller,
+  // villager, beggar, thief, bandit); their art is underwear until an outfit is picked. Outfit numbers are those of NPC_OUTFITS.
+  const HUMAN_NPC = { female: { first: 17087, aid: 0x20002000 }, male: { first: 17088, aid: 0x28002000 } };
+  const humanNpcNum = (gender, job) => HUMAN_NPC[gender].first + 2 * job;
+  const humanNpcAid = num => (num % 2 === 0 ? HUMAN_NPC.male : HUMAN_NPC.female).aid;
+  const OUTFIT_CITY = 8, RESIDENT_OUTFITS = [1, 2, 5, 7, 8], RESIDENT_JOBS = [6, 7, 7, 7];
+  // An NPC `num` placed on tile (wx, wy) in the outfit `part`; needs the NPC tool's state set up as in stampStation.
+  const placeDressed = (num, label, wx, wy, part) => {
+    const was = mk.npcs.outfit.value;
+    mk.npcs.outfit.value = String(part);
+    try {
+      edit.sel.npcs = { num, label, objType: 16, aid: humanNpcAid(num), npcFlags: 0, qty: null };
+      return placeMob({ wx, wy });
+    } finally { mk.npcs.outfit.value = was; }
+  };
+  // One villager in every house of `homes` ([{ tiles: [[x, y], ...] }]): a free floor tile (no furniture on it, the fewest pieces
+  // around it), half of them women and half men, in clothes picked at random.
+  const stampResidents = homes => {
+    const before = edit.tool, sel = edit.sel.npcs;
+    edit.tool = 'npcs';
+    edit.painting = true; edit.stroke = new Map(); edit.objOps = []; edit.strokeSeen = new Set(); edit.skippedMob = 0; edit.problem = null;
+    const pick = a => a[Math.floor(Math.random() * a.length)];
+    const genders = homes.map((_, i) => (i % 2 ? 'male' : 'female'));
+    for (let i = genders.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [genders[i], genders[j]] = [genders[j], genders[i]]; }
+    const furniture = (x, y) => objectsAt(x, y).filter(p => p.type !== 0 && p.type !== 1).length;
+    let placed = 0;
+    try {
+      homes.forEach((h, i) => {
+        const free = (h.tiles || []).filter(([x, y]) => !furniture(x, y));
+        if (!free.length) return;
+        const crowd = ([x, y]) => { let n = 0; for (let dy = -1; dy <= 1; dy++) for (let dx = -1; dx <= 1; dx++) n += furniture(x + dx, y + dy); return n + Math.random(); };
+        free.sort((a, b) => crowd(a) - crowd(b));
+        const [x, y] = free[0];
+        if (placeDressed(humanNpcNum(genders[i], pick(RESIDENT_JOBS)), 'Villager', x, y, pick(RESIDENT_OUTFITS))) placed++;
+      });
+    } finally { endStroke(); edit.tool = before; edit.sel.npcs = sel; }
+    return placed;
+  };
+
+  // A temple (the one of Caladon, or the vine-covered one of Shrouded Hills: sec-facade-composites.js) on the open ground nearest `near`
+  // ({ x, y }), 6 tiles clear of every rectangle of `taken` ({ a, b, c, e }). Returns { box, link } - the ground it takes and the
+  // start of its path ({ ox, oy, ix, iy }: the tile in front of its steps and the one behind) - or null when no ground is big enough.
+  const stampTemple = (near, taken, open) => {
+    const vine = Math.random() < 0.5, tiles = templeTiles(vine);
+    let x0 = Infinity, x1 = -Infinity, y0 = Infinity, y1 = -Infinity;
+    for (const t of tiles) { x0 = Math.min(x0, t.dx); x1 = Math.max(x1, t.dx); y0 = Math.min(y0, t.dy); y1 = Math.max(y1, t.dy); }
+    const boxAt = (ax, ay) => ({ a: ax + x0, b: ax + x1 + 1, c: ay + y0, e: ay + y1 + 1 });
+    const apart = (r, o) => r.a - 6 >= o.b || o.a - 6 >= r.b || r.c - 6 >= o.e || o.c - 6 >= r.e;
+    const cands = [];
+    for (let ay = 6 - y0; ay + y1 <= mapH - 8; ay += 4) for (let ax = 6 - x0; ax + x1 <= mapW - 8; ax += 4) {
+      const b = boxAt(ax, ay);
+      cands.push({ ax, ay, d: Math.hypot((b.a + b.b) / 2 - near.x, (b.c + b.e) / 2 - near.y) });
+    }
+    cands.sort((p, q) => p.d - q.d);
+    const site = cands.find(c => { const b = boxAt(c.ax, c.ay); return taken.every(o => apart(b, o)) && open(b.a - 2, b.b + 2, b.c - 2, b.e + 2); });
+    if (!site) return null;
+    const before = edit.tool;
+    edit.painting = true; edit.stroke = new Map(); edit.objOps = []; edit.strokeSeen = new Set(); edit.skippedMob = 0; edit.problem = null;
+    try { for (const t of tiles) stampTile(site.ax + t.dx, site.ay + t.dy, secMakeFacadeRaw(t.num, t.frame, 0, TEMPLE_KEEP)); }
+    finally { endStroke(); edit.tool = before; }
+    const f = TEMPLE_FRONT;
+    return { vine, box: boxAt(site.ax, site.ay), anchor: { x: site.ax, y: site.ay }, link: { ox: site.ax + f.ox, oy: site.ay + f.oy, ix: site.ax + f.ix, iy: site.ay + f.iy } };
+  };
+
+  // One guard for every five people of the town, each on a patrol over a stretch of the village paths `laid` ([x, y, x, y, ...]):
+  // an NPC of the Human Guard prototype, dressed and armed like the guards of the towns of Arcanum (town-guards.js).
+  const stampGuards = async (laid, people) => {
+    const tiles = [];
+    for (let i = 0; i < laid.length; i += 2) tiles.push([laid[i], laid[i + 1]]);
+    const routes = planPatrols(tiles, guardCount(people)), tier = GUARD_TIERS[guardTier(people)];
+    const entry = (type, num) => secProtoCatalog.byType[type]?.find(e => e.num === num);
+    const flagsOf = async e => Number((await decodeProtoForSearch(e.filename, e.relPath)).fields.find(f => f.field === 19 && f.available)?.value) | 0;
+    const gEntry = entry(16, GUARD_PROTO), armor = entry(7, tier.armor), weapon = entry(5, tier.weapon), pack = tier.pack.map(n => entry(9, n));
+    if (!routes.length || !gEntry || !armor || !weapon || pack.some(e => !e)) return 0;
+    const proto = await decodeProtoForSearch(gEntry.filename, gEntry.relPath);
+    const kit = [{ objType: 7, num: armor.num, slot: 1006, flags: await flagsOf(armor) }, { objType: 5, num: weapon.num, slot: 1004, flags: await flagsOf(weapon) }];
+    for (const [i, e] of pack.entries()) kit.push({ objType: 9, num: e.num, slot: i, flags: await flagsOf(e) });
+    const before = edit.tool, sel = edit.sel.npcs, outfit = mk.npcs.outfit.value;
+    edit.tool = 'npcs';
+    edit.painting = true; edit.stroke = new Map(); edit.objOps = []; edit.strokeSeen = new Set(); edit.skippedMob = 0; edit.problem = null;
+    let placed = 0;
+    try {
+      mk.npcs.outfit.value = String(tier.part);   // drawn in the armor he wears
+      for (const route of routes) {
+        edit.sel.npcs = { num: GUARD_PROTO, label: 'Human Guard', objType: 16, aid: GUARD_AID, npcFlags: 0, qty: null };
+        if (!placeMob({ wx: route[0][0], wy: route[0][1] })) continue;
+        const m = edit.newMobs[edit.newMobs.length - 1];
+        const locs = route.map(([x, y]) => locationFor(sectorAtWorld(x, y).sec, x & 63, y & 63));
+        const level = guardLevel(people), aid = (GUARD_AID & ~((0xF << 20) | (1 << 19))) | (tier.part << 20);
+        const dressed = dressGuard(m.bytes, { proto, level, aid, route: locs, items: kit });
+        m.bytes = dressed.bytes;
+        // the Special tiles layer draws the patrol: the point hydrated from the plain NPC knows nothing of it
+        const abs = route.map(([x, y]) => { const s = sectorAtWorld(x, y).sec; return { x: Number(s.position.x) * 64 + (x & 63), y: Number(s.position.y) * 64 + (y & 63) }; });
+        m.pt.__motion = m.pt.motion = { flags: 6, waypoints: abs, current: 0, standDay: abs[0], standNight: abs[0], speed: 8 };
+        for (const k of dressed.kids) { k.owner = m.name; edit.kidMobs.push(k); registerInventoryItem(decodeMobBuffer(k.bytes.slice().buffer, k.name)); }
+        placed++;
+      }
+    } finally { mk.npcs.outfit.value = outfit; endStroke(); edit.tool = before; edit.sel.npcs = sel; }
+    return placed;
+  };
+
+  const buildTown = async () => {
+    try {
+      status.textContent = 'Building a town…';
+      await objectsReady(); await protoCatalogReady();
+      const cache = new Map();
+      const open = (a, b, c, e) => {
+        for (let y = c; y < e; y += 4) for (let x = a; x < b; x += 4) {
+          const k = (y >> 2) * mapW + (x >> 2);
+          let v = cache.get(k); if (v === undefined) cache.set(k, v = groundOpenAt(x, y));
+          if (!v) return false;
+        }
+        return true;
+      };
+      const wantTown = opts.town || opts.townStation;
+      const town = wantTown ? planTown({ rand: Math.random, mapW, mapH, open, count: opts.town ? townHouseCount(opts.town) : 0, station: opts.townStation ? [STATION_W, STATION_H] : null }) : null;
+      const noTown = 'No open ground big enough for a town: paint some grassland first.';
+      if (wantTown && !town && !opts.docks) { status.textContent = noTown; return; }
+      const before = { tool: edit.tool, kind: edit.genKind }, built = [], rects = town ? town.rects : [];
+      edit.tool = 'generate';
+      // one wall style for the whole town, from the terrain it stands on
+      const style = town ? townWallStyle(opts.townTerrain?.(minX + (Math.round(town.cx) >> 6), minY + (Math.round(town.cy) >> 6))) : 0;
+      const place = r => {
+        edit.genKind = r.kind; edit.lastHouse = null;
+        edit.wallDrag = { i0: r.a, j0: r.c, i1: r.b, j1: r.e, sx: 0, sy: 0 };
+        edit.painting = true; edit.stroke = new Map(); edit.objOps = []; edit.strokeSeen = new Set(); edit.skippedMob = 0; edit.problem = null;
+        endStroke();
+      };
+      // one house of the Generate tool in rect `r` with wall style `style` (Auto when the game has none of that kind with those walls)
+      const makeHouse = (r, style) => {
+        gen.kinds.find(b => b.dataset.kind === r.kind)?.click();   // fills the list of walls (Auto)
+        if (!gen.style.querySelector(`option[value="${style}"]`)) gen.style.add(new Option(HOUSE_STYLES[style].name, style));
+        gen.style.value = String(style);
+        place(r);
+        if (!edit.lastHouse) { gen.style.value = 'auto'; place(r); }
+        return edit.lastHouse ? edit.lastHouse.house : null;
+      };
+      let station = false;
+      const homes = [], avoid = [], links = [];
+      edit.pathAvoid = avoid; edit.pathOpen = [];
+      try {
+        let n = 0;
+        for (const r of rects) {
+          if (opts.onStage) { opts.onStage('Building the town', n++, rects.length + (opts.docks ? 1 : 0)); await nextFrame(); }   // let the bar paint
+          if (r.kind === 'station') {
+            station = stampStation(r.a, r.c, r.rail);
+            if (station) {
+              // paths keep off the platform and the track; one runs from the ticket office's door (7, 13 of the template, opening on the
+              // platform) to the village, over the two platform tiles in front of it
+              avoid.push({ a: r.a, b: r.b, c: r.c, e: r.e });
+              if (r.rail) avoid.push(r.rail.box);
+              edit.pathOpen.push([r.a + STATION_DOOR[0], r.c + STATION_DOOR[1] + 1], [r.a + STATION_DOOR[0], r.c + STATION_DOOR[1] + 2]);
+              const ox = r.a + STATION_DOOR[0], oy = r.c + STATION_DOOR[1] + 1;
+              links.push({ ox, oy, ix: ox, iy: oy - 1 });
+            }
+            continue;
+          }
+          const h = makeHouse(r, style); if (h) { built.push(h); homes.push({ tiles: edit.lastHouse.tiles }); }
+        }
+      } finally { edit.tool = before.tool; edit.genKind = before.kind; }
+      // the temple goes up on open ground near the town (the middle of the map without one), its steps joined to the village by a path
+      let temple = null, templeText = '';
+      if (opts.temple) {
+        const taken = rects.map(r => ({ a: r.a, b: r.b, c: r.c, e: r.e })).concat(avoid);
+        temple = stampTemple(town ? { x: town.cx, y: town.cy } : { x: mapW / 2, y: mapH / 2 }, taken, open);
+        edit.templeSite = temple;
+        if (temple) { avoid.push(temple.box); links.push(temple.link); templeText = ` · a ${temple.vine ? 'vine-covered ' : ''}temple`; }
+        else templeText = ' · no room for the temple';
+      }
+      const note = built.length + links.length > 1 ? joinHouses(built, links) : '';
+      let guardNote = '';
+      if (opts.town && /^\d+ path tiles/.test(note) && edit.pathLaid?.length) {
+        const g = await stampGuards(edit.pathLaid.slice(), opts.town);
+        if (g) guardNote = ` · ${g} guard${g === 1 ? '' : 's'} on patrol`;
+      }
+      if (opts.town && homes.length) {
+        const r = stampResidents(homes);
+        if (r) guardNote += ` · ${r} villager${r === 1 ? '' : 's'} at home`;
+      }
+      const stationNote =opts.townStation ? (station ? ' · with a train station' : ' · no room for the train station') : '';
+      const townText = !wantTown ? '' : !town ? noTown
+        : `A town of ${built.length} building${built.length === 1 ? '' : 's'}${opts.town ? ` for about ${opts.town} people` : ''}${note ? ` · ${note}` : ''}${guardNote}${stationNote}`;
+      // the docks go in last, on the shore nearest the town (the middle of the map without one)
+      let docksText = '', site = null;
+      if (opts.docks) {
+        if (opts.onStage) { opts.onStage('Building the town', rects.length, rects.length + 1); await nextFrame(); }
+        site = planDocks({ rand: Math.random, mapW, mapH, boats: opts.docks.boats, cell: dockCell, near: town ? { x: town.cx, y: town.cy } : { x: mapW / 2, y: mapH / 2 } });
+        edit.docksSite = site;
+        if (site && stampDocks(site)) {
+          const n = site.piers.length;
+          docksText = `docks with ${site.boats} boat${site.boats === 1 ? '' : 's'} on ${n} pier${n === 1 ? '' : 's'}${site.boats < opts.docks.boats ? ` (the sea has room for ${site.boats} of the ${opts.docks.boats})` : ''}`;
+          // two wooden sheds on the land by each pier, like the dockside buildings of Dernholm
+          const shacks = [], taken = site.piers.map(p => p.box).concat(rects.map(r => ({ x0: r.a, y0: r.c, x1: r.b, y1: r.e })), temple ? [{ x0: temple.box.a, y0: temple.box.c, x1: temple.box.b, y1: temple.box.e }] : []);
+          const apart = (r, o, g) => r.a - g >= o.x1 || o.x0 - g >= r.b || r.c - g >= o.y1 || o.y0 - g >= r.e;
+          const freeGround = r => { for (let y = r.c - 2; y < r.e + 2; y += 2) for (let x = r.a - 2; x < r.b + 2; x += 2) if (!groundOpenAt(x, y)) return false; return true; };
+          const picks = [];
+          for (const p of site.piers) {
+            const l = p.link, cands = [];
+            for (let dy = -28; dy <= 28; dy += 4) for (let dx = -28; dx <= 28; dx += 4) {
+              const a = 4 * Math.round((l.ox + dx - 4) / 4) + 2, c = 4 * Math.round((l.oy + dy - 4) / 4) + 2, r = { kind: 'home', a, b: a + 9, c, e: c + 9 };
+              const d = Math.hypot(a + 4.5 - l.ox, c + 4.5 - l.oy);
+              if (d >= 9 && d <= 30 && r.a >= 2 && r.c >= 2 && r.b <= mapW - 4 && r.e <= mapH - 4 && !(l.ox >= a - 2 && l.ox < r.b + 2 && l.oy >= c - 2 && l.oy < r.e + 2)) cands.push({ r, d: d * (0.8 + 0.4 * Math.random()) });
+            }
+            cands.sort((u, v) => u.d - v.d);
+            let n = 0;
+            for (const { r } of cands) {
+              if (n >= 1) break;
+              if (!taken.every(o => apart(r, o, 4)) || !freeGround(r)) continue;
+              picks.push(r); taken.push({ x0: r.a, y0: r.c, x1: r.b, y1: r.e }); n++;
+            }
+          }
+          const was = { tool: edit.tool, kind: edit.genKind };
+          edit.tool = 'generate';
+          try { for (const r of picks) { const h = makeHouse(r, 14); if (h) shacks.push(h); } } finally { edit.tool = was.tool; edit.genKind = was.kind; }
+          if (shacks.length) docksText += ` · ${shacks.length} dockside shed${shacks.length === 1 ? '' : 's'}`;
+          // the piers are joined to the village: a path from them to the house nearest to the first one, and to the sheds
+          if (built.length || shacks.length) {
+            const l = site.piers[0].link, d = r => Math.hypot((r.a + r.b) / 2 - l.ox, (r.c + r.e) / 2 - l.oy);
+            const pathNote = joinHouses((built.length ? [built.reduce((p, q) => d(q) < d(p) ? q : p)] : []).concat(shacks), site.piers.map(p => p.link).concat(!built.length && temple ? [temple.link] : []));
+            docksText += /^\d+ path tiles/.test(pathNote) ? (built.length ? ' · joined to the village by a path' : ' · joined by a path') : ' · no path to the village could be laid';
+          }
+        } else docksText = 'no room for the docks: they need a beach with open sea beside it';
+      }
+      edit.pathAvoid = edit.pathOpen = null;
+      status.textContent = [townText, templeText.replace(/^ · /, ''), docksText].filter(Boolean).join(' · ');
+      const wx =Math.round(town ? town.cx : site ? site.at.x : mapW / 2), wy = Math.round(town ? town.cy : site ? site.at.y + 20 : mapH / 2);
+      goToPlace({ sectorX: minX + (wx >> 6), sectorY: minY + (wy >> 6), tileX: wx & 63, tileY: wy & 63, name: town ? 'Town' : 'Docks', x: minX * 64 + wx, y: minY * 64 + wy, zoomTo: 1 });
+    } catch (err) { edit.pathAvoid = edit.pathOpen = null; status.textContent = `Could not build the town: ${errText(err)}`; }
+  };
+
+  // The player's start in a generated world: the open tile nearest the middle of the map, with nothing built within two
+  // tiles of it (no house, wall, fence or path-side object), saved as startloc.txt.
+  const placeStart = async () => {
+    await objectsReady();
+    const cx = Math.round(mapW / 2), cy = Math.round(mapH / 2), maxR = Math.max(mapW, mapH) >> 1;
+    const free = (x, y) => {
+      for (let dy = -2; dy <= 2; dy++) for (let dx = -2; dx <= 2; dx++) if (!groundOpenAt(x + dx, y + dy)) return false;
+      for (let dy = -2; dy <= 2; dy++) for (let dx = -2; dx <= 2; dx++) if (objectsAt(x + dx, y + dy).length) return false;
+      return true;
+    };
+    for (let r = 0; r <= maxR; r++) {
+      let best = null;
+      for (let dy = -r; dy <= r; dy++) for (let dx = -r; dx <= r; dx++) {
+        if (Math.max(Math.abs(dx), Math.abs(dy)) !== r) continue;
+        const d = dx * dx + dy * dy;
+        if ((!best || d < best.d) && free(cx + dx, cy + dy)) best = { x: cx + dx, y: cy + dy, d };
+      }
+      if (best) { extra.setStart(best.x, best.y); edit.startAt = best; return best; }
+    }
+    return null;
   };
 
   const enterEdit = async () => {
@@ -3316,7 +3739,7 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
       loadMobDataAtZoom().then(() => redraw()).catch(() => {});
       zoom100(); fitToolLabels();
       await setTool(toolPref.get(groupOf(edit.tool)) || edit.tool);   // a button that holds two tools starts with the one it shows
-      loadAllSectorsForEdit().catch(err => { status.textContent = `Edit mode · ${errText(err)}`; });
+      edit.sectorsDone = loadAllSectorsForEdit().catch(err => { status.textContent = `Edit mode · ${errText(err)}`; });
     } finally { editBtn.disabled = false; }
   };
   const exitEdit = () => {
@@ -3346,9 +3769,17 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
     document.body.appendChild(a); a.click(); a.remove();
     setTimeout(() => URL.revokeObjectURL(a.href), 10000);
   };
-  exportSecBtn.addEventListener('click', async () => {
+  const MODULE_TEMPLATE = 'Module template';
+  // The module's map list starts the player on this map: {5001}{start, 2048, 2048, Type: START_MAP, WorldMap: 0}
+  const patchMapList = (bytes, name, start) => {
+    const text = Array.from(bytes, c => String.fromCharCode(c)).join('');
+    const out = text.replace(/\{5001\}\{[^,}]*,\s*\d+,\s*\d+,/, `{5001}{${name}, ${start.x}, ${start.y},`);
+    return Uint8Array.from(out, c => c.charCodeAt(0));
+  };
+  const exportFiles = async asModule => {
     const changed = [...dirtySectors().values()], mobs = mobFiles(), mapFiles = extra ? extra.mapFiles() : [], hasStory = storyFileCount(edit.story) > 0 || mapFiles.length > 0;
     if (!changed.length && !mobs.length && !hasStory) return;
+    setExportMenu(false);
     exportSecBtn.disabled = true;
     try {
       status.textContent = 'Export · reading prototypes…';
@@ -3363,7 +3794,22 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
       // changes nothing they hold (secMapInfoBytes patches an existing mapinfo.txt once something does).
       if (opts.extraFiles) files.push(...await opts.extraFiles());
       const kind = mobs.length || hasStory ? 'files' : 'sectors';
-      if (files.length === 1 && !files[0].name.includes('/')) {
+      if (asModule) {
+        // the whole Module template folder, with this map in maps/<name>/ and the module named after the map
+        const name = String(opts.mapName || folderName || 'map');
+        status.textContent = 'Export module · reading the module template…';
+        const list = await (await fetch(`${INDEX_ROOT}files/module_template_files.json`)).json();
+        const out = new Map();
+        await Promise.all(list.map(async p => out.set(p, await fetchDataBytes(`${MODULE_TEMPLATE}/${p}`))));
+        // map files sit beside the sectors; dialogs, scripts and the logbook have their folder in the name already
+        for (const f of files) out.set(f.name.includes('/') ? f.name : `maps/${name}/${f.name}`, f.bytes);
+        if (mapData.start && out.has('Rules/MapList.mes')) out.set('Rules/MapList.mes', patchMapList(out.get('Rules/MapList.mes'), name, mapData.start));
+        await loadJSZip();
+        const zip = new window.JSZip();
+        for (const [p, bytes] of out) zip.file(`${name}/${p}`, bytes);
+        saveBlob(await zip.generateAsync({ type: 'blob', compression: 'DEFLATE' }), `${name}.zip`);
+        status.textContent = `Exported the module "${name}" as a .zip: ${out.size} files, the map in maps/${name}/`;
+      } else if (files.length === 1 && !files[0].name.includes('/')) {
         saveBlob(new Blob([files[0].bytes], { type: 'application/octet-stream' }), files[0].name);
         status.textContent = `Exported ${files[0].name}`;
       } else if (await loadJSZip().then(() => true, () => false)) {
@@ -3371,7 +3817,7 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
         for (const f of files) zip.file(f.name, f.bytes);
         const folder = String(relativePath || '').split('/').filter(Boolean).pop() || 'map';
         const onlyStory = hasStory && !changed.length && !mobs.length;
-        saveBlob(await zip.generateAsync({ type: 'blob' }), opts.virtual ? 'new_world_sec.zip' : onlyStory ? (storyFileCount(edit.story) > 0 ? 'dialogs_and_quests.zip' : `${folder}_map_files.zip`) : `${folder}_edited_sec.zip`);
+        saveBlob(await zip.generateAsync({ type: 'blob' }), opts.virtual ? `${opts.mapName ? opts.mapName.replace(/ /g, '_') : 'new_world'}_sec.zip` : onlyStory ? (storyFileCount(edit.story) > 0 ? 'dialogs_and_quests.zip' : `${folder}_map_files.zip`) : `${folder}_edited_sec.zip`);
         status.textContent = `Exported ${files.length} altered ${kind} as a .zip`;
       } else {
         for (const f of files) { saveBlob(new Blob([f.bytes], { type: 'application/octet-stream' }), f.name.replace(/^.*\//, '')); await new Promise(r => setTimeout(r, 250)); }
@@ -3387,18 +3833,40 @@ export async function renderSecFolderMap(relativePath, folderName, sectors, focu
     } catch (err) {
       status.textContent = `Export failed: ${errText(err)}`;
     } finally { refreshEditUi(); }
-  });
+  };
+  exportItems.files.addEventListener('click', () => exportFiles(false));
+  exportItems.module.addEventListener('click', () => exportFiles(true));
 
   const ro=new ResizeObserver(()=>{ if(!view.initialized) fitView(); else redraw(); }); ro.observe(stage);
   requestAnimationFrame(fitView);
   if (opts.virtual) edit.unsaved = true;   // leaving a world that was never exported asks first
-  if (opts.startEditing || editorRequested()) setTimeout(() => { enterEdit().catch(err => { status.textContent = `Edit mode · ${errText(err)}`; }); }, 0);   // a reload of a link with &editor=on
+  // (a reload of a link with &editor=on). A new world reports its stages through opts.onStage(text, done, total) and is told
+  // with opts.onReady() when the editor, every sector and the town are in place, so the page can show it all at once.
+  if (opts.startEditing || editorRequested()) setTimeout(async () => {
+    try {
+      opts.onStage?.('Opening the editor', 0, 1);
+      await enterEdit();
+      await edit.sectorsDone;
+      if (opts.town || opts.townStation || opts.docks || opts.temple) await buildTown();
+      if (opts.newWorld) await placeStart();
+      opts.onStage?.('Drawing the map', 0, 1);
+      await nextFrame(); await nextFrame();
+    } catch (err) { status.textContent = `Edit mode · ${errText(err)}`; }
+    finally { opts.onReady?.(); }
+  }, 0);
   // For scripts (browser tests): where a map tile is on the screen, what stands on it, and the editor's state.
   article.editBench = {
     screenOf: (wx, wy) => { const p = tileCentre(wx, wy), r = canvas.getBoundingClientRect(); return { x: r.left + p.x, y: r.top + p.y }; },
     objectsAt: (wx, wy) => mobPoints.filter(p => p.staticSecObject && wxOf(p) === wx && wyOf(p) === wy)
       .map(p => ({ type: p.type, proto: p.__obj ? mobOidTypeAndNumber(p.__obj.protoOid)?.number : null, aid: Number(p.currentAidRaw) >>> 0 })),
     sectorOrigin: () => ({ minX, minY, mapW, mapH }),
+    docks: () => edit.docksSite || null,
+    temple: () => edit.templeSite || null,
+    motions: () => mobPoints.filter(p => p.motion?.waypoints?.length).map(p => ({ file: p.file, wps: p.motion.waypoints.map(w => [w.x - minX * 64, w.y - minY * 64]) })),
+    tool: () => edit.tool,
+    pathLaid: () => Array.from(edit.pathLaid || []),
+    statusText: () => status.textContent,
+    tileRaw: (wx, wy) => { const at = sectorAtWorld(wx, wy); return at ? at.sec.decoded.tiles[at.idx] >>> 0 : null; },
     newMobs: () => edit.newMobs.map(m => ({ name: m.name, size: m.bytes.length, type: m.pt.type, proto: m.pt.protoNum, wx: wxOf(m.pt), wy: wyOf(m.pt), offset: [m.pt.offsetX, m.pt.offsetY], hasArt: !!m.pt.artCanvas })),
     newMobBytes: () => edit.newMobs.map(m => ({ name: m.name, bytes: Array.from(m.bytes) })),
     pickMob: (kind, num) => { const it = mobCatalog(kind).find(i => i.num === num); if (it) selectMob(kind, it); return !!it; },

@@ -13,6 +13,7 @@
 // ScriptAction    = { int type; uint8 op_type[8]; int op_value[8] }  0x2C bytes
 
 import { SCR_ACTIONS, SCR_CONDITIONS, SCR_FLAG_BITS } from './scr-schema.js';
+import { sniffCodepage } from '../core/text-io.js';
 
 export const SCR_HEADER_SIZE = 0x40;
 export const SCR_ENTRY_SIZE = 0x84;
@@ -25,14 +26,14 @@ function readAction(view, bytes, o) {
   return { type: view.getInt32(o, true), opType, opValue };
 }
 
-export function decodeScrBuffer(buf, filename = '') {
+export function decodeScrBuffer(buf, filename = '', { sniff = false } = {}) {
   const bytes = new Uint8Array(buf);
   const view = new DataView(buf);
   if (bytes.length < SCR_HEADER_SIZE) throw new Error(`file is too small to be a .scr (${bytes.length} bytes)`);
 
   const descEnd = bytes.indexOf(0, 8);
   const descBytes = bytes.subarray(8, descEnd >= 8 && descEnd < 48 ? descEnd : 48);
-  const description = new TextDecoder('windows-1252').decode(descBytes);
+  const description = new TextDecoder(sniff ? sniffCodepage(descBytes) : 'windows-1252').decode(descBytes);   // (sniff: read-only callers, a Russian module's header is windows-1251)
   const numEntries = view.getInt32(0x34, true);
   const warnings = [];
   if (numEntries < 0) throw new Error(`invalid entry count ${numEntries}`);

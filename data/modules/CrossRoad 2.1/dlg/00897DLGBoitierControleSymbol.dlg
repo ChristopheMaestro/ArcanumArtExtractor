@@ -1,0 +1,141 @@
+{1}{[Le boîtier de contrôle possède quatre interrupteurs : un noir, un blanc, un vert et un violet. Sur lequel voulez-vous appuyez ?]}{[Le boîtier de contrôle possède quatre interrupteurs : un noir, un blanc, un vert et un violet. Sur lequel voulez-vous appuyez ?]}{}{}{}{}
+{2}{[Le violet]}{}{1}{}{10}{lf0 1}
+{3}{[Le vert]}{}{1}{}{100}{lf1 1}
+{4}{[Le blanc]}{}{1}{}{200}{lf2 1}
+{5}{[Le noir]}{}{1}{}{300}{lf3 1}
+{6}{[Partir]}{}{1}{}{0}{}
+
+{10}{[Vous pressez le bouton violet qui s'enfonce dans la machine, souhaitez-vous appuyer sur un autre bouton ?]}{[Vous pressez le bouton violet qui s'enfonce dans la machine, souhaitez-vous appuyer sur un autre bouton ?]}{}{}{}{}
+{11}{[Le violet]}{}{1}{lf0 0, lf1 1, lf2 0, lf3 0}{10}{lf0 1}
+{12}{[Le violet]}{}{1}{lf0 0, lf1 0, lf2 1, lf3 0}{10}{lf0 1}
+{13}{[Le violet]}{}{1}{lf0 0, lf1 0, lf2 0, lf3 1}{10}{lf0 1}
+{14}{[Le violet]}{}{1}{lf0 0, lf1 1, lf2 1, lf3 0}{10}{lf0 1}
+{15}{[Le violet]}{}{1}{lf0 0, lf1 1, lf2 0, lf3 1}{10}{lf0 1}
+{16}{[Le violet]}{}{1}{lf0 0, lf1 0, lf2 1, lf3 1}{10}{lf0 1}
+{17}{[Le violet]}{}{1}{lf0 0, lf1 1, lf2 1, lf3 1}{50}{lf0 1}
+{18}{[Le vert]}{}{1}{lf1 0, lf0 1, lf2 0, lf3 0}{100}{lf1 1, lf4 1}
+{19}{[Le vert]}{}{1}{lf1 0, lf0 0, lf2 1, lf3 0}{100}{lf1 1}
+{20}{[Le vert]}{}{1}{lf1 0, lf0 0, lf2 0, lf3 1}{100}{lf1 1}
+{21}{[Le vert]}{}{1}{lf1 0, lf0 1, lf2 1, lf3 0}{100}{lf1 1}
+{22}{[Le vert]}{}{1}{lf1 0, lf0 1, lf2 0, lf3 1}{100}{lf1 1}
+{23}{[Le vert]}{}{1}{lf1 0, lf0 0, lf2 1, lf3 1}{100}{lf1 1}
+{24}{[Le vert]}{}{1}{lf1 0, lf0 1, lf2 1, lf3 1}{50}{lf1 1}
+{25}{[Le blanc]}{}{1}{lf2 0, lf1 1, lf0 0, lf3 0}{200}{lf2 1}
+{26}{[Le blanc]}{}{1}{lf2 0, lf1 0, lf0 1, lf3 0}{200}{lf2 1}
+{27}{[Le blanc]}{}{1}{lf2 0, lf1 0, lf0 0, lf3 1}{200}{lf2 1}
+{28}{[Le blanc]}{}{1}{lf2 0, lf1 1, lf0 1, lf3 0}{200}{lf2 1}
+{29}{[Le blanc]}{}{1}{lf2 0, lf1 1, lf0 0, lf3 1}{200}{lf2 1}
+{30}{[Le blanc]}{}{1}{lf2 0, lf1 0, lf0 1, lf3 1}{200}{lf2 1}
+{31}{[Le blanc]}{}{1}{lf2 0, lf1 1, lf0 1, lf3 1}{50}{lf2 1}
+{32}{[Le noir]}{}{1}{lf3 0, lf1 1, lf2 0, lf0 0}{300}{lf3 1}
+{33}{[Le noir]}{}{1}{lf3 0, lf1 0, lf2 1, lf0 0}{300}{lf3 1}
+{34}{[Le noir]}{}{1}{lf3 0, lf1 0, lf2 0, lf0 1}{300}{lf3 1}
+{35}{[Le noir]}{}{1}{lf3 0, lf1 1, lf2 1, lf0 0}{300}{lf3 1}
+{36}{[Le noir]}{}{1}{lf3 0, lf1 1, lf2 0, lf0 1}{300}{lf3 1}
+{37}{[Le noir]}{}{1}{lf3 0, lf1 0, lf2 1, lf0 1}{300}{lf3 1}
+{38}{[Le noir]}{}{1}{lf3 0, lf1 1, lf2 1, lf0 1}{50}{lf3 1}
+{39}{[Réinitialiser les boutons et partir]}{}{1}{}{0}{lf0 0, lf1 0, lf2 0, lf3 0, lf4 0, lf5 0}
+
+{50}{[La combinaison semble ne pas être la bonne, les boutons sortent tous de leurs orifices. Voulez-vous appuyer sur un bouton ?]}{[La combinaison semble ne pas être la bonne, les boutons sortent tous de leurs orifices. Voulez-vous appuyer sur un bouton ?]}{}{}{}{lf0 0, lf1 0, lf2 0, lf3 0, lf4 0, lf5 0}
+{51}{[Le violet]}{}{1}{}{10}{lf0 1}
+{52}{[Le vert]}{}{1}{}{100}{lf1 1}
+{53}{[Le blanc]}{}{1}{}{200}{lf2 1}
+{54}{[Le noir]}{}{1}{}{300}{lf3 1}
+{55}{[Partir]}{}{1}{}{0}{}
+
+{100}{[Vous pressez le bouton vert qui s'enfonce dans la machine, souhaitez-vous appuyer sur un autre bouton ?]}{[Vous pressez le bouton vert qui s'enfonce dans la machine, souhaitez-vous appuyer sur un autre bouton ?]}{}{}{}{}
+{101}{[Le violet]}{}{1}{lf0 0, lf1 1, lf2 0, lf3 0}{10}{lf0 1}
+{102}{[Le violet]}{}{1}{lf0 0, lf1 0, lf2 1, lf3 0}{10}{lf0 1}
+{103}{[Le violet]}{}{1}{lf0 0, lf1 0, lf2 0, lf3 1}{10}{lf0 1}
+{104}{[Le violet]}{}{1}{lf0 0, lf1 1, lf2 1, lf3 0}{10}{lf0 1}
+{105}{[Le violet]}{}{1}{lf0 0, lf1 1, lf2 0, lf3 1}{10}{lf0 1}
+{106}{[Le violet]}{}{1}{lf0 0, lf1 0, lf2 1, lf3 1}{10}{lf0 1}
+{107}{[Le violet]}{}{1}{lf0 0, lf1 1, lf2 1, lf3 1}{50}{lf0 1}
+{108}{[Le vert]}{}{1}{lf1 0, lf0 1, lf2 0, lf3 0}{100}{lf1 1}
+{109}{[Le vert]}{}{1}{lf1 0, lf0 0, lf2 1, lf3 0}{100}{lf1 1}
+{110}{[Le vert]}{}{1}{lf1 0, lf0 0, lf2 0, lf3 1}{100}{lf1 1}
+{111}{[Le vert]}{}{1}{lf1 0, lf0 1, lf2 1, lf3 0}{100}{lf1 1}
+{112}{[Le vert]}{}{1}{lf1 0, lf0 1, lf2 0, lf3 1}{100}{lf1 1}
+{113}{[Le vert]}{}{1}{lf1 0, lf0 0, lf2 1, lf3 1}{100}{lf1 1}
+{114}{[Le vert]}{}{1}{lf1 0, lf0 1, lf2 1, lf3 1}{50}{lf1 1}
+{115}{[Le blanc]}{}{1}{lf2 0, lf1 1, lf0 0, lf3 0}{200}{lf2 1}
+{116}{[Le blanc]}{}{1}{lf2 0, lf1 0, lf0 1, lf3 0}{200}{lf2 1}
+{117}{[Le blanc]}{}{1}{lf2 0, lf1 0, lf0 0, lf3 1}{200}{lf2 1}
+{118}{[Le blanc]}{}{1}{lf2 0, lf1 1, lf0 1, lf3 0}{200}{lf2 1}
+{119}{[Le blanc]}{}{1}{lf2 0, lf1 1, lf0 0, lf3 1}{200}{lf2 1}
+{120}{[Le blanc]}{}{1}{lf2 0, lf1 0, lf0 1, lf3 1}{200}{lf2 1}
+{121}{[Le blanc]}{}{1}{lf2 0, lf1 1, lf0 1, lf3 1}{50}{lf2 1}
+{122}{[Le noir]}{}{1}{lf3 0, lf1 1, lf2 0, lf0 0}{300}{lf3 1}
+{123}{[Le noir]}{}{1}{lf3 0, lf1 0, lf2 1, lf0 0}{300}{lf3 1}
+{124}{[Le noir]}{}{1}{lf3 0, lf1 0, lf2 0, lf0 1}{300}{lf3 1}
+{125}{[Le noir]}{}{1}{lf3 0, lf1 1, lf2 1, lf0 0}{300}{lf3 1}
+{126}{[Le noir]}{}{1}{lf3 0, lf1 1, lf2 0, lf0 1, lf4 1}{300}{lf3 1, lf5 1}
+{127}{[Le noir]}{}{1}{lf3 0, lf1 1, lf2 0, lf0 1, lf4 0}{300}{lf3 1}
+{128}{[Le noir]}{}{1}{lf3 0, lf1 0, lf2 1, lf0 1}{300}{lf3 1}
+{129}{[Le noir]}{}{1}{lf3 0, lf1 1, lf2 1, lf0 1}{50}{lf3 1}
+{130}{[Réinitialiser les boutons et partir]}{}{1}{}{0}{lf0 0, lf1 0, lf2 0, lf3 0, lf4 0, lf5 0}
+
+{200}{[Vous pressez le bouton blanc qui s'enfonce dans la machine, souhaitez-vous appuyer sur un autre bouton ?]}{[Vous pressez le bouton blanc qui s'enfonce dans la machine, souhaitez-vous appuyer sur un autre bouton ?]}{}{}{}{}
+{201}{[Le violet]}{}{1}{lf0 0, lf1 1, lf2 0, lf3 0}{10}{lf0 1}
+{202}{[Le violet]}{}{1}{lf0 0, lf1 0, lf2 1, lf3 0}{10}{lf0 1}
+{203}{[Le violet]}{}{1}{lf0 0, lf1 0, lf2 0, lf3 1}{10}{lf0 1}
+{204}{[Le violet]}{}{1}{lf0 0, lf1 1, lf2 1, lf3 0}{10}{lf0 1}
+{205}{[Le violet]}{}{1}{lf0 0, lf1 1, lf2 0, lf3 1}{10}{lf0 1}
+{206}{[Le violet]}{}{1}{lf0 0, lf1 0, lf2 1, lf3 1}{10}{lf0 1}
+{207}{[Le violet]}{}{1}{lf0 0, lf1 1, lf2 1, lf3 1}{50}{lf0 1}
+{208}{[Le vert]}{}{1}{lf1 0, lf0 1, lf2 0, lf3 0}{100}{lf1 1}
+{209}{[Le vert]}{}{1}{lf1 0, lf0 0, lf2 1, lf3 0}{100}{lf1 1}
+{210}{[Le vert]}{}{1}{lf1 0, lf0 0, lf2 0, lf3 1}{100}{lf1 1}
+{211}{[Le vert]}{}{1}{lf1 0, lf0 1, lf2 1, lf3 0}{100}{lf1 1}
+{212}{[Le vert]}{}{1}{lf1 0, lf0 1, lf2 0, lf3 1}{100}{lf1 1}
+{213}{[Le vert]}{}{1}{lf1 0, lf0 0, lf2 1, lf3 1}{100}{lf1 1}
+{214}{[Le vert]}{}{1}{lf1 0, lf0 1, lf2 1, lf3 1}{50}{lf1 1}
+{215}{[Le blanc]}{}{1}{lf2 0, lf1 1, lf0 0, lf3 0}{200}{lf2 1}
+{216}{[Le blanc]}{}{1}{lf2 0, lf1 0, lf0 1, lf3 0}{200}{lf2 1}
+{217}{[Le blanc]}{}{1}{lf2 0, lf1 0, lf0 0, lf3 1}{200}{lf2 1}
+{218}{[Le blanc]}{}{1}{lf2 0, lf1 1, lf0 1, lf3 0}{200}{lf2 1}
+{219}{[Le blanc]}{}{1}{lf2 0, lf1 1, lf0 0, lf3 1}{200}{lf2 1}
+{220}{[Le blanc]}{}{1}{lf2 0, lf1 0, lf0 1, lf3 1}{200}{lf2 1}
+{221}{[Le blanc]}{}{1}{lf2 0, lf1 1, lf0 1, lf3 1}{50}{lf2 1}
+{222}{[Le noir]}{}{1}{lf3 0, lf1 1, lf2 0, lf0 0}{300}{lf3 1}
+{223}{[Le noir]}{}{1}{lf3 0, lf1 0, lf2 1, lf0 0}{300}{lf3 1}
+{224}{[Le noir]}{}{1}{lf3 0, lf1 0, lf2 0, lf0 1}{300}{lf3 1}
+{225}{[Le noir]}{}{1}{lf3 0, lf1 1, lf2 1, lf0 0}{300}{lf3 1}
+{226}{[Le noir]}{}{1}{lf3 0, lf1 1, lf2 0, lf0 1}{300}{lf3 1}
+{227}{[Le noir]}{}{1}{lf3 0, lf1 0, lf2 1, lf0 1}{300}{lf3 1}
+{228}{[Le noir]}{}{1}{lf3 0, lf1 1, lf2 1, lf0 1}{50}{lf3 1}
+{229}{[Réinitialiser les boutons et partir]}{}{1}{}{0}{lf0 0, lf1 0, lf2 0, lf3 0, lf4 0, lf5 0}
+
+{300}{[Vous pressez le bouton noir qui s'enfonce dans la machine, souhaitez-vous appuyer sur un autre bouton ?]}{[Vous pressez le bouton noir qui s'enfonce dans la machine, souhaitez-vous appuyer sur un autre bouton ?]}{}{}{}{}
+{301}{[Le violet]}{}{1}{lf0 0, lf1 1, lf2 0, lf3 0}{10}{lf0 1}
+{302}{[Le violet]}{}{1}{lf0 0, lf1 0, lf2 1, lf3 0}{10}{lf0 1}
+{303}{[Le violet]}{}{1}{lf0 0, lf1 0, lf2 0, lf3 1}{10}{lf0 1}
+{304}{[Le violet]}{}{1}{lf0 0, lf1 1, lf2 1, lf3 0}{10}{lf0 1}
+{305}{[Le violet]}{}{1}{lf0 0, lf1 1, lf2 0, lf3 1}{10}{lf0 1}
+{306}{[Le violet]}{}{1}{lf0 0, lf1 0, lf2 1, lf3 1}{10}{lf0 1}
+{307}{[Le violet]}{}{1}{lf0 0, lf1 1, lf2 1, lf3 1}{50}{lf0 1}
+{308}{[Le vert]}{}{1}{lf1 0, lf0 1, lf2 0, lf3 0}{100}{lf1 1}
+{309}{[Le vert]}{}{1}{lf1 0, lf0 0, lf2 1, lf3 0}{100}{lf1 1}
+{310}{[Le vert]}{}{1}{lf1 0, lf0 0, lf2 0, lf3 1}{100}{lf1 1}
+{311}{[Le vert]}{}{1}{lf1 0, lf0 1, lf2 1, lf3 0}{100}{lf1 1}
+{312}{[Le vert]}{}{1}{lf1 0, lf0 1, lf2 0, lf3 1}{100}{lf1 1}
+{313}{[Le vert]}{}{1}{lf1 0, lf0 0, lf2 1, lf3 1}{100}{lf1 1}
+{314}{[Le vert]}{}{1}{lf1 0, lf0 1, lf2 1, lf3 1}{50}{lf1 1}
+{315}{[Le blanc]}{}{1}{lf2 0, lf1 1, lf0 0, lf3 0}{200}{lf2 1}
+{316}{[Le blanc]}{}{1}{lf2 0, lf1 0, lf0 1, lf3 0}{200}{lf2 1}
+{317}{[Le blanc]}{}{1}{lf2 0, lf1 0, lf0 0, lf3 1}{200}{lf2 1}
+{318}{[Le blanc]}{}{1}{lf2 0, lf1 1, lf0 1, lf3 0}{200}{lf2 1}
+{319}{[Le blanc]}{}{1}{lf2 0, lf1 1, lf0 0, lf3 1}{200}{lf2 1}
+{320}{[Le blanc]}{}{1}{lf2 0, lf1 0, lf0 1, lf3 1}{200}{lf2 1}
+{321}{[Le blanc]}{}{1}{lf2 0, lf1 1, lf0 1, lf3 1, lf5 0}{50}{lf2 1}
+{322}{[Le blanc]}{}{1}{lf2 0, lf1 1, lf0 1, lf3 1, lf5 1}{-3}{lf2 1}
+{323}{[Le noir]}{}{1}{lf3 0, lf1 1, lf2 0, lf0 0}{300}{lf3 1}
+{324}{[Le noir]}{}{1}{lf3 0, lf1 0, lf2 1, lf0 0}{300}{lf3 1}
+{325}{[Le noir]}{}{1}{lf3 0, lf1 0, lf2 0, lf0 1}{300}{lf3 1}
+{326}{[Le noir]}{}{1}{lf3 0, lf1 1, lf2 1, lf0 0}{300}{lf3 1}
+{327}{[Le noir]}{}{1}{lf3 0, lf1 1, lf2 0, lf0 1}{300}{lf3 1}
+{328}{[Le noir]}{}{1}{lf3 0, lf1 0, lf2 1, lf0 1}{300}{lf3 1}
+{329}{[Le noir]}{}{1}{lf3 0, lf1 1, lf2 1, lf0 1}{50}{lf3 1}
+{330}{[Réinitialiser les boutons et partir]}{}{1}{}{0}{lf0 0, lf1 0, lf2 0, lf3 0, lf4 0, lf5 0}
+
+{350}{[Le courant est rétabli]}{[Le courant est rétabli]}{}{}{}{}

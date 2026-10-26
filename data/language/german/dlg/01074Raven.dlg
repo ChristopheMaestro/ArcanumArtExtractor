@@ -1,0 +1,841 @@
+{50}{G:}{G:}{}{2}{}{}
+{51}{Verzeihung, ich glaube, wir hatten noch nicht das Vergnügen ...}{}{5}{me 0, re 41}{91}{}
+{52}{Hallo, Ravena.  Habt Ihr wohl einen Moment Zeit für ein Gespräch?}{}{5}{me 1, re 41}{101}{}
+{53}{Madame!  Wir kennen einander nicht einmal!  Warum behandelt Ihr mich so?}{}{5}{me 0, re -40}{70}{}
+{54}{Ravena!  Womit bin ich Euch zu nahe getreten?}{}{5}{me 1, re -40}{70}{}
+{55}{Äh ... ich Euch nich' kennen!}{}{-4}{me 0}{825}{re -5}
+{56}{He, hübschig Mä'chen!  Ich Euch Fragens fragen?}{}{-4}{me 1}{835}{}
+{57}{E:}{}{1}{}{0}{}
+{70}{Tut mir Leid, aber ich kann Eure offensichtlichen Mängel nicht übersehen.  Bitte lasst mich einfach in Ruhe ...}{Tut mir Leid, aber ich kann Eure offensichtlichen Mängel nicht übersehen.  Bitte lasst mich einfach in Ruhe ...}{}{3}{}{}
+{71}{Hmmm.  Vielleicht wollt Ihr es Euch noch einmal überlegen, Madame?}{}{5}{ch 16}{76}{re +10}
+{72}{Bitte vergebt mir. Könntet Ihr für mich nicht eine Ausnahme machen ...?}{}{5}{}{86}{re +10}
+{73}{Ihr macht einen schrecklichen Fehler, Madame ...}{}{5}{}{81}{re -5}
+{74}{E:}{}{5}{}{0}{}
+{76}{Oh, es tut mir sehr Leid.  Ihr müsst mir vergeben ... Ihr seid ganz gewiss eine Person edlen Charakters ...}{Oh, es tut mir sehr Leid.  Ihr müsst mir vergeben ... Ihr seid ganz gewiss eine Person edlen Charakters ...}{}{4}{}{}
+{77}{Schon vergessen, Madame.  Darf ich nach Eurem Namen fragen?}{}{5}{me 0}{94}{}
+{78}{Natürlich, Ravena.  Können wir einen Moment reden?}{}{5}{me 1}{101}{}
+{79}{E:}{}{5}{}{0}{}
+{81}{Oh, meint Ihr?  Ich glaube, Ihr habt keine Ahnung, worauf Ihr Euch da einlasst ...}{Oh, meint Ihr?  Ich glaube, Ihr habt keine Ahnung, worauf Ihr Euch da einlasst ...}{}{5}{}{}
+{82}{Vielleicht habt Ihr ja Recht.  Bitte verzeiht mir ...}{}{5}{}{86}{re +10}
+{83}{Ihr habt die falsche Person bedroht, Madame ...}{}{5}{}{}{co, fl 251}
+{84}{E:}{}{5}{}{0}{}
+{86}{[Sie deutet ein Lächeln an.]  Hmmm.  Ja, ich denke, ich kann über Eure Mängel wohl vorerst hinwegsehen.  Was wünscht Ihr von mir?}{[Sie deutet ein Lächeln an.]  Hmmm.  Ja, ich denke, ich kann über Eure Mängel wohl vorerst hinwegsehen.  Was wünscht Ihr von mir?}{}{6}{}{}
+{87}{Dürfte ich nach Eurem Namen fragen, Madame?}{}{5}{me 0}{94}{}
+{88}{Habt Ihr wohl einen Moment Zeit für ein Gespräch, Ravena?}{}{5}{me 1}{101}{}
+{89}{E:}{}{5}{}{0}{}
+{91}{Nein ... Ihr habt Recht.  Wir sind einander nie begegnet ... [Die Elfenfrau sieht dich gleichmütig an.  Ihre Haut ist hell, fast durchscheinend, ihr Haar ein dunkles Scharlachrot, fast schwarz. Sie ist wunderschön, aber sehr ernst, abweisend.]}{Nein ... Ihr habt Recht.  Wir sind einander nie begenet ... [Die Elfenfrau sieht dich gleichmütig an.  Ihre Haut ist hell, fast durchscheinend, ihr Haar ein dunkles Scharlachrot, fast schwarz. Sie ist wunderschön, aber sehr ernst, abweisend.]}{}{7}{}{}
+{92}{Äh ... fein!  Wie lautet Euer Name, Madame?}{}{5}{}{94}{}
+{94}{Mein Name ist sehr alt und sehr lang. [Sie denkt einen Moment nach, ihre grünen Augen funkeln.] Es wäre vielleicht das Beste, wenn Ihr mich einfach "Ravena" nennen würdet.}{Mein Name ist sehr alt und sehr lang. [Sie denkt einen Moment nach, ihre grünen Augen funkeln.] Es wäre vielleicht das Beste, wenn Ihr mich einfach "Ravena" nennen würdet.}{}{8}{}{}
+{95}{Interessant.  Habt Ihr wohl einen Moment Zeit?}{}{5}{}{97}{}
+{97}{Natürlich.}{Natürlich.}{}{9}{}{}
+{98}{Ich würde Euch gern ein paar Fragen stellen ...}{}{5}{}{101}{}
+{101}{Sicher.  Wie darf ich Euch behilflich sein?}{Sicher.  Wie darf ich Euch behilflich sein?}{}{10}{}{}
+{102}{Ich muss mit der Silberfürstin sprechen ...}{}{5}{lf6 0, lf7 0, qb1019 1, lf11 0, lf22 0}{139}{}
+{103}{Da bin ich wieder ... habt Ihr Zeit, mit mir zu sprechen?}{}{5}{lc2 0, lf6 1, qb1019 3, lf22 0}{256}{lc2 1}
+{104}{Da bin ich wieder ... habt Ihr Zeit, mit mir zu sprechen?}{}{5}{lc2 1, lf6 1, qb1019 3, lf22 0}{256}{lc2 2}
+{105}{Da bin ich wieder ... habt Ihr Zeit, mit mir zu sprechen?}{}{5}{lc2 2, lf6 1, qb1019 3, lf22 0}{128}{}
+{106}{Da bin ich wieder ... habt Ihr Zeit, mit mir zu sprechen?}{}{5}{lc3 0, lf7 1, qb1019 3, lf22 0}{263}{lc3 1}
+{107}{Da bin ich wieder ... habt Ihr Zeit, mit mir zu sprechen?}{}{5}{lc3 1, lf7 1, qb1019 3, lf22 0}{263}{lc3 2}
+{108}{Da bin ich wieder ... habt Ihr Zeit, mit mir zu sprechen?}{}{5}{lc3 2, lf7 1, qb1019 3, lf22 0}{128}{}
+{109}{Ich habe mich den Menschen bei Falkenpein entgegengestellt ...}{}{5}{gf1071 1, gf1070 0, qu1019 2, lf14 1, lf22 0}{270}{}
+{110}{Ich habe die Menschen aus Falkenpein vertrieben ...}{}{5}{gf1070 1, lf11 0, lf14 1, lf22 0}{280}{}
+{111}{Ich habe mit Eurer Mutter darüber gesprochen, was vorgefallen ist ...}{}{5}{gf1084 1, gf1086 0, qb1046 1, lf22 0}{295}{}
+{112}{Ich würde gern noch einmal über die Visionen Eurer Mutter sprechen ...}{}{5}{qa1046 2, gf1097 0, lf22 0}{300}{}
+{113}{Ich bringe Informationen über das Dorf der Dunkelelfen ...}{}{5}{qu1020 4, lf12 1,  lf17 0, lf18 0, gf1098 0, gf2003 0, lf22 0, ss 15}{522}{}
+{114}{Ich bringe Informationen über das Dorf der Dunkelelfen ...}{}{5}{qu1020 4, lf12  0, lf17 0, lf18 0, gf1098 0, gf2003 0, lf22 0, ss 15}{516}{}
+{115}{Ich bringe Informationen über das Dorf der Dunkelelfen ...}{}{5}{qu1025 2, gf2003 1, lf22 0, ss 15}{799}{lf12 0, gf2364 0}
+{116}{Sprechen wir noch einmal über die Dunkelelfen ...}{}{5}{qu1020 4, lf17 1, lf18 0, gf1098 0, gf2003 0, lf22 0}{710}{}
+{117}{Sprechen wir noch einmal über die Dunkelelfen ...}{}{5}{qu1020 4, lf17 0, lf18 1, gf1098 0, gf2003 0, lf22 0}{721}{}
+{118}{Ich habe mit Eurer Mutter über Arronax gesprochen ...}{}{5}{gf1088 1, lf22 0, lf24 0}{735}{lf24 1}
+{119}{Ich wüsste gern, ob Ihr mit mir kommen wollt, Ravena ...}{}{5}{lf12 0, lf22 1}{796}{jo 0 762}
+{120}{Ich wüsste gern, ob Ihr mit mir kommen wollt, Ravena ...}{}{5}{lf12 1, lf22 1}{796}{jo 0 776}
+{121}{E:}{}{5}{}{0}{}
+{128}{Tut mir Leid, aber Ihr scheint keine andere Wahl zu haben, als mir zu helfen.  Wenn nicht, kann ich nicht sagen, ob Ihr meine Mutter je zu Gesicht bekommt.  Was meint Ihr?}{Tut mir Leid, aber Ihr scheint keine andere Wahl zu haben, als mir zu helfen.  Wenn nicht, kann ich nicht sagen, ob Ihr meine Mutter je zu Gesicht bekommt.  Was meint Ihr?}{}{11}{}{}
+{129}{Ich schätze, ich habe keine andere Wahl.  Was ist zu tun?}{}{5}{}{189}{}
+{130}{Das gefällt mir nicht.  Ich würde ungern mit Gewalt eindringen ...}{}{5}{}{133}{re -5}
+{131}{Also gut.  Ich würde lieber einfach gehen.  Auf Wiedersehen.}{}{5}{}{0}{}
+{133}{[Sie kneift die Augen zusammen.]  Darüber würde ich keine Witze machen, Fremdling.  Ihr wäret tot, bevor Ihr es Euch noch einmal überlegen könnt.  Also, werdet Ihr uns nun helfen oder nicht?  Wenn nicht, dann geht Ihr jetzt besser ...}{[Sie kneift die Augen zusammen.]  Darüber würde ich keine Witze machen, Fremdling.  Ihr wäret tot, bevor Ihr es Euch noch einmal überlegen könnt.  Also, werdet Ihr uns nun helfen oder nicht?  Wenn nicht, dann geht Ihr jetzt besser ...}{}{12}{}{}
+{134}{Na gut, na gut.  Was muss ich tun?}{}{5}{}{189}{}
+{135}{Ich habe die Nase von Euren Drohungen voll.  Jetzt mache ich ihnen ein Ende ...}{}{5}{}{}{co, fl 251}
+{136}{Dann werde ich jetzt gehen.  Auf Wiedersehen.}{}{5}{}{0}{}
+{139}{Die Silberfürstin?  Oh ... Ihr meint meine Mutter. [Sie kneift die Augen zusammen.]  Das ist eine stolze Bitte, die Erfüllung wird nicht leicht gewährt ...}{Die Silberfürstin?  Oh ... Ihr meint meine Mutter. [Sie kneift die Augen zusammen.]  Das ist eine stolze Bitte, die Erfüllung wird nicht leicht gewährt ...}{}{13}{}{}
+{140}{Glaubt mir, Ravena ... sie wird mit mir sprechen wollen ...}{}{5}{ra -2, ra -3}{154}{}
+{141}{Glaubt mir, Ravena ... sie wird mit mir sprechen wollen ...}{}{5}{ra 2}{149}{}
+{142}{Selbst für einen Elf?  Ich meine, ich GEHÖRE doch zu Euch ...}{}{5}{ra 3}{144}{}
+{144}{Das mag schon sein ... aber Ihr seid nicht von hier und ich bin SEHR vorsichtig, wenn es darum geht, wer zu meiner Mutter vorgelassen wird.  Sie mag zwar unsere Königin sein, doch die Tagespolitik hier in Quintarra liegt in meinen Händen ...}{Das mag schon sein ... aber Ihr seid nicht von hier und ich bin SEHR vorsichtig, wenn es darum geht, wer zu meiner Mutter vorgelassen wird.  Sie mag zwar unsere Königin sein, doch die Tagespolitik hier in Quintarra liegt in meinen Händen ...}{}{14}{}{}
+{145}{Ich verstehe.  Wie kann ich Euch von der Dringlichkeit meiner Mission überzeugen ...?}{}{5}{}{159}{}
+{146}{Vielleicht sollte sie jemand anderem das Kommando überlassen ...}{}{5}{}{241}{re -5}
+{147}{E:}{}{5}{}{0}{}
+{149}{Das mag schon sein ... aber vergebt mir, wenn ich einem fremden Zwerg den Zutritt zu meiner Mutter verwehre, nur weil er mit ihr zu sprechen wünscht.  Sie mag zwar unsere Königin sein, doch die Tagespolitik hier in Quintarra liegt in meinen Händen ...}{Das mag schon sein ... aber vergebt mir, wenn ich einem fremden Zwerg den Zutritt zu meiner Mutter verwehre, nur weil er mit ihr zu sprechen wünscht.  Sie mag zwar unsere Königin sein, doch die Tagespolitik hier in Quintarra liegt in meinen Händen ...}{}{15}{}{}
+{150}{Ich verstehe.  Wie kann ich Euch von der Dringlichkeit meiner Mission überzeugen ...?}{}{5}{}{159}{}
+{151}{Vielleicht sollte sie jemand anderem das Kommando überlassen ...}{}{5}{}{241}{re -5}
+{152}{E:}{}{5}{}{0}{}
+{154}{Und glaubt MIR, wenn ich sage, dass NIEMAND meine Mutter zu sehen bekommt, wenn ich es nicht für erforderlich halte.  Sie mag zwar unsere Königin sein, doch die Tagespolitik hier in Quintarra liegt in meinen Händen ...}{Und glaubt MIR, wenn ich sage, dass NIEMAND meine Mutter zu sehen bekommt, wenn ich es nicht für erforderlich halte.  Sie mag zwar unsere Königin sein, doch die Tagespolitik hier in Quintarra liegt in meinen Händen ...}{}{16}{}{}
+{155}{Ich verstehe.  Wie kann ich Euch von der Dringlichkeit meiner Mission überzeugen ...?}{}{5}{}{159}{}
+{156}{Vielleicht sollte sie jemand anderem das Kommando überlassen ...}{}{5}{}{241}{re -5}
+{157}{E:}{}{5}{}{0}{}
+{159}{Ihr bekommt Eure Chance.  Vergebt mir, wenn ich etwas kurz angebunden bin, aber mir geht heut viel durch den Kopf und es ist viel zu tun.  Sobald ich die dringendsten Angelegenheiten erledigt habe, spreche ich mit Euch über Eure Anliegen ...}{Ihr bekommt Eure Chance.  Vergebt mir, wenn ich etwas kurz angebunden bin, aber mir geht heute viel durch den Kopf und es ist viel zu tun.  Sobald ich die dringendsten Angelegenheiten erledigt habe, spreche ich mit Euch über Eure Anliegen ...}{}{17}{}{}
+{160}{Ich verstehe.  Vielleicht könnte ich Euch behilflich sein?}{}{5}{ra 1}{183}{}
+{161}{Ich verstehe.  Vielleicht könnte ich Euch behilflich sein?}{}{5}{ra 2}{177}{}
+{162}{Ich verstehe.  Vielleicht könnte ich Euch behilflich sein?}{}{5}{ra 3}{172}{}
+{163}{Ich verstehe.  Vielleicht könnte ich Euch behilflich sein?}{}{5}{ra -1, ra -2, ra -3}{167}{}
+{164}{Ich verstehe.  Soll ich besser später noch einmal zurückkommen?}{}{5}{}{256}{}
+{165}{E:}{}{5}{}{0}{}
+{167}{Euer Angebot ist höchst willkommen ... wir nehmen Eure Hilfe jederzeit gerne an ...}{Euer Angebot ist höchst willkommen ... wir nehmen Eure Hilfe jederzeit gerne an ...}{}{18}{}{}
+{168}{Es ist mir ein Vergnügen ... was kann ich tun?}{}{5}{}{189}{re +10}
+{169}{Vielleicht halte ich mich da vorerst besser raus.  Soll ich besser später noch einmal zurückkommen?}{}{5}{}{256}{}
+{172}{Ja, natürlich.  Es ist stets ein Vergnügen, mit einem Elfenbruder von außerhalb zu arbeiten ... Wir nehmen Eure Hilfe gern an ... [Sie lächelt strahlend.]}{Ja, natürlich.  Es ist stets ein Vergnügen, mit einer Elfenschwester von außerhalb zu arbeiten ... Wir nehmen Eure Hilfe gern an ... [Sie lächelt strahlend.]}{}{19}{}{}
+{173}{Es ist mir ein Vergnügen ... was kann ich tun?}{}{5}{}{189}{re +10}
+{174}{Vielleicht halte ich mich da vorerst besser raus.  Soll ich besser später noch einmal zurückkommen?}{}{5}{}{256}{}
+{177}{Hmmm.  Ich bin nicht sicher ... Ihr SEID doch immerhin ein Zwerg.  Ich maße mir kein Urteil über EUCH als Person an, aber Elfen und Zwerge kommen nicht immer besonders gut miteinander aus ...}{Hmmm.  Ich bin nicht sicher ... Ihr SEID doch immerhin ein Zwerg.  Ich maße mir kein Urteil über EUCH als Person an, aber Elfen und Zwerge kommen nicht immer besonders gut miteinander aus ...}{}{20}{}{}
+{178}{Im Augenblick bin ich bereit, über diese Differenzen hinwegzusehen ...}{}{5}{}{189}{re +10}
+{179}{Euer Benehmen zeigt deutlich, warum das so ist ...}{}{5}{}{236}{re -10}
+{180}{Ich glaube, ich hab es mir anders überlegt.  Soll ich besser später noch einmal zurückkommen?}{}{5}{}{256}{}
+{183}{Hmmm.  Es ist möglich ... Ihr SEID ein Mensch, und eines unserer Probleme hat mit Menschen zu tun.  Nichts für ungut, aber Euer Volk ist mir ein Rätsel ...}{Hmmm.  Es ist möglich ... Ihr SEID ein Mensch, und eines unserer Probleme hat mit Menschen zu tun.  Nichts für ungut, aber Euer Volk ist mir ein Rätsel ...}{}{21}{}{}
+{184}{Kein Problem.  Wo liegt denn das Problem ...?}{}{5}{}{189}{re +10}
+{185}{Wahrscheinlich genauso sehr ein Rätsel wie Euer schlechtes Benehmen für mich ...}{}{5}{}{236}{re -10}
+{186}{Ich glaube, ich hab es mir anders überlegt.  Soll ich besser später noch einmal zurückkommen?}{}{5}{}{256}{}
+{189}{Eine Gruppe Menschen hat etwa eine Tagesreise von hier entfernt ihr Lager aufgeschlagen. Wir wissen nicht, was sie wollen, aber wo Menschen sind, ist Ärger für gewöhnlich nicht weit.}{Eine Gruppe Menschen hat ein paar Tagesreisen von hier entfernt ihr Lager aufgeschlagen. Wir wissen nicht, was sie wollen, aber wo Menschen sind, ist Ärger für gewöhnlich nicht weit.}{}{22}{}{}
+{190}{Was soll ich tun?}{}{5}{}{194}{}
+{194}{Der Ort, an dem sie ihr Lager aufgeschlagen haben, heißt Falkenpein und ist ein heiliger Ort für die Elfen von Quintarra.  Ihr sollt herausfinden, warum die Menschen dort sind, und sie vertreiben ...}{Der Ort, an dem sie ihr Lager aufgeschlagen haben, heißt Falkenpein und ist ein heiliger Ort für die Elfen von Quintarra.  Ihr sollt herausfinden, warum die Menschen dort sind, und sie vertreiben ...}{}{23}{}{lf5 1, qu1019 1}
+{195}{Das habe ich bereits getan ...}{}{5}{gf1070 1}{280}{}
+{196}{Ich habe ein paar Fragen dazu ...}{}{5}{}{200}{}
+{197}{Ich tu's ...}{}{5}{}{227}{qu1019 2, lf14 1}
+{198}{Ich bin nicht interessiert.  Soll ich besser später noch einmal zurückkommen?}{}{5}{}{263}{}
+{200}{Natürlich ... was wollt Ihr wissen?}{Natürlich ... was wollt Ihr wissen?}{}{24}{}{}
+{201}{Falkenpein ... was für ein Ort ist das?}{}{5}{}{208}{lf1 1}
+{202}{Diese Menschen ... wie sollen sie "vertrieben" werden?}{}{5}{}{218}{lf2 1}
+{203}{Wie komme ich nach Falkenpein?}{}{5}{}{222}{lf3 1, lf4 1}
+{204}{Sonst nichts mehr.  Ich komme wieder, wenn die Aufgabe vollbracht ist.}{}{5}{qu1019 2, lf4 1}{0}{}
+{205}{Ich nehme die Aufgabe an ...}{}{5}{lf4 1}{227}{qu1019 2, lf14 1}
+{206}{Ich werde darüber nachdenken und später wiederkommen.}{}{5}{}{0}{}
+{208}{Wie ich schon sagte, Falkenpein ist heiliges Land der Elfen.  Vor vielen Jahren lebte eine Elfenkönigin, deren Name in Eurer Sprache "Falke" lautete.   Eines Tages war sie auf der Jagd und erlegte mit dem Bogen einen Hirsch.  Als sie ihn fand, lag er am Ufer eines Teichs und verblutete langsam an einer Wunde in der Flanke ...}{Wie ich schon sagte, Falkenpein ist heiliges Land der Elfen.  Vor vielen Jahren lebte eine Elfenkönigin, deren Name in Eurer Sprache "Falke" lautete.   Eines Tages war sie auf der Jagd und erlegte mit dem Bogen einen Hirsch.  Als sie ihn fand, lag er am Ufer eines Teichs und verblutete langsam an einer Wunde in der Flanke ...}{}{25}{}{}
+{209}{Was ist passiert?}{}{5}{}{211}{}
+{211}{Der Hirsch sprach zu ihr; und in ihm waren die Geister von Elfen, die zur Seele des Hirsches geworden waren, und Falke hatte mit ihrem Pfeil beide durchbohrt.   Sie waren traurig und ängstlich zugleich, da ihr Leben auch das des Hirsches war und sie mit ihm sterben würden ...}{Der Hirsch sprach zu ihr; und in ihm waren die Geister von Elfen, die zur Seele des Hirsches geworden waren, und Falke hatte mit ihrem Pfeil beide durchbohrt.   Sie waren traurig und ängstlich zugleich, da ihr Leben auch das des Hirsches war und sie mit ihm sterben würden ...}{}{26}{}{}
+{212}{Was hat Falke getan?}{}{5}{}{214}{}
+{214}{[Ravena scheint in weiter Ferne zu sein, in ihren Augen steht eine uralte Traurigkeit geschrieben.]  Sie konnte nichts tun.  Sie hielt den Kopf des Hirsches in den Armen, sang ihm Lieder und wusch seine Wunde mit ihren Tränen.  Die Pein in ihrem Herzen nahm zu, während die alten Elfenstimmen langsam verstummten, nahm so sehr zu, dass Falke schließlich mit den Geistern starb ...}{[Ravena scheint in weiter Ferne zu sein, in ihren Augen steht eine uralte Traurigkeit geschrieben.]  Sie konnte nichts tun.  Sie hielt den Kopf des Hirsches in den Armen, sang ihm Lieder und wusch seine Wunde mit ihren Tränen.  Die Pein in ihrem Herzen nahm zu, während die alten Elfenstimmen langsam verstummten, nahm so sehr zu, dass Falke schließlich mit den Geistern starb ...}{}{27}{}{}
+{215}{Das ist eine traurige Geschichte.  Noch ein paar Fragen zu dieser Sache ...}{}{5}{}{200}{}
+{216}{E:}{}{5}{}{0}{}
+{218}{Mir ist vollkommen gleichgültig, wie Ihr sie vertreibt, aber eines MÜSST Ihr wissen - UNTER GAR KEINEN UMSTÄNDEN dürft Ihr auf diesem Land Blut vergießen.  Die Geister dort fordern einen Preis, einen Preis, den Ihr auf gar keinen Fall bezahlen wollt ... versteht Ihr?  Keiner erhebe die Hand gegen den anderen ...}{Mir ist vollkommen gleichgültig, wie Ihr sie vertreibt, aber eines MÜSST Ihr wissen - UNTER GAR KEINEN UMSTÄNDEN dürft Ihr auf diesem Land Blut vergießen.  Die Geister dort fordern einen Preis, einen Preis, den Ihr auf gar keinen Fall bezahlen wollt ... versteht Ihr?  Keiner erhebe die Hand gegen den anderen ...}{}{28}{}{}
+{219}{Alles klar ... Noch ein paar Fragen zu dieser Sache ...}{}{5}{}{200}{}
+{222}{Es ist nicht weit von hier ... ich markiere den Ort auf Eurer Karte ...}{Es ist nicht weit von hier ... ich markiere den Ort auf Eurer Karte ...}{}{29}{}{mm 12}
+{223}{Vielen Dank.  Noch ein paar Fragen dazu ...}{}{5}{}{200}{}
+{224}{Danke.  Ich komme wieder, wenn die Aufgabe vollbracht ist ...}{}{5}{lf4 1}{0}{qu1019 2, lf14 1}
+{227}{Wunderbar. [Sie lächelt herzlich.]  Habt Ihr auch ganz sicher verstanden, was getan werden muss?  Ein paar Dinge müsst Ihr wissen, da sie SEHR wichtig sind ...}{Wunderbar. [Sie lächelt herzlich.]  Habt Ihr auch ganz sicher verstanden, was getan werden muss?  Ein paar Dinge müsst Ihr wissen, da sie SEHR wichtig sind ...}{}{30}{}{ru 2052}
+{228}{Wenn ich es recht bedenke, dann habe ich da ein paar Fragen ...}{}{5}{}{200}{}
+{229}{Ich denke, Ihr habt mir alles gesagt.  Ich komme wieder, wenn es vollbracht ist ...}{}{5}{lf1 1, lf2 1, lf3 1}{232}{lf14 1}
+{230}{Ich muss nur wissen, wo das ist ...}{}{5}{lf4 0}{222}{lf4 1}
+{232}{Gut.  Habt Dank für Eure Hilfe. [Sie legt sanft eine Hand auf deinen Arm.]  Viel Glück auf Euren Wegen.  Ich erwarte Eure Rückkehr ...}{Gut.  Habt Dank für Eure Hilfe.  Viel Glück auf Euren Wegen.  Ich erwarte Eure Rückkehr ...}{}{31}{}{}
+{233}{E:}{}{5}{}{0}{}
+{236}{Mein Benehmen und was Ihr davon haltet sind bedeutungslos im Vergleich zur Sicherheit dieses Dorfes, Fremdling.  Wenn Euch das nicht passt, steht es Euch jederzeit frei, wieder zu gehen ...}{Mein Benehmen und was Ihr davon haltet sind bedeutungslos im Vergleich zur Sicherheit dieses Dorfes, Fremdling.  Wenn Euch das nicht passt, steht es Euch jederzeit frei, wieder zu gehen ...}{}{32}{}{}
+{237}{Verstanden.  Seid Ihr sicher, dass ich nicht helfen kann?}{}{5}{}{189}{}
+{238}{Euer ungehobeltes Benehmen könnte schmerzhaft werden, Madame ...}{}{5}{}{246}{lc1 1}
+{239}{Mir scheint, unsere Begegnung steht unter keinem guten Stern.  Auf Wiedersehen ...}{}{5}{}{0}{}
+{241}{Ach wirklich, Fremdling?  Ihr geht mir auf die Nerven und überstrapaziert meine Geduld.  Es gibt einen schnelleren Weg auf den Waldboden hinab ... vielleicht möchtet Ihr ihn sehen?}{Ach wirklich, Fremdling?  Ihr geht mir auf die Nerven und überstrapaziert meine Geduld.  Es gibt einen schnelleren Weg auf den Waldboden hinab ... vielleicht möchtet Ihr ihn sehen?}{}{33}{}{}
+{242}{Vergebt mir ... kann ich Euch von der Dringlichkeit meiner Mission überzeugen ...?}{}{5}{}{159}{re +5}
+{243}{Ihr würdet die Vorführung nicht überleben, Ravena ...}{}{5}{}{246}{re -10, lc1 1}
+{244}{Mir scheint, unsere Begegnung steht unter keinem guten Stern.  Auf Wiedersehen ...}{}{5}{}{0}{}
+{246}{Solltet Ihr mich noch einmal beleidigen oder bedrohen, Fremdling, werdet Ihr den Sonnenuntergang nicht mehr sehen, das schwöre ich ...}{Solltet Ihr mich noch einmal beleidigen oder bedrohen, Fremdling, werdet Ihr den Sonnenuntergang nicht mehr sehen, das schwöre ich ...}{}{34}{}{}
+{247}{Vergebt mir ... kann ich Euch von der Dringlichkeit meiner Mission überzeugen ...?}{}{5}{}{159}{re +5}
+{248}{Ich spare uns beiden Zeit ... Ihr seid eine gar jämmerliche Gestalt ...}{}{5}{}{}{co, fl 251}
+{249}{Es wäre wohl am besten, wenn ich dann gehe ...}{}{5}{}{0}{}
+{251}{Schwachkopf!  Ihr werdet den Tag bedauern, an dem Ihr Quintarra betreten habt!}{Schwachkopf!  Ihr werdet den Tag bedauern, an dem Ihr Quintarra betreten habt!}{}{35}{}{}
+{256}{Ich bin sehr beschäftigt und kann nicht sagen, wie lange Ihr warten müsst, aber Ihr könnt Euch gern in Quintarra umschauen ... kommt später wieder zu mir ...}{Ich bin sehr beschäftigt und kann nicht sagen, wie lange Ihr warten müsst, aber Ihr könnt Euch gern in Quintarra umschauen ... kommt später wieder zu mir ...}{}{36}{}{}
+{257}{Das werde ich tun ...}{}{5}{}{0}{lf6 1}
+{258}{Wartet!  Vielleicht helfe ich Euch ...}{}{5}{ra 1}{183}{}
+{259}{Wartet!  Vielleicht helfe ich Euch ...}{}{5}{ra 2}{177}{}
+{260}{Wartet!  Vielleicht helfe ich Euch ...}{}{5}{ra 3}{172}{}
+{261}{Wartet!  Vielleicht helfe ich Euch ...}{}{5}{ra -1, ra -2, ra -3}{167}{}
+{263}{Ich bin sehr beschäftigt und kann nicht sagen, wie lange Ihr warten müsst, aber Ihr könnt Euch gern in Quintarra umschauen ... kommt später wieder zu mir ...}{Ich bin sehr beschäftigt und kann nicht sagen, wie lange Ihr warten müsst, aber Ihr könnt Euch gern in Quintarra umschauen ... kommt später wieder zu mir ...}{}{37}{}{}
+{264}{Das werde ich tun ...}{}{5}{}{0}{lf7 1}
+{265}{Wartet!  Wenn ich es recht bedenke, dann nehme ich den Auftrag an ...}{}{5}{lf5 0}{189}{qu1019 2}
+{266}{Wartet!  Wenn ich es recht bedenke, dann nehme ich den Auftrag an ...}{}{5}{lf5 1}{227}{qu1019 2}
+{270}{Ja?  Was waren das für Leute?}{Ja?  Was waren das für Leute?}{}{38}{}{}
+{271}{Feldmesser einer Holzfabrik ...}{}{5}{}{273}{}
+{273}{Und habt Ihr sie vertrieben?}{Und habt Ihr sie vertrieben?}{}{39}{}{}
+{274}{Nein ... sie wollen nicht gehen.  Was soll ich tun?}{}{5}{}{}{fl 276}
+{276}{Das ist Euer Problem.  Ihr kennt die Regeln ... erhebt NIEMALS die Hand gegen sie, um Gewalt auszuüben.  Denkt einfach darüber nach.  Ich bin sicher, es wird Euch etwas einfallen ...}{Das ist Euer Problem.  Ihr kennt die Regeln ... erhebt NIEMALS die Hand gegen sie, um Gewalt auszuüben.  Denkt einfach darüber nach.  Ich bin sicher, es wird Euch etwas einfallen ...}{}{40}{}{}
+{280}{Habt vielen Dank ... ich weiß Eure Hilfe in dieser Angelegenheit zu schätzen.   Nun denn, worüber müsst Ihr mit meiner Mutter sprechen?}{Habt vielen Dank ... ich weiß Eure Hilfe in dieser Angelegenheit zu schätzen.   Nun denn, worüber müsst Ihr mit meiner Mutter sprechen?}{}{41}{}{qu1019 4, lf11 1}
+{281}{Das ist eine lange Geschichte, Ravena ... [Du erzählst ihr alles.]}{}{5}{}{283}{}
+{283}{[Ravena steht auf und denkt nach.  Und dann ...]  Eine düstere, schmerzliche Geschichte.  Und es sieht so aus, als wären wir, die Elfen, daran schuld ...}{[Ravena steht auf und denkt nach.  Und dann ...]  Eine düstere, schmerzliche Geschichte.  Und es sieht so aus, als wären wir, die Elfen, daran schuld ...}{}{42}{}{}
+{284}{Es sind Elfen im Spiel ... sagt Euch der Name M'in Gorad etwas?}{}{5}{}{286}{}
+{286}{Nein, und auch keiner der Elfen hier trägt ihn.  Aber es quält mich sehr und verdüstert mir Herz und Verstand.  Es gäbe da jedoch noch eine andere Möglichkeit, eine, die ich lieber nicht in Erwägung ziehen möchte ...}{Nein, und auch keiner der Elfen hier trägt ihn.  Aber es quält mich sehr und verdüstert mir Herz und Verstand.  Es gäbe da jedoch noch eine andere Möglichkeit, eine, die ich lieber nicht in Erwägung ziehen möchte ...}{}{43}{}{}
+{287}{Was, Ravena?  Wisst Ihr, wo ich M'in Gorad finden kann?}{}{5}{}{289}{}
+{289}{Nein ... darüber müsst Ihr mit meiner Mutter sprechen ... sie kann Euch sagen, was zu tun ist ...}{Nein ... darüber müsst Ihr mit meiner Mutter sprechen ... sie kann Euch sagen, was zu tun ist ...}{}{44}{}{}
+{290}{Nun gut ... wo kann ich sie finden?}{}{5}{}{292}{}
+{292}{Sie wartet jenseits der großen Tür hinter mir. Aber seid gewarnt ... meine Mutter ist ein magisches Wesen mit großer Macht.  Ihr Geist schwimmt im Strom, und manchmal ist sie mehr in jener Welt als in dieser.  Sie sieht nicht immer das, was wir sehen, daher mögen ihre Antworten Euch vielleicht seltsam erscheinen.  Fragt, was Ihr wissen wollt, und HÖRT GUT ZU.  Kommt zu mir zurück, wenn Ihr mit ihr gesprochen habt ...}{Sie wartet jenseits der großen Tür hinter mir. Aber seid gewarnt ... meine Mutter ist ein magisches Wesen mit großer Macht.  Ihr Geist schwimmt im Strom, und manchmal ist sie mehr in jener Welt als in dieser.  Sie sieht nicht immer das, was wir sehen, daher mögen ihre Antworten Euch vielleicht seltsam erscheinen.  Fragt, was Ihr wissen wollt, und HÖRT GUT ZU.  Kommt zu mir zurück, wenn Ihr mit ihr gesprochen habt ...}{}{45}{}{ru 2053}
+{293}{Das werde ich, Ravena.  Vielen Dank für Eure Hilfe ...}{}{5}{}{}{}
+{295}{Und was habt Ihr sie gefragt?}{Und was habt Ihr sie gefragt?}{}{46}{}{}
+{296}{Noch nicht viel ...}{}{5}{gf1082 0, gf1083 0}{304}{}
+{297}{Ich habe sie nach dem Schwarzberg-Clan gefragt ...}{}{5}{gf1082 1}{308}{}
+{298}{Ich habe sie nach M'in Gorad gefragt.}{}{5}{gf1083 1}{315}{}
+{300}{Natürlich ... worüber wolltet Ihr sprechen?}{Natürlich ... worüber wolltet Ihr sprechen?}{}{47}{}{}
+{301}{Sprechen wir über ihre Visionen vom Schwarzberg-Clan ...}{}{5}{gf1082 1}{308}{}
+{302}{Sprechen wir über ihre Visionen von M'in Gorad ...}{}{5}{gf1083 1}{315}{}
+{304}{Ich verstehe ... nun denn, kommt zu mir zurück, wenn Ihr mit ihr gesprochen habt.  Ich kann Euch vielleicht helfen, den Sinn ihrer Worte zu begreifen ...}{Ich verstehe ... nun denn, kommt zu mir zurück, wenn Ihr mit ihr gesprochen habt.  Ich kann Euch vielleicht helfen, den Sinn ihrer Worte zu begreifen ...}{}{48}{}{}
+{305}{Das werde ich.  Aber vorher habe ich da ein paar Fragen ...}{}{5}{}{101}{}
+{306}{E:}{}{5}{}{0}{}
+{308}{Der Schwarzberg-Clan ... was hat sie gesehen?}{Der Schwarzberg-Clan ... was hat sie gesehen?}{}{49}{}{}
+{309}{Sie sah Raben, Blitze und einen verheerenden Sturm ...}{}{5}{}{328}{}
+{310}{Den Schwarzberg-Clan mit einem kleinen, maschinenähnlichen Kind ...}{}{5}{}{334}{}
+{311}{Eine Flamme, die ein Weizenfeld und einen Teich verzehrte ...}{}{5}{}{340}{}
+{312}{Einen dunklen Ort mit dunklem Feuer ... und eine spiegelnde Ebene ...}{}{5}{}{346}{}
+{313}{E:}{}{5}{}{0}{}
+{315}{M'in Gorad ... Was hat sie gesehen?}{M'in Gorad ... Was hat sie gesehen?}{}{50}{}{}
+{316}{Einen Mann ohne Augen, unter Qualen, der einen Schlüssel schnitzte ... einen Wolf mit erhobener Pfote ...}{}{5}{}{352}{}
+{317}{Einen zerrissenen Vorhang ... einen gebrochenen Finger mit Ring, der nach Osten zeigte ...}{}{5}{}{361}{}
+{318}{Eine sehende Hand, die blind ist ... einen wahrhaften Mann mit einer Maske ...}{}{5}{}{367}{}
+{319}{Verlorene Kinder in einem Versteck ... ein Mann flieht vor ihnen und lässt Blätter fallen ...}{}{5}{qb1046 1}{399}{}
+{320}{Verlorene Kinder in einem Versteck ... ein Mann flieht vor ihnen und lässt Blätter fallen ...}{}{5}{qa1046 2}{}{}
+{321}{E:}{}{5}{}{0}{}
+{323}{Wie wir sagten, der fliehende Mann könnte Renford A. Terwilliger sein, ein Forscher, der von den Dunkelelfen gefangen wurde und entkommen konnte.  Wir sind nicht sicher, was die Blätter angeht, aber es könnte klug sein, Mr. Terwilliger in Tarant aufzusuchen.}{Wie wir sagten, der fliehende Mann könnte Renford A. Terwilliger sein, ein Forscher, der von den Dunkelelfen gefangen wurde und entkommen konnte.  Wir sind nicht sicher, was die Blätter angeht, aber es könnte klug sein, Mr. Terwilliger in Tarant aufzusuchen.}{}{51}{}{}
+{324}{Sie hatte noch andere Visionen von M'in Gorad ...}{}{5}{}{315}{}
+{325}{Außerdem hatte sie Visionen vom Schwarzberg-Clan ...}{}{5}{}{308}{}
+{326}{Ich werde Euch fürs Erste verlassen ...}{}{5}{}{510}{}
+{328}{Raben und einen Sturm?  Und warum ließ der Sturm nach und tobte dann erneut?  In den Visionen meiner Mutter ist nichts, was es zu sein scheint ... Wir müssen darüber nachdenken. }{Raben und einen Sturm?  Und warum ließ der Sturm nach und tobte dann erneut?  In den Visionen meiner Mutter ist nichts, was es zu sein scheint ... Wir müssen darüber nachdenken. }{}{52}{}{}
+{329}{Sie hatte noch andere Visionen vom Schwarzberg-Clan ...}{}{5}{}{308}{}
+{330}{Sie hatte außerdem Visionen von M'in Gorad ...}{}{5}{}{315}{}
+{331}{Ich werde Euch fürs Erste verlassen ...}{}{5}{qb1046 1}{506}{}
+{332}{Ich werde Euch fürs Erste verlassen ...}{}{5}{qa1046 2}{510}{}
+{334}{Wie Ihr schon sagtet, das muss der Mann gewesen sein, den Ihr als Gilbert Bates kennt.  Sie hat ihn gesehen, weil er eine so bedeutende Rolle in ihrem Schicksal spielt ...}{Wie Ihr schon sagtet, das muss der Mann gewesen sein, den Ihr als Gilbert Bates kennt.  Sie hat ihn gesehen, weil er eine so bedeutende Rolle in ihrem Schicksal spielt ...}{}{53}{}{}
+{335}{Sie hatte noch andere Visionen vom Schwarzberg-Clan ...}{}{5}{}{308}{}
+{336}{Sie hatte außerdem Visionen von M'in Gorad ...}{}{5}{}{315}{}
+{337}{Ich werde Euch fürs Erste verlassen ...}{}{5}{qb1046 1}{506}{}
+{338}{Ich werde Euch fürs Erste verlassen ...}{}{5}{qa1046 2}{510}{}
+{340}{Ich bin nicht sicher, wofür das steht, aber in ihren Visionen ist Feuer häufig gleichbedeutend mit Magie.  Und Ihr sagt, das Wasser hat es gelöscht?  Oder ist die Flamme einfach ausgebrannt ...?}{Ich bin nicht sicher, wofür das steht, aber in ihren Visionen ist Feuer häufig gleichbedeutend mit Magie.  Und Ihr sagt, das Wasser hat es gelöscht?  Oder ist die Flamme einfach ausgebrannt ...?}{}{54}{}{}
+{341}{Sie hatte noch andere Visionen vom Schwarzberg-Clan ...}{}{5}{}{308}{}
+{342}{Sie hatte außerdem Visionen von M'in Gorad ...}{}{5}{}{315}{}
+{343}{Ich werde Euch fürs Erste verlassen ...}{}{5}{qb1046 1}{506}{}
+{344}{Ich werde Euch fürs Erste verlassen ...}{}{5}{qa1046 2}{510}{}
+{346}{Das sind zwei verschiedene Visionen.  Die Flamme ist wieder gleichbedeutend mit Magie ... aber irgendwie verzerrt, dunkel brennend.  Und hattet Ihr gesagt, dass der Schwarzberg-Clan in der Nähe dieser Flamme war?  Die spiegelnde Ebene, ein weißer Himmel, eine einsame Gestalt.  Die Welten auf beiden Seiten dieses Spiegels sind dieselben ... wer kann sagen, welche die echte ist?  Seltsam. [Sie sieht dich etwas merkwürdig an ...]}{Das sind zwei verschiedene Visionen.  Die Flamme ist wieder gleichbedeutend mit Magie ... aber irgendwie verzerrt, dunkel brennend.  Und hattet Ihr gesagt, dass der Schwarzberg-Clan in der Nähe dieser Flamme war?  Die spiegelnde Ebene, ein weißer Himmel, eine einsame Gestalt.  Die Welten auf beiden Seiten dieses Spiegels sind dieselben ... wer kann sagen, welche die echte ist?  Seltsam. [Sie sieht dich etwas merkwürdig an ...]}{}{55}{}{}
+{347}{Sie hatte noch andere Visionen vom Schwarzberg-Clan ...}{}{5}{}{308}{}
+{348}{Sie hatte außerdem Visionen von M'in Gorad ...}{}{5}{}{315}{}
+{349}{Ich werde Euch fürs Erste verlassen ...}{}{5}{qb1046 1}{506}{}
+{350}{Ich werde Euch fürs Erste verlassen ...}{}{5}{qa1046 2}{510}{}
+{352}{Ich habe keine Ahnung, was der schreiende Mann und sein Schlüssel bedeuten ... aber ich weiß, dass das offizielle Symbol der Stadt Caladon ein Wolf mit erhobener Pfote ist ...}{Ich habe keine Ahnung, was der schreiende Mann und sein Schlüssel bedeuten ... aber ich weiß, dass das offizielle Symbol der Stadt Caladon ein Wolf mit erhobener Pfote ist ...}{}{56}{}{}
+{353}{Vielleicht müssen wir unsere Suche dort beginnen, Ravena ...}{}{5}{}{355}{}
+{355}{Da bin ich mir nicht so sicher.  Vergesst nicht, die Visionen meiner Mutter sind weder durch unsere Augen noch durch die Zeit eingeschränkt ... die Ereignisse, die sie beschreibt, könnten in der Zukunft oder in der Vergangenheit liegen ... denken wir über alles nach, was sie gesagt hat, bevor wir übereilt handeln ...}{Da bin ich mir nicht so sicher.  Vergesst nicht, die Visionen meiner Mutter sind weder durch unsere Augen noch durch die Zeit eingeschränkt ... die Ereignisse, die sie beschreibt, könnten in der Zukunft oder in der Vergangenheit liegen ... denken wir über alles nach, was sie gesagt hat, bevor wir übereilt handeln ...}{}{57}{}{}
+{356}{Sie hatte noch andere Visionen von M'in Gorad ...}{}{5}{}{315}{}
+{357}{Außerdem hatte sie Visionen vom Schwarzberg-Clan ...}{}{5}{}{308}{}
+{358}{Ich werde Euch fürs Erste verlassen ...}{}{5}{qb1046 1}{506}{}
+{359}{Ich werde Euch fürs Erste verlassen ...}{}{5}{qa1046 2}{510}{}
+{361}{Etwas an dieser ganzen Vision kommt mir bekannt vor ... besonders der Ring.  Ich werde darüber nachdenken ...}{Etwas an dieser ganzen Vision kommt mir bekannt vor ... besonders der Ring.  Ich werde darüber nachdenken ...}{}{58}{}{}
+{362}{Sie hatte noch andere Visionen von M'in Gorad ...}{}{5}{}{315}{}
+{363}{Außerdem hatte sie Visionen vom Schwarzberg-Clan ...}{}{5}{}{308}{}
+{364}{Ich werde Euch fürs Erste verlassen ...}{}{5}{qb1046 1}{506}{}
+{365}{Ich werde Euch fürs Erste verlassen ...}{}{5}{qa1046 2}{510}{}
+{367}{Ich habe keine Ahnung ...}{Ich habe keine Ahnung ...}{}{59}{}{}
+{368}{Wartet!  Hört sich ganz nach dem Symbol eines Amuletts an, das ich schon gesehen habe ...}{}{5}{gf1045 1}{374}{}
+{369}{Sie hatte noch andere Visionen von M'in Gorad ...}{}{5}{}{315}{}
+{370}{Außerdem hatte sie Visionen vom Schwarzberg-Clan ...}{}{5}{}{308}{}
+{371}{Ich werde Euch fürs Erste verlassen ...}{}{5}{qb1046 1}{506}{}
+{372}{Ich werde Euch fürs Erste verlassen ...}{}{5}{qa1046 2}{510}{}
+{374}{Interessant.  Das ist das uralte Symbol der Molochäischen Hand.  Wisst Ihr davon?}{Interessant.  Das ist das uralte Symbol der Molochäischen Hand.  Wisst Ihr davon?}{}{60}{}{}
+{375}{Bleiben wir beim Thema ... was hat die Vision zu bedeuten?}{}{5}{}{393}{}
+{376}{Ja ... ich weiß, dass das ein uralter Orden von Meuchelmördern war ...}{}{5}{gf1085 1}{379}{}
+{377}{Nein ... könntet Ihr mir davon erzählen?}{}{5}{gf1085 0}{379}{}
+{379}{Die Molochäische Hand, das waren Meuchelmörder für den so genannten Derian Ka ... den uralten Orden der Toten ...}{Die Molochäische Hand, das waren Meuchelmörder für den so genannten Derian Ka ... den uralten Orden der Toten ...}{}{61}{}{gf1085 1}
+{380}{Der Orden der Toten?  Was waren das für Leute?}{}{5}{gf1087 0}{384}{}
+{381}{Magnus Felsenfaust hat etwas darüber erwähnt ...}{}{5}{gf1087 1}{384}{}
+{382}{Interessant ... aber ich wüsste lieber, was die Vision bedeutete ...}{}{5}{}{393}{}
+{384}{Die Derian Ka waren eine schemenhafte Gruppe, die im Zeitalter der Legenden entstand.  Mitgliedschaft und Zielsetzung waren stets streng geheim.  Außer vagen Gerüchten weiß ich wenig über sie, aber Gerüchte darüber, wer sie waren und was sie taten, gab es immer wieder ...}{Die Derian Ka waren eine schemenhafte Gruppe, die im Zeitalter der Legenden entstand.  Mitgliedschaft und Zielsetzung waren stets streng geheim.  Außer vagen Gerüchten weiß ich wenig über sie, aber Gerüchte darüber, wer sie waren und was sie taten, gab es immer wieder ...}{}{62}{}{}
+{385}{Und ihre Verbindung zur Molochäischen Hand?}{}{5}{}{387}{}
+{387}{Wie ich schon sagte, die Molochäische Hand waren ihre Meuchelmörder.  Wenn ich mich recht an die Schriften über sie erinnere, wurde die Hand wegen unterschiedlicher Glaubensrichtungen vom Orden der Toten ausgestoßen ... nach einem kurzen Kampf verschwand die Hand.  Gerüchte über ihre Wiederkehr hat es immer gegeben, aber soweit ich weiß, sind das eben nur ... Gerüchte ...}{Wie ich schon sagte, die Molochäische Hand waren ihre Meuchelmörder.  Wenn ich mich recht an die Schriften über sie erinnere, wurde die Hand wegen unterschiedlicher Glaubensrichtungen vom Orden der Toten ausgestoßen ... nach einem kurzen Kampf verschwand die Hand.  Gerüchte über ihre Wiederkehr hat es immer gegeben, aber soweit ich weiß, sind das eben nur ... Gerüchte ...}{}{63}{}{}
+{388}{Diese Amulette und Anschläge auf mein Leben sagen aber etwas anderes ...}{}{5}{}{390}{}
+{390}{Richtig ... aber ich habe keine Ahnung, warum sie sich in diese Angelegenheit einmischen sollten. Hä. Äußerst interessant ...}{Richtig ... aber ich habe keine Ahnung, warum sie sich in diese Angelegenheit einmischen sollten. Hä. Äußerst interessant ...}{}{64}{}{}
+{391}{Was meint Ihr, bedeutet die Vision als solche?}{}{5}{}{393}{}
+{393}{Das weiß ich wirklich nicht, jedoch scheint mir, als wären sie etwas in die Irre geführt ... in den Visionen meiner Mutter hat Blindheit stets etwas mit Täuschung zu tun.  Und was ist mit dem Mann mit der Maske, der in Wahrheit gehüllt ist?  Ich hab keine Ahnung ...}{Das weiß ich wirklich nicht, jedoch scheint mir, als wären sie etwas in die Irre geführt ... in den Visionen meiner Mutter hat Blindheit stets etwas mit Täuschung zu tun.  Und was ist mit dem Mann mit der Maske, der in Wahrheit gehüllt ist?  Ich hab keine Ahnung ...}{}{65}{}{}
+{394}{Sie hatte noch andere Visionen von M'in Gorad ...}{}{5}{}{315}{}
+{395}{Außerdem hatte sie Visionen vom Schwarzberg-Clan ...}{}{5}{}{308}{}
+{396}{Ich werde Euch fürs Erste verlassen ...}{}{5}{qb1046 1}{506}{}
+{397}{Ich werde Euch fürs Erste verlassen ...}{}{5}{qa1046 2}{510}{}
+{399}{Das ist das Interessanteste von allem.  Und es scheint, als wären meine Befürchtungen zutreffend gewesen ...}{Das ist das Interessanteste von allem.  Und es scheint, als wären meine Befürchtungen zutreffend gewesen ...}{}{66}{}{}
+{400}{Warum, Ravena?  Was meint Ihr, was bedeutet das?}{}{5}{}{402}{}
+{402}{Erinnert Ihr Euch, wie ich sagte, dass mich der Name M'in Gorad irgendwie beunruhigt?  Das mag daran gelegen haben, dass M'in Gorad ein DUNKLER Name ist ...}{Erinnert Ihr Euch, wie ich sagte, dass mich der Name M'in Gorad irgendwie beunruhigt?  Das mag daran gelegen haben, dass M'in Gorad ein DUNKLER Name ist ...}{}{67}{}{}
+{403}{Was soll das heißen, ein dunkler Name?}{}{5}{}{405}{}
+{405}{Ein Name der Dunkelelfen.  Kennt Ihr die Dunkelelfen?}{Ein Name der Dunkelelfen.  Kennt Ihr die Dunkelelfen?}{}{68}{}{ru 2054}
+{406}{Ich habe nur wenig über sie gehört ... Könnt Ihr mir mehr sagen?}{}{5}{}{409}{}
+{407}{Eigentlich will ich das gar nicht wissen.  Ich möchte nur M'in Gorad finden ...}{}{5}{}{433}{}
+{409}{Es ist eine lange Geschichte, aber irgendwann im Zeitalter der Legenden, viele Jahre bevor meine Mutter geboren wurde, gab es eine abtrünnige Gruppe von Elfen ... es gab philosophische Differenzen, und sie waren in unseren Wäldern nicht mehr willkommen ... aus diesen Elfen wurden schließlich die Dunkelelfen ...}{Es ist eine lange Geschichte, aber irgendwann im Zeitalter der Legenden, viele Jahre bevor meine Mutter geboren wurde, gab es eine abtrünnige Gruppe von Elfen ... es gab philosophische Differenzen, und sie waren in unseren Wäldern nicht mehr willkommen ... aus diesen Elfen wurden schließlich die Dunkelelfen ...}{}{69}{}{}
+{410}{Was waren das für Differenzen?}{}{5}{}{418}{}
+{411}{Was ist das "Zeitalter der Legenden"?}{}{5}{}{413}{}
+{413}{Das Zeitalter der Legenden war eine Ära in der Geschichte von Arcanum, als alles ganz anders war als heute.  Es gab einen Elfen-Rat, der über alle Völker herrschte, und Magie war ein BEDEUTENDER Teil im Leben aller.  Es war die Zeit der Helden und des Guten, aber auch des mächtigen Bösen.  Eine Zeit vor dem Triumph der Technologie, vor den Clan-Kriegen der Zwerge, bevor die Magier nach Tulla aufbrachen ...}{Das Zeitalter der Legenden war eine Ära in der Geschichte von Arcanum, als alles ganz anders war als heute.  Es gab einen Elfen-Rat, der über alle Völker herrschte, und Magie war ein BEDEUTENDER Teil im Leben aller.  Es war die Zeit der Helden und des Guten, aber auch des mächtigen Bösen.  Eine Zeit vor dem Triumph der Technologie, vor den Clan-Kriegen der Zwerge, bevor die Magier nach Tulla aufbrachen ...}{}{70}{}{}
+{414}{Ich verstehe ... und die Unterschiede zwischen Euch und den Dunkelelfen?}{}{5}{gf1098 0}{418}{}
+{415}{Was ist noch dran an der Geschichte von Arronax ...?}{}{5}{gf1098 1}{688}{}
+{416}{Die Leere?  Was ist die Leere?}{}{5}{gf1098 1}{681}{}
+{418}{Sie glauben, dass diese Welt und ALLE ihre Völker der Herrschaft der Elfen unterworfen sind.  Aufgrund unserer engen Naturverbundenheit, unserer magischen Kräfte und unserer Langlebigkeit halten sie alle Elfen für überlegen.  Sie sehen die anderen Völker als ungeschickte Kinder an, die unserer Führung bedürfen, wie gestreng sie auch sein mag ...}{Sie glauben, dass diese Welt und ALLE ihre Völker der Herrschaft der Elfen unterworfen sind.  Aufgrund unserer engen Naturverbundenheit, unserer magischen Kräfte und unserer Langlebigkeit halten sie alle Elfen für überlegen.  Sie sehen die anderen Völker als ungeschickte Kinder an, die unserer Führung bedürfen, wie gestreng sie auch sein mag ...}{}{71}{}{}
+{419}{Und was ist mit den Elfen von Quintarra?  Was glauben sie?}{}{5}{}{422}{}
+{420}{Und Ihr?  Was glaubt IHR?}{}{5}{}{429}{}
+{422}{Die Elfen von Quintarra ... eigentlich sogar ALLE Elfen ... sind der Überzeugung, dass alles und jeder einen rechtmäßigen Platz in der Erfahrung hat, die diese Wirklichkeit formt.  Elfen glauben, dass nur sehr wenig bis gar nichts passiert, das nicht Teil des natürlichen Fortschritts dieses Stadiums ist.  Sie empfinden keine Überlegenheit aufgrund ihrer ... Vorzüge ... sie gehören eben zu der Rolle, die ihnen zugewiesen wurde ...}{Die Elfen von Quintarra ... eigentlich sogar ALLE Elfen ... sind der Überzeugung, dass alles und jeder einen rechtmäßigen Platz in der Erfahrung hat, die diese Wirklichkeit formt.  Elfen glauben, dass nur sehr wenig bis gar nichts passiert, das nicht Teil des natürlichen Fortschritts dieses Stadiums ist.  Sie empfinden keine Überlegenheit aufgrund ihrer ... Vorzüge ... sie gehören eben zu der Rolle, die ihnen zugewiesen wurde ...}{}{72}{}{}
+{423}{Betrachten sie die Dunkelelfen als Verstoß gegen diese Ordnung ...?}{}{5}{}{425}{}
+{425}{Leider nicht.  Die Dunkelelfen werden im selben Licht wie alle anderen gesehen ... dass sie ihre Rolle spielen müssen und spielen ...}{Leider nicht.  Die Dunkelelfen werden im selben Licht wie alle anderen gesehen ... dass sie ihre Rolle spielen müssen und spielen ...}{}{73}{}{}
+{426}{Ich verstehe.  Kommen wir wieder zur Vision Eurer Mutter zurück.}{}{5}{}{433}{}
+{427}{Ihr sagt "leider".  Was glaubt Ihr, Ravena?}{}{5}{}{429}{}
+{429}{[Ihre Miene versteinert.] Ich glaube ... tja, sagen wir mal so, ich bin nicht immer einer Meinung mit denen in Quintarra, was den "rechtmäßigen" Platz der Dunkelelfen angeht.  MEINE Aufgabe hier besteht darin zu beschützen.  Und das werde ich tun, koste es, was es wolle.}{[Ihre Miene versteinert.] Ich glaube ... tja, sagen wir mal so, ich bin nicht immer einer Meinung mit denen in Quintarra, was den "rechtmäßigen" Platz der Dunkelelfen angeht.  MEINE Aufgabe hier besteht darin zu beschützen.  Und das werde ich tun, koste es, was es wolle.}{}{74}{}{}
+{430}{Ich verstehe.  Kommen wir wieder zur Vision Eurer Mutter zurück.}{}{5}{}{433}{}
+{431}{Und WAS glauben die Elfen hier?}{}{5}{}{422}{}
+{433}{Ich glaube, in der Vision meiner Mutter von den verlorenen Kindern ging es um die Dunkelelfen.  Sie waren vor ihr verborgen, weil sie vor uns ALLEN verborgen sind ... durch Magie und Isolation haben wir seit fast fünfhundert Jahren keine Ahnung, wo sie leben ...}{Ich glaube, in der Vision meiner Mutter von den verlorenen Kindern ging es um die Dunkelelfen.  Sie waren vor ihr verborgen, weil sie vor uns ALLEN verborgen sind ... durch Magie und Isolation haben wir seit fast fünfhundert Jahren keine Ahnung, wo sie leben ...}{}{75}{}{}
+{434}{Aber wer war der Mann, der vor ihnen geflohen ist?}{}{5}{}{436}{}
+{436}{Vor vielen Jahren kam ein Mann in den Schimmerwald, um die Elfen zu studieren, und ich erinnere mich, dass er sich ganz besonders für die Dunkelelfen interessiert hat.  Es gab Gerüchte, dass er von ihnen gefangen genommen wurde und entkommen konnte ...}{Vor vielen Jahren kam ein Mann in den Schimmerwald, um die Elfen zu studieren, und ich erinnere mich, dass er sich ganz besonders für die Dunkelelfen interessiert hat.  Es gab Gerüchte, dass er von ihnen gefangen genommen wurde und entkommen konnte ...}{}{76}{}{}
+{437}{Wer war er?}{}{5}{}{439}{}
+{439}{Ein Forscher, wie ich schon sagte ... ein seltsamer kleiner Mann, etwas übertrieben gekleidet, aber gütig und sehr intelligent ... damals war ich jung, gerade mal hundertsechzig Jahre alt ... und er war der erste Mensch, den ich je gesehen hatte ... [Sie lächelt verhalten.]}{Ein Forscher, wie ich schon sagte ... ein seltsamer kleiner Mann, etwas übertrieben gekleidet, aber gütig und sehr intelligent ... damals war ich jung, gerade mal hundertsechzig Jahre alt ... und er war der erste Mensch, den ich je gesehen hatte ... [Sie lächelt verhalten.]}{}{77}{}{}
+{440}{Erinnert Ihr Euch an seinen Namen?}{}{5}{}{445}{lf8 1}
+{445}{Sein Name ... es ist schon lange her ... aber ich erinnere mich, weil er ihn oft genannt hat ... ich glaube, Menschen hören ihre eigenen Namen einfach gern. Terwilliger ... Dr. Renford A. Terwilliger ... Ich kann es ihn heute noch sagen hören …}{Sein Name ... es ist schon lange her ... aber ich erinnere mich, weil er ihn oft genannt hat ... ich glaube, Menschen hören ihre eigenen Namen einfach gern. Terwilliger ... Dr. Renford A. Terwilliger ... Ich kann es ihn heute noch sagen hören …}{}{78}{}{gf1086 1, ss 10, ru 2055}
+{446}{Was waren das für "Blätter", die er fallen ließ?}{}{5}{lf9 0}{451}{lf9 1}
+{447}{Was ist dieser Ort von "Rauch und Wasser"?}{}{5}{lf10 0}{468}{lf10 1}
+{448}{Tja, was nun?}{}{5}{lf81 , lf9 1, lf10 1, qb1046 1}{474}{}
+{451}{Ich weiß nicht so recht.  In der Vision hatte es fast den Anschein, als hätte sich der "Schwarm", der ihn verzehrte, mehr für die Blätter interessiert ... und meine Mutter sagte sogar, findet, was zurückgeblieben ist ... diese "Blätter" könnten genau das sein, wonach wir suchen ...}{Ich weiß nicht so recht.  In der Vision hatte es fast den Anschein, als hätte sich der "Schwarm", der ihn verzehrte, mehr für die Blätter interessiert ... und meine Mutter sagte sogar, findet, was zurückgeblieben ist ... diese "Blätter" könnten genau das sein, wonach wir suchen ...}{}{79}{}{}
+{452}{Ich habe einen interessanten Zusammenhang zwischen diesen Visionen hergestellt ...}{}{16}{}{457}{}
+{454}{Was ist dieser Ort von "Rauch und Wasser"?}{}{5}{lf10 0}{468}{lf10 1}
+{455}{Tja, was nun?}{}{5}{lf81 , lf9 1, lf10 1, qb1046 1}{474}{}
+{457}{Was habt Ihr gesehen?}{Was habt Ihr gesehen?}{}{80}{}{}
+{458}{In vielen der Visionen kamen Vogelschwärme vor ...}{}{5}{}{460}{}
+{460}{Ja?}{Ja?}{}{81}{}{}
+{461}{Ich glaube, sie stehen immer für die Dunkelelfen ...}{}{5}{}{463}{}
+{463}{Interessant ... das ergibt ein interessantes Bild und könnte unser Bild von ihnen teilweise ändern ... die Raben, die um den Sturm kreisen, der Mann, dem die Vögel die Augen ausgepickt haben, und nun dieser Mann, der Blätter fallen lässt ... interessant ...}{Interessant ... das ergibt ein interessantes Bild und könnte unser Bild von ihnen teilweise ändern ... die Raben, die um den Sturm kreisen, der Mann, dem die Vögel die Augen ausgepickt haben, und nun dieser Mann, der Blätter fallen lässt ... interessant ...}{}{82}{}{}
+{465}{Was ist dieser Ort von "Rauch und Wasser"?}{}{5}{lf10 0}{468}{lf10 1}
+{466}{Tja, was nun?}{}{5}{lf81 , lf9 1, lf10 1, qb1046 1}{474}{}
+{468}{Sie könnte praktisch jeden Ort gemeint haben, aber wenn ich eine Vermutung äußern müsste, würde ich sagen, dass sie von der Menschenstadt Tarant gesprochen hat.  Sie liegt am Golf von Morbihan, wo ihre ... wie werden sie genannt, Fabriken? ... ununterbrochen Qualm in den Himmel ausstoßen.  Das, und ... [Sie zwinkert und lächelt verschmitzt.] ... ich weiß, dass Terwilliger von dort kam ...}{Sie könnte praktisch jeden Ort gemeint haben, aber wenn ich eine Vermutung äußern müsste, würde ich sagen, dass sie von der Menschenstadt Tarant gesprochen hat.  Sie liegt am Golf von Morbihan, wo ihre ... wie werden sie genannt, Fabriken? ... ununterbrochen Qualm in den Himmel ausstoßen.  Das, und ... [Sie zwinkert und lächelt verschmitzt.] ... ich weiß, dass Terwilliger von dort kam ...}{}{83}{}{}
+{470}{Was waren das für "Blätter", die er fallen ließ?}{}{5}{lf9 0}{451}{lf9 1}
+{471}{Tja, was nun?}{}{5}{lf81 , lf9 1, lf10 1, qb1046 1}{474}{}
+{474}{Ihr habt einen Ort, um Eure Suche zu beginnen.  Mir scheint, wenn Ihr M'in Gorad finden wollt, müsst Ihr das Dorf der Dunkelelfen finden.  Renford A. Terwilliger ist der Einzige, der wissen könnte, wo sie zu finden sind.  Er mag in Tarant sein oder auch nicht, aber es wäre immerhin ein guter Ausgangspunkt ...}{Ihr habt einen Ort, um Eure Suche zu beginnen.  Mir scheint, wenn Ihr M'in Gorad finden wollt, müsst Ihr das Dorf der Dunkelelfen finden.  Renford A. Terwilliger ist der Einzige, der wissen könnte, wo sie zu finden sind.  Er mag in Tarant sein oder auch nicht, aber es wäre immerhin ein guter Ausgangspunkt ...}{}{84}{}{qu1020 1, qu1021 1}
+{475}{Dann werde ich die Dunkelelfen suchen.  Auf nach Tarant ...}{}{5}{}{476}{qu1020 2, qu1021 2}
+{476}{Ihr beeindruckt mich. [Sie nimmt deine Hand.]  Es gibt wenige wie Euch, die diese Bürde auf sich nehmen würden.  Ihr habt Euch meinen Respekt verdient ...}{Ihr beeindruckt mich. Es gibt wenige wie Euch, die diese Bürde auf sich nehmen würden.  Ihr habt Euch meinen Respekt verdient ...}{}{85}{}{}
+{477}{Ich bin kein Held ... ich will nur, dass die Leute nicht mehr versuchen, mich zu töten ...}{}{5}{}{487}{}
+{478}{Euer Respekt macht das alles nur umso lohnender ...}{0}{5}{}{490}{}
+{479}{Euer Respekt macht das alles nur umso lohnender ...}{1}{5}{}{-31}{}
+{486}{Na schön.  Würdet Ihr wohl meine Hand loslassen, damit ich aufbrechen kann?}{}{5}{}{501}{}
+{487}{[Ihre Hand gleitet aus der deinigen.] Vielleicht habe ich Euch falsch eingeschätzt ... doch das ist einerlei.  Was immer der Antrieb für Euer Tun sein mag, es ist edel.  Viel Glück.  Sucht mich wieder auf, wenn Ihr die Dunkelelfen gefunden habt, und erzählt mir, was Ihr dort fandet ...}{Vielleicht habe ich Euch falsch eingeschätzt ... doch das ist einerlei.  Was immer der Antrieb für Euer Tun sein mag, es ist edel.  Viel Glück.  Sucht mich wieder auf, wenn Ihr die Dunkelelfen gefunden habt, und erzählt mir, was Ihr dort fandet ...}{}{86}{}{qu1046 1}
+{488}{Ich komme wieder, wenn ich mehr weiß ... Lebt wohl ...}{}{5}{}{0}{qu1046 2}
+{490}{[Sie sieht dir in die Augen.]  Zwischen Unseresgleichen existieren starke Bande.  Viel Glück.  Sucht mich wieder auf, wenn Ihr die Dunkelelfen gefunden habt, und erzählt mir, was Ihr dort fandet ...}{[Sie sieht dir in die Augen.]  Zwischen Unseresgleichen existieren starke Bande.  Viel Glück.  Sucht mich wieder auf, wenn Ihr die Dunkelelfen gefunden habt, und erzählt mir, was Ihr dort fandet ...}{}{87}{}{qu1046 1}
+{491}{Ich komme wieder, wenn ich mehr weiß ... Lebt wohl ...}{}{5}{}{0}{qu1046 2}
+{493}{[Sie lächelt.]  Danke für das Kompliment.  Sieht so aus, als würden wir gute Freunde werden, @PCNAME@.    Sucht mich wieder auf, wenn Ihr die Dunkelelfen gefunden habt, und erzählt mir, was Ihr entdeckt habt.  Bei Eurer Rückkehr werden wir viel zu besprechen haben ...}{[Sie lächelt.]  Danke für das Kompliment.  Sieht so aus, als würden wir gute Freunde werden, @PCNAME@.    Sucht mich wieder auf, wenn Ihr die Dunkelelfen gefunden habt, und erzählt mir, was Ihr entdeckt habt.  Bei Eurer Rückkehr werden wir viel zu besprechen haben ...}{}{88}{}{qu1046 1}
+{494}{Ich komme wieder, wenn ich mehr weiß ... Lebt wohl ...}{}{5}{}{0}{qu1046 2}
+{498}{[Ravena errötet, kommt näher und spricht leise.]  Sucht mich wieder auf, wenn Ihr die Dunkelelfen gefunden habt, und erzählt mir, was Ihr entdeckt habt. Wir werden viel zu besprechen haben ...}{[Ravena errötet, kommt näher und spricht leise.]  Sucht mich wieder auf, wenn Ihr die Dunkelelfen gefunden habt, und erzählt mir, was Ihr entdeckt habt. Wir werden viel zu besprechen haben ...}{}{89}{}{qu1046 1, lf12 1, gf2364 1}
+{499}{Ich komme wieder, wenn ich mehr weiß, Ravena ... vorerst lebt wohl ...}{}{5}{}{0}{qu1046 2}
+{501}{[Steif, während sie deine Hand loslässt.] J-j-a, natürlich.  Verzeiht mir. Ich werde Euch nicht länger aufhalten.  Sucht mich wieder auf, wenn Ihr die Dunkelelfen gefunden habt, und erzählt mir, was Ihr dort fandet ...}{[Steif.] J-j-a, natürlich.  Verzeiht mir. Ich werde Euch nicht länger aufhalten.  Sucht mich wieder auf, wenn Ihr die Dunkelelfen gefunden habt, und erzählt mir, was Ihr dort fandet ...}{}{90}{}{qu1046 1}
+{502}{Ich werde zurückkehren, wenn ich weitere Informationen darüber habe ...}{}{5}{}{}{qu1046 2}
+{506}{Nun gut ... aber kehrt bald zurück!  Wir müssen uns ausführlicher über diese Visionen unterhalten.  Ich glaube, wir haben noch nicht gefunden, wonach wir suchen ...}{Nun gut ... aber kehrt bald zurück!  Wir müssen uns ausführlicher über diese Visionen unterhalten.  Ich glaube, wir haben noch nicht gefunden, wonach wir suchen ...}{}{91}{}{}
+{507}{Natürlich ... aber ich habe noch ein paar allgemeine Fragen ...}{}{5}{}{101}{}
+{508}{Das werde ich, Ravena ...}{}{5}{}{0}{}
+{510}{Fein.  Kehrt jederzeit zurück, wenn Ihr darüber sprechen wollt.  Gibt es sonst noch was?}{Fein.  Kehrt jederzeit zurück, wenn Ihr darüber sprechen wollt.  Gibt es sonst noch was?}{}{92}{}{}
+{511}{Ich habe da noch ein paar allgemeine Fragen ...}{}{5}{}{101}{}
+{512}{E:}{}{5}{}{0}{}
+{516}{Ich bin ja so froh, dass Ihr zu uns zurückgekehrt seid.  Habt Ihr das Dorf der Dunkelelfen gefunden? Was ist passiert, seit Ihr uns verlassen habt?}{Ich bin ja so froh, dass Ihr zu uns zurückgekehrt seid.  Habt Ihr das Dorf der Dunkelelfen gefunden? Was ist passiert, seit Ihr uns verlassen habt?}{}{93}{}{qu1046 4}
+{517}{Ich bin nach Tarant gereist und ... [Du erzählst ihr, wie du T'sen-Ang gefunden hast.]}{}{5}{}{552}{}
+{522}{Ich bin ja so froh, dass Ihr wohlbehalten zurückgekehrt seid, @PCNAME@, so erleichtert ... [Sie nimmt deine beiden Hände und betrachtet dich von oben bis unten.]  Seid Ihr verletzt?  Vielleicht braucht Ihr etwas Heilung ...?}{Ich bin ja so froh, dass Ihr wohlbehalten zurückgekehrt seid, @PCNAME@, so erleichtert ... [Sie nimmt deine beiden Hände und betrachtet dich von oben bis unten.]  Seid Ihr verletzt?  Vielleicht braucht Ihr etwas Heilung ...?}{}{94}{}{qu1046 4}
+{523}{Nein, Ravena.  Mir geht es gut.  Aber es ist schön, Euch zu sehen ...}{}{5}{}{527}{re +5}
+{524}{Euer Angebot ist sehr großzügig, Ravena.  Das wäre wunderbar ...}{}{5}{}{530}{re +5}
+{525}{Wir müssen uns um dringende Angelegenheiten kümmern ... Ich bringe Neuigkeiten ...}{}{5}{}{539}{lf12 0, re -5, gf2364 0}
+{527}{Nun gut, vielleicht ein andermal.  [Sie lächelte zurückhaltend, aber ihr Blick ruht länger als nötig auf dir.]  Was für Neuigkeiten bringt Ihr von M'in Gorad?  Habt Ihr ihn gefunden?}{Nun gut, vielleicht ein andermal.  [Sie lächelte zurückhaltend, aber ihr Blick ruht länger als nötig auf dir.]  Was für Neuigkeiten bringt Ihr von M'in Gorad?  Habt Ihr ihn gefunden?}{}{95}{}{}
+{528}{Ich bringe Neuigkeiten von den Dunkelelfen ...}{}{5}{}{542}{}
+{530}{Dann werde ich Euch heilen ... [Sie kommt näher, legt dir die Hände auf die Schultern und berührt mit der Stirn deine Brust.  Sie atmet langsam und tief durch ... und hält dich mit den Händen fester, während sie dich zu sich heranzieht.  Hitze wallt zwischen euch beiden auf - ein leises Summen ertönt in deinen Ohren.  Sie flüstert ...]  Seid Ihr bereit?}{Dann werde ich Euch heilen ... [Sie kommt näher, legt dir die Hände auf die Schultern und berührt mit der Stirn deine Brust.  Sie atmet langsam und tief durch ... und hält dich mit den Händen fester, während sie dich zu sich heranzieht.  Hitze wallt zwischen euch beiden auf - ein leises Summen ertönt in deinen Ohren.  Sie flüstert ...]  Seid Ihr bereit?}{}{96}{}{}
+{531}{Nun ...}{}{5}{}{-49}{}
+{536}{So ... [Sie weicht zurück, lächelt und lässt die Hände noch einen Moment auf deinen Schultern ruhen, ehe sie sie fallen lässt.]  Ihr sagt, Ihr habt Neuigkeiten?}{So ... [Sie weicht zurück, lächelt und lässt die Hände noch einen Moment auf deinen Schultern ruhen, ehe sie sie fallen lässt.]  Ihr sagt, Ihr habt Neuigkeiten?}{}{98}{}{}
+{537}{Ich bringe Neuigkeiten von den Dunkelelfen ...}{}{5}{}{542}{}
+{539}{[Steif.] J-j-a, natürlich. [Sie lässt hastig die Hände fallen und weicht einen Schritt zurück.]  Was habt Ihr herausgefunden?}{[Steif.] J-j-a, natürlich. [Sie lässt hastig die Hände fallen und weicht einen Schritt zurück.]  Was habt Ihr herausgefunden?}{}{99}{}{}
+{540}{Ich bringe Neuigkeiten von den Dunkelelfen ...}{}{5}{}{542}{}
+{542}{Habt Ihr das Dorf der Dunkelelfen gefunden?  Erzählt mir, was passiert ist ...}{Habt Ihr das Dorf der Dunkelelfen gefunden?  Erzählt mir, was passiert ist ...}{}{100}{}{}
+{543}{Ich bin nach Tarant gereist und ... [Du erzählst ihr, wie du T'sen-Ang gefunden hast.]}{}{5}{}{545}{}
+{545}{Das ist ein großartiges Abenteuer ... aber es scheint, als hättet Ihr gefunden, wonach Ihr gesucht habt.  Und dieser M'in Gorad?  Habt Ihr ihn gefunden?  Hat er Euch erzählt, was aus dem Schwarzberg-Clan geworden ist?}{Das ist ein großartiges Abenteuer ... aber es scheint, als hättet Ihr gefunden, wonach Ihr gesucht habt.  Und dieser M'in Gorad?  Habt Ihr ihn gefunden?  Hat er Euch erzählt, was aus dem Schwarzberg-Clan geworden ist?}{}{101}{}{lc4 1}
+{546}{Ja, SIE war in dem Dorf.  Ich habe mit ihr gesprochen ...}{}{5}{lf12 1, gf2001 1}{568}{}
+{547}{Ja, SIE war in dem Dorf.  Ich habe mit ihr gesprochen ...}{}{5}{lf12  0, gf2001 1}{552}{}
+{548}{Ja, SIE war in dem Dorf ...}{}{5}{gf2001 0, lf12 0}{552}{}
+{549}{Ja, SIE war in dem Dorf ...}{}{5}{gf2001 0, lf12 1}{568}{}
+{550}{Wir sollten später darüber reden ...}{}{5}{}{700}{}
+{552}{Ah ... M'in Gorad ist also eine Frau.  [Ravenas Miene versteinert, sie runzelt die Stirn.]  Ich würde sie sehr gern kennen lernen ...}{Ah ... M'in Gorad ist also eine Frau.  [Ravenas Miene versteinert, sie runzelt die Stirn.]  Ich würde sie sehr gern kennen lernen ...}{}{102}{}{}
+{553}{Es dürfte schwierig sein, ein Treffen zu arrangieren.  Ich habe sie umgebracht ...}{}{5}{gf1097 1}{562}{}
+{554}{Ich hoffe, Ihr bekommt die Gelegenheit ...}{}{5}{gf1097 0}{556}{}
+{556}{Ich auch, ich auch. Und was habt Ihr von dieser M'in Gorad erfahren ...?}{Ich auch, ich auch. Und was habt Ihr von dieser M'in Gorad erfahren ...?}{}{103}{}{lc4 2}
+{557}{Sie hat mir vom Schwarzberg-Clan erzählt ... [Du sagst Ravena, was du weißt.]}{}{5}{gf2000 1, gf2001 1}{653}{}
+{558}{Ich konnte diesen Brief ergattern ...}{}{5}{ gf1099 1}{645}{}
+{559}{Ich möchte lieber später darüber reden ...}{}{5}{}{700}{}
+{562}{Ihr habt sie umgebracht?  Das ist wahrhaft bedauerlich, wenn man das Wesen des Elfenlebens bedenkt ... [Sie beugt sich näher zu dir und flüstert ...] Das war wirklich gut.  Also, was hat sie Euch erzählt?}{Ihr habt sie umgebracht?  Das ist wahrhaft bedauerlich, wenn man das Wesen des Elfenlebens bedenkt ... [Sie beugt sich näher zu dir und flüstert ...] Das war wirklich gut.  Also, was hat sie Euch erzählt?}{}{104}{}{lc4 2}
+{563}{Sie sagte nur: "Jetzt könnt Ihr nichts mehr dagegen tun.  Arronax ..."}{}{5}{gf2000 0}{658}{}
+{564}{Sie hat mir vom Schwarzberg-Clan erzählt ... [Du sagst Ravena, was du weißt.]}{}{5}{gf2000 1}{653}{}
+{565}{Ich konnte diesen Brief ergattern ...}{}{5}{ gf1099 1}{645}{}
+{566}{Ich möchte lieber später darüber reden ...}{}{5}{}{700}{}
+{568}{SIE?  [Ravenas Augen verengen sich zu Schlitzen, als sie die Schultern reckt.]  Und was hatte SIE zu sagen?  Ihr wart lange genug dort ... offenbar hattet Ihr beiden viel zu bereden ...}{SIE?  [Ravenas Augen verengen sich zu Schlitzen, als sie die Schultern reckt.]  Und was hatte SIE zu sagen?  Ihr wart lange genug dort ... offenbar hattet Ihr beiden viel zu bereden ...}{}{105}{}{}
+{569}{So würde ich das nicht sehen.  Sie sagte nur sehr wenig, bevor ich sie umgebracht habe ...}{}{5}{gf1097 1}{579}{re +10}
+{570}{Ja ... wir haben über die Widmung in Mr. Terwilligers Buch gesprochen ...}{}{5}{ru 2001, lf15 0}{585}{lf15 1}
+{571}{Nur die Zeit, die erforderlich war ... ich hatte Gründe, schnellstens zurückzukehren ...}{}{5}{}{575}{re +10}
+{572}{Werdet Ihr wohl zuhören, Mädchen!  Das Schicksal der Welt steht auf dem Spiel!}{}{5}{}{593}{lf12 0, re -10, gf2364 0}
+{575}{Und das, @PCNAME@, ist womöglich das schönste Kompliment, das ich je bekommen habe.  Vielen Dank ... [Wieder nimmt sie deine Hand ...]  Erzählt mir von dieser M'in Gorad ... was hat sie gesagt?}{Und das, @PCNAME@, ist womöglich das schönste Kompliment, das ich je bekommen habe.  Vielen Dank ... [Wieder nimmt sie deine Hand ...]  Erzählt mir von dieser M'in Gorad ... was hat sie gesagt?}{}{106}{}{}
+{576}{Bevor oder nachdem ich sie umgebracht habe?}{}{5}{gf1097 1}{579}{re +5}
+{577}{Sie hat mir vom Schwarzberg-Clan erzählt ... [Du sagst Ravena, was du weißt.]}{}{5}{gf2000 1}{653}{}
+{579}{Sie umgebracht?  [Ravena unterdrückt ein Lächeln.]  War das wirklich nötig, ich meine ... das Wesen des Elfenlebens bedeutet ... [Sie beugt sich dicht zu dir und haucht dir ins Ohr ...]  Ich bin sicher, sie hatte es verdient.  Was hat sie Euch erzählt?}{Sie umgebracht?  [Ravena unterdrückt ein Lächeln.]  War das wirklich nötig, ich meine ... das Wesen des Elfenlebens bedeutet ... [Sie beugt sich dicht zu dir und haucht dir ins Ohr ...]  Ich bin sicher, sie hatte es verdient.  Was hat sie Euch erzählt?}{}{107}{}{lc4 2}
+{580}{Sie sagte nur: "Jetzt könnt Ihr nichts mehr dagegen tun.  Arronax ..."}{}{5}{gf1097 1}{658}{}
+{581}{Sie hat mir vom Schwarzberg-Clan erzählt ... [Du sagst Ravena, was du weißt.]}{}{5}{gf1097 1, gf2000 1}{653}{}
+{582}{Ich konnte diesen Brief ergattern ...}{}{5}{ gf1099 1}{645}{}
+{583}{Ich möchte lieber später darüber reden ...}{}{5}{}{700}{}
+{585}{Widmung ...?  Er hat etwas geschrieben ...?  Ich meine, warum sollte er ...?  [Sichtlich erregt.] Wie, äh, wie lautete sie ...?}{Widmung ...?  Er hat etwas geschrieben ...?  Ich meine, warum sollte er ...?  [Sichtlich erregt.] Wie, äh, wie lautete sie ...?}{}{108}{}{}
+{586}{[Du sagst ihr, wie die Widmung lautete ...]}{}{5}{}{588}{}
+{588}{[Errötend.]  Das sind wunderbare Worte ... [Sie wendet sich sehnsüchtig ab und sieht dann dich an ...]  Er war stets so umsichtig ...}{[Errötend.]  Das sind wunderbare Worte ... [Sie wendet sich sehnsüchtig ab und sieht dann dich an ...]  Er war stets so umsichtig ...}{}{109}{}{}
+{589}{[Verspielt.] Und was genau hat sich zwischen euch beiden abgespielt?}{}{5}{}{600}{}
+{590}{Genug davon.  Das ist Vergangenheit ... kommen wir zu den dringenderen Aufgaben ...}{}{5}{}{597}{lf12 0, gf2364 0}
+{591}{Ich werde dieses Gesprächs überdrüssig ... reden wir später weiter ...}{}{5}{}{705}{lf12 0, gf2364 0}
+{593}{Natürlich ... tut mir SO Leid, dass ich Eure Zeit vergeudet habe. [Etwas kühl.]  Und?  Was ist mit dieser Frau, dieser M'in Gorad?  Was hat sie Euch erzählt?}{Natürlich ... tut mir SO Leid, dass ich Eure Zeit vergeudet habe. [Etwas kühl.]  Und?  Was ist mit dieser Frau, dieser M'in Gorad?  Was hat sie Euch erzählt?}{}{110}{}{}
+{594}{Ich habe sie umgebracht ...}{}{5}{}{562}{re +5}
+{595}{Sie hat mir vom Schwarzberg-Clan erzählt ... [Du sagst Ravena, was du weißt.]}{}{5}{}{}{}
+{597}{Natürlich ... tut mir SO Leid, dass ich Eure Zeit vergeudet habe. [Kalt.]  Und?  Was ist mit Renford?  Wie geht es ihm?  Lebt er noch in Tarant?}{Natürlich ... tut mir SO Leid, dass ich Eure Zeit vergeudet habe. [Kalt.]  Und?  Was ist mit Renford?  Wie geht es ihm?  Lebt er noch in Tarant?}{}{111}{}{}
+{598}{Nein, Ravena.  Er ist schon lange tot ...}{}{5}{}{617}{}
+{600}{Oh, nichts ... das ist schon lange her.  Es macht Euch doch nichts aus, oder?}{Oh, nichts ... das ist schon lange her.  Es macht Euch doch nichts aus, oder?}{}{112}{}{}
+{601}{Natürlich nicht.  Wenn Euch diese Erinnerung zum Lächeln bringt, gereicht sie auch mir zur Freude ...}{}{5}{}{613}{re +10}
+{602}{Natürlich nicht.  Ist Schäkern eine allgemeine Eigenschaft der Elfen?}{}{5}{}{605}{}
+{603}{Ich werde dieses Gesprächs überdrüssig ... reden wir später weiter ...}{}{5}{}{705}{lf12 0, gf2364 0}
+{605}{Schäkern!  Ihr wagt es, ein derartiges Urteil über meinen Charakter zu fällen?  Ihr geht zu weit ...}{Schäkern!  Ihr wagt es, ein derartiges Urteil über meinen Charakter zu fällen?  Ihr geht zu weit ...}{}{113}{}{}
+{606}{Verzeiht mir, Ravena.  Hört zu, ich habe schlechte Nachrichten über Renford ...}{}{5}{}{617}{}
+{607}{Es liegt mir nicht, einen blauen Stein rot zu nennen ...}{}{5}{}{609}{lf12 0, gf2364 0}
+{609}{Und mir scheint, als hätte ich EUREN Charakter überschätzt. [Kalt.] Nun gut.  Und was ist mit Renford?  Lebt er noch in Tarant?}{Und mir scheint, als hätte ich EUREN Charakter überschätzt. [Kalt.] Nun gut.  Und was ist mit Renford?  Lebt er noch in Tarant?}{}{114}{}{}
+{610}{Nein, Ravena.  Er ist schon lange tot ...}{}{5}{}{617}{}
+{611}{Ich werde dieses Gesprächs überdrüssig ... reden wir später weiter ...}{}{5}{}{705}{lf12 0, gf2364 0}
+{613}{Und das, @PCNAME@, ist womöglich das schönste Kompliment, das ich je bekommen habe.  Vielen Dank ... [Wieder nimmt sie deine Hand ...]  Bitte sagt mir ... habt Ihr Renford gefunden?  Wie geht es ihm?}{Und das, @PCNAME@, ist womöglich das schönste Kompliment, das ich je bekommen habe.  Vielen Dank ... [Wieder nimmt sie deine Hand ...]  Bitte sagt mir ... habt Ihr Renford gefunden?  Wie geht es ihm?}{}{115}{}{}
+{614}{Es tut mir Leid, Ravena.  Er ist schon lange tot ...}{}{5}{}{617}{}
+{617}{Nein ... [Tränen schießen ihr in die Augen.]  Was ist passiert?  Wurde er von den Dunkelelfen getötet?  "Verzehrt", wie in der Vision meiner Mutter ...?}{Nein ... [Tränen schießen ihr in die Augen.]  Was ist passiert?  Wurde er von den Dunkelelfen getötet?  "Verzehrt", wie in der Vision meiner Mutter ...?}{}{116}{}{}
+{618}{Seinen Tod umgibt ein Geheimnis, aber so scheint es gewesen zu sein ...}{}{5}{}{620}{}
+{620}{Armer Renford ... sein ganzes Leben lag noch vor ihm ...}{Armer Renford ... sein ganzes Leben lag noch vor ihm ...}{}{117}{}{}
+{621}{Eigentlich nicht ... er starb als alter Mann ...}{}{5}{ra 1, lf12 1}{632}{}
+{622}{Eigentlich nicht ... er starb als alter Mann ...}{}{5}{ra -1, lf12 1}{628}{}
+{623}{Eigentlich nicht ... er starb als alter Mann ...}{}{5}{lf12 0}{625}{}
+{625}{Ja, natürlich.  Schließlich war er ein Mensch.  Ich vergesse immer, was für eine kurze Lebensspanne sie haben ... armer Renford ... [Sie wendet sich ab und trocknet ihre Tränen ...]  Und was habt Ihr in T'sen-Ang gefunden?}{Ja, natürlich.  Schließlich war er ein Mensch.  Ich vergesse immer, was für eine kurze Lebensspanne sie haben ... armer Renford ... [Sie wendet sich ab und trocknet ihre Tränen ...]  Und was habt Ihr in T'sen-Ang gefunden?}{}{118}{}{}
+{626}{Wie ich schon sagte, ich habe M'in Gorad gefunden ...}{}{5}{}{653}{}
+{628}{Als alter Mann?  Oh ... ja, das hatte ich vergessen.  Menschen haben so wenig Zeit ... sie sind so ganz anders als wir. [Sie lässt deine Hand los.] Ich werde Renford vermissen.  Und was habt Ihr in T'sen-Ang gefunden?}{Als alter Mann?  Oh ... ja, das hatte ich vergessen.  Menschen haben so wenig Zeit ... sie sind so ganz anders als wir. [Sie lässt deine Hand los.] Ich werde Renford vermissen.  Und was habt Ihr in T'sen-Ang gefunden?}{}{119}{}{}
+{629}{Wie ich schon sagte, ich habe M'in Gorad gefunden ...}{}{5}{}{638}{}
+{632}{Als alter Mann?  Oh ... ja, das hatte ich vergessen.  [Sie sieht dich traurig an und lässt deine Hand los.]  Ihr Menschen habt so wenig Zeit ...}{Als alter Mann?  Oh ... ja, das hatte ich vergessen.  [Sie sieht dich traurig an und lässt deine Hand los.]  Ihr Menschen habt so wenig Zeit ...}{}{120}{}{gf2366 1}
+{633}{Ravena, ich ...}{}{5}{}{635}{}
+{635}{Nein ... sprechen wir später darüber. [Sie trocknet ihre Tränen.]  Und was habt Ihr in T'sen-Ang gefunden?}{Nein ... sprechen wir später darüber. [Sie trocknet ihre Tränen.]  Und was habt Ihr in T'sen-Ang gefunden?}{}{121}{}{}
+{636}{Wie ich schon sagte, ich habe M'in Gorad gefunden ...}{}{5}{}{638}{}
+{638}{Und was hat sie gesagt?}{Und was hat sie gesagt?}{}{122}{}{lc4 2}
+{639}{Ihr meint, bevor oder nachdem ich sie umgebracht habe?}{}{5}{gf1097 1, lf12 0}{562}{}
+{640}{Ihr meint, bevor oder nachdem ich sie umgebracht habe?}{}{5}{gf1097 1, lf12 1}{579}{}
+{641}{Sie hat mir vom Schwarzberg-Clan erzählt ... [Du sagst Ravena, was du weißt.]}{}{5}{gf2000 1, gf2001 1}{653}{}
+{642}{Ich konnte diesen Brief ergattern ...}{}{5}{ gf1099 1}{645}{}
+{643}{Ich möchte lieber später darüber reden ...}{}{5}{}{700}{}
+{645}{Was steht darin?}{Was steht darin?}{}{123}{}{lc4 3}
+{646}{Hier ist vom Schwarzberg-Clan und einem Mann namens Arronax die Rede ... [Du zeigst ihr den Brief.]}{}{5}{}{653}{lf13 1}
+{653}{Aha ... der Schwarzberg-Clan wurde also verbannt, damit Arronax die Schutzzauber schwächen kann.  Er kommt wirklich zurück.  Wir Elfen sind ein magisches Volk und bewandert in Runen und Prophezeiungen, aber ich hätte nie gedacht ... Einerlei, wir müssen handeln.  Ihr müsst mit meiner Mutter sprechen ... sie kann vielleicht sehen, was getan werden muss ...}{Aha ... der Schwarzberg-Clan wurde also verbannt, damit Arronax die Schutzzauber schwächen kann.  Er kommt wirklich zurück.  Wir Elfen sind ein magisches Volk und bewandert in Runen und Prophezeiungen, aber ich hätte nie gedacht ... Einerlei, wir müssen handeln.  Ihr müsst mit meiner Mutter sprechen ... sie kann vielleicht sehen, was getan werden muss ...}{}{124}{}{gf1098 1, lc4 3}
+{654}{Das werde ich, Ravena.  Ich komme wieder, sobald ich das getan habe ...}{}{5}{}{0}{lf17 1}
+{655}{Wartet ... Ich habe einige Fragen über Arronax ...}{}{5}{}{673}{}
+{656}{Was soll dieser Hinweis auf Vendigroth?}{}{5}{lf13 1}{695}{lf19 1}
+{658}{Arronax?  Was hat er mit alledem zu schaffen? ...}{Arronax?  Was hat er mit alledem zu schaffen? ...}{}{125}{}{}
+{659}{Stennar Steinschneider sagte, etwas käme zurück ...}{}{5}{}{661}{}
+{661}{Ja, und nun sagt M'in Gorad, "... Ihr könnt nichts mehr dagegen tun" und erwähnt Arronax ... vielleicht ist die Sache ernster, als wir uns alle vorstellen können ...}{Ja, und nun sagt M'in Gorad, "... Ihr könnt nichts mehr dagegen tun" und erwähnt Arronax ... vielleicht ist die Sache ernster, als wir uns alle vorstellen können ...}{}{126}{}{gf1098 1}
+{662}{Wer ist Arronax?}{}{5}{}{673}{}
+{663}{Was sollen wir tun?}{}{5}{}{667}{}
+{664}{Ich habe auch einen Brief gelesen, den sie hatte ...}{}{5}{gf1099 1, lf13 0}{645}{}
+{665}{Und der Hinweis des Briefes auf Vendigroth?}{}{5}{gf1099 1, lf13 1, lf19 0}{695}{lf19 1}
+{667}{Meine Mutter wird wissen, welchen Weg wir einschlagen sollen ... sie kann dies alles vielleicht durchschauen und uns sagen, was getan werden muss ...}{Meine Mutter wird wissen, welchen Weg wir einschlagen sollen ... sie kann dies alles vielleicht durchschauen und uns sagen, was getan werden muss ...}{}{127}{}{gf1098 1}
+{668}{Ich spreche mit ihr, Ravena, und komme wieder, sobald ich es getan habe ...}{}{5}{}{0}{lf17 1}
+{669}{Was könnt Ihr mir über diesen Arronax erzählen?}{}{5}{}{673}{}
+{670}{Ich habe auch einen Brief gelesen, den sie hatte ...}{}{5}{gf1099 1, lf13 0}{645}{}
+{671}{Und der Hinweis des Briefes auf Vendigroth?}{}{5}{gf1099 1, lf13 1, lf19 0}{695}{lf19 1}
+{673}{Die Geschichte von Arronax ist alt ... er war ein mächtiger Elf, der im Zeitalter der Legenden lebte.  Damals gab es einen Elfen-Rat, der das Land regierte, und Arronax hat sich ihm widersetzt.  Es kam zu einem erbitterten Kampf zwischen ihnen, und Arronax wurde in die Leere verbannt.  Natürlich ist die Geschichte noch viel komplizierter, aber das sind die wesentlichen Punkte ...}{Die Geschichte von Arronax ist alt ... er war ein mächtiger Elf, der im Zeitalter der Legenden lebte.  Damals gab es einen Elfen-Rat, der das Land regierte, und Arronax hat sich ihm widersetzt.  Es kam zu einem erbitterten Kampf zwischen ihnen, und Arronax wurde in die Leere verbannt.  Natürlich ist die Geschichte noch viel komplizierter, aber das sind die wesentlichen Punkte ...}{}{128}{}{}
+{674}{Die Leere?  Was ist die Leere?}{}{5}{}{681}{}
+{675}{Was meint Ihr mit dem "Zeitalter der Legenden"?}{}{5}{}{413}{}
+{676}{Und der Rest der Geschichte?}{}{5}{}{688}{}
+{677}{Was sollen wir tun?}{}{5}{}{667}{}
+{678}{Ich habe auch einen Brief gelesen, den sie hatte ...}{}{5}{gf1099 1, lf13 0}{645}{}
+{679}{Und der Hinweis des Briefes auf Vendigroth?}{}{5}{gf1099 1, lf13 1, lf19 0}{695}{lf19 1}
+{681}{Die Leute gehen in die Leere, wenn sie verbannt werden.  Fragt mich nicht danach ... ich weiß nicht, wie es dort ist.  Das weiß schon deshalb niemand, weil noch niemand von dort je zurückgekommen ist. }{Die Leute gehen in die Leere, wenn sie verbannt werden.  Fragt mich nicht danach ... ich weiß nicht, wie es dort ist.  Das weiß schon deshalb niemand, weil noch niemand von dort je zurückgekommen ist. }{}{129}{}{}
+{682}{Was meint Ihr mit dem "Zeitalter der Legenden"?}{}{5}{}{413}{}
+{683}{Was ist noch dran an der Geschichte von Arronax ...?}{}{5}{}{688}{}
+{684}{Was sollen wir tun?}{}{5}{}{667}{}
+{685}{Ich habe auch einen Brief gelesen, den sie hatte ...}{}{5}{gf1099 1, lf13 0}{645}{}
+{686}{Und der Hinweis des Briefes auf Vendigroth?}{}{5}{gf1099 1, lf13 1, lf19 0}{695}{lf19 1}
+{688}{Ich weiß nicht so viel über die Geschichte wie andere.  Die ganze Panarii-Religion kreist um Arronax ... von ihr kommt die Prophezeiung seiner Rückkehr.  Wenn Ihr Fragen dazu habt, ihre Tempel gibt es überall in Arcanum ... jeder Priester kann Euch mit den Einzelheiten vertraut machen ...}{Ich weiß nicht so viel über die Geschichte wie andere.  Die ganze Panarii-Religion kreist um Arronax ... von ihr kommt die Prophezeiung seiner Rückkehr.  Wenn Ihr Fragen dazu habt, ihre Tempel gibt es überall in Arcanum ... jeder Priester kann Euch mit den Einzelheiten vertraut machen ...}{}{130}{}{}
+{689}{Was meint Ihr mit dem "Zeitalter der Legenden"?}{}{5}{}{413}{}
+{690}{Die Leere?  Was ist die Leere?}{}{5}{}{681}{}
+{691}{Was sollen wir tun?}{}{5}{}{667}{}
+{692}{Ich habe auch einen Brief gelesen, den sie hatte ...}{}{5}{gf1099 1, lf13 0}{645}{}
+{693}{Und der Hinweis des Briefes auf Vendigroth?}{}{5}{gf1099 1, lf13 1, lf19 0}{695}{lf19 1}
+{695}{Vendigroth?  Ich weiß, dass die Vendigroth-Wüste im Norden liegt und Vendigroth eine Rolle in den Panarii-Legenden um Arronax spielt.  Es wurde oft darüber diskutiert, ob es sich dabei um eine richtige Stadt oder nur um etwas Symbolisches handelt.  Sieht so aus, als hätten die Dunkelelfen und dieser K'an Hua dort etwas gefunden ...}{Vendigroth?  Ich weiß, dass die Vendigroth-Wüste im Norden liegt und Vendigroth eine Rolle in den Panarii-Legenden um Arronax spielt.  Es wurde oft darüber diskutiert, ob es sich dabei um eine richtige Stadt oder nur um etwas Symbolisches handelt.  Sieht so aus, als hätten die Dunkelelfen und dieser K'an Hua dort etwas gefunden ...}{}{131}{}{}
+{696}{Ich habe da einige Fragen über Arronax ...}{}{5}{}{673}{}
+{697}{Was sollen wir tun?}{}{5}{}{667}{}
+{700}{Nun gut ... aber kehrt bald zurück!  Wir müssen immer noch über Vieles reden ...}{Nun gut ... aber kehrt bald zurück!  Wir müssen immer noch über Vieles reden ...}{}{132}{}{lf18 0}
+{701}{Das werde ich, Ravena. }{}{5}{}{}{lf17 1}
+{705}{Ja, vielleicht wäre es besser, wir reden später darüber.  Eure Gesellschaft langweilt mich recht schnell.  [Kalt.]  Kommt wieder, wenn Ihr besserer Laune seid.}{Ja, vielleicht wäre es besser, wir reden später darüber.  Eure Gesellschaft langweilt mich recht schnell.  [Kalt.]  Kommt wieder, wenn Ihr besserer Laune seid.}{}{133}{}{lf17 0}
+{706}{Auf Wiedersehen, Ravena.}{}{5}{}{}{lf18 1}
+{710}{Ja, ich glaube, darüber müssen wir uns unterhalten ... wo waren wir stehen geblieben?}{Ja, ich glaube, darüber müssen wir uns unterhalten ... wo waren wir stehen geblieben?}{}{134}{}{}
+{711}{Ich habe mit M'in Gorad gesprochen ... SIE war eine höchst interessante Person ...}{}{5}{lf12 1, gf2001 1, lc4 1}{568}{}
+{712}{Ich habe mit M'in Gorad gesprochen ... SIE war eine höchst interessante Person ...}{}{5}{lf12  0, gf2001 1, lc4 1}{552}{}
+{713}{M'in Gorad ... SIE war eine höchst interessante Person ...}{}{5}{gf2001 0, lf12 0, lc4 1}{552}{}
+{714}{M'in Gorad ... SIE war eine höchst interessante Person ...}{}{5}{gf2001 0, lf12 1, lc4 1}{568}{}
+{715}{M'in Gorad sagte nur: "Jetzt könnt Ihr nichts mehr dagegen tun.  Arronax ..."}{}{5}{gf2000 0, gf2001 1, lc4 2}{658}{}
+{716}{Sie hat mir vom Schwarzberg-Clan erzählt ... [Du sagst Ravena, was du weißt.]}{}{5}{gf2000 1, gf2001 1, lc4 2}{653}{}
+{717}{Ich habe nicht mit ihr gesprochen, aber diesen Brief bekommen ...}{}{5}{gf2001 0, gf1099 1, lc4 2}{645}{}
+{718}{Jetzt, wo wir über Arronax Bescheid wissen, was sollen wir tun?}{}{5}{lc4 3}{667}{}
+{719}{Es tut mir Leid.  Ich möchte lieber später darüber reden ...}{}{5}{}{0}{}
+{721}{Ja, gut.  Vielleicht können wir uns ja tatsächlich wie zivilisierte Leute unterhalten.  Wo waren wir stehen geblieben?}{Ja, gut.  Vielleicht können wir uns ja tatsächlich wie zivilisierte Leute unterhalten.  Wo waren wir stehen geblieben?}{}{135}{}{}
+{722}{Ich habe mit M'in Gorad gesprochen ... SIE war eine höchst interessante Person ...}{}{5}{lf12  0, gf2001 1, lc4 1}{552}{}
+{723}{M'in Gorad ... SIE war eine höchst interessante Person ...}{}{5}{gf2001 0, lf12 0, lc4 1}{552}{}
+{724}{M'in Gorad sagte nur: "Jetzt könnt Ihr nichts mehr dagegen tun.  Arronax ..."}{}{5}{gf2000 0, gf2001 1, lc4 2}{658}{}
+{725}{Sie hat mir vom Schwarzberg-Clan erzählt ... [Du sagst Ravena, was du weißt.]}{}{5}{gf2000 1, gf2001 1, lc4 2}{653}{}
+{726}{Ich habe nicht mit ihr gesprochen, aber diesen Brief bekommen ...}{}{5}{gf2001 0, gf1099 1, lc4 2}{645}{}
+{727}{Jetzt, wo wir über Arronax Bescheid wissen, was sollen wir tun?}{}{5}{lc4 3}{667}{}
+{728}{Es tut mir Leid.  Ich möchte lieber später darüber reden ...}{}{5}{}{0}{}
+{735}{Wirklich?  Und was hat sie Euch erzählt, @PCNAME@?}{Wirklich?  Und was hat sie Euch erzählt, @PCNAME@?}{}{136}{}{}
+{736}{Sie sagte mir: "Eure Antwort liegt allein bei Nasrudin ..."}{}{5}{}{738}{}
+{738}{Das ist sehr, sehr seltsam ...}{Das ist sehr, sehr seltsam ...}{}{137}{}{}
+{739}{Warum?}{}{5}{}{741}{}
+{741}{Weil Nasrudin seit über zweitausend Jahren tot ist ...}{Weil Nasrudin seit über zweitausend Jahren tot ist ...}{}{138}{}{}
+{742}{Das scheint die Situation ein wenig zu komplizieren ...}{}{5}{}{744}{}
+{744}{[Sie lächelt ironisch.] Ja, das scheint mir auch so.}{[Sie lächelt ironisch.] Ja, das scheint mir auch so.}{}{139}{}{}
+{745}{Nasrudin und der Rat ... sie haben Arronax verbannt ...}{}{5}{}{747}{}
+{747}{Ja, ich weiß.  Das erzählt man sich jedenfalls.  Wie schon gesagt, ich kenne die Einzelheiten nicht ...}{Ja, ich weiß.  Das erzählt man sich jedenfalls.  Wie schon gesagt, ich kenne die Einzelheiten nicht ...}{}{140}{}{}
+{748}{Tja, damit stecke ich in der Klemme.  Ich suche nach einem toten Mann ...}{}{5}{lf12 0}{753}{}
+{749}{Tja, damit stecke ich in der Klemme.  Ich suche nach einem toten Mann ...}{}{5}{lf12 1}{768}{}
+{753}{Ja, das ist sehr seltsam.  Ich würde Euch raten, nach Caladon zu reisen.  Dort findet Ihr den Obersten Tempel der Panarii und vielleicht ein paar Antworten mehr ...}{Ja, das ist sehr seltsam.  Ich würde Euch raten, nach Caladon zu reisen.  Dort findet Ihr den Obersten Tempel der Panarii und vielleicht ein paar Antworten mehr ...}{}{141}{}{ru 2056}
+{754}{Das hört sich nicht übel an.  Möchtet Ihr mich wohl begleiten?}{}{5}{}{796}{lf22 1, jo 0 762}
+{755}{Das werde ich tun, Ravena.  Vielen Dank für Eure Hilfe ...}{}{5}{}{}{fl 757}
+{757}{Viel Glück, @PCNAME@.  Ich hoffe, dies alles nimmt ein gutes Ende ... für uns alle ...}{Viel Glück, @PCNAME@.  Ich hoffe, dies alles nimmt ein gutes Ende ... für uns alle ...}{}{142}{}{}
+{759}{Ich muss mich hier in Quintarra um vieles kümmern.  Aber meine besten Wünsche und mein Dank begleiten Euch.  Ich hoffe, dies alles nimmt ein gutes Ende ... für uns alle ...}{Ich muss mich hier in Quintarra um vieles kümmern.  Aber meine besten Wünsche und mein Dank begleiten Euch.  Ich hoffe, dies alles nimmt ein gutes Ende ... für uns alle ...}{}{143}{}{}
+{760}{Vielen Dank, Ravena.  Auf Wiedersehen.}{}{5}{}{0}{}
+{762}{[Sie beugt sich zu dir und flüstert leise ...]  Ich hatte gehofft, dass Ihr mich darum bitten würdet.  [Und dann, so dass alle es hören können ...]  Ich trage viel Verantwortung hier in Quintarra, denke aber, mein Platz ist jetzt an Eurer Seite. Diese Angelegenheit betrifft ganz Arcanum, besonders aber die Elfen.  Ja, @PCNAME@, ich werde mit Euch kommen und tun, was getan werden muss, wenn das Euer Wunsch ist ...}{[Sie beugt sich zu dir und flüstert leise ...]  Ich hatte gehofft, dass Ihr mich darum bitten würdet.  [Und dann, so dass alle es hören können ...]  Ich trage viel Verantwortung hier in Quintarra, denke aber, mein Platz ist jetzt an Eurer Seite. Diese Angelegenheit betrifft ganz Arcanum, besonders aber die Elfen.  Ja, @PCNAME@, ich werde mit Euch kommen und tun, was getan werden muss, wenn das Euer Wunsch ist ...}{}{144}{}{}
+{763}{Das werde ich, Ravena.  Es wäre mir eine Ehre, wenn Ihr mich begleiten würdet ...}{}{5}{}{765}{}
+{765}{Und es ist MIR eine Ehre, Gefährtin von jemandem mit so offensichtlichem Mut und eindeutiger Integrität zu sein.  Sollen wir?}{Und es ist MIR eine Ehre, Gefährtin von jemandem mit so offensichtlichem Mut und eindeutiger Integrität zu sein.  Sollen wir?}{}{145}{}{}
+{766}{Ja, also los ...}{}{5}{}{0}{}
+{768}{Ja, das ist sehr seltsam.  Ich würde Euch raten, dass wir nach Caladon reisen.  Dort finden wir den Obersten Tempel der Panarii und vielleicht ein paar Antworten mehr ...}{Ja, das ist sehr seltsam.  Ich würde Euch raten, dass wir nach Caladon reisen.  Dort finden wir den Obersten Tempel der Panarii und vielleicht ein paar Antworten mehr ...}{}{146}{}{}
+{769}{Pardon ... habt Ihr "wir" gesagt?}{}{5}{}{771}{}
+{771}{Ja, das habe ich.  [Sie sieht dich herausfordernd an.]  Diese Angelegenheit betrifft ganz Arcanum, besonders aber die Elfen.  Wo anders sollte ich sein als da, wo ich am dringendsten gebraucht werde?}{Ja, das habe ich.  [Sie sieht dich herausfordernd an.]  Diese Angelegenheit betrifft ganz Arcanum, besonders aber die Elfen.  Wo anders sollte ich sein als da, wo ich am dringendsten gebraucht werde?}{}{147}{}{}
+{772}{Ich habe die Entscheidung nicht in Zweifel gezogen.  Also wollt Ihr mich begleiten?}{}{5}{}{796}{lf22 1, jo 0 776}
+{773}{Ich denke, das geht in Ordnung, solange Ihr wisst, wer das Kommando hat ...}{}{5}{}{782}{re -10, lf12  0, gf2364 0}
+{774}{Es tut mir sehr Leid, Ravena.  Hier trennen sich unsere Wege ...}{}{5}{}{792}{lf12 0, gf2364 0}
+{776}{[Sie schenkt dir ein strahlendes Lächeln.]  Natürlich würde ich Euch gern begleiten.  Würdet Ihr mich denn mitnehmen?}{[Sie schenkt dir ein strahlendes Lächeln.]  Natürlich würde ich Euch gern begleiten.  Würdet Ihr mich denn mitnehmen?}{}{148}{}{}
+{777}{Etwas anderes käme doch überhaupt nicht infrage ...}{}{5}{}{779}{}
+{779}{[Sie kommt näher zu dir und legt die Hand langsam in deine.]  Dann lasst uns allem, was da draußen wartet, gemeinsam trotzen ...}{[Sie kommt näher zu dir und legt die Hand langsam in deine.]  Dann lasst uns allem, was da draußen wartet, gemeinsam trotzen ...}{}{149}{}{}
+{780}{Ja, gehen wir ...}{}{5}{}{0}{}
+{782}{Wer das Kommando hat ... wie könnt Ihr es wagen?  Ich bin die Tochter der Elfenkönigin!  Ich lasse mir von niemandem Vorschriften machen!  Ihr wärt gut beraten, mich in Eurer Gruppe zu haben, @PCNAME@!}{Wer das Kommando hat ... wie könnt Ihr es wagen?  Ich bin die Tochter der Elfenkönigin!  Ich lasse mir von niemandem Vorschriften machen!  Ihr wärt gut beraten, mich in Eurer Gruppe zu haben, @PCNAME@!}{}{150}{}{}
+{783}{Vergebt mir ... wir würden als Ebenbürtige reisen.  Wollt Ihr mich begleiten?}{}{5}{}{796}{lf22 1, jo 0 786}
+{784}{Wenn ich es recht bedenke, gehe ich lieber alleine ...}{}{5}{}{792}{}
+{786}{Ja, als Ebenbürtige.  [Ihr Verhalten dir gegenüber ist etwas distanziert.]  Dann nehmt Ihr mich also mit?}{Ja, als Ebenbürtige.  [Ihr Verhalten dir gegenüber ist etwas distanziert.]  Dann nehmt Ihr mich also mit?}{}{151}{}{}
+{787}{Nun ...}{}{5}{}{789}{}
+{789}{Dann sollten wir jetzt gehen ...  Ich brenne darauf zu tun, was getan werden muss ...}{Dann sollten wir jetzt gehen ...  Ich brenne darauf zu tun, was getan werden muss ...}{}{152}{}{}
+{790}{Genau wie ich. Sollen wir ...?}{}{5}{}{0}{}
+{792}{Wirklich?  [Kalt.]  Ich verstehe.  Nun denn, viel Glück bei Eurer Suche.  Ich hoffe, dies alles nimmt ein gutes Ende ... für uns alle.}{Wirklich?  [Kalt.]  Ich verstehe.  Nun denn, viel Glück bei Eurer Suche.  Ich hoffe, dies alles nimmt ein gutes Ende ... für uns alle.}{}{153}{}{}
+{793}{Lebt wohl, Ravena.}{}{5}{}{0}{}
+{796}{Gibt es sonst noch etwas?  Ich muss mich hier in Quintarra um vieles kümmern ...}{Gibt es sonst noch etwas?  Ich muss mich hier in Quintarra um vieles kümmern ...}{}{154}{}{}
+{797}{E:}{}{5}{}{0}{}
+{799}{Wartet ... hier stimmt etwas nicht ... Ihr seid so anders ...}{Wartet ... hier stimmt etwas nicht ... Ihr seid so anders ...}{}{155}{}{}
+{800}{Was?  Was wollt Ihr damit andeuten?}{}{5}{}{802}{}
+{801}{Äh?  Wovon Ihr reden?}{}{-4}{}{977}{}
+{802}{Ihr habt mit ihnen zu tun gehabt, richtig?  Die Dunkelelfen!  Ich sehe es ... Ihr habt eingewilligt, ihnen zu helfen!  Ich kann es nicht glauben.  Ich dachte, Ihr wäret anders ...}{Ihr habt mit ihnen zu tun gehabt, richtig?  Die Dunkelelfen!  Ich sehe es ... Ihr habt eingewilligt, ihnen zu helfen!  Ich kann es nicht glauben.  Ich dachte, Ihr wäret anders ...}{}{156}{}{}
+{803}{Wartet, Ravena!  Ich habe nur eingewilligt, damit ich hierher zurückkehren konnte!}{}{5}{}{806}{}
+{804}{Ja?  Und?  Was wollt IHR dagegen unternehmen?}{}{5}{}{806}{}
+{806}{[Ravena weicht einen Schritt zurück und ballt die Faust.]  Trefft Eure Entscheidung auf der Stelle.  Seid Ihr für uns oder gegen uns?}{[Ravena weicht einen Schritt zurück und ballt die Faust.]  Trefft Eure Entscheidung auf der Stelle.  Seid Ihr für uns oder gegen uns?}{}{157}{}{}
+{807}{Ich bin für Euch!}{}{5}{}{825}{}
+{808}{Ich lasse mir diese Entscheidung von niemandem aufzwingen ...}{}{5}{}{810}{}
+{810}{[Die Luft um Ravena herum leuchtet scharlachrot auf - ihre Augen funkeln im selben Farbton.]  Entscheidet Euch.  Sofort.}{[Die Luft um Ravena herum leuchtet scharlachrot auf - ihre Augen funkeln im selben Farbton.]  Entscheidet Euch.  Sofort.}{}{158}{}{}
+{811}{Schon gut, schon gut ... ich bin für Euch.}{}{5}{}{825}{}
+{812}{Wie schade, meine Teuerste.  Ich bedaure, dass ich Euch töten muss ...}{}{5}{}{}{co, fl 820}
+{814}{Also gut ... [Sie beruhigt sich.]  Ich glaube Euch, @PCNAME@.  Aber Ihr müsst mir beweisen, dass Ihr nicht mit den Dunkelelfen im Bunde seid. Geht.  Tötet M'in Gorad, und kommt zurück ...}{Also gut ... [Sie beruhigt sich.]  Ich glaube Euch, @PCNAME@.  Aber Ihr müsst mir beweisen, dass Ihr nicht mit den Dunkelelfen im Bunde seid. Geht.  Tötet M'in Gorad, und kommt zurück ...}{}{159}{}{}
+{815}{Aber Ihr habt doch nicht die geringste Ahnung, was hier vor sich geht ...}{}{5}{}{817}{}
+{817}{Sofort!  Ich spreche erst wieder mit Euch, wenn Ihr das getan habt.  Kommt erst wieder zu mir, wenn M'in Gorad tot ist.}{Sofort!  Ich spreche erst wieder mit Euch, wenn Ihr das getan habt.  Kommt erst wieder zu mir, wenn M'in Gorad tot ist.}{}{160}{}{}
+{818}{Gut ... das werde ich tun und dann zurückkehren ...}{}{5}{}{0}{gf2002 1}
+{820}{Ich werde das Böse nicht in Quintarra dulden!  Ihr werdet heute hier sterben ...}{Ich werde das Böse nicht in Quintarra dulden!  Ihr werdet heute hier sterben ...}{}{161}{}{}
+{825}{Und ich kenne EUCH nicht.  [Dieses Elfenmädchen ist wunderschön, aber offenbar nicht zufrieden mit dir.  Du bist dir nicht sicher, denkst aber, das könnte an deiner geistigen Unzulänglichkeit liegen.]}{Und ich kenne EUCH nicht.  [Dieses Elfenmädchen ist wunderschön, aber offenbar nicht zufrieden mit dir.  Du bist dir nicht sicher, denkst aber, das könnte an deiner geistigen Unzulänglichkeit liegen.]}{}{162}{}{}
+{826}{Äh ... wie Ihr heißen, hübschig Elfmä'chen?}{}{-4}{ch 16}{829}{re +10}
+{827}{Äh ... wie Ihr heißen, hübschig Elfmä'chen?}{}{-4}{ch -15}{832}{}
+{829}{[Ihr Gesichtsausdruck wird sanfter, du glaubst, die vage Andeutung eines Lächelns zu sehen.]  Meinen wahren Namen würdet Ihr nicht verstehen.  Ihr könnt mich Ravena nennen.}{[Ihr Gesichtsausdruck wird sanfter, du glaubst, die vage Andeutung eines Lächelns zu sehen.]  Meinen wahren Namen würdet Ihr nicht verstehen.  Ihr könnt mich Ravena nennen.}{}{163}{}{}
+{830}{Fein, hübschig Elfmä'chen!  Ich Euch Fragens fragen?}{}{-4}{}{835}{}
+{832}{[Das Gesicht dieses Mädchens ist wie Stein.]  Spart Euch Eure Komplimente.  Mein Name ist nicht wichtig, aber wenn es denn sein muss, könnt Ihr mich Ravena nennen.}{[Das Gesicht dieses Mädchens ist wie Stein.]  Spart Euch Eure Komplimente.  Mein Name ist nicht wichtig, aber wenn es denn sein muss, könnt Ihr mich Ravena nennen.}{}{164}{}{}
+{833}{Fein, hübschig Elfmä'chen!  Ich Euch Fragens fragen?}{}{-4}{}{835}{}
+{835}{Wenn es sein muss ...}{Wenn es sein muss ...}{}{165}{}{}
+{836}{Ich brauchen Hilfe!  Bösig Sachens passieren!}{}{-4}{qu1019 0}{848}{}
+{837}{Ich brauchen Hilfe!  Bösig Sachens passieren!}{}{-4}{qu1019 1}{870}{}
+{838}{Ich brauchen Hilfe!  Bösig Sachens passieren!}{}{-4}{qu1019 2, gf1070 0, gf1071 0}{}{fl 874}
+{839}{Bösig Menschens nich' geh'n weg!}{}{-4}{gf1071 1, gf1070 0, qu1019 2}{}{fl 876}
+{840}{Ich bösig Menschens loswerden!}{}{-4}{gf1070 1, qb1020 1}{878}{}
+{841}{Suchen Dunkelfens!}{}{-4}{qu1021 2}{}{fl 902}
+{842}{Ich Dunkelfens finden haben!}{}{-4}{qu1025 2, gf2003 1}{977}{}
+{843}{Ich Dunkelfens finden haben!}{}{-4}{qu1020 4, gf1088 0, lf20 0, gf2003 0}{904}{}
+{844}{Ich Dunkelfens finden haben!}{}{-4}{lf20 1, gf1088 0, gf2003 0}{}{fl 941}
+{845}{Ich mi' Mama reden haben!}{}{-4}{gf1088 1, lf21 0, lf24 0}{943}{lf24 1}
+{846}{Ich Nassruhdin finden haben!}{}{-4}{lf21 1}{}{fl 952}
+{847}{Ich jetz' geh'n.}{}{-4}{}{0}{}
+{848}{Tut mir Leid ... ich bin momentan sehr beschäftigt.  Vielleicht habe ich später Zeit, mit Euch zu sprechen, aber im Augenblick muss ich mich um dringende Geschäfte kümmern.  Es sei denn, Ihr möchtet uns helfen?}{Tut mir Leid ... ich bin momentan sehr beschäftigt.  Vielleicht habe ich später Zeit, mit Euch zu sprechen, aber im Augenblick muss ich mich um dringende Geschäfte kümmern.  Es sei denn, Ihr möchtet uns helfen?}{}{166}{}{}
+{849}{Fein, hübschig Elfmä'chen!  Ich helfen!}{}{-4}{}{853}{re +5}
+{850}{Äh ... Ich kommen später wieda ...}{}{-4}{}{0}{}
+{851}{E:}{}{-4}{}{0}{}
+{853}{[Sie lächelt verhalten und sichtlich erfreut.]  Na gut.  Eine Gruppe Menschen hat nicht weit von hier ihr Lager aufgeschlagen ... der Ort heißt Falkenpein ... Ich markiere ihn auf Eurer Karte.  Das ist heiliges Gebiet der Elfen.  Habt Ihr das verstanden?}{[Sie lächelt verhalten und sichtlich erfreut.]  Na gut.  Eine Gruppe Menschen hat nicht weit von hier ihr Lager aufgeschlagen ... der Ort heißt Falkenpein ... Ich markiere ihn auf Eurer Karte.  Das ist heiliges Gebiet der Elfen.  Habt Ihr das verstanden?}{}{167}{}{mm 12}
+{854}{Ei-lich Ge...?}{}{-4}{}{856}{}
+{856}{Wartet ... besonderes Land, es ist ganz besonderes Land für mich. Ja?}{Wartet ... besonderes Land, es ist ganz besonderes Land für mich. Ja?}{}{168}{}{}
+{857}{Fein!  Besonder für hübschig Elfmä'chen!}{}{-4}{}{859}{}
+{859}{Ja, ja.  Ihr müsst herausfinden, warum sie dort sind, und sie dann vertreiben.  Aber ...  DAS IST SEHR WICHTIG!  Ihr dürft keine Hand gegen sie erheben ... Es gibt Geister dort, die übel mit Leuten umspringen, die anderen Leuten Böses antun ... Habt Ihr verstanden?}{Ja, ja.  Ihr müsst herausfinden, warum sie dort sind, und sie dann vertreiben.  Aber ...  DAS IST SEHR WICHTIG!  Ihr dürft keine Hand gegen sie erheben ... Es gibt Geister dort, die übel mit Leuten umspringen, die anderen Leuten Böses antun ... Habt Ihr verstanden?}{}{169}{}{qu1019 1}
+{860}{Äähh ...}{}{-4}{gf1070 0}{863}{}
+{861}{Ich schon tun haben!  Sie weg!}{}{-4}{gf1070 1}{878}{}
+{863}{Nicht schlagen!  Verstanden?  Nicht schlagen!}{Nicht schlagen!  Verstanden?  Nicht schlagen!}{}{170}{}{}
+{864}{Ja!  Ich versteh'n!  Nich' schlagen!  Ich sie wegjagen!}{}{-4}{}{867}{qu1019 2}
+{865}{Äh ... ich das jetz' nich' tun willen.  Ich kommen späta zurück.}{}{-4}{}{0}{}
+{867}{Danke, mein kleiner Einfaltspinsel!  Hier ist es ... [Sie zeigt auf deine Karte.]  Seid vorsichtig!  Und kommt wieder, wenn Ihr es getan habt ...}{Danke, mein kleiner Einfaltspinsel!  Hier ist es ... [Sie zeigt auf deine Karte.]  Seid vorsichtig!  Und kommt wieder, wenn Ihr es getan habt ...}{}{171}{}{ru 2052, mm 12}
+{868}{Ja!  Ja!  Tschö!}{}{-4}{}{0}{}
+{870}{Ich sagte doch ... wir brauchen Hilfe in Falkenpein.  Werdet Ihr es tun? }{Ich sagte doch ... wir brauchen Hilfe in Falkenpein.  Werdet Ihr es tun? }{}{172}{}{}
+{871}{Ja!  Ich tu's!}{}{-4}{}{867}{}
+{872}{Nein ... kommen späta wieder ...}{}{-4}{}{0}{}
+{874}{Ihr müsst Euch um die Menschen in Falkenpein kümmern ... und dann zu mir zurückkommen ...}{Ihr müsst Euch um die Menschen in Falkenpein kümmern ... und dann zu mir zurückkommen ...}{}{173}{}{}
+{876}{Ich habe nicht gesagt, dass es leicht sein würde, aber Ihr müsst eine Möglichkeit finden, sie loszuwerden!  SCHLAGT SIE NICHT!}{Ich habe nicht gesagt, dass es leicht sein würde, aber Ihr müsst eine Möglichkeit finden, sie loszuwerden!  SCHLAGT SIE NICHT!}{}{174}{}{}
+{878}{Sehr gut!  Recht herzlichen Dank ... nun denn, wie kann ich Euch helfen?}{Sehr gut!  Recht herzlichen Dank ... nun denn, wie kann ich Euch helfen?}{}{175}{}{qu1019 4}
+{879}{Bösig Sachens passieren! [Du erzählst Ravena alles, was geschehen ist.]}{}{-4}{}{881}{}
+{881}{[Ravena steht auf und denkt nach.  Und dann ...]  Eine düstere, schmerzliche Geschichte.  Und es sieht so aus, als wären wir, die Elfen, daran schuld ...}{[Ravena steht auf und denkt nach.  Und dann ...]  Eine düstere, schmerzliche Geschichte.  Und es sieht so aus, als wären wir, die Elfen, daran schuld ...}{}{176}{}{}
+{882}{Äh ... ich mussen finden M'in Gora' ...}{}{-4}{}{884}{}
+{884}{Tut mir Leid, aber hier gibt es keine Elfen dieses Namens.  Normalerweise würde ich Ihr erlauben, mit Mutter zu sprechen, aber ich kann niemanden in Ihrer geistigen Verfassung mit der Königin der Elfen reden lassen.  Es gibt aber EINE Möglichkeit ...}{Tut mir Leid, aber hier gibt es keine Elfen dieses Namens.  Normalerweise würde ich Ihr erlauben, mit Mutter zu sprechen, aber ich kann niemanden in Ihrer geistigen Verfassung mit der Königin der Elfen reden lassen.  Es gibt aber EINE Möglichkeit ...}{}{177}{}{}
+{885}{Was, hübschig Elfmä'chen?}{}{-4}{}{887}{}
+{887}{M'in Gorad könnte ein Dunkelelf sein.  Ihr solltet vielleicht die Dunkelelfen finden und feststellen, ob dieser M'in Gorad bei ihnen ist ...}{M'in Gorad könnte ein Dunkelelf sein.  Ihr solltet vielleicht die Dunkelelfen finden und feststellen, ob dieser M'in Gorad bei ihnen ist ...}{}{178}{}{ru 2100}
+{888}{D-d-dunk-e-l-lf?  Was sein Dunkelf?  Wo Dunkelfens?}{}{-4}{}{890}{}
+{890}{Die Dunkelelfen sind anders als wir ... sie sind böse ... haben böse Gedanken.  Ich weiß nicht, wo sie sind - sie sind vor uns verborgen, selbst vor meiner Mutter.  Tut mir Leid, Ihr müsst sie schon alleine finden ...}{Die Dunkelelfen sind anders als wir ... sie sind böse ... haben böse Gedanken.  Ich weiß nicht, wo sie sind - sie sind vor uns verborgen, selbst vor meiner Mutter.  Tut mir Leid, Ihr müsst sie schon alleine finden ...}{}{179}{}{qu1020 1}
+{891}{Äh ... fein!  Ich sie finden geh'n!}{}{-4}{}{893}{qu1020 2}
+{893}{Wartet!  Ich habe vielleicht einen Hinweis ...}{Wartet!  Ich habe vielleicht einen Hinweis ...}{}{180}{}{}
+{894}{Jaaa?  Was?}{}{-4}{}{896}{}
+{896}{Vor vielen Jahren kam ein Mann hierher, der nach den Dunkelelfen suchte.  Er war ein Mensch, sehr intelligent, aber etwas übertrieben gekleidet.  [Sie lächelt in sich hinein.]  Sein Name war Renford ... Renford A. Terwilliger.  Ich weiß nicht, wo er steckt oder was aus ihm geworden ist, aber wenn Ihr ihn finden könnt, kann er Euch vielleicht etwas über die Dunkelelfen sagen ...}{Vor vielen Jahren kam ein Mann hierher, der nach den Dunkelelfen suchte.  Er war ein Mensch, sehr intelligent, aber etwas übertrieben gekleidet.  [Sie lächelt in sich hinein.]  Sein Name war Renford ... Renford A. Terwilliger.  Ich weiß nicht, wo er steckt oder was aus ihm geworden ist, aber wenn Ihr ihn finden könnt, kann er Euch vielleicht etwas über die Dunkelelfen sagen ...}{}{181}{}{qu1021 1, ss 10, ru 2055}
+{897}{Ich ihn finden!  Wo Wer-billiger?}{}{-4}{}{899}{qu1021 2}
+{899}{Ich weiß es nicht, aber ich würde zuerst in den großen Menschenstädten suchen.  Kommt zu mir zurück, wenn Ihr das Dorf der Dunkelelfen gefunden habt.  Ich wüsste ZU GERN, ob sie hinter alledem hier stecken.  Viel Glück!}{Ich weiß es nicht, aber ich würde zuerst in den großen Menschenstädten suchen.  Kommt zu mir zurück, wenn Ihr das Dorf der Dunkelelfen gefunden habt.  Ich wüsste ZU GERN, ob sie hinter alledem hier stecken.  Viel Glück!}{}{182}{}{gf1046 1}
+{900}{Fein!  Ich wiederkommen, wenn finden haben, hübschig Elfmä'chen!  Tschö!}{}{-4}{}{0}{gf1046 2}
+{902}{Ich wünschte, ich könnte Euch weiterhelfen.  Sucht Renford A. Terwilliger ... er könnte in einer der größeren Menschenstädte sein.  Viel Glück!}{Ich wünschte, ich könnte Euch weiterhelfen.  Sucht Renford A. Terwilliger ... er könnte in einer der größeren Menschenstädte sein.  Viel Glück!}{}{183}{}{}
+{904}{Ihr habt sie gefunden!  Herzlichen Glückwunsch!  Vielleicht ist Eure geistige Verfassung doch nicht so hinderlich, wie man meinen sollte!  Und habt Ihr M'in Gorad gefunden?}{Ihr habt sie gefunden!  Herzlichen Glückwunsch!  Vielleicht ist Eure geistige Verfassung doch nicht so hinderlich, wie man meinen sollte!  Und habt Ihr M'in Gorad gefunden?}{}{184}{}{}
+{905}{Äh ... nein ... ich nich' reden mi' M'in Gora'.}{}{-4}{gf1097 0, gf1099 0}{912}{}
+{906}{Äh ... ich nich' reden mi' M'in Gora', abba Papier finden haben! [Du erzählst ihr davon.]}{}{-4}{gf1097 0, gf1099 1}{918}{}
+{907}{Ja!  Un' ich ihr totig machen haben!}{}{-4}{gf1097 1}{928}{}
+{908}{Äh ... ich willen jetz' geh'n.}{}{-4}{}{0}{}
+{912}{Ihr habt KEINE Informationen in dem Dorf bekommen?}{Ihr habt KEINE Informationen in dem Dorf bekommen?}{}{185}{}{}
+{913}{Ähhh ... hmmm ... ooohhh ...}{}{-4}{}{915}{}
+{915}{Dann müsst Ihr wiederkommen, wenn Ihr etwas mehr habt.  Geht wieder zurück.  Findet M'in Gorad oder etwas, das uns hilft, genau herauszufinden, was hier vor sich geht.  (Vielleicht ist diese ganze Geschichte nur das unsinnige Gestammel eines Schwachkopfs.  Ich hoffe jedenfalls, dass es so ist.)  Viel Glück ...}{Dann müsst Ihr wiederkommen, wenn Ihr etwas mehr habt.  Geht wieder zurück.  Findet M'in Gorad oder etwas, das uns hilft, genau herauszufinden, was hier vor sich geht.  (Vielleicht ist diese ganze Geschichte nur das unsinnige Gestammel eines Schwachkopfs.  Ich hoffe jedenfalls, dass es so ist.)  Viel Glück ...}{}{186}{}{}
+{916}{Tschö ...}{}{-4}{}{0}{}
+{918}{Interessant. Es scheint als wäre der Schwarzberg-Clan verbannt worden, damit Arronax die Schutzzauber schwächen kann.  Er kommt wirklich zurück.  Wir Elfen sind ein magisches Volk und bewandert in Runen und Prophezeiungen, aber ich hätte nie gedacht ... Einerlei, wir müssen handeln.}{Interessant. Es scheint als wäre der Schwarzberg-Clan verbannt worden, damit Arronax die Schutzzauber schwächen kann.  Er kommt wirklich zurück.  Wir Elfen sind ein magisches Volk und bewandert in Runen und Prophezeiungen, aber ich hätte nie gedacht ... Einerlei, wir müssen handeln.}{}{187}{}{}
+{919}{Was wir sollen jetz' tun, hübschig Elfmä'chen?}{}{-4}{}{922}{}
+{920}{Äh ... was sein Arronax?}{}{-4}{}{935}{}
+{922}{Nachdem Ihr aufgebrochen wart, um die Dunkelelfen zu suchen, habe ich mit meiner Mutter, der Silberfürstin, über Euch gesprochen.  Sie sagte, wenn Ihr zurückkehrt, wäre es SEHR wichtig, dass Ihr mit ihr sprecht ...}{Nachdem Ihr aufgebrochen wart, um die Dunkelelfen zu suchen, habe ich mit meiner Mutter, der Silberfürstin, über Euch gesprochen.  Sie sagte, wenn Ihr zurückkehrt, wäre es SEHR wichtig, dass Ihr mit ihr sprecht ...}{}{188}{}{gf1098 1}
+{923}{Sibbel-für-stein ...?}{}{-4}{}{925}{}
+{925}{Ja, die Silberfürstin.  Geht zu ihr ... Sie wartet jenseits der großen Tür hinter mir. Seid sehr direkt ... fragt sie, was Ihr als Nächstes tun sollt.  Hoffentlich hat sie die Antwort, die wir brauchen.  Kommt zu mir zurück, wenn Ihr mit ihr gesprochen habt ...}{Ja, die Silberfürstin.  Geht zu ihr ... Sie wartet jenseits der großen Tür hinter mir. Seid sehr direkt ... fragt sie, was Ihr als Nächstes tun sollt.  Hoffentlich hat sie die Antwort, die wir brauchen.  Kommt zu mir zurück, wenn Ihr mit ihr gesprochen habt ...}{}{189}{}{lf20 1, gf1098 1}
+{926}{Fein!  Ich kommen danach zurück!}{}{-4}{}{0}{}
+{928}{Ihr?  Sie war eine Frau? [Wut blitzt in ihren Augen auf.]  Jammerschade, dass Ihr sie umgebracht habt.  Ich hätte diese M'in Gorad gern kennen gelernt.  Egal ... was hat sie gesagt?}{Ihr?  Sie war eine Frau? [Wut blitzt in ihren Augen auf.]  Jammerschade, dass Ihr sie umgebracht habt.  Ich hätte diese M'in Gorad gern kennen gelernt.  Egal ... was hat sie gesagt?}{}{190}{}{}
+{929}{Äh ... nur sagen ... äh ... Anno-racks?}{}{-4}{gf1099 0}{932}{}
+{930}{Nich' viel sagen ... abba ich Papier finden haben! [Du erzählst ihr davon.]}{}{-4}{gf1099 1}{918}{}
+{932}{Arronax!  Habt Ihr Arronax gesagt?}{Arronax!  Habt Ihr Arronax gesagt?}{}{191}{}{}
+{933}{Ja!  Arronax!  Äh ... was sein Arronax?}{}{-4}{}{935}{}
+{935}{Arronax ist ein alter Elf.  Ein alter Elf, der vor vielen Jahren verbannt ... fortgeschickt ... wurde.  Anscheinend kehrt er zurück, genau wie es in den Prophezeiungen heißt.  Wenn Ihr mehr Fragen über ihn habt, besucht einen Panarii-Tempel.  Die Priester dort können Euch weiterhelfen ...}{Arronax ist ein alter Elf.  Ein alter Elf, der vor vielen Jahren verbannt ... fortgeschickt ... wurde.  Anscheinend kehrt er zurück, genau wie es in den Prophezeiungen heißt.  Wenn Ihr mehr Fragen über ihn habt, besucht einen Panarii-Tempel.  Die Priester dort können Euch weiterhelfen ...}{}{192}{}{}
+{936}{Pa-na-d-ie?}{}{-4}{}{938}{}
+{938}{Vergesst es.  Ich bin sicher, Ihr werdet dahinterkommen.}{Vergesst es.  Ich bin sicher, Ihr werdet dahinterkommen.}{}{193}{}{}
+{939}{Was wir sollen jetz' tun, hübschig Elfmä'chen?}{}{-4}{}{922}{}
+{941}{Ich weiß, ich weiß ... aber Ihr müsst jetzt mit meiner Mutter sprechen!  Kommt zurück, wenn Ihr fertig seid ...}{Ich weiß, ich weiß ... aber Ihr müsst jetzt mit meiner Mutter sprechen!  Kommt zurück, wenn Ihr fertig seid ...}{}{194}{}{}
+{943}{Wirklich?  Und was hat sie Euch erzählt?}{Wirklich?  Und was hat sie Euch erzählt?}{}{195}{}{}
+{944}{Äh ... Antwort ... äh ... Nass-r-ubin-n ...?}{}{-4}{}{946}{}
+{946}{Eure Antwort liegt bei Nasrudin?  Sehr seltsam, mein kleiner Einfaltspinsel.  Nasrudin ist seit über 2000 Jahren tot ...}{Eure Antwort liegt bei Nasrudin?  Sehr seltsam, mein kleiner Einfaltspinsel.  Nasrudin ist seit über 2000 Jahren tot ...}{}{196}{}{}
+{947}{Ähhh ... hmmm ... ooohhh ...}{}{-4}{}{949}{}
+{949}{Ja, ja.  Es geht mir genauso. Ich würde empfehlen, dass Ihr Eure Suche im Obersten Tempel der Panarii in Caladon beginnt.  Sie werden mehr Informationen über Nasrudin und Arronax haben als ich ... Viel Glück und gute Reise.  Mein Herz und meine Seele begleiten Euch ...}{Ja, ja.  Es geht mir genauso. Ich würde empfehlen, dass Ihr Eure Suche im Obersten Tempel der Panarii in Caladon beginnt.  Sie werden mehr Informationen über Nasrudin und Arronax haben als ich ... Viel Glück und gute Reise.  Mein Herz und meine Seele begleiten Euch ...}{}{197}{}{lf21 1, ru 2056}
+{950}{Ich finden Nasrudin, hübschig Elfmä'chen!  Tschö!}{}{-4}{}{0}{}
+{952}{Ja, da bin ich mir sicher.  Vergesst nicht ... geht zum Obersten Tempel der Panarii in Caladon ... dort werdet Ihr mehr Informationen über Nasrudin und Arronax finden ... viel Glück!}{Ja, da bin ich mir sicher.  Vergesst nicht ... geht zum Obersten Tempel der Panarii in Caladon ... dort werdet Ihr mehr Informationen über Nasrudin und Arronax finden ... viel Glück!}{}{198}{}{}
+{960}{[Der Geist von Ravena sieht dich kühl an.]  Ich sehe also einen Mörder vor mir. Meinen eigenen.  Und Ihr besitzt die Stirn, mich zurückzuholen?  Ich wohne jetzt in den Ländern meiner Mutter.  Ihr habt keine Macht über mich ...}{[Der Geist von Ravena sieht dich kühl an.]  Ich sehe also einen Mörder vor mir. Meinen eigenen.  Und Ihr besitzt die Stirn, mich zurückzuholen?  Ich wohne jetzt in den Ländern meiner Mutter.  Ihr habt keine Macht über mich ...}{}{199}{}{}
+{961}{Warum seid Ihr dann hier?  Geht ...}{}{5}{}{963}{}
+{962}{E:}{}{5}{}{0}{}
+{963}{Ihr wisst, dass ich das nicht kann.   Aber ich habe nicht die Absicht, Euch weiterhin zu helfen.  Ich kann sehr lange hier warten ...}{Ihr wisst, dass ich das nicht kann.   Aber ich habe nicht die Absicht, Euch weiterhin zu helfen.  Ich kann sehr lange hier warten ...}{}{200}{}{}
+{964}{Ich brauche nur eine Antwort, Ravena. }{}{5}{}{966}{}
+{965}{E:}{}{5}{}{0}{}
+{966}{Und warum sollte ich antworten, Elfenmörder? Nein, vergebt mir. Bitte ... stellt Eure Frage.}{Und warum sollte ich antworten, Elfenmörder? Nein, vergebt mir. Bitte ... stellt Eure Frage.}{}{201}{}{}
+{967}{Wo finde ich M'in Gorad?}{}{5}{}{969}{}
+{968}{E:}{}{5}{}{0}{}
+{969}{[Lange Zeit ist Ravena in Schweigen versunken.]  Sucht meinen Liebsten, Mörder.  Sucht meinen Liebsten ...}{[Lange Zeit ist Ravena in Schweigen versunken.]  Sucht meinen Liebsten, Mörder.  Sucht meinen Liebsten ...}{}{202}{}{}
+{970}{Wer?  Wer ist das?}{}{5}{}{972}{}
+{971}{E:}{}{5}{}{0}{}
+{972}{[Ravena schweigt.  Sie sagt nichts ...]}{[Ravena schweigt.  Sie sagt nichts ...]}{}{203}{}{lf16 1}
+{973}{Ravena!  Wer ist es?}{}{5}{}{972}{}
+{974}{E:}{}{5}{}{0}{}
+{975}{[Ravena schweigt.  Sie sagt nichts ...]}{[Ravena schweigt.  Sie sagt nichts ...]}{}{204}{}{}
+{977}{Ihr habt mit ihnen zu tun gehabt, richtig?  Die Dunkelelfen!  Ich sehe es ... Ihr habt eingewilligt, ihnen zu helfen!  Ich kann es nicht glauben.  Ich dachte, Ihr wäret anders ...}{Ihr habt mit ihnen zu tun gehabt, richtig?  Die Dunkelelfen!  Ich sehe es ... Ihr habt eingewilligt, ihnen zu helfen!  Ich kann es nicht glauben.  Ich dachte, Ihr wäret anders ...}{}{205}{}{}
+{978}{Ich tue es nur, damit ich hierher zurückkehren kann ...!}{}{-4}{}{981}{}
+{979}{Äh ... na und?  Was IHR willen dagegen tun?}{}{-4}{}{981}{}
+{981}{[Ravena weicht einen Schritt zurück und ballt die Faust.]  Trefft Eure Entscheidung auf der Stelle.  Seid Ihr für uns oder gegen uns?}{[Ravena weicht einen Schritt zurück und ballt die Faust.]  Trefft Eure Entscheidung auf der Stelle.  Seid Ihr für uns oder gegen uns?}{}{206}{}{}
+{982}{Fein!  Fein!  Ich für Euch!  Ich für Euch!}{}{-4}{}{989}{}
+{983}{Ich nich' tun mussen, was Ihr sagen, Elfmä'chen!}{}{-4}{}{985}{}
+{985}{[Die Luft um Ravena herum leuchtet scharlachrot auf - ihre Augen funkeln im selben Farbton.]  Entscheidet Euch.  Sofort.}{[Die Luft um Ravena herum leuchtet scharlachrot auf - ihre Augen funkeln im selben Farbton.]  Entscheidet Euch.  Sofort.}{}{207}{}{}
+{986}{Gut!  Ich für Euch!}{}{-4}{}{989}{}
+{987}{Schade, ich Euch jetz' totig machen mussen, Elfmä'chen ...}{}{-4}{}{}{co, fl 820}
+{989}{Also, gut ... [Sie beruhigt sich.]  Ich glaube Euch, @PCNAME@.  Aber Ihr müsst mir beweisen, dass Ihr nicht mit den Dunkelelfen im Bunde seid. Geht.  Tötet M'in Gorad, und kommt zurück ...}{Also, gut ... [Sie beruhigt sich.]  Ich glaube Euch, @PCNAME@.  Aber Ihr müsst mir beweisen, dass Ihr nicht mit den Dunkelelfen im Bunde seid. Geht.  Tötet M'in Gorad, und kommt zurück ...}{}{208}{}{}
+{990}{Äh ... ich erst' mussen mi' Euch reden!}{}{-4}{}{992}{}
+{992}{Sofort!  Ich spreche erst wieder mit Euch, wenn Ihr das getan habt.  Kommt erst wieder zu mir, wenn M'in Gorad tot ist.}{Sofort!  Ich spreche erst wieder mit Euch, wenn Ihr das getan habt.  Kommt erst wieder zu mir, wenn M'in Gorad tot ist.}{}{209}{}{}
+{993}{Fein.  Ich jetz' geh'n ...}{}{-4}{}{0}{gf2002 1}
+{1040}{Wie kann ich Euch behilflich sein?}{Wie kann ich Euch behilflich sein?}{}{210}{}{}
+{1041}{B:}{}{5}{wa 0}{}{}
+{1042}{Ich habe ein paar Fragen an Euch, Ravena ...}{}{5}{wa 0}{1079}{}
+{1043}{Ich möchte, dass Ihr etwas für mich tut, Ravena ...}{}{5}{wa 0}{1161}{}
+{1045}{Euer Warten hat jetzt ein Ende, Ravena ...}{}{5}{wa 1, pa -6613}{1198}{uw 0 1169}
+{1046}{Euer Warten hat jetzt ein Ende, Ravena ...}{}{5}{wa 1, pa 6613}{1183}{}
+{1047}{E:}{}{5}{}{0}{}
+{1048}{Öh ...}{}{-4}{}{}{fl 1070}
+{1070}{[Sie wirft dir einen arroganten Blick zu, offensichtlich verärgert über deinen momentanen geistigen Zustand.  Sie sagt nichts.]}{[Sie wirft dir einen arroganten Blick zu, offensichtlich verärgert über deinen momentanen geistigen Zustand.  Sie sagt nichts.]}{}{}{}{}
+{1079}{Dann werde ich mich bemühen, nach besten Kräften zu antworten ...}{Dann werde ich mich bemühen, nach besten Kräften zu antworten ...}{}{211}{}{}
+{1080}{Ich möchte gern ein paar Dinge über Euch wissen, Raven ...}{}{1}{}{}{ce}
+{1094}{Was könnt Ihr mir über Arronax erzählen, Ravena?}{}{1}{ss 15, ss -15, lf12 0}{1400}{}
+{1095}{Was könnt Ihr mir über Arronax erzählen, Ravena?}{}{1}{ss 15, ss -15, lf12 1}{1404}{}
+{1097}{Was wisst Ihr über Nasrudin, Ravena?}{}{1}{ss 16, ss -16}{1408}{}
+{1100}{Was wisst Ihr über den Ring von Brodgar, Ravena?}{}{1}{ss 19, ss -19}{1412}{}
+{1102}{Was wisst Ihr über die Leere, Ravena?}{}{1}{ss 21, ss -21}{1416}{}
+{1104}{Ravena, was wisst Ihr über Kerghan?}{}{1}{ss 23, ss -23}{1420}{}
+{1105}{Ravena!  Was sollen wir jetzt tun?}{}{1}{ss 24, ss -24}{1429}{}
+{1107}{Was wisst Ihr über diesen Ort?}{}{1}{ia 21, lf12 0, gf2364 0}{1213}{}
+{1108}{Was wisst Ihr über diesen Ort?}{}{1}{ia 21, lf12 1, gf2364 1}{1217}{}
+{1110}{Was wisst Ihr über diesen Ort?}{}{1}{ia 4, lf12 0, gf2364 0}{1221}{}
+{1113}{Was wisst Ihr über diesen Ort?}{}{1}{ia 4, lf12 1, gf2364 1}{1225}{}
+{1116}{Was wisst Ihr über diesen Ort?}{}{1}{ia 9}{1239}{}
+{1118}{Was wisst Ihr über diesen Ort?}{}{1}{ia 11, lf12 0, gf2364 0}{1243}{}
+{1119}{Was wisst Ihr über diesen Ort?}{}{1}{ia 11, lf12 1, gf2364 1}{1247}{}
+{1122}{Was wisst Ihr über diesen Ort?}{}{1}{ia 16}{1257}{}
+{1124}{Was wisst Ihr über diesen Ort?}{}{1}{ia 20, lf12 0, gf2364 0}{1261}{}
+{1125}{Was wisst Ihr über diesen Ort?}{}{1}{ia 20, lf12 1, gf2364 1, lf26 0}{1265}{lf26 1}
+{1126}{Was wisst Ihr über diesen Ort?}{}{1}{ia 22}{1290}{}
+{1127}{Was wisst Ihr über diesen Ort?}{}{1}{ia 23,lf12 0, gf2364 0}{1294}{}
+{1128}{Was wisst Ihr über diesen Ort?}{}{1}{ia 23, lf12 1, gf2364 1}{1298}{}
+{1129}{Ihr scheint böse auf mich zu sein, Ravena. Kann ich etwas für Euch tun?}{}{1}{re -20}{1140}{}
+{1130}{E:}{}{1}{}{0}{}
+{1140}{[Ravena wirft dir einen vernichtenden Blick zu.]  Diese Reise verläuft ganz und gar nicht so, wie ich es geplant hatte.  Möglicherweise war es unklug, Euch als Begleiter zu wählen.  Ich muss allerdings gestehen, ein kräftiger Schluck Elfenquellwasser hilft mir immer, alles in einem anderen Licht zu sehen ...}{[Ravena wirft dir einen vernichtenden Blick zu.]  Diese Reise verläuft ganz und gar nicht so, wie ich es geplant hatte.  Möglicherweise war es unklug, Euch als Begleiter zu wählen.  Ich muss allerdings gestehen, ein kräftiger Schluck Elfenquellwasser hilft mir immer, alles in einem anderen Licht zu sehen ...}{}{253}{}{}
+{1141}{Teuerste Ravena, seid Ihr sicher, dass Ihr so empfindet ...?}{}{1}{ch 20}{1147}{re +20}
+{1142}{Da haben wir aber Glück, Ravena. Ganz zufällig habe ich etwas davon hier ...}{}{1}{in 3615, ch -19}{-53}{re +20}
+{1143}{Interessant.  Ich werde versuchen, etwas davon für Euch zu beschaffen ...}{}{1}{in -3615, ch -19}{1156}{}
+{1144}{Hmmm.  Es ist gut, Wünsche zu haben, so albern sie auch sein mögen ...}{}{1}{}{}{gf2364  0, re -5, fl 1159}
+{1147}{[Ravena versucht, gegen dein mächtiges Charisma anzukämpfen, schafft es aber nicht.]  Ja, da habt Ihr wohl Recht.  Vielleicht war ich ein wenig gereizt.  Dann also weiter ...}{[Ravena versucht, gegen dein mächtiges Charisma anzukämpfen, schafft es aber nicht.]  Ja, da habt Ihr wohl Recht.  Vielleicht war ich ein wenig gereizt.  Dann also weiter ...}{}{254}{}{}
+{1148}{Ja, gehen wir ...}{}{1}{}{0}{}
+{1150}{[Ravena nimmt die Flasche und leert sie in einem Zug.]  Ah, ja!  So ist das schon viel besser.  Ich muss gestehen, meine Laune hat sich deutlich verbessert.  Vielen Dank ...}{[Ravena nimmt die Flasche und leert sie in einem Zug.]  Ah, ja!  So ist das schon viel besser.  Ich muss gestehen, meine Laune hat sich deutlich verbessert.  Vielen Dank ...}{}{255}{}{}
+{1151}{Ich wüsste gern, ob Ihr mich wohl wieder begleiten wollt, Ravena ...}{}{1}{pa -6613, pa -6426}{1198}{jo 0 1201}
+{1152}{Ich wüsste gern, ob Ihr mich wohl wieder begleiten wollt, Ravena ...}{}{1}{pa 6613, pa -6426}{1183}{}
+{1153}{Oh bitte, keine Ursache.  Sollen wir ...?}{}{1}{}{0}{}
+{1156}{Gut.  Und ich hoffe, eher früher als später ...}{Gut.  Und ich hoffe, eher früher als später ...}{}{256}{}{}
+{1157}{Ich werde mich darum kümmern.  Gehen wir ...}{}{1}{}{0}{}
+{1159}{Na ja!  Wenn das hier so läuft, kann ich nicht sagen, wie lange ich mit Euch reisen werde ...}{Na ja!  Wenn das hier so läuft, kann ich nicht sagen, wie lange ich mit Euch reisen werde ...}{}{257}{}{}
+{1161}{Ja?  Was soll ich tun?}{Ja?  Was soll ich tun?}{}{212}{}{}
+{1162}{Geht weg, Ravena.}{}{1}{}{0}{so}
+{1163}{Kommt ein bisschen näher, Ravena.}{}{1}{}{0}{sc}
+{1164}{Wartet hier ein Weilchen ...}{}{1}{wa 0}{1172}{wa}
+{1165}{Euer Warten hat jetzt ein Ende, Ravena.}{}{1}{wa 1, pa -6613}{1198}{uw 0 1169}
+{1166}{Euer Warten hat jetzt ein Ende, Ravena.}{}{1}{wa 1, pa 6613}{1183}{}
+{1167}{Ihr solltet die Gruppe lieber verlassen.}{}{1}{}{1174}{lv}
+{1168}{[zurück]}{}{1}{}{1040}{}
+{1169}{Wir können aufbrechen, wann immer Ihr bereit seid ...}{Wir können aufbrechen, wann immer Ihr bereit seid ...}{}{213}{}{}
+{1170}{E:}{}{1}{}{0}{}
+{1172}{Ja, ich warte hier auf Euch.  Aber versucht, mich nicht zu lange warten zu lassen ...}{Ja, ich warte hier auf Euch.  Aber versucht, mich nicht zu lange warten zu lassen ...}{}{214}{}{}
+{1173}{E:}{}{1}{}{0}{}
+{1174}{Was?  Ich ... tja, ich schätze, das ist Eure Entscheidung.  Ich wünsche Euch viel Glück auf Eurer Reise, wo immer sie Euch auch hinführen mag ...}{Was?  Ich ... tja, ich schätze, das ist Eure Entscheidung.  Ich wünsche Euch viel Glück auf Eurer Reise, wo immer sie Euch auch hinführen mag ...}{}{215}{}{lf31 1}
+{1175}{E:}{}{1}{}{0}{}
+{1176}{Seid gegrüßt. [Ravena wirkt ein wenig reserviert.]  Was führt Euch wieder hierher?  Kommt Ihr einfach nur zufällig vorbei, oder hat das einen bestimmten Grund ...?}{Seid gegrüßt. [Ravena wirkt ein wenig reserviert.]  Was führt Euch wieder hierher?  Kommt Ihr einfach nur zufällig vorbei, oder hat das einen bestimmten Grund ...?}{}{216}{}{}
+{1177}{Ich wüsste gern, ob Ihr mich wohl wieder begleiten wollt, Ravena ...}{}{5}{pa -6613}{1198}{jo 0 1201}
+{1178}{Ich wüsste gern, ob Ihr mich wohl wieder begleiten wollt, Ravena ...}{}{5}{pa 6613}{1183}{}
+{1179}{Ihr scheint böse auf mich zu sein, Ravena. Kann ich etwas für Euch tun?}{}{5}{re -20}{1140}{}
+{1180}{E:}{}{5}{}{0}{}
+{1181}{Öh ...}{}{-4}{}{}{fl 1070}
+{1183}{[Ravena sieht Z'an Al'urin mit zusammengekniffenen Augen an.]  Mit der Dunkelelffrau gehe ich nirgendwohin.  Wenn sie Euch begleitet, dann komme ich nicht mit ... so einfach ist das ...}{[Ravena sieht Z'an Al'urin mit zusammengekniffenen Augen an.]  Mit der Dunkelelffrau gehe ich nirgendwohin.  Wenn sie Euch begleitet, dann komme ich nicht mit ... so einfach ist das ...}{}{217}{}{}
+{1184}{Ravena, ich bin sicher, meine Persönlichkeit überdeckt die von Z'an Al'urin ...}{}{1}{ch 20, lf23 0}{1195}{lf23 1}
+{1185}{Ravena!  Sie ist nicht wie die anderen!  Vertraut Ihr mir denn nicht?}{}{1}{ch -19, lf23 0}{1189}{lf23 1}
+{1186}{Ich entscheide mich für Euch, Ravena.  Wartet einen Moment, ich werde sie wegschicken ...}{}{1}{lf23 1}{0}{}
+{1187}{Sieht so aus, als würdet Ihr uns dann wohl verlassen, Ravena ...}{}{1}{lf23 1}{1174}{lf12 0, gf2364 0, lv}
+{1188}{E:}{}{1}{lf23 1}{0}{}
+{1189}{Tut mir Leid, aber Ihr wisst ja nicht, wozu ihresgleichen fähig ist.  Denkt darüber nach!  Alles, was passiert ist, geschah durch das Böse der Dunkelelfen!}{Tut mir Leid, aber Ihr wisst ja nicht, wozu ihresgleichen fähig ist.  Denkt darüber nach!  Alles, was passiert ist, geschah durch das Böse der Dunkelelfen!}{}{218}{}{}
+{1190}{Ja, aber Z'an Al'urin hat damit nichts zu tun ...!}{}{1}{}{1192}{}
+{1192}{Sie ist ein Dunkelelf, alles andere zählt nicht.  Hat sie nicht unter ihnen gelebt?  Wurde sie nicht von ihnen erzogen?  Ihr könnt ihr nicht vertrauen!  Sie wird sich gegen Euch wenden ... sie handelt nur aus Eigennutz.  Schaut ihr in die Augen und sagt mir, dass es nicht stimmt ...}{Sie ist ein Dunkelelf, alles andere zählt nicht.  Hat sie nicht unter ihnen gelebt?  Wurde sie nicht von ihnen erzogen?  Ihr könnt ihr nicht vertrauen!  Sie wird sich gegen Euch wenden ... sie handelt nur aus Eigennutz.  Schaut ihr in die Augen und sagt mir, dass es nicht stimmt ...}{}{219}{}{}
+{1193}{[Du hörst genau zu.]}{}{1}{}{-17}{}
+{1195}{[Ravena scheint hin und her gerissen, nickt aber.]  Ja, Ihr habt Recht.  Ich könnte vielleicht über die Tatsache hinwegsehen, dass Ihr Euch mit derlei ... Abschaum einlasst ...}{[Ravena scheint hin und her gerissen, nickt aber.]  Ja, Ihr habt Recht.  Ich könnte vielleicht über die Tatsache hinwegsehen, dass Ihr Euch mit derlei ... Abschaum einlasst ...}{}{220}{}{}
+{1196}{Also, was ist, werdet Ihr mich wieder begleiten?}{}{1}{pa -6426}{1198}{jo 0 1201}
+{1197}{Gut, jetzt Z'an Al'urin ...}{}{1}{pa 6426}{-41}{}
+{1198}{Gibt es sonst noch was?}{Gibt es sonst noch was?}{}{221}{}{}
+{1199}{E:}{}{1}{}{0}{}
+{1201}{Tja, wie soll ich das ausdrücken ...  [sie lächelt strahlend.]  Ja, natürlich begleite ich Euch.  Ich wusste, früher oder später würdet Ihr Euren Irrtum einsehen.  Sollen wir aufbrechen ...?}{Tja, wie soll ich das ausdrücken ...  [sie lächelt strahlend.]  Ja, natürlich begleite ich Euch.  Ich wusste, früher oder später würdet Ihr Euren Irrtum einsehen.  Sollen wir aufbrechen ...?}{}{222}{}{lf31 0}
+{1202}{E:}{}{1}{}{0}{}
+{1203}{[Ravenas Augen blitzen.]  Ihr besitzt die Stirn, zu mir zurückzukehren, nachdem Ihr mich so lange warten ließet?  So lasse ich mich nicht behandeln!  Ihr könnt gleich wieder umkehren und dorthin gehen, von wo Ihr gekommen seid ...!}{[Ravenas Augen blitzen.]  Ihr besitzt die Stirn, zu mir zurückzukehren, nachdem Ihr mich so lange warten ließet?  So lasse ich mich nicht behandeln!  Ihr könnt gleich wieder umkehren und dorthin gehen, von wo Ihr gekommen seid ...!}{}{223}{}{}
+{1204}{Bitte vergebt mir, Ravena ... Möchtet Ihr mich wieder begleiten?}{}{5}{pa -6613}{1198}{jo 0 1209}
+{1205}{Bitte vergebt mir, Ravena ... Möchtet Ihr mich wieder begleiten?}{}{5}{pa 6613}{1183}{}
+{1206}{Ihr scheint böse auf mich zu sein, Ravena. Kann ich etwas für Euch tun?}{}{5}{re -20}{1140}{}
+{1207}{E:}{}{5}{}{0}{}
+{1208}{Öh ...}{}{-4}{}{}{fl 1070}
+{1209}{[Sie sieht dich kalt an.]  Ja, ich werde mit Euch reisen.  Aber wenn Ihr mich jemals wieder so behandelt ... nächstes Mal kommt Ihr mir nicht so glimpflich davon ... }{[Sie sieht dich kalt an.]  Ja, ich werde mit Euch reisen.  Aber wenn Ihr mich jemals wieder so behandelt ... nächstes Mal kommt Ihr mir nicht so glimpflich davon ... }{}{224}{}{}
+{1210}{E:}{}{1}{}{0}{}
+{1213}{Ist das nicht Tarant?  Renford hat mir davon erzählt und mich gebeten, ihm hier einen Besuch abzustatten ...}{Ist das nicht Tarant?  Renford hat mir davon erzählt und mich gebeten, ihm hier einen Besuch abzustatten ...}{}{225}{}{}
+{1214}{K:}{}{1}{}{1040}{}
+{1215}{E:}{}{1}{}{0}{}
+{1217}{Ist das nicht Tarant?  Renford hat mir davon erzählt und mich gebeten, ihm hier einen Besuch abzustatten ... [Sie sieht dich an und flüstert.]  Natürlich bin ich sehr froh, mit Euch hier zu sein ...}{Ist das nicht Tarant?  Renford hat mir davon erzählt und mich gebeten, ihm hier einen Besuch abzustatten ... [Sie sieht dich an und flüstert.]  Natürlich bin ich sehr froh, mit Euch hier zu sein ...}{}{226}{}{}
+{1218}{K:}{}{1}{}{1040}{}
+{1219}{E:}{}{1}{}{0}{}
+{1221}{Das hier ist Caladon.  Der Oberste Tempel der Panarii ist hier.  Wenn wir Informationen über Nasrudin suchen, sollten wir dort anfangen ...}{Das hier ist Caladon.  Der Oberste Tempel der Panarii ist hier.  Wenn wir Informationen über Nasrudin suchen, sollten wir dort anfangen ...}{}{227}{}{}
+{1222}{K:}{}{1}{}{1040}{}
+{1223}{E:}{}{1}{}{0}{}
+{1225}{Das hier ist Caladon.  Der Oberste Tempel der Panarii ist hier.  Wenn wir Informationen über Nasrudin suchen, sollten wir dort anfangen.  [Sie lehnt sich herüber und flüstert dir etwas zu.]  Ich habe gehört, ein Spaziergang an der Meeresküste soll bei Nacht atemberaubend sein, und ich kenne keinen, mit dem ich das lieber ausprobieren würde.  Wenn es nur nicht so viel zu tun gäbe ...}{Das hier ist Caladon.  Der Oberste Tempel der Panarii ist hier.  Wenn wir Informationen über Nasrudin suchen, sollten wir dort anfangen.  [Sie lehnt sich herüber und flüstert dir etwas zu.]  Ich habe gehört, ein Spaziergang an der Meeresküste soll bei Nacht atemberaubend sein, und ich kenne keinen, mit dem ich das lieber ausprobieren würde.  Wenn es nur nicht so viel zu tun gäbe ...}{}{228}{}{}
+{1226}{Ravena, lasst diese Albernheiten.  Wir müssen eine Welt retten!}{}{5}{lf25 0}{1231}{lf12 0, gf2364 0, re -10, lf25 1}
+{1227}{Und ich kann mir NICHTS Atemberaubenderes als Euch vorstellen ...}{}{5}{lf25 0}{1235}{re +10, lf25 1}
+{1228}{K:}{}{1}{}{1040}{}
+{1229}{E:}{}{1}{}{0}{}
+{1231}{[Steif.]  J-ja, natürlich.  Wie dumm von mir, Eure kostbare Zeit zu vergeuden.  Wird nicht wieder vorkommen ...}{[Steif.]  J-ja, natürlich.  Wie dumm von mir, Eure kostbare Zeit zu vergeuden.  Wird nicht wieder vorkommen ...}{}{229}{}{}
+{1232}{K:}{}{1}{}{1040}{}
+{1233}{E:}{}{1}{}{0}{}
+{1235}{Mmmm.  Ihr macht es einem schwer, sich auf die anliegenden Aufgaben zu konzentrieren.  Wir beide müssen hierher zurückkehren, wenn unsere Reise abgeschlossen ist ...}{Mmmm.  Ihr macht es einem schwer, sich auf die anliegenden Aufgaben zu konzentrieren.  Wir beide müssen hierher zurückkehren, wenn unsere Reise abgeschlossen ist ...}{}{230}{}{}
+{1236}{K:}{}{1}{}{1040}{}
+{1237}{E:}{}{1}{}{0}{}
+{1239}{Wir sind in der Höhle des Rad-Clans, der Heimat des Königs der Zwerge.  Ich mag Zwergenbehausungen nicht besonders ... sie sind so ... beengend.  Ich fühle mich so eingesperrt. Und Ihr wisst wahrscheinlich, dass Elfen und Zwerge einander nicht grün sind.  Wir sind Geschöpfe der Magie, und sie ... nun ... sie sind Zwerge ...}{Wir sind in der Höhle des Rad-Clans, der Heimat des Königs der Zwerge.  Ich mag Zwergenbehausungen nicht besonders ... sie sind so ... beengend.  Ich fühle mich so eingesperrt. Und Ihr wisst wahrscheinlich, dass Elfen und Zwerge einander nicht grün sind.  Wir sind Geschöpfe der Magie, und sie ... nun ... sie sind Zwerge ...}{}{231}{}{}
+{1240}{K:}{}{1}{}{1040}{}
+{1241}{E:}{}{1}{}{0}{}
+{1243}{Das ist das legendäre Tulla ... die Stadt der Magier.  Es ist eine wunderbare Stadt, voll von Wundern und Magie.  Simeon Torr ist hier der Meistermagier ... vielleicht sollten wir ihm einen Besuch abstatten ...}{Das ist das legendäre Tulla ... die Stadt der Magier.  Es ist eine wunderbare Stadt, voll von Wundern und Magie.  Simeon Torr ist hier der Meistermagier ... vielleicht sollten wir ihm einen Besuch abstatten ...}{}{232}{}{}
+{1244}{K:}{}{1}{}{1040}{}
+{1245}{E:}{}{1}{}{0}{}
+{1247}{Das ist das legendäre Tulla ... die Stadt der Magier.  Es ist eine wunderbare Stadt, voll von Wundern und Magie.  Simeon Torr ist hier der Meistermagier ... vielleicht sollten wir ihm einen Besuch abstatten.  [Dann, flüsternd ...]  Wisst Ihr, dies ist wahrhaftig ein wunderbarer Ort ... was umso mehr zutrifft, als Ihr mit mir hier seid ...}{Das ist das legendäre Tulla ... die Stadt der Magier.  Es ist eine wunderbare Stadt, voll von Wundern und Magie.  Simeon Torr ist hier der Meistermagier ... vielleicht sollten wir ihm einen Besuch abstatten.  [Dann, flüsternd ...]  Wisst Ihr, dies ist wahrhaftig ein wunderbarer Ort ... was umso mehr zutrifft, als Ihr mit mir hier seid ...}{}{233}{}{}
+{1248}{Ravena, lasst diese Albernheiten.  Wir müssen eine Welt retten!}{}{5}{lf26 0}{1231}{lf12 0, gf2364 0, re -10, lf26 1}
+{1249}{Und Ihr mit mir, teuerste Ravena ...}{}{5}{lf26 0}{1253}{re +5, lf26 1}
+{1250}{K:}{}{1}{}{1040}{}
+{1251}{E:}{}{1}{}{0}{}
+{1253}{Und Euch sprudeln stets die wunderbarsten Worte über die Lippen.  [Sieht sich errötend um.]  Nun denn, wenden wir uns wieder den anliegenden Aufgaben zu ...}{Und Euch sprudeln stets die wunderbarsten Worte über die Lippen.  [Sieht sich errötend um.]  Nun denn, wenden wir uns wieder den anliegenden Aufgaben zu ...}{}{234}{}{}
+{1254}{K:}{}{1}{}{1040}{}
+{1255}{E:}{}{1}{}{0}{}
+{1257}{Das ist T'sen-Ang, die Heimat der Dunkelelfen.  Allein schon ihre Anwesenheit ekelt mich. Verschwinden wir so schnell wie möglich wieder von hier ...}{Das ist T'sen-Ang, die Heimat der Dunkelelfen.  Allein schon ihre Anwesenheit ekelt mich. Verschwinden wir so schnell wie möglich wieder von hier ...}{}{235}{}{}
+{1258}{K:}{}{1}{}{1040}{}
+{1259}{E:}{}{1}{}{0}{}
+{1261}{Ich glaube, das ist Black Root ... ein kleines Fischerdorf an der Ostküste.  Ich fürchte, ich weiß nicht viel darüber ...}{Ich glaube, das ist Black Root ... ein kleines Fischerdorf an der Ostküste.  Ich fürchte, ich weiß nicht viel darüber ...}{}{236}{}{}
+{1262}{K:}{}{1}{}{1040}{}
+{1263}{E:}{}{1}{}{0}{}
+{1265}{Ich glaube, das ist Black Root ... ein kleines Fischerdorf an der Ostküste.  Ich fürchte, ich weiß nicht viel darüber ... [Sie beugt sich flüsternd zu dir.]  Ich habe viel über Euch nachgedacht ... I-ich meine, über uns.  Wenn das alles vorbei ist, ich meine ...}{Oh!  Das ist Leahbo ... ein Dorf der Halblinge.  Ich war vor langer Zeit einmal mit meiner Mutter zu Besuch hier.  Sieht immer noch unverändert aus.  Ich glaube, ich erinnere mich an einen seltsamen kleinen Halbling-Jungen, der immer in Schwierigkeiten geriet. [Sie lehnt sich herüber und flüstert dir etwas zu.]  Ich habe viel über Euch nachgedacht ... I-ich meine, über uns.  Wenn das alles vorbei ist, ich meine ...}{}{237}{}{}
+{1266}{Ravena!  Konzentriert Euch auf unsere Aufgabe hier ...!}{}{5}{}{1231}{lf12 0, gf2364 0, re -10}
+{1267}{Ja?  Was habt Ihr Euch dabei gedacht?!?}{}{5}{}{1271}{}
+{1268}{K:}{}{1}{}{1040}{}
+{1269}{E:}{}{1}{}{0}{}
+{1271}{Oh ... nichts.  Es ist nur ... tja, ich empfinde Eure Gesellschaft als äußerst angenehm.  Vielleicht können wir ja etwas Zeit miteinander verbringen, wenn wir dies alles erledigt haben ...?  Ich meine, nur wenn Ihr mögt ...}{Oh ... nichts.  Es ist nur ... tja, ich empfinde Eure Gesellschaft als äußerst angenehm.  Vielleicht können wir ja etwas Zeit miteinander verbringen, wenn wir dies alles erledigt haben ...?  Ich meine, nur wenn Ihr mögt ...}{}{238}{}{}
+{1272}{Vergesst es.  Das hier ist ein Abenteuer, und nur das ...}{}{1}{}{1278}{lf12 0, gf2364 0, re -10}
+{1273}{Möglicherweise.  Unterhalten wir uns darüber, wenn dies alles überstanden ist ...}{}{1}{}{1282}{}
+{1274}{Natürlich.  Wie könnte ich etwas anderes wollen ...?}{}{1}{}{1286}{}
+{1275}{K:}{}{1}{}{1040}{}
+{1276}{E:}{}{1}{}{0}{}
+{1278}{[Kalt.]  Oh.  Ich verstehe.  Tut mir Leid, dass ich überhaupt davon angefangen habe.  Also dann, gehen wir ...}{[Kalt.]  Oh.  Ich verstehe.  Tut mir Leid, dass ich überhaupt davon angefangen habe.  Also dann, gehen wir ...}{}{239}{}{}
+{1279}{K:}{}{1}{}{1040}{}
+{1280}{E:}{}{1}{}{0}{}
+{1282}{Ja, gut.  Aber dieses Gespräch würde ich wirklich gern führen ...}{Ja, gut.  Aber dieses Gespräch würde ich wirklich gern führen ...}{}{240}{}{}
+{1283}{K:}{}{1}{}{1040}{}
+{1284}{E:}{}{1}{}{0}{}
+{1286}{[Sie errötet.]  Ihr ... Ihr macht mich sehr glücklich.  Selbst im Lichte all dessen, was vor uns liegt.  Danke, vielen Dank ...}{[Sie errötet.]  Ihr ... Ihr macht mich sehr glücklich.  Selbst im Lichte all dessen, was vor uns liegt.  Danke, vielen Dank ...}{}{241}{}{}
+{1287}{K:}{}{1}{}{1040}{}
+{1288}{E:}{}{1}{}{0}{}
+{1290}{Ich glaube, das sind die Ruinen des alten Vendigroth.  Ich habe immer Gerüchte und Legenden gehört, dass sie existieren sollen, hätte aber nie gedacht, dass ich sie einmal mit eigenen Augen sehen würde.  [Sie wirkt besorgt.]  Dies ist ein dunkler Ort ... ein Ort des Bösen.  Wir sollten tun, was getan werden muss, und schnellstens verschwinden ...}{Ich glaube, das sind die Ruinen des alten Vendigroth.  Ich habe immer Gerüchte und Legenden gehört, dass sie existieren sollen, hätte aber nie gedacht, dass ich sie einmal mit eigenen Augen sehen würde.  [Sie wirkt besorgt.]  Dies ist ein dunkler Ort ... ein Ort des Bösen.  Wir sollten tun, was getan werden muss, und schnellstens verschwinden ...}{}{242}{}{}
+{1291}{K:}{}{1}{}{1040}{}
+{1292}{E:}{}{1}{}{0}{}
+{1294}{Thanatos?  Die Insel des Todes?  Ich kenne nur ihren Ruf, darüber hinaus weiß ich wenig von ihr.  Ich würde vorschlagen, dass wir sehr vorsichtig sind ...}{Thanatos?  Die Insel des Todes?  Ich kenne nur ihren Ruf, darüber hinaus weiß ich wenig von ihr.  Ich würde vorschlagen, dass wir sehr vorsichtig sind ...}{}{243}{}{}
+{1295}{K:}{}{1}{}{1040}{}
+{1296}{E:}{}{1}{}{0}{}
+{1298}{Thanatos?  Die Insel des Todes?  Ich kenne nur ihren Ruf, darüber hinaus weiß ich wenig von ihr.  Ich würde vorschlagen, dass wir sehr vorsichtig sind.  [Sie lehnt sich herüber und flüstert dir etwas zu.]  Und Ihr ... bleibt dicht bei mir ... Ich lasse nicht zu, dass Euch etwas Böses widerfährt ...}{Thanatos?  Die Insel des Todes?  Ich kenne nur ihren Ruf, darüber hinaus weiß ich wenig von ihr.  Ich würde vorschlagen, dass wir sehr vorsichtig sind.  [Sie lehnt sich herüber und flüstert dir etwas zu.]  Und Ihr ... bleibt dicht bei mir ... Ich lasse nicht zu, dass Euch etwas Böses widerfährt ...}{}{244}{}{}
+{1299}{K:}{}{1}{}{1040}{}
+{1300}{E:}{}{1}{}{0}{}
+{1400}{Arronax?  Ein sehr mächtiger Elf aus dem Zeitalter der Legenden, der aus der Leere zurückzukehren scheint.  Und obendrein scheint er eine heftige Abneigung gegen Euch zu hegen ...}{Arronax?  Ein sehr mächtiger Elf aus dem Zeitalter der Legenden, der aus der Leere zurückzukehren scheint.  Und obendrein scheint er eine heftige Abneigung gegen Euch zu hegen ...}{}{245}{}{}
+{1401}{K:}{}{1}{}{1040}{}
+{1402}{E:}{}{1}{}{0}{}
+{1404}{Arronax?  Ein sehr mächtiger Elf aus dem Zeitalter der Legenden, der aus der Leere zurückzukehren scheint.  Und obendrein scheint er eine heftige Abneigung gegen Euch zu hegen.  [Dann, flüsternd ...]  Bevor er an Euch herankommt, muss er natürlich erst einmal an mir vorbei ...}{Arronax?  Ein sehr mächtiger Elf aus dem Zeitalter der Legenden, der aus der Leere zurückzukehren scheint.  Und obendrein scheint er eine heftige Abneigung gegen Euch zu hegen.  [Dann, flüsternd ...]  Bevor er an Euch herankommt, muss er natürlich erst einmal an mir vorbei ...}{}{246}{}{}
+{1405}{K:}{}{1}{}{1040}{}
+{1406}{E:}{}{1}{}{0}{}
+{1408}{Nasrudin?  Im Zeitalter der Legenden war er der Anführer des Elfen-Rates.  Und da meine Mutter sagt, dass Eure Antworten bei ihm lägen, schlage ich vor, wir finden so viel wie möglich über ihn heraus ...}{Nasrudin?  Im Zeitalter der Legenden war er der Anführer des Elfen-Rates.  Und da meine Mutter sagt, dass Eure Antworten bei ihm lägen, schlage ich vor, wir finden so viel wie möglich über ihn heraus ...}{}{247}{}{}
+{1409}{K:}{}{1}{}{1040}{}
+{1410}{E:}{}{1}{}{0}{}
+{1412}{Der Ring von Brodgar ist der Ort, an dem Arronax in die Leere verbannt wurde ... die Steine des Rings selbst sind Schutzzauber, die ihn dort festhalten.  Es ist ein alter Ort, aber verlassen.  Wenn man dort ist, kann man die Leere spüren, die die Verbannung erzeugt hat ...}{Der Ring von Brodgar ist der Ort, an dem Arronax in die Leere verbannt wurde ... die Steine des Rings selbst sind Schutzzauber, die ihn dort festhalten.  Es ist ein alter Ort, aber verlassen.  Wenn man dort ist, kann man die Leere spüren, die die Verbannung erzeugt hat ...}{}{248}{}{}
+{1413}{K:}{}{1}{}{1040}{}
+{1414}{E:}{}{1}{}{0}{}
+{1416}{Ich kann nicht behaupten, dass ich etwas über diesen Ort weiß.  So etwas habe ich noch nie gesehen ... so seltsam und so still ... ich habe gar keinen Wind gespürt.  Und es scheint keine Sonne hier ... woher kommt dann das Licht?  Als hätte die Zeit selbst vergessen, dass der Ort existiert ...}{Ich kann nicht behaupten, dass ich etwas über diesen Ort weiß.  So etwas habe ich noch nie gesehen ... so seltsam und so still ... ich habe gar keinen Wind gespürt.  Und es scheint keine Sonne hier ... woher kommt dann das Licht?  Als hätte die Zeit selbst vergessen, dass der Ort existiert ...}{}{249}{}{}
+{1417}{K:}{}{1}{}{1040}{}
+{1418}{E:}{}{1}{}{0}{}
+{1420}{Kerghan?  Nur, dass er der erste schwarze Nekromant war und deswegen verbannt wurde.  Sieht so aus, als würde er endlich Rache üben ... und nur wir haben die Macht, ihn aufzuhalten.  Ich für meinen Teil bin dazu bereit ...}{Kerghan?  Nur, dass er der erste schwarze Nekromant war und deswegen verbannt wurde.  Sieht so aus, als würde er endlich Rache üben ... und nur wir haben die Macht, ihn aufzuhalten.  Ich für meinen Teil bin dazu bereit ...}{}{250}{}{}
+{1421}{Und Ihr könnt Euch darauf verlassen, dass ich an Eurer Seite bin, Liebster ...}{}{5}{lf12 1, gf2364 1, lf27 0}{1425}{re +5, lf27 1}
+{1422}{K:}{}{1}{}{1040}{}
+{1423}{E:}{}{1}{}{0}{}
+{1425}{Ich weiß, Liebe meines Lebens.  Ich weiß ...}{Ich weiß, Liebe meines Lebens.  Ich weiß ...}{}{251}{}{}
+{1426}{K:}{}{1}{}{1040}{}
+{1427}{E:}{}{1}{}{0}{}
+{1429}{Das ist eine dumme Frage.  Wir werden die Maschine abschalten und zu Bett gehen.  Ich will damit sagen, das Spiel ist vorbei.  Es bleibt nichts mehr zu tun. Gute Nacht ...}{Das ist eine dumme Frage.  Wir werden die Maschine abschalten und zu Bett gehen.  Ich will damit sagen, das Spiel ist vorbei.  Es bleibt nichts mehr zu tun. Gute Nacht ...}{}{252}{}{}
+{1430}{K:}{}{1}{}{1040}{}
+{1431}{E:}{}{1}{}{0}{}
+

@@ -13,7 +13,7 @@ import { saveDataExplorerState } from '../explorer/state-store.js';
 let bmpFiles = [];
 let bmpTree = null;
 
-// data/file_index_bmp.json (toolbox/file_index.py) lists every .bmp under data/, mods and modules included.
+// js/index/files/file_index_bmp.json (toolbox/file_index.py) lists every .bmp under data/, mods and modules included.
 // One request gives the whole folder tree; the folders it holds all contain a .bmp.
 let bmpFolders = null;   // path -> { subs: Set<name>, files: [] }
 async function loadBmpFolders() {

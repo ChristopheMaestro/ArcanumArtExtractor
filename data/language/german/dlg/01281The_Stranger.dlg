@@ -1,0 +1,59 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Seid gegrüßt.  Dürfte ich wohl Euren Namen erfahren, Sire?}{}{5}{me 0}{10}{}
+{3}{Hallo, da.  Habt Ihr wohl einen Moment Zeit?}{}{5}{me 1}{81}{}
+{5}{Äh ... ich nich' sehr klug.  Wer Ihr?}{}{-4}{me 0}{10}{}
+{6}{Hallo!  Fragens haben!}{}{-4}{me 1}{20}{}
+{7}{E:}{}{1}{}{0}{}
+{10}{[Vor dir siehst du einen Mann in dunklen Gewändern.  Er blickt sich verstohlen um und sieht dich dann aus kalten, reglosen Augen an.]  Ihr stellt besser keine solchen Fragen, Freund.  Bringt Leute wie Euch nur in Schwierigkeiten.  Nehmt es nicht persönlich ... aber so ist es hier nun mal ...}{[Vor dir siehst du einen Mann in dunklen Gewändern.  Er blickt sich verstohlen um und sieht dich dann aus kalten, reglosen Augen an.]  Ihr stellt besser keine solchen Fragen.  Bringt Mädchen wie Euch nur in Schwierigkeiten.}{}{}{}{}
+{11}{Danke für den Rat, Freund.}{}{5}{}{20}{re +5 }
+{12}{Ach, tatsächlich?  Das solltet Ihr vielleicht weiter ausführen ...}{}{5}{}{55}{re -5}
+{14}{Äh ... fein!}{}{-4}{}{20}{re +5 }
+{15}{Ihr bösig Sachens sagen ... ich Euch vielleich' Schädel einschlagen ...}{}{-4}{}{55}{re -5}
+{16}{E:}{}{1}{}{0}{}
+{20}{[Der Mann blickt dich berechnend an ... dann scheint er eine Entscheidung zu fällen.]  Sucht Ihr Arbeit?  Seid Ihr ein Mann, der weiß, was Verschwiegenheit heißt ... und der sich vielleicht gern eine Handvoll Gold verdienen würde?}{[Der Mann blickt dich berechnend an ... dann scheint er eine Entscheidung zu fällen.]  Sucht Ihr Arbeit?  Seid Ihr eine Frau, die weiß, was Verschwiegenheit heißt ... und die sich vielleicht gern eine Handvoll Gold verdienen würde?}{}{}{}{}
+{21}{Ich suche tatsächlich Arbeit ... bin neu in der Gegend ...}{}{5}{}{30}{re +5}
+{22}{Nein, aber danke für das Angebot.  Guten Tag ...}{}{5}{}{0}{}
+{23}{Als würde ich für einen Perversling wie Euch arbeiten ...}{}{5}{lf4 0}{55}{re -5, lf4 1}
+{24}{Äh ... klar!  Ich Münzens brauchen!}{}{-4}{}{27}{}
+{25}{E:}{}{-4}{}{0}{}
+{27}{[Er kommt näher und seine Miene wird drohender.]  Das wird kein Zuckerschlecken.  Ihr scheint zwar ein bisschen schwer von Begriff zu sein, aber das sollte Euch nicht zu dem Glauben verleiten, dass ich Euch nicht den Hals abschneide, wenn Ihr das vermasselt.  Ich dulde kein Versagen ...}{[Er kommt näher und seine Miene wird drohender.]  Das wird kein Zuckerschlecken.  Ihr scheint zwar ein bisschen schwer von Begriff zu sein, aber das sollte Euch nicht zu dem Glauben verleiten, dass ich Euch nicht den Hals abschneide, wenn Ihr das vermasselt.  Ich dulde kein Versagen ...}{}{}{}{}
+{28}{Ich versteh'n!  Was ich mussen tun?}{}{-4}{}{40}{}
+{29}{Äh ... ich das nich' magen.  Ich jetz' lieber geh'n tu ...}{}{-4}{}{35}{lf1 1}
+{30}{[Er kommt näher und seine Miene wird drohender.]  Das wird kein Zuckerschlecken.  Es ist kein schwieriger Job, aber auf Versagen steht der Tod.  Haben wir uns verstanden?}{[Er kommt näher und seine Miene wird drohender.]  Das wird kein Zuckerschlecken.  Es ist kein schwieriger Job, aber auf Versagen steht der Tod.  Haben wir uns verstanden?}{}{}{}{}
+{31}{Vollkommen ... was soll ich machen?}{}{5}{}{40}{}
+{32}{Vielleicht eigne ich mich nicht für diese Aufgabe ...}{}{5}{}{35}{lf1 1}
+{35}{[Der Mann lächelt dünn.]  Möglicherweise ist es auch besser so, Fremdling.  Diese Arbeit sollte man nicht auf die leichte Schulter nehmen.  Aber wenn Ihr Eure Meinung ändern solltet - ich bin immer in der Nähe ...}{[Der Mann lächelt dünn.]  Möglicherweise ist es auch besser so, Fremdling.  Diese Arbeit sollte man nicht auf die leichte Schulter nehmen.  Aber wenn Ihr Eure Meinung ändern solltet - ich bin immer in der Nähe ...}{}{}{}{}
+{36}{E:}{}{1}{}{0}{}
+{40}{Also, darum geht's.  In meiner Hand habe ich einen versiegelten Brief.  Bringt diesen Brief auf direktem Wege zu der Anschrift, die ich Euch nennen werde.  Ihr dürft Euch den Brief nicht ansehen.  Wenn Ihr es dennoch tut, werden wir es erfahren, und das wäre äußerst schlecht für Euch.  Ihr bekommt 100 Goldstücke für Eure Mühen.  Und keine Fragen.}{Also, darum geht's.  In meiner Hand habe ich einen versiegelten Brief.  Bringt diesen Brief auf direktem Wege zu der Anschrift, die ich Euch nennen werde.  Ihr dürft Euch den Brief nicht ansehen.  Wenn Ihr es dennoch tut, werden wir es erfahren, und das wäre äußerst schlecht für Euch.  Ihr bekommt 100 Goldstücke für Eure Mühen.  Und keine Fragen.}{}{}{}{qu1061 1}
+{41}{Ich bin Euer Mann.}{1}{5}{}{48}{qu1061 2}
+{42}{Ich bin die Richtige für den Job.}{0}{5}{}{48}{qu1061 2}
+{43}{Damit will ich lieber nichts zu tun haben.   Einen schönen Tag noch ...}{}{5}{}{35}{lf1 1}
+{44}{Äh ... fein.}{}{-4}{}{48}{qu1061 2}
+{45}{Äh ... das ich nich' tun willen.}{}{-4}{}{35}{lf1 1}
+{48}{Nun gut. [Er gibt dir den Brief.]  Wie ich bereits sagte: Ihr dürft den Brief nicht lesen.  Bringt ihn zur Low Dervish Row Nummer 36. Dann holt Euer Geld ab.  Ich wünsche Euch einen schönen Tag.}{Nun gut. [Er gibt dir den Brief.]  Wie ich bereits sagte: Ihr dürft den Brief nicht lesen.  Bringt ihn zur Low Dervish Row Nummer 36. Dann holt Euer Geld ab.  Ich wünsche Euch einen schönen Tag.}{}{}{}{in -5219}
+{49}{Einen schönen Tag noch.}{}{5}{}{0}{lf2 1}
+{50}{Tschö.}{}{-4}{}{0}{lf2 1}
+{55}{[Der Mann richtet sich zu seiner vollen Größe auf.]  Ihr wisst nicht, was Ihr da macht, Junge.  Ich würde Euch raten, Euch zu verdrücken.}{[Der Mann richtet sich zu seiner vollen Größe auf.]  Ihr wisst nicht, was Ihr da tut, Mädchen.  Ich würde Euch raten, Euch zu verdrücken.}{}{}{}{}
+{56}{Und ich würde EUCH raten, Eure Deckung hoch zu nehmen, feiger Hund!}{}{5}{}{}{co, fl 61}
+{57}{Ihr seid der Herausforderung offenbar nicht gewachsen.  Einen schönen Tag noch.}{}{5}{}{0}{lf3 1}
+{58}{Äh ... ich nix versteh'n.  Ich jetz' geh'n.}{}{-4}{}{}{co, fl 61}
+{59}{Ich wissen, ich Euch jetz' umbringen!}{}{-4}{}{0}{lf3 1}
+{61}{Ihr habt Euch mit dem falschen Mann angelegt, Junge.}{Ihr habt Euch mit dem falschen Mann angelegt, Weib.}{}{}{}{}
+{63}{Ah ... unser Schwachkopf mit der flinken Zunge.  Habt Ihr sie inzwischen unter Kontrolle, Junge?}{Ah ... unser Schwachkopf mit der flinken Zunge.  Habt Ihr sie inzwischen unter Kontrolle, Weib?}{}{}{}{}
+{64}{Hört zu ... vielleicht haben wir beide das alles einfach verkehrt angefangen ...}{}{5}{}{69}{re +5}
+{65}{Nein ... ich bin nur hier, um Euch fertig zu machen.}{}{5}{}{}{co, fl 61}
+{66}{Mir Lei' tun wegen vorhin ... wir vielleich' Freundens werden?}{}{-4}{}{69}{re +5}
+{67}{Äh, nein ... ich nur hier, um Euch machen alle.}{}{-4}{}{}{co, fl 61}
+{69}{Ich verstehe.  Ja, vielleicht sollten wir unsere Unterhaltung fortführen ...}{Ich verstehe.  Ja, vielleicht sollten wir unsere Unterhaltung fortführen ...}{}{}{}{}
+{70}{Das wäre hervorragend ...}{}{5}{}{20}{lf3 0}
+{71}{Ja!}{}{-4}{}{20}{lf3 0}
+{73}{Ihr seid zurückgekehrt?  Dann habt Ihr Eure Meinung also geändert, was den Job angeht?}{Ihr seid zurückgekehrt?  Dann habt Ihr Eure Meinung also geändert, was den Job angeht?}{}{}{}{}
+{74}{Sieht so aus.  Erzählt mir die Einzelheiten.}{}{5}{}{40}{}
+{76}{Äh ... was das für Abbei' sein?}{}{-4}{}{40}{}
+{77}{E:}{}{1}{}{0}{}
+{79}{Wir haben uns nichts mehr zu sagen.  Was Euch betrifft, so habt Ihr mich nie getroffen.}{Wir haben uns nichts mehr zu sagen.  Was Euch betrifft, so habt Ihr mich nie getroffen.}{}{}{}{}
+{81}{Ja?}{Ja?}{}{}{}{}
+{82}{Ich dachte nur, vielleicht könnten wir unsere Unterhaltung ja fortsetzen ...}{}{5}{}{20}{}
+{84}{Äh ... wir vielleich' reden weiter?}{}{-4}{}{20}{}
+{85}{E:}{}{-4}{}{0}{}
+

@@ -1,0 +1,27 @@
+// This message file contains text to be used in user-supplied newspapers
+// Only the message line numbers 0-999 are valid.
+// Each new newspaper begins on a multiple of 10, and can use up to 10
+// lines, which must be consecutive. The first line is always the main 
+// headline, while the 9 remaining lines go into 4 columns of the paper.
+// Format: each line begins with a font number and justification letter,
+// followed by the text for that line.
+
+// Some font numbers to use:
+//	490 Extra Large Headline
+//	486 Large Headline
+//	492 Normal Headline
+//	483 Story Body
+//	488 Clip Art 0-5
+
+// Justification letters (you must use one)
+//	l = left
+//	c = center
+
+{0}{486c GILBERT BATES MURDERED! PERPERTRATOR STILL AT LARGE} //Main Headline
+{1}{483l The most affluent industrialist in the civlized world was slain in his home. Police have not yet released details of the grisly murder of Gilbert Bates, but the murderer has not yet been apprehended.}
+{2}{492c _ DO ORCS HAVE RIGHTS? _}
+{3}{483l Are orcs worthy of the same rights enjoyed by humans, elves and other intelligent people in Arcanum? Or are they no more than draft horses and watch dogs, to be kept fed and housed so that they might perform their services for our benefit?}
+{4}{488c 3}
+{5}{483l More details on the rights of orcs can be found inside on page 3.}
+{6}{492c _ ELECTRICITY! THE NEW MEDICAL BREAK THROUGH _}
+{7}{483l Doctors and scienticians alike are hailing electricity as the wonder cure-all of our century!}

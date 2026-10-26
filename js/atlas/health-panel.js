@@ -3,8 +3,9 @@
 // toolbox/atlas/audit_glows.py: glows per version, signs / waypoints, the picture pool) and, from what the page already has, the files
 // the version carries of its own (window.AtlasVersionData) and the maps no door leads to (window.ArcanumMaps).
 
+import { escapeHtml as esc } from '../core/util.js';
+
 const ID = 'healthPanel';
-const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const KIND = { n: 'people', c: 'containers', i: 'items on the floor', s: 'signs', w: 'waypoints' };
 const fmt = n => Number(n).toLocaleString('en');
 

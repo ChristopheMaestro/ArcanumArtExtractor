@@ -1,0 +1,896 @@
+// Items on the ground (isometric view)
+
+// weapons start at 0
+// subtypes begin at multiples of 20 and are values of TIG_Art_Weapon in art.h
+
+// boomerangs start at 20
+{20}{g_boomerang-generic.ART}
+{21}{g_boomerang-bladed.ART}
+{22}{g_boomerang-balanced.ART}
+{23}{g_chakrum-cheap.ART}
+{24}{g_chakrum_charmed.art}  //Changed by Positiff
+{25}{g_chakrum_magic.art}    //Changed by Positiff
+{26}{g_glaive.ART}
+{27}{g_flying-guillotine.ART}
+{28}{g_boomerang-balanced.ART}  //Added by Positiff
+{29}{g_chakrum_mystic.art}      //Added by Positiff
+{30}{g_chakrum_arcane.art}      //Added by Positiff
+
+// daggers start at 40
+{40}{g_dagger00.ART}
+{41}{g_dagger00.ART}
+{42}{g_dagger00.ART}
+{43}{g_dagger00.ART}
+{44}{g_dagger00.ART}
+{45}{g_dagger00.ART}
+{46}{g_dagger00.ART}
+{47}{g_dagger00.ART}
+{48}{g_dagger00.ART}
+{49}{g_dagger00.ART}
+{50}{g_spike.art}   //Changed by Positiff
+{51}{g_dagger00.ART}
+{52}{g_dagger00.ART}
+{53}{g_dagger00.ART}
+{54}{g_dagger00.ART}
+{55}{g_dagger00.ART}
+{56}{g_dagger00.ART}
+{57}{g_dagger00.ART}
+{58}{g_dagger00.ART}
+
+// one-handed swords start at 60
+{60}{g_1hsword00.ART}
+{61}{g_1hsword00.ART}
+{62}{g_1hsword00.ART}
+{63}{g_1hsword00.ART}
+{64}{g_1hsword00.ART}
+{65}{g_1hsword00.ART}
+{66}{g_1hsword00.ART}
+{67}{g_1hsword00.ART}
+{68}{g_1hsword00.ART}
+{69}{g_1hsword00.ART}
+{70}{g_1hsword00.ART}
+{71}{g_1hsword00.ART}
+{72}{g_1hsword00.ART}
+{73}{g_1hsword00.ART}
+{74}{g_1hsword00.ART}
+{75}{g_1hsword00.ART}
+{76}{g_1hsword00.ART}
+{77}{g_1hsword00.ART}
+{78}{g_1hsword00.ART}
+{79}{g_1hsword00.ART}
+
+// axes start at 80
+{80}{g_axe00.ART}
+{81}{g_axe00.ART}
+{82}{g_axe00.ART}
+{83}{g_axe00.ART}
+{84}{g_axe00.ART}
+{85}{g_axe00.ART}
+{86}{g_axe00.ART}
+{87}{g_axe00.ART}
+{88}{g_axe00.ART}
+{89}{g_axe00.ART}
+{90}{g_axe00.ART}
+{91}{g_axe00.ART}
+{92}{g_axe00.ART}
+{93}{g_axe00.ART}
+{94}{g_axe00.ART}
+{95}{g_axe00.ART}
+
+// maces/hammers start at 100
+{100}{g_hammer00.art}
+{101}{g_mace.art}            //Changed by Positiff
+{102}{g_mace.art}            //Changed by Positiff
+{103}{g_hammer00.art}
+{104}{g_mace.art}            //Changed by Positiff
+{105}{g_hammer00.art}
+{106}{g_hammer00.art}
+{107}{g_hammer00.art}
+{108}{g_mace.art}            //Changed by Positiff
+{109}{g_hammer00.art}
+{110}{g_hammer00.art}
+{111}{g_big_pipe.art}        //Changed by Positiff
+{112}{g_oak_axe_handle.art}  //Changed by Positiff
+{113}{g_mace.art}            //Changed by Positiff
+{114}{g_mace.art}            //Changed by Positiff
+{115}{g_hammer00.art}
+{116}{g_mace.art}            //Changed by Positiff
+{117}{g_mace.art}            //Changed by Positiff
+
+// pistols start at 120
+{120}{g_pistol00.ART}
+{121}{g_pistol00.ART}
+{122}{g_pistol00.ART}
+{123}{g_pistol00.ART}
+{124}{g_pistol00.ART}
+{125}{g_pistol00.ART}
+{126}{g_pistol00.ART}
+{127}{g_pistol00.ART}
+{128}{g_pistol00.ART}
+{129}{g_pistol00.ART}
+{130}{g_pistol00.ART}
+{131}{g_pistol00.ART}
+{132}{g_pistol00.ART}
+{133}{g_pistol00.ART}
+{134}{g_pistol00.ART}
+{135}{g_pistol00.ART}
+
+// two-handed swords start at 140
+{140}{g_2hsword00.ART}
+{141}{g_2hsword00.ART}
+{142}{g_2hsword00.ART}
+{143}{g_2hsword00.ART}
+{144}{g_2hsword00.ART}
+{145}{g_2hsword00.ART}
+{146}{g_2hsword00.ART}
+{147}{g_2hsword00.ART}
+{148}{g_2hsword00.ART}
+{149}{g_2hsword00.ART}
+{150}{g_void_sword.ART}
+{151}{g_2hsword00.ART}
+{152}{g_2hsword00.ART}
+{153}{g_2hsword00.ART}
+{154}{g_2hsword00.ART}  //LIM
+{155}{g_2hsword00.ART}  //LIM
+{156}{g_2hsword00.ART}  //LIM
+{157}{g_1hsword00.ART}  //LIM
+{158}{g_1hsword00.ART}  //LIM
+{159}{g_1hsword00.ART}  //Added by Positiff
+
+// bows start at 160
+{160}{g_bow00.ART}
+{161}{g_bow00.ART}
+{162}{g_bow00.ART}
+{163}{g_bow00.ART}
+{164}{g_bow00.ART}
+{165}{g_bow00.ART}
+{166}{g_bow00.ART}
+{167}{g_bow00.ART}
+{168}{g_bow00.ART}
+{169}{g_bow00.ART}
+{170}{g_bow00.ART}
+{171}{g_bow00.ART}
+
+// rifles/hi tech guns start at 200
+{200}{g_rifle00.ART}
+{201}{g_rifle00.ART}
+{202}{g_rifle00.ART}
+{203}{g_rifle00.ART}
+{204}{g_rifle00.ART}
+{205}{g_rifle00.ART}
+{206}{g_rifle00.ART}
+{207}{g_rifle00.ART}
+{208}{g_rifle00.ART}
+{209}{g_rifle00.ART}
+{210}{g_rifle00.ART}
+{211}{g_rifle00.ART}
+{212}{g_rifle00.ART}
+{213}{g_rifle00.ART}
+{214}{g_rifle00.ART}
+{215}{g_rifle00.ART}
+{216}{g_rifle00.ART}
+{217}{g_rifle00.ART}
+{218}{g_rifle00.ART}
+{219}{g_rifle00.ART}
+{220}{g_rifle00.ART}
+{221}{g_rifle00.ART}
+{222}{g_rifle00.ART}
+{223}{g_rifle00.ART}
+{224}{g_rifle00.ART}  //LIM
+{225}{G_Arbalet.ART}  //Arcanum 1.5
+
+// staffs start at 260
+{260}{g_staff.ART}
+{261}{g_quality_staff.art}   //Changed by Positiff
+{262}{g_staff.ART}
+{263}{g_shocking_staff.art}  //Changed by Positiff
+{264}{g_tesla_rod.art}       //Changed by Positiff
+{265}{g_staff.ART}
+{266}{g_staff.ART}
+{267}{g_staff.ART}
+{268}{g_staff.ART}
+{269}{g_staff.ART}
+{270}{g_staff.ART}
+{271}{g_staff.ART}
+
+// ammo starts at 1000, with subgroups increasing by 20
+{1000}{g_arrows.ART}
+{1020}{g_bullets.ART}
+{1040}{g_charges.ART}
+{1060}{g_fuel.ART}
+
+// armor starts at 2000
+// subtypes begin at multiples of 20 and are values of TIG_Art_Armor in art.h
+
+// underwear starts at 2000
+
+// villager starts at 2020
+{2020}{g_clothes00.ART}
+{2021}{g_clothes00.ART}
+{2022}{g_clothes00.ART}
+{2023}{g_clothes00.ART}
+{2024}{g_clothes00.ART}
+{2025}{g_clothes00.ART}
+{2026}{g_clothes00.ART}
+{2027}{g_clothes00.ART}
+{2028}{g_clothes00.ART}
+{2029}{g_clothes00.ART}
+{2030}{g_clothes00.ART}
+{2031}{g_clothes00.ART}
+{2032}{g_clothes00.ART}
+{2033}{g_clothes00.ART}
+{2034}{g_clothes00.ART}
+{2035}{g_clothes00.ART}
+{2036}{g_clothes00.ART}
+{2037}{g_clothes00.ART}
+
+// leather starts at 2040
+{2040}{g_leatherbrown01.ART}
+{2041}{g_leatherbrown01.ART}
+{2042}{g_leatherbrown01.ART}
+{2043}{g_armor_Leather_Black.ART}  //Changed by Positiff
+{2044}{g_armor_Leather_Black.ART}  //Changed by Positiff
+{2045}{g_armor_Leather_Black.ART}  //Changed by Positiff
+{2046}{g_armor_Leather_Black.ART}  //Changed by Positiff
+{2047}{g_armor_Leather_Black.ART}  //Changed by Positiff
+{2048}{g_armor_Leather_Black.ART}  //Changed by Positiff
+{2049}{g_leatherbrown01.ART}       //Changed by Positiff
+{2050}{g_leatherbrown01.ART}       //Changed by Positiff
+{2051}{g_leatherbrown01.ART}       //Changed by Positiff
+{2052}{g_leatherblue01.ART}        //Changed by Positiff
+{2053}{g_leatherblue01.ART}        //Changed by Positiff
+{2054}{g_leatherblue01.ART}        //Changed by Positiff
+{2055}{g_armor_Leather_Grey.ART}   //Changed by Positiff
+{2056}{g_armor_Leather_Grey.ART}   //Changed by Positiff
+{2057}{g_armor_Leather_Grey.ART}   //Changed by Positiff
+{2058}{g_armor_Leather_Grey.ART}   //Changed by Positiff
+{2059}{g_leatherbrown01.ART}
+
+// chain starts at 2060
+{2060}{G_ClassicChain.ART}
+{2061}{G_ClassicChain.ART}
+{2062}{G_ClassicChain.ART}
+{2063}{G_ClassicChain.ART}
+{2064}{G_ClassicChain.ART}
+{2065}{G_ClassicChain.ART}
+{2066}{G_ClassicChain.ART}
+{2067}{G_ClassicChain.ART}
+{2068}{G_ClassicChain.ART}
+{2069}{G_ClassicChain.ART}
+{2070}{G_ClassicChain.ART}
+{2071}{G_ClassicChain.ART}
+{2072}{G_ClassicChain.ART}
+{2073}{G_ClassicChain.ART}
+{2074}{G_ClassicChain.ART}
+{2075}{G_ClassicChain.ART}
+{2076}{G_ClassicChain.ART}
+{2077}{G_ClassicChain.ART}
+{2078}{G_ClassicChain.ART}  //Added by Positiff
+{2079}{G_ClassicChain.ART}  //Added by Positiff
+
+// plate technical starts at 2080
+{2080}{g_plate00.ART}
+{2081}{g_plate00.ART}
+{2082}{g_plate00.ART}
+{2083}{g_plate00.ART}
+{2084}{g_plate00.ART}
+{2085}{g_plate00.ART}
+{2086}{g_plate00.ART}
+{2087}{g_plate00.ART}  //LIM
+{2088}{g_plate00.ART}  //LIM
+{2089}{g_plate00.ART}  //Added by Positiff
+{2090}{g_plate00.ART}  //Added by Positiff
+{2091}{g_plate00.ART}  //Added by Positiff
+{2092}{g_plate00.ART}  //Added by Positiff
+{2093}{g_plate00.ART}  //Added by Positiff
+{2094}{g_plate00.ART}  //Added by Positiff
+
+// robes starts at 2100
+{2100}{g_robe00.ART}
+{2101}{g_robe00.ART}
+{2102}{g_robe00.ART}
+{2103}{g_robe00.ART}
+{2104}{g_robe00.ART}
+{2105}{g_robe00.ART}
+{2106}{g_robe00.ART}
+{2107}{g_robe00.ART}
+
+// plate classic starts at 2120
+{2120}{g_armor_plate_Dark-grey.ART}      //Changed by Positiff
+{2121}{g_armor_plate_Dark-grey.ART}      //Changed by Positiff
+{2122}{g_armor_plate_Dark-grey.ART}      //Changed by Positiff
+{2123}{g_armor_Plate_Yellow-Purple.ART}  //Changed by Positiff
+{2124}{g_armor_Plate_Yellow-Purple.ART}  //Changed by Positiff
+{2125}{g_armor_Plate_Yellow-Purple.ART}  //Changed by Positiff
+{2126}{g_armor_plate_Dark-grey.ART}      //Changed by Positiff
+{2127}{g_armor_plate_Dark-grey.ART}      //Changed by Positiff
+{2128}{g_armor_Plate_Blue.ART}           //Changed by Positiff
+{2129}{g_armor_Plate_Blue.ART}           //Changed by Positiff
+{2130}{g_armor_plate_Grey.ART}
+{2131}{g_armor_plate_Grey.ART}
+{2132}{g_armor_plate_Grey.ART}
+{2133}{g_arcane_plate.ART}  //Changed by Positiff
+{2134}{g_arcane_plate.ART}  //Changed by Positiff
+{2135}{g_arcane_plate.ART}  //Changed by Positiff
+{2136}{g_armor_plate_Grey.ART}
+{2137}{g_armor_plate_Grey.ART}
+{2138}{g_armor_plate_Grey.ART}
+{2139}{g_armor_plate_Grey.ART}
+
+// barbarian starts at 2140
+{2140}{g_barb00.ART}
+{2141}{g_armor_barbarian_bronze.ART}
+{2142}{g_armor_barbarian_grey.ART}
+{2143}{g_armor_barbarian_dark-grey.ART}
+{2144}{g_armor_barbarian_red.ART}
+{2145}{g_barb00.ART}                     //Added by Positiff
+{2146}{g_armor_barbarian_bronze.ART}     //Added by Positiff
+{2147}{g_armor_barbarian_grey.ART}       //Added by Positiff
+{2148}{g_armor_barbarian_dark-grey.ART}  //Added by Positiff
+{2149}{g_armor_barbarian_red.ART}        //Added by Positiff
+
+// city dweller starts at 2160
+{2160}{G_BlackSuit.ART}
+{2161}{G_BlackSuit.ART}
+{2162}{G_BlackSuit.ART}
+{2163}{G_BlackSuit.ART}
+{2164}{g_blue_dresses.ART}
+{2165}{g_blue_dresses.ART}
+{2166}{g_blue_dresses.ART}
+{2167}{g_blue_dresses.ART}
+{2168}{G_BlackSuit.ART}
+{2169}{G_BlackSuit.ART}
+{2170}{G_BlackSuit.ART}
+{2171}{G_BlackSuit.ART}
+{2172}{G_BlackSuit.ART}
+{2173}{G_BlackSuit.ART}
+{2174}{G_BlackSuit.ART}
+{2175}{G_BlackSuit.ART}
+
+// shields begin at 2300
+{2300}{g_shield00.ART}
+{2301}{g_shield00.ART}
+{2302}{g_shield00.ART}
+{2303}{g_shield00.ART}
+{2304}{g_shield00.ART}
+{2305}{g_shield00.ART}
+{2306}{g_shield00.ART}
+{2307}{g_magic_detector.art}  //Changed by Positiff
+{2308}{g_shield00.ART}
+{2309}{g_shield00.ART}
+{2310}{g_shield00.ART}
+{2311}{g_shield00.ART}
+{2312}{g_shield00.ART}
+{2313}{g_shield00.ART}  //Added by Positiff
+{2314}{g_shield00.ART}  //Added by Positiff
+{2315}{g_shield00.ART}  //Added by Positiff
+{2316}{g_shield00.ART}  //Added by Positiff
+{2317}{g_shield00.ART}  //Added by Positiff
+{2318}{g_lantern.ART}         //Added by Positiff
+{2319}{g_electric_light.ART}  //Added by Positiff
+{2320}{g_shield00.ART}        //Added by Positiff
+
+// helmets begin at 2400
+{2400}{g_dark_helmet.art}       //Changed by Positiff
+{2401}{g_fine_helmet.art}       //Changed by Positiff
+{2402}{g_helmet_of_light.art}   //Changed by Positiff
+{2403}{g_pig_face_helmet.art}   //Changed by Positiff
+{2404}{g_eye_gear.art}          //Changed by Positiff
+{2405}{g_eye_glasses.ART}
+{2406}{g_tophat.ART}
+{2407}{g_helmet.ART}
+{2408}{g_helmet.ART}
+{2409}{g_big_helmet.art}        //Changed by Positiff
+{2410}{g_inv_mag_hat.art}       //Changed by Positiff
+{2411}{g_head_band.ART}
+{2412}{g_eye_glasses.ART}
+{2413}{g_googled_helmet.art}    //Changed by Positiff
+{2414}{g_miners_helmet.art}     //Changed by Positiff
+{2415}{g_charmed_helmet.art}    //Changed by Positiff
+{2416}{g_magick_helmet.art}     //Changed by Positiff
+{2417}{g_mystic_helmet.art}     //Changed by Positiff
+{2418}{g_arcane_helmet.art}     //Changed by Positiff
+{2419}{g_helmet_of_vision.ART}  //Changed by Positiff
+{2420}{g_helmet.ART}
+{2421}{g_helmet.ART}
+
+// gauntlets begin at 2500
+{2500}{g_war_dwarven_gauntlet.art}          //Changed by Positiff
+{2501}{g_dwarven_gauntlet.art}              //Changed by Positiff
+{2502}{g_war_chain_gloves.art}              //Changed by Positiff
+{2503}{g_leather_gloves.art}                //Changed by Positiff
+{2504}{g_chain_gloves.art}                  //Changed by Positiff
+{2505}{g_light_fingered_gloves.art}         //Changed by Positiff
+{2506}{g_war_gauntlets.art}                 //Changed by Positiff
+{2507}{g_dexterity_gloves.art}              //Changed by Positiff
+{2508}{g_vendigrothian_war_gauntlets.art}   //Changed by Positiff
+{2509}{g_vendigrothian_leather_gloves.art}  //Changed by Positiff
+{2510}{g_charmed_gloves.art}                //Changed by Positiff
+{2511}{g_electro_gauntlets.art}             //Added by Positiff
+
+// boots begin at 2600
+{2600}{g_metal_boots.art}        //Changed by Positiff
+{2601}{g_fine_boots.art}         //Changed by Positiff
+{2602}{g_woman_boots.art}        //Changed by Positiff
+{2603}{g_shoes.ART}
+{2604}{g_elven_boots.art}        //Changed by Positiff
+{2605}{g_boots.ART}
+{2606}{g_woman_boots.art}        //Changed by Positiff
+{2607}{g_enchant_war_boots.art}  //Changed by Positiff
+{2608}{g_shoes.ART}
+{2609}{g_boots.ART}
+{2610}{g_leg_brace01.ART}
+{2611}{g_boots.ART}  //Arcanum 1.5
+{2612}{g_boots.ART}  //Arcanum 1.5
+{2613}{g_war_boots.art}         //Added by Positiff
+{2614}{g_mechanical_boots.art}  //Added by Positiff
+{2615}{g_electro_boots.art}     //Added by Positiff
+
+// rings begin at 2700
+{2700}{g_decorated_ring.art}      //Changed by Positiff
+{2701}{g_gold_ring.art}           //Changed by Positiff
+{2702}{g_gb_ring.art}             //Changed by Positiff
+{2703}{g_charged_copper_ring.art} //Changed by Positiff
+{2704}{g_ring_of_protection.art}  //Changed by Positiff
+{2705}{g_fated_ring.art}          //Changed by Positiff
+{2706}{g_copper_ring.art}         //Changed by Positiff
+{2707}{g_gem_ring.art}            //Changed by Positiff
+{2708}{g_magic_ring.art}          //Changed by Positiff
+{2709}{g_mystic_ring.art}         //Changed by Positiff
+{2710}{g_arcane_ring.art}         //Changed by Positiff
+{2711}{g_wood_ring.art}           //Changed by Positiff
+{2712}{g_ring_02.art}             //Changed by Positiff
+{2713}{g_diamond_ring.art}        //Changed by Positiff
+{2714}{g_void_ring.art}           //Changed by Positiff
+{2715}{g_gold_ring.art}             //Added by Positiff
+{2716}{g_gold_ring.art}             //Added by Positiff
+{2717}{g_gold_ring.art}             //Added by Positiff
+{2718}{g_gold_ring.art}             //Added by Positiff
+{2719}{g_gold_ring.art}             //Added by Positiff
+{2720}{g_gold_ring.art}             //Added by Positiff
+{2721}{g_gold_ring.art}             //Added by Positiff
+{2722}{g_gold_ring.art}             //Added by Positiff
+{2723}{g_gold_ring.art}             //Added by Positiff
+{2724}{g_gold_ring.art}             //Added by Positiff
+{2725}{g_gold_ring.art}             //Added by Positiff
+{2726}{g_gold_ring.art}             //Added by Positiff
+{2727}{g_gold_ring.art}             //Added by Positiff
+{2728}{g_gold_ring.art}             //Added by Positiff
+{2729}{g_gold_ring.art}             //Added by Positiff
+{2730}{g_gold_ring.art}             //Added by Positiff
+{2731}{g_charged_ring.art}          //Added by Positiff
+{2732}{g_charged_gold_ring.art}     //Added by Positiff
+{2733}{g_charged_mithril_ring.art}  //Added by Positiff
+
+// medallions/necklaces begin at 2800
+{2800}{g_medalion.art}             //Changed by Positiff
+{2801}{g_emblem_ground.ART}        //Changed by Positiff
+{2802}{g_dorian_amulet.art}        //Changed by Positiff
+{2803}{g_beauty_medalion.art}      //Changed by Positiff
+{2804}{g_finger_of_mannox.ART}
+{2805}{g_conveyance_medalion.art}  //Changed by Positiff
+{2806}{g_divination_medalion.art}  //Changed by Positiff
+{2807}{g_earth_medalion.art}       //Changed by Positiff
+{2808}{g_fire_medalion.art}        //Changed by Positiff
+{2809}{g_force_medalion.art}       //Changed by Positiff
+{2810}{g_mental_medalion.art}      //Changed by Positiff
+{2811}{g_meta_medalion.art}        //Changed by Positiff
+{2812}{g_morph_medalion.art}       //Changed by Positiff
+{2813}{g_nature_medalion.art}      //Changed by Positiff
+{2814}{g_necroevil_medalion.art}   //Changed by Positiff
+{2815}{g_necrogood_medalion.art}   //Changed by Positiff
+{2816}{g_phantasm_medalion.art}    //Changed by Positiff
+{2817}{g_summoning_medalion.art}   //Changed by Positiff
+{2818}{g_temporal_medalion.art}    //Changed by Positiff
+{2819}{g_water_medalion.art}       //Changed by Positiff
+{2820}{g_air_medalion.art}         //Changed by Positiff
+{2821}{g_snake_amulet.art}         //Changed by Positiff
+{2822}{g_locket.art}               //Changed by Positiff
+{2823}{g_void_medalion.art}        //Changed by Positiff
+{2824}{g_necklace_ruby.art}        //Changed by Positiff
+{2825}{g_necklace_diamond.art}     //Changed by Positiff
+{2826}{g_tech_medallion.art}       //Changed by Positiff
+{2827}{g_antidotу_medallion.art}   //Added by Positiff
+
+// gold starts at 3000
+{3000}{g_coins00.ART}
+
+// food starts at 4000
+{4000}{g_potion_01.art}            //Changed by Positiff
+{4001}{g_potion_of_haste.art}      //Changed by Positiff
+{4002}{g_potion_of_intellect.art}  //Changed by Positiff
+{4003}{g_potion_04.art}            //Changed by Positiff
+{4004}{g_chemical_poison.art}      //Changed by Positiff
+{4005}{G_CocaLeaves.ART}
+{4006}{g_cure_all.art}             //Changed by Positiff
+{4007}{g_cure_poison.art}          //Changed by Positiff
+{4008}{g_fatigue_limiter.art}      //Changed by Positiff
+{4009}{g_fatigue_restore.art}      //Changed by Positiff
+{4010}{g_heal_accelerator.art}     //Changed by Positiff
+{4011}{g_food.ART}
+{4012}{G_GinkaRoot.ART}
+{4013}{G_Kedurastem.ART}
+{4014}{G_Herb3.ART}
+{4015}{G_Poppy.ART}
+{4016}{g_snake_oil.art}          //Changed by Positiff
+{4017}{G_Tobacco.ART}
+{4018}{g_venom.art}              //Changed by Positiff
+{4019}{g_wonder_drug.art}        //Changed by Positiff
+{4020}{G_Chemical.ART}
+{4021}{g_animal_lure.art}        //Changed by Positiff
+{4022}{g_animal_scent.art}       //Changed by Positiff
+{4023}{g_brewers_yeast.art}      //Changed by Positiff
+{4024}{g_carbolic_acid.art}      //Changed by Positiff
+{4025}{g_electrolyte.art}        //Changed by Positiff
+{4026}{g_hallucinite.art}        //Changed by Positiff
+{4027}{g_household_cleaner.art}  //Changed by Positiff
+{4028}{G_Mushroom.ART}
+{4029}{g_strong_poison.art}      //Changed by Positiff
+{4030}{g_sulfur.art}             //Changed by Positiff
+{4031}{G_GeneralBottle.ART}
+{4032}{g_cough_syrup.art}        //Changed by Positiff
+{4033}{g_lady's_perfume.art}     //Changed by Positiff
+{4034}{g_man's_cologne.art}      //Changed by Positiff
+{4035}{G_Herb3.ART}
+{4036}{g_blood_pills.art}        //Changed by Positiff
+{4037}{g_boost_all_stats.art}    //Changed by Positiff
+{4038}{g_therapeutic01.ART}
+{4039}{g_therapeutic02.ART}
+{4040}{g_energizer.art}              //Changed by Positiff
+{4041}{g_glyceride.art}              //Changed by Positiff
+{4042}{g_elixir_of_persuasion.art}   //Changed by Positiff
+{4043}{g_lavatory_cleaner.art}       //Changed by Positiff
+{4044}{g_nerve_and_brain_pills.art}  //Changed by Positiff
+{4045}{g_perception_booster.art}     //Changed by Positiff
+{4046}{g_phosphorous.art}            //Changed by Positiff
+{4047}{g_quinine.art}                //Changed by Positiff
+{4048}{g_spirit_of_camphor.art}      //Changed by Positiff
+{4049}{g_strength_booster.art}       //Changed by Positiff
+{4050}{g_witch_hazel_extract.art}    //Changed by Positiff
+{4051}{g_jug.ART}
+{4052}{g_lyons_rheumatism_cure.art}  //Changed by Positiff
+{4053}{g_migraine_cure.art}          //Changed by Positiff
+{4054}{g_tincture_of_arnica.art}     //Changed by Positiff
+{4055}{G_GeneralBag.ART}
+{4056}{g_invigorator.art}            //Changed by Positiff
+{4057}{g_reanimator.art}             //Changed by Positiff
+{4058}{g_miracle_cure.art}           //Changed by Positiff
+{4059}{g_mental_inhibitor.art}       //Changed by Positiff
+{4060}{g_necromizer.art}             //Changed by Positiff
+{4061}{g_fortifier.art}              //Changed by Positiff
+{4062}{g_sleep_aid.art}              //Changed by Positiff
+{4063}{g_potion_of_paralysis.art}            //Changed by Positiff
+{4064}{g_elixir_of_hypnotic_suggestion.art}  //Changed by Positiff
+{4065}{g_brain_builder.art}                  //Changed by Positiff
+{4066}{g_muscle_maker.art}                   //Changed by Positiff
+{4067}{G_PassionRoot.ART}
+{4068}{G_Lemon.ART}
+{4069}{G_Potato.ART}
+{4070}{G_Vial-of-Blood.ART}
+{4071}{g_bottle_of_brandy.art}           //Changed by Positiff
+{4072}{g_dwarven_snuff.art}              //Changed by Positiff
+{4073}{g_elven_spring_water.art}         //Changed by Positiff
+{4074}{G_GeneralBox.ART}
+{4075}{g_absinte.art}                    //Changed by Positiff
+{4076}{g_sweet_cakes.art}                //Changed by Positiff
+{4077}{g_vendigrothian_elixir.art}       //Changed by Positiff
+{4078}{g_vivifier.art}                   //Changed by Positiff
+{4079}{g_potion_heal_light.art}          //Changed by Positiff
+{4080}{g_potion_heal_greater.art}        //Changed by Positiff
+{4081}{g_potion_fatigue_light.art}       //Changed by Positiff
+{4082}{g_potion_fatigue_greater.art}     //Changed by Positiff
+{4083}{g_potion_heal_poison.art}         //Changed by Positiff
+{4084}{g_potion_heal_all.art}            //Changed by Positiff
+{4085}{g_potion_kalispi's_venom.art}     //Changed by Positiff
+{4086}{g_potion_fatigue_slower.art}      //Changed by Positiff
+{4087}{g_potion_of_skin_thickening.art}  //Changed by Positiff
+{4088}{g_bread.art}                      //Changed by Positiff
+{4089}{g_tincture_of_coordination.art}   //Made by Positiff
+{4091}{g_willpower_booster.art}          //Made by Positiff
+
+// scroll starts at 5000
+{5000}{g_scrolls.ART}
+
+// keys starts at 6000
+{6000}{g_key.ART}
+{6001}{g_key.ART}
+{6002}{g_dwarven_key.art}  //Changed by Positiff
+
+// key ring starts at 7000
+{7000}{g_key.ART}
+{7001}{g_key.ART}
+{7002}{g_dwarven_key.art}  //Added by Positiff
+
+// written starts at 8000
+{8000}{g_book.ART}
+{8001}{g_book.ART}
+{8002}{g_book.ART}
+{8003}{g_book_green.ART}  //Changed by Positiff
+{8004}{g_book_blue.ART}   //Changed by Positiff
+{8005}{g_book.ART}
+{8006}{g_newspaper_ground_object.ART}
+{8007}{G_Schematic.ART}
+{8008}{g_schematic_drawing.ART}
+{8009}{g_schematic_drawing.ART}
+
+// generic starts at 9000
+{9000}{g_camera01.ART}
+{9001}{G_Papers.ART}
+{9002}{g_statue.ART}
+{9003}{g_newspaper_ground_object.ART}
+{9004}{g_treasure_chest_ground.ART}
+{9005}{g_bear_trap.art}     //Changed by Positiff
+{9006}{g_clamp.art}         //Changed by Positiff
+{9007}{G_Engine.ART}
+{9008}{g_mechanical.ART}
+{9009}{g_large_spring.art}  //Changed by Positiff
+{9010}{g_LockPicks.ART}
+{9011}{g_newspaper_ground_object}
+{9012}{g_mechanical.ART}
+{9013}{g_small_spring.art}  //Changed by Positiff
+{9014}{g_spider_curled.ART}
+{9015}{g_spike_trap.ART}
+{9016}{g_bean.ART}
+{9017}{g_statue.ART.ART}
+{9018}{g_trap_spring_part.art}  //Changed by Positiff
+{9019}{g_trap_spring.art}       //Changed by Positiff
+{9020}{g_watch_parts.art}       //Changed by Positiff
+{9021}{g_vase.art}              //Changed by Positiff
+{9022}{g_music_box.art}         //Changed by Positiff
+{9023}{g_candle_stick.art}      //Changed by Positiff
+{9024}{g_poison_full.ART}       //Changed by Positiff
+{9025}{g_dynamite.ART}
+{9026}{g_book.ART}
+{9027}{g_old_gear.art}               //Changed by Positiff
+{9028}{g_metal_plates.art}           //Changed by Positiff
+{9029}{g_capacitor.art}              //Changed by Positiff
+{9030}{g_electric_harness.art}       //Changed by Positiff
+{9031}{g_electric_light.art}         //Changed by Positiff
+{9032}{g_filament.art}               //Changed by Positiff
+{9033}{g_electrical_detail.art}      //Changed by Positiff
+{9034}{g_fire_resistant_gel.art}     //Changed by Positiff
+{9035}{g_electrical.ART}
+{9036}{g_magic_detector.art}         //Changed by Positiff
+{9037}{g_teleportation_device.art}   //Changed by Positiff
+{9038}{g_tesla_coil.art}             //Changed by Positiff
+{9039}{g_old_gear.art}               //Changed by Positiff
+{9040}{g_dynamite.ART}
+{9041}{g_black_powder.art}           //Changed by Positiff
+{9042}{g_fire_obstruction.art}       //Changed by Positiff
+{9043}{g_oxidizer.art}               //Changed by Positiff
+{9044}{g_gun_smithy.ART}
+{9045}{g_gun_chassis.art}            //Changed by Positiff
+{9046}{g_revolver_chamber.art}       //Changed by Positiff
+{9047}{g_self_loading_chamber.art}   //Changed by Positiff
+{9048}{g_mechanical.ART}
+{9049}{G_ClockWerk.ART}
+{9050}{g_watch.art}                  //Changed by Positiff
+{9051}{g_big_pipe.art}               //Changed by Positiff
+{9052}{G_Lantern.ART}
+{9053}{g_leather_strap.art}          //Changed by Positiff
+{9054}{g_metal_shavings.art}         //Changed by Positiff
+{9055}{g_small_electrical_part.art}  //Changed by Positiff
+{9056}{g_telescope.art}              //Changed by Positiff
+{9057}{g_dwarven_ore.art}            //Changed by Positiff
+{9058}{g_dwarven_sheet_metal.ART}    //Changed by Positiff
+{9059}{g_dagger00.ART}               //Changed by Positiff
+{9060}{g_heavy_wire.art}             //Changed by Positiff
+{9061}{g_iron_ore.art}               //Changed by Positiff
+{9062}{g_oak_axe_handle.art}         //Changed by Positiff
+{9063}{g_pure_ore.art}               //Changed by Positiff
+{9064}{g_sheet_metal.art}            //Changed by Positiff
+{9065}{g_smithy02.ART}
+{9066}{g_thermometer.art}            //Changed by Positiff
+{9067}{skull_g.ART}
+{9068}{g_BessiesBoot.ART}
+{9069}{g_bunny_trap_empty_flip.ART}
+{9070}{g_bunny_trap_full_flip.ART}
+{9071}{g_pelt_real.ART}
+{9072}{g_pelt_fake.ART}
+{9073}{g_shovel.ART}
+{9074}{g_boot_buckle_ground.ART}
+{9075}{g_chunk_of_stone_ground.ART}
+{9076}{g_emblem_ground.ART}
+{9077}{g_fraimed_painting_ground.ART}
+{9078}{g_head_stone_ground.ART}
+{9079}{g_newspaper_ground_object.ART}
+{9080}{g_passport_ground_object.ART}
+{9081}{g_treasure_chest_ground.ART}
+{9082}{g_chrystal_ball.ART}
+{9083}{g_gem_blue.ART}
+{9084}{g_gem_green.ART}
+{9085}{G_Diamond.art}
+{9086}{g_gem_red.ART}
+{9087}{g_poison_full.ART}  //Changed by Positiff
+{9088}{g_poison_full_green.ART}
+{9089}{g_wine_glass.ART}
+{9090}{g_wine_crate.ART}
+{9091}{g_rope.ART}
+{9092}{g_grothian_gun_chassis.art}  //Changed by Positiff
+{9093}{g_coal.art}                  //Changed by Positiff
+{9094}{g_schematic_drawing.ART}
+{9095}{g_golden_idol.art}
+{9096}{G_Automaton.ART}
+{9097}{g_Wisp-Essence.ART}
+{9098}{g_bromide.art}            //Changed by Positiff
+{9099}{g_potassium_nitrate.art}  //Changed by Positiff
+{9101}{g_saltpeter.art}          //Changed by Positiff
+{9102}{g_potassium_nitrate.art}  //Changed by Positiff
+{9103}{g_nitroglycerin.art}      //Changed by Positiff
+{9104}{g_electrical_coil.art}    //Changed by Positiff
+{9105}{G_GeneralBottle.ART}
+{9106}{G_GeneralCan.ART}
+{9107}{G_GeneralBox.ART}
+{9108}{g_engine_muffler.art}     //Changed by Positiff
+{9109}{g_metal_casing.art}       //Changed by Positiff
+{9110}{G_GeneralCan.ART}
+{9111}{g_charcoal.art}           //Changed by Positiff
+{9112}{g_small_pipe.art}         //Changed by Positiff
+{9113}{g_compass.art}            //Changed by Positiff
+{9114}{G_GeneralBag.ART}
+{9115}{G_GeneralCan.ART}         //Changed by Positiff
+{9116}{g_liquid_soap.art}        //Changed by Positiff
+{9117}{g_flintlock_parts.art}    //Changed by Positiff
+{9118}{g_flash_grenade.art}      //Changed by Positiff
+{9119}{g_explosive_grenade.art}  //Changed by Positiff
+{9120}{g_smoke_grenade.art}      //Changed by Positiff
+{9121}{g_stun_grenade.art}       //Changed by Positiff
+{9122}{g_fire_obstruction.art}   //Changed by Positiff
+{9123}{g_fieldrock.ART}
+{9124}{g_godess.ART}
+{9125}{g_eye_of_krakatur.ART}
+{9126}{g_parcel.ART}
+{9127}{g_glass_device.ART}
+{9128}{needart.ART}
+{9129}{needart.ART}
+{9130}{g_gem_green.ART}  //Changed by Positiff
+{9131}{g_ruby.art}
+{9132}{g_strong_box.art}
+{9133}{g_tool_pouch.art}
+{9134}{G_ClockWerk.ART}
+{9135}{g_noise_maker_decoy.ART}
+{9136}{g_knock_out_gas.art}          //Changed by Positiff
+{9137}{g_hallucination_grenade.art}  //Changed by Positiff
+{9138}{g_electrocution_grenade.art}  //Changed by Positiff
+{9139}{g_Time_Bomb.ART}
+{9140}{g_concussion_grenade.art}   //Changed by Positiff
+{9141}{g_paralysis_grenade.art}    //Changed by Positiff
+{9142}{g_mustard_gas_grenade.art}  //Changed by Positiff
+{9143}{g_plastique.art}            //Changed by Positiff
+{9144}{g_detonator.art}            //Changed by Positiff
+{9145}{G_Lemon.ART}
+{9146}{G_Potato.ART}
+{9147}{g_pullies.art}              //Changed by Positiff
+{9148}{g_small_steam_engine.art}   //Changed by Positiff
+{9149}{G_Diamond.ART}
+{9150}{G_Diamond.ART}
+{9151}{G_HeartStone.ART}
+{9152}{g_lava_rock.art}  //Changed by Positiff
+{9153}{G_OliveBranch.ART}
+{9154}{G_Drum.ART}
+{9155}{g_match_box.ART}
+{9156}{G_Papers.ART}
+{9157}{g_mnura_coin.art}  //Changed by Positiff
+{9158}{g_litani.ART}
+{9159}{g_book_blue.ART}  //Changed by Positiff
+{9160}{g_book_blue.ART}  //Changed by Positiff
+{9161}{g_book_blue.ART}  //Changed by Positiff
+{9162}{g_book_blue.ART}  //Changed by Positiff
+{9163}{g_book_blue.ART}  //Changed by Positiff
+{9164}{g_book_blue.ART}  //Changed by Positiff
+{9165}{g_book_blue.ART}  //Changed by Positiff
+{9166}{g_book_blue.ART}  //Changed by Positiff
+{9167}{g_two_skulls.ART}
+{9168}{g_toy_train.ART}
+{9169}{g_Vendigroth_Sheet_Metal.ART}     //Changed by Positiff
+{9170}{g_unknown_chemical_compound.art}  //Changed by Positiff
+{9171}{g_heirloomstatue.art}
+{9172}{g_religious_artifact.art}
+{9173}{g_match_box.ART}
+{9174}{g_eye_balls.ART}
+{9175}{g_Vendigroth-Device.ART}
+{9176}{G_Bandages.ART}
+{9177}{G_DoctorsBag.ART}
+{9178}{G_Diamond.ART}
+{9179}{g_gem_green.ART}
+{9180}{g_gem_red.ART}
+{9181}{g_gem_blue.ART}
+{9182}{g_gem_red.ART}
+{9183}{g_gem_blue.ART}
+{9184}{g_molitov.art}   //Changed by Positiff
+{9185}{g_kerosene.art}  //Changed by Positiff
+{9186}{g_rag.ART}
+{9187}{g_volars_wisp_essence.ART}
+{9188}{g_wisp_essence.ART}
+{9189}{G_bracelet.ART}
+{9190}{g_big_cup.ART}
+{9191}{g_lizard_leg.ART}
+{9192}{g_skeletonkey01.ART}
+{9193}{g_smithy02.ART}
+{9194}{g_chargedautomaton.ART}
+{9195}{g_revolver_parts.art}  //Changed by Positiff
+{9196}{g_ClockWerk_green.ART}
+{9197}{g_ClockWerk_yellow.ART}
+{9198}{g_ClockWerk_red.ART}
+{9199}{g_gem_blue.ART}       //LIM
+{9200}{g_gem_green.ART}      //LIM
+{9201}{g_gem_purpletif.ART}  //LIM
+{9202}{g_elecpic.art}  //машинка перемещений
+{9203}{g_emerald_big.art}
+{9204}{g_Gem_new_01.art}
+{9205}{g_Gem_new_02.art}
+{9206}{g_Gem_new_03.art}
+{9207}{g_Gem_new_04.art}
+{9208}{g_Gem_new_05.art}
+{9209}{g_Gem_new_06.art}
+{9210}{g_Gem_new_07.art}
+{9212}{g_gem_red.ART}  //LIM
+{9213}{g_Mitheral_Sheet_Metal.ART}  //Added by Positiff
+{9214}{g_spider_curled.ART}         //Added by Positiff
+{9215}{g_spider_curled.ART}         //Added by Positiff
+{9216}{g_instruments.art}           //Added by Positiff
+
+
+// Destroyed items start here, at 10000
+
+// daggers start at 10040
+{10040}{g_dagger00.ART}
+{10041}{g_dagger00.ART}
+{10042}{g_dagger00.ART}
+{10043}{g_dagger00.ART}
+
+// one-handed swords start at 10060
+{10060}{needart.ART}
+{10061}{needart.ART}
+{10062}{needart.ART}
+{10063}{needart.ART}
+
+// axes start at 10080
+{10080}{needart.ART}
+{10081}{needart.ART}
+{10082}{needart.ART}
+{10083}{needart.ART}
+
+// maces/hammers start at 10100
+
+// pistols start at 10120
+{10120}{needart.ART}
+{10121}{needart.ART}
+{10122}{needart.ART}
+{10123}{needart.ART}
+{10124}{needart.ART}
+{10125}{needart.ART}
+{10126}{needart.ART}
+
+// two-handed swords start at 10140
+{10140}{needart.ART}
+{10141}{needart.ART}
+{10142}{needart.ART}
+{10143}{needart.ART}
+{10144}{needart.ART}
+{10145}{needart.ART}
+{10146}{needart.ART}
+{10147}{needart.ART}
+{10148}{needart.ART}
+
+// bows start at 10160
+{10160}{needart.ART}
+{10161}{needart.ART}
+
+// rifles/hi tech guns start at 10200
+{10200}{needart.ART}
+{10201}{needart.ART}
+{10202}{needart.ART}
+{10203}{needart.ART}
+
+// staffs start at 10260
+{10260}{needart.ART}
+{10263}{needart.ART}
+{10262}{needart.ART}
+
+// shields begin at 12300
+{12300}{needart.ART}
+{12301}{needart.ART}
+{12302}{needart.ART}
+{12303}{needart.ART}
+{12304}{needart.ART}

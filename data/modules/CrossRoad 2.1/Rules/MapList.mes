@@ -1,0 +1,87 @@
+//
+// Map List Info
+//
+
+// Types:
+//	START_MAP -- This is the starting map (there should only be one of these!)
+//	SHOPPING_MAP -- This is the shopping map used in character creation.  If not
+//		present, then this process is skipped during character creation.
+
+	// Starting Location (Convert for World by:)
+	// (54624 - 32) / 64 = 853
+	// (45408 - 32) / 64 = 709
+
+// Area: <#> -- This is the Index # in area.mes that the map maps to
+
+
+// List of valid maps for game & Starting X/Y position
+{5000}{ShopMap, 31, 29, Type: SHOPPING_MAP}
+{5001}{Boat_sea, 107, 89, Type: START_MAP, WorldMap: 0, Area: 1}
+{5002}{Memories_1, , , , WorldMap: 0}
+{5003}{Memories_2, , , , WorldMap: 0}
+{5004}{Boat_Taverne, , , , WorldMap: 0, Area: 1}
+{5005}{Boat_Cale, , , , WorldMap: 0, Area: 1}
+{5006}{Boat_Cale_Nuit, , , , WorldMap: 0, Area: 1}
+{5007}{Boat_Taverne_Nuit, , , , WorldMap: 0, Area: 1}
+{5008}{Boat_sea_Nuit, , , , WorldMap: 0, Area: 1}
+{5009}{Boat_sea_Nuit_11, , , , WorldMap: 0, Area: 1}
+{5010}{Boat_Cale_Matin, , , , WorldMap: 0, Area: 1}
+{5011}{Boat_Cabine, , , , WorldMap: 0, Area: 1}
+{5012}{Boat_sea_Planche, , , , WorldMap: 0, Area: 1}
+{5013}{Death, , , , WorldMap: 0}
+{5014}{Styx, , , , WorldMap: 0, Area: 10}
+{5015}{Styx_Tower, , , , WorldMap: 0, Area: 10}
+{5016}{Styx_Chamber, , , , WorldMap: 0, Area: 10}
+{5017}{Cercle 666, , , , WorldMap: 0, Area: 7}
+{5018}{Cercle 666_Agence, , , , WorldMap: 0, Area: 7}
+{5019}{Cercle 666_Quartier, , , , WorldMap: 0, Area: 7}
+{5020}{Cercle 666_Secrets Hut, , , , WorldMap: 0, Area: 14}
+{5021}{Passage entre les deux mondes, , , , WorldMap: 0, Area: 9}
+{5022}{Cercle 218, , , , WorldMap: 0, Area: 2}
+{5023}{Cercle 218_Asylum, , , , WorldMap: 0, Area: 3}
+{5024}{Cercle 218_FirstFloor, , , , WorldMap: 0, Area: 3}
+{5025}{Cercle 218_Ventilation, , , , WorldMap: 0, Area: 4}
+{5026}{Cercle 218_SS, , , , WorldMap: 0, Area: 5}
+{5027}{Cercle 218_Asc, , , , WorldMap: 0, Area: 3}
+{5028}{Cercle 218_Esprit, , , , WorldMap: 0, Area: 6}
+{5029}{Black_Teleport, , , , WorldMap: 0}
+{5030}{Cercle 218_EscapeWay, , , , WorldMap: 0, Area: 5}
+{5031}{Cercle 218_Intendants, , , , WorldMap: 0, Area: 3}
+{5032}{Cercle 666_Alchimie, , , , WorldMap: 0, Area: 7}
+{5033}{Cercle 666_Maison Performer, , , , WorldMap: 0, Area: 8}
+{5034}{Styx_Grotte, , , , WorldMap: 0, Area: 11}
+{5035}{Styx_Grotte_Int, , , , WorldMap: 0, Area: 11}
+{5036}{Styx_Ile_Secrete, , , , WorldMap: 0, Area: 11}
+{5037}{Styx_Banshee, , , , WorldMap: 0, Area: 11}
+{5038}{Cercle 666_Quai, , , , WorldMap: 0, Area: 12}
+{5039}{Cercle 666_Quai_Cuisine, , , , WorldMap: 0, Area: 12}
+{5040}{Train_Int, , , , WorldMap: 0, Area: 13}
+{5041}{Train_SecretBois, , , , WorldMap: 0, Area: 13}
+{5042}{Train_PortailHarry, , , , WorldMap: 0, Area: 13}
+{5043}{Train_Testsymbol, , , , WorldMap: 0, Area: 13}
+{5044}{Train_MemoriesAristote, , , , WorldMap: 0, Area: 13}
+{5045}{Cercle 666_Charisma, , , , WorldMap: 0, Area: 14}
+{5046}{Train_Tunnel_Ext, , , , WorldMap: 0, Area: 15}
+{5047}{Train_Tunnel_Int, , , , WorldMap: 0, Area: 15}
+{5048}{Train_Tunnel_Fondations, , , , WorldMap: 0, Area: 15}
+{5049}{Train_Tunnel_Boss, , , , WorldMap: 0, Area: 15}
+{5050}{Train_SoulStone_Ext, , , , WorldMap: 0, Area: 16}
+{5051}{Train_SoulStone_Gare, , , , WorldMap: 0, Area: 16}
+{5052}{Train_SoulStone_Grotte, , , , WorldMap: 0, Area: 16}
+{5053}{Train_SoulStone_Esprit_Ext, , , , WorldMap: 0, Area: 17}
+{5054}{Train_SoulStone_Esprit_Int, , , , WorldMap: 0, Area: 17}
+{5055}{Cercle 218 Alternative, , , , WorldMap: 0, Area: 2}
+{5056}{Cercle 218 Alt_Asylum, , , , WorldMap: 0, Area: 2}
+{5057}{Cercle 218 Alt_FirstFloor, , , , WorldMap: 0, Area: 2}
+{5058}{Cercle 666_Tenues, , , , WorldMap: 0, Area: 14}
+{5059}{Limbes_Ext, , , , WorldMap: 0, Area: 18}
+{5060}{Limbes_Cabane, , , , WorldMap: 0, Area: 18}
+{5061}{Limbes_Portails, , , , WorldMap: 0, Area: 18}
+{5062}{Cercle 666_EpreuveInf, , , , WorldMap: 0, Area: 7}
+{5063}{Tir Na nOg - Carte 1, , , , WorldMap: 0, Area: 19}
+{5064}{Tir Na nOg - Carte 2, , , , WorldMap: 0, Area: 19}
+{5065}{Tir Na nOg - Carte 3, , , , WorldMap: 0, Area: 19}
+{5066}{Tir Na nOg - Carte 4, , , , WorldMap: 0, Area: 19}
+{5067}{Tir Na nOg - Carte 5, , , , WorldMap: 0, Area: 19}
+{5068}{Tir Na nOg - Carte 6, , , , WorldMap: 0, Area: 19}
+{5069}{Tir Na nOg - Carte 7, , , , WorldMap: 0, Area: 19}

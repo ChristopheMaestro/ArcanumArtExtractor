@@ -1,0 +1,248 @@
+// need a gang of thieves on outskirts of Black Root
+// need a silver dagger with name 2002 on a thief above
+// need a case of 5 gold bars with name 5601 on Mayor
+// newspaper with name 5201 must be available somewhere (perhaps in Tarant)
+// in all 10 Tarant Black Root guards' death scripts: increment global 1003
+
+// lines 120,260,350 and 390 need a global FLAG added to say that Black root has rejoined Cumbria
+
+//lf1 1 - already asked Mayor for taxes
+
+//lf2 1 - talked to Mayor before
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+{1}{G:}{G:}{}{}{}{}
+	{2}{Ich bin hier auf Geheiß König Praetors.}{}{5}{lf1 0, qu 1000 2}{30}{lf2 1, lf1 1}
+	{3}{Ich habe mich entschlossen, für Euch nach dem Dolch zu suchen.}{}{5}{qu 1005 1}{90}{qu 1005 2}
+	{4}{Ich habe Euren Dolch zurückgebracht.}{}{5}{qb 1005 3, in 2002}{100}{}
+	{5}{T:11}{}{5}{qu1005 4, re 41}{20}{}
+	{6}{Bitte, Sire, ich wollte niemanden beleidigen.}{}{5}{ch-9, re-40}{470}{re41}	
+	{7}{Preh-Tohr. Steuerns.}{}{-4}{qu 1000 2}{360}{lf2 1}
+	{8}{Garf.}{}{-4}{}{0}{}
+	{9}{Wer seid Ihr?}{}{5}{re41, lf2 0}{400}{lf2 1}
+	{10}{Tarant bietet Euch keinen Schutz mehr, Bürgermeister.}{}{5}{qb1000 3, gv 1003 6}{200}{}
+	{11}{Ich habe Euren Dolch noch nicht gefunden.}{}{5}{qu 1005 2, ni2002}{20}{}
+	{12}{Ich wollte Euch wissen lassen, dass ich die Steuern habe.}{}{5}{qb1000 3, in 5601, lf5 0}{140}{re -15}
+	{13}{Ich habe Euch wohl nicht richtig verstanden, Sire.}{}{5}{ch10, re-40}{490}{re50}
+	{14}{E:}{}{5}{}{0}{}
+	
+{20}{Gibt es sonst noch etwas?}{Gibt es sonst noch etwas?}{}{}{}{}
+	{21}{N:}{}{5}{}{0}{}
+	{23}{Habt Ihr es Euch vielleicht überlegt, ob Ihr mir die Steuern nicht doch aushändigt?}{}{5}{}{420}{re +5}
+
+{30}{Was wollt Ihr?}{Was wollt Ihr?}{}{}{}{}
+	{31}{Ich bin hier, um die Steuern einzutreiben, die Black Root schuldet.}{}{5}{}{40}{lf 1 1}
+	{32}{Tarant bietet Euch keinen Schutz mehr, Bürgermeister.}{}{5}{gv 1003 6}{200}{}
+	{33}{Ich glaube, dieser Zeitungsartikel wird Euch interessieren.}{}{5}{gv 1001 1, in 5201}{150}{}
+	{34}{Ich wollte Euch wissen lassen, dass ich die Steuern habe.}{}{5}{in 5601}{140}{re -15}
+	{35}{F:}{}{5}{}{0}{}
+
+{40}{Black Root hat sich jetzt mit dem Vereinigten Königreich verbündet. Ich treibe nur für Tarant Steuern ein.}{Black Root hat sich jetzt mit dem Vereinigten Königreich verbündet. Ich treibe nur für Tarant Steuern ein.}{}{}{}{gv 1001 1}
+	{41}{König Praetor wäre damit nicht einverstanden.}{}{5}{}{50}{}
+	{42}{Ich werde diese Steuern mit allen gebotenen Mitteln eintreiben.}{}{5}{}{50}{re -15}
+
+{50}{Ich schere mich weder um Praetor, noch um Euch, Sire. Kumbrien hat uns zu lange im Stich gelassen. Wir stehen jetzt unter dem Schutz von Tarant.}{Ich schere mich weder um Praetor, noch um Euch, gute Frau. Kumbrien hat uns zu lange im Stich gelassen. Wir stehen jetzt unter dem Schutz von Tarant.}{}{}{}{}
+	{51}{Erlaubt mir, anderer Ansicht zu sein.}{}{5}{}{300}{re -10}
+	{52}{Also bietet jetzt die tarantinische Garde Black Root Schutz?}{}{5}{}{60}{}
+	{53}{Was ist das für ein Gefühl, Tarants Schoßhündchen zu sein?}{}{5}{ps -7}{300}{re -15}
+      {54}{Was ist das für ein Gefühl, Tarants Schoßhündchen zu sein?}{}{5}{ps 8}{290}{re +10}
+
+{60}{Natürlich. Die Vorgehensweise mag anders sein, aber unsere schöne Stadt wurde im Rahmen ihrer Möglichkeiten beschützt.}{Natürlich. Die Vorgehensweise mag anders sein, aber unsere schöne Stadt wurde im Rahmen ihrer Möglichkeiten beschützt.}{}{}{}{}
+	{61}{Im Rahmen ihrer Möglichkeiten? Was soll das bedeuten?}{}{5}{}{210}{}
+	{62}{Das scheint mir eher nach Schwäche und Feigheit zu klingen.}{}{5}{ps 8}{70}{}
+
+{70}{Die Wachen können niemanden ohne Beweis in Haft nehmen, so sagen sie jedenfalls.}{Die Wachen können niemanden ohne Beweis in Haft nehmen, so sagen sie jedenfalls.}{}{}{}{}
+	{71}{Was für eine Art von Beweis?}{}{5}{}{80}{}
+	{72}{Ich habe kein Interesse an Eurem Gejammer, Sire. Die Steuern?}{}{5}{}{310}{re -15}
+	{73}{Was für einen Beweis brauchen diese Dummköpfe denn?}{}{5}{ps 8}{80}{}
+
+{80}{Diebe haben mir mein Amtszeichen, einen silbernen Zeremonialdolch, gestohlen. Wenn Ihr ihn zurückholen könnt, wäre das Beweis genug, um sie verhaften zu lassen.}{Diebe haben mir mein Amtszeichen, einen silbernen Zeremonialdolch, gestohlen. Wenn Ihr ihn zurückholen könnt, wäre das Beweis genug, um sie verhaften zu lassen.}{}{}{}{qu 1005 1}
+	{81}{Ich nehme Euren Auftrag an, guter Mann.}{}{5}{}{90}{qu 1005 2}
+	{82}{Ich habe kein Interesse an Euren nichtigen Sorgen.}{}{5}{}{0}{re -10, fl 1020}
+	{83}{Ich muss mir das gründlich durch den Kopf gehen lassen. Guten Tag.}{}{5}{}{0}{}
+        {84}{Zufälligerweise habe ich Euren Dolch bereits in meinen Besitz gebracht.}{}{5}{in 2002}{100}{}
+
+{90}{Die Diebe sollen irgendwo in den Randgebieten der Stadt herumschleichen. Ihr Anführer ist, glaube ich, ein Elf namens D'ak Taan. Viel Glück, Sire.}{Die Diebe sollen irgendwo in den Randgebieten der Stadt herumschleichen. Ihr Anführer ist, glaube ich, ein Elf namens D'ak Taan. Viel Glück, Madame.}{}{}{}{}
+	{91}{E:}{}{5}{}{0}{}
+
+{100}{Ausgezeichnet. Gebt her, und ich werde diese Diebe sofort verhaften lassen.}{Ausgezeichnet. Gebt her, und ich werde diese Diebe sofort verhaften lassen.}{}{}{}{}
+	{101}{Eure Wache kann Euch nicht einmal vor ein paar armseligen Dieben schützen.}{}{5}{}{110}{}
+	{102}{Hier, bitte schön.}{}{5}{}{430}{qu 1005 4, in 2002}
+	{103}{Nicht, bevor Ihr noch einmal über Eure Verbündeten nachgedacht habt.}{}{5}{ch 13}{340}{}
+
+{110}{Ihr habt Euren Standpunkt klar ausgedrückt, aber was soll ich für Euch tun?}{Ihr habt Euren Standpunkt klar ausgedrückt, aber was soll ich für Euch tun?}{}{}{}{}
+	{111}{Übergebt mir die Steuern, und verbündet Euch mit Kumbrien.}{}{5}{}{120}{}
+	{112}{Ihr gefallt Euch wohl in der Rolle eines unfähigen Schwachkopfs?}{}{5}{}{0}{fl 1010, co} 
+
+{120}{Ich nehme Euren Vorschlag an - wenn Ihr mir meinen Zeremonialdolch zurückbringt.}{Ich nehme Euren Vorschlag an - wenn Ihr mir meinen Zeremonialdolch zurückbringt.}{}{}{}{}
+	{121}{Hier ist Euer Dolch, Sire.}{}{5}{}{130}{gf 1000 1, qu 1005 4, qu 1000 3, in -5601, in 2002, lf5 1}
+	{122}{Habt Ihr nichts anderes als diesen verfluchten Dolch im Kopf?}{}{5}{ch 13}{350}{re - 5}
+
+{130}{Vielen Dank, @pcname@. Euer Einfallsreichtum verblüfft mich.}{Vielen Dank, @pcname@. Euer Einfallsreichtum verblüfft mich.}{}{}{}{}
+	{131}{A:}{}{5}{}{0}{}
+	{132}{E:}{}{5}{}{0}{}
+
+{140}{Was?! Dieb!}{Was?! Dieb!}{}{}{}{}
+	{141}{Beruhigt Euch, ich habe Euch einen Vorschlag zu unterbreiten.}{}{5}{}{230}{}
+	{142}{Ich fürchte, Ihr müsst jetzt wohl sterben.}{}{5}{}{0}{co}
+
+{150}{Was veranlasst Euch zu der Annahme, dass ich ein Interesse daran hätte?}{Was veranlasst Euch zu der Annahme, dass ich ein Interesse daran hätte?}{}{}{}{}
+	{151}{Hier werden die momentanen Spannungen zwischen Caladon und Tarant beschrieben.}{}{5}{}{160}{}
+	{152}{Mein Fehler. Guten Tag.}{}{5}{}{0}{}
+
+{160}{Ich verstehe.}{Ich verstehe.}{}{}{}{}
+	{161}{Hier wird Tarant aufgefordert, Caladon den Krieg zu erklären.}{}{5}{}{170}{}
+
+{170}{Was? Das Vereinigte Königreich würde in Caladon einmarschieren, um es zu annektieren?}{Was? Das Vereinigte Königreich würde in Caladon einmarschieren, um es zu annektieren?}{}{}{}{}
+	{171}{Ihr wollt Euch offenbar aus diesem drohenden Konflikt heraushalten.}{}{5}{ps -6}{0}{fl 1000, re -10}
+	{172}{Ihr wollt Euch offenbar aus diesem drohenden Konflikt heraushalten.}{}{5}{ps 8}{180}{}
+	{173}{Dieser Artikel ist das Werk eines angesehenen Journalisten.}{}{5}{ps -7}{280}{}
+
+{180}{Das ist furchtbar! Wir hätten Kumbriens Schutz niemals verlassen dürfen!}{Das ist furchtbar! Wir hätten Kumbriens Schutz niemals verlassen dürfen!}{}{}{}{}
+	{181}{Übergebt mir die Steuern, und Ihr werdet diesen Schutz wieder genießen können.}{}{5}{}{190}{}
+
+{190}{Aber natürlich! Bitte überbringt mit den Steuern auch meine besten Grüße ... und Praetor braucht ja nicht unbedingt etwas von der ganzen Situation in Tarant erfahren.}{Aber natürlich! Bitte überbringt mit den Steuern auch meine besten Grüße ... und Praetor braucht ja nicht unbedingt etwas von der ganzen Situation in Tarant erfahren.}{}{}{}{qu 1000 3, in -5601}
+	{191}{Natürlich. Es war mir ein Vergnügen, mit Euch Geschäfte zu machen. Guten Tag.}{}{5}{}{0}{}
+
+{200}{Was wollt Ihr damit andeuten?}{Was wollt Ihr damit andeuten?}{}{}{}{}
+	{201}{Alle Wachen sind tot. Die Steuern werden gezahlt. Sofort.}{}{5}{}{190}{}
+
+{210}{Nun ja, es gibt gewisse Verhaltensregeln, wisst Ihr, hinreichenden Verdacht und Beweise von Missetaten zum Beispiel.}{Nun ja, es gibt gewisse Verhaltensregeln, wisst Ihr, hinreichenden Verdacht und Beweise von Missetaten zum Beispiel.}{}{}{}{}
+	{211}{Gibt es Probleme, mit denen sie nicht fertig werden?}{}{5}{}{220}{}
+	{212}{E:}{}{5}{}{0}{}
+
+{220}{Ich bin sicher, dass sie unser Problem mit den Diebstählen im Handumdrehen gelöst haben.}{Ich bin sicher, dass sie unser Problem mit den Diebstählen im Handumdrehen gelöst haben.}{}{}{}{}
+	{221}{Warum ist jetzt nicht der richtige Zeitpunkt dafür?}{}{5}{}{70}{}
+	{222}{Ich könnte Euer Problem mit den Diebstählen beseitigen.}{}{5}{}{80}{}
+	{223}{E:}{}{5}{}{0}{} 
+
+{230}{Was für einen Vorschlag könntet Ihr wohl unterbreiten, der mich interessieren würde?}{Was für einen Vorschlag könntet Ihr wohl unterbreiten, der mich interessieren würde?}{}{}{}{}
+	{231}{Ich könnte Jahr für Jahr die Steuern rauben, oder Ihr könntet sie mir freiwillig zahlen.}{}{5}{}{240}{}
+
+{240}{Elende Ratte! Ich sollte die Wache auf Euch hetzen!}{Elende Ratte! Ich sollte die Wache auf Euch hetzen!}{}{}{}{}
+	{241}{Eure Wache kann Euch nicht einmal vor ein paar armseligen Dieben schützen.}{}{5}{}{250}{}
+
+{250}{Eure Argumente entbehren nicht eines gewissen Wahrheitsgehalts, Halunke. Welche Vorgehensweise schlagt Ihr vor?}{Eure Argumente entbehren nicht eines gewissen Wahrheitsgehalts, Halunke. Welche Vorgehensweise schlagt Ihr vor?}{}{}{}{}
+	{251}{Eure Freundschaft sollte wieder Kumbrien gelten.}{}{5}{}{260}{}
+
+{260}{Bei Jupiter, ich glaube, Ihr habt Recht, Sire. Zum Teufel mit diesen tarantinischen Faulenzern, eh?}{Bei Jupiter, ich glaube, Ihr habt Recht, Madame. Zum Teufel mit diesen tarantinischen Faulenzern, eh?}{}{}{}{gf 1000 1}
+	{261}{Ich stimme Euch aus ganzem Herzen zu.}{}{5}{}{270}{}
+
+{270}{Bitte überbringt mit den Steuern auch meine besten Grüße ... und Praetor braucht ja nicht unbedingt etwas von der ganzen Situation in Tarant erfahren.}{Bitte überbringt mit den Steuern auch meine besten Grüße ... und Praetor braucht ja nicht unbedingt etwas von der ganzen Situation in Tarant erfahren.}{}{}{}{}
+	{271}{Natürlich. Es war mir ein Vergnügen, mit Euch Geschäfte zu machen. Guten Tag.}{}{5}{}{0}{}
+
+{280}{Haltet Ihr mich für einen Narren? Das sind die Ergüsse eines im Schmutz wühlenden Klatschblättchenschreiberlings!}{Haltet Ihr mich für einen Narren? Das sind die Ergüsse eines im Schmutz wühlenden Klatschblättchenschreiberlings!}{}{}{}{}
+	{281}{Ich war gerade in Tarant, dort bereitet man sich auf einen Krieg vor.}{}{5}{}{180}{}
+	{282}{Ihr habt Recht. Es tut mir Leid für die Unannehmlichkeiten.}{}{5}{}{0}{}
+
+{290}{Euer Verstand ist ziemlich scharf, alter Knabe. Aber Eure List wird dennoch nicht fruchten, da wir mit unserem derzeitigen Arrangement mit Tarant recht zufrieden sind.}{Euer Verstand ist ziemlich scharf, Madame. Aber Eure List wird dennoch nicht fruchten, da wir mit unserem derzeitigen Arrangement mit Tarant recht zufrieden sind.}{}{}{}{}
+	{291}{Ihr könnt Euch also über die tarantinische Wache nicht beschweren?}{}{5}{}{60}{}
+	{292}{E:}{}{5}{}{0}{}
+
+{300}{Ihr solltet besser Eure Zunge im Zaum halten. Ich habe nicht viel Geduld, wenn es um närrisches Geschwätz geht.}{Ihr solltet besser Eure Zunge im Zaum halten. Ich habe nicht viel Geduld, wenn es um närrisches Geschwätz geht.}{}{}{}{}
+	{301}{Ihr könnt Euch also über die tarantinische Wache nicht beschweren?}{}{5}{}{60}{}
+	{302}{Ich bin nicht sehr gewillt, Narren am Leben zu lassen.}{}{5}{}{0}{fl 1010, co}
+	{303}{E:}{}{5}{}{0}{}
+
+{310}{Sohn einer räudigen Hündin!}{Billiges Flittchen!}{}{}{}{}
+	{311}{Bitte verzeiht mir meine Unverschämtheit, Sire.}{}{5}{}{320}{re +5}
+	{312}{Ich verlange Genugtuung, Sire! [Du schlägst ihn.]}{}{5}{}{0}{}
+
+{320}{Passt auf, wie Ihr mit mir redet, Sire. Und Ihr könnt Praetor sagen, dass die Steuern jetzt und in der Zukunft nach Tarant gehen.}{Passt auf, wie Ihr mit mir redet, Madame. Und Ihr könnt Praetor sagen, dass die Steuern jetzt und in der Zukunft nach Tarant gehen.}{}{}{}{}
+	{321}{Es macht Euch also nichts aus, von Tarant kontrolliert zu werden?}{}{5}{}{330}{}
+	{322}{Man wird die Steuern aus Eurem ausgeweideten Kadaver klauben müssen.}{}{5}{}{0}{fl 1010, co}
+
+{330}{Ich bin sicher, dass sie unser Problem mit den Diebstählen im Handumdrehen gelöst haben.}{Ich bin sicher, dass sie unser Problem mit den Diebstählen im Handumdrehen gelöst haben.}{}{}{}{}
+	{331}{Ich könnte Euer Problem mit den Diebstählen beseitigen.}{}{5}{}{80}{}
+	{332}{E:}{}{5}{}{0}{}
+
+{340}{Warum sollte ich so etwas tun?}{Warum sollte ich so etwas tun?}{}{}{}{}
+	{341}{Die Wachen haben Euch nicht einmal den Dolch zurückgebracht.}{}{5}{}{110}{} 
+	{342}{F:}{}{5}{}{0}{}
+
+{350}{Er ist das Symbol meines Amtes, Sire. Seid gewahr, dass sich Euer Charme langsam abnutzt.}{Es ist ein Symbol meines Amtes, meine Dame. Seid gewahr, dass sich Euer Charme langsam abnutzt.}{}{}{}{} 
+	{351}{Hier ist Euer Dolch, Sire.}{}{5}{}{130}{gf 1000 1, qu 1005 4, qu 1000 3, in -5601, in 2002}
+	{352}{E:}{}{5}{}{0}{}
+	{353}{Dann wird mein Messer für mich sprechen!}{}{5}{}{0}{co}
+
+{360}{Oh, ich verstehe, Praetor hat einen seiner Ratgeber geschickt. Aber Black Root hat sich jetzt mit dem Vereinigten Königreich verbündet. Ich treibe nur für Tarant Steuern ein.}{Oh, ich verstehe, Praetor hat einen seiner Ratgeber geschickt. Aber Black Root hat sich jetzt mit dem Vereinigten Königreich verbündet. Ich treibe nur für Tarant Steuern ein.}{}{}{}{}
+	{361}{Ich Steuers nehmen.}{}{-4}{}{fl 370}{re -10}
+	{362}{Paff.}{}{-4}{}{0}{}
+      {363}{Wachens tot. Steuerns geben.}{}{-4}{gv 1003 6}{380}{}
+
+{370}{Ja, das glaube ich Euch gern. Verschwindet, Dummkopf.}{Ja, das glaube ich Euch gern. Verschwindet, Dummkopf.}{}{}{}{}
+
+{380}{Bei den Göttern! Hier, nehmt sie. Bitte tut mir nichts, ich mache alles, was Ihr wollt.}{Bei den Göttern! Hier, nehmt sie. Bitte tut mir nichts, ich mache alles, was Ihr wollt.}{}{}{}{}
+	{381}{Dankie fein. Ihr wieda mit Kummbrie sein?}{}{-4}{}{0}{fl 390}
+	{382}{Ihr tot. Sofort.}{}{-4}{}{0}{co}
+
+{390}{Ja, ja, natürlich. Bitte geht ganz einfach.}{Ja, ja, natürlich. Bitte geht ganz einfach.}{}{}{}{gf 1000 1}
+
+{400}{Ich bin der Bürgermeister von Black Root. Und darf ich wohl fragen, wer Ihr seid?}{Ich bin der Bürgermeister von Black Root. Und darf ich wohl fragen, wer Ihr seid?}{}{}{}{lf2 1}
+	{401}{Ich bin @pcname@. Habt Ihr vielleicht Arbeit für mich?}{}{5}{qu 1000 0}{410}{}
+	{402}{Ich bin @pcname@. Habt Ihr vielleicht Arbeit für mich?}{}{5}{qu 1000 1}{410}{}
+	{403}{Ich bin hier auf Geheiß König Praetors.}{}{5}{qu 1000 2, lf1 0}{30}{lf1 1, lf2 1}
+	{404}{Ich habe mich entschlossen, für Euch nach dem Dolch zu suchen.}{}{5}{qu 1005 1}{90}{qu 1005 2}
+	{405}{Ich habe Euren Dolch zurückgebracht.}{}{5}{qu 1005 2, in 2002}{100}{}
+	{406}{E:}{}{5}{}{0}{}
+	{407}{Ich bin die letzte Person, die Ihr in Eurem Leben sehen werdet, Trottel.}{}{5}{}{0}{fl 1010, co}
+
+{410}{Momentan nicht. Vielleicht solltet Ihr mich später noch einmal aufsuchen.}{Momentan nicht. Vielleicht solltet Ihr mich später noch einmal aufsuchen.}{}{}{}{}
+	{411}{E:}{}{5}{}{0}{} 
+
+{420}{Ha, ha! Ihr seid ein amüsanter Bursche. Aber die Antwort ist weiter "nein".}{Ha, ha! Ihr seid eine amüsante Frau. Aber die Antwort ist weiter "nein".}{}{}{}{}
+	{421}{Nun denn, guten Tag.}{}{5}{}{0}{}
+	{422}{Schade, dann muss ich Euch wohl jetzt erledigen.}{}{5}{}{0}{fl 1010, co}
+
+{430}{Vielen Dank, Sire. Erlaubt mir, Euch für Eure Mühen zu entschädigen.}{Vielen Dank, Madame. Erlaubt mir, Euch für Eure Mühen zu entschädigen.}{}{}{}{}
+	{431}{Die Zahlung der Steuern wäre Entschädigung genug.}{}{5}{}{440}{}
+	{432}{Mit 200 wäre mir schon gedient.}{}{5}{ha 13}{460}{}
+
+{440}{Ich fürchte, ich kann Euch nicht weiterhelfen. Die Steuern gehen nach Tarant, aber hier sind 100 Goldstücke für Euch.}{Ich fürchte, ich kann Euch nicht weiterhelfen. Die Steuern gehen nach Tarant, aber hier sind 100 Goldstücke für Euch.}{}{}{}{$$100}
+	{441}{Ohne Eure Wachen würdet Ihr mir die Steuern nicht verweigern.}{}{5}{}{450}{re -15}
+	{442}{Eure Wachen können mich nicht davon abhalten, die Steuern zu stehlen.}{}{5}{}{450}{re -15}
+	{443}{Vielen Dank, einen schönen Tag noch.}{}{5}{}{0}{}
+
+{450}{Das kann gut sein, aber Ihr habt nicht die nötigen Mittel Eure Bedrohung zu unterstreichen, daher werden wir es wohl nie erfahren, was meint Ihr? Und jetzt befreit mich von Eurer abstoßenden Anwesenheit.}{Das kann gut sein, aber Ihr habt nicht die nötigen Mittel Eure Bedrohung zu unterstreichen, daher werden wir es wohl nie erfahren, was meint Ihr? Und jetzt befreit mich von Eurer abstoßenden Anwesenheit.}{}{}{}{}
+	{451}{Dann könnt Ihr jetzt wohl ruhig schlafen. Guten Tag.}{}{5}{}{0}{}
+
+{460}{200 Münzen. Abgemacht. Vielen Dank für Eure Hilfe, Sire.}{200 Münzen. Abgemacht. Vielen Dank für Eure Hilfe, Madame.}{}{}{}{$$200}
+	{461}{A:}{}{5}{}{0}{}
+
+{470}{Ja, ja, ich nehme an, Ihr könnt nichts dafür, wie Ihr seid. Was kann ich für Euch tun?}{Ja, ja, ich nehme an, Ihr könnt nichts dafür, wie Ihr seid. Was kann ich für Euch tun?}{}{}{}{}
+	{471}{Ich bin hier auf Geheiß König Praetors.}{}{5}{lf1 0, qu 1000 2}{30}{lf2 1, lf1 1}
+	{472}{Ich habe mich entschlossen, für Euch nach dem Dolch zu suchen.}{}{5}{qu 1005 1}{90}{qu 1005 2}
+	{473}{Ich habe Euren Dolch zurückgebracht.}{}{5}{qu 1005 3, in 2002}{100}{}
+	{474}{T:11}{}{5}{qu1005 4, re 41}{20}{}
+	{476}{Preh-Tohr. Steuerns.}{}{-4}{qu 1000 2}{360}{}
+	{477}{Garf.}{}{-4}{}{0}{}
+	{478}{Wer seid Ihr?}{}{5}{lf2 0}{400}{lf2 1}
+	{479}{Tarant bietet Euch keinen Schutz mehr, Bürgermeister.}{}{5}{lf5 0, qb1000 3, gv 1003 6}{200}{}
+	{480}{Ich habe Euren Dolch noch nicht gefunden.}{}{5}{qu 1005 2}{20}{}
+	{481}{Ich wollte Euch wissen lassen, dass ich die Steuern habe.}{}{5}{qb1000 3, in 5601, lf5 0}{140}{re -15}
+	{482}{E:}{}{5}{}{0}{}
+
+{490}{Ja, ja, ich nehme an, Ihr könnt nichts dafür, wie Ihr seid. Was kann ich für Euch tun?}{Ja, ja, ich nehme an, Ihr könnt nichts dafür, wie Ihr seid. Was kann ich für Euch tun?}{}{}{}{}
+	{491}{Ich bin hier auf Geheiß König Praetors.}{}{5}{lf1 0, qu 1000 2}{30}{lf1 1, lf2 1}
+	{492}{Ich habe mich entschlossen, für Euch nach dem Dolch zu suchen.}{}{5}{qu 1005 1}{90}{qu 1005 2}
+	{493}{Ich habe Euren Dolch zurückgebracht.}{}{5}{qu 1005 3, in 2002}{100}{}
+	{494}{T:11}{}{5}{qu1005 4, re 41}{20}{}
+	{496}{Preh-Tohr. Steuerns.}{}{-4}{qu 1000 2}{360}{}
+	{497}{Garf.}{}{-4}{}{0}{}
+	{498}{Wer seid Ihr?}{}{5}{lf2 0}{400}{lf2 1}
+	{499}{Tarant bietet Euch keinen Schutz mehr, Bürgermeister.}{}{5}{lf5 0, qb1000 3, gv 1003 6}{200}{}
+	{500}{Ich habe Euren Dolch noch nicht gefunden.}{}{5}{qu 1005 2}{20}{}
+	{501}{Ich wollte Euch wissen lassen, dass ich die Steuern habe.}{}{5}{qb1000 3, in 5601}{140}{re -15}
+	{502}{E:}{}{5}{}{0}{}
+
+
+
+//npc floats
+
+{1000}{Haltet Ihr mich für einen Narren? Das sind die Ergüsse eines im Schmutz wühlenden Klatschblättchenschreiberlings! Lasst mich in Ruhe.}{Haltet Ihr mich für einen Narren? Das sind die Ergüsse eines im Schmutz wühlenden Klatschblättchenschreiberlings! Lasst mich in Ruhe.}{}{}{}{}
+
+{1010}{Kumbrischer Hund! Das ist Euer Tod!}{Kumbrische Hexe! Das ist Euer Tod!}{}{}{}{}
+
+{1020}{Fort mit Euch, tölpelhafte Nervensäge!}{Fort mit Euch, tölpelhafte Nervensäge!}{}{}{}{}

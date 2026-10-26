@@ -1,0 +1,293 @@
+{1}{Soyez le bienvenu à l'institut psychiatrique du château. Vous êtes @pcname@, c'est bien ça ?}{Soyez la bienvenue à l'institut psychiatrique du château. Vous êtes @pcname@, c'est bien ça ?}{}{}{}{}
+{2}{En effet.}{}{5}{}{10}{}
+{3}{C'est bien cela.}{}{5}{}{10}{re +5}
+{4}{Ouaips.}{}{-4}{}{10}{}
+
+{10}{Bien, je suis le concierge. Tout le monde m'appelle Carl alors vous pouvez m'appeler ainsi si vous le désirez.}{Bien, je suis le concierge. Tout le monde m'appelle Carl alors vous pouvez m'appeler ainsi si vous le désirez.}{}{}{}{}
+{11}{Mais ce n'est pas votre vrai nom ?}{}{5}{lf3 0}{20}{lf3 1, re -10}
+{12}{Très bien Carl, vous savez pourquoi je suis là.}{}{5}{lf2 0}{30}{lf2 1}
+{13}{Soit, je saurai à qui m'adresser si besoin est.}{}{5}{}{0}{fl 26}
+{14}{Okay, vous savoir p'quoi moi êt'e là !}{}{-4}{lf2 0}{30}{lf2 1}
+{15}{Moi vous parlerai si besoin de vous.}{}{-4}{}{0}{fl 26}
+
+{20}{Non, c'est le directeur qui m'a attribué ce sobriquet le jour de mon arrivée. Il m'a dit que c'était le prénom traditionnel des serviteurs zombies dans les histoires de maison hantée.}{Non, c'est le directeur qui m'a attribué ce sobriquet le jour de mon arrivée. Il m'a dit que c'était le prénom traditionnel des serviteurs zombies dans les histoires de maison hantée.}{}{}{}{}
+{21}{Et pourquoi ne pas reprendre votre vrai nom ?}{}{5}{ps 7, lf0 0}{40}{lf0 1}
+{22}{Quel genre de personne est le directeur ?}{}{5}{lf1 0}{50}{lf1 1, re -5}
+{23}{Bref, vous savez pourquoi je suis là.}{}{5}{lf2 0}{30}{lf2 1}
+{24}{Intéressant... Bon, je repasserai vous voir.}{}{5}{}{0}{fl 26}
+
+{26}{Bien, j'ai pour consignes de ne pas quitter le hall pour l'instant.}{Bien, j'ai pour consignes de ne pas quitter le hall pour l'instant.}{}{}{}{}
+
+{30}{En effet. Et si je puis vous être d'une quelconque aide, n'hésitez pas.}{En effet. Et si je puis vous être d'une quelconque aide, n'hésitez pas.}{}{}{}{}
+{31}{Et bien en tant que concierge, pourriez-vous m'indiquez comment est organisé l'asile ?}{}{5}{lf4 0}{60}{lf4 1}
+{32}{Certes, pourriez-vous me parlez des personnes disparues ?}{}{5}{lf5 0}{70}{lf5 1}
+{33}{En quoi consiste votre travail exactement ?}{}{5}{lf6 0}{80}{lf6 1}
+{34}{Ouaips, pouvoir me dire comment asile est fait ?}{}{-4}{lf4 0}{60}{lf4 1}
+{35}{Comment étaient disparus ?}{}{-4}{lf5 0}{70}{lf5 1}
+{36}{Bien, je repasserai vous voir.}{}{5}{}{0}{fl 26}
+{37}{Okay, moi r'passai.}{}{-4}{}{0}{fl 26}
+
+{40}{Il... il ne veut pas. Je suis un peu comme son jouet, je ne peux me défaire du nom qu'il m'a choisi.}{Il... il ne veut pas. Je suis un peu comme son jouet, je ne peux me défaire du nom qu'il m'a choisi.}{}{}{}{}
+{41}{Son jouet ? Mais qu'est-ce qui se passe ici ?}{}{7}{}{130}{}
+{42}{Pardon ? Que voulez-vous dire ?}{}{5}{}{90}{}
+{43}{Je ne saisis pas tout mais cela ne concerne à l'évidence pas l'affaire en cours.}{}{5}{}{100}{}
+
+{50}{Il est... il est terrifiant. Il ne parle pratiquement jamais. Je ne me souviens même pas du son de sa voix mais il arrive à vous terroriser rien qu'avec son regard. Il vous regarde et vous perdez tous vos moyens, vous n'avez pas alors d'autre option que de lui obéir.}{Il est... il est terrifiant. Il ne parle pratiquement jamais. Je ne me souviens même pas du son de sa voix mais il arrive à vous terroriser rien qu'avec son regard. Il vous regarde et vous perdez tous vos moyens, vous n'avez pas alors d'autre option que de lui obéir.}{}{}{}{}
+{51}{Mais pourquoi vous avoir choisi un nom ?}{}{5}{}{110}{}
+{52}{Il est si terrible ?}{}{5}{}{120}{ru 1027}
+{53}{Hum... intéressant. Cependant je crains que nous nous éloignions de l'objet de ma visite.}{}{5}{}{100}{ru 1027}
+
+{60}{Le château est organisé en deux étages et un sous-sol. L'accès à ce dernier se fait par l'ascenseur mais il est prohibé sauf autorisation expresse du directeur. Votre mission ne vous autorise pas à passer outre cette interdiction. Le rez-de-chaussée est divisé en quatre zones pénitentiaires. Entre chaque zone se trouvent des portes que seul un employé peut franchir grâce à son badge. [Il désigne le morceau de métal rouge qui orne sa fiche de renseignement]}{Le château est organisé en deux étages et un sous-sol. L'accès à ce dernier se fait par l'ascenseur mais il est prohibé sauf autorisation expresse du directeur. Votre mission ne vous autorise pas à passer outre cette interdiction. Le rez-de-chaussée est divisé en quatre zones pénitentiaires. Entre chaque zone se trouvent des portes que seul un employé peut franchir grâce à son badge. [Il désigne le morceau de métal rouge qui orne sa fiche de renseignement]}{}{}{}{ru 1024}
+{61}{[Suite]}{}{1}{}{63}{}
+
+{63}{Si vous voulez bien me confiez vous fiche un instant afin que j'y entre l'autorisation, vous pourrez ainsi circuler librement dans tout le rez-de-chaussée.}{Si vous voulez bien me confiez vous fiche un instant afin que j'y entre l'autorisation, vous pourrez ainsi circuler librement dans tout le rez-de-chaussée.}{}{}{}{gf89 1}
+{64}{[Vous la lui donnez]}{}{1}{}{66}{}
+
+{66}{[Il applique un petit appareil qui colle un badge sur votre fiche et vous la rend] Voilà, vous pouvez désormais passez ces portes en présentant votre badge aux détecteurs devant celles-ci. Ensuite, le premier étage. Il comporte la partie administrative de l'institut : le bureau du directeur, les fiches de renseignement sur les patients, ... Encore une fois, leur accès nécessite l'autorisation du directeur. Voilà, c'est un peu près tout.}{[Il applique un petit appareil qui colle un badge sur votre fiche et vous la rend] Voilà, vous pouvez désormais passez ces portes en présentant votre badge aux détecteurs devant celles-ci. Ensuite, le premier étage. Il comporte la partie administrative de l'institut : le bureau du directeur, les fiches de renseignement sur les patients, ... Encore une fois, leur accès nécessite l'autorisation du directeur. Voilà, c'est un peu près tout.}{}{}{}{ru 1025}
+{67}{Je vous remercie.}{}{5}{}{290}{}
+{68}{M'rci.}{}{-4}{}{290}{}
+
+{70}{Des pensionnaires comme les autres pour ceux que je connaissais : ceux qui vivaient dans l'institut. Le jour des disparitions, je n'ai rien remarqué de suspect. Ah si, pour l'un d'eux qui habitait la cellule n°21 , je passais dans le couloir peu avant qu'il ne disparaisse, il avait l'air effrayé. Je suis repartit mais je m'inquiétais alors j'ai fait demi-tour pour voir s'il allait bien mais là, il avait disparu.}{Des pensionnaires comme les autres pour ceux que je connaissais : ceux qui vivaient dans l'institut. Le jour des disparitions, je n'ai rien remarqué de suspect. Ah si, pour l'un d'eux qui habitait la cellule n°21 , je passais dans le couloir peu avant qu'il ne disparaisse, il avait l'air effrayé. Je suis repartit mais je m'inquiétais alors j'ai fait demi-tour pour voir s'il allait bien mais là, il avait disparu.}{}{}{}{ru 1026}
+{71}{Je vois. Pourriez-vous m'indiquez comment est organisé l'asile ?}{}{5}{lf4 0}{60}{lf4 1}
+{72}{Bien. En quoi consiste votre travail ?}{}{5}{lf6 0}{80}{lf6 1}
+{73}{Okay. Vous me dire comment asile être fait ?}{}{-4}{lf4 0}{60}{lf4 1}
+{74}{Je vous remercie, je vais vous laisser.}{}{5}{}{0}{fl 26}
+{75}{Oki, moi partir.}{}{-4}{}{0}{fl 26}
+
+{80}{Je suis chargé d'ordinaire de veiller sur les pensionnaires, de m'assurer de la "normalité" de leur comportement ainsi que de l'accueil des nouveaux. Je détermine aussi s'ils nécessitent un établissement à l'intérieur de l'institut.}{Je suis chargé d'ordinaire de veiller sur les pensionnaires, de m'assurer de la "normalité" de leur comportement ainsi que de l'accueil des nouveaux. Je détermine aussi s'ils nécessitent un établissement à l'intérieur de l'institut.}{}{}{}{}
+{81}{Bon, et pourriez-vous me dire comment est organisé l'institut ?}{}{5}{lf4 0}{60}{lf4 1}
+{82}{Et comment étaient ceux qui ont disparus ?}{}{5}{lf5 0}{70}{lf5 1}
+{83}{Bien, je vais vous laisser.}{}{5}{}{0}{}
+
+{90}{Je... non, cela ne vous concerne pas, vous n'êtes pas d'ici. Faites votre travail et repartez ! Je... je vous aiderais du mieux que je le peux mais je vous prie de ne pas vous mêler de ma vie privée.}{Je... non, cela ne vous concerne pas, vous n'êtes pas d'ici. Faites votre travail et repartez ! Je... je vous aiderais du mieux que je le peux mais je vous prie de ne pas vous mêler de ma vie privée.}{}{}{}{re- 10}
+{91}{J'ai compris. Puis-je vous poser alors des questions d'ordre professionnel ?}{}{5}{}{140}{}
+{92}{Bien, je vais vous laisser alors.}{}{5}{}{0}{}
+
+{100}{[Il semble profondément déçu mais un petit peu soulagé] Vous avez raison, vous devez vous concentrer sur les disparitions. Et si je peux faire quoi que ce soit pour vous aider.}{[Il semble profondément déçu mais un petit peu soulagé] Vous avez raison, vous devez vous concentrer sur les disparitions. Et si je peux faire quoi que ce soit pour vous aider.}{}{}{}{re- 10}
+{101}{Et bien en tant que concierge, pourriez-vous m'indiquez comment est organisé l'asile ?}{}{5}{lf4 0}{60}{lf4 1}
+{102}{Certes, pourriez-vous me parlez des personnes disparues ?}{}{5}{lf5 0}{70}{lf5 1}
+{103}{En quoi consiste votre travail exactement ?}{}{5}{lf6 0}{80}{lf6 1}
+{104}{Ouaips, pouvoir me dire comment asile est fait ?}{}{-4}{lf4 0}{60}{lf4 1}
+{105}{Comment étaient disparus ?}{}{-4}{lf5 0}{70}{lf5 1}
+{106}{C'est entendu, je repasserai vous voir.}{}{5}{}{0}{fl 26}
+{107}{Okay, moi r'passai.}{}{-4}{}{0}{fl 26}
+
+{110}{Parce... je suis comme son jouet. [Il avoue cela honteusement] Il considère qu'il est normal de me donner un nouveau nom.}{Parce... je suis comme son jouet. [Il avoue cela honteusement] Il considère qu'il est normal de me donner un nouveau nom.}{}{}{}{}
+{111}{Son jouet ? Mais qu'est-ce qui se passe ici ?}{}{7}{ps 7}{150}{}
+{112}{Pardon ? Et cela ne vous ennuie pas d'être un jouet ?}{}{5}{}{160}{}
+{113}{Je ne saisis pas tout mais cela ne concerne à l'évidence pas l'affaire en cours.}{}{5}{}{100}{}
+
+{120}{Oui je... [Il semble terrifié] Je ne peux pas vous en parler... je... suis désolé ! Faites votre travail et repartez d'ici. Je vous aiderais du mieux que je le peux mais je vous prie de ne plus me questionner sur ma vie privée ni sur... [il avale sa salive] ni sur lui.}{Oui je... [Il semble terrifié] Je ne peux pas vous en parler... je... suis désolé ! Faites votre travail et repartez d'ici. Je vous aiderais du mieux que je le peux mais je vous prie de ne plus me questionner sur ma vie privée ni sur... [il avale sa salive] ni sur lui.}{}{}{}{re- 5}
+{121}{J'ai compris. Puis-je vous poser alors des questions d'ordre professionnel ?}{}{5}{}{140}{}
+{122}{Bien, je vais vous laisser alors.}{}{5}{}{0}{}
+
+{130}{Je... je ne sais pas pourquoi je vous raconte tout cela mais... en fait, le directeur est quelqu'un de terrifiant. Il ne parle pratiquement jamais. Je ne me souviens même pas du son de sa voix mais il arrive à vous terroriser rien qu'avec son regard. Il vous regarde et vous perdez tous vos moyens, vous n'avez pas alors d'autre option que de lui obéir... C'est l'effet qu'il m'a fait le jour où je suis arrivé ici.}{Je... je ne sais pas pourquoi je vous raconte tout cela mais... en fait, le directeur est quelqu'un de terrifiant. Il ne parle pratiquement jamais. Je ne me souviens même pas du son de sa voix mais il arrive à vous terroriser rien qu'avec son regard. Il vous regarde et vous perdez tous vos moyens, vous n'avez pas alors d'autre option que de lui obéir... C'est l'effet qu'il m'a fait le jour où je suis arrivé ici.}{}{}{}{re +20}
+{131}{[Suite]}{}{1}{}{133}{}
+
+{133}{J'ai trouvé dans mon casier une missive qui me demandait de me rendre dans son bureau. Je m'y suis rendu le coeur léger mais... lorsque je suis arrivé devant son bureau, j'ai frappé à la porte et je n'ai entendu aucune réponse. Je me suis alors décidé à entrer. Le directeur semblait assoupi. Je me suis approché de lui, il a alors relevé la tête et là, son regard a croisé le mien. Rien que cela m'a glacé le sang, son regard était tellement... tellement vide et, en même temps, rempli d'émotions.}{J'ai trouvé dans mon casier une missive qui me demandait de me rendre dans son bureau. Je m'y suis rendu le coeur léger mais... lorsque je suis arrivé devant son bureau, j'ai frappé à la porte et je n'ai entendu aucune réponse. Je me suis alors décidé à entrer. Le directeur semblait assoupi. Je me suis approché de lui, il a alors relevé la tête et là, son regard a croisé le mien. Rien que cela m'a glacé le sang, son regard était tellement... tellement vide et, en même temps, rempli d'émotions.}{}{}{}{}
+{134}{[Suite]}{}{1}{}{136}{}
+
+{136}{Ce n'est pas facile à décrire. Ses yeux semblaient ne rien exprimer mais en même temps, je pouvais tout y lire, de la haire, de la jalousie mais aussi de l'amour, de la curiosité, de la fatigue et de la joie. Tout s'y mêlait de sorte qu'aucune émotion ne dominait. Cette impression m'a paralysé. Il s'est alors je relevé, a contourné son bureau et s'est rapproché de moi. Il m'a alors caressé les cheveux, a glissé un mot dans ma poche et est retourné à son bureau.}{Ce n'est pas facile à décrire. Ses yeux semblaient ne rien exprimer mais en même temps, je pouvais tout y lire, de la haire, de la jalousie mais aussi de l'amour, de la curiosité, de la fatigue et de la joie. Tout s'y mêlait de sorte qu'aucune émotion ne dominait. Cette impression m'a paralysé. Il s'est alors je relevé, a contourné son bureau et s'est rapproché de moi. Il m'a alors caressé les cheveux, a glissé un mot dans ma poche et est retourné à son bureau.}{}{}{}{}
+{137}{[Suite]}{}{1}{}{170}{}
+
+{140}{Heu... oui, je vous en prie.}{Heu... oui, je vous en prie.}{}{}{}{}
+{141}{Et bien en tant que concierge, pourriez-vous m'indiquez comment est organisé l'asile ?}{}{5}{lf4 0}{60}{lf4 1}
+{142}{Certes, pourriez-vous me parlez des personnes disparues ?}{}{5}{lf5 0}{70}{lf5 1}
+{143}{En quoi consiste votre travail exactement ?}{}{5}{lf6 0}{80}{lf6 1}
+{144}{Ouaips, pouvoir me dire comment asile est fait ?}{}{-4}{lf4 0}{60}{lf4 1}
+{145}{Comment étaient disparus ?}{}{-4}{lf5 0}{70}{lf5 1}
+{146}{Bien, je repasserai vous voir.}{}{5}{}{0}{fl 26}
+{147}{Okay, moi r'passai.}{}{-4}{}{0}{fl 26}
+
+{150}{Je... je ne sais pas pourquoi je vous raconte tout cela mais... Je vous ai dit quel effet le directeur fait aux gens. Eh bien, c'est exactement ce qui m'est arrivé, ça remonte à mon premier jour  de travail dans ce cercle.}{Je... je ne sais pas pourquoi je vous raconte tout cela mais... Je vous ai dit quel effet le directeur fait aux gens. Eh bien, c'est exactement ce qui m'est arrivé, ça remonte à mon premier jour  de travail dans ce cercle.}{}{}{}{re +20}
+{151}{[Suite]}{}{1}{}{133}{}
+
+{160}{Je... je... [Il se met en colère] Mais ça suffit ! Il s'agit là de ma vie, pourquoi essayez-vous de le torturer ? Faites donc votre travail et partez d'ici ! [Il souffle et se ressaisit] Je suis désolé, je... je veux vous aider, vraiment. Mais comprenez qu'il s'agit ici de choses qui ne regardent qui moi. Je vous apporterai toute l'aide que je pourrai pour votre enquête.}{Je... je... [Il se met en colère] Mais ça suffit ! Il s'agit là de ma vie, pourquoi essayez-vous de le torturer ? Faites donc votre travail et partez d'ici ! [Il souffle et se ressaisit] Je suis désolé, je... je veux vous aider, vraiment. Mais comprenez qu'il s'agit ici de choses qui ne regardent qui moi. Je vous apporterai toute l'aide que je pourrai pour votre enquête.}{}{}{}{}
+{161}{J'ai compris. Puis-je vous poser alors des questions d'ordre professionnel ?}{}{5}{}{140}{}
+{162}{Bien, je vais vous laisser alors.}{}{5}{}{0}{}
+
+{170}{Il m'a fait un signe du doigt qui m'invitait à sortir et s'est remis la tête sur son bureau. Lorsque je me suis retrouvé hors de son bureau, j'ai eu l'impression de revivre. J'ai regardé le mot dans ma poche, il disait "Bienvenue dans mon coffre à jouets, désormais, tu t'appelles Carl". Ce fut le début de mon cauchemar. Tout le monde m'appelait alors Carl et chacun me rappelait sans le vouloir que j'étais devenu son jouet.}{Il m'a fait un signe du doigt qui m'invitait à sortir et s'est remis la tête sur son bureau. Lorsque je me suis retrouvé hors de son bureau, j'ai eu l'impression de revivre. J'ai regardé le mot dans ma poche, il disait "Bienvenue dans mon coffre à jouets, désormais, tu t'appelles Carl". Ce fut le début de mon cauchemar. Tout le monde m'appelait alors Carl et chacun me rappelait sans le vouloir que j'étais devenu son jouet.}{}{}{}{}
+{171}{[Suite]}{}{1}{}{173}{}
+
+{173}{Je me suis acquitté de mon travail mais celui-ci me rendait chaque jour plus triste. J'ai peut-être touché le fond pour me confier ainsi à un étranger.}{Je me suis acquitté de mon travail mais celui-ci me rendait chaque jour plus triste. J'ai peut-être touché le fond pour me confier ainsi à un étranger.}{}{}{}{ru 1028}
+{174}{Il est parfois plus facile de parler à un étranger qu'à son meilleur ami.}{}{5}{}{180}{re+10}
+{175}{En effet mon vieux, vous avez touché le fond, et pas qu'un peu !}{}{5}{}{190}{re-30}
+{176}{Et bien, c'est enfin fini ? Quel ennui.}{}{5}{}{200}{re-40}
+{177}{Ne croyez pas ça, vous avez eu raison de me parler.}{}{5}{}{210}{re+10}
+
+{180}{Mais parler n'arrangera rien à ma condition, cela ne peut que lui nuire si "il" le découvre.}{Mais parler n'arrangera rien à ma condition, cela ne peut que lui nuire si "il" le découvre.}{}{}{}{}
+{181}{Je ne pense pas, je vais pouvoir vous aider.}{}{5}{}{220}{}
+{182}{Certes, triste destin que le votre mais je n'y puis rien.}{}{5}{}{230}{}
+
+{190}{[La colère brille dans ses yeux mais il semble se calmer] Je crois que je me suis laissé aller, je n'aurai pas du raconter tout cela. Vous êtes ici pour travailler alors résolvez l'affaire et partez !}{[La colère brille dans ses yeux mais il semble se calmer] Je crois que je me suis laissé aller, je n'aurai pas du raconter tout cela. Vous êtes ici pour travailler alors résolvez l'affaire et partez !}{}{}{}{}
+{191}{Pour cela, j'aurai besoin de votre aide.}{}{5}{}{240}{}
+{192}{C'est ce que je compte faire en commençant par vous interroger.}{}{5}{}{250}{re-5}
+
+{200}{Je.. [Ses yeux brillent de colère] Je vous hais. Faites ce pourquoi vous êtes venus et repartez !}{Je.. [Ses yeux brillent de colère] Je vous hais. Faites ce pourquoi vous êtes venus et repartez !}{}{}{}{}
+{201}{Pour cela, j'aurai besoin de votre aide.}{}{5}{}{260}{}
+{202}{C'est ce que je compte faire en commençant par vous interroger.}{}{5}{}{270}{re-5}
+
+{210}{Pardon ? Et pourquoi donc ?}{Pardon ? Et pourquoi donc ?}{}{}{}{}
+{211}{Parce qu'il est important que quelqu'un partage vos peines pour les alléger.}{}{5}{}{180}{}
+{212}{Votre histoire m'a fait comprendre quelque chose.}{}{9}{}{280}{}
+
+{220}{M'aider ? [Il semble empli de joie mais celle-ci s'estompe] Et comment ? Personne ne le peut ?}{M'aider ? [Il semble empli de joie mais celle-ci s'estompe] Et comment ? Personne ne le peut ?}{}{}{}{re+ 10}
+{221}{Parce votre histoire l'a fait comprendre quelque chose.}{}{9}{}{280}{}
+{222}{Vous avez raison, je suis désolé mais je dois me concentrer sur l'enquête.}{}{5}{}{230}{}
+
+{230}{Je comprends, après tout, c'est pour l'enquête que vous êtes venu. Je vous apporterai toute l'aide que je peux.}{Je comprends, après tout, c'est pour l'enquête que vous êtes venue. Je vous apporterai toute l'aide que je peux.}{}{}{}{re -5}
+{231}{Merci. En tant que concierge, pourriez-vous m'indiquez comment est organisé l'asile ?}{}{5}{lf4 0}{60}{lf4 1}
+{232}{Merci, pourriez-vous me parlez des personnes disparues ?}{}{5}{lf5 0}{70}{lf5 1}
+{233}{Alors pourriez vous me dire en quoi consiste votre travail exactement ?}{}{5}{lf6 0}{80}{lf6 1}
+{234}{M'rci, pouvoir me dire comment asile est fait ?}{}{-4}{lf4 0}{60}{lf4 1}
+{235}{Alors me dire comment étaient disparus ?}{}{-4}{lf5 0}{70}{lf5 1}
+{236}{Très bien, je repasserai vous voir.}{}{5}{}{0}{fl 26}
+{237}{Okay, moi r'passai.}{}{-4}{}{0}{fl 26}
+
+{240}{C'est exact, je vais vous aider comme je le pourrai.}{C'est exact, je vais vous aider comme je le pourrai.}{}{}{}{}
+{241}{Merci. En tant que concierge, pourriez-vous m'indiquez comment est organisé l'asile ?}{}{5}{lf4 0}{60}{lf4 1}
+{242}{Merci, pourriez-vous me parlez des personnes disparues ?}{}{5}{lf5 0}{70}{lf5 1}
+{243}{Alors pourriez vous me dire en quoi consiste votre travail exactement ?}{}{5}{lf6 0}{80}{lf6 1}
+{244}{M'rci, pouvoir me dire comment asile est fait ?}{}{-4}{lf4 0}{60}{lf4 1}
+{245}{Alors me dire comment étaient disparus ?}{}{-4}{lf5 0}{70}{lf5 1}
+{246}{Très bien, je repasserai vous voir.}{}{5}{}{0}{fl 26}
+{247}{Okay, moi r'passai.}{}{-4}{}{0}{fl 26}
+
+{250}{M'interroger ? Ah oui, bien sûr. Je vous apporterais toute l'aide que je peux.}{M'interroger ? Ah oui, bien sûr. Je vous apporterais toute l'aide que je peux.}{}{}{}{}
+{251}{Merci. En tant que concierge, pourriez-vous m'indiquez comment est organisé l'asile ?}{}{5}{lf4 0}{60}{lf4 1}
+{252}{Merci, pourriez-vous me parlez des personnes disparues ?}{}{5}{lf5 0}{70}{lf5 1}
+{253}{Alors pourriez vous me dire en quoi consiste votre travail exactement ?}{}{5}{lf6 0}{80}{lf6 1}
+{254}{M'rci, pouvoir me dire comment asile est fait ?}{}{-4}{lf4 0}{60}{lf4 1}
+{255}{Alors me dire comment étaient disparus ?}{}{-4}{lf5 0}{70}{lf5 1}
+
+{260}{[Il hésite visiblement] Soit, je ferais mon travail ! Je répondrai aux questions utiles pour votre enquête.}{[Il hésite visiblement] Soit, je ferais mon travail ! Je répondrai aux questions utiles pour votre enquête.}{}{}{}{}
+{261}{Merci. En tant que concierge, pourriez-vous m'indiquez comment est organisé l'asile ?}{}{5}{lf4 0}{60}{lf4 1}
+{262}{Merci, pourriez-vous me parlez des personnes disparues ?}{}{5}{lf5 0}{70}{lf5 1}
+{263}{Alors pourriez vous me dire en quoi consiste votre travail exactement ?}{}{5}{lf6 0}{80}{lf6 1}
+{264}{M'rci, pouvoir me dire comment asile est fait ?}{}{-4}{lf4 0}{60}{lf4 1}
+{265}{Alors me dire comment étaient disparus ?}{}{-4}{lf5 0}{70}{lf5 1}
+
+{270}{M'interroger ? [Il semble indigné mais se reprends] Soit, je ferais mon travail ! Je répondrai aux questions utiles pour votre enquête.}{M'interroger ? [Il semble indigné mais se reprends] Soit, je ferais mon travail ! Je répondrai aux questions utiles pour votre enquête.}{}{}{}{}
+{271}{Merci. En tant que concierge, pourriez-vous m'indiquez comment est organisé l'asile ?}{}{5}{lf4 0}{60}{lf4 1}
+{272}{Merci, pourriez-vous me parlez des personnes disparues ?}{}{5}{lf5 0}{70}{lf5 1}
+{273}{Alors pourriez vous me dire en quoi consiste votre travail exactement ?}{}{5}{lf6 0}{80}{lf6 1}
+{274}{M'rci, pouvoir me dire comment asile est fait ?}{}{-4}{lf4 0}{60}{lf4 1}
+{275}{Alors me dire comment étaient disparus ?}{}{-4}{lf5 0}{70}{lf5 1}
+
+{280}{Je ne suis pas sûr de vous suivre.}{Je ne suis pas sûr de vous suivre.}{}{}{}{}
+{281}{Il est possible que le directeur soit lié aux disparitions.}{}{5}{}{300}{re +10}
+{282}{Oubliez ça, je vais me concentrer sur mon enquête.}{}{5}{}{230}{}
+
+{290}{Oh, et les portes en forme d'arche mènent à des culs-de-sac. Si vous cherchez la sortie, ne lui empruntez pas. Faites aussi attention, il fait assez sombre dans l'asile.}{Oh, et les portes en forme d'arche mènent à des culs-de-sac. Si vous cherchez la sortie, ne lui empruntez pas. Faites aussi attention, il fait assez sombre dans l'asile.}{}{}{}{}
+{291}{Bien, pourriez-vous me parlez des personnes disparues ?}{}{5}{lf5 0}{70}{lf5 1}
+{292}{Pourrais-je savoir en quoi consiste votre travail exactement ?}{}{5}{lf6 0}{80}{lf6 1}
+{293}{Et comment y s'étaient disparus ?}{}{-4}{lf5 0}{70}{lf5 1}
+{294}{Merci, je repasserai vous voir si j'ai besoin d'aide.}{}{5}{}{0}{fl 26}
+{295}{M'rci, moi r'venir si besoin vous.}{}{-4}{}{0}{fl 26}
+
+{300}{Non ? Il serait... à l'origine de tout cela ?}{Non ? Il serait... à l'origine de tout cela ?}{}{}{}{re +5, ru 1029, gf112 1}
+{301}{Ce n'est qu'une hypothèse.}{}{5}{}{310}{re +5}
+{302}{C'est la piste la plus sérieuse que je tiens.}{}{5}{}{320}{re +10}
+
+{310}{[Il semble se calmer] Bien, je vous laisse enquêter dans ce cas. Vous devriez quand même en avertir vos supérieurs.}{[Il semble se calmer] Bien, je vous laisse enquêter dans ce cas. Vous devriez quand même en avertir vos supérieurs.}{}{}{}{}
+{311}{Je vais le faire de suite.  Au revoir.}{}{5}{}{0}{}
+{312}{Je le ferai, puis-je vous poser quelques questions pour mon enquête ?}{}{5}{}{315}{}
+{313}{C'est possible. Je vais vous laisser pour l'instant.}{}{5}{}{0}{fl 26}
+
+{315}{Je vous en prie.}{Je vous en prie.}{}{}{}{}
+{316}{En tant que concierge, pourriez-vous m'indiquez comment est organisé l'asile ?}{}{5}{lf4 0}{60}{lf4 1}
+{317}{Pourriez-vous me parlez des personnes disparues ?}{}{5}{lf5 0}{70}{lf5 1}
+{318}{En quoi consiste votre travail exactement ?}{}{5}{lf6 0}{80}{lf6 1}
+
+{320}{[Il semble extrêmement convaincu] Alors allez vite en parlez à vos supérieurs. Il faut l'arrêter, il faut... il faut que tout ça s'arrête.}{[Il semble extrêmement convaincu] Alors allez vite en parlez à vos supérieurs. Il faut l'arrêter, il faut... il faut que tout ça s'arrête.}{}{}{}{}
+{321}{Vous avez raison, j'y vais de ce pas.}{}{5}{}{0}{}
+{322}{J'y compte bien, puis-je auparavant vous poser quelques questions pour mon enquête ?}{}{5}{}{315}{}
+{323}{Je vais y réfléchir. Je vous laisse.}{}{5}{}{0}{fl 26}
+
+
+
+{500}{Rebonjour @pcname@. Je peux vous aider ?}{Rebonjour @pcname@. Je peux vous aider ?}{}{}{}{}
+{501}{Oui. En tant que concierge, pourriez-vous m'indiquez comment est organisé l'asile ?}{}{5}{lf4 0}{60}{lf4 1}
+{502}{Eh bien, pourriez-vous me parlez des personnes disparues ?}{}{5}{lf5 0}{70}{lf5 1}
+{503}{J'aimerais savoir en quoi consiste votre travail exactement ?}{}{5}{lf6 0}{80}{lf6 1}
+{504}{Ouaips, pouvoir me dire comment asile est fait ?}{}{-4}{lf4 0}{60}{lf4 1}
+{505}{Me dire comment étaient disparus ?}{}{-4}{lf5 0}{70}{lf5 1}
+{506}{Oui, il nous faut des preuves de la culpabilité du directeur.}{}{5}{ru 1030, gf131 0}{525}{gf98 1, gf131 1}
+{507}{J'ai repéré un coffret dans le bureau du directeur, il contient peut-être nos preuves.}{}{5}{gf95 1}{-4}{gf95 0} //540
+{508}{J'ai repéré une grille d'aération dans le bureau du directeur, elle peut nous servir.}{}{5}{gf106 1, lf7 1}{550}{lf7 0, gf106 0}
+{509}{Oui, j'aurai besoin de renseignements sur la ventilation.}{}{5}{gf107 1}{560}{gf107 0}
+{510}{Ouaips, moi b'soin infos sur ventil'tion.}{}{-4}{gf107 1}{560}{gf107 0}
+{511}{Nous avions raison, c'était bien le directeur !}{}{5}{lf8 0, gf133 1, gf131 1, gf134 0, ru 1030}{580}{lf8 1}
+{512}{Oui, j'aurai encore besoin de vous afin de prouver la culpabilité du directeur.}{}{5}{ru 1030, qu1014 1}{590}{qu1014 2}
+{513}{Oui, je crains d'avoir encore besoin de vous.}{}{5}{ru 1032, qu1014 1}{600}{qu1014 2}
+{514}{Ouais, moi b'soin encore.}{}{-4}{qu1014 1}{600}{qu1014 2}
+{515}{Je vous ramène votre clef et votre poison.}{}{5}{in 5810, in 5811, lf9 1}{610}{lf9 0}
+{516}{Moi ai clef et poison de vous.}{}{-4}{in 5810, in 5811, lf9 1}{610}{lf9 0}
+{517}{Pas pour l'instant.}{}{5}{}{0}{}
+{518}{Pas maint'nant.}{}{-4}{}{0}{}
+
+{525}{[Il semble perturbé par cette déclaration] Oui, bien sûr... Je n'en ai pas moi-même mais je sais qu'il est de retour dans son bureau, vous pourrez donc y entrez, enfin, normalement. Vous pourrez jetez un oeil tout en discutant avec lui. Revenez si vous trouvez un détail suspect.}{[Il semble perturbé par cette déclaration] Oui, bien sûr... Je n'en ai pas moi-même mais je sais qu'il est de retour dans son bureau, vous pourrez donc y entrez, enfin, normalement. Vous pourrez jetez un oeil tout en discutant avec lui. Revenez si vous trouvez un détail suspect.}{}{}{}{}
+{526}{Je vous remercie de ce conseil, j'y vais de ce pas.}{}{5}{}{0}{}
+{527}{Je vais réfléchir à ce plan.}{}{5}{}{0}{}
+{528}{J'aurais auparavant quelques questions à vous poser.}{}{5}{}{530}{}
+
+{530}{Je vous écoute.}{Je vous écoute.}{}{}{}{}
+{531}{En tant que concierge, pourriez-vous m'indiquez comment est organisé l'asile ?}{}{5}{lf4 0}{60}{lf4 1}
+{532}{Pourriez-vous me parlez des personnes disparues ?}{}{5}{lf5 0}{70}{lf5 1}
+{533}{Pourrais-je savoir en quoi consiste votre travail exactement ?}{}{5}{lf6 0}{80}{lf6 1}
+{534}{Comment y s'étaient disparus ?}{}{-4}{lf5 0}{70}{lf5 1}
+{535}{En fait, je repasserai vous voir plus tard.}{}{5}{}{0}{fl 26}
+{536}{Bin moi r'venir p'utôt plus tard.}{}{-4}{}{0}{fl 26}
+
+{540}{Vraiment ? Si c'est le cas c'est merveilleux. Cependant, ça ne va pas être simple de les récupérer. Bon, avez-vous trouvé un moyen d'entrer dans son bureau pendant son absence ?}{Vraiment ? Si c'est le cas c'est merveilleux. Cependant, ça ne va pas être simple de les récupérer. Bon, avez-vous trouvé un moyen d'entrer dans son bureau pendant son absence ?}{}{}{}{}
+{541}{Oui, il y a une grille d'aération dans son bureau, elle doit communiquer avec d'autres.}{}{5}{gf106 1}{550}{gf106 0}
+{542}{Malheureusement non, je vais y retourner.}{}{5}{}{0}{lf7 1, fl 545}
+
+{545}{D'accord...}{D'accord...}{}{}{}{}
+
+{550}{En effet, elle communique avec toutes les autres. La plus accessible pour vous se trouve au rez-de-chaussée, à côté de l'ascenseur. Mais il y a une infirmière en poste à cet endroit. Vous n'aurez qu'à lui dire que j'ai besoin de lui parler et qu'elle doit venir me voir. Par contre, il y a une autre difficulté, c'est l'organisation de la ventilation, c'est un vrai labyrinthe et certains conduits sont fermés à clef.}{En effet, elle communique avec toutes les autres. La plus accessible pour vous se trouve au rez-de-chaussée, à côté de l'ascenseur. Mais il y a une infirmière en poste à cet endroit. Vous n'aurez qu'à lui dire que j'ai besoin de lui parler et qu'elle doit venir me voir. Par contre, il y a une autre difficulté, c'est l'organisation de la ventilation, c'est un vrai labyrinthe et certains conduits sont fermés à clef.}{}{}{}{}
+{551}{[Suite]}{}{1}{}{553}{}
+
+{553}{Je peux vous en fournir la clef mais je ne peux quitter mon poste, d'autant plus que l'infirmière en poste à l'ascenseur doit venir me voir dans notre plan. Vous allez devoir vous débrouillez pour trouver la sortie. Tenez, voici un passe partout pour la ventilation. [Il vous tend une clef] Je ne l'ai jamais essayé mais en théorie, il fonctionne. Si vraiment vous êtes perdu, en dernier recours, suicidez vous : votre âme sera alors téléportée au dispensaire.}{Je peux vous en fournir la clef mais je ne peux quitter mon poste, d'autant plus que l'infirmière en poste à l'ascenseur doit venir me voir dans notre plan. Vous allez devoir vous débrouillez pour trouver la sortie. Tenez, voici un passe partout pour la ventilation. [Il vous tend une clef] Je ne l'ai jamais essayé mais en théorie, il fonctionne. Si vraiment vous êtes perdu, en dernier recours, suicidez vous : votre âme sera alors téléportée au dispensaire.}{}{}{}{}
+{554}{[Suite]}{}{1}{}{556}{}
+
+{556}{Tenez, voici un poison très virulent pour les esprits. Il est très efficace mais quasiment impossible à utiliser en combat, il ne sert qu'à se suicider. [Il vous tend un petit flacon] Voilà, quelques gouttes suffiront à vous achever. Rendez-moi le flacon et le passe-partout à votre retour. Enfin, il vous faut un moyen de savoir ce qu'il y a dans le coffre du directeur. Pour cela, je ne sais que vous conseiller.}{Tenez, voici un poison très virulent pour les esprits. Il est très efficace mais quasiment impossible à utiliser en combat, il ne sert qu'à se suicider. [Il vous tend un petit flacon] Voilà, quelques gouttes suffiront à vous achever. Rendez-moi le flacon et le passe-partout à votre retour. Enfin, il vous faut un moyen de savoir ce qu'il y a dans le coffre du directeur. Pour cela, je ne sais que vous conseiller.}{}{}{}{in-5810, in-5811, in-4604}
+{557}{Bien, je vais me débrouillez. Merci pour tout.}{}{5}{}{0}{qu1012 2, gf109 1}
+
+{560}{Oui, bien sûr. Vous voulez y entrer ou juste savoir comment les différentes bouches communiquent ?}{Oui, bien sûr. Vous voulez y entrer ou juste savoir comment les différentes bouches communiquent ?}{}{}{}{}
+{561}{Y entrer.}{}{5}{}{570}{}
+{562}{Entrer.}{}{-4}{}{570}{}
+
+{570}{Bon, il faut que vous sachiez qu'à l'intérieur, c'est un vrai labyrinthe. Non seulement beaucoup de portes sont fermées mais en plus, l'organisation est assez chaotique... je vais tout d'abord vous donner le passe partout de la ventilation. [Il vous le donne] Je ne peux pas quitter mon poste donc je ne pourrai pas vous guider. Cependant, en cherchant un petit peu, vous devriez trouver ce que vous cherchez.}{Bon, il faut que vous sachiez qu'à l'intérieur, c'est un vrai labyrinthe. Non seulement beaucoup de portes sont fermées mais en plus, l'organisation est assez chaotique... je vais tout d'abord vous donner le passe partout de la ventilation. [Il vous le donne] Je ne peux pas quitter mon poste donc je ne pourrai pas vous guider. Cependant, en cherchant un petit peu, vous devriez trouver ce que vous cherchez.}{}{}{}{}
+{571}{[Suite]}{}{1}{}{573}{}
+
+{573}{Si vous êtes vraiment perdu, en dernier recours, suicidez vous ! Votre âme sera alors transportée au dispensaire. Tenez, voici un poison très virulent pour les esprits. Il est très efficace mais quasiment impossible à utiliser en combat, il ne sert qu'à se suicider. [Il vous tend un petit flacon] Voilà, quelques gouttes suffiront à vous achever. Enfin, je vous serais gré de me rendre la clef et le poison à votre retour.}{Si vous êtes vraiment perdu, en dernier recours, suicidez vous ! Votre âme sera alors transportée au dispensaire. Tenez, voici un poison très virulent pour les esprits. Il est très efficace mais quasiment impossible à utiliser en combat, il ne sert qu'à se suicider. [Il vous tend un petit flacon] Voilà, quelques gouttes suffiront à vous achever. Enfin, je vous serais gré de me rendre la clef et le poison à votre retour.}{}{}{}{in-5810, in-5811, in-4604}
+{574}{Je n'y manquerai pas. Au revoir.}{}{5}{}{0}{}
+{575}{Moi l'faire. R'voir.}{}{-4}{}{0}{}
+
+{580}{Vraiment ? Il va partir alors ? Oh merci ! Merci beaucoup ! Allez vite prévenir vos supérieurs et revenez me voir si vous avez besoin de quoi que ce soit.}{Vraiment ? Il va partir alors ? Oh merci ! Merci beaucoup ! Allez vite prévenir vos supérieurs et revenez me voir si vous avez besoin de quoi que ce soit.}{}{}{}{}
+{581}{Oui, j'y vais de ce pas.}{}{5}{}{0}{}
+
+{590}{Heu, juste avant, m'avez vous ramené ma clef et mon poison ?}{Heu, juste avant, m'avez vous ramené ma clef et mon poison ?}{}{}{}{lf10 1}
+{591}{Oui, les voici.}{}{5}{in 5810, in 5811}{610}{in 5810, in 5811}
+{592}{Ha non, je vais les chercher et je reviens.}{}{5}{}{0}{lf9 1}
+
+{600}{Bien sûr, pas de problème. Mais avant cela, pourrais-je récupérer ma clef et mon poison ?}{Bien sûr, pas de problème. Mais avant cela, pourrais-je récupérer ma clef et mon poison ?}{}{}{}{}
+{601}{Oui, les voici.}{}{5}{in 5810, in 5811}{610}{in 5810, in 5811}
+{602}{Ha non, je vais les chercher et je reviens.}{}{5}{}{0}{lf9 1}
+{603}{V'là.}{}{-4}{in 5810, in 5811}{610}{in 5810, in 5811}
+{604}{Moi aller chercher et r'viens.}{}{-4}{}{0}{lf9 1}
+
+{610}{Merci bien. [Il semble bien content de vous les reprendre] De quoi avez-vous besoin ?}{Merci bien. [Il semble bien content de vous les reprendre] De quoi avez-vous besoin ?}{}{}{}{gf192 1}
+{611}{Je dois me rendre au sous-sol, j'ai l'autorisation.}{}{5}{lf10 0}{620}{}
+{612}{Moi d'voir aller sous-sol. A autorisation.}{}{-4}{}{620}{}
+{613}{Je dois aller au sous-sol trouver les pensionnaires.}{}{5}{lf10 1}{630}{}
+
+{620}{Bien. [Il appuie sur un bouton sur le mur] Voilà, il est déverrouillé. Vous pouvez y aller.}{Bien. [Il appuie sur un bouton sur le mur] Voilà, il est déverrouillé. Vous pouvez y aller.}{}{}{}{gf136 1}
+{621}{Merci bien.}{}{5}{}{0}{}
+{622}{M'rci.}{}{-4}{}{0}{}
+
+{630}{Ah oui, il est en effet possible qu'ils s'y trouvent. [Il appuie sur un bouton sur le mur] Voilà, j'ai déverrouillé l'ascenseur. Soyez prudent et revenez me voir si vous avez besoin d'aide.}{Ah oui, il est en effet possible qu'ils s'y trouvent. [Il appuie sur un bouton sur le mur] Voilà, j'ai déverrouillé l'ascenseur. Soyez prudente et revenez me voir si vous avez besoin d'aide.}{}{}{}{gf136 1}
+{631}{Je n'y manquerai pas.}{}{5}{}{0}{}
+{632}{Bien sûr.}{}{5}{}{0}{}
+{633}{Merci bien.}{}{5}{}{0}{}

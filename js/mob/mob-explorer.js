@@ -82,10 +82,11 @@ export async function loadMobFromServer(filename,rowEl,relativePath='') {
   try {
     const resp=await fetch(url);
     if(!resp.ok)throw new Error(`HTTP ${resp.status} fetching ${url}`);
-    const decoded=decodeMobBuffer(await resp.arrayBuffer(),filename);
+    const buffer=await resp.arrayBuffer();
+    const decoded=decodeMobBuffer(buffer,filename);
     await loadDescriptionMes().catch(() => null);   // so the name of a special NPC shows in the field table
     if (requestId !== mobViewerRequestToken) return;
-    const parts = renderMobViewer(decoded);
+    const parts = renderMobViewer(decoded, buffer);
     const { protoSection } = parts;
     resolveMobPrototype(decoded).then(proto => {
       if (requestId !== mobViewerRequestToken) return;

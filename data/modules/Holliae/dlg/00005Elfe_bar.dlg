@@ -1,0 +1,60 @@
+{1}{}{}{}{}{}{}
+{2}{Salutations.}{}{1}{}{4}{}
+
+{4}{Veuillez m'excuser mais je n'ai pas le temps de discutter.}{Veuillez m'excuser mais je n'ai pas le temps de discutter.}{}{1}{}{}
+{5}{Que se passe-t-il ?}{}{5}{lf1 0}{10}{lf1 1}
+{6}{Quoi y avoir ?}{}{-4}{lf1 0}{10}{lf1 1}
+{7}{Je comprends, au revoir.}{}{5}{}{0}{}
+{8}{Ciao !}{}{-4}{}{0}{}
+
+{10}{Un petit problème, mais cela ne vous regarde pas je crois.}{Un petit problème, mais cela ne vous regarde pas je crois.}{}{2}{}{}
+{11}{Peut-être dans ce cas puis-je vous aportez mon aide ?}{}{5}{}{14}{}
+{12}{E:}{}{1}{}{0}{}
+
+{14}{J'accepte, me faudra-til vous payer?}{J'accepte, me faudra-til vous payer?}{}{3}{}{}
+{15}{Je me contente de 20 000 pièces d'or.}{}{5}{}{17}{re-5, qu1001 6}
+{16}{Un peu de bénévolat ne me fera pas de mal.}{}{5}{}{21}{re+10}
+
+{17}{Je ne peux me permettre un tel luxe, adieu.}{Je ne peux me permettre un tel luxe, adieu.}{}{4}{}{}
+{18}{Alors soit, adieu.}{}{5}{}{0}{}
+{19}{Tans pis pour vous: vous allez mourir.}{}{5}{}{0}{co, re-1000}
+
+{21}{Très bien. Il y a trois jours de cela, j'ai perdu un collier inestimable.}{Très bien. Il y a trois jours de cela, j'ai perdu un collier inestimable.}{}{5}{}{}
+{22}{Combien ?}{}{5}{}{60}{}
+{23}{Vous voudriez que je le retrouve je présume.}{}{5}{}{27}{}
+{24}{J'ai changé d'avis: au revoir.}{}{5}{}{0}{qu1002 6}
+{25}{[Vous regardez votre montre pour échaper à la conversation] Ciel, j'ai oublié mon rendez vous chez le dentiste.}{}{5}{}{0}{re-5, qu1002 6}
+
+{27}{Oui, je l'ai perdu aux alentours des docks.}{Oui, je l'ai perdu aux alentours des docks.}{}{6}{}{}
+{28}{J'accepte.}{}{5}{}{33}{qu1002 2}
+{29}{Je refuse catégoriquement.}{}{5}{}{0}{qu1002 6}
+{30}{Peut-être, nous verrons cela.}{}{5}{}{36}{qu1002 1}
+{31}{C'est triste mais je m'en moque éperdument.}{}{5}{}{0}{re-5, qu1002 6}
+
+{33}{Merci, j'ai toute confiance en vous.}{Merci, j'ai toute confiance en vous.}{}{7}{}{}
+{34}{Au revoir cher collègue.}{}{5}{}{0}{re+10, lf0 1, lf3 1}
+
+{36}{Merci quand même.}{Merci quand même.}{}{8}{}{}
+{37}{Au revoir.}{}{5}{}{0}{re+5, lf0 1, lf2 1}
+
+{39}{Je ne souhaite pas vous parlez.}{Je ne souhaite pas vous parlez.}{}{9}{}{}
+{40}{E:}{}{1}{}{0}{}
+{41}{Bien dans ce cas... [Vous retirez votre gant et lui lancez un soufflet]}{}{5}{}{0}{co}
+{42}{Moi te taper.}{}{-4}{}{0}{co}
+
+{44}{Bonjour cher ami.}{Bonjour chère amie.}{}{10}{}{}
+{45}{J'accepte votre offre.}{}{5}{lf2 1, lf3 0}{50}{lf3 1, qu 1002 2}
+{46}{Je refuse votre offre.}{}{5}{lf2 1, lf3 0}{0}{lf3 1, qu1002 6, lf0 0}
+{47}{J'ai votre collier [Vous le lui remettez]}{}{5}{lf3 1, in 3001}{53}{qu1002 4, in3001}
+{48}{E:}{}{1}{}{0}{}
+
+{50}{Merci, j'ai toute confiance en vous.}{Merci, j'ai toute confiance en vous.}{}{7}{}{}
+{51}{Au revoir cher collègue.}{}{5}{}{0}{lf0 1}
+
+{53}{Merci infiniment.}{Merci infiniment madame.}{}{11}{}{}
+{54}{De rien.}{}{5}{}{0}{}
+
+{60}{Inestimable vous dis-je.}{Inestimable vous dis-je.}{}{12}{}{}
+{61}{Ca fait cher ça.}{}{5}{}{0}{re-5, fl63}
+
+{63}{Vous moquez vous de moi ? Allez au diable.}{Vous moquez vous de moi ? Allez au diable.}{}{13}{}{qu1002 6}

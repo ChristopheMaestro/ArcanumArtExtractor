@@ -1,0 +1,2665 @@
+
+//
+// Spell List
+//
+// Defaults:  Casting Effect: Instant
+// Defaults:  No Maintain, No Resist, Range is max visible
+// Defaults:  MinIQ is one of (6, 9, 12, 15, 18) based on spell level
+// Defaults:  Info is Neutral
+// Defaults:  Action AoE's are of type Any
+// Ordering:  IQ: , Cost: , Maintain: , Resist: , Range: , Info:
+//
+// Notes:
+//	Be *CAREFUL* with [End]AoE's and maintained spells, because if you put a
+//	condition on them that can *CHANGE* during the course of play, then you
+//	have to assume that it will.  An example of a bug this could cause is if
+//	you had a spell that was only supposed to target LIVE critters, but the
+//	critter dies...the spell would then become un-cancellable!
+//
+//	It is possible for a spell to be terminated (interrupted, de-maintained,
+//	etc.) before it finishes "starting up". Because of this, you need to make 
+//	sure that you remove the begin eye-candy as well as any maintain eye-candy!
+//
+//	It is not valid to have a maintained spell with no [Begin] section.
+//
+// Commands:
+//	AGoal - anim_goal_knock_down, anim_goal_knockback, anim_goal_floating, anim_goal_follow, anim_goal_animate, anim_goal_destroy_obj
+//	TestNBranch - LessThan, LessThanOrEqual, Equal, GreaterThanOrEqual, GreaterThan
+//	No_Stack, No_Reflect, No_Resist
+//	Cancels_SF, Cancels_EnvSF
+//
+
+
+// College: [Conveyance] ------
+
+
+// 00 -- Disarm
+{1000}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_Self}
+{1001}{Cost: 5, Resist: (stat_dexterity @ 0), Info: aggressive}
+{1004}{AI_Offensive: 1}
+{1005}{[Begin], Type: Damage, DmgType: Dmg_Normal, Dmg: 0, Dmg_Flags: Weap_Dropped}
+{1006}{[Begin], Type: EyeCandy, 2, Add}
+
+
+// 01 -- Unlocking Cantrip
+{1050}{AoE: Tgt_Obj_T_Portal | Tgt_Obj_T_Container}
+{1051}{Cost: 10}
+{1055}{[Begin], AoE: Tgt_Obj_T_Portal, Type: ObjFlag, obj_f_portal_flags, OPF_LOCKED, FLAG_OFF}
+{1056}{[Begin], AoE: Tgt_Obj_T_Container, Type: ObjFlag, obj_f_container_flags, OCOF_LOCKED, FLAG_OFF}
+{1057}{[Begin], Type: EyeCandy, 2, Add}
+
+
+// 02 -- Unseen Force
+{1100}{AoE: Tgt_Obj_No_Inven | Tgt_Obj_No_Self}
+{1101}{Cost: 15, Duration: (18 @ -1), Resist: (stat_constitution @ -5), Info: aggressive}  //Changed by Positiff
+{1104}{AI_Offensive: 10}
+{1105}{[Begin], AoE: Tgt_Obj_No_Self | Tgt_Obj_T_Critter, Type: AGoal, anim_goal_knockback}
+{1106}{[Begin], AoE: Tgt_Obj_No_Self | Tgt_Obj_T_Critter, Type: EyeCandy, 2, Add}
+{1107}{[Begin], AoE: Tgt_Obj_No_Self | Tgt_Obj_T_Critter, Type: Effect, 297, Add, Count: 5}  //Added by Positiff
+{1108}{[Begin], AoE: Tgt_Obj_No_Self | Tgt_Obj_Weight_Below_5, Type: AGoal, anim_goal_knockback}
+{1109}{[Begin], AoE: Tgt_Obj_No_Self | Tgt_Obj_Weight_Below_5, Type: EyeCandy, 2, Add}
+{1110}{[End], AoE: Tgt_Obj_No_Self | Tgt_Obj_T_Critter, Type: Effect, 297, Remove, Count: 5}  //Added by Positiff
+
+
+// 03 -- Spacial Distortion
+{1150}{AoE: Tgt_Self | Tgt_Tile_Empty | Tgt_Tile_Pathable_To}
+{1151}{Cost: 20}  //Changed by Positiff
+{1154}{AI_Flee: 4}
+{1155}{[Begin], AoE: Tgt_Self, Type: EyeCandy, 2, Add}
+{1156}{[Begin], AoE: Tgt_Self, Type: Movement, Move_Location: Target_Tile}
+{1157}{[Begin], AoE: Tgt_Self, Type: Movement, Move_Location: Target_Tile}  //Added by Positiff
+{1158}{[Begin], AoE: Tgt_Self, Type: Movement, Move_Location: Target_Tile}  //Added by Positiff
+{1159}{[Begin], AoE: Tgt_Self, Type: Movement, Move_Location: Target_Tile}  //Added by Positiff
+{1160}{[Begin], AoE: Tgt_Self, Type: Movement, Move_Location: Target_Tile}  //Added by Positiff
+
+
+// 04 -- Teleportation
+{1200}{AoE: Tgt_Self}
+{1201}{Cost: 50, ChargeBeginCost: 0}
+{1205}{[Begin], Type: EyeCandy, 2, Add}
+{1206}{[Begin], Type: Movement, Move_Location: Teleport_Tile}
+
+
+
+// College: [Divination] ------
+
+
+// 05 -- Sense Alignment
+{1250}{AoE: Tgt_Self}
+{1251}{Cost: 1, Maintain: (1 @ 10)}  //Changed by Positiff
+{1253}{No_Stack: 1, Disallowed_SF: OSF_DETECTING_ALIGNMENT}
+{1255}{[Begin], Type: ObjFlag, obj_f_spell_flags, OSF_DETECTING_ALIGNMENT, FLAG_ON}
+{1256}{[End], Type: ObjFlag, obj_f_spell_flags, OSF_DETECTING_ALIGNMENT, FLAG_OFF}
+
+
+// 06 -- See Contents
+{1300}{AoE: Tgt_Obj_T_Container}
+{1301}{Cost: 10}
+{1305}{[Begin], Type: Identify, IF_DISPLAY_ALL}
+
+
+// 07 -- Sense Aura
+{1350}{AoE: Tgt_Obj_No_Self | Tgt_Obj_T_Critter}
+{1351}{Cost: 15}
+{1355}{[Begin], Type: Identify, IF_DISPLAY_ALL}
+
+
+// 08 -- Sense Hidden  //Changed by Positiff
+{1400}{AoE: Tgt_Self}
+{1401}{Cost: 4, Maintain: (4 @ 10)}  //Changed by Positiff
+{1403}{No_Stack: 1, Disallowed_SF: OSF_DETECTING_INVISIBLE}
+{1405}{[Begin], Type: ObjFlag, obj_f_spell_flags, OSF_DETECTING_INVISIBLE, FLAG_ON}
+{1406}{[Begin], Type: ObjFlag, obj_f_spell_flags, OSF_DETECTING_TRAPS, FLAG_ON}
+{1407}{[End], Type: ObjFlag, obj_f_spell_flags, OSF_DETECTING_INVISIBLE, FLAG_OFF}
+{1408}{[End], Type: ObjFlag, obj_f_spell_flags, OSF_DETECTING_TRAPS, FLAG_OFF}
+
+
+// 09 -- Identification
+{1450}{AoE: Tgt_Obj_Inven}
+{1451}{Cost: 30}
+{1455}{[Begin], Type: ObjFlag, obj_f_item_flags, OIF_IDENTIFIED, FLAG_ON}
+{1456}{[Begin], Type: Identify, IF_DISPLAY_ALL}
+
+
+
+// College: [Air] ------
+
+
+// 10 -- Vitality of Air
+{1500}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead, [End]AoE: Tgt_Object}
+{1501}{Cost: 5, Maintain: (1 @ 10), Info: friendly}
+{1503}{No_Stack: 0}
+{1504}{AI_Defensive: (2 @ 0)}
+{1505}{[Begin], Type: Effect, 160, Add, Count: 2, Scaled: 2}  //Changed by Positiff
+{1506}{[Begin], Type: EyeCandy, 2, Add}
+{1507}{[End], Type: Effect, 160, Remove, Count: 2, Scaled: 2}  //Changed by Positiff
+{1508}{[End], Type: EyeCandy, 2, Remove}
+
+
+// 11 -- Wind Walk
+-1550--AoE: Tgt_Self-
+-1551--Cost: 5, Maintain: (1 @ 10)- //, Disabled: 1-
+-1553--Cancels_SF: OSF_FLOATING-
+-1555--[Begin], Type: ObjFlag, obj_f_spell_flags, OSF_FLOATING, FLAG_ON-
+-1556--[Begin], Type: AGoal, anim_goal_floating-
+-1557--[Begin], Type: EyeCandy, 2, Add-
+-1558--[Begin], Type: EyeCandy, 3, Add, Play: Stack-
+-1559--[End], Type: ObjFlag, obj_f_spell_flags, OSF_FLOATING, FLAG_OFF-
+-1560--[End], Type: EyeCandy, 3, Remove-
+-1561--[End], Type: AGoalTerminate, anim_goal_floating-
+-1562--[End], Type: EyeCandy, 2, Add, Play: Reverse-
+// Here we could have another anim_goal to float down to the ground...
+
+
+// 11 -- Poison Vapours
+{1550}{AoE: Tgt_None, Radius: 1, [Begin]AoE: Tgt_Obj_Radius | Tgt_Obj_T_Critter | Tgt_Tile_Radius | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Undead, [Maintain]AoE: Tgt_Obj_Radius | Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Mechanical | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Undead, [End]AoE: Tgt_Summoned, [EndCallback]AoE: Tgt_Summoned}  //Changed by Positiff
+{1551}{Cost: 1, Maintain: (1 @ 1), Resist: (stat_constitution @ 0), Info: aggressive}  //Changed by Positiff
+{1554}{AI_Offensive: 14}
+{1555}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self | Tgt_Non_Party_Critters, Type: Damage, DmgType: Dmg_Poison, Dmg: 3-15, Dmg_Flags: Scaled}  //Changed by Positiff
+{1556}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self | Tgt_Non_Party_Critters, Type: Damage, DmgType: Dmg_Magic, Dmg: 1-5, Dmg_Flags: Scaled}  //Changed by Positiff
+{1557}{[Begin], AoE: Tgt_Tile_Radius, Type: Summon, Proto: 4029}
+{1558}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 2, Add}
+{1559}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 3, Add, Play: Stack | Random_Start}
+{1560}{[Maintain], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self | Tgt_Non_Party_Critters, Type: Damage, DmgType: Dmg_Poison, Dmg: 3-15, Dmg_Flags: Scaled}  //Changed by Positiff
+{1561}{[Maintain], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self | Tgt_Non_Party_Critters, Type: Damage, DmgType: Dmg_Magic, Dmg: 1-5, Dmg_Flags: Scaled}  //Changed by Positiff
+{1562}{[End], Type: EyeCandy, 2, Remove}
+{1563}{[End], Type: EyeCandy, 3, Remove}
+{1564}{[End], Type: EyeCandy, 2, Add, Play: Reverse | End_Callback}
+{1565}{[Callback], Type: ObjFlag, obj_f_flags, OF_DONTDRAW, FLAG_OFF}
+{1566}{[EndCallback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+
+
+// 12 -- Call Winds
+{1600}{AoE: Tgt_Self | Tgt_Cone | Tgt_Obj_No_Self | Tgt_Obj_T_Critter | Tgt_Non_Party_Critters, Radius: 3}  //Changed by Positiff
+{1601}{Cost: 15, Resist: (stat_constitution @ -5), Info: aggressive}
+{1604}{AI_Offensive: 4}
+{1605}{[Begin], AoE: Tgt_Obj_No_Self | Tgt_Obj_Weight_Below_5, Type: AGoal, anim_goal_knockback}
+{1606}{[Begin], AoE: Tgt_Obj_No_Self | Tgt_Obj_T_Critter, Type: AGoal, anim_goal_knock_down}  //Changed by Positiff
+{1607}{[Begin], AoE: Tgt_Obj_No_Self | Tgt_Obj_T_Critter, Type: Damage, DmgType: Dmg_Magic, Dmg: 10-15}  //Added by Positiff
+{1608}{[Begin], AoE: Tgt_Obj_No_Self | Tgt_Obj_T_Critter, AoE_SF: OSF_BODY_OF_AIR, Type: Damage, DmgType: Dmg_Normal, Dmg: 30-45}  //Changed by Positiff
+{1609}{[Begin], AoE: Tgt_Obj_No_Self | Tgt_Obj_T_Critter, Type: EyeCandy, 2, Add}
+
+
+// 13 -- Body of Air
+{1650}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead, [End]AoE: Tgt_Object}
+{1651}{Cost: 20, Maintain: (4 @ 10)}  //Changed by Positiff
+{1653}{Disallowed_TSF: OSF_BODY_OF_AIR | OSF_BODY_OF_EARTH | OSF_BODY_OF_FIRE | OSF_BODY_OF_WATER | OSF_POLYMORPHED | OSF_WATER_WALKING}  //Changed by Positiff
+{1654}{AI_Flee: 3, AI_Defensive: (14 @ 0)}
+{1655}{[Begin], Type: Trait, art_num, 28, Palette: 1}
+//-1656--[Begin], Type: ObjFlag, obj_f_spell_flags, OSF_BODY_OF_AIR, FLAG_ON-  //Changed by Positiff
+{1656}{[Begin], Type: ObjFlag, obj_f_spell_flags, OSF_WATER_WALKING, FLAG_ON}
+{1657}{[Begin], Type: Effect, 51, Add}
+{1658}{[Begin], Type: EyeCandy, 2, Add}
+{1659}{[End], Type: Trait, art_num, -1}
+//-1660--[End], Type: ObjFlag, obj_f_spell_flags, OSF_BODY_OF_AIR, FLAG_OFF-  //Changed by Positiff
+{1660}{[End], Type: ObjFlag, obj_f_spell_flags, OSF_WATER_WALKING, FLAG_OFF}
+{1661}{[End], Type: Effect, 51, Remove}
+{1662}{[End], Type: EyeCandy, 2, Remove}
+{1663}{[End], Type: EyeCandy, 2, Add, Play: Reverse}
+
+
+// 14 -- Call Air Elemental
+{1700}{AoE: Tgt_None, [Begin]AoE: Tgt_Tile_Empty, [End]AoE: Tgt_Summoned, [Callback]AoE: Tgt_Summoned, [EndCallback]AoE: Tgt_Summoned}
+{1701}{Cost: 40, Maintain: (5 @ 10)}  //Changed by Positiff
+{1704}{AI_Summon: 10}
+{1705}{[Begin], AoE: Tgt_Tile_Empty, Type: Summon, Proto: 28310}
+{1706}{[Begin], Apply_AoE: Tgt_Summoned, Type: ObjFlag, obj_f_spell_flags, OSF_MIND_CONTROLLED, FLAG_ON}
+{1707}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 2, Add, Play: Callback}
+{1708}{[End], Type: EyeCandy, 2, Add, Play: Reverse | End_Callback}
+{1709}{[Callback], Type: ObjFlag, obj_f_flags, OF_DONTDRAW, FLAG_OFF}
+{1710}{[EndCallback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+
+
+
+// College: [Earth] ------
+
+
+// 15 -- Strength of Earth
+{1750}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead, [End]AoE: Tgt_Object}
+{1751}{Cost: 5, Maintain: (1 @ 10), Info: friendly}
+{1753}{No_Stack: 0}
+{1754}{AI_Defensive: (2 @ 0)}
+{1755}{[Begin], Type: Effect, 161, Add, Count: 2, Scaled: 2}  //Changed by Positiff
+{1756}{[Begin], Type: EyeCandy, 2, Add}
+{1757}{[End], Type: Effect, 161, Remove, Count: 2, Scaled: 2}  //Changed by Positiff
+{1758}{[End], Type: EyeCandy, 2, Remove}
+
+
+// 16 -- Stone Throw
+{1800}{AoE: Tgt_Object | Tgt_Obj_No_Self}
+{1801}{Cost: 10, Info: aggressive}  //Changed by Positiff
+{1802}{Missile: 0}
+{1804}{AI_Offensive: 3}
+{1805}{[Begin], AoE: Tgt_Object, Type: Damage, DmgType: Dmg_Normal, Dmg: 15-45, Dmg_Flags: Scaled}  //Changed by Positiff
+{1806}{[Begin], AoE: Tgt_Object, Type: EyeCandy, 2, Add}
+
+
+// 17 -- Pass Through Wall  //Made by Positiff
+{1850}{AoE: Tgt_Obj_T_Wall}
+{1851}{Cost: 15, Maintain: (3 @ 10)}
+{1853}{Cancels_SF: OSF_PASSWALLED}
+{1855}{[Begin], Type: ObjFlag, obj_f_spell_flags, OSF_PASSWALLED, FLAG_ON}
+{1856}{[Begin], Type: ObjFlag, obj_f_spell_flags, OSF_STONED, FLAG_ON}
+{1857}{[Begin], Type: EyeCandy, 2, Add}
+{1858}{[End], Type: ObjFlag, obj_f_spell_flags, OSF_PASSWALLED, FLAG_OFF}
+{1859}{[End], Type: ObjFlag, obj_f_spell_flags, OSF_STONED, FLAG_OFF}
+{1860}{[End], Type: EyeCandy, 2, Remove}
+
+
+// 18 -- Body of Stone
+{1900}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead, [End]AoE: Tgt_Object}
+{1901}{Cost: 20, Maintain: (4 @ 10)}  //Changed by Positiff
+{1903}{Disallowed_TSF: OSF_BODY_OF_AIR | OSF_BODY_OF_EARTH | OSF_BODY_OF_FIRE | OSF_BODY_OF_WATER | OSF_POLYMORPHED | OSF_WATER_WALKING}  //Changed by Positiff
+{1904}{AI_Defensive: (13 @ 0)}
+{1905}{[Begin], Type: Trait, art_num, 3, Palette: 1}
+{1906}{[Begin], Type: ObjFlag, obj_f_spell_flags, OSF_BODY_OF_EARTH, FLAG_ON}
+{1907}{[Begin], Type: Effect, 52, Add}
+{1908}{[Begin], Type: EyeCandy, 2, Add}
+{1909}{[End], Type: Trait, art_num, -1}
+{1910}{[End], Type: ObjFlag, obj_f_spell_flags, OSF_BODY_OF_EARTH, FLAG_OFF}
+{1911}{[End], Type: Effect, 52, Remove}
+{1912}{[End], Type: EyeCandy, 2, Remove}
+{1913}{[End], Type: EyeCandy, 2, Add, Play: Reverse}
+
+
+// 19 -- Call Earth Elemental
+{1950}{AoE: Tgt_None, [Begin]AoE: Tgt_Tile_Empty, [End]AoE: Tgt_Summoned, [Callback]AoE: Tgt_Summoned, [EndCallback]AoE: Tgt_Summoned}
+{1951}{Cost: 40, Maintain: (5 @ 10)}  //Changed by Positiff
+{1954}{AI_Summon: 9}
+{1955}{[Begin], AoE: Tgt_Tile_Empty, Type: Summon, Proto: 28311}
+{1956}{[Begin], Apply_AoE: Tgt_Summoned, Type: ObjFlag, obj_f_spell_flags, OSF_MIND_CONTROLLED, FLAG_ON}
+{1957}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 2, Add, Play: Callback}
+{1958}{[End], Type: EyeCandy, 2, Add, Play: Reverse | End_Callback}
+{1959}{[Callback], Type: ObjFlag, obj_f_flags, OF_DONTDRAW, FLAG_OFF}
+{1960}{[EndCallback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+
+
+
+// College: [Fire] ------
+
+
+// 20 -- Agility of Fire
+{2000}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead, [End]AoE: Tgt_Object}
+{2001}{Cost: 5, Maintain: (1 @ 10), Info: friendly}
+{2003}{No_Stack: 0}
+{2004}{AI_Defensive: (2 @ 0)}
+{2005}{[Begin], Type: Effect, 162, Add, Count: 2, Scaled: 2}  //Changed by Positiff
+{2006}{[Begin], Type: EyeCandy, 2, Add}
+{2007}{[End], Type: Effect, 162, Remove, Count: 2, Scaled: 2}  //Changed by Positiff
+{2008}{[End], Type: EyeCandy, 2, Remove}
+
+
+// 21 -- Wall of Fire
+{2050}{AoE: Tgt_None, Radius: 2, [Begin]AoE: Tgt_Tile | Tgt_Tile_Radius_Wall, [End]AoE: Tgt_Summoned, [Callback]AoE: Tgt_Summoned, [EndCallback]AoE: Tgt_Summoned}
+{2051}{Cost: 1, Maintain: (1 @ 1), Resist: (stat_constitution @ -5)}  //Changed by Positiff
+{2055}{[Begin], AoE: Tgt_Tile_Empty_Immobiles, Type: Summon, Proto: 4031}
+{2056}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 2, Add}
+{2057}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 3, Add, Play: Stack | Random_Start | Fire_Dmg}
+{2058}{[End], Type: EyeCandy, 2, Remove}
+{2059}{[End], Type: EyeCandy, 3, Remove}
+{2060}{[End], Type: EyeCandy, 2, Add, Play: Reverse | End_Callback}
+{2061}{[Callback], Type: ObjFlag, obj_f_flags, OF_DONTDRAW, FLAG_OFF}
+{2062}{[EndCallback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+
+
+// 22 -- Fireflash
+{2100}{AoE: Tgt_None, [Begin]AoE: Tgt_Tile | Tgt_Obj_Radius | Tgt_Obj_No_Self | Tgt_Obj_No_T_Wall | Tgt_Non_Party_Critters, [Begin]Radius: 2, [Callback]AoE: Tgt_Summoned}
+{2101}{Cost: 15, Resist: (stat_constitution @ -5), Info: aggressive}
+{2102}{Missile: 0}
+{2104}{AI_Offensive: 13}
+{2105}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Invulnerable | Tgt_Non_Party_Critters, Type: Damage, DmgType: Dmg_Fire, Dmg: 15-45, Dmg_Flags: Scaled}
+{2106}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Invulnerable | Tgt_Non_Party_Critters, Type: EyeCandy, 2, Add}
+{2107}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Invulnerable | Tgt_Non_Party_Critters, Type: EyeCandy, 3, Add, Play: Stack}
+{2108}{[Begin], AoE: Tgt_Tile_Empty, Type: Summon, Proto: 4050}
+{2109}{[Begin], AoE: Tgt_Tile_Empty, Apply_AoE: Tgt_Summoned, Type: EyeCandy, 2, Add, Play: Callback}
+{2110}{[Callback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+
+
+// 23 -- Body of Fire
+{2150}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead, [End]AoE: Tgt_Object}
+{2151}{Cost: 20, Maintain: (4 @ 10)}  //Changed by Positiff
+{2153}{Disallowed_TSF: OSF_BODY_OF_AIR | OSF_BODY_OF_EARTH | OSF_BODY_OF_FIRE | OSF_BODY_OF_WATER | OSF_POLYMORPHED | OSF_WATER_WALKING}  //Changed by Positiff
+{2154}{AI_Defensive: (2 @ 0)}
+{2155}{[Begin], Type: Trait, art_num, 26, Palette: 1}
+{2156}{[Begin], Type: Effect, 53, Add}  //Changed by Positiff
+{2157}{[Begin], Type: ObjFlag, obj_f_spell_flags, OSF_BODY_OF_FIRE, FLAG_ON}
+{2158}{[Begin], Type: EyeCandy, 2, Add}
+{2159}{[Begin], Type: EyeCandy, 3, Add}  //Ultimate Nightmare Mod
+{2160}{[End], Type: EyeCandy, 3, Remove}  //Ultimate Nightmare Mod
+{2161}{[End], Type: Trait, art_num, -1}
+{2162}{[End], Type: Effect, 53, Remove}  //Changed by Positiff
+{2163}{[End], Type: ObjFlag, obj_f_spell_flags, OSF_BODY_OF_FIRE, FLAG_OFF}
+{2164}{[End], Type: EyeCandy, 2, Remove}
+{2165}{[End], Type: EyeCandy, 2, Add, Play: Reverse}
+
+
+// 24 -- Call Fire Elemental
+{2200}{AoE: Tgt_None, [Begin]AoE: Tgt_Tile_Empty, [End]AoE: Tgt_Summoned, [Callback]AoE: Tgt_Summoned, [EndCallback]AoE: Tgt_Summoned}
+{2201}{Cost: 40, Maintain: (5 @ 10)}  //Changed by Positiff
+{2204}{AI_Summon: 8}
+{2205}{[Begin], AoE: Tgt_Tile_Empty, Type: Summon, Proto: 28312}
+{2206}{[Begin], Apply_AoE: Tgt_Summoned, Type: ObjFlag, obj_f_spell_flags, OSF_MIND_CONTROLLED, FLAG_ON}
+{2207}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 2, Add, Play: Callback}
+{2208}{[End], Type: EyeCandy, 2, Add, Play: Reverse | End_Callback}
+{2209}{[Callback], Type: ObjFlag, obj_f_flags, OF_DONTDRAW, FLAG_OFF}
+{2210}{[EndCallback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+
+
+
+// College: [Water] ------
+
+
+// 25 -- Purity of Water
+{2250}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead, [End]AoE: Tgt_Object}
+{2251}{Cost: 5, Maintain: (1 @ 10), Info: friendly}
+{2253}{No_Stack: 0}
+{2254}{AI_Defensive: (2 @ 0)}
+{2255}{[Begin], Type: Effect, 163, Add, Count: 2, Scaled: 2}  //Changed by Positiff
+{2256}{[Begin], Type: EyeCandy, 2, Add}
+{2257}{[End], Type: Effect, 163, Remove, Count: 2, Scaled: 2}  //Changed by Positiff
+{2258}{[End], Type: EyeCandy, 2, Remove}
+
+
+// 26 -- Call Fog
+//-2300--AoE: Tgt_None, [Begin]AoE: Tgt_Tile, [End]AoE: Tgt_Summoned, [Callback]AoE: Tgt_Summoned, [EndCallback]AoE: Tgt_Summoned-
+{2300}{AoE: Tgt_None, Radius: 1, [Begin]AoE: Tgt_Tile | Tgt_Tile_Radius, [End]AoE: Tgt_Summoned, [Callback]AoE: Tgt_Summoned, [EndCallback]AoE: Tgt_Summoned}
+{2301}{Cost: 10, Maintain: (1 @ 10)}
+{2304}{AI_Flee: 1}
+{2305}{[Begin], AoE: Tgt_Tile_Empty, Type: Summon, Proto: 4033}
+{2306}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 2, Add}
+{2307}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 3, Add, Play: Stack | Random_Start}
+{2308}{[End], Type: EyeCandy, 2, Remove}
+{2309}{[End], Type: EyeCandy, 3, Remove}
+{2310}{[End], Type: EyeCandy, 2, Add, Play: Reverse | End_Callback}
+{2311}{[Callback], Type: ObjFlag, obj_f_flags, OF_DONTDRAW, FLAG_OFF}
+{2312}{[EndCallback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+
+
+// 27 -- Squall of Ice
+{2350}{AoE: Tgt_None, Radius: 1, [Begin]AoE: Tgt_Obj_Radius | Tgt_Obj_T_Critter | Tgt_Tile_Radius, [Maintain]AoE: Tgt_Obj_Radius | Tgt_Obj_T_Critter, [End]AoE: Tgt_Summoned, [EndCallback]AoE: Tgt_Summoned}  //Changed by Positiff
+{2351}{Cost: 1, Maintain: (1 @ 1), Resist: (stat_constitution @ -5)}  //Changed by Positiff
+{2354}{AI_Offensive: 11}
+{2355}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self | Tgt_Non_Party_Critters, Type: Damage, DmgType: Dmg_Normal, Dmg: 2-8, Dmg_Flags: Scaled}  //Changed by Positiff
+{2356}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self | Tgt_Non_Party_Critters, Type: Damage, DmgType: Dmg_Magic, Dmg: 2-8, Dmg_Flags: Scaled}  //Added by Positiff
+{2357}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self | Tgt_Non_Party_Critters, AoE_SF: OSF_BODY_OF_FIRE, Type: Damage, DmgType: Dmg_Normal, Dmg: 2-8, Dmg_Flags: Scaled}  //Added by Positiff
+{2358}{[Begin], AoE: Tgt_Tile_Radius, Type: Summon, Proto: 4034}
+{2359}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 2, Add}
+{2360}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 3, Add, Play: Stack | Random_Start}  //Changed by Positiff
+{2361}{[Maintain], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self | Tgt_Non_Party_Critters, Type: Damage, DmgType: Dmg_Normal, Dmg: 2-8, Dmg_Flags: Scaled}  //Changed by Positiff
+{2362}{[Maintain], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self | Tgt_Non_Party_Critters, Type: Damage, DmgType: Dmg_Magic, Dmg: 2-8, Dmg_Flags: Scaled}  //Added by Positiff
+{2363}{[Maintain], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self | Tgt_Non_Party_Critters, AoE_SF: OSF_BODY_OF_FIRE, Type: Damage, DmgType: Dmg_Normal, Dmg: 2-8, Dmg_Flags: Scaled}  //Added by Positiff
+{2364}{[End], Type: EyeCandy, 2, Remove}
+{2365}{[End], Type: EyeCandy, 3, Remove}
+{2366}{[End], Type: EyeCandy, 2, Add, Play: Reverse | End_Callback}
+{2367}{[Callback], Type: ObjFlag, obj_f_flags, OF_DONTDRAW, FLAG_OFF}
+{2368}{[EndCallback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+
+
+// 28 -- Body of Water
+{2400}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead, [End]AoE: Tgt_Object}
+{2401}{Cost: 20, Maintain: (4 @ 10)}  //Changed by Positiff
+{2403}{Disallowed_TSF: OSF_BODY_OF_AIR | OSF_BODY_OF_EARTH | OSF_BODY_OF_FIRE | OSF_BODY_OF_WATER | OSF_POLYMORPHED | OSF_WATER_WALKING}  //Changed by Positiff
+{2404}{AI_Defensive: (11 @ 0)}
+{2405}{[Begin], Type: Trait, art_num, 27, Palette: 1}
+{2406}{[Begin], Type: Effect, 54, Add}  //Changed by Positiff
+{2407}{[Begin], Type: ObjFlag, obj_f_spell_flags, OSF_BODY_OF_WATER, FLAG_ON}
+{2408}{[Begin], Type: ObjFlag, obj_f_spell_flags, OSF_WATER_WALKING, FLAG_ON}
+{2409}{[Begin], Type: EyeCandy, 2, Add}
+{2410}{[End], Type: Trait, art_num, -1}
+{2411}{[End], Type: Effect, 54, Remove}  //Changed by Positiff
+{2412}{[End], Type: ObjFlag, obj_f_spell_flags, OSF_BODY_OF_WATER, FLAG_OFF}
+{2413}{[End], Type: ObjFlag, obj_f_spell_flags, OSF_WATER_WALKING, FLAG_OFF}
+{2414}{[End], Type: EyeCandy, 2, Remove}
+{2415}{[End], Type: EyeCandy, 2, Add, Play: Reverse}
+
+
+// 29 -- Call Water Elemental
+{2450}{AoE: Tgt_None, [Begin]AoE: Tgt_Tile_Empty, [End]AoE: Tgt_Summoned, [Callback]AoE: Tgt_Summoned, [EndCallback]AoE: Tgt_Summoned}
+{2451}{Cost: 40, Maintain: (5 @ 10)}  //Changed by Positiff
+{2454}{AI_Summon: 7}
+{2455}{[Begin], AoE: Tgt_Tile_Empty, Type: Summon, Proto: 28313}
+{2456}{[Begin], Apply_AoE: Tgt_Summoned, Type: ObjFlag, obj_f_spell_flags, OSF_MIND_CONTROLLED, FLAG_ON}
+{2457}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 2, Add, Play: Callback}
+{2458}{[End], Type: EyeCandy, 2, Add, Play: Reverse | End_Callback}
+{2459}{[Callback], Type: ObjFlag, obj_f_flags, OF_DONTDRAW, FLAG_OFF}
+{2460}{[EndCallback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+
+
+
+// College: [Force] ------
+
+
+// 30 -- Energy Shield
+{2500}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead, [End]AoE: Tgt_Object}
+{2501}{Cost: 6, Maintain: (1 @ 8), Info: friendly}  //Changed by Positiff
+{2503}{No_Stack: 1}
+{2504}{AI_Defensive: (2 @ 0)}
+{2505}{[Begin], Type: Effect, 62, Add, Count:  3, Scaled: 2}  //Changed by Positiff
+{2506}{[Begin], Type: Effect, 63, Add, Count: 12, Scaled: 8}  //Changed by Positiff
+{2507}{[Begin], Type: EyeCandy, 2, Add}
+{2508}{[Begin], Type: EyeCandy, 3, Add, Play: Stack}
+{2509}{[Begin], Type: ObjFlag, obj_f_spell_flags, OSF_SHIELDED, FLAG_ON}
+{2510}{[End], Type: Effect, 62, Remove, Count:  3, Scaled: 2}  //Changed by Positiff
+{2511}{[End], Type: Effect, 63, Remove, Count: 12, Scaled: 8}  //Changed by Positiff
+{2512}{[End], Type: EyeCandy, 2, Remove}
+{2513}{[End], Type: EyeCandy, 3, Remove}
+{2514}{[End], Type: EyeCandy, 2, Add, Play: Reverse}
+{2515}{[End], Type: ObjFlag, obj_f_spell_flags, OSF_SHIELDED, FLAG_OFF}
+
+
+// 31 -- Jolt
+{2550}{AoE: Tgt_Obj_Radius | Tgt_Self | Tgt_Obj_No_Self | Tgt_Obj_T_Critter | Tgt_Non_Party_Critters, Radius:1}
+{2551}{Cost: 10, Resist: (stat_constitution @ -10), Info: aggressive}
+{2554}{AI_Offensive: 6}
+{2555}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self, Type: Damage, DmgType: Dmg_Electrical, Dmg: 5-30, Dmg_Flags: Scaled}  //Changed by Positiff
+{2556}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self, Type: EyeCandy, 2, Add}
+{2557}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self, Type: EyeCandy, 3, Add, Play: Stack}
+
+
+// 32 -- Wall of Force
+{2600}{AoE: Tgt_None, Radius: 2, [Begin]AoE: Tgt_Tile_Empty | Tgt_Tile_Radius_Wall, [End]AoE: Tgt_Summoned, [Callback]AoE: Tgt_Summoned, [EndCallback]AoE: Tgt_Summoned}
+{2601}{Cost: 10, Maintain: (1 @ 5)}  //Changed by Positiff
+{2605}{[Begin], AoE: Tgt_Tile_Empty, Type: Summon, Proto: 4030}
+{2606}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 2, Add}
+{2607}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 3, Add, Play: Stack | Random_Start}
+{2608}{[End], Type: EyeCandy, 2, Remove}
+{2609}{[End], Type: EyeCandy, 3, Remove}
+{2610}{[End], Type: EyeCandy, 2, Add, Play: Reverse | End_Callback}
+{2611}{[Callback], Type: ObjFlag, obj_f_flags, OF_DONTDRAW, FLAG_OFF}
+{2612}{[EndCallback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+
+
+// 33 -- Bolt of Lightning
+{2650}{AoE: Tgt_Object | Tgt_Obj_No_Self | Tgt_Obj_No_ST_Critter_Dead}
+{2651}{Cost: 25, Resist: (stat_constitution @ -5), Info: aggressive}
+{2652}{Missile: 0}
+{2654}{AI_Offensive: 15}
+{2655}{[Begin], Type: Damage, DmgType: Dmg_Electrical, Dmg: 25-75, Dmg_Flags: Scaled}  //Changed by Positiff
+{2656}{[Begin], Type: EyeCandy, 2, Add}
+{2657}{[Begin], Type: EyeCandy, 3, Add, Play: Stack}
+
+
+// 34 -- Disintegrate (Fixed by gamer_777)
+{2700}{AoE: Tgt_Object | Tgt_Obj_No_Self | Tgt_Obj_No_T_PC | Tgt_Obj_No_T_Wall | Tgt_Obj_No_Invulnerable}
+{2701}{Cost: 50, Resist: (stat_constitution @ -5), Info: aggressive}
+{2703}{Missile: 0}
+{2704}{AI_Offensive: 20}
+{2705}{[Begin], Type: Damage, Dmg_Flags: Full | Death}
+{2706}{[Begin], Type: Damage, Dmg_Flags: Full | Death}
+{2707}{[Begin], Type: Damage, Dmg_Flags: Full | Death}
+{2708}{[Begin], Type: Damage, Dmg_Flags: Full | Death}
+{2709}{[Begin], AoE: Tgt_Obj_T_Portal | Tgt_Obj_T_Container, Type: Damage, DmgType: Dmg_Electrical, Dmg: 30000-30000}
+{2710}{[Begin], AoE: Tgt_Obj_T_Portal | Tgt_Obj_T_Container | Tgt_Obj_T_Critter | Tgt_Obj_ST_Critter_Dead, Type: EyeCandy, 2, Add, Play: Callback | Destroy}
+{2711}{[Begin], AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead, Type: EyeCandy, 3, Add}
+{2712}{[Callback], AoE: Tgt_Obj_T_Portal | Tgt_Obj_T_Container | Tgt_Obj_T_Critter | Tgt_Obj_ST_Critter_Dead, Type: ObjFlag, obj_f_flags, OF_DONTDRAW, FLAG_ON}
+
+
+
+// College: [Mental] ------
+
+
+// 35 -- Charm
+{2750}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_No_T_PC | Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Animal | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Undead | Tgt_Obj_No_ST_Critter_Mechanical | Tgt_Obj_No_Self, [End]AoE: Tgt_Object}
+{2751}{Cost: 5, Maintain: (1 @ 10), Resist: (stat_willpower @ -5)}
+{2753}{No_Stack: 1, Cancels_SF: OSF_CHARMED, Disallowed_TSF: OSF_CHARMED}
+{2755}{[Begin], Type: ObjFlag, obj_f_spell_flags, OSF_CHARMED, FLAG_ON}
+{2756}{[Begin], Type: EyeCandy, 2, Add}
+{2757}{[End], Type: ObjFlag, obj_f_spell_flags, OSF_CHARMED, FLAG_OFF}
+{2758}{[End], Type: EyeCandy, 2, Add, Play: Reverse}
+
+
+// 36 -- Stun
+{2800}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_Self | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical, [End]AoE: Tgt_Object}
+{2801}{Cost: 10, Resist: (stat_willpower @ -5), Info: aggressive}
+{2804}{AI_Offensive: 7}
+{2805}{[Begin], Type: EyeCandy, 2, Add}
+{2806}{[End], Type: Damage, Dmg_Flags: Stunned}
+
+
+// 37 -- Drain Will
+{2850}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Animal | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical | Tgt_Obj_No_Self, [End]AoE: Tgt_Object}
+{2851}{Cost: 15, Maintain: (3 @ 10), Resist: (stat_willpower @ -5), Info: aggressive}  //Changed by Positiff
+{2854}{AI_Offensive: 10}
+{2855}{[Begin], Type: Effect, 59, Add}
+{2856}{[Begin], Type: EyeCandy, 2, Add}
+{2857}{[End], Type: Effect, 59, Remove}
+
+
+// 38 -- Nightmare
+{2900}{AoE: Tgt_Obj_Radius | Tgt_Self | Tgt_Obj_No_Self | Tgt_Non_Party_Critters | Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Undead | Tgt_Obj_No_ST_Critter_Mechanical | Tgt_Obj_No_Self, Radius:5}
+{2901}{Cost: 20, Resist: (stat_willpower @ -5), Info: aggressive}
+{2904}{AI_Offensive: 16}
+{2905}{[Begin], Type: EyeCandy, 2, Add}
+{2906}{[Begin], Type: ObjFlag, obj_f_critter_flags, OCF_FLEEING, FLAG_ON}
+
+
+// 39 -- Dominate Will
+{2950}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_No_T_PC | Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Animal | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Undead | Tgt_Obj_No_ST_Critter_Mechanical | Tgt_Obj_No_Self, [End]AoE: Tgt_Object}
+{2951}{Cost: 25, Maintain: (6 @ 10), Resist: (stat_willpower @ -5), Info: friendly}  //Changed by Positiff
+{2953}{No_Stack: 0, Disallowed_TSF: OSF_MIND_CONTROLLED}
+{2954}{AI_Offensive: 19}
+{2955}{[Begin], Type: ObjFlag, obj_f_spell_flags, OSF_MIND_CONTROLLED, FLAG_ON}
+{2956}{[Begin], Type: EyeCandy, 2, Add}
+{2957}{[End], Type: ObjFlag, obj_f_spell_flags, OSF_MIND_CONTROLLED, FLAG_OFF}
+// Note: Could make maintain cost affected by WP or level (or etc.) of target?
+
+
+
+// College: [Meta] ------
+
+
+// 40 -- Resist Magic
+{3000}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead, [End]AoE: Tgt_Object}
+{3001}{Cost: 5, Maintain: (1 @ 8)}  //Changed by Positiff
+{3003}{No_Stack: 1}
+{3004}{AI_Defensive: (3 @ 0)}
+{3005}{[Begin], Type: Effect, 56, Add, Count: 3, Scaled: 2}  //Changed by Positiff
+{3006}{[Begin], Type: EyeCandy, 2, Add}
+{3007}{[Begin], Type: EyeCandy, 3, Add, Play: Stack}
+{3008}{[End], Type: Effect, 56, Remove, Count: 3, Scaled: 2}  //Changed by Positiff
+{3009}{[End], Type: EyeCandy, 2, Remove}
+{3010}{[End], Type: EyeCandy, 3, Remove}
+{3011}{[End], Type: EyeCandy, 2, Add, Play: Reverse}
+
+
+// 41 -- Disperse Magic
+{3050}{AoE: Tgt_Object}
+{3051}{Cost: 10}
+{3054}{AI_Defensive: (6 @ 1)}
+{3055}{[Begin], Type: EyeCandy, 2, Add}  //Must be in this order in case was cast on a summoned critter
+{3056}{[Begin], Type: Dispel}
+
+
+// 42 -- Dweomer Shield
+{3100}{AoE: Tgt_Self}  //Changed by Positiff
+{3101}{Cost: 15, Maintain: (4 @ 10)}  //Changed by Positiff
+{3103}{No_Stack: 1, Disallowed_TSF: OSF_ENTANGLED | OSF_DETECTING_MAGIC, Disallowed_TCF: OCF_PARALYZED}  //Arcanum 1.5
+//-3104--AI_Defensive: (8 @ 1)-  //Disabled because causes problems...
+{3105}{[Begin], Type: Dispel}
+{3106}{[Begin], Type: ObjFlag, obj_f_spell_flags, OSF_ANTI_MAGIC_SHELL, FLAG_ON}
+{3107}{[Begin], Type: EyeCandy, 2, Add}
+{3108}{[Begin], Type: EyeCandy, 3, Add, Play: Stack}
+{3109}{[End], Type: ObjFlag, obj_f_spell_flags, OSF_ANTI_MAGIC_SHELL, FLAG_OFF}
+{3110}{[End], Type: EyeCandy, 2, Remove}
+{3111}{[End], Type: EyeCandy, 3, Remove}
+{3112}{[End], Type: EyeCandy, 2, Add, Play: Reverse}
+
+
+// 43 -- Bonds of Magick
+{3150}{AoE: Tgt_Object | Tgt_Obj_No_Self | Tgt_Obj_T_Critter}
+{3151}{Cost: 20, Maintain: (4 @ 10), Info: friendly}  //Changed by Positiff
+{3153}{No_Stack: 1}
+{3154}{AI_Defensive: (10 @ 1)}
+{3155}{[Begin], Type: ObjFlag, obj_f_spell_flags, OSF_BONDS_OF_MAGIC, FLAG_ON}
+{3156}{[Begin], Type: EyeCandy, 2, Add}
+{3157}{[Begin], Type: EyeCandy, 3, Add, Play: Stack}
+{3158}{[End], Type: ObjFlag, obj_f_spell_flags, OSF_BONDS_OF_MAGIC, FLAG_OFF}
+{3159}{[End], Type: EyeCandy, 2, Remove}
+{3160}{[End], Type: EyeCandy, 3, Remove}
+{3161}{[End], Type: EyeCandy, 2, Add, Play: Reverse}
+
+
+// 44 -- Reflection Shield
+{3200}{AoE: Tgt_Object}
+{3201}{Cost: 30, Maintain: (5 @ 10), Info: friendly}
+{3203}{No_Stack: 1, Disallowed_TSF: OSF_ENTANGLED | OSF_DETECTING_MAGIC, Disallowed_TCF: OCF_PARALYZED}  //Arcanum 1.5
+{3204}{AI_Defensive: (15 @ 0)}
+{3205}{[Begin], Type: ObjFlag, obj_f_spell_flags, OSF_FULL_REFLECTION, FLAG_ON}
+{3206}{[Begin], Type: EyeCandy, 2, Add}
+{3207}{[Begin], Type: EyeCandy, 3, Add, Play: Stack}
+{3208}{[End], Type: ObjFlag, obj_f_spell_flags, OSF_FULL_REFLECTION, FLAG_OFF}
+{3209}{[End], Type: EyeCandy, 2, Remove}
+{3210}{[End], Type: EyeCandy, 3, Remove}
+{3211}{[End], Type: EyeCandy, 2, Add, Play: Reverse}
+
+
+
+// College: [Morph] ------
+
+
+// 45 -- Hardened Hands
+{3250}{AoE: Tgt_Obj_T_Critter}
+{3251}{Cost: 5, Maintain: (1 @ 10), Info: friendly}
+{3253}{No_Stack: 1}
+{3254}{AI_Defensive: (2 @ 0)}
+{3255}{[Begin], Type: ObjFlag, obj_f_spell_flags, OSF_HARDENED_HANDS, FLAG_ON}
+{3256}{[Begin], Type: EyeCandy, 2, Add}
+{3257}{[Begin], Type: EyeCandy, 3, Add, Play: Stack}
+{3258}{[End], Type: ObjFlag, obj_f_spell_flags, OSF_HARDENED_HANDS, FLAG_OFF}
+{3259}{[End], Type: EyeCandy, 2, Remove}
+{3260}{[End], Type: EyeCandy, 3, Remove}
+{3261}{[End], Type: EyeCandy, 2, Add, Play: Reverse}
+
+
+// 46 -- Weaken
+{3300}{AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_Self}
+{3301}{Cost: 10, Maintain: (3 @ 10), Resist: (stat_constitution @ -5), Info: aggressive}  //Changed by Positiff
+{3303}{No_Stack: 1}
+{3304}{AI_Offensive: 1}
+{3305}{[Begin], Type: ObjFlag, obj_f_spell_flags, OSF_DETECTING_MAGIC, FLAG_ON}  //Arcanum 1.5
+{3306}{[Begin], Type: Effect, 154, Add, Count: 20, Scaled: 15}  //Changed by Positiff
+{3307}{[Begin], Type: Effect, 155, Add, Count:  3, Scaled:  2}  //Changed by Positiff
+{3308}{[Begin], Type: EyeCandy, 2, Add}
+{3309}{[Begin], Type: EyeCandy, 3, Add, Play: Stack}
+{3310}{[End], Type: Effect, 154, Remove, Count: 20, Scaled: 15}  //Changed by Positiff
+{3311}{[End], Type: Effect, 155, Remove, Count:  3, Scaled:  2}  //Changed by Positiff
+{3312}{[End], Type: ObjFlag, obj_f_spell_flags, OSF_DETECTING_MAGIC, FLAG_OFF}  //Arcanum 1.5
+{3313}{[End], Type: EyeCandy, 2, Remove}
+{3314}{[End], Type: EyeCandy, 3, Remove}
+
+
+// 47 -- Flesh to Stone
+{3350}{AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Mechanical | Tgt_Obj_T_Portal | Tgt_Obj_M_Stone | Tgt_Obj_No_Self}
+{3351}{Cost: 15, Duration: (10 @ -1), Resist: (stat_constitution @ -5), Info: aggressive}  //Changed by Positiff
+{3354}{AI_Offensive: 9}
+{3355}{[Begin], AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_M_Stone, Type: EyeCandy, 2, Add}
+{3356}{[Begin], AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_M_Stone, Type: ObjFlag, obj_f_spell_flags, OSF_STONED, FLAG_ON}
+{3357}{[Begin], AoE: Tgt_Obj_T_Portal | Tgt_Obj_M_Stone, Type: EyeCandy, 3, Remove}
+{3358}{[Begin], AoE: Tgt_Obj_T_Portal | Tgt_Obj_M_Stone, AoE_SF: OSF_STONED, Type: ObjFlag, obj_f_spell_flags, OSF_STONED, FLAG_OFF}
+{3359}{[End], AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_M_Stone, Type: EyeCandy, 2, Remove}
+{3360}{[End], AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_M_Stone, Type: ObjFlag, obj_f_spell_flags, OSF_STONED, FLAG_OFF}
+{3361}{[End], AoE: Tgt_Obj_T_Portal | Tgt_Obj_M_Stone, Type: EyeCandy, 3, Remove}
+{3362}{[End], AoE: Tgt_Obj_T_Portal | Tgt_Obj_M_Stone, AoE_SF: OSF_STONED, Type: ObjFlag, obj_f_spell_flags, OSF_STONED, FLAG_ON}  //AoE_NO_SF
+
+
+// 48 -- Shrink
+{3400}{AoE: Tgt_Obj_T_Critter}
+{3401}{Cost: 20, Maintain: (4 @ 10), Resist: (stat_constitution @ -5), Info: friendly}  //Changed by Positiff
+{3403}{Cancels_SF: OSF_SHRUNK}
+{3404}{AI_Offensive: 1}
+{3405}{[Begin], Type: ObjFlag, obj_f_spell_flags, OSF_SHRUNK, FLAG_ON}
+{3406}{[Begin], Type: Effect, 60, Add}
+{3407}{[Begin], Type: EyeCandy, 2, Add}
+{3408}{[End], Type: ObjFlag, obj_f_spell_flags, OSF_SHRUNK, FLAG_OFF}
+{3409}{[End], Type: Effect, 60, Remove}
+{3410}{[End], Type: EyeCandy, 2, Remove}
+{3411}{[End], Type: EyeCandy, 2, Add, Play: Reverse}
+
+
+// 49 -- Polymorph  //Made by gamer_777, Changed by Positiff
+{3450}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical, [End]AoE: Tgt_Object}
+{3451}{Cost: 30, Maintain: (6 @ 10), Resist: (stat_constitution @ -5), Info: friendly}
+//-3453--Cancels_SF: OSF_BODY_OF_AIR | OSF_BODY_OF_EARTH | OSF_BODY_OF_FIRE | OSF_BODY_OF_WATER | OSF_POLYMORPHED-
+{3453}{No_Stack: 1, Disallowed_TSF: OSF_POLYMORPHED | OSF_BODY_OF_AIR | OSF_BODY_OF_EARTH | OSF_BODY_OF_FIRE | OSF_BODY_OF_WATER | OSF_STONED}
+{3454}{AI_Offensive: 18}
+{3455}{[Begin], AoE: Tgt_Obj_No_Self | Tgt_Non_Party_Critters, Type: ObjFlag, obj_f_spell_flags, OSF_POLYMORPHED, FLAG_ON}
+{3456}{[Begin], AoE: Tgt_Object | Tgt_Party_Critter, Type: ObjFlag, obj_f_spell_flags, OSF_POLYMORPHED, FLAG_ON}
+{3457}{[Begin], Type: EyeCandy, 2, Add}
+{3458}{[Begin], AoE: Tgt_Obj_No_Self | Tgt_Non_Party_Critters, Type: Trait, art_num, 20}  //Sheep
+{3459}{[Begin], AoE: Tgt_Obj_No_Self | Tgt_Non_Party_Critters, Type: Effect, 156, Add}
+{3460}{[Begin], AoE: Tgt_Object | Tgt_Party_Critter, Type: Trait, art_num, 31}  //Werewolf
+{3461}{[Begin], AoE: Tgt_Object | Tgt_Party_Critter, Type: Effect, 157, Add}
+{3462}{[End], AoE: Tgt_Obj_No_Self | Tgt_Non_Party_Critters, Type: ObjFlag, obj_f_spell_flags, OSF_POLYMORPHED, FLAG_OFF}
+{3463}{[End], AoE: Tgt_Obj_No_Self | Tgt_Non_Party_Critters, Type: Trait, art_num, -1}
+{3464}{[End], AoE: Tgt_Obj_No_Self | Tgt_Non_Party_Critters, Type: Effect, 156, Remove}
+{3465}{[End], AoE: Tgt_Object | Tgt_Party_Critter, Type: ObjFlag, obj_f_spell_flags, OSF_POLYMORPHED, FLAG_OFF}
+{3466}{[End], AoE: Tgt_Object | Tgt_Party_Critter, Type: Trait, art_num, -1}
+{3467}{[End], AoE: Tgt_Object | Tgt_Party_Critter, Type: Effect, 157, Remove}
+
+
+
+// College: [Nature] ------
+
+
+// 50 -- Charm Beast
+{3500}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_Radius | Tgt_Self | Tgt_Obj_No_Self | Tgt_Obj_T_Critter | Tgt_Obj_ST_Critter_Animal | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Undead | Tgt_Obj_No_ST_Critter_Mechanical, [Begin]Radius: 6}
+{3501}{Cost: 4, Resist: (stat_willpower @ -5)}  //Changed by Positiff
+//-3503--Cancels_SF: OSF_CHARMED-
+{3505}{[Begin], AoE: Tgt_Obj_Radius, Type: ObjFlag, obj_f_spell_flags, OSF_CHARMED, FLAG_ON}
+{3506}{[Begin], AoE: Tgt_Obj_Radius, Type: EyeCandy, 2, Add}
+
+
+// 51 -- Entangle
+{3550}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_Self, [End]AoE: Tgt_Object}
+{3551}{Cost: 5, Maintain: (1 @ 5), DurationTriggerCount: 2, Resist: (stat_strength @ -1)}  //Changed by Positiff
+{3553}{Disallowed_TSF: OSF_ENTANGLED}
+{3554}{AI_Defensive: (4 @ 1)}
+{3555}{[Begin], Type: ObjFlag, obj_f_spell_flags, OSF_ENTANGLED, FLAG_ON}
+{3556}{[Begin], Type: EyeCandy, 2, Add}
+{3557}{[Begin], Type: EyeCandy, 3, Add, Play: Stack}
+{3558}{[Begin], Type: Effect, 61, Add}  //Changed by Positiff
+{3559}{[End], Type: ObjFlag, obj_f_spell_flags, OSF_ENTANGLED, FLAG_OFF}
+{3560}{[End], Type: EyeCandy, 2, Remove}
+{3561}{[End], Type: EyeCandy, 3, Remove}
+{3562}{[End], Type: EyeCandy, 2, Add, Play: Reverse}
+{3563}{[End], Type: Effect, 61, Remove}  //Changed by Positiff
+
+
+// 52 -- Control Beast
+{3600}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_ST_Critter_Animal | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Undead | Tgt_Obj_No_ST_Critter_Mechanical, [End]AoE: Tgt_Object}
+{3601}{Cost: 15, Maintain: (1 @ 5), Resist: (stat_willpower @ -5), Info: friendly}  //Changed by Positiff
+{3603}{No_Stack: 0, Disallowed_TSF: OSF_MIND_CONTROLLED}
+{3605}{[Begin], Type: ObjFlag, obj_f_spell_flags, OSF_MIND_CONTROLLED, FLAG_ON}
+{3606}{[Begin], Type: EyeCandy, 2, Add}
+{3607}{[Begin], Type: EyeCandy, 3, Add, Play: Stack}
+{3608}{[End], Type: ObjFlag, obj_f_spell_flags, OSF_MIND_CONTROLLED, FLAG_OFF}
+{3609}{[End], Type: EyeCandy, 2, Remove}
+{3610}{[End], Type: EyeCandy, 3, Remove}
+{3611}{[End], Type: EyeCandy, 2, Add, Play: Reverse}
+
+
+// 53 -- Succor Beast
+{3650}{AoE: Tgt_None, [Begin]AoE: Tgt_Tile_Empty, [End]AoE: Tgt_Summoned, [Callback]AoE: Tgt_Summoned, [EndCallback]AoE: Tgt_Summoned}
+{3651}{Cost: 20, Maintain: (2 @ 5)}  //Changed by Positiff
+{3654}{AI_Summon: 6}
+{3655}{[Begin], AoE: Tgt_Tile_Empty, Type: Summon, Proto: 0, List: 4}  // List: Animal_Tough-
+{3656}{[Begin], Apply_AoE: Tgt_Summoned, Type: ObjFlag, obj_f_spell_flags, OSF_MIND_CONTROLLED, FLAG_ON}
+{3657}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 2, Add, Play: Callback}
+{3658}{[End], Type: EyeCandy, 2, Add, Play: Reverse | End_Callback}
+{3659}{[Callback], Type: ObjFlag, obj_f_flags, OF_DONTDRAW, FLAG_OFF}
+{3660}{[EndCallback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+
+
+// 54 -- Regenerate
+{3700}{AoE: Tgt_Self | Tgt_All_Party_Critters | Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical}
+{3701}{Cost: 3, Maintain: (3 @ 3), Info: friendly}  //Changed by Positiff
+{3703}{No_Stack: 1}
+{3704}{}
+{3705}{[Begin], AoE: Tgt_Self, Type: EyeCandy, 2, Add}
+{3706}{[Begin], AoE: Tgt_Self, Type: EyeCandy, 3, Add, Play: Stack}
+{3707}{[Maintain], AoE: Tgt_Obj_No_ST_Critter_Undead | Tgt_Obj_No_ST_Critter_Mechanical | Tgt_Obj_Damaged, Type: Heal, Dmg: 2-6, Dmg_Flags: Scaled}  //Changed by Positiff
+{3708}{[End], AoE: Tgt_Self, Type: EyeCandy, 2, Remove}
+{3709}{[End], AoE: Tgt_Self, Type: EyeCandy, 3, Remove}
+{3710}{[End], AoE: Tgt_Self, Type: EyeCandy, 2, Add, Play: Reverse}  //Apply_AoE
+
+
+
+// College: [Necromantic (Evil)] ------
+
+
+// 55 -- Harm
+{3750}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_Self}
+{3751}{Cost: 6, Resist: (stat_constitution @ -5), Info: aggressive}  //Changed by Positiff
+{3754}{AI_Offensive: 1}
+{3755}{[Begin], Type: Damage, DmgType: Dmg_Normal, Dmg: 6-30, Dmg_Flags: Scaled}  //Changed by Positiff
+{3756}{[Begin], Type: EyeCandy, 2, Add}
+
+
+// 56 -- Conjure Spirit
+{3800}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Animal | Tgt_Obj_No_ST_Critter_Mechanical | Tgt_Obj_No_Self, [End]AoE: Tgt_Object}
+{3801}{Cost: 10, Maintain: (2 @ 10)}  //Changed by Positiff
+{3803}{No_Stack: 1, Disallowed_TSF: OSF_SPOKEN_WITH_DEAD}
+{3804}{No_Reflect: 1}
+{3805}{[Begin], Type: ObjFlag, obj_f_spell_flags, OSF_SPOKEN_WITH_DEAD, FLAG_ON}
+{3806}{[Begin], Type: EyeCandy, 2, Add}
+{3807}{[Begin], Type: EyeCandy, 3, Add, Play: Stack}
+{3808}{[End], Type: ObjFlag, obj_f_spell_flags, OSF_SPOKEN_WITH_DEAD, FLAG_OFF}
+{3809}{[End], Type: EyeCandy, 2, Remove}
+{3810}{[End], Type: EyeCandy, 3, Remove}
+{3811}{[End], Type: EyeCandy, 2, Add, Play: Reverse}
+
+
+// 57 -- Summon Undead
+{3850}{AoE: Tgt_None, [Begin]AoE: Tgt_Tile_Empty, [End]AoE: Tgt_Summoned, [Callback]AoE: Tgt_Summoned, [EndCallback]AoE: Tgt_Summoned}
+{3851}{Cost: 15, Maintain: (3 @ 10)}  //Changed by Positiff
+// NOTE: Disable the following line if you want the old "Summon Undead" that is KOS to *everything*!
+{3854}{AI_Summon: 1}
+{3855}{[Begin], AoE: Tgt_Tile_Empty, Type: Summon, Proto: 0, List: 5}  // Undead Scaled List
+// NOTE: Remove the following line if you want the old "Summon Undead" that is KOS to *everything*!
+{3856}{[Begin], Apply_AoE: Tgt_Summoned, Type: ObjFlag, obj_f_spell_flags, OSF_MIND_CONTROLLED, FLAG_ON}
+{3857}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 2, Add, Play: Callback}
+{3858}{[End], Type: EyeCandy, 2, Add, Play: Reverse | End_Callback}
+{3859}{[Callback], Type: ObjFlag, obj_f_flags, OF_DONTDRAW, FLAG_OFF}
+{3860}{[EndCallback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+
+
+// 58 -- Create Undead
+{3900}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical | Tgt_Obj_No_Self, [End]AoE: Tgt_Summoned}
+{3901}{Cost: 20, Maintain: (4 @ 10)}  //Changed by Positiff
+//-3903--No_Stack: 1, Cancels_SF: OSF_SPOKEN_WITH_DEAD-
+{3903}{}
+{3904}{No_Reflect: 1, No_Resist: 1}
+{3905}{[Begin], AoE: Tgt_Obj_No_ST_Critter_Unrevivifiable, Type: Heal, Dmg_Flags: Full | Reanimate}
+{3906}{[Begin], AoE: Tgt_Obj_No_ST_Critter_Unrevivifiable, Type: Heal, DmgType: Dmg_Poison, Dmg: 32000}
+{3907}{[Begin], AoE: Tgt_Obj_No_ST_Critter_Unrevivifiable, Type: EyeCandy, 2, Add}
+{3908}{[Begin], AoE: Tgt_Obj_No_ST_Critter_Unrevivifiable, Type: ObjFlag, obj_f_critter_flags, OCF_UNDEAD, FLAG_ON}
+{3909}{[Begin], AoE: Tgt_Obj_No_ST_Critter_Unrevivifiable, Type: ObjFlag, obj_f_spell_flags, OSF_MIND_CONTROLLED, FLAG_ON}
+{3910}{[End], AoE: Tgt_Obj_No_ST_Critter_Unrevivifiable, Type: ObjFlag, obj_f_spell_flags, OSF_MIND_CONTROLLED, FLAG_OFF}
+{3911}{[End], AoE: Tgt_Obj_No_ST_Critter_Unrevivifiable, Type: Damage, Dmg_Flags: Full | Death}
+// For Multiplayer, we allow PCs to be resurrected after being turned into Undead, for Game-Play reasons
+{3912}{[End], AoE: Tgt_Obj_No_ST_Critter_Unrevivifiable | Tgt_Obj_T_PC, Type: ObjFlag, obj_f_critter_flags, OCF_UNDEAD, FLAG_OFF}
+// Need to Set CORRECT Tint, and need to change AI-Type!
+
+
+// 59 -- Quench Life
+{3950}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter  | Tgt_Obj_No_Self | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Undead | Tgt_Obj_No_ST_Critter_Mechanical, [Callback]AoE: Tgt_Object}
+{3951}{Cost: 40, Resist: (stat_constitution @ -5), Info: aggressive}  //Changed by Positiff
+{3954}{AI_Offensive: 17}
+{3955}{[Begin], Type: EyeCandy, 2, Add, Play: Callback}
+{3956}{[Begin], Type: ObjFlag, obj_f_critter_flags, OCF_PARALYZED, FLAG_ON}
+{3957}{[Callback], Type: ObjFlag, obj_f_critter_flags, OCF_PARALYZED, FLAG_OFF}
+{3958}{[Callback], Type: Damage, DmgType: Dmg_Normal, Dmg: 60-150, Dmg_Flags: Scaled}  //Changed by Positiff
+{3959}{[Callback], Type: Damage, DmgType: Dmg_Magic, Dmg: 20-50, Dmg_Flags: Scaled}  //Added by Positiff
+
+
+
+// College: [Necromantic (Good)] ------
+
+
+// 60 -- Minor Healing
+{4000}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical | Tgt_Obj_Damaged}
+{4001}{Cost: 5, Info: friendly}
+{4004}{AI_HealingLight: 1}
+{4005}{[Begin], Type: Heal, Dmg: 5-25, Dmg_Flags: Scaled}  //Changed by Positiff
+{4006}{[Begin], Type: EyeCandy, 2, Add}
+
+
+// 61 -- Halt Poison
+{4050}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical}
+{4051}{Cost: 10, Info: friendly}  //Changed by Positiff
+{4054}{AI_CurePoison: 1}
+{4055}{[Begin], Type: Heal, DmgType: Dmg_Poison, Dmg: 40-100, Dmg_Flags: Scaled}  //Changed by Positiff
+{4056}{[Begin], Type: EyeCandy, 2, Add}
+
+
+// 62 -- Major Healing
+{4100}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical | Tgt_Obj_Damaged}
+{4101}{Cost: 15, Info: friendly}  //Changed by Positiff
+{4104}{AI_HealingMedium: 3}
+{4105}{[Begin], Type: Heal, Dmg: 30-75, Dmg_Flags: Scaled | Scars | Crippling}  //Changed by Positiff
+{4106}{[Begin], Type: EyeCandy, 2, Add}
+
+
+// 63 -- Sanctuary
+{4150}{AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead}
+{4151}{Cost: 15, Maintain: (5 @ 10)}
+{4155}{[Begin], Type: ObjFlag, obj_f_spell_flags, OSF_ENSHROUDED, FLAG_ON}
+{4156}{[Begin], Type: EyeCandy, 2, Add}
+{4157}{[Begin], Type: EyeCandy, 3, Add, Play: Stack}
+{4158}{[End], Type: ObjFlag, obj_f_spell_flags, OSF_ENSHROUDED, FLAG_OFF}
+{4159}{[End], Type: EyeCandy, 3, Remove}
+{4160}{[End], Type: EyeCandy, 2, Remove}
+{4161}{[End], Type: EyeCandy, 2, Add, Play: Reverse}
+
+
+// 64 -- Ressurrect
+{4200}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Undead | Tgt_Obj_No_ST_Critter_Mechanical | Tgt_Obj_No_Self, [Callback]AoE: Tgt_Object}
+{4201}{Cost: 50, Info: friendly}
+{4203}{Cancels_SF: OSF_SPOKEN_WITH_DEAD}
+{4204}{AI_Resurrect: 1}
+{4205}{[Begin], Type: EyeCandy, 2, Add, Play: Callback}
+{4206}{[Callback], Type: Heal, Dmg_Flags: Full | Resurrect}
+
+
+
+// College: [Light] ------
+
+
+// 65 -- Illuminate
+{4250}{AoE: Tgt_Object}  //Changed by Positiff
+{4251}{Cost: 3, Maintain: (1 @ 10)}
+{4253}{No_Stack: 1}
+{4255}{[Begin], Type: EyeCandy, 3, Add}
+{4256}{[End], Type: EyeCandy, 3, Remove}
+
+
+// 66 -- Flash
+{4300}{AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_Self | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical}
+{4301}{Cost: 10, Duration: (10 @ -1), Resist: (stat_constitution @ -5), Info: aggressive}
+{4304}{AI_Offensive: 1}
+{4303}{No_Stack: 1}
+{4305}{[Begin], AoE: Tgt_Obj_T_Critter, Type: EyeCandy, 2, Add}  //Added by Positiff
+{4306}{[Begin], Type: ObjFlag, obj_f_critter_flags, OCF_BLINDED, FLAG_ON}
+{4307}{[End], Type: ObjFlag, obj_f_critter_flags, OCF_BLINDED, FLAG_OFF}
+
+
+// 67 -- Blur Sight
+{4350}{AoE: Tgt_Self}
+{4351}{Cost: 15, Maintain: (3 @ 10)}  //Changed by Positiff
+{4353}{No_Stack: 1}
+{4354}{AI_Defensive: (7 @ 0)}
+{4355}{[Begin], AoE: Tgt_Self, Type: EyeCandy, 3, Add}   //Added by Positiff
+{4356}{[Begin], Type: Effect, 159, Add, Count: 15}     //Changed by Positiff
+{4357}{[End], AoE: Tgt_Self, Type: EyeCandy, 3, Remove}  //Added by Positiff
+{4358}{[End], Type: Effect, 159, Remove, Count: 15}    //Changed by Positiff
+
+
+// 68 -- Illusion
+{4400}{AoE: Tgt_None, [Begin]AoE: Tgt_Tile_Empty, [End]AoE: Tgt_Summoned, [Callback]AoE: Tgt_Summoned, [EndCallback]AoE: Tgt_Summoned}
+{4401}{Cost: 20, Maintain: (4 @ 10), Resist: (stat_willpower @ -5)}  //Changed by Positiff
+{4404}{AI_Summon: 3}
+{4405}{[Begin], AoE: Tgt_Tile_Empty, Type: Summon, Proto: 28464}  //Changed by Positiff
+{4406}{[Begin], Apply_AoE: Tgt_Summoned, Type: ObjFlag, obj_f_spell_flags, OSF_ILLUSION, FLAG_ON}
+{4407}{[Begin], Apply_AoE: Tgt_Summoned, Type: ObjFlag, obj_f_spell_flags, OSF_MIND_CONTROLLED, FLAG_ON}
+{4408}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 2, Add, Play: Callback}
+{4409}{[End], Type: EyeCandy, 2, Add, Play: Reverse | End_Callback}
+{4410}{[Callback], Type: ObjFlag, obj_f_flags, OF_DONTDRAW, FLAG_OFF}
+{4411}{[EndCallback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+
+
+// 69 -- Invisibility
+{4450}{AoE: Tgt_Obj_T_Critter}
+{4451}{Cost: 25, Maintain: (5 @ 10), Info: friendly}  //Changed by Positiff
+{4453}{No_Stack: 1, Disallowed_TSF: OSF_INVISIBLE}
+{4454}{AI_Flee: 10}
+{4455}{[Begin], Type: ObjFlag, obj_f_spell_flags, OSF_INVISIBLE, FLAG_ON}
+{4456}{[End], Type: ObjFlag, obj_f_spell_flags, OSF_INVISIBLE, FLAG_OFF}
+
+
+
+// College: [Summon] ------
+
+
+// 70 -- Plague of Insects
+{4500}{AoE: Tgt_Object, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_Self | Tgt_Obj_No_ST_Critter_Dead}  //Changed by Positiff
+{4501}{Cost: 3, Maintain: (1 @ 5), Info: aggressive}  //Changed by Positiff
+{4503}{No_Stack: 1}
+{4504}{AI_Offensive: 2}
+{4505}{[Begin], Type: EyeCandy, 2, Add}
+{4506}{[Begin], Type: EyeCandy, 3, Add, Play: Stack}
+{4507}{[Begin], Type: Effect, 61, Add}  //Changed by Positiff
+{4508}{[Begin], Type: Damage, DmgType: Dmg_Normal, Dmg: 2-4}  //Added by Positiff
+{4509}{[Maintain], AoE: Tgt_Obj_No_ST_Critter_Dead, Type: Damage, DmgType: Dmg_Normal, Dmg: 2-4}  //Added by Positiff
+{4510}{[End], Type: EyeCandy, 2, Add, Play: Reverse | End_Callback}
+{4511}{[EndCallback], Type: EyeCandy, 2, Remove}
+{4512}{[EndCallback], Type: EyeCandy, 3, Remove}
+{4513}{[EndCallback], Type: Effect, 61, Remove}  //Changed by Positiff
+
+
+// 71 -- Orcish Grunt
+{4550}{AoE: Tgt_None, [Begin]AoE: Tgt_Tile_Empty, [End]AoE: Tgt_Summoned, [Callback]AoE: Tgt_Summoned, [EndCallback]AoE: Tgt_Summoned}
+{4551}{Cost: 10, Maintain: (2 @ 10)}
+{4554}{AI_Summon: 1}
+{4555}{[Begin], AoE: Tgt_Tile_Empty, Type: Summon, Proto: 28443}
+{4556}{[Begin], Apply_AoE: Tgt_Summoned, Type: ObjFlag, obj_f_spell_flags, OSF_MIND_CONTROLLED, FLAG_ON}
+{4557}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 2, Add, Play: Callback}
+{4558}{[End], Type: EyeCandy, 2, Add, Play: Reverse | End_Callback}
+{4559}{[Callback], Type: ObjFlag, obj_f_flags, OF_DONTDRAW, FLAG_OFF}
+{4560}{[EndCallback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+
+
+// 72 -- Ogre Bandit
+{4600}{AoE: Tgt_None, [Begin]AoE: Tgt_Tile_Empty, [End]AoE: Tgt_Summoned, [Callback]AoE: Tgt_Summoned, [EndCallback]AoE: Tgt_Summoned}
+{4601}{Cost: 15, Maintain: (3 @ 10)}
+{4604}{AI_Summon: 2}
+{4605}{[Begin], AoE: Tgt_Tile_Empty, Type: Summon, Proto: 17285}  //Changed by Positiff
+{4606}{[Begin], Apply_AoE: Tgt_Summoned, Type: ObjFlag, obj_f_spell_flags, OSF_MIND_CONTROLLED, FLAG_ON}
+{4607}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 2, Add, Play: Callback}
+{4608}{[End], Type: EyeCandy, 2, Add, Play: Reverse | End_Callback}
+{4609}{[Callback], Type: ObjFlag, obj_f_flags, OF_DONTDRAW, FLAG_OFF}
+{4610}{[EndCallback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+
+
+// 73 -- Familiar  //Moved by Positiff
+{4650}{AoE: Tgt_None, [Begin]AoE: Tgt_Tile_Empty, [End]AoE: Tgt_Summoned, [Callback]AoE: Tgt_Summoned, [EndCallback]AoE: Tgt_Summoned}
+{4651}{Cost: 40}  //Changed by Positiff
+{4653}{Disallowed_SF: OSF_FAMILIAR}
+{4654}{AI_Summon: 4}
+{4655}{[Begin], AoE: Tgt_Tile_Empty, Type: Summon, Proto: 0, List: 3}
+{4656}{[Begin], Apply_AoE: TGT_SELF, Type: ObjFlag, obj_f_spell_flags, OSF_FAMILIAR, FLAG_ON}
+{4657}{[Begin], Apply_AoE: Tgt_Summoned, Type: ObjFlag, obj_f_spell_flags, OSF_MIND_CONTROLLED, FLAG_ON}
+{4658}{[Begin], Apply_AoE: Tgt_Summoned, Type: ObjFlag, obj_f_npc_flags, ONF_FAMILIAR, FLAG_ON}
+{4659}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 2, Add, Play: Callback}
+{4660}{[Callback], Type: ObjFlag, obj_f_flags, OF_DONTDRAW, FLAG_OFF}
+
+
+// 74 -- Ogre Destroyer  //Moved by Positiff
+{4700}{AoE: Tgt_None, [Begin]AoE: Tgt_Tile_Empty, [End]AoE: Tgt_Summoned, [Callback]AoE: Tgt_Summoned, [EndCallback]AoE: Tgt_Summoned}
+{4701}{Cost: 30, Maintain: (6 @ 10)}
+{4704}{AI_Summon: 5}
+{4705}{[Begin], AoE: Tgt_Tile_Empty, Type: Summon, Proto: 17286}  //Changed by Positiff
+{4706}{[Begin], Apply_AoE: Tgt_Summoned, Type: ObjFlag, obj_f_spell_flags, OSF_MIND_CONTROLLED, FLAG_ON}
+{4707}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 2, Add, Play: Callback}
+{4708}{[End], Type: EyeCandy, 2, Add, Play: Reverse | End_Callback}
+{4709}{[Callback], Type: ObjFlag, obj_f_flags, OF_DONTDRAW, FLAG_OFF}
+{4710}{[EndCallback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+
+
+
+// College: [Temporal] ------
+
+
+// 75 -- Magelock
+{4750}{AoE: Tgt_Obj_T_Portal | Tgt_Obj_No_ST_Magically_Held}
+{4751}{Cost: 5, Maintain: (1 @ 10)}
+{4755}{[Begin], Type: ObjFlag, obj_f_portal_flags, OPF_MAGICALLY_HELD, FLAG_ON}
+{4756}{[Begin], Type: EyeCandy, 2, Add}
+{4757}{[Begin], Type: EyeCandy, 3, Add, Play: Stack}
+{4758}{[End], Type: ObjFlag, obj_f_portal_flags, OPF_MAGICALLY_HELD, FLAG_OFF}
+{4759}{[End], Type: EyeCandy, 2, Remove}
+{4760}{[End], Type: EyeCandy, 3, Remove}
+{4761}{[End], Type: EyeCandy, 2, Add, Play: Reverse}
+
+
+// 76 -- Hasten  //Moved by Positiff
+{4800}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead, [End]AoE: Tgt_Object}  //Changed by Positiff
+{4801}{Cost: 10, Maintain: (2 @ 10), Info: friendly}  //Changed by Positiff
+{4803}{No_Stack: 1}
+{4804}{AI_Flee: 7}
+{4805}{[Begin], Type: Effect, 58, Add}
+{4806}{[Begin], Type: EyeCandy, 2, Add}
+{4807}{[Begin], Type: EyeCandy, 3, Add, Play: Stack}
+{4808}{[End], Type: Effect, 58, Remove}
+{4809}{[End], Type: EyeCandy, 2, Remove}
+{4810}{[End], Type: EyeCandy, 3, Remove}
+{4811}{[End], Type: EyeCandy, 2, Add, Play: Reverse}
+
+
+// 77 -- Deceleration  //Moved by Positiff
+{4850}{AoE: Tgt_List, [Begin]AoE: Tgt_Self | Tgt_Obj_Radius | Tgt_Obj_T_Critter | Tgt_Obj_No_Self | Tgt_Non_Party_Critters | Tgt_Obj_No_ST_Critter_Dead, [Begin]Radius:9}
+{4851}{Cost: 15, Maintain: (3 @ 10), Resist: (stat_willpower @ -5)}  //Changed by Positiff
+{4853}{No_Stack: 1}
+{4854}{AI_Defensive: (5 @ 1)}
+{4855}{[Begin], AoE: Tgt_Obj_No_Self | Tgt_Non_Party_Critters, Type: Effect, 57, Add}  //Changed by Positiff
+{4856}{[Begin], AoE: Tgt_Obj_No_Self | Tgt_Non_Party_Critters, Type: EyeCandy, 2, Add}  //Changed by Positiff
+{4857}{[Begin], AoE: Tgt_Obj_No_Self | Tgt_Non_Party_Critters, Type: EyeCandy, 3, Add, Play: Stack}  //Changed by Positiff
+{4858}{[End], Type: Effect, 57, Remove}
+{4859}{[End], Type: EyeCandy, 2, Remove}
+{4860}{[End], Type: EyeCandy, 3, Remove}
+{4861}{[End], Type: EyeCandy, 2, Add, Play: Reverse}
+
+
+// 78 -- Stasis
+{4900}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_Self | Tgt_Obj_No_ST_Critter_Dead, [End]AoE: Tgt_Object}  //Changed by Positiff
+{4901}{Cost: 25, Maintain: (5 @ 10), DurationTriggerCount: 2, Resist: (stat_willpower @ -10), Info: friendly}  //Changed by Positiff
+{4903}{No_Stack: 1, Disallowed_TCF: OCF_PARALYZED}
+{4904}{AI_Defensive: (9 @ 1)}
+{4905}{[Begin], Type: ObjFlag, obj_f_spell_flags, OSF_BONDS_OF_MAGIC, FLAG_ON}  //Added by Positiff
+{4906}{[Begin], Type: ObjFlag, obj_f_critter_flags, OCF_PARALYZED, FLAG_ON}
+{4907}{[Begin], Type: EyeCandy, 2, Add}
+{4908}{[Begin], Type: EyeCandy, 3, Add, Play: Stack}
+{4909}{[End], Type: ObjFlag, obj_f_spell_flags, OSF_BONDS_OF_MAGIC, FLAG_OFF}  //Added by Positiff
+{4910}{[End], Type: ObjFlag, obj_f_critter_flags, OCF_PARALYZED, FLAG_OFF}
+{4911}{[End], Type: EyeCandy, 2, Remove}
+{4912}{[End], Type: EyeCandy, 3, Remove}
+{4913}{[End], Type: EyeCandy, 2, Add, Play: Reverse}
+
+
+// 79 -- Tempus Fugit
+{4950}{AoE: Tgt_Self | Tgt_All_Party_Critters}
+{4951}{Cost: 40, Maintain: (5 @ 10)}
+{4953}{No_Stack: 1, Cancels_SF: OSF_TEMPUS_FUGIT}  //Changed by Positiff
+{4954}{AI_Flee: 8}
+{4955}{[Begin], Type: ObjFlag, obj_f_spell_flags, OSF_TEMPUS_FUGIT, FLAG_ON}
+{4956}{[Begin], Apply_AoE: Tgt_Self, Type: EyeCandy, 2, Add}
+{4957}{[End], Type: ObjFlag, obj_f_spell_flags, OSF_TEMPUS_FUGIT, FLAG_OFF}
+{4958}{[End], Apply_AoE: Tgt_Self, Type: EyeCandy, 2, Remove}
+{4959}{[End], Apply_AoE: Tgt_Self, Type: EyeCandy, 3, Add, Play: Reverse}
+
+
+
+// Item-Only Spells -----
+
+
+// 80 -- Food: Alchohol (Positive Effect)  //Moved by Positiff
+{5000}{AoE: Tgt_Obj_T_Critter | Tgt_Party_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical}
+{5001}{Duration: (360 @ -1), Range: 2, Info: friendly}
+{5002}{Is_Tech: 1}
+{5003}{No_Stack: 1, Disallowed_TSF: OSF_DRUNK, ItemTriggers: Item_Used}  //Changed by Positiff
+{5005}{[Begin], ItemTriggers: Item_Used, Type: ObjFlag, obj_f_spell_flags, OSF_DRUNK, FLAG_ON}  //Moved by Positiff
+{5006}{[Begin], ItemTriggers: Item_Used, Type: Effect, 132, Add}
+{5007}{[Begin], ItemTriggers: Item_Used, Type: EyeCandy, 2, Add}
+{5008}{[End], ItemTriggers: Item_Used, Type: Effect, 132, Remove}
+{5009}{[End], ItemTriggers: Item_Used, Type: ObjFlag, obj_f_spell_flags, OSF_DRUNK, FLAG_OFF}
+
+
+// 81 -- Food: Alchohol (Negative Effect)  //Moved by Positiff
+{5050}{AoE: Tgt_Obj_T_Critter | Tgt_Party_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical}
+{5051}{Duration: (360 @ -1), Range: 2, Info: friendly}
+{5052}{Is_Tech: 1}
+{5053}{No_Stack: 0, ItemTriggers: Item_Used}  //Changed by Positiff
+{5055}{[Begin], ItemTriggers: Item_Used, Type: Effect, 133, Add}  //Changed by Positiff
+{5056}{[Begin], ItemTriggers: Item_Used, Type: EyeCandy, 2, Add}  //Changed by Positiff
+{5057}{[End], ItemTriggers: Item_Used, Type: Effect, 133, Remove}  //Changed by Positiff
+
+
+// 82 -- Fire Shield
+{5100}{AoE: Tgt_Object, Radius:2}  //AoE: Tgt_Attacker_Obj
+{5101}{Cost: 0, Info: aggressive}
+{5103}{No_Stack: 1, ItemTriggers: Parent_Hit | Target_Attacker | Target_Attacker_Weapon_Melee}
+{5105}{[Begin], AoE: Tgt_Obj_No_Self, ItemTriggers: Parent_Hit | Target_Attacker | Target_Attacker_Weapon_Melee, Type: Damage, DmgType: Dmg_Fire, Dmg: 3-5}
+{5106}{[Begin], AoE: Tgt_Obj_No_Self, ItemTriggers: Parent_Hit | Target_Attacker | Target_Attacker_Weapon_Melee, Type: EyeCandy, 3, Add}
+
+
+// 83 -- Shield
+{5150}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead, [End]AoE: Tgt_Object}
+{5151}{Cost: 0, Duration: (8 @ -1)}
+{5153}{Disallowed_TSF: OSF_SHIELDED}
+{5155}{[Begin], Type: Effect, 63, Add, Count: 10}
+{5156}{[Begin], Type: Effect, 155, Add, Count: 25}
+{5157}{[Begin], Type: EyeCandy, 2, Add}
+{5158}{[Begin], Type: EyeCandy, 3, Add, Play: Stack}
+{5159}{[Begin], Type: ObjFlag, obj_f_spell_flags, OSF_SHIELDED, FLAG_ON}
+{5160}{[End], Type: Effect, 63, Remove, Count: 10}
+{5161}{[End], Type: Effect, 155, Remove, Count: 25}
+{5162}{[End], Type: EyeCandy, 2, Remove}
+{5163}{[End], Type: EyeCandy, 3, Remove}
+{5164}{[End], Type: EyeCandy, 2, Add, Play: Reverse}
+{5165}{[End], Type: ObjFlag, obj_f_spell_flags, OSF_SHIELDED, FLAG_OFF}
+
+
+// 84 -- Invisibility, Continuing (Ring)
+{5200}{AoE: Tgt_Parent_Obj}
+{5201}{Cost: 0}
+{5203}{No_Stack: 1, ItemTriggers: Wear | Unwear}
+{5205}{[Begin], ItemTriggers: Wear, Type: ObjFlag, obj_f_spell_flags, OSF_INVISIBLE, FLAG_ON}
+{5206}{[Begin], ItemTriggers: Unwear, Type: ObjFlag, obj_f_spell_flags, OSF_INVISIBLE, FLAG_OFF}
+
+
+// 85 -- Demonic Armor: Base Effects
+{5250}{AoE: Tgt_Parent_Obj, [Begin]AoE: Tgt_Obj_T_Critter}
+{5251}{Cost: 0}
+{5253}{No_Stack: 1, ItemTriggers: Wear | Unwear}
+{5255}{[Begin], ItemTriggers: Wear, Type: Effect, 144, Add}
+{5256}{[Begin], ItemTriggers: Unwear, Type: Effect, 144, Remove}
+{5257}{[Begin], AoE: Tgt_Obj_ST_Critter_Good, ItemTriggers: Wear, Type: Damage, DmgType: Dmg_Normal, Dmg: 30-40}
+{5258}{[Begin], AoE: Tgt_Obj_ST_Critter_Good, ItemTriggers: Wear, Type: Effect, 145, Add, Cause: Injury}
+{5259}{[Begin], ItemTriggers: Unwear, Type: Damage, DmgType: Dmg_Normal, Dmg: 10-20}
+{5260}{[Begin], ItemTriggers: Unwear, Type: Effect, 145, Add, Cause: Injury}
+
+
+// 86 -- Demonic Armor: Dmg Shield
+{5300}{AoE: Tgt_Object, Radius:2}
+{5301}{Cost: 0, Info: aggressive}
+{5303}{No_Stack: 1, ItemTriggers: Parent_Hit | Target_Attacker | Target_Attacker_Weapon_Melee}
+{5305}{[Begin], AoE: Tgt_Obj_No_Self, ItemTriggers: Parent_Hit | Target_Attacker | Target_Attacker_Weapon_Melee, Type: Damage, DmgType: Dmg_Electrical, Dmg: 3-5}
+{5306}{[Begin], AoE: Tgt_Obj_No_Self, ItemTriggers: Parent_Hit | Target_Attacker | Target_Attacker_Weapon_Melee, Type: EyeCandy, 3, Add}
+//-5307--[Begin], AoE: Tgt_Obj_ST_Critter_Good, ItemTriggers: Parent_Hit | Target_Attacker, Type: Damage, DmgType: Dmg_Electrical, Dmg: 3-5-
+//-5308--[Begin], AoE: Tgt_Obj_ST_Critter_Good, ItemTriggers: Parent_Hit | Target_Attacker, Type: EyeCandy, 3, Add-
+
+
+// 87 -- Shield of Force
+{5350}{AoE: Tgt_Parent_Obj | Tgt_Self, [Begin]AoE: Tgt_Obj_T_Critter}
+{5351}{Cost: 0, Info: aggressive}
+{5353}{No_Stack: 1, ItemTriggers: Parent_Hit | Target_Attacker | Target_Attacker_Weapon_Melee}
+{5355}{[Begin], AoE: Tgt_Self, ItemTriggers: Parent_Hit | Target_Attacker | Target_Attacker_Weapon_Melee, Type: Damage, DmgType: Dmg_Magic, Dmg: 1-2, Dmg_Flags: Scaled}  //Added by Positiff
+{5356}{[Begin], AoE: Tgt_Obj_No_Self, ItemTriggers: Parent_Hit | Target_Attacker | Target_Attacker_Weapon_Melee, Type: Damage, DmgType: Dmg_Electrical, Dmg: 3-8, Dmg_Flags: Scaled}  //Changed by Positiff
+{5357}{[Begin], AoE: Tgt_Obj_No_Self, ItemTriggers: Parent_Hit | Target_Attacker | Target_Attacker_Weapon_Melee, Type: EyeCandy, 2, Add}  //Changed by Positiff
+
+
+// 88 -- SnakeForm
+{5400}{AoE: Tgt_Obj_T_Critter}
+{5401}{Cost: 0}
+{5403}{No_Stack: 1, Cancels_SF: OSF_BODY_OF_AIR | OSF_BODY_OF_EARTH | OSF_BODY_OF_FIRE | OSF_BODY_OF_WATER | OSF_POLYMORPHED}
+{5405}{[Begin], Type: EyeCandy, 2, Add}
+{5406}{[Begin], Type: Trait, art_num, 15}  //15 is Snake Man
+
+
+// 89 -- EarthQuake
+{5450}{AoE: Tgt_Obj_Radius | Tgt_Obj_T_Critter | Tgt_Obj_No_Self, Radius:5}
+{5451}{Resist: (stat_dexterity @ -5), Info: aggressive}
+// Activate the Proc *CHANCE*!!!
+{5453}{No_Stack: 1, ItemTriggers: Parent_Dmgs_Opponent} //  | Random_Chance_Uncommon
+{5455}{[Begin], ItemTriggers: Parent_Dmgs_Opponent, Type: EyeCandy, 2, Add}
+{5456}{[Begin], ItemTriggers: Parent_Dmgs_Opponent, Type: AGoal, anim_goal_knock_down}
+
+
+// 90 -- Harm Undead
+{5500}{AoE: Tgt_Obj_T_Critter | Tgt_Obj_ST_Critter_Undead}
+{5501}{Cost: 0, Info: aggressive}
+{5503}{No_Stack: 1}
+{5505}{[Begin], Type: EyeCandy, 2, Add}
+{5506}{[Begin], Type: Damage, DmgType: Dmg_Normal, Dmg: 1-6}
+
+
+// 91 -- Item: Throwing Dagger  //Made by Positiff
+{5550}{AoE: Tgt_Tile | Tgt_Obj_Radius, Radius: 0}
+{5551}{Cost: 0, Info: aggressive}
+{5552}{Is_Tech: 1}
+{5553}{No_Stack: 0, ItemTriggers: Parent_Atks_Location}
+{5555}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_T_Container, ItemTriggers: Parent_Atks_Location, Type: Damage, DmgType: Dmg_Normal, Dmg: 2-5}
+{5556}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_T_Critter, ItemTriggers: Parent_Atks_Location, Type: Damage, DmgType: Dmg_Normal, Dmg: 2-5}
+{5557}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_T_Critter, ItemTriggers: Parent_Atks_Location, Type: Damage, DmgType: Dmg_Magic, Dmg: 1-2}
+
+
+// 92 -- Holy Smiting
+{5600}{AoE: Tgt_Obj_T_Critter}
+{5601}{Cost: 0, Info: aggressive}
+{5603}{No_Stack: 1}
+{5605}{[Begin], Type: EyeCandy, 2, Add}
+{5606}{[Begin], Type: Damage, DmgType: Dmg_Normal, Dmg: 1-6}
+
+
+// 93 -- Slaying Strength
+// Limit this by attacker type? (Undead, etc.)
+{5650}{AoE: Tgt_Parent_Obj, [Begin]AoE: Tgt_Obj_T_Critter}
+{5651}{Duration: (8 @ -1), Info: friendly}
+{5653}{No_Stack: 1, ItemTriggers: Parent_Hit | Parent_Atks_Opponent}
+{5655}{[Begin], ItemTriggers: Parent_Hit | Parent_Atks_Opponent, Type: Effect, 152, Add}
+{5656}{[End], ItemTriggers: Parent_Hit | Parent_Atks_Opponent, Type: Effect, 152, Remove}
+
+
+// 94 -- Hammer of the Earth
+{5700}{AoE: Tgt_Parent_Obj, [Begin]AoE: Tgt_Obj_T_Critter}
+{5701}{Info: friendly}
+{5703}{No_Stack: 1, ItemTriggers: Wear | Unwear}
+{5705}{[Begin], ItemTriggers: Wear, Type: Effect, 148, Add}
+{5706}{[Begin], ItemTriggers: Wear, Type: Effect, 149, Add}
+{5707}{[Begin], ItemTriggers: Unwear, Type: Effect, 148, Remove}
+{5708}{[Begin], ItemTriggers: Unwear, Type: Effect, 149, Remove}
+
+
+// 95 -- Axe of the Winds
+{5750}{AoE: Tgt_Parent_Obj, [Begin]AoE: Tgt_Obj_T_Critter}
+{5751}{Info: friendly}
+{5753}{No_Stack: 1, ItemTriggers: Wear | Unwear}
+{5755}{[Begin], ItemTriggers: Wear, Type: Effect, 150, Add}
+{5756}{[Begin], ItemTriggers: Unwear, Type: Effect, 150, Remove}
+
+
+// 96 -- Dagger of Pain
+{5800}{AoE: Tgt_Parent_Obj, [Begin]AoE: Tgt_Obj_T_Critter}
+{5801}{Info: friendly}
+{5803}{No_Stack: 1, ItemTriggers: Wear | Unwear}
+{5805}{[Begin], ItemTriggers: Wear, Type: Effect, 146, Add}
+{5806}{[Begin], ItemTriggers: Unwear, Type: Effect, 146, Remove}
+
+
+// 97 -- Food: Bread  //Made by Positiff
+{5850}{AoE: Tgt_Obj_T_Critter | Tgt_Party_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical}
+{5851}{Duration: (11 @ -1), DurationTriggerCount: 5, Range: 2, Info: friendly}
+{5852}{Is_Tech: 1}
+{5853}{No_Stack: 1, ItemTriggers: Item_Used}
+{5855}{[Maintain], ItemTriggers: Item_Used, Type: Heal, DmgType: Dmg_Normal, Dmg: 1}
+
+
+// 98 -- Food: Water  //Made by Positiff
+{5900}{AoE: Tgt_Obj_T_Critter | Tgt_Party_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical}
+{5901}{Duration: (11 @ -1), DurationTriggerCount: 5, Range: 2, Info: friendly}
+{5902}{Is_Tech: 1}
+{5903}{No_Stack: 1, ItemTriggers: Item_Used}
+{5905}{[Maintain], ItemTriggers: Item_Used, Type: Heal, DmgType: Dmg_Magic, Dmg: 1}
+
+
+// 99 -- Food: Tobacco  //Made by Positiff
+{5950}{AoE: Tgt_Obj_T_Critter | Tgt_Party_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical}
+{5951}{Duration: (360 @ -1), Range: 2, Info: friendly}
+{5952}{Is_Tech: 1}
+{5953}{No_Stack: 1, ItemTriggers: Item_Used}
+{5955}{[Begin], ItemTriggers: Item_Used, Type: Effect, 399, Add}
+{5956}{[End], ItemTriggers: Item_Used, Type: Effect, 399, Remove}
+
+
+// 100 -- Chemistry: Cleaner  //Moved by Positiff
+{6000}{AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Undead | Tgt_Obj_No_ST_Critter_Mechanical}
+{6001}{Range: 2, Info: aggressive}
+{6002}{Is_Tech: 1}  //Added by Positiff
+{6003}{No_Stack: 0, ItemTriggers: Item_Used}
+{6005}{[Begin], ItemTriggers: Item_Used, Type: Damage, DmgType: Dmg_Poison, Dmg: 40}  //Changed by Positiff
+{6006}{[Begin], ItemTriggers: Item_Used, Type: EyeCandy, 2, Add}
+
+
+// 101 -- Chemistry: Venom  //Moved by Positiff
+{6050}{AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Undead | Tgt_Obj_No_ST_Critter_Mechanical}
+{6051}{Range: 2, Info: aggressive}
+{6052}{Is_Tech: 1}  //Added by Positiff
+{6053}{No_Stack: 0, ItemTriggers: Item_Used}
+{6054}{AI_Offensive:2}
+{6055}{[Begin], ItemTriggers: Item_Used, Type: Damage, DmgType: Dmg_Poison, Dmg: 70}  //Changed by Positiff
+{6056}{[Begin], ItemTriggers: Item_Used, Type: EyeCandy, 2, Add}
+
+
+// 102 -- Chemistry: Poison  //Moved by Positiff
+{6100}{AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Undead | Tgt_Obj_No_ST_Critter_Mechanical}
+{6101}{Cost: 0, Range: 2, Info: aggressive}
+{6102}{Is_Tech: 1}  //Added by Positiff
+{6103}{No_Stack: 0, ItemTriggers: Item_Used}  //Changed by Positiff
+{6105}{[Begin], AoE: Tgt_Obj_T_Critter, Type: Damage, DmgType: Dmg_Poison, Dmg: 120}  //Changed by Positiff
+{6106}{[Begin], AoE: Tgt_Obj_T_Critter, Type: EyeCandy, 2, Add}
+
+
+// 103 -- Chemistry: Aqua Vitae  //Moved by Positiff
+{6150}{AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Undead | Tgt_Obj_No_ST_Critter_Mechanical}  //Changed by Positiff
+{6151}{Duration: (0 @ 2), DurationStatInfo: (21 @ 180), Range: 2, Info: friendly}
+{6152}{Is_Tech: 1}  //Added by Positiff
+{6153}{No_Stack: 1, ItemTriggers: Item_Used}
+{6155}{[Begin], ItemTriggers: Item_Used, Type: Effect, 224, Add, Count: 2}  //Changed by Positiff
+{6156}{[Begin], ItemTriggers: Item_Used, Type: EyeCandy, 2, Add}
+{6157}{[End], ItemTriggers: Item_Used, Type: Effect, 224, Remove, Count: 2}  //Changed by Positiff
+
+
+// 104 -- Hammer Bash  //Made by Positiff
+{6200}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter, [End]AoE: Tgt_Object}
+{6201}{Info: aggressive}
+{6202}{Is_Tech: 1}
+{6203}{No_Stack: 0}
+{6205}{[Begin], Type: EyeCandy, 2, Add}
+{6206}{[Begin], AoE: Tgt_Object, Type: Damage, DmgType: Dmg_Normal, Dmg: 5}
+{6207}{[End], Type: Damage, Dmg_Flags: Stunned}
+
+
+// 105 -- Unrevivifiable Undead
+{6250}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Mechanical}  //AoE: Tgt_Parent_Obj
+{6251}{Info: friendly}
+{6253}{No_Stack: 1}
+{6255}{[Begin], Type: ObjFlag, obj_f_critter_flags, OCF_UNREVIVIFIABLE, FLAG_ON}
+
+
+// 106 -- Area Fear
+{6300}{AoE: Tgt_Obj_T_Critter | Tgt_Obj_ST_Critter_Undead | Tgt_Obj_No_ST_Critter_Mechanical}
+{6301}{Cost: 0, Info: aggressive}
+{6303}{No_Stack: 1}
+{6305}{[Begin], Type: EyeCandy, 2, Add}
+{6306}{[Begin], Type: ObjFlag, obj_f_critter_flags, OCF_FLEEING, FLAG_ON}
+
+
+// 107 -- Area Fatigue
+{6350}{AoE: Tgt_Obj_T_Critter | Tgt_Obj_ST_Critter_Undead}
+{6351}{Cost: 0, Info: aggressive}
+{6353}{No_Stack: 1}
+{6355}{[Begin], Type: EyeCandy, 2, Add}
+{6356}{[Begin], Type: ObjFlag, obj_f_critter_flags, OCF_FLEEING, FLAG_ON}
+
+
+// 108 -- Area Fear (Animals)
+{6400}{AoE: Tgt_Obj_T_Critter | Tgt_Obj_ST_Critter_Animal | Tgt_Obj_No_ST_Critter_Undead | Tgt_Obj_No_ST_Critter_Mechanical}
+{6401}{Cost: 0, Info: aggressive}
+{6403}{No_Stack: 1}
+{6405}{[Begin], Type: EyeCandy, 2, Add}
+{6406}{[Begin], Type: ObjFlag, obj_f_critter_flags, OCF_FLEEING, FLAG_ON}
+
+
+// 109 -- Area Reanimate
+{6450}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical | Tgt_Obj_No_Self, [End]AoE: Tgt_Summoned}
+{6451}{Cost: 10, Maintain: (1 @ 60)}
+{6453}{No_Stack: 1, Cancels_SF: OSF_SPOKEN_WITH_DEAD}
+{6455}{[Begin], Type: Heal, Dmg_Flags: Full | Resurrect}
+{6456}{[Begin], Type: Heal, DmgType: Dmg_Poison, Dmg: 32000}
+{6457}{[Begin], Type: EyeCandy, 2, Add}
+{6458}{[Begin], Type: ObjFlag, obj_f_critter_flags, OCF_UNDEAD, FLAG_ON}
+{6459}{[Begin], Type: ObjFlag, obj_f_spell_flags, OSF_MIND_CONTROLLED, FLAG_ON}
+{6460}{[End], Type: ObjFlag, obj_f_spell_flags, OSF_MIND_CONTROLLED, FLAG_OFF}
+{6461}{[End], Type: Damage, Dmg_Flags: Full | Death}
+// Need to Set CORRECT Tint, and need to change AI-Type!
+
+
+// 110 -- Wolf Form
+{6500}{AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Mechanical}
+{6501}{Cost: 0}
+{6503}{No_Stack: 1, Cancels_SF: OSF_BODY_OF_AIR | OSF_BODY_OF_EARTH | OSF_BODY_OF_FIRE | OSF_BODY_OF_WATER | OSF_POLYMORPHED}
+{6505}{[Begin], Type: EyeCandy, 2, Add}
+{6506}{[Begin], Type: Trait, art_num, 15}  //15 is Snake Man
+
+
+// 111 -- Returning
+{6550}{AoE: Tgt_Obj_T_Critter}
+{6551}{Cost: 0}
+{6553}{No_Stack: 1, Cancels_SF: OSF_BODY_OF_AIR | OSF_BODY_OF_EARTH | OSF_BODY_OF_FIRE | OSF_BODY_OF_WATER | OSF_POLYMORPHED}
+{6555}{[Begin], Type: EyeCandy, 2, Add}
+{6556}{[Begin], Type: Trait, art_num, 15}  //15 is Snake Man
+
+
+// 112 -- Staff of the Necromancer
+{6600}{AoE: Tgt_Parent_Obj, [Begin]AoE: Tgt_Obj_T_Critter}
+{6601}{Info: friendly}
+{6603}{No_Stack: 1, ItemTriggers: Wear | Unwear}
+{6605}{[Begin], ItemTriggers: Wear, Type: Effect, 151, Add}
+{6606}{[Begin], ItemTriggers: Unwear, Type: Effect, 151, Remove}
+
+
+// 113 -- Item: Perfume (Negative Effect)  //Made by Positiff
+{6650}{AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical}
+{6651}{Duration: (480 @ -1), Range: 2, Info: friendly}
+{6652}{Is_Tech: 1}
+{6653}{No_Stack: 1}
+{6655}{[Begin], Type: Effect, 226, Add}
+{6656}{[End], Type: Effect, 226, Remove}
+
+
+// 114 -- Item: Perfume (Positive Effect)
+{6700}{AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical}
+{6701}{Duration: (480 @ -1), Range: 2, Info: friendly}  //Changed by Positiff
+{6702}{Is_Tech: 1}
+{6703}{No_Stack: 1}  //Changed by Positiff
+{6705}{[Begin], Type: Effect, 227, Add}  //Changed by Positiff
+{6706}{[End], Type: Effect, 227, Remove}  //Changed by Positiff
+
+
+// 115 -- Heal Light (Will'O'Wisp)
+{6750}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical | Tgt_Obj_Damaged}
+{6751}{Range: 2, Info: friendly}
+{6753}{No_Stack: 1, ItemTriggers: Item_Used}
+{6754}{AI_HealingLight: 5}
+{6755}{[Begin], ItemTriggers: Item_Used, Type: Heal, Dmg: 10}
+{6757}{[Begin], ItemTriggers: Item_Used, Type: EyeCandy, 2, Add}
+
+
+// 116 -- Reserved for Pad Lighting (Pad Lighting1)
+{6800}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical | Tgt_Obj_Damaged}
+{6801}{Range: 2, Info: friendly}
+{6803}{No_Stack: 1, ItemTriggers: Item_Used}
+{6805}{[Begin], ItemTriggers: Item_Used, Type: Heal, Dmg: 10}
+{6807}{[Begin], ItemTriggers: Item_Used, Type: EyeCandy, 2, Add}
+
+
+// 117 -- Reserved for Pad Lighting (Pad Lighting2)
+{6850}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical | Tgt_Obj_Damaged}
+{6851}{Range: 2, Info: friendly}
+{6853}{No_Stack: 1, ItemTriggers: Item_Used}
+{6855}{[Begin], ItemTriggers: Item_Used, Type: Heal, Dmg: 10}
+{6857}{[Begin], ItemTriggers: Item_Used, Type: EyeCandy, 2, Add}
+
+
+// 118 -- Reserved for Pad Lighting (Pad Lighting3)
+{6900}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical | Tgt_Obj_Damaged}
+{6901}{Range: 2, Info: friendly}
+{6903}{No_Stack: 1, ItemTriggers: Item_Used}
+{6905}{[Begin], ItemTriggers: Item_Used, Type: Heal, Dmg: 10}
+{6907}{[Begin], ItemTriggers: Item_Used, Type: EyeCandy, 2, Add}
+
+
+// 119 -- Reserved for Pad Lighting (Pad Lighting4)
+{6950}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical | Tgt_Obj_Damaged}
+{6951}{Range: 2, Info: friendly}
+{6953}{No_Stack: 1, ItemTriggers: Item_Used}
+{6955}{[Begin], ItemTriggers: Item_Used, Type: Heal, Dmg: 10}
+{6957}{[Begin], ItemTriggers: Item_Used, Type: EyeCandy, 2, Add}
+
+
+// 120 -- Reserved for Pad Lighting (Pad Lighting5)
+{7000}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical | Tgt_Obj_Damaged}
+{7001}{Range: 2, Info: friendly}
+{7003}{No_Stack: 1, ItemTriggers: Item_Used}
+{7005}{[Begin], ItemTriggers: Item_Used, Type: Heal, Dmg: 10}
+{7007}{[Begin], ItemTriggers: Item_Used, Type: EyeCandy, 2, Add}
+
+
+// 121 -- SuperHeal (SuperHeal)
+{7050}{AoE: Tgt_Object, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Mechanical | Tgt_Obj_Damaged}
+{7051}{Cost: 0, Info: friendly}
+{7053}{No_Stack: 1, Cancels_SF: OSF_SPOKEN_WITH_DEAD}
+{7054}{AI_HealingHeavy: 8}
+{7055}{[Begin], Type: EyeCandy, 2, Add, Play: Callback}
+{7056}{[Callback], Type: Heal, Dmg_Flags: Full | Resurrect}
+
+
+// 122 -- Araya Projectile
+{7100}{AoE: Tgt_Tile | Tgt_Object | Tgt_Obj_No_Self}
+{7101}{Cost: 4, Resist: (stat_constitution @ -5), Info: aggressive}
+{7102}{Missile: 0}
+{7104}{AI_Offensive: 3}
+{7105}{[Begin], AoE: Tgt_Object, Type: Damage, DmgType: Dmg_Normal, Dmg: 1-7}
+{7106}{[Begin], AoE: Tgt_Object, Type: EyeCandy, 2, Add}
+
+
+// 123 -- Summon Seether
+{7150}{AoE: Tgt_None, [Begin]AoE: Tgt_Tile_Empty, [End]AoE: Tgt_Summoned, [Callback]AoE: Tgt_Summoned, [EndCallback]AoE: Tgt_Summoned}
+{7151}{Cost: 5, Maintain: (1 @ 1)}
+{7154}{AI_Summon: 1}
+{7155}{[Begin], AoE: Tgt_Tile_Empty, Type: Summon, Proto: 28348}
+{7156}{[Begin], Apply_AoE: Tgt_Summoned, Type: ObjFlag, obj_f_spell_flags, OSF_MIND_CONTROLLED, FLAG_ON}
+{7157}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 2, Add, Play: Callback}
+{7158}{[End], Type: EyeCandy, 2, Add, Play: Reverse | End_Callback}
+{7159}{[Callback], Type: ObjFlag, obj_f_flags, OF_DONTDRAW, FLAG_OFF}
+{7160}{[EndCallback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+
+
+// 124 -- Summon Were-Rat
+{7200}{AoE: Tgt_None, [Begin]AoE: Tgt_Tile_Empty, [End]AoE: Tgt_Summoned, [Callback]AoE: Tgt_Summoned, [EndCallback]AoE: Tgt_Summoned}
+{7201}{Cost: 5, Maintain: (1 @ 1)}
+{7204}{AI_Summon: 1}
+{7205}{[Begin], AoE: Tgt_Tile_Empty, Type: Summon, Proto: 28327}
+{7206}{[Begin], Apply_AoE: Tgt_Summoned, Type: ObjFlag, obj_f_spell_flags, OSF_MIND_CONTROLLED, FLAG_ON}
+{7207}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 2, Add, Play: Callback}
+{7208}{[End], Type: EyeCandy, 2, Add, Play: Reverse | End_Callback}
+{7209}{[Callback], Type: ObjFlag, obj_f_flags, OF_DONTDRAW, FLAG_OFF}
+{7210}{[EndCallback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+
+
+// 125 -- Summon Wargun
+{7250}{AoE: Tgt_None, [Begin]AoE: Tgt_Tile_Empty, [End]AoE: Tgt_Summoned, [Callback]AoE: Tgt_Summoned, [EndCallback]AoE: Tgt_Summoned}
+{7251}{Cost: 5, Maintain: (1 @ 1)}
+{7254}{AI_Summon: 1}
+{7255}{[Begin], AoE: Tgt_Tile_Empty, Type: Summon, Proto: 27331}
+{7256}{[Begin], Apply_AoE: Tgt_Summoned, Type: ObjFlag, obj_f_spell_flags, OSF_MIND_CONTROLLED, FLAG_ON}
+{7257}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 2, Add, Play: Callback}
+{7258}{[End], Type: EyeCandy, 2, Add, Play: Reverse | End_Callback}
+{7259}{[Callback], Type: ObjFlag, obj_f_flags, OF_DONTDRAW, FLAG_OFF}
+{7260}{[EndCallback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+
+
+// 126 -- Summon Baleful Hound
+{7300}{AoE: Tgt_None, [Begin]AoE: Tgt_Tile_Empty, [End]AoE: Tgt_Summoned, [Callback]AoE: Tgt_Summoned, [EndCallback]AoE: Tgt_Summoned}
+{7301}{Cost: 5, Maintain: (1 @ 1)}
+{7304}{AI_Summon: 1}
+{7305}{[Begin], AoE: Tgt_Tile_Empty, Type: Summon, Proto: 27335}
+{7306}{[Begin], Apply_AoE: Tgt_Summoned, Type: ObjFlag, obj_f_spell_flags, OSF_MIND_CONTROLLED, FLAG_ON}
+{7307}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 2, Add, Play: Callback}
+{7308}{[End], Type: EyeCandy, 2, Add, Play: Reverse | End_Callback}
+{7309}{[Callback], Type: ObjFlag, obj_f_flags, OF_DONTDRAW, FLAG_OFF}
+{7310}{[EndCallback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+
+
+// 127 -- Flesh to Stone (Duration)
+{7350}{AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Mechanical | Tgt_Obj_T_Portal | Tgt_Obj_M_Stone | Tgt_Obj_No_Self}
+{7351}{Cost: 20, Duration: (8 @ -1), Resist: (stat_constitution @ -5), Info: aggressive}
+{7354}{AI_Offensive: 9}
+{7355}{[Begin], AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_M_Stone, Type: EyeCandy, 2, Add}
+{7356}{[Begin], AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_M_Stone, Type: ObjFlag, obj_f_spell_flags, OSF_STONED, FLAG_ON}
+{7357}{[Begin], AoE: Tgt_Obj_T_Portal | Tgt_Obj_M_Stone, Type: EyeCandy, 3, Remove}
+{7358}{[Begin], AoE: Tgt_Obj_T_Portal | Tgt_Obj_M_Stone, AoE_SF: OSF_STONED, Type: ObjFlag, obj_f_spell_flags, OSF_STONED, FLAG_OFF}
+{7359}{[End], AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_M_Stone, Type: EyeCandy, 2, Add}
+{7360}{[End], AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_M_Stone, Type: ObjFlag, obj_f_spell_flags, OSF_STONED, FLAG_OFF}
+{7361}{[End], AoE: Tgt_Obj_T_Portal | Tgt_Obj_M_Stone, Type: EyeCandy, 3, Remove}
+{7362}{[End], AoE: Tgt_Obj_T_Portal | Tgt_Obj_M_Stone, AoE_SF: OSF_STONED, Type: ObjFlag, obj_f_spell_flags, OSF_STONED, FLAG_ON}
+
+
+// 128 -- Slow Party
+{7400}{AoE: Tgt_Self | Tgt_All_Party_Critters}
+{7401}{Cost: 30, Duration: (20 @ -1)}
+{7403}{Cancels_SF: OSF_TEMPUS_FUGIT}
+{7404}{AI_Flee: 8}
+{7405}{[Begin], Type: ObjFlag, obj_f_critter_flags2, OCF2_SLOW_PARTY, FLAG_ON}
+{7406}{[Begin], Apply_AoE: Tgt_Self, Type: EyeCandy, 2, Add}
+{7407}{[End], Type: ObjFlag, obj_f_critter_flags2, OCF2_SLOW_PARTY, FLAG_OFF}
+{7408}{[End], Apply_AoE: Tgt_Self, Type: EyeCandy, 2, Remove}
+{7409}{[End], Apply_AoE: Tgt_Self, Type: EyeCandy, 3, Add, Play: Reverse}
+
+
+// 129 -- Poison DOT
+{7450}{AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical}
+{7451}{Duration: (4 @ -1), DurationTriggerCount: 24, Info: aggressive}
+{7453}{No_Stack: 1}
+{7454}{}
+{7455}{[Begin], Type: NoOp}
+{7456}{[Maintain], AoE: Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Undead | Tgt_Obj_Damaged, Type: EyeCandy, 2, Add}
+{7457}{[Maintain], AoE: Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Undead | Tgt_Obj_Damaged, Type: Damage, DmgType: Dmg_Poison, Dmg: 5}
+
+
+// 130 -- Fatigue DOT
+{7500}{AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Undead | Tgt_Obj_No_ST_Critter_Mechanical}
+{7501}{Duration: (4 @ -1), DurationTriggerCount: 24, Info: aggressive}
+{7503}{No_Stack: 1}
+{7504}{}
+{7505}{[Begin], Type: NoOp}
+{7506}{[Maintain], AoE: Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Undead | Tgt_Obj_Damaged, Type: EyeCandy, 2, Add}
+{7507}{[Maintain], AoE: Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Undead | Tgt_Obj_Damaged, Type: Damage, DmgType: Dmg_Magic, Dmg: 5}
+
+
+// 131 -- Call Winds (All)
+{7550}{AoE: Tgt_Self | Tgt_Cone, Radius:5}
+{7551}{Cost: 4, Resist: (stat_constitution @ -5), Info: aggressive}
+{7554}{AI_Offensive: 4}
+{7555}{[Begin], AoE: Tgt_Obj_Weight_Below_5, Type: AGoal, anim_goal_knockback}
+{7556}{[Begin], AoE: Tgt_Obj_T_Critter, Type: AGoal, anim_goal_knockback}
+{7557}{[Begin], AoE: Tgt_Obj_T_Critter, AoE_SF: OSF_BODY_OF_AIR, Type: Damage, DmgType: Dmg_Normal, Dmg: 5-30}
+{7558}{[Begin], AoE: Tgt_Obj_T_Critter, Type: EyeCandy, 2, Add}
+
+
+// 132 -- Unseen Force (All)
+{7600}{AoE: Tgt_Self}
+{7601}{Cost: 5, Info: aggressive}
+{7604}{AI_Offensive: 5}
+{7605}{[Begin], AoE: Tgt_Obj_T_Critter, Type: AGoal, anim_goal_knockback}
+{7606}{[Begin], AoE: Tgt_Obj_T_Critter, Type: EyeCandy, 2, Add}
+{7607}{[Begin], AoE: Tgt_Obj_Weight_Below_5, Type: AGoal, anim_goal_knockback}
+{7608}{[Begin], AoE: Tgt_Obj_Weight_Below_5, Type: EyeCandy, 2, Add}
+
+
+// 133 -- Stasis (Duration)
+{7650}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_Self, [End]AoE: Tgt_Object}
+{7651}{Cost: 15, Duration: (6 @ -1), Info: aggressive}  //Changed by Positiff
+{7653}{No_Stack: 1, Disallowed_TCF: OCF_PARALYZED}
+{7654}{AI_Defensive: (9 @ 1)}
+{7655}{[Begin], Type: ObjFlag, obj_f_spell_flags, OSF_BONDS_OF_MAGIC, FLAG_ON}  //Added by Positiff
+{7656}{[Begin], Type: ObjFlag, obj_f_critter_flags, OCF_PARALYZED, FLAG_ON}
+{7657}{[Begin], Type: EyeCandy, 2, Add}
+{7658}{[Begin], Type: EyeCandy, 3, Add, Play: Stack}
+{7659}{[End], Type: ObjFlag, obj_f_spell_flags, OSF_BONDS_OF_MAGIC, FLAG_OFF}  //Added by Positiff
+{7660}{[End], Type: ObjFlag, obj_f_critter_flags, OCF_PARALYZED, FLAG_OFF}
+{7661}{[End], Type: EyeCandy, 2, Remove}
+{7662}{[End], Type: EyeCandy, 3, Remove}
+{7663}{[End], Type: EyeCandy, 2, Add, Play: Reverse}
+
+
+// 134 -- Freeze
+{7700}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_Self, [End]AoE: Tgt_Object}
+{7701}{Cost: 10, Duration: (6 @ -1), Info: aggressive}
+//-7651--Cost: 10, Maintain: (2 @ 1), Resist: (stat_willpower @ -10), Info: aggressive-
+//-10851--Duration: (0 @ 2), DurationStatInfo: (21 @ 180), Range: 2, Info: friendly-
+{7703}{No_Stack: 1, Disallowed_TCF: OCF_PARALYZED}
+{7704}{AI_Defensive: (9 @ 1)}
+{7705}{[Begin], Type: ObjFlag, obj_f_critter_flags, OCF_PARALYZED, FLAG_ON}
+{7706}{[Begin], Type: ObjFlag, obj_f_flags, OF_FROZEN, FLAG_ON}
+{7707}{[Begin], Type: EyeCandy, 2, Add}
+{7708}{[Begin], Type: EyeCandy, 3, Add, Play: Stack}
+{7709}{[End], Type: ObjFlag, obj_f_critter_flags, OCF_PARALYZED, FLAG_OFF}
+{7710}{[End], Type: ObjFlag, obj_f_flags, OF_FROZEN, FLAG_OFF}
+{7711}{[End], Type: EyeCandy, 2, Remove}
+{7712}{[End], Type: EyeCandy, 3, Remove}
+{7713}{[End], Type: EyeCandy, 2, Add, Play: Reverse}
+// WIP! JLR! Needs to change the TINTING!
+
+
+// 135 -- Summon Undead
+{7750}{AoE: Tgt_None, [Begin]AoE: Tgt_Tile_Empty, [End]AoE: Tgt_Summoned, [Callback]AoE: Tgt_Summoned, [EndCallback]AoE: Tgt_Summoned}
+{7751}{Cost: 5, Maintain: (1 @ 1)}
+{7754}{AI_Summon: 1}
+{7755}{[Begin], AoE: Tgt_Tile_Empty, Type: Summon, Proto: 28322}
+{7756}{[Begin], Apply_AoE: Tgt_Summoned, Type: ObjFlag, obj_f_spell_flags, OSF_MIND_CONTROLLED, FLAG_ON}
+{7757}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 2, Add, Play: Callback}
+{7758}{[End], Type: EyeCandy, 2, Add, Play: Reverse | End_Callback}
+{7759}{[Callback], Type: ObjFlag, obj_f_flags, OF_DONTDRAW, FLAG_OFF}
+{7760}{[EndCallback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+
+
+// 136 -- Conjure Spirit II  -- Different art, used for Pelogian in Tulla
+{7800}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Animal | Tgt_Obj_No_ST_Critter_Mechanical | Tgt_Obj_No_Self, [End]AoE: Tgt_Object}
+{7801}{Cost: 0, Maintain: (0 @ 86400), DurationTriggerCount: 80000}  //24 hours of real-time: should be enough for now...
+//-7801--Cost: 15, Maintain: (3 @ 10)-
+{7803}{No_Stack: 1, Disallowed_TSF: OSF_SPOKEN_WITH_DEAD}
+{7805}{[Begin], Type: ObjFlag, obj_f_spell_flags, OSF_SPOKEN_WITH_DEAD, FLAG_ON}
+{7806}{[Begin], Type: EyeCandy, 2, Add}
+{7807}{[Begin], Type: EyeCandy, 3, Add, Play: Stack}
+{7808}{[End], Type: ObjFlag, obj_f_spell_flags, OSF_SPOKEN_WITH_DEAD, FLAG_OFF}
+{7809}{[End], Type: EyeCandy, 2, Remove}
+{7810}{[End], Type: EyeCandy, 3, Remove}
+{7811}{[End], Type: EyeCandy, 2, Add, Play: Reverse}
+
+
+// 137 -- Heal Potion
+{7850}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical | Tgt_Obj_Damaged}
+{7851}{Range: 2, Info: friendly}
+{7853}{No_Stack: 1, ItemTriggers: Item_Used}
+{7854}{AI_HealingLight: 2}
+{7855}{[Begin], ItemTriggers: Item_Used, Type: Heal, Dmg: 10}
+{7856}{[Begin], ItemTriggers: Item_Used, Type: EyeCandy, 2, Add}
+
+
+// 138 -- Haste Boots
+{7900}{AoE: Tgt_Parent_Obj}
+{7901}{Cost: 0}
+{7903}{No_Stack: 1, ItemTriggers: Wear | Unwear}
+{7905}{[Begin], ItemTriggers: Wear, Type: Effect, 58, Add}
+{7906}{[Begin], ItemTriggers: Unwear, Type: Effect, 58, Remove}
+
+
+// 139 -- MI 60
+{7950}{AoE: Tgt_None}
+{7951}{Cost: 0}
+
+
+
+
+// Tech-Item-Only "Spells" ----- '140'
+
+
+// 140 -- Tech: Bear Trap
+{10000}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_Self, [End]AoE: Tgt_Object}
+{10001}{Cost: 0, Duration: (10 @ -1), Info: aggressive}  //Changed by Positiff
+{10002}{Is_Tech: 1}  //Added by Positiff
+{10003}{No_Stack: 1, Disallowed_TCF: OCF_PARALYZED}
+{10005}{[Begin], Type: ObjFlag, obj_f_spell_flags, OSF_ENTANGLED, FLAG_ON}
+{10006}{[Begin], Type: EyeCandy, 2, Add}
+{10007}{[Begin], Type: EyeCandy, 3, Add, Play: Stack}
+{10008}{[End], Type: ObjFlag, obj_f_spell_flags, OSF_ENTANGLED, FLAG_OFF}
+{10009}{[End], Type: EyeCandy, 2, Remove}
+{10010}{[End], Type: EyeCandy, 3, Remove}
+{10011}{[End], Type: EyeCandy, 2, Add, Play: Reverse}
+
+
+// 141 -- Tech: Brain Builder
+{10050}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Parent_Obj}
+{10051}{Info: friendly}
+{10052}{Is_Tech: 1}  //Added by Positiff
+{10053}{No_Stack: 1, ItemTriggers: Item_Used}
+{10055}{[Begin], ItemTriggers: Item_Used, Type: Effect, 122, Add}  //Changed by Positiff
+{10056}{[Begin], ItemTriggers: Item_Used, Type: Effect, 320, Add}  //Changed by Positiff
+{10057}{[Begin], ItemTriggers: Item_Used, Type: EyeCandy, 2, Add}
+
+
+// 142 -- Tech: Elixir of Hypnotic Suggestion
+{10100}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_No_T_PC | Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Animal | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Undead | Tgt_Obj_No_ST_Critter_Mechanical | Tgt_Obj_No_Self, [End]AoE: Tgt_Object}
+{10101}{Duration: (60 @ -1), Range: 2, Info: friendly}  //Changed by Positiff
+{10102}{Is_Tech: 1}  //Added by Positiff
+{10103}{No_Stack: 0, Disallowed_TSF: OSF_MIND_CONTROLLED, ItemTriggers: Item_Used}
+{10104}{AI_Offensive: 19}
+{10105}{[Begin], ItemTriggers: Item_Used, Type: ObjFlag, obj_f_spell_flags, OSF_MIND_CONTROLLED, FLAG_ON}
+{10106}{[Begin], ItemTriggers: Item_Used, Type: EyeCandy, 2, Add}
+{10107}{[End], ItemTriggers: Item_Used, Type: ObjFlag, obj_f_spell_flags, OSF_MIND_CONTROLLED, FLAG_OFF}
+
+
+// 143 -- Tech: Paralysis
+{10150}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Undead | Tgt_Obj_No_ST_Critter_Mechanical | Tgt_Obj_No_Self, [End]AoE: Tgt_Object}
+{10151}{Duration: (8 @ -1), Info: friendly}  //Changed by Positiff
+{10152}{Is_Tech: 1}  //Added by Positiff
+{10153}{No_Stack: 1, Disallowed_TCF: OCF_PARALYZED}
+{10154}{AI_Defensive: (9 @ 1)}
+{10155}{[Begin], Type: ObjFlag, obj_f_critter_flags, OCF_PARALYZED, FLAG_ON}
+{10156}{[Begin], Type: EyeCandy, 2, Add}
+{10157}{[Begin], Type: EyeCandy, 3, Add, Play: Stack}
+{10158}{[End], Type: ObjFlag, obj_f_critter_flags, OCF_PARALYZED, FLAG_OFF}
+{10159}{[End], Type: EyeCandy, 2, Remove}
+{10160}{[End], Type: EyeCandy, 3, Remove}
+{10161}{[End], Type: EyeCandy, 2, Add, Play: Reverse}
+
+
+// 144 -- Tech: Muscle Maker
+{10200}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead, [End]AoE: Tgt_Object}
+{10201}{Cost: 0, Info: friendly}
+{10202}{Is_Tech: 1}  //Added by Positiff
+{10203}{No_Stack: 1, ItemTriggers: Item_Used}
+{10205}{[Begin], ItemTriggers: Item_Used, Type: Effect, 123, Add}  //Changed by Positiff
+{10206}{[Begin], ItemTriggers: Item_Used, Type: Effect, 321, Add}  //Changed by Positiff
+{10207}{[Begin], ItemTriggers: Item_Used, Type: EyeCandy, 2, Add}
+
+
+// 145 -- Tech: Charged Ring
+{10250}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead, [End]AoE: Tgt_Object}
+{10251}{Range: 2, Info: friendly}
+{10252}{Is_Tech: 1}  //Added by Positiff
+{10253}{No_Stack: 1, ItemTriggers: Wear | Unwear}
+{10255}{[Begin], ItemTriggers: Wear, Type: Effect, 118, Add}
+{10256}{[Begin], ItemTriggers: Wear, Type: EyeCandy, 2, Add}
+{10257}{[Begin], ItemTriggers: Unwear, Type: Effect, 118, Remove}
+
+
+// 146 -- Tech: Flow Spectrometer  //Made by Positiff
+{10300}{AoE: Tgt_Obj_T_Critter}
+{10301}{Cost: 0, Duration: (60 @ -1), Info: friendly}
+{10302}{Is_Tech: 1}
+{10303}{No_Stack: 1}
+{10305}{[Begin], Type: ObjFlag, obj_f_spell_flags, OSF_DETECTING_TRAPS, FLAG_ON}
+{10306}{[End], Type: ObjFlag, obj_f_spell_flags, OSF_DETECTING_TRAPS, FLAG_OFF}
+
+
+// 147 -- Tech: Shocking Staff
+{10350}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead, [End]AoE: Tgt_Object}
+{10351}{Cost: 0, ChargesFromCells: 1, Info: aggressive}
+{10352}{Is_Tech: 1}  //Added by Positiff
+{10353}{No_Stack: 1, ItemTriggers: Parent_Dmgs_Opponent_W_Item | Target_Attacker}  //Changed by Positiff
+{10355}{[Begin], ItemTriggers: Parent_Dmgs_Opponent_W_Item | Target_Attacker, Type: ChargeNBranch, Cost: 2}  //Changed by Positiff
+{10356}{[Begin], ItemTriggers: Parent_Dmgs_Opponent_W_Item | Target_Attacker, Type: Damage, DmgType: Dmg_Electrical, Dmg: 15-30}  //Changed by Positiff
+{10357}{[Begin], ItemTriggers: Parent_Dmgs_Opponent_W_Item | Target_Attacker, Type: EyeCandy, 2, Add}  //Changed by Positiff
+
+
+// 148 -- Tech: Hallucinate Grenade
+{10400}{AoE: Tgt_None, [Begin]AoE: Tgt_Tile | Tgt_Obj_Radius, [Begin]Radius: 2, [Callback]AoE: Tgt_Summoned}  //Changed by Positiff
+{10401}{Info: friendly}  //Changed by Positiff
+{10402}{Is_Tech: 1}  //Added by Positiff
+{10403}{No_Stack: 0, ItemTriggers: Parent_Atks_Location}
+{10405}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self | Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical, ItemTriggers: Parent_Atks_Location, Type: ObjFlag, obj_f_critter_flags, OCF_FLEEING, FLAG_ON}
+{10406}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self | Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical, ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 2, Add}
+{10407}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self | Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical, ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 3, Add, Play: Stack}
+{10408}{[Begin], AoE: Tgt_Tile, ItemTriggers: Parent_Atks_Location, Type: Summon, Proto: 4050}
+{10409}{[Begin], AoE: Tgt_Tile, Apply_AoE: Tgt_Summoned, ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 2, Add, Play: Callback}
+{10410}{[Begin], Apply_AoE: Tgt_Self, ItemTriggers: Parent_Atks_Location, Type: Destroy}
+{10411}{[Callback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+
+
+// 149 -- Tech: Fire-resistant Gel  //Made by Positiff
+{10450}{AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical}
+{10451}{Duration: (0 @ 2), DurationStatInfo: (21 @ 180), Range: 2, Info: friendly}
+{10452}{Is_Tech: 1}
+{10453}{No_Stack: 1, ItemTriggers: Item_Used}
+{10455}{[Begin], ItemTriggers: Item_Used, Type: Effect, 355, Add}
+{10456}{[End], ItemTriggers: Item_Used, Type: Effect, 355, Remove}
+
+
+// 150 -- Tech: Heal Light
+{10500}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical | Tgt_Obj_Damaged}
+{10501}{Range: 2, Info: friendly}
+{10502}{Is_Tech: 1}  //Added by Positiff
+{10503}{No_Stack: 1, ItemTriggers: Item_Used}
+{10504}{AI_HealingLight: 2}
+{10505}{[Begin], ItemTriggers: Item_Used, Type: Heal, Dmg: 20}
+{10506}{[Begin], ItemTriggers: Item_Used, Type: EyeCandy, 2, Add}
+
+
+// 151 -- Tech: Fatigue Restore
+{10550}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical}
+{10551}{Range: 2, Info: friendly}
+{10552}{Is_Tech: 1}  //Added by Positiff
+{10553}{No_Stack: 1, ItemTriggers: Item_Used}
+{10554}{AI_FatigueRecover: 2}
+{10555}{[Begin], ItemTriggers: Item_Used, Type: Heal, DmgType: Dmg_Magic, Dmg: 20}
+{10556}{[Begin], ItemTriggers: Item_Used, Type: EyeCandy, 2, Add}
+
+
+// 152 -- Tech: Cure Poison
+{10600}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical | Tgt_Obj_Poisoned}
+{10601}{Range: 2, Info: friendly}
+{10602}{Is_Tech: 1}  //Added by Positiff
+{10603}{No_Stack: 1, ItemTriggers: Item_Used}
+{10604}{AI_CurePoison: 2}
+{10605}{[Begin], ItemTriggers: Item_Used, Type: Heal, DmgType: Dmg_Poison, Dmg: 100}  //Changed by Positiff
+{10606}{[Begin], ItemTriggers: Item_Used, Type: EyeCandy, 2, Add}
+
+
+// 153 -- Tech: Fatigue Limiter
+{10650}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical, [End]AoE: Tgt_Object}
+{10651}{Duration: (180 @ -1), Range: 2, Info: friendly}
+{10652}{Is_Tech: 1}  //Added by Positiff
+{10653}{No_Stack: 1, Disallowed_TCF: OCF_FATIGUE_LIMITING, ItemTriggers: Item_Used}  //Changed by Positiff
+{10655}{[Begin], ItemTriggers: Item_Used, Type: ObjFlag, obj_f_critter_flags, OCF_FATIGUE_LIMITING, FLAG_ON}
+{10656}{[Begin], ItemTriggers: Item_Used, Type: EyeCandy, 2, Add}
+{10657}{[End], ItemTriggers: Item_Used, Type: ObjFlag, obj_f_critter_flags, OCF_FATIGUE_LIMITING, FLAG_OFF}
+
+
+// 154 -- Tech: Heal Accelerator
+{10700}{AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical}
+{10701}{Duration: (4 @ -1), DurationTriggerCount: 30, Range: 2, Info: friendly}  //Changed by Positiff
+{10702}{Is_Tech: 1}  //Added by Positiff
+{10703}{No_Stack: 1, ItemTriggers: Item_Used}
+{10705}{[Begin], ItemTriggers: Item_Used, Type: EyeCandy, 2, Add}
+{10706}{[Maintain], ItemTriggers: Item_Used, Type: Heal, DmgType: Dmg_Normal, Dmg: 3}  //Changed by Positiff
+{10707}{[Maintain], ItemTriggers: Item_Used, Type: Heal, DmgType: Dmg_Magic, Dmg: 2}  //Added by Positiff
+
+
+// 155 -- Tech: Wonder Drug
+{10750}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical}
+{10751}{Range: 2, Info: friendly}
+{10752}{Is_Tech: 1}  //Added by Positiff
+{10753}{No_Stack: 1, ItemTriggers: Item_Used}
+{10754}{AI_HealingMedium:2}
+{10755}{[Begin], ItemTriggers: Item_Used, Type: Heal, DmgType: Dmg_Normal, Dmg: 80}  //Changed by Positiff
+{10756}{[Begin], ItemTriggers: Item_Used, Type: Heal, DmgType: Dmg_Magic, Dmg: 80}  //Changed by Positiff
+{10757}{[Begin], ItemTriggers: Item_Used, Type: EyeCandy, 2, Add}
+
+
+// 156 -- Tech: Cure All
+{10800}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical}
+{10801}{Range: 2, Info: friendly}
+{10802}{Is_Tech: 1}  //Added by Positiff
+{10803}{No_Stack: 1, ItemTriggers: Item_Used}
+{10804}{AI_HealingMedium:2, AI_CurePoison: 2}
+{10805}{[Begin], ItemTriggers: Item_Used, Type: Heal, Dmg_Flags: Full | Scars | Crippling}
+{10806}{[Begin], ItemTriggers: Item_Used, Type: Heal, DmgType: Dmg_Magic, Dmg: 32000}  //Changed by Positiff
+{10807}{[Begin], ItemTriggers: Item_Used, Type: Heal, DmgType: Dmg_Poison, Dmg: 32000}
+{10808}{[Begin], ItemTriggers: Item_Used, Type: EyeCandy, 2, Add}
+
+
+// 157 -- Tech: Boost Persuasion
+{10850}{AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical}
+{10851}{Duration: (0 @ 2), DurationStatInfo: (21 @ 180), Range: 2, Info: friendly}
+{10852}{Is_Tech: 1}  //Added by Positiff
+{10853}{No_Stack: 1, ItemTriggers: Item_Used}
+{10855}{[Begin], ItemTriggers: Item_Used, Type: Effect, 116, Add}
+{10856}{[Begin], ItemTriggers: Item_Used, Type: EyeCandy, 2, Add}
+{10857}{[End], ItemTriggers: Item_Used, Type: Effect, 116, Remove}
+
+
+// 158 -- Tech: Boost Strength
+{10900}{AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical}
+{10901}{Duration: (0 @ 2), DurationStatInfo: (21 @ 180), Range: 2, Info: friendly}
+{10902}{Is_Tech: 1}  //Added by Positiff
+{10903}{No_Stack: 1, ItemTriggers: Item_Used}
+{10905}{[Begin], ItemTriggers: Item_Used, Type: Effect, 117, Add}
+{10906}{[Begin], ItemTriggers: Item_Used, Type: EyeCandy, 2, Add}
+{10907}{[End], ItemTriggers: Item_Used, Type: Effect, 117, Remove}
+
+
+// 159 -- Tech: Boost Perception
+{10950}{AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical}
+{10951}{Duration: (0 @ 2), DurationStatInfo: (21 @ 180), Range: 2, Info: friendly}
+{10952}{Is_Tech: 1}  //Added by Positiff
+{10953}{No_Stack: 1, ItemTriggers: Item_Used}
+{10955}{[Begin], ItemTriggers: Item_Used, Type: Effect, 121, Add}
+{10956}{[Begin], ItemTriggers: Item_Used, Type: EyeCandy, 2, Add}
+{10957}{[End], ItemTriggers: Item_Used, Type: Effect, 121, Remove}
+
+
+// 160 -- Tech: Boost Dexterity
+{11000}{AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical}
+{11001}{Duration: (0 @ 2), DurationStatInfo: (21 @ 180), Range: 2, Info: friendly}
+{11002}{Is_Tech: 1}  //Added by Positiff
+{11003}{No_Stack: 1, ItemTriggers: Item_Used}
+{11005}{[Begin], ItemTriggers: Item_Used, Type: Effect, 120, Add}
+{11006}{[Begin], ItemTriggers: Item_Used, Type: EyeCandy, 2, Add}
+{11007}{[End], ItemTriggers: Item_Used, Type: Effect, 120, Remove}
+
+
+// 161 -- Tech: Boost Mental Stats
+{11050}{AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical}
+{11051}{Duration: (0 @ 2), DurationStatInfo: (21 @ 180), Range: 2, Info: friendly}
+{11052}{Is_Tech: 1}  //Added by Positiff
+{11053}{No_Stack: 1, ItemTriggers: Item_Used}
+{11055}{[Begin], ItemTriggers: Item_Used, Type: Effect, 122, Add, Count: 2}  //Changed by Positiff
+{11056}{[Begin], ItemTriggers: Item_Used, Type: EyeCandy, 2, Add}
+{11057}{[End], ItemTriggers: Item_Used, Type: Effect, 122, Remove, Count: 2}  //Changed by Positiff
+
+
+// 162 -- Tech: Boost Physical Stats
+{11100}{AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical}
+{11101}{Duration: (0 @ 2), DurationStatInfo: (21 @ 180), Range: 2, Info: friendly}
+{11102}{Is_Tech: 1}  //Added by Positiff
+{11103}{No_Stack: 1, ItemTriggers: Item_Used}
+{11105}{[Begin], ItemTriggers: Item_Used, Type: Effect, 123, Add, Count: 2}  //Changed by Positiff
+{11106}{[Begin], ItemTriggers: Item_Used, Type: EyeCandy, 2, Add}
+{11107}{[End], ItemTriggers: Item_Used, Type: Effect, 123, Remove, Count: 2}  //Changed by Positiff
+
+
+// 163 -- Tech: Boost All Stats
+{11150}{AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical}
+{11151}{Duration: (0 @ 2), DurationStatInfo: (21 @ 180), Range: 2, Info: friendly}
+{11152}{Is_Tech: 1}  //Added by Positiff
+{11153}{No_Stack: 1, ItemTriggers: Item_Used}
+{11155}{[Begin], ItemTriggers: Item_Used, Type: Effect, 122, Add, Count: 2}  //Changed by Positiff
+{11156}{[Begin], ItemTriggers: Item_Used, Type: Effect, 123, Add, Count: 2}  //Changed by Positiff
+{11157}{[Begin], ItemTriggers: Item_Used, Type: EyeCandy, 2, Add}
+{11158}{[End], ItemTriggers: Item_Used, Type: Effect, 122, Remove, Count: 2}  //Changed by Positiff
+{11159}{[End], ItemTriggers: Item_Used, Type: Effect, 123, Remove, Count: 2}  //Changed by Positiff
+
+
+// 164 -- Tech: Boost Willpower  //Made by Positiff
+{11200}{AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical}
+{11201}{Duration: (0 @ 2), DurationStatInfo: (21 @ 180), Range: 2, Info: friendly}
+{11202}{Is_Tech: 1}
+{11203}{No_Stack: 1, ItemTriggers: Item_Used}
+{11205}{[Begin], ItemTriggers: Item_Used, Type: Effect, 55, Add}
+{11206}{[Begin], ItemTriggers: Item_Used, Type: EyeCandy, 2, Add}
+{11207}{[End], ItemTriggers: Item_Used, Type: Effect, 55, Remove}
+
+
+// 165 --  Tech: Boost Coordination  //Made by Positiff
+{11250}{AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical}
+{11251}{Duration: (0 @ 2), DurationStatInfo: (21 @ 180), Range: 2, Info: friendly}
+{11252}{Is_Tech: 1}
+{11253}{No_Stack: 1, ItemTriggers: Item_Used}
+{11255}{[Begin], ItemTriggers: Item_Used, Type: Effect, 324, Add}
+{11256}{[Begin], ItemTriggers: Item_Used, Type: EyeCandy, 2, Add}
+{11257}{[End], ItemTriggers: Item_Used, Type: Effect, 324, Remove}
+
+
+// 166 -- Tech: Corrosive Acid
+{11300}{AoE: Tgt_Tile | Tgt_Obj_Radius, Radius: 2}
+{11301}{Cost: 0, Info: aggressive}
+{11302}{Is_Tech: 1}  //Added by Positiff
+{11303}{No_Stack: 0, ItemTriggers: Parent_Atks_Location}
+{11305}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self, ItemTriggers: Parent_Atks_Location, Type: Damage, DmgType: Dmg_Acid, Dmg: 30-75}  //Changed by Positiff
+{11306}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self, ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 2, Add}
+{11307}{[Begin], AoE: Tgt_Tile, ItemTriggers: Parent_Atks_Location, Type: Summon, Proto: 4050}
+{11308}{[Begin], AoE: Tgt_Tile, Apply_AoE: Tgt_Summoned, ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 2, Add, Play: Callback}  //Added by Positiff
+{11309}{[Begin], Apply_AoE: Tgt_Self, ItemTriggers: Parent_Atks_Location, Type: Destroy}
+{11310}{[Callback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+
+
+// 167 -- Tech: Animal Scent
+{11350}{AoE: Tgt_Obj_T_Critter}
+{11351}{Cost: 0, Duration: (338 @ -1), Range: 2}
+{11352}{Is_Tech: 1}  //Added by Positiff
+{11353}{No_Stack: 0, ItemTriggers: Item_Used}
+{11355}{[Begin], ItemTriggers: Item_Used, Type: ObjFlag, obj_f_critter_flags, OCF_ANIMAL_ENSHROUD, FLAG_ON}
+{11356}{[End], ItemTriggers: Item_Used, Type: ObjFlag, obj_f_critter_flags, OCF_ANIMAL_ENSHROUD, FLAG_OFF}
+
+
+// 168 -- Tech: Charged Regenerate
+{11400}{AoE: Tgt_Parent_Obj, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Mechanical}
+{11401}{Cost: 0, Maintain: (0 @ 5), ChargesFromCells: 1, Info: friendly}
+{11402}{Is_Tech: 1}  //Added by Positiff
+{11403}{No_Stack: 1, ItemTriggers: Wear | Unwear}
+{11405}{[Begin], Type: NoOp}  //Needed or spell won't maintain!
+{11406}{[Maintain], ItemTriggers: Wear, Type: TestNBranch, HP_Damage, GreaterThan, TestVal: 0}
+{11407}{[Maintain], ItemTriggers: Wear, Type: ChargeNBranch, Cost: 1}
+{11408}{[Maintain], AoE: Tgt_Obj_No_ST_Critter_Dead, ItemTriggers: Wear, Type: EyeCandy, 2, Add}
+{11409}{[Maintain], AoE: Tgt_Obj_No_ST_Critter_Dead, ItemTriggers: Wear, Type: Heal, DmgType: Dmg_Normal, Dmg: 5}  //Changed by Positiff
+{11410}{[Maintain], AoE: Tgt_Obj_No_ST_Critter_Dead, ItemTriggers: Wear, Type: Heal, DmgType: Dmg_Magic, Dmg: 3}  //Added by Positiff
+
+
+// 169 -- Tech: Flow Neutralizer  //Made by gamer_777, Moved by Positiff
+{11450}{AoE: Tgt_Obj_T_Critter}
+{11451}{Cost: 0, Info: friendly}
+{11452}{Is_Tech: 1}
+{11453}{No_Stack: 1, ItemTriggers: Wear | Unwear}
+{11455}{[Begin], ItemTriggers: Wear, Type: ObjFlag, obj_f_spell_flags, OSF_MIRRORED, FLAG_ON}
+{11456}{[Begin], ItemTriggers: Unwear, Type: ObjFlag, obj_f_spell_flags, OSF_MIRRORED, FLAG_OFF}
+
+
+// 170 -- Tech: Hallucinate  //Moved by Positiff
+{11500}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Undead | Tgt_Obj_No_ST_Critter_Mechanical, [End]AoE: Tgt_Object}  //Changed by Positiff
+{11501}{Duration: (600 @ 2), DurationStatInfo: (21 @ 180), Range: 2, Info: friendly}  //Changed by Positiff
+{11502}{Is_Tech: 1}  //Added by Positiff
+{11503}{No_Stack: 1}
+{11505}{[Begin], Type: ObjFlag, obj_f_critter_flags, OCF_FLEEING, FLAG_ON}
+{11506}{[Begin], Type: EyeCandy, 2, Add}
+
+
+// 171 -- Tech: Strong Poison
+{11550}{AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Undead | Tgt_Obj_No_ST_Critter_Mechanical}
+{11551}{Duration: (180 @ -1), Range: 2, Info: aggressive}  //Changed by Positiff
+{11552}{Is_Tech: 1}  //Added by Positiff
+{11553}{No_Stack: 0, ItemTriggers: Item_Used}
+{11554}{AI_Offensive:2}
+{11555}{[Begin], ItemTriggers: Item_Used, Type: Effect, 224, Add, Count: 2}  //Changed by Positiff
+{11556}{[Begin], ItemTriggers: Item_Used, Type: Damage, DmgType: Dmg_Poison, Dmg: 200}  //Changed by Positiff
+{11557}{[Begin], ItemTriggers: Item_Used, Type: EyeCandy, 2, Add}
+{11558}{[End], ItemTriggers: Item_Used, Type: Effect, 224, Remove, Count: 2}  //Changed by Positiff
+
+
+// 172 -- Tech: Envenomed Axe  //Made by Positiff
+{11600}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Undead | Tgt_Obj_No_ST_Critter_Mechanical, [End]AoE: Tgt_Object}
+{11601}{Duration: (180 @ -1), Info: aggressive}
+{11602}{Is_Tech: 1}
+{11603}{No_Stack: 0}
+{11605}{[Begin], Type: Effect, 224, Add}
+{11606}{[End], Type: Effect, 224, Remove}
+
+
+// 173 -- Tech: Machined Plate  //Made by Positiff
+{11650}{AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead}
+{11651}{Cost: 0, Duration: (60 @ -1), Info: friendly}
+{11652}{Is_Tech: 1}
+{11653}{No_Stack: 1}
+{11655}{[Begin], Type: EyeCandy, 2, Add}
+{11656}{[Begin], Type: ObjFlag, obj_f_critter_flags, OCF_FATIGUE_LIMITING, FLAG_ON}
+{11657}{[End], Type: EyeCandy, 2, Remove}
+{11658}{[End], Type: ObjFlag, obj_f_critter_flags, OCF_FATIGUE_LIMITING, FLAG_OFF}
+
+
+// 174 -- Tech: Charged Shield  //Made by Positiff
+{11700}{AoE: Tgt_Parent_Obj, [Begin]AoE: Tgt_Obj_T_Critter}
+{11701}{Cost: 0, ChargesFromCells: 1, Info: aggressive}
+{11702}{Is_Tech: 1}
+{11703}{No_Stack: 1, ItemTriggers: Parent_Hit | Target_Attacker | Target_Attacker_Weapon_Melee}
+{11705}{[Begin], AoE: Tgt_Obj_No_Self, Type: ChargeNBranch, Cost: 1}
+{11706}{[Begin], AoE: Tgt_Obj_No_Self, ItemTriggers: Parent_Hit | Target_Attacker | Target_Attacker_Weapon_Melee, Type: Damage, DmgType: Dmg_Electrical, Dmg: 8-0, Dmg_Flags: Scaled}
+{11707}{[Begin], AoE: Tgt_Obj_No_Self, ItemTriggers: Parent_Hit | Target_Attacker | Target_Attacker_Weapon_Melee, Type: EyeCandy, 2, Add}
+
+
+// 175 -- Tech: Explosion Grenade
+{11750}{AoE: Tgt_Tile | Tgt_Obj_Radius, Radius: 2, [Callback]AoE: Tgt_Summoned}
+{11751}{Cost: 0, Info: aggressive}
+{11752}{Is_Tech: 1}  //Added by Positiff
+{11753}{No_Stack: 0, ItemTriggers: Parent_Atks_Location}
+{11755}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self, ItemTriggers: Parent_Atks_Location, Type: Damage, DmgType: Dmg_Fire, Dmg: 10-20}  //Changed by Positiff
+{11756}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self, ItemTriggers: Parent_Atks_Location, Type: Damage, DmgType: Dmg_Normal, Dmg: 30-60}  //Changed by Positiff
+{11757}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self | Tgt_obj_T_Critter, ItemTriggers: Parent_Atks_Location, Type: Damage, DmgType: Dmg_Magic, Dmg: 15-30}  //Added by Positiff
+{11758}{[Begin], AoE: Tgt_Tile, ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 2, Add}  //Changed by Positiff
+{11759}{[Begin], AoE: Tgt_Tile, ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 3, Add, Play: Stack}  //Changed by Positiff
+{11760}{[Begin], AoE: Tgt_Tile, ItemTriggers: Parent_Atks_Location, Type: Summon, Proto: 4050}
+{11761}{[Begin], AoE: Tgt_Tile, Apply_AoE: Tgt_Summoned, ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 2, Add, Play: Callback}
+{11762}{[Begin], Apply_AoE: Tgt_Self, ItemTriggers: Parent_Atks_Location, Type: Destroy}
+{11763}{[Callback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+
+
+// 176 -- Tech: Dynamite
+{11800}{AoE: Tgt_Tile | Tgt_Obj_Radius, Radius: 3, [Callback]AoE: Tgt_Summoned}  //Changed by Positiff
+{11801}{Cost: 0, Info: aggressive}
+{11802}{Is_Tech: 1}  //Added by Positiff
+{11803}{No_Stack: 0}
+{11805}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self, Type: Damage, DmgType: Dmg_Fire, Dmg: 25-50}  //Changed by Positiff
+{11806}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self, Type: Damage, DmgType: Dmg_Normal, Dmg: 75-150}  //Changed by Positiff
+{11807}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self | Tgt_obj_T_Critter, Type: Damage, DmgType: Dmg_Magic, Dmg: 35-75}  //Added by Positiff
+{11808}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self | Tgt_Obj_T_Critter, Type: AGoal, anim_goal_knock_down}  //Changed by Positiff
+{11809}{[Begin], AoE: Tgt_Tile, Type: EyeCandy, 2, Add}  //Changed by Positiff
+{11810}{[Begin], AoE: Tgt_Tile, Type: EyeCandy, 3, Add, Play: Stack}  //Changed by Positiff
+{11811}{[Begin], AoE: Tgt_Tile, Type: Summon, Proto: 4050}
+{11812}{[Begin], AoE: Tgt_Tile, Apply_AoE: Tgt_Summoned, Type: EyeCandy, 2, Add, Play: Callback}
+{11813}{[Begin], Apply_AoE: Tgt_Self, Type: Destroy}
+{11814}{[Callback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+
+
+// 177 -- Tech: Flash Grenade
+{11850}{AoE: Tgt_None, [Begin]AoE: Tgt_Tile | Tgt_Obj_Radius | Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical | Tgt_Non_Party_Critters, [Begin]Radius: 2, [End]AoE: Tgt_Object, [Callback]AoE: Tgt_Summoned}
+{11851}{Cost: 0, Duration: (10 @ -1), Info: aggressive}
+{11852}{Is_Tech: 1}  //Added by Positiff
+{11853}{No_Stack: 0, ItemTriggers: Parent_Atks_Location}
+{11855}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self, ItemTriggers: Parent_Atks_Location, Type: ObjFlag, obj_f_critter_flags, OCF_BLINDED, FLAG_ON}
+{11856}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self, ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 2, Add}
+{11857}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self, ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 3, Add, Play: Stack}
+{11858}{[Begin], AoE: Tgt_Tile, ItemTriggers: Parent_Atks_Location, Type: Summon, Proto: 4050}
+{11859}{[Begin], AoE: Tgt_Tile, Apply_AoE: Tgt_Summoned, ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 2, Add, Play: Callback}
+{11860}{[Begin], Apply_AoE: Tgt_Self, ItemTriggers: Parent_Atks_Location, Type: Destroy}
+{11861}{[End], AoE: Tgt_Object, ItemTriggers: Parent_Atks_Location, Type: ObjFlag, obj_f_critter_flags, OCF_BLINDED, FLAG_OFF}
+{11862}{[Callback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+
+
+// 178 -- Tech: Smoke Grenade
+{11900}{AoE: Tgt_None, Radius: 1, [Begin]AoE: Tgt_Tile_Radius, [End]AoE: Tgt_Summoned, [EndCallback]AoE: Tgt_Summoned}
+{11901}{Cost: 0, Duration: (10 @ -1), Info: aggressive}
+{11902}{Is_Tech: 1}  //Added by Positiff
+{11903}{No_Stack: 0, ItemTriggers: Parent_Atks_Location}
+{11905}{[Begin], AoE: Tgt_Tile, ItemTriggers: Parent_Atks_Location, Type: Summon, Proto: 4033}
+{11906}{[Begin], Apply_AoE: Tgt_Self, ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 1, Add}  //Added by Positiff
+{11907}{[Begin], Apply_AoE: Tgt_Summoned, ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 2, Add}
+{11908}{[Begin], Apply_AoE: Tgt_Summoned, ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 3, Add, Play: Stack | Random_Start}
+{11909}{[Begin], Apply_AoE: Tgt_Self, ItemTriggers: Parent_Atks_Location, Type: Destroy}
+{11910}{[End], ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 2, Remove}
+{11911}{[End], ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 3, Remove}
+{11912}{[End], ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 2, Add, Play: Reverse | End_Callback}
+{11913}{[Callback], Type: ObjFlag, obj_f_flags, OF_DONTDRAW, FLAG_OFF}
+{11914}{[EndCallback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+
+
+// 179 -- Tech: Stun Grenade
+{11950}{AoE: Tgt_None, [Begin]AoE: Tgt_Tile | Tgt_Obj_Radius | Tgt_Non_Party_Critters, [Begin]Radius: 2, [Callback]AoE: Tgt_Summoned}  //Changed by Positiff
+{11951}{Cost: 0, Info: aggressive}
+{11952}{Is_Tech: 1}  //Added by Positiff
+{11953}{No_Stack: 0, ItemTriggers: Parent_Atks_Location}
+{11955}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self | Tgt_obj_T_Critter, ItemTriggers: Parent_Atks_Location, Type: Damage, DmgType: Dmg_Magic, Dmg: 5-15}  //Added by Positiff
+{11956}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self | Tgt_Obj_T_Critter, ItemTriggers: Parent_Atks_Location, Type: Damage, Dmg_Flags: Stunned}  //Changed by Positiff
+{11957}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self | Tgt_Obj_T_Critter, ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 2, Add}
+{11958}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self | Tgt_Obj_T_Critter, ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 3, Add, Play: Stack}
+{11959}{[Begin], AoE: Tgt_Tile, ItemTriggers: Parent_Atks_Location, Type: Summon, Proto: 4050}
+{11960}{[Begin], AoE: Tgt_Tile, Apply_AoE: Tgt_Summoned, ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 2, Add, Play: Callback}
+{11961}{[Begin], Apply_AoE: Tgt_Self, ItemTriggers: Parent_Atks_Location, Type: Destroy}
+{11962}{[Callback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+
+
+// 180 -- Tech: Barrier of Fire
+{12000}{AoE: Tgt_None, Radius: 1, [Begin]AoE: Tgt_Obj_Radius | Tgt_Obj_T_Critter | Tgt_Tile_Radius, [Maintain]AoE: Tgt_Obj_Radius | Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Mechanical, [End]AoE: Tgt_Summoned, [EndCallback]AoE: Tgt_Summoned}
+{12001}{Cost: 0, Duration: (11 @ -1), Info: aggressive}  //Changed by Positiff
+{12002}{Is_Tech: 1}  //Added by Positiff
+{12003}{No_Stack: 0, ItemTriggers: Parent_Atks_Location}
+{12005}{[Begin], AoE: Tgt_Tile_Radius, ItemTriggers: Parent_Atks_Location, Type: Summon, Proto: 4031}
+{12006}{[Begin], Apply_AoE: Tgt_Summoned, ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 1, Add}  //Added by Positiff
+{12007}{[Begin], Apply_AoE: Tgt_Summoned, ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 2, Add}
+{12008}{[Begin], Apply_AoE: Tgt_Summoned, ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 3, Add, Play: Stack | Random_Start | Fire_Dmg}
+{12009}{[Begin], Apply_AoE: Tgt_Self, ItemTriggers: Parent_Atks_Location, Type: Destroy}
+{12010}{[End], ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 1, Remove}  //Added by Positiff
+{12011}{[End], ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 2, Remove}
+{12012}{[End], ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 3, Remove}
+{12013}{[End], ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 2, Add, Play: Reverse | End_Callback}
+{12014}{[EndCallback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+
+
+// 181 -- Tech: Teleportation Device  //Made by Gentle_Giant, Moved by Positiff
+{12050}{AoE: Tgt_Self}
+{12051}{Cost: 0, ChargeBeginCost: 0}
+{12052}{Is_Tech: 1}
+{12054}{No_Resist: 1}
+{12055}{[Begin], Type: EyeCandy, 2, Add}
+{12056}{[Begin], Type: Movement, Move_Location: Teleport_Tile}
+
+
+// 182 -- Tech: Magnetic Inversion  //Changed by Positiff
+{12100}{AoE: Tgt_Obj_T_Critter}
+{12101}{Cost: 0, Duration: (60 @ -1), Info: friendly}
+{12102}{Is_Tech: 1}
+{12103}{No_Stack: 1, Disallowed_TSF: OSF_MAGNETIC_INVERSION}
+{12105}{[Begin], Type: ObjFlag, obj_f_spell_flags, OSF_MAGNETIC_INVERSION, FLAG_ON}
+{12106}{[Begin], Type: EyeCandy, 2, Add, Play: Check_Already}
+{12107}{[End], Type: ObjFlag, obj_f_spell_flags, OSF_MAGNETIC_INVERSION, FLAG_OFF}
+{12108}{[End], Type: EyeCandy, 2, Remove}
+
+
+// 183 -- Tech: Animal Lure
+{12150}{AoE: Tgt_Obj_T_Critter, [End]AoE: Tgt_Summoned}
+{12151}{Cost: 0, Duration: (2 @ -1), DurationTriggerCount: 15, Range: 2, Info: aggressive}
+{12152}{Is_Tech: 1}  //Added by Positiff
+{12153}{No_Stack: 1, ItemTriggers: Item_Used}
+{12155}{[Begin], Apply_AoE: Tgt_Tile_Empty | Tgt_Tile_Offscreen, ItemTriggers: Item_Used, Type: Summon, Proto: 0, List: 0}
+{12156}{[Begin], Apply_AoE: Tgt_Summoned, ItemTriggers: Item_Used, Type: ObjFlag, obj_f_flags, OF_DONTDRAW, FLAG_OFF}
+{12157}{[Begin], ItemTriggers: Item_Used, Type: AIRedirect, OCF_ANIMAL}
+{12158}{[Begin], ItemTriggers: Item_Used, Type: EyeCandy, 2, Add}
+{12159}{[Maintain], ItemTriggers: Item_Used, Type: AIRedirect, OCF_ANIMAL}
+// Note: We don't bother removing the critter... he will fight the PC too, if he lives?
+
+
+// 184 -- Tech: Trap Springer
+{12200}{AoE: Tgt_Obj_T_Portal | Tgt_Obj_T_Container | Tgt_Obj_ST_Openable_Locked}
+{12201}{Cost: 0, Duration: (4 @ -1), Range: 2, Info: friendly}
+{12202}{Is_Tech: 1}  //Added by Positiff
+{12203}{No_Stack: 1, ItemTriggers: Item_Used}
+{12205}{[Begin], ItemTriggers: Item_Used, Type: EyeCandy, 2, Add}
+{12206}{[Begin], Apply_AoE: Tgt_Source, ItemTriggers: Item_Used, Type: Destroy}
+{12207}{[End], ItemTriggers: Item_Used, Type: Use}
+{12208}{[End], ItemTriggers: Item_Used, Type: EyeCandy, 2, Remove}
+
+
+// 185 -- Tech: Plastid  //Made by Positiff
+{12250}{AoE: Tgt_Tile | Tgt_Obj_Radius, Radius: 3, [Callback]AoE: Tgt_Summoned}  //Changed by Positiff
+{12251}{Cost: 0, Info: aggressive}
+{12252}{Is_Tech: 1}
+{12253}{No_Stack: 0}
+{12255}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self, Type: Damage, DmgType: Dmg_Fire, Dmg: 35-50}  //Changed by Positiff
+{12256}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self, Type: Damage, DmgType: Dmg_Normal, Dmg: 100-150}  //Changed by Positiff
+{12257}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self | Tgt_obj_T_Critter, Type: Damage, DmgType: Dmg_Magic, Dmg: 50-75}  //Added by Positiff
+{12258}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self | Tgt_obj_T_Critter, Type: AGoal, anim_goal_knock_down}  //Added by Positiff
+{12259}{[Begin], AoE: Tgt_Tile, Type: EyeCandy, 2, Add}  //Changed by Positiff
+{12260}{[Begin], AoE: Tgt_Tile, Type: EyeCandy, 3, Add, Play: Stack}  //Changed by Positiff
+{12261}{[Begin], AoE: Tgt_Tile, Type: Summon, Proto: 4050}
+{12262}{[Begin], AoE: Tgt_Tile, Apply_AoE: Tgt_Summoned, Type: EyeCandy, 2, Add, Play: Callback}
+{12263}{[Begin], Apply_AoE: Tgt_Self, Type: Destroy}
+{12264}{[Callback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+
+
+// 186 --  Tech: Flash Grenade
+{12300}{AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical}
+{12301}{Duration: (10 @ -1), Resist: (stat_constitution @ -5), Range: 2, Info: friendly}
+{12302}{Is_Tech: 1}  //Added by Positiff
+{12303}{No_Stack: 1}
+{12305}{[Begin], Type: ObjFlag, obj_f_critter_flags, OCF_BLINDED, FLAG_ON}
+{12306}{[End], Type: ObjFlag, obj_f_critter_flags, OCF_BLINDED, FLAG_OFF}
+
+
+// 187 -- Tech: Molotov Cocktail  //Moved by Positiff
+{12350}{AoE: Tgt_Tile | Tgt_Obj_Radius, Radius: 2, [Callback]AoE: Tgt_Summoned}
+{12351}{Cost: 0, Info: aggressive}
+{12352}{Is_Tech: 1}
+{12353}{No_Stack: 0, ItemTriggers: Parent_Atks_Location}
+{12355}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self, ItemTriggers: Parent_Atks_Location, Type: Damage, DmgType: Dmg_Fire, Dmg: 10-30}  //Changed by Positiff
+{12356}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self, ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 2, Add}
+{12357}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self, ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 3, Add, Play: Stack}
+{12358}{[Begin], AoE: Tgt_Tile, ItemTriggers: Parent_Atks_Location, Type: Summon, Proto: 4050}
+{12359}{[Begin], AoE: Tgt_Tile, Apply_AoE: Tgt_Summoned, ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 2, Add, Play: Callback}
+{12360}{[Begin], Apply_AoE: Tgt_Self, ItemTriggers: Parent_Atks_Location, Type: Destroy}
+{12361}{[Callback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+
+
+// 188 -- UNUSED
+{12400}{AoE: Tgt_None}
+{12401}{Cost: 0}
+{12402}{Is_Tech: 1}
+
+
+// 189 -- Tech: Invigorator
+{12450}{AoE: Tgt_Object, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Undead | Tgt_Obj_No_ST_Critter_Mechanical}
+{12451}{Duration: (60 @ -1), Range: 2, Info: friendly}
+{12452}{Is_Tech: 1}  //Added by Positiff
+{12453}{No_Stack: 1, ItemTriggers: Item_Used}
+{12454}{AI_HealingLight: 8}
+{12455}{[Begin], Type: Effect, 318, Add, Count: 25}  //Raises Max HPs & Fatigue
+{12456}{[Begin], ItemTriggers: Item_Used, Type: Heal, DmgType: Dmg_Normal, Dmg: 25}
+{12457}{[Begin], ItemTriggers: Item_Used, Type: Heal, DmgType: Dmg_Magic, Dmg: 25}
+{12458}{[Begin], ItemTriggers: Item_Used, Type: EyeCandy, 2, Add}
+{12459}{[End], Type: Effect, 318, Remove, Count: 25}
+{12460}{[End], Type: EyeCandy, 2, Add, Play: Reverse}
+
+
+// 190 -- Tech: Reanimator
+{12500}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Undead | Tgt_Obj_No_ST_Critter_Mechanical | Tgt_Obj_No_Self, [Callback]AoE: Tgt_Object}
+{12501}{Info: friendly}
+{12502}{Is_Tech: 1}  //Added by Positiff
+{12503}{Cancels_SF: OSF_SPOKEN_WITH_DEAD, ItemTriggers: Item_Used}
+{12504}{AI_Resurrect: 1}
+{12505}{[Begin], Type: EyeCandy, 2, Add, Play: Callback}
+{12506}{[Callback], Type: Heal, Dmg_Flags: Full | Resurrect}
+
+
+// 191 -- Tech: Clockwork Physician
+{12550}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical | Tgt_Obj_Damaged}
+{12551}{Range: 2, Info: friendly}
+{12552}{Is_Tech: 1}  //Added by Positiff
+{12553}{No_Stack: 1, ItemTriggers: Item_Used}
+{12554}{AI_HealingLight: 2}
+{12555}{[Begin], ItemTriggers: Item_Used, Type: Heal, Dmg: 20}
+{12556}{[Begin], ItemTriggers: Item_Used, Type: EyeCandy, 2, Add}
+
+
+// 192 -- Tech: Miracle Cure
+{12600}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical}  //Changed by Positiff
+{12601}{Range: 2, Info: friendly}
+{12602}{Is_Tech: 1}  //Added by Positiff
+{12603}{No_Stack: 1, ItemTriggers: Item_Used}
+{12604}{AI_HealingMedium: 3}  //Changed by Positiff
+{12605}{[Begin], ItemTriggers: Item_Used, Type: Heal, DmgType: Dmg_Normal, Dmg: 100}
+{12606}{[Begin], ItemTriggers: Item_Used, Type: Heal, DmgType: Dmg_Magic, Dmg: 100}
+{12607}{[Begin], ItemTriggers: Item_Used, Type: EyeCandy, 2, Add}
+
+
+// 193 -- Tech: Mental Inhibitor
+{12650}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Animal | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical | Tgt_Obj_No_Self, [End]AoE: Tgt_Object}
+{12651}{Duration: (60 @ -1), Info: aggressive}
+{12652}{Is_Tech: 1}  //Added by Positiff
+{12654}{AI_Offensive: 10}
+{12655}{[Begin], Type: Effect, 59, Add}
+{12656}{[Begin], Type: EyeCandy, 2, Add}
+{12657}{[End], Type: Effect, 59, Remove}
+
+
+// 194 -- Tech: Necromizer
+{12700}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical | Tgt_Obj_No_Self, [End]AoE: Tgt_Summoned}
+{12701}{Duration: (360 @ -1), Range: 2}
+{12702}{Is_Tech: 1}  //Added by Positiff
+{12703}{ItemTriggers: Item_Used}
+{12705}{[Begin], AoE: Tgt_Obj_No_ST_Critter_Unrevivifiable, Type: Heal, Dmg_Flags: Full | Reanimate}
+{12706}{[Begin], AoE: Tgt_Obj_No_ST_Critter_Unrevivifiable, Type: Heal, DmgType: Dmg_Poison, Dmg: 32000}
+{12707}{[Begin], AoE: Tgt_Obj_No_ST_Critter_Unrevivifiable, Type: EyeCandy, 2, Add}
+{12708}{[Begin], AoE: Tgt_Obj_No_ST_Critter_Unrevivifiable, Type: ObjFlag, obj_f_critter_flags, OCF_UNDEAD, FLAG_ON}
+{12709}{[Begin], AoE: Tgt_Obj_No_ST_Critter_Unrevivifiable, Type: ObjFlag, obj_f_spell_flags, OSF_MIND_CONTROLLED, FLAG_ON}
+{12710}{[End], AoE: Tgt_Obj_No_ST_Critter_Unrevivifiable, Type: ObjFlag, obj_f_spell_flags, OSF_MIND_CONTROLLED, FLAG_OFF}
+{12711}{[End], AoE: Tgt_Obj_No_ST_Critter_Unrevivifiable, Type: Damage, Dmg_Flags: Full | Death}
+// For Multiplayer, we allow PCs to be resurrected after being turned into Undead, for Game-Play reasons
+{12712}{[End], AoE: Tgt_Obj_No_ST_Critter_Unrevivifiable | Tgt_Obj_T_PC, Type: ObjFlag, obj_f_critter_flags, OCF_UNDEAD, FLAG_OFF}
+// WIP! JLR! FINISH!  Need to Set CORRECT Tint, and need to change AI-Type!
+
+
+// 195 -- Tech: Fortifier
+{12750}{AoE: Tgt_Object, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical}
+{12751}{Duration: (120 @ -1), Range: 2, Info: friendly}
+{12752}{Is_Tech: 1}  //Added by Positiff
+{12753}{No_Stack: 1, Disallowed_TCF: OCF_UNUSED, ItemTriggers: Item_Used}  //Changed by Positiff
+{12754}{}
+{12755}{[Begin], ItemTriggers: Item_Used, Type: ObjFlag, obj_f_critter_flags, OCF_UNUSED, FLAG_ON}  //Added by Positiff
+{12756}{[Begin], ItemTriggers: Item_Used, Type: ObjFlag, obj_f_critter_flags, OCF_FATIGUE_LIMITING, FLAG_ON}  //Moved by Positiff
+{12757}{[Begin], ItemTriggers: Item_Used, Type: Effect, 319, Add}  //Changed by Positiff
+{12758}{[Begin], ItemTriggers: Item_Used, Type: EyeCandy, 2, Add}
+{12759}{[End], ItemTriggers: Item_Used, Type: Effect, 319, Remove}  //Changed by Positiff
+{12760}{[End], ItemTriggers: Item_Used, Type: ObjFlag, obj_f_critter_flags, OCF_FATIGUE_LIMITING, FLAG_OFF}
+{12761}{[End], ItemTriggers: Item_Used, Type: ObjFlag, obj_f_critter_flags, OCF_UNUSED, FLAG_OFF}  //Added by Positiff
+{12762}{[End], ItemTriggers: Item_Used, Type: Damage, DmgType: Dmg_Normal, Dmg: 20-20}  //Changed by Positiff
+{12763}{[End], ItemTriggers: Item_Used, Type: Damage, DmgType: Dmg_Magic, Dmg: 20-20}  //Changed by Positiff
+{12764}{[End], ItemTriggers: Item_Used, Type: EyeCandy, 2, Add, Play: Reverse}
+
+
+// 196 -- Tech: Sleep Aid
+{12800}{AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical}
+{12801}{Range: 2, Info: aggressive}
+{12802}{Is_Tech: 1}  //Added by Positiff
+{12803}{No_Stack: 0, ItemTriggers: Item_Used}
+{12805}{[Begin], ItemTriggers: Item_Used, Type: Damage, DmgType: Dmg_Magic, Dmg_Flags: Full}
+{12806}{[Begin], ItemTriggers: Item_Used, Type: EyeCandy, 2, Add}
+
+
+// 197 -- Tech: Potion of Paralysis
+{12850}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_Self | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Undead | Tgt_Obj_No_ST_Critter_Mechanical, [End]AoE: Tgt_Object}  //Changed by Positiff
+{12851}{Duration: (8 @ -1), Range: 2, Info: friendly}  //Changed by Positiff
+{12852}{Is_Tech: 1}  //Added by Positiff
+{12853}{No_Stack: 1, Disallowed_TCF: OCF_PARALYZED, ItemTriggers: Item_Used}
+{12854}{AI_Defensive: (9 @ 1)}
+{12855}{[Begin], ItemTriggers: Item_Used, Type: ObjFlag, obj_f_critter_flags, OCF_PARALYZED, FLAG_ON}
+{12856}{[Begin], ItemTriggers: Item_Used, Type: EyeCandy, 2, Add}
+{12857}{[Begin], ItemTriggers: Item_Used, Type: EyeCandy, 3, Add, Play: Stack}
+{12858}{[End], ItemTriggers: Item_Used, Type: ObjFlag, obj_f_critter_flags, OCF_PARALYZED, FLAG_OFF}
+{12859}{[End], ItemTriggers: Item_Used, Type: EyeCandy, 2, Remove}
+{12860}{[End], ItemTriggers: Item_Used, Type: EyeCandy, 3, Remove}
+{12861}{[End], ItemTriggers: Item_Used, Type: EyeCandy, 2, Add, Play: Reverse}
+
+
+// 198 -- Tech: Knock-Out Gas
+{12900}{AoE: Tgt_Tile | Tgt_Obj_Radius, Radius: 2}  //Changed by Positiff
+{12901}{Cost: 0, Info: aggressive}
+{12902}{Is_Tech: 1}  //Added by Positiff
+{12903}{No_Stack: 0, ItemTriggers: Parent_Atks_Location}
+{12905}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_T_Critter, ItemTriggers: Parent_Atks_Location, Type: Damage, DmgType: Dmg_Magic, Dmg_Flags: Full}
+{12906}{[Begin], Apply_AoE: Tgt_Self, ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 1, Add}  //Added by Positiff
+{12907}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self | Tgt_Obj_T_Critter, ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 2, Add}
+{12908}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self | Tgt_Obj_T_Critter, ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 3, Add, Play: Stack}
+{12909}{[Begin], AoE: Tgt_Tile, ItemTriggers: Parent_Atks_Location, Type: Summon, Proto: 4050}
+{12910}{[Begin], AoE: Tgt_Tile, Apply_AoE: Tgt_Summoned, ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 2, Add, Play: Callback}
+{12911}{[Begin], Apply_AoE: Tgt_Self, ItemTriggers: Parent_Atks_Location, Type: Destroy}
+{12912}{[Callback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+
+
+// 199 -- Tech: Electrocution Grenade
+{12950}{AoE: Tgt_None, [Begin]AoE: Tgt_Tile | Tgt_Obj_Radius, [Begin]Radius: 2, [Callback]AoE: Tgt_Summoned}
+{12951}{Cost: 0, Info: aggressive}
+{12952}{Is_Tech: 1}  //Added by Positiff
+{12953}{No_Stack: 0, ItemTriggers: Parent_Atks_Location}
+{12955}{[Begin], AoE: Tgt_Obj_Radius, ItemTriggers: Parent_Atks_Location, Type: Damage, DmgType: Dmg_Electrical, Dmg: 30-50}  //Changed by Positiff
+{12956}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Undead | Tgt_Obj_No_ST_Critter_Mechanical, Type: AGoal, anim_goal_knock_down}  //Added by Positiff
+{12957}{[Begin], AoE: Tgt_Obj_Radius, ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 2, Add}  //Changed by Positiff
+{12958}{[Begin], AoE: Tgt_Obj_Radius, ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 3, Add, Play: Stack}  //Changed by Positiff
+{12959}{[Begin], AoE: Tgt_Tile, ItemTriggers: Parent_Atks_Location, Type: Summon, Proto: 4050}
+{12960}{[Begin], AoE: Tgt_Tile, Apply_AoE: Tgt_Summoned, ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 2, Add, Play: Callback}
+{12961}{[Begin], Apply_AoE: Tgt_Self, ItemTriggers: Parent_Atks_Location, Type: Destroy}
+{12962}{[Callback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+
+
+// 200 -- Tech: Mustard Gas
+{13000}{AoE: Tgt_None, Radius: 1, [Begin]AoE: Tgt_Tile | Tgt_Obj_Radius | Tgt_Obj_T_Critter | Tgt_Tile_Radius | Tgt_Obj_No_ST_Critter_Undead, [Maintain]AoE: Tgt_Obj_Radius | Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Mechanical | Tgt_Obj_No_ST_Critter_Undead, [End]AoE: Tgt_Summoned, [EndCallback]AoE: Tgt_Summoned}
+{13001}{Cost: 5, Duration: (1 @ -1), DurationTriggerCount: 10, Resist: (stat_constitution @ 0), Info: aggressive}  //Changed by Positiff
+{13002}{Is_Tech: 1}  //Added by Positiff
+{13003}{No_Stack: 0, ItemTriggers: Parent_Atks_Location}
+{13005}{[Begin], AoE: Tgt_Obj_Radius, ItemTriggers: Parent_Atks_Location, Type: Damage, DmgType: Dmg_Poison, Dmg: 30-30}  //Changed by Positiff
+{13006}{[Begin], AoE: Tgt_Obj_Radius, ItemTriggers: Parent_Atks_Location, Type: Damage, DmgType: Dmg_Acid, Dmg: 6-6}  //Added by Positiff
+{13007}{[Begin], AoE: Tgt_Tile_Radius, ItemTriggers: Parent_Atks_Location, Type: Summon, Proto: 4029}
+{13008}{[Begin], Apply_AoE: Tgt_Self, ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 1, Add}  //Added by Positiff
+{13009}{[Begin], Apply_AoE: Tgt_Summoned, ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 2, Add}
+{13010}{[Begin], Apply_AoE: Tgt_Summoned, ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 3, Add, Play: Stack | Random_Start}
+{13011}{[Begin], Apply_AoE: Tgt_Self, ItemTriggers: Parent_Atks_Location, Type: Destroy}
+{13012}{[Maintain], AoE: Tgt_Obj_Radius, Type: Damage, DmgType: Dmg_Poison, Dmg: 30-30}  //Changed by Positiff
+{13013}{[Maintain], AoE: Tgt_Obj_Radius, Type: Damage, DmgType: Dmg_Acid, Dmg: 6-6}  //Added by Positiff
+{13014}{[End], Type: EyeCandy, 2, Remove}
+{13015}{[End], Type: EyeCandy, 3, Remove}
+{13016}{[End], Type: EyeCandy, 2, Add, Play: Reverse | End_Callback}
+{13017}{[Callback], Type: ObjFlag, obj_f_flags, OF_DONTDRAW, FLAG_OFF}
+{13018}{[EndCallback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+
+
+// 201 -- Tech: Concussion Grenade
+{13050}{AoE: Tgt_None, [Begin]AoE: Tgt_Tile | Tgt_Obj_Radius, [Begin]Radius: 3, [Callback]AoE: Tgt_Summoned}  //Changed by Positiff
+{13051}{Cost: 0, Info: aggressive}
+{13052}{Is_Tech: 1}  //Added by Positiff
+{13053}{No_Stack: 0, ItemTriggers: Parent_Atks_Location}
+{13055}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self, ItemTriggers: Parent_Atks_Location, Type: Damage, DmgType: Dmg_Fire, Dmg: 10-20}  //Added by Positiff
+{13056}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self, ItemTriggers: Parent_Atks_Location, Type: Damage, DmgType: Dmg_Normal, Dmg: 50-100}  //Changed by Positiff
+{13057}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self | Tgt_obj_T_Critter, ItemTriggers: Parent_Atks_Location, Type: Damage, DmgType: Dmg_Magic, Dmg: 25-50}  //Changed by Positiff
+{13058}{[Begin], AoE: Tgt_Tile, ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 2, Add}  //Changed by Positiff
+{13059}{[Begin], AoE: Tgt_Tile, ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 3, Add, Play: Stack}  //Changed by Positiff
+{13060}{[Begin], AoE: Tgt_Tile, ItemTriggers: Parent_Atks_Location, Type: Summon, Proto: 4050}
+{13061}{[Begin], AoE: Tgt_Tile, Apply_AoE: Tgt_Summoned, ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 2, Add, Play: Callback}
+{13062}{[Begin], Apply_AoE: Tgt_Self, ItemTriggers: Parent_Atks_Location, Type: Destroy}
+{13063}{[Callback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+
+
+// 202 -- Tech: Paralysis Grenade
+{13100}{AoE: Tgt_List, [Begin]AoE: Tgt_Tile | Tgt_Obj_Radius, [Begin]Radius: 2, [End]AoE: Tgt_List | Tgt_Summoned, [Callback]AoE: Tgt_Summoned}
+{13101}{Duration: (8 @ -1), Info: friendly}  //Changed by Positiff
+{13102}{Is_Tech: 1}  //Added by Positiff
+{13103}{No_Stack: 0, ItemTriggers: Parent_Atks_Location}
+{13105}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self | Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Undead | Tgt_Obj_No_ST_Critter_Mechanical, ItemTriggers: Parent_Atks_Location, Type: ObjFlag, obj_f_critter_flags, OCF_PARALYZED, FLAG_ON}  //Changed by Positiff
+{13106}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self | Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Undead | Tgt_Obj_No_ST_Critter_Mechanical, ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 2, Add}  //Changed by Positiff
+{13107}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self | Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Undead | Tgt_Obj_No_ST_Critter_Mechanical, ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 3, Add, Play: Stack}  //Changed by Positiff
+{13108}{[Begin], AoE: Tgt_Tile, ItemTriggers: Parent_Atks_Location, Type: Summon, Proto: 4050}
+{13109}{[Begin], AoE: Tgt_Tile, Apply_AoE: Tgt_Summoned, ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 2, Add}
+{13110}{[Begin], Apply_AoE: Tgt_Self, ItemTriggers: Parent_Atks_Location, Type: Destroy}
+{13111}{[End], AoE: Tgt_Obj_T_Critter, ItemTriggers: Parent_Atks_Location, Type: ObjFlag, obj_f_critter_flags, OCF_PARALYZED, FLAG_OFF}
+{13112}{[End], AoE: Tgt_Obj_T_Critter, ItemTriggers: Parent_Atks_Location, Type: EyeCandy, 3, Remove}
+{13113}{[End], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+
+
+// 203 -- Tech: Acid Gun  //Made by Positiff
+{13150}{AoE: Tgt_Object}
+{13151}{Info: aggressive}
+{13152}{Is_Tech: 1}
+{13153}{No_Stack: 0, ItemTriggers: Parent_Dmgs_Opponent_W_Item | Target_Attacker}
+{13155}{[Begin], ItemTriggers: Parent_Dmgs_Opponent_W_Item | Target_Attacker, Type: EyeCandy, 2, Add}
+{13156}{[Begin], ItemTriggers: Parent_Dmgs_Opponent_W_Item | Target_Attacker, Type: Damage, DmgType: Dmg_Acid, Dmg: 9-18}
+
+
+// 204 -- Tech: Tranquilizer Gun
+{13200}{AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical}
+{13201}{Info: aggressive}
+{13202}{Is_Tech: 1}  //Added by Positiff
+{13203}{No_Stack: 0, ItemTriggers: Parent_Dmgs_Opponent_W_Item | Target_Attacker}
+{13205}{[Begin], AoE: Tgt_Obj_M_Flesh, ItemTriggers: Parent_Dmgs_Opponent_W_Item | Target_Attacker, Type: Damage, DmgType: Dmg_Magic, Dmg_Flags: Full}
+{13206}{[Begin], ItemTriggers: Parent_Dmgs_Opponent_W_Item | Target_Attacker, Type: EyeCandy, 2, Add}
+
+
+// 205 -- Tech: Grenade Launcher  //Changed by Positiff
+{13250}{AoE: Tgt_None, [Begin]AoE: Tgt_Tile | Tgt_Obj_Radius, [Begin]Radius: 2, [Callback]AoE: Tgt_Summoned}
+{13251}{Info: friendly}
+{13252}{Is_Tech: 1}  //Added by Positiff
+{13253}{No_Stack: 0}
+{13255}{[Begin], AoE: Tgt_Tile, Type: EyeCandy, 2, Add}
+{13256}{[Begin], AoE: Tgt_Tile, Type: EyeCandy, 3, Add, Play: Stack}
+{13257}{[Begin], AoE: Tgt_Tile, Type: Summon, Proto: 4050}
+{13258}{[Begin], AoE: Tgt_Tile, Apply_AoE: Tgt_Summoned, Type: EyeCandy, 2, Add, Play: Callback}
+{13259}{[Callback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+
+
+// 206 -- UNUSED
+{13300}{AoE: Tgt_None}
+{13301}{Cost: 0}
+{13302}{Is_Tech: 1}  //Added by Positiff
+
+
+
+
+// Item-Only Spells Part 2 -----
+
+
+// 207 -- Kerghan Death Spell
+{13350}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_Self | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Undead | Tgt_Obj_No_ST_Critter_Mechanical, [Callback]AoE: Tgt_Object}
+{13351}{Cost: 40, Resist: (stat_constitution @ -5), Info: aggressive}  //Changed by Positiff
+{13352}{CastingAnim: 14}
+{13354}{AI_Offensive: 17}
+{13355}{[Begin], Type: EyeCandy, 2, Add, Play: Callback}
+//-13356--[Begin], Type: ObjFlag, obj_f_critter_flags, OCF_PARALYZED, FLAG_ON-
+//-13357--[Callback], Type: ObjFlag, obj_f_critter_flags, OCF_PARALYZED, FLAG_OFF-
+{13356}{[Callback], Type: Damage, DmgType: Dmg_Normal, Dmg: 100-200, Dmg_Flags: Scaled}  //Changed by Positiff
+
+
+// 208 -- Kerghan Attack Spell
+{13400}{AoE: Tgt_Self | Tgt_Cone | Tgt_Obj_No_Self | Tgt_Non_Party_Critters, Radius:5}
+{13401}{Cost: 15, Resist: (stat_constitution @ -5), Info: aggressive}
+{13402}{CastingAnim: 14}
+{13404}{AI_Offensive: 4}
+{13405}{[Begin], AoE: Tgt_Obj_No_Self | Tgt_Obj_Weight_Below_5, Type: AGoal, anim_goal_knockback}
+{13406}{[Begin], AoE: Tgt_Obj_No_Self | Tgt_Obj_T_Critter, Type: Damage, DmgType: Dmg_Normal, Dmg: 25-50}  //Changed by Positiff
+{13407}{[Begin], AoE: Tgt_Obj_No_Self | Tgt_Obj_T_Critter, Type: AGoal, anim_goal_knockback}
+{13408}{[Begin], AoE: Tgt_Obj_No_Self | Tgt_Obj_T_Critter, AoE_SF: OSF_BODY_OF_AIR, Type: Damage, DmgType: Dmg_Normal, Dmg: 25-50}  //Changed by Positiff
+{13409}{[Begin], AoE: Tgt_Obj_No_Self | Tgt_Obj_T_Critter, Type: EyeCandy, 2, Add}
+
+
+// 209 -- Kerghan Healing Spell
+{13450}{AoE: Tgt_Self | Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead}  //Changed by Positiff
+{13451}{Cost: 25, Maintain: (0 @ 1), DurationTriggerCount: 80000, Info: friendly}  //Changed by Positiff
+{13453}{No_Stack: 1}
+{13454}{}
+{13455}{[Begin], Type: ObjFlag, obj_f_critter_flags, OCF_PARALYZED, FLAG_ON}
+{13456}{[Begin], Type: EyeCandy, 2, Add}
+{13457}{[Begin], Type: EyeCandy, 3, Add, Play: Stack}
+{13458}{[Begin], Type: ObjFlag, obj_f_spell_flags, OSF_SHIELDED, FLAG_ON}
+{13459}{[Maintain], AoE: Tgt_Obj_No_ST_Critter_Undead | Tgt_Obj_Damaged, Type: Heal, Dmg: 5}  //Changed by Positiff
+{13460}{[End], Type: ObjFlag, obj_f_critter_flags, OCF_PARALYZED, FLAG_OFF}
+{13461}{[End], Type: EyeCandy, 2, Remove}
+{13462}{[End], Type: EyeCandy, 3, Remove}
+{13463}{[End], Type: EyeCandy, 2, Add, Play: Reverse}
+{13464}{[Begin], Type: ObjFlag, obj_f_spell_flags, OSF_SHIELDED, FLAG_OFF}
+
+
+// 210 -- Potion: Fatigue Slower  //Changed by Positiff
+{13500}{AoE: Tgt_Object, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Party_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical, [End]AoE: Tgt_Object}
+{13501}{Cost: 0, Duration: (120 @ -1), Range: 2, Info: friendly}  //Changed by Positiff
+{13503}{No_Stack: 1, Disallowed_TCF: OCF_FATIGUE_LIMITING}
+{13505}{[Begin], Type: ObjFlag, obj_f_critter_flags, OCF_FATIGUE_LIMITING, FLAG_ON}
+{13506}{[Begin], Type: EyeCandy, 2, Add}
+{13507}{[End], Type: ObjFlag, obj_f_critter_flags, OCF_FATIGUE_LIMITING, FLAG_OFF}
+{13508}{[End], Type: EyeCandy, 2, Add, Play: Reverse}
+
+
+// 211 -- Potion: Essence of Intellect  //Changed by Positiff
+{13550}{AoE: Tgt_Object, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Party_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical, [End]AoE: Tgt_Object}
+{13551}{Cost: 0, Duration: (120 @ -1), Range: 2, Info: friendly}  //Changed by Positiff
+{13553}{No_Stack: 1}
+{13555}{[Begin], Type: Effect, 331, Add, Count: 4}  //Changed by Positiff
+{13556}{[Begin], Type: EyeCandy, 2, Add}
+{13557}{[Begin], Type: EyeCandy, 3, Add, Play: Stack}
+{13558}{[End], Type: Effect, 331, Remove, Count: 4}  //Changed by Positiff
+{13559}{[End], Type: EyeCandy, 2, Remove}
+{13560}{[End], Type: EyeCandy, 3, Remove}
+{13561}{[End], Type: EyeCandy, 2, Add, Play: Reverse}
+
+
+// 212 -- Potion: Haste  //Changed by Positiff
+{13600}{AoE: Tgt_Object, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Party_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical, [End]AoE: Tgt_Object}
+{13601}{Cost: 0, Duration: (120 @ -1), Range: 2, Info: friendly}  //Changed by Positiff
+{13603}{No_Stack: 1}
+{13604}{AI_Defensive: (3 @ 0)}
+{13605}{[Begin], Type: Effect, 332, Add, Count: 10}  //Changed by Positiff
+{13606}{[Begin], Type: EyeCandy, 2, Add}
+{13607}{[Begin], Type: EyeCandy, 3, Add, Play: Stack}
+{13608}{[End], Type: Effect, 332, Remove, Count: 10}  //Changed by Positiff
+{13609}{[End], Type: EyeCandy, 2, Remove}
+{13610}{[End], Type: EyeCandy, 3, Remove}
+{13611}{[End], Type: EyeCandy, 2, Add, Play: Reverse}
+
+
+// 213 -- Potion: Liquid Of Skin Thickening  //Changed by Positiff
+{13650}{AoE: Tgt_Object, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Party_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical, [End]AoE: Tgt_Object}
+{13651}{Cost: 0, Duration: (120 @ -1), Range: 2, Info: friendly}  //Changed by Positiff
+{13653}{No_Stack: 1}
+{13655}{[Begin], Type: Effect, 333, Add, Count: 20}
+{13656}{[Begin], Type: EyeCandy, 2, Add}
+{13657}{[Begin], Type: EyeCandy, 3, Add, Play: Stack}
+{13658}{[End], Type: Effect, 333, Remove, Count: 20}
+{13659}{[End], Type: EyeCandy, 2, Remove}
+{13660}{[End], Type: EyeCandy, 3, Remove}
+{13661}{[End], Type: EyeCandy, 2, Add, Play: Reverse}
+
+
+// 214 -- Potion: Kalispi's Venom  //Changed by Positiff
+{13700}{AoE: Tgt_Object, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Party_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical, [End]AoE: Tgt_Object}
+{13701}{Cost: 0, Duration: (240 @ -1), Range: 2, Info: friendly}  //Changed by Positiff
+{13703}{No_Stack: 0}
+{13704}{AI_Defensive: (3 @ 0)}
+{13705}{[Begin], Type: Damage, DmgType: Dmg_Poison, Dmg: 30}  //Added by Positiff
+{13706}{[Begin], Type: Effect, 334, Add, Count: 30}  //Changed by Positiff
+{13707}{[Begin], Type: EyeCandy, 2, Add}
+{13708}{[Begin], Type: EyeCandy, 3, Add, Play: Stack}
+{13709}{[End], Type: Effect, 334, Remove, Count: 30}  //Changed by Positiff
+{13710}{[End], Type: EyeCandy, 2, Remove}
+{13711}{[End], Type: EyeCandy, 3, Remove}
+{13712}{[End], Type: EyeCandy, 2, Add, Play: Reverse}
+
+
+// 215 -- Potion: Restorative
+{13750}{AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Mechanical}
+{13751}{Duration: (4 @ -1), DurationTriggerCount: 24, Range: 2, Info: friendly}
+{13753}{No_Stack: 1, ItemTriggers: Item_Used}
+{13755}{[Begin], ItemTriggers: Item_Used, Type: Heal, Dmg: 2}
+{13756}{[Begin], ItemTriggers: Item_Used, Type: EyeCandy, 2, Add}
+{13757}{[Maintain], ItemTriggers: Item_Used, Type: Heal, Dmg: 2}
+
+
+// 216 -- Conjure Spirit Permanent
+{13800}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Animal | Tgt_Obj_No_ST_Critter_Mechanical | Tgt_Obj_No_Self, [End]AoE: Tgt_Object}
+{13801}{Cost: 0, Maintain: (0 @ 86400), DurationTriggerCount: 80000}  //24 hours of real-time: should be enough for now...
+{13803}{No_Stack: 1}
+{13805}{[Begin], Type: ObjFlag, obj_f_spell_flags, OSF_SPOKEN_WITH_DEAD, FLAG_ON}
+{13806}{[Begin], Type: EyeCandy, 2, Add}
+{13807}{[Begin], Type: EyeCandy, 3, Add, Play: Stack}
+{13808}{[End], Type: ObjFlag, obj_f_spell_flags, OSF_SPOKEN_WITH_DEAD, FLAG_OFF}
+{13809}{[End], Type: EyeCandy, 2, Remove}
+{13810}{[End], Type: EyeCandy, 3, Remove}
+{13811}{[End], Type: EyeCandy, 2, Add, Play: Reverse}
+
+
+// 217 -- Phantom Knight Death
+{13850}{AoE: Tgt_Obj_T_Critter, [Callback]AoE: Tgt_Summoned}
+{13851}{Cost: 0, Info: friendly}
+{13853}{No_Stack: 1}
+//-13855--[Begin], Type: NoOp-
+{13855}{[Begin], AoE: Tgt_Obj_T_Critter, Type: ObjFlag, obj_f_flags, OF_DONTDRAW, FLAG_ON}
+{13856}{[Begin], Apply_AoE: Tgt_Tile, Type: Summon, Proto: 4050}
+{13857}{[Begin], Apply_AoE: Tgt_Summoned, Type: EyeCandy, 2, Add, Play: Callback}
+//-13857--[Begin], AoE: Tgt_Obj_T_Critter, Type: Destroy, Object-
+//-13857--[Begin], AoE: Tgt_Obj_T_Critter, Type: NoOp-
+{13858}{[Callback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+
+
+// 218 -- Scroll: Teleport Exit
+{13900}{AoE: Tgt_Self}
+{13901}{Cost: 50, ChargeBeginCost: 0}
+{13904}{No_Resist: 1}
+{13905}{[Begin], Type: EyeCandy, 2, Add}
+{13906}{[Begin], Type: Movement, Move_Location: Teleport_Area_Portal}
+
+
+// 219 -- Scroll: Identification  //Made by Positiff
+{13950}{AoE: Tgt_None, [Begin]AoE: Tgt_Object}
+{13951}{Cost: 0}
+{13955}{[Begin], Type: ObjFlag, obj_f_item_flags, OIF_IDENTIFIED, FLAG_ON}
+{13956}{[Begin], Type: Identify, IF_DISPLAY_ALL}
+
+
+// 220 -- Tech: Time Bomb
+{14000}{AoE: Tgt_Tile | Tgt_Obj_Radius, Radius: 3, [Callback]AoE: Tgt_Summoned}  //Changed by Positiff
+{14001}{Cost: 0, Info: aggressive}
+{14002}{Is_Tech: 1}
+{14003}{No_Stack: 0}
+{14005}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self, Type: Damage, DmgType: Dmg_Fire, Dmg: 25-50}  //Changed by Positiff
+{14006}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self, Type: Damage, DmgType: Dmg_Normal, Dmg: 75-150}  //Changed by Positiff
+{14007}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self | Tgt_obj_T_Critter, Type: Damage, DmgType: Dmg_Magic, Dmg: 35-75}  //Added by Positiff
+{14008}{[Begin], AoE: Tgt_Obj_Radius | Tgt_Obj_No_Self | Tgt_Obj_T_Critter, Type: AGoal, anim_goal_knock_down}  //Changed by Positiff
+{14009}{[Begin], AoE: Tgt_Tile, Type: EyeCandy, 2, Add}  //Changed by Positiff
+{14010}{[Begin], AoE: Tgt_Tile, Type: EyeCandy, 3, Add, Play: Stack}  //Changed by Positiff
+{14011}{[Begin], AoE: Tgt_Tile, Type: Summon, Proto: 4050}
+{14012}{[Begin], AoE: Tgt_Tile, Apply_AoE: Tgt_Summoned, Type: EyeCandy, 2, Add, Play: Callback}
+{14013}{[Begin], Apply_AoE: Tgt_Self, Type: Destroy}
+{14014}{[Callback], AoE: Tgt_Summoned, Type: Destroy, Summoned Object}
+
+
+// 221 -- Quench Life (Full)
+{14050}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter  | Tgt_Obj_No_Self | Tgt_Obj_No_ST_Critter_Dead | Tgt_Obj_No_ST_Critter_Undead | Tgt_Obj_No_ST_Critter_Mechanical, [Callback]AoE: Tgt_Object}
+{14051}{Cost: 50, Info: aggressive}
+{14054}{No_Resist: 1}
+{14055}{[Begin], Type: EyeCandy, 2, Add, Play: Callback}
+{14056}{[Begin], Type: ObjFlag, obj_f_critter_flags, OCF_PARALYZED, FLAG_ON}
+{14057}{[Callback], Type: ObjFlag, obj_f_critter_flags, OCF_PARALYZED, FLAG_OFF}
+{14058}{[Callback], Type: Damage, Dmg_Flags: Full | Death, Dmg_Flags: Scaled}
+
+
+// 222 -- Wolf Form (Permanent)
+{14100}{AoE: Tgt_None, [Begin]AoE: Tgt_Obj_T_Critter | Tgt_Obj_No_ST_Critter_Dead  | Tgt_Obj_No_Self, [End]AoE: Tgt_Object}
+{14101}{Cost: 0}
+{14103}{Disallowed_TSF: OSF_POLYMORPHED | OSF_BODY_OF_AIR | OSF_BODY_OF_EARTH | OSF_BODY_OF_FIRE | OSF_BODY_OF_WATER | OSF_STONED}
+{14104}{}
+{14105}{[Begin], Type: EyeCandy, 2, Add}
+{14106}{[Begin], Type: ObjFlag, obj_f_critter_flags2, OCF2_PERMA_POLYMORPH, FLAG_ON}
+{14107}{[Begin], Type: Trait, art_num, 0}  //0 is wolf, 20 is sheep  //, List: Animal_Weak-
+//-14108--[Begin], Type: Effect, 155, Add-
+

@@ -1,0 +1,83 @@
+// This message file contains text to be used in game-supplied newspapers
+// Only the message line numbers 1000 or higher are valid
+// Each new newspaper begins on a multiple of 10, and can use up to 10
+// lines, which must be consecutive. The first line is always the main 
+// headline, while the 9 remaining lines go into 4 columns of the paper.
+// Format: each line begins with a font number and justification letter,
+// followed by the text for that line.
+
+// Some font numbers to use:
+//	490 Extra Large Headline
+//	486 Large Headline
+//	492 Normal Headline
+//	483 Story Body
+//	488 Clip Art 0-6
+
+// Justification letters (you must use one)
+//	l = left
+//	c = center
+
+// NOTE: The first blocks, 0 thru 999, are reserved for UI use
+
+// News Paper Type 1
+{0}{01/01/1891}
+{1}{[ L'aurore ]}
+{2}{5 pièces}
+{3}{Le journal hebdomadaire d'Holliae.}
+
+// News Paper Type 2
+{4}{[ Actualité ]}
+{5}{Le prix du pétrole augmente}
+
+// filler articles
+{10}{492c _ BONNE ANNEE _}
+{11}{483l La rédaction souhaite à tous ses lecteurs une bonne et heureuse année sur l'île d'Holliae.}
+{12}{492c _ METEO _}
+{13}{483l Un hiver plûtot doux est attendu sur l'île, aucune intempérie n'est attendu durant la semaine.}
+{14}{492c _ PENDAISON _}
+{15}{483l Un multi recidiviste ayant assassiné six personnes à était pendu hier à Tarante. Les autorités ce sont refuséees à tout commentaires.}
+{16}{492c _ DISLOQUATION DU CONSEIL _}
+{17}{483l Le conseil gnome a été dissout hier, de lourdes charges sur le clonage de demi-ogres étaient retenus contre eux depuis 1885.}
+{18}{492c _ REOUVERTURE _}
+{19}{483l Le bar "au petit gavage" fermé l'an passé pour raisons sanitaires a fêté cette nuit non seulement le nouvel an mais aussi sa réouverture. Cet établissement est situé sur l'ouest de l'île. Le bureau des soins et de l'hygiène déclare qu'àprès reflexion, le bar peut resté ouvert et conserver sa clientèle s'il est rénové dans les 30 jours.}
+{20}{492c _ NAUFRAGE _}
+{21}{483l The Engineering School of the University of Tarant is holding a Distinguished Speaker Series this semester. Interested parties are invited to contact the University Registrar for more Information.}
+{22}{492c _ CHARITY BALL _}
+{23}{483l The Ladies Society of Tarant will once again hold a Charity Ball this Saturday evening. This Event will benefit Orphans and Survivors of Foreign Wars. Festivities will begin at 8pm. Strict dress code will be enforced.}
+{24}{492c _ TIDAL FIGURES _}
+{25}{483l High tides will occur at 6:15am and 7:30pm today, with low tides at approximately 1:05pm and 25 minutes after midnight. Full tidal charts can be found on page 8.}
+
+//Game Related Newspapers
+//Use lines 1000-4990
+//Generic Newspapers Start at line 5000
+
+{1000}{490c SAMPLE HEADLINE!}
+{1001}{492c _ Place subheading here _}
+{1002}{483l And here's the text of the story. It's pretty exciting!}
+
+{1020}{490c GARRINGSBURG HEIST!
+PAINTING STOLEN!}
+{1021}{492c _ THIEVES STILL AT LARGE _}
+{1022}{483l Late on Tuesday evening, the mansion of Mr. James and Mrs. Evelyn Garringsburg, at 37 Devonshire Way, was broken into by thieves and ransacked, according to sources close to the family.  Among the many items stolen was the famed 'Kerghan and Persephone', painted by Pizarro.  Sold last year at Renaud's for a reputed 50,000 gold pieces, the painting was the show piece of the Garringsburg gallery.
+Mr. Garringsburg, a long-standing member of the Wellington Gentlemen's Club, had this to say--"You can be assured that the perpetrators of this heinous crime will be brought to justice, and that reparations will be made."  Mrs. Garringburg was unavailable for comment.
+The Garringsburgs have offered a 300 gold piece reward.  This crime is only the latest of many art-related robberies, which have included the "Lorek in repose" statue, and the Blendom Vase.}
+
+	
+
+	
+
+
+//Generic Newspapers
+
+{5000}{490c INFLATION DU PRIX DU PETROLE}
+{5001}{492c _ Jusqu'où ira-t-on? _}
+{5002}{483l    Le baril a atteinds 12 pièces d'or. Gilbert Bastien le principal producteur à déclaré qu'<< une guerre sur un terrain pétrolier a éclaté, ce qui en empêche l'exploitation >>.
+    Le nobre limités de barils de pétrole envoyés à l'usine de raffinage de bastien a provoqué une baisse des salaires des orques employés. Certains ayant essayer de se soulever ont étaient massacrés.
+    <<La "ligue des droits des orques et des esclaves" comdane cet act barbare et gratuit, déclare son dircteur, et vous pouvez me citer>>.}
+
+
+{5010}{490c FLYING MACHINE RUMORS QUELLED}
+{5011}{492c _ LEARNED MAGE SPEAKS OUT _}
+{5012}{483l	As of late there have been many rumors concerning the sightings and indeed the very existence of what have come to be called "heavier than air craft". Many of these accounts describe craft that are "bird shaped", and create quite a clamor. Because we here at the Tarantian have received so many letters concerning these "sightings" or phenomena, we decided to consult an expert in the field, Master Mage Krolus Brajercliff. 
+	He is a master in both the colleges' of Air and Conveyance. When asked about these mysterious craft, Master Brajercliff informed us that such a contrivance was simply not possible, and he supplied us with the following. "Even a commoner knows that birds' bones are hollow, and filled with air. Even so, does it not have to exert itself greatly? Even the best of those retched new "engines" wouldn't have one tenth the power needed. No I'm afraid that the only way the common man can achieve flight is through the use of one of those most dangerous and inconvenient lighter-than-air ships, or through the rigorous study of Magick."
+	We at the Tarantian thank Master Brajercliff for sharing his thoughts and insights concerning this.}

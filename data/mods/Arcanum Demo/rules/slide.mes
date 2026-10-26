@@ -1,0 +1,49 @@
+// This file enumerates the slide in the game. Slides can be added via the script slide
+// command in one of these scripts:
+//
+//	997 - called when a script has ended the game
+//	998 - called when the player has died
+//	999 - called when in-game credits are requested
+//
+// Note that NO script is called when the game ends through the player exiting the game.
+
+// Each slide lists a BMP and an MP3. The bmp is an 8-bit BMP located in the module's
+// Slide directory. The MP3 must be located in the module's Sound/Speech/Slide directory.
+
+// Note: slide 0 is the DEFAULT death slide. If the player dies and no slide is queued by
+// script 5001, then slide 0 is used.
+
+{0}{death.bmp DeathSound.mp3}
+{1}{slide001.bmp 1second.mp3}
+{2}{slide002.bmp 1second.mp3}
+{3}{slide003.bmp 1second.mp3}
+{4}{slide004.bmp 1second.mp3}
+{5}{slide005.bmp 1second.mp3}
+{6}{slide006.bmp 1second.mp3}
+{7}{slide007.bmp 1second.mp3}
+{8}{slide008.bmp 1second.mp3}
+{9}{slide009.bmp 1second.mp3}
+{10}{slide010.bmp 1second.mp3}
+{11}{slide011.bmp 1second.mp3}
+{12}{slide012.bmp 1second.mp3}
+{13}{slide013.bmp 1second.mp3}
+{14}{slide014.bmp 1second.mp3}
+{15}{slide015.bmp 1second.mp3}
+{16}{slide016.bmp 1second.mp3}
+{17}{slide017.bmp 1second.mp3}
+{18}{slide018.bmp 1second.mp3}
+{19}{slide019.bmp 1second.mp3}
+{20}{slide020.bmp 1second.mp3}
+{21}{slide021.bmp 1second.mp3}
+{22}{slide022.bmp 1second.mp3}
+{23}{slide023.bmp 1second.mp3}
+{24}{slide024-ThankYou.bmp 1second.mp3}
+{25}{slide025-Page1.bmp 10second.mp3}
+{26}{slide026-Page2.bmp 10second.mp3}
+{27}{slide027-Page3.bmp 10second.mp3}
+
+
+
+
+
+

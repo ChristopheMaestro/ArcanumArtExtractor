@@ -1,0 +1,32 @@
+{1}{Bonjour monsieur. Ma famille est très pauvre, vous auriez une pièce d'or s'il vous plaît. [Elle vous fait un sourire]}{Bonjour madame. Ma famille est très pauvre, vous auriez une pièce d'or s'il vous plaît. [Elle vous fait un sourire]}{}{1}{}{}
+{2}{Tiens petite. [Vous lui donnez une pièce]}{}{5}{$$ 1}{10}{re+10, $$-1, lf2 1}
+{3}{Gah ha ha ha [Vous lui donnez une pièce]}{}{-4}{$$ 1}{10}{re+10, $$-1, lf2 1}
+{4}{Désolé mais je n'ai pas d'argent mais je reviendrai.}{}{5}{}{20}{lf0 1}
+{5}{D'solé mais moi rien avoir mais moi r'venir plus tard avec sou.}{}{-4}{}{20}{lf0 1}
+{6}{Laisse moi tranquille.}{}{5}{}{30}{re-10, lf1 1}
+{7}{Toi me laisser ou moi te taper.}{}{-4}{}{30}{re-10, lf1 1}
+
+{10}{Merci monsieur. [Elle vous refait un gros sourire]}{Merci madame. [Elle vous refait un gros sourire]}{}{2}{}{}
+{11}{Allez, au revoir.}{}{5}{}{0}{}
+{12}{S'lut}{}{-4}{}{0}{}
+
+{20}{Je m'en souviendrai.}{Je m'en souviendrai.}{}{3}{}{}
+{21}{Allez, au revoir.}{}{5}{}{0}{}
+{22}{S'lut}{}{-4}{}{0}{}
+
+{30}{Ouin, z'êtes méchant. Je vais le dire à ma maman.}{Ouin, z'êtes méchante. Je vais le dire à ma maman.}{}{4}{}{}
+{31}{Du balai.}{}{5}{}{0}{}
+{32}{Oust, toi filer.}{}{-4}{}{0}{}
+
+{40}{Alors, z'avez les sous ?}{Alors, z'avez les sous ?}{}{5}{}{}
+{41}{Oui, tiens. [Vous lui tendez une pièce d'or.]}{}{5}{$$1}{10}{$$-1, re+10, lf2 1}
+{42}{Ouais, toi prendre ça ![Vous lui tendez une pièce d'or.]}{}{-4}{$$1}{10}{$$-1, re+10, lf2 1}
+{43}{Je n'ai toujours rien sur moi.}{}{5}{}{30}{lf1 1, lf0 0}
+{44}{Moi pas avoir sou, moi acheter vin avec.}{}{-4}{}{30}{lf1 1, lf0 0}
+
+{50}{Maman a dit que vous êtes un vilain.}{Maman a dit que vous êtes une vilaine.}{}{6}{}{}
+{51}{[Partir]}{}{1}{}{0}{}
+
+{60}{Vous êtes gentil monieur.}{Vous êtes gentille madame.}{}{7}{}{}
+{61}{Allez, au revoir.}{}{5}{}{0}{}
+{62}{S'lut}{}{-4}{}{0}{}

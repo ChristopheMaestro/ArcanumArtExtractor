@@ -1,0 +1,382 @@
+{1}{Halt!  Wisst Ihr denn nicht, dass ich Eure Gegenwart riechen kann?!}{Halt!  Wisst Ihr denn nicht, dass ich Eure Gegenwart riechen kann?!}{}{}{}{re 30 }
+{2}{Äh, seid gegrüßt, Sire.  Dürfte ich wohl Euren Namen erfahren?}{}{5}{lf1 0}{16}{re 30 }
+{3}{Seid mir gegrüßt, Adkin. Dürfte ich wohl für einen Augenblick mit Euch sprechen?}{}{5}{lf1 1}{154}{re 30 }
+{4}{Ich bringe Euch ein Geschenk von Lady Druella.}{}{5}{in 3603, lf 14 0, qa 1115 1, qb 1115 2}{198}{re +50, lf 14 1 }
+{5}{Ich habe die Augen von Sire Garrick Stout!}{}{5}{in 5660, lf 15 0, qu1105 3}{162}{re +50, lf 15 1 }
+{6}{Ich habe die Augen von Sire Garrick Stout!}{}{5}{in 5660, lf 15 0, qu1116 3}{257}{re +50, lf 15 1 }
+{7}{Ich habe meine Fertigkeiten verbessert.  Bitte bildet mich aus.}{}{5}{qu1116 4, tr1 2, tr1 -2, sk1 20}{271}{ }
+{8}{Ich jetz' bessa.  Ihr mir lernen?}{}{-4}{qu1116 4, tr1 2, tr1 -2, sk1 20}{271}{ }
+{9}{Ich haben Augens!  Ich haben Augens!}{}{-4}{in 5660, lf 15 0, qu1105 3}{162}{re +50, lf 15 1 }
+{10}{Ich haben Augens!  Ich haben Augens!}{}{-4}{in 5660, lf 15 0, qu1116 3}{257}{re +50, lf 15 1 }
+{11}{Äh ... jaaaa ...  Ich mal was fragen?}{}{-4}{lf1 1}{154}{re 30 }
+{12}{Äh ...  Ich stinken?}{}{-4}{lf1 0}{16}{re 30 }
+{13}{Ich haben schönig Flasch' von nettig Dam'.}{}{-4}{in 3603, lf 14 0, qa 1115 1, qb 1115 2}{198}{re +50, lf 14 1 }
+{15}{E:}{}{1}{}{0}{ }
+{16}{Ihr habt wohl geglaubt, Ihr könntet Euch unbemerkt anschleichen, was?  Wer hat Euch geschickt?}{Ihr habt wohl geglaubt, Ihr könntet Euch unbemerkt anschleichen, was?  Wer hat Euch geschickt?}{}{}{}{ }
+{17}{Ich wollte Euch nichts Böses. Würdet Ihr mir Euren Namen verraten, Sire?}{}{5}{}{21}{ }
+{19}{Niemand mir schicken ... äh ... wie Ihr heiß'n?}{}{-4}{}{21}{ }
+{20}{E:}{}{1}{}{0}{ }
+{21}{Namen ... Namen ... was sind schon Namen?  Werkzeuge der Zerstörung in den Händen unserer Feinde!  Welcher Name wird wohl Euer Untergang sein?}{Namen ... Namen ... was sind schon Namen?  Werkzeuge der Zerstörung in den Händen unserer Feinde!  Welcher Name wird wohl Euer Untergang sein?}{}{}{}{ }
+{22}{Äh, ja ... man nennt mich @pcname@. Dürfte ich nach Eurem Namen fragen?}{}{5}{}{26}{ }
+{23}{Mein Name ist so unwichtig wie der Eure.}{}{5}{}{0}{ }
+{24}{Grmpf?}{}{-4}{}{103}{ }
+{25}{E:}{}{1}{}{0}{ }
+{26}{Warum, @pcname@, sucht Ihr einen alten, blinden Mann auf und belästigt ihn?  Hat er Euch geschickt, um mich zu töten?  Nun sagt schon!}{Warum, @pcname@, sucht Ihr einen alten, blinden Mann auf und belästigt ihn?  Hat er Euch geschickt, um mich zu töten?  Nun sagt schon!}{}{}{}{ }
+{27}{Ich weiß nicht, wovon Ihr redet. Mich hat niemand geschickt.}{}{5}{}{46}{ }
+{29}{Ich wollte doch bloß Euren Namen wissen! Ihr wollt mich wohl auf die Probe stellen ...}{}{5}{}{33}{ }
+{30}{Ich nich' versteh'n.}{}{-4}{}{46}{ }
+{31}{Ihr mir machen wütig! Ihr nich' geben Antwortens auf Fragens!}{}{-4}{}{33}{ }
+{32}{Es ist wohl an der Zeit, Euch eine Lektion zu erteilen.}{Es ist wohl an der Zeit, Euch eine Lektion zu erteilen.}{}{}{}{re -15 }
+{33}{Dann hebt Euch hinweg!  Ich brauche keine Schwachsinnigen, die auf die groteske Maske starren, die mich einst sehen ließ.  Belästigt mich nicht länger!}{Dann hebt Euch hinweg!  Ich brauche keine Schwachsinnigen, die auf die groteske Maske starren, die mich einst sehen ließ.  Belästigt mich nicht länger!}{}{}{}{ }
+{35}{Wer versucht, Euch ein Leid zu tun?}{}{5}{}{46}{ }
+{36}{Und ich kann keinen verrückten Narren gebrauchen!  Ich werde jetzt gehen!}{}{5}{}{40}{ }
+{37}{Ihr brauch'n Hilfens?  Jeman' bösig zu blindig Mann?}{}{-4}{}{46}{ }
+{38}{Wer willen wehtun Euch?}{}{-4}{}{46}{ }
+{39}{Ihr bekloppig!  Ich jetz' geh'n tun!}{}{-4}{}{40}{ }
+{40}{Wartet einen Augenblick!  Seht Euch vor ... sollte unser Treffen bekannt werden, werdet Ihr Euren Namen auf der Todesliste des Einen, des Bösen, wiederfinden ... direkt neben meinem.  [Er lacht irre.]  Böse.  BÖSE!  Räuber des Augenlichts!  Vernichter der Unschuldigen!}{Wartet einen Augenblick!  Seht Euch vor ... sollte unser Treffen bekannt werden, werdet Ihr Euren Namen auf der Todesliste des Einen, des Bösen, wiederfinden ... direkt neben meinem.  [Er lacht irre.]  Böse.  BÖSE!  Räuber des Augenlichts!  Vernichter der Unschuldigen!}{}{}{}{ }
+{41}{Ich glaube, Ihr seid schon viel zu lang allein hier draußen.}{}{5}{}{0}{ }
+{42}{Ob blind oder nicht ... Ihr seid viel zu nervtötend, um am Leben gelassen zu werden.}{}{5}{}{}{co, fl 32}
+{44}{Ihr verrücktig Kerl! Ich jetz' geh'n.}{}{-4}{}{0}{ }
+{45}{Ich sterben?!?  Nö!  IHR STERBEN!}{}{-4}{}{}{co, fl 32}
+{46}{Er hat mich niemals gefunden, wisst Ihr ... und er wird mich auch niemals finden!  Nicht mich!  Der Meister des Ausweichens ist einem wie Stout stets überlegen!  ... niemals, niemals, niemals ... }{Er hat mich niemals gefunden, wisst Ihr ... und er wird mich auch niemals finden!  Nicht mich!  Der Meister des Ausweichens ist einem wie Stout stets überlegen!  ... niemals, niemals, niemals ... }{}{}{}{ }
+{47}{Ihr seid Adkin Chambers ... der Meister des Ausweichens?}{}{5}{tr1 2, tr1 -2}{64}{lf1 1 }
+{48}{Meister des Ausweichens?  Ihr seid der Meister des Ausweichens?!?}{}{5}{tr1 -1}{55}{ }
+{49}{Ihr seid ein Meister? Ha, ha, ha! Der war echt gut, Maulwurf!}{}{5}{tr1 -1}{55}{ }
+{50}{Ihr Meiser von Aufweichen?  Akki Schäbers?  Ich Euch suchen!}{}{-4}{tr1 2, tr1 -2}{64}{ }
+{53}{Ha, ha, ha ...  Blindig Mann witzig!  Wer Ihr wirklich?}{}{-4}{tr1 -1}{55}{ }
+{54}{E:}{}{1}{}{0}{ }
+{55}{Wisst Ihr denn nicht, wen Ihr vor Euch habt, Schwachkopf?  Ich bin Adkin Chambers ... Meister des Ausweichens!}{Wisst Ihr denn nicht, wen Ihr vor Euch habt, Schwachkopf?  Ich bin Adkin Chambers ...  Meister des Ausweichens!}{}{}{}{lf1 1, gf2280 1 }
+{56}{Wenn Ihr der "Meister" seid ... warum bildet Ihr mich dann nicht aus?}{}{5}{}{81}{ }
+{57}{Der Meister des Ausweichens ist ein verrückter blinder Mann ...  Beweist es!}{}{5}{}{}{co, fl 32}
+{58}{Dürfte ich Euch eine Frage stellen. Mr. Chambers?}{}{5}{}{139}{ }
+{60}{Ihr Meiser sein, was? Wenn das wahr, dann Ihr rausbildern @pcname@!}{}{-4}{}{81}{ }
+{61}{Gutt, witzig Aufweichmann ... wenn so guttig ... dann ausweichen DAS!}{}{-4}{}{}{co, fl 32}
+{62}{Ich was fragen?}{}{-4}{}{139}{ }
+{63}{E:}{}{1}{}{0}{ }
+{64}{Wer hat Euch das erzählt?!  Sieh mal einer an!  Ich dachte, Ihr wüsstet nichts ... und jetzt wisst Ihr meinen Namen ... Lüge!  Ich bin noch immer der Beste ... Ihr werdet mich nicht töten!}{Wer hat Euch das erzählt?!  Sieh mal einer an!  Ich dachte, Ihr wüsstet nichts ... und jetzt wisst Ihr meinen Namen ...  Lüge!  Ich bin noch immer der Beste ... Ihr werdet mich nicht töten!}{}{}{}{ }
+{65}{Ich habe Euch tatsächlich gesucht, aber nur, um ausgebildet zu werden. Aus keinem anderen Grund.}{}{5}{tr1 2, tr1 -2}{69}{ }
+{67}{Ich nich' lügen!  Ich nur willen Rausbilderung.  Ihr tun?}{}{-4}{tr1 2, tr1 -2}{69}{ }
+{68}{E:}{}{1}{}{0}{ }
+{69}{Lüge!  Er hat Euch geschickt, um mich zu töten!  Gebt es zu!  Reicht es denn nicht, dass er mir Druella genommen hat?!?  Oder dass er mich geblendet hat und mich sterben lassen wollte?}{Lüge!  Er hat Euch geschickt, um mich zu töten!  Gebt es zu!  Reicht es denn nicht, dass er mir Druella genommen hat?!?  Oder dass er mich geblendet hat und mich sterben lassen wollte?}{}{}{}{ }
+{70}{Nein, Sire.  Ich bin nur gekommen, weil ich Eure Weisheit als Lehrmeister benötige.}{}{5}{}{75}{ }
+{73}{Ich nur willen Rausbilderung.}{}{-4}{}{75}{ }
+{74}{E:}{}{1}{}{0}{ }
+{75}{Ihr erwartet also, dass ich glaube, Ihr habet einen alten blinden Mann aufgesucht, damit er Euch zum Meister des Ausweichens macht?  Ihr haltet mich wohl für einen vollkommenen Narren!}{Ihr erwartet also, dass ich glaube, Ihr habet einen alten blinden Mann aufgesucht, damit er Euch zum Meister des Ausweichens macht?  Ihr haltet mich wohl für einen vollkommenen Narren!}{}{}{}{ }
+{76}{Aber es stimmt, Sire. Außer der Ausbildung gibt es keinen Grund.}{}{5}{}{81}{ }
+{79}{Blindig Mann imma noch rausbildern?   Odda zu schwer?}{}{-4}{}{81}{ }
+{80}{E:}{}{1}{}{0}{ }
+{81}{[Sarkastisch.] Und wie soll ich feststellen, wie weit Ihr es in der Kunst des Ausweichens bereits gebracht habt?    Wenn Ihr wahrlich schon bewandert seid, dann seht Ihr DAS hier ja sicher kommen ...  [Plötzlich schießt sein Arm nach vorne, um nach dir zu schlagen ...]}{[Sarkastisch.] Und wie soll ich feststellen, wie weit Ihr es in der Kunst des Ausweichens bereits gebracht habt?    Wenn Ihr wahrlich schon bewandert seid, dann seht Ihr DAS hier ja sicher kommen ...  [Plötzlich schießt sein Arm nach vorne, um nach dir zu schlagen ...]}{}{}{}{ }
+{82}{Was zum ...? [Ausweichen.]}{}{5}{tr1 2, tr1 -2, sk1 20}{179}{ }
+{83}{Was zum ...? [Ausweichen.]}{}{5}{tr1 2, tr1 -2, sk1 -19}{191}{ }
+{84}{Was zum ...? [Ausweichen.]}{}{5}{tr1 1, tr1 -1}{186}{ }
+{85}{He! Verrückter alter Mann! [Ausweichen.]}{}{5}{tr1 -1}{186}{ }
+{86}{Grmpf? [Ausweichen.]}{}{-4}{tr1 2, tr1 -2, sk1 20}{179}{ }
+{87}{Grmpf? [Ausweichen.]}{}{-4}{tr1 2, tr1 -2, sk1 -19}{191}{ }
+{88}{Grmpf? [Ausweichen.]}{}{-4}{tr1 1, tr1 -1}{186}{ }
+{89}{He!  Ihr verrücktig! [Ausweichen.]}{}{-4}{tr1 -1}{186}{ }
+{90}{Ha!  Gut!  Ich werde Euch "glauben".  Wenn Ihr wirklich zum Meister ausgebildet werden wollt, dann müsst Ihr zunächst eine Aufgabe für mich erfüllen, ehe ich Euch in meine Geheimnisse einweihe.}{Ha!  Gut!  Ich werde Euch "glauben".  Wenn Ihr wirklich zum Meister ausgebildet werden wollt, dann müsst Ihr zunächst eine Aufgabe für mich erfüllen, ehe ich Euch in meine Geheimnisse einweihe.}{}{}{}{ }
+{91}{Was immer Ihr wollt, Meister.}{}{5}{}{96}{ }
+{92}{Was muss ich tun, um mich zu beweisen?}{}{5}{}{96}{ }
+{94}{Was ich sollen tun?}{}{-4}{}{96}{ }
+{95}{E:}{}{1}{}{0}{ }
+{96}{Tod!  Ich will den Tod!  Tötet Sire Garrick Stout, den Nahkampfmeister!  Ha, ha!  Ja!  Beweist, dass er nicht Euer Meister ist, und ich werde Euch mit der Ausbildung belohnen! }{Tod!  Ich will den Tod!  Tötet Sire Garrick Stout, den Nahkampfmeister!  Ha, ha!  Ja!  Beweist, dass er nicht Euer Meister ist, und ich werde Euch mit der Ausbildung belohnen! }{}{}{}{qu1105 1 }
+{97}{Ihr wollt, dass ich den Meister des Nahkampfs für Euch töte?  Aber warum denn?}{}{5}{gf2291 0}{107}{ }
+{98}{Welchen Sinn hätte sein Tod für Euch?}{}{5}{gf2291 0}{107}{ }
+{99}{Diesen arroganten Narren habe ich bereits getötet.}{}{5}{gf2291  1}{336}{ }
+{100}{Ich sollen totig mach'n Nahkrampfmeiser? Warum?}{}{-4}{gf2291 0}{107}{ }
+{101}{Was er Euch tun?}{}{-4}{gf2291 0}{107}{ }
+{102}{Ich schon totig machen bösig Mann.}{}{-4}{gf2291  1}{336}{ }
+{103}{Ha!  Jetzt schickt er also auch schon einen Schwachkopf, um seine Taten zu vollenden.  Konnte er nicht jemand besseres finden?  Ich habe nach Eurem Namen gefragt!}{Ha!  Jetzt schickt er also auch schon einen Schwachkopf, um seine Taten zu vollenden.  Konnte er nicht jemand besseres finden?  Ich habe nach Eurem Namen gefragt!}{}{}{}{ }
+{104}{Oh ... @pcname@.  So mich heiß'n.}{}{-4}{}{26}{ }
+{105}{Ich nich' Schwatzkopp!  Das mir machen sauer!  Ich Euch jetz' kriegen!}{}{-4}{}{}{co, fl 32}
+{106}{E:}{}{-4}{}{0}{ }
+{107}{Warum er sterben soll?  WARUM ER STERBEN SOLL?  Weil er mein Leben zerstört und mich geblendet hat!  Druella war mein!  Mein!  Er wusste es, er wusste, dass sie mich liebte ...  Nur deshalb hat er sie mir genommen!}{Warum er sterben soll?  WARUM ER STERBEN SOLL?  Weil er mein Leben zerstört und mich geblendet hat!  Druella war mein!  Mein!  Er wusste es, er wusste, dass sie mich liebte ...  Nur deshalb hat er sie mir genommen!}{}{}{}{ }
+{108}{Er hat Euch wegen einer Frau geblendet?}{}{5}{}{112}{ }
+{110}{Ihr kämpfen wegen Mä'chen?}{}{-4}{}{112}{ }
+{111}{E:}{}{1}{}{0}{ }
+{112}{Er und ich waren einander noch niemals grün.  Aber dann forderte er mich zu einem Duell, der Preis war Druellas Hand.  Ich war rasend vor Zorn!  Dieses aufgeblasene Schwein!  Stolz, wie ich war, nahm ich an, obwohl sie vehement protestierte ... Ich konnte ja nicht ahnen, wie besessen er von ihr inzwischen war ...}{Er und ich waren einander noch niemals grün.  Aber dann forderte er mich zu einem Duell, der Preis war Druellas Hand.  Ich war rasend vor Zorn!  Dieses aufgeblasene Schwein!  Stolz, wie ich war, nahm ich an, obwohl sie vehement protestierte ... Ich konnte ja nicht ahnen, wie besessen er von ihr inzwischen war ...}{}{}{}{ }
+{113}{Aber warum hat er Euch nur geblendet - und nicht getötet?}{}{5}{}{118}{ }
+{116}{Er Euch blenden bei Düll?  Das nich' richtich.}{}{-4}{}{118}{ }
+{117}{E:}{}{-4}{}{0}{ }
+{118}{Ich machte eine falsche Bewegung, und er hatte mich. Ich ergab mich, aber er konnte nicht aufhören. Er wollte, dass ich seine Geschicklichkeit als Kämpfer anerkannte.  Als ich das ablehnte, sagte er, er würde schon dafür sorgen, dass ich nie wieder glaubte, ich sei ihm ebenbürtig.  Dann blendete er mich mit seinem Schwert.  Das Letzte, das ich hörte, bevor der Schmerz mir die Sinne raubte, war Druellas Schrei ...}{Ich machte eine falsche Bewegung, und er hatte mich. Ich ergab mich, aber er konnte nicht aufhören. Er wollte, dass ich seine Geschicklichkeit als Kämpfer anerkannte.  Als ich das ablehnte, sagte er, er würde schon dafür sorgen, dass ich nie wieder glaubte, ich sei ihm ebenbürtig.  Dann blendete er mich mit seinem Schwert.  Das Letzte, das ich hörte, bevor der Schmerz mir die Sinne raubte, war Druellas Schrei ...}{}{}{}{ }
+{119}{Was geschah dann?}{}{5}{}{124}{ }
+{120}{Ich werde Euch rächen!  Welchen Beweis soll ich Euch bringen?}{}{5}{}{134}{qu1105 2 }
+{121}{Was dann?}{}{-4}{}{124}{ }
+{122}{Ich ihm totig machen für Euch! }{}{-4}{}{134}{qu1105 2 }
+{124}{Während ich in einem Spital genas, wuchs mein Hass auf Stout ins Unermessliche.  Er verzehrt mich jetzt zu jeder wachen Minute.  Ihr seid das Werkzeug, das mir geschickt wurde. Ihr werdet meine Augen sein!}{Während ich in einem Spital genas, wuchs mein Hass auf Stout ins Unermessliche.  Er verzehrt mich jetzt zu jeder wachen Minute.  Ihr seid das Werkzeug, das mir geschickt wurde. Ihr werdet meine Augen sein!}{}{}{}{ }
+{125}{Ich werde in Eurem Namen Rache nehmen. }{}{5}{}{134}{qu1105 2 }
+{126}{Ich ihm totig machen für Euch!}{}{-4}{}{134}{qu1105 2 }
+{127}{Er ist ein starker Gegner.  Ich muss darüber nachdenken ...}{}{5}{}{0}{ }
+{128}{Er großig Mann.  Mich nich' sicher ...  Ich zurück kommen.}{}{-4}{}{0}{ }
+{129}{Ich habe Gerüchte vernommen, nach denen Druella seinen Klauen entkommen ist.  Das ist der einzige Lichtblick in meinem Leben.  Vielleicht findet Ihr sie ja auf Eurer Reise.  Ich würde mich über jede Nachricht von ihr freuen.  [Plötzlich verfällt er wieder in seinen Wahn ...]  Nun wird er endlich für die Zerstörung unseres Lebens zahlen, Druella, meine Liebe.  Nun wird er endlich dafür zahlen!!!  ... GEHT!  Tötet diesen Dämon Garrick Stout und bringt mir seine Augen!!!}{Ich habe Gerüchte vernommen, nach denen Druella seinen Klauen entkommen ist.  Das ist der einzige Lichtblick in meinem Leben.  Vielleicht findet Ihr sie ja auf Eurer Reise.  Ich würde mich über jede Nachricht von ihr freuen.  [Plötzlich verfällt er wieder in seinen Wahn ...]  Nun wird er endlich für die Zerstörung unseres Lebens zahlen, Druella, meine Liebe.  Nun wird er endlich dafür zahlen!!!  ... GEHT!  Tötet diesen Dämon Garrick Stout und bringt mir seine Augen!!!}{}{}{}{ }
+{130}{Ich gehe!}{}{5}{}{0}{ }
+{131}{Das werde ich!  Ich hätte da noch eine Frage, bevor ich aufbreche ...}{}{5}{}{139}{ }
+{132}{Ich ihm kriegen!}{}{-4}{}{0}{ }
+{133}{Ja!  Abba ich vorher noch Fragens fragen ...}{}{-4}{}{139}{ }
+{134}{[Er kichert bösartig.] Bringt mir seine Augen.  Das soll mir als Beweis für seinen Tod genügen.}{[Er kichert bösartig.] Bringt mir seine Augen.  Das soll mir als Beweis für seinen Tod genügen.}{}{}{}{ }
+{135}{Sie gehören praktisch schon Euch. Dürfte ich fragen, was aus Druella geworden ist?}{}{5}{}{129}{ }
+{137}{Ich sie holen!  Was passier'n mi' Mä'chen?}{}{-4}{}{129}{ }
+{138}{E:}{}{1}{}{0}{ }
+{139}{Und?}{Und?}{}{}{}{ }
+{140}{Werdet Ihr mich zum Meister im Ausweichen machen?}{}{5}{qb 1105 0, qb 1116 0}{75}{ }
+{141}{H:}{}{5}{}{139}{ }
+{142}{E:}{}{5}{}{0}{ }
+{143}{Ich werde Stout für Euch töten. }{}{5}{qu1105 1}{134}{qu1105 2 }
+{144}{Ich habe die Augen Eures Feindes!}{}{5}{qu1105 3, in5660, lf 15 0}{162}{ }
+{145}{Ich bringe Euch ein Geschenk von Lady Druella.}{}{5}{in 3603, lf 14 0, qa 1115 1, qb 1115 2}{198}{ }
+{146}{Ich was haben für Euch ... von Ledig Trulla!}{}{-4}{in 3603, lf 14 0, qa 1115 1, qb 1115 2}{198}{ }
+{147}{Ihr mir machen Aufweichmeiser?}{}{-4}{qb 1105 0, qb 1116 0}{75}{ }
+{148}{H:}{}{-4}{}{139}{ }
+{149}{Ich Stau totig machen für Euch! }{}{-4}{qu1105 1}{134}{qu1105 2 }
+{150}{Ich haben Augens!  Ich haben Augens!}{}{-4}{qu1105 3, in5660, lf 15 0}{162}{ }
+{151}{E:}{}{-4}{}{0}{ }
+{152}{Ich habe die Augen von Stout noch nicht.}{}{5}{qu1105 2, ni5660}{157}{ }
+{153}{Haben Augens noch nich'...}{}{-4}{qu1105 2, ni5660}{157}{ }
+{154}{Oh, Ihr seid es, @pcname@.  Dieser Gestank kam mir doch gleich so bekannt vor!}{Oh, Ihr seid es, @pcname@.  Dieses Parfüm kam mir doch gleich so bekannt vor!}{}{}{}{ }
+{155}{Ich habe da eine Frage ...}{}{5}{}{139}{ }
+{156}{Ich was fragen?}{}{-4}{}{139}{ }
+{157}{Warum seid Ihr dann hier?!?  Von mir bekommt Ihr nichts, bevor Stout nicht tot ist!  TÖTET IHN!!!}{Warum seid Ihr dann hier?!?  Von mir bekommt Ihr nichts, bevor Stout nicht tot ist!  TÖTET IHN!!!}{}{}{}{ }
+{158}{K:}{}{5}{}{139}{ }
+{159}{E:}{}{5}{}{0}{ }
+{160}{K:}{}{-4}{}{139}{ }
+{161}{E:}{}{-4}{}{0}{ }
+{162}{[Er beginnt, wie ein Verrückter zu lachen.]  Ja!  JA!  Ich wusste, dass Ihr dazu fähig sein würdet!  Gebt sie mir!}{[Er beginnt, wie ein Verrückter zu lachen.]  Ja!  JA!  Ich wusste, dass Ihr dazu fähig sein würdet!  Gebt sie mir!}{}{}{}{lf 15 1 }
+{163}{Hier, nehmt sie.}{}{5}{}{167}{in 5660 }
+{164}{Bitte nehmt diese widerlichen Dinger!}{}{5}{}{167}{in 5660 }
+{165}{Fein.  Da.}{}{-4}{}{167}{in 5660 }
+{166}{Ihr nehmen Glibberdingens!}{}{-4}{}{167}{in 5660 }
+{167}{[Er fängt an, mit den Augen zu reden.] Ich wusste, dass ich meine Rache haben würde!  Jetzt habt Ihr für Eure Verbrechen gebüßt!  Die Rache ist MEIN!  [Er zerquetscht die Augen glückselig in seiner Faust und lacht dabei die ganze Zeit.]}{[Er fängt an, mit den Augen zu reden.] Ich wusste, dass ich meine Rache haben würde!  Jetzt habt Ihr für Eure Verbrechen gebüßt!  Die Rache ist MEIN!  [Er zerquetscht die Augen glückselig in seiner Faust und lacht dabei die ganze Zeit.]}{}{}{}{ }
+{168}{Ähem. Wie steht es jetzt um meine Ausbildung, Mr. Chambers?}{}{5}{}{170}{ }
+{169}{Ähmmm ...  Ihr mir jetz' rausbildern?}{}{-4}{}{170}{ }
+{170}{Ja, mein Sohn!  Ich erfülle Euch jeden Wunsch dafür, dass Ihr die Welt von dieser nichtswürdigen Kreatur befreit habt!  Indem Ihr Stout getötet habt, habt Ihr Euer Geschick in unserer Kunst brillant unter Beweis gestellt. Erlaubt mir also, Euch den Titel des Meisters im Ausweichen zu überreichen.  Vielen Dank.  Vielen, vielen Dank.}{Ja, Madame!  Ich erfülle Euch jeden Wunsch dafür, dass Ihr die Welt von dieser nichtswürdigen Kreatur befreit habt!  Indem Ihr Stout getötet habt, habt Ihr Euer Geschick in unserer Kunst brillant unter Beweis gestellt. Erlaubt mir also, Euch den Titel des Meisters im Ausweichen zu überreichen.  Vielen Dank.  Vielen, vielen Dank.}{}{}{}{tr1 3, qu1105 4, rq2163 }
+{171}{Vielen Dank.  Ich werde meine Abenteuer fortsetzen ...}{}{5}{}{-15}{ }
+{172}{Jetzt muss ich Euch ins Jenseits schicken. Es kann nur einen Meister geben.}{}{5}{}{}{co, fl 32}
+{173}{Ich bringe ein Geschenk ... von der Lady Druella!}{}{5}{ in3603, lf 14 0, qa1115 1, qb 1115 2}{198}{lf 14 1 }
+{175}{Dankie, Meiser.}{}{-4}{}{-15}{ }
+{176}{Ich was haben für Euch ... von Ledig Trulla!}{}{-4}{ in3603, lf 14 0, qa1115 1, qb 1115 2}{198}{lf 14 1 }
+{177}{Fein. Jetz' Ihr sterben! Ich sein einzig Meiser!}{}{-4}{}{}{co, fl 32}
+{178}{E:}{}{1}{}{-15}{ }
+{179}{[Es gelingt dir, seinem Schlag auszuweichen.]  Ihr scheint tatsächlich schon ein Experte im Ausweichen zu sein ...}{[Es gelingt dir, seinem Schlag auszuweichen.]  Ihr scheint tatsächlich schon ein Experte im Ausweichen zu sein ...}{}{}{}{ }
+{180}{Ich habe Euch doch gesagt, dass ich nur eine Ausbildung haben will!}{}{5}{}{90}{ }
+{181}{Das reicht, blinder Mann!  Verteidigt Euch!}{}{5}{}{}{co, fl 32}
+{183}{He!  Verrücktig Mann, ich nur willen Rausbilderung!}{}{-4}{}{90}{ }
+{184}{Ihr versuchen mich wehtun!  Ich Euch kriegen!}{}{-4}{}{}{co, fl 32}
+{185}{E:}{}{1}{}{0}{ }
+{186}{[Der erstaunlich kräftige Schlag des Blinden erwischt dich.]  Ha!  Ich wusste doch, dass Ihr lügt!  Ihr habt nicht einmal andeutungsweise die Fähigkeiten, ein Meister zu werden. Ihr müsst also ein Spion sein ...  Geht - oder tragt die Konsequenzen!}{[Der erstaunlich kräftige Schlag des Blinden erwischt dich.]  Ha!  Ich wusste doch, dass Ihr lügt!  Ihr habt nicht einmal andeutungsweise die Fähigkeiten, ein Meister zu werden. Ihr müsst also ein Spion sein ...  Geht - oder tragt die Konsequenzen!}{}{}{}{ }
+{187}{Jetzt reicht's. Ihr seid ja völlig verrückt!  Ich gehe!}{}{5}{}{40}{ }
+{188}{Dafür werdet Ihr teuer bezahlen, blinder Mann ...}{}{5}{}{}{co, fl 32}
+{189}{Ihr bekloppig!  Ich jetz' geh'n tun!}{}{-4}{}{40}{ }
+{190}{He!  Ihr mir hauen!  Jetz' ich hauen Euch!}{}{-4}{}{}{co, fl 32}
+{191}{[Du willst dem Hieb mit einem Schritt zur Seite ausweichen, aber die überraschende Schnelligkeit des Blinden überrumpelt dich etwas.]  Hmmm ...  Ihr seid tatsächlich bereits Experte in der Kunst des Ausweichens.  Doch reichen Eure Fertigkeiten noch nicht aus, um die Meisterschaft zu erlangen.  Verbessert Euch - dann werde ich Euch vielleicht ausbilden.}{[Du willst dem Hieb mit einem Schritt zur Seite ausweichen, aber die überraschende Schnelligkeit des Blinden überrumpelt dich etwas.]  Hmmm ...  Ihr seid tatsächlich bereits Experte in der Kunst des Ausweichens.  Doch reichen Eure Fertigkeiten noch nicht aus, um die Meisterschaft zu erlangen.  Verbessert Euch - dann werde ich Euch vielleicht ausbilden.}{}{}{}{ }
+{192}{Ich werde mich verbessern und zurückkommen.}{}{5}{}{0}{ }
+{193}{Das reicht, blinder Mann!  Verteidigt Euch!}{}{5}{}{}{co, fl 32}
+{195}{Ich mir bessern.  Dann ich zurück kommen.}{}{-4}{}{0}{ }
+{196}{Ihr versuchen mich wehtun!  Ich Euch kriegen!}{}{-4}{}{}{co, fl 32}
+{197}{E:}{}{1}{}{0}{ }
+{198}{Lady Druella!  Ihr habt sie gesehen!  Was schickt sie mir?}{Lady Druella!  Ihr habt sie gesehen!  Was schickt sie mir?}{}{}{}{ }
+{199}{Einen Trank.  Mir wurde gesagt, dass er Euch das Augenlicht wiedergeben kann.}{}{5}{ gf2291 1}{203}{ }
+{200}{Ein Trink.  Trink, wo machen Augens heile!}{}{-4}{gf2291 1}{203}{ }
+{201}{Einen Trank.  Mir wurde gesagt, dass er Euch das Augenlicht wiedergeben kann.}{}{5}{gf2291 0}{-10}{ }
+{202}{Ein Trink.  Trink, wo machen Augens heile!}{}{-4}{ gf2291 0}{-10}{ }
+{203}{Mein Augenlicht wiedergeben?!  Wie ist sie in Besitz eines solchen Mittels gekommen?  Oder ist das nur eine Narretei?}{Mein Augenlicht wiedergeben?!  Wie ist sie in Besitz eines solchen Mittels gekommen?  Oder ist das nur eine Narretei?}{}{}{}{ }
+{204}{Garrick wollte sie damit zwingen, ihn zu heiraten.}{}{5}{}{206}{ }
+{205}{Garstig sie willen zwingen dami', ihm heiraten.}{}{-4}{}{206}{ }
+{206}{Diese bösartige Bestie!  Ist seine Niedertracht denn wirklich so grenzenlos?  Ihr habt gut daran getan, die Welt von dieser Pestbeule zu befreien.  Worauf wartet Ihr noch?  Gebt mir den Trank!}{Diese bösartige Bestie!  Ist seine Niedertracht denn wirklich so grenzenlos?  Ihr habt gut daran getan, die Welt von dieser Pestbeule zu befreien.  Worauf wartet Ihr noch?  Gebt mir den Trank!}{}{}{}{ }
+{207}{Hier.  Trinkt.}{}{5}{}{-10}{ }
+{209}{Hier.  Ihr trinken. }{}{-4}{}{-10}{ }
+{211}{Ich kann sehen!  Ich kann sehen!  Gepriesen seien die Götter!  Ich habe noch nie zuvor von solcher Magie gehört!  Dafür muss dieses Monster einen hohen Preis gezahlt haben!  Oh, der Segen der Götter sei mit Euch!  Bitte ... was ist mit Druella?}{Ich kann sehen!  Ich kann sehen!  Gepriesen seien die Götter!  Ich habe noch nie zuvor von solcher Magie gehört!  Dafür muss dieses Monster einen hohen Preis gezahlt haben!  Oh, der Segen der Götter sei mit Euch!  Bitte ... was ist mit Druella?}{}{}{}{gf 2292 1, qu 1115 4, in 3603, al +100, fp }
+{212}{Sie ist in Dernholm - sie war nicht sicher, ob Ihr sie noch liebt.}{}{5}{qu1114 4, gf2290 0, gf2291 1}{-19}{ }
+{213}{Sie wurde Sire Garricks Braut im Austausch gegen Euer Augenlicht.}{}{5}{qu1114 4, gf2290 0, gf2291 0}{400}{ }
+{214}{Ich fürchte, sie hat es nicht geschafft. Sie hat Euch bis zuletzt geliebt.}{}{5}{gf2290 1}{229}{ }
+{215}{Sie hat genervt. Ich habe sie getötet, so wie ich Euch jetzt töten werde.}{}{5}{gf2290 1}{}{co, fl 234}
+{216}{Sie warten in Dernholm.  Sie nich' wissen, ob Ihr ihr noch lieb haben.}{}{-4}{qu1114 4, gf2290 0, gf2291 1}{-19}{ }
+{217}{Sie in Dernholm, heiraten Sire Garstig, dami' Ihr können haben Augens.}{}{-4}{qu1114 4, gf2290 0, gf2291 0}{400}{ }
+{218}{Mich Leid tun.  Sie Euch lieb haben bis totig sein ...}{}{-4}{gf2290 1}{229}{ }
+{219}{Sie mir nerven.  Ich ihr totig machen, un' totig machen Euch jetz' auch!}{}{-4}{gf2290 1}{}{co, fl 234}
+{220}{Nie habe ich auch nur eine Sekunde in meiner Liebe zu ihr gewankt.  Ich breche sofort auf!  Danke für alles, was Ihr für uns getan habt.  Kein Krieger könnte ehrenhafter sein.  Mögen die Götter Eure Reise segnen!  Lebt wohl!}{Nie habe ich auch nur eine Sekunde in meiner Liebe zu ihr gewankt.  Ich breche sofort auf!  Danke für alles, was Ihr für uns getan habt.  Kein Krieger könnte ehrenhafter sein.  Mögen die Götter Eure Reise segnen!  Lebt wohl!}{}{}{}{ }
+{221}{Lebt wohl.}{}{5}{}{-15}{ }
+{222}{Doch, eines könnt Ihr wohl für mich tun ... Meister des Ausweichens ...}{}{5}{sk1 18, tr 1 2, tr 1 -2, gf2291 1, qu 1105 0}{350}{ }
+{223}{Ich muss Euch sagen, dass Sire Garrick tot ist. Ich habe seine Augen.}{}{5}{lf 15 0, in 5660, qu 1105 3}{162}{ }
+{224}{Und damit es eine faire Angelegenheit bleibt ... bringe Ich Euch jetzt ebenfalls um!}{}{5}{}{}{co, fl 32}
+{225}{Garstig totig! Ich haben sein Augens!}{}{-4}{lf 15 0, in 5660, qu 1105 3}{162}{ }
+{226}{Ja. Ich guttig Hüpfer. Ich willen lernen Aufweichmeiser.}{}{-4}{sk1 18, tr 1 2, tr 1 -2, gf2291 1, qu 1105 0}{350}{ }
+{227}{Tschö.}{}{-4}{}{-15}{ }
+{228}{Jetz' Euch können kucken, wie ich machen Euch totig auch!}{}{-4}{}{}{co, fl 32}
+{229}{NEIIIN!  Sagt, dass das nicht wahr ist!  Oh!  Was für ein Preis für mein Augenlicht!  Was für ein grausamer Preis!  Ich würde es sofort wieder hergeben, wenn sie nur wieder leben würde!  [Er schluchzt voller Kummer.] Bitte ... lasst mich allein, ich will in aller Einsamkeit trauern.}{NEIIIN!  Sagt, dass das nicht wahr ist!  Oh!  Was für ein Preis für mein Augenlicht!  Was für ein grausamer Preis!  Ich würde es sofort wieder hergeben, wenn sie nur wieder leben würde!  [Er schluchzt voller Kummer.] Bitte ... lasst mich allein, ich will in aller Einsamkeit trauern.}{}{}{}{ }
+{230}{Es tut mir Leid, Adkin.  Ich gehe.  Lebt wohl.}{}{5}{}{0}{ }
+{231}{Lasst uns schauen, ob Ihr so leicht zu töten seid wie sie ...}{}{5}{}{}{co, fl 234}
+{232}{Mich Leid tun, Akki. Tschö.}{}{-4}{}{0}{ }
+{233}{Mal kucken, ob Euch auch so leichtig totig zu machen wie ihr.  Ihr heulen wie Mä'chens?}{}{-4}{}{}{co, fl 234}
+{234}{Was!?!  Ihr da!  Wie könnt Ihr es in Eurer Häme wagen, zurückzukommen?  Ich werde Rache an Euch nehmen!}{Was!?!  Ihr da!  Wie könnt Ihr es in Eurer Häme wagen, zurückzukommen?  Ich werde Rache an Euch nehmen!}{}{}{}{ }
+{235}{}{}{}{}{}{ }
+{236}{}{}{}{}{}{ }
+{237}{}{}{}{}{}{ }
+{238}{}{}{}{}{}{ }
+{239}{}{}{}{}{}{ }
+{240}{Lady Druella!  Ihr habt sie gesehen!  Was schickt sie mir?}{Lady Druella!  Ihr habt sie gesehen!  Was schickt sie mir?}{}{}{}{ }
+{241}{Einen Trank. Mir wurde gesagt, dass er Euch das Augenlicht wiedergeben kann.}{}{5}{}{-10}{ }
+{242}{Ein Trink.  Trink, wo machen Augens heile!  Hier.  Ihr trinken.}{}{-4}{}{-10}{ }
+{244}{}{}{}{}{}{ }
+{245}{}{}{}{}{}{ }
+{246}{}{}{}{}{}{ }
+{247}{}{}{}{}{}{ }
+{248}{}{}{}{}{}{ }
+{249}{}{}{}{}{}{ }
+{252}{[Er denkt einen Moment lang nach.] Seine Augen.  [Ein böses Lachen.] Ja.  Seine Augen!  Das ist der Beweis, den ich will!  Bringt mir die Augen von Sire Garrick Stout, und ich mache Euch zum Meister des Ausweichens.}{[Er denkt einen Moment lang nach.] Seine Augen.  [Ein böses Lachen.] Ja.  Seine Augen!  Das ist der Beweis, den ich will!  Bringt mir die Augen von Sire Garrick Stout, und ich mache Euch zum Meister des Ausweichens.}{}{}{}{ }
+{253}{Ich werde in Kürze damit zurückkehren.}{}{5}{}{0}{qu1116 2 }
+{254}{Es tut mir Leid.  Ich will ihn nicht töten.  Lebt wohl.}{}{5}{}{0}{ }
+{255}{Ich sie kriegen.  Baldig wieda da sein.}{}{-4}{}{0}{qu1116 2 }
+{256}{Nein. Ich nich' willen totig machen Sire Garstig.  Tschö.}{}{-4}{}{0}{ }
+{257}{[Er beginnt, wie ein Verrückter zu lachen.]  Ja!  JA!  Ich wusste, dass Ihr dazu fähig sein würdet!  Gebt sie mir!}{[Er beginnt, wie ein Verrückter zu lachen.]  Ja!  JA!  Ich wusste, dass Ihr dazu fähig sein würdet!  Gebt sie mir!}{}{}{}{lf 15 1 }
+{258}{Hier, nehmt sie.}{}{5}{}{262}{in 5660 }
+{259}{Bitte nehmt diese widerlichen Dinger!}{}{5}{}{262}{in 5660 }
+{260}{Fein.  Da.}{}{-4}{}{262}{in 5660 }
+{261}{Ihr nehmen Glibberdingens!}{}{-4}{}{262}{in 5660 }
+{262}{[Er fängt an, mit den Augen zu reden.] Ich wusste, dass ich meine Rache haben würde!  Jetzt habt Ihr für Eure Verbrechen gebüßt!  Die Rache ist MEIN!  [Er zerquetscht die Augen glückselig in seiner Faust und lacht dabei die ganze Zeit.]}{[Er fängt an, mit den Augen zu reden.] Ich wusste, dass ich meine Rache haben würde!  Jetzt habt Ihr für Eure Verbrechen gebüßt!  Die Rache ist MEIN!  [Er zerquetscht die Augen glückselig in seiner Faust und lacht dabei die ganze Zeit.]}{}{}{}{ }
+{263}{Ähem.  Adkin, wie steht es jetzt um meine Ausbildung?}{}{5}{sk1 18, tr 1 2, tr 1 -2}{271}{ }
+{264}{Ähmmm ...  Ihr mir jetz' rausbildern?}{}{-4}{sk1 18, tr 1 2, tr 1 -2}{271}{ }
+{265}{Ähem.  Adkin, wie steht es jetzt um meine Ausbildung?}{}{5}{sk1 -17, tr 1 2, tr 1 -2}{285}{ }
+{266}{Ähmmm ...  Ihr mir jetz' rausbildern?}{}{-4}{sk1 -17, tr 1 2, tr 1 -2}{285}{ }
+{267}{Ähem.  Adkin, wie steht es jetzt um meine Ausbildung?}{}{5}{tr 1 -1}{285}{ }
+{268}{Ähmmm ...  Ihr mir jetz' rausbildern?}{}{-4}{tr 1 -1}{285}{ }
+{271}{Ja, mein Sohn!  Ich erfülle Euch jeden Wunsch dafür, dass Ihr die Welt von dieser nichtswürdigen Kreatur befreit habt!  Indem Ihr Stout getötet habt, habt Ihr Euer Geschick in unserer Kunst brillant unter Beweis gestellt. Erlaubt mir also, Euch den Titel des Meisters im Ausweichen zu überreichen.  Vielen Dank.  Vielen, vielen Dank.  ... Und was ist mit meiner geliebten Druella?}{Ja, meine Tochter!  Ich erfülle Euch jeden Wunsch dafür, dass Ihr die Welt von dieser nichtswürdigen Kreatur befreit habt!  Indem Ihr Stout getötet habt, habt Ihr Euer Geschick in unserer Kunst brillant unter Beweis gestellt. Erlaubt mir also, Euch den Titel des Meisters im Ausweichen zu überreichen.  Vielen Dank.  Vielen, vielen Dank.    ... Und was ist mit meiner geliebten Druella?}{}{}{}{tr1 3, qu1116 4, Rq2163 }
+{272}{Sie ist in Dernholm - sie war nicht sicher, ob Ihr sie noch liebt.}{}{5}{qu1114 4, gf2290 0, gf2291 1}{-19}{ }
+{273}{Sie wurde Sire Garricks Braut im Austausch gegen Euer Augenlicht.}{}{5}{qu1114 4, gf2290 0, gf2291 0}{400}{ }
+{274}{Ich fürchte, sie hat es nicht geschafft.  Sie hat Euch bis zuletzt geliebt.}{}{5}{gf2290 1}{229}{ }
+{275}{Sie hat genervt. Ich habe sie getötet, so wie ich Euch jetzt töten werde.}{}{5}{gf2290 1}{}{co, fl 234}
+{276}{Sie warten in Dernholm.  Sie nich' wissen, ob Ihr ihr noch lieb haben.}{}{-4}{qu1114 4, gf2290 0, gf2291 1}{-19}{ }
+{277}{Sie in Dernholm, heiraten Sire Garstig, dami' Ihr können haben Augens.}{}{-4}{qu1114 4, gf2290 0, gf2291 0}{400}{ }
+{278}{Mich Leid tun.  Sie Euch lieb haben bis totig sein ...}{}{-4}{gf2290 1}{229}{ }
+{279}{Sie mir nerven.  Ich ihr totig machen, un' totig machen Euch jetz' auch!}{}{-4}{gf2290 1}{}{co, fl 234}
+{280}{Ich bin ein echter Spezialist.  Ich kann Euch erst ausbilden, wenn Ihr nicht nur Eure Lehre abgeschlossen habt, sondern auch schon Experte seid. Und Ihr braucht genug Erfahrung, um der Ausbildung zum Meister würdig zu sein ...  Es tut mir Leid.  Aber das ist alles, was ich Euch anbieten kann ...}{Ich bin ein echter Spezialist.  Ich kann Euch erst ausbilden, wenn Ihr nicht nur Eure Lehre abgeschlossen habt, sondern auch schon Experte seid. Und Ihr braucht genug Erfahrung, um der Ausbildung zum Meister würdig zu sein ...  Es tut mir Leid.  Aber das ist alles, was ich Euch anbieten kann ...}{}{}{}{ }
+{281}{Dann werde ich weiter üben. Was soll seinen Tod beweisen?}{}{5}{}{252}{qu1116 2 }
+{283}{Ich mir bessern.  Ich ihm totig machen.  Was für Beweis Ihr willen, er totig sein?}{}{-4}{}{252}{qu1116 2 }
+{284}{E:}{}{1}{}{0}{ }
+{285}{Ich bin ein echter Spezialist.  Ich kann Euch erst ausbilden, wenn Ihr nicht nur Eure Lehre abgeschlossen habt, sondern auch schon Experte seid. Und Ihr braucht genug Erfahrung, um der Ausbildung zum Meister würdig zu sein ...  Es tut mir Leid.  Kommt wieder, wenn Eure Fertigkeiten sich verbessert haben. Dann ...  werde ich Euch ausbilden.}{Ich bin ein echter Spezialist.  Ich kann Euch erst ausbilden, wenn Ihr nicht nur Eure Lehre abgeschlossen habt, sondern auch schon Experte seid. Und Ihr braucht genug Erfahrung, um der Ausbildung zum Meister würdig zu sein ...  Es tut mir Leid.  Kommt wieder, wenn Eure Fertigkeiten sich verbessert haben. Dann ...  werde ich Euch ausbilden.}{}{}{}{ }
+{286}{Ich werde mich verbessern und zurückkommen.}{}{5}{}{0}{ }
+{288}{Ich mir bessern.  Dann ich zurück kommen.}{}{-4}{}{0}{ }
+{289}{E:}{}{1}{}{0}{ }
+{292}{}{}{}{}{}{ }
+{293}{}{}{}{}{}{ }
+{294}{}{}{}{}{}{ }
+{295}{}{}{}{}{}{ }
+{296}{Ja, mein Sohn!  Ich erfülle Euch jeden Wunsch dafür, dass Ihr die Welt von dieser nichtswürdigen Kreatur befreit habt!  Indem Ihr Stout getötet habt, habt Ihr Eure kämpferischen Fertigkeiten unter Beweis gestellt.  Bald ... Bald, hoffe ich ... werdet Ihr für die Ausbildung bereit sein, und ich kann Euch den Titel eines Meisters im Ausweichen verleihen.  Vielen Dank.  Vielen, vielen Dank.  ... Und was ist mit meiner geliebten Druella?}{Ja, meine Tochter!  Ich erfülle Euch jeden Wunsch dafür, dass Ihr die Welt von dieser nichtswürdigen Kreatur befreit habt!  Indem Ihr Stout getötet habt, habt Ihr Eure kämpferischen Fertigkeiten unter Beweis gestellt.  Bald ... Bald, hoffe ich ... werdet Ihr für die Ausbildung bereit sein, und ich kann Euch den Titel eines Meisters im Ausweichen verleihen.  Vielen Dank.  Vielen, vielen Dank.  ... Und was ist mit meiner geliebten Druella?}{}{}{}{ }
+{297}{Sie ist in Dernholm - sie war nicht sicher, ob Ihr sie noch liebt.}{}{5}{qu1114 4, gf2290 0, gf2291 1}{-19}{ }
+{298}{Sie wurde Sire Garricks Braut im Austausch gegen Euer Augenlicht.}{}{5}{qu1114 4, gf2290 0, gf2291 0}{400}{ }
+{299}{Ich fürchte, sie hat es nicht geschafft.  Sie hat Euch bis zuletzt geliebt.}{}{5}{gf2290 1}{229}{ }
+{300}{Sie hat genervt. Ich habe sie getötet, so wie ich Euch jetzt töten werde.}{}{5}{gf2290 1}{}{co, fl 260}
+{301}{Sie warten in Dernholm.  Sie nich' wissen, ob Ihr ihr noch lieb haben.}{}{-4}{qu1114 4, gf2290 0, gf2291 1}{-19}{ }
+{302}{Sie in Dernholm, heiraten Sire Garstig, dami' Ihr können haben Augens.}{}{-4}{qu1114 4, gf2290 0, gf2291 0}{400}{ }
+{303}{Mich Leid tun.  Sie Euch lieb haben bis totig sein ...}{}{-4}{gf2290 1}{229}{ }
+{304}{Sie mir nerven.  Ich ihr totig machen, un' totig machen Euch jetz' auch!}{}{-4}{gf2290 1}{}{co, fl 260}
+{309}{Endlich legt Ihr die nötigen Fertigkeiten an den Tag. Ich verleihe Euch hiermit den Titel des Meisters im Ausweichen!}{Endlich legt Ihr die nötigen Fertigkeiten an den Tag. Ich verleihe Euch hiermit den Titel des Meisters im Ausweichen!}{}{}{}{tr1 3, qu1116 4, rq2163 }
+{310}{Vielen Dank für Eure Geduld.}{}{5}{}{0}{ }
+{312}{Dankie, lieb Meiser!}{}{-4}{}{0}{ }
+{313}{E:}{}{1}{}{0}{ }
+{314}{G:}{G:}{}{}{}{ }
+{315}{Ich habe die Augen von Garrick Stout, wie Ihr es verlangt habt!}{}{5}{in5660, lf 13 0}{262}{lf 13 1, in 5660 }
+{316}{Ich versuche noch immer, Stout zu töten und Euch seine Augen zu bringen!}{}{5}{ni5660, lf 13 0}{0}{ }
+{317}{Ich bin jetzt für die Ausbildung zum Meister bereit.}{}{5}{lf 13 1, tr 1 2, tr 1 -2, sk1 18}{309}{ }
+{318}{Ich arbeite noch immer an meiner Ausbildung.}{}{5}{tr 1 -1, tr 1 1}{0}{ }
+{319}{Ich arbeite noch immer an meiner Geschicklichkeit.}{}{5}{sk1 -17, tr 1 1}{0}{ }
+{320}{Ich bin nicht bereit für die Ausbildung.}{}{5}{}{0}{ }
+{321}{Ich haben Augens von bösig Mann.}{}{-4}{in5660, lf 13 0}{262}{lf 13 1, in 5660 }
+{322}{Ich bald Augens haben von bösig Mann.}{}{-4}{ni5660, lf 13 0}{0}{ }
+{323}{Ark. Mir rausbildern! Sofort!}{}{-4}{lf 13 1, tr 1 2, tr 1 -2, sk1 18}{309}{ }
+{324}{Ark. Mir nich' rausbildern! Mussen noch übeln. Ich jetz' geh'n tu!}{}{-4}{tr 1 -1, tr 13 1}{0}{ }
+{325}{Ark. Mir nich' rausbildern! Mussen noch übeln. Ich jetz' geh'n tu!}{}{-4}{sk1 -17, tr 13 1}{0}{ }
+{326}{Ich nich' fertig für lernen.}{}{-4}{}{0}{ }
+{327}{Wenn Ihr mir nicht die Augen von Sire Garrick Stout bringt, wird aus unserer Abmachung nichts. Bringt mir seine Augen!}{Wenn Ihr mir nicht die Augen von Sire Garrick Stout bringt, wird aus unserer Abmachung nichts. Bringt mir seine Augen!}{}{}{}{ }
+{328}{E:}{}{5}{}{0}{ }
+{329}{E:}{}{-4}{}{0}{ }
+{330}{[Lachend.] Ihr seid bereits ein Meister! Ich wünsche Euch Glück auf all Euren Abenteuerreisen!}{[Lachend.] Ihr seid bereits ein Meister! Ich wünsche Euch Glück auf all Euren Abenteuerreisen!}{}{}{}{qu 1116 4 }
+{331}{E:}{}{5}{}{0}{ }
+{332}{E:}{}{-4}{}{0}{ }
+{335}{Tötet Stout! Und bringt mir seine Augen!}{Tötet Stout! Und bringt mir seine Augen!}{}{}{}{ }
+{336}{[Sein Mund bleibt vor Überraschung offen stehen.]  Was meint Ihr? Garrick Stout ist tot?}{[Sein Mund bleibt vor Überraschung offen stehen.]  Was meint Ihr? Garrick Stout ist tot?}{}{}{}{ }
+{337}{Ja.}{}{5}{}{339}{ }
+{338}{Jawoll!  Er totig.}{}{-4}{}{339}{ }
+{339}{Könnt Ihr das beweisen?  Stout war der Nahkampfmeister.  Keiner, der so leicht zu besiegen war.}{Könnt Ihr das beweisen?  Stout war der Nahkampfmeister.  Keiner, der so leicht zu besiegen war.}{}{}{}{ }
+{340}{Ich sage, er ist tot.  Ihr könnt gern an mir zweifeln - auf eigene Gefahr.}{}{5}{}{343}{ }
+{341}{Stellt meine Ehre nicht in Frage, Sire.}{}{5}{}{343}{ }
+{342}{Er sehr mausetotig. Mich sicha!}{}{-4}{}{343}{ }
+{343}{[Er schenkt dir Glauben.] So wahr es Götter gibt in Arcanum - ich wusste, dass ich meine Vergeltung eines Tages bekommen würde.  Die Rache ist MEIN, endlich!  Ha, ha, ha, ha!}{[Er schenkt dir Glauben.] So wahr es Götter gibt in Arcanum - ich wusste, dass ich meine Vergeltung eines Tages bekommen würde.  Die Rache ist MEIN, endlich!  Ha, ha, ha, ha!}{}{}{}{ }
+{344}{Ähem.  Adkin, dürfte ich noch mal auf die Ausbildung zurückkommen?}{}{5}{sk1 18, tr 1 2, tr 1 -2}{271}{ }
+{345}{Ähmmm ...  Ihr mir jetz' rausbildern?}{}{-4}{sk1 18, tr 1 2, tr 1 -2}{271}{ }
+{346}{Ähem.  Adkin, dürfte ich noch mal auf die Ausbildung zurückkommen?}{}{5}{sk1 -17, tr 1 2, tr 1 -2}{285}{ }
+{347}{Ähmmm ...  Ihr mir jetz' rausbildern?}{}{-4}{sk1 -17, tr 1 2, tr 1 -2}{285}{ }
+{348}{Ähem.  Adkin, dürfte ich noch mal auf die Ausbildung zurückkommen?}{}{5}{tr 1 -1}{285}{ }
+{349}{Ähmmm ...  Ihr mir jetz' rausbildern?}{}{-4}{tr 1 -1}{285}{ }
+{350}{Aber natürlich ... nach allem, was Ihr geleistet habt, @pcname@ ... Es ist mir eine Ehre, Euch in die Geheimnisse des Ausweichens einzuweihen.  Wir werden einige Stunden dazu brauchen.  Fangen wir gleich an ...}{Aber natürlich ... nach allem, was Ihr geleistet habt, @pcname@ ... Es ist mir eine Ehre, Euch in die Geheimnisse des Ausweichens einzuweihen.  Wir werden einige Stunden dazu brauchen.  Fangen wir gleich an ...}{}{}{}{ }
+{351}{[Du beginnst mit der Ausbildung.]}{}{1}{}{0}{tr 1 3 , rq2163 }
+{352}{}{}{}{}{}{ }
+{353}{Ich habe keinen weltlichen Besitz ... wartet!  Ich habe immer noch meine Fertigkeiten!  Schließlich bin ich der Meister im Ausweichen.  Ich biete Euch eine Ausbildung zum Meister an, wenn Ihr ihn tötet.}{Ich habe keinen weltlichen Besitz ... wartet!  Ich habe immer noch meine Fertigkeiten!  Schließlich bin ich der Meister im Ausweichen.  Ich biete Euch eine Ausbildung zum Meister an, wenn Ihr ihn tötet.}{}{}{}{qu1116 1 }
+{354}{Ich werde ihn für Euch töten. }{}{5}{sk1 18, tr 1 2, tr 1 -2}{252}{ }
+{355}{Ich bin nicht geschickt genug, um Meister zu werden.}{}{5}{sk1 -17, tr 1 2, tr 1 -2}{280}{ }
+{356}{Ich bin kein gedungener Meuchelmörder, ich weigere mich.}{}{5}{}{157}{ }
+{357}{Oh!  Mich gern sein Meiser.  Ich ihm totig machen. }{}{-4}{sk1 18, tr 1 2, tr 1 -2}{252}{ }
+{358}{Das klingeln gutt.  Abba mich nich' gutt 'nug für Meiser.}{}{-4}{sk1 -17, tr 1 2, tr 1 -2}{280}{ }
+{359}{Ich ihm nich' totig machen. Ich sagen nö.}{}{-4}{}{157}{ }
+{360}{}{}{}{}{}{ }
+{361}{Seid gegrüßt, @pcname@! Ich kann Euch gar nicht genug danken, dass Ihr mir mein Augenlicht zurückgegeben habt. Ich werde auf ewig in Eurer Schuld stehen.}{Seid gegrüßt, @pcname@! Ich kann Euch gar nicht genug danken, dass Ihr mir mein Augenlicht zurückgegeben habt. Ich werde auf ewig in Eurer Schuld stehen.}{}{}{}{ }
+{362}{Doch, eines könnt Ihr wohl für mich tun ... Meister des Ausweichens ...}{}{5}{sk1 18, tr 1 2, tr 1 -2, gf2291 1, qu 1105 0}{350}{ }
+{363}{Ja. Ich guttig Hüpfer. Ich willen lernen Aufweichmeiser.}{}{-4}{sk1 18, tr 1 2, tr 1 -2, gf2291 1, qu 1105 0}{350}{ }
+{364}{Werdet Ihr mich dann also zum Ausweichmeister ausbilden?}{}{5}{sk1 18, tr 1 2, tr 1 -2, gf2291 0, qu 1105 0}{373}{ }
+{365}{Ich willen sein Aufweichmeiser. Ihr mir rausbildern?}{}{-4}{sk1 18, tr 1 2, tr 1 -2, gf2291 0, qu 1105 0}{373}{ }
+{366}{Ich habe viel über Euer Angebot nachgedacht, Stout zu töten.}{}{5}{sk1 18, tr 1 2, tr 1 -2, gf2291 0, qu 1105 1}{392}{ }
+{367}{Ich nachdenken haben übba Stau totig machen.}{}{-4}{sk1 18, tr 1 2, tr 1 -2, gf2291 0, qu 1105 1}{392}{ }
+{368}{Ich habe die Augen von Sire Garrick Stout!}{}{5}{qu1105 3, in5660, lf 15 0}{162}{ }
+{369}{Ich haben Augens!  Ich haben Augens!}{}{-4}{qu1105 3, in5660, lf 15 0}{162}{ }
+{370}{Ich habe die Augen von Stout noch nicht.}{}{5}{qu1105 2, ni5660}{157}{ }
+{371}{Haben Augens noch nich' ...}{}{-4}{qu1105 2, ni5660}{157}{ }
+{372}{E:}{}{1}{}{0}{ }
+{373}{[Nachdenklich.] Ja, aber nur unter einer Bedingung ... Dieser Garrick Stout muss sterben.  Tötet ihn, dann werde ich Euch ausbilden.}{[Nachdenklich.] Ja, aber nur unter einer Bedingung ... Dieser Garrick Stout muss sterben.  Tötet ihn, dann werde ich Euch ausbilden.}{}{}{}{ }
+{374}{Wenn ich ihn töte, werdet Ihr mich dann im Gegenzug ausbilden?}{}{5}{}{383}{ }
+{375}{Nein. Ich habe ja keinen Ärger mit ihm.  Das werde ich nicht tun.}{}{5}{}{0}{ }
+{376}{So vergeltet Ihr es ihm also? Ihr müsst sterben!}{}{5}{}{}{co, fl 32}
+{377}{Ich ihm totig machen, dann Ihr mir rausbildern?}{}{-4}{}{383}{ }
+{378}{Nö. Ich nich' sauer auf Sire Garstig.  Ich ihm nich' totig machen.}{}{-4}{}{0}{ }
+{379}{Er Euch machen heile! Ihr jetz' mussen sterben!}{}{-4}{}{}{co, fl 32}
+{380}{}{}{}{}{}{ }
+{381}{}{}{}{}{}{ }
+{382}{}{}{}{}{}{ }
+{383}{Ja, ich biete Euch eine Ausbildung zum Meister an, wenn Ihr ihn tötet.}{Ja, ich biete Euch eine Ausbildung zum Meister an, wenn Ihr ihn tötet.}{}{}{}{qu1116 1 }
+{384}{Ich werde ihn für Euch töten. }{}{5}{sk1 18, tr 1 2, tr 1 -2}{252}{ }
+{385}{Ich bin kein gedungener Meuchelmörder, ich weigere mich.}{}{5}{}{157}{ }
+{386}{Oh!  Mich gern sein Meiser.  Ich ihm totig machen. }{}{-4}{sk1 18, tr 1 2, tr 1 -2}{252}{ }
+{387}{Ich ihm nich' totig machen. Ich sagen nö.}{}{-4}{}{157}{ }
+{388}{}{}{}{}{}{ }
+{389}{}{}{}{}{}{ }
+{390}{}{}{}{}{}{ }
+{391}{}{}{}{}{}{ }
+{392}{[Er kichert bösartig.] Bringt mir seine Augen.  Das soll mir als Beweis für seinen Tod genügen.}{[Er kichert bösartig.] Bringt mir seine Augen.  Das soll mir als Beweis für seinen Tod genügen.}{}{}{}{ }
+{393}{Sie gehören praktisch schon Euch.}{}{5}{}{0}{qu 1105 2 }
+{394}{E:}{}{5}{}{0}{ }
+{395}{Ich sie holen.}{}{-4}{}{0}{qu 1105 2 }
+{396}{E:}{}{1}{}{0}{ }
+{397}{}{}{}{}{}{ }
+{398}{}{}{}{}{}{ }
+{399}{}{}{}{}{}{ }
+{400}{[Entsetzt.] Nein!  ... Was für ein Preis für mein Augenlicht!  Was für ein grausamer Preis!  Ich hätte doch nie von ihr verlangt, dieses Monster zu heiraten!  ... Er muss sterben!  Aber er hat bewiesen, dass ich ihm nicht gewachsen bin ...  Ihr scheint mir stark zu sein.  Werdet Ihr diese üble Bestie vernichten?  Nun?}{[Entsetzt.] Nein!  ... Was für ein Preis für mein Augenlicht!  Was für ein grausamer Preis!  Ich hätte doch nie von ihr verlangt, dieses Monster zu heiraten!  ... Er muss sterben!  Aber er hat bewiesen, dass ich ihm nicht gewachsen bin ...  Ihr scheint mir stark zu sein.  Werdet Ihr diese üble Bestie vernichten?  Nun?}{}{}{}{ }
+{401}{Was würdet Ihr mir dafür zahlen?}{}{5}{qu 1105 0}{353}{ }
+{402}{Ihr habt vorgeschlagen, Stout dafür zu töten.}{}{5}{qa 1105 1, qb 1105 2}{414}{ }
+{403}{Ich habe die Augen von Sire Garrick Stout!}{}{5}{qu1105 3, in5660, lf 15 0}{162}{ }
+{404}{Ich haben Augens!  Ich haben Augens!}{}{-4}{qu1105 3, in5660, lf 15 0}{162}{ }
+{405}{Nein. Ich habe ja keinen Ärger mit ihm.  Das werde ich nicht tun.}{}{5}{}{0}{ }
+{406}{So vergeltet Ihr es ihm also? Ihr müsst sterben!}{}{5}{}{}{co, fl 32}
+{407}{Was ich kriegen für ich ihm machen totig?}{}{-4}{qu 1105 0}{353}{ }
+{408}{Ihr mir sagen übba Stau totig machen.}{}{-4}{qa 1105 1, qb 1105 2}{414}{ }
+{409}{Ich habe die Augen von Stout noch nicht.}{}{5}{qu1105 2, ni5660}{157}{ }
+{410}{Haben Augens noch nich' ...}{}{-4}{qu1105 2, ni5660}{157}{ }
+{411}{Nö. Ich nich' sauer auf Sire Garstig.  Ich ihm nich' totig machen.}{}{-4}{}{0}{ }
+{412}{Er Euch machen heile! Ihr jetz' mussen sterben!}{}{-4}{}{}{co, fl 32}
+{413}{E:}{}{1}{}{0}{ }
+{414}{Ja ... und an meinem Verlangen nach Rache hat sich nichts geändert!  Tötet Stout, und bringt mir zum Beweis dafür seine Augen!  Erledigt dies, und ich werde Euch zum Ausweichmeister ausbilden!}{Ja ... und an meinem Verlangen nach Rache hat sich nichts geändert!  Tötet Stout, und bringt mir zum Beweis dafür seine Augen!  Erledigt dies, und ich werde Euch zum Ausweichmeister ausbilden!}{}{}{}{ }
+{415}{Ich werde ihn für Euch töten und dann zurückkehren.}{}{5}{sk1 18, tr 1 2, tr 1 -2}{0}{qu 1105 2 }
+{416}{Ich bin kein gedungener Meuchelmörder, ich weigere mich.}{}{5}{}{0}{ }
+{417}{Oh!  Mich gern sein Meiser.  Ich ihm totig machen. }{}{-4}{sk1 18, tr 1 2, tr 1 -2}{0}{qu 1105 2 }
+{418}{Ich ihm nich' totig machen. Ich sagen nö.}{}{-4}{}{0}{ }
+{419}{E:}{}{1}{}{0}{ }
+{420}{}{}{}{}{}{ }
+{421}{}{}{}{}{}{ }
+

@@ -1,0 +1,115 @@
+//
+// terrain.mes
+//
+// Defines the various terrain types, their associated colors 
+// in the editor, and the transitions between them.
+//
+
+
+//
+// 0 - 31
+// terrain base types
+//
+// [#][name]
+//
+// Note: "name" is the name displayed in the editor, as
+// well as the name of the folder the base variants map
+// is stored in.
+//
+// Note: numbering must start at zero and be sequential
+// i.e. you cannot have a terrain type declared in message
+// number 2 without also having terrain types declared
+// in messages 0 and 1.
+//
+{0}{green grasslands}
+{1}{swamps}
+{2}{water /b}
+{3}{plains}
+{4}{forest}
+{5}{desert island}
+{6}{void plains}
+{7}{broad leaf forest}
+{8}{desert}
+{9}{mountains /b}
+{10}{elven forest}
+{11}{deforested}
+{12}{snowy plains}
+{13}{tropical jungle}
+{14}{void mountains /b}
+{15}{scorched earth}
+{16}{desert mountains /b}
+{17}{snowy mountains /b}
+{18}{tropical mountains /b}
+
+
+//
+// 100 - 131
+// terrain colors (used only by the editor)
+//
+// [base # + 100][red,green,blue]
+//
+{100}{ 32,128, 32} // green grasslands
+{101}{ 96,128, 64} // swamps
+{102}{ 96, 96,255} // water
+{103}{200,200,128} // plains
+{104}{ 32, 96, 32} // forest
+{105}{232,232,196} // desert island
+{106}{164,164,164} // void plains
+{107}{  0,255,  0} // broad leaf forest
+{108}{196,196,100} // desert
+{109}{164, 96,  0} // mountains
+{110}{  0,132,132} // elven forest
+{111}{200,200,  0} // deforested
+{112}{255,255,255} // snow plains
+{113}{232,232, 64} // tropical jungle
+{114}{ 92, 92, 92} // void mountains
+{115}{128,128,128} // scorched earth
+{116}{ 96, 96, 32} // desert mountains
+{117}{192,192,192} // snowy mountains
+{118}{118,160, 31} // tropical mountains
+
+//
+// 200 - ???
+// transitions
+//
+// [#][name1 to name2]
+//
+// name1 and name2 must each be one of the base names
+// in messages 0 - 31.  The entire "name1 to name2" is
+// the folder name the transition map is stored in.
+//
+// Note: you only have to list a transition once. If you 
+// add a line called "plains to desert", you don't need 
+// to add "desert to plains" (although it's OK to have 
+// it, it's redundant)
+//
+// Note: numbering must start at 200 and be sequential
+// i.e. you cannot have a transition declared in message
+// number 202 without also having transitions declared
+// in messages 200 and 201.
+//
+{200}{green grasslands to swamps}
+{201}{green grasslands to water}
+{202}{green grasslands to plains}
+{203}{green grasslands to forest}
+{204}{water to desert island}
+{205}{water to void plains}
+{206}{plains to broad leaf forest}
+{207}{plains to desert}
+{208}{forest to mountains}
+{209}{forest to elven forest}
+{210}{forest to deforested}
+{211}{forest to snowy plains}
+{212}{desert island to tropical jungle}
+{213}{void plains to void mountains}
+{214}{void plains to scorched earth}
+{215}{desert to desert mountains}
+{216}{snowy plains to snowy mountains}
+{217}{tropical jungle to tropical mountains}
+
+
+
+
+
+
+

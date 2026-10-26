@@ -1,16 +1,16 @@
 // The explorers of .art .pro .sec .mob .dlg .mes .scr all start from data/ (as the .BMP one does), so the mods and the modules
-// are listed too. data/file_index_<ext>.json (toolbox/file_index.py) holds the folder tree of one kind of file:
+// are listed too. js/index/files/file_index_<ext>.json (toolbox/file_index.py) holds the folder tree of one kind of file:
 // { f: [file names], d: { folder: tree } }. One request per category builds the whole tree.
 
-import { DATA_ROOT } from './config.js';
+import { INDEX_ROOT } from './config.js';
 import { joinPath } from './manifest.js';
 
 const trees = new Map();   // ext -> Promise<tree>
 function loadTree(ext) {
   if (!trees.has(ext)) {
     const p = (async () => {
-      const resp = await fetch(`${DATA_ROOT}file_index_${ext}.json`);
-      if (!resp.ok) throw new Error(`couldn't load ${DATA_ROOT}file_index_${ext}.json (HTTP ${resp.status}); run toolbox/file_index.py`);
+      const resp = await fetch(`${INDEX_ROOT}files/file_index_${ext}.json`);
+      if (!resp.ok) throw new Error(`couldn't load ${INDEX_ROOT}files/file_index_${ext}.json (HTTP ${resp.status}); run toolbox/file_index.py`);
       return resp.json();
     })();
     trees.set(ext, p);
@@ -22,13 +22,13 @@ function loadTree(ext) {
 export const loadIndexTree = loadTree;   // ext -> Promise<{ f, d }>, the whole folder tree of one kind of file
 
 // A big index (.mob: 119 000 names) lists only its folders in file_index_<ext>.json; a folder marked `s` (a game, mod or module) keeps
-// its files in data/file_index_<ext>/<path with / as __>.json, fetched the first time something inside it is read.
+// its files in js/index/files/file_index_<ext>/<path with / as __>.json, fetched the first time something inside it is read.
 const shards = new Map();   // "ext:path" -> Promise
 async function openShard(ext, node, path) {
   if (!node.s) return node;
   const key = `${ext}:${path}`;
   if (!shards.has(key)) {
-    const p = fetch(`${DATA_ROOT}file_index_${ext}/${encodeURIComponent(path.replaceAll('/', '__'))}.json`).then(r => {
+    const p = fetch(`${INDEX_ROOT}files/file_index_${ext}/${encodeURIComponent(path.replaceAll('/', '__'))}.json`).then(r => {
       if (!r.ok) throw new Error(`couldn't load the ${path} part of the .${ext} index (HTTP ${r.status}); run toolbox/file_index.py`);
       return r.json();
     });

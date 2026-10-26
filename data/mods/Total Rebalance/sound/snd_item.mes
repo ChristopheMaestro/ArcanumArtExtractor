@@ -1,0 +1,409 @@
+// Item sounds range 4000-5999
+// Subtypes begin at multiples of 10 and are values of TIG_Art_Weapon
+// in Art.h (minus 2, since no_weapon and unarmed are not items)
+
+
+// --- Dagger
+{4000}{swish_thin.wav}		//Use
+{4001}{break_metal_small.wav}	//Busted (Changed by Positiff)
+{4002}{break_metal_small.wav}	//Destroyed (Changed by Positiff)
+{4003}{}			//Miss
+{4004}{}			//Hit 1 (if empty, default to weapon material to target material table)
+{4005}{}			//Hit 2 (if empty, default to weapon material to target material table)
+{4006}{}			//Critical Hit (if empty, default to weapon material to target material table)
+{4007}{}			//Out of ammo (if empty, play nothing)
+
+
+// --- One-handed sword
+{4010}{swish_medium.wav}	//Use
+{4011}{break_metal_small.wav}	//Busted (Changed by Positiff)
+{4012}{break_metal_small.wav}	//Destroyed (Changed by Positiff)
+{4013}{}			//Miss
+{4014}{}			//Hit 1
+{4015}{}			//Hit 2
+{4016}{}			//Critical Hit
+{4017}{}			//Out of ammo
+
+
+// --- Axe
+{4020}{swish_heavy.wav}		//Use (Added by Positiff)
+{4021}{break_metal_small.wav}	//Busted (Added by Positiff)
+{4022}{break_metal_small.wav}	//Destroyed (Added by Positiff)
+
+
+// --- Mace/Hammer
+{4030}{swish_heavy.wav}		//Use (Added by Positiff)
+{4031}{break_metal_small.wav}	//Busted (Added by Positiff)
+{4032}{break_metal_small.wav}	//Destroyed (Added by Positiff)
+
+
+// --- Pistol
+{4040}{shoot_pistol.wav}	//Use
+{4041}{break_gun_small.wav}	//Busted
+{4042}{break_gun_small.wav}	//Destroyed
+{4043}{RICOCHET_B.wav}		//Miss (Changed by Positiff)
+{4044}{hit_flesh_bullet1.wav}	//Hit 1
+{4045}{hit_flesh_bullet2.wav}	//Hit 2
+{4046}{hit_flesh_heavy.wav}	//Critical Hit
+{4047}{gun-out-of-ammo.wav}	//Out of ammo
+
+
+// --- Two-handed sword
+{4050}{swish_heavy.wav}		//Use
+{4051}{break_metal_small.wav}	//Busted (Changed by Positiff)
+{4052}{break_metal_small.wav}	//Destroyed (Changed by Positiff)
+{4053}{}			//Miss
+{4054}{}			//Hit 1
+{4055}{}			//Hit 2
+{4056}{}			//Critical Hit
+{4057}{}			//Out of ammo
+
+
+// --- Bow
+{4060}{shoot_bow.wav}	//Use
+{4061}{break_bow.wav}	//Busted
+{4062}{break_bow.wav}	//Destroyed
+{4063}{}		//Miss
+{4064}{}		//Hit 1
+{4065}{}		//Hit 2
+{4066}{}		//Critical Hit
+{4067}{}		//Out of ammo
+
+
+// --- Revolver (Added by Positiff)
+{4070}{shoot_revolver.wav}	//Use
+{4071}{break_gun_small.wav}	//Busted
+{4072}{break_gun_small.wav}	//Destroyed
+{4073}{RICOCHET_B.wav}		//Miss
+{4074}{hit_flesh_bullet1.wav}	//Hit 1
+{4075}{hit_flesh_bullet2.wav}	//Hit 2
+{4076}{hit_flesh_heavy.wav}	//Critical Hit
+{4077}{gun-out-of-ammo.wav}	//Out of ammo
+
+
+// --- Rifle
+{4080}{shoot_rifle.wav}		//Use
+{4081}{break_gun_big.wav}	//Busted
+{4082}{break_gun_big.wav}	//Destroyed
+{4083}{RICOCHET_LD.wav}		//Miss
+{4084}{hit_flesh_bullet1.wav}	//Hit 1
+{4085}{hit_flesh_bullet2.wav}	//Hit 2
+{4086}{hit_flesh_heavy.wav}	//Critical Hit
+{4087}{gun-out-of-ammo.wav}	//Out of ammo
+
+
+// --- Shotgun (Arcanum Weapon & Technology Redux)
+{4090}{shoot_shotgun.wav}	//Use
+{4091}{break_gun_big.wav}	//Busted
+{4092}{break_gun_big.wav}	//Destroyed
+{4093}{RICOCHET_MG.wav}		//Miss (Changed by Positiff)
+{4094}{hit_flesh_heavy.wav}	//Hit 1
+{4095}{hit_flesh_heavy.wav}	//Hit 2
+{4096}{hit_flesh_heavy.wav}	//Critical Hit
+{4097}{gun-out-of-ammo.wav}	//Out of ammo
+
+
+// --- Machinegun (Arcanum Weapon & Technology Redux)
+{4100}{shoot_machinegun.wav}	//Use (Changed by Positiff)
+{4101}{break_gun_big.wav}	//Busted
+{4102}{break_gun_big.wav}	//Destroyed
+{4103}{RICOCHET_MG.wav}		//Miss (Changed by Positiff)
+{4104}{hit_flesh_bullet1.wav}	//Hit 1 (Changed by Positiff)
+{4105}{hit_flesh_bullet2.wav}	//Hit 2 (Changed by Positiff)
+{4106}{hit_flesh_heavy.wav}	//Critical Hit (Changed by Positiff)
+{4107}{gun-out-of-ammo.wav}	//Out of ammo
+
+
+// --- Staff
+{4110}{swish_heavy.wav}	//Use
+{4111}{break_wood.wav}	//Busted (Changed by Positiff)
+{4112}{break_wood.wav}	//Destroyed (Changed by Positiff)
+{4113}{}		//Miss
+{4114}{}		//Hit 1
+{4115}{}		//Hit 2
+{4116}{}		//Critical Hit
+{4117}{}		//Out of ammo
+
+
+// --- High-caliber rifle (Arcanum Weapon & Technology Redux)
+{4120}{shoot_rifle_high.wav}	//Use
+{4121}{break_gun_big.wav}	//Busted
+{4122}{break_gun_big.wav}	//Destroyed
+{4123}{RICOCHET_LD.wav}		//Miss
+{4124}{hit_flesh_bullet1.wav}	//Hit 1
+{4125}{hit_flesh_bullet2.wav}	//Hit 2
+{4126}{hit_flesh_heavy.wav}	//Critical Hit
+{4127}{gun-out-of-ammo.wav}	//Out of ammo
+
+
+// --- High-caliber pistol (Arcanum Weapon & Technology Redux)
+{4130}{shoot_pistol_high.wav}	//Use
+{4131}{break_gun_small.wav}	//Busted
+{4132}{break_gun_small.wav}	//Destroyed
+{4133}{RICOCHET_B.wav}		//Miss (Changed by Positiff)
+{4134}{hit_flesh_bullet1.wav}	//Hit 1
+{4135}{hit_flesh_bullet2.wav}	//Hit 2
+{4136}{hit_flesh_heavy.wav}	//Critical Hit
+{4137}{gun-out-of-ammo.wav}	//Out of ammo
+
+
+// --- Big Gun (Arcanum Weapon & Technology Redux)
+{4140}{shoot_big_gun.wav}	//Use
+{4141}{break_gun_big.wav}	//Busted
+{4142}{break_gun_big.wav}	//Destroyed
+{4143}{RICOCHET_MG.wav}		//Miss (Changed by Positiff)
+{4144}{hit_flesh_bullet2.wav}	//Hit 1 (Changed by Positiff)
+{4145}{hit_flesh_bullet2.wav}	//Hit 2
+{4146}{hit_flesh_heavy.wav}	//Critical Hit
+{4147}{gun-out-of-ammo.wav}	//Out of ammo
+
+
+// --- Ammo using one-handed sword (Arcanum Weapon & Technology Redux)
+{4150}{swish_medium.wav}	//Use
+{4151}{break_metal_small.wav}	//Busted (Changed by Positiff)
+{4152}{break_metal_small.wav}	//Destroyed (Changed by Positiff)
+{4153}{}			//Miss
+{4154}{}			//Hit 1
+{4155}{}			//Hit 2
+{4156}{}			//Critical Hit
+{4157}{gun-out-of-ammo.wav}	//Out of ammo
+
+
+// --- Ammo using axe (Arcanum Weapon & Technology Redux) - Changed by Positiff
+{4160}{swish_heavy.wav}		//Use
+{4161}{break_metal_small.wav}	//Busted (Changed by Positiff)
+{4162}{break_metal_small.wav}	//Destroyed (Changed by Positiff)
+{4167}{gun-out-of-ammo.wav}	//Out of ammo
+
+
+// --- Folding Rifle (Added by Positiff)
+{4170}{shoot_rifle_folding.wav}	//Use
+{4171}{break_gun_big.wav}	//Busted
+{4172}{break_gun_big.wav}	//Destroyed
+{4173}{RICOCHET_LD.wav}		//Miss
+{4174}{hit_flesh_bullet1.wav}	//Hit 1
+{4175}{hit_flesh_bullet2.wav}	//Hit 2
+{4176}{hit_flesh_heavy.wav}	//Critical Hit
+{4177}{gun-out-of-ammo.wav}	//Out of ammo
+
+
+// --- Clarington Rifle (Added by Positiff)
+{4180}{shoot_rifle_folding.wav}	//Use
+{4181}{break_gun_big.wav}	//Busted
+{4182}{break_gun_big.wav}	//Destroyed
+{4183}{RICOCHET_LD.wav}		//Miss
+{4184}{hit_flesh_bullet1.wav}	//Hit 1
+{4185}{hit_flesh_bullet2.wav}	//Hit 2
+{4186}{hit_flesh_heavy.wav}	//Critical Hit
+{4187}{gun-out-of-ammo.wav}	//Out of ammo
+
+
+// --- Marksman Rifle (Added by Positiff)
+{4190}{shoot_rifle_sniper.wav}	//Use
+{4191}{break_gun_big.wav}	//Busted
+{4192}{break_gun_big.wav}	//Destroyed
+{4193}{RICOCHET_LD.wav}		//Miss
+{4194}{hit_flesh_bullet1.wav}	//Hit 1
+{4195}{hit_flesh_bullet2.wav}	//Hit 2
+{4196}{hit_flesh_heavy.wav}	//Critical Hit
+{4197}{gun-out-of-ammo.wav}	//Out of ammo
+
+
+// --- Looking Glass Rifle (Added by Positiff)
+{4200}{shoot_rifle_glass.wav}	//Use
+{4201}{break_gun_big.wav}	//Busted
+{4202}{break_gun_big.wav}	//Destroyed
+{4203}{RICOCHET_MG.wav}		//Miss
+{4204}{hit_flesh_bullet2.wav}	//Hit 1
+{4205}{hit_flesh_bullet2.wav}	//Hit 2
+{4206}{hit_flesh_heavy.wav}	//Critical Hit
+{4207}{gun-out-of-ammo.wav}	//Out of ammo
+
+
+// --- Pyrotechnic Rifle (Added by Positiff)
+{4210}{shoot_rifle_glass.wav}	//Use
+{4211}{break_gun_big.wav}	//Busted
+{4212}{break_gun_big.wav}	//Destroyed
+{4213}{RICOCHET_MG.wav}		//Miss
+{4214}{hit_flesh_bullet2.wav}	//Hit 1
+{4215}{hit_flesh_bullet2.wav}	//Hit 2
+{4216}{hit_flesh_heavy.wav}	//Critical Hit
+{4217}{gun-out-of-ammo.wav}	//Out of ammo
+
+
+// --- Charged Gun (Added by Positiff)
+{4220}{shoot_rifle.wav}		//Use
+{4221}{break_gun_big.wav}	//Busted
+{4222}{break_gun_big.wav}	//Destroyed
+{4223}{RICOCHET_LD.wav}		//Miss
+{4224}{hit_flesh_bullet1.wav}	//Hit 1
+{4225}{hit_flesh_bullet2.wav}	//Hit 2
+{4226}{hit_flesh_heavy.wav}	//Critical Hit
+{4227}{gun-out-of-ammo.wav}	//Out of ammo
+{4228}{hit_electro.wav}		//Electro Hit
+{4229}{Spell_Force_Jolt.wav}	//Electro Critical Hit
+
+
+// --- Acid Gun (Added by Positiff)
+{4230}{shoot_acid_gun.wav}	//Use
+{4231}{break_gun_big.wav}	//Busted
+{4232}{break_gun_big.wav}	//Destroyed
+{4233}{RICOCHET_LD.wav}		//Miss
+{4234}{hit_flesh_bullet2.wav}	//Hit 1
+{4235}{hit_flesh_bullet2.wav}	//Hit 2
+{4236}{hit_flesh_heavy.wav}	//Critical Hit
+{4237}{gun-out-of-ammo.wav}	//Out of ammo
+
+
+// --- Harpoon (Added by Positiff)
+{4240}{shoot_harpoon.wav}	//Use
+{4241}{break_gun_big.wav}	//Busted
+{4242}{break_gun_big.wav}	//Destroyed
+{4243}{RICOCHET_MG.wav}		//Miss
+{4244}{hit_flesh_bullet2.wav}	//Hit 1
+{4245}{hit_flesh_bullet2.wav}	//Hit 2
+{4246}{hit_flesh_heavy.wav}	//Critical Hit
+{4247}{gun-out-of-ammo.wav}	//Out of ammo
+
+
+// --- Huge Gun (Added by Positiff)
+{4250}{shoot_huge_gun.wav}	//Use
+{4251}{break_gun_big.wav}	//Busted
+{4252}{break_gun_big.wav}	//Destroyed
+{4253}{RICOCHET_MG.wav}		//Miss
+{4254}{hit_flesh_bullet1.wav}	//Hit 1
+{4255}{hit_flesh_bullet2.wav}	//Hit 2
+{4256}{hit_flesh_heavy.wav}	//Critical Hit
+{4257}{gun-out-of-ammo.wav}	//Out of ammo
+
+
+// --- Vendigroth Rifle (Added by Positiff)
+{4260}{shoot_rifle_vendigroth.wav}	//Use
+{4261}{break_gun_big.wav}		//Busted
+{4262}{break_gun_big.wav}		//Destroyed
+{4263}{RICOCHET_MG.wav}			//Miss
+{4264}{hit_flesh_bullet2.wav}		//Hit 1
+{4265}{hit_flesh_bullet2.wav}		//Hit 2
+{4266}{hit_flesh_heavy.wav}		//Critical Hit
+{4267}{gun-out-of-ammo.wav}		//Out of ammo
+
+
+// --- Vendigroth Pistol (Added by Positiff)
+{4270}{shoot_pistol_vendigroth.wav}	//Use
+{4271}{break_gun_small.wav}		//Busted
+{4272}{break_gun_small.wav}		//Destroyed
+{4273}{RICOCHET_MG.wav}			//Miss
+{4274}{hit_flesh_bullet2.wav}		//Hit 1
+{4275}{hit_flesh_bullet2.wav}		//Hit 2
+{4276}{hit_flesh_heavy.wav}		//Critical Hit
+{4277}{gun-out-of-ammo.wav}		//Out of ammo
+
+
+// --- Wolf Teeth ???
+{5060}{critter_wolf_miss.wav}	//Use
+{5061}{}			//Busted
+{5062}{}			//Destroyed
+{5063}{critter_wolf_miss.wav}	//Miss
+{5064}{}			//Hit 1
+{5065}{}			//Hit 2
+{5066}{}			//Critical Hit
+{5067}{}			//Out of ammo
+
+
+// --- Flame Thrower
+{5070}{Spell_Elemental_Fire_Body_Up.Wav}	//Use
+{5071}{break_gun_big.wav}			//Busted (Changed by Positiff)
+{5072}{break_gun_big.wav}			//Destroyed (Changed by Positiff)
+{5073}{}					//Miss
+{5074}{spell_elemental_fire.wav}		//Hit 1 (Changed by Positiff)
+{5075}{spell_elemental_fire.wav}		//Hit 2 (Changed by Positiff)
+{5076}{spell_elemental_fire_body_up.wav}	//Critical Hit (Changed by Positiff)
+{5077}{gun-out-of-ammo.wav}			//Out of ammo (Changed by Positiff)
+
+
+// --- Hushed Pistol
+{5080}{shoot_pistol-hushed.Wav}	//Use
+{5081}{break_gun_small.wav}	//Busted
+{5082}{break_gun_small.wav}	//Destroyed
+{5083}{}			//Miss
+{5084}{hit_flesh_bullet1.wav}	//Hit 1
+{5085}{hit_flesh_bullet1.wav}	//Hit 2 (Changed by Positiff)
+{5086}{hit_flesh_bullet2.wav}	//Critical Hit (Changed by Positiff)
+{5087}{gun-out-of-ammo.wav}	//Out of ammo
+
+
+// --- Tesla Gun (Arcanum Weapon & Technology Redux)
+{5090}{shoot_energy.wav}	//Use
+{5091}{break_gun_small.wav}	//Busted (Changed by Positiff)
+{5092}{break_gun_small.wav}	//Destroyed (Changed by Positiff)
+{5093}{}			//Miss
+{5094}{hit_plasma.wav}		//Hit 1 (Changed by Positiff)
+{5095}{hit_plasma.wav}		//Hit 2 (Changed by Positiff)
+{5096}{Bronwycks-Hit.wav}	//Critical Hit
+{5097}{gun-out-of-ammo.wav}	//Out of ammo
+
+
+// --- High Velocity Pistol (Arcanum Weapon & Technology Redux)
+{5100}{shoot_revolver.wav}	//Use (Changed by Positiff)
+{5101}{break_gun_small.wav}	//Busted (Changed by Positiff)
+{5102}{break_gun_small.wav}	//Destroyed (Changed by Positiff)
+{5103}{RICOCHET_LD.wav}		//Miss  (Changed by Positiff)
+{5104}{hit_flesh_bullet1.wav}	//Hit 1 (Changed by Positiff)
+{5105}{hit_flesh_bullet2.wav}	//Hit 2 (Changed by Positiff)
+{5106}{hit_flesh_heavy.wav}	//Critical Hit
+{5107}{gun-out-of-ammo.wav}	//Out of ammo
+{5108}{shoot_gauss.wav}		//High Velocity Shoot
+
+
+// --- Grenade Launcher (Arcanum Weapon & Technology Redux)
+{5110}{grenade_launch.wav}	//Use
+{5111}{break_gun_big.wav}	//Busted
+{5112}{break_gun_big.wav}	//Destroyed
+{5113}{}			//Miss
+{5114}{}			//Hit 1
+{5115}{}			//Hit 2
+{5116}{}			//Critical Hit
+{5117}{gun-out-of-ammo.wav}	//Out of ammo
+
+
+// --- Grenades
+{5301}{Grenade_Explosive.wav}             //Explosive Grenade (Arcanum Weapon & Technology Redux) - Changed by Positiff
+{5302}{Grenade_Flash.wav}                 //Flash Grenade     (Arcanum Weapon & Technology Redux)
+{5303}{Grenade_Smoke.wav}                 //Smoke Grenade     (Arcanum Weapon & Technology Redux)
+{5304}{Grenade_Stun.wav}                  //Stun Grenade      (Added by Positiff)
+{5305}{Spell_Force_Jolt_Big.wav}          //Electro Grenade   (Added by Positiff)
+{5306}{Spell_Elemental_Fire_Body_Up.wav}  //Molotov Cocktail  (Added by Positiff)
+{5307}{Grenade_Barrier_Of_Fire.wav}       //Barrier of Fire   (Added by Positiff)
+{5308}{Chemistry-Acid.wav}                //Corrosive Acid    (Added by Positiff)
+
+
+// --- Technologies
+{5401}{Electrical-JacketHealing.wav}  //Flow Spectrometer
+{5402}{ElectricLights.wav}            //Detonator
+
+
+// --- Picking up sounds
+{5950}{item_pick_up.wav}	//flesh
+{5951}{item_pick_up.wav}	//light metal
+{5952}{item_pick_up.wav}	//heavy metal
+{5953}{item_pick_up.wav}	//stone
+{5954}{item_pick_up.wav}	//wood
+{5955}{item_pick_up.wav}	//glass
+{5956}{item_pick_up.wav}	//cloth
+{5957}{item_pick_up.wav}	//paper
+{5958}{BagOfCoins.wav}		//coins
+
+
+// --- Dropping sounds
+{5960}{item_drop.wav}	//flesh
+{5961}{item_drop.wav}	//light metal
+{5962}{item_drop.wav}	//heavy metal
+{5963}{item_drop.wav}	//stone
+{5964}{item_drop.wav}	//wood
+{5965}{item_drop.wav}	//glass
+{5966}{item_drop.wav}	//cloth
+{5967}{item_drop.wav}	//paper
+{5968}{BagOfCoins.wav}	//coins
+{5969}{BUZZER.wav}	//Noise Maker Decoy
+{5970}{StaffOfTeleportation-Cast.wav}	//Staff Of Teleportation
+

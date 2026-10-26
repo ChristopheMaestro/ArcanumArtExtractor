@@ -1,0 +1,124 @@
+{1}{G:}{}{}{}{}{lf 11 0, lf 12 0 , lf 13 0, lf 14 0}
+{2}{Seid gegrüßt, werte Dame.}{}{5}{lf1 0, re 41}{25}{lf1 1}
+{3}{Begrüßt Ihr neue Kunden immer auf diese Weise?}{}{5}{lf1 0, ch-10, re -40}{19}{lf1 1}
+{4}{Hallo.  Dürfte ich wohl für einen Augenblick Eure kostbare Zeit in Anspruch nehmen?}{}{5}{lf1 1, re 41}{25}{}
+{5}{Darf ich Euch eine Frage stellen?}{}{5}{lf1 1, ch-10, re -40}{19}{}
+{6}{Es besteht kein Grund, unhöflich zu sein, Madame.}{}{5}{lf1 1, ch11, re -40}{83}{}
+{7}{Begrüßt Ihr neue Kunden immer auf diese Weise?}{}{5}{lf1 0, ch11, re -40}{83}{lf1 1}
+{14}{Hei-ho.}{}{-4}{lf1 0, re 41}{25}{lf1 1}
+{15}{Ihr dummig, bösig Frau.}{}{-4}{lf1 0, re -40}{19}{lf1 1}
+{16}{Ich reden mi' Wir'?}{}{-4}{lf1 1, re 41}{25}{}
+{17}{Ich fragen Gas'wir'frau was?}{}{-4}{lf1 1, re -40}{140}{}
+{18}{E:}{}{1}{}{0}{}
+{19}{Leute wie Ihr werden hier nicht bedient.  Verlasst diesen Ort, oder ich sehe mich gezwungen, die Wache zu rufen.}{Leute wie Ihr werden hier nicht bedient.  Verlasst diesen Ort, oder ich sehe mich gezwungen, die Wache zu rufen.}{}{}{}{}
+{20}{Bitte, Madame, ich möchte doch nur ein Zimmer haben.}{}{5}{lf 10 0}{100}{}
+{21}{Nein, Ihr werdet gezwungen sein, den Totengräber zu rufen.}{}{5}{}{0}{re -10, fl 130}
+{22}{Abba ich willen Zimmer haben.}{}{-4}{lf 10 0}{100}{}
+{23}{K:}{}{1}{lf 10 1}{25}{}
+{24}{F:}{}{1}{}{0}{}
+{25}{Womit kann ich Euch behilflich sein?}{Womit kann ich Euch behilflich sein?}{}{}{}{}
+{26}{Ich hätte gern ein Zimmer für die Nacht.}{}{5}{lf 10 0}{45}{}
+{27}{Ich werde ein Weilchen in der Stadt sein.  Ich hätte gern ein Zimmer für eine Woche.}{}{5}{ha7, lf 10 0}{52}{}
+{28}{Ich werde ein Weilchen in der Stadt sein.  Ich hätte gern ein Zimmer für eine Woche.}{}{5}{ha-6, lf 10 0}{57}{}
+{29}{Ich hierbleiben ein Nach'?}{}{-4}{lf 10 0}{45}{}
+{30}{Ich hier lang. Ich kriegen Zimmer für Woch'?}{}{-4}{ha7, lf 10 0}{52}{}
+{31}{Ich hier lang. Ich kriegen Zimmer für Woch'?}{}{-4}{ha-6, lf 10 0}{57}{}
+{32}{C:}{}{1}{lf 14 0}{35}{lf 14 1}
+{33}{E:}{}{1}{}{0}{}
+{34}{}{}{}{}{}{}
+{35}{Gibt es sonst noch etwas?}{Gibt es sonst noch etwas?}{}{}{}{}
+{36}{Ich hätte gern ein Zimmer für die Nacht.}{}{5}{lf 10 0}{45}{}
+{37}{Ich werde ein Weilchen in der Stadt sein.  Ich hätte gern ein Zimmer für eine Woche.}{}{5}{ha7, lf 10 0}{52}{}
+{38}{Ich werde ein Weilchen in der Stadt sein.  Ich hätte gern ein Zimmer für eine Woche.}{}{5}{ha-6, lf 10 0}{57}{}
+{39}{Ich hierbleiben übba Nach'?}{}{-4}{lf 10 0}{45}{}
+{40}{Ich kriegen Zimmer für ein Woch'?}{}{-4}{ha7, lf 10 0}{52}{}
+{41}{Ich kriegen Zimmer für ein Woch'?}{}{-4}{ha-6, lf 10 0}{57}{}
+{42}{C:}{}{1}{lf 14 0}{35}{lf 14 1}
+{43}{E:}{}{1}{}{0}{}
+{44}{}{}{}{}{}{}
+{45}{Oh, selbstverständlich, Sire.  Das macht 25 Münzen bitte.}{Oh, selbstverständlich, Madame.  Das macht 25 Münzen bitte.}{}{}{}{}
+{46}{Bitte sehr ... [Du gibst ihr das Geld.]}{}{5}{$$ 25}{-2}{$$-25, lf 13 0, lf 10 1}
+{47}{Das ist ganz schön happig ... [Seufzer.] Hier. [Du gibst ihr das Geld.]}{}{5}{$$ 25}{-2}{$$-25, lf 13 0, lf 10 1}
+{48}{Äh ... hier.  [Du gibst ihr das Geld.]}{}{-4}{$$ 25}{-2}{$$-25, lf 13 0, lf 10 1}
+{49}{Das sein viel! Fein, hier.  [Du gibst ihr das Geld.]}{}{-4}{$$ 25}{-2}{$$-25, lf 13 0, lf 10 1}
+{50}{K:}{}{1}{}{35}{}
+{51}{F:}{}{1}{}{0}{re-2}
+{52}{Oh ja, Sire!  Ich wäre höchst erfreut, wenn Ihr mein Etablissement mit einem ausgedehnten Aufenthalt beehren würdet.  Hmm ... [Denkt einen Moment nach.] Für treue Gäste wie Euch reduziere ich den Preis auf 130 Münzen für die ganze Woche.}{Oh ja, Madame!  Ich wäre höchst erfreut, wenn Ihr mein Etablissement mit einem ausgedehnten Aufenthalt beehren würdet.  Hmm ... [Denkt einen Moment nach.] Für treue Gäste wie Euch reduziere ich den Preis auf 130 Münzen für die ganze Woche.}{}{}{}{}
+{53}{Danke. Hier. [Du gibst ihr das Geld.]}{}{5}{$$ 130}{-5}{$$-130, lf 13 1, lf 10 1}
+{54}{Äh ...  Dankie. Hier.  [Du gibst ihr das Geld.]}{}{-4}{$$ 130}{-5}{$$-130, lf 13 1, lf 10 1}
+{55}{K:}{}{1}{}{35}{}
+{56}{F:}{}{1}{}{0}{re -2}
+{57}{Oh!  Ja, natürlich ...  Der Preis für eine Woche beträgt 175 Münzen, Sire.}{Oh!  Ja, natürlich ...  Der Preis für eine Woche beträgt 175 Münzen, Madame ...}{}{}{}{}
+{58}{Danke. Hier. [Du gibst ihr das Geld.]}{}{5}{$$ 175}{-5}{$$-175, lf 13 1, lf 10 1}
+{59}{Ihr bietet nicht zufällig einen Rabatt bei Vorauszahlung?}{}{5}{}{78}{}
+{60}{Äh ...  Dankie. Hier.  [Du gibst ihr das Geld.]}{}{-4}{$$ 175}{-5}{$$-175, lf 13 1, lf 10 1}
+{61}{Hä?  Nich' kosten wenigers, wenn bleiben lang?}{}{-4}{}{78}{}
+{62}{K:}{}{1}{}{35}{}
+{63}{F:}{}{1}{}{0}{re -2}
+{64}{Vielen Dank, Sire!  Euer Zimmer ist gleich dort im Korridor.  Das Zimmer steht Euch nur heute Nacht zur Verfügung.  Die Tür ist nicht verschlossen.  Ich hoffe von Herzen, dass Ihr einen angenehmen Aufenthalt habt.}{Vielen Dank, Milady!  Euer Zimmer ist gleich dort im Korridor.  Das Zimmer steht Euch nur heute Nacht zur Verfügung.  Die Tür ist nicht verschlossen.  Ich hoffe von Herzen, dass Ihr einen angenehmen Aufenthalt habt.}{}{}{}{}
+{65}{Vielen Dank.}{}{5}{}{0}{}
+{66}{Äh ...  Dankie.}{}{-4}{}{0}{}
+{67}{K:}{}{1}{}{35}{}
+{68}{C:}{}{1}{lf 14 0}{35}{lf 14 1}
+{69}{E:}{}{1}{}{0}{}
+{70}{}{}{}{}{}{}
+{71}{Vielen Dank, Sire!  Euer Zimmer ist gleich dort im Korridor.  Das Zimmer steht Euch die nächsten sieben Nächte zur Verfügung. Die Tür ist nicht verschlossen.  Ich hoffe von Herzen, dass Ihr einen angenehmen Aufenthalt habt.}{Vielen Dank, Milady!  Euer Zimmer ist gleich dort im Korridor.  Das Zimmer steht Euch die nächsten sieben Nächte zur Verfügung. Die Tür ist nicht verschlossen.  Ich hoffe von Herzen, dass Ihr einen angenehmen Aufenthalt habt.}{}{}{}{}
+{72}{Vielen Dank.}{}{5}{}{0}{}
+{73}{Äh ...  Dankie.}{}{-4}{}{0}{}
+{74}{K:}{}{1}{}{35}{}
+{75}{C:}{}{1}{lf 14 0}{35}{lf 14 1}
+{76}{E:}{}{1}{}{0}{}
+{77}{}{}{}{}{}{}
+{78}{Es tut mir Leid, Sire.  Wir sind in letzter Zeit fast ständig ausgebucht.  Ich bin überrascht, dass wir überhaupt ein Zimmer frei haben.  Aber das wird sicher nicht lange so bleiben, falls Ihr es nicht nehmen solltet.}{Es tut mir Leid, Madame.  Wir sind in letzter Zeit fast ständig ausgebucht.  Ich bin überrascht, dass wir überhaupt ein Zimmer frei haben.  Aber das wird sicher nicht lange so bleiben, falls Ihr es nicht nehmen solltet.}{}{}{}{}
+{79}{[Seufzer.] Hier. [Du gibst ihr das Geld.]}{}{5}{$$ 175}{-5}{$$-175, lf 13 1, lf 10 1}
+{80}{[Seufzer.] Hier.  [Du gibst ihr das Geld.]}{}{-4}{$$ 175}{-5}{$$-175, lf 13 1, lf 10 1}
+{81}{K:}{}{1}{}{35}{}
+{82}{F:}{}{1}{}{0}{re -2}
+{83}{Oh! ... Ich, äh, wollte nicht, äh, bitte nehmt meine Entschuldigung an, Sire!  Ich habe Euch mit jemandem verwechselt.  Wie kann ich Euch zu Diensten sein?}{Oh! ... Ich, äh, wollte nicht, äh, bitte nehmt meine Entschuldigung an, Madame!  Ich habe Euch mit jemandem verwechselt.  Wie kann ich Euch zu Diensten sein?}{}{}{}{}
+{84}{Ich hätte gern ein Zimmer für die Nacht.}{}{5}{lf 10 0}{45}{}
+{85}{Ich werde ein Weilchen in der Stadt sein.  Ich hätte gern ein Zimmer für eine Woche.}{}{5}{ha7, lf 10 0}{52}{}
+{86}{Ich werde ein Weilchen in der Stadt sein.  Ich hätte gern ein Zimmer für eine Woche.}{}{5}{ha-6, lf 10 0}{57}{}
+{87}{Ich hierbleiben ein Nach'?}{}{-4}{lf 10 0}{45}{}
+{88}{Ich hier lang. Ich kriegen Zimmer für Woch'?}{}{-4}{ha7, lf 10 0}{52}{}
+{89}{Ich hier lang. Ich kriegen Zimmer für Woch'?}{}{-4}{ha-6, lf 10 0}{57}{}
+{90}{C:}{}{1}{lf 14 0}{35}{lf 14 1}
+{91}{E:}{}{1}{}{0}{}
+{100}{[Sie mustert dich missbilligend.] Das wird Euch 30 Münzen pro Nacht kosten ... fünf Münzen mehr als üblich, da ich danach das Bett von den Läusen befreien muss, von denen Ihr sicher befallen seid.}{[Sie mustert dich missbilligend.] Das wird Euch 30 Münzen kosten ... fünf Münzen mehr als üblich, da ich danach das Bett von den Läusen befreien muss, von denen Ihr sicher befallen seid. Aber Ihr könnt Euch wahrscheinlich keine 30 Münzen leisten, oder?}{}{}{}{}
+{101}{Ich nehme ein Zimmer für eine Nacht. [Du gibst ihr das Geld.]}{}{5}{$$30, lf 10 0}{-2}{$$-30, re +5, lf 12 1, lf 10 1}
+{102}{Wie viel kostet eine Woche?}{}{5}{lf 10 0}{120}{}
+{103}{Ich würde Euch nicht dafür bezahlen, hier bleiben zu dürfen, Schlampe!}{}{5}{}{0}{re -10, fl 130}
+{104}{Ich glaube nicht, dass Eure Zimmer 30 Münzen pro Nacht wert sind. Guten Tag.}{}{5}{}{0}{re -5}
+{105}{Ihr habt Recht, ich habe kein Geld. Guten Tag.}{}{5}{}{0}{}
+{106}{Ich haben Münzens. Ich willen Zimmer. [Du gibst ihr das Geld.]}{}{-4}{$$30, lf 10 0}{-2}{$$-30, re +5, lf 12 1, lf 10 1}
+{107}{Ich willen Zimmer für Woch'! Wie viel das kosten?}{}{-4}{lf 10 0}{120}{}
+{109}{Ich haben Münzens, abba ich nich' geben fiesig Mä'chen!}{}{-4}{}{0}{re-5}
+{110}{Äh, ich mussen geh'n jetz'.}{}{-4}{}{0}{}
+{120}{210 Münzen für Euch, aber ich kann mir kaum vorstellen, dass sich das jemand von Eurem Schlage leisten kann.}{210 Münzen für Euch, aber ich kann mir kaum vorstellen, dass sich das jemand von Eurem Schlage leisten kann.}{}{}{}{}
+{121}{Ich kann, und ich nehme das Zimmer. [Du gibst ihr das Geld.]}{}{5}{$$210}{-5}{$$-210, re 45, lf 11 1, lf 10 1}
+{122}{Ich haben Münzens! Ich nehmen Zimmer! [Du gibst ihr das Geld.]}{}{-4}{$$210}{-5}{$$-210, re 45, lf 11 1, lf 10 1}
+{123}{Es ist noch nicht mal die Hälfte wert. Guten Tag, Madame.}{}{5}{}{0}{re-5}
+{124}{Ich haben Münzens, abba ich nicht magen Euer Gas'hof. Tschö.}{}{-4}{}{0}{re-5}
+{127}{Ich habe genug von Euch und Eurem flohverseuchten Gasthof! Guten Tag!}{}{5}{}{0}{re-10}
+{128}{Äh, ich geh'n jetz' weg.}{}{-4}{}{0}{}
+{129}{Ich verstehe. Vielleicht komme ich später wieder zurück.}{}{5}{}{0}{}
+{130}{Ich finde das gar nicht witzig, Sire. Bitte schleift Euren flohverseuchten Hintern aus meinem Etablissement, sonst sehe ich mich gezwungen, die Wachen zu rufen.}{Ich finde das gar nicht witzig, Madame. Bitte schleift Euren flohverseuchten Hintern aus meinem Etablissement, sonst sehe ich mich gezwungen, die Wachen zu rufen.}{}{}{}{}
+{140}{Ja, was liegt an, Schwachkopf?}{Ja, was liegt an, Schwachkopf?}{}{}{}{}
+{141}{Ich hierbleiben ein Nach'?}{}{-4}{lf 10 0}{45}{}
+{142}{Ich hier lang. Ich kriegen Zimmer für Woch'?}{}{-4}{ha7, lf 10 0}{52}{}
+{143}{Ich hier lang. Ich kriegen Zimmer für Woch'?}{}{-4}{ha-6, lf 10 0}{57}{}
+{144}{C:}{}{1}{lf 14 0}{35}{lf 14 1}
+{145}{E:}{}{1}{}{0}{}
+{150}{[Sie nimmt dein Geld gierig an.] Oh, Verzeihung, Sire! Ich wusste nicht, dass Ihr wohlhabend seid. Euer Zimmer ist gleich dort im Korridor.  Das Zimmer steht Euch die nächsten sieben Nächte zur Verfügung. Die Tür ist nicht verschlossen.  Ich hoffe, Ihr habt einen angenehmen Aufenthalt, und, bitte, seht mir etwaige Beleidigungen nach.}{[Sie nimmt dein Geld gierig an.] Oh, Verzeihung, Madame! Ich wusste nicht, dass Ihr wohlhabend seid. Euer Zimmer ist gleich dort im Korridor.  Das Zimmer steht Euch die nächsten sieben Nächte zur Verfügung. Die Tür ist nicht verschlossen.  Ich hoffe, Ihr habt einen angenehmen Aufenthalt, und, bitte, seht mir etwaige Beleidigungen nach.}{}{}{}{}
+{151}{Vielen Dank.}{}{5}{}{0}{}
+{152}{Äh ...  Dankie.}{}{-4}{}{0}{}
+{153}{K:}{}{1}{}{35}{}
+{154}{C:}{}{1}{lf 14 0}{35}{lf 14 1}
+{155}{E:}{}{1}{}{0}{}
+{160}{Also gut. Euer Zimmer ist gleich dort im Korridor, aber das Zimmer steht Euch nur heute Nacht zur Verfügung. Und macht bloß keinen Ärger, sonst werde ich nicht zögern, Euch rauswerfen zu lassen. Und Rückerstattungen gibt es nicht.}{Also gut. Euer Zimmer ist gleich dort im Korridor, aber das Zimmer steht Euch nur heute Nacht zur Verfügung. Und macht bloß keinen Ärger, sonst werde ich nicht zögern, Euch rauswerfen zu lassen. Und Rückerstattungen gibt es nicht.}{}{}{}{}
+{161}{Vielen Dank.}{}{5}{}{0}{}
+{162}{Äh ...  Dankie.}{}{-4}{}{0}{}
+{163}{K:}{}{1}{}{35}{}
+{164}{C:}{}{1}{lf 14 0}{35}{lf 14 1}
+{165}{E:}{}{1}{}{0}{}
+{166}{}{}{}{}{}{}
+

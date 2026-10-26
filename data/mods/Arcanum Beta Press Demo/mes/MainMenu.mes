@@ -1,0 +1,259 @@
+//
+// MainMenu
+//
+
+
+// Main SplashScreen msg
+{1}{Loading Arcanum...}
+
+
+// Loading SaveGame
+{5}{Loading SaveGame...}
+
+
+// Main Menu
+{10}{Single Player}
+{11}{MultiPlayer}
+{12}{Options}
+{13}{Exit Game}
+// Main Menu -- Hotkeys
+{20}{S}
+{21}{M}
+{22}{O}
+{23}{E}
+
+
+// Main Menu  -- Multiplayer disabled, for editors!
+{10010}{Single Player}
+{10011}{Options}
+{10012}{Exit Game}
+// Main Menu -- Hotkeys
+{10020}{S}
+{10021}{O}
+{10022}{E}
+
+
+// Main Menu In Play
+{30}{Save Game}
+{31}{Load Game}
+{32}{Options}
+{33}{Quit Game}
+// Main Menu -- Hotkeys
+{40}{S}
+{41}{L}
+{42}{O}
+{43}{Q}
+
+// Main Menu In Play Locked
+{10030}{Options}
+{10031}{Quit Game}
+// Main Menu -- Hotkeys
+{10040}{O}
+{10041}{Q}
+
+// Single Player Menu
+{50}{New Game}
+{51}{Load Game}
+{52}{Last Save}
+{53}{View Intro}
+// Single Player Menu -- Hotkeys
+{60}{N}
+{61}{L}
+{62}{S}
+{63}{V}
+
+// New Game Menu
+// WIP! JLR! THIS IS WRONG!
+{100}{Pick Character}
+{101}{Create Char}
+// New Game Menu
+// WIP! JLR! THIS IS WRONG!
+{110}{P}
+{111}{C}
+
+
+// Multiplayer Main Menu
+{200}{Internet}
+{201}{LAN}
+// Multiplayer Main Menu -- Hotkeys
+{210}{I}
+{211}{L}
+
+// Multiplayer Choose Server/Client
+{220}{Join Game}
+{221}{Server}
+// Multiplayer Choose Server/Client -- Hotkeys
+{230}{J}
+{231}{S}
+
+// In-Game Multiplayer
+{250}{Save State}
+{251}{Disconnect}
+{252}{Options}
+// In-Game Multiplayer -- Hotkeys
+{260}{S}
+{261}{D}
+{262}{O}
+
+
+
+// WIP! JLR! REMOVE!
+// Multiplayer Join Start
+{280}{Join}
+{281}{Cancel}
+// Multiplayer Join Start
+{290}{J}
+{291}{C}
+
+
+
+// WIP! JLR! Ack!?
+// Multiplayer Server options Start
+{400}{Name}
+{401}{Scenario}
+{402}{Max Players}
+{403}{Done}
+// Multiplayer Server options Start -- Hotkeys
+{410}{N}
+{411}{S}
+{412}{M}
+{413}{D}
+
+
+
+
+// Base, starting player name
+{500}{Choose Name} // Player
+{505}{You must choose a portrait.}
+{506}{You must choose a name.}
+
+
+
+// Pregenerated characters -- Global Script flag to set when picked (-1 means none)
+{550}{-1}
+{551}{2350}
+{552}{2351}
+{553}{2352}
+{554}{2353}
+{555}{2354}
+{556}{2355}
+{557}{2356}
+{558}{2357}
+{559}{2358}
+{560}{2359}
+{561}{2360}
+{562}{2361}
+
+
+// Used with pregenerated characters
+{610}{Create Character}
+
+// Pregenerated character descriptions
+// NOTE: The character-combinations "\t" and "\n" are used for formatting the text.
+//  In standard format, "\t" means TAB and "\n" means carriage-return and line-feed.
+{650}{\tCreate your own character.}
+{651}{\tMerwin Tumblebrook was raised in a small halfling town, where he showed a proficiency in various technological disciplines, but was also prone to random acts of theft and pilfery. Although not an evil child, his dresser was often full of the ill-gotten possessions of his friends and neighbors, as well as the occasional gold-leafed religious relic from a temple in the nearby human village.  When young Merwin's tastes began drifting to explosives and the contents of the local treasury, his parents thought it time to take action.\n\tMerwin has boarded the IFS Zephyr en route to Tarant, where he is enrolled in the spring semester at the Westrel Military Academy for Promising Young Men.  Needless to say, he is less than exuberant over the whole affair.}
+{652}{\tGodfrey Castleburger grew up on the rolling hills of his family's estate.  The son of a wealthy and influential businessman, Godfrey was tutored daily by the best teachers, and excelled in economics and the dialectic method.  In his free time, he was trained by a master in the technological discipline of Gunsmithy, and is well-trained in the making of firearms and hopes to become an expert marksmen.\n\tHaving finished his compulsory education, young Godfrey is being sent to Tarant on the IFS Zephyr to broaden his experience in the new world, as well as to sow any of his proverbial wild oats before he returns to assume control of the family business.}
+{653}{\tHorace McGinley was born under a bad sign.  An orphan from birth, he found himself in a daily battle with life and its peculiar quandaries.  After running away from various homes and institutions, Horace found himself on the streets, homeless and hungry.\n\tCarving a niche for oneself in such an environment is difficult, but Horace was anything if not determined.  After falling in with a group of local street toughs, Horace began to learn the ways of combat and thievery, and even began dabbling in the ways of magick.\n\tWith the money from a few successful heists, Horace has booked passage on the IFS Zephyr to Tarant.  Its not that life won't give you anything, he thinks, it's just all in the way that you ask.}
+{654}{\tMuck Evil Eye was born in a remote ogre village, the offspring of an unusual union between a human male and Histreg Wide Thighs, an ogre female whose appetites tended toward the exotic.  Muck grew up an outcast, scorned by his fellow ogre because of his human heritage. He frequently found himself fighting because of aspersions cast at his family and his character; in time, he became the most feared, if not the most despised, warrior in his village.\n\tMuck, because of his human blood, is a tad smarter than the common ogre.  Upon hearing of employment opportunities in the new world for half-ogre bodyguards, he's taken a job in the boiler room of the IFS Zephyr in exchange for passage to Tarant.}
+{655}{\tD'ren Le'lor is a dreamer.  The son of an elven hunter, D'ren found himself more interested in the history of Arcanum than he did in bowmanship, although he was quite proficient in the latter as well, and was often found in the library, poring over the ancient texts and manuscripts.  Magick came easily to him, and he spent much time studying the ancient runes while his friends were off engaging in contests of physical skill and horseplay.\n\tTo D'ren the world is a large and wonderful place.  So tonight, after leaving a heartfelt note to his parents saying he would return soon, he has stolen away to the nearest town, where he's booked passage on the IFS Zephyr, bound for Tarant at first light.}
+{656}{\tSolomon Doone was born the 13th son of Derzin Doone, the most evil necromancer in a long line of evil necromancers.  It was the night of the full moon, and Solomon's mother, a frightful witch whose body was covered in strange birthmarks of the most evil shapes and configurations, died in childbirth at the stroke of midnight.  Bezzle Gerts, the twisted, one-armed midwife who delivered the child, remarked that Fergel, the Doone's black housecat, had crossed the threshold into the room just as Solomon uttered his first cry.\n\tOftentimes Fate is not subtle.  After a family dispute that left most of the Doone clan unrecognizable or immobilized, Solomon has purchased a ticket for Tarant on the IFS Zephyr.  He doesn't bother looking at the seat number.}
+{657}{\tThe story of Merik Luggerton is not an unfamiliar one.  Born into abject poverty, Merik lived with his family in a one-room shanty, working at odd jobs in the factory district of the city in which he lived.  Orcish wages being what they were, the family had a lot of trouble putting food on the table.\n\tAs in many orcish ghettos, there was a great demand for pugilists, and many were the men who placed bets on the outcome of a brawl between two strapping young half-orcs.  Merik found himself in the ring one night, and, upon winning, had more than a month's wages.\n\tMerik fought, and Merik won.  Having taken care of his family, he's purchased a ticket for the IFS Zephyr, in hopes of finding a new and better life in the great city of Tarant.}
+{658}{\tLugard Bloodstone is a miner's son, and over the front door of his home is a plaque that reads: Any Work Not Done With Your Hands Is No Such Thing.  Unfortunately, as a child Lugard seemed to excel at what his father dubbed 'senseless tinkering', and a young Lugard's birthday gift to his father of a steam-powered shovel went over like stone shoes at the swimming hole.  Still, regardless of his father, Lugard studied long and hard, and looked to the day when he might study among the great inventors and scientists of Tarant.\n\tLugard's father is old-fashioned, but he is also wise.  Upon completing the dwarven rights of adulthood, Lugard has been permitted to enroll at Tarant University, and he's booked passage on the IFS Zephyr, bound for the greatest industrial city in all of Arcanum.}
+{659}{\tVictoria Warrington was the daughter of nobility, one of the lesser families who lost both land and power in the aftermath of the great wars.  As the years have passed, the Warrington name has come to mean less and less, but the family has survived, and holds on to as much of its past glory as society will permit.  Victoria is the youngest of three daughters, beautiful and quick-witted.  Having been educated in the finest schools of knowledge and magick, she is the model of strong character and good breeding.\n\tBut Victoria craves adventure.  Many nights, she frequents the local taverns in disguise, hungry for stories, a strong glass of ale, and a game of dice.  Tonight she's been lucky, and the poor soul across from her has lost his last remaining possession...a ticket on the IFS Zephyr to Tarant...}
+{660}{\tThe T'Seraa family name is an old one, and Bel'an has been raised with one standard: elven honor above all.  She has been taught the true elven ways from birth, and holds them in her heart like a gemstone.  Magick and warcraft are as familiar to her as the sun through the leaves of her treetop home, and she feels a strong kinship with Nature and Her mysteries...\n\tBut all is not right in Arcanum, and Bel'an has been chosen by her people to go out into the world, and see what is to be seen.  And although her heart breaks to leave the deep elven forests she has always known, there is a peculiar excitement she feels at boarding this...airship?...the IFS Zephyr, and traveling to someplace called Tarant...}
+{661}{\tUntil a little while ago, Clarisse Vorak had a bright future.  Having recently moved to the city from a small town, she had apprenticed herself to a well-respected doctor and was well on her way to earning advanced degrees in the Anatomical and Therapeutic disciplines.  She was a gifted student, and a quick learner.\n\tThat all changed when it was discovered that the small town she was from was actually an orcish tribe.  Times and attitudes being what they are, she has been asked to leave her apprenticeship.   All of her friends have abandoned her, and her landlord has evicted her on "social" grounds.\n\tIn the hopes that the new world has shed such prejudices, she has purchased a ticket on the IFS Zephyr, bound for Tarant...}
+{662}{\tKe'ree Melange has always lived in two worlds.  Her father was a human politician, and her mother an elven sorceress, and she has learned to be a little like them both.  Having grown up in both elven villages and bustling cities, she has come to appreciate the powers of adaptation and persuasion.  She has always excelled in everything she has done.\n\tKe'ree also remembers arguments between her mother and father concerning the nature of magick and technology, and why one was better than the other.  After studying them both, she has concluded that both have merit, and that each has its place. After all, she thinks, if you can't live in two worlds, then you're obviously trapped in one...\n\tHaving come to that conclusion, this very afternoon she has purchased a ticket on the IFS Zephyr, bound for Tarant.  If there is a new world, she wants to be in it...}
+
+
+
+
+
+// Race/Gender Combos -- Note: These lookup to values in Rules/MainMenu.mes
+{700}{Human/Male}
+{701}{Human/Female}
+{702}{Elf/Male}
+{703}{Elf/Female}
+{704}{Dwarf/Male}
+{705}{Gnome/Male}
+{706}{Halfling/Male}
+{707}{Half-Elf/Male}
+{708}{Half-Elf/Female}
+{709}{Half-Orc/Male}
+{710}{Half-Orc/Female}
+{711}{Half-Ogre/Male}
+
+
+// Race/Gender Combo Descriptions
+{750}{Humans have no special modifiers to their stats and abilities. Humans are the most populous and distributed race by far, having numerous cities and kingdoms throughout the world. They interact with the other races as much as the gnomes, and they interbreed with everything (hence, half-elves, half-ogres, and half-orcs). They are not inherently predisposed towards magick or technology, but they are the front-runners in the latest technological race. Being shorter-lived than most of the other races as well as fairly ingenious tinkerers, they are probably attracted to the quick return on investment that technology promises.}
+{751}{Humans have no special modifiers to their stats and abilities. Humans are the most populous and distributed race by far, having numerous cities and kingdoms throughout the world. They interact with the other races as much as the gnomes, and they interbreed with everything (hence, half-elves, half-ogres, and half-orcs). They are not inherently predisposed towards magick or technology, but they are the front-runners in the latest technological race. Being shorter-lived than most of the other races as well as fairly ingenious tinkerers, they are probably attracted to the quick return on investment that technology promises.}
+{752}{The character gains +1 dexterity and beauty.  He loses -2 ranks to all tech skills and has an increased chance of technological items failing to work.  Elves are slender and pale, having a natural, exotic beauty that is the envy of the other races.  Elves are a philosophical race, the dreamers and poets of Arcanum. They prefer to live near forests and rivers, spending their time feasting, singing and talking. Elves can be rather arrogant to all other races, but they especially disdain dwarves.}
+{753}{The character gains +1 dexterity and beauty.  She loses -2 ranks to all tech skills and has an increased chance of technological items failing to work.  Elves are slender and pale, having a natural, exotic beauty that is the envy of the other races.  Elves are a philosophical race, the dreamers and poets of Arcanum. They prefer to live near forests and rivers, spending their time feasting, singing and talking. Elves can be rather arrogant to all other races, but they especially disdain dwarves.}
+{754}{The character gains +2 strength and +1 constitution and +2 ranks to all tech skills.  The character is hampered in throwing spells, finding that they cost twice as much to cast, and has an increased chance of magical items failing to work.  Dwarven males are short, stocky, bearded people. Although very wide and stout for their height, dwarves tend to be muscular and not fat. They are hard-working, prideful and focused almost to the point of being humorless, although most dwarves enjoy a good mead. Dwarves tend to be quick to judge and quick to anger. Dwarves dislike elves but are respectful to humans and gnomes.}
+{755}{The character gains +2 willpower, 2 ranks of Haggle and +10 to any bad reaction, but loses -2 points of constitution.  Gnomes are short with very big noses and while not usually overweight, they do tend to get pot-bellied in later years.  Gnomes tend to be a hard-working people.  They are equally at home in cities, underground or in the forest.  Since they get along well with most other races and because they love wealth, they tend to be merchants and traders. Like humans, they have little predisposition to either magick or technology. They can use either, but most often they choose to abstain from both.}
+{756}{The character gains +2 dexterity, 2 ranks of Prowling, 1 rank of Dodge and +5% critical hit chance, but then loses -3 points of strength.  Halflings are short people, smaller even than gnomes and dwarves. They enjoy cooking and eating and tend to be overweight. They do not wear shoes, instead relying on their heavily-soled and hair-topped feet. This also means halflings can be very quiet when they want to be.  Halflings are a quiet, rustic folk who tend not to dabble in either magick or technology, although nothing inherent prevents them from doing so. They are regarded as lazy by the other races, but despite this reputation, they are generally well liked.}
+{757}{The character gains +1 dexterity but loses -1 ranks to all tech skills. In build and appearance, they resemble their human parents more, but some half-elves possess the pointed ears and pale, delicate features associated with their elven parents. Half-elven personality ranges the entire gamut available to humans and elves, although most of them have a natural bent to their personality and enjoy spending time out-of-doors. Half-elves do not come across as arrogant to the other races and are generally well-liked by everyone.}
+{758}{The character gains +1 dexterity but loses -1 ranks to all tech skills. In build and appearance, they resemble their human parents more, but some half-elves possess the pointed ears and pale, delicate features associated with their elven parents. Half-elven personality ranges the entire gamut available to humans and elves, although most of them have a natural bent to their personality and enjoy spending time out-of-doors. Half-elves do not come across as arrogant to the other races and are generally well-liked by everyone.}
+{759}{The character gains +1 constitution, +1 strength and an extra 10% poison resistance, but loses -2 points of beauty and -2 points of charisma.  Half-orcs are the progeny of orc and human parents, usually a male orc and an unwilling female human. This history makes half-orcs a despised segment of the human population. Most half-orcs can pass as full humans (albeit ugly ones), but they usually have some trait that identifies their orcish blood (upturned nose, hairiness, foul temper) to the careful observer, and people usually discriminate against them when they discover their race. Half-orcs are quick-tempered and violent like their orcish parent. Some have learned to control their temper, but this usually means that instead of attacking immediately, they will plot revenge.}
+{760}{The character gains +1 constitution, +1 strength and an extra 10% poison resistance, but loses -2 points of beauty and -2 points of charisma.  Half-orcs are the progeny of orc and human parents, usually a male orc and an unwilling female human. This history makes half-orcs a despised segment of the human population. Most half-orcs can pass as full humans (albeit ugly ones), but they usually have some trait that identifies their orcish blood (upturned nose, hairiness, foul temper) to the careful observer, and people usually discriminate against them when they discover their race. Half-orcs are quick-tempered and violent like their orcish parent. Some have learned to control their temper, but this usually means that instead of attacking immediately, they will plot revenge.}
+{761}{The character gains +4 strength and an extra 10% damage resistance but then loses 1 point of beauty, 4 points of intelligence and 2 ranks of Prowling.  Half-ogres are half-human, half-ogre individuals, a seemingly rare combination. They tend to be large and heavy and thus cannot wear most armor or use certain technological items. In appearance, they resemble, but are not as violent as, their ogrish parents. They are slow to anger and tend to be gentle with smaller folk and if acting as bodyguards, they will defend their charges to the death. Due to their large size, they rarely face open discrimination in human cities.}
+
+
+// Background title
+{800}{Background}
+
+
+{2100}{Server refused join.  May be full.}
+
+
+
+
+// Options Buttons
+{4000}{Combat}
+{4001}{Audio}
+{4002}{Done}
+// Options Buttons -- Hotkeys
+{4010}{C}
+{4011}{A}
+{4012}{D}
+
+// Combat Options Buttons
+{4100}{Turn-Based}
+{4101}{Auto-Combat}
+{4102}{Always Run}
+{4103}{Float Messages}
+{4104}{Fast TB Combat}
+{4105}{Violence Filter}
+
+
+// Load/Save Game Messages
+{5000}{Game Loaded Successfully.}
+{5001}{SaveGame Corrupt!  Load Failed!}
+{5002}{Game Saved Successfully.}
+{5003}{SaveGame Corrupt!  Save Failed!}
+
+{5004}{Version Mismatch!}
+{5005}{Empty}
+
+{5010}{Create New SaveGame}
+
+
+// Misc Messages
+{6000}{Please Wait}  // Used for waiting screen
+
+
+// Hover-Help Messages:
+{6999}{Action:}
+// PickPregen
+{7000}{View Picture}
+{7001}{View Description}
+{7002}{Previous Screen}
+{7003}{Next Screen}
+
+{7010}{Previous Background}
+{7011}{Next Background}
+{7012}{Normal Pictures}
+{7013}{Custom Pictures}
+
+{7020}{Load Game}
+{7021}{Save Game}

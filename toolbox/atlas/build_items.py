@@ -79,7 +79,9 @@ class Items:
         # a module's own books, notes, newspapers... (mes/game*.mes) replace the game's for its objects
         self.module_written = {k: {s: mv.mes('mes', f) for s, f in WRITTEN_MES.items()}
                                for k, (m, mv) in mods.items() if any((m / 'mes' / f).is_file() for f in WRITTEN_MES.values())}
-        self.keys = v.mes('mes', 'gamekey.mes')
+        self.base_keys = self.keys = v.mes('mes', 'gamekey.mes')
+        # a module numbers its locks and keys from its own mes/gamekey.mes: key 3 of a module is not the game's key 3
+        self.module_keys = {k: mv.mes('mes', 'gamekey.mes') if (m / 'mes' / 'gamekey.mes').is_file() else {} for k, (m, mv) in mods.items()}
         self.onames = v.mes('oemes', 'oname.mes')
         self.protos = dict(v.protos())
         self.entries, self.by_sig, self.icons = [], {}, {}
@@ -88,6 +90,7 @@ class Items:
         """Names from here on are the descriptions of the object's own module (its mes/gamedesc.mes), when it has one."""
         self.desc = self.module_desc.get(getattr(o, 'map', None), self.base_desc)
         self.written = self.module_written.get(getattr(o, 'map', None), self.base_written)
+        self.keys = self.module_keys.get(getattr(o, 'map', None), self.base_keys)
 
     # ---- one entry per thing the player can tell apart --------------------------------------------------------
     def name_of(self, e):
@@ -430,7 +433,7 @@ class Altars:
             if not f:
                 continue
             data = f.read_bytes()
-            m = re.match(r"(?:The )?Altar of ([^,]+), (.+)", data[8:48].split(b'\0')[0].decode(ao.RAW_ENC, 'replace').strip())
+            m = re.match(r"(?:The )?Altar of ([^,]+), (.+)", ao.decode_raw(data[8:48].split(b'\0')[0]).strip())
             if not m:
                 continue
             god, title = m.group(1).strip(), m.group(2).strip()      # "Ter'el", "the god of Wisdom" / "the Stone God"
@@ -565,9 +568,12 @@ def recipes(items, objs):
             if idx is not None:
                 docs[e.int(203)].add(idx)
 
+    def toks(s):                         # Total Rebalance lists alternatives with commas: {4233}{10093, 10126, 10130}
+        return (s or '').replace(',', ' ').split()
+
     def entries(num):
         out = []
-        for tok in (rules.get(num) or '').split():
+        for tok in toks(rules.get(num)):
             idx = items.proto_entry(int(tok) + 20) if tok.lstrip('-').isdigit() else None
             if idx is not None and idx not in out:
                 out.append(idx)
@@ -575,8 +581,8 @@ def recipes(items, objs):
 
     def expertise(num):                  # schematic_ui.c: each part needs its own discipline at -complexity
         need = {}
-        for tok in (rules.get(num) or '').split()[:1]:
-            p = items.protos.get(int(tok) + 20)
+        for tok in toks(rules.get(num))[:1]:
+            p = items.protos.get(int(tok) + 20) if tok.lstrip('-').isdigit() else None
             if p is None:
                 continue
             level = -(p.get(96) or 0)
@@ -593,11 +599,11 @@ def recipes(items, objs):
             continue
         r = {'name': (text.get(int(rules[num]) if rules[num].strip().isdigit() else -1) or '').strip(),
              'parts': [entries(num + 3), entries(num + 4)], 'makes': makes,
-             'qty': int(rules.get(num + 6, '1').split()[0] or 1)}
+             'qty': int((toks(rules.get(num + 6, '1')) or ['1'])[0])}
         if num < 4000:
             r['tech'], r['degree'] = (num - 2000) // 200, (num - 2000) % 200 // 10 + 1
         else:
-            p = items.protos.get(int(rules[num + 5].split()[0]) + 20)
+            p = items.protos.get(int(toks(rules[num + 5])[0]) + 20)
             r['tech'] = (p.get(97) or 0) if p else 0
             r['found'] = sorted(docs.get(num, ()))
         need = {}
@@ -672,18 +678,22 @@ def main():
             got[idx] += qty or 1
         return [[i, q] for i, q in got.items()]
 
-    keys = defaultdict(set)      # key id -> item entries of the keys that carry it
+    # (scope, key id) -> item entries of the keys that carry it. A module numbers its keys on its own: its locks are opened by the keys of its own
+    # maps only, never by the game's key of the same number (scope = the module's name; None = the game)
+    module_of = {key: module.name for key, module, _ in build_modules.entries()}
+    keys = defaultdict(set)
     for o in objs:
         if o.type == 11:
+            items.use(o)
             kid = ao.Effective(o, items.protos.get(o.proto)).int(186)
             idx = items.mob_entry(o)
             if kid and idx is not None:
-                keys[kid].add(idx)
+                keys[module_of.get(o.map), kid].add(idx)
     for num, p in items.protos.items():
         if p.type == 11 and p.get(186):
             idx = items.proto_entry(num)
             if idx is not None:
-                keys[p.get(186)].add(idx)
+                keys[None, p.get(186)].add(idx)
 
     # an item listed in a container's or a character's inventory is not lying on the ground, whatever its own parent field says
     # (some keep an inventory slot, field 94, and lose the parent: the rubbish bins of Tarant are full of them)
@@ -722,7 +732,7 @@ def main():
                         c['says'] = text
             if locked:
                 c['locked'] = e.int(57)
-                ks = sorted(keys.get(e.int(58), ())) if e.int(58) else []
+                ks = sorted(keys.get((module_of.get(o.map), e.int(58)), ())) if e.int(58) else []
                 if ks:
                     c['keys'] = ks
             if flags & OCOF_JAMMED:

@@ -403,6 +403,22 @@ def parse_mob_header_and_aid(path, data=None):
     }
 
 
+def sniff_codec(data, default="cp1252"):
+    """The code page a byte string is really in, told by its content: valid UTF-8 with accents is UTF-8; text whose high bytes sit in runs of
+    3 or more (cp1251 Cyrillic words, as Windows-1252 they would be "Ñòàëüíûå") is Windows-1251; anything else is `default`. Cyrillic is only chosen
+    when such runs are at least 60 % of the high bytes, so French / German accents (one high byte between ASCII letters) are never mistaken."""
+    high = sum(1 for b in data if b >= 0x80 and b != 0xA7)      # (the "§§§" banners of the sound lists are not text)
+    if not high:
+        return default
+    try:
+        data.decode("utf-8")
+        return "utf-8"
+    except UnicodeDecodeError:
+        pass
+    runs = re.findall(rb"[\xc0-\xff\xa8\xb8]{3,}", data)       # (letter bytes only: a run of "§§§" in schemelist.mes is not a word)
+    return "cp1251" if runs and sum(map(len, runs)) >= 0.6 * high else default
+
+
 def load_description_mes():
     """Load prototype names and optional //gender annotations."""
     result = {}
@@ -415,7 +431,8 @@ def load_description_mes():
     for path, first_key in ((DESCRIPTION_MES, None), (GAME_DESCRIPTION_MES, 30000)):
         if not path.exists():
             continue
-        text = path.read_text(encoding="cp1252", errors="replace")
+        raw = path.read_bytes()
+        text = raw.decode(sniff_codec(raw), errors="replace")
         for match in pattern.finditer(text):
             key = int(match.group(1))
             if first_key is not None and key < first_key:

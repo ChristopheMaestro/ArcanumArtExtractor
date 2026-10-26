@@ -1,0 +1,173 @@
+lf2 : Débouter sans @pcname@
+
+{1}{Bienvenue à La perle des Enfers. Vous désirez manger chez nous ?}{Bienvenue à La perle des Enfers. Vous désirez manger chez nous ?}{}{}{}{}
+{2}{Oui s'il vous plaît.}{}{5}{}{11}{}
+{3}{Yep si 'ous plaît.}{}{-4}{}{11}{}
+{4}{Peut-être. En attendant, avez-vous entendu des commérages intéressants ?}{}{5}{lf0 0}{20}{lf0 1}
+{5}{P'têt... Vous avoir 'tendu des ragots bien ?}{}{-4}{lf0 0}{20}{lf0 1}
+{6}{En fait, je recherche la disciple de M. Saule. C'est vous n'est-ce pas ?}{}{7}{ru 1051, lf1 0}{30}{lf1 1}
+{7}{Non merci, pas tout de suite.}{}{5}{}{0}{fl 102}
+{8}{Nan marsi.}{}{-4}{}{0}{fl 102}
+
+{}{}{}{}{}{}{}
+
+{11}{Alors entrez donc et commandez ! Pourquoi attendre sur le seuil...}{Alors entrez donc et commandez ! Pourquoi attendre sur le seuil...}{}{}{}{}
+{12}{C'est ce que je vais faire.}{}{5}{}{0}{}
+{13}{Moi l'faire.}{}{-4}{}{0}{}
+{14}{Oui. Juste avant, avez-vous entendu des commérages intéressants ?}{}{5}{lf0 0}{20}{lf0 1}
+{15}{Ouais. Juste, vous avoir 'tendu des ragots bien ?}{}{-4}{lf0 0}{20}{lf0 1}
+{16}{Parce que je viens aussi pour autre chose : vous êtes la disciple de M. Saule. n'est-ce pas ?}{}{7}{ru 1051, lf1 0}{30}{lf1 1}
+
+{}{}{}{}{}{}{}
+
+{20}{Si vous cherchez un toit pour la nuit, vous ne trouviez rien de mieux que l'Auberge de Natalie à l'entrée de la gare.}{Si vous cherchez un toit pour la nuit, vous ne trouviez rien de mieux que l'Auberge de Natalie à l'entrée de la gare.}{}{}{}{ru 1034}
+{21}{Bon, je vais entrer manger.}{}{5}{}{0}{}
+{22}{Bon, moi entrer manger.}{}{-4}{}{0}{}
+{23}{Merci bien. Sinon... je suis à la recherche de la disciple de M. Saule. C'est vous, n'ai-je pas raison ?}{}{7}{ru 1051, lf1 0}{30}{lf1 1}
+{24}{Merci, je vais vous laisser.}{}{5}{}{0}{}
+{25}{M'rci, moi vous laisser.}{}{-4}{}{0}{}
+
+{30}{[Son visage souriant et chaleureux devient triste] Monsieur Saule... ne parle jamais de ses élèves. Serait-ce Anaïs qui vous a parlé de moi ?}{[Son visage souriant et chaleureux devient triste] Monsieur Saule... ne parle jamais de ses élèves. Serait-ce Anaïs qui vous a parlé de moi ?}{}{}{}{}
+{31}{C'est bien elle en effet.}{}{5}{}{40}{}
+{32}{Vous devinez juste, elle m'a dit d'aller vous trouver afin d'assurer ma formation.}{}{5}{}{50}{}
+{33}{Non, ce n'est ni elle, ni M. Saule qui m'ont parlé de vous. Cependant, je doute que ma source ait une importance.}{}{5}{}{60}{}
+{34}{Vous ne semblez pas connaître M. Saule aussi bien que je l'ai connu en Arcanum.}{}{5}{}{70}{}
+
+{40}{Et pourquoi vous envoie-t-elle ? Aurait-elle quelque aide à me demander aujourd'hui ?}{Et pourquoi vous envoie-t-elle ? Aurait-elle quelque aide à me demander aujourd'hui ?}{}{}{}{}
+{41}{Nullement, elle me recommande à vous afin de m'enseigner votre art.}{}{5}{}{80}{}
+{42}{En fait, elle souhaite s'excuser de son comportement passé.}{}{5}{}{90}{}
+{43}{Cette perspective ne semble pas vous réjouir, seriez-vous en froid ?}{}{5}{}{110}{}
+
+{50}{Assurer votre formation ? Serait-elle trop rouillée pour l'assurer elle-même ?}{Assurer votre formation ? Serait-elle trop rouillée pour l'assurer elle-même ?}{}{}{}{}
+{51}{Nullement. Cependant, nous sommes en froid et elle a refusé de le faire elle-même.}{}{5}{}{120}{}
+{52}{J'en doute, elle m'a seulement recommandé à vous. Elle doit tenir votre talent en haute estime.}{}{5}{}{130}{}
+{53}{Je ne souhaitais pas qu'elle s'en charge, elle était bien trop prétentieuse.}{}{5}{}{140}{}
+{54}{Je suppose, sinon pourquoi m'enverrait-elle ici ?}{}{5}{}{150}{}
+
+{60}{[Vous remarquez que ces yeux expriment du mépris] J'ignore pourquoi vous ne voulez rien révéler, mais ne pensez pas vous faire une place dans le monde de la négociation en débarquant ainsi de nulle part. Nous autres négociateurs aimons savoir qui parle de notre métier à des personnes extérieures. Puisse cette leçon vous être utile, je vous demanderai de ne plus me parler de ça.}{[Vous remarquez que ces yeux expriment du mépris] J'ignore pourquoi vous ne voulez rien révéler, mais ne pensez pas vous faire une place dans le monde de la négociation en débarquant ainsi de nulle part. Nous autres négociateurs aimons savoir qui parle de notre métier à des personnes extérieures. Puisse cette leçon vous être utile, je vous demanderai de ne plus me parler de ça.}{}{}{}{lf2 1}
+{61}{C'est entendu, excusez-moi.}{}{5}{}{0}{}
+{62}{Si vous le prenez ainsi...}{}{5}{}{0}{}
+
+{70}{[Son visage triste change d'expression pour exprimer dédain et colère] Vous êtes un bien piètre menteur, je connaissais suffisamment M. Saule pour avoir sur lui deux certitudes : il ne mentait jamais à propos de ses principes, et jamais il ne reviendrait sur l'un d'eux. Ces deux certitudes sont tout ce que vous apprendrez grâce à moi. A présent, je vous demanderai de ne plus me parler de ça.}{[Son visage triste change d'expression pour exprimer dédain et colère] Vous êtes un bien piètre menteur, je connaissais suffisamment M. Saule pour avoir sur lui deux certitudes : il ne mentait jamais à propos de ses principes, et jamais il ne reviendrait sur l'un d'eux. Ces deux certitudes sont tout ce que vous apprendrez grâce à moi. A présent, je vous demanderai de ne plus me parler de ça.}{}{}{}{lf2 1}
+{71}{Vous êtes persuadée d'avoir raison alors que vous le connaissez si mal. Pitoyable !}{}{5}{}{0}{}
+{72}{Si vous le prenez ainsi...}{}{5}{}{0}{}
+
+{80}{Vous enseigner notre art ? Serait-elle trop rouillée pour vous l'enseigner elle-même ?}{Vous enseigner notre art ? Serait-elle trop rouillée pour vous l'enseigner elle-même ?}{}{}{}{}
+{81}{Nullement. Cependant, nous sommes en froid et elle a refusé de le faire elle-même.}{}{5}{}{120}{}
+{82}{J'en doute, elle m'a seulement recommandé à vous. Elle doit tenir votre talent en haute estime.}{}{5}{}{130}{}
+{83}{Je ne souhaitais pas qu'elle s'en charge, elle était bien trop prétentieuse.}{}{5}{}{140}{}
+{84}{Je suppose, sinon pourquoi m'enverrait-elle ici ?}{}{5}{}{150}{}
+
+{90}{[Elle semble surprise mais, très vite, son expression devient dédaigneuse] Ne racontez pas n'importe quoi. Tout d'abord, jamais elle ne pourra comprendre le mal qu'elle m'a fait. Ensuite, si elle souhaitait vraiment le faire, elle viendrait me voir en personne. J'ignore comment vous connaissez notre passé, je doute qu'elle vous en ait parlé en détails, mais de toute façon ça n'a pas d'importance. Je vous demanderai de ne plus jamais me parler de ça.}{[Elle semble surprise mais, très vite, son expression devient dédaigneuse] Ne racontez pas n'importe quoi. Tout d'abord, jamais elle ne pourra comprendre le mal qu'elle m'a fait. Ensuite, si elle souhaitait vraiment le faire, elle viendrait me voir en personne. J'ignore comment vous connaissez notre passé, je doute qu'elle vous en ait parlé en détails, mais de toute façon ça n'a pas d'importance. Je vous demanderai de ne plus jamais me parler de ça.}{}{}{}{lf2 1}
+{91}{C'est entendu, je vais partir.}{}{5}{}{0}{}
+{92}{Si vous le prenez ainsi...}{}{5}{}{0}{}
+{93}{Excusez-moi, je ne souhaitais pas vous importuner. Au revoir...}{}{5}{}{0}{}
+
+{100}{Entrez mesdames messieurs, La perle des Enfers vous accueillera à bras ouverts.}{Entrez mesdames messieurs, La perle des Enfers vous accueillera à bras ouverts.}{}{}{}{}
+
+{102}{N'hésitez pas : c'est gratuit.}{N'hésitez pas : c'est gratuit.}{}{}{}{}
+
+{110}{[La tristesse qu'exprimait son visage se renforce] C'est le moins que l'on puisse dire, en effet. Cependant, tout cela ne vous concerne pas. Quand bien même elle aurait besoin de mon aide, jamais elle n'oserait passer par un tiers.}{[La tristesse qu'exprimait son visage se renforce] C'est le moins que l'on puisse dire, en effet. Cependant, tout cela ne vous concerne pas. Quand bien même elle aurait besoin de mon aide, jamais elle n'oserait passer par un tiers.}{}{}{}{}
+{111}{En fait, elle ne souhaite pas vous demander votre aide, je viens pour moi-même, afin que vous m’enseigniez la négociation.}{}{5}{}{115}{}
+{112}{Très bien, alors je vais vous laisser.}{}{5}{}{0}{lf2 1}
+
+{115}{J'en ai assez de tout ça. Vous venez ici, me parlez d'Anaïs, et demandez à ce que je vous enseigne mon savoir ? Adressez-vous à Anaïs, je ne prends pas d'élèves. Au revoir... [Son insistance sur cette formule de séparation vous fait deviner qu'elle souhaite mettre fin à la conversation le plus rapidement possible]}{J'en ai assez de tout ça. Vous venez ici, me parlez d'Anaïs, et demandez à ce que je vous enseigne mon savoir ? Adressez-vous à Anaïs, je ne prends pas d'élèves. Au revoir... [Son insistance sur cette formule de séparation vous fait deviner qu'elle souhaite mettre fin à la conversation le plus rapidement possible]}{}{}{}{lf2 1}
+{116}{Bien, au revoir...}{}{5}{}{0}{}
+{117}{[Partir]}{}{1}{}{0}{}
+
+{120}{J'apprécie votre honnêtement. Cependant, me révéler que vous vous êtes froissé avec une négociatrice ne me rassure pas quant à votre talent... [Elle soupire] Enfin, puisque vous êtes là, autant en profiter pour tester votre éloquence.}{J'apprécie votre honnêtement. Cependant, me révéler que vous vous êtes froissé avec une négociatrice ne me rassure pas quant à votre talent... [Elle soupire] Enfin, puisque vous êtes là, autant en profiter pour tester votre éloquence.}{}{}{}{}
+{121}{Comment voulez-vous y procéder ?}{}{5}{}{160}{}
+{122}{Cela ne me plaît, je viens chercher une formation et non perdre du temps dans un test.}{}{5}{}{170}{}
+
+{130}{[Elle reste silencieuse un instant] J'ignore pourquoi vous me cachez la vérité, mais je sais parfaitement qu'elle me considère inférieure à elle. La seule vraie raison qu'elle pourrait avoir est que vous l'avez froissée, n'ai-je pas raison ? [Elle continue sans attendre de réponse de votre part] Je doute, au vue de ces évènements, que vous ayez la moindre éloquence. A présent, je vous demanderez de partir, je suis en plein travail...}{[Elle reste silencieuse un instant] J'ignore pourquoi vous me cachez la vérité, mais je sais parfaitement qu'elle me considère inférieure à elle. La seule vraie raison qu'elle pourrait avoir est que vous l'avez froissée, n'ai-je pas raison ? [Elle continue sans attendre de réponse de votre part] Je doute, au vue de ces évènements, que vous ayez la moindre éloquence. A présent, je vous demanderez de partir, je suis en plein travail...}{}{}{}{lf2 1}
+{131}{Bien, au revoir...}{}{5}{}{0}{}
+{132}{[Partir]}{}{1}{}{0}{}
+
+{140}{[La tristesse qu'exprimait son regard se change en dédain] Il est vrai qu'elle est suffisante. Cependant, celui que je trouve prétentieux en ce moment, c'est vous. Vous espérez trouvez un mentor idéal pour votre formation dans l'art de la négociation, quelqu'un chez qui une erreur critiquable n'existerait ? Notre art passe parfois par l'acceptation des défauts de l'interlocuteur.}{[La tristesse qu'exprimait son regard se change en dédain] Il est vrai qu'elle est suffisante. Cependant, celle que je trouve prétentieuse en ce moment, c'est vous. Vous espérez trouvez un mentor idéal pour votre formation dans l'art de la négociation, quelqu'un chez qui une erreur critiquable n'existerait ? Notre art passe parfois par l'acceptation des défauts de l'interlocuteur.}{}{}{}{}
+{141}{[Vous écoutez]}{}{1}{}{143}{}
+
+{143}{Cette leçon sera la seule que je daignerai vous enseigner. A présent, je vous demanderez de partir, je suis en plein travail...}{Cette leçon sera la seule que je daignerai vous enseigner. A présent, je vous demanderez de partir, je suis en plein travail...}{}{}{}{lf2 1}
+{144}{C'est entendu, excusez-moi.}{}{5}{}{0}{}
+{145}{Si vous le prenez ainsi...}{}{5}{}{0}{}
+{146}{Soit, au revoir.}{}{5}{}{0}{}
+
+{150}{Balivernes ! [Sa réaction soudaine a fait disparaître la tristesse qui caractérisait jusqu'à présent son expression, cependant sa voix redevient très vite malheureuse] Jamais elle ne renoncerait à l'un de ses deux métiers... moi non plus d'ailleurs. Je ne prends pas d'élèves, je suis désolée. A présent, je vous demanderez de partir, je suis en plein travail...}{Balivernes ! [Sa réaction soudaine a fait disparaître la tristesse qui caractérisait jusqu'à présent son expression, cependant sa voix redevient très vite malheureuse] Jamais elle ne renoncerait à l'un de ses deux métiers... moi non plus d'ailleurs. Je ne prends pas d'élèves, je suis désolée. A présent, je vous demanderez de partir, je suis en plein travail...}{}{}{}{lf2 1}
+{151}{C'est entendu, je vais partir.}{}{5}{}{0}{}
+{152}{Excusez-moi, je ne souhaitais pas vous importuner. Au revoir...}{}{5}{}{0}{}
+{153}{[Partir]}{}{1}{}{0}{}
+
+{160}{De la manière la plus simple, dans une situation réelle. Je vous explique : le marmiton de ce restaurant est l'un de mes amis. Actuellement, il est en stage ici mais, d'ici quelques temps, devra retourner dans son cercle. Pour pouvoir rendre son séjour définitif, il doit écrire une lettre de motivation à un intendant, ce qui l'angoisse terriblement.}{De la manière la plus simple, dans une situation réelle. Je vous explique : le marmiton de ce restaurant est l'un de mes amis. Actuellement, il est en stage ici mais, d'ici quelques temps, devra retourner dans son cercle. Pour pouvoir rendre son séjour définitif, il doit écrire une lettre de motivation à un intendant, ce qui l'angoisse terriblement.}{}{}{}{}
+{161}{[Vous écoutez]}{}{1}{}{162}{}
+
+{162}{Je comptais la rédiger avec lui mais, puisque vous êtes là, je vous laisse le soin de le faire. J'évaluerai ensuite le résultat afin de déterminer votre talent. Cela vous semble-t-il possible ?}{Je comptais la rédiger avec lui mais, puisque vous êtes là, je vous laisse le soin de le faire. J'évaluerai ensuite le résultat afin de déterminer votre talent. Cela vous semble-t-il possible ?}{}{}{}{}
+{163}{Bien entendu. Je suppose qu'il me donnera lui-même tous les détails ?}{}{5}{}{180}{}
+{164}{Non, malheureusement écrire une lettre n'est pas mon fort.}{}{5}{}{190}{}
+
+{170}{Vous êtes bien prétentieux, jamais vous ne trouverez de tuteur dans ce domaine qui vous accepte sans vérifier au préalable de quoi vous êtes capable. Mais soit, essayez ailleurs : je ne vous retiens pas...}{Vous êtes bien prétentieuse, jamais vous ne trouverez de tuteur dans ce domaine qui vous accepte sans vérifier au préalable de quoi vous êtes capable. Mais soit, essayez ailleurs : je ne vous retiens pas...}{}{}{}{lf2 1}
+{171}{[Partir]}{}{1}{}{0}{}
+{172}{Soit, au revoir.}{}{5}{}{0}{}
+
+{180}{En effet. Je vous laisse maître de choisir lesquels inclure et lesquels évincer. Sur ce, je crois qu'il ne vous reste plus qu'à vous mettre au travail. Quel est votre nom ?}{En effet. Je vous laisse maître de choisir lesquels inclure et lesquels évincer. Sur ce, je crois qu'il ne vous reste plus qu'à vous mettre au travail. Quel est votre nom ?}{}{}{}{qu1049 2}
+{181}{@pcname@.}{0}{1}{}{0}{fl 185}
+{182}{@pcname@, madame.}{1}{1}{}{0}{fl 185}
+
+{185}{Claude Desmarées. Bien, bonne chance @pcname@.}{Claude Desmarées. Bien, bonne chance @pcname@.}{}{}{}{}
+
+{190}{Alors n'en parlons plus, vous pouvez oublier tout ça. Bonne journée à vous... [Son ton froid contraste avec la formule polie qu'elle emploie]}{Alors n'en parlons plus, vous pouvez oublier tout ça. Bonne journée à vous... [Son ton froid contraste avec la formule polie qu'elle emploie]}{}{}{}{qu1049 6, lf2 1}
+{191}{[Partir]}{}{1}{}{0}{}
+{192}{Soit, au revoir.}{}{5}{}{0}{}
+
+{195}{Bienvenue à La perle des Enfers monsieur...}{Bienvenue à La perle des Enfers madame...}{}{}{}{}
+
+{200}{@pcname@. Avez-vous aidé Maxime à écrire sa lettre ?}{@pcname@. Avez-vous aidé Maxime à écrire sa lettre ?}{}{}{}{}
+{201}{Oui, la voici.}{}{5}{in 5409}{210}{in 5409}
+{202}{Pas encore non...}{}{5}{}{0}{}
+
+{210}{[Elle s'empare de la lettre et la porte à hauteur de ses yeux] Maxime a fait du très bon travail : non seulement il a fait une ébauche mais a aussi noté vos conseils "bruts"... [Elle parcourt la lettre du regard]}{[Elle s'empare de la lettre et la porte à hauteur de ses yeux] Maxime a fait du très bon travail : non seulement il a fait une ébauche mais a aussi noté vos conseils "bruts"... [Elle parcourt la lettre du regard]}{}{}{}{}
+{211}{[Vous patientez]}{}{1}{}{-4}{}//220 ou 230
+
+{220}{@pcname@. Pour être honnête... cette lettre est médiocre. Ce n'est certainement pas avec elle que Maxime sera reçu. [Elle plie la lettre en quatre avant de la glisser dans une poche. Elle secoue lentement la tête horizontalement] Vous n'avez pas réussi le test, je ne vous apprendrai donc rien. Cependant, cela a sans doute été un bon exercice pour vous, j'espère que vous n'abandonnerez pas et que vous persévèrerez dans cette voie.}{@pcname@. Pour être honnête... cette lettre est médiocre. Ce n'est certainement pas avec elle que Maxime sera reçu. [Elle plie la lettre en quatre avant de la glisser dans une poche. Elle secoue lentement la tête horizontalement] Vous n'avez pas réussi le test, je ne vous apprendrai donc rien. Cependant, cela a sans doute été un bon exercice pour vous, j'espère que vous n'abandonnerez pas et que vous persévèrerez dans cette voie.}{}{}{}{qu1049 6}
+{221}{Soit, alors au revoir...}{}{5}{}{0}{fl 225}
+{222}{[Partir]}{}{1}{}{0}{}
+
+{225}{Au revoir @pcname@...}{Au revoir @pcname@...}{}{}{}{}
+
+{230}{C'est de l'excellent travail @pcname@, c'est parfait. [Elle plie la lettre en quatre et la glisse dans l'une de ses poches] Honnêtement, je pensais que j'aurais au moins quelques détails à retoucher mais il ne reste qu'à la mettre au propre.}{C'est de l'excellent travail @pcname@, c'est parfait. [Elle plie la lettre en quatre et la glisse dans l'une de ses poches] Honnêtement, je pensais que j'aurais au moins quelques détails à retoucher mais il ne reste qu'à la mettre au propre.}{}{}{}{qu 1049 4}
+{231}{Merci bien.}{}{5}{}{240}{}
+
+{240}{Bien, il est temps de passer à votre formation. [Elle vous parle de nombreux petits atouts possibles dans une négociation. Le plus intéressant d'entre eux est incontestablement le fait de faire boire son interlocuteur discrètement]}{Bien, il est temps de passer à votre formation. [Elle vous parle de nombreux petits atouts possibles dans une négociation. Le plus intéressant d'entre eux est incontestablement le fait de faire boire son interlocuteur discrètement]}{}{}{}{tr11 1}
+{241}{Ce fût très instructif, je vous remercie. Avant de partir, pourriez-vous m'apprendre les commérages du quartier ?}{}{5}{lf0 0}{250}{lf0 1}
+{242}{Ce fût très instructif, je vous remercie. Au revoir...}{}{5}{}{0}{fl 248}
+
+{248}{Bonne journée @pcname@...}{Bonne journée @pcname@...}{}{}{}{}
+
+{250}{Je n'ai rien entendu de particulier récemment. Cependant, je peux toujours vous dire ceci : si vous cherchez un toit pour la nuit, vous ne trouviez rien de mieux que l'Auberge de Natalie à l'entrée de la gare.}{Je n'ai rien entendu de particulier récemment. Cependant, je peux toujours vous dire ceci : si vous cherchez un toit pour la nuit, vous ne trouviez rien de mieux que l'Auberge de Natalie à l'entrée de la gare.}{}{}{}{ru 1034}
+{251}{Je vois. Merci bien et au revoir...}{}{5}{}{0}{}
+
+{260}{@pcname@... Bienvenue à La perle des Enfers. Vous désirez une table ?}{@pcname@... Bienvenue à La perle des Enfers. Vous désirez une table ?}{}{}{}{}
+{261}{En effet, je vais entrer.}{}{5}{}{0}{fl 266}
+{262}{En fait, j'aimerais que vous me parliez des commérages récents.}{}{5}{lf0 0}{270}{lf0 1}
+{263}{Non merci, pas tout de suite.}{}{5}{}{0}{fl 268}
+
+{266}{Vous connaissez le chemin...}{Vous connaissez le chemin...}{}{}{}{}
+
+{268}{Très bien, alors peut-être plus tard...}{Très bien, alors peut-être plus tard...}{}{}{}{}
+
+{270}{Les rumeurs ne sont pas particulièrement intéressantes ces temps-ci. Mais je peux toujours vous apprendre ceci : si vous cherchez un toit pour la nuit, vous ne trouviez rien de mieux que l'Auberge de Natalie à l'entrée de la gare.}{Les rumeurs ne sont pas particulièrement intéressantes ces temps-ci. Mais je peux toujours vous apprendre ceci : si vous cherchez un toit pour la nuit, vous ne trouviez rien de mieux que l'Auberge de Natalie à l'entrée de la gare.}{}{}{}{ru 1034}
+{271}{Bon, je vais entrer manger.}{}{5}{}{0}{}
+{272}{Merci, je vais vous laisser.}{}{5}{}{0}{}
+
+{280}{@pcname@, quelle bonne surprise ! Bienvenue à La perle des Enfers. Vous désirez une table ?}{@pcname@, quelle bonne surprise ! Bienvenue à La perle des Enfers. Vous désirez une table ?}{}{}{}{}
+{281}{En effet, je vais entrer.}{}{5}{}{0}{fl 286}
+{282}{En fait, j'aimerais que vous me parliez des commérages récents.}{}{5}{lf0 0}{2-0}{lf0 1}
+{283}{Non merci, pas pour le moment.}{}{5}{}{0}{fl 288}
+
+{286}{Parfait, vous connaissez le chemin !}{Parfait, vous connaissez le chemin !}{}{}{}{}
+
+{288}{Vous devez être fort occupé. Mais pensez tout de même à venir vous détendre parfois...}{Vous devez être fort occupée. Mais pensez tout de même à venir vous détendre parfois...}{}{}{}{}
+
+{290}{Les rumeurs ne sont pas particulièrement intéressantes ces temps-ci. Mais je peux toujours vous apprendre ceci : si vous cherchez un toit pour la nuit, vous ne trouviez rien de mieux que l'Auberge de Natalie à l'entrée de la gare.}{Les rumeurs ne sont pas particulièrement intéressantes ces temps-ci. Mais je peux toujours vous apprendre ceci : si vous cherchez un toit pour la nuit, vous ne trouviez rien de mieux que l'Auberge de Natalie à l'entrée de la gare.}{}{}{}{ru 1034}
+{291}{Bon, je vais entrer manger.}{}{5}{}{0}{fl 288}
+{292}{Merci, je vais vous laisser.}{}{5}{}{0}{fl 298}
+
+{298}{C'est entendu, bonne journée.}{C'est entendu, bonne journée.}{}{}{}{}

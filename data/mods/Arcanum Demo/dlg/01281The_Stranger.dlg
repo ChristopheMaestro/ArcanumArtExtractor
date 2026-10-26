@@ -1,0 +1,59 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Greetings.  Might I ask who you are, sir?}{}{5}{me 0}{10}{}
+{3}{Hullo, there.  Have you a moment?}{}{5}{me 1}{81}{}
+{5}{Uh...I not too smart.  Who you?}{}{-4}{me 0}{10}{}
+{6}{Hi!  Got questions!}{}{-4}{me 1}{20}{}
+{7}{E:}{}{1}{}{0}{}
+{10}{[The man before you is dressed in dark robes.  He looks furtively, back and forth, then regards with hard, unblinking eyes.]  Better you don't ask questions like that, friend.  Likely to get a bloke like you in a world of trouble.  I mean no offense...it's just the way of things around here...}{[The man before you is dressed in dark robes.  He looks furtively, back and forth, then regards with hard, unblinking eyes.]  Better you don't ask questions like that.  Likely to get a girl like you in a world of trouble.}{}{}{}{}
+{11}{I appreciate the tip, friend.}{}{5}{}{20}{re +5 }
+{12}{Is that a fact?  Perhaps you'd like to illustrate that point...}{}{5}{}{55}{re -5}
+{14}{Uh...okay!}{}{-4}{}{20}{re +5 }
+{15}{You say rude things...maybe I crush your head...}{}{-4}{}{55}{re -5}
+{16}{E:}{}{1}{}{0}{}
+{20}{[The man looks you over, calculating...he seems to come to a decision.]  Are you looking for work, friend?  Are you a man that can keep his mouth shut...make yourself a handful of gold?}{[The man looks you over, calculating...he seems to come to a decision.]  Are you looking for work, friend?  Are you a woman that can keep her mouth shut...make yourself a handful of gold?}{}{}{}{}
+{21}{I'd appreciate the work...I'm new around here...}{}{5}{}{30}{re +5}
+{22}{I don't think so, but thanks for the offer.  Good day...}{}{5}{}{0}{}
+{23}{As if I'd work for a bloody degenerate like yourself...}{}{5}{lf4 0}{55}{re -5, lf4 1}
+{24}{Uh...sure!  I need money!}{}{-4}{}{27}{}
+{25}{E:}{}{-4}{}{0}{}
+{27}{[He comes closer, his features hardening.]  This is no cutpurses jaunt, my friend.  You seem a little slow, but don't think I won't slice your throat if you mess this up.  I've no patience for failure...}{[He comes closer, his features hardening.]  This is no cutpurses jaunt, my friend.  You seem a little slow, but don't think I won't slice your throat if you mess this up.  I've no patience for failure...}{}{}{}{}
+{28}{I unnerstand!  What I need do?}{}{-4}{}{40}{}
+{29}{Uh...I no like this.  Better go...}{}{-4}{}{35}{lf1 1}
+{30}{[He comes closer, his features hardening.]  This is no cutpurses jaunt, my friend.  The job is not difficult, but the price for failure is death.  Do we understand one another?}{[He comes closer, his features hardening.]  This is no cutpurses jaunt, my friend.  The job is not difficult, but the price for failure is death.  Do we understand one another?}{}{}{}{}
+{31}{Clearly...what is it I need to do?}{}{5}{}{40}{}
+{32}{Perhaps I'm not the one for the job...}{}{5}{}{35}{lf1 1}
+{35}{[The man smiles, thinly.]  Perhaps it is for the best, stranger.  This isn't work to be taken lightly.  But, if you change your mind, I'll be around...}{[The man smiles, thinly.]  Perhaps it is for the best, stranger.  This isn't work to be taken lightly.  But, if you change your mind, I'll be around...}{}{}{}{}
+{36}{E:}{}{1}{}{0}{}
+{40}{Here's the word, friend.  In my hand, I have a sealed note.  You're to take it from here directly to the address I tell you.  You are not to look at the note.  We will know if you have, and that would be most unfortunate.  You will be paid 100 gold pieces for your trouble.  No questions asked.}{Here's the word, friend.  In my hand, I have a sealed note.  You're to take it from here directly to the address I tell you.  You are not to look at the note.  We will know if you have, and that would be most unfortunate.  You will be paid 100 gold pieces for your trouble.  No questions asked.}{}{}{}{qu1061 1}
+{41}{I'm your man.}{1}{5}{}{48}{qu1061 2}
+{42}{I'm the woman for the job.}{0}{5}{}{48}{qu1061 2}
+{43}{I'd rather not get mixed up in this.   Good day to you...}{}{5}{}{35}{lf1 1}
+{44}{Okey-dokey.}{}{-4}{}{48}{qu1061 2}
+{45}{Uh...I not gonna do it...}{}{-4}{}{35}{lf1 1}
+{48}{Very well. [He hands you the note.]  As I said, do not open the note.  Deliver it to 36 Low Dervish Row, and collect your money.  I bid you good day.}{Very well. [He hands you the note.]  As I said, do not open the note.  Deliver it to 36 Low Dervish Row, and collect your money.  I bid you good day.}{}{}{}{in -5219}
+{49}{Good day to you.}{}{5}{}{0}{lf2 1}
+{50}{Buh-bye.}{}{-4}{}{0}{lf2 1}
+{55}{[The man squares himself to you.]  You don't know what you're doing, boy.  I recommend you take yourself elsewhere.}{[The man squares himself to you.]  You don't know what you're doing, girl.  I recommend you take yourself elsewhere.}{}{}{}{}
+{56}{I recommend YOU put up your fists, coward!}{}{5}{}{}{co, fl 61}
+{57}{You're obviously not up to the challenge.  Good day to you.}{}{5}{}{0}{lf3 1}
+{58}{Uh...you make no sense.  I leave now.}{}{-4}{}{}{co, fl 61}
+{59}{I know I gonna kill you now!}{}{-4}{}{0}{lf3 1}
+{61}{You've pushed the wrong man, boy.}{You've pushed the wrong man, woman.}{}{}{}{}
+{63}{Ah...the fool with the quick tongue.  Have you learned to control it yet, boy?}{Ah...the fool with the quick tongue.  Have you learned to control it yet, woman?}{}{}{}{}
+{64}{Listen...perhaps we got off on the wrong foot...}{}{5}{}{69}{re +5}
+{65}{No...I came back to finish you off.}{}{5}{}{}{co, fl 61}
+{66}{I sorry 'bout before...mebbe we make friends?}{}{-4}{}{69}{re +5}
+{67}{Uh, no...I just come back to kill you.}{}{-4}{}{}{co, fl 61}
+{69}{I see.  Yes, perhaps we might continue our conversation...}{I see.  Yes, perhaps we might continue our conversation...}{}{}{}{}
+{70}{That would be grand...}{}{5}{}{20}{lf3 0}
+{71}{Yes!}{}{-4}{}{20}{lf3 0}
+{73}{You've returned?  Have you changed your mind about the job?}{You've returned?  Have you changed your mind about the job?}{}{}{}{}
+{74}{I believe so.  Let's go over the details.}{}{5}{}{40}{}
+{76}{Uh...what was job again?}{}{-4}{}{40}{}
+{77}{E:}{}{1}{}{0}{}
+{79}{We've nothing left to say to one another, friend.  As far as you're concerned, you've never met me.}{We've nothing left to say to one another, friend.  As far as you're concerned, you've never met me.}{}{}{}{}
+{81}{Yes?}{Yes?}{}{}{}{}
+{82}{I was thinking perhaps we could continue our conversation...}{}{5}{}{20}{}
+{84}{Uh...mebbe we talk again?}{}{-4}{}{20}{}
+{85}{E:}{}{-4}{}{0}{}
+

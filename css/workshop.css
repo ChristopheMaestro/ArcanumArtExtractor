@@ -16,6 +16,12 @@
 }
 .sec-edit-export:not(:disabled) { border-color: var(--teal); color: var(--teal); }
 .sec-edit-export:disabled { opacity: .45; cursor: default; }
+.sec-export-wrap { position: relative; display: inline-flex; margin-left: auto; }
+.sec-export-wrap .sec-edit-export { margin-left: 0 !important; }
+.sec-export-menu { position: absolute; top: 100%; right: 0; z-index: 60; display: flex; flex-direction: column; gap: 4px; margin-top: 4px; padding: 6px;
+  background: var(--surface-2, #25211a); border: 1px solid var(--border); border-radius: 6px; box-shadow: 0 6px 18px rgba(0,0,0,.5); }
+.sec-export-menu[hidden] { display: none; }
+.sec-export-menu .btn-back { margin: 0; white-space: nowrap; text-align: left; }
 
 /* While editing, the right-hand bar becomes the tile palette. */
 .sec-tile-info.editing > :not(.sec-edit-panel) { display: none !important; }

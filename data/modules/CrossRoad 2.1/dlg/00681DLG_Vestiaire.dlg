@@ -1,0 +1,160 @@
+{1}{Bonjour monsieur, je peux vous aider ?}{Bonjour madame, je peux vous aider ?}{}{}{}{}
+{2}{Oui, je recherche un couteau.}{}{5}{qu1023 2, lf0 0}{30}{lf0 1}
+{3}{Ouais, moi chercher couteau.}{}{-4}{qu1023 2, lf0 0}{30}{lf0 1}
+{4}{J'ai plus de renseignements sur ce couteau.}{}{5}{lf0 1, lf1 0, gf259 1}{40}{}
+{5}{Moi savoir plus sur couteau !}{}{-4}{lf0 1, lf1 0, gf259 1}{40}{}
+{6}{Je suis à la recherche d'une marmite de potage aux champignons.}{}{5}{lf2 0, qu1024 2}{-2}{lf2 1}//Si 1409 -> 50 sinon 70
+{7}{Je suis à la recherche d'une marmite de potage aux champignons.}{}{5}{lf2 0, qu1024 1}{-2}{lf2 1}
+{8}{Quelqu'un a égaré une pipe en ébène, je dois la retrouver.}{}{5}{ru 1050, lf3 0}{110}{lf3 1}
+{9}{Oui, je recherche une bague perdue portant un emblème familial.}{}{5}{qu1026 1, lf4 0}{150}{lf4 1}
+{10}{En effet, je recherche un médaillon orné d'une pierre précieuse en forme de soleil.}{}{5}{qu1035 1, lf5 0}{170}{lf5 1}
+{11}{Non, pas tout de suite.}{}{5}{}{0}{}
+{12}{Nan.}{}{-4}{}{0}{}
+
+{}{}{}{}{}{}{}
+
+{30}{Quel genre de couteau exactement ?}{Quel genre de couteau exactement ?}{}{}{}{}
+{31}{25 centimètres, lame grise, manche en bois brun.}{}{5}{gf259 1}{-4}{lf1 1}//Si 1409 -> 90 sinon 130
+{32}{25 centimètres et a lame grise. Et manche marron !}{}{-4}{gf259 1}{-4}{lf1 1}
+{33}{Ah, en fait il n'est pas à moi, je vais me renseigner.}{}{5}{gf259 0}{0}{fl 38}
+{34}{Ah, moi pas savoir car pas à moi. Vais d'mander.}{}{-4}{gf259 0}{0}{fl 38}
+
+{38}{C'est cela, au revoir... (Quel crétin)}{C'est cela, au revoir... (Quelle crétine)}{}{}{}{}
+
+{40}{Je vous écoute...}{Je vous écoute...}{}{}{}{}
+{41}{Il mesure 25 centimètres, possède une lame grise et un manche en érable brun.}{}{5}{}{-4}{lf1 1}
+{42}{25 centimètres et a lame grise. Et manche marron !}{}{-4}{}{-4}{lf1 1}
+
+{50}{Si l'on avait trouvé un tel objet, il est certain que je m'en serais souvenu... Désolé : pas vue. Vous recherchez encore autre chose ?}{Si l'on avait trouvé un tel objet, il est certain que je m'en serais souvenu... Désolé : pas vue. Vous recherchez encore autre chose ?}{}{}{}{}
+{51}{Oui, un couteau.}{}{5}{qu1023 2, lf0 0}{30}{lf0 1}
+{52}{Ouais, couteau.}{}{-4}{qu1023 2, lf0 0}{30}{lf0 1}
+{53}{Oui, je me suis renseigné sur le couteau dont je vous ai parlé.}{}{5}{lf0 1, lf1 0, gf259 1}{40}{}
+{54}{Ouais, moi savoir choses sur couteau !}{}{-4}{lf0 1, lf1 0, gf259 1}{40}{}
+{55}{Une pipe en ébène égarée.}{}{5}{ru 1050, lf3 0}{110}{lf3 1}
+{56}{Oui, une bague portant l'emblème d'une famille.}{}{5}{qu1026 1, lf4 0}{150}{lf4 1}
+{57}{En effet, un médaillon serti d'une pierre précieuse en forme de soleil.}{}{5}{qu1035 1, lf5 0}{170}{lf5 1}
+{58}{Non, merci.}{}{5}{}{0}{}
+{59}{Pas d'tout.}{}{-4}{}{0}{}
+
+{}{}{}{}{}{}{}
+
+{70}{Si l'on avait trouvé un tel objet, il est certain que je m'en serais souvenu... Désolé : pas vue. [Il réfléchit un instant] Si c'est important, vous pourriez aller voir le passager de la cabine n°5. J'ai entendu que c'était un célèbre détective, il pourra peut-être vous aider... [Il reprend sur son ton monocorde] Vous avez perdu autre chose ?}{Si l'on avait trouvé un tel objet, il est certain que je m'en serais souvenu... Désolé : pas vue. [Il réfléchit un instant] Si c'est important, vous pourriez aller voir le passager de la cabine n°5. J'ai entendu que c'était un célèbre détective, il pourra peut-être vous aider... [Il reprend sur son ton monocorde] Vous avez perdu autre chose ?}{}{}{}{ru 1049}
+{71}{Oui, un couteau.}{}{5}{qu1023 2, lf0 0}{30}{lf0 1}
+{72}{Ouais, couteau.}{}{-4}{qu1023 2, lf0 0}{30}{lf0 1}
+{73}{Oui, je me suis renseigné sur le couteau dont je vous ai parlé.}{}{5}{lf0 1, lf1 0, gf259 1}{40}{}
+{74}{Ouais, moi savoir choses sur couteau !}{}{-4}{lf0 1, lf1 0, gf259 1}{40}{}
+{75}{Une pipe en ébène égarée.}{}{5}{ru 1050, lf3 0}{110}{lf3 1}
+{76}{Oui, une bague portant l'emblème d'une famille.}{}{5}{qu1026 1, lf4 0}{150}{lf4 1}
+{77}{En effet, un médaillon serti d'une pierre précieuse en forme de soleil.}{}{5}{qu1035 1, lf5 0}{170}{lf5 1}
+{78}{Non, merci.}{}{5}{}{0}{}
+{79}{Pas d'tout.}{}{-4}{}{0}{}
+
+{}{}{}{}{}{}{}
+
+{90}{C'est très précis... [Il réfléchit] Non, je n'ai rien de semblable : le seul couteau trouvé que j'ai ici possède un manche en acacia bleuté. Vous cherchiez autre chose ?}{C'est très précis... [Il réfléchit] Non, je n'ai rien de semblable : le seul couteau trouvé que j'ai ici possède un manche en acacia bleuté. Vous cherchiez autre chose ?}{}{}{}{}
+{91}{Oui, une marmite de potage aux champignons qui a disparue.}{}{5}{lf2 0, qu1024 2}{-2}{lf2 1}//Si 1409 -> 50 sinon 70
+{92}{Oui, une marmite de potage aux champignons qui a disparue.}{}{5}{lf2 0, qu1024 1}{-2}{lf2 1}
+{93}{Une pipe en ébène égarée.}{}{5}{ru 1050, lf3 0}{110}{lf3 1}
+{94}{Oui, une bague portant l'emblème d'une famille.}{}{5}{qu1026 1, lf4 0}{150}{lf4 1}
+{95}{En effet, un médaillon serti d'une pierre précieuse en forme de soleil.}{}{5}{qu1035 1, lf5 0}{170}{lf5 1}
+{96}{Non, merci.}{}{5}{}{0}{}
+{97}{Pas d'tout.}{}{-4}{}{0}{}
+
+{}{}{}{}{}{}{}
+
+{110}{En effet, nous avons trouvé cette pipe. [Il la sort d'un petit meuble] La voici ! [Il vous remet la pipe noire de l'intendant] Etiez-vous à la recherche d'un autre objet perdu ?}{En effet, nous avons trouvé cette pipe. [Il la sort d'un petit meuble] La voici ! [Il vous remet la pipe noire de l'intendant] Etiez-vous à la recherche d'un autre objet perdu ?}{}{}{}{in-5855}
+{111}{Oui, un couteau.}{}{5}{qu1023 2, lf0 0}{30}{lf0 1}
+{112}{Ouais, couteau.}{}{-4}{qu1023 2, lf0 0}{30}{lf0 1}
+{113}{Oui, je me suis renseigné sur le couteau dont je vous ai parlé.}{}{5}{lf0 1, lf1 0, gf259 1}{40}{}
+{114}{Ouais, moi savoir choses sur couteau !}{}{-4}{lf0 1, lf1 0, gf259 1}{40}{}
+{115}{Oui, une marmite de potage aux champignons qui a disparue.}{}{5}{lf2 0, qu1024 2}{-2}{lf2 1}//Si 1409 -> 50 sinon 70
+{116}{Oui, une marmite de potage aux champignons qui a disparue.}{}{5}{lf2 0, qu1024 1}{-2}{lf2 1}
+{117}{Oui, une bague portant l'emblème d'une famille.}{}{5}{qu1026 1, lf4 0}{150}{lf4 1}
+{118}{En effet, un médaillon serti d'une pierre précieuse en forme de soleil.}{}{5}{qu1035 1, lf5 0}{170}{lf5 1}
+{119}{Non, merci.}{}{5}{}{0}{}
+{120}{Pas d'tout.}{}{-4}{}{0}{}
+
+{}{}{}{}{}{}{}
+
+{130}{C'est très précis... [Il réfléchit] Non, je n'ai rien de semblable : le seul couteau trouvé que j'ai ici possède un manche en acacia bleuté. [Il réfléchit un instant] Si c'est important, vous pourriez aller voir le passager de la cabine n°5. J'ai entendu que c'était un célèbre détective, il pourra peut-être vous aider... [Il reprend sur son ton monocorde] Vous avez perdu autre chose ?}{C'est très précis... [Il réfléchit] Non, je n'ai rien de semblable : le seul couteau trouvé que j'ai ici possède un manche en acacia bleuté. [Il réfléchit un instant] Si c'est important, vous pourriez aller voir le passager de la cabine n°5. J'ai entendu que c'était un célèbre détective, il pourra peut-être vous aider... [Il reprend sur son ton monocorde] Vous avez perdu autre chose ?}{}{}{}{ru 1049}
+{131}{Oui, une marmite de potage aux champignons qui a disparue.}{}{5}{lf2 0, qu1024 2}{-2}{lf2 1}//Si 1409 -> 50 sinon 70
+{132}{Oui, une marmite de potage aux champignons qui a disparue.}{}{5}{lf2 0, qu1024 1}{-2}{lf2 1}
+{133}{Une pipe en ébène égarée.}{}{5}{ru 1050, lf3 0}{110}{lf3 1}
+{134}{Oui, une bague portant l'emblème d'une famille.}{}{5}{qu1026 1, lf4 0}{150}{lf4 1}
+{135}{En effet, un médaillon serti d'une pierre précieuse en forme de soleil.}{}{5}{qu1035 1, lf5 0}{170}{lf5 1}
+{136}{Non, merci.}{}{5}{}{0}{}
+{137}{Pas d'tout.}{}{-4}{}{0}{}
+
+{}{}{}{}{}{}{}
+
+{150}{Nous n'avons trouvé aucun anneau, bague, alliance ou chevalière. J'en suis navré. Peut-être cherchiez-vous autre chose ?}{Nous n'avons trouvé aucun anneau, bague, alliance ou chevalière. J'en suis navré. Peut-être cherchiez-vous autre chose ?}{}{}{}{}
+{151}{Oui, un couteau.}{}{5}{qu1023 2, lf0 0}{30}{lf0 1}
+{152}{Oui, une marmite de potage aux champignons qui a disparue.}{}{5}{lf2 0, qu1024 2}{-2}{lf2 1}//Si 1409 -> 50 sinon 70
+{153}{Oui, une marmite de potage aux champignons qui a disparue.}{}{5}{lf2 0, qu1024 1}{-2}{lf2 1}
+{154}{Une pipe en ébène égarée.}{}{5}{ru 1050, lf3 0}{110}{lf3 1}
+{155}{En effet, un médaillon serti d'une pierre précieuse en forme de soleil.}{}{5}{qu1035 1, lf5 0}{170}{lf5 1}
+{156}{Non, merci.}{}{5}{}{0}{}
+
+{}{}{}{}{}{}{}
+
+{170}{Hum... [Il réfléchit un instant, ouvre un tiroir devant lui et le referme.] Non, nous ne l'avons pas. Nous avons bien trouvé un collier mais il ne correspond pas le moins du monde à votre description. Je suppose que personne ne l'a encore trouvé mais s'il est dans le train, il n'est pas perdu... Et à part ce médaillon, vous cherchiez autre chose ?}{Hum... [Il réfléchit un instant, ouvre un tiroir devant lui et le referme.] Non, nous ne l'avons pas. Nous avons bien trouvé un collier mais il ne correspond pas le moins du monde à votre description. Je suppose que personne ne l'a encore trouvé mais s'il est dans le train, il n'est pas perdu... Et à part ce médaillon, vous cherchiez autre chose ?}{}{}{}{}
+{171}{Oui, un couteau.}{}{5}{qu1023 2, lf0 0}{30}{lf0 1}
+{172}{Oui, une marmite de potage aux champignons qui a disparue.}{}{5}{lf2 0, qu1024 2}{-2}{lf2 1}//Si 1409 -> 50 sinon 70
+{173}{Oui, une marmite de potage aux champignons qui a disparue.}{}{5}{lf2 0, qu1024 1}{-2}{lf2 1}
+{174}{Une pipe en ébène égarée.}{}{5}{ru 1050, lf3 0}{110}{lf3 1}
+{175}{Oui, une bague portant l'emblème d'une famille.}{}{5}{qu1026 1, lf4 0}{150}{lf4 1}
+{176}{Non, merci.}{}{5}{}{0}{}
+
+{}{}{}{}{}{}{}
+
+
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}
+{}{}{}{}{}{}{}

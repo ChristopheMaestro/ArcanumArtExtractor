@@ -1,0 +1,20 @@
+// WorldMap & TownMap Info
+//
+
+// World Art Size is 2000 x 2000 currently
+
+// World Latitude/Longitude Offsets (Base Values for (0, 0))
+{20}{0, 0}  // Remove this?
+
+// Width & Height Count of WorldMap Tiles  -- These happen to be 250 x 250 Currently
+// WorldMap Tile Art-Idx BaseName, Zoomed version
+// Which maps it is keyed to...this is the map that will allow walking on it, all other
+//   maps that reference it will "fake" where they think they are in the world.
+{50}{8, 8, SmallMapChunks, ZoomedName: Map_Zoomed, MapKeyedTo: 1}
+
+
+// TownMap Info -- Start Numbering at 1 because we might not have any... :P
+// List of all TownMaps (these are passed to the TownMap module to retrieve appropriate info)
+{501}{CrashSite}
+{502}{ShroudedHills}
+{503}{Tarant}

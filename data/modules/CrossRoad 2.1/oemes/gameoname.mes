@@ -1,0 +1,454 @@
+// These are for internal use only, and will not be seen by the player
+// The player will see the descriptions in data\mes\description.mes
+
+// Keep these ranges sync'd with O_Name_Index in OName.h
+
+
+//Miscellaneous ranges from 200 - 399
+
+{200}{Miscellaneous_CR}
+
+// Wall ranges from 500 - 799
+
+{500}{Wall_CR}
+
+// Portal ranges from 1000 - 1199
+
+{1000}{Portal_CR}
+{1001}{Cabine_1001}//PorteNone//fenêtre plafond tunnel//porte électrique gare 2
+{1002}{Agence de placement_1002}//ElectricitéTunnel
+{1003}{Porte Agence_1003}//Porte crypte esprit//Porte cimetière Pfepper
+{1004}{Voyance_1004}//Fenêtre train cassable
+{1005}{Passeurs_1005}//Baggages porte ouverte
+{1006}{Essayage_1006}
+{1007}{218_1007}
+{1008}{Asile 1-1008}//Porte Ext Cabine 4//Portes cimetière//Porte bijouterie//Porte Far-West 1
+{1009}{Asile 2-1009}//PorteSymbolMagie1/Porte employés Soulstones//Porte Far-West 2
+{1010}{Asile 3-1010}//PorteSymbolMagie2/Porte électrique concierge//Porte Far-West 3
+{1011}{Asile 4-1011}//PorteSymbolMagie3/Porte démon//Porte Far-West 4
+{1012}{Asile 5-1012}//PorteSymbolMagie4//Porte Far-West 5
+{1013}{Asile 6-1013}//PorteSymbolMagie5//Porte Far-West 6
+{1014}{Asile 7-1014}//PorteSymbolMagie6
+{1015}{Asile 8-1015}
+{1016}{Asile Directeur-1016}
+{1017}{Porte Jardin_1017}
+{1018}{Porte deux chaînes_1018}
+{1019}{Interrupteur_1019}
+{1020}{Volets mettaliques_1020}
+{1021}{entrée blindée_1021}
+{1022}{Portail_1022}
+{1023}{PorteSerrures_1023}
+{1024}{Portes Latérales_1024}
+{1025}{Autres portes_1025}
+{1026}{Ventilation1_1026}
+{1027}{Alchimiste_1027}
+{1028}{Fenêtre réparée_1028}
+{1029}{Fenêtre posée_1029}
+{1030}{Fenêtre cassée_1030}
+{1031}{Porte à installer_1031}
+{1032}{Porte instalée_1032}
+{1033}{Fenetre train secret_1033}
+{1034}{Balise création pont_1034} /!\ NE PAS REUTILISER
+
+// Container ranges from 1400 - 1599
+
+{1400}{Container_CR}
+{1401}{Coffre chambre_1401}//brouillon perle des enfers//présentoir schématique cabine 6//Caisse explosion//malle cabine 6//Sacs charbon performer//Cadeau 3 Tir na nOg
+{1402}{Containerteleport_1402}//CoffreFortCabine7//Transfer marmite//Malle cabine 8 (teleport)//Cadeau Tir na nOg 4
+{1403}{CoffretDirecteur_1403}//Coffre rouge baggages//Livre Amaranthus
+{1404}{Parchemin_1404}//TransferPotionfroide/Hantise tunnel//Cadeau Tir na nOg 2
+{1405}{Baguette_1405}//TransferPotionCabine1//PrésentoirArmureRéfléchissantSoleil//Transfer ? (gare ?)//
+{1406}{Appareil photo_1406}//TransferBottleVide//Transfer clef noire entrepôt//Transfer Heïdi key//transfer gui
+{1407}{Flèche_1407}//TransferBottleEau//CoffreBoisAncien//Cadeau 1 Tir na nOg
+{1408}{Montre_1408}//TransferBottleEssence//TransferBouclierimmaculé//Coffre candy//Cadeau Tir na nOg 5
+{1409}{Clef_1409}//TransferBottleVide2
+{1410}{Table Vide_1410}/!\Objet à utiliser dessus//TilesBlocksEpreuveInf
+{1411}{Table Pleine_1411}/!\Objet à utiliser dessus
+{1412}{Seau_1412}//TransferFlacon3/Porte-Clefs grotte
+{1413}{Pot de peinture_1413}//Cimeterre Banshee/TransferNappe/Transfer protection naine/Vitrine géant /!\objet à utiliser //Transfer Jerrican plein/vide
+{1414}{Tombeau_1414}//Plante Cabine 1//Caisse gare cadenas//Poteau corde gare
+{1415}{Ouvert au PDB_1415}//Malle Pensior /!\Objet à utiliser dessus
+{1416}{Coffre de sécurité_1416}//Coffre noir entrepot
+{1417}{Crate_1417}
+{1418}{Coffre réserve_1418}
+{1419}{Coffre Jardin_1419}//TransferCobra/TransferVernis
+{1420}{Tonneau Jardin_1420}//TransferFlacon4
+{1421}{Secrétaire_1421}
+{1422}{CroixCarmin Stand_1422}//Cadeau Tir na nOg 6
+{1423}{Armoire Heather 1_1423}
+{1424}{Cabinet ébène_1424}
+{1425}{Transfer_Anneau_1425}//Transfer parfum//Malle verte//Malle soulstones
+{1426}{Transfer_Rubis_1426}//Transfer allumettes//Tas d'objets esprit cendres
+{1427}{CoffreFortCabine1_1427}
+{1428}{Lampes à cristal_1428}/!\Objet à introduire
+{1429}{Lampes à cristal vide_1429}/!\Objet à introduire
+
+// Scenery ranges from 1800 - 1979
+
+{1800}{Scenery_CR}
+{1801}{Trappe_1801}//+Trappe sous statue//Cuve Rubis alchimiste//Cercueil symbol//Présentoir Cabine 6//Sceau derrière none//Portes Noires RDC+fondations//Gui tombe
+{1802}{Plaque_1802}//+Plante Aurore /!\Objet à utiliser dessus//+Rond rouge (rename disappear charisma)
+{1803}{Vase_1803}//+Vase eau cabine 1 /!\Objet à utiliser dessus//Morceaux verre dispensaire train
+{1804}{Flamme_1804}//LightSymbolTechno, tableau déchéance disappear, porte du charisme (vraie+disapper charisme)//Escalier tunnel
+{1805}{Pipes_1805}//Cloche protection /!\Objet à utiliser dessus//Vitrine verre géant, porte du charisme (fond+lampes)
+{1806}{Lights_1806}//Tableau visible, ONparunlockingbluechest, disappear 2 charisme + faux eye candy//Tuyau Mario
+{1807}{Lights 2_1807}//Tableau invisible, nexus science//Scenary décor tuyau//Trappe sous produits chimiques //Composant électrique gare 1
+{1808}{Lights 3_1808}//Serrure tableau /!\Objet à utiliser dessus //Lumière générateur gare //Composant électrique gare 2
+{1809}{Lights 4_1809}//Trappe tableau +statuesymbolmagie 1 +NexusMagie, None 1 //Composant électrique gare 3
+{1810}{Lights 5_1810}//Escalier tableau +statuesymbolmagie 2//Citerne carburant /!\Objet à utiliser dessus (gare seulement) //Composant électrique gare 4
+{1811}{Lights 6_1811}//Light Cabine 1 +statuesymbolmagie 3, None 2 //Composant électrique gare 5
+{1812}{Lights 7_1812}//Plante Cabine 1 /!\ +statuesymbolmagie 4//Cadre liche asile
+{1813}{Lights 8_1813}//Statuette brisée/LightSymbolTechno2 +statuesymbolmagie 5, Secretgears /!\objet à utiliser //Table dissappear esprit
+{1814}{Lights 9_1814}//Feu chaud cabine 1 +statuesymbolmagie 6//Trone secret hut
+{1815}{Lights 10_1815}//Cloche appear, demi-formule appear, tableauVice1//Trappe sous trone secrets
+{1816}{Lights 11_1816}//Statuette Mur, coffrefermébleu, tableauVice2//Portail + lights gare limbes
+{1817}{Lights 12_1817}//Tableau topaz, lightsmagiesud, tapis blanc//App contrôle tunnel
+{1818}{Lights 13_1818}//Tableau2portes /!\objet à utiliser//Pixel dummy carde liche asile//Chaise et lettre marmiton//
+{1819}{Pierre d'Eva_1819} /!\Objet à utiliser dessus //Baril dynamite
+{1820}{Barque_1820}//Tableau Topaz Appear, tableau déchéance appear//Croix carmin gare caisse /!\objet à utiliser
+{1821}{Travaux_1821}//Tiles Cabine Passeur/ bureau cabine 1//Block portes noires fondations//Réserve de carburant Bluestar /!\objet à utiliser dans la gare
+{1822}{Passeurs_1822}//Candelabres éteint train /!\ //Grilles tunnel
+{1823}{PierreSphynx_1823}//Bain de décantation /!\Objet à utiliser dessus
+{1824}{Bol_1824}/!\Objet à utiliser dessus/ Flammes chandeliers train//Chaise disappear marmiton RDC
+{1825}{Eboulis_1825}//Croix carmin baggages /!\Objet à utiliser dessus
+{1826}{Bloqueportail_1826}//Candelabres allumés train /!\//Tiles Soulstones grille//Tiles murs de force limbes (appeler leur script a examine pour savoir lesquels sont supprimées : COUNTER 0 = 1 : Lac Hydrien, 2 : sud/ouest Hydrien, 3 : sud-ouest complet, 4 : nord ouest complet, 5 : nord guichet, 6 : est-nord, 7 : est-est, 8 : ,)
+{1827}{Lampes à éclair_1827}//Marmite cabine 6
+{1828}{Parchemin_1828}//Pot othéryx /!\Objet à utiliser dessus//Tile pont appear Soulstones
+{1829}{Baguette_1829}//Tube cryogénique /!\Objet à utiliser dessus//Pont apparait gare
+{1830}{Appareil photo_1830}//PorteSymbolMagie1
+{1831}{Flèche_1831}//PorteSymbolMagie2//Echelle plafond tunnel//Coffre bleu pale ouvert//Cadenas /!\Objet à utiliser dessus
+{1832}{Montre_1832}//PorteSymbolMagie3//Plaque gare /!\Objet à utiliser dessus
+{1833}{Clef_1833}//PorteSymbolMagie4//Echelle entrepôt
+{1834}{Serrure_Verouillée_1834}//PorteSymbolMagie5//Grille gare
+{1835}{Serrure_Déverouillée_1835}//PorteSymbolMagie6
+{1836}{Statue sainte_1836}//TrouGrotteSoulstones /!\Objet à utiliser dessus
+{1837}{Chaudron_1837} /!\Objet à utiliser dessus / dynamite annexe
+{1838}{Poster2_1838}//Gui/!\Objet à utiliser dessus
+{1839}{SerrureCheckPointNord_1839}//Serrure Grille gare /!\Objet à utiliser dessus (Asile, Soulstones)/Vase gui /!\Objet à utiliser dessus /Scenery Fantome 1
+{1840}{Tapisserie_1840}//Condensateur/résistance /!\Objet à utiliser dessus /Scenery Fantome 2
+{1841}{SerrureCheckPointEst_1841}//Générateur /!\Objet à utiliser dessus /Scenery Fantome 3
+{1842}{EscalierPremier_1842}//
+{1843}{Lampes Bombonne_1843}//Produits chimiques gare
+{1844}{Planches_1844}Cariatides /!\Objet à utiliser dessus
+{1845}{Mur à abbatre_1845}//Burette de chimie /!\Objet à utiliser dessus /Scenery Fantome 4
+{1846}{Incinérateur_1846}
+{1847}{Terre fertile_1847}/!\Objet à utiliser dessus /Scenery Fantome 5
+{1848}{Terre utilisée_1848}/!\Objet à utiliser dessus /Scenery Fantome 6
+{1849}{Terre finie_1849}/!\Objet à utiliser dessus
+{1850}{vase Bouture_1850}
+{1851}{Charnières_1851}
+{1852}{Clou à tableau_1852}/!\Objet à utiliser dessus
+{1853}{Clou à tableau USED_1853}/!\Objet à utiliser dessus
+{1854}{Clous mal enfoncés_1854}/!\Objet à utiliser dessus
+{1855}{Gazinière_1855}
+{1856}{Charette_1856}
+{1857}{Tiles tapis_1857}//Tiles tapis cabine 1
+{1858}{Marque Rouge_1858}/!\Objet à utiliser dessus
+{1859}{TapisseriePerformer_1859}/!\Objet à utiliser dessus
+{1860}{Meuble d'angle_1860}//Serrure bleue /!\Objet à utiliser dessus
+{1861}{Buche_1861}//
+{1862}{Feu_1862}//
+{1863}{Cadre_1863}//
+{1864}{Table en bois_1864}/!\Objet à utiliser dessus
+{1865}{Chandelier1 de table_1865}//Chandelier éteint wagon1-2 /!\Objet à utiliser dessus //Tableaux missions//Pixels cimetière (teleport Reset)
+{1866}{Table réunion_1866}
+{1867}{Chandelier2 de table_1867}
+{1868}{Chandelier de table allumé_1868}
+{1869}{Lampe jaune_1869}
+{1870}{Socle boule de cristal_1870}/!\Objet à utiliser dessus
+{1871}{Bibliothèque+tiles_1871}
+{1872}{Bibliothèque appear_1872}//Bureau appear//Pancarte alchimiste
+{1873}{Tonneaux appear_1873}//Pancarte Performer
+{1874}{Porte appear_1874}
+{1875}{Escalier_1875}
+{1876}{Annihilation côté gare_1876}
+{1877}{Portail vert_1877}
+{1878}{Tile block Gare_1878}
+{1879}{Echelle Secrète_1879}//Objet en question
+{1880}{Boule de cristal Train_1880}//Objet détruit chateau esprit 6 +un autre objet
+{1881}{Croix carmin train_1881}//Objet détruit chateau esprit 1
+{1882}{Croix carmin finie_1882}//Objet détruit chateau esprit 2
+{1883}{Corde croix carmin_1883}//Objet détruit chateau esprit 3
+{1884}{Croix carmin stand_1884}//Objet détruit chateau esprit 4
+{1885}{Candelabre éteint_1885}//Objet détruit chateau esprit 5 +un autre objet
+{1886}{FlammeBraséro/Flamme_performer1_1886}//Autre objet différé en question
+{1887}{FlammeChandelier/Flamme_performer2_1887}//Renomer les objet chateau
+
+// Projectile ranges from 1990 - 1999
+
+{1990}{Projectile_CR}
+
+// Weapon ranges from 2200 - 2399
+
+{2200}{Weapon_CR}
+{2201}{Cimetère de Vélorien_2201}
+{2202}{Shiva_2202}
+{2203}{ChevalierAgentArme_2203}
+{2204}{BourreauMonarchique_2204}
+{2205}{BadinePrestidigitateur_2205}
+{2206}{Etoile hantée_2206}
+{2207}{Baton électrisant_2207}
+{2208}{_2208}
+{2209}{Pistolet transcendant_2209}
+{2210}{Rapière elfique_2210}
+
+// Ammo ranges from 2600 - 2799
+
+{2600}{Ammo_CR}
+
+// Armor ranges from 3000 - 3199
+
+{3000}{Armor_CR}
+{3001}{Cryoflash_3001}
+{3002}{Tenue Inf_3002}//Bague Hangman
+{3003}{Haume_3003}
+{3004}{Dévore-rêve_3004}
+{3005}{Parapluie_3005}
+{3006}{Premier anneau_3006}
+{3007}{Second anneau_3007}
+{3008}{Lorgnon_3008}
+{3009}{Faux anneau_3009}
+{3010}{GantsEpais_3010}
+{3011}{AnneauInnominé_3011}
+{3012}{AnneauCobra_3012}
+{3013}{CollierMeterore_3013}
+{3014}{ProtecteurNain_3014}
+{3015}{NewLorgnon_3015}
+{3016}{Médaillonterne_3016}
+{3017}{Kanon1_3017}//médaillon
+{3018}{Kanon2_3018}
+{3019}{Kanon3_3019}
+{3020}{Kanon4_3020}
+{3021}{Kanon5_3021}
+{3022}{ChevalierArgent1_3022}//casque
+{3023}{ChevalierArgent2_3023}
+{3024}{ChevalierArgent3_3024}
+{3025}{ChevalierArgent4_3025}
+{3026}{ChevalierArgent5_3026}
+{3027}{AmuletteSerpent_3027}
+{3028}{Anneau serpent 1_3028}
+{3029}{Anneau serpent 2_3029}
+{3030}{BraceletCélérité_3030}
+{3031}{Hirdonellecontrevent_3031}
+{3032}{BougieEmpyrée_3032}
+{3033}{ArmureTradiNaine_3033}
+{3034}{BottesPorteMalheur_3034}
+{3035}{BottesEnfantsNuits_3035}
+{3036}{Amour doré (level 1)_3036}
+{3037}{Gants travail vespéral_3037}
+{3038}{Gants déchire âme_3038}
+{3039}{Bouclier irradiant_3039}
+{3040}{Bouclier immaculé_3040}
+{3041}{Paix 1_3041}//Robe
+{3042}{Paix 2_3042}
+{3043}{Paix 3_3043}
+{3044}{Paix 4_3044}
+{3045}{Prestidigitateur 1_3045}//Chapeau
+{3046}{Prestidigitateur 2_3046}
+{3047}{Prestidigitateur 3_3047}
+{3048}{Prestidigitateur 4_3048}
+{3049}{Prestidigitateur 5_3049}
+{3050}{Prestidigitateur 6_3050}
+{3051}{Collier saphir prisme_3051}
+{3052}{Lentille de précision_3052}
+{3053}{Blessure entravée_3053}
+{3054}{Mitaine archer_3054}
+{3055}{Chape illusion_3055}
+
+// Gold ranges from 3400 - 3599
+
+{3400}{Gold_CR}
+
+// Food ranges from 3800 - 3999
+
+{3800}{Food_CR}
+{3801}{Cuir de porc_3801}
+{3802}{Argile_3802}
+{3803}{VinDeMesse_3803}
+{3804}{FleurMélancolie_3804}
+{3805}{Fourrure_3805}
+{3806}{NoyerBleu_3806}
+{3807}{Marmite_3807}
+{3808}{Huile illusoire_3808}
+{3809}{EngrenageAcier_3809}
+{3810}{Mystèremécanique_3810}
+{3811}{Lubrifiant Bluestar_3811}
+{3812}{Vernis Bluestar_3812}
+{3813}{Garde épée_3813}
+{3814}{Armature de cuir bleu_3814}
+{3815}{Prière à l'aube_3815}
+{3816}{Essence fleur ardente_3816}
+{3817}{BlackNecklaceRope_3817}
+{3818}{Chambre de revolver améliorée_3818}
+{3819}{Griffe accusateur_3819}
+{3820}{EMPTY_3820}
+{3821}{Couteau_3821}
+{3822}{NeigesEternelles_3822}
+{3823}{SaphirEternite_3823}
+{3824}{CondensateurHauteCapa_3824}
+{3825}{Lunette chromée_3825}
+
+// Scrolls range from 4200 - 4399
+
+{4200}{Scroll_CR}
+{4201}{EMPTY_4201}
+{4202}{TempusFugit_4202}
+
+// Key ranges from 4600 - 4799
+
+{4600}{Key_CR}
+{4601}{Cale_4601}//TRANSFER ONLY : Clef gare/Clef entrepot gare/Clef Heïdi
+{4602}{Cellule21_4602}
+{4603}{Caisses_4603}
+{4604}{VraieClé_5604}
+{4605}{Clef de la boîte_4605}
+{4606}{Clef du placard_4606}
+{4607}{ClefMalle8_4607}
+{4608}{ClefMalleHangman_4608}
+{4609}{ClefCabineHeïdi_4609}
+
+// Key Ring ranges 5000 - 5199
+
+{5000}{Key Ring_CR}
+
+// Written ranges from 5400 - 5599
+
+{5400}{Written_CR}
+{5401}{Manuel_5401}
+{5402}{Explications_5402}//TRANSFER ONLY : Note Poltergeist
+{5403}{Explications2_5403}
+{5404}{Note robe_5404}
+{5405}{Listing_5405}
+{5406}{Amaranthus_5406}
+{5407}{PhotoLoco_5407}
+{5408}{NoteGui_5408}
+{5409}{Brouillon Lettre_5409}
+{5410}{Livres de Stan_5410}
+{5411}{Carte de membre TirNanOg_5411}
+
+// Generic ranges from 5800 - 5999
+
+{5800}{Generic_CR}
+{5801}{Diament noir_5801}
+{5802}{Boucle_5802}
+{5803}{Réanimateur_5803}//Livre aux sortilèges
+{5804}{Kerghan et Perséphone_5804}
+{5805}{Appareil photo_5805}//Path to the light
+{5806}{Poudre_5806}
+{5807}{Potion sabat_5807}//TransferOnly MatérialisationOlf
+{5808}{CV_5808}
+{5809}{MineraiDeFeu_5809}
+{5810}{FausseClé_5810}//Clef brisée
+{5811}{Poison_5811}//App photo apélioré
+{5812}{Rubis sacré1_5812}//Cercle218
+{5813}{Parchemin_5813}//Transfer Only : allumettes train, engrenage darkestman, cadenas, Jerrican vide
+{5814}{Baguette_5814}//Faucille druidique /!\
+{5815}{Appareil photo_5815}
+{5816}{Flèche_5816}//Ethanol vide (transfer)
+{5817}{Montre_5817}//
+{5818}{Clef_5818}//
+{5819}{Ste Claudia_5819}
+{5820}{Livre1_5820}//Cristal Rouge
+{5821}{Livre2_5821}//Cristal Bleu
+{5822}{Livre3_5822}//Cristal violet
+{5823}{Livre4_5823}//cristal gris
+{5824}{LivreMauvais_5824}
+{5825}{Clef Seau_5825}
+{5826}{CV Marine_5826}
+{5827}{Diamant pur_5827}
+{5828}{Sachet de souffre_5828}
+{5829}{Fiole vide_5829}//
+{5830}{Fiole pleine ok_5830}//
+{5831}{Fiole pleine mauvaise_5831}//
+{5832}{RubisSacré2A_5832}//Alchimiste
+{5833}{Graines_5833}//Transfer/loop for only : potion cabine 1, clef vitrine géant
+{5834}{Engrais_5834}
+{5835}{Bouture_5835}//Transfer/loop for only : élixir cabine 1/Gui//NE PAS DONNER AVANT PERFORMER/ALCHIMISTE
+{5836}{Fenetres_5836}//Transfer/loop for only : Nappe, potion poly
+{5837}{Bricolage_5837}
+{5838}{Pince_5838}
+{5839}{Sacs de charbon_5839}//NE PAS DONNER AVANT LE PERFORMER
+{5840}{Vieille masse_5840}
+{5841}{Aiguille_5841}
+{5842}{Fil_5842}//
+{5843}{Aiguille fil_5843}//
+{5844}{Chandelier de table1_5844}//
+{5845}{RubisSacré2B_5845}//Performer
+{5846}{Chandelier de table2_5846}//
+{5847}{Lessive_5847}//Pied de biche brisé
+{5848}{Pendentif morceau_5848}
+{5849}{Boule de cristal_5849}
+{5850}{RubisSacré3_5850}//Banshee
+{5851}{Lockpicks_5851}
+{5852}{Tabac blast_5852}
+{5853}{Tabac pinky_5853}
+{5854}{Pipe chêne_5854}
+{5855}{Pipe ébène_5855}
+{5856}{Dragon rose plein_5856}
+{5857}{Verre à pied_5857}
+{5858}{Clef Pensior_5858}
+{5859}{BoiteRelais_5859}
+{5860}{BoiteRelaisVide_5860}
+{5861}{Ingrédient_5861}
+{5862}{Carte Coeur_5862}
+{5863}{Carte Carreau_5863}
+{5864}{Carte Pique_5864}
+{5865}{Carte Trèfle_5865}
+{5866}{RubisSacré4_5866}//Train
+{5867}{ArcanesHorloges_5867}
+{5868}{FragmentZenith_5868}
+{5869}{Ambre elfique_5869}
+{5870}{BouteilleVerre_5870}
+{5871}{Oeil de Kraken_5871}
+{5872}{Parfum_5872}
+{5873}{Rosaire_5873}
+
+// PC ranges from 6200 - 6399
+
+{6200}{PC_CR}
+
+// NPC ranges from 8000 - 9999
+
+{8000}{NPC_CR}
+{8001}{Ami imaginaire_8001}
+{8002}{Lueurs_8002}//Pigeon fusil Aristote, voix écu rouge cabine 6, voix cabine 3//Voix contrôle électricité
+{8003}{Capitaine_8003}//Voix lit Banshee, Mélanie cabine 1, Kevin memories//Voix musicographie
+{8004}{Helena_8004}//Aristote (+memories)//Obèse//Voix plomberie 2//Garde portail gare
+{8005}{Standardiste_8005}//automate foreur, esprits d'harmonie morts//Voix plomberie 3
+{8006}{Pigeon éclair_8006}//Mineur nain, pigeon choc
+{8007}{Grand_intendant_8007}//Voix Heather 2//Voix contrôle tunnel
+{8008}{Ames en attente_8008}//Menace rampante//Voix leviers plomberie 1
+{8009}{William Omen_8009}//RIEN D'AUTRE (peut-être compagnon, même temporaire ?)
+{8010}{Infirmières_8010}//Espritcendre1//Resetregret//Ami Stan Utopique dystopie
+{8011}{La pierre du sphynx_8011}//Démon
+{8012}{Araignée 1_8012}//Voix coffre fort cabine 7 + tunnel
+{8013}{Araignée 2_8013}//Voix boitier controle symbols//Voix coffre bois ancien
+{8014}{Araignée 3_8014}//Voix écriteau 1//Voix électrovanne bleue//Test quartiers inf
+{8015}{Araignée 4_8015}//Voix écriteau 2//Voix électrovanne verte//Voix carburant
+{8016}{Araignée 5_8016}//Voix écriteau 3//Voix électrovanne violette//Voix batterie
+{8017}{Araignée 6_8017}//Voix écriteau 4//Voix électrovanne rouge//Voix balles
+{8018}{Araignée 7_8018}//Voix écriteau 5//Voix contrôle tuyaux A à F//Voix flèches
+{8019}{Araignée 8_8019}//Coffre code//Voix acquisition//Démon size 75 crypte
+{8020}{DirecteurSS_8020}//Harry, Banshee (/!\ Ste Violence no drop)//Voix contrôle électrovannes
+{8021}{Esprit de haine_8021}//Voix contrôle bassin, Jason
+{8022}{Lapin_8022}//Voix coffre-fort
+{8023}{Lapin réel_8023}//Controleur
+{8024}{Evantide_8024}//+Evantide egouts
+{8025}{Voltax_8025}//Silver égout + cimetière
+{8026}{Détenus_8026}
+{8027}{PigeonEvantide_8027}
+{8028}{M.Disintegrate_8028}
+{8029}{Alchimiste_8029}//Employée Tin Na nOg
+{8030}{Performer_8030}//Passeur7
+{8031}{Serveuse_8031}//Joaillère
+{8032}{Dernier à la gare_8032}//TackraDLG
+{8033}{Pigeon candelabre_8033}
+{8034}{Voix porte détective_8034}//Homme lit, porte cabine 10, leviers de controle cabine 1
+{8035}{Détective_8035}
+{8036}{Mélanie 2_8036}//Silver mort
+{8037}{TackrasSoins_8037}
+
+// Trap ranges from 10500 - 
+
+{10500}{Trap_CR}
+

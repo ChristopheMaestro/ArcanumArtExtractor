@@ -1,0 +1,158 @@
+{1}{Aucune réponse...}{Aucune réponse...}{}{}{}{gf104 1}
+
+{3}{Entrez !}{Entrez !}{}{}{}{gf104 1}
+
+{100}{Re-bienvenu @pcname@. Vous désirez ?}{Re-bienvenu @pcname@. Vous désirez ?}{}{}{}{}
+{101}{J'aurais des questions à vous poser.}{}{5}{}{120}{}
+{102}{Moi questions à d'mander.}{}{-4}{}{120}{}
+{103}{Heu, rien en fait.}{}{5}{}{0}{}
+{104}{Nan, rien d'tout.}{}{-4}{}{0}{}
+
+{120}{Je les écoute avec attention.}{Je les écoute avec attention.}{}{}{}{}
+{121}{Pourquoi l'accès au sous-sol et celui aux archives m'est-il interdit ?}{}{5}{lf0 0, ru 1025}{650}{lf0 1}
+{122}{J'aimerais pouvoir examiner la cellule n°21.}{}{5}{gf105 1}{660}{gf105 0}
+{123}{Pensez-vous qu'un membre de votre personnel puisse être responsable de tout cela ?}{}{5}{lf1 0}{400}{lf1 1}
+{124}{Pourrais-je inspecter votre bureau ?}{}{5}{lf2 0}{700}{lf2 1}
+{125}{Si je vous le demande, aurais-je accès au sous-sol et aux archives ?}{}{5}{lf3 0, lf0 1}{720}{lf3 1}
+{126}{Vous avez dit que le sous-sol était dangereux ?}{}{5}{lf4 0, lf0 1}{740}{lf4 1}
+{127}{Mais si moi demande, moi pouvoir aller sous-sol et archives ?}{}{-4}{lf3 0, lf0 1}{720}{lf3 1}
+{128}{Vous dit sous-terre dangereux ?}{}{-4}{lf4 0, lf0 1}{740}{lf4 1}
+{129}{En fait, je préfère repasser plus tard.}{}{5}{}{0}{}
+{130}{Pourquoi accès à des lieux pas possible ?}{}{-4}{lf0 0, ru 1025}{650}{lf0 1}
+{131}{Moi pouvoir examiner cellule 21 ?}{}{-4}{gf105 1}{660}{gf105 0}
+{132}{Penser que personnel être cause de tout ?}{}{-4}{lf1 0}{400}{lf1 1}
+{133}{Moi peux inspecter bureau ?}{}{-4}{lf2 0}{700}{lf2 1}
+{134}{En fait, je préfère repasser plus tard.}{}{-4}{}{0}{}
+
+//BUG : Ligne personnel
+{400}{Et bien, techniquement ce n'est pas impossible : le personnel peut circuler librement dans et hors de l'institut mais, pour ma part, je ne pense pas que l'un d'eux soit responsable. Je n'ai pas moi-même connaissance, comme les intendants, des déplacements de chacun mais je pense que cela pourra les innocenter. Et puis, je les connais bien, ils ne sont pas mauvais. De toute façon, qu'y gagneraient-ils ?}{Et bien, techniquement ce n'est pas impossible : le personnel peut circuler librement dans et hors de l'institut mais, pour ma part, je ne pense pas que l'un d'eux soit responsable. Je n'ai pas moi-même connaissance, comme les intendants, des déplacements de chacun mais je pense que cela pourra les innocenter. Et puis, je les connais bien, ils ne sont pas mauvais. De toute façon, qu'y gagneraient-ils ?}{}{}{}{}
+{401}{Là est tout le mystère, cependant quelqu'un doit bien y gagner quelque chose.}{}{5}{}{410}{}
+{402}{Mais il est donc possible que le coupable soit tout près.}{}{5}{}{430}{}
+{403}{Vous avez sûrement raison.}{}{5}{}{450}{}
+{404}{Vous surement raison.}{}{-4}{}{450}{}
+
+{410}{C'est en effet très probable. reste à découvrir quoi.}{C'est en effet très probable. reste à découvrir quoi.}{}{}{}{}
+{411}{Oui, j'aimerais pouvoir examiner la cellule n°21.}{}{5}{gf105 1}{660}{gf105 0}
+{412}{Heu, moi peux inspecter bureau ?}{}{-4}{lf2 0}{700}{lf2 1}
+{413}{Certes. Pourrais-je inspecter votre bureau ?}{}{5}{lf2 0}{700}{lf2 1}
+{414}{Certes. Vous avez dit que le sous-sol était dangereux ?}{}{5}{lf4 0, lf0 1}{740}{lf4 1}
+{415}{Ouaips. Vous dit sous-terre dangereux ?}{}{-4}{lf4 0, lf0 1}{740}{lf4 1}
+{416}{Si je vous le demande, aurais-je accès au sous-sol et aux archives ?}{}{5}{lf3 0, lf0 1}{720}{lf3 1}
+{417}{Mais si moi demande, moi pouvoir aller sous-sol et archives ?}{}{-4}{lf3 0, lf0 1}{720}{lf3 1}
+{418}{En effet. Je reviendrai vous voir si j'en apprends plus.}{}{5}{}{0}{}
+{419}{Moi pouvoir examiner cellule 21 ?}{}{-4}{gf105 1}{660}{gf105 0}
+{420}{M'rci, moi r'venir si savoir plus.}{}{-4}{}{0}{}
+
+{430}{Et oui, il est peut-être même devant vous. [Il rigole légèrement] Il ne vous reste qu'à trouvez mon mobile.}{Et oui, il est peut-être même devant vous. [Il rigole légèrement] Il ne vous reste qu'à trouvez mon mobile.}{}{}{}{}
+{431}{Non ? Vous êtes le coupable ?}{}{5}{}{460}{}
+
+{450}{Oh, ce n'est pas une certitude. Et puis, le coupable, ce pourrait tout aussi être moi.}{Oh, ce n'est pas une certitude. Et puis, le coupable, ce pourrait tout aussi être moi.}{}{}{}{}
+{451}{Non ? Vous êtes le coupable ?}{}{5}{}{460}{}
+{452}{Nan ? Vous l'coupable ?}{}{-4}{}{460}{}
+
+{460}{Heu... non. [Il semble consterné par votre sérieux] C'était juste un peu d'humour. Et puis je n'ai pas de mobile (enfin je ne crois pas).}{Heu... non. [Il semble consterné par votre sérieux] C'était juste un peu d'humour. Et puis je n'ai pas de mobile (enfin je ne crois pas).}{}{}{}{}
+{461}{Ha, j'aimerais pouvoir examiner la cellule n°21.}{}{5}{gf105 1}{660}{gf105 0}
+{462}{Heu, moi peux inspecter bureau ?}{}{-4}{lf2 0}{700}{lf2 1}
+{463}{Hum... Pourrais-je inspecter votre bureau ?}{}{5}{lf2 0}{700}{lf2 1}
+{464}{Hum... Vous avez dit que le sous-sol était dangereux ?}{}{5}{lf4 0, lf0 1}{740}{lf4 1}
+{465}{Ouaips. Vous dit sous-terre dangereux ?}{}{-4}{lf4 0, lf0 1}{740}{lf4 1}
+{466}{Et si je vous le demande, aurais-je accès au sous-sol et aux archives ?}{}{5}{lf3 0, lf0 1}{720}{lf3 1}
+{467}{Et si moi demande, moi pouvoir aller sous-sol et archives ?}{}{-4}{lf3 0, lf0 1}{720}{lf3 1}
+{468}{Bon... Je reviendrai vous voir si j'en apprends plus.}{}{5}{}{0}{}
+{469}{Ah, moi pouvoir examiner cellule 21 ?}{}{-4}{gf105 1}{660}{gf105 0}
+{470}{Ouaips, moi r'venir si savoir plus.}{}{-4}{}{0}{}
+
+{500}{Bien le bonjour @pcname@, je suis Julius Mc Hoseeing, le directeur de cet institut. [Le personnage qui vous fait face a les yeux fermés] Je suis bien content de vous recevoir ici, au sein de mon... établissement. Cette affaire de disparitions est d'une complexité peu commune.}{Bien le bonjour @pcname@, je suis Julius Mc Hoseeing, le directeur de cet institut. [Le personnage qui vous fait face a les yeux fermés] Je suis bien content de vous recevoir ici, au sein de mon... établissement. Cette affaire de disparitions est d'une complexité peu commune.}{}{}{}{}
+{501}{Enchanté.}{1}{5}{}{510}{}
+{502}{Enchantée.}{0}{5}{}{510}{}
+{503}{'chanté.}{1}{-4}{}{510}{}
+{504}{'chantée.}{0}{-4}{}{510}{}
+
+{510}{[Il ouvre enfin les yeux. Ils ont l'air extrêmement chaleureux mais vous ne sauriez dire pourquoi, il y a en eux une petite flamme de haine. En regardant plus attentivement, vous y remarquez aussi de l'admiration ou peut-être du désespoir. Cet amalgame de sentiments provoque en vous une drôle de sensation.] Et bien mon jeune ami, vous vous sentez mal ?}{[Il ouvre enfin les yeux. Ils ont l'air extrêmement chaleureux mais vous ne sauriez dire pourquoi, il y a en eux une petite flamme de haine. En regardant plus attentivement, vous y remarquez aussi de l'admiration ou peut-être du désespoir. Cet amalgame de sentiments provoque en vous une drôle de sensation.] Et bien ma jeune amie, vous vous sentez mal ?}{}{}{}{}
+{511}{Non, je...}{}{5}{}{-9}{}
+{512}{Nan, je...}{}{-4}{}{-9}{}
+
+{600}{Vous êtes revenu à vous ? [Ses yeux sont à nouveaux clos] Vous êtes tombé à terre si soudainement. Vous voulez peut-être vous reposez un petit peu.}{Vous êtes revenu à vous ? [Ses yeux sont à nouveaux clos] Vous êtes tombé à terre si soudainement. Vous voulez peut-être vous reposez un petit peu.}{}{}{}{gf111 1}
+{601}{Non, merci. Je n'ai pas le temps.}{}{5}{}{610}{}
+{602}{Hein ? Heu, non. Non merci.}{}{-4}{}{610}{}
+{603}{Heu ? Nan nan, moi pas l'temps.}{}{-4}{}{610}{}
+
+{610}{Je dois avouer que vous m'avez inquiété. Il est assez rare que des âmes aient un malaise. Enfin, si vous êtes rétabli, c'est le principal. J'imagine que vous avez une foule de questions à me poser pour votre enquête.}{Je dois avouer que vous m'avez inquiété. Il est assez rare que des âmes aient un malaise. Enfin, si vous êtes rétabli, c'est le principal. J'imagine que vous avez une foule de questions à me poser pour votre enquête.}{}{}{}{}
+{611}{Et bien, j'en ai en effet quelques unes.}{}{5}{}{620}{}
+{612}{Oui, mais cela peut attendre. Je repasserai.}{}{5}{}{0}{fl 618}
+{613}{Ouaips, moi en avoir pas mal.}{}{-4}{}{620}{}
+{614}{Pouvoir attendre aut'fois.}{}{-4}{}{0}{fl 618}
+
+{618}{Comme vous préférez, je reste à votre disposition.}{Comme vous préférez, je reste à votre disposition.}{}{}{}{}
+
+{620}{Alors commençons si vous le voulez bien.}{Alors commençons si vous le voulez bien.}{}{}{}{}
+{621}{Pourquoi l'accès au sous-sol et celui aux archives m'est-il interdit ?}{}{5}{lf0 0, ru 1025}{650}{lf0 1}
+{622}{J'aimerais pouvoir examiner la cellule n°21.}{}{5}{gf105 1}{660}{gf105 0}
+{623}{Pensez-vous qu'un membre de votre personnel puisse être responsable de tout cela ?}{}{5}{lf1 0}{400}{lf1 1}
+{624}{Pourrais-je inspecter votre bureau ?}{}{5}{lf2 0}{700}{lf2 1}
+{625}{En fait, je préfère repasser plus tard.}{}{5}{}{0}{}
+{626}{Pourquoi accès à des lieux pas possible ?}{}{-4}{lf0 0, ru 1025}{650}{lf0 1}
+{627}{Moi pouvoir examiner cellule 21 ?}{}{-4}{gf105 1}{660}{gf105 0}
+{628}{Penser que personnel être cause de tout ?}{}{-4}{lf1 0}{400}{lf1 1}
+{629}{Moi peux inspecter bureau ?}{}{-4}{lf2 0}{700}{lf2 1}
+{630}{En fait, je préfère repasser plus tard.}{}{-4}{}{0}{}
+
+{650}{Et bien, pour les archives, il n'y a absolument rien qui pourrait vous aider dans tout ces vieux dossiers. si vraiment vous aviez l'intime conviction qu'il y a quelque chose, je vous en autoriserai l'accès mais pour l'instant, je juge que c'est inutile. De-même, pour l'instant je ne pense pas que le sous-sol puisse vous apporter quelque chose d'intéressant et comme c'est un lieu assez dangereux, je préfère que vous vous en teniez éloigné.}{Et bien, pour les archives, il n'y a absolument rien qui pourrait vous aider dans tout ces vieux dossiers. si vraiment vous aviez l'intime conviction qu'il y a quelque chose, je vous en autoriserai l'accès mais pour l'instant, je juge que c'est inutile. De-même, pour l'instant je ne pense pas que le sous-sol puisse vous apporter quelque chose d'intéressant et comme c'est un lieu assez dangereux, je préfère que vous vous en teniez éloigné.}{}{}{}{}
+{651}{Mais si je vous le demande, pourrais-je y entrer ?}{}{5}{lf3 0}{720}{lf3 1}
+{652}{Le sous-sol est dangereux ?}{}{5}{lf4 0}{740}{lf4 1}
+{653}{Mais si moi demande, moi pouvoir aller ?}{}{-4}{lf3 0}{720}{lf3 1}
+{654}{Sous-terre dangereux ?}{}{-4}{lf4 0}{740}{lf4 1}
+
+{660}{La cellule 21 ? Ah oui, un prisonnier en a disparu n'est-ce pas ? Et bien en voici la clef. [Il sort un énorme trousseau et en détache une clef avant de vous la donner]}{La cellule 21 ? Ah oui, un prisonnier en a disparu n'est-ce pas ? Et bien en voici la clef. [Il sort un énorme trousseau et en détache une clef avant de vous la donner]}{}{}{}{in-4602}
+{661}{Pourquoi l'accès au sous-sol et celui aux archives m'est-il interdit ?}{}{5}{lf0 0, ru 1025}{650}{lf0 1}
+{662}{Pensez-vous qu'un membre de votre personnel puisse être responsable de tout cela ?}{}{5}{lf1 0}{400}{lf1 1}
+{663}{Pourrais-je inspecter votre bureau ?}{}{5}{lf2 0}{700}{lf2 1}
+{664}{Pourquoi accès à des lieux pas possible ?}{}{-4}{lf0 0, ru 1025}{650}{lf0 1}
+{665}{Penser que personnel être cause de tout ?}{}{-4}{lf1 0}{400}{lf1 1}
+{666}{Si je vous le demande, aurais-je accès au sous-sol et aux archives ?}{}{5}{lf3 0, lf0 1}{720}{lf3 1}
+{667}{Vous avez dit que le sous-sol était dangereux ?}{}{5}{lf4 0, lf0 1}{740}{lf4 1}
+{668}{Mais si moi demande, moi pouvoir aller sous-sol et archives ?}{}{-4}{lf3 0, lf0 1}{720}{lf3 1}
+{669}{Vous dit sous-terre dangereux ?}{}{-4}{lf4 0, lf0 1}{740}{lf4 1}
+{670}{Moi peux inspecter bureau ?}{}{-4}{lf2 0}{700}{lf2 1}
+{671}{Je vous remercie, je m'en vais.}{}{5}{}{0}{}
+{672}{Moi remercier et partir.}{}{-4}{}{0}{}
+
+//Trou bug cf. 400
+
+{700}{Et bien je n'ai rien à y redire. Cependant je ne pense pas que vous y trouviez quelque élément compromettant. Attention toutefois à ne pas casser mes jouets.}{Et bien je n'ai rien à y redire. Cependant je ne pense pas que vous y trouviez quelque élément compromettant. Attention toutefois à ne pas casser mes jouets.}{}{}{}{}
+{701}{Pourquoi l'accès au sous-sol et celui aux archives m'est-il interdit ?}{}{5}{lf0 0, ru 1025}{650}{lf0 1}
+{702}{J'aimerais pouvoir examiner la cellule n°21.}{}{5}{gf105 1}{660}{gf105 0}
+{703}{Pensez-vous qu'un membre de votre personnel puisse être responsable de tout cela ?}{}{5}{lf1 0}{400}{lf1 1}
+{704}{Si je vous le demande, aurais-je accès au sous-sol et aux archives ?}{}{5}{lf3 0, lf0 1}{720}{lf3 1}
+{705}{Vous avez dit que le sous-sol était dangereux ?}{}{5}{lf4 0, lf0 1}{740}{lf4 1}
+{706}{Mais si moi demande, moi pouvoir aller sous-sol et archives ?}{}{-4}{lf3 0, lf0 1}{720}{lf3 1}
+{707}{Vous dit sous-terre dangereux ?}{}{-4}{lf4 0, lf0 1}{740}{lf4 1}
+{708}{Merci, je reviendrai vous voir si nécessaire.}{}{5}{}{0}{}
+{709}{Pourquoi accès à des lieux pas possible ?}{}{-4}{lf0 0, ru 1025}{650}{lf0 1}
+{710}{Moi pouvoir examiner cellule 21 ?}{}{-4}{gf105 1}{660}{gf105 0}
+{711}{Penser que personnel être cause de tout ?}{}{-4}{lf1 0}{400}{lf1 1}
+{712}{M'rci, moi r'venir si b'soin.}{}{-4}{}{0}{}
+
+{720}{Et bien, comme je vous l'ai dit, si vous estimez que votre visite y est nécessaire, dites moi pourquoi. Je vous donnerai volontiers l'autorisation si cela peut faire progresser votre enquête mais dans l'immédiat, cela me semble tout simplement inutile.}{Et bien, comme je vous l'ai dit, si vous estimez que votre visite y est nécessaire, dites moi pourquoi. Je vous donnerai volontiers l'autorisation si cela peut faire progresser votre enquête mais dans l'immédiat, cela me semble tout simplement inutile.}{}{}{}{}
+{721}{J'aimerais pouvoir examiner la cellule n°21.}{}{5}{gf105 1}{660}{gf105 0}
+{722}{Pensez-vous qu'un membre de votre personnel puisse être responsable de tout cela ?}{}{5}{lf1 0}{400}{lf1 1}
+{723}{Moi peux inspecter bureau ?}{}{-4}{lf2 0}{700}{lf2 1}
+{724}{Pourrais-je inspecter votre bureau ?}{}{5}{lf2 0}{700}{lf2 1}
+{725}{Vous avez dit que le sous-sol était dangereux ?}{}{5}{lf4 0, lf0 1}{740}{lf4 1}
+{726}{Vous dit sous-terre dangereux ?}{}{-4}{lf4 0, lf0 1}{740}{lf4 1}
+{727}{Merci, je reviendrai vous voir si nécessaire.}{}{5}{}{0}{}
+{728}{Moi pouvoir examiner cellule 21 ?}{}{-4}{gf105 1}{660}{gf105 0}
+{729}{Penser que personnel être cause de tout ?}{}{-4}{lf1 0}{400}{lf1 1}
+{730}{M'rci, moi r'venir si b'soin.}{}{-4}{}{0}{}
+
+{740}{Oui, il se trouve que bon nombre d'esprits y ont trouvé refuge. Et comme notre personnel n'est pas vraiment formé pour le combat... Je crains maintenant qu’ils ne soient trop nombreux alors j'ai fait interdire l'accès à l'ascenseur qui y mène. Si vous avez à un moment besoin d'y aller, préparez-vous bien en vue des combats qui vous y attendront ou vous finirez au dispensaire.}{Oui, il se trouve que bon nombre d'esprits y ont trouvé refuge. Et comme notre personnel n'est pas vraiment formé pour le combat... Je crains maintenant qu’ils ne soient trop nombreux alors j'ai fait interdire l'accès à l'ascenseur qui y mène. Si vous avez à un moment besoin d'y aller, préparez-vous bien en vue des combats qui vous y attendront ou vous finirez au dispensaire.}{}{}{}{}
+{741}{J'aimerais pouvoir examiner la cellule n°21.}{}{5}{gf105 1}{660}{gf105 0}
+{742}{Pensez-vous qu'un membre de votre personnel puisse être responsable de tout cela ?}{}{5}{lf1 0}{400}{lf1 1}
+{743}{Moi peux inspecter bureau ?}{}{-4}{lf2 0}{700}{lf2 1}
+{744}{Pourrais-je inspecter votre bureau ?}{}{5}{lf2 0}{700}{lf2 1}
+{745}{Si je vous le demande, aurais-je accès au sous-sol et aux archives ?}{}{5}{lf3 0, lf0 1}{720}{lf3 1}
+{746}{Mais si moi demande, moi pouvoir aller sous-sol et archives ?}{}{-4}{lf3 0, lf0 1}{720}{lf3 1}
+{747}{Merci, je reviendrai vous voir si nécessaire.}{}{5}{}{0}{}
+{748}{Moi pouvoir examiner cellule 21 ?}{}{-4}{gf105 1}{660}{gf105 0}
+{749}{Penser que personnel être cause de tout ?}{}{-4}{lf1 0}{400}{lf1 1}
+{750}{M'rci, moi r'venir si b'soin.}{}{-4}{}{0}

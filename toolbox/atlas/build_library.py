@@ -101,7 +101,7 @@ def prune_pool():
     """Pool pictures no version's library.js names any more go."""
     used = set()
     base = ao.PROJECT / 'js' / 'atlas' / 'data'                        # (a version's run writes js/atlas/data/<key>/: the base game's file counts too)
-    for js in {OUT_JS, base / 'library.js', *base.glob('*/library.js')}:
+    for js in {OUT_JS, base / 'library.js', *base.glob('*/library.js'), *base.glob('lang/*-library.js')}:       # (a language's font sheet: build_language_overlay.py)
         if not js.is_file():
             continue
         used |= set(re.findall(r'atlas/graphics/library/([a-z]+-[0-9a-f]{8}\.webp)', js.read_text(encoding='utf-8')))
@@ -299,12 +299,15 @@ def main():
         name = interface.get(num, '').strip()
         try:
             fonts[num], strips[num] = font(find(name))
-        except (StopIteration, struct.error, ValueError, IndexError):
+        except (StopIteration, struct.error, ValueError, IndexError, OSError):      # (OSError: no line in interface.mes, or the file is not in a standalone version's art)
             missing.append(num)
     sheet(fonts, strips, 'fonts')                                             # all fonts in one picture, all backgrounds in another
     bgs, pics = {}, {}
     for n in BACKGROUNDS:
-        bgs[n], pics[n] = background(find(interface[n].strip()))
+        try:
+            bgs[n], pics[n] = background(find(interface[n].strip()))
+        except (StopIteration, KeyError, OSError):                            # (a standalone version may lack one: reported, never taken from another game)
+            print(f'  background {n} ({interface.get(n, "no interface.mes line").strip()}): not in this version\'s art/interface, left out')
     sheet(bgs, pics, 'backgrounds')
     docs = documents(texts)
     mes = {str(sub): {str(k): v.replace('\r', '') for k, v in t.items()} for sub, t in texts.items()}

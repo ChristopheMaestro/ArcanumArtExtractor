@@ -1,5 +1,5 @@
 // Helpers for the folder listings every explorer reads. A listing is { subfolders: { name: { folder_name, relative_path } }, files: [names] };
-// js/core/file-index.js builds them from data/file_index_<ext>.json (toolbox/file_index.py).
+// js/core/file-index.js builds them from js/index/files/file_index_<ext>.json (toolbox/file_index.py).
 
 export function joinPath(parent, child) {
   const a = String(parent || '').replace(/^\/+|\/+$/g, '');

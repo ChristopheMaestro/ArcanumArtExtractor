@@ -1,0 +1,320 @@
+{1}{Vous voilà ! Vous êtes prêt à commencer ?}{Vous voilà ! Vous êtes prête à commencer ?}{}{}{}{lf30 1}
+{2}{Oui, allons-y.}{}{5}{}{10}{}
+{3}{Pouvez-vous me redonner tous les éléments concernant cette "tâche" ?}{}{5}{lf0 0}{20}{lf0 1}
+{4}{Attendez, je reviens dans un instant.}{}{5}{}{0}{fl 9}
+
+{9}{Soit...}{Soit...}{}{}{}{}
+
+{10}{[Mélanie pose sa main droite sur son oeil homolatéral comme pour le masquer. Elle écarte légèrement les doigts et révèle une orbite vide. Elle ouvre alors la main gauche, dans la paume de celle-ci se trouve son oeil. Elle le regarde un instant de son unique oeil restant avant de le jeter à vos pieds]}{[Mélanie pose sa main droite sur son oeil homolatéral comme pour le masquer. Elle écarte légèrement les doigts et révèle une orbite vide. Elle ouvre alors la main gauche, dans la paume de celle-ci se trouve son oeil. Elle le regarde un instant de son unique oeil restant avant de le jeter à vos pieds]}{}{}{}{}
+{11}{[Suite]}{}{1}{}{-2}{}
+
+{20}{[Elle soupire] Vous devez vous emparez d'un anneau sans nom dans cette cabine. Son propriétaire s'y repose mais ne peut pas ouvrir les yeux. Il faudra donc éviter le moindre bruit. Vous disposerez pour cela de 5 minutes, c'est le temps qu'il ne reste avant que sa femme ne rentre dans la cabine. Passé ce délai ou s'il y a le moindre problème entre temps, je vous téléporterai en dehors de la cabine. Voilà, c'est tout.}{[Elle soupire] Vous devez vous emparez d'un anneau sans nom dans cette cabine. Son propriétaire s'y repose mais ne peut pas ouvrir les yeux. Il faudra donc éviter le moindre bruit. Vous disposerez pour cela de 5 minutes, c'est le temps qu'il ne reste avant que sa femme ne rentre dans la cabine. Passé ce délai ou s'il y a le moindre problème entre temps, je vous téléporterai en dehors de la cabine. Voilà, c'est tout.}{}{}{}{}
+{21}{Bien, vous pouvez me téléporter.}{}{5}{}{10}{}
+{22}{J'ai compris. Donnez-moi quelques minutes et on commence.}{}{5}{}{0}{fl 29}
+
+{29}{Très bien...}{Très bien...}{}{}{}{}
+
+{30}{Vous êtes de retour. Pouvons-nous commencer ?}{Vous êtes de retour. Pouvons-nous commencer ?}{}{}{}{}
+{31}{Oui.}{}{5}{}{10}{}
+{32}{Attendez, j'aimerais que vous me rappeliez succinctement ma mission}{}{5}{lf0 0}{20}{lf0 1}
+{33}{Encore un instant je vous prie.}{}{5}{}{0}{fl 39}
+
+{39}{Bien...}{Bien...}{}{}{}{}
+
+
+{50}{Tuez donc ces horreurs avant de venir me parler...}{Tuez donc ces horreurs avant de venir me parler...}{}{}{}{}
+
+
+//Quête Echouée
+{100}{J'ai vu que sa femme entrer dans sa cabine alors je vous ai ramené. Dites-moi vite : avez-vous trouvé l'anneau ?}{J'ai vu que sa femme entrer dans sa cabine alors je vous ai ramenée. Dites-moi vite : avez-vous trouvé l'anneau ?}{}{}{}{}
+{101}{Non, je n'en ai pas eu le temps.}{}{5}{}{110}{}
+{102}{Bien évidement, seulement je compte le garder. [Vous mentez]}{}{1}{}{120}{}
+{103}{J'ai échoué...}{}{5}{}{130}{}
+
+{110}{[Elle vous regarde dans les yeux, probablement afin d'y percevoir si vous ne mentez pas] Je vois... Peut-être aurais-je du y aller moi-même. Oui, c'est même évident. [Elle cesse son monologue et s'adresse à vous] Je suis profondément déçue, je pensais pourtant que vous étiez capable de trouver l'anneau. Je pensais... que notre duo serait efficace. Mais il n'en est rien...}{[Elle vous regarde dans les yeux, probablement afin d'y percevoir si vous ne mentez pas] Je vois... Peut-être aurais-je du y aller moi-même. Oui, c'est même évident. [Elle cesse son monologue et s'adresse à vous] Je suis profondément déçue, je pensais pourtant que vous étiez capable de trouver l'anneau. Je pensais... que notre duo serait efficace. Mais il n'en est rien...}{}{}{}{qu1032 6}
+{111}{"Notre duo" ? Vous comptiez multiplier ce genre de "travaux" ?}{}{5}{lf1 0}{140}{lf1 1}
+{112}{Pourquoi ne pourrais-je pas réessayer ?}{}{5}{lf2 0}{150}{lf2 1}
+{113}{En ce cas, il vaut mieux nous séparer.}{}{5}{}{117}{}
+{114}{Maintenant que tout est fini, vous pourriez peut-être me parler des pouvoirs de cet anneau.}{}{5}{lf3 0, gf359 0}{160}{lf3 1}
+
+{117}{Oui, c'est préférable...}{Oui, c'est préférable...}{}{}{}{}
+{118}{[Suite]}{}{1}{}{-10}{}
+
+{120}{[Elle vous regarde dans les yeux mais il n'y a ni colère ni aucun sentiment de ce genre dans ce regard] Je vois... Non content d'avoir échoué, vous me mentez dans l'espoir que je vous considère comme talentueux. Je ne vous conseille cependant pas de me mettre en colère mais bon... De toute façon, vous avez échoué alors je ne vois aucune raison de poursuivre notre conversation, au revoir.}{[Elle vous regarde dans les yeux mais il n'y a ni colère ni aucun sentiment de ce genre dans ce regard] Je vois... Non content d'avoir échoué, vous me mentez dans l'espoir que je vous considère comme talentueux. Je ne vous conseille cependant pas de me mettre en colère mais bon... De toute façon, vous avez échoué alors je ne vois aucune raison de poursuivre notre conversation, au revoir.}{}{}{}{qu1032 6}
+{121}{[Suite]}{}{1}{}{-10}{}
+{122}{C'est cela, au revoir.}{}{5}{}{-10}{}
+{123}{Vous vous méprenez, j'ai réellement trouvé l'anneau.}{}{5}{}{-10}{}
+
+{130}{[Elle vous regarde dans les yeux, probablement afin d'y percevoir si vous ne mentez pas] Vous avez échoué ? Je vois... Peut-être aurais-je du y aller moi-même. Oui, c'était pourtant évident... [Elle cesse son monologue et s'adresse à vous] Je suis profondément déçue, je pensais pourtant que vous étiez capable de trouver l'anneau. Je pensais... que notre duo serait efficace. Mais il n'en est rien...}{[Elle vous regarde dans les yeux, probablement afin d'y percevoir si vous ne mentez pas] Vous avez échoué ? Je vois... Peut-être aurais-je du y aller moi-même. Oui, c'était pourtant évident... [Elle cesse son monologue et s'adresse à vous] Je suis profondément déçue, je pensais pourtant que vous étiez capable de trouver l'anneau. Je pensais... que notre duo serait efficace. Mais il n'en est rien...}{}{}{}{qu1032 6}
+{131}{"Notre duo" ? Vous comptiez multiplier ce genre de "travaux" ?}{}{5}{lf1 0}{140}{lf1 1}
+{132}{Pourquoi ne pourrais-je pas réessayer ?}{}{5}{lf2 0}{150}{lf2 1}
+{133}{En ce cas, il vaut mieux nous séparer.}{}{5}{}{117}{}
+{134}{Maintenant que tout est fini, vous pourriez peut-être me parler des pouvoirs de cet anneau.}{}{5}{lf3 0, gf359 0}{160}{lf3 1}
+
+{140}{Je l'avais envisagé, en effet. Mais parler du passé n'a plus guère d'intérêt n'est-ce pas ? Aussi, si vous n'avez plus de questions, permettez-moi de vous dire au revoir.}{Je l'avais envisagé, en effet. Mais parler du passé n'a plus guère d'intérêt n'est-ce pas ? Aussi, si vous n'avez plus de questions, permettez-moi de vous dire au revoir.}{}{}{}{}
+{141}{Je vous en prie, au revoir...}{}{5}{}{-10}{}
+{142}{Je ne comprends pas pourquoi n'ai-je pas droit à un second essai ?}{}{5}{lf2 0}{150}{lf2 1}
+{143}{En fait, j'aurais quand même voulu savoir, puisque tout est terminé, quels sont les pouvoirs de cet anneau.}{}{5}{lf3 0, gf359 0}{160}{lf3 1}
+
+{150}{Parce que sa femme ne sortira pas de la cabine : je suppose que vous avez déplacé plusieurs objets à l'intérieur, que vous avez pris des affaires ou simplement que vous avez tourné les pages d'un livre. Il suffit d'un détail, d'une action qu'une âme aveugle et affaiblie ne pourrait pas faire pour que tout tombe à l'eau. Ce n'est pas que je refuse de vous donner une seconde chance, c'est que nous n'en aurons pas l'occasion...}{Parce que sa femme ne sortira pas de la cabine : je suppose que vous avez déplacé plusieurs objets à l'intérieur, que vous avez pris des affaires ou simplement que vous avez tourné les pages d'un livre. Il suffit d'un détail, d'une action qu'une âme aveugle et affaiblie ne pourrait pas faire pour que tout tombe à l'eau. Ce n'est pas que je refuse de vous donner une seconde chance, c'est que nous n'en aurons pas l'occasion...}{}{}{}{}
+{151}{Je comprends. Et vous avez parlé de "notre duo" ? Comptiez-vous me réengager plus tard ?}{}{5}{lf1 0}{140}{lf1 1}
+{152}{Bon, je pense qu'il est temps de nous dire au revoir.}{}{5}{}{117}{}
+{153}{Je vois... Mais maintenant que nous ne l'aurons pas, vous pourriez peut-être me dire quels pouvoirs a cet anneau ?}{}{5}{lf3 0, gf359 0}{160}{lf3 1}
+
+{160}{Maintenant encore moins qu'avant. Je ne peux rien vous dire tant que je ne possède pas cet anneau, et même surement après.}{Maintenant encore moins qu'avant. Je ne peux rien vous dire tant que je ne possède pas cet anneau, et même surement après.}{}{}{}{}
+{161}{Hum... Quand vous disiez "notre duo", vous vouliez dire que vous songiez à me donner encore du travail ?}{}{5}{lf1 0}{140}{lf1 1}
+{162}{Mais peut-être puis-je avoir une seconde chance de le récupérer ? Pourquoi ne puis-je pas y retourner ?}{}{5}{lf2 0}{150}{lf2 1}
+{163}{Bon, je crois que nous nous sommes tout dit, il est temps de se séparer.}{}{5}{}{117}{}
+
+
+//Quête réussie
+{500}{J'ai vu que sa femme entrer dans sa cabine alors je vous ai ramené. Mais dites-moi vite : avez-vous trouvé l'anneau ?}{J'ai vu que sa femme entrer dans sa cabine alors je vous ai ramenée. Mais dites-moi vite : avez-vous trouvé l'anneau ?}{}{}{}{}
+{501}{Non, je n'en ai pas eu le temps. [Vous mentez]}{}{5}{}{510}{}
+{502}{Malheureusement, j'ai échoué... [Vous mentez]}{}{5}{}{510}{}
+{503}{En effet, je l'ai. [Vous le lui montrer tout en le tenant fermement]}{}{5}{}{520}{}
+{504}{Le voici. [Vous le lui donnez]}{}{5}{}{530}{in 3011}
+{505}{Bien évidemment. Seulement, j'ai décidé de la garder.}{}{5}{}{540}{}
+
+{510}{[Elle vous regarde dans les yeux mais il n'y a ni colère ni aucun sentiment de ce genre dans ce regard, elle se contente de scruter vos yeux] Vous espérez sérieusement réussir à me duper ? Remettez-moi l'anneau afin que ça ne dégénère.}{[Elle vous regarde dans les yeux mais il n'y a ni colère ni aucun sentiment de ce genre dans ce regard, elle se contente de scruter vos yeux] Vous espérez sérieusement réussir à me duper ? Remettez-moi l'anneau afin que ça ne dégénère.}{}{}{}{}
+{511}{"Avant que ça ne dégénère" ? Votre brutalité est peu commune.}{}{5}{}{550}{}
+{512}{Soit, le voici. [Vous le lui donnez]}{}{5}{}{560}{in 3011}
+{513}{Vous avez raison, je l'ai récupéré. En revanche, je compte le garder pour moi.}{}{5}{}{570}{}
+{514}{Mais je vous assure que j'ai échoué à le récupérer.}{}{5}{}{580}{}
+{515}{Vous êtes perspicace. En revanche, j'exige une récompense contre cet anneau.}{}{5}{}{620}{}
+
+{520}{Je vois, c'est de l'excellent travail. [Elle tend la main droite]}{Je vois, c'est de l'excellent travail. [Elle tend la main droite]}{}{}{}{}
+{521}{[Lui donner l'anneau]}{}{5}{}{590}{in 3011}
+{522}{[Ranger l'anneau dans une poche]}{}{5}{}{600}{}
+{523}{Que m'offrez-vous en échange, il ne fut pas aisé de le récupérer vous savez.}{}{5}{}{610}{}
+
+{530}{[Elle s'en empare et le regarde sous toutes les coutures] Il est magnifique, vous avez fait de l'excellent travail.}{[Elle s'en empare et le regarde sous toutes les coutures] Il est magnifique, vous avez fait de l'excellent travail.}{}{}{}{}
+{531}{[Ne rien dire]}{}{5}{}{630}{}
+{532}{En effet, et vous conviendrez que cela mérite une récompense.}{}{5}{}{640}{}
+{533}{Bon, assez plaisanté. Que m'offrez-vous en échange de l'anneau ?}{}{5}{}{650}{}
+
+{540}{[Elle vous regarde dans les yeux] Vous avez décidé de le garder ? Mais bien sûr... [Elle marque une pause] Allez, il est temps de redevenir sérieux. Remettez-moi l'anneau avant que cela ne dégénère.}{[Elle vous regarde dans les yeux] Vous avez décidé de le garder ? Mais bien sûr... [Elle marque une pause] Allez, il est temps de redevenir sérieux. Remettez-moi l'anneau avant que cela ne dégénère.}{}{}{}{}
+{541}{"Avant que ça ne dégénère" ? Votre brutalité est peu commune.}{}{5}{}{550}{}
+{542}{Soit, le voici. [Vous le lui donnez]}{}{5}{}{560}{in 3011}
+{543}{C'est entendu, cependant j'exige une récompense en échange.}{}{5}{}{620}{}
+
+{550}{Ma "brutalité" ? Mais voyons, je n'ai jamais eu l'intention d'être brutale avec vous. Je compte simplement recouvrer mon bien, avec ou sans votre permission. D'ailleurs, je vous fais le pari que je peux le récupérer sans même vous effleurer.}{Ma "brutalité" ? Mais voyons, je n'ai jamais eu l'intention d'être brutale avec vous. Je compte simplement recouvrer mon bien, avec ou sans votre permission. D'ailleurs, je vous fais le pari que je peux le récupérer sans même vous effleurer.}{}{}{}{}
+{551}{C'est entendu, si vous réussissez l'anneau est à vous.}{}{5}{}{-17}{}//660
+{552}{Ce pari est risqué et sans intérêt, très peu pour moi.}{}{5}{}{670}{}
+{553}{Que gagnerais-je si vous échouez ?}{}{5}{}{680}{}
+
+{560}{[Elle saisit l'anneau et le place dans une poche intérieure de son armure] Bien, c'est très aimable à vous. Sachez que si j'ai encore besoin d'effectuer une tâche délicate, je penserais à vous.}{[Elle saisit l'anneau et le place dans une poche intérieure de son armure] Bien, c'est très aimable à vous. Sachez que si j'ai encore besoin d'effectuer une tâche délicate, je penserais à vous.}{}{}{}{qu1032 2}
+{561}{Merci bien et au plaisir.}{}{5}{}{690}{ru 1160}
+{562}{Un instant, il me semble que cet anneau vaut bien une récompense.}{}{5}{}{700}{}
+{563}{C'est très aimable mais je n'ai guère l'intention de travailler à nouveau pour vous, adieu.}{}{5}{}{710}{ru 1161}
+
+{570}{Vous comptez le garder ? Mais bien sûr... [Elle fronce les yeux] Allez, il est temps de cessez ce petit jeu, donnez-moi l'anneau !}{Vous comptez le garder ? Mais bien sûr... [Elle fronce les yeux] Allez, il est temps de cessez ce petit jeu, donnez-moi l'anneau !}{}{}{}{}
+{}{}{}{}{}{}{}
+{571}{Non !}{}{5}{}{-67}{}//720
+{572}{[Vous le lui donnez]}{}{5}{}{560}{in 3011}
+{573}{J'y consens contre une rémunération adéquate.}{}{5}{}{730}{}
+
+{580}{Cessez de me prendre pour une abrutie je vous prie, c'est très désagréable. [Elle fronce les sourcils] Allez, remettez-moi cet anneau, maintenant !}{Cessez de me prendre pour une abrutie je vous prie, c'est très désagréable. [Elle fronce les sourcils] Allez, remettez-moi cet anneau, maintenant !}{}{}{}{}
+{581}{Non !}{}{5}{}{-67}{}//720
+{582}{[Vous le lui donnez]}{}{5}{}{560}{in 3011}
+{583}{J'y consens contre une rémunération adéquate.}{}{5}{}{730}{}
+
+{590}{[Elle saisit l'anneau et le place dans une poche intérieure de son armure] Bien, m'aider était très aimable à vous. Sachez que si j'ai encore besoin d'effectuer une tâche délicate, je penserais immédiatement à vous.}{[Elle saisit l'anneau et le place dans une poche intérieure de son armure] Bien, m'aider était très aimable à vous. Sachez que si j'ai encore besoin d'effectuer une tâche délicate, je penserais immédiatement à vous.}{}{}{}{qu1032 2}
+{591}{Merci bien et au plaisir.}{}{5}{}{690}{ru 1160}
+{592}{Un instant, il me semble que cet anneau vaut bien une récompense.}{}{5}{}{700}{ru 1160}
+{593}{C'est très aimable mais je n'ai guère l'intention de travailler à nouveau pour vous, adieu.}{}{5}{}{710}{ru 1161}
+
+{600}{[Elle garde la main droite tendue] Cessez vos plaisanteries voulez-vous, je ne suis pas d'humeur à plaisanter.}{[Elle garde la main droite tendue] Cessez vos plaisanteries voulez-vous, je ne suis pas d'humeur à plaisanter.}{}{}{}{}
+{601}{Qui a dit que j'allais vous le donner ? Je le garde.}{}{5}{}{-77}{}//740
+{602}{Je ne plaisante pas : j'exige que vous me remettiez une compensation.}{}{5}{}{750}{}
+{603}{Dommage, je pensais que cette blague vous plairait. [Vous lui donnez l'anneau]}{}{5}{}{590}{in 3011}
+
+{610}{Je ne suis pas du genre à négocier une récompense une fois le travail accomplie mais il est vrai que c'est un point que nous avons négligé. [Elle réfléchit] Un anneau pour un anneau : je vous remets le puissant anneau Cobra.}{Je ne suis pas du genre à négocier une récompense une fois le travail accomplie mais il est vrai que c'est un point que nous avons négligé. [Elle réfléchit] Un anneau pour un anneau : je vous remets le puissant anneau Cobra.}{}{}{}{}
+{611}{Ca me semble raisonnable, procédons à l'échange.}{}{5}{}{-22}{}//760
+{612}{Etrangement, je suis persuadé que votre anneau Cobra ne vaut pas le mien.}{1}{5}{}{770}{}
+{613}{Etrangement, je suis persuadée que votre anneau Cobra ne vaut pas le mien.}{0}{5}{}{770}{}
+{614}{Non, je refuse. Je préfère finalement garder mon anneau.}{}{5}{}{-64}{}//780
+
+{620}{Hum, très bien... Ce n'est pas dans mes habitudes de négocier cela après que le travail soit accompli mais il est vrai qu'il s'agit d'un point que nous avons négligé. [Elle réfléchit] Un anneau pour un anneau : je vous remets le puissant anneau Cobra en échange du votre.}{Hum, très bien... Ce n'est pas dans mes habitudes de négocier cela après que le travail soit accompli mais il est vrai qu'il s'agit d'un point que nous avons négligé. [Elle réfléchit] Un anneau pour un anneau : je vous remets le puissant anneau Cobra en échange du votre.}{}{}{}{}
+{621}{Ca me semble raisonnable, procédons à l'échange.}{}{5}{}{-22}{}//760
+{622}{Etrangement, je suis persuadé que votre anneau Cobra ne vaut pas le mien.}{1}{5}{}{770}{}
+{623}{Etrangement, je suis persuadée que votre anneau Cobra ne vaut pas le mien.}{0}{5}{}{770}{}
+{624}{Non, je refuse. Je reste attaché à mon anneau et préfère le garder.}{1}{5}{}{-64}{}//780
+{625}{Non, je refuse. Je reste attachée à mon anneau et préfère le garder.}{0}{5}{}{-64}{}//780
+
+{630}{Bien, étant tout à fait satisfaite de vos services, je penserais immédiatement à vous si j'ai un autre "travail" délicat.}{}{}{}{}{}
+{631}{Merci bien et au plaisir.}{}{5}{}{690}{ru 1160}
+{632}{Avant de nous quitter, je pense que ce "travail" mérite bien une récompense.}{}{5}{}{700}{ru 1160}
+{633}{C'est très aimable mais je n'ai guère l'intention de travailler à nouveau pour vous, adieu.}{}{5}{}{710}{ru 1161}
+
+{640}{Mais bien naturellement, je vous remets l'anneau Cobra, un bijou magique d'une grande valeur. Et bien entendu, je ferais à nouveau appel à vous si j'ai un "cas" difficile comme celui-ci.}{Mais bien naturellement, je vous remets l'anneau Cobra, un bijou magique d'une grande valeur. Et bien entendu, je ferais à nouveau appel à vous si j'ai un "cas" difficile comme celui-ci.}{}{}{}{}
+{641}{[Vous prenez l'anneau] Parfait, alors au revoir.}{}{5}{}{-28}{ru 1160}//690
+{642}{[Vous prenez l'anneau] C'est gentil de penser à moi mais je préfère ne plus travailler pour vous. Au revoir.}{}{5}{}{-33}{ru 1161}//790
+{643}{Vous me cédez bien facilement cet anneau, vaut-il au moins un dixième de la valeur du mien ?}{}{5}{}{800}{}
+
+{650}{[Elle semble étonnée de votre ton rude] Si vous m'aviez laissé poursuivre, vous le sauriez déjà. Je comptais vous remettre l'anneau Cobra, un ornement magique d'une grande valeur. De plus, je voulais vous dire que je ferais de nouveau appel à vous si j'ai un "cas" difficile comme celui-ci. Cela vous convient-il ?}{[Elle semble étonnée de votre ton rude] Si vous m'aviez laissé poursuivre, vous le sauriez déjà. Je comptais vous remettre l'anneau Cobra, un ornement magique d'une grande valeur. De plus, je voulais vous dire que je ferais de nouveau appel à vous si j'ai un "cas" difficile comme celui-ci. Cela vous convient-il ?}{}{}{}{}
+{651}{[Vous prenez l'anneau] Parfait, excusez mon débordement. Merci et au revoir.}{}{5}{}{-28}{ru 1160}//690
+{652}{[Vous saisissez l'anneau] Bien, c'est entendu. Au revoir.}{}{5}{}{-28}{ru 1160}//690
+{653}{[Vous prenez l'anneau] C'est très aimable de penser à moi mais je préfère ne plus travailler pour vous. Au revoir.}{}{5}{}{-33}{ru 1161}//790
+{654}{Vous me cédez bien facilement cet anneau, vaut-il au moins un dixième de la valeur du mien ?}{}{5}{}{800}{}
+
+{660}{[Elle tend la main gauche et, avec son index droit, trace un cercle fictif dans sa paume. Le cercle invisible se met à briller d'une lueur bleue qui s'intensifie. Cette lumière bleue se matérialise alors et l'anneau apparaît dans sa main.] Et voilà, j'ai gagné. l'anneau est donc à moi !}{[Elle tend la main gauche et, avec son index droit, trace un cercle fictif dans sa paume. Le cercle invisible se met à briller d'une lueur bleue qui s'intensifie. Cette lumière bleue se matérialise alors et l'anneau apparaît dans sa main.] Et voilà, j'ai gagné. l'anneau est donc à moi !}{}{}{}{}
+{661}{Oui, je serais bon joueur : je vous laisse l'anneau.}{}{5}{}{810}{}
+{662}{Mais comment... ?}{}{5}{}{820}{}
+{663}{Vous n'aviez pas le droit de faire de magie !}{}{5}{}{830}{}
+
+{670}{Dois-je comprendre que s'il y avait un intérêt, vous seriez d'accord ? Très bien, alors en ce cas, si je ne réussi pas à prendre l'anneau sans vous toucher d'ici à notre arrivée, je vous donnerais un duo d'anneaux des arcanes. Cela vous convient-il ? [Elle vous montre les deux bagues qu'elle porte à l'index et au majeur droit]}{Dois-je comprendre que s'il y avait un intérêt, vous seriez d'accord ? Très bien, alors en ce cas, si je ne réussi pas à prendre l'anneau sans vous toucher d'ici à notre arrivée, je vous donnerais un duo d'anneaux des arcanes. Cela vous convient-il ? [Elle vous montre les deux bagues qu'elle porte à l'index et au majeur droit]}{}{}{}{}
+{671}{Très bien. Si vous réussissez  mon anneau est à vous. Dans le cas contraire vous me donnerez les vôtres.}{}{5}{}{-17}{}//660
+{672}{Non, vous semblez trop sûre de vous. Je préfère garder mon anneau.}{}{5}{}{-70}{}//840
+
+{680}{Hum... [Elle réfléchit quelques secondes puis vous montre sa main droite. A son index ainsi qu'à son majeur se trouvent deux anneaux violet-argent. Les anneaux reflètent légèrement la lumière ambiante.] Ce sont deux anneaux des arcanes en parfait état, je les mets en gage si je n'arrivais pas à gagner le pari.}{Hum... [Elle réfléchit quelques secondes puis vous montre sa main droite. A son index ainsi qu'à son majeur se trouvent deux anneaux violet-argent. Les anneaux reflètent légèrement la lumière ambiante.] Ce sont deux anneaux des arcanes en parfait état, je les mets en gage si je n'arrivais pas à gagner le pari.}{}{}{}{}
+{681}{Très bien. Si vous réussissez  mon anneau est à vous. Dans le cas contraire vous me donnerez les vôtres.}{}{5}{}{-17}{}//660
+{682}{Non, vous semblez trop sûre de vous. Je préfère garder mon anneau.}{}{5}{}{-70}{}//840
+
+{690}{[Mélanie sourit, passe l'anneau innominé à son doigt et frotte le saphir azur contre ses vêtements, comme pour enlever la poussière inexistante. Elle retire sa main de sa manche et pose son autre main sur l'anneau. Elle commence alors à murmurer des formules en une langue inconnue. Au terme de la formule de quelques secondes, elle s'entoure d'une aura violette.]}{[Mélanie sourit, passe l'anneau innominé à son doigt et frotte le saphir azur contre ses vêtements, comme pour enlever la poussière inexistante. Elle retire sa main de sa manche et pose son autre main sur l'anneau. Elle commence alors à murmurer des formules en une langue inconnue. Au terme de la formule de quelques secondes, elle s'entoure d'une aura violette.]}{}{}{}{}
+{691}{[Regarder]}{}{1}{}{-38}{qu1032 4}
+
+{700}{Mais oui, bien naturellement. [Elle remet la main dans sa poche et en ressort votre anneau ainsi qu'un autre.] Voilà, je vous remets l'anneau Cobra, un bijou magique d'une grande valeur. Je pense qu'il vous conviendra parfaitement.}{Mais oui, bien naturellement. [Elle remet la main dans sa poche et en ressort votre anneau ainsi qu'un autre.] Voilà, je vous remets l'anneau Cobra, un bijou magique d'une grande valeur. Je pense qu'il vous conviendra parfaitement.}{}{}{}{}
+{701}{[Vous prenez l'anneau] Oui, c'est parfait. Au revoir.}{}{5}{}{-28}{ru 1160}
+{702}{[Vous prenez l'anneau] C'est gentil de penser à moi mais je préfère ne plus travailler pour vous. Au revoir.}{}{5}{}{-33}{ru 1161}
+{703}{Vous me cédez bien facilement cet anneau, vaut-il au moins un dixième de la valeur du mien ?}{}{5}{}{800}{}
+
+{710}{[Elle semble un peu étonnée] Alors soit, adieu... Je retourne dans ma cabine si vous changez d'avis... [Mélanie passe l'anneau innominé à son doigt et frotte le saphir azur contre ses vêtements, comme pour enlever la poussière inexistante. Elle retire sa main de sa manche et pose son autre main sur l'anneau. Elle commence alors à murmurer des formules en une langue inconnue. Au terme de la formule de quelques secondes, elle s'entoure d'une aura violette.]}{[Elle semble un peu étonnée] Alors soit, adieu... Je retourne dans ma cabine si vous changez d'avis... [Mélanie passe l'anneau innominé à son doigt et frotte le saphir azur contre ses vêtements, comme pour enlever la poussière inexistante. Elle retire sa main de sa manche et pose son autre main sur l'anneau. Elle commence alors à murmurer des formules en une langue inconnue. Au terme de la formule de quelques secondes, elle s'entoure d'une aura violette.]}{}{}{}{}
+{711}{[Regarder]}{}{1}{}{-38}{qu1032 4}
+
+{720}{Je suis réellement déçue par votre comportement. Puisque c'est ainsi, je n'ai d'autre choix que de vous le voler à mon tour. [Elle tend la main gauche et, avec son index droit, trace un cercle fictif dans sa paume. Le cercle invisible se met à briller d'une lueur bleue qui s'intensifie. Cette lumière bleue se matérialise alors et l'anneau apparaît dans sa main.] Bien, j'ai ce que je voulais.}{Je suis réellement déçue par votre comportement. Puisque c'est ainsi, je n'ai d'autre choix que de vous le voler à mon tour. [Elle tend la main gauche et, avec son index droit, trace un cercle fictif dans sa paume. Le cercle invisible se met à briller d'une lueur bleue qui s'intensifie. Cette lumière bleue se matérialise alors et l'anneau apparaît dans sa main.] Bien, j'ai ce que je voulais.}{}{}{}{}
+{721}{Je suis impressionnée par votre magie, je consens donc à vous laisser l'anneau.}{0}{5}{}{850}{}
+{722}{Je suis impressionné par votre magie, je consens donc à vous laisser l'anneau.}{1}{5}{}{850}{}
+{723}{Rendez-moi mon anneau, sinon je révèle au passager de la cabine 1 qu'il est en votre possession.}{}{8}{}{860}{}
+{724}{Restituez-moi cet anneau immédiatement.}{}{5}{}{870}{}
+{725}{Je ne peux lutter contre votre magie mais j'exige en revanche une compensation pour l'anneau.}{}{5}{}{880}{}
+
+{730}{Hum, c'est entendu... Ce n'est pas dans mes habitudes de négocier cela après que le travail soit accompli mais il est vrai qu'il s'agit d'un point que nous avons négligé. [Elle réfléchit] Un anneau pour un anneau : je vous remets le puissant anneau Cobra en échange du votre.}{Hum, très bien... Ce n'est pas dans mes habitudes de négocier cela après que le travail soit accompli mais il est vrai qu'il s'agit d'un point que nous avons négligé. [Elle réfléchit] Un anneau pour un anneau : je vous remets le puissant anneau Cobra en échange du votre.}{}{}{}{}
+{731}{Ca me semble raisonnable, procédons à l'échange.}{}{5}{}{-22}{}//760
+{732}{Etrangement, je suis persuadé que votre anneau Cobra ne vaut pas le mien.}{1}{5}{}{770}{}
+{733}{Etrangement, je suis persuadée que votre anneau Cobra ne vaut pas le mien.}{0}{5}{}{770}{}
+
+{740}{Ah oui, vraiment ? Comme vous êtes décevant, vous imaginez sérieusement que je n'avais pas prévu l'éventualité de cette réticence ? Bon, puisque c'est comme ça, il ne me reste qu'à vous voler l'anneau à mon tour... [Elle tend la main gauche et, avec son index droit, trace un cercle fictif dans sa paume. Le cercle invisible se met à briller d'une lueur bleue qui s'intensifie. Cette lumière bleue se matérialise alors et l'anneau apparaît dans sa main.] Bien, j'ai ce que je voulais.}{Ah oui, vraiment ? Comme vous êtes décevant, vous imaginez sérieusement que je n'avais pas prévu l'éventualité de cette réticence ? Bon, puisque c'est comme ça, il ne me reste qu'à vous voler l'anneau à mon tour... [Elle tend la main gauche et, avec son index droit, trace un cercle fictif dans sa paume. Le cercle invisible se met à briller d'une lueur bleue qui s'intensifie. Cette lumière bleue se matérialise alors et l'anneau apparaît dans sa main.] Bien, j'ai ce que je voulais.}{}{}{}{}
+{741}{Je suis impressionnée par votre magie, je consens donc à vous laisser l'anneau.}{0}{5}{}{850}{}
+{742}{Je suis impressionné par votre magie, je consens donc à vous laisser l'anneau.}{1}{5}{}{850}{}
+{743}{Rendez-moi mon anneau, sinon je révèle au passager de la cabine 1 qu'il est en votre possession.}{}{8}{}{860}{}
+{744}{Restituez-moi cet anneau immédiatement !}{}{5}{}{870}{}
+{745}{Je ne peux lutter contre votre magie mais j'exige en revanche une compensation pour l'anneau.}{}{5}{}{880}{}
+
+{750}{Une récompense ? Hum, c'est entendu... Ce n'est pas dans mes habitudes de négocier cela après que le travail soit accompli mais il est vrai qu'il s'agit d'un point que nous avons négligé. [Elle réfléchit] Un anneau pour un anneau : je vous remets le puissant anneau Cobra en échange du votre.}{Une récompense ? Hum, c'est entendu... Ce n'est pas dans mes habitudes de négocier cela après que le travail soit accompli mais il est vrai qu'il s'agit d'un point que nous avons négligé. [Elle réfléchit] Un anneau pour un anneau : je vous remets le puissant anneau Cobra en échange du votre.}{}{}{}{}
+{751}{Ca me semble raisonnable, procédons à l'échange.}{}{5}{}{-22}{}//760
+{752}{Etrangement, je suis persuadé que votre anneau Cobra ne vaut pas le mien.}{1}{5}{}{770}{}
+{753}{Etrangement, je suis persuadée que votre anneau Cobra ne vaut pas le mien.}{0}{5}{}{770}{}
+
+{760}{[Elle sort de l'une de ses poches un anneau doré orné d'un serpent et portant deux pierres précieuses vertes en guise d'yeux.] Voici l'anneau Cobra. [Vous lui donnez l'anneau innominé puis, à son tour, elle vous remet cet anneau doré] Bien, je pense qu'ainsi, les deux parties en présence sont satisfaites. Sachez en tout cas que j'ai pris beaucoup de plaisir à travailler avec vous. Si je rencontre à nouveau des difficultés, je penserais à vous.}{[Elle sort de l'une de ses poches un anneau doré orné d'un serpent et portant deux pierres précieuses vertes en guise d'yeux.] Voici l'anneau Cobra. [Vous lui donnez l'anneau innominé puis, à son tour, elle vous remet cet anneau doré] Bien, je pense qu'ainsi, les deux parties en présence sont satisfaites. Sachez en tout cas que j'ai pris beaucoup de plaisir à travailler avec vous. Si je rencontre à nouveau des difficultés, je penserais à vous.}{}{}{}{}
+{761}{Très bien, ça me convient. Au revoir...}{}{5}{}{690}{ru 1160}
+{762}{C'est gentil de penser à moi mais je préfère ne plus travailler pour vous. Au revoir.}{}{5}{}{790}{ru 1161}
+
+{770}{Vous n'êtes pas tout à fait dans le faux. En revanche, pour vous qui n'y connaissez rien en objets magiques, l'anneau Cobra est largement préférable. Je puis vous assurer sans mentir que jamais vous ne pourrez tirer un quelconque pouvoir de l'anneau innominé.}{Vous n'êtes pas tout à fait dans le faux. En revanche, pour vous qui n'y connaissez rien en objets magiques, l'anneau Cobra est largement préférable. Je puis vous assurer sans mentir que jamais vous ne pourrez tirer un quelconque pouvoir de l'anneau innominé.}{}{}{}{}
+{771}{Bien, je suis disposé à vous croire. Nous pouvons procéder à la transaction.}{1}{5}{}{-22}{}//760
+{772}{Bien, je suis disposée à vous croire. Nous pouvons procéder à la transaction.}{0}{5}{}{-22}{}
+{773}{C'est ce que nous verrons, en attendant je garde mon anneau.}{}{5}{}{-64}{}//780
+
+{780}{Hahaha, je crois que vous n'avez pas très bien compris, je compte procéder à cette échange que vous l'acceptiez ou non. [Elle tend la main gauche et, avec son index droit, trace un cercle fictif dans sa paume. Le cercle invisible se met à briller d'une lueur bleue qui s'intensifie. Cette lumière bleue se matérialise alors et l'anneau innominé apparaît dans sa main. Elle le place dans sa poche intérieure et en ressort l'anneau Cobra qu'elle vous tend.]}{Hahaha, je crois que vous n'avez pas très bien compris, je compte procéder à cette échange que vous l'acceptiez ou non. [Elle tend la main gauche et, avec son index droit, trace un cercle fictif dans sa paume. Le cercle invisible se met à briller d'une lueur bleue qui s'intensifie. Cette lumière bleue se matérialise alors et l'anneau innominé apparaît dans sa main. Elle le place dans sa poche intérieure et en ressort l'anneau Cobra qu'elle vous tend.]}{}{}{}{}
+{781}{[Suite]}{}{1}{}{783}{}
+
+{783}{A présent, vous êtes libre de prendre cet anneau ou non, que décidez-vous ?}{A présent, vous êtes libre de prendre cet anneau ou non, que décidez-vous ?}{}{}{}{}
+{784}{Je le prends, bien évidemment.}{}{5}{}{-51}{}//890
+{785}{Voleuse, j'exige que vous me rendiez mon anneau !}{}{5}{}{900}{}
+{786}{Je ne veux pas de votre anneau car je compte bientôt vous subtiliser l'anneau innominé.}{}{5}{}{910}{}
+
+{790}{[Elle semble un peu étonnée de votre réponse] Je serais dans ma cabine si vous changez d'avis... [Mélanie passe l'anneau innominé à son doigt et frotte le saphir azur contre ses vêtements, comme pour enlever la poussière inexistante. Elle retire sa main de sa manche et pose son autre main sur l'anneau. Elle commence alors à murmurer des formules en une langue inconnue. Au terme de la formule de quelques secondes, elle s'entoure d'une aura violette.]}{[Elle semble un peu étonnée de votre réponse] Je serais dans ma cabine si vous changez d'avis... [Mélanie passe l'anneau innominé à son doigt et frotte le saphir azur contre ses vêtements, comme pour enlever la poussière inexistante. Elle retire sa main de sa manche et pose son autre main sur l'anneau. Elle commence alors à murmurer des formules en une langue inconnue. Au terme de la formule de quelques secondes, elle s'entoure d'une aura violette.]}{}{}{}{}
+{791}{[Regarder]}{}{1}{}{-38}{qu1032 4}
+
+{800}{Un dixième, oui. Après, il est vrai qu'il ne vaut pas l'anneau innominé en terme de rareté ou de potentiel. En revanche, pour un néophyte en objets magiques comme vous, il a une valeur bien plus importante. En effet, à votre doigt, le pouvoir de l'anneau sans nom restera à l'état de potentiel alors que celui de l'anneau Cobra devrait pouvoir se développer.}{Un dixième, oui. Après, il est vrai qu'il ne vaut pas l'anneau innominé en terme de rareté ou de potentiel. En revanche, pour un néophyte en objets magiques comme vous, il a une valeur bien plus importante. En effet, à votre doigt, le pouvoir de l'anneau sans nom restera à l'état de potentiel alors que celui de l'anneau Cobra devrait pouvoir se développer.}{}{}{}{}
+{801}{Bien, je vous fais confiance. [Vous prenez l'anneau Cobra]}{}{5}{}{-56}{}//920
+{802}{Vous reconnaissez qu'il a un faible pouvoir, j'exige plus que cet anneau.}{}{5}{}{930}{}
+
+{810}{Merci bien. Sur ce, je vous laisse. [Elle semble se remémorer quelque chose] Oh et, si j'ai encore une tâche délicate à effectuer, je ne manquerais pas de vous demander.}{Merci bien. Sur ce, je vous laisse. [Elle semble se remémorer quelque chose] Oh et, si j'ai encore une tâche délicate à effectuer, je ne manquerais pas de vous demander.}{}{}{}{}
+{811}{Très bien, au revoir...}{}{5}{}{690}{ru 1160}
+{812}{C'est gentil de penser à moi mais je préfère ne plus travailler pour vous. Au revoir.}{}{5}{}{790}{ru 1161}
+{813}{Ne poussez pas mon indulgence à bout, je ne veux plus vous revoir.}{}{5}{}{815}{ru 1162}
+
+{815}{[Elle semble un peu froissée de votre réponse] Bien, alors adieu ! [Mélanie passe l'anneau innominé à son doigt et frotte le saphir azur contre ses vêtements, comme pour enlever la poussière inexistante. Elle retire sa main de sa manche et pose son autre main sur l'anneau. Elle commence alors à murmurer des formules en une langue inconnue. Au terme de la formule de quelques secondes, elle s'entoure d'une aura violette.]}{[Elle semble un peu froissée de votre réponse] Bien, alors adieu ! [Mélanie passe l'anneau innominé à son doigt et frotte le saphir azur contre ses vêtements, comme pour enlever la poussière inexistante. Elle retire sa main de sa manche et pose son autre main sur l'anneau. Elle commence alors à murmurer des formules en une langue inconnue. Au terme de la formule de quelques secondes, elle s'entoure d'une aura violette.]}{}{}{}{gf361 1}
+{816}{[Regarder]}{}{1}{}{-39}{}
+
+{820}{Allons, il n'y a pas de "mais comment" qui tienne : un pari est un pari. Cependant, je suis bonne gagnante et vous laisse le droit de vous venger. Dès que j'arriverais dans ma cabine, je déposerais l'anneau dans le coffre-fort. Vous avez jusqu'à notre arrivée pour me le subtiliser. En revanche, vous n'avez pas le droit d'en parler à Sebastian. Pour m'en assurer, je vais ensorceler l'anneau : il se téléportera dans ma main à l'instant ou Sebastian ouvrira le coffre ou vous donnera la combinaison.}{Allons, il n'y a pas de "mais comment" qui tienne : un pari est un pari. Cependant, je suis bonne gagnante et vous laisse le droit de vous venger. Dès que j'arriverais dans ma cabine, je déposerais l'anneau dans le coffre-fort. Vous avez jusqu'à notre arrivée pour me le subtiliser. En revanche, vous n'avez pas le droit d'en parler à Sebastian. Pour m'en assurer, je vais ensorceler l'anneau : il se téléportera dans ma main à l'instant ou Sebastian ouvrira le coffre ou vous donnera la combinaison.}{}{}{}{ru 1163}
+{821}{[Suite]}{}{1}{}{823}{}
+
+{823}{Et puis, avant de nous séparer, je tiens à vous dire que vous avez fait de l'excellent travail. Si je venais à rencontrer à nouveau des difficultés, je pense vous réengager.}{Et puis, avant de nous séparer, je tiens à vous dire que vous avez fait de l'excellent travail. Si je venais à rencontrer à nouveau des difficultés, je pense vous réengager.}{}{}{}{}
+{824}{[Ne rien dire]}{}{5}{}{690}{ru 1160}
+{825}{Ne me faites pas rire, jamais plus je ne travaillerais pour vous.}{}{5}{}{815}{ru 1162}
+{826}{Non, je préfère ne plus travailler pour vous. Au revoir.}{}{5}{}{790}{ru 1161}
+{827}{Très bien, au revoir...}{}{5}{}{690}{ru 1160}
+
+{830}{Qui a dit ça ? Moi, je n'en ai pas le souvenir en tout cas... Cependant, je suis bonne gagnante et vous laisse le droit de vous venger. Je déposerais l'anneau dans le coffre-fort de ma cabine. Vous avez jusqu'à notre arrivée pour me le subtiliser. Bonne chance... Et puis, avant de nous séparer, je tiens à vous dire que vous avez fait de l'excellent travail. Si je rencontre à nouveau des difficultés, je pense vous réengager.}{Qui a dit ça ? Moi, je n'en ai pas le souvenir en tout cas... Cependant, je suis bonne gagnante et vous laisse le droit de vous venger. Je déposerais l'anneau dans le coffre-fort de ma cabine. Vous avez jusqu'à notre arrivée pour me le subtiliser. Bonne chance... Et puis, avant de nous séparer, je tiens à vous dire que vous avez fait de l'excellent travail. Si je rencontre à nouveau des difficultés, je pense vous réengager.}{}{}{}{ru 1163}
+{831}{[Ne rien dire]}{}{5}{}{690}{ru 1160}
+{832}{Ne me faites pas rire, jamais plus je ne travaillerais pour vous.}{}{5}{}{815}{ru 1162}
+{833}{Non, je préfère ne plus travailler pour vous. Au revoir.}{}{5}{}{790}{ru 1161}
+{834}{Très bien, au revoir...}{}{5}{}{690}{ru 1160}
+
+{840}{Bien, on dirait que vous n'avez pas tout compris. Je compte récupérer mon anneau que vous soyez d'accord ou non ! Aussi, je me passerais de ce pari pour gagner... [Elle tend la main gauche et, avec son index droit, trace un cercle fictif dans sa paume. Le cercle invisible se met à briller d'une lueur bleue qui s'intensifie. Cette lumière bleue se matérialise alors et l'anneau apparaît dans sa main.] Bien, j'ai ce que je voulais.}{Bien, on dirait que vous n'avez pas tout compris. Je compte récupérer mon anneau que vous soyez d'accord ou non ! Aussi, je me passerais de ce pari pour gagner... [Elle tend la main gauche et, avec son index droit, trace un cercle fictif dans sa paume. Le cercle invisible se met à briller d'une lueur bleue qui s'intensifie. Cette lumière bleue se matérialise alors et l'anneau apparaît dans sa main.] Bien, j'ai ce que je voulais.}{}{}{}{}
+{841}{Je suis impressionnée par votre magie, je consens donc à vous laisser l'anneau.}{0}{5}{}{850}{}
+{842}{Je suis impressionné par votre magie, je consens donc à vous laisser l'anneau.}{1}{5}{}{850}{}
+{843}{Rendez-moi mon anneau, sinon je révèle au passager de la cabine 1 qu'il est en votre possession.}{}{8}{}{860}{}
+{844}{Restituez-moi cet anneau immédiatement !}{}{5}{}{870}{}
+{845}{Je ne peux lutter contre votre magie mais j'exige en revanche une compensation pour l'anneau.}{}{5}{}{880}{}
+
+{850}{Bien, on dirait que vous devenez raisonnable. Aussi, je vais vous laisser une chance de reprendre définitivement cet anneau. Dès que je serais de retour dans ma cabine, je déposerai cet anneau dans me coffre-fort et l'y laisserai jusqu'à notre arrivée. Vous avez jusque là pour le récupérer. Néanmoins, vous n'avez pas le droit d'en parler à Sebastian. Pour m'en assurer, je vais ensorceler l'anneau qui se téléportera dans ma main à l'instant ou Sebastian ouvrira le coffre ou vous donnera la combinaison.}{Bien, on dirait que vous devenez raisonnable. Aussi, je vais vous laisser une chance de reprendre définitivement cet anneau. Dès que je serais de retour dans ma cabine, je déposerai cet anneau dans me coffre-fort et l'y laisserai jusqu'à notre arrivée. Vous avez jusque là pour le récupérer. Néanmoins, vous n'avez pas le droit d'en parler à Sebastian. Pour m'en assurer, je vais ensorceler l'anneau qui se téléportera dans ma main à l'instant ou Sebastian ouvrira le coffre ou vous donnera la combinaison.}{}{}{}{ru 1163}
+{851}{[Suite]}{}{1}{}{823}{}
+
+{860}{Oh, que vous êtes mauvais joueur. Mais dans ce cas, il faudra aussi avouer que vous l'avez volé non ? [Elle sourit] Je suis sûre que vous comprenez à quel point la situation a évoluée à mon avantage. Cependant... il convient au vainqueur de laisser une chance de revanche au vaincu. Aussi, je vais dès à présent vous offrir la possibilité de récupérer votre anneau.}{Oh, que vous êtes mauvaise joueuse. Mais dans ce cas, il faudra aussi avouer que vous l'avez volé non ? [Elle sourit] Je suis sûre que vous comprenez à quel point la situation a évoluée à mon avantage. Cependant... il convient au vainqueur de laisser une chance de revanche au vaincu. Aussi, je vais dès à présent vous offrir la possibilité de récupérer votre anneau.}{}{}{}{}
+{861}{[Suite]}{}{1}{}{863}{}
+
+{863}{Voilà en quoi consistera cette chance : dès que je serais de retour dans ma cabine, je déposerai cet anneau dans me coffre-fort et l'y laisserai jusqu'à notre arrivée. Ainsi, vous avez jusqu'au terminus pour tenter de le récupérer. En revanche, vous n'avez pas le droit d'en parler à Sebastian. Pour m'en assurer, je vais ensorceler l'anneau : il se téléportera dans ma main à l'instant ou Sebastian ouvrira le coffre ou vous donnera la combinaison.}{Voilà en quoi consistera cette chance : dès que je serais de retour dans ma cabine, je déposerai cet anneau dans me coffre-fort et l'y laisserai jusqu'à notre arrivée. Ainsi, vous avez jusqu'au terminus pour tenter de le récupérer. En revanche, vous n'avez pas le droit d'en parler à Sebastian. Pour m'en assurer, je vais ensorceler l'anneau : il se téléportera dans ma main à l'instant ou Sebastian ouvrira le coffre ou vous donnera la combinaison.}{}{}{}{ru 1163}
+{864}{[Suite]}{}{1}{}{823}{}
+
+{870}{Sinon quoi ? Dites-moi, que ferez-vous si je ne vous le rends pas ? Je vais vous le dire : vous ne ferez rien car vous ne pourrez rien faire. [Elle s'arrête un instant et semble soudain avoir une idée.] Hum... Cependant, je suis très joueuse, je vais donc réaliser partiellement votre souhait en vous donnant dès à présent la possibilité de récupérer votre anneau.}{Sinon quoi ? Dites-moi, que ferez-vous si je ne vous le rends pas ? Je vais vous le dire : vous ne ferez rien car vous ne pourrez rien faire. [Elle s'arrête un instant et semble soudain avoir une idée.] Hum... Cependant, je suis très joueuse, je vais donc réaliser partiellement votre souhait en vous donnant dès à présent la possibilité de récupérer votre anneau.}{}{}{}{}
+{871}{[Suite]}{}{1}{}{863}{}
+
+{880}{Oh, quelle audace. Je viens de vous dépouiller et vous demander un dédommagement ? Très bien, disons que ce sera votre salaire pour ce travail... En échange de l'anneau innominé, je vous offre le puissant anneau Cobra. [Elle sort de l'une de ses poches un anneau doré qu'elle vous tend. Le bijou est surmonté d'un serpent doré portant deux pierres précieuses vertes en guise d'yeux.] J'ai beaucoup d'estime pour vous, permettez moi donc de faire à nouveau appel à vous si j'ai besoin.}{Oh, quelle audace. Je viens de vous dépouiller et vous demander un dédommagement ? Très bien, disons que ce sera votre salaire pour ce travail... En échange de l'anneau innominé, je vous offre le puissant anneau Cobra. [Elle sort de l'une de ses poches un anneau doré qu'elle vous tend. Le bijou est surmonté d'un serpent doré portant deux pierres précieuses vertes en guise d'yeux.] J'ai beaucoup d'estime pour vous, permettez moi donc de faire à nouveau appel à vous si j'ai besoin.}{}{}{}{}
+{881}{[Vous prenez l'anneau] C'est entendu Au revoir.}{}{5}{}{-28}{ru 1160}//690
+{882}{[Vous prenez l'anneau] Non, je préfère ne plus travailler pour vous. Au revoir.}{}{5}{}{-33}{ru 1161}//790
+{883}{Vous me cédez bien facilement cet anneau, vaut-il au moins un dixième de la valeur du mien ?}{}{5}{}{800}{}
+
+{890}{Bien, je considère donc que nous sommes parvenus à un accord. [Elle vous donne l'anneau] Sachez en tout cas que, malgré ces petites chamailleries, j'ai eu grand plaisir à travailler avec vous et que j'ai beaucoup d'estime pour vous. Si j'ai à nouveau besoin de quelqu'un pour effectuer un travail difficile, je penserais en priorité à vous.}{Bien, je considère donc que nous sommes parvenus à un accord. [Elle vous donne l'anneau] Sachez en tout cas que, malgré ces petites chamailleries, j'ai eu grand plaisir à travailler avec vous et que j'ai beaucoup d'estime pour vous. Si j'ai à nouveau besoin de quelqu'un pour effectuer un travail difficile, je penserais en priorité à vous.}{}{}{}{}
+{891}{[Ne rien dire]}{}{5}{}{690}{ru 1160}
+{892}{Ne me faites pas rire, jamais plus je ne travaillerais pour vous.}{}{5}{}{815}{ru 1162}
+{893}{Non, je préfère ne plus travailler pour vous. Au revoir.}{}{5}{}{790}{ru 1161}
+{894}{Très bien, au revoir...}{}{5}{}{690}{ru 1160}
+
+{900}{Je crois que vous n'avez pas compris : cet anneau est à moi à présent. Vous devriez l'oublier... [Elle s'arrête un instant et semble soudain avoir une idée.] Hum... Cependant, je suis très joueuse, je vais donc accéder partiellement à votre demande en vous donnant dès à présent la possibilité de récupérer votre anneau. Je pense que ce sera à la fois divertissant et que cela vous aidera à y renoncer si vous échouer.}{Je crois que vous n'avez pas compris : cet anneau est à moi à présent. Vous devriez l'oublier... [Elle s'arrête un instant et semble soudain avoir une idée.] Hum... Cependant, je suis très joueuse, je vais donc accéder partiellement à votre demande en vous donnant dès à présent la possibilité de récupérer votre anneau. Je pense que ce sera à la fois divertissant et que cela vous aidera à y renoncer si vous échouer.}{}{}{}{}
+{901}{[Suite]}{}{1}{}{863}{}
+
+{910}{Vous en pensez-vous capable ? Alors soit, je vais même vous y aider : dès que je serais de retour dans ma cabine, je déposerai cet anneau dans me coffre-fort et l'y laisserai jusqu'à notre arrivée. Ainsi, vous avez jusqu'au terminus pour tenter de le récupérer. En revanche, vous n'avez pas le droit d'en parler à Sebastian. Pour m'en assurer, je vais ensorceler l'anneau : il se téléportera dans ma main à l'instant ou Sebastian ouvrira le coffre ou vous donnera la combinaison.}{Vous en pensez-vous capable ? Alors soit, je vais même vous y aider : dès que je serais de retour dans ma cabine, je déposerai cet anneau dans me coffre-fort et l'y laisserai jusqu'à notre arrivée. Ainsi, vous avez jusqu'au terminus pour tenter de le récupérer. En revanche, vous n'avez pas le droit d'en parler à Sebastian. Pour m'en assurer, je vais ensorceler l'anneau : il se téléportera dans ma main à l'instant ou Sebastian ouvrira le coffre ou vous donnera la combinaison.}{}{}{}{ru 1163}
+{911}{[Suite]}{}{1}{}{913}{}
+
+{913}{Ce sera un challenge intéressant et divertissant à la fois... Oh et, une dernière chose avant de nous séparer. Je tiens à vous dire que vous avez fait de l'excellent travail. Si je venais à rencontrer à nouveau des difficultés, je pense que je ferais à nouveau appel à vos services.}{Ce sera un challenge intéressant et divertissant à la fois... Oh et, une dernière chose avant de nous séparer. Je tiens à vous dire que vous avez fait de l'excellent travail. Si je venais à rencontrer à nouveau des difficultés, je pense que je ferais à nouveau appel à vos services.}{}{}{}{}
+{914}{[Ne rien dire]}{}{5}{}{690}{ru 1160}
+{915}{Ne me faites pas rire, je reprendrai l'anneau mais jamais plus je ne travaillerais pour vous.}{}{5}{}{815}{ru 1162}
+{916}{Non, je préfère ne plus travailler pour vous. Au revoir et préparez vous à perdre l'anneau.}{}{5}{}{790}{ru 1161}
+{917}{Très bien, au revoir. Et n'oubliez pas, l'anneau sera à moi...}{}{5}{}{690}{ru 1160}
+
+{920}{Très bien, vous ne le regretterez pas. Et donc, à une prochaine fois...}{Très bien, vous ne le regretterez pas. Et donc, à une prochaine fois...}{}{}{}{}
+{921}{[Vous hochez la tête.]}{}{5}{}{690}{ru 1160}
+{922}{Bien entendu, au revoir.}{}{5}{}{690}{ru 1160}
+{923}{C'est très aimable à vous mais je ne souhaite pas travailler de nouveau pour vous.}{}{5}{}{790}{ru 1161}
+
+{930}{Je crois que vous n'avez pas compris. Ce n'est pas une négociation que je mène, je vous offre cet anneau. Que vous le preniez ou non, moi je possède déjà le bijou innominé. Maintenant, décidez-vous si vous le prenez ou non.}{Je crois que vous n'avez pas compris. Ce n'est pas une négociation que je mène, je vous offre cet anneau. Que vous le preniez ou non, moi je possède déjà le bijou innominé. Maintenant, décidez-vous si vous le prenez ou non.}{}{}{}{}
+{931}{Je le prends, bien évidemment.}{}{5}{}{-51}{}//890
+{932}{Non, je ne veux pas d'une récompense aussi minable !}{}{5}{}{940}{}
+{933}{Je ne veux pas de votre anneau car je compte bientôt vous subtiliser l'anneau innominé.}{}{5}{}{910}{}
+
+{940}{Très bien, alors vous n'aurez rien... J'imagine que cela vous convient ? [Elle est manifestement indifférente à votre réaction et ne vous regarde même pas dans les yeux] A présent, je dois partir. Juste avant, je me dois de vous poser une question dont je pense connaître la réponse. Si jamais je rencontre un "cas" difficile et que je pense que vous serez à la hauteur, dois-je venir vous demander de travailler pour moi ?}{Très bien, alors vous n'aurez rien... J'imagine que cela vous convient ? [Elle est manifestement indifférente à votre réaction et ne vous regarde même pas dans les yeux] A présent, je dois partir. Juste avant, je me dois de vous poser une question dont je pense connaître la réponse. Si jamais je rencontre un "cas" difficile et que je pense que vous serez à la hauteur, dois-je venir vous demander de travailler pour moi ?}{}{}{}{}
+{941}{Tout dépendra de l'offre mais je serais prêt à la considérer.}{1}{5}{}{950}{ru 1160}
+{942}{Tout dépendra de l'offre mais je serais prête à la considérer.}{0}{5}{}{950}{ru 1160}
+{943}{Oui, je vous aiderais.}{}{5}{}{960}{ru 1160}
+{944}{Comme vous l'avez dit, une réponse négative est l'évidence même.}{}{5}{}{970}{ru 1162}
+
+{950}{Bien, alors je viendrai probablement vous trouver prochainement. [Mélanie sort de sa poche l'anneau innominé et le  passe à son doigt. Elle frotte le saphir azur contre ses vêtements, comme pour enlever la poussière inexistante. Elle retire ensuite sa main portant l'anneau de sa manche et pose son autre main sur l'anneau. Elle commence alors à murmurer des formules en une langue inconnue. Au terme de la formule de quelques secondes, elle s'entoure d'une aura violette.]}{Bien, alors je viendrai probablement vous trouver prochainement. [Mélanie sort de sa poche l'anneau innominé et le  passe à son doigt. Elle frotte le saphir azur contre ses vêtements, comme pour enlever la poussière inexistante. Elle retire ensuite sa main portant l'anneau de sa manche et pose son autre main sur l'anneau. Elle commence alors à murmurer des formules en une langue inconnue. Au terme de la formule de quelques secondes, elle s'entoure d'une aura violette.]}{}{}{}{}
+{951}{[Regarder]}{}{1}{}{-38}{qu1032 4}
+
+{960}{Parfait, alors je viendrai vous trouver prochainement. [Mélanie sort de sa poche l'anneau innominé et le  passe à son doigt. Elle frotte le saphir azur contre ses vêtements, comme pour enlever la poussière inexistante. Elle retire ensuite sa main portant l'anneau de sa manche et pose son autre main sur l'anneau. Elle commence alors à murmurer des formules en une langue inconnue. Au terme de la formule de quelques secondes, elle s'entoure d'une aura violette.]}{Parfait, alors je viendrai vous trouver prochainement. [Mélanie sort de sa poche l'anneau innominé et le  passe à son doigt. Elle frotte le saphir azur contre ses vêtements, comme pour enlever la poussière inexistante. Elle retire ensuite sa main portant l'anneau de sa manche et pose son autre main sur l'anneau. Elle commence alors à murmurer des formules en une langue inconnue. Au terme de la formule de quelques secondes, elle s'entoure d'une aura violette.]}{}{}{}{}
+{961}{[Regarder]}{}{1}{}{-38}{qu1032 4}
+
+{970}{Bien, alors je vous dis au revoir. [Mélanie sort de sa poche l'anneau innominé et le  passe à son doigt. Elle frotte le saphir azur contre ses vêtements, comme pour enlever la poussière inexistante. Elle retire ensuite sa main portant l'anneau de sa manche et pose son autre main sur l'anneau. Elle commence alors à murmurer des formules en une langue inconnue. Au terme de la formule de quelques secondes, elle s'entoure d'une aura violette.]}{Bien, alors je vous dis au revoir. [Mélanie sort de sa poche l'anneau innominé et le  passe à son doigt. Elle frotte le saphir azur contre ses vêtements, comme pour enlever la poussière inexistante. Elle retire ensuite sa main portant l'anneau de sa manche et pose son autre main sur l'anneau. Elle commence alors à murmurer des formules en une langue inconnue. Au terme de la formule de quelques secondes, elle s'entoure d'une aura violette.]}{}{}{}{gf361 1}
+{971}{[Regarder]}{}{1}{}{-39}{}

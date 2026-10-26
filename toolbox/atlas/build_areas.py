@@ -85,7 +85,7 @@ WORLD_MIN = 10000                 # CE also lists areas of its own maps (Hell Da
 NAME_FIX = {'Stringy Petes Cove': "Stringy Pete's Cove"}      # a typo of the base game, which CE Restored corrects: one name for both
 CE_SETTLEMENTS = {'Brandybuck', 'Cotswold', 'Leahbo', 'Marsyona', 'Lynchbany', 'Plainwicke Plantation', 'Vaselan'}      # CE's areas that are settlements
 CE_NOT_LISTED = {'Tol Guldur', 'Treasure Island'}           # maps of their own (modules): no place in the list, no name on the world map
-LINE = re.compile(r'\{(\d+)\}\{\s*(-?\d+)\s*,\s*(-?\d+)\s*,\s*-?\d+\s*,\s*-?\d+\s*/(.*)\}')
+LINE = re.compile(r'\{(\d+)\}\{\s*(-?\d+)\s*,\s*(-?\d+)\s*(?:,\s*-?\d+\s*,\s*-?\d+\s*)?/(.*)\}')      # (the 2000 beta's lines have only the tile: {1}{90224,84174 /Shrouded Hills /...})
 nk = lambda s: re.sub(r'[^a-z0-9]', '', s.lower())
 
 
@@ -221,6 +221,101 @@ def main():
     build_ru(places)
     build_tin(areas, places)
     build_rb(areas, places)
+    build_tr(areas, places)
+    build_dem(areas, places)
+    build_bpd()
+    build_v064(places)
+
+
+def build_v064(places):
+    """js/atlas/data/v064-areas.js (window.ArcanumV064Areas) for Arcanum 1.0.6.4, a standalone version: its own gamearea.mes and its own world folder, nothing of the
+    base game's files. The base game's list of places is read only to tell which areas are towns (the same game: the same names)."""
+    mod = ROOT / 'data' / 'mods' / 'Arcanum 1.0.6.4'
+    areas = list(read_lines(mod / 'mes' / 'gamearea.mes').values())
+    link(areas, places)
+    for a in areas:
+        a['ce'] = True
+        a['place'] = None                                                           # (the version has no places of its own: the side list is the areas, as for the Demo)
+    secret = read_secret(mod / 'maps' / 'Arcanum1-024-fixed')
+    note = ('Same shape as areas.js, for Arcanum 1.0.6.4, which is not laid over the base game: areas = the lines of its own gamearea.mes; '
+            'secret = the "Secret Area - " folders of its own world')
+    write_js(DATA_JS / 'v064-areas.js', 'ArcanumV064Areas', note, areas=areas, secret=secret)
+    print(f'Arcanum 1.0.6.4: {len(areas)} areas, {len(secret)} secret areas')
+
+
+BPD_NAMED = {(64032, 64000): ('Center of Arcanum', None), (90848, 70304): ('Torin Quarry', 'Quest locations'), (55776, 76128): ('Vooriden', 'settlement'),
+             (43680, 85728): ("Stringy Pete's Cove", 'Quest locations'), (51680, 85728): ("Stringy Pete's Treasure", 'Quest locations')}      # tile of the group -> (name, side list group; None: stays a secret area)
+
+
+def build_bpd():
+    """js/atlas/data/bpd-areas.js (window.ArcanumBPDAreas) for the Arcanum Beta/Press Demo (2000), a standalone version: its own mes/area.mes (it has no gamearea.mes)
+    and its own world folder, nothing of the base game's. Shrouded Hills is its settlement, Crash Site a quest location."""
+    mod = ROOT / 'data' / 'mods' / 'Arcanum Beta Press Demo'
+    areas = [a for _, a in sorted(read_lines(mod / 'mes' / 'area.mes').items()) if a['name'] and on_map(a)]
+    link(areas, [])
+    number_same_names(areas)
+    for a in areas:
+        a['ce'] = True
+        if a['name'] in ('Shrouded Hills', 'Tarant'):
+            a['settlement'] = True
+        else:
+            a['group'] = 'Quest locations'
+    world = mod / 'maps' / 'Arcanum1-024-fixed'
+    secret = read_secret(world)
+    # The beta names only four places. The sectors of its world that none of them is near are "Secret Area (n)" places for the user to name: sectors at most 3 apart
+    # (either way) are one group, a group is a place only if no sector of it lies within CAR_NEAR sectors of an area (the named ones cover their own land)
+    pts = sorted({(i & 0x3FFFFFF, i >> 26) for i in (int(s.stem) for s in sec_alias.rglob(world, '*.sec') if s.stem.isdigit())})
+    groups = []
+    for p in pts:
+        joined = [g for g in groups if any(max(abs(p[0] - q[0]), abs(p[1] - q[1])) <= 3 for q in g)]
+        merged = [p] + [q for g in joined for q in g]
+        groups = [g for g in groups if g not in joined] + [merged]
+    spots = [a['tile'] for a in areas]
+    for g in sorted(groups, key=lambda g: (min(y for _, y in g), min(x for x, _ in g))):
+        cx, cy = sum(x for x, _ in g) / len(g) * 64 + 32, sum(y for _, y in g) / len(g) * 64 + 32
+        if cy >= 127000 or any(max(abs(tx - (x * 64 + 32)), abs(ty - (y * 64 + 32))) / 64 <= CAR_NEAR for x, y in g for tx, ty in spots):
+            continue                                                                # (the corner sector at y 127000+ is the editor's filler spot, like the area lines there)
+        tile = (round(cx), round(cy))
+        if tile in BPD_NAMED:                                                       # (named by the user, 2026-10-24, with the base game's names: places of the stock game)
+            name, kind = BPD_NAMED[tile]
+            if kind:
+                a = {'name': name, 'description': '', 'tile': list(tile), 'radius': 5, 'ce': True}
+                link([a], [])
+                if kind == 'settlement':
+                    a['settlement'] = True
+                else:
+                    a['group'] = kind
+                areas.append(a)
+                continue
+        else:
+            name = f'Secret Area ({len(secret) + 1})'
+        secret.append({'name': name, 'tile': list(tile), 'description': '', 'radius': 5, 'sectors': len(g)})
+    note = ('Same shape as ce-areas.js, for the Arcanum Beta/Press Demo, which is not laid over the base game: areas = the lines of its own mes/area.mes; '
+            'secret = "Secret Area (n)" for the sectors of its own world that no area is near (groups of sectors at most 3 apart)')
+    write_js(DATA_JS / 'bpd-areas.js', 'ArcanumBPDAreas', note, areas=areas, secret=secret)
+    print(f'Arcanum Beta Press Demo: {len(areas)} areas, {len(secret)} secret areas')
+
+
+def build_dem(base_areas, places):
+    """js/atlas/data/dem-areas.js (window.ArcanumDEMAreas), same shape as fp-areas.js, for the Arcanum Demo (2001-03-14). Base game + the mod's folder: its gamearea.mes
+    laid over the base game's by number; the "Secret Area (n)" places are the mod's world sectors no area is near."""
+    world = ROOT / 'data' / 'mods' / 'Arcanum Demo' / 'maps' / 'MGH Arcanum1-024-fixed'     # (the demo calls its world folder so)
+    # A standalone version (game_files.STANDALONE): its own gamearea.mes and its own world folder, nothing of the base game's (this list is also dem/areas.js, standalone.py)
+    areas = [a for _, a in sorted(read_lines(ROOT / 'data' / 'mods' / 'Arcanum Demo' / 'mes' / 'gamearea.mes').items()) if a['name'] and on_map(a, CE_NOT_LISTED)]
+    areas = [a for a in areas if a['name'] not in ('Dernholm', 'Tarant')]            # (not listed: the user's choice, 2026-10-23)
+    link(areas, [])
+    number_same_names(areas)
+    for a in areas:
+        a['ce'] = True
+        if a['name'] == 'Shrouded Hills':
+            a['settlement'] = True                                                    # (the demo's one settlement)
+        else:
+            a['group'] = 'Quest locations'                                            # (Arbalah's House, Crash Site, Simon Fahrkus' Shack: the page's list reads `group` first)
+    secret = read_secret(world)
+    note = ('Same shape as ce-areas.js, for the Arcanum Demo, which is not laid over the base game: areas = the lines of its own gamearea.mes; '
+            'secret = the "Secret Area - " folders of its own world')
+    write_js(DATA_JS / 'dem-areas.js', 'ArcanumDEMAreas', note, areas=areas, secret=secret)
+    print(f'Arcanum Demo: {len(areas)} areas, {len(secret)} secret areas')
 
 
 def build_tin(base_areas, places):
@@ -256,6 +351,24 @@ def build_rb(base_areas, places):
             'and the mod, plus "Secret Area (n)" for sectors of the mod no area is near')
     write_js(DATA_JS / 'rb-areas.js', 'ArcanumRBAreas', note, areas=areas, secret=secret)
     print(f'Arcanum ReBulid: {len(areas)} areas, {len(secret)} secret areas')
+    print('  secret areas of the mod: ' + ', '.join(f'{s["name"]} {s["tile"]}' for s in secret if s['name'].startswith('Secret Area (')))
+
+
+def build_tr(base_areas, places):
+    """js/atlas/data/tr-areas.js (window.ArcanumTRAreas), same shape as rb-areas.js, for Arcanum Total Rebalance (no gamearea.mes: the base game's list, plus
+    "Secret Area (n)" places for the mod's sectors no area is near - it changes only one world .sec, so there should be none)."""
+    world = ROOT / 'data' / 'mods' / 'Total Rebalance' / 'maps' / bs.WORLD
+    areas = [a for _, a in sorted(read_lines(MES).items()) if a['name'] and on_map(a)]
+    link(areas, places)
+    number_same_names(areas)
+    have = {nk(a['name']) for a in areas}
+    secret = [s for s in read_secret(WORLD, world) if nk(s['name']) not in have]
+    secret += unnamed_places(world, areas + secret)
+    mark_changed(areas, base_areas)
+    note = ('Same shape as ce-areas.js, for Arcanum Total Rebalance: areas = the base game\'s gamearea.mes (the mod has none); secret = the "Secret Area - " folders of the base game '
+            'and the mod, plus "Secret Area (n)" for sectors of the mod no area is near')
+    write_js(DATA_JS / 'tr-areas.js', 'ArcanumTRAreas', note, areas=areas, secret=secret)
+    print(f'Arcanum Total Rebalance: {len(areas)} areas, {len(secret)} secret areas')
     print('  secret areas of the mod: ' + ', '.join(f'{s["name"]} {s["tile"]}' for s in secret if s['name'].startswith('Secret Area (')))
 
 

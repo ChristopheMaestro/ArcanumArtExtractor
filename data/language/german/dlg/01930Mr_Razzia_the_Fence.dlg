@@ -1,0 +1,166 @@
+{1}{G:}{G:}{}{}{}{}
+{2}{Hallo, Sire.  Darf ich nach Eurem Namen fragen?}{}{5}{re 41, lf1 0}{25}{}
+{3}{Seid gegrüßt, @npcname@.  Ich habe etwas, wonach Ihr sucht.}{}{5}{re 41, lf1 1, rp1001}{43}{}
+{4}{Ähm ... ja ...  Darf ich nach Eurem Namen fragen?}{}{5}{re -40, lf1 0}{25}{}
+{5}{Äh ... Ich habe etwas, wonach Ihr sucht, @npcname@.}{}{5}{re -40, lf1 1, rp1001}{43}{}
+{6}{Hallo, Mr. Razzia.  Ich habe einige Fragen ...}{}{5}{rp-1001, lf1 1}{}{fl 101}
+{7}{Könnt Ihr mich zu einem Experten im Taschendiebstahl ausbilden?}{}{5}{rp1001, tr5 -1}{35}{et5 102}
+{8}{Könnt Ihr mich zu einem Experten im Schleichen ausbilden?}{}{5}{rp1001, tr6 -1}{35}{et6 114}
+{9}{Äh ... Ich habe etwas, wonach Ihr sucht, @npcname@.}{}{5}{GF2386 1}{}{co, fl 126}
+{10}{Ich hätte da ein paar Fragen zu einem Pass, den Ihr angefertigt habt ...}{}{5}{GF2410 1}{127}{}
+{11}{Könnt Ihr mich zu einem Experten im Meucheln ausbilden?}{}{5}{rp1001, tr4 -1}{35}{et4 158}
+{13}{Äh ... Hallo.  Wie Ihr heiß'n?}{}{-4}{lf1 0}{25}{}
+{14}{Äh ... Mister Black ...  Ich was haben, Ihr vielleich' willen.}{}{-4}{re 41, lf1 1, rp1001}{43}{}
+{15}{He!  Das garstig, Mister Black ...  Ich was haben, Ihr vielleich' willen.}{}{-4}{re -40, lf1 1, rp1001}{43}{}
+{16}{Äh ...  Hallo, Mister Black.  Ich was fragen, ja?}{}{-4}{rp-1001, lf1 1}{}{fl 101}
+{17}{Willen Taschensklau-Exper' sein ...}{}{-4}{rp1001, tr5 -1}{35}{et5 102}
+{18}{Willen Schleich-Exper' sein...}{}{-4}{rp1001, tr6 -1}{35}{et6 114}
+{19}{Äh ... Mister Black ...  Ich was haben, Ihr vielleich' willen.}{}{-4}{GF2386 1}{}{co, fl 126}
+{20}{Willen Morchel... äh, Meuchel-Exper' sein ...}{}{-4}{rp1001, tr4 -1}{35}{et4 158}
+{24}{E:}{}{1}{}{0}{}
+{25}{Ich bin Mr. Razzia.  ... Was wollt Ihr?}{Ich bin Mr. Razzia.  ... Was wollt Ihr?}{}{}{}{lf1 1}
+{26}{Ich habe etwas, das Euch interessieren könnte.}{}{5}{rp1001}{43}{}
+{27}{Was könnt Ihr mir wohl über diesen Ort erzählen?}{}{5}{rp-1001}{}{fl 101}
+{28}{Könnt Ihr mich zu einem Experten im Taschendiebstahl ausbilden?}{}{5}{rp1001, tr5 1, tr5 -1, sk5 10}{102}{}
+{29}{Könnt Ihr mich zu einem Experten im Schleichen ausbilden?}{}{5}{rp1001, tr6 1, tr6 -1, sk6 10}{114}{}
+{30}{Ich was haben, Ihr vielleich' willen ...}{}{-4}{rp1001}{43}{}
+{31}{Ihr mir was zählen von das Platz hier?}{}{-4}{rp-1001}{}{fl 101}
+{32}{Willen Taschensklau-Exper' sein ...}{}{-4}{rp1001, tr5 1, tr5 -1, sk5 10}{102}{}
+{33}{Willen Schleich-Exper' sein ...}{}{-4}{rp1001, tr6 1, tr6 -1, sk6 10}{114}{}
+{34}{E:}{}{1}{}{0}{}
+{35}{Gibt es sonst noch etwas?}{Gibt es sonst noch etwas?}{}{}{}{}
+{36}{Ich habe etwas, das Euch interessieren könnte.}{}{5}{rp1001}{43}{}
+{37}{Könnt Ihr mich zu einem Experten im Taschendiebstahl ausbilden?}{}{5}{rp1001, tr5 1, tr5 -1, sk5 10}{102}{}
+{38}{Könnt Ihr mich zu einem Experten im Schleichen ausbilden?}{}{5}{rp1001, tr6 1, tr6 -1, sk6 10}{114}{}
+{39}{Ich was haben, Ihr vielleich' willen ...}{}{-4}{rp1001}{43}{}
+{40}{Willen Taschensklau-Exper' sein ...}{}{-4}{rp1001, tr5 1, tr5 -1, sk5 10}{102}{}
+{41}{Willen Schleich-Exper' sein ...}{}{-4}{rp1001, tr6 1, tr6 -1, sk6 10}{114}{}
+{42}{E:}{}{1}{}{0}{}
+{43}{Was habt Ihr denn anzubieten?}{Was habt Ihr denn anzubieten?}{}{}{}{}
+{44}{Ich habe das Amulett, das dem Paar im "Pilz" gehört.}{}{5}{ru1145, rq-1145, in2851}{59}{}
+{45}{Ich habe Ryan Sanders' Taschenuhr.}{}{5}{ru1146, rq-1146, in5689}{65}{}
+{46}{Ich habe die Truhe mit Gold aus dem Schiffswrack geborgen.}{}{5}{ru1147, rq-1147, in5674}{71}{}
+{47}{Ich habe eine caladonische Kreuzritterrüstung in meinem Besitz.}{}{5}{ru1148, rq-1148, in2850}{77}{}
+{48}{Ich habe Ryan Marshalls polizeiliches Führungszeugnis.}{}{5}{ru1149, rq-1149, in5690}{83}{}
+{49}{Ich habe den Postsack, der für Tarant bestimmt war.}{}{5}{ru1150, rq-1150, in5676}{89}{}
+{50}{Ich habe Jonathan Sanders' Stab der Restauration in meinem Besitz.}{}{5}{ru1151, rq-1151, in2028}{95}{}
+{51}{Ich haben Omelett von Pärchen aus "Pilz".}{}{-4}{ru1145, rq-1145, in2851}{59}{}
+{52}{Ich haben Uhr.}{}{-4}{ru1146, rq-1146, in5689}{65}{}
+{53}{Ich haben Gold aus Schief.}{}{-4}{ru1147, rq-1147, in5674}{71}{}
+{54}{Ich haben Rüstung aus unter Haus von Wachens.}{}{-4}{ru1148, rq-1148, in2850}{77}{}
+{55}{Ich haben Pollezei-Papiers von Reien Marschel.}{}{-4}{ru1149, rq-1149, in5690}{83}{}
+{56}{Ich haben Sack mit Briefens drin.}{}{-4}{ru1150, rq-1150, in5676}{89}{}
+{57}{Ich haben Stock von unter Sanders Haus.}{}{-4}{ru1151, rq-1151, in2028}{95}{}
+{58}{F:}{}{1}{}{0}{}
+{59}{Nun ...  Wir haben schon auf die Ankunft dieses Stücks gewartet.  Vielen Dank, dass Ihr uns das besorgt habt.  Der Untergrund zahlt Euch einen Finderlohn von 250 Münzen dafür.  Bitte sehr, @pcname@.  Gute Arbeit.}{Nun ...  Wir haben schon auf die Ankunft dieses Stücks gewartet.  Vielen Dank, dass Ihr uns das besorgt habt.  Der Untergrund zahlt Euch einen Finderlohn von 250 Münzen dafür.  Bitte sehr, @pcname@.  Gute Arbeit.}{}{}{}{$$250, rq1145, in2851, xp4}
+{60}{Es ist mir ein Vergnügen.  Lebt wohl, @npcname@.}{}{5}{}{0}{}
+{61}{Vielen Dank.  Ich habe da noch etwas ...}{}{5}{}{43}{}
+{62}{Dankie.  Tschö.}{}{-4}{}{0}{}
+{63}{Dankie.  Ich mehr haben ...}{}{-4}{}{43}{}
+{64}{E:}{}{1}{}{0}{}
+{65}{Nun ...  Wir haben schon auf die Ankunft dieses Stücks gewartet.  Vielen Dank, dass Ihr uns das besorgt habt.  Der Untergrund zahlt Euch einen Finderlohn von 300 Münzen dafür.  Bitte sehr, @pcname@.  Gute Arbeit.}{Nun ...  Wir haben schon auf die Ankunft dieses Stücks gewartet.  Vielen Dank, dass Ihr uns das besorgt habt.  Der Untergrund zahlt Euch einen Finderlohn von 300 Münzen dafür.  Bitte sehr, @pcname@.  Gute Arbeit.}{}{}{}{$$300, rq1146, in5689, xp4}
+{66}{Es ist mir ein Vergnügen.  Lebt wohl, @npcname@.}{}{5}{}{0}{}
+{67}{Vielen Dank.  Ich habe da noch etwas ...}{}{5}{}{43}{}
+{68}{Dankie.  Tschö.}{}{-4}{}{0}{}
+{69}{Dankie.  Ich mehr haben ...}{}{-4}{}{43}{}
+{70}{E:}{}{1}{}{0}{}
+{71}{Nun ...  Wir haben schon auf die Ankunft dieses Stücks gewartet.  Vielen Dank, dass Ihr uns das besorgt habt.  Der Untergrund zahlt Euch einen Finderlohn von 700 Münzen dafür.  Bitte sehr, @pcname@.  Gute Arbeit.}{Nun ...  Wir haben schon auf die Ankunft dieses Stücks gewartet.  Vielen Dank, dass Ihr uns das besorgt habt.  Der Untergrund zahlt Euch einen Finderlohn von 700 Münzen dafür.  Bitte sehr, @pcname@.  Gute Arbeit.}{}{}{}{$$700, rq1147, in5674, xp2}
+{72}{Es ist mir ein Vergnügen.  Lebt wohl, @npcname@.}{}{5}{}{0}{}
+{73}{Vielen Dank.  Ich habe da noch etwas ...}{}{5}{}{43}{}
+{74}{Dankie.  Tschö.}{}{-4}{}{0}{}
+{75}{Dankie.  Ich mehr haben ...}{}{-4}{}{43}{}
+{76}{E:}{}{1}{}{0}{}
+{77}{Nun ...  Wir haben schon auf die Ankunft dieses Stücks gewartet.  Vielen Dank, dass Ihr uns das besorgt habt.  Der Untergrund zahlt Euch einen Finderlohn von 400 Münzen dafür.  Bitte sehr, @pcname@.  Gute Arbeit.}{Nun ...  Wir haben schon auf die Ankunft dieses Stücks gewartet.  Vielen Dank, dass Ihr uns das besorgt habt.  Der Untergrund zahlt Euch einen Finderlohn von 400 Münzen dafür.  Bitte sehr, @pcname@.  Gute Arbeit.}{}{}{}{$$400, rq1148, in2850, xp7}
+{78}{Es ist mir ein Vergnügen.  Lebt wohl, @npcname@.}{}{5}{}{0}{}
+{79}{Vielen Dank.  Ich habe da noch etwas ...}{}{5}{}{43}{}
+{80}{Dankie.  Tschö.}{}{-4}{}{0}{}
+{81}{Dankie.  Ich mehr haben ...}{}{-4}{}{43}{}
+{82}{E:}{}{1}{}{0}{}
+{83}{Nun ...  Wir haben schon auf die Ankunft dieses Stücks gewartet.  Vielen Dank, dass Ihr uns das besorgt habt.  Der Untergrund zahlt Euch einen Finderlohn von 300 Münzen dafür.  Bitte sehr, @pcname@.  Gute Arbeit.}{Nun ...  Wir haben schon auf die Ankunft dieses Stücks gewartet.  Vielen Dank, dass Ihr uns das besorgt habt.  Der Untergrund zahlt Euch einen Finderlohn von 300 Münzen dafür.  Bitte sehr, @pcname@.  Gute Arbeit.}{}{}{}{$$300, rq1149, in5690, xp10}
+{84}{Es ist mir ein Vergnügen.  Lebt wohl, @npcname@.}{}{5}{}{0}{}
+{85}{Vielen Dank.  Ich habe da noch etwas ...}{}{5}{}{43}{}
+{86}{Dankie.  Tschö.}{}{-4}{}{0}{}
+{87}{Dankie.  Ich mehr haben ...}{}{-4}{}{43}{}
+{88}{E:}{}{1}{}{0}{}
+{89}{Nun ...  Wir haben schon auf die Ankunft dieses Stücks gewartet.  Vielen Dank, dass Ihr uns das besorgt habt.  Der Untergrund zahlt Euch einen Finderlohn von 350 Münzen dafür.  Bitte sehr, @pcname@.  Gute Arbeit.}{Nun ...  Wir haben schon auf die Ankunft dieses Stücks gewartet.  Vielen Dank, dass Ihr uns das besorgt habt.  Der Untergrund zahlt Euch einen Finderlohn von 350 Münzen dafür.  Bitte sehr, @pcname@.  Gute Arbeit.}{}{}{}{$$350, rq1150, in5676, xp6}
+{90}{Es ist mir ein Vergnügen.  Lebt wohl, @npcname@.}{}{5}{}{0}{}
+{91}{Vielen Dank.  Ich habe da noch etwas ...}{}{5}{}{43}{}
+{92}{Dankie.  Tschö.}{}{-4}{}{0}{}
+{93}{Dankie.  Ich mehr haben ...}{}{-4}{}{43}{}
+{94}{E:}{}{1}{}{0}{}
+{95}{Nun ...  Wir haben schon auf die Ankunft dieses Stücks gewartet.  Vielen Dank, dass Ihr uns das besorgt habt.  Der Untergrund zahlt Euch einen Finderlohn von 500 Münzen dafür.  Bitte sehr, @pcname@.  Gute Arbeit.}{Nun ...  Wir haben schon auf die Ankunft dieses Stücks gewartet.  Vielen Dank, dass Ihr uns das besorgt habt.  Der Untergrund zahlt Euch einen Finderlohn von 500 Münzen dafür.  Bitte sehr, @pcname@.  Gute Arbeit.}{}{}{}{$$500, rq1151, in2028, xp9}
+{96}{Es ist mir ein Vergnügen.  Lebt wohl, @npcname@.}{}{5}{}{0}{}
+{97}{Vielen Dank.  Ich habe da noch etwas ...}{}{5}{}{43}{}
+{98}{Dankie.  Tschö.}{}{-4}{}{0}{}
+{99}{Dankie.  Ich mehr haben ...}{}{-4}{}{43}{}
+{100}{E:}{}{1}{}{0}{}
+{101}{[Er wirkt verärgert.] Hört mal, Kumpel ...  Ich habe keine Zeit für Eure Störungen.  Wenn Ihr Hilfe braucht, sprecht mit dem Ladenbesitzer.  Lebt wohl.}{[Er wirkt verärgert.] Hört mal, Lady ...  Ich habe keine Zeit für Eure Störungen.  Wenn Ihr Hilfe braucht, sprecht mit dem Ladenbesitzer.  Lebt wohl.}{}{}{}{}
+{102}{Ja.  Ich kann Euch tatsächlich zu einem Experten im Taschendiebstahl ausbilden.  Das Honorar beträgt 500 Münzen.  Seid Ihr interessiert?}{Ja.  Ich kann Euch tatsächlich zu einem Experten im Taschendiebstahl ausbilden.  Das Honorar beträgt 500 Münzen.  Seid Ihr interessiert?}{}{}{}{}
+{103}{Ja.  Hier ist das Geld. [Du gibst ihm das Geld.]}{}{5}{$$500}{108}{}
+{104}{Ich muss zuerst etwas Geld auftreiben.  Ich komme wieder.}{}{5}{$$-499}{0}{}
+{105}{Äh ... jaaaa.  Hier Münzens.  [Du gibst ihm das Geld.]}{}{-4}{$$500}{108}{}
+{106}{Ich nich' Münzens haben.  Ich wieda herkommen.}{}{-4}{$$-499}{0}{}
+{107}{F:}{}{1}{}{0}{}
+{108}{Vielen Dank, @pcname@.  [Er braucht einen Augenblick, um sich ein Bild von deinen Fertigkeiten zu machen und demonstriert dann selbst ein paar neue Techniken.] Jetzt seid Ihr ein Experte im Taschendiebstahl.  Falls Ihr Meister in diesem Gewerbe werden wollt, solltet Ihr Sammie White aufsuchen.  Er lebt in Tarant, und man trifft ihn normalerweise in der Nähe der Metrostation an.  ... Mögen Euch Eure neu erworbenen Fertigkeiten ordentlich Geld in die Kasse bringen.}{Vielen Dank, @pcname@.  [Er braucht einen Augenblick, um sich ein Bild von deinen Fertigkeiten zu machen und demonstriert dann selbst ein paar neue Techniken.] Jetzt seid Ihr ein Experte im Taschendiebstahl.  Falls Ihr Meister in diesem Gewerbe werden wollt, solltet Ihr Sammie White aufsuchen.  Er lebt in Tarant, und man trifft ihn normalerweise in der Nähe der Metrostation an.  ... Mögen Euch Eure neu erworbenen Fertigkeiten ordentlich Geld in die Kasse bringen.}{}{}{}{$$-500, tr5 2, ru2160}
+{109}{Vielen Dank.  Lebt wohl.}{}{5}{}{0}{}
+{110}{Vielen Dank.  Ich habe etwas, das Euch interessieren könnte.}{}{5}{}{43}{}
+{111}{Dankie.  Tschö.}{}{-4}{}{0}{}
+{112}{Dankie.  Ich was haben, Ihr vielleich' willen.}{}{-4}{}{43}{}
+{113}{E:}{}{1}{}{0}{}
+{114}{Ja.  Ich kann Euch zu einem Experten im Schleichen ausbilden.  Das Honorar beträgt 500 Münzen. Seid Ihr interessiert?}{Ja.  Ich kann Euch zu einem Experten im Schleichen ausbilden.  Das Honorar beträgt 500 Münzen. Seid Ihr interessiert?}{}{}{}{}
+{115}{Ja.  Hier ist das Geld. [Du gibst ihm das Geld.]}{}{5}{$$500}{120}{}
+{116}{Ich muss zuerst etwas Geld auftreiben.  Ich komme wieder.}{}{5}{$$-499}{0}{}
+{117}{Äh ... jaaaa.  Hier Münzens.  [Du gibst ihm das Geld.]}{}{-4}{$$500}{120}{}
+{118}{Ich nich' Münzens haben.  Ich wieda herkommen.}{}{-4}{$$-499}{0}{}
+{119}{F:}{}{1}{}{0}{}
+{120}{Vielen Dank, @pcname@. [Er braucht einen Augenblick, um sich ein Bild von deinen Fertigkeiten zu machen und demonstriert dann selbst ein paar neue Techniken.] Jetzt seid Ihr ein Experte im Schleichen. Hier, nehmt diesen Brief. Falls Ihr irgendwann einmal Meister im Schleichen werden wollt, müsst Ihr den Hinweisen auf diesem Zettel folgen, um den Meister zu finden. Viel Glück. Ich bin sicher, Eure neu erworbenen Fertigkeiten werden den Untergrund ziemlich beeindrucken.}{Vielen Dank, @pcname@. [Er braucht einen Augenblick, um sich ein Bild von deinen Fertigkeiten zu machen und demonstriert dann selbst ein paar neue Techniken.] Jetzt seid Ihr ein Experte im Schleichen. Hier, nehmt diesen Brief. Falls Ihr irgendwann einmal Meister im Schleichen werden wollt, müsst Ihr den Hinweisen auf diesem Zettel folgen, um den Meister zu finden. Viel Glück. Ich bin sicher, Eure neu erworbenen Fertigkeiten werden den Untergrund ziemlich beeindrucken.}{}{}{}{$$-500, tr6 2, ru2161, in-5233}
+{121}{Vielen Dank.  Lebt wohl.}{}{5}{}{0}{}
+{122}{Vielen Dank.  Ich habe etwas, das Euch interessieren könnte.}{}{5}{}{43}{}
+{123}{Dankie.  Tschö.}{}{-4}{}{0}{}
+{124}{Dankie.  Ich was haben, Ihr vielleich' willen.}{}{-4}{}{43}{}
+{125}{E:}{}{1}{}{0}{}
+{126}{Mörder!  Ihr sollt sterben, für das, was Ihr Mr. Black angetan habt!}{Mörder!  Ihr sollt sterben, für das, was Ihr Mr. Black angetan habt!}{}{}{}{}
+{127}{Ich weiß nicht, wovon Ihr hier sprecht.  Ich "fertige" keine Pässe an ... das ist ungesetzlich.}{Ich weiß nicht, wovon Ihr hier sprecht.  Ich "fertige" keine Pässe an ... das ist ungesetzlich, Madame.}{}{}{}{}
+{128}{Mr. Preston Radcliffe ist da aber ganz anderer Ansicht ... [Du zeigst ihm den Pass.]}{}{5}{in5671}{132}{}
+{129}{Kommt schon, Mr. Razzia ...  Ich BIN einer von Euch ...}{}{5}{rp1001, ni5671}{136}{}
+{130}{Hilft Euch der Name "Preston Radcliffe" vielleicht etwas auf die Sprünge?}{}{5}{ni5671}{154}{}
+{131}{E:}{}{1}{}{0}{}
+{132}{[Er wirkt schockiert ... und leicht eingeschüchtert.] Wo habt Ihr den her?}{[Er wirkt schockiert ... und leicht eingeschüchtert.] Wo habt Ihr den her?}{}{}{}{}
+{133}{Ich fand ihn bei seiner Leiche im Wrack der IFS Zephyr.}{}{5}{}{136}{}
+{134}{Von einer Leiche bei der IFS Zephyr.  Ich brauche ein paar Informationen über ihn.}{}{5}{}{136}{}
+{135}{E:}{}{1}{}{0}{}
+{136}{[Der Mann blickt dich argwöhnisch an.] Wer war dieser Mann überhaupt?  Ihr seid nicht die einzige Person, die hier Fragen gestellt hat ...}{[Der Mann blickt dich argwöhnisch an.] Wer war dieser Mann überhaupt?  Ihr seid nicht die einzige Person, die hier Fragen gestellt hat ...}{}{}{}{}
+{137}{Wer war denn sonst noch hier?}{}{5}{}{140}{}
+{138}{Es gab noch andere, die nach ihm gesucht haben?}{}{5}{}{140}{}
+{139}{E:}{}{1}{}{0}{}
+{140}{Gleich nachdem die Zephyr Caladon verlassen hat, kamen schon ein paar Halsabschneider vorbei.  Sie wollten Informationen über ihn.  Als ich mich weigerte zu reden, fanden sie, ich bräuchte etwas Ermutigung. [Du siehst den Schmerz in seinen Augen.] Ich weiß nicht, wer diese Leute waren ...}{Gleich nachdem die Zephyr Caladon verlassen hat, kamen schon ein paar Halsabschneider vorbei.  Sie wollten Informationen über ihn.  Als ich mich weigerte zu reden, fanden sie, ich bräuchte etwas Ermutigung. [Du siehst den Schmerz in seinen Augen.] Ich weiß nicht, wer diese Leute waren ...}{}{}{}{}
+{141}{Was habt Ihr ihnen erzählt?}{}{5}{}{144}{}
+{142}{Was haben sie aus Euch herausbekommen?}{}{5}{}{144}{}
+{143}{E:}{}{1}{}{0}{}
+{144}{Ich sagte ihnen, dass ich ihm einen Pass angefertigt hatte ... dass er sich den Namen "Preston Radcliffe" ausgesucht hätte, ein Gnom aus Tarant.  Ich informierte sie auch darüber, dass sie zu spät gekommen seien ...  Er war gerade mit der Zephyr abgeflogen, und es gab nichts, was sie dagegen unternehmen konnten ... das dachte ich jedenfalls ...}{Ich sagte ihnen, dass ich ihm einen Pass angefertigt hatte ... dass er sich den Namen "Preston Radcliffe" ausgesucht hätte, ein Gnom aus Tarant.  Ich informierte sie auch darüber, dass sie zu spät gekommen seien ...  Er war gerade mit der Zephyr abgeflogen, und es gab nichts, was sie dagegen unternehmen konnten ... das dachte ich jedenfalls ...}{}{}{}{}
+{145}{Was haben sie getan?}{}{5}{}{147}{}
+{146}{E:}{}{1}{}{0}{}
+{147}{Sie "bestanden" darauf, dass ich ihnen Informationen darüber gebe, wie sie zur Zephyr gelangen könnten.  Ich lachte bitter, und sagte ihnen, sie seien wohl nicht ganz bei Trost ...  Der verrückte alte Maxim hatte die Zephyr in seiner Fabrik vor der Stadt gebaut, und das war ein Einzelstück ...}{Sie "bestanden" darauf, dass ich ihnen Informationen darüber gebe, wie sie zur Zephyr gelangen könnten.  Ich lachte bitter, und sagte ihnen, sie seien wohl nicht ganz bei Trost ...  Der verrückte alte Maxim hatte die Zephyr in seiner Fabrik vor der Stadt gebaut, und das war ein Einzelstück ...}{}{}{}{}
+{148}{Ihr sagtet ihnen, wo sich die Fabrik befindet?}{}{5}{}{150}{}
+{149}{E:}{}{1}{}{0}{}
+{150}{Ich habe mir nichts dabei gedacht.  Jedermann weiß doch, wo Maxims Fabrik steht ...  Und in genau dieser Nacht brannte sie bis auf die Grundmauern nieder.  Das ist alles, was ich weiß.}{Ich habe mir nichts dabei gedacht.  Jedermann weiß doch, wo Maxims Fabrik steht ...  Und in genau dieser Nacht brannte sie bis auf die Grundmauern nieder.  Das ist alles, was ich weiß.}{}{}{}{}
+{151}{Vielen Dank.  Ihr wart eine große Hilfe.}{}{5}{}{0}{}
+{152}{Danke.}{}{5}{}{0}{}
+{153}{E:}{}{1}{}{0}{}
+{154}{Wie ich schon sagte, ich weiß nicht, wovon Ihr hier sprecht.  Und ich wäre Euch dankbar, wenn Ihr jetzt gehen würdet.}{Wie ich schon sagte, ich weiß nicht, wovon Ihr hier sprecht.  Und ich wäre Euch dankbar, wenn Ihr jetzt gehen würdet.}{}{}{}{}
+{155}{[Drohend.] Zwingt mich NICHT, Gewalt anzuwenden, "Sire" ...}{}{5}{}{136}{}
+{156}{[Drohend.] Ich will Antworten ...  Sofort!}{}{5}{}{136}{}
+{157}{E:}{}{1}{}{0}{}
+{158}{Ja.  Ich kann Euch zu einem Experten im Meucheln ausbilden.  Das Honorar beträgt 500 Münzen. Seid Ihr interessiert?}{Ja.  Ich kann Euch zu einem Experten im Meucheln ausbilden.  Das Honorar beträgt 500 Münzen. Seid Ihr interessiert?}{}{}{}{}
+{159}{Ja.  Hier ist das Geld. [Du gibst ihm das Geld.]}{}{5}{$$500}{164}{}
+{160}{Ich muss zuerst etwas Geld auftreiben.  Ich komme wieder.}{}{5}{$$-499}{0}{}
+{161}{Äh ... jaaaa.  Hier Münzens.  [Du gibst ihm das Geld.]}{}{-4}{$$500}{164}{}
+{162}{Ich nich' Münzens haben.  Ich wieda herkommen.}{}{-4}{$$-499}{0}{}
+{163}{F:}{}{1}{}{0}{}
+{164}{Vielen Dank, @pcname@.  [Er braucht einen Augenblick, um sich ein Bild von deinen Fertigkeiten zu machen, und demonstriert dann selbst ein paar neue Techniken.]  Ihr seid jetzt Meuchel-Experte.  Falls Ihr irgendwann einmal Meister werden möchtet, solltet Ihr Doktor Edmund Craig ausfindig machen.  Er hält sich nach einem kürzlichen Zwischenfall irgendwo in Tarant versteckt.  Ich weiß allerdings nicht, wo ...}{Vielen Dank, @pcname@.  [Er braucht einen Augenblick, um sich ein Bild von deinen Fertigkeiten zu machen, und demonstriert dann selbst ein paar neue Techniken.]  Ihr seid jetzt Meuchel-Experte.  Falls Ihr irgendwann einmal Meister werden möchtet, solltet Ihr Doktor Edmund Craig ausfindig machen.  Er hält sich nach einem kürzlichen Zwischenfall irgendwo in Tarant versteckt.  Ich weiß allerdings nicht, wo ...}{}{}{}{$$-500, tr4 2, ru2166}
+{165}{Vielen Dank.  Lebt wohl.}{}{5}{}{0}{}
+{166}{Vielen Dank.  Ich habe etwas, das Euch interessieren könnte.}{}{5}{}{43}{}
+{167}{Dankie.  Tschö.}{}{-4}{}{0}{}
+{168}{Dankie.  Ich was haben, Ihr vielleich' willen.}{}{-4}{}{43}{}
+{169}{E:}{}{1}{}{0}{}
+
